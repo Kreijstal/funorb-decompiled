@@ -69,7 +69,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         return false;
     }
 
-    final void a(eja param0, int param1, int param2, int param3, iw param4, int param5, int param6) {
+    final void a(VertexBuffer param0, int param1, int param2, int param3, iw param4, int param5, int param6) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -139,7 +139,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final gf createIntTexture2D(int[] param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
+    final GpuTexture2D createIntTexture2D(int[] param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         OpenGlTexture2D var9 = null;
@@ -156,15 +156,15 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
             !cla.a(9181, param5))) {
             if (this.field_sd) {
               stackIn_8_0 = new pe(this, param3, param5, param0, param1, param4);
-              return (gf) ((Object) stackIn_8_0);
+              return (GpuTexture2D) ((Object) stackIn_8_0);
             }
             var9 = new OpenGlTexture2D(this, SwitchableId.field_a, una.field_g, lla.a(false, param3), lla.a(false, param5));
             var9.a(param1, param5, param4, 113, 0, param0, param3, 0);
             stackIn_6_0 = var9;
-            return (gf) ((Object) stackIn_6_0);
+            return (GpuTexture2D) ((Object) stackIn_6_0);
           }
           stackIn_10_0 = new OpenGlTexture2D(this, param3, param5, param2, param0, param1, param4);
-          return (gf) ((Object) stackIn_10_0);
+          return (GpuTexture2D) ((Object) stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
@@ -310,7 +310,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         this.d(0, false);
         this.setLightingEnabled(0, false);
         this.b(false, (byte) 81);
-        this.bindTexture(true, (iva) null);
+        this.bindTexture(true, (GpuTexture) null);
         this.a((byte) -80, false, false, -2);
         this.a((byte) 118, 1);
         this.setBlendMode(0, 1);
@@ -334,11 +334,11 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         jaggl.OpenGL.glViewport(this.field_i, this.field_Kc, this.field_Hb, this.field_jc);
     }
 
-    final eja createIndexBuffer(int param0, boolean param1) {
+    final VertexBuffer createIndexBuffer(int param0, boolean param1) {
         if (param0 != 26) {
           this.field_rd = true;
         }
-        return (eja) ((Object) new OpenGlVertexBuffer(this, una.field_f, param1));
+        return (VertexBuffer) ((Object) new OpenGlVertexBuffer(this, una.field_f, param1));
     }
 
     final void g(byte param0) {
@@ -374,7 +374,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         super.g(param0);
     }
 
-    final jca createRenderTarget(nha param0, mw param1) {
+    final RenderTarget createRenderTarget(RenderSurface param0, RenderBuffer param1) {
         RuntimeException var3 = null;
         Object stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -385,7 +385,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           stackIn_1_0 = null;
-          return (jca) (stackIn_1_0);
+          return (RenderTarget) (stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -418,7 +418,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         return false;
     }
 
-    final gf createTexture2D(int param0, int param1, ft param2, byte param3, una param4) {
+    final GpuTexture2D createTexture2D(int param0, int param1, ft param2, byte param3, una param4) {
         RuntimeException var6 = null;
         pe stackIn_8_0 = null;
         OpenGlTexture2D stackIn_10_0 = null;
@@ -437,13 +437,13 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
             !cla.a(9181, param1))) {
             if (!this.field_sd) {
               stackIn_10_0 = new OpenGlTexture2D(this, param2, param4, lla.a(false, param0), lla.a(false, param1));
-              return (gf) ((Object) stackIn_10_0);
+              return (GpuTexture2D) ((Object) stackIn_10_0);
             }
             stackIn_8_0 = new pe(this, param2, param4, param0, param1);
-            return (gf) ((Object) stackIn_8_0);
+            return (GpuTexture2D) ((Object) stackIn_8_0);
           }
           stackIn_12_0 = new OpenGlTexture2D(this, param2, param4, param0, param1);
-          return (gf) ((Object) stackIn_12_0);
+          return (GpuTexture2D) ((Object) stackIn_12_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
@@ -521,7 +521,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final gf a(boolean param0, byte[] param1, int param2, int param3, int param4, int param5, ft param6, int param7) {
+    final GpuTexture2D a(boolean param0, byte[] param1, int param2, int param3, int param4, int param5, ft param6, int param7) {
         RuntimeException var9 = null;
         OpenGlTexture2D var10 = null;
         OpenGlTexture2D stackIn_7_0 = null;
@@ -541,15 +541,15 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
             !cla.a(9181, param3))) {
             if (this.field_sd) {
               stackIn_10_0 = new pe(this, param6, param7, param3, param1, param2, param5);
-              return (gf) ((Object) stackIn_10_0);
+              return (GpuTexture2D) ((Object) stackIn_10_0);
             }
             var10 = new OpenGlTexture2D(this, param6, una.field_g, lla.a(false, param7), lla.a(false, param3));
             var10.a(0, (byte) -124, param3, param1, param5, param2, param6, param7, 0);
             stackIn_12_0 = var10;
-            return (gf) ((Object) stackIn_12_0);
+            return (GpuTexture2D) ((Object) stackIn_12_0);
           }
           stackIn_7_0 = new OpenGlTexture2D(this, param6, param7, param3, param0, param1, param2, param5);
-          return (gf) ((Object) stackIn_7_0);
+          return (GpuTexture2D) ((Object) stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
@@ -620,7 +620,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         jaggl.OpenGL.glLightfv(16385, 4609, dia.field_r, 0);
     }
 
-    final void a(jca param0) {
+    final void a(RenderTarget param0) {
     }
 
     final void a(float param0, float param1, float param2) {
@@ -732,7 +732,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
     final void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
         try {
           this.usePixelProjection(19822);
-          this.bindTexture(true, (iva) null);
+          this.bindTexture(true, (GpuTexture) null);
           this.setBlendMode(0, 1);
           this.i((byte) 126);
           jaggl.OpenGL.glPixelZoom(1.0f, -1.0f);
@@ -962,7 +962,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         jaggl.OpenGL.glTexEnvi(8960, 34162, VerticalScrollbar.a((byte) 101, this.field_db[this.field_Cc]));
     }
 
-    final mw b(int param0, int param1) {
+    final RenderBuffer b(int param0, int param1) {
         return null;
     }
 
@@ -1017,10 +1017,10 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final gf a(ft param0, int param1, int param2, boolean param3, int param4, int param5, float[] param6, int param7) {
+    final GpuTexture2D a(ft param0, int param1, int param2, boolean param3, int param4, int param5, float[] param6, int param7) {
         RuntimeException var9 = null;
         OpenGlTexture2D var10 = null;
-        gf stackIn_2_0 = null;
+        GpuTexture2D stackIn_2_0 = null;
         OpenGlTexture2D stackIn_9_0 = null;
         pe stackIn_11_0 = null;
         OpenGlTexture2D stackIn_13_0 = null;
@@ -1032,22 +1032,22 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 0) {
-            stackIn_2_0 = (gf) null;
+            stackIn_2_0 = (GpuTexture2D) null;
             return stackIn_2_0;
           }
           if (!this.field_Wc && (!cla.a(9181, param4) ||
             !cla.a(9181, param7))) {
             if (this.field_sd) {
               stackIn_11_0 = new pe(this, param0, param4, param7, param6, param5, param1);
-              return (gf) ((Object) stackIn_11_0);
+              return (GpuTexture2D) ((Object) stackIn_11_0);
             }
             var10 = new OpenGlTexture2D(this, param0, una.field_h, lla.a(false, param4), lla.a(false, param7));
             var10.a(0, param6, 0, param4, param7, param5, param1, param0, true);
             stackIn_9_0 = var10;
-            return (gf) ((Object) stackIn_9_0);
+            return (GpuTexture2D) ((Object) stackIn_9_0);
           }
           stackIn_13_0 = new OpenGlTexture2D(this, param0, param4, param7, param3, param6, param5, param1);
-          return (gf) ((Object) stackIn_13_0);
+          return (GpuTexture2D) ((Object) stackIn_13_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
@@ -1246,7 +1246,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           if (this.field_lb == mp.field_a) {
             jaggl.OpenGL.glBlendFunc(1, 1);
           } else {
-            if (bma.field_w == this.field_lb) {
+            if (BrickOperator.field_w == this.field_lb) {
               jaggl.OpenGL.glBlendFunc(774, 1);
             }
           }
@@ -1737,7 +1737,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          jaggl.OpenGL.glTexEnvi(8960, param1 + 34176, bma.a(param0, true));
+          jaggl.OpenGL.glTexEnvi(8960, param1 + 34176, BrickOperator.a(param0, true));
           if (param2 != -6219) {
             this.field_Tc = (jaggl.MapBuffer) null;
           }
@@ -1791,7 +1791,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           if (param1 != 15802) {
             this.N(120);
           }
-          jaggl.OpenGL.glTexEnvi(8960, param3 + 34184, bma.a(param0, true));
+          jaggl.OpenGL.glTexEnvi(8960, param3 + 34184, BrickOperator.a(param0, true));
           jaggl.OpenGL.glTexEnvi(8960, 34200 + param3, !param2 ? 770 : 771);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "kda.AC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

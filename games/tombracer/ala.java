@@ -140,7 +140,7 @@ final class ala extends dfa {
               du.field_g = false;
             }
             if (qp.field_s) {
-              wja.a(jk.field_i, 15165);
+              ClampOperator.a(jk.field_i, 15165);
               qp.field_s = false;
             }
             return;
@@ -180,7 +180,7 @@ final class ala extends dfa {
           du.field_g = false;
         }
         if (qp.field_s) {
-          wja.a(jk.field_i, 15165);
+          ClampOperator.a(jk.field_i, 15165);
           qp.field_s = false;
         }
     }

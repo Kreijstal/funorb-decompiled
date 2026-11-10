@@ -147,7 +147,7 @@ final class ina {
           if (param0 != -16) {
             ina.releaseStatics(46);
           }
-          stackIn_3_0 = on.a(param1, (byte) -91, false);
+          stackIn_3_0 = TeleportState.a(param1, (byte) -91, false);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

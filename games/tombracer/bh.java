@@ -319,7 +319,7 @@ final class bh extends ela {
                     if (var12.field_yb == 2) {
                       var12.field_Nb.field_r = vua.field_z;
                     } else {
-                      var12.field_Vb.field_r = pv.field_q;
+                      var12.field_Vb.field_r = FlipOperator.field_q;
                     }
                   }
                 }

@@ -4,8 +4,8 @@
 final class gg {
     boolean field_g;
     boolean field_a;
-    eja field_c;
-    eja field_d;
+    VertexBuffer field_c;
+    VertexBuffer field_d;
     static AudioOutput field_b;
     static ToolkitSprite field_f;
     static IntrusiveDeque field_e;
@@ -18,7 +18,7 @@ final class gg {
         if (param0 == -17253) {
           return;
         }
-        this.field_d = (eja) null;
+        this.field_d = (VertexBuffer) null;
     }
 
     final boolean a(boolean param0) {

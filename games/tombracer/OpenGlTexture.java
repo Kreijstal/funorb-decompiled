@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class OpenGlTexture implements iva {
+abstract class OpenGlTexture implements GpuTexture {
     una field_a;
     static int[][] field_e;
     private hs field_g;
@@ -295,7 +295,7 @@ abstract class OpenGlTexture implements iva {
     }
 
     private final void d(byte param0) {
-        this.field_j.bindTexture(true, (iva) (this));
+        this.field_j.bindTexture(true, (GpuTexture) (this));
         if (this.field_g != MirrorComponent.field_G) {
           jaggl.OpenGL.glTexParameteri(this.field_i, 10241, !this.field_b ? 9728 : 9984);
           jaggl.OpenGL.glTexParameteri(this.field_i, 10240, 9728);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class OpenGlFramebuffer implements ks {
+final class OpenGlFramebuffer implements Framebuffer {
     private int field_a;
     private int field_b;
     private int field_e;
@@ -10,7 +10,7 @@ final class OpenGlFramebuffer implements ks {
     static ToolkitSprite[] field_i;
     private OpenGlToolkit field_f;
     private int field_d;
-    private wia[] field_h;
+    private FramebufferAttachment[] field_h;
 
     private final void a(int param0, rt param1, int param2, int param3) {
         RuntimeException runtimeException = null;
@@ -34,7 +34,7 @@ final class OpenGlFramebuffer implements ks {
             this.field_c = param1.field_l;
           }
           param1.a(this.field_a, param2, 0, vta.field_d[param3]);
-          this.field_h[param3] = (wia) ((Object) param1);
+          this.field_h[param3] = (FramebufferAttachment) ((Object) param1);
           this.field_e = this.field_e | var5_int;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -141,7 +141,7 @@ final class OpenGlFramebuffer implements ks {
           if (!param2) {
             this.a(-122, 86);
           }
-          this.field_h[param0] = (wia) ((Object) param1);
+          this.field_h[param0] = (FramebufferAttachment) ((Object) param1);
           this.field_e = this.field_e | var4_int;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -232,7 +232,7 @@ final class OpenGlFramebuffer implements ks {
 
     OpenGlFramebuffer(OpenGlToolkit param0) {
         this.field_a = -1;
-        this.field_h = new wia[9];
+        this.field_h = new FramebufferAttachment[9];
         this.field_d = 0;
         try {
           if (!param0.field_id) {

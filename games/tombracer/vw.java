@@ -16,7 +16,7 @@ abstract class vw {
 
     abstract void a(int param0);
 
-    abstract void a(int param0, iva param1, int param2);
+    abstract void a(int param0, GpuTexture param1, int param2);
 
     public static void a(byte param0) {
         field_b = null;

@@ -132,7 +132,7 @@ final class vua extends SingleChildWidget {
     }
 
     vua(int param0, int param1, int param2, int param3, isa param4, UiWidget param5) {
-        super(param0, param1, param2, param3, param4, (qc) null);
+        super(param0, param1, param2, param3, param4, (WidgetListener) null);
         try {
           this.child = param5;
         } catch (RuntimeException runtimeException) {

@@ -135,7 +135,7 @@ abstract class AppletGameShell extends GameApplet {
                   ic.field_b = tr.field_g;
                   ak.g(0);
                   Transform3D.field_c = 10;
-                  qga.field_m = false;
+                  HorizontalGradientOperator.field_m = false;
                 } else {
                   epa.a(var5Lifetime2, (byte) -84, io.field_b);
                   io.field_b = null;
@@ -145,7 +145,7 @@ abstract class AppletGameShell extends GameApplet {
           }
           if (var4 == 4) {
             if (!ft.field_a) {
-              qga.field_m = true;
+              HorizontalGradientOperator.field_m = true;
               Transform3D.field_c = 10;
             } else {
               cua.a((byte) -26, di.a(118));
@@ -243,7 +243,7 @@ abstract class AppletGameShell extends GameApplet {
             return;
           }
           if (var2 == 1) {
-            bma.d((byte) 82);
+            BrickOperator.d((byte) 82);
           } else {
             if (var2 == 2) {
               voa.d(-95);
@@ -421,7 +421,7 @@ abstract class AppletGameShell extends GameApplet {
         tja.field_q = dka.a((byte) -86);
         fpa.a(nma.field_l, (byte) 75);
         bi.field_c = param2;
-        nga.field_p = param3;
+        MonochromeFillOperator.field_p = param3;
         tj.field_c = param6;
         fq.field_g = param1;
         fm.field_j = param0;
@@ -666,7 +666,7 @@ abstract class AppletGameShell extends GameApplet {
         }
         if (cga.field_f == 1) {
           if (0 != ApproachPlayerLocomotor.field_t) {
-            InvisibleTouchSwitchComponent.field_J = SoftReferenceCache.openArchive(nga.field_p, 1);
+            InvisibleTouchSwitchComponent.field_J = SoftReferenceCache.openArchive(MonochromeFillOperator.field_p, 1);
           }
           tk.field_b = FacePointLocomotor.a(true, fq.field_g, false, 1, (byte) -95);
           OpenGlTexture2D.field_n = FacePointLocomotor.a(true, bi.field_c, false, 1, (byte) -109);
@@ -701,10 +701,10 @@ abstract class AppletGameShell extends GameApplet {
           GameAssetLoader.field_t = false;
           cra.a(tk.field_b, OpenGlTexture2D.field_n, 1, ft.field_a, vc.field_p);
           if (ofa.field_I ||
-            null != bma.field_s) {
+            null != BrickOperator.field_s) {
             stackIn_101_0 = !(ofa.field_I);
             stackIn_104_1 = !(ofa.field_I);
-            ag.a(stackIn_101_0, stackIn_104_1, false, bma.field_s);
+            ag.a(stackIn_101_0, stackIn_104_1, false, BrickOperator.field_s);
           }
           if (vv.field_r) {
             aoa.b(true);

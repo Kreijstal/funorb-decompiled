@@ -40,7 +40,7 @@ final class C2SSubmitSettingsPacket implements GamePacket {
     final static void a(java.awt.Canvas param0, byte param1) {
         try {
           if (Transform3D.field_c == 11) {
-            wja.d((byte) 96);
+            ClampOperator.d((byte) 96);
           }
           if (param1 < 84) {
             field_c = (String) null;

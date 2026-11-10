@@ -150,7 +150,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
                         var3 = -1;
                       }
                     } else {
-                      if (on.a((byte) 15, fna.field_h)) {
+                      if (TeleportState.a((byte) 15, fna.field_h)) {
                         var3 = fna.field_h;
                         continue;
                       }

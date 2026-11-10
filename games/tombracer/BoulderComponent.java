@@ -128,7 +128,7 @@ final class BoulderComponent extends PathMoverComponent {
             BoulderComponent.releaseStatics((byte) 73);
           }
           tu.field_h = tu.field_h + 1;
-          ksa.field_p = tka.field_n;
+          RangeOperator.field_p = tka.field_n;
           jba.field_j = ena.field_n;
           GridWidgetContainer.field_B = ee.field_a;
           qma.field_c = PlayerContextMenu.field_c;

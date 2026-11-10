@@ -49,9 +49,9 @@ final class DateFieldsWidget extends paa {
     private DateFieldsWidget(isa param0, boolean param1) {
         super(0, 0, 0, 0, (isa) null);
         try {
-          this.field_B = (TextInputWidget) ((Object) new so("", (qc) null, 2));
-          this.field_E = (TextInputWidget) ((Object) new so("", (qc) null, 2));
-          this.field_D = (TextInputWidget) ((Object) new so("", (qc) null, 4));
+          this.field_B = (TextInputWidget) ((Object) new so("", (WidgetListener) null, 2));
+          this.field_E = (TextInputWidget) ((Object) new so("", (WidgetListener) null, 2));
+          this.field_D = (TextInputWidget) ((Object) new so("", (WidgetListener) null, 4));
           this.field_G = param1 ? true : false;
           this.field_D.field_r = param0;
           this.field_E.field_r = param0;
@@ -166,10 +166,10 @@ final class DateFieldsWidget extends paa {
     final void a(byte param0, uba param1) {
         try {
           super.a((byte) -95, param1);
-          this.field_B.field_h = (qc) ((Object) param1);
+          this.field_B.field_h = (WidgetListener) ((Object) param1);
           int var3_int = 118 / ((-36 - param0) / 59);
-          this.field_E.field_h = (qc) ((Object) param1);
-          this.field_D.field_h = (qc) ((Object) param1);
+          this.field_E.field_h = (WidgetListener) ((Object) param1);
+          this.field_D.field_h = (WidgetListener) ((Object) param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fe.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

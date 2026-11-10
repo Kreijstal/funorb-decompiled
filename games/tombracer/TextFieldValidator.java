@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class TextFieldValidator extends kma implements cd {
+abstract class TextFieldValidator extends kma implements TextInputListener {
     static int field_h;
     static int field_g;
     private TextInputWidget field_i;

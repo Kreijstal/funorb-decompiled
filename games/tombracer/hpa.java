@@ -35,7 +35,7 @@ final class hpa extends aa {
           }
           paa.a((iv) (stackIn_2_0), stackIn_3_1, param1.field_j, param1.field_i, -11635, (int[]) null, param1.field_l, param1.field_d, param1.field_g);
           if (0 == param1.field_d &&
-            !nga.c(param0 + 2) &&
+            !MonochromeFillOperator.c(param0 + 2) &&
             null == uu.field_a &&
             null == ifa.field_n) {
             if (!PowerDownItemBehaviour.field_s) {
@@ -48,7 +48,7 @@ final class hpa extends aa {
             var7.field_f.addItem((byte) -117, 20, var8);
           }
           if (param1.field_d == 1 &&
-            !nga.c(0) &&
+            !MonochromeFillOperator.c(0) &&
             uu.field_a != null &&
             param1.field_e == uu.field_a.f(0)) {
             if (!PowerDownItemBehaviour.field_s) {

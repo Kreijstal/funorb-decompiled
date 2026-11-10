@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hv extends TextureOperator {
+final class ThresholdOperator extends TextureOperator {
     static String field_n;
     private int field_p;
     static String field_o;
     private int field_m;
 
-    public hv() {
+    public ThresholdOperator() {
         super(1, true);
         this.field_p = 0;
         this.field_m = 4096;
     }
 
-    final int[] c(int param0, int param1) {
+    final int[] getMonochromeRow(int param0, int param1) {
         int var5 = 0;
         int[] var3;
         int[] var4;
@@ -25,12 +25,12 @@ final class hv extends TextureOperator {
         int stackIn_10_2 = 0;
         var7 = TombRacer.field_G ? 1 : 0;
         if (param0 != 1) {
-          hv.releaseStatics(true);
+          ThresholdOperator.releaseStatics(true);
         }
         var8 = this.field_i.a((byte) -112, param1);
         var3 = var8;
         if (this.field_i.field_d) {
-          var4 = this.c(0, -125, param1);
+          var4 = this.getInputMonochromeRow(0, -125, param1);
           for (var5 = 0; var5 < ns.field_g; var5++) {
             var6 = var4[var5];
             stackIn_8_0 = var8;
@@ -47,7 +47,7 @@ final class hv extends TextureOperator {
         return var8;
     }
 
-    final void a(byte param0, PacketBuffer param1, int param2) {
+    final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -58,7 +58,7 @@ final class hv extends TextureOperator {
         var5 = TombRacer.field_G ? 1 : 0;
         try {
           if (param0 != 107) {
-            this.c(119, 60);
+            this.getMonochromeRow(119, 60);
           }
           var4_int = param2;
           if (var4_int == 0) {

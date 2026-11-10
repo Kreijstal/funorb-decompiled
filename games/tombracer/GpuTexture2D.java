@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-interface gf extends iva {
+interface GpuTexture2D extends GpuTexture {
     public abstract float textureU(int param0, float param1);
 
     public abstract int b(int param0);

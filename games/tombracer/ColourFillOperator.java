@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lm extends TextureOperator {
+final class ColourFillOperator extends TextureOperator {
     private int field_n;
     private int field_q;
     static int[] field_r;
@@ -10,11 +10,11 @@ final class lm extends TextureOperator {
     private int field_s;
     static SpriteData[] field_p;
 
-    public lm() {
+    public ColourFillOperator() {
         this(0);
     }
 
-    private lm(int param0) {
+    private ColourFillOperator(int param0) {
         super(0, false);
         this.a(param0, (byte) -55);
     }
@@ -29,7 +29,7 @@ final class lm extends TextureOperator {
         field_o = null;
     }
 
-    final void a(byte param0, PacketBuffer param1, int param2) {
+    final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         PacketBuffer var5 = null;
         RuntimeException stackIn_8_0 = null;
@@ -44,7 +44,7 @@ final class lm extends TextureOperator {
           }
           if (param0 != 107) {
             var5 = (PacketBuffer) null;
-            this.a((byte) -48, (PacketBuffer) null, 9);
+            this.decodeParameter((byte) -48, (PacketBuffer) null, 9);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -61,7 +61,7 @@ final class lm extends TextureOperator {
         }
     }
 
-    final int[][] b(int param0, int param1) {
+    final int[][] getColourRow(int param0, int param1) {
         int[] var4 = null;
         int[] var5 = null;
         int[] var6 = null;
@@ -89,7 +89,7 @@ final class lm extends TextureOperator {
         this.field_n = (param0 & 16711680) >> 12;
         if (param1 != -55) {
           PacketBuffer var4 = (PacketBuffer) null;
-          this.a((byte) 12, (PacketBuffer) null, 20);
+          this.decodeParameter((byte) 12, (PacketBuffer) null, 20);
         }
         this.field_s = 4080 & param0 << 4;
         this.field_q = (65280 & param0) >> 4;

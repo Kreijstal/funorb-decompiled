@@ -87,7 +87,7 @@ final class wna extends TextureOperator {
         return;
     }
 
-    final void a(byte param0, PacketBuffer param1, int param2) {
+    final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -395,7 +395,7 @@ final class wna extends TextureOperator {
         return false;
     }
 
-    final int[][] b(int param0, int param1) {
+    final int[][] getColourRow(int param0, int param1) {
         int[][] var3;
         int var4;
         int[] var6;
@@ -422,7 +422,7 @@ final class wna extends TextureOperator {
           if (!this.field_h.field_f) {
             return var11;
           }
-          var17 = this.c(0, -15, param0);
+          var17 = this.getInputMonochromeRow(0, -15, param0);
           var6 = var14[0];
           var7 = var14[1];
           var8 = var14[2];
@@ -445,7 +445,7 @@ final class wna extends TextureOperator {
         if (!this.field_h.field_f) {
           return var11;
         }
-        var17Lifetime1 = this.c(0, -15, param0);
+        var17Lifetime1 = this.getInputMonochromeRow(0, -15, param0);
         var6Lifetime1 = var14[0];
         var7Lifetime1 = var14[1];
         var8Lifetime1 = var14[2];

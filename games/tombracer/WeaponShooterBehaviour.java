@@ -315,13 +315,13 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
         param0 = upa.a(this.field_s, param0, (byte) -55);
         if (param1 <= -48) {
           param0 = upa.a(this.field_t, param0, (byte) -119);
-          param0 = fs.mixHash((byte) 89, param0, this.field_u.getCooldown(524288));
+          param0 = CurveOperator.mixHash((byte) 89, param0, this.field_u.getCooldown(524288));
           return param0;
         }
         in var4 = (in) null;
         WeaponShooterBehaviour.a(-27, (in) null);
         param0 = upa.a(this.field_t, param0, (byte) -119);
-        param0 = fs.mixHash((byte) 89, param0, this.field_u.getCooldown(524288));
+        param0 = CurveOperator.mixHash((byte) 89, param0, this.field_u.getCooldown(524288));
         return param0;
     }
 

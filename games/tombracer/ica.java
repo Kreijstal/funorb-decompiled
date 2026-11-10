@@ -211,14 +211,14 @@ final class ica {
                         var38 = uoa.field_e - var37 - 1;
                       }
                       if (var37 < 0) {
-                        qga.a(-(var37 * var41) + var29, var25 - var37 * var40, param6, var39, var36Lifetime2, -116, var38 + var37, var40, -(var39 * var37) + var21, var41);
+                        HorizontalGradientOperator.a(-(var37 * var41) + var29, var25 - var37 * var40, param6, var39, var36Lifetime2, -116, var38 + var37, var40, -(var39 * var37) + var21, var41);
                       } else {
-                        qga.a(var29, var25, param6, var39, var36Lifetime2 + var37, param4 - 113, var38, var40, var21, var41);
+                        HorizontalGradientOperator.a(var29, var25, param6, var39, var36Lifetime2 + var37, param4 - 113, var38, var40, var21, var41);
                       }
                     } else {
                       if (var37 >= 0 &&
                         uoa.field_e > var37) {
-                        qga.a(var29, var25, param6, 0, var37 + var36Lifetime2, param4 ^ -108, var38, 0, var21, 0);
+                        HorizontalGradientOperator.a(var29, var25, param6, 0, var37 + var36Lifetime2, param4 ^ -108, var38, 0, var21, 0);
                       }
                     }
                   }
@@ -293,7 +293,7 @@ final class ica {
                 if (var37Lifetime1 == 0) {
                   if (0 <= var36Lifetime1 &&
                     uoa.field_e > var36Lifetime1) {
-                    qga.a(var29, var25, param6, 0, var35Lifetime1 + var36Lifetime1, -112, var37Lifetime1, 0, var21, 0);
+                    HorizontalGradientOperator.a(var29, var25, param6, 0, var35Lifetime1 + var36Lifetime1, -112, var37Lifetime1, 0, var21, 0);
                   }
                 } else {
                   var38Lifetime1 = (-var21 + var22) / var37Lifetime1;
@@ -303,9 +303,9 @@ final class ica {
                     var37Lifetime1 = uoa.field_e - var36Lifetime1 - 1;
                   }
                   if (var36Lifetime1 >= 0) {
-                    qga.a(var29, var25, param6, var38Lifetime1, var36Lifetime1 + var35Lifetime1, -123, var37Lifetime1, var39Lifetime1, var21, var40Lifetime1);
+                    HorizontalGradientOperator.a(var29, var25, param6, var38Lifetime1, var36Lifetime1 + var35Lifetime1, -123, var37Lifetime1, var39Lifetime1, var21, var40Lifetime1);
                   } else {
-                    qga.a(var29 - var36Lifetime1 * var40Lifetime1, -(var36Lifetime1 * var39Lifetime1) + var25, param6, var38Lifetime1, var35Lifetime1, -127, var36Lifetime1 + var37Lifetime1, var39Lifetime1, -(var36Lifetime1 * var38Lifetime1) + var21, var40Lifetime1);
+                    HorizontalGradientOperator.a(var29 - var36Lifetime1 * var40Lifetime1, -(var36Lifetime1 * var39Lifetime1) + var25, param6, var38Lifetime1, var35Lifetime1, -127, var36Lifetime1 + var37Lifetime1, var39Lifetime1, -(var36Lifetime1 * var38Lifetime1) + var21, var40Lifetime1);
                   }
                 }
               }

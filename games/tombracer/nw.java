@@ -158,7 +158,7 @@ final class nw extends TextureOperator {
         this.field_t = 5;
     }
 
-    final int[] c(int param0, int param1) {
+    final int[] getMonochromeRow(int param0, int param1) {
         int var14 = 0;
         int var8 = 0;
         int var7 = 0;
@@ -346,7 +346,7 @@ final class nw extends TextureOperator {
         return var3;
     }
 
-    final void a(byte param0, PacketBuffer param1, int param2) {
+    final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         int dupTemp$0 = 0;
         int var4_int = 0;
         int var5 = 0;

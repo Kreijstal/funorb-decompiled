@@ -53,7 +53,7 @@ final class nna {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = (CharSequence) ((Object) param1);
-          if (!fs.a(true, var6)) {
+          if (!CurveOperator.a(true, var6)) {
             stackIn_2_0 = pk.field_v;
             return stackIn_2_0;
           }

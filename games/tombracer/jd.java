@@ -152,7 +152,7 @@ final class jd extends OpenGlTexture implements lv {
           this.field_n = param4;
           this.field_l = param3;
           this.field_k = param2;
-          this.field_j.bindTexture(true, (iva) (this));
+          this.field_j.bindTexture(true, (GpuTexture) (this));
           jaggl.OpenGL.glPixelStorei(3317, 1);
           jaggl.OpenGL.glTexImage3Dub(this.field_i, 0, this.d(120), this.field_k, this.field_l, this.field_n, 0, waa.a(this.field_f, 1383), 5121, param5, 0);
           jaggl.OpenGL.glPixelStorei(3317, 4);

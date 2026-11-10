@@ -143,7 +143,7 @@ final class dta {
             }
             if (var16 != 0) {
               var17 = 8;
-              lm.field_m.a(var17, 0);
+              ColourFillOperator.field_m.a(var17, 0);
               var18 = 0;
               var19 = dea.a(var14, (byte) -8);
               RoomEffectTraps.a(0, -106, var18 + (param5 + 34), var19.substring(0, -3 + var19.length()), 12 + param0 + var17, SingleChildWidget.field_v, 11903361);

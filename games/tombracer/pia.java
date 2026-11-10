@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pia extends nqa implements gf {
+final class pia extends nqa implements GpuTexture2D {
     boolean field_g;
     private jagdx.IDirect3DTexture field_f;
     private int field_h;

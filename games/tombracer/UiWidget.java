@@ -17,7 +17,7 @@ class UiWidget extends IntrusiveNode {
     int field_s;
     int field_i;
     int field_j;
-    qc field_h;
+    WidgetListener field_h;
     isa field_r;
 
     final void appendDiagnosticProperties(int param0, StringBuilder param1, Hashtable param2, int param3) {
@@ -272,7 +272,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    UiWidget(String param0, qc param1) {
+    UiWidget(String param0, WidgetListener param1) {
         this(param0, afa.field_c.field_k, param1);
     }
 
@@ -506,7 +506,7 @@ class UiWidget extends IntrusiveNode {
             hf.field_b != 0) {
             this.clearKeyboardFocus((byte) 119);
           }
-          TextFieldValidator.field_f = ksa.field_p;
+          TextFieldValidator.field_f = RangeOperator.field_p;
           fea.a((byte) -33, this.getHoverText((byte) 68));
           if (param3 <= -86) {
             return param1;
@@ -518,7 +518,7 @@ class UiWidget extends IntrusiveNode {
           if (hf.field_b != 0) {
             if (!this.handlePointerPress(97, param2, param0, lba.field_p, hf.field_b, this, PasswordValidator.field_m)) {
               if (var5 == 0) {
-                if (ksa.field_p == 0 &&
+                if (RangeOperator.field_p == 0 &&
                   TextFieldValidator.field_f != 0) {
                   this.handlePointerRelease((byte) 59, this, GridWidgetContainer.field_B, param2, param0, jba.field_j);
                   var8 = ava.field_f;
@@ -536,7 +536,7 @@ class UiWidget extends IntrusiveNode {
                     this.clearKeyboardFocus((byte) 119);
                   }
                 }
-                TextFieldValidator.field_f = ksa.field_p;
+                TextFieldValidator.field_f = RangeOperator.field_p;
                 fea.a((byte) -33, this.getHoverText((byte) 68));
                 if (param3 > -86) {
                   this.refreshLayout((byte) -121);
@@ -551,7 +551,7 @@ class UiWidget extends IntrusiveNode {
               param1 = false;
             }
           }
-          if (ksa.field_p == 0 &&
+          if (RangeOperator.field_p == 0 &&
             TextFieldValidator.field_f != 0) {
             this.handlePointerRelease((byte) 59, this, GridWidgetContainer.field_B, param2, param0, jba.field_j);
             var9 = ava.field_f;
@@ -566,14 +566,14 @@ class UiWidget extends IntrusiveNode {
               hf.field_b != 0) {
               this.clearKeyboardFocus((byte) 119);
             }
-            TextFieldValidator.field_f = ksa.field_p;
+            TextFieldValidator.field_f = RangeOperator.field_p;
             fea.a((byte) -33, this.getHoverText((byte) 68));
             if (param3 > -86) {
               this.refreshLayout((byte) -121);
             }
             return param1;
           }
-          TextFieldValidator.field_f = ksa.field_p;
+          TextFieldValidator.field_f = RangeOperator.field_p;
           fea.a((byte) -33, this.getHoverText((byte) 68));
           if (param3 <= -86) {
             return param1;
@@ -584,7 +584,7 @@ class UiWidget extends IntrusiveNode {
         if (var5 == 0) {
           if (hf.field_b != 0) {
             if (!this.handlePointerPress(97, param2, param0, lba.field_p, hf.field_b, this, PasswordValidator.field_m)) {
-              if (ksa.field_p == 0 &&
+              if (RangeOperator.field_p == 0 &&
                 TextFieldValidator.field_f != 0) {
                 this.handlePointerRelease((byte) 59, this, GridWidgetContainer.field_B, param2, param0, jba.field_j);
                 var10 = ava.field_f;
@@ -602,7 +602,7 @@ class UiWidget extends IntrusiveNode {
                   this.clearKeyboardFocus((byte) 119);
                 }
               }
-              TextFieldValidator.field_f = ksa.field_p;
+              TextFieldValidator.field_f = RangeOperator.field_p;
               fea.a((byte) -33, this.getHoverText((byte) 68));
               if (param3 > -86) {
                 this.refreshLayout((byte) -121);
@@ -611,7 +611,7 @@ class UiWidget extends IntrusiveNode {
             }
             param1 = false;
           }
-          if (ksa.field_p == 0 &&
+          if (RangeOperator.field_p == 0 &&
             TextFieldValidator.field_f != 0) {
             this.handlePointerRelease((byte) 59, this, GridWidgetContainer.field_B, param2, param0, jba.field_j);
             var11 = ava.field_f;
@@ -626,14 +626,14 @@ class UiWidget extends IntrusiveNode {
               hf.field_b != 0) {
               this.clearKeyboardFocus((byte) 119);
             }
-            TextFieldValidator.field_f = ksa.field_p;
+            TextFieldValidator.field_f = RangeOperator.field_p;
             fea.a((byte) -33, this.getHoverText((byte) 68));
             if (param3 > -86) {
               this.refreshLayout((byte) -121);
             }
             return param1;
           }
-          TextFieldValidator.field_f = ksa.field_p;
+          TextFieldValidator.field_f = RangeOperator.field_p;
           fea.a((byte) -33, this.getHoverText((byte) 68));
           if (param3 <= -86) {
             return param1;
@@ -652,8 +652,8 @@ class UiWidget extends IntrusiveNode {
             param1 = false;
           }
         }
-        if (ksa.field_p != 0) {
-          TextFieldValidator.field_f = ksa.field_p;
+        if (RangeOperator.field_p != 0) {
+          TextFieldValidator.field_f = RangeOperator.field_p;
           fea.a((byte) -33, this.getHoverText((byte) 68));
           if (param3 <= -86) {
             return param1;
@@ -662,7 +662,7 @@ class UiWidget extends IntrusiveNode {
           return param1;
         }
         if (TextFieldValidator.field_f == 0) {
-          TextFieldValidator.field_f = ksa.field_p;
+          TextFieldValidator.field_f = RangeOperator.field_p;
           fea.a((byte) -33, this.getHoverText((byte) 68));
           if (param3 <= -86) {
             return param1;
@@ -683,7 +683,7 @@ class UiWidget extends IntrusiveNode {
           hf.field_b != 0) {
           this.clearKeyboardFocus((byte) 119);
         }
-        TextFieldValidator.field_f = ksa.field_p;
+        TextFieldValidator.field_f = RangeOperator.field_p;
         fea.a((byte) -33, this.getHoverText((byte) 68));
         if (param3 <= -86) {
           return param1;
@@ -701,7 +701,7 @@ class UiWidget extends IntrusiveNode {
         this.field_j = 0;
     }
 
-    UiWidget(String param0, isa param1, qc param2) {
+    UiWidget(String param0, isa param1, WidgetListener param2) {
         RuntimeException runtimeException = null;
         oaa var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -750,7 +750,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    UiWidget(int param0, int param1, int param2, int param3, isa param4, qc param5) {
+    UiWidget(int param0, int param1, int param2, int param3, isa param4, WidgetListener param5) {
         this.field_t = 0;
         this.field_j = 0;
         try {

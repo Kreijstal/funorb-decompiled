@@ -192,7 +192,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
           }
           hb.field_t.a((byte) 114);
           if (mpa.field_X) {
-            qv.field_o = null;
+            MandelbrotOperator.field_o = null;
             RotaterMountComponent.field_H = new IntrusiveDeque();
             var11 = SimpleConditionBehaviour.field_o;
             var9 = var11;
@@ -430,8 +430,8 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
         if (param0 != 0) {
           return 20;
         }
-        param1 = fs.mixHash((byte) 68, param1, this.field_u);
-        param1 = fs.mixHash((byte) 90, param1, this.field_s);
+        param1 = CurveOperator.mixHash((byte) 68, param1, this.field_u);
+        param1 = CurveOperator.mixHash((byte) 90, param1, this.field_s);
         return param1;
     }
 

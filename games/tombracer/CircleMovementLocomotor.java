@@ -13,9 +13,9 @@ final class CircleMovementLocomotor extends Locomotor {
         if (param0 != 0) {
           return -79;
         }
-        param1 = fs.mixHash((byte) 54, param1, this.field_o);
-        param1 = fs.mixHash((byte) 100, param1, this.field_q);
-        param1 = fs.mixHash((byte) 107, param1, this.field_r);
+        param1 = CurveOperator.mixHash((byte) 54, param1, this.field_o);
+        param1 = CurveOperator.mixHash((byte) 100, param1, this.field_q);
+        param1 = CurveOperator.mixHash((byte) 107, param1, this.field_r);
         return param1;
     }
 

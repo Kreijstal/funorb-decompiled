@@ -339,12 +339,12 @@ final class qh extends dfa implements rqa {
         this.field_w = false;
         try {
           if (param9 >= 0 && (!mca.a((byte) 6, param9) ||
-            !bma.d(-74, param9))) {
+            !BrickOperator.d(-74, param9))) {
             throw new IllegalStateException("CA:" + param9);
           }
           this.field_E = param9;
           this.field_x = param3;
-          qv.field_o = null;
+          MandelbrotOperator.field_o = null;
           ConsoleToken.field_o = false;
           stackIn_8_1 = (param0);
           this.field_D = stackIn_8_1;
@@ -1457,13 +1457,13 @@ final class qh extends dfa implements rqa {
         if (param0 != -18570) {
           this.field_E = 16;
         }
-        if (qv.field_o == null &&
+        if (MandelbrotOperator.field_o == null &&
           this.field_j > 0 &&
           !this.o((byte) 62) && this.field_E >= 0) {
           var2 = this.field_E;
-          qv.field_o = new kb(var2, var2 ^ 65535, ti.field_b, tb.field_o, lu.field_a, Transform3D.field_b, new int[]{this.field_j});
+          MandelbrotOperator.field_o = new kb(var2, var2 ^ 65535, ti.field_b, tb.field_o, lu.field_a, Transform3D.field_b, new int[]{this.field_j});
           if (!TextWidgetPainter.a(66)) {
-            su.a(qv.field_o, (byte) -108, 3);
+            su.a(MandelbrotOperator.field_o, (byte) -108, 3);
           }
         }
     }

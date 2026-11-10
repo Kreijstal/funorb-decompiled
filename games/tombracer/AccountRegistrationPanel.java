@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends WidgetContainer implements tma, tsa, mia {
+final class AccountRegistrationPanel extends WidgetContainer implements HotspotListener, ButtonListener, mia {
     private so field_E;
     private jla field_D;
     private so field_I;
@@ -17,7 +17,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements tma, tsa
     static String field_H;
     static String[] dayNames;
 
-    public final void a(HotspotTextWidget param0, int param1, int param2, int param3) {
+    public final void onHotspotAction(HotspotTextWidget param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         HotspotTextWidget var7 = null;
@@ -29,7 +29,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements tma, tsa
         try {
           if (param2 != 30846) {
             var7 = (HotspotTextWidget) null;
-            this.a((HotspotTextWidget) null, -41, 57, 20);
+            this.onHotspotAction((HotspotTextWidget) null, -41, 57, 20);
           }
           if (param1 == 0) {
             gva.a("terms.ws", (byte) -25);
@@ -160,16 +160,16 @@ final class AccountRegistrationPanel extends WidgetContainer implements tma, tsa
 
     public AccountRegistrationPanel() {
         super(0, 0, 496, 0, (isa) null);
-        this.field_G = new so("", (qc) null, 12);
-        this.field_z = new so("", (qc) null, 100);
-        this.field_J = new so("", (qc) null, 100);
-        this.field_E = new so("", (qc) null, 20);
-        this.field_C = new so("", (qc) null, 20);
-        this.field_I = new so("", (qc) null, 3);
+        this.field_G = new so("", (WidgetListener) null, 12);
+        this.field_z = new so("", (WidgetListener) null, 100);
+        this.field_J = new so("", (WidgetListener) null, 100);
+        this.field_E = new so("", (WidgetListener) null, 20);
+        this.field_C = new so("", (WidgetListener) null, 20);
+        this.field_I = new so("", (WidgetListener) null, 3);
         int var1 = 1;
-        this.field_D = new jla("", (qc) null, var1 != 0);
-        this.field_F = new FocusableWidget(sla.field_c, (qc) null);
-        this.field_B = new FocusableWidget(HardwareOpenGlToolkit.field_gd, (qc) null);
+        this.field_D = new jla("", (WidgetListener) null, var1 != 0);
+        this.field_F = new FocusableWidget(sla.field_c, (WidgetListener) null);
+        this.field_B = new FocusableWidget(HardwareOpenGlToolkit.field_gd, (WidgetListener) null);
         this.field_G.field_q = rma.field_a;
         this.field_z.field_q = ema.field_a;
         this.field_J.field_q = ju.field_a;
@@ -211,7 +211,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements tma, tsa
         this.field_A.field_q = "";
         this.field_A.a(sw.field_Fb, 0, 0);
         this.field_A.a(sw.field_Fb, 1, 0);
-        this.field_A.field_h = (qc) (this);
+        this.field_A.field_h = (WidgetListener) (this);
         this.field_A.a(var3, (byte) -120, -90 + this.field_m, 46);
         var3 = var3 + (this.field_A.field_p + 15);
         this.addChild(this.field_A, -1);
@@ -219,8 +219,8 @@ final class AccountRegistrationPanel extends WidgetContainer implements tma, tsa
         int var7 = 200;
         this.field_F.setBounds((byte) -31, var7, 40, -var7 + 496 >> 1, var3);
         this.field_B.setBounds((byte) -31, 60, 40, var6 + 3, 15 + var3);
-        this.field_B.field_h = (qc) (this);
-        this.field_F.field_h = (qc) (this);
+        this.field_B.field_h = (WidgetListener) (this);
+        this.field_F.field_h = (WidgetListener) (this);
         this.addChild(this.field_F, -1);
         this.addChild(this.field_B, -1);
         this.field_y = new UsernameSuggestionsPanel((mia) (this));
@@ -254,7 +254,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements tma, tsa
           var10 = new jsa(20, param0, param3 + 120, 25, param2, false, 120, 3, KeySwitchComponent.field_J, 16777215, param6);
           this.addChild(var10, -1);
           var9 = new ValidationMessageWidget(((mk) ((Object) param2)).a((byte) 120), param5, 126, var10.field_p + param0, param3 + 50, param4);
-          var9.field_h = (qc) (this);
+          var9.field_h = (WidgetListener) (this);
           this.addChild(var9, -1);
           if (param1 >= 66) {
             stackIn_4_0 = var9.field_p + var10.field_p;
@@ -456,7 +456,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements tma, tsa
         try {
           if (param3 != -3) {
             var8 = (HotspotTextWidget) null;
-            this.a((HotspotTextWidget) null, -33, -81, -72);
+            this.onHotspotAction((HotspotTextWidget) null, -33, -81, -72);
           }
           stackIn_3_0 = this.a(param5, param3 + 112, param2, param4, 35, param1, param0);
           return stackIn_3_0;

@@ -165,7 +165,7 @@ final class S2CPlayerSyncPacket implements GamePacket {
           if (param0 < 104) {
             S2CPlayerSyncPacket.a(-27);
           }
-          stackIn_3_0 = qga.a(125, param1, 0, param1.length);
+          stackIn_3_0 = HorizontalGradientOperator.a(125, param1, 0, param1.length);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

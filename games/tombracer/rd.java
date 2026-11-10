@@ -77,7 +77,7 @@ final class rd extends wv {
           var3 = 500;
           var4 = aaa.a(false) / 2 - var3 / 2;
           var5 = param0 + 100;
-          oka.a(wja.field_o.toUpperCase(), 2497287, SingleChildWidget.field_v, -1, -30 + gg.field_f.c() / 2 + var5, aaa.a(false) / 2, -1);
+          oka.a(ClampOperator.field_o.toUpperCase(), 2497287, SingleChildWidget.field_v, -1, -30 + gg.field_f.c() / 2 + var5, aaa.a(false) / 2, -1);
           var6 = kn.field_p;
           var7 = kv.field_a.field_h + (kv.field_a.field_g + 4);
           var8 = 3 * var7;

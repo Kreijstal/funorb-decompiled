@@ -216,7 +216,7 @@ class tu extends SimulationObserver {
         }
     }
 
-    void a(int param0, Player param1, Room param2) {
+    void onRoomEntered(int param0, Player param1, Room param2) {
         int var7 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ita implements mw {
+final class ita implements RenderBuffer {
     static IndexedSprite[] field_e;
     int field_d;
     static jea field_c;

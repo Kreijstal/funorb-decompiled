@@ -145,7 +145,7 @@ class TextWidgetPainter implements isa, oaa {
         if (param0 <= 2) {
           TextWidgetPainter.a(3);
         }
-        return qga.field_m;
+        return HorizontalGradientOperator.field_m;
     }
 
     private final void a(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6, int param7) {

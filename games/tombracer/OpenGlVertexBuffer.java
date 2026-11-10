@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class OpenGlVertexBuffer extends OpenGlBuffer implements eja {
+final class OpenGlVertexBuffer extends OpenGlBuffer implements VertexBuffer {
     private una field_l;
 
     public final void a(int param0, int param1) {

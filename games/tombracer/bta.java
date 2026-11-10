@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bta extends vw {
-    private gf field_p;
+    private GpuTexture2D field_p;
     private mf field_r;
     private mf field_o;
     static java.awt.Color field_i;
@@ -170,7 +170,7 @@ final class bta extends vw {
     final void a(int param0) {
         this.field_c.e(1, false);
         if (param0 < -4) {
-          this.field_c.bindTexture(true, (iva) null);
+          this.field_c.bindTexture(true, (GpuTexture) null);
           this.field_c.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
           this.field_c.a(ej.field_c, 0, -49);
           this.field_c.a(pea.field_c, 2, -53);
@@ -190,7 +190,7 @@ final class bta extends vw {
           return;
         }
         this.a(73);
-        this.field_c.bindTexture(true, (iva) null);
+        this.field_c.bindTexture(true, (GpuTexture) null);
         this.field_c.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
         this.field_c.a(ej.field_c, 0, -49);
         this.field_c.a(pea.field_c, 2, -53);
@@ -209,7 +209,7 @@ final class bta extends vw {
         }
     }
 
-    final void a(int param0, iva param1, int param2) {
+    final void a(int param0, GpuTexture param1, int param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -254,7 +254,7 @@ final class bta extends vw {
 
     final boolean c(int param0) {
         if (param0 != 1185) {
-          this.field_p = (gf) null;
+          this.field_p = (GpuTexture2D) null;
           return this.field_m;
         }
         return this.field_m;

@@ -37,8 +37,8 @@ final class usa extends vw {
         if (param0 == 107) {
           return;
         }
-        iva var4 = (iva) null;
-        this.a(-5, (iva) null, 86);
+        GpuTexture var4 = (GpuTexture) null;
+        this.a(-5, (GpuTexture) null, 86);
     }
 
     final void b(int param0) {
@@ -76,7 +76,7 @@ final class usa extends vw {
         this.a((byte) 6, -79, -56);
     }
 
-    final void a(int param0, iva param1, int param2) {
+    final void a(int param0, GpuTexture param1, int param2) {
         if (param2 != 24595) {
           field_d = (float[]) null;
         }
@@ -131,8 +131,8 @@ final class usa extends vw {
     final void a(boolean param0, int param1) {
         this.field_c.setTextureCombineOperations(jv.field_m, (byte) -110, r.field_m);
         if (param1 != 5744) {
-          iva var4 = (iva) null;
-          this.a(-56, (iva) null, 109);
+          GpuTexture var4 = (GpuTexture) null;
+          this.a(-56, (GpuTexture) null, 109);
         }
     }
 

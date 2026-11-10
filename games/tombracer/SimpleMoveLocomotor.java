@@ -10,7 +10,7 @@ final class SimpleMoveLocomotor extends Locomotor {
     private int field_o;
 
     final int hashState(int param0, int param1) {
-        param1 = fs.mixHash((byte) 35, param1, this.field_o);
+        param1 = CurveOperator.mixHash((byte) 35, param1, this.field_o);
         if (param0 != 0) {
           this.tick((byte) -115);
           return param1;

@@ -4,7 +4,7 @@
 final class bda extends TextureOperator {
     static int field_m;
 
-    final int[] c(int param0, int param1) {
+    final int[] getMonochromeRow(int param0, int param1) {
         int var4 = 0;
         int var5 = 0;
         int var6 = TombRacer.field_G ? 1 : 0;

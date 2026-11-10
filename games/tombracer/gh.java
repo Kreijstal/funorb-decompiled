@@ -12,7 +12,7 @@ final class gh extends ToolkitSprite {
     private boolean field_a;
     private int field_j;
     private boolean field_b;
-    private gf field_d;
+    private GpuTexture2D field_d;
     private int field_k;
     static String field_e;
     private int field_i;
@@ -35,7 +35,7 @@ final class gh extends ToolkitSprite {
         float var25;
         float var26;
         AffineTransform3D var27;
-        gf stackIn_4_0 = null;
+        GpuTexture2D stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         hs stackIn_5_2 = null;
         var27 = this.field_c.y((byte) -77);
@@ -49,7 +49,7 @@ final class gh extends ToolkitSprite {
         } else {
           stackIn_5_2 = MiscItemBehaviour.field_v;
         }
-        ((gf) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_5_2);
+        ((GpuTexture2D) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_5_2);
         this.field_c.k((byte) 121);
         this.field_c.bindTexture(true, this.field_d);
         this.field_c.setBlendMode(param8, 1);
@@ -192,7 +192,7 @@ final class gh extends ToolkitSprite {
     final void drawScaled(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         AffineTransform3D var10;
         AffineTransform3D var11;
-        gf stackIn_4_0 = null;
+        GpuTexture2D stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         hs stackIn_6_2 = null;
         var11 = this.field_c.y((byte) -77);
@@ -206,7 +206,7 @@ final class gh extends ToolkitSprite {
         } else {
           stackIn_6_2 = MiscItemBehaviour.field_v;
         }
-        ((gf) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_6_2);
+        ((GpuTexture2D) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_6_2);
         this.field_c.k((byte) 118);
         this.field_c.bindTexture(true, this.field_d);
         this.field_c.setBlendMode(param6, 1);

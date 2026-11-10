@@ -14,7 +14,7 @@ final class em extends vw {
           this.field_c.a(0, false, ej.field_c);
         } else {
           this.field_c.e(1, false);
-          this.field_c.bindTexture(true, (iva) null);
+          this.field_c.bindTexture(true, (GpuTexture) null);
           this.field_c.applyTexCoordGeneration(ItemModel.field_o, (byte) 0);
           this.field_c.p((byte) 127);
           if (!this.field_d) {
@@ -25,7 +25,7 @@ final class em extends vw {
             this.field_c.a(ej.field_c, 0, -108);
             this.field_c.a(PlayerContextMenu.field_j, 1, -15);
             this.field_c.a(0, false, ej.field_c);
-            this.field_c.bindTexture(true, (iva) null);
+            this.field_c.bindTexture(true, (GpuTexture) null);
           } else {
             this.field_c.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
             this.field_c.a(ej.field_c, 0, -94);
@@ -209,7 +209,7 @@ final class em extends vw {
         return true;
     }
 
-    final void a(int param0, iva param1, int param2) {
+    final void a(int param0, GpuTexture param1, int param2) {
         this.field_c.bindTexture(true, param1);
         if (param2 != 24595) {
           return;

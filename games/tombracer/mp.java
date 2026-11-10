@@ -193,12 +193,12 @@ final class mp {
           pm.field_a[0] = 16764000;
           pm.field_a[1] = 6356832;
           VortexBehaviour.field_t = param7;
-          bma.field_t[3] = 16736511;
-          bma.field_t[2] = 16736352;
+          BrickOperator.field_t[3] = 16736511;
+          BrickOperator.field_t[2] = 16736352;
           sva.field_d = 8421504;
-          bma.field_t[param6] = 16764000;
+          BrickOperator.field_t[param6] = 16764000;
           pm.field_a[4] = 16711935;
-          bma.field_t[1] = 6356832;
+          BrickOperator.field_t[1] = 6356832;
           var12 = new Sprite(4, 4);
           var13 = var12.pixels;
           var14 = var12.pixels;

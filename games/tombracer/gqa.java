@@ -108,7 +108,7 @@ final class gqa {
         this.field_f = ConveyorBehaviour.field_p;
         this.field_g = esa.field_c;
         this.field_c = gb.field_a;
-        this.field_n = jda.field_m;
+        this.field_n = GreyscaleOperator.field_m;
         this.field_e = era.field_a;
         if (!param0) {
           this.field_h = null;

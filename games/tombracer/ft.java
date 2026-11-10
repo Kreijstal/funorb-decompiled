@@ -153,7 +153,7 @@ final class ft {
                   wp.field_c[var23Lifetime2] = var29Lifetime1;
                 }
                 if (param6) {
-                  bma.field_p[var23Lifetime2] = var27Lifetime1 >> SecondaryNodeDeque.field_a;
+                  BrickOperator.field_p[var23Lifetime2] = var27Lifetime1 >> SecondaryNodeDeque.field_a;
                   WheeledMountComponent.field_M[var23Lifetime2] = var28Lifetime1 >> SecondaryNodeDeque.field_a;
                   iia.field_v[var23Lifetime2] = var29Lifetime1;
                 }

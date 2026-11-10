@@ -21,7 +21,7 @@ final class bk extends TextureOperator {
     final void b(byte param0) {
         if (param0 != 116) {
           PacketBuffer var3 = (PacketBuffer) null;
-          this.a((byte) 61, (PacketBuffer) null, -62);
+          this.decodeParameter((byte) 61, (PacketBuffer) null, -62);
         }
         tka.b((byte) 115);
     }
@@ -35,7 +35,7 @@ final class bk extends TextureOperator {
         this.field_n = 0;
     }
 
-    final void a(byte param0, PacketBuffer param1, int param2) {
+    final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_19_0 = null;
@@ -89,7 +89,7 @@ final class bk extends TextureOperator {
         }
     }
 
-    final int[] c(int param0, int param1) {
+    final int[] getMonochromeRow(int param0, int param1) {
         int var7 = 0;
         int var23 = 0;
         int stackIn_8_0 = 0;
@@ -138,7 +138,7 @@ final class bk extends TextureOperator {
             var8 = var8 >> 4 & 255;
             var9 = BufferedSocket.a(ns.field_g, var6, 44);
             var10 = BufferedSocket.a(ArchiveNetworkClient.field_i, var6, -127);
-            var11 = (this.field_o * lm.field_r[var8] >> 12) + var9;
+            var11 = (this.field_o * ColourFillOperator.field_r[var8] >> 12) + var9;
             var12 = var10 + (ou.field_e[var8] * this.field_o >> 12);
             var13 = var12 - var10;
             var14 = -var9 + var11;

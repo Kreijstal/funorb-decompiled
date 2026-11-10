@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class Projectile extends PooledObject implements Renderable, Collidable, t {
+final class Projectile extends PooledObject implements Renderable, Collidable, Teleportable {
     private int field_j;
     private boolean field_p;
     private int x;
@@ -27,7 +27,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, t
     private int endSize;
     private int field_o;
     private int field_I;
-    private on field_q;
+    private TeleportState field_q;
     private int serial;
     int field_m;
 
@@ -65,7 +65,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, t
         return this.velocityX;
     }
 
-    public final boolean j(byte param0) {
+    public final boolean canTeleport(byte param0) {
         if (param0 >= -102) {
           field_n = (ToolkitSprite) null;
           return true;
@@ -367,7 +367,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, t
         int var3Lifetime1;
         int var2Lifetime1;
         if (param0 < 0) {
-          this.c(true);
+          this.getTeleportState(true);
           var3 = this.effect.type;
           if (var3 == 4) {
             return;
@@ -920,7 +920,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, t
 
     final int i(int param0) {
         if (param0 != -1) {
-          this.field_q = (on) null;
+          this.field_q = (TeleportState) null;
           return this.field_o;
         }
         return this.field_o;
@@ -956,7 +956,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, t
         }
     }
 
-    public final on c(boolean param0) {
+    public final TeleportState getTeleportState(boolean param0) {
         if (param0) {
           this.field_I = -9;
           return this.field_q;
@@ -966,7 +966,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, t
 
     public final void f(int param0) {
         if (param0 != -4366) {
-          this.field_q = (on) null;
+          this.field_q = (TeleportState) null;
         }
     }
 
@@ -1230,7 +1230,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, t
 
     public final int getRenderY(byte param0) {
         if (param0 <= 91) {
-          this.field_q = (on) null;
+          this.field_q = (TeleportState) null;
           return this.y;
         }
         return this.y;
@@ -1363,20 +1363,20 @@ final class Projectile extends PooledObject implements Renderable, Collidable, t
     }
 
     final int hashState(int param0, byte param1) {
-        param0 = fs.mixHash((byte) 88, param0, this.x);
-        param0 = fs.mixHash((byte) 30, param0, this.y);
+        param0 = CurveOperator.mixHash((byte) 88, param0, this.x);
+        param0 = CurveOperator.mixHash((byte) 30, param0, this.y);
         if (param1 == -39) {
-          param0 = fs.mixHash((byte) 32, param0, this.velocityX);
-          param0 = fs.mixHash((byte) 120, param0, this.velocityY);
-          param0 = fs.mixHash((byte) 58, param0, this.endSize);
-          param0 = fs.mixHash((byte) 85, param0, this.angle);
+          param0 = CurveOperator.mixHash((byte) 32, param0, this.velocityX);
+          param0 = CurveOperator.mixHash((byte) 120, param0, this.velocityY);
+          param0 = CurveOperator.mixHash((byte) 58, param0, this.endSize);
+          param0 = CurveOperator.mixHash((byte) 85, param0, this.angle);
           return param0;
         }
         boolean discarded$0 = this.isFromPlayer((byte) 2);
-        param0 = fs.mixHash((byte) 32, param0, this.velocityX);
-        param0 = fs.mixHash((byte) 120, param0, this.velocityY);
-        param0 = fs.mixHash((byte) 58, param0, this.endSize);
-        param0 = fs.mixHash((byte) 85, param0, this.angle);
+        param0 = CurveOperator.mixHash((byte) 32, param0, this.velocityX);
+        param0 = CurveOperator.mixHash((byte) 120, param0, this.velocityY);
+        param0 = CurveOperator.mixHash((byte) 58, param0, this.endSize);
+        param0 = CurveOperator.mixHash((byte) 85, param0, this.angle);
         return param0;
     }
 
@@ -1438,7 +1438,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, t
 
     Projectile() {
         this.field_i = -1;
-        this.field_q = new on();
+        this.field_q = new TeleportState();
         int fieldTemp$0 = ValidationMessageWidget.field_G;
         ValidationMessageWidget.field_G = ValidationMessageWidget.field_G + 1;
         this.serial = fieldTemp$0;

@@ -57,13 +57,13 @@ final class fp {
         int incrementValue$0 = param1;
         param1++;
         var16_ref.a(incrementValue$0, (byte) 47, param0);
-        lm.field_p = new SpriteData[6];
-        lm.field_p[0] = SpriteData.loadSprite(param2, "", "menu_button_sml");
-        lm.field_p[1] = SpriteData.loadSprite(param2, "", "menu_button_mid");
-        lm.field_p[2] = SpriteData.loadSprite(param2, "", "menu_button_lrg");
-        lm.field_p[3] = SpriteData.loadSprite(param2, "", "menu_button_xlrg");
-        lm.field_p[4] = SpriteData.loadSprite(param2, "", "button_main1");
-        lm.field_p[5] = SpriteData.loadSprite(param2, "", "button_main2");
+        ColourFillOperator.field_p = new SpriteData[6];
+        ColourFillOperator.field_p[0] = SpriteData.loadSprite(param2, "", "menu_button_sml");
+        ColourFillOperator.field_p[1] = SpriteData.loadSprite(param2, "", "menu_button_mid");
+        ColourFillOperator.field_p[2] = SpriteData.loadSprite(param2, "", "menu_button_lrg");
+        ColourFillOperator.field_p[3] = SpriteData.loadSprite(param2, "", "menu_button_xlrg");
+        ColourFillOperator.field_p[4] = SpriteData.loadSprite(param2, "", "button_main1");
+        ColourFillOperator.field_p[5] = SpriteData.loadSprite(param2, "", "button_main2");
         int incrementValue$1 = param1;
         param1++;
         var16_ref.a(incrementValue$1, (byte) 47, param0);
@@ -257,7 +257,7 @@ final class fp {
               if (FacePointLocomotor.field_r.field_h == var4) {
                 var5 = ct.field_a;
               } else {
-                var5 = qv.field_m;
+                var5 = MandelbrotOperator.field_m;
               }
             } else {
               var5 = mn.field_k;

@@ -39,7 +39,7 @@ final class pfa {
                 this.var4 = 0;
             }
             void runChunk0() throws java.lang.RuntimeException {
-                fs.textArchive = param0;
+                CurveOperator.textArchive = param0;
                 var2 = mt.readTextEntry("achievement_names,0", (byte) 108);
                 if (null != var2) {
                   lq.achievementNames[0] = jaa.decodeText((byte) 77, var2);
@@ -643,7 +643,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("instructionTextLindemannTotems", (byte) 123);
                 if (var2 != null) {
-                  sba.field_o = jaa.decodeText((byte) 29, var2);
+                  InvertOperator.field_o = jaa.decodeText((byte) 29, var2);
                 }
                 var2 = mt.readTextEntry("instructionTitleMobileLindemannTotems", (byte) 102);
                 if (var2 != null) {
@@ -667,7 +667,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("instructionTextMirrors", (byte) 127);
                 if (null != var2) {
-                  hv.field_o = jaa.decodeText((byte) 89, var2);
+                  ThresholdOperator.field_o = jaa.decodeText((byte) 89, var2);
                 }
                 var2 = mt.readTextEntry("instructionTitleMobileMirrors", (byte) 126);
                 if (var2 != null) {
@@ -1053,7 +1053,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("pleaselogin", (byte) 105);
                 if (null != var2) {
-                  wja.field_o = jaa.decodeText((byte) 79, var2);
+                  ClampOperator.field_o = jaa.decodeText((byte) 79, var2);
                 }
                 var2 = mt.readTextEntry("hint_drag", (byte) 115);
                 if (null != var2) {
@@ -2129,7 +2129,7 @@ final class pfa {
                 if (null != var2) {
                   qw.field_g = jaa.decodeText((byte) 39, var2);
                 }
-                fs.textArchive = null;
+                CurveOperator.textArchive = null;
             }
             void run() {
                 var4 = TombRacer.field_G ? 1 : 0;

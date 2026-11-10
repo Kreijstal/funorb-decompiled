@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-abstract class ArrayWidgetGroup extends UiWidget implements tpa {
+abstract class ArrayWidgetGroup extends UiWidget implements WidgetParent {
     static int[] field_u;
     static SpriteData field_v;
     UiWidget[] children;
@@ -370,7 +370,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements tpa {
     }
 
     ArrayWidgetGroup(int param0, int param1, int param2, int param3, isa param4) {
-        super(param0, param1, param2, param3, param4, (qc) null);
+        super(param0, param1, param2, param3, param4, (WidgetListener) null);
     }
 
     final int getTopLayer(boolean param0) {

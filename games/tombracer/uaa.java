@@ -33,10 +33,10 @@ final class uaa {
           var2_int = sva.field_d;
           if (param1.field_d != 2) {
             if (param1.field_d == 4) {
-              var2_intLifetime1 = bma.field_t[param1.field_d];
+              var2_intLifetime1 = BrickOperator.field_t[param1.field_d];
             } else {
               if (~param1.field_i != ~SimpleConditionBehaviour.field_r) {
-                var2_intLifetime1 = bma.field_t[param1.field_d];
+                var2_intLifetime1 = BrickOperator.field_t[param1.field_d];
               } else {
                 var2_intLifetime1 = pm.field_a[param1.field_d];
               }
@@ -49,7 +49,7 @@ final class uaa {
                 param1.field_o == 0) {
                 var2_intLifetime1 = pm.field_a[param1.field_d];
               } else {
-                var2_intLifetime1 = bma.field_t[param1.field_d];
+                var2_intLifetime1 = BrickOperator.field_t[param1.field_d];
               }
             }
           }

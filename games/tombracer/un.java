@@ -9,7 +9,7 @@ final class un extends TextureOperator {
     private int field_p;
     static int[] field_r;
 
-    final int[] c(int param0, int param1) {
+    final int[] getMonochromeRow(int param0, int param1) {
         int var7 = 0;
         int[] var26 = null;
         int[] var9 = null;
@@ -31,9 +31,9 @@ final class un extends TextureOperator {
         int[] var3 = var18;
         if (this.field_i.field_d) {
           var7 = this.field_o * ooa.field_g >> 12;
-          var26 = this.c(0, -126, hba.field_b & -1 + param1);
-          var9 = this.c(0, param0 ^ -36, param1);
-          var25 = this.c(0, -116, param1 + 1 & hba.field_b);
+          var26 = this.getInputMonochromeRow(0, -126, hba.field_b & -1 + param1);
+          var9 = this.getInputMonochromeRow(0, param0 ^ -36, param1);
+          var25 = this.getInputMonochromeRow(0, -116, param1 + 1 & hba.field_b);
           for (var11 = 0; var11 < ns.field_g; var11++) {
             var12 = (var25[var11] - var26[var11]) * var7 >> 12;
             var13 = var7 * (var9[-1 + var11 & una.field_b] - var9[una.field_b & var11 + 1]) >> 12;
@@ -72,7 +72,7 @@ final class un extends TextureOperator {
         this.field_n = new int[3];
     }
 
-    final void a(byte param0, PacketBuffer param1, int param2) {
+    final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -95,7 +95,7 @@ final class un extends TextureOperator {
             this.field_o = param1.readUnsignedShort(param0 + 14);
           }
           if (param0 != 107) {
-            this.c(24, 112);
+            this.getMonochromeRow(24, 112);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

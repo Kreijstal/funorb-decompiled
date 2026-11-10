@@ -36,7 +36,7 @@ final class fn extends vw {
         }
         this.field_c.e(1, false);
         if ((param1 & 128) != 0) {
-          this.field_c.bindTexture(true, (iva) null);
+          this.field_c.bindTexture(true, (GpuTexture) null);
         } else {
           if ((1 & param2) != 1) {
             if (this.field_d.field_g) {
@@ -64,7 +64,7 @@ final class fn extends vw {
           this.field_c.a(ej.field_c, 0, -55);
           this.field_c.a(0, false, ej.field_c);
           this.field_c.a(1, (byte) 58);
-          this.field_c.bindTexture(true, (iva) null);
+          this.field_c.bindTexture(true, (GpuTexture) null);
           this.field_c.e(0, false);
           this.field_c.a(0, false, ej.field_c);
           return;
@@ -75,7 +75,7 @@ final class fn extends vw {
         this.field_c.a(ej.field_c, 0, -55);
         this.field_c.a(0, false, ej.field_c);
         this.field_c.a(1, (byte) 58);
-        this.field_c.bindTexture(true, (iva) null);
+        this.field_c.bindTexture(true, (GpuTexture) null);
         this.field_c.e(0, false);
         this.field_c.a(0, false, ej.field_c);
     }
@@ -114,7 +114,7 @@ final class fn extends vw {
         this.field_c.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, iw.field_c);
     }
 
-    final void a(int param0, iva param1, int param2) {
+    final void a(int param0, GpuTexture param1, int param2) {
         try {
           this.field_c.bindTexture(true, param1);
           if (param2 != 24595) {

@@ -40,7 +40,7 @@ class FocusableWidget extends UiWidget {
         }
     }
 
-    FocusableWidget(String param0, isa param1, qc param2) {
+    FocusableWidget(String param0, isa param1, WidgetListener param2) {
         super(param0, param1, param2);
         this.field_u = false;
         this.field_x = 0;
@@ -96,7 +96,7 @@ class FocusableWidget extends UiWidget {
         }
     }
 
-    FocusableWidget(String param0, qc param1) {
+    FocusableWidget(String param0, WidgetListener param1) {
         this(param0, afa.field_c.field_u, param1);
     }
 
@@ -105,11 +105,11 @@ class FocusableWidget extends UiWidget {
           super.updatePointerState(param0, param1, param2, param3);
           this.field_x = 0;
           if (this.field_s != 0) {
-            if (this.field_s == ksa.field_p) {
+            if (this.field_s == RangeOperator.field_p) {
               return;
             }
             if (this.containsPointer(jba.field_j, param0, param1 ^ -2097252, GridWidgetContainer.field_B, param3) &&
-              ksa.field_p == 0) {
+              RangeOperator.field_p == 0) {
               this.b(GridWidgetContainer.field_B - param3, this.field_s, -param0 + jba.field_j, -86);
             }
             this.handlePointerRelease((byte) 59, param2, GridWidgetContainer.field_B, param0, param3, jba.field_j);
@@ -178,7 +178,7 @@ class FocusableWidget extends UiWidget {
         var2Lifetime3 = 101 / ((param0 + 38) / 60);
     }
 
-    FocusableWidget(int param0, int param1, int param2, int param3, isa param4, qc param5) {
+    FocusableWidget(int param0, int param1, int param2, int param3, isa param4, WidgetListener param5) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_u = false;
         this.field_x = 0;
@@ -362,14 +362,14 @@ class FocusableWidget extends UiWidget {
           FocusableWidget.a(14);
           return;
         }
-        if (!(this.field_h instanceof tsa)) {
+        if (!(this.field_h instanceof ButtonListener)) {
           if (param3 <= -40) {
             return;
           }
           FocusableWidget.a(14);
           return;
         }
-        ((tsa) (this.field_h)).onButtonActivated(param0, param2, this, param1, (byte) 115);
+        ((ButtonListener) (this.field_h)).onButtonActivated(param0, param2, this, param1, (byte) 115);
         if (param3 <= -40) {
           return;
         }

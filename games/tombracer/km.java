@@ -121,13 +121,13 @@ final class km extends DualLinkNode {
           var7 = var20;
           var8 = 0;
           for (var9 = 0; var9 < param2; var9++) {
-            if (this.field_k.field_g) {
-              var15_ref_int__ = this.field_k.c(1, var9);
+            if (this.field_k.monochrome) {
+              var15_ref_int__ = this.field_k.getMonochromeRow(1, var9);
               var10_ref_int__ = var15_ref_int__;
               var11 = var15_ref_int__;
               var12 = var15_ref_int__;
             } else {
-              var23 = this.field_k.b(var9, -1);
+              var23 = this.field_k.getColourRow(var9, -1);
               var22 = var23;
               var19 = var22;
               var15_ref_int____ = var19;
@@ -135,18 +135,18 @@ final class km extends DualLinkNode {
               var12 = var23[2];
               var10_ref_int__ = var23[0];
             }
-            if (this.field_r.field_g) {
-              var13 = this.field_r.c(1, var9);
+            if (this.field_r.monochrome) {
+              var13 = this.field_r.getMonochromeRow(1, var9);
             } else {
-              var13 = this.field_r.b(var9, -1)[0];
+              var13 = this.field_r.getColourRow(var9, -1)[0];
             }
             if (param4) {
               var8 = var9 << 2;
             }
-            if (this.field_m.field_g) {
-              var14 = this.field_m.c(1, var9);
+            if (this.field_m.monochrome) {
+              var14 = this.field_m.getMonochromeRow(1, var9);
             } else {
-              var14 = this.field_m.b(var9, -1)[0];
+              var14 = this.field_m.getColourRow(var9, -1)[0];
             }
             for (var15 = param3 - 1; var15 >= 0; var15--) {
               var16 = (float)var13[var15] / 4096.0f;
@@ -264,13 +264,13 @@ final class km extends DualLinkNode {
           }
           var14 = 0;
           for (var15 = 0; var15 < param0; var15++) {
-            if (this.field_k.field_g) {
-              var19_ref_int__ = this.field_k.c(1, var15);
+            if (this.field_k.monochrome) {
+              var19_ref_int__ = this.field_k.getMonochromeRow(1, var15);
               var16 = var19_ref_int__;
               var18 = var19_ref_int__;
               var17 = var19_ref_int__;
             } else {
-              var29 = this.field_k.b(var15, -1);
+              var29 = this.field_k.getColourRow(var15, -1);
               var28 = var29;
               var25 = var28;
               var19_ref_int____ = var25;
@@ -386,7 +386,7 @@ final class km extends DualLinkNode {
             if (var14.c((byte) -117) >= 0) {
               var4++;
             }
-            var8 = var14.field_j.length;
+            var8 = var14.inputs.length;
             array$2 = new int[var8];
             var12[var6] = array$2;
             for (var9 = 0; var8 > var9; var9++) {
@@ -400,9 +400,9 @@ final class km extends DualLinkNode {
           var4Lifetime1 = 0;
           for (var6Lifetime1 = 0; var2_int > var6Lifetime1; var6Lifetime1++) {
             var15 = this.field_l[var6Lifetime1];
-            var8Lifetime1 = var15.field_j.length;
+            var8Lifetime1 = var15.inputs.length;
             for (var9Lifetime1 = 0; var8Lifetime1 > var9Lifetime1; var9Lifetime1++) {
-              var15.field_j[var9Lifetime1] = this.field_l[var12[var6Lifetime1][var9Lifetime1]];
+              var15.inputs[var9Lifetime1] = this.field_l[var12[var6Lifetime1][var9Lifetime1]];
             }
             var9Lifetime1Lifetime1 = var15.a(100);
             var10 = var15.c((byte) -117);
@@ -484,8 +484,8 @@ final class km extends DualLinkNode {
           var9 = new int[param0 * param2];
           var10 = 0;
           for (var11 = 0; param2 > var11; var11++) {
-            if (!this.field_k.field_g) {
-              var26 = this.field_k.b(var11, -1);
+            if (!this.field_k.monochrome) {
+              var26 = this.field_k.getColourRow(var11, -1);
               var25 = var26;
               var22 = var25;
               var15 = var22;
@@ -493,16 +493,16 @@ final class km extends DualLinkNode {
               var12 = var26[0];
               var14 = var26[2];
             } else {
-              var23 = this.field_k.c(1, var11);
+              var23 = this.field_k.getMonochromeRow(1, var11);
               var15_array = var23;
               var14 = var23;
               var12 = var23;
               var13 = var23;
             }
-            if (this.field_r.field_g) {
-              var15_arrayLifetime1 = this.field_r.c(1, var11);
+            if (this.field_r.monochrome) {
+              var15_arrayLifetime1 = this.field_r.getMonochromeRow(1, var11);
             } else {
-              var15_arrayLifetime1 = this.field_r.b(var11, -1)[0];
+              var15_arrayLifetime1 = this.field_r.getColourRow(var11, -1)[0];
             }
             if (param1) {
               var10 = var11;

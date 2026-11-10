@@ -33,16 +33,16 @@ final class OpenGlToolkit extends GraphicsToolkit {
     jaclib.memory.heap.NativeHeap field_md;
     int field_Oc;
     private IntrusiveDeque field_qb;
-    private ks field_Qb;
+    private Framebuffer field_Qb;
     private int field_A;
-    private ks[] field_M;
-    private ks[] field_kd;
-    private ks[] field_ub;
+    private Framebuffer[] field_M;
+    private Framebuffer[] field_kd;
+    private Framebuffer[] field_ub;
     private OpenGlSprite field_Mb;
     private vj field_F;
     private OpenGlFramebuffer field_bb;
     private int field_Zc;
-    private ks field_t;
+    private Framebuffer field_t;
     private int field_x;
     private NodeHashTable field_Wc;
     private IntrusiveDeque field_Lc;
@@ -201,7 +201,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         return (Transform3D) ((Object) new OpenGlTransform3D());
     }
 
-    final void a(jca param0) {
+    final void a(RenderTarget param0) {
     }
 
     final ka a(oc param0, int param1, int param2, int param3, int param4) {
@@ -938,7 +938,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final jca createRenderTarget(nha param0, mw param1) {
+    final RenderTarget createRenderTarget(RenderSurface param0, RenderBuffer param1) {
         RuntimeException var3 = null;
         Object stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -949,7 +949,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           stackIn_1_0 = null;
-          return (jca) (stackIn_1_0);
+          return (RenderTarget) (stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -979,7 +979,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         jaggl.OpenGL.glMatrixMode(5888);
     }
 
-    final void a(ks param0, int param1) {
+    final void a(Framebuffer param0, int param1) {
         int fieldTemp$1 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -1261,7 +1261,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final mw b(int param0, int param1) {
+    final RenderBuffer b(int param0, int param1) {
         return null;
     }
 
@@ -1725,11 +1725,11 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_Ob = false;
         this.field_qb = new IntrusiveDeque();
         this.field_A = -1;
-        this.field_ub = new ks[4];
+        this.field_ub = new Framebuffer[4];
         this.field_Zc = -1;
-        this.field_M = new ks[4];
+        this.field_M = new Framebuffer[4];
         this.field_x = -1;
-        this.field_kd = new ks[4];
+        this.field_kd = new Framebuffer[4];
         this.field_F = new vj();
         this.field_Wc = new NodeHashTable(16);
         this.field_Lc = new IntrusiveDeque();
@@ -1942,7 +1942,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void b(ks param0, byte param1) {
+    final void b(Framebuffer param0, byte param1) {
         int fieldTemp$1 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -2015,7 +2015,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         return this.field_jb + (this.field_mb + this.field_Tb);
     }
 
-    final void c(ks param0, int param1) {
+    final void c(Framebuffer param0, int param1) {
         int fieldTemp$0 = 0;
         try {
           if (param1 >= ~this.field_Zc) {
@@ -2047,8 +2047,8 @@ final class OpenGlToolkit extends GraphicsToolkit {
 
     private final void r(int param0) {
         if (param0 != 0) {
-          ks var3 = (ks) null;
-          this.a((ks) null, 54);
+          Framebuffer var3 = (Framebuffer) null;
+          this.a((Framebuffer) null, 54);
         }
         if (this.field_e != 1) {
           jaggl.OpenGL.glMatrixMode(5889);
@@ -2543,7 +2543,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void a(ks param0, byte param1) {
+    final void a(Framebuffer param0, byte param1) {
         int fieldTemp$1 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -2790,7 +2790,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
             if (this.field_bb == this.field_Qb) {
               throw new RuntimeException();
             }
-            this.b((ks) (this.field_bb), (byte) 81);
+            this.b((Framebuffer) (this.field_bb), (byte) 81);
             if (param1) {
               var3 = (OpenGlRenderbuffer) (this.field_Wc.get((byte) -106, (long)(this.field_Mb.a() << 16 | this.field_Mb.c())));
               if (var3 == null) {
@@ -2887,7 +2887,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_Vb.addLast((byte) -84, var4);
     }
 
-    final void a(int param0, ks param1) {
+    final void a(int param0, Framebuffer param1) {
         int fieldTemp$0 = 0;
         try {
           if (3 <= this.field_A) {
@@ -3017,9 +3017,9 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void b(ks param0, int param1) {
+    final void b(Framebuffer param0, int param1) {
         int fieldTemp$3 = 0;
-        ks dupTemp$4 = null;
+        Framebuffer dupTemp$4 = null;
         int var4 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -3187,7 +3187,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_Jc = param0 ? true : false;
         this.c((byte) 13);
         if (param1) {
-          this.field_t = (ks) null;
+          this.field_t = (Framebuffer) null;
         }
     }
 

@@ -34,7 +34,7 @@ final class fha {
         try {
           fua.field_f = BoulderComponent.a(param2, "commonui", 5, "frame_bottom");
           ApproachPlayerLocomotor.field_s = nia.a(param2, "commonui", "jagex_logo_grey", -101);
-          nga.field_n = BoulderComponent.a(param2, "commonui", 5, "button");
+          MonochromeFillOperator.field_n = BoulderComponent.a(param2, "commonui", 5, "button");
           pq.field_b = Particle.a("validation", param2, "commonui", -57);
           eka.field_o = (BitmapFont) ((Object) SnakePitModel.a(param2, param1, false, "commonui", "arezzo12"));
           KeySwitchComponent.field_J = (BitmapFont) ((Object) SnakePitModel.a(param2, param1, false, "commonui", "arezzo14"));
@@ -79,7 +79,7 @@ final class fha {
           var12.c();
           var17.d(-var9Lifetime1, 0);
           pfa.a(1);
-          nga.field_n = new Sprite[]{var15, var12, var11};
+          MonochromeFillOperator.field_n = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fha.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

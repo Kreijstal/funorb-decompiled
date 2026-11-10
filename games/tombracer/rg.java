@@ -8,7 +8,7 @@ final class rg extends SingleChildWidget {
     static int field_B;
 
     rg(UiWidget param0) {
-        super(param0.field_i, param0.field_n, param0.field_m, param0.field_p, (isa) null, (qc) null);
+        super(param0.field_i, param0.field_n, param0.field_m, param0.field_p, (isa) null, (WidgetListener) null);
         try {
           param0.setBounds((byte) -31, this.field_m, this.field_p, 0, 0);
           this.child = param0;
@@ -60,7 +60,7 @@ final class rg extends SingleChildWidget {
         wba.field_q[11] = oia.field_e;
         wba.field_q[20] = wq.field_d;
         wba.field_q[26] = wg.field_m[0];
-        wba.field_q[38] = ksa.field_n;
+        wba.field_q[38] = RangeOperator.field_n;
         wba.field_q[41] = WidgetStyleLayer.field_e;
         wba.field_q[23] = bi.field_b[0];
         wba.field_q[28] = goa.field_c;
@@ -169,7 +169,7 @@ final class rg extends SingleChildWidget {
           Effect.field_h[2] = new String[]{bpa.field_a, du.field_f, vua.field_C};
           IntrusiveDeque.field_d[3] = new String[]{QuickChatMenu.field_Ab, rua.field_hb, Player.field_s};
           IntrusiveDeque.field_d[4] = new String[]{ConstrainToCircleLocomotor.field_t, fv.field_b, RopeBridgeComponent.field_G};
-          Effect.field_h[3] = new String[]{sba.field_o, vk.field_a, SwitchLinkList.field_d};
+          Effect.field_h[3] = new String[]{InvertOperator.field_o, vk.field_a, SwitchLinkList.field_d};
           Effect.field_h[4] = new String[]{DisplaySettingsDialog.field_R, gn.field_y, tr.field_d};
           IntrusiveDeque.field_d[5] = new String[]{TripBeamComponent.field_J, td.field_u, PitModel.field_r};
           Effect.field_h[5] = new String[]{gu.field_k, MazeComponent.field_G, du.field_b};
@@ -179,7 +179,7 @@ final class rg extends SingleChildWidget {
           IntrusiveDeque.field_d[8] = new String[]{uv.field_u, jd.field_m, hoa.field_n};
           Effect.field_h[7] = new String[]{km.field_n, ld.field_d};
           IntrusiveDeque.field_d[9] = new String[]{td.field_n, nea.field_b, gga.field_L};
-          Effect.field_h[8] = new String[]{hv.field_o, StaticCrusherComponent.field_G, ClientException.field_e};
+          Effect.field_h[8] = new String[]{ThresholdOperator.field_o, StaticCrusherComponent.field_G, ClientException.field_e};
           Effect.field_h[9] = new String[]{qna.field_a, wv.field_h, PrefabComponent.field_D};
           IntrusiveDeque.field_d[10] = new String[]{kd.field_z, qba.field_d, GridWidgetContainer.field_H};
           Effect.field_h[10] = new String[]{ViewportManager.field_a, ir.field_c, fb.field_b};
@@ -221,7 +221,7 @@ final class rg extends SingleChildWidget {
         Effect.field_h[2] = new String[]{bpa.field_a, du.field_f, vua.field_C};
         IntrusiveDeque.field_d[3] = new String[]{QuickChatMenu.field_Ab, rua.field_hb, Player.field_s};
         IntrusiveDeque.field_d[4] = new String[]{ConstrainToCircleLocomotor.field_t, fv.field_b, RopeBridgeComponent.field_G};
-        Effect.field_h[3] = new String[]{sba.field_o, vk.field_a, SwitchLinkList.field_d};
+        Effect.field_h[3] = new String[]{InvertOperator.field_o, vk.field_a, SwitchLinkList.field_d};
         Effect.field_h[4] = new String[]{DisplaySettingsDialog.field_R, gn.field_y, tr.field_d};
         IntrusiveDeque.field_d[5] = new String[]{TripBeamComponent.field_J, td.field_u, PitModel.field_r};
         Effect.field_h[5] = new String[]{gu.field_k, MazeComponent.field_G, du.field_b};
@@ -231,14 +231,14 @@ final class rg extends SingleChildWidget {
         IntrusiveDeque.field_d[8] = new String[]{uv.field_u, jd.field_m, hoa.field_n};
         Effect.field_h[7] = new String[]{km.field_n, ld.field_d};
         IntrusiveDeque.field_d[9] = new String[]{td.field_n, nea.field_b, gga.field_L};
-        Effect.field_h[8] = new String[]{hv.field_o, StaticCrusherComponent.field_G, ClientException.field_e};
+        Effect.field_h[8] = new String[]{ThresholdOperator.field_o, StaticCrusherComponent.field_G, ClientException.field_e};
         Effect.field_h[9] = new String[]{qna.field_a, wv.field_h, PrefabComponent.field_D};
         IntrusiveDeque.field_d[10] = new String[]{kd.field_z, qba.field_d, GridWidgetContainer.field_H};
         Effect.field_h[10] = new String[]{ViewportManager.field_a, ir.field_c, fb.field_b};
     }
 
     public rg() {
-        super(0, 0, 0, 0, (isa) null, (qc) null);
+        super(0, 0, 0, 0, (isa) null, (WidgetListener) null);
         this.field_y = 256;
     }
 

@@ -54,7 +54,7 @@ final class PlatformBehaviour extends Behaviour {
         if (param1 >= -48) {
           return 39;
         }
-        param0 = fs.mixHash((byte) 71, param0, this.field_u);
+        param0 = CurveOperator.mixHash((byte) 71, param0, this.field_u);
         return param0;
     }
 

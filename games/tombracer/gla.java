@@ -19,7 +19,7 @@ final class gla extends TextureOperator {
         field_q = null;
     }
 
-    final int[] c(int param0, int param1) {
+    final int[] getMonochromeRow(int param0, int param1) {
         int stackIn_16_0 = 0;
         int stackIn_23_0 = 0;
         int stackIn_31_0 = 0;
@@ -194,7 +194,7 @@ final class gla extends TextureOperator {
         this.field_n = 585;
     }
 
-    final void a(byte param0, PacketBuffer param1, int param2) {
+    final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

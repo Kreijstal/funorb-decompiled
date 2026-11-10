@@ -117,7 +117,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -78, "mu_chat_friends");
                 if (null != var2) {
-                  nga.field_o = jaa.decodeText((byte) 46, var2);
+                  MonochromeFillOperator.field_o = jaa.decodeText((byte) 46, var2);
                 }
                 var2 = dn.a((byte) 104, "mu_chat_off");
                 if (var2 != null) {
@@ -401,7 +401,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -97, "unable_to_send_message_password_a");
                 if (var2 != null) {
-                  sba.field_m = jaa.decodeText((byte) 75, var2);
+                  InvertOperator.field_m = jaa.decodeText((byte) 75, var2);
                 }
                 var2 = dn.a((byte) 124, "unable_to_send_message_password_b");
                 if (var2 != null) {
@@ -477,7 +477,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -88, "rated_game_tips");
                 if (null != var2) {
-                  hv.field_n = jaa.decodeText((byte) 93, var2);
+                  ThresholdOperator.field_n = jaa.decodeText((byte) 93, var2);
                 }
                 var2 = dn.a((byte) 112, "searching_for_opponent_singular");
                 if (null != var2) {
@@ -593,7 +593,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 118, "status_playing");
                 if (null != var2) {
-                  pv.field_q = jaa.decodeText((byte) 41, var2);
+                  FlipOperator.field_q = jaa.decodeText((byte) 41, var2);
                 }
                 var2 = dn.a((byte) 108, "status_join");
                 if (var2 != null) {
@@ -645,7 +645,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -126, "spectate_xs_game");
                 if (null != var2) {
-                  lm.field_o = jaa.decodeText((byte) 106, var2);
+                  ColourFillOperator.field_o = jaa.decodeText((byte) 106, var2);
                 }
                 var2 = dn.a((byte) -90, "hide_players_in_xs_game");
                 if (var2 != null) {
@@ -1031,7 +1031,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -100, "reloadgame");
                 if (var2 != null) {
-                  sba.field_n = jaa.decodeText((byte) 94, var2);
+                  InvertOperator.field_n = jaa.decodeText((byte) 94, var2);
                 }
                 var2 = dn.a((byte) -115, "toserverlist");
                 if (null != var2) {
@@ -1119,7 +1119,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 118, "retry");
                 if (null != var2) {
-                  nga.field_q = jaa.decodeText((byte) 44, var2);
+                  MonochromeFillOperator.field_q = jaa.decodeText((byte) 44, var2);
                 }
                 var2 = dn.a((byte) 104, "back");
                 if (var2 != null) {
@@ -1647,7 +1647,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -36, "create_passwordvalid");
                 if (var2 != null) {
-                  pv.field_m = jaa.decodeText((byte) 26, var2);
+                  FlipOperator.field_m = jaa.decodeText((byte) 26, var2);
                 }
                 var2 = dn.a((byte) 104, "create_emailvalid");
                 if (null != var2) {
@@ -2117,7 +2117,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 115, "graphics_java");
                 if (null != var2) {
-                  ksa.field_n = jaa.decodeText((byte) 112, var2);
+                  RangeOperator.field_n = jaa.decodeText((byte) 112, var2);
                 }
                 var2 = dn.a((byte) 125, "graphics_quality_high");
                 if (var2 != null) {

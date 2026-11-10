@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-abstract class SingleChildWidget extends UiWidget implements tpa {
+abstract class SingleChildWidget extends UiWidget implements WidgetParent {
     UiWidget child;
     static GameFont field_v;
     static String[] sawDeathMessages;
@@ -739,7 +739,7 @@ abstract class SingleChildWidget extends UiWidget implements tpa {
         }
     }
 
-    SingleChildWidget(int param0, int param1, int param2, int param3, isa param4, qc param5) {
+    SingleChildWidget(int param0, int param1, int param2, int param3, isa param4, WidgetListener param5) {
         super(param0, param1, param2, param3, param4, param5);
     }
 

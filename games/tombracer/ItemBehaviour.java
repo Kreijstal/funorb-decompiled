@@ -29,12 +29,12 @@ abstract class ItemBehaviour extends Behaviour {
         param0 = upa.a(this.field_o, param0, (byte) -53);
         param0 = upa.a(this.field_n, param0, (byte) -111);
         if (param1 < -48) {
-          param0 = fs.mixHash((byte) 37, param0, this.field_r);
+          param0 = CurveOperator.mixHash((byte) 37, param0, this.field_r);
           return param0;
         }
         Player var4 = (Player) null;
         this.tryCollect(-22, (Player) null);
-        param0 = fs.mixHash((byte) 37, param0, this.field_r);
+        param0 = CurveOperator.mixHash((byte) 37, param0, this.field_r);
         return param0;
     }
 

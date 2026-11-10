@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qv extends TextureOperator {
+final class MandelbrotOperator extends TextureOperator {
     private int field_q;
     private int field_n;
     private int field_p;
@@ -9,7 +9,7 @@ final class qv extends TextureOperator {
     static int field_m;
     static kb field_o;
 
-    final int[] c(int param0, int param1) {
+    final int[] getMonochromeRow(int param0, int param1) {
         int var4 = 0;
         int[] stackIn_11_0 = null;
         int stackIn_11_1 = 0;
@@ -28,7 +28,7 @@ final class qv extends TextureOperator {
         int[] var15;
         var14 = TombRacer.field_G ? 1 : 0;
         if (param0 != 1) {
-          this.c(94, -103);
+          this.getMonochromeRow(94, -103);
         }
         var15 = this.field_i.a((byte) 20, param1);
         var3 = var15;
@@ -91,7 +91,7 @@ final class qv extends TextureOperator {
         return var9;
     }
 
-    final void a(byte param0, PacketBuffer param1, int param2) {
+    final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_16_0 = null;
@@ -138,11 +138,11 @@ final class qv extends TextureOperator {
     public static void a(boolean param0) {
         field_o = null;
         if (!param0) {
-          qv.a(false, 72, -128, 0.8583102226257324f, -87, (byte) 7, -60, -76, -111);
+          MandelbrotOperator.a(false, 72, -128, 0.8583102226257324f, -87, (byte) 7, -60, -76, -111);
         }
     }
 
-    public qv() {
+    public MandelbrotOperator() {
         super(0, true);
         this.field_q = 1365;
         this.field_n = 0;

@@ -279,7 +279,7 @@ final class FleeLocomotor extends Locomotor {
 
     final int hashState(int param0, int param1) {
         param1 = upa.a(this.field_D, param1, (byte) -41);
-        param1 = fs.mixHash((byte) 37, param1, this.field_p);
+        param1 = CurveOperator.mixHash((byte) 37, param1, this.field_p);
         if (param0 == 0) {
           return param1;
         }

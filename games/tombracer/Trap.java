@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, Renderable, WorldBody, Collidable, noa, qn, t {
+final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, Renderable, WorldBody, Collidable, noa, qn, Teleportable {
     private IntrusiveDeque children;
     static jea field_q;
     static int field_m;
@@ -48,7 +48,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
     private int field_L;
     private boolean[] field_k;
     private bca field_o;
-    private on field_fb;
+    private TeleportState field_fb;
     private int field_R;
     private int field_I;
     private boolean field_l;
@@ -342,12 +342,12 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
 
     final int hashState(int param0, int param1) {
         int var4 = TombRacer.field_G ? 1 : 0;
-        param0 = fs.mixHash((byte) 79, param0, this.localX);
+        param0 = CurveOperator.mixHash((byte) 79, param0, this.localX);
         if (param1 >= -100) {
           this.field_db = -42;
         }
-        param0 = fs.mixHash((byte) 64, param0, this.localY);
-        param0 = fs.mixHash((byte) 84, param0, this.angle);
+        param0 = CurveOperator.mixHash((byte) 64, param0, this.localY);
+        param0 = CurveOperator.mixHash((byte) 84, param0, this.angle);
         Locomotor var5 = (Locomotor) (this.locomotors.first(-80));
         while (var5 != null) {
           param0 = var5.hashState(0, param0);
@@ -1463,7 +1463,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         }
     }
 
-    public final boolean j(byte param0) {
+    public final boolean canTeleport(byte param0) {
         if (param0 >= -102) {
           return false;
         }
@@ -1659,7 +1659,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         }
     }
 
-    public final on c(boolean param0) {
+    public final TeleportState getTeleportState(boolean param0) {
         if (param0) {
           this.field_eb = false;
         }
@@ -2982,7 +2982,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
             param0.field_f = var3_int * (this.field_w >> 8) + (this.field_g >> 8) * var4;
           }
           if (param1 <= 9) {
-            this.field_fb = (on) null;
+            this.field_fb = (TeleportState) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3173,7 +3173,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         this.field_k = new boolean[3];
         this.models = new IntrusiveDeque();
         this.field_o = new bca();
-        this.field_fb = new on();
+        this.field_fb = new TeleportState();
         this.field_z = -1;
         this.field_db = 32;
         try {

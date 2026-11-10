@@ -59,7 +59,7 @@ final class vv extends wv {
         String var9Lifetime2;
         String var9Lifetime3;
         int var8Lifetime1;
-        oka.a(wja.field_o.toUpperCase(), 2497287, SingleChildWidget.field_v, -1, gg.field_f.c() / 2 + var5 - 30, aaa.a(false) / 2, -1);
+        oka.a(ClampOperator.field_o.toUpperCase(), 2497287, SingleChildWidget.field_v, -1, gg.field_f.c() / 2 + var5 - 30, aaa.a(false) / 2, -1);
         GameFont var6 = kn.field_p;
         int var7 = kv.field_a.field_h + (kv.field_a.field_g + 4);
         if (param0 < -116) {

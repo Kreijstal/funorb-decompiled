@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class OpenGlRenderbuffer extends DualLinkNode implements wia {
+final class OpenGlRenderbuffer extends DualLinkNode implements FramebufferAttachment {
     int field_o;
     private int field_q;
     private int field_m;

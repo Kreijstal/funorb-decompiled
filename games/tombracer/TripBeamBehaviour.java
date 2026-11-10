@@ -329,11 +329,11 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
         param0 = upa.a(this.field_r, param0, (byte) -63);
         param0 = upa.a(this.field_A, param0, (byte) -57);
         if (param1 <= -48) {
-          param0 = fs.mixHash((byte) 61, param0, this.field_s);
+          param0 = CurveOperator.mixHash((byte) 61, param0, this.field_s);
           return param0;
         }
         this.getDimColour(-120);
-        param0 = fs.mixHash((byte) 61, param0, this.field_s);
+        param0 = CurveOperator.mixHash((byte) 61, param0, this.field_s);
         return param0;
     }
 

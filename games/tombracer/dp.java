@@ -100,9 +100,9 @@ final class dp extends vw {
         if (param0 < -4) {
           if (this.field_h) {
             this.field_c.e(1, false);
-            this.field_c.bindTexture(true, (iva) null);
+            this.field_c.bindTexture(true, (GpuTexture) null);
             this.field_c.e(0, false);
-            this.field_c.bindTexture(true, (iva) null);
+            this.field_c.bindTexture(true, (GpuTexture) null);
             jaggl.OpenGL.glUseProgramObjectARB(0L);
             this.field_h = false;
           }
@@ -111,9 +111,9 @@ final class dp extends vw {
         this.c(6);
         if (this.field_h) {
           this.field_c.e(1, false);
-          this.field_c.bindTexture(true, (iva) null);
+          this.field_c.bindTexture(true, (GpuTexture) null);
           this.field_c.e(0, false);
-          this.field_c.bindTexture(true, (iva) null);
+          this.field_c.bindTexture(true, (GpuTexture) null);
           jaggl.OpenGL.glUseProgramObjectARB(0L);
           this.field_h = false;
         }
@@ -160,7 +160,7 @@ final class dp extends vw {
         }
     }
 
-    final void a(int param0, iva param1, int param2) {
+    final void a(int param0, GpuTexture param1, int param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

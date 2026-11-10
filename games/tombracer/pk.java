@@ -149,7 +149,7 @@ final class pk extends we {
         var4 = var17;
         var24 = this.field_F[param0];
         var25 = this.field_w[param0];
-        var7 = qv.field_o;
+        var7 = MandelbrotOperator.field_o;
         var8 = 0;
         stackIn_3_0 = (var7 != null) ? 0 : 1;
         var9 = stackIn_3_0;

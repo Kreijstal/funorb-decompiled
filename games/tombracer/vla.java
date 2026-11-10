@@ -12,7 +12,7 @@ final class vla extends TextureOperator {
         tka.b((byte) 48);
     }
 
-    final int[][] b(int param0, int param1) {
+    final int[][] getColourRow(int param0, int param1) {
         int[] var30 = null;
         int[] var31 = null;
         int[] var6 = null;
@@ -35,19 +35,19 @@ final class vla extends TextureOperator {
         int[][] var18 = var19;
         int[][] var3 = var18;
         if (this.field_h.field_f) {
-          var30 = this.c(1, param1 - 21, param0);
-          var31 = this.c(2, -45, param0);
+          var30 = this.getInputMonochromeRow(1, param1 - 21, param0);
+          var31 = this.getInputMonochromeRow(2, -45, param0);
           var6 = var23[0];
           var7 = var23[1];
           var8 = var23[2];
           for (var9 = 0; var9 < ns.field_g; var9++) {
             var10 = 255 & 255 * var30[var9] >> 12;
             var11 = this.field_n * var31[var9] >> 12;
-            var12 = lm.field_r[var10] * var11 >> 12;
+            var12 = ColourFillOperator.field_r[var10] * var11 >> 12;
             var13 = ou.field_e[var10] * var11 >> 12;
             var14 = (var12 >> 12) + var9 & una.field_b;
             var15 = hba.field_b & (var13 >> 12) + param0;
-            var32 = this.a(var15, 0, -1);
+            var32 = this.getInputColourRow(var15, 0, -1);
             var6[var9] = var32[0][var14];
             var7[var9] = var32[1][var14];
             var8[var9] = var32[2][var14];
@@ -61,7 +61,7 @@ final class vla extends TextureOperator {
         this.field_n = 32768;
     }
 
-    final int[] c(int param0, int param1) {
+    final int[] getMonochromeRow(int param0, int param1) {
         int[] var26 = null;
         int[] var27 = null;
         int var6 = 0;
@@ -75,28 +75,28 @@ final class vla extends TextureOperator {
         int var14 = TombRacer.field_G ? 1 : 0;
         if (param0 != 1) {
           PacketBuffer var15 = (PacketBuffer) null;
-          this.a((byte) 85, (PacketBuffer) null, -36);
+          this.decodeParameter((byte) 85, (PacketBuffer) null, -36);
         }
         int[] var16 = this.field_i.a((byte) -128, param1);
         int[] var3 = var16;
         if (this.field_i.field_d) {
-          var26 = this.c(1, param0 - 85, param1);
-          var27 = this.c(2, -119, param1);
+          var26 = this.getInputMonochromeRow(1, param0 - 85, param1);
+          var27 = this.getInputMonochromeRow(2, -119, param1);
           for (var6 = 0; var6 < ns.field_g; var6++) {
             var7 = (4094 & var26[var6]) >> 4;
             var8 = this.field_n * var27[var6] >> 12;
-            var9 = lm.field_r[var7] * var8 >> 12;
+            var9 = ColourFillOperator.field_r[var7] * var8 >> 12;
             var10 = ou.field_e[var7] * var8 >> 12;
             var11 = var6 + (var9 >> 12) & una.field_b;
             var12 = hba.field_b & (var10 >> 12) + param1;
-            var28 = this.c(0, -27, var12);
+            var28 = this.getInputMonochromeRow(0, -27, var12);
             var16[var6] = var28[var11];
           }
         }
         return var3;
     }
 
-    final void a(byte param0, PacketBuffer param1, int param2) {
+    final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_13_0 = null;
@@ -111,7 +111,7 @@ final class vla extends TextureOperator {
           } else {
             if (1 == var4_int) {
               stackIn_7_1 = (param1.readUnsignedByte(255) == 1);
-              this.field_g = stackIn_7_1;
+              this.monochrome = stackIn_7_1;
             }
           }
           if (param0 != 107) {

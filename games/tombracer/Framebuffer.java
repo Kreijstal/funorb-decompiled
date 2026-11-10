@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-interface ks {
+interface Framebuffer {
     public abstract void unbindDrawFramebuffer(byte param0);
 
     public abstract void bindDrawFramebuffer(byte param0);

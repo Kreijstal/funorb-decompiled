@@ -9,7 +9,7 @@ final class vda extends TextureOperator {
     static String field_n;
     static Sprite[] field_m;
 
-    final int[][] b(int param0, int param1) {
+    final int[][] getColourRow(int param0, int param1) {
         int var11 = 0;
         int[][] var3;
         int[] var8;
@@ -35,7 +35,7 @@ final class vda extends TextureOperator {
         var16 = var18;
         var3 = var16;
         if (this.field_h.field_f) {
-          var31 = this.a(param0, 0, -1);
+          var31 = this.getInputColourRow(param0, 0, -1);
           var32 = var31[0];
           var34 = var31[1];
           var33 = var31[2];
@@ -61,7 +61,7 @@ final class vda extends TextureOperator {
         return var3;
     }
 
-    final void a(byte param0, PacketBuffer param1, int param2) {
+    final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_15_0 = null;

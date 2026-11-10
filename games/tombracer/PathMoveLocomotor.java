@@ -292,8 +292,8 @@ final class PathMoveLocomotor extends Locomotor {
     }
 
     final int hashState(int param0, int param1) {
-        param1 = fs.mixHash((byte) 98, param1, this.field_r);
-        param1 = fs.mixHash((byte) 26, param1, this.field_w);
+        param1 = CurveOperator.mixHash((byte) 98, param1, this.field_r);
+        param1 = CurveOperator.mixHash((byte) 26, param1, this.field_w);
         if (param0 == 0) {
           return param1;
         }

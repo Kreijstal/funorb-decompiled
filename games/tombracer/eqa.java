@@ -67,7 +67,7 @@ final class eqa implements os {
           if (lt.a(var4_ref_String, -1)) {
             var13 = (String) null;
             var12 = (String) null;
-            gu.a(0, param1, (String) null, sba.field_m, (String) null, 2);
+            gu.a(0, param1, (String) null, InvertOperator.field_m, (String) null, 2);
             var15 = (String) null;
             var14 = (String) null;
             gu.a(0, true, (String) null, mm.field_f, (String) null, 2);

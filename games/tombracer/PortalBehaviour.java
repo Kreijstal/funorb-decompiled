@@ -253,13 +253,13 @@ final class PortalBehaviour extends Behaviour {
         int var19;
         int var20;
         int var21;
-        on var22;
+        TeleportState var22;
         int var23;
         int var24;
         Object var25;
         int var26;
         Switchable[] var27;
-        t var28;
+        Teleportable var28;
         WorldBody var29;
         var17 = null;
         var25 = null;
@@ -292,9 +292,9 @@ final class PortalBehaviour extends Behaviour {
         var14 = var13;
         for (var15 = 0; var14.length > var15; var15++) {
           var16 = var14[var15];
-          if (var16 instanceof t) {
-            var28 = (t) ((Object) var16);
-            if (var28.j((byte) -113) &&
+          if (var16 instanceof Teleportable) {
+            var28 = (Teleportable) ((Object) var16);
+            if (var28.canTeleport((byte) -113) &&
               var16 != this.trap &&
               !this.trap.a(var16, true)) {
               var18 = var16.getX(3);
@@ -306,7 +306,7 @@ final class PortalBehaviour extends Behaviour {
               var20 = 9 * var20 / 10;
               var21 = var21 * 9 / 10;
               if (io.centredBoxesOverlap(var6, var19, (byte) -93, var7, var18, var5, var21, var20, var4)) {
-                var22 = var28.c(false);
+                var22 = var28.getTeleportState(false);
                 var22.a((byte) -44);
                 if (ck.a(var18, var21, var4, var6, var7, var19, (byte) 66, var5, var20)) {
                   var23 = -var4 + var18 + var8;

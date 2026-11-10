@@ -21,30 +21,30 @@ final class kp {
         this.field_b.demoteOldEntries(123, param0);
     }
 
-    final gf a(int param0, int param1) {
+    final GpuTexture2D a(int param0, int param1) {
         int[] var13 = null;
-        gf var14 = null;
+        GpuTexture2D var14 = null;
         int[] var22 = null;
-        gf var20 = null;
+        GpuTexture2D var20 = null;
         int[] var16 = null;
-        gf var17 = null;
+        GpuTexture2D var17 = null;
         float[] var9 = null;
-        gf var4 = null;
+        GpuTexture2D var4 = null;
         int[] var7 = null;
-        gf var21 = null;
+        GpuTexture2D var21 = null;
         int var8 = TombRacer.field_G ? 1 : 0;
         Object var3 = this.field_b.a((byte) 64, (long)param0);
         int[] var7Lifetime1;
         int[] var7Lifetime2;
         int[] var7Lifetime3;
-        gf var21Lifetime1;
-        gf var21Lifetime2;
+        GpuTexture2D var21Lifetime1;
+        GpuTexture2D var21Lifetime2;
         int[] var7Lifetime4;
         if (var3 != null) {
-          return (gf) (var3);
+          return (GpuTexture2D) (var3);
         }
         if (param1 < 91) {
-          return (gf) null;
+          return (GpuTexture2D) null;
         }
         if (!this.field_e.a(param0, (byte) 57)) {
           return null;

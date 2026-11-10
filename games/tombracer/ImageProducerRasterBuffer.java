@@ -128,7 +128,7 @@ final class ImageProducerRasterBuffer extends cha implements java.awt.image.Imag
           if (param1.field_ec && (param1.field_yb == 2 ||
             !(ld.field_e < 2))) {
             var10 = hka.field_b;
-            var11 = gl.$cfr$intArgs$a$53ce4ab4c593(109, lm.field_o, new String[]{param3});
+            var11 = gl.$cfr$intArgs$a$53ce4ab4c593(109, ColourFillOperator.field_o, new String[]{param3});
             var10.field_f.addItem((byte) -125, 10, var11);
           }
           hka.field_b.a((byte) -84);

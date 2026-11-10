@@ -274,7 +274,7 @@ final class TeleportLocomotor extends Locomotor {
     }
 
     final int hashState(int param0, int param1) {
-        param1 = fs.mixHash((byte) 120, param1, this.field_r);
+        param1 = CurveOperator.mixHash((byte) 120, param1, this.field_r);
         if (param0 != 0) {
           return -59;
         }

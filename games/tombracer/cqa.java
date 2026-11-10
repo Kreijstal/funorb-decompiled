@@ -5,7 +5,7 @@ final class cqa extends vw {
     private jagdx.IDirect3DVertexShader field_l;
     private jagdx.IDirect3DVertexShader field_o;
     private boolean field_n;
-    private gf field_g;
+    private GpuTexture2D field_g;
     private jagdx.IDirect3DVertexShader field_j;
     private boolean field_e;
     private jagdx.IDirect3DVertexShader field_k;
@@ -17,7 +17,7 @@ final class cqa extends vw {
 
     final void a(byte param0, int param1, int param2) {
         if (param0 != 55) {
-          this.field_g = (gf) null;
+          this.field_g = (GpuTexture2D) null;
         }
     }
 
@@ -40,7 +40,7 @@ final class cqa extends vw {
         if (param0 == 1) {
           return;
         }
-        this.field_g = (gf) null;
+        this.field_g = (GpuTexture2D) null;
     }
 
     final void a(int param0, boolean param1) {
@@ -62,7 +62,7 @@ final class cqa extends vw {
         }
     }
 
-    final void a(int param0, iva param1, int param2) {
+    final void a(int param0, GpuTexture param1, int param2) {
         if (param1 != null) {
           if (this.field_e) {
             this.field_c.a(ej.field_c, 0, -90);
@@ -164,7 +164,7 @@ final class cqa extends vw {
 
     final void a(int param0) {
         this.field_c.e(1, false);
-        this.field_c.bindTexture(true, (iva) null);
+        this.field_c.bindTexture(true, (GpuTexture) null);
         this.field_c.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
         this.field_c.a(ej.field_c, 0, -58);
         this.field_c.a(pea.field_c, 2, -122);

@@ -91,7 +91,7 @@ final class ControllerLocomotor extends Locomotor {
     }
 
     final int hashState(int param0, int param1) {
-        param1 = fs.mixHash((byte) 63, param1, this.field_s);
+        param1 = CurveOperator.mixHash((byte) 63, param1, this.field_s);
         if (param0 != 0) {
           this.field_u = (Locomotor[]) null;
         }

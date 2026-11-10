@@ -22,7 +22,7 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
         if (param1 >= -48) {
           this.getDimColour(56);
         }
-        param0 = fs.mixHash((byte) 122, param0, this.field_t);
+        param0 = CurveOperator.mixHash((byte) 122, param0, this.field_t);
         return this.field_n.hashState(105, param0);
     }
 

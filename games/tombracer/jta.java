@@ -320,7 +320,7 @@ final class jta extends SingleChildWidget {
     }
 
     public jta() {
-        super(0, 0, bb.field_m, qba.field_a, (isa) null, (qc) null);
+        super(0, 0, bb.field_m, qba.field_a, (isa) null, (WidgetListener) null);
         this.field_y = new IntrusiveDeque();
     }
 

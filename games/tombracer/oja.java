@@ -31,7 +31,7 @@ final class oja extends vw {
         }
     }
 
-    final void a(int param0, iva param1, int param2) {
+    final void a(int param0, GpuTexture param1, int param2) {
         if (param2 != 24595) {
           this.field_e = (jagdx.IDirect3DVertexShader) null;
         }
@@ -77,9 +77,9 @@ final class oja extends vw {
           this.field_i.a((jagdx.IDirect3DVertexShader) null, -1);
           this.field_i.a(-92, (jagdx.IDirect3DPixelShader) null);
           this.field_c.e(1, false);
-          this.field_c.bindTexture(true, (iva) null);
+          this.field_c.bindTexture(true, (GpuTexture) null);
           this.field_c.e(0, false);
-          this.field_c.bindTexture(true, (iva) null);
+          this.field_c.bindTexture(true, (GpuTexture) null);
           this.field_j = false;
           if (param0 >= -4) {
             this.field_j = false;

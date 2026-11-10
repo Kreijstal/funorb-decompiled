@@ -61,7 +61,7 @@ final class gu extends me {
         field_l = null;
     }
 
-    final static TextureOperator a(byte param0, int param1) {
+    final static TextureOperator createTextureOperator(byte param0, int param1) {
         int var2;
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
@@ -70,34 +70,34 @@ final class gu extends me {
         }
         var2 = param1;
         if (var2 == 0) {
-          return (TextureOperator) ((Object) new nga());
+          return (TextureOperator) ((Object) new MonochromeFillOperator());
         }
         if (var2 == 1) {
-          return (TextureOperator) ((Object) new lm());
+          return (TextureOperator) ((Object) new ColourFillOperator());
         }
         if (var2 == 2) {
-          return (TextureOperator) ((Object) new qga());
+          return (TextureOperator) ((Object) new HorizontalGradientOperator());
         }
         if (var2 == 3) {
-          return (TextureOperator) ((Object) new gm());
+          return (TextureOperator) ((Object) new VerticalGradientOperator());
         }
         if (var2 == 4) {
-          return (TextureOperator) ((Object) new bma());
+          return (TextureOperator) ((Object) new BrickOperator());
         }
         if (var2 == 5) {
-          return (TextureOperator) ((Object) new cl());
+          return (TextureOperator) ((Object) new BoxBlurOperator());
         }
         if (var2 == 6) {
-          return (TextureOperator) ((Object) new wja());
+          return (TextureOperator) ((Object) new ClampOperator());
         }
         if (var2 == 7) {
           return (TextureOperator) ((Object) new eka());
         }
         if (var2 == 8) {
-          return (TextureOperator) ((Object) new fs());
+          return (TextureOperator) ((Object) new CurveOperator());
         }
         if (var2 == 9) {
-          return (TextureOperator) ((Object) new pv());
+          return (TextureOperator) ((Object) new FlipOperator());
         }
         if (var2 == 10) {
           return (TextureOperator) ((Object) new wna());
@@ -136,19 +136,19 @@ final class gu extends me {
           return (TextureOperator) ((Object) new nia());
         }
         if (var2 == 22) {
-          return (TextureOperator) ((Object) new sba());
+          return (TextureOperator) ((Object) new InvertOperator());
         }
         if (var2 == 23) {
           return (TextureOperator) ((Object) new fl());
         }
         if (24 == var2) {
-          return (TextureOperator) ((Object) new jda());
+          return (TextureOperator) ((Object) new GreyscaleOperator());
         }
         if (var2 == 25) {
           return (TextureOperator) ((Object) new cma());
         }
         if (var2 == 26) {
-          return (TextureOperator) ((Object) new hv());
+          return (TextureOperator) ((Object) new ThresholdOperator());
         }
         if (var2 == 27) {
           return (TextureOperator) ((Object) new bj());
@@ -160,10 +160,10 @@ final class gu extends me {
           return (TextureOperator) ((Object) new rda());
         }
         if (var2 == 30) {
-          return (TextureOperator) ((Object) new ksa());
+          return (TextureOperator) ((Object) new RangeOperator());
         }
         if (var2 == 31) {
-          return (TextureOperator) ((Object) new qv());
+          return (TextureOperator) ((Object) new MandelbrotOperator());
         }
         if (32 == var2) {
           return (TextureOperator) ((Object) new un());

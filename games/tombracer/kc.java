@@ -68,7 +68,7 @@ final class kc {
         try {
           stackIn_3_0 = !param2;
           var8 = (CharSequence) ((Object) param0);
-          if (!fs.a(stackIn_3_0, var8)) {
+          if (!CurveOperator.a(stackIn_3_0, var8)) {
             stackIn_6_0 = pk.field_v;
             return stackIn_6_0;
           }

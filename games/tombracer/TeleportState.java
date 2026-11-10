@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class on {
+final class TeleportState {
     private boolean field_c;
     private boolean field_a;
     static AccountRegistrationPanel field_b;
@@ -109,7 +109,7 @@ final class on {
           }
           if (param1 > -37) {
             var6 = (d) null;
-            on.a((java.awt.Canvas) null, (d) null, 122, (byte) 69);
+            TeleportState.a((java.awt.Canvas) null, (d) null, 122, (byte) 69);
           }
           for (var4 = 0; var4 < param0.length(); var4++) {
             if (!SwitchComponent.a(false, param0.charAt(var4))) {
@@ -135,7 +135,7 @@ final class on {
     final static boolean a(byte param0, int param1) {
         boolean stackIn_26_0 = false;
         if (param0 != 15) {
-          on.releaseStatics(119);
+          TeleportState.releaseStatics(119);
         }
         boolean decompiledFrameRemainder0 = true;
         if (!VerticalScrollbar.field_tb[82] &&

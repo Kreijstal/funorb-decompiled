@@ -100,8 +100,8 @@ final class ow extends wv {
 
     final static void a(byte param0, String[] param1) {
         try {
-          if (on.field_b != null) {
-            on.field_b.field_y.a(13597, param1);
+          if (TeleportState.field_b != null) {
+            TeleportState.field_b.field_y.a(13597, param1);
           }
           if (PushableMountComponent.field_F != null) {
             PushableMountComponent.field_F.field_x.a(13597, param1);

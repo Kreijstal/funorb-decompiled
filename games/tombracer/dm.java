@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dm implements eja {
+final class dm implements VertexBuffer {
     jagdx.IDirect3DIndexBuffer field_d;
     private Direct3DToolkit field_a;
     private int field_f;

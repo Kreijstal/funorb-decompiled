@@ -64,14 +64,14 @@ final class ko {
           this.field_e = true;
           this.field_a = gp.field_m;
           if (this.field_f != 0 &&
-            ksa.field_p != 0) {
+            RangeOperator.field_p != 0) {
             if (0 >= this.field_a) {
               this.field_a = aua.field_b;
             }
             this.field_a = this.field_a - 1;
           }
           if (hf.field_b == 0 &&
-            0 == ksa.field_p) {
+            0 == RangeOperator.field_p) {
             this.field_f = 0;
           }
           var4 = -69 % ((-29 - param1) / 63);
@@ -97,7 +97,7 @@ final class ko {
         }
         if (this.field_f == 0) {
           if (hf.field_b == 0 &&
-            0 == ksa.field_p) {
+            0 == RangeOperator.field_p) {
             this.field_f = 0;
           }
           var4Lifetime1 = -69 % ((-29 - param1) / 63);
@@ -121,9 +121,9 @@ final class ko {
           this.field_h = param2;
           return;
         }
-        if (ksa.field_p == 0) {
+        if (RangeOperator.field_p == 0) {
           if (hf.field_b == 0) {
-            if (0 != ksa.field_p) {
+            if (0 != RangeOperator.field_p) {
               var4Lifetime2 = -69 % ((-29 - param1) / 63);
               if (0 != this.field_f) {
                 return;
@@ -184,7 +184,7 @@ final class ko {
         if (0 < this.field_a) {
           this.field_a = this.field_a - 1;
           if (hf.field_b == 0 &&
-            0 == ksa.field_p) {
+            0 == RangeOperator.field_p) {
             this.field_f = 0;
           }
           var4Lifetime3 = -69 % ((-29 - param1) / 63);
@@ -212,7 +212,7 @@ final class ko {
         this.field_a = aua.field_b;
         this.field_a = this.field_a - 1;
         if (hf.field_b == 0) {
-          if (0 != ksa.field_p) {
+          if (0 != RangeOperator.field_p) {
             var4Lifetime4 = -69 % ((-29 - param1) / 63);
             if (0 == this.field_f) {
               if (!this.field_e &&

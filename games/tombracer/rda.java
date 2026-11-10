@@ -9,7 +9,7 @@ final class rda extends TextureOperator {
     private rra[] field_p;
     static int field_o;
 
-    final void a(byte param0, PacketBuffer param1, int param2) {
+    final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         boolean stackIn_20_1 = false;
         RuntimeException stackIn_24_0 = null;
@@ -50,7 +50,7 @@ final class rda extends TextureOperator {
           }
           if (param2 == 1) {
             stackIn_20_1 = (param1.readUnsignedByte(255) == 1);
-            this.field_g = stackIn_20_1;
+            this.monochrome = stackIn_20_1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -182,7 +182,7 @@ final class rda extends TextureOperator {
         }
     }
 
-    final int[] c(int param0, int param1) {
+    final int[] getMonochromeRow(int param0, int param1) {
         if (param0 != 1) {
           field_n = (int[]) null;
         }
@@ -194,7 +194,7 @@ final class rda extends TextureOperator {
         return var4;
     }
 
-    final int[][] b(int param0, int param1) {
+    final int[][] getColourRow(int param0, int param1) {
         int var4 = 0;
         int var5 = 0;
         int[][] var29 = null;

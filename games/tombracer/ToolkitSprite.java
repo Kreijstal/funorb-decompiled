@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ToolkitSprite implements nha {
+abstract class ToolkitSprite implements RenderSurface {
     final void a(int param0, int param1) {
         this.draw(param0, param1, 1, 0, 1);
     }

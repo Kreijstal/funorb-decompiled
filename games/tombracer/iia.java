@@ -253,7 +253,7 @@ final class iia extends TextureOperator {
         return param1;
     }
 
-    final void a(byte param0, PacketBuffer param1, int param2) {
+    final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -336,7 +336,7 @@ final class iia extends TextureOperator {
         }
     }
 
-    final int[] c(int param0, int param1) {
+    final int[] getMonochromeRow(int param0, int param1) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int stackIn_21_0 = 0;

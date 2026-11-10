@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pv extends TextureOperator {
+final class FlipOperator extends TextureOperator {
     private boolean field_o;
     static String field_q;
     static String[] shortMonthNames;
     static String field_m;
     private boolean field_n;
 
-    final void a(byte param0, PacketBuffer param1, int param2) {
+    final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_11_1 = false;
@@ -32,7 +32,7 @@ final class pv extends TextureOperator {
             if (1 != var4_int) {
               if (var4_int == 2) {
                 stackIn_19_1 = (param1.readUnsignedByte(255) == 1);
-                this.field_g = stackIn_19_1;
+                this.monochrome = stackIn_19_1;
               }
             } else {
               stackIn_15_1 = (1 == param1.readUnsignedByte(255));
@@ -54,13 +54,13 @@ final class pv extends TextureOperator {
         }
     }
 
-    public pv() {
+    public FlipOperator() {
         super(1, false);
         this.field_o = true;
         this.field_n = true;
     }
 
-    final int[] c(int param0, int param1) {
+    final int[] getMonochromeRow(int param0, int param1) {
         int var5 = 0;
         int[] var3;
         int[] var4;
@@ -71,7 +71,7 @@ final class pv extends TextureOperator {
         int stackIn_6_3 = 0;
         var6 = TombRacer.field_G ? 1 : 0;
         if (param0 != 1) {
-          this.b(52, -14);
+          this.getColourRow(52, -14);
         }
         var7 = this.field_i.a((byte) -114, param1);
         var3 = var7;
@@ -83,7 +83,7 @@ final class pv extends TextureOperator {
           } else {
             stackIn_6_3 = param1;
           }
-          var4 = this.c(stackIn_5_1, stackIn_5_2, stackIn_6_3);
+          var4 = this.getInputMonochromeRow(stackIn_5_1, stackIn_5_2, stackIn_6_3);
           if (this.field_o) {
             for (var5 = 0; var5 < ns.field_g; var5++) {
               var7[var5] = var4[-var5 + una.field_b];
@@ -95,7 +95,7 @@ final class pv extends TextureOperator {
         return var3;
     }
 
-    final int[][] b(int param0, int param1) {
+    final int[][] getColourRow(int param0, int param1) {
         int stackIn_6_1 = 0;
         int[][] var3;
         int[] var5;
@@ -131,7 +131,7 @@ final class pv extends TextureOperator {
           } else {
             stackIn_6_1 = -param0 + hba.field_b;
           }
-          var26 = this.a(stackIn_6_1, 0, param1 ^ 0);
+          var26 = this.getInputColourRow(stackIn_6_1, 0, param1 ^ 0);
           var22 = var26[0];
           var17 = var22;
           var5 = var17;

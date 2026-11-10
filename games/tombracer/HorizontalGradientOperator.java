@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qga extends TextureOperator {
+final class HorizontalGradientOperator extends TextureOperator {
     static boolean field_m;
 
     final static String a(int param0, CharSequence[] param1, int param2, int param3) {
@@ -82,9 +82,9 @@ final class qga extends TextureOperator {
         }
     }
 
-    final int[] c(int param0, int param1) {
+    final int[] getMonochromeRow(int param0, int param1) {
         if (param0 != 1) {
-          qga.c(97);
+          HorizontalGradientOperator.c(97);
         }
         return ht.field_Fb;
     }
@@ -105,7 +105,7 @@ final class qga extends TextureOperator {
         }
     }
 
-    public qga() {
+    public HorizontalGradientOperator() {
         super(0, true);
     }
 
@@ -128,7 +128,7 @@ final class qga extends TextureOperator {
         try {
           if (param5 >= -107) {
             var17 = (int[]) null;
-            qga.a(30, -67, (int[]) null, -70, -115, -54, -31, -19, 111, 23);
+            HorizontalGradientOperator.a(30, -67, (int[]) null, -70, -115, -54, -31, -19, 111, 23);
           }
           param6--;
           while (param6 >= 0) {

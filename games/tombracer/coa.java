@@ -10,7 +10,7 @@ class coa extends TextureOperator {
     int field_r;
     static int[] field_q;
 
-    final void a(byte param0, PacketBuffer param1, int param2) {
+    final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -58,7 +58,7 @@ class coa extends TextureOperator {
         this.field_p = null;
     }
 
-    int[][] b(int param0, int param1) {
+    int[][] getColourRow(int param0, int param1) {
         int incrementValue$0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_7_1 = 0;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class MessageDialog extends ContentTransitionDialog implements tsa {
+class MessageDialog extends ContentTransitionDialog implements ButtonListener {
     private boolean field_W;
     private static String[] field_Z;
     private boolean field_bb;
@@ -174,15 +174,15 @@ class MessageDialog extends ContentTransitionDialog implements tsa {
           var7 = new sr(this, this.field_ab, param2);
           var4 = var7;
           if (param0 == 5) {
-            var7.a(sba.field_n, 11, 61);
+            var7.a(InvertOperator.field_n, 11, 61);
             var7.a(ControllerLocomotor.field_q, 17, 36);
           } else {
             if (param0 == 256) {
-              var7.a(nga.field_q, (byte) -102, (qc) (this));
+              var7.a(MonochromeFillOperator.field_q, (byte) -102, (WidgetListener) (this));
             } else {
               stackIn_13_0 = var7;
               if (this.field_V) {
-                stackIn_14_1 = nga.field_q;
+                stackIn_14_1 = MonochromeFillOperator.field_q;
               } else {
                 stackIn_14_1 = KeyLockBehaviour.field_o;
               }
@@ -198,7 +198,7 @@ class MessageDialog extends ContentTransitionDialog implements tsa {
                   this.a(95, var7);
                   return;
                 }
-                var7.a(epa.field_q, (byte) -102, (qc) (this));
+                var7.a(epa.field_q, (byte) -102, (WidgetListener) (this));
               } else {
                 var7.a(vf.field_a, 9, -65);
               }

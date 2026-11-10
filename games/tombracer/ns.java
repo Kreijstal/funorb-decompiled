@@ -82,11 +82,11 @@ final class ns extends qe {
             if (null == this.field_k) {
               return;
             }
-            var16 = qv.a(false, 0, 3, 0.4000000059604645f, 64, (byte) -95, 4, 4, 256);
+            var16 = MandelbrotOperator.a(false, 0, 3, 0.4000000059604645f, 64, (byte) -95, 4, 4, 256);
             var12 = var16;
             var11 = var12;
             var3 = var11;
-            var23 = qv.a(false, 8, 3, 0.4000000059604645f, 64, (byte) -102, 4, 4, 256);
+            var23 = MandelbrotOperator.a(false, 8, 3, 0.4000000059604645f, 64, (byte) -102, 4, 4, 256);
             this.field_e = new float[32768];
             var5 = 0;
             for (var6 = 0; var6 < 256; var6++) {

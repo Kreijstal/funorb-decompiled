@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-interface qm extends mta {
+interface qm extends GpuBuffer {
     public abstract boolean a(int param0, int param1, boolean param2);
 
     public abstract void a(int param0);

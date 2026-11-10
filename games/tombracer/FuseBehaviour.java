@@ -103,7 +103,7 @@ final class FuseBehaviour extends Behaviour {
         if (param1 >= -48) {
           return 57;
         }
-        param0 = fs.mixHash((byte) 122, param0, this.field_s);
+        param0 = CurveOperator.mixHash((byte) 122, param0, this.field_s);
         return param0;
     }
 

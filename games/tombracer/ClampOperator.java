@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wja extends TextureOperator {
+final class ClampOperator extends TextureOperator {
     private int field_m;
     private int field_n;
     static String field_o;
@@ -22,13 +22,13 @@ final class wja extends TextureOperator {
           wo.field_k.a(320, -(2 * var5) + (var3 - 120), -23776, var5, (-320 + var2_int) / 2);
           wo.field_k.field_w = Player.c(wo.field_k.field_t, 2105376, 3, 11579568, -118, 8421504);
           rv.field_c.a(-24 + (wo.field_k.field_G - 24), -20 + wo.field_k.field_t - 24, -23776, 16, 24);
-          bma.field_v.a(80, 24, param1 ^ -26595, -24 + wo.field_k.field_t - 20, 120);
+          BrickOperator.field_v.a(80, 24, param1 ^ -26595, -24 + wo.field_k.field_t - 20, 120);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wja.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(byte param0, PacketBuffer param1, int param2) {
+    final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_11_1 = false;
@@ -46,7 +46,7 @@ final class wja extends TextureOperator {
             } else {
               if (2 == var4_int) {
                 stackIn_11_1 = (param1.readUnsignedByte(255) == 1);
-                this.field_g = stackIn_11_1;
+                this.monochrome = stackIn_11_1;
               }
             }
           } else {
@@ -77,7 +77,7 @@ final class wja extends TextureOperator {
         field_o = null;
     }
 
-    public wja() {
+    public ClampOperator() {
         super(1, false);
         this.field_n = 0;
         this.field_m = 4096;
@@ -89,7 +89,7 @@ final class wja extends TextureOperator {
         }
     }
 
-    final int[][] b(int param0, int param1) {
+    final int[][] getColourRow(int param0, int param1) {
         int var11 = 0;
         int[][] var3;
         int[] var8;
@@ -121,7 +121,7 @@ final class wja extends TextureOperator {
         var16 = var18;
         var3 = var16;
         if (this.field_h.field_f) {
-          var37 = this.a(param0, 0, param1 ^ 0);
+          var37 = this.getInputColourRow(param0, 0, param1 ^ 0);
           var38 = var37[0];
           var39 = var37[1];
           var40 = var37[2];
@@ -170,7 +170,7 @@ final class wja extends TextureOperator {
         return var3;
     }
 
-    final int[] c(int param0, int param1) {
+    final int[] getMonochromeRow(int param0, int param1) {
         int var5 = 0;
         int[] var3;
         int[] var4;
@@ -179,10 +179,10 @@ final class wja extends TextureOperator {
         var7 = TombRacer.field_G ? 1 : 0;
         var3 = this.field_i.a((byte) 84, param1);
         if (param0 != 1) {
-          wja.releaseStatics(18);
+          ClampOperator.releaseStatics(18);
         }
         if (this.field_i.field_d) {
-          var4 = this.c(0, -101, param1);
+          var4 = this.getInputMonochromeRow(0, -101, param1);
           for (var5 = 0; var5 < ns.field_g; var5++) {
             var6 = var4[var5];
             if (this.field_n <= var6) {

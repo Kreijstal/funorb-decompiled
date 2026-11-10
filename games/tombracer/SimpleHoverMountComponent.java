@@ -93,7 +93,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
           }
           pq.a(aca.field_i, true, 0, 17, eda.field_e, param3);
         }
-        if (0 != bma.field_v.field_y) {
+        if (0 != BrickOperator.field_v.field_y) {
           uv.field_o = false;
         }
     }

@@ -173,7 +173,7 @@ final class iea {
           vda.field_m = BoulderComponent.a(param1, "lobby", 5, "chatfilter");
           StripedMazeGenerator.field_c[0] = SecondaryNodeDequeIterator.field_b;
           StripedMazeGenerator.field_c[param2] = OpenGlTexture2D.field_m;
-          StripedMazeGenerator.field_c[1] = nga.field_o;
+          StripedMazeGenerator.field_c[1] = MonochromeFillOperator.field_o;
           gea.a(0, param3, qw.field_f);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "iea.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

@@ -52,7 +52,7 @@ final class mq {
           var12 = this.field_c.field_ic;
           var6 = new OpenGlRenderbuffer(this.field_c, 6408, param3.field_r, param3.field_q);
           var8 = 0;
-          this.field_c.b((ks) (var12), (byte) 81);
+          this.field_c.b((Framebuffer) (var12), (byte) 81);
           var12.a(0, var6, true);
           if (var12.c(86)) {
             jaggl.OpenGL.glPushMatrix();

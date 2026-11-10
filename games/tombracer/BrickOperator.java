@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class bma extends TextureOperator {
+final class BrickOperator extends TextureOperator {
     private int field_m;
     private int field_r;
     private int field_A;
@@ -41,7 +41,7 @@ final class bma extends TextureOperator {
         var1.unlink(71);
     }
 
-    final void a(byte param0, PacketBuffer param1, int param2) {
+    final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_25_0 = null;
@@ -84,7 +84,7 @@ final class bma extends TextureOperator {
             this.field_o = param1.readUnsignedByte(255);
           }
           if (param0 != 107) {
-            bma.d((byte) -52);
+            BrickOperator.d((byte) -52);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -167,7 +167,7 @@ final class bma extends TextureOperator {
 
     public static void d(int param0) {
         if (param0 != -21771) {
-          bma.d(5, -48, 96);
+          BrickOperator.d(5, -48, 96);
         }
         field_p = null;
         field_w = null;
@@ -183,7 +183,7 @@ final class bma extends TextureOperator {
         this.c(122);
     }
 
-    public bma() {
+    public BrickOperator() {
         super(0, true);
         this.field_n = 8;
         this.field_q = 81;
@@ -223,7 +223,7 @@ final class bma extends TextureOperator {
             return stackIn_7_0;
           }
           if (!param1) {
-            bma.d(-82, 71, 72);
+            BrickOperator.d(-82, 71, 72);
           }
           throw new IllegalArgumentException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -240,7 +240,7 @@ final class bma extends TextureOperator {
         }
     }
 
-    final int[] c(int param0, int param1) {
+    final int[] getMonochromeRow(int param0, int param1) {
         int var4 = 0;
         int stackIn_14_0 = 0;
         int stackIn_23_0 = 0;

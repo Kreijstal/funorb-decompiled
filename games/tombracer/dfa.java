@@ -30,31 +30,31 @@ abstract class dfa {
               if (!ns.field_f) {
                 return false;
               }
-              if (gm.field_n != 2) {
-                if (2 == gm.field_n) {
+              if (VerticalGradientOperator.field_n != 2) {
+                if (2 == VerticalGradientOperator.field_n) {
                   if (VerticalScrollbar.i(-1)) {
                     var4 = (String) null;
-                    opa.a(gm.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
+                    opa.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
                   }
                   return true;
                 }
                 if (var3 == 0) {
                   if (VerticalScrollbar.i(-1)) {
                     var4 = (String) null;
-                    opa.a(gm.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
+                    opa.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
                   }
                   return true;
                 }
                 return false;
               }
               if (ota.a(apa.field_a, (byte) 13, cr.field_b)) {
-                if (2 != gm.field_n &&
+                if (2 != VerticalGradientOperator.field_n &&
                   var3 != 0) {
                   return false;
                 }
                 if (VerticalScrollbar.i(-1)) {
                   var4 = (String) null;
-                  opa.a(gm.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
+                  opa.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
                 }
                 return true;
               }
@@ -65,17 +65,17 @@ abstract class dfa {
               return false;
             }
             if (ns.field_f) {
-              if (gm.field_n == 2 &&
+              if (VerticalGradientOperator.field_n == 2 &&
                 !ota.a(apa.field_a, (byte) 13, cr.field_b)) {
                 return false;
               }
-              if (2 != gm.field_n &&
+              if (2 != VerticalGradientOperator.field_n &&
                 var3 != 0) {
                 return false;
               }
               if (VerticalScrollbar.i(-1)) {
                 var4Lifetime3 = (String) null;
-                opa.a(gm.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
+                opa.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
               }
               return true;
             }
@@ -100,17 +100,17 @@ abstract class dfa {
             if (!ns.field_f) {
               return false;
             }
-            if (gm.field_n == 2 &&
+            if (VerticalGradientOperator.field_n == 2 &&
               !ota.a(apa.field_a, (byte) 13, cr.field_b)) {
               return false;
             }
-            if (2 != gm.field_n &&
+            if (2 != VerticalGradientOperator.field_n &&
               var3 != 0) {
               return false;
             }
             if (VerticalScrollbar.i(-1)) {
               var4Lifetime1 = (String) null;
-              opa.a(gm.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
+              opa.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
             }
             return true;
           }
@@ -120,17 +120,17 @@ abstract class dfa {
           if (!ns.field_f) {
             return false;
           }
-          if (gm.field_n == 2 &&
+          if (VerticalGradientOperator.field_n == 2 &&
             !ota.a(apa.field_a, (byte) 13, cr.field_b)) {
             return false;
           }
-          if (2 != gm.field_n &&
+          if (2 != VerticalGradientOperator.field_n &&
             var3 != 0) {
             return false;
           }
           if (VerticalScrollbar.i(-1)) {
             var4Lifetime2 = (String) null;
-            opa.a(gm.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
+            opa.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
           }
           return true;
         }

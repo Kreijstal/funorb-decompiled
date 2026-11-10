@@ -434,10 +434,10 @@ class jea extends um {
         }
         stackIn_31_1 = (!FuseBehaviour.field_w) && (jba.field_j >= SoftwareRasterizer.field_b) && (jba.field_j < SoftwareRasterizer.field_d) && (GridWidgetContainer.field_B >= SoftwareRasterizer.field_h) && (SoftwareRasterizer.field_k > GridWidgetContainer.field_B);
         this.field_pb = stackIn_31_1;
-        if (ksa.field_p == 0) {
+        if (RangeOperator.field_p == 0) {
           this.field_E = 0;
         }
-        stackIn_38_1 = (this.field_pb) && (this.field_E == ksa.field_p) && (param1);
+        stackIn_38_1 = (this.field_pb) && (this.field_E == RangeOperator.field_p) && (param1);
         this.field_o = stackIn_38_1;
         if (this.field_J != null) {
           var13 = (jea) (this.field_J.last(3));

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rua extends MessageDialog implements tsa {
+final class rua extends MessageDialog implements ButtonListener {
     static String field_jb;
     static String field_hb;
     static jea field_gb;
@@ -131,17 +131,17 @@ final class rua extends MessageDialog implements tsa {
               this.a(param0 ^ 86, new pg(this));
               return;
             }
-            var5.a(aua.field_d, (byte) -102, (qc) (this));
+            var5.a(aua.field_d, (byte) -102, (WidgetListener) (this));
           } else {
             if (!this.field_ib) {
               if (param2.field_f != 5) {
                 var5.a(KeyLockBehaviour.field_o, -1, 40);
               } else {
-                var5.a(sba.field_n, 11, 102);
+                var5.a(InvertOperator.field_n, 11, 102);
                 var5.a(ControllerLocomotor.field_q, 17, 59);
               }
             } else {
-              var5.a(aua.field_d, (byte) -102, (qc) (this));
+              var5.a(aua.field_d, (byte) -102, (WidgetListener) (this));
             }
             if (param2.field_f != 3) {
               if (param2.field_f == 6) {

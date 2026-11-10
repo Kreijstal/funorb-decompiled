@@ -15,8 +15,8 @@ final class au extends aa {
         if (nla.field_a != ub.field_c) {
           if (vb.field_i == ub.field_c) {
             if (!TextWidgetPainter.a(23)) {
-              if (qv.field_o != null) {
-                su.a(qv.field_o, (byte) -108, 3);
+              if (MandelbrotOperator.field_o != null) {
+                su.a(MandelbrotOperator.field_o, (byte) -108, 3);
               }
               qfa.a(-116);
               if (FlagSet.field_c) {

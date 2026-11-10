@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jda extends TextureOperator {
+final class GreyscaleOperator extends TextureOperator {
     static int field_m;
 
     final static void a(boolean param0, int param1) {
@@ -11,7 +11,7 @@ final class jda extends TextureOperator {
         }
     }
 
-    public jda() {
+    public GreyscaleOperator() {
         super(1, true);
     }
 
@@ -28,7 +28,7 @@ final class jda extends TextureOperator {
         return true;
     }
 
-    final int[] c(int param0, int param1) {
+    final int[] getMonochromeRow(int param0, int param1) {
         int[][] var4 = null;
         int[] var5 = null;
         int[] var6 = null;
@@ -41,7 +41,7 @@ final class jda extends TextureOperator {
           return (int[]) null;
         }
         if (this.field_i.field_d) {
-          var4 = this.a(param1, 0, -1);
+          var4 = this.getInputColourRow(param1, 0, -1);
           var5 = var4[0];
           var6 = var4[1];
           var7 = var4[2];

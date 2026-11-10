@@ -5,7 +5,7 @@ final class jla extends FocusableWidget {
     static IntrusiveDeque field_z;
     static String field_B;
 
-    jla(String param0, qc param1, boolean param2) {
+    jla(String param0, WidgetListener param1, boolean param2) {
         this(param0, param1);
         try {
           this.field_w = param2 ? true : false;
@@ -14,7 +14,7 @@ final class jla extends FocusableWidget {
         }
     }
 
-    private jla(String param0, isa param1, qc param2) {
+    private jla(String param0, isa param1, WidgetListener param2) {
         super(param0, param1, param2);
         try {
           this.field_r = afa.field_c.field_d;
@@ -41,7 +41,7 @@ final class jla extends FocusableWidget {
         super.b(param0, param1, param2, -71);
     }
 
-    private jla(String param0, qc param1) {
+    private jla(String param0, WidgetListener param1) {
         this(param0, afa.field_c.field_u, param1);
         try {
           this.field_r = afa.field_c.field_d;

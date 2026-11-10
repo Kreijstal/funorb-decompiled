@@ -17,7 +17,7 @@ final class jv extends TextureOperator {
         this.field_n = true;
     }
 
-    final int[][] b(int param0, int param1) {
+    final int[][] getColourRow(int param0, int param1) {
         int var10 = 0;
         int[][] var3;
         int[] var5;
@@ -46,9 +46,9 @@ final class jv extends TextureOperator {
         var22 = var23;
         var3 = var22;
         if (this.field_h.field_f) {
-          var41 = this.c(0, param1 - 118, hba.field_b & -1 + param0);
-          var5 = this.c(0, -32, param0);
-          var40 = this.c(0, -111, param0 + 1 & hba.field_b);
+          var41 = this.getInputMonochromeRow(0, param1 - 118, hba.field_b & -1 + param0);
+          var5 = this.getInputMonochromeRow(0, -32, param0);
+          var40 = this.getInputMonochromeRow(0, -111, param0 + 1 & hba.field_b);
           var42 = var29[0];
           var43 = var29[1];
           var44 = var29[2];
@@ -86,7 +86,7 @@ final class jv extends TextureOperator {
         return var22;
     }
 
-    final void a(byte param0, PacketBuffer param1, int param2) {
+    final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

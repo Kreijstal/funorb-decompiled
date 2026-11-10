@@ -39,7 +39,7 @@ final class PerlinNoise2D extends TextureOperator {
         }
     }
 
-    final void a(byte param0, PacketBuffer param1, int param2) {
+    final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         int dupTemp$0 = 0;
         boolean stackIn_16_1 = false;
         RuntimeException stackIn_31_0 = null;
@@ -221,7 +221,7 @@ final class PerlinNoise2D extends TextureOperator {
           }
           if (param1 != -1) {
             var20 = (PacketBuffer) null;
-            this.a((byte) 111, (PacketBuffer) null, 5);
+            this.decodeParameter((byte) 111, (PacketBuffer) null, 5);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -279,7 +279,7 @@ final class PerlinNoise2D extends TextureOperator {
         }
     }
 
-    final int[] c(int param0, int param1) {
+    final int[] getMonochromeRow(int param0, int param1) {
         int[] var4 = this.field_i.a((byte) -119, param1);
         int[] var3 = var4;
         if (param0 != 1) {

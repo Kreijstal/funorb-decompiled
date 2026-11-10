@@ -32,7 +32,7 @@ final class go extends TextureOperator {
         }
     }
 
-    final int[] c(int param0, int param1) {
+    final int[] getMonochromeRow(int param0, int param1) {
         int var7 = 0;
         int stackIn_7_0 = 0;
         int[] var3;
@@ -53,9 +53,9 @@ final class go extends TextureOperator {
         var17 = this.field_i.a((byte) 80, param1);
         var3 = var17;
         if (this.field_i.field_d) {
-          var24 = this.c(0, -73, -1 + param1 & hba.field_b);
-          var5 = this.c(0, -112, param1);
-          var25 = this.c(0, -47, param1 + 1 & hba.field_b);
+          var24 = this.getInputMonochromeRow(0, -73, -1 + param1 & hba.field_b);
+          var5 = this.getInputMonochromeRow(0, -112, param1);
+          var25 = this.getInputMonochromeRow(0, -47, param1 + 1 & hba.field_b);
           for (var7 = 0; var7 < ns.field_g; var7++) {
             var8 = (-var24[var7] + var25[var7]) * this.field_n;
             var9 = this.field_n * (-var5[una.field_b & var7 - 1] + var5[1 + var7 & una.field_b]);
@@ -76,12 +76,12 @@ final class go extends TextureOperator {
           }
         }
         if (param0 != 1) {
-          this.c(-51, 114);
+          this.getMonochromeRow(-51, 114);
         }
         return var17;
     }
 
-    final void a(byte param0, PacketBuffer param1, int param2) {
+    final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         if (param0 != 107) {
           return;
         }

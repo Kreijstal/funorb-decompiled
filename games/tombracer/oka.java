@@ -87,7 +87,7 @@ final class oka extends wv {
         if (hf.field_b == 1) {
           for (var5 = 0; LoginForm.field_z.length > var5; var5++) {
             if (mca.a((byte) 6, var5) &&
-              bma.d(100, var5)) {
+              BrickOperator.d(100, var5)) {
               var6 = LoginForm.field_z[var5] + (this.field_t + (uta.field_d.a() >> 1));
               var7 = this.field_r - (-hq.field_b[var5] - (uta.field_d.c() >> 1));
               var8 = 20;
@@ -373,7 +373,7 @@ final class oka extends wv {
                 }
                 var10 = stackIn_43_0;
                 if (mca.a((byte) 6, var10) &&
-                  bma.d(96, var10)) {
+                  BrickOperator.d(96, var10)) {
                   if (var9.b(true)) {
                     this.field_x.a(-28562, var9.field_k << 16, var9.field_j << 16);
                   }

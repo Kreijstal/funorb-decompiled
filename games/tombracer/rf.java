@@ -42,7 +42,7 @@ final class rf {
         CharSequence var6 = null;
         try {
           var6 = (CharSequence) ((Object) param1);
-          if (!fs.a(param0, var6)) {
+          if (!CurveOperator.a(param0, var6)) {
             stackIn_3_0 = pk.field_v;
             return stackIn_3_0;
           }

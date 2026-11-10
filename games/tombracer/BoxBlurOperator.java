@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cl extends TextureOperator {
+final class BoxBlurOperator extends TextureOperator {
     static boolean field_o;
     private int field_m;
     private int field_n;
 
-    public cl() {
+    public BoxBlurOperator() {
         super(1, false);
         this.field_m = 1;
         this.field_n = 1;
     }
 
-    final int[] c(int param0, int param1) {
+    final int[] getMonochromeRow(int param0, int param1) {
         int var11 = 0;
         int[] var3;
         int var4;
@@ -36,7 +36,7 @@ final class cl extends TextureOperator {
         int var13Lifetime1;
         var14 = TombRacer.field_G ? 1 : 0;
         if (param0 != 1) {
-          this.c(-10, -66);
+          this.getMonochromeRow(-10, -66);
         }
         var3 = this.field_i.a((byte) -123, param1);
         if (this.field_i.field_d) {
@@ -48,7 +48,7 @@ final class cl extends TextureOperator {
           var17 = var19;
           var8 = var17;
           for (var9 = param1 - this.field_m; var9 <= this.field_m + param1; var9++) {
-            var10_ref_int__ = this.c(0, -98, hba.field_b & var9);
+            var10_ref_int__ = this.getInputMonochromeRow(0, -98, hba.field_b & var9);
             var18 = new int[ns.field_g];
             var16 = var18;
             var11_ref_int__ = var16;
@@ -77,7 +77,7 @@ final class cl extends TextureOperator {
         return var3;
     }
 
-    final int[][] b(int param0, int param1) {
+    final int[][] getColourRow(int param0, int param1) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -127,7 +127,7 @@ final class cl extends TextureOperator {
           var30 = var38;
           var8 = var30;
           for (var9_int = param0 - this.field_m; this.field_m + param0 >= var9_int; var9_int++) {
-            var46 = this.a(hba.field_b & var9_int, 0, -1);
+            var46 = this.getInputColourRow(hba.field_b & var9_int, 0, -1);
             var50 = new int[3][ns.field_g];
             var12 = 0;
             var13 = 0;
@@ -182,7 +182,7 @@ final class cl extends TextureOperator {
         return var3;
     }
 
-    final void a(byte param0, PacketBuffer param1, int param2) {
+    final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_14_1 = false;
@@ -201,7 +201,7 @@ final class cl extends TextureOperator {
             if (1 != var4_int) {
               if (var4_int == 2) {
                 stackIn_14_1 = (1 == param1.readUnsignedByte(255));
-                this.field_g = stackIn_14_1;
+                this.monochrome = stackIn_14_1;
               }
             } else {
               this.field_m = param1.readUnsignedByte(255);
@@ -263,7 +263,7 @@ final class cl extends TextureOperator {
           return false;
         }
         if (param1 < 117) {
-          cl.a(false, (byte) -6, 50, 41);
+          BoxBlurOperator.a(false, (byte) -6, 50, 41);
         }
         return !(param2 <= param3);
     }

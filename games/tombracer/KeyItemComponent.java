@@ -5,11 +5,11 @@ final class KeyItemComponent extends ItemComponent {
     static int field_G;
 
     final static void e(boolean param0) {
-        if (!qga.field_m) {
+        if (!HorizontalGradientOperator.field_m) {
           throw new IllegalStateException();
         }
         GameAssetLoader.field_t = param0;
-        jda.a(false, 262144);
+        GreyscaleOperator.a(false, 262144);
         Transform3D.field_c = 0;
     }
 

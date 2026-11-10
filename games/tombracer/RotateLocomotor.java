@@ -9,7 +9,7 @@ final class RotateLocomotor extends Locomotor {
         if (param0 != 0) {
           return -115;
         }
-        param1 = fs.mixHash((byte) 23, param1, this.field_p);
+        param1 = CurveOperator.mixHash((byte) 23, param1, this.field_p);
         return param1;
     }
 

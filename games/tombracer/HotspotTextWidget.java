@@ -48,7 +48,7 @@ class HotspotTextWidget extends FocusableWidget {
     }
 
     HotspotTextWidget(String param0, isa param1) {
-        super(param0, (qc) null);
+        super(param0, (WidgetListener) null);
         this.field_A = null;
         try {
           this.field_r = param1;
@@ -283,7 +283,7 @@ class HotspotTextWidget extends FocusableWidget {
             return;
           }
           if (this.field_h != null) {
-            ((tma) ((Object) this.field_h)).a(this, var7.field_h, 30846, param1);
+            ((HotspotListener) ((Object) this.field_h)).onHotspotAction(this, var7.field_h, 30846, param1);
             return;
           }
           return;
@@ -295,7 +295,7 @@ class HotspotTextWidget extends FocusableWidget {
         if (this.field_h == null) {
           return;
         }
-        ((tma) ((Object) this.field_h)).a(this, var7Lifetime1.field_h, 30846, param1);
+        ((HotspotListener) ((Object) this.field_h)).onHotspotAction(this, var7Lifetime1.field_h, 30846, param1);
     }
 
     void renderLayer(int param0, int param1, int param2, int param3) {

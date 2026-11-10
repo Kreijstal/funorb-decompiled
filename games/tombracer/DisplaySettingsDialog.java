@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DisplaySettingsDialog extends ofa implements tsa {
+final class DisplaySettingsDialog extends ofa implements ButtonListener {
     static volatile int field_X;
     private GridWidgetContainer field_T;
     private FocusableWidget field_Z;
@@ -189,11 +189,11 @@ final class DisplaySettingsDialog extends ofa implements tsa {
           this.field_T.field_E = 83;
           this.field_T.a(5, 5, (byte) 97);
           this.addChild(this.field_T, -1);
-          this.field_W = this.a(-82, ie.field_f, ke.field_a, (qc) (this));
+          this.field_W = this.a(-82, ie.field_f, ke.field_a, (WidgetListener) (this));
           if (var2_intLifetime1 != 0) {
-            this.field_N = this.a(-87, rra.field_a, kka.field_o, (qc) (this));
+            this.field_N = this.a(-87, rra.field_a, kka.field_o, (WidgetListener) (this));
           }
-          this.field_V = this.a(-94, ita.field_e, pa.field_c, (qc) (this));
+          this.field_V = this.a(-94, ita.field_e, pa.field_c, (WidgetListener) (this));
           if (var2_intLifetime1 != 0) {
             stackIn_57_1 = 3;
           } else {
@@ -222,11 +222,11 @@ final class DisplaySettingsDialog extends ofa implements tsa {
             this.field_ab.setBounds((byte) -31, 126, 18, this.field_V.field_i + this.field_T.field_i, -19 + (this.field_V.field_p + (this.field_V.field_n + this.field_T.field_n)));
             this.children.addFirst((byte) 126, (IntrusiveNode) (this.field_ab));
           }
-          this.field_Z = this.a((qc) (this), CachedTextLayout.field_i, 30815);
+          this.field_Z = this.a((WidgetListener) (this), CachedTextLayout.field_i, 30815);
           var5Lifetime1 = this.field_Z.field_m / 2 + this.field_Z.field_i;
           this.field_Z.field_m = 150;
           this.field_Z.field_i = -this.field_Z.field_m + (var5Lifetime1 - 20);
-          this.field_L = this.a((qc) (this), wm.field_b, 30815);
+          this.field_L = this.a((WidgetListener) (this), wm.field_b, 30815);
           this.field_L.field_y = false;
           this.field_L.field_i = var5Lifetime1 + 20;
           this.field_L.field_m = this.field_Z.field_m;
@@ -239,7 +239,7 @@ final class DisplaySettingsDialog extends ofa implements tsa {
             }
             var10 = stackIn_74_0;
             var6 = var10;
-            var7 = new UiWidget(var10, (qc) null);
+            var7 = new UiWidget(var10, (WidgetListener) null);
             var7.field_m = this.field_m;
             var7.field_p = 80;
             var7.field_n = 163;
@@ -492,8 +492,8 @@ final class DisplaySettingsDialog extends ofa implements tsa {
         }
         this.field_B = false;
         if (param0 != -8266) {
-          qc var3 = (qc) null;
-          discarded$0 = this.a(-99, (IndexedSprite[]) null, (String) null, (qc) null);
+          WidgetListener var3 = (WidgetListener) null;
+          discarded$0 = this.a(-99, (IndexedSprite[]) null, (String) null, (WidgetListener) null);
         }
     }
 
@@ -502,7 +502,7 @@ final class DisplaySettingsDialog extends ofa implements tsa {
         FocusableWidget var3 = null;
         int var4 = 0;
         dh var5 = null;
-        qc var6 = null;
+        WidgetListener var6 = null;
         FocusableWidget stackIn_2_0 = null;
         boolean stackIn_3_1 = false;
         RuntimeException stackIn_20_0 = null;
@@ -518,8 +518,8 @@ final class DisplaySettingsDialog extends ofa implements tsa {
           stackIn_3_1 = (param1 != var3);
           stackIn_2_0.field_y = stackIn_3_1;
           if (param0 != 20306) {
-            var6 = (qc) null;
-            discarded$1 = this.a(-82, (IndexedSprite[]) null, (String) null, (qc) null);
+            var6 = (WidgetListener) null;
+            discarded$1 = this.a(-82, (IndexedSprite[]) null, (String) null, (WidgetListener) null);
           }
           if (param1 == this.field_V) {
             if (var3 == param1) {
@@ -562,7 +562,7 @@ final class DisplaySettingsDialog extends ofa implements tsa {
         return ota.a(ica.field_b, (byte) 13, mn.field_n);
     }
 
-    private final FocusableWidget a(qc param0, String param1, int param2) {
+    private final FocusableWidget a(WidgetListener param0, String param1, int param2) {
         FocusableWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -628,7 +628,7 @@ final class DisplaySettingsDialog extends ofa implements tsa {
         var3 = TombRacer.field_G ? 1 : 0;
         if (param0 != -1) {
           var4 = (String) null;
-          discarded$1 = this.a((qc) null, (String) null, -2);
+          discarded$1 = this.a((WidgetListener) null, (String) null, -2);
         }
         boolean decompiledFrameRemainder0 = true;
         if (this.field_W == this.field_S) {
@@ -679,8 +679,8 @@ final class DisplaySettingsDialog extends ofa implements tsa {
           var4.field_w = this.field_S == var4 ? true : false;
         }
         if (param0 != -30) {
-          qc var6 = (qc) null;
-          discarded$0 = this.a(-33, (IndexedSprite[]) null, (String) null, (qc) null);
+          WidgetListener var6 = (WidgetListener) null;
+          discarded$0 = this.a(-33, (IndexedSprite[]) null, (String) null, (WidgetListener) null);
         }
     }
 
@@ -744,7 +744,7 @@ final class DisplaySettingsDialog extends ofa implements tsa {
         }
     }
 
-    private final FocusableWidget a(int param0, IndexedSprite[] param1, String param2, qc param3) {
+    private final FocusableWidget a(int param0, IndexedSprite[] param1, String param2, WidgetListener param3) {
         FocusableWidget var5 = null;
         RuntimeException var5_ref = null;
         GridWidgetContainer var6 = null;

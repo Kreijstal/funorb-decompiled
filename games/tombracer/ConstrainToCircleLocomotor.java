@@ -108,7 +108,7 @@ final class ConstrainToCircleLocomotor extends ConstraintLocomotor {
     }
 
     final int hashState(int param0, int param1) {
-        param1 = fs.mixHash((byte) 30, param1, this.field_u);
+        param1 = CurveOperator.mixHash((byte) 30, param1, this.field_u);
         if (param0 != 0) {
           this.applyConstraint(-37);
           return param1;

@@ -1,6 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-interface tsa extends qc {
+interface ButtonListener extends WidgetListener {
     public abstract void onButtonActivated(int param0, int param1, FocusableWidget param2, int param3, byte param4);
 }

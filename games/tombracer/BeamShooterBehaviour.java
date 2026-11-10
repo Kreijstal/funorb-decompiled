@@ -433,7 +433,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
 
     final int hashState(int param0, int param1) {
         param0 = upa.a(this.field_v, param0, (byte) -106);
-        param0 = fs.mixHash((byte) 127, param0, this.field_o);
+        param0 = CurveOperator.mixHash((byte) 127, param0, this.field_o);
         if (param1 >= -48) {
           return 84;
         }

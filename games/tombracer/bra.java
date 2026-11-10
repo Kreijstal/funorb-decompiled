@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bra extends ofa implements tsa {
+final class bra extends ofa implements ButtonListener {
     static String[] field_M;
     private FocusableWidget field_N;
     private FocusableWidget field_L;
@@ -107,7 +107,7 @@ final class bra extends ofa implements tsa {
         super(param0, 200, 130);
         UiWidget var2 = null;
         try {
-          var2 = new UiWidget(jba.field_l, (qc) null);
+          var2 = new UiWidget(jba.field_l, (WidgetListener) null);
           var2.field_m = this.field_m;
           var2.field_i = 0;
           var2.field_p = 80;
@@ -115,15 +115,15 @@ final class bra extends ofa implements tsa {
           var2.field_r = (isa) ((Object) new TextWidgetPainter(eka.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(var2, -1);
           if (TextWidgetPainter.a(94)) {
-            this.field_L = this.a(UiWidget.field_k, (byte) 91, (qc) (this));
+            this.field_L = this.a(UiWidget.field_k, (byte) 91, (WidgetListener) (this));
           }
-          this.field_N = this.a(BitPacketBuffer.field_j, (byte) 54, (qc) (this));
+          this.field_N = this.a(BitPacketBuffer.field_j, (byte) 54, (WidgetListener) (this));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "bra.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final FocusableWidget a(String param0, byte param1, qc param2) {
+    private final FocusableWidget a(String param0, byte param1, WidgetListener param2) {
         FocusableWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;

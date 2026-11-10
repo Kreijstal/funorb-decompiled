@@ -7,7 +7,7 @@ final class ni {
     static boolean field_c;
     private qm field_a;
     private qm field_d;
-    private eja field_b;
+    private VertexBuffer field_b;
 
     final void a(byte param0) {
         this.field_a.a(12574);

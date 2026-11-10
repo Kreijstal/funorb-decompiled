@@ -91,7 +91,7 @@ final class hb extends coa {
         field_x = null;
     }
 
-    final int[][] b(int param0, int param1) {
+    final int[][] getColourRow(int param0, int param1) {
         int var8 = 0;
         int var9 = 0;
         int var10 = TombRacer.field_G ? 1 : 0;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class efa extends WidgetContainer implements mia, tsa {
+final class efa extends WidgetContainer implements mia, ButtonListener {
     private so field_z;
     static Sprite[][] field_w;
     static int field_y;
@@ -107,11 +107,11 @@ final class efa extends WidgetContainer implements mia, tsa {
 
     public efa() {
         super(0, 0, 496, 0, (isa) null);
-        this.field_z = new so("", (qc) null, 12);
+        this.field_z = new so("", (WidgetListener) null, 12);
         TextWidgetPainter var1 = new TextWidgetPainter(eka.field_o, 0, 0, 0, 0, 16777215, -1, 3, 0, KeySwitchComponent.field_J.field_w, -1, 2147483647, true);
-        UiWidget var2 = new UiWidget(cj.field_e, var1, (qc) null);
-        this.field_A = new FocusableWidget(nf.field_j, (qc) null);
-        this.field_B = new FocusableWidget(mq.field_d, (qc) null);
+        UiWidget var2 = new UiWidget(cj.field_e, var1, (WidgetListener) null);
+        this.field_A = new FocusableWidget(nf.field_j, (WidgetListener) null);
+        this.field_B = new FocusableWidget(mq.field_d, (WidgetListener) null);
         this.field_z.field_q = rma.field_a;
         this.field_z.a(-13861, new tf(this.field_z));
         this.field_A.field_y = false;
@@ -127,8 +127,8 @@ final class efa extends WidgetContainer implements mia, tsa {
         var3 = var3 + (5 + this.a(var3, CrusherBehaviour.field_r, za.field_f, this.field_z, -2239, 170));
         this.field_A.setBounds((byte) -31, var5, 40, -var5 + 496 >> 1, var3);
         this.field_B.setBounds((byte) -31, 60, 40, var4 + 3, var3 + 15);
-        this.field_B.field_h = (qc) (this);
-        this.field_A.field_h = (qc) (this);
+        this.field_B.field_h = (WidgetListener) (this);
+        this.field_A.field_h = (WidgetListener) (this);
         this.addChild(this.field_A, -1);
         this.addChild(this.field_B, -1);
         this.field_x = new UsernameSuggestionsPanel((mia) (this));
@@ -267,7 +267,7 @@ final class efa extends WidgetContainer implements mia, tsa {
           var10 = new jsa(20, param0, 120 + param2, 25, param1, false, 120, param6, KeySwitchComponent.field_J, 16777215, param3);
           this.addChild(var10, -1);
           var9 = new ValidationMessageWidget(((mk) ((Object) param1)).a((byte) 124), param4, 126, param0 + var10.field_p, param2 + 25, param5);
-          var9.field_h = (qc) (this);
+          var9.field_h = (WidgetListener) (this);
           this.addChild(var9, -1);
           stackIn_1_0 = var10.field_p + var9.field_p;
           return stackIn_1_0;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-interface tua extends qc {
+interface tua extends WidgetListener {
     public abstract void a(int param0, ScrollControlWidget param1, int param2, int param3);
 
     public abstract void a(int param0, ScrollControlWidget param1, boolean param2, int param3);

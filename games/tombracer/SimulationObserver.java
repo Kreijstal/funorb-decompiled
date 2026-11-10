@@ -100,7 +100,7 @@ abstract class SimulationObserver {
 
     abstract void onRoomReset(int param0, Room param1);
 
-    abstract void a(int param0, Player param1, Room param2);
+    abstract void onRoomEntered(int param0, Player param1, Room param2);
 
     final void a(PlayerSimulation param0, PendingEvent param1, boolean param2) {
         int var5 = 0;

@@ -87,7 +87,7 @@ final class sw extends jea {
           try {
             var2_int = this.b(-2, -this.field_Cb.field_S + (-this.field_q + jba.field_j));
             if (this.field_y != 1) {
-              if (ksa.field_p == 1 &&
+              if (RangeOperator.field_p == 1 &&
                 this.field_tb) {
                 if (this.field_vb &&
                   this.field_yb > var2_int &&

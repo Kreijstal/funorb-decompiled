@@ -106,7 +106,7 @@ final class ifa extends TextureOperator {
         field_q = null;
     }
 
-    final void a(byte param0, PacketBuffer param1, int param2) {
+    final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -146,7 +146,7 @@ final class ifa extends TextureOperator {
         }
     }
 
-    final int[] c(int param0, int param1) {
+    final int[] getMonochromeRow(int param0, int param1) {
         int var6 = 0;
         int[] var3;
         int var4;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fs extends TextureOperator {
+final class CurveOperator extends TextureOperator {
     static ResourceArchive textArchive;
     private int field_r;
     private int[] field_q;
@@ -26,7 +26,7 @@ final class fs extends TextureOperator {
         return this.field_n[param1];
     }
 
-    public fs() {
+    public CurveOperator() {
         super(1, true);
         this.field_r = 0;
         this.field_m = new short[257];
@@ -141,7 +141,7 @@ final class fs extends TextureOperator {
             var24 = this.field_n[-1 + var3];
             var35 = this.field_n[var3];
             var7 = (-var24[0] + var4 << 12) / (-var24[0] + var35[0]);
-            var8 = 4096 - lm.field_r[var7 >> 5 & 255] >> 1;
+            var8 = 4096 - ColourFillOperator.field_r[var7 >> 5 & 255] >> 1;
             var9 = -var8 + 4096;
             var10 = var8 * var35[1] + var9 * var24[1] >> 12;
             if (var10 <= -32768) {
@@ -158,7 +158,7 @@ final class fs extends TextureOperator {
         }
     }
 
-    final int[] c(int param0, int param1) {
+    final int[] getMonochromeRow(int param0, int param1) {
         int[] var5 = null;
         int var6 = 0;
         int var4 = 0;
@@ -169,7 +169,7 @@ final class fs extends TextureOperator {
         int[] var8 = this.field_i.a((byte) 50, param1);
         int[] var3 = var8;
         if (this.field_i.field_d) {
-          var5 = this.c(0, param0 ^ -33, param1);
+          var5 = this.getInputMonochromeRow(0, param0 ^ -33, param1);
           for (var6 = 0; var6 < ns.field_g; var6++) {
             var4 = var5[var6] >> 4;
             if (0 > var4) {
@@ -208,7 +208,7 @@ final class fs extends TextureOperator {
         this.d((byte) 119);
     }
 
-    final void a(byte param0, PacketBuffer param1, int param2) {
+    final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_10_0 = null;

@@ -218,7 +218,7 @@ final class PlayerContextMenu {
           return true;
         }
         if (param0 == 18) {
-          fs.a((byte) 123, this.field_g, this.field_i);
+          CurveOperator.a((byte) 123, this.field_g, this.field_i);
           return true;
         }
         if (param0 == 11) {

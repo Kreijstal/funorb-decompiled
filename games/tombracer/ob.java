@@ -58,15 +58,15 @@ abstract class ob extends IntrusiveNode {
           WidgetStyleLayer.field_k = new ToolkitSprite[6];
           em.field_h = new ToolkitSprite[6];
           for (var2_intLifetime1 = 0; var2_intLifetime1 < 6; var2_intLifetime1++) {
-            WidgetStyleLayer.field_k[var2_intLifetime1] = su.a(lm.field_p[var2_intLifetime1], param0, (byte) -68);
-            lm.field_p[var2_intLifetime1].b();
-            em.field_h[var2_intLifetime1] = su.a(lm.field_p[var2_intLifetime1], param0, (byte) 125);
-            lm.field_p[var2_intLifetime1].b();
+            WidgetStyleLayer.field_k[var2_intLifetime1] = su.a(ColourFillOperator.field_p[var2_intLifetime1], param0, (byte) -68);
+            ColourFillOperator.field_p[var2_intLifetime1].b();
+            em.field_h[var2_intLifetime1] = su.a(ColourFillOperator.field_p[var2_intLifetime1], param0, (byte) 125);
+            ColourFillOperator.field_p[var2_intLifetime1].b();
           }
           ik.field_h = su.a(dna.field_F, param0, (byte) 127);
           ArchiveSource.field_a = ak.a(param0, bp.field_p, -79);
           bd.field_i = su.a(ara.field_vb, param0, (byte) -20);
-          lm.field_m = su.a(tla.field_g, param0, (byte) -99);
+          ColourFillOperator.field_m = su.a(tla.field_g, param0, (byte) -99);
           CachedTextLayout.field_l = su.a(wd.field_c, param0, (byte) 25);
           lh.field_b = su.a(lha.field_l, param0, (byte) 127);
           vua.field_A = su.a(wj.field_a, param0, (byte) 126);

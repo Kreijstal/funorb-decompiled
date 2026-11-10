@@ -60,10 +60,10 @@ final class wg extends tu {
         }
     }
 
-    final void a(int param0, Player param1, Room param2) {
+    final void onRoomEntered(int param0, Player param1, Room param2) {
         try {
           qra.a(param2, 100, this.field_f);
-          super.a(param0, param1, param2);
+          super.onRoomEntered(param0, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wg.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

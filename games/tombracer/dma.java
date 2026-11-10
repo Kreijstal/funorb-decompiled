@@ -33,7 +33,7 @@ final class dma extends OpenGlTexture implements na {
         int var7 = 0;
         int var5_intLifetime1;
         try {
-          this.field_j.bindTexture(true, (iva) (this));
+          this.field_j.bindTexture(true, (GpuTexture) (this));
           if (param2) {
             for (var5_int = 0; var5_int < 6; var5_int++) {
               this.a((byte) 99, var5_int + 34069, param1, param3[var5_int], param1);

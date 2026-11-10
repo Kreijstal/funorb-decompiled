@@ -13,7 +13,7 @@ final class pja extends vw {
         this.field_c.a(PlayerContextMenu.field_j, 0, -37);
     }
 
-    final void a(int param0, iva param1, int param2) {
+    final void a(int param0, GpuTexture param1, int param2) {
         try {
           if (param2 != 24595) {
             this.field_d = (mf) null;

@@ -112,7 +112,7 @@ final class opa extends qra {
             for (var8Lifetime1 = param1; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
               var9Lifetime1 = BlockModel.field_n[var8Lifetime1];
               var10Lifetime1 = BlockModel.field_n[var8Lifetime1 + 1];
-              if (cl.a(param6, (byte) 119, var10Lifetime1, var9Lifetime1)) {
+              if (BoxBlurOperator.a(param6, (byte) 119, var10Lifetime1, var9Lifetime1)) {
                 BlockModel.field_n[var8Lifetime1] = var10Lifetime1;
                 BlockModel.field_n[var8Lifetime1 + 1] = var9Lifetime1;
               }

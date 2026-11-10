@@ -454,7 +454,7 @@ final class ila {
         gja.field_x = 127 & var3;
         stackIn_3_0 = ((128 & var3) != 0);
         sb.field_b = stackIn_3_0;
-        jda.field_m = var8.readUnsignedByte(255);
+        GreyscaleOperator.field_m = var8.readUnsignedByte(255);
         ScrollContainer.field_z = var8.readLong(param0 ^ -290628099);
         if (gja.field_x == 2) {
           gb.field_a = var8.readUnsignedShort(127);

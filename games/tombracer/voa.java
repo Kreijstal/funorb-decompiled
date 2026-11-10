@@ -13,7 +13,7 @@ final class voa extends TextureOperator {
     static String field_q;
     private int field_t;
 
-    final int[] c(int param0, int param1) {
+    final int[] getMonochromeRow(int param0, int param1) {
         int var5 = 0;
         int stackIn_8_0 = 0;
         int stackIn_11_0 = 0;
@@ -119,7 +119,7 @@ final class voa extends TextureOperator {
         return var12;
     }
 
-    final void a(byte param0, PacketBuffer param1, int param2) {
+    final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         boolean discarded$0 = false;
         int var4_int = 0;
         int var5 = 0;
@@ -421,7 +421,7 @@ final class voa extends TextureOperator {
         int var5;
         boolean stackIn_6_0 = false;
         var4 = (param2 + param0) * this.field_t >> 12;
-        var5 = lm.field_r[(1047023 & 255 * var4) >> 12];
+        var5 = ColourFillOperator.field_r[(1047023 & 255 * var4) >> 12];
         var5 = (var5 << 12) / this.field_t;
         if (param1 != -128) {
           this.field_r = 96;
@@ -437,7 +437,7 @@ final class voa extends TextureOperator {
         int var5;
         boolean stackIn_6_0 = false;
         var4 = (param0 - param1) * this.field_t >> 12;
-        var5 = lm.field_r[(var4 * 255 & 1048064) >> 12];
+        var5 = ColourFillOperator.field_r[(var4 * 255 & 1048064) >> 12];
         var5 = (var5 << 12) / this.field_t;
         var5 = (var5 << 12) / this.field_r;
         var5 = var5 * this.field_m >> 12;

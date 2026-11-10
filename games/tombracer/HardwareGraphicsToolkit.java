@@ -78,9 +78,9 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     int field_Bc;
     ica[] field_mc;
     boolean field_l;
-    private iva[] field_N;
+    private GpuTexture[] field_N;
     private int field_rb;
-    iva field_Jb;
+    GpuTexture field_Jb;
     boolean field_Yb;
     float field_pc;
     float[] field_M;
@@ -131,7 +131,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     gja field_E;
     gja field_gc;
     private mna field_ub;
-    private eja field_z;
+    private VertexBuffer field_z;
     gja field_O;
     mna field_nc;
     mna field_ob;
@@ -257,7 +257,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
               } else {
                 var5 = 1;
                 var4 = 1;
-                var3 = bma.field_w;
+                var3 = BrickOperator.field_w;
               }
             }
           }
@@ -413,7 +413,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    abstract eja createIndexBuffer(int param0, boolean param1);
+    abstract VertexBuffer createIndexBuffer(int param0, boolean param1);
 
     abstract void uploadDirectionalLights(byte param0);
 
@@ -616,9 +616,9 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
     }
 
-    final gf a(boolean param0, int param1, boolean param2, int param3, int[] param4) {
+    final GpuTexture2D a(boolean param0, int param1, boolean param2, int param3, int[] param4) {
         RuntimeException var6 = null;
-        gf stackIn_3_0 = null;
+        GpuTexture2D stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -645,7 +645,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     final AffineTransform3D E(int param0) {
         if (param0 < 1) {
-          this.field_Jb = (iva) null;
+          this.field_Jb = (GpuTexture) null;
         }
         return this.field_Qb;
     }
@@ -1231,10 +1231,10 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           }
           this.a(var9, var7, var8, param1, param2, -25);
           if (null == this.field_pb) {
-            this.bindTexture(true, (iva) (var5));
+            this.bindTexture(true, (GpuTexture) (var5));
             this.a((byte) -37, var6);
           } else {
-            this.field_pb.a(var6, (iva) (var5), 24595);
+            this.field_pb.a(var6, (GpuTexture) (var5), 24595);
           }
           this.field_Jc = param3;
           this.field_V = this.field_L;
@@ -1245,7 +1245,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final void bindTexture(boolean param0, iva param1) {
+    final void bindTexture(boolean param0, GpuTexture param1) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -1279,7 +1279,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    abstract gf createIntTexture2D(int[] param0, int param1, boolean param2, int param3, int param4, int param5, int param6);
+    abstract GpuTexture2D createIntTexture2D(int[] param0, int param1, boolean param2, int param3, int param4, int param5, int param6);
 
     final void a(AffineTransform3D param0, byte param1) {
         try {
@@ -1362,10 +1362,10 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     abstract void applyBlendFactors(boolean param0);
 
-    final gf a(float[] param0, ft param1, boolean param2, boolean param3, int param4, int param5) {
+    final GpuTexture2D a(float[] param0, ft param1, boolean param2, boolean param3, int param4, int param5) {
         RuntimeException var7 = null;
         ft var8 = null;
-        gf stackIn_3_0 = null;
+        GpuTexture2D stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -1622,7 +1622,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    abstract void a(eja param0, int param1, int param2, int param3, iw param4, int param5, int param6);
+    abstract void a(VertexBuffer param0, int param1, int param2, int param3, iw param4, int param5, int param6);
 
     private final boolean p(int param0) {
         if (param0 > -41) {
@@ -1673,7 +1673,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    abstract gf createTexture2D(int param0, int param1, ft param2, byte param3, una param4);
+    abstract GpuTexture2D createTexture2D(int param0, int param1, ft param2, byte param3, una param4);
 
     final void d(int param0, int param1, int param2, int param3, int param4, int param5) {
         float var7 = this.c((byte) -76);
@@ -1753,7 +1753,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     final void initializeHardwareResources(int param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
-        this.field_N = new iva[this.field_Vb];
+        this.field_N = new GpuTexture[this.field_Vb];
         this.field_hc = new AffineTransform3D[this.field_Vb];
         this.field_db = new ica[this.field_Vb];
         this.field_v = new ura[this.field_Vb];
@@ -1770,7 +1770,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           var2++;
         }
         this.field_ib = new ob[-2 + this.field_e];
-        this.field_Jb = (iva) ((Object) this.createTexture2D(1, 1, SwitchableId.field_a, (byte) -63, una.field_g));
+        this.field_Jb = (GpuTexture) ((Object) this.createTexture2D(1, 1, SwitchableId.field_a, (byte) -63, una.field_g));
         this.a(new to(262144));
         this.field_Db = this.createVertexLayout(new ne[]{new ne(new gj[]{gj.field_p, gj.field_n})}, 0);
         this.createVertexLayout(new ne[]{new ne(new gj[]{gj.field_p, gj.field_b})}, 0);
@@ -2183,7 +2183,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    abstract gf a(boolean param0, byte[] param1, int param2, int param3, int param4, int param5, ft param6, int param7);
+    abstract GpuTexture2D a(boolean param0, byte[] param1, int param2, int param3, int param4, int param5, ft param6, int param7);
 
     final void la() {
         this.field_K = 0;
@@ -2494,7 +2494,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         return this.field_u;
     }
 
-    abstract gf a(ft param0, int param1, int param2, boolean param3, int param4, int param5, float[] param6, int param7);
+    abstract GpuTexture2D a(ft param0, int param1, int param2, boolean param3, int param4, int param5, float[] param6, int param7);
 
     private final void u(int param0) {
         this.z(param0);
@@ -2528,10 +2528,10 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.field_z.a(param0 ^ 12568);
     }
 
-    final gf a(int param0, byte[] param1, boolean param2, ft param3, int param4, int param5) {
+    final GpuTexture2D a(int param0, byte[] param1, boolean param2, ft param3, int param4, int param5) {
         RuntimeException var7 = null;
-        gf stackIn_2_0 = null;
-        gf stackIn_4_0 = null;
+        GpuTexture2D stackIn_2_0 = null;
+        GpuTexture2D stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -2543,7 +2543,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
             stackIn_4_0 = this.a(param2, param1, 0, param0, 1, 0, param3, param5);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (gf) null;
+          stackIn_2_0 = (GpuTexture2D) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

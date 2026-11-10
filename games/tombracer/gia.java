@@ -49,7 +49,7 @@ final class gia extends TextureOperator {
         this.field_n = -1;
     }
 
-    final void a(byte param0, PacketBuffer param1, int param2) {
+    final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -77,7 +77,7 @@ final class gia extends TextureOperator {
         }
     }
 
-    final int[][] b(int param0, int param1) {
+    final int[][] getColourRow(int param0, int param1) {
         int incrementValue$0 = 0;
         int stackIn_6_0 = 0;
         int[][] var3;

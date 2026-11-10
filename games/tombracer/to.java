@@ -41,7 +41,7 @@ final class to extends za {
         if (param0 != 11) {
           return;
         }
-        qga.c(param0 ^ -10787);
+        HorizontalGradientOperator.c(param0 ^ -10787);
     }
 
     to(int param0) {

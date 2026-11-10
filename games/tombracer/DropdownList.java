@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DropdownList extends WidgetContainer implements tsa {
+final class DropdownList extends WidgetContainer implements ButtonListener {
     ScrollContainer field_F;
     private FocusableWidget field_I;
     private boolean field_B;
@@ -55,13 +55,13 @@ final class DropdownList extends WidgetContainer implements tsa {
         this.field_w = "";
         try {
           this.field_z = new je(this, this.field_H, param0, param1);
-          this.field_z.field_h = (qc) (this);
+          this.field_z.field_h = (WidgetListener) (this);
           this.field_G = false;
           this.field_A = param2;
-          this.field_I = new FocusableWidget("", new fua(this), (qc) (this));
+          this.field_I = new FocusableWidget("", new fua(this), (WidgetListener) (this));
           this.field_E = new FocusableWidget();
           this.field_E.field_r = (isa) ((Object) new ema());
-          this.field_E.field_h = (qc) (this);
+          this.field_E.field_h = (WidgetListener) (this);
           this.addChild(this.field_I, -1);
           this.addChild(this.field_E, -1);
         } catch (RuntimeException runtimeException) {

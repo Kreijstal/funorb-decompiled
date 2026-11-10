@@ -19,11 +19,11 @@ final class FacePlayerLocomotor extends Locomotor {
 
     final int hashState(int param0, int param1) {
         if (param0 == 0) {
-          param1 = fs.mixHash((byte) 61, param1, this.field_o);
+          param1 = CurveOperator.mixHash((byte) 61, param1, this.field_o);
           return param1;
         }
         field_p = (bb) null;
-        param1 = fs.mixHash((byte) 61, param1, this.field_o);
+        param1 = CurveOperator.mixHash((byte) 61, param1, this.field_o);
         return param1;
     }
 

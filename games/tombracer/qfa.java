@@ -5,7 +5,7 @@ final class qfa {
     static String field_a;
 
     final static void a(int param0) {
-        cl.field_o = false;
+        BoxBlurOperator.field_o = false;
         if (param0 >= -75) {
           field_a = (String) null;
         }
@@ -21,13 +21,13 @@ final class qfa {
     }
 
     final static void a(byte param0) {
-        on.field_b = new AccountRegistrationPanel();
+        TeleportState.field_b = new AccountRegistrationPanel();
         if (param0 == 6) {
-          um.field_l.a(103, on.field_b);
+          um.field_l.a(103, TeleportState.field_b);
           return;
         }
         qfa.a((byte) -122);
-        um.field_l.a(103, on.field_b);
+        um.field_l.a(103, TeleportState.field_b);
     }
 
     final static void a(int param0, int param1) {

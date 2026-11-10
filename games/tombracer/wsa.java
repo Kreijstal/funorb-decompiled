@@ -13,7 +13,7 @@ final class wsa extends TextureOperator {
     private int field_p;
     private int field_q;
 
-    final int[][] b(int param0, int param1) {
+    final int[][] getColourRow(int param0, int param1) {
         int var11 = 0;
         int[][] var3;
         int[] var8;
@@ -36,7 +36,7 @@ final class wsa extends TextureOperator {
         var13 = var15;
         var3 = var13;
         if (this.field_h.field_f) {
-          var28 = this.a(param0, 0, -1);
+          var28 = this.getInputColourRow(param0, 0, -1);
           var30 = var28[0];
           var31 = var28[1];
           var29 = var28[2];
@@ -244,7 +244,7 @@ final class wsa extends TextureOperator {
         }
     }
 
-    final void a(byte param0, PacketBuffer param1, int param2) {
+    final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_14_0 = null;

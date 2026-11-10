@@ -23,7 +23,7 @@ final class cma extends TextureOperator {
         this.field_n = 409;
     }
 
-    final void a(byte param0, PacketBuffer param1, int param2) {
+    final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         int var5 = 0;
         int var6 = 0;
         PacketBuffer var7 = null;
@@ -37,7 +37,7 @@ final class cma extends TextureOperator {
         try {
           if (param0 != 107) {
             var7 = (PacketBuffer) null;
-            this.a((byte) -33, (PacketBuffer) null, 70);
+            this.decodeParameter((byte) -33, (PacketBuffer) null, 70);
           }
           var5 = param2;
           if (var5 == 0) {
@@ -77,7 +77,7 @@ final class cma extends TextureOperator {
         }
     }
 
-    final int[][] b(int param0, int param1) {
+    final int[][] getColourRow(int param0, int param1) {
         int var11 = 0;
         int[][] var3;
         int[] var8;
@@ -115,7 +115,7 @@ final class cma extends TextureOperator {
         if (!this.field_h.field_f) {
           return var3;
         }
-        var38 = this.a(param0, 0, -1);
+        var38 = this.getInputColourRow(param0, 0, -1);
         var39 = var38[0];
         var40 = var38[1];
         var41 = var38[2];

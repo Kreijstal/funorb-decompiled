@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uba extends kma implements cd, eaa {
+final class uba extends kma implements TextInputListener, eaa {
     static int field_f;
     paa field_i;
     static String[] loadingQuipsShort;

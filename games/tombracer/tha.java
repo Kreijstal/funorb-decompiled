@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tha extends WidgetContainer implements tsa {
+final class tha extends WidgetContainer implements ButtonListener {
     static String field_A;
     static String field_B;
     private FocusableWidget field_x;
@@ -140,9 +140,9 @@ final class tha extends WidgetContainer implements tsa {
 
     public tha() {
         super(0, 0, 476, 225, (isa) null);
-        this.field_z = new FocusableWidget(foa.field_a, (qc) null);
-        this.field_w = new FocusableWidget(HardwareOpenGlToolkit.field_gd, (qc) null);
-        this.field_x = new FocusableWidget(fca.field_d, (qc) null);
+        this.field_z = new FocusableWidget(foa.field_a, (WidgetListener) null);
+        this.field_w = new FocusableWidget(HardwareOpenGlToolkit.field_gd, (WidgetListener) null);
+        this.field_x = new FocusableWidget(fca.field_d, (WidgetListener) null);
         td var1 = new td();
         this.field_z.field_r = (isa) ((Object) var1);
         this.field_w.field_r = (isa) ((Object) var1);
@@ -153,10 +153,10 @@ final class tha extends WidgetContainer implements tsa {
         this.field_w.setBounds((byte) -31, var4, 30, this.field_m - var3 >> 1, -var2 + (this.field_p - 48));
         this.field_x.setBounds((byte) -31, var4, 30, var4 + (-var3 + this.field_m >> 1) + var2, -var2 + this.field_p - 48);
         this.field_z.setBounds((byte) -31, var3, 30, this.field_m - var3 >> 1, this.field_p + (-78 - var2 * 2));
-        this.field_w.field_h = (qc) (this);
-        this.field_z.field_h = (qc) (this);
+        this.field_w.field_h = (WidgetListener) (this);
+        this.field_z.field_h = (WidgetListener) (this);
         this.field_z.field_q = hga.field_n;
-        this.field_x.field_h = (qc) (this);
+        this.field_x.field_h = (WidgetListener) (this);
         this.field_x.field_q = tg.field_a;
         this.addChild(this.field_w, -1);
         this.addChild(this.field_z, -1);

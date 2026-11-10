@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nga extends TextureOperator {
+final class MonochromeFillOperator extends TextureOperator {
     static Sprite[] field_n;
     static String field_q;
     static int field_p;
     static String field_o;
     private int field_m;
 
-    private nga(int param0) {
+    private MonochromeFillOperator(int param0) {
         super(0, true);
         this.field_m = 4096;
         this.field_m = param0;
     }
 
-    final void a(byte param0, PacketBuffer param1, int param2) {
+    final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_7_0 = null;
@@ -45,7 +45,7 @@ final class nga extends TextureOperator {
         }
     }
 
-    final int[] c(int param0, int param1) {
+    final int[] getMonochromeRow(int param0, int param1) {
         int[] var4 = this.field_i.a((byte) 61, param1);
         int[] var3 = var4;
         if (this.field_i.field_d) {
@@ -73,7 +73,7 @@ final class nga extends TextureOperator {
         return true;
     }
 
-    public nga() {
+    public MonochromeFillOperator() {
         this(4096);
     }
 

@@ -44,7 +44,7 @@ final class uv extends oga {
           jaggl.OpenGL.glLoadIdentity();
           jaggl.OpenGL.glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
           if (null != this.field_l) {
-            this.field_g.b((ks) (this.field_s), (byte) 81);
+            this.field_g.b((Framebuffer) (this.field_s), (byte) 81);
             var5_int = WidgetContainer.highestOneBit(this.field_t, (byte) 85);
             var6 = WidgetContainer.highestOneBit(this.field_n, (byte) 96);
             var7_int = 0;
@@ -89,7 +89,7 @@ final class uv extends oga {
               {
                 this.field_g.b(this.field_s, 0);
                 this.field_g.a(true, this.field_l[-1 + var7_int]);
-                this.field_g.b((ks) (this.field_q), (byte) 81);
+                this.field_g.b((Framebuffer) (this.field_q), (byte) 81);
                 this.field_q.a(0, (byte) -91);
                 jaggl.OpenGL.glViewport(0, 0, 256, 256);
                 var8 = this.field_v.field_c;
@@ -112,7 +112,7 @@ final class uv extends oga {
           }
           if (decompiledFrameCompleted0) {
             this.field_g.a(true, param0);
-            this.field_g.b((ks) (this.field_q), (byte) 81);
+            this.field_g.b((Framebuffer) (this.field_q), (byte) 81);
             this.field_q.a(0, (byte) -91);
             jaggl.OpenGL.glViewport(0, 0, 256, 256);
             var5_long = this.field_m.field_c;
@@ -392,7 +392,7 @@ final class uv extends oga {
         this.field_x.a(false, false, -3554);
         this.field_i = new rt(this.field_g, 3553, 34842, 256, 256);
         this.field_i.a(false, false, -3554);
-        this.field_g.b((ks) (this.field_q), (byte) 81);
+        this.field_g.b((Framebuffer) (this.field_q), (byte) 81);
         this.field_q.a(true, this.field_x, 0);
         this.field_q.a(true, this.field_i, 1);
         this.field_q.a(0, (byte) -91);

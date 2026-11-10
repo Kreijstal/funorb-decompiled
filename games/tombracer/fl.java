@@ -4,7 +4,7 @@
 final class fl extends TextureOperator {
     static int field_m;
 
-    final int[] c(int param0, int param1) {
+    final int[] getMonochromeRow(int param0, int param1) {
         int var4 = 0;
         int[] var5 = null;
         int var6 = TombRacer.field_G ? 1 : 0;
@@ -17,7 +17,7 @@ final class fl extends TextureOperator {
         if (this.field_i.field_d) {
           for (var4 = 0; ns.field_g > var4; var4++) {
             this.d(var4, param1, -5455);
-            var5 = this.c(0, -70, fv.field_e);
+            var5 = this.getInputMonochromeRow(0, -70, fv.field_e);
             var8[var4] = var5[BlockModel.field_o];
           }
         }
@@ -130,7 +130,7 @@ final class fl extends TextureOperator {
         BlockModel.field_o = BlockModel.field_o & una.field_b;
     }
 
-    final void a(byte param0, PacketBuffer param1, int param2) {
+    final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         boolean stackIn_5_1 = false;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -140,7 +140,7 @@ final class fl extends TextureOperator {
         try {
           if (0 == param2) {
             stackIn_5_1 = (param1.readUnsignedByte(param0 + 148) == 1);
-            this.field_g = stackIn_5_1;
+            this.monochrome = stackIn_5_1;
           }
           if (param0 != 107) {
             field_m = -44;
@@ -160,7 +160,7 @@ final class fl extends TextureOperator {
         }
     }
 
-    final int[][] b(int param0, int param1) {
+    final int[][] getColourRow(int param0, int param1) {
         int[] var4 = null;
         int[] var5 = null;
         int[] var6 = null;
@@ -177,7 +177,7 @@ final class fl extends TextureOperator {
           var6 = var13[2];
           for (var7 = 0; var7 < ns.field_g; var7++) {
             this.d(var7, param0, -5455);
-            var14 = this.a(fv.field_e, 0, -1);
+            var14 = this.getInputColourRow(fv.field_e, 0, -1);
             var4[var7] = var14[0][BlockModel.field_o];
             var5[var7] = var14[1][BlockModel.field_o];
             var6[var7] = var14[2][BlockModel.field_o];

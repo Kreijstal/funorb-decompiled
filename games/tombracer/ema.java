@@ -66,7 +66,7 @@ final class ema implements isa {
         SpriteData var9;
         int stackIn_17_0 = 0;
         int var6Lifetime1;
-        var8 = lm.field_p[param3];
+        var8 = ColourFillOperator.field_p[param3];
         var9 = var8;
         var6 = 0;
         if (param0) {

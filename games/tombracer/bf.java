@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bf implements jca {
+final class bf implements RenderTarget {
     int[] field_g;
     static tv[][] field_b;
     float[] field_e;

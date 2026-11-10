@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class xa implements mw, e {
+final class xa implements RenderBuffer, e {
     long field_nativeid;
 
     private final native void va(long param0, boolean param1);

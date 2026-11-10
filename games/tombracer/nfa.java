@@ -343,7 +343,7 @@ final class nfa extends TextureOperator {
         }
     }
 
-    final int[][] b(int param0, int param1) {
+    final int[][] getColourRow(int param0, int param1) {
         int var13 = 0;
         int[][] var3;
         int[][] var4;
@@ -371,10 +371,10 @@ final class nfa extends TextureOperator {
           var5 = ns.field_g / this.field_m;
           var6 = ArchiveNetworkClient.field_i / this.field_o;
           if (var6 <= 0) {
-            var4 = this.a(0, 0, -1);
+            var4 = this.getInputColourRow(0, 0, -1);
           } else {
             var7_int = param0 % var6;
-            var4 = this.a(var7_int * ArchiveNetworkClient.field_i / var6, 0, param1 + 0);
+            var4 = this.getInputColourRow(var7_int * ArchiveNetworkClient.field_i / var6, 0, param1 + 0);
           }
           var7 = var4[0];
           var8 = var4[1];
@@ -400,7 +400,7 @@ final class nfa extends TextureOperator {
         return var17;
     }
 
-    final int[] c(int param0, int param1) {
+    final int[] getMonochromeRow(int param0, int param1) {
         int[] var3;
         int[] var4;
         int var5;
@@ -419,10 +419,10 @@ final class nfa extends TextureOperator {
           var5 = ns.field_g / this.field_m;
           var6 = ArchiveNetworkClient.field_i / this.field_o;
           if (var6 <= 0) {
-            var4 = this.c(0, -84, 0);
+            var4 = this.getInputMonochromeRow(0, -84, 0);
           } else {
             var7 = param1 % var6;
-            var4 = this.c(0, -116, var7 * ArchiveNetworkClient.field_i / var6);
+            var4 = this.getInputMonochromeRow(0, -116, var7 * ArchiveNetworkClient.field_i / var6);
           }
           var10 = 0;
           var7Lifetime1 = var10;
@@ -460,7 +460,7 @@ final class nfa extends TextureOperator {
         this.field_m = 4;
     }
 
-    final void a(byte param0, PacketBuffer param1, int param2) {
+    final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_11_0 = null;

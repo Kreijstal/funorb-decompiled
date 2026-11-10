@@ -53,7 +53,7 @@ final class MirrorBehaviour extends Behaviour {
     }
 
     final int hashState(int param0, int param1) {
-        param0 = fs.mixHash((byte) 83, param0, this.field_w);
+        param0 = CurveOperator.mixHash((byte) 83, param0, this.field_w);
         if (param1 > -48) {
           return -43;
         }

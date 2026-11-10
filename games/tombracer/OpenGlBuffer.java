@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class OpenGlBuffer implements mta {
+abstract class OpenGlBuffer implements GpuBuffer {
     private jaclib.memory.heap.NativeHeapBuffer field_b;
     private int field_f;
     static String field_i;

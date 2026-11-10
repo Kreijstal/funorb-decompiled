@@ -1450,7 +1450,7 @@ final class gja extends ka {
 
     private final boolean h(int param0) {
         RuntimeException decompiledCaughtException = null;
-        eja var2 = null;
+        VertexBuffer var2 = null;
         RuntimeException var2_ref = null;
         jaclib.memory.Buffer var3 = null;
         jaclib.memory.Stream var4 = null;
@@ -1646,7 +1646,7 @@ final class gja extends ka {
             }
           }
           if (this.field_C != null &&
-            !jda.d(this.field_h, -28090, this.field_Y)) {
+            !GreyscaleOperator.d(this.field_h, -28090, this.field_Y)) {
             if (null == this.field_E ||
               this.field_E.b(16440)) {
               this.field_C = null;

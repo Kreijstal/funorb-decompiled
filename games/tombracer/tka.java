@@ -39,15 +39,15 @@ final class tka extends TextWidgetPainter {
             field_p = (ToolkitSprite) null;
           }
           if (ou.field_e != null &&
-            lm.field_r != null) {
+            ColourFillOperator.field_r != null) {
             return;
           }
-          lm.field_r = new int[256];
+          ColourFillOperator.field_r = new int[256];
           ou.field_e = new int[256];
           for (var1_int = 0; 256 > var1_int; var1_int++) {
             var2 = (double)var1_int / 255.0 * 6.283185307179586;
             ou.field_e[var1_int] = (int)(Math.sin(var2) * 4096.0);
-            lm.field_r[var1_int] = (int)(4096.0 * Math.cos(var2));
+            ColourFillOperator.field_r[var1_int] = (int)(4096.0 * Math.cos(var2));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

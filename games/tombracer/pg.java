@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pg extends WidgetContainer implements tma, tsa {
+final class pg extends WidgetContainer implements HotspotListener, ButtonListener {
     private HotspotTextWidget field_z;
     static String field_A;
     static int field_y;
@@ -11,11 +11,11 @@ final class pg extends WidgetContainer implements tma, tsa {
     static int[] field_C;
 
     final static void b(boolean param0) {
-        if (!qga.field_m) {
+        if (!HorizontalGradientOperator.field_m) {
           throw new IllegalStateException();
         }
         GameAssetLoader.field_t = true;
-        jda.a(true, 262144);
+        GreyscaleOperator.a(true, 262144);
         Transform3D.field_c = 0;
         if (!param0) {
           return;
@@ -28,7 +28,7 @@ final class pg extends WidgetContainer implements tma, tsa {
         return "<u=2164A2><col=2164A2>";
     }
 
-    public final void a(HotspotTextWidget param0, int param1, int param2, int param3) {
+    public final void onHotspotAction(HotspotTextWidget param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -117,7 +117,7 @@ final class pg extends WidgetContainer implements tma, tsa {
         int var6 = 0;
         try {
           this.field_w = param0;
-          this.field_B = new FocusableWidget(aua.field_d, (qc) null);
+          this.field_B = new FocusableWidget(aua.field_d, (WidgetListener) null);
           this.field_B.field_r = (isa) ((Object) new td());
           var7 = gl.$cfr$intArgs$a$53ce4ab4c593(108, SafeZoneBehaviour.field_q, new String[]{this.c(-58), this.d(-35)});
           var3 = 20;
@@ -127,14 +127,14 @@ final class pg extends WidgetContainer implements tma, tsa {
           this.field_z.a(sw.field_Fb, 0, 0);
           this.field_z.a(sw.field_Fb, 1, 0);
           this.field_z.field_m = this.field_m - 40;
-          this.field_z.field_h = (qc) (this);
+          this.field_z.field_h = (WidgetListener) (this);
           this.field_z.a(var3, (byte) -120, this.field_m - 40, 26);
           var3 = var3 + (this.field_z.field_p + 15);
           this.addChild(this.field_z, -1);
           var5 = 4;
           var6 = 200;
           this.field_B.setBounds((byte) -31, var6, 40, 300 - var6 >> 1, var3);
-          this.field_B.field_h = (qc) (this);
+          this.field_B.field_h = (WidgetListener) (this);
           this.addChild(this.field_B, -1);
           this.setBounds((byte) -31, 300, var5 + (55 + var3), 0, 0);
         } catch (RuntimeException runtimeException) {

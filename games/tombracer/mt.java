@@ -23,7 +23,7 @@ abstract class mt {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= 99) {
-            stackIn_4_0 = fs.textArchive.a("", (byte) 116, param0);
+            stackIn_4_0 = CurveOperator.textArchive.a("", (byte) 116, param0);
             return stackIn_4_0;
           }
           stackIn_2_0 = (byte[]) null;

@@ -28,7 +28,7 @@ final class uca {
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           var10 = (CharSequence) ((Object) param0);
-          if (!fs.a(true, var10)) {
+          if (!CurveOperator.a(true, var10)) {
             stackIn_3_0 = pk.field_v;
             return stackIn_3_0;
           }

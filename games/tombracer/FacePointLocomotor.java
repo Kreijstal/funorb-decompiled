@@ -9,12 +9,12 @@ final class FacePointLocomotor extends Locomotor {
     static ko field_r;
 
     final int hashState(int param0, int param1) {
-        param1 = fs.mixHash((byte) 75, param1, this.field_p);
+        param1 = CurveOperator.mixHash((byte) 75, param1, this.field_p);
         if (param0 != 0) {
           return -7;
         }
-        param1 = fs.mixHash((byte) 117, param1, this.field_q);
-        param1 = fs.mixHash((byte) 121, param1, this.field_s);
+        param1 = CurveOperator.mixHash((byte) 117, param1, this.field_q);
+        param1 = CurveOperator.mixHash((byte) 121, param1, this.field_s);
         return param1;
     }
 

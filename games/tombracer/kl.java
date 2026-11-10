@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class kl implements wia {
+abstract class kl implements FramebufferAttachment {
     int field_c;
     private boolean field_g;
     static String field_j;

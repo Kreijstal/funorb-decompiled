@@ -2316,7 +2316,7 @@ final class np extends ka {
           }
           var1_int = jv.d(-77);
           var2 = za.a(18998);
-          aoa.field_b.a((byte) 57, var1_int + (jf.field_q << 1), -gm.field_m + wp.field_b, wt.field_a - jf.field_q, (gm.field_m << 1) + var2);
+          aoa.field_b.a((byte) 57, var1_int + (jf.field_q << 1), -VerticalGradientOperator.field_m + wp.field_b, wt.field_a - jf.field_q, (VerticalGradientOperator.field_m << 1) + var2);
           ConsoleToken.a(125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

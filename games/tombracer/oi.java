@@ -11,7 +11,7 @@ final class oi {
             String var7 = (String) null;
             oi.a(-68L, 54, 86, (String) null, 2);
           }
-          gm.field_n = param4;
+          VerticalGradientOperator.field_n = param4;
           apa.field_a = param0;
           cr.field_b = param3;
           uda.field_q = param1;

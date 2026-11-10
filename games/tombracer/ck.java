@@ -167,10 +167,10 @@ final class ck {
           rv.field_c = new jea(0L, Corpse.field_i);
           rv.field_c.field_bb = 0;
           rv.field_c.field_z = 1;
-          bma.field_v = new jea(0L, dp.field_i, nf.field_j.toUpperCase());
+          BrickOperator.field_v = new jea(0L, dp.field_i, nf.field_j.toUpperCase());
           wo.field_k = new jea(0L, WallModel.field_r);
           wo.field_k.b(param11 - 25572, rv.field_c);
-          wo.field_k.b(-122, bma.field_v);
+          wo.field_k.b(-122, BrickOperator.field_v);
           HazardModel.field_t = new jea(0L, rfa.field_C);
           HazardModel.field_t.a(false, Corpse.field_i);
           HazardModel.field_t.field_bb = 1;

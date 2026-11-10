@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class FullscreenConfirmationDialog extends ofa implements tsa {
+final class FullscreenConfirmationDialog extends ofa implements ButtonListener {
     private UiWidget field_L;
     private FocusableWidget field_N;
     static SpriteData field_O;
@@ -123,22 +123,22 @@ final class FullscreenConfirmationDialog extends ofa implements tsa {
         UiWidget var3 = null;
         try {
           this.field_P = bva.b((byte) -107);
-          var3 = new UiWidget(rfa.field_B, (qc) null);
+          var3 = new UiWidget(rfa.field_B, (WidgetListener) null);
           var3.field_m = this.field_m;
           var3.field_p = 100;
           var3.field_n = 50;
           var3.field_i = 0;
           var3.field_r = (isa) ((Object) new TextWidgetPainter(eka.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(var3, -1);
-          this.field_L = new UiWidget(rfa.field_B, (qc) null);
+          this.field_L = new UiWidget(rfa.field_B, (WidgetListener) null);
           this.field_L.field_i = 0;
           this.field_L.field_n = 20 + var3.field_n + var3.field_p;
           this.field_L.field_m = this.field_m;
           this.field_L.field_p = 80;
           this.field_L.field_r = (isa) ((Object) new TextWidgetPainter(ft.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(this.field_L, -1);
-          this.field_N = this.a((qc) (this), 77, vc.field_s);
-          this.field_M = this.a((qc) (this), 71, mha.field_F);
+          this.field_N = this.a((WidgetListener) (this), 77, vc.field_s);
+          this.field_M = this.a((WidgetListener) (this), 71, mha.field_F);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "op.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -225,7 +225,7 @@ final class FullscreenConfirmationDialog extends ofa implements tsa {
         }
     }
 
-    private final FocusableWidget a(qc param0, int param1, String param2) {
+    private final FocusableWidget a(WidgetListener param0, int param1, String param2) {
         FocusableWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;

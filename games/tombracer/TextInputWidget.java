@@ -682,8 +682,8 @@ class TextInputWidget extends FocusableWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 54 / ((param0 - 31) / 62);
-          if (this.field_h instanceof cd) {
-            ((cd) (this.field_h)).a(-6038, this);
+          if (this.field_h instanceof TextInputListener) {
+            ((TextInputListener) (this.field_h)).a(-6038, this);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -778,8 +778,8 @@ class TextInputWidget extends FocusableWidget {
           if (param0 != 200) {
             this.k(-51);
           }
-          if (this.field_h instanceof cd) {
-            ((cd) (this.field_h)).a(this, -10);
+          if (this.field_h instanceof TextInputListener) {
+            ((TextInputListener) (this.field_h)).a(this, -10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -934,7 +934,7 @@ class TextInputWidget extends FocusableWidget {
         }
     }
 
-    TextInputWidget(String param0, qc param1, int param2) {
+    TextInputWidget(String param0, WidgetListener param1, int param2) {
         super(param0, param1);
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;

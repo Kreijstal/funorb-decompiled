@@ -188,7 +188,7 @@ final class DamageableBehaviour extends Behaviour {
         RuntimeException decompiledCaughtException = null;
         try {
           if (GameApplet.a(param0, param1, param3, param2)) {
-            return sba.d((byte) 120);
+            return InvertOperator.d((byte) 120);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -386,9 +386,9 @@ final class DamageableBehaviour extends Behaviour {
     }
 
     final int hashState(int param0, int param1) {
-        param0 = fs.mixHash((byte) 27, param0, this.health);
+        param0 = CurveOperator.mixHash((byte) 27, param0, this.health);
         if (param1 < -48) {
-          param0 = fs.mixHash((byte) 59, param0, this.field_v);
+          param0 = CurveOperator.mixHash((byte) 59, param0, this.field_v);
           return param0;
         }
         return 119;

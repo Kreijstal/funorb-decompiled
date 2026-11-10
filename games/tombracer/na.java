@@ -1,5 +1,5 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-interface na extends iva {
+interface na extends GpuTexture {
 }

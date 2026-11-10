@@ -10,7 +10,7 @@ abstract class TextLayout {
     static float field_b;
 
     final static void a(int param0, byte param1, int param2) {
-        qv.field_o = null;
+        MandelbrotOperator.field_o = null;
         String var3 = fna.field_k;
         if (var3 == null) {
           var3 = kma.defaultPlayerNames[0];

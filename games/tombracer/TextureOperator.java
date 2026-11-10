@@ -3,54 +3,54 @@
  */
 abstract class TextureOperator extends IntrusiveNode {
     fk field_h;
-    boolean field_g;
+    boolean monochrome;
     static int field_k;
     mv field_i;
     static MessageDialog field_l;
     int field_f;
-    TextureOperator[] field_j;
+    TextureOperator[] inputs;
 
     void b(int param0, int param1, int param2) {
         int var4 = ~this.field_f == param2 ? param1 : this.field_f;
-        if (!this.field_g) {
+        if (!this.monochrome) {
           this.field_h = new fk(var4, param1, param0);
           return;
         }
         this.field_i = new mv(var4, param1, param0);
     }
 
-    final int[] c(int param0, int param1, int param2) {
+    final int[] getInputMonochromeRow(int param0, int param1, int param2) {
         if (param1 > -3) {
           this.field_f = 54;
-          if (!this.field_j[param0].field_g) {
-            return this.field_j[param0].b(param2, -1)[0];
+          if (!this.inputs[param0].monochrome) {
+            return this.inputs[param0].getColourRow(param2, -1)[0];
           }
-          return this.field_j[param0].c(1, param2);
+          return this.inputs[param0].getMonochromeRow(1, param2);
         }
-        if (!this.field_j[param0].field_g) {
-          return this.field_j[param0].b(param2, -1)[0];
+        if (!this.inputs[param0].monochrome) {
+          return this.inputs[param0].getColourRow(param2, -1)[0];
         }
-        return this.field_j[param0].c(1, param2);
+        return this.inputs[param0].getMonochromeRow(1, param2);
     }
 
-    void a(byte param0, PacketBuffer param1, int param2) {
+    void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         try {
           if (param0 != 107) {
-            this.c(1, -94);
+            this.getMonochromeRow(1, -94);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ci.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final int[][] a(int param0, int param1, int param2) {
+    final int[][] getInputColourRow(int param0, int param1, int param2) {
         if (param2 != -1) {
           return (int[][]) null;
         }
-        if (!this.field_j[param1].field_g) {
-          return this.field_j[param1].b(param0, -1);
+        if (!this.inputs[param1].monochrome) {
+          return this.inputs[param1].getColourRow(param0, -1);
         }
-        int[] var6 = this.field_j[param1].c(1, param0);
+        int[] var6 = this.inputs[param1].getMonochromeRow(1, param0);
         int[] var4 = var6;
         int[][] var5 = new int[3][];
         var5[1] = var6;
@@ -72,7 +72,7 @@ abstract class TextureOperator extends IntrusiveNode {
         }
     }
 
-    int[][] b(int param0, int param1) {
+    int[][] getColourRow(int param0, int param1) {
         if (param1 != -1) {
           return (int[][]) null;
         }
@@ -96,7 +96,7 @@ abstract class TextureOperator extends IntrusiveNode {
     }
 
     void b(int param0) {
-        if (this.field_g) {
+        if (this.monochrome) {
           this.field_i.a(false);
           this.field_i = null;
           if (param0 >= -32) {
@@ -113,17 +113,17 @@ abstract class TextureOperator extends IntrusiveNode {
         }
     }
 
-    int[] c(int param0, int param1) {
+    int[] getMonochromeRow(int param0, int param1) {
         if (param0 != 1) {
-          this.c(-21, -6);
+          this.getMonochromeRow(-21, -6);
           throw new IllegalStateException("This operation does not have a monochrome output");
         }
         throw new IllegalStateException("This operation does not have a monochrome output");
     }
 
     TextureOperator(int param0, boolean param1) {
-        this.field_j = new TextureOperator[param0];
-        this.field_g = param1 ? true : false;
+        this.inputs = new TextureOperator[param0];
+        this.monochrome = param1 ? true : false;
     }
 
     final static AntialiasedBitmapFont a(byte[] param0, byte param1) {

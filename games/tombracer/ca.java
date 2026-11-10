@@ -3,7 +3,7 @@
  */
 final class ca extends GameFont {
     private HardwareGraphicsToolkit field_g;
-    private gf field_f;
+    private GpuTexture2D field_f;
     private qm field_d;
     private boolean field_e;
 

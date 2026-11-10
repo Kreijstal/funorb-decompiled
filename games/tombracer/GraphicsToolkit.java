@@ -104,7 +104,7 @@ abstract class GraphicsToolkit {
             return stackIn_6_0;
           }
           if (param3 == 1) {
-            stackIn_10_0 = on.a(param6, param0, param5, (byte) -109);
+            stackIn_10_0 = TeleportState.a(param6, param0, param5, (byte) -109);
             return stackIn_10_0;
           }
           if (5 == param3) {
@@ -223,7 +223,7 @@ abstract class GraphicsToolkit {
 
     abstract void drawCircle(int param0, int param1, int param2, int param3, int param4);
 
-    abstract mw b(int param0, int param1);
+    abstract RenderBuffer b(int param0, int param1);
 
     abstract ob a(int param0, int param1, int param2, int param3, int param4, float param5);
 
@@ -279,11 +279,11 @@ abstract class GraphicsToolkit {
 
     abstract int XA();
 
-    abstract void a(jca param0);
+    abstract void a(RenderTarget param0);
 
     abstract void DA(int param0, int param1, int param2, int param3);
 
-    abstract jca createRenderTarget(nha param0, mw param1);
+    abstract RenderTarget createRenderTarget(RenderSurface param0, RenderBuffer param1);
 
     abstract void k();
 

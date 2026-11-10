@@ -23,7 +23,7 @@ final class vc extends TextureOperator {
         field_n = (StringBuilder) null;
     }
 
-    final void a(byte param0, PacketBuffer param1, int param2) {
+    final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -63,7 +63,7 @@ final class vc extends TextureOperator {
         }
     }
 
-    final int[] c(int param0, int param1) {
+    final int[] getMonochromeRow(int param0, int param1) {
         int[] var3;
         int var4;
         int var5;

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class WidgetContainer extends UiWidget implements tpa {
+class WidgetContainer extends UiWidget implements WidgetParent {
     static String field_v;
     IntrusiveDeque children;
 
@@ -451,7 +451,7 @@ class WidgetContainer extends UiWidget implements tpa {
     }
 
     WidgetContainer(int param0, int param1, int param2, int param3, isa param4) {
-        super(param0, param1, param2, param3, param4, (qc) null);
+        super(param0, param1, param2, param3, param4, (WidgetListener) null);
         this.children = new IntrusiveDeque();
     }
 

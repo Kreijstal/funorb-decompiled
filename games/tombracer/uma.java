@@ -48,7 +48,7 @@ final class uma {
         if (10 > Transform3D.field_c) {
           return false;
         }
-        if (!qga.field_m) {
+        if (!HorizontalGradientOperator.field_m) {
           return !o.e(param0 + 540801) ? true : false;
         }
         return false;

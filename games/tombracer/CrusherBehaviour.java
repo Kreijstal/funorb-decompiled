@@ -381,7 +381,7 @@ final class CrusherBehaviour extends Behaviour {
     }
 
     final int hashState(int param0, int param1) {
-        param0 = fs.mixHash((byte) 49, param0, this.phase);
+        param0 = CurveOperator.mixHash((byte) 49, param0, this.phase);
         if (param1 >= -48) {
           return -52;
         }

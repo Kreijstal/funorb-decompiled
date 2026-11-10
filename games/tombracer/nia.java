@@ -4,7 +4,7 @@
 final class nia extends TextureOperator {
     static String field_m;
 
-    final int[] c(int param0, int param1) {
+    final int[] getMonochromeRow(int param0, int param1) {
         int var7 = 0;
         int[] var3;
         int var8;
@@ -15,9 +15,9 @@ final class nia extends TextureOperator {
         var9 = TombRacer.field_G ? 1 : 0;
         var3 = this.field_i.a((byte) 23, param1);
         if (this.field_i.field_d) {
-          var21 = this.c(0, -39, param1);
-          var20 = this.c(1, -74, param1);
-          var19 = this.c(2, -7, param1);
+          var21 = this.getInputMonochromeRow(0, -39, param1);
+          var20 = this.getInputMonochromeRow(1, -74, param1);
+          var19 = this.getInputMonochromeRow(2, -7, param1);
           for (var7 = 0; ns.field_g > var7; var7++) {
             var8 = var19[var7];
             if (var8 == 4096) {
@@ -37,7 +37,7 @@ final class nia extends TextureOperator {
         return (int[]) null;
     }
 
-    final int[][] b(int param0, int param1) {
+    final int[][] getColourRow(int param0, int param1) {
         int var16 = 0;
         int[][] var3;
         int[] var7;
@@ -68,9 +68,9 @@ final class nia extends TextureOperator {
         var20 = var21;
         var3 = var20;
         if (this.field_h.field_f) {
-          var52 = this.c(2, -104, param0);
-          var50 = this.a(param0, 0, -1);
-          var51 = this.a(param0, 1, param1 + 0);
+          var52 = this.getInputMonochromeRow(2, -104, param0);
+          var50 = this.getInputColourRow(param0, 0, -1);
+          var51 = this.getInputColourRow(param0, 1, param1 + 0);
           var7 = var31[0];
           var8 = var31[1];
           var9 = var31[2];
@@ -230,7 +230,7 @@ final class nia extends TextureOperator {
         }
     }
 
-    final void a(byte param0, PacketBuffer param1, int param2) {
+    final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         boolean stackIn_4_1 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -240,7 +240,7 @@ final class nia extends TextureOperator {
         try {
           if (param2 == 0) {
             stackIn_4_1 = (param1.readUnsignedByte(255) == 1);
-            this.field_g = stackIn_4_1;
+            this.monochrome = stackIn_4_1;
           }
           if (param0 != 107) {
             field_m = (String) null;

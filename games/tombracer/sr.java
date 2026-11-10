@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sr extends WidgetContainer implements tsa {
+final class sr extends WidgetContainer implements ButtonListener {
     private MessageDialog field_y;
     private int field_z;
     private String field_C;
@@ -9,7 +9,7 @@ final class sr extends WidgetContainer implements tsa {
     private BitmapFont field_B;
     private int[] field_w;
 
-    final FocusableWidget a(String param0, byte param1, qc param2) {
+    final FocusableWidget a(String param0, byte param1, WidgetListener param2) {
         FocusableWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -97,7 +97,7 @@ final class sr extends WidgetContainer implements tsa {
           var4_int = this.field_z;
           this.b(var4_int + 1, (byte) 104);
           int var5 = -11 % ((-15 - param2) / 38);
-          this.field_x[var4_int] = this.a(param0, (byte) -102, (qc) (this));
+          this.field_x[var4_int] = this.a(param0, (byte) -102, (WidgetListener) (this));
           this.field_w[var4_int] = param1;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sr.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

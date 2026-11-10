@@ -98,7 +98,7 @@ final class so extends TextInputWidget implements mk {
         }
     }
 
-    so(String param0, qc param1, int param2) {
+    so(String param0, WidgetListener param1, int param2) {
         super(param0, param1, param2);
     }
 

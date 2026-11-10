@@ -518,7 +518,7 @@ public final class TombRacer extends rfa implements ls {
         ada.releaseStatics(param0 ^ 3628);
         MiscItemBehaviour.releaseStatics(param0 ^ -3666);
         cba.releaseStatics((byte) 109);
-        on.releaseStatics(32);
+        TeleportState.releaseStatics(32);
         StatusEffect.releaseStatics(2907);
         qka.releaseStatics((byte) 62);
         gp.releaseStatics(-117);
@@ -774,13 +774,13 @@ public final class TombRacer extends rfa implements ls {
         coa.releaseStatics(16711680);
         gia.releaseStatics(-26382);
         tga.releaseStatics(61);
-        nga.releaseStatics((byte) -119);
-        lm.releaseStatics(7438);
-        bma.d(-21771);
-        wja.releaseStatics(0);
+        MonochromeFillOperator.releaseStatics((byte) -119);
+        ColourFillOperator.releaseStatics(7438);
+        BrickOperator.d(-21771);
+        ClampOperator.releaseStatics(0);
         eka.releaseStatics(param0 ^ 3612);
-        fs.releaseStatics(-92);
-        pv.releaseStatics((byte) -93);
+        CurveOperator.releaseStatics(-92);
+        FlipOperator.releaseStatics((byte) -93);
         wna.d((byte) -109);
         vda.releaseStatics((byte) 90);
         ifa.releaseStatics((byte) 117);
@@ -792,13 +792,13 @@ public final class TombRacer extends rfa implements ls {
         vla.releaseStatics(param0 ^ -3668);
         nfa.releaseStatics((byte) -123);
         nia.releaseStatics(-124);
-        sba.releaseStatics(param0 ^ 14527);
-        hv.releaseStatics(false);
+        InvertOperator.releaseStatics(param0 ^ 14527);
+        ThresholdOperator.releaseStatics(false);
         bj.releaseStatics(true);
         iia.releaseStatics(-1);
         rda.c(-118);
-        ksa.releaseStatics(param0 ^ 17000);
-        qv.a(true);
+        RangeOperator.releaseStatics(param0 ^ 17000);
+        MandelbrotOperator.a(true);
         un.releaseStatics(true);
         jv.releaseStatics(param0 ^ 12863);
         go.releaseStatics((byte) -105);
@@ -1376,7 +1376,7 @@ public final class TombRacer extends rfa implements ls {
             }
           }
           param1.endBitAccess((byte) 98);
-          qv.field_o = null;
+          MandelbrotOperator.field_o = null;
           SecondaryNodeDequeIterator.field_a = new qh(true, var4_intLifetime2, var9, var10, var5_intLifetime1 != 0, var6, -1 + var6, var7Lifetime1, var8Lifetime1, 0, var11, var32, (ou) null);
           SecondaryNodeDequeIterator.field_a.a(120, param1);
           SecondaryNodeDequeIterator.field_a.j((byte) -121);

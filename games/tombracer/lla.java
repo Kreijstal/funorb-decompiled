@@ -20,7 +20,7 @@ final class lla {
         String[] var3 = null;
         jea[] var4 = null;
         try {
-          var3 = new String[]{param0, nga.field_o, of.field_a};
+          var3 = new String[]{param0, MonochromeFillOperator.field_o, of.field_a};
           var4 = new jea[]{param1, dqa.field_e, (jea) ((Object) OpenGlSprite.field_j)};
           this.field_a = new bv(0L, Effect.field_a, var3, CachedArchiveSource.field_d, var4, 0);
         } catch (RuntimeException runtimeException) {

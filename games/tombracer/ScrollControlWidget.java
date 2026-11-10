@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ScrollControlWidget extends ArrayWidgetGroup implements tsa {
+final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListener {
     int field_C;
     private int field_y;
     static String field_K;
@@ -393,10 +393,10 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements tsa {
         this.field_A = 1024;
         try {
           this.children = new UiWidget[6];
-          dupTemp$0 = new DraggableWidget(param0, param1, param7, param8, (isa) null, (qc) null, new FocusableWidget(0, 0, param7, param8, param6, (qc) null), false, false);
+          dupTemp$0 = new DraggableWidget(param0, param1, param7, param8, (isa) null, (WidgetListener) null, new FocusableWidget(0, 0, param7, param8, param6, (WidgetListener) null), false, false);
           this.field_N = dupTemp$0;
           this.children[0] = (UiWidget) ((Object) dupTemp$0);
-          dupTemp$1 = new FocusableWidget(param0, param1, param7, param8, param5, (qc) null);
+          dupTemp$1 = new FocusableWidget(param0, param1, param7, param8, param5, (WidgetListener) null);
           this.field_D = dupTemp$1;
           this.children[1] = (UiWidget) ((Object) dupTemp$1);
           this.field_G = param10;

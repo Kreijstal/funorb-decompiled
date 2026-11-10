@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gga extends ofa implements tsa {
+final class gga extends ofa implements ButtonListener {
     private FocusableWidget field_N;
     static SpriteData[] field_O;
     static ur field_M;
@@ -16,7 +16,7 @@ final class gga extends ofa implements tsa {
         }
     }
 
-    private final FocusableWidget a(String param0, qc param1, int param2) {
+    private final FocusableWidget a(String param0, WidgetListener param1, int param2) {
         FocusableWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -180,14 +180,14 @@ final class gga extends ofa implements tsa {
               }
             }
           }
-          var4 = new UiWidget((String) (var3), (qc) null);
+          var4 = new UiWidget((String) (var3), (WidgetListener) null);
           var4.field_p = 80;
           var4.field_m = this.field_m;
           var4.field_n = 50;
           var4.field_i = 0;
           var4.field_r = (isa) ((Object) new TextWidgetPainter(eka.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(var4, -1);
-          this.field_N = this.a(BitPacketBuffer.field_j, (qc) (this), -93);
+          this.field_N = this.a(BitPacketBuffer.field_j, (WidgetListener) (this), -93);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

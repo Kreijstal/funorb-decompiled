@@ -624,11 +624,11 @@ abstract class wv extends dfa {
               }
               if (var7 == 39 &&
                 var8 == 0) {
-                ksa.a(true, WeaponShooterBehaviour.field_r);
+                RangeOperator.a(true, WeaponShooterBehaviour.field_r);
                 return true;
               }
               if (var7 == 40) {
-                ksa.a(true, vk.field_d);
+                RangeOperator.a(true, vk.field_d);
                 return true;
               }
               if (var7 == 29) {

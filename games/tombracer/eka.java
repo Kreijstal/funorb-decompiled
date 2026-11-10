@@ -14,7 +14,7 @@ final class eka extends TextureOperator {
         field_o = null;
     }
 
-    final int[][] b(int param0, int param1) {
+    final int[][] getColourRow(int param0, int param1) {
         int[] stackIn_34_0 = null;
         int stackIn_34_1 = 0;
         int stackIn_35_2 = 0;
@@ -116,8 +116,8 @@ final class eka extends TextureOperator {
         var23 = var24;
         var3 = var23;
         if (this.field_h.field_f) {
-          var50 = this.a(param0, 0, -1);
-          var51 = this.a(param0, 1, -1);
+          var50 = this.getInputColourRow(param0, 0, -1);
+          var51 = this.getInputColourRow(param0, 1, -1);
           var12 = var33[0];
           var13 = var33[1];
           var14 = var33[2];
@@ -536,7 +536,7 @@ final class eka extends TextureOperator {
         return (dfa) ((Object) nl.a(param0, (byte) 50));
     }
 
-    final void a(byte param0, PacketBuffer param1, int param2) {
+    final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_8_1 = false;
@@ -553,7 +553,7 @@ final class eka extends TextureOperator {
           } else {
             if (1 == var4_int) {
               stackIn_8_1 = (param1.readUnsignedByte(255) == 1);
-              this.field_g = stackIn_8_1;
+              this.monochrome = stackIn_8_1;
             }
           }
           if (param0 != 107) {
@@ -609,7 +609,7 @@ final class eka extends TextureOperator {
         this.field_m = 6;
     }
 
-    final int[] c(int param0, int param1) {
+    final int[] getMonochromeRow(int param0, int param1) {
         int[] stackIn_34_0 = null;
         int stackIn_34_1 = 0;
         int stackIn_35_2 = 0;
@@ -644,8 +644,8 @@ final class eka extends TextureOperator {
         var10 = this.field_i.a((byte) 23, param1);
         var3 = var10;
         if (this.field_i.field_d) {
-          var18 = this.c(0, -89, param1);
-          var17 = this.c(1, -116, param1);
+          var18 = this.getInputMonochromeRow(0, -89, param1);
+          var17 = this.getInputMonochromeRow(1, -116, param1);
           var8 = this.field_m;
           if (var8 == 1) {
             for (var8 = 0; ns.field_g > var8; var8++) {

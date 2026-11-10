@@ -727,7 +727,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           }
           var3_ref = this.getSimulation(-1553494544).getObserver(9262);
           if (var3_ref != null) {
-            var3_ref.a(-2, this.getPlayer(-18), this);
+            var3_ref.onRoomEntered(-2, this.getPlayer(-18), this);
           }
         }
         var7 = this.getPlayer(-22);

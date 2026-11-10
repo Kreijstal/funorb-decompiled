@@ -81,7 +81,7 @@ final class vta extends vw {
         }
     }
 
-    final void a(int param0, iva param1, int param2) {
+    final void a(int param0, GpuTexture param1, int param2) {
         try {
           this.field_c.bindTexture(true, param1);
           this.field_c.a((byte) -35, param0);

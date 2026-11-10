@@ -91,7 +91,7 @@ final class cw {
         }
         if (this.field_h) {
           if (this.field_e == null) {
-            this.field_t.b((ks) (this.field_i), (byte) 81);
+            this.field_t.b((Framebuffer) (this.field_i), (byte) 81);
             this.field_i.a(-110, 0);
             this.field_i.a(-114, 1);
             this.field_i.a(36, 8);
@@ -106,7 +106,7 @@ final class cw {
             }
             this.field_t.b(this.field_i, 0);
           } else {
-            this.field_t.b((ks) (this.field_i), (byte) 81);
+            this.field_t.b((Framebuffer) (this.field_i), (byte) 81);
             this.field_i.a(-93, 0);
             this.field_i.a(-123, 1);
             this.field_i.a(107, 8);
@@ -118,7 +118,7 @@ final class cw {
               this.field_i.a(true, this.field_m, 8);
             }
             this.field_t.b(this.field_i, 0);
-            this.field_t.b((ks) (this.field_e), (byte) 81);
+            this.field_t.b((Framebuffer) (this.field_e), (byte) 81);
             this.field_e.a(124, 0);
             this.field_e.a(71, 8);
             this.field_e.a(0, this.field_l, true);
@@ -129,7 +129,7 @@ final class cw {
           this.field_n = true;
         }
         if (this.field_n) {
-          this.field_t.b((ks) (this.field_d), (byte) 81);
+          this.field_t.b((Framebuffer) (this.field_d), (byte) 81);
           stackIn_55_1 = !(this.field_d.c(20));
           this.field_n = stackIn_55_1;
           this.field_t.b(this.field_d, param0 + 739);
@@ -207,7 +207,7 @@ final class cw {
           this.field_q = param3;
           this.field_a = true;
           this.field_o = param1;
-          this.field_t.b((ks) (this.field_d), (byte) 81);
+          this.field_t.b((Framebuffer) (this.field_d), (byte) 81);
           this.field_d.a(0, (byte) -91);
           this.field_t.a(4, -this.field_t.field_I + (this.field_g + this.field_q), -this.field_o);
           return true;
@@ -255,7 +255,7 @@ final class cw {
             var2 = var2 | 256;
           }
           jaggl.OpenGL.glBlitFramebufferEXT(0, 0, this.field_k, this.field_g, 0, 0, this.field_k, this.field_g, var2, 9728);
-          this.field_t.a((ks) (this.field_e), (byte) -38);
+          this.field_t.a((Framebuffer) (this.field_e), (byte) -38);
           this.field_t.c(this.field_i, -4);
         }
         this.field_t.q(2);

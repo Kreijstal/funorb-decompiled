@@ -1061,8 +1061,8 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         return;
     }
 
-    final jca createRenderTarget(nha param0, mw param1) {
-        return (jca) ((Object) new bf(this, (ToolkitSprite) (param0), (ita) (param1)));
+    final RenderTarget createRenderTarget(RenderSurface param0, RenderBuffer param1) {
+        return (RenderTarget) ((Object) new bf(this, (ToolkitSprite) (param0), (ita) (param1)));
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -1153,8 +1153,8 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final mw b(int param0, int param1) {
-        return (mw) ((Object) new ita(param0, param1));
+    final RenderBuffer b(int param0, int param1) {
+        return (RenderBuffer) ((Object) new ita(param0, param1));
     }
 
     final void la() {
@@ -1177,7 +1177,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         return this.field_g;
     }
 
-    final void a(jca param0) {
+    final void a(RenderTarget param0) {
         bf var2 = (bf) (param0);
         this.field_K = var2.field_c;
         this.field_h = var2.field_d;

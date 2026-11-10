@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class Player implements Renderable, WorldBody, Collidable, jfa, t {
+final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportable {
     private ac field_u;
     private int field_c;
     private int size;
@@ -43,7 +43,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
     static String field_s;
     private int[] treasure;
     private int heldItemKind;
-    private on field_jb;
+    private TeleportState field_jb;
     private int field_kb;
     private boolean field_o;
     private boolean field_V;
@@ -68,9 +68,9 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
     private int field_ab;
     private int total;
 
-    public final on c(boolean param0) {
+    public final TeleportState getTeleportState(boolean param0) {
         RuntimeException var2 = null;
-        on stackIn_4_0 = null;
+        TeleportState stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
@@ -2572,13 +2572,13 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          param0 = fs.mixHash((byte) 114, param0, this.x);
-          param0 = fs.mixHash((byte) 105, param0, this.y);
+          param0 = CurveOperator.mixHash((byte) 114, param0, this.x);
+          param0 = CurveOperator.mixHash((byte) 105, param0, this.y);
           if (param1 > -22) {
             this.elevation = -19;
           }
-          param0 = fs.mixHash((byte) 44, param0, this.velocityX);
-          param0 = fs.mixHash((byte) 38, param0, this.velocityY);
+          param0 = CurveOperator.mixHash((byte) 44, param0, this.velocityX);
+          param0 = CurveOperator.mixHash((byte) 38, param0, this.velocityY);
           stackIn_4_0 = param0;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2973,7 +2973,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    public final boolean j(byte param0) {
+    public final boolean canTeleport(byte param0) {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -4000,7 +4000,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         this.treasure = new int[3];
         this.roomTreasure = new int[3];
         this.heldItemKind = -1;
-        this.field_jb = new on();
+        this.field_jb = new TeleportState();
         this.field_F = -1;
         this.field_hb = false;
         this.field_cb = 0;

@@ -10,7 +10,7 @@ final class vu extends vw {
         super(param0);
     }
 
-    final void a(int param0, iva param1, int param2) {
+    final void a(int param0, GpuTexture param1, int param2) {
         try {
           this.field_c.bindTexture(true, param1);
           if (param2 != 24595) {
@@ -193,7 +193,7 @@ final class vu extends vw {
               }
             } else {
               bc.field_b.field_X = false;
-              HazardModel.field_t.field_r = hv.field_n;
+              HazardModel.field_t.field_r = ThresholdOperator.field_n;
               if (var8 != 0) {
                 stackIn_23_0 = to.field_l;
               } else {

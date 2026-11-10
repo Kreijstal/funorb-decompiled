@@ -107,7 +107,7 @@ final class td extends TextWidgetPainter {
     private td(int param0, int param1, int param2) {
         this.field_p = param2;
         this.field_s = param1;
-        this.field_o = nga.field_n;
+        this.field_o = MonochromeFillOperator.field_n;
         this.field_t = param0;
         this.field_e = ft.field_c;
     }

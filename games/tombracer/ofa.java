@@ -236,7 +236,7 @@ abstract class ofa extends gn {
         if (!param0) {
           return false;
         }
-        return cl.field_o;
+        return BoxBlurOperator.field_o;
     }
 
     static {

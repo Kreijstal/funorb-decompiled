@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ksa extends TextureOperator {
+final class RangeOperator extends TextureOperator {
     static String field_n;
     private int field_m;
     static int field_p;
     private int field_q;
     private int field_o;
 
-    public ksa() {
+    public RangeOperator() {
         super(1, false);
         this.field_q = 2048;
         this.field_m = 1024;
@@ -18,7 +18,7 @@ final class ksa extends TextureOperator {
     public static void releaseStatics(int param0) {
         field_n = null;
         if (param0 != -19514) {
-          ksa.releaseStatics(80);
+          RangeOperator.releaseStatics(80);
         }
     }
 
@@ -30,17 +30,17 @@ final class ksa extends TextureOperator {
         }
     }
 
-    final int[] c(int param0, int param1) {
+    final int[] getMonochromeRow(int param0, int param1) {
         int[] var4 = null;
         int var5 = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
         if (param0 != 1) {
-          this.b(79, -115);
+          this.getColourRow(79, -115);
         }
         int[] var7 = this.field_i.a((byte) 64, param1);
         int[] var3 = var7;
         if (this.field_i.field_d) {
-          var4 = this.c(0, -10, param1);
+          var4 = this.getInputMonochromeRow(0, -10, param1);
           for (var5 = 0; var5 < ns.field_g; var5++) {
             var7[var5] = (this.field_q * var4[var5] >> 12) + this.field_m;
           }
@@ -48,7 +48,7 @@ final class ksa extends TextureOperator {
         return var3;
     }
 
-    final void a(byte param0, PacketBuffer param1, int param2) {
+    final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_11_1 = false;
@@ -66,7 +66,7 @@ final class ksa extends TextureOperator {
             if (var4_int != 1) {
               if (var4_int == 2) {
                 stackIn_11_1 = (param1.readUnsignedByte(255) == 1);
-                this.field_g = stackIn_11_1;
+                this.monochrome = stackIn_11_1;
               }
             } else {
               this.field_o = param1.readUnsignedShort(param0 ^ 20);
@@ -97,7 +97,7 @@ final class ksa extends TextureOperator {
         this.field_q = -this.field_m + this.field_o;
     }
 
-    final int[][] b(int param0, int param1) {
+    final int[][] getColourRow(int param0, int param1) {
         int[][] var29 = null;
         int[] var30 = null;
         int[] var31 = null;
@@ -112,7 +112,7 @@ final class ksa extends TextureOperator {
         int[][] var14 = var16;
         int[][] var3 = var14;
         if (this.field_h.field_f) {
-          var29 = this.a(param0, 0, -1);
+          var29 = this.getInputColourRow(param0, 0, -1);
           var30 = var29[0];
           var31 = var29[1];
           var32 = var29[2];
@@ -127,7 +127,7 @@ final class ksa extends TextureOperator {
         }
         if (param1 != -1) {
           kia var13 = (kia) null;
-          ksa.a(true, (kia) null);
+          RangeOperator.a(true, (kia) null);
         }
         return var3;
     }

@@ -48,8 +48,8 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
           Trap var4 = (Trap) null;
           this.attachToTrap(false, (Trap) null);
         }
-        param0 = fs.mixHash((byte) 87, param0, this.field_s);
-        param0 = fs.mixHash((byte) 82, param0, this.field_p);
+        param0 = CurveOperator.mixHash((byte) 87, param0, this.field_s);
+        param0 = CurveOperator.mixHash((byte) 82, param0, this.field_p);
         return this.field_q.hashState(89, param0);
     }
 

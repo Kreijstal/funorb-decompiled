@@ -468,7 +468,7 @@ final class SweepRotateLocomotor extends Locomotor {
           if (param0 != 0) {
             this.field_r = 54;
           }
-          param1 = fs.mixHash((byte) 26, param1, this.field_r);
+          param1 = CurveOperator.mixHash((byte) 26, param1, this.field_r);
           stackIn_4_0 = param1;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

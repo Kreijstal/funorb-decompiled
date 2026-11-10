@@ -46,7 +46,7 @@ final class sl extends vw {
           this.field_c.a(pea.field_c, 2, -21);
           this.field_c.a(0, false, ej.field_c);
           this.field_c.p((byte) -87);
-          this.field_c.bindTexture(true, (iva) null);
+          this.field_c.bindTexture(true, (GpuTexture) null);
           this.field_c.e(0, false);
           this.field_f = false;
         }
@@ -94,7 +94,7 @@ final class sl extends vw {
         }
     }
 
-    final void a(int param0, iva param1, int param2) {
+    final void a(int param0, GpuTexture param1, int param2) {
         try {
           this.field_c.bindTexture(true, param1);
           if (param2 != 24595) {

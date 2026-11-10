@@ -5,12 +5,12 @@ import java.io.*;
 
 final class hk {
     lv field_c;
-    gf[] field_d;
+    GpuTexture2D[] field_d;
     lv field_f;
     boolean field_g;
     static jea field_e;
     private HardwareGraphicsToolkit field_b;
-    private gf[] field_a;
+    private GpuTexture2D[] field_a;
 
     final boolean c(int param0) {
         if (param0 != -30634) {
@@ -335,12 +335,12 @@ final class hk {
           }
           TextInputWidget.g(12890);
           if (!this.field_g) {
-            this.field_d = new gf[16];
+            this.field_d = new GpuTexture2D[16];
             for (var2_int = 0; var2_int < 16; var2_int++) {
               var17 = ua.a(ak.field_o, 32768, 32768 * var2_int, false);
               this.field_d[var2_int] = this.field_b.a(128, var17, true, wo.field_i, -117, 128);
             }
-            this.field_a = new gf[16];
+            this.field_a = new GpuTexture2D[16];
             for (var2_intLifetime1 = 0; 16 > var2_intLifetime1; var2_intLifetime1++) {
               var18 = ua.a(lt.field_f, 32768, var2_intLifetime1 * 32768, false);
               this.field_a[var2_intLifetime1] = this.field_b.a(128, var18, true, wo.field_i, -77, 128);

@@ -68,8 +68,8 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
         this.ma(((ja) (param0)).field_nativeid);
     }
 
-    final mw b(int param0, int param1) {
-        return (mw) ((Object) new xa(param0, param1));
+    final RenderBuffer b(int param0, int param1) {
+        return (RenderBuffer) ((Object) new xa(param0, param1));
     }
 
     final native void f(int param0, int param1);
@@ -205,8 +205,8 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
         this.g(0);
     }
 
-    final jca createRenderTarget(nha param0, mw param1) {
-        return (jca) ((Object) new wa(this, (j) (param0), (xa) (param1)));
+    final RenderTarget createRenderTarget(RenderSurface param0, RenderBuffer param1) {
+        return (RenderTarget) ((Object) new wa(this, (j) (param0), (xa) (param1)));
     }
 
     private final native void t(NativeCanvasSurface param0);
@@ -413,7 +413,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
         this.field_s = true;
     }
 
-    final void a(jca param0) {
+    final void a(RenderTarget param0) {
         wa var2 = (wa) (param0);
         this.n(var2.field_b.field_nativeid, var2.field_a.field_nativeid);
     }

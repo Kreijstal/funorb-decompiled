@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sba extends TextureOperator {
+final class InvertOperator extends TextureOperator {
     static String field_o;
     static String field_n;
     static String field_m;
@@ -15,7 +15,7 @@ final class sba extends TextureOperator {
         field_o = null;
     }
 
-    final int[][] b(int param0, int param1) {
+    final int[][] getColourRow(int param0, int param1) {
         int[][] var19 = null;
         int[] var21 = null;
         int[] var22 = null;
@@ -33,7 +33,7 @@ final class sba extends TextureOperator {
           return (int[][]) null;
         }
         if (this.field_h.field_f) {
-          var19 = this.a(param0, 0, -1);
+          var19 = this.getInputColourRow(param0, 0, -1);
           var21 = var19[0];
           var22 = var19[1];
           var23 = var19[2];
@@ -58,11 +58,11 @@ final class sba extends TextureOperator {
         return var1;
     }
 
-    public sba() {
+    public InvertOperator() {
         super(1, false);
     }
 
-    final void a(byte param0, PacketBuffer param1, int param2) {
+    final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
         boolean stackIn_4_1 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -72,7 +72,7 @@ final class sba extends TextureOperator {
         try {
           if (param2 == 0) {
             stackIn_4_1 = (param1.readUnsignedByte(255) == 1);
-            this.field_g = stackIn_4_1;
+            this.monochrome = stackIn_4_1;
           }
           if (param0 != 107) {
             field_n = (String) null;
@@ -92,7 +92,7 @@ final class sba extends TextureOperator {
         }
     }
 
-    final int[] c(int param0, int param1) {
+    final int[] getMonochromeRow(int param0, int param1) {
         int[] var4 = null;
         int var5 = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
@@ -102,7 +102,7 @@ final class sba extends TextureOperator {
         int[] var7 = this.field_i.a((byte) 63, param1);
         int[] var3 = var7;
         if (this.field_i.field_d) {
-          var4 = this.c(0, -106, param1);
+          var4 = this.getInputMonochromeRow(0, -106, param1);
           for (var5 = 0; ns.field_g > var5; var5++) {
             var7[var5] = 4096 - var4[var5];
           }

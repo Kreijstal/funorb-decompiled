@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class LoginForm extends WidgetContainer implements cd, tsa {
+final class LoginForm extends WidgetContainer implements TextInputListener, ButtonListener {
     private FocusableWidget field_y;
     private TextInputWidget field_A;
     private boolean field_w;
@@ -50,14 +50,14 @@ final class LoginForm extends WidgetContainer implements cd, tsa {
             this.field_w)) {
             throw new IllegalStateException();
           }
-          this.field_A = (TextInputWidget) ((Object) new so(param0, (qc) (this), 100));
-          this.field_C = (TextInputWidget) ((Object) new so("", (qc) (this), 20));
+          this.field_A = (TextInputWidget) ((Object) new so(param0, (WidgetListener) (this), 100));
+          this.field_C = (TextInputWidget) ((Object) new so("", (WidgetListener) (this), 20));
           if (this.field_x) {
-            this.field_B = new FocusableWidget(nga.field_q, (qc) null);
-            this.field_y = new FocusableWidget(ControllerLocomotor.field_q, (qc) null);
+            this.field_B = new FocusableWidget(MonochromeFillOperator.field_q, (WidgetListener) null);
+            this.field_y = new FocusableWidget(ControllerLocomotor.field_q, (WidgetListener) null);
             this.field_A.field_y = false;
           } else {
-            this.field_B = new FocusableWidget(goa.field_c, (qc) null);
+            this.field_B = new FocusableWidget(goa.field_c, (WidgetListener) null);
             stackIn_17_1 = null;
             stackIn_17_2 = null;
             if (!this.field_w) {
@@ -69,9 +69,9 @@ final class LoginForm extends WidgetContainer implements cd, tsa {
               stackIn_18_2 = null;
               stackIn_18_3 = fca.field_d;
             }
-            this.field_y = new FocusableWidget(stackIn_18_3, (qc) null);
+            this.field_y = new FocusableWidget(stackIn_18_3, (WidgetListener) null);
             if (this.field_D) {
-              this.field_E = new FocusableWidget(foa.field_a, (qc) (this));
+              this.field_E = new FocusableWidget(foa.field_a, (WidgetListener) (this));
             }
           }
           this.field_A.field_r = (isa) ((Object) new hga(10000536));
@@ -120,12 +120,12 @@ final class LoginForm extends WidgetContainer implements cd, tsa {
           var13 = dupTemp$1;
           this.addChild(dupTemp$1, -1);
           this.field_n = this.field_n + (((UiWidget) ((Object) var13)).field_p + 5);
-          this.field_B.field_h = (qc) (this);
+          this.field_B.field_h = (WidgetListener) (this);
           if (this.field_E != null) {
-            this.field_E.field_h = (qc) (this);
+            this.field_E.field_h = (WidgetListener) (this);
           }
           if (null != this.field_y) {
-            this.field_y.field_h = (qc) (this);
+            this.field_y.field_h = (WidgetListener) (this);
           }
           if (this.field_E != null) {
             this.field_B.setBounds((byte) -31, this.field_m - 95, 30, 85, this.field_n);
