@@ -9724,6 +9724,14 @@
       "renamedSymbol": "F:RenderScene.renderTarget:Liq;"
     },
     {
+      "symbol": "F:v.field_h:Lvna;",
+      "originalName": "field_h",
+      "to": "unacknowledged",
+      "evidence": "Sent actions not yet acknowledged; the debug overlay prints its size as 'unack'.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:MatchProtocol.unacknowledged:LIntrusiveDeque;"
+    },
+    {
       "symbol": "F:vca.field_a:Lpi;",
       "originalName": "field_a",
       "to": "event",
@@ -10972,6 +10980,14 @@
       "renamedSymbol": "M:AffineTransform3D.setIdentity()V"
     },
     {
+      "symbol": "M:asa.a(FIFF)V",
+      "originalName": "a",
+      "to": "translate",
+      "evidence": "Adds float offsets to the translation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AffineTransform3D.translate(FIFF)V"
+    },
+    {
       "symbol": "M:asa.a(III)V",
       "originalName": "a",
       "to": "translate",
@@ -11004,12 +11020,28 @@
       "renamedSymbol": "M:AffineTransform3D.copyStateFrom(LTransform3D;I)V"
     },
     {
+      "symbol": "M:asa.a(ZIII)V",
+      "originalName": "a",
+      "to": "setTranslation",
+      "evidence": "Sets the identity rotation with the given x, y and z translation, as Sum Oblitz's AffineTransform3D.setTranslation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AffineTransform3D.setTranslation(ZIII)V"
+    },
+    {
       "symbol": "M:asa.b(I)V",
       "originalName": "b",
       "to": "rotateZ",
       "evidence": "AffineTransform3D rotates the x and y rows, including the translation, by a 16384-step angle. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:AffineTransform3D.rotateZ(I)V"
+    },
+    {
+      "symbol": "M:asa.b(II)V",
+      "originalName": "b",
+      "to": "setRotationX",
+      "evidence": "Sets a rotation about the x axis by a 16384-step angle with zero translation, as Sum Oblitz's setRotationX.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AffineTransform3D.setRotationX(II)V"
     },
     {
       "symbol": "M:asa.c(I)V",
@@ -19108,6 +19140,38 @@
       "renamedSymbol": "M:PlatformTaskDispatcher.isFullscreenAvailable(B)Z"
     },
     {
+      "symbol": "M:fia.a(BLjava/awt/datatransfer/Transferable;)Lnaa;",
+      "originalName": "a",
+      "to": "requestSetClipboard",
+      "evidence": "Queues task 19, which puts the transferable on the system clipboard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestSetClipboard(BLjava/awt/datatransfer/Transferable;)LAsyncRequest;"
+    },
+    {
+      "symbol": "M:fia.a(I)Lnaa;",
+      "originalName": "a",
+      "to": "requestDisplayModes",
+      "evidence": "Queues task 5, which lists the fullscreen display modes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestDisplayModes(I)LAsyncRequest;"
+    },
+    {
+      "symbol": "M:fia.a(IIBLjava/lang/Object;I)Lnaa;",
+      "originalName": "a",
+      "to": "enqueueTask",
+      "evidence": "Queues an AsyncRequest of the given task type for the dispatcher thread.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.enqueueTask(IIBLjava/lang/Object;I)LAsyncRequest;"
+    },
+    {
+      "symbol": "M:fia.a(IIIBI)Lnaa;",
+      "originalName": "a",
+      "to": "requestEnterFullscreen",
+      "evidence": "Queues task 6 with the packed display mode.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestEnterFullscreen(IIIBI)LAsyncRequest;"
+    },
+    {
       "symbol": "M:fia.a(IILjava/lang/String;Ljava/lang/String;)Lml;",
       "originalName": "a",
       "to": "openPreferencesFile",
@@ -19116,12 +19180,84 @@
       "renamedSymbol": "M:PlatformTaskDispatcher.openPreferencesFile(IILjava/lang/String;Ljava/lang/String;)LRandomAccessFileHandle;"
     },
     {
+      "symbol": "M:fia.a(ILjava/lang/String;I)Lnaa;",
+      "originalName": "a",
+      "to": "requestSocket",
+      "evidence": "Queues a request to open a socket to the host and port.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestSocket(ILjava/lang/String;I)LAsyncRequest;"
+    },
+    {
+      "symbol": "M:fia.a(ILjava/lang/String;Ljava/lang/Class;)Lnaa;",
+      "originalName": "a",
+      "to": "requestDeclaredField",
+      "evidence": "Queues a reflective getDeclaredField lookup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestDeclaredField(ILjava/lang/String;Ljava/lang/Class;)LAsyncRequest;"
+    },
+    {
+      "symbol": "M:fia.a(ILjava/lang/String;ZI)Lnaa;",
+      "originalName": "a",
+      "to": "requestSocketInternal",
+      "evidence": "Shared helper that queues the socket request task.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestSocketInternal(ILjava/lang/String;ZI)LAsyncRequest;"
+    },
+    {
+      "symbol": "M:fia.a(I[Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Lnaa;",
+      "originalName": "a",
+      "to": "requestDeclaredMethod",
+      "evidence": "Queues a reflective getDeclaredMethod lookup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestDeclaredMethod(I[Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)LAsyncRequest;"
+    },
+    {
+      "symbol": "M:fia.a(Ljava/awt/Frame;I)Lnaa;",
+      "originalName": "a",
+      "to": "requestExitFullscreen",
+      "evidence": "Queues a request to leave fullscreen for the frame.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestExitFullscreen(Ljava/awt/Frame;I)LAsyncRequest;"
+    },
+    {
+      "symbol": "M:fia.a(Ljava/lang/Runnable;II)Lnaa;",
+      "originalName": "a",
+      "to": "startThread",
+      "evidence": "Queues a request to start a thread for the runnable.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.startThread(Ljava/lang/Runnable;II)LAsyncRequest;"
+    },
+    {
+      "symbol": "M:fia.a(Ljava/net/URL;I)Lnaa;",
+      "originalName": "a",
+      "to": "requestUrlStream",
+      "evidence": "Queues a request to open a stream to the URL.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestUrlStream(Ljava/net/URL;I)LAsyncRequest;"
+    },
+    {
+      "symbol": "M:fia.a([BLjava/io/File;Z)Z",
+      "originalName": "a",
+      "to": "writeFileBytes",
+      "evidence": "Writes the bytes to the file, as Sum Oblitz's writeFileBytes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.writeFileBytes([BLjava/io/File;Z)Z"
+    },
+    {
       "symbol": "M:fia.b(B)V",
       "originalName": "b",
       "to": "shutdown",
       "evidence": "Stops the dispatcher thread. Body matches several games PlatformTaskDispatcher.shutdown.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PlatformTaskDispatcher.shutdown(B)V"
+    },
+    {
+      "symbol": "M:fia.b(I)Lnaa;",
+      "originalName": "b",
+      "to": "requestClipboardContents",
+      "evidence": "Queues task 18, which reads the system clipboard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestClipboardContents(I)LAsyncRequest;"
     },
     {
       "symbol": "M:fj.a(IIIIILqh;I)V",
@@ -25884,6 +26020,14 @@
       "renamedSymbol": "M:ScrollControlWidget.decodeMesh(LBitPacketBuffer;Z)LTriangleMesh;"
     },
     {
+      "symbol": "M:jo.c(I)I",
+      "originalName": "c",
+      "to": "getVerticalPageFraction",
+      "evidence": "Viewport height over content height in 16.16 fixed point, as in Armies of Gielinor.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollControlWidget.getVerticalPageFraction(I)I"
+    },
+    {
       "symbol": "M:jo.g(B)V",
       "originalName": "g",
       "to": "releaseStatics",
@@ -29844,6 +29988,14 @@
       "renamedSymbol": "M:LegacyOpenGlReflectionEffect.releaseStatics(I)V"
     },
     {
+      "symbol": "M:maa.a()V",
+      "originalName": "a",
+      "to": "release",
+      "evidence": "Drops the payload and the per-track arrays.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiFileReader.release()V"
+    },
+    {
       "symbol": "M:maa.a(I)I",
       "originalName": "a",
       "to": "readNextMessage",
@@ -29884,6 +30036,22 @@
       "renamedSymbol": "M:MidiFileReader.releaseStatics()V"
     },
     {
+      "symbol": "M:maa.b(I)I",
+      "originalName": "b",
+      "to": "readMessage",
+      "evidence": "Reads the next message of a track through readNextMessage.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiFileReader.readMessage(I)I"
+    },
+    {
+      "symbol": "M:maa.c()I",
+      "originalName": "c",
+      "to": "trackCount",
+      "evidence": "Returns the number of tracks.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiFileReader.trackCount()I"
+    },
+    {
       "symbol": "M:maa.c(I)V",
       "originalName": "c",
       "to": "readDelta",
@@ -29900,12 +30068,52 @@
       "renamedSymbol": "M:MidiFileReader.isDone()Z"
     },
     {
+      "symbol": "M:maa.d(I)J",
+      "originalName": "d",
+      "to": "tickTime",
+      "evidence": "Converts a tick to time from the tempo base and ticks.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiFileReader.tickTime(I)J"
+    },
+    {
+      "symbol": "M:maa.e()V",
+      "originalName": "e",
+      "to": "markTrackDone",
+      "evidence": "Sets the buffer position to -1.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiFileReader.markTrackDone()V"
+    },
+    {
+      "symbol": "M:maa.e(I)V",
+      "originalName": "e",
+      "to": "seekTrack",
+      "evidence": "Moves the buffer to a track's saved position.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiFileReader.seekTrack(I)V"
+    },
+    {
       "symbol": "M:maa.f()I",
       "originalName": "f",
       "to": "nextTrack",
       "evidence": "Body is token-identical (identifiers normalised) to sumoblitz MidiFileReader.nextTrack, zombiedawnmulti MidiFileReader.nextTrack, arcanistsmulti MidiFileReader.nextTrack.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MidiFileReader.nextTrack()I"
+    },
+    {
+      "symbol": "M:maa.f(I)V",
+      "originalName": "f",
+      "to": "saveTrackPosition",
+      "evidence": "Stores the buffer position as the track's position.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiFileReader.saveTrackPosition(I)V"
+    },
+    {
+      "symbol": "M:maa.g()Z",
+      "originalName": "g",
+      "to": "isReady",
+      "evidence": "True while a payload is loaded.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiFileReader.isReady()Z"
     },
     {
       "symbol": "M:mb.a(ILla;)V",
@@ -36076,6 +36284,14 @@
       "renamedSymbol": "M:PcmSampleStream.isOutOfRange()Z"
     },
     {
+      "symbol": "M:qia.f()I",
+      "originalName": "f",
+      "to": "getPan",
+      "evidence": "Returns the pan, or -1 when negative.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmSampleStream.getPan()I"
+    },
+    {
       "symbol": "M:qia.f(I)V",
       "originalName": "f",
       "to": "setStepMagnitude",
@@ -36098,6 +36314,30 @@
       "evidence": "Body is token-identical (identifiers normalised) to sumoblitz PcmSampleStream.cancelRamp, zombiedawnmulti PcmSampleStream.cancelRamp, arcanistsmulti PcmSampleStream.cancelRamp.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PcmSampleStream.cancelRamp()V"
+    },
+    {
+      "symbol": "M:qia.j()I",
+      "originalName": "j",
+      "to": "getStepMagnitude",
+      "evidence": "Returns the absolute sample step.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmSampleStream.getStepMagnitude()I"
+    },
+    {
+      "symbol": "M:qia.l()I",
+      "originalName": "l",
+      "to": "getVolume",
+      "evidence": "Returns the volume, or 0 once the stream has been stopped.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmSampleStream.getVolume()I"
+    },
+    {
+      "symbol": "M:qia.m()Z",
+      "originalName": "m",
+      "to": "isRamping",
+      "evidence": "True while a volume or pan ramp has steps left.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmSampleStream.isRamping()Z"
     },
     {
       "symbol": "M:qka.a(CII)Z",
@@ -43036,12 +43276,28 @@
       "renamedSymbol": "M:MatchProtocol.handleMatchResultPacket(LMatchScreen;LBitPacketBuffer;I)V"
     },
     {
+      "symbol": "M:v.c(I)V",
+      "originalName": "c",
+      "to": "drawDebugInfo",
+      "evidence": "Draws the 'unack' and 'received' counters of the protocol.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MatchProtocol.drawDebugInfo(I)V"
+    },
+    {
       "symbol": "M:v.c(II)V",
       "originalName": "c",
       "to": "sendRewardChoice",
       "evidence": "Builds a C2SChooseRewardPacket with the choice and queues it.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MatchProtocol.sendRewardChoice(II)V"
+    },
+    {
+      "symbol": "M:v.d(I)Ltt;",
+      "originalName": "d",
+      "to": "pollReceivedAction",
+      "evidence": "Takes the next received S2CActionPacket from the receive queue.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MatchProtocol.pollReceivedAction(I)LS2CActionPacket;"
     },
     {
       "symbol": "M:v.d(II)V",
@@ -129362,9 +129618,9 @@
     },
     {
       "symbol": "F:v.field_h:Lvna;",
-      "renamedSymbol": "F:MatchProtocol.field_h:LIntrusiveDeque;",
+      "renamedSymbol": "F:MatchProtocol.unacknowledged:LIntrusiveDeque;",
       "originalName": "field_h",
-      "renamedName": "field_h",
+      "renamedName": "unacknowledged",
       "declaration": {
         "file": "v.java",
         "start": 257,
@@ -148447,7 +148703,7 @@
     },
     {
       "symbol": "L:asa.b(II)V#0",
-      "renamedSymbol": "L:AffineTransform3D.b(II)V#0",
+      "renamedSymbol": "L:AffineTransform3D.setRotationX(II)V#0",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -148458,7 +148714,7 @@
     },
     {
       "symbol": "L:asa.b(II)V#1",
-      "renamedSymbol": "L:AffineTransform3D.b(II)V#1",
+      "renamedSymbol": "L:AffineTransform3D.setRotationX(II)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -229165,7 +229421,7 @@
     },
     {
       "symbol": "L:fia.a(IIBLjava/lang/Object;I)Lnaa;#0",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(IIBLjava/lang/Object;I)LAsyncRequest;#0",
+      "renamedSymbol": "L:PlatformTaskDispatcher.enqueueTask(IIBLjava/lang/Object;I)LAsyncRequest;#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -229176,7 +229432,7 @@
     },
     {
       "symbol": "L:fia.a(IIBLjava/lang/Object;I)Lnaa;#1",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(IIBLjava/lang/Object;I)LAsyncRequest;#1",
+      "renamedSymbol": "L:PlatformTaskDispatcher.enqueueTask(IIBLjava/lang/Object;I)LAsyncRequest;#1",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -229187,7 +229443,7 @@
     },
     {
       "symbol": "L:fia.a(IIBLjava/lang/Object;I)Lnaa;#2",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(IIBLjava/lang/Object;I)LAsyncRequest;#2",
+      "renamedSymbol": "L:PlatformTaskDispatcher.enqueueTask(IIBLjava/lang/Object;I)LAsyncRequest;#2",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -229319,7 +229575,7 @@
     },
     {
       "symbol": "L:fia.a(ILjava/lang/String;I)Lnaa;#0",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(ILjava/lang/String;I)LAsyncRequest;#0",
+      "renamedSymbol": "L:PlatformTaskDispatcher.requestSocket(ILjava/lang/String;I)LAsyncRequest;#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -229330,7 +229586,7 @@
     },
     {
       "symbol": "L:fia.a(ILjava/lang/String;Ljava/lang/Class;)Lnaa;#0",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/Class;)LAsyncRequest;#0",
+      "renamedSymbol": "L:PlatformTaskDispatcher.requestDeclaredField(ILjava/lang/String;Ljava/lang/Class;)LAsyncRequest;#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -229341,7 +229597,7 @@
     },
     {
       "symbol": "L:fia.a(ILjava/lang/String;ZI)Lnaa;#0",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(ILjava/lang/String;ZI)LAsyncRequest;#0",
+      "renamedSymbol": "L:PlatformTaskDispatcher.requestSocketInternal(ILjava/lang/String;ZI)LAsyncRequest;#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -229352,7 +229608,7 @@
     },
     {
       "symbol": "L:fia.a([BLjava/io/File;Z)Z#0",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a([BLjava/io/File;Z)Z#0",
+      "renamedSymbol": "L:PlatformTaskDispatcher.writeFileBytes([BLjava/io/File;Z)Z#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -229363,7 +229619,7 @@
     },
     {
       "symbol": "L:fia.a([BLjava/io/File;Z)Z#1",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a([BLjava/io/File;Z)Z#1",
+      "renamedSymbol": "L:PlatformTaskDispatcher.writeFileBytes([BLjava/io/File;Z)Z#1",
       "originalName": "var4_ref",
       "renamedName": "var4_ref",
       "declaration": {
@@ -229374,7 +229630,7 @@
     },
     {
       "symbol": "L:fia.a([BLjava/io/File;Z)Z#2",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a([BLjava/io/File;Z)Z#2",
+      "renamedSymbol": "L:PlatformTaskDispatcher.writeFileBytes([BLjava/io/File;Z)Z#2",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -229385,7 +229641,7 @@
     },
     {
       "symbol": "L:fia.a([BLjava/io/File;Z)Z#3",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a([BLjava/io/File;Z)Z#3",
+      "renamedSymbol": "L:PlatformTaskDispatcher.writeFileBytes([BLjava/io/File;Z)Z#3",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -361352,7 +361608,7 @@
     },
     {
       "symbol": "L:maa.b(I)I#0",
-      "renamedSymbol": "L:MidiFileReader.b(I)I#0",
+      "renamedSymbol": "L:MidiFileReader.readMessage(I)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -509973,7 +510229,7 @@
     },
     {
       "symbol": "L:v.c(I)V#0",
-      "renamedSymbol": "L:MatchProtocol.c(I)V#0",
+      "renamedSymbol": "L:MatchProtocol.drawDebugInfo(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -509984,7 +510240,7 @@
     },
     {
       "symbol": "L:v.c(I)V#1",
-      "renamedSymbol": "L:MatchProtocol.c(I)V#1",
+      "renamedSymbol": "L:MatchProtocol.drawDebugInfo(I)V#1",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -558010,9 +558266,9 @@
     },
     {
       "symbol": "M:asa.a(FIFF)V",
-      "renamedSymbol": "M:AffineTransform3D.a(FIFF)V",
+      "renamedSymbol": "M:AffineTransform3D.translate(FIFF)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "translate",
       "declaration": {
         "file": "asa.java",
         "start": 12109,
@@ -558131,9 +558387,9 @@
     },
     {
       "symbol": "M:asa.a(ZIII)V",
-      "renamedSymbol": "M:AffineTransform3D.a(ZIII)V",
+      "renamedSymbol": "M:AffineTransform3D.setTranslation(ZIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setTranslation",
       "declaration": {
         "file": "asa.java",
         "start": 31063,
@@ -558208,9 +558464,9 @@
     },
     {
       "symbol": "M:asa.b(II)V",
-      "renamedSymbol": "M:AffineTransform3D.b(II)V",
+      "renamedSymbol": "M:AffineTransform3D.setRotationX(II)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "setRotationX",
       "declaration": {
         "file": "asa.java",
         "start": 336,
@@ -581066,9 +581322,9 @@
     },
     {
       "symbol": "M:fia.a(BLjava/awt/datatransfer/Transferable;)Lnaa;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(BLjava/awt/datatransfer/Transferable;)LAsyncRequest;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestSetClipboard(BLjava/awt/datatransfer/Transferable;)LAsyncRequest;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestSetClipboard",
       "declaration": {
         "file": "fia.java",
         "start": 21666,
@@ -581077,9 +581333,9 @@
     },
     {
       "symbol": "M:fia.a(I)Lnaa;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(I)LAsyncRequest;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestDisplayModes(I)LAsyncRequest;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestDisplayModes",
       "declaration": {
         "file": "fia.java",
         "start": 19456,
@@ -581088,9 +581344,9 @@
     },
     {
       "symbol": "M:fia.a(IIBLjava/lang/Object;I)Lnaa;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(IIBLjava/lang/Object;I)LAsyncRequest;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.enqueueTask(IIBLjava/lang/Object;I)LAsyncRequest;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "enqueueTask",
       "declaration": {
         "file": "fia.java",
         "start": 19809,
@@ -581099,9 +581355,9 @@
     },
     {
       "symbol": "M:fia.a(IIIBI)Lnaa;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(IIIBI)LAsyncRequest;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestEnterFullscreen(IIIBI)LAsyncRequest;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestEnterFullscreen",
       "declaration": {
         "file": "fia.java",
         "start": 20537,
@@ -581121,9 +581377,9 @@
     },
     {
       "symbol": "M:fia.a(ILjava/lang/String;I)Lnaa;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(ILjava/lang/String;I)LAsyncRequest;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestSocket(ILjava/lang/String;I)LAsyncRequest;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestSocket",
       "declaration": {
         "file": "fia.java",
         "start": 13492,
@@ -581132,9 +581388,9 @@
     },
     {
       "symbol": "M:fia.a(ILjava/lang/String;Ljava/lang/Class;)Lnaa;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/Class;)LAsyncRequest;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestDeclaredField(ILjava/lang/String;Ljava/lang/Class;)LAsyncRequest;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestDeclaredField",
       "declaration": {
         "file": "fia.java",
         "start": 13827,
@@ -581143,9 +581399,9 @@
     },
     {
       "symbol": "M:fia.a(ILjava/lang/String;ZI)Lnaa;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(ILjava/lang/String;ZI)LAsyncRequest;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestSocketInternal(ILjava/lang/String;ZI)LAsyncRequest;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestSocketInternal",
       "declaration": {
         "file": "fia.java",
         "start": 14111,
@@ -581154,9 +581410,9 @@
     },
     {
       "symbol": "M:fia.a(I[Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Lnaa;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(I[Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)LAsyncRequest;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestDeclaredMethod(I[Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)LAsyncRequest;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestDeclaredMethod",
       "declaration": {
         "file": "fia.java",
         "start": 14395,
@@ -581165,9 +581421,9 @@
     },
     {
       "symbol": "M:fia.a(Ljava/awt/Frame;I)Lnaa;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(Ljava/awt/Frame;I)LAsyncRequest;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestExitFullscreen(Ljava/awt/Frame;I)LAsyncRequest;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestExitFullscreen",
       "declaration": {
         "file": "fia.java",
         "start": 19619,
@@ -581176,9 +581432,9 @@
     },
     {
       "symbol": "M:fia.a(Ljava/lang/Runnable;II)Lnaa;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(Ljava/lang/Runnable;II)LAsyncRequest;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.startThread(Ljava/lang/Runnable;II)LAsyncRequest;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "startThread",
       "declaration": {
         "file": "fia.java",
         "start": 20793,
@@ -581187,9 +581443,9 @@
     },
     {
       "symbol": "M:fia.a(Ljava/net/URL;I)Lnaa;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(Ljava/net/URL;I)LAsyncRequest;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestUrlStream(Ljava/net/URL;I)LAsyncRequest;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestUrlStream",
       "declaration": {
         "file": "fia.java",
         "start": 767,
@@ -581198,9 +581454,9 @@
     },
     {
       "symbol": "M:fia.a([BLjava/io/File;Z)Z",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a([BLjava/io/File;Z)Z",
+      "renamedSymbol": "M:PlatformTaskDispatcher.writeFileBytes([BLjava/io/File;Z)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "writeFileBytes",
       "declaration": {
         "file": "fia.java",
         "start": 20997,
@@ -581220,9 +581476,9 @@
     },
     {
       "symbol": "M:fia.b(I)Lnaa;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.b(I)LAsyncRequest;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestClipboardContents(I)LAsyncRequest;",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "requestClipboardContents",
       "declaration": {
         "file": "fia.java",
         "start": 21860,
@@ -605552,9 +605808,9 @@
     },
     {
       "symbol": "M:jo.c(I)I",
-      "renamedSymbol": "M:ScrollControlWidget.c(I)I",
+      "renamedSymbol": "M:ScrollControlWidget.getVerticalPageFraction(I)I",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "getVerticalPageFraction",
       "declaration": {
         "file": "jo.java",
         "start": 24078,
@@ -616783,9 +617039,9 @@
     },
     {
       "symbol": "M:maa.a()V",
-      "renamedSymbol": "M:MidiFileReader.a()V",
+      "renamedSymbol": "M:MidiFileReader.release()V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "release",
       "declaration": {
         "file": "maa.java",
         "start": 4238,
@@ -616849,9 +617105,9 @@
     },
     {
       "symbol": "M:maa.b(I)I",
-      "renamedSymbol": "M:MidiFileReader.b(I)I",
+      "renamedSymbol": "M:MidiFileReader.readMessage(I)I",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "readMessage",
       "declaration": {
         "file": "maa.java",
         "start": 548,
@@ -616860,9 +617116,9 @@
     },
     {
       "symbol": "M:maa.c()I",
-      "renamedSymbol": "M:MidiFileReader.c()I",
+      "renamedSymbol": "M:MidiFileReader.trackCount()I",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "trackCount",
       "declaration": {
         "file": "maa.java",
         "start": 1668,
@@ -616893,9 +617149,9 @@
     },
     {
       "symbol": "M:maa.d(I)J",
-      "renamedSymbol": "M:MidiFileReader.d(I)J",
+      "renamedSymbol": "M:MidiFileReader.tickTime(I)J",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "tickTime",
       "declaration": {
         "file": "maa.java",
         "start": 4135,
@@ -616904,9 +617160,9 @@
     },
     {
       "symbol": "M:maa.e()V",
-      "renamedSymbol": "M:MidiFileReader.e()V",
+      "renamedSymbol": "M:MidiFileReader.markTrackDone()V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "markTrackDone",
       "declaration": {
         "file": "maa.java",
         "start": 642,
@@ -616915,9 +617171,9 @@
     },
     {
       "symbol": "M:maa.e(I)V",
-      "renamedSymbol": "M:MidiFileReader.e(I)V",
+      "renamedSymbol": "M:MidiFileReader.seekTrack(I)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "seekTrack",
       "declaration": {
         "file": "maa.java",
         "start": 4915,
@@ -616937,9 +617193,9 @@
     },
     {
       "symbol": "M:maa.f(I)V",
-      "renamedSymbol": "M:MidiFileReader.f(I)V",
+      "renamedSymbol": "M:MidiFileReader.saveTrackPosition(I)V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "saveTrackPosition",
       "declaration": {
         "file": "maa.java",
         "start": 5006,
@@ -616948,9 +617204,9 @@
     },
     {
       "symbol": "M:maa.g()Z",
-      "renamedSymbol": "M:MidiFileReader.g()Z",
+      "renamedSymbol": "M:MidiFileReader.isReady()Z",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "isReady",
       "declaration": {
         "file": "maa.java",
         "start": 4842,
@@ -635021,9 +635277,9 @@
     },
     {
       "symbol": "M:qia.f()I",
-      "renamedSymbol": "M:PcmSampleStream.f()I",
+      "renamedSymbol": "M:PcmSampleStream.getPan()I",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "getPan",
       "declaration": {
         "file": "qia.java",
         "start": 28267,
@@ -635076,9 +635332,9 @@
     },
     {
       "symbol": "M:qia.j()I",
-      "renamedSymbol": "M:PcmSampleStream.j()I",
+      "renamedSymbol": "M:PcmSampleStream.getStepMagnitude()I",
       "originalName": "j",
-      "renamedName": "j",
+      "renamedName": "getStepMagnitude",
       "declaration": {
         "file": "qia.java",
         "start": 20561,
@@ -635098,9 +635354,9 @@
     },
     {
       "symbol": "M:qia.l()I",
-      "renamedSymbol": "M:PcmSampleStream.l()I",
+      "renamedSymbol": "M:PcmSampleStream.getVolume()I",
       "originalName": "l",
-      "renamedName": "l",
+      "renamedName": "getVolume",
       "declaration": {
         "file": "qia.java",
         "start": 13842,
@@ -635109,9 +635365,9 @@
     },
     {
       "symbol": "M:qia.m()Z",
-      "renamedSymbol": "M:PcmSampleStream.m()Z",
+      "renamedSymbol": "M:PcmSampleStream.isRamping()Z",
       "originalName": "m",
-      "renamedName": "m",
+      "renamedName": "isRamping",
       "declaration": {
         "file": "qia.java",
         "start": 60429,
@@ -654337,9 +654593,9 @@
     },
     {
       "symbol": "M:v.c(I)V",
-      "renamedSymbol": "M:MatchProtocol.c(I)V",
+      "renamedSymbol": "M:MatchProtocol.drawDebugInfo(I)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "drawDebugInfo",
       "declaration": {
         "file": "v.java",
         "start": 11712,
@@ -654359,9 +654615,9 @@
     },
     {
       "symbol": "M:v.d(I)Ltt;",
-      "renamedSymbol": "M:MatchProtocol.d(I)LS2CActionPacket;",
+      "renamedSymbol": "M:MatchProtocol.pollReceivedAction(I)LS2CActionPacket;",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "pollReceivedAction",
       "declaration": {
         "file": "v.java",
         "start": 16529,
@@ -670716,7 +670972,7 @@
     },
     {
       "symbol": "P:asa.a(FIFF)V#0",
-      "renamedSymbol": "P:AffineTransform3D.a(FIFF)V#0",
+      "renamedSymbol": "P:AffineTransform3D.translate(FIFF)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -670727,7 +670983,7 @@
     },
     {
       "symbol": "P:asa.a(FIFF)V#1",
-      "renamedSymbol": "P:AffineTransform3D.a(FIFF)V#1",
+      "renamedSymbol": "P:AffineTransform3D.translate(FIFF)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -670738,7 +670994,7 @@
     },
     {
       "symbol": "P:asa.a(FIFF)V#2",
-      "renamedSymbol": "P:AffineTransform3D.a(FIFF)V#2",
+      "renamedSymbol": "P:AffineTransform3D.translate(FIFF)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -670749,7 +671005,7 @@
     },
     {
       "symbol": "P:asa.a(FIFF)V#3",
-      "renamedSymbol": "P:AffineTransform3D.a(FIFF)V#3",
+      "renamedSymbol": "P:AffineTransform3D.translate(FIFF)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -671167,7 +671423,7 @@
     },
     {
       "symbol": "P:asa.a(ZIII)V#0",
-      "renamedSymbol": "P:AffineTransform3D.a(ZIII)V#0",
+      "renamedSymbol": "P:AffineTransform3D.setTranslation(ZIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -671178,7 +671434,7 @@
     },
     {
       "symbol": "P:asa.a(ZIII)V#1",
-      "renamedSymbol": "P:AffineTransform3D.a(ZIII)V#1",
+      "renamedSymbol": "P:AffineTransform3D.setTranslation(ZIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -671189,7 +671445,7 @@
     },
     {
       "symbol": "P:asa.a(ZIII)V#2",
-      "renamedSymbol": "P:AffineTransform3D.a(ZIII)V#2",
+      "renamedSymbol": "P:AffineTransform3D.setTranslation(ZIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -671200,7 +671456,7 @@
     },
     {
       "symbol": "P:asa.a(ZIII)V#3",
-      "renamedSymbol": "P:AffineTransform3D.a(ZIII)V#3",
+      "renamedSymbol": "P:AffineTransform3D.setTranslation(ZIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -671387,7 +671643,7 @@
     },
     {
       "symbol": "P:asa.b(II)V#0",
-      "renamedSymbol": "P:AffineTransform3D.b(II)V#0",
+      "renamedSymbol": "P:AffineTransform3D.setRotationX(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -671398,7 +671654,7 @@
     },
     {
       "symbol": "P:asa.b(II)V#1",
-      "renamedSymbol": "P:AffineTransform3D.b(II)V#1",
+      "renamedSymbol": "P:AffineTransform3D.setRotationX(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -719941,7 +720197,7 @@
     },
     {
       "symbol": "P:fia.a(BLjava/awt/datatransfer/Transferable;)Lnaa;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(BLjava/awt/datatransfer/Transferable;)LAsyncRequest;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestSetClipboard(BLjava/awt/datatransfer/Transferable;)LAsyncRequest;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -719952,7 +720208,7 @@
     },
     {
       "symbol": "P:fia.a(BLjava/awt/datatransfer/Transferable;)Lnaa;#1",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(BLjava/awt/datatransfer/Transferable;)LAsyncRequest;#1",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestSetClipboard(BLjava/awt/datatransfer/Transferable;)LAsyncRequest;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -719963,7 +720219,7 @@
     },
     {
       "symbol": "P:fia.a(I)Lnaa;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(I)LAsyncRequest;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestDisplayModes(I)LAsyncRequest;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -719974,7 +720230,7 @@
     },
     {
       "symbol": "P:fia.a(IIBLjava/lang/Object;I)Lnaa;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IIBLjava/lang/Object;I)LAsyncRequest;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.enqueueTask(IIBLjava/lang/Object;I)LAsyncRequest;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -719985,7 +720241,7 @@
     },
     {
       "symbol": "P:fia.a(IIBLjava/lang/Object;I)Lnaa;#1",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IIBLjava/lang/Object;I)LAsyncRequest;#1",
+      "renamedSymbol": "P:PlatformTaskDispatcher.enqueueTask(IIBLjava/lang/Object;I)LAsyncRequest;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -719996,7 +720252,7 @@
     },
     {
       "symbol": "P:fia.a(IIBLjava/lang/Object;I)Lnaa;#2",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IIBLjava/lang/Object;I)LAsyncRequest;#2",
+      "renamedSymbol": "P:PlatformTaskDispatcher.enqueueTask(IIBLjava/lang/Object;I)LAsyncRequest;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -720007,7 +720263,7 @@
     },
     {
       "symbol": "P:fia.a(IIBLjava/lang/Object;I)Lnaa;#3",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IIBLjava/lang/Object;I)LAsyncRequest;#3",
+      "renamedSymbol": "P:PlatformTaskDispatcher.enqueueTask(IIBLjava/lang/Object;I)LAsyncRequest;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -720018,7 +720274,7 @@
     },
     {
       "symbol": "P:fia.a(IIBLjava/lang/Object;I)Lnaa;#4",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IIBLjava/lang/Object;I)LAsyncRequest;#4",
+      "renamedSymbol": "P:PlatformTaskDispatcher.enqueueTask(IIBLjava/lang/Object;I)LAsyncRequest;#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -720029,7 +720285,7 @@
     },
     {
       "symbol": "P:fia.a(IIIBI)Lnaa;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IIIBI)LAsyncRequest;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestEnterFullscreen(IIIBI)LAsyncRequest;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -720040,7 +720296,7 @@
     },
     {
       "symbol": "P:fia.a(IIIBI)Lnaa;#1",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IIIBI)LAsyncRequest;#1",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestEnterFullscreen(IIIBI)LAsyncRequest;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -720051,7 +720307,7 @@
     },
     {
       "symbol": "P:fia.a(IIIBI)Lnaa;#2",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IIIBI)LAsyncRequest;#2",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestEnterFullscreen(IIIBI)LAsyncRequest;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -720062,7 +720318,7 @@
     },
     {
       "symbol": "P:fia.a(IIIBI)Lnaa;#3",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IIIBI)LAsyncRequest;#3",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestEnterFullscreen(IIIBI)LAsyncRequest;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -720073,7 +720329,7 @@
     },
     {
       "symbol": "P:fia.a(IIIBI)Lnaa;#4",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IIIBI)LAsyncRequest;#4",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestEnterFullscreen(IIIBI)LAsyncRequest;#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -720128,7 +720384,7 @@
     },
     {
       "symbol": "P:fia.a(ILjava/lang/String;I)Lnaa;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/String;I)LAsyncRequest;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestSocket(ILjava/lang/String;I)LAsyncRequest;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -720139,7 +720395,7 @@
     },
     {
       "symbol": "P:fia.a(ILjava/lang/String;I)Lnaa;#1",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/String;I)LAsyncRequest;#1",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestSocket(ILjava/lang/String;I)LAsyncRequest;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -720150,7 +720406,7 @@
     },
     {
       "symbol": "P:fia.a(ILjava/lang/String;I)Lnaa;#2",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/String;I)LAsyncRequest;#2",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestSocket(ILjava/lang/String;I)LAsyncRequest;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -720161,7 +720417,7 @@
     },
     {
       "symbol": "P:fia.a(ILjava/lang/String;Ljava/lang/Class;)Lnaa;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/Class;)LAsyncRequest;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestDeclaredField(ILjava/lang/String;Ljava/lang/Class;)LAsyncRequest;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -720172,7 +720428,7 @@
     },
     {
       "symbol": "P:fia.a(ILjava/lang/String;Ljava/lang/Class;)Lnaa;#1",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/Class;)LAsyncRequest;#1",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestDeclaredField(ILjava/lang/String;Ljava/lang/Class;)LAsyncRequest;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -720183,7 +720439,7 @@
     },
     {
       "symbol": "P:fia.a(ILjava/lang/String;Ljava/lang/Class;)Lnaa;#2",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/Class;)LAsyncRequest;#2",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestDeclaredField(ILjava/lang/String;Ljava/lang/Class;)LAsyncRequest;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -720194,7 +720450,7 @@
     },
     {
       "symbol": "P:fia.a(ILjava/lang/String;ZI)Lnaa;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/String;ZI)LAsyncRequest;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestSocketInternal(ILjava/lang/String;ZI)LAsyncRequest;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -720205,7 +720461,7 @@
     },
     {
       "symbol": "P:fia.a(ILjava/lang/String;ZI)Lnaa;#1",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/String;ZI)LAsyncRequest;#1",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestSocketInternal(ILjava/lang/String;ZI)LAsyncRequest;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -720216,7 +720472,7 @@
     },
     {
       "symbol": "P:fia.a(ILjava/lang/String;ZI)Lnaa;#2",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/String;ZI)LAsyncRequest;#2",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestSocketInternal(ILjava/lang/String;ZI)LAsyncRequest;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -720227,7 +720483,7 @@
     },
     {
       "symbol": "P:fia.a(ILjava/lang/String;ZI)Lnaa;#3",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/String;ZI)LAsyncRequest;#3",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestSocketInternal(ILjava/lang/String;ZI)LAsyncRequest;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -720238,7 +720494,7 @@
     },
     {
       "symbol": "P:fia.a(I[Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Lnaa;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(I[Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)LAsyncRequest;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestDeclaredMethod(I[Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)LAsyncRequest;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -720249,7 +720505,7 @@
     },
     {
       "symbol": "P:fia.a(I[Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Lnaa;#1",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(I[Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)LAsyncRequest;#1",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestDeclaredMethod(I[Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)LAsyncRequest;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -720260,7 +720516,7 @@
     },
     {
       "symbol": "P:fia.a(I[Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Lnaa;#2",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(I[Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)LAsyncRequest;#2",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestDeclaredMethod(I[Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)LAsyncRequest;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -720271,7 +720527,7 @@
     },
     {
       "symbol": "P:fia.a(I[Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Lnaa;#3",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(I[Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)LAsyncRequest;#3",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestDeclaredMethod(I[Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)LAsyncRequest;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -720282,7 +720538,7 @@
     },
     {
       "symbol": "P:fia.a(Ljava/awt/Frame;I)Lnaa;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/awt/Frame;I)LAsyncRequest;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestExitFullscreen(Ljava/awt/Frame;I)LAsyncRequest;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -720293,7 +720549,7 @@
     },
     {
       "symbol": "P:fia.a(Ljava/awt/Frame;I)Lnaa;#1",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/awt/Frame;I)LAsyncRequest;#1",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestExitFullscreen(Ljava/awt/Frame;I)LAsyncRequest;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -720304,7 +720560,7 @@
     },
     {
       "symbol": "P:fia.a(Ljava/lang/Runnable;II)Lnaa;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/lang/Runnable;II)LAsyncRequest;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.startThread(Ljava/lang/Runnable;II)LAsyncRequest;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -720315,7 +720571,7 @@
     },
     {
       "symbol": "P:fia.a(Ljava/lang/Runnable;II)Lnaa;#1",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/lang/Runnable;II)LAsyncRequest;#1",
+      "renamedSymbol": "P:PlatformTaskDispatcher.startThread(Ljava/lang/Runnable;II)LAsyncRequest;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -720326,7 +720582,7 @@
     },
     {
       "symbol": "P:fia.a(Ljava/lang/Runnable;II)Lnaa;#2",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/lang/Runnable;II)LAsyncRequest;#2",
+      "renamedSymbol": "P:PlatformTaskDispatcher.startThread(Ljava/lang/Runnable;II)LAsyncRequest;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -720337,7 +720593,7 @@
     },
     {
       "symbol": "P:fia.a(Ljava/net/URL;I)Lnaa;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/net/URL;I)LAsyncRequest;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestUrlStream(Ljava/net/URL;I)LAsyncRequest;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -720348,7 +720604,7 @@
     },
     {
       "symbol": "P:fia.a(Ljava/net/URL;I)Lnaa;#1",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/net/URL;I)LAsyncRequest;#1",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestUrlStream(Ljava/net/URL;I)LAsyncRequest;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -720359,7 +720615,7 @@
     },
     {
       "symbol": "P:fia.a([BLjava/io/File;Z)Z#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a([BLjava/io/File;Z)Z#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.writeFileBytes([BLjava/io/File;Z)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -720370,7 +720626,7 @@
     },
     {
       "symbol": "P:fia.a([BLjava/io/File;Z)Z#1",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a([BLjava/io/File;Z)Z#1",
+      "renamedSymbol": "P:PlatformTaskDispatcher.writeFileBytes([BLjava/io/File;Z)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -720381,7 +720637,7 @@
     },
     {
       "symbol": "P:fia.a([BLjava/io/File;Z)Z#2",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a([BLjava/io/File;Z)Z#2",
+      "renamedSymbol": "P:PlatformTaskDispatcher.writeFileBytes([BLjava/io/File;Z)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -720403,7 +720659,7 @@
     },
     {
       "symbol": "P:fia.b(I)Lnaa;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.b(I)LAsyncRequest;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestClipboardContents(I)LAsyncRequest;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -779968,7 +780224,7 @@
     },
     {
       "symbol": "P:jo.c(I)I#0",
-      "renamedSymbol": "P:ScrollControlWidget.c(I)I#0",
+      "renamedSymbol": "P:ScrollControlWidget.getVerticalPageFraction(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -805686,7 +805942,7 @@
     },
     {
       "symbol": "P:maa.b(I)I#0",
-      "renamedSymbol": "P:MidiFileReader.b(I)I#0",
+      "renamedSymbol": "P:MidiFileReader.readMessage(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -805708,7 +805964,7 @@
     },
     {
       "symbol": "P:maa.d(I)J#0",
-      "renamedSymbol": "P:MidiFileReader.d(I)J#0",
+      "renamedSymbol": "P:MidiFileReader.tickTime(I)J#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -805719,7 +805975,7 @@
     },
     {
       "symbol": "P:maa.e(I)V#0",
-      "renamedSymbol": "P:MidiFileReader.e(I)V#0",
+      "renamedSymbol": "P:MidiFileReader.seekTrack(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -805730,7 +805986,7 @@
     },
     {
       "symbol": "P:maa.f(I)V#0",
-      "renamedSymbol": "P:MidiFileReader.f(I)V#0",
+      "renamedSymbol": "P:MidiFileReader.saveTrackPosition(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -890419,7 +890675,7 @@
     },
     {
       "symbol": "P:v.c(I)V#0",
-      "renamedSymbol": "P:MatchProtocol.c(I)V#0",
+      "renamedSymbol": "P:MatchProtocol.drawDebugInfo(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -890452,7 +890708,7 @@
     },
     {
       "symbol": "P:v.d(I)Ltt;#0",
-      "renamedSymbol": "P:MatchProtocol.d(I)LS2CActionPacket;#0",
+      "renamedSymbol": "P:MatchProtocol.pollReceivedAction(I)LS2CActionPacket;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -920968,7 +921224,7 @@
       "original": "af.java",
       "renamed": "SecondaryNodeHashTable.java",
       "inputSha256": "1741cfdbaed9e2faa04812913953ff7eb695e88ecd2d0cb94638518ceb906712",
-      "outputSha256": "1b7a609b8fb5ae32d836a4e88ea9177e2c41aa96d9e06c183736bac7aaaec7cf",
+      "outputSha256": "acd489046022b988bf99818410ba9afd5d5bfab7fd4ab77f18302a31ee689ad5",
       "edits": [
         {
           "start": 50,
@@ -921032,6 +921288,13 @@
           "symbol": "M:fia.a(B)Z",
           "original": "a",
           "renamed": "isFullscreenAvailable"
+        },
+        {
+          "start": 1049,
+          "end": 1050,
+          "symbol": "M:fia.a(I)Lnaa;",
+          "original": "a",
+          "renamed": "requestDisplayModes"
         },
         {
           "start": 1108,
@@ -927945,7 +928208,7 @@
       "original": "asa.java",
       "renamed": "AffineTransform3D.java",
       "inputSha256": "5c866be013ba98d176baca01d65cbe0d9ec384092faf6d4f4ac3297b078ee375",
-      "outputSha256": "b3e3cfce32d86cdb5ba4d4b21d8652080212639a0945ca59c84b735209c89587",
+      "outputSha256": "6834bc5f8c4c69593098577dff05ea786a8b5904e0554b9f6f43adee9ac4dcd7",
       "edits": [
         {
           "start": 50,
@@ -927967,6 +928230,13 @@
           "symbol": "C:vna",
           "original": "vna",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 336,
+          "end": 337,
+          "symbol": "M:asa.b(II)V",
+          "original": "b",
+          "renamed": "setRotationX"
         },
         {
           "start": 419,
@@ -928060,6 +928330,13 @@
           "renamed": "BufferedCacheFile"
         },
         {
+          "start": 3620,
+          "end": 3621,
+          "symbol": "M:asa.a(FIFF)V",
+          "original": "a",
+          "renamed": "translate"
+        },
+        {
           "start": 3818,
           "end": 3821,
           "symbol": "C:gda",
@@ -928107,6 +928384,13 @@
           "symbol": "C:ph",
           "original": "ph",
           "renamed": "BufferedCacheFile"
+        },
+        {
+          "start": 12109,
+          "end": 12110,
+          "symbol": "M:asa.a(FIFF)V",
+          "original": "a",
+          "renamed": "translate"
         },
         {
           "start": 13532,
@@ -928429,6 +928713,13 @@
           "symbol": "C:asa",
           "original": "asa",
           "renamed": "AffineTransform3D"
+        },
+        {
+          "start": 31063,
+          "end": 31064,
+          "symbol": "M:asa.a(ZIII)V",
+          "original": "a",
+          "renamed": "setTranslation"
         },
         {
           "start": 31905,
@@ -947233,7 +947524,7 @@
       "original": "ca.java",
       "renamed": "ca.java",
       "inputSha256": "c0d964e6c0ae054da198f17917241549a584028e42c094e375625f47e55ea5c8",
-      "outputSha256": "338d1f047cdf580b15ffef1a127802e582edbdf89effc31255fce5232ded965f",
+      "outputSha256": "4ade2295d12d2ff41a5511ac3ace956a95e1ecebb881af7ca810758ada32c1ed",
       "edits": [
         {
           "start": 61,
@@ -947418,6 +947709,13 @@
           "renamed": "PlatformComponent"
         },
         {
+          "start": 10174,
+          "end": 10175,
+          "symbol": "M:asa.a(ZIII)V",
+          "original": "a",
+          "renamed": "setTranslation"
+        },
+        {
           "start": 10302,
           "end": 10303,
           "symbol": "M:eo.a(Lmna;I)V",
@@ -947430,7 +947728,7 @@
       "original": "caa.java",
       "renamed": "UrlDownloadRequest.java",
       "inputSha256": "551a6786db7cfd2c95f31ac92c2822c71576cb02230d1bb6594a36ef7e3ee4d8",
-      "outputSha256": "68940e7c854247e775b09e6306b53897778f1792d33c739fa05d3f004078e9e2",
+      "outputSha256": "1279cb0ff2244a44d06557f7c2d6642490e913f6e0da56a06a694129f69baaff",
       "edits": [
         {
           "start": 69,
@@ -947545,6 +947843,27 @@
           "renamed": "poll"
         },
         {
+          "start": 1473,
+          "end": 1474,
+          "symbol": "M:fia.a(Ljava/net/URL;I)Lnaa;",
+          "original": "a",
+          "renamed": "requestUrlStream"
+        },
+        {
+          "start": 1867,
+          "end": 1868,
+          "symbol": "M:fia.a(ILjava/lang/String;I)Lnaa;",
+          "original": "a",
+          "renamed": "requestSocket"
+        },
+        {
+          "start": 2283,
+          "end": 2284,
+          "symbol": "M:fia.a(Ljava/lang/Runnable;II)Lnaa;",
+          "original": "a",
+          "renamed": "startThread"
+        },
+        {
           "start": 3132,
           "end": 3133,
           "symbol": "M:us.a(Ljava/lang/CharSequence;Z)[B",
@@ -947557,6 +947876,20 @@
           "symbol": "F:uia.field_h:I",
           "original": "field_h",
           "renamed": "position"
+        },
+        {
+          "start": 3617,
+          "end": 3618,
+          "symbol": "M:fia.a(Ljava/lang/Runnable;II)Lnaa;",
+          "original": "a",
+          "renamed": "startThread"
+        },
+        {
+          "start": 4313,
+          "end": 4314,
+          "symbol": "M:fia.a(Ljava/lang/Runnable;II)Lnaa;",
+          "original": "a",
+          "renamed": "startThread"
         },
         {
           "start": 4706,
@@ -993635,7 +993968,7 @@
       "original": "em.java",
       "renamed": "HardwareSpecularEffect.java",
       "inputSha256": "fbca34fa129ba569e68a4a7480ce1829ec7874e2d911b43e4f887678a2d6535c",
-      "outputSha256": "6c4e40be9d382510427a0cc3b83c715829ef1b3679141ae30fe0c5b383eff8f0",
+      "outputSha256": "25dbe6fda930c85ec834635e9b58e788cbb9e9eab653cbd6e696655c502a1257",
       "edits": [
         {
           "start": 50,
@@ -994021,6 +994354,13 @@
           "symbol": "F:vw.field_c:Leo;",
           "original": "field_c",
           "renamed": "owner"
+        },
+        {
+          "start": 6050,
+          "end": 6051,
+          "symbol": "M:asa.b(II)V",
+          "original": "b",
+          "renamed": "setRotationX"
         },
         {
           "start": 6079,
@@ -995200,7 +995540,7 @@
       "original": "eo.java",
       "renamed": "HardwareGraphicsToolkit.java",
       "inputSha256": "04951f02319c9adfeafb9ac8e4ed8bc5ffdbc08453d0c94ed081510674e0b0f0",
-      "outputSha256": "d595ba45a9a975474b81fb56d31273421f0420a9ab26fd284e0b6da7401924e2",
+      "outputSha256": "150e88bc0124960bb49eff021666331bc4ff71f79b76bc8769efeee14db7aac7",
       "edits": [
         {
           "start": 74,
@@ -995768,6 +996108,13 @@
           "symbol": "C:nr",
           "original": "nr",
           "renamed": "S2CRewardChoicePacket"
+        },
+        {
+          "start": 14353,
+          "end": 14354,
+          "symbol": "M:asa.a(FIFF)V",
+          "original": "a",
+          "renamed": "translate"
         },
         {
           "start": 14595,
@@ -996715,6 +997062,13 @@
           "symbol": "M:eo.c(II)V",
           "original": "c",
           "renamed": "setBlendMode"
+        },
+        {
+          "start": 51801,
+          "end": 51802,
+          "symbol": "M:asa.a(FIFF)V",
+          "original": "a",
+          "renamed": "translate"
         },
         {
           "start": 52068,
@@ -1006043,7 +1006397,7 @@
       "original": "et.java",
       "renamed": "MidiVoiceMixer.java",
       "inputSha256": "cd7ede9fc1b0459cfa34485c16caab61023d6bf4fc6dc75a16f957011b2b4e84",
-      "outputSha256": "6cce33a3042c1c7540dcb7429025852d40632b1177499d4458bb49bca23d99d2",
+      "outputSha256": "bf5075b7484e15f90a1bd9e67e032dcfdb5261def30f138e4b967d100ed85f40",
       "edits": [
         {
           "start": 50,
@@ -1006256,6 +1006610,20 @@
           "renamed": "create"
         },
         {
+          "start": 6757,
+          "end": 6758,
+          "symbol": "M:qia.j()I",
+          "original": "j",
+          "renamed": "getStepMagnitude"
+        },
+        {
+          "start": 6780,
+          "end": 6781,
+          "symbol": "M:qia.f()I",
+          "original": "f",
+          "renamed": "getPan"
+        },
+        {
           "start": 7008,
           "end": 7009,
           "symbol": "C:l",
@@ -1006275,6 +1006643,27 @@
           "symbol": "M:qia.a(Lu;III)Lqia;",
           "original": "a",
           "renamed": "create"
+        },
+        {
+          "start": 7175,
+          "end": 7176,
+          "symbol": "M:qia.j()I",
+          "original": "j",
+          "renamed": "getStepMagnitude"
+        },
+        {
+          "start": 7195,
+          "end": 7196,
+          "symbol": "M:qia.l()I",
+          "original": "l",
+          "renamed": "getVolume"
+        },
+        {
+          "start": 7215,
+          "end": 7216,
+          "symbol": "M:qia.f()I",
+          "original": "f",
+          "renamed": "getPan"
         },
         {
           "start": 7527,
@@ -1006340,11 +1006729,32 @@
           "renamed": "create"
         },
         {
+          "start": 9859,
+          "end": 9860,
+          "symbol": "M:qia.j()I",
+          "original": "j",
+          "renamed": "getStepMagnitude"
+        },
+        {
+          "start": 9873,
+          "end": 9874,
+          "symbol": "M:qia.f()I",
+          "original": "f",
+          "renamed": "getPan"
+        },
+        {
           "start": 10104,
           "end": 10105,
           "symbol": "C:l",
           "original": "l",
           "renamed": "MidiPcmStream"
+        },
+        {
+          "start": 10227,
+          "end": 10228,
+          "symbol": "M:qia.l()I",
+          "original": "l",
+          "renamed": "getVolume"
         },
         {
           "start": 10289,
@@ -1006361,6 +1006771,27 @@
           "renamed": "create"
         },
         {
+          "start": 10317,
+          "end": 10318,
+          "symbol": "M:qia.j()I",
+          "original": "j",
+          "renamed": "getStepMagnitude"
+        },
+        {
+          "start": 10328,
+          "end": 10329,
+          "symbol": "M:qia.l()I",
+          "original": "l",
+          "renamed": "getVolume"
+        },
+        {
+          "start": 10339,
+          "end": 10340,
+          "symbol": "M:qia.f()I",
+          "original": "f",
+          "renamed": "getPan"
+        },
+        {
           "start": 10499,
           "end": 10500,
           "symbol": "M:qia.d(I)V",
@@ -1006373,6 +1006804,13 @@
           "symbol": "M:qia.b([III)V",
           "original": "b",
           "renamed": "fill"
+        },
+        {
+          "start": 10589,
+          "end": 10590,
+          "symbol": "M:qia.m()Z",
+          "original": "m",
+          "renamed": "isRamping"
         },
         {
           "start": 10753,
@@ -1017596,7 +1018034,7 @@
       "original": "fia.java",
       "renamed": "PlatformTaskDispatcher.java",
       "inputSha256": "23eba00e582ca2bf08d8ee9cfc8e5fe4074e75cf84dd2d85ffc39204bf3c9910",
-      "outputSha256": "f14fb79bb0daaa4c2bcd687e7e9b12048e561220a500e00114eb088b82747e4d",
+      "outputSha256": "7d9b061bf59b9037131e68fe985cbe42f74cb5e13494bbbdc319c885a3c2b63b",
       "edits": [
         {
           "start": 69,
@@ -1017669,11 +1018107,25 @@
           "renamed": "AsyncRequest"
         },
         {
+          "start": 767,
+          "end": 768,
+          "symbol": "M:fia.a(Ljava/net/URL;I)Lnaa;",
+          "original": "a",
+          "renamed": "requestUrlStream"
+        },
+        {
           "start": 849,
           "end": 852,
           "symbol": "C:naa",
           "original": "naa",
           "renamed": "AsyncRequest"
+        },
+        {
+          "start": 890,
+          "end": 891,
+          "symbol": "M:fia.a(IIBLjava/lang/Object;I)Lnaa;",
+          "original": "a",
+          "renamed": "enqueueTask"
         },
         {
           "start": 1303,
@@ -1017878,11 +1018330,39 @@
           "renamed": "AsyncRequest"
         },
         {
+          "start": 13492,
+          "end": 13493,
+          "symbol": "M:fia.a(ILjava/lang/String;I)Lnaa;",
+          "original": "a",
+          "renamed": "requestSocket"
+        },
+        {
+          "start": 13677,
+          "end": 13678,
+          "symbol": "M:fia.a(BLjava/awt/datatransfer/Transferable;)Lnaa;",
+          "original": "a",
+          "renamed": "requestSetClipboard"
+        },
+        {
+          "start": 13764,
+          "end": 13765,
+          "symbol": "M:fia.a(ILjava/lang/String;ZI)Lnaa;",
+          "original": "a",
+          "renamed": "requestSocketInternal"
+        },
+        {
           "start": 13823,
           "end": 13826,
           "symbol": "C:naa",
           "original": "naa",
           "renamed": "AsyncRequest"
+        },
+        {
+          "start": 13827,
+          "end": 13828,
+          "symbol": "M:fia.a(ILjava/lang/String;Ljava/lang/Class;)Lnaa;",
+          "original": "a",
+          "renamed": "requestDeclaredField"
         },
         {
           "start": 13952,
@@ -1017899,11 +1018379,25 @@
           "renamed": "openPreferencesFile"
         },
         {
+          "start": 14028,
+          "end": 14029,
+          "symbol": "M:fia.a(IIBLjava/lang/Object;I)Lnaa;",
+          "original": "a",
+          "renamed": "enqueueTask"
+        },
+        {
           "start": 14107,
           "end": 14110,
           "symbol": "C:naa",
           "original": "naa",
           "renamed": "AsyncRequest"
+        },
+        {
+          "start": 14111,
+          "end": 14112,
+          "symbol": "M:fia.a(ILjava/lang/String;ZI)Lnaa;",
+          "original": "a",
+          "renamed": "requestSocketInternal"
         },
         {
           "start": 14246,
@@ -1017920,11 +1018414,32 @@
           "renamed": "openPreferencesFile"
         },
         {
+          "start": 14323,
+          "end": 14324,
+          "symbol": "M:fia.a(IIBLjava/lang/Object;I)Lnaa;",
+          "original": "a",
+          "renamed": "enqueueTask"
+        },
+        {
           "start": 14391,
           "end": 14394,
           "symbol": "C:naa",
           "original": "naa",
           "renamed": "AsyncRequest"
+        },
+        {
+          "start": 14395,
+          "end": 14396,
+          "symbol": "M:fia.a(I[Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Lnaa;",
+          "original": "a",
+          "renamed": "requestDeclaredMethod"
+        },
+        {
+          "start": 14557,
+          "end": 14558,
+          "symbol": "M:fia.a(IIBLjava/lang/Object;I)Lnaa;",
+          "original": "a",
+          "renamed": "enqueueTask"
         },
         {
           "start": 14644,
@@ -1017939,6 +1018454,13 @@
           "symbol": "M:fia.b(B)V",
           "original": "b",
           "renamed": "shutdown"
+        },
+        {
+          "start": 15504,
+          "end": 15505,
+          "symbol": "M:fia.a(Ljava/awt/Frame;I)Lnaa;",
+          "original": "a",
+          "renamed": "requestExitFullscreen"
         },
         {
           "start": 17677,
@@ -1017990,11 +1018512,25 @@
           "renamed": "AsyncRequest"
         },
         {
+          "start": 19456,
+          "end": 19457,
+          "symbol": "M:fia.a(I)Lnaa;",
+          "original": "a",
+          "renamed": "requestDisplayModes"
+        },
+        {
           "start": 19518,
           "end": 19521,
           "symbol": "C:naa",
           "original": "naa",
           "renamed": "AsyncRequest"
+        },
+        {
+          "start": 19559,
+          "end": 19560,
+          "symbol": "M:fia.a(IIBLjava/lang/Object;I)Lnaa;",
+          "original": "a",
+          "renamed": "enqueueTask"
         },
         {
           "start": 19615,
@@ -1018004,6 +1018540,13 @@
           "renamed": "AsyncRequest"
         },
         {
+          "start": 19619,
+          "end": 19620,
+          "symbol": "M:fia.a(Ljava/awt/Frame;I)Lnaa;",
+          "original": "a",
+          "renamed": "requestExitFullscreen"
+        },
+        {
           "start": 19707,
           "end": 19710,
           "symbol": "C:naa",
@@ -1018011,11 +1018554,25 @@
           "renamed": "AsyncRequest"
         },
         {
+          "start": 19748,
+          "end": 19749,
+          "symbol": "M:fia.a(IIBLjava/lang/Object;I)Lnaa;",
+          "original": "a",
+          "renamed": "enqueueTask"
+        },
+        {
           "start": 19805,
           "end": 19808,
           "symbol": "C:naa",
           "original": "naa",
           "renamed": "AsyncRequest"
+        },
+        {
+          "start": 19809,
+          "end": 19810,
+          "symbol": "M:fia.a(IIBLjava/lang/Object;I)Lnaa;",
+          "original": "a",
+          "renamed": "enqueueTask"
         },
         {
           "start": 19885,
@@ -1018046,11 +1018603,25 @@
           "renamed": "AsyncRequest"
         },
         {
+          "start": 20537,
+          "end": 20538,
+          "symbol": "M:fia.a(IIIBI)Lnaa;",
+          "original": "a",
+          "renamed": "requestEnterFullscreen"
+        },
+        {
           "start": 20648,
           "end": 20651,
           "symbol": "C:naa",
           "original": "naa",
           "renamed": "AsyncRequest"
+        },
+        {
+          "start": 20689,
+          "end": 20690,
+          "symbol": "M:fia.a(IIBLjava/lang/Object;I)Lnaa;",
+          "original": "a",
+          "renamed": "enqueueTask"
         },
         {
           "start": 20789,
@@ -1018060,11 +1018631,32 @@
           "renamed": "AsyncRequest"
         },
         {
+          "start": 20793,
+          "end": 20794,
+          "symbol": "M:fia.a(Ljava/lang/Runnable;II)Lnaa;",
+          "original": "a",
+          "renamed": "startThread"
+        },
+        {
           "start": 20893,
           "end": 20895,
           "symbol": "C:ml",
           "original": "ml",
           "renamed": "RandomAccessFileHandle"
+        },
+        {
+          "start": 20935,
+          "end": 20936,
+          "symbol": "M:fia.a(IIBLjava/lang/Object;I)Lnaa;",
+          "original": "a",
+          "renamed": "enqueueTask"
+        },
+        {
+          "start": 20997,
+          "end": 20998,
+          "symbol": "M:fia.a([BLjava/io/File;Z)Z",
+          "original": "a",
+          "renamed": "writeFileBytes"
         },
         {
           "start": 21662,
@@ -1018074,6 +1018666,27 @@
           "renamed": "AsyncRequest"
         },
         {
+          "start": 21666,
+          "end": 21667,
+          "symbol": "M:fia.a(BLjava/awt/datatransfer/Transferable;)Lnaa;",
+          "original": "a",
+          "renamed": "requestSetClipboard"
+        },
+        {
+          "start": 21769,
+          "end": 21770,
+          "symbol": "M:fia.a(I)Lnaa;",
+          "original": "a",
+          "renamed": "requestDisplayModes"
+        },
+        {
+          "start": 21806,
+          "end": 21807,
+          "symbol": "M:fia.a(IIBLjava/lang/Object;I)Lnaa;",
+          "original": "a",
+          "renamed": "enqueueTask"
+        },
+        {
           "start": 21856,
           "end": 21859,
           "symbol": "C:naa",
@@ -1018081,11 +1018694,25 @@
           "renamed": "AsyncRequest"
         },
         {
+          "start": 21860,
+          "end": 21861,
+          "symbol": "M:fia.b(I)Lnaa;",
+          "original": "b",
+          "renamed": "requestClipboardContents"
+        },
+        {
           "start": 21923,
           "end": 21926,
           "symbol": "C:naa",
           "original": "naa",
           "renamed": "AsyncRequest"
+        },
+        {
+          "start": 21964,
+          "end": 21965,
+          "symbol": "M:fia.a(IIBLjava/lang/Object;I)Lnaa;",
+          "original": "a",
+          "renamed": "enqueueTask"
         },
         {
           "start": 22015,
@@ -1018516,7 +1019143,7 @@
       "original": "fja.java",
       "renamed": "PlayPhase.java",
       "inputSha256": "9c67ded2a35321bc2b4518bb96afe3e264ac1fca749a5926de2705f72bf4fa1c",
-      "outputSha256": "a7f79debb1b4550db5aa2073e114165d0810ec895e6694ed9ef9ecf6ff140c66",
+      "outputSha256": "c63cf22fa1fb5f341283baff44687f3865e772252919222159d5256574c78034",
       "edits": [
         {
           "start": 50,
@@ -1019259,6 +1019886,13 @@
           "symbol": "F:qra.field_f:Lv;",
           "original": "field_f",
           "renamed": "protocol"
+        },
+        {
+          "start": 7816,
+          "end": 7817,
+          "symbol": "M:v.c(I)V",
+          "original": "c",
+          "renamed": "drawDebugInfo"
         },
         {
           "start": 7885,
@@ -1022590,7 +1023224,7 @@
       "original": "fn.java",
       "renamed": "HardwareAnimatedWaterEffect.java",
       "inputSha256": "eb8dcd62dc07dbef32de42753e340e7b59678ecfcb4ce3b4207c189a710cf208",
-      "outputSha256": "35be8d99429627c38a02f20ed01e643447c2d28d7ebebccead3f270f24475c2a",
+      "outputSha256": "b602370e61cdbf728b9fb9d508a29f671a2c96f58572088ed64882ad023d005c",
       "edits": [
         {
           "start": 50,
@@ -1023018,6 +1023652,13 @@
           "symbol": "M:asa.a(Lgda;I)V",
           "original": "a",
           "renamed": "copyStateFrom"
+        },
+        {
+          "start": 3065,
+          "end": 3066,
+          "symbol": "M:asa.a(FIFF)V",
+          "original": "a",
+          "renamed": "translate"
         },
         {
           "start": 3117,
@@ -1045487,7 +1046128,7 @@
       "original": "gh.java",
       "renamed": "gh.java",
       "inputSha256": "81c2b213c67d8a678785b44e019a4b53ea6e6f02888f0d712e2c8e0e373a758b",
-      "outputSha256": "3efd1b621fcda84870938998b0d9febeee249ad01ade9f9e9822d07f950dfbed",
+      "outputSha256": "d926da76856c5131489b3d775c98952b476c8a72166de88b03672a1378fc746b",
       "edits": [
         {
           "start": 82,
@@ -1045600,6 +1046241,13 @@
           "symbol": "M:gh.b()I",
           "original": "b",
           "renamed": "paddedHeight"
+        },
+        {
+          "start": 2767,
+          "end": 2768,
+          "symbol": "M:asa.a(FIFF)V",
+          "original": "a",
+          "renamed": "translate"
         },
         {
           "start": 2833,
@@ -1104045,7 +1104693,7 @@
       "original": "jna.java",
       "renamed": "GameApplet.java",
       "inputSha256": "f748ae7b51f46ec3c85b102173baa34fc90ecfd0321134051736f2ddbbf6231a",
-      "outputSha256": "b15f5daf7b78e7583b7999ea85685878da8476f51c4808f9153aede304d3403a",
+      "outputSha256": "81bb01a37b47642f84bc8f9133592f03cc05aef919e49068f17065e41fc1d684",
       "edits": [
         {
           "start": 60,
@@ -1104741,6 +1105389,13 @@
           "renamed": "PlatformTaskDispatcher"
         },
         {
+          "start": 29873,
+          "end": 29874,
+          "symbol": "M:fia.a(Ljava/lang/Runnable;II)Lnaa;",
+          "original": "a",
+          "renamed": "startThread"
+        },
+        {
           "start": 29991,
           "end": 29994,
           "symbol": "C:vja",
@@ -1104893,7 +1105548,7 @@
       "original": "jo.java",
       "renamed": "ScrollControlWidget.java",
       "inputSha256": "50910a14a85fb295b9d683df5dbf4769b2dd5ea7e2112031571a8a4f313effbb",
-      "outputSha256": "dfaceae755b7e301879d62737d56e8eec6efd7eafedbdba20375862dd0c55073",
+      "outputSha256": "3629ddbee68295f4db402ab1befeb812d9181420932bd97c52c67301723d1d76",
       "edits": [
         {
           "start": 50,
@@ -1105589,6 +1106244,20 @@
           "renamed": "hasKeyboardFocus"
         },
         {
+          "start": 19280,
+          "end": 19281,
+          "symbol": "M:jo.c(I)I",
+          "original": "c",
+          "renamed": "getVerticalPageFraction"
+        },
+        {
+          "start": 19423,
+          "end": 19424,
+          "symbol": "M:jo.c(I)I",
+          "original": "c",
+          "renamed": "getVerticalPageFraction"
+        },
+        {
           "start": 19576,
           "end": 19578,
           "symbol": "C:oj",
@@ -1105720,6 +1106389,13 @@
           "symbol": "M:jo.g(B)V",
           "original": "g",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 24078,
+          "end": 24079,
+          "symbol": "M:jo.c(I)I",
+          "original": "c",
+          "renamed": "getVerticalPageFraction"
         },
         {
           "start": 24254,
@@ -1106182,7 +1106858,7 @@
       "original": "joa.java",
       "renamed": "joa.java",
       "inputSha256": "ba691bbb3b9a239b53f9c9f22f23a8e20648c1c9b7395d4f40b6e13bc896057a",
-      "outputSha256": "65bafe7c5f0fcde41da919e6b052b306bf63479537822fce12374df3eef1989b",
+      "outputSha256": "9c3f2f2509faf6ffd07a33cd15b4b99d5a1ca339e98d8f25108b44ffdafb0487",
       "edits": [
         {
           "start": 228,
@@ -1106330,6 +1107006,13 @@
           "symbol": "C:kqa",
           "original": "kqa",
           "renamed": "RaceStandings"
+        },
+        {
+          "start": 5141,
+          "end": 5142,
+          "symbol": "M:fia.a(ILjava/lang/String;I)Lnaa;",
+          "original": "a",
+          "renamed": "requestSocket"
         },
         {
           "start": 5151,
@@ -1107327,7 +1108010,7 @@
       "original": "jqa.java",
       "renamed": "BufferedSocket.java",
       "inputSha256": "ccad26b577ed2d8013ad1b5b2047055fe460027fc39d097ef9f7e64db5a967b1",
-      "outputSha256": "80eecce1943ac6383380f1631132d05f3e81e3bcb14e927afa0e9915a116514f",
+      "outputSha256": "c749fbbfa636bc0df0c38bdef1b5677a040fc295f65a727910a0c9d65df44f1f",
       "edits": [
         {
           "start": 89,
@@ -1107349,6 +1108032,13 @@
           "symbol": "C:naa",
           "original": "naa",
           "renamed": "AsyncRequest"
+        },
+        {
+          "start": 1879,
+          "end": 1880,
+          "symbol": "M:fia.a(Ljava/lang/Runnable;II)Lnaa;",
+          "original": "a",
+          "renamed": "startThread"
         },
         {
           "start": 2940,
@@ -1117176,7 +1117866,7 @@
       "original": "kha.java",
       "renamed": "kha.java",
       "inputSha256": "e0c272c2e72ec77bc47af3d32d5704e114fb03977af4f05b6ae514b925950a13",
-      "outputSha256": "bba3e2fb3269e311836d97760e12e4e65a27e47efbb2f88d4a1e85a4c55d7b50",
+      "outputSha256": "655262869295820ff143e78ff71a40e7fba61a2d9410a4ce2d86180a17a3356e",
       "edits": [
         {
           "start": 151,
@@ -1117240,6 +1117930,13 @@
           "symbol": "M:af.a(ILfia;)[Ldh;",
           "original": "a",
           "renamed": "queryDisplayModes"
+        },
+        {
+          "start": 3021,
+          "end": 3022,
+          "symbol": "M:fia.a(IIIBI)Lnaa;",
+          "original": "a",
+          "renamed": "requestEnterFullscreen"
         },
         {
           "start": 3118,
@@ -1123598,7 +1124295,7 @@
       "original": "kq.java",
       "renamed": "kq.java",
       "inputSha256": "7a3e284e99f23a41d49f7d4ee97a481ae6d4883457242e40e90d0c65abc261b8",
-      "outputSha256": "7eeaa21c74e3213871ac12811e80fd3caf49283565d221656b7530d7e03f1885",
+      "outputSha256": "5313817c6613885376a37f0bc4de819af29f137ef40f4f071d3187cabb1c6bcd",
       "edits": [
         {
           "start": 146,
@@ -1123734,6 +1124431,13 @@
           "renamed": "resolveReflectionType"
         },
         {
+          "start": 4239,
+          "end": 4240,
+          "symbol": "M:fia.a(I[Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Lnaa;",
+          "original": "a",
+          "renamed": "requestDeclaredMethod"
+        },
+        {
           "start": 4261,
           "end": 4263,
           "symbol": "C:sg",
@@ -1123767,6 +1124471,13 @@
           "symbol": "M:uia.e(I)I",
           "original": "e",
           "renamed": "readInt"
+        },
+        {
+          "start": 4825,
+          "end": 4826,
+          "symbol": "M:fia.a(ILjava/lang/String;Ljava/lang/Class;)Lnaa;",
+          "original": "a",
+          "renamed": "requestDeclaredField"
         },
         {
           "start": 4841,
@@ -1125737,7 +1126448,7 @@
       "original": "kta.java",
       "renamed": "AudioOutput.java",
       "inputSha256": "01c7906e61c0d045d1ca62436b33b54e30592869418a5fbcc59368e8656e3112",
-      "outputSha256": "d8a153f469678770fa49ad92834edb142667c9c81c989ef3eb3415df6c75c694",
+      "outputSha256": "c019c01a637a7d7248381e5b0bc68e633ffaddf3cc7ee1679facec807c26961d",
       "edits": [
         {
           "start": 44,
@@ -1126090,6 +1126801,13 @@
           "symbol": "C:kta",
           "original": "kta",
           "renamed": "AudioOutput"
+        },
+        {
+          "start": 6201,
+          "end": 6202,
+          "symbol": "M:fia.a(Ljava/lang/Runnable;II)Lnaa;",
+          "original": "a",
+          "renamed": "startThread"
         },
         {
           "start": 6474,
@@ -1128860,7 +1129578,7 @@
       "original": "l.java",
       "renamed": "MidiPcmStream.java",
       "inputSha256": "e56f649f2603989f3ec8b95daa188951258795ab268f822dd99ab4e664b32f84",
-      "outputSha256": "f4db5a4bb5ab5502f1bf15422c37ae39c9476395cf8a3ff7c08d3c8cbca73ea7",
+      "outputSha256": "ff2ccb38d3e305bd33b2783b8b64145d95c36cc280940b0b73605f22064aeb6b",
       "edits": [
         {
           "start": 44,
@@ -1128910,6 +1129628,13 @@
           "symbol": "M:l.b(ILrta;)I",
           "original": "b",
           "renamed": "voicePan"
+        },
+        {
+          "start": 2572,
+          "end": 2573,
+          "symbol": "M:maa.g()Z",
+          "original": "g",
+          "renamed": "isReady"
         },
         {
           "start": 2606,
@@ -1129537,6 +1130262,13 @@
           "renamed": "fill"
         },
         {
+          "start": 24625,
+          "end": 24626,
+          "symbol": "M:maa.g()Z",
+          "original": "g",
+          "renamed": "isReady"
+        },
+        {
           "start": 24693,
           "end": 24696,
           "symbol": "C:kta",
@@ -1129556,6 +1130288,13 @@
           "symbol": "M:l.d(I)V",
           "original": "d",
           "renamed": "advanceMidiEvents"
+        },
+        {
+          "start": 25337,
+          "end": 25338,
+          "symbol": "M:maa.g()Z",
+          "original": "g",
+          "renamed": "isReady"
         },
         {
           "start": 25483,
@@ -1129593,6 +1130332,13 @@
           "renamed": "AudioOutput"
         },
         {
+          "start": 26973,
+          "end": 26974,
+          "symbol": "M:qia.m()Z",
+          "original": "m",
+          "renamed": "isRamping"
+        },
+        {
           "start": 27238,
           "end": 27239,
           "symbol": "M:vg.p(I)V",
@@ -1129614,6 +1130360,13 @@
           "renamed": "skip"
         },
         {
+          "start": 27816,
+          "end": 27817,
+          "symbol": "M:maa.g()Z",
+          "original": "g",
+          "renamed": "isReady"
+        },
+        {
           "start": 27878,
           "end": 27881,
           "symbol": "C:kta",
@@ -1129633,6 +1130386,13 @@
           "symbol": "M:l.d(I)V",
           "original": "d",
           "renamed": "advanceMidiEvents"
+        },
+        {
+          "start": 28426,
+          "end": 28427,
+          "symbol": "M:maa.g()Z",
+          "original": "g",
+          "renamed": "isReady"
         },
         {
           "start": 28587,
@@ -1129780,6 +1130540,13 @@
           "symbol": "M:qia.b([III)V",
           "original": "b",
           "renamed": "fill"
+        },
+        {
+          "start": 38371,
+          "end": 38372,
+          "symbol": "M:qia.m()Z",
+          "original": "m",
+          "renamed": "isRamping"
         },
         {
           "start": 38533,
@@ -1129948,6 +1130715,34 @@
           "kind": "label"
         },
         {
+          "start": 45150,
+          "end": 45151,
+          "symbol": "M:maa.e(I)V",
+          "original": "e",
+          "renamed": "seekTrack"
+        },
+        {
+          "start": 45197,
+          "end": 45198,
+          "symbol": "M:maa.b(I)I",
+          "original": "b",
+          "renamed": "readMessage"
+        },
+        {
+          "start": 45364,
+          "end": 45365,
+          "symbol": "M:maa.e()V",
+          "original": "e",
+          "renamed": "markTrackDone"
+        },
+        {
+          "start": 45402,
+          "end": 45403,
+          "symbol": "M:maa.f(I)V",
+          "original": "f",
+          "renamed": "saveTrackPosition"
+        },
+        {
           "start": 45449,
           "end": 45450,
           "symbol": "M:maa.d()Z",
@@ -1129992,6 +1130787,13 @@
           "renamed": "resetSynthesizer"
         },
         {
+          "start": 45995,
+          "end": 45996,
+          "symbol": "M:maa.a()V",
+          "original": "a",
+          "renamed": "release"
+        },
+        {
           "start": 46181,
           "end": 46182,
           "symbol": "M:maa.c(I)V",
@@ -1129999,11 +1130801,32 @@
           "renamed": "readDelta"
         },
         {
+          "start": 46221,
+          "end": 46222,
+          "symbol": "M:maa.f(I)V",
+          "original": "f",
+          "renamed": "saveTrackPosition"
+        },
+        {
           "start": 46349,
           "end": 46350,
           "symbol": "M:maa.f()I",
           "original": "f",
           "renamed": "nextTrack"
+        },
+        {
+          "start": 46437,
+          "end": 46438,
+          "symbol": "M:maa.d(I)J",
+          "original": "d",
+          "renamed": "tickTime"
+        },
+        {
+          "start": 46904,
+          "end": 46905,
+          "symbol": "M:maa.d(I)J",
+          "original": "d",
+          "renamed": "tickTime"
         },
         {
           "start": 46991,
@@ -1130034,6 +1130857,13 @@
           "renamed": "parse"
         },
         {
+          "start": 47860,
+          "end": 47861,
+          "symbol": "M:maa.c()I",
+          "original": "c",
+          "renamed": "trackCount"
+        },
+        {
           "start": 47978,
           "end": 47979,
           "symbol": "M:maa.f()I",
@@ -1130041,11 +1130871,32 @@
           "renamed": "nextTrack"
         },
         {
+          "start": 48108,
+          "end": 48109,
+          "symbol": "M:maa.e(I)V",
+          "original": "e",
+          "renamed": "seekTrack"
+        },
+        {
           "start": 48142,
           "end": 48143,
           "symbol": "M:maa.c(I)V",
           "original": "c",
           "renamed": "readDelta"
+        },
+        {
+          "start": 48176,
+          "end": 48177,
+          "symbol": "M:maa.f(I)V",
+          "original": "f",
+          "renamed": "saveTrackPosition"
+        },
+        {
+          "start": 48336,
+          "end": 48337,
+          "symbol": "M:maa.d(I)J",
+          "original": "d",
+          "renamed": "tickTime"
         },
         {
           "start": 49259,
@@ -1130200,6 +1131051,13 @@
           "symbol": "M:vna.b(BLvg;)V",
           "original": "b",
           "renamed": "addLast"
+        },
+        {
+          "start": 52560,
+          "end": 52561,
+          "symbol": "M:maa.a()V",
+          "original": "a",
+          "renamed": "release"
         },
         {
           "start": 52671,
@@ -1149488,7 +1150346,7 @@
       "original": "maa.java",
       "renamed": "MidiFileReader.java",
       "inputSha256": "d4657bbe50a2847339759211061e1b10737cb4c3feebfa1a32ce000428981eca",
-      "outputSha256": "ec0690079daf176e81f31e1157384f9618b64590195c30661f370e3f5f6b6737",
+      "outputSha256": "ed5b5e10677120c9dd64b7182559a9e3f3b911968d3c62f9b49674fc56c0ac5b",
       "edits": [
         {
           "start": 50,
@@ -1149512,11 +1150370,25 @@
           "renamed": "isDone"
         },
         {
+          "start": 548,
+          "end": 549,
+          "symbol": "M:maa.b(I)I",
+          "original": "b",
+          "renamed": "readMessage"
+        },
+        {
           "start": 588,
           "end": 589,
           "symbol": "M:maa.a(I)I",
           "original": "a",
           "renamed": "readNextMessage"
+        },
+        {
+          "start": 642,
+          "end": 643,
+          "symbol": "M:maa.e()V",
+          "original": "e",
+          "renamed": "markTrackDone"
         },
         {
           "start": 669,
@@ -1149594,6 +1150466,13 @@
           "symbol": "F:uia.field_h:I",
           "original": "field_h",
           "renamed": "position"
+        },
+        {
+          "start": 1668,
+          "end": 1669,
+          "symbol": "M:maa.c()I",
+          "original": "c",
+          "renamed": "trackCount"
         },
         {
           "start": 1732,
@@ -1149792,6 +1150671,20 @@
           "renamed": "readUnsignedByte"
         },
         {
+          "start": 4135,
+          "end": 4136,
+          "symbol": "M:maa.d(I)J",
+          "original": "d",
+          "renamed": "tickTime"
+        },
+        {
+          "start": 4238,
+          "end": 4239,
+          "symbol": "M:maa.a()V",
+          "original": "a",
+          "renamed": "release"
+        },
+        {
           "start": 4265,
           "end": 4272,
           "symbol": "F:uia.field_g:[B",
@@ -1149806,6 +1150699,13 @@
           "renamed": "nextTrack"
         },
         {
+          "start": 4842,
+          "end": 4843,
+          "symbol": "M:maa.g()Z",
+          "original": "g",
+          "renamed": "isReady"
+        },
+        {
           "start": 4876,
           "end": 4883,
           "symbol": "F:uia.field_g:[B",
@@ -1149813,11 +1150713,25 @@
           "renamed": "payload"
         },
         {
+          "start": 4915,
+          "end": 4916,
+          "symbol": "M:maa.e(I)V",
+          "original": "e",
+          "renamed": "seekTrack"
+        },
+        {
           "start": 4952,
           "end": 4959,
           "symbol": "F:uia.field_h:I",
           "original": "field_h",
           "renamed": "position"
+        },
+        {
+          "start": 5006,
+          "end": 5007,
+          "symbol": "M:maa.f(I)V",
+          "original": "f",
+          "renamed": "saveTrackPosition"
         },
         {
           "start": 5066,
@@ -1221427,7 +1222341,7 @@
       "original": "qda.java",
       "renamed": "ArchiveNetworkClient.java",
       "inputSha256": "2d203ffb179ba0ba01ce78f91a5c51891fe5a047bfb09cdbbde2a63117d37a28",
-      "outputSha256": "a93deb2a2f4fcaabbbbae6e10ea5085b0c35e36fe8eb5a56fd6794fa74690d7e",
+      "outputSha256": "6e9080b0edc6afc4f1f16b00571f89bd1df2eeff7f1049123a4699dbb3db8701",
       "edits": [
         {
           "start": 92,
@@ -1221582,6 +1222496,13 @@
           "symbol": "C:bga",
           "original": "bga",
           "renamed": "S2CProfileUpdatePacket"
+        },
+        {
+          "start": 2708,
+          "end": 2709,
+          "symbol": "M:fia.a(ILjava/lang/String;I)Lnaa;",
+          "original": "a",
+          "renamed": "requestSocket"
         },
         {
           "start": 2718,
@@ -1228059,7 +1228980,7 @@
       "original": "qia.java",
       "renamed": "PcmSampleStream.java",
       "inputSha256": "272564df7ebc4e166809b0961ff078a002ad6c336e25dc74c3c503596310b1dd",
-      "outputSha256": "6d844dd31d49edc366213bb5b6923661667eb2fe9739460abceea8a6128776fa",
+      "outputSha256": "fcc05d40403a74798263f19fd1b03eb3b0cd461a8ae495f76e74145413c7646c",
       "edits": [
         {
           "start": 50,
@@ -1228165,6 +1229086,13 @@
           "symbol": "C:qia",
           "original": "qia",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 13842,
+          "end": 13843,
+          "symbol": "M:qia.l()I",
+          "original": "l",
+          "renamed": "getVolume"
         },
         {
           "start": 13946,
@@ -1228279,6 +1229207,13 @@
           "renamed": "unlink"
         },
         {
+          "start": 20561,
+          "end": 20562,
+          "symbol": "M:qia.j()I",
+          "original": "j",
+          "renamed": "getStepMagnitude"
+        },
+        {
           "start": 20667,
           "end": 20668,
           "symbol": "M:qia.a(I[B[IIIIIIIIIILqia;)I",
@@ -1228319,6 +1229254,13 @@
           "symbol": "C:qia",
           "original": "qia",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 28267,
+          "end": 28268,
+          "symbol": "M:qia.f()I",
+          "original": "f",
+          "renamed": "getPan"
         },
         {
           "start": 28361,
@@ -1228741,6 +1229683,13 @@
           "renamed": "PcmSampleStream"
         },
         {
+          "start": 43295,
+          "end": 43296,
+          "symbol": "M:qia.f()I",
+          "original": "f",
+          "renamed": "getPan"
+        },
+        {
           "start": 43337,
           "end": 43338,
           "symbol": "M:qia.b([B[IIIIIIIILqia;)I",
@@ -1229049,11 +1229998,25 @@
           "renamed": "unlink"
         },
         {
+          "start": 60429,
+          "end": 60430,
+          "symbol": "M:qia.m()Z",
+          "original": "m",
+          "renamed": "isRamping"
+        },
+        {
           "start": 60545,
           "end": 60546,
           "symbol": "M:qia.a(III)V",
           "original": "a",
           "renamed": "rampVolume"
+        },
+        {
+          "start": 60568,
+          "end": 60569,
+          "symbol": "M:qia.f()I",
+          "original": "f",
+          "renamed": "getPan"
         },
         {
           "start": 60598,
@@ -1239480,7 +1240443,7 @@
       "original": "qua.java",
       "renamed": "MusicTrack.java",
       "inputSha256": "111845265860dae141de0edbf2210e061100a2ce796b3867789336a31740e0f6",
-      "outputSha256": "9a0a1aedd880c7e292a21773f0e7d9fac7824947a31a4ef43ef338f1290afe6d",
+      "outputSha256": "cb15065b77a43b82ce1ef1ef2dfdb3d1930406fcd67af025fd16d701a8ccb322",
       "edits": [
         {
           "start": 50,
@@ -1239532,6 +1240495,20 @@
           "renamed": "MidiFileReader"
         },
         {
+          "start": 1032,
+          "end": 1033,
+          "symbol": "M:maa.c()I",
+          "original": "c",
+          "renamed": "trackCount"
+        },
+        {
+          "start": 1098,
+          "end": 1099,
+          "symbol": "M:maa.e(I)V",
+          "original": "e",
+          "renamed": "seekTrack"
+        },
+        {
           "start": 1122,
           "end": 1123,
           "symbol": "M:maa.c(I)V",
@@ -1239539,11 +1240516,46 @@
           "renamed": "readDelta"
         },
         {
+          "start": 1146,
+          "end": 1147,
+          "symbol": "M:maa.f(I)V",
+          "original": "f",
+          "renamed": "saveTrackPosition"
+        },
+        {
           "start": 1219,
           "end": 1220,
           "symbol": "M:maa.f()I",
           "original": "f",
           "renamed": "nextTrack"
+        },
+        {
+          "start": 1402,
+          "end": 1403,
+          "symbol": "M:maa.e(I)V",
+          "original": "e",
+          "renamed": "seekTrack"
+        },
+        {
+          "start": 1444,
+          "end": 1445,
+          "symbol": "M:maa.b(I)I",
+          "original": "b",
+          "renamed": "readMessage"
+        },
+        {
+          "start": 1510,
+          "end": 1511,
+          "symbol": "M:maa.e()V",
+          "original": "e",
+          "renamed": "markTrackDone"
+        },
+        {
+          "start": 1534,
+          "end": 1535,
+          "symbol": "M:maa.f(I)V",
+          "original": "f",
+          "renamed": "saveTrackPosition"
         },
         {
           "start": 1575,
@@ -1239572,6 +1240584,13 @@
           "symbol": "M:maa.c(I)V",
           "original": "c",
           "renamed": "readDelta"
+        },
+        {
+          "start": 2963,
+          "end": 2964,
+          "symbol": "M:maa.f(I)V",
+          "original": "f",
+          "renamed": "saveTrackPosition"
         },
         {
           "start": 3025,
@@ -1269807,7 +1270826,7 @@
       "original": "sma.java",
       "renamed": "ScoreStandings.java",
       "inputSha256": "9a28dd300203772020ca089445f79d751caf4f98dfa6c8e9d0e4a3e2537b7326",
-      "outputSha256": "06c76c2ca0dfbc8836647fe5365dc6a81067361ecf548dd3d26d219e267674aa",
+      "outputSha256": "c92743367a044fd9a685ed6518c9815e740e5331a2d53e38ece0c11fecb56703",
       "edits": [
         {
           "start": 69,
@@ -1269983,6 +1271002,13 @@
           "symbol": "M:cn.a(Ljava/lang/String;BLjava/lang/String;)[B",
           "original": "a",
           "renamed": "getFileByName"
+        },
+        {
+          "start": 4042,
+          "end": 4043,
+          "symbol": "M:fia.a([BLjava/io/File;Z)Z",
+          "original": "a",
+          "renamed": "writeFileBytes"
         },
         {
           "start": 4364,
@@ -1273738,7 +1274764,7 @@
       "original": "ss.java",
       "renamed": "DiskCacheWorker.java",
       "inputSha256": "fd081ca6fea415114de72535ed1e44cf969af555159df08ff5098d359f61e39f",
-      "outputSha256": "fc221dbf825ff9529a46a94c38dde023be8492c31d580dfa0412f7b8cce9af89",
+      "outputSha256": "0cb2fda5357509693f4801adb8e3edbc718a513f87af228b66a2dd315b7837e7",
       "edits": [
         {
           "start": 50,
@@ -1274049,6 +1275075,13 @@
           "renamed": "AsyncRequest"
         },
         {
+          "start": 9867,
+          "end": 9868,
+          "symbol": "M:fia.a(Ljava/lang/Runnable;II)Lnaa;",
+          "original": "a",
+          "renamed": "startThread"
+        },
+        {
           "start": 9947,
           "end": 9950,
           "symbol": "C:vja",
@@ -1274068,7 +1275101,7 @@
       "original": "ssa.java",
       "renamed": "ssa.java",
       "inputSha256": "50f7f67e6b6bac648ad700db89a03f893123eb5203a1ae5a42f9d626e13214eb",
-      "outputSha256": "d628e9e84000ef9a917cca6f8aaaeee9096a604d7f62b4b18136c2cccca25e63",
+      "outputSha256": "0420b396b762bd90a55451b5142538ff955897075fef8bd1b7e31777f0a99bf1",
       "edits": [
         {
           "start": 139,
@@ -1274167,6 +1275200,13 @@
           "symbol": "C:fia",
           "original": "fia",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 2317,
+          "end": 2318,
+          "symbol": "M:fia.a(Ljava/net/URL;I)Lnaa;",
+          "original": "a",
+          "renamed": "requestUrlStream"
         },
         {
           "start": 2433,
@@ -1276980,7 +1278020,7 @@
       "original": "sw.java",
       "renamed": "sw.java",
       "inputSha256": "24fe04bfcbcbec9735ea9ead5910a0d54b6030a3a36382920ee30da4dca4c192",
-      "outputSha256": "d4db41b6e3cf8cb8d8b3361e50860b2026db21a99843069f390398dcc45748ae",
+      "outputSha256": "f218cf3ee34467124265f1055a0e9afa1bdfb8340d534c73249f25701064aa70",
       "edits": [
         {
           "start": 213,
@@ -1277193,6 +1278233,13 @@
           "renamed": "PlatformTaskDispatcher"
         },
         {
+          "start": 13896,
+          "end": 13897,
+          "symbol": "M:fia.b(I)Lnaa;",
+          "original": "b",
+          "renamed": "requestClipboardContents"
+        },
+        {
           "start": 14285,
           "end": 14286,
           "symbol": "M:sw.f(B)Ljava/lang/String;",
@@ -1277205,6 +1278252,13 @@
           "symbol": "M:sw.f(B)Ljava/lang/String;",
           "original": "f",
           "renamed": "getSelectedText"
+        },
+        {
+          "start": 14591,
+          "end": 14592,
+          "symbol": "M:fia.a(BLjava/awt/datatransfer/Transferable;)Lnaa;",
+          "original": "a",
+          "renamed": "requestSetClipboard"
         },
         {
           "start": 15103,
@@ -1310487,7 +1311541,7 @@
       "original": "v.java",
       "renamed": "MatchProtocol.java",
       "inputSha256": "1a18d4454b3e798711ab90a8a3a31dc818cfb6aef5dcb2eac401cef7528d5136",
-      "outputSha256": "08e7c12337b702e5b0e3d719d647b84b61ee9b8e4325633cf34eeff6bced7082",
+      "outputSha256": "0558126e35551c0e3db055a951d9663021773630567de57fdaa80e5287f90e81",
       "edits": [
         {
           "start": 50,
@@ -1310502,6 +1311556,13 @@
           "symbol": "C:vna",
           "original": "vna",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 257,
+          "end": 264,
+          "symbol": "F:v.field_h:Lvna;",
+          "original": "field_h",
+          "renamed": "unacknowledged"
         },
         {
           "start": 370,
@@ -1310644,6 +1311705,13 @@
           "renamed": "setCharacter"
         },
         {
+          "start": 1776,
+          "end": 1783,
+          "symbol": "F:v.field_h:Lvna;",
+          "original": "field_h",
+          "renamed": "unacknowledged"
+        },
+        {
           "start": 1784,
           "end": 1785,
           "symbol": "M:vna.d(I)V",
@@ -1310735,11 +1311803,25 @@
           "renamed": "decodePacket"
         },
         {
+          "start": 3407,
+          "end": 3414,
+          "symbol": "F:v.field_h:Lvna;",
+          "original": "field_h",
+          "renamed": "unacknowledged"
+        },
+        {
           "start": 3415,
           "end": 3416,
           "symbol": "M:vna.d(B)Z",
           "original": "d",
           "renamed": "isEmpty"
+        },
+        {
+          "start": 3450,
+          "end": 3457,
+          "symbol": "F:v.field_h:Lvna;",
+          "original": "field_h",
+          "renamed": "unacknowledged"
         },
         {
           "start": 3458,
@@ -1310882,6 +1311964,13 @@
           "renamed": "isSpectating"
         },
         {
+          "start": 6229,
+          "end": 6236,
+          "symbol": "F:v.field_h:Lvna;",
+          "original": "field_h",
+          "renamed": "unacknowledged"
+        },
+        {
           "start": 6237,
           "end": 6238,
           "symbol": "M:vna.a(B)I",
@@ -1310917,11 +1312006,25 @@
           "renamed": "getId"
         },
         {
+          "start": 7119,
+          "end": 7120,
+          "symbol": "M:v.d(I)Ltt;",
+          "original": "d",
+          "renamed": "pollReceivedAction"
+        },
+        {
           "start": 7192,
           "end": 7199,
           "symbol": "F:ff.field_H:[Lhca;",
           "original": "field_H",
           "renamed": "players"
+        },
+        {
+          "start": 7756,
+          "end": 7757,
+          "symbol": "M:v.d(I)Ltt;",
+          "original": "d",
+          "renamed": "pollReceivedAction"
         },
         {
           "start": 7806,
@@ -1311141,6 +1312244,13 @@
           "renamed": "S2CNewRoomPacket"
         },
         {
+          "start": 11316,
+          "end": 11323,
+          "symbol": "F:v.field_h:Lvna;",
+          "original": "field_h",
+          "renamed": "unacknowledged"
+        },
+        {
           "start": 11327,
           "end": 11330,
           "symbol": "C:vna",
@@ -1311169,11 +1312279,25 @@
           "renamed": "apply"
         },
         {
+          "start": 11712,
+          "end": 11713,
+          "symbol": "M:v.c(I)V",
+          "original": "c",
+          "renamed": "drawDebugInfo"
+        },
+        {
           "start": 11786,
           "end": 11788,
           "symbol": "C:ts",
           "original": "ts",
           "renamed": "RoomEffectTraps"
+        },
+        {
+          "start": 11828,
+          "end": 11835,
+          "symbol": "F:v.field_h:Lvna;",
+          "original": "field_h",
+          "renamed": "unacknowledged"
         },
         {
           "start": 11836,
@@ -1311372,6 +1312496,13 @@
           "renamed": "players"
         },
         {
+          "start": 15461,
+          "end": 15468,
+          "symbol": "F:v.field_h:Lvna;",
+          "original": "field_h",
+          "renamed": "unacknowledged"
+        },
+        {
           "start": 15472,
           "end": 15475,
           "symbol": "C:vna",
@@ -1311447,6 +1312578,13 @@
           "symbol": "C:tt",
           "original": "tt",
           "renamed": "S2CActionPacket"
+        },
+        {
+          "start": 16529,
+          "end": 16530,
+          "symbol": "M:v.d(I)Ltt;",
+          "original": "d",
+          "renamed": "pollReceivedAction"
         },
         {
           "start": 16592,
@@ -1311610,6 +1312748,13 @@
           "renamed": "getEvent"
         },
         {
+          "start": 19836,
+          "end": 19843,
+          "symbol": "F:v.field_h:Lvna;",
+          "original": "field_h",
+          "renamed": "unacknowledged"
+        },
+        {
           "start": 19844,
           "end": 19845,
           "symbol": "M:vna.d(I)V",
@@ -1311771,6 +1312916,13 @@
           "renamed": "setRound"
         },
         {
+          "start": 22900,
+          "end": 22907,
+          "symbol": "F:v.field_h:Lvna;",
+          "original": "field_h",
+          "renamed": "unacknowledged"
+        },
+        {
           "start": 22908,
           "end": 22909,
           "symbol": "M:vna.b(BLvg;)V",
@@ -1311783,6 +1312935,13 @@
           "symbol": "M:v.<init>(II)V",
           "original": "v",
           "renamed": "MatchProtocol"
+        },
+        {
+          "start": 23326,
+          "end": 23333,
+          "symbol": "F:v.field_h:Lvna;",
+          "original": "field_h",
+          "renamed": "unacknowledged"
         },
         {
           "start": 23340,
@@ -1311855,7 +1313014,7 @@
       "original": "vb.java",
       "renamed": "vb.java",
       "inputSha256": "faa4460d336f5e8cf84df875bd7f5505a71508a3a1ba80ef4eb06caca307cc60",
-      "outputSha256": "512f0ffb07baec407d257dd3f6cff820e3ced0ef4339b1bc23b818e9f4b2f8c0",
+      "outputSha256": "607365378cc42b692185edf907e0ebe6badb14ccca25b0ab66508bc748941a74",
       "edits": [
         {
           "start": 61,
@@ -1312192,6 +1313351,13 @@
           "symbol": "C:vg",
           "original": "vg",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 8157,
+          "end": 8158,
+          "symbol": "M:qia.l()I",
+          "original": "l",
+          "renamed": "getVolume"
         },
         {
           "start": 8226,
@@ -1314898,7 +1316064,7 @@
       "original": "vf.java",
       "renamed": "RenderLayer.java",
       "inputSha256": "79a6019955899bdefd272485e7c044bc14cb84958839875cf63a158e33be6d7a",
-      "outputSha256": "4116d9c1c853cbf6982018fc7e8c66a14b5411713d31b4cfadfffb793717ba68",
+      "outputSha256": "8a3152c5a5f8b53b19b82abb2202b6b97d4828f294ec43a53974d1de39f6457a",
       "edits": [
         {
           "start": 71,
@@ -1314962,6 +1316128,13 @@
           "symbol": "C:naa",
           "original": "naa",
           "renamed": "AsyncRequest"
+        },
+        {
+          "start": 1046,
+          "end": 1047,
+          "symbol": "M:fia.a(Ljava/awt/Frame;I)Lnaa;",
+          "original": "a",
+          "renamed": "requestExitFullscreen"
         },
         {
           "start": 1118,
@@ -1344599,10 +1345772,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/tombracer"
     },
-    "rulesSha256": "ee7bcce772aaf7e6a526885190507a4a876f88d8a17934ae6da21cc68a978d37",
+    "rulesSha256": "795d407decc94c8bb2b752c718777466204d0c1b5fbf13c6e310942b0f3ec891",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "145b13bc847895948659831ff292c85bf8487ab5cdb2b9615b317b54baf77e7d",
-    "outputTreeSha256": "da2db1621475ad8c3798c7eb071797cb718e19e7ec9a4937a743fcb64e9bc96c",
+    "outputTreeSha256": "2b06e80962d1bbf648d98cacaa11e9c76d6ffc9f5518867dc8c40fcabbaa4771",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

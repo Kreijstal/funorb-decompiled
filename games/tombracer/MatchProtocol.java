@@ -9,7 +9,7 @@ final class MatchProtocol {
     static String field_j;
     private int field_e;
     private int field_d;
-    private IntrusiveDeque field_h;
+    private IntrusiveDeque unacknowledged;
     private boolean field_f;
     private int[] field_b;
     private vi field_c;
@@ -54,7 +54,7 @@ final class MatchProtocol {
         if (!param0) {
           this.a((byte) -48);
         }
-        this.field_h.clear(8);
+        this.unacknowledged.clear(8);
         this.field_c.a(0);
         this.field_f = false;
     }
@@ -109,8 +109,8 @@ final class MatchProtocol {
         }
         try {
           if (var4 != 0) {
-            if (!this.field_h.isEmpty((byte) 14)) {
-              this.field_h.removeFirst(34);
+            if (!this.unacknowledged.isEmpty((byte) 14)) {
+              this.unacknowledged.removeFirst(34);
               var5 = 0;
             }
             if (var5 == 0) {
@@ -191,7 +191,7 @@ final class MatchProtocol {
             return;
           }
           if (!param0.isSpectating((byte) 94)) {
-            var4_int = this.field_h.size((byte) -16);
+            var4_int = this.unacknowledged.size((byte) -16);
             stackIn_7_1 = !(var4_int < 15);
             this.field_f = stackIn_7_1;
             while (var4_int < 15) {
@@ -214,7 +214,7 @@ final class MatchProtocol {
               var4_int++;
             }
           }
-          var4 = this.d(-16);
+          var4 = this.pollReceivedAction(-16);
           while (var4 != null) {
             for (var5 = 0; var8.players.length > var5; var5++) {
               if (this.field_d != var5 &&
@@ -231,7 +231,7 @@ final class MatchProtocol {
                 }
               }
             }
-            var4 = this.d(param1 - 17);
+            var4 = this.pollReceivedAction(param1 - 17);
           }
           if (!param0.isSpectating((byte) 106)) {
             if (var8.simulations[this.field_d].isFinished(param1 - 1)) {
@@ -324,7 +324,7 @@ final class MatchProtocol {
         S2CNewRoomPacket var4 = null;
         try {
           if (!param0) {
-            this.field_h = (IntrusiveDeque) null;
+            this.unacknowledged = (IntrusiveDeque) null;
           }
           var4 = new S2CNewRoomPacket();
           this.decodePacket(var4, -53, param1);
@@ -334,10 +334,10 @@ final class MatchProtocol {
         }
     }
 
-    final void c(int param0) {
+    final void drawDebugInfo(int param0) {
         int var2 = 32;
         int var2Lifetime1;
-        RoomEffectTraps.a(0, -121, var2 + 10, "unack: " + this.field_h.size((byte) -16), 16, kn.field_p, 16777215);
+        RoomEffectTraps.a(0, -121, var2 + 10, "unack: " + this.unacknowledged.size((byte) -16), 16, kn.field_p, 16777215);
         var2Lifetime1 = 48;
         RoomEffectTraps.a(0, -122, 10 + var2Lifetime1, "received: " + this.field_c.a((byte) 107), param0, kn.field_p, 16777215);
     }
@@ -442,7 +442,7 @@ final class MatchProtocol {
         try {
           var4 = new S2CPlayerSyncPacket(param0.matchState.players.length);
           if (param2) {
-            this.field_h = (IntrusiveDeque) null;
+            this.unacknowledged = (IntrusiveDeque) null;
           }
           this.decodePacket(var4, 117, param1);
           var4.apply(param0, this, (byte) 119);
@@ -470,7 +470,7 @@ final class MatchProtocol {
         return this.field_b[param0] == 0 ? true : false;
     }
 
-    private final S2CActionPacket d(int param0) {
+    private final S2CActionPacket pollReceivedAction(int param0) {
         if (param0 != -16) {
           return (S2CActionPacket) null;
         }
@@ -545,7 +545,7 @@ final class MatchProtocol {
     }
 
     final void f(int param0) {
-        this.field_h.clear(8);
+        this.unacknowledged.clear(8);
         this.field_a.c(param0 - 134);
         this.field_b[this.field_d] = 0;
         if (param0 != 10) {
@@ -641,7 +641,7 @@ final class MatchProtocol {
         var6.setHash(-2767, param4);
         var6.b(8469, param3);
         var6.setRound(param1, (byte) -113);
-        this.field_h.addLast((byte) -104, var6);
+        this.unacknowledged.addLast((byte) -104, var6);
         hw.a((byte) -111, 0, 71, var6);
     }
 
@@ -658,7 +658,7 @@ final class MatchProtocol {
 
     MatchProtocol(int param0, int param1) {
         this.field_a = new bka();
-        this.field_h = new IntrusiveDeque();
+        this.unacknowledged = new IntrusiveDeque();
         this.field_d = param0;
         this.field_e = param1;
         this.field_c = new vi();

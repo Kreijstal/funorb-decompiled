@@ -129,7 +129,7 @@ final class joa {
           int stackIn_10_0 = 0;
           Throwable decompiledCaughtException = null;
           if (Room.field_R == null) {
-            Room.field_R = RaceStandings.field_a.a(-24818, ConstrainToLatticeLocomotor.field_x, nn.field_b);
+            Room.field_R = RaceStandings.field_a.requestSocket(-24818, ConstrainToLatticeLocomotor.field_x, nn.field_b);
           }
           var2 = -67 % ((param1 - 67) / 35);
           if (0 == Room.field_R.field_b) {

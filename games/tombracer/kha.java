@@ -98,7 +98,7 @@ final class kha {
               return (java.awt.Frame) (stackIn_27_0);
             }
           }
-          var11 = param0.a(param4, param1, param2, (byte) 66, param5);
+          var11 = param0.requestEnterFullscreen(param4, param1, param2, (byte) 66, param5);
           while (var11.field_b == 0) {
             TrapSpawner.sleepMillis(0, 10L);
           }

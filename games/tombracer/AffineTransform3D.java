@@ -16,7 +16,7 @@ final class AffineTransform3D extends Transform3D {
     float field_f;
     float field_m;
 
-    final void b(int param0, int param1) {
+    final void setRotationX(int param0, int param1) {
         this.field_g = 1.0f;
         float dupTemp$0 = BufferedCacheFile.field_c[16383 & param1];
         this.field_h = dupTemp$0;
@@ -88,7 +88,7 @@ final class AffineTransform3D extends Transform3D {
         if (param2 <= -40) {
           return param0 * this.field_h + (this.field_p * param1 + this.field_o * param3) + this.field_i;
         }
-        this.a(0.7830915451049805f, 11, -1.1317301988601685f, 0.6542510986328125f);
+        this.translate(0.7830915451049805f, 11, -1.1317301988601685f, 0.6542510986328125f);
         return param0 * this.field_h + (this.field_p * param1 + this.field_o * param3) + this.field_i;
     }
 
@@ -295,7 +295,7 @@ final class AffineTransform3D extends Transform3D {
         this.field_i = -(var3 * var7) + var2 * this.field_i;
     }
 
-    final void a(float param0, int param1, float param2, float param3) {
+    final void translate(float param0, int param1, float param2, float param3) {
         this.field_i = this.field_i + param3;
         this.field_n = this.field_n + param0;
         this.field_e = this.field_e + param2;
@@ -775,7 +775,7 @@ final class AffineTransform3D extends Transform3D {
         }
     }
 
-    final void a(boolean param0, int param1, int param2, int param3) {
+    final void setTranslation(boolean param0, int param1, int param2, int param3) {
         this.field_n = (float)param2;
         this.field_p = 0.0f;
         this.field_o = 0.0f;

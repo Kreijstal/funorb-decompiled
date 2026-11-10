@@ -362,7 +362,7 @@ final class PcmSampleStream extends PcmStream {
         this.n();
     }
 
-    final synchronized int l() {
+    final synchronized int getVolume() {
         return this.field_q == -2147483648 ? 0 : this.field_q;
     }
 
@@ -584,7 +584,7 @@ final class PcmSampleStream extends PcmStream {
         return false;
     }
 
-    final synchronized int j() {
+    final synchronized int getStepMagnitude() {
         return this.field_p < 0 ? -this.field_p : this.field_p;
     }
 
@@ -772,7 +772,7 @@ final class PcmSampleStream extends PcmStream {
         return param5;
     }
 
-    final synchronized int f() {
+    final synchronized int getPan() {
         return this.field_o < 0 ? -1 : this.field_o;
     }
 
@@ -1144,7 +1144,7 @@ final class PcmSampleStream extends PcmStream {
     }
 
     final synchronized void e(int param0) {
-        this.a(param0, this.f());
+        this.a(param0, this.getPan());
     }
 
     private final static int mixForwardMonoAlignedRamp(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, PcmSampleStream param9) {
@@ -1646,12 +1646,12 @@ final class PcmSampleStream extends PcmStream {
         return;
     }
 
-    final synchronized boolean m() {
+    final synchronized boolean isRamping() {
         return this.field_x != 0;
     }
 
     final synchronized void b(int param0, int param1) {
-        this.rampVolume(param0, param1, this.f());
+        this.rampVolume(param0, param1, this.getPan());
     }
 
     final static PcmSampleStream create(u param0, int param1, int param2, int param3) {

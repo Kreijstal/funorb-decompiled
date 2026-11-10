@@ -45,7 +45,7 @@ final class UrlDownloadRequest implements Runnable {
         }
         if (this.field_f == 0) {
           if (this.field_c == null) {
-            this.field_c = this.field_g.a(this.field_b, 74);
+            this.field_c = this.field_g.requestUrlStream(this.field_b, 74);
           }
           if (this.field_c.field_b == 0) {
             return false;
@@ -58,7 +58,7 @@ final class UrlDownloadRequest implements Runnable {
         }
         if (this.field_f == 1) {
           if (null == this.field_e) {
-            this.field_e = this.field_g.a(-24818, this.field_b.getHost(), 443);
+            this.field_e = this.field_g.requestSocket(-24818, this.field_b.getHost(), 443);
           }
           if (this.field_e.field_b == 0) {
             return false;
@@ -71,7 +71,7 @@ final class UrlDownloadRequest implements Runnable {
         }
         if (this.field_a != null) {
           if (null == this.field_d) {
-            this.field_d = this.field_g.a((Runnable) (this), 425, 5);
+            this.field_d = this.field_g.startThread((Runnable) (this), 425, 5);
           }
           if (param0) {
             this.field_a = (DataInputStream) null;
@@ -106,7 +106,7 @@ final class UrlDownloadRequest implements Runnable {
           this.finalize();
           this.field_f = this.field_f + 1;
           if (null == this.field_d) {
-            this.field_d = this.field_g.a((Runnable) (this), 425, 5);
+            this.field_d = this.field_g.startThread((Runnable) (this), 425, 5);
           }
           if (!param0) {
             if (this.field_d.field_b == 0) {
@@ -129,7 +129,7 @@ final class UrlDownloadRequest implements Runnable {
           return false;
         }
         if (null == this.field_d) {
-          this.field_d = this.field_g.a((Runnable) (this), 425, 5);
+          this.field_d = this.field_g.startThread((Runnable) (this), 425, 5);
         }
         if (param0) {
           this.field_a = (DataInputStream) null;

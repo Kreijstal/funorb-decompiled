@@ -99,7 +99,7 @@ abstract class ArchiveNetworkClient {
           }
           try {
             if (ColourKeyOperator.field_m == 0) {
-              S2CProfileUpdatePacket.field_c = oi.field_a.a(-24818, TileGridCell.field_a, du.field_d);
+              S2CProfileUpdatePacket.field_c = oi.field_a.requestSocket(-24818, TileGridCell.field_a, du.field_d);
               ColourKeyOperator.field_m = ColourKeyOperator.field_m + 1;
             }
             if (ColourKeyOperator.field_m == 1) {

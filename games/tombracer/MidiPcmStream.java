@@ -80,7 +80,7 @@ class MidiPcmStream extends PcmStream {
         if (param0 > -70) {
           this.a((byte) -3, 35, 27);
         }
-        return this.field_w.g();
+        return this.field_w.isReady();
     }
 
     private final int voiceVolume(rta param0, int param1) {
@@ -659,7 +659,7 @@ class MidiPcmStream extends PcmStream {
         int var8 = 0;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
-          if (this.field_w.g()) {
+          if (this.field_w.isReady()) {
             var4_int = this.field_w.field_e * this.field_H / AudioOutput.field_d;
             while (true) {
               var5 = (long)var4_int * (long)param2 + this.field_E;
@@ -675,7 +675,7 @@ class MidiPcmStream extends PcmStream {
               param2 = param2 - var7;
               this.advanceMidiEvents(125);
               param1 = param1 + var7;
-              if (!this.field_w.g()) {
+              if (!this.field_w.isReady()) {
                 break;
               }
               if (var8 == 0) {
@@ -722,7 +722,7 @@ class MidiPcmStream extends PcmStream {
               param1 == var3.field_k) {
               if (null != var3.field_x) {
                 var3.field_x.fadeOut(AudioOutput.field_d / 100);
-                if (var3.field_x.m()) {
+                if (var3.field_x.isRamping()) {
                   this.field_v.field_m.a(var3.field_x);
                 }
                 var3.a(5806);
@@ -753,7 +753,7 @@ class MidiPcmStream extends PcmStream {
         int var6;
         boolean decompiledFrameCompleted0 = true;
         var6 = TombRacer.field_G ? 1 : 0;
-        if (this.field_w.g()) {
+        if (this.field_w.isReady()) {
           var2 = this.field_H * this.field_w.field_e / AudioOutput.field_d;
           while (true) {
             var3 = this.field_E + (long)var2 * (long)param0;
@@ -768,7 +768,7 @@ class MidiPcmStream extends PcmStream {
             param0 = param0 - var5;
             this.field_v.skip(var5);
             this.advanceMidiEvents(124);
-            if (!this.field_w.g() &&
+            if (!this.field_w.isReady() &&
               var6 == 0) {
               break;
             }
@@ -1040,7 +1040,7 @@ class MidiPcmStream extends PcmStream {
           } else {
             param0.field_x.fill(param1, param2, param4);
           }
-          if (param0.field_x.m()) {
+          if (param0.field_x.isRamping()) {
             this.field_v.field_m.a(param0.field_x);
           }
           param0.a(param3 ^ 5800);
@@ -1242,13 +1242,13 @@ class MidiPcmStream extends PcmStream {
                   break regionExit1;
                 }
                 if (stackIn_30_0 == stackIn_30_1) {
-                  this.field_w.e(var2);
-                  var6 = this.field_w.b(var2);
+                  this.field_w.seekTrack(var2);
+                  var6 = this.field_w.readMessage(var2);
                   stackIn_7_0 = var6;
                   stackIn_7_1 = 1;
                   if (stackIn_7_0 == stackIn_7_1) {
-                    this.field_w.e();
-                    this.field_w.f(var2);
+                    this.field_w.markTrackDone();
+                    this.field_w.saveTrackPosition(var2);
                     if (!this.field_w.isDone() &&
                       var7 == 0) {
                       break scanLoop2;
@@ -1264,21 +1264,21 @@ class MidiPcmStream extends PcmStream {
                       break scanLoop2;
                     }
                     this.resetSynthesizer(true, -127);
-                    this.field_w.a();
+                    this.field_w.release();
                     return;
                   }
                   if (0 != (var6 & 128)) {
                     this.c(var6, 128);
                   }
                   this.field_w.readDelta(var2);
-                  this.field_w.f(var2);
+                  this.field_w.saveTrackPosition(var2);
                   continue;
                 }
                 break;
               }
               var2 = this.field_w.nextTrack();
               var3 = this.field_w.field_a[var2];
-              var4 = this.field_w.d(var3);
+              var4 = this.field_w.tickTime(var3);
               continue;
             }
             this.field_p = var3;
@@ -1293,7 +1293,7 @@ class MidiPcmStream extends PcmStream {
           if (stackIn_30_0 > stackIn_30_1) {
             this.field_j = -1;
             this.field_p = this.field_C;
-            this.field_B = this.field_w.d(this.field_p);
+            this.field_B = this.field_w.tickTime(this.field_p);
           }
           return;
         }
@@ -1326,7 +1326,7 @@ class MidiPcmStream extends PcmStream {
           this.field_E = 0L;
           stackIn_4_1 = (param0);
           this.field_t = stackIn_4_1;
-          var5_int = this.field_w.c();
+          var5_int = this.field_w.trackCount();
           var6 = 0;
           do {
             if (var5_int <= var6) {
@@ -1334,15 +1334,15 @@ class MidiPcmStream extends PcmStream {
               this.field_p = this.field_w.field_a[this.field_j];
               break;
             }
-            this.field_w.e(var6);
+            this.field_w.seekTrack(var6);
             this.field_w.readDelta(var6);
-            this.field_w.f(var6);
+            this.field_w.saveTrackPosition(var6);
             var6++;
           } while (var7 == 0);
           if (param2 != 40) {
             return;
           }
-          this.field_B = this.field_w.d(this.field_p);
+          this.field_B = this.field_w.tickTime(this.field_p);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1456,7 +1456,7 @@ class MidiPcmStream extends PcmStream {
     }
 
     private final synchronized void a(int param0, boolean param1) {
-        this.field_w.a();
+        this.field_w.release();
         if (param0 != -191040664) {
           return;
         }

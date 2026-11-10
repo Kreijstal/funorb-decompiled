@@ -216,7 +216,7 @@ final class vb extends IntrusiveNode {
     vb(PcmSampleStream param0, IntrusiveNode param1) {
         try {
           this.field_f = param0;
-          this.field_g = param0.l();
+          this.field_g = param0.getVolume();
           this.field_h = param1;
           this.field_f.e(128 + HardwareRidgedWaterNoise.field_v * this.field_g >> 8);
         } catch (RuntimeException runtimeException) {

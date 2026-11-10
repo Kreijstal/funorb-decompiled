@@ -29,11 +29,11 @@ final class PlatformTaskDispatcher implements Runnable {
     private AsyncRequest field_k;
     private static String field_a;
 
-    final AsyncRequest a(java.net.URL param0, int param1) {
+    final AsyncRequest requestUrlStream(java.net.URL param0, int param1) {
         if (param1 < 69) {
           return (AsyncRequest) null;
         }
-        return this.a(0, 0, (byte) 104, param0, 4);
+        return this.enqueueTask(0, 0, (byte) 104, param0, 4);
     }
 
     public final void run() {
@@ -286,35 +286,35 @@ final class PlatformTaskDispatcher implements Runnable {
         }
     }
 
-    final AsyncRequest a(int param0, String param1, int param2) {
+    final AsyncRequest requestSocket(int param0, String param1, int param2) {
         if (param0 != -24818) {
           java.awt.datatransfer.Transferable var5 = (java.awt.datatransfer.Transferable) null;
-          this.a((byte) 92, (java.awt.datatransfer.Transferable) null);
+          this.requestSetClipboard((byte) 92, (java.awt.datatransfer.Transferable) null);
         }
-        return this.a(param0 + 24819, param1, false, param2);
+        return this.requestSocketInternal(param0 + 24819, param1, false, param2);
     }
 
-    final AsyncRequest a(int param0, String param1, Class param2) {
+    final AsyncRequest requestDeclaredField(int param0, String param1, Class param2) {
         if (param0 != 10355) {
           String var5 = (String) null;
           PlatformTaskDispatcher.openPreferencesFile(-73, 85, (String) null, (String) null);
         }
-        return this.a(0, 0, (byte) 104, new Object[]{param2, param1}, 9);
+        return this.enqueueTask(0, 0, (byte) 104, new Object[]{param2, param1}, 9);
     }
 
-    private final AsyncRequest a(int param0, String param1, boolean param2, int param3) {
+    private final AsyncRequest requestSocketInternal(int param0, String param1, boolean param2, int param3) {
         if (param0 != 1) {
           String var6 = (String) null;
           PlatformTaskDispatcher.openPreferencesFile(-120, 43, (String) null, (String) null);
         }
-        return this.a(param3, 0, (byte) 104, param1, param2 ? 22 : 1);
+        return this.enqueueTask(param3, 0, (byte) 104, param1, param2 ? 22 : 1);
     }
 
-    final AsyncRequest a(int param0, Class[] param1, String param2, Class param3) {
+    final AsyncRequest requestDeclaredMethod(int param0, Class[] param1, String param2, Class param3) {
         if (param0 != 26868) {
           this.field_i = (Object) null;
         }
-        return this.a(0, 0, (byte) 104, new Object[]{param3, param2, param1}, 8);
+        return this.enqueueTask(0, 0, (byte) 104, new Object[]{param3, param2, param1}, 8);
     }
 
     final boolean isFullscreenAvailable(byte param0) {
@@ -346,7 +346,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           if (param0 != 59) {
             var4 = (java.awt.Frame) null;
-            this.a((java.awt.Frame) null, 58);
+            this.requestExitFullscreen((java.awt.Frame) null, 58);
           }
           try {
             this.field_m.join();
@@ -442,21 +442,21 @@ final class PlatformTaskDispatcher implements Runnable {
         }
     }
 
-    final AsyncRequest a(int param0) {
+    final AsyncRequest requestDisplayModes(int param0) {
         if (param0 > -87) {
           return (AsyncRequest) null;
         }
-        return this.a(0, 0, (byte) 104, (Object) null, 5);
+        return this.enqueueTask(0, 0, (byte) 104, (Object) null, 5);
     }
 
-    final AsyncRequest a(java.awt.Frame param0, int param1) {
+    final AsyncRequest requestExitFullscreen(java.awt.Frame param0, int param1) {
         if (param1 != 18885) {
           return (AsyncRequest) null;
         }
-        return this.a(0, 0, (byte) 104, param0, 7);
+        return this.enqueueTask(0, 0, (byte) 104, param0, 7);
     }
 
-    private final AsyncRequest a(int param0, int param1, byte param2, Object param3, int param4) {
+    private final AsyncRequest enqueueTask(int param0, int param1, byte param2, Object param3, int param4) {
         AsyncRequest var6 = null;
         Throwable decompiledCaughtException = null;
         Object var7 = null;
@@ -482,21 +482,21 @@ final class PlatformTaskDispatcher implements Runnable {
         return var6;
     }
 
-    final AsyncRequest a(int param0, int param1, int param2, byte param3, int param4) {
+    final AsyncRequest requestEnterFullscreen(int param0, int param1, int param2, byte param3, int param4) {
         if (param3 != 66) {
           return (AsyncRequest) null;
         }
-        return this.a(param2 + (param4 << 16), param1 + (param0 << 16), (byte) 104, (Object) null, 6);
+        return this.enqueueTask(param2 + (param4 << 16), param1 + (param0 << 16), (byte) 104, (Object) null, 6);
     }
 
-    final AsyncRequest a(Runnable param0, int param1, int param2) {
+    final AsyncRequest startThread(Runnable param0, int param1, int param2) {
         if (param1 != 425) {
           this.field_h = (RandomAccessFileHandle[]) null;
         }
-        return this.a(param2, 0, (byte) 104, param0, 2);
+        return this.enqueueTask(param2, 0, (byte) 104, param0, 2);
     }
 
-    final boolean a(byte[] param0, File param1, boolean param2) {
+    final boolean writeFileBytes(byte[] param0, File param1, boolean param2) {
         FileOutputStream var4 = null;
         IOException var4_ref = null;
         Throwable decompiledCaughtException = null;
@@ -515,18 +515,18 @@ final class PlatformTaskDispatcher implements Runnable {
         }
     }
 
-    final AsyncRequest a(byte param0, java.awt.datatransfer.Transferable param1) {
+    final AsyncRequest requestSetClipboard(byte param0, java.awt.datatransfer.Transferable param1) {
         if (param0 <= 56) {
-          this.a(96);
+          this.requestDisplayModes(96);
         }
-        return this.a(0, 0, (byte) 104, param1, 19);
+        return this.enqueueTask(0, 0, (byte) 104, param1, 19);
     }
 
-    final AsyncRequest b(int param0) {
+    final AsyncRequest requestClipboardContents(int param0) {
         if (param0 <= 104) {
           return (AsyncRequest) null;
         }
-        return this.a(0, 0, (byte) 104, (Object) null, 18);
+        return this.enqueueTask(0, 0, (byte) 104, (Object) null, 18);
     }
 
     PlatformTaskDispatcher(int param0, String param1, int param2, boolean param3) throws Exception {

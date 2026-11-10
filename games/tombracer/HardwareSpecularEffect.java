@@ -171,7 +171,7 @@ final class HardwareSpecularEffect extends ShaderEffect {
           this.owner.e(1, false);
           this.owner.applyTexCoordGeneration(IdolItemComponent.field_H, (byte) 0);
           var4 = this.owner.C(0);
-          var4.b(-94, 1024);
+          var4.setRotationX(-94, 1024);
           this.owner.a(cva.field_b, false);
           if (!this.field_d) {
             this.owner.setTextureCombineOperations(iw.field_c, (byte) -110, PlatformComponent.field_F);

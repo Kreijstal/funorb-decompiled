@@ -126,7 +126,7 @@ final class ScoreStandings {
             }
             try {
               if (var6 == 0) {
-                hna.field_a.a(var15, var11, true);
+                hna.field_a.writeFileBytes(var15, var11, true);
               }
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;

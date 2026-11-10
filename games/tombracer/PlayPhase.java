@@ -207,7 +207,7 @@ final class PlayPhase extends MatchPhase {
             S2CNextRoundPacket.a(4, kn.field_p, "Debug", 565, 0, 48, 16777215);
             S2CNextRoundPacket.a(4, kn.field_p, "FPS: " + RenderableNode.field_f, 565, 0, 64, 16777215);
             if (this.screen.field_D) {
-              this.protocol.c(16);
+              this.protocol.drawDebugInfo(16);
             }
             if (var3 >= 0 &&
               this.screen.f(-12963, var3)) {

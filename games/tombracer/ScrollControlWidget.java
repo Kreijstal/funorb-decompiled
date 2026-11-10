@@ -492,11 +492,11 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
               return true;
             }
             if (104 == param2) {
-              this.a(this.field_O - this.c(1553449360), (byte) -99);
+              this.a(this.field_O - this.getVerticalPageFraction(1553449360), (byte) -99);
               return true;
             }
             if (105 == param2) {
-              this.a(this.field_O + this.c(1553449360), (byte) -127);
+              this.a(this.field_O + this.getVerticalPageFraction(1553449360), (byte) -127);
               return true;
             }
             if (102 == param2) {
@@ -628,7 +628,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
         }
     }
 
-    private final int c(int param0) {
+    private final int getVerticalPageFraction(int param0) {
         if (param0 != 1553449360) {
           return 79;
         }

@@ -273,7 +273,7 @@ final class DiskCacheWorker implements Runnable {
         this.field_b = 0;
         this.field_e = false;
         try {
-          var2 = param0.a((Runnable) (this), 425, 5);
+          var2 = param0.startThread((Runnable) (this), 425, 5);
           while (var2.field_b == 0) {
             TrapSpawner.sleepMillis(0, 10L);
           }

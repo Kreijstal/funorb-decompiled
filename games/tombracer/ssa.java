@@ -69,7 +69,7 @@ final class ssa {
               stackIn_17_2 = null;
               stackIn_17_5 = "" + ic.field_b;
             }
-            var4 = ((PlatformTaskDispatcher) (Object) stackIn_16_0).a(new java.net.URL(stackIn_16_3, ((StringBuilder) (Object) stackIn_16_4).append(stackIn_17_5).append("&v1=").append(PlatformTaskDispatcher.field_e).append("&v2=").append(PlatformTaskDispatcher.field_v).append("&e=").append(var10).toString()), 122);
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_16_0).requestUrlStream(new java.net.URL(stackIn_16_3, ((StringBuilder) (Object) stackIn_16_4).append(stackIn_17_5).append("&v1=").append(PlatformTaskDispatcher.field_e).append("&v2=").append(PlatformTaskDispatcher.field_v).append("&e=").append(var10).toString()), 122);
             while (var4.field_b == 0) {
               TrapSpawner.sleepMillis(0, 1L);
             }

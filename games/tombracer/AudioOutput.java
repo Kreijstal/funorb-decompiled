@@ -191,7 +191,7 @@ class AudioOutput {
                 field_p == null) {
                 field_p = new ch();
                 field_p.field_d = param0;
-                param0.a((Runnable) ((Object) field_p), 425, field_q);
+                param0.startThread((Runnable) ((Object) field_p), 425, field_q);
               }
               if (field_p != null) {
                 if (field_p.field_c[param2] != null) {

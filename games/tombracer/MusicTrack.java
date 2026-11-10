@@ -45,11 +45,11 @@ final class MusicTrack extends IntrusiveNode {
         var19[9] = 128;
         var23[9] = 128;
         var4 = new MidiFileReader(this.field_g);
-        var5 = var4.c();
+        var5 = var4.trackCount();
         for (var6 = 0; var6 < var5; var6++) {
-          var4.e(var6);
+          var4.seekTrack(var6);
           var4.readDelta(var6);
-          var4.f(var6);
+          var4.saveTrackPosition(var6);
         }
         while (true) {
           var6Lifetime1 = var4.nextTrack();
@@ -58,11 +58,11 @@ final class MusicTrack extends IntrusiveNode {
             if (var4.field_a[var6Lifetime1] != var7) {
               break;
             }
-            var4.e(var6Lifetime1);
-            var8 = var4.b(var6Lifetime1);
+            var4.seekTrack(var6Lifetime1);
+            var8 = var4.readMessage(var6Lifetime1);
             if (var8 == 1) {
-              var4.e();
-              var4.f(var6Lifetime1);
+              var4.markTrackDone();
+              var4.saveTrackPosition(var6Lifetime1);
               if (var4.isDone()) {
                 return;
               }
@@ -101,7 +101,7 @@ final class MusicTrack extends IntrusiveNode {
               }
             }
             var4.readDelta(var6Lifetime1);
-            var4.f(var6Lifetime1);
+            var4.saveTrackPosition(var6Lifetime1);
           }
         }
     }

@@ -36,7 +36,7 @@ final class RenderLayer {
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           while (true) {
-            var3 = param1.a(param2, 18885);
+            var3 = param1.requestExitFullscreen(param2, 18885);
             while (0 == var3.field_b) {
               TrapSpawner.sleepMillis(0, 10L);
             }

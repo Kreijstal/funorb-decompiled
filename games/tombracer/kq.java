@@ -124,7 +124,7 @@ final class kq {
                       var12[var17] = SafeZoneBehaviour.resolveReflectionType(var10[var17], 1);
                       var17++;
                     }
-                    var18.field_k[var5] = param1.a(26868, var12, var8, SafeZoneBehaviour.resolveReflectionType(var20, 1));
+                    var18.field_k[var5] = param1.requestDeclaredMethod(26868, var12, var8, SafeZoneBehaviour.resolveReflectionType(var20, 1));
                     var18.field_g[var5] = var21;
                   }
                 } else {
@@ -138,7 +138,7 @@ final class kq {
                   }
                   var18.field_i[var5] = var6_int;
                   var18.field_h[var5] = var9;
-                  var18.field_j[var5] = param1.a(10355, var15, SafeZoneBehaviour.resolveReflectionType(var16, 1));
+                  var18.field_j[var5] = param1.requestDeclaredField(10355, var15, SafeZoneBehaviour.resolveReflectionType(var16, 1));
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

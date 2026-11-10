@@ -284,7 +284,7 @@ final class ca extends GameFont {
           this.field_g.g(3625, param3);
         }
         var6 = this.field_g.y((byte) -77);
-        var6.a(false, param1, param2, 0);
+        var6.setTranslation(false, param1, param2, 0);
         this.field_g.F(-1662);
         this.field_g.a(-128, 0, this.field_d);
         this.field_g.bindVertexLayout(this.field_g.field_Db, -32);

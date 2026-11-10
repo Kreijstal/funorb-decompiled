@@ -35,7 +35,7 @@ final class SecondaryNodeHashTable {
             stackIn_3_0 = new dh[]{};
             return stackIn_3_0;
           }
-          var9 = param1.a(-111);
+          var9 = param1.requestDisplayModes(-111);
           while (var9.field_b == 0) {
             TrapSpawner.sleepMillis(0, 10L);
           }

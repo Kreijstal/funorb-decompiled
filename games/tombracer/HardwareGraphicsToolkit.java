@@ -506,7 +506,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
         if (S2CRewardChoicePacket.field_d == this.field_r) {
           var2 = this.c((byte) -61);
-          this.field_q.a(var2, param0 ^ -128, var2, 0.0f);
+          this.field_q.translate(var2, param0 ^ -128, var2, 0.0f);
         }
         this.field_p = false;
         this.z((byte) -73);
@@ -1683,7 +1683,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.a(0, false, pea.field_c);
         this.setBlendMode(param5, 1);
         this.field_q.a(1.0f, (float)(param2 - 1), false, (float)(param3 - 1));
-        this.field_q.a(-var7 + (float)param1, -39, (float)param0 - var7, 0.0f);
+        this.field_q.translate(-var7 + (float)param1, -39, (float)param0 - var7, 0.0f);
         this.F(-1662);
         this.b(1, false);
         this.a(di.field_d, (byte) -32, 4);

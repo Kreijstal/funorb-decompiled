@@ -378,7 +378,7 @@ final class sw extends jea {
           return;
         }
         try {
-          this.field_Db = this.field_Bb.b(param0 + 25);
+          this.field_Db = this.field_Bb.requestClipboardContents(param0 + 25);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sw.D(" + param0 + ')');
         }
@@ -399,7 +399,7 @@ final class sw extends jea {
             if (param0 != 82) {
               this.field_wb = (StringBuilder) null;
             }
-            this.field_Bb.a((byte) 84, (java.awt.datatransfer.Transferable) ((Object) var3));
+            this.field_Bb.requestSetClipboard((byte) 84, (java.awt.datatransfer.Transferable) ((Object) var3));
           } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) ((Object) runtimeException), "sw.OA(" + param0 + ')');
           }
