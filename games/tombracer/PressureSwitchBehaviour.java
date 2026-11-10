@@ -39,7 +39,7 @@ final class PressureSwitchBehaviour extends Behaviour implements ut {
         }
         var2 = 0;
         var3 = this.b(true).field_u;
-        var4 = var3.a((byte) -26, this.field_g);
+        var4 = var3.a((byte) -26, this.trap);
         for (var5 = 0; var5 < var4.length; var5++) {
           if (this.a(var4[var5], (byte) -103)) {
             var2 = var2 + var4[var5].b(75);
@@ -147,15 +147,15 @@ final class PressureSwitchBehaviour extends Behaviour implements ut {
           if (param1 > -73) {
             this.k(15);
           }
-          if (this.field_g == param0) {
+          if (this.trap == param0) {
             return false;
           }
           if (!this.field_q) {
-            if (!io.a(this.field_g.getWidth(-73), param0.getY(9648), (byte) -89, this.field_g.getHeight((byte) 55), param0.getX(3), this.field_g.getY(9648), param0.getHeight((byte) 55), param0.getWidth(-43), this.field_g.getX(3))) {
+            if (!io.a(this.trap.getWidth(-73), param0.getY(9648), (byte) -89, this.trap.getHeight((byte) 55), param0.getX(3), this.trap.getY(9648), param0.getHeight((byte) 55), param0.getWidth(-43), this.trap.getX(3))) {
               return false;
             }
           } else {
-            if (!ck.a(param0.getX(3), param0.getHeight((byte) 55), this.field_g.getX(3), this.field_g.getWidth(-113), this.field_g.getHeight((byte) 55), param0.getY(9648), (byte) 67, this.field_g.getY(9648), param0.getWidth(-51))) {
+            if (!ck.a(param0.getX(3), param0.getHeight((byte) 55), this.trap.getX(3), this.trap.getWidth(-113), this.trap.getHeight((byte) 55), param0.getY(9648), (byte) 67, this.trap.getY(9648), param0.getWidth(-51))) {
               return false;
             }
           }

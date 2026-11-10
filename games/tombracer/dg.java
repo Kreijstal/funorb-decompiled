@@ -3,14 +3,14 @@
  */
 abstract class dg extends IntrusiveNode implements Renderable, noa {
     private int field_l;
-    gr field_k;
+    TrapPart field_k;
     private int field_i;
     int field_g;
     private boolean field_j;
     WorldBody field_h;
     private int field_f;
 
-    void a(WorldBody param0, int param1, gr param2) {
+    void a(WorldBody param0, int param1, TrapPart param2) {
         try {
           if (param1 != -2159) {
             this.h(80);
@@ -156,7 +156,7 @@ abstract class dg extends IntrusiveNode implements Renderable, noa {
           }
           var4 = 0;
           if (var4 == 0) {
-            stackIn_16_0 = (this.field_h.h(param0 + 31070)) ? 1 : 0;
+            stackIn_16_0 = (this.field_h.isExpired(param0 + 31070)) ? 1 : 0;
           } else {
             stackIn_16_0 = 1;
           }
@@ -204,7 +204,7 @@ abstract class dg extends IntrusiveNode implements Renderable, noa {
           if (var4Lifetime1 != 0) {
             stackIn_64_0 = 1;
           } else {
-            stackIn_64_0 = (this.field_h.h(param0 + 31070)) ? 1 : 0;
+            stackIn_64_0 = (this.field_h.isExpired(param0 + 31070)) ? 1 : 0;
           }
           var5Lifetime1 = stackIn_64_0;
           if (this.field_k != null) {
@@ -251,7 +251,7 @@ abstract class dg extends IntrusiveNode implements Renderable, noa {
         if (var4Lifetime2 != 0) {
           stackIn_218_0 = 1;
         } else {
-          if (this.field_h.h(param0 + 31070)) {
+          if (this.field_h.isExpired(param0 + 31070)) {
             var5Lifetime2 = 1;
             regionExit1: {
               if (this.field_k != null) {
@@ -538,7 +538,7 @@ abstract class dg extends IntrusiveNode implements Renderable, noa {
         }
     }
 
-    final gr c(int param0) {
+    final TrapPart c(int param0) {
         if (param0 > -73) {
           this.field_l = -95;
           return this.field_k;
@@ -567,7 +567,7 @@ abstract class dg extends IntrusiveNode implements Renderable, noa {
         return this.g((byte) -105);
     }
 
-    void a(gr param0, WorldBody param1, byte param2) {
+    void a(TrapPart param0, WorldBody param1, byte param2) {
         try {
           this.field_k = param0;
           if (param2 != 36) {
@@ -602,7 +602,7 @@ abstract class dg extends IntrusiveNode implements Renderable, noa {
             return true;
           }
           if (null != this.field_h &&
-            !this.field_h.h(18407)) {
+            !this.field_h.isExpired(18407)) {
             return false;
           }
           return true;
@@ -616,7 +616,7 @@ abstract class dg extends IntrusiveNode implements Renderable, noa {
         if (null == this.field_h) {
           return true;
         }
-        if (this.field_h.h(18407)) {
+        if (this.field_h.isExpired(18407)) {
           return true;
         }
         return false;
@@ -706,7 +706,7 @@ abstract class dg extends IntrusiveNode implements Renderable, noa {
 
     final WorldBody j(byte param0) {
         if (param0 != 16) {
-          this.field_k = (gr) null;
+          this.field_k = (TrapPart) null;
           return this.field_h;
         }
         return this.field_h;

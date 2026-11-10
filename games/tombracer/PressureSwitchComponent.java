@@ -182,7 +182,7 @@ final class PressureSwitchComponent extends SwitchComponent {
           var5 = new PressureSwitchBehaviour(param2, param0);
           var5.a(this.field_L, true);
           this.a(var5, (byte) -94);
-          var10.a((byte) 83, (Behaviour) (var5));
+          var10.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (cv) (var6.a(9, param1 ^ 113));
           if (param1 != 3) {

@@ -10,13 +10,13 @@ final class dj {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        hr var11 = null;
+        Particle var11 = null;
         int var12 = TombRacer.field_G ? 1 : 0;
         int var7 = 131072;
         for (var8 = param4; 1 > var8; var8++) {
           var9 = param2 / 8 + (-(var7 / 2) + this.a((byte) -33, var7));
           var10 = -(var7 / 2) + (this.a((byte) -33, var7) + param5 / 8);
-          var11 = this.field_c.a(param1, param0, (byte) 100, param3);
+          var11 = this.field_c.spawnParticle(param1, param0, (byte) 100, param3);
           var11.a(false, 32, 10, 16, 20 + this.a((byte) -33, 15));
           var11.a(var10, -var10 / 64, var9, -var9 / 64, 131072, -8192, (byte) -20);
           var11.a(this.a((byte) -33, 2048), this.a((byte) -33, 32) - 16, -77);
@@ -57,7 +57,7 @@ final class dj {
         int var14 = 0;
         int var17 = 0;
         int var18 = 0;
-        hr var15 = null;
+        Particle var15 = null;
         int var19 = TombRacer.field_G ? 1 : 0;
         if (param1 >= -63) {
           return;
@@ -68,7 +68,7 @@ final class dj {
           var14 = bua.a(0, var12 >> 2);
           var17 = gqa.a(var13, (byte) 24, param7);
           var18 = gqa.a(var14, (byte) 24, param7);
-          var15 = this.field_c.a(param8, param0, (byte) 100, param3);
+          var15 = this.field_c.spawnParticle(param8, param0, (byte) 100, param3);
           var15.a(false, param9, param2, param10, param6);
           var15.a(var18, -var18 / 32, var17, -var17 / 32, 0, 0, (byte) -20);
           var15.a(this.a((byte) -33, 2048), this.a((byte) -33, 128) - 64, -125);
@@ -94,7 +94,7 @@ final class dj {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        hr var15 = null;
+        Particle var15 = null;
         int var16 = 0;
         var16 = TombRacer.field_G ? 1 : 0;
         try {
@@ -125,7 +125,7 @@ final class dj {
           }
           var13 = param1.field_k;
           for (var14 = 0; var10 > var14; var14++) {
-            var15 = this.field_c.a(var12, var13, (byte) 100, param1.field_i);
+            var15 = this.field_c.spawnParticle(var12, var13, (byte) 100, param1.field_i);
             var15.a(false, 12, param1.field_j, 6, var11);
             var13 = var13 + var9;
             var12 = var12 + var8;
@@ -166,13 +166,13 @@ final class dj {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        hr var11 = null;
+        Particle var11 = null;
         int var12 = TombRacer.field_G ? 1 : 0;
         int var7 = 131072;
         for (var8 = param4; var8 < 5; var8++) {
           var9 = param3 / 8 - var7 / 2 + this.a((byte) -33, var7);
           var10 = param0 / 8 + (-(var7 / 2) + this.a((byte) -33, var7));
-          var11 = this.field_c.a(param5, param1, (byte) 100, param2);
+          var11 = this.field_c.spawnParticle(param5, param1, (byte) 100, param2);
           var11.a(false, 64, 11, 16, this.a((byte) -33, 15) + 20);
           var11.a(var10, -var10 / 64, var9, -var9 / 64, 0, 0, (byte) -20);
           var11.a(this.a((byte) -33, 2048), -8 + this.a((byte) -33, 16), -112);
@@ -183,13 +183,13 @@ final class dj {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        hr var9 = null;
+        Particle var9 = null;
         int var10 = TombRacer.field_G ? 1 : 0;
         int var5 = 262144;
         for (var6 = 0; var6 < 4 + uca.field_c.a(4, param2 ^ 46); var6++) {
           var7 = -(var5 / 2) + this.a((byte) -33, var5);
           var8 = this.a((byte) -33, var5) - var5 / 2;
-          var9 = this.field_c.a(param3, param0, (byte) 100, param1);
+          var9 = this.field_c.spawnParticle(param3, param0, (byte) 100, param1);
           var9.a(false, 16, 14, 16, 25 + uca.field_c.a(25, param2 ^ 46));
           var9.a(var8, -var8 / 64, var7, -var7 / 64, 131072 + uca.field_c.a(131072, 0), -8192, (byte) -20);
           var9.a(this.a((byte) -33, 2048), this.a((byte) -33, 32) - 16, -110);
@@ -202,7 +202,7 @@ final class dj {
     final void c(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var9 = 0;
         int var10 = 0;
-        hr var11 = null;
+        Particle var11 = null;
         int var12 = TombRacer.field_G ? 1 : 0;
         int var7 = 262144;
         int var8 = 0;
@@ -212,7 +212,7 @@ final class dj {
         while (var8 < 3) {
           var9 = -(var7 / 2) + this.a((byte) -33, var7) + param4;
           var10 = param2 - var7 / 2 + this.a((byte) -33, var7);
-          var11 = this.field_c.a(param0, param5, (byte) 100, param3);
+          var11 = this.field_c.spawnParticle(param0, param5, (byte) 100, param3);
           var11.a(false, 32, 2, 16, this.a((byte) -33, 4) + 8);
           var11.b(98, var10, var9);
           var11.a(this.a((byte) -33, 2048), -64 + this.a((byte) -33, 128), -113);
@@ -232,7 +232,7 @@ final class dj {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        hr var10 = null;
+        Particle var10 = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -246,7 +246,7 @@ final class dj {
           var7 = this.a((byte) -33, 8192);
           var8 = MouseInputHandler.a((byte) 102, var7 >> 2);
           var9 = bua.a(0, var7 >> 2);
-          var10 = this.field_c.a(param1, param0, (byte) 100, param2);
+          var10 = this.field_c.spawnParticle(param1, param0, (byte) 100, param2);
           var11 = var5 + this.a((byte) -33, var5);
           var12 = gqa.a(var8, (byte) 24, var11);
           var13 = gqa.a(var9, (byte) 24, var11);
@@ -261,7 +261,7 @@ final class dj {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        hr var10 = null;
+        Particle var10 = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -274,7 +274,7 @@ final class dj {
           var7 = this.a((byte) -33, 8192);
           var8 = MouseInputHandler.a((byte) 126, var7 >> 2);
           var9 = bua.a(0, var7 >> 2);
-          var10 = this.field_c.a(param2, param3, (byte) 100, param1);
+          var10 = this.field_c.spawnParticle(param2, param3, (byte) 100, param1);
           var11 = this.a((byte) -33, var5) + var5;
           var12 = gqa.a(var8, (byte) 24, var11);
           var13 = gqa.a(var9, (byte) 24, var11);
@@ -288,7 +288,7 @@ final class dj {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        hr var10 = null;
+        Particle var10 = null;
         int var11 = 0;
         int var12 = TombRacer.field_G ? 1 : 0;
         if (param0 < 47) {
@@ -298,7 +298,7 @@ final class dj {
           var7 = -256 + (this.a((byte) -33, 512) + param4);
           var8 = MouseInputHandler.a((byte) 124, var7 >> 2);
           var9 = bua.a(0, var7 >> 2);
-          var10 = this.field_c.a(param3, param2, (byte) 100, param1);
+          var10 = this.field_c.spawnParticle(param3, param2, (byte) 100, param1);
           var11 = 262144 + this.a((byte) -33, 262144);
           var10.a(false, 2, 4, 16, 10);
           var10.b(69, gqa.a(var9, (byte) 24, var11), gqa.a(var8, (byte) 24, var11));

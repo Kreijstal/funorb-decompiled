@@ -211,13 +211,13 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
           var4.a((byte) -3, 0);
           var4.b((byte) 17, true);
           var4.g(119, 2);
-          var4.a((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
+          var4.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = this.createPathMove((byte) -60, param2, param0);
-          var4.a(var5, 0);
+          var4.addLocomotor(var5, 0);
           var6 = rm.field_a;
           var7 = (nq) (var6.a(16, 78));
           var7.b(8022, 3);
-          var4.a((gr) null, (byte) 124, var7);
+          var4.a((TrapPart) null, (byte) 124, var7);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -131,7 +131,7 @@ final class PlatformComponent extends kna {
           var4.b((byte) -11, this.field_k, this.field_l);
           var5 = new PlatformBehaviour(param2, false);
           var5.b(-5, this.field_G);
-          var4.a((byte) 83, (Behaviour) (var5));
+          var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           if (param1 != 3) {
             this.t(49);

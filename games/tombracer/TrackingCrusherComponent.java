@@ -97,11 +97,11 @@ final class TrackingCrusherComponent extends kna {
           var5 = new ApproachPlayerLocomotor(param2, param0);
           var5.c(66, 0);
           var5.a(false, 262144);
-          var9.a(var5, param1 ^ 3);
+          var9.addLocomotor(var5, param1 ^ 3);
           var6 = new CrusherBehaviour(param2, param0);
           var6.a(25, 12, 1, 25, 12);
           var6.b((byte) 127, true);
-          var9.a((byte) 83, (Behaviour) (var6));
+          var9.addBehaviour((byte) 83, (Behaviour) (var6));
           var7 = rm.field_a;
           var8 = (dc) (var7.a(11, param1 ^ 116));
           var9.a(var6, (byte) 124, var8);

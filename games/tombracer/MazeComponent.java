@@ -99,7 +99,7 @@ abstract class MazeComponent extends kna {
           var5.a(this.a(false, param2, (byte) -114), 2);
           var5.b(true, this.A(-1));
           var5.a(false, this.B(123));
-          var6.a((byte) 83, (Behaviour) (var5));
+          var6.addBehaviour((byte) 83, (Behaviour) (var5));
           stackIn_4_0 = var6;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -211,12 +211,12 @@ abstract class MazeComponent extends kna {
             var11 = new MiscItemBehaviour(param1, param0);
             var11.a(0, false);
             var6 = var11;
-            var9.a((byte) 83, (Behaviour) (var11));
+            var9.addBehaviour((byte) 83, (Behaviour) (var11));
           } else {
             var10 = new MiscItemBehaviour(param1, param0);
             var10.a(1, false);
             var6 = var10;
-            var9.a((byte) 83, (Behaviour) (var10));
+            var9.addBehaviour((byte) 83, (Behaviour) (var10));
           }
           var12 = rm.field_a;
           var8 = var12.a(var6, var9, -102);

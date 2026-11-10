@@ -78,14 +78,14 @@ final class SimpleBlockBehaviour extends Behaviour {
         }
     }
 
-    final void a(boolean param0, Trap param1) {
+    final void attachToTrap(boolean param0, Trap param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          super.a(param0, param1);
+          super.attachToTrap(param0, param1);
           if (4 <= this.b(param0).formatVersion) {
             return;
           }
@@ -190,7 +190,7 @@ final class SimpleBlockBehaviour extends Behaviour {
     final int a(boolean param0) {
         if (param0) {
           Trap var3 = (Trap) null;
-          this.a(true, (Trap) null);
+          this.attachToTrap(true, (Trap) null);
           return 12;
         }
         return 12;
@@ -265,7 +265,7 @@ final class SimpleBlockBehaviour extends Behaviour {
           return;
         }
         if (this.d(8031)) {
-          this.m((byte) 19).a(2, (byte) -123, this.field_s);
+          this.getPlayer((byte) 19).a(2, (byte) -123, this.field_s);
           if (param0 == 5418) {
             return;
           }

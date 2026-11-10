@@ -473,7 +473,7 @@ final class oo extends dg {
         if (var3 == null) {
           return;
         }
-        var4 = var3.H(3);
+        var4 = var3.getPlayer(3);
         if (param0 != -1) {
           this.field_q = -26;
         }
@@ -555,7 +555,7 @@ final class oo extends dg {
         }
     }
 
-    final void a(gr param0, WorldBody param1, byte param2) {
+    final void a(TrapPart param0, WorldBody param1, byte param2) {
         try {
           super.a(param0, param1, param2);
           if (param0 instanceof SnakePitBehaviour) {

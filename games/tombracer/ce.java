@@ -93,7 +93,7 @@ final class ce extends dg {
         }
     }
 
-    final void a(gr param0, WorldBody param1, byte param2) {
+    final void a(TrapPart param0, WorldBody param1, byte param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -132,7 +132,7 @@ final class ce extends dg {
         }
     }
 
-    final void a(WorldBody param0, int param1, gr param2) {
+    final void a(WorldBody param0, int param1, TrapPart param2) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -472,7 +472,7 @@ final class ce extends dg {
             }
             stackIn_51_1 = (var3 != 0);
             this.field_p = stackIn_51_1;
-            var15 = var5_ref.field_B;
+            var15 = var5_ref.locomotors;
             var16 = new uja(var15);
             var17 = 0;
             var18_ref = (Locomotor) (var16.a(true));

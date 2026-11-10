@@ -98,7 +98,7 @@ final class boa extends dg {
         }
     }
 
-    final void a(WorldBody param0, int param1, gr param2) {
+    final void a(WorldBody param0, int param1, TrapPart param2) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -217,7 +217,7 @@ final class boa extends dg {
           }
         }
         if (11 == this.field_v) {
-          var12 = var3.field_u;
+          var12 = var3.behaviours;
           var13 = new uja(var12);
           var7_int = 0;
           var8_ref_nv = (Behaviour) (var13.a(true));
@@ -246,7 +246,7 @@ final class boa extends dg {
           }
         }
         if (16 == this.field_v) {
-          var14 = var3.field_u;
+          var14 = var3.behaviours;
           var15 = new uja(var14);
           var7 = (Behaviour) (var15.a(true));
           while (var7 != null) {
@@ -290,7 +290,7 @@ final class boa extends dg {
           }
         }
         if (this.field_v == 15) {
-          var16 = var3.field_u;
+          var16 = var3.behaviours;
           var17 = new uja(var16);
           var7 = (Behaviour) (var17.a(true));
           while (var7 != null) {
@@ -371,7 +371,7 @@ final class boa extends dg {
         this.field_p = 1;
     }
 
-    final void a(gr param0, WorldBody param1, byte param2) {
+    final void a(TrapPart param0, WorldBody param1, byte param2) {
         try {
           super.a(param0, param1, param2);
         } catch (RuntimeException runtimeException) {

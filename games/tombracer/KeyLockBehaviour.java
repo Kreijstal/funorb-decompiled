@@ -44,11 +44,11 @@ final class KeyLockBehaviour extends Behaviour implements ut {
             stackIn_19_1 = 1;
           }
           this.field_n = stackIn_19_1;
-          var3 = var8.getX(3) - this.field_g.getX(3);
-          var4 = var8.getY(param0 ^ 9650) - this.field_g.getY(9648);
+          var3 = var8.getX(3) - this.trap.getX(3);
+          var4 = var8.getY(param0 ^ 9650) - this.trap.getY(9648);
           var5 = 262144;
-          if (ua.a(var3, param0 ^ -122) <= this.field_g.getWidth(-120) / param0 + var8.getWidth(-59) / 2 + var5 &&
-            ua.a(var4, -121) <= var5 + this.field_g.getHeight((byte) 55) / 2 + var8.getHeight((byte) 55) / 2) {
+          if (ua.a(var3, param0 ^ -122) <= this.trap.getWidth(-120) / param0 + var8.getWidth(-59) / 2 + var5 &&
+            ua.a(var4, -121) <= var5 + this.trap.getHeight((byte) 55) / 2 + var8.getHeight((byte) 55) / 2) {
             if (this.field_p > this.field_n) {
               return false;
             }
@@ -72,14 +72,14 @@ final class KeyLockBehaviour extends Behaviour implements ut {
           stackIn_6_1 = 1;
         }
         this.field_n = stackIn_6_1;
-        var3Lifetime1 = var7.getX(3) - this.field_g.getX(3);
-        var4Lifetime1 = var7.getY(param0 ^ 9650) - this.field_g.getY(9648);
+        var3Lifetime1 = var7.getX(3) - this.trap.getX(3);
+        var4Lifetime1 = var7.getY(param0 ^ 9650) - this.trap.getY(9648);
         var5Lifetime1 = 262144;
-        if (ua.a(var3Lifetime1, param0 ^ -122) > this.field_g.getWidth(-120) / param0 + var7.getWidth(-59) / 2 + var5Lifetime1) {
+        if (ua.a(var3Lifetime1, param0 ^ -122) > this.trap.getWidth(-120) / param0 + var7.getWidth(-59) / 2 + var5Lifetime1) {
           this.field_n = 0;
           return false;
         }
-        if (ua.a(var4Lifetime1, -121) > var5Lifetime1 + this.field_g.getHeight((byte) 55) / 2 + var7.getHeight((byte) 55) / 2) {
+        if (ua.a(var4Lifetime1, -121) > var5Lifetime1 + this.trap.getHeight((byte) 55) / 2 + var7.getHeight((byte) 55) / 2) {
           this.field_n = 0;
           return false;
         }
@@ -93,12 +93,12 @@ final class KeyLockBehaviour extends Behaviour implements ut {
         return true;
     }
 
-    final void a(boolean param0, Trap param1) {
+    final void attachToTrap(boolean param0, Trap param1) {
         if (!param0) {
           return;
         }
         try {
-          super.a(param0, param1);
+          super.attachToTrap(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sm.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

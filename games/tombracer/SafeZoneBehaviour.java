@@ -115,7 +115,7 @@ final class SafeZoneBehaviour extends Behaviour {
         }
         if (this.d(8031)) {
           this.field_r = true;
-          var2 = this.m((byte) 19);
+          var2 = this.getPlayer((byte) 19);
           if (this.field_t) {
             var2.i(true);
           }

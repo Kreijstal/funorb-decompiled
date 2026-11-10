@@ -167,11 +167,11 @@ final class BoulderComponent extends PathMoverComponent {
           var6 = new Effect(0, 10);
           var6.b(1, 14);
           var5.a(true, var6);
-          var11.a((byte) 83, (Behaviour) (var5));
+          var11.addBehaviour((byte) 83, (Behaviour) (var5));
           var7 = new SimpleBlockBehaviour(param2, param0);
-          var11.a((byte) 83, (Behaviour) (var7));
+          var11.addBehaviour((byte) 83, (Behaviour) (var7));
           var8 = this.createPathMove((byte) -30, param2, param0);
-          var11.a(var8, 0);
+          var11.addLocomotor(var8, 0);
           var9 = rm.field_a;
           var10 = (fu) (var9.a(8, param1 ^ 76));
           var10.a(false, 0);

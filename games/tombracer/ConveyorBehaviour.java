@@ -22,21 +22,21 @@ final class ConveyorBehaviour extends Behaviour {
         }
         this.b(0);
         var8 = this.b(true).field_u;
-        var3 = var8.a((byte) -26, this.field_g);
+        var3 = var8.a((byte) -26, this.trap);
         var4 = this.e(6);
         for (var5 = 0; var3.length > var5; var5++) {
           var6 = var3[var5];
           if (var6.a(-77) &&
             var6 != var4 &&
-            io.a(var6.getWidth(param0 - 5435), this.field_g.getY(9648), (byte) -55, var6.getHeight((byte) 55), this.field_g.getX(param0 - 5415), var6.getY(9648), this.field_g.getHeight((byte) 55), this.field_g.getWidth(-21), var6.getX(3))) {
+            io.a(var6.getWidth(param0 - 5435), this.trap.getY(9648), (byte) -55, var6.getHeight((byte) 55), this.trap.getX(param0 - 5415), var6.getY(9648), this.trap.getHeight((byte) 55), this.trap.getWidth(-21), var6.getX(3))) {
             var6.a(100, true, 1, this.field_o, this.field_n, 0);
           }
         }
     }
 
     private final void b(int param0) {
-        int var2 = MouseInputHandler.a((byte) 111, this.field_g.g(-25787) >> 2);
-        int var3 = bua.a(param0, this.field_g.g(-25787) >> 2);
+        int var2 = MouseInputHandler.a((byte) 111, this.trap.g(-25787) >> 2);
+        int var3 = bua.a(param0, this.trap.g(-25787) >> 2);
         this.field_n = -gqa.a(this.field_r, (byte) 24, var2) + gqa.a(this.field_s, (byte) 24, var3);
         this.field_o = -gqa.a(this.field_s, (byte) 24, var2) + gqa.a(this.field_r, (byte) 24, var3);
     }
@@ -155,9 +155,9 @@ final class ConveyorBehaviour extends Behaviour {
         return true;
     }
 
-    final void a(boolean param0, Trap param1) {
+    final void attachToTrap(boolean param0, Trap param1) {
         try {
-          super.a(param0, param1);
+          super.attachToTrap(param0, param1);
           param1.b((byte) 60, 3);
           this.b(0);
         } catch (RuntimeException runtimeException) {

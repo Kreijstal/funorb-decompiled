@@ -383,8 +383,8 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
     }
 
     final void b(int param0) {
-        int var2 = this.field_n.s(25745) - this.f(10);
-        int var3 = this.field_n.e(false) - this.g((byte) 30);
+        int var2 = this.trap.s(25745) - this.f(10);
+        int var3 = this.trap.e(false) - this.g((byte) 30);
         int var4 = 0;
         if (var2 > this.field_u) {
           var4 = -(var2 - this.field_u);
@@ -402,7 +402,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
         if (param0 != 1) {
           return;
         }
-        this.field_n.a((byte) -35, var4, var5);
+        this.trap.a((byte) -35, var4, var5);
     }
 
     ConstrainToRectangleLocomotor(Room param0, BitPacketBuffer param1, boolean param2) {
@@ -448,13 +448,13 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
         }
     }
 
-    final void a(int param0, Trap param1) {
+    final void attachToTrap(int param0, Trap param1) {
         try {
           if (param0 <= 35) {
             byte[] var4 = (byte[]) null;
             ConstrainToRectangleLocomotor.a(63, (byte[]) null);
           }
-          super.a(112, param1);
+          super.attachToTrap(112, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ira.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -46,7 +46,7 @@ final class ConstrainToFacingArcLocomotor extends ConstraintLocomotor {
         if (param0 != 1) {
           return;
         }
-        for (var2 = this.field_n.q((byte) -80) - this.e((byte) -43); var2 < 0; var2 += 8192) {
+        for (var2 = this.trap.q((byte) -80) - this.e((byte) -43); var2 < 0; var2 += 8192) {
         }
         while (var2 > 8192) {
           var2 -= 8192;
@@ -64,7 +64,7 @@ final class ConstrainToFacingArcLocomotor extends ConstraintLocomotor {
           }
         }
         if (var3 != 0) {
-          this.field_n.c(false, var3);
+          this.trap.c(false, var3);
         }
         return;
     }

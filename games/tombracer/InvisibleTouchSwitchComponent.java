@@ -33,7 +33,7 @@ final class InvisibleTouchSwitchComponent extends SwitchComponent {
           var4.b((byte) -11, this.field_k, this.field_l);
           var5 = new TouchSwitchBehaviour(param2, param0);
           this.a(var5, (byte) -92);
-          var4.a((byte) 83, (Behaviour) (var5));
+          var4.addBehaviour((byte) 83, (Behaviour) (var5));
           stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

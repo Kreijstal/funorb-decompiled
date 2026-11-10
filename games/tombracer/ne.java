@@ -103,14 +103,14 @@ final class ne {
         RuntimeException var1 = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          var1_int = c.field_g[0];
+          var1_int = PooledObject.field_g[0];
           var2 = 1;
           if (param0 >= -49) {
             var5 = (String) null;
             ne.a(true, (String) null, (String) null);
           }
-          while (c.field_g.length > var2) {
-            var3 = c.field_g[var2];
+          while (PooledObject.field_g.length > var2) {
+            var3 = PooledObject.field_g[var2];
             lua.a(aia.field_t, var2 << 4, aia.field_t, var1_int, var3);
             var1_int = var1_int + var3;
             var2++;

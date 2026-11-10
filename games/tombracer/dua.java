@@ -89,7 +89,7 @@ final class dua extends me {
           if (!this.field_g.d((byte) 113)) {
             var4 = var4 * 2;
           }
-          var23 = this.field_g.f(0, 0);
+          var23 = this.field_g.getSimulation(0, 0);
           var6 = 0;
           var7 = var23.l(-7);
           var8 = koa.b(0) >> 1;
@@ -132,10 +132,10 @@ final class dua extends me {
           while (this.field_g.field_P > var19) {
             var13Lifetime3 = this.field_g.field_c.field_e[var19];
             var25 = this.field_g.players[var13Lifetime3].getRoom((byte) 113);
-            if (var25.c(72) >= var6 &&
-              var25.c(-87) < var7) {
+            if (var25.getCourseIndex(72) >= var6 &&
+              var25.getCourseIndex(-87) < var7) {
               var15 = 16;
-              var16Lifetime3 = var9Lifetime3 - var4 * this.field_g.i(1, var13Lifetime3);
+              var16Lifetime3 = var9Lifetime3 - var4 * this.field_g.getPlayerCourseIndex(1, var13Lifetime3);
               var16Lifetime3 = var16Lifetime3 + var4 * this.field_g.players[var13Lifetime3].f(false) / var25.getHeight(-113);
               var15 = var15 + var3 * this.field_g.players[var13Lifetime3].w(63) / var25.getWidth((byte) -86);
               this.field_g.players[var13Lifetime3].n((byte) -111).a(var15, 124, var16Lifetime3);
@@ -154,7 +154,7 @@ final class dua extends me {
         if (!this.field_g.d((byte) 113)) {
           var4Lifetime1 = var4Lifetime1 * 2;
         }
-        var20 = this.field_g.f(0, 0);
+        var20 = this.field_g.getSimulation(0, 0);
         var6Lifetime1 = 0;
         var7Lifetime1 = var20.l(-7);
         var8Lifetime1 = koa.b(0) >> 1;
@@ -197,10 +197,10 @@ final class dua extends me {
         while (this.field_g.field_P > var19Lifetime1) {
           var13Lifetime2 = this.field_g.field_c.field_e[var19Lifetime1];
           var22 = this.field_g.players[var13Lifetime2].getRoom((byte) 113);
-          if (var22.c(72) >= var6Lifetime1 &&
-            var22.c(-87) < var7Lifetime1) {
+          if (var22.getCourseIndex(72) >= var6Lifetime1 &&
+            var22.getCourseIndex(-87) < var7Lifetime1) {
             var15Lifetime1 = 16;
-            var16Lifetime2 = var9Lifetime2 - var4Lifetime1 * this.field_g.i(1, var13Lifetime2);
+            var16Lifetime2 = var9Lifetime2 - var4Lifetime1 * this.field_g.getPlayerCourseIndex(1, var13Lifetime2);
             var16Lifetime2 = var16Lifetime2 + var4Lifetime1 * this.field_g.players[var13Lifetime2].f(false) / var22.getHeight(-113);
             var15Lifetime1 = var15Lifetime1 + var3Lifetime1 * this.field_g.players[var13Lifetime2].w(63) / var22.getWidth((byte) -86);
             this.field_g.players[var13Lifetime2].n((byte) -111).a(var15Lifetime1, 124, var16Lifetime2);

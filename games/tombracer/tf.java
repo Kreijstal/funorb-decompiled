@@ -26,7 +26,7 @@ final class tf extends kca {
             this.field_j = (String) null;
           }
           var4 = (CharSequence) ((Object) param1);
-          if (!pta.a(var4, 0)) {
+          if (!ObjectPool.a(var4, 0)) {
             stackIn_4_0 = fp.field_c;
             return stackIn_4_0;
           }

@@ -59,15 +59,15 @@ final class WallCrusherComponent extends kna {
           var14.a((byte) -3, 20);
           var14.b((byte) 17, true);
           var5 = new SimpleBlockBehaviour(param2, param0);
-          var14.a((byte) 83, (Behaviour) (var5));
+          var14.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = new SimpleMoveLocomotor(param2, param0);
           var6.c(this.field_J, 26621);
-          var14.a(var6, 0);
+          var14.addLocomotor(var6, 0);
           var7 = new SimpleMoveLocomotor(param2, param0);
           var7.c(this.field_I, 26621);
           var7.d(4, 4096);
           var7.m(112);
-          var14.a(var7, param1 ^ param1);
+          var14.addLocomotor(var7, param1 ^ param1);
           this.field_G = new TimeSwitchBehaviour(param2, param0);
           var8 = new int[]{this.field_O * 50 >> 16, this.field_M * 50 >> 16};
           var9 = new mg(var8);
@@ -86,10 +86,10 @@ final class WallCrusherComponent extends kna {
           var11 = this.field_G.k((byte) -91);
           var11.b(0, 55);
           var11.h(param1 - 2).a(9, new lj[]{(lj) ((Object) var6), (lj) ((Object) var7)});
-          var14.a((byte) 83, (Behaviour) (this.field_G));
+          var14.addBehaviour((byte) 83, (Behaviour) (this.field_G));
           var12 = rm.field_a;
           var13 = (lma) (var12.a(15, 93));
-          var14.a((gr) null, (byte) 124, var13);
+          var14.a((TrapPart) null, (byte) 124, var13);
           stackIn_7_0 = var14;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

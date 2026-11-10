@@ -444,7 +444,7 @@ public final class TombRacer extends rfa implements ls {
         fm.d(-124);
         sqa.releaseStatics((byte) -128);
         uw.releaseStatics(param0 + 3666);
-        pta.releaseStatics(true);
+        ObjectPool.releaseStatics(true);
         npa.releaseStatics(-2147483648);
         bba.releaseStatics((byte) -28);
         tqa.releaseStatics((byte) 75);
@@ -532,7 +532,7 @@ public final class TombRacer extends rfa implements ls {
         vf.releaseStatics(-55);
         uda.releaseStatics(115);
         daa.releaseStatics(-12224);
-        ova.releaseStatics((byte) -77);
+        RoomCompletedScreen.releaseStatics((byte) -77);
         dua.releaseStatics((byte) -128);
         ab.releaseStatics(6153);
         opa.releaseStatics(param0 + 3766);
@@ -552,7 +552,7 @@ public final class TombRacer extends rfa implements ls {
         jl.releaseStatics(param0 ^ -1088533378);
         lk.releaseStatics(false);
         mba.releaseStatics(-1);
-        c.releaseStatics(72);
+        PooledObject.releaseStatics(72);
         vh.releaseStatics(param0 + 3560);
         jk.releaseStatics((byte) 76);
         fka.releaseStatics();

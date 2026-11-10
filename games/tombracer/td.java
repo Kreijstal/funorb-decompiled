@@ -21,7 +21,7 @@ final class td extends vpa {
         RuntimeException var1_ref = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          var5 = c.field_g;
+          var5 = PooledObject.field_g;
           var1 = var5;
           if (param0 != -62) {
             field_q = (String) null;

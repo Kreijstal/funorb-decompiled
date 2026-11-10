@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class Behaviour extends IntrusiveNode implements lj, Renderable, noa, gr {
+abstract class Behaviour extends IntrusiveNode implements lj, Renderable, noa, TrapPart {
     boolean field_f;
     static String field_h;
-    Trap field_g;
+    Trap trap;
     private SwitchableId field_j;
     boolean field_k;
     private boolean field_i;
@@ -15,12 +15,12 @@ abstract class Behaviour extends IntrusiveNode implements lj, Renderable, noa, g
         Player var2 = null;
         Player var2Lifetime1;
         if (param0 == 8031) {
-          var2 = this.m((byte) 19);
-          return io.a(var2.getWidth(-47), this.field_g.getY(9648), (byte) -57, var2.getHeight((byte) 55), this.field_g.getX(3), var2.getY(9648), this.field_g.getHeight((byte) 55), this.field_g.getWidth(param0 ^ -8057), var2.getX(3));
+          var2 = this.getPlayer((byte) 19);
+          return io.a(var2.getWidth(-47), this.trap.getY(9648), (byte) -57, var2.getHeight((byte) 55), this.trap.getX(3), var2.getY(9648), this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -8057), var2.getX(3));
         }
         this.field_m = (Room) null;
-        var2Lifetime1 = this.m((byte) 19);
-        return io.a(var2Lifetime1.getWidth(-47), this.field_g.getY(9648), (byte) -57, var2Lifetime1.getHeight((byte) 55), this.field_g.getX(3), var2Lifetime1.getY(9648), this.field_g.getHeight((byte) 55), this.field_g.getWidth(param0 ^ -8057), var2Lifetime1.getX(3));
+        var2Lifetime1 = this.getPlayer((byte) 19);
+        return io.a(var2Lifetime1.getWidth(-47), this.trap.getY(9648), (byte) -57, var2Lifetime1.getHeight((byte) 55), this.trap.getX(3), var2Lifetime1.getY(9648), this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -8057), var2Lifetime1.getX(3));
     }
 
     int a(int param0, Projectile param1, Effect param2) {
@@ -100,9 +100,9 @@ abstract class Behaviour extends IntrusiveNode implements lj, Renderable, noa, g
         return this.field_j;
     }
 
-    public final Trap f(byte param0) {
+    public final Trap getTrap(byte param0) {
         int var2 = 119 / ((-32 - param0) / 50);
-        return this.field_g;
+        return this.trap;
     }
 
     void a(ffa param0, byte param1, WorldBody param2, int param3) {
@@ -136,12 +136,12 @@ abstract class Behaviour extends IntrusiveNode implements lj, Renderable, noa, g
         }
     }
 
-    final Player m(byte param0) {
+    final Player getPlayer(byte param0) {
         if (param0 == 19) {
-          return this.field_g.H(param0 ^ -108);
+          return this.trap.getPlayer(param0 ^ -108);
         }
-        this.field_g = (Trap) null;
-        return this.field_g.H(param0 ^ -108);
+        this.trap = (Trap) null;
+        return this.trap.getPlayer(param0 ^ -108);
     }
 
     int a(int param0, Effect param1, pc param2) {
@@ -198,9 +198,9 @@ abstract class Behaviour extends IntrusiveNode implements lj, Renderable, noa, g
     public final ew h(byte param0) {
         if (param0 <= 105) {
           this.c(false);
-          return (ew) ((Object) this.field_g.r(0));
+          return (ew) ((Object) this.trap.getRoot(0));
         }
-        return (ew) ((Object) this.field_g.r(0));
+        return (ew) ((Object) this.trap.getRoot(0));
     }
 
     Behaviour(Room param0, BitPacketBuffer param1, boolean param2) {
@@ -225,7 +225,7 @@ abstract class Behaviour extends IntrusiveNode implements lj, Renderable, noa, g
 
     public final int getRenderX(byte param0) {
         int var2 = 53 % ((param0 + 23) / 53);
-        return this.field_g.getX(3);
+        return this.trap.getX(3);
     }
 
     public static void releaseStatics(int param0) {
@@ -235,12 +235,12 @@ abstract class Behaviour extends IntrusiveNode implements lj, Renderable, noa, g
         field_h = null;
     }
 
-    void a(boolean param0, Trap param1) {
+    void attachToTrap(boolean param0, Trap param1) {
         try {
           if (!param0) {
             this.m(23);
           }
-          this.field_g = param1;
+          this.trap = param1;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "nv.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -264,7 +264,7 @@ abstract class Behaviour extends IntrusiveNode implements lj, Renderable, noa, g
         try {
           if (param1 != 1) {
             var6 = (Trap) null;
-            this.a(false, (Trap) null);
+            this.attachToTrap(false, (Trap) null);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -317,18 +317,18 @@ abstract class Behaviour extends IntrusiveNode implements lj, Renderable, noa, g
         if (param0 != 46) {
           return (IsaacCipher) null;
         }
-        return this.field_g.y(1751085328);
+        return this.trap.y(1751085328);
     }
 
     public final boolean a(byte param0) {
         if (param0 != 87) {
           this.p((byte) -104);
-          if (null != this.field_g) {
+          if (null != this.trap) {
             return this.field_i ? true : false;
           }
           return true;
         }
-        if (null == this.field_g) {
+        if (null == this.trap) {
           return true;
         }
         if (!this.field_i) {
@@ -347,9 +347,9 @@ abstract class Behaviour extends IntrusiveNode implements lj, Renderable, noa, g
     public final int getRenderY(byte param0) {
         if (param0 < 91) {
           this.n((byte) 65);
-          return this.field_g.getY(9648);
+          return this.trap.getY(9648);
         }
-        return this.field_g.getY(9648);
+        return this.trap.getY(9648);
     }
 
     void a(boolean param0, BitPacketBuffer param1) {
@@ -382,24 +382,24 @@ abstract class Behaviour extends IntrusiveNode implements lj, Renderable, noa, g
         if (param0 != 12340) {
           return (PlayerSimulation) null;
         }
-        return this.field_g.x(param0 + 3130);
+        return this.trap.getSimulation(param0 + 3130);
     }
 
     final Trap e(int param0) {
         if (param0 == 6) {
-          return this.field_g.r(param0 ^ 6);
+          return this.trap.getRoot(param0 ^ 6);
         }
         iq var3 = (iq) null;
         this.render(-63, (iq) null);
-        return this.field_g.r(param0 ^ 6);
+        return this.trap.getRoot(param0 ^ 6);
     }
 
     public final int getRenderZ(byte param0) {
         if (param0 > -86) {
           this.a((byte) -24, false);
-          return this.field_g.g((byte) 115);
+          return this.trap.g((byte) 115);
         }
-        return this.field_g.g((byte) 115);
+        return this.trap.g((byte) 115);
     }
 
     abstract int a(int param0, int param1);
@@ -440,7 +440,7 @@ abstract class Behaviour extends IntrusiveNode implements lj, Renderable, noa, g
     public final void render(int param0, iq param1) {
         try {
           if (param0 < 103) {
-            this.f((byte) -97);
+            this.getTrap((byte) -97);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "nv.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

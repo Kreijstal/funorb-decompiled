@@ -203,7 +203,7 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         wf var3 = null;
-        hr var3_ref = null;
+        Particle var3_ref = null;
         RuntimeException var3_ref2 = null;
         int var4 = 0;
         var4 = TombRacer.field_G ? 1 : 0;
@@ -306,7 +306,7 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
                   this.field_O = this.field_O - 16384;
                   if (this.field_w <= -17825792) {
                     if (this.field_T == 6) {
-                      var3_ref = this.room.a(this.x, this.y, (byte) 100, -17825792);
+                      var3_ref = this.room.spawnParticle(this.x, this.y, (byte) 100, -17825792);
                       var3_ref.a(false, 32, 4, 16, 5 + uca.field_c.a(5, 0));
                       var3_ref.b(param0 + 99, 0, 0);
                       var3_ref.a(uca.field_c.a(8192, param0 ^ 5), -32 + uca.field_c.a(64, param0 - 5), -125);
@@ -320,7 +320,7 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
                 if (this.field_T != 5 &&
                   this.field_T != 6 &&
                   this.room.a(this.size, this.size, (WorldBody) (this), this.x, this.y, (byte) -126) == 0) {
-                  this.room.a(8, this.o(-94));
+                  this.room.recordDeath(8, this.o(-94));
                 }
                 this.room.i((byte) -124);
               }
@@ -727,7 +727,7 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
             stackIn_7_0 = 1;
             return stackIn_7_0;
           }
-          if (eha.a(this.size, param1, this.y, this.size, param2, this.x, 2) == -1) {
+          if (SimulationObserver.a(this.size, param1, this.y, this.size, param2, this.x, 2) == -1) {
             stackIn_12_0 = 0;
             return stackIn_12_0;
           }
@@ -1055,7 +1055,7 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
         }
     }
 
-    final int r(int param0) {
+    final int getCourseIndex(int param0) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -1063,7 +1063,7 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
           if (param0 > -95) {
             this.I(-94);
           }
-          stackIn_4_0 = this.room.c(81);
+          stackIn_4_0 = this.room.getCourseIndex(81);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1256,7 +1256,7 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
             var3.a(0, false);
           }
           var3.a(true, (byte) 2);
-          var2.a((byte) 83, (Behaviour) (var3));
+          var2.addBehaviour((byte) 83, (Behaviour) (var3));
           var2.c(437453352, true);
           var2.e(true, param0 ^ 30447);
           this.room.a(var2, (byte) 32);
@@ -1936,7 +1936,7 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
             param2 != 0) {
             this.field_v.addLast((byte) -118, new vl(param2, param0));
           }
-          this.C(-1).m(9262).a(param2, 15818, this, param0);
+          this.C(-1).getObserver(9262).a(param2, 15818, this, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2849,7 +2849,7 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
           if (!this.a(param1, param2, 1)) {
             return false;
           }
-          var5_int = eha.a(this.size, 12, this.getY(9648), this.size, param3, this.getX(3), 2);
+          var5_int = SimulationObserver.a(this.size, 12, this.getY(9648), this.size, param3, this.getX(3), 2);
           if (-1 == var5_int) {
             return false;
           }
@@ -3417,7 +3417,7 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            this.h(45);
+            this.isExpired(45);
           }
           stackIn_7_0 = (this.field_a == 1);
           return stackIn_7_0;
@@ -3545,7 +3545,7 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
         }
     }
 
-    public final boolean h(int param0) {
+    public final boolean isExpired(int param0) {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -3947,8 +3947,8 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
           }
           if (!this.room.k((byte) 53) &&
             param0.field_j == 4) {
-            this.velocityX = this.velocityX + param1.k(-71) / 8;
-            this.velocityY = this.velocityY + param1.b(false) / 8;
+            this.velocityX = this.velocityX + param1.getVelocityX(-71) / 8;
+            this.velocityY = this.velocityY + param1.getVelocityY(false) / 8;
           }
           stackIn_23_0 = this.a(param0, -1);
           return stackIn_23_0;

@@ -26,12 +26,12 @@ final class MovingWallComponent extends PathMoverComponent {
           var9.a((byte) -3, 20);
           var9.b((byte) 17, true);
           var5 = new SimpleBlockBehaviour(param2, param0);
-          var9.a((byte) 83, (Behaviour) (var5));
+          var9.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = this.createPathMove((byte) 124, param2, param0);
-          var9.a(var6, param1 ^ 3);
+          var9.addLocomotor(var6, param1 ^ 3);
           var7 = rm.field_a;
           var8 = (lma) (var7.a(15, 111));
-          var9.a((gr) null, (byte) 124, var8);
+          var9.a((TrapPart) null, (byte) 124, var8);
           stackIn_1_0 = var9;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

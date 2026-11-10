@@ -196,10 +196,10 @@ final class uu implements GamePacket {
           }
           var5_int = 0;
           while (true) {
-            if (c.field_g.length <= var5_int) {
+            if (PooledObject.field_g.length <= var5_int) {
               return;
             }
-            param3 = c.field_g[var5_int];
+            param3 = PooledObject.field_g[var5_int];
             var6 = var5_int << 4;
             while (true) {
               incrementValue$0 = param3;

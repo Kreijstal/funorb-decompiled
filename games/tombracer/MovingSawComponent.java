@@ -74,13 +74,13 @@ final class MovingSawComponent extends PathMoverComponent {
           var12.a((byte) -3, 0);
           var12.b((byte) 17, true);
           var5 = this.createPathMove((byte) 125, param2, param0);
-          var12.a(var5, 0);
+          var12.addLocomotor(var5, 0);
           var6 = new ConstantEffectBehaviour(param2, param0);
           var7 = new Effect(0, 10);
           var7.b(1, 15);
           var6.a(true, var7);
           var6.a((byte) -24, true);
-          var12.a((byte) 83, (Behaviour) (var6));
+          var12.addBehaviour((byte) 83, (Behaviour) (var6));
           var8 = new Trap(param2, param0);
           var8.b((byte) -11, 1048576, 1048576);
           var8.h(3, param1 ^ 3);
@@ -88,8 +88,8 @@ final class MovingSawComponent extends PathMoverComponent {
           var8.a((byte) -3, 0);
           var8.b((byte) 17, true);
           var9 = new SimpleBlockBehaviour(param2, param0);
-          var8.a((byte) 83, (Behaviour) (var9));
-          var12.a(-128, var8);
+          var8.addBehaviour((byte) 83, (Behaviour) (var9));
+          var12.addChild(-128, var8);
           var10 = rm.field_a;
           var11 = (fu) (var10.a(8, param1 + 119));
           var11.a(false, 1);

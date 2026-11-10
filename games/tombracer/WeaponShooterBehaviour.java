@@ -11,12 +11,12 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
     private boolean field_s;
     static String[] field_q;
 
-    final void a(boolean param0, Trap param1) {
+    final void attachToTrap(boolean param0, Trap param1) {
         try {
           if (!param0) {
             this.field_p = false;
           }
-          super.a(param0, param1);
+          super.attachToTrap(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ska.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -235,7 +235,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
         boolean stackIn_15_1 = false;
         boolean stackIn_45_1 = false;
         if (this.field_p) {
-          if (this.m((byte) 19).u(-25561)) {
+          if (this.getPlayer((byte) 19).u(-25561)) {
             return;
           }
           if (null != this.field_n) {
@@ -247,7 +247,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
                 field_r = (kia) null;
               }
               if (this.field_s) {
-                this.field_t = this.field_u.a(this.field_g.g(-25787), this.field_g.P(param0 - 5418) << 16, this.e(param0 - 5412), this.field_g.getX(3), this.field_g.getY(param0 + 4230), this.b(true), 0, 0, et.b(this.field_g.getHeight((byte) 55), this.field_g.getWidth(param0 ^ -5478), 123) / 2, false);
+                this.field_t = this.field_u.a(this.trap.g(-25787), this.trap.P(param0 - 5418) << 16, this.e(param0 - 5412), this.trap.getX(3), this.trap.getY(param0 + 4230), this.b(true), 0, 0, et.b(this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -5478), 123) / 2, false);
                 if (!this.field_u.a(12111)) {
                   this.c(false);
                 }
@@ -262,7 +262,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
           if (param0 != 5418) {
             field_r = (kia) null;
             if (this.field_s) {
-              this.field_t = this.field_u.a(this.field_g.g(-25787), this.field_g.P(param0 - 5418) << 16, this.e(param0 - 5412), this.field_g.getX(3), this.field_g.getY(param0 + 4230), this.b(true), 0, 0, et.b(this.field_g.getHeight((byte) 55), this.field_g.getWidth(param0 ^ -5478), 123) / 2, false);
+              this.field_t = this.field_u.a(this.trap.g(-25787), this.trap.P(param0 - 5418) << 16, this.e(param0 - 5412), this.trap.getX(3), this.trap.getY(param0 + 4230), this.b(true), 0, 0, et.b(this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -5478), 123) / 2, false);
               if (!this.field_u.a(12111)) {
                 this.c(false);
               }
@@ -279,7 +279,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
               if (param0 != 5418) {
                 field_r = (kia) null;
                 if (this.field_s) {
-                  this.field_t = this.field_u.a(this.field_g.g(-25787), this.field_g.P(param0 - 5418) << 16, this.e(param0 - 5412), this.field_g.getX(3), this.field_g.getY(param0 + 4230), this.b(true), 0, 0, et.b(this.field_g.getHeight((byte) 55), this.field_g.getWidth(param0 ^ -5478), 123) / 2, false);
+                  this.field_t = this.field_u.a(this.trap.g(-25787), this.trap.P(param0 - 5418) << 16, this.e(param0 - 5412), this.trap.getX(3), this.trap.getY(param0 + 4230), this.b(true), 0, 0, et.b(this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -5478), 123) / 2, false);
                   if (!this.field_u.a(12111)) {
                     this.c(false);
                   }
@@ -304,7 +304,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
         if (!this.field_s) {
           return;
         }
-        this.field_t = this.field_u.a(this.field_g.g(-25787), this.field_g.P(param0 - 5418) << 16, this.e(param0 - 5412), this.field_g.getX(3), this.field_g.getY(param0 + 4230), this.b(true), 0, 0, et.b(this.field_g.getHeight((byte) 55), this.field_g.getWidth(param0 ^ -5478), 123) / 2, false);
+        this.field_t = this.field_u.a(this.trap.g(-25787), this.trap.P(param0 - 5418) << 16, this.e(param0 - 5412), this.trap.getX(3), this.trap.getY(param0 + 4230), this.b(true), 0, 0, et.b(this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -5478), 123) / 2, false);
         if (this.field_u.a(12111)) {
           return;
         }

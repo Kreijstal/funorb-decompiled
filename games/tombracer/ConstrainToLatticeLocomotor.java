@@ -31,16 +31,16 @@ final class ConstrainToLatticeLocomotor extends ConstraintLocomotor {
         }
         if (param0 > -22) {
           Trap var3 = (Trap) null;
-          this.a(-103, (Trap) null);
+          this.attachToTrap(-103, (Trap) null);
         }
     }
 
-    final void a(int param0, Trap param1) {
+    final void attachToTrap(int param0, Trap param1) {
         if (param0 <= 35) {
           return;
         }
         try {
-          super.a(68, param1);
+          super.attachToTrap(68, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "rsa.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -89,8 +89,8 @@ final class ConstrainToLatticeLocomotor extends ConstraintLocomotor {
         int var12;
         int var13;
         var13 = TombRacer.field_G ? 1 : 0;
-        var2 = this.field_n.s(25745) - this.f(10);
-        var3 = this.field_n.e(false) - this.g((byte) 30);
+        var2 = this.trap.s(25745) - this.f(10);
+        var3 = this.trap.e(false) - this.g((byte) 30);
         if (var2 == 0 &&
           0 == var3) {
           return;
@@ -135,7 +135,7 @@ final class ConstrainToLatticeLocomotor extends ConstraintLocomotor {
           var12 = -var3 + this.field_y * var10;
           if (0 != var11) {
             if (var12 == 0) {
-              this.field_n.a((byte) -31, var4, var5);
+              this.trap.a((byte) -31, var4, var5);
               decompiledFrameRemainder0 = false;
             }
             else {
@@ -148,7 +148,7 @@ final class ConstrainToLatticeLocomotor extends ConstraintLocomotor {
           }
         }
         if (decompiledFrameRemainder0) {
-          this.field_n.a((byte) -31, var4, var5);
+          this.trap.a((byte) -31, var4, var5);
         }
 
     }

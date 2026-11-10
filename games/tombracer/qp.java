@@ -244,7 +244,7 @@ final class qp extends we {
         qr.field_v.a(param1 + 63, false, b.field_v.toUpperCase() + " - " + wg.field_m[this.field_x].toUpperCase(), 65, -14279929, -1);
         var4 = 120 + param1;
         eda.field_f.a(-1, -1, es.field_h[0], -14671840, var4, hl.field_a);
-        eda.field_f.a(var4, false, pta.field_g.toUpperCase(), es.field_h[1], -14671840, -1);
+        eda.field_f.a(var4, false, ObjectPool.field_g.toUpperCase(), es.field_h[1], -14671840, -1);
         eda.field_f.a(var4, false, ControllerLocomotor.field_o.toUpperCase(), es.field_h[2], -14671840, -1);
         eda.field_f.a(var4, false, SimpleConditionBehaviour.field_q.toUpperCase(), es.field_h[3], -14671840, -1);
         eda.field_f.a(var4, false, PlayerProfile.field_u.toUpperCase(), es.field_h[4], -14671840, -1);

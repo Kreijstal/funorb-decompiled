@@ -35,14 +35,14 @@ final class CrusherBehaviour extends Behaviour {
         return this.field_n == 2 ? true : false;
     }
 
-    final void a(boolean param0, Trap param1) {
+    final void attachToTrap(boolean param0, Trap param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          super.a(param0, param1);
+          super.attachToTrap(param0, param1);
           if (4 > this.b(true).formatVersion) {
             param1.h(3, 0);
           }
@@ -236,17 +236,17 @@ final class CrusherBehaviour extends Behaviour {
         int var7;
         Player var8;
         var7 = TombRacer.field_G ? 1 : 0;
-        var8 = this.field_g.H(param0 - 5537);
+        var8 = this.trap.getPlayer(param0 - 5537);
         var3 = this.field_p ? 1 : 0;
-        var4 = this.field_g.getX(3);
-        var5 = this.field_g.getY(param0 + 4230);
+        var4 = this.trap.getX(3);
+        var5 = this.trap.getY(param0 + 4230);
         if (var3 == 0) {
           if (this.field_n != 0) {
             if (1 == this.field_n) {
-              var3 = ck.a(var8.getX(3), 1, var4, this.field_g.getWidth(param0 - 5496), this.field_g.getHeight((byte) 55), var8.getY(9648), (byte) 82, var5, 1) ? 1 : 0;
+              var3 = ck.a(var8.getX(3), 1, var4, this.trap.getWidth(param0 - 5496), this.trap.getHeight((byte) 55), var8.getY(9648), (byte) 82, var5, 1) ? 1 : 0;
             }
           } else {
-            var3 = ck.a(var8.getX(3), var8.getHeight((byte) 55), var4, this.field_g.getWidth(-23), this.field_g.getHeight((byte) 55), var8.getY(9648), (byte) 69, var5, var8.getWidth(param0 - 5519)) ? 1 : 0;
+            var3 = ck.a(var8.getX(3), var8.getHeight((byte) 55), var4, this.trap.getWidth(-23), this.trap.getHeight((byte) 55), var8.getY(9648), (byte) 69, var5, var8.getWidth(param0 - 5519)) ? 1 : 0;
           }
         }
         var6_int = this.field_n;
@@ -254,7 +254,7 @@ final class CrusherBehaviour extends Behaviour {
           if (var3 == 0) {
             this.b(0, 0);
             if (this.field_u) {
-              this.field_g.L(-31);
+              this.trap.L(-31);
               if (param0 != 5418) {
                 this.field_v = -69;
               }
@@ -263,13 +263,13 @@ final class CrusherBehaviour extends Behaviour {
           } else {
             this.field_n = 1;
             if (this.field_u) {
-              this.field_g.G(121);
+              this.trap.G(121);
             }
             this.field_w = this.field_w + 1;
             if (this.field_v < this.field_w) {
               this.b(param0 ^ 5418, 2);
               if (!this.field_u) {
-                this.field_g.G(121);
+                this.trap.G(121);
                 if (param0 != 5418) {
                   this.field_v = -69;
                 }
@@ -283,10 +283,10 @@ final class CrusherBehaviour extends Behaviour {
               this.field_w = this.field_w + 1;
               if (this.field_w > this.field_o) {
                 var6 = this.b(true);
-                var6.a(123, var5, this.field_t, this.field_g.getHeight((byte) 55), this.field_g.getWidth(-79), var4);
+                var6.a(123, var5, this.field_t, this.trap.getHeight((byte) 55), this.trap.getWidth(-79), var4);
                 this.b(0, 3);
-                this.field_g.a((byte) -3, this.field_q);
-                this.field_g.b((byte) 17, false);
+                this.trap.a((byte) -3, this.field_q);
+                this.trap.b((byte) 17, false);
                 if (param0 == 5418) {
                   return;
                 }
@@ -299,15 +299,15 @@ final class CrusherBehaviour extends Behaviour {
                   this.field_w = this.field_w + 1;
                   if (this.field_w > this.field_x) {
                     this.b(param0 - 5418, 1);
-                    this.field_g.L(127);
+                    this.trap.L(127);
                   }
                 }
               } else {
                 this.field_w = this.field_w + 1;
                 if (this.field_s < this.field_w) {
                   this.b(param0 - 5418, 4);
-                  this.field_g.a((byte) -3, 0);
-                  this.field_g.b((byte) 17, true);
+                  this.trap.a((byte) -3, 0);
+                  this.trap.b((byte) 17, true);
                 }
               }
             }
@@ -315,19 +315,19 @@ final class CrusherBehaviour extends Behaviour {
             if (var3 != 0) {
               this.field_n = 1;
               if (this.field_u) {
-                this.field_g.G(121);
+                this.trap.G(121);
               }
               this.field_w = this.field_w + 1;
               if (this.field_v < this.field_w) {
                 this.b(param0 ^ 5418, 2);
                 if (!this.field_u) {
-                  this.field_g.G(121);
+                  this.trap.G(121);
                 }
               }
             } else {
               this.b(0, 0);
               if (this.field_u) {
-                this.field_g.L(-31);
+                this.trap.L(-31);
               }
             }
           }

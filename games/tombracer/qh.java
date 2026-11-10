@@ -165,7 +165,7 @@ final class qh extends dfa implements rqa {
               hba.a(this.field_E, this.field_m, (byte) 64, this.field_i);
               this.field_k.field_I[this.field_x] = false;
             }
-            if (this.field_k.f(this.field_x, 0).b(0)) {
+            if (this.field_k.getSimulation(this.field_x, 0).b(0)) {
               if (this.field_p) {
                 return;
               }
@@ -844,12 +844,12 @@ final class qh extends dfa implements rqa {
         if (!this.field_D) {
           var4 = this.field_k.a(true, param1);
           while (var4 != null) {
-            var5 = new PendingEvent(var4.a((byte) -125), param1, param1, 50 + this.field_k.simulations[param1].tick, var4.a((byte) -125).a((byte) -28), this.field_k.i(1, param1));
-            this.field_k.a((byte) 96, var5);
+            var5 = new PendingEvent(var4.a((byte) -125), param1, param1, 50 + this.field_k.simulations[param1].tick, var4.a((byte) -125).a((byte) -28), this.field_k.getPlayerCourseIndex(1, param1));
+            this.field_k.deliverPendingEvent((byte) 96, var5);
             var4 = this.field_k.a(true, param1);
           }
         } else {
-          this.field_k.simulations[param1].field_i.b(-113);
+          this.field_k.simulations[param1].observer.b(-113);
         }
     }
 
@@ -1366,7 +1366,7 @@ final class qh extends dfa implements rqa {
               }
               break;
             }
-            var5 = (tu) (this.field_k.simulations[var2].m(9262));
+            var5 = (tu) (this.field_k.simulations[var2].getObserver(9262));
             var6 = var5.b((byte) 121);
             while (var6 != null) {
               if (iqa.field_c.b(4782)) {

@@ -10,5 +10,5 @@ interface mb {
 
     public abstract void a(int param0, Room param1);
 
-    public abstract void a(iq param0, byte param1, hr param2);
+    public abstract void a(iq param0, byte param1, Particle param2);
 }

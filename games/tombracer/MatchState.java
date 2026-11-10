@@ -66,7 +66,7 @@ final class MatchState implements dv {
         if (!param0) {
           return;
         }
-        var4.m(9262).a(var4, param1, 104);
+        var4.getObserver(9262).a(var4, param1, 104);
         if (!var4.k(-19271)) {
           this.n(121, param2);
         }
@@ -111,7 +111,7 @@ final class MatchState implements dv {
         if (var5 == null) {
           return true;
         }
-        int var6 = var5.c(74);
+        int var6 = var5.getCourseIndex(74);
         if (param2 != var6 &&
           param2 != var6 + 1) {
           return true;
@@ -137,7 +137,7 @@ final class MatchState implements dv {
           if (param1.o((byte) -82)) {
             return;
           }
-          var3_int = param1.c(91);
+          var3_int = param1.getCourseIndex(91);
           for (var4 = 0; var4 < this.simulations.length; var4++) {
             if (this.simulations[var4] != null) {
               var5 = this.simulations[var4].a(param0, var3_int);
@@ -251,7 +251,7 @@ final class MatchState implements dv {
         }
     }
 
-    final Room a(int param0, int param1) {
+    final Room getPlayerRoom(int param0, int param1) {
         if (param0 != 0) {
           this.field_A = -127;
         }
@@ -293,7 +293,7 @@ final class MatchState implements dv {
           this.field_u = (wea[]) (gha.a(this.field_u, 1, 8, -16499, kba.field_u, param0));
           this.field_v = fa.a(0, param0, 8, this.field_v);
           this.field_o = uma.a(32, param0, -26803);
-          this.field_q = c.a(8, this.field_q, (byte) 93, param0);
+          this.field_q = PooledObject.a(8, this.field_q, (byte) 93, param0);
           this.field_P = param0.readBits((byte) 44, 32);
           this.field_s = CircleMovementLocomotor.a(5907, param0);
           if (!CircleMovementLocomotor.a(5907, param0)) {
@@ -305,7 +305,7 @@ final class MatchState implements dv {
             this.field_i.a(param0, false);
           }
           this.field_E = uma.a(32, param0, -26803);
-          this.field_I = c.a(8, this.field_I, (byte) -41, param0);
+          this.field_I = PooledObject.a(8, this.field_I, (byte) -41, param0);
           if (param1) {
             return;
           }
@@ -364,7 +364,7 @@ final class MatchState implements dv {
     final boolean j(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != -1878) {
-          this.i(-41, -61);
+          this.getPlayerCourseIndex(-41, -61);
         }
         stackIn_6_0 = (this.field_k == 1) && (this.field_K != 2);
         return stackIn_6_0;
@@ -416,7 +416,7 @@ final class MatchState implements dv {
         if (!param0) {
           return (dda) null;
         }
-        return this.simulations[param1].m(9262).a(104);
+        return this.simulations[param1].getObserver(9262).a(104);
     }
 
     final void m(int param0, int param1) {
@@ -455,11 +455,11 @@ final class MatchState implements dv {
         }
     }
 
-    final int i(int param0, int param1) {
+    final int getPlayerCourseIndex(int param0, int param1) {
         if (param0 != 1) {
           this.a(21, (byte) 42);
         }
-        return this.players[param1].getRoom((byte) 87).c(-79);
+        return this.players[param1].getRoom((byte) 87).getCourseIndex(-79);
     }
 
     final boolean l(int param0, int param1) {
@@ -529,21 +529,21 @@ final class MatchState implements dv {
         return dna.b(this.simulations[param1].a(true), 255);
     }
 
-    final PlayerSimulation f(int param0, int param1) {
+    final PlayerSimulation getSimulation(int param0, int param1) {
         if (param0 < param1) {
           return null;
         }
         return this.simulations[param0];
     }
 
-    final void a(byte param0, PendingEvent param1) {
+    final void deliverPendingEvent(byte param0, PendingEvent param1) {
         PlayerSimulation var3 = null;
         try {
           if (param0 <= 14) {
             this.b((byte) -115);
           }
           var3 = this.simulations[param1.a(3)];
-          var3.m(9262).a(var3, param1, false);
+          var3.getObserver(9262).a(var3, param1, false);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ff.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -575,7 +575,7 @@ final class MatchState implements dv {
           this.a((byte) -36, var2);
         }
         for (var2Lifetime1 = 0; var2Lifetime1 < this.simulations.length; var2Lifetime1++) {
-          var3 = this.simulations[var2Lifetime1].a(-88);
+          var3 = this.simulations[var2Lifetime1].getFirstRoom(-88);
           if (var3 != null) {
             var3.i((byte) -89);
           }

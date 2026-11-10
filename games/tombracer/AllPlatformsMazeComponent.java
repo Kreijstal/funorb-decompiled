@@ -141,7 +141,7 @@ final class AllPlatformsMazeComponent extends MazeComponent {
           var5 = new PlatformBehaviour(param2, false);
           var5.b(-5, 2);
           var5.a(1, (byte) 71);
-          var4.a((byte) 83, (Behaviour) (var5));
+          var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (ce) (var6.a(17, 81));
           var7.b(4, (byte) 23);
@@ -339,7 +339,7 @@ final class AllPlatformsMazeComponent extends MazeComponent {
           var4.b((byte) -11, 2097152, 2097152);
           var5 = new PlatformBehaviour(param0, param1);
           var5.b(-5, 0);
-          var4.a((byte) 83, (Behaviour) (var5));
+          var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (ce) (var6.a(17, 87));
           var7.b(4, (byte) 23);

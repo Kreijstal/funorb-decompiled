@@ -93,7 +93,7 @@ final class ArrowShooterComponent extends ShooterComponent {
           var9 = new Trap(param2, param0);
           var9.b((byte) -11, this.field_k, this.field_l);
           var9.h(param1, 0);
-          var9.a((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
+          var9.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new WeaponShooterBehaviour(param2, param0);
           var6 = ci.a(0, -1);
           var6.a(91, true);
@@ -105,7 +105,7 @@ final class ArrowShooterComponent extends ShooterComponent {
           }
           var5.a(var6, (byte) 66);
           this.a((byte) 43, var5, param2);
-          var9.a((byte) 83, (Behaviour) (var5));
+          var9.addBehaviour((byte) 83, (Behaviour) (var5));
           var7 = rm.field_a;
           var8 = (boa) (var7.a(7, 86));
           var8.b(127, 12);

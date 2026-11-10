@@ -198,7 +198,7 @@ final class v {
               if (this.field_a.b(param1 - 1) < 8) {
                 break;
               }
-              var5_ref_la = var8.a(0, this.field_d);
+              var5_ref_la = var8.getPlayerRoom(0, this.field_d);
               stackIn_12_0 = this;
               stackIn_12_1 = -115;
               stackIn_12_2 = var8.field_A;
@@ -428,7 +428,7 @@ final class v {
         int var4 = TombRacer.field_G ? 1 : 0;
         try {
           while (!this.field_a.b((byte) -26)) {
-            var3 = param0.a(0, this.field_d);
+            var3 = param0.getPlayerRoom(0, this.field_d);
             this.a(-92, param0.field_A, 0, var3 == null ? 0 : var3.q((byte) -82) + 1, 0);
           }
           int var3_int = 110 % ((param1 - 27) / 62);
@@ -538,7 +538,7 @@ final class v {
           }
           var4 = new S2CEventPacket();
           this.a(var4, -4, param1);
-          param0.field_k.a((byte) 121, var4.getEvent((byte) 118));
+          param0.field_k.deliverPendingEvent((byte) 121, var4.getEvent((byte) 118));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "v.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

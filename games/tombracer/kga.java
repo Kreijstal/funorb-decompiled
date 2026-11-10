@@ -11,7 +11,7 @@ final class kga extends dg {
     static dn field_o;
     static eua field_n;
 
-    final void a(gr param0, WorldBody param1, byte param2) {
+    final void a(TrapPart param0, WorldBody param1, byte param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -49,7 +49,7 @@ final class kga extends dg {
         }
     }
 
-    final void a(WorldBody param0, int param1, gr param2) {
+    final void a(WorldBody param0, int param1, TrapPart param2) {
         int var5 = 0;
         int var6 = 0;
         MiscItemBehaviour var7 = null;

@@ -136,7 +136,7 @@ final class PlatformMazeComponent extends MazeComponent {
           var4.b((byte) -11, 2097152, 2097152);
           var5 = new PlatformBehaviour(param0, param1);
           var5.b(-5, this.field_K);
-          var4.a((byte) 83, (Behaviour) (var5));
+          var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (ce) (var6.a(17, 102));
           var7.b(0, (byte) 23);

@@ -50,18 +50,18 @@ final class BlockComponent extends kna {
           var15.b((byte) 17, false);
           var15.a(1, (byte) -12, true);
           var9 = new SimpleBlockBehaviour(param2, param0);
-          var15.a((byte) 83, (Behaviour) (var9));
+          var15.addBehaviour((byte) 83, (Behaviour) (var9));
           var15.d(var6, -1);
           var10 = new DamageableBehaviour(param2, param0);
           var10.b(1, var8, param1 - 3);
           var11 = var10.j((byte) -106);
           var11.a(false, 67);
           var11.a(0, -17075, true);
-          var15.a((byte) 83, (Behaviour) (var10));
+          var15.addBehaviour((byte) 83, (Behaviour) (var10));
           var12 = rm.field_a;
           var13 = (boa) (var12.a(7, 92));
           var13.b(107, var7);
-          var15.a((gr) null, (byte) 124, var13);
+          var15.a((TrapPart) null, (byte) 124, var13);
           stackIn_8_0 = var15;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

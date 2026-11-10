@@ -104,7 +104,7 @@ final class ck {
           gv.field_w = new String[5];
           gv.field_w[0] = kda.field_cd;
           gv.field_w[2] = un.field_q;
-          gv.field_w[3] = pta.field_d;
+          gv.field_w[3] = ObjectPool.field_d;
           gv.field_w[4] = PacketBuffer.field_f;
           gv.field_w[1] = cha.field_b;
           rra.field_e = new jea(0L, (jea) null);
@@ -507,8 +507,8 @@ final class ck {
                       } else {
                         stackIn_22_0 = var15 << -var7;
                       }
-                      var16 = -stackIn_22_0 + c.field_g.length - 1;
-                      var17 = c.field_g[var16];
+                      var16 = -stackIn_22_0 + PooledObject.field_g.length - 1;
+                      var17 = PooledObject.field_g[var16];
                       while (true) {
                         if (var17 >> 4 != 0) {
                           var16--;
@@ -518,14 +518,14 @@ final class ck {
                             System.err.println("Out of range!");
                             break;
                           }
-                          var17 = c.field_g[var16];
+                          var17 = PooledObject.field_g[var16];
                           continue;
                         }
                         stackIn_33_0Lifetime1 = var16 << 4;
                         stackIn_33_1Lifetime1 = var17;
                         var18 = stackIn_33_0Lifetime1 + stackIn_33_1Lifetime1;
                         aia.field_t[var18] = var8;
-                        c.field_g[var16] = 1 + var17;
+                        PooledObject.field_g[var16] = 1 + var17;
                         if (param2.field_K > 0 &&
                           null != param2.field_q) {
                           dupTemp$0 = param2.field_q[var8];

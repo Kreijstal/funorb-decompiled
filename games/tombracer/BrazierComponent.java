@@ -147,20 +147,20 @@ final class BrazierComponent extends kna {
           var9.b((byte) -11, this.field_k, this.field_l);
           var9.a((byte) -3, 5);
           var5 = new SimpleBlockBehaviour(param2, param0);
-          var9.a((byte) 83, (Behaviour) (var5));
+          var9.addBehaviour((byte) 83, (Behaviour) (var5));
           var9.b((byte) 17, false);
           var9.a(1, (byte) -12, false);
           var9.h(3, param1 - 3);
           var6 = rm.field_a;
           var7 = (am) (var6.a(4, 91));
           var7.b(0, (byte) 77);
-          var9.a((gr) null, (byte) 124, var7);
+          var9.a((TrapPart) null, (byte) 124, var7);
           var8 = (gaa) (var6.a(5, 74));
           var8.a(64, 122);
           var8.a(true, 16633231);
           var8.b(1, 128);
           var8.a(0, param1, 1, true);
-          var9.a((gr) null, (byte) 124, var8);
+          var9.a((TrapPart) null, (byte) 124, var8);
           stackIn_1_0 = var9;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

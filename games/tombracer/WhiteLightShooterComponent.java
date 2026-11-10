@@ -160,11 +160,11 @@ final class WhiteLightShooterComponent extends ShooterComponent {
           var4 = new Trap(param2, param0);
           var4.b((byte) -11, this.field_k, this.field_l);
           var4.h(param1, 0);
-          var4.a((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
+          var4.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new BeamShooterBehaviour(param2, param0);
           var5.a(new Effect(6, 10), true);
           this.a((byte) 43, var5, param2);
-          var4.a((byte) 83, (Behaviour) (var5));
+          var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (boa) (var6.a(7, param1 ^ 77));
           var7.b(113, 15);

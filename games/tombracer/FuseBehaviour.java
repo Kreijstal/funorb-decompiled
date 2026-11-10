@@ -130,7 +130,7 @@ final class FuseBehaviour extends Behaviour {
         }
     }
 
-    final void a(boolean param0, Trap param1) {
+    final void attachToTrap(boolean param0, Trap param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -140,7 +140,7 @@ final class FuseBehaviour extends Behaviour {
         RuntimeException var3 = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          super.a(param0, param1);
+          super.attachToTrap(param0, param1);
           param1.b((byte) -112, 4);
           if (!param0) {
             this.field_x = (kpa) null;
@@ -179,7 +179,7 @@ final class FuseBehaviour extends Behaviour {
         if (param0 != -67) {
           this.field_q = (kpa) null;
         }
-        this.b(true).a(124, this.field_g.getY(param0 ^ -9715), var2, this.field_g.getHeight((byte) 55) + this.field_n * 2, this.field_g.getWidth(-107) + 2 * this.field_n, this.field_g.getX(3));
+        this.b(true).a(124, this.trap.getY(param0 ^ -9715), var2, this.trap.getHeight((byte) 55) + this.field_n * 2, this.trap.getWidth(-107) + 2 * this.field_n, this.trap.getX(3));
         this.c(false);
     }
 

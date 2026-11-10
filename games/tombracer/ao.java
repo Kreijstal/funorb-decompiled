@@ -28,7 +28,7 @@ final class ao extends dg {
         }
     }
 
-    final void a(gr param0, WorldBody param1, byte param2) {
+    final void a(TrapPart param0, WorldBody param1, byte param2) {
         try {
           super.a(param0, param1, param2);
         } catch (RuntimeException runtimeException) {

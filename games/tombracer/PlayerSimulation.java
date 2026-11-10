@@ -6,7 +6,7 @@ final class PlayerSimulation {
     private int[] field_j;
     private int field_e;
     Player player;
-    eha field_i;
+    SimulationObserver observer;
     private boolean field_a;
     Room[] rooms;
     private int field_l;
@@ -14,10 +14,10 @@ final class PlayerSimulation {
     int tick;
     static String field_n;
     private boolean field_f;
-    private int field_m;
+    private int roomCount;
     private int field_d;
 
-    private final Room a(byte param0, Room param1) {
+    private final Room getNextRoom(byte param0, Room param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         Room stackIn_2_0 = null;
@@ -31,7 +31,7 @@ final class PlayerSimulation {
             stackIn_2_0 = (Room) null;
             return stackIn_2_0;
           }
-          var3_int = param1.c(115);
+          var3_int = param1.getCourseIndex(115);
           if (var3_int >= this.rooms.length - 1) {
             return null;
           }
@@ -64,7 +64,7 @@ final class PlayerSimulation {
     }
 
     final void a(Room param0, int param1) {
-        eha var3 = null;
+        SimulationObserver var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -76,7 +76,7 @@ final class PlayerSimulation {
           }
           this.field_f = false;
           this.field_h = true;
-          var3 = this.m(9262);
+          var3 = this.getObserver(9262);
           if (var3 != null) {
             var3.a(35, param0);
           }
@@ -103,13 +103,13 @@ final class PlayerSimulation {
           if (this.c(param0, -1)) {
             return true;
           }
-          stackIn_6_0 = !(!this.rooms[this.player.r(param1 ^ -10957)].b(param0, (byte) -44));
+          stackIn_6_0 = !(!this.rooms[this.player.getCourseIndex(param1 ^ -10957)].b(param0, (byte) -44));
           return stackIn_6_0;
         }
         if (this.c(param0, -1)) {
           stackIn_12_0 = true;
         } else {
-          if (this.rooms[this.player.r(param1 ^ -10957)].b(param0, (byte) -44)) {
+          if (this.rooms[this.player.getCourseIndex(param1 ^ -10957)].b(param0, (byte) -44)) {
             return true;
           }
           stackIn_12_0 = false;
@@ -131,7 +131,7 @@ final class PlayerSimulation {
         if (param0 > -2) {
           return 8;
         }
-        return this.field_m;
+        return this.roomCount;
     }
 
     final boolean g(int param0) {
@@ -166,14 +166,14 @@ final class PlayerSimulation {
     }
 
     final void a(Player param0, int param1, int param2, int param3) {
-        eha var5 = null;
+        SimulationObserver var5 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
         try {
-          var5 = this.m(9262);
+          var5 = this.getObserver(9262);
           if (var5 != null) {
             var5.a(15, param0, param1, param0.getRoom((byte) -96), this.tick, param3);
           }
@@ -213,7 +213,7 @@ final class PlayerSimulation {
 
     final boolean j(int param0) {
         if (param0 != 0) {
-          this.field_m = 36;
+          this.roomCount = 36;
           return this.field_a;
         }
         return this.field_a;
@@ -238,7 +238,7 @@ final class PlayerSimulation {
         Room discarded$2 = null;
         if (param0 != -1) {
           Room var4 = (Room) null;
-          discarded$2 = this.a((byte) -105, (Room) null);
+          discarded$2 = this.getNextRoom((byte) -105, (Room) null);
           if (this.field_a) {
             return;
           }
@@ -274,18 +274,18 @@ final class PlayerSimulation {
         Room var2;
         Room var3;
         Room var5;
-        eha var6;
-        eha var7;
+        SimulationObserver var6;
+        SimulationObserver var7;
         Room var3Lifetime1;
-        var2 = this.a((byte) 123);
+        var2 = this.getCurrentRoom((byte) 123);
         if (param0 == -1) {
           var2.g(58);
-          var3 = this.a((byte) 104, var2);
+          var3 = this.getNextRoom((byte) 104, var2);
           if (this.player.l(false) &&
             var3 == null) {
-            var3 = this.a(param0 - 114);
+            var3 = this.getFirstRoom(param0 - 114);
           }
-          var7 = this.m(param0 + 9263);
+          var7 = this.getObserver(param0 + 9263);
           if (var7 != null) {
             var7.a(this.player, var2, false);
           }
@@ -299,12 +299,12 @@ final class PlayerSimulation {
         var5 = (Room) null;
         this.a((Room) null, -52);
         var2.g(58);
-        var3Lifetime1 = this.a((byte) 104, var2);
+        var3Lifetime1 = this.getNextRoom((byte) 104, var2);
         if (this.player.l(false) &&
           var3Lifetime1 == null) {
-          var3Lifetime1 = this.a(param0 - 114);
+          var3Lifetime1 = this.getFirstRoom(param0 - 114);
         }
-        var6 = this.m(param0 + 9263);
+        var6 = this.getObserver(param0 + 9263);
         if (var6 != null) {
           var6.a(this.player, var2, false);
         }
@@ -357,14 +357,14 @@ final class PlayerSimulation {
     }
 
     final void a(Player param0, int param1) {
-        eha var3 = null;
+        SimulationObserver var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          var3 = this.m(9262);
+          var3 = this.getObserver(9262);
           if (param1 != -1) {
             return;
           }
@@ -418,7 +418,7 @@ final class PlayerSimulation {
         return this.field_j[param0];
     }
 
-    final Room a(int param0) {
+    final Room getFirstRoom(int param0) {
         if (param0 >= -22) {
           this.b(-15);
           return this.rooms[0];
@@ -448,9 +448,9 @@ final class PlayerSimulation {
     final int b(boolean param0, int param1) {
         if (param0) {
           this.a((byte) 29, -34, 71);
-          return iia.d(this.e(param1, 0), this.rooms[this.player.r(-101)].a(-121, param1), 2);
+          return iia.d(this.e(param1, 0), this.rooms[this.player.getCourseIndex(-101)].a(-121, param1), 2);
         }
-        return iia.d(this.e(param1, 0), this.rooms[this.player.r(-101)].a(-121, param1), 2);
+        return iia.d(this.e(param1, 0), this.rooms[this.player.getCourseIndex(-101)].a(-121, param1), 2);
     }
 
     final boolean h(int param0) {
@@ -461,9 +461,9 @@ final class PlayerSimulation {
         return !this.field_a ? true : false;
     }
 
-    final Room a(byte param0) {
+    final Room getCurrentRoom(byte param0) {
         int var2 = -127 / ((param0 - 64) / 59);
-        return this.rooms[this.player.r(-108)];
+        return this.rooms[this.player.getCourseIndex(-108)];
     }
 
     final int f(int param0) {
@@ -483,12 +483,12 @@ final class PlayerSimulation {
         }
     }
 
-    final eha m(int param0) {
+    final SimulationObserver getObserver(int param0) {
         if (param0 != 9262) {
           this.d(36);
-          return this.field_i;
+          return this.observer;
         }
-        return this.field_i;
+        return this.observer;
     }
 
     final void b(int param0, int param1) {
@@ -502,7 +502,7 @@ final class PlayerSimulation {
         return this.rooms[param1];
     }
 
-    PlayerSimulation(eha param0, Player param1, int param2, int param3) {
+    PlayerSimulation(SimulationObserver param0, Player param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -516,9 +516,9 @@ final class PlayerSimulation {
           this.field_e = param2;
           this.player = param1;
           this.field_d = param3;
-          this.field_i = param0;
-          this.field_m = this.field_d + this.field_e;
-          this.rooms = new Room[this.field_m];
+          this.observer = param0;
+          this.roomCount = this.field_d + this.field_e;
+          this.rooms = new Room[this.roomCount];
           for (var5_int = 0; var5_int < this.field_j.length; var5_int++) {
             this.field_j[var5_int] = -1;
           }

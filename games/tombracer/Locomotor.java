@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class Locomotor extends IntrusiveNode implements lj, noa, gr {
+abstract class Locomotor extends IntrusiveNode implements lj, noa, TrapPart {
     private Room field_f;
     boolean field_k;
     private SwitchableId field_g;
-    Trap field_n;
+    Trap trap;
     boolean field_i;
     private SwitchableId field_h;
     static String field_m;
@@ -26,9 +26,9 @@ abstract class Locomotor extends IntrusiveNode implements lj, noa, gr {
         return this.field_k;
     }
 
-    public final Trap f(byte param0) {
+    public final Trap getTrap(byte param0) {
         int var2 = 73 / ((-32 - param0) / 50);
-        return this.field_n;
+        return this.trap;
     }
 
     void a(BitPacketBuffer param0, byte param1) {
@@ -47,12 +47,12 @@ abstract class Locomotor extends IntrusiveNode implements lj, noa, gr {
     public final boolean a(byte param0) {
         if (param0 != 87) {
           field_m = (String) null;
-          if (null != this.field_n) {
+          if (null != this.trap) {
             return this.field_j ? true : false;
           }
           return true;
         }
-        if (null == this.field_n) {
+        if (null == this.trap) {
           return true;
         }
         if (!this.field_j) {
@@ -120,9 +120,9 @@ abstract class Locomotor extends IntrusiveNode implements lj, noa, gr {
     final int d(byte param0) {
         if (param0 >= -43) {
           this.a(-18, true);
-          return this.field_n.O(80);
+          return this.trap.O(80);
         }
-        return this.field_n.O(80);
+        return this.trap.O(80);
     }
 
     void c(byte param0) {
@@ -237,14 +237,14 @@ abstract class Locomotor extends IntrusiveNode implements lj, noa, gr {
     final int a(boolean param0) {
         if (param0) {
           field_m = (String) null;
-          return this.field_n.o((byte) -124);
+          return this.trap.o((byte) -124);
         }
-        return this.field_n.o((byte) -124);
+        return this.trap.o((byte) -124);
     }
 
-    void a(int param0, Trap param1) {
+    void attachToTrap(int param0, Trap param1) {
         try {
-          this.field_n = param1;
+          this.trap = param1;
           if (param0 < 35) {
             this.i((byte) 25);
           }
@@ -257,15 +257,15 @@ abstract class Locomotor extends IntrusiveNode implements lj, noa, gr {
         if (param0 < 105) {
           return (ew) null;
         }
-        return (ew) ((Object) this.field_n.r(0));
+        return (ew) ((Object) this.trap.getRoot(0));
     }
 
     final int b(boolean param0) {
         if (!param0) {
           this.field_i = true;
-          return this.field_n.M(0);
+          return this.trap.M(0);
         }
-        return this.field_n.M(0);
+        return this.trap.M(0);
     }
 
     Locomotor(Room param0, boolean param1) {

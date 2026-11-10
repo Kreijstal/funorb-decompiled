@@ -24,7 +24,7 @@ final class gaa extends dg {
           return;
         }
         this.field_s.a(this.getRenderZ((byte) -123), (byte) 127, this.getRenderY((byte) 105), this.getRenderX((byte) -117));
-        if (this.field_h.h(18407)) {
+        if (this.field_h.isExpired(18407)) {
           this.k(24642);
           return;
         }
@@ -365,7 +365,7 @@ final class gaa extends dg {
         }
     }
 
-    final void a(gr param0, WorldBody param1, byte param2) {
+    final void a(TrapPart param0, WorldBody param1, byte param2) {
         try {
           super.a(param0, param1, param2);
         } catch (RuntimeException runtimeException) {
@@ -434,7 +434,7 @@ final class gaa extends dg {
         try {
           var12 = new byte[param7 * (param2 * param5)];
           var11 = var12;
-          hr.a(param0, param2, 0, 0, param4, var12, param1, param5, param6, param3, param9, param7, param10);
+          Particle.a(param0, param2, 0, 0, param4, var12, param1, param5, param6, param3, param9, param7, param10);
           if (param8 == 4) {
             stackIn_4_0 = var12;
             return stackIn_4_0;

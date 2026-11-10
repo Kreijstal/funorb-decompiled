@@ -14,7 +14,7 @@ interface WorldBody {
 
     public abstract Room getRoom(byte param0);
 
-    public abstract boolean h(int param0);
+    public abstract boolean isExpired(int param0);
 
     public abstract boolean l(int param0);
 

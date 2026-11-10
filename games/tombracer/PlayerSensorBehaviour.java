@@ -28,7 +28,7 @@ final class PlayerSensorBehaviour extends Behaviour implements ut {
     }
 
     private final boolean r(int param0) {
-        int var2 = this.m((byte) 19).g(-25787);
+        int var2 = this.getPlayer((byte) 19).g(-25787);
         int var3 = ua.a(var2 - (4096 + this.field_v), -120);
         var3 = dfa.a(var3, param0, 109);
         if (4096 < var3) {
@@ -37,16 +37,16 @@ final class PlayerSensorBehaviour extends Behaviour implements ut {
         return this.field_u / 2 >= var3 ? true : false;
     }
 
-    final void a(boolean param0, Trap param1) {
+    final void attachToTrap(boolean param0, Trap param1) {
         try {
-          super.a(param0, param1);
+          super.attachToTrap(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "kj.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final boolean l(int param0) {
-        int var2 = this.field_g.g(-25787);
+        int var2 = this.trap.g(-25787);
         int var3 = ua.a(var2 - this.field_v, -113);
         var3 = dfa.a(var3, param0, param0 ^ -8300);
         if (var3 > 4096) {
@@ -95,16 +95,16 @@ final class PlayerSensorBehaviour extends Behaviour implements ut {
         int var5Lifetime1;
         int var6Lifetime1;
         var2 = var2 * var2;
-        Player var3 = this.m((byte) 19);
+        Player var3 = this.getPlayer((byte) 19);
         if (!param0) {
-          var4 = this.field_g.getX(3) - var3.getX(3) >> 16;
-          var5 = this.field_g.getY(9648) - var3.getY(9648) >> 16;
+          var4 = this.trap.getX(3) - var3.getX(3) >> 16;
+          var5 = this.trap.getY(9648) - var3.getY(9648) >> 16;
           var6 = var4 * var4 + var5 * var5;
           return var6 < var2 ? true : false;
         }
         this.field_s = false;
-        var4Lifetime1 = this.field_g.getX(3) - var3.getX(3) >> 16;
-        var5Lifetime1 = this.field_g.getY(9648) - var3.getY(9648) >> 16;
+        var4Lifetime1 = this.trap.getX(3) - var3.getX(3) >> 16;
+        var5Lifetime1 = this.trap.getY(9648) - var3.getY(9648) >> 16;
         var6Lifetime1 = var4Lifetime1 * var4Lifetime1 + var5Lifetime1 * var5Lifetime1;
         return var6Lifetime1 < var2 ? true : false;
     }
@@ -214,15 +214,15 @@ final class PlayerSensorBehaviour extends Behaviour implements ut {
           if (var2 != 0) {
             if (!this.field_t) {
               if (this.field_s) {
-                var6 = this.m((byte) 19);
-                var4 = var6.getX(3) - this.field_g.getX(3);
-                var5 = var6.getY(9648) - this.field_g.getY(9648);
+                var6 = this.getPlayer((byte) 19);
+                var4 = var6.getX(3) - this.trap.getX(3);
+                var5 = var6.getY(9648) - this.trap.getY(9648);
                 this.field_v = qva.a((byte) -94, var5, var4);
               } else {
                 if (this.field_r) {
-                  var7 = this.m((byte) 19);
-                  var4 = var7.getX(3) - this.field_g.getX(3);
-                  var5 = var7.getY(9648) - this.field_g.getY(9648);
+                  var7 = this.getPlayer((byte) 19);
+                  var4 = var7.getX(3) - this.trap.getX(3);
+                  var5 = var7.getY(9648) - this.trap.getY(9648);
                   this.field_v = qva.a((byte) -94, var5, var4);
                 }
               }
@@ -249,15 +249,15 @@ final class PlayerSensorBehaviour extends Behaviour implements ut {
           }
           if (var2 != 0) {
             if (this.field_s) {
-              var9 = this.m((byte) 19);
-              var4 = var9.getX(3) - this.field_g.getX(3);
-              var5 = var9.getY(9648) - this.field_g.getY(9648);
+              var9 = this.getPlayer((byte) 19);
+              var4 = var9.getX(3) - this.trap.getX(3);
+              var5 = var9.getY(9648) - this.trap.getY(9648);
               this.field_v = qva.a((byte) -94, var5, var4);
             } else {
               if (this.field_r) {
-                var8 = this.m((byte) 19);
-                var4 = var8.getX(3) - this.field_g.getX(3);
-                var5 = var8.getY(9648) - this.field_g.getY(9648);
+                var8 = this.getPlayer((byte) 19);
+                var4 = var8.getX(3) - this.trap.getX(3);
+                var5 = var8.getY(9648) - this.trap.getY(9648);
                 this.field_v = qva.a((byte) -94, var5, var4);
                 if (this.field_s) {
                   stackIn_42_0 = (!this.r(8192)) ? 0 : 1;
@@ -307,15 +307,15 @@ final class PlayerSensorBehaviour extends Behaviour implements ut {
           if (var2 != 0) {
             if (!this.field_t) {
               if (this.field_s) {
-                var10 = this.m((byte) 19);
-                var4 = var10.getX(3) - this.field_g.getX(3);
-                var5 = var10.getY(9648) - this.field_g.getY(9648);
+                var10 = this.getPlayer((byte) 19);
+                var4 = var10.getX(3) - this.trap.getX(3);
+                var5 = var10.getY(9648) - this.trap.getY(9648);
                 this.field_v = qva.a((byte) -94, var5, var4);
               } else {
                 if (this.field_r) {
-                  var11 = this.m((byte) 19);
-                  var4 = var11.getX(3) - this.field_g.getX(3);
-                  var5 = var11.getY(9648) - this.field_g.getY(9648);
+                  var11 = this.getPlayer((byte) 19);
+                  var4 = var11.getX(3) - this.trap.getX(3);
+                  var5 = var11.getY(9648) - this.trap.getY(9648);
                   this.field_v = qva.a((byte) -94, var5, var4);
                 }
               }
@@ -367,9 +367,9 @@ final class PlayerSensorBehaviour extends Behaviour implements ut {
             }
           } else {
             if (this.field_s) {
-              var13 = this.m((byte) 19);
-              var4 = var13.getX(3) - this.field_g.getX(3);
-              var5 = var13.getY(9648) - this.field_g.getY(9648);
+              var13 = this.getPlayer((byte) 19);
+              var4 = var13.getX(3) - this.trap.getX(3);
+              var5 = var13.getY(9648) - this.trap.getY(9648);
               this.field_v = qva.a((byte) -94, var5, var4);
               if (var2 != 0 &&
                 this.field_s) {
@@ -399,9 +399,9 @@ final class PlayerSensorBehaviour extends Behaviour implements ut {
               return;
             }
             if (this.field_r) {
-              var12 = this.m((byte) 19);
-              var4 = var12.getX(3) - this.field_g.getX(3);
-              var5 = var12.getY(9648) - this.field_g.getY(9648);
+              var12 = this.getPlayer((byte) 19);
+              var4 = var12.getX(3) - this.trap.getX(3);
+              var5 = var12.getY(9648) - this.trap.getY(9648);
               this.field_v = qva.a((byte) -94, var5, var4);
               if (var2 != 0 &&
                 this.field_s) {
@@ -479,7 +479,7 @@ final class PlayerSensorBehaviour extends Behaviour implements ut {
         if (param0) {
           return false;
         }
-        return this.m((byte) 19).p((byte) -110);
+        return this.getPlayer((byte) 19).p((byte) -110);
     }
 
     static {

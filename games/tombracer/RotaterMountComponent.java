@@ -92,10 +92,10 @@ final class RotaterMountComponent extends kna {
           var8.a((byte) -3, 6);
           var8.b((byte) 17, false);
           var8.g(param1 ^ 109, 2);
-          var8.a((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
+          var8.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new RotateLocomotor(param2, param0);
           var5.a((byte) -124, this.field_F * 8);
-          var8.a(var5, 0);
+          var8.addLocomotor(var5, 0);
           var6 = rm.field_a;
           var7 = (nq) (var6.a(16, 124));
           var7.b(8022, 2);

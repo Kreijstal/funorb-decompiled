@@ -53,7 +53,7 @@ final class fja extends qra {
             !this.field_m) {
             this.field_m = true;
             if (this.field_h.c(false)) {
-              this.field_h.a(new ova(this.field_h), 680);
+              this.field_h.a(new RoomCompletedScreen(this.field_h), 680);
             } else {
               this.field_h.a(new gi(this.field_h), param0 + 600);
             }
@@ -318,9 +318,9 @@ final class fja extends qra {
           if (this.field_h.field_D) {
             return false;
           }
-          var6 = this.field_c.f(this.field_h.field_x, param1 - 25);
+          var6 = this.field_c.getSimulation(this.field_h.field_x, param1 - 25);
           if (param2 == 25) {
-            var6.a((byte) -114).b(7, true);
+            var6.getCurrentRoom((byte) -114).b(7, true);
             return true;
           }
           if (param2 == 24) {
@@ -533,7 +533,7 @@ final class fja extends qra {
                 var11_ref_StringLifetime4 = "";
               }
               ql.field_k.a(var11_ref_StringLifetime4, false);
-              bna.a(oca.field_a, false, c.field_f, ql.field_k, jg.field_a);
+              bna.a(oca.field_a, false, PooledObject.field_f, ql.field_k, jg.field_a);
               ql.field_k.b(ql.field_k.position - var10, (byte) -35);
             } else {
               jg.field_a.position = 0;
@@ -556,7 +556,7 @@ final class fja extends qra {
               ql.field_k.i(16, 0);
               ql.field_k.position = ql.field_k.position + 1;
               var9 = ql.field_k.position;
-              bna.a(oca.field_a, false, c.field_f, ql.field_k, jg.field_a);
+              bna.a(oca.field_a, false, PooledObject.field_f, ql.field_k, jg.field_a);
               ql.field_k.d(ql.field_k.position - var9, (byte) -115);
             }
             bl.a(-1, -1);

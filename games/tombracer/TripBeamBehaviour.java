@@ -148,10 +148,10 @@ final class TripBeamBehaviour extends Behaviour implements ut {
             this.field_s = var3;
           }
         }
-        this.field_x = this.field_g.g(-25787) >> 2;
+        this.field_x = this.trap.g(-25787) >> 2;
         this.field_E = MouseInputHandler.a((byte) 102, this.field_x);
         this.field_o = bua.a(0, this.field_x);
-        var6 = this.field_g.P(0) << 16;
+        var6 = this.trap.P(0) << 16;
         if (!this.field_D) {
           this.q((byte) 92);
           stackIn_28_0 = var11;
@@ -160,16 +160,16 @@ final class TripBeamBehaviour extends Behaviour implements ut {
           } else {
             stackIn_29_1 = 4;
           }
-          ((Room) (Object) stackIn_28_0).a(stackIn_29_1, this.field_g, -44, this.field_u, this.e(6), this.field_z);
+          ((Room) (Object) stackIn_28_0).a(stackIn_29_1, this.trap, -44, this.field_u, this.e(6), this.field_z);
           var4 = this.a(this.field_u, (byte) 72);
           this.q((byte) 92);
-          var11.a(1, this.field_g, -91, this.field_u, this.e(6), this.field_z);
+          var11.a(1, this.trap, -91, this.field_u, this.e(6), this.field_z);
           var11.b(false).a((byte) 119, this.field_u, this.field_z);
           var7_ref_pc = this.field_u;
           while (var7_ref_pc.field_h != null) {
             var7_ref_pc = var7_ref_pc.field_h;
           }
-          var11.b(false).a(var7_ref_pc, this.field_g, (byte) -119);
+          var11.b(false).a(var7_ref_pc, this.trap, (byte) -119);
           var5 = this.a(this.field_u, (byte) -65);
         } else {
           this.q((byte) 92);
@@ -439,9 +439,9 @@ final class TripBeamBehaviour extends Behaviour implements ut {
         return false;
     }
 
-    final void a(boolean param0, Trap param1) {
+    final void attachToTrap(boolean param0, Trap param1) {
         try {
-          super.a(param0, param1);
+          super.attachToTrap(param0, param1);
           this.field_p = new mma(0, 16777215, this.field_u, param1.P(0));
           if (!param0) {
             this.field_u = (pc) null;
@@ -465,11 +465,11 @@ final class TripBeamBehaviour extends Behaviour implements ut {
     }
 
     private final void q(byte param0) {
-        int var2 = this.field_g.getX(3) + gqa.a(this.field_E, (byte) 24, this.field_g.getWidth(-31) / 2);
-        int var3 = this.field_g.getY(param0 + 9556) + gqa.a(this.field_o, (byte) 24, this.field_g.getWidth(-64) / 2);
+        int var2 = this.trap.getX(3) + gqa.a(this.field_E, (byte) 24, this.trap.getWidth(-31) / 2);
+        int var3 = this.trap.getY(param0 + 9556) + gqa.a(this.field_o, (byte) 24, this.trap.getWidth(-64) / 2);
         this.field_u.a(var2, var2 + gqa.a(this.field_E, (byte) 24, this.field_s), var3, gqa.a(this.field_o, (byte) 24, this.field_s) + var3, 44);
         this.field_u.field_b = this.field_s;
-        this.field_u.field_i = this.field_g.P(param0 ^ 92) << 16;
+        this.field_u.field_i = this.trap.P(param0 ^ 92) << 16;
         if (param0 == 92) {
           return;
         }

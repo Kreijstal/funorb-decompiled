@@ -97,11 +97,11 @@ final class GasTrapComponent extends kna {
           var13.b((byte) 17, true);
           var13.a(1, (byte) -12, true);
           var5 = new SimpleBlockBehaviour(param2, param0);
-          var13.a((byte) 83, (Behaviour) (var5));
+          var13.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = new TimeSwitchBehaviour(param2, param0);
           var6.a(new mg(50 * this.field_I >> 16), (byte) -105);
           var6.k((byte) -91).b(1, 97);
-          var13.a((byte) 83, (Behaviour) (var6));
+          var13.addBehaviour((byte) 83, (Behaviour) (var6));
           var7 = new Trap(param2, true);
           var8 = param2.getWidth((byte) -86);
           var9 = param2.getHeight(-127);
@@ -112,7 +112,7 @@ final class GasTrapComponent extends kna {
           var10 = new SimpleBlockBehaviour(param2, true);
           var10.b((byte) -106, true);
           var10.a(16, (byte) -22);
-          var7.a((byte) 83, (Behaviour) (var10));
+          var7.addBehaviour((byte) 83, (Behaviour) (var10));
           var7.m(-45);
           param2.a(var7, (byte) 32);
           var6.k((byte) -115).h(1).a(9, new lj[]{(lj) ((Object) var7)});

@@ -110,7 +110,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         return (ew) ((Object) this.o((byte) -34));
     }
 
-    public final boolean h(int param0) {
+    public final boolean isExpired(int param0) {
         mka discarded$0 = null;
         if (param0 != 18407) {
           discarded$0 = this.a(20, 6);

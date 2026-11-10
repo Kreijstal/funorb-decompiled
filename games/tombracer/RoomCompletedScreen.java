@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ova extends me {
+final class RoomCompletedScreen extends me {
     static String field_j;
     static String field_k;
 
@@ -33,7 +33,7 @@ final class ova extends me {
           var4 += 20;
           oka.a("Total Time: " + dea.a(this.field_g.simulations[0].tick, (byte) -8), var2, kn.field_p, -1, var4, 320, 0);
           var4 += 20;
-          oka.a("Deaths: " + var5.v(0), var2, kn.field_p, -1, var4, 320, 0);
+          oka.a("Deaths: " + var5.getDeathCount(0), var2, kn.field_p, -1, var4, 320, 0);
           return;
         }
     }
@@ -49,11 +49,11 @@ final class ova extends me {
     final void a(byte param0) {
         if (param0 > -107) {
           lu var3 = (lu) null;
-          ova.a((byte) 21, true, 36, (lu) null, true);
+          RoomCompletedScreen.a((byte) 21, true, 36, (lu) null, true);
         }
     }
 
-    ova(qh param0) {
+    RoomCompletedScreen(qh param0) {
         super(param0);
     }
 
@@ -132,7 +132,7 @@ final class ova extends me {
           if (null != ji.field_d) {
             ql.field_k.a(ji.field_d, (byte) 0);
           }
-          bna.a(oca.field_a, false, c.field_f, ql.field_k, jg.field_a);
+          bna.a(oca.field_a, false, PooledObject.field_f, ql.field_k, jg.field_a);
           ql.field_k.b(ql.field_k.position - var5_int, (byte) 114);
           bl.a(-1, -1);
           return;

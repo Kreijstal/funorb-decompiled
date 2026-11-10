@@ -38,7 +38,7 @@ final class SweeperMountComponent extends kna {
           var9.a((byte) -3, 6);
           var9.b((byte) 17, false);
           var9.g(param1 ^ 126, 2);
-          var9.a((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
+          var9.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new SweepRotateLocomotor(param2, param0);
           var5.a((byte) -35, 8 * this.field_G);
           var6 = 2048;
@@ -50,7 +50,7 @@ final class SweeperMountComponent extends kna {
               var5.a(true, var6 * 2);
             }
           }
-          var9.a(var5, 0);
+          var9.addLocomotor(var5, 0);
           var7 = rm.field_a;
           var8 = (nq) (var7.a(16, param1 ^ 107));
           var8.b(param1 ^ 8021, 2);

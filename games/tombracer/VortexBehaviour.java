@@ -45,16 +45,16 @@ final class VortexBehaviour extends Behaviour {
         int var24;
         int var25;
         int var26;
-        hr var27;
-        hr var28;
+        Particle var27;
+        Particle var28;
         var26 = TombRacer.field_G ? 1 : 0;
-        var2 = this.field_g.getX(3);
+        var2 = this.trap.getX(3);
         if (param0 != 5418) {
           field_u = (String) null;
         }
-        var3 = this.field_g.getY(param0 + 4230);
-        var4 = this.field_g.getWidth(param0 - 5487);
-        var5 = this.field_g.getHeight((byte) 55);
+        var3 = this.trap.getY(param0 + 4230);
+        var4 = this.trap.getWidth(param0 - 5487);
+        var5 = this.trap.getHeight((byte) 55);
         var7 = this.field_p << 16;
         var8 = this.field_r << 16;
         var9 = var4 >> 17;
@@ -63,15 +63,15 @@ final class VortexBehaviour extends Behaviour {
         var12 = this.o((byte) 46).a(8192, 0);
         var13 = MouseInputHandler.a((byte) 98, var12 >> 2);
         var14 = bua.a(0, var12 >> 2);
-        var16 = this.field_g.P(0);
+        var16 = this.trap.P(0);
         if (this.field_q) {
           var17_int = 1 + this.o((byte) 46).a(5, 0);
-          var28 = this.b(true).a(var13 * var11 / var17_int + var2, var3 + var11 * var14 / var17_int, (byte) 100, var16);
+          var28 = this.b(true).spawnParticle(var13 * var11 / var17_int + var2, var3 + var11 * var14 / var17_int, (byte) 100, var16);
           var28.a(false, 2, 3, 4, 20);
           var28.b(param0 ^ 5392, -(var14 * (this.field_p + this.field_r)), -(var13 * (this.field_p + this.field_r)) / var17_int);
         } else {
           var17_int = 1 + this.o((byte) 46).a(5, 0);
-          var27 = this.b(true).a(var2, var3, (byte) 100, var16);
+          var27 = this.b(true).spawnParticle(var2, var3, (byte) 100, var16);
           var27.a(false, 2, 3, 4, 25);
           var27.b(param0 - 5361, var14 * this.field_r / var17_int, this.field_r * var13 / var17_int);
         }
@@ -79,11 +79,11 @@ final class VortexBehaviour extends Behaviour {
         var18 = var17;
         for (var19 = 0; var19 < var18.length; var19++) {
           var20 = var18[var19];
-          if (this.field_g != var20 &&
-            !this.field_g.a(var20, true)) {
+          if (this.trap != var20 &&
+            !this.trap.a(var20, true)) {
             var21 = var20.getX(3);
             var22 = var20.getY(9648);
-            if (this.field_g.a((byte) 110, var22, var21, var20.getHeight((byte) 55), var20.getWidth(-40))) {
+            if (this.trap.a((byte) 110, var22, var21, var20.getHeight((byte) 55), var20.getWidth(-40))) {
               var23 = var21 - var2 >> 16;
               var24 = -var3 + var22 >> 16;
               var25 = ConstrainToRectangleLocomotor.a(var24, var23, 124);

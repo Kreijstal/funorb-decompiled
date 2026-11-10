@@ -324,8 +324,8 @@ abstract class wv extends dfa {
             }
             if (SecondaryNodeDequeIterator.field_a != null &&
               null != SecondaryNodeDequeIterator.field_a.field_k &&
-              SecondaryNodeDequeIterator.field_a.field_k.a(param2 ^ 15283, SecondaryNodeDequeIterator.field_a.l(param2 ^ 15336)) != null) {
-              var4 = (w) (SecondaryNodeDequeIterator.field_a.field_k.a(0, SecondaryNodeDequeIterator.field_a.l(param2 ^ 15326)).field_G);
+              SecondaryNodeDequeIterator.field_a.field_k.getPlayerRoom(param2 ^ 15283, SecondaryNodeDequeIterator.field_a.l(param2 ^ 15336)) != null) {
+              var4 = (w) (SecondaryNodeDequeIterator.field_a.field_k.getPlayerRoom(0, SecondaryNodeDequeIterator.field_a.l(param2 ^ 15326)).field_G);
               if (var4 != null) {
                 var4.a(108, true);
               }

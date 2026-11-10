@@ -131,7 +131,7 @@ final class lfa extends dg {
         }
     }
 
-    final void a(gr param0, WorldBody param1, byte param2) {
+    final void a(TrapPart param0, WorldBody param1, byte param2) {
         try {
           super.a(param0, param1, param2);
           this.field_r = param1.getX(param2 - 33);
@@ -181,7 +181,7 @@ final class lfa extends dg {
           return;
         }
         var3 = (Trap) (this.field_h);
-        if (var3.x(param0 + 15471).i(param0 - 14885)) {
+        if (var3.getSimulation(param0 + 15471).i(param0 - 14885)) {
           return;
         }
         if (param0 == -1) {
@@ -191,7 +191,7 @@ final class lfa extends dg {
           if (this.field_q == 5) {
             return;
           }
-          var8 = var3.field_B;
+          var8 = var3.locomotors;
           discarded$0 = new uja(var8);
           var5 = 0;
           if (var3.getX(3) != this.field_r ||
@@ -206,7 +206,7 @@ final class lfa extends dg {
           if (this.field_q == 5) {
             return;
           }
-          var7 = var3.field_B;
+          var7 = var3.locomotors;
           discarded$1 = new uja(var7);
           var5 = 0;
           if (var3.getX(3) != this.field_r ||

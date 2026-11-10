@@ -58,9 +58,9 @@ final class SpawnerBehaviour extends Behaviour {
         return this.field_q.a(param2, -65, param1);
     }
 
-    final void a(boolean param0, Trap param1) {
+    final void attachToTrap(boolean param0, Trap param1) {
         try {
-          super.a(param0, param1);
+          super.attachToTrap(param0, param1);
           this.field_r = this.field_p;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wma.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -101,8 +101,8 @@ final class SpawnerBehaviour extends Behaviour {
           if (!this.field_o.c(0)) {
             return;
           }
-          var2 = this.field_g.g(-25787);
-          this.field_q.a(var2, this.field_g.getX(3), this.field_g.getY(9648), 4);
+          var2 = this.trap.g(-25787);
+          this.field_q.a(var2, this.trap.getX(3), this.trap.getY(9648), 4);
           if (this.field_r <= 0) {
             return;
           }
@@ -124,8 +124,8 @@ final class SpawnerBehaviour extends Behaviour {
         if (!this.field_o.c(0)) {
           return;
         }
-        var2Lifetime1 = this.field_g.g(-25787);
-        this.field_q.a(var2Lifetime1, this.field_g.getX(3), this.field_g.getY(9648), 4);
+        var2Lifetime1 = this.trap.g(-25787);
+        this.field_q.a(var2Lifetime1, this.trap.getX(3), this.trap.getY(9648), 4);
         if (this.field_r <= 0) {
           return;
         }

@@ -38,9 +38,9 @@ abstract class ItemBehaviour extends Behaviour {
         return param0;
     }
 
-    final void a(boolean param0, Trap param1) {
+    final void attachToTrap(boolean param0, Trap param1) {
         try {
-          super.a(param0, param1);
+          super.attachToTrap(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pd.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -76,12 +76,12 @@ abstract class ItemBehaviour extends Behaviour {
             if (this.field_o) {
               return;
             }
-            var4 = this.m((byte) 19);
+            var4 = this.getPlayer((byte) 19);
             if (!this.field_n) {
               if (var4.q(81)) {
                 return;
               }
-              if (!this.field_g.a((byte) 110, var4.getY(9648), var4.getX(3), var4.getHeight((byte) 55), var4.getWidth(-125))) {
+              if (!this.trap.a((byte) 110, var4.getY(9648), var4.getX(3), var4.getHeight((byte) 55), var4.getWidth(-125))) {
                 return;
               }
               if (this.a(param0 - 5533, var4)) {
@@ -95,7 +95,7 @@ abstract class ItemBehaviour extends Behaviour {
               if (var4.q(102)) {
                 return;
               }
-              if (this.field_g.a((byte) 110, var4.getY(9648), var4.getX(3), var4.getHeight((byte) 55), var4.getWidth(-63))) {
+              if (this.trap.a((byte) 110, var4.getY(9648), var4.getX(3), var4.getHeight((byte) 55), var4.getWidth(-63))) {
                 return;
               }
               this.field_n = false;
@@ -108,12 +108,12 @@ abstract class ItemBehaviour extends Behaviour {
               if (this.field_o) {
                 return;
               }
-              var5 = this.m((byte) 19);
+              var5 = this.getPlayer((byte) 19);
               if (!this.field_n) {
                 if (var5.q(81)) {
                   return;
                 }
-                if (!this.field_g.a((byte) 110, var5.getY(9648), var5.getX(3), var5.getHeight((byte) 55), var5.getWidth(-125))) {
+                if (!this.trap.a((byte) 110, var5.getY(9648), var5.getX(3), var5.getHeight((byte) 55), var5.getWidth(-125))) {
                   return;
                 }
                 if (this.a(param0 - 5533, var5)) {
@@ -127,7 +127,7 @@ abstract class ItemBehaviour extends Behaviour {
                 if (var5.q(102)) {
                   return;
                 }
-                if (this.field_g.a((byte) 110, var5.getY(9648), var5.getX(3), var5.getHeight((byte) 55), var5.getWidth(-63))) {
+                if (this.trap.a((byte) 110, var5.getY(9648), var5.getX(3), var5.getHeight((byte) 55), var5.getWidth(-63))) {
                   return;
                 }
                 this.field_n = false;
@@ -140,13 +140,13 @@ abstract class ItemBehaviour extends Behaviour {
           if (this.field_o) {
             return;
           }
-          var6 = this.m((byte) 19);
+          var6 = this.getPlayer((byte) 19);
           var3 = var6;
           if (this.field_n) {
             if (var6.q(102)) {
               return;
             }
-            if (this.field_g.a((byte) 110, var6.getY(9648), var6.getX(3), var6.getHeight((byte) 55), var6.getWidth(-63))) {
+            if (this.trap.a((byte) 110, var6.getY(9648), var6.getX(3), var6.getHeight((byte) 55), var6.getWidth(-63))) {
               return;
             }
             this.field_n = false;
@@ -155,7 +155,7 @@ abstract class ItemBehaviour extends Behaviour {
           if (var6.q(81)) {
             return;
           }
-          if (!this.field_g.a((byte) 110, var6.getY(9648), var6.getX(3), var6.getHeight((byte) 55), var6.getWidth(-125))) {
+          if (!this.trap.a((byte) 110, var6.getY(9648), var6.getX(3), var6.getHeight((byte) 55), var6.getWidth(-125))) {
             return;
           }
           if (!this.a(param0 - 5533, var6)) {
@@ -171,12 +171,12 @@ abstract class ItemBehaviour extends Behaviour {
           if (this.field_o) {
             return;
           }
-          var7 = this.m((byte) 19);
+          var7 = this.getPlayer((byte) 19);
           if (this.field_n) {
             if (var7.q(102)) {
               return;
             }
-            if (this.field_g.a((byte) 110, var7.getY(9648), var7.getX(3), var7.getHeight((byte) 55), var7.getWidth(-63))) {
+            if (this.trap.a((byte) 110, var7.getY(9648), var7.getX(3), var7.getHeight((byte) 55), var7.getWidth(-63))) {
               return;
             }
             this.field_n = false;
@@ -185,7 +185,7 @@ abstract class ItemBehaviour extends Behaviour {
           if (var7.q(81)) {
             return;
           }
-          if (!this.field_g.a((byte) 110, var7.getY(9648), var7.getX(3), var7.getHeight((byte) 55), var7.getWidth(-125))) {
+          if (!this.trap.a((byte) 110, var7.getY(9648), var7.getX(3), var7.getHeight((byte) 55), var7.getWidth(-125))) {
             return;
           }
           if (!this.a(param0 - 5533, var7)) {
@@ -201,13 +201,13 @@ abstract class ItemBehaviour extends Behaviour {
           if (this.field_o) {
             return;
           }
-          var8 = this.m((byte) 19);
+          var8 = this.getPlayer((byte) 19);
           var3Lifetime1 = var8;
           if (this.field_n) {
             if (var8.q(102)) {
               return;
             }
-            if (this.field_g.a((byte) 110, var8.getY(9648), var8.getX(3), var8.getHeight((byte) 55), var8.getWidth(-63))) {
+            if (this.trap.a((byte) 110, var8.getY(9648), var8.getX(3), var8.getHeight((byte) 55), var8.getWidth(-63))) {
               return;
             }
             this.field_n = false;
@@ -216,7 +216,7 @@ abstract class ItemBehaviour extends Behaviour {
           if (var8.q(81)) {
             return;
           }
-          if (!this.field_g.a((byte) 110, var8.getY(9648), var8.getX(3), var8.getHeight((byte) 55), var8.getWidth(-125))) {
+          if (!this.trap.a((byte) 110, var8.getY(9648), var8.getX(3), var8.getHeight((byte) 55), var8.getWidth(-125))) {
             return;
           }
           if (!this.a(param0 - 5533, var8)) {
@@ -231,10 +231,10 @@ abstract class ItemBehaviour extends Behaviour {
         this.field_r = this.field_r - 1;
         if (this.field_r != 0) {
           if (!this.field_o) {
-            var10 = this.m((byte) 19);
+            var10 = this.getPlayer((byte) 19);
             if (!this.field_n) {
               if (!var10.q(81) &&
-                this.field_g.a((byte) 110, var10.getY(9648), var10.getX(3), var10.getHeight((byte) 55), var10.getWidth(-125))) {
+                this.trap.a((byte) 110, var10.getY(9648), var10.getX(3), var10.getHeight((byte) 55), var10.getWidth(-125))) {
                 if (!this.a(param0 - 5533, var10)) {
                   return;
                 }
@@ -246,7 +246,7 @@ abstract class ItemBehaviour extends Behaviour {
               }
             } else {
               if (!var10.q(102) &&
-                !this.field_g.a((byte) 110, var10.getY(9648), var10.getX(3), var10.getHeight((byte) 55), var10.getWidth(-63))) {
+                !this.trap.a((byte) 110, var10.getY(9648), var10.getX(3), var10.getHeight((byte) 55), var10.getWidth(-63))) {
                 this.field_n = false;
                 return;
               }
@@ -257,10 +257,10 @@ abstract class ItemBehaviour extends Behaviour {
         this.field_o = false;
         this.g((byte) 3);
         if (!this.field_o) {
-          var9 = this.m((byte) 19);
+          var9 = this.getPlayer((byte) 19);
           if (!this.field_n) {
             if (!var9.q(81) &&
-              this.field_g.a((byte) 110, var9.getY(9648), var9.getX(3), var9.getHeight((byte) 55), var9.getWidth(-125))) {
+              this.trap.a((byte) 110, var9.getY(9648), var9.getX(3), var9.getHeight((byte) 55), var9.getWidth(-125))) {
               if (!this.a(param0 - 5533, var9)) {
                 return;
               }
@@ -272,7 +272,7 @@ abstract class ItemBehaviour extends Behaviour {
             }
           } else {
             if (!var9.q(102) &&
-              !this.field_g.a((byte) 110, var9.getY(9648), var9.getX(3), var9.getHeight((byte) 55), var9.getWidth(-63))) {
+              !this.trap.a((byte) 110, var9.getY(9648), var9.getX(3), var9.getHeight((byte) 55), var9.getWidth(-63))) {
               this.field_n = false;
               return;
             }

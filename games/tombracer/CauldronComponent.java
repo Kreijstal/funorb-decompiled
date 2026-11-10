@@ -25,7 +25,7 @@ final class CauldronComponent extends SwitchComponent {
           var10.e(false, param1 + 112);
           var10.b((byte) 17, false);
           var10.a((byte) -3, 6);
-          var10.a((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
+          var10.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new EffectSwitchBehaviour(param2, param0);
           var5.a(true, 3, (byte) -122);
           var5.a(true, 4, -81);
@@ -34,7 +34,7 @@ final class CauldronComponent extends SwitchComponent {
           var6 = var5.k((byte) -101);
           var7 = 25;
           var6.a(var7, 0, 0, 0, 5, 0);
-          var10.a((byte) 83, (Behaviour) (var5));
+          var10.addBehaviour((byte) 83, (Behaviour) (var5));
           var8 = rm.field_a;
           var9 = (cv) (var8.a(9, 123));
           var9.b(1, (byte) -112);

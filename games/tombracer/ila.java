@@ -238,7 +238,7 @@ final class ila {
               ama.a(8, -1)) {
               PathMoverComponent.field_L = vc.field_q.b(290646880);
               vc.field_q.position = 0;
-              ova.a((byte) 121, param5, param3, fd.field_d, param0);
+              RoomCompletedScreen.a((byte) 121, param5, param3, fd.field_d, param0);
               km.field_p = ria.field_o;
             }
             boolean decompiledFrameRemainder0 = true;

@@ -74,7 +74,7 @@ final class wd implements dv {
               if (var6_int == 2) {
                 param4.a((byte) -3, 10);
                 param4.h(3, 0);
-                param4.a((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param3, param5)));
+                param4.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param3, param5)));
                 param4.e(true, 117);
                 param4.g(119, 1);
                 param4.a(1, (byte) -12, true);
@@ -87,8 +87,8 @@ final class wd implements dv {
                   var8 = new SimpleBlockBehaviour(param3, param5);
                   param4.a(3, (byte) -12, true);
                   var8.b((byte) -107, true);
-                  param4.a((byte) 83, (Behaviour) (var8));
-                  param4.a(new SimpleMoveLocomotor(param3, 131072, 0, 0, param5), 0);
+                  param4.addBehaviour((byte) 83, (Behaviour) (var8));
+                  param4.addLocomotor(new SimpleMoveLocomotor(param3, 131072, 0, 0, param5), 0);
                   param4.b((byte) 17, false);
                   param4.b(false, 11468);
                 } else {
@@ -96,23 +96,23 @@ final class wd implements dv {
                     if (var6_int == 5) {
                       param4.a((byte) -3, 10);
                       param4.h(3, 0);
-                      param4.a((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param3, param5)));
-                      param4.a((byte) 83, (Behaviour) (new BeamShooterBehaviour(param3, param5)));
-                      param4.a(new FacePlayerLocomotor(param3, param5), 0);
+                      param4.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param3, param5)));
+                      param4.addBehaviour((byte) 83, (Behaviour) (new BeamShooterBehaviour(param3, param5)));
+                      param4.addLocomotor(new FacePlayerLocomotor(param3, param5), 0);
                     } else {
                       if (var6_int == 6) {
                         param4.a((byte) -3, 20);
                         param4.h(3, 0);
-                        param4.a((byte) 83, (Behaviour) (new CrusherBehaviour(param3, param5)));
+                        param4.addBehaviour((byte) 83, (Behaviour) (new CrusherBehaviour(param3, param5)));
                         var9 = new ApproachPlayerLocomotor(param3, param5);
-                        param4.a(var9, 0);
+                        param4.addLocomotor(var9, 0);
                         var9.c(124, 0);
                       } else {
                         if (var6_int == 7) {
                           param4.a((byte) -3, 2);
                           var10 = new MiscItemBehaviour(param3, param5);
                           var10.a(0, false);
-                          param4.a((byte) 83, (Behaviour) (var10));
+                          param4.addBehaviour((byte) 83, (Behaviour) (var10));
                           param4.b(false, 11468);
                           param4.b((byte) 17, false);
                         }
@@ -121,22 +121,22 @@ final class wd implements dv {
                   } else {
                     param4.a((byte) -3, 10);
                     param4.h(3, 0);
-                    param4.a((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param3, param5)));
+                    param4.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param3, param5)));
                     var6 = new WeaponShooterBehaviour(param3, param5);
                     var6.a(ci.a(2, -1), (byte) 100);
-                    param4.a((byte) 83, (Behaviour) (var6));
-                    param4.a(new RotateLocomotor(param3, param5), 0);
+                    param4.addBehaviour((byte) 83, (Behaviour) (var6));
+                    param4.addLocomotor(new RotateLocomotor(param3, param5), 0);
                   }
                 }
               }
             } else {
               param4.a((byte) -3, 10);
               param4.h(3, 0);
-              param4.a((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param3, param5)));
+              param4.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param3, param5)));
               param4.b((byte) 17, true);
             }
           } else {
-            param4.a((byte) 83, (Behaviour) (new PitBehaviour(param3, param5)));
+            param4.addBehaviour((byte) 83, (Behaviour) (new PitBehaviour(param3, param5)));
           }
           if (param0 > -85) {
             field_c = (jpa) null;

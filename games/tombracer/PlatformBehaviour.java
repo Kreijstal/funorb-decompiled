@@ -35,10 +35,10 @@ final class PlatformBehaviour extends Behaviour {
         }
         int var7 = 0;
         if (param4 >= 79) {
-          return foa.a(param1, param5, this.field_g.getY(9648), param2, -var7 + this.field_g.getWidth(-62), (byte) 75, param0, this.field_g.getHeight((byte) 55) - var7, 16, this.field_g.getX(3));
+          return foa.a(param1, param5, this.trap.getY(9648), param2, -var7 + this.trap.getWidth(-62), (byte) 75, param0, this.trap.getHeight((byte) 55) - var7, 16, this.trap.getX(3));
         }
         this.field_q = -65;
-        return foa.a(param1, param5, this.field_g.getY(9648), param2, -var7 + this.field_g.getWidth(-62), (byte) 75, param0, this.field_g.getHeight((byte) 55) - var7, 16, this.field_g.getX(3));
+        return foa.a(param1, param5, this.trap.getY(9648), param2, -var7 + this.trap.getWidth(-62), (byte) 75, param0, this.trap.getHeight((byte) 55) - var7, 16, this.trap.getX(3));
     }
 
     final boolean g(byte param0) {
@@ -46,7 +46,7 @@ final class PlatformBehaviour extends Behaviour {
           return this.field_u <= 0 ? true : false;
         }
         Trap var3 = (Trap) null;
-        this.a(false, (Trap) null);
+        this.attachToTrap(false, (Trap) null);
         return this.field_u <= 0 ? true : false;
     }
 
@@ -58,9 +58,9 @@ final class PlatformBehaviour extends Behaviour {
         return param0;
     }
 
-    final void a(boolean param0, Trap param1) {
+    final void attachToTrap(boolean param0, Trap param1) {
         try {
-          super.a(param0, param1);
+          super.attachToTrap(param0, param1);
           param1.b((byte) 91, 3);
           param1.a(true, (byte) -119, 1);
           param1.a((byte) -112, true, 2);
@@ -172,7 +172,7 @@ final class PlatformBehaviour extends Behaviour {
           this.field_u = this.field_u - 1;
           if (this.field_u <= 0) {
             this.field_r = true;
-            this.field_g.i(true);
+            this.trap.i(true);
             return;
           }
           return;
@@ -209,9 +209,9 @@ final class PlatformBehaviour extends Behaviour {
           if (param3 != 2) {
             return;
           }
-          if (this.field_g == param0) {
-            var5_int = this.field_g.getX(3) - this.field_g.I(-16423);
-            var6 = this.field_g.getY(9648) - this.field_g.y((byte) -91);
+          if (this.trap == param0) {
+            var5_int = this.trap.getX(3) - this.trap.I(-16423);
+            var6 = this.trap.getY(9648) - this.trap.y((byte) -91);
             if (var5_int != 0) {
               param2.a(125, true, 1, var6, var5_int, 0);
             } else {

@@ -45,7 +45,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         int var12;
         var12 = TombRacer.field_G ? 1 : 0;
         if (this.field_q &&
-          this.m((byte) 19).u(-25561)) {
+          this.getPlayer((byte) 19).u(-25561)) {
           this.field_t = false;
           return;
         }
@@ -74,15 +74,15 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
             this.field_o = var2;
           }
         }
-        var3 = this.field_g.g(-25787) >> 2;
+        var3 = this.trap.g(-25787) >> 2;
         var4 = MouseInputHandler.a((byte) 111, var3);
         var5 = bua.a(0, var3);
-        var6 = 131072 + iia.d(this.field_g.getWidth(param0 - 5467), this.field_g.getHeight((byte) 55), param0 ^ 5416) / 2;
-        var7 = this.field_g.getX(3) + gqa.a(var4, (byte) 24, var6);
-        var8 = this.field_g.getY(9648) + gqa.a(var5, (byte) 24, var6);
+        var6 = 131072 + iia.d(this.trap.getWidth(param0 - 5467), this.trap.getHeight((byte) 55), param0 ^ 5416) / 2;
+        var7 = this.trap.getX(3) + gqa.a(var4, (byte) 24, var6);
+        var8 = this.trap.getY(9648) + gqa.a(var5, (byte) 24, var6);
         this.field_s.a(var7, gqa.a(var4, (byte) 24, this.field_o) + var7, var8, gqa.a(var5, (byte) 24, this.field_o) + var8, 44);
         this.field_s.field_b = this.field_o;
-        this.field_s.field_i = this.field_g.P(param0 ^ param0) << 16;
+        this.field_s.field_i = this.trap.P(param0 ^ param0) << 16;
         var9_int = this.field_r.field_j;
         if (3 == var9_int) {
           this.field_s.field_j = 6;
@@ -94,7 +94,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
           }
         }
         var9 = this.b(true);
-        var10 = var9.a(1, this.field_g, -66, this.field_s, this.e(6), this.field_r) ? 1 : 0;
+        var10 = var9.a(1, this.trap, -66, this.field_s, this.e(6), this.field_r) ? 1 : 0;
         var9.b(false).a((byte) 120, this.field_s, this.field_r);
         if (var10 != 0) {
           var11 = this.field_s;
@@ -103,7 +103,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
               return;
             }
             if (null == var11.field_h) {
-              var9.b(false).a(var11, this.field_g, (byte) -123);
+              var9.b(false).a(var11, this.trap, (byte) -123);
               var9.a(param0 ^ 5463, var11.field_a, this.field_r, 524288, 524288, var11.field_e);
             }
             var11 = var11.field_h;
@@ -462,9 +462,9 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         }
     }
 
-    final void a(boolean param0, Trap param1) {
+    final void attachToTrap(boolean param0, Trap param1) {
         try {
-          super.a(param0, param1);
+          super.attachToTrap(param0, param1);
           this.field_r.a(this.e(6), 2348);
           if (!param0) {
             this.field_q = true;
@@ -477,7 +477,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
     final boolean p(byte param0) {
         if (param0 != 120) {
           Trap var3 = (Trap) null;
-          this.a(true, (Trap) null);
+          this.attachToTrap(true, (Trap) null);
         }
         return false;
     }

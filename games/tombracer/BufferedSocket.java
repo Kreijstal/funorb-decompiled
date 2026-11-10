@@ -101,8 +101,8 @@ final class BufferedSocket implements Runnable {
         if (param1 != 1) {
           field_b = (jea) null;
         }
-        int var10 = ova.a(param7, param8, true, param9, param6);
-        int var11 = ova.a(param4, param3, true, param0, param2);
+        int var10 = RoomCompletedScreen.a(param7, param8, true, param9, param6);
+        int var11 = RoomCompletedScreen.a(param4, param3, true, param0, param2);
         if (param5 > 0) {
           var10 = var10 + (1 << param5 - 1);
           var11 = var11 + (1 << -1 + param5);

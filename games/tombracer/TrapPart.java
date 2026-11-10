@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-interface gr {
-    public abstract Trap f(byte param0);
+interface TrapPart {
+    public abstract Trap getTrap(byte param0);
 
     public abstract boolean a(byte param0);
 

@@ -290,7 +290,7 @@ final class fu extends dg {
             this.field_v.a(this.getRenderX((byte) -83), var10_ref.field_c, -128, var10_ref.field_h, this.getRenderY((byte) 107));
           }
           if (this.field_u == 1) {
-            var11 = var3_ref.field_u;
+            var11 = var3_ref.behaviours;
             var12 = new uja(var11);
             var7_int = 0;
             var8 = (Behaviour) (var12.a(true));
@@ -312,7 +312,7 @@ final class fu extends dg {
             }
           }
           if (0 == this.field_u) {
-            var13 = var3_ref.field_B;
+            var13 = var3_ref.locomotors;
             var14 = new uja(var13);
             var7 = (Locomotor) (var14.a(true));
             while (var7 != null) {

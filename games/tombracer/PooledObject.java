@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class c extends IntrusiveNode implements Renderable {
+abstract class PooledObject extends IntrusiveNode implements Renderable {
     static int[] field_g;
     static java.math.BigInteger field_f;
     static String field_h;
 
-    int a(int param0, byte param1) {
+    int hashState(int param0, byte param1) {
         if (param1 != -39) {
-          this.h(10);
+          this.isExpired(10);
           return param0;
         }
         return param0;
     }
 
-    abstract boolean h(int param0);
+    abstract boolean isExpired(int param0);
 
     final static boolean[] a(int param0, boolean[] param1, byte param2, BitPacketBuffer param3) {
         int var4_int = 0;
@@ -80,16 +80,16 @@ abstract class c extends IntrusiveNode implements Renderable {
         field_h = null;
     }
 
-    abstract void a(int param0, byte param1, int param2, int param3);
+    abstract void setPosition(int param0, byte param1, int param2, int param3);
 
-    abstract void a(Room param0, int param1);
+    abstract void mirrorInRoom(Room param0, int param1);
 
-    abstract void a(int param0, boolean param1);
+    abstract void tick(int param0, boolean param1);
 
-    c() {
+    PooledObject() {
     }
 
-    abstract c d(boolean param0);
+    abstract PooledObject createInstance(boolean param0);
 
     static {
         field_g = new int[1024];

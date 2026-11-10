@@ -67,7 +67,7 @@ final class CoinItemComponent extends ItemComponent {
           var4 = super.a(param0, param1 + 0, param2);
           var5 = new MiscItemBehaviour(param2, param0);
           var5.a(1, false);
-          var4.a((byte) 83, (Behaviour) (var5));
+          var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (kga) (var6.a(12, 93));
           var7.b((byte) 112, 0);

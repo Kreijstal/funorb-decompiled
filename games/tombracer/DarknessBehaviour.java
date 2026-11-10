@@ -75,9 +75,9 @@ final class DarknessBehaviour extends Behaviour {
         }
     }
 
-    final void a(boolean param0, Trap param1) {
+    final void attachToTrap(boolean param0, Trap param1) {
         try {
-          super.a(param0, param1);
+          super.attachToTrap(param0, param1);
           this.b(0);
           param1.a(26492, true, 1);
           param1.a(param0, 35);
@@ -116,8 +116,8 @@ final class DarknessBehaviour extends Behaviour {
         }
         nm.a(this.field_r, (byte) 89);
         var7 = 0;
-        var8 = param5 - (param0 / 2 + this.field_g.getX(3) - this.field_g.getWidth(-15) / 2);
-        var9 = -this.field_g.getY(9648) + this.field_g.getHeight((byte) 55) / 2 + (param2 - param1 / 2);
+        var8 = param5 - (param0 / 2 + this.trap.getX(3) - this.trap.getWidth(-15) / 2);
+        var9 = -this.trap.getY(9648) + this.trap.getHeight((byte) 55) / 2 + (param2 - param1 / 2);
         var10 = param0 + var8;
         var11 = var9 + param1;
         var12 = this.b(-105, var8);
@@ -319,7 +319,7 @@ final class DarknessBehaviour extends Behaviour {
           }
         }
         if (this.field_n > 0) {
-          var3 = this.m((byte) 19);
+          var3 = this.getPlayer((byte) 19);
           this.a(var3.getX(3), (byte) 86, 10, this.field_n, var3.getY(param0 ^ 12442));
         }
     }
@@ -345,10 +345,10 @@ final class DarknessBehaviour extends Behaviour {
             var10 = (pc) null;
             this.a(26, (Effect) null, (pc) null);
           }
-          var4_int = param2.field_d - this.field_g.getX(3) + this.field_g.getWidth(-67) / 2;
-          var5 = param2.field_e - (this.field_g.getX(3) - this.field_g.getWidth(-63) / 2);
-          var6 = param2.field_k - this.field_g.getY(9648) + this.field_g.getHeight((byte) 55) / 2;
-          var7 = param2.field_a + (-this.field_g.getY(9648) + this.field_g.getHeight((byte) 55) / 2);
+          var4_int = param2.field_d - this.trap.getX(3) + this.trap.getWidth(-67) / 2;
+          var5 = param2.field_e - (this.trap.getX(3) - this.trap.getWidth(-63) / 2);
+          var6 = param2.field_k - this.trap.getY(9648) + this.trap.getHeight((byte) 55) / 2;
+          var7 = param2.field_a + (-this.trap.getY(9648) + this.trap.getHeight((byte) 55) / 2);
           var8 = param1.size;
           if (var8 >= 10) {
             var8 = 9;
@@ -391,8 +391,8 @@ final class DarknessBehaviour extends Behaviour {
         int var3;
         int stackIn_12_1 = 0;
         int stackIn_13_2 = 0;
-        var2 = this.field_g.getWidth(param0 - 21) >> 16;
-        var3 = this.field_g.getHeight((byte) 55) >> 16;
+        var2 = this.trap.getWidth(param0 - 21) >> 16;
+        var3 = this.trap.getHeight((byte) 55) >> 16;
         if (param0 != 0) {
           return;
         }

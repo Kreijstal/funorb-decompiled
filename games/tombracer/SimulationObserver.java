@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class eha {
+abstract class SimulationObserver {
     private IntrusiveDeque field_a;
     private IntrusiveDeque field_b;
 
@@ -94,7 +94,7 @@ abstract class eha {
         rfa.field_B = FleeLocomotor.field_B + " <b>" + vc.field_s + "</b> " + cq.field_c + " <b>" + mha.field_F + "</b> " + kka.field_p + "<br>" + "<br>" + wg.field_k;
         if (param0 != -27) {
           pc var2 = (pc) null;
-          eha.a(-114, -20, 86, 69, (pc) null, -36, 11);
+          SimulationObserver.a(-114, -20, 86, 69, (pc) null, -36, 11);
         }
     }
 
@@ -119,7 +119,7 @@ abstract class eha {
             var6 = (Trap) null;
             this.a(-16, -102, (Player) null, (Trap) null);
           }
-          if (param1.a(param0.player.r(-108), 3)) {
+          if (param1.a(param0.player.getCourseIndex(-108), 3)) {
             return;
           }
           var7 = (PendingEvent) (this.field_a.first(-80));
@@ -169,7 +169,7 @@ abstract class eha {
 
     abstract void a(Player param0, Room param1, boolean param2);
 
-    protected eha() {
+    protected SimulationObserver() {
         this.field_b = new IntrusiveDeque();
         this.field_a = new IntrusiveDeque();
     }
@@ -188,7 +188,7 @@ abstract class eha {
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           var3_int = param1.tick;
-          var4 = param1.player.r(-102);
+          var4 = param1.player.getCourseIndex(-102);
           if (param0 != -27) {
             var7 = (Trap) null;
             this.a(84, 86, (Player) null, (Trap) null);

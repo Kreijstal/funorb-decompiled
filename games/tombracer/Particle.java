@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hr extends c implements Renderable {
+final class Particle extends PooledObject implements Renderable {
     private int field_t;
     private int field_l;
     private int field_B;
     private int field_j;
     private int field_n;
-    private int field_s;
+    private int lifetime;
     private int field_p;
     private int field_u;
     private int field_x;
@@ -16,11 +16,11 @@ final class hr extends c implements Renderable {
     private int field_q;
     private int field_y;
     private int field_z;
-    private boolean field_i;
+    private boolean expired;
     private int field_o;
     private String field_w;
     private int field_m;
-    private int field_k;
+    private int age;
     private int field_A;
 
     final int b(int param0) {
@@ -50,9 +50,9 @@ final class hr extends c implements Renderable {
     public final boolean d(byte param0) {
         if (param0 != 48) {
           this.field_m = -112;
-          return this.field_i;
+          return this.expired;
         }
-        return this.field_i;
+        return this.expired;
     }
 
     final void a(int param0, int param1) {
@@ -60,22 +60,22 @@ final class hr extends c implements Renderable {
         this.a(param1, 0, -105);
     }
 
-    final void a(int param0, boolean param1) {
+    final void tick(int param0, boolean param1) {
         String var4 = null;
         String var4Lifetime1;
-        if (this.field_i) {
+        if (this.expired) {
           return;
         }
-        this.field_k = this.field_k + 1;
+        this.age = this.age + 1;
         this.field_q = this.field_q + this.field_n;
         this.field_y = this.field_y + this.field_j;
         this.field_v = this.field_v + this.field_o;
-        if (this.field_s <= this.field_k) {
-          this.field_i = true;
+        if (this.lifetime <= this.age) {
+          this.expired = true;
           this.field_B = this.field_B + this.field_q;
           if (param0 != -1) {
             var4 = (String) null;
-            hr.a((String) null, (cn) null, (String) null, -74);
+            Particle.a((String) null, (cn) null, (String) null, -74);
             this.field_l = this.field_l + this.field_v;
             this.field_m = this.field_m + this.field_r;
             this.field_x = this.field_x + this.field_y;
@@ -94,7 +94,7 @@ final class hr extends c implements Renderable {
           return;
         }
         var4Lifetime1 = (String) null;
-        hr.a((String) null, (cn) null, (String) null, -74);
+        Particle.a((String) null, (cn) null, (String) null, -74);
         this.field_l = this.field_l + this.field_v;
         this.field_m = this.field_m + this.field_r;
         this.field_x = this.field_x + this.field_y;
@@ -132,7 +132,7 @@ final class hr extends c implements Renderable {
         try {
           if (param3 >= -25) {
             var6 = (jg) null;
-            hr.a(0.712020754814148f, -6, 74, 40, -86, (byte[]) null, 1.6334935426712036f, 88, -0.9209427833557129f, (jg) null, 0.7779105305671692f, -124, 0.9752581119537354f);
+            Particle.a(0.712020754814148f, -6, 74, 40, -86, (byte[]) null, 1.6334935426712036f, 88, -0.9209427833557129f, (jg) null, 0.7779105305671692f, -124, 0.9752581119537354f);
           }
           var4_int = param1.b(param2, -7768);
           var5 = param1.a(true, param0, var4_int);
@@ -175,12 +175,12 @@ final class hr extends c implements Renderable {
         }
     }
 
-    final c d(boolean param0) {
+    final PooledObject createInstance(boolean param0) {
         if (!param0) {
           this.a(66, 88);
-          return (c) ((Object) new hr());
+          return (PooledObject) ((Object) new Particle());
         }
-        return (c) ((Object) new hr());
+        return (PooledObject) ((Object) new Particle());
     }
 
     final void a(uw param0, int param1) {
@@ -276,9 +276,9 @@ final class hr extends c implements Renderable {
     final int b(boolean param0) {
         if (!param0) {
           this.field_u = 98;
-          return this.field_s;
+          return this.lifetime;
         }
-        return this.field_s;
+        return this.lifetime;
     }
 
     final static void a(float param0, int param1, int param2, int param3, int param4, byte[] param5, float param6, int param7, float param8, jg param9, float param10, int param11, float param12) {
@@ -334,7 +334,7 @@ final class hr extends c implements Renderable {
         this.field_p = param1;
     }
 
-    final void a(Room param0, int param1) {
+    final void mirrorInRoom(Room param0, int param1) {
         this.field_B = param0.a(this.field_B, (byte) 71);
         if (param1 >= -16) {
           return;
@@ -346,12 +346,12 @@ final class hr extends c implements Renderable {
         }
     }
 
-    final boolean h(int param0) {
+    final boolean isExpired(int param0) {
         if (param0 != 18407) {
           this.a(-128);
-          return this.field_i;
+          return this.expired;
         }
-        return this.field_i;
+        return this.expired;
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -364,7 +364,7 @@ final class hr extends c implements Renderable {
         this.a(param3, 0, param1, 0, param0, 0, (byte) -20);
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void setPosition(int param0, byte param1, int param2, int param3) {
         this.field_B = param0;
         if (param1 != -78) {
           return;
@@ -408,21 +408,21 @@ final class hr extends c implements Renderable {
         this.field_q = 0;
         this.field_z = param1;
         this.field_A = param3;
-        this.field_i = param0 ? true : false;
+        this.expired = param0 ? true : false;
         this.field_j = 0;
         this.field_w = null;
         this.field_u = param2;
         this.field_o = 0;
-        this.field_k = 0;
+        this.age = 0;
         this.field_m = 0;
         this.field_v = 0;
         this.field_y = 0;
-        this.field_s = param4;
+        this.lifetime = param4;
         this.field_n = 0;
         this.field_r = 0;
     }
 
-    hr() {
+    Particle() {
     }
 
     final int f(byte param0) {
@@ -435,9 +435,9 @@ final class hr extends c implements Renderable {
     final int e(int param0) {
         if (param0 != 0) {
           this.field_o = -106;
-          return this.field_k;
+          return this.age;
         }
-        return this.field_k;
+        return this.age;
     }
 
     final int c(int param0) {

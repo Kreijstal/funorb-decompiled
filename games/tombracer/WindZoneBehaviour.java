@@ -69,10 +69,10 @@ final class WindZoneBehaviour extends Behaviour {
 
     final void k(int param0) {
         int var17 = 0;
-        hr stackIn_18_0 = null;
+        Particle stackIn_18_0 = null;
         int stackIn_18_1 = 0;
         int stackIn_19_2 = 0;
-        hr stackIn_22_0 = null;
+        Particle stackIn_22_0 = null;
         int stackIn_22_1 = 0;
         int stackIn_22_2 = 0;
         int stackIn_23_3;
@@ -101,13 +101,13 @@ final class WindZoneBehaviour extends Behaviour {
         int var21;
         int var22;
         int var23;
-        hr var24;
-        hr var25;
+        Particle var24;
+        Particle var25;
         var23 = TombRacer.field_G ? 1 : 0;
-        var2 = this.field_g.getX(3);
-        var3 = this.field_g.getY(9648);
-        var4 = this.field_g.getWidth(param0 ^ -5493);
-        var5 = this.field_g.getHeight((byte) 55);
+        var2 = this.trap.getX(3);
+        var3 = this.trap.getY(9648);
+        var4 = this.trap.getWidth(param0 ^ -5493);
+        var5 = this.trap.getHeight((byte) 55);
         if (param0 != 5418) {
           this.field_q = 90;
         }
@@ -137,10 +137,10 @@ final class WindZoneBehaviour extends Behaviour {
             }
           }
         }
-        var14 = this.field_g.P(param0 - 5418);
+        var14 = this.trap.P(param0 - 5418);
         if (this.field_q != 0 &&
           this.field_q != 2) {
-          var25 = this.b(true).a(var11, this.field_g.Q(2) + this.o((byte) 46).a(var5, 0), (byte) 100, var14);
+          var25 = this.b(true).spawnParticle(var11, this.trap.Q(2) + this.o((byte) 46).a(var5, 0), (byte) 100, var14);
           var25.a(false, 2, 3, 8, 10);
           stackIn_22_0 = var25;
           stackIn_22_1 = 72;
@@ -150,9 +150,9 @@ final class WindZoneBehaviour extends Behaviour {
           } else {
             stackIn_23_3 = var10;
           }
-          ((hr) (Object) stackIn_22_0).b(stackIn_22_1, stackIn_22_2, stackIn_23_3);
+          ((Particle) (Object) stackIn_22_0).b(stackIn_22_1, stackIn_22_2, stackIn_23_3);
         } else {
-          var24 = this.b(true).a(this.field_g.r((byte) -95) + this.o((byte) 46).a(var4, 0), var11, (byte) 100, var14);
+          var24 = this.b(true).spawnParticle(this.trap.r((byte) -95) + this.o((byte) 46).a(var4, 0), var11, (byte) 100, var14);
           var24.a(false, 2, 3, 8, 10);
           stackIn_18_0 = var24;
           stackIn_18_1 = 79;
@@ -161,17 +161,17 @@ final class WindZoneBehaviour extends Behaviour {
           } else {
             stackIn_19_2 = -var10;
           }
-          ((hr) (Object) stackIn_18_0).b(stackIn_18_1, stackIn_19_2, 0);
+          ((Particle) (Object) stackIn_18_0).b(stackIn_18_1, stackIn_19_2, 0);
         }
         var15 = this.b(true).field_u.b(var3, -1, var2, var4, var5);
         var16 = var15;
         for (var17 = 0; var17 < var16.length; var17++) {
           var18 = var16[var17];
-          if (var18 != this.field_g &&
-            !this.field_g.a(var18, true)) {
+          if (var18 != this.trap &&
+            !this.trap.a(var18, true)) {
             var19 = var18.getX(3);
             var20 = var18.getY(param0 + 4230);
-            if (this.field_g.a((byte) 110, var20, var19, 1, 1)) {
+            if (this.trap.a((byte) 110, var20, var19, 1, 1)) {
               var22 = this.field_q;
               if (var22 == 0) {
                 var21 = var20 + var18.getHeight((byte) 55) / 2;

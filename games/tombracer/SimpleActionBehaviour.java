@@ -33,12 +33,12 @@ final class SimpleActionBehaviour extends Behaviour {
         var2 = 81 % ((28 - param0) / 49);
         var3 = this.field_o;
         if (var3 == 0) {
-          this.field_g.v((byte) 109);
+          this.trap.v((byte) 109);
         } else {
           if (var3 == 1) {
-            stackIn_6_0 = this.field_g;
+            stackIn_6_0 = this.trap;
             stackIn_6_1 = 17;
-            stackIn_7_2 = (this.field_g.z((byte) 90)) ? false : true;
+            stackIn_7_2 = (this.trap.z((byte) 90)) ? false : true;
             ((Trap) (Object) stackIn_6_0).b((byte) stackIn_6_1, stackIn_7_2);
           }
         }
@@ -60,13 +60,13 @@ final class SimpleActionBehaviour extends Behaviour {
         }
     }
 
-    final void a(boolean param0, Trap param1) {
+    final void attachToTrap(boolean param0, Trap param1) {
         try {
           if (!param0) {
             Trap var4 = (Trap) null;
-            this.a(true, (Trap) null);
+            this.attachToTrap(true, (Trap) null);
           }
-          super.a(param0, param1);
+          super.attachToTrap(param0, param1);
           this.field_f = false;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wn.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

@@ -129,7 +129,7 @@ final class faa implements Renderable {
         if (param0 <= 103) {
           this.field_f = (bua) null;
         }
-        gr var3 = this.field_c.c(-98);
+        TrapPart var3 = this.field_c.c(-98);
         if (var3 != null &&
           !var3.a(-127)) {
           return;

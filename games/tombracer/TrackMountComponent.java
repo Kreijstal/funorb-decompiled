@@ -41,7 +41,7 @@ final class TrackMountComponent extends kna {
           var9.a((byte) -3, 6);
           var9.b((byte) 17, false);
           var9.g(119, 2);
-          var9.a((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
+          var9.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new TrackPlayerLocomotor(param2, param0);
           stackIn_3_0 = (34 != this.r(12)) ? 0 : 1;
           var6 = stackIn_3_0;
@@ -51,7 +51,7 @@ final class TrackMountComponent extends kna {
           stackIn_6_2 = (var6 == 0);
           ((TrackPlayerLocomotor) (Object) stackIn_5_0).c(stackIn_5_1, stackIn_6_2);
           var5.a(false, this.field_F);
-          var9.a(var5, param1 ^ param1);
+          var9.addLocomotor(var5, param1 ^ param1);
           var7 = rm.field_a;
           var8 = (nq) (var7.a(16, param1 + 119));
           var8.b(param1 ^ 8021, 0);

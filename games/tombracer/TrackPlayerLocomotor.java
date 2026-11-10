@@ -20,16 +20,16 @@ final class TrackPlayerLocomotor extends Locomotor {
         int var10;
         Player var11;
         var10 = TombRacer.field_G ? 1 : 0;
-        var11 = this.field_n.H(-123);
+        var11 = this.trap.getPlayer(-123);
         if (var11.u(-25561)) {
           return;
         }
         this.field_o.field_f = var11.getX(3);
         this.field_o.field_d = var11.getY(9648);
         var4 = 78 % ((-69 - param0) / 42);
-        this.field_n.a(this.field_o, 59);
-        var3 = this.field_o.field_f - this.field_n.s(25745);
-        var5 = this.field_o.field_d - this.field_n.e(false);
+        this.trap.a(this.field_o, 59);
+        var3 = this.field_o.field_f - this.trap.s(25745);
+        var5 = this.field_o.field_d - this.trap.e(false);
         var6 = 0;
         var7 = 0;
         var8 = ua.a(var3, -120);
@@ -79,7 +79,7 @@ final class TrackPlayerLocomotor extends Locomotor {
             }
           }
         }
-        this.field_n.a((byte) -42, var6, var7);
+        this.trap.a((byte) -42, var6, var7);
         return;
     }
 

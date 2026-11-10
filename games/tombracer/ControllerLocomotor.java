@@ -42,7 +42,7 @@ final class ControllerLocomotor extends Locomotor {
     final void b(int param0) {
         if (param0 != 1) {
           Trap var3 = (Trap) null;
-          this.a(32, (Trap) null);
+          this.attachToTrap(32, (Trap) null);
         }
     }
 
@@ -166,7 +166,7 @@ final class ControllerLocomotor extends Locomotor {
         }
     }
 
-    final void a(int param0, Trap param1) {
+    final void attachToTrap(int param0, Trap param1) {
         int var4 = 0;
         Locomotor[] var3 = null;
         Locomotor var5 = null;
@@ -179,12 +179,12 @@ final class ControllerLocomotor extends Locomotor {
         RuntimeException var3_ref = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
-          super.a(110, param1);
+          super.attachToTrap(110, param1);
           var7 = this.field_u;
           var3 = var7;
           for (var4 = 0; var4 < var7.length; var4++) {
             var5 = var7[var4];
-            var5.a(36, param1);
+            var5.attachToTrap(36, param1);
           }
           if (param0 <= 35) {
             this.b((byte) -51);

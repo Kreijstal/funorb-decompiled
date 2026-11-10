@@ -122,8 +122,8 @@ final class PitBehaviour extends Behaviour {
           var6Lifetime1 = param2.getY(9648);
           var7 = param2.getWidth(-93);
           var8 = param2.getHeight((byte) 55);
-          var9Lifetime1 = var5_intLifetime1 - var7 / 2 - this.field_g.r((byte) -95) - this.field_o;
-          var10Lifetime1 = var6Lifetime1 - var8 / 2 + (-this.field_g.Q(2) - this.field_q);
+          var9Lifetime1 = var5_intLifetime1 - var7 / 2 - this.trap.r((byte) -95) - this.field_o;
+          var10Lifetime1 = var6Lifetime1 - var8 / 2 + (-this.trap.Q(2) - this.field_q);
           var11Lifetime1 = var9Lifetime1 + (var7 - 1);
           var12Lifetime1 = var10Lifetime1 + var8 - 1;
           var9Lifetime1 = var9Lifetime1 / this.field_u;
@@ -191,21 +191,21 @@ final class PitBehaviour extends Behaviour {
         }
     }
 
-    final void a(boolean param0, Trap param1) {
+    final void attachToTrap(boolean param0, Trap param1) {
         int var3_int = 0;
         int var4 = 0;
         try {
-          super.a(param0, param1);
-          this.field_g.b((byte) -102, 4);
-          this.field_g.a(true, (byte) -25, 0);
-          this.field_g.a((byte) -114, true, 1);
-          this.field_g.b((byte) 17, param0);
-          var3_int = this.field_g.getWidth(-56) / this.field_u;
-          var4 = this.field_g.getHeight((byte) 55) / this.field_u;
+          super.attachToTrap(param0, param1);
+          this.trap.b((byte) -102, 4);
+          this.trap.a(true, (byte) -25, 0);
+          this.trap.a((byte) -114, true, 1);
+          this.trap.b((byte) 17, param0);
+          var3_int = this.trap.getWidth(-56) / this.field_u;
+          var4 = this.trap.getHeight((byte) 55) / this.field_u;
           this.field_t = new hj(var3_int, var4, 0);
-          this.field_o = (this.field_g.getWidth(-92) - this.field_t.field_f * this.field_u) / 2;
-          this.field_q = (this.field_g.getHeight((byte) 55) - this.field_t.field_a * this.field_u) / 2;
-          this.field_g.getRoom((byte) -93).a(1, -1, this.field_g.getX(3), this.field_g.getY(9648), this.field_g.getWidth(-27), this.field_g.getHeight((byte) 55), 123);
+          this.field_o = (this.trap.getWidth(-92) - this.field_t.field_f * this.field_u) / 2;
+          this.field_q = (this.trap.getHeight((byte) 55) - this.field_t.field_a * this.field_u) / 2;
+          this.trap.getRoom((byte) -93).a(1, -1, this.trap.getX(3), this.trap.getY(9648), this.trap.getWidth(-27), this.trap.getHeight((byte) 55), 123);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "mo.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -226,15 +226,15 @@ final class PitBehaviour extends Behaviour {
         if (0 != param3) {
           return 0;
         }
-        if (!io.a(this.field_u * this.field_t.field_f, param2, (byte) -115, this.field_u * this.field_t.field_a, param5, this.field_g.getY(9648), param1, param0, this.field_g.getX(3))) {
+        if (!io.a(this.field_u * this.field_t.field_f, param2, (byte) -115, this.field_u * this.field_t.field_a, param5, this.trap.getY(9648), param1, param0, this.trap.getX(3))) {
           return 0;
         }
         var7 = 0;
-        var8 = this.field_g.r((byte) -95) + this.field_o;
+        var8 = this.trap.r((byte) -95) + this.field_o;
         if (param4 < 79) {
           this.a(false);
         }
-        var9 = this.field_g.Q(2) + this.field_q;
+        var9 = this.trap.Q(2) + this.field_q;
         var10 = -(param0 / 2) - (var8 - param5);
         var11 = param2 - param1 / 2 - var9;
         var12 = -1 + (param0 + var10);

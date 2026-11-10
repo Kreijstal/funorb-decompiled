@@ -551,7 +551,7 @@ final class cm implements GamePacket {
                       }
                     }
                     if (var14 != 0) {
-                      var22 = ova.field_j;
+                      var22 = RoomCompletedScreen.field_j;
                       if (var15 > 0 &&
                         null != BitPacketBuffer.field_l &&
                         var15 <= BitPacketBuffer.field_l.length &&

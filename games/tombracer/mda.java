@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mda extends c implements Renderable, ffa, WorldBody {
+final class mda extends PooledObject implements Renderable, ffa, WorldBody {
     private int field_i;
     private Room field_q;
     private int field_n;
@@ -90,7 +90,7 @@ final class mda extends c implements Renderable, ffa, WorldBody {
           if (param0 != -1) {
             this.field_i = 97;
           }
-          var5_int = eha.a(this.field_k, 12, this.field_j, this.field_k, param3, this.field_p, 2);
+          var5_int = SimulationObserver.a(this.field_k, 12, this.field_j, this.field_k, param3, this.field_p, 2);
           if (var5_int == -1) {
             return false;
           }
@@ -117,7 +117,7 @@ final class mda extends c implements Renderable, ffa, WorldBody {
         }
     }
 
-    final void a(Room param0, int param1) {
+    final void mirrorInRoom(Room param0, int param1) {
         try {
           this.field_p = param0.a(this.field_p, (byte) 71);
           if (param1 >= -16) {
@@ -165,7 +165,7 @@ final class mda extends c implements Renderable, ffa, WorldBody {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (eha.a(this.field_k, param1, this.field_j, this.field_k, param2, this.field_p, 2) < 0) {
+          if (SimulationObserver.a(this.field_k, param1, this.field_j, this.field_k, param2, this.field_p, 2) < 0) {
             stackIn_3_0 = 0;
             return stackIn_3_0;
           }
@@ -328,7 +328,7 @@ final class mda extends c implements Renderable, ffa, WorldBody {
         return 0;
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void setPosition(int param0, byte param1, int param2, int param3) {
         if (param1 == -78) {
           this.field_j = param2;
           this.field_p = param0;
@@ -657,12 +657,12 @@ final class mda extends c implements Renderable, ffa, WorldBody {
         return 1 == this.field_s ? true : false;
     }
 
-    final c d(boolean param0) {
+    final PooledObject createInstance(boolean param0) {
         if (!param0) {
           this.getPreviousY(117);
-          return (c) ((Object) new mda());
+          return (PooledObject) ((Object) new mda());
         }
-        return (c) ((Object) new mda());
+        return (PooledObject) ((Object) new mda());
     }
 
     private final void n(int param0) {
@@ -671,7 +671,7 @@ final class mda extends c implements Renderable, ffa, WorldBody {
         }
     }
 
-    public final boolean h(int param0) {
+    public final boolean isExpired(int param0) {
         if (param0 != 18407) {
           return true;
         }
@@ -685,7 +685,7 @@ final class mda extends c implements Renderable, ffa, WorldBody {
         return 0;
     }
 
-    final void a(int param0, boolean param1) {
+    final void tick(int param0, boolean param1) {
         float var3;
         Player var5;
         Player var6;

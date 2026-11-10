@@ -6,12 +6,12 @@ final class FacePlayerLocomotor extends Locomotor {
     static bb field_p;
     static String field_q;
 
-    final void a(int param0, Trap param1) {
+    final void attachToTrap(int param0, Trap param1) {
         try {
           if (param0 < 35) {
             this.field_o = 28;
           }
-          super.a(89, param1);
+          super.attachToTrap(89, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pt.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -62,14 +62,14 @@ final class FacePlayerLocomotor extends Locomotor {
         int var8;
         var8 = TombRacer.field_G ? 1 : 0;
         var2 = 93 / ((-69 - param0) / 42);
-        var3 = this.field_n.H(-122);
+        var3 = this.trap.getPlayer(-122);
         if (var3.u(-25561)) {
           return;
         }
-        var4 = var3.getX(3) - this.field_n.getX(3);
-        var5 = var3.getY(9648) - this.field_n.getY(9648);
+        var4 = var3.getX(3) - this.trap.getX(3);
+        var5 = var3.getY(9648) - this.trap.getY(9648);
         var6 = qva.a((byte) -118, var5, var4);
-        var7 = -this.field_n.g(-25787) + var6;
+        var7 = -this.trap.g(-25787) + var6;
         if (0 < this.field_o) {
           while (var7 < -4096) {
             var7 += 8192;
@@ -85,7 +85,7 @@ final class FacePlayerLocomotor extends Locomotor {
             }
           }
         }
-        this.field_n.c(false, var7);
+        this.trap.c(false, var7);
     }
 
     final static byte[] a(byte[] param0, int param1, int param2) {
@@ -123,7 +123,7 @@ final class FacePlayerLocomotor extends Locomotor {
     final void a(int param0, byte param1) {
         if (param1 < 123) {
           Trap var4 = (Trap) null;
-          this.a(101, (Trap) null);
+          this.attachToTrap(101, (Trap) null);
           this.field_o = param0;
           return;
         }

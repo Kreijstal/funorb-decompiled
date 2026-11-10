@@ -68,7 +68,7 @@ final class lca implements Renderable {
         if (param0 <= 103) {
           return;
         }
-        gr var3 = this.field_a.c(-114);
+        TrapPart var3 = this.field_a.c(-114);
         if (var3 != null &&
           !var3.a(-50)) {
           return;

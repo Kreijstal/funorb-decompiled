@@ -140,7 +140,7 @@ final class ts {
         if (param1 != 25) {
           this.c(false);
         }
-        this.field_f[0].a((byte) 83, (Behaviour) (var5));
+        this.field_f[0].addBehaviour((byte) 83, (Behaviour) (var5));
         this.field_f[0].c(437453352, false);
         this.field_c.a(this.field_f[0], (byte) 32);
         if (param0) {
@@ -299,7 +299,7 @@ final class ts {
           var14 = new WindZoneBehaviour(this.field_c, true);
           var14.b(param2 ^ 5, param3);
           var14.a(param0, param1, 19072);
-          this.field_e[var11Lifetime1].a((byte) 83, (Behaviour) (var14));
+          this.field_e[var11Lifetime1].addBehaviour((byte) 83, (Behaviour) (var14));
           this.field_c.a(this.field_e[var11Lifetime1], (byte) 32);
         }
     }

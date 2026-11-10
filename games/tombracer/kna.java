@@ -90,7 +90,7 @@ abstract class kna extends RoomComponent {
             }
             param2.a(var13, (byte) 32);
           } else {
-            param6.a(-39, var13);
+            param6.addChild(-39, var13);
           }
           if (this.a(6) &&
             !this.field_x) {

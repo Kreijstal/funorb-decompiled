@@ -181,9 +181,9 @@ final class roa {
               }
               var21 = param6 + gqa.a(var18, (byte) 24, var20);
               var22 = param7 + gqa.a(var19, (byte) 24, var20);
-              var23 = param5.a(var14, var13, 127, param1);
+              var23 = param5.spawnProjectile(var14, var13, 127, param1);
               var23.a(this.field_a, param5, this.field_l, 66, this.field_b, this.field_k);
-              var23.b(var21, var22, (byte) -92);
+              var23.setVelocity(var21, var22, (byte) -92);
               var24 = var15.a(8192, 0);
               if (3 == this.field_b) {
                 var25 = -512 + var15.a(1024, 0);
@@ -193,7 +193,7 @@ final class roa {
                   var23.b(7, 128, var24);
                 }
               }
-              var23.a(-126, new Effect(param2, this.field_f));
+              var23.setEffect(-126, new Effect(param2, this.field_f));
               if (this.field_i != -1) {
                 var23.a(this.field_i, -38);
               }

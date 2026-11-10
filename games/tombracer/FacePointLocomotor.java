@@ -167,9 +167,9 @@ final class FacePointLocomotor extends Locomotor {
         int var8;
         int var9;
         var9 = TombRacer.field_G ? 1 : 0;
-        var2 = this.field_n.s(25745) - this.d((byte) -57);
+        var2 = this.trap.s(25745) - this.d((byte) -57);
         var5 = -32 / ((-69 - param0) / 42);
-        var3 = this.field_n.e(false) - this.a(false);
+        var3 = this.trap.e(false) - this.a(false);
         if (this.field_o) {
           var6 = -this.field_q + var3 >> 10;
           var4 = -this.field_p + var2 >> 10;
@@ -181,7 +181,7 @@ final class FacePointLocomotor extends Locomotor {
         for (var7 = var7 * -1; var7 < 0; var7 += 8192) {
         }
         regionExit1: {
-          var8 = var7 - this.field_n.g(-25787);
+          var8 = var7 - this.trap.g(-25787);
           if (0 < this.field_s) {
             while (var8 < -4096) {
               var8 += 8192;
@@ -193,15 +193,15 @@ final class FacePointLocomotor extends Locomotor {
               var8 = this.field_s;
             } else {
               if (var8 >= -this.field_s) {
-                this.field_n.c(false, var8);
+                this.trap.c(false, var8);
               } else {
                 var8 = -this.field_s;
-                this.field_n.c(false, var8);
+                this.trap.c(false, var8);
               }
               break regionExit1;
             }
           }
-          this.field_n.c(false, var8);
+          this.trap.c(false, var8);
         }
     }
 
@@ -212,12 +212,12 @@ final class FacePointLocomotor extends Locomotor {
         }
     }
 
-    final void a(int param0, Trap param1) {
+    final void attachToTrap(int param0, Trap param1) {
         try {
           if (param0 <= 35) {
             FacePointLocomotor.a(true, 47, true, -59, (byte) -121);
           }
-          super.a(110, param1);
+          super.attachToTrap(110, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sa.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

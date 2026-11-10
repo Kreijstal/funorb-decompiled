@@ -56,16 +56,16 @@ final class FleeLocomotor extends Locomotor {
         int var11Lifetime4;
         int var12Lifetime4;
         var13 = TombRacer.field_G ? 1 : 0;
-        var14 = this.field_n.H(-119);
+        var14 = this.trap.getPlayer(-119);
         if (var14.u(-25561)) {
           return;
         }
         var3 = -103 / ((-69 - param0) / 42);
         this.field_s.field_f = var14.getX(3);
         this.field_s.field_d = var14.getY(9648);
-        this.field_n.a(this.field_s, 117);
-        var4 = this.field_s.field_f - this.field_n.s(25745);
-        var5 = this.field_s.field_d - this.field_n.e(false);
+        this.trap.a(this.field_s, 117);
+        var4 = this.field_s.field_f - this.trap.s(25745);
+        var5 = this.field_s.field_d - this.trap.e(false);
         var6 = (var5 >> 16) * (var5 >> 16) + (var4 >> 16) * (var4 >> 16);
         if (this.field_D &&
           !this.field_r) {
@@ -88,9 +88,9 @@ final class FleeLocomotor extends Locomotor {
               var10 = bua.a(0, var8 >> 2);
               var11 = doa.a(2, this.field_A, var9);
               var12 = doa.a(2, this.field_A, var10);
-              this.field_n.a((byte) -110, var11, var12);
+              this.trap.a((byte) -110, var11, var12);
               if (this.field_w) {
-                this.field_n.c(false, -this.field_n.q((byte) -80) + var8);
+                this.trap.c(false, -this.trap.q((byte) -80) + var8);
               }
               return;
             }
@@ -105,11 +105,11 @@ final class FleeLocomotor extends Locomotor {
           var10Lifetime4 = bua.a(0, var8Lifetime4 >> 2);
           var11Lifetime4 = doa.a(2, this.field_A, var9Lifetime4);
           var12Lifetime4 = doa.a(2, this.field_A, var10Lifetime4);
-          this.field_n.a((byte) -110, var11Lifetime4, var12Lifetime4);
+          this.trap.a((byte) -110, var11Lifetime4, var12Lifetime4);
           if (!this.field_w) {
             return;
           }
-          this.field_n.c(false, -this.field_n.q((byte) -80) + var8Lifetime4);
+          this.trap.c(false, -this.trap.q((byte) -80) + var8Lifetime4);
           return;
         }
         var7Lifetime1 = (this.field_t >> 16) * (this.field_t >> 16);
@@ -141,14 +141,14 @@ final class FleeLocomotor extends Locomotor {
                 var10Lifetime1 = bua.a(0, var8Lifetime1 >> 2);
                 var11Lifetime1 = doa.a(2, this.field_A, var9Lifetime1);
                 var12Lifetime1 = doa.a(2, this.field_A, var10Lifetime1);
-                this.field_n.a((byte) -110, var11Lifetime1, var12Lifetime1);
+                this.trap.a((byte) -110, var11Lifetime1, var12Lifetime1);
                 if (this.field_w) {
-                  this.field_n.c(false, -this.field_n.q((byte) -80) + var8Lifetime1);
+                  this.trap.c(false, -this.trap.q((byte) -80) + var8Lifetime1);
                 }
               }
               return;
             }
-            this.field_p = this.field_n.y(1751085328).a(this.field_u, 0) - this.field_u / 2;
+            this.field_p = this.trap.y(1751085328).a(this.field_u, 0) - this.field_u / 2;
           }
           this.field_D = true;
           if (this.field_r) {
@@ -174,9 +174,9 @@ final class FleeLocomotor extends Locomotor {
             var10Lifetime2 = bua.a(0, var8Lifetime2 >> 2);
             var11Lifetime2 = doa.a(2, this.field_A, var9Lifetime2);
             var12Lifetime2 = doa.a(2, this.field_A, var10Lifetime2);
-            this.field_n.a((byte) -110, var11Lifetime2, var12Lifetime2);
+            this.trap.a((byte) -110, var11Lifetime2, var12Lifetime2);
             if (this.field_w) {
-              this.field_n.c(false, -this.field_n.q((byte) -80) + var8Lifetime2);
+              this.trap.c(false, -this.trap.q((byte) -80) + var8Lifetime2);
             }
             return;
           }
@@ -191,11 +191,11 @@ final class FleeLocomotor extends Locomotor {
         var10Lifetime3 = bua.a(0, var8Lifetime3 >> 2);
         var11Lifetime3 = doa.a(2, this.field_A, var9Lifetime3);
         var12Lifetime3 = doa.a(2, this.field_A, var10Lifetime3);
-        this.field_n.a((byte) -110, var11Lifetime3, var12Lifetime3);
+        this.trap.a((byte) -110, var11Lifetime3, var12Lifetime3);
         if (!this.field_w) {
           return;
         }
-        this.field_n.c(false, -this.field_n.q((byte) -80) + var8Lifetime3);
+        this.trap.c(false, -this.trap.q((byte) -80) + var8Lifetime3);
         return;
     }
 
@@ -266,12 +266,12 @@ final class FleeLocomotor extends Locomotor {
         field_x = null;
     }
 
-    final void a(int param0, Trap param1) {
+    final void attachToTrap(int param0, Trap param1) {
         if (param0 < 35) {
           return;
         }
         try {
-          super.a(96, param1);
+          super.attachToTrap(96, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "bha.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

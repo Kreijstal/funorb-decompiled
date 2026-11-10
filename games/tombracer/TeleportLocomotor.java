@@ -50,17 +50,17 @@ final class TeleportLocomotor extends Locomotor {
               this.field_r = this.c(true).q(73).a(var13.length, 0);
             }
           }
-          this.field_n.a((byte) 54, this.field_t);
-          var5 = this.field_n.r(0);
-          if (this.field_n.getRoom((byte) -70).a(this.field_n, this.field_n.getHeight((byte) 55), 2, this.field_n.g(true), this.field_t.field_d, this.field_t.field_f, false, var5, this.field_n.getWidth(-110))) {
+          this.trap.a((byte) 54, this.field_t);
+          var5 = this.trap.getRoot(0);
+          if (this.trap.getRoom((byte) -70).a(this.trap, this.trap.getHeight((byte) 55), 2, this.trap.g(true), this.field_t.field_d, this.field_t.field_f, false, var5, this.trap.getWidth(-110))) {
             return;
           }
-          this.c(true).field_u.a((ffa) (this.field_n), (byte) 98);
-          this.field_n.b(437453352, var4, var3);
-          this.c(true).field_u.b(this.field_n, 7073);
+          this.c(true).field_u.a((ffa) (this.trap), (byte) 98);
+          this.trap.b(437453352, var4, var3);
+          this.c(true).field_u.b(this.trap, 7073);
           var6 = 98 / ((-69 - param0) / 42);
           if (this.field_u > 0) {
-            this.field_n.n(this.field_u, -112);
+            this.trap.n(this.field_u, -112);
             return;
           }
           return;
@@ -82,17 +82,17 @@ final class TeleportLocomotor extends Locomotor {
               this.field_r = this.c(true).q(73).a(var13.length, 0);
             }
           }
-          this.field_n.a((byte) 54, this.field_t);
-          var5Lifetime1 = this.field_n.r(0);
-          if (this.field_n.getRoom((byte) -70).a(this.field_n, this.field_n.getHeight((byte) 55), 2, this.field_n.g(true), this.field_t.field_d, this.field_t.field_f, false, var5Lifetime1, this.field_n.getWidth(-110))) {
+          this.trap.a((byte) 54, this.field_t);
+          var5Lifetime1 = this.trap.getRoot(0);
+          if (this.trap.getRoom((byte) -70).a(this.trap, this.trap.getHeight((byte) 55), 2, this.trap.g(true), this.field_t.field_d, this.field_t.field_f, false, var5Lifetime1, this.trap.getWidth(-110))) {
             return;
           }
-          this.c(true).field_u.a((ffa) (this.field_n), (byte) 98);
-          this.field_n.b(437453352, var4Lifetime1, var3Lifetime1);
-          this.c(true).field_u.b(this.field_n, 7073);
+          this.c(true).field_u.a((ffa) (this.trap), (byte) 98);
+          this.trap.b(437453352, var4Lifetime1, var3Lifetime1);
+          this.c(true).field_u.b(this.trap, 7073);
           var6Lifetime1 = 98 / ((-69 - param0) / 42);
           if (this.field_u > 0) {
-            this.field_n.n(this.field_u, -112);
+            this.trap.n(this.field_u, -112);
             return;
           }
           return;
@@ -108,51 +108,51 @@ final class TeleportLocomotor extends Locomotor {
         this.field_t.field_d = var4Lifetime2;
         if (!this.field_p) {
           this.field_r = this.field_r + 1;
-          this.field_n.a((byte) 54, this.field_t);
-          var5Lifetime2 = this.field_n.r(0);
-          if (this.field_n.getRoom((byte) -70).a(this.field_n, this.field_n.getHeight((byte) 55), 2, this.field_n.g(true), this.field_t.field_d, this.field_t.field_f, false, var5Lifetime2, this.field_n.getWidth(-110))) {
+          this.trap.a((byte) 54, this.field_t);
+          var5Lifetime2 = this.trap.getRoot(0);
+          if (this.trap.getRoom((byte) -70).a(this.trap, this.trap.getHeight((byte) 55), 2, this.trap.g(true), this.field_t.field_d, this.field_t.field_f, false, var5Lifetime2, this.trap.getWidth(-110))) {
             return;
           }
-          this.c(true).field_u.a((ffa) (this.field_n), (byte) 98);
-          this.field_n.b(437453352, var4Lifetime2, var3Lifetime2);
-          this.c(true).field_u.b(this.field_n, 7073);
+          this.c(true).field_u.a((ffa) (this.trap), (byte) 98);
+          this.trap.b(437453352, var4Lifetime2, var3Lifetime2);
+          this.c(true).field_u.b(this.trap, 7073);
           var6Lifetime2 = 98 / ((-69 - param0) / 42);
           if (this.field_u <= 0) {
             return;
           }
-          this.field_n.n(this.field_u, -112);
+          this.trap.n(this.field_u, -112);
           return;
         }
         if (var13.length <= 0) {
-          this.field_n.a((byte) 54, this.field_t);
-          var5Lifetime3 = this.field_n.r(0);
-          if (this.field_n.getRoom((byte) -70).a(this.field_n, this.field_n.getHeight((byte) 55), 2, this.field_n.g(true), this.field_t.field_d, this.field_t.field_f, false, var5Lifetime3, this.field_n.getWidth(-110))) {
+          this.trap.a((byte) 54, this.field_t);
+          var5Lifetime3 = this.trap.getRoot(0);
+          if (this.trap.getRoom((byte) -70).a(this.trap, this.trap.getHeight((byte) 55), 2, this.trap.g(true), this.field_t.field_d, this.field_t.field_f, false, var5Lifetime3, this.trap.getWidth(-110))) {
             return;
           }
-          this.c(true).field_u.a((ffa) (this.field_n), (byte) 98);
-          this.field_n.b(437453352, var4Lifetime2, var3Lifetime2);
-          this.c(true).field_u.b(this.field_n, 7073);
+          this.c(true).field_u.a((ffa) (this.trap), (byte) 98);
+          this.trap.b(437453352, var4Lifetime2, var3Lifetime2);
+          this.c(true).field_u.b(this.trap, 7073);
           var6Lifetime3 = 98 / ((-69 - param0) / 42);
           if (this.field_u <= 0) {
             return;
           }
-          this.field_n.n(this.field_u, -112);
+          this.trap.n(this.field_u, -112);
           return;
         }
         this.field_r = this.c(true).q(73).a(var13.length, 0);
-        this.field_n.a((byte) 54, this.field_t);
-        var5Lifetime4 = this.field_n.r(0);
-        if (this.field_n.getRoom((byte) -70).a(this.field_n, this.field_n.getHeight((byte) 55), 2, this.field_n.g(true), this.field_t.field_d, this.field_t.field_f, false, var5Lifetime4, this.field_n.getWidth(-110))) {
+        this.trap.a((byte) 54, this.field_t);
+        var5Lifetime4 = this.trap.getRoot(0);
+        if (this.trap.getRoom((byte) -70).a(this.trap, this.trap.getHeight((byte) 55), 2, this.trap.g(true), this.field_t.field_d, this.field_t.field_f, false, var5Lifetime4, this.trap.getWidth(-110))) {
           return;
         }
-        this.c(true).field_u.a((ffa) (this.field_n), (byte) 98);
-        this.field_n.b(437453352, var4Lifetime2, var3Lifetime2);
-        this.c(true).field_u.b(this.field_n, 7073);
+        this.c(true).field_u.a((ffa) (this.trap), (byte) 98);
+        this.trap.b(437453352, var4Lifetime2, var3Lifetime2);
+        this.c(true).field_u.b(this.trap, 7073);
         var6Lifetime4 = 98 / ((-69 - param0) / 42);
         if (this.field_u <= 0) {
           return;
         }
-        this.field_n.n(this.field_u, -112);
+        this.trap.n(this.field_u, -112);
     }
 
     TeleportLocomotor(Room param0, BitPacketBuffer param1, boolean param2) {

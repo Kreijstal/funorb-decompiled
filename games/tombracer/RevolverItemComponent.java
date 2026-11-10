@@ -34,7 +34,7 @@ final class RevolverItemComponent extends ItemComponent {
           var4 = super.a(param0, 3, param2);
           var5 = new WeaponItemBehaviour(param2, param0);
           var5.a(ci.a(4, -1), 5);
-          var4.a((byte) 83, (Behaviour) (var5));
+          var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var4.l(param1, 146366800);
           var6 = rm.field_a;
           var7 = (kga) (var6.a(12, 104));

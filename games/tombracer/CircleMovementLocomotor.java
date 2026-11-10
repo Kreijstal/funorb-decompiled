@@ -34,8 +34,8 @@ final class CircleMovementLocomotor extends Locomotor {
           var4 = (cr.a(true, this.field_q >> 2) >> 8) * (this.field_o >> 8) + var2;
           var5 = var3 + (pla.b(35, this.field_q >> 2) >> 8) * (this.field_o >> 8);
         } else {
-          var4 = this.field_n.s(25745);
-          var5 = this.field_n.e(false);
+          var4 = this.trap.s(25745);
+          var5 = this.trap.e(false);
           this.field_p = false;
         }
         this.field_q = this.field_q - this.field_r;
@@ -43,7 +43,7 @@ final class CircleMovementLocomotor extends Locomotor {
         var7 = 49 % ((param0 + 69) / 42);
         var6 = var2 + (cr.a(true, this.field_q >> 2) >> 8) * (this.field_o >> 8);
         var8 = var3 + (pla.b(102, this.field_q >> 2) >> 8) * (this.field_o >> 8);
-        this.field_n.a((byte) -94, -var4 + var6, var8 - var5);
+        this.trap.a((byte) -94, -var4 + var6, var8 - var5);
     }
 
     final static boolean a(int param0, BitPacketBuffer param1) {
@@ -73,9 +73,9 @@ final class CircleMovementLocomotor extends Locomotor {
         }
     }
 
-    final void a(int param0, Trap param1) {
+    final void attachToTrap(int param0, Trap param1) {
         try {
-          super.a(85, param1);
+          super.attachToTrap(85, param1);
           this.field_p = true;
           if (param0 < 35) {
             this.field_r = -34;

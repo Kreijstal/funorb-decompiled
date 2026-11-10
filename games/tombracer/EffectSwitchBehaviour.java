@@ -46,7 +46,7 @@ final class EffectSwitchBehaviour extends Behaviour implements ut {
     final int a(int param0, int param1) {
         if (param1 > -48) {
           Trap var4 = (Trap) null;
-          this.a(false, (Trap) null);
+          this.attachToTrap(false, (Trap) null);
         }
         param0 = fs.a((byte) 87, param0, this.field_s);
         param0 = fs.a((byte) 82, param0, this.field_p);
@@ -319,7 +319,7 @@ final class EffectSwitchBehaviour extends Behaviour implements ut {
         }
     }
 
-    final void a(boolean param0, Trap param1) {
+    final void attachToTrap(boolean param0, Trap param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -329,7 +329,7 @@ final class EffectSwitchBehaviour extends Behaviour implements ut {
         RuntimeException var3 = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          super.a(param0, param1);
+          super.attachToTrap(param0, param1);
           for (var3_int = 0; var3_int < 6; var3_int++) {
             if (this.field_u.a(0, var3_int) ||
               this.field_t.a(0, var3_int)) {

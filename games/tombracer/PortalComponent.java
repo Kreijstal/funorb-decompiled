@@ -42,7 +42,7 @@ final class PortalComponent extends kna {
           }
           var4.b((byte) -11, this.field_k, this.field_l);
           this.field_F = new PortalBehaviour(param2, param0);
-          var4.a((byte) 83, (Behaviour) (this.field_F));
+          var4.addBehaviour((byte) 83, (Behaviour) (this.field_F));
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

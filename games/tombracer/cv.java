@@ -33,7 +33,7 @@ final class cv extends dg {
         }
     }
 
-    final void a(gr param0, WorldBody param1, byte param2) {
+    final void a(TrapPart param0, WorldBody param1, byte param2) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -97,7 +97,7 @@ final class cv extends dg {
         field_m = null;
     }
 
-    final void a(WorldBody param0, int param1, gr param2) {
+    final void a(WorldBody param0, int param1, TrapPart param2) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;

@@ -168,7 +168,7 @@ final class vsa extends dg {
         }
     }
 
-    final void a(gr param0, WorldBody param1, byte param2) {
+    final void a(TrapPart param0, WorldBody param1, byte param2) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -378,7 +378,7 @@ final class vsa extends dg {
         if (var2 == null) {
           return;
         }
-        Player var3 = var2.H(param0 ^ 117);
+        Player var3 = var2.getPlayer(param0 ^ 117);
         if (var3 == null) {
           return;
         }

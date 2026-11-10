@@ -193,7 +193,7 @@ final class sva implements ev {
             this.a(true, (Renderable) null, (iq) null);
           }
           if (uh.a((byte) -7)) {
-            var4_int = param1 instanceof hr ? 1 : 0;
+            var4_int = param1 instanceof Particle ? 1 : 0;
             var5 = 0;
             var6 = et.b(this.field_a.length, tga.field_a.l(), -97);
             var7 = null;

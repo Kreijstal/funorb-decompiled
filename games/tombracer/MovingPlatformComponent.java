@@ -95,9 +95,9 @@ final class MovingPlatformComponent extends PathMoverComponent {
             stackIn_2_0 = (Trap) null;
             return stackIn_2_0;
           }
-          var4.a((byte) 83, (Behaviour) (var5));
+          var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = this.createPathMove((byte) -104, param2, param0);
-          var4.a(var6, 0);
+          var4.addLocomotor(var6, 0);
           var7 = rm.field_a;
           var8 = (ce) (var7.a(17, 88));
           var8.b(2, (byte) 23);

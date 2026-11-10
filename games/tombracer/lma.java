@@ -18,7 +18,7 @@ final class lma extends dg {
     private boolean field_t;
     private fh[][] field_x;
 
-    final void a(gr param0, WorldBody param1, byte param2) {
+    final void a(TrapPart param0, WorldBody param1, byte param2) {
         try {
           super.a(param0, param1, param2);
         } catch (RuntimeException runtimeException) {

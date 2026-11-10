@@ -165,22 +165,22 @@ final class MirrorComponent extends kna {
           var11.a(1, (byte) -12, true);
           var5 = new SimpleBlockBehaviour(param2, param0);
           var5.a(-28592, true);
-          var11.a((byte) 83, (Behaviour) (var5));
+          var11.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = new Trap(param2, param0);
           var6.b((byte) -11, this.field_k, this.field_l);
           var6.a((byte) -3, 0);
           var7 = new MirrorBehaviour(param2, param0);
-          var6.a((byte) 83, (Behaviour) (var7));
-          var11.a(-98, var6);
+          var6.addBehaviour((byte) 83, (Behaviour) (var7));
+          var11.addChild(-98, var6);
           var8 = rm.field_a;
           if (this.field_m != 19) {
             var13 = (nq) (var8.a(16, param1 ^ 105));
             var13.b(8022, 4);
-            var11.a((gr) null, (byte) 124, var13);
+            var11.a((TrapPart) null, (byte) 124, var13);
           } else {
             var12 = (nq) (var8.a(16, 127));
             var12.b(param1 + 8019, 1);
-            var11.a((gr) null, (byte) 124, var12);
+            var11.a((TrapPart) null, (byte) 124, var12);
           }
           var14 = (boa) (var8.a(7, 125));
           var14.b(param1 + 116, 9);

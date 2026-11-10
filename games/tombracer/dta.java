@@ -148,7 +148,7 @@ final class dta {
               var19 = dea.a(var14, (byte) -8);
               ts.a(0, -106, var18 + (param5 + 34), var19.substring(0, -3 + var19.length()), 12 + param0 + var17, qr.field_v, 11903361);
               ts.a(0, -102, var18 + (param5 + 35), var19.substring(var19.length() - 2, var19.length()), 98 + (var17 + param0), eda.field_f, 11903361);
-              var20 = 1 + var12.r(-104);
+              var20 = 1 + var12.getCourseIndex(-104);
               var21 = var12.C(-1).f(122);
               if (var12.C(-1).d(28091)) {
                 var21 = (var21 >> 1) + 1;
@@ -294,13 +294,13 @@ final class dta {
                   if (var30Lifetime3 == 0 ||
                     var31Lifetime2 == 0) {
                     var37 = 0;
-                    var38_ref_nv = (Behaviour) (var35[var36_int].field_u.first(-80));
+                    var38_ref_nv = (Behaviour) (var35[var36_int].behaviours.first(-80));
                     while (var38_ref_nv != null) {
                       if (var38_ref_nv instanceof SnakePitBehaviour) {
                         var30Lifetime3 = 1;
                       } else {
                         if (!(var38_ref_nv instanceof SimpleBlockBehaviour)) {
-                          var38_ref_nv = (Behaviour) (var35[var36_int].field_u.next(121));
+                          var38_ref_nv = (Behaviour) (var35[var36_int].behaviours.next(121));
                           continue;
                         }
                         var37 = 1;

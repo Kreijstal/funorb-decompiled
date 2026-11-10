@@ -257,7 +257,7 @@ final class db extends IntrusiveNode implements Renderable, ffa, WorldBody, noa,
         }
     }
 
-    public final boolean h(int param0) {
+    public final boolean isExpired(int param0) {
         if (param0 != 18407) {
           this.field_n = -92;
           return false;
@@ -279,7 +279,7 @@ final class db extends IntrusiveNode implements Renderable, ffa, WorldBody, noa,
           if (param0 != -1) {
             field_s = (jea) null;
           }
-          var5_int = eha.a(this.field_g, 12, this.field_r, this.field_q, param3, this.field_p, 2);
+          var5_int = SimulationObserver.a(this.field_g, 12, this.field_r, this.field_q, param3, this.field_p, 2);
           if (var5_int == -1) {
             return false;
           }
@@ -420,7 +420,7 @@ final class db extends IntrusiveNode implements Renderable, ffa, WorldBody, noa,
         if (param0 != -8195) {
           return;
         }
-        this.a(rm.field_a.a((gr) null, (WorldBody) (this), -116), true);
+        this.a(rm.field_a.a((TrapPart) null, (WorldBody) (this), -116), true);
     }
 
     public final int getRenderZ(byte param0) {
@@ -678,7 +678,7 @@ final class db extends IntrusiveNode implements Renderable, ffa, WorldBody, noa,
           if (!param1) {
             this.field_r = -69;
           }
-          param0.a((gr) null, (WorldBody) (this), (byte) 36);
+          param0.a((TrapPart) null, (WorldBody) (this), (byte) 36);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "db.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

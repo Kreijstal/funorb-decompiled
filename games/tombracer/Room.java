@@ -22,10 +22,10 @@ final class Room implements ew, Renderable, noa {
     private uw field_S;
     private int randomSeed;
     int field_a;
-    private IntrusiveDeque field_l;
-    private pta field_s;
-    private pta field_f;
-    private pta field_c;
+    private IntrusiveDeque recentDeaths;
+    private ObjectPool projectilePool;
+    private ObjectPool field_f;
+    private ObjectPool particlePool;
     npa field_u;
     private IsaacCipher field_H;
     private te field_D;
@@ -43,7 +43,7 @@ final class Room implements ew, Renderable, noa {
     private int[] field_b;
     private int entranceY;
     private ts field_g;
-    private int field_M;
+    private int deathCount;
     private int field_J;
     private dj field_F;
     private int field_A;
@@ -51,7 +51,7 @@ final class Room implements ew, Renderable, noa {
 
     private final mda b(int param0, int param1, int param2, int param3) {
         int var5 = 112 / ((param0 + 6) / 43);
-        return (mda) (this.field_f.a(-2698, param1, param2, this.field_S, param3));
+        return (mda) (this.field_f.spawn(-2698, param1, param2, this.field_S, param3));
     }
 
     final int a(int param0, int param1, WorldBody param2, int param3, int param4, byte param5) {
@@ -198,7 +198,7 @@ final class Room implements ew, Renderable, noa {
         if (1 == var7) {
           return false;
         }
-        var8 = new uja(this.field_f.field_b);
+        var8 = new uja(this.field_f.active);
         if (param0 != 30097) {
           this.b(-85, -33);
         }
@@ -223,11 +223,11 @@ final class Room implements ew, Renderable, noa {
         return true;
     }
 
-    final hr a(int param0, int param1, byte param2, int param3) {
+    final Particle spawnParticle(int param0, int param1, byte param2, int param3) {
         if (param2 != 100) {
           this.k((byte) 119);
         }
-        hr var5 = (hr) (this.field_c.a(-2698, param1, param3, this.field_S, param0));
+        Particle var5 = (Particle) (this.particlePool.spawn(-2698, param1, param3, this.field_S, param0));
         var5.a(true, uca.field_c.a(100, 0));
         return var5;
     }
@@ -237,11 +237,11 @@ final class Room implements ew, Renderable, noa {
         return this.field_S;
     }
 
-    final int v(int param0) {
+    final int getDeathCount(int param0) {
         if (param0 != 0) {
           this.simulation = (PlayerSimulation) null;
         }
-        return this.field_M;
+        return this.deathCount;
     }
 
     final int getHeight(int param0) {
@@ -275,7 +275,7 @@ final class Room implements ew, Renderable, noa {
         RuntimeException var3 = null;
         try {
           if (param1 != 32) {
-            this.v(-75);
+            this.getDeathCount(-75);
           }
           if (param0.n((byte) 121)) {
             this.traps.addLast((byte) -94, param0);
@@ -373,12 +373,12 @@ final class Room implements ew, Renderable, noa {
         this.a((byte) -108, true);
     }
 
-    final eha b(int param0) {
+    final SimulationObserver b(int param0) {
         if (param0 != -1) {
           sqa var3 = (sqa) null;
           this.a(15, (sqa) null);
         }
-        return this.getSimulation(-1553494544).m(param0 + 9263);
+        return this.getSimulation(-1553494544).getObserver(param0 + 9263);
     }
 
     final void b(int param0, boolean param1) {
@@ -405,13 +405,13 @@ final class Room implements ew, Renderable, noa {
         }
         this.entranceX = this.a(this.entranceX, (byte) 71);
         if (param1) {
-          if (this.simulation.a((byte) -3) == this) {
+          if (this.simulation.getCurrentRoom((byte) -3) == this) {
             this.getPlayer(-9).q((byte) -57);
           }
           this.field_D.a(this, -110);
-          this.field_s.a(121);
+          this.projectilePool.a(121);
           this.field_f.a(119);
-          this.field_c.a(97);
+          this.particlePool.a(97);
         }
     }
 
@@ -449,9 +449,9 @@ final class Room implements ew, Renderable, noa {
         return this.field_t;
     }
 
-    final Projectile a(int param0, int param1, int param2, int param3) {
+    final Projectile spawnProjectile(int param0, int param1, int param2, int param3) {
         int var5 = -101 / ((29 - param2) / 33);
-        return (Projectile) (this.field_s.a(-2698, param0, param3, this.field_S, param1));
+        return (Projectile) (this.projectilePool.spawn(-2698, param0, param3, this.field_S, param1));
     }
 
     final boolean j(int param0) {
@@ -478,13 +478,13 @@ final class Room implements ew, Renderable, noa {
           this.field_t = new IsaacCipher(new int[]{this.randomSeed});
           this.field_H = new IsaacCipher(new int[]{this.randomSeed});
           this.field_u = new npa(false, 16);
-          this.field_c = new pta(this, new hr(), 100);
-          this.field_s = new pta(this, new Projectile(), 25);
-          this.field_f = new pta(this, new mda(), 50);
+          this.particlePool = new ObjectPool(this, new Particle(), 100);
+          this.projectilePool = new ObjectPool(this, new Projectile(), 25);
+          this.field_f = new ObjectPool(this, new mda(), 50);
           this.field_B = new tqa(this, 2097152);
-          this.field_c.a((byte) 114);
-          this.field_s.a((byte) 122);
-          this.field_f.a((byte) 116);
+          this.particlePool.releaseAll((byte) 114);
+          this.projectilePool.releaseAll((byte) 122);
+          this.field_f.releaseAll((byte) 116);
           this.field_F = new dj(this);
           if (this.field_U != null) {
           }
@@ -696,7 +696,7 @@ final class Room implements ew, Renderable, noa {
 
     private final void a(byte param0, boolean param1) {
         uw var3;
-        eha var3_ref;
+        SimulationObserver var3_ref;
         RoomComponent var4;
         int var5;
         WorldBody var6;
@@ -725,7 +725,7 @@ final class Room implements ew, Renderable, noa {
             this.b((byte) -12, 1);
             this.field_S = var8;
           }
-          var3_ref = this.getSimulation(-1553494544).m(9262);
+          var3_ref = this.getSimulation(-1553494544).getObserver(9262);
           if (var3_ref != null) {
             var3_ref.a(-2, this.getPlayer(-18), this);
           }
@@ -767,8 +767,8 @@ final class Room implements ew, Renderable, noa {
         }
         this.getPlayer(-12).a(25, this.field_S);
         this.field_D.a(this.field_S, -28255);
-        this.field_s.a(this.field_S, (byte) -89, true, 7);
-        this.field_c.a(this.field_S, (byte) 126, true, 7);
+        this.projectilePool.a(this.field_S, (byte) -89, true, 7);
+        this.particlePool.a(this.field_S, (byte) 126, true, 7);
         this.field_f.a(this.field_S, (byte) -33, false, 6);
         var5 = (Trap) (this.traps.first(-80));
         while (var5 != null) {
@@ -796,7 +796,7 @@ final class Room implements ew, Renderable, noa {
     final void dumpDebug(boolean param0) {
         System.out.println("Rooms ID: " + this.id);
         System.out.println("Projectiles: ");
-        this.field_s.a(false);
+        this.projectilePool.printAll(false);
         if (!param0) {
           WorldBody var3 = (WorldBody) null;
           this.a(2, (pc) null, (WorldBody) null, (byte) 52);
@@ -997,9 +997,9 @@ final class Room implements ew, Renderable, noa {
           this.a(-72, -34, 70, 80, true, 64, (byte) -83);
         }
         this.field_f = null;
-        this.field_c = null;
+        this.particlePool = null;
         this.field_F = null;
-        this.field_s = null;
+        this.projectilePool = null;
         this.field_u = null;
     }
 
@@ -1027,7 +1027,7 @@ final class Room implements ew, Renderable, noa {
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         if (param6 < 118) {
           kua var9 = (kua) null;
-          this.a(-24, (kua) null);
+          this.recordDeath(-24, (kua) null);
         }
         this.field_B.a(param1, param5, param4, param2, param0, param3, true);
     }
@@ -1313,7 +1313,7 @@ final class Room implements ew, Renderable, noa {
           return;
         }
         try {
-          this.field_D.a(23436, param0.field_l);
+          this.field_D.a(23436, param0.recentDeaths);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "la.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -1525,7 +1525,7 @@ final class Room implements ew, Renderable, noa {
         while (var5_ref_fsa != null) {
           var5_ref_fsa.b(param1 + 106, false);
           this.field_a = var5_ref_fsa.i(this.field_a, -109);
-          if (var5_ref_fsa.h(param1 + 18407)) {
+          if (var5_ref_fsa.isExpired(param1 + 18407)) {
             var5_ref_fsa.unlink(param1 ^ 79);
           }
           var5_ref_fsa = (Trap) (var9.a(-1));
@@ -1536,10 +1536,10 @@ final class Room implements ew, Renderable, noa {
           var7 = (Trap) null;
           this.a((Trap) null, -31);
         }
-        this.field_s.a(var5 != 0, (byte) -126);
-        this.field_f.a(var5 != 0, (byte) -31);
-        this.field_c.a(var5 != 0, (byte) -103);
-        this.field_a = this.field_s.a(this.field_a, -119);
+        this.projectilePool.update(var5 != 0, (byte) -126);
+        this.field_f.update(var5 != 0, (byte) -31);
+        this.particlePool.update(var5 != 0, (byte) -103);
+        this.field_a = this.projectilePool.hashState(this.field_a, -119);
         if (this.field_S != null) {
           this.field_S.d(0);
           if (this.simulation.f(8, param1 + 10915)) {
@@ -1727,7 +1727,7 @@ final class Room implements ew, Renderable, noa {
           var6 = (Trap) (this.traps.first(-80));
           while (var6 != null) {
             if (!var6.w((byte) -117)) {
-              var6.a(param0, -100);
+              var6.encode(param0, -100);
             }
             var6 = (Trap) (this.traps.next(114));
           }
@@ -1773,7 +1773,7 @@ final class Room implements ew, Renderable, noa {
           this.field_F.b(param4, param1, param3, param2, 0, param5);
         }
         if (param0) {
-          this.a(55, 54, (byte) -12, -30);
+          this.spawnParticle(55, 54, (byte) -12, -30);
         }
     }
 
@@ -1969,17 +1969,17 @@ final class Room implements ew, Renderable, noa {
         }
     }
 
-    final void a(int param0, kua param1) {
+    final void recordDeath(int param0, kua param1) {
         int var4 = TombRacer.field_G ? 1 : 0;
         try {
-          this.field_l.addLast((byte) -54, param1);
-          while (this.field_l.size((byte) -16) > 10) {
-            this.field_l.removeFirst(-99);
+          this.recentDeaths.addLast((byte) -54, param1);
+          while (this.recentDeaths.size((byte) -16) > 10) {
+            this.recentDeaths.removeFirst(-99);
           }
           if (param0 != 8) {
             this.field_b = (int[]) null;
           }
-          this.field_M = this.field_M + 1;
+          this.deathCount = this.deathCount + 1;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "la.VB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -1990,7 +1990,7 @@ final class Room implements ew, Renderable, noa {
         return this.width / 2;
     }
 
-    final int c(int param0) {
+    final int getCourseIndex(int param0) {
         int var2 = -6 % ((param0 - 1) / 54);
         return this.courseIndex;
     }
@@ -2030,7 +2030,7 @@ final class Room implements ew, Renderable, noa {
         this.field_d = new IntrusiveDeque();
         this.traps = new IntrusiveDeque();
         this.components = new IntrusiveDeque();
-        this.field_l = new IntrusiveDeque();
+        this.recentDeaths = new IntrusiveDeque();
         this.field_D = new te();
         this.field_y = new ui();
         this.field_q = new ui();

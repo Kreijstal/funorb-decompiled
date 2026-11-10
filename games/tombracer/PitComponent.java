@@ -166,7 +166,7 @@ final class PitComponent extends kna {
           if (param1 != 3) {
             this.s(48);
           }
-          var9.a((byte) 83, (Behaviour) (var5));
+          var9.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (kva) (var6.a(10, 111));
           var8 = this.field_F;

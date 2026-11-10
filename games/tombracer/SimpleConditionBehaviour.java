@@ -106,7 +106,7 @@ final class SimpleConditionBehaviour extends Behaviour {
           return;
         }
         if (var3 == 1) {
-          this.field_s = this.field_g.d(50, false);
+          this.field_s = this.trap.d(50, false);
           if (param0 == 79) {
             return;
           }
@@ -123,8 +123,8 @@ final class SimpleConditionBehaviour extends Behaviour {
           this.g(91);
           return;
         }
-        var2 = this.b(true).a(this.field_g.getY(9648), this.field_g.getWidth(-96), param0 ^ 79, 2, this.field_g.getHeight((byte) 55), this.field_g.getX(param0 - 76), this.e(6));
-        stackIn_8_1 = !(var2 < (this.field_g.getWidth(param0 ^ -51) >> 16) * (this.field_g.getHeight((byte) 55) >> 16));
+        var2 = this.b(true).a(this.trap.getY(9648), this.trap.getWidth(-96), param0 ^ 79, 2, this.trap.getHeight((byte) 55), this.trap.getX(param0 - 76), this.e(6));
+        stackIn_8_1 = !(var2 < (this.trap.getWidth(param0 ^ -51) >> 16) * (this.trap.getHeight((byte) 55) >> 16));
         this.field_s = stackIn_8_1;
         if (param0 == 79) {
           return;

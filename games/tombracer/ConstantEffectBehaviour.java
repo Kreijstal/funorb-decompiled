@@ -9,7 +9,7 @@ final class ConstantEffectBehaviour extends Behaviour {
     int field_o;
 
     final void k(int param0) {
-        this.field_o = this.b(true).a(125, this.field_g.getY(9648), this.field_r, this.field_g.getHeight((byte) 55), this.field_g.getWidth(-111), this.field_g.getX(param0 - 5415));
+        this.field_o = this.b(true).a(125, this.trap.getY(9648), this.field_r, this.trap.getHeight((byte) 55), this.trap.getWidth(-111), this.trap.getX(param0 - 5415));
         if (param0 != 5418) {
           this.k(-67);
         }
@@ -70,9 +70,9 @@ final class ConstantEffectBehaviour extends Behaviour {
         }
     }
 
-    final void a(boolean param0, Trap param1) {
+    final void attachToTrap(boolean param0, Trap param1) {
         try {
-          super.a(param0, param1);
+          super.attachToTrap(param0, param1);
           this.field_r.a(this.e(6), 2348);
           param1.b((byte) -103, 8);
         } catch (RuntimeException runtimeException) {

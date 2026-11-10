@@ -178,16 +178,16 @@ final class WheeledMountComponent extends PathMoverComponent {
           var8.a((byte) -3, 6);
           var8.b((byte) 17, false);
           var8.g(126, 2);
-          var8.a((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
+          var8.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = this.createPathMove((byte) -41, param2, param0);
           var5.a(true, -606738686);
           var5.b(4, true);
           var5.c(this.field_Q * 8, -60);
-          var8.a(var5, 0);
+          var8.addLocomotor(var5, 0);
           var6 = rm.field_a;
           var7 = (nq) (var6.a(16, param1 + 71));
           var7.b(8022, 0);
-          var8.a((gr) null, (byte) 124, var7);
+          var8.a((TrapPart) null, (byte) 124, var7);
           stackIn_1_0 = var8;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

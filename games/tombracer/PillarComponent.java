@@ -18,14 +18,14 @@ final class PillarComponent extends kna {
           var4.b((byte) -11, this.field_k, this.field_l);
           var4.a((byte) -3, 20);
           var5 = new SimpleBlockBehaviour(param2, param0);
-          var4.a((byte) 83, (Behaviour) (var5));
+          var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var4.b((byte) 17, false);
           var4.a(1, (byte) -12, false);
           var4.h(3, param1 - 3);
           var6 = rm.field_a;
           var7 = (am) (var6.a(4, 108));
           var7.b(param1, (byte) 77);
-          var4.a((gr) null, (byte) 124, var7);
+          var4.a((TrapPart) null, (byte) 124, var7);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -9,9 +9,9 @@ final class vl extends IntrusiveNode {
     vl(int param0, Trap param1) {
         try {
           this.field_f = param0;
-          this.field_g = param1.getRoom((byte) -72).c(121);
+          this.field_g = param1.getRoom((byte) -72).getCourseIndex(121);
           this.field_h = param1.n(31974).id;
-          param1.x(15470);
+          param1.getSimulation(15470);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vl.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -83,7 +83,7 @@ final class TrapSpawner extends Spawner {
     final void a(BitPacketBuffer param0, byte param1) {
         try {
           super.a(param0, param1);
-          this.field_c.a(param0, 8);
+          this.field_c.encode(param0, 8);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vja.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -95,15 +95,15 @@ final class TrapSpawner extends Spawner {
         if (this.field_c.J(96)) {
           return;
         }
-        if (this.field_c.h(18407)) {
+        if (this.field_c.isExpired(18407)) {
           return;
         }
         BitPacketBuffer var5 = new BitPacketBuffer(30000);
         var5.beginBitWrite(8);
-        this.field_c.a(var5, 97);
+        this.field_c.encode(var5, 97);
         if (param3 == 4) {
           var5.endBitWrite(-1826190686);
-          var6 = this.field_c.a(param3 - 14406, this.field_a, true);
+          var6 = this.field_c.cloneInto(param3 - 14406, this.field_a, true);
           var6.m(1, param1);
           var6.c(param2, -19879);
           var6.c(false, param0);
@@ -112,7 +112,7 @@ final class TrapSpawner extends Spawner {
         }
         this.a(false);
         var5.endBitWrite(-1826190686);
-        var6Lifetime1 = this.field_c.a(param3 - 14406, this.field_a, true);
+        var6Lifetime1 = this.field_c.cloneInto(param3 - 14406, this.field_a, true);
         var6Lifetime1.m(1, param1);
         var6Lifetime1.c(param2, -19879);
         var6Lifetime1.c(false, param0);

@@ -30,7 +30,7 @@ final class MirrorBehaviour extends Behaviour {
     }
 
     private final void b(int param0) {
-        int var2 = this.field_g.g(-25787);
+        int var2 = this.trap.g(-25787);
         if (param0 != 1659280738) {
           pc var3 = (pc) null;
           this.a(65, 57, (pc) null, 85);
@@ -209,7 +209,7 @@ final class MirrorBehaviour extends Behaviour {
           var5.a(var6, (var12 >> 8) * var15 + var6, var7, (var13 >> 8) * var15 + var7, 44);
           var5.field_b = var14;
           var16 = this.b(true);
-          var16.a(this.field_q, this.field_g, -108, var5, this.e(6), param1);
+          var16.a(this.field_q, this.trap, -108, var5, this.e(6), param1);
           stackIn_14_0 = 0;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -232,9 +232,9 @@ final class MirrorBehaviour extends Behaviour {
         }
     }
 
-    final void a(boolean param0, Trap param1) {
+    final void attachToTrap(boolean param0, Trap param1) {
         try {
-          super.a(true, param1);
+          super.attachToTrap(true, param1);
           param1.a(param0, 120);
           this.field_n = et.b(param1.getHeight((byte) 55), param1.getWidth(-23), -23);
           this.b(1659280738);
@@ -249,9 +249,9 @@ final class MirrorBehaviour extends Behaviour {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        int var2 = this.field_g.getX(param0 ^ 2);
+        int var2 = this.trap.getX(param0 ^ 2);
         if (param0 == 1) {
-          var3 = this.field_g.getY(9648);
+          var3 = this.trap.getY(9648);
           var4 = this.field_n >> 8;
           var5 = (this.field_t >> 8) * var4 / 2;
           var6 = var4 * (this.field_p >> 8) / 2;

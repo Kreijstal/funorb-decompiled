@@ -30,7 +30,7 @@ final class sna {
         var9 = TombRacer.field_G ? 1 : 0;
         var10 = this.field_l.field_k.players[this.field_l.field_x];
         var3 = var10.getRoom((byte) -106);
-        var4 = this.field_l.field_k.i(1, this.field_l.field_x);
+        var4 = this.field_l.field_k.getPlayerCourseIndex(1, this.field_l.field_x);
         if (param0 != 9981) {
           this.a(77);
         }

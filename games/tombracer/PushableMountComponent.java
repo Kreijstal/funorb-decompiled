@@ -58,11 +58,11 @@ final class PushableMountComponent extends kna {
           var4.b((byte) 17, false);
           var4.a(1, (byte) -12, true);
           var5 = new SimpleBlockBehaviour(param2, param0);
-          var4.a((byte) 83, (Behaviour) (var5));
+          var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (boa) (var6.a(7, 103));
           var7.b(125, 0);
-          var4.a((gr) null, (byte) 124, var7);
+          var4.a((TrapPart) null, (byte) 124, var7);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

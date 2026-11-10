@@ -368,7 +368,7 @@ final class wu implements mfa {
         }
     }
 
-    public final dg a(gr param0, WorldBody param1, int param2) {
+    public final dg a(TrapPart param0, WorldBody param1, int param2) {
         dg stackIn_31_0 = null;
         dg stackIn_33_0 = null;
         RuntimeException stackIn_37_0 = null;

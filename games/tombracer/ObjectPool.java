@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pta implements Renderable {
+final class ObjectPool implements Renderable {
     static String field_g;
-    private Room field_e;
-    IntrusiveDeque field_b;
-    private c field_f;
-    private IntrusiveDeque field_c;
+    private Room room;
+    IntrusiveDeque active;
+    private PooledObject prototype;
+    private IntrusiveDeque free;
     static String field_d;
     private boolean field_a;
 
@@ -21,7 +21,7 @@ final class pta implements Renderable {
 
     public final int getRenderZ(byte param0) {
         if (param0 > -86) {
-          this.field_e = (Room) null;
+          this.room = (Room) null;
           return 0;
         }
         return 0;
@@ -37,19 +37,19 @@ final class pta implements Renderable {
     public final int getRenderY(byte param0) {
         if (param0 < 91) {
           CharSequence var3 = (CharSequence) null;
-          pta.a((CharSequence) null, -61);
+          ObjectPool.a((CharSequence) null, -61);
           return 0;
         }
         return 0;
     }
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         int var5 = TombRacer.field_G ? 1 : 0;
         int var3 = -68 % ((-41 - param1) / 42);
-        c var4 = (c) (this.field_b.first(-80));
+        PooledObject var4 = (PooledObject) (this.active.first(-80));
         while (var4 != null) {
-          param0 = var4.a(param0, (byte) -39);
-          var4 = (c) (this.field_b.next(121));
+          param0 = var4.hashState(param0, (byte) -39);
+          var4 = (PooledObject) (this.active.next(121));
         }
         return param0;
     }
@@ -66,36 +66,36 @@ final class pta implements Renderable {
         }
     }
 
-    final void a(boolean param0) {
-        c var2;
+    final void printAll(boolean param0) {
+        PooledObject var2;
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
         if (!param0) {
-          var2 = (c) (this.field_b.first(-80));
+          var2 = (PooledObject) (this.active.first(-80));
           while (var2 != null) {
             System.out.println(var2);
-            var2 = (c) (this.field_b.next(116));
+            var2 = (PooledObject) (this.active.next(116));
           }
         } else {
           field_d = (String) null;
-          var2 = (c) (this.field_b.first(-80));
+          var2 = (PooledObject) (this.active.first(-80));
           while (var2 != null) {
             System.out.println(var2);
-            var2 = (c) (this.field_b.next(116));
+            var2 = (PooledObject) (this.active.next(116));
           }
         }
     }
 
-    final void a(boolean param0, byte param1) {
+    final void update(boolean param0, byte param1) {
         int var4 = TombRacer.field_G ? 1 : 0;
-        c var3 = (c) (this.field_b.first(-80));
+        PooledObject var3 = (PooledObject) (this.active.first(-80));
         while (var3 != null) {
-          var3.a(-1, param0);
-          if (var3.h(18407)) {
+          var3.tick(-1, param0);
+          if (var3.isExpired(18407)) {
             var3.unlink(76);
-            this.field_c.addLast((byte) -88, var3);
+            this.free.addLast((byte) -88, var3);
           }
-          var3 = (c) (this.field_b.next(127));
+          var3 = (PooledObject) (this.active.next(127));
         }
         if (param1 >= -19) {
           field_d = (String) null;
@@ -103,13 +103,13 @@ final class pta implements Renderable {
         }
     }
 
-    final void a(byte param0) {
+    final void releaseAll(byte param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
-        c var2 = (c) (this.field_b.first(-80));
+        PooledObject var2 = (PooledObject) (this.active.first(-80));
         while (var2 != null) {
           var2.unlink(88);
-          this.field_c.addLast((byte) -60, var2);
-          var2 = (c) (this.field_b.next(112));
+          this.free.addLast((byte) -60, var2);
+          var2 = (PooledObject) (this.active.next(112));
         }
         if (param0 > 111) {
           return;
@@ -120,36 +120,36 @@ final class pta implements Renderable {
 
     public final boolean d(byte param0) {
         if (param0 != 48) {
-          this.field_e = (Room) null;
+          this.room = (Room) null;
           return false;
         }
         return false;
     }
 
-    final c a(int param0, int param1, int param2, uw param3, int param4) {
-        c var6 = null;
+    final PooledObject spawn(int param0, int param1, int param2, uw param3, int param4) {
+        PooledObject var6 = null;
         RuntimeException var6_ref = null;
-        c stackIn_9_0 = null;
+        PooledObject stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -2698) {
-            this.a((byte) 28);
+            this.releaseAll((byte) 28);
           }
-          if (!this.field_c.isEmpty((byte) 14)) {
-            var6 = (c) (this.field_c.removeFirst(param0 ^ 2800));
+          if (!this.free.isEmpty((byte) 14)) {
+            var6 = (PooledObject) (this.free.removeFirst(param0 ^ 2800));
             var6.unlink(param0 + 2821);
           } else {
-            var6 = this.field_f.d(true);
+            var6 = this.prototype.createInstance(true);
           }
-          var6.a(param4, (byte) -78, param1, param2);
+          var6.setPosition(param4, (byte) -78, param1, param2);
           if (this.field_a &&
             param3 != null) {
             var6.a(param3, param0 + 8163);
           }
-          this.field_b.addLast((byte) -109, var6);
+          this.active.addLast((byte) -109, var6);
           stackIn_9_0 = var6;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -168,7 +168,7 @@ final class pta implements Renderable {
 
     public final void render(int param0, iq param1) {
         int var4 = 0;
-        c var5 = null;
+        PooledObject var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -176,13 +176,13 @@ final class pta implements Renderable {
         RuntimeException var3 = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          var5 = (c) (this.field_b.first(-80));
+          var5 = (PooledObject) (this.active.first(-80));
           if (param0 <= 103) {
             return;
           }
           while (var5 != null) {
             var5.render(104, param1);
-            var5 = (c) (this.field_b.next(121));
+            var5 = (PooledObject) (this.active.next(121));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -206,20 +206,20 @@ final class pta implements Renderable {
 
     final void a(int param0) {
         int var3;
-        c var4;
+        PooledObject var4;
         var3 = TombRacer.field_G ? 1 : 0;
         if (param0 > 93) {
-          var4 = (c) (this.field_b.first(-80));
+          var4 = (PooledObject) (this.active.first(-80));
           while (var4 != null) {
-            var4.a(this.field_e, -63);
-            var4 = (c) (this.field_b.next(109));
+            var4.mirrorInRoom(this.room, -63);
+            var4 = (PooledObject) (this.active.next(109));
           }
         } else {
           this.getRenderZ((byte) 14);
-          var4 = (c) (this.field_b.first(-80));
+          var4 = (PooledObject) (this.active.first(-80));
           while (var4 != null) {
-            var4.a(this.field_e, -63);
-            var4 = (c) (this.field_b.next(109));
+            var4.mirrorInRoom(this.room, -63);
+            var4 = (PooledObject) (this.active.next(109));
           }
         }
     }
@@ -251,7 +251,7 @@ final class pta implements Renderable {
         }
     }
 
-    pta(Room param0, c param1, int param2) {
+    ObjectPool(Room param0, PooledObject param1, int param2) {
         int var4_int = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -260,13 +260,13 @@ final class pta implements Renderable {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        this.field_b = new IntrusiveDeque();
-        this.field_c = new IntrusiveDeque();
+        this.active = new IntrusiveDeque();
+        this.free = new IntrusiveDeque();
         try {
-          this.field_e = param0;
-          this.field_f = param1;
+          this.room = param0;
+          this.prototype = param1;
           for (var4_int = 0; param2 > var4_int; var4_int++) {
-            this.field_c.addLast((byte) -81, param1.d(true));
+            this.free.addLast((byte) -81, param1.createInstance(true));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

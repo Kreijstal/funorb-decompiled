@@ -56,7 +56,7 @@ final class dpa implements Renderable {
         int var7 = 0;
         int var8 = 0;
         ka var4 = null;
-        gr var3 = this.field_e.c(-85);
+        TrapPart var3 = this.field_e.c(-85);
         if (var3 != null &&
           !var3.a(-102)) {
           return;

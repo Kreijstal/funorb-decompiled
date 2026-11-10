@@ -57,10 +57,10 @@ final class FacePlayerMountComponent extends kna {
           var8.a((byte) -3, 6);
           var8.b((byte) 17, false);
           var8.g(126, 2);
-          var8.a((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
+          var8.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new FacePlayerLocomotor(param2, param0);
           var5.a(8 * this.field_G, (byte) 127);
-          var8.a(var5, 0);
+          var8.addLocomotor(var5, 0);
           var6 = rm.field_a;
           var7 = (nq) (var6.a(16, param1 ^ 82));
           var7.b(8022, 2);

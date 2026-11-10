@@ -25,7 +25,7 @@ final class DamageableBehaviour extends Behaviour {
     private final Trap b(int param0) {
         int var2 = -100 / ((48 - param0) / 57);
         if (this.field_n) {
-          return this.field_g;
+          return this.trap;
         }
         return this.e(6);
     }
@@ -102,11 +102,11 @@ final class DamageableBehaviour extends Behaviour {
         }
     }
 
-    final void a(boolean param0, Trap param1) {
+    final void attachToTrap(boolean param0, Trap param1) {
         int var3_int = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
         try {
-          super.a(param0, param1);
+          super.attachToTrap(param0, param1);
           for (var3_int = 0; var3_int < 6; var3_int++) {
             if (this.field_w.a(0, var3_int) ||
               this.field_A.a(0, var3_int)) {

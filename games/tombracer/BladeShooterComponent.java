@@ -61,13 +61,13 @@ final class BladeShooterComponent extends ShooterComponent {
           var9 = new Trap(param2, param0);
           var9.b((byte) -11, this.field_k, this.field_l);
           var9.h(3, param1 ^ param1);
-          var9.a((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
+          var9.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new WeaponShooterBehaviour(param2, param0);
           var6 = ci.a(1, -1);
           var6.a(param1 ^ -119, true);
           var5.a(var6, (byte) 61);
           this.a((byte) 43, var5, param2);
-          var9.a((byte) 83, (Behaviour) (var5));
+          var9.addBehaviour((byte) 83, (Behaviour) (var5));
           var7 = rm.field_a;
           var8 = (boa) (var7.a(7, param1 ^ 122));
           var8.b(106, 13);

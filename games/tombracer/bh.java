@@ -512,7 +512,7 @@ final class bh extends ela {
               } else {
                 var34 = gv.field_w[var12.field_cc];
               }
-              qda.field_b = ova.field_k + " - " + var34;
+              qda.field_b = RoomCompletedScreen.field_k + " - " + var34;
             }
             if (var12.field_fc.field_o) {
               if (var12.field_Ob) {

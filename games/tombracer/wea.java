@@ -9,7 +9,7 @@ final class wea implements dv {
     private boolean[] field_b;
 
     public final void a(BitPacketBuffer param0, boolean param1) {
-        this.field_b = c.a(8, this.field_b, (byte) -84, param0);
+        this.field_b = PooledObject.a(8, this.field_b, (byte) -84, param0);
         if (param1) {
           return;
         }

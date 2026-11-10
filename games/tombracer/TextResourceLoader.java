@@ -621,7 +621,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 110, "who_can_join");
                 if (var2 != null) {
-                  ova.field_k = jaa.a((byte) 97, var2);
+                  RoomCompletedScreen.field_k = jaa.a((byte) 97, var2);
                 }
                 var2 = dn.a((byte) -69, "you_can_join");
                 if (null != var2) {
@@ -681,7 +681,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 116, "multiconst_similar_rating");
                 if (null != var2) {
-                  pta.field_d = jaa.a((byte) 120, var2);
+                  ObjectPool.field_d = jaa.a((byte) 120, var2);
                 }
                 var2 = dn.a((byte) 123, "multiconst_open");
                 if (var2 != null) {
@@ -789,7 +789,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 122, "gameopt_notunlocked");
                 if (null != var2) {
-                  ova.field_j = jaa.a((byte) 28, var2);
+                  RoomCompletedScreen.field_j = jaa.a((byte) 28, var2);
                 }
                 var2 = dn.a((byte) -27, "gameopt_cannotbecombined1");
                 if (null != var2) {
@@ -1463,7 +1463,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -70, "login_username_email");
                 if (null != var2) {
-                  c.field_h = jaa.a((byte) 54, var2);
+                  PooledObject.field_h = jaa.a((byte) 54, var2);
                 }
                 var2 = dn.a((byte) -51, "login_username");
                 if (var2 != null) {
@@ -2289,7 +2289,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -39, "hs_name");
                 if (null != var2) {
-                  pta.field_g = jaa.a((byte) 29, var2);
+                  ObjectPool.field_g = jaa.a((byte) 29, var2);
                 }
                 var2 = dn.a((byte) -65, "hs_level");
                 if (var2 != null) {

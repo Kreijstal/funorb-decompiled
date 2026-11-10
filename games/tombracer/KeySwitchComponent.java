@@ -64,13 +64,13 @@ final class KeySwitchComponent extends SwitchComponent {
           var9 = new Trap(param2, param0);
           var9.b((byte) -11, this.field_k, this.field_l);
           var9.h(3, param1 ^ param1);
-          var9.a((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
+          var9.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new KeyLockBehaviour(param2, param0);
           var5.b(0, 1);
           this.a(var5, (byte) -101);
           var6 = var5.k((byte) -98);
           var6.b(1, 106);
-          var9.a((byte) 83, (Behaviour) (var5));
+          var9.addBehaviour((byte) 83, (Behaviour) (var5));
           var7 = rm.field_a;
           var8 = (cv) (var7.a(9, param1 + 103));
           var8.b(3, (byte) -112);

@@ -80,7 +80,7 @@ final class PushableBlockMazeComponent extends MazeComponent {
           var10.b(false, 11468);
           var10.a(1, (byte) -12, true);
           var5 = new SimpleBlockBehaviour(param2, param1);
-          var10.a((byte) 83, (Behaviour) (var5));
+          var10.addBehaviour((byte) 83, (Behaviour) (var5));
           var10.d(25, -1);
           var6 = new DamageableBehaviour(param2, param1);
           var6.b((byte) 0, true);
@@ -88,14 +88,14 @@ final class PushableBlockMazeComponent extends MazeComponent {
           var7 = var6.j((byte) -112);
           var7.a(false, 67);
           var7.a(0, -17075, true);
-          var10.a((byte) 83, (Behaviour) (var6));
+          var10.addBehaviour((byte) 83, (Behaviour) (var6));
           if (param0 != 5) {
             field_L = true;
           }
           var8 = rm.field_a;
           var9 = (boa) (var8.a(7, 75));
           var9.b(124, 0);
-          var10.a((gr) null, (byte) 124, var9);
+          var10.a((TrapPart) null, (byte) 124, var9);
           stackIn_3_0 = var10;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

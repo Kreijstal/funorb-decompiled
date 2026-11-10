@@ -26,13 +26,13 @@ final class TorchComponent extends kna {
           var5 = rm.field_a;
           var6 = (am) (var5.a(4, 80));
           var6.b(1, (byte) 77);
-          var4.a((gr) null, (byte) 124, var6);
+          var4.a((TrapPart) null, (byte) 124, var6);
           var7 = (gaa) (var5.a(5, 88));
           var7.a(64, 119);
           var7.a(true, 16633231);
           var7.b(1, 96);
           var7.a(0, param1, 1, true);
-          var4.a((gr) null, (byte) 124, var7);
+          var4.a((TrapPart) null, (byte) 124, var7);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

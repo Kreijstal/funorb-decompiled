@@ -133,9 +133,9 @@ final class PortalBehaviour extends Behaviour {
         this.field_p.a(this.h((byte) 112), 8);
     }
 
-    final void a(boolean param0, Trap param1) {
+    final void attachToTrap(boolean param0, Trap param1) {
         try {
-          super.a(param0, param1);
+          super.attachToTrap(param0, param1);
           param1.b((byte) -126, 3);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "im.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -279,10 +279,10 @@ final class PortalBehaviour extends Behaviour {
         if (param0 != 5418) {
           return;
         }
-        var4 = this.field_g.getX(param0 - 5415);
-        var5 = this.field_g.getY(9648);
-        var6 = this.field_g.getWidth(-119);
-        var7 = this.field_g.getHeight((byte) 55);
+        var4 = this.trap.getX(param0 - 5415);
+        var5 = this.trap.getY(9648);
+        var6 = this.trap.getWidth(-119);
+        var7 = this.trap.getHeight((byte) 55);
         var8 = ((Trap) (var3)).getX(3);
         var9 = ((Trap) (var3)).getY(param0 ^ 12442);
         var10 = ((Trap) (var3)).getWidth(param0 - 5510);
@@ -295,8 +295,8 @@ final class PortalBehaviour extends Behaviour {
           if (var16 instanceof t) {
             var28 = (t) ((Object) var16);
             if (var28.j((byte) -113) &&
-              var16 != this.field_g &&
-              !this.field_g.a(var16, true)) {
+              var16 != this.trap &&
+              !this.trap.a(var16, true)) {
               var18 = var16.getX(3);
               var19 = var16.getY(9648);
               var20 = var16.getWidth(-128);

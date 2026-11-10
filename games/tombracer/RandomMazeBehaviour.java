@@ -40,8 +40,8 @@ final class RandomMazeBehaviour extends Behaviour {
           if (null == this.field_z) {
             return false;
           }
-          var8_int = this.field_g.getX(3) - this.field_g.getWidth(-29) / 2;
-          var9 = this.field_g.getY(9648) - this.field_g.getHeight((byte) 55) / 2;
+          var8_int = this.trap.getX(3) - this.trap.getWidth(-29) / 2;
+          var9 = this.trap.getY(9648) - this.trap.getHeight((byte) 55) / 2;
           param3 = param3 - (this.field_y + param1 / 2);
           param4 = param4 - (this.field_w + param0 / 2);
           var10 = -var8_int + param3;
@@ -89,14 +89,14 @@ final class RandomMazeBehaviour extends Behaviour {
         }
     }
 
-    final void a(boolean param0, Trap param1) {
+    final void attachToTrap(boolean param0, Trap param1) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          super.a(param0, param1);
+          super.attachToTrap(param0, param1);
           if (this.b(true).formatVersion < 4) {
             param1.h(4, 0);
           }
@@ -229,8 +229,8 @@ final class RandomMazeBehaviour extends Behaviour {
         RuntimeException decompiledCaughtException = null;
         var17 = TombRacer.field_G ? 1 : 0;
         try {
-          var3_int = this.field_g.getX(param1 + 4) - this.field_g.getWidth(param1 - 54) / 2;
-          var4 = this.field_g.getY(9648) - this.field_g.getHeight((byte) 55) / 2;
+          var3_int = this.trap.getX(param1 + 4) - this.trap.getWidth(param1 - 54) / 2;
+          var4 = this.trap.getY(9648) - this.trap.getHeight((byte) 55) / 2;
           var5 = -this.field_y + (-var3_int + param0.field_d);
           var6 = param0.field_e - var3_int - this.field_y;
           var7 = param0.field_k - (this.field_w + var4);
@@ -313,13 +313,13 @@ final class RandomMazeBehaviour extends Behaviour {
         int[][] var37;
         int var20Lifetime1;
         var22 = TombRacer.field_G ? 1 : 0;
-        if (this.field_g == null) {
+        if (this.trap == null) {
           return;
         }
         var25 = this.b(true);
         var3 = this.o((byte) 46);
-        var4 = this.field_g.getWidth(-34) / this.field_t;
-        var5 = this.field_g.getHeight((byte) 55) / this.field_t;
+        var4 = this.trap.getWidth(-34) / this.field_t;
+        var5 = this.trap.getHeight((byte) 55) / this.field_t;
         if (var4 / 2 * 2 == var4) {
           var4--;
         }
@@ -327,7 +327,7 @@ final class RandomMazeBehaviour extends Behaviour {
           var5--;
         }
         if (this.field_u &&
-          this.field_t * var4 <= this.field_g.getWidth(-109) - 2097152) {
+          this.field_t * var4 <= this.trap.getWidth(-109) - 2097152) {
           var4 += 2;
         }
         var6 = var4 / 2;
@@ -378,10 +378,10 @@ final class RandomMazeBehaviour extends Behaviour {
           }
           break;
         }
-        this.field_y = (this.field_g.getWidth(-30) - this.field_t * this.field_z.field_f) / 2;
-        this.field_w = (this.field_g.getHeight((byte) 55) - this.field_z.field_a * this.field_t) / 2;
-        var12 = this.field_y - this.field_g.getWidth(-12) / 2 + this.field_t / 2;
-        var13 = this.field_w - this.field_g.getHeight((byte) 55) / 2 + this.field_t / 2;
+        this.field_y = (this.trap.getWidth(-30) - this.field_t * this.field_z.field_f) / 2;
+        this.field_w = (this.trap.getHeight((byte) 55) - this.field_z.field_a * this.field_t) / 2;
+        var12 = this.field_y - this.trap.getWidth(-12) / 2 + this.field_t / 2;
+        var13 = this.field_w - this.trap.getHeight((byte) 55) / 2 + this.field_t / 2;
         if (this.field_u) {
           return;
         }
@@ -395,7 +395,7 @@ final class RandomMazeBehaviour extends Behaviour {
           var26 = new BitPacketBuffer(30000);
           var15 = var26;
           var26.beginBitWrite(8);
-          this.field_r.a(var26, 125);
+          this.field_r.encode(var26, 125);
           var26.endBitWrite(-1826190686);
         }
         if (null != this.field_A &&
@@ -403,7 +403,7 @@ final class RandomMazeBehaviour extends Behaviour {
           var27 = new BitPacketBuffer(30000);
           var16 = var27;
           var27.beginBitWrite(8);
-          this.field_A.a(var27, 84);
+          this.field_A.encode(var27, 84);
           var27.endBitWrite(-1826190686);
         }
         if (null != this.field_o &&
@@ -411,7 +411,7 @@ final class RandomMazeBehaviour extends Behaviour {
           var28 = new BitPacketBuffer(30000);
           var17 = var28;
           var28.beginBitWrite(8);
-          this.field_o.a(var28, -112);
+          this.field_o.encode(var28, -112);
           var28.endBitWrite(-1826190686);
         }
         for (var18 = 0; this.field_z.field_f > var18; var18++) {
@@ -497,8 +497,8 @@ final class RandomMazeBehaviour extends Behaviour {
           }
           var5_int = 0;
           if (0 < this.field_y) {
-            var6 = this.field_g.getX(3) - this.field_g.getWidth(-49) / 2;
-            var7 = this.field_g.getY(9648) - (this.field_g.getHeight((byte) 55) / 2 - this.field_w);
+            var6 = this.trap.getX(3) - this.trap.getWidth(-49) / 2;
+            var7 = this.trap.getY(9648) - (this.trap.getHeight((byte) 55) / 2 - this.field_w);
             var8 = this.field_t * this.field_z.field_f;
             var9 = this.field_z.field_a * this.field_t;
             var10 = this.field_y + var8;
@@ -508,7 +508,7 @@ final class RandomMazeBehaviour extends Behaviour {
               stackIn_14_0 = 1;
             }
             var5_int = stackIn_14_0;
-            if (!this.a(false, var9, var10 + var6, var7, param2, this.field_g.getWidth(-45) - var10)) {
+            if (!this.a(false, var9, var10 + var6, var7, param2, this.trap.getWidth(-45) - var10)) {
               stackIn_20_0 = (var5_int != 0) ? 1 : 0;
             } else {
               stackIn_20_0 = 1;
@@ -558,7 +558,7 @@ final class RandomMazeBehaviour extends Behaviour {
           var8.d((byte) -97, true);
           var8.m(1, param5 + this.field_t * param0);
           var8.c(param1 + this.field_t * param2, -19879);
-          this.field_g.a(-97, var8);
+          this.trap.addChild(-97, var8);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vd.AA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
@@ -692,10 +692,10 @@ final class RandomMazeBehaviour extends Behaviour {
           param1.writeBits((byte) 113, this.field_q, 7);
           param1.writeBits((byte) -127, this.field_v, 3);
           if (!this.field_u) {
-            this.field_r.a(param1, 85);
-            this.field_A.a(param1, 126);
+            this.field_r.encode(param1, 85);
+            this.field_A.encode(param1, 126);
             if (this.field_v > 0) {
-              this.field_o.a(param1, -10);
+              this.field_o.encode(param1, -10);
               return;
             }
           }

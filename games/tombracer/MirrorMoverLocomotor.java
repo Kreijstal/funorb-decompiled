@@ -20,7 +20,7 @@ final class MirrorMoverLocomotor extends Locomotor {
         int var5 = 0;
         int var2 = 72 % ((-69 - param0) / 42);
         if (this.field_k) {
-          var3 = this.field_n.H(-34);
+          var3 = this.trap.getPlayer(-34);
           if (var3.u(-25561)) {
             return;
           }
@@ -32,7 +32,7 @@ final class MirrorMoverLocomotor extends Locomotor {
           if (this.field_p) {
             var4 = var4 * -1;
           }
-          this.field_n.a((byte) -105, var4, var5);
+          this.trap.a((byte) -105, var4, var5);
         }
     }
 

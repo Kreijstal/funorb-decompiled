@@ -35,7 +35,7 @@ final class fha {
           fua.field_f = BoulderComponent.a(param2, "commonui", 5, "frame_bottom");
           ApproachPlayerLocomotor.field_s = nia.a(param2, "commonui", "jagex_logo_grey", -101);
           nga.field_n = BoulderComponent.a(param2, "commonui", 5, "button");
-          pq.field_b = hr.a("validation", param2, "commonui", -57);
+          pq.field_b = Particle.a("validation", param2, "commonui", -57);
           eka.field_o = (BitmapFont) ((Object) oo.a(param2, param1, false, "commonui", "arezzo12"));
           KeySwitchComponent.field_J = (BitmapFont) ((Object) oo.a(param2, param1, false, "commonui", "arezzo14"));
           ft.field_c = (BitmapFont) ((Object) oo.a(param2, param1, false, "commonui", "arezzo14bold"));

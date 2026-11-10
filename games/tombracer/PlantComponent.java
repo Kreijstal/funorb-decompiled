@@ -75,7 +75,7 @@ final class PlantComponent extends kna {
           }
           var7 = (ki) (var5.a(14, 82));
           var7.a(true, var6);
-          var9.a((gr) null, (byte) 124, var7);
+          var9.a((TrapPart) null, (byte) 124, var7);
           stackIn_17_0 = var9;
           return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

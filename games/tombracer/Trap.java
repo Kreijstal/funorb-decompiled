@@ -2,20 +2,20 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody, ffa, noa, qn, t {
-    private IntrusiveDeque field_K;
+    private IntrusiveDeque children;
     static jea field_q;
     static int field_m;
-    private SwitchableId field_i;
-    private Trap field_X;
+    private SwitchableId switchableId;
+    private Trap parent;
     private SwitchableId field_Y;
     private int field_ab;
     private Room room;
-    IntrusiveDeque field_B;
-    IntrusiveDeque field_u;
+    IntrusiveDeque locomotors;
+    IntrusiveDeque behaviours;
     private boolean field_v;
     private int field_g;
     private int field_j;
-    private int field_Z;
+    private int localX;
     private int field_w;
     private int field_ib;
     private int field_J;
@@ -27,20 +27,20 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
     private int field_n;
     private int field_E;
     private boolean field_p;
-    private int field_gb;
+    private int height;
     private boolean field_jb;
     private boolean field_T;
     private int field_U;
     private boolean field_eb;
     private boolean[] field_h;
     private int field_bb;
-    private int field_mb;
+    private int localY;
     private int field_lb;
     private boolean field_cb;
     private boolean field_C;
     private boolean[] field_W;
     private IntrusiveDeque field_O;
-    private int field_t;
+    private int width;
     private int field_N;
     private boolean field_r;
     private int field_V;
@@ -63,13 +63,13 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
     private int field_kb;
     private int field_db;
 
-    final void a(byte param0, Behaviour param1) {
+    final void addBehaviour(byte param0, Behaviour param1) {
         try {
-          this.field_u.addLast((byte) -58, param1);
-          param1.a(true, this);
+          this.behaviours.addLast((byte) -58, param1);
+          param1.attachToTrap(true, this);
           if (param0 != 83) {
             Locomotor var4 = (Locomotor) null;
-            this.a((Locomotor) null, 39);
+            this.addLocomotor((Locomotor) null, 39);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fsa.WB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -107,11 +107,11 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
     }
 
     private final void u(byte param0) {
-        this.field_bb = this.field_mb;
+        this.field_bb = this.localY;
         if (param0 != 116) {
           this.b(83, 92, 87, -71, -11);
         }
-        this.field_s = this.field_Z;
+        this.field_s = this.localX;
         this.field_U = this.getX(3);
         this.field_E = this.getY(9648);
     }
@@ -138,28 +138,28 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           }
           param1 = stackIn_7_0;
           if (param2 != null) {
-            this.field_i = param2.a(-114, param1);
+            this.switchableId = param2.a(-114, param1);
           }
           if (param3 != null) {
             this.field_Y = param3.a(-102, false);
           }
-          var7 = (Locomotor) (this.field_B.first(-80));
+          var7 = (Locomotor) (this.locomotors.first(-80));
           while (var7 != null) {
             var7.a(param1, (byte) -128, param2, param3);
-            var7 = (Locomotor) (this.field_B.next(116));
+            var7 = (Locomotor) (this.locomotors.next(116));
           }
           if (!param0) {
             this.b((byte) -99, -59);
           }
-          var8 = (Behaviour) (this.field_u.first(-80));
+          var8 = (Behaviour) (this.behaviours.first(-80));
           while (var8 != null) {
             var8.a(-121, param2, param1, param3);
-            var8 = (Behaviour) (this.field_u.next(115));
+            var8 = (Behaviour) (this.behaviours.next(115));
           }
-          var9 = (Trap) (this.field_K.first(-80));
+          var9 = (Trap) (this.children.first(-80));
           while (var9 != null) {
             var9.a(true, param1, param2, param3);
-            var9 = (Trap) (this.field_K.next(109));
+            var9 = (Trap) (this.children.next(109));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -221,8 +221,8 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
     final void h(int param0, int param1) {
         boolean discarded$0 = false;
         this.field_f = param0;
-        if (null != this.field_X) {
-          this.field_X.h(param0, 0);
+        if (null != this.parent) {
+          this.parent.h(param0, 0);
         }
         if (param1 != 0) {
           discarded$0 = this.C(-45);
@@ -245,7 +245,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         }
     }
 
-    final void a(gr param0, byte param1, dg param2) {
+    final void a(TrapPart param0, byte param1, dg param2) {
         if (param2 == null) {
           return;
         }
@@ -298,8 +298,8 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         }
         boolean decompiledFrameRemainder0 = true;
         if (this.field_hb == 0 && (!this.field_A ||
-          this.field_X == null ||
-          !this.field_X.j(-1))) {
+          this.parent == null ||
+          !this.parent.j(-1))) {
           stackIn_9_0 = false;
           decompiledFrameRemainder0 = false;
         }
@@ -342,21 +342,21 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
 
     final int i(int param0, int param1) {
         int var4 = TombRacer.field_G ? 1 : 0;
-        param0 = fs.a((byte) 79, param0, this.field_Z);
+        param0 = fs.a((byte) 79, param0, this.localX);
         if (param1 >= -100) {
           this.field_db = -42;
         }
-        param0 = fs.a((byte) 64, param0, this.field_mb);
+        param0 = fs.a((byte) 64, param0, this.localY);
         param0 = fs.a((byte) 84, param0, this.field_F);
-        Locomotor var5 = (Locomotor) (this.field_B.first(-80));
+        Locomotor var5 = (Locomotor) (this.locomotors.first(-80));
         while (var5 != null) {
           param0 = var5.a(0, param0);
-          var5 = (Locomotor) (this.field_B.next(121));
+          var5 = (Locomotor) (this.locomotors.next(121));
         }
-        Behaviour var6 = (Behaviour) (this.field_u.first(-80));
+        Behaviour var6 = (Behaviour) (this.behaviours.first(-80));
         while (var6 != null) {
           param0 = var6.a(param0, -109);
-          var6 = (Behaviour) (this.field_u.next(115));
+          var6 = (Behaviour) (this.behaviours.next(115));
         }
         return param0;
     }
@@ -384,8 +384,8 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           return false;
         }
         this.b(1 + param5, param4, 123, param2, param3);
-        if (this.field_s + param4 == this.field_Z) {
-          stackIn_20_0 = (this.field_mb == param3 + this.field_bb) ? 1 : 0;
+        if (this.field_s + param4 == this.localX) {
+          stackIn_20_0 = (this.localY == param3 + this.field_bb) ? 1 : 0;
         } else {
           stackIn_20_0 = 0;
         }
@@ -407,8 +407,8 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         if (param0 != -11) {
           return;
         }
-        this.field_gb = param1;
-        this.field_t = param2;
+        this.height = param1;
+        this.width = param2;
     }
 
     final void i(boolean param0) {
@@ -417,15 +417,15 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         if (this.j(-1)) {
           return;
         }
-        if (this.field_X != null &&
+        if (this.parent != null &&
           !this.field_A) {
         }
-        Trap var2 = (Trap) (this.field_K.first(-80));
+        Trap var2 = (Trap) (this.children.first(-80));
         while (var2 != null) {
           if (var2.field_A) {
             var2.i(true);
           }
-          var2 = (Trap) (this.field_K.next(120));
+          var2 = (Trap) (this.children.next(120));
         }
         this.field_hb = 1;
         this.field_f = 0;
@@ -446,42 +446,42 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         int var6Lifetime1;
         this.F((byte) -116);
         if (this.field_V <= 0) {
-          this.field_mb = this.field_mb + param4;
-          this.field_Z = this.field_Z + param1;
+          this.localY = this.localY + param4;
+          this.localX = this.localX + param1;
         } else {
           var6 = 0;
           if (param1 != 0) {
             var6 = 1;
-            this.field_Z = this.field_Z + param1;
+            this.localX = this.localX + param1;
           }
           if (var6 != 0 &&
             this.a(this.getX(3) - this.field_U, 0, -4648, param3, param0) == 2) {
-            this.field_Z = this.field_s;
+            this.localX = this.field_s;
             this.field_Q = true;
           }
           var6Lifetime1 = 0;
           if (0 != param4) {
-            this.field_mb = this.field_mb + param4;
+            this.localY = this.localY + param4;
             var6Lifetime1 = 1;
           }
           if (var6Lifetime1 != 0 &&
             this.a(0, this.getY(9648) - this.field_E, -4648, param3, param0) == 2) {
             this.field_P = true;
-            this.field_mb = this.field_bb;
+            this.localY = this.field_bb;
           }
           if (this.d(false, -3)) {
-            if (this.field_s != this.field_Z) {
+            if (this.field_s != this.localX) {
               this.field_Q = true;
             }
-            if (this.field_bb != this.field_mb) {
+            if (this.field_bb != this.localY) {
               this.field_P = true;
             }
-            this.field_Z = this.field_s;
-            this.field_mb = this.field_bb;
+            this.localX = this.field_s;
+            this.localY = this.field_bb;
           }
         }
-        if (this.field_s != this.field_Z ||
-          this.field_mb != this.field_bb) {
+        if (this.field_s != this.localX ||
+          this.localY != this.field_bb) {
           this.field_M = true;
           this.z(1);
         }
@@ -531,7 +531,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           this.D((byte) 118);
         }
         if (!param1) {
-          stackIn_20_0 = (this.x(15470).g(99));
+          stackIn_20_0 = (this.getSimulation(15470).g(99));
         } else {
           stackIn_20_0 = true;
         }
@@ -543,13 +543,13 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         }
         if (!param1 &&
           this.field_v &&
-          this.x(15470).f(8, 10915)) {
+          this.getSimulation(15470).f(8, 10915)) {
           this.a(86, true, 1, 131072 - this.room.q(90).a(262144, 0), -this.room.q(85).a(262144, 0) + 131072, 0);
         }
         if (!this.j(-1)) {
           this.field_Q = false;
           this.field_P = false;
-          var8 = new uja(this.field_B);
+          var8 = new uja(this.locomotors);
           if (this.field_D &&
             !param1) {
             var11 = (Locomotor) (var8.a(true));
@@ -570,7 +570,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
             var6.b(1);
             var6 = (Locomotor) (var8.a(-1));
           }
-          var9 = new uja(this.field_u);
+          var9 = new uja(this.behaviours);
           var12 = (Behaviour) (var9.a(true));
           while (var12 != null) {
             if (!var12.a((byte) 87)) {
@@ -588,7 +588,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
             }
             var12 = (Behaviour) (var9.a(-1));
           }
-          var10 = new uja(this.field_K);
+          var10 = new uja(this.children);
           var4 = (Trap) (var10.a(true));
           while (var4 != null) {
             var4.b(75, param1);
@@ -605,12 +605,12 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           var7 = (dg) (this.field_O.next(126));
         }
         if (this.field_eb &&
-          this.field_B.isEmpty((byte) 14)) {
+          this.locomotors.isEmpty((byte) 14)) {
           this.v((byte) 109);
           return;
         }
         if (this.field_p &&
-          this.field_u.isEmpty((byte) 14)) {
+          this.behaviours.isEmpty((byte) 14)) {
           this.v((byte) 109);
           return;
         }
@@ -618,12 +618,12 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           this.e(-93, 58);
         }
         if (!this.field_r && (!this.field_A ||
-          null == this.field_X) && this.room.a(0, (WorldBody) (this)) == 1) {
+          null == this.parent) && this.room.a(0, (WorldBody) (this)) == 1) {
           this.i(true);
           return;
         }
-        if (this.field_hb != 0 && (this.field_X == null ||
-          !this.field_X.j(-1))) {
+        if (this.field_hb != 0 && (this.parent == null ||
+          !this.parent.j(-1))) {
           this.field_hb = this.field_hb + this.field_kb;
           this.field_kb = this.field_kb + 16384;
           if (17825792 <= this.field_hb) {
@@ -637,17 +637,17 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
 
     final void x(byte param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
-        if (this.field_X != null) {
-          this.field_g = MouseInputHandler.a((byte) 124, -this.field_X.g(-25787) >> 2);
-          this.field_w = bua.a(0, -this.field_X.g(param0 - 25727) >> 2);
+        if (this.parent != null) {
+          this.field_g = MouseInputHandler.a((byte) 124, -this.parent.g(-25787) >> 2);
+          this.field_w = bua.a(0, -this.parent.g(param0 - 25727) >> 2);
         }
         if (param0 != -60) {
           this.field_g = -7;
         }
-        Trap var4 = (Trap) (this.field_K.first(param0 ^ 116));
+        Trap var4 = (Trap) (this.children.first(param0 ^ 116));
         while (var4 != null) {
           var4.x((byte) -60);
-          var4 = (Trap) (this.field_K.next(113));
+          var4 = (Trap) (this.children.next(113));
         }
     }
 
@@ -808,15 +808,15 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         if (vh.a(param1, param0, -27201, (lj) (this))) {
           return (lj) (this);
         }
-        var9 = (Locomotor) (this.field_B.first(-80));
+        var9 = (Locomotor) (this.locomotors.first(-80));
         while (var9 != null) {
           var4 = var9.a(param0, 1, param1);
           if (var4 != null) {
             return var4;
           }
-          var9 = (Locomotor) (this.field_B.next(119));
+          var9 = (Locomotor) (this.locomotors.next(119));
         }
-        var11 = new uja(this.field_u);
+        var11 = new uja(this.behaviours);
         var8 = (Behaviour) (var11.a(true));
         while (var8 != null) {
           var4Lifetime1 = var8.a(0, param1, param0);
@@ -825,7 +825,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           }
           var8 = (Behaviour) (var11.a(-1));
         }
-        var12 = new uja(this.field_K);
+        var12 = new uja(this.children);
         if (param2 != -26) {
           this.h(122, -84);
         }
@@ -852,8 +852,8 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           var3 = (Projectile) null;
           this.a((Effect) null, (Projectile) null, -25);
         }
-        stackIn_10_0 = ((null != this.field_X &&
-          this.field_X.l(0)) ||
+        stackIn_10_0 = ((null != this.parent &&
+          this.parent.l(0)) ||
           (this.room.o((byte) -82) &&
           !(this.a(this.room.i(6029), 31749))));
         return stackIn_10_0;
@@ -870,10 +870,10 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         if (param0 != 2) {
           return 72;
         }
-        return this.getY(9648) - this.field_gb / 2;
+        return this.getY(9648) - this.height / 2;
     }
 
-    private final int a(int param0, gr param1) {
+    private final int a(int param0, TrapPart param1) {
         ub var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -886,7 +886,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         RuntimeException decompiledCaughtException = null;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          var3 = this.k((byte) -30);
+          var3 = this.collectParts((byte) -30);
           if (param0 != 13464) {
             this.field_D = true;
           }
@@ -948,14 +948,14 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         int var7Lifetime1;
         int var8Lifetime1;
         try {
-          this.field_X = param1;
+          this.parent = param1;
           if (param1 != null) {
             this.field_cb = false;
           }
-          this.field_Z = CoinItemComponent.a(true, 12, param2.readBits((byte) 44, 12)) << 16;
-          this.field_mb = CoinItemComponent.a(true, 12, param2.readBits((byte) 44, 12)) << 16;
-          this.field_t = param2.readBits((byte) 44, 10) << 16;
-          this.field_gb = param2.readBits((byte) 44, 10) << 16;
+          this.localX = CoinItemComponent.a(true, 12, param2.readBits((byte) 44, 12)) << 16;
+          this.localY = CoinItemComponent.a(true, 12, param2.readBits((byte) 44, 12)) << 16;
+          this.width = param2.readBits((byte) 44, 10) << 16;
+          this.height = param2.readBits((byte) 44, 10) << 16;
           stackIn_6_1 = (param2.readBits((byte) 44, 1) == 1);
           this.field_eb = stackIn_6_1;
           stackIn_9_1 = (param2.readBits((byte) 44, 1) == 1);
@@ -993,14 +993,14 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           var5_int = param2.readBits((byte) 44, 3);
           for (var6 = 0; var5_int > var6; var6++) {
             var7_ref_wda = ki.readLocomotor(param2, (byte) 95, param0, param3);
-            this.field_B.addLast((byte) -49, var7_ref_wda);
-            var7_ref_wda.a(64, this);
+            this.locomotors.addLast((byte) -49, var7_ref_wda);
+            var7_ref_wda.attachToTrap(64, this);
           }
           var6Lifetime1 = param2.readBits((byte) 44, 3);
           for (var7 = 0; var7 < var6Lifetime1; var7++) {
             var8_ref_nv = bda.readBehaviour(param3, (byte) 44, param0, param2);
-            this.field_u.addLast((byte) -88, var8_ref_nv);
-            var8_ref_nv.a(true, this);
+            this.behaviours.addLast((byte) -88, var8_ref_nv);
+            var8_ref_nv.attachToTrap(true, this);
           }
           if (param0.formatVersion < 2) {
             var7Lifetime1 = param2.readBits((byte) 44, 2);
@@ -1009,7 +1009,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           }
           for (var8 = 0; var8 < var7Lifetime1; var8++) {
             var9_ref_fsa = new Trap(param0, this, param2, param3);
-            this.field_K.addLast((byte) -120, var9_ref_fsa);
+            this.children.addLast((byte) -120, var9_ref_fsa);
           }
           if (param0.formatVersion > 8) {
             var8Lifetime1 = param2.readBits((byte) 44, 3);
@@ -1077,13 +1077,13 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
 
     final void h(boolean param0) {
         int var4 = TombRacer.field_G ? 1 : 0;
-        uja var2 = new uja(this.field_u);
+        uja var2 = new uja(this.behaviours);
         Behaviour var5 = (Behaviour) (var2.a(true));
         while (var5 != null) {
           var5.g(-2);
           var5 = (Behaviour) (var2.a(-1));
         }
-        var2 = new uja(this.field_K);
+        var2 = new uja(this.children);
         Trap var6 = (Trap) (var2.a(param0));
         while (var6 != null) {
           var6.h(true);
@@ -1093,8 +1093,8 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
 
     public final int g(int param0) {
         int var2 = this.field_F;
-        if (this.field_X != null) {
-          var2 = var2 + this.field_X.g(param0 + 0);
+        if (this.parent != null) {
+          var2 = var2 + this.parent.g(param0 + 0);
         }
         if (param0 != -25787) {
           this.a(false);
@@ -1104,18 +1104,18 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
 
     public final int getRenderX(byte param0) {
         int var2 = -82 % ((-23 - param0) / 53);
-        return this.field_Z;
+        return this.localX;
     }
 
     public final int getWidth(int param0) {
         if (param0 > -11) {
-          this.field_mb = 62;
+          this.localY = 62;
         }
-        return this.field_t;
+        return this.width;
     }
 
     final void c(int param0, int param1) {
-        this.field_mb = param0;
+        this.localY = param0;
         if (param1 != -19879) {
           this.c(-99, -65);
         }
@@ -1125,11 +1125,11 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         if (param0 != 55) {
           return -54;
         }
-        return this.field_gb;
+        return this.height;
     }
 
     public final String toString() {
-        return this.E(116) + " (id " + this.field_i + ")";
+        return this.describe(116) + " (id " + this.switchableId + ")";
     }
 
     final boolean m(byte param0) {
@@ -1152,7 +1152,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           return false;
         }
         if (!this.j(-1) &&
-          !this.h(18407)) {
+          !this.isExpired(18407)) {
           if (this.field_f < 1) {
             return false;
           }
@@ -1167,8 +1167,8 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         if (param0 != 115) {
           return -57;
         }
-        if (this.field_X != null) {
-          var2 = var2 + this.field_X.g((byte) 115);
+        if (this.parent != null) {
+          var2 = var2 + this.parent.g((byte) 115);
         }
         return var2;
     }
@@ -1213,10 +1213,10 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           this.a(param1, true);
-          var6 = (Trap) (this.field_K.first(-80));
+          var6 = (Trap) (this.children.first(-80));
           while (var6 != null) {
             var6.a(127, param1);
-            var6 = (Trap) (this.field_K.next(115));
+            var6 = (Trap) (this.children.next(115));
           }
           if (param0 <= 115) {
             var5 = (CharSequence) null;
@@ -1237,7 +1237,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         }
     }
 
-    final void a(BitPacketBuffer param0, int param1) {
+    final void encode(BitPacketBuffer param0, int param1) {
         BitPacketBuffer stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         int stackIn_4_2 = 0;
@@ -1266,10 +1266,10 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         dg var8 = null;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          param0.writeBits((byte) 0, dqa.a(true, this.field_Z >> 16, 12), 12);
-          param0.writeBits((byte) -126, dqa.a(true, this.field_mb >> 16, 12), 12);
-          param0.writeBits((byte) -127, this.field_t >> 16, 10);
-          param0.writeBits((byte) 72, this.field_gb >> 16, 10);
+          param0.writeBits((byte) 0, dqa.a(true, this.localX >> 16, 12), 12);
+          param0.writeBits((byte) -126, dqa.a(true, this.localY >> 16, 12), 12);
+          param0.writeBits((byte) -127, this.width >> 16, 10);
+          param0.writeBits((byte) 72, this.height >> 16, 10);
           stackIn_3_0 = (BitPacketBuffer) (param0);
           stackIn_3_1 = 58;
           if (!this.field_eb) {
@@ -1310,28 +1310,28 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           param0.writeBits((byte) 26, this.field_f, 3);
           param0.writeBits((byte) -127, this.field_V, 3);
           param0.writeBits((byte) -126, this.field_L, 3);
-          param0.writeBits((byte) -125, this.field_B.size((byte) -16), 3);
-          var6 = (Locomotor) (this.field_B.first(-80));
+          param0.writeBits((byte) -125, this.locomotors.size((byte) -16), 3);
+          var6 = (Locomotor) (this.locomotors.first(-80));
           while (var6 != null) {
             var6.a(param0, (byte) -100);
-            var6 = (Locomotor) (this.field_B.next(118));
+            var6 = (Locomotor) (this.locomotors.next(118));
           }
-          param0.writeBits((byte) -127, this.field_u.size((byte) -16), 3);
-          var7 = (Behaviour) (this.field_u.first(-80));
+          param0.writeBits((byte) -127, this.behaviours.size((byte) -16), 3);
+          var7 = (Behaviour) (this.behaviours.first(-80));
           while (var7 != null) {
             var7.a(false, param0);
-            var7 = (Behaviour) (this.field_u.next(111));
+            var7 = (Behaviour) (this.behaviours.next(111));
           }
           param0.writeBits((byte) -126, this.t((byte) 112), 3);
-          var4 = (Trap) (this.field_K.first(-80));
+          var4 = (Trap) (this.children.first(-80));
           while (var4 != null) {
             if (var4.w((byte) -119)) {
               var4.B(-165);
               var4.unlink(17);
             } else {
-              var4.a(param0, -14);
+              var4.encode(param0, -14);
             }
-            var4 = (Trap) (this.field_K.next(124));
+            var4 = (Trap) (this.children.next(124));
           }
           if (this.room.formatVersion >= 9) {
             param0.writeBits((byte) 88, this.field_O.size((byte) -16), 3);
@@ -1379,10 +1379,10 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           var2.e(param0 ^ -23607);
           var2 = (dg) (this.field_O.next(param0 ^ 23599));
         }
-        Trap var4 = (Trap) (this.field_K.first(-80));
+        Trap var4 = (Trap) (this.children.first(-80));
         while (var4 != null) {
           var4.A(23645);
-          var4 = (Trap) (this.field_K.next(110));
+          var4 = (Trap) (this.children.next(110));
         }
         if (param0 != 23645) {
           this.field_lb = -40;
@@ -1395,12 +1395,12 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         if (param0 != 3) {
           this.a((byte) 51, true, -11);
         }
-        int var2 = this.field_Z;
-        if (null != this.field_X) {
+        int var2 = this.localX;
+        if (null != this.parent) {
           var3 = var2 >> 8;
-          var4 = this.field_mb >> 8;
+          var4 = this.localY >> 8;
           var2 = -((this.field_g >> 8) * var4) + var3 * (this.field_w >> 8);
-          var2 = var2 + this.field_X.getX(3);
+          var2 = var2 + this.parent.getX(3);
         }
         return var2;
     }
@@ -1446,16 +1446,16 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         Trap var3_ref = null;
         int var4 = TombRacer.field_G ? 1 : 0;
         this.v(-1332);
-        Behaviour var3 = (Behaviour) (this.field_u.first(param0 ^ -437453416));
+        Behaviour var3 = (Behaviour) (this.behaviours.first(param0 ^ -437453416));
         while (var3 != null) {
           this.a(var3, (byte) 124, rm.field_a.a(var3, (WorldBody) (this), -126));
-          var3 = (Behaviour) (this.field_u.next(107));
+          var3 = (Behaviour) (this.behaviours.next(107));
         }
         if (param1) {
-          var3_ref = (Trap) (this.field_K.first(param0 ^ -437453416));
+          var3_ref = (Trap) (this.children.first(param0 ^ -437453416));
           while (var3_ref != null) {
             var3_ref.c(437453352, true);
-            var3_ref = (Trap) (this.field_K.next(117));
+            var3_ref = (Trap) (this.children.next(117));
           }
         }
         if (param0 != 437453352) {
@@ -1472,8 +1472,8 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
 
     final void a(int param0, boolean param1, int param2) {
         this.field_W[param2] = param1;
-        if (this.field_X != null) {
-          this.field_X.a(26492, param1, param2);
+        if (this.parent != null) {
+          this.parent.a(26492, param1, param2);
         }
         if (param0 != 26492) {
           uw var5 = (uw) null;
@@ -1490,8 +1490,8 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
 
     final void o(int param0, int param1) {
         this.room.field_u.a((ffa) (this), (byte) 112);
-        this.field_Z = this.field_Z + param0;
-        this.field_mb = this.field_mb + param0;
+        this.localX = this.localX + param0;
+        this.localY = this.localY + param0;
         if (param1 <= 78) {
           return;
         }
@@ -1503,7 +1503,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         if (param0 < 105) {
           this.field_j = 102;
         }
-        return (ew) ((Object) this.r(0));
+        return (ew) ((Object) this.getRoot(0));
     }
 
     final int O(int param0) {
@@ -1562,7 +1562,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
     }
 
     private final boolean a(dg param0, int param1) {
-        gr var3 = null;
+        TrapPart var3 = null;
         int var3_int = 0;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_11_0 = null;
@@ -1574,7 +1574,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           if (!param0.a((byte) 70)) {
             var3 = param0.c(-100);
             if ((var3 != null &&
-              this == var3.f((byte) 74)) &&
+              this == var3.getTrap((byte) 74)) &&
               (decompiledFrameRemainder0 = !(!var3.a((byte) 87)))) {
               return false;
             }
@@ -1621,10 +1621,10 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         if (param0 != -165) {
           return;
         }
-        Trap var4 = (Trap) (this.field_K.first(-80));
+        Trap var4 = (Trap) (this.children.first(-80));
         while (var4 != null) {
           var4.B(-165);
-          var4 = (Trap) (this.field_K.next(110));
+          var4 = (Trap) (this.children.next(110));
         }
     }
 
@@ -1640,7 +1640,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         if (param0 != 31974) {
           this.a(-74, (byte) 85);
         }
-        return this.field_i;
+        return this.switchableId;
     }
 
     final void D(byte param0) {
@@ -1648,10 +1648,10 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         this.u((byte) 116);
         this.field_n = this.field_E;
         if (param0 != 118) {
-          this.field_i = (SwitchableId) null;
+          this.switchableId = (SwitchableId) null;
         }
         this.field_lb = this.field_U;
-        uja var2 = new uja(this.field_K);
+        uja var2 = new uja(this.children);
         Trap var3 = (Trap) (var2.a(true));
         while (var3 != null) {
           var3.D((byte) 118);
@@ -1667,7 +1667,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
     }
 
     final void m(int param0, int param1) {
-        this.field_Z = param1;
+        this.localX = param1;
         if (param0 != 1) {
           iq var4 = (iq) null;
           this.render(120, (iq) null);
@@ -1680,8 +1680,8 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           return false;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (!this.field_jb && (null == this.field_X ||
-          !this.field_X.w((byte) -113))) {
+        if (!this.field_jb && (null == this.parent ||
+          !this.parent.w((byte) -113))) {
           stackIn_8_0 = false;
           decompiledFrameRemainder0 = false;
         }
@@ -1727,7 +1727,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
             return stackIn_14_0;
           }
           var5 = 0;
-          var6 = new uja(this.field_u);
+          var6 = new uja(this.behaviours);
           var7 = (Behaviour) (var6.a(true));
           while (var7 != null) {
             var5 = var5 + var7.a(25940, param1, param0);
@@ -1758,15 +1758,15 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
     public final int getY(int param0) {
         int var3 = 0;
         int var4 = 0;
-        int var2 = this.field_mb;
+        int var2 = this.localY;
         if (param0 != 9648) {
           this.c(-71, false);
         }
-        if (this.field_X != null) {
-          var3 = this.field_Z >> 8;
+        if (this.parent != null) {
+          var3 = this.localX >> 8;
           var4 = var2 >> 8;
           var2 = (this.field_w >> 8) * var4 + var3 * (this.field_g >> 8);
-          var2 = var2 + this.field_X.getY(param0 + 0);
+          var2 = var2 + this.parent.getY(param0 + 0);
         }
         return var2;
     }
@@ -1800,7 +1800,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
             return stackIn_12_0;
           }
           var7_int = param3;
-          var8 = new uja(this.field_u);
+          var8 = new uja(this.behaviours);
           var9 = (Behaviour) (var8.a(true));
           while (var9 != null) {
             var7_int = var7_int + var9.a(param5, param1, param0, param2, (byte) 8, param4);
@@ -1822,7 +1822,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         }
     }
 
-    final Player H(int param0) {
+    final Player getPlayer(int param0) {
         int var2 = 68 % ((-84 - param0) / 32);
         return this.room.getPlayer(-53);
     }
@@ -1842,7 +1842,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         if (param0 != 25745) {
           this.field_C = true;
         }
-        return this.field_Z;
+        return this.localX;
     }
 
     final void n(int param0, int param1) {
@@ -1860,7 +1860,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         if (param0 <= 35) {
           this.field_lb = 122;
         }
-        stackIn_7_0 = (this.field_K.isEmpty((byte) 14)) && (this.field_u.isEmpty((byte) 14)) && (this.field_B.isEmpty((byte) 14));
+        stackIn_7_0 = (this.children.isEmpty((byte) 14)) && (this.behaviours.isEmpty((byte) 14)) && (this.locomotors.isEmpty((byte) 14));
         return stackIn_7_0;
     }
 
@@ -1871,13 +1871,13 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         }
         this.room.field_u.a((ffa) (this), -78);
         this.room.field_u.b((ffa) (this), param0 + 7072);
-        Trap var2 = (Trap) (this.field_K.first(-80));
+        Trap var2 = (Trap) (this.children.first(-80));
         if (param0 != 1) {
           this.field_j = 74;
         }
         while (var2 != null) {
           var2.z(param0 + 0);
-          var2 = (Trap) (this.field_K.next(122));
+          var2 = (Trap) (this.children.next(122));
         }
     }
 
@@ -1892,26 +1892,26 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         if (this.field_jb) {
           this.field_x = true;
         }
-        var2 = (Trap) (this.field_K.first(-80));
+        var2 = (Trap) (this.children.first(-80));
         while (var2 != null) {
           if (var2.w((byte) -127)) {
             var2.B(param0 ^ -165);
             var2.unlink(48);
           }
-          var2 = (Trap) (this.field_K.next(118));
+          var2 = (Trap) (this.children.next(118));
         }
         this.x((byte) -60);
         this.N(param0 ^ param0);
-        var4 = (Locomotor) (this.field_B.first(param0 - 80));
+        var4 = (Locomotor) (this.locomotors.first(param0 - 80));
         while (var4 != null) {
-          var4.a(88, this);
-          var4 = (Locomotor) (this.field_B.next(120));
+          var4.attachToTrap(88, this);
+          var4 = (Locomotor) (this.locomotors.next(120));
         }
-        var5 = (Behaviour) (this.field_u.first(-80));
+        var5 = (Behaviour) (this.behaviours.first(-80));
         while (var5 != null) {
-          var5.a(true, this);
+          var5.attachToTrap(true, this);
           var5.n((byte) 86);
-          var5 = (Behaviour) (this.field_u.next(122));
+          var5 = (Behaviour) (this.behaviours.next(122));
         }
         var2_ref = (dg) (this.field_O.first(-80));
         while (var2_ref != null) {
@@ -1922,11 +1922,11 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           }
           var2_ref = (dg) (this.field_O.next(124));
         }
-        var6 = (Trap) (this.field_K.first(-80));
+        var6 = (Trap) (this.children.first(-80));
         while (var6 != null) {
-          var6.field_X = this;
+          var6.parent = this;
           var6.u(param0 + 0);
-          var6 = (Trap) (this.field_K.next(126));
+          var6 = (Trap) (this.children.next(126));
         }
     }
 
@@ -1945,10 +1945,10 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           return true;
         }
         if (param1) {
-          if (null == this.field_X) {
+          if (null == this.parent) {
             return false;
           }
-          return this.field_X.d(50, param1);
+          return this.parent.d(50, param1);
         }
         return false;
     }
@@ -1960,37 +1960,37 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         return this.field_db + this.g((byte) 115);
     }
 
-    private final String E(int param0) {
+    private final String describe(int param0) {
         String var2;
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
-        if (!this.field_K.isEmpty((byte) 14)) {
+        if (!this.children.isEmpty((byte) 14)) {
           var2 = "Compound Trap";
         } else {
-          if (this.field_u.isEmpty((byte) 14) &&
-            this.field_B.isEmpty((byte) 14)) {
+          if (this.behaviours.isEmpty((byte) 14) &&
+            this.locomotors.isEmpty((byte) 14)) {
             var2 = "Empty Trap";
           } else {
             var2 = "Regular Trap";
           }
         }
-        var2 = var2 + " [" + this.field_i.id + "]";
+        var2 = var2 + " [" + this.switchableId.id + "]";
         if (param0 <= 108) {
           this.field_db = -28;
         }
         return var2;
     }
 
-    private final gr b(int param0, int param1) {
-        ub var3 = this.k((byte) -30);
+    private final TrapPart b(int param0, int param1) {
+        ub var3 = this.collectParts((byte) -30);
         if (param1 >= 0 &&
           !(param1 >= var3.a(-1))) {
-          return (gr) (var3.a(true, param1));
+          return (TrapPart) (var3.a(true, param1));
         }
         if (param0 == 3) {
           return null;
         }
-        return (gr) null;
+        return (TrapPart) null;
     }
 
     public final boolean b(boolean param0) {
@@ -2000,11 +2000,11 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           var3 = (ffa) null;
           this.a(-86, (WorldBody) null, (ffa) null, -88);
         }
-        if (null != this.field_X &&
-          this.field_X.b(param0)) {
+        if (null != this.parent &&
+          this.parent.b(param0)) {
           return true;
         }
-        stackIn_11_0 = (this.f(false)) || !(this.field_B.isEmpty((byte) 14));
+        stackIn_11_0 = (this.f(false)) || !(this.locomotors.isEmpty((byte) 14));
         return stackIn_11_0;
     }
 
@@ -2025,15 +2025,15 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         RuntimeException var3 = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          var5 = (Behaviour) (this.field_u.first(-80));
+          var5 = (Behaviour) (this.behaviours.first(-80));
           while (var5 != null) {
             var5.b(123, param0);
-            var5 = (Behaviour) (this.field_u.next(param1 + 10546));
+            var5 = (Behaviour) (this.behaviours.next(param1 + 10546));
           }
-          var6 = (Trap) (this.field_K.first(-80));
+          var6 = (Trap) (this.children.first(-80));
           while (var6 != null) {
             var6.a(param0, -10425);
-            var6 = (Trap) (this.field_K.next(123));
+            var6 = (Trap) (this.children.next(123));
           }
           if (param1 != -10425) {
             discarded$1 = this.B((byte) 57);
@@ -2093,54 +2093,54 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
     private final void F(byte param0) {
         int var4 = TombRacer.field_G ? 1 : 0;
         this.u((byte) 116);
-        uja var2 = new uja(this.field_K);
+        uja var2 = new uja(this.children);
         Trap var3 = (Trap) (var2.a(true));
         while (var3 != null) {
           var3.F((byte) -102);
           var3 = (Trap) (var2.a(-1));
         }
         if (param0 > -90) {
-          this.field_mb = 92;
+          this.localY = 92;
         }
     }
 
     final void b(int param0, int param1, int param2) {
-        this.field_mb = param1;
+        this.localY = param1;
         if (param0 != 437453352) {
           return;
         }
-        this.field_Z = param2;
+        this.localX = param2;
     }
 
     public final void m(int param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
-        Trap var4 = (Trap) (this.field_K.first(-80));
+        Trap var4 = (Trap) (this.children.first(-80));
         while (var4 != null) {
           var4.m(-93);
-          var4 = (Trap) (this.field_K.next(123));
+          var4 = (Trap) (this.children.next(123));
         }
-        Locomotor var5 = (Locomotor) (this.field_B.first(-80));
+        Locomotor var5 = (Locomotor) (this.locomotors.first(-80));
         while (var5 != null) {
           var5.m(127);
-          var5 = (Locomotor) (this.field_B.next(109));
+          var5 = (Locomotor) (this.locomotors.next(109));
         }
-        Behaviour var6 = (Behaviour) (this.field_u.first(-80));
+        Behaviour var6 = (Behaviour) (this.behaviours.first(-80));
         while (var6 != null) {
           var6.m(-109);
-          var6 = (Behaviour) (this.field_u.next(112));
+          var6 = (Behaviour) (this.behaviours.next(112));
         }
         int var2 = 14 / ((28 - param0) / 49);
     }
 
     final void d(int param0, byte param1) {
         int var4 = TombRacer.field_G ? 1 : 0;
-        Trap var6 = (Trap) (this.field_K.first(-80));
+        Trap var6 = (Trap) (this.children.first(-80));
         while (var6 != null) {
           if (!var6.a(param0, 31749)) {
             var6.v((byte) 109);
             var6.unlink(39);
           }
-          var6 = (Trap) (this.field_K.next(119));
+          var6 = (Trap) (this.children.next(119));
         }
         if (param1 >= -7) {
           ui var5 = (ui) null;
@@ -2156,10 +2156,10 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           return;
         }
         this.field_ib = this.q((byte) -80);
-        Trap var4 = (Trap) (this.field_K.first(-80));
+        Trap var4 = (Trap) (this.children.first(-80));
         while (var4 != null) {
           var4.N(0);
-          var4 = (Trap) (this.field_K.next(126));
+          var4 = (Trap) (this.children.next(126));
         }
         this.u((byte) 116);
     }
@@ -2198,13 +2198,13 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           if (!this.a((byte) 110, param4, param6, param0, param3)) {
             return false;
           }
-          var11 = (Behaviour) (this.field_u.first(-80));
+          var11 = (Behaviour) (this.behaviours.first(-80));
           while (true) {
             if (var11 == null) {
               return false;
             }
             if (!var11.a(param0, param3, 1, param6, param4, param7, param5)) {
-              var11 = (Behaviour) (this.field_u.next(126));
+              var11 = (Behaviour) (this.behaviours.next(126));
               continue;
             }
             break;
@@ -2242,19 +2242,19 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           this.field_Q = true;
         }
         int var7 = 0;
-        Behaviour var8 = (Behaviour) (this.field_u.first(-80));
+        Behaviour var8 = (Behaviour) (this.behaviours.first(-80));
         while (var8 != null) {
           if (var8.a(-97)) {
             var7 = var7 + var8.a(param1, param5, param2, param4, (byte) 88, param3);
           }
-          var8 = (Behaviour) (this.field_u.next(126));
+          var8 = (Behaviour) (this.behaviours.next(126));
         }
         return var7;
     }
 
     final void c(int param0, byte param1) {
         int var4 = TombRacer.field_G ? 1 : 0;
-        this.x(param1 ^ 15463).m(9262).a(this, param1 ^ 8);
+        this.getSimulation(param1 ^ 15463).getObserver(9262).a(this, param1 ^ 8);
         if (param1 != 9) {
           this.field_D = true;
         }
@@ -2270,8 +2270,8 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
     final void a(byte param0, boolean param1, int param2) {
         int var4 = -63 % ((param0 + 61) / 41);
         this.field_h[param2] = param1;
-        if (this.field_X != null) {
-          this.field_X.a((byte) 102, param1, param2);
+        if (this.parent != null) {
+          this.parent.a((byte) 102, param1, param2);
         }
     }
 
@@ -2300,7 +2300,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           var5 = (dg) (this.field_O.next(param0 ^ 102));
         }
         if (param0 != 10) {
-          this.field_i = (SwitchableId) null;
+          this.switchableId = (SwitchableId) null;
         }
         this.field_db = this.field_db + param1;
     }
@@ -2322,7 +2322,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         return this.room.a(param0 + 0, param1, param2);
     }
 
-    final Trap a(int param0, Room param1, boolean param2) {
+    final Trap cloneInto(int param0, Room param1, boolean param2) {
         BitPacketBuffer var4 = null;
         RuntimeException var4_ref = null;
         Trap var5 = null;
@@ -2339,7 +2339,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
             stackIn_2_0 = (Trap) null;
             return stackIn_2_0;
           }
-          this.a(var4, -108);
+          this.encode(var4, -108);
           var4.endBitWrite(-1826190686);
           var4.position = 0;
           var4.beginBitAccess((byte) 111);
@@ -2414,9 +2414,9 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           }
           if (!this.n((byte) 122)) {
             this.field_s = -this.field_s;
-            this.field_Z = -this.field_Z;
+            this.localX = -this.localX;
           } else {
-            this.field_Z = param0.a(this.field_Z, (byte) 71);
+            this.localX = param0.a(this.localX, (byte) 71);
             this.field_s = param0.a(this.field_s, (byte) 71);
           }
           this.field_lb = param0.a(this.field_lb, (byte) 71);
@@ -2429,25 +2429,25 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           this.field_ib = dfa.a(-this.field_ib, 8192, -35);
           this.field_F = dfa.a(-this.field_F, 8192, -97);
           param0.field_u.b((ffa) (this), 7073);
-          var5 = (Locomotor) (this.field_B.first(-80));
+          var5 = (Locomotor) (this.locomotors.first(-80));
           while (var5 != null) {
             var5.c((byte) -122);
-            var5 = (Locomotor) (this.field_B.next(114));
+            var5 = (Locomotor) (this.locomotors.next(114));
           }
-          var6 = (Behaviour) (this.field_u.first(-80));
+          var6 = (Behaviour) (this.behaviours.first(-80));
           while (var6 != null) {
             var6.h(28701);
-            var6 = (Behaviour) (this.field_u.next(116));
+            var6 = (Behaviour) (this.behaviours.next(116));
           }
           var7 = (dg) (this.field_O.first(-80));
           while (var7 != null) {
             var7.h(65);
             var7 = (dg) (this.field_O.next(110));
           }
-          var8 = (Trap) (this.field_K.first(-80));
+          var8 = (Trap) (this.children.first(-80));
           while (var8 != null) {
             var8.a(param0, false);
-            var8 = (Trap) (this.field_K.next(121));
+            var8 = (Trap) (this.children.next(121));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2476,10 +2476,10 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         if (this.room.j((byte) 104) != null) {
           this.a(this.room.j((byte) 49), true);
         }
-        Trap var4 = (Trap) (this.field_K.first(-80));
+        Trap var4 = (Trap) (this.children.first(-80));
         while (var4 != null) {
           var4.F(127);
-          var4 = (Trap) (this.field_K.next(108));
+          var4 = (Trap) (this.children.next(108));
         }
         this.u(0);
         this.u((byte) 116);
@@ -2491,9 +2491,9 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
 
     private final boolean C(int param0) {
         if (param0 >= -40) {
-          this.H(37);
+          this.getPlayer(37);
         }
-        return null != this.field_X ? true : false;
+        return null != this.parent ? true : false;
     }
 
     final void a(int param0, byte param1, boolean param2) {
@@ -2502,7 +2502,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         int var6 = TombRacer.field_G ? 1 : 0;
         this.field_V = param0;
         if (param2) {
-          var4 = new uja(this.field_K);
+          var4 = new uja(this.children);
           var5 = (Trap) (var4.a(true));
           while (var5 != null) {
             var5.a(param0, (byte) -12, param2);
@@ -2514,10 +2514,10 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         }
     }
 
-    final void a(Locomotor param0, int param1) {
+    final void addLocomotor(Locomotor param0, int param1) {
         try {
-          this.field_B.addLast((byte) -101, param0);
-          param0.a(45, this);
+          this.locomotors.addLast((byte) -101, param0);
+          param0.attachToTrap(45, this);
           if (param1 != 0) {
             this.room = (Room) null;
           }
@@ -2543,7 +2543,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
             this.w((byte) -34);
           }
           if (param0 instanceof Trap &&
-            this.r(0) == ((Trap) (param0)).r(0)) {
+            this.getRoot(0) == ((Trap) (param0)).getRoot(0)) {
             return true;
           }
           return false;
@@ -2565,12 +2565,12 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         int var3 = -10 / ((-12 - param0) / 42);
     }
 
-    final Trap r(int param0) {
+    final Trap getRoot(int param0) {
         if (param0 != 0) {
           this.field_f = 55;
         }
-        if (this.field_X != null) {
-          return this.field_X.r(0);
+        if (this.parent != null) {
+          return this.parent.getRoot(0);
         }
         return this;
     }
@@ -2601,7 +2601,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         if (param0 != -95) {
           this.z(-122);
         }
-        return this.getX(3) - this.field_t / 2;
+        return this.getX(3) - this.width / 2;
     }
 
     final boolean C(byte param0) {
@@ -2611,16 +2611,16 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         return this.field_P;
     }
 
-    final void a(int param0, Trap param1) {
+    final void addChild(int param0, Trap param1) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          this.field_K.addLast((byte) -111, param1);
+          this.children.addLast((byte) -111, param1);
           param1.field_cb = false;
-          param1.field_X = this;
+          param1.parent = this;
           param1.u(0);
           if (param0 >= -29) {
             this.d((byte) 16, false);
@@ -2650,7 +2650,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         if (param0) {
           return 31;
         }
-        return this.field_mb;
+        return this.localY;
     }
 
     final void a(int param0, byte param1) {
@@ -2660,7 +2660,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         this.field_F = param0;
     }
 
-    final PlayerSimulation x(int param0) {
+    final PlayerSimulation getSimulation(int param0) {
         if (param0 != 15470) {
           this.i((byte) -88);
         }
@@ -2683,8 +2683,8 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
 
     final void a(boolean param0, byte param1, int param2) {
         this.field_k[param2] = param0;
-        if (this.field_X != null) {
-          this.field_X.a(param0, (byte) -116, param2);
+        if (this.parent != null) {
+          this.parent.a(param0, (byte) -116, param2);
         }
         int var4 = -79 / ((param1 - 40) / 58);
     }
@@ -2695,19 +2695,19 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           return;
         }
         this.field_C = true;
-        Behaviour var5 = (Behaviour) (this.field_u.first(-80));
+        Behaviour var5 = (Behaviour) (this.behaviours.first(-80));
         while (var5 != null) {
           var5.c(false);
-          var5 = (Behaviour) (this.field_u.next(120));
+          var5 = (Behaviour) (this.behaviours.next(120));
         }
         if (param0 != 109) {
           WorldBody var4 = (WorldBody) null;
           this.a((WorldBody) null, -13);
         }
-        Trap var6 = (Trap) (this.field_K.first(-80));
+        Trap var6 = (Trap) (this.children.first(-80));
         while (var6 != null) {
           var6.v((byte) 109);
-          var6 = (Trap) (this.field_K.next(111));
+          var6 = (Trap) (this.children.next(111));
         }
         this.B(-165);
         this.v(-1332);
@@ -2748,13 +2748,13 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
             stackIn_9_0 = 0;
             return stackIn_9_0;
           }
-          var4_int = eha.a(this.field_t, param1, this.getY(param1 + 9636), this.field_gb, param2, this.getX(param1 ^ 15), 2);
+          var4_int = SimulationObserver.a(this.width, param1, this.getY(param1 + 9636), this.height, param2, this.getX(param1 ^ 15), 2);
           if (var4_int == -1) {
             stackIn_12_0 = 0;
             return stackIn_12_0;
           }
           var5 = 0;
-          var6 = new uja(this.field_u);
+          var6 = new uja(this.behaviours);
           var7 = (Behaviour) (var6.a(true));
           while (var7 != null) {
             var5 = var5 + var7.a(-119, param0, param2);
@@ -2803,12 +2803,12 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           if (param0 != 26689) {
             this.field_I = -15;
           }
-          var7 = (Behaviour) (this.field_u.first(-80));
+          var7 = (Behaviour) (this.behaviours.first(-80));
           while (var7 != null) {
             if (var7.a(-115)) {
               var7.a(param2, (byte) 24, param1, param3);
             }
-            var7 = (Behaviour) (this.field_u.next(113));
+            var7 = (Behaviour) (this.behaviours.next(113));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2838,7 +2838,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         int var7;
         uja var8;
         var7 = TombRacer.field_G ? 1 : 0;
-        var8 = new uja(this.field_K);
+        var8 = new uja(this.children);
         if (param1 != -3) {
           return true;
         }
@@ -2865,25 +2865,25 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         return true;
     }
 
-    public final boolean h(int param0) {
+    public final boolean isExpired(int param0) {
         if (param0 != 18407) {
           this.field_z = 79;
         }
         return this.field_C;
     }
 
-    private final ub k(byte param0) {
+    private final ub collectParts(byte param0) {
         int var4 = TombRacer.field_G ? 1 : 0;
         ub var2 = new ub();
-        Locomotor var3 = (Locomotor) (this.field_B.first(-80));
+        Locomotor var3 = (Locomotor) (this.locomotors.first(-80));
         while (var3 != null) {
           var2.a((byte) -37, var3);
-          var3 = (Locomotor) (this.field_B.next(param0 ^ -110));
+          var3 = (Locomotor) (this.locomotors.next(param0 ^ -110));
         }
-        Behaviour var3_ref = (Behaviour) (this.field_u.first(param0 - 50));
+        Behaviour var3_ref = (Behaviour) (this.behaviours.first(param0 - 50));
         while (var3_ref != null) {
           var2.a((byte) -37, var3_ref);
-          var3_ref = (Behaviour) (this.field_u.next(117));
+          var3_ref = (Behaviour) (this.behaviours.next(117));
         }
         if (param0 != -30) {
           this.w((byte) 21);
@@ -2951,9 +2951,9 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         }
         if (param3 != 0 && (param0 != 0 ||
           0 != param1)) {
-          return this.room.a((ffa) (this), (WorldBody) (this), this.field_V, this.field_t, param1, param2 ^ -4652, this.field_gb, this.getX(param2 + 4651), param3, param0, this.getY(9648), param4, true);
+          return this.room.a((ffa) (this), (WorldBody) (this), this.field_V, this.width, param1, param2 ^ -4652, this.height, this.getX(param2 + 4651), param3, param0, this.getY(9648), param4, true);
         }
-        stackIn_15_0 = (this.room.a((ffa) (this), this.field_gb, 2, this.field_V, this.getY(param2 + 14296), this.getX(3), true, (WorldBody) (this), this.field_t)) ? 2 : 0;
+        stackIn_15_0 = (this.room.a((ffa) (this), this.height, 2, this.field_V, this.getY(param2 + 14296), this.getX(3), true, (WorldBody) (this), this.width)) ? 2 : 0;
         return stackIn_15_0;
     }
 
@@ -2973,9 +2973,9 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (null != this.field_X) {
-            param0.field_f = param0.field_f - this.field_X.getX(3);
-            param0.field_d = param0.field_d - this.field_X.getY(9648);
+          if (null != this.parent) {
+            param0.field_f = param0.field_f - this.parent.getX(3);
+            param0.field_d = param0.field_d - this.parent.getY(9648);
             var3_int = param0.field_f >> 8;
             var4 = param0.field_d >> 8;
             param0.field_d = var4 * (this.field_w >> 8) - var3_int * (this.field_g >> 8);
@@ -3003,7 +3003,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         if (!param0) {
           return false;
         }
-        return !this.field_K.isEmpty((byte) 14) ? true : false;
+        return !this.children.isEmpty((byte) 14) ? true : false;
     }
 
     private final boolean A(byte param0) {
@@ -3025,13 +3025,13 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           if (param0 != 54) {
             this.r((byte) 1);
           }
-          if (null != this.field_X) {
+          if (null != this.parent) {
             var3_int = param1.field_f >> 8;
             var4 = param1.field_d >> 8;
             param1.field_f = -((this.field_g >> 8) * var4) + (this.field_w >> 8) * var3_int;
             param1.field_d = (this.field_w >> 8) * var4 + var3_int * (this.field_g >> 8);
-            param1.field_f = param1.field_f + this.field_X.getX(3);
-            param1.field_d = param1.field_d + this.field_X.getY(9648);
+            param1.field_f = param1.field_f + this.parent.getX(3);
+            param1.field_d = param1.field_d + this.parent.getY(9648);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3053,7 +3053,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         if (param0 > -80) {
           this.field_j = -124;
         }
-        stackIn_6_0 = (this.field_A) && (null != this.field_X);
+        stackIn_6_0 = (this.field_A) && (null != this.parent);
         return stackIn_6_0;
     }
 
@@ -3067,9 +3067,9 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
     public final int getRenderY(byte param0) {
         if (param0 <= 91) {
           Behaviour var3 = (Behaviour) null;
-          this.a((byte) 41, (Behaviour) null);
+          this.addBehaviour((byte) 41, (Behaviour) null);
         }
-        return this.field_mb;
+        return this.localY;
     }
 
     public final boolean a(int param0, WorldBody param1, int param2, pc param3) {
@@ -3098,18 +3098,18 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
             !this.field_T) {
             return false;
           }
-          var5_int = eha.a(this.field_t, 12, this.getY(param0 + 9649), this.field_gb, param3, this.getX(3), 2);
+          var5_int = SimulationObserver.a(this.width, 12, this.getY(param0 + 9649), this.height, param3, this.getX(3), 2);
           if (param0 == var5_int) {
             return false;
           }
           var6 = wm.a(4096, var5_int, param0 + 125);
           var7 = 0;
-          var8 = (Behaviour) (this.field_u.first(-80));
+          var8 = (Behaviour) (this.behaviours.first(-80));
           while (var8 != null) {
             if (var8.a(param2, 1, param3, var6)) {
               var7 = 1;
             }
-            var8 = (Behaviour) (this.field_u.next(param0 ^ -114));
+            var8 = (Behaviour) (this.behaviours.next(param0 ^ -114));
           }
           stackIn_21_0 = var7;
           return stackIn_21_0 != 0;
@@ -3135,8 +3135,8 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
 
     final void a(boolean param0, int param1) {
         this.field_T = param0 ? true : false;
-        if (null != this.field_X) {
-          this.field_X.a(param0, -102);
+        if (null != this.parent) {
+          this.parent.a(param0, -102);
         }
         int var3 = -77 % ((param1 + 34) / 49);
     }
@@ -3144,12 +3144,12 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
     private final int t(byte param0) {
         int var4 = TombRacer.field_G ? 1 : 0;
         int var2 = 0;
-        Trap var3 = (Trap) (this.field_K.first(-80));
+        Trap var3 = (Trap) (this.children.first(-80));
         while (var3 != null) {
           if (!var3.w((byte) -113)) {
             var2++;
           }
-          var3 = (Trap) (this.field_K.next(116));
+          var3 = (Trap) (this.children.next(116));
         }
         if (param0 <= 15) {
           return -30;
@@ -3158,9 +3158,9 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
     }
 
     Trap(Room param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
-        this.field_K = new IntrusiveDeque();
-        this.field_B = new IntrusiveDeque();
-        this.field_u = new IntrusiveDeque();
+        this.children = new IntrusiveDeque();
+        this.locomotors = new IntrusiveDeque();
+        this.behaviours = new IntrusiveDeque();
         this.field_T = false;
         this.field_h = new boolean[3];
         this.field_f = 0;
@@ -3178,15 +3178,15 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         this.field_db = 32;
         try {
           this.field_ab = RoomComponentFactory.field_b;
-          this.field_gb = param4 << 16;
+          this.height = param4 << 16;
           this.field_jb = param6 ? true : false;
           this.field_D = true;
           RoomComponentFactory.field_b = RoomComponentFactory.field_b + 1;
           this.room = param0;
-          this.field_mb = param2 << 16;
+          this.localY = param2 << 16;
           this.field_F = param5;
-          this.field_t = param3 << 16;
-          this.field_Z = param1 << 16;
+          this.width = param3 << 16;
+          this.localX = param1 << 16;
           this.a(true, param6, param0.e(-51), (ui) null);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fsa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');

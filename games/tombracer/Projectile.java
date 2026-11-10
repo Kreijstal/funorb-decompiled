@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class Projectile extends c implements Renderable, ffa, t {
+final class Projectile extends PooledObject implements Renderable, ffa, t {
     private int field_j;
     private boolean field_p;
     private int x;
     private int field_w;
     private boolean field_l;
     private int velocityX;
-    private boolean field_F;
+    private boolean expired;
     private boolean field_C;
     private int field_x;
     private int field_J;
@@ -19,9 +19,9 @@ final class Projectile extends c implements Renderable, ffa, t {
     private Room field_z;
     private int angle;
     private int y;
-    private Effect field_t;
+    private Effect effect;
     private boolean field_B;
-    private int field_G;
+    private int z;
     static ToolkitSprite field_n;
     static jea field_r;
     private int endSize;
@@ -46,9 +46,9 @@ final class Projectile extends c implements Renderable, ffa, t {
     public final int getRenderZ(byte param0) {
         if (param0 > -86) {
           this.field_z = (Room) null;
-          return this.field_G;
+          return this.z;
         }
-        return this.field_G;
+        return this.z;
     }
 
     public final int getHeight(byte param0) {
@@ -60,7 +60,7 @@ final class Projectile extends c implements Renderable, ffa, t {
         return this.field_o;
     }
 
-    final int k(int param0) {
+    final int getVelocityX(int param0) {
         int var2 = -72 / ((param0 + 24) / 39);
         return this.velocityX;
     }
@@ -73,7 +73,7 @@ final class Projectile extends c implements Renderable, ffa, t {
         return true;
     }
 
-    private final void a(int param0, int param1, byte param2) {
+    private final void setXY(int param0, int param1, byte param2) {
         if (param2 > 17) {
           this.x = param0;
           this.y = param1;
@@ -84,7 +84,7 @@ final class Projectile extends c implements Renderable, ffa, t {
         this.y = param1;
     }
 
-    final void a(Room param0, int param1) {
+    final void mirrorInRoom(Room param0, int param1) {
         try {
           this.x = param0.a(this.x, (byte) 71);
           this.velocityX = -this.velocityX;
@@ -97,26 +97,26 @@ final class Projectile extends c implements Renderable, ffa, t {
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void setPosition(int param0, byte param1, int param2, int param3) {
         this.y = param2;
-        this.field_G = param3;
+        this.z = param3;
         this.x = param0;
         if (param1 != -78) {
           this.a(53);
         }
     }
 
-    final boolean h(int param0) {
+    final boolean isExpired(int param0) {
         if (param0 != 18407) {
           this.a(false, true);
-          return this.field_F;
+          return this.expired;
         }
-        return this.field_F;
+        return this.expired;
     }
 
     private final void b(boolean param0, boolean param1) {
         if (param0) {
-          this.field_z.a(this.y, this.x, this.field_m, this.field_G, (byte) 6);
+          this.field_z.a(this.y, this.x, this.field_m, this.z, (byte) 6);
           if (this.field_B) {
             if (this.velocityX != 0) {
               this.velocityX = 0;
@@ -147,11 +147,11 @@ final class Projectile extends c implements Renderable, ffa, t {
           if (!this.field_C) {
             return;
           }
-          this.field_t.field_g = null;
+          this.effect.field_g = null;
           return;
         }
         this.field_o = -115;
-        this.field_z.a(this.y, this.x, this.field_m, this.field_G, (byte) 6);
+        this.field_z.a(this.y, this.x, this.field_m, this.z, (byte) 6);
         if (!this.field_B) {
           this.h((byte) 32);
           if (!param1) {
@@ -185,7 +185,7 @@ final class Projectile extends c implements Renderable, ffa, t {
             if (!this.field_C) {
               return;
             }
-            this.field_t.field_g = null;
+            this.effect.field_g = null;
             return;
           }
           this.field_I = this.field_I - 1;
@@ -193,13 +193,13 @@ final class Projectile extends c implements Renderable, ffa, t {
             if (!this.field_C) {
               return;
             }
-            this.field_t.field_g = null;
+            this.effect.field_g = null;
             return;
           }
           this.a(true, 0);
         }
         if (this.field_C) {
-          this.field_t.field_g = null;
+          this.effect.field_g = null;
         }
     }
 
@@ -247,19 +247,19 @@ final class Projectile extends c implements Renderable, ffa, t {
               if (var6Lifetime2 == 0) {
                 if (param1 >= -51) {
                   var10 = (Effect) null;
-                  this.a(81, (Effect) null);
+                  this.setEffect(81, (Effect) null);
                 }
                 if (var5 != 0) {
                   return;
                 }
                 if (!param3 &&
-                  this.field_t.field_j == 0) {
+                  this.effect.field_j == 0) {
                   return;
                 }
-                if (this.field_t.field_j == 3) {
+                if (this.effect.field_j == 3) {
                   this.field_z.a(-40, this.y, WindZoneBehaviour.field_o, 2 * this.field_o, 2 * this.field_o, this.x);
                 }
-                var6Lifetime2 = this.field_z.a(this, -16164, this.field_t);
+                var6Lifetime2 = this.field_z.a(this, -16164, this.effect);
                 if (var6Lifetime2 <= 0) {
                   return;
                 }
@@ -277,13 +277,13 @@ final class Projectile extends c implements Renderable, ffa, t {
                   return;
                 }
                 if (!param3 &&
-                  this.field_t.field_j == 0) {
+                  this.effect.field_j == 0) {
                   return;
                 }
-                if (this.field_t.field_j == 3) {
+                if (this.effect.field_j == 3) {
                   this.field_z.a(-40, this.y, WindZoneBehaviour.field_o, 2 * this.field_o, 2 * this.field_o, this.x);
                 }
-                var6Lifetime2 = this.field_z.a(this, -16164, this.field_t);
+                var6Lifetime2 = this.field_z.a(this, -16164, this.effect);
                 if (var6Lifetime2 <= 0) {
                   return;
                 }
@@ -291,18 +291,18 @@ final class Projectile extends c implements Renderable, ffa, t {
                 return;
               }
               var10 = (Effect) null;
-              this.a(81, (Effect) null);
+              this.setEffect(81, (Effect) null);
               if (var5 != 0) {
                 return;
               }
               if (!param3 &&
-                this.field_t.field_j == 0) {
+                this.effect.field_j == 0) {
                 return;
               }
-              if (this.field_t.field_j == 3) {
+              if (this.effect.field_j == 3) {
                 this.field_z.a(-40, this.y, WindZoneBehaviour.field_o, 2 * this.field_o, 2 * this.field_o, this.x);
               }
-              var6Lifetime2 = this.field_z.a(this, -16164, this.field_t);
+              var6Lifetime2 = this.field_z.a(this, -16164, this.effect);
               if (var6Lifetime2 <= 0) {
                 return;
               }
@@ -314,19 +314,19 @@ final class Projectile extends c implements Renderable, ffa, t {
             if (!this.c(param2, 0, 111)) {
               if (param1 >= -51) {
                 var10Lifetime2 = (Effect) null;
-                this.a(81, (Effect) null);
+                this.setEffect(81, (Effect) null);
               }
               if (var5 != 0) {
                 return;
               }
               if (!param3 &&
-                this.field_t.field_j == 0) {
+                this.effect.field_j == 0) {
                 return;
               }
-              if (this.field_t.field_j == 3) {
+              if (this.effect.field_j == 3) {
                 this.field_z.a(-40, this.y, WindZoneBehaviour.field_o, 2 * this.field_o, 2 * this.field_o, this.x);
               }
-              var6Lifetime2 = this.field_z.a(this, -16164, this.field_t);
+              var6Lifetime2 = this.field_z.a(this, -16164, this.effect);
               if (var6Lifetime2 <= 0) {
                 return;
               }
@@ -341,19 +341,19 @@ final class Projectile extends c implements Renderable, ffa, t {
         }
         if (param1 >= -51) {
           var10Lifetime1 = (Effect) null;
-          this.a(81, (Effect) null);
+          this.setEffect(81, (Effect) null);
         }
         if (var5 != 0) {
           return;
         }
         if (!param3 &&
-          this.field_t.field_j == 0) {
+          this.effect.field_j == 0) {
           return;
         }
-        if (this.field_t.field_j == 3) {
+        if (this.effect.field_j == 3) {
           this.field_z.a(-40, this.y, WindZoneBehaviour.field_o, 2 * this.field_o, 2 * this.field_o, this.x);
         }
-        var6Lifetime1 = this.field_z.a(this, -16164, this.field_t);
+        var6Lifetime1 = this.field_z.a(this, -16164, this.effect);
         if (var6Lifetime1 <= 0) {
           return;
         }
@@ -368,7 +368,7 @@ final class Projectile extends c implements Renderable, ffa, t {
         int var2Lifetime1;
         if (param0 < 0) {
           this.c(true);
-          var3 = this.field_t.field_j;
+          var3 = this.effect.field_j;
           if (var3 == 4) {
             return;
           }
@@ -378,15 +378,15 @@ final class Projectile extends c implements Renderable, ffa, t {
           if (var3 != 3) {
             if (var3 == 0) {
               var2 = qva.a((byte) -35, this.velocityY, this.velocityX) + 4096;
-              this.field_z.b(false).a(this.y, (byte) -83, 5, this.field_G, 3, var2, 10, 262144, this.x, 16, 8);
+              this.field_z.b(false).a(this.y, (byte) -83, 5, this.z, 3, var2, 10, 262144, this.x, 16, 8);
               return;
             }
             return;
           }
-          this.field_z.b(false).a(this.y, (byte) -121, 4, this.field_G, 1, 0, 20, 0, this.x, this.field_o >> 18, this.field_o >> 17);
+          this.field_z.b(false).a(this.y, (byte) -121, 4, this.z, 1, 0, 20, 0, this.x, this.field_o >> 18, this.field_o >> 17);
           return;
         }
-        var3Lifetime1 = this.field_t.field_j;
+        var3Lifetime1 = this.effect.field_j;
         if (var3Lifetime1 == 4) {
           return;
         }
@@ -398,10 +398,10 @@ final class Projectile extends c implements Renderable, ffa, t {
             return;
           }
           var2Lifetime1 = qva.a((byte) -35, this.velocityY, this.velocityX) + 4096;
-          this.field_z.b(false).a(this.y, (byte) -83, 5, this.field_G, 3, var2Lifetime1, 10, 262144, this.x, 16, 8);
+          this.field_z.b(false).a(this.y, (byte) -83, 5, this.z, 3, var2Lifetime1, 10, 262144, this.x, 16, 8);
           return;
         }
-        this.field_z.b(false).a(this.y, (byte) -121, 4, this.field_G, 1, 0, 20, 0, this.x, this.field_o >> 18, this.field_o >> 17);
+        this.field_z.b(false).a(this.y, (byte) -121, 4, this.z, 1, 0, 20, 0, this.x, this.field_o >> 18, this.field_o >> 17);
     }
 
     private final int b(int param0, Effect param1) {
@@ -422,41 +422,41 @@ final class Projectile extends c implements Renderable, ffa, t {
             stackIn_2_0 = 115;
             return stackIn_2_0;
           }
-          if (this.field_t.field_j == 4 &&
+          if (this.effect.field_j == 4 &&
             5 == param1.field_j) {
             this.a(false, 0);
             this.field_z.b(30097, 1048576, 1, this.y, this.x);
             stackIn_32_0 = 0;
             return stackIn_32_0;
           }
-          if (this.field_t.field_j == 3 && (param1.field_j == 4 ||
+          if (this.effect.field_j == 3 && (param1.field_j == 4 ||
             param1.field_j == 5)) {
             this.a(false, 0);
-            this.field_z.b(false).c(this.x, 93, this.velocityY, this.field_G, this.velocityX, this.y);
+            this.field_z.b(false).c(this.x, 93, this.velocityY, this.z, this.velocityX, this.y);
             if (5 == param1.field_j) {
               this.field_z.b(30097, 1048576, 0, this.y, this.x);
             }
             stackIn_30_0 = 0;
             return stackIn_30_0;
           }
-          if (3 != this.field_t.field_j &&
+          if (3 != this.effect.field_j &&
             3 == param1.field_j) {
             var3_int = 1 + param1.size / 2;
             if (0 >= var3_int) {
               stackIn_15_0 = 0;
               return stackIn_15_0;
             }
-            if (this.field_t.field_j == 4 ||
-              this.field_t.field_j == 5) {
+            if (this.effect.field_j == 4 ||
+              this.effect.field_j == 5) {
               var3_int = 0;
             }
             if (var3_int <= 0) {
               return 0;
             }
-            if (!this.field_t.d(6734)) {
+            if (!this.effect.d(6734)) {
               this.field_i = 4;
             }
-            this.field_t.a(29525, param1.b(-344));
+            this.effect.a(29525, param1.b(-344));
             stackIn_26_0 = 0;
             return stackIn_26_0;
           }
@@ -513,15 +513,15 @@ final class Projectile extends c implements Renderable, ffa, t {
 
     public final int getX(int param0) {
         if (param0 != 3) {
-          this.field_F = true;
+          this.expired = true;
           return this.x;
         }
         return this.x;
     }
 
-    final int f(boolean param0) {
+    final int getAngle(boolean param0) {
         if (!param0) {
-          this.a(42, (byte) 84);
+          this.hashState(42, (byte) 84);
           return this.angle;
         }
         return this.angle;
@@ -575,11 +575,11 @@ final class Projectile extends c implements Renderable, ffa, t {
               var5 = 1;
               var6 = 0;
               if (param1 ||
-                this.field_t.field_j != 0) {
-                if (this.field_t.field_j == 3) {
+                this.effect.field_j != 0) {
+                if (this.effect.field_j == 3) {
                   this.field_z.a(param3 - 31, this.y, WindZoneBehaviour.field_o, 2 * this.field_o, this.field_o * 2, this.x);
                 }
-                var7 = this.field_z.a(this, -16164, this.field_t);
+                var7 = this.field_z.a(this, -16164, this.effect);
                 if (var7 > 0) {
                   var6 = 1;
                   this.b(true, true);
@@ -599,7 +599,7 @@ final class Projectile extends c implements Renderable, ffa, t {
           }
           var6 = 0;
           if (!param1 &&
-            this.field_t.field_j == 0) {
+            this.effect.field_j == 0) {
             if (var5 != 0 &&
               this.c(param2, param0, 122) &&
               var6 == 0) {
@@ -607,10 +607,10 @@ final class Projectile extends c implements Renderable, ffa, t {
             }
             return;
           }
-          if (this.field_t.field_j == 3) {
+          if (this.effect.field_j == 3) {
             this.field_z.a(param3 - 31, this.y, WindZoneBehaviour.field_o, 2 * this.field_o, this.field_o * 2, this.x);
           }
-          var7 = this.field_z.a(this, -16164, this.field_t);
+          var7 = this.field_z.a(this, -16164, this.effect);
           if (var7 <= 0) {
             if (var5 != 0 &&
               this.c(param2, param0, 122) &&
@@ -638,10 +638,10 @@ final class Projectile extends c implements Renderable, ffa, t {
               var5 = 1;
               var6 = 0;
               if (param1) {
-                if (this.field_t.field_j == 3) {
+                if (this.effect.field_j == 3) {
                   this.field_z.a(param3 - 31, this.y, WindZoneBehaviour.field_o, 2 * this.field_o, this.field_o * 2, this.x);
                 }
-                var7 = this.field_z.a(this, -16164, this.field_t);
+                var7 = this.field_z.a(this, -16164, this.effect);
                 if (var7 > 0) {
                   var6 = 1;
                   this.b(true, true);
@@ -653,11 +653,11 @@ final class Projectile extends c implements Renderable, ffa, t {
                 }
                 return;
               }
-              if (this.field_t.field_j != 0) {
-                if (this.field_t.field_j == 3) {
+              if (this.effect.field_j != 0) {
+                if (this.effect.field_j == 3) {
                   this.field_z.a(param3 - 31, this.y, WindZoneBehaviour.field_o, 2 * this.field_o, this.field_o * 2, this.x);
                 }
-                var7 = this.field_z.a(this, -16164, this.field_t);
+                var7 = this.field_z.a(this, -16164, this.effect);
                 if (var7 > 0) {
                   var6 = 1;
                   this.b(true, true);
@@ -677,20 +677,20 @@ final class Projectile extends c implements Renderable, ffa, t {
           }
           var6 = 0;
           if (param1) {
-            if (this.field_t.field_j == 3) {
+            if (this.effect.field_j == 3) {
               this.field_z.a(param3 - 31, this.y, WindZoneBehaviour.field_o, 2 * this.field_o, this.field_o * 2, this.x);
             }
-            var7 = this.field_z.a(this, -16164, this.field_t);
+            var7 = this.field_z.a(this, -16164, this.effect);
             if (var7 > 0) {
               var6 = 1;
               this.b(true, true);
             }
           } else {
-            if (this.field_t.field_j != 0) {
-              if (this.field_t.field_j == 3) {
+            if (this.effect.field_j != 0) {
+              if (this.effect.field_j == 3) {
                 this.field_z.a(param3 - 31, this.y, WindZoneBehaviour.field_o, 2 * this.field_o, this.field_o * 2, this.x);
               }
-              var7 = this.field_z.a(this, -16164, this.field_t);
+              var7 = this.field_z.a(this, -16164, this.effect);
               if (var7 > 0) {
                 var6 = 1;
                 this.b(true, true);
@@ -710,11 +710,11 @@ final class Projectile extends c implements Renderable, ffa, t {
         this.b(true, true);
     }
 
-    final c d(boolean param0) {
+    final PooledObject createInstance(boolean param0) {
         if (!param0) {
-          return (c) null;
+          return (PooledObject) null;
         }
-        return (c) ((Object) new Projectile());
+        return (PooledObject) ((Object) new Projectile());
     }
 
     public final int a(boolean param0, int param1, int param2, int param3, int param4, int param5) {
@@ -754,15 +754,15 @@ final class Projectile extends c implements Renderable, ffa, t {
     private final boolean f(byte param0) {
         if (param0 >= -114) {
           this.c(false, false);
-          if (!(this.field_t.field_g instanceof Player)) {
-            return this.field_t.field_c instanceof Player ? true : false;
+          if (!(this.effect.field_g instanceof Player)) {
+            return this.effect.field_c instanceof Player ? true : false;
           }
           return true;
         }
-        if (this.field_t.field_g instanceof Player) {
+        if (this.effect.field_g instanceof Player) {
           return true;
         }
-        if (!(this.field_t.field_c instanceof Player)) {
+        if (!(this.effect.field_c instanceof Player)) {
           return false;
         }
         return true;
@@ -770,8 +770,8 @@ final class Projectile extends c implements Renderable, ffa, t {
 
     private final void a(boolean param0, int param1) {
         if (param0) {
-          if (this.field_t.field_j != 4) {
-            if (this.field_t.field_j == 5) {
+          if (this.effect.field_j != 4) {
+            if (this.effect.field_j == 5) {
             }
           } else {
             if (this.field_z.b(param1 ^ 30097, 1048576, 0, this.y, this.x)) {
@@ -779,7 +779,7 @@ final class Projectile extends c implements Renderable, ffa, t {
             }
           }
         }
-        this.field_F = true;
+        this.expired = true;
         this.field_z.field_u.a((ffa) (this), (byte) 123);
         if (param1 == 0) {
           return;
@@ -791,7 +791,7 @@ final class Projectile extends c implements Renderable, ffa, t {
         if (param0 != 48) {
           return false;
         }
-        return this.field_F;
+        return this.expired;
     }
 
     public static void releaseStatics(int param0) {
@@ -807,7 +807,7 @@ final class Projectile extends c implements Renderable, ffa, t {
         field_r = null;
     }
 
-    final void b(int param0, int param1, byte param2) {
+    final void setVelocity(int param0, int param1, byte param2) {
         this.velocityX = param0;
         this.velocityY = param1;
         int var4 = 118 / ((-51 - param2) / 40);
@@ -817,15 +817,15 @@ final class Projectile extends c implements Renderable, ffa, t {
     final void b(int param0, boolean param1) {
         this.field_p = param1 ? true : false;
         if (param0 != -1) {
-          this.b(false);
+          this.getVelocityY(false);
         }
     }
 
     public final void a(int param0, int param1, int param2) {
         this.field_z.field_u.a((ffa) (this), (byte) 98);
-        this.a(param1, param0, (byte) 114);
+        this.setXY(param1, param0, (byte) 114);
         this.g((byte) -99);
-        this.field_t.field_g = null;
+        this.effect.field_g = null;
         if (param2 == 2) {
           this.field_z.field_u.b((ffa) (this), param2 + 7071);
           return;
@@ -848,13 +848,13 @@ final class Projectile extends c implements Renderable, ffa, t {
           this.field_C = false;
           this.field_j = param5;
           this.field_w = 0;
-          this.field_F = false;
+          this.expired = false;
           this.field_z = param1;
           this.field_i = -1;
           this.velocityX = 0;
           this.field_x = 0;
           this.field_o = this.field_J;
-          this.field_t = null;
+          this.effect = null;
           this.field_I = 0;
           this.field_q.b((byte) 93);
         } catch (RuntimeException runtimeException) {
@@ -862,7 +862,7 @@ final class Projectile extends c implements Renderable, ffa, t {
         }
     }
 
-    final int b(boolean param0) {
+    final int getVelocityY(boolean param0) {
         if (param0) {
           this.field_i = -106;
           return this.velocityY;
@@ -870,9 +870,9 @@ final class Projectile extends c implements Renderable, ffa, t {
         return this.velocityY;
     }
 
-    final void a(int param0, Effect param1) {
+    final void setEffect(int param0, Effect param1) {
         try {
-          this.field_t = param1;
+          this.effect = param1;
           if (param0 > -122) {
             this.x = -12;
           }
@@ -898,7 +898,7 @@ final class Projectile extends c implements Renderable, ffa, t {
     final void a(boolean param0, boolean param1) {
         this.field_l = param1 ? true : false;
         if (!param0) {
-          this.d(true);
+          this.createInstance(true);
         }
     }
 
@@ -913,9 +913,9 @@ final class Projectile extends c implements Renderable, ffa, t {
           var4 = 1;
         }
         if (!this.field_p) {
-          return this.field_z.a((ffa) (this), this.field_J, 2, var4, this.y, this.x, false, this.field_t.field_g, this.field_J);
+          return this.field_z.a((ffa) (this), this.field_J, 2, var4, this.y, this.x, false, this.effect.field_g, this.field_J);
         }
-        return this.field_z.a((ffa) (this), this.field_t.field_g, var4, this.field_J, param0 / 4, 12, this.field_J, this.x, 1, param1 / 4, this.y, 0, false) != 0 ? true : false;
+        return this.field_z.a((ffa) (this), this.effect.field_g, var4, this.field_J, param0 / 4, 12, this.field_J, this.x, 1, param1 / 4, this.y, 0, false) != 0 ? true : false;
     }
 
     final int i(int param0) {
@@ -936,7 +936,7 @@ final class Projectile extends c implements Renderable, ffa, t {
           if (param1 != 5465) {
             this.a((byte) 21, true);
           }
-          if (this.field_G >= 0) {
+          if (this.z >= 0) {
             param0.a((byte) -116, 7, (Renderable) (this));
           } else {
             param0.a((byte) -128, 2, (Renderable) (this));
@@ -1009,16 +1009,16 @@ final class Projectile extends c implements Renderable, ffa, t {
         }
     }
 
-    final void a(int param0, boolean param1) {
+    final void tick(int param0, boolean param1) {
         int stackIn_81_0 = 0;
         int var3;
         int var5;
         int var6;
         int var7;
-        hr var8;
-        hr var10;
-        hr var12;
-        hr var13;
+        Particle var8;
+        Particle var10;
+        Particle var12;
+        Particle var13;
         int var3Lifetime1;
         int var5Lifetime1;
         int var6Lifetime1;
@@ -1033,13 +1033,13 @@ final class Projectile extends c implements Renderable, ffa, t {
               this.field_x = this.field_x + 1;
               if (this.field_x >= this.field_j) {
                 this.a(true, param0 + 1);
-                if (this.field_F) {
+                if (this.expired) {
                   return;
                 }
               }
             }
-            if (this.field_F) {
-              if (!this.field_F) {
+            if (this.expired) {
+              if (!this.expired) {
                 this.field_z.field_u.a((ffa) (this), -66);
                 this.field_z.field_u.b((ffa) (this), 7073);
               }
@@ -1050,7 +1050,7 @@ final class Projectile extends c implements Renderable, ffa, t {
               }
               if (var3 != 0 &&
                 this.field_i != -1) {
-                var8 = this.field_z.a(this.x, this.y, (byte) 100, this.field_G);
+                var8 = this.field_z.spawnParticle(this.x, this.y, (byte) 100, this.z);
                 var5 = 131072;
                 var6 = -(var5 / 2) + uca.field_c.a(var5, 0);
                 var7 = uca.field_c.a(var5, ~param0) - var5 / 2;
@@ -1064,7 +1064,7 @@ final class Projectile extends c implements Renderable, ffa, t {
               } else {
                 this.a(this.velocityX, var3 != 0, this.velocityY, ~param0);
               }
-              if (this.field_F) {
+              if (this.expired) {
                 if (!this.field_B ||
                   this.velocityX != 0 ||
                   this.velocityY != 0) {
@@ -1072,7 +1072,7 @@ final class Projectile extends c implements Renderable, ffa, t {
                 }
                 if (var3 != 0 &&
                   this.field_i != -1) {
-                  var10 = this.field_z.a(this.x, this.y, (byte) 100, this.field_G);
+                  var10 = this.field_z.spawnParticle(this.x, this.y, (byte) 100, this.z);
                   var5 = 131072;
                   var6 = -(var5 / 2) + uca.field_c.a(var5, 0);
                   var7 = uca.field_c.a(var5, ~param0) - var5 / 2;
@@ -1090,7 +1090,7 @@ final class Projectile extends c implements Renderable, ffa, t {
                 }
                 if (var3 != 0 &&
                   this.field_i != -1) {
-                  var12 = this.field_z.a(this.x, this.y, (byte) 100, this.field_G);
+                  var12 = this.field_z.spawnParticle(this.x, this.y, (byte) 100, this.z);
                   var5 = 131072;
                   var6 = -(var5 / 2) + uca.field_c.a(var5, 0);
                   var7 = uca.field_c.a(var5, ~param0) - var5 / 2;
@@ -1101,22 +1101,22 @@ final class Projectile extends c implements Renderable, ffa, t {
               }
             }
             if (this.x < 0) {
-              this.field_F = true;
+              this.expired = true;
             } else {
               if (this.y < 0) {
-                this.field_F = true;
+                this.expired = true;
               } else {
                 if (this.x >= this.field_z.getWidth((byte) -86)) {
-                  this.field_F = true;
+                  this.expired = true;
                 } else {
                   if (this.y >= this.field_z.getHeight(-121)) {
-                    this.field_F = true;
+                    this.expired = true;
                   }
                 }
               }
             }
             if (param0 != -1) {
-              this.field_t = (Effect) null;
+              this.effect = (Effect) null;
             }
             return;
           }
@@ -1130,19 +1130,19 @@ final class Projectile extends c implements Renderable, ffa, t {
           this.field_x = this.field_x + 1;
           if (this.field_x >= this.field_j) {
             this.a(true, param0 + 1);
-            if (this.field_F) {
+            if (this.expired) {
               return;
             }
           }
         }
-        if (!this.field_F) {
+        if (!this.expired) {
           if (this.field_C) {
             this.a(this.velocityX, (byte) -127, this.velocityY, var3Lifetime1 != 0);
           } else {
             this.a(this.velocityX, var3Lifetime1 != 0, this.velocityY, ~param0);
           }
         }
-        if (!this.field_F) {
+        if (!this.expired) {
           this.field_z.field_u.a((ffa) (this), -66);
           this.field_z.field_u.b((ffa) (this), 7073);
         }
@@ -1158,19 +1158,19 @@ final class Projectile extends c implements Renderable, ffa, t {
               this.y >= 0 &&
               this.x < this.field_z.getWidth((byte) -86)) {
               if (!(this.y < this.field_z.getHeight(-121))) {
-                this.field_F = true;
+                this.expired = true;
                 if (param0 != -1) {
-                  this.field_t = (Effect) null;
+                  this.effect = (Effect) null;
                 }
                 return;
               }
             } else {
-              this.field_F = true;
+              this.expired = true;
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            var13 = this.field_z.a(this.x, this.y, (byte) 100, this.field_G);
+            var13 = this.field_z.spawnParticle(this.x, this.y, (byte) 100, this.z);
             var5Lifetime1 = 131072;
             var6Lifetime1 = -(var5Lifetime1 / 2) + uca.field_c.a(var5Lifetime1, 0);
             var7Lifetime1 = uca.field_c.a(var5Lifetime1, ~param0) - var5Lifetime1 / 2;
@@ -1181,16 +1181,16 @@ final class Projectile extends c implements Renderable, ffa, t {
         }
         if (decompiledFrameRemainder0) {
           if (this.x < 0) {
-            this.field_F = true;
+            this.expired = true;
           } else {
             if (this.y < 0) {
-              this.field_F = true;
+              this.expired = true;
             } else {
               if (this.x >= this.field_z.getWidth((byte) -86)) {
-                this.field_F = true;
+                this.expired = true;
               } else {
                 if (this.y >= this.field_z.getHeight(-121)) {
-                  this.field_F = true;
+                  this.expired = true;
                 }
               }
             }
@@ -1199,7 +1199,7 @@ final class Projectile extends c implements Renderable, ffa, t {
         if (param0 == -1) {
           return;
         }
-        this.field_t = (Effect) null;
+        this.effect = (Effect) null;
     }
 
     public final boolean a(WorldBody param0, int param1) {
@@ -1336,7 +1336,7 @@ final class Projectile extends c implements Renderable, ffa, t {
             stackIn_2_0 = 0;
             return stackIn_2_0;
           }
-          if (eha.a(this.field_o, param1, this.y, this.field_o, param2, this.x, 2) >= 0) {
+          if (SimulationObserver.a(this.field_o, param1, this.y, this.field_o, param2, this.x, 2) >= 0) {
             stackIn_7_0 = this.b(115, param0);
             return stackIn_7_0;
           }
@@ -1362,7 +1362,7 @@ final class Projectile extends c implements Renderable, ffa, t {
         }
     }
 
-    final int a(int param0, byte param1) {
+    final int hashState(int param0, byte param1) {
         param0 = fs.a((byte) 88, param0, this.x);
         param0 = fs.a((byte) 30, param0, this.y);
         if (param1 == -39) {
@@ -1385,7 +1385,7 @@ final class Projectile extends c implements Renderable, ffa, t {
           return 7 + 7 * this.field_D;
         }
         Effect var3 = (Effect) null;
-        this.a(-80, (Effect) null);
+        this.setEffect(-80, (Effect) null);
         return 7 + 7 * this.field_D;
     }
 

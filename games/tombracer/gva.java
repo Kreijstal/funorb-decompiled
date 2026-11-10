@@ -5,7 +5,7 @@ final class gva implements mb {
     private int[] field_a;
     static us field_b;
 
-    public final void a(iq param0, byte param1, hr param2) {
+    public final void a(iq param0, byte param1, Particle param2) {
         int stackIn_85_0 = 0;
         RuntimeException stackIn_136_0 = null;
         StringBuilder stackIn_136_1 = null;
@@ -157,7 +157,7 @@ final class gva implements mb {
               (decompiledFrameRemainder1) &&
               (decompiledFrameRemainder0)) {
               var26Lifetime2 = param2.e(0) * 255 / param2.b(true);
-              stackIn_85_0 = (ova.c(param1 ^ -25)) ? 15 : 14;
+              stackIn_85_0 = (RoomCompletedScreen.c(param1 ^ -25)) ? 15 : 14;
               var27 = stackIn_85_0;
               var28 = SpawnerBehaviour.a(var27, param1 ^ -12189, 7).a((byte) 1, 526343, true);
               var28.O(var26Lifetime2 >> 2, 128, var26Lifetime2 >> 2);
@@ -364,19 +364,19 @@ final class gva implements mb {
               var13.O(var10 << 2, 512, var10 << 2);
               stackIn_36_0 = (Projectile) (param2);
               stackIn_37_1 = !(param1);
-              gqa.a(dfa.a(-(((Projectile) (Object) stackIn_36_0).f(stackIn_37_1) >> 2), 2048, -56), -83584144, var6, var5, var13, var7 + (255 & var6 * 883 + var5 * 233));
+              gqa.a(dfa.a(-(((Projectile) (Object) stackIn_36_0).getAngle(stackIn_37_1) >> 2), 2048, -56), -83584144, var6, var5, var13, var7 + (255 & var6 * 883 + var5 * 233));
               if (var15 == 0) {
                 return;
               }
             case 2:
-              gqa.a(param2.f(true), -83584144, var6, var5, SpawnerBehaviour.a(0, 12166, 7), var7);
+              gqa.a(param2.getAngle(true), -83584144, var6, var5, SpawnerBehaviour.a(0, 12166, 7), var7);
               if (var15 == 0) {
                 return;
               }
             case 0:
               stackIn_46_0 = (Projectile) (param2);
               stackIn_47_1 = !(param1);
-              gqa.a(dfa.a(-(((Projectile) (Object) stackIn_46_0).f(stackIn_47_1) >> 2), 2048, -96), -83584144, var6, var5, SpawnerBehaviour.a(1, 12166, 7), var7);
+              gqa.a(dfa.a(-(((Projectile) (Object) stackIn_46_0).getAngle(stackIn_47_1) >> 2), 2048, -96), -83584144, var6, var5, SpawnerBehaviour.a(1, 12166, 7), var7);
               if (var15 == 0) {
                 return;
               }
@@ -384,7 +384,7 @@ final class gva implements mb {
             default:
               break;
           }
-          gqa.a(dfa.a(-(param2.f(true) >> 2), 2048, 107), -83584144, var6, var5, SpawnerBehaviour.a(2, 12166, 7), var7);
+          gqa.a(dfa.a(-(param2.getAngle(true) >> 2), 2048, 107), -83584144, var6, var5, SpawnerBehaviour.a(2, 12166, 7), var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -718,7 +718,7 @@ final class gva implements mb {
         }
     }
 
-    private final void a(int param0, iq param1, hr param2) {
+    private final void a(int param0, iq param1, Particle param2) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;

@@ -53,7 +53,7 @@ final class oia implements gs {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        gr var3 = this.field_c.c(-100);
+        TrapPart var3 = this.field_c.c(-100);
         if (var3 != null &&
           !var3.a(-101)) {
           return;

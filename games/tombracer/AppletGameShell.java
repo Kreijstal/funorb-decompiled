@@ -696,7 +696,7 @@ abstract class AppletGameShell extends GameApplet {
           esa.a(vc.field_p, tk.field_b, -128, hm.field_n) &&
           S2CActionPacket.a(vc.field_p, (byte) -53)) {
           ee.a(-1);
-          eha.a((byte) -27);
+          SimulationObserver.a((byte) -27);
           ura.field_b = nl.field_c;
           sra.field_t = false;
           cra.a(tk.field_b, hm.field_n, 1, ft.field_a, vc.field_p);

@@ -87,7 +87,7 @@ final class RopeBridgeComponent extends kna {
           }
           var5 = new PlatformBehaviour(param2, param0);
           var5.b(-5, this.field_H);
-          var13.a((byte) 83, (Behaviour) (var5));
+          var13.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = new Trap(param2, param0);
           var7 = new Trap(param2, param0);
           if (this.field_m == 46) {
@@ -106,15 +106,15 @@ final class RopeBridgeComponent extends kna {
           var8 = new SimpleBlockBehaviour(param2, param0);
           var8.a(true, -45);
           var8.a(-28592, true);
-          var6.a((byte) 83, (Behaviour) (var8));
+          var6.addBehaviour((byte) 83, (Behaviour) (var8));
           var7.b((byte) 17, false);
           var7.h(param1, 0);
           var9 = new SimpleBlockBehaviour(param2, param0);
           var9.a(true, -128);
           var9.a(-28592, true);
-          var7.a((byte) 83, (Behaviour) (var9));
-          var13.a(-107, var6);
-          var13.a(param1 ^ -61, var7);
+          var7.addBehaviour((byte) 83, (Behaviour) (var9));
+          var13.addChild(-107, var6);
+          var13.addChild(param1 ^ -61, var7);
           var10 = rm.field_a;
           var11 = (vsa) (var10.a(19, param1 ^ 106));
           var11.b((byte) 80, 0);

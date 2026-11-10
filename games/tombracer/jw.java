@@ -103,7 +103,7 @@ final class jw extends b implements cd, tsa {
           if (null != this.field_F) {
             this.field_n = this.field_n + (var7.a(this.field_F, this.field_m - 40, var7.field_w) + 5);
           }
-          var8 = c.field_h;
+          var8 = PooledObject.field_h;
           var9 = cc.a((byte) 122, di.a(28));
           if (vw.field_a != var9) {
             if (var9 == ub.field_d) {

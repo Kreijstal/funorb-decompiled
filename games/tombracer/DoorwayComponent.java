@@ -84,29 +84,29 @@ final class DoorwayComponent extends kna {
             var7_ref_fsa.b(437453352, -327680, -this.field_l / 4);
             var7_ref_fsa.h(3, 0);
             var8 = new SimpleBlockBehaviour(param2, param0);
-            var7_ref_fsa.a((byte) 83, (Behaviour) (var8));
+            var7_ref_fsa.addBehaviour((byte) 83, (Behaviour) (var8));
             var9 = new PathMoveLocomotor(param2, param0);
             var9.a(param1 ^ 40, new gea(new int[][]{new int[]{0, 0}}));
-            var7_ref_fsa.a(var9, 0);
+            var7_ref_fsa.addLocomotor(var9, 0);
             var10 = new PathMoveLocomotor(param2, param0);
             var10.a(param1 ^ 14, new gea(new int[][]{new int[]{262144 + -this.field_l / 2, 0}}));
             var10.a(true, false);
-            var7_ref_fsa.a(var10, 0);
+            var7_ref_fsa.addLocomotor(var10, 0);
             var11 = new Trap(param2, param0);
             var11.b((byte) -11, this.field_k / 3, this.field_l / 2);
             var11.b(437453352, -327680, this.field_l / 4);
             var11.h(3, 0);
             var12 = new SimpleBlockBehaviour(param2, param0);
-            var11.a((byte) 83, (Behaviour) (var12));
+            var11.addBehaviour((byte) 83, (Behaviour) (var12));
             var13 = new PathMoveLocomotor(param2, param0);
             var13.a(87, new gea(new int[][]{new int[]{0, 0}}));
-            var11.a(var13, param1 ^ 3);
+            var11.addLocomotor(var13, param1 ^ 3);
             var14 = new PathMoveLocomotor(param2, param0);
             var14.a(66, new gea(new int[][]{new int[]{-262144 + this.field_l / 2, 0}}));
             var14.a(true, false);
-            var11.a(var14, 0);
-            var20.a(-72, var7_ref_fsa);
-            var20.a(-42, var11);
+            var11.addLocomotor(var14, 0);
+            var20.addChild(-72, var7_ref_fsa);
+            var20.addChild(-42, var11);
             if (this.field_H == 3) {
               var15 = 0;
             } else {
@@ -119,11 +119,11 @@ final class DoorwayComponent extends kna {
             }
             var17_ref = (lfa) (var6.a(6, 87));
             var17_ref.a(var15, true);
-            var7_ref_fsa.a((gr) null, (byte) 124, var17_ref);
+            var7_ref_fsa.a((TrapPart) null, (byte) 124, var17_ref);
             var7_ref_fsa.f(param1 + 7, 1048576);
             var18_ref = (lfa) (var6.a(6, 101));
             var18_ref.a(var16, true);
-            var11.a((gr) null, (byte) 124, var18_ref);
+            var11.a((TrapPart) null, (byte) 124, var18_ref);
             var11.f(param1 + 7, 1048576);
           }
           if (this.field_H != param1) {
@@ -133,7 +133,7 @@ final class DoorwayComponent extends kna {
           }
           var21_ref = (lfa) (var6.a(6, 126));
           var21_ref.a(var7, true);
-          var20.a((gr) null, (byte) 124, var21_ref);
+          var20.a((TrapPart) null, (byte) 124, var21_ref);
           stackIn_23_0 = var20;
           return stackIn_23_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
