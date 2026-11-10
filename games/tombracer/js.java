@@ -61,7 +61,7 @@ final class js extends dr {
           }
           if (this.field_w) {
             var2_int = 1;
-            var3 = this.field_f.f(-80);
+            var3 = this.field_f.first(-80);
             while (var3 != null) {
               var4 = (int)var3.key;
               if (this.field_n[var4] == 0) {
@@ -72,7 +72,7 @@ final class js extends dr {
               } else {
                 var3.unlink(116);
               }
-              var3 = this.field_f.e(124);
+              var3 = this.field_f.next(124);
             }
             scanLoop1: while (true) {
               if (this.field_m < this.field_k.field_c.length) {
@@ -88,7 +88,7 @@ final class js extends dr {
                     var7 = new IntrusiveNode();
                     var7.key = (long)this.field_m;
                     var2_int = 0;
-                    this.field_f.b((byte) -91, var7);
+                    this.field_f.addLast((byte) -91, var7);
                   }
                 }
                 this.field_m = this.field_m + 1;
@@ -105,7 +105,7 @@ final class js extends dr {
           else {
             if (this.field_r) {
               var2_intLifetime1 = 1;
-              var3Lifetime1 = this.field_f.f(param0 ^ -936);
+              var3Lifetime1 = this.field_f.first(param0 ^ -936);
               while (var3Lifetime1 != null) {
                 var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_n[var4Lifetime1] != 1) {
@@ -116,7 +116,7 @@ final class js extends dr {
                 } else {
                   var3Lifetime1.unlink(41);
                 }
-                var3Lifetime1 = this.field_f.e(116);
+                var3Lifetime1 = this.field_f.next(116);
               }
               while (this.field_k.field_c.length > this.field_m) {
                 if (this.field_k.field_c[this.field_m] == 0) {
@@ -130,7 +130,7 @@ final class js extends dr {
                   if (this.field_n[this.field_m] != 1) {
                     var6 = new IntrusiveNode();
                     var6.key = (long)this.field_m;
-                    this.field_f.b((byte) -96, var6);
+                    this.field_f.addLast((byte) -96, var6);
                     var2_intLifetime1 = 0;
                   }
                   this.field_m = this.field_m + 1;
@@ -215,7 +215,7 @@ final class js extends dr {
         if (null == this.a(true)) {
           return;
         }
-        IntrusiveNode var2 = this.field_b.f(-80);
+        IntrusiveNode var2 = this.field_b.first(-80);
         while (var2 != null) {
           var3 = (int)var2.key;
           if (0 > var3) {
@@ -239,7 +239,7 @@ final class js extends dr {
               }
             }
           }
-          var2 = this.field_b.e(param0 ^ -28599);
+          var2 = this.field_b.next(param0 ^ -28599);
         }
         if (param0 != -28613) {
           this.field_s = (ppa) null;

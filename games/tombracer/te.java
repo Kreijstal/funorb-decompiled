@@ -9,7 +9,7 @@ final class te {
         if (param0 != -10430) {
           return;
         }
-        this.field_a.d(8);
+        this.field_a.clear(8);
     }
 
     final void a(uw param0, int param1) {
@@ -25,10 +25,10 @@ final class te {
           if (param1 != -28255) {
             field_b = 19;
           }
-          var3 = (kua) (this.field_a.f(-80));
+          var3 = (kua) (this.field_a.first(-80));
           while (var3 != null) {
             param0.a((byte) 25, var3.f((byte) 103), var3);
-            var3 = (kua) (this.field_a.e(111));
+            var3 = (kua) (this.field_a.next(111));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -60,10 +60,10 @@ final class te {
             var5 = (IntrusiveDeque) null;
             this.a(71, (IntrusiveDeque) null);
           }
-          var6 = (kua) (param1.f(-80));
+          var6 = (kua) (param1.first(-80));
           while (var6 != null) {
-            this.field_a.b((byte) -97, new kua(var6));
-            var6 = (kua) (param1.e(121));
+            this.field_a.addLast((byte) -97, new kua(var6));
+            var6 = (kua) (param1.next(121));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -93,10 +93,10 @@ final class te {
           if (param1 > -59) {
             this.a(-81);
           }
-          var5 = (kua) (this.field_a.f(-80));
+          var5 = (kua) (this.field_a.first(-80));
           while (var5 != null) {
             var5.a(param0, (byte) -72);
-            var5 = (kua) (this.field_a.e(107));
+            var5 = (kua) (this.field_a.next(107));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

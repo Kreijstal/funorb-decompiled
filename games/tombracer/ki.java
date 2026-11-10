@@ -78,7 +78,7 @@ final class ki extends dg {
         int var7 = 0;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          if (param2.field_E > 7) {
+          if (param2.formatVersion > 7) {
             var4_int = param0.readBits((byte) 44, 6);
           } else {
             var4_int = param0.readBits((byte) 44, 4);
@@ -174,7 +174,7 @@ final class ki extends dg {
         }
     }
 
-    final void a(gr param0, gma param1, byte param2) {
+    final void a(gr param0, WorldBody param1, byte param2) {
         try {
           super.a(param0, param1, param2);
         } catch (RuntimeException runtimeException) {
@@ -211,18 +211,18 @@ final class ki extends dg {
         RuntimeException var2 = null;
         var3 = TombRacer.field_G ? 1 : 0;
         try {
-          var4 = (kb) (nn.field_a.f(-80));
+          var4 = (kb) (nn.field_a.first(-80));
           while (var4 != null) {
             mca.a(var4, 0, param1);
-            var4 = (kb) (nn.field_a.e(111));
+            var4 = (kb) (nn.field_a.next(111));
           }
           if (param0) {
             ki.b(true, -117);
           }
-          var5 = (bb) (mg.field_b.f(-80));
+          var5 = (bb) (mg.field_b.first(-80));
           while (var5 != null) {
             pc.a(param0, param1, var5);
-            var5 = (bb) (mg.field_b.e(122));
+            var5 = (bb) (mg.field_b.next(122));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

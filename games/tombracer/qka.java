@@ -252,7 +252,7 @@ final class qka extends qra {
                 var12_ref = rm.field_c;
               }
               if (var12_ref != null) {
-                ((nh) (var12_ref)).a(var3 - (120 + ((nh) (var12_ref)).d() / 2), var4 - 10);
+                ((ToolkitSprite) (var12_ref)).a(var3 - (120 + ((ToolkitSprite) (var12_ref)).d() / 2), var4 - 10);
               }
               oka.a(var13_ref_String, 65793, kn.field_p, -1, 35 + var4, var3 - 120, -1);
             }

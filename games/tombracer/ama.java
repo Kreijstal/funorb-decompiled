@@ -17,7 +17,7 @@ final class ama extends lba {
         return this.field_t;
     }
 
-    final static int a(il param0, String param1, int param2, int param3, String[] param4) {
+    final static int a(BitmapFont param0, String param1, int param2, int param3, String[] param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -47,7 +47,7 @@ final class ama extends lba {
         try {
           if (param3 != 1) {
             var14 = (String[]) null;
-            ama.a((il) null, (String) null, -117, -80, (String[]) null);
+            ama.a((BitmapFont) null, (String) null, -117, -80, (String[]) null);
           }
           var5_int = param0.b(param1);
           if (var5_int <= param2 &&

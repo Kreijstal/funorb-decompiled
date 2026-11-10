@@ -54,7 +54,7 @@ final class v {
         if (!param0) {
           this.a((byte) -48);
         }
-        this.field_h.d(8);
+        this.field_h.clear(8);
         this.field_c.a(0);
         this.field_f = false;
     }
@@ -109,8 +109,8 @@ final class v {
         }
         try {
           if (var4 != 0) {
-            if (!this.field_h.d((byte) 14)) {
-              this.field_h.c(34);
+            if (!this.field_h.isEmpty((byte) 14)) {
+              this.field_h.removeFirst(34);
               var5 = 0;
             }
             if (var5 == 0) {
@@ -191,7 +191,7 @@ final class v {
             return;
           }
           if (!param0.d((byte) 94)) {
-            var4_int = this.field_h.a((byte) -16);
+            var4_int = this.field_h.size((byte) -16);
             stackIn_7_1 = !(var4_int < 15);
             this.field_f = stackIn_7_1;
             while (var4_int < 15) {
@@ -337,7 +337,7 @@ final class v {
     final void c(int param0) {
         int var2 = 32;
         int var2Lifetime1;
-        ts.a(0, -121, var2 + 10, "unack: " + this.field_h.a((byte) -16), 16, kn.field_p, 16777215);
+        ts.a(0, -121, var2 + 10, "unack: " + this.field_h.size((byte) -16), 16, kn.field_p, 16777215);
         var2Lifetime1 = 48;
         ts.a(0, -122, 10 + var2Lifetime1, "received: " + this.field_c.a((byte) 107), param0, kn.field_p, 16777215);
     }
@@ -545,7 +545,7 @@ final class v {
     }
 
     final void f(int param0) {
-        this.field_h.d(8);
+        this.field_h.clear(8);
         this.field_a.c(param0 - 134);
         this.field_b[this.field_d] = 0;
         if (param0 != 10) {
@@ -641,7 +641,7 @@ final class v {
         var6.a(-2767, param4);
         var6.b(8469, param3);
         var6.a(param1, (byte) -113);
-        this.field_h.b((byte) -104, var6);
+        this.field_h.addLast((byte) -104, var6);
         hw.a((byte) -111, 0, 71, var6);
     }
 

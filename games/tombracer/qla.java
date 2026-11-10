@@ -236,7 +236,7 @@ final class qla {
         }
     }
 
-    private final int a(String param0, nh[] param1, int param2) {
+    private final int a(String param0, ToolkitSprite[] param1, int param2) {
         int stackIn_5_0 = 0;
         int stackIn_72_0 = 0;
         RuntimeException stackIn_76_0 = null;
@@ -408,7 +408,7 @@ final class qla {
         }
     }
 
-    final int a(String param0, int param1, String[] param2, nh[] param3, int[] param4) {
+    final int a(String param0, int param1, String[] param2, ToolkitSprite[] param3, int[] param4) {
         int stackIn_3_0 = 0;
         int stackIn_117_0 = 0;
         int stackIn_141_0 = 0;
@@ -707,7 +707,7 @@ final class qla {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 35 % ((param1 + 44) / 54);
-          stackIn_1_0 = this.a(param0, (nh[]) null, -61);
+          stackIn_1_0 = this.a(param0, (ToolkitSprite[]) null, -61);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -723,7 +723,7 @@ final class qla {
         }
     }
 
-    final String a(boolean param0, nh[] param1, String param2, int param3) {
+    final String a(boolean param0, ToolkitSprite[] param1, String param2, int param3) {
         String stackIn_3_0 = null;
         String stackIn_60_0 = null;
         String stackIn_76_0 = null;
@@ -755,7 +755,7 @@ final class qla {
             stackIn_3_0 = (String) (param2);
             return stackIn_3_0;
           }
-          param3 = param3 - this.a("...", (nh[]) null, -61);
+          param3 = param3 - this.a("...", (ToolkitSprite[]) null, -61);
           var5_int = -1;
           var6 = -1;
           var7 = 0;
@@ -993,7 +993,7 @@ final class qla {
         }
     }
 
-    final int a(String param0, int param1, nh[] param2, int param3, int param4) {
+    final int a(String param0, int param1, ToolkitSprite[] param2, int param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;

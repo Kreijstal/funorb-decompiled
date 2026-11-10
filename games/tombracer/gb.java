@@ -12,8 +12,8 @@ final class gb {
           if (var1 == null) {
             var1 = new bd();
           }
-          var1.a(bea.field_g, bea.field_l, 116, bea.field_d, bea.field_h, bea.field_b, bea.field_a, bea.field_k);
-          gg.field_e.b((byte) -111, var1);
+          var1.a(SoftwareRasterizer.field_g, SoftwareRasterizer.field_l, 116, SoftwareRasterizer.field_d, SoftwareRasterizer.field_h, SoftwareRasterizer.field_b, SoftwareRasterizer.field_a, SoftwareRasterizer.field_k);
+          gg.field_e.addLast((byte) -111, var1);
           return;
         }
         GraphicsToolkit var2 = (GraphicsToolkit) null;
@@ -22,8 +22,8 @@ final class gb {
         if (var1Lifetime1 == null) {
           var1Lifetime1 = new bd();
         }
-        var1Lifetime1.a(bea.field_g, bea.field_l, 116, bea.field_d, bea.field_h, bea.field_b, bea.field_a, bea.field_k);
-        gg.field_e.b((byte) -111, var1Lifetime1);
+        var1Lifetime1.a(SoftwareRasterizer.field_g, SoftwareRasterizer.field_l, 116, SoftwareRasterizer.field_d, SoftwareRasterizer.field_h, SoftwareRasterizer.field_b, SoftwareRasterizer.field_a, SoftwareRasterizer.field_k);
+        gg.field_e.addLast((byte) -111, var1Lifetime1);
     }
 
     public final String toString() {

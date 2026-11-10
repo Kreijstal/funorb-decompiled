@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class pf extends nh {
+abstract class SoftwareToolkitSprite extends ToolkitSprite {
     int field_o;
     static int field_u;
     static int field_e;
@@ -20,7 +20,7 @@ abstract class pf extends nh {
     static int field_h;
     int field_f;
     private static int field_q;
-    sfa field_b;
+    SoftwareGraphicsToolkit field_b;
     static int field_D;
     private static int field_p;
     static int field_d;
@@ -51,9 +51,9 @@ abstract class pf extends nh {
 
     abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8);
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4);
+    abstract void draw(int param0, int param1, int param2, int param3, int param4);
 
-    private final boolean a(float param0, float param1, float param2, float param3, float param4, float param5) {
+    private final boolean prepareAffine(float param0, float param1, float param2, float param3, float param4, float param5) {
         int var7;
         int var8;
         float var9;
@@ -211,13 +211,13 @@ abstract class pf extends nh {
         return this.field_o + this.field_f + this.field_v;
     }
 
-    final void a(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8, int param9) {
+    final void drawAffine(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8, int param9) {
         int var11;
         int var12;
         if (this.field_b.n()) {
           throw new IllegalStateException();
         }
-        if (!this.a(param0, param1, param2, param3, param4, param5)) {
+        if (!this.prepareAffine(param0, param1, param2, param3, param4, param5)) {
           return;
         }
         field_B = param7;
@@ -420,7 +420,7 @@ abstract class pf extends nh {
         }
     }
 
-    pf(sfa param0, int param1, int param2) {
+    SoftwareToolkitSprite(SoftwareGraphicsToolkit param0, int param1, int param2) {
         this.field_b = param0;
         this.field_a = param1;
         this.field_f = param2;

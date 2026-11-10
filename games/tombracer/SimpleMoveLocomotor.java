@@ -448,13 +448,13 @@ final class SimpleMoveLocomotor extends Locomotor {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          if (param0.field_E > 7) {
+          if (param0.formatVersion > 7) {
             this.field_t = this.a(param1.readBits((byte) 44, 8), false);
           } else {
             this.field_t = param1.readBits((byte) 44, 4) << 16;
           }
           this.field_r = param1.readBits((byte) 44, 10) << 16;
-          if (param0.field_E >= 10) {
+          if (param0.formatVersion >= 10) {
             this.field_p = oo.a(4, 8192, 0, param1.readBits((byte) 44, 4));
             stackIn_9_1 = (1 == param1.readBits((byte) 44, 1));
             this.field_q = stackIn_9_1;

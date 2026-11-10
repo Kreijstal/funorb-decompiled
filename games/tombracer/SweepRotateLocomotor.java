@@ -98,7 +98,7 @@ final class SweepRotateLocomotor extends Locomotor {
               fieldTemp$1 = tba.field_k;
               tba.field_k = tba.field_k + 1;
               var6.field_Db = fieldTemp$1;
-              wv.field_l.b((byte) -116, var6);
+              wv.field_l.addLast((byte) -116, var6);
             }
             var6.field_yb = var5;
             var6.field_tb = var4_ref_String;
@@ -156,7 +156,7 @@ final class SweepRotateLocomotor extends Locomotor {
             fieldTemp$0 = ii.field_a;
             ii.field_a = ii.field_a + 1;
             var6Lifetime1.field_Db = fieldTemp$0;
-            fla.field_f.b((byte) -61, var6Lifetime1);
+            fla.field_f.addLast((byte) -61, var6Lifetime1);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -165,7 +165,7 @@ final class SweepRotateLocomotor extends Locomotor {
           var6Lifetime1.field_Cb = (String) (var3Lifetime1);
           var6Lifetime1.field_tb = var4_ref_StringLifetime1;
           var6Lifetime1.unlink(70);
-          var7 = (mu) (fla.field_f.f(-80));
+          var7 = (mu) (fla.field_f.first(-80));
           scanLoop1: while (true) {
             if (null != var7) {
               stackIn_55_0 = var7;
@@ -173,7 +173,7 @@ final class SweepRotateLocomotor extends Locomotor {
                 break scanLoop1;
               }
               if (ol.a(stackIn_55_0, true, var6Lifetime1)) {
-                var7 = (mu) (fla.field_f.e(param0 - 14058));
+                var7 = (mu) (fla.field_f.next(param0 - 14058));
                 continue;
               }
             }
@@ -181,7 +181,7 @@ final class SweepRotateLocomotor extends Locomotor {
             break;
           }
           if (stackIn_55_0 == null) {
-            fla.field_f.b((byte) -112, var6Lifetime1);
+            fla.field_f.addLast((byte) -112, var6Lifetime1);
             if (var9 == 0) {
               return;
             }
@@ -478,7 +478,7 @@ final class SweepRotateLocomotor extends Locomotor {
         }
     }
 
-    final static nh a(GraphicsToolkit param0, byte param1, byte[] param2) {
+    final static ToolkitSprite a(GraphicsToolkit param0, byte param1, byte[] param2) {
         java.awt.Canvas var3 = null;
         InterruptedException var3_ref = null;
         RuntimeException var3_ref2 = null;
@@ -488,8 +488,8 @@ final class SweepRotateLocomotor extends Locomotor {
         int var7 = 0;
         int[] var8 = null;
         java.awt.image.PixelGrabber var9 = null;
-        nh stackIn_2_0 = null;
-        nh stackIn_4_0 = null;
+        ToolkitSprite stackIn_2_0 = null;
+        ToolkitSprite stackIn_4_0 = null;
         Object stackIn_6_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -501,7 +501,7 @@ final class SweepRotateLocomotor extends Locomotor {
           try {
             var3 = nma.field_l;
             if (param1 >= -59) {
-              stackIn_2_0 = (nh) null;
+              stackIn_2_0 = (ToolkitSprite) null;
               return stackIn_2_0;
             }
             var4 = java.awt.Toolkit.getDefaultToolkit().createImage(param2);
@@ -519,7 +519,7 @@ final class SweepRotateLocomotor extends Locomotor {
             decompiledCaughtException = decompiledCaughtParameter0;
             var3_ref = (InterruptedException) (Object) decompiledCaughtException;
             stackIn_6_0 = null;
-            return (nh) (stackIn_6_0);
+            return (ToolkitSprite) (stackIn_6_0);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;

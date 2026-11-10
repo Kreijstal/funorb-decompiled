@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class dg extends IntrusiveNode implements fo, noa {
+abstract class dg extends IntrusiveNode implements Renderable, noa {
     private int field_l;
     gr field_k;
     private int field_i;
     int field_g;
     private boolean field_j;
-    gma field_h;
+    WorldBody field_h;
     private int field_f;
 
-    void a(gma param0, int param1, gr param2) {
+    void a(WorldBody param0, int param1, gr param2) {
         try {
           if (param1 != -2159) {
             this.h(80);
@@ -36,20 +36,20 @@ abstract class dg extends IntrusiveNode implements fo, noa {
         return true;
     }
 
-    public final int c(byte param0) {
+    public final int getRenderY(byte param0) {
         if (param0 < 91) {
           return -69;
         }
         if (null != this.field_h) {
-          return this.field_h.e(9648);
+          return this.field_h.getY(9648);
         }
         return 0;
     }
 
-    public final int b(byte param0) {
+    public final int getRenderX(byte param0) {
         int var2 = 19 % ((param0 + 23) / 53);
         if (null != this.field_h) {
-          return this.field_h.d(3);
+          return this.field_h.getX(3);
         }
         return 0;
     }
@@ -183,17 +183,17 @@ abstract class dg extends IntrusiveNode implements fo, noa {
             var5 == 0) {
             return;
           }
-          var7 = this.field_h.c(-49);
-          var8 = this.field_h.a((byte) 55);
-          var9 = this.field_h.f((byte) 79);
+          var7 = this.field_h.getWidth(-49);
+          var8 = this.field_h.getHeight((byte) 55);
+          var9 = this.field_h.getRoom((byte) 79);
           if (var5 != 0 &&
             this.field_j) {
-            var9.b(var2, var8, var7, this.field_h.e(9648), -119, this.field_h.d(3), var3);
+            var9.b(var2, var8, var7, this.field_h.getY(9648), -119, this.field_h.getX(3), var3);
             this.field_j = false;
           }
           if (var6 != 0 &&
             !this.field_j) {
-            var9.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7, var8, 121);
+            var9.a(var3, var2, this.field_h.getX(3), this.field_h.getY(9648), var7, var8, 121);
             this.field_j = true;
           }
           return;
@@ -232,17 +232,17 @@ abstract class dg extends IntrusiveNode implements fo, noa {
             var5Lifetime1 == 0) {
             return;
           }
-          var7Lifetime1 = this.field_h.c(-49);
-          var8Lifetime1 = this.field_h.a((byte) 55);
-          var9Lifetime1 = this.field_h.f((byte) 79);
+          var7Lifetime1 = this.field_h.getWidth(-49);
+          var8Lifetime1 = this.field_h.getHeight((byte) 55);
+          var9Lifetime1 = this.field_h.getRoom((byte) 79);
           if (var5Lifetime1 != 0 &&
             this.field_j) {
-            var9Lifetime1.b(var2, var8Lifetime1, var7Lifetime1, this.field_h.e(9648), -119, this.field_h.d(3), var3);
+            var9Lifetime1.b(var2, var8Lifetime1, var7Lifetime1, this.field_h.getY(9648), -119, this.field_h.getX(3), var3);
             this.field_j = false;
           }
           if (var6Lifetime1 != 0 &&
             !this.field_j) {
-            var9Lifetime1.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7Lifetime1, var8Lifetime1, 121);
+            var9Lifetime1.a(var3, var2, this.field_h.getX(3), this.field_h.getY(9648), var7Lifetime1, var8Lifetime1, 121);
             this.field_j = true;
           }
           return;
@@ -275,17 +275,17 @@ abstract class dg extends IntrusiveNode implements fo, noa {
                   }
                   var6Lifetime2 = stackIn_158_0;
                   if (var6Lifetime2 != 0) {
-                    var7Lifetime2 = this.field_h.c(-49);
-                    var8Lifetime2 = this.field_h.a((byte) 55);
-                    var9Lifetime2 = this.field_h.f((byte) 79);
+                    var7Lifetime2 = this.field_h.getWidth(-49);
+                    var8Lifetime2 = this.field_h.getHeight((byte) 55);
+                    var9Lifetime2 = this.field_h.getRoom((byte) 79);
                     if (var5Lifetime2 != 0 &&
                       this.field_j) {
-                      var9Lifetime2.b(var2, var8Lifetime2, var7Lifetime2, this.field_h.e(9648), -119, this.field_h.d(3), var3);
+                      var9Lifetime2.b(var2, var8Lifetime2, var7Lifetime2, this.field_h.getY(9648), -119, this.field_h.getX(3), var3);
                       this.field_j = false;
                     }
                     if (var6Lifetime2 != 0 &&
                       !this.field_j) {
-                      var9Lifetime2.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7Lifetime2, var8Lifetime2, 121);
+                      var9Lifetime2.a(var3, var2, this.field_h.getX(3), this.field_h.getY(9648), var7Lifetime2, var8Lifetime2, 121);
                       this.field_j = true;
                     }
                     return;
@@ -293,17 +293,17 @@ abstract class dg extends IntrusiveNode implements fo, noa {
                   if (var5Lifetime2 == 0) {
                     return;
                   }
-                  var7Lifetime2Lifetime2 = this.field_h.c(-49);
-                  var8Lifetime2Lifetime2 = this.field_h.a((byte) 55);
-                  var9Lifetime2 = this.field_h.f((byte) 79);
+                  var7Lifetime2Lifetime2 = this.field_h.getWidth(-49);
+                  var8Lifetime2Lifetime2 = this.field_h.getHeight((byte) 55);
+                  var9Lifetime2 = this.field_h.getRoom((byte) 79);
                   if (var5Lifetime2 != 0 &&
                     this.field_j) {
-                    var9Lifetime2.b(var2, var8Lifetime2Lifetime2, var7Lifetime2Lifetime2, this.field_h.e(9648), -119, this.field_h.d(3), var3);
+                    var9Lifetime2.b(var2, var8Lifetime2Lifetime2, var7Lifetime2Lifetime2, this.field_h.getY(9648), -119, this.field_h.getX(3), var3);
                     this.field_j = false;
                   }
                   if (var6Lifetime2 != 0 &&
                     !this.field_j) {
-                    var9Lifetime2.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7Lifetime2Lifetime2, var8Lifetime2Lifetime2, 121);
+                    var9Lifetime2.a(var3, var2, this.field_h.getX(3), this.field_h.getY(9648), var7Lifetime2Lifetime2, var8Lifetime2Lifetime2, 121);
                     this.field_j = true;
                   }
                   return;
@@ -322,17 +322,17 @@ abstract class dg extends IntrusiveNode implements fo, noa {
               var5Lifetime2 == 0) {
               return;
             }
-            var7Lifetime2Lifetime1 = this.field_h.c(-49);
-            var8Lifetime2Lifetime1 = this.field_h.a((byte) 55);
-            var9Lifetime2Lifetime1 = this.field_h.f((byte) 79);
+            var7Lifetime2Lifetime1 = this.field_h.getWidth(-49);
+            var8Lifetime2Lifetime1 = this.field_h.getHeight((byte) 55);
+            var9Lifetime2Lifetime1 = this.field_h.getRoom((byte) 79);
             if (var5Lifetime2 != 0 &&
               this.field_j) {
-              var9Lifetime2Lifetime1.b(var2, var8Lifetime2Lifetime1, var7Lifetime2Lifetime1, this.field_h.e(9648), -119, this.field_h.d(3), var3);
+              var9Lifetime2Lifetime1.b(var2, var8Lifetime2Lifetime1, var7Lifetime2Lifetime1, this.field_h.getY(9648), -119, this.field_h.getX(3), var3);
               this.field_j = false;
             }
             if (var6Lifetime2 != 0 &&
               !this.field_j) {
-              var9Lifetime2Lifetime1.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7Lifetime2Lifetime1, var8Lifetime2Lifetime1, 121);
+              var9Lifetime2Lifetime1.a(var3, var2, this.field_h.getX(3), this.field_h.getY(9648), var7Lifetime2Lifetime1, var8Lifetime2Lifetime1, 121);
               this.field_j = true;
             }
             return;
@@ -359,13 +359,13 @@ abstract class dg extends IntrusiveNode implements fo, noa {
               var5Lifetime3 == 0) {
               return;
             }
-            var7Lifetime3 = this.field_h.c(-49);
-            var8Lifetime3 = this.field_h.a((byte) 55);
-            var9Lifetime3 = this.field_h.f((byte) 79);
+            var7Lifetime3 = this.field_h.getWidth(-49);
+            var8Lifetime3 = this.field_h.getHeight((byte) 55);
+            var9Lifetime3 = this.field_h.getRoom((byte) 79);
             if (var5Lifetime3 == 0) {
               if (var6Lifetime3 != 0 &&
                 !this.field_j) {
-                var9Lifetime3.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7Lifetime3, var8Lifetime3, 121);
+                var9Lifetime3.a(var3, var2, this.field_h.getX(3), this.field_h.getY(9648), var7Lifetime3, var8Lifetime3, 121);
                 this.field_j = true;
               }
               return;
@@ -373,12 +373,12 @@ abstract class dg extends IntrusiveNode implements fo, noa {
             if (!this.field_j) {
               if (var6Lifetime3 != 0 &&
                 !this.field_j) {
-                var9Lifetime3.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7Lifetime3, var8Lifetime3, 121);
+                var9Lifetime3.a(var3, var2, this.field_h.getX(3), this.field_h.getY(9648), var7Lifetime3, var8Lifetime3, 121);
                 this.field_j = true;
               }
               return;
             }
-            var9Lifetime3.b(var2, var8Lifetime3, var7Lifetime3, this.field_h.e(9648), -119, this.field_h.d(3), var3);
+            var9Lifetime3.b(var2, var8Lifetime3, var7Lifetime3, this.field_h.getY(9648), -119, this.field_h.getX(3), var3);
             this.field_j = false;
             if (var6Lifetime3 == 0) {
               return;
@@ -386,7 +386,7 @@ abstract class dg extends IntrusiveNode implements fo, noa {
             if (this.field_j) {
               return;
             }
-            var9Lifetime3.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7Lifetime3, var8Lifetime3, 121);
+            var9Lifetime3.a(var3, var2, this.field_h.getX(3), this.field_h.getY(9648), var7Lifetime3, var8Lifetime3, 121);
             this.field_j = true;
             return;
           }
@@ -408,13 +408,13 @@ abstract class dg extends IntrusiveNode implements fo, noa {
               var5Lifetime3 == 0) {
               return;
             }
-            var7Lifetime3Lifetime1 = this.field_h.c(-49);
-            var8Lifetime3Lifetime1 = this.field_h.a((byte) 55);
-            var9Lifetime3Lifetime1 = this.field_h.f((byte) 79);
+            var7Lifetime3Lifetime1 = this.field_h.getWidth(-49);
+            var8Lifetime3Lifetime1 = this.field_h.getHeight((byte) 55);
+            var9Lifetime3Lifetime1 = this.field_h.getRoom((byte) 79);
             if (var5Lifetime3 == 0) {
               if (var6Lifetime3Lifetime1 != 0 &&
                 !this.field_j) {
-                var9Lifetime3Lifetime1.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7Lifetime3Lifetime1, var8Lifetime3Lifetime1, 121);
+                var9Lifetime3Lifetime1.a(var3, var2, this.field_h.getX(3), this.field_h.getY(9648), var7Lifetime3Lifetime1, var8Lifetime3Lifetime1, 121);
                 this.field_j = true;
               }
               return;
@@ -422,18 +422,18 @@ abstract class dg extends IntrusiveNode implements fo, noa {
             if (!this.field_j) {
               if (var6Lifetime3Lifetime1 != 0 &&
                 !this.field_j) {
-                var9Lifetime3Lifetime1.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7Lifetime3Lifetime1, var8Lifetime3Lifetime1, 121);
+                var9Lifetime3Lifetime1.a(var3, var2, this.field_h.getX(3), this.field_h.getY(9648), var7Lifetime3Lifetime1, var8Lifetime3Lifetime1, 121);
                 this.field_j = true;
               }
               return;
             }
-            var9Lifetime3Lifetime1.b(var2, var8Lifetime3Lifetime1, var7Lifetime3Lifetime1, this.field_h.e(9648), -119, this.field_h.d(3), var3);
+            var9Lifetime3Lifetime1.b(var2, var8Lifetime3Lifetime1, var7Lifetime3Lifetime1, this.field_h.getY(9648), -119, this.field_h.getX(3), var3);
             this.field_j = false;
             if (var6Lifetime3Lifetime1 != 0) {
               if (this.field_j) {
                 return;
               }
-              var9Lifetime3Lifetime1.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7Lifetime3Lifetime1, var8Lifetime3Lifetime1, 121);
+              var9Lifetime3Lifetime1.a(var3, var2, this.field_h.getX(3), this.field_h.getY(9648), var7Lifetime3Lifetime1, var8Lifetime3Lifetime1, 121);
               this.field_j = true;
             }
             return;
@@ -451,17 +451,17 @@ abstract class dg extends IntrusiveNode implements fo, noa {
               var5Lifetime3 == 0) {
               return;
             }
-            var7Lifetime3Lifetime2 = this.field_h.c(-49);
-            var8Lifetime3Lifetime2 = this.field_h.a((byte) 55);
-            var9Lifetime3Lifetime2 = this.field_h.f((byte) 79);
+            var7Lifetime3Lifetime2 = this.field_h.getWidth(-49);
+            var8Lifetime3Lifetime2 = this.field_h.getHeight((byte) 55);
+            var9Lifetime3Lifetime2 = this.field_h.getRoom((byte) 79);
             if (var5Lifetime3 != 0 &&
               this.field_j) {
-              var9Lifetime3Lifetime2.b(var2, var8Lifetime3Lifetime2, var7Lifetime3Lifetime2, this.field_h.e(9648), -119, this.field_h.d(3), var3);
+              var9Lifetime3Lifetime2.b(var2, var8Lifetime3Lifetime2, var7Lifetime3Lifetime2, this.field_h.getY(9648), -119, this.field_h.getX(3), var3);
               this.field_j = false;
             }
             if (var6Lifetime3Lifetime2 != 0 &&
               !this.field_j) {
-              var9Lifetime3Lifetime2.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7Lifetime3Lifetime2, var8Lifetime3Lifetime2, 121);
+              var9Lifetime3Lifetime2.a(var3, var2, this.field_h.getX(3), this.field_h.getY(9648), var7Lifetime3Lifetime2, var8Lifetime3Lifetime2, 121);
               this.field_j = true;
             }
             return;
@@ -476,18 +476,18 @@ abstract class dg extends IntrusiveNode implements fo, noa {
                 var5Lifetime3 == 0) {
                 return;
               }
-              var7Lifetime4 = this.field_h.c(-49);
-              var8Lifetime4 = this.field_h.a((byte) 55);
-              var9Lifetime4 = this.field_h.f((byte) 79);
+              var7Lifetime4 = this.field_h.getWidth(-49);
+              var8Lifetime4 = this.field_h.getHeight((byte) 55);
+              var9Lifetime4 = this.field_h.getRoom((byte) 79);
               if (!this.field_j) {
                 if (var6Lifetime4 != 0 &&
                   !this.field_j) {
-                  var9Lifetime4.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7Lifetime4, var8Lifetime4, 121);
+                  var9Lifetime4.a(var3, var2, this.field_h.getX(3), this.field_h.getY(9648), var7Lifetime4, var8Lifetime4, 121);
                   this.field_j = true;
                 }
                 return;
               }
-              var9Lifetime4.b(var2, var8Lifetime4, var7Lifetime4, this.field_h.e(9648), -119, this.field_h.d(3), var3);
+              var9Lifetime4.b(var2, var8Lifetime4, var7Lifetime4, this.field_h.getY(9648), -119, this.field_h.getX(3), var3);
               this.field_j = false;
               break regionExit4;
             }
@@ -500,12 +500,12 @@ abstract class dg extends IntrusiveNode implements fo, noa {
             var5Lifetime3 == 0) {
             return;
           }
-          var7Lifetime4 = this.field_h.c(-49);
-          var8Lifetime4 = this.field_h.a((byte) 55);
-          var9Lifetime4 = this.field_h.f((byte) 79);
+          var7Lifetime4 = this.field_h.getWidth(-49);
+          var8Lifetime4 = this.field_h.getHeight((byte) 55);
+          var9Lifetime4 = this.field_h.getRoom((byte) 79);
           if (var5Lifetime3 != 0 &&
             this.field_j) {
-            var9Lifetime4.b(var2, var8Lifetime4, var7Lifetime4, this.field_h.e(9648), -119, this.field_h.d(3), var3);
+            var9Lifetime4.b(var2, var8Lifetime4, var7Lifetime4, this.field_h.getY(9648), -119, this.field_h.getX(3), var3);
             this.field_j = false;
           }
         }
@@ -513,7 +513,7 @@ abstract class dg extends IntrusiveNode implements fo, noa {
           if (this.field_j) {
             return;
           }
-          var9Lifetime4.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7Lifetime4, var8Lifetime4, 121);
+          var9Lifetime4.a(var3, var2, this.field_h.getX(3), this.field_h.getY(9648), var7Lifetime4, var8Lifetime4, 121);
           this.field_j = true;
         }
         return;
@@ -567,12 +567,12 @@ abstract class dg extends IntrusiveNode implements fo, noa {
         return this.g((byte) -105);
     }
 
-    void a(gr param0, gma param1, byte param2) {
+    void a(gr param0, WorldBody param1, byte param2) {
         try {
           this.field_k = param0;
           if (param2 != 36) {
             iq var5 = (iq) null;
-            this.a(-31, (iq) null);
+            this.render(-31, (iq) null);
           }
           this.field_h = param1;
         } catch (RuntimeException runtimeException) {
@@ -586,7 +586,7 @@ abstract class dg extends IntrusiveNode implements fo, noa {
           this.field_h = null;
           return;
         }
-        this.field_h = (gma) null;
+        this.field_h = (WorldBody) null;
         this.g(param0 - 12633);
         this.field_h = null;
     }
@@ -622,7 +622,7 @@ abstract class dg extends IntrusiveNode implements fo, noa {
         return false;
     }
 
-    public final void a(int param0, iq param1) {
+    public final void render(int param0, iq param1) {
         Object var3 = null;
         int var4 = 0;
         Object stackIn_13_0 = null;
@@ -639,7 +639,7 @@ abstract class dg extends IntrusiveNode implements fo, noa {
               var3 = (Trap) (this.field_h);
             }
             var4 = (this.field_f << 16) + this.field_h.g((byte) 115);
-            this.a(param1, this.field_h.e(9648), this.field_h.d(3), var4, (byte) 46);
+            this.a(param1, this.field_h.getY(9648), this.field_h.getX(3), var4, (byte) 46);
             if (var3 != null) {
               ((Trap) (var3)).a(param1, -10425);
             }
@@ -694,17 +694,17 @@ abstract class dg extends IntrusiveNode implements fo, noa {
         if (param0 < 12) {
           this.a((byte) -118);
           if (this.field_h != null) {
-            return this.field_h.f((byte) 116);
+            return this.field_h.getRoom((byte) 116);
           }
           return null;
         }
         if (this.field_h != null) {
-          return this.field_h.f((byte) 116);
+          return this.field_h.getRoom((byte) 116);
         }
         return null;
     }
 
-    final gma j(byte param0) {
+    final WorldBody j(byte param0) {
         if (param0 != 16) {
           this.field_k = (gr) null;
           return this.field_h;
@@ -731,7 +731,7 @@ abstract class dg extends IntrusiveNode implements fo, noa {
           if (param2 < 40) {
             this.a((byte) -28, 26);
           }
-          param1.a(param0, (fo) (this), (byte) -33);
+          param1.a(param0, (Renderable) (this), (byte) -33);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "dg.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -746,7 +746,7 @@ abstract class dg extends IntrusiveNode implements fo, noa {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          if (param1.field_E >= 15) {
+          if (param1.formatVersion >= 15) {
             if (param2.readBits((byte) 44, 1) != 1) {
               this.field_f = 0;
             } else {
@@ -777,7 +777,7 @@ abstract class dg extends IntrusiveNode implements fo, noa {
         }
     }
 
-    public int e(byte param0) {
+    public int getRenderZ(byte param0) {
         if (param0 > -86) {
           this.k((byte) -84);
           if (null != this.field_h) {
@@ -808,7 +808,7 @@ abstract class dg extends IntrusiveNode implements fo, noa {
           if (param0 <= 50) {
             this.m((byte) 49);
           }
-          param2.a((byte) -99, param1, (fo) (this));
+          param2.a((byte) -99, param1, (Renderable) (this));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "dg.V(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -826,7 +826,7 @@ abstract class dg extends IntrusiveNode implements fo, noa {
           return;
         }
         try {
-          param0.a(this.field_i, (fo) (this), (byte) -33);
+          param0.a(this.field_i, (Renderable) (this), (byte) -33);
           this.field_i = -1;
           if (param1 < 82) {
             this.d(-6);

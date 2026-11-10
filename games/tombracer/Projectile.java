@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class Projectile extends c implements fo, ffa, t {
+final class Projectile extends c implements Renderable, ffa, t {
     private int field_j;
     private boolean field_p;
     private int x;
@@ -22,7 +22,7 @@ final class Projectile extends c implements fo, ffa, t {
     private Effect field_t;
     private boolean field_B;
     private int field_G;
-    static nh field_n;
+    static ToolkitSprite field_n;
     static jea field_r;
     private int endSize;
     private int field_o;
@@ -43,7 +43,7 @@ final class Projectile extends c implements fo, ffa, t {
         this.field_i = param0;
     }
 
-    public final int e(byte param0) {
+    public final int getRenderZ(byte param0) {
         if (param0 > -86) {
           this.field_z = (Room) null;
           return this.field_G;
@@ -51,7 +51,7 @@ final class Projectile extends c implements fo, ffa, t {
         return this.field_G;
     }
 
-    public final int a(byte param0) {
+    public final int getHeight(byte param0) {
         if (param0 != 55) {
           uw var3 = (uw) null;
           this.a((uw) null, -69);
@@ -67,7 +67,7 @@ final class Projectile extends c implements fo, ffa, t {
 
     public final boolean j(byte param0) {
         if (param0 >= -102) {
-          field_n = (nh) null;
+          field_n = (ToolkitSprite) null;
           return true;
         }
         return true;
@@ -476,7 +476,7 @@ final class Projectile extends c implements fo, ffa, t {
         }
     }
 
-    public final boolean a(int param0, gma param1, int param2, pc param3) {
+    public final boolean a(int param0, WorldBody param1, int param2, pc param3) {
         RuntimeException var5 = null;
         iq var6 = null;
         RuntimeException stackIn_6_0 = null;
@@ -488,7 +488,7 @@ final class Projectile extends c implements fo, ffa, t {
         try {
           if (param0 != -1) {
             var6 = (iq) null;
-            this.a(63, (iq) null);
+            this.render(63, (iq) null);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -511,7 +511,7 @@ final class Projectile extends c implements fo, ffa, t {
         }
     }
 
-    public final int d(int param0) {
+    public final int getX(int param0) {
         if (param0 != 3) {
           this.field_F = true;
           return this.x;
@@ -719,7 +719,7 @@ final class Projectile extends c implements fo, ffa, t {
 
     public final int a(boolean param0, int param1, int param2, int param3, int param4, int param5) {
         if (!param0) {
-          this.e((byte) -115);
+          this.getRenderZ((byte) -115);
           return 0;
         }
         return 0;
@@ -737,14 +737,14 @@ final class Projectile extends c implements fo, ffa, t {
         return this.field_E;
     }
 
-    public final int c(int param0) {
+    public final int getWidth(int param0) {
         if (param0 >= -11) {
           return 67;
         }
         return this.field_o;
     }
 
-    public final int e(int param0) {
+    public final int getY(int param0) {
         if (param0 != 9648) {
           return -95;
         }
@@ -830,7 +830,7 @@ final class Projectile extends c implements fo, ffa, t {
           this.field_z.field_u.b((ffa) (this), param2 + 7071);
           return;
         }
-        this.d(107);
+        this.getX(107);
         this.field_z.field_u.b((ffa) (this), param2 + 7071);
     }
 
@@ -890,7 +890,7 @@ final class Projectile extends c implements fo, ffa, t {
         return false;
     }
 
-    public final int b(byte param0) {
+    public final int getRenderX(byte param0) {
         int var2 = 40 % ((-23 - param0) / 53);
         return this.x;
     }
@@ -937,9 +937,9 @@ final class Projectile extends c implements fo, ffa, t {
             this.a((byte) 21, true);
           }
           if (this.field_G >= 0) {
-            param0.a((byte) -116, 7, (fo) (this));
+            param0.a((byte) -116, 7, (Renderable) (this));
           } else {
-            param0.a((byte) -128, 2, (fo) (this));
+            param0.a((byte) -128, 2, (Renderable) (this));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -983,7 +983,7 @@ final class Projectile extends c implements fo, ffa, t {
         this.angle = param2;
     }
 
-    public final boolean a(int param0, gma param1) {
+    public final boolean a(int param0, WorldBody param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -1106,10 +1106,10 @@ final class Projectile extends c implements fo, ffa, t {
               if (this.y < 0) {
                 this.field_F = true;
               } else {
-                if (this.x >= this.field_z.m((byte) -86)) {
+                if (this.x >= this.field_z.getWidth((byte) -86)) {
                   this.field_F = true;
                 } else {
-                  if (this.y >= this.field_z.s(-121)) {
+                  if (this.y >= this.field_z.getHeight(-121)) {
                     this.field_F = true;
                   }
                 }
@@ -1156,8 +1156,8 @@ final class Projectile extends c implements fo, ffa, t {
           if (this.field_i == -1) {
             if (this.x >= 0 &&
               this.y >= 0 &&
-              this.x < this.field_z.m((byte) -86)) {
-              if (!(this.y < this.field_z.s(-121))) {
+              this.x < this.field_z.getWidth((byte) -86)) {
+              if (!(this.y < this.field_z.getHeight(-121))) {
                 this.field_F = true;
                 if (param0 != -1) {
                   this.field_t = (Effect) null;
@@ -1186,10 +1186,10 @@ final class Projectile extends c implements fo, ffa, t {
             if (this.y < 0) {
               this.field_F = true;
             } else {
-              if (this.x >= this.field_z.m((byte) -86)) {
+              if (this.x >= this.field_z.getWidth((byte) -86)) {
                 this.field_F = true;
               } else {
-                if (this.y >= this.field_z.s(-121)) {
+                if (this.y >= this.field_z.getHeight(-121)) {
                   this.field_F = true;
                 }
               }
@@ -1202,7 +1202,7 @@ final class Projectile extends c implements fo, ffa, t {
         this.field_t = (Effect) null;
     }
 
-    public final boolean a(gma param0, int param1) {
+    public final boolean a(WorldBody param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -1228,7 +1228,7 @@ final class Projectile extends c implements fo, ffa, t {
         }
     }
 
-    public final int c(byte param0) {
+    public final int getRenderY(byte param0) {
         if (param0 <= 91) {
           this.field_q = (on) null;
           return this.y;
@@ -1308,12 +1308,12 @@ final class Projectile extends c implements fo, ffa, t {
         }
     }
 
-    public final void a(int param0, iq param1) {
+    public final void render(int param0, iq param1) {
         try {
           dea.field_a.a(param1, false, this);
           if (param0 < 103) {
             ffa var4 = (ffa) null;
-            this.a(40, (gma) null, -76, 70, -19, (ffa) null, -19, 65);
+            this.a(40, (WorldBody) null, -76, 70, -19, (ffa) null, -19, 65);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ep.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -1391,13 +1391,13 @@ final class Projectile extends c implements fo, ffa, t {
 
     final int e(boolean param0) {
         if (param0) {
-          this.c((byte) 40);
+          this.getRenderY((byte) 40);
           return this.field_j;
         }
         return this.field_j;
     }
 
-    public final boolean a(int param0, gma param1, int param2, int param3, int param4, ffa param5, int param6, int param7) {
+    public final boolean a(int param0, WorldBody param1, int param2, int param3, int param4, ffa param5, int param6, int param7) {
         RuntimeException var9 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

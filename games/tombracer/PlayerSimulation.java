@@ -124,7 +124,7 @@ final class PlayerSimulation {
         if (!param0) {
           return -119;
         }
-        return this.player.f((byte) -88).field_a;
+        return this.player.getRoom((byte) -88).field_a;
     }
 
     final int l(int param0) {
@@ -175,7 +175,7 @@ final class PlayerSimulation {
         try {
           var5 = this.m(9262);
           if (var5 != null) {
-            var5.a(15, param0, param1, param0.f((byte) -96), this.tick, param3);
+            var5.a(15, param0, param1, param0.getRoom((byte) -96), this.tick, param3);
           }
           if (param2 != 1) {
             this.d(18, 84);
@@ -244,7 +244,7 @@ final class PlayerSimulation {
           }
           this.field_f = this.player.d((byte) -95, 3);
           this.field_h = false;
-          this.player.f((byte) -64).d(param1, 0);
+          this.player.getRoom((byte) -64).d(param1, 0);
           if (this.field_a) {
             return;
           }
@@ -256,7 +256,7 @@ final class PlayerSimulation {
         }
         this.field_f = this.player.d((byte) -95, 3);
         this.field_h = false;
-        this.player.f((byte) -64).d(param1, 0);
+        this.player.getRoom((byte) -64).d(param1, 0);
         if (this.field_a) {
           return;
         }
@@ -369,7 +369,7 @@ final class PlayerSimulation {
             return;
           }
           if (var3 != null) {
-            var3.a(15, param0, 0, param0.f((byte) -118), this.tick, 2);
+            var3.a(15, param0, 0, param0.getRoom((byte) -118), this.tick, 2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -391,10 +391,10 @@ final class PlayerSimulation {
         System.out.println("Player: " + this.player.toString());
         if (param0 != 114) {
           this.field_k = false;
-          this.player.f((byte) 65).dumpDebug(true);
+          this.player.getRoom((byte) 65).dumpDebug(true);
           return;
         }
-        this.player.f((byte) 65).dumpDebug(true);
+        this.player.getRoom((byte) 65).dumpDebug(true);
     }
 
     final boolean k(int param0) {
@@ -473,7 +473,7 @@ final class PlayerSimulation {
 
     final void a(int param0, int param1, Room param2) {
         try {
-          param2.a(param1, false);
+          param2.setCourseIndex(param1, false);
           if (param0 != -28088) {
             this.d(41);
           }

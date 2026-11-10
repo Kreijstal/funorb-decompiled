@@ -5,7 +5,7 @@ final class cja {
     private IntrusiveDeque field_a;
 
     final void a(byte param0) {
-        no var2 = (no) (this.field_a.f(-80));
+        no var2 = (no) (this.field_a.first(-80));
         if (param0 >= -76) {
           int[] var3 = (int[]) null;
           this.a((byte) -64, (int[]) null);
@@ -259,7 +259,7 @@ final class cja {
           var3 = var7;
           for (var4 = 0; var7.length > var4; var4++) {
             var5 = var7[var4];
-            this.field_a.b((byte) -104, new no(SecondaryNodeDequeIterator.field_a, var5));
+            this.field_a.addLast((byte) -104, new no(SecondaryNodeDequeIterator.field_a, var5));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -288,7 +288,7 @@ final class cja {
         if (param0 != -66) {
           return;
         }
-        no var3 = (no) (this.field_a.f(param0 - 14));
+        no var3 = (no) (this.field_a.first(param0 - 14));
         if (var3 == null) {
           return;
         }

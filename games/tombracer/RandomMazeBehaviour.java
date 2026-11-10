@@ -40,8 +40,8 @@ final class RandomMazeBehaviour extends Behaviour {
           if (null == this.field_z) {
             return false;
           }
-          var8_int = this.field_g.d(3) - this.field_g.c(-29) / 2;
-          var9 = this.field_g.e(9648) - this.field_g.a((byte) 55) / 2;
+          var8_int = this.field_g.getX(3) - this.field_g.getWidth(-29) / 2;
+          var9 = this.field_g.getY(9648) - this.field_g.getHeight((byte) 55) / 2;
           param3 = param3 - (this.field_y + param1 / 2);
           param4 = param4 - (this.field_w + param0 / 2);
           var10 = -var8_int + param3;
@@ -97,7 +97,7 @@ final class RandomMazeBehaviour extends Behaviour {
         RuntimeException var3 = null;
         try {
           super.a(param0, param1);
-          if (this.b(true).field_E < 4) {
+          if (this.b(true).formatVersion < 4) {
             param1.h(4, 0);
           }
           return;
@@ -229,8 +229,8 @@ final class RandomMazeBehaviour extends Behaviour {
         RuntimeException decompiledCaughtException = null;
         var17 = TombRacer.field_G ? 1 : 0;
         try {
-          var3_int = this.field_g.d(param1 + 4) - this.field_g.c(param1 - 54) / 2;
-          var4 = this.field_g.e(9648) - this.field_g.a((byte) 55) / 2;
+          var3_int = this.field_g.getX(param1 + 4) - this.field_g.getWidth(param1 - 54) / 2;
+          var4 = this.field_g.getY(9648) - this.field_g.getHeight((byte) 55) / 2;
           var5 = -this.field_y + (-var3_int + param0.field_d);
           var6 = param0.field_e - var3_int - this.field_y;
           var7 = param0.field_k - (this.field_w + var4);
@@ -318,8 +318,8 @@ final class RandomMazeBehaviour extends Behaviour {
         }
         var25 = this.b(true);
         var3 = this.o((byte) 46);
-        var4 = this.field_g.c(-34) / this.field_t;
-        var5 = this.field_g.a((byte) 55) / this.field_t;
+        var4 = this.field_g.getWidth(-34) / this.field_t;
+        var5 = this.field_g.getHeight((byte) 55) / this.field_t;
         if (var4 / 2 * 2 == var4) {
           var4--;
         }
@@ -327,7 +327,7 @@ final class RandomMazeBehaviour extends Behaviour {
           var5--;
         }
         if (this.field_u &&
-          this.field_t * var4 <= this.field_g.c(-109) - 2097152) {
+          this.field_t * var4 <= this.field_g.getWidth(-109) - 2097152) {
           var4 += 2;
         }
         var6 = var4 / 2;
@@ -378,15 +378,15 @@ final class RandomMazeBehaviour extends Behaviour {
           }
           break;
         }
-        this.field_y = (this.field_g.c(-30) - this.field_t * this.field_z.field_f) / 2;
-        this.field_w = (this.field_g.a((byte) 55) - this.field_z.field_a * this.field_t) / 2;
-        var12 = this.field_y - this.field_g.c(-12) / 2 + this.field_t / 2;
-        var13 = this.field_w - this.field_g.a((byte) 55) / 2 + this.field_t / 2;
+        this.field_y = (this.field_g.getWidth(-30) - this.field_t * this.field_z.field_f) / 2;
+        this.field_w = (this.field_g.getHeight((byte) 55) - this.field_z.field_a * this.field_t) / 2;
+        var12 = this.field_y - this.field_g.getWidth(-12) / 2 + this.field_t / 2;
+        var13 = this.field_w - this.field_g.getHeight((byte) 55) / 2 + this.field_t / 2;
         if (this.field_u) {
           return;
         }
-        var14 = var25.field_E;
-        var25.field_E = 26;
+        var14 = var25.formatVersion;
+        var25.formatVersion = 26;
         var15 = null;
         var16 = null;
         var17 = null;
@@ -450,7 +450,7 @@ final class RandomMazeBehaviour extends Behaviour {
             this.a(var37[var20Lifetime1][0], var13, var37[var20Lifetime1][1], -113, (BitPacketBuffer) (var17), var12);
           }
         }
-        var25.field_E = var14;
+        var25.formatVersion = var14;
         return;
     }
 
@@ -497,8 +497,8 @@ final class RandomMazeBehaviour extends Behaviour {
           }
           var5_int = 0;
           if (0 < this.field_y) {
-            var6 = this.field_g.d(3) - this.field_g.c(-49) / 2;
-            var7 = this.field_g.e(9648) - (this.field_g.a((byte) 55) / 2 - this.field_w);
+            var6 = this.field_g.getX(3) - this.field_g.getWidth(-49) / 2;
+            var7 = this.field_g.getY(9648) - (this.field_g.getHeight((byte) 55) / 2 - this.field_w);
             var8 = this.field_t * this.field_z.field_f;
             var9 = this.field_z.field_a * this.field_t;
             var10 = this.field_y + var8;
@@ -508,7 +508,7 @@ final class RandomMazeBehaviour extends Behaviour {
               stackIn_14_0 = 1;
             }
             var5_int = stackIn_14_0;
-            if (!this.a(false, var9, var10 + var6, var7, param2, this.field_g.c(-45) - var10)) {
+            if (!this.a(false, var9, var10 + var6, var7, param2, this.field_g.getWidth(-45) - var10)) {
               stackIn_20_0 = (var5_int != 0) ? 1 : 0;
             } else {
               stackIn_20_0 = 1;
@@ -578,7 +578,7 @@ final class RandomMazeBehaviour extends Behaviour {
         this.field_t = 2097152;
         try {
           this.field_s = param1.readBits((byte) 44, 2);
-          if (param0.field_E >= 4) {
+          if (param0.formatVersion >= 4) {
             this.field_t = param1.readBits((byte) 44, 10) << 16;
             stackIn_6_1 = (1 == param1.readBits((byte) 44, 1));
             this.field_u = stackIn_6_1;
@@ -586,7 +586,7 @@ final class RandomMazeBehaviour extends Behaviour {
             this.field_t = 2097152;
             this.field_u = true;
           }
-          if (param0.field_E >= 11) {
+          if (param0.formatVersion >= 11) {
             this.field_x = param1.readBits((byte) 44, 7);
             this.field_q = param1.readBits((byte) 44, 7);
             this.field_v = param1.readBits((byte) 44, 3);
@@ -600,7 +600,7 @@ final class RandomMazeBehaviour extends Behaviour {
             this.field_r = new Trap(param0, param1, false);
             this.field_A = new Trap(param0, param1, false);
             if (this.field_v > 0 &&
-              14 <= param0.field_E) {
+              14 <= param0.formatVersion) {
               this.field_o = new Trap(param0, param1, false);
             }
           }

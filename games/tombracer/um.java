@@ -7,7 +7,7 @@ class um extends DualLinkNode {
     static mpa field_l;
 
     final static vb a(int param0, int param1, u param2, int param3, int param4) {
-        qia var5 = null;
+        PcmSampleStream var5 = null;
         RuntimeException var5_ref = null;
         sc var6 = null;
         vb var7 = null;
@@ -20,10 +20,10 @@ class um extends DualLinkNode {
           if (param3 != -6455) {
             field_k = (String) null;
           }
-          var5 = qia.b(param2, 100, param4, param0);
+          var5 = PcmSampleStream.b(param2, 100, param4, param0);
           var6 = hda.a(param1, 1303, var5);
           var7 = new vb(var5, var6);
-          DivisionMazeGenerator.field_e.b((byte) -57, var7);
+          DivisionMazeGenerator.field_e.addLast((byte) -57, var7);
           kva.field_n.a(var6);
           stackIn_3_0 = var7;
           return stackIn_3_0;

@@ -76,7 +76,7 @@ final class fj {
             return;
           }
           var9 = var38.players[param0];
-          var10 = var9.f((byte) 73);
+          var10 = var9.getRoom((byte) 73);
           var11 = -param1 + param2;
           var12 = param4 - param3;
           ij.a(param1, var12, var11, param3, 0, 6);
@@ -132,7 +132,7 @@ final class fj {
           var28 = var16_ref.c(-30661);
           var29 = var16_ref.b((byte) 70);
           param5.field_g[param0].a(var29 << 16, 50, var28 << 16);
-          param5.field_g[param0].b(var9.e(9648), var9.d(3), 89);
+          param5.field_g[param0].b(var9.getY(9648), var9.getX(3), 89);
           var22 = var28 << 2;
           var23 = var29 << 2;
           var30 = var20;
@@ -164,7 +164,7 @@ final class fj {
               break;
           }
           if (param5.f((byte) 33)) {
-            var23 = var9.e(9648) >> 16;
+            var23 = var9.getY(9648) >> 16;
             var24 = 1600;
             var25 = 4096;
           }
@@ -180,7 +180,7 @@ final class fj {
             var31 = 0;
             var32 = 256;
             var33 = 1600;
-            var34 = var33 + (var10.s(78) >> 16) - 400;
+            var34 = var33 + (var10.getHeight(78) >> 16) - 400;
             var35 = 0;
             var36 = 0;
             if (var33 <= var23) {
@@ -196,7 +196,7 @@ final class fj {
               var31 = 256;
               if (var35 == 0) {
                 if (var36 != 0) {
-                  var9.b(var10.m((byte) -86) / 2, var34 + var32 << 16, 76473160);
+                  var9.b(var10.getWidth((byte) -86) / 2, var34 + var32 << 16, 76473160);
                 }
               } else {
                 var9.b(16384, true);

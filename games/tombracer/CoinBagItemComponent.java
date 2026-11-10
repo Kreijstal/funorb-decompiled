@@ -366,7 +366,7 @@ final class CoinBagItemComponent extends ItemComponent {
                   var16 = 0;
                 }
                 var17 = tn.field_n.field_tb.field_J;
-                var18_ref = (pha) (var17.f(param1 - 79));
+                var18_ref = (pha) (var17.first(param1 - 79));
                 scanLoop3: while (true) {
                   boolean decompiledFrameRemainder1 = true;
                   if (var18_ref != null) {
@@ -409,7 +409,7 @@ final class CoinBagItemComponent extends ItemComponent {
                       }
                     }
                     if (decompiledFrameRemainder1) {
-                      var18_ref = (pha) (var17.e(120));
+                      var18_ref = (pha) (var17.next(120));
                       continue;
                     }
                   }

@@ -33,9 +33,9 @@ final class hf implements ac, gs {
         return stackIn_9_0;
     }
 
-    public final int b(byte param0) {
+    public final int getRenderX(byte param0) {
         int var2 = 94 / ((-23 - param0) / 53);
-        return this.field_p.d(3);
+        return this.field_p.getX(3);
     }
 
     public final void a(int param0, int param1, int param2) {
@@ -56,7 +56,7 @@ final class hf implements ac, gs {
         this.field_c.a(0);
         this.field_n.a(0);
         this.field_h = dfa.a(8 + this.field_h, 2048, 106);
-        this.field_l.a(this.field_p.g((byte) 115) + 2097152, (byte) 101, this.field_p.e(9648), this.field_p.d(3));
+        this.field_l.a(this.field_p.g((byte) 115) + 2097152, (byte) 101, this.field_p.getY(9648), this.field_p.getX(3));
         if (param0 != -4366) {
           return;
         }
@@ -250,8 +250,8 @@ final class hf implements ac, gs {
         int var5;
         var5 = TombRacer.field_G ? 1 : 0;
         if (this.field_p != null &&
-          this.field_p.f((byte) 108) != null) {
-          var2 = (w) (this.field_p.f((byte) 90).field_G);
+          this.field_p.getRoom((byte) 108) != null) {
+          var2 = (w) (this.field_p.getRoom((byte) 90).field_G);
           if (param0 != 21463) {
             return;
           }
@@ -265,22 +265,22 @@ final class hf implements ac, gs {
               this.field_g = this.field_g - 1;
               if (var5 != 0) {
                 if (this.f((byte) 62)) {
-                  var2.a(new fm(69, this.b((byte) 116), this.c((byte) 121), this.e((byte) -105)), param0 ^ -21487);
-                  var2.a(new fm(70, this.b((byte) -122), this.c((byte) 93), this.e((byte) -87)), param0 ^ -21487);
+                  var2.a(new fm(69, this.getRenderX((byte) 116), this.getRenderY((byte) 121), this.getRenderZ((byte) -105)), param0 ^ -21487);
+                  var2.a(new fm(70, this.getRenderX((byte) -122), this.getRenderY((byte) 93), this.getRenderZ((byte) -87)), param0 ^ -21487);
                 } else {
-                  var2.a(new fm(70, this.b((byte) -122), this.c((byte) 93), this.e((byte) -87)), param0 ^ -21487);
+                  var2.a(new fm(70, this.getRenderX((byte) -122), this.getRenderY((byte) 93), this.getRenderZ((byte) -87)), param0 ^ -21487);
                 }
                 this.field_g = 50;
               }
             }
           } else {
             if (this.f((byte) 62)) {
-              var2.a(new fm(69, this.b((byte) 116), this.c((byte) 121), this.e((byte) -105)), param0 ^ -21487);
+              var2.a(new fm(69, this.getRenderX((byte) 116), this.getRenderY((byte) 121), this.getRenderZ((byte) -105)), param0 ^ -21487);
               if (var5 != 0) {
-                var2.a(new fm(70, this.b((byte) -122), this.c((byte) 93), this.e((byte) -87)), param0 ^ -21487);
+                var2.a(new fm(70, this.getRenderX((byte) -122), this.getRenderY((byte) 93), this.getRenderZ((byte) -87)), param0 ^ -21487);
               }
             } else {
-              var2.a(new fm(70, this.b((byte) -122), this.c((byte) 93), this.e((byte) -87)), param0 ^ -21487);
+              var2.a(new fm(70, this.getRenderX((byte) -122), this.getRenderY((byte) 93), this.getRenderZ((byte) -87)), param0 ^ -21487);
             }
             this.field_g = 50;
           }
@@ -310,12 +310,12 @@ final class hf implements ac, gs {
             if (var4 != 0) {
               if (2 == this.field_k) {
                 if (!this.field_m) {
-                  var2.a(new fm(73, this.b((byte) -102), this.c((byte) 96), this.e((byte) -114)), -58);
+                  var2.a(new fm(73, this.getRenderX((byte) -102), this.getRenderY((byte) 96), this.getRenderZ((byte) -114)), -58);
                   if (var5 != 0) {
-                    var2.a(new fm(72, this.b((byte) -119), this.c((byte) 120), this.e((byte) -116)), -58);
+                    var2.a(new fm(72, this.getRenderX((byte) -119), this.getRenderY((byte) 120), this.getRenderZ((byte) -116)), -58);
                   }
                 } else {
-                  var2.a(new fm(72, this.b((byte) -119), this.c((byte) 120), this.e((byte) -116)), -58);
+                  var2.a(new fm(72, this.getRenderX((byte) -119), this.getRenderY((byte) 120), this.getRenderZ((byte) -116)), -58);
                 }
                 stackIn_50_1 = !(this.field_m);
                 this.field_m = stackIn_50_1;
@@ -323,23 +323,23 @@ final class hf implements ac, gs {
               }
               if (decompiledFrameRemainder0) {
                 if (this.field_k == 1) {
-                  var2.a(new fm(71, this.b((byte) -98), this.c((byte) 98), this.e((byte) -127)), -58);
+                  var2.a(new fm(71, this.getRenderX((byte) -98), this.getRenderY((byte) 98), this.getRenderZ((byte) -127)), -58);
                   if ((var5 != 0) &&
                     (this.field_k == 3)) {
-                    var2.a(new fm(74, this.b((byte) 70), this.c((byte) 111), this.e((byte) -96)), -58);
+                    var2.a(new fm(74, this.getRenderX((byte) 70), this.getRenderY((byte) 111), this.getRenderZ((byte) -96)), -58);
                   }
                 } else {
                   if (this.field_k == 3) {
-                    var2.a(new fm(74, this.b((byte) 70), this.c((byte) 111), this.e((byte) -96)), -58);
+                    var2.a(new fm(74, this.getRenderX((byte) 70), this.getRenderY((byte) 111), this.getRenderZ((byte) -96)), -58);
                   }
                 }
               }
             }
           }
           this.field_k = 0;
-          if (this.field_p.f((byte) 109) != null &&
-            this.field_p.f((byte) -123).f((byte) 93) != null) {
-            var3 = this.field_p.f((byte) -88).f((byte) 93).a(this.c((byte) 106), this.b((byte) 102), (byte) 119);
+          if (this.field_p.getRoom((byte) 109) != null &&
+            this.field_p.getRoom((byte) -123).f((byte) 93) != null) {
+            var3 = this.field_p.getRoom((byte) -88).f((byte) 93).a(this.getRenderY((byte) 106), this.getRenderX((byte) 102), (byte) 119);
             if (var3 != null &&
               var3.b(param0 ^ 21463)) {
               this.field_k = 1;
@@ -347,7 +347,7 @@ final class hf implements ac, gs {
           }
           if (!this.field_o &&
             this.field_p.j(-1)) {
-            var2.a(new fm(79, this.b((byte) 77), this.c((byte) 114), this.e((byte) -123)), -58);
+            var2.a(new fm(79, this.getRenderX((byte) 77), this.getRenderY((byte) 114), this.getRenderZ((byte) -123)), -58);
             this.field_o = true;
           }
           return;
@@ -389,7 +389,7 @@ final class hf implements ac, gs {
         field_d = null;
     }
 
-    public final int e(byte param0) {
+    public final int getRenderZ(byte param0) {
         if (param0 >= -86) {
           this.a((byte) 117);
         }
@@ -429,7 +429,7 @@ final class hf implements ac, gs {
         var5 = 1.0f;
         var6 = 0;
         var7 = this.field_p.u((byte) 127);
-        var8 = this.field_p.f((byte) 98);
+        var8 = this.field_p.getRoom((byte) 98);
         if (var8 != null) {
           stackIn_8_0 = var8.field_G;
         } else {
@@ -658,12 +658,12 @@ final class hf implements ac, gs {
           case 12:
             {
               if (!this.f((byte) 62)) {
-                var9.a(-103, new fm(86, this.field_p.d(3), this.field_p.e(9648), this.field_p.g((byte) 115)));
+                var9.a(-103, new fm(86, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.g((byte) 115)));
                 if (var12 != 0) {
-                  var9.a(-107, new fm(85, this.field_p.d(3), this.field_p.e(9648), this.field_p.g((byte) 115)));
+                  var9.a(-107, new fm(85, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.g((byte) 115)));
                 }
               } else {
-                var9.a(-107, new fm(85, this.field_p.d(3), this.field_p.e(9648), this.field_p.g((byte) 115)));
+                var9.a(-107, new fm(85, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.g((byte) 115)));
               }
             }
             var4 = 18;
@@ -672,14 +672,14 @@ final class hf implements ac, gs {
             }
           case 13:
             {
-              var9.a(-103, new fm(83, this.field_p.d(3), this.field_p.e(9648), this.field_p.g((byte) 115)));
+              var9.a(-103, new fm(83, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.g((byte) 115)));
               if (!this.f((byte) 62)) {
-                var9.a(param0 ^ -124, new fm(88, this.field_p.d(param0 - 23), this.field_p.e(param0 + 9622), this.field_p.g((byte) 115)));
+                var9.a(param0 ^ -124, new fm(88, this.field_p.getX(param0 - 23), this.field_p.getY(param0 + 9622), this.field_p.g((byte) 115)));
                 if (var12 != 0) {
-                  var9.a(param0 - 143, new fm(87, this.field_p.d(3), this.field_p.e(9648), this.field_p.g((byte) 115)));
+                  var9.a(param0 - 143, new fm(87, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.g((byte) 115)));
                 }
               } else {
-                var9.a(param0 - 143, new fm(87, this.field_p.d(3), this.field_p.e(9648), this.field_p.g((byte) 115)));
+                var9.a(param0 - 143, new fm(87, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.g((byte) 115)));
               }
             }
             var4 = 10;
@@ -688,14 +688,14 @@ final class hf implements ac, gs {
             }
           case 14:
             {
-              var9.a(-128, new fm(78, this.field_p.d(3), this.field_p.e(param0 + 9622), this.field_p.g((byte) 115)));
+              var9.a(-128, new fm(78, this.field_p.getX(3), this.field_p.getY(param0 + 9622), this.field_p.g((byte) 115)));
               if (this.f((byte) 62)) {
-                var9.a(-103, new fm(87, this.field_p.d(3), this.field_p.e(param0 ^ 9642), this.field_p.g((byte) 115)));
+                var9.a(-103, new fm(87, this.field_p.getX(3), this.field_p.getY(param0 ^ 9642), this.field_p.g((byte) 115)));
                 if (var12 != 0) {
-                  var9.a(-116, new fm(88, this.field_p.d(3), this.field_p.e(param0 ^ 9642), this.field_p.g((byte) 115)));
+                  var9.a(-116, new fm(88, this.field_p.getX(3), this.field_p.getY(param0 ^ 9642), this.field_p.g((byte) 115)));
                 }
               } else {
-                var9.a(-116, new fm(88, this.field_p.d(3), this.field_p.e(param0 ^ 9642), this.field_p.g((byte) 115)));
+                var9.a(-116, new fm(88, this.field_p.getX(3), this.field_p.getY(param0 ^ 9642), this.field_p.g((byte) 115)));
               }
             }
             var4 = 9;
@@ -704,14 +704,14 @@ final class hf implements ac, gs {
             }
           case 16:
             {
-              var9.a(-106, new fm(84, this.field_p.d(3), this.field_p.e(9648), this.field_p.g((byte) 115)));
+              var9.a(-106, new fm(84, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.g((byte) 115)));
               if (!this.f((byte) 62)) {
-                var9.a(-110, new fm(88, this.field_p.d(3), this.field_p.e(9648), this.field_p.g((byte) 115)));
+                var9.a(-110, new fm(88, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.g((byte) 115)));
                 if (var12 != 0) {
-                  var9.a(-105, new fm(87, this.field_p.d(param0 - 23), this.field_p.e(9648), this.field_p.g((byte) 115)));
+                  var9.a(-105, new fm(87, this.field_p.getX(param0 - 23), this.field_p.getY(9648), this.field_p.g((byte) 115)));
                 }
               } else {
-                var9.a(-105, new fm(87, this.field_p.d(param0 - 23), this.field_p.e(9648), this.field_p.g((byte) 115)));
+                var9.a(-105, new fm(87, this.field_p.getX(param0 - 23), this.field_p.getY(9648), this.field_p.g((byte) 115)));
               }
             }
             var4 = 21;
@@ -719,28 +719,28 @@ final class hf implements ac, gs {
               break;
             }
           case 17:
-            var9.a(-122, new fm(80, this.field_p.d(param0 - 23), this.field_p.e(param0 ^ 9642), this.field_p.g((byte) 115)));
+            var9.a(-122, new fm(80, this.field_p.getX(param0 - 23), this.field_p.getY(param0 ^ 9642), this.field_p.g((byte) 115)));
             var4 = 22;
             if (!this.f((byte) 62)) {
-              var9.a(param0 ^ -78, new fm(88, this.field_p.d(param0 ^ 25), this.field_p.e(9648), this.field_p.g((byte) 115)));
+              var9.a(param0 ^ -78, new fm(88, this.field_p.getX(param0 ^ 25), this.field_p.getY(9648), this.field_p.g((byte) 115)));
               if (var12 == 0) {
                 break;
               }
             }
-            var9.a(-118, new fm(87, this.field_p.d(3), this.field_p.e(9648), this.field_p.g((byte) 115)));
+            var9.a(-118, new fm(87, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.g((byte) 115)));
             if (var12 == 0) {
               break;
             }
           case 20:
             {
-              var9.a(-98, new fm(78, this.field_p.d(3), this.field_p.e(9648), this.field_p.g((byte) 115)));
+              var9.a(-98, new fm(78, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.g((byte) 115)));
               if (this.f((byte) 62)) {
-                var9.a(-110, new fm(87, this.field_p.d(3), this.field_p.e(9648), this.field_p.g((byte) 115)));
+                var9.a(-110, new fm(87, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.g((byte) 115)));
                 if (var12 != 0) {
-                  var9.a(-91, new fm(88, this.field_p.d(3), this.field_p.e(9648), this.field_p.g((byte) 115)));
+                  var9.a(-91, new fm(88, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.g((byte) 115)));
                 }
               } else {
-                var9.a(-91, new fm(88, this.field_p.d(3), this.field_p.e(9648), this.field_p.g((byte) 115)));
+                var9.a(-91, new fm(88, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.g((byte) 115)));
               }
             }
             var4 = 25;
@@ -750,12 +750,12 @@ final class hf implements ac, gs {
           case 21:
             {
               if (this.f((byte) 62)) {
-                var9.a(-96, new fm(87, this.field_p.d(3), this.field_p.e(9648), this.field_p.g((byte) 115)));
+                var9.a(-96, new fm(87, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.g((byte) 115)));
                 if (var12 != 0) {
-                  var9.a(param0 - 148, new fm(88, this.field_p.d(3), this.field_p.e(param0 + 9622), this.field_p.g((byte) 115)));
+                  var9.a(param0 - 148, new fm(88, this.field_p.getX(3), this.field_p.getY(param0 + 9622), this.field_p.g((byte) 115)));
                 }
               } else {
-                var9.a(param0 - 148, new fm(88, this.field_p.d(3), this.field_p.e(param0 + 9622), this.field_p.g((byte) 115)));
+                var9.a(param0 - 148, new fm(88, this.field_p.getX(3), this.field_p.getY(param0 + 9622), this.field_p.g((byte) 115)));
               }
             }
             var4 = 34;
@@ -763,15 +763,15 @@ final class hf implements ac, gs {
               break;
             }
           case 22:
-            var9.a(-124, new fm(82, this.field_p.d(3), this.field_p.e(9648), this.field_p.g((byte) 115)));
+            var9.a(-124, new fm(82, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.g((byte) 115)));
             var4 = 35;
             if (this.f((byte) 62)) {
-              var9.a(-120, new fm(87, this.field_p.d(param0 ^ 25), this.field_p.e(param0 + 9622), this.field_p.g((byte) 115)));
+              var9.a(-120, new fm(87, this.field_p.getX(param0 ^ 25), this.field_p.getY(param0 + 9622), this.field_p.g((byte) 115)));
               if (var12 == 0) {
                 break;
               }
             }
-            var9.a(-115, new fm(88, this.field_p.d(param0 - 23), this.field_p.e(9648), this.field_p.g((byte) 115)));
+            var9.a(-115, new fm(88, this.field_p.getX(param0 - 23), this.field_p.getY(9648), this.field_p.g((byte) 115)));
             if (var12 == 0) {
               break;
             }
@@ -807,7 +807,7 @@ final class hf implements ac, gs {
         return;
     }
 
-    public final void a(int param0, iq param1) {
+    public final void render(int param0, iq param1) {
         if (this.field_p.l(false)) {
           return;
         }
@@ -815,7 +815,7 @@ final class hf implements ac, gs {
           return;
         }
         try {
-          this.a(125, this.b((byte) -122), this.e((byte) -114), this.c((byte) 95));
+          this.a(125, this.getRenderX((byte) -122), this.getRenderZ((byte) -114), this.getRenderY((byte) 95));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hf.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -830,11 +830,11 @@ final class hf implements ac, gs {
         return stackIn_14_0;
     }
 
-    public final int c(byte param0) {
+    public final int getRenderY(byte param0) {
         if (param0 < 91) {
           this.a(-8);
         }
-        return this.field_p.e(9648);
+        return this.field_p.getY(9648);
     }
 
     public final boolean a(boolean param0) {

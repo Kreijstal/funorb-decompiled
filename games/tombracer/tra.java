@@ -184,7 +184,7 @@ class tra extends rj {
         }
     }
 
-    final static void a(int param0, nh[] param1, byte param2, int param3, GraphicsToolkit param4, int param5, int param6, int param7, int param8, int param9) {
+    final static void a(int param0, ToolkitSprite[] param1, byte param2, int param3, GraphicsToolkit param4, int param5, int param6, int param7, int param8, int param9) {
         int stackIn_14_0 = 0;
         int stackIn_18_0 = 0;
         int stackIn_22_0 = 0;
@@ -271,22 +271,22 @@ class tra extends rj {
             }
             if (null != param1[0]) {
               var10.a(var21, param8, (byte) -12, var23, param3);
-              param1[0].a(param3, param8, param0, param9, param6);
+              param1[0].draw(param3, param8, param0, param9, param6);
               var10.a(97);
             }
             if (null != param1[2]) {
               var10.a(var15, param8, (byte) -12, var23, var22);
-              param1[2].a(var18, param8, param0, param9, param6);
+              param1[2].draw(var18, param8, param0, param9, param6);
               var10.a(-88);
             }
             if (param1[6] != null) {
               var10.a(var21, var24, (byte) -12, var16, param3);
-              param1[6].a(param3, var20, param0, param9, param6);
+              param1[6].draw(param3, var20, param0, param9, param6);
               var10.a(-33);
             }
             if (null != param1[8]) {
               var10.a(var15, var24, (byte) -12, var16, var22);
-              param1[8].a(var18, var20, param0, param9, param6);
+              param1[8].draw(var18, var20, param0, param9, param6);
               var10.a(-66);
             }
             boolean decompiledFrameCompleted4 = true;
@@ -295,7 +295,7 @@ class tra extends rj {
               var10.a(var22, param8, (byte) -12, var23, var21);
               var25 = var17;
               while (var25 < var18) {
-                param1[1].a(var25, param8, param0, param9, param6);
+                param1[1].draw(var25, param8, param0, param9, param6);
                 var25 = var25 + param1[1].d();
                 if (var27 != 0) {
                   decompiledFrameCompleted4 = false;
@@ -312,7 +312,7 @@ class tra extends rj {
               var10.a(var22, var24, (byte) -12, var16, var21);
               var25Lifetime1 = var17;
               while (var25Lifetime1 < var18) {
-                param1[7].a(var25Lifetime1, var20, param0, param9, param6);
+                param1[7].draw(var25Lifetime1, var20, param0, param9, param6);
                 var25Lifetime1 = var25Lifetime1 + param1[7].d();
                 if (var27 != 0) {
                   decompiledFrameCompleted3 = false;
@@ -329,7 +329,7 @@ class tra extends rj {
               var10.a(var21, var23, (byte) -12, var24, param3);
               var25Lifetime2 = var19;
               while (var25Lifetime2 < var20) {
-                param1[3].a(param3, var25Lifetime2, param0, param9, param6);
+                param1[3].draw(param3, var25Lifetime2, param0, param9, param6);
                 var25Lifetime2 = var25Lifetime2 + param1[3].b();
                 if (var27 != 0) {
                   decompiledFrameCompleted2 = false;
@@ -346,7 +346,7 @@ class tra extends rj {
               var10.a(var15, var23, (byte) -12, var24, var22);
               var25Lifetime3 = var19;
               while (var20 > var25Lifetime3) {
-                param1[5].a(var18, var25Lifetime3, param0, param9, param6);
+                param1[5].draw(var18, var25Lifetime3, param0, param9, param6);
                 var25Lifetime3 = var25Lifetime3 + param1[5].b();
                 if (var27 != 0) {
                   decompiledFrameCompleted1 = false;
@@ -371,7 +371,7 @@ class tra extends rj {
                 }
                 var26 = stackIn_111_0;
                 while (var26 < var18) {
-                  param1[4].a(var26, var25Lifetime4, param0, param9, param6);
+                  param1[4].draw(var26, var25Lifetime4, param0, param9, param6);
                   var26 = var26 + param1[4].d();
                 }
                 var25Lifetime4 = var25Lifetime4 + param1[4].b();

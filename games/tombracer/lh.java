@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lh {
-    static nh field_b;
+    static ToolkitSprite field_b;
     static int field_a;
 
     public static void a(byte param0) {

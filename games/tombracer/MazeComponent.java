@@ -283,8 +283,8 @@ abstract class MazeComponent extends kna {
         int var13 = 0;
         var13 = TombRacer.field_G ? 1 : 0;
         try {
-          ob.field_i = bea.field_g;
-          BufferedSocket.field_g = bea.field_a;
+          ob.field_i = SoftwareRasterizer.field_g;
+          BufferedSocket.field_g = SoftwareRasterizer.field_a;
           if (param0) {
             stackIn_4_0 = GameKeyHandler.field_a;
           } else {
@@ -403,7 +403,7 @@ abstract class MazeComponent extends kna {
               }
             }
           }
-          hf.field_a.a(360, -134 + (bea.field_a - 10), -23776, 10, bea.field_g - 360 >> 1);
+          hf.field_a.a(360, -134 + (SoftwareRasterizer.field_a - 10), -23776, 10, SoftwareRasterizer.field_g - 360 >> 1);
           S2CEventPacket.field_e.a(hf.field_a.field_G, 24, -23776, 0, 0);
           vs.field_R.a(hf.field_a.field_G, -24 + hf.field_a.field_t, -23776, 24, 0);
           vs.field_R.field_w = Player.c(vs.field_R.field_t, 1, 3, 11579568, param1 ^ -116, 8421504);

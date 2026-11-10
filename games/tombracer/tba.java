@@ -21,72 +21,72 @@ final class tba extends IntrusiveNode {
         int var8 = 0;
         Object var10 = null;
         Object var11 = null;
-        int[] var16 = bea.field_l;
+        int[] var16 = SoftwareRasterizer.field_l;
         int[] var15 = var16;
         int[] var12 = var15;
         int[] var6 = var12;
         int var7Lifetime1;
         int var8Lifetime1;
         if (param0 < -62) {
-          var7 = bea.field_g;
-          var8 = bea.field_a;
+          var7 = SoftwareRasterizer.field_g;
+          var8 = SoftwareRasterizer.field_a;
           var20 = new Sprite(16, param2);
           var20.c();
-          bea.b(0, 0, 16, param2, param3, param4);
+          SoftwareRasterizer.b(0, 0, 16, param2, param3, param4);
           var10 = null;
           if (param5) {
-            var21 = var20.a();
+            var21 = var20.copy();
             var10 = var21;
             var21.c();
-            bea.c(0, 0, 5, 0);
-            bea.c(0, 1, 3, 0);
-            bea.c(0, 2, 2, 0);
-            bea.c(0, 3, 1, 0);
-            bea.c(0, 4, 1, 0);
+            SoftwareRasterizer.drawHorizontalLine(0, 0, 5, 0);
+            SoftwareRasterizer.drawHorizontalLine(0, 1, 3, 0);
+            SoftwareRasterizer.drawHorizontalLine(0, 2, 2, 0);
+            SoftwareRasterizer.drawHorizontalLine(0, 3, 1, 0);
+            SoftwareRasterizer.drawHorizontalLine(0, 4, 1, 0);
           }
           var11 = null;
           if (param1) {
-            var22 = var20.a();
+            var22 = var20.copy();
             var11 = var22;
             var22.c();
-            bea.c(11, 0, 5, 0);
-            bea.c(13, 1, 3, 0);
-            bea.c(14, 2, 2, 0);
-            bea.c(15, 3, 1, 0);
-            bea.c(15, 4, 1, 0);
+            SoftwareRasterizer.drawHorizontalLine(11, 0, 5, 0);
+            SoftwareRasterizer.drawHorizontalLine(13, 1, 3, 0);
+            SoftwareRasterizer.drawHorizontalLine(14, 2, 2, 0);
+            SoftwareRasterizer.drawHorizontalLine(15, 3, 1, 0);
+            SoftwareRasterizer.drawHorizontalLine(15, 4, 1, 0);
           }
-          bea.a(var16, var7, var8);
+          SoftwareRasterizer.a(var16, var7, var8);
           return new Sprite[]{null, null, null, (Sprite) (var10), var20, (Sprite) (var11), null, null, null};
         }
         tba.a((byte) -71);
-        var7Lifetime1 = bea.field_g;
-        var8Lifetime1 = bea.field_a;
+        var7Lifetime1 = SoftwareRasterizer.field_g;
+        var8Lifetime1 = SoftwareRasterizer.field_a;
         Sprite var17 = new Sprite(16, param2);
         var17.c();
-        bea.b(0, 0, 16, param2, param3, param4);
+        SoftwareRasterizer.b(0, 0, 16, param2, param3, param4);
         var10 = null;
         if (param5) {
-          var18 = var17.a();
+          var18 = var17.copy();
           var10 = var18;
           var18.c();
-          bea.c(0, 0, 5, 0);
-          bea.c(0, 1, 3, 0);
-          bea.c(0, 2, 2, 0);
-          bea.c(0, 3, 1, 0);
-          bea.c(0, 4, 1, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 0, 5, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 1, 3, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 2, 2, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 3, 1, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 4, 1, 0);
         }
         var11 = null;
         if (param1) {
-          var19 = var17.a();
+          var19 = var17.copy();
           var11 = var19;
           var19.c();
-          bea.c(11, 0, 5, 0);
-          bea.c(13, 1, 3, 0);
-          bea.c(14, 2, 2, 0);
-          bea.c(15, 3, 1, 0);
-          bea.c(15, 4, 1, 0);
+          SoftwareRasterizer.drawHorizontalLine(11, 0, 5, 0);
+          SoftwareRasterizer.drawHorizontalLine(13, 1, 3, 0);
+          SoftwareRasterizer.drawHorizontalLine(14, 2, 2, 0);
+          SoftwareRasterizer.drawHorizontalLine(15, 3, 1, 0);
+          SoftwareRasterizer.drawHorizontalLine(15, 4, 1, 0);
         }
-        bea.a(var16, var7Lifetime1, var8Lifetime1);
+        SoftwareRasterizer.a(var16, var7Lifetime1, var8Lifetime1);
         return new Sprite[]{null, null, null, (Sprite) (var10), var17, (Sprite) (var11), null, null, null};
     }
 

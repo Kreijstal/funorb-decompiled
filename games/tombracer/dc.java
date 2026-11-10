@@ -26,12 +26,12 @@ final class dc extends dg {
         }
     }
 
-    public final int e(byte param0) {
+    public final int getRenderZ(byte param0) {
         if (param0 < -86) {
-          return super.e((byte) -108) + (this.field_r << 16);
+          return super.getRenderZ((byte) -108) + (this.field_r << 16);
         }
-        this.e((byte) 28);
-        return super.e((byte) -108) + (this.field_r << 16);
+        this.getRenderZ((byte) 28);
+        return super.getRenderZ((byte) -108) + (this.field_r << 16);
     }
 
     final void a(byte param0, BitPacketBuffer param1) {
@@ -380,7 +380,7 @@ final class dc extends dg {
             this.field_r = this.field_n - this.field_n * this.field_v.g((byte) -107) / this.field_v.j((byte) 90);
             if (this.field_r == 0 &&
               var2 != 0) {
-              this.a(42).b(false).a(0, this.c((byte) 92), 0, 0, 0, this.b((byte) 52));
+              this.a(42).b(false).a(0, this.getRenderY((byte) 92), 0, 0, 0, this.getRenderX((byte) 52));
             }
             var13 = (w) (this.a(param0 + 44).field_G);
             if (var13 == null) {
@@ -395,31 +395,31 @@ final class dc extends dg {
             var6 = stackIn_85_0;
             if (this.field_s == null &&
               var6 != 0) {
-              var13.a(new fm(56, this.b((byte) -93), this.c((byte) 124), this.e((byte) -118)), -58);
-              this.field_s = var13.a(new fm(57, this.b((byte) 32), this.c((byte) 118), this.e((byte) -95)), -58);
+              var13.a(new fm(56, this.getRenderX((byte) -93), this.getRenderY((byte) 124), this.getRenderZ((byte) -118)), -58);
+              this.field_s = var13.a(new fm(57, this.getRenderX((byte) 32), this.getRenderY((byte) 118), this.getRenderZ((byte) -95)), -58);
             } else {
               if (this.field_s != null &&
                 var6 == 0) {
                 this.field_s.a(1, var13);
                 this.field_s = null;
-                var13.a(new fm(58, this.b((byte) -99), this.c((byte) 95), this.e((byte) -122)), param0 ^ 57);
+                var13.a(new fm(58, this.getRenderX((byte) -99), this.getRenderY((byte) 95), this.getRenderZ((byte) -122)), param0 ^ 57);
               }
             }
             if (var6 == 0 &&
               !this.field_u &&
               this.field_v.c(110)) {
-              var13.a(new fm(59, this.b((byte) -121), this.c((byte) 92), this.e((byte) -105)), -58);
+              var13.a(new fm(59, this.getRenderX((byte) -121), this.getRenderY((byte) 92), this.getRenderZ((byte) -105)), -58);
             }
             this.field_u = this.field_v.c(param0 - 77);
             if (var6 == 0 &&
               !this.field_p &&
               this.field_v.r(-110)) {
-              var13.a(new fm(60, this.b((byte) -86), this.c((byte) 112), this.e((byte) -97)), -58);
+              var13.a(new fm(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
             }
             this.field_p = this.field_v.r(-59);
             if (this.field_r == 0 &&
               var2 != 0) {
-              var13.a(new fm(2, this.b((byte) -90), this.c((byte) 127), this.e((byte) -122)), -58);
+              var13.a(new fm(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
             }
             return;
           }
@@ -428,7 +428,7 @@ final class dc extends dg {
             this.field_r = 0;
             if (this.field_r == 0 &&
               var2 != 0) {
-              this.a(42).b(false).a(0, this.c((byte) 92), 0, 0, 0, this.b((byte) 52));
+              this.a(42).b(false).a(0, this.getRenderY((byte) 92), 0, 0, 0, this.getRenderX((byte) 52));
             }
             var9 = (w) (this.a(param0 + 44).field_G);
             if (var9 == null) {
@@ -443,31 +443,31 @@ final class dc extends dg {
             var6Lifetime3 = stackIn_16_0;
             if (this.field_s == null &&
               var6Lifetime3 != 0) {
-              var9.a(new fm(56, this.b((byte) -93), this.c((byte) 124), this.e((byte) -118)), -58);
-              this.field_s = var9.a(new fm(57, this.b((byte) 32), this.c((byte) 118), this.e((byte) -95)), -58);
+              var9.a(new fm(56, this.getRenderX((byte) -93), this.getRenderY((byte) 124), this.getRenderZ((byte) -118)), -58);
+              this.field_s = var9.a(new fm(57, this.getRenderX((byte) 32), this.getRenderY((byte) 118), this.getRenderZ((byte) -95)), -58);
             } else {
               if (this.field_s != null &&
                 var6Lifetime3 == 0) {
                 this.field_s.a(1, var9);
                 this.field_s = null;
-                var9.a(new fm(58, this.b((byte) -99), this.c((byte) 95), this.e((byte) -122)), param0 ^ 57);
+                var9.a(new fm(58, this.getRenderX((byte) -99), this.getRenderY((byte) 95), this.getRenderZ((byte) -122)), param0 ^ 57);
               }
             }
             if (var6Lifetime3 == 0 &&
               !this.field_u &&
               this.field_v.c(110)) {
-              var9.a(new fm(59, this.b((byte) -121), this.c((byte) 92), this.e((byte) -105)), -58);
+              var9.a(new fm(59, this.getRenderX((byte) -121), this.getRenderY((byte) 92), this.getRenderZ((byte) -105)), -58);
             }
             this.field_u = this.field_v.c(param0 - 77);
             if (var6Lifetime3 == 0 &&
               !this.field_p &&
               this.field_v.r(-110)) {
-              var9.a(new fm(60, this.b((byte) -86), this.c((byte) 112), this.e((byte) -97)), -58);
+              var9.a(new fm(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
             }
             this.field_p = this.field_v.r(-59);
             if (this.field_r == 0 &&
               var2 != 0) {
-              var9.a(new fm(2, this.b((byte) -90), this.c((byte) 127), this.e((byte) -122)), -58);
+              var9.a(new fm(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
             }
             return;
           }
@@ -476,7 +476,7 @@ final class dc extends dg {
             this.field_r = this.field_n * this.field_v.g((byte) -120) / this.field_v.d(false);
             if (this.field_r == 0 &&
               var2 != 0) {
-              this.a(42).b(false).a(0, this.c((byte) 92), 0, 0, 0, this.b((byte) 52));
+              this.a(42).b(false).a(0, this.getRenderY((byte) 92), 0, 0, 0, this.getRenderX((byte) 52));
             }
             var11 = (w) (this.a(param0 + 44).field_G);
             if (var11 == null) {
@@ -491,31 +491,31 @@ final class dc extends dg {
             var6Lifetime4 = stackIn_51_0;
             if (this.field_s == null &&
               var6Lifetime4 != 0) {
-              var11.a(new fm(56, this.b((byte) -93), this.c((byte) 124), this.e((byte) -118)), -58);
-              this.field_s = var11.a(new fm(57, this.b((byte) 32), this.c((byte) 118), this.e((byte) -95)), -58);
+              var11.a(new fm(56, this.getRenderX((byte) -93), this.getRenderY((byte) 124), this.getRenderZ((byte) -118)), -58);
+              this.field_s = var11.a(new fm(57, this.getRenderX((byte) 32), this.getRenderY((byte) 118), this.getRenderZ((byte) -95)), -58);
             } else {
               if (this.field_s != null &&
                 var6Lifetime4 == 0) {
                 this.field_s.a(1, var11);
                 this.field_s = null;
-                var11.a(new fm(58, this.b((byte) -99), this.c((byte) 95), this.e((byte) -122)), param0 ^ 57);
+                var11.a(new fm(58, this.getRenderX((byte) -99), this.getRenderY((byte) 95), this.getRenderZ((byte) -122)), param0 ^ 57);
               }
             }
             if (var6Lifetime4 == 0 &&
               !this.field_u &&
               this.field_v.c(110)) {
-              var11.a(new fm(59, this.b((byte) -121), this.c((byte) 92), this.e((byte) -105)), -58);
+              var11.a(new fm(59, this.getRenderX((byte) -121), this.getRenderY((byte) 92), this.getRenderZ((byte) -105)), -58);
             }
             this.field_u = this.field_v.c(param0 - 77);
             if (var6Lifetime4 == 0 &&
               !this.field_p &&
               this.field_v.r(-110)) {
-              var11.a(new fm(60, this.b((byte) -86), this.c((byte) 112), this.e((byte) -97)), -58);
+              var11.a(new fm(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
             }
             this.field_p = this.field_v.r(-59);
             if (this.field_r == 0 &&
               var2 != 0) {
-              var11.a(new fm(2, this.b((byte) -90), this.c((byte) 127), this.e((byte) -122)), -58);
+              var11.a(new fm(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
             }
             return;
           }
@@ -535,35 +535,35 @@ final class dc extends dg {
             var6Lifetime1 = stackIn_118_0;
             if (this.field_s == null &&
               var6Lifetime1 != 0) {
-              var15.a(new fm(56, this.b((byte) -93), this.c((byte) 124), this.e((byte) -118)), -58);
-              this.field_s = var15.a(new fm(57, this.b((byte) 32), this.c((byte) 118), this.e((byte) -95)), -58);
+              var15.a(new fm(56, this.getRenderX((byte) -93), this.getRenderY((byte) 124), this.getRenderZ((byte) -118)), -58);
+              this.field_s = var15.a(new fm(57, this.getRenderX((byte) 32), this.getRenderY((byte) 118), this.getRenderZ((byte) -95)), -58);
             } else {
               if (this.field_s != null &&
                 var6Lifetime1 == 0) {
                 this.field_s.a(1, var15);
                 this.field_s = null;
-                var15.a(new fm(58, this.b((byte) -99), this.c((byte) 95), this.e((byte) -122)), param0 ^ 57);
+                var15.a(new fm(58, this.getRenderX((byte) -99), this.getRenderY((byte) 95), this.getRenderZ((byte) -122)), param0 ^ 57);
               }
             }
             if (var6Lifetime1 == 0 &&
               !this.field_u &&
               this.field_v.c(110)) {
-              var15.a(new fm(59, this.b((byte) -121), this.c((byte) 92), this.e((byte) -105)), -58);
+              var15.a(new fm(59, this.getRenderX((byte) -121), this.getRenderY((byte) 92), this.getRenderZ((byte) -105)), -58);
             }
             this.field_u = this.field_v.c(param0 - 77);
             if (var6Lifetime1 == 0 &&
               !this.field_p &&
               this.field_v.r(-110)) {
-              var15.a(new fm(60, this.b((byte) -86), this.c((byte) 112), this.e((byte) -97)), -58);
+              var15.a(new fm(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
             }
             this.field_p = this.field_v.r(-59);
             if (this.field_r == 0 &&
               var2 != 0) {
-              var15.a(new fm(2, this.b((byte) -90), this.c((byte) 127), this.e((byte) -122)), -58);
+              var15.a(new fm(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
             }
             return;
           }
-          this.a(42).b(false).a(0, this.c((byte) 92), 0, 0, 0, this.b((byte) 52));
+          this.a(42).b(false).a(0, this.getRenderY((byte) 92), 0, 0, 0, this.getRenderX((byte) 52));
         }
         var17_ref = (w) (this.a(param0 + 44).field_G);
         if (var17_ref == null) {
@@ -578,21 +578,21 @@ final class dc extends dg {
         var6Lifetime2 = stackIn_149_0;
         if (this.field_s == null &&
           var6Lifetime2 != 0) {
-          var17_ref.a(new fm(56, this.b((byte) -93), this.c((byte) 124), this.e((byte) -118)), -58);
-          this.field_s = var17_ref.a(new fm(57, this.b((byte) 32), this.c((byte) 118), this.e((byte) -95)), -58);
+          var17_ref.a(new fm(56, this.getRenderX((byte) -93), this.getRenderY((byte) 124), this.getRenderZ((byte) -118)), -58);
+          this.field_s = var17_ref.a(new fm(57, this.getRenderX((byte) 32), this.getRenderY((byte) 118), this.getRenderZ((byte) -95)), -58);
           if (var6Lifetime2 == 0 &&
             !this.field_u &&
             this.field_v.c(110)) {
-            var17_ref.a(new fm(59, this.b((byte) -121), this.c((byte) 92), this.e((byte) -105)), -58);
+            var17_ref.a(new fm(59, this.getRenderX((byte) -121), this.getRenderY((byte) 92), this.getRenderZ((byte) -105)), -58);
             this.field_u = this.field_v.c(param0 - 77);
             if (!this.field_p &&
               this.field_v.r(-110)) {
-              var17_ref.a(new fm(60, this.b((byte) -86), this.c((byte) 112), this.e((byte) -97)), -58);
+              var17_ref.a(new fm(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
             }
             this.field_p = this.field_v.r(-59);
             if (this.field_r == 0 &&
               var2 != 0) {
-              var17_ref.a(new fm(2, this.b((byte) -90), this.c((byte) 127), this.e((byte) -122)), -58);
+              var17_ref.a(new fm(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
             }
             return;
           }
@@ -603,11 +603,11 @@ final class dc extends dg {
               this.field_p = this.field_v.r(-59);
               if (this.field_r == 0 &&
                 var2 != 0) {
-                var17_ref.a(new fm(2, this.b((byte) -90), this.c((byte) 127), this.e((byte) -122)), -58);
+                var17_ref.a(new fm(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
               }
               return;
             }
-            var17_ref.a(new fm(60, this.b((byte) -86), this.c((byte) 112), this.e((byte) -97)), -58);
+            var17_ref.a(new fm(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
           }
           this.field_p = this.field_v.r(-59);
           if (this.field_r != 0) {
@@ -616,58 +616,58 @@ final class dc extends dg {
           if (var2 == 0) {
             return;
           }
-          var17_ref.a(new fm(2, this.b((byte) -90), this.c((byte) 127), this.e((byte) -122)), -58);
+          var17_ref.a(new fm(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
           return;
         }
         if (this.field_s != null) {
           if (var6Lifetime2 == 0) {
             this.field_s.a(1, var17_ref);
             this.field_s = null;
-            var17_ref.a(new fm(58, this.b((byte) -99), this.c((byte) 95), this.e((byte) -122)), param0 ^ 57);
+            var17_ref.a(new fm(58, this.getRenderX((byte) -99), this.getRenderY((byte) 95), this.getRenderZ((byte) -122)), param0 ^ 57);
             if (!this.field_u &&
               this.field_v.c(110)) {
-              var17_ref.a(new fm(59, this.b((byte) -121), this.c((byte) 92), this.e((byte) -105)), -58);
+              var17_ref.a(new fm(59, this.getRenderX((byte) -121), this.getRenderY((byte) 92), this.getRenderZ((byte) -105)), -58);
             }
             this.field_u = this.field_v.c(param0 - 77);
             if (!this.field_p &&
               this.field_v.r(-110)) {
-              var17_ref.a(new fm(60, this.b((byte) -86), this.c((byte) 112), this.e((byte) -97)), -58);
+              var17_ref.a(new fm(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
             }
           } else {
             if (var6Lifetime2 == 0 &&
               !this.field_u &&
               this.field_v.c(110)) {
-              var17_ref.a(new fm(59, this.b((byte) -121), this.c((byte) 92), this.e((byte) -105)), -58);
+              var17_ref.a(new fm(59, this.getRenderX((byte) -121), this.getRenderY((byte) 92), this.getRenderZ((byte) -105)), -58);
             }
             this.field_u = this.field_v.c(param0 - 77);
             if (var6Lifetime2 == 0 &&
               !this.field_p &&
               this.field_v.r(-110)) {
-              var17_ref.a(new fm(60, this.b((byte) -86), this.c((byte) 112), this.e((byte) -97)), -58);
+              var17_ref.a(new fm(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
             }
           }
           this.field_p = this.field_v.r(-59);
           if (this.field_r == 0 &&
             var2 != 0) {
-            var17_ref.a(new fm(2, this.b((byte) -90), this.c((byte) 127), this.e((byte) -122)), -58);
+            var17_ref.a(new fm(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
           }
           return;
         }
         if (var6Lifetime2 == 0 &&
           !this.field_u &&
           this.field_v.c(110)) {
-          var17_ref.a(new fm(59, this.b((byte) -121), this.c((byte) 92), this.e((byte) -105)), -58);
+          var17_ref.a(new fm(59, this.getRenderX((byte) -121), this.getRenderY((byte) 92), this.getRenderZ((byte) -105)), -58);
           this.field_u = this.field_v.c(param0 - 77);
           if (!this.field_p) {
             if (!this.field_v.r(-110)) {
               this.field_p = this.field_v.r(-59);
               if (this.field_r == 0 &&
                 var2 != 0) {
-                var17_ref.a(new fm(2, this.b((byte) -90), this.c((byte) 127), this.e((byte) -122)), -58);
+                var17_ref.a(new fm(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
               }
               return;
             }
-            var17_ref.a(new fm(60, this.b((byte) -86), this.c((byte) 112), this.e((byte) -97)), -58);
+            var17_ref.a(new fm(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
           }
           this.field_p = this.field_v.r(-59);
           if (this.field_r != 0) {
@@ -676,7 +676,7 @@ final class dc extends dg {
           if (var2 == 0) {
             return;
           }
-          var17_ref.a(new fm(2, this.b((byte) -90), this.c((byte) 127), this.e((byte) -122)), -58);
+          var17_ref.a(new fm(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
           return;
         }
         this.field_u = this.field_v.c(param0 - 77);
@@ -690,15 +690,15 @@ final class dc extends dg {
             if (var2 == 0) {
               return;
             }
-            var17_ref.a(new fm(2, this.b((byte) -90), this.c((byte) 127), this.e((byte) -122)), -58);
+            var17_ref.a(new fm(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
             return;
           }
-          var17_ref.a(new fm(60, this.b((byte) -86), this.c((byte) 112), this.e((byte) -97)), -58);
+          var17_ref.a(new fm(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
         }
         this.field_p = this.field_v.r(-59);
         if (this.field_r == 0 &&
           var2 != 0) {
-          var17_ref.a(new fm(2, this.b((byte) -90), this.c((byte) 127), this.e((byte) -122)), -58);
+          var17_ref.a(new fm(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
           return;
         }
         return;
@@ -750,7 +750,7 @@ final class dc extends dg {
         }
     }
 
-    final void a(gr param0, gma param1, byte param2) {
+    final void a(gr param0, WorldBody param1, byte param2) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

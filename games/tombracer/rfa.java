@@ -310,7 +310,7 @@ abstract class rfa extends AppletGameShell implements sia {
         }
         if (!vpa.a(66)) {
           while (true) {
-            var5 = (cga) (RotaterMountComponent.field_H.c(119));
+            var5 = (cga) (RotaterMountComponent.field_H.removeFirst(119));
             if (var5 == null) {
               break;
             }

@@ -39,7 +39,7 @@ final class fna {
     }
 
     final int d(int param0) {
-        nh var2;
+        ToolkitSprite var2;
         int var3;
         if (this.field_g == 5) {
           return ng.field_k[5].c() / 2 + this.field_d;
@@ -103,7 +103,7 @@ final class fna {
         int stackIn_19_0 = 0;
         kia stackIn_51_0 = null;
         int stackIn_78_0 = 0;
-        nh stackIn_89_0 = null;
+        ToolkitSprite stackIn_89_0 = null;
         int var5;
         GameFont var6;
         int var7;
@@ -111,7 +111,7 @@ final class fna {
         int var9;
         int var10;
         int var11;
-        nh var12;
+        ToolkitSprite var12;
         int var13;
         int var14;
         int var15;
@@ -125,16 +125,16 @@ final class fna {
         int var21_int;
         String var21;
         kea var21_ref;
-        nh var21_ref2;
+        ToolkitSprite var21_ref2;
         int var22_int;
         String var22;
         int var24;
-        nh[] var25;
+        ToolkitSprite[] var25;
         GraphicsToolkit var26;
         kia var27;
-        nh[] var28;
+        ToolkitSprite[] var28;
         GraphicsToolkit var29;
-        nh var30;
+        ToolkitSprite var30;
         int var18Lifetime1;
         int var19Lifetime1;
         int var18Lifetime2;
@@ -324,15 +324,15 @@ final class fna {
         }
         var20 = stackIn_78_0;
         if (!param3) {
-          tka.field_p.a(-34 + this.field_b, var9 - 16, 0, -4144960, 1);
+          tka.field_p.draw(-34 + this.field_b, var9 - 16, 0, -4144960, 1);
         }
         if (param3 ||
           var24 != 0) {
           tka.field_p.a(this.field_b - 34, -16 + var9);
         }
-        tga.field_a.KA(this.field_b - 35, -17 + var9, (var20 >> 1) - 35 + this.field_b, var9);
+        tga.field_a.setClip(this.field_b - 35, -17 + var9, (var20 >> 1) - 35 + this.field_b, var9);
         if (!param3) {
-          Projectile.field_n.a(this.field_b - 34, -16 + var9, 0, -4144960, 1);
+          Projectile.field_n.draw(this.field_b - 34, -16 + var9, 0, -4144960, 1);
         }
         if (param3 ||
           var24 != 0) {
@@ -352,7 +352,7 @@ final class fna {
             return;
           }
         }
-        var30.a((var20 >> 1) + (-35 + this.field_b) - 12, -6 - (var30.c() >> 1) + var9, 0, -4144960, 1);
+        var30.draw((var20 >> 1) + (-35 + this.field_b) - 12, -6 - (var30.c() >> 1) + var9, 0, -4144960, 1);
         return;
     }
 
@@ -360,7 +360,7 @@ final class fna {
         if (param0 != -163) {
           return -37;
         }
-        nh var2 = this.b(param0 ^ 28586);
+        ToolkitSprite var2 = this.b(param0 ^ 28586);
         return var2.a() + this.field_d;
     }
 
@@ -439,7 +439,7 @@ final class fna {
         int var7;
         int var8;
         int var9;
-        nh var10;
+        ToolkitSprite var10;
         int var5Lifetime1;
         if (!this.field_c.b(20)) {
           return false;
@@ -465,7 +465,7 @@ final class fna {
         return ab.a(-(var5Lifetime1 / 2) + this.field_i, param1, var5Lifetime1 / 2 + this.field_i, param2, this.field_b + var4 / 2, this.field_b - var4 / 2, 104);
     }
 
-    private final nh b(int param0) {
+    private final ToolkitSprite b(int param0) {
         if (this.field_g == 1) {
           return ConstantEffectBehaviour.field_q;
         }

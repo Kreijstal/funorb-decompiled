@@ -34,7 +34,7 @@ final class pca {
             this.field_d = (int[]) null;
           }
           if (this.field_e != null) {
-            this.field_e.a(113, param1);
+            this.field_e.render(113, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -301,8 +301,8 @@ final class pca {
             return;
           }
           this.field_h = param2.readBits((byte) 44, 8);
-          if (param1.field_E >= 10 &&
-            param1.field_E <= 17) {
+          if (param1.formatVersion >= 10 &&
+            param1.formatVersion <= 17) {
             param2.readBits((byte) 44, 1);
             param2.readBits((byte) 44, 1);
             if (this.field_h > 5) {

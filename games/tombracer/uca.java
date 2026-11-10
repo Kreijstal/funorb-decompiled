@@ -44,9 +44,9 @@ final class uca {
           if (param1 != 102) {
             field_d = 38;
           }
-          fla.field_f.a(-13854, var8);
+          fla.field_f.startForwardFrom(-13854, var8);
           while (true) {
-            var7 = (mu) (fla.field_f.e(115));
+            var7 = (mu) (fla.field_f.next(115));
             if (var7 != null) {
               var7.field_Db = var7.field_Db - 1;
               continue;

@@ -102,7 +102,7 @@ final class SpawnerBehaviour extends Behaviour {
             return;
           }
           var2 = this.field_g.g(-25787);
-          this.field_q.a(var2, this.field_g.d(3), this.field_g.e(9648), 4);
+          this.field_q.a(var2, this.field_g.getX(3), this.field_g.getY(9648), 4);
           if (this.field_r <= 0) {
             return;
           }
@@ -125,7 +125,7 @@ final class SpawnerBehaviour extends Behaviour {
           return;
         }
         var2Lifetime1 = this.field_g.g(-25787);
-        this.field_q.a(var2Lifetime1, this.field_g.d(3), this.field_g.e(9648), 4);
+        this.field_q.a(var2Lifetime1, this.field_g.getX(3), this.field_g.getY(9648), 4);
         if (this.field_r <= 0) {
           return;
         }
@@ -147,7 +147,7 @@ final class SpawnerBehaviour extends Behaviour {
         super(param0, param1, param2);
         this.field_p = 0;
         try {
-          this.field_o = new mg(param0.field_E, param1);
+          this.field_o = new mg(param0.formatVersion, param1);
           this.field_q = pha.readSpawner(param1, param0, 162);
           this.field_p = param1.readBits((byte) 44, 12);
         } catch (RuntimeException runtimeException) {

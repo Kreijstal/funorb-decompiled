@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gca {
-    static nh field_a;
+    static ToolkitSprite field_a;
     int field_c;
     static String field_l;
     static String[] field_j;

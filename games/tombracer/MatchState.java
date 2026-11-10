@@ -107,7 +107,7 @@ final class MatchState implements dv {
         if (param0) {
           return false;
         }
-        Room var5 = var4.f((byte) -85);
+        Room var5 = var4.getRoom((byte) -85);
         if (var5 == null) {
           return true;
         }
@@ -255,7 +255,7 @@ final class MatchState implements dv {
         if (param0 != 0) {
           this.field_A = -127;
         }
-        return this.players[param1].f((byte) 106);
+        return this.players[param1].getRoom((byte) 106);
     }
 
     final void d(byte param0, int param1) {
@@ -459,7 +459,7 @@ final class MatchState implements dv {
         if (param0 != 1) {
           this.a(21, (byte) 42);
         }
-        return this.players[param1].f((byte) 87).c(-79);
+        return this.players[param1].getRoom((byte) 87).c(-79);
     }
 
     final boolean l(int param0, int param1) {

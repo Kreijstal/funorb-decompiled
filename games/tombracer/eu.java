@@ -3,7 +3,7 @@
  */
 final class eu {
     static String field_b;
-    static nh field_a;
+    static ToolkitSprite field_a;
     private static String field_z;
 
     public static void releaseStatics(int param0) {

@@ -47,7 +47,7 @@ abstract class ob extends IntrusiveNode {
         int var2_intLifetime1;
         int var2_intLifetime2;
         WhiteLightShooterComponent.field_K = su.a(rva.field_v, param0, (byte) 127);
-        Room.field_p = new nh[6][];
+        Room.field_p = new ToolkitSprite[6][];
         if (param1 != 17186) {
           return;
         }
@@ -55,8 +55,8 @@ abstract class ob extends IntrusiveNode {
           for (var2_int = 0; var2_int < 6; var2_int++) {
             Room.field_p[var2_int] = ak.a(param0, eta.field_a[var2_int], -82);
           }
-          ng.field_k = new nh[6];
-          em.field_h = new nh[6];
+          ng.field_k = new ToolkitSprite[6];
+          em.field_h = new ToolkitSprite[6];
           for (var2_intLifetime1 = 0; var2_intLifetime1 < 6; var2_intLifetime1++) {
             ng.field_k[var2_intLifetime1] = su.a(lm.field_p[var2_intLifetime1], param0, (byte) -68);
             lm.field_p[var2_intLifetime1].b();
@@ -89,7 +89,7 @@ abstract class ob extends IntrusiveNode {
           pq.field_a = su.a(qh.field_q, param0, (byte) 28);
           uta.field_d = su.a(TimeSwitchBehaviour.field_n, param0, (byte) 127);
           cb.field_i = ak.a(param0, WallCrusherComponent.field_F, -67);
-          qf.field_k = new nh[cb.field_i.length];
+          qf.field_k = new ToolkitSprite[cb.field_i.length];
           for (var2_intLifetime2 = 0; cb.field_i.length > var2_intLifetime2; var2_intLifetime2++) {
             var13 = WallCrusherComponent.field_F[var2_intLifetime2].e();
             var12 = var13;

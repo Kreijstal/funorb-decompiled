@@ -70,15 +70,15 @@ abstract class ofa extends gn {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = TombRacer.field_G ? 1 : 0;
-        bea.b(6 + param2, 35 + param0, this.field_m - 12, this.field_p - 40, 2105376, 0);
+        SoftwareRasterizer.b(6 + param2, 35 + param0, this.field_m - 12, this.field_p - 40, 2105376, 0);
         var4 = 35;
         var5 = 211;
         var6 = 194;
         var7 = 0;
         var8 = param0;
         while (var4 > var7) {
-          if (var8 >= bea.field_h &&
-            var8 < bea.field_k) {
+          if (var8 >= SoftwareRasterizer.field_h &&
+            var8 < SoftwareRasterizer.field_k) {
             var9 = (var6 - var5) * var7 / var4 + var5;
             var10 = 0;
             var11 = this.field_m;
@@ -91,7 +91,7 @@ abstract class ofa extends gn {
                   }
                   var13 = var9 * (-var12 + 462) / 42;
                   var13 = var13 | (var13 << 8 | var13 << 16);
-                  bea.field_l[var10 + param2 + bea.field_g * var8] = var13;
+                  SoftwareRasterizer.field_l[var10 + param2 + SoftwareRasterizer.field_g * var8] = var13;
                 }
                 var10++;
               }
@@ -108,7 +108,7 @@ abstract class ofa extends gn {
                   } else {
                     var15 = var9 * (-var14 + 462) / 42;
                     var15 = var15 | (var15 << 16 | var15 << 8);
-                    bea.field_l[param2 + (var8 * bea.field_g + var11)] = var15;
+                    SoftwareRasterizer.field_l[param2 + (var8 * SoftwareRasterizer.field_g + var11)] = var15;
                   }
                   var13Lifetime1++;
                   var11++;
@@ -119,7 +119,7 @@ abstract class ofa extends gn {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 8 | var9 << 16);
-            bea.c(var10 + param2, var8, -var10 + var11, var9);
+            SoftwareRasterizer.drawHorizontalLine(var10 + param2, var8, -var10 + var11, var9);
           }
           var8++;
           var7++;
@@ -132,8 +132,8 @@ abstract class ofa extends gn {
         while (var4Lifetime1 > var7Lifetime1) {
           var9Lifetime1 = var7Lifetime1 * (-var5Lifetime1 + var6Lifetime1) / var4Lifetime1 + var5Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 8 | var9Lifetime1 << 16);
-          bea.c(param2, var8Lifetime1, 6, var9Lifetime1);
-          bea.c(param2 + this.field_m - 6, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(param2, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(param2 + this.field_m - 6, var8Lifetime1, 6, var9Lifetime1);
           var7Lifetime1++;
           var8Lifetime1++;
         }
@@ -151,8 +151,8 @@ abstract class ofa extends gn {
         while (var4Lifetime2 > var7Lifetime2) {
           var9Lifetime2 = var7Lifetime2 * (var6Lifetime2 - var5Lifetime2) / var4Lifetime2 + var5Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 8 | var9Lifetime2 << 16);
-          bea.c(param2, var8Lifetime2, 6, var9Lifetime2);
-          bea.c(param2 + this.field_m - 6, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(param2, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(param2 + this.field_m - 6, var8Lifetime2, 6, var9Lifetime2);
           var8Lifetime2++;
           var7Lifetime2++;
         }

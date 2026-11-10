@@ -5,11 +5,11 @@ final class ng {
     Sprite[] field_i;
     private int field_j;
     private int field_a;
-    static nh[] field_b;
+    static ToolkitSprite[] field_b;
     private int field_d;
     Sprite field_c;
     private int field_l;
-    static nh[] field_k;
+    static ToolkitSprite[] field_k;
     private boolean field_g;
     static String field_e;
     private int field_h;
@@ -80,7 +80,7 @@ final class ng {
     }
 
     final void a(int param0, int param1, vga param2, int param3, ae param4) {
-        il stackIn_20_0;
+        BitmapFont stackIn_20_0;
         String stackIn_20_1;
         int stackIn_20_2;
         int stackIn_20_3;
@@ -124,7 +124,7 @@ final class ng {
             this.field_c.b(var6_int, var7);
           }
           if (param0 > -31) {
-            field_b = (nh[]) null;
+            field_b = (ToolkitSprite[]) null;
           }
           var6 = param2.d(-4, param4);
           if (var6 != null &&
@@ -158,7 +158,7 @@ final class ng {
             } else {
               stackIn_27_8 = 256;
             }
-            ((il) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param2.field_l, param2.field_a, param2.field_f);
+            ((BitmapFont) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param2.field_l, param2.field_a, param2.field_f);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

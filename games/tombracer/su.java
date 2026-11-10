@@ -11,7 +11,7 @@ final class su {
 
     final static void a(kb param0, byte param1, int param2) {
         try {
-          nn.field_a.b((byte) -99, param0);
+          nn.field_a.addLast((byte) -99, param0);
           mca.a(param0, param1 ^ -108, param2);
           if (param1 != -108) {
             kb var4 = (kb) null;
@@ -22,10 +22,10 @@ final class su {
         }
     }
 
-    final static nh a(jpa param0, GraphicsToolkit param1, byte param2) {
+    final static ToolkitSprite a(jpa param0, GraphicsToolkit param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        nh stackIn_4_0 = null;
+        ToolkitSprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;

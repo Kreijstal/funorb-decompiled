@@ -177,7 +177,7 @@ final class RotaterMountComponent extends kna {
               var10 = var12;
               var6 = var10;
               if (var3 == 1) {
-                kr.a(var12, var5_int, param0, var4, 9);
+                Bzip2Decompressor.a(var12, var5_int, param0, var4, 9);
               } else {
                 var7 = sma.field_e;
                 synchronized (var7) {

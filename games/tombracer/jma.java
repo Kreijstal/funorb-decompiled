@@ -459,8 +459,8 @@ final class jma implements noa {
         this.field_p = false;
         this.field_m = true;
         try {
-          this.field_d = new koa(param0, 0, param1.field_E, param2);
-          if (param1.field_E > 9) {
+          this.field_d = new koa(param0, 0, param1.formatVersion, param2);
+          if (param1.formatVersion > 9) {
             this.field_e = param2.readBits((byte) 44, 8);
             this.field_k = param2.readBits((byte) 44, 8);
             this.field_i = param2.readBits((byte) 44, 8);

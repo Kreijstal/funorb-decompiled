@@ -7,7 +7,7 @@ final class cj implements isa {
     static String field_e;
     private int field_f;
     private int field_h;
-    private il field_b;
+    private BitmapFont field_b;
     private int field_c;
     private int field_g;
 
@@ -42,7 +42,7 @@ final class cj implements isa {
           var2_long = bva.b((byte) -107);
           if (WallCrusherComponent.field_H != 0 &&
             GameKeyHandler.field_b < 0) {
-            var4_ref_rha = (rha) (vn.field_a.f(-80));
+            var4_ref_rha = (rha) (vn.field_a.first(-80));
             if (var4_ref_rha != null &&
               var2_long > var4_ref_rha.field_f) {
               var4_ref_rha.unlink(115);
@@ -90,7 +90,7 @@ final class cj implements isa {
             for (var6 = 0; var6 < uca.field_d; var6++) {
               var5.field_g[var6] = vc.field_q.payload[var6];
             }
-            vn.field_a.b((byte) -98, var5);
+            vn.field_a.addLast((byte) -98, var5);
             GameKeyHandler.field_b = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -130,16 +130,16 @@ final class cj implements isa {
           var12 = (kd) (stackIn_4_0);
           if (var12 != null) {
           }
-          bea.e(param1 + param0.field_i, param3 + param0.field_n, param0.field_m, param0.field_p, this.field_f);
+          SoftwareRasterizer.e(param1 + param0.field_i, param3 + param0.field_n, param0.field_m, param0.field_p, this.field_f);
           var7 = -(var12.field_E * 2) + param0.field_m;
           var8 = param1 + param0.field_i + var12.field_E;
           var9 = param0.field_n + param3 + var12.field_C;
-          bea.a(var8, var9, var8 + var7, var9, this.field_a);
+          SoftwareRasterizer.a(var8, var9, var8 + var7, var9, this.field_a);
           if (param2 != 16777215) {
             return;
           }
           for (var10 = var12.c(-3) - 1; 0 <= var10; var10--) {
-            bea.e(var12.a(var10, (byte) -14) * var7 / var12.b(24857) + var8, var9, this.field_d, this.field_c);
+            SoftwareRasterizer.e(var12.a(var10, (byte) -14) * var7 / var12.b(24857) + var8, var9, this.field_d, this.field_c);
           }
           if (this.field_b != null) {
             this.field_b.a(var12.field_o, var7 / 2 + var8, var12.field_C + var9 + this.field_b.field_m, this.field_g, this.field_h);
@@ -159,7 +159,7 @@ final class cj implements isa {
         }
     }
 
-    cj(il param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    cj(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_f = param4;
           this.field_d = param5;

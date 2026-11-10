@@ -7,7 +7,7 @@ final class dp extends vw {
     private qca field_k;
     private boolean field_h;
     static wm field_j;
-    static nh field_d;
+    static ToolkitSprite field_d;
     static jea field_i;
     static su field_g;
 

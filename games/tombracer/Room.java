@@ -1,26 +1,26 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class Room implements ew, fo, noa {
-    int field_E;
+final class Room implements ew, Renderable, noa {
+    int formatVersion;
     static AsyncRequest field_R;
     private int id;
-    private PlayerSimulation field_h;
+    private PlayerSimulation simulation;
     private int field_e;
-    private int field_v;
+    private int width;
     static String[] field_m;
     static kia field_k;
     private int field_C;
     private int courseIndex;
     private IntrusiveDeque field_d;
-    private int field_w;
-    static nh field_j;
-    static nh[][] field_p;
-    private IntrusiveDeque field_i;
-    private IntrusiveDeque field_z;
+    private int height;
+    static ToolkitSprite field_j;
+    static ToolkitSprite[][] field_p;
+    private IntrusiveDeque traps;
+    private IntrusiveDeque components;
     private IsaacCipher field_t;
     private uw field_S;
-    private int field_n;
+    private int randomSeed;
     int field_a;
     private IntrusiveDeque field_l;
     private pta field_s;
@@ -31,17 +31,17 @@ final class Room implements ew, fo, noa {
     private te field_D;
     private tqa field_B;
     private int field_r;
-    private BitPacketBuffer field_K;
+    private BitPacketBuffer data;
     private ui field_y;
     private bba field_U;
     private int field_I;
     private boolean field_T;
     private ui field_q;
     private ffa field_o;
-    private int field_Q;
+    private int entranceX;
     private fq field_P;
     private int[] field_b;
-    private int field_L;
+    private int entranceY;
     private ts field_g;
     private int field_M;
     private int field_J;
@@ -54,7 +54,7 @@ final class Room implements ew, fo, noa {
         return (mda) (this.field_f.a(-2698, param1, param2, this.field_S, param3));
     }
 
-    final int a(int param0, int param1, gma param2, int param3, int param4, byte param5) {
+    final int a(int param0, int param1, WorldBody param2, int param3, int param4, byte param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -90,10 +90,10 @@ final class Room implements ew, fo, noa {
         return this.field_U;
     }
 
-    private final int a(int param0, int param1, gma param2, int param3, ffa[] param4, int param5, int param6) {
+    private final int a(int param0, int param1, WorldBody param2, int param3, ffa[] param4, int param5, int param6) {
         int stackIn_13_0 = 0;
         ffa stackIn_19_0 = null;
-        gma stackIn_19_1 = null;
+        WorldBody stackIn_19_1 = null;
         int stackIn_28_0 = 0;
         int stackIn_30_0 = 0;
         RuntimeException stackIn_33_0 = null;
@@ -144,7 +144,7 @@ final class Room implements ew, fo, noa {
           for (var12Lifetime1 = 0; param4.length > var12Lifetime1; var12Lifetime1++) {
             var13Lifetime1 = param4[var12Lifetime1];
             stackIn_19_0 = var13Lifetime1;
-            stackIn_19_1 = (gma) (param2);
+            stackIn_19_1 = (WorldBody) (param2);
             if (stackIn_19_0 != stackIn_19_1) {
               var9Lifetime1 = var13Lifetime1.a(true, param5, param0, param3, 1, param6);
               if (var9Lifetime1 > var8_intLifetime1) {
@@ -194,7 +194,7 @@ final class Room implements ew, fo, noa {
         if (param1 < var6) {
           return false;
         }
-        var7 = this.a(var6, var6, (gma) null, param4, param3, (byte) -128);
+        var7 = this.a(var6, var6, (WorldBody) null, param4, param3, (byte) -128);
         if (1 == var7) {
           return false;
         }
@@ -206,7 +206,7 @@ final class Room implements ew, fo, noa {
         while (var9 != null) {
           if (~var9.r(-70) == ~param2) {
             var10 = var9.t(param0 ^ 30096);
-            if (io.a(var6, var9.e(9648), (byte) -78, var6, var9.d(3), param3, var10, var10, param4)) {
+            if (io.a(var6, var9.getY(9648), (byte) -78, var6, var9.getX(3), param3, var10, var10, param4)) {
               var9.h((byte) -1);
               return true;
             }
@@ -214,7 +214,7 @@ final class Room implements ew, fo, noa {
           var9 = (mda) (var8.a(param0 ^ -30098));
         }
         if (param2 == 1 &&
-          this.a((ffa) null, param1 * 2, 2, 1, param3, param4, false, (gma) null, 2 * param1)) {
+          this.a((ffa) null, param1 * 2, 2, 1, param3, param4, false, (WorldBody) null, 2 * param1)) {
           return false;
         }
         var12 = this.b(94, param3, 0, param4);
@@ -239,14 +239,14 @@ final class Room implements ew, fo, noa {
 
     final int v(int param0) {
         if (param0 != 0) {
-          this.field_h = (PlayerSimulation) null;
+          this.simulation = (PlayerSimulation) null;
         }
         return this.field_M;
     }
 
-    final int s(int param0) {
+    final int getHeight(int param0) {
         int var2 = -114 / ((param0 + 42) / 61);
-        return this.field_w;
+        return this.height;
     }
 
     final dj b(boolean param0) {
@@ -278,7 +278,7 @@ final class Room implements ew, fo, noa {
             this.v(-75);
           }
           if (param0.n((byte) 121)) {
-            this.field_i.b((byte) -94, param0);
+            this.traps.addLast((byte) -94, param0);
             param0.F(param1 + 82);
             param0.x((byte) -60);
           }
@@ -302,7 +302,7 @@ final class Room implements ew, fo, noa {
         if (-1 == param1) {
           return;
         }
-        Trap var3 = (Trap) (this.field_i.f(-80));
+        Trap var3 = (Trap) (this.traps.first(-80));
         while (var3 != null) {
           if (!var3.a(param1, 31749)) {
             this.a(var3, 2);
@@ -310,31 +310,31 @@ final class Room implements ew, fo, noa {
           } else {
             var3.d(param1, (byte) -55);
           }
-          var3 = (Trap) (this.field_i.e(115));
+          var3 = (Trap) (this.traps.next(115));
         }
-        db var5 = (db) (this.field_d.f(-80));
+        db var5 = (db) (this.field_d.first(-80));
         while (var5 != null) {
           if (!var5.b(param1, 1569)) {
             this.a(var5, -26755);
             var5.m(0);
           }
-          var5 = (db) (this.field_d.e(108));
+          var5 = (db) (this.field_d.next(108));
         }
         if (null != this.field_B) {
           this.field_B.a(param1, (byte) -33);
         }
         if (param0 >= -4) {
-          this.k(7);
+          this.resetEntrance(7);
         }
-        Trap var6 = (Trap) (this.field_i.f(-80));
+        Trap var6 = (Trap) (this.traps.first(-80));
         while (var6 != null) {
           var6.A(23645);
-          var6 = (Trap) (this.field_i.e(125));
+          var6 = (Trap) (this.traps.next(125));
         }
-        db var7 = (db) (this.field_d.f(-80));
+        db var7 = (db) (this.field_d.first(-80));
         while (var7 != null) {
           var7.c(true);
-          var7 = (db) (this.field_d.e(114));
+          var7 = (db) (this.field_d.next(114));
         }
     }
 
@@ -358,12 +358,12 @@ final class Room implements ew, fo, noa {
 
     final boolean a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
         if (param1 != 131072) {
-          field_p = (nh[][]) null;
+          field_p = (ToolkitSprite[][]) null;
         }
         if (!param5) {
-          return io.a(this.field_v, param4, (byte) -123, this.field_w, param0, this.field_w / 2, param3, param2, this.field_v / 2);
+          return io.a(this.width, param4, (byte) -123, this.height, param0, this.height / 2, param3, param2, this.width / 2);
         }
-        return ck.a(param0, param3, this.field_v / 2, this.field_v, this.field_w, param4, (byte) 125, this.field_w / 2, param2);
+        return ck.a(param0, param3, this.width / 2, this.width, this.height, param4, (byte) 125, this.height / 2, param2);
     }
 
     final void i(byte param0) {
@@ -378,35 +378,35 @@ final class Room implements ew, fo, noa {
           sqa var3 = (sqa) null;
           this.a(15, (sqa) null);
         }
-        return this.a(-1553494544).m(param0 + 9263);
+        return this.getSimulation(-1553494544).m(param0 + 9263);
     }
 
     final void b(int param0, boolean param1) {
         int var4 = TombRacer.field_G ? 1 : 0;
         this.field_B.f((byte) 64);
-        Trap var6 = (Trap) (this.field_i.f(param0 - 87));
+        Trap var6 = (Trap) (this.traps.first(param0 - 87));
         while (var6 != null) {
           var6.a(this, false);
-          var6 = (Trap) (this.field_i.e(115));
+          var6 = (Trap) (this.traps.next(115));
         }
-        db var7 = (db) (this.field_d.f(-80));
+        db var7 = (db) (this.field_d.first(-80));
         while (var7 != null) {
           var7.a(-76, this);
-          var7 = (db) (this.field_d.e(122));
+          var7 = (db) (this.field_d.next(122));
         }
-        RoomComponent var8 = (RoomComponent) (this.field_z.f(-80));
+        RoomComponent var8 = (RoomComponent) (this.components.first(-80));
         while (var8 != null) {
           var8.a(this, 1);
-          var8 = (RoomComponent) (this.field_z.e(126));
+          var8 = (RoomComponent) (this.components.next(126));
         }
         if (param0 != 7) {
-          gma var5 = (gma) null;
-          this.a(-11, 100, 116, 16, 41, 79, (gma) null);
+          WorldBody var5 = (WorldBody) null;
+          this.a(-11, 100, 116, 16, 41, 79, (WorldBody) null);
         }
-        this.field_Q = this.a(this.field_Q, (byte) 71);
+        this.entranceX = this.a(this.entranceX, (byte) 71);
         if (param1) {
-          if (this.field_h.a((byte) -3) == this) {
-            this.u(-9).q((byte) -57);
+          if (this.simulation.a((byte) -3) == this) {
+            this.getPlayer(-9).q((byte) -57);
           }
           this.field_D.a(this, -110);
           this.field_s.a(121);
@@ -422,19 +422,19 @@ final class Room implements ew, fo, noa {
         return this.field_H;
     }
 
-    private final void k(int param0) {
+    private final void resetEntrance(int param0) {
         if (param0 <= 98) {
           this.field_J = 98;
         }
-        this.field_Q = this.field_v / 2;
-        this.field_L = this.field_w - 6291456;
+        this.entranceX = this.width / 2;
+        this.entranceY = this.height - 6291456;
     }
 
     final boolean k(byte param0) {
         if (param0 != 53) {
           this.b(31, 62, -43, -109, -2);
         }
-        return this.a(-1553494544).g(110);
+        return this.getSimulation(-1553494544).g(110);
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -461,22 +461,22 @@ final class Room implements ew, fo, noa {
         return this.field_P.a(-25584);
     }
 
-    private final void a(boolean param0, byte param1) {
+    private final void reset(boolean param0, byte param1) {
         PlayerSimulation var4;
         this.field_H = null;
         this.field_t = null;
-        this.field_d.d(8);
+        this.field_d.clear(8);
         if (param1 <= 95) {
           Room.l(-107);
         }
-        this.field_i.d(8);
-        this.field_z.d(8);
+        this.traps.clear(8);
+        this.components.clear(8);
         if (this.field_G != null) {
           this.field_G.a((byte) -127);
         }
         if (param0) {
-          this.field_t = new IsaacCipher(new int[]{this.field_n});
-          this.field_H = new IsaacCipher(new int[]{this.field_n});
+          this.field_t = new IsaacCipher(new int[]{this.randomSeed});
+          this.field_H = new IsaacCipher(new int[]{this.randomSeed});
           this.field_u = new npa(false, 16);
           this.field_c = new pta(this, new hr(), 100);
           this.field_s = new pta(this, new Projectile(), 25);
@@ -491,7 +491,7 @@ final class Room implements ew, fo, noa {
           this.field_r = 0;
         }
         this.field_D.a(-10430);
-        var4 = this.a(-1553494544);
+        var4 = this.getSimulation(-1553494544);
         if (var4 != null) {
           var4.a(this, -9774);
         }
@@ -501,7 +501,7 @@ final class Room implements ew, fo, noa {
         this.field_g.b((byte) 100);
     }
 
-    final boolean a(boolean param0, int param1, gma param2, int param3) {
+    final boolean a(boolean param0, int param1, WorldBody param2, int param3) {
         RuntimeException var5 = null;
         Effect var6 = null;
         boolean stackIn_5_0 = false;
@@ -533,19 +533,19 @@ final class Room implements ew, fo, noa {
     private final void m(int param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
         this.field_y.a((byte) 97);
-        Trap var2 = (Trap) (this.field_i.f(-80));
+        Trap var2 = (Trap) (this.traps.first(-80));
         if (param0 != 9) {
           this.d(-36);
         }
         while (var2 != null) {
           var2.a(true, false, this.field_y, new ui());
-          var2 = (Trap) (this.field_i.e(113));
+          var2 = (Trap) (this.traps.next(113));
         }
         this.field_q.a((byte) 74);
-        RoomComponent var2_ref = (RoomComponent) (this.field_z.f(param0 ^ -71));
+        RoomComponent var2_ref = (RoomComponent) (this.components.first(param0 ^ -71));
         while (var2_ref != null) {
           var2_ref.a(false, 6, this.field_q, new ui());
-          var2_ref = (RoomComponent) (this.field_z.e(108));
+          var2_ref = (RoomComponent) (this.components.next(108));
         }
     }
 
@@ -599,7 +599,7 @@ final class Room implements ew, fo, noa {
         }
     }
 
-    final boolean a(int param0, pc param1, gma param2, byte param3) {
+    final boolean a(int param0, pc param1, WorldBody param2, byte param3) {
         int var8 = 0;
         int var5_int = 0;
         ffa[] var6 = null;
@@ -663,7 +663,7 @@ final class Room implements ew, fo, noa {
         if (param0 != 28672) {
           this.toString();
         }
-        var4 = new uja(this.field_i);
+        var4 = new uja(this.traps);
         var5 = (Trap) (var4.a(true));
         while (var5 != null) {
           var6 = var5.a(false, param1, (byte) -26);
@@ -699,7 +699,7 @@ final class Room implements ew, fo, noa {
         eha var3_ref;
         RoomComponent var4;
         int var5;
-        gma var6;
+        WorldBody var6;
         Player var7;
         uw var8;
         RoomComponent var4Lifetime1;
@@ -711,33 +711,33 @@ final class Room implements ew, fo, noa {
             var8 = this.field_S;
             var3 = var8;
             this.field_S = null;
-            var4 = (RoomComponent) (this.field_z.f(-80));
+            var4 = (RoomComponent) (this.components.first(-80));
             while (var4 != null) {
               var4.a(false, true, this, 0, 0, 1, (Trap) null);
-              var4 = (RoomComponent) (this.field_z.e(123));
+              var4 = (RoomComponent) (this.components.next(123));
             }
-            var4Lifetime1 = (RoomComponent) (this.field_z.f(-80));
+            var4Lifetime1 = (RoomComponent) (this.components.first(-80));
             while (var4Lifetime1 != null) {
               var4Lifetime1.a(true, 1);
-              var4Lifetime1 = (RoomComponent) (this.field_z.e(115));
+              var4Lifetime1 = (RoomComponent) (this.components.next(115));
             }
-            this.field_z.d(8);
+            this.components.clear(8);
             this.b((byte) -12, 1);
             this.field_S = var8;
           }
-          var3_ref = this.a(-1553494544).m(9262);
+          var3_ref = this.getSimulation(-1553494544).m(9262);
           if (var3_ref != null) {
-            var3_ref.a(-2, this.u(-18), this);
+            var3_ref.a(-2, this.getPlayer(-18), this);
           }
         }
-        var7 = this.u(-22);
-        var7.a(this, this.field_Q, this.field_L, true);
+        var7 = this.getPlayer(-22);
+        var7.a(this, this.entranceX, this.entranceY, true);
         var7.a(-127, param1);
         if (param0 >= -80) {
-          var6 = (gma) null;
-          this.a(94, 108, 82, 71, 28, 102, (gma) null);
+          var6 = (WorldBody) null;
+          this.a(94, 108, 82, 71, 28, 102, (WorldBody) null);
         }
-        this.field_u.b(this.u(-107), 7073);
+        this.field_u.b(this.getPlayer(-107), 7073);
         if (this.field_S != null) {
           this.h(-106);
         }
@@ -760,30 +760,30 @@ final class Room implements ew, fo, noa {
           this.field_C = 71;
         }
         if (this.o((byte) -82)) {
-          var2.a(-128, (byte) -3, (this.field_w >> 16) + 128, -128, (this.field_v >> 16) + 128);
+          var2.a(-128, (byte) -3, (this.height >> 16) + 128, -128, (this.width >> 16) + 128);
         } else {
           var3 = 192;
-          var2.a(var3, (byte) -3, (this.field_w >> 16) - var3, var3, -var3 + (this.field_v >> 16));
+          var2.a(var3, (byte) -3, (this.height >> 16) - var3, var3, -var3 + (this.width >> 16));
         }
-        this.u(-12).a(25, this.field_S);
+        this.getPlayer(-12).a(25, this.field_S);
         this.field_D.a(this.field_S, -28255);
         this.field_s.a(this.field_S, (byte) -89, true, 7);
         this.field_c.a(this.field_S, (byte) 126, true, 7);
         this.field_f.a(this.field_S, (byte) -33, false, 6);
-        var5 = (Trap) (this.field_i.f(-80));
+        var5 = (Trap) (this.traps.first(-80));
         while (var5 != null) {
           var5.a(122, this.field_S);
-          var5 = (Trap) (this.field_i.e(107));
+          var5 = (Trap) (this.traps.next(107));
         }
-        var6 = (db) (this.field_d.f(-80));
+        var6 = (db) (this.field_d.first(-80));
         while (var6 != null) {
           var6.a((byte) 48, this.field_S);
-          var6 = (db) (this.field_d.e(108));
+          var6 = (db) (this.field_d.next(108));
         }
-        var7 = (RoomComponent) (this.field_z.f(-80));
+        var7 = (RoomComponent) (this.components.first(-80));
         while (var7 != null) {
           var7.a(-1704, this.field_S);
-          var7 = (RoomComponent) (this.field_z.e(116));
+          var7 = (RoomComponent) (this.components.next(116));
         }
         dea.field_a.a(121, this);
         this.field_B.a(this.field_S, 0);
@@ -798,12 +798,12 @@ final class Room implements ew, fo, noa {
         System.out.println("Projectiles: ");
         this.field_s.a(false);
         if (!param0) {
-          gma var3 = (gma) null;
-          this.a(2, (pc) null, (gma) null, (byte) 52);
+          WorldBody var3 = (WorldBody) null;
+          this.a(2, (pc) null, (WorldBody) null, (byte) 52);
         }
     }
 
-    public final void a(int param0, iq param1) {
+    public final void render(int param0, iq param1) {
         try {
           if (param0 <= 103) {
             this.o((byte) 66);
@@ -844,8 +844,8 @@ final class Room implements ew, fo, noa {
 
     final int a(byte param0) {
         if (param0 != 107) {
-          gma var3 = (gma) null;
-          this.a(33, (gma) null);
+          WorldBody var3 = (WorldBody) null;
+          this.a(33, (WorldBody) null);
         }
         return this.field_r;
     }
@@ -857,11 +857,11 @@ final class Room implements ew, fo, noa {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          this.b(-1, param0.a((byte) 55), param0.c(-101), param0.e(9648), -124, param0.d(param1 ^ -26754), 0);
+          this.b(-1, param0.getHeight((byte) 55), param0.getWidth(-101), param0.getY(9648), -124, param0.getX(param1 ^ -26754), 0);
           param0.unlink(112);
           this.field_u.a((ffa) (param0), (byte) 118);
           if (param1 != -26755) {
-            this.field_z = (IntrusiveDeque) null;
+            this.components = (IntrusiveDeque) null;
           }
           if (null != this.field_S) {
             param0.a(this.field_S, (byte) 105);
@@ -895,14 +895,14 @@ final class Room implements ew, fo, noa {
         }
     }
 
-    public final int c(byte param0) {
+    public final int getRenderY(byte param0) {
         if (param0 < 91) {
           return 63;
         }
-        return this.field_w / 2;
+        return this.height / 2;
     }
 
-    public final int e(byte param0) {
+    public final int getRenderZ(byte param0) {
         if (param0 >= -86) {
           this.a(121, 21, 23, -88, -121, true);
           return 0;
@@ -936,11 +936,11 @@ final class Room implements ew, fo, noa {
         return var8;
     }
 
-    final Trap[] n(int param0) {
+    final Trap[] getAllTraps(int param0) {
         if (param0 != 16) {
           return (Trap[]) null;
         }
-        return this.a(this.field_v, this.field_w / 2, 59, this.field_w, this.field_v / 2);
+        return this.a(this.width, this.height / 2, 59, this.height, this.width / 2);
     }
 
     public static void p(int param0) {
@@ -951,7 +951,7 @@ final class Room implements ew, fo, noa {
         if (param0 != -128) {
           Room.l(-58);
         }
-        field_p = (nh[][]) null;
+        field_p = (ToolkitSprite[][]) null;
     }
 
     final boolean a(int param0, int param1, int param2, int param3, boolean param4, int param5, byte param6) {
@@ -976,7 +976,7 @@ final class Room implements ew, fo, noa {
         return this.field_C;
     }
 
-    final void a(int param0, boolean param1) {
+    final void setCourseIndex(int param0, boolean param1) {
         if (param1) {
           this.a(false, -109, -42, 112, -101, -128);
         }
@@ -991,7 +991,7 @@ final class Room implements ew, fo, noa {
     }
 
     final void g(int param0) {
-        this.a(false, (byte) 123);
+        this.reset(false, (byte) 123);
         this.field_B = null;
         if (param0 <= 43) {
           this.a(-72, -34, 70, 80, true, 64, (byte) -83);
@@ -1050,37 +1050,37 @@ final class Room implements ew, fo, noa {
         int var6Lifetime1;
         int var6Lifetime2;
         var9 = TombRacer.field_G ? 1 : 0;
-        this.a(true, (byte) 123);
-        if (null == this.field_K) {
+        this.reset(true, (byte) 123);
+        if (null == this.data) {
           return;
         }
         var2 = this.field_S;
         this.field_S = null;
         this.field_y.a((byte) -69);
         bca.b((byte) 55);
-        var3 = this.field_K;
+        var3 = this.data;
         var3.position = 0;
         var3.beginBitAccess((byte) -64);
-        this.field_E = var3.readBits((byte) 44, 8);
-        this.field_P = new fq(this.field_E, var3);
-        if (19 >= this.field_E) {
-          this.field_v = var3.readBits((byte) 44, 12) << 16;
-          this.field_w = var3.readBits((byte) 44, 12) << 16;
+        this.formatVersion = var3.readBits((byte) 44, 8);
+        this.field_P = new fq(this.formatVersion, var3);
+        if (19 >= this.formatVersion) {
+          this.width = var3.readBits((byte) 44, 12) << 16;
+          this.height = var3.readBits((byte) 44, 12) << 16;
         } else {
-          if (20 != this.field_E) {
-            this.field_v = 2097152 * var3.readBits((byte) 44, 6);
-            this.field_w = var3.readBits((byte) 44, 6) * 2097152;
+          if (20 != this.formatVersion) {
+            this.width = 2097152 * var3.readBits((byte) 44, 6);
+            this.height = var3.readBits((byte) 44, 6) * 2097152;
           } else {
-            this.field_v = 2097152 * var3.readBits((byte) 44, 8);
-            this.field_w = var3.readBits((byte) 44, 8) * 2097152;
+            this.width = 2097152 * var3.readBits((byte) 44, 8);
+            this.height = var3.readBits((byte) 44, 8) * 2097152;
           }
         }
         this.field_B.a(2097152, this, 4);
-        if (11 > this.field_E) {
-          this.k(109);
+        if (11 > this.formatVersion) {
+          this.resetEntrance(109);
         } else {
-          this.field_Q = var3.readBits((byte) 44, 12) << 16;
-          this.field_L = var3.readBits((byte) 44, 12) << 16;
+          this.entranceX = var3.readBits((byte) 44, 12) << 16;
+          this.entranceY = var3.readBits((byte) 44, 12) << 16;
         }
         var4 = var3.readBits((byte) 44, param0);
         for (var5 = 0; var4 > var5; var5++) {
@@ -1094,7 +1094,7 @@ final class Room implements ew, fo, noa {
           var7_ref_fsa.D((byte) 118);
         }
         this.field_B.a((byte) 25, var3, this);
-        if (this.field_E >= 11) {
+        if (this.formatVersion >= 11) {
           var6Lifetime1 = var3.readBits((byte) 44, 8);
           for (var7 = 0; var6Lifetime1 > var7; var7++) {
             var8 = vha.field_c.readComponent(var3, 55, this);
@@ -1103,46 +1103,46 @@ final class Room implements ew, fo, noa {
             }
           }
         }
-        if (this.field_E == 12) {
+        if (this.formatVersion == 12) {
           for (var6Lifetime2 = 0; 3 > var6Lifetime2; var6Lifetime2++) {
             var3.readBits((byte) 44, 10);
           }
         } else {
-          if (this.field_E >= 13 &&
-            26 > this.field_E) {
+          if (this.formatVersion >= 13 &&
+            26 > this.formatVersion) {
             for (var6Lifetime2 = 0; var6Lifetime2 < 3; var6Lifetime2++) {
               var3.readBits((byte) 44, 8);
             }
           }
         }
-        if (16 <= this.field_E) {
+        if (16 <= this.formatVersion) {
           this.field_A = var3.readBits((byte) 44, 2);
         }
-        if (this.field_E >= 19) {
+        if (this.formatVersion >= 19) {
           this.field_J = var3.readBits((byte) 44, 3);
         }
         var3.endBitAccess((byte) 98);
         this.m(param0 ^ 1);
-        var10 = (Trap) (this.field_i.f(-80));
+        var10 = (Trap) (this.traps.first(-80));
         while (var10 != null) {
           var10.h(true);
           var10.u(0);
-          var10 = (Trap) (this.field_i.e(115));
+          var10 = (Trap) (this.traps.next(115));
         }
-        var11 = (RoomComponent) (this.field_z.f(-80));
+        var11 = (RoomComponent) (this.components.first(-80));
         while (var11 != null) {
           var11.c(true);
-          var11 = (RoomComponent) (this.field_z.e(124));
+          var11 = (RoomComponent) (this.components.next(124));
         }
         var3.position = 0;
-        if (this.field_E != 26) {
-          if (this.field_E <= 19) {
+        if (this.formatVersion != 26) {
+          if (this.formatVersion <= 19) {
             this.b(1, param0 - 28);
           }
-          this.field_E = 26;
+          this.formatVersion = 26;
           var13 = new BitPacketBuffer(30000);
-          this.a(var13, -28426);
-          this.field_K = var13;
+          this.encode(var13, -28426);
+          this.data = var13;
           var13.position = 0;
         }
         if (var2 != null) {
@@ -1154,7 +1154,7 @@ final class Room implements ew, fo, noa {
         return;
     }
 
-    final boolean a(int param0, gma param1, int param2, pc param3, gma param4, Effect param5) {
+    final boolean a(int param0, WorldBody param1, int param2, pc param3, WorldBody param4, Effect param5) {
         int discarded$3 = 0;
         int var7_int = 0;
         RuntimeException var7 = null;
@@ -1213,7 +1213,7 @@ final class Room implements ew, fo, noa {
         }
     }
 
-    final boolean a(ffa param0, int param1, int param2, int param3, int param4, int param5, boolean param6, gma param7, int param8) {
+    final boolean a(ffa param0, int param1, int param2, int param3, int param4, int param5, boolean param6, WorldBody param7, int param8) {
         int var11 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -1243,7 +1243,7 @@ final class Room implements ew, fo, noa {
               var12.a(param1, param7, 85, param8, param4, param0, param5, param3)) {
               if ((param7 != null &&
                 param6) &&
-                (decompiledFrameRemainder0 = !(var12.a(param7.a((byte) 55), param7, 107, param7.c(-48), param7.k(-21185), param0, param7.i(103), param3)))) {
+                (decompiledFrameRemainder0 = !(var12.a(param7.getHeight((byte) 55), param7, 107, param7.getWidth(-48), param7.getPreviousY(-21185), param0, param7.getPreviousX(103), param3)))) {
                 return true;
               }
               if (decompiledFrameRemainder0) {
@@ -1279,12 +1279,12 @@ final class Room implements ew, fo, noa {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          this.field_d.b((byte) -74, param0);
+          this.field_d.addLast((byte) -74, param0);
           this.field_u.b(param0, 7073);
           if (null != this.field_S) {
             param0.a((byte) 85, this.field_S);
           }
-          this.a(0, -1, param0.d(3), param0.e(9648), param0.c(-69), param0.a((byte) 55), 126);
+          this.a(0, -1, param0.getX(3), param0.getY(9648), param0.getWidth(-69), param0.getHeight((byte) 55), 126);
           if (!param1) {
             this.a(30, 106, -59, -125, (byte) -34);
           }
@@ -1326,7 +1326,7 @@ final class Room implements ew, fo, noa {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          this.field_z.b((byte) -88, param0);
+          this.components.addLast((byte) -88, param0);
           if (null != this.field_S) {
             param0.a(param1 - 33556136, this.field_S);
           }
@@ -1360,7 +1360,7 @@ final class Room implements ew, fo, noa {
         this.a((byte) -125, false);
     }
 
-    final int a(int param0, gma param1) {
+    final int a(int param0, WorldBody param1) {
         int var11 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -1381,12 +1381,12 @@ final class Room implements ew, fo, noa {
         var13 = TombRacer.field_G ? 1 : 0;
         try {
           if (param0 != 0) {
-            this.e((byte) 46);
+            this.getRenderZ((byte) 46);
           }
-          var3_int = param1.d(param0 ^ 3);
-          var4 = param1.e(9648);
-          var5 = param1.c(param0 ^ -38);
-          var6 = param1.a((byte) 55);
+          var3_int = param1.getX(param0 ^ 3);
+          var4 = param1.getY(9648);
+          var5 = param1.getWidth(param0 ^ -38);
+          var6 = param1.getHeight((byte) 55);
           var7 = this.field_u.b(var4, param0 - 1, var3_int, var5, var6);
           var8 = this.a(var4, 32238, param1, var3_int, var7, var5, var6);
           var9 = this.field_o;
@@ -1420,7 +1420,7 @@ final class Room implements ew, fo, noa {
           return;
         }
         if (param0) {
-          this.field_Q = 15;
+          this.entranceX = 15;
         }
         this.field_S.c(0);
         this.field_S.b(1909106792);
@@ -1440,8 +1440,8 @@ final class Room implements ew, fo, noa {
         int var3;
         boolean stackIn_4_0 = false;
         var3 = 23 / ((param0 - 24) / 33);
-        var2 = this.u(-86);
-        stackIn_4_0 = (this == var2.f((byte) 64)) && (var2.e(9648) <= 12582912);
+        var2 = this.getPlayer(-86);
+        stackIn_4_0 = (this == var2.getRoom((byte) 64)) && (var2.getY(9648) <= 12582912);
         return stackIn_4_0;
     }
 
@@ -1486,11 +1486,11 @@ final class Room implements ew, fo, noa {
         }
     }
 
-    final PlayerSimulation a(int param0) {
+    final PlayerSimulation getSimulation(int param0) {
         if (param0 != -1553494544) {
           field_k = (kia) null;
         }
-        return this.field_h;
+        return this.simulation;
     }
 
     final void d(int param0, int param1) {
@@ -1502,25 +1502,25 @@ final class Room implements ew, fo, noa {
         Player var8;
         uja var9;
         var6 = TombRacer.field_G ? 1 : 0;
-        var8 = this.u(-62);
+        var8 = this.getPlayer(-62);
         if (var8 == null) {
           return;
         }
         var8.d(5, param0);
-        if (this != var8.f((byte) -83)) {
+        if (this != var8.getRoom((byte) -83)) {
           return;
         }
-        if (!this.a(param1 - 1553494544).k(-19271)) {
+        if (!this.getSimulation(param1 - 1553494544).k(-19271)) {
           return;
         }
         this.field_a = 6029;
         this.field_a = var8.e(this.field_a, -40);
-        var4 = (db) (this.field_d.f(param1 - 80));
+        var4 = (db) (this.field_d.first(param1 - 80));
         while (var4 != null) {
           var4.s(param1 ^ 0);
-          var4 = (db) (this.field_d.e(120));
+          var4 = (db) (this.field_d.next(120));
         }
-        var9 = new uja(this.field_i);
+        var9 = new uja(this.traps);
         var5_ref_fsa = (Trap) (var9.a(true));
         while (var5_ref_fsa != null) {
           var5_ref_fsa.b(param1 + 106, false);
@@ -1531,7 +1531,7 @@ final class Room implements ew, fo, noa {
           var5_ref_fsa = (Trap) (var9.a(-1));
         }
         this.field_g.c(true);
-        var5 = this.a(-1553494544).g(param1 + 112) ? 1 : 0;
+        var5 = this.getSimulation(-1553494544).g(param1 + 112) ? 1 : 0;
         if (param1 != 0) {
           var7 = (Trap) null;
           this.a((Trap) null, -31);
@@ -1542,7 +1542,7 @@ final class Room implements ew, fo, noa {
         this.field_a = this.field_s.a(this.field_a, -119);
         if (this.field_S != null) {
           this.field_S.d(0);
-          if (this.field_h.f(8, param1 + 10915)) {
+          if (this.simulation.f(8, param1 + 10915)) {
             this.field_S.c(0).a(uca.field_c.a(9, 0) - 4, 0, -4 + uca.field_c.a(9, 0), 26768);
           }
         }
@@ -1565,18 +1565,18 @@ final class Room implements ew, fo, noa {
         return this.field_e;
     }
 
-    final Player u(int param0) {
+    final Player getPlayer(int param0) {
         if (param0 >= 0) {
           this.field_A = -11;
         }
-        return this.a(-1553494544).player;
+        return this.getSimulation(-1553494544).player;
     }
 
-    final int m(byte param0) {
+    final int getWidth(byte param0) {
         if (param0 != -86) {
           this.a(-23, -87, 7, -112, true, -64, (byte) -10);
         }
-        return this.field_v;
+        return this.width;
     }
 
     final void b(boolean param0, int param1, int param2) {
@@ -1592,28 +1592,28 @@ final class Room implements ew, fo, noa {
         if (var3 == 0) {
           return;
         }
-        this.field_Q = this.field_Q + var3;
-        this.field_w = this.field_w + var3 * 2;
-        this.field_v = this.field_v + 2 * var3;
-        this.field_L = this.field_L + var3;
+        this.entranceX = this.entranceX + var3;
+        this.height = this.height + var3 * 2;
+        this.width = this.width + 2 * var3;
+        this.entranceY = this.entranceY + var3;
         this.field_B.b(2097152, 2, var3);
         if (param1 != -20) {
           this.field_b = (int[]) null;
         }
-        Trap var6 = (Trap) (this.field_i.f(-80));
+        Trap var6 = (Trap) (this.traps.first(-80));
         while (var6 != null) {
           var6.o(var3, 81);
-          var6 = (Trap) (this.field_i.e(115));
+          var6 = (Trap) (this.traps.next(115));
         }
-        RoomComponent var7 = (RoomComponent) (this.field_z.f(param1 ^ 92));
+        RoomComponent var7 = (RoomComponent) (this.components.first(param1 ^ 92));
         while (var7 != null) {
           var7.a(var3, true);
-          var7 = (RoomComponent) (this.field_z.e(param1 ^ -104));
+          var7 = (RoomComponent) (this.components.next(param1 ^ -104));
         }
-        db var8 = (db) (this.field_d.f(-80));
+        db var8 = (db) (this.field_d.first(-80));
         while (var8 != null) {
           var8.a(param1 - 105, var3);
-          var8 = (db) (this.field_d.e(108));
+          var8 = (db) (this.field_d.next(108));
         }
     }
 
@@ -1623,7 +1623,7 @@ final class Room implements ew, fo, noa {
           return;
         }
         if (param2 < 104) {
-          field_p = (nh[][]) null;
+          field_p = (ToolkitSprite[][]) null;
         }
         if (var7.b(0) ||
           uca.field_c.a(5, 0) == 0) {
@@ -1635,7 +1635,7 @@ final class Room implements ew, fo, noa {
         if (param1 != 71) {
           return 111;
         }
-        return -param0 - (-(this.field_v / 2) - this.field_v / 2);
+        return -param0 - (-(this.width / 2) - this.width / 2);
     }
 
     final static void l(int param0) {
@@ -1647,7 +1647,7 @@ final class Room implements ew, fo, noa {
         }
     }
 
-    final int a(int param0, int param1, int param2, int param3, int param4, int param5, gma param6) {
+    final int a(int param0, int param1, int param2, int param3, int param4, int param5, WorldBody param6) {
         int var10 = 0;
         ffa[] var8 = null;
         RuntimeException var8_ref = null;
@@ -1694,7 +1694,7 @@ final class Room implements ew, fo, noa {
         return this.field_I;
     }
 
-    private final void a(BitPacketBuffer param0, int param1) {
+    private final void encode(BitPacketBuffer param0, int param1) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -1713,30 +1713,30 @@ final class Room implements ew, fo, noa {
           if (param1 != -28426) {
             this.o((byte) 71);
           }
-          param0.writeBits((byte) 59, this.field_v / 2097152, 6);
-          param0.writeBits((byte) -125, this.field_w / 2097152, 6);
-          param0.writeBits((byte) -126, this.field_Q >> 16, 12);
-          param0.writeBits((byte) -128, this.field_L >> 16, 12);
-          param0.writeBits((byte) -125, this.field_d.a((byte) -16), 8);
-          var5 = (db) (this.field_d.f(-80));
+          param0.writeBits((byte) 59, this.width / 2097152, 6);
+          param0.writeBits((byte) -125, this.height / 2097152, 6);
+          param0.writeBits((byte) -126, this.entranceX >> 16, 12);
+          param0.writeBits((byte) -128, this.entranceY >> 16, 12);
+          param0.writeBits((byte) -125, this.field_d.size((byte) -16), 8);
+          var5 = (db) (this.field_d.first(-80));
           while (var5 != null) {
             var5.a(true, param0);
-            var5 = (db) (this.field_d.e(113));
+            var5 = (db) (this.field_d.next(113));
           }
-          param0.writeBits((byte) 119, this.field_i.a((byte) -16), 8);
-          var6 = (Trap) (this.field_i.f(-80));
+          param0.writeBits((byte) 119, this.traps.size((byte) -16), 8);
+          var6 = (Trap) (this.traps.first(-80));
           while (var6 != null) {
             if (!var6.w((byte) -117)) {
               var6.a(param0, -100);
             }
-            var6 = (Trap) (this.field_i.e(114));
+            var6 = (Trap) (this.traps.next(114));
           }
           this.field_B.a(8, param0);
-          param0.writeBits((byte) 120, this.field_z.a((byte) -16), 8);
-          var7 = (RoomComponent) (this.field_z.f(-80));
+          param0.writeBits((byte) 120, this.components.size((byte) -16), 8);
+          var7 = (RoomComponent) (this.components.first(-80));
           while (var7 != null) {
             vha.field_c.writeComponent(var7, -16097, param0);
-            var7 = (RoomComponent) (this.field_z.e(107));
+            var7 = (RoomComponent) (this.components.next(107));
           }
           param0.writeBits((byte) 102, this.field_A, 2);
           param0.writeBits((byte) 127, this.field_J, 3);
@@ -1806,7 +1806,7 @@ final class Room implements ew, fo, noa {
         var7 = TombRacer.field_G ? 1 : 0;
         try {
           if (param1 != -16164) {
-            this.field_E = 42;
+            this.formatVersion = 42;
           }
           if (param2 == null) {
             stackIn_5_0 = 0;
@@ -1839,7 +1839,7 @@ final class Room implements ew, fo, noa {
         }
     }
 
-    final int a(ffa param0, gma param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    final int a(ffa param0, WorldBody param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         int stackIn_6_0 = 0;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
@@ -1890,7 +1890,7 @@ final class Room implements ew, fo, noa {
                 var14_int = 1;
                 if (param1 == null ||
                   !param12 ||
-                  !var17[var18].a(param1.a((byte) 55), param1, 81, param1.c(-48), param1.k(-21185), param0, param1.i(param5 + 115), param2)) {
+                  !var17[var18].a(param1.getHeight((byte) 55), param1, 81, param1.getWidth(-48), param1.getPreviousY(-21185), param0, param1.getPreviousX(param5 + 115), param2)) {
                   var16 = 1;
                   if (!var17[var18].a((byte) -55, false)) {
                     var15 = 1;
@@ -1972,9 +1972,9 @@ final class Room implements ew, fo, noa {
     final void a(int param0, kua param1) {
         int var4 = TombRacer.field_G ? 1 : 0;
         try {
-          this.field_l.b((byte) -54, param1);
-          while (this.field_l.a((byte) -16) > 10) {
-            this.field_l.c(-99);
+          this.field_l.addLast((byte) -54, param1);
+          while (this.field_l.size((byte) -16) > 10) {
+            this.field_l.removeFirst(-99);
           }
           if (param0 != 8) {
             this.field_b = (int[]) null;
@@ -1985,9 +1985,9 @@ final class Room implements ew, fo, noa {
         }
     }
 
-    public final int b(byte param0) {
+    public final int getRenderX(byte param0) {
         int var2 = 81 / ((-23 - param0) / 53);
-        return this.field_v / 2;
+        return this.width / 2;
     }
 
     final int c(int param0) {
@@ -2004,7 +2004,7 @@ final class Room implements ew, fo, noa {
         if (param2 != 6) {
           this.field_o = (ffa) null;
         }
-        var4 = new uja(this.field_z);
+        var4 = new uja(this.components);
         var5 = (RoomComponent) (var4.a(true));
         while (var5 != null) {
           var6 = var5.a(param1, false, false);
@@ -2026,10 +2026,10 @@ final class Room implements ew, fo, noa {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        this.field_E = 26;
+        this.formatVersion = 26;
         this.field_d = new IntrusiveDeque();
-        this.field_i = new IntrusiveDeque();
-        this.field_z = new IntrusiveDeque();
+        this.traps = new IntrusiveDeque();
+        this.components = new IntrusiveDeque();
         this.field_l = new IntrusiveDeque();
         this.field_D = new te();
         this.field_y = new ui();
@@ -2042,16 +2042,16 @@ final class Room implements ew, fo, noa {
           for (var6_int = 0; this.field_b.length > var6_int; var6_int++) {
             this.field_b[var6_int] = -1;
           }
-          this.field_h = param0;
-          this.field_v = 33554432;
-          this.field_K = param2;
-          this.field_w = 33554432;
+          this.simulation = param0;
+          this.width = 33554432;
+          this.data = param2;
+          this.height = 33554432;
           this.id = param1;
-          this.field_n = param3;
+          this.randomSeed = param3;
           stackIn_7_1 = (param4);
           this.field_T = stackIn_7_1;
           this.field_g = new ts(this);
-          this.a(false, (byte) 113);
+          this.reset(false, (byte) 113);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

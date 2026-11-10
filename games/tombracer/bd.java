@@ -7,7 +7,7 @@ final class bd extends IntrusiveNode {
     int field_k;
     int field_n;
     int field_h;
-    static nh field_i;
+    static ToolkitSprite field_i;
     int[] field_g;
     static String field_j;
     int field_l;
@@ -108,7 +108,7 @@ final class bd extends IntrusiveNode {
     public static void releaseStatics(int param0) {
         field_i = null;
         if (param0 <= 61) {
-          field_i = (nh) null;
+          field_i = (ToolkitSprite) null;
         }
         field_j = null;
     }

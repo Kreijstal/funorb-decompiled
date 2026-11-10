@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dpa implements fo {
+final class dpa implements Renderable {
     int field_i;
     boolean field_g;
     kva field_e;
@@ -13,17 +13,17 @@ final class dpa implements fo {
     int field_d;
     static String field_c;
 
-    public final int e(byte param0) {
+    public final int getRenderZ(byte param0) {
         if (param0 <= -86) {
-          return this.field_e.e((byte) -99) - (this.field_h << 16);
+          return this.field_e.getRenderZ((byte) -99) - (this.field_h << 16);
         }
         dpa.releaseStatics(-37);
-        return this.field_e.e((byte) -99) - (this.field_h << 16);
+        return this.field_e.getRenderZ((byte) -99) - (this.field_h << 16);
     }
 
-    public final int b(byte param0) {
+    public final int getRenderX(byte param0) {
         int var2 = 36 / ((-23 - param0) / 53);
-        return this.field_e.b((byte) 95) + this.field_i;
+        return this.field_e.getRenderX((byte) 95) + this.field_i;
     }
 
     public final boolean d(byte param0) {
@@ -34,11 +34,11 @@ final class dpa implements fo {
         return this.field_e.d((byte) 48);
     }
 
-    public final int c(byte param0) {
+    public final int getRenderY(byte param0) {
         if (param0 < 91) {
           return 115;
         }
-        return this.field_e.c((byte) 125) + this.field_a;
+        return this.field_e.getRenderY((byte) 125) + this.field_a;
     }
 
     public static void releaseStatics(int param0) {
@@ -50,7 +50,7 @@ final class dpa implements fo {
         field_c = null;
     }
 
-    public final void a(int param0, iq param1) {
+    public final void render(int param0, iq param1) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -71,9 +71,9 @@ final class dpa implements fo {
             var4 = this.field_e.a(this, 44);
           }
           var5 = dfa.a(this.field_f, 2048, -54);
-          var6 = this.b((byte) -95);
-          var7 = this.c((byte) 117);
-          var8 = this.e((byte) -106);
+          var6 = this.getRenderX((byte) -95);
+          var7 = this.getRenderY((byte) 117);
+          var8 = this.getRenderZ((byte) -106);
           gqa.a(var5, -83584144, var7, var6, var4, var8);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "dpa.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

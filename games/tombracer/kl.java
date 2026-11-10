@@ -9,7 +9,7 @@ abstract class kl implements wia {
     int field_e;
     private boolean field_d;
     int field_i;
-    static il field_b;
+    static BitmapFont field_b;
     private int field_f;
     OpenGlToolkit field_h;
     static fpa field_a;

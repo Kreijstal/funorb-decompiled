@@ -104,15 +104,15 @@ final class cr {
         RuntimeException var2 = null;
         this.field_c = 0;
         try {
-          this.field_a = new ConsoleToken[param0.a((byte) -16)];
+          this.field_a = new ConsoleToken[param0.size((byte) -16)];
           var2_int = 0;
-          var3 = (ConsoleToken) (param0.f(-80));
+          var3 = (ConsoleToken) (param0.first(-80));
           while (var3 != null) {
             var3.unlink(67);
             incrementValue$2 = var2_int;
             var2_int++;
             this.field_a[incrementValue$2] = var3;
-            var3 = (ConsoleToken) (param0.e(124));
+            var3 = (ConsoleToken) (param0.next(124));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

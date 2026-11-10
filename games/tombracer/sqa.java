@@ -36,7 +36,7 @@ abstract class sqa {
 
     final void a(int param0, fm param1) {
         try {
-          this.field_b.b((byte) -122, param1);
+          this.field_b.addLast((byte) -122, param1);
           if (param0 >= -84) {
             field_a = (String) null;
           }
@@ -103,10 +103,10 @@ abstract class sqa {
     final void c(byte param0) {
         if (param0 < 108) {
           this.c((byte) 15);
-          this.field_b.d(8);
+          this.field_b.clear(8);
           return;
         }
-        this.field_b.d(8);
+        this.field_b.clear(8);
     }
 
     static {

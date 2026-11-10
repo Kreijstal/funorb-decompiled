@@ -4,7 +4,7 @@
 final class rm {
     static mfa field_a;
     static lla field_e;
-    static nh field_c;
+    static ToolkitSprite field_c;
     static ur field_d;
     static String field_b;
     private static String field_z;

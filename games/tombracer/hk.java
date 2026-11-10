@@ -136,7 +136,7 @@ final class hk {
           var22 = null;
           var12 = TombRacer.field_G ? 1 : 0;
           try {
-            var13 = (aj) (al.field_g.f(-80));
+            var13 = (aj) (al.field_g.first(-80));
             var18 = var13;
             if (var18 == null) {
               return;

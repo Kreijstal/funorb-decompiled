@@ -4,7 +4,7 @@
 final class WhiteLightShooterComponent extends ShooterComponent {
     static String field_L;
     static String field_J;
-    static nh field_K;
+    static ToolkitSprite field_K;
 
     final static Room a(int param0, boolean param1, PlayerSimulation param2, int param3, byte param4) {
         Object var5 = null;
@@ -39,7 +39,7 @@ final class WhiteLightShooterComponent extends ShooterComponent {
 
     final boolean v(int param0) {
         if (param0 != 555277520) {
-          field_K = (nh) null;
+          field_K = (ToolkitSprite) null;
           return false;
         }
         return false;

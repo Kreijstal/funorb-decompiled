@@ -164,7 +164,7 @@ final class CircleMovementLocomotor extends Locomotor {
         try {
           this.field_o = param1.readBits((byte) 44, 10) << 16;
           this.field_r = CoinItemComponent.a(true, 12, param1.readBits((byte) 44, 12));
-          if (param0.field_E < 10) {
+          if (param0.formatVersion < 10) {
             this.field_q = oo.a(3, 32768, 0, param1.readBits((byte) 44, 3));
             this.field_t = true;
           } else {
@@ -231,7 +231,7 @@ final class CircleMovementLocomotor extends Locomotor {
             param8.field_J = new IntrusiveDeque();
           }
           uma.field_b = param8.field_J;
-          uma.field_b.d(param2 ^ -59);
+          uma.field_b.clear(param2 ^ -59);
           fua.field_a = new af(param4);
           rda.field_o = 0;
           so.field_K = 0;
@@ -241,13 +241,13 @@ final class CircleMovementLocomotor extends Locomotor {
             param3.field_J = new IntrusiveDeque();
           }
           asa.field_j = param3.field_J;
-          asa.field_j.d(8);
+          asa.field_j.clear(8);
           WhiteLightSensorComponent.field_K = new af(param7);
           if (param0.field_J == null) {
             param0.field_J = new IntrusiveDeque();
           }
           qha.field_g = param0.field_J;
-          qha.field_g.d(8);
+          qha.field_g.clear(8);
           tc.field_d = new af(param1);
           qsa.field_a = param9;
           uq.field_d = 0L;

@@ -190,28 +190,28 @@ final class opa extends qra {
         int var19;
         int var20;
         String var20_ref_String;
-        nh var21;
+        ToolkitSprite var21;
         int var21_int;
         int var22;
         int var23;
         int var24;
-        nh var25;
+        ToolkitSprite var25;
         int var26;
         int var27;
         String var28;
         String var29;
         String var30;
-        nh var31;
+        ToolkitSprite var31;
         String var32;
         String var33;
         String var34;
-        nh var35;
+        ToolkitSprite var35;
         String var36;
         String var37;
-        nh var38;
+        ToolkitSprite var38;
         String var39;
         String var40;
-        nh var41;
+        ToolkitSprite var41;
         int var7Lifetime1;
         int var7Lifetime2;
         int var8Lifetime1;
@@ -260,8 +260,8 @@ final class opa extends qra {
         for (var7Lifetime1 = 0; 3 > var7Lifetime1; var7Lifetime1++) {
           var8Lifetime1 = -30 + (var3 - 50 >> 2) * 3;
           var9 = (var7Lifetime1 + 1) * ((var4 - 0) / 4) + 20;
-          ng.field_b[0].a((float)var8Lifetime1, (float)var9, 4096, 16384, 3, 1610612736, 1);
-          ng.field_b[0].a((float)(var8Lifetime1 + 150), (float)var9, 4096, 16384, 3, 1610612736, 1);
+          ng.field_b[0].drawRotated((float)var8Lifetime1, (float)var9, 4096, 16384, 3, 1610612736, 1);
+          ng.field_b[0].drawRotated((float)(var8Lifetime1 + 150), (float)var9, 4096, 16384, 3, 1610612736, 1);
         }
         var7Lifetime2 = this.field_c.field_E;
         for (var8Lifetime2 = 0; this.field_c.field_k > var8Lifetime2; var8Lifetime2++) {
@@ -401,9 +401,9 @@ final class opa extends qra {
               oka.a(uda.field_o.toUpperCase(), 2431750, eda.field_f, -1, var9Lifetime2, 20 + (50 + var3 >> 1), -1);
             }
           }
-          tga.field_a.KA(0, var9Lifetime2 - 100, (int)(2.0 + this.field_r[var8Lifetime3].field_q), var9Lifetime2 + 50);
+          tga.field_a.setClip(0, var9Lifetime2 - 100, (int)(2.0 + this.field_r[var8Lifetime3].field_q), var9Lifetime2 + 50);
           var10Lifetime1Lifetime1 = wga.field_a[var8Lifetime3];
-          gca.field_a.a(62, 10 + var9Lifetime2 - 95, 0, var10Lifetime1Lifetime1 | -1006632960, 1);
+          gca.field_a.draw(62, 10 + var9Lifetime2 - 95, 0, var10Lifetime1Lifetime1 | -1006632960, 1);
           tga.field_a.la();
           this.field_c.players[var8Lifetime3].n((byte) -42).a(-1, (int)this.field_r[var8Lifetime3].field_q, 1400, 1536, var9Lifetime2);
           oka.a(this.field_c.field_l[var8Lifetime3].toUpperCase(), var10Lifetime1Lifetime1, kn.field_p, -1, var9Lifetime2, (int)this.field_r[var8Lifetime3].field_q, -1);

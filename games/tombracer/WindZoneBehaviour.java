@@ -104,10 +104,10 @@ final class WindZoneBehaviour extends Behaviour {
         hr var24;
         hr var25;
         var23 = TombRacer.field_G ? 1 : 0;
-        var2 = this.field_g.d(3);
-        var3 = this.field_g.e(9648);
-        var4 = this.field_g.c(param0 ^ -5493);
-        var5 = this.field_g.a((byte) 55);
+        var2 = this.field_g.getX(3);
+        var3 = this.field_g.getY(9648);
+        var4 = this.field_g.getWidth(param0 ^ -5493);
+        var5 = this.field_g.getHeight((byte) 55);
         if (param0 != 5418) {
           this.field_q = 90;
         }
@@ -169,24 +169,24 @@ final class WindZoneBehaviour extends Behaviour {
           var18 = var16[var17];
           if (var18 != this.field_g &&
             !this.field_g.a(var18, true)) {
-            var19 = var18.d(3);
-            var20 = var18.e(param0 + 4230);
+            var19 = var18.getX(3);
+            var20 = var18.getY(param0 + 4230);
             if (this.field_g.a((byte) 110, var20, var19, 1, 1)) {
               var22 = this.field_q;
               if (var22 == 0) {
-                var21 = var20 + var18.a((byte) 55) / 2;
+                var21 = var20 + var18.getHeight((byte) 55) / 2;
               } else {
                 switch (var22) {
                   case 2:
-                    var21 = var20 - var18.a((byte) 55) / 2;
+                    var21 = var20 - var18.getHeight((byte) 55) / 2;
                     break;
                   default:
                     return;
                   case 1:
-                    var21 = var19 - var18.c(param0 ^ -5496) / 2;
+                    var21 = var19 - var18.getWidth(param0 ^ -5496) / 2;
                     break;
                   case 3:
-                    var21 = var19 + var18.c(-107) / 2;
+                    var21 = var19 + var18.getWidth(-107) / 2;
                     break;
                 }
               }

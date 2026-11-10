@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nu extends GameFont {
+final class SoftwareAlphaFont extends GameFont {
     private byte[][] field_g;
-    private sfa field_i;
+    private SoftwareGraphicsToolkit field_i;
     private int[] field_h;
     private int[] field_e;
     private int[] field_f;
     private int[] field_d;
 
-    private final void a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final void blitCoverageGlyph(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$11 = 0;
@@ -129,10 +129,10 @@ final class nu extends GameFont {
           var7 <= 0) {
           return;
         }
-        this.a(this.field_g[param0], this.field_i.field_r, param3, var12, var9, var6, var7, var10, var11);
+        this.blitCoverageGlyph(this.field_g[param0], this.field_i.field_r, param3, var12, var9, var6, var7, var10, var11);
     }
 
-    nu(sfa param0, qla param1, jpa[] param2, int[] param3, int[] param4) {
+    SoftwareAlphaFont(SoftwareGraphicsToolkit param0, qla param1, jpa[] param2, int[] param3, int[] param4) {
         super(param0, param1);
         int var6 = 0;
         byte[] array$0 = null;

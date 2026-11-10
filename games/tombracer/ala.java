@@ -205,20 +205,20 @@ final class ala extends dfa {
             var4 = 428 + var3;
             var5 = 67;
             var6 = 309;
-            bea.c(var3, var5, var4 - var3, -var5 + var6, 0, this.field_g >> 1);
+            SoftwareRasterizer.c(var3, var5, var4 - var3, -var5 + var6, 0, this.field_g >> 1);
             if (this.field_g != 256) {
-              bea.c(0, 0, var3, 480, 0, this.field_g);
-              bea.c(var4, 0, -var4 + 640, 480, 0, this.field_g);
-              bea.c(var3, 0, var4 - var3, var5, 0, this.field_g);
-              bea.c(var3, var6, var4 - var3, 480 - var6, 0, this.field_g);
-              bea.c(var3, var5, -var3 + var4, var6 - var5, 0, this.field_g >> 1);
+              SoftwareRasterizer.c(0, 0, var3, 480, 0, this.field_g);
+              SoftwareRasterizer.c(var4, 0, -var4 + 640, 480, 0, this.field_g);
+              SoftwareRasterizer.c(var3, 0, var4 - var3, var5, 0, this.field_g);
+              SoftwareRasterizer.c(var3, var6, var4 - var3, 480 - var6, 0, this.field_g);
+              SoftwareRasterizer.c(var3, var5, -var3 + var4, var6 - var5, 0, this.field_g >> 1);
               return;
             }
-            bea.e(0, 0, var3, 480, 0);
-            bea.e(var4, 0, -var4 + 640, 480, 0);
-            bea.e(var3, 0, var4 - var3, var5, 0);
-            bea.e(var3, var6, var4 - var3, -var6 + 480, 0);
-            bea.c(var3, var5, -var3 + var4, -var5 + var6, 0, 128);
+            SoftwareRasterizer.e(0, 0, var3, 480, 0);
+            SoftwareRasterizer.e(var4, 0, -var4 + 640, 480, 0);
+            SoftwareRasterizer.e(var3, 0, var4 - var3, var5, 0);
+            SoftwareRasterizer.e(var3, var6, var4 - var3, -var6 + 480, 0);
+            SoftwareRasterizer.c(var3, var5, -var3 + var4, -var5 + var6, 0, 128);
             return;
           }
           this.field_g = this.field_g + 16;
@@ -232,20 +232,20 @@ final class ala extends dfa {
             var4Lifetime1 = 428 + var3;
             var5Lifetime1 = 67;
             var6Lifetime1 = 309;
-            bea.c(var3, var5Lifetime1, var4Lifetime1 - var3, -var5Lifetime1 + var6Lifetime1, 0, this.field_g >> 1);
+            SoftwareRasterizer.c(var3, var5Lifetime1, var4Lifetime1 - var3, -var5Lifetime1 + var6Lifetime1, 0, this.field_g >> 1);
             if (this.field_g != 256) {
-              bea.c(0, 0, var3, 480, 0, this.field_g);
-              bea.c(var4Lifetime1, 0, -var4Lifetime1 + 640, 480, 0, this.field_g);
-              bea.c(var3, 0, var4Lifetime1 - var3, var5Lifetime1, 0, this.field_g);
-              bea.c(var3, var6Lifetime1, var4Lifetime1 - var3, 480 - var6Lifetime1, 0, this.field_g);
-              bea.c(var3, var5Lifetime1, -var3 + var4Lifetime1, var6Lifetime1 - var5Lifetime1, 0, this.field_g >> 1);
+              SoftwareRasterizer.c(0, 0, var3, 480, 0, this.field_g);
+              SoftwareRasterizer.c(var4Lifetime1, 0, -var4Lifetime1 + 640, 480, 0, this.field_g);
+              SoftwareRasterizer.c(var3, 0, var4Lifetime1 - var3, var5Lifetime1, 0, this.field_g);
+              SoftwareRasterizer.c(var3, var6Lifetime1, var4Lifetime1 - var3, 480 - var6Lifetime1, 0, this.field_g);
+              SoftwareRasterizer.c(var3, var5Lifetime1, -var3 + var4Lifetime1, var6Lifetime1 - var5Lifetime1, 0, this.field_g >> 1);
               return;
             }
-            bea.e(0, 0, var3, 480, 0);
-            bea.e(var4Lifetime1, 0, -var4Lifetime1 + 640, 480, 0);
-            bea.e(var3, 0, var4Lifetime1 - var3, var5Lifetime1, 0);
-            bea.e(var3, var6Lifetime1, var4Lifetime1 - var3, -var6Lifetime1 + 480, 0);
-            bea.c(var3, var5Lifetime1, -var3 + var4Lifetime1, -var5Lifetime1 + var6Lifetime1, 0, 128);
+            SoftwareRasterizer.e(0, 0, var3, 480, 0);
+            SoftwareRasterizer.e(var4Lifetime1, 0, -var4Lifetime1 + 640, 480, 0);
+            SoftwareRasterizer.e(var3, 0, var4Lifetime1 - var3, var5Lifetime1, 0);
+            SoftwareRasterizer.e(var3, var6Lifetime1, var4Lifetime1 - var3, -var6Lifetime1 + 480, 0);
+            SoftwareRasterizer.c(var3, var5Lifetime1, -var3 + var4Lifetime1, -var5Lifetime1 + var6Lifetime1, 0, 128);
             return;
           }
           this.field_g = this.field_g - 16;
@@ -257,20 +257,20 @@ final class ala extends dfa {
         var4Lifetime2 = 428 + var3;
         var5Lifetime2 = 67;
         var6Lifetime2 = 309;
-        bea.c(var3, var5Lifetime2, var4Lifetime2 - var3, -var5Lifetime2 + var6Lifetime2, 0, this.field_g >> 1);
+        SoftwareRasterizer.c(var3, var5Lifetime2, var4Lifetime2 - var3, -var5Lifetime2 + var6Lifetime2, 0, this.field_g >> 1);
         if (this.field_g != 256) {
-          bea.c(0, 0, var3, 480, 0, this.field_g);
-          bea.c(var4Lifetime2, 0, -var4Lifetime2 + 640, 480, 0, this.field_g);
-          bea.c(var3, 0, var4Lifetime2 - var3, var5Lifetime2, 0, this.field_g);
-          bea.c(var3, var6Lifetime2, var4Lifetime2 - var3, 480 - var6Lifetime2, 0, this.field_g);
-          bea.c(var3, var5Lifetime2, -var3 + var4Lifetime2, var6Lifetime2 - var5Lifetime2, 0, this.field_g >> 1);
+          SoftwareRasterizer.c(0, 0, var3, 480, 0, this.field_g);
+          SoftwareRasterizer.c(var4Lifetime2, 0, -var4Lifetime2 + 640, 480, 0, this.field_g);
+          SoftwareRasterizer.c(var3, 0, var4Lifetime2 - var3, var5Lifetime2, 0, this.field_g);
+          SoftwareRasterizer.c(var3, var6Lifetime2, var4Lifetime2 - var3, 480 - var6Lifetime2, 0, this.field_g);
+          SoftwareRasterizer.c(var3, var5Lifetime2, -var3 + var4Lifetime2, var6Lifetime2 - var5Lifetime2, 0, this.field_g >> 1);
           return;
         }
-        bea.e(0, 0, var3, 480, 0);
-        bea.e(var4Lifetime2, 0, -var4Lifetime2 + 640, 480, 0);
-        bea.e(var3, 0, var4Lifetime2 - var3, var5Lifetime2, 0);
-        bea.e(var3, var6Lifetime2, var4Lifetime2 - var3, -var6Lifetime2 + 480, 0);
-        bea.c(var3, var5Lifetime2, -var3 + var4Lifetime2, -var5Lifetime2 + var6Lifetime2, 0, 128);
+        SoftwareRasterizer.e(0, 0, var3, 480, 0);
+        SoftwareRasterizer.e(var4Lifetime2, 0, -var4Lifetime2 + 640, 480, 0);
+        SoftwareRasterizer.e(var3, 0, var4Lifetime2 - var3, var5Lifetime2, 0);
+        SoftwareRasterizer.e(var3, var6Lifetime2, var4Lifetime2 - var3, -var6Lifetime2 + 480, 0);
+        SoftwareRasterizer.c(var3, var5Lifetime2, -var3 + var4Lifetime2, -var5Lifetime2 + var6Lifetime2, 0, 128);
     }
 
     final static void a(byte param0, String param1, boolean param2, float param3) {
@@ -279,7 +279,7 @@ final class ala extends dfa {
           ej.field_a.c(ena.field_p, 89);
         }
         ena.field_p.a(param3, param1, param2, (byte) 110);
-        bea.a();
+        SoftwareRasterizer.clear();
         if (param0 != -30) {
           return;
         }

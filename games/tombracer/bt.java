@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bt implements fo {
+final class bt implements Renderable {
     private boolean field_g;
     static int field_b;
     oo field_a;
@@ -11,11 +11,11 @@ final class bt implements fo {
     static jea[] field_c;
     static int[] field_h;
 
-    public final int c(byte param0) {
+    public final int getRenderY(byte param0) {
         if (param0 <= 91) {
           return 125;
         }
-        return this.field_a.c((byte) 112) + this.field_e.f(0);
+        return this.field_a.getRenderY((byte) 112) + this.field_e.f(0);
     }
 
     public static void releaseStatics(int param0) {
@@ -26,7 +26,7 @@ final class bt implements fo {
         field_c = null;
     }
 
-    public final void a(int param0, iq param1) {
+    public final void render(int param0, iq param1) {
         int var3_int = 0;
         int var4 = 0;
         ka var5 = null;
@@ -37,7 +37,7 @@ final class bt implements fo {
             bt.a((byte) 44, -55, -63, 37);
           }
           var5 = this.field_d.b((byte) 74);
-          gqa.a(var4, -83584144, this.c((byte) 120), this.b((byte) -89), var5, this.e((byte) -95));
+          gqa.a(var4, -83584144, this.getRenderY((byte) 120), this.getRenderX((byte) -89), var5, this.getRenderZ((byte) -95));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "bt.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -68,24 +68,24 @@ final class bt implements fo {
         this.field_d.a(0);
     }
 
-    public final int b(byte param0) {
+    public final int getRenderX(byte param0) {
         int var2 = -13 / ((-23 - param0) / 53);
-        return this.field_a.b((byte) 101) + this.field_e.a((byte) 84);
+        return this.field_a.getRenderX((byte) 101) + this.field_e.a((byte) 84);
     }
 
     final static int a(byte param0, int param1, int param2, int param3) {
-        if (bea.field_g >= param3 + param1) {
+        if (SoftwareRasterizer.field_g >= param3 + param1) {
           return param3;
         }
         if (param0 != -8) {
           bt.a((byte) 51, -70, 71, 100);
           if (-param1 + param3 + param2 < 0) {
-            return -param1 + bea.field_g;
+            return -param1 + SoftwareRasterizer.field_g;
           }
           return -param1 + param2 + param3;
         }
         if (-param1 + param3 + param2 < 0) {
-          return -param1 + bea.field_g;
+          return -param1 + SoftwareRasterizer.field_g;
         }
         return -param1 + param2 + param3;
     }
@@ -104,12 +104,12 @@ final class bt implements fo {
         this.field_f = true;
     }
 
-    public final int e(byte param0) {
+    public final int getRenderZ(byte param0) {
         if (param0 >= -86) {
           bt.releaseStatics(-6);
-          return this.field_a.e((byte) -94);
+          return this.field_a.getRenderZ((byte) -94);
         }
-        return this.field_a.e((byte) -94);
+        return this.field_a.getRenderZ((byte) -94);
     }
 
     static {

@@ -70,7 +70,7 @@ final class npa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -26) {
-            stackIn_4_0 = this.b(param1.e(9648), -1, param1.d(3), param1.c(-48), param1.a((byte) 55));
+            stackIn_4_0 = this.b(param1.getY(9648), -1, param1.getX(3), param1.getWidth(-48), param1.getHeight((byte) 55));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ffa[]) null;
@@ -224,18 +224,18 @@ final class npa {
         int var11 = 0;
         var11 = TombRacer.field_G ? 1 : 0;
         try {
-          var3_int = this.a(2, param0.d(param1 - 7070) - param0.c(-55) / 2);
-          var4 = this.a(2, param0.e(9648) - param0.a((byte) 55) / 2);
+          var3_int = this.a(2, param0.getX(param1 - 7070) - param0.getWidth(-55) / 2);
+          var4 = this.a(2, param0.getY(9648) - param0.getHeight((byte) 55) / 2);
           if (param1 != 7073) {
             return;
           }
-          var5 = this.a(param1 - 7071, -1 + param0.d(3) + param0.c(-58) / 2);
-          var6 = this.a(2, param0.e(param1 + 2575) - (-(param0.a((byte) 55) / 2) + 1));
+          var5 = this.a(param1 - 7071, -1 + param0.getX(3) + param0.getWidth(-58) / 2);
+          var6 = this.a(2, param0.getY(param1 + 2575) - (-(param0.getHeight((byte) 55) / 2) + 1));
           for (var7 = var3_int; var5 >= var7; var7++) {
             for (var8 = var4; var6 >= var8; var8++) {
               boolean decompiledFrameCompleted0 = true;
               if (!this.field_g ||
-                param0.a(32 << this.field_c, (gma) null, 113, 32 << this.field_c, var8 * 32 + 16 << this.field_c, (ffa) null, 32 * var7 + 16 << this.field_c, 0)) {
+                param0.a(32 << this.field_c, (WorldBody) null, 113, 32 << this.field_c, var8 * 32 + 16 << this.field_c, (ffa) null, 32 * var7 + 16 << this.field_c, 0)) {
                 var9 = (q) (this.field_e.a(-121, (long)param0.a(true)));
                 while (var9 != null) {
                   if (var9.a(var8, var7, param0, 123)) {
@@ -309,11 +309,11 @@ final class npa {
         RuntimeException var3 = null;
         var9 = TombRacer.field_G ? 1 : 0;
         try {
-          var3_int = this.a(2, param0.d(3) - param0.c(-14) / 2);
+          var3_int = this.a(2, param0.getX(3) - param0.getWidth(-14) / 2);
           var5 = -25 / ((param1 - 13) / 51);
-          var4 = this.a(2, param0.e(9648) - param0.a((byte) 55) / 2);
-          var6 = this.a(2, -1 + param0.d(3) + param0.c(-51) / 2);
-          var7 = this.a(2, -1 + (param0.e(9648) + param0.a((byte) 55) / 2));
+          var4 = this.a(2, param0.getY(9648) - param0.getHeight((byte) 55) / 2);
+          var6 = this.a(2, -1 + param0.getX(3) + param0.getWidth(-51) / 2);
+          var7 = this.a(2, -1 + (param0.getY(9648) + param0.getHeight((byte) 55) / 2));
           var8 = (q) (this.field_e.a(-120, (long)param0.a(true)));
           while (var8 != null) {
             if (var8.a((byte) -76) == param0 &&

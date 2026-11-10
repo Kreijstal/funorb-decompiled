@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jr implements isa {
-    private il field_k;
+    private BitmapFont field_k;
     static String[] field_j;
     private int field_d;
     private int field_g;
@@ -42,17 +42,17 @@ final class jr implements isa {
             param4 = param4 & var11.field_y;
           }
           var7 = 5592405;
-          bea.e(param0.field_i + param1, param0.field_n + param3, param0.field_m, param0.field_p, this.field_b);
+          SoftwareRasterizer.e(param0.field_i + param1, param0.field_n + param3, param0.field_m, param0.field_p, this.field_b);
           if (param4) {
             var7 = 16777215;
           }
           var8 = param1 + param0.field_i + this.field_l;
           var9 = this.field_d + (param0.field_n + param3);
-          bea.d(var8, var9, this.field_e, this.field_c, 5592405);
-          bea.e(var8, var9, this.field_e, this.field_c, var7);
+          SoftwareRasterizer.d(var8, var9, this.field_e, this.field_c, 5592405);
+          SoftwareRasterizer.e(var8, var9, this.field_e, this.field_c, var7);
           if (var11.field_w) {
-            bea.a(var8, var9, var8 + this.field_e, this.field_c + var9, 1);
-            bea.a(this.field_e + var8, var9, var8, this.field_c + var9, 1);
+            SoftwareRasterizer.a(var8, var9, var8 + this.field_e, this.field_c + var9, 1);
+            SoftwareRasterizer.a(this.field_e + var8, var9, var8, this.field_c + var9, 1);
           }
           if (null == this.field_k) {
             return;
@@ -95,7 +95,7 @@ final class jr implements isa {
         MazeComponent.field_F = null;
     }
 
-    jr(il param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    jr(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_g = 1;
         this.field_h = 1;
         try {

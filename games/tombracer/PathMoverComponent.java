@@ -96,7 +96,7 @@ abstract class PathMoverComponent extends kna {
         this.field_J = 131072;
         this.field_I = true;
         try {
-          this.field_K = new gea(param0.field_E, param2);
+          this.field_K = new gea(param0.formatVersion, param2);
           if (this.A(-97)) {
             stackIn_5_1 = (param2.readBits((byte) 44, 1) == 1);
             this.field_I = stackIn_5_1;

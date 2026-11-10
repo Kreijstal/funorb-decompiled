@@ -12,7 +12,7 @@ final class rta extends IntrusiveNode {
     u field_n;
     int field_r;
     int field_p;
-    qia field_x;
+    PcmSampleStream field_x;
     int field_h;
     static String field_j;
     int field_f;

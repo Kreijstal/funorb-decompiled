@@ -6,7 +6,7 @@ final class pq implements os {
     static int[] field_e;
     static jea field_g;
     static Sprite[] field_b;
-    static nh field_a;
+    static ToolkitSprite field_a;
     static String field_d;
     static jea field_c;
 

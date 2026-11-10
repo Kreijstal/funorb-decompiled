@@ -8,7 +8,7 @@ final class qua extends IntrusiveNode {
     final void b() {
         int[] var1;
         int[] var2;
-        maa var4;
+        MidiFileReader var4;
         int var5;
         int var6;
         int var7;
@@ -44,7 +44,7 @@ final class qua extends IntrusiveNode {
         var23 = var1;
         var19[9] = 128;
         var23[9] = 128;
-        var4 = new maa(this.field_g);
+        var4 = new MidiFileReader(this.field_g);
         var5 = var4.c();
         for (var6 = 0; var6 < var5; var6++) {
           var4.e(var6);
@@ -52,7 +52,7 @@ final class qua extends IntrusiveNode {
           var4.f(var6);
         }
         while (true) {
-          var6Lifetime1 = var4.f();
+          var6Lifetime1 = var4.nextTrack();
           var7 = var4.field_a[var6Lifetime1];
           while (true) {
             if (var4.field_a[var6Lifetime1] != var7) {

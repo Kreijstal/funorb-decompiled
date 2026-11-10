@@ -4,7 +4,7 @@
 final class era {
     static int field_a;
     static jea field_e;
-    static il field_g;
+    static BitmapFont field_g;
     static String field_b;
     static String field_f;
     static ara field_d;

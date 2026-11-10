@@ -103,8 +103,8 @@ final class GasTrapComponent extends kna {
           var6.k((byte) -91).b(1, 97);
           var13.a((byte) 83, (Behaviour) (var6));
           var7 = new Trap(param2, true);
-          var8 = param2.m((byte) -86);
-          var9 = param2.s(-127);
+          var8 = param2.getWidth((byte) -86);
+          var9 = param2.getHeight(-127);
           var7.b((byte) -11, var9, var8);
           var7.b(437453352, var9 / 2, var8 / 2);
           var7.a((byte) -3, 0);

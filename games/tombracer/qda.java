@@ -56,15 +56,15 @@ abstract class qda {
           if (param1 != -21) {
             return;
           }
-          var4 = (toa) (vsa.field_m.f(-80));
+          var4 = (toa) (vsa.field_m.first(-80));
           while (var4 != null) {
             uca.a(param0, var4, (byte) 93);
-            var4 = (toa) (vsa.field_m.e(113));
+            var4 = (toa) (vsa.field_m.next(113));
           }
-          var5 = (ik) (Player.field_I.f(param1 ^ 91));
+          var5 = (ik) (Player.field_I.first(param1 ^ 91));
           while (var5 != null) {
             fna.a(param0, -23814, var5);
-            var5 = (ik) (Player.field_I.e(121));
+            var5 = (ik) (Player.field_I.next(121));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -43,7 +43,7 @@ final class CrusherBehaviour extends Behaviour {
         RuntimeException var3 = null;
         try {
           super.a(param0, param1);
-          if (4 > this.b(true).field_E) {
+          if (4 > this.b(true).formatVersion) {
             param1.h(3, 0);
           }
           param1.b((byte) -62, 8);
@@ -174,16 +174,16 @@ final class CrusherBehaviour extends Behaviour {
         this.field_u = false;
         this.field_p = false;
         try {
-          if (param0.field_E >= 3) {
+          if (param0.formatVersion >= 3) {
             this.field_v = param1.readBits((byte) 44, 8);
             this.field_o = param1.readBits((byte) 44, 8);
-            if (param0.field_E >= 20) {
+            if (param0.formatVersion >= 20) {
               this.field_s = param1.readBits((byte) 44, 8);
             }
             this.field_x = param1.readBits((byte) 44, 8);
             stackIn_8_1 = (param1.readBits((byte) 44, 1) == 1);
             this.field_u = stackIn_8_1;
-            if (param0.field_E >= 20) {
+            if (param0.formatVersion >= 20) {
               stackIn_12_1 = (param1.readBits((byte) 44, 1) == 1);
               this.field_p = stackIn_12_1;
             }
@@ -193,7 +193,7 @@ final class CrusherBehaviour extends Behaviour {
             this.field_v = 50;
             this.field_x = 50;
           }
-          if (16 <= param0.field_E) {
+          if (16 <= param0.formatVersion) {
             this.field_t = ad.a((byte) 87, param1);
           } else {
             this.field_t = new Effect(0, 100);
@@ -238,15 +238,15 @@ final class CrusherBehaviour extends Behaviour {
         var7 = TombRacer.field_G ? 1 : 0;
         var8 = this.field_g.H(param0 - 5537);
         var3 = this.field_p ? 1 : 0;
-        var4 = this.field_g.d(3);
-        var5 = this.field_g.e(param0 + 4230);
+        var4 = this.field_g.getX(3);
+        var5 = this.field_g.getY(param0 + 4230);
         if (var3 == 0) {
           if (this.field_n != 0) {
             if (1 == this.field_n) {
-              var3 = ck.a(var8.d(3), 1, var4, this.field_g.c(param0 - 5496), this.field_g.a((byte) 55), var8.e(9648), (byte) 82, var5, 1) ? 1 : 0;
+              var3 = ck.a(var8.getX(3), 1, var4, this.field_g.getWidth(param0 - 5496), this.field_g.getHeight((byte) 55), var8.getY(9648), (byte) 82, var5, 1) ? 1 : 0;
             }
           } else {
-            var3 = ck.a(var8.d(3), var8.a((byte) 55), var4, this.field_g.c(-23), this.field_g.a((byte) 55), var8.e(9648), (byte) 69, var5, var8.c(param0 - 5519)) ? 1 : 0;
+            var3 = ck.a(var8.getX(3), var8.getHeight((byte) 55), var4, this.field_g.getWidth(-23), this.field_g.getHeight((byte) 55), var8.getY(9648), (byte) 69, var5, var8.getWidth(param0 - 5519)) ? 1 : 0;
           }
         }
         var6_int = this.field_n;
@@ -283,7 +283,7 @@ final class CrusherBehaviour extends Behaviour {
               this.field_w = this.field_w + 1;
               if (this.field_w > this.field_o) {
                 var6 = this.b(true);
-                var6.a(123, var5, this.field_t, this.field_g.a((byte) 55), this.field_g.c(-79), var4);
+                var6.a(123, var5, this.field_t, this.field_g.getHeight((byte) 55), this.field_g.getWidth(-79), var4);
                 this.b(0, 3);
                 this.field_g.a((byte) -3, this.field_q);
                 this.field_g.b((byte) 17, false);

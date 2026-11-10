@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sp implements com.ms.directX.IEnumModesCallback {
+final class MicrosoftDisplayController implements com.ms.directX.IEnumModesCallback {
     private com.ms.directX.DirectDraw field_a;
     private static int field_b;
     private static int[] field_c;
@@ -54,7 +54,7 @@ final class sp implements com.ms.directX.IEnumModesCallback {
         param0.requestFocus();
     }
 
-    public sp() {
+    public MicrosoftDisplayController() {
         this.field_a = new com.ms.directX.DirectDraw();
         this.field_a.initialize((com.ms.com._Guid) null);
     }

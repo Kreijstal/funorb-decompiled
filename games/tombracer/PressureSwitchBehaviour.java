@@ -79,10 +79,10 @@ final class PressureSwitchBehaviour extends Behaviour implements ut {
         super(param0, param1, param2);
         try {
           this.field_o = param1.readBits((byte) 44, 8);
-          if (param0.field_E <= 10) {
+          if (param0.formatVersion <= 10) {
             this.field_o = this.field_o / 5;
           }
-          if (9 <= param0.field_E) {
+          if (9 <= param0.formatVersion) {
             this.field_q = 1 != param1.readBits((byte) 44, 1) ? false : true;
           }
           this.field_n = new jma(15, param0, param1);
@@ -151,11 +151,11 @@ final class PressureSwitchBehaviour extends Behaviour implements ut {
             return false;
           }
           if (!this.field_q) {
-            if (!io.a(this.field_g.c(-73), param0.e(9648), (byte) -89, this.field_g.a((byte) 55), param0.d(3), this.field_g.e(9648), param0.a((byte) 55), param0.c(-43), this.field_g.d(3))) {
+            if (!io.a(this.field_g.getWidth(-73), param0.getY(9648), (byte) -89, this.field_g.getHeight((byte) 55), param0.getX(3), this.field_g.getY(9648), param0.getHeight((byte) 55), param0.getWidth(-43), this.field_g.getX(3))) {
               return false;
             }
           } else {
-            if (!ck.a(param0.d(3), param0.a((byte) 55), this.field_g.d(3), this.field_g.c(-113), this.field_g.a((byte) 55), param0.e(9648), (byte) 67, this.field_g.e(9648), param0.c(-51))) {
+            if (!ck.a(param0.getX(3), param0.getHeight((byte) 55), this.field_g.getX(3), this.field_g.getWidth(-113), this.field_g.getHeight((byte) 55), param0.getY(9648), (byte) 67, this.field_g.getY(9648), param0.getWidth(-51))) {
               return false;
             }
           }

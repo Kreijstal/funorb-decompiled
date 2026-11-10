@@ -9,7 +9,7 @@ final class tga {
         if (param0 != -21953) {
           return;
         }
-        bea.g(param1, param3, param2, param4);
+        SoftwareRasterizer.g(param1, param3, param2, param4);
     }
 
     public static void releaseStatics(int param0) {

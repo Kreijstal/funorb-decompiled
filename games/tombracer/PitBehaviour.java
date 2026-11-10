@@ -38,7 +38,7 @@ final class PitBehaviour extends Behaviour {
         }
     }
 
-    final void a(ffa param0, byte param1, gma param2, int param3) {
+    final void a(ffa param0, byte param1, WorldBody param2, int param3) {
         int var15 = 0;
         int var16 = 0;
         RuntimeException stackIn_55_0 = null;
@@ -78,8 +78,8 @@ final class PitBehaviour extends Behaviour {
             return;
           }
           if (param2 instanceof Player) {
-            var5_int = param2.d(3);
-            var6 = param2.e(9648);
+            var5_int = param2.getX(3);
+            var6 = param2.getY(9648);
             var7_ref_la = this.b(true);
             var8_ref_tqa = var7_ref_la.f((byte) 93);
             var9 = var8_ref_tqa.a(var5_int, false);
@@ -118,10 +118,10 @@ final class PitBehaviour extends Behaviour {
           if (this.field_n == 0) {
             return;
           }
-          var5_intLifetime1 = param2.d(3);
-          var6Lifetime1 = param2.e(9648);
-          var7 = param2.c(-93);
-          var8 = param2.a((byte) 55);
+          var5_intLifetime1 = param2.getX(3);
+          var6Lifetime1 = param2.getY(9648);
+          var7 = param2.getWidth(-93);
+          var8 = param2.getHeight((byte) 55);
           var9Lifetime1 = var5_intLifetime1 - var7 / 2 - this.field_g.r((byte) -95) - this.field_o;
           var10Lifetime1 = var6Lifetime1 - var8 / 2 + (-this.field_g.Q(2) - this.field_q);
           var11Lifetime1 = var9Lifetime1 + (var7 - 1);
@@ -200,12 +200,12 @@ final class PitBehaviour extends Behaviour {
           this.field_g.a(true, (byte) -25, 0);
           this.field_g.a((byte) -114, true, 1);
           this.field_g.b((byte) 17, param0);
-          var3_int = this.field_g.c(-56) / this.field_u;
-          var4 = this.field_g.a((byte) 55) / this.field_u;
+          var3_int = this.field_g.getWidth(-56) / this.field_u;
+          var4 = this.field_g.getHeight((byte) 55) / this.field_u;
           this.field_t = new hj(var3_int, var4, 0);
-          this.field_o = (this.field_g.c(-92) - this.field_t.field_f * this.field_u) / 2;
-          this.field_q = (this.field_g.a((byte) 55) - this.field_t.field_a * this.field_u) / 2;
-          this.field_g.f((byte) -93).a(1, -1, this.field_g.d(3), this.field_g.e(9648), this.field_g.c(-27), this.field_g.a((byte) 55), 123);
+          this.field_o = (this.field_g.getWidth(-92) - this.field_t.field_f * this.field_u) / 2;
+          this.field_q = (this.field_g.getHeight((byte) 55) - this.field_t.field_a * this.field_u) / 2;
+          this.field_g.getRoom((byte) -93).a(1, -1, this.field_g.getX(3), this.field_g.getY(9648), this.field_g.getWidth(-27), this.field_g.getHeight((byte) 55), 123);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "mo.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -226,7 +226,7 @@ final class PitBehaviour extends Behaviour {
         if (0 != param3) {
           return 0;
         }
-        if (!io.a(this.field_u * this.field_t.field_f, param2, (byte) -115, this.field_u * this.field_t.field_a, param5, this.field_g.e(9648), param1, param0, this.field_g.d(3))) {
+        if (!io.a(this.field_u * this.field_t.field_f, param2, (byte) -115, this.field_u * this.field_t.field_a, param5, this.field_g.getY(9648), param1, param0, this.field_g.getX(3))) {
           return 0;
         }
         var7 = 0;
@@ -274,12 +274,12 @@ final class PitBehaviour extends Behaviour {
           this.field_n = param1.readBits((byte) 44, 8);
           stackIn_4_1 = (1 == param1.readBits((byte) 44, 1));
           this.field_r = stackIn_4_1;
-          if (param0.field_E < 4) {
+          if (param0.formatVersion < 4) {
             this.field_u = jm.field_l;
           } else {
             this.field_u = param1.readBits((byte) 44, 10) << 16;
           }
-          if (param0.field_E >= 11) {
+          if (param0.formatVersion >= 11) {
             stackIn_12_1 = (param1.readBits((byte) 44, 1) == 1);
             this.field_s = stackIn_12_1;
             this.c(0);

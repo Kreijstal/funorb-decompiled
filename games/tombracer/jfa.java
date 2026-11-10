@@ -1,5 +1,5 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-interface jfa extends fo {
+interface jfa extends Renderable {
 }

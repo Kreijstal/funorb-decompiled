@@ -166,7 +166,7 @@ final class fu extends dg {
             var5 = (iq) null;
             this.a((iq) null, -12, 26, 100, (byte) -44);
           }
-          if (param1.field_E >= 16) {
+          if (param1.formatVersion >= 16) {
             this.field_u = param2.readBits((byte) 44, 4);
           }
           return;
@@ -231,8 +231,8 @@ final class fu extends dg {
         try {
           super.d(param0);
           if (this.field_u == 0) {
-            var4 = this.j((byte) 16).d(3);
-            var5 = this.j((byte) 16).e(param0 + 9649);
+            var4 = this.j((byte) 16).getX(3);
+            var5 = this.j((byte) 16).getY(param0 + 9649);
             if (this.field_n) {
               var3_int = 0;
               var2_int = 0;
@@ -249,7 +249,7 @@ final class fu extends dg {
               this.field_q = dfa.a(this.field_q - (ua.a(var2_int >> 13, -113) + ua.a(var3_int >> 13, 67)), 2048, -100);
               if (!(65536 >= ua.a(var2_int, param0 + 93)) ||
                 !(ua.a(var3_int, param0 ^ -85) <= 65536)) {
-                this.a(103).a(false, this.b((byte) -119), 0, -var2_int, this.c((byte) 127), -var3_int);
+                this.a(103).a(false, this.getRenderX((byte) -119), 0, -var2_int, this.getRenderY((byte) 127), -var3_int);
               }
             }
           } else {
@@ -273,10 +273,10 @@ final class fu extends dg {
             if (var4Lifetime1 != 0 && (null == this.field_v ||
               !this.field_v.isLinked((byte) -101))) {
               if (this.field_u == 0) {
-                this.field_v = var10_ref.a(new fm(10, this.b((byte) -90), this.c((byte) 103), this.e((byte) -103)), param0 - 57);
+                this.field_v = var10_ref.a(new fm(10, this.getRenderX((byte) -90), this.getRenderY((byte) 103), this.getRenderZ((byte) -103)), param0 - 57);
               } else if (this.field_u != 1) {
               } else {
-                this.field_v = var10_ref.a(new fm(11, this.b((byte) 112), this.c((byte) 121), this.e((byte) -125)), -58);
+                this.field_v = var10_ref.a(new fm(11, this.getRenderX((byte) 112), this.getRenderY((byte) 121), this.getRenderZ((byte) -125)), -58);
               }
             } else {
               if (this.field_v != null &&
@@ -287,7 +287,7 @@ final class fu extends dg {
             }
           }
           if (this.field_v != null) {
-            this.field_v.a(this.b((byte) -83), var10_ref.field_c, -128, var10_ref.field_h, this.c((byte) 107));
+            this.field_v.a(this.getRenderX((byte) -83), var10_ref.field_c, -128, var10_ref.field_h, this.getRenderY((byte) 107));
           }
           if (this.field_u == 1) {
             var11 = var3_ref.field_u;
@@ -303,7 +303,7 @@ final class fu extends dg {
             }
             if (var7_int != 0 &&
               null == this.field_r) {
-              this.field_r = var10_ref.a(new fm(12, this.b((byte) -105), this.c((byte) 104), this.e((byte) -119)), -58);
+              this.field_r = var10_ref.a(new fm(12, this.getRenderX((byte) -105), this.getRenderY((byte) 104), this.getRenderZ((byte) -119)), -58);
             }
             if (this.field_r != null &&
               this.field_r.field_i.field_f.e()) {
@@ -318,7 +318,7 @@ final class fu extends dg {
             while (var7 != null) {
               if (var7 instanceof PathMoveLocomotor &&
                 ((PathMoveLocomotor) (var7)).d(false) != this.field_s) {
-                var10_ref.a(new fm(3, this.b((byte) 68), this.c((byte) 124), this.e((byte) -111)), -58);
+                var10_ref.a(new fm(3, this.getRenderX((byte) 68), this.getRenderY((byte) 124), this.getRenderZ((byte) -111)), -58);
                 this.field_s = ((PathMoveLocomotor) (var7)).d(false);
               }
               var7 = (Locomotor) (var14.a(param0 + 0));

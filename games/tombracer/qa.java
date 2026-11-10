@@ -271,7 +271,7 @@ final class qa {
         this.field_n.a(0, param1);
     }
 
-    final static void a(int param0, int param1, byte param2, int param3, nh[] param4, int param5) {
+    final static void a(int param0, int param1, byte param2, int param3, ToolkitSprite[] param4, int param5) {
         int var9 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -282,7 +282,7 @@ final class qa {
         int var7 = 0;
         int var8 = 0;
         int var10 = 0;
-        nh[] var11 = null;
+        ToolkitSprite[] var11 = null;
         int var8Lifetime1;
         int var8Lifetime2;
         var10 = TombRacer.field_G ? 1 : 0;
@@ -311,8 +311,8 @@ final class qa {
           if (param2 > 64) {
             return;
           }
-          var11 = (nh[]) null;
-          qa.a(110, 85, (byte) -45, -18, (nh[]) null, -3);
+          var11 = (ToolkitSprite[]) null;
+          qa.a(110, 85, (byte) -45, -18, (ToolkitSprite[]) null, -3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

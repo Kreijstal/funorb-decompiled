@@ -44,7 +44,7 @@ final class mv {
             var4 = new tba(param1, this.field_c);
             this.field_c = this.field_c + 1;
           } else {
-            var5Lifetime2 = (tba) (this.field_g.b(3));
+            var5Lifetime2 = (tba) (this.field_g.last(3));
             var4 = new tba(param1, var5Lifetime2.field_j);
             this.field_f[var5Lifetime2.field_h] = null;
             var5Lifetime2.unlink(69);
@@ -65,7 +65,7 @@ final class mv {
         }
         this.field_a = (int[][]) null;
         this.field_f = null;
-        this.field_g.d(8);
+        this.field_g.clear(8);
         this.field_g = null;
         if (param0) {
           this.a(true);

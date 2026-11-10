@@ -42,7 +42,7 @@ final class cc extends IntrusiveNode {
           this.field_g = -113;
         }
         while (var12 < param0) {
-          uda.field_r.a((var9 * (1 + var12) >> 16) + (param4 + uda.field_r.a()), param1 + (var10 * (var12 + 1) >> 16) + uda.field_r.c(), var11, -1695485712, 1);
+          uda.field_r.draw((var9 * (1 + var12) >> 16) + (param4 + uda.field_r.a()), param1 + (var10 * (var12 + 1) >> 16) + uda.field_r.c(), var11, -1695485712, 1);
           var12++;
         }
     }

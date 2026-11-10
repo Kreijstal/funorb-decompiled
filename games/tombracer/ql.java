@@ -16,7 +16,7 @@ class ql extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         try {
           var5_int = 28 % ((param2 + 76) / 32);
-          stackIn_1_0 = pea.a(qia.b(param1, param0, param3, param4), 1);
+          stackIn_1_0 = pea.a(PcmSampleStream.b(param1, param0, param3, param4), 1);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -42,10 +42,10 @@ class ql extends DualLinkNode {
           if (param1 != -28521) {
             return;
           }
-          var4 = (aca) (io.field_d.f(-80));
+          var4 = (aca) (io.field_d.first(-80));
           while (var4 != null) {
             jea.a(param0, 1325, var4);
-            var4 = (aca) (io.field_d.e(113));
+            var4 = (aca) (io.field_d.next(113));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -79,16 +79,16 @@ class ql extends DualLinkNode {
         try {
           var3 = -66 / ((param0 - 45) / 59);
           param1.unlink(118);
-          var2 = (pha) (uma.field_b.f(-80));
+          var2 = (pha) (uma.field_b.first(-80));
           while (var2 != null) {
             if (var2.a((byte) 123, param1)) {
-              var2 = (pha) (uma.field_b.e(121));
+              var2 = (pha) (uma.field_b.next(121));
               continue;
             }
             break;
           }
           if (var2 == null) {
-            uma.field_b.b((byte) -108, param1);
+            uma.field_b.addLast((byte) -108, param1);
             return;
           }
           PlatformComponent.a(var2, param1, (byte) 24);

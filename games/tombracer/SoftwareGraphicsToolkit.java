@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sfa extends GraphicsToolkit {
+final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     private int field_j;
     private ija field_T;
     private int field_m;
@@ -48,7 +48,7 @@ final class sfa extends GraphicsToolkit {
     float[] field_n;
     private dd field_X;
     private int field_v;
-    private nh field_R;
+    private ToolkitSprite field_R;
 
     final tw a(Runnable param0) {
         int var2 = 0;
@@ -217,19 +217,19 @@ final class sfa extends GraphicsToolkit {
     }
 
     final void c(int param0) {
-        qq var4 = null;
+        ScrollingTexturePixels var4 = null;
         int var5 = 0;
         dw var6 = null;
         int var2 = param0 - this.field_j;
         Object var3 = this.field_F.b((byte) 85);
         while (var3 != null) {
-          var4 = (qq) (var3);
+          var4 = (ScrollingTexturePixels) (var3);
           if (var4.field_g) {
             var4.field_j = var4.field_j + var2;
             var5 = var4.field_j / 20;
             if (var5 > 0) {
               var6 = this.field_c.a((byte) -53, var4.field_f);
-              var4.a(var6.field_s * var2 * 50 / 1000, var6.field_o * var2 * 50 / 1000);
+              var4.scroll(var6.field_s * var2 * 50 / 1000, var6.field_o * var2 * 50 / 1000);
               var4.field_j = var4.field_j - var5 * 20;
             }
             var4.field_g = false;
@@ -242,14 +242,14 @@ final class sfa extends GraphicsToolkit {
     }
 
     final void GA(int param0) {
-        this.aa(0, 0, this.field_K, this.field_h, param0, 0);
+        this.fillRectangle(0, 0, this.field_K, this.field_h, param0, 0);
     }
 
     final void d(int param0, int param1, int param2, int param3, int param4, int param5) {
-        this.U(param0, param1, param2, param4, param5);
-        this.U(param0, param1 + param3 - 1, param2, param4, param5);
-        this.c(param0, param1 + 1, param3 - 2, param4, param5);
-        this.c(param0 + param2 - 1, param1 + 1, param3 - 2, param4, param5);
+        this.drawHorizontalLine(param0, param1, param2, param4, param5);
+        this.drawHorizontalLine(param0, param1 + param3 - 1, param2, param4, param5);
+        this.drawVerticalLine(param0, param1 + 1, param3 - 2, param4, param5);
+        this.drawVerticalLine(param0 + param2 - 1, param1 + 1, param3 - 2, param4, param5);
     }
 
     private final void b(java.awt.Canvas param0, int param1, int param2) {
@@ -286,7 +286,7 @@ final class sfa extends GraphicsToolkit {
         }
     }
 
-    private final void c(int param0, int param1, int param2, int param3, int param4) {
+    private final void drawVerticalLine(int param0, int param1, int param2, int param3, int param4) {
         int var6;
         int var7;
         int var8;
@@ -378,7 +378,7 @@ final class sfa extends GraphicsToolkit {
           var14 = var12 + (var14 - var12) * var15Lifetime1;
           var10 = (float)this.field_g;
         }
-        this.a(this.field_L + (int)((float)this.field_Q * var11 / var9), this.field_w + (int)((float)this.field_C * var12 / var9), this.field_L + (int)((float)this.field_Q * var13 / var10), this.field_w + (int)((float)this.field_C * var14 / var10), param6, param7);
+        this.drawLine(this.field_L + (int)((float)this.field_Q * var11 / var9), this.field_w + (int)((float)this.field_C * var12 / var9), this.field_L + (int)((float)this.field_Q * var13 / var10), this.field_w + (int)((float)this.field_C * var14 / var10), param6, param7);
     }
 
     final void a(za param0) {
@@ -394,7 +394,7 @@ final class sfa extends GraphicsToolkit {
         return true;
     }
 
-    final void a(int param0, int param1) throws qva {
+    final void present(int param0, int param1) throws qva {
         java.awt.Graphics var3 = null;
         if (this.field_t == null ||
           this.field_T == null) {
@@ -427,24 +427,24 @@ final class sfa extends GraphicsToolkit {
     }
 
     final int[] h(int param0) {
-        qq var2 = null;
+        ScrollingTexturePixels var2 = null;
         Object var3 = null;
         dw var4 = null;
         Object stackIn_4_0 = null;
         int stackIn_10_0 = 0;
-        qq stackIn_12_0;
-        qq stackIn_12_1;
+        ScrollingTexturePixels stackIn_12_0;
+        ScrollingTexturePixels stackIn_12_1;
         int stackIn_12_2;
         int stackIn_12_3;
         int[] stackIn_12_4;
-        qq stackIn_13_0;
-        qq stackIn_13_1;
+        ScrollingTexturePixels stackIn_13_0;
+        ScrollingTexturePixels stackIn_13_1;
         boolean stackIn_13_5;
         Throwable decompiledCaughtException = null;
         int var5 = 0;
         var3 = this.field_F;
         synchronized (var3) {
-          var2 = (qq) (this.field_F.a((byte) 92, (long)param0 | -9223372036854775808L));
+          var2 = (ScrollingTexturePixels) (this.field_F.a((byte) 92, (long)param0 | -9223372036854775808L));
           if (var2 == null) {
             if (!this.field_c.a(param0, (byte) 41)) {
               stackIn_4_0 = null;
@@ -472,7 +472,7 @@ final class sfa extends GraphicsToolkit {
               stackIn_13_1 = null;
               stackIn_13_5 = true;
             }
-            var2 = new qq(stackIn_12_2, stackIn_12_3, stackIn_12_4, stackIn_13_5);
+            var2 = new ScrollingTexturePixels(stackIn_12_2, stackIn_12_3, stackIn_12_4, stackIn_13_5);
             this.field_F.a(29166, var2, (long)param0 | -9223372036854775808L);
           }
         }
@@ -480,7 +480,7 @@ final class sfa extends GraphicsToolkit {
         return var2.b();
     }
 
-    final void KA(int param0, int param1, int param2, int param3) {
+    final void setClip(int param0, int param1, int param2, int param3) {
         if (param0 < 0) {
           param0 = 0;
         }
@@ -550,7 +550,7 @@ final class sfa extends GraphicsToolkit {
         this.field_z = true;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawLine(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var7;
         int var8;
         int var9;
@@ -576,17 +576,17 @@ final class sfa extends GraphicsToolkit {
         param3 = param3 - param1;
         if (param3 == 0) {
           if (param2 < 0) {
-            this.U(param0 + param2, param1, -param2 + 1, param4, param5);
+            this.drawHorizontalLine(param0 + param2, param1, -param2 + 1, param4, param5);
           } else {
-            this.U(param0, param1, param2 + 1, param4, param5);
+            this.drawHorizontalLine(param0, param1, param2 + 1, param4, param5);
           }
           return;
         }
         if (param2 == 0) {
           if (param3 < 0) {
-            this.c(param0, param1 + param3, -param3 + 1, param4, param5);
+            this.drawVerticalLine(param0, param1 + param3, -param3 + 1, param4, param5);
           } else {
-            this.c(param0, param1, param3 + 1, param4, param5);
+            this.drawVerticalLine(param0, param1, param3 + 1, param4, param5);
           }
           return;
         }
@@ -1062,15 +1062,15 @@ final class sfa extends GraphicsToolkit {
     }
 
     final jca a(nha param0, mw param1) {
-        return (jca) ((Object) new bf(this, (nh) (param0), (ita) (param1)));
+        return (jca) ((Object) new bf(this, (ToolkitSprite) (param0), (ita) (param1)));
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        nh var11;
+        ToolkitSprite var11;
         int[] var12;
         int var13;
         int[] var14;
-        nh var15;
+        ToolkitSprite var15;
         int[] var16;
         int stackIn_12_0 = 0;
         if (param3 == 0) {
@@ -1082,7 +1082,7 @@ final class sfa extends GraphicsToolkit {
         if (param6 != 65535 &&
           !this.field_c.a((byte) -7, param6).field_p) {
           if (this.field_v != param6) {
-            var11 = (nh) (this.field_X.a((byte) 75, (long)param6));
+            var11 = (ToolkitSprite) (this.field_X.a((byte) 75, (long)param6));
             if (var11 == null) {
               var16 = this.h(param6);
               var14 = var16;
@@ -1103,18 +1103,18 @@ final class sfa extends GraphicsToolkit {
             this.field_v = param6;
             this.field_R = var11;
           }
-          ((pf) (this.field_R)).b(param0 - param3, param1 - param4, param2, param3 << 1, param4 << 1, param8, param7, param9, 1);
+          ((SoftwareToolkitSprite) (this.field_R)).b(param0 - param3, param1 - param4, param2, param3 << 1, param4 << 1, param8, param7, param9, 1);
         } else {
           this.e(param0, param1, param2, param3, param7, param9);
         }
     }
 
     final void c(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        nh var11;
+        ToolkitSprite var11;
         int[] var12;
         int var13;
         int[] var14;
-        nh var15;
+        ToolkitSprite var15;
         int[] var16;
         int stackIn_12_0 = 0;
         if (param3 == 0) {
@@ -1126,7 +1126,7 @@ final class sfa extends GraphicsToolkit {
         if (param6 != 65535 &&
           !this.field_c.a((byte) 5, param6).field_p) {
           if (this.field_v != param6) {
-            var11 = (nh) (this.field_X.a((byte) 55, (long)param6));
+            var11 = (ToolkitSprite) (this.field_X.a((byte) 55, (long)param6));
             if (var11 == null) {
               var16 = this.h(param6);
               var14 = var16;
@@ -1147,7 +1147,7 @@ final class sfa extends GraphicsToolkit {
             this.field_v = param6;
             this.field_R = var11;
           }
-          ((pf) (this.field_R)).a(param0 - param3, param1 - param4, param2, param3 << 1, param4 << 1, param8, param7, param9, 1);
+          ((SoftwareToolkitSprite) (this.field_R)).a(param0 - param3, param1 - param4, param2, param3 << 1, param4 << 1, param8, param7, param9, 1);
         } else {
           this.e(param0, param1, param2, param3, param7, param9);
         }
@@ -1235,7 +1235,7 @@ final class sfa extends GraphicsToolkit {
         this.la();
     }
 
-    final void T(int param0, int param1, int param2, int param3) {
+    final void intersectClip(int param0, int param1, int param2, int param3) {
         if (this.field_J < param0) {
           this.field_J = param0;
         }
@@ -1251,7 +1251,7 @@ final class sfa extends GraphicsToolkit {
         this.g();
     }
 
-    sfa(java.awt.Canvas param0, d param1, int param2, int param3) {
+    SoftwareGraphicsToolkit(java.awt.Canvas param0, d param1, int param2, int param3) {
         this(param1);
         try {
           this.a(param0, param2, param3);
@@ -1284,7 +1284,7 @@ final class sfa extends GraphicsToolkit {
     final void a(int param0, ob[] param1) {
     }
 
-    final nh a(jpa param0, boolean param1) {
+    final ToolkitSprite a(jpa param0, boolean param1) {
         int[] stackIn_26_0 = null;
         int stackIn_26_1 = 0;
         int stackIn_27_2 = 0;
@@ -1333,7 +1333,7 @@ final class sfa extends GraphicsToolkit {
           for (var10 = 0; var10 < var20.length; var10++) {
             var8[var10] = var20[var10];
           }
-          var7 = new kf(this, var21, var22, var5, var6);
+          var7 = new SoftwareIndexedSprite(this, var21, var22, var5, var6);
         } else {
           var23 = new int[var5 * var6];
           var19 = var23;
@@ -1346,7 +1346,7 @@ final class sfa extends GraphicsToolkit {
                 var15[var11 + var12] = var3[var4[var11 + var12] & 255] | var9[var11 + var12] << 24;
               }
             }
-            var7 = new vqa(this, var23, var5, var6);
+            var7 = new SoftwareArgbSprite(this, var23, var5, var6);
           } else {
             for (var10 = 0; var10 < var6; var10++) {
               var11 = var10 * var5;
@@ -1362,14 +1362,14 @@ final class sfa extends GraphicsToolkit {
                 stackIn_26_0[stackIn_26_1] = stackIn_27_2;
               }
             }
-            var7 = new raa(this, var23, var5, var6);
+            var7 = new SoftwareRgbSprite(this, var23, var5, var6);
           }
         }
-        ((nh) (var7)).b(param0.field_d, param0.field_c, param0.field_b, param0.field_e);
-        return (nh) (var7);
+        ((ToolkitSprite) (var7)).b(param0.field_d, param0.field_c, param0.field_b, param0.field_e);
+        return (ToolkitSprite) (var7);
     }
 
-    private sfa(d param0) {
+    private SoftwareGraphicsToolkit(d param0) {
         super(param0);
         this.field_E = false;
         this.field_z = false;
@@ -1429,7 +1429,7 @@ final class sfa extends GraphicsToolkit {
           var15 = var13 + (var15 - var13) * var16Lifetime1;
           var11 = (float)this.field_g;
         }
-        this.a(this.field_L + (int)((float)this.field_Q * var12 / (float)param6), this.field_w + (int)((float)this.field_C * var13 / (float)param6), this.field_L + (int)((float)this.field_Q * var14 / (float)param6), this.field_w + (int)((float)this.field_C * var15 / (float)param6), param7, param8);
+        this.drawLine(this.field_L + (int)((float)this.field_Q * var12 / (float)param6), this.field_w + (int)((float)this.field_C * var13 / (float)param6), this.field_L + (int)((float)this.field_Q * var14 / (float)param6), this.field_w + (int)((float)this.field_C * var15 / (float)param6), param7, param8);
     }
 
     final int[] Y() {
@@ -1452,7 +1452,7 @@ final class sfa extends GraphicsToolkit {
         this.field_S = (int)(param5 * 65535.0f / var7);
     }
 
-    final void U(int param0, int param1, int param2, int param3, int param4) {
+    final void drawHorizontalLine(int param0, int param1, int param2, int param3, int param4) {
         int var6;
         int var7;
         int var8;
@@ -1554,14 +1554,14 @@ final class sfa extends GraphicsToolkit {
         }
         if (!param2) {
           if (var6 == 0) {
-            return (GameFont) ((Object) new sn(this, param0, param1, var4, var5));
+            return (GameFont) ((Object) new SoftwarePaletteFont(this, param0, param1, var4, var5));
           }
           throw new IllegalArgumentException("");
         }
         if (var6 == 0) {
-          return (GameFont) ((Object) new le(this, param0, param1, var4, var5));
+          return (GameFont) ((Object) new SoftwareBinaryFont(this, param0, param1, var4, var5));
         }
-        return (GameFont) ((Object) new nu(this, param0, param1, var4, var5));
+        return (GameFont) ((Object) new SoftwareAlphaFont(this, param0, param1, var4, var5));
     }
 
     final void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
@@ -1627,7 +1627,7 @@ final class sfa extends GraphicsToolkit {
         }
     }
 
-    final void s(int param0, int param1, int param2, int param3, int param4) {
+    final void drawCircle(int param0, int param1, int param2, int param3, int param4) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -2956,7 +2956,7 @@ final class sfa extends GraphicsToolkit {
         this.g(0);
     }
 
-    final void aa(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void fillRectangle(int param0, int param1, int param2, int param3, int param4, int param5) {
         int incrementValue$1 = 0;
         int incrementValue$0 = 0;
         int var7 = 0;
@@ -3123,7 +3123,7 @@ final class sfa extends GraphicsToolkit {
         var12.field_m = false;
     }
 
-    final nh a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
+    final ToolkitSprite a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
         int var10 = 0;
         int incrementValue$4 = 0;
         int var7;
@@ -3151,9 +3151,9 @@ final class sfa extends GraphicsToolkit {
           break;
         }
         if (var7 == 0) {
-          return (nh) ((Object) new raa(this, param0, param1, param2, param3, param4, param5));
+          return (ToolkitSprite) ((Object) new SoftwareRgbSprite(this, param0, param1, param2, param3, param4, param5));
         }
-        return (nh) ((Object) new vqa(this, param0, param1, param2, param3, param4, param5));
+        return (ToolkitSprite) ((Object) new SoftwareArgbSprite(this, param0, param1, param2, param3, param4, param5));
     }
 
     static {

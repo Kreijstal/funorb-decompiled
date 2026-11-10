@@ -252,16 +252,16 @@ final class PlantComponent extends kna {
         RuntimeException var2_ref = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          var5 = (sda) (qd.field_a.f(-80));
+          var5 = (sda) (qd.field_a.first(-80));
           while (var5 != null) {
             oia.a(param1, var5, 127);
-            var5 = (sda) (qd.field_a.e(111));
+            var5 = (sda) (qd.field_a.next(111));
           }
           var3 = 22 / ((param0 + 35) / 63);
-          var2 = SpawnerBehaviour.field_n.f(-80);
+          var2 = SpawnerBehaviour.field_n.first(-80);
           while (var2 != null) {
             dr.a(param1, -75);
-            var2 = SpawnerBehaviour.field_n.e(116);
+            var2 = SpawnerBehaviour.field_n.next(116);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

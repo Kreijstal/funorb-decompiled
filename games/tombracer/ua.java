@@ -193,18 +193,18 @@ final class ua implements GamePacket {
         RuntimeException var2_ref = null;
         var3 = TombRacer.field_G ? 1 : 0;
         try {
-          var4 = (cga) (aba.field_a.f(-80));
+          var4 = (cga) (aba.field_a.first(-80));
           while (var4 != null) {
             wj.a(var4, param0, -121);
-            var4 = (cga) (aba.field_a.e(114));
+            var4 = (cga) (aba.field_a.next(114));
           }
           if (param1 != 2) {
             return;
           }
-          var2 = MovingWallComponent.field_N.f(-80);
+          var2 = MovingWallComponent.field_N.first(-80);
           while (var2 != null) {
             TouchSwitchBehaviour.b(param0, param1 ^ -117);
-            var2 = MovingWallComponent.field_N.e(param1 + 105);
+            var2 = MovingWallComponent.field_N.next(param1 + 105);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

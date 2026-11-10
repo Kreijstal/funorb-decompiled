@@ -193,7 +193,7 @@ final class TimeSwitchBehaviour extends Behaviour implements ut {
         super(param0, param1, param2);
         try {
           this.field_s = new jma(15, param0, param1);
-          this.field_o = new mg(param0.field_E, param1);
+          this.field_o = new mg(param0.formatVersion, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "tl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

@@ -56,7 +56,7 @@ final class ww extends ka {
     private byte[] field_k;
     private int[] field_rb;
     private int[] field_s;
-    private sfa field_d;
+    private SoftwareGraphicsToolkit field_d;
     private gna[] field_I;
     private boolean field_A;
     private short[] field_ob;
@@ -761,7 +761,7 @@ final class ww extends ka {
         int var7Lifetime1;
         int var8Lifetime1;
         int var9Lifetime1;
-        var4 = cla.field_m[this.a(param0, param2)];
+        var4 = cla.field_m[this.scaleHslLightness(param0, param2)];
         var5 = this.field_d.field_c.a((byte) -52, param1 & 65535);
         var6 = var5.field_c & 255;
         if (var6 != 0) {
@@ -2880,7 +2880,7 @@ final class ww extends ka {
         }
     }
 
-    private final int a(int param0, int param1) {
+    private final int scaleHslLightness(int param0, int param1) {
         param1 = param1 * (param0 & 127) >> 7;
         if (param1 < 2) {
           param1 = 2;
@@ -3867,7 +3867,7 @@ final class ww extends ka {
 
     }
 
-    ww(sfa param0) {
+    ww(SoftwareGraphicsToolkit param0) {
         this.field_zb = false;
         this.field_Z = 0;
         this.field_r = false;
@@ -3880,7 +3880,7 @@ final class ww extends ka {
         this.field_d = param0;
     }
 
-    ww(sfa param0, oc param1, int param2, int param3, int param4, int param5) {
+    ww(SoftwareGraphicsToolkit param0, oc param1, int param2, int param3, int param4, int param5) {
         int var9_int = 0;
         int stackIn_6_0 = 0;
         int stackIn_41_0 = 0;

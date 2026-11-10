@@ -30,7 +30,7 @@ final class ho {
           } else {
             var2 = new rw();
             var2.field_f = param1;
-            field_a.b((byte) -118, var2);
+            field_a.addLast((byte) -118, var2);
           }
           return;
         }
@@ -40,7 +40,7 @@ final class ho {
         rw var1;
         RuntimeException var1_ref;
         while (true) {
-          var1 = (rw) (field_a.c(-113));
+          var1 = (rw) (field_a.removeFirst(-113));
           if (var1 != null) {
             var1.field_f.w(true);
             var1.unlink(120);

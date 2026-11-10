@@ -29,7 +29,7 @@ final class sna {
         Player var10;
         var9 = TombRacer.field_G ? 1 : 0;
         var10 = this.field_l.field_k.players[this.field_l.field_x];
-        var3 = var10.f((byte) -106);
+        var3 = var10.getRoom((byte) -106);
         var4 = this.field_l.field_k.i(1, this.field_l.field_x);
         if (param0 != 9981) {
           this.a(77);
@@ -39,7 +39,7 @@ final class sna {
           if (0 == this.field_g) {
             this.a(fk.field_j, new wq(), 50, param0 ^ -9907);
           }
-          var5_ref_fsa__ = var3.n(16);
+          var5_ref_fsa__ = var3.getAllTraps(16);
           var6_ref_fsa__ = var5_ref_fsa__;
           for (var7 = 0; var7 < var6_ref_fsa__.length; var7++) {
             var8 = var6_ref_fsa__[var7];
@@ -125,7 +125,7 @@ final class sna {
           }
           var5 = new dl(this.field_l, param1);
           var5.a(tea.field_a, param0, vda.field_n, (byte) 21);
-          this.field_c.b((byte) -125, new mga(var5, param2));
+          this.field_c.addLast((byte) -125, new mga(var5, param2));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sna.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -135,7 +135,7 @@ final class sna {
         mga var2;
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
-        var2 = (mga) (this.field_c.f(-80));
+        var2 = (mga) (this.field_c.first(-80));
         while (var2 != null) {
           if (var2.field_k > 0) {
             var2.field_k = var2.field_k - 1;
@@ -145,7 +145,7 @@ final class sna {
               var2.unlink(param0 ^ 18);
             }
           }
-          var2 = (mga) (this.field_c.e(108));
+          var2 = (mga) (this.field_c.next(108));
         }
         if (param0 != 44) {
           this.a(1);

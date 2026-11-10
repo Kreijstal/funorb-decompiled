@@ -205,10 +205,10 @@ final class vh {
         try {
           var14 = vc.field_q;
           var2 = var14.h(255);
-          var3 = (upa) (ina.field_d.f(param0 ^ 100));
+          var3 = (upa) (ina.field_d.first(param0 ^ 100));
           while (var3 != null) {
             if (var3.field_n != var2) {
-              var3 = (upa) (ina.field_d.e(117));
+              var3 = (upa) (ina.field_d.next(117));
               continue;
             }
             break;

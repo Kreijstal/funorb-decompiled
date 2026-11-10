@@ -5,7 +5,7 @@ final class ega {
     static int field_c;
     static String field_d;
     static int field_b;
-    static nh field_e;
+    static ToolkitSprite field_e;
     private static String[] field_a;
 
     final static boolean a(int param0, CharSequence param1, boolean param2, boolean param3) {
@@ -98,7 +98,7 @@ final class ega {
     public static void releaseStatics(int param0) {
         field_e = null;
         if (param0 != 2) {
-          field_e = (nh) null;
+          field_e = (ToolkitSprite) null;
         }
         field_d = null;
         field_a = null;

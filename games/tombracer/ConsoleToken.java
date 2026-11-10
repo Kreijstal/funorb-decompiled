@@ -170,15 +170,15 @@ final class ConsoleToken extends IntrusiveNode {
           }
           try {
             if (tr.field_f == this.kind) {
-              var7 = new bfa[this.field_i.a((byte) -16)];
+              var7 = new bfa[this.field_i.size((byte) -16)];
               var8 = var7;
               var4 = 0;
-              var5 = (ConsoleToken) (this.field_i.f(-80));
+              var5 = (ConsoleToken) (this.field_i.first(-80));
               while (var5 != null) {
                 incrementValue$0 = var4;
                 var4++;
                 var7[incrementValue$0] = var5.a(-1, param1);
-                var5 = (ConsoleToken) (this.field_i.e(114));
+                var5 = (ConsoleToken) (this.field_i.next(114));
               }
               stackIn_9_0 = pc.a(param1, 19, this.text, var8);
               return stackIn_9_0;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lca implements fo {
+final class lca implements Renderable {
     private static String[] field_g;
     int field_b;
     int field_c;
@@ -12,7 +12,7 @@ final class lca implements fo {
 
     public final boolean d(byte param0) {
         if (param0 != 48) {
-          this.e((byte) 127);
+          this.getRenderZ((byte) 127);
           return this.field_a.d((byte) 48);
         }
         return this.field_a.d((byte) 48);
@@ -24,24 +24,24 @@ final class lca implements fo {
         }
     }
 
-    public final int e(byte param0) {
+    public final int getRenderZ(byte param0) {
         if (param0 > -86) {
           this.field_d = -90;
-          return this.field_a.e((byte) -121);
+          return this.field_a.getRenderZ((byte) -121);
         }
-        return this.field_a.e((byte) -121);
+        return this.field_a.getRenderZ((byte) -121);
     }
 
-    public final int c(byte param0) {
+    public final int getRenderY(byte param0) {
         if (param0 <= 91) {
           return -97;
         }
-        return this.field_a.c((byte) 117) + this.field_d;
+        return this.field_a.getRenderY((byte) 117) + this.field_d;
     }
 
-    public final int b(byte param0) {
+    public final int getRenderX(byte param0) {
         int var2 = 1 % ((-23 - param0) / 53);
-        return this.field_a.b((byte) -79) + this.field_b;
+        return this.field_a.getRenderX((byte) -79) + this.field_b;
     }
 
     final static boolean a(boolean param0) {
@@ -64,7 +64,7 @@ final class lca implements fo {
         return false;
     }
 
-    public final void a(int param0, iq param1) {
+    public final void render(int param0, iq param1) {
         if (param0 <= 103) {
           return;
         }
@@ -74,7 +74,7 @@ final class lca implements fo {
           return;
         }
         try {
-          gqa.a(dfa.a(this.field_e, 2048, -108), -83584144, this.c((byte) 97), this.b((byte) -92), this.field_a.a(false, this), this.e((byte) -110));
+          gqa.a(dfa.a(this.field_e, 2048, -108), -83584144, this.getRenderY((byte) 97), this.getRenderX((byte) -92), this.field_a.a(false, this), this.getRenderZ((byte) -110));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "lca.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

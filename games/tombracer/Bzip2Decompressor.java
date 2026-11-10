@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kr {
+final class Bzip2Decompressor {
     private static nna field_a;
 
-    private final static void a(int[] param0, int[] param1, int[] param2, byte[] param3, int param4, int param5, int param6) {
+    private final static void buildHuffmanTables(int[] param0, int[] param1, int[] param2, byte[] param3, int param4, int param5, int param6) {
         int var9 = 0;
         int dupTemp$0 = 0;
         int var7;
@@ -49,7 +49,7 @@ final class kr {
         }
     }
 
-    private final static int a(int param0, nna param1) {
+    private final static int readBits(int param0, nna param1) {
         int var2;
         while (param1.field_o < param0) {
           param1.field_n = param1.field_n << 8 | param1.field_v[param1.field_B] & 255;
@@ -208,7 +208,7 @@ final class kr {
     }
 
     private final static byte b(nna param0) {
-        return (byte)kr.a(8, param0);
+        return (byte)Bzip2Decompressor.readBits(8, param0);
     }
 
     final static int a(byte[] param0, int param1, byte[] param2, int param3, int param4) {
@@ -226,7 +226,7 @@ final class kr {
           field_a.field_n = 0;
           field_a.field_c = 0;
           field_a.field_D = 0;
-          kr.e(field_a);
+          Bzip2Decompressor.e(field_a);
           param1 = param1 - field_a.field_d;
           field_a.field_v = null;
           field_a.field_l = null;
@@ -307,31 +307,31 @@ final class kr {
           if (var26 == 0) {
             return;
           }
-          var1 = kr.b(param0);
+          var1 = Bzip2Decompressor.b(param0);
           if (var1 == 23) {
             return;
           }
-          var1 = kr.b(param0);
-          var1 = kr.b(param0);
-          var1 = kr.b(param0);
-          var1 = kr.b(param0);
-          var1 = kr.b(param0);
-          var1 = kr.b(param0);
-          var1 = kr.b(param0);
-          var1 = kr.b(param0);
-          var1 = kr.b(param0);
-          var1 = kr.d(param0);
+          var1 = Bzip2Decompressor.b(param0);
+          var1 = Bzip2Decompressor.b(param0);
+          var1 = Bzip2Decompressor.b(param0);
+          var1 = Bzip2Decompressor.b(param0);
+          var1 = Bzip2Decompressor.b(param0);
+          var1 = Bzip2Decompressor.b(param0);
+          var1 = Bzip2Decompressor.b(param0);
+          var1 = Bzip2Decompressor.b(param0);
+          var1 = Bzip2Decompressor.b(param0);
+          var1 = Bzip2Decompressor.d(param0);
           if (var1 == 0) {
           }
           param0.field_h = 0;
-          var1 = kr.b(param0);
+          var1 = Bzip2Decompressor.b(param0);
           param0.field_h = param0.field_h << 8 | var1 & 255;
-          var1 = kr.b(param0);
+          var1 = Bzip2Decompressor.b(param0);
           param0.field_h = param0.field_h << 8 | var1 & 255;
-          var1 = kr.b(param0);
+          var1 = Bzip2Decompressor.b(param0);
           param0.field_h = param0.field_h << 8 | var1 & 255;
           for (var4 = 0; var4 < 16; var4++) {
-            var1 = kr.d(param0);
+            var1 = Bzip2Decompressor.d(param0);
             if (var1 != 1) {
               param0.field_C[var4] = false;
             } else {
@@ -344,22 +344,22 @@ final class kr {
           for (var4 = 0; var4 < 16; var4++) {
             if (param0.field_C[var4]) {
               for (var5 = 0; var5 < 16; var5++) {
-                var1 = kr.d(param0);
+                var1 = Bzip2Decompressor.d(param0);
                 if (var1 == 1) {
                   param0.field_r[var4 * 16 + var5] = true;
                 }
               }
             }
           }
-          kr.c(param0);
+          Bzip2Decompressor.c(param0);
           var7 = param0.field_F + 2;
-          var8 = kr.a(3, param0);
-          var9 = kr.a(15, param0);
+          var8 = Bzip2Decompressor.readBits(3, param0);
+          var9 = Bzip2Decompressor.readBits(15, param0);
           var4 = 0;
           while (var4 < var9) {
             var5 = 0;
             while (true) {
-              var1 = kr.d(param0);
+              var1 = Bzip2Decompressor.d(param0);
               if (var1 != 0) {
                 var5++;
                 continue;
@@ -389,7 +389,7 @@ final class kr {
           }
           var6 = 0;
           while (var6 < var8) {
-            var17 = kr.a(5, param0);
+            var17 = Bzip2Decompressor.readBits(5, param0);
             var4 = 0;
             while (true) {
               if (var4 >= var7) {
@@ -397,13 +397,13 @@ final class kr {
                 break;
               }
               while (true) {
-                var1 = kr.d(param0);
+                var1 = Bzip2Decompressor.d(param0);
                 if (var1 == 0) {
                   param0.field_e[var6][var4] = (byte)var17;
                   var4++;
                   break;
                 }
-                var1 = kr.d(param0);
+                var1 = Bzip2Decompressor.d(param0);
                 if (var1 != 0) {
                   var17--;
                   continue;
@@ -423,7 +423,7 @@ final class kr {
                 var2 = param0.field_e[var6][var4];
               }
             }
-            kr.a(param0.field_s[var6], param0.field_b[var6], param0.field_t[var6], param0.field_e[var6], var2, var3, var7);
+            Bzip2Decompressor.buildHuffmanTables(param0.field_s[var6], param0.field_b[var6], param0.field_t[var6], param0.field_e[var6], var2, var3, var7);
             param0.field_j[var6] = var2;
           }
           var10 = param0.field_F + 1;
@@ -452,10 +452,10 @@ final class kr {
           }
           var12--;
           var18 = var22;
-          var19 = kr.a(var18, param0);
+          var19 = Bzip2Decompressor.readBits(var18, param0);
           while (var19 > ((int[]) (var23))[var18]) {
             var18++;
-            var20 = kr.d(param0);
+            var20 = Bzip2Decompressor.d(param0);
             var19 = var19 << 1 | var20;
           }
           var13 = ((int[]) (var25))[var19 - ((int[]) (var24))[var18]];
@@ -483,7 +483,7 @@ final class kr {
               param0.field_u = param0.field_u >> 8;
               param0.field_E = param0.field_E + 1;
               param0.field_f = var14;
-              kr.a(param0);
+              Bzip2Decompressor.a(param0);
               if (param0.field_E == param0.field_f + 1 &&
                 param0.field_x == 0) {
                 var26 = 1;
@@ -555,10 +555,10 @@ final class kr {
               }
               var12--;
               var18 = var22;
-              var19 = kr.a(var18, param0);
+              var19 = Bzip2Decompressor.readBits(var18, param0);
               while (var19 > ((int[]) (var23))[var18]) {
                 var18++;
-                var20 = kr.d(param0);
+                var20 = Bzip2Decompressor.d(param0);
                 var19 = var19 << 1 | var20;
               }
               var13 = ((int[]) (var25))[var19 - ((int[]) (var24))[var18]];
@@ -586,10 +586,10 @@ final class kr {
               }
               var12--;
               var18 = var22;
-              var19 = kr.a(var18, param0);
+              var19 = Bzip2Decompressor.readBits(var18, param0);
               while (var19 > ((int[]) (var23))[var18]) {
                 var18++;
-                var20 = kr.d(param0);
+                var20 = Bzip2Decompressor.d(param0);
                 var19 = var19 << 1 | var20;
               }
               var13 = ((int[]) (var25))[var19 - ((int[]) (var24))[var18]];
@@ -608,7 +608,7 @@ final class kr {
     }
 
     private final static byte d(nna param0) {
-        return (byte)kr.a(1, param0);
+        return (byte)Bzip2Decompressor.readBits(1, param0);
     }
 
     public static void releaseStatics() {

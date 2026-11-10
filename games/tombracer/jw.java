@@ -33,7 +33,7 @@ final class jw extends b implements cd, tsa {
         RuntimeException decompiledCaughtException = null;
         td var6 = null;
         RuntimeException var6_ref = null;
-        il var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         nl var9 = null;
         jsa var12 = null;
@@ -315,7 +315,7 @@ final class jw extends b implements cd, tsa {
           KeySwitchComponent.field_J.a(this.field_F, param0 + (this.field_i + 20), param1 + this.field_n + 15, this.field_m - 40, this.field_p, 16777215, -1, 1, 0, KeySwitchComponent.field_J.field_w);
         }
         if (this.field_E != null) {
-          bea.c(param0 + 10, param1 + 134, this.field_m - 20, 4210752);
+          SoftwareRasterizer.drawHorizontalLine(param0 + 10, param1 + 134, this.field_m - 20, 4210752);
         }
         super.a(param0, param1, param2 + param2, param3);
     }

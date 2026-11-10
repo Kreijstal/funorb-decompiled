@@ -56,20 +56,20 @@ final class so extends tra implements mk {
           bga.field_b = bga.field_b - 1;
           if (0 == bga.field_b) {
             bga.field_b = 200;
-            var1 = (vb) (DivisionMazeGenerator.field_e.f(-80));
+            var1 = (vb) (DivisionMazeGenerator.field_e.first(-80));
             while (var1 != null) {
               if (!var1.field_h.isLinked((byte) -101)) {
                 var1.unlink(21);
               }
-              var1 = (vb) (DivisionMazeGenerator.field_e.e(110));
+              var1 = (vb) (DivisionMazeGenerator.field_e.next(110));
             }
             if (db.field_f != null) {
-              var1Lifetime1 = (vb) (db.field_f.f(param0 ^ 16378));
+              var1Lifetime1 = (vb) (db.field_f.first(param0 ^ 16378));
               while (var1Lifetime1 != null) {
                 if (!var1Lifetime1.field_h.isLinked((byte) -91)) {
                   var1Lifetime1.unlink(param0 + 16389);
                 }
-                var1Lifetime1 = (vb) (db.field_f.e(118));
+                var1Lifetime1 = (vb) (db.field_f.next(118));
               }
             }
           }

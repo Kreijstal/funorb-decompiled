@@ -173,7 +173,7 @@ final class nda {
         RuntimeException var5 = null;
         long var6 = 0L;
         u var8 = null;
-        fg var9 = null;
+        VorbisSample var9 = null;
         u stackIn_2_0 = null;
         Object stackIn_11_0 = null;
         u stackIn_19_0 = null;
@@ -195,9 +195,9 @@ final class nda {
             param1[0] <= 0) {
             return null;
           }
-          var9 = (fg) (this.field_e.a((byte) -114, var6));
+          var9 = (VorbisSample) (this.field_e.a((byte) -114, var6));
           if (var9 == null) {
-            var9 = fg.a(this.field_c, param3, param0);
+            var9 = VorbisSample.a(this.field_c, param3, param0);
             if (var9 == null) {
               stackIn_11_0 = null;
               return (u) (stackIn_11_0);
@@ -340,7 +340,7 @@ final class nda {
         RuntimeException var5 = null;
         long var6 = 0L;
         u var8 = null;
-        vma var9 = null;
+        SoundEffect var9 = null;
         u var10 = null;
         u stackIn_4_0 = null;
         Object stackIn_8_0 = null;
@@ -368,7 +368,7 @@ final class nda {
             stackIn_8_0 = null;
             return (u) (stackIn_8_0);
           }
-          var9 = vma.a(this.field_b, param1, param2);
+          var9 = SoundEffect.a(this.field_b, param1, param2);
           if (var9 == null) {
             stackIn_11_0 = null;
             return (u) (stackIn_11_0);

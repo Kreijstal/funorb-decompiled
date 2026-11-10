@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kaa implements isa {
-    private il field_c;
+    private BitmapFont field_c;
     private int field_a;
     private int field_b;
 
@@ -122,7 +122,7 @@ final class kaa implements isa {
         this.field_c = KeySwitchComponent.field_J;
     }
 
-    kaa(il param0, int param1, int param2) {
+    kaa(BitmapFont param0, int param1, int param2) {
         try {
           this.field_c = param0;
           this.field_a = param1;

@@ -18,7 +18,7 @@ final class lma extends dg {
     private boolean field_t;
     private fh[][] field_x;
 
-    final void a(gr param0, gma param1, byte param2) {
+    final void a(gr param0, WorldBody param1, byte param2) {
         try {
           super.a(param0, param1, param2);
         } catch (RuntimeException runtimeException) {
@@ -102,17 +102,17 @@ final class lma extends dg {
           var4 = var3.d(param0 + 51, false) ? 1 : 0;
           if (this.field_o == null &&
             var4 != 0) {
-            this.field_o = var6.a(new fm(17, this.b((byte) -105), this.c((byte) 94), this.e((byte) -114)), -58);
+            this.field_o = var6.a(new fm(17, this.getRenderX((byte) -105), this.getRenderY((byte) 94), this.getRenderZ((byte) -114)), -58);
           } else {
             if (this.field_o != null &&
               var4 == 0) {
-              var6.a(new fm(18, this.b((byte) 101), this.c((byte) 109), this.e((byte) -89)), -58);
+              var6.a(new fm(18, this.getRenderX((byte) 101), this.getRenderY((byte) 109), this.getRenderZ((byte) -89)), -58);
               this.field_o.a(14, var6);
               this.field_o = null;
             }
           }
           if (this.field_o != null) {
-            this.field_o.a(this.b((byte) -93), var6.field_c, -128, var6.field_h, this.c((byte) 110));
+            this.field_o.a(this.getRenderX((byte) -93), var6.field_c, -128, var6.field_h, this.getRenderY((byte) 110));
           }
         }
     }
@@ -301,7 +301,7 @@ final class lma extends dg {
             this.field_m = -87;
           }
           super.a(127, param1, param2);
-          if (17 <= param1.field_E) {
+          if (17 <= param1.formatVersion) {
             this.field_y = param2.readBits((byte) 44, 4);
             stackIn_7_1 = (param2.readBits((byte) 44, 1) == 1);
             this.field_p = stackIn_7_1;
@@ -448,18 +448,18 @@ final class lma extends dg {
         int var37;
         Room var38;
         var37 = TombRacer.field_G ? 1 : 0;
-        var38 = this.field_h.f((byte) 68);
-        var3 = var38.m((byte) -86);
-        var4 = var38.s(param0 ^ 2097238);
-        var5 = this.field_h.c(param0 - 2097273);
-        var6 = this.field_h.a((byte) 55);
-        this.field_v = this.field_h.d(3) - var5 / 2;
+        var38 = this.field_h.getRoom((byte) 68);
+        var3 = var38.getWidth((byte) -86);
+        var4 = var38.getHeight(param0 ^ 2097238);
+        var5 = this.field_h.getWidth(param0 - 2097273);
+        var6 = this.field_h.getHeight((byte) 55);
+        this.field_v = this.field_h.getX(3) - var5 / 2;
         this.field_A = this.field_v + var5;
-        this.field_u = this.field_h.e(9648) - var6 / 2;
+        this.field_u = this.field_h.getY(9648) - var6 / 2;
         this.field_m = var6 + this.field_u;
         var7 = this.k(10) ? 1 : 0;
-        var8 = this.field_h.d(3);
-        var9 = this.field_h.e(9648);
+        var8 = this.field_h.getX(3);
+        var9 = this.field_h.getY(9648);
         this.field_w = (-this.field_u + this.field_m) / 2097152;
         this.field_q = (-this.field_v + this.field_A) / param0;
         this.field_x = new fh[this.field_q][this.field_w];
@@ -935,8 +935,8 @@ final class lma extends dg {
         var2 = this.k(param0 ^ 32172) ? 1 : 0;
         var3 = this.a(param0 - 32121);
         var4 = 4194304;
-        var5 = this.field_h.d(3);
-        var6 = this.field_h.e(9648);
+        var5 = this.field_h.getX(3);
+        var6 = this.field_h.getY(9648);
         for (var10 = 0; var10 < this.field_q; var10++) {
           for (var11 = 0; this.field_w > var11; var11++) {
             boolean decompiledFrameRemainder1 = true;

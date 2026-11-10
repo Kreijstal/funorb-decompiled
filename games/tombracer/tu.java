@@ -57,7 +57,7 @@ class tu extends eha {
             ab.field_n.field_y.a((byte) -105, 77, -1);
           }
           var7 = new qw(param1, param3, param2, param5, param4);
-          this.field_c.b((byte) -88, var7);
+          this.field_c.addLast((byte) -88, var7);
           var9 = null;
           if (1 != param5) {
             var8 = -10;
@@ -116,7 +116,7 @@ class tu extends eha {
           }
           var5_int = param0;
           if (var5_int == 0) {
-            var6 = param2.f((byte) 121).a(param2.d(3), param2.e(9648), (byte) 100, 3145728 + param2.g((byte) 115));
+            var6 = param2.getRoom((byte) 121).a(param2.getX(3), param2.getY(9648), (byte) 100, 3145728 + param2.g((byte) 115));
             var6.a(false, 128, 15, 128, 50);
             var6.a(131072, 0, -107, 0);
           } else {
@@ -124,7 +124,7 @@ class tu extends eha {
               if (2 == var5_int) {
               }
             } else {
-              var7 = param2.f((byte) -109).a(param2.d(3), param2.e(9648), (byte) 100, param2.g((byte) 115) + 3145728);
+              var7 = param2.getRoom((byte) -109).a(param2.getX(3), param2.getY(9648), (byte) 100, param2.g((byte) 115) + 3145728);
               var7.a(false, 128, 16, 128, 50);
               var7.a(131072, 0, -89, 0);
             }
@@ -193,7 +193,7 @@ class tu extends eha {
           if (var3_int == -1) {
             return;
           }
-          var4 = param0.f((byte) -65).u(-90);
+          var4 = param0.getRoom((byte) -65).getPlayer(-90);
           if (param1 != 1) {
             return;
           }
@@ -236,7 +236,7 @@ class tu extends eha {
           if (!this.field_f.k(-25319) &&
             param2 != null &&
             param2.field_u != null) {
-            var4_int = param2.u(-2).A(param0 + 2);
+            var4_int = param2.getPlayer(-2).A(param0 + 2);
             if (param2.j(0) &&
               !this.field_f.j(param0 - 1876)) {
               ProxySocketConnector.a(var4_int, 5);
@@ -244,7 +244,7 @@ class tu extends eha {
               li.b(var4_int, (byte) 116);
             }
             MatchState.d(param0 ^ -2, var4_int);
-            var5 = param2.n(16);
+            var5 = param2.getAllTraps(16);
             var6 = var5;
             for (var7 = 0; var7 < var6.length; var7++) {
               var8 = var6[var7];
@@ -283,10 +283,10 @@ class tu extends eha {
 
     final qw b(byte param0) {
         int var2 = -114 / ((59 - param0) / 50);
-        if (this.field_c.d((byte) 14)) {
+        if (this.field_c.isEmpty((byte) 14)) {
           return null;
         }
-        return (qw) (this.field_c.c(73));
+        return (qw) (this.field_c.removeFirst(73));
     }
 
     void a(Player param0, Room param1, boolean param2) {

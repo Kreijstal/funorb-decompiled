@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class maa {
+final class MidiFileReader {
     private static byte[] field_b;
     private PacketBuffer field_d;
     private int[] field_c;
@@ -155,7 +155,7 @@ final class maa {
         this.field_f = null;
     }
 
-    final int f() {
+    final int nextTrack() {
         int var4 = 0;
         int var1;
         int var2;
@@ -189,11 +189,11 @@ final class maa {
         field_b = null;
     }
 
-    maa() {
+    MidiFileReader() {
         this.field_d = new PacketBuffer((byte[]) null);
     }
 
-    final void a(long param0) {
+    final void reset(long param0) {
         int var4 = 0;
         this.field_i = param0;
         int var3 = this.field_c.length;
@@ -206,7 +206,7 @@ final class maa {
         }
     }
 
-    maa(byte[] param0) {
+    MidiFileReader(byte[] param0) {
         this.field_d = new PacketBuffer((byte[]) null);
         this.a(param0);
     }

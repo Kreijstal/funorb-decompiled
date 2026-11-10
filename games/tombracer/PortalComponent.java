@@ -133,7 +133,7 @@ final class PortalComponent extends kna {
         super(param0, param1, param2, param3);
         this.field_G = new f(1, 1);
         try {
-          this.field_G = new f(1, 1, param0.field_E, param2);
+          this.field_G = new f(1, 1, param0.formatVersion, param2);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

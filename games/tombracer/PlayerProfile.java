@@ -24,7 +24,7 @@ final class PlayerProfile {
     private BitSet coursesUnlocked;
     static int field_c;
     static String[] field_q;
-    static nh[] field_r;
+    static ToolkitSprite[] field_r;
 
     final static void a(boolean param0) {
         if (!param0) {
@@ -142,12 +142,12 @@ final class PlayerProfile {
         if (param0 < 29) {
           PlayerProfile.releaseStatics(90);
         }
-        return (taa) (this.field_i.c(59));
+        return (taa) (this.field_i.removeFirst(59));
     }
 
     final int a(int param0) {
         int var2 = -45 / ((-54 - param0) / 34);
-        return this.field_i.a((byte) -16);
+        return this.field_i.size((byte) -16);
     }
 
     final static void a(int param0, int param1) {
@@ -234,7 +234,7 @@ final class PlayerProfile {
           if (param0 != 8) {
             PlayerProfile.a(true);
           }
-          this.field_i.b((byte) -48, param1);
+          this.field_i.addLast((byte) -48, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ufa.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

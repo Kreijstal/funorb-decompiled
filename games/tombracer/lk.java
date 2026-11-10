@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lk extends IntrusiveNode implements qn, fo, noa {
+final class lk extends IntrusiveNode implements qn, Renderable, noa {
     private int field_o;
     private int field_p;
     private bca field_m;
@@ -23,7 +23,7 @@ final class lk extends IntrusiveNode implements qn, fo, noa {
 
     final boolean a(int param0, boolean param1) {
         if (param1) {
-          this.c((byte) -27);
+          this.getRenderY((byte) -27);
         }
         return this.field_m.a(param0, 14530);
     }
@@ -42,7 +42,7 @@ final class lk extends IntrusiveNode implements qn, fo, noa {
           this.field_g = stackIn_3_1;
           if (param1 != 104) {
             var4 = (iq) null;
-            this.a(-36, (iq) null);
+            this.render(-36, (iq) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -71,11 +71,11 @@ final class lk extends IntrusiveNode implements qn, fo, noa {
     final void a(int param0, int param1) {
         this.field_n = param1;
         if (param0 != -6492) {
-          this.b((byte) 30);
+          this.getRenderX((byte) 30);
         }
     }
 
-    public final void a(int param0, iq param1) {
+    public final void render(int param0, iq param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -103,7 +103,7 @@ final class lk extends IntrusiveNode implements qn, fo, noa {
         }
     }
 
-    public final int b(byte param0) {
+    public final int getRenderX(byte param0) {
         int var2 = -17 % ((-23 - param0) / 53);
         return this.field_n;
     }
@@ -139,14 +139,14 @@ final class lk extends IntrusiveNode implements qn, fo, noa {
         return this.a(72);
     }
 
-    public final int c(byte param0) {
+    public final int getRenderY(byte param0) {
         if (param0 < 91) {
           return -46;
         }
         return this.field_p;
     }
 
-    public final int e(byte param0) {
+    public final int getRenderZ(byte param0) {
         if (param0 >= -86) {
           this.field_k = -73;
           return 0;
@@ -205,7 +205,7 @@ final class lk extends IntrusiveNode implements qn, fo, noa {
           this.field_o = param1.readBits((byte) 44, 10) << 16;
           this.field_g = param1.readBits((byte) 44, 1) == 1 ? true : false;
           this.field_f = param1.readBits((byte) 44, 1) == 1 ? true : false;
-          this.field_m = new bca(param0.field_E, param1);
+          this.field_m = new bca(param0.formatVersion, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "lk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

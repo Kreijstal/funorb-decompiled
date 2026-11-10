@@ -7,7 +7,7 @@ final class vua extends qr {
     static String field_C;
     static int field_B;
     static String[] field_D;
-    static nh field_A;
+    static ToolkitSprite field_A;
 
     final boolean a(int param0, int param1, int param2, int param3, int param4, ae param5, int param6) {
         RuntimeException var8 = null;
@@ -121,7 +121,7 @@ final class vua extends qr {
           stackIn_20_0 = ((param1 & 55) == 0);
           return stackIn_20_0 & (cra.a(param1, param2 ^ -13642, param0) | wq.b(param1, param0, 8000));
         }
-        field_A = (nh) null;
+        field_A = (ToolkitSprite) null;
         stackIn_5_0 = o.a(-1, param1, param0);
         stackIn_6_1 = ((45056 & param0) == 0) ? false : true;
         if (stackIn_5_0 | stackIn_6_1 | mpa.a(false, param1, param0)) {

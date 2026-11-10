@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class eka extends ci {
-    static il field_o;
+    static BitmapFont field_o;
     private int field_m;
     static String field_n;
 

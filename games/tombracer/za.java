@@ -3,7 +3,7 @@
  */
 abstract class za extends IntrusiveNode {
     static String field_f;
-    static nh field_g;
+    static ToolkitSprite field_g;
 
     final static int a(int param0, byte param1, int param2, int param3) {
         if (param0 > param3) {
@@ -15,7 +15,7 @@ abstract class za extends IntrusiveNode {
         if (param1 > 35) {
           return param3;
         }
-        field_g = (nh) null;
+        field_g = (ToolkitSprite) null;
         return param3;
     }
 
@@ -152,7 +152,7 @@ abstract class za extends IntrusiveNode {
         if (param1 > 35) {
           return param3;
         }
-        field_g = (nh) null;
+        field_g = (ToolkitSprite) null;
         return param3;
     }
 }

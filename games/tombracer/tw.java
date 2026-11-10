@@ -4,7 +4,7 @@
 final class tw {
     int field_B;
     int field_M;
-    private sfa field_z;
+    private SoftwareGraphicsToolkit field_z;
     static String field_g;
     pna field_u;
     boolean field_h;
@@ -115,7 +115,7 @@ final class tw {
         field_f = (byte[][]) null;
     }
 
-    tw(sfa param0) {
+    tw(SoftwareGraphicsToolkit param0) {
         int var2_int = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

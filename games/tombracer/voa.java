@@ -225,10 +225,10 @@ final class voa extends ci {
           var2 = var28.h(255);
           if (var2 == 0) {
             var3 = var28.d(122);
-            var4 = (bb) (mg.field_b.f(-80));
+            var4 = (bb) (mg.field_b.first(-80));
             while (var4 != null) {
               if (var4.field_n != var3) {
-                var4 = (bb) (mg.field_b.e(124));
+                var4 = (bb) (mg.field_b.next(124));
                 continue;
               }
               break;
@@ -324,10 +324,10 @@ final class voa extends ci {
           if (var2 == 1) {
             var3Lifetime1 = var28.d(125);
             var4_long = var28.b(290646880);
-            var6_ref_kb = (kb) (nn.field_a.f(-80));
+            var6_ref_kb = (kb) (nn.field_a.first(-80));
             while (var6_ref_kb != null) {
               if (var6_ref_kb.field_l != var3Lifetime1) {
-                var6_ref_kb = (kb) (nn.field_a.e(122));
+                var6_ref_kb = (kb) (nn.field_a.next(122));
                 continue;
               }
               break;
@@ -368,9 +368,9 @@ final class voa extends ci {
     final static void a(int param0, boolean param1, int param2, boolean param3, int param4, boolean param5, int param6, int param7, boolean param8, boolean param9) {
         int var11;
         var11 = TombRacer.field_G ? 1 : 0;
-        if (!param1 && (bea.field_g != ob.field_i ||
-          BufferedSocket.field_g != bea.field_a) && (bea.field_a == gn.field_C.field_e &&
-          gn.field_C.field_f == bea.field_g)) {
+        if (!param1 && (SoftwareRasterizer.field_g != ob.field_i ||
+          BufferedSocket.field_g != SoftwareRasterizer.field_a) && (SoftwareRasterizer.field_a == gn.field_C.field_e &&
+          gn.field_C.field_f == SoftwareRasterizer.field_g)) {
           if (null != uu.field_a) {
             MazeComponent.c(false, 2);
           } else {

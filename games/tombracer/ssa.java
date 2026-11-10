@@ -10,7 +10,7 @@ final class ssa {
     static String field_d;
     static jea field_g;
     private iea field_f;
-    private nh field_e;
+    private ToolkitSprite field_e;
 
     final static void a(String param0, byte param1, Throwable param2) {
         try {
@@ -107,7 +107,7 @@ final class ssa {
 
     final void a(int param0, int param1, byte param2, int param3, int param4) {
         this.c(param2 ^ 31146);
-        this.field_b.T(param4, param1, param0, param3);
+        this.field_b.intersectClip(param4, param1, param0, param3);
         if (param2 != -12) {
           this.c(-41);
         }
@@ -121,7 +121,7 @@ final class ssa {
           }
           this.field_e = this.field_c.field_a;
         }
-        this.field_b.KA(this.field_c.field_d, this.field_c.field_h, this.field_c.field_c, this.field_c.field_f);
+        this.field_b.setClip(this.field_c.field_d, this.field_c.field_h, this.field_c.field_c, this.field_c.field_f);
         int var2 = -7 / ((param0 - 36) / 59);
         iea var3 = this.field_c;
         this.field_c = this.field_c.field_b;

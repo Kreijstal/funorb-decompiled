@@ -12,7 +12,7 @@ final class lfa extends dg {
 
     final void a(int param0, Room param1, BitPacketBuffer param2) {
         super.a(126, param1, param2);
-        if (param1.field_E <= 17) {
+        if (param1.formatVersion <= 17) {
           return;
         }
         if (param0 < 119) {
@@ -131,11 +131,11 @@ final class lfa extends dg {
         }
     }
 
-    final void a(gr param0, gma param1, byte param2) {
+    final void a(gr param0, WorldBody param1, byte param2) {
         try {
           super.a(param0, param1, param2);
-          this.field_r = param1.d(param2 - 33);
-          this.field_p = param1.e(param2 + 9612);
+          this.field_r = param1.getX(param2 - 33);
+          this.field_p = param1.getY(param2 + 9612);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "lfa.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -194,8 +194,8 @@ final class lfa extends dg {
           var8 = var3.field_B;
           discarded$0 = new uja(var8);
           var5 = 0;
-          if (var3.d(3) != this.field_r ||
-            var3.e(9648) != this.field_p) {
+          if (var3.getX(3) != this.field_r ||
+            var3.getY(9648) != this.field_p) {
             var5 = 1;
           }
         } else {
@@ -209,16 +209,16 @@ final class lfa extends dg {
           var7 = var3.field_B;
           discarded$1 = new uja(var7);
           var5 = 0;
-          if (var3.d(3) != this.field_r ||
-            var3.e(9648) != this.field_p) {
+          if (var3.getX(3) != this.field_r ||
+            var3.getY(9648) != this.field_p) {
             var5 = 1;
           }
         }
-        this.field_r = var3.d(3);
-        this.field_p = var3.e(param0 + 9649);
+        this.field_r = var3.getX(3);
+        this.field_p = var3.getY(param0 + 9649);
         if (var5 != 0 &&
           this.field_s == null) {
-          this.field_s = var6_ref.a(new fm(55, this.b((byte) 89), this.c((byte) 117), this.e((byte) -122)), -58);
+          this.field_s = var6_ref.a(new fm(55, this.getRenderX((byte) 89), this.getRenderY((byte) 117), this.getRenderZ((byte) -122)), -58);
           return;
         }
         if (var5 != 0) {

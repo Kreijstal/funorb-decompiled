@@ -87,11 +87,11 @@ final class kqa {
           if (param0 != 18916) {
             field_a = (PlatformTaskDispatcher) null;
           }
-          var1 = (vb) (DivisionMazeGenerator.field_e.f(-80));
+          var1 = (vb) (DivisionMazeGenerator.field_e.first(-80));
           while (var1 != null) {
             var2 = new fla(var1, var1.field_f.k(), var1.field_f.g());
             rs.a(var2, -58);
-            var1 = (vb) (DivisionMazeGenerator.field_e.e(119));
+            var1 = (vb) (DivisionMazeGenerator.field_e.next(119));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

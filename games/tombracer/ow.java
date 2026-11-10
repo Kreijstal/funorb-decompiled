@@ -143,7 +143,7 @@ final class ow extends wv {
         WhiteLightShooterComponent.field_K.a((aaa.a(false) >> 1) - (WhiteLightShooterComponent.field_K.a() >> 1), var3);
     }
 
-    final static jea a(int param0, int param1, int param2, int param3, il param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, byte param12) {
+    final static jea a(int param0, int param1, int param2, int param3, BitmapFont param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, byte param12) {
         jea var13 = null;
         RuntimeException var13_ref = null;
         jea stackIn_3_0 = null;

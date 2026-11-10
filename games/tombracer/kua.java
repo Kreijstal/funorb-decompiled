@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kua extends IntrusiveNode implements fo {
+final class kua extends IntrusiveNode implements Renderable {
     private Player field_h;
     private int field_g;
     private int field_l;
@@ -83,7 +83,7 @@ final class kua extends IntrusiveNode implements fo {
         this(param0.field_h, param0.field_l, param0.field_g, param0.field_f, param0.field_k);
     }
 
-    public final int e(byte param0) {
+    public final int getRenderZ(byte param0) {
         if (param0 >= -86) {
           this.field_h = (Player) null;
           return this.field_f;
@@ -98,7 +98,7 @@ final class kua extends IntrusiveNode implements fo {
         return false;
     }
 
-    public final void a(int param0, iq param1) {
+    public final void render(int param0, iq param1) {
         if (param0 < 103) {
           return;
         }
@@ -109,12 +109,12 @@ final class kua extends IntrusiveNode implements fo {
         }
     }
 
-    public final int b(byte param0) {
+    public final int getRenderX(byte param0) {
         int var2 = 105 % ((-23 - param0) / 53);
         return this.field_l;
     }
 
-    public final int c(byte param0) {
+    public final int getRenderY(byte param0) {
         if (param0 <= 91) {
           field_i = (jea) null;
           return this.field_g;

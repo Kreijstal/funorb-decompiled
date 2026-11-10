@@ -30,16 +30,16 @@ final class boa extends dg {
 
     final void a(byte param0, int param1) {
         super.a((byte) 97, param1);
-        this.a(28).b(false).a(this.field_h.e(9648), this.field_h.g((byte) 115), (byte) 46, this.field_h.d(3));
+        this.a(28).b(false).a(this.field_h.getY(9648), this.field_h.g((byte) 115), (byte) 46, this.field_h.getX(3));
         w var5 = (w) (this.a(30).field_G);
         if (var5 == null) {
           return;
         }
         int var4 = -67 / ((7 - param0) / 36);
         if (this.field_v == 0) {
-          var5.a(new fm(3, this.b((byte) -118), this.c((byte) 95), this.e((byte) -89)), -58);
+          var5.a(new fm(3, this.getRenderX((byte) -118), this.getRenderY((byte) 95), this.getRenderZ((byte) -89)), -58);
         } else {
-          var5.a(new fm(2, this.b((byte) -122), this.c((byte) 109), this.e((byte) -97)), -58);
+          var5.a(new fm(2, this.getRenderX((byte) -122), this.getRenderY((byte) 109), this.getRenderZ((byte) -97)), -58);
         }
         if (null != this.field_r) {
           this.field_r.a(-98, var5);
@@ -98,7 +98,7 @@ final class boa extends dg {
         }
     }
 
-    final void a(gma param0, int param1, gr param2) {
+    final void a(WorldBody param0, int param1, gr param2) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -111,8 +111,8 @@ final class boa extends dg {
           if (param2 instanceof mra) {
             this.field_v = 8;
           } else {
-            if (4194304 == param0.c(-92) &&
-              param0.a((byte) 55) == 4194304) {
+            if (4194304 == param0.getWidth(-92) &&
+              param0.getHeight((byte) 55) == 4194304) {
               this.field_v = 10;
               return;
             }
@@ -202,11 +202,11 @@ final class boa extends dg {
           if ((this.field_r == null ||
             !this.field_r.isLinked((byte) -116)) && var4 != 0) {
             if (this.i(param0 ^ -78)) {
-              this.field_r = var11.a(new fm(0, this.b((byte) -113), this.c((byte) 118), this.e((byte) -114)), -58);
+              this.field_r = var11.a(new fm(0, this.getRenderX((byte) -113), this.getRenderY((byte) 118), this.getRenderZ((byte) -114)), -58);
             } else if (this.field_v == 9) {
-              this.field_r = var11.a(new fm(4, this.b((byte) -112), this.c((byte) 92), this.e((byte) -87)), -58);
+              this.field_r = var11.a(new fm(4, this.getRenderX((byte) -112), this.getRenderY((byte) 92), this.getRenderZ((byte) -87)), -58);
             } else {
-              this.field_r = var11.a(new fm(1, this.b((byte) 39), this.c((byte) 92), this.e((byte) -109)), -58);
+              this.field_r = var11.a(new fm(1, this.getRenderX((byte) 39), this.getRenderY((byte) 92), this.getRenderZ((byte) -109)), -58);
             }
           } else {
             if (null != this.field_r &&
@@ -230,19 +230,19 @@ final class boa extends dg {
           boolean decompiledFrameRemainder0 = true;
           if (var7_int != 0 && (this.field_x == null ||
             !this.field_x.isLinked((byte) -100))) {
-            this.field_x = var11.a(new fm(5, this.b((byte) -97), this.c((byte) 107), this.e((byte) -107)), -58);
+            this.field_x = var11.a(new fm(5, this.getRenderX((byte) -97), this.getRenderY((byte) 107), this.getRenderZ((byte) -107)), -58);
             decompiledFrameRemainder0 = false;
           }
           else {
             if (var7_int == 0 &&
               null != this.field_x) {
-              var11.a(new fm(6, this.b((byte) 117), this.c((byte) 108), this.e((byte) -116)), -58);
+              var11.a(new fm(6, this.getRenderX((byte) 117), this.getRenderY((byte) 108), this.getRenderZ((byte) -116)), -58);
               this.field_x.a(81, var11);
               this.field_x = null;
             }
           }
           if (null != this.field_x) {
-            this.field_x.a(this.b((byte) -114), var11.field_c, -128, var11.field_h, this.c((byte) 105));
+            this.field_x.a(this.getRenderX((byte) -114), var11.field_c, -128, var11.field_h, this.getRenderY((byte) 105));
           }
         }
         if (16 == this.field_v) {
@@ -269,14 +269,14 @@ final class boa extends dg {
                   continue;
                 }
                 if (this.field_m < var8) {
-                  var11.a(-92, new fm(var8 - 2 + 34, this.b((byte) 30), this.c((byte) 105), this.e((byte) -105)));
+                  var11.a(-92, new fm(var8 - 2 + 34, this.getRenderX((byte) 30), this.getRenderY((byte) 105), this.getRenderZ((byte) -105)));
                 }
                 this.field_m = var8;
                 if (null != this.field_w) {
                   this.field_w.a(-119, var11);
                   this.field_w = null;
                 }
-                this.field_w = var11.a(new fm(29 + this.field_m - 1, this.b((byte) -80), this.c((byte) 109), this.e((byte) -97)), -58);
+                this.field_w = var11.a(new fm(29 + this.field_m - 1, this.getRenderX((byte) -80), this.getRenderY((byte) 109), this.getRenderZ((byte) -97)), -58);
               } else {
                 if (null != this.field_w) {
                   this.field_w.a(-94, var11);
@@ -324,21 +324,21 @@ final class boa extends dg {
               stackIn_75_0 = ~var8Lifetime1;
               stackIn_75_1 = ~this.field_p;
               if (stackIn_75_0 < stackIn_75_1) {
-                var11.a(-104, new fm(var8Lifetime1 - 2 + 44, this.b((byte) -85), this.c((byte) 125), this.e((byte) -117)));
+                var11.a(-104, new fm(var8Lifetime1 - 2 + 44, this.getRenderX((byte) -85), this.getRenderY((byte) 125), this.getRenderZ((byte) -117)));
               }
               this.field_p = var8Lifetime1;
               if (this.field_u != null) {
                 this.field_u.a(-123, var11);
                 this.field_u = null;
               }
-              this.field_u = var11.a(new fm(39 + this.field_p - 1, this.b((byte) 87), this.c((byte) 127), this.e((byte) -111)), -58);
+              this.field_u = var11.a(new fm(39 + this.field_p - 1, this.getRenderX((byte) 87), this.getRenderY((byte) 127), this.getRenderZ((byte) -111)), -58);
             }
             var7 = (Behaviour) (var17.a(-1));
           }
         }
         if (var3.j(param0) &&
           null == this.field_q) {
-          this.field_q = var11.a(new fm(7, this.b((byte) 122), this.c((byte) 92), this.e((byte) -99)), param0 ^ 57);
+          this.field_q = var11.a(new fm(7, this.getRenderX((byte) 122), this.getRenderY((byte) 92), this.getRenderZ((byte) -99)), param0 ^ 57);
         } else {
           if (!var3.j(-1) &&
             null != this.field_q) {
@@ -371,7 +371,7 @@ final class boa extends dg {
         this.field_p = 1;
     }
 
-    final void a(gr param0, gma param1, byte param2) {
+    final void a(gr param0, WorldBody param1, byte param2) {
         try {
           super.a(param0, param1, param2);
         } catch (RuntimeException runtimeException) {

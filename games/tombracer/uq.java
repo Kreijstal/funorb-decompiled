@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class uq implements fo {
+abstract class uq implements Renderable {
     static long field_d;
     static String field_f;
     static int field_a;
@@ -31,7 +31,7 @@ abstract class uq implements fo {
         }
     }
 
-    public abstract void a(int param0, iq param1);
+    public abstract void render(int param0, iq param1);
 
     final Room a(int param0) {
         if (param0 != 10685) {

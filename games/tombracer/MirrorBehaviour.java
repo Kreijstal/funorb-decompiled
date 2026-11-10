@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MirrorBehaviour extends Behaviour {
-    static nh field_r;
+    static ToolkitSprite field_r;
     private int field_p;
     private int field_n;
     private int field_v;
@@ -117,7 +117,7 @@ final class MirrorBehaviour extends Behaviour {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 1) {
-            field_r = (nh) null;
+            field_r = (ToolkitSprite) null;
           }
           var5_int = al.a(param2, 12, 12, this.field_u);
           if (-1 == var5_int) {
@@ -191,7 +191,7 @@ final class MirrorBehaviour extends Behaviour {
           }
           var5 = new pc();
           if (param0 >= -85) {
-            field_r = (nh) null;
+            field_r = (ToolkitSprite) null;
           }
           param2.field_h = var5;
           var6 = param2.field_e;
@@ -236,7 +236,7 @@ final class MirrorBehaviour extends Behaviour {
         try {
           super.a(true, param1);
           param1.a(param0, 120);
-          this.field_n = et.b(param1.a((byte) 55), param1.c(-23), -23);
+          this.field_n = et.b(param1.getHeight((byte) 55), param1.getWidth(-23), -23);
           this.b(1659280738);
           this.j((byte) 1);
         } catch (RuntimeException runtimeException) {
@@ -249,9 +249,9 @@ final class MirrorBehaviour extends Behaviour {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        int var2 = this.field_g.d(param0 ^ 2);
+        int var2 = this.field_g.getX(param0 ^ 2);
         if (param0 == 1) {
-          var3 = this.field_g.e(9648);
+          var3 = this.field_g.getY(9648);
           var4 = this.field_n >> 8;
           var5 = (this.field_t >> 8) * var4 / 2;
           var6 = var4 * (this.field_p >> 8) / 2;

@@ -15,7 +15,7 @@ class l extends cg {
     private rta[][] field_n;
     private int[] field_F;
     private int[] field_m;
-    private maa field_w;
+    private MidiFileReader field_w;
     private int[] field_o;
     private int field_G;
     private int[] field_y;
@@ -215,7 +215,7 @@ class l extends cg {
         boolean decompiledFrameCompleted0 = true;
         var4 = TombRacer.field_G ? 1 : 0;
         if ((this.field_M[param1] & 2) != 0) {
-          var3 = (rta) (this.field_v.field_l.f(-80));
+          var3 = (rta) (this.field_v.field_l.first(-80));
           while (var3 != null) {
             stackIn_11_0 = param1;
             stackIn_11_1 = var3.field_k;
@@ -228,7 +228,7 @@ class l extends cg {
               0 > var3.field_t) {
               var3.field_t = 0;
             }
-            var3 = (rta) (this.field_v.field_l.e(123));
+            var3 = (rta) (this.field_v.field_l.next(123));
           }
         }
         if (decompiledFrameCompleted0) {
@@ -242,7 +242,7 @@ class l extends cg {
 
     final static GraphicsToolkit a(int param0, int param1, java.awt.Canvas param2, d param3, int param4) {
         RuntimeException var5 = null;
-        sfa stackIn_3_0 = null;
+        SoftwareGraphicsToolkit stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -253,7 +253,7 @@ class l extends cg {
           if (param1 != 127) {
             l.c(-1);
           }
-          stackIn_3_0 = new sfa(param2, param3, param4, param0);
+          stackIn_3_0 = new SoftwareGraphicsToolkit(param2, param3, param4, param0);
           return (GraphicsToolkit) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -547,7 +547,7 @@ class l extends cg {
         boolean decompiledFrameCompleted0 = true;
         this.field_I[param1][param0] = null;
         if ((this.field_M[param1] & 2) != param3) {
-          var6 = (rta) (this.field_v.field_l.f(param3 ^ -80));
+          var6 = (rta) (this.field_v.field_l.first(param3 ^ -80));
           while (true) {
             if (var6 != null) {
               if (var7 != 0) {
@@ -559,7 +559,7 @@ class l extends cg {
                 var6 != var8) {
                 var8.field_t = 0;
               } else {
-                var6 = (rta) (this.field_v.field_l.e(param3 ^ 113));
+                var6 = (rta) (this.field_v.field_l.next(param3 ^ 113));
                 continue;
               }
             }
@@ -713,7 +713,7 @@ class l extends cg {
         int var4;
         int stackIn_16_0 = 0;
         var4 = TombRacer.field_G ? 1 : 0;
-        var3 = (rta) (this.field_v.field_l.f(-80));
+        var3 = (rta) (this.field_v.field_l.first(-80));
         boolean decompiledNaturalLoopExit0 = false;
         while (!(decompiledNaturalLoopExit0 = (var3 == null))) {
           stackIn_16_0 = param1;
@@ -732,7 +732,7 @@ class l extends cg {
               }
               var3.unlink(100);
             }
-            var3 = (rta) (this.field_v.field_l.e(118));
+            var3 = (rta) (this.field_v.field_l.next(118));
             continue;
           }
           break;
@@ -842,7 +842,7 @@ class l extends cg {
         boolean decompiledFrameCompleted0 = true;
         var4 = TombRacer.field_G ? 1 : 0;
         if ((4 & this.field_M[param1]) != 0) {
-          var3 = (rta) (this.field_v.field_l.f(-80));
+          var3 = (rta) (this.field_v.field_l.first(-80));
           while (var3 != null) {
             stackIn_8_0 = ~var3.field_k;
             stackIn_8_1 = ~param1;
@@ -853,7 +853,7 @@ class l extends cg {
             if (stackIn_8_0 == stackIn_8_1) {
               var3.field_r = 0;
             }
-            var3 = (rta) (this.field_v.field_l.e(126));
+            var3 = (rta) (this.field_v.field_l.next(126));
           }
         }
         if (decompiledFrameCompleted0) {
@@ -869,7 +869,7 @@ class l extends cg {
         rta var3;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
-        var3 = (rta) (this.field_v.field_l.f(-80));
+        var3 = (rta) (this.field_v.field_l.first(-80));
         if (param1 < 57) {
           this.field_t = true;
         }
@@ -881,7 +881,7 @@ class l extends cg {
               this.field_I[var3.field_k][var3.field_m] = null;
               var3.field_t = 0;
             }
-            var3 = (rta) (this.field_v.field_l.e(110));
+            var3 = (rta) (this.field_v.field_l.next(110));
             continue;
           }
           break;
@@ -1260,7 +1260,7 @@ class l extends cg {
                     }
                     if (this.field_t &&
                       var3 != 0) {
-                      this.field_w.a(var4);
+                      this.field_w.reset(var4);
                       break scanLoop2;
                     }
                     this.a(true, -127);
@@ -1276,7 +1276,7 @@ class l extends cg {
                 }
                 break;
               }
-              var2 = this.field_w.f();
+              var2 = this.field_w.nextTrack();
               var3 = this.field_w.field_a[var2];
               var4 = this.field_w.d(var3);
               continue;
@@ -1330,7 +1330,7 @@ class l extends cg {
           var6 = 0;
           do {
             if (var5_int <= var6) {
-              this.field_j = this.field_w.f();
+              this.field_j = this.field_w.nextTrack();
               this.field_p = this.field_w.field_a[this.field_j];
               break;
             }
@@ -1382,7 +1382,7 @@ class l extends cg {
         var9 = TombRacer.field_G ? 1 : 0;
         this.a(param0, param2, 64, 0);
         if ((this.field_M[param2] & 2) != 0) {
-          var5 = (rta) (this.field_v.field_l.b(param1 + 3));
+          var5 = (rta) (this.field_v.field_l.last(param1 + 3));
           while (var5 != null) {
             if (~param2 == ~var5.field_k &&
               var5.field_t < 0) {
@@ -1395,7 +1395,7 @@ class l extends cg {
               var5.field_u = 4096;
               return;
             }
-            var5 = (rta) (this.field_v.field_l.a(-1));
+            var5 = (rta) (this.field_v.field_l.previous(-1));
             if (var9 == 0) {
               continue;
             }
@@ -1427,16 +1427,16 @@ class l extends cg {
         var7.field_A = 0;
         var7.field_f = 0;
         if (0 != this.field_q[param2]) {
-          var7.field_x = qia.a(var6, this.a(-101, var7), 0, this.b(-2421, var7));
+          var7.field_x = PcmSampleStream.a(var6, this.a(-101, var7), 0, this.b(-2421, var7));
           stackIn_16_1 = 95;
           stackIn_16_2 = var7;
           stackIn_17_3 = !(0 <= var10.field_g[param0]);
           this.a((byte) stackIn_16_1, stackIn_16_2, stackIn_17_3);
           if (var9 != 0) {
-            var7.field_x = qia.a(var6, this.a(param1 - 71, var7), this.a(var7, 113), this.b(-2421, var7));
+            var7.field_x = PcmSampleStream.a(var6, this.a(param1 - 71, var7), this.a(var7, 113), this.b(-2421, var7));
           }
         } else {
-          var7.field_x = qia.a(var6, this.a(param1 - 71, var7), this.a(var7, 113), this.b(-2421, var7));
+          var7.field_x = PcmSampleStream.a(var6, this.a(param1 - 71, var7), this.a(var7, 113), this.b(-2421, var7));
         }
         if (0 > var10.field_g[param0]) {
           var7.field_x.b(-1);
@@ -1450,7 +1450,7 @@ class l extends cg {
           }
           this.field_n[param2][var7.field_z] = var7;
         }
-        this.field_v.field_l.b((byte) -68, var7);
+        this.field_v.field_l.addLast((byte) -68, var7);
         this.field_I[param2][param0] = var7;
         return;
     }
@@ -1529,7 +1529,7 @@ class l extends cg {
         this.field_O = new int[16];
         this.field_H = 1000000;
         this.field_L = new int[16];
-        this.field_w = new maa();
+        this.field_w = new MidiFileReader();
         this.field_v = new et(this);
         this.field_r = new ji(128);
         this.a((byte) -105, 256, -1);
@@ -1557,7 +1557,7 @@ class l extends cg {
         this.field_O = new int[16];
         this.field_H = 1000000;
         this.field_L = new int[16];
-        this.field_w = new maa();
+        this.field_w = new MidiFileReader();
         this.field_v = new et(this);
         try {
           this.field_r = param0.field_r;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class Behaviour extends IntrusiveNode implements lj, fo, noa, gr {
+abstract class Behaviour extends IntrusiveNode implements lj, Renderable, noa, gr {
     boolean field_f;
     static String field_h;
     Trap field_g;
@@ -16,11 +16,11 @@ abstract class Behaviour extends IntrusiveNode implements lj, fo, noa, gr {
         Player var2Lifetime1;
         if (param0 == 8031) {
           var2 = this.m((byte) 19);
-          return io.a(var2.c(-47), this.field_g.e(9648), (byte) -57, var2.a((byte) 55), this.field_g.d(3), var2.e(9648), this.field_g.a((byte) 55), this.field_g.c(param0 ^ -8057), var2.d(3));
+          return io.a(var2.getWidth(-47), this.field_g.getY(9648), (byte) -57, var2.getHeight((byte) 55), this.field_g.getX(3), var2.getY(9648), this.field_g.getHeight((byte) 55), this.field_g.getWidth(param0 ^ -8057), var2.getX(3));
         }
         this.field_m = (Room) null;
         var2Lifetime1 = this.m((byte) 19);
-        return io.a(var2Lifetime1.c(-47), this.field_g.e(9648), (byte) -57, var2Lifetime1.a((byte) 55), this.field_g.d(3), var2Lifetime1.e(9648), this.field_g.a((byte) 55), this.field_g.c(param0 ^ -8057), var2Lifetime1.d(3));
+        return io.a(var2Lifetime1.getWidth(-47), this.field_g.getY(9648), (byte) -57, var2Lifetime1.getHeight((byte) 55), this.field_g.getX(3), var2Lifetime1.getY(9648), this.field_g.getHeight((byte) 55), this.field_g.getWidth(param0 ^ -8057), var2Lifetime1.getX(3));
     }
 
     int a(int param0, Projectile param1, Effect param2) {
@@ -105,7 +105,7 @@ abstract class Behaviour extends IntrusiveNode implements lj, fo, noa, gr {
         return this.field_g;
     }
 
-    void a(ffa param0, byte param1, gma param2, int param3) {
+    void a(ffa param0, byte param1, WorldBody param2, int param3) {
         try {
           if (param1 < 18) {
             this.e(-16);
@@ -207,7 +207,7 @@ abstract class Behaviour extends IntrusiveNode implements lj, fo, noa, gr {
         this(param0, param2);
         try {
           this.field_f = param1.readBits((byte) 44, 1) == 1 ? true : false;
-          if (param0.field_E >= 22) {
+          if (param0.formatVersion >= 22) {
             this.field_k = param1.readBits((byte) 44, 1) == 1 ? true : false;
           }
         } catch (RuntimeException runtimeException) {
@@ -223,9 +223,9 @@ abstract class Behaviour extends IntrusiveNode implements lj, fo, noa, gr {
         return this.field_m;
     }
 
-    public final int b(byte param0) {
+    public final int getRenderX(byte param0) {
         int var2 = 53 % ((param0 + 23) / 53);
-        return this.field_g.d(3);
+        return this.field_g.getX(3);
     }
 
     public static void releaseStatics(int param0) {
@@ -344,12 +344,12 @@ abstract class Behaviour extends IntrusiveNode implements lj, fo, noa, gr {
         return this.field_i;
     }
 
-    public final int c(byte param0) {
+    public final int getRenderY(byte param0) {
         if (param0 < 91) {
           this.n((byte) 65);
-          return this.field_g.e(9648);
+          return this.field_g.getY(9648);
         }
-        return this.field_g.e(9648);
+        return this.field_g.getY(9648);
     }
 
     void a(boolean param0, BitPacketBuffer param1) {
@@ -390,11 +390,11 @@ abstract class Behaviour extends IntrusiveNode implements lj, fo, noa, gr {
           return this.field_g.r(param0 ^ 6);
         }
         iq var3 = (iq) null;
-        this.a(-63, (iq) null);
+        this.render(-63, (iq) null);
         return this.field_g.r(param0 ^ 6);
     }
 
-    public final int e(byte param0) {
+    public final int getRenderZ(byte param0) {
         if (param0 > -86) {
           this.a((byte) -24, false);
           return this.field_g.g((byte) 115);
@@ -413,8 +413,8 @@ abstract class Behaviour extends IntrusiveNode implements lj, fo, noa, gr {
 
     boolean p(byte param0) {
         if (param0 != 120) {
-          gma var3 = (gma) null;
-          this.a((ffa) null, (byte) -1, (gma) null, 16);
+          WorldBody var3 = (WorldBody) null;
+          this.a((ffa) null, (byte) -1, (WorldBody) null, 16);
           return false;
         }
         return false;
@@ -437,7 +437,7 @@ abstract class Behaviour extends IntrusiveNode implements lj, fo, noa, gr {
         return null;
     }
 
-    public final void a(int param0, iq param1) {
+    public final void render(int param0, iq param1) {
         try {
           if (param0 < 103) {
             this.f((byte) -97);

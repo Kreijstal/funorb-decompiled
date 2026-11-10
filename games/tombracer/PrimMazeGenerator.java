@@ -28,14 +28,14 @@ final class PrimMazeGenerator extends MazeGenerator {
         try {
           this.a(param3, param0, param2, param1);
           while (true) {
-            if (this.field_d.d((byte) 14)) {
+            if (this.field_d.isEmpty((byte) 14)) {
               return;
             }
-            var6 = this.random.a(this.field_d.a((byte) -16), 0);
+            var6 = this.random.a(this.field_d.size((byte) -16), 0);
             var7 = 0;
-            var5 = (oda) (this.field_d.f(-80));
+            var5 = (oda) (this.field_d.first(-80));
             while (var6 != var7) {
-              var5 = (oda) (this.field_d.e(param3 ^ 126));
+              var5 = (oda) (this.field_d.next(param3 ^ 126));
               var7++;
             }
             var19 = this.a(4, param3 - 2354);
@@ -86,7 +86,7 @@ final class PrimMazeGenerator extends MazeGenerator {
           if (param2.a(param0, param1, (byte) -128) &&
             0 < param2.b((byte) -5, param1, param0)) {
             param2.a(param1, -1, 0, param0);
-            this.field_d.b((byte) -76, new oda(param0, param1));
+            this.field_d.addLast((byte) -76, new oda(param0, param1));
           }
           if (param3 >= 93) {
             return;

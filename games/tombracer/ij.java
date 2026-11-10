@@ -5,12 +5,12 @@ class ij extends lc implements tsa {
     private boolean field_W;
     private static String[] field_Z;
     private boolean field_bb;
-    private il field_ab;
+    private BitmapFont field_ab;
     private boolean field_V;
     private boolean field_Y;
     private rk field_cb;
     private static String[] field_db;
-    static nh field_X;
+    static ToolkitSprite field_X;
 
     public void a(int param0, int param1, rj param2, int param3, byte param4) {
         RuntimeException var6 = null;
@@ -52,7 +52,7 @@ class ij extends lc implements tsa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param3) {
-            field_X = (nh) null;
+            field_X = (ToolkitSprite) null;
           }
           if (13 != param2) {
             stackIn_7_0 = super.a(param0, param1, param2, true);
@@ -129,7 +129,7 @@ class ij extends lc implements tsa {
         tga.field_a.c(fm.a(false, param4), param0, param2, param3, param5 - 22977, param1);
     }
 
-    ij(jta param0, il param1, String param2, boolean param3, boolean param4) {
+    ij(jta param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new sr((ij) null, param1, param2), 77, 10, 10);
         try {
           this.field_ab = param1;

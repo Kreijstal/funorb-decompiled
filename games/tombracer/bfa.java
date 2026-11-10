@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bfa {
-    static il field_c;
+    static BitmapFont field_c;
     Object field_d;
     static Sprite field_e;
     boolean field_a;

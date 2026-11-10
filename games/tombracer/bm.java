@@ -7,12 +7,12 @@ final class bm extends IntrusiveNode {
     int field_l;
     int field_h;
     int field_i;
-    static nh[] field_f;
+    static ToolkitSprite[] field_f;
     int field_j;
 
     public static void releaseStatics(int param0) {
         if (param0 != 717) {
-          field_f = (nh[]) null;
+          field_f = (ToolkitSprite[]) null;
           field_f = null;
           return;
         }

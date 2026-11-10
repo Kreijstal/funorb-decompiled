@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kn {
-    il field_q;
+    BitmapFont field_q;
     int field_m;
     isa field_u;
     int field_b;
@@ -61,7 +61,7 @@ final class kn {
           if (var7 == -1) {
             var7 = this.field_q.field_k + this.field_q.field_w;
           }
-          var8 = bea.field_g >> 2;
+          var8 = SoftwareRasterizer.field_g >> 2;
           var9 = this.field_q.b(param1);
           var10 = this.field_q.field_w + this.field_q.field_k;
           var11 = 1;
@@ -87,15 +87,15 @@ final class kn {
             }
           }
           var12 = param3;
-          if (var12 - (-var9 - var5_int) > bea.field_g) {
-            var12 = -var5_int + (bea.field_g - var9);
+          if (var12 - (-var9 - var5_int) > SoftwareRasterizer.field_g) {
+            var12 = -var5_int + (SoftwareRasterizer.field_g - var9);
           }
           var13Lifetime1 = param2 - (this.field_q.field_G - 32);
-          if (var13Lifetime1 + var10 + var6 > bea.field_a) {
+          if (var13Lifetime1 + var10 + var6 > SoftwareRasterizer.field_a) {
             var13Lifetime1 = -var6 + param2 - var10;
           }
-          bea.f(var12, var13Lifetime1, var5_int + var9, var6 + var10, this.field_a);
-          bea.e(var12 + 1, var13Lifetime1 + 1, var9 + (var5_int - 2), var10 + var6 - 2, this.field_c);
+          SoftwareRasterizer.f(var12, var13Lifetime1, var5_int + var9, var6 + var10, this.field_a);
+          SoftwareRasterizer.e(var12 + 1, var13Lifetime1 + 1, var9 + (var5_int - 2), var10 + var6 - 2, this.field_c);
           this.field_q.a(param1, this.field_i + var12, this.field_t + var13Lifetime1, var9, var10, this.field_s, -1, 0, 0, var7);
           var14Lifetime1 = -78 % ((-56 - param0) / 47);
           return;
@@ -144,7 +144,7 @@ final class kn {
     }
 
     final void a(int param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
-        bea.c(param6, param0, param5, param1, param2, param3);
+        SoftwareRasterizer.c(param6, param0, param5, param1, param2, param3);
         if (param4 <= 103) {
           this.field_n = false;
         }
@@ -183,15 +183,15 @@ final class kn {
           }
           var6 = this.field_q.field_k + this.field_q.field_G;
           var7 = param1;
-          if (var5_int + (var7 + 6) > bea.field_g) {
-            var7 = -6 + bea.field_g - var5_int;
+          if (var5_int + (var7 + 6) > SoftwareRasterizer.field_g) {
+            var7 = -6 + SoftwareRasterizer.field_g - var5_int;
           }
           var8 = param0 + (-this.field_q.field_G + 32);
-          if (bea.field_a < 6 + var6 + var8) {
-            var8 = -var6 + (bea.field_a - 6);
+          if (SoftwareRasterizer.field_a < 6 + var6 + var8) {
+            var8 = -var6 + (SoftwareRasterizer.field_a - 6);
           }
-          bea.f(var7, var8, 6 + var5_int, 6 + var6, this.field_s);
-          bea.e(var7 + 1, 1 + var8, 4 + var5_int, 4 + var6, this.field_c);
+          SoftwareRasterizer.f(var7, var8, 6 + var5_int, 6 + var6, this.field_s);
+          SoftwareRasterizer.e(var7 + 1, 1 + var8, 4 + var5_int, 4 + var6, this.field_c);
           this.field_q.c(param2, var7 + 3, this.field_q.field_G + (3 + var8), this.field_s, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -212,15 +212,15 @@ final class kn {
         if (param2 != 8947848) {
           this.a((byte) 41, 95, -41, 50, 51);
         }
-        bea.a(param3, param0, param4, param5, param1);
+        SoftwareRasterizer.a(param3, param0, param4, param5, param1);
     }
 
-    final void a(il param0, boolean param1) {
+    final void a(BitmapFont param0, boolean param1) {
         vpa var17 = null;
         vga var4 = null;
         Sprite[] var5 = null;
-        mea var16 = null;
-        mea var18 = null;
+        ArgbSprite var16 = null;
+        ArgbSprite var18 = null;
         int var7_int = 0;
         vga var6 = null;
         vga var7 = null;
@@ -259,7 +259,7 @@ final class kn {
           var4.a(1, (byte) 98).a(2, gn.b(11184810, 1, 10066329, 13421772));
           var4.a(3, (byte) 42).a(2, gn.b(8947848, 1, 7829367, 10066329)).c(-1, 1).a(1, 1);
           var5 = new Sprite[9];
-          var16 = new mea(32, 32);
+          var16 = new ArgbSprite(32, 32);
           var18 = var16;
           for (var7_int = 0; var7_int < var18.pixels.length; var7_int++) {
             var16.pixels[var7_int] = 1077952576;
@@ -299,14 +299,14 @@ final class kn {
           this.field_m = 10;
           var13.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new vga(var4, param1);
-          var14.a(var13.a(), (byte) -107);
-          var13.b();
+          var14.a(var13.copy(), (byte) -107);
+          var13.rotateClockwise();
           var14Lifetime1 = new vga(var4, true);
-          var14Lifetime1.a(var13.a(), (byte) -102);
-          var13.b();
+          var14Lifetime1.a(var13.copy(), (byte) -102);
+          var13.rotateClockwise();
           var14Lifetime2 = new vga(var4, true);
-          var14Lifetime2.a(var13.a(), (byte) 121);
-          var13.b();
+          var14Lifetime2.a(var13.copy(), (byte) 121);
+          var13.rotateClockwise();
           var19 = new vga(var4, true);
           var19.a(var13, (byte) 60);
         } catch (RuntimeException runtimeException) {

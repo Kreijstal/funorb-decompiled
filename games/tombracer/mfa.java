@@ -6,7 +6,7 @@ interface mfa {
 
     public abstract void a(int param0, BitPacketBuffer param1, dg param2);
 
-    public abstract dg a(gr param0, gma param1, int param2);
+    public abstract dg a(gr param0, WorldBody param1, int param2);
 
     public abstract dg a(int param0, int param1);
 }

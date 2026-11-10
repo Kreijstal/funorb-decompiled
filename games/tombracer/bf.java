@@ -19,10 +19,10 @@ final class bf implements jca {
         field_b = (tv[][]) null;
     }
 
-    bf(sfa param0, nh param1, ita param2) {
+    bf(SoftwareGraphicsToolkit param0, ToolkitSprite param1, ita param2) {
         RuntimeException runtimeException = null;
-        vqa var5 = null;
-        raa var6 = null;
+        SoftwareArgbSprite var5 = null;
+        SoftwareRgbSprite var6 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -32,16 +32,16 @@ final class bf implements jca {
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 instanceof raa) {
-            var6 = (raa) (param1);
+          if (param1 instanceof SoftwareRgbSprite) {
+            var6 = (SoftwareRgbSprite) (param1);
             this.field_g = var6.field_E;
             this.field_d = var6.field_f;
             this.field_c = var6.field_a;
           } else {
-            if (!(param1 instanceof vqa)) {
+            if (!(param1 instanceof SoftwareArgbSprite)) {
               throw new RuntimeException();
             }
-            var5 = (vqa) (param1);
+            var5 = (SoftwareArgbSprite) (param1);
             this.field_c = var5.field_a;
             this.field_d = var5.field_f;
             this.field_g = var5.field_E;

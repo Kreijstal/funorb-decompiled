@@ -125,7 +125,7 @@ final class oka extends wv {
         int var3;
         int var4;
         int var5;
-        nh var5_ref_nh;
+        ToolkitSprite var5_ref_nh;
         int var6;
         int var7;
         String var8;
@@ -142,10 +142,10 @@ final class oka extends wv {
         }
         ik.field_h.a(this.field_t, this.field_r);
         dp.field_d.a(this.field_t, this.field_r);
-        var10 = (cc) (this.field_q.f(-80));
+        var10 = (cc) (this.field_q.first(-80));
         while (var10 != null) {
           var10.a(99, this.field_t, this.field_r);
-          var10 = (cc) (this.field_q.e(121));
+          var10 = (cc) (this.field_q.next(121));
         }
         if (mq.field_e == null &&
           !vpa.a(param0 + 119)) {
@@ -157,7 +157,7 @@ final class oka extends wv {
             if (rd.b(false) &&
               !dta.field_g[var4]) {
               var3 = 1;
-              qf.field_k[var4].a(pha.field_ub[var4] + this.field_t, C2SSubmitSettingsPacket.field_b[var4] + this.field_r, 0, -1426063361, 1);
+              qf.field_k[var4].draw(pha.field_ub[var4] + this.field_t, C2SSubmitSettingsPacket.field_b[var4] + this.field_r, 0, -1426063361, 1);
             } else {
               cb.field_i[var4].a(pha.field_ub[var4] + this.field_t, this.field_r + C2SSubmitSettingsPacket.field_b[var4]);
               var5_ref_nh = uta.field_d;
@@ -227,21 +227,21 @@ final class oka extends wv {
         this.field_r = this.e(-18796);
         this.field_x = new pfa(0, this.field_v);
         this.field_q = new IntrusiveDeque();
-        this.field_q.b((byte) -118, new cc(0, 1, 2));
-        this.field_q.b((byte) -54, new cc(0, 2, 6));
-        this.field_q.b((byte) -115, new cc(1, 3, 4));
-        this.field_q.b((byte) -70, new cc(1, 4, ta.field_vb[0], go.field_m[0], 4, 2));
-        this.field_q.b((byte) -97, new cc(2, 4, 4));
-        this.field_q.b((byte) -80, new cc(4, 3, ta.field_vb[1], go.field_m[1], 2, 3));
-        this.field_q.b((byte) -119, new cc(4, 5, ta.field_vb[5], go.field_m[5], 3, 2));
-        this.field_q.b((byte) -88, new cc(3, 6, 4));
-        this.field_q.b((byte) -92, new cc(5, 7, ta.field_vb[2], go.field_m[2], 3, 3));
-        this.field_q.b((byte) -96, new cc(6, 8, 4));
+        this.field_q.addLast((byte) -118, new cc(0, 1, 2));
+        this.field_q.addLast((byte) -54, new cc(0, 2, 6));
+        this.field_q.addLast((byte) -115, new cc(1, 3, 4));
+        this.field_q.addLast((byte) -70, new cc(1, 4, ta.field_vb[0], go.field_m[0], 4, 2));
+        this.field_q.addLast((byte) -97, new cc(2, 4, 4));
+        this.field_q.addLast((byte) -80, new cc(4, 3, ta.field_vb[1], go.field_m[1], 2, 3));
+        this.field_q.addLast((byte) -119, new cc(4, 5, ta.field_vb[5], go.field_m[5], 3, 2));
+        this.field_q.addLast((byte) -88, new cc(3, 6, 4));
+        this.field_q.addLast((byte) -92, new cc(5, 7, ta.field_vb[2], go.field_m[2], 3, 3));
+        this.field_q.addLast((byte) -96, new cc(6, 8, 4));
         if (param0 <= 78) {
           this.b(true, false, 48);
         }
-        this.field_q.b((byte) -107, new cc(6, 7, ta.field_vb[3], go.field_m[3], 3, 3));
-        this.field_q.b((byte) -51, new cc(7, 8, ta.field_vb[4], go.field_m[4], 1, 2));
+        this.field_q.addLast((byte) -107, new cc(6, 7, ta.field_vb[3], go.field_m[3], 3, 3));
+        this.field_q.addLast((byte) -51, new cc(7, 8, ta.field_vb[4], go.field_m[4], 1, 2));
     }
 
     private final void b(boolean param0) {
@@ -361,7 +361,7 @@ final class oka extends wv {
         }
         if (!this.field_x.field_g) {
           var8 = this.field_v;
-          var9 = (cc) (this.field_q.f(-80));
+          var9 = (cc) (this.field_q.first(-80));
           while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var9 != null) {
@@ -382,7 +382,7 @@ final class oka extends wv {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var9 = (cc) (this.field_q.e(param2 + 115));
+                var9 = (cc) (this.field_q.next(param2 + 115));
                 continue;
               }
             }

@@ -4,7 +4,7 @@
 final class dn {
     static hla field_b;
     static jea field_a;
-    static nh[] field_d;
+    static ToolkitSprite[] field_d;
     private static String[] field_c;
 
     final static byte[] a(byte param0, String param1) {

@@ -35,10 +35,10 @@ abstract class ConstraintLocomotor extends Locomotor {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (5 > param0.field_E) {
+          if (5 > param0.formatVersion) {
             return;
           }
-          if (param0.field_E < 25) {
+          if (param0.formatVersion < 25) {
             this.field_o = param1.readBits((byte) 44, 10) << 16;
             this.field_q = param1.readBits((byte) 44, 10) << 16;
             return;

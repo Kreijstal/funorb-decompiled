@@ -168,7 +168,7 @@ final class vsa extends dg {
         }
     }
 
-    final void a(gr param0, gma param1, byte param2) {
+    final void a(gr param0, WorldBody param1, byte param2) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -382,7 +382,7 @@ final class vsa extends dg {
         if (var3 == null) {
           return;
         }
-        if (var2.a((byte) 110, var3.e(param0 ^ -9649), var3.d(3), var3.a((byte) 55), var3.c(-40))) {
+        if (var2.a((byte) 110, var3.getY(param0 ^ -9649), var3.getX(3), var3.getHeight((byte) 55), var3.getWidth(-40))) {
           var4 = var3.n((byte) -56);
           if (var4 == null) {
             return;
@@ -464,10 +464,10 @@ final class vsa extends dg {
         Room var20;
         var19 = TombRacer.field_G ? 1 : 0;
         var20 = this.a(78);
-        var3 = this.field_h.d(3);
-        var4 = this.field_h.e(9648);
-        var5 = this.field_h.c(-56);
-        var6 = this.field_h.a((byte) 55);
+        var3 = this.field_h.getX(3);
+        var4 = this.field_h.getY(9648);
+        var5 = this.field_h.getWidth(-56);
+        var6 = this.field_h.getHeight((byte) 55);
         if (var5 < var6) {
           var5 = 2097152;
         } else {
@@ -634,10 +634,10 @@ final class vsa extends dg {
                 var8[var6] = ql.field_k.payload[var6];
               }
               var6_ref_rha = new rha(var2_long + (long)var4, ql.field_k.position, var17);
-              jla.field_z.b((byte) -71, var6_ref_rha);
+              jla.field_z.addLast((byte) -71, var6_ref_rha);
               ql.field_k.position = 0;
             }
-            var9 = (rha) (jla.field_z.f(-80));
+            var9 = (rha) (jla.field_z.first(-80));
             var13 = var9;
             if (var13 != null &&
               var13.field_f < var2_long) {
@@ -666,14 +666,14 @@ final class vsa extends dg {
         int var3 = TombRacer.field_G ? 1 : 0;
         jea var2Lifetime1;
         try {
-          var4 = (jea) (param1.field_J.f(-80));
+          var4 = (jea) (param1.field_J.first(-80));
           var2 = var4;
           while (var4 != null) {
             var4.field_K = 0;
             var4.field_O = 0;
             var4.field_T = 0;
             var4.field_t = 0;
-            var4 = (jea) (param1.field_J.e(112));
+            var4 = (jea) (param1.field_J.next(112));
             var2Lifetime1 = var4;
           }
           param1.field_t = 0;

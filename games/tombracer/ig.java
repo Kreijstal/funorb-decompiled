@@ -13,17 +13,17 @@ final class ig {
         }
         try {
           if (null != uma.field_b) {
-            uma.field_b.d(8);
+            uma.field_b.clear(8);
             uma.field_b = null;
           }
           fua.field_a = null;
           if (asa.field_j != null) {
-            asa.field_j.d(8);
+            asa.field_j.clear(8);
             asa.field_j = null;
           }
           WhiteLightSensorComponent.field_K = null;
           if (null != qha.field_g) {
-            qha.field_g.d(8);
+            qha.field_g.clear(8);
             qha.field_g = null;
           }
           tc.field_d = null;

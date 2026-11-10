@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eh implements fo {
+final class eh implements Renderable {
     int field_f;
     static byte[][] field_i;
     ce field_e;
@@ -47,7 +47,7 @@ final class eh implements fo {
             return;
           }
           var4 = (iq) null;
-          this.a(-82, (iq) null);
+          this.render(-82, (iq) null);
           return;
         }
         if (this.field_b >= 66) {
@@ -56,7 +56,7 @@ final class eh implements fo {
             return;
           }
           var4Lifetime1 = (iq) null;
-          this.a(-82, (iq) null);
+          this.render(-82, (iq) null);
           return;
         }
         this.field_g.a(3, false, (byte) 34, 4);
@@ -64,7 +64,7 @@ final class eh implements fo {
           return;
         }
         var4Lifetime2 = (iq) null;
-        this.a(-82, (iq) null);
+        this.render(-82, (iq) null);
         return;
     }
 
@@ -73,9 +73,9 @@ final class eh implements fo {
         field_i = (byte[][]) null;
     }
 
-    public final void a(int param0, iq param1) {
+    public final void render(int param0, iq param1) {
         try {
-          gqa.a(this.field_a, -83584144, this.c((byte) 123), this.b((byte) 122), this.field_g.b((byte) 74), this.e((byte) -88));
+          gqa.a(this.field_a, -83584144, this.getRenderY((byte) 123), this.getRenderX((byte) 122), this.field_g.b((byte) 74), this.getRenderZ((byte) -88));
           if (param0 < 103) {
             this.f(-75);
           }
@@ -84,34 +84,34 @@ final class eh implements fo {
         }
     }
 
-    public final int c(byte param0) {
+    public final int getRenderY(byte param0) {
         if (param0 >= 91) {
-          return this.field_e.c((byte) 112) + this.field_c + this.field_e.i(1024);
+          return this.field_e.getRenderY((byte) 112) + this.field_c + this.field_e.i(1024);
         }
         this.d((byte) 85);
-        return this.field_e.c((byte) 112) + this.field_c + this.field_e.i(1024);
+        return this.field_e.getRenderY((byte) 112) + this.field_c + this.field_e.i(1024);
     }
 
     public final void f(int param0) {
         if (param0 != -4366) {
           iq var3 = (iq) null;
-          this.a(-33, (iq) null);
+          this.render(-33, (iq) null);
         }
     }
 
-    public final int b(byte param0) {
+    public final int getRenderX(byte param0) {
         int var2 = 116 % ((-23 - param0) / 53);
-        return this.field_e.b((byte) -89) + this.field_d + this.field_e.k(-13019);
+        return this.field_e.getRenderX((byte) -89) + this.field_d + this.field_e.k(-13019);
     }
 
-    public final int e(byte param0) {
+    public final int getRenderZ(byte param0) {
         if (param0 >= -86) {
           return 121;
         }
         if (this.field_e.n((byte) 87) != 1) {
-          return this.field_e.e((byte) -88) - 655360;
+          return this.field_e.getRenderZ((byte) -88) - 655360;
         }
-        return this.field_e.e((byte) -121);
+        return this.field_e.getRenderZ((byte) -121);
     }
 
     static {

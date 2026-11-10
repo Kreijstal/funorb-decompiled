@@ -72,21 +72,21 @@ final class lp {
             if (var4 != 34 &&
               var4 != 39) {
               if (var4 == 40) {
-                var2.b((byte) -90, new ConsoleToken(lna.field_a, -1 + var3.field_b));
+                var2.addLast((byte) -90, new ConsoleToken(lna.field_a, -1 + var3.field_b));
                 continue;
               }
               if (var4 == 41) {
-                var2.b((byte) -112, new ConsoleToken(rs.field_a, var3.field_b - 1));
+                var2.addLast((byte) -112, new ConsoleToken(rs.field_a, var3.field_b - 1));
                 continue;
               }
               if (44 == var4) {
-                var2.b((byte) -107, new ConsoleToken(qba.field_c, var3.field_b - 1));
+                var2.addLast((byte) -107, new ConsoleToken(qba.field_c, var3.field_b - 1));
                 continue;
               }
-              var2.b((byte) -75, WeaponShooterBehaviour.a(param0 - 93, var3));
+              var2.addLast((byte) -75, WeaponShooterBehaviour.a(param0 - 93, var3));
               continue;
             }
-            var2.b((byte) -81, hb.a(var3, false));
+            var2.addLast((byte) -81, hb.a(var3, false));
           }
           stackIn_18_0 = var2;
           return stackIn_18_0;

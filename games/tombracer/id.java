@@ -6,7 +6,7 @@ final class id extends ou {
     private boolean field_j;
     static String field_k;
     static String[] field_g;
-    static nh[] field_h;
+    static ToolkitSprite[] field_h;
     static String field_i;
 
     id(int param0, int param1) {

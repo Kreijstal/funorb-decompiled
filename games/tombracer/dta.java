@@ -124,7 +124,7 @@ final class dta {
             var16 = stackIn_12_0;
             if (var9.field_P > 1) {
               if (var9.b((byte) 90, param2)) {
-                tga.field_a.KA(param0, param5, param1, param6);
+                tga.field_a.setClip(param0, param5, param1, param6);
                 Room.field_j.a(0, 0);
                 SocketConnector.a(ad.field_i.toUpperCase(), 1, qr.field_v, 10981495, 20, -param5 + param6, 1, param5, param0, 1, (byte) 60, -param0 + param1);
                 SocketConnector.a(dea.a(var9.c((byte) 115, param2), (byte) -8), 1, eda.field_f, 10981495, 20, param6 - param5, 1, param5 + 30, param0, 1, (byte) 60, param1 - param0);
@@ -174,12 +174,12 @@ final class dta {
               var25 = 16;
               if (!param4.field_D &&
                 !param4.c(false)) {
-                var26 = doa.b(var12.f((byte) 125).q((byte) -82), 0, param4.m(-1)).field_h;
+                var26 = doa.b(var12.getRoom((byte) 125).q((byte) -82), 0, param4.m(-1)).field_h;
                 if (0 == var26) {
                   var26 = 750;
                 }
                 var26 = var26 * 2;
-                var27_int = var12.f((byte) 125).p((byte) 118);
+                var27_int = var12.getRoom((byte) 125).p((byte) 118);
                 var28_double = 80.0 * (double)var27_int / (double)var26;
                 if (var27_int > -50 + var26) {
                   var25 = -((var27_int - var26) / 4) + 16;
@@ -200,17 +200,17 @@ final class dta {
                   }
                   var28_double = 80.0;
                 }
-                qf.field_j.a((aa) null, 12, 0, 0, var18Lifetime2 - (po.field_l.c() - 32), -16777216, (int[]) null, 1, -5599403, bd.field_j.toUpperCase(), (byte) -66, 300, 0, (nh[]) null, -14 + (param1 + var24), 0);
+                qf.field_j.a((aa) null, 12, 0, 0, var18Lifetime2 - (po.field_l.c() - 32), -16777216, (int[]) null, 1, -5599403, bd.field_j.toUpperCase(), (byte) -66, 300, 0, (ToolkitSprite[]) null, -14 + (param1 + var24), 0);
                 var30 = 30 + (-po.field_l.c() + var18Lifetime2) + 80;
                 vua.field_A.a(param1 - (po.field_l.a() - var24), var18Lifetime2 - po.field_l.c() + (-vua.field_A.c() + var25));
                 var31 = (int)(-var28_double + (double)var30);
                 lh.field_b.a(-lh.field_b.a() + (param1 - 1) + var24, var18Lifetime2 - lh.field_b.c() - po.field_l.c());
-                tga.field_a.KA(param1 - 28 + var24, 0, var24 - 20 + param1, 10 + var31);
+                tga.field_a.setClip(param1 - 28 + var24, 0, var24 - 20 + param1, 10 + var31);
                 if (var28_double < 80.0) {
                   dn.field_d[(var14 >> 2) % 4 + 3].a(-48 + (param1 - po.field_l.a()), 36 + (var18Lifetime2 - (po.field_l.c() + vua.field_A.c())));
                 }
                 tga.field_a.la();
-                tga.field_a.KA(param1 - (30 - var24), var31, -20 + param1 + var24, var30);
+                tga.field_a.setClip(param1 - (30 - var24), var31, -20 + param1 + var24, var30);
                 MirrorBehaviour.field_r.a(var24 + (-30 + param1), var31);
                 tga.field_a.la();
                 po.field_l.a(-1 + param1 - po.field_l.a() + var24, -po.field_l.c() + var18Lifetime2);
@@ -283,24 +283,24 @@ final class dta {
                 var29Lifetime2 += 24;
               }
               if (!var12.q(119) &&
-                null != var12.f((byte) 94).field_u) {
+                null != var12.getRoom((byte) 94).field_u) {
                 var30Lifetime3 = 0;
                 var31Lifetime2 = 0;
                 var32Lifetime1 = 0;
                 var33 = 0;
-                var34 = var12.f((byte) 101);
-                var35 = var34.n(16);
+                var34 = var12.getRoom((byte) 101);
+                var35 = var34.getAllTraps(16);
                 for (var36_int = 0; var36_int < var35.length; var36_int++) {
                   if (var30Lifetime3 == 0 ||
                     var31Lifetime2 == 0) {
                     var37 = 0;
-                    var38_ref_nv = (Behaviour) (var35[var36_int].field_u.f(-80));
+                    var38_ref_nv = (Behaviour) (var35[var36_int].field_u.first(-80));
                     while (var38_ref_nv != null) {
                       if (var38_ref_nv instanceof SnakePitBehaviour) {
                         var30Lifetime3 = 1;
                       } else {
                         if (!(var38_ref_nv instanceof SimpleBlockBehaviour)) {
-                          var38_ref_nv = (Behaviour) (var35[var36_int].field_u.e(121));
+                          var38_ref_nv = (Behaviour) (var35[var36_int].field_u.next(121));
                           continue;
                         }
                         var37 = 1;
@@ -370,7 +370,7 @@ final class dta {
             return;
           }
           if (!param4.n(99)) {
-            tga.field_a.KA(param0, param5, param1, param6);
+            tga.field_a.setClip(param0, param5, param1, param6);
             Room.field_j.a(0, 0);
             tga.field_a.la();
           }

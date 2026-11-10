@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class p extends IntrusiveNode implements e {
+final class NativeCanvasSurface extends IntrusiveNode implements e {
     java.awt.Canvas field_f;
     private static boolean field_g;
     int field_i;
@@ -33,7 +33,7 @@ final class p extends IntrusiveNode implements e {
 
     private final native void H(int param0, int param1, int param2, int param3);
 
-    final void a(int param0, int param1) {
+    final void present(int param0, int param1) {
         java.awt.Dimension var4 = null;
         synchronized (this.field_f.getTreeLock()) {
           var4 = this.field_f.getSize();
@@ -51,7 +51,7 @@ final class p extends IntrusiveNode implements e {
 
     private final native void sa(oa param0, java.awt.Canvas param1, int param2, int param3);
 
-    p(oa param0, java.awt.Canvas param1, int param2, int param3) {
+    NativeCanvasSurface(oa param0, java.awt.Canvas param1, int param2, int param3) {
         this.field_f = param1;
         this.field_i = param2;
         this.field_h = param3;

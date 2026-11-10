@@ -86,7 +86,7 @@ final class SimpleBlockBehaviour extends Behaviour {
         RuntimeException decompiledCaughtException = null;
         try {
           super.a(param0, param1);
-          if (4 <= this.b(param0).field_E) {
+          if (4 <= this.b(param0).formatVersion) {
             return;
           }
           param1.h(3, 0);
@@ -170,16 +170,16 @@ final class SimpleBlockBehaviour extends Behaviour {
     SimpleBlockBehaviour(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
-          if (param0.field_E >= 4) {
+          if (param0.formatVersion >= 4) {
             this.field_q = param1.readBits((byte) 44, 1) == 1 ? true : false;
           }
-          if (param0.field_E >= 6) {
+          if (param0.formatVersion >= 6) {
             this.field_u = 1 == param1.readBits((byte) 44, 1) ? true : false;
           }
-          if (param0.field_E >= 11) {
+          if (param0.formatVersion >= 11) {
             this.field_t = param1.readBits((byte) 44, 1) == 1 ? true : false;
           }
-          if (param0.field_E >= 20) {
+          if (param0.formatVersion >= 20) {
             this.field_o = param1.readBits((byte) 44, 1) == 1 ? true : false;
           }
         } catch (RuntimeException runtimeException) {

@@ -8,7 +8,7 @@ final class lva extends ci {
     boolean field_s;
     private byte[] field_p;
     int field_z;
-    static nh[] field_m;
+    static ToolkitSprite[] field_m;
     static String field_o;
     static String field_v;
     static String field_y;

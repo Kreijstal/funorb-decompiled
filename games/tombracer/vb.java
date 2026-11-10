@@ -3,7 +3,7 @@
  */
 final class vb extends IntrusiveNode {
     int field_g;
-    qia field_f;
+    PcmSampleStream field_f;
     IntrusiveNode field_h;
     static int field_i;
 
@@ -106,7 +106,7 @@ final class vb extends IntrusiveNode {
                   }
                   var9_int = var9_int + var11;
                   var10 = var10 + var12;
-                  var16Lifetime2 = var16Lifetime2 + bea.field_g;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_g;
                 }
               }
               var16Lifetime3 = -param6 + param7;
@@ -184,7 +184,7 @@ final class vb extends IntrusiveNode {
               }
               var10 = var10 + var12;
               var9_int = var9_int + var11;
-              var15Lifetime1 = var15Lifetime1 + bea.field_g;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_g;
             }
             return;
           }
@@ -213,7 +213,7 @@ final class vb extends IntrusiveNode {
         this.field_f.a(128 + param1 * ot.field_v >> 8, param0);
     }
 
-    vb(qia param0, IntrusiveNode param1) {
+    vb(PcmSampleStream param0, IntrusiveNode param1) {
         try {
           this.field_f = param0;
           this.field_g = param0.l();

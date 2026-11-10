@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class le extends GameFont {
+final class SoftwareBinaryFont extends GameFont {
     private int[] field_d;
-    private sfa field_g;
+    private SoftwareGraphicsToolkit field_g;
     private int[] field_i;
     private int[] field_h;
     private int[] field_e;
@@ -138,7 +138,7 @@ final class le extends GameFont {
           this.b(this.field_f[param0], this.field_g.field_r, param3, var12, var9, var6, var7, var10, var11);
         } else {
           if ((param3 & -16777216) != 0) {
-            this.a(this.field_f[param0], this.field_g.field_r, param3, var12, var9, var6, var7, var10, var11);
+            this.blitGlyphAlpha(this.field_f[param0], this.field_g.field_r, param3, var12, var9, var6, var7, var10, var11);
           }
         }
     }
@@ -334,7 +334,7 @@ final class le extends GameFont {
         }
     }
 
-    private final void a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final void blitGlyphAlpha(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var12 = 0;
         int var13 = 0;
         int incrementValue$12 = 0;
@@ -361,7 +361,7 @@ final class le extends GameFont {
         }
     }
 
-    le(sfa param0, qla param1, jpa[] param2, int[] param3, int[] param4) {
+    SoftwareBinaryFont(SoftwareGraphicsToolkit param0, qla param1, jpa[] param2, int[] param3, int[] param4) {
         super(param0, param1);
         int var6 = 0;
         this.field_g = param0;

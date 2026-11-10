@@ -14,7 +14,7 @@ final class n extends GameFont implements e {
 
     public final native void w(boolean param0);
 
-    n(oa param0, ya param1, qla param2, jpa[] param3, nh[] param4) {
+    n(oa param0, ya param1, qla param2, jpa[] param3, ToolkitSprite[] param4) {
         super(param0, param2);
         int var11 = 0;
         byte[][] var6 = new byte[param3.length][];

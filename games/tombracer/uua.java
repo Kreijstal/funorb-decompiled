@@ -8,7 +8,7 @@ final class uua {
     private qe[] field_c;
     private int field_g;
     private int field_e;
-    static nh field_a;
+    static ToolkitSprite field_a;
     private int field_f;
 
     final void a(int param0, int param1, boolean param2, boolean param3, int param4, int param5) {
@@ -237,7 +237,7 @@ final class uua {
         if (param0 == 2147483647) {
           return this.field_c[param1].b(-11921);
         }
-        field_a = (nh) null;
+        field_a = (ToolkitSprite) null;
         return this.field_c[param1].b(-11921);
     }
 

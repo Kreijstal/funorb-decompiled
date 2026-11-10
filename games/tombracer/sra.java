@@ -95,12 +95,12 @@ final class sra implements eb {
         try {
           var2 = new IntrusiveDeque();
           while (param1.position < param1.payload.length) {
-            var2.b((byte) -72, new gba(pe.a(param1, (byte) 73)));
+            var2.addLast((byte) -72, new gba(pe.a(param1, (byte) 73)));
           }
-          var3 = new String[var2.a((byte) -16)][];
+          var3 = new String[var2.size((byte) -16)][];
           var4 = -92 / ((param0 + 9) / 51);
           for (var5 = 0; var3.length > var5; var5++) {
-            var3[var5] = ((gba) (var2.c(44))).field_g;
+            var3[var5] = ((gba) (var2.removeFirst(44))).field_g;
           }
           stackIn_8_0 = var3;
           return stackIn_8_0;

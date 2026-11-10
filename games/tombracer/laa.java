@@ -21,7 +21,7 @@ final class laa extends b implements tsa {
         int var6 = 0;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
-          this.field_u.d(param0 - 13589);
+          this.field_u.clear(param0 - 13589);
           if (param1 != null &&
             param1.length != 0) {
             if (param0 != 13597) {
@@ -104,7 +104,7 @@ final class laa extends b implements tsa {
         if (param3 != 0) {
           return;
         }
-        il var5 = KeySwitchComponent.field_J;
+        BitmapFont var5 = KeySwitchComponent.field_J;
         if (null != this.field_A) {
           var5.a(ch.field_e, param0 + this.field_i, param1 + this.field_n, this.field_m, 20, 16777215, -1, 0, 0, var5.field_k + var5.field_w);
         }

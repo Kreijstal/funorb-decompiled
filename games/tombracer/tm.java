@@ -9,21 +9,21 @@ final class tm {
 
     tm() {
         int var1 = 0;
-        fg.a(16);
-        this.field_b = fg.c() != 0 ? fg.a(4) + 1 : 1;
-        if (fg.c() != 0) {
-          fg.a(8);
+        VorbisSample.readBits(16);
+        this.field_b = VorbisSample.c() != 0 ? VorbisSample.readBits(4) + 1 : 1;
+        if (VorbisSample.c() != 0) {
+          VorbisSample.readBits(8);
         }
-        fg.a(2);
+        VorbisSample.readBits(2);
         if (this.field_b > 1) {
-          this.field_a = fg.a(4);
+          this.field_a = VorbisSample.readBits(4);
         }
         this.field_d = new int[this.field_b];
         this.field_c = new int[this.field_b];
         for (var1 = 0; var1 < this.field_b; var1++) {
-          fg.a(8);
-          this.field_d[var1] = fg.a(8);
-          this.field_c[var1] = fg.a(8);
+          VorbisSample.readBits(8);
+          this.field_d[var1] = VorbisSample.readBits(8);
+          this.field_c[var1] = VorbisSample.readBits(8);
         }
     }
 }

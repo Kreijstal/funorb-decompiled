@@ -9,7 +9,7 @@ final class jsa extends qr {
     static String field_z;
     private boolean field_E;
     private int field_A;
-    private il field_B;
+    private BitmapFont field_B;
     static String field_y;
 
     final String d(byte param0) {
@@ -32,7 +32,7 @@ final class jsa extends qr {
         this.field_B.a(this.field_C, this.field_G + var5 + var7, this.field_G + var6, this.field_D - this.field_G, -(this.field_G * 2) + this.field_p, this.field_A, -1, !this.field_E ? 2 : 0, 1, this.field_B.field_w);
     }
 
-    jsa(int param0, int param1, int param2, int param3, ae param4, boolean param5, int param6, int param7, il param8, int param9, String param10) {
+    jsa(int param0, int param1, int param2, int param3, ae param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (isa) null, (qc) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;

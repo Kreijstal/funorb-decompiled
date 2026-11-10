@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fh implements fo {
+final class fh implements Renderable {
     int field_f;
     int field_i;
     private boolean field_c;
@@ -30,7 +30,7 @@ final class fh implements fo {
         }
     }
 
-    public final void a(int param0, iq param1) {
+    public final void render(int param0, iq param1) {
         RuntimeException stackIn_51_0 = null;
         StringBuilder stackIn_51_1 = null;
         String stackIn_52_2 = null;
@@ -46,9 +46,9 @@ final class fh implements fo {
         int var10 = 0;
         var10 = TombRacer.field_G ? 1 : 0;
         try {
-          var3_int = this.b((byte) -113);
-          var4 = this.c((byte) 115);
-          var5 = this.e((byte) -108);
+          var3_int = this.getRenderX((byte) -113);
+          var4 = this.getRenderY((byte) 115);
+          var5 = this.getRenderZ((byte) -108);
           gqa.a(dfa.a(this.field_o, 2048, 87), -83584144, var4, var3_int, this.field_g.a(this, (byte) 76), var5);
           if (!nk.c(-115)) {
             return;
@@ -524,17 +524,17 @@ final class fh implements fo {
         }
     }
 
-    public final int b(byte param0) {
+    public final int getRenderX(byte param0) {
         int var2 = -104 % ((param0 + 23) / 53);
-        return this.field_g.b((byte) -76) + this.field_l;
+        return this.field_g.getRenderX((byte) -76) + this.field_l;
     }
 
-    public final int c(byte param0) {
+    public final int getRenderY(byte param0) {
         if (param0 >= 91) {
-          return this.field_g.c((byte) 126) + this.field_f;
+          return this.field_g.getRenderY((byte) 126) + this.field_f;
         }
         this.field_m = true;
-        return this.field_g.c((byte) 126) + this.field_f;
+        return this.field_g.getRenderY((byte) 126) + this.field_f;
     }
 
     final void a(int param0) {
@@ -544,16 +544,16 @@ final class fh implements fo {
         if (param0 == 0) {
           return;
         }
-        this.b((byte) -30);
+        this.getRenderX((byte) -30);
     }
 
-    public final int e(byte param0) {
+    public final int getRenderZ(byte param0) {
         if (param0 < -86) {
-          return this.field_g.e((byte) -115);
+          return this.field_g.getRenderZ((byte) -115);
         }
         java.awt.Canvas var3 = (java.awt.Canvas) null;
         fh.a(true, (java.awt.Canvas) null, -71);
-        return this.field_g.e((byte) -115);
+        return this.field_g.getRenderZ((byte) -115);
     }
 
     static int a(int param0, int param1) {
@@ -585,7 +585,7 @@ final class fh implements fo {
             et.a((byte) 108, tn.a(-10918), bta.field_i, dla.a(7), var3_int != 0);
           } else {
             if (!qk.i(250)) {
-              bea.a();
+              SoftwareRasterizer.clear();
               gga.b(320, 240, (byte) 113);
               fga.a(0, false, 0, param1);
             } else {

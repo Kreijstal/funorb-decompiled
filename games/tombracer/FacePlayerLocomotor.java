@@ -66,8 +66,8 @@ final class FacePlayerLocomotor extends Locomotor {
         if (var3.u(-25561)) {
           return;
         }
-        var4 = var3.d(3) - this.field_n.d(3);
-        var5 = var3.e(9648) - this.field_n.e(9648);
+        var4 = var3.getX(3) - this.field_n.getX(3);
+        var5 = var3.getY(9648) - this.field_n.getY(9648);
         var6 = qva.a((byte) -118, var5, var4);
         var7 = -this.field_n.g(-25787) + var6;
         if (0 < this.field_o) {
@@ -194,33 +194,33 @@ final class FacePlayerLocomotor extends Locomotor {
         var4 = null;
         var5 = TombRacer.field_G ? 1 : 0;
         if (param0 == 22578) {
-          var4_ref = (upa) (ina.field_d.f(-80));
+          var4_ref = (upa) (ina.field_d.first(-80));
           while (var4_ref != null) {
             if (param3 == var4_ref.field_n) {
               return var4_ref;
             }
-            var4_ref = (upa) (ina.field_d.e(param0 - 22454));
+            var4_ref = (upa) (ina.field_d.next(param0 - 22454));
           }
           var6 = new upa();
           var6.field_n = param3;
           var6.field_k = param2;
-          ina.field_d.b((byte) -49, var6);
+          ina.field_d.addLast((byte) -49, var6);
           ip.a(var6, param1, 2147);
           return var6;
         }
         field_p = (bb) null;
-        var4_refLifetime1 = (upa) (ina.field_d.f(-80));
+        var4_refLifetime1 = (upa) (ina.field_d.first(-80));
         while (var4_refLifetime1 != null) {
           if (param3 == var4_refLifetime1.field_n) {
             return var4_refLifetime1;
           }
-          var4_refLifetime1 = (upa) (ina.field_d.e(param0 - 22454));
+          var4_refLifetime1 = (upa) (ina.field_d.next(param0 - 22454));
         }
         var7 = new upa();
         var4_refLifetime2 = var7;
         var7.field_n = param3;
         var7.field_k = param2;
-        ina.field_d.b((byte) -49, var7);
+        ina.field_d.addLast((byte) -49, var7);
         ip.a(var7, param1, 2147);
         return var7;
     }

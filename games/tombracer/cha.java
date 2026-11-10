@@ -26,11 +26,11 @@ abstract class cha {
 
     final void a(int param0) {
         if (param0 == -19216) {
-          bea.a(this.field_g, this.field_f, this.field_e);
+          SoftwareRasterizer.a(this.field_g, this.field_f, this.field_e);
           return;
         }
         field_h = (String) null;
-        bea.a(this.field_g, this.field_f, this.field_e);
+        SoftwareRasterizer.a(this.field_g, this.field_f, this.field_e);
     }
 
     final static int a(goa param0, goa param1, int param2) {
@@ -74,20 +74,20 @@ abstract class cha {
 
     final static void a(int param0, int param1, GraphicsToolkit param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         try {
-          param2.KA(param0, param4, param0 + param3, param3 + param4);
+          param2.setClip(param0, param4, param0 + param3, param3 + param4);
           param2.za(param0 + param3, param3 + param4, param3, param6, param7);
-          param2.KA(-param3 + param5 + param0, param4, param0 + param5, param4 + param3);
+          param2.setClip(-param3 + param5 + param0, param4, param0 + param5, param4 + param3);
           param2.za(param0 + param5 - param3, param3 + param4, param3, param6, param7);
-          param2.KA(param5 + (param0 - param3), -param3 + param4 + param8, param5 + param0, param4 + param8);
+          param2.setClip(param5 + (param0 - param3), -param3 + param4 + param8, param5 + param0, param4 + param8);
           param2.za(-param3 + (param0 + param5), param8 + param4 - param3, param3, param6, param7);
-          param2.KA(param0, param8 + (param4 - param3), param3 + param0, param8 + param4);
+          param2.setClip(param0, param8 + (param4 - param3), param3 + param0, param8 + param4);
           param2.za(param0 + param3, param8 + param4 - param3, param3, param6, param7);
           param2.la();
-          param2.aa(param3 + param0, param4, param5 - param3 * 2, param3, param6, param7);
-          param2.aa(param3 + param0, param4 + param8 - param3, -(2 * param3) + param5, param3, param6, param7);
-          param2.aa(param0, param4 + param3, param3, param8 - param3 * 2, param6, param7);
-          param2.aa(-param3 + (param0 + param5), param3 + param4, param3, -(param1 * param3) + param8, param6, param7);
-          param2.aa(param0 + param3, param4 + param3, param5 - 2 * param3, param8 - param3 * 2, param6, param7);
+          param2.fillRectangle(param3 + param0, param4, param5 - param3 * 2, param3, param6, param7);
+          param2.fillRectangle(param3 + param0, param4 + param8 - param3, -(2 * param3) + param5, param3, param6, param7);
+          param2.fillRectangle(param0, param4 + param3, param3, param8 - param3 * 2, param6, param7);
+          param2.fillRectangle(-param3 + (param0 + param5), param3 + param4, param3, -(param1 * param3) + param8, param6, param7);
+          param2.fillRectangle(param0 + param3, param4 + param3, param5 - 2 * param3, param8 - param3 * 2, param6, param7);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "cha.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

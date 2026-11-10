@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class TripBeamBehaviour extends Behaviour implements ut {
-    static nh field_y;
+    static ToolkitSprite field_y;
     private int field_n;
     private boolean field_D;
     private mg field_t;
@@ -70,7 +70,7 @@ final class TripBeamBehaviour extends Behaviour implements ut {
         if (param0 == -108) {
           return !this.field_C.b((byte) 88) ? 0 : 1;
         }
-        field_y = (nh) null;
+        field_y = (ToolkitSprite) null;
         return !this.field_C.b((byte) 88) ? 0 : 1;
     }
 
@@ -465,8 +465,8 @@ final class TripBeamBehaviour extends Behaviour implements ut {
     }
 
     private final void q(byte param0) {
-        int var2 = this.field_g.d(3) + gqa.a(this.field_E, (byte) 24, this.field_g.c(-31) / 2);
-        int var3 = this.field_g.e(param0 + 9556) + gqa.a(this.field_o, (byte) 24, this.field_g.c(-64) / 2);
+        int var2 = this.field_g.getX(3) + gqa.a(this.field_E, (byte) 24, this.field_g.getWidth(-31) / 2);
+        int var3 = this.field_g.getY(param0 + 9556) + gqa.a(this.field_o, (byte) 24, this.field_g.getWidth(-64) / 2);
         this.field_u.a(var2, var2 + gqa.a(this.field_E, (byte) 24, this.field_s), var3, gqa.a(this.field_o, (byte) 24, this.field_s) + var3, 44);
         this.field_u.field_b = this.field_s;
         this.field_u.field_i = this.field_g.P(param0 ^ 92) << 16;
@@ -490,7 +490,7 @@ final class TripBeamBehaviour extends Behaviour implements ut {
         this.field_s = 0;
         try {
           this.field_C = new jma(15, param0, param1);
-          this.field_t = new mg(param0.field_E, param1);
+          this.field_t = new mg(param0.formatVersion, param1);
           this.field_q = param1.readBits((byte) 44, 10) << 16;
           this.field_v = param1.readBits((byte) 44, 1) == 1 ? true : false;
           this.field_D = param1.readBits((byte) 44, 1) == 1 ? true : false;

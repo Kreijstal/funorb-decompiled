@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nc {
-    static nh field_e;
+    static ToolkitSprite field_e;
     private cn field_a;
     private dd field_c;
     private cn field_d;

@@ -93,7 +93,7 @@ final class ce extends dg {
         }
     }
 
-    final void a(gr param0, gma param1, byte param2) {
+    final void a(gr param0, WorldBody param1, byte param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -132,7 +132,7 @@ final class ce extends dg {
         }
     }
 
-    final void a(gma param0, int param1, gr param2) {
+    final void a(WorldBody param0, int param1, gr param2) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -220,10 +220,10 @@ final class ce extends dg {
         var16 = TombRacer.field_G ? 1 : 0;
         try {
           var17 = this.a(18);
-          var3 = this.field_h.d(3);
-          var4 = this.field_h.e(9648);
-          this.field_z = this.field_h.c(-84) / 2097152;
-          this.field_s = this.field_h.a((byte) 55) / 2097152;
+          var3 = this.field_h.getX(3);
+          var4 = this.field_h.getY(9648);
+          this.field_z = this.field_h.getWidth(-84) / 2097152;
+          this.field_s = this.field_h.getHeight((byte) 55) / 2097152;
           if ((1 >= this.field_z ||
             this.field_s <= 1) && this.field_q == 2) {
             this.field_q = 0;
@@ -233,12 +233,12 @@ final class ce extends dg {
             return;
           }
           this.field_r = new eh[this.field_z][this.field_s];
-          var5 = 1048576 + (-(this.field_h.a((byte) 55) / 2) + var4);
+          var5 = 1048576 + (-(this.field_h.getHeight((byte) 55) / 2) + var4);
           if (!param0) {
             this.field_o = (fla) null;
           }
           for (var6 = 0; this.field_s > var6; var6++) {
-            var7 = -(this.field_h.c(-117) / 2) + (var3 + 1048576);
+            var7 = -(this.field_h.getWidth(-117) / 2) + (var3 + 1048576);
             for (var8 = 0; this.field_z > var8; var8++) {
               boolean decompiledFrameRemainder0 = true;
               var9 = new eh();
@@ -374,7 +374,7 @@ final class ce extends dg {
           if (var3 == null) {
             return;
           }
-          var3.a(new fm(3, this.b((byte) -93), this.c((byte) 115), this.e((byte) -89)), -58);
+          var3.a(new fm(3, this.getRenderX((byte) -93), this.getRenderY((byte) 115), this.getRenderZ((byte) -89)), -58);
           if (this.field_t != null) {
             this.field_t.a(-120, var3);
             this.field_t = null;
@@ -447,8 +447,8 @@ final class ce extends dg {
           }
           var5_ref = (Trap) (this.field_h);
           var6 = 1;
-          var7 = this.b((byte) 84) - var4_ref.field_h >> 16;
-          var8 = this.c((byte) 126) - var4_ref.field_c >> 16;
+          var7 = this.getRenderX((byte) 84) - var4_ref.field_h >> 16;
+          var8 = this.getRenderY((byte) 126) - var4_ref.field_c >> 16;
           var9 = (double)ua.a(var7, -118);
           var11 = (double)ua.a(var8, -125);
           var13 = Math.sqrt(var11 * var11 + var9 * var9);
@@ -458,7 +458,7 @@ final class ce extends dg {
           if (1 != this.field_q) {
             if (var2_int != 0 &&
               this.field_t == null) {
-              this.field_t = var4_ref.a(new fm(19, this.b((byte) 84), this.c((byte) 123), this.e((byte) -118)), param0 ^ 57);
+              this.field_t = var4_ref.a(new fm(19, this.getRenderX((byte) 84), this.getRenderY((byte) 123), this.getRenderZ((byte) -118)), param0 ^ 57);
             } else {
               if (var2_int == 0 &&
                 null != this.field_t) {
@@ -468,7 +468,7 @@ final class ce extends dg {
             }
             if (var3 != 0 &&
               !this.field_p) {
-              var4_ref.a(new fm(7, this.b((byte) -109), this.c((byte) 125), this.e((byte) -115)), param0 ^ 57);
+              var4_ref.a(new fm(7, this.getRenderX((byte) -109), this.getRenderY((byte) 125), this.getRenderZ((byte) -115)), param0 ^ 57);
             }
             stackIn_51_1 = (var3 != 0);
             this.field_p = stackIn_51_1;
@@ -479,18 +479,18 @@ final class ce extends dg {
             while (var18_ref != null) {
               if (var18_ref instanceof PathMoveLocomotor) {
                 if (((PathMoveLocomotor) (var18_ref)).d(false) != this.field_y) {
-                  var4_ref.a(new fm(20, this.b((byte) 39), this.c((byte) 109), this.e((byte) -116)), -58);
+                  var4_ref.a(new fm(20, this.getRenderX((byte) 39), this.getRenderY((byte) 109), this.getRenderZ((byte) -116)), -58);
                   this.field_y = ((PathMoveLocomotor) (var18_ref)).d(false);
                 }
                 if (var18_ref.a(-58) &&
                   this.field_y == 0) {
                   if (((PathMoveLocomotor) (var18_ref)).e(69) == 4096 &&
                     this.field_v == null) {
-                    this.field_v = var4_ref.a(new fm(21, this.b((byte) 114), this.c((byte) 94), this.e((byte) -124)), -58);
+                    this.field_v = var4_ref.a(new fm(21, this.getRenderX((byte) 114), this.getRenderY((byte) 94), this.getRenderZ((byte) -124)), -58);
                   } else {
                     if (((PathMoveLocomotor) (var18_ref)).e(114) == 327680 &&
                       null == this.field_v) {
-                      this.field_v = var4_ref.a(new fm(22, this.b((byte) -86), this.c((byte) 101), this.e((byte) -113)), -58);
+                      this.field_v = var4_ref.a(new fm(22, this.getRenderX((byte) -86), this.getRenderY((byte) 101), this.getRenderZ((byte) -113)), -58);
                     }
                   }
                   var17 = 1;
@@ -505,7 +505,7 @@ final class ce extends dg {
             }
           } else if (this.field_o == null &&
             var6 != 0) {
-            this.field_o = var4_ref.a(new fm(9, this.b((byte) -101), this.c((byte) 99), this.e((byte) -98)), param0 ^ 57);
+            this.field_o = var4_ref.a(new fm(9, this.getRenderX((byte) -101), this.getRenderY((byte) 99), this.getRenderZ((byte) -98)), param0 ^ 57);
           } else {
             if (this.field_o != null &&
               var6 == 0) {
@@ -514,10 +514,10 @@ final class ce extends dg {
             }
           }
           if (this.field_o != null) {
-            this.field_o.a(this.b((byte) -97), var4_ref.field_c, param0 ^ 127, var4_ref.field_h, this.c((byte) 96));
+            this.field_o.a(this.getRenderX((byte) -97), var4_ref.field_c, param0 ^ 127, var4_ref.field_h, this.getRenderY((byte) 96));
           }
           if (this.field_t != null) {
-            this.field_t.a(this.b((byte) 103), var4_ref.field_c, -128, var4_ref.field_h, this.c((byte) 127));
+            this.field_t.a(this.getRenderX((byte) 103), var4_ref.field_c, -128, var4_ref.field_h, this.getRenderY((byte) 127));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

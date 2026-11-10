@@ -37,7 +37,7 @@ abstract class vw {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = (q) (vga.field_n.c(27));
+          var4 = (q) (vga.field_n.removeFirst(27));
           if (var4 == null) {
             var4 = new q(param1, param0, param2);
           } else {

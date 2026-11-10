@@ -6,7 +6,7 @@ final class sr extends b implements tsa {
     private int field_z;
     private String field_C;
     private rj[] field_x;
-    private il field_B;
+    private BitmapFont field_B;
     private int[] field_w;
 
     final rj a(String param0, byte param1, qc param2) {
@@ -25,7 +25,7 @@ final class sr extends b implements tsa {
           var4.field_r = (isa) ((Object) new td());
           var5 = this.field_p - 2;
           if (param1 != -102) {
-            this.field_B = (il) null;
+            this.field_B = (BitmapFont) null;
           }
           this.a((byte) -31, this.field_m, 34 + this.field_p, 0, 0);
           var4.a((byte) -31, -14 + this.field_m, 30, 7, var5);
@@ -76,7 +76,7 @@ final class sr extends b implements tsa {
         }
     }
 
-    sr(ij param0, il param1, String param2) {
+    sr(ij param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (isa) null);
         int var4_int = 0;
         this.field_z = 0;

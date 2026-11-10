@@ -56,7 +56,7 @@ final class fua implements isa {
           if (param0.b((byte) -34)) {
             nn.a(var6_int + 2, 2 + var7, -4 + param0.field_p, param0.field_m - 4, false);
           }
-          bea.b(var6_int, var7, var6_int + (param0.field_m - 2), var7 + param0.field_p);
+          SoftwareRasterizer.b(var6_int, var7, var6_int + (param0.field_m - 2), var7 + param0.field_p);
           var8 = this.field_d.field_z.d(124);
           if (var8 != null) {
             var9 = var8.toString();
@@ -64,10 +64,10 @@ final class fua implements isa {
             if (this.field_d.b((byte) -34) &&
               var9.startsWith(this.field_d.field_w)) {
               var10 = this.field_d.field_H.b(this.field_d.field_w);
-              bea.c(2 + var6_int, var7 + 2, var10, -4 + param0.field_p, 2188450, 100);
+              SoftwareRasterizer.c(2 + var6_int, var7 + 2, var10, -4 + param0.field_p, 2188450, 100);
             }
           }
-          bea.b();
+          SoftwareRasterizer.b();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

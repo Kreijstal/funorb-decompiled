@@ -51,7 +51,7 @@ final class kda extends eo {
     final void k() {
         super.k();
         if (null != this.field_Mc) {
-          this.field_Mc.b();
+          this.field_Mc.detachFromThread();
           this.field_Mc.release();
           this.field_Mc = null;
         }
@@ -324,7 +324,7 @@ final class kda extends eo {
         jaggl.OpenGL.glFlush();
         jaggl.OpenGL.glReadBuffer(1029);
         jaggl.OpenGL.glDrawBuffer(1029);
-        this.KA(var1, var3, var2, var4);
+        this.setClip(var1, var3, var2, var4);
     }
 
     final void B(byte param0) {
@@ -589,7 +589,7 @@ final class kda extends eo {
           this.field_ad = (IntrusiveDeque) null;
         }
         var4.key = param0;
-        this.field_kd.b((byte) -65, var4);
+        this.field_kd.addLast((byte) -65, var4);
     }
 
     final void d(int param0) {
@@ -665,7 +665,7 @@ final class kda extends eo {
         }
     }
 
-    final void a(int param0, int param1) throws qva {
+    final void present(int param0, int param1) throws qva {
         this.field_Mc.swapBuffers();
     }
 
@@ -773,8 +773,8 @@ final class kda extends eo {
         var4 = TombRacer.field_G ? 1 : 0;
         param0 = param0 & 2147483647;
         var2 = 0;
-        while (!this.field_dd.d((byte) 14)) {
-          var5 = (al) (this.field_dd.c(61));
+        while (!this.field_dd.isEmpty((byte) 14)) {
+          var5 = (al) (this.field_dd.removeFirst(61));
           incrementValue$5 = var2;
           var2++;
           RoomComponent.field_i[incrementValue$5] = (int)var5.key;
@@ -786,8 +786,8 @@ final class kda extends eo {
           var2 = 0;
         }
         if (var2 <= 0) {
-          while (!this.field_Rc.d((byte) 14)) {
-            var6 = (al) (this.field_Rc.c(-96));
+          while (!this.field_Rc.isEmpty((byte) 14)) {
+            var6 = (al) (this.field_Rc.removeFirst(-96));
             incrementValue$1 = var2;
             var2++;
             RoomComponent.field_i[incrementValue$1] = (int)var6.key;
@@ -801,8 +801,8 @@ final class kda extends eo {
         } else {
           jaggl.OpenGL.glDeleteBuffersARB(var2, RoomComponent.field_i, 0);
           var2 = 0;
-          while (!this.field_Rc.d((byte) 14)) {
-            var6 = (al) (this.field_Rc.c(-96));
+          while (!this.field_Rc.isEmpty((byte) 14)) {
+            var6 = (al) (this.field_Rc.removeFirst(-96));
             incrementValue$0 = var2;
             var2++;
             RoomComponent.field_i[incrementValue$0] = (int)var6.key;
@@ -820,8 +820,8 @@ final class kda extends eo {
         if (var2 > 0) {
           jaggl.OpenGL.glDeleteTextures(var2, RoomComponent.field_i, 0);
           var2 = 0;
-          while (!this.field_Oc.d((byte) 14)) {
-            var7 = (al) (this.field_Oc.c(62));
+          while (!this.field_Oc.isEmpty((byte) 14)) {
+            var7 = (al) (this.field_Oc.removeFirst(62));
             incrementValue$2 = var2;
             var2++;
             RoomComponent.field_i[incrementValue$2] = var7.field_i;
@@ -832,8 +832,8 @@ final class kda extends eo {
             var2 = 0;
           }
         } else {
-          if (!this.field_Oc.d((byte) 14)) {
-            var7 = (al) (this.field_Oc.c(62));
+          if (!this.field_Oc.isEmpty((byte) 14)) {
+            var7 = (al) (this.field_Oc.removeFirst(62));
             incrementValue$3 = var2;
             var2++;
             RoomComponent.field_i[incrementValue$3] = var7.field_i;
@@ -843,20 +843,20 @@ final class kda extends eo {
               decompiledFrameRemainder1 = false;
             }
             else {
-              while (!this.field_bd.d((byte) 14)) {
-                var9 = (al) (this.field_bd.c(-101));
+              while (!this.field_bd.isEmpty((byte) 14)) {
+                var9 = (al) (this.field_bd.removeFirst(-101));
                 jaggl.OpenGL.glDeleteLists((int)var9.key, var9.field_i);
               }
-              while (!this.field_nd.d((byte) 14)) {
-                var10 = this.field_nd.c(-120);
+              while (!this.field_nd.isEmpty((byte) 14)) {
+                var10 = this.field_nd.removeFirst(-120);
                 jaggl.OpenGL.glDeleteProgramARB((int)var10.key);
               }
-              while (!this.field_kd.d((byte) 14)) {
-                var11 = this.field_kd.c(61);
+              while (!this.field_kd.isEmpty((byte) 14)) {
+                var11 = this.field_kd.removeFirst(61);
                 jaggl.OpenGL.glDeleteObjectARB(var11.key);
               }
-              while (!this.field_bd.d((byte) 14)) {
-                var12 = (al) (this.field_bd.c(-99));
+              while (!this.field_bd.isEmpty((byte) 14)) {
+                var12 = (al) (this.field_bd.removeFirst(-99));
                 jaggl.OpenGL.glDeleteLists((int)var12.key, var12.field_i);
               }
               if ((!(this.Q(10) <= 100663296)) &&
@@ -874,8 +874,8 @@ final class kda extends eo {
             jaggl.OpenGL.glDeleteFramebuffersEXT(var2, RoomComponent.field_i, 0);
             var2 = 0;
           }
-          while (!this.field_ad.d((byte) 14)) {
-            var8 = (al) (this.field_ad.c(30));
+          while (!this.field_ad.isEmpty((byte) 14)) {
+            var8 = (al) (this.field_ad.removeFirst(30));
             incrementValue$4 = var2;
             var2++;
             RoomComponent.field_i[incrementValue$4] = (int)var8.key;
@@ -891,12 +891,12 @@ final class kda extends eo {
           if (var2 > 0) {
             jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, RoomComponent.field_i, 0);
             var2 = 0;
-            while (!this.field_bd.d((byte) 14)) {
-              var9Lifetime2 = (al) (this.field_bd.c(-101));
+            while (!this.field_bd.isEmpty((byte) 14)) {
+              var9Lifetime2 = (al) (this.field_bd.removeFirst(-101));
               jaggl.OpenGL.glDeleteLists((int)var9Lifetime2.key, var9Lifetime2.field_i);
             }
-            while (!this.field_nd.d((byte) 14)) {
-              var10Lifetime2 = this.field_nd.c(-120);
+            while (!this.field_nd.isEmpty((byte) 14)) {
+              var10Lifetime2 = this.field_nd.removeFirst(-120);
               jaggl.OpenGL.glDeleteProgramARB((int)var10Lifetime2.key);
             }
             decompiledFrameRemainder0 = false;
@@ -904,22 +904,22 @@ final class kda extends eo {
         }
         if ((decompiledFrameRemainder2) &&
           (decompiledFrameRemainder0)) {
-          while (!this.field_bd.d((byte) 14)) {
-            var9Lifetime1 = (al) (this.field_bd.c(-101));
+          while (!this.field_bd.isEmpty((byte) 14)) {
+            var9Lifetime1 = (al) (this.field_bd.removeFirst(-101));
             jaggl.OpenGL.glDeleteLists((int)var9Lifetime1.key, var9Lifetime1.field_i);
           }
-          while (!this.field_nd.d((byte) 14)) {
-            var10Lifetime1 = this.field_nd.c(-120);
+          while (!this.field_nd.isEmpty((byte) 14)) {
+            var10Lifetime1 = this.field_nd.removeFirst(-120);
             jaggl.OpenGL.glDeleteProgramARB((int)var10Lifetime1.key);
           }
         }
         if (decompiledFrameRemainder2) {
-          while (!this.field_kd.d((byte) 14)) {
-            var11Lifetime1 = this.field_kd.c(61);
+          while (!this.field_kd.isEmpty((byte) 14)) {
+            var11Lifetime1 = this.field_kd.removeFirst(61);
             jaggl.OpenGL.glDeleteObjectARB(var11Lifetime1.key);
           }
-          while (!this.field_bd.d((byte) 14)) {
-            var12Lifetime1 = (al) (this.field_bd.c(-99));
+          while (!this.field_bd.isEmpty((byte) 14)) {
+            var12Lifetime1 = (al) (this.field_bd.removeFirst(-99));
             jaggl.OpenGL.glDeleteLists((int)var12Lifetime1.key, var12Lifetime1.field_i);
           }
           if (!(this.Q(10) <= 100663296) &&
@@ -1273,7 +1273,7 @@ final class kda extends eo {
         if (param1 != 18) {
           return;
         }
-        this.field_nd.b((byte) -124, var3);
+        this.field_nd.addLast((byte) -124, var3);
     }
 
     final Object a(boolean param0, java.awt.Canvas param1) {
@@ -1481,7 +1481,7 @@ final class kda extends eo {
         try {
           try {
             this.field_Mc = param0;
-            this.field_Mc.a();
+            this.field_Mc.attachToThread();
             this.field_Nc = jaggl.OpenGL.glGetString(7936).toLowerCase();
             this.field_jd = jaggl.OpenGL.glGetString(7937).toLowerCase();
             if (this.field_Nc.indexOf("microsoft") == -1 &&
@@ -1666,7 +1666,7 @@ final class kda extends eo {
         if (param2 <= 41) {
           return;
         }
-        this.field_dd.b((byte) -80, var4);
+        this.field_dd.addLast((byte) -80, var4);
     }
 
     final void a(int param0, byte param1) {
@@ -1675,7 +1675,7 @@ final class kda extends eo {
         }
     }
 
-    final void a(nh param0, boolean param1) {
+    final void a(ToolkitSprite param0, boolean param1) {
     }
 
     private final void i(boolean param0) {
@@ -1813,7 +1813,7 @@ final class kda extends eo {
         }
         al var4 = new al(param1);
         var4.key = (long)param0;
-        this.field_Rc.b((byte) -67, var4);
+        this.field_Rc.addLast((byte) -67, var4);
     }
 
     final void a(Object param0, boolean param1, java.awt.Canvas param2) {

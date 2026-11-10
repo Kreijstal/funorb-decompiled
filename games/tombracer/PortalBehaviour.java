@@ -50,7 +50,7 @@ final class PortalBehaviour extends Behaviour {
     PortalBehaviour(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
-          this.field_p = new koa(1, 1, param0.field_E, param1);
+          this.field_p = new koa(1, 1, param0.formatVersion, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "im.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -260,7 +260,7 @@ final class PortalBehaviour extends Behaviour {
         int var26;
         lj[] var27;
         t var28;
-        gma var29;
+        WorldBody var29;
         var17 = null;
         var25 = null;
         var26 = TombRacer.field_G ? 1 : 0;
@@ -279,14 +279,14 @@ final class PortalBehaviour extends Behaviour {
         if (param0 != 5418) {
           return;
         }
-        var4 = this.field_g.d(param0 - 5415);
-        var5 = this.field_g.e(9648);
-        var6 = this.field_g.c(-119);
-        var7 = this.field_g.a((byte) 55);
-        var8 = ((Trap) (var3)).d(3);
-        var9 = ((Trap) (var3)).e(param0 ^ 12442);
-        var10 = ((Trap) (var3)).c(param0 - 5510);
-        var11 = ((Trap) (var3)).a((byte) 55);
+        var4 = this.field_g.getX(param0 - 5415);
+        var5 = this.field_g.getY(9648);
+        var6 = this.field_g.getWidth(-119);
+        var7 = this.field_g.getHeight((byte) 55);
+        var8 = ((Trap) (var3)).getX(3);
+        var9 = ((Trap) (var3)).getY(param0 ^ 12442);
+        var10 = ((Trap) (var3)).getWidth(param0 - 5510);
+        var11 = ((Trap) (var3)).getHeight((byte) 55);
         var12 = this.b(true);
         var13 = var12.field_u.b(var5, -1, var4, var6, var7);
         var14 = var13;
@@ -297,10 +297,10 @@ final class PortalBehaviour extends Behaviour {
             if (var28.j((byte) -113) &&
               var16 != this.field_g &&
               !this.field_g.a(var16, true)) {
-              var18 = var16.d(3);
-              var19 = var16.e(9648);
-              var20 = var16.c(-128);
-              var21 = var16.a((byte) 55);
+              var18 = var16.getX(3);
+              var19 = var16.getY(9648);
+              var20 = var16.getWidth(-128);
+              var21 = var16.getHeight((byte) 55);
               var18 = var18 + 5 * var20 / 100;
               var19 = var19 + 5 * var21 / 100;
               var20 = 9 * var20 / 10;
@@ -313,8 +313,8 @@ final class PortalBehaviour extends Behaviour {
                   var24 = var19 + (var9 - var5);
                   if (ck.a(var23, var21, var8, var10, var11, var24, (byte) 99, var9, var20) &&
                     !var22.b(-59)) {
-                    if (var16 instanceof gma) {
-                      var29 = (gma) ((Object) var16);
+                    if (var16 instanceof WorldBody) {
+                      var29 = (WorldBody) ((Object) var16);
                       if (!var12.a(var16, var21, 2, 1, var24, var23, false, var29, var20)) {
                         var12.a(var19, var18, 8, 0, (byte) 6);
                         var12.b(false).a(var19, var18, 0, -44);

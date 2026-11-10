@@ -332,7 +332,7 @@ public final class Direct3DToolkit extends eo {
     final void a(jca param0) {
     }
 
-    final void a(nh param0, boolean param1) {
+    final void a(ToolkitSprite param0, boolean param1) {
     }
 
     final void N(int param0) {
@@ -746,7 +746,7 @@ public final class Direct3DToolkit extends eo {
         return false;
     }
 
-    final void a(int param0, int param1) throws qva {
+    final void present(int param0, int param1) throws qva {
         int fieldTemp$1 = 0;
         boolean discarded$2 = false;
         boolean discarded$3 = false;
@@ -937,8 +937,8 @@ public final class Direct3DToolkit extends eo {
 
     final void d(int param0) {
         if (param0 != 1) {
-          nh var3 = (nh) null;
-          this.a((nh) null, false);
+          ToolkitSprite var3 = (ToolkitSprite) null;
+          this.a((ToolkitSprite) null, false);
         }
         if (this.field_Qc[this.field_Cc]) {
           this.field_Qc[this.field_Cc] = false;

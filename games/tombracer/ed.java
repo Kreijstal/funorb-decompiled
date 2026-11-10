@@ -148,7 +148,7 @@ final class ed {
                 return stackIn_20_0;
               }
               param0.field_c = param0.field_c - 1;
-              var4.field_i.b((byte) -127, ed.a(param0, -31733));
+              var4.field_i.addLast((byte) -127, ed.a(param0, -31733));
               if (param0.a((byte) 125)) {
                 throw new jj(var4.field_h);
               }

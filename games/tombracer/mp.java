@@ -83,7 +83,7 @@ final class mp {
           if (param0 != 2) {
             return;
           }
-          var2 = (vb) (DivisionMazeGenerator.field_e.f(param0 ^ -78));
+          var2 = (vb) (DivisionMazeGenerator.field_e.first(param0 ^ -78));
           while (null != var2) {
             stackIn_23_0 = var2.field_h.isLinked((byte) 122);
             if (var3 != 0) {
@@ -92,7 +92,7 @@ final class mp {
                   var2.field_f.e(var2.field_g * ot.field_v + 128 >> 8);
                 }
                 var2.unlink(param0 + 2);
-                var2 = (vb) (db.field_f.e(113));
+                var2 = (vb) (db.field_f.next(113));
                 return;
               }
             }
@@ -103,14 +103,14 @@ final class mp {
               var3 != 0) {
               var2.field_f.e(var2.field_g * ot.field_v + 128 >> 8);
             }
-            var2 = (vb) (DivisionMazeGenerator.field_e.e(112));
+            var2 = (vb) (DivisionMazeGenerator.field_e.next(112));
             if (var3 == 0) {
               continue;
             }
             break;
           }
           if (null != db.field_f) {
-            var2Lifetime1 = (vb) (db.field_f.f(param0 ^ -78));
+            var2Lifetime1 = (vb) (db.field_f.first(param0 ^ -78));
             while (null != var2Lifetime1) {
               if (var3 != 0) {
                 return;
@@ -121,7 +121,7 @@ final class mp {
               } else {
                 var2Lifetime1.unlink(param0 + 2);
               }
-              var2Lifetime1 = (vb) (db.field_f.e(113));
+              var2Lifetime1 = (vb) (db.field_f.next(113));
             }
           }
           return;
@@ -148,7 +148,7 @@ final class mp {
         }
     }
 
-    final static void a(jea param0, jea param1, boolean param2, jea param3, oj param4, jea param5, int param6, jea param7, jea param8, jea param9, jea param10, il param11) {
+    final static void a(jea param0, jea param1, boolean param2, jea param3, oj param4, jea param5, int param6, jea param7, jea param8, jea param9, jea param10, BitmapFont param11) {
         String stackIn_27_0 = null;
         int stackIn_31_0 = 0;
         RuntimeException stackIn_42_0 = null;

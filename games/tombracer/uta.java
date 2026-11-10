@@ -4,14 +4,14 @@
 abstract class uta implements sia {
     private static String[] field_l;
     private static String[] field_f;
-    il field_m;
+    BitmapFont field_m;
     static String field_n;
     String field_t;
     private int field_k;
     iv field_a;
     jea field_p;
     sw field_o;
-    static nh field_d;
+    static ToolkitSprite field_d;
     static String field_e;
     private jea field_i;
     private IntrusiveDeque field_s;
@@ -34,12 +34,12 @@ abstract class uta implements sia {
           if (!param0) {
             this.field_h = -36;
           }
-          var3 = (gka) (this.field_s.f(-80));
+          var3 = (gka) (this.field_s.first(-80));
           if (var3 == null ||
             !param1.equals(var3.field_h)) {
             this.field_s.addFirst((byte) 88, (IntrusiveNode) (new gka(param1)));
           }
-          if (this.field_s.a((byte) -16) > 30) {
+          if (this.field_s.size((byte) -16) > 30) {
             this.field_s.pollLast((byte) 22);
           }
           return;
@@ -83,10 +83,10 @@ abstract class uta implements sia {
             var8 = var6[var7];
             if (var4_int <= this.field_m.b(var8)) {
               var9 = this.a(var4_int, true, var8);
-              var10 = (gka) (var9.f(param0 ^ -24277));
+              var10 = (gka) (var9.first(param0 ^ -24277));
               while (var10 != null) {
                 this.b(var10.field_h, param2, 230);
-                var10 = (gka) (var9.e(param0 ^ 24289));
+                var10 = (gka) (var9.next(param0 ^ 24289));
               }
             } else {
               this.b(var8, param2, param0 - 23989);
@@ -150,7 +150,7 @@ abstract class uta implements sia {
               if (var7 != 0) {
                 var9 = param2.substring(0, var7);
                 param2 = param2.substring(var7 + 1);
-                var4.b((byte) -128, new gka(var9));
+                var4.addLast((byte) -128, new gka(var9));
                 continue scanLoop1;
               }
               var5 = this.field_m.b(param2);
@@ -167,7 +167,7 @@ abstract class uta implements sia {
             else {
               param2 = null;
             }
-            var4.b((byte) -128, new gka(var6));
+            var4.addLast((byte) -128, new gka(var6));
           }
           if (param1) {
             stackIn_27_0 = var4;
@@ -234,21 +234,21 @@ abstract class uta implements sia {
           uta.releaseStatics(24);
         }
         if (!(this.field_i.field_t + this.field_i.field_T <= 0)) {
-          bea.c(this.field_i.field_q, this.field_i.field_A, this.field_a.field_qb, this.field_i.field_t, 5592405, 230);
-          bea.c(this.field_a.field_q + this.field_a.field_G, this.field_i.field_A, this.field_a.field_qb, this.field_i.field_t, 5592405, 230);
-          bea.c(this.field_a.field_q, this.field_i.field_A, this.field_a.field_G, this.field_a.field_T, 5592405, 230);
-          bea.c(this.field_a.field_q, this.field_a.field_A + this.field_a.field_t, this.field_a.field_G, -this.field_a.field_t - this.field_a.field_A + this.field_o.field_A, 5592405, 230);
-          bea.c(this.field_a.field_q, this.field_o.field_t + this.field_o.field_A, this.field_a.field_G, this.field_i.field_t - this.field_o.field_T - this.field_o.field_t, 5592405, 230);
-          bea.c(this.field_a.field_q, this.field_a.field_A, this.field_a.field_G, this.field_a.field_t, 2236962, 240);
-          bea.c(this.field_o.field_q, this.field_o.field_A, this.field_o.field_G, this.field_o.field_t, 2236962, 240);
+          SoftwareRasterizer.c(this.field_i.field_q, this.field_i.field_A, this.field_a.field_qb, this.field_i.field_t, 5592405, 230);
+          SoftwareRasterizer.c(this.field_a.field_q + this.field_a.field_G, this.field_i.field_A, this.field_a.field_qb, this.field_i.field_t, 5592405, 230);
+          SoftwareRasterizer.c(this.field_a.field_q, this.field_i.field_A, this.field_a.field_G, this.field_a.field_T, 5592405, 230);
+          SoftwareRasterizer.c(this.field_a.field_q, this.field_a.field_A + this.field_a.field_t, this.field_a.field_G, -this.field_a.field_t - this.field_a.field_A + this.field_o.field_A, 5592405, 230);
+          SoftwareRasterizer.c(this.field_a.field_q, this.field_o.field_t + this.field_o.field_A, this.field_a.field_G, this.field_i.field_t - this.field_o.field_T - this.field_o.field_t, 5592405, 230);
+          SoftwareRasterizer.c(this.field_a.field_q, this.field_a.field_A, this.field_a.field_G, this.field_a.field_t, 2236962, 240);
+          SoftwareRasterizer.c(this.field_o.field_q, this.field_o.field_A, this.field_o.field_G, this.field_o.field_t, 2236962, 240);
           var2 = this.field_i.field_T + 256;
           if (var2 < 0) {
             var2 = 0;
           }
-          bea.c(this.field_i.field_q, this.field_i.field_t + this.field_i.field_A, this.field_i.field_G, -this.field_i.field_t + qf.field_i - this.field_i.field_A, 0, var2 >> 1);
+          SoftwareRasterizer.c(this.field_i.field_q, this.field_i.field_t + this.field_i.field_A, this.field_i.field_G, -this.field_i.field_t + qf.field_i - this.field_i.field_A, 0, var2 >> 1);
           var3 = this.field_i.field_t + (this.field_i.field_T + 5);
           for (var4 = 0; 6 > var4; var4++) {
-            bea.c(0, var3, mma.field_a, 0, var4 << 5);
+            SoftwareRasterizer.drawHorizontalLineAlpha(0, var3, mma.field_a, 0, var4 << 5);
             var3--;
           }
           this.field_i.b(100, (this.field_h & 8) == 0 ? true : false);
@@ -380,7 +380,7 @@ abstract class uta implements sia {
               if (null != this.field_g) {
                 stackIn_19_1 = this.field_g.next;
               } else {
-                stackIn_19_1 = this.field_s.f(-80);
+                stackIn_19_1 = this.field_s.first(-80);
               }
               this.field_g = (gka) (stackIn_19_1);
               if (this.field_g != null) {
@@ -394,7 +394,7 @@ abstract class uta implements sia {
             return true;
           }
           this.a(24219, this.field_t + var7, 5635925);
-          var5 = (jea) (this.field_a.field_tb.field_J.b(3));
+          var5 = (jea) (this.field_a.field_tb.field_J.last(3));
           if (!this.a(var7, (byte) -112)) {
             var5.field_ib = 16733525;
           }
@@ -496,18 +496,18 @@ abstract class uta implements sia {
         if (param2 != 0) {
           field_f = (String[]) null;
         }
-        bb var5 = (bb) (mg.field_b.f(-80));
+        bb var5 = (bb) (mg.field_b.first(-80));
         while (var5 != null) {
           if (param1 == var5.field_n) {
             return var5;
           }
-          var5 = (bb) (mg.field_b.e(126));
+          var5 = (bb) (mg.field_b.next(126));
         }
         var5 = new bb();
         var5.field_j = param3;
         var5.field_i = param4;
         var5.field_n = param1;
-        mg.field_b.b((byte) -48, var5);
+        mg.field_b.addLast((byte) -48, var5);
         pc.a(false, param0, var5);
         return var5;
     }
@@ -518,15 +518,15 @@ abstract class uta implements sia {
         int var6 = TombRacer.field_G ? 1 : 0;
         try {
           this.field_a.field_tb.b(param2 ^ -155, this.a(param0, 16733525, param1));
-          if (this.field_a.field_tb.field_J.a((byte) -16) > 256) {
-            this.field_a.field_tb.field_J.c(-106);
+          if (this.field_a.field_tb.field_J.size((byte) -16) > 256) {
+            this.field_a.field_tb.field_J.removeFirst(-106);
           }
           var4_int = 5;
-          var5 = (jea) (this.field_a.field_tb.field_J.f(-80));
+          var5 = (jea) (this.field_a.field_tb.field_J.first(-80));
           while (var5 != null) {
             var5.field_T = var4_int;
             var4_int = var4_int + this.field_k;
-            var5 = (jea) (this.field_a.field_tb.field_J.e(116));
+            var5 = (jea) (this.field_a.field_tb.field_J.next(116));
           }
           if (param2 != 230) {
             this.field_i = (jea) null;
@@ -538,7 +538,7 @@ abstract class uta implements sia {
         }
     }
 
-    uta(il param0, PlatformTaskDispatcher param1) {
+    uta(BitmapFont param0, PlatformTaskDispatcher param1) {
         int var3_int = 0;
         jea var4 = null;
         jea var5 = null;

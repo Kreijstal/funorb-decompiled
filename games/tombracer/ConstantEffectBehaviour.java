@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ConstantEffectBehaviour extends Behaviour {
-    static nh field_q;
+    static ToolkitSprite field_q;
     static float field_p;
     static char[] field_n;
     private Effect field_r;
     int field_o;
 
     final void k(int param0) {
-        this.field_o = this.b(true).a(125, this.field_g.e(9648), this.field_r, this.field_g.a((byte) 55), this.field_g.c(-111), this.field_g.d(param0 - 5415));
+        this.field_o = this.b(true).a(125, this.field_g.getY(9648), this.field_r, this.field_g.getHeight((byte) 55), this.field_g.getWidth(-111), this.field_g.getX(param0 - 5415));
         if (param0 != 5418) {
           this.k(-67);
         }
@@ -39,7 +39,7 @@ final class ConstantEffectBehaviour extends Behaviour {
         try {
           this.field_r = param1;
           if (!param0) {
-            field_q = (nh) null;
+            field_q = (ToolkitSprite) null;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fra.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -57,7 +57,7 @@ final class ConstantEffectBehaviour extends Behaviour {
         field_q = null;
         field_n = null;
         if (param0 != -27203) {
-          field_q = (nh) null;
+          field_q = (ToolkitSprite) null;
         }
     }
 

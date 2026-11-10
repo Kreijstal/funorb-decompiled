@@ -233,7 +233,7 @@ final class ica {
                   var26 = var26 + var28;
                   var29 = var29 + var31;
                   var22 = var22 + var24;
-                  var36Lifetime2 = var36Lifetime2 + bea.field_g;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_g;
                   var21 = var21 + var23;
                 }
               }
@@ -320,7 +320,7 @@ final class ica {
               var17_int = var17_int + var19;
               var30 = var30 + var32;
               var29 = var29 + var31;
-              var35Lifetime1 = var35Lifetime1 + bea.field_g;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_g;
               var25 = var25 + var27;
             }
             return;
@@ -349,16 +349,16 @@ final class ica {
           var1 = new Sprite(540, 140);
           nm.a(var1, (byte) 112);
           uoa.b();
-          bea.a();
+          SoftwareRasterizer.clear();
           TimeSwitchBehaviour.field_r = 0;
           uw.a(false);
-          var2 = var1.a();
+          var2 = var1.copy();
           if (param0 != 16777215) {
             field_b = 106L;
           }
           for (var3 = 0; 15 > var3; var3++) {
             var2.b(-2, -2, 16777215);
-            bea.a(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.a(4, 4, 0, 0, 540, 140);
           }
           bw.field_a.c();
           var1.c(0, 0);

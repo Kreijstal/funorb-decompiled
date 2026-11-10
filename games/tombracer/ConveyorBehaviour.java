@@ -28,7 +28,7 @@ final class ConveyorBehaviour extends Behaviour {
           var6 = var3[var5];
           if (var6.a(-77) &&
             var6 != var4 &&
-            io.a(var6.c(param0 - 5435), this.field_g.e(9648), (byte) -55, var6.a((byte) 55), this.field_g.d(param0 - 5415), var6.e(9648), this.field_g.a((byte) 55), this.field_g.c(-21), var6.d(3))) {
+            io.a(var6.getWidth(param0 - 5435), this.field_g.getY(9648), (byte) -55, var6.getHeight((byte) 55), this.field_g.getX(param0 - 5415), var6.getY(9648), this.field_g.getHeight((byte) 55), this.field_g.getWidth(-21), var6.getX(3))) {
             var6.a(100, true, 1, this.field_o, this.field_n, 0);
           }
         }

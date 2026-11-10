@@ -17,10 +17,10 @@ final class ne {
     }
 
     final static void a(cn param0, int param1) {
-        fg var2 = null;
+        VorbisSample var2 = null;
         try {
-          fg.b(param0.a("headers.packvorbis", (byte) 124, ""));
-          var2 = fg.a(param0, "jagex logo2.packvorbis", "");
+          VorbisSample.b(param0.a("headers.packvorbis", (byte) 124, ""));
+          var2 = VorbisSample.a(param0, "jagex logo2.packvorbis", "");
           var2.a();
           int var3 = -87 % ((param1 - 12) / 50);
         } catch (RuntimeException runtimeException) {

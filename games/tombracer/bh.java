@@ -133,7 +133,7 @@ final class bh extends ela {
           var8 = nsa.field_i.field_tb.field_J;
           var9 = bva.b((byte) -107);
           var11 = null;
-          var12 = (ht) (var8.f(-80));
+          var12 = (ht) (var8.first(-80));
           while (var12 != null) {
             var13 = 0;
             if (null == var12.field_J) {
@@ -342,7 +342,7 @@ final class bh extends ela {
               } else {
                 var12.field_Nb.a(68, di.field_a, -23776, var31, 0);
               }
-              var12.field_bc.field_r = il.a(var12.field_bc.field_H, var32, 78);
+              var12.field_bc.field_r = BitmapFont.a(var12.field_bc.field_H, var32, 78);
               var12.field_bc.a(78, di.field_a, param1 ^ -23776, var31, 70);
               if (var12.field_bc.field_o &&
                 !var12.field_bc.field_r.equals(var32)) {
@@ -560,7 +560,7 @@ final class bh extends ela {
                 }
               }
             }
-            var12 = (ht) (var8.e(param1 + 114));
+            var12 = (ht) (var8.next(param1 + 114));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

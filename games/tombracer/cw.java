@@ -153,7 +153,7 @@ final class cw {
           }
           if (param1.c((byte) 99) ||
             param1.a((byte) 65)) {
-            this.field_j.b((byte) -59, param1);
+            this.field_j.addLast((byte) -59, param1);
             this.b(114);
             if (this.c(-739)) {
               if (-1 != this.field_k &&
@@ -187,14 +187,14 @@ final class cw {
         if (null == this.field_d) {
           return false;
         }
-        if (this.field_j.d((byte) 14)) {
+        if (this.field_j.isEmpty((byte) 14)) {
           return false;
         }
         if (param0 != this.field_k ||
           param2 != this.field_g) {
           this.field_k = param0;
           this.field_g = param2;
-          var6 = this.field_j.f(-80);
+          var6 = this.field_j.first(-80);
           while (this.field_j.sentinel != var6) {
             ((oga) (var6)).a(this.field_g, (byte) -71, this.field_k);
             var6 = var6.next;
@@ -264,9 +264,9 @@ final class cw {
         this.field_t.la();
         var2Lifetime1 = 0;
         var3 = 1;
-        var4 = (oga) (this.field_j.f(-80));
+        var4 = (oga) (this.field_j.first(-80));
         while (var4 != null) {
-          var5 = (oga) (this.field_j.e(125));
+          var5 = (oga) (this.field_j.next(125));
           var6 = var4.c(1);
           for (var7 = 0; var6 > var7; var7++) {
             var4.a(this.field_r[var2Lifetime1], var7, (byte) -100, this.field_m);
@@ -333,7 +333,7 @@ final class cw {
         var2 = 0;
         var3 = 0;
         var4 = 0;
-        var9 = (oga) (this.field_j.f(-80));
+        var9 = (oga) (this.field_j.first(-80));
         if (param0 < 35) {
           this.field_f = false;
         }
@@ -344,7 +344,7 @@ final class cw {
           }
           var4 = var4 + var9.c(1);
           var2 = var2 != 0 | var9.a(1) ? 1 : 0;
-          var9 = (oga) (this.field_j.e(107));
+          var9 = (oga) (this.field_j.next(107));
         }
         if (var3 != 2) {
           if (var3 == 1) {
@@ -398,8 +398,8 @@ final class cw {
         this.field_b = null;
         this.field_e = null;
         this.field_d = null;
-        if (!this.field_j.d((byte) 14)) {
-          var2 = this.field_j.f(-80);
+        if (!this.field_j.isEmpty((byte) 14)) {
+          var2 = this.field_j.first(-80);
           while (this.field_j.sentinel != var2) {
             ((oga) (var2)).d((byte) -35);
             var2 = var2.next;

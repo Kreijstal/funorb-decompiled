@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bca {
-    static nh field_d;
+    static ToolkitSprite field_d;
     private kpa field_b;
     static String field_c;
     static int[] field_a;
@@ -40,7 +40,7 @@ final class bca {
     final static void b(byte param0) {
         RoomComponentFactory.field_b = 0;
         if (param0 != 55) {
-          field_d = (nh) null;
+          field_d = (ToolkitSprite) null;
         }
     }
 
@@ -48,7 +48,7 @@ final class bca {
         try {
           this.field_b.a(param1, (byte) -120);
           if (param0 >= -13) {
-            field_d = (nh) null;
+            field_d = (ToolkitSprite) null;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "bca.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

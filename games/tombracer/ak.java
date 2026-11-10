@@ -32,14 +32,14 @@ final class ak extends ela {
         }
     }
 
-    final static nh[] a(GraphicsToolkit param0, jpa[] param1, int param2) {
+    final static ToolkitSprite[] a(GraphicsToolkit param0, jpa[] param1, int param2) {
         int var4 = 0;
-        nh[] var3 = null;
+        ToolkitSprite[] var3 = null;
         RuntimeException var3_ref = null;
         int var5 = 0;
-        nh[] var6 = null;
+        ToolkitSprite[] var6 = null;
         Object stackIn_3_0 = null;
-        nh[] stackIn_10_0 = null;
+        ToolkitSprite[] stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -50,9 +50,9 @@ final class ak extends ela {
         try {
           if (param1 == null) {
             stackIn_3_0 = null;
-            return (nh[]) (stackIn_3_0);
+            return (ToolkitSprite[]) (stackIn_3_0);
           }
-          var6 = new nh[param1.length];
+          var6 = new ToolkitSprite[param1.length];
           var3 = var6;
           if (param2 > -54) {
             field_p = (int[]) null;

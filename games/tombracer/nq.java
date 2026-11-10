@@ -87,7 +87,7 @@ final class nq extends cda {
         }
     }
 
-    final void a(gr param0, gma param1, byte param2) {
+    final void a(gr param0, WorldBody param1, byte param2) {
         try {
           super.a(param0, param1, param2);
         } catch (RuntimeException runtimeException) {

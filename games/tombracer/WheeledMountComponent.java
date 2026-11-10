@@ -47,14 +47,14 @@ final class WheeledMountComponent extends PathMoverComponent {
         try {
           so.n(-16310);
           var1_int = -106 / ((-7 - param0) / 37);
-          var2 = (fla) (nl.field_f.f(-80));
+          var2 = (fla) (nl.field_f.first(-80));
           while (var2 != null) {
             var2.c(-97);
             if (var2.field_h <= 0) {
               bca.a(var2.field_i, (byte) -42);
               var2.unlink(25);
             }
-            var2 = (fla) (nl.field_f.e(107));
+            var2 = (fla) (nl.field_f.next(107));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

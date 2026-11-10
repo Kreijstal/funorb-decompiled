@@ -5,8 +5,8 @@ final class po extends bja {
     static String field_i;
     private int field_f;
     private boolean field_h;
-    static nh field_l;
-    private il field_j;
+    static ToolkitSprite field_l;
+    private BitmapFont field_j;
     private String field_k;
     private int field_e;
     private int field_n;
@@ -57,7 +57,7 @@ final class po extends bja {
         }
     }
 
-    final void a(il param0, byte param1, String param2, int param3, int param4, int param5, int param6, int param7) {
+    final void a(BitmapFont param0, byte param1, String param2, int param3, int param4, int param5, int param6, int param7) {
         kha stackIn_35_0;
         kha stackIn_35_1;
         int stackIn_35_2;
@@ -67,7 +67,7 @@ final class po extends bja {
         int stackIn_36_4 = 0;
         int stackIn_39_0;
         String stackIn_39_1;
-        il stackIn_39_2;
+        BitmapFont stackIn_39_2;
         kha stackIn_39_3;
         int stackIn_40_4;
         RuntimeException stackIn_47_0 = null;
@@ -162,7 +162,7 @@ final class po extends bja {
               var14.field_c[var13.length()] = param0.b(var13);
               stackIn_39_0 = param1 ^ -2097201;
               stackIn_39_1 = var13;
-              stackIn_39_2 = (il) (param0);
+              stackIn_39_2 = (BitmapFont) (param0);
               stackIn_39_3 = var14;
               if (param6 != 3) {
                 stackIn_40_4 = 0;
@@ -176,7 +176,7 @@ final class po extends bja {
           }
           if (param1 != -49) {
             var16 = (String) null;
-            this.a(58, (il) null, 24, (String) null, -110);
+            this.a(58, (BitmapFont) null, 24, (String) null, -110);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -199,7 +199,7 @@ final class po extends bja {
         }
     }
 
-    final void a(int param0, il param1, int param2, String param3, int param4) {
+    final void a(int param0, BitmapFont param1, int param2, String param3, int param4) {
         kha var8 = null;
         kha var9 = null;
         if (param3 == null) {
@@ -228,7 +228,7 @@ final class po extends bja {
         }
     }
 
-    private final kha a(il param0, int param1, String param2, int param3) {
+    private final kha a(BitmapFont param0, int param1, String param2, int param3) {
         kha var5 = null;
         RuntimeException var5_ref = null;
         String var6 = null;
@@ -243,7 +243,7 @@ final class po extends bja {
         try {
           if (param1 != 0) {
             var6 = (String) null;
-            this.a(114, -55, (il) null, (String) null, -39);
+            this.a(114, -55, (BitmapFont) null, (String) null, -39);
           }
           var7 = new kha(param3 - param0.field_w, param0.field_k + param3, param2.length());
           var5 = var7;
@@ -270,7 +270,7 @@ final class po extends bja {
         }
     }
 
-    final void a(int param0, int param1, il param2, String param3, byte param4) {
+    final void a(int param0, int param1, BitmapFont param2, String param3, byte param4) {
         kha var7 = null;
         int var8 = 0;
         int var6_int = 38 / ((param4 - 5) / 54);
@@ -299,7 +299,7 @@ final class po extends bja {
         }
     }
 
-    final void a(int param0, int param1, il param2, String param3, int param4) {
+    final void a(int param0, int param1, BitmapFont param2, String param3, int param4) {
         if (param3 == null) {
           this.field_c = null;
           return;

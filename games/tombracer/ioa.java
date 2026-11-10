@@ -7,7 +7,7 @@ final class ioa extends dg {
     private ut field_p;
     static String field_o;
 
-    final void a(gr param0, gma param1, byte param2) {
+    final void a(gr param0, WorldBody param1, byte param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -72,8 +72,8 @@ final class ioa extends dg {
               var6_int = this.field_p.g((byte) -108);
             }
           }
-          var8 = this.field_h.c(-29) / 2;
-          var9 = this.field_h.a((byte) 55) / 2;
+          var8 = this.field_h.getWidth(-29) / 2;
+          var9 = this.field_h.getHeight((byte) 55) / 2;
           int var10 = 86 % ((param4 + 38) / 47);
           oq.a(-var8 + param2, -var9 + param1, param3, 255, param2 + var8, var6_int, param1 + var9, true);
         } catch (RuntimeException runtimeException) {

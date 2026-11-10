@@ -5,7 +5,7 @@ import java.io.*;
 
 final class KeySwitchComponent extends SwitchComponent {
     static String[] field_L;
-    static il field_J;
+    static BitmapFont field_J;
     static String field_K;
     static String field_M;
 
@@ -119,7 +119,7 @@ final class KeySwitchComponent extends SwitchComponent {
 
     final int t(int param0) {
         if (param0 != 8) {
-          field_J = (il) null;
+          field_J = (BitmapFont) null;
           return 7;
         }
         return 7;

@@ -40,7 +40,7 @@ final class hs {
     final static void a(boolean param0, byte param1) {
         int var2 = 109 / ((-1 - param1) / 54);
         if (era.field_d != null) {
-          bea.d(bea.field_b, bea.field_h, -bea.field_b + bea.field_d, -bea.field_h + bea.field_k);
+          SoftwareRasterizer.d(SoftwareRasterizer.field_b, SoftwareRasterizer.field_h, -SoftwareRasterizer.field_b + SoftwareRasterizer.field_d, -SoftwareRasterizer.field_h + SoftwareRasterizer.field_k);
           era.field_d.b(64, param0);
         }
     }

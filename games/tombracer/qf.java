@@ -4,7 +4,7 @@
 final class qf extends PacketBuffer {
     static GameFont field_j;
     static String field_l;
-    static nh[] field_k;
+    static ToolkitSprite[] field_k;
     static int field_i;
 
     final void a(byte param0, float param1) {
@@ -26,7 +26,7 @@ final class qf extends PacketBuffer {
           this.payload[fieldTemp$3] = (byte)(var3 >> 24);
           return;
         }
-        field_k = (nh[]) null;
+        field_k = (ToolkitSprite[]) null;
         int fieldTemp$4 = this.position;
         this.position = this.position + 1;
         this.payload[fieldTemp$4] = (byte)(var3 >> 16);
@@ -45,7 +45,7 @@ final class qf extends PacketBuffer {
         if (param0 == 966747152) {
           return param3;
         }
-        field_k = (nh[]) null;
+        field_k = (ToolkitSprite[]) null;
         return param3;
     }
 

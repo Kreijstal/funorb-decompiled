@@ -21,7 +21,7 @@ class b extends ae implements tpa {
         RuntimeException decompiledCaughtException = null;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          if (this.field_u.d((byte) 14)) {
+          if (this.field_u.isEmpty((byte) 14)) {
             return false;
           }
           var9 = new uja(this.field_u);
@@ -85,7 +85,7 @@ class b extends ae implements tpa {
         RuntimeException decompiledCaughtException = null;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          if (this.field_u.d((byte) 14)) {
+          if (this.field_u.isEmpty((byte) 14)) {
             return false;
           }
           if (param1 > -45) {
@@ -565,7 +565,7 @@ class b extends ae implements tpa {
 
     final void a(ae param0, int param1) {
         try {
-          this.field_u.b((byte) -67, param0);
+          this.field_u.addLast((byte) -67, param0);
           if (param1 != -1) {
             this.b(64);
           }

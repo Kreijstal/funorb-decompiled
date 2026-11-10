@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hr extends c implements fo {
+final class hr extends c implements Renderable {
     private int field_t;
     private int field_l;
     private int field_B;
@@ -31,7 +31,7 @@ final class hr extends c implements fo {
         return this.field_z;
     }
 
-    public final int c(byte param0) {
+    public final int getRenderY(byte param0) {
         if (param0 <= 91) {
           this.a((byte) -91);
           return this.field_x;
@@ -100,7 +100,7 @@ final class hr extends c implements fo {
         this.field_x = this.field_x + this.field_y;
     }
 
-    public final int e(byte param0) {
+    public final int getRenderZ(byte param0) {
         if (param0 >= -86) {
           this.field_r = -74;
           return this.field_l;
@@ -164,7 +164,7 @@ final class hr extends c implements fo {
         }
     }
 
-    public final void a(int param0, iq param1) {
+    public final void render(int param0, iq param1) {
         try {
           dea.field_a.a(param1, (byte) -27, this);
           if (param0 < 103) {
@@ -194,10 +194,10 @@ final class hr extends c implements fo {
             this.field_r = 51;
           }
           if (this.field_l < 0) {
-            param0.a((byte) 34, 2, (fo) (this));
+            param0.a((byte) 34, 2, (Renderable) (this));
             return;
           }
-          param0.a((byte) -124, 7, (fo) (this));
+          param0.a((byte) -124, 7, (Renderable) (this));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -380,7 +380,7 @@ final class hr extends c implements fo {
         }
     }
 
-    public final int b(byte param0) {
+    public final int getRenderX(byte param0) {
         int var2 = 76 % ((-23 - param0) / 53);
         return this.field_B;
     }

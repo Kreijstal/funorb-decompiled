@@ -29,7 +29,7 @@ class hga extends vpa {
         int var1 = 71 % ((param0 - 38) / 42);
     }
 
-    hga(il param0, int param1) {
+    hga(BitmapFont param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_w, -1, 2147483647, false);
     }
 

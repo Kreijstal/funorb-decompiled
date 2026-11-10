@@ -355,7 +355,7 @@ abstract class hl implements mta {
             if (this.field_f > 0) {
               jaggl.OpenGL.glBindBufferARB(this.field_k, this.field_f);
               if (this.field_e != 1) {
-                stackIn_10_0 = (!param0.a()) ? 0 : 1;
+                stackIn_10_0 = (!param0.unmap()) ? 0 : 1;
                 var3_int = stackIn_10_0;
               } else {
                 jaggl.OpenGL.glBufferSubDataARBa(this.field_k, 0, this.field_d, this.field_h.field_o.getAddress());

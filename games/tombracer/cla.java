@@ -83,7 +83,7 @@ final class cla extends DualLinkNode {
 
     final static void f(int param0) {
         TripBeamComponent.b(1, param0);
-        bea.a();
+        SoftwareRasterizer.clear();
         fp.a(122);
         if (!(ld.field_e < 2)) {
           dia.field_o = new gq(jk.a((byte) 122), o.field_d, dsa.field_c);

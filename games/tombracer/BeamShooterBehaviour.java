@@ -77,9 +77,9 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         var3 = this.field_g.g(-25787) >> 2;
         var4 = MouseInputHandler.a((byte) 111, var3);
         var5 = bua.a(0, var3);
-        var6 = 131072 + iia.d(this.field_g.c(param0 - 5467), this.field_g.a((byte) 55), param0 ^ 5416) / 2;
-        var7 = this.field_g.d(3) + gqa.a(var4, (byte) 24, var6);
-        var8 = this.field_g.e(9648) + gqa.a(var5, (byte) 24, var6);
+        var6 = 131072 + iia.d(this.field_g.getWidth(param0 - 5467), this.field_g.getHeight((byte) 55), param0 ^ 5416) / 2;
+        var7 = this.field_g.getX(3) + gqa.a(var4, (byte) 24, var6);
+        var8 = this.field_g.getY(9648) + gqa.a(var5, (byte) 24, var6);
         this.field_s.a(var7, gqa.a(var4, (byte) 24, this.field_o) + var7, var8, gqa.a(var5, (byte) 24, this.field_o) + var8, 44);
         this.field_s.field_b = this.field_o;
         this.field_s.field_i = this.field_g.P(param0 ^ param0) << 16;
@@ -383,14 +383,14 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         this.field_s = new pc();
         this.field_o = 0;
         try {
-          this.field_n = new mg(param0.field_E, param1);
+          this.field_n = new mg(param0.formatVersion, param1);
           this.field_w = param1.readBits((byte) 44, 10) << 16;
           this.field_r = ad.a((byte) 87, param1);
-          if (8 <= param0.field_E) {
+          if (8 <= param0.formatVersion) {
             stackIn_5_1 = (param1.readBits((byte) 44, 1) == 1);
             this.field_q = stackIn_5_1;
           }
-          if (param0.field_E >= 11) {
+          if (param0.formatVersion >= 11) {
             this.field_u = param1.readBits((byte) 44, 8) << 16;
           }
           return;

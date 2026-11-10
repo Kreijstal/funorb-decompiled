@@ -7,7 +7,7 @@ final class rs {
     final static void a(fla param0, int param1) {
         try {
           int var2_int = 104 % ((param1 - 4) / 38);
-          nl.field_f.b((byte) -77, param0);
+          nl.field_f.addLast((byte) -77, param0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "rs.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

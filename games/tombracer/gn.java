@@ -118,7 +118,7 @@ abstract class gn extends b {
         if (fta.field_a == null) {
           fta.field_a = new Sprite(this.field_m, this.field_p);
           nm.a(fta.field_a, (byte) 118);
-          bea.a();
+          SoftwareRasterizer.clear();
           this.a(0, (byte) -67, 0);
           super.a(-this.field_i - param0, -param1 - this.field_n, param2, param3);
           pfa.a(param2 ^ 1);
@@ -128,7 +128,7 @@ abstract class gn extends b {
         if (fta.field_a.field_m < this.field_m) {
           fta.field_a = new Sprite(this.field_m, this.field_p);
           nm.a(fta.field_a, (byte) 118);
-          bea.a();
+          SoftwareRasterizer.clear();
           this.a(0, (byte) -67, 0);
           super.a(-this.field_i - param0, -param1 - this.field_n, param2, param3);
           pfa.a(param2 ^ 1);
@@ -137,7 +137,7 @@ abstract class gn extends b {
         }
         if (fta.field_a.field_q >= this.field_p) {
           nm.a(fta.field_a, (byte) 118);
-          bea.a();
+          SoftwareRasterizer.clear();
           this.a(0, (byte) -67, 0);
           super.a(-this.field_i - param0, -param1 - this.field_n, param2, param3);
           pfa.a(param2 ^ 1);
@@ -146,7 +146,7 @@ abstract class gn extends b {
         }
         fta.field_a = new Sprite(this.field_m, this.field_p);
         nm.a(fta.field_a, (byte) 118);
-        bea.a();
+        SoftwareRasterizer.clear();
         this.a(0, (byte) -67, 0);
         super.a(-this.field_i - param0, -param1 - this.field_n, param2, param3);
         pfa.a(param2 ^ 1);

@@ -13,7 +13,7 @@ final class fka {
     private co field_k;
     private static int[] field_b;
     private co field_e;
-    private hva field_n;
+    private AudioFilter field_n;
     private static int[] field_x;
     private co field_y;
     int field_v;
@@ -74,7 +74,7 @@ final class fka {
         this.field_m = param0.d((byte) -46);
         this.field_v = param0.d(123);
         this.field_i = param0.d(126);
-        this.field_n = new hva();
+        this.field_n = new AudioFilter();
         this.field_d = new co();
         this.field_n.a(param0, this.field_d);
     }
@@ -218,8 +218,8 @@ final class fka {
           !(this.field_n.field_a[1] <= 0)) {
           this.field_d.a();
           var11Lifetime4 = this.field_d.a(param0 + 1);
-          var12Lifetime3 = this.field_n.a(0, (float)var11Lifetime4 / 65536.0f);
-          var13Lifetime2 = this.field_n.a(1, (float)var11Lifetime4 / 65536.0f);
+          var12Lifetime3 = this.field_n.computeCoefficients(0, (float)var11Lifetime4 / 65536.0f);
+          var13Lifetime2 = this.field_n.computeCoefficients(1, (float)var11Lifetime4 / 65536.0f);
           if (param0 >= var12Lifetime3 + var13Lifetime2) {
             var14Lifetime2 = 0;
             var15Lifetime2 = var13Lifetime2;
@@ -227,12 +227,12 @@ final class fka {
               var15Lifetime2 = param0 - var12Lifetime3;
             }
             while (var14Lifetime2 < var15Lifetime2) {
-              var16Lifetime1 = (int)((long)field_x[var14Lifetime2 + var12Lifetime3] * (long)hva.field_d >> 16);
+              var16Lifetime1 = (int)((long)field_x[var14Lifetime2 + var12Lifetime3] * (long)AudioFilter.field_d >> 16);
               for (var17 = 0; var17 < var12Lifetime3; var17++) {
-                var16Lifetime1 = var16Lifetime1 + (int)((long)field_x[var14Lifetime2 + var12Lifetime3 - 1 - var17] * (long)hva.field_g[0][var17] >> 16);
+                var16Lifetime1 = var16Lifetime1 + (int)((long)field_x[var14Lifetime2 + var12Lifetime3 - 1 - var17] * (long)AudioFilter.field_g[0][var17] >> 16);
               }
               for (var17Lifetime3 = 0; var17Lifetime3 < var14Lifetime2; var17Lifetime3++) {
-                var16Lifetime1 = var16Lifetime1 - (int)((long)field_x[var14Lifetime2 - 1 - var17Lifetime3] * (long)hva.field_g[1][var17Lifetime3] >> 16);
+                var16Lifetime1 = var16Lifetime1 - (int)((long)field_x[var14Lifetime2 - 1 - var17Lifetime3] * (long)AudioFilter.field_g[1][var17Lifetime3] >> 16);
               }
               field_x[var14Lifetime2] = var16Lifetime1;
               var11Lifetime4 = this.field_d.a(param0 + 1);
@@ -244,20 +244,20 @@ final class fka {
                 var15Lifetime2Lifetime1 = param0 - var12Lifetime3;
               }
               while (var14Lifetime2 < var15Lifetime2Lifetime1) {
-                var16Lifetime1Lifetime1 = (int)((long)field_x[var14Lifetime2 + var12Lifetime3] * (long)hva.field_d >> 16);
+                var16Lifetime1Lifetime1 = (int)((long)field_x[var14Lifetime2 + var12Lifetime3] * (long)AudioFilter.field_d >> 16);
                 for (var17Lifetime1 = 0; var17Lifetime1 < var12Lifetime3; var17Lifetime1++) {
-                  var16Lifetime1Lifetime1 = var16Lifetime1Lifetime1 + (int)((long)field_x[var14Lifetime2 + var12Lifetime3 - 1 - var17Lifetime1] * (long)hva.field_g[0][var17Lifetime1] >> 16);
+                  var16Lifetime1Lifetime1 = var16Lifetime1Lifetime1 + (int)((long)field_x[var14Lifetime2 + var12Lifetime3 - 1 - var17Lifetime1] * (long)AudioFilter.field_g[0][var17Lifetime1] >> 16);
                 }
                 for (var17Lifetime1Lifetime1 = 0; var17Lifetime1Lifetime1 < var13Lifetime2; var17Lifetime1Lifetime1++) {
-                  var16Lifetime1Lifetime1 = var16Lifetime1Lifetime1 - (int)((long)field_x[var14Lifetime2 - 1 - var17Lifetime1Lifetime1] * (long)hva.field_g[1][var17Lifetime1Lifetime1] >> 16);
+                  var16Lifetime1Lifetime1 = var16Lifetime1Lifetime1 - (int)((long)field_x[var14Lifetime2 - 1 - var17Lifetime1Lifetime1] * (long)AudioFilter.field_g[1][var17Lifetime1Lifetime1] >> 16);
                 }
                 field_x[var14Lifetime2] = var16Lifetime1Lifetime1;
                 var11Lifetime4 = this.field_d.a(param0 + 1);
                 var14Lifetime2++;
               }
               if (var14Lifetime2 < param0 - var12Lifetime3) {
-                var12Lifetime3 = this.field_n.a(0, (float)var11Lifetime4 / 65536.0f);
-                var13Lifetime2 = this.field_n.a(1, (float)var11Lifetime4 / 65536.0f);
+                var12Lifetime3 = this.field_n.computeCoefficients(0, (float)var11Lifetime4 / 65536.0f);
+                var13Lifetime2 = this.field_n.computeCoefficients(1, (float)var11Lifetime4 / 65536.0f);
                 var15Lifetime2Lifetime1 += 128;
                 continue;
               }
@@ -266,10 +266,10 @@ final class fka {
             while (var14Lifetime2 < param0) {
               var16Lifetime1Lifetime2 = 0;
               for (var17Lifetime2 = var14Lifetime2 + var12Lifetime3 - param0; var17Lifetime2 < var12Lifetime3; var17Lifetime2++) {
-                var16Lifetime1Lifetime2 = var16Lifetime1Lifetime2 + (int)((long)field_x[var14Lifetime2 + var12Lifetime3 - 1 - var17Lifetime2] * (long)hva.field_g[0][var17Lifetime2] >> 16);
+                var16Lifetime1Lifetime2 = var16Lifetime1Lifetime2 + (int)((long)field_x[var14Lifetime2 + var12Lifetime3 - 1 - var17Lifetime2] * (long)AudioFilter.field_g[0][var17Lifetime2] >> 16);
               }
               for (var17Lifetime2Lifetime1 = 0; var17Lifetime2Lifetime1 < var13Lifetime2; var17Lifetime2Lifetime1++) {
-                var16Lifetime1Lifetime2 = var16Lifetime1Lifetime2 - (int)((long)field_x[var14Lifetime2 - 1 - var17Lifetime2Lifetime1] * (long)hva.field_g[1][var17Lifetime2Lifetime1] >> 16);
+                var16Lifetime1Lifetime2 = var16Lifetime1Lifetime2 - (int)((long)field_x[var14Lifetime2 - 1 - var17Lifetime2Lifetime1] * (long)AudioFilter.field_g[1][var17Lifetime2Lifetime1] >> 16);
               }
               field_x[var14Lifetime2] = var16Lifetime1Lifetime2;
               var11Lifetime4 = this.field_d.a(param0 + 1);

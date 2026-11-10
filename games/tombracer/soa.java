@@ -14,7 +14,7 @@ final class soa {
         try {
           var5 = param1.field_d;
           var3 = var5;
-          var5.KA(this.field_d[0], this.field_d[1], this.field_d[2], this.field_d[3]);
+          var5.setClip(this.field_d[0], this.field_d[1], this.field_d[2], this.field_d[3]);
           var5.DA(this.field_a[0], this.field_a[1], this.field_a[2], this.field_a[3]);
           int var4 = -13 / ((31 - param0) / 35);
           var3.f(this.field_b, this.field_e);

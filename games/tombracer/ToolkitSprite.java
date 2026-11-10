@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class nh implements nha {
+abstract class ToolkitSprite implements nha {
     final void a(int param0, int param1) {
-        this.a(param0, param1, 1, 0, 1);
+        this.draw(param0, param1, 1, 0, 1);
     }
 
     abstract int d();
 
     abstract int c();
 
-    private final void a(float param0, float param1, float param2, float param3, int param4, int param5, int param6, int param7, int param8) {
+    private final void drawRotatedAround(float param0, float param1, float param2, float param3, int param4, int param5, int param6, int param7, int param8) {
         double var10 = 0.0;
         float var12 = 0.0f;
         float var13 = 0.0f;
@@ -45,8 +45,8 @@ abstract class nh implements nha {
         this.a(param0, param1, param2, param3, param4, param5, param6, 1);
     }
 
-    final void a(float param0, float param1, int param2, int param3, int param4, int param5, int param6) {
-        this.a(param0, param1, (float)this.d() / 2.0f, (float)this.b() / 2.0f, param2, param3, param4, param5, param6);
+    final void drawRotated(float param0, float param1, int param2, int param3, int param4, int param5, int param6) {
+        this.drawRotatedAround(param0, param1, (float)this.d() / 2.0f, (float)this.b() / 2.0f, param2, param3, param4, param5, param6);
     }
 
     abstract void b(int param0, int param1, int param2, int param3);
@@ -56,10 +56,10 @@ abstract class nh implements nha {
     abstract int b();
 
     private final void a(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8) {
-        this.a(param0, param1, param2, param3, param4, param5, param6, param7, param8, 1);
+        this.drawAffine(param0, param1, param2, param3, param4, param5, param6, param7, param8, 1);
     }
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4);
+    abstract void draw(int param0, int param1, int param2, int param3, int param4);
 
-    abstract void a(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8, int param9);
+    abstract void drawAffine(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8, int param9);
 }

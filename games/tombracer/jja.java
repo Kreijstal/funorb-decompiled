@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jja extends nh {
+final class jja extends ToolkitSprite {
     private int field_i;
     qk field_a;
     static ura field_d;
@@ -55,7 +55,7 @@ final class jja extends nh {
         int var9 = 0;
         int var10 = TombRacer.field_G ? 1 : 0;
         if (param5 != 8448) {
-          this.a(93, -73, -91, -117, 84);
+          this.draw(93, -73, -91, -117, 84);
         }
         if (!this.field_c.field_Eb) {
           this.field_a.a(param2, param4, param1, param3, (byte) -84, param6, param0);
@@ -173,7 +173,7 @@ final class jja extends nh {
         }
     }
 
-    final void a(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8, int param9) {
+    final void drawAffine(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8, int param9) {
         float var13 = 0.0f;
         float var14 = 0.0f;
         float var15 = 0.0f;
@@ -242,7 +242,7 @@ final class jja extends nh {
         this.field_b = stackIn_7_1;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void draw(int param0, int param1, int param2, int param3, int param4) {
         this.field_a.b(false, 3);
         this.field_c.q(2);
         this.field_c.a((byte) 46, param4);

@@ -31,8 +31,8 @@ final class SnakePitBehaviour extends Behaviour {
         int var16 = 0;
         var16 = TombRacer.field_G ? 1 : 0;
         try {
-          var4_int = this.field_g.d(3);
-          var5 = this.field_g.e(9648);
+          var4_int = this.field_g.getX(3);
+          var5 = this.field_g.getY(9648);
           var6 = param2.field_d - var4_int;
           if (param0 >= -85) {
             field_p = (String) null;
@@ -89,7 +89,7 @@ final class SnakePitBehaviour extends Behaviour {
             return stackIn_2_0;
           }
           var4_int = param1.i(-1);
-          stackIn_4_0 = this.a(var4_int, var4_int, param2, param1.d(param0 ^ 25943), (byte) 125, param1.e(param0 ^ 16612));
+          stackIn_4_0 = this.a(var4_int, var4_int, param2, param1.getX(param0 ^ 25943), (byte) 125, param1.getY(param0 ^ 16612));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -163,10 +163,10 @@ final class SnakePitBehaviour extends Behaviour {
         if (param0 != 5418) {
           return;
         }
-        int var2 = this.field_g.d(3);
-        int var3 = this.field_g.e(9648);
+        int var2 = this.field_g.getX(3);
+        int var3 = this.field_g.getY(9648);
         for (var4 = 0; this.field_n.length > var4; var4++) {
-          this.field_n[var4].a(var2, this.field_g.c(-112), this.field_g.a((byte) 55), var3, (byte) -80, this.field_g.r(0), this.field_g.f((byte) 77));
+          this.field_n[var4].a(var2, this.field_g.getWidth(-112), this.field_g.getHeight((byte) 55), var3, (byte) -80, this.field_g.r(0), this.field_g.getRoom((byte) 77));
         }
         var4Lifetime1 = this.d(8031) ? 1 : 0;
         for (var5 = 0; var5 < this.field_n.length; var5++) {
@@ -190,7 +190,7 @@ final class SnakePitBehaviour extends Behaviour {
         RuntimeException decompiledCaughtException = null;
         var3 = TombRacer.field_G ? 1 : 0;
         try {
-          var4 = (aj) (al.field_g.f(-80));
+          var4 = (aj) (al.field_g.first(-80));
           var1 = var4;
           if (var1 == null) {
             return false;
@@ -285,14 +285,14 @@ final class SnakePitBehaviour extends Behaviour {
         RuntimeException decompiledCaughtException = null;
         var13 = TombRacer.field_G ? 1 : 0;
         try {
-          var7_int = this.field_g.d(3);
-          var8 = this.field_g.e(9648);
+          var7_int = this.field_g.getX(3);
+          var8 = this.field_g.getY(9648);
           for (var9 = 0; this.field_n.length > var9; var9++) {
             var10_ref_aia = this.field_n[var9];
             var11 = var10_ref_aia.a((byte) 91) + var7_int;
             var12 = var8 + var10_ref_aia.f(0);
             if (io.a(param1, var12, (byte) -61, param0, var11, param5, var10_ref_aia.g(0), var10_ref_aia.g(0), param3)) {
-              this.a(-this.field_g.e(9648) + param5, -this.field_g.d(3) + param3, var10_ref_aia, (byte) -115, param2);
+              this.a(-this.field_g.getY(9648) + param5, -this.field_g.getX(3) + param3, var10_ref_aia, (byte) -115, param2);
             }
           }
           var10 = -90 / ((param4 - 62) / 52);
@@ -434,8 +434,8 @@ final class SnakePitBehaviour extends Behaviour {
         int var7;
         int var8;
         var9 = TombRacer.field_G ? 1 : 0;
-        var2 = this.field_g.c(-33);
-        var3 = this.field_g.a((byte) 55);
+        var2 = this.field_g.getWidth(-33);
+        var3 = this.field_g.getHeight((byte) 55);
         if (!param0) {
           this.field_n = (aia[]) null;
         }

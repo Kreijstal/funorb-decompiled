@@ -9,7 +9,7 @@ final class PlatformBehaviour extends Behaviour {
     private int field_q;
     private boolean field_r;
     static Random field_p;
-    static il field_s;
+    static BitmapFont field_s;
     private int field_n;
     static int field_v;
     static boolean field_w;
@@ -35,10 +35,10 @@ final class PlatformBehaviour extends Behaviour {
         }
         int var7 = 0;
         if (param4 >= 79) {
-          return foa.a(param1, param5, this.field_g.e(9648), param2, -var7 + this.field_g.c(-62), (byte) 75, param0, this.field_g.a((byte) 55) - var7, 16, this.field_g.d(3));
+          return foa.a(param1, param5, this.field_g.getY(9648), param2, -var7 + this.field_g.getWidth(-62), (byte) 75, param0, this.field_g.getHeight((byte) 55) - var7, 16, this.field_g.getX(3));
         }
         this.field_q = -65;
-        return foa.a(param1, param5, this.field_g.e(9648), param2, -var7 + this.field_g.c(-62), (byte) 75, param0, this.field_g.a((byte) 55) - var7, 16, this.field_g.d(3));
+        return foa.a(param1, param5, this.field_g.getY(9648), param2, -var7 + this.field_g.getWidth(-62), (byte) 75, param0, this.field_g.getHeight((byte) 55) - var7, 16, this.field_g.getX(3));
     }
 
     final boolean g(byte param0) {
@@ -108,8 +108,8 @@ final class PlatformBehaviour extends Behaviour {
         try {
           this.field_n = param1.readBits((byte) 44, 8);
           this.field_q = param1.readBits((byte) 44, 8);
-          if (param0.field_E >= 4 &&
-            19 >= param0.field_E) {
+          if (param0.formatVersion >= 4 &&
+            19 >= param0.formatVersion) {
             param1.readBits((byte) 44, 1);
             return;
           }
@@ -188,7 +188,7 @@ final class PlatformBehaviour extends Behaviour {
         this.field_t = 0;
     }
 
-    final void a(ffa param0, byte param1, gma param2, int param3) {
+    final void a(ffa param0, byte param1, WorldBody param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -210,8 +210,8 @@ final class PlatformBehaviour extends Behaviour {
             return;
           }
           if (this.field_g == param0) {
-            var5_int = this.field_g.d(3) - this.field_g.I(-16423);
-            var6 = this.field_g.e(9648) - this.field_g.y((byte) -91);
+            var5_int = this.field_g.getX(3) - this.field_g.I(-16423);
+            var6 = this.field_g.getY(9648) - this.field_g.y((byte) -91);
             if (var5_int != 0) {
               param2.a(125, true, 1, var6, var5_int, 0);
             } else {

@@ -41,15 +41,15 @@ final class oia implements gs {
         }
     }
 
-    public final int c(byte param0) {
+    public final int getRenderY(byte param0) {
         if (param0 > 91) {
-          return this.field_c.c((byte) 103) + this.field_b;
+          return this.field_c.getRenderY((byte) 103) + this.field_b;
         }
         this.field_a = -18;
-        return this.field_c.c((byte) 103) + this.field_b;
+        return this.field_c.getRenderY((byte) 103) + this.field_b;
     }
 
-    public final void a(int param0, iq param1) {
+    public final void render(int param0, iq param1) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -67,9 +67,9 @@ final class oia implements gs {
           return;
         }
         try {
-          var5 = this.b((byte) 69);
-          var6 = this.c((byte) 102);
-          var7 = this.e((byte) -114);
+          var5 = this.getRenderX((byte) 69);
+          var6 = this.getRenderY((byte) 102);
+          var7 = this.getRenderZ((byte) -114);
           gqa.a(0, -83584144, var6, var5, var4, var7);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "oia.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -119,21 +119,21 @@ final class oia implements gs {
 
     public final void f(int param0) {
         if (param0 != -4366) {
-          this.b((byte) -5);
+          this.getRenderX((byte) -5);
         }
     }
 
-    public final int e(byte param0) {
+    public final int getRenderZ(byte param0) {
         if (param0 < -86) {
-          return this.field_c.e((byte) -119) - 17825792;
+          return this.field_c.getRenderZ((byte) -119) - 17825792;
         }
         this.field_a = 113;
-        return this.field_c.e((byte) -119) - 17825792;
+        return this.field_c.getRenderZ((byte) -119) - 17825792;
     }
 
-    public final int b(byte param0) {
+    public final int getRenderX(byte param0) {
         int var2 = 35 / ((param0 + 23) / 53);
-        return this.field_c.b((byte) 103) + this.field_a;
+        return this.field_c.getRenderX((byte) 103) + this.field_a;
     }
 
     static {

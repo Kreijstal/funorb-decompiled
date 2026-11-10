@@ -87,7 +87,7 @@ final class rk extends ae {
               var6 = Math.sqrt(-var6 + 1.0);
               var8 = var6 >= 1.0 ? 255 : (int)(var6 * 255.0);
             }
-            bea.a(var5, var4, var8 << 8 | var8 | var8 << 16);
+            SoftwareRasterizer.setPixel(var5, var4, var8 << 8 | var8 | var8 << 16);
           }
         }
         pfa.a(1);
@@ -168,13 +168,13 @@ final class rk extends ae {
           var11 = var7 - var6;
           var12 = (int)(128.0 * (Math.sqrt((double)(var6 * var6 - var11 * var11)) / (double)var6)) + 128;
           var13 = var12 < 256 ? (-16711936 & var9 * var12 | var12 * var10 & 16711680) >>> 8 : var9 | var10;
-          bea.c(var8, var7, this.field_u, var13);
-          bea.c(-(2 * this.field_u) + var8, var7, this.field_u, var13);
+          SoftwareRasterizer.drawHorizontalLine(var8, var7, this.field_u, var13);
+          SoftwareRasterizer.drawHorizontalLine(-(2 * this.field_u) + var8, var7, this.field_u, var13);
           var9Lifetime1 = 16711935 & param2;
           var10Lifetime1 = 65280 & param2;
           var13Lifetime1 = var12 >= 256 ? var10Lifetime1 | var9Lifetime1 : (16711680 & var12 * var10Lifetime1 | var12 * var9Lifetime1 & -16711936) >>> 8;
-          bea.c(this.field_u + var8, var7, this.field_u, var13Lifetime1);
-          bea.c(var8 - this.field_u, var7, this.field_u, var13Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(this.field_u + var8, var7, this.field_u, var13Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(var8 - this.field_u, var7, this.field_u, var13Lifetime1);
         }
         pfa.a(1);
         return var5;
@@ -201,7 +201,7 @@ final class rk extends ae {
             param1.b(var6, param0);
           }
           pfa.a(1);
-          if (bea.field_b <= this.field_A.field_m + param2) {
+          if (SoftwareRasterizer.field_b <= this.field_A.field_m + param2) {
             nm.a(this.field_E, (byte) 116);
             param1.b(-this.field_y, 0);
             param1.b(2 * this.field_u - this.field_y, 0);
@@ -209,7 +209,7 @@ final class rk extends ae {
             pfa.a(1);
             this.field_E.b(param2, param0);
           }
-          if (bea.field_d >= -this.field_A.field_m + var5_int) {
+          if (SoftwareRasterizer.field_d >= -this.field_A.field_m + var5_int) {
             nm.a(this.field_E, (byte) 91);
             for (var7 = this.field_y + this.field_m - this.field_A.field_m; 2 * this.field_u < var7; var7 = var7 - 2 * this.field_u) {
             }

@@ -10,7 +10,7 @@ final class sta extends rva {
     static String field_A;
     private int[] field_C;
     private int[] field_I;
-    static nh[] field_y;
+    static ToolkitSprite[] field_y;
     static String field_H;
     static int field_B;
     private int field_z;

@@ -78,7 +78,7 @@ final class vba extends we {
         }
     }
 
-    private final nh h(int param0, int param1) {
+    private final ToolkitSprite h(int param0, int param1) {
         if ((!SimpleBlockBehaviour.c(param1) ||
           !oj.field_tb[82]) &&
           !this.a(false, param0)) {
@@ -142,7 +142,7 @@ final class vba extends we {
         int var7;
         int var8;
         int var9_int;
-        nh var9;
+        ToolkitSprite var9;
         int var10;
         int var11;
         var11 = TombRacer.field_G ? 1 : 0;
@@ -220,7 +220,7 @@ final class vba extends we {
         int var8_int;
         String var8;
         int var10;
-        nh[] var11;
+        ToolkitSprite[] var11;
         String var12;
         int var7Lifetime1;
         var3 = 26;
@@ -290,7 +290,7 @@ final class vba extends we {
         try {
           var14 = new String[10];
           var10 = var14;
-          var11 = param1.a(param0, -99, var14, (nh[]) null, new int[]{param3});
+          var11 = param1.a(param0, -99, var14, (ToolkitSprite[]) null, new int[]{param3});
           if (param6 != 128) {
             stackIn_3_0 = -59;
             return stackIn_3_0;

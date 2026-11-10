@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uda extends qra {
-    static nh field_r;
+    static ToolkitSprite field_r;
     private daa field_m;
     private IntrusiveDeque field_n;
     static String field_w;
@@ -21,14 +21,14 @@ final class uda extends qra {
         if (param0 != 0) {
           return true;
         }
-        ad var2 = (ad) (this.field_n.f(param0 ^ -80));
+        ad var2 = (ad) (this.field_n.first(param0 ^ -80));
         while (var2 != null) {
           if (var2.a((byte) -85) &&
             !var2.a(-64)) {
             this.field_v = var2.field_f;
             return true;
           }
-          var2 = (ad) (this.field_n.e(111));
+          var2 = (ad) (this.field_n.next(111));
         }
         return false;
     }
@@ -76,12 +76,12 @@ final class uda extends qra {
           var5 != 0) {
           SocketConnector.a(jsa.field_F, 1, eda.field_f, 2431750, 0, 48, 1, koa.b(0) - 48, var3 - 256, -1, (byte) 60, 512);
         }
-        var6_ref_ad = (ad) (this.field_n.f(-80));
+        var6_ref_ad = (ad) (this.field_n.first(-80));
         while (var6_ref_ad != null) {
           stackIn_12_0 = (var6_ref_ad.field_f == this.field_v) ? 1 : 0;
           var7 = stackIn_12_0;
           var6_ref_ad.a((byte) -9, var7 != 0);
-          var6_ref_ad = (ad) (this.field_n.e(119));
+          var6_ref_ad = (ad) (this.field_n.next(119));
         }
         if (param0 >= -50) {
           this.a(33, true);
@@ -96,7 +96,7 @@ final class uda extends qra {
           if (this.field_t[var11] != null) {
             this.field_t[var11].a(var8, 1400, var9 + 55, (byte) 73);
           } else {
-            bsa.field_i.a(-(bsa.field_i.a() >> 1) + var8, -(bsa.field_i.c() >> 1) + var9, 0, 1627389951, 1);
+            bsa.field_i.draw(-(bsa.field_i.a() >> 1) + var8, -(bsa.field_i.c() >> 1) + var9, 0, 1627389951, 1);
           }
           SocketConnector.a(this.field_h.a(var11, false).toUpperCase(), 1, qf.field_j, wga.field_a[var11], 0, 32, 1, 55 + var9, var8 - 64, -1, (byte) 60, 128);
           var11++;
@@ -202,7 +202,7 @@ final class uda extends qra {
             if (this.a(var3_int, (byte) -35)) {
               var8 = new ad(var3_int, var6, var7);
             }
-            this.field_n.b((byte) -104, var8);
+            this.field_n.addLast((byte) -104, var8);
           }
           var3_intLifetime1 = param0.field_k.players.length;
           this.field_t = new rp[var3_intLifetime1];

@@ -67,11 +67,11 @@ final class ag implements iq {
           this.b(12052);
           return;
         }
-        var2 = (float)((this.field_g.b((byte) -103) >> 16) - this.field_d);
+        var2 = (float)((this.field_g.getRenderX((byte) -103) >> 16) - this.field_d);
         if (param0 < 84) {
           this.field_b = -28;
         }
-        var3 = (float)((this.field_g.c((byte) 124) >> 16) - this.field_h);
+        var3 = (float)((this.field_g.getRenderY((byte) 124) >> 16) - this.field_h);
         var4 = var3 * var3 + var2 * var2;
         if (!(var4 > 576.0f)) {
           this.field_a = this.field_a + 1;
@@ -165,8 +165,8 @@ final class ag implements iq {
             var7 = param1[1].field_n;
             param1[0].b(param3, param0);
             param1[2].b(-var6 + param4 + param3, param0);
-            bea.b(ic.field_d);
-            bea.g(param3 + var5_int, param0, -var6 + (param3 + param4), param0 + param1[1].field_k);
+            SoftwareRasterizer.b(ic.field_d);
+            SoftwareRasterizer.g(param3 + var5_int, param0, -var6 + (param3 + param4), param0 + param1[1].field_k);
             var8 = param3 + var5_int;
             var9 = -var6 + (param3 + param4);
             param3 = var8;
@@ -177,7 +177,7 @@ final class ag implements iq {
               param1[1].b(param3, param0);
               param3 = param3 + var7;
             }
-            bea.a(ic.field_d);
+            SoftwareRasterizer.a(ic.field_d);
             return;
           }
           return;

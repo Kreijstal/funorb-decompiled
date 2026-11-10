@@ -19,16 +19,16 @@ final class ao extends dg {
           return;
         }
         try {
-          var6_int = this.field_h.c(-53) / 2;
+          var6_int = this.field_h.getWidth(-53) / 2;
           int var8 = -77 / ((param4 + 38) / 47);
-          var7 = this.field_h.a((byte) 55) / 2;
+          var7 = this.field_h.getHeight((byte) 55) / 2;
           oq.a(-var6_int + param2, -var7 + param1, param3, 160, var6_int + param2, 16777215, var7 + param1, true);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ao.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final void a(gr param0, gma param1, byte param2) {
+    final void a(gr param0, WorldBody param1, byte param2) {
         try {
           super.a(param0, param1, param2);
         } catch (RuntimeException runtimeException) {

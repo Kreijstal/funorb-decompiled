@@ -226,7 +226,7 @@ abstract class eo extends GraphicsToolkit {
 
     final za a(int param0) {
         to var2 = new to(param0);
-        this.field_ic.b((byte) -68, var2);
+        this.field_ic.addLast((byte) -68, var2);
         return (za) ((Object) var2);
     }
 
@@ -298,10 +298,10 @@ abstract class eo extends GraphicsToolkit {
         java.awt.Canvas var2 = null;
         int var3 = TombRacer.field_G ? 1 : 0;
         if (!this.field_Fc) {
-          var1 = this.field_ic.f(-80);
+          var1 = this.field_ic.first(-80);
           while (var1 != null) {
             ((to) (var1)).b((byte) 30);
-            var1 = this.field_ic.e(110);
+            var1 = this.field_ic.next(110);
           }
           var1_ref = this.field_oc.keys();
           while (var1_ref.hasMoreElements()) {
@@ -455,7 +455,7 @@ abstract class eo extends GraphicsToolkit {
         this.o(16);
     }
 
-    final nh a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
+    final ToolkitSprite a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
         RuntimeException var7 = null;
         gh stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -464,7 +464,7 @@ abstract class eo extends GraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           stackIn_1_0 = new gh(this, param3, param4, param0, param1, param2);
-          return (nh) ((Object) stackIn_1_0);
+          return (ToolkitSprite) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
@@ -495,8 +495,8 @@ abstract class eo extends GraphicsToolkit {
         }
     }
 
-    final void U(int param0, int param1, int param2, int param3, int param4) {
-        this.a(param0, param1, param0 + param2, param1, param3, param4);
+    final void drawHorizontalLine(int param0, int param1, int param2, int param3, int param4) {
+        this.drawLine(param0, param1, param0 + param2, param1, param3, param4);
     }
 
     private final void o(int param0) {
@@ -1059,7 +1059,7 @@ abstract class eo extends GraphicsToolkit {
         }
     }
 
-    final void aa(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void fillRectangle(int param0, int param1, int param2, int param3, int param4, int param5) {
         this.g(114);
         this.g(3625, param4);
         this.a(pea.field_c, 0, -117);
@@ -1155,7 +1155,7 @@ abstract class eo extends GraphicsToolkit {
         }
     }
 
-    final void s(int param0, int param1, int param2, int param3, int param4) {
+    final void drawCircle(int param0, int param1, int param2, int param3, int param4) {
         this.g(118);
         this.g(3625, param3);
         this.a(pea.field_c, 0, -71);
@@ -1309,7 +1309,7 @@ abstract class eo extends GraphicsToolkit {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawLine(int param0, int param1, int param2, int param3, int param4, int param5) {
         float var7;
         float var8;
         float var9;
@@ -1634,7 +1634,7 @@ abstract class eo extends GraphicsToolkit {
 
     void h(int param0) {
         if (param0 != -29040) {
-          this.U(-18, -45, 101, 121, 112);
+          this.drawHorizontalLine(-18, -45, 101, 121, 112);
         }
         this.m((byte) 97);
     }
@@ -2201,7 +2201,7 @@ abstract class eo extends GraphicsToolkit {
         return true;
     }
 
-    final void KA(int param0, int param1, int param2, int param3) {
+    final void setClip(int param0, int param1, int param2, int param3) {
         if (param0 <= 0 && -1 + this.field_Hb <= param2 && param1 <= 0 &&
           this.field_jc - 1 <= param3) {
           this.la();
@@ -2314,7 +2314,7 @@ abstract class eo extends GraphicsToolkit {
         return this.field_hc[this.field_Cc];
     }
 
-    final void T(int param0, int param1, int param2, int param3) {
+    final void intersectClip(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         if (this.field_A < param0) {
           var5 = 1;
@@ -2565,19 +2565,19 @@ abstract class eo extends GraphicsToolkit {
         }
     }
 
-    final nh a(jpa param0, boolean param1) {
+    final ToolkitSprite a(jpa param0, boolean param1) {
         int incrementValue$2 = 0;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int[] stackIn_18_0 = null;
         int stackIn_18_1 = 0;
         int stackIn_19_2 = 0;
-        nh stackIn_23_0 = null;
+        ToolkitSprite stackIn_23_0 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
-        nh var3 = null;
+        ToolkitSprite var3 = null;
         RuntimeException var3_ref = null;
         int[] var4 = null;
         int var5 = 0;

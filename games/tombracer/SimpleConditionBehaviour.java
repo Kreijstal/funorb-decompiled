@@ -123,8 +123,8 @@ final class SimpleConditionBehaviour extends Behaviour {
           this.g(91);
           return;
         }
-        var2 = this.b(true).a(this.field_g.e(9648), this.field_g.c(-96), param0 ^ 79, 2, this.field_g.a((byte) 55), this.field_g.d(param0 - 76), this.e(6));
-        stackIn_8_1 = !(var2 < (this.field_g.c(param0 ^ -51) >> 16) * (this.field_g.a((byte) 55) >> 16));
+        var2 = this.b(true).a(this.field_g.getY(9648), this.field_g.getWidth(-96), param0 ^ 79, 2, this.field_g.getHeight((byte) 55), this.field_g.getX(param0 - 76), this.e(6));
+        stackIn_8_1 = !(var2 < (this.field_g.getWidth(param0 ^ -51) >> 16) * (this.field_g.getHeight((byte) 55) >> 16));
         this.field_s = stackIn_8_1;
         if (param0 == 79) {
           return;

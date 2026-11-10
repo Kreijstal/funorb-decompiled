@@ -6,7 +6,7 @@ package jaggl;
 public class MapBuffer extends jaclib.memory.NativeBuffer {
     private int c;
 
-    public final boolean a() {
+    public final boolean unmap() {
         int var1_int;
         RuntimeException var1;
         var1_int = 1;

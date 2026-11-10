@@ -7,24 +7,24 @@ final class vi {
 
     final void a(int param0) {
         if (param0 == 0) {
-          this.field_b.d(param0 ^ 8);
+          this.field_b.clear(param0 ^ 8);
           return;
         }
         S2CActionPacket var3 = (S2CActionPacket) null;
         this.a((byte) 62, (S2CActionPacket) null);
-        this.field_b.d(param0 ^ 8);
+        this.field_b.clear(param0 ^ 8);
     }
 
     final S2CActionPacket a(boolean param0) {
         if (!param0) {
           this.field_b = (IntrusiveDeque) null;
-          if (!this.field_b.d((byte) 14)) {
-            return (S2CActionPacket) (this.field_b.c(-113));
+          if (!this.field_b.isEmpty((byte) 14)) {
+            return (S2CActionPacket) (this.field_b.removeFirst(-113));
           }
           return null;
         }
-        if (!this.field_b.d((byte) 14)) {
-          return (S2CActionPacket) (this.field_b.c(-113));
+        if (!this.field_b.isEmpty((byte) 14)) {
+          return (S2CActionPacket) (this.field_b.removeFirst(-113));
         }
         return null;
     }
@@ -40,7 +40,7 @@ final class vi {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_b.b((byte) -110, param1);
+          this.field_b.addLast((byte) -110, param1);
           if (param0 > 9) {
             return true;
           }
@@ -62,7 +62,7 @@ final class vi {
 
     final int a(byte param0) {
         int var2 = 35 % ((51 - param0) / 46);
-        return this.field_b.a((byte) -16);
+        return this.field_b.size((byte) -16);
     }
 
     final int a(byte param0, int param1) {
@@ -73,21 +73,21 @@ final class vi {
         if (param0 < 21) {
           this.a((byte) 71, -82);
         } else {
-          var4 = (S2CActionPacket) (this.field_b.f(-80));
+          var4 = (S2CActionPacket) (this.field_b.first(-80));
           while (var4 != null) {
             if (var4.a(false, param1)) {
               var3++;
             }
-            var4 = (S2CActionPacket) (this.field_b.e(107));
+            var4 = (S2CActionPacket) (this.field_b.next(107));
           }
           return var3;
         }
-        var4Lifetime1 = (S2CActionPacket) (this.field_b.f(-80));
+        var4Lifetime1 = (S2CActionPacket) (this.field_b.first(-80));
         while (var4Lifetime1 != null) {
           if (var4Lifetime1.a(false, param1)) {
             var3++;
           }
-          var4Lifetime1 = (S2CActionPacket) (this.field_b.e(107));
+          var4Lifetime1 = (S2CActionPacket) (this.field_b.next(107));
         }
         return var3;
     }

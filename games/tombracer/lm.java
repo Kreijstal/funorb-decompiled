@@ -5,7 +5,7 @@ final class lm extends ci {
     private int field_n;
     private int field_q;
     static int[] field_r;
-    static nh field_m;
+    static ToolkitSprite field_m;
     static String field_o;
     private int field_s;
     static jpa[] field_p;

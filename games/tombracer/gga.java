@@ -87,10 +87,10 @@ final class gga extends ofa implements tsa {
         }
         nm.a(vha.field_a, (byte) 108);
         uoa.b();
-        bea.a();
+        SoftwareRasterizer.clear();
         uw.a(false);
         if (var5 < 256) {
-          bea.c(0, 0, bea.field_g, bea.field_a, 0, 256 - var5);
+          SoftwareRasterizer.c(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_a, 0, 256 - var5);
         }
         pfa.a(1);
         if (TimeSwitchBehaviour.field_r >= 150) {

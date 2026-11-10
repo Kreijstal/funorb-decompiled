@@ -267,20 +267,20 @@ final class kva extends dg {
         dpa var31;
         var26 = TombRacer.field_G ? 1 : 0;
         var30 = this.a(113);
-        var3 = var30.m((byte) -86);
-        var4 = var30.s(85);
-        var5 = this.field_h.d(3);
-        var6 = this.field_h.e(param0 + 9758);
-        this.field_o = this.field_h.c(-128) / 2097152;
-        this.field_t = this.field_h.a((byte) 55) / 2097152;
+        var3 = var30.getWidth((byte) -86);
+        var4 = var30.getHeight(85);
+        var5 = this.field_h.getX(3);
+        var6 = this.field_h.getY(param0 + 9758);
+        this.field_o = this.field_h.getWidth(-128) / 2097152;
+        this.field_t = this.field_h.getHeight((byte) 55) / 2097152;
         this.field_m = new dpa[this.field_o][this.field_t];
-        var7 = -(this.field_h.a((byte) 55) / 2) + (var6 + 1048576);
+        var7 = -(this.field_h.getHeight((byte) 55) / 2) + (var6 + 1048576);
         if (param0 != -110) {
           var27 = (dpa) null;
           this.a(-101, (dpa) null);
         }
         for (var8 = 0; var8 < this.field_t; var8++) {
-          var9 = -(this.field_h.c(-53) / 2) + var5 + 1048576;
+          var9 = -(this.field_h.getWidth(-53) / 2) + var5 + 1048576;
           for (var10 = 0; var10 < this.field_o; var10++) {
             var28 = new dpa();
             var29 = var28;
@@ -660,8 +660,8 @@ final class kva extends dg {
           if (1 != var7) {
             return null;
           }
-          var4 = param1.b((byte) 111) / 2097152 % 3;
-          var5 = param1.c((byte) 102) / 2097152 % 3;
+          var4 = param1.getRenderX((byte) 111) / 2097152 % 3;
+          var5 = param1.getRenderY((byte) 102) / 2097152 % 3;
           var6 = 3 * var5 + (80 + var4);
           stackIn_6_0 = RevolverItemComponent.field_J[var6];
           return stackIn_6_0;
@@ -692,7 +692,7 @@ final class kva extends dg {
             this.f((byte) -126);
           }
           super.a(122, param1, param2);
-          if (param1.field_E >= 19) {
+          if (param1.formatVersion >= 19) {
             this.field_v = param2.readBits((byte) 44, 2);
           }
           return;
@@ -722,15 +722,15 @@ final class kva extends dg {
         int var7 = 0;
         oia var8 = null;
         int var9 = TombRacer.field_G ? 1 : 0;
-        int var2 = this.field_h.d(3);
-        int var3 = this.field_h.e(param0 - 211);
+        int var2 = this.field_h.getX(3);
+        int var3 = this.field_h.getY(param0 - 211);
         if (param0 != 9859) {
           return;
         }
         this.field_q = new oia[this.field_o][this.field_t];
-        int var4 = -(this.field_h.a((byte) 55) / 2) + var3 + 1048576;
+        int var4 = -(this.field_h.getHeight((byte) 55) / 2) + var3 + 1048576;
         for (var5 = 0; this.field_t > var5; var5++) {
-          var6 = 1048576 + (var2 - this.field_h.c(-100) / 2);
+          var6 = 1048576 + (var2 - this.field_h.getWidth(-100) / 2);
           for (var7 = 0; var7 < this.field_o; var7++) {
             var8 = new oia();
             this.field_q[var7][var5] = var8;
@@ -818,7 +818,7 @@ final class kva extends dg {
           if (this.field_v == 1) {
             var6 = new aga(tga.field_a, 0, 0, 0, 0, 16720418, 200, 8);
             this.field_u = new uh(var6);
-            this.field_u.a(-17825792 + this.e((byte) -118) + 4194304, (byte) 95, this.c((byte) 108), this.b((byte) 84));
+            this.field_u.a(-17825792 + this.getRenderZ((byte) -118) + 4194304, (byte) 95, this.getRenderY((byte) 108), this.getRenderX((byte) 84));
             var4 = param1.a((byte) 59);
             if (var4 instanceof sva) {
               var5 = (sva) (var4);

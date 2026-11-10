@@ -7,7 +7,7 @@ final class cb implements ks {
     private int field_e;
     private int field_c;
     private int field_g;
-    static nh[] field_i;
+    static ToolkitSprite[] field_i;
     private OpenGlToolkit field_f;
     private int field_d;
     private wia[] field_h;
@@ -223,7 +223,7 @@ final class cb implements ks {
 
     public static void releaseStatics(int param0) {
         if (param0 != 36053) {
-          field_i = (nh[]) null;
+          field_i = (ToolkitSprite[]) null;
           field_i = null;
           return;
         }

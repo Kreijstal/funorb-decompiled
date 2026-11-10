@@ -373,8 +373,8 @@ final class DamageableBehaviour extends Behaviour {
           this.field_u = param1.readBits((byte) 44, 4);
           this.field_y = param1.readBits((byte) 44, 4);
           this.field_t = param1.readBits((byte) 44, 8);
-          this.field_w = new kpa(6, param0.field_E, param1);
-          this.field_A = new kpa(6, param0.field_E, param1);
+          this.field_w = new kpa(6, param0.formatVersion, param1);
+          this.field_A = new kpa(6, param0.formatVersion, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "cu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

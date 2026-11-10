@@ -41,18 +41,18 @@ final class PathMoveLocomotor extends Locomotor {
         RuntimeException var4 = null;
         this.field_s = false;
         try {
-          this.field_t = new gea(param0.field_E, param1);
-          if (7 < param0.field_E) {
+          this.field_t = new gea(param0.formatVersion, param1);
+          if (7 < param0.formatVersion) {
             this.field_r = this.a(param1.readBits((byte) 44, 8), false);
           } else {
             this.field_r = param1.readBits((byte) 44, 4) << 16;
           }
-          if (param0.field_E < 11) {
+          if (param0.formatVersion < 11) {
             stackIn_7_0 = this.field_t;
             stackIn_8_1 = (1 == param1.readBits((byte) 44, 1));
             ((gea) (Object) stackIn_7_0).a(stackIn_8_1, 1);
           }
-          if (param0.field_E >= 12) {
+          if (param0.formatVersion >= 12) {
             stackIn_13_1 = (param1.readBits((byte) 44, 1) == 1);
             this.field_o = stackIn_13_1;
             if (this.field_o) {

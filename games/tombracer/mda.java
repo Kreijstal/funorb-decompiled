@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mda extends c implements fo, ffa, gma {
+final class mda extends c implements Renderable, ffa, WorldBody {
     private int field_i;
     private Room field_q;
     private int field_n;
@@ -28,10 +28,10 @@ final class mda extends c implements fo, ffa, gma {
           if (param1 > -101) {
             mda.b(-10, (byte) -8);
           }
-          var4 = (upa) (ina.field_d.f(-80));
+          var4 = (upa) (ina.field_d.first(-80));
           while (var4 != null) {
             ip.a(var4, param0, 2147);
-            var4 = (upa) (ina.field_d.e(121));
+            var4 = (upa) (ina.field_d.next(121));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -68,12 +68,12 @@ final class mda extends c implements fo, ffa, gma {
     private final int a(int param0, int param1, int param2, int param3, int param4) {
         if (this.field_s == 1) {
           int var6 = 80 / ((-23 - param1) / 56);
-          return this.field_q.a((ffa) (this), (gma) (this), 1, this.field_k, param3, 12, this.field_k, this.field_p, param4, param0, this.field_j, param2, true);
+          return this.field_q.a((ffa) (this), (WorldBody) (this), 1, this.field_k, param3, 12, this.field_k, this.field_p, param4, param0, this.field_j, param2, true);
         }
         return 0;
     }
 
-    public final boolean a(int param0, gma param1, int param2, pc param3) {
+    public final boolean a(int param0, WorldBody param1, int param2, pc param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -136,7 +136,7 @@ final class mda extends c implements fo, ffa, gma {
         return this.field_k >> 17;
     }
 
-    public final int d(int param0) {
+    public final int getX(int param0) {
         if (param0 != 3) {
           return -56;
         }
@@ -148,7 +148,7 @@ final class mda extends c implements fo, ffa, gma {
           if (param1 != 5465) {
             this.field_m = -24;
           }
-          param0.a((byte) 111, 6, (fo) (this));
+          param0.a((byte) 111, 6, (Renderable) (this));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "mda.AA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -207,7 +207,7 @@ final class mda extends c implements fo, ffa, gma {
         return stackIn_7_0;
     }
 
-    public final boolean a(int param0, gma param1, int param2, int param3, int param4, ffa param5, int param6, int param7) {
+    public final boolean a(int param0, WorldBody param1, int param2, int param3, int param4, ffa param5, int param6, int param7) {
         RuntimeException var9 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -244,7 +244,7 @@ final class mda extends c implements fo, ffa, gma {
         }
     }
 
-    private final boolean a(gma param0, byte param1) {
+    private final boolean a(WorldBody param0, byte param1) {
         RuntimeException var3 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -286,7 +286,7 @@ final class mda extends c implements fo, ffa, gma {
           if (param2 >= -97) {
             this.field_q = (Room) null;
           }
-          stackIn_3_0 = this.a(param0, var4_int, param1.d(3), 0, param1.e(9648), var4_int);
+          stackIn_3_0 = this.a(param0, var4_int, param1.getX(3), 0, param1.getY(9648), var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -308,12 +308,12 @@ final class mda extends c implements fo, ffa, gma {
         }
     }
 
-    public final int b(byte param0) {
+    public final int getRenderX(byte param0) {
         int var2 = 12 % ((param0 + 23) / 53);
         return this.field_p;
     }
 
-    public final int e(byte param0) {
+    public final int getRenderZ(byte param0) {
         if (param0 > -86) {
           return 2;
         }
@@ -322,7 +322,7 @@ final class mda extends c implements fo, ffa, gma {
 
     public final int g(byte param0) {
         if (param0 != 115) {
-          this.f((byte) -93);
+          this.getRoom((byte) -93);
           return 0;
         }
         return 0;
@@ -360,16 +360,16 @@ final class mda extends c implements fo, ffa, gma {
         return eqa.a(param2, true, param0);
     }
 
-    public final int e(int param0) {
+    public final int getY(int param0) {
         if (param0 == 9648) {
           return this.field_j;
         }
         ffa var3 = (ffa) null;
-        this.a(-103, (gma) null, -104, -49, -55, (ffa) null, -28, -39);
+        this.a(-103, (WorldBody) null, -104, -49, -55, (ffa) null, -28, -39);
         return this.field_j;
     }
 
-    public final int c(byte param0) {
+    public final int getRenderY(byte param0) {
         if (param0 <= 91) {
           this.field_r = 45;
           return this.field_j;
@@ -525,7 +525,7 @@ final class mda extends c implements fo, ffa, gma {
         return io.a(param4, this.field_j, (byte) -70, param3, this.field_p, param1, this.field_k, this.field_k, param2);
     }
 
-    public final int i(int param0) {
+    public final int getPreviousX(int param0) {
         if (param0 <= 90) {
           mda.b(122, (byte) -32, 39, 92);
           return this.field_u;
@@ -540,7 +540,7 @@ final class mda extends c implements fo, ffa, gma {
         return false;
     }
 
-    public final void a(int param0, iq param1) {
+    public final void render(int param0, iq param1) {
         try {
           if (param0 <= 103) {
             this.b(-91);
@@ -576,7 +576,7 @@ final class mda extends c implements fo, ffa, gma {
           var6Lifetime1 = 1;
         }
         if (var6Lifetime1 != 0 &&
-          this.a(0, -103, param4, this.e(9648) - this.field_r, param2) == 2) {
+          this.a(0, -103, param4, this.getY(9648) - this.field_r, param2) == 2) {
           this.field_j = this.field_r;
         }
         if (this.field_j == this.field_r &&
@@ -593,7 +593,7 @@ final class mda extends c implements fo, ffa, gma {
         return this.field_s;
     }
 
-    public final int a(byte param0) {
+    public final int getHeight(byte param0) {
         if (param0 != 55) {
           return -104;
         }
@@ -610,7 +610,7 @@ final class mda extends c implements fo, ffa, gma {
         this.field_r = this.field_j;
     }
 
-    public final Room f(byte param0) {
+    public final Room getRoom(byte param0) {
         int var2 = 38 / ((param0 - 0) / 61);
         return this.field_q;
     }
@@ -648,7 +648,7 @@ final class mda extends c implements fo, ffa, gma {
           this.field_m = 0;
           return;
         }
-        this.c((byte) 100);
+        this.getRenderY((byte) 100);
         this.field_m = 0;
     }
 
@@ -659,7 +659,7 @@ final class mda extends c implements fo, ffa, gma {
 
     final c d(boolean param0) {
         if (!param0) {
-          this.k(117);
+          this.getPreviousY(117);
           return (c) ((Object) new mda());
         }
         return (c) ((Object) new mda());
@@ -706,8 +706,8 @@ final class mda extends c implements fo, ffa, gma {
           if (~this.field_s != param0) {
             return;
           }
-          var5 = this.field_q.u(-37);
-          if (this.a((byte) 110, var5.e(9648), var5.d(3), var5.a((byte) 55), var5.c(param0 ^ 104))) {
+          var5 = this.field_q.getPlayer(-37);
+          if (this.a((byte) 110, var5.getY(9648), var5.getX(3), var5.getHeight((byte) 55), var5.getWidth(param0 ^ 104))) {
             var5.G(31027);
           }
           return;
@@ -731,8 +731,8 @@ final class mda extends c implements fo, ffa, gma {
             if (~this.field_s != param0) {
               return;
             }
-            var6 = this.field_q.u(-37);
-            if (this.a((byte) 110, var6.e(9648), var6.d(3), var6.a((byte) 55), var6.c(param0 ^ 104))) {
+            var6 = this.field_q.getPlayer(-37);
+            if (this.a((byte) 110, var6.getY(9648), var6.getX(3), var6.getHeight((byte) 55), var6.getWidth(param0 ^ 104))) {
               var6.G(31027);
             }
             return;
@@ -748,14 +748,14 @@ final class mda extends c implements fo, ffa, gma {
         if (~this.field_s != param0) {
           return;
         }
-        var7 = this.field_q.u(-37);
-        if (this.a((byte) 110, var7.e(9648), var7.d(3), var7.a((byte) 55), var7.c(param0 ^ 104))) {
+        var7 = this.field_q.getPlayer(-37);
+        if (this.a((byte) 110, var7.getY(9648), var7.getX(3), var7.getHeight((byte) 55), var7.getWidth(param0 ^ 104))) {
           var7.G(31027);
         }
         return;
     }
 
-    public final boolean a(gma param0, int param1) {
+    public final boolean a(WorldBody param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -782,7 +782,7 @@ final class mda extends c implements fo, ffa, gma {
         }
     }
 
-    public final boolean a(int param0, gma param1) {
+    public final boolean a(int param0, WorldBody param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -817,7 +817,7 @@ final class mda extends c implements fo, ffa, gma {
         }
     }
 
-    public final int k(int param0) {
+    public final int getPreviousY(int param0) {
         if (param0 != -21185) {
           this.field_m = -67;
           return this.field_r;
@@ -863,7 +863,7 @@ final class mda extends c implements fo, ffa, gma {
         this.field_w = fieldTemp$0;
     }
 
-    public final int c(int param0) {
+    public final int getWidth(int param0) {
         if (param0 >= -11) {
           this.field_l = 88;
           return this.field_k;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class j extends nh implements e {
+final class j extends ToolkitSprite implements e {
     long field_nativeid;
 
     private final native void RA(long param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8);
@@ -30,7 +30,7 @@ final class j extends nh implements e {
         this.RA(this.field_nativeid, param0, param1, param2, param3, param4, param5, param6, param7);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void draw(int param0, int param1, int param2, int param3, int param4) {
         this.W(this.field_nativeid, param0, param1, param2, param3, param4);
     }
 
@@ -48,7 +48,7 @@ final class j extends nh implements e {
         return this.JA(this.field_nativeid);
     }
 
-    final void a(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8, int param9) {
+    final void drawAffine(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8, int param9) {
         this.b(this.field_nativeid, param0, param1, param2, param3, param4, param5, param6, param7, param8, param9);
     }
 

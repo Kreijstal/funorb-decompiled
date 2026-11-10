@@ -10,7 +10,7 @@ final class et extends cg {
     final cg c() {
         rta var1_ref = null;
         do {
-          var1_ref = (rta) (this.field_l.e(112));
+          var1_ref = (rta) (this.field_l.next(112));
           if (var1_ref == null) {
             return null;
           }
@@ -24,7 +24,7 @@ final class et extends cg {
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
         this.field_m.a(param0);
-        var3 = (rta) (this.field_l.f(-80));
+        var3 = (rta) (this.field_l.first(-80));
         while (var3 != null) {
           if (!this.field_k.c(15, var3)) {
             var2 = param0;
@@ -38,7 +38,7 @@ final class et extends cg {
               var2 = var2 - var3.field_B;
             } while (!this.field_k.a(var3, (int[]) null, 0, (byte) 6, var2));
           }
-          var3 = (rta) (this.field_l.e(125));
+          var3 = (rta) (this.field_l.next(125));
         }
     }
 
@@ -170,14 +170,14 @@ final class et extends cg {
             param2.field_r = 1048575 & var4_int * param1 + param2.field_r;
             if (var5 <= param1) {
               if (this.field_k.field_q[param2.field_k] != 0) {
-                param2.field_x = qia.a(param2.field_n, param2.field_x.j(), 0, param2.field_x.f());
+                param2.field_x = PcmSampleStream.a(param2.field_n, param2.field_x.j(), 0, param2.field_x.f());
                 stackIn_8_0 = this.field_k;
                 stackIn_8_1 = -111;
                 stackIn_8_2 = (rta) (param2);
                 stackIn_9_3 = !(0 <= param2.field_y.field_g[param2.field_m]);
                 ((l) (Object) stackIn_8_0).a((byte) stackIn_8_1, stackIn_8_2, stackIn_9_3);
               } else {
-                param2.field_x = qia.a(param2.field_n, param2.field_x.j(), param2.field_x.l(), param2.field_x.f());
+                param2.field_x = PcmSampleStream.a(param2.field_n, param2.field_x.j(), param2.field_x.l(), param2.field_x.f());
               }
               if (param2.field_y.field_g[param2.field_m] < 0) {
                 param2.field_x.b(-1);
@@ -220,7 +220,7 @@ final class et extends cg {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        qia var11 = null;
+        PcmSampleStream var11 = null;
         int var12 = 0;
         var12 = TombRacer.field_G ? 1 : 0;
         try {
@@ -244,7 +244,7 @@ final class et extends cg {
               }
               var11 = param3.field_x;
               if (this.field_k.field_q[param3.field_k] != 0) {
-                param3.field_x = qia.a(param3.field_n, var11.j(), 0, var11.f());
+                param3.field_x = PcmSampleStream.a(param3.field_n, var11.j(), 0, var11.f());
                 stackIn_12_0 = this.field_k;
                 stackIn_12_1 = -35;
                 stackIn_12_2 = (rta) (param3);
@@ -252,7 +252,7 @@ final class et extends cg {
                 ((l) (Object) stackIn_12_0).a((byte) stackIn_12_1, stackIn_12_2, stackIn_13_3);
                 param3.field_x.b(var9, var11.l());
               } else {
-                param3.field_x = qia.a(param3.field_n, var11.j(), var11.l(), var11.f());
+                param3.field_x = PcmSampleStream.a(param3.field_n, var11.j(), var11.l(), var11.f());
               }
               if (param3.field_y.field_g[param3.field_m] < 0) {
                 param3.field_x.b(-1);
@@ -303,7 +303,7 @@ final class et extends cg {
         var7 = TombRacer.field_G ? 1 : 0;
         try {
           this.field_m.b(param0, param1, param2);
-          var6 = (rta) (this.field_l.f(-80));
+          var6 = (rta) (this.field_l.first(-80));
           while (var6 != null) {
             if (!this.field_k.c(15, var6)) {
               var4_int = param1;
@@ -319,7 +319,7 @@ final class et extends cg {
                 var5 = var5 - var6.field_B;
               } while (!this.field_k.a(var6, param0, var4_int, (byte) 6, var5));
             }
-            var6 = (rta) (this.field_l.e(121));
+            var6 = (rta) (this.field_l.next(121));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -359,7 +359,7 @@ final class et extends cg {
     }
 
     final cg b() {
-        rta var1 = (rta) (this.field_l.f(-80));
+        rta var1 = (rta) (this.field_l.first(-80));
         if (var1 == null) {
           return null;
         }

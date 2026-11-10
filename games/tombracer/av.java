@@ -207,12 +207,12 @@ final class av {
                 var5_int++;
               }
               if (var5_int == 1) {
-                var8.b((byte) -80, new qja(var3_int, var4));
+                var8.addLast((byte) -80, new qja(var3_int, var4));
               }
             }
           }
         }
-        var10 = new int[var8.a((byte) -16)][2];
+        var10 = new int[var8.size((byte) -16)][2];
         var9 = var10;
         var3 = var9;
         if (param0 > -40) {
@@ -220,12 +220,12 @@ final class av {
         }
         var7 = 0;
         var4Lifetime1 = var7;
-        var5 = (qja) (var8.f(-80));
+        var5 = (qja) (var8.first(-80));
         while (var5 != null) {
           var10[var7][0] = var5.field_h;
           var10[var7][1] = var5.field_g;
           var7++;
-          var5 = (qja) (var8.e(125));
+          var5 = (qja) (var8.next(125));
         }
         return var3;
     }

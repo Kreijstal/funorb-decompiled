@@ -7,7 +7,7 @@ abstract class eha {
 
     final void a(GameEvent param0, Player param1, boolean param2) {
         try {
-          this.field_b.b((byte) -96, new dda(param1, param0));
+          this.field_b.addLast((byte) -96, new dda(param1, param0));
           if (!param2) {
             Room var5 = (Room) null;
             this.a(-124, (Room) null);
@@ -122,14 +122,14 @@ abstract class eha {
           if (param1.a(param0.player.r(-108), 3)) {
             return;
           }
-          var7 = (PendingEvent) (this.field_a.f(-80));
+          var7 = (PendingEvent) (this.field_a.first(-80));
           while (var7 != null) {
             if (var7.a(param1, 0)) {
               return;
             }
-            var7 = (PendingEvent) (this.field_a.e(107));
+            var7 = (PendingEvent) (this.field_a.next(107));
           }
-          this.field_a.b((byte) -82, param1);
+          this.field_a.addLast((byte) -82, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -155,7 +155,7 @@ abstract class eha {
         if (param0 > -111) {
           return;
         }
-        this.field_b.d(8);
+        this.field_b.clear(8);
     }
 
     abstract void a(int param0, Player param1, int param2, Room param3, int param4, int param5);
@@ -164,7 +164,7 @@ abstract class eha {
         if (param0 < 99) {
           return (dda) null;
         }
-        return (dda) (this.field_b.c(23));
+        return (dda) (this.field_b.removeFirst(23));
     }
 
     abstract void a(Player param0, Room param1, boolean param2);
@@ -193,7 +193,7 @@ abstract class eha {
             var7 = (Trap) null;
             this.a(84, 86, (Player) null, (Trap) null);
           }
-          var5 = (PendingEvent) (this.field_a.f(param0 - 53));
+          var5 = (PendingEvent) (this.field_a.first(param0 - 53));
           while (var5 != null) {
             if (!var5.a(var3_int, -1, var4)) {
               if (var5.c(var3_int, 113)) {
@@ -203,7 +203,7 @@ abstract class eha {
               var5.a(param1, -102);
               var5.unlink(40);
             }
-            var5 = (PendingEvent) (this.field_a.e(122));
+            var5 = (PendingEvent) (this.field_a.next(122));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

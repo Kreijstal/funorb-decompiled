@@ -18,7 +18,7 @@ final class dl extends me {
 
     final void b(byte param0) {
         int var2 = this.field_n.e(-115);
-        nh var3 = gg.field_f;
+        ToolkitSprite var3 = gg.field_f;
         int var4 = var3.d();
         int var5 = var3.b();
         var3.a(-(var4 / 2) + this.field_s, var2 + (this.field_u - var5 / 2));

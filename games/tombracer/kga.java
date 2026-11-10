@@ -11,7 +11,7 @@ final class kga extends dg {
     static dn field_o;
     static eua field_n;
 
-    final void a(gr param0, gma param1, byte param2) {
+    final void a(gr param0, WorldBody param1, byte param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -21,7 +21,7 @@ final class kga extends dg {
         RuntimeException decompiledCaughtException = null;
         try {
           super.a(param0, param1, param2);
-          if (this.a(127).field_E < 20) {
+          if (this.a(127).formatVersion < 20) {
             this.a(param1, -2159, param0);
           }
           if (0 != this.field_t) {
@@ -49,7 +49,7 @@ final class kga extends dg {
         }
     }
 
-    final void a(gma param0, int param1, gr param2) {
+    final void a(WorldBody param0, int param1, gr param2) {
         int var5 = 0;
         int var6 = 0;
         MiscItemBehaviour var7 = null;
@@ -225,7 +225,7 @@ final class kga extends dg {
           if (param0 <= 119) {
             this.f(88);
           }
-          if (param1.field_E < 20) {
+          if (param1.formatVersion < 20) {
             return;
           }
           this.field_t = param2.readBits((byte) 44, 4);

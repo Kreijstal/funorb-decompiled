@@ -27,7 +27,7 @@ final class PitComponent extends kna {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0.field_E < 21) {
+          if (param0.formatVersion < 21) {
             return;
           }
           this.field_F = param2.readBits((byte) 44, 2);
@@ -123,11 +123,11 @@ final class PitComponent extends kna {
           var6 = 0;
         }
         int var8 = var4 + this.field_k / 2;
-        int var9 = this.field_o.m((byte) -86);
+        int var9 = this.room.getWidth((byte) -86);
         if (var9 - param0 <= var7) {
           var7 = var9;
         }
-        int var10 = this.field_o.s(-104);
+        int var10 = this.room.getHeight(-104);
         var3 = (-var5 + var7) / 2 + var5;
         if (var10 - param0 <= var8) {
           var8 = var10;

@@ -124,7 +124,7 @@ final class bda extends ci {
             return (Behaviour) ((Object) stackIn_73_0);
           }
           if (var6_int == 10) {
-            if (7 <= param2.field_E) {
+            if (7 <= param2.formatVersion) {
               stackIn_76_0 = new SafeZoneBehaviour(param2, param3, param0);
               return (Behaviour) ((Object) stackIn_76_0);
             }

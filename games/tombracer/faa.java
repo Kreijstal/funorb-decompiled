@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class faa implements fo {
+final class faa implements Renderable {
     static String field_g;
     int field_e;
     int field_b;
@@ -69,7 +69,7 @@ final class faa implements fo {
         }
     }
 
-    public final int b(byte param0) {
+    public final int getRenderX(byte param0) {
         int var3 = 0;
         int var2 = 3 % ((param0 + 23) / 53);
         if (this.field_b == 0) {
@@ -77,7 +77,7 @@ final class faa implements fo {
         } else {
           var3 = this.field_c.o((byte) 122);
         }
-        return var3 + (this.field_c.b((byte) -86) + this.field_d);
+        return var3 + (this.field_c.getRenderX((byte) -86) + this.field_d);
     }
 
     public static void a(boolean param0) {
@@ -90,7 +90,7 @@ final class faa implements fo {
         field_g = null;
     }
 
-    public final int c(byte param0) {
+    public final int getRenderY(byte param0) {
         int var2 = 0;
         if (this.field_b == 0) {
           var2 = 0;
@@ -98,7 +98,7 @@ final class faa implements fo {
           var2 = this.field_c.p((byte) 68);
         }
         if (param0 >= 91) {
-          return this.field_c.c((byte) 124) + this.field_a + var2;
+          return this.field_c.getRenderY((byte) 124) + this.field_a + var2;
         }
         return 78;
     }
@@ -111,21 +111,21 @@ final class faa implements fo {
         return this.field_c.d((byte) 48);
     }
 
-    public final int e(byte param0) {
+    public final int getRenderZ(byte param0) {
         if (param0 > -86) {
           faa.a(true);
           if (this.field_b != 0) {
-            return this.field_c.e((byte) -104);
+            return this.field_c.getRenderZ((byte) -104);
           }
           return 0;
         }
         if (this.field_b != 0) {
-          return this.field_c.e((byte) -104);
+          return this.field_c.getRenderZ((byte) -104);
         }
         return 0;
     }
 
-    public final void a(int param0, iq param1) {
+    public final void render(int param0, iq param1) {
         if (param0 <= 103) {
           this.field_f = (bua) null;
         }
@@ -138,7 +138,7 @@ final class faa implements fo {
           return;
         }
         try {
-          gqa.a(this.field_e, -83584144, this.c((byte) 105), this.b((byte) -102), this.field_f.b((byte) 74), this.e((byte) -98));
+          gqa.a(this.field_e, -83584144, this.getRenderY((byte) 105), this.getRenderX((byte) -102), this.field_f.b((byte) 74), this.getRenderZ((byte) -98));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "faa.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hva {
+final class AudioFilter {
     private static float[][] field_h;
     private int[] field_f;
     private int[][][] field_b;
@@ -16,7 +16,7 @@ final class hva {
         field_g = (int[][]) null;
     }
 
-    final int a(int param0, float param1) {
+    final int computeCoefficients(int param0, float param1) {
         float var5 = 0.0f;
         float var6 = 0.0f;
         int var7 = 0;
@@ -119,7 +119,7 @@ final class hva {
     private final float a(int param0, int param1, float param2) {
         float var4 = (float)this.field_b[param0][0][param1] + param2 * (float)(this.field_b[param0][1][param1] - this.field_b[param0][0][param1]);
         var4 = var4 * 0.0001220703125f;
-        return hva.a(var4);
+        return AudioFilter.a(var4);
     }
 
     private final static float a(float param0) {
@@ -133,7 +133,7 @@ final class hva {
         return 1.0f - (float)Math.pow(10.0, (double)(-var4 / 20.0f));
     }
 
-    hva() {
+    AudioFilter() {
         this.field_b = new int[2][2][4];
         this.field_f = new int[2];
         this.field_a = new int[2];

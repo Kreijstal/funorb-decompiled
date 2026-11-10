@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
+final class db extends IntrusiveNode implements Renderable, ffa, WorldBody, noa, qn {
     private int field_n;
     private Room field_m;
     private int field_p;
@@ -27,25 +27,25 @@ final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
 
     private final void t(int param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
-        dg var4 = (dg) (this.field_k.f(-80));
+        dg var4 = (dg) (this.field_k.first(-80));
         while (var4 != null) {
           var4.i((byte) -30);
-          var4 = (dg) (this.field_k.e(param0 ^ 112));
+          var4 = (dg) (this.field_k.next(param0 ^ 112));
         }
         if (param0 != 0) {
           this.field_o = (bca) null;
         }
-        this.field_k.d(param0 + 8);
+        this.field_k.clear(param0 + 8);
     }
 
-    public final int c(int param0) {
+    public final int getWidth(int param0) {
         if (param0 >= -11) {
           this.j(-31);
         }
         return this.field_g;
     }
 
-    public final boolean a(int param0, gma param1) {
+    public final boolean a(int param0, WorldBody param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -83,12 +83,12 @@ final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
         try {
           var3_int = -41 % ((param1 - 62) / 37);
           if (this.r(24269)) {
-            param0.a(9, (fo) (this), (byte) -33);
+            param0.a(9, (Renderable) (this), (byte) -33);
           }
-          var4 = (dg) (this.field_k.f(-80));
+          var4 = (dg) (this.field_k.first(-80));
           while (var4 != null) {
             var4.a(param0, 111);
-            var4 = (dg) (this.field_k.e(124));
+            var4 = (dg) (this.field_k.next(124));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -118,17 +118,17 @@ final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
         return true;
     }
 
-    public final int i(int param0) {
+    public final int getPreviousX(int param0) {
         if (param0 <= 90) {
           field_s = (jea) null;
         }
         return this.field_p;
     }
 
-    public final void a(int param0, iq param1) {
+    public final void render(int param0, iq param1) {
         try {
           if (param0 < 103) {
-            this.a((byte) -57);
+            this.getHeight((byte) -57);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "db.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -150,17 +150,17 @@ final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
         return false;
     }
 
-    public final int k(int param0) {
+    public final int getPreviousY(int param0) {
         if (param0 != -21185) {
-          gma var3 = (gma) null;
-          this.a(69, (gma) null);
+          WorldBody var3 = (WorldBody) null;
+          this.a(69, (WorldBody) null);
         }
         return this.field_r;
     }
 
-    public final int a(byte param0) {
+    public final int getHeight(byte param0) {
         if (param0 != 55) {
-          this.i(29);
+          this.getPreviousX(29);
         }
         return this.field_q;
     }
@@ -198,12 +198,12 @@ final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
           if (param0 > -74) {
             this.field_k = (IntrusiveDeque) null;
           }
-          this.field_p = param1.m((byte) -86) / 2 - (this.field_p - param1.m((byte) -86) / 2);
+          this.field_p = param1.getWidth((byte) -86) / 2 - (this.field_p - param1.getWidth((byte) -86) / 2);
           param1.field_u.b((ffa) (this), 7073);
-          var5 = (dg) (this.field_k.f(-80));
+          var5 = (dg) (this.field_k.first(-80));
           while (var5 != null) {
             var5.h(61);
-            var5 = (dg) (this.field_k.e(108));
+            var5 = (dg) (this.field_k.next(108));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -265,7 +265,7 @@ final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
         return false;
     }
 
-    public final boolean a(int param0, gma param1, int param2, pc param3) {
+    public final boolean a(int param0, WorldBody param1, int param2, pc param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -306,7 +306,7 @@ final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
         }
     }
 
-    public final boolean a(int param0, gma param1, int param2, int param3, int param4, ffa param5, int param6, int param7) {
+    public final boolean a(int param0, WorldBody param1, int param2, int param3, int param4, ffa param5, int param6, int param7) {
         RuntimeException var9 = null;
         boolean stackIn_12_0 = false;
         RuntimeException stackIn_15_0 = null;
@@ -347,7 +347,7 @@ final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
         }
     }
 
-    public final boolean a(gma param0, int param1) {
+    public final boolean a(WorldBody param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -375,10 +375,10 @@ final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
 
     final void c(boolean param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
-        dg var4 = (dg) (this.field_k.f(-80));
+        dg var4 = (dg) (this.field_k.first(-80));
         while (var4 != null) {
           var4.e(-41);
-          var4 = (dg) (this.field_k.e(118));
+          var4 = (dg) (this.field_k.next(118));
         }
         if (!param0) {
           this.field_i = false;
@@ -396,12 +396,12 @@ final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
           if (!param0) {
             this.field_i = false;
           }
-          if (this.field_m.field_E >= 9) {
-            param1.writeBits((byte) -36, this.field_k.a((byte) -16), 2);
-            var5 = (dg) (this.field_k.f(-80));
+          if (this.field_m.formatVersion >= 9) {
+            param1.writeBits((byte) -36, this.field_k.size((byte) -16), 2);
+            var5 = (dg) (this.field_k.first(-80));
             while (var5 != null) {
               rm.field_a.a(15682, param1, var5);
-              var5 = (dg) (this.field_k.e(127));
+              var5 = (dg) (this.field_k.next(127));
             }
           }
           this.field_o.a((byte) -79, param1);
@@ -420,10 +420,10 @@ final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
         if (param0 != -8195) {
           return;
         }
-        this.a(rm.field_a.a((gr) null, (gma) (this), -116), true);
+        this.a(rm.field_a.a((gr) null, (WorldBody) (this), -116), true);
     }
 
-    public final int e(byte param0) {
+    public final int getRenderZ(byte param0) {
         if (param0 > -86) {
           field_f = (IntrusiveDeque) null;
           return 0;
@@ -481,7 +481,7 @@ final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
         var3 = -(this.field_g / 2) + this.field_p;
         var4 = -(this.field_q / 2) + this.field_r;
         if (param0 >= -122) {
-          this.c((byte) 50);
+          this.getRenderY((byte) 50);
         }
         var5 = this.field_g / 2 + this.field_p;
         var6 = this.field_q / 2 + this.field_r;
@@ -491,8 +491,8 @@ final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
         if (var3 <= param1) {
           var3 = 0;
         }
-        var7 = this.field_m.m((byte) -86);
-        var8 = this.field_m.s(34);
+        var7 = this.field_m.getWidth((byte) -86);
+        var8 = this.field_m.getHeight(34);
         if (-param1 + var7 <= var5) {
           var5 = var7;
         }
@@ -530,7 +530,7 @@ final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
         return 5 + 5 * this.field_n;
     }
 
-    public final int e(int param0) {
+    public final int getY(int param0) {
         if (param0 != 9648) {
           return -56;
         }
@@ -544,12 +544,12 @@ final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
         return 0;
     }
 
-    public final int b(byte param0) {
+    public final int getRenderX(byte param0) {
         int var2 = -80 % ((param0 + 23) / 53);
         return this.field_p;
     }
 
-    public final Room f(byte param0) {
+    public final Room getRoom(byte param0) {
         int var2 = 110 / ((param0 - 0) / 61);
         return this.field_m;
     }
@@ -558,18 +558,18 @@ final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
         if (param0 != 110) {
           return false;
         }
-        return io.a(param4, this.e(9648), (byte) -80, param3, this.d(3), param1, this.field_q, this.field_g, param2);
+        return io.a(param4, this.getY(9648), (byte) -80, param3, this.getX(3), param1, this.field_q, this.field_g, param2);
     }
 
     final void s(int param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
-        dg var2 = (dg) (this.field_k.f(-80));
+        dg var2 = (dg) (this.field_k.first(-80));
         if (param0 != 0) {
           this.field_p = 88;
         }
         while (var2 != null) {
           var2.d(-1);
-          var2 = (dg) (this.field_k.e(124));
+          var2 = (dg) (this.field_k.next(124));
         }
     }
 
@@ -592,15 +592,15 @@ final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           if (this.r(24269)) {
-            param1.a((byte) -106, 9, (fo) (this));
+            param1.a((byte) -106, 9, (Renderable) (this));
           }
           if (param0 <= 6) {
             return;
           }
-          var5 = (dg) (this.field_k.f(-80));
+          var5 = (dg) (this.field_k.first(-80));
           while (var5 != null) {
             var5.b(0, param1);
-            var5 = (dg) (this.field_k.e(112));
+            var5 = (dg) (this.field_k.next(112));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -655,8 +655,8 @@ final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
 
     final boolean b(int param0, int param1) {
         if (param1 != 1569) {
-          gma var4 = (gma) null;
-          this.a((gma) null, -24);
+          WorldBody var4 = (WorldBody) null;
+          this.a((WorldBody) null, -24);
         }
         return this.field_o.a(param0, 14530);
     }
@@ -674,11 +674,11 @@ final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
           return;
         }
         try {
-          this.field_k.b((byte) -73, param0);
+          this.field_k.addLast((byte) -73, param0);
           if (!param1) {
             this.field_r = -69;
           }
-          param0.a((gr) null, (gma) (this), (byte) 36);
+          param0.a((gr) null, (WorldBody) (this), (byte) 36);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "db.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -691,14 +691,14 @@ final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
         return false;
     }
 
-    public final int c(byte param0) {
+    public final int getRenderY(byte param0) {
         if (param0 < 91) {
           this.field_g = -15;
         }
         return this.field_r;
     }
 
-    public final int d(int param0) {
+    public final int getX(int param0) {
         if (param0 != 3) {
           return -6;
         }
@@ -722,7 +722,7 @@ final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
         this.field_i = false;
         try {
           this.field_m = param0;
-          if (param0.field_E > 20) {
+          if (param0.formatVersion > 20) {
             this.field_p = 1048576 * param1.readBits((byte) 44, 7);
             this.field_r = param1.readBits((byte) 44, 7) * 1048576;
             this.field_g = param1.readBits((byte) 44, 6) * 2097152;
@@ -733,7 +733,7 @@ final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
             this.field_q = param1.readBits((byte) 44, 10) << 16;
             this.field_g = param1.readBits((byte) 44, 10) << 16;
           }
-          if (8 < param0.field_E) {
+          if (8 < param0.formatVersion) {
             var3_int = param1.readBits((byte) 44, 2);
             for (var4 = 0; var4 < var3_int; var4++) {
               var5 = rm.field_a.a(param0, param1, false);
@@ -742,7 +742,7 @@ final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
           } else {
             this.n(-8195);
           }
-          this.field_o = new bca(param0.field_E, param1);
+          this.field_o = new bca(param0.formatVersion, param1);
           fieldTemp$0 = fi.field_c;
           fi.field_c = fi.field_c + 1;
           this.field_n = fieldTemp$0;

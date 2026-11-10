@@ -12,7 +12,7 @@ class jea extends um {
     IntrusiveDeque field_J;
     Sprite field_B;
     int field_hb;
-    il field_H;
+    BitmapFont field_H;
     boolean field_cb;
     int field_p;
     boolean field_o;
@@ -76,7 +76,7 @@ class jea extends um {
           if (param0 >= -121) {
             this.a(33, true, 32, -78, -54, -31);
           }
-          this.field_J.b((byte) -115, param1);
+          this.field_J.addLast((byte) -115, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "jea.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -251,13 +251,13 @@ class jea extends um {
           }
         }
         if (this.field_J != null) {
-          var4 = (jea) (this.field_J.f(-80));
+          var4 = (jea) (this.field_J.first(-80));
           while (var4 != null) {
             var5 = var4.field_G + var4.field_qb;
             if (var5 > var3) {
               var3 = var5;
             }
-            var4 = (jea) (this.field_J.e(115));
+            var4 = (jea) (this.field_J.next(115));
           }
         }
         return var3;
@@ -275,11 +275,11 @@ class jea extends um {
         int var10Lifetime1;
         if (!param0) {
           var10 = 0;
-          var11_ref_jea = (jea) (this.field_J.f(-80));
+          var11_ref_jea = (jea) (this.field_J.first(-80));
           while (var11_ref_jea != null) {
             var11_ref_jea.field_K = -var11_ref_jea.field_T + var10;
             var10 = var10 + (param1 + (var11_ref_jea.field_O + var11_ref_jea.field_t));
-            var11_ref_jea = (jea) (this.field_J.e(127));
+            var11_ref_jea = (jea) (this.field_J.next(127));
           }
           var9 = var10 - param1;
         }
@@ -307,18 +307,18 @@ class jea extends um {
         FuseBehaviour.field_w = !param1 ? true : false;
         int var3 = -103 / ((-16 - param0) / 34);
         ow.field_s = !param1 ? true : false;
-        this.a(-1, true, bea.field_a, bea.field_g, 0, 0);
+        this.a(-1, true, SoftwareRasterizer.field_a, SoftwareRasterizer.field_g, 0, 0);
     }
 
     final void a(int param0) {
         jea var4 = null;
         int var3 = TombRacer.field_G ? 1 : 0;
         if (this.field_J != null) {
-          var4 = (jea) (this.field_J.b(param0 ^ -10967));
+          var4 = (jea) (this.field_J.last(param0 ^ -10967));
           while (var4 != null) {
             var4.field_Q = true;
             var4.a(-10966);
-            var4 = (jea) (this.field_J.a(-1));
+            var4 = (jea) (this.field_J.previous(-1));
           }
         }
         if (param0 != -10966) {
@@ -408,19 +408,19 @@ class jea extends um {
         this.field_t = this.field_t + var7Lifetime3;
         this.field_q = this.field_qb + param4;
         this.field_A = param5 + this.field_T;
-        var8 = bea.field_b;
-        var9 = bea.field_h;
-        var10 = bea.field_d;
-        var11 = bea.field_k;
-        bea.g(this.field_q, this.field_A, this.field_G + this.field_q, this.field_t + this.field_A);
+        var8 = SoftwareRasterizer.field_b;
+        var9 = SoftwareRasterizer.field_h;
+        var10 = SoftwareRasterizer.field_d;
+        var11 = SoftwareRasterizer.field_k;
+        SoftwareRasterizer.g(this.field_q, this.field_A, this.field_G + this.field_q, this.field_t + this.field_A);
         var12 = 0;
         if (!ow.field_s &&
           param1 &&
           0 != hf.field_b &&
-          jm.field_m >= bea.field_b &&
-          jm.field_m < bea.field_d &&
-          bea.field_h <= lba.field_p &&
-          bea.field_k > lba.field_p) {
+          jm.field_m >= SoftwareRasterizer.field_b &&
+          jm.field_m < SoftwareRasterizer.field_d &&
+          SoftwareRasterizer.field_h <= lba.field_p &&
+          SoftwareRasterizer.field_k > lba.field_p) {
           this.field_E = hf.field_b;
           this.field_kb = -this.field_A + lba.field_p;
           var12 = 1;
@@ -432,7 +432,7 @@ class jea extends um {
           }
           this.field_y = 0;
         }
-        stackIn_31_1 = (!FuseBehaviour.field_w) && (jba.field_j >= bea.field_b) && (jba.field_j < bea.field_d) && (sta.field_B >= bea.field_h) && (bea.field_k > sta.field_B);
+        stackIn_31_1 = (!FuseBehaviour.field_w) && (jba.field_j >= SoftwareRasterizer.field_b) && (jba.field_j < SoftwareRasterizer.field_d) && (sta.field_B >= SoftwareRasterizer.field_h) && (SoftwareRasterizer.field_k > sta.field_B);
         this.field_pb = stackIn_31_1;
         if (ksa.field_p == 0) {
           this.field_E = 0;
@@ -440,10 +440,10 @@ class jea extends um {
         stackIn_38_1 = (this.field_pb) && (this.field_E == ksa.field_p) && (param1);
         this.field_o = stackIn_38_1;
         if (this.field_J != null) {
-          var13 = (jea) (this.field_J.b(3));
+          var13 = (jea) (this.field_J.last(3));
           while (var13 != null) {
             var13.a(-1, param1, this.field_t, this.field_G, this.field_q, this.field_A);
-            var13 = (jea) (this.field_J.a(-1));
+            var13 = (jea) (this.field_J.previous(-1));
           }
         }
         if (this.field_pb) {
@@ -452,7 +452,7 @@ class jea extends um {
         if (var12 != 0) {
           ow.field_s = true;
         }
-        bea.b(var8, var9, var10, var11);
+        SoftwareRasterizer.b(var8, var9, var10, var11);
         if (0 != this.field_E &&
           this.field_F) {
           this.field_qb = -param4 + jba.field_j - this.field_p;
@@ -521,11 +521,11 @@ class jea extends um {
         var25 = TombRacer.field_G ? 1 : 0;
         this.field_q = param7 + this.field_qb;
         this.field_A = param8 + this.field_T;
-        var12 = bea.field_b;
-        var13 = bea.field_h;
-        var14 = bea.field_d;
-        var15 = bea.field_k;
-        bea.g(this.field_q, this.field_A, this.field_G + this.field_q, this.field_A + this.field_t);
+        var12 = SoftwareRasterizer.field_b;
+        var13 = SoftwareRasterizer.field_h;
+        var14 = SoftwareRasterizer.field_d;
+        var15 = SoftwareRasterizer.field_k;
+        SoftwareRasterizer.g(this.field_q, this.field_A, this.field_G + this.field_q, this.field_A + this.field_t);
         if (!this.field_Q) {
           param0 = this.field_o;
           stackIn_5_0 = (0 != this.field_E);
@@ -668,13 +668,13 @@ class jea extends um {
           }
         }
         if (this.field_J != null) {
-          var23_ref = (jea) (this.field_J.f(-80));
+          var23_ref = (jea) (this.field_J.first(-80));
           while (var23_ref != null) {
             var23_ref.a(param0, 0, this.field_t, param3, param4, param5, param6, var19 + this.field_q, this.field_A + var20, this.field_L, this.field_G);
-            var23_ref = (jea) (this.field_J.e(108));
+            var23_ref = (jea) (this.field_J.next(108));
           }
         }
-        bea.b(var12, var13, var14, var15);
+        SoftwareRasterizer.b(var12, var13, var14, var15);
     }
 
     jea(long param0, jea param1, String param2) {
@@ -682,7 +682,7 @@ class jea extends um {
     }
 
     final void b(int param0, boolean param1) {
-        this.a(false, 0, bea.field_a, param1, false, true, false, 0, 0, false, bea.field_g);
+        this.a(false, 0, SoftwareRasterizer.field_a, param1, false, true, false, 0, 0, false, SoftwareRasterizer.field_g);
         if (param0 <= 34) {
           this.field_v = -101;
         }

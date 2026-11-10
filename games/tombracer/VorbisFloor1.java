@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eoa {
+final class VorbisFloor1 {
     private static int[] field_c;
     private int field_i;
     private static int[] field_d;
@@ -56,7 +56,7 @@ final class eoa {
         field_b = null;
     }
 
-    private final int a(int param0, int param1, int param2, int param3, int param4) {
+    private final int interpolatePoint(int param0, int param1, int param2, int param3, int param4) {
         int var6 = param3 - param1;
         int var7 = param2 - param0;
         int var8 = var6 < 0 ? -var6 : var6;
@@ -124,7 +124,7 @@ final class eoa {
         int var10;
         int var11;
         int var13;
-        stackIn_3_0 = (fg.c() == 0) ? 0 : 1;
+        stackIn_3_0 = (VorbisSample.c() == 0) ? 0 : 1;
         var1 = stackIn_3_0;
         if (var1 == 0) {
           return false;
@@ -133,8 +133,8 @@ final class eoa {
         System.arraycopy(this.field_e, 0, field_j, 0, var2);
         var3 = field_d[this.field_i - 1];
         var4 = CauldronComponent.a((byte) 93, var3 - 1);
-        field_c[0] = fg.a(var4);
-        field_c[1] = fg.a(var4);
+        field_c[0] = VorbisSample.readBits(var4);
+        field_c[1] = VorbisSample.readBits(var4);
         var5 = 2;
         for (var6 = 0; var6 < this.field_g.length; var6++) {
           var7 = this.field_g[var6];
@@ -143,7 +143,7 @@ final class eoa {
           var10 = (1 << var9) - 1;
           var11 = 0;
           if (var9 > 0) {
-            var11 = fg.field_n[this.field_h[var7]].c();
+            var11 = VorbisSample.field_n[this.field_h[var7]].c();
           }
           for (var12 = 0; var12 < var8; var12++) {
             var13 = this.field_l[var7][var11 & var10];
@@ -155,7 +155,7 @@ final class eoa {
             if (var13 < 0) {
               stackIn_14_2 = 0;
             } else {
-              stackIn_14_2 = fg.field_n[var13].c();
+              stackIn_14_2 = VorbisSample.field_n[var13].c();
             }
             stackIn_13_0[stackIn_13_1] = stackIn_14_2;
           }
@@ -189,7 +189,7 @@ final class eoa {
         }
     }
 
-    eoa() {
+    VorbisFloor1() {
         int dupTemp$1 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;
@@ -210,15 +210,15 @@ final class eoa {
         int var5Lifetime1;
         int var5Lifetime2;
         int var5Lifetime3;
-        var1 = fg.a(16);
+        var1 = VorbisSample.readBits(16);
         if (var1 != 1) {
           throw new RuntimeException();
         }
-        var2 = fg.a(5);
+        var2 = VorbisSample.readBits(5);
         var3 = 0;
         this.field_g = new int[var2];
         for (var4 = 0; var4 < var2; var4++) {
-          var5 = fg.a(4);
+          var5 = VorbisSample.readBits(4);
           this.field_g[var4] = var5;
           if (var5 >= var3) {
             var3 = var5 + 1;
@@ -229,12 +229,12 @@ final class eoa {
         this.field_h = new int[var3];
         this.field_l = new int[var3][];
         for (var4Lifetime1 = 0; var4Lifetime1 < var3; var4Lifetime1++) {
-          this.field_a[var4Lifetime1] = fg.a(3) + 1;
-          dupTemp$1 = fg.a(2);
+          this.field_a[var4Lifetime1] = VorbisSample.readBits(3) + 1;
+          dupTemp$1 = VorbisSample.readBits(2);
           this.field_f[var4Lifetime1] = dupTemp$1;
           var5Lifetime1 = dupTemp$1;
           if (var5Lifetime1 != 0) {
-            this.field_h[var4Lifetime1] = fg.a(8);
+            this.field_h[var4Lifetime1] = VorbisSample.readBits(8);
           }
           var5Lifetime1 = 1 << var5Lifetime1;
           var10 = new int[var5Lifetime1];
@@ -242,11 +242,11 @@ final class eoa {
           var6_ref_int__ = var9;
           this.field_l[var4Lifetime1] = var10;
           for (var7 = 0; var7 < var5Lifetime1; var7++) {
-            var6_ref_int__[var7] = fg.a(8) - 1;
+            var6_ref_int__[var7] = VorbisSample.readBits(8) - 1;
           }
         }
-        this.field_i = fg.a(2) + 1;
-        var4Lifetime2 = fg.a(4);
+        this.field_i = VorbisSample.readBits(2) + 1;
+        var4Lifetime2 = VorbisSample.readBits(4);
         var5Lifetime2 = 2;
         for (var6 = 0; var6 < var2; var6++) {
           var5Lifetime2 = var5Lifetime2 + this.field_a[this.field_g[var6]];
@@ -260,7 +260,7 @@ final class eoa {
           for (var8 = 0; var8 < this.field_a[var7Lifetime1]; var8++) {
             incrementValue$0 = var5Lifetime3;
             var5Lifetime3++;
-            this.field_e[incrementValue$0] = fg.a(var4Lifetime2);
+            this.field_e[incrementValue$0] = VorbisSample.readBits(var4Lifetime2);
           }
         }
         if (field_j != null &&
@@ -308,9 +308,9 @@ final class eoa {
         field_b[1] = true;
         var5[0] = true;
         for (var6 = 2; var6 < var3; var6++) {
-          var7 = eoa.b(field_j, var6);
-          var8_int = eoa.a(field_j, var6);
-          var9 = this.a(field_j[var7], field_c[var7], field_j[var8_int], field_c[var8_int], field_j[var6]);
+          var7 = VorbisFloor1.b(field_j, var6);
+          var8_int = VorbisFloor1.a(field_j, var6);
+          var9 = this.interpolatePoint(field_j[var7], field_c[var7], field_j[var8_int], field_c[var8_int], field_j[var6]);
           var10 = field_c[var6];
           var11 = var4 - var9;
           var12 = var9;

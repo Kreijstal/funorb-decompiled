@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vma {
+final class SoundEffect {
     private int field_c;
     private int field_b;
     private fka[] field_a;
 
-    final static vma a(cn param0, int param1, int param2) {
+    final static SoundEffect a(cn param0, int param1, int param2) {
         byte[] var3 = param0.a(false, param1, param2);
         if (var3 == null) {
           return null;
         }
-        return new vma(new PacketBuffer(var3));
+        return new SoundEffect(new PacketBuffer(var3));
     }
 
-    private final byte[] b() {
+    private final byte[] mixSamples() {
         int var4 = 0;
         int var8 = 0;
         int var1;
@@ -55,11 +55,11 @@ final class vma {
     }
 
     final u a() {
-        byte[] var1 = this.b();
+        byte[] var1 = this.mixSamples();
         return new u(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_b / 1000);
     }
 
-    private vma(PacketBuffer param0) {
+    private SoundEffect(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_a = new fka[10];

@@ -21,7 +21,7 @@ final class uoa {
     }
 
     final static void b() {
-        uoa.a(bea.field_b, bea.field_h, bea.field_d, bea.field_k);
+        uoa.a(SoftwareRasterizer.field_b, SoftwareRasterizer.field_h, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k);
     }
 
     private final static void a(int param0, int param1, int param2, int param3) {
@@ -32,10 +32,10 @@ final class uoa {
         if (field_d.length < field_b) {
           field_d = new int[lla.a(false, field_b)];
         }
-        int var4 = param1 * bea.field_g + param0;
+        int var4 = param1 * SoftwareRasterizer.field_g + param0;
         for (var5 = 0; var5 < field_b; var5++) {
           field_d[var5] = var4;
-          var4 = var4 + bea.field_g;
+          var4 = var4 + SoftwareRasterizer.field_g;
         }
     }
 

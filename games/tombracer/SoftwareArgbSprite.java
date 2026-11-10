@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vqa extends pf {
+final class SoftwareArgbSprite extends SoftwareToolkitSprite {
     int[] field_E;
 
     final void b(int param0, int param1) {
@@ -3527,12 +3527,12 @@ final class vqa extends pf {
 
     }
 
-    vqa(sfa param0, int[] param1, int param2, int param3) {
+    SoftwareArgbSprite(SoftwareGraphicsToolkit param0, int[] param1, int param2, int param3) {
         super(param0, param2, param3);
         this.field_E = param1;
     }
 
-    vqa(sfa param0, int[] param1, int param2, int param3, int param4, int param5, boolean param6) {
+    SoftwareArgbSprite(SoftwareGraphicsToolkit param0, int[] param1, int param2, int param3, int param4, int param5, boolean param6) {
         super(param0, param4, param5);
         int var9 = 0;
         int var10 = 0;
@@ -3557,7 +3557,7 @@ final class vqa extends pf {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void draw(int param0, int param1, int param2, int param3, int param4) {
         int incrementValue$27 = 0;
         int incrementValue$28 = 0;
         int incrementValue$29 = 0;

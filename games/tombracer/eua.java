@@ -111,8 +111,8 @@ final class eua extends jea {
         String var12 = null;
         Object var14 = null;
         int var15 = 0;
-        il var17 = null;
-        il var18 = null;
+        BitmapFont var17 = null;
+        BitmapFont var18 = null;
         this.field_tb = -1;
         try {
           this.field_zb = param4;

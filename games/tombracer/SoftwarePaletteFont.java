@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sn extends GameFont {
-    private sfa field_g;
+final class SoftwarePaletteFont extends GameFont {
+    private SoftwareGraphicsToolkit field_g;
     private byte[][] field_e;
     private int[] field_f;
     private int[] field_i;
@@ -55,11 +55,11 @@ final class sn extends GameFont {
         if (param4) {
           this.a(this.field_e[param0], this.field_g.field_r, param3, var12, var9, var6, var7, var10, var11);
         } else {
-          this.a(this.field_e[param0], this.field_g.field_r, this.field_f, var12, var9, var6, var7, var10, var11);
+          this.blitPaletteGlyph(this.field_e[param0], this.field_g.field_r, this.field_f, var12, var9, var6, var7, var10, var11);
         }
     }
 
-    sn(sfa param0, qla param1, jpa[] param2, int[] param3, int[] param4) {
+    SoftwarePaletteFont(SoftwareGraphicsToolkit param0, qla param1, jpa[] param2, int[] param3, int[] param4) {
         super(param0, param1);
         int var6 = 0;
         this.field_g = param0;
@@ -354,7 +354,7 @@ final class sn extends GameFont {
         }
     }
 
-    private final void a(byte[] param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final void blitPaletteGlyph(byte[] param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var12 = 0;
         int incrementValue$3 = 0;
         byte dupTemp$4 = 0;

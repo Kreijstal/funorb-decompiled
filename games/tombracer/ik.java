@@ -4,7 +4,7 @@
 final class ik extends IntrusiveNode {
     static String field_j;
     static int field_f;
-    static nh field_h;
+    static ToolkitSprite field_h;
     int[] field_i;
     int field_g;
 

@@ -208,7 +208,7 @@ class rj extends ae {
           var11 = vc.field_q;
           var2 = var11.h(255);
           if (var2 == 0) {
-            var10 = (mm) (SpawnerBehaviour.field_n.f(-80));
+            var10 = (mm) (SpawnerBehaviour.field_n.first(-80));
             if (var10 == null) {
               dea.a(60);
               return;
@@ -234,10 +234,10 @@ class rj extends ae {
             return;
           }
           var3 = var11.e(-34);
-          var4_ref_sda = (sda) (qd.field_a.f(param0 - 84));
+          var4_ref_sda = (sda) (qd.field_a.first(param0 - 84));
           while (var4_ref_sda != null) {
             if (var4_ref_sda.field_l != var3) {
-              var4_ref_sda = (sda) (qd.field_a.e(117));
+              var4_ref_sda = (sda) (qd.field_a.next(117));
               continue;
             }
             break;

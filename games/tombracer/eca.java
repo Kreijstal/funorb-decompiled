@@ -4,7 +4,7 @@
 final class eca {
     static String[][] field_b;
     static int field_a;
-    static nh[] field_c;
+    static ToolkitSprite[] field_c;
 
     final static boolean a(byte param0, int param1, long param2, int[] param3, String param4) {
         int var6_int = 0;

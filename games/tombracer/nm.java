@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nm extends vo implements sca {
-    static nh field_l;
+    static ToolkitSprite field_l;
     private int field_k;
     static jpa field_i;
     static String field_j;
@@ -13,7 +13,7 @@ final class nm extends vo implements sca {
           return;
         }
         try {
-          bea.a(param0.pixels, param0.field_n, param0.field_k);
+          SoftwareRasterizer.a(param0.pixels, param0.field_n, param0.field_k);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "nm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -59,7 +59,7 @@ final class nm extends vo implements sca {
     public static void releaseStatics(byte param0) {
         field_i = null;
         if (param0 < 17) {
-          field_l = (nh) null;
+          field_l = (ToolkitSprite) null;
           field_l = null;
           field_j = null;
           return;

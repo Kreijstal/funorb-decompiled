@@ -140,7 +140,7 @@ final class ava {
           var9Lifetime1 = stackIn_47_0;
           var10 = param0.field_tb.field_J;
           var11 = null;
-          var12 = (pha) (var10.f(-80));
+          var12 = (pha) (var10.first(-80));
           while (var12 != null) {
             var13 = 0;
             if (var12.field_J == null) {
@@ -189,7 +189,7 @@ final class ava {
             if (param0 == bsa.field_j) {
               var21 += 42;
             }
-            var33 = il.a(var12.field_Nb.field_H, var32, var21);
+            var33 = BitmapFont.a(var12.field_Nb.field_H, var32, var21);
             var20 = var33;
             var20 = var33;
             var20 = var33;
@@ -468,7 +468,7 @@ final class ava {
               }
             }
             var11 = var12;
-            var12 = (pha) (var10.e(124));
+            var12 = (pha) (var10.next(124));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

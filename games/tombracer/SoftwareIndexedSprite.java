@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kf extends pf {
+final class SoftwareIndexedSprite extends SoftwareToolkitSprite {
     private int[] field_F;
     private byte[] field_E;
 
@@ -2596,7 +2596,7 @@ final class kf extends pf {
 
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void draw(int param0, int param1, int param2, int param3, int param4) {
         int incrementValue$27 = 0;
         int incrementValue$28 = 0;
         int incrementValue$29 = 0;
@@ -3799,7 +3799,7 @@ final class kf extends pf {
 
     }
 
-    kf(sfa param0, byte[] param1, int[] param2, int param3, int param4) {
+    SoftwareIndexedSprite(SoftwareGraphicsToolkit param0, byte[] param1, int[] param2, int param3, int param4) {
         super(param0, param3, param4);
         this.field_E = param1;
         this.field_F = param2;

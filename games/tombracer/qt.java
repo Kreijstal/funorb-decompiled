@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qt {
-    static il field_a;
+    static BitmapFont field_a;
 
     public static void b(int param0) {
         field_a = null;
@@ -166,11 +166,11 @@ final class qt {
               return;
             }
             if (var2 == 7) {
-              var32 = (pha) (uma.field_b.f(-80));
+              var32 = (pha) (uma.field_b.first(-80));
               while (var32 != null) {
                 var32.unlink(70);
                 var32.unlinkSecondary(-7975);
-                var32 = (pha) (uma.field_b.e(118));
+                var32 = (pha) (uma.field_b.next(118));
               }
               so.field_K = 0;
               return;
@@ -202,11 +202,11 @@ final class qt {
               return;
             }
             if (var2 == 10) {
-              var34 = (ht) (asa.field_j.f(-80));
+              var34 = (ht) (asa.field_j.first(-80));
               while (var34 != null) {
                 var34.unlink(122);
                 var34.unlinkSecondary(-7975);
-                var34 = (ht) (asa.field_j.e(127));
+                var34 = (ht) (asa.field_j.next(127));
               }
               return;
             }
@@ -251,7 +251,7 @@ final class qt {
                     var7.field_zb = var8 >> 1;
                     var7.field_Ab = ((PacketBuffer) ((Object) var1)).h(255);
                     var7.field_Eb = ((PacketBuffer) ((Object) var1)).h(255);
-                    qha.field_g.b((byte) -54, var7);
+                    qha.field_g.addLast((byte) -54, var7);
                     return;
                   }
                   if (var2 == 19) {
@@ -349,11 +349,11 @@ final class qt {
             cua.a(var25, (byte) -97);
             return;
           }
-          var3_ref_pha = (pha) (qha.field_g.f(-80));
+          var3_ref_pha = (pha) (qha.field_g.first(-80));
           while (var3_ref_pha != null) {
             var3_ref_pha.unlink(63);
             var3_ref_pha.unlinkSecondary(-7975);
-            var3_ref_pha = (pha) (qha.field_g.e(117));
+            var3_ref_pha = (pha) (qha.field_g.next(117));
           }
           var3_ref_phaLifetime1 = (pha) (fua.field_a.b(-119));
           while (var3_ref_phaLifetime1 != null) {
@@ -428,7 +428,7 @@ final class qt {
             return false;
           }
           if (!param1) {
-            field_a = (il) null;
+            field_a = (BitmapFont) null;
           }
           var8 = new rua(ej.field_a, param5);
           ej.field_a.c(var8, 88);

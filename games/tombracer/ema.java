@@ -24,7 +24,7 @@ final class ema implements isa {
           for (var6_int = 0; param0.field_p >= var6_int; var6_int++) {
             var7 = 152 + var6_int * 48 / param0.field_p;
             var8 = var7 | (var7 << 16 | var7 << 8);
-            bea.c(param0.field_i + param1, param0.field_n + (param3 + var6_int), param0.field_m, var8);
+            SoftwareRasterizer.drawHorizontalLine(param0.field_i + param1, param0.field_n + (param3 + var6_int), param0.field_m, var8);
           }
           if (param2 != 16777215) {
             ema.a(false, 4, -88, -72, -24);
@@ -33,16 +33,16 @@ final class ema implements isa {
             var7Lifetime1 = param0.field_m + param0.field_i + (param1 - (param0.field_m >> 1) - 5) + var6_intLifetime1;
             var8Lifetime1 = (param0.field_m >> 1) - var6_intLifetime1 * 2;
             var9 = (param0.field_p - 4 >> 1) + (param0.field_n + (param3 + var6_intLifetime1));
-            if (bea.field_h <= var9 &&
-              bea.field_k > var9) {
-              if (var7Lifetime1 > bea.field_b) {
-                bea.field_l[var9 * bea.field_g - (-var7Lifetime1 + 1)] = SnakePitBehaviour.c(16711422, bea.field_l[var7Lifetime1 + (bea.field_g * var9 - 1)]) >> 1;
+            if (SoftwareRasterizer.field_h <= var9 &&
+              SoftwareRasterizer.field_k > var9) {
+              if (var7Lifetime1 > SoftwareRasterizer.field_b) {
+                SoftwareRasterizer.field_l[var9 * SoftwareRasterizer.field_g - (-var7Lifetime1 + 1)] = SnakePitBehaviour.c(16711422, SoftwareRasterizer.field_l[var7Lifetime1 + (SoftwareRasterizer.field_g * var9 - 1)]) >> 1;
               }
-              if (var7Lifetime1 + var8Lifetime1 < bea.field_d) {
-                bea.field_l[var7Lifetime1 + var9 * bea.field_g + var8Lifetime1] = SnakePitBehaviour.c(8355711, bea.field_l[var8Lifetime1 + bea.field_g * var9 + var7Lifetime1] >> 1);
+              if (var7Lifetime1 + var8Lifetime1 < SoftwareRasterizer.field_d) {
+                SoftwareRasterizer.field_l[var7Lifetime1 + var9 * SoftwareRasterizer.field_g + var8Lifetime1] = SnakePitBehaviour.c(8355711, SoftwareRasterizer.field_l[var8Lifetime1 + SoftwareRasterizer.field_g * var9 + var7Lifetime1] >> 1);
               }
             }
-            bea.c(var7Lifetime1, var9, var8Lifetime1, 0);
+            SoftwareRasterizer.drawHorizontalLine(var7Lifetime1, var9, var8Lifetime1, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

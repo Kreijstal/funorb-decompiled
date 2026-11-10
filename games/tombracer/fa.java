@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fa {
-    static nh[] field_a;
+    static ToolkitSprite[] field_a;
     static int field_b;
 
     final static jea b(byte param0) {
@@ -11,7 +11,7 @@ final class fa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 113) {
-            field_a = (nh[]) null;
+            field_a = (ToolkitSprite[]) null;
           }
           stackIn_4_0 = jja.field_j.field_tb;
           return stackIn_4_0;
@@ -145,7 +145,7 @@ final class fa {
                 }
               }
             }
-            dqa.a(var4 + il.c(vc.field_n.toString()), var7, var5, pm.field_a[var6], 125);
+            dqa.a(var4 + BitmapFont.escapeMarkup(vc.field_n.toString()), var7, var5, pm.field_a[var6], 125);
             if (!ni.field_c) {
               mka.field_b.field_o = false;
             }

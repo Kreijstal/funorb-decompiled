@@ -9,7 +9,7 @@ final class bta extends vw {
     private boolean field_m;
     private boolean field_g;
     private boolean field_j;
-    static il field_d;
+    static BitmapFont field_d;
     static int[] field_f;
     static int field_q;
     private float[] field_h;
@@ -51,7 +51,7 @@ final class bta extends vw {
           field_d = null;
           return;
         }
-        field_d = (il) null;
+        field_d = (BitmapFont) null;
         field_f = null;
         field_i = null;
         field_n = null;

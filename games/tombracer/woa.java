@@ -10,7 +10,7 @@ final class woa extends DualLinkNode {
           if (param2) {
             woa.releaseStatics(-60);
           }
-          aba.field_a.b((byte) -86, param1);
+          aba.field_a.addLast((byte) -86, param1);
           wj.a(param1, param0, -118);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "woa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

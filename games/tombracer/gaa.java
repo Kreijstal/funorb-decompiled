@@ -23,7 +23,7 @@ final class gaa extends dg {
           this.k(param0 ^ -24643);
           return;
         }
-        this.field_s.a(this.e((byte) -123), (byte) 127, this.c((byte) 105), this.b((byte) -117));
+        this.field_s.a(this.getRenderZ((byte) -123), (byte) 127, this.getRenderY((byte) 105), this.getRenderX((byte) -117));
         if (this.field_h.h(18407)) {
           this.k(24642);
           return;
@@ -150,7 +150,7 @@ final class gaa extends dg {
         if (this.field_h == null) {
           return;
         }
-        var9 = this.field_h.f((byte) -86);
+        var9 = this.field_h.getRoom((byte) -86);
         var3 = var9.j((byte) -105);
         if (var3 == null) {
           return;
@@ -166,7 +166,7 @@ final class gaa extends dg {
           var6 = 0;
           var11 = new aga(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
           this.field_s = new uh(var11);
-          this.field_s.a(this.e((byte) -121), (byte) 110, this.c((byte) 107), this.b((byte) -95));
+          this.field_s.a(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
           if (this.field_r) {
             this.field_s.b(uca.field_c.a(50000, 0), 0);
           }
@@ -179,7 +179,7 @@ final class gaa extends dg {
             var6 = 16;
             var13 = new aga(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
             this.field_s = new uh(var13);
-            this.field_s.a(this.e((byte) -121), (byte) 110, this.c((byte) 107), this.b((byte) -95));
+            this.field_s.a(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
             if (this.field_r) {
               this.field_s.b(uca.field_c.a(50000, 0), 0);
             }
@@ -190,7 +190,7 @@ final class gaa extends dg {
             var6 = 15;
             var14 = new aga(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
             this.field_s = new uh(var14);
-            this.field_s.a(this.e((byte) -121), (byte) 110, this.c((byte) 107), this.b((byte) -95));
+            this.field_s.a(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
             if (this.field_r) {
               this.field_s.b(uca.field_c.a(50000, 0), 0);
             }
@@ -200,7 +200,7 @@ final class gaa extends dg {
           if (2 != var7) {
             var12 = new aga(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
             this.field_s = new uh(var12);
-            this.field_s.a(this.e((byte) -121), (byte) 110, this.c((byte) 107), this.b((byte) -95));
+            this.field_s.a(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
             if (this.field_r) {
               this.field_s.b(uca.field_c.a(50000, 0), 0);
             }
@@ -210,7 +210,7 @@ final class gaa extends dg {
           var6 = 14;
           var15 = new aga(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
           this.field_s = new uh(var15);
-          this.field_s.a(this.e((byte) -121), (byte) 110, this.c((byte) 107), this.b((byte) -95));
+          this.field_s.a(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
           if (this.field_r) {
             this.field_s.b(uca.field_c.a(50000, 0), 0);
           }
@@ -223,7 +223,7 @@ final class gaa extends dg {
             var6 = 11;
             var17 = new aga(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
             this.field_s = new uh(var17);
-            this.field_s.a(this.e((byte) -121), (byte) 110, this.c((byte) 107), this.b((byte) -95));
+            this.field_s.a(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
             if (this.field_r) {
               this.field_s.b(uca.field_c.a(50000, 0), 0);
             }
@@ -234,7 +234,7 @@ final class gaa extends dg {
             var6 = 7;
             var18 = new aga(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
             this.field_s = new uh(var18);
-            this.field_s.a(this.e((byte) -121), (byte) 110, this.c((byte) 107), this.b((byte) -95));
+            this.field_s.a(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
             if (this.field_r) {
               this.field_s.b(uca.field_c.a(50000, 0), 0);
             }
@@ -244,7 +244,7 @@ final class gaa extends dg {
           if (2 != var7) {
             var16 = new aga(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
             this.field_s = new uh(var16);
-            this.field_s.a(this.e((byte) -121), (byte) 110, this.c((byte) 107), this.b((byte) -95));
+            this.field_s.a(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
             if (this.field_r) {
               this.field_s.b(uca.field_c.a(50000, 0), 0);
             }
@@ -254,7 +254,7 @@ final class gaa extends dg {
           var6 = 9;
           var19 = new aga(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
           this.field_s = new uh(var19);
-          this.field_s.a(this.e((byte) -121), (byte) 110, this.c((byte) 107), this.b((byte) -95));
+          this.field_s.a(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
           if (this.field_r) {
             this.field_s.b(uca.field_c.a(50000, 0), 0);
           }
@@ -266,7 +266,7 @@ final class gaa extends dg {
             var6 = 5;
             var24 = new aga(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
             this.field_s = new uh(var24);
-            this.field_s.a(this.e((byte) -121), (byte) 110, this.c((byte) 107), this.b((byte) -95));
+            this.field_s.a(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
             if (this.field_r) {
               this.field_s.b(uca.field_c.a(50000, 0), 0);
             }
@@ -276,7 +276,7 @@ final class gaa extends dg {
           if (var7 != 5) {
             var10 = new aga(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
             this.field_s = new uh(var10);
-            this.field_s.a(this.e((byte) -121), (byte) 110, this.c((byte) 107), this.b((byte) -95));
+            this.field_s.a(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
             if (this.field_r) {
               this.field_s.b(uca.field_c.a(50000, 0), 0);
             }
@@ -286,7 +286,7 @@ final class gaa extends dg {
           var6 = 4;
           var25 = new aga(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
           this.field_s = new uh(var25);
-          this.field_s.a(this.e((byte) -121), (byte) 110, this.c((byte) 107), this.b((byte) -95));
+          this.field_s.a(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
           if (this.field_r) {
             this.field_s.b(uca.field_c.a(50000, 0), 0);
           }
@@ -298,7 +298,7 @@ final class gaa extends dg {
           var6 = 10;
           var21 = new aga(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
           this.field_s = new uh(var21);
-          this.field_s.a(this.e((byte) -121), (byte) 110, this.c((byte) 107), this.b((byte) -95));
+          this.field_s.a(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
           if (this.field_r) {
             this.field_s.b(uca.field_c.a(50000, 0), 0);
           }
@@ -309,7 +309,7 @@ final class gaa extends dg {
           var6 = 6;
           var22 = new aga(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
           this.field_s = new uh(var22);
-          this.field_s.a(this.e((byte) -121), (byte) 110, this.c((byte) 107), this.b((byte) -95));
+          this.field_s.a(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
           if (this.field_r) {
             this.field_s.b(uca.field_c.a(50000, 0), 0);
           }
@@ -319,7 +319,7 @@ final class gaa extends dg {
         if (var7Lifetime1 != 2) {
           var20 = new aga(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
           this.field_s = new uh(var20);
-          this.field_s.a(this.e((byte) -121), (byte) 110, this.c((byte) 107), this.b((byte) -95));
+          this.field_s.a(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
           if (this.field_r) {
             this.field_s.b(uca.field_c.a(50000, 0), 0);
           }
@@ -329,7 +329,7 @@ final class gaa extends dg {
         var6Lifetime1 = 8;
         var23 = new aga(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6Lifetime1);
         this.field_s = new uh(var23);
-        this.field_s.a(this.e((byte) -121), (byte) 110, this.c((byte) 107), this.b((byte) -95));
+        this.field_s.a(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
         if (this.field_r) {
           this.field_s.b(uca.field_c.a(50000, 0), 0);
         }
@@ -365,7 +365,7 @@ final class gaa extends dg {
         }
     }
 
-    final void a(gr param0, gma param1, byte param2) {
+    final void a(gr param0, WorldBody param1, byte param2) {
         try {
           super.a(param0, param1, param2);
         } catch (RuntimeException runtimeException) {
@@ -403,7 +403,7 @@ final class gaa extends dg {
 
     final void a(int param0, Room param1, BitPacketBuffer param2) {
         super.a(127, param1, param2);
-        if (!(param1.field_E >= 18)) {
+        if (!(param1.formatVersion >= 18)) {
           return;
         }
         this.field_q = param2.readBits((byte) 44, 4);
@@ -415,7 +415,7 @@ final class gaa extends dg {
         try {
           this.field_r = true;
           this.field_m = param2.readBits((byte) 44, 8) * 8;
-          this.field_n = new jaa(false, db.field_l, param1.field_E, param2);
+          this.field_n = new jaa(false, db.field_l, param1.formatVersion, param2);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "gaa.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

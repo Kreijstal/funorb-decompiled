@@ -16,10 +16,10 @@ final class ila {
         if (!param0) {
           this.field_a = (gqa) null;
         }
-        jha var4 = (jha) (this.field_d.f(-80));
+        jha var4 = (jha) (this.field_d.first(-80));
         while (var4 != null) {
           var4.b((byte) -111);
-          var4 = (jha) (this.field_d.e(107));
+          var4 = (jha) (this.field_d.next(107));
         }
     }
 
@@ -101,15 +101,15 @@ final class ila {
         }
         var6Lifetime1 = 120;
         if (this.field_e) {
-          var7_ref = (jha) (this.field_b.f(-80));
+          var7_ref = (jha) (this.field_b.first(-80));
           while (var7_ref != null) {
             var7_ref.d((byte) 80);
             if (var7_ref.a((byte) -100) <= 0) {
-              this.field_d.b((byte) -77, var7_ref);
+              this.field_d.addLast((byte) -77, var7_ref);
             }
-            var7_ref = (jha) (this.field_b.e(111));
+            var7_ref = (jha) (this.field_b.next(111));
           }
-          var7_refLifetime1 = (jha) (this.field_d.f(-80));
+          var7_refLifetime1 = (jha) (this.field_d.first(-80));
           while (var7_refLifetime1 != null) {
             var7_refLifetime1.a(var6Lifetime1, 4, aaa.a(false) - var7_refLifetime1.c((byte) -96));
             var7_refLifetime1.a(-43);
@@ -119,7 +119,7 @@ final class ila {
             if (var7_refLifetime1.e((byte) -39)) {
               var7_refLifetime1.unlink(3);
             }
-            var7_refLifetime1 = (jha) (this.field_d.e(121));
+            var7_refLifetime1 = (jha) (this.field_d.next(121));
           }
         }
         if (this.field_c) {
@@ -140,9 +140,9 @@ final class ila {
         }
         try {
           if (param0 <= 0) {
-            this.field_d.b((byte) -67, param2);
+            this.field_d.addLast((byte) -67, param2);
           } else {
-            this.field_b.b((byte) -80, param2);
+            this.field_b.addLast((byte) -80, param2);
             param2.a(false, param0);
           }
           if (param1 != 0) {
@@ -422,7 +422,7 @@ final class ila {
           return;
         }
         this.field_e = true;
-        this.field_d.d(8);
+        this.field_d.clear(8);
         if (param0 != 0) {
           this.field_a = (gqa) null;
         }
@@ -528,7 +528,7 @@ final class ila {
           return;
         }
         this.field_e = param0 ? true : false;
-        this.field_d.d(8);
+        this.field_d.clear(8);
     }
 
     final boolean e(int param0) {

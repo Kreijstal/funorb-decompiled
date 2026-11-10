@@ -4,7 +4,7 @@
 final class tka extends vpa {
     private hja[] field_o;
     static volatile int field_n;
-    static nh field_p;
+    static ToolkitSprite field_p;
     static jea field_q;
 
     tka(hja[] param0) {
@@ -36,7 +36,7 @@ final class tka extends vpa {
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           if (param0 <= 46) {
-            field_p = (nh) null;
+            field_p = (ToolkitSprite) null;
           }
           if (ou.field_e != null &&
             lm.field_r != null) {
@@ -75,7 +75,7 @@ final class tka extends vpa {
         int var12 = 0;
         int var13 = 0;
         try {
-          bea.f(param1 + param0.field_i, param3 + param0.field_n, param0.field_m, param0.field_p, 10197915);
+          SoftwareRasterizer.f(param1 + param0.field_i, param3 + param0.field_n, param0.field_m, param0.field_p, 10197915);
           if (param4) {
             stackIn_6_0 = (((rj) (param0)).field_w) ? 1 : 0;
           } else {

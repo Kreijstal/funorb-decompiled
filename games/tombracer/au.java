@@ -82,7 +82,7 @@ final class au extends aa {
             for (var7 = 0; var7 < var6; var7++) {
               var10[var7] = ((PacketBuffer) ((Object) var5)).e(99);
             }
-            var12 = (bna) (MovingWallComponent.field_N.f(-80));
+            var12 = (bna) (MovingWallComponent.field_N.first(-80));
             if (var12 == null) {
               dea.a(60);
               return;
@@ -92,7 +92,7 @@ final class au extends aa {
             var12.unlink(83);
           } else {
             if (var2 == 1) {
-              var13 = (cga) (aba.field_a.f(-80));
+              var13 = (cga) (aba.field_a.first(-80));
               if (var13 == null) {
                 dea.a(60);
                 return;
@@ -103,7 +103,7 @@ final class au extends aa {
                 ssa.a("A1: " + kk.a(32), (byte) 116, (Throwable) null);
                 dea.a(param0 ^ 63);
               } else {
-                var15 = (bna) (MovingWallComponent.field_N.f(-80));
+                var15 = (bna) (MovingWallComponent.field_N.first(-80));
                 if (var15 == null) {
                   dea.a(60);
                   return;

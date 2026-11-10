@@ -118,8 +118,8 @@ final class FuseBehaviour extends Behaviour {
     FuseBehaviour(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
-          this.field_x = new kpa(6, param0.field_E, param1);
-          this.field_q = new kpa(6, param0.field_E, param1);
+          this.field_x = new kpa(6, param0.formatVersion, param1);
+          this.field_q = new kpa(6, param0.formatVersion, param1);
           this.field_u = param1.readBits((byte) 44, 8);
           this.field_o = param1.readBits((byte) 44, 8);
           this.field_r = param1.readBits((byte) 44, 8);
@@ -179,7 +179,7 @@ final class FuseBehaviour extends Behaviour {
         if (param0 != -67) {
           this.field_q = (kpa) null;
         }
-        this.b(true).a(124, this.field_g.e(param0 ^ -9715), var2, this.field_g.a((byte) 55) + this.field_n * 2, this.field_g.c(-107) + 2 * this.field_n, this.field_g.d(3));
+        this.b(true).a(124, this.field_g.getY(param0 ^ -9715), var2, this.field_g.getHeight((byte) 55) + this.field_n * 2, this.field_g.getWidth(-107) + 2 * this.field_n, this.field_g.getX(3));
         this.c(false);
     }
 

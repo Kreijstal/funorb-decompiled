@@ -81,10 +81,10 @@ final class ena extends DualLinkNode {
           var18.position = 1;
           var8 = var18.d(param0 + 18);
           var9 = null;
-          var10 = (nk) (var19.f(-80));
+          var10 = (nk) (var19.first(-80));
           while (var10 != null) {
             if (~var10.field_l != ~var8) {
-              var10 = (nk) (var19.e(param0 + 4));
+              var10 = (nk) (var19.next(param0 + 4));
               continue;
             }
             var9 = var10;
@@ -95,7 +95,7 @@ final class ena extends DualLinkNode {
             synchronized (var10_ref) {
               var9 = new nk(var8, jma.field_j.f(var8, -93));
             }
-            var19.b((byte) -124, (IntrusiveNode) (var9));
+            var19.addLast((byte) -124, (IntrusiveNode) (var9));
           }
           this.field_o[var30[var5]] = new rq(var31, (nk) (var9));
           var5++;

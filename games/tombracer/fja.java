@@ -212,7 +212,7 @@ final class fja extends qra {
             if (var3 >= 0 &&
               this.field_h.f(-12963, var3)) {
               var16 = this.field_h.field_k.players[var3];
-              var5 = var16.f((byte) 87);
+              var5 = var16.getRoom((byte) 87);
               var6Lifetime1Lifetime2 = var5.q((byte) -82);
               if (this.field_c.field_K != 3) {
                 if (this.field_c.i(0) != -1) {

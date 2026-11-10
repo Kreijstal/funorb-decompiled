@@ -5,16 +5,16 @@ final class Effect implements noa {
     static jea field_a;
     int field_j;
     private int preset;
-    gma field_g;
+    WorldBody field_g;
     static jpa[] field_e;
     private int field_k;
     static String[][] field_h;
     int size;
     private static String[] field_i;
-    gma field_c;
+    WorldBody field_c;
     static String[] field_d;
 
-    final void a(gma param0, int param1) {
+    final void a(WorldBody param0, int param1) {
         this.field_g = param0;
         if (param1 != 2348) {
           return;
@@ -193,7 +193,7 @@ final class Effect implements noa {
     }
 
     Effect(int param0, int param1) {
-        this((gma) null, param0, param1);
+        this((WorldBody) null, param0, param1);
     }
 
     final void b(int param0, int param1) {
@@ -203,7 +203,7 @@ final class Effect implements noa {
         }
     }
 
-    Effect(gma param0, Effect param1) {
+    Effect(WorldBody param0, Effect param1) {
         this(param0, param1.preset, param1.size);
         try {
           this.field_k = param1.field_k;
@@ -212,7 +212,7 @@ final class Effect implements noa {
         }
     }
 
-    Effect(gma param0, int param1, int param2) {
+    Effect(WorldBody param0, int param1, int param2) {
         try {
           this.preset = param1;
           this.size = param2;

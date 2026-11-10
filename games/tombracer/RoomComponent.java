@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class RoomComponent extends IntrusiveNode implements noa, qn, fo, gma, lj, ew {
+abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderable, WorldBody, lj, ew {
     int field_m;
     private int field_q;
     int field_k;
@@ -14,7 +14,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, fo, gma, 
     int field_l;
     static int field_n;
     static int field_g;
-    Room field_o;
+    Room room;
     private SwitchableId field_w;
     static su field_y;
     int field_p;
@@ -24,7 +24,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, fo, gma, 
     static int[] field_i;
     boolean field_x;
 
-    public final int e(byte param0) {
+    public final int getRenderZ(byte param0) {
         if (param0 >= -86) {
           RoomComponent var3 = (RoomComponent) null;
           this.a((RoomComponent) null, -115, (byte) -23);
@@ -119,21 +119,21 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, fo, gma, 
         return false;
     }
 
-    public final int k(int param0) {
+    public final int getPreviousY(int param0) {
         if (param0 != -21185) {
           this.field_l = -20;
         }
         return this.field_p;
     }
 
-    public final Room f(byte param0) {
+    public final Room getRoom(byte param0) {
         int var2 = -126 / ((param0 - 0) / 61);
-        return this.field_o;
+        return this.room;
     }
 
-    public final int b(byte param0) {
+    public final int getRenderX(byte param0) {
         int var2 = -53 / ((param0 + 23) / 53);
-        return this.d(3);
+        return this.getX(3);
     }
 
     void x(int param0) {
@@ -153,13 +153,13 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, fo, gma, 
         }
         for (var3 = 0; var6.length > var3; var3++) {
           var4 = var6[var3];
-          var4.a(this.field_f, (byte) -61, this.field_o, this.field_h);
+          var4.a(this.field_f, (byte) -61, this.room, this.field_h);
         }
     }
 
     private final boolean p(byte param0) {
         int var2 = -18 / ((param0 + 28) / 57);
-        return this.field_o.o((byte) -82);
+        return this.room.o((byte) -82);
     }
 
     final void a(boolean param0, int param1, ui param2, ui param3) {
@@ -218,8 +218,8 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, fo, gma, 
         }
         stackIn_10_0 = ((null != this.field_u &&
           this.field_u.l(0)) ||
-          (this.field_o.o((byte) -82) &&
-          !(this.b(true, this.field_o.i(6029)))));
+          (this.room.o((byte) -82) &&
+          !(this.b(true, this.room.i(6029)))));
         return stackIn_10_0;
     }
 
@@ -261,7 +261,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, fo, gma, 
         }
     }
 
-    public final int c(int param0) {
+    public final int getWidth(int param0) {
         if (param0 > -11) {
           this.field_u = (RoomComponent) null;
         }
@@ -272,7 +272,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, fo, gma, 
         if (param0 != 110) {
           this.field_s = (SwitchableId) null;
         }
-        return io.a(param4, this.e(9648), (byte) -62, param3, this.d(3), param1, this.field_k, this.field_l, param2);
+        return io.a(param4, this.getY(9648), (byte) -62, param3, this.getX(3), param1, this.field_k, this.field_l, param2);
     }
 
     void a(Room param0, int param1) {
@@ -294,7 +294,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, fo, gma, 
         }
     }
 
-    public final int e(int param0) {
+    public final int getY(int param0) {
         int var3 = 0;
         int var4 = 0;
         if (param0 != 9648) {
@@ -305,7 +305,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, fo, gma, 
           var3 = this.field_j >> 8;
           var4 = var2 >> 8;
           var2 = var3 * (this.field_u.field_f >> 8) + var4 * (this.field_u.field_h >> 8);
-          var2 = var2 + this.field_u.e(9648);
+          var2 = var2 + this.field_u.getY(9648);
         }
         return var2;
     }
@@ -325,7 +325,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, fo, gma, 
         }
     }
 
-    public final int i(int param0) {
+    public final int getPreviousX(int param0) {
         if (param0 <= 90) {
           return 61;
         }
@@ -401,7 +401,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, fo, gma, 
           this.a(true, false, (Room) null, 109, -103, 35, (Trap) null);
         }
         if (!param1) {
-          return this.field_o.a(param1, param0, param2 ^ 18);
+          return this.room.a(param1, param0, param2 ^ 18);
         }
         return this.a(param0, param1, false);
     }
@@ -432,7 +432,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, fo, gma, 
         try {
           this.field_u = param3;
           if (param3 == null) {
-            if (param0.field_E > 20) {
+            if (param0.formatVersion > 20) {
               this.field_j = 1048576 * CoinItemComponent.a(true, 8, param2.readBits((byte) 44, 8));
               this.field_p = 1048576 * CoinItemComponent.a(true, 8, param2.readBits((byte) 44, 8));
             } else {
@@ -441,7 +441,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, fo, gma, 
             }
           }
           if (this.v(555277520)) {
-            if (20 < param0.field_E) {
+            if (20 < param0.formatVersion) {
               this.field_l = 2097152 * param2.readBits((byte) 44, 6);
               this.field_k = 2097152 * param2.readBits((byte) 44, 6);
             } else {
@@ -452,12 +452,12 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, fo, gma, 
           if (this.n((byte) -122)) {
             this.field_r = oo.a(4, 8192, 0, param2.readBits((byte) 44, 4));
           }
-          if (20 <= param0.field_E &&
+          if (20 <= param0.formatVersion &&
             this.a(6)) {
             stackIn_16_1 = (param2.readBits((byte) 44, 1) == 1);
             this.field_x = stackIn_16_1;
           }
-          this.field_z = new bca(param0.field_E, param2);
+          this.field_z = new bca(param0.formatVersion, param2);
           stackIn_20_1 = (param2.readBits((byte) 44, 1) == 1);
           this.field_v = stackIn_20_1;
           for (var5_int = 0; this.field_t.length > var5_int; var5_int++) {
@@ -553,7 +553,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, fo, gma, 
         RuntimeException var3 = null;
         try {
           if (this.p((byte) -94)) {
-            param1.a((byte) -116, this.t(8), (fo) (this));
+            param1.a((byte) -116, this.t(8), (Renderable) (this));
           }
           if (param0 != -1704) {
             field_n = 90;
@@ -575,7 +575,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, fo, gma, 
 
     public final boolean j(int param0) {
         if (param0 != -1) {
-          this.e((byte) 109);
+          this.getRenderZ((byte) 109);
           return false;
         }
         return false;
@@ -591,7 +591,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, fo, gma, 
         this.field_x = !this.field_x ? true : false;
     }
 
-    public final void a(int param0, iq param1) {
+    public final void render(int param0, iq param1) {
         try {
           if (param0 <= 103) {
             this.field_r = -82;
@@ -616,11 +616,11 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, fo, gma, 
 
     abstract boolean v(int param0);
 
-    public final int c(byte param0) {
+    public final int getRenderY(byte param0) {
         if (param0 <= 91) {
           return -114;
         }
-        return this.e(9648);
+        return this.getY(9648);
     }
 
     public final boolean d(byte param0) {
@@ -633,7 +633,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, fo, gma, 
 
     public final SwitchableId n(int param0) {
         if (param0 != 31974) {
-          this.field_o = (Room) null;
+          this.room = (Room) null;
         }
         return this.field_w;
     }
@@ -705,7 +705,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, fo, gma, 
         return this.field_z.a(param1, 14530);
     }
 
-    public final int a(byte param0) {
+    public final int getHeight(byte param0) {
         boolean discarded$0 = false;
         if (param0 != 55) {
           discarded$0 = this.p((byte) -128);
@@ -723,13 +723,13 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, fo, gma, 
         if (param0 > -52) {
           return true;
         }
-        if (this.field_o.w(0) == null) {
+        if (this.room.w(0) == null) {
           return true;
         }
-        return this.field_o.w(0).a(this, true, true);
+        return this.room.w(0).a(this, true, true);
     }
 
-    public final int d(int param0) {
+    public final int getX(int param0) {
         int var3 = 0;
         int var4 = 0;
         if (param0 != 3) {
@@ -740,7 +740,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, fo, gma, 
           var3 = var2 >> 8;
           var4 = this.field_p >> 8;
           var2 = (this.field_u.field_h >> 8) * var3 - (this.field_u.field_f >> 8) * var4;
-          var2 = var2 + this.field_u.d(3);
+          var2 = var2 + this.field_u.getX(3);
         }
         return var2;
     }
@@ -863,7 +863,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, fo, gma, 
         this.field_z = new bca();
         this.field_x = true;
         try {
-          this.field_o = param0;
+          this.room = param0;
           this.field_m = param1;
           this.field_w = param0.d(-31957).a(-54, false);
           this.q((byte) -128);

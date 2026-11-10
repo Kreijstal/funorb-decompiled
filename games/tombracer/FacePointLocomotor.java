@@ -122,7 +122,7 @@ final class FacePointLocomotor extends Locomotor {
     final static void a(boolean param0, byte param1) {
         if (mla.field_a > 0 &&
           uv.field_o) {
-          bea.d(0, 0, bea.field_g, era.field_e.field_A);
+          SoftwareRasterizer.d(0, 0, SoftwareRasterizer.field_g, era.field_e.field_A);
           wo.field_k.b(108, param0);
         }
         if (param1 <= 6) {
@@ -131,7 +131,7 @@ final class FacePointLocomotor extends Locomotor {
         }
         if ((GameKeyHandler.field_a > 0 || fp.field_e > 0) &&
           tla.field_e) {
-          bea.d(0, 0, bea.field_g, era.field_e.field_A);
+          SoftwareRasterizer.d(0, 0, SoftwareRasterizer.field_g, era.field_e.field_A);
           hf.field_a.b(85, param0);
         }
     }
@@ -239,7 +239,7 @@ final class FacePointLocomotor extends Locomotor {
           this.field_q = CoinItemComponent.a(true, 12, param1.readBits((byte) 44, 12)) << 16;
           stackIn_4_1 = (param1.readBits((byte) 44, 1) == 1);
           this.field_o = stackIn_4_1;
-          if (this.c(true).field_E < 3) {
+          if (this.c(true).formatVersion < 3) {
             this.field_s = 0;
           } else {
             this.field_s = CoinItemComponent.a(true, 12, param1.readBits((byte) 44, 12));

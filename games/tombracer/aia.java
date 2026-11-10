@@ -61,7 +61,7 @@ final class aia extends IntrusiveNode {
             return;
           }
           var17 = param6.q(57);
-          if (param6.a(-1553494544).f(8, 10915)) {
+          if (param6.getSimulation(-1553494544).f(8, 10915)) {
             this.field_o = 100 + var17.a(50, 0);
           }
           var9 = this.a(0) ? 1 : 0;
@@ -259,8 +259,8 @@ final class aia extends IntrusiveNode {
             0 < this.field_g) {
             var7Lifetime1 = param3 + this.field_n;
             var8 = this.field_r + param2;
-            var9 = -var7Lifetime1 + param4.d(3);
-            var10 = -var8 + param4.e(9648);
+            var9 = -var7Lifetime1 + param4.getX(3);
+            var10 = -var8 + param4.getY(9648);
             this.field_f = ConstrainToCircleLocomotor.a(var9, var10, -111);
             this.field_l = true;
           }
@@ -401,7 +401,7 @@ final class aia extends IntrusiveNode {
           if (param0 != -196609) {
             this.field_r = 31;
           }
-          stackIn_3_0 = io.a(param1.c(-28) / 2, this.field_r + param2, (byte) -63, param1.a((byte) 55) / 2, this.field_n + param3, param1.e(9648), this.field_q / 2, this.field_q / 2, param1.d(3));
+          stackIn_3_0 = io.a(param1.getWidth(-28) / 2, this.field_r + param2, (byte) -63, param1.getHeight((byte) 55) / 2, this.field_n + param3, param1.getY(9648), this.field_q / 2, this.field_q / 2, param1.getX(3));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

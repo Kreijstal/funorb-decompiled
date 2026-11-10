@@ -74,7 +74,7 @@ final class qh extends dfa implements rqa {
     }
 
     private final void i(byte param0) {
-        this.field_f.d(8);
+        this.field_f.clear(8);
         if (param0 != 99) {
           this.field_i = 64;
         }
@@ -131,7 +131,7 @@ final class qh extends dfa implements rqa {
           this.field_l.a(80, param1);
         }
         this.field_w = false;
-        var6 = (me) (this.field_f.f(-80));
+        var6 = (me) (this.field_f.first(-80));
         while (var6 != null) {
           var6.a((byte) -120);
           if (!var6.c((byte) -121)) {
@@ -141,7 +141,7 @@ final class qh extends dfa implements rqa {
           } else {
             this.a(-19805, var6);
           }
-          var6 = (me) (this.field_f.e(param2 - 15171));
+          var6 = (me) (this.field_f.next(param2 - 15171));
         }
         if (null != this.field_n) {
           this.field_n.a((byte) 44);
@@ -543,7 +543,7 @@ final class qh extends dfa implements rqa {
         this.a(6, new fja(this, this.field_z));
         for (var2 = 0; this.field_u.length > var2; var2++) {
           this.field_u[var2] = false;
-          var3 = this.field_k.players[var2].f((byte) -73);
+          var3 = this.field_k.players[var2].getRoom((byte) -73);
           if (var3 != null) {
             var3.i((byte) -75);
           }
@@ -671,7 +671,7 @@ final class qh extends dfa implements rqa {
           this.field_x == 0) {
           var4 = this.field_k.players[this.field_x];
           if (!var4.C(-1).j(0)) {
-            ppa.a(var4.f((byte) -127), 64, this.field_k);
+            ppa.a(var4.getRoom((byte) -127), 64, this.field_k);
           }
         }
         if (param2 != 0) {
@@ -889,10 +889,10 @@ final class qh extends dfa implements rqa {
           if (param0 != -28) {
             discarded$0 = this.o((byte) 26);
           }
-          var5 = (me) (this.field_f.f(param0 ^ 84));
+          var5 = (me) (this.field_f.first(param0 ^ 84));
           while (var5 != null) {
             var5.b((byte) -66);
-            var5 = (me) (this.field_f.e(123));
+            var5 = (me) (this.field_f.next(123));
           }
           return;
         }
@@ -942,7 +942,7 @@ final class qh extends dfa implements rqa {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          this.field_f.b((byte) -120, param0);
+          this.field_f.addLast((byte) -120, param0);
           if (param1 != 680) {
             this.a(-90, false);
           }
@@ -1273,7 +1273,7 @@ final class qh extends dfa implements rqa {
         if (param2 != 1) {
           return true;
         }
-        var7 = (me) (this.field_f.f(param2 ^ -79));
+        var7 = (me) (this.field_f.first(param2 ^ -79));
         if (var7 == null) {
           return true;
         }

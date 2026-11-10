@@ -23,7 +23,7 @@ final class dj {
         }
     }
 
-    final void a(pc param0, gma param1, byte param2) {
+    final void a(pc param0, WorldBody param1, byte param2) {
         try {
           if (param2 >= -99) {
             Effect var5 = (Effect) null;
@@ -132,8 +132,8 @@ final class dj {
             var15.a(-121, var6);
             if (var12 >= 0 &&
               var13 >= 0 &&
-              var12 <= this.field_c.m((byte) -86) &&
-              var13 <= this.field_c.s(-127)) {
+              var12 <= this.field_c.getWidth((byte) -86) &&
+              var13 <= this.field_c.getHeight(-127)) {
               continue;
             }
             break;

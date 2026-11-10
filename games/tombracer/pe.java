@@ -38,9 +38,9 @@ final class pe extends tfa implements gf {
             param0.position = param0.position + (mga.field_j.length - 1);
             break;
           }
-          var3 = new String[var6.a((byte) -16)];
+          var3 = new String[var6.size((byte) -16)];
           for (var4 = 0; var3.length > var4; var4++) {
-            var3[var4] = ((gka) (var6.c(-103))).field_h;
+            var3[var4] = ((gka) (var6.removeFirst(-103))).field_h;
           }
           stackIn_13_0 = var3;
           return stackIn_13_0;

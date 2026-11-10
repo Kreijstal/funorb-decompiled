@@ -29,7 +29,7 @@ final class gva implements mb {
         int var16 = 0;
         int var17 = 0;
         int var18 = 0;
-        nh var19 = null;
+        ToolkitSprite var19 = null;
         int var20 = 0;
         int var21 = 0;
         int var22 = 0;
@@ -43,9 +43,9 @@ final class gva implements mb {
         int var27 = 0;
         ka var28 = null;
         int var29 = 0;
-        nh var19Lifetime1;
+        ToolkitSprite var19Lifetime1;
         Object var24Lifetime1;
-        nh var19Lifetime2;
+        ToolkitSprite var19Lifetime2;
         int var20Lifetime1;
         int var26Lifetime1;
         int var20Lifetime2;
@@ -126,7 +126,7 @@ final class gva implements mb {
                         }
                         var19 = PlayerProfile.field_r[1];
                         var20 = var16 * 512 * var12 / (var19.d() * var10);
-                        var19.a((float)var8, (float)var9, var20, dfa.a(param2.f((byte) -127) << var21, 2048 << var21, -61), 0, var18, 1);
+                        var19.drawRotated((float)var8, (float)var9, var20, dfa.a(param2.f((byte) -127) << var21, 2048 << var21, -61), 0, var18, 1);
                         if (var29 == 0) {
                           break regionExit1;
                         }
@@ -177,7 +177,7 @@ final class gva implements mb {
               }
               var19 = Room.field_p[1][0];
               var20 = var16 * 8192 * var12 / (var19.d() * var10);
-              var19.a((float)var8, (float)var9, var20, dfa.a(param2.f((byte) -127) << var21, 2048 << var21, 76), 0, var18, 1);
+              var19.drawRotated((float)var8, (float)var9, var20, dfa.a(param2.f((byte) -127) << var21, 2048 << var21, 76), 0, var18, 1);
               if (var29 == 0) {
                 break regionExit1;
               }
@@ -191,7 +191,7 @@ final class gva implements mb {
               }
               var19 = Room.field_p[2][0];
               var20 = var16 * (8192 * var12) / (var19.d() * var10);
-              var19.a((float)var8, (float)var9, var20, dfa.a(param2.f((byte) -127) << var21, 2048 << var21, 83), 0, var18, 1);
+              var19.drawRotated((float)var8, (float)var9, var20, dfa.a(param2.f((byte) -127) << var21, 2048 << var21, 83), 0, var18, 1);
               if (var29 == 0) {
                 break regionExit1;
               }
@@ -204,7 +204,7 @@ final class gva implements mb {
               }
               var19 = Room.field_p[3][0];
               var20 = var12 * 8192 * var16 / (var10 * var19.d());
-              var19.a((float)var8, (float)var9, var20, dfa.a(param2.f((byte) -127) << var21, 2048 << var21, -97), 0, var18, 1);
+              var19.drawRotated((float)var8, (float)var9, var20, dfa.a(param2.f((byte) -127) << var21, 2048 << var21, -97), 0, var18, 1);
               if (var29 == 0) {
                 break regionExit1;
               }
@@ -216,7 +216,7 @@ final class gva implements mb {
               }
               var19Lifetime2 = Room.field_p[4][0];
               var20Lifetime2 = var12 * 8192 * var16 / (var19Lifetime2.d() * var10);
-              var19Lifetime2.a((float)var8, (float)var9, var20Lifetime2, dfa.a(param2.f((byte) -127) << var21, 2048 << var21, 126), 2, var17, 2);
+              var19Lifetime2.drawRotated((float)var8, (float)var9, var20Lifetime2, dfa.a(param2.f((byte) -127) << var21, 2048 << var21, 126), 2, var17, 2);
               if (var29 == 0) {
                 break regionExit1;
               }
@@ -227,7 +227,7 @@ final class gva implements mb {
               }
               var19Lifetime1 = Room.field_p[5][0];
               var20Lifetime1 = var16 * (8192 * var12) / (var10 * var19Lifetime1.d());
-              var19Lifetime1.a((float)var8, (float)var9, var20Lifetime1, dfa.a(param2.f((byte) -127) << var21, 2048 << var21, 95), 0, var18, 1);
+              var19Lifetime1.drawRotated((float)var8, (float)var9, var20Lifetime1, dfa.a(param2.f((byte) -127) << var21, 2048 << var21, 95), 0, var18, 1);
               if (var29 == 0) {
                 break regionExit1;
               }
@@ -334,9 +334,9 @@ final class gva implements mb {
             return;
           }
           var4 = this.field_a;
-          var5 = param2.b((byte) 57);
-          var6 = param2.c((byte) 93);
-          var7 = param2.e((byte) -98);
+          var5 = param2.getRenderX((byte) 57);
+          var6 = param2.getRenderY((byte) 93);
+          var7 = param2.getRenderZ((byte) -98);
           cr.a(var4, var7, var5, var6, (byte) 35);
           var8 = var4[0];
           var9 = var4[1];
@@ -798,8 +798,8 @@ final class gva implements mb {
           }
           var4_int = param0.t(1);
           var5 = param0.r(-77);
-          var6 = param0.d(3);
-          var7 = param0.e(param1 + 9553);
+          var6 = param0.getX(3);
+          var7 = param0.getY(param1 + 9553);
           if (var5 == 0) {
             oq.a(-(var4_int / 2) + var6, var7 - var4_int / 2, 0, 128, var4_int / 2 + var6, 14544639, var7 + var4_int / 2, true);
             if (!TombRacer.field_G) {

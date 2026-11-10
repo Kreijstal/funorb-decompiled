@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ft {
-    static il field_c;
+    static BitmapFont field_c;
     int field_b;
     static boolean field_a;
 
@@ -19,7 +19,7 @@ final class ft {
         try {
           java.net.URL var2 = null;
           if (param0 < 75) {
-            field_c = (il) null;
+            field_c = (BitmapFont) null;
           }
           try {
             var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
@@ -265,8 +265,8 @@ final class ft {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (~vga.field_n.a((byte) -16) > param1) {
-            vga.field_n.b((byte) -90, param0);
+          if (~vga.field_n.size((byte) -16) > param1) {
+            vga.field_n.addLast((byte) -90, param0);
           }
           param0.unlinkSecondary(param1 ^ 8174);
           return;

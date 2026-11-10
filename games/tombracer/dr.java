@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class dr {
-    static nh[] field_a;
+    static ToolkitSprite[] field_a;
 
     final static void a(int param0, int param1) {
         BitPacketBuffer var2 = ql.field_k;
@@ -12,7 +12,7 @@ abstract class dr {
         if (param1 < -51) {
           return;
         }
-        field_a = (nh[]) null;
+        field_a = (ToolkitSprite[]) null;
     }
 
     abstract dla a(boolean param0);

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class em extends vw {
-    static nh[] field_h;
+    static ToolkitSprite[] field_h;
     private boolean field_g;
     private na[] field_e;
     static String field_f;

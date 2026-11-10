@@ -52,7 +52,7 @@ final class TeleportLocomotor extends Locomotor {
           }
           this.field_n.a((byte) 54, this.field_t);
           var5 = this.field_n.r(0);
-          if (this.field_n.f((byte) -70).a(this.field_n, this.field_n.a((byte) 55), 2, this.field_n.g(true), this.field_t.field_d, this.field_t.field_f, false, var5, this.field_n.c(-110))) {
+          if (this.field_n.getRoom((byte) -70).a(this.field_n, this.field_n.getHeight((byte) 55), 2, this.field_n.g(true), this.field_t.field_d, this.field_t.field_f, false, var5, this.field_n.getWidth(-110))) {
             return;
           }
           this.c(true).field_u.a((ffa) (this.field_n), (byte) 98);
@@ -84,7 +84,7 @@ final class TeleportLocomotor extends Locomotor {
           }
           this.field_n.a((byte) 54, this.field_t);
           var5Lifetime1 = this.field_n.r(0);
-          if (this.field_n.f((byte) -70).a(this.field_n, this.field_n.a((byte) 55), 2, this.field_n.g(true), this.field_t.field_d, this.field_t.field_f, false, var5Lifetime1, this.field_n.c(-110))) {
+          if (this.field_n.getRoom((byte) -70).a(this.field_n, this.field_n.getHeight((byte) 55), 2, this.field_n.g(true), this.field_t.field_d, this.field_t.field_f, false, var5Lifetime1, this.field_n.getWidth(-110))) {
             return;
           }
           this.c(true).field_u.a((ffa) (this.field_n), (byte) 98);
@@ -110,7 +110,7 @@ final class TeleportLocomotor extends Locomotor {
           this.field_r = this.field_r + 1;
           this.field_n.a((byte) 54, this.field_t);
           var5Lifetime2 = this.field_n.r(0);
-          if (this.field_n.f((byte) -70).a(this.field_n, this.field_n.a((byte) 55), 2, this.field_n.g(true), this.field_t.field_d, this.field_t.field_f, false, var5Lifetime2, this.field_n.c(-110))) {
+          if (this.field_n.getRoom((byte) -70).a(this.field_n, this.field_n.getHeight((byte) 55), 2, this.field_n.g(true), this.field_t.field_d, this.field_t.field_f, false, var5Lifetime2, this.field_n.getWidth(-110))) {
             return;
           }
           this.c(true).field_u.a((ffa) (this.field_n), (byte) 98);
@@ -126,7 +126,7 @@ final class TeleportLocomotor extends Locomotor {
         if (var13.length <= 0) {
           this.field_n.a((byte) 54, this.field_t);
           var5Lifetime3 = this.field_n.r(0);
-          if (this.field_n.f((byte) -70).a(this.field_n, this.field_n.a((byte) 55), 2, this.field_n.g(true), this.field_t.field_d, this.field_t.field_f, false, var5Lifetime3, this.field_n.c(-110))) {
+          if (this.field_n.getRoom((byte) -70).a(this.field_n, this.field_n.getHeight((byte) 55), 2, this.field_n.g(true), this.field_t.field_d, this.field_t.field_f, false, var5Lifetime3, this.field_n.getWidth(-110))) {
             return;
           }
           this.c(true).field_u.a((ffa) (this.field_n), (byte) 98);
@@ -142,7 +142,7 @@ final class TeleportLocomotor extends Locomotor {
         this.field_r = this.c(true).q(73).a(var13.length, 0);
         this.field_n.a((byte) 54, this.field_t);
         var5Lifetime4 = this.field_n.r(0);
-        if (this.field_n.f((byte) -70).a(this.field_n, this.field_n.a((byte) 55), 2, this.field_n.g(true), this.field_t.field_d, this.field_t.field_f, false, var5Lifetime4, this.field_n.c(-110))) {
+        if (this.field_n.getRoom((byte) -70).a(this.field_n, this.field_n.getHeight((byte) 55), 2, this.field_n.g(true), this.field_t.field_d, this.field_t.field_f, false, var5Lifetime4, this.field_n.getWidth(-110))) {
           return;
         }
         this.c(true).field_u.a((ffa) (this.field_n), (byte) 98);
@@ -162,12 +162,12 @@ final class TeleportLocomotor extends Locomotor {
         this.field_p = false;
         this.field_t = new ir();
         try {
-          this.field_q = new gea(param0.field_E, param1);
-          if (param0.field_E < 11) {
+          this.field_q = new gea(param0.formatVersion, param1);
+          if (param0.formatVersion < 11) {
             this.field_q.a(1 == param1.readBits((byte) 44, 1) ? true : false, 1);
           }
-          this.field_s = new mg(param0.field_E, param1);
-          if (11 <= param0.field_E) {
+          this.field_s = new mg(param0.formatVersion, param1);
+          if (11 <= param0.formatVersion) {
             this.field_p = param1.readBits((byte) 44, 1) == 1 ? true : false;
             this.field_u = param1.readBits((byte) 44, 8);
           }

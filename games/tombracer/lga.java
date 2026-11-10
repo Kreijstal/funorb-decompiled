@@ -13,7 +13,7 @@ class lga extends rj {
         bm var5;
         int var6;
         var6 = TombRacer.field_G ? 1 : 0;
-        var4 = (bm) (this.field_D.f(param2 ^ 92));
+        var4 = (bm) (this.field_D.first(param2 ^ 92));
         if (param2 != -20) {
           return (bm) null;
         }
@@ -28,7 +28,7 @@ class lga extends rj {
             }
             var5 = var5.field_k;
           }
-          var4 = (bm) (this.field_D.e(122));
+          var4 = (bm) (this.field_D.next(122));
         }
         return null;
     }
@@ -217,7 +217,7 @@ class lga extends rj {
               if (var10 != null) {
                 ((bm) (var10)).field_k = var29;
               }
-              this.field_D.b((byte) -46, var29);
+              this.field_D.addLast((byte) -46, var29);
               var10 = var29;
             }
           }
@@ -263,7 +263,7 @@ class lga extends rj {
             if (var10Lifetime1 != null) {
               ((bm) (var10Lifetime1)).field_k = var24;
             }
-            this.field_D.b((byte) -46, var24);
+            this.field_D.addLast((byte) -46, var24);
             var10Lifetime1 = var24;
           }
         }

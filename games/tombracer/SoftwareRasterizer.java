@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bea {
+final class SoftwareRasterizer {
     static int[] field_c;
     static int[] field_f;
     private static int[] field_j;
@@ -15,7 +15,7 @@ final class bea {
     static int field_a;
     static int field_b;
 
-    final static void a() {
+    final static void clear() {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -61,7 +61,7 @@ final class bea {
         }
     }
 
-    final static void c(int param0, int param1, int param2, int param3) {
+    final static void drawHorizontalLine(int param0, int param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
         if (param1 >= field_h) {
@@ -296,10 +296,10 @@ final class bea {
         }
         int var4 = field_g - param2;
         int var5 = param0 + param1 * field_g;
-        bea.a(var5, field_l, 0, param2, -param3, var4);
+        SoftwareRasterizer.a(var5, field_l, 0, param2, -param3, var4);
     }
 
-    private final static void b(int param0, int param1, int param2, int param3, int param4) {
+    private final static void drawVerticalLineAlpha(int param0, int param1, int param2, int param3, int param4) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -343,19 +343,19 @@ final class bea {
         field_h = param0[1];
         field_d = param0[2];
         field_k = param0[3];
-        bea.c();
+        SoftwareRasterizer.c();
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        bea.a(field_l, 0, param2 + param3 * field_g, param0, param2, param4, field_g - param4, param5);
-        bea.a(field_l, 0, param2 + param3 * field_g, param1, param3, param5, field_g - param4, param2, param4);
+        SoftwareRasterizer.a(field_l, 0, param2 + param3 * field_g, param0, param2, param4, field_g - param4, param5);
+        SoftwareRasterizer.a(field_l, 0, param2 + param3 * field_g, param1, param3, param5, field_g - param4, param2, param4);
     }
 
     final static void a(int[] param0, int param1, int param2) {
         field_l = param0;
         field_g = param1;
         field_a = param2;
-        bea.b(0, 0, param1, param2);
+        SoftwareRasterizer.b(0, 0, param1, param2);
     }
 
     final static void e(int param0, int param1, int param2, int param3) {
@@ -386,7 +386,7 @@ final class bea {
         int var14Lifetime1;
         int var15Lifetime1;
         if (param2 == 0) {
-          bea.a(param0, param1, param3);
+          SoftwareRasterizer.setPixel(param0, param1, param3);
           return;
         }
         if (param2 < 0) {
@@ -537,10 +537,10 @@ final class bea {
         if (field_k > param3) {
           field_k = param3;
         }
-        bea.c();
+        SoftwareRasterizer.c();
     }
 
-    final static void f(int param0, int param1, int param2, int param3) {
+    final static void drawVerticalLine(int param0, int param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
         if (param0 >= field_b) {
@@ -574,17 +574,17 @@ final class bea {
         param3 = param3 - param1;
         if (param3 == 0) {
           if (param2 < 0) {
-            bea.c(param0 + param2, param1, -param2 + 1, param4);
+            SoftwareRasterizer.drawHorizontalLine(param0 + param2, param1, -param2 + 1, param4);
           } else {
-            bea.c(param0, param1, param2 + 1, param4);
+            SoftwareRasterizer.drawHorizontalLine(param0, param1, param2 + 1, param4);
           }
           return;
         }
         if (param2 == 0) {
           if (param3 < 0) {
-            bea.f(param0, param1 + param3, -param3 + 1, param4);
+            SoftwareRasterizer.drawVerticalLine(param0, param1 + param3, -param3 + 1, param4);
           } else {
-            bea.f(param0, param1, param3 + 1, param4);
+            SoftwareRasterizer.drawVerticalLine(param0, param1, param3 + 1, param4);
           }
           return;
         }
@@ -646,16 +646,16 @@ final class bea {
         int var5 = 0;
         for (var6 = 0; var6 < 4; var6++) {
           var5 = 128 - (var6 << 5);
-          bea.c(param0 + var6, param1 + param3 + var6, param2, param4, var5);
-          bea.b(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
+          SoftwareRasterizer.drawHorizontalLineAlpha(param0 + var6, param1 + param3 + var6, param2, param4, var5);
+          SoftwareRasterizer.drawVerticalLineAlpha(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
         }
     }
 
     final static void f(int param0, int param1, int param2, int param3, int param4) {
-        bea.c(param0, param1, param2, param4);
-        bea.c(param0, param1 + param3 - 1, param2, param4);
-        bea.f(param0, param1, param3, param4);
-        bea.f(param0 + param2 - 1, param1, param3, param4);
+        SoftwareRasterizer.drawHorizontalLine(param0, param1, param2, param4);
+        SoftwareRasterizer.drawHorizontalLine(param0, param1 + param3 - 1, param2, param4);
+        SoftwareRasterizer.drawVerticalLine(param0, param1, param3, param4);
+        SoftwareRasterizer.drawVerticalLine(param0 + param2 - 1, param1, param3, param4);
     }
 
     final static void c(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -720,10 +720,10 @@ final class bea {
         field_h = param1;
         field_d = param2;
         field_k = param3;
-        bea.c();
+        SoftwareRasterizer.c();
     }
 
-    final static void c(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawHorizontalLineAlpha(int param0, int param1, int param2, int param3, int param4) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -1063,7 +1063,7 @@ final class bea {
         field_h = 0;
         field_d = field_g;
         field_k = field_a;
-        bea.c();
+        SoftwareRasterizer.c();
     }
 
     private final static void a(int param0, int[] param1, int param2, int param3, int param4, int param5) {
@@ -1097,7 +1097,7 @@ final class bea {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void setPixel(int param0, int param1, int param2) {
         if (param0 >= field_b) {
           if (param1 < field_h ||
             param0 >= field_d ||

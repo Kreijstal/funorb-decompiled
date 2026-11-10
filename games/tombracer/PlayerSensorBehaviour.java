@@ -97,14 +97,14 @@ final class PlayerSensorBehaviour extends Behaviour implements ut {
         var2 = var2 * var2;
         Player var3 = this.m((byte) 19);
         if (!param0) {
-          var4 = this.field_g.d(3) - var3.d(3) >> 16;
-          var5 = this.field_g.e(9648) - var3.e(9648) >> 16;
+          var4 = this.field_g.getX(3) - var3.getX(3) >> 16;
+          var5 = this.field_g.getY(9648) - var3.getY(9648) >> 16;
           var6 = var4 * var4 + var5 * var5;
           return var6 < var2 ? true : false;
         }
         this.field_s = false;
-        var4Lifetime1 = this.field_g.d(3) - var3.d(3) >> 16;
-        var5Lifetime1 = this.field_g.e(9648) - var3.e(9648) >> 16;
+        var4Lifetime1 = this.field_g.getX(3) - var3.getX(3) >> 16;
+        var5Lifetime1 = this.field_g.getY(9648) - var3.getY(9648) >> 16;
         var6Lifetime1 = var4Lifetime1 * var4Lifetime1 + var5Lifetime1 * var5Lifetime1;
         return var6Lifetime1 < var2 ? true : false;
     }
@@ -215,14 +215,14 @@ final class PlayerSensorBehaviour extends Behaviour implements ut {
             if (!this.field_t) {
               if (this.field_s) {
                 var6 = this.m((byte) 19);
-                var4 = var6.d(3) - this.field_g.d(3);
-                var5 = var6.e(9648) - this.field_g.e(9648);
+                var4 = var6.getX(3) - this.field_g.getX(3);
+                var5 = var6.getY(9648) - this.field_g.getY(9648);
                 this.field_v = qva.a((byte) -94, var5, var4);
               } else {
                 if (this.field_r) {
                   var7 = this.m((byte) 19);
-                  var4 = var7.d(3) - this.field_g.d(3);
-                  var5 = var7.e(9648) - this.field_g.e(9648);
+                  var4 = var7.getX(3) - this.field_g.getX(3);
+                  var5 = var7.getY(9648) - this.field_g.getY(9648);
                   this.field_v = qva.a((byte) -94, var5, var4);
                 }
               }
@@ -250,14 +250,14 @@ final class PlayerSensorBehaviour extends Behaviour implements ut {
           if (var2 != 0) {
             if (this.field_s) {
               var9 = this.m((byte) 19);
-              var4 = var9.d(3) - this.field_g.d(3);
-              var5 = var9.e(9648) - this.field_g.e(9648);
+              var4 = var9.getX(3) - this.field_g.getX(3);
+              var5 = var9.getY(9648) - this.field_g.getY(9648);
               this.field_v = qva.a((byte) -94, var5, var4);
             } else {
               if (this.field_r) {
                 var8 = this.m((byte) 19);
-                var4 = var8.d(3) - this.field_g.d(3);
-                var5 = var8.e(9648) - this.field_g.e(9648);
+                var4 = var8.getX(3) - this.field_g.getX(3);
+                var5 = var8.getY(9648) - this.field_g.getY(9648);
                 this.field_v = qva.a((byte) -94, var5, var4);
                 if (this.field_s) {
                   stackIn_42_0 = (!this.r(8192)) ? 0 : 1;
@@ -308,14 +308,14 @@ final class PlayerSensorBehaviour extends Behaviour implements ut {
             if (!this.field_t) {
               if (this.field_s) {
                 var10 = this.m((byte) 19);
-                var4 = var10.d(3) - this.field_g.d(3);
-                var5 = var10.e(9648) - this.field_g.e(9648);
+                var4 = var10.getX(3) - this.field_g.getX(3);
+                var5 = var10.getY(9648) - this.field_g.getY(9648);
                 this.field_v = qva.a((byte) -94, var5, var4);
               } else {
                 if (this.field_r) {
                   var11 = this.m((byte) 19);
-                  var4 = var11.d(3) - this.field_g.d(3);
-                  var5 = var11.e(9648) - this.field_g.e(9648);
+                  var4 = var11.getX(3) - this.field_g.getX(3);
+                  var5 = var11.getY(9648) - this.field_g.getY(9648);
                   this.field_v = qva.a((byte) -94, var5, var4);
                 }
               }
@@ -368,8 +368,8 @@ final class PlayerSensorBehaviour extends Behaviour implements ut {
           } else {
             if (this.field_s) {
               var13 = this.m((byte) 19);
-              var4 = var13.d(3) - this.field_g.d(3);
-              var5 = var13.e(9648) - this.field_g.e(9648);
+              var4 = var13.getX(3) - this.field_g.getX(3);
+              var5 = var13.getY(9648) - this.field_g.getY(9648);
               this.field_v = qva.a((byte) -94, var5, var4);
               if (var2 != 0 &&
                 this.field_s) {
@@ -400,8 +400,8 @@ final class PlayerSensorBehaviour extends Behaviour implements ut {
             }
             if (this.field_r) {
               var12 = this.m((byte) 19);
-              var4 = var12.d(3) - this.field_g.d(3);
-              var5 = var12.e(9648) - this.field_g.e(9648);
+              var4 = var12.getX(3) - this.field_g.getX(3);
+              var5 = var12.getY(9648) - this.field_g.getY(9648);
               this.field_v = qva.a((byte) -94, var5, var4);
               if (var2 != 0 &&
                 this.field_s) {

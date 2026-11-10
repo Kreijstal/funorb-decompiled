@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nta implements fo {
+final class nta implements Renderable {
     private int field_g;
     static String field_e;
     private int field_a;
@@ -18,14 +18,14 @@ final class nta implements fo {
           return;
         }
         try {
-          param1.a((byte) -100, 2, (fo) (this));
+          param1.a((byte) -100, 2, (Renderable) (this));
           int var4_int = 5 / ((-52 - param0) / 57);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "nta.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    public final int e(byte param0) {
+    public final int getRenderZ(byte param0) {
         if (param0 >= -86) {
           field_e = (String) null;
           return this.field_g;
@@ -52,7 +52,7 @@ final class nta implements fo {
         field_d = -24;
     }
 
-    public final void a(int param0, iq param1) {
+    public final void render(int param0, iq param1) {
         ka var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_5_0 = null;
@@ -61,7 +61,7 @@ final class nta implements fo {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = this.field_f.b((byte) 74);
-          gqa.a(this.field_c, -83584144, this.c((byte) 106), this.b((byte) 90), var3, this.e((byte) -106));
+          gqa.a(this.field_c, -83584144, this.getRenderY((byte) 106), this.getRenderX((byte) 90), var3, this.getRenderZ((byte) -106));
           if (param0 >= 103) {
             return;
           }
@@ -81,7 +81,7 @@ final class nta implements fo {
         }
     }
 
-    public final int c(byte param0) {
+    public final int getRenderY(byte param0) {
         if (param0 <= 91) {
           this.f(-64);
           return this.field_i;
@@ -103,7 +103,7 @@ final class nta implements fo {
         return true;
     }
 
-    public final int b(byte param0) {
+    public final int getRenderX(byte param0) {
         int var2 = -32 % ((-23 - param0) / 53);
         return this.field_j;
     }

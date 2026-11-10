@@ -146,14 +146,14 @@ final class LaserShooterComponent extends ShooterComponent {
             return stackIn_3_0;
           }
           var2 = lp.a((byte) 48, param1);
-          var3 = new ConsoleToken[var2.a((byte) -16)];
+          var3 = new ConsoleToken[var2.size((byte) -16)];
           var4 = 0;
-          var5 = (ConsoleToken) (var2.f(-80));
+          var5 = (ConsoleToken) (var2.first(-80));
           while (var5 != null) {
             incrementValue$1 = var4;
             var4++;
             var3[incrementValue$1] = var5;
-            var5 = (ConsoleToken) (var2.e(124));
+            var5 = (ConsoleToken) (var2.next(124));
           }
           if (param0 != 126) {
             stackIn_9_0 = (ConsoleToken[]) null;

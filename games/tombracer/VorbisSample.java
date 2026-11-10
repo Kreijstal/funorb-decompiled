@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class fg extends IntrusiveNode {
+final class VorbisSample extends IntrusiveNode {
     private static float[] field_x;
     private static float[] field_y;
     private static tm[] field_M;
@@ -21,7 +21,7 @@ final class fg extends IntrusiveNode {
     private int field_f;
     private float[] field_l;
     private static float[] field_C;
-    private static eoa[] field_K;
+    private static VorbisFloor1[] field_K;
     private byte[][] field_t;
     private boolean field_E;
     private int field_r;
@@ -39,7 +39,7 @@ final class fg extends IntrusiveNode {
     private int field_s;
     private static int field_i;
 
-    final static int a(int param0) {
+    final static int readBits(int param0) {
         int var4 = 0;
         int var3 = 0;
         int var1 = 0;
@@ -150,10 +150,10 @@ final class fg extends IntrusiveNode {
         return new u(this.field_s, var12, this.field_J, this.field_f, this.field_A);
     }
 
-    final static fg a(cn param0, String param1, String param2) {
+    final static VorbisSample a(cn param0, String param1, String param2) {
         try {
-          fg var4_ref = null;
-          if (!fg.a(param0)) {
+          VorbisSample var4_ref = null;
+          if (!VorbisSample.a(param0)) {
             param0.b(param1, (byte) 2, param2);
             return null;
           }
@@ -163,7 +163,7 @@ final class fg extends IntrusiveNode {
           }
           Object var4 = null;
           try {
-            var4_ref = new fg(var3);
+            var4_ref = new VorbisSample(var3);
           } catch (IOException iOException) {
             iOException.printStackTrace();
           }
@@ -256,9 +256,9 @@ final class fg extends IntrusiveNode {
         int var4Lifetime2;
         int var5Lifetime1;
         int var5Lifetime2;
-        fg.a(param0, 0);
-        field_B = 1 << fg.a(4);
-        field_H = 1 << fg.a(4);
+        VorbisSample.a(param0, 0);
+        field_B = 1 << VorbisSample.readBits(4);
+        field_H = 1 << VorbisSample.readBits(4);
         field_C = new float[field_H];
         for (var1 = 0; var1 < 2; var1++) {
           if (var1 == 0) {
@@ -302,41 +302,41 @@ final class fg extends IntrusiveNode {
             field_q = var9;
           }
         }
-        var1Lifetime1 = fg.a(8) + 1;
+        var1Lifetime1 = VorbisSample.readBits(8) + 1;
         field_n = new vq[var1Lifetime1];
         for (var2Lifetime1 = 0; var2Lifetime1 < var1Lifetime1; var2Lifetime1++) {
           field_n[var2Lifetime1] = new vq();
         }
-        var2Lifetime2 = fg.a(6) + 1;
+        var2Lifetime2 = VorbisSample.readBits(6) + 1;
         for (var3Lifetime1 = 0; var3Lifetime1 < var2Lifetime2; var3Lifetime1++) {
-          fg.a(16);
+          VorbisSample.readBits(16);
         }
-        var2Lifetime3 = fg.a(6) + 1;
-        field_K = new eoa[var2Lifetime3];
+        var2Lifetime3 = VorbisSample.readBits(6) + 1;
+        field_K = new VorbisFloor1[var2Lifetime3];
         for (var3Lifetime2 = 0; var3Lifetime2 < var2Lifetime3; var3Lifetime2++) {
-          field_K[var3Lifetime2] = new eoa();
+          field_K[var3Lifetime2] = new VorbisFloor1();
         }
-        var3Lifetime3 = fg.a(6) + 1;
+        var3Lifetime3 = VorbisSample.readBits(6) + 1;
         field_h = new aha[var3Lifetime3];
         for (var4Lifetime1 = 0; var4Lifetime1 < var3Lifetime3; var4Lifetime1++) {
           field_h[var4Lifetime1] = new aha();
         }
-        var4Lifetime2 = fg.a(6) + 1;
+        var4Lifetime2 = VorbisSample.readBits(6) + 1;
         field_M = new tm[var4Lifetime2];
         for (var5Lifetime1 = 0; var5Lifetime1 < var4Lifetime2; var5Lifetime1++) {
           field_M[var5Lifetime1] = new tm();
         }
-        var5Lifetime2 = fg.a(6) + 1;
+        var5Lifetime2 = VorbisSample.readBits(6) + 1;
         field_g = new boolean[var5Lifetime2];
         field_F = new int[var5Lifetime2];
         for (var6 = 0; var6 < var5Lifetime2; var6++) {
           stackIn_41_0 = (boolean[]) (field_g);
           stackIn_41_1 = var6;
-          stackIn_42_2 = (fg.c() != 0);
+          stackIn_42_2 = (VorbisSample.c() != 0);
           stackIn_41_0[stackIn_41_1] = stackIn_42_2;
-          fg.a(16);
-          fg.a(16);
-          field_F[var6] = fg.a(8);
+          VorbisSample.readBits(16);
+          VorbisSample.readBits(16);
+          field_F[var6] = VorbisSample.readBits(8);
         }
         field_j = true;
     }
@@ -355,10 +355,10 @@ final class fg extends IntrusiveNode {
         return var0;
     }
 
-    final static fg a(cn param0, int param1, int param2) {
+    final static VorbisSample a(cn param0, int param1, int param2) {
         try {
-          fg var4_ref = null;
-          if (!fg.a(param0)) {
+          VorbisSample var4_ref = null;
+          if (!VorbisSample.a(param0)) {
             param0.a(param1, (byte) -126, param2);
             return null;
           }
@@ -368,7 +368,7 @@ final class fg extends IntrusiveNode {
           }
           Object var4 = null;
           try {
-            var4_ref = new fg(var3);
+            var4_ref = new VorbisSample(var3);
           } catch (IOException iOException) {
             iOException.printStackTrace();
           }
@@ -387,12 +387,12 @@ final class fg extends IntrusiveNode {
           if (var1 == null) {
             return false;
           }
-          fg.b(var1);
+          VorbisSample.b(var1);
         }
         return true;
     }
 
-    final static float c(int param0) {
+    final static float unpackFloat(int param0) {
         int var1 = param0 & 2097151;
         int var2 = param0 & -2147483648;
         int var3 = (param0 & 2145386496) >> 21;
@@ -514,9 +514,9 @@ final class fg extends IntrusiveNode {
         float var30Lifetime1Lifetime3;
         int var18_intLifetime1;
         int var18_intLifetime2;
-        fg.a(this.field_t[param0], 0);
-        fg.c();
-        var2 = fg.a(CauldronComponent.a((byte) 93, field_F.length - 1));
+        VorbisSample.a(this.field_t[param0], 0);
+        VorbisSample.c();
+        var2 = VorbisSample.readBits(CauldronComponent.a((byte) 93, field_F.length - 1));
         var3 = field_g[var2] ? 1 : 0;
         if (var3 == 0) {
           stackIn_3_0 = field_B;
@@ -527,9 +527,9 @@ final class fg extends IntrusiveNode {
         var5 = 0;
         var6 = 0;
         if (var3 != 0) {
-          stackIn_7_0 = (fg.c() == 0) ? 0 : 1;
+          stackIn_7_0 = (VorbisSample.c() == 0) ? 0 : 1;
           var5 = stackIn_7_0;
-          stackIn_10_0 = (fg.c() == 0) ? 0 : 1;
+          stackIn_10_0 = (VorbisSample.c() == 0) ? 0 : 1;
           var6 = stackIn_10_0;
         }
         var7 = var4 >> 1;
@@ -754,7 +754,7 @@ final class fg extends IntrusiveNode {
         return (float[]) (var17);
     }
 
-    private fg(byte[] param0) throws IOException {
+    private VorbisSample(byte[] param0) throws IOException {
         this.a(param0);
     }
 

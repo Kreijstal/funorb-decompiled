@@ -33,21 +33,21 @@ final class w extends sqa {
         if (param0 >= -118) {
           this.field_g = (IntrusiveDeque) null;
         } else {
-          var4 = (fla) (this.field_g.f(-80));
+          var4 = (fla) (this.field_g.first(-80));
           while (var4 != null) {
             rs.a(var4, 107);
-            var4 = (fla) (this.field_g.e(107));
+            var4 = (fla) (this.field_g.next(107));
           }
-          this.field_g.d(8);
+          this.field_g.clear(8);
           this.a(true);
           return;
         }
-        var4Lifetime1 = (fla) (this.field_g.f(-80));
+        var4Lifetime1 = (fla) (this.field_g.first(-80));
         while (var4Lifetime1 != null) {
           rs.a(var4Lifetime1, 107);
-          var4Lifetime1 = (fla) (this.field_g.e(107));
+          var4Lifetime1 = (fla) (this.field_g.next(107));
         }
-        this.field_g.d(8);
+        this.field_g.clear(8);
         this.a(true);
     }
 
@@ -112,7 +112,7 @@ final class w extends sqa {
             }
             break;
           }
-          param2.b((byte) -59, new gka(var8.toString()));
+          param2.addLast((byte) -59, new gka(var8.toString()));
           if (param1 != -58) {
             field_d = (String) null;
           }
@@ -162,7 +162,7 @@ final class w extends sqa {
           if (this.field_e) {
             return null;
           }
-          if (this.field_g.a((byte) -16) >= 15) {
+          if (this.field_g.size((byte) -16) >= 15) {
             return null;
           }
           if (var3_int < 0) {
@@ -213,7 +213,7 @@ final class w extends sqa {
             var11.field_f.b(-1);
           }
           var12 = new fla(var11, var3_int, var7 != 0, var4, var10, var9);
-          this.field_g.b((byte) -100, var12);
+          this.field_g.addLast((byte) -100, var12);
           this.field_i[var3_int] = this.field_i[var3_int] + 1;
           stackIn_37_0 = var12;
           return stackIn_37_0;
@@ -303,27 +303,27 @@ final class w extends sqa {
         boolean discarded$1 = false;
         fla var6 = null;
         int var4 = TombRacer.field_G ? 1 : 0;
-        fm var5 = (fm) (this.field_b.f(-80));
+        fm var5 = (fm) (this.field_b.first(-80));
         fla var6Lifetime1;
         while (var5 != null) {
           this.a(var5, -58);
           var5.unlink(15);
-          var5 = (fm) (this.field_b.e(124));
+          var5 = (fm) (this.field_b.next(124));
         }
         if (param0 < 75) {
           discarded$1 = this.a(53, -23);
         } else {
-          var6 = (fla) (this.field_g.f(-80));
+          var6 = (fla) (this.field_g.first(-80));
           while (var6 != null) {
             var6.a(564550600, this, param1);
-            var6 = (fla) (this.field_g.e(110));
+            var6 = (fla) (this.field_g.next(110));
           }
           return;
         }
-        var6Lifetime1 = (fla) (this.field_g.f(-80));
+        var6Lifetime1 = (fla) (this.field_g.first(-80));
         while (var6Lifetime1 != null) {
           var6Lifetime1.a(564550600, this, param1);
-          var6Lifetime1 = (fla) (this.field_g.e(110));
+          var6Lifetime1 = (fla) (this.field_g.next(110));
         }
     }
 

@@ -134,7 +134,7 @@ public final class TombRacer extends rfa implements ls {
                 var4_int = stackIn_19_0;
                 if (var4_int != 0) {
                   wm.field_a.a((byte) -28, false);
-                  tga.field_a.SA(0, 0, aaa.a(false), koa.b(param2 ^ 17), bea.field_l, 0, aaa.a(false));
+                  tga.field_a.SA(0, 0, aaa.a(false), koa.b(param2 ^ 17), SoftwareRasterizer.field_l, 0, aaa.a(false));
                 }
               }
             }
@@ -142,7 +142,7 @@ public final class TombRacer extends rfa implements ls {
           var4_intLifetime1 = 0;
           if (hb.field_t != null) {
             if (hb.field_t.b(31923)) {
-              bea.a();
+              SoftwareRasterizer.clear();
               var4_intLifetime1 = 1;
               hb.field_t.a((byte) -28, true);
             } else {
@@ -152,7 +152,7 @@ public final class TombRacer extends rfa implements ls {
           if (param0) {
             iqa.field_c.d(true);
             if (iqa.field_c.e(-8832)) {
-              bea.a();
+              SoftwareRasterizer.clear();
               stackIn_33_0 = ((this.field_E & 8) == 0);
               SpawnerBehaviour.a(stackIn_33_0, 0);
               bi.a(tga.field_a, param2 ^ 17);
@@ -180,12 +180,12 @@ public final class TombRacer extends rfa implements ls {
               stackIn_47_0 = true;
             }
             S2CNewRoomPacket.a(stackIn_47_0, 106);
-            tga.field_a.SA(0, 0, bea.field_g, bea.field_a, bea.field_l, 0, bea.field_g);
+            tga.field_a.SA(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_a, SoftwareRasterizer.field_l, 0, SoftwareRasterizer.field_g);
             var5_ref_ssa.a(param2 + 84);
           }
           if (var4_intLifetime1 != 0) {
             if (!lca.a(false)) {
-              tga.field_a.SA(0, 0, bea.field_g, bea.field_a, bea.field_l, 0, bea.field_g);
+              tga.field_a.SA(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_a, SoftwareRasterizer.field_l, 0, SoftwareRasterizer.field_g);
             } else {
               tga.field_a.c(-1073741824, 0, aaa.a(false), 0, -22971, koa.b(0));
               var5 = f.a(false);
@@ -194,7 +194,7 @@ public final class TombRacer extends rfa implements ls {
               var8 = rs.a((byte) 124);
               var9 = uja.a((byte) 65, tga.field_a);
               var9.a(var5 + var7, var6, (byte) -12, var6 + var8, var5);
-              tga.field_a.SA(0, 0, bea.field_g, bea.field_a, bea.field_l, 0, bea.field_g);
+              tga.field_a.SA(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_a, SoftwareRasterizer.field_l, 0, SoftwareRasterizer.field_g);
               var9.a(99);
             }
             this.x(-28581);
@@ -222,7 +222,7 @@ public final class TombRacer extends rfa implements ls {
         GameKeyHandler.a(127);
         pba.releaseStatics(4096);
         IntrusiveDeque.b((byte) 91);
-        bea.releaseStatics();
+        SoftwareRasterizer.releaseStatics();
         gda.releaseStatics(27316);
         ssa.releaseStatics(-98);
         nba.releaseStatics(false);
@@ -339,7 +339,7 @@ public final class TombRacer extends rfa implements ls {
         af.releaseStatics(123);
         re.releaseStatics((byte) -33);
         DualLinkNode.b(0);
-        il.releaseStatics();
+        BitmapFont.releaseStatics();
         ji.f(124);
         rf.releaseStatics((byte) -19);
         g.releaseStatics(false);
@@ -426,7 +426,7 @@ public final class TombRacer extends rfa implements ls {
         li.releaseStatics(3);
         ch.releaseStatics((byte) -35);
         rta.releaseStatics(-89);
-        maa.releaseStatics();
+        MidiFileReader.releaseStatics();
         sv.releaseStatics(-48);
         dea.releaseStatics(true);
         jn.releaseStatics(param0 ^ -3610);
@@ -494,7 +494,7 @@ public final class TombRacer extends rfa implements ls {
         wb.releaseStatics((byte) -39);
         qoa.releaseStatics((byte) 33);
         uoa.releaseStatics();
-        fg.releaseStatics();
+        VorbisSample.releaseStatics();
         uca.releaseStatics(65);
         an.releaseStatics(-32768);
         nn.releaseStatics((byte) 9);
@@ -505,10 +505,10 @@ public final class TombRacer extends rfa implements ls {
         ol.a(0);
         pla.releaseStatics(-1);
         qu.releaseStatics(72);
-        kr.releaseStatics();
+        Bzip2Decompressor.releaseStatics();
         aj.releaseStatics(-11061);
         SpriteState.f(0);
-        eoa.releaseStatics();
+        VorbisFloor1.releaseStatics();
         aqa.releaseStatics((byte) -59);
         wua.releaseStatics((byte) -36);
         dd.releaseStatics(8476);
@@ -741,7 +741,7 @@ public final class TombRacer extends rfa implements ls {
         fk.releaseStatics(-116);
         fj.releaseStatics(-2);
         dta.releaseStatics(0);
-        hva.releaseStatics();
+        AudioFilter.releaseStatics();
         cs.a(3840);
         ConveyorBehaviour.releaseStatics(6);
         SimpleConditionBehaviour.releaseStatics((byte) -119);
@@ -805,7 +805,7 @@ public final class TombRacer extends rfa implements ls {
         voa.releaseStatics(0);
         bk.releaseStatics((byte) 101);
         cna.releaseStatics(param0 ^ 3646);
-        qq.releaseStatics();
+        ScrollingTexturePixels.releaseStatics();
         ita.a((byte) 48);
         lp.a((byte) 34);
         hna.releaseStatics(121);
@@ -1425,7 +1425,7 @@ public final class TombRacer extends rfa implements ls {
           tga.field_a.a(0, (ob[]) null);
           if (dia.field_o != null &&
             dia.field_o.a(param0 + 28579)) {
-            tga.field_a.SA(0, 0, bea.field_g, bea.field_a, bea.field_l, 0, bea.field_g);
+            tga.field_a.SA(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_a, SoftwareRasterizer.field_l, 0, SoftwareRasterizer.field_g);
           }
           if (param0 != -28581) {
             return;

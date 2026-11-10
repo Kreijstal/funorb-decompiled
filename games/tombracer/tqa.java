@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tqa implements fo {
+final class tqa implements Renderable {
     private int field_c;
     private int field_m;
     private int field_h;
@@ -19,11 +19,11 @@ final class tqa implements fo {
     private pca[] field_j;
     private int field_n;
 
-    public final int c(byte param0) {
+    public final int getRenderY(byte param0) {
         if (param0 < 91) {
           this.field_h = 23;
         }
-        return this.field_f.s(38) / 2;
+        return this.field_f.getHeight(38) / 2;
     }
 
     private final int a(byte param0, int param1, int param2) {
@@ -78,14 +78,14 @@ final class tqa implements fo {
         }
     }
 
-    public final int b(byte param0) {
+    public final int getRenderX(byte param0) {
         int var2 = -60 % ((param0 + 23) / 53);
-        return this.field_f.m((byte) -86) / 2;
+        return this.field_f.getWidth((byte) -86) / 2;
     }
 
     public final void f(int param0) {
         if (param0 != -4366) {
-          this.c((byte) -59);
+          this.getRenderY((byte) -59);
         }
     }
 
@@ -108,9 +108,9 @@ final class tqa implements fo {
           if (param0 != 25) {
             this.field_f = (Room) null;
           }
-          this.field_p.d(8);
-          if (param2.field_E > 8) {
-            if (param2.field_E <= 9) {
+          this.field_p.clear(8);
+          if (param2.formatVersion > 8) {
+            if (param2.formatVersion <= 9) {
               param1.readBits((byte) 44, 8);
               param1.readBits((byte) 44, 8);
             }
@@ -119,11 +119,11 @@ final class tqa implements fo {
                 this.a(param0 - 133, var5, var4_int).a((byte) 29, param2, param1);
               }
             }
-            if (10 <= param2.field_E) {
+            if (10 <= param2.formatVersion) {
               var4_intLifetime1 = param1.readBits((byte) 44, 8);
               for (var5Lifetime1 = 0; var5Lifetime1 < var4_intLifetime1; var5Lifetime1++) {
                 var6 = new lk(param2, param1);
-                this.field_p.b((byte) -77, var6);
+                this.field_p.addLast((byte) -77, var6);
               }
               return;
             }
@@ -174,10 +174,10 @@ final class tqa implements fo {
             var5.e(param0 - 64);
           }
         }
-        lk var7 = (lk) (this.field_p.f(param0 ^ -16));
+        lk var7 = (lk) (this.field_p.first(param0 ^ -16));
         while (var7 != null) {
           var7.a(this.field_f, (byte) 104);
-          var7 = (lk) (this.field_p.e(107));
+          var7 = (lk) (this.field_p.next(107));
         }
     }
 
@@ -205,7 +205,7 @@ final class tqa implements fo {
         return false;
     }
 
-    public final void a(int param0, iq param1) {
+    public final void render(int param0, iq param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -225,10 +225,10 @@ final class tqa implements fo {
               this.a(-118, var3_int, var4).a((byte) 117, param1);
             }
           }
-          var6 = (lk) (this.field_p.f(-80));
+          var6 = (lk) (this.field_p.first(-80));
           while (var6 != null) {
-            var6.a(119, param1);
-            var6 = (lk) (this.field_p.e(107));
+            var6.render(119, param1);
+            var6 = (lk) (this.field_p.next(107));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -245,7 +245,7 @@ final class tqa implements fo {
         }
     }
 
-    public final int e(byte param0) {
+    public final int getRenderZ(byte param0) {
         if (param0 > -86) {
           this.field_d = -124;
           return 0;
@@ -396,11 +396,11 @@ final class tqa implements fo {
             this.a(param1 - 115, var9_int, var10).a(var4[var12 * var5 + var11], 21324);
           }
         }
-        lk var9 = (lk) (this.field_p.f(-80));
+        lk var9 = (lk) (this.field_p.first(-80));
         while (var9 != null) {
           var9.a(-6492, var9.a((byte) 124) + param2);
           var9.b(param1 ^ 2, param2 + var9.g((byte) -121));
-          var9 = (lk) (this.field_p.e(118));
+          var9 = (lk) (this.field_p.next(118));
         }
     }
 
@@ -457,7 +457,7 @@ final class tqa implements fo {
 
     final void a(int param0, Room param1, int param2) {
         try {
-          this.a(param0, param1, param1.m((byte) -86), param1.s(-125), 0);
+          this.a(param0, param1, param1.getWidth((byte) -86), param1.getHeight(-125), 0);
           int var4_int = 17 / ((-78 - param2) / 43);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "tqa.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -478,12 +478,12 @@ final class tqa implements fo {
 
     final void a(int param0, byte param1) {
         int var4 = TombRacer.field_G ? 1 : 0;
-        lk var5 = (lk) (this.field_p.f(-80));
+        lk var5 = (lk) (this.field_p.first(-80));
         while (var5 != null) {
           if (!var5.a(param0, false)) {
             var5.unlink(56);
           }
-          var5 = (lk) (this.field_p.e(126));
+          var5 = (lk) (this.field_p.next(126));
         }
         if (param1 > -11) {
           this.field_n = 14;
@@ -507,11 +507,11 @@ final class tqa implements fo {
               this.a(-98, var4, var3_int).a(param1, -78);
             }
           }
-          param1.writeBits((byte) -128, this.field_p.a((byte) -16), param0);
-          var6 = (lk) (this.field_p.f(-80));
+          param1.writeBits((byte) -128, this.field_p.size((byte) -16), param0);
+          var6 = (lk) (this.field_p.first(-80));
           while (var6 != null) {
             var6.a((byte) -128, param1);
-            var6 = (lk) (this.field_p.e(123));
+            var6 = (lk) (this.field_p.next(123));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

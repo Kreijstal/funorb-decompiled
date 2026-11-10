@@ -41,8 +41,8 @@ final class ApproachPlayerLocomotor extends Locomotor {
         if (var14.u(-25561)) {
           return;
         }
-        this.field_o.field_f = var14.d(3);
-        this.field_o.field_d = var14.e(9648);
+        this.field_o.field_f = var14.getX(3);
+        this.field_o.field_d = var14.getY(9648);
         this.field_n.a(this.field_o, 30);
         var4 = this.field_o.field_f - this.field_n.s(25745);
         var5 = this.field_o.field_d - this.field_n.e(false);
@@ -228,12 +228,12 @@ final class ApproachPlayerLocomotor extends Locomotor {
         this.field_o = new ir();
         try {
           this.field_q = param1.readBits((byte) 44, 10) << 16;
-          if (7 < param0.field_E) {
+          if (7 < param0.formatVersion) {
             this.field_v = this.a(param1.readBits((byte) 44, 8), false);
           } else {
             this.field_v = param1.readBits((byte) 44, 4) << 16;
           }
-          if (this.c(true).field_E < 3) {
+          if (this.c(true).formatVersion < 3) {
             this.field_u = false;
           } else {
             stackIn_8_1 = (1 == param1.readBits((byte) 44, 1));

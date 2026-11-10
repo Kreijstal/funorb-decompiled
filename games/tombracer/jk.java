@@ -14,16 +14,16 @@ final class jk extends IntrusiveNode {
         if (param0 != 122) {
           jk.a((byte) 64);
         }
-        var1.b((byte) -117, new ak("load", new Class[]{String.class}, "Run a test level from the freelevels directory."));
-        var1.b((byte) -47, new dia("hello", new Class[]{}, "Be friendly."));
-        var1.b((byte) -91, new eea("banner", new Class[]{}, "Load the banner corridor."));
-        var1.b((byte) -56, new lq("showLevelSet", new Class[]{}, "Show the level set editor"));
-        var1.b((byte) -100, new vr("setFakeLag", new Class[]{Integer.TYPE}, (String) null));
-        var1.b((byte) -112, new wr("toggleMusicChannel", new Class[]{String.class, Boolean.TYPE}, (String) null));
-        var1.b((byte) -82, new rna("listChannels", new Class[]{}, (String) null));
-        var1.b((byte) -73, new bh("playTrack", new Class[]{String.class}, (String) null));
-        var1.b((byte) -83, new tb("listTracks", new Class[]{}, (String) null));
-        var1.b((byte) -81, new jf("loadProfile", new Class[]{String.class}, (String) null));
+        var1.addLast((byte) -117, new ak("load", new Class[]{String.class}, "Run a test level from the freelevels directory."));
+        var1.addLast((byte) -47, new dia("hello", new Class[]{}, "Be friendly."));
+        var1.addLast((byte) -91, new eea("banner", new Class[]{}, "Load the banner corridor."));
+        var1.addLast((byte) -56, new lq("showLevelSet", new Class[]{}, "Show the level set editor"));
+        var1.addLast((byte) -100, new vr("setFakeLag", new Class[]{Integer.TYPE}, (String) null));
+        var1.addLast((byte) -112, new wr("toggleMusicChannel", new Class[]{String.class, Boolean.TYPE}, (String) null));
+        var1.addLast((byte) -82, new rna("listChannels", new Class[]{}, (String) null));
+        var1.addLast((byte) -73, new bh("playTrack", new Class[]{String.class}, (String) null));
+        var1.addLast((byte) -83, new tb("listTracks", new Class[]{}, (String) null));
+        var1.addLast((byte) -81, new jf("loadProfile", new Class[]{String.class}, (String) null));
         return var1;
     }
 

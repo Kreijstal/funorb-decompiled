@@ -20,7 +20,7 @@ final class iua {
     private int field_t;
     int field_n;
     boolean field_q;
-    private sfa field_k;
+    private SoftwareGraphicsToolkit field_k;
     int field_b;
     private int field_f;
     private int[] field_a;
@@ -9506,7 +9506,7 @@ final class iua {
 
     }
 
-    iua(sfa param0, tw param1) {
+    iua(SoftwareGraphicsToolkit param0, tw param1) {
         this.field_j = true;
         this.field_m = false;
         this.field_p = new int[4096];

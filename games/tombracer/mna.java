@@ -27,7 +27,7 @@ abstract class mna {
         int var8Lifetime1;
         int var8Lifetime2;
         var14 = TombRacer.field_G ? 1 : 0;
-        ne.field_d.field_tb.field_J.d(8);
+        ne.field_d.field_tb.field_J.clear(8);
         var4 = null;
         var5 = 0;
         var6 = 0;
@@ -54,7 +54,7 @@ abstract class mna {
               if (var15.field_l == null) {
               }
               var11 = moa.a(var15, 94);
-              var12 = var11 + il.c(var15.field_f);
+              var12 = var11 + BitmapFont.escapeMarkup(var15.field_f);
               var13 = uaa.a((byte) -116, var15);
               var15.field_l = new jea(0L, VortexBehaviour.field_t, var12);
               var6 = var6 + param2;

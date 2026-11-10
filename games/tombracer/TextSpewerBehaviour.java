@@ -140,8 +140,8 @@ final class TextSpewerBehaviour extends Behaviour {
             this.a(-91, 115);
             var2 = var2 * var2;
             var9 = this.m((byte) 19);
-            var4 = this.field_g.d(3) - var9.d(param0 ^ 5417) >> 16;
-            var5 = this.field_g.e(9648) - var9.e(9648) >> 16;
+            var4 = this.field_g.getX(3) - var9.getX(param0 ^ 5417) >> 16;
+            var5 = this.field_g.getY(9648) - var9.getY(9648) >> 16;
             var6 = var4 * var4 + var5 * var5;
             if (var2 > var6) {
               if (this.field_q) {
@@ -153,7 +153,7 @@ final class TextSpewerBehaviour extends Behaviour {
                   this.field_u = 0;
                 }
               }
-              var10 = this.b(true).a(this.field_g.d(3), this.field_g.e(param0 ^ 12442), (byte) 100, this.field_g.P(0));
+              var10 = this.b(true).a(this.field_g.getX(3), this.field_g.getY(param0 ^ 12442), (byte) 100, this.field_g.P(0));
               var10.a(false, 8388608, 0, 8388608, this.field_s);
               var10.a(0, 16777215, this.field_n[var7]);
               var10.a(65536, 0, -101, 0);
@@ -163,15 +163,15 @@ final class TextSpewerBehaviour extends Behaviour {
           }
           var2 = var2 * var2;
           var11 = this.m((byte) 19);
-          var4Lifetime3 = this.field_g.d(3) - var11.d(param0 ^ 5417) >> 16;
-          var5Lifetime3 = this.field_g.e(9648) - var11.e(9648) >> 16;
+          var4Lifetime3 = this.field_g.getX(3) - var11.getX(param0 ^ 5417) >> 16;
+          var5Lifetime3 = this.field_g.getY(9648) - var11.getY(9648) >> 16;
           var6Lifetime3 = var4Lifetime3 * var4Lifetime3 + var5Lifetime3 * var5Lifetime3;
           if (var2 <= var6Lifetime3) {
             return;
           }
           if (this.field_q) {
             var7Lifetime4 = this.o((byte) 46).a(this.field_n.length, 0);
-            var12 = this.b(true).a(this.field_g.d(3), this.field_g.e(param0 ^ 12442), (byte) 100, this.field_g.P(0));
+            var12 = this.b(true).a(this.field_g.getX(3), this.field_g.getY(param0 ^ 12442), (byte) 100, this.field_g.P(0));
             var12.a(false, 8388608, 0, 8388608, this.field_s);
             var12.a(0, 16777215, this.field_n[var7Lifetime4]);
             var12.a(65536, 0, -101, 0);
@@ -182,14 +182,14 @@ final class TextSpewerBehaviour extends Behaviour {
           this.field_u = this.field_u + 1;
           if (this.field_n.length <= this.field_u) {
             this.field_u = 0;
-            var14 = this.b(true).a(this.field_g.d(3), this.field_g.e(param0 ^ 12442), (byte) 100, this.field_g.P(0));
+            var14 = this.b(true).a(this.field_g.getX(3), this.field_g.getY(param0 ^ 12442), (byte) 100, this.field_g.P(0));
             var14.a(false, 8388608, 0, 8388608, this.field_s);
             var14.a(0, 16777215, this.field_n[var7Lifetime5]);
             var14.a(65536, 0, -101, 0);
             this.field_r = this.field_p;
             return;
           }
-          var13 = this.b(true).a(this.field_g.d(3), this.field_g.e(param0 ^ 12442), (byte) 100, this.field_g.P(0));
+          var13 = this.b(true).a(this.field_g.getX(3), this.field_g.getY(param0 ^ 12442), (byte) 100, this.field_g.P(0));
           var13.a(false, 8388608, 0, 8388608, this.field_s);
           var13.a(0, 16777215, this.field_n[var7Lifetime5]);
           var13.a(65536, 0, -101, 0);
@@ -205,15 +205,15 @@ final class TextSpewerBehaviour extends Behaviour {
           this.a(-91, 115);
           var2Lifetime1 = var2Lifetime1 * var2Lifetime1;
           var15 = this.m((byte) 19);
-          var4Lifetime1 = this.field_g.d(3) - var15.d(param0 ^ 5417) >> 16;
-          var5Lifetime1 = this.field_g.e(9648) - var15.e(9648) >> 16;
+          var4Lifetime1 = this.field_g.getX(3) - var15.getX(param0 ^ 5417) >> 16;
+          var5Lifetime1 = this.field_g.getY(9648) - var15.getY(9648) >> 16;
           var6Lifetime1 = var4Lifetime1 * var4Lifetime1 + var5Lifetime1 * var5Lifetime1;
           if (var2Lifetime1 <= var6Lifetime1) {
             return;
           }
           if (this.field_q) {
             var7Lifetime1 = this.o((byte) 46).a(this.field_n.length, 0);
-            var16 = this.b(true).a(this.field_g.d(3), this.field_g.e(param0 ^ 12442), (byte) 100, this.field_g.P(0));
+            var16 = this.b(true).a(this.field_g.getX(3), this.field_g.getY(param0 ^ 12442), (byte) 100, this.field_g.P(0));
             var16.a(false, 8388608, 0, 8388608, this.field_s);
             var16.a(0, 16777215, this.field_n[var7Lifetime1]);
             var16.a(65536, 0, -101, 0);
@@ -224,14 +224,14 @@ final class TextSpewerBehaviour extends Behaviour {
           this.field_u = this.field_u + 1;
           if (this.field_n.length <= this.field_u) {
             this.field_u = 0;
-            var20 = this.b(true).a(this.field_g.d(3), this.field_g.e(param0 ^ 12442), (byte) 100, this.field_g.P(0));
+            var20 = this.b(true).a(this.field_g.getX(3), this.field_g.getY(param0 ^ 12442), (byte) 100, this.field_g.P(0));
             var20.a(false, 8388608, 0, 8388608, this.field_s);
             var20.a(0, 16777215, this.field_n[var7Lifetime1Lifetime1]);
             var20.a(65536, 0, -101, 0);
             this.field_r = this.field_p;
             return;
           }
-          var18 = this.b(true).a(this.field_g.d(3), this.field_g.e(param0 ^ 12442), (byte) 100, this.field_g.P(0));
+          var18 = this.b(true).a(this.field_g.getX(3), this.field_g.getY(param0 ^ 12442), (byte) 100, this.field_g.P(0));
           var18.a(false, 8388608, 0, 8388608, this.field_s);
           var18.a(0, 16777215, this.field_n[var7Lifetime1Lifetime1]);
           var18.a(65536, 0, -101, 0);
@@ -240,15 +240,15 @@ final class TextSpewerBehaviour extends Behaviour {
         }
         var2Lifetime1 = var2Lifetime1 * var2Lifetime1;
         Player var21 = this.m((byte) 19);
-        var4Lifetime2 = this.field_g.d(3) - var21.d(param0 ^ 5417) >> 16;
-        var5Lifetime2 = this.field_g.e(9648) - var21.e(9648) >> 16;
+        var4Lifetime2 = this.field_g.getX(3) - var21.getX(param0 ^ 5417) >> 16;
+        var5Lifetime2 = this.field_g.getY(9648) - var21.getY(9648) >> 16;
         var6Lifetime2 = var4Lifetime2 * var4Lifetime2 + var5Lifetime2 * var5Lifetime2;
         if (var2Lifetime1 <= var6Lifetime2) {
           return;
         }
         if (this.field_q) {
           var7Lifetime2 = this.o((byte) 46).a(this.field_n.length, 0);
-          var22 = this.b(true).a(this.field_g.d(3), this.field_g.e(param0 ^ 12442), (byte) 100, this.field_g.P(0));
+          var22 = this.b(true).a(this.field_g.getX(3), this.field_g.getY(param0 ^ 12442), (byte) 100, this.field_g.P(0));
           var22.a(false, 8388608, 0, 8388608, this.field_s);
           var22.a(0, 16777215, this.field_n[var7Lifetime2]);
           var22.a(65536, 0, -101, 0);
@@ -259,14 +259,14 @@ final class TextSpewerBehaviour extends Behaviour {
         this.field_u = this.field_u + 1;
         if (this.field_n.length <= this.field_u) {
           this.field_u = 0;
-          var24 = this.b(true).a(this.field_g.d(3), this.field_g.e(param0 ^ 12442), (byte) 100, this.field_g.P(0));
+          var24 = this.b(true).a(this.field_g.getX(3), this.field_g.getY(param0 ^ 12442), (byte) 100, this.field_g.P(0));
           var24.a(false, 8388608, 0, 8388608, this.field_s);
           var24.a(0, 16777215, this.field_n[var7Lifetime3]);
           var24.a(65536, 0, -101, 0);
           this.field_r = this.field_p;
           return;
         }
-        hr var23 = this.b(true).a(this.field_g.d(3), this.field_g.e(param0 ^ 12442), (byte) 100, this.field_g.P(0));
+        hr var23 = this.b(true).a(this.field_g.getX(3), this.field_g.getY(param0 ^ 12442), (byte) 100, this.field_g.P(0));
         var23.a(false, 8388608, 0, 8388608, this.field_s);
         var23.a(0, 16777215, this.field_n[var7Lifetime3]);
         var23.a(65536, 0, -101, 0);

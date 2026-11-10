@@ -4,11 +4,11 @@
 final class je extends haa {
     int field_G;
     int field_K;
-    static nh field_E;
+    static ToolkitSprite field_E;
     int field_H;
     Object[] field_I;
     private rla field_J;
-    private il field_F;
+    private BitmapFont field_F;
 
     final void a(int param0, int param1, int param2, int param3) {
         int var8 = 0;
@@ -20,7 +20,7 @@ final class je extends haa {
         }
         int var5 = param0 + this.field_i;
         int var6 = param1 + this.field_n;
-        bea.e(var5, var6, this.field_m, this.field_p, param2);
+        SoftwareRasterizer.e(var5, var6, this.field_m, this.field_p, param2);
         int var7 = this.field_G;
         if (this.field_H != -1) {
           var7 = this.field_H;
@@ -30,7 +30,7 @@ final class je extends haa {
             var9 = this.field_I[var8];
             var10 = var9.toString();
             if (var7 == var8) {
-              bea.c(2 + var5, 4 + var6, -4 + this.field_m, this.field_K, 2188450, 128);
+              SoftwareRasterizer.c(2 + var5, 4 + var6, -4 + this.field_m, this.field_K, 2188450, 128);
             }
             var6 = var6 + this.field_K;
             this.field_F.c(var10, var5 + 2, var6, 10000536, -1);
@@ -148,7 +148,7 @@ final class je extends haa {
         }
     }
 
-    je(rla param0, il param1, Object[] param2, int param3) {
+    je(rla param0, BitmapFont param1, Object[] param2, int param3) {
         super(param0);
         try {
           this.field_F = param1;

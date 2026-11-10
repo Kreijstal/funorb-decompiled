@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class il extends DualLinkNode {
+abstract class BitmapFont extends DualLinkNode {
     private rka[] field_l;
     private int[] field_I;
     private int[] field_u;
@@ -125,7 +125,7 @@ abstract class il extends DualLinkNode {
         this.b(param0, param1 - this.b(param0) / 2, param2);
     }
 
-    final static String c(String param0) {
+    final static String escapeMarkup(String param0) {
         int var3_int = 0;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
@@ -282,7 +282,7 @@ abstract class il extends DualLinkNode {
               for (var8Lifetime2 = 0; var8Lifetime2 < 256; var8Lifetime2++) {
                 if (var8Lifetime2 != 32 &&
                   var8Lifetime2 != 160) {
-                  this.field_F[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)il.a(var15, var16, var17, this.field_B, var14, var7Lifetime2, var8Lifetime2);
+                  this.field_F[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)BitmapFont.a(var15, var16, var17, this.field_B, var14, var7Lifetime2, var8Lifetime2);
                 }
               }
             }
@@ -535,10 +535,10 @@ abstract class il extends DualLinkNode {
               }
               param1 = param1 + this.field_B[var8];
               if (field_o != -1) {
-                bea.c(var11, param2 + (int)((double)this.field_m * 0.7), param1 - var11, field_o);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + (int)((double)this.field_m * 0.7), param1 - var11, field_o);
               }
               if (field_q != -1) {
-                bea.c(var11, param2 + this.field_m + 1, param1 - var11, field_q);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + this.field_m + 1, param1 - var11, field_q);
               }
               var5 = var8;
             }
@@ -929,7 +929,7 @@ abstract class il extends DualLinkNode {
         this.b(param0, param1 - this.b(param0) / 2, param2);
     }
 
-    final static String a(il param0, String param1, int param2) {
+    final static String a(BitmapFont param0, String param1, int param2) {
         int var6 = 0;
         int var3;
         int var4;
@@ -960,7 +960,7 @@ abstract class il extends DualLinkNode {
         return this.field_w + var5 + this.field_k;
     }
 
-    il(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4) {
+    BitmapFont(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4) {
         int var8 = 0;
         int var6;
         int var7;

@@ -61,8 +61,8 @@ final class FleeLocomotor extends Locomotor {
           return;
         }
         var3 = -103 / ((-69 - param0) / 42);
-        this.field_s.field_f = var14.d(3);
-        this.field_s.field_d = var14.e(9648);
+        this.field_s.field_f = var14.getX(3);
+        this.field_s.field_d = var14.getY(9648);
         this.field_n.a(this.field_s, 117);
         var4 = this.field_s.field_f - this.field_n.s(25745);
         var5 = this.field_s.field_d - this.field_n.e(false);
@@ -214,7 +214,7 @@ final class FleeLocomotor extends Locomotor {
         this.field_s = new ir();
         try {
           this.field_t = param1.readBits((byte) 44, 10) << 16;
-          if (7 < param0.field_E) {
+          if (7 < param0.formatVersion) {
             this.field_v = param1.readBits((byte) 44, 10) << 16;
             this.field_A = this.a(param1.readBits((byte) 44, 8), false);
             stackIn_6_1 = (param1.readBits((byte) 44, 1) == 1);

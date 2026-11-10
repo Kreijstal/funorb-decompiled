@@ -7,7 +7,7 @@ final class gg {
     eja field_c;
     eja field_d;
     static AudioOutput field_b;
-    static nh field_f;
+    static ToolkitSprite field_f;
     static IntrusiveDeque field_e;
 
     final void a(int param0) {

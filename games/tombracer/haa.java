@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class haa extends rj {
-    static nh field_z;
+    static ToolkitSprite field_z;
     static jpa field_A;
     private ae field_B;
     static int[][] field_C;

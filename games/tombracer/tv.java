@@ -6,7 +6,7 @@ final class tv extends jea {
     jea field_vb;
     static String field_ub;
     static String field_xb;
-    static nh field_wb;
+    static ToolkitSprite field_wb;
 
     tv(long param0, jea param1, jea param2, jea param3, Sprite param4, String param5) {
         super(param0, param1);

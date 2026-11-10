@@ -125,15 +125,15 @@ final class ts {
         if (param0 != -115) {
           return (PlayerSimulation) null;
         }
-        return this.field_c.a(-1553494544);
+        return this.field_c.getSimulation(-1553494544);
     }
 
     private final void a(boolean param0, byte param1) {
         if (this.field_f != null) {
           this.b(false);
         }
-        int var3 = this.field_c.m((byte) -86) >> 16;
-        int var4 = this.field_c.s(param1 ^ -107) >> 16;
+        int var3 = this.field_c.getWidth((byte) -86) >> 16;
+        int var4 = this.field_c.getHeight(param1 ^ -107) >> 16;
         this.field_f = new Trap[1];
         this.field_f[0] = new Trap(this.field_c, var3 / 2, var4 / 2, var3 + 32, var4 + 32, 0, true);
         DarknessBehaviour var5 = new DarknessBehaviour(this.field_c, true);
@@ -186,8 +186,8 @@ final class ts {
         if (null != this.field_e) {
           this.a(-93);
         }
-        var5 = this.field_c.m((byte) -86);
-        var6 = this.field_c.s(param2 ^ -29);
+        var5 = this.field_c.getWidth((byte) -86);
+        var6 = this.field_c.getHeight(param2 ^ -29);
         if (param2 != -127) {
           this.field_d = (Trap[]) null;
         }
@@ -213,7 +213,7 @@ final class ts {
               } else {
                 stackIn_35_6 = -(32 * var11) + (var9 - 16);
               }
-              if (((Room) (Object) stackIn_34_0).a((ffa) (stackIn_34_1), stackIn_34_2, stackIn_34_3, stackIn_34_4, stackIn_34_5, stackIn_35_6 << 16, false, (gma) null, 2097152)) {
+              if (((Room) (Object) stackIn_34_0).a((ffa) (stackIn_34_1), stackIn_34_2, stackIn_34_3, stackIn_34_4, stackIn_34_5, stackIn_35_6 << 16, false, (WorldBody) null, 2097152)) {
                 continue;
               }
               var12 = 1;
@@ -258,7 +258,7 @@ final class ts {
               } else {
                 stackIn_15_5 = var11 * 32 + 16;
               }
-              if (((Room) (Object) stackIn_14_0).a((ffa) (stackIn_14_1), stackIn_14_2, stackIn_14_3, stackIn_14_4, stackIn_15_5 << 16, 16 + 32 * var13 << 16, false, (gma) null, 2097152)) {
+              if (((Room) (Object) stackIn_14_0).a((ffa) (stackIn_14_1), stackIn_14_2, stackIn_14_3, stackIn_14_4, stackIn_15_5 << 16, 16 + 32 * var13 << 16, false, (WorldBody) null, 2097152)) {
                 continue;
               }
               var12 = 1;
@@ -358,12 +358,12 @@ final class ts {
         if (null != this.field_d) {
           this.a(false);
         }
-        var3 = this.field_c.m((byte) -86);
-        var4 = this.field_c.s(125);
+        var3 = this.field_c.getWidth((byte) -86);
+        var4 = this.field_c.getHeight(125);
         this.field_d = new Trap[param1];
         var5 = vha.field_c.createSkeletonComponent(this.field_c, (byte) 118);
-        var6 = var5.c(-41);
-        var7 = var5.a((byte) 55);
+        var6 = var5.getWidth(-41);
+        var7 = var5.getHeight((byte) 55);
         var8 = 0;
         if (param0 != 82) {
           return;
@@ -376,12 +376,12 @@ final class ts {
               var8++;
               var12 = var6 / 2 + this.field_c.q(param0 - 41).a(var3 - var6, 0);
               var13 = this.field_c.q(param0 - 195).a(var4 - var7, 0) + var7 / 2;
-              var14 = -var12 + this.field_c.u(-53).d(3) >> 16;
-              var15 = -var13 + this.field_c.u(-79).e(param0 ^ 9698) >> 16;
+              var14 = -var12 + this.field_c.getPlayer(-53).getX(3) >> 16;
+              var15 = -var13 + this.field_c.getPlayer(-79).getY(param0 ^ 9698) >> 16;
               if (4096 > var15 * var15 + var14 * var14) {
                 continue;
               }
-              stackIn_17_0 = (!this.field_c.a((ffa) null, var7, 2, 1, var13, var12, false, (gma) null, var6)) ? 0 : 1;
+              stackIn_17_0 = (!this.field_c.a((ffa) null, var7, 2, 1, var13, var12, false, (WorldBody) null, var6)) ? 0 : 1;
               var11 = stackIn_17_0;
               if (var11 != 0) {
                 continue;

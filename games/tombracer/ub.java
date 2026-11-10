@@ -46,8 +46,8 @@ final class ub {
           ol.field_b = null;
           ii.field_a = 0;
           tba.field_k = param0;
-          fla.field_f.d(8);
-          wv.field_l.d(8);
+          fla.field_f.clear(8);
+          wv.field_l.clear(8);
           var1 = TrackPlayerLocomotor.field_s.b(16);
           while (var1 != null) {
             var1.unlinkSecondary(-7975);

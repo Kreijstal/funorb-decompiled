@@ -90,7 +90,7 @@ abstract class SwitchComponent extends kna {
     SwitchComponent(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
         try {
-          this.field_G = new f(this.B(31609), 0, param0.field_E, param2);
+          this.field_G = new f(this.B(31609), 0, param0.formatVersion, param2);
           if (this.r((byte) 93)) {
             this.field_I = param2.readBits((byte) 44, 1) == 1 ? true : false;
           }

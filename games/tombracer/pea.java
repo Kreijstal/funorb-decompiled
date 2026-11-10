@@ -15,8 +15,8 @@ final class pea {
           field_c = null;
           return;
         }
-        qia var2 = (qia) null;
-        pea.a((qia) null, -115);
+        PcmSampleStream var2 = (PcmSampleStream) null;
+        pea.a((PcmSampleStream) null, -115);
         field_f = null;
         field_c = null;
     }
@@ -33,7 +33,7 @@ final class pea {
         return var4;
     }
 
-    final static vb a(qia param0, int param1) {
+    final static vb a(PcmSampleStream param0, int param1) {
         vb var2 = null;
         RuntimeException var2_ref = null;
         vb stackIn_3_0 = null;
@@ -43,7 +43,7 @@ final class pea {
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = new vb(param0, param0);
-          DivisionMazeGenerator.field_e.b((byte) -68, var2);
+          DivisionMazeGenerator.field_e.addLast((byte) -68, var2);
           if (param1 != 1) {
             pea.a((byte) -106);
           }

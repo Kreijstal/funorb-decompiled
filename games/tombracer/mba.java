@@ -11,9 +11,9 @@ final class mba extends uq {
     private int field_l;
     private int field_n;
 
-    public final int c(byte param0) {
+    public final int getRenderY(byte param0) {
         if (param0 < 91) {
-          this.e((byte) -93);
+          this.getRenderZ((byte) -93);
           return this.field_e.a(true);
         }
         return this.field_e.a(true);
@@ -25,7 +25,7 @@ final class mba extends uq {
           this.field_m = 12;
           this.field_m = this.field_m + (2 + this.h(16094)) % 4;
           if (param0 <= 125) {
-            this.c((byte) -70);
+            this.getRenderY((byte) -70);
             return;
           }
           return;
@@ -35,7 +35,7 @@ final class mba extends uq {
             this.field_m = 0;
             this.field_m = this.field_m + (2 + this.h(16094)) % 4;
             if (param0 <= 125) {
-              this.c((byte) -70);
+              this.getRenderY((byte) -70);
               return;
             }
             return;
@@ -45,7 +45,7 @@ final class mba extends uq {
           if (param0 > 125) {
             return;
           }
-          this.c((byte) -70);
+          this.getRenderY((byte) -70);
           return;
         }
         this.field_m = 8;
@@ -53,7 +53,7 @@ final class mba extends uq {
         if (param0 > 125) {
           return;
         }
-        this.c((byte) -70);
+        this.getRenderY((byte) -70);
     }
 
     final void g(byte param0) {
@@ -160,7 +160,7 @@ final class mba extends uq {
         return this.field_e.c((byte) 102) % 2 + 2 * (this.field_e.f(-77) % 2);
     }
 
-    public final void a(int param0, iq param1) {
+    public final void render(int param0, iq param1) {
         RuntimeException stackIn_37_0 = null;
         StringBuilder stackIn_37_1 = null;
         String stackIn_38_2 = null;
@@ -182,7 +182,7 @@ final class mba extends uq {
           var4 = this.field_e.f(111);
           var5 = this.field_e.a(18641).c(31);
           if (param0 < 103) {
-            this.c((byte) 39);
+            this.getRenderY((byte) 39);
           }
           var6 = 4;
           var7 = var5 - 5;
@@ -257,7 +257,7 @@ final class mba extends uq {
         }
     }
 
-    public final int e(byte param0) {
+    public final int getRenderZ(byte param0) {
         if (param0 >= -86) {
           this.field_h = -55;
           return 0;
@@ -265,7 +265,7 @@ final class mba extends uq {
         return 0;
     }
 
-    public final int b(byte param0) {
+    public final int getRenderX(byte param0) {
         int var2 = -111 % ((-23 - param0) / 53);
         return this.field_e.a((byte) -104);
     }

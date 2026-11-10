@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class Player implements fo, gma, ffa, jfa, t {
+final class Player implements Renderable, WorldBody, ffa, jfa, t {
     private ac field_u;
     private int field_c;
-    private int field_G;
+    private int size;
     private int field_lb;
     private int velocityX;
     private int y;
@@ -14,7 +14,7 @@ final class Player implements fo, gma, ffa, jfa, t {
     static fta field_p;
     private int field_r;
     private int field_M;
-    private Room field_J;
+    private Room room;
     private int velocityY;
     private int field_Q;
     private IntrusiveDeque field_fb;
@@ -27,9 +27,9 @@ final class Player implements fo, gma, ffa, jfa, t {
     private int field_t;
     private IntrusiveDeque field_v;
     private boolean field_q;
-    private int field_X;
+    private int previousX;
     private boolean[] field_C;
-    private int field_k;
+    private int previousY;
     private int field_m;
     private boolean field_L;
     private boolean field_l;
@@ -47,10 +47,10 @@ final class Player implements fo, gma, ffa, jfa, t {
     private int field_kb;
     private boolean field_o;
     private boolean field_V;
-    private gma field_g;
+    private WorldBody field_g;
     private int field_T;
     private int field_y;
-    private gma field_eb;
+    private WorldBody field_eb;
     private int field_F;
     private int field_n;
     private int field_e;
@@ -88,14 +88,14 @@ final class Player implements fo, gma, ffa, jfa, t {
     public final void f(int param0) {
         try {
           if (param0 != -4366) {
-            this.b(103, (gma) null);
+            this.b(103, (WorldBody) null);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hca.N(" + param0 + ')');
         }
     }
 
-    public final void a(int param0, iq param1) {
+    public final void render(int param0, iq param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -108,7 +108,7 @@ final class Player implements fo, gma, ffa, jfa, t {
           if (null == this.field_u) {
             return;
           }
-          this.field_u.a(106, param1);
+          this.field_u.render(106, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -170,7 +170,7 @@ final class Player implements fo, gma, ffa, jfa, t {
         RuntimeException var2 = null;
         try {
           if (param0 != 31027) {
-            this.b(-101, (gma) null);
+            this.b(-101, (WorldBody) null);
           }
           this.field_A = 25;
           return;
@@ -220,12 +220,12 @@ final class Player implements fo, gma, ffa, jfa, t {
                 return;
               }
             }
-            if (this.field_J.g((byte) 104)) {
+            if (this.room.g((byte) 104)) {
               this.a(60, (byte) 2);
             }
             return;
           }
-          this.o((byte) 120);
+          this.savePreviousPosition((byte) 120);
           this.field_jb.a(86);
           if (param0 != 5) {
             return;
@@ -249,7 +249,7 @@ final class Player implements fo, gma, ffa, jfa, t {
                 continue;
               }
             } else {
-              var3 = (wf) (this.field_fb.f(-80));
+              var3 = (wf) (this.field_fb.first(-80));
               while (true) {
                 if (null != var3) {
                   var3.c(-9);
@@ -260,7 +260,7 @@ final class Player implements fo, gma, ffa, jfa, t {
                     } else {
                       var3.unlink(param0 ^ 93);
                     }
-                    var3 = (wf) (this.field_fb.e(117));
+                    var3 = (wf) (this.field_fb.next(117));
                     continue;
                   }
                 } else {
@@ -291,12 +291,12 @@ final class Player implements fo, gma, ffa, jfa, t {
           boolean decompiledFrameRemainder0 = true;
           if (var3_int == 0) {
             this.c((byte) 111, param1);
-            if (this.field_J.a(0, (gma) (this)) != 1) {
+            if (this.room.a(0, (WorldBody) (this)) != 1) {
             }
           } else {
             if (var3_int == 1 &&
               var4 == 0) {
-              this.field_J.a(0, (gma) (this));
+              this.room.a(0, (WorldBody) (this));
               if (4 != this.field_r) {
                 this.velocityY = 0;
                 this.velocityX = 0;
@@ -306,7 +306,7 @@ final class Player implements fo, gma, ffa, jfa, t {
                   this.field_O = this.field_O - 16384;
                   if (this.field_w <= -17825792) {
                     if (this.field_T == 6) {
-                      var3_ref = this.field_J.a(this.x, this.y, (byte) 100, -17825792);
+                      var3_ref = this.room.a(this.x, this.y, (byte) 100, -17825792);
                       var3_ref.a(false, 32, 4, 16, 5 + uca.field_c.a(5, 0));
                       var3_ref.b(param0 + 99, 0, 0);
                       var3_ref.a(uca.field_c.a(8192, param0 ^ 5), -32 + uca.field_c.a(64, param0 - 5), -125);
@@ -319,10 +319,10 @@ final class Player implements fo, gma, ffa, jfa, t {
               if (!(this.field_M > 0)) {
                 if (this.field_T != 5 &&
                   this.field_T != 6 &&
-                  this.field_J.a(this.field_G, this.field_G, (gma) (this), this.x, this.y, (byte) -126) == 0) {
-                  this.field_J.a(8, this.o(-94));
+                  this.room.a(this.size, this.size, (WorldBody) (this), this.x, this.y, (byte) -126) == 0) {
+                  this.room.a(8, this.o(-94));
                 }
-                this.field_J.i((byte) -124);
+                this.room.i((byte) -124);
               }
               decompiledFrameRemainder0 = false;
             }
@@ -338,8 +338,8 @@ final class Player implements fo, gma, ffa, jfa, t {
                   this.field_lb = 0;
                   this.field_c = 40;
                 }
-                this.field_J.field_u.a((ffa) (this), -46);
-                this.field_J.field_u.b((ffa) (this), 7073);
+                this.room.field_u.a((ffa) (this), -46);
+                this.room.field_u.b((ffa) (this), 7073);
                 decompiledFrameRemainder0 = false;
               } else {
                 decompiledFrameRemainder0 = (var3_int == 3);
@@ -539,14 +539,14 @@ final class Player implements fo, gma, ffa, jfa, t {
 
     final void g(int param0, int param1) {
         try {
-          this.field_J.a(this.y, this.x, param0, 0, (byte) 6);
+          this.room.a(this.y, this.x, param0, 0, (byte) 6);
           int var3_int = 35 % ((57 - param1) / 47);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hca.W(" + param0 + ',' + param1 + ')');
         }
     }
 
-    private final boolean a(gma param0, int param1, int param2) {
+    private final boolean a(WorldBody param0, int param1, int param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -596,7 +596,7 @@ final class Player implements fo, gma, ffa, jfa, t {
         }
     }
 
-    public final int c(byte param0) {
+    public final int getRenderY(byte param0) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -727,7 +727,7 @@ final class Player implements fo, gma, ffa, jfa, t {
             stackIn_7_0 = 1;
             return stackIn_7_0;
           }
-          if (eha.a(this.field_G, param1, this.y, this.field_G, param2, this.x, 2) == -1) {
+          if (eha.a(this.size, param1, this.y, this.size, param2, this.x, 2) == -1) {
             stackIn_12_0 = 0;
             return stackIn_12_0;
           }
@@ -860,7 +860,7 @@ final class Player implements fo, gma, ffa, jfa, t {
           if (this.field_lb != 3) {
             this.field_lb = 3;
             this.field_M = param0;
-            this.field_F = this.field_J.p((byte) 18) + param0;
+            this.field_F = this.room.p((byte) 18) + param0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -895,9 +895,9 @@ final class Player implements fo, gma, ffa, jfa, t {
             }
             boolean decompiledFrameRemainder0 = true;
             this.C(-1).a(this, param0, 1, param2);
-            this.field_J.field_u.a((ffa) (this), (byte) 107);
+            this.room.field_u.a((ffa) (this), (byte) 107);
             if (4 == param0) {
-              var4 = this.field_J.j((byte) 52);
+              var4 = this.room.j((byte) 52);
               if (null != var4 &&
                 this.field_u != null) {
                 var4.a(7, this.field_u, (byte) -33);
@@ -934,7 +934,7 @@ final class Player implements fo, gma, ffa, jfa, t {
                           this.a(-5636, 17, true);
                           this.a(-5636, 16, true);
                           this.a(-5636, 13, true);
-                          this.field_J.b(false).a((byte) 61, 2097152 + this.g((byte) 115), this.x, this.y);
+                          this.room.b(false).a((byte) 61, 2097152 + this.g((byte) 115), this.x, this.y);
                         }
                       }
                     }} else {
@@ -942,19 +942,19 @@ final class Player implements fo, gma, ffa, jfa, t {
                     if (var5 != 0) {
                       this.a(-5636, 16, true);
                       this.a(-5636, 13, true);
-                      this.field_J.b(false).a((byte) 61, 2097152 + this.g((byte) 115), this.x, this.y);
+                      this.room.b(false).a((byte) 61, 2097152 + this.g((byte) 115), this.x, this.y);
                     }
                   }
                 } else {
                   this.a(-5636, 16, true);
                   if (var5 != 0) {
                     this.a(-5636, 13, true);
-                    this.field_J.b(false).a((byte) 61, 2097152 + this.g((byte) 115), this.x, this.y);
+                    this.room.b(false).a((byte) 61, 2097152 + this.g((byte) 115), this.x, this.y);
                   }
                 }
               } else {
                 this.a(-5636, 13, true);
-                this.field_J.b(false).a((byte) 61, 2097152 + this.g((byte) 115), this.x, this.y);
+                this.room.b(false).a((byte) 61, 2097152 + this.g((byte) 115), this.x, this.y);
               }
             }
             this.p(30358);
@@ -981,8 +981,8 @@ final class Player implements fo, gma, ffa, jfa, t {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          boolean decompiledSharedTail0 = (this.field_J != null &&
-            !(this.field_J.o((byte) -82)));
+          boolean decompiledSharedTail0 = (this.room != null &&
+            !(this.room.o((byte) -82)));
           if (!decompiledSharedTail0) {
             this.field_lb = 0;
             this.x = this.field_e;
@@ -1018,7 +1018,7 @@ final class Player implements fo, gma, ffa, jfa, t {
           this.field_L = false;
           this.field_Y = 0;
           this.v((byte) 74);
-          this.o((byte) 116);
+          this.savePreviousPosition((byte) 116);
           this.field_jb.b((byte) 93);
           this.field_B = 0;
           this.field_eb = null;
@@ -1026,7 +1026,7 @@ final class Player implements fo, gma, ffa, jfa, t {
           this.field_w = 0;
           this.field_g = null;
           if (param1) {
-            this.field_fb.d(8);
+            this.field_fb.clear(8);
             this.b((byte) 89, 10);
             this.m(15876);
             this.field_o = false;
@@ -1039,7 +1039,7 @@ final class Player implements fo, gma, ffa, jfa, t {
         }
     }
 
-    public final int b(byte param0) {
+    public final int getRenderX(byte param0) {
         int stackIn_1_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
@@ -1063,7 +1063,7 @@ final class Player implements fo, gma, ffa, jfa, t {
           if (param0 > -95) {
             this.I(-94);
           }
-          stackIn_4_0 = this.field_J.c(81);
+          stackIn_4_0 = this.room.c(81);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1119,31 +1119,31 @@ final class Player implements fo, gma, ffa, jfa, t {
             stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
-          var6 = bea.field_l;
-          var7 = bea.field_g;
-          var8 = bea.field_a;
+          var6 = SoftwareRasterizer.field_l;
+          var7 = SoftwareRasterizer.field_g;
+          var8 = SoftwareRasterizer.field_a;
           var9 = new Sprite(param2, -(param2 * 2) + param0);
           var9.c();
-          bea.b(0, 0, param2, -(param2 * 2) + param0, param3, param5);
+          SoftwareRasterizer.b(0, 0, param2, -(param2 * 2) + param0, param3, param5);
           var10 = new Sprite(param2, param2);
           var10.c();
-          bea.e(0, 0, param2, param2, param3);
+          SoftwareRasterizer.e(0, 0, param2, param2, param3);
           var11 = new Sprite(16, param2);
           var11.c();
-          bea.e(0, 0, 16, param2, param3);
+          SoftwareRasterizer.e(0, 0, 16, param2, param3);
           var12 = new Sprite(param2, param2);
           var12.c();
-          bea.e(0, 0, param2, param2, param5);
+          SoftwareRasterizer.e(0, 0, param2, param2, param5);
           var13 = new Sprite(16, param2);
           var13.c();
-          bea.e(0, 0, 16, param2, param5);
+          SoftwareRasterizer.e(0, 0, 16, param2, param5);
           var14 = null;
           if (param1 > 0) {
             var14 = new Sprite(16, 16);
             ((Sprite) (var14)).c();
-            bea.e(0, 0, 16, 16, param1);
+            SoftwareRasterizer.e(0, 0, 16, 16, param1);
           }
-          bea.a(var6, var7, var8);
+          SoftwareRasterizer.a(var6, var7, var8);
           stackIn_8_0 = new Sprite[]{var10, var11, var10, var9, (Sprite) (var14), var9, var12, var13, var12};
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1159,7 +1159,7 @@ final class Player implements fo, gma, ffa, jfa, t {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 110) {
-            stackIn_4_0 = io.a(param4, this.y, (byte) -118, param3, this.x, param1, this.field_G, this.field_G, param2);
+            stackIn_4_0 = io.a(param4, this.y, (byte) -118, param3, this.x, param1, this.size, this.size, param2);
             return stackIn_4_0;
           }
           return false;
@@ -1203,7 +1203,7 @@ final class Player implements fo, gma, ffa, jfa, t {
         }
     }
 
-    public final int k(int param0) {
+    public final int getPreviousY(int param0) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -1211,7 +1211,7 @@ final class Player implements fo, gma, ffa, jfa, t {
           if (param0 != -21185) {
             this.field_D = (int[]) null;
           }
-          stackIn_4_0 = this.field_k;
+          stackIn_4_0 = this.previousY;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1232,7 +1232,7 @@ final class Player implements fo, gma, ffa, jfa, t {
           if (!this.x(param0 ^ -30382)) {
             return;
           }
-          var2 = new Trap(this.field_J, true);
+          var2 = new Trap(this.room, true);
           var2.b(437453352, this.y, this.x);
           if (param0 != 30358) {
             this.field_S = -25;
@@ -1242,7 +1242,7 @@ final class Player implements fo, gma, ffa, jfa, t {
           var2.b((byte) 17, false);
           var2.a((byte) -3, this.field_f);
           var2.a(92, true);
-          var3 = new MiscItemBehaviour(this.field_J, true);
+          var3 = new MiscItemBehaviour(this.room, true);
           var4 = this.field_a;
           if (0 == var4 &&
             var5 == 0) {
@@ -1259,7 +1259,7 @@ final class Player implements fo, gma, ffa, jfa, t {
           var2.a((byte) 83, (Behaviour) (var3));
           var2.c(437453352, true);
           var2.e(true, param0 ^ 30447);
-          this.field_J.a(var2, (byte) 32);
+          this.room.a(var2, (byte) 32);
           this.J(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1284,10 +1284,10 @@ final class Player implements fo, gma, ffa, jfa, t {
         }
     }
 
-    private final void o(byte param0) {
+    private final void savePreviousPosition(byte param0) {
         try {
-          this.field_X = this.x;
-          this.field_k = this.y;
+          this.previousX = this.x;
+          this.previousY = this.y;
           int var2_int = 103 % ((-7 - param0) / 44);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hca.JE(" + param0 + ')');
@@ -1359,7 +1359,7 @@ final class Player implements fo, gma, ffa, jfa, t {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          this.x = this.field_J.a(this.x, (byte) 71);
+          this.x = this.room.a(this.x, (byte) 71);
           this.field_b = -this.field_b;
           if (param0 != -57) {
             this.a((wf) null, (byte) -39);
@@ -1514,7 +1514,7 @@ final class Player implements fo, gma, ffa, jfa, t {
           if (!this.x(93) &&
             param0) {
             this.field_eb = null;
-            var3_int = 1048576 + this.field_G / 2;
+            var3_int = 1048576 + this.size / 2;
             if (!param1) {
               this.field_cb = 60;
             }
@@ -1551,7 +1551,7 @@ final class Player implements fo, gma, ffa, jfa, t {
                   if (stackIn_31_0 >= ~var10) {
                     break scanLoop2;
                   }
-                  var11 = this.field_J.field_u.b(var8[var10][1], -1, var8[var10][0], 2, 2);
+                  var11 = this.room.field_u.b(var8[var10][1], -1, var8[var10][0], 2, 2);
                   var12 = var11;
                   if (var20 != 0) {
                     break regionExit1;
@@ -1566,26 +1566,26 @@ final class Player implements fo, gma, ffa, jfa, t {
                       var15 = (Trap) (var14);
                       if (var15.s((byte) -114) &&
                         var15.a((byte) 110, var8[var10][1], var8[var10][0], 2, 2)) {
-                        this.field_eb = (gma) ((Object) var14);
-                        var16 = this.field_eb.d(3);
-                        var17 = this.field_eb.e(9648);
+                        this.field_eb = (WorldBody) ((Object) var14);
+                        var16 = this.field_eb.getX(3);
+                        var17 = this.field_eb.getY(9648);
                         var18 = -this.x + var16;
                         var19 = -this.y + var17;
                         if (((var18 >> 8) * (var18 >> 8)) <= ((var19 >> 8) * (var19 >> 8))) {
                           if (var19 < 0) {
-                            var19 = var19 + (this.field_G + this.field_eb.a((byte) 55) >> 1);
+                            var19 = var19 + (this.size + this.field_eb.getHeight((byte) 55) >> 1);
                           } else {
                             if (var19 > 0) {
-                              var19 = var19 - (this.field_G + this.field_eb.a((byte) 55) >> 1);
+                              var19 = var19 - (this.size + this.field_eb.getHeight((byte) 55) >> 1);
                             }
                           }
                           this.y = this.y + var19;
                         } else {
                           if (var18 < 0) {
-                            var18 = var18 + (this.field_G + this.field_eb.c(-114) >> 1);
+                            var18 = var18 + (this.size + this.field_eb.getWidth(-114) >> 1);
                           } else {
                             if (var18 > 0) {
-                              var18 = var18 - (this.field_G + this.field_eb.c(-110) >> 1);
+                              var18 = var18 - (this.size + this.field_eb.getWidth(-110) >> 1);
                             }
                           }
                           this.x = this.x + var18;
@@ -1633,7 +1633,7 @@ final class Player implements fo, gma, ffa, jfa, t {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -1) {
-            this.b(24, (gma) null);
+            this.b(24, (WorldBody) null);
           }
           var7_int = param5 * 393216 * param1;
           var8 = param5 * (393216 * param2);
@@ -1641,12 +1641,12 @@ final class Player implements fo, gma, ffa, jfa, t {
           var10 = 786432 * param4;
           var11 = var9 / 2 + (var7_int + this.x);
           var12 = var10 / 2 + (var8 + this.y);
-          var13 = this.field_G + ua.a(var9, -113);
-          var14 = this.field_G + ua.a(var10, 67);
-          if (!this.field_J.a(var11, 131072, var13, var14, var12, true)) {
+          var13 = this.size + ua.a(var9, -113);
+          var14 = this.size + ua.a(var10, 67);
+          if (!this.room.a(var11, 131072, var13, var14, var12, true)) {
             return false;
           }
-          if (this.field_J.a((ffa) (this), var14, param0 ^ -3, 1, var12, var11, false, (gma) (this), var13)) {
+          if (this.room.a((ffa) (this), var14, param0 ^ -3, 1, var12, var11, false, (WorldBody) (this), var13)) {
             return false;
           }
           this.a(131072 * param2, param0 + 128, 131072 * param1, 0, 0);
@@ -1682,7 +1682,7 @@ final class Player implements fo, gma, ffa, jfa, t {
         int stackIn_11_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_J == null) {
+          if (this.room == null) {
             stackIn_2_0 = 0;
             return stackIn_2_0;
           }
@@ -1693,7 +1693,7 @@ final class Player implements fo, gma, ffa, jfa, t {
           if (param0) {
             this.field_T = 52;
           }
-          stackIn_11_0 = this.field_J.a((ffa) (this), (gma) (this), 1, this.field_G, param1, 12, this.field_G, this.x, param3, param4, this.y, param2, true);
+          stackIn_11_0 = this.room.a((ffa) (this), (WorldBody) (this), 1, this.size, param1, 12, this.size, this.x, param3, param4, this.y, param2, true);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1773,9 +1773,9 @@ final class Player implements fo, gma, ffa, jfa, t {
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           if (!param0.a((byte) -60, this)) {
-            this.field_fb.b((byte) -123, param0);
-            while (!(3 >= this.field_fb.a((byte) -16))) {
-              this.field_fb.c(param1 ^ -106);
+            this.field_fb.addLast((byte) -123, param0);
+            while (!(3 >= this.field_fb.size((byte) -16))) {
+              this.field_fb.removeFirst(param1 ^ -106);
               if (var4 != 0) {
                 return;
               }
@@ -1818,7 +1818,7 @@ final class Player implements fo, gma, ffa, jfa, t {
         }
     }
 
-    private final void b(int param0, gma param1) {
+    private final void b(int param0, WorldBody param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -1832,8 +1832,8 @@ final class Player implements fo, gma, ffa, jfa, t {
           if (param0 != 0) {
             this.a((byte) 121, 43, -99);
           }
-          var3_int = param1.d(3);
-          var4 = param1.e(9648);
+          var3_int = param1.getX(3);
+          var4 = param1.getY(9648);
           var5 = this.x - var3_int;
           var6 = -var4 + this.y;
           this.c(var6, param0 ^ -58, var5);
@@ -1887,7 +1887,7 @@ final class Player implements fo, gma, ffa, jfa, t {
         }
     }
 
-    public final int i(int param0) {
+    public final int getPreviousX(int param0) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -1895,7 +1895,7 @@ final class Player implements fo, gma, ffa, jfa, t {
           if (param0 <= 90) {
             this.q(127);
           }
-          stackIn_4_0 = this.field_X;
+          stackIn_4_0 = this.previousX;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1908,13 +1908,13 @@ final class Player implements fo, gma, ffa, jfa, t {
         if (param0 != 74) {
           this.field_y = -19;
         }
-        if (this.field_J == null) {
+        if (this.room == null) {
           return;
         }
         try {
-          za.$cfr$intArgs$a$c604db63f465(0, 108, this.field_J.m((byte) -86), this.x);
-          this.field_J.o(param0 - 66);
-          this.field_m = za.$cfr$intArgs$a$c604db63f465(0, 73, this.field_J.s(120), this.y) + this.field_J.n((byte) -51);
+          za.$cfr$intArgs$a$c604db63f465(0, 108, this.room.getWidth((byte) -86), this.x);
+          this.room.o(param0 - 66);
+          this.field_m = za.$cfr$intArgs$a$c604db63f465(0, 73, this.room.getHeight(120), this.y) + this.room.n((byte) -51);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hca.TB(" + param0 + ')');
         }
@@ -1934,7 +1934,7 @@ final class Player implements fo, gma, ffa, jfa, t {
           this.field_P[param2] = this.field_P[param2] + 1;
           if (null != param0 &&
             param2 != 0) {
-            this.field_v.b((byte) -118, new vl(param2, param0));
+            this.field_v.addLast((byte) -118, new vl(param2, param0));
           }
           this.C(-1).m(9262).a(param2, 15818, this, param0);
           return;
@@ -2086,8 +2086,8 @@ final class Player implements fo, gma, ffa, jfa, t {
           var19 = stackIn_87_0;
           if (var9 == 0) {
             if (this.field_eb != null) {
-              if (this.field_eb.c(-117) > 2097152 &&
-                this.field_eb.a((byte) 55) > 2097152) {
+              if (this.field_eb.getWidth(-117) > 2097152 &&
+                this.field_eb.getHeight((byte) 55) > 2097152) {
                 stackIn_100_0 = 1;
               } else {
                 stackIn_100_0 = 0;
@@ -2120,8 +2120,8 @@ final class Player implements fo, gma, ffa, jfa, t {
             var16 = -1;
           }
           if (var18 != 0) {
-            if (this.field_g.c(-64) > 2097152 &&
-              2097152 < this.field_g.a((byte) 55)) {
+            if (this.field_g.getWidth(-64) > 2097152 &&
+              2097152 < this.field_g.getHeight((byte) 55)) {
               stackIn_122_0 = 1;
             } else {
               stackIn_122_0 = 0;
@@ -2178,7 +2178,7 @@ final class Player implements fo, gma, ffa, jfa, t {
               if (this.field_S <= 0) {
                 var25 = 100000;
                 var26 = 32000;
-                this.field_J.a(this.y, 0, (byte) 126, this.x, this.velocityY * 6, this.velocityX * 6);
+                this.room.a(this.y, 0, (byte) 126, this.x, this.velocityY * 6, this.velocityX * 6);
                 if (var29 != 0) {
                   this.field_gb = true;
                   var22 = 1;
@@ -2202,8 +2202,8 @@ final class Player implements fo, gma, ffa, jfa, t {
               this.C(-1).f(8, 10915)) {
               this.field_gb = true;
               var22 = 1;
-              this.velocityX = this.velocityX + (131072 - this.field_J.q(-81).a(262144, 0));
-              this.velocityY = this.velocityY + (131072 - this.field_J.q(-83).a(262144, 0));
+              this.velocityX = this.velocityX + (131072 - this.room.q(-81).a(262144, 0));
+              this.velocityY = this.velocityY + (131072 - this.room.q(-83).a(262144, 0));
             }
             var16--;
             boolean decompiledSharedTail0 = (null == this.field_g);
@@ -2215,8 +2215,8 @@ final class Player implements fo, gma, ffa, jfa, t {
               this.a(this.velocityY, this.velocityX, (byte) -103);
               if (this.field_eb == null &&
                 this.field_kb == 0 &&
-                this.field_X == this.x &&
-                ~this.field_k == ~this.y &&
+                this.previousX == this.x &&
+                ~this.previousY == ~this.y &&
                 var24 != 0) {
                 this.b((byte) 40, var20, var21);
               }
@@ -2254,8 +2254,8 @@ final class Player implements fo, gma, ffa, jfa, t {
               this.y(2);
             }
           }
-          if (this.field_X == this.x &&
-            ~this.y == ~this.field_k) {
+          if (this.previousX == this.x &&
+            ~this.y == ~this.previousY) {
             stackIn_241_0 = 0;
           } else {
             stackIn_241_0 = 1;
@@ -2270,7 +2270,7 @@ final class Player implements fo, gma, ffa, jfa, t {
           }
           boolean decompiledFrameRemainder4 = true;
           if (var22 == 0 && (var25Lifetime1 != 0 ||
-            !this.field_J.a(false, this.y, (gma) (this), this.x))) {
+            !this.room.a(false, this.y, (WorldBody) (this), this.x))) {
             stackIn_259_0 = 0;
             decompiledFrameRemainder4 = false;
           }
@@ -2281,7 +2281,7 @@ final class Player implements fo, gma, ffa, jfa, t {
           if (var24 != 0 &&
             var25Lifetime1 != 0 &&
             var23 == 0) {
-            this.field_J.a(false, this.x, 0, -this.velocityX, this.y, -this.velocityY);
+            this.room.a(false, this.x, 0, -this.velocityX, this.y, -this.velocityY);
           }
           boolean decompiledFrameRemainder0 = true;
           var26Lifetime1 = -1;
@@ -2305,7 +2305,7 @@ final class Player implements fo, gma, ffa, jfa, t {
             }
             if (this.field_ab == 0 &&
               150 < this.field_bb) {
-              if (this.field_J.q(-91).a(2, 0) == 0) {
+              if (this.room.q(-91).a(2, 0) == 0) {
                 var26Lifetime1 = 6;
                 if (var29 != 0) {
                   var26Lifetime1 = 18;
@@ -2395,10 +2395,10 @@ final class Player implements fo, gma, ffa, jfa, t {
             this.a(2, (byte) -126, 1);
           }
           if (this.field_C[0]) {
-            var28Lifetime1 = this.field_J.q(-96).a(32, 0) + 256 << 16;
-            this.field_J.a(-116, this.y, new Effect(4, 32), var28Lifetime1, var28Lifetime1, this.x);
+            var28Lifetime1 = this.room.q(-96).a(32, 0) + 256 << 16;
+            this.room.a(-116, this.y, new Effect(4, 32), var28Lifetime1, var28Lifetime1, this.x);
           }
-          if (this.field_J.g((byte) -67)) {
+          if (this.room.g((byte) -67)) {
             this.a(1, (byte) -25);
           }
           return;
@@ -2409,14 +2409,14 @@ final class Player implements fo, gma, ffa, jfa, t {
         }
     }
 
-    public final int a(byte param0) {
+    public final int getHeight(byte param0) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 55) {
-            stackIn_4_0 = this.field_G;
+            stackIn_4_0 = this.size;
             return stackIn_4_0;
           }
           stackIn_2_0 = -39;
@@ -2547,7 +2547,7 @@ final class Player implements fo, gma, ffa, jfa, t {
             return;
           }
           var2_int = PortalBehaviour.a(this.field_K, this.field_b, param0 - 1);
-          this.field_l = this.field_i.a(var2_int, 1572864, (gma) (this), this.x, this.y, this.f((byte) 80), this.velocityX, this.velocityY, this.field_G / param0, false);
+          this.field_l = this.field_i.a(var2_int, 1572864, (WorldBody) (this), this.x, this.y, this.getRoom((byte) 80), this.velocityX, this.velocityY, this.size / param0, false);
           if (!this.field_l) {
             return;
           }
@@ -2603,14 +2603,14 @@ final class Player implements fo, gma, ffa, jfa, t {
     }
 
     public final void a(int param0, int param1, int param2) {
-        this.field_J.field_u.a((ffa) (this), (byte) 121);
+        this.room.field_u.a((ffa) (this), (byte) 121);
         if (param2 != 2) {
           return;
         }
         try {
           this.b(param1, param0, 76473160);
-          this.o((byte) -116);
-          this.field_J.field_u.b((ffa) (this), 7073);
+          this.savePreviousPosition((byte) -116);
+          this.room.field_u.b((ffa) (this), 7073);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hca.DD(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
@@ -2626,13 +2626,13 @@ final class Player implements fo, gma, ffa, jfa, t {
         try {
           this.field_e = param1;
           this.field_ib = param2;
-          this.field_J = param0;
+          this.room = param0;
           if (this.field_db) {
             this.field_ib = this.field_ib + 157286400;
           }
           this.v((byte) 74);
           if (!param3) {
-            discarded$1 = this.a((gma) null, 119, -93);
+            discarded$1 = this.a((WorldBody) null, 119, -93);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2682,7 +2682,7 @@ final class Player implements fo, gma, ffa, jfa, t {
         }
     }
 
-    public final int c(int param0) {
+    public final int getWidth(int param0) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -2690,7 +2690,7 @@ final class Player implements fo, gma, ffa, jfa, t {
           if (param0 > -11) {
             this.g(117, 73);
           }
-          stackIn_4_0 = this.field_G;
+          stackIn_4_0 = this.size;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2718,7 +2718,7 @@ final class Player implements fo, gma, ffa, jfa, t {
         }
     }
 
-    public final int e(byte param0) {
+    public final int getRenderZ(byte param0) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -2751,7 +2751,7 @@ final class Player implements fo, gma, ffa, jfa, t {
         }
     }
 
-    public final boolean a(int param0, gma param1, int param2, int param3, int param4, ffa param5, int param6, int param7) {
+    public final boolean a(int param0, WorldBody param1, int param2, int param3, int param4, ffa param5, int param6, int param7) {
         RuntimeException var9 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -2790,7 +2790,7 @@ final class Player implements fo, gma, ffa, jfa, t {
         }
     }
 
-    public final boolean a(int param0, gma param1) {
+    public final boolean a(int param0, WorldBody param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -2832,7 +2832,7 @@ final class Player implements fo, gma, ffa, jfa, t {
         }
     }
 
-    public final boolean a(int param0, gma param1, int param2, pc param3) {
+    public final boolean a(int param0, WorldBody param1, int param2, pc param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -2849,7 +2849,7 @@ final class Player implements fo, gma, ffa, jfa, t {
           if (!this.a(param1, param2, 1)) {
             return false;
           }
-          var5_int = eha.a(this.field_G, 12, this.e(9648), this.field_G, param3, this.d(3), 2);
+          var5_int = eha.a(this.size, 12, this.getY(9648), this.size, param3, this.getX(3), 2);
           if (-1 == var5_int) {
             return false;
           }
@@ -3102,7 +3102,7 @@ final class Player implements fo, gma, ffa, jfa, t {
         }
     }
 
-    public final boolean a(gma param0, int param1) {
+    public final boolean a(WorldBody param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -3110,7 +3110,7 @@ final class Player implements fo, gma, ffa, jfa, t {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            this.field_eb = (gma) null;
+            this.field_eb = (WorldBody) null;
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3170,7 +3170,7 @@ final class Player implements fo, gma, ffa, jfa, t {
         try {
           var2_int = this.x;
           if (this.field_o) {
-            var2_int = this.field_J.a(var2_int, (byte) 71);
+            var2_int = this.room.a(var2_int, (byte) 71);
           }
           if (param0 > -76) {
             field_U = (String[]) null;
@@ -3199,7 +3199,7 @@ final class Player implements fo, gma, ffa, jfa, t {
           var2_int = 0;
           do {
             if (var2_int >= 3) {
-              this.field_v.d(8);
+              this.field_v.clear(8);
               this.field_hb = false;
               break;
             }
@@ -3265,14 +3265,14 @@ final class Player implements fo, gma, ffa, jfa, t {
         }
     }
 
-    public final Room f(byte param0) {
+    public final Room getRoom(byte param0) {
         Room stackIn_1_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         try {
           var2_int = 45 / ((0 - param0) / 61);
-          stackIn_1_0 = this.field_J;
+          stackIn_1_0 = this.room;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3325,7 +3325,7 @@ final class Player implements fo, gma, ffa, jfa, t {
           if (param0 != 5) {
             field_s = (String) null;
           }
-          stackIn_13_0 = (this.field_g != null) && (2097152 < this.field_g.c(-57)) && (this.field_g.a((byte) 55) > 2097152);
+          stackIn_13_0 = (this.field_g != null) && (2097152 < this.field_g.getWidth(-57)) && (this.field_g.getHeight((byte) 55) > 2097152);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3334,7 +3334,7 @@ final class Player implements fo, gma, ffa, jfa, t {
         }
     }
 
-    public final int d(int param0) {
+    public final int getX(int param0) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -3533,8 +3533,8 @@ final class Player implements fo, gma, ffa, jfa, t {
             var4_int = 1;
           }
           this.field_g.a(80, false, var4_int, this.velocityY, this.velocityX, 0);
-          if (this.x == this.field_X &&
-            ~this.y == ~this.field_k) {
+          if (this.x == this.previousX &&
+            ~this.y == ~this.previousY) {
             this.a(this.velocityY, this.velocityX, (byte) -103);
           }
           return;
@@ -3615,7 +3615,7 @@ final class Player implements fo, gma, ffa, jfa, t {
         int var9Lifetime1;
         var10 = TombRacer.field_G ? 1 : 0;
         try {
-          this.o((byte) 45);
+          this.savePreviousPosition((byte) 45);
           var6_int = this.x;
           var7 = this.y;
           var8 = 0;
@@ -3700,20 +3700,20 @@ final class Player implements fo, gma, ffa, jfa, t {
             var10 != 0) {
             this.field_h = this.field_h - 1;
           }
-          boolean decompiledSharedTail0 = !(this.x < (this.field_G / 2));
+          boolean decompiledSharedTail0 = !(this.x < (this.size / 2));
           if (!decompiledSharedTail0) {
-            this.x = this.field_G / 2;
+            this.x = this.size / 2;
             decompiledSharedTail0 = (var10 != 0);
           }
           if ((decompiledSharedTail0) &&
-            (this.x > this.field_J.m((byte) -86) - this.field_G / 2)) {
-            this.x = this.field_J.m((byte) -86) - this.field_G / 2;
+            (this.x > this.room.getWidth((byte) -86) - this.size / 2)) {
+            this.x = this.room.getWidth((byte) -86) - this.size / 2;
           }
           if (param1 <= 126) {
             this.field_e = -23;
           }
-          if (this.y > (this.field_J.s(-125) - this.field_G / 2)) {
-            this.y = this.field_J.s(-121) - this.field_G / 2;
+          if (this.y > (this.room.getHeight(-125) - this.size / 2)) {
+            this.y = this.room.getHeight(-121) - this.size / 2;
           }
           this.v((byte) 74);
           this.field_t = za.$cfr$intArgs$a$c604db63f465(0, 36, 5, this.field_t);
@@ -3729,8 +3729,8 @@ final class Player implements fo, gma, ffa, jfa, t {
               this.field_Y = 0;
             }
           }
-          this.field_J.field_u.a((ffa) (this), -86);
-          this.field_J.field_u.b((ffa) (this), 7073);
+          this.room.field_u.a((ffa) (this), -86);
+          this.room.field_u.b((ffa) (this), 7073);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3821,7 +3821,7 @@ final class Player implements fo, gma, ffa, jfa, t {
         }
     }
 
-    public final int e(int param0) {
+    public final int getY(int param0) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -3864,7 +3864,7 @@ final class Player implements fo, gma, ffa, jfa, t {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -1) {
-            stackIn_4_0 = this.field_J.a(-1553494544);
+            stackIn_4_0 = this.room.getSimulation(-1553494544);
             return stackIn_4_0;
           }
           stackIn_2_0 = (PlayerSimulation) null;
@@ -3887,7 +3887,7 @@ final class Player implements fo, gma, ffa, jfa, t {
           var3_int = -37 / ((-23 - param0) / 38);
           if (this.field_u != null) {
             param1.a((byte) -82, 7, this.field_u);
-            this.field_u.a(30355, this.field_J);
+            this.field_u.a(30355, this.room);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3941,11 +3941,11 @@ final class Player implements fo, gma, ffa, jfa, t {
             return stackIn_10_0;
           }
           var4_int = param1.i(-1);
-          if (!this.a((byte) 110, param1.e(9648), param1.d(3), var4_int, var4_int)) {
+          if (!this.a((byte) 110, param1.getY(9648), param1.getX(3), var4_int, var4_int)) {
             stackIn_15_0 = 0;
             return stackIn_15_0;
           }
-          if (!this.field_J.k((byte) 53) &&
+          if (!this.room.k((byte) 53) &&
             param0.field_j == 4) {
             this.velocityX = this.velocityX + param1.k(-71) / 8;
             this.velocityY = this.velocityY + param1.b(false) / 8;
@@ -3992,7 +3992,7 @@ final class Player implements fo, gma, ffa, jfa, t {
     }
 
     Player(int param0) {
-        this.field_G = 1572864;
+        this.size = 1572864;
         this.field_fb = new IntrusiveDeque();
         this.field_C = new boolean[6];
         this.field_v = new IntrusiveDeque();

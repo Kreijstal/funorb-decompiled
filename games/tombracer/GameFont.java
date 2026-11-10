@@ -17,7 +17,7 @@ abstract class GameFont {
           return;
         }
         try {
-          this.a(false, param2 - this.field_a.a(param5, (byte) 107) / 2, (aa) null, (int[]) null, 0, (nh[]) null, param5, 0, param4);
+          this.a(false, param2 - this.field_a.a(param5, (byte) 107) / 2, (aa) null, (int[]) null, 0, (ToolkitSprite[]) null, param5, 0, param4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "da.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
@@ -152,7 +152,7 @@ abstract class GameFont {
         }
     }
 
-    private final int a(int[] param0, int param1, String param2, int param3, int param4, aa param5, int param6, nh[] param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
+    private final int a(int[] param0, int param1, String param2, int param3, int param4, aa param5, int param6, ToolkitSprite[] param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
         int stackIn_3_0 = 0;
         int stackIn_46_0 = 0;
         Object stackIn_49_0 = null;
@@ -330,7 +330,7 @@ abstract class GameFont {
         }
     }
 
-    private final void a(boolean param0, int param1, aa param2, int[] param3, int param4, nh[] param5, String param6, int param7, int param8) {
+    private final void a(boolean param0, int param1, aa param2, int[] param3, int param4, ToolkitSprite[] param5, String param6, int param7, int param8) {
         int var13 = 0;
         int stackIn_29_0 = 0;
         RuntimeException stackIn_65_0 = null;
@@ -352,7 +352,7 @@ abstract class GameFont {
         int var15 = 0;
         int var16_int = 0;
         Exception var16 = null;
-        nh var17 = null;
+        ToolkitSprite var17 = null;
         int var18 = 0;
         int var19 = 0;
         Object var20 = null;
@@ -403,9 +403,9 @@ abstract class GameFont {
                                     }
                                     var18 = stackIn_29_0;
                                     if ((-16777216 & v.field_k) != -16777216) {
-                                      var17.a(param1, param8 + this.field_a.field_a - var18, 0, 16777215 | -16777216 & v.field_k, 1);
+                                      var17.draw(param1, param8 + this.field_a.field_a - var18, 0, 16777215 | -16777216 & v.field_k, 1);
                                     } else {
-                                      var17.a(param1, this.field_a.field_a + param8 - var18, 1, 0, 1);
+                                      var17.draw(param1, this.field_a.field_a + param8 - var18, 1, 0, 1);
                                     }
                                     param1 = param1 + param5[var16_int].d();
                                     var11 = -1;
@@ -506,7 +506,7 @@ abstract class GameFont {
         }
     }
 
-    final int a(aa param0, int param1, int param2, int param3, int param4, int param5, int[] param6, int param7, int param8, String param9, byte param10, int param11, int param12, nh[] param13, int param14, int param15) {
+    final int a(aa param0, int param1, int param2, int param3, int param4, int param5, int[] param6, int param7, int param8, String param9, byte param10, int param11, int param12, ToolkitSprite[] param13, int param14, int param15) {
         int var17_int = 0;
         RuntimeException var17 = null;
         int stackIn_1_0 = 0;
@@ -562,7 +562,7 @@ abstract class GameFont {
         }
         try {
           this.a(param4, param5, 125);
-          this.a(param1, param3, (aa) null, (int[]) null, 0, (nh[]) null, param2, 0, param0);
+          this.a(param1, param3, (aa) null, (int[]) null, 0, (ToolkitSprite[]) null, param2, 0, param0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "da.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -577,7 +577,7 @@ abstract class GameFont {
             this.field_a = (qla) null;
           }
           this.a(param4, param3, 118);
-          this.a(false, -this.field_a.a(param2, (byte) -102) + param5, (aa) null, (int[]) null, 0, (nh[]) null, param2, 0, param1);
+          this.a(false, -this.field_a.a(param2, (byte) -102) + param5, (aa) null, (int[]) null, 0, (ToolkitSprite[]) null, param2, 0, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "da.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

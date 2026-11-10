@@ -8,7 +8,7 @@ class vpa implements isa, oaa {
     int field_j;
     int field_d;
     int field_g;
-    il field_e;
+    BitmapFont field_e;
     int field_c;
     int field_i;
     int field_a;
@@ -568,7 +568,7 @@ class vpa implements isa, oaa {
             param0.field_l = (bja) ((Object) new po());
           }
           if (param1 != 14157) {
-            this.field_e = (il) null;
+            this.field_e = (BitmapFont) null;
           }
           if (!this.field_b) {
             this.c(param1 ^ 14131, param0);
@@ -649,14 +649,14 @@ class vpa implements isa, oaa {
         }
     }
 
-    vpa(il param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    vpa(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
     protected vpa() {
     }
 
-    vpa(il param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    vpa(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_k = param10;
           this.field_l = param7;

@@ -5,7 +5,7 @@ final class kq {
     private bka field_e;
     static String field_d;
     static boolean field_c;
-    static nh field_a;
+    static ToolkitSprite field_a;
     static String field_b;
     private int field_f;
 
@@ -35,7 +35,7 @@ final class kq {
         field_d = null;
         field_b = null;
         if (param0 != -9598) {
-          field_a = (nh) null;
+          field_a = (ToolkitSprite) null;
         }
         field_a = null;
     }
@@ -163,7 +163,7 @@ final class kq {
               }
               var5++;
             }
-            al.field_g.b((byte) -109, var18);
+            al.field_g.addLast((byte) -109, var18);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;
@@ -218,7 +218,7 @@ final class kq {
           return;
         }
         if (param2 < 106) {
-          field_a = (nh) null;
+          field_a = (ToolkitSprite) null;
         }
         qpa var3 = new qpa();
         var3.b(param1, -123);

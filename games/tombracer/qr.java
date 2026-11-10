@@ -215,14 +215,14 @@ abstract class qr extends ae implements tpa {
           var8 = new jea(0L, (jea) null);
           var8.field_P = di.field_a;
           var8.field_ib = 16777215;
-          var8.field_H = (il) ((Object) var7);
+          var8.field_H = (BitmapFont) ((Object) var7);
           var8.field_bb = 1;
           var9 = var8;
           var9.field_z = 1;
           var10 = new jea(0L, (jea) null);
           var10.field_P = di.field_a;
           var10.field_ib = 16777215;
-          var10.field_H = (il) ((Object) qw.field_f);
+          var10.field_H = (BitmapFont) ((Object) qw.field_f);
           var11 = var10;
           var10.field_bb = 1;
           var11.field_z = 1;
@@ -256,7 +256,7 @@ abstract class qr extends ae implements tpa {
           kua.field_i = new jea(0L, (jea) null);
           kua.field_i.field_ib = 13421772;
           kua.field_i.field_P = di.field_a;
-          kua.field_i.field_H = (il) ((Object) qw.field_f);
+          kua.field_i.field_H = (BitmapFont) ((Object) qw.field_f);
           kua.field_i.field_bb = 1;
           PressureSwitchBehaviour.field_p = new jea(0L, kua.field_i);
           PressureSwitchBehaviour.field_p.field_ab = 16777215;
@@ -266,7 +266,7 @@ abstract class qr extends ae implements tpa {
           PressureSwitchBehaviour.field_p.field_N = 16777215;
           var15 = new jea(0L, PressureSwitchBehaviour.field_p);
           var15.field_ib = 16777215;
-          var15.field_H = (il) ((Object) var7);
+          var15.field_H = (BitmapFont) ((Object) var7);
           var15.field_P = di.field_a;
           tka.field_q = new jea(0L, kua.field_i);
           tka.field_q.field_w = tba.a(-103, param0, 16, 2236962, 2236962, false);

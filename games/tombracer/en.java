@@ -8,20 +8,20 @@ final class en extends cg {
     private int field_j;
 
     private final void b(int param0) {
-        cg var2 = (cg) (this.field_l.f(-80));
+        cg var2 = (cg) (this.field_l.first(-80));
         while (var2 != null) {
           var2.a(param0);
-          var2 = (cg) (this.field_l.e(122));
+          var2 = (cg) (this.field_l.next(122));
         }
     }
 
     private final void e() {
         jva var1 = null;
         if (this.field_k > 0) {
-          var1 = (jva) (this.field_m.f(-80));
+          var1 = (jva) (this.field_m.first(-80));
           while (var1 != null) {
             var1.field_f = var1.field_f - this.field_k;
-            var1 = (jva) (this.field_m.e(119));
+            var1 = (jva) (this.field_m.next(119));
           }
           this.field_j = this.field_j - this.field_k;
           this.field_k = 0;
@@ -47,7 +47,7 @@ final class en extends cg {
     }
 
     final cg c() {
-        return (cg) (this.field_l.e(126));
+        return (cg) (this.field_l.next(126));
     }
 
     final synchronized void b(int[] param0, int param1, int param2) {
@@ -72,7 +72,7 @@ final class en extends cg {
           param2 = param2 - var4;
           this.field_k = this.field_k + var4;
           this.e();
-          var5 = (jva) (this.field_m.f(-80));
+          var5 = (jva) (this.field_m.first(-80));
           var6 = var5;
           synchronized (var6) {
             var7 = var5.a(this);
@@ -93,10 +93,10 @@ final class en extends cg {
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        cg var4 = (cg) (this.field_l.f(-80));
+        cg var4 = (cg) (this.field_l.first(-80));
         while (var4 != null) {
           var4.a(param0, param1, param2);
-          var4 = (cg) (this.field_l.e(119));
+          var4 = (cg) (this.field_l.next(119));
         }
     }
 
@@ -125,7 +125,7 @@ final class en extends cg {
           param0 = param0 - var2;
           this.field_k = this.field_k + var2;
           this.e();
-          var3 = (jva) (this.field_m.f(-80));
+          var3 = (jva) (this.field_m.first(-80));
           var4 = var3;
           synchronized (var4) {
             var5 = var3.a(this);
@@ -157,7 +157,7 @@ final class en extends cg {
     }
 
     final cg b() {
-        return (cg) (this.field_l.f(-80));
+        return (cg) (this.field_l.first(-80));
     }
 
     public en() {

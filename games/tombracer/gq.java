@@ -211,7 +211,7 @@ final class gq extends uta {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3_ref = (jj) (Object) decompiledCaughtException;
               param0 = "<col=55ff55>" + param0.substring(0, var3_ref.field_a) + "</col>" + param0.substring(var3_ref.field_a);
-              var4_ref = (jea) (this.field_a.field_tb.field_J.b(3));
+              var4_ref = (jea) (this.field_a.field_tb.field_J.last(3));
               var4_ref.field_r = this.field_t + param0;
             } catch (rv decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
@@ -255,7 +255,7 @@ final class gq extends uta {
         }
     }
 
-    gq(IntrusiveDeque param0, il param1, PlatformTaskDispatcher param2) {
+    gq(IntrusiveDeque param0, BitmapFont param1, PlatformTaskDispatcher param2) {
         super(param1, param2);
         int incrementValue$1 = 0;
         RuntimeException runtimeException = null;
@@ -272,14 +272,14 @@ final class gq extends uta {
         RuntimeException decompiledCaughtException = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
-          this.field_v = new ela[param0.a((byte) -16)];
+          this.field_v = new ela[param0.size((byte) -16)];
           var4_int = 0;
-          var5 = (ela) (param0.f(-80));
+          var5 = (ela) (param0.first(-80));
           while (var5 != null) {
             incrementValue$1 = var4_int;
             var4_int++;
             this.field_v[incrementValue$1] = var5;
-            var5 = (ela) (param0.e(125));
+            var5 = (ela) (param0.next(125));
             if (var6 != 0) {
               return;
             }

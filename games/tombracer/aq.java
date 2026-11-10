@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class aq {
-    static nh[] field_a;
+    static ToolkitSprite[] field_a;
 
     public static void releaseStatics(int param0) {
         field_a = null;

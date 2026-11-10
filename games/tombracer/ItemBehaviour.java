@@ -81,7 +81,7 @@ abstract class ItemBehaviour extends Behaviour {
               if (var4.q(81)) {
                 return;
               }
-              if (!this.field_g.a((byte) 110, var4.e(9648), var4.d(3), var4.a((byte) 55), var4.c(-125))) {
+              if (!this.field_g.a((byte) 110, var4.getY(9648), var4.getX(3), var4.getHeight((byte) 55), var4.getWidth(-125))) {
                 return;
               }
               if (this.a(param0 - 5533, var4)) {
@@ -95,7 +95,7 @@ abstract class ItemBehaviour extends Behaviour {
               if (var4.q(102)) {
                 return;
               }
-              if (this.field_g.a((byte) 110, var4.e(9648), var4.d(3), var4.a((byte) 55), var4.c(-63))) {
+              if (this.field_g.a((byte) 110, var4.getY(9648), var4.getX(3), var4.getHeight((byte) 55), var4.getWidth(-63))) {
                 return;
               }
               this.field_n = false;
@@ -113,7 +113,7 @@ abstract class ItemBehaviour extends Behaviour {
                 if (var5.q(81)) {
                   return;
                 }
-                if (!this.field_g.a((byte) 110, var5.e(9648), var5.d(3), var5.a((byte) 55), var5.c(-125))) {
+                if (!this.field_g.a((byte) 110, var5.getY(9648), var5.getX(3), var5.getHeight((byte) 55), var5.getWidth(-125))) {
                   return;
                 }
                 if (this.a(param0 - 5533, var5)) {
@@ -127,7 +127,7 @@ abstract class ItemBehaviour extends Behaviour {
                 if (var5.q(102)) {
                   return;
                 }
-                if (this.field_g.a((byte) 110, var5.e(9648), var5.d(3), var5.a((byte) 55), var5.c(-63))) {
+                if (this.field_g.a((byte) 110, var5.getY(9648), var5.getX(3), var5.getHeight((byte) 55), var5.getWidth(-63))) {
                   return;
                 }
                 this.field_n = false;
@@ -146,7 +146,7 @@ abstract class ItemBehaviour extends Behaviour {
             if (var6.q(102)) {
               return;
             }
-            if (this.field_g.a((byte) 110, var6.e(9648), var6.d(3), var6.a((byte) 55), var6.c(-63))) {
+            if (this.field_g.a((byte) 110, var6.getY(9648), var6.getX(3), var6.getHeight((byte) 55), var6.getWidth(-63))) {
               return;
             }
             this.field_n = false;
@@ -155,7 +155,7 @@ abstract class ItemBehaviour extends Behaviour {
           if (var6.q(81)) {
             return;
           }
-          if (!this.field_g.a((byte) 110, var6.e(9648), var6.d(3), var6.a((byte) 55), var6.c(-125))) {
+          if (!this.field_g.a((byte) 110, var6.getY(9648), var6.getX(3), var6.getHeight((byte) 55), var6.getWidth(-125))) {
             return;
           }
           if (!this.a(param0 - 5533, var6)) {
@@ -176,7 +176,7 @@ abstract class ItemBehaviour extends Behaviour {
             if (var7.q(102)) {
               return;
             }
-            if (this.field_g.a((byte) 110, var7.e(9648), var7.d(3), var7.a((byte) 55), var7.c(-63))) {
+            if (this.field_g.a((byte) 110, var7.getY(9648), var7.getX(3), var7.getHeight((byte) 55), var7.getWidth(-63))) {
               return;
             }
             this.field_n = false;
@@ -185,7 +185,7 @@ abstract class ItemBehaviour extends Behaviour {
           if (var7.q(81)) {
             return;
           }
-          if (!this.field_g.a((byte) 110, var7.e(9648), var7.d(3), var7.a((byte) 55), var7.c(-125))) {
+          if (!this.field_g.a((byte) 110, var7.getY(9648), var7.getX(3), var7.getHeight((byte) 55), var7.getWidth(-125))) {
             return;
           }
           if (!this.a(param0 - 5533, var7)) {
@@ -207,7 +207,7 @@ abstract class ItemBehaviour extends Behaviour {
             if (var8.q(102)) {
               return;
             }
-            if (this.field_g.a((byte) 110, var8.e(9648), var8.d(3), var8.a((byte) 55), var8.c(-63))) {
+            if (this.field_g.a((byte) 110, var8.getY(9648), var8.getX(3), var8.getHeight((byte) 55), var8.getWidth(-63))) {
               return;
             }
             this.field_n = false;
@@ -216,7 +216,7 @@ abstract class ItemBehaviour extends Behaviour {
           if (var8.q(81)) {
             return;
           }
-          if (!this.field_g.a((byte) 110, var8.e(9648), var8.d(3), var8.a((byte) 55), var8.c(-125))) {
+          if (!this.field_g.a((byte) 110, var8.getY(9648), var8.getX(3), var8.getHeight((byte) 55), var8.getWidth(-125))) {
             return;
           }
           if (!this.a(param0 - 5533, var8)) {
@@ -234,7 +234,7 @@ abstract class ItemBehaviour extends Behaviour {
             var10 = this.m((byte) 19);
             if (!this.field_n) {
               if (!var10.q(81) &&
-                this.field_g.a((byte) 110, var10.e(9648), var10.d(3), var10.a((byte) 55), var10.c(-125))) {
+                this.field_g.a((byte) 110, var10.getY(9648), var10.getX(3), var10.getHeight((byte) 55), var10.getWidth(-125))) {
                 if (!this.a(param0 - 5533, var10)) {
                   return;
                 }
@@ -246,7 +246,7 @@ abstract class ItemBehaviour extends Behaviour {
               }
             } else {
               if (!var10.q(102) &&
-                !this.field_g.a((byte) 110, var10.e(9648), var10.d(3), var10.a((byte) 55), var10.c(-63))) {
+                !this.field_g.a((byte) 110, var10.getY(9648), var10.getX(3), var10.getHeight((byte) 55), var10.getWidth(-63))) {
                 this.field_n = false;
                 return;
               }
@@ -260,7 +260,7 @@ abstract class ItemBehaviour extends Behaviour {
           var9 = this.m((byte) 19);
           if (!this.field_n) {
             if (!var9.q(81) &&
-              this.field_g.a((byte) 110, var9.e(9648), var9.d(3), var9.a((byte) 55), var9.c(-125))) {
+              this.field_g.a((byte) 110, var9.getY(9648), var9.getX(3), var9.getHeight((byte) 55), var9.getWidth(-125))) {
               if (!this.a(param0 - 5533, var9)) {
                 return;
               }
@@ -272,7 +272,7 @@ abstract class ItemBehaviour extends Behaviour {
             }
           } else {
             if (!var9.q(102) &&
-              !this.field_g.a((byte) 110, var9.e(9648), var9.d(3), var9.a((byte) 55), var9.c(-63))) {
+              !this.field_g.a((byte) 110, var9.getY(9648), var9.getX(3), var9.getHeight((byte) 55), var9.getWidth(-63))) {
               this.field_n = false;
               return;
             }

@@ -59,7 +59,7 @@ final class fk {
             var4 = new dq(param0, this.field_g);
             this.field_g = this.field_g + 1;
           } else {
-            var5Lifetime2 = (dq) (this.field_h.b(3));
+            var5Lifetime2 = (dq) (this.field_h.last(3));
             var4 = new dq(param0, var5Lifetime2.field_g);
             this.field_k[var5Lifetime2.field_i] = null;
             var5Lifetime2.unlink(63);
@@ -130,7 +130,7 @@ final class fk {
         }
         this.field_a = (int[][][]) null;
         this.field_k = null;
-        this.field_h.d(8);
+        this.field_h.clear(8);
         this.field_h = null;
     }
 

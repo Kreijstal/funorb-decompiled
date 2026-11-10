@@ -37,18 +37,18 @@ final class KeyLockBehaviour extends Behaviour implements ut {
         int var4Lifetime1;
         int var5Lifetime1;
         if (!this.field_s) {
-          var8 = this.b(true).u(-98);
+          var8 = this.b(true).getPlayer(-98);
           if (var8.u((byte) 127) != 1) {
             stackIn_19_1 = 0;
           } else {
             stackIn_19_1 = 1;
           }
           this.field_n = stackIn_19_1;
-          var3 = var8.d(3) - this.field_g.d(3);
-          var4 = var8.e(param0 ^ 9650) - this.field_g.e(9648);
+          var3 = var8.getX(3) - this.field_g.getX(3);
+          var4 = var8.getY(param0 ^ 9650) - this.field_g.getY(9648);
           var5 = 262144;
-          if (ua.a(var3, param0 ^ -122) <= this.field_g.c(-120) / param0 + var8.c(-59) / 2 + var5 &&
-            ua.a(var4, -121) <= var5 + this.field_g.a((byte) 55) / 2 + var8.a((byte) 55) / 2) {
+          if (ua.a(var3, param0 ^ -122) <= this.field_g.getWidth(-120) / param0 + var8.getWidth(-59) / 2 + var5 &&
+            ua.a(var4, -121) <= var5 + this.field_g.getHeight((byte) 55) / 2 + var8.getHeight((byte) 55) / 2) {
             if (this.field_p > this.field_n) {
               return false;
             }
@@ -64,7 +64,7 @@ final class KeyLockBehaviour extends Behaviour implements ut {
         if (this.field_t) {
           return true;
         }
-        var7 = this.b(true).u(-98);
+        var7 = this.b(true).getPlayer(-98);
         var6 = var7;
         if (var7.u((byte) 127) != 1) {
           stackIn_6_1 = 0;
@@ -72,14 +72,14 @@ final class KeyLockBehaviour extends Behaviour implements ut {
           stackIn_6_1 = 1;
         }
         this.field_n = stackIn_6_1;
-        var3Lifetime1 = var7.d(3) - this.field_g.d(3);
-        var4Lifetime1 = var7.e(param0 ^ 9650) - this.field_g.e(9648);
+        var3Lifetime1 = var7.getX(3) - this.field_g.getX(3);
+        var4Lifetime1 = var7.getY(param0 ^ 9650) - this.field_g.getY(9648);
         var5Lifetime1 = 262144;
-        if (ua.a(var3Lifetime1, param0 ^ -122) > this.field_g.c(-120) / param0 + var7.c(-59) / 2 + var5Lifetime1) {
+        if (ua.a(var3Lifetime1, param0 ^ -122) > this.field_g.getWidth(-120) / param0 + var7.getWidth(-59) / 2 + var5Lifetime1) {
           this.field_n = 0;
           return false;
         }
-        if (ua.a(var4Lifetime1, -121) > var5Lifetime1 + this.field_g.a((byte) 55) / 2 + var7.a((byte) 55) / 2) {
+        if (ua.a(var4Lifetime1, -121) > var5Lifetime1 + this.field_g.getHeight((byte) 55) / 2 + var7.getHeight((byte) 55) / 2) {
           this.field_n = 0;
           return false;
         }
@@ -192,7 +192,7 @@ final class KeyLockBehaviour extends Behaviour implements ut {
         this.field_s = true;
         this.field_p = 1;
         try {
-          if (16 < param0.field_E) {
+          if (16 < param0.formatVersion) {
             this.field_p = 1;
           } else {
             this.field_p = param1.readBits((byte) 44, 3);

@@ -33,7 +33,7 @@ final class gea {
         }
     }
 
-    final static void a(int param0, cn param1, il param2) {
+    final static void a(int param0, cn param1, BitmapFont param2) {
         int var8 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -49,7 +49,7 @@ final class gea {
         int var9 = 0;
         Throwable var10 = null;
         Throwable var11 = null;
-        il var12 = null;
+        BitmapFont var12 = null;
         int[] var16 = null;
         var9 = TombRacer.field_G ? 1 : 0;
         try {
@@ -71,19 +71,19 @@ final class gea {
             return;
           }
           vp.a(-1, var4);
-          var12 = (il) null;
-          oka.field_w = ow.a(1127256, 1513239, 1513239, 0, (il) null, 2245737, 4020342, 65793, 65793, 5138823, 8947848, 65793, (byte) -78);
+          var12 = (BitmapFont) null;
+          oka.field_w = ow.a(1127256, 1513239, 1513239, 0, (BitmapFont) null, 2245737, 4020342, 65793, 65793, 5138823, 8947848, 65793, (byte) -78);
           BoulderComponent.field_M = ow.a(0, 0, 0, 16764006, param2, 0, param0, 0, 0, 0, 0, 0, (byte) -81);
           tg.field_c = ow.a(0, 0, 0, 16777215, param2, 0, 0, 0, 0, 0, 0, 0, (byte) -123);
-          var5 = bea.field_g;
-          var6 = bea.field_a;
-          var16 = bea.field_l;
+          var5 = SoftwareRasterizer.field_g;
+          var6 = SoftwareRasterizer.field_a;
+          var16 = SoftwareRasterizer.field_l;
           gfa.field_j = new Sprite(10, 14);
           gfa.field_j.c();
           for (var8 = 2; var8 < 7; var8++) {
-            bea.f(var8, var8 + 1, -(var8 << 1) + 14, 16777215);
+            SoftwareRasterizer.drawVerticalLine(var8, var8 + 1, -(var8 << 1) + 14, 16777215);
           }
-          bea.a(var16, var5, var6);
+          SoftwareRasterizer.a(var16, var5, var6);
           cia.field_g = qla.a(true, BoulderComponent.field_M, oka.field_w, var4, tg.field_c);
           rua.field_gb.field_J = new IntrusiveDeque();
           return;

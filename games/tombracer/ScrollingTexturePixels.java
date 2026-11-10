@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qq extends IntrusiveNode {
+final class ScrollingTexturePixels extends IntrusiveNode {
     boolean field_g;
     int field_j;
     private int field_i;
@@ -13,7 +13,7 @@ final class qq extends IntrusiveNode {
         return this.field_k;
     }
 
-    final void a(int param0, int param1) {
+    final void scroll(int param0, int param1) {
         int var8_int = 0;
         int var9 = 0;
         int var10 = 0;
@@ -49,7 +49,7 @@ final class qq extends IntrusiveNode {
         field_h = null;
     }
 
-    qq(int param0, int param1, int[] param2, boolean param3) {
+    ScrollingTexturePixels(int param0, int param1, int[] param2, boolean param3) {
         int var31_int = 0;
         int[] var5;
         int[] var6;

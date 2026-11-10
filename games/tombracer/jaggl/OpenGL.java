@@ -11,7 +11,7 @@ public class OpenGL {
     private static Hashtable c;
     private Thread b;
 
-    public final synchronized boolean a() {
+    public final synchronized boolean attachToThread() {
         Thread var1 = Thread.currentThread();
         if (!this.attachPeer()) {
           return false;
@@ -281,7 +281,7 @@ public class OpenGL {
 
     public final native static void glLineWidth(float param0);
 
-    public final synchronized boolean b() {
+    public final synchronized boolean detachFromThread() {
         if (this.b != Thread.currentThread()) {
           return false;
         }

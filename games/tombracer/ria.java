@@ -15,7 +15,7 @@ final class ria extends dg {
         }
     }
 
-    final void a(gr param0, gma param1, byte param2) {
+    final void a(gr param0, WorldBody param1, byte param2) {
         try {
           super.a(param0, param1, param2);
         } catch (RuntimeException runtimeException) {
@@ -88,7 +88,7 @@ final class ria extends dg {
           this.field_q = -123;
         }
         super.a(126, param1, param2);
-        if (param1.field_E <= 17) {
+        if (param1.formatVersion <= 17) {
           return;
         }
         try {

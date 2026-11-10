@@ -25,7 +25,7 @@ final class bma extends ci {
     static int[] field_p;
 
     final static void d(byte param0) {
-        aca var1 = (aca) (io.field_d.f(-80));
+        aca var1 = (aca) (io.field_d.first(-80));
         if (var1 == null) {
           dea.a(60);
           return;

@@ -119,7 +119,7 @@ final class wf extends IntrusiveNode {
         this.field_h = 100;
         try {
           this.field_f = param1.readBits((byte) 44, 4);
-          if (param0.field_E > 8) {
+          if (param0.formatVersion > 8) {
             this.field_h = 50 * param1.readBits((byte) 44, 6);
           } else {
             this.field_h = 100;

@@ -145,14 +145,14 @@ final class oo extends dg {
           this.field_r = (lca[][]) null;
         }
         var17 = this.a(param0 + 3494);
-        var3 = this.field_h.d(3);
-        var4 = this.field_h.e(9648);
-        this.field_o = this.field_h.c(param0 ^ 3403) / C2SSubmitSettingsPacket.field_a;
-        this.field_q = this.field_h.a((byte) 55) / C2SSubmitSettingsPacket.field_a;
+        var3 = this.field_h.getX(3);
+        var4 = this.field_h.getY(9648);
+        this.field_o = this.field_h.getWidth(param0 ^ 3403) / C2SSubmitSettingsPacket.field_a;
+        this.field_q = this.field_h.getHeight((byte) 55) / C2SSubmitSettingsPacket.field_a;
         this.field_r = new lca[this.field_o][this.field_q];
-        var5 = -(this.field_h.a((byte) 55) / 2) + (var4 + C2SSubmitSettingsPacket.field_a / 2);
+        var5 = -(this.field_h.getHeight((byte) 55) / 2) + (var4 + C2SSubmitSettingsPacket.field_a / 2);
         for (var6 = 0; var6 < this.field_q; var6++) {
-          var7 = var3 - this.field_h.c(-60) / 2 + C2SSubmitSettingsPacket.field_a / 2;
+          var7 = var3 - this.field_h.getWidth(-60) / 2 + C2SSubmitSettingsPacket.field_a / 2;
           for (var8 = 0; this.field_o > var8; var8++) {
             var9 = new lca();
             this.field_r[var8][var6] = var9;
@@ -464,9 +464,9 @@ final class oo extends dg {
           this.field_u = uca.field_c.a(100, 0) + 50;
           var3_int = uca.field_c.a(this.field_s.length, ~param0);
           if (this.field_s[var3_int].field_e.a(0)) {
-            var2.a(new fm(24, this.field_s[var3_int].b((byte) -123), this.field_s[var3_int].c((byte) 94), this.field_s[var3_int].e((byte) -112)), param0 - 57);
+            var2.a(new fm(24, this.field_s[var3_int].getRenderX((byte) -123), this.field_s[var3_int].getRenderY((byte) 94), this.field_s[var3_int].getRenderZ((byte) -112)), param0 - 57);
           } else {
-            var7.a(new fm(23, this.field_s[var3_int].b((byte) -83), this.field_s[var3_int].c((byte) 122), this.field_s[var3_int].e((byte) -107)), param0 - 57);
+            var7.a(new fm(23, this.field_s[var3_int].getRenderX((byte) -83), this.field_s[var3_int].getRenderY((byte) 122), this.field_s[var3_int].getRenderZ((byte) -107)), param0 - 57);
           }
         }
         var3 = (Trap) (this.field_h);
@@ -480,7 +480,7 @@ final class oo extends dg {
         if (var4 == null) {
           return;
         }
-        if (var3.a((byte) 110, var4.e(param0 ^ -9649), var4.d(3), var4.a((byte) 55), var4.c(-30))) {
+        if (var3.a((byte) 110, var4.getY(param0 ^ -9649), var4.getX(3), var4.getHeight((byte) 55), var4.getWidth(-30))) {
           var5 = var4.n((byte) -98);
           if (var5 == null) {
             return;
@@ -555,7 +555,7 @@ final class oo extends dg {
         }
     }
 
-    final void a(gr param0, gma param1, byte param2) {
+    final void a(gr param0, WorldBody param1, byte param2) {
         try {
           super.a(param0, param1, param2);
           if (param0 instanceof SnakePitBehaviour) {

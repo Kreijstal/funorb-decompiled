@@ -8,7 +8,7 @@ final class iea {
     int field_f;
     int field_d;
     int field_c;
-    nh field_a;
+    ToolkitSprite field_a;
     iea field_b;
 
     public static void releaseStatics(int param0) {
@@ -19,7 +19,7 @@ final class iea {
         field_e = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3, iea param4, nh param5, int param6) {
+    final void a(int param0, int param1, int param2, int param3, iea param4, ToolkitSprite param5, int param6) {
         try {
           this.field_c = param1;
           this.field_f = param0;
@@ -85,7 +85,7 @@ final class iea {
           jja.field_j.field_X = true;
           jja.field_j.field_vb.field_vb.field_r = null;
           var5 = null;
-          var6 = (mu) (var4.f(-80));
+          var6 = (mu) (var4.first(-80));
           while (var6 != null) {
             var7 = 0;
             if (var6.field_J == null) {
@@ -116,7 +116,7 @@ final class iea {
             if (0 >= var10) {
               stackIn_23_1 = var6.field_tb;
             } else {
-              stackIn_23_1 = il.a(var6.field_xb.field_H, var6.field_tb, var10);
+              stackIn_23_1 = BitmapFont.a(var6.field_xb.field_H, var6.field_tb, var10);
             }
             stackIn_22_0.field_r = stackIn_23_1;
             stackIn_26_0 = (var6.field_xb.field_r.equals(var6.field_tb)) ? 0 : 1;
@@ -148,7 +148,7 @@ final class iea {
               var17.field_f.b(var14, 0, -69, 0, var13);
             }
             var5 = var6;
-            var6 = (mu) (var4.e(126));
+            var6 = (mu) (var4.next(126));
           }
           if (jja.field_j.field_yb.field_y != 0) {
             bl.field_a = new is(jja.field_j.field_yb.field_q, jja.field_j.field_yb.field_A, jja.field_j.field_yb.field_G, jja.field_j.field_yb.field_t, pe.field_k, lw.field_a, kua.field_i, kua.field_i);

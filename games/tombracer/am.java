@@ -139,7 +139,7 @@ final class am extends dg {
         if (param0 < 119) {
           this.field_m = 77;
         }
-        if (param1.field_E <= 17) {
+        if (param1.formatVersion <= 17) {
           return;
         }
         try {

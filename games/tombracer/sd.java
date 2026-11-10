@@ -212,7 +212,7 @@ final class sd extends lga {
               this.field_H.field_m >= var11 &&
               var12 <= this.field_H.field_q) {
               nm.a(this.field_H, (byte) 120);
-              bea.a();
+              SoftwareRasterizer.clear();
             } else {
               this.field_H = new Sprite(var11, var12);
               nm.a(this.field_H, (byte) 121);
@@ -254,7 +254,7 @@ final class sd extends lga {
             } else {
               if (var12Lifetime5 <= this.field_H.field_q) {
                 nm.a(this.field_H, (byte) 120);
-                bea.a();
+                SoftwareRasterizer.clear();
               } else {
                 this.field_H = new Sprite(var11Lifetime5, var12Lifetime5);
                 nm.a(this.field_H, (byte) 121);
@@ -297,7 +297,7 @@ final class sd extends lga {
               this.field_H.field_m >= var11Lifetime1 &&
               var12Lifetime1 <= this.field_H.field_q) {
               nm.a(this.field_H, (byte) 120);
-              bea.a();
+              SoftwareRasterizer.clear();
             } else {
               this.field_H = new Sprite(var11Lifetime1, var12Lifetime1);
               nm.a(this.field_H, (byte) 121);
@@ -339,7 +339,7 @@ final class sd extends lga {
             } else {
               if (var12Lifetime1Lifetime1 <= this.field_H.field_q) {
                 nm.a(this.field_H, (byte) 120);
-                bea.a();
+                SoftwareRasterizer.clear();
               } else {
                 this.field_H = new Sprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
                 nm.a(this.field_H, (byte) 121);
@@ -380,7 +380,7 @@ final class sd extends lga {
               this.field_H.field_m >= var11Lifetime2 &&
               var12Lifetime2 <= this.field_H.field_q) {
               nm.a(this.field_H, (byte) 120);
-              bea.a();
+              SoftwareRasterizer.clear();
             } else {
               this.field_H = new Sprite(var11Lifetime2, var12Lifetime2);
               nm.a(this.field_H, (byte) 121);
@@ -425,7 +425,7 @@ final class sd extends lga {
             } else {
               if (var12Lifetime2Lifetime1 <= this.field_H.field_q) {
                 nm.a(this.field_H, (byte) 120);
-                bea.a();
+                SoftwareRasterizer.clear();
               } else {
                 this.field_H = new Sprite(var11Lifetime2Lifetime1, var12Lifetime2Lifetime1);
                 nm.a(this.field_H, (byte) 121);
@@ -468,7 +468,7 @@ final class sd extends lga {
             this.field_H.field_m >= var11Lifetime3 &&
             var12Lifetime3 <= this.field_H.field_q) {
             nm.a(this.field_H, (byte) 120);
-            bea.a();
+            SoftwareRasterizer.clear();
           } else {
             this.field_H = new Sprite(var11Lifetime3, var12Lifetime3);
             nm.a(this.field_H, (byte) 121);
@@ -513,7 +513,7 @@ final class sd extends lga {
               nm.a(this.field_H, (byte) 121);
             } else {
               nm.a(this.field_H, (byte) 120);
-              bea.a();
+              SoftwareRasterizer.clear();
             }
           }
         }

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class gh extends nh {
+final class gh extends ToolkitSprite {
     private boolean field_h;
     private int field_g;
     static String field_f;
@@ -18,7 +18,7 @@ final class gh extends nh {
     private int field_i;
     private int field_m;
 
-    final void a(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8, int param9) {
+    final void drawAffine(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8, int param9) {
         asa var12;
         float var13;
         float var14;
@@ -94,7 +94,7 @@ final class gh extends nh {
         return this.field_l;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void draw(int param0, int param1, int param2, int param3, int param4) {
         asa var8 = this.field_c.y((byte) -77);
         asa var7 = this.field_c.C(0);
         param1 = param1 + this.field_j;

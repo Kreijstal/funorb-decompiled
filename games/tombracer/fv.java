@@ -26,14 +26,14 @@ final class fv {
 
     final void a(int param0) {
         int var3 = 0;
-        nh var4 = null;
+        ToolkitSprite var4 = null;
         int var2 = this.field_h.b((byte) -75).a(param0 ^ 28, this.field_f);
         GraphicsToolkit var3_ref_ha = tga.field_a;
         int var4_int = this.field_g;
         int var5 = this.field_c;
         int var6 = this.field_j;
         int var7 = this.field_i;
-        nh[] var8 = dr.field_a;
+        ToolkitSprite[] var8 = dr.field_a;
         tra.a(1, var8, (byte) -51, var4_int, var3_ref_ha, var6, param0, var7, var5, 0);
         if (var2 != -1) {
           var3 = bta.field_n[var2];

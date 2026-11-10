@@ -23,10 +23,10 @@ abstract class GraphicsToolkit {
     abstract void la();
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        this.U(param3, param2, param1, param4, param0);
+        this.drawHorizontalLine(param3, param2, param1, param4, param0);
     }
 
-    void a(nh param0, boolean param1) {
+    void a(ToolkitSprite param0, boolean param1) {
         try {
           this.a(this.a(param0, !param1 ? null : this.b(param0.a(), param0.c())));
         } catch (RuntimeException runtimeException) {
@@ -38,11 +38,11 @@ abstract class GraphicsToolkit {
         this.a(true);
     }
 
-    abstract void a(int param0, int param1) throws qva;
+    abstract void present(int param0, int param1) throws qva;
 
     abstract void a(float param0, float param1, float param2);
 
-    abstract nh a(jpa param0, boolean param1);
+    abstract ToolkitSprite a(jpa param0, boolean param1);
 
     final void a(int param0, int param1, int param2, int param3, int param4, byte param5) {
         this.d(param1, param0, param3, param2, param4, 1);
@@ -59,7 +59,7 @@ abstract class GraphicsToolkit {
 
     abstract void ZA(int param0, float param1, float param2, float param3, float param4, float param5);
 
-    abstract void T(int param0, int param1, int param2, int param3);
+    abstract void intersectClip(int param0, int param1, int param2, int param3);
 
     abstract boolean h();
 
@@ -71,7 +71,7 @@ abstract class GraphicsToolkit {
         if (param4 != -22971) {
           this.a(-0.8806686997413635f, -0.4391394555568695f, 0.2737298011779785f);
         }
-        this.aa(param1, param3, param2, param5, param0, 1);
+        this.fillRectangle(param1, param3, param2, param5, param0, 1);
     }
 
     abstract GameFont a(qla param0, jpa[] param1, boolean param2);
@@ -173,24 +173,24 @@ abstract class GraphicsToolkit {
     abstract void d();
 
     final void e(int param0) throws qva {
-        this.a(param0, 0);
+        this.present(param0, 0);
     }
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5);
+    abstract void drawLine(int param0, int param1, int param2, int param3, int param4, int param5);
 
-    abstract void U(int param0, int param1, int param2, int param3, int param4);
+    abstract void drawHorizontalLine(int param0, int param1, int param2, int param3, int param4);
 
     abstract void c(int param0);
 
     final void b(int param0, int param1, int param2, int param3, int param4, int param5) {
-        this.a(param2, param0, param5, param3, param1, param4);
+        this.drawLine(param2, param0, param5, param3, param1, param4);
     }
 
     abstract void a(za param0);
 
     abstract void da(int param0, int param1, int param2, int[] param3);
 
-    abstract void KA(int param0, int param1, int param2, int param3);
+    abstract void setClip(int param0, int param1, int param2, int param3);
 
     abstract za a(int param0);
 
@@ -221,13 +221,13 @@ abstract class GraphicsToolkit {
         }
     }
 
-    abstract void s(int param0, int param1, int param2, int param3, int param4);
+    abstract void drawCircle(int param0, int param1, int param2, int param3, int param4);
 
     abstract mw b(int param0, int param1);
 
     abstract ob a(int param0, int param1, int param2, int param3, int param4, float param5);
 
-    abstract nh a(int[] param0, int param1, int param2, int param3, int param4, boolean param5);
+    abstract ToolkitSprite a(int[] param0, int param1, int param2, int param3, int param4, boolean param5);
 
     abstract void b(int param0);
 
@@ -237,9 +237,9 @@ abstract class GraphicsToolkit {
 
     abstract void a(gda param0);
 
-    final nh a(int[] param0, int param1, int param2, int param3, int param4, int param5) {
+    final ToolkitSprite a(int[] param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
-        nh stackIn_3_0 = null;
+        ToolkitSprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -265,7 +265,7 @@ abstract class GraphicsToolkit {
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4) {
-        this.s(param0, param4, param2, param3, 1);
+        this.drawCircle(param0, param4, param2, param3, 1);
         if (param1 != -11185) {
           this.L(-114, 43, -49);
         }
@@ -275,7 +275,7 @@ abstract class GraphicsToolkit {
 
     abstract void K(int[] param0);
 
-    abstract void aa(int param0, int param1, int param2, int param3, int param4, int param5);
+    abstract void fillRectangle(int param0, int param1, int param2, int param3, int param4, int param5);
 
     abstract int XA();
 

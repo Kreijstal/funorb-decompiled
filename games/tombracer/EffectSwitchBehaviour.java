@@ -131,7 +131,7 @@ final class EffectSwitchBehaviour extends Behaviour implements ut {
           this.field_w = param1.readBits((byte) 44, 8);
           this.field_v = param1.readBits((byte) 44, 8);
           this.field_n = param1.readBits((byte) 44, 4);
-          if (param0.field_E < 9) {
+          if (param0.formatVersion < 9) {
             var4_int = param1.readBits((byte) 44, 3);
             var12 = new int[var4_int];
             var10 = var12;
@@ -152,8 +152,8 @@ final class EffectSwitchBehaviour extends Behaviour implements ut {
             this.field_t.a(var13, 0);
             return;
           }
-          this.field_u = new kpa(6, param0.field_E, param1);
-          this.field_t = new kpa(6, param0.field_E, param1);
+          this.field_u = new kpa(6, param0.formatVersion, param1);
+          this.field_t = new kpa(6, param0.formatVersion, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -336,7 +336,7 @@ final class EffectSwitchBehaviour extends Behaviour implements ut {
               param1.a(26492, true, var3_int);
             }
           }
-          if (4 > this.b(true).field_E) {
+          if (4 > this.b(true).formatVersion) {
             param1.h(3, 0);
           }
           return;

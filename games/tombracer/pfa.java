@@ -2184,13 +2184,13 @@ final class pfa {
           if (!param0) {
             return;
           }
-          boolean decompiledSharedTail0 = !(this.field_f.a((byte) -16) > 0);
+          boolean decompiledSharedTail0 = !(this.field_f.size((byte) -16) > 0);
           if (!decompiledSharedTail0) {
             if (!this.field_g) {
               this.field_c.a(this.field_d, false, 0, 1, true);
             }
             this.field_g = true;
-            var2 = (wk) (this.field_f.f(-80));
+            var2 = (wk) (this.field_f.first(-80));
             if (!var2.field_j) {
               var2.a(0, this.field_j, this.field_e);
               var2.field_j = true;
@@ -2238,7 +2238,7 @@ final class pfa {
           if (param0 != -28562) {
             this.b(96, -22, 33);
           }
-          this.field_f.b((byte) -79, var4);
+          this.field_f.addLast((byte) -79, var4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2297,7 +2297,7 @@ final class pfa {
           }
           this.field_j = jw.field_z[param0] << 16;
           this.field_e = hq.field_b[param0] << 16;
-          this.field_f.d(8);
+          this.field_f.clear(8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2318,10 +2318,10 @@ final class pfa {
           if (null == var1) {
             throw new IllegalStateException();
           }
-          bea.a(var1.field_g, var1.field_m, var1.field_l);
-          bea.b(var1.field_n, var1.field_k, var1.field_h, var1.field_f);
+          SoftwareRasterizer.a(var1.field_g, var1.field_m, var1.field_l);
+          SoftwareRasterizer.b(var1.field_n, var1.field_k, var1.field_h, var1.field_f);
           var1.field_g = null;
-          vt.field_a.b((byte) -67, var1);
+          vt.field_a.addLast((byte) -67, var1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

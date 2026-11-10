@@ -25,7 +25,7 @@ final class bna extends IntrusiveNode {
         pha var1Lifetime1;
         var2 = TombRacer.field_G ? 1 : 0;
         try {
-          var1 = (pha) (uma.field_b.f(-80));
+          var1 = (pha) (uma.field_b.first(-80));
           while (var1 != null) {
             if (var1.field_xb > 0) {
               var1.field_xb = var1.field_xb - 1;
@@ -36,12 +36,12 @@ final class bna extends IntrusiveNode {
                 }
               }
             }
-            var1 = (pha) (uma.field_b.e(122));
+            var1 = (pha) (uma.field_b.next(122));
           }
           if (param0 != 10) {
             return;
           }
-          var1_ref = (ht) (asa.field_j.f(-80));
+          var1_ref = (ht) (asa.field_j.first(-80));
           while (var1_ref != null) {
             if (var1_ref.field_zb > 0) {
               var1_ref.field_zb = var1_ref.field_zb - 1;
@@ -52,14 +52,14 @@ final class bna extends IntrusiveNode {
                 }
               }
             }
-            var1_ref = (ht) (asa.field_j.e(120));
+            var1_ref = (ht) (asa.field_j.next(120));
           }
-          var1Lifetime1 = (pha) (qha.field_g.f(param0 ^ -70));
+          var1Lifetime1 = (pha) (qha.field_g.first(param0 ^ -70));
           while (var1Lifetime1 != null) {
             if (var1Lifetime1.field_xb > 0) {
               var1Lifetime1.field_xb = var1Lifetime1.field_xb - 1;
               if (var1Lifetime1.field_xb != 0) {
-                var1Lifetime1 = (pha) (qha.field_g.e(param0 + 101));
+                var1Lifetime1 = (pha) (qha.field_g.next(param0 + 101));
                 continue;
               }
               var1Lifetime1.field_Lb = 0;
@@ -67,7 +67,7 @@ final class bna extends IntrusiveNode {
                 var1Lifetime1.unlink(72);
               }
             }
-            var1Lifetime1 = (pha) (qha.field_g.e(param0 + 101));
+            var1Lifetime1 = (pha) (qha.field_g.next(param0 + 101));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

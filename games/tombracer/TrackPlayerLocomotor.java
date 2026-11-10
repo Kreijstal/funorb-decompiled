@@ -24,8 +24,8 @@ final class TrackPlayerLocomotor extends Locomotor {
         if (var11.u(-25561)) {
           return;
         }
-        this.field_o.field_f = var11.d(3);
-        this.field_o.field_d = var11.e(9648);
+        this.field_o.field_f = var11.getX(3);
+        this.field_o.field_d = var11.getY(9648);
         var4 = 78 % ((-69 - param0) / 42);
         this.field_n.a(this.field_o, 59);
         var3 = this.field_o.field_f - this.field_n.s(25745);
@@ -123,8 +123,8 @@ final class TrackPlayerLocomotor extends Locomotor {
           var6 = di.field_a * var4 + 2;
           var7 = bt.a((byte) -8, var5, 12, var2_int);
           var8 = hsa.a(20, var6, var3, (byte) -107);
-          bea.f(var7, var8, var5, var6, 0);
-          bea.e(var7 + 1, 1 + var8, var5 - 2, -2 + var6, 16777088);
+          SoftwareRasterizer.f(var7, var8, var5, var6, 0);
+          SoftwareRasterizer.e(var7 + 1, 1 + var8, var5 - 2, -2 + var6, 16777088);
           if (param0 > -63) {
             field_s = (af) null;
           }

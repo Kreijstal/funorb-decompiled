@@ -28,7 +28,7 @@ final class iv extends jea {
           var2 = var10.h(255);
           var3 = var10.h(param0 + 255);
           if (var2 == param0) {
-            var4 = (ik) (Player.field_I.f(param0 ^ -80));
+            var4 = (ik) (Player.field_I.first(param0 ^ -80));
             if (var4 == null) {
               dea.a(60);
               return;
@@ -48,11 +48,11 @@ final class iv extends jea {
           }
           if (var2 == 1) {
             var4_int = var10.f((byte) -128);
-            var5_ref_toa = (toa) (vsa.field_m.f(-80));
+            var5_ref_toa = (toa) (vsa.field_m.first(-80));
             while (var5_ref_toa != null) {
               if (var5_ref_toa.field_i != var3 ||
                 var4_int != var5_ref_toa.field_k) {
-                var5_ref_toa = (toa) (vsa.field_m.e(param0 + 123));
+                var5_ref_toa = (toa) (vsa.field_m.next(param0 + 123));
                 continue;
               }
               break;

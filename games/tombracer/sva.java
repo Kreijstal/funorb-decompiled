@@ -11,7 +11,7 @@ final class sva implements ev {
         if (param0 != 13113) {
           this.field_a = (ob[]) null;
         }
-        this.field_b.d(8);
+        this.field_b.clear(8);
     }
 
     public final void a(iq param0, int param1) {
@@ -70,20 +70,20 @@ final class sva implements ev {
           tga.field_a.xa(var5);
           tga.field_a.ZA(var6, var3_float, var4, (float)var7, (float)var8, (float)var9);
           if (uh.a((byte) -7)) {
-            var12 = (uh) (this.field_b.f(-80));
+            var12 = (uh) (this.field_b.first(-80));
             while (var12 != null) {
               if (!var12.c(param1 - 1459836712)) {
-                var12.a((byte) 100, this.field_c.a(-1553494544).tick);
+                var12.a((byte) 100, this.field_c.getSimulation(-1553494544).tick);
               } else {
                 var12.unlink(57);
               }
-              var12 = (uh) (this.field_b.e(116));
+              var12 = (uh) (this.field_b.next(116));
             }
             tga.field_a.a(0, (ob[]) null);
           }
           if (param1 != -15530) {
             var14 = (iq) null;
-            this.a(92, (fo) null, (iq) null);
+            this.a(92, (Renderable) null, (iq) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -164,7 +164,7 @@ final class sva implements ev {
         }
     }
 
-    public final void a(int param0, fo param1, iq param2) {
+    public final void a(int param0, Renderable param1, iq param2) {
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -190,7 +190,7 @@ final class sva implements ev {
         try {
           if (param0 != 0) {
             var13 = (iq) null;
-            this.a(true, (fo) null, (iq) null);
+            this.a(true, (Renderable) null, (iq) null);
           }
           if (uh.a((byte) -7)) {
             var4_int = param1 instanceof hr ? 1 : 0;
@@ -208,21 +208,21 @@ final class sva implements ev {
                 tga.field_a.a(var5, this.field_a);
                 return;
               }
-              var11 = (uh) (this.field_b.f(-80));
+              var11 = (uh) (this.field_b.first(-80));
               while (var11 != null) {
                 if (var7 != null &&
                   ((gs) (var7)).a(false, var11)) {
                   var8 = -1;
                 } else {
-                  var8 = var11.a(param1.e((byte) -124), param1.b((byte) -101), param1.c((byte) 95), -43);
+                  var8 = var11.a(param1.getRenderZ((byte) -124), param1.getRenderX((byte) -101), param1.getRenderY((byte) 95), -43);
                 }
                 var11.a(var8, 92);
-                var11 = (uh) (this.field_b.e(119));
+                var11 = (uh) (this.field_b.next(119));
               }
               while (var5 < var6) {
                 var10Lifetime1 = null;
                 var9Lifetime1 = 0;
-                var11Lifetime1 = (uh) (this.field_b.f(-80));
+                var11Lifetime1 = (uh) (this.field_b.first(-80));
                 while (var11Lifetime1 != null) {
                   var8Lifetime1 = var11Lifetime1.b(121);
                   if (0 < var8Lifetime1 &&
@@ -230,7 +230,7 @@ final class sva implements ev {
                     var10Lifetime1 = var11Lifetime1;
                     var9Lifetime1 = var8Lifetime1;
                   }
-                  var11Lifetime1 = (uh) (this.field_b.e(115));
+                  var11Lifetime1 = (uh) (this.field_b.next(115));
                 }
                 if (var10Lifetime1 == null) {
                   break;
@@ -263,7 +263,7 @@ final class sva implements ev {
         }
     }
 
-    public final void a(boolean param0, fo param1, iq param2) {
+    public final void a(boolean param0, Renderable param1, iq param2) {
         try {
           if (param0) {
             iq var5 = (iq) null;
@@ -289,7 +289,7 @@ final class sva implements ev {
           return;
         }
         try {
-          this.field_b.b((byte) -61, param1);
+          this.field_b.addLast((byte) -61, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sva.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

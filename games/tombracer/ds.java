@@ -85,7 +85,7 @@ final class ds {
         int var2 = 105 % ((param0 + 9) / 56);
         if (lca.a(false)) {
           if (param1) {
-            bea.c(0, 0, bea.field_g, bea.field_a, 0, 192);
+            SoftwareRasterizer.c(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_a, 0, 192);
           }
           wu.field_a.b(-108, 0, 0);
           return;

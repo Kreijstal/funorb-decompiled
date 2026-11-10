@@ -46,7 +46,7 @@ final class poa extends hga {
         }
     }
 
-    private poa(il param0, int param1) {
+    private poa(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 

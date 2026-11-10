@@ -58,7 +58,7 @@ final class uw {
         return this.field_d;
     }
 
-    final void a(int param0, fo param1, byte param2) {
+    final void a(int param0, Renderable param1, byte param2) {
         if (param2 != -33) {
           return;
         }
@@ -96,7 +96,7 @@ final class uw {
         }
     }
 
-    final void a(byte param0, int param1, fo param2) {
+    final void a(byte param0, int param1, Renderable param2) {
         try {
           this.field_c[param1].a(param2, (byte) -61);
           int var4_int = -46 % ((param0 + 45) / 37);

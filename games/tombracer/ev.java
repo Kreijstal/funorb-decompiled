@@ -12,7 +12,7 @@ interface ev {
 
     public abstract void a(iq param0, int param1);
 
-    public abstract void a(int param0, fo param1, iq param2);
+    public abstract void a(int param0, Renderable param1, iq param2);
 
-    public abstract void a(boolean param0, fo param1, iq param2);
+    public abstract void a(boolean param0, Renderable param1, iq param2);
 }

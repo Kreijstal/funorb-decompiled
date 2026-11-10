@@ -126,7 +126,7 @@ final class roa {
         return ci.a(this.field_r, -1);
     }
 
-    final boolean a(int param0, int param1, gma param2, int param3, int param4, Room param5, int param6, int param7, int param8, boolean param9) {
+    final boolean a(int param0, int param1, WorldBody param2, int param3, int param4, Room param5, int param6, int param7, int param8, boolean param9) {
         int var16 = 0;
         Projectile stackIn_31_0 = null;
         boolean stackIn_32_1 = false;

@@ -62,7 +62,7 @@ final class vs extends ofa {
         super.a(param0, param1, param2);
         ft.field_c.a(this.field_S, param2 + (this.field_m >> 1), param0 + 103, 16777215, -1);
         if (null != this.field_M) {
-          bea.c(20 + param2, param0 + 120 - 7, 260, 8421504);
+          SoftwareRasterizer.drawHorizontalLine(20 + param2, param0 + 120 - 7, 260, 8421504);
           ft.field_c.a(this.field_M, param2 + 20, 120 + param0 + 8, 260, 100, 16777215, -1, 1, 0, ft.field_c.field_w);
         }
     }

@@ -53,7 +53,7 @@ final class DarknessBehaviour extends Behaviour {
             this.field_q = 56;
           }
           var4_int = param1.i(-1);
-          stackIn_3_0 = this.a(var4_int, var4_int, param2, param1.d(3), (byte) -36, param1.e(9648));
+          stackIn_3_0 = this.a(var4_int, var4_int, param2, param1.getX(3), (byte) -36, param1.getY(9648));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -116,8 +116,8 @@ final class DarknessBehaviour extends Behaviour {
         }
         nm.a(this.field_r, (byte) 89);
         var7 = 0;
-        var8 = param5 - (param0 / 2 + this.field_g.d(3) - this.field_g.c(-15) / 2);
-        var9 = -this.field_g.e(9648) + this.field_g.a((byte) 55) / 2 + (param2 - param1 / 2);
+        var8 = param5 - (param0 / 2 + this.field_g.getX(3) - this.field_g.getWidth(-15) / 2);
+        var9 = -this.field_g.getY(9648) + this.field_g.getHeight((byte) 55) / 2 + (param2 - param1 / 2);
         var10 = param0 + var8;
         var11 = var9 + param1;
         var12 = this.b(-105, var8);
@@ -129,8 +129,8 @@ final class DarknessBehaviour extends Behaviour {
           var18 = this.field_r.field_m * var17 + var12;
           for (var19 = var12; var14 >= var19; var19++) {
             if (var18 >= 0 &&
-              var18 < bea.field_l.length &&
-              this.field_q <= bea.field_l[var18]) {
+              var18 < SoftwareRasterizer.field_l.length &&
+              this.field_q <= SoftwareRasterizer.field_l[var18]) {
               if (var13 != var17 &&
                 var17 != var15 &&
                 var19 != var12 &&
@@ -168,7 +168,7 @@ final class DarknessBehaviour extends Behaviour {
         this.field_n = 2621440;
         this.field_p = 255;
         try {
-          if (param0.field_E >= 4) {
+          if (param0.formatVersion >= 4) {
             this.field_n = param1.readBits((byte) 44, 10) << 16;
           }
           return;
@@ -320,7 +320,7 @@ final class DarknessBehaviour extends Behaviour {
         }
         if (this.field_n > 0) {
           var3 = this.m((byte) 19);
-          this.a(var3.d(3), (byte) 86, 10, this.field_n, var3.e(param0 ^ 12442));
+          this.a(var3.getX(3), (byte) 86, 10, this.field_n, var3.getY(param0 ^ 12442));
         }
     }
 
@@ -345,10 +345,10 @@ final class DarknessBehaviour extends Behaviour {
             var10 = (pc) null;
             this.a(26, (Effect) null, (pc) null);
           }
-          var4_int = param2.field_d - this.field_g.d(3) + this.field_g.c(-67) / 2;
-          var5 = param2.field_e - (this.field_g.d(3) - this.field_g.c(-63) / 2);
-          var6 = param2.field_k - this.field_g.e(9648) + this.field_g.a((byte) 55) / 2;
-          var7 = param2.field_a + (-this.field_g.e(9648) + this.field_g.a((byte) 55) / 2);
+          var4_int = param2.field_d - this.field_g.getX(3) + this.field_g.getWidth(-67) / 2;
+          var5 = param2.field_e - (this.field_g.getX(3) - this.field_g.getWidth(-63) / 2);
+          var6 = param2.field_k - this.field_g.getY(9648) + this.field_g.getHeight((byte) 55) / 2;
+          var7 = param2.field_a + (-this.field_g.getY(9648) + this.field_g.getHeight((byte) 55) / 2);
           var8 = param1.size;
           if (var8 >= 10) {
             var8 = 9;
@@ -391,8 +391,8 @@ final class DarknessBehaviour extends Behaviour {
         int var3;
         int stackIn_12_1 = 0;
         int stackIn_13_2 = 0;
-        var2 = this.field_g.c(param0 - 21) >> 16;
-        var3 = this.field_g.a((byte) 55) >> 16;
+        var2 = this.field_g.getWidth(param0 - 21) >> 16;
+        var3 = this.field_g.getHeight((byte) 55) >> 16;
         if (param0 != 0) {
           return;
         }

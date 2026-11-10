@@ -48,13 +48,13 @@ final class VortexBehaviour extends Behaviour {
         hr var27;
         hr var28;
         var26 = TombRacer.field_G ? 1 : 0;
-        var2 = this.field_g.d(3);
+        var2 = this.field_g.getX(3);
         if (param0 != 5418) {
           field_u = (String) null;
         }
-        var3 = this.field_g.e(param0 + 4230);
-        var4 = this.field_g.c(param0 - 5487);
-        var5 = this.field_g.a((byte) 55);
+        var3 = this.field_g.getY(param0 + 4230);
+        var4 = this.field_g.getWidth(param0 - 5487);
+        var5 = this.field_g.getHeight((byte) 55);
         var7 = this.field_p << 16;
         var8 = this.field_r << 16;
         var9 = var4 >> 17;
@@ -81,9 +81,9 @@ final class VortexBehaviour extends Behaviour {
           var20 = var18[var19];
           if (this.field_g != var20 &&
             !this.field_g.a(var20, true)) {
-            var21 = var20.d(3);
-            var22 = var20.e(9648);
-            if (this.field_g.a((byte) 110, var22, var21, var20.a((byte) 55), var20.c(-40))) {
+            var21 = var20.getX(3);
+            var22 = var20.getY(9648);
+            if (this.field_g.a((byte) 110, var22, var21, var20.getHeight((byte) 55), var20.getWidth(-40))) {
               var23 = var21 - var2 >> 16;
               var24 = -var3 + var22 >> 16;
               var25 = ConstrainToRectangleLocomotor.a(var24, var23, 124);

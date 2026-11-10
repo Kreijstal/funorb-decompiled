@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kfa {
+final class CursorController {
     private java.awt.Component field_b;
     private java.awt.Robot field_a;
 
@@ -48,7 +48,7 @@ final class kfa {
         }
     }
 
-    public kfa() throws Exception {
+    public CursorController() throws Exception {
         java.awt.Robot var2 = new java.awt.Robot();
         this.field_a = var2;
     }

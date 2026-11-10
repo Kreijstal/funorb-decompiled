@@ -81,8 +81,8 @@ abstract class cda extends dg {
         var5 = 0;
         var6 = 0;
         if (!(this.field_h instanceof Trap)) {
-          var4Lifetime1 = this.field_h.d(3);
-          var5Lifetime1 = this.field_h.e(9648);
+          var4Lifetime1 = this.field_h.getX(3);
+          var5Lifetime1 = this.field_h.getY(9648);
           var6Lifetime1 = this.field_h.g(-25787);
         } else {
           var7 = (Trap) (this.field_h);

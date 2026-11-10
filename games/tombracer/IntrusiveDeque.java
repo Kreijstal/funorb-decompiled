@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class IntrusiveDeque {
-    static nh field_c;
+    static ToolkitSprite field_c;
     static su field_a;
     static String[][] field_d;
     IntrusiveNode sentinel;
     private IntrusiveNode cursor;
 
-    final IntrusiveNode a(int param0, IntrusiveNode param1) {
+    final IntrusiveNode startForwardFrom(int param0, IntrusiveNode param1) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         IntrusiveNode stackIn_5_0 = null;
@@ -66,7 +66,7 @@ final class IntrusiveDeque {
           param1.next = this.sentinel.next;
           param1.previous = this.sentinel;
           if (param0 < 87) {
-            this.f(54);
+            this.first(54);
           }
           param1.previous.next = param1;
           param1.next.previous = param1;
@@ -182,7 +182,7 @@ final class IntrusiveDeque {
             is.field_yb.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(99, uba.field_h, new String[]{ol.field_b});
             dn.field_b.field_vb.field_vb.field_r = null;
             var6 = null;
-            var7 = (mu) (var4.f(-80));
+            var7 = (mu) (var4.first(-80));
             while (true) {
               boolean decompiledFrameRemainder0 = true;
               if (var7 != null) {
@@ -239,7 +239,7 @@ final class IntrusiveDeque {
                   if (var14 <= 0) {
                     stackIn_47_1 = var7.field_tb;
                   } else {
-                    stackIn_47_1 = il.a(var7.field_xb.field_H, var7.field_tb, var14);
+                    stackIn_47_1 = BitmapFont.a(var7.field_xb.field_H, var7.field_tb, var14);
                   }
                   stackIn_46_0.field_r = stackIn_47_1;
                   var7.field_xb.a(var14, di.field_a, -23776, var9, var13);
@@ -286,7 +286,7 @@ final class IntrusiveDeque {
                   } else {
                     qda.field_b = var7.field_vb;
                   }
-                  var7 = (mu) (var4.e(111));
+                  var7 = (mu) (var4.next(111));
                   continue;
                 }
               } else {
@@ -315,7 +315,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final IntrusiveNode a(int param0) {
+    final IntrusiveNode previous(int param0) {
         IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
@@ -343,7 +343,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final int a(byte param0) {
+    final int size(byte param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         IntrusiveNode var3 = null;
@@ -376,7 +376,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final boolean d(byte param0) {
+    final boolean isEmpty(byte param0) {
         RuntimeException var2 = null;
         boolean stackIn_7_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -393,7 +393,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final IntrusiveNode c(int param0) {
+    final IntrusiveNode removeFirst(int param0) {
         IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -417,7 +417,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final void b(byte param0, IntrusiveNode param1) {
+    final void addLast(byte param0, IntrusiveNode param1) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -449,7 +449,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final IntrusiveNode f(int param0) {
+    final IntrusiveNode first(int param0) {
         IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         IntrusiveNode stackIn_2_0 = null;
@@ -482,7 +482,7 @@ final class IntrusiveDeque {
         RuntimeException var1 = null;
         try {
           if (param0 <= 87) {
-            field_c = (nh) null;
+            field_c = (ToolkitSprite) null;
           }
           field_d = (String[][]) null;
           field_c = null;
@@ -495,7 +495,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final IntrusiveNode b(int param0) {
+    final IntrusiveNode last(int param0) {
         IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_4_0 = null;
@@ -523,7 +523,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final void d(int param0) {
+    final void clear(int param0) {
         RuntimeException runtimeException = null;
         IntrusiveNode var2 = null;
         int var3 = 0;
@@ -542,7 +542,7 @@ final class IntrusiveDeque {
             break;
           }
           if (param0 != 8) {
-            this.a(-64);
+            this.previous(-64);
           }
           this.cursor = null;
           return;
@@ -553,7 +553,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final IntrusiveNode e(int param0) {
+    final IntrusiveNode next(int param0) {
         IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_4_0 = null;

@@ -62,21 +62,21 @@ final class aka extends cda {
         }
         if (var3 != 0) {
           var5_intLifetime1 = this.i(-6874);
-          var6 = new nta(this.b((byte) 40), this.c((byte) 123), this.e((byte) -96), this.field_C, var5_intLifetime1, var3);
-          var6.a((byte) -113, this.field_h.f((byte) -109).j((byte) -118), this.k((byte) -99));
+          var6 = new nta(this.getRenderX((byte) 40), this.getRenderY((byte) 123), this.getRenderZ((byte) -96), this.field_C, var5_intLifetime1, var3);
+          var6.a((byte) -113, this.field_h.getRoom((byte) -109).j((byte) -118), this.k((byte) -99));
         }
-        var5 = (w) (this.field_h.f((byte) -99).field_G);
+        var5 = (w) (this.field_h.getRoom((byte) -99).field_G);
         if (var5 == null) {
           return;
         }
         if (param1 == 3) {
-          var5.a(new fm(78, this.b((byte) 71), this.c((byte) 106), this.e((byte) -91)), -58);
+          var5.a(new fm(78, this.getRenderX((byte) 71), this.getRenderY((byte) 106), this.getRenderZ((byte) -91)), -58);
           return;
         }
         if (param1 != 2) {
           return;
         }
-        var5.a(new fm(80, this.b((byte) 90), this.c((byte) 94), this.e((byte) -108)), -58);
+        var5.a(new fm(80, this.getRenderX((byte) 90), this.getRenderY((byte) 94), this.getRenderZ((byte) -108)), -58);
         return;
     }
 
@@ -138,7 +138,7 @@ final class aka extends cda {
         jo.a(oba.field_f, 0, kua.field_i, rfa.field_C, lma.field_r);
     }
 
-    final void a(gr param0, gma param1, byte param2) {
+    final void a(gr param0, WorldBody param1, byte param2) {
         try {
           super.a(param0, param1, param2);
         } catch (RuntimeException runtimeException) {
@@ -187,7 +187,7 @@ final class aka extends cda {
           this.field_C.a(1, false, (byte) -114, var4);
         }
         this.field_C.a(param0 ^ param0);
-        var5 = (w) (this.field_h.f((byte) -79).field_G);
+        var5 = (w) (this.field_h.getRoom((byte) -79).field_G);
         if (var5 == null) {
           return;
         }
@@ -199,10 +199,10 @@ final class aka extends cda {
               if (var12 == null) {
                 return;
               }
-              var7 = var12.a((byte) 110, var12.H(param0 ^ -4445).e(param0 ^ -13502), var12.H(66).d(param0 ^ -4367), var12.H(-128).a((byte) 55), var12.H(-120).c(-125)) ? 1 : 0;
+              var7 = var12.a((byte) 110, var12.H(param0 ^ -4445).getY(param0 ^ -13502), var12.H(66).getX(param0 ^ -4367), var12.H(-128).getHeight((byte) 55), var12.H(-120).getWidth(-125)) ? 1 : 0;
               if (var7 != 0 &&
                 !this.field_w) {
-                var5.a(new fm(81, this.b((byte) 56), this.c((byte) 99), this.e((byte) -117)), -58);
+                var5.a(new fm(81, this.getRenderX((byte) 56), this.getRenderY((byte) 99), this.getRenderZ((byte) -117)), -58);
                 this.field_w = true;
               }
               if (var7 == 0 &&
@@ -211,14 +211,14 @@ final class aka extends cda {
               }
               return;
             }
-            var5.a(new fm(79, this.b((byte) -112), this.c((byte) 121), this.e((byte) -119)), param0 + 4308);
+            var5.a(new fm(79, this.getRenderX((byte) -112), this.getRenderY((byte) 121), this.getRenderZ((byte) -119)), param0 + 4308);
             this.field_y = true;
           }
           var13 = (Trap) (this.field_h);
           if (var13 == null) {
             return;
           }
-          var7Lifetime4 = var13.a((byte) 110, var13.H(param0 ^ -4445).e(param0 ^ -13502), var13.H(66).d(param0 ^ -4367), var13.H(-128).a((byte) 55), var13.H(-120).c(-125)) ? 1 : 0;
+          var7Lifetime4 = var13.a((byte) 110, var13.H(param0 ^ -4445).getY(param0 ^ -13502), var13.H(66).getX(param0 ^ -4367), var13.H(-128).getHeight((byte) 55), var13.H(-120).getWidth(-125)) ? 1 : 0;
           if (var7Lifetime4 != 0) {
             if (this.field_w) {
               if (var7Lifetime4 == 0 &&
@@ -227,7 +227,7 @@ final class aka extends cda {
               }
               return;
             }
-            var5.a(new fm(81, this.b((byte) 56), this.c((byte) 99), this.e((byte) -117)), -58);
+            var5.a(new fm(81, this.getRenderX((byte) 56), this.getRenderY((byte) 99), this.getRenderZ((byte) -117)), -58);
             this.field_w = true;
           }
           if (var7Lifetime4 != 0) {
@@ -240,21 +240,21 @@ final class aka extends cda {
           return;
         }
         if (this.field_z == 20) {
-          var5.a(new fm(77, this.b((byte) 49), this.c((byte) 108), this.e((byte) -87)), -58);
+          var5.a(new fm(77, this.getRenderX((byte) 49), this.getRenderY((byte) 108), this.getRenderZ((byte) -87)), -58);
           this.field_z = 0;
           if (!this.field_y &&
             this.field_h.j(-1)) {
-            var5.a(new fm(79, this.b((byte) -112), this.c((byte) 121), this.e((byte) -119)), param0 + 4308);
+            var5.a(new fm(79, this.getRenderX((byte) -112), this.getRenderY((byte) 121), this.getRenderZ((byte) -119)), param0 + 4308);
             this.field_y = true;
           }
           var11 = (Trap) (this.field_h);
           if (var11 == null) {
             return;
           }
-          var7Lifetime1 = var11.a((byte) 110, var11.H(param0 ^ -4445).e(param0 ^ -13502), var11.H(66).d(param0 ^ -4367), var11.H(-128).a((byte) 55), var11.H(-120).c(-125)) ? 1 : 0;
+          var7Lifetime1 = var11.a((byte) 110, var11.H(param0 ^ -4445).getY(param0 ^ -13502), var11.H(66).getX(param0 ^ -4367), var11.H(-128).getHeight((byte) 55), var11.H(-120).getWidth(-125)) ? 1 : 0;
           if (var7Lifetime1 != 0) {
             if (!this.field_w) {
-              var5.a(new fm(81, this.b((byte) 56), this.c((byte) 99), this.e((byte) -117)), -58);
+              var5.a(new fm(81, this.getRenderX((byte) 56), this.getRenderY((byte) 99), this.getRenderZ((byte) -117)), -58);
               this.field_w = true;
             }
             if (var7Lifetime1 == 0 &&
@@ -274,10 +274,10 @@ final class aka extends cda {
           if (var9 == null) {
             return;
           }
-          var7Lifetime2 = var9.a((byte) 110, var9.H(param0 ^ -4445).e(param0 ^ -13502), var9.H(66).d(param0 ^ -4367), var9.H(-128).a((byte) 55), var9.H(-120).c(-125)) ? 1 : 0;
+          var7Lifetime2 = var9.a((byte) 110, var9.H(param0 ^ -4445).getY(param0 ^ -13502), var9.H(66).getX(param0 ^ -4367), var9.H(-128).getHeight((byte) 55), var9.H(-120).getWidth(-125)) ? 1 : 0;
           if (var7Lifetime2 != 0) {
             if (!this.field_w) {
-              var5.a(new fm(81, this.b((byte) 56), this.c((byte) 99), this.e((byte) -117)), -58);
+              var5.a(new fm(81, this.getRenderX((byte) 56), this.getRenderY((byte) 99), this.getRenderZ((byte) -117)), -58);
               this.field_w = true;
             }
             if (var7Lifetime2 == 0 &&
@@ -292,21 +292,21 @@ final class aka extends cda {
           return;
         }
         if (this.field_h.j(-1)) {
-          var5.a(new fm(79, this.b((byte) -112), this.c((byte) 121), this.e((byte) -119)), param0 + 4308);
+          var5.a(new fm(79, this.getRenderX((byte) -112), this.getRenderY((byte) 121), this.getRenderZ((byte) -119)), param0 + 4308);
           this.field_y = true;
         }
         var10 = (Trap) (this.field_h);
         if (var10 == null) {
           return;
         }
-        var7Lifetime3 = var10.a((byte) 110, var10.H(param0 ^ -4445).e(param0 ^ -13502), var10.H(66).d(param0 ^ -4367), var10.H(-128).a((byte) 55), var10.H(-120).c(-125)) ? 1 : 0;
+        var7Lifetime3 = var10.a((byte) 110, var10.H(param0 ^ -4445).getY(param0 ^ -13502), var10.H(66).getX(param0 ^ -4367), var10.H(-128).getHeight((byte) 55), var10.H(-120).getWidth(-125)) ? 1 : 0;
         if (var7Lifetime3 == 0) {
           if (this.field_w) {
             this.field_w = false;
           }
         } else {
           if (!this.field_w) {
-            var5.a(new fm(81, this.b((byte) 56), this.c((byte) 99), this.e((byte) -117)), -58);
+            var5.a(new fm(81, this.getRenderX((byte) 56), this.getRenderY((byte) 99), this.getRenderZ((byte) -117)), -58);
             this.field_w = true;
           }
           if (var7Lifetime3 == 0 &&

@@ -18,7 +18,7 @@ final class PlatformTaskDispatcher implements Runnable {
     private Object field_t;
     RandomAccessFileHandle field_n;
     java.awt.EventQueue field_r;
-    private sp field_w;
+    private MicrosoftDisplayController field_w;
     private qj field_g;
     static java.lang.reflect.Method field_b;
     private static String field_u;
@@ -159,7 +159,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           if (this.field_p) {
                             this.field_g.a(0, var3_int, var4);
                           } else {
-                            Class.forName("kfa").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_t, new Object[]{new Integer(var3_int), new Integer(var4)});
+                            Class.forName("CursorController").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_t, new Object[]{new Integer(var3_int), new Integer(var4)});
                           }
                           break;
                         }
@@ -169,7 +169,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           var3_int = stackIn_84_0;
                           var15 = (java.awt.Component) (var8.field_c);
                           if (!this.field_p) {
-                            Class.forName("kfa").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_t, new Object[]{var15, new Boolean(var3_int != 0)});
+                            Class.forName("CursorController").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_t, new Object[]{var15, new Boolean(var3_int != 0)});
                           } else {
                             this.field_g.a(var3_int != 0, -54, var15);
                           }
@@ -178,7 +178,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         if (!this.field_p &&
                           17 == var2_int) {
                           var13 = (Object[]) (var8.field_c);
-                          Class.forName("kfa").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_t, new Object[]{var13[0], var13[1], new Integer(var8.field_e), new Integer(var8.field_d), var13[2]});
+                          Class.forName("CursorController").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_t, new Object[]{var13[0], var13[1], new Integer(var8.field_e), new Integer(var8.field_d), var13[2]});
                         } else {
                           if (var2_int != 16) {
                             throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
@@ -539,7 +539,7 @@ final class PlatformTaskDispatcher implements Runnable {
         ThreadGroup var5 = null;
         ThreadGroup var6 = null;
         Thread[] var7 = null;
-        sp var9 = null;
+        MicrosoftDisplayController var9 = null;
         ThreadGroup var10 = null;
         ThreadGroup var11 = null;
         this.field_c = false;
@@ -639,7 +639,7 @@ final class PlatformTaskDispatcher implements Runnable {
             if (!this.field_p) {
               this.field_i = Class.forName("pj").newInstance();
             } else {
-              var9 = new sp();
+              var9 = new MicrosoftDisplayController();
               this.field_w = var9;
             }
           } catch (java.lang.Throwable decompiledCaughtParameter9) {
@@ -648,7 +648,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           try {
             if (!this.field_p) {
-              this.field_t = Class.forName("kfa").newInstance();
+              this.field_t = Class.forName("CursorController").newInstance();
             } else {
               this.field_g = new qj();
             }

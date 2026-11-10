@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pta implements fo {
+final class pta implements Renderable {
     static String field_g;
     private Room field_e;
     IntrusiveDeque field_b;
@@ -19,7 +19,7 @@ final class pta implements fo {
         field_d = (String) null;
     }
 
-    public final int e(byte param0) {
+    public final int getRenderZ(byte param0) {
         if (param0 > -86) {
           this.field_e = (Room) null;
           return 0;
@@ -34,7 +34,7 @@ final class pta implements fo {
         field_g = (String) null;
     }
 
-    public final int c(byte param0) {
+    public final int getRenderY(byte param0) {
         if (param0 < 91) {
           CharSequence var3 = (CharSequence) null;
           pta.a((CharSequence) null, -61);
@@ -46,10 +46,10 @@ final class pta implements fo {
     final int a(int param0, int param1) {
         int var5 = TombRacer.field_G ? 1 : 0;
         int var3 = -68 % ((-41 - param1) / 42);
-        c var4 = (c) (this.field_b.f(-80));
+        c var4 = (c) (this.field_b.first(-80));
         while (var4 != null) {
           param0 = var4.a(param0, (byte) -39);
-          var4 = (c) (this.field_b.e(121));
+          var4 = (c) (this.field_b.next(121));
         }
         return param0;
     }
@@ -58,7 +58,7 @@ final class pta implements fo {
         try {
           this.field_a = param2 ? true : false;
           if (!param2) {
-            param0.a((byte) 83, param3, (fo) (this));
+            param0.a((byte) 83, param3, (Renderable) (this));
           }
           int var5_int = -45 / ((59 - param1) / 63);
         } catch (RuntimeException runtimeException) {
@@ -71,31 +71,31 @@ final class pta implements fo {
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
         if (!param0) {
-          var2 = (c) (this.field_b.f(-80));
+          var2 = (c) (this.field_b.first(-80));
           while (var2 != null) {
             System.out.println(var2);
-            var2 = (c) (this.field_b.e(116));
+            var2 = (c) (this.field_b.next(116));
           }
         } else {
           field_d = (String) null;
-          var2 = (c) (this.field_b.f(-80));
+          var2 = (c) (this.field_b.first(-80));
           while (var2 != null) {
             System.out.println(var2);
-            var2 = (c) (this.field_b.e(116));
+            var2 = (c) (this.field_b.next(116));
           }
         }
     }
 
     final void a(boolean param0, byte param1) {
         int var4 = TombRacer.field_G ? 1 : 0;
-        c var3 = (c) (this.field_b.f(-80));
+        c var3 = (c) (this.field_b.first(-80));
         while (var3 != null) {
           var3.a(-1, param0);
           if (var3.h(18407)) {
             var3.unlink(76);
-            this.field_c.b((byte) -88, var3);
+            this.field_c.addLast((byte) -88, var3);
           }
-          var3 = (c) (this.field_b.e(127));
+          var3 = (c) (this.field_b.next(127));
         }
         if (param1 >= -19) {
           field_d = (String) null;
@@ -105,11 +105,11 @@ final class pta implements fo {
 
     final void a(byte param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
-        c var2 = (c) (this.field_b.f(-80));
+        c var2 = (c) (this.field_b.first(-80));
         while (var2 != null) {
           var2.unlink(88);
-          this.field_c.b((byte) -60, var2);
-          var2 = (c) (this.field_b.e(112));
+          this.field_c.addLast((byte) -60, var2);
+          var2 = (c) (this.field_b.next(112));
         }
         if (param0 > 111) {
           return;
@@ -138,8 +138,8 @@ final class pta implements fo {
           if (param0 != -2698) {
             this.a((byte) 28);
           }
-          if (!this.field_c.d((byte) 14)) {
-            var6 = (c) (this.field_c.c(param0 ^ 2800));
+          if (!this.field_c.isEmpty((byte) 14)) {
+            var6 = (c) (this.field_c.removeFirst(param0 ^ 2800));
             var6.unlink(param0 + 2821);
           } else {
             var6 = this.field_f.d(true);
@@ -149,7 +149,7 @@ final class pta implements fo {
             param3 != null) {
             var6.a(param3, param0 + 8163);
           }
-          this.field_b.b((byte) -109, var6);
+          this.field_b.addLast((byte) -109, var6);
           stackIn_9_0 = var6;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -166,7 +166,7 @@ final class pta implements fo {
         }
     }
 
-    public final void a(int param0, iq param1) {
+    public final void render(int param0, iq param1) {
         int var4 = 0;
         c var5 = null;
         RuntimeException stackIn_8_0 = null;
@@ -176,13 +176,13 @@ final class pta implements fo {
         RuntimeException var3 = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          var5 = (c) (this.field_b.f(-80));
+          var5 = (c) (this.field_b.first(-80));
           if (param0 <= 103) {
             return;
           }
           while (var5 != null) {
-            var5.a(104, param1);
-            var5 = (c) (this.field_b.e(121));
+            var5.render(104, param1);
+            var5 = (c) (this.field_b.next(121));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -199,7 +199,7 @@ final class pta implements fo {
         }
     }
 
-    public final int b(byte param0) {
+    public final int getRenderX(byte param0) {
         int var2 = 35 / ((param0 + 23) / 53);
         return 0;
     }
@@ -209,17 +209,17 @@ final class pta implements fo {
         c var4;
         var3 = TombRacer.field_G ? 1 : 0;
         if (param0 > 93) {
-          var4 = (c) (this.field_b.f(-80));
+          var4 = (c) (this.field_b.first(-80));
           while (var4 != null) {
             var4.a(this.field_e, -63);
-            var4 = (c) (this.field_b.e(109));
+            var4 = (c) (this.field_b.next(109));
           }
         } else {
-          this.e((byte) 14);
-          var4 = (c) (this.field_b.f(-80));
+          this.getRenderZ((byte) 14);
+          var4 = (c) (this.field_b.first(-80));
           while (var4 != null) {
             var4.a(this.field_e, -63);
-            var4 = (c) (this.field_b.e(109));
+            var4 = (c) (this.field_b.next(109));
           }
         }
     }
@@ -266,7 +266,7 @@ final class pta implements fo {
           this.field_e = param0;
           this.field_f = param1;
           for (var4_int = 0; param2 > var4_int; var4_int++) {
-            this.field_c.b((byte) -81, param1.d(true));
+            this.field_c.addLast((byte) -81, param1.d(true));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

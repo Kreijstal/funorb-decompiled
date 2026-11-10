@@ -167,7 +167,7 @@ abstract class Locomotor extends IntrusiveNode implements lj, noa, gr {
         try {
           stackIn_4_1 = (param1.readBits((byte) 44, 1) == 1);
           this.field_k = stackIn_4_1;
-          if (param0.field_E < 22) {
+          if (param0.formatVersion < 22) {
             return;
           }
           stackIn_9_1 = (param1.readBits((byte) 44, 1) == 1);

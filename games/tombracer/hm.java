@@ -146,7 +146,7 @@ final class hm extends tfa implements gf {
         ng.field_b = null;
         em.field_h = null;
         qf.field_k = null;
-        Room.field_p = (nh[][]) null;
+        Room.field_p = (ToolkitSprite[][]) null;
         dn.field_d = null;
         ng.field_k = null;
         ega.field_e = null;
