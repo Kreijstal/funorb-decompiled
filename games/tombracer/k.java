@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class k extends qr {
+final class k extends SingleChildWidget {
     static String field_z;
     private static String[] field_y;
     static int field_A;
 
-    final void a(byte param0, ae param1, int param2, int param3, int param4, int param5) {
+    final void handlePointerRelease(byte param0, UiWidget param1, int param2, int param3, int param4, int param5) {
         vp var7 = null;
         try {
-          super.a(param0, param1, param2, param3, param4, param5);
+          super.handlePointerRelease(param0, param1, param2, param3, param4, param5);
           var7 = ava.field_f;
           if (var7 != null &&
-            this.a(param5, param3, 17, param2, param4)) {
+            this.containsPointer(param5, param3, 17, param2, param4)) {
             if (this.field_h instanceof kja) {
               ((kja) (this.field_h)).a(var7, (byte) 59, this);
               ava.field_f = null;
@@ -29,10 +29,10 @@ final class k extends qr {
         }
     }
 
-    private k(int param0, int param1, int param2, int param3, isa param4, qc param5, ae param6) {
+    private k(int param0, int param1, int param2, int param3, isa param4, qc param5, UiWidget param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
-          this.field_x = param6;
+          this.child = param6;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "k.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }

@@ -16,7 +16,7 @@ class vpa implements isa, oaa {
     int field_k;
     private boolean field_b;
 
-    public final int a(int param0, ae param1) {
+    public final int a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         vpa var4 = null;
         int stackIn_3_0 = 0;
@@ -46,7 +46,7 @@ class vpa implements isa, oaa {
         }
     }
 
-    public final int a(ae param0, byte param1, int param2, int param3, int param4, int param5) {
+    public final int a(UiWidget param0, byte param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -74,7 +74,7 @@ class vpa implements isa, oaa {
         }
     }
 
-    private final int a(ae param0, int param1, int param2, int param3) {
+    private final int a(UiWidget param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -101,9 +101,9 @@ class vpa implements isa, oaa {
         }
     }
 
-    String d(int param0, ae param1) {
+    String d(int param0, UiWidget param1) {
         RuntimeException var3 = null;
-        ae var4 = null;
+        UiWidget var4 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -111,8 +111,8 @@ class vpa implements isa, oaa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -4) {
-            var4 = (ae) null;
-            this.a((ae) null, -39);
+            var4 = (UiWidget) null;
+            this.a((UiWidget) null, -39);
           }
           stackIn_3_0 = param1.field_o;
           return stackIn_3_0;
@@ -130,7 +130,7 @@ class vpa implements isa, oaa {
         }
     }
 
-    private final void a(boolean param0, ae param1, int param2, int param3) {
+    private final void a(boolean param0, UiWidget param1, int param2, int param3) {
         try {
           this.a(this.field_m, 0, param1, 0, param3, 12589, param2, this.field_j);
           if (param0) {
@@ -148,7 +148,7 @@ class vpa implements isa, oaa {
         return qga.field_m;
     }
 
-    private final void a(int param0, int param1, ae param2, int param3, int param4, int param5, int param6, int param7) {
+    private final void a(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6, int param7) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -219,8 +219,8 @@ class vpa implements isa, oaa {
 
     public final int a(byte param0) {
         if (param0 != -90) {
-          ae var3 = (ae) null;
-          this.a(-102, (ae) null);
+          UiWidget var3 = (UiWidget) null;
+          this.a(-102, (UiWidget) null);
         }
         return this.field_e.field_w + this.field_e.field_k;
     }
@@ -233,8 +233,8 @@ class vpa implements isa, oaa {
           param0.field_a = this.field_a;
           param0.field_i = this.field_i;
           if (param1 >= -21) {
-            ae var4 = (ae) null;
-            discarded$0 = this.a(61, 17, (ae) null, (byte) -104);
+            UiWidget var4 = (UiWidget) null;
+            discarded$0 = this.a(61, 17, (UiWidget) null, (byte) -104);
           }
           param0.field_k = this.field_k;
           param0.field_h = this.field_h;
@@ -250,7 +250,7 @@ class vpa implements isa, oaa {
         }
     }
 
-    public final void a(int param0, ae param1, int param2, int param3, int param4, int param5) {
+    public final void a(int param0, UiWidget param1, int param2, int param3, int param4, int param5) {
         int var12 = 0;
         int stackIn_16_0 = 0;
         int stackIn_21_0 = 0;
@@ -277,7 +277,7 @@ class vpa implements isa, oaa {
           if (param0 != -1) {
             return;
           }
-          if (param1.b((byte) -34)) {
+          if (param1.hasKeyboardFocus((byte) -34)) {
             var17 = this.a(param1, 14157);
             var18 = var17;
             if (param4 < param5) {
@@ -328,7 +328,7 @@ class vpa implements isa, oaa {
         }
     }
 
-    public final int a(int param0, ae param1, byte param2) {
+    public final int a(int param0, UiWidget param1, byte param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -357,7 +357,7 @@ class vpa implements isa, oaa {
         }
     }
 
-    private final void c(int param0, ae param1) {
+    private final void c(int param0, UiWidget param1) {
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
@@ -429,10 +429,10 @@ class vpa implements isa, oaa {
         }
     }
 
-    private final int b(int param0, ae param1) {
+    private final int b(int param0, UiWidget param1) {
         int discarded$1 = 0;
         RuntimeException var3 = null;
-        ae var4 = null;
+        UiWidget var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -440,8 +440,8 @@ class vpa implements isa, oaa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 2147483647) {
-            var4 = (ae) null;
-            discarded$1 = this.a(60, 118, (ae) null, (byte) -16);
+            var4 = (UiWidget) null;
+            discarded$1 = this.a(60, 118, (UiWidget) null, (byte) -16);
           }
           stackIn_3_0 = param1.field_p - this.field_g - this.field_i;
           return stackIn_3_0;
@@ -459,22 +459,22 @@ class vpa implements isa, oaa {
         }
     }
 
-    public void a(ae param0, int param1, int param2, int param3, boolean param4) {
+    public void a(UiWidget param0, int param1, int param2, int param3, boolean param4) {
         if (null == this.field_e) {
           return;
         }
         try {
           this.a(false, param0, param3, param1);
           if (param2 != 16777215) {
-            ae var7 = (ae) null;
-            this.a(false, (ae) null, 1, 26);
+            UiWidget var7 = (UiWidget) null;
+            this.a(false, (UiWidget) null, 1, 26);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vpa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    public final int a(ae param0, int param1, byte param2) {
+    public final int a(UiWidget param0, int param1, byte param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -501,7 +501,7 @@ class vpa implements isa, oaa {
         }
     }
 
-    public final int a(byte param0, ae param1) {
+    public final int a(byte param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -527,7 +527,7 @@ class vpa implements isa, oaa {
         }
     }
 
-    private final int a(int param0, int param1, ae param2, byte param3) {
+    private final int a(int param0, int param1, UiWidget param2, byte param3) {
         RuntimeException var5 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -556,7 +556,7 @@ class vpa implements isa, oaa {
         }
     }
 
-    public final bja a(ae param0, int param1) {
+    public final bja a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         bja stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
@@ -591,7 +591,7 @@ class vpa implements isa, oaa {
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, ae param4) {
+    public final void a(int param0, int param1, int param2, int param3, UiWidget param4) {
         bja var13 = null;
         bja var14 = null;
         int var7 = 0;
@@ -604,7 +604,7 @@ class vpa implements isa, oaa {
           if (param2 != -22502) {
             this.field_a = -110;
           }
-          if (param4.b((byte) -34)) {
+          if (param4.hasKeyboardFocus((byte) -34)) {
             var13 = this.a(param4, 14157);
             var14 = var13;
             var7 = var14.a(param0, 0);
@@ -622,7 +622,7 @@ class vpa implements isa, oaa {
         }
     }
 
-    public final int b(byte param0, ae param1) {
+    public final int b(byte param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;

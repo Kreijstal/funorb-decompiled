@@ -727,7 +727,7 @@ class jea extends um {
     }
 
     final void a(int param0, jea param1) {
-        uja var3 = null;
+        IntrusiveDequeCursor var3 = null;
         jea var4 = null;
         int var5 = 0;
         boolean stackIn_11_1 = false;
@@ -739,11 +739,11 @@ class jea extends um {
         var5 = TombRacer.field_G ? 1 : 0;
         try {
           if (null != this.field_J) {
-            var3 = new uja(this.field_J);
-            var4 = (jea) (var3.a(true));
+            var3 = new IntrusiveDequeCursor(this.field_J);
+            var4 = (jea) (var3.first(true));
             while (var4 != null) {
               var4.a(-124, param1);
-              var4 = (jea) (var3.a(-1));
+              var4 = (jea) (var3.next(-1));
             }
           }
           if (param0 > -64) {

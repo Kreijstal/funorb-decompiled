@@ -4,7 +4,7 @@
 final class ee implements isa {
     static volatile int field_a;
 
-    public final void a(ae param0, int param1, int param2, int param3, boolean param4) {
+    public final void a(UiWidget param0, int param1, int param2, int param3, boolean param4) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -25,7 +25,7 @@ final class ee implements isa {
           if (param2 != 16777215) {
             ee.a(55);
           }
-          if (!param0.b((byte) -34)) {
+          if (!param0.hasKeyboardFocus((byte) -34)) {
             return;
           }
           nn.a(2 + var6_int, 2 + var7, param0.field_p - 4, -4 + param0.field_m, false);

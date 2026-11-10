@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ada extends rva implements tsa {
+final class ada extends ArrayWidgetGroup implements tsa {
     static ura field_z;
     private fe field_x;
     static int[] field_y;
@@ -20,8 +20,8 @@ final class ada extends rva implements tsa {
 
     public final void a(int param0, int param1, rj param2, int param3, byte param4) {
         if (param4 < 44) {
-          ae var7 = (ae) null;
-          this.a(-16, -96, (ae) null, 107);
+          UiWidget var7 = (UiWidget) null;
+          this.updatePointerState(-16, -96, (UiWidget) null, 107);
         }
         if (this.field_x.a((byte) 124).b(-4666) != uh.field_k) {
           return;
@@ -33,8 +33,8 @@ final class ada extends rva implements tsa {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void renderLayer(int param0, int param1, int param2, int param3) {
+        super.renderLayer(param0, param1, param2, param3);
         eka.field_o.c(mca.field_d, this.field_i + (param0 + 4), 4 + (eka.field_o.field_w + (this.field_n + param1)), 16777215, -1);
     }
 
@@ -43,14 +43,14 @@ final class ada extends rva implements tsa {
         this.field_x = new fe(new hga(10000536), GraphicsToolkit.field_b, 0, 0, 140, 25);
         this.field_x.a((byte) 111, new uba());
         this.field_B = new rj(aua.field_d, (qc) (this));
-        this.field_w = new ae[]{(ae) ((Object) this.field_x), (ae) ((Object) this.field_B)};
+        this.children = new UiWidget[]{(UiWidget) ((Object) this.field_x), (UiWidget) ((Object) this.field_B)};
         this.field_B.field_r = (isa) ((Object) new td());
-        this.c((byte) 127);
+        this.refreshLayout((byte) 127);
     }
 
-    final void a(int param0, int param1, ae param2, int param3) {
+    final void updatePointerState(int param0, int param1, UiWidget param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
           this.field_B.field_y = this.field_x.a((byte) 47).b(-4666) == uh.field_k ? true : false;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ada.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -68,13 +68,13 @@ final class ada extends rva implements tsa {
     final void a(byte param0) {
         int var2 = 250;
         if (param0 == 88) {
-          this.field_x.a((byte) -31, 140, 25, this.field_m - var2 >> 1, this.field_p + 20 - 25 >> 1);
-          this.field_B.a((byte) -31, 100, 30, 10 + (140 + (this.field_m - var2 >> 1)), (-30 + this.field_p + 20 >> 1) + 2);
+          this.field_x.setBounds((byte) -31, 140, 25, this.field_m - var2 >> 1, this.field_p + 20 - 25 >> 1);
+          this.field_B.setBounds((byte) -31, 100, 30, 10 + (140 + (this.field_m - var2 >> 1)), (-30 + this.field_p + 20 >> 1) + 2);
           return;
         }
         field_y = (int[]) null;
-        this.field_x.a((byte) -31, 140, 25, this.field_m - var2 >> 1, this.field_p + 20 - 25 >> 1);
-        this.field_B.a((byte) -31, 100, 30, 10 + (140 + (this.field_m - var2 >> 1)), (-30 + this.field_p + 20 >> 1) + 2);
+        this.field_x.setBounds((byte) -31, 140, 25, this.field_m - var2 >> 1, this.field_p + 20 - 25 >> 1);
+        this.field_B.setBounds((byte) -31, 100, 30, 10 + (140 + (this.field_m - var2 >> 1)), (-30 + this.field_p + 20 >> 1) + 2);
     }
 
     static {

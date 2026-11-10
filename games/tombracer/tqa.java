@@ -33,7 +33,7 @@ final class tqa implements Renderable {
 
     final static void a(boolean param0, byte param1) {
         int var2 = -75 / ((param1 + 12) / 44);
-        ej.field_a.b(-42, 0, 0);
+        ej.field_a.renderWithTooltip(-42, 0, 0);
     }
 
     private final void a(int param0, Room param1, int param2, int param3, int param4) {

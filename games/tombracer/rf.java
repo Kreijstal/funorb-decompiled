@@ -46,7 +46,7 @@ final class rf {
             stackIn_3_0 = pk.field_v;
             return stackIn_3_0;
           }
-          if (ae.field_g != 2) {
+          if (UiWidget.field_g != 2) {
             stackIn_7_0 = db.field_j;
             return stackIn_7_0;
           }

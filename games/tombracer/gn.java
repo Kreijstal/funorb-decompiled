@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class gn extends b {
+abstract class gn extends WidgetContainer {
     static cha field_C;
     static String field_y;
     private int field_x;
@@ -31,12 +31,12 @@ abstract class gn extends b {
         field_A = null;
     }
 
-    final ae g(byte param0) {
-        ae var2 = super.g(param0);
+    final UiWidget getFocusedChild(byte param0) {
+        UiWidget var2 = super.getFocusedChild(param0);
         if (var2 != null) {
           return var2;
         }
-        return (ae) (this);
+        return (UiWidget) (this);
     }
 
     boolean a(int param0) {
@@ -103,14 +103,14 @@ abstract class gn extends b {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void renderLayer(int param0, int param1, int param2, int param3) {
         if (this.field_x == 0) {
           return;
         }
         if (this.field_x >= 256) {
           if (param3 == 0) {
             this.a(param1 + this.field_n, (byte) -67, this.field_i + param0);
-            super.a(param0, param1, 0, param3);
+            super.renderLayer(param0, param1, 0, param3);
             return;
           }
           return;
@@ -120,7 +120,7 @@ abstract class gn extends b {
           nm.a(fta.field_a, (byte) 118);
           SoftwareRasterizer.clear();
           this.a(0, (byte) -67, 0);
-          super.a(-this.field_i - param0, -param1 - this.field_n, param2, param3);
+          super.renderLayer(-this.field_i - param0, -param1 - this.field_n, param2, param3);
           pfa.a(param2 ^ 1);
           fta.field_a.c(param0 + this.field_i, this.field_n + param1, this.field_x);
           return;
@@ -130,7 +130,7 @@ abstract class gn extends b {
           nm.a(fta.field_a, (byte) 118);
           SoftwareRasterizer.clear();
           this.a(0, (byte) -67, 0);
-          super.a(-this.field_i - param0, -param1 - this.field_n, param2, param3);
+          super.renderLayer(-this.field_i - param0, -param1 - this.field_n, param2, param3);
           pfa.a(param2 ^ 1);
           fta.field_a.c(param0 + this.field_i, this.field_n + param1, this.field_x);
           return;
@@ -139,7 +139,7 @@ abstract class gn extends b {
           nm.a(fta.field_a, (byte) 118);
           SoftwareRasterizer.clear();
           this.a(0, (byte) -67, 0);
-          super.a(-this.field_i - param0, -param1 - this.field_n, param2, param3);
+          super.renderLayer(-this.field_i - param0, -param1 - this.field_n, param2, param3);
           pfa.a(param2 ^ 1);
           fta.field_a.c(param0 + this.field_i, this.field_n + param1, this.field_x);
           return;
@@ -148,7 +148,7 @@ abstract class gn extends b {
         nm.a(fta.field_a, (byte) 118);
         SoftwareRasterizer.clear();
         this.a(0, (byte) -67, 0);
-        super.a(-this.field_i - param0, -param1 - this.field_n, param2, param3);
+        super.renderLayer(-this.field_i - param0, -param1 - this.field_n, param2, param3);
         pfa.a(param2 ^ 1);
         fta.field_a.c(param0 + this.field_i, this.field_n + param1, this.field_x);
     }
@@ -157,11 +157,11 @@ abstract class gn extends b {
 
     final void c(int param0, int param1, int param2) {
         if (param0 == -11560) {
-          this.a((byte) -31, param2, param1, -param2 + bb.field_m >> 1, qba.field_a - param1 >> 1);
+          this.setBounds((byte) -31, param2, param1, -param2 + bb.field_m >> 1, qba.field_a - param1 >> 1);
           return;
         }
         this.field_B = false;
-        this.a((byte) -31, param2, param1, -param2 + bb.field_m >> 1, qba.field_a - param1 >> 1);
+        this.setBounds((byte) -31, param2, param1, -param2 + bb.field_m >> 1, qba.field_a - param1 >> 1);
     }
 
     static {

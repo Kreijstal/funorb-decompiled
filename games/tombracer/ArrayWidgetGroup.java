@@ -3,28 +3,28 @@
  */
 import java.util.*;
 
-abstract class rva extends ae implements tpa {
+abstract class ArrayWidgetGroup extends UiWidget implements tpa {
     static int[] field_u;
     static jpa field_v;
-    ae[] field_w;
+    UiWidget[] children;
 
-    private final ae a(int param0) {
+    private final UiWidget getFocusedChild(int param0) {
         int var3 = 0;
-        ae[] var2;
-        ae var4;
+        UiWidget[] var2;
+        UiWidget var4;
         int var5;
-        ae[] var7;
+        UiWidget[] var7;
         StringBuilder var6;
         var5 = TombRacer.field_G ? 1 : 0;
-        if (null == this.field_w) {
+        if (null == this.children) {
           return null;
         }
-        var7 = this.field_w;
+        var7 = this.children;
         var2 = var7;
         for (var3 = 0; var3 < var7.length; var3++) {
           var4 = var7[var3];
           if (var4 != null &&
-            var4.b((byte) -34)) {
+            var4.hasKeyboardFocus((byte) -34)) {
             return var4;
           }
         }
@@ -36,32 +36,32 @@ abstract class rva extends ae implements tpa {
         return null;
     }
 
-    final boolean a(ae param0, byte param1, int param2) {
+    final boolean focusBackwardFrom(UiWidget param0, byte param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        ae var5 = null;
-        ae var6 = null;
+        UiWidget var5 = null;
+        UiWidget var6 = null;
         int var7 = 0;
-        ae stackIn_8_0 = null;
+        UiWidget stackIn_8_0 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          if (null == this.field_w) {
+          if (null == this.children) {
             return false;
           }
-          var4_int = this.field_w.length - 1;
+          var4_int = this.children.length - 1;
           while (var4_int >= 0) {
-            var5 = this.field_w[var4_int];
+            var5 = this.children[var4_int];
             stackIn_8_0 = var5;
             if (stackIn_8_0 != null &&
-              var5.b((byte) -34)) {
+              var5.hasKeyboardFocus((byte) -34)) {
               for (var4_int = var4_int - param2; var4_int >= 0; var4_int = var4_int - param2) {
-                var6 = this.field_w[var4_int];
+                var6 = this.children[var4_int];
                 if (var6 != null &&
-                  var6.a(param0, false)) {
+                  var6.requestKeyboardFocus(param0, false)) {
                   return true;
                 }
               }
@@ -87,13 +87,13 @@ abstract class rva extends ae implements tpa {
         }
     }
 
-    final void a(byte param0, ae param1, int param2, int param3, int param4, int param5) {
+    final void handlePointerRelease(byte param0, UiWidget param1, int param2, int param3, int param4, int param5) {
         int var8 = 0;
-        ae[] var7 = null;
-        ae var9 = null;
+        UiWidget[] var7 = null;
+        UiWidget var9 = null;
         int var10 = 0;
-        ae var11 = null;
-        ae[] var12 = null;
+        UiWidget var11 = null;
+        UiWidget[] var12 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -101,19 +101,19 @@ abstract class rva extends ae implements tpa {
         RuntimeException var7_ref = null;
         var10 = TombRacer.field_G ? 1 : 0;
         try {
-          if (null == this.field_w) {
+          if (null == this.children) {
             return;
           }
           if (param0 != 59) {
-            var11 = (ae) null;
-            this.a(103, (ae) null, -84);
+            var11 = (UiWidget) null;
+            this.focusForwardFrom(103, (UiWidget) null, -84);
           }
-          var12 = this.field_w;
+          var12 = this.children;
           var7 = var12;
           for (var8 = 0; var8 < var12.length; var8++) {
             var9 = var12[var8];
             if (var9 != null) {
-              var9.a((byte) 59, param1, param2, this.field_i + param3, this.field_n + param4, param5);
+              var9.handlePointerRelease((byte) 59, param1, param2, this.field_i + param3, this.field_n + param4, param5);
             }
           }
           return;
@@ -131,14 +131,14 @@ abstract class rva extends ae implements tpa {
         }
     }
 
-    boolean a(char param0, ae param1, int param2, boolean param3) {
+    boolean handleKeyInput(char param0, UiWidget param1, int param2, boolean param3) {
         int var6 = 0;
-        ae[] var5 = null;
+        UiWidget[] var5 = null;
         int var5_int = 0;
         RuntimeException var5_ref = null;
-        ae var7 = null;
+        UiWidget var7 = null;
         int var8 = 0;
-        ae[] var9 = null;
+        UiWidget[] var9 = null;
         boolean stackIn_20_0 = false;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -146,19 +146,19 @@ abstract class rva extends ae implements tpa {
         RuntimeException decompiledCaughtException = null;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
-          if (this.field_w == null) {
+          if (this.children == null) {
             return false;
           }
-          var9 = this.field_w;
+          var9 = this.children;
           var5 = var9;
           if (!param3) {
-            this.a(true);
+            this.getTopLayer(true);
           }
           for (var6 = 0; var9.length > var6; var6++) {
             var7 = var9[var6];
             if (var7 != null &&
-              var7.b((byte) -34) &&
-              var7.a(param0, param1, param2, true)) {
+              var7.hasKeyboardFocus((byte) -34) &&
+              var7.handleKeyInput(param0, param1, param2, true)) {
               return true;
             }
           }
@@ -189,51 +189,51 @@ abstract class rva extends ae implements tpa {
     public static void b(int param0) {
         if (param0 != 0) {
           Class var2 = (Class) null;
-          rva.a((Class) null, (byte) -126);
+          ArrayWidgetGroup.a((Class) null, (byte) -126);
         }
         field_u = null;
         field_v = null;
     }
 
-    final void f(byte param0) {
+    final void clearKeyboardFocus(byte param0) {
         int var4 = 0;
-        ae[] var2;
+        UiWidget[] var2;
         int var3;
-        ae var5;
+        UiWidget var5;
         int var6;
-        ae[] var7;
+        UiWidget[] var7;
         var6 = TombRacer.field_G ? 1 : 0;
-        var7 = this.field_w;
+        var7 = this.children;
         var2 = var7;
         var3 = 99 / ((param0 + 38) / 60);
         for (var4 = 0; var4 < var7.length; var4++) {
           var5 = var7[var4];
           if (var5 != null) {
-            var5.f((byte) -128);
+            var5.clearKeyboardFocus((byte) -128);
           }
         }
     }
 
     abstract void a(byte param0);
 
-    final String d(byte param0) {
-        ae[] var2;
+    final String getHoverText(byte param0) {
+        UiWidget[] var2;
         int var3;
-        ae var4;
+        UiWidget var4;
         int var6;
-        ae[] var7;
+        UiWidget[] var7;
         String var5;
         int var3Lifetime1;
         var6 = TombRacer.field_G ? 1 : 0;
-        if (null == this.field_w) {
+        if (null == this.children) {
           return null;
         }
-        var7 = this.field_w;
+        var7 = this.children;
         var2 = var7;
         for (var3 = 0; var7.length > var3; var3++) {
           var4 = var7[var3];
           if (var4 != null) {
-            var5 = var4.d((byte) 4);
+            var5 = var4.getHoverText((byte) 4);
             if (var5 != null) {
               return var5;
             }
@@ -243,20 +243,20 @@ abstract class rva extends ae implements tpa {
         return null;
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void renderLayer(int param0, int param1, int param2, int param3) {
         int var5 = 0;
-        ae var6;
+        UiWidget var6;
         int var7;
         var7 = TombRacer.field_G ? 1 : 0;
         if (param2 == param3 &&
           this.field_r != null) {
-          this.field_r.a((ae) (this), param0, 16777215, param1, true);
+          this.field_r.a((UiWidget) (this), param0, 16777215, param1, true);
         }
-        if (null != this.field_w) {
-          for (var5 = this.field_w.length - 1; 0 <= var5; var5--) {
-            var6 = this.field_w[var5];
+        if (null != this.children) {
+          for (var5 = this.children.length - 1; 0 <= var5; var5--) {
+            var6 = this.children[var5];
             if (var6 != null) {
-              var6.a(this.field_i + param0, this.field_n + param1, 0, param3);
+              var6.renderLayer(this.field_i + param0, this.field_n + param1, 0, param3);
             }
           }
         }
@@ -268,9 +268,9 @@ abstract class rva extends ae implements tpa {
         int var8 = 0;
         StringBuilder discarded$6 = null;
         StringBuilder discarded$5 = null;
-        ae var7 = null;
+        UiWidget var7 = null;
         int var9 = 0;
-        ae[] var10 = null;
+        UiWidget[] var10 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -280,10 +280,10 @@ abstract class rva extends ae implements tpa {
         RuntimeException var5 = null;
         var9 = TombRacer.field_G ? 1 : 0;
         try {
-          if (this.field_w == null) {
+          if (this.children == null) {
             return;
           }
-          var10 = this.field_w;
+          var10 = this.children;
           if (param2 <= 121) {
             field_v = (jpa) null;
           }
@@ -296,7 +296,7 @@ abstract class rva extends ae implements tpa {
             if (var7 == null) {
               discarded$5 = param3.append("null");
             } else {
-              var7.a(1 + param1, param0, param3, 0);
+              var7.appendDiagnostics(1 + param1, param0, param3, 0);
             }
           }
           return;
@@ -320,34 +320,34 @@ abstract class rva extends ae implements tpa {
         }
     }
 
-    final boolean a(int param0, ae param1, int param2) {
+    final boolean focusForwardFrom(int param0, UiWidget param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        ae var5 = null;
-        ae var6 = null;
+        UiWidget var5 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ae var6Lifetime1;
-        ae var6Lifetime2;
+        UiWidget var6Lifetime1;
+        UiWidget var6Lifetime2;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          if (this.field_w == null) {
+          if (this.children == null) {
             return false;
           }
           var4_int = param2;
-          while (var4_int < this.field_w.length) {
-            var5 = this.field_w[var4_int];
+          while (var4_int < this.children.length) {
+            var5 = this.children[var4_int];
             var6 = var5;
             var6Lifetime1 = var5;
             if (var5 != null &&
-              var5.b((byte) -34)) {
-              for (var4_int = var4_int + param0; var4_int < this.field_w.length; var4_int = var4_int + param0) {
-                var6Lifetime2 = this.field_w[var4_int];
+              var5.hasKeyboardFocus((byte) -34)) {
+              for (var4_int = var4_int + param0; var4_int < this.children.length; var4_int = var4_int + param0) {
+                var6Lifetime2 = this.children[var4_int];
                 if (var6Lifetime2 != null &&
-                  var6Lifetime2.a(param1, false)) {
+                  var6Lifetime2.requestKeyboardFocus(param1, false)) {
                   return true;
                 }
               }
@@ -369,24 +369,24 @@ abstract class rva extends ae implements tpa {
         }
     }
 
-    rva(int param0, int param1, int param2, int param3, isa param4) {
+    ArrayWidgetGroup(int param0, int param1, int param2, int param3, isa param4) {
         super(param0, param1, param2, param3, param4, (qc) null);
     }
 
-    final int a(boolean param0) {
+    final int getTopLayer(boolean param0) {
         int var4 = 0;
         int var2;
-        ae[] var3;
-        ae var5;
+        UiWidget[] var3;
+        UiWidget var5;
         int var7;
         int var6;
         var7 = TombRacer.field_G ? 1 : 0;
         var2 = 0;
-        var3 = this.field_w;
+        var3 = this.children;
         for (var4 = 0; var4 < var3.length; var4++) {
           var5 = var3[var4];
           if (var5 != null) {
-            var6 = var5.a(false);
+            var6 = var5.getTopLayer(false);
             if (var6 > var2) {
               var2 = var6;
             }
@@ -398,14 +398,14 @@ abstract class rva extends ae implements tpa {
         return var2;
     }
 
-    final boolean b(byte param0) {
+    final boolean hasKeyboardFocus(byte param0) {
         if (param0 != -34) {
           this.a((byte) 29);
         }
-        return this.a(-49) != null ? true : false;
+        return this.getFocusedChild(-49) != null ? true : false;
     }
 
-    final StringBuilder a(int param0, Hashtable param1, StringBuilder param2, int param3) {
+    final StringBuilder appendDiagnostics(int param0, Hashtable param1, StringBuilder param2, int param3) {
         RuntimeException var5 = null;
         StringBuilder stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
@@ -415,12 +415,12 @@ abstract class rva extends ae implements tpa {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a((byte) -122, param0, param1, param2)) {
-            this.a(1, param2, param1, param0);
+          if (this.beginDiagnosticVisit((byte) -122, param0, param1, param2)) {
+            this.appendDiagnosticProperties(1, param2, param1, param0);
             this.a(param1, param0, 123, param2);
           }
           if (param3 != 0) {
-            this.field_w = (ae[]) null;
+            this.children = (UiWidget[]) null;
           }
           stackIn_5_0 = (StringBuilder) (param2);
           return stackIn_5_0;
@@ -460,7 +460,7 @@ abstract class rva extends ae implements tpa {
             stackIn_6_0 = param0.getName().substring(1 + param0.getName().lastIndexOf("."));
             return stackIn_6_0;
           }
-          stackIn_4_0 = rva.a(param0.getComponentType(), (byte) -57) + "[]";
+          stackIn_4_0 = ArrayWidgetGroup.a(param0.getComponentType(), (byte) -57) + "[]";
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -476,7 +476,7 @@ abstract class rva extends ae implements tpa {
         }
     }
 
-    final boolean a(byte param0, ae param1) {
+    final boolean a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -485,9 +485,9 @@ abstract class rva extends ae implements tpa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 43) {
-            this.field_w = (ae[]) null;
+            this.children = (UiWidget[]) null;
           }
-          stackIn_3_0 = this.a(1, param1, 0);
+          stackIn_3_0 = this.focusForwardFrom(1, param1, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -503,13 +503,13 @@ abstract class rva extends ae implements tpa {
         }
     }
 
-    boolean a(ae param0, boolean param1) {
+    boolean requestKeyboardFocus(UiWidget param0, boolean param1) {
         int var4 = 0;
-        ae[] var3 = null;
+        UiWidget[] var3 = null;
         RuntimeException var3_ref = null;
-        ae var5 = null;
+        UiWidget var5 = null;
         int var6 = 0;
-        ae[] var7 = null;
+        UiWidget[] var7 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -517,14 +517,14 @@ abstract class rva extends ae implements tpa {
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           if (param1) {
-            this.b((byte) -65);
+            this.hasKeyboardFocus((byte) -65);
           }
-          var7 = this.field_w;
+          var7 = this.children;
           var3 = var7;
           for (var4 = 0; var7.length > var4; var4++) {
             var5 = var7[var4];
             if (var5 != null &&
-              var5.a(param0, param1)) {
+              var5.requestKeyboardFocus(param0, param1)) {
               return true;
             }
           }
@@ -543,12 +543,12 @@ abstract class rva extends ae implements tpa {
         }
     }
 
-    void a(int param0, int param1, ae param2, int param3) {
+    void updatePointerState(int param0, int param1, UiWidget param2, int param3) {
         int var6 = 0;
-        ae[] var5 = null;
-        ae var7 = null;
+        UiWidget[] var5 = null;
+        UiWidget var7 = null;
         int var8 = 0;
-        ae[] var9 = null;
+        UiWidget[] var9 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -556,16 +556,16 @@ abstract class rva extends ae implements tpa {
         RuntimeException var5_ref = null;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
-          super.a(param0, param1, param2, param3);
-          if (null == this.field_w) {
+          super.updatePointerState(param0, param1, param2, param3);
+          if (null == this.children) {
             return;
           }
-          var9 = this.field_w;
+          var9 = this.children;
           var5 = var9;
           for (var6 = 0; var6 < var9.length; var6++) {
             var7 = var9[var6];
             if (var7 != null) {
-              var7.a(this.field_i + param0, 2097152, param2, param3 + this.field_n);
+              var7.updatePointerState(this.field_i + param0, 2097152, param2, param3 + this.field_n);
             }
           }
           return;
@@ -583,9 +583,9 @@ abstract class rva extends ae implements tpa {
         }
     }
 
-    final boolean a(ae param0, int param1) {
+    final boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
-        ae var4 = null;
+        UiWidget var4 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -593,10 +593,10 @@ abstract class rva extends ae implements tpa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 1) {
-            var4 = (ae) null;
-            this.a(-74, -77, 93, 125, (ae) null, -41, 108);
+            var4 = (UiWidget) null;
+            this.a(-74, -77, 93, 125, (UiWidget) null, -41, 108);
           }
-          stackIn_3_0 = this.a(param0, (byte) -14, 1);
+          stackIn_3_0 = this.focusBackwardFrom(param0, (byte) -14, 1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -612,36 +612,36 @@ abstract class rva extends ae implements tpa {
         }
     }
 
-    void a(byte param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    void setBounds(byte param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.a((byte) 88);
     }
 
-    boolean a(int param0, int param1, int param2, int param3, ae param4, int param5, int param6) {
+    boolean a(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {
         int var9 = 0;
-        ae[] var8 = null;
+        UiWidget[] var8 = null;
         RuntimeException var8_ref = null;
-        ae var10 = null;
+        UiWidget var10 = null;
         int var11 = 0;
-        ae[] var12 = null;
+        UiWidget[] var12 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         var11 = TombRacer.field_G ? 1 : 0;
         try {
-          if (this.field_w == null) {
+          if (this.children == null) {
             return false;
           }
           if (param6 != -1) {
-            this.field_w = (ae[]) null;
+            this.children = (UiWidget[]) null;
           }
-          var12 = this.field_w;
+          var12 = this.children;
           var8 = var12;
           for (var9 = 0; var9 < var12.length; var9++) {
             var10 = var12[var9];
             if (var10 != null &&
-              var10.b((byte) -34) &&
+              var10.hasKeyboardFocus((byte) -34) &&
               var10.a(param0, param1, param2, param3, param4, param5, param6 + 0)) {
               return true;
             }
@@ -661,33 +661,33 @@ abstract class rva extends ae implements tpa {
         }
     }
 
-    boolean a(int param0, int param1, int param2, int param3, int param4, ae param5, int param6) {
+    boolean handlePointerPress(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         int var9 = 0;
-        ae[] var8 = null;
+        UiWidget[] var8 = null;
         RuntimeException var8_ref = null;
-        ae var10 = null;
+        UiWidget var10 = null;
         int var11 = 0;
-        ae var12 = null;
-        ae[] var13 = null;
+        UiWidget var12 = null;
+        UiWidget[] var13 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         var11 = TombRacer.field_G ? 1 : 0;
         try {
-          if (this.field_w == null) {
+          if (this.children == null) {
             return false;
           }
           if (param0 < 70) {
-            var12 = (ae) null;
-            this.a((ae) null, 84);
+            var12 = (UiWidget) null;
+            this.a((UiWidget) null, 84);
           }
-          var13 = this.field_w;
+          var13 = this.children;
           var8 = var13;
           for (var9 = 0; var9 < var13.length; var9++) {
             var10 = var13[var9];
             if (var10 != null &&
-              var10.a(123, this.field_i + param1, this.field_n + param2, param3, param4, param5, param6)) {
+              var10.handlePointerPress(123, this.field_i + param1, this.field_n + param2, param3, param4, param5, param6)) {
               return true;
             }
           }

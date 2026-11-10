@@ -184,7 +184,7 @@ final class Room implements ew, Renderable, noa {
     final boolean b(int param0, int param1, int param2, int param3, int param4) {
         int var6;
         int var7;
-        uja var8;
+        IntrusiveDequeCursor var8;
         mda var9;
         int var10;
         int var11;
@@ -198,11 +198,11 @@ final class Room implements ew, Renderable, noa {
         if (1 == var7) {
           return false;
         }
-        var8 = new uja(this.field_f.active);
+        var8 = new IntrusiveDequeCursor(this.field_f.active);
         if (param0 != 30097) {
           this.b(-85, -33);
         }
-        var9 = (mda) (var8.a(true));
+        var9 = (mda) (var8.first(true));
         while (var9 != null) {
           if (~var9.r(-70) == ~param2) {
             var10 = var9.t(param0 ^ 30096);
@@ -211,7 +211,7 @@ final class Room implements ew, Renderable, noa {
               return true;
             }
           }
-          var9 = (mda) (var8.a(param0 ^ -30098));
+          var9 = (mda) (var8.next(param0 ^ -30098));
         }
         if (param2 == 1 &&
           this.a((Collidable) null, param1 * 2, 2, 1, param3, param4, false, (WorldBody) null, 2 * param1)) {
@@ -655,7 +655,7 @@ final class Room implements ew, Renderable, noa {
     }
 
     public final lj a(int param0, int param1, boolean param2) {
-        uja var4;
+        IntrusiveDequeCursor var4;
         Trap var5;
         lj var6;
         int var7;
@@ -663,14 +663,14 @@ final class Room implements ew, Renderable, noa {
         if (param0 != 28672) {
           this.toString();
         }
-        var4 = new uja(this.traps);
-        var5 = (Trap) (var4.a(true));
+        var4 = new IntrusiveDequeCursor(this.traps);
+        var5 = (Trap) (var4.first(true));
         while (var5 != null) {
           var6 = var5.a(false, param1, (byte) -26);
           if (var6 != null) {
             return var6;
           }
-          var5 = (Trap) (var4.a(-1));
+          var5 = (Trap) (var4.next(-1));
         }
         return null;
     }
@@ -1500,7 +1500,7 @@ final class Room implements ew, Renderable, noa {
         int var6;
         Trap var7;
         Player var8;
-        uja var9;
+        IntrusiveDequeCursor var9;
         var6 = TombRacer.field_G ? 1 : 0;
         var8 = this.getPlayer(-62);
         if (var8 == null) {
@@ -1520,15 +1520,15 @@ final class Room implements ew, Renderable, noa {
           var4.s(param1 ^ 0);
           var4 = (db) (this.field_d.next(120));
         }
-        var9 = new uja(this.traps);
-        var5_ref_fsa = (Trap) (var9.a(true));
+        var9 = new IntrusiveDequeCursor(this.traps);
+        var5_ref_fsa = (Trap) (var9.first(true));
         while (var5_ref_fsa != null) {
           var5_ref_fsa.b(param1 + 106, false);
           this.field_a = var5_ref_fsa.i(this.field_a, -109);
           if (var5_ref_fsa.isExpired(param1 + 18407)) {
             var5_ref_fsa.unlink(param1 ^ 79);
           }
-          var5_ref_fsa = (Trap) (var9.a(-1));
+          var5_ref_fsa = (Trap) (var9.next(-1));
         }
         this.field_g.c(true);
         var5 = this.getSimulation(-1553494544).g(param1 + 112) ? 1 : 0;
@@ -1996,7 +1996,7 @@ final class Room implements ew, Renderable, noa {
     }
 
     final RoomComponent a(boolean param0, int param1, int param2) {
-        uja var4;
+        IntrusiveDequeCursor var4;
         RoomComponent var5;
         RoomComponent var6;
         int var7;
@@ -2004,14 +2004,14 @@ final class Room implements ew, Renderable, noa {
         if (param2 != 6) {
           this.field_o = (Collidable) null;
         }
-        var4 = new uja(this.components);
-        var5 = (RoomComponent) (var4.a(true));
+        var4 = new IntrusiveDequeCursor(this.components);
+        var5 = (RoomComponent) (var4.first(true));
         while (var5 != null) {
           var6 = var5.a(param1, false, false);
           if (var6 != null) {
             return var6;
           }
-          var5 = (RoomComponent) (var4.a(-1));
+          var5 = (RoomComponent) (var4.next(-1));
         }
         return null;
     }

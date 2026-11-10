@@ -129,7 +129,7 @@ final class pu implements isa {
         }
     }
 
-    public final void a(ae param0, int param1, int param2, int param3, boolean param4) {
+    public final void a(UiWidget param0, int param1, int param2, int param3, boolean param4) {
         try {
           if (param2 != 16777215) {
             field_a = (int[]) null;

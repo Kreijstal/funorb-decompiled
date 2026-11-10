@@ -40,7 +40,7 @@ final class fp {
         int var10_intLifetime1;
         int var11_intLifetime1;
         var16_ref.a(param1, (byte) 47, param0);
-        rva.field_v = jpa.a(param2, "", "title");
+        ArrayWidgetGroup.field_v = jpa.a(param2, "", "title");
         eta.field_a = new jpa[6][];
         eta.field_a[0] = new jpa[1];
         eta.field_a[0][0] = jpa.a(param2, "", "billboard_flame");

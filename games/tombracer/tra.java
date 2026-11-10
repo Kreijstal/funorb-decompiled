@@ -13,7 +13,7 @@ class tra extends rj {
     static String[] field_z;
     private int field_C;
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void renderLayer(int param0, int param1, int param2, int param3) {
         RuntimeException decompiledCaughtException = null;
         oaa var5 = null;
         RuntimeException var5_ref = null;
@@ -24,15 +24,15 @@ class tra extends rj {
           }
           if (this.field_r != null &&
             param3 == 0) {
-            this.field_r.a((ae) (this), param0, param2 ^ 16777215, param1, this.field_y);
+            this.field_r.a((UiWidget) (this), param0, param2 ^ 16777215, param1, this.field_y);
             if (this.field_r instanceof oaa) {
               var5 = (oaa) ((Object) this.field_r);
               if (this.field_B != this.field_I) {
-                var5.a(-1, (ae) (this), param1, param0, this.field_B, this.field_I);
+                var5.a(-1, (UiWidget) (this), param1, param0, this.field_B, this.field_I);
               }
               var6 = bva.b((byte) -107);
               if ((-this.field_H + var6) % 1000L < 500L) {
-                var5.a(this.field_I, param1, param2 - 22502, param0, (ae) (this));
+                var5.a(this.field_I, param1, param2 - 22502, param0, (UiWidget) (this));
               }
             }
           }
@@ -44,7 +44,7 @@ class tra extends rj {
         }
     }
 
-    final boolean a(char param0, ae param1, int param2, boolean param3) {
+    final boolean handleKeyInput(char param0, UiWidget param1, int param2, boolean param3) {
         int dupTemp$0 = 0;
         int stackIn_95_1 = 0;
         int stackIn_96_2 = 0;
@@ -221,7 +221,7 @@ class tra extends rj {
         int var25Lifetime4;
         var27 = TombRacer.field_G ? 1 : 0;
         try {
-          var10 = uja.a((byte) 65, param4);
+          var10 = IntrusiveDequeCursor.a((byte) 65, param4);
           if (param1 == null) {
             return;
           }
@@ -486,9 +486,9 @@ class tra extends rj {
             return;
           }
           var2 = (oaa) ((Object) this.field_r);
-          var3 = var2.a((ae) (this), 14157);
+          var3 = var2.a((UiWidget) (this), 14157);
           var4 = var3.a(0);
-          var5 = var2.a((byte) 117, (ae) (this));
+          var5 = var2.a((byte) 117, (UiWidget) (this));
           var6 = var2.a((byte) -90) >> 1;
           var7 = 28 / ((param0 - 47) / 36);
           if (var4 < -var6 + var5) {
@@ -580,7 +580,7 @@ class tra extends rj {
         }
     }
 
-    void a(int param0, int param1, ae param2, int param3) {
+    void updatePointerState(int param0, int param1, UiWidget param2, int param3) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -589,12 +589,12 @@ class tra extends rj {
         RuntimeException var5_ref = null;
         int var6 = 0;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
           this.h((byte) -105);
           if (this.field_s == 1) {
             if (this.field_r instanceof oaa) {
               var5 = (oaa) ((Object) this.field_r);
-              var6 = var5.a((ae) (this), (byte) 4, sta.field_B, param0, param3, jba.field_j);
+              var6 = var5.a((UiWidget) (this), (byte) 4, sta.field_B, param0, param3, jba.field_j);
               if (var6 != -1) {
                 if (this.field_E &&
                   var6 < this.field_F &&
@@ -621,7 +621,7 @@ class tra extends rj {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, ae param5, int param6) {
+    final boolean handlePointerPress(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         int stackIn_10_1 = 0;
         int stackIn_11_2 = 0;
         boolean stackIn_15_1 = false;
@@ -636,9 +636,9 @@ class tra extends rj {
           if (param0 <= 70) {
             this.f(18);
           }
-          if (super.a(92, param1, param2, param3, param4, param5, param6) &&
+          if (super.handlePointerPress(92, param1, param2, param3, param4, param5, param6) &&
             this.field_r instanceof oaa) {
-            var8_int = ((oaa) ((Object) this.field_r)).a((ae) (this), (byte) 4, sta.field_B, param1, param2, jba.field_j);
+            var8_int = ((oaa) ((Object) this.field_r)).a((UiWidget) (this), (byte) 4, sta.field_B, param1, param2, jba.field_j);
             stackIn_10_1 = 60;
             if (-1 == var8_int) {
               stackIn_11_2 = 0;

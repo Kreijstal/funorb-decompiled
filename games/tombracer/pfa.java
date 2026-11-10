@@ -1879,35 +1879,35 @@ final class pfa {
                 }
                 var2 = mt.a("death_bigsaw,0", (byte) 113);
                 if (var2 != null) {
-                  qr.sawDeathMessages[0] = jaa.a((byte) 107, var2);
+                  SingleChildWidget.sawDeathMessages[0] = jaa.a((byte) 107, var2);
                 }
                 var2 = mt.a("death_bigsaw,1", (byte) 105);
                 if (var2 != null) {
-                  qr.sawDeathMessages[1] = jaa.a((byte) 118, var2);
+                  SingleChildWidget.sawDeathMessages[1] = jaa.a((byte) 118, var2);
                 }
                 var2 = mt.a("death_bigsaw,2", (byte) 102);
                 if (var2 != null) {
-                  qr.sawDeathMessages[2] = jaa.a((byte) 103, var2);
+                  SingleChildWidget.sawDeathMessages[2] = jaa.a((byte) 103, var2);
                 }
                 var2 = mt.a("death_bigsaw,3", (byte) 108);
                 if (var2 != null) {
-                  qr.sawDeathMessages[3] = jaa.a((byte) 41, var2);
+                  SingleChildWidget.sawDeathMessages[3] = jaa.a((byte) 41, var2);
                 }
                 var2 = mt.a("death_bigsaw,4", (byte) 116);
                 if (var2 != null) {
-                  qr.sawDeathMessages[4] = jaa.a((byte) 62, var2);
+                  SingleChildWidget.sawDeathMessages[4] = jaa.a((byte) 62, var2);
                 }
                 var2 = mt.a("death_bigsaw,5", (byte) 126);
                 if (null != var2) {
-                  qr.sawDeathMessages[5] = jaa.a((byte) 80, var2);
+                  SingleChildWidget.sawDeathMessages[5] = jaa.a((byte) 80, var2);
                 }
                 var2 = mt.a("death_bigsaw,6", (byte) 102);
                 if (var2 != null) {
-                  qr.sawDeathMessages[6] = jaa.a((byte) 60, var2);
+                  SingleChildWidget.sawDeathMessages[6] = jaa.a((byte) 60, var2);
                 }
                 var2 = mt.a("death_bigsaw,7", (byte) 116);
                 if (var2 != null) {
-                  qr.sawDeathMessages[7] = jaa.a((byte) 75, var2);
+                  SingleChildWidget.sawDeathMessages[7] = jaa.a((byte) 75, var2);
                 }
                 var2 = mt.a("death_skiproom,0", (byte) 117);
                 if (var2 != null) {

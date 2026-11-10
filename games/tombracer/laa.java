@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class laa extends b implements tsa {
+final class laa extends WidgetContainer implements tsa {
     private String[] field_A;
     static lqa field_x;
     private mia field_w;
@@ -21,7 +21,7 @@ final class laa extends b implements tsa {
         int var6 = 0;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
-          this.field_u.clear(param0 - 13589);
+          this.children.clear(param0 - 13589);
           if (param1 != null &&
             param1.length != 0) {
             if (param0 != 13597) {
@@ -38,13 +38,13 @@ final class laa extends b implements tsa {
               this.field_z[var5] = new rj(this.field_A[var5], (qc) (this));
               this.field_z[var5].field_r = (isa) ((Object) var4);
               this.field_z[var5].field_q = qla.field_i;
-              this.field_z[var5].a((byte) -31, 80, 15, 0, 20 + 16 * var5);
-              this.a(this.field_z[var5], param0 ^ -13598);
+              this.field_z[var5].setBounds((byte) -31, 80, 15, 0, 20 + 16 * var5);
+              this.addChild(this.field_z[var5], param0 ^ -13598);
             }
             this.field_z[var3_int] = new rj(ll.field_h, (qc) (this));
             this.field_z[var3_int].field_r = (isa) ((Object) var4);
-            this.field_z[var3_int].a((byte) -31, 100, 15, 0, 20 + var3_int * 16 + 16);
-            this.a(this.field_z[var3_int], -1);
+            this.field_z[var3_int].setBounds((byte) -31, 100, 15, 0, 20 + var3_int * 16 + 16);
+            this.addChild(this.field_z[var3_int], -1);
             return;
           }
           this.field_A = null;
@@ -99,8 +99,8 @@ final class laa extends b implements tsa {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void renderLayer(int param0, int param1, int param2, int param3) {
+        super.renderLayer(param0, param1, param2, param3);
         if (param3 != 0) {
           return;
         }
@@ -267,7 +267,7 @@ final class laa extends b implements tsa {
         }
     }
 
-    final boolean a(char param0, ae param1, int param2, boolean param3) {
+    final boolean handleKeyInput(char param0, UiWidget param1, int param2, boolean param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_10_0 = false;
@@ -276,17 +276,17 @@ final class laa extends b implements tsa {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKeyInput(param0, param1, param2, param3)) {
             return true;
           }
           if (param2 == 98) {
-            stackIn_7_0 = this.b(param1, (byte) -120);
+            stackIn_7_0 = this.focusPreviousChild(param1, (byte) -120);
             return stackIn_7_0;
           }
           if (param2 != 99) {
             return false;
           }
-          stackIn_10_0 = this.a(param1, (byte) -9);
+          stackIn_10_0 = this.focusNextChild(param1, (byte) -9);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

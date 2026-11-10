@@ -135,13 +135,13 @@ final class BlockComponent extends PrefabComponent {
     final static int A(int param0) {
         if (param0 <= 12) {
           BlockComponent.A(-47);
-          uja.field_a.a(-121);
+          IntrusiveDequeCursor.field_a.a(-121);
           if (wg.field_l.c(81)) {
             return 0;
           }
           return qda.b((byte) -66);
         }
-        uja.field_a.a(-121);
+        IntrusiveDequeCursor.field_a.a(-121);
         if (wg.field_l.c(81)) {
           return 0;
         }

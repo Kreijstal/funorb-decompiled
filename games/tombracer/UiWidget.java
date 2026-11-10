@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class ae extends IntrusiveNode {
+class UiWidget extends IntrusiveNode {
     bja field_l;
     int field_p;
     boolean field_f;
@@ -20,7 +20,7 @@ class ae extends IntrusiveNode {
     qc field_h;
     isa field_r;
 
-    final void a(int param0, StringBuilder param1, Hashtable param2, int param3) {
+    final void appendDiagnosticProperties(int param0, StringBuilder param1, Hashtable param2, int param3) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -46,13 +46,13 @@ class ae extends IntrusiveNode {
           if (this.field_f) {
             discarded$2 = param1.append(" mouseover");
           }
-          if (this.b((byte) -34)) {
+          if (this.hasKeyboardFocus((byte) -34)) {
             discarded$3 = param1.append(" focused");
           }
           if (null != this.field_r) {
             discarded$4 = param1.append(" renderer=");
-            if (this.field_r instanceof ae) {
-              param1 = this.a(param3 + 1, param2, param1, 0);
+            if (this.field_r instanceof UiWidget) {
+              param1 = this.appendDiagnostics(param3 + 1, param2, param1, 0);
               if (var6 != 0) {
                 discarded$5 = param1.append(this.field_r);
               }
@@ -62,13 +62,13 @@ class ae extends IntrusiveNode {
           }
           if (this.field_h != null) {
             discarded$6 = param1.append(" listener=");
-            if (!(this.field_h instanceof ae)) {
+            if (!(this.field_h instanceof UiWidget)) {
               discarded$7 = param1.append(this.field_h);
               if (var6 != 0) {
-                param1 = this.a(1 + param3, param2, param1, 0);
+                param1 = this.appendDiagnostics(1 + param3, param2, param1, 0);
               }
             } else {
-              param1 = this.a(1 + param3, param2, param1, 0);
+              param1 = this.appendDiagnostics(1 + param3, param2, param1, 0);
             }
           }
           if (param0 != 1) {
@@ -95,7 +95,7 @@ class ae extends IntrusiveNode {
         }
     }
 
-    boolean a(int param0, int param1, int param2, int param3, int param4) {
+    boolean containsPointer(int param0, int param1, int param2, int param3, int param4) {
         int var6 = -82 / ((-38 - param2) / 50);
         if (param0 < param1 + this.field_i) {
           return false;
@@ -112,12 +112,12 @@ class ae extends IntrusiveNode {
         return false;
     }
 
-    final void c(byte param0) {
+    final void refreshLayout(byte param0) {
         int var2 = -39 / ((77 - param0) / 44);
-        this.a((byte) -31, this.field_m, this.field_p, this.field_i, this.field_n);
+        this.setBounds((byte) -31, this.field_m, this.field_p, this.field_i, this.field_n);
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void renderWithTooltip(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -127,7 +127,7 @@ class ae extends IntrusiveNode {
         String var10 = null;
         String var11 = null;
         var6 = TombRacer.field_G ? 1 : 0;
-        var4 = this.a(false);
+        var4 = this.getTopLayer(false);
         var5 = 0;
         while (true) {
           if (var4 < var5) {
@@ -145,7 +145,7 @@ class ae extends IntrusiveNode {
             }
             return;
           }
-          this.a(param2, param1, 0, var5);
+          this.renderLayer(param2, param1, 0, var5);
           var5++;
           if (var6 != 0) {
             var7 = of.a(1);
@@ -157,7 +157,7 @@ class ae extends IntrusiveNode {
         }
     }
 
-    boolean a(char param0, ae param1, int param2, boolean param3) {
+    boolean handleKeyInput(char param0, UiWidget param1, int param2, boolean param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -183,11 +183,11 @@ class ae extends IntrusiveNode {
         }
     }
 
-    void f(byte param0) {
+    void clearKeyboardFocus(byte param0) {
         int var2 = -8 / ((-38 - param0) / 60);
     }
 
-    boolean a(int param0, int param1, int param2, int param3, ae param4, int param5, int param6) {
+    boolean a(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -212,18 +212,18 @@ class ae extends IntrusiveNode {
         }
     }
 
-    final boolean a(byte param0, int param1, char param2) {
+    final boolean dispatchKeyInput(byte param0, int param1, char param2) {
         int var4 = 0;
         int var4Lifetime1;
-        if (!this.b((byte) -34)) {
+        if (!this.hasKeyboardFocus((byte) -34)) {
           var4 = param1;
           if (var4 != 80) {
             var4 = 17 / ((38 - param0) / 57);
             return false;
           }
-          return this.a(this, false);
+          return this.requestKeyboardFocus(this, false);
         }
-        if (this.a(param2, this, param1, true)) {
+        if (this.handleKeyInput(param2, this, param1, true)) {
           return true;
         }
         var4Lifetime1 = param1;
@@ -231,10 +231,10 @@ class ae extends IntrusiveNode {
           var4Lifetime1 = 17 / ((38 - param0) / 57);
           return false;
         }
-        return this.a(this, false);
+        return this.requestKeyboardFocus(this, false);
     }
 
-    final boolean a(byte param0, int param1, Hashtable param2, StringBuilder param3) {
+    final boolean beginDiagnosticVisit(byte param0, int param1, Hashtable param2, StringBuilder param3) {
         StringBuilder discarded$1 = null;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -272,11 +272,11 @@ class ae extends IntrusiveNode {
         }
     }
 
-    ae(String param0, qc param1) {
+    UiWidget(String param0, qc param1) {
         this(param0, afa.field_c.field_k, param1);
     }
 
-    boolean a(ae param0, boolean param1) {
+    boolean requestKeyboardFocus(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -301,24 +301,24 @@ class ae extends IntrusiveNode {
         }
     }
 
-    int a(boolean param0) {
+    int getTopLayer(boolean param0) {
         if (param0) {
           return 28;
         }
         return 0;
     }
 
-    void a(byte param0, int param1, int param2, int param3, int param4) {
+    void setBounds(byte param0, int param1, int param2, int param3, int param4) {
         this.field_i = param3;
         this.field_n = param4;
         this.field_p = param2;
         this.field_m = param1;
         if (param0 != -31) {
-          this.a((byte) 27, -25, '﾿');
+          this.dispatchKeyInput((byte) 27, -25, '﾿');
         }
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void renderLayer(int param0, int param1, int param2, int param3) {
         if (param2 == param3) {
           if (this.field_r == null) {
             return;
@@ -327,7 +327,7 @@ class ae extends IntrusiveNode {
         }
     }
 
-    boolean b(byte param0) {
+    boolean hasKeyboardFocus(byte param0) {
         if (param0 != -34) {
           this.field_p = 89;
           return false;
@@ -335,7 +335,7 @@ class ae extends IntrusiveNode {
         return false;
     }
 
-    boolean a(int param0, int param1, int param2, int param3, int param4, ae param5, int param6) {
+    boolean handlePointerPress(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -345,7 +345,7 @@ class ae extends IntrusiveNode {
           if (param0 < 70) {
             this.field_f = false;
           }
-          if (!this.a(param6, param1, 47, param3, param2)) {
+          if (!this.containsPointer(param6, param1, 47, param3, param2)) {
             return false;
           }
           this.field_s = param4;
@@ -364,7 +364,7 @@ class ae extends IntrusiveNode {
         }
     }
 
-    void a(int param0, int param1, ae param2, int param3) {
+    void updatePointerState(int param0, int param1, UiWidget param2, int param3) {
         int var5_int = 0;
         int stackIn_5_0 = 0;
         int stackIn_8_1 = 0;
@@ -378,7 +378,7 @@ class ae extends IntrusiveNode {
           if (param1 != 2097152) {
             field_k = (String) null;
           }
-          var5_int = this.a(jba.field_j, param0, -105, sta.field_B, param3) ? 1 : 0;
+          var5_int = this.containsPointer(jba.field_j, param0, -105, sta.field_B, param3) ? 1 : 0;
           stackIn_5_0 = (this.field_f) ? 0 : 1;
           if (var5_int != 0) {
             stackIn_8_1 = 0;
@@ -409,7 +409,7 @@ class ae extends IntrusiveNode {
         }
     }
 
-    StringBuilder a(int param0, Hashtable param1, StringBuilder param2, int param3) {
+    StringBuilder appendDiagnostics(int param0, Hashtable param1, StringBuilder param2, int param3) {
         RuntimeException var5 = null;
         StringBuilder stackIn_5_0 = null;
         StringBuilder stackIn_7_0 = null;
@@ -420,8 +420,8 @@ class ae extends IntrusiveNode {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a((byte) -122, param0, param1, param2)) {
-            this.a(1, param2, param1, param0);
+          if (this.beginDiagnosticVisit((byte) -122, param0, param1, param2)) {
+            this.appendDiagnosticProperties(1, param2, param1, param0);
           }
           if (param3 == 0) {
             stackIn_7_0 = (StringBuilder) (param2);
@@ -454,7 +454,7 @@ class ae extends IntrusiveNode {
         field_k = null;
     }
 
-    String d(byte param0) {
+    String getHoverText(byte param0) {
         int var2 = 7 % ((param0 + 58) / 60);
         if (!this.field_f) {
           return null;
@@ -478,7 +478,7 @@ class ae extends IntrusiveNode {
         return true;
     }
 
-    void a(byte param0, ae param1, int param2, int param3, int param4, int param5) {
+    void handlePointerRelease(byte param0, UiWidget param1, int param2, int param3, int param4, int param5) {
         try {
           if (param0 != 59) {
             this.field_q = (String) null;
@@ -489,7 +489,7 @@ class ae extends IntrusiveNode {
         }
     }
 
-    final boolean a(int param0, boolean param1, int param2, int param3) {
+    final boolean processPointerFrame(int param0, boolean param1, int param2, int param3) {
         int var5;
         int var7;
         vp var8;
@@ -499,28 +499,28 @@ class ae extends IntrusiveNode {
         vp var12;
         vp var13;
         var7 = TombRacer.field_G ? 1 : 0;
-        this.a(param2, 2097152, this, param0);
-        var5 = this.b((byte) -34) ? 1 : 0;
+        this.updatePointerState(param2, 2097152, this, param0);
+        var5 = this.hasKeyboardFocus((byte) -34) ? 1 : 0;
         if (!param1) {
           if (var5 != 0 &&
             hf.field_b != 0) {
-            this.f((byte) 119);
+            this.clearKeyboardFocus((byte) 119);
           }
           kca.field_f = ksa.field_p;
-          fea.a((byte) -33, this.d((byte) 68));
+          fea.a((byte) -33, this.getHoverText((byte) 68));
           if (param3 <= -86) {
             return param1;
           }
-          this.c((byte) -121);
+          this.refreshLayout((byte) -121);
           return param1;
         }
         if (0 == pg.field_y) {
           if (hf.field_b != 0) {
-            if (!this.a(97, param2, param0, lba.field_p, hf.field_b, this, jm.field_m)) {
+            if (!this.handlePointerPress(97, param2, param0, lba.field_p, hf.field_b, this, jm.field_m)) {
               if (var5 == 0) {
                 if (ksa.field_p == 0 &&
                   kca.field_f != 0) {
-                  this.a((byte) 59, this, sta.field_B, param2, param0, jba.field_j);
+                  this.handlePointerRelease((byte) 59, this, sta.field_B, param2, param0, jba.field_j);
                   var8 = ava.field_f;
                   if (var8 != null) {
                     if (!(var8.field_h instanceof kja)) {
@@ -533,17 +533,17 @@ class ae extends IntrusiveNode {
                   if (var7 != 0 &&
                     var5 != 0 &&
                     hf.field_b != 0) {
-                    this.f((byte) 119);
+                    this.clearKeyboardFocus((byte) 119);
                   }
                 }
                 kca.field_f = ksa.field_p;
-                fea.a((byte) -33, this.d((byte) 68));
+                fea.a((byte) -33, this.getHoverText((byte) 68));
                 if (param3 > -86) {
-                  this.c((byte) -121);
+                  this.refreshLayout((byte) -121);
                 }
                 return param1;
               }
-              this.f((byte) -98);
+              this.clearKeyboardFocus((byte) -98);
               if (var7 != 0) {
                 param1 = false;
               }
@@ -553,7 +553,7 @@ class ae extends IntrusiveNode {
           }
           if (ksa.field_p == 0 &&
             kca.field_f != 0) {
-            this.a((byte) 59, this, sta.field_B, param2, param0, jba.field_j);
+            this.handlePointerRelease((byte) 59, this, sta.field_B, param2, param0, jba.field_j);
             var9 = ava.field_f;
             if (var9 != null) {
               if (var9.field_h instanceof kja) {
@@ -564,29 +564,29 @@ class ae extends IntrusiveNode {
             if (var7 != 0 &&
               var5 != 0 &&
               hf.field_b != 0) {
-              this.f((byte) 119);
+              this.clearKeyboardFocus((byte) 119);
             }
             kca.field_f = ksa.field_p;
-            fea.a((byte) -33, this.d((byte) 68));
+            fea.a((byte) -33, this.getHoverText((byte) 68));
             if (param3 > -86) {
-              this.c((byte) -121);
+              this.refreshLayout((byte) -121);
             }
             return param1;
           }
           kca.field_f = ksa.field_p;
-          fea.a((byte) -33, this.d((byte) 68));
+          fea.a((byte) -33, this.getHoverText((byte) 68));
           if (param3 <= -86) {
             return param1;
           }
-          this.c((byte) -121);
+          this.refreshLayout((byte) -121);
           return param1;
         }
         if (var5 == 0) {
           if (hf.field_b != 0) {
-            if (!this.a(97, param2, param0, lba.field_p, hf.field_b, this, jm.field_m)) {
+            if (!this.handlePointerPress(97, param2, param0, lba.field_p, hf.field_b, this, jm.field_m)) {
               if (ksa.field_p == 0 &&
                 kca.field_f != 0) {
-                this.a((byte) 59, this, sta.field_B, param2, param0, jba.field_j);
+                this.handlePointerRelease((byte) 59, this, sta.field_B, param2, param0, jba.field_j);
                 var10 = ava.field_f;
                 if (var10 != null) {
                   if (!(var10.field_h instanceof kja)) {
@@ -599,13 +599,13 @@ class ae extends IntrusiveNode {
                 if (var7 != 0 &&
                   var5 != 0 &&
                   hf.field_b != 0) {
-                  this.f((byte) 119);
+                  this.clearKeyboardFocus((byte) 119);
                 }
               }
               kca.field_f = ksa.field_p;
-              fea.a((byte) -33, this.d((byte) 68));
+              fea.a((byte) -33, this.getHoverText((byte) 68));
               if (param3 > -86) {
-                this.c((byte) -121);
+                this.refreshLayout((byte) -121);
               }
               return param1;
             }
@@ -613,7 +613,7 @@ class ae extends IntrusiveNode {
           }
           if (ksa.field_p == 0 &&
             kca.field_f != 0) {
-            this.a((byte) 59, this, sta.field_B, param2, param0, jba.field_j);
+            this.handlePointerRelease((byte) 59, this, sta.field_B, param2, param0, jba.field_j);
             var11 = ava.field_f;
             if (var11 != null) {
               if (var11.field_h instanceof kja) {
@@ -624,27 +624,27 @@ class ae extends IntrusiveNode {
             if (var7 != 0 &&
               var5 != 0 &&
               hf.field_b != 0) {
-              this.f((byte) 119);
+              this.clearKeyboardFocus((byte) 119);
             }
             kca.field_f = ksa.field_p;
-            fea.a((byte) -33, this.d((byte) 68));
+            fea.a((byte) -33, this.getHoverText((byte) 68));
             if (param3 > -86) {
-              this.c((byte) -121);
+              this.refreshLayout((byte) -121);
             }
             return param1;
           }
           kca.field_f = ksa.field_p;
-          fea.a((byte) -33, this.d((byte) 68));
+          fea.a((byte) -33, this.getHoverText((byte) 68));
           if (param3 <= -86) {
             return param1;
           }
-          this.c((byte) -121);
+          this.refreshLayout((byte) -121);
           return param1;
         }
         this.a(pg.field_y, param0, param2, sta.field_B, this, jba.field_j, -1);
         if (hf.field_b != 0) {
-          if (!this.a(97, param2, param0, lba.field_p, hf.field_b, this, jm.field_m)) {
-            this.f((byte) -98);
+          if (!this.handlePointerPress(97, param2, param0, lba.field_p, hf.field_b, this, jm.field_m)) {
+            this.clearKeyboardFocus((byte) -98);
             if (var7 != 0) {
               param1 = false;
             }
@@ -654,23 +654,23 @@ class ae extends IntrusiveNode {
         }
         if (ksa.field_p != 0) {
           kca.field_f = ksa.field_p;
-          fea.a((byte) -33, this.d((byte) 68));
+          fea.a((byte) -33, this.getHoverText((byte) 68));
           if (param3 <= -86) {
             return param1;
           }
-          this.c((byte) -121);
+          this.refreshLayout((byte) -121);
           return param1;
         }
         if (kca.field_f == 0) {
           kca.field_f = ksa.field_p;
-          fea.a((byte) -33, this.d((byte) 68));
+          fea.a((byte) -33, this.getHoverText((byte) 68));
           if (param3 <= -86) {
             return param1;
           }
-          this.c((byte) -121);
+          this.refreshLayout((byte) -121);
           return param1;
         }
-        this.a((byte) 59, this, sta.field_B, param2, param0, jba.field_j);
+        this.handlePointerRelease((byte) 59, this, sta.field_B, param2, param0, jba.field_j);
         var13 = ava.field_f;
         if (var13 != null) {
           if (var13.field_h instanceof kja) {
@@ -681,27 +681,27 @@ class ae extends IntrusiveNode {
         if (var7 != 0 &&
           var5 != 0 &&
           hf.field_b != 0) {
-          this.f((byte) 119);
+          this.clearKeyboardFocus((byte) 119);
         }
         kca.field_f = ksa.field_p;
-        fea.a((byte) -33, this.d((byte) 68));
+        fea.a((byte) -33, this.getHoverText((byte) 68));
         if (param3 <= -86) {
           return param1;
         }
-        this.c((byte) -121);
+        this.refreshLayout((byte) -121);
         return param1;
     }
 
     public final String toString() {
-        return this.a(0, new Hashtable(), new StringBuilder(), 0).toString();
+        return this.appendDiagnostics(0, new Hashtable(), new StringBuilder(), 0).toString();
     }
 
-    protected ae() {
+    protected UiWidget() {
         this.field_t = 0;
         this.field_j = 0;
     }
 
-    ae(String param0, isa param1, qc param2) {
+    UiWidget(String param0, isa param1, qc param2) {
         RuntimeException runtimeException = null;
         oaa var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -750,7 +750,7 @@ class ae extends IntrusiveNode {
         }
     }
 
-    ae(int param0, int param1, int param2, int param3, isa param4, qc param5) {
+    UiWidget(int param0, int param1, int param2, int param3, isa param4, qc param5) {
         this.field_t = 0;
         this.field_j = 0;
         try {

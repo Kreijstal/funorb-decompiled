@@ -186,7 +186,7 @@ abstract class tfa implements iva {
           if (rp.field_g == this.field_f) {
             return 6406;
           }
-          if (qr.field_w == this.field_f) {
+          if (SingleChildWidget.field_w == this.field_f) {
             return 6409;
           }
           if (wo.field_i == this.field_f) {
@@ -207,7 +207,7 @@ abstract class tfa implements iva {
               if (rp.field_g == this.field_f) {
                 return 34838;
               }
-              if (qr.field_w == this.field_f) {
+              if (SingleChildWidget.field_w == this.field_f) {
                 return 34840;
               }
               if (wo.field_i == this.field_f) {
@@ -227,7 +227,7 @@ abstract class tfa implements iva {
             if (rp.field_g == this.field_f) {
               return 34844;
             }
-            if (this.field_f == qr.field_w) {
+            if (this.field_f == SingleChildWidget.field_w) {
               return 34846;
             }
             if (wo.field_i == this.field_f) {

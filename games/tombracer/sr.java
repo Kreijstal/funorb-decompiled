@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sr extends b implements tsa {
+final class sr extends WidgetContainer implements tsa {
     private ij field_y;
     private int field_z;
     private String field_C;
@@ -27,9 +27,9 @@ final class sr extends b implements tsa {
           if (param1 != -102) {
             this.field_B = (BitmapFont) null;
           }
-          this.a((byte) -31, this.field_m, 34 + this.field_p, 0, 0);
-          var4.a((byte) -31, -14 + this.field_m, 30, 7, var5);
-          this.a(var4, -1);
+          this.setBounds((byte) -31, this.field_m, 34 + this.field_p, 0, 0);
+          var4.setBounds((byte) -31, -14 + this.field_m, 30, 7, var5);
+          this.addChild(var4, -1);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -85,7 +85,7 @@ final class sr extends b implements tsa {
           this.field_C = param2;
           this.field_B = param1;
           var4_int = null == this.field_C ? 0 : this.field_B.a(this.field_C, 260, this.field_B.field_w);
-          this.a((byte) -31, 288, 22 + var4_int, 0, 0);
+          this.setBounds((byte) -31, 288, 22 + var4_int, 0, 0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -133,8 +133,8 @@ final class sr extends b implements tsa {
         return ub.field_c != ub.field_h ? true : false;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void renderLayer(int param0, int param1, int param2, int param3) {
+        super.renderLayer(param0, param1, param2, param3);
         this.field_B.a(this.field_C, 14 + (param0 + this.field_i), 10 + this.field_n + param1, -28 + this.field_m, this.field_p, 16777215, -1, 0, 0, this.field_B.field_w);
     }
 

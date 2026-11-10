@@ -71,7 +71,7 @@ final class uda extends qra {
         stackIn_3_0 = (this.i(-1)) ? 0 : 1;
         var5 = stackIn_3_0;
         ik.field_h.a(0, 0);
-        SocketConnector.a(gta.field_a.toUpperCase(), 1, qr.field_v, 2431750, 0, 48, 1, -222 + var4, var3 - 360, -1, (byte) 60, 512);
+        SocketConnector.a(gta.field_a.toUpperCase(), 1, SingleChildWidget.field_v, 2431750, 0, 48, 1, -222 + var4, var3 - 360, -1, (byte) 60, 512);
         if (-1 == this.field_u &&
           var5 != 0) {
           SocketConnector.a(jsa.field_F, 1, eda.field_f, 2431750, 0, 48, 1, koa.b(0) - 48, var3 - 256, -1, (byte) 60, 512);

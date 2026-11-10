@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class op extends ofa implements tsa {
-    private ae field_L;
+    private UiWidget field_L;
     private rj field_N;
     static jpa field_O;
     private rj field_M;
@@ -120,23 +120,23 @@ final class op extends ofa implements tsa {
 
     op(jta param0) {
         super(param0, 200, 200);
-        ae var3 = null;
+        UiWidget var3 = null;
         try {
           this.field_P = bva.b((byte) -107);
-          var3 = new ae(rfa.field_B, (qc) null);
+          var3 = new UiWidget(rfa.field_B, (qc) null);
           var3.field_m = this.field_m;
           var3.field_p = 100;
           var3.field_n = 50;
           var3.field_i = 0;
           var3.field_r = (isa) ((Object) new vpa(eka.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.a(var3, -1);
-          this.field_L = new ae(rfa.field_B, (qc) null);
+          this.addChild(var3, -1);
+          this.field_L = new UiWidget(rfa.field_B, (qc) null);
           this.field_L.field_i = 0;
           this.field_L.field_n = 20 + var3.field_n + var3.field_p;
           this.field_L.field_m = this.field_m;
           this.field_L.field_p = 80;
           this.field_L.field_r = (isa) ((Object) new vpa(ft.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.a(this.field_L, -1);
+          this.addChild(this.field_L, -1);
           this.field_N = this.a((qc) (this), 77, vc.field_s);
           this.field_M = this.a((qc) (this), 71, mha.field_F);
         } catch (RuntimeException runtimeException) {
@@ -188,7 +188,7 @@ final class op extends ofa implements tsa {
         }
     }
 
-    final boolean a(char param0, ae param1, int param2, boolean param3) {
+    final boolean handleKeyInput(char param0, UiWidget param1, int param2, boolean param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_11_0 = false;
@@ -202,14 +202,14 @@ final class op extends ofa implements tsa {
           }
           var5_int = param2;
           if (var5_int == 99) {
-            this.field_M.a((ae) (this), false);
+            this.field_M.requestKeyboardFocus((UiWidget) (this), false);
             return true;
           }
           if (var5_int != 98) {
-            stackIn_11_0 = super.a(param0, param1, param2, param3);
+            stackIn_11_0 = super.handleKeyInput(param0, param1, param2, param3);
             return stackIn_11_0;
           }
-          this.field_N.a((ae) (this), false);
+          this.field_N.requestKeyboardFocus((UiWidget) (this), false);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -246,9 +246,9 @@ final class op extends ofa implements tsa {
             stackIn_2_0 = (rj) null;
             return stackIn_2_0;
           }
-          var4.a((byte) -31, -30 + this.field_m, 30, 15, var5);
-          this.a(var4, -1);
-          this.c((byte) -54);
+          var4.setBounds((byte) -31, -30 + this.field_m, 30, 15, var5);
+          this.addChild(var4, -1);
+          this.refreshLayout((byte) -54);
           stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -303,7 +303,7 @@ final class op extends ofa implements tsa {
         }
     }
 
-    final void a(int param0, int param1, ae param2, int param3) {
+    final void updatePointerState(int param0, int param1, UiWidget param2, int param3) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -312,9 +312,9 @@ final class op extends ofa implements tsa {
         RuntimeException var5 = null;
         int var7 = 0;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
           if (qma.field_c) {
-            param2.f((byte) 64);
+            param2.clearKeyboardFocus((byte) 64);
           }
           var5_long = -this.field_P + bva.b((byte) -107);
           var7 = (int)((-var5_long + 10999L) / 1000L);

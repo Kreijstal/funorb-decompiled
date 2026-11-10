@@ -100,7 +100,7 @@ final class S2CActionPacket extends IntrusiveNode implements GamePacket {
             param1.writeBits((byte) 71, this.hasPlayerOrders[var3_int] ? 1 : 0, 1);
             if (this.hasPlayerOrders[var3_int]) {
               for (var4 = 0; var4 < this.playerOrders[var3_int].length; var4++) {
-                param1.writeBits((byte) -23, uja.a(-47, this.playerOrders[var3_int][var4]), 7);
+                param1.writeBits((byte) -23, IntrusiveDequeCursor.a(-47, this.playerOrders[var3_int][var4]), 7);
               }
             }
             var3_int++;

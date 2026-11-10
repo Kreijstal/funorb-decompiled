@@ -87,7 +87,7 @@ final class ds {
           if (param1) {
             SoftwareRasterizer.c(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_a, 0, 192);
           }
-          ModelFactory.field_a.b(-108, 0, 0);
+          ModelFactory.field_a.renderWithTooltip(-108, 0, 0);
           return;
         }
     }

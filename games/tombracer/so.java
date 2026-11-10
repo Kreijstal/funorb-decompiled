@@ -19,9 +19,9 @@ final class so extends tra implements mk {
         field_L = null;
     }
 
-    final void a(int param0, int param1, ae param2, int param3) {
+    final void updatePointerState(int param0, int param1, UiWidget param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
           this.field_M = -param0 + jba.field_j - this.field_i;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "so.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -107,7 +107,7 @@ final class so extends tra implements mk {
         return (jj.a(param2, param0, -32842) | mg.a((byte) -53, param2, param0) | gha.a(param2, param0, 86)) & hha.a(param2, 0, param0);
     }
 
-    final String d(byte param0) {
+    final String getHoverText(byte param0) {
         if (!this.field_f) {
           return null;
         }

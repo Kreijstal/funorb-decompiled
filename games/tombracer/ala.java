@@ -299,7 +299,7 @@ final class ala extends dfa {
 
     final void a(byte param0, boolean param1) {
         this.a(true, 68);
-        fca.a(qr.a(0), 7);
+        fca.a(SingleChildWidget.a(0), 7);
         if (param0 != -28) {
           this.a((byte) 98);
         }

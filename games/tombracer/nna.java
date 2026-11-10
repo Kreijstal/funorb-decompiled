@@ -61,7 +61,7 @@ final class nna {
             stackIn_6_0 = iia.field_q;
             return stackIn_6_0;
           }
-          if (~ae.field_g != param0) {
+          if (~UiWidget.field_g != param0) {
             stackIn_9_0 = EffectSwitchBehaviour.field_o;
             return stackIn_9_0;
           }

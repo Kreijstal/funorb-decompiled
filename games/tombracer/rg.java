@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rg extends qr {
+final class rg extends SingleChildWidget {
     static hra field_A;
     int field_y;
     static int field_z;
     static int field_B;
 
-    rg(ae param0) {
+    rg(UiWidget param0) {
         super(param0.field_i, param0.field_n, param0.field_m, param0.field_p, (isa) null, (qc) null);
         try {
-          param0.a((byte) -31, this.field_m, this.field_p, 0, 0);
-          this.field_x = param0;
+          param0.setBounds((byte) -31, this.field_m, this.field_p, 0, 0);
+          this.child = param0;
           this.field_y = 256;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "rg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
@@ -48,7 +48,7 @@ final class rg extends qr {
         wba.field_q[7] = s.field_a;
         wba.field_q[17] = fga.field_a;
         wba.field_q[15] = sra.field_i;
-        wba.field_q[13] = b.field_v;
+        wba.field_q[13] = WidgetContainer.field_v;
         wba.field_q[18] = pl.field_b;
         wba.field_q[0] = fga.field_a;
         wba.field_q[19] = PrimMazeGenerator.field_b;
@@ -158,7 +158,7 @@ final class rg extends qr {
           tk.field_a[12] = SwitchComponent.fireDeathMessages;
           tk.field_a[5] = tia.fallDeathMessages;
           tk.field_a[13] = id.laserDeathMessages;
-          tk.field_a[15] = qr.sawDeathMessages;
+          tk.field_a[15] = SingleChildWidget.sawDeathMessages;
           tk.field_a[7] = fpa.snakeDeathMessages;
           tk.field_a[4] = or.fallingObjectDeathMessages;
           IntrusiveDeque.field_d[0] = new String[]{ela.field_m, fr.field_a, null, null, null, null, qfa.field_a};
@@ -210,7 +210,7 @@ final class rg extends qr {
         tk.field_a[12] = SwitchComponent.fireDeathMessages;
         tk.field_a[5] = tia.fallDeathMessages;
         tk.field_a[13] = id.laserDeathMessages;
-        tk.field_a[15] = qr.sawDeathMessages;
+        tk.field_a[15] = SingleChildWidget.sawDeathMessages;
         tk.field_a[7] = fpa.snakeDeathMessages;
         tk.field_a[4] = or.fallingObjectDeathMessages;
         IntrusiveDeque.field_d[0] = new String[]{ela.field_m, fr.field_a, null, null, null, null, qfa.field_a};
@@ -242,26 +242,26 @@ final class rg extends qr {
         this.field_y = 256;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void renderLayer(int param0, int param1, int param2, int param3) {
         Sprite var6 = null;
         if (param3 != 0) {
           return;
         }
-        if (this.field_x == null) {
+        if (this.child == null) {
           return;
         }
         if (0 == this.field_y) {
           return;
         }
         if (this.field_y != 256) {
-          var6 = new Sprite(this.field_x.field_m, this.field_x.field_p);
+          var6 = new Sprite(this.child.field_m, this.child.field_p);
           nm.a(var6, (byte) 110);
-          this.field_x.a(param2, 0, 0, param3);
+          this.child.renderLayer(param2, 0, 0, param3);
           pfa.a(1);
           var6.c(param0 + this.field_i, this.field_n + param1, this.field_y);
           return;
         }
-        this.field_x.a(param0 + this.field_i, this.field_n + param1, 0, param3);
+        this.child.renderLayer(param0 + this.field_i, this.field_n + param1, 0, param3);
     }
 
     final static boolean e(int param0, int param1, int param2) {

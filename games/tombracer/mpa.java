@@ -6,7 +6,7 @@ final class mpa extends lc {
     static apa field_V;
     static boolean field_X;
 
-    mpa(jta param0, ae param1) {
+    mpa(jta param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 
@@ -95,7 +95,7 @@ final class mpa extends lc {
         return (param2 & 1048832) != 0 ? true : false;
     }
 
-    final void a(int param0, ae param1) {
+    final void a(int param0, UiWidget param1) {
         try {
           if (param0 <= 67) {
             field_W = (int[]) null;

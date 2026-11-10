@@ -72,7 +72,7 @@ final class kc {
             stackIn_6_0 = pk.field_v;
             return stackIn_6_0;
           }
-          if (ae.field_g != 2) {
+          if (UiWidget.field_g != 2) {
             stackIn_9_0 = rt.field_n;
             return stackIn_9_0;
           }

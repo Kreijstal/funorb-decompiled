@@ -172,7 +172,7 @@ public final class TombRacer extends rfa implements ls {
           if (fja.h(param2 ^ 110) &&
             !lca.a(false)) {
             tga.field_a.c(-1073741824, 0, aaa.a(false), 0, param2 ^ -22956, koa.b(0));
-            var5_ref_ssa = uja.a((byte) 65, tga.field_a);
+            var5_ref_ssa = IntrusiveDequeCursor.a((byte) 65, tga.field_a);
             var5_ref_ssa.a(aaa.a(false) + mp.a((byte) -112) >> 1, koa.b(0) - qra.a(96) >> 1, (byte) -12, koa.b(0) + qra.a(96) >> 1, aaa.a(false) - mp.a((byte) -125) >> 1);
             if (dq.field_f == null) {
               stackIn_47_0 = VortexBehaviour.field_n;
@@ -192,7 +192,7 @@ public final class TombRacer extends rfa implements ls {
               var6 = PlantComponent.A(-1);
               var7 = PillarComponent.A(param2 - 7128);
               var8 = rs.a((byte) 124);
-              var9 = uja.a((byte) 65, tga.field_a);
+              var9 = IntrusiveDequeCursor.a((byte) 65, tga.field_a);
               var9.a(var5 + var7, var6, (byte) -12, var6 + var8, var5);
               tga.field_a.SA(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_a, SoftwareRasterizer.field_l, 0, SoftwareRasterizer.field_g);
               var9.a(99);
@@ -406,9 +406,9 @@ public final class TombRacer extends rfa implements ls {
         vga.b(96);
         bsa.releaseStatics((byte) -33);
         cj.releaseStatics(47);
-        uja.releaseStatics(param0 ^ -3668);
-        ae.releaseStatics((byte) -28);
-        qr.releaseStatics(param0 ^ -3666);
+        IntrusiveDequeCursor.releaseStatics(param0 ^ -3668);
+        UiWidget.releaseStatics((byte) -28);
+        SingleChildWidget.releaseStatics(param0 ^ -3666);
         gn.releaseStatics(0);
         bja.releaseStatics(127);
         at.releaseStatics((byte) -102);
@@ -417,8 +417,8 @@ public final class TombRacer extends rfa implements ls {
         ofa.releaseStatics(0);
         rla.releaseStatics(true);
         sta.releaseStatics((byte) -124);
-        b.releaseStatics((byte) 122);
-        rva.b(0);
+        WidgetContainer.releaseStatics((byte) 122);
+        ArrayWidgetGroup.b(0);
         joa.a(false);
         dr.a(115);
         sb.a(0);

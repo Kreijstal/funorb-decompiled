@@ -4185,7 +4185,7 @@ final class np extends ka {
             }
           }
           if (this.field_H != null &&
-            !ae.a(this.field_bb, this.field_u, 6100)) {
+            !UiWidget.a(this.field_bb, this.field_u, 6100)) {
             if ((this.field_w == null ||
               this.field_w.field_a != null) &&
               (null == this.field_kb ||

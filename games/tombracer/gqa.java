@@ -29,7 +29,7 @@ final class gqa {
           if (~this.field_i == ~SimpleConditionBehaviour.field_r) {
             return 1;
           }
-          if (ae.field_g == 2 &&
+          if (UiWidget.field_g == 2 &&
             dda.a(false, this.field_j)) {
             return 1;
           }
@@ -41,7 +41,7 @@ final class gqa {
         if (~this.field_i == ~SimpleConditionBehaviour.field_r) {
           return 1;
         }
-        if (ae.field_g == 2 &&
+        if (UiWidget.field_g == 2 &&
           dda.a(false, this.field_j)) {
           return 1;
         }

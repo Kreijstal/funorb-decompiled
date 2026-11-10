@@ -35,9 +35,9 @@ final class gga extends ofa implements tsa {
           if (param2 >= -82) {
             gga.releaseStatics(16);
           }
-          var4.a((byte) -31, -16 + (this.field_m - 14), 30, 15, var5);
-          this.a(var4, -1);
-          this.c((byte) -75);
+          var4.setBounds((byte) -31, -16 + (this.field_m - 14), 30, 15, var5);
+          this.addChild(var4, -1);
+          this.refreshLayout((byte) -75);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -160,7 +160,7 @@ final class gga extends ofa implements tsa {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ae var4 = null;
+        UiWidget var4 = null;
         try {
           var3 = null;
           if (gj.field_o == param1) {
@@ -180,13 +180,13 @@ final class gga extends ofa implements tsa {
               }
             }
           }
-          var4 = new ae((String) (var3), (qc) null);
+          var4 = new UiWidget((String) (var3), (qc) null);
           var4.field_p = 80;
           var4.field_m = this.field_m;
           var4.field_n = 50;
           var4.field_i = 0;
           var4.field_r = (isa) ((Object) new vpa(eka.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.a(var4, -1);
+          this.addChild(var4, -1);
           this.field_N = this.a(BitPacketBuffer.field_j, (qc) (this), -93);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

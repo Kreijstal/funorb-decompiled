@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tha extends b implements tsa {
+final class tha extends WidgetContainer implements tsa {
     static String field_A;
     static String field_B;
     private rj field_x;
@@ -9,11 +9,11 @@ final class tha extends b implements tsa {
     private rj field_w;
     static String field_y;
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void renderLayer(int param0, int param1, int param2, int param3) {
         int var5 = this.field_i + param0;
         int var6 = param1 + this.field_n;
         KeySwitchComponent.field_J.a(bb.field_q, var5 + 20, 20 + var6, -40 + this.field_m, -50 + this.field_p, 16777215, -1, 1, param2, KeySwitchComponent.field_J.field_w);
-        super.a(param0, param1, 0, param3);
+        super.renderLayer(param0, param1, 0, param3);
     }
 
     final static void a(int param0) {
@@ -150,17 +150,17 @@ final class tha extends b implements tsa {
         int var2 = 4;
         int var3 = 326;
         int var4 = var3 - var2 >> 1;
-        this.field_w.a((byte) -31, var4, 30, this.field_m - var3 >> 1, -var2 + (this.field_p - 48));
-        this.field_x.a((byte) -31, var4, 30, var4 + (-var3 + this.field_m >> 1) + var2, -var2 + this.field_p - 48);
-        this.field_z.a((byte) -31, var3, 30, this.field_m - var3 >> 1, this.field_p + (-78 - var2 * 2));
+        this.field_w.setBounds((byte) -31, var4, 30, this.field_m - var3 >> 1, -var2 + (this.field_p - 48));
+        this.field_x.setBounds((byte) -31, var4, 30, var4 + (-var3 + this.field_m >> 1) + var2, -var2 + this.field_p - 48);
+        this.field_z.setBounds((byte) -31, var3, 30, this.field_m - var3 >> 1, this.field_p + (-78 - var2 * 2));
         this.field_w.field_h = (qc) (this);
         this.field_z.field_h = (qc) (this);
         this.field_z.field_q = hga.field_n;
         this.field_x.field_h = (qc) (this);
         this.field_x.field_q = tg.field_a;
-        this.a(this.field_w, -1);
-        this.a(this.field_z, -1);
-        this.a(this.field_x, -1);
+        this.addChild(this.field_w, -1);
+        this.addChild(this.field_z, -1);
+        this.addChild(this.field_x, -1);
     }
 
     public static void releaseStatics(int param0) {
@@ -209,7 +209,7 @@ final class tha extends b implements tsa {
         }
     }
 
-    final boolean a(char param0, ae param1, int param2, boolean param3) {
+    final boolean handleKeyInput(char param0, UiWidget param1, int param2, boolean param3) {
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
         boolean stackIn_8_0 = false;
@@ -218,17 +218,17 @@ final class tha extends b implements tsa {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKeyInput(param0, param1, param2, param3)) {
             return true;
           }
           if (param2 == 98) {
-            stackIn_5_0 = this.b(param1, (byte) -118);
+            stackIn_5_0 = this.focusPreviousChild(param1, (byte) -118);
             return stackIn_5_0;
           }
           if (param2 != 99) {
             return false;
           }
-          stackIn_8_0 = this.a(param1, (byte) -9);
+          stackIn_8_0 = this.focusNextChild(param1, (byte) -9);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

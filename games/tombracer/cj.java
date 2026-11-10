@@ -107,9 +107,9 @@ final class cj implements isa {
         }
     }
 
-    public final void a(ae param0, int param1, int param2, int param3, boolean param4) {
+    public final void a(UiWidget param0, int param1, int param2, int param3, boolean param4) {
         int var10 = 0;
-        ae stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -123,7 +123,7 @@ final class cj implements isa {
         var11 = TombRacer.field_G ? 1 : 0;
         try {
           if (param0 instanceof kd) {
-            stackIn_4_0 = (ae) (param0);
+            stackIn_4_0 = (UiWidget) (param0);
           } else {
             stackIn_4_0 = null;
           }

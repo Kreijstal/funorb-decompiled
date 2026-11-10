@@ -3,27 +3,27 @@
  */
 import java.util.*;
 
-class rj extends ae {
+class rj extends UiWidget {
     int field_x;
     private boolean field_u;
     private boolean field_v;
     boolean field_y;
     boolean field_w;
 
-    boolean a(char param0, ae param1, int param2, boolean param3) {
+    boolean handleKeyInput(char param0, UiWidget param1, int param2, boolean param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.b((byte) -34) && (param2 == 84 ||
+          if (this.hasKeyboardFocus((byte) -34) && (param2 == 84 ||
             param2 == 83)) {
             this.b(-1, 1, -1, -81);
             return true;
           }
           if (!param3) {
-            this.f((byte) -61);
+            this.clearKeyboardFocus((byte) -61);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -48,11 +48,11 @@ class rj extends ae {
         this.field_y = true;
     }
 
-    final StringBuilder a(int param0, Hashtable param1, StringBuilder param2, int param3) {
+    final StringBuilder appendDiagnostics(int param0, Hashtable param1, StringBuilder param2, int param3) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         RuntimeException var5 = null;
-        ae var6 = null;
+        UiWidget var6 = null;
         StringBuilder stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -61,8 +61,8 @@ class rj extends ae {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a((byte) -122, param0, param1, param2)) {
-            this.a(1, param2, param1, param0);
+          if (this.beginDiagnosticVisit((byte) -122, param0, param1, param2)) {
+            this.appendDiagnosticProperties(1, param2, param1, param0);
             if (this.field_w) {
               discarded$2 = param2.append(" active");
             }
@@ -71,8 +71,8 @@ class rj extends ae {
             }
           }
           if (param3 != 0) {
-            var6 = (ae) null;
-            this.a((ae) null, true);
+            var6 = (UiWidget) null;
+            this.requestKeyboardFocus((UiWidget) null, true);
           }
           stackIn_8_0 = (StringBuilder) (param2);
           return stackIn_8_0;
@@ -100,26 +100,26 @@ class rj extends ae {
         this(param0, afa.field_c.field_u, param1);
     }
 
-    void a(int param0, int param1, ae param2, int param3) {
+    void updatePointerState(int param0, int param1, UiWidget param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
           this.field_x = 0;
           if (this.field_s != 0) {
             if (this.field_s == ksa.field_p) {
               return;
             }
-            if (this.a(jba.field_j, param0, param1 ^ -2097252, sta.field_B, param3) &&
+            if (this.containsPointer(jba.field_j, param0, param1 ^ -2097252, sta.field_B, param3) &&
               ksa.field_p == 0) {
               this.b(sta.field_B - param3, this.field_s, -param0 + jba.field_j, -86);
             }
-            this.a((byte) 59, param2, sta.field_B, param0, param3, jba.field_j);
+            this.handlePointerRelease((byte) 59, param2, sta.field_B, param0, param3, jba.field_j);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "rj.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    boolean a(ae param0, boolean param1) {
+    boolean requestKeyboardFocus(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -128,7 +128,7 @@ class rj extends ae {
         try {
           if (this.field_y &&
             this.field_v) {
-            param0.f((byte) -127);
+            param0.clearKeyboardFocus((byte) -127);
             this.field_u = true;
             if (param1) {
               this.field_v = true;
@@ -137,7 +137,7 @@ class rj extends ae {
               if (!(this.field_h instanceof vfa)) {
                 return true;
               }
-              ((vfa) (this.field_h)).a((ae) (this), (byte) 90, this.field_u);
+              ((vfa) (this.field_h)).a((UiWidget) (this), (byte) 90, this.field_u);
             }
             return true;
           }
@@ -156,7 +156,7 @@ class rj extends ae {
         }
     }
 
-    final void f(byte param0) {
+    final void clearKeyboardFocus(byte param0) {
         int var2 = 0;
         int var2Lifetime1;
         int var2Lifetime2;
@@ -171,7 +171,7 @@ class rj extends ae {
           return;
         }
         if (this.field_h instanceof vfa) {
-          ((vfa) (this.field_h)).a((ae) (this), (byte) -74, this.field_u);
+          ((vfa) (this.field_h)).a((UiWidget) (this), (byte) -74, this.field_u);
           var2Lifetime2 = 101 / ((param0 + 38) / 60);
           return;
         }
@@ -293,7 +293,7 @@ class rj extends ae {
         }
     }
 
-    boolean a(int param0, int param1, int param2, int param3, int param4, ae param5, int param6) {
+    boolean handlePointerPress(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -301,8 +301,8 @@ class rj extends ae {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_y &&
-            this.a(param6, param1, 125, param3, param2)) {
-            this.a(param5, false);
+            this.containsPointer(param6, param1, 125, param3, param2)) {
+            this.requestKeyboardFocus(param5, false);
             this.field_s = param4;
             if (null != this.field_h &&
               this.field_h instanceof om) {
@@ -329,7 +329,7 @@ class rj extends ae {
         }
     }
 
-    final boolean b(byte param0) {
+    final boolean hasKeyboardFocus(byte param0) {
         if (param0 != -34) {
           this.field_u = false;
           return this.field_u;
@@ -337,15 +337,15 @@ class rj extends ae {
         return this.field_u;
     }
 
-    final void a(byte param0, ae param1, int param2, int param3, int param4, int param5) {
+    final void handlePointerRelease(byte param0, UiWidget param1, int param2, int param3, int param4, int param5) {
         try {
           if (this.field_h != null &&
             this.field_h instanceof om) {
             ((om) (this.field_h)).a(param4, param3, 12728, param2, this, param5);
           }
           if (param0 != 59) {
-            ae var8 = (ae) null;
-            this.a((ae) null, true);
+            UiWidget var8 = (UiWidget) null;
+            this.requestKeyboardFocus((UiWidget) null, true);
           }
           this.field_s = 0;
         } catch (RuntimeException runtimeException) {

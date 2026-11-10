@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jsa extends qr {
+final class jsa extends SingleChildWidget {
     private int field_G;
     static String field_F;
     private String field_C;
@@ -12,19 +12,19 @@ final class jsa extends qr {
     private BitmapFont field_B;
     static String field_y;
 
-    final String d(byte param0) {
+    final String getHoverText(byte param0) {
         int var3 = 114 % ((param0 + 58) / 60);
-        int var2 = this.field_x.field_f ? 1 : 0;
-        this.field_x.field_f = this.field_f;
-        String var4 = this.field_x.d((byte) 56);
-        this.field_x.field_f = var2 != 0 ? true : false;
+        int var2 = this.child.field_f ? 1 : 0;
+        this.child.field_f = this.field_f;
+        String var4 = this.child.getHoverText((byte) 56);
+        this.child.field_f = var2 != 0 ? true : false;
         return var4;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void renderLayer(int param0, int param1, int param2, int param3) {
         int var5 = this.field_i + param0;
         int var6 = this.field_n + param1;
-        super.a(param0, param1, param2 ^ param2, param3);
+        super.renderLayer(param0, param1, param2 ^ param2, param3);
         if (param3 != 0) {
           return;
         }
@@ -32,7 +32,7 @@ final class jsa extends qr {
         this.field_B.a(this.field_C, this.field_G + var5 + var7, this.field_G + var6, this.field_D - this.field_G, -(this.field_G * 2) + this.field_p, this.field_A, -1, !this.field_E ? 2 : 0, 1, this.field_B.field_w);
     }
 
-    jsa(int param0, int param1, int param2, int param3, ae param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
+    jsa(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (isa) null, (qc) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
@@ -53,7 +53,7 @@ final class jsa extends qr {
           this.field_A = param9;
           this.field_C = param10;
           this.field_B = param8;
-          this.field_x = param4;
+          this.child = param4;
           stackIn_4_1 = (param5);
           this.field_E = stackIn_4_1;
           this.field_G = param7;
@@ -62,7 +62,7 @@ final class jsa extends qr {
           if (param3 >= var13) {
             var13 = param3;
           } else {
-            this.a((byte) -31, param2, var13, param0, param1);
+            this.setBounds((byte) -31, param2, var13, param0, param1);
           }
           if (this.field_E) {
             stackIn_10_0 = 0;
@@ -70,7 +70,7 @@ final class jsa extends qr {
             stackIn_10_0 = 2 * this.field_G + this.field_D;
           }
           var14 = stackIn_10_0;
-          this.field_x.a((byte) -31, -this.field_D + param2 - this.field_G * 3, -(this.field_G * 2) + param3, var14, this.field_G + (var13 - param3 >> 1));
+          this.child.setBounds((byte) -31, -this.field_D + param2 - this.field_G * 3, -(this.field_G * 2) + param3, var14, this.field_G + (var13 - param3 >> 1));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

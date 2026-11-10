@@ -90,8 +90,8 @@ final class jn extends we {
         int var11Lifetime2;
         int var11Lifetime2Lifetime1;
         var15 = TombRacer.field_G ? 1 : 0;
-        SocketConnector.a(SnakePitBehaviour.field_q.toUpperCase(), 1, qr.field_v, 2497287, -1, 160, 1, param1 - 20, 0, -1, (byte) 60, 320);
-        ua.a(4, qr.field_v, rka.a(td.field_r, true), 600, -1, param1 + 72, 11288327);
+        SocketConnector.a(SnakePitBehaviour.field_q.toUpperCase(), 1, SingleChildWidget.field_v, 2497287, -1, 160, 1, param1 - 20, 0, -1, (byte) 60, 320);
+        ua.a(4, SingleChildWidget.field_v, rka.a(td.field_r, true), 600, -1, param1 + 72, 11288327);
         var16 = IntrusiveDeque.field_d[td.field_r];
         var4 = var16;
         var5 = Effect.field_h[td.field_r];

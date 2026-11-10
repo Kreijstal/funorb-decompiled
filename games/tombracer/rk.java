@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rk extends ae {
+final class rk extends UiWidget {
     private int field_u;
     private int field_C;
     boolean field_D;
@@ -34,7 +34,7 @@ final class rk extends ae {
         field_F = null;
     }
 
-    final void a(int param0, int param1, ae param2, int param3) {
+    final void updatePointerState(int param0, int param1, UiWidget param2, int param3) {
         Sprite discarded$1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -94,8 +94,8 @@ final class rk extends ae {
         return var3;
     }
 
-    final void a(byte param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(byte param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.g((byte) 12);
     }
 
@@ -109,7 +109,7 @@ final class rk extends ae {
         this.field_E = new Sprite(this.field_p >> 1, this.field_p);
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void renderLayer(int param0, int param1, int param2, int param3) {
         if (param3 != 0) {
           return;
         }
@@ -248,7 +248,7 @@ final class rk extends ae {
         this.field_v = param7;
         this.field_C = param5;
         this.field_G = param8;
-        this.a((byte) -31, param2, param3, param0, param1);
+        this.setBounds((byte) -31, param2, param3, param0, param1);
     }
 
     static {

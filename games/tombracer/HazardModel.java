@@ -221,9 +221,9 @@ final class HazardModel extends TrapModel {
         Object var10 = null;
         w var10_ref = null;
         IntrusiveDeque var11 = null;
-        uja var12 = null;
+        IntrusiveDequeCursor var12 = null;
         IntrusiveDeque var13 = null;
-        uja var14 = null;
+        IntrusiveDequeCursor var14 = null;
         int var4Lifetime1;
         var10 = null;
         var3 = null;
@@ -291,15 +291,15 @@ final class HazardModel extends TrapModel {
           }
           if (this.field_u == 1) {
             var11 = var3_ref.behaviours;
-            var12 = new uja(var11);
+            var12 = new IntrusiveDequeCursor(var11);
             var7_int = 0;
-            var8 = (Behaviour) (var12.a(true));
+            var8 = (Behaviour) (var12.first(true));
             while (var8 != null) {
               if (var8 instanceof ConstantEffectBehaviour &&
                 ((ConstantEffectBehaviour) (var8)).field_o > 0) {
                 var7_int = 1;
               }
-              var8 = (Behaviour) (var12.a(-1));
+              var8 = (Behaviour) (var12.next(-1));
             }
             if (var7_int != 0 &&
               null == this.field_r) {
@@ -313,15 +313,15 @@ final class HazardModel extends TrapModel {
           }
           if (0 == this.field_u) {
             var13 = var3_ref.locomotors;
-            var14 = new uja(var13);
-            var7 = (Locomotor) (var14.a(true));
+            var14 = new IntrusiveDequeCursor(var13);
+            var7 = (Locomotor) (var14.first(true));
             while (var7 != null) {
               if (var7 instanceof PathMoveLocomotor &&
                 ((PathMoveLocomotor) (var7)).d(false) != this.field_s) {
                 var10_ref.a(new fm(3, this.getRenderX((byte) 68), this.getRenderY((byte) 124), this.getRenderZ((byte) -111)), -58);
                 this.field_s = ((PathMoveLocomotor) (var7)).d(false);
               }
-              var7 = (Locomotor) (var14.a(param0 + 0));
+              var7 = (Locomotor) (var14.next(param0 + 0));
             }
             return;
           }

@@ -80,7 +80,7 @@ final class vs extends ofa {
           this.field_Q = false;
           this.field_N = false;
           this.field_L.field_D = true;
-          this.a(this.field_L, -1);
+          this.addChild(this.field_L, -1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vs.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

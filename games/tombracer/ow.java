@@ -18,7 +18,7 @@ final class ow extends wv {
         }
         if (!vpa.a(54)) {
           if (!SecondaryNodeDequeIterator.field_a.field_D) {
-            this.a(22174, uja.field_e);
+            this.a(22174, IntrusiveDequeCursor.field_e);
           } else {
             if (!SecondaryNodeDequeIterator.field_a.d((byte) 100)) {
               this.a(22174, ConsoleToken.field_l);

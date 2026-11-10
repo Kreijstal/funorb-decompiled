@@ -75,7 +75,7 @@ final class qna {
               mba.field_g[var5] = lra.field_c[var5];
             }
             mba.field_g[-3 + var4] = "";
-            mba.field_g[-2 + var4] = ae.field_k;
+            mba.field_g[-2 + var4] = UiWidget.field_k;
             CoinItemComponent.field_H[-2 + var4] = 0;
             hb.field_w[0] = 4;
             mba.field_g[var4 - 1] = BitPacketBuffer.field_j;

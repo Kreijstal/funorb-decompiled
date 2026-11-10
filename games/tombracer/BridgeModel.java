@@ -259,7 +259,7 @@ final class BridgeModel extends TrapModel {
         for (var2 = 0; this.field_p > var2; var2++) {
           for (var3 = 0; this.field_r > var3; var3++) {
             var4 = this.field_q[var2][var3];
-            var5 = uja.field_c[var4.field_b];
+            var5 = IntrusiveDequeCursor.field_c[var4.field_b];
             var4.field_e = dfa.a(-var4.field_e + var5, 2048, -31);
             var4.field_d = -var4.field_d;
           }
@@ -537,7 +537,7 @@ final class BridgeModel extends TrapModel {
                 var12.field_b = 0;
               }
             }
-            var12.field_e = dfa.a(var18 + uja.field_c[var12.field_b], 2048, -54);
+            var12.field_e = dfa.a(var18 + IntrusiveDequeCursor.field_c[var12.field_b], 2048, -54);
             var12.field_a = var7 - var4;
             var12.field_d = var10 - var3;
             var20.e(true).nextBounded(100, 0);

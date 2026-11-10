@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jo extends rva implements tsa {
+final class jo extends ArrayWidgetGroup implements tsa {
     int field_C;
     private int field_y;
     static String field_K;
@@ -118,7 +118,7 @@ final class jo extends rva implements tsa {
           this.field_N.field_i = 0;
           this.field_N.field_m = this.field_D.field_m;
         }
-        this.field_N.c((byte) 121);
+        this.field_N.refreshLayout((byte) 121);
     }
 
     private final void b(int param0, boolean param1) {
@@ -136,8 +136,8 @@ final class jo extends rva implements tsa {
         if (param0 >= -80) {
           return;
         }
-        if (this.field_N.field_x instanceof rj) {
-          stackIn_11_0 = (rj) (this.field_N.field_x);
+        if (this.field_N.child instanceof rj) {
+          stackIn_11_0 = (rj) (this.field_N.child);
           stackIn_13_1 = (param1) || (this.field_P);
           stackIn_11_0.field_y = stackIn_13_1;
         }
@@ -276,7 +276,7 @@ final class jo extends rva implements tsa {
         }
     }
 
-    final void a(int param0, int param1, ae param2, int param3) {
+    final void updatePointerState(int param0, int param1, UiWidget param2, int param3) {
         RuntimeException stackIn_43_0 = null;
         StringBuilder stackIn_43_1 = null;
         String stackIn_44_2 = null;
@@ -289,9 +289,9 @@ final class jo extends rva implements tsa {
         int var5_intLifetime2;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          super.a(param0, param1 ^ 0, param2, param3);
-          if ((!(this.field_N.field_x instanceof rj) ||
-            ((rj) (this.field_N.field_x)).field_y) && this.field_N.field_s == 1) {
+          super.updatePointerState(param0, param1 ^ 0, param2, param3);
+          if ((!(this.field_N.child instanceof rj) ||
+            ((rj) (this.field_N.child)).field_y) && this.field_N.field_s == 1) {
             if (!this.field_J) {
               this.h((byte) -101);
             } else {
@@ -392,13 +392,13 @@ final class jo extends rva implements tsa {
         this.field_G = 0;
         this.field_A = 1024;
         try {
-          this.field_w = new ae[6];
+          this.children = new UiWidget[6];
           dupTemp$0 = new vp(param0, param1, param7, param8, (isa) null, (qc) null, new rj(0, 0, param7, param8, param6, (qc) null), false, false);
           this.field_N = dupTemp$0;
-          this.field_w[0] = (ae) ((Object) dupTemp$0);
+          this.children[0] = (UiWidget) ((Object) dupTemp$0);
           dupTemp$1 = new rj(param0, param1, param7, param8, param5, (qc) null);
           this.field_D = dupTemp$1;
-          this.field_w[1] = (ae) ((Object) dupTemp$1);
+          this.children[1] = (UiWidget) ((Object) dupTemp$1);
           this.field_G = param10;
           stackIn_4_1 = (param12);
           this.field_P = stackIn_4_1;
@@ -407,7 +407,7 @@ final class jo extends rva implements tsa {
           this.field_I = param9;
           this.a(27980, param13);
           this.c(16, param14);
-          this.a((byte) -31, param2, param3, param0, param1);
+          this.setBounds((byte) -31, param2, param3, param0, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -461,18 +461,18 @@ final class jo extends rva implements tsa {
         }
     }
 
-    final boolean a(char param0, ae param1, int param2, boolean param3) {
+    final boolean handleKeyInput(char param0, UiWidget param1, int param2, boolean param3) {
         RuntimeException stackIn_46_0 = null;
         StringBuilder stackIn_46_1 = null;
         String stackIn_47_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKeyInput(param0, param1, param2, param3)) {
             return true;
           }
           if (this.field_x) {
-            if (!this.field_N.b((byte) -34)) {
+            if (!this.field_N.hasKeyboardFocus((byte) -34)) {
               return false;
             }
             if (param2 == 98) {
@@ -545,10 +545,10 @@ final class jo extends rva implements tsa {
           if (var4 < this.field_I) {
             var4 = this.field_I;
           }
-          this.field_N.a((byte) -31, var4, this.field_N.field_p, this.field_N.field_i, this.field_N.field_n);
+          this.field_N.setBounds((byte) -31, var4, this.field_N.field_p, this.field_N.field_i, this.field_N.field_n);
           this.b(-122, true);
         } else {
-          this.field_N.a((byte) -31, this.field_D.field_m, this.field_N.field_p, this.field_N.field_i, this.field_N.field_n);
+          this.field_N.setBounds((byte) -31, this.field_D.field_m, this.field_N.field_p, this.field_N.field_i, this.field_N.field_n);
           this.b(-82, false);
         }
         if (param0 >= -81) {
@@ -563,14 +563,14 @@ final class jo extends rva implements tsa {
           this.c(-65, -82, -68);
         }
         if (param1 >= param0) {
-          this.field_N.a((byte) -31, this.field_N.field_m, this.field_D.field_p, this.field_N.field_i, this.field_N.field_n);
+          this.field_N.setBounds((byte) -31, this.field_N.field_m, this.field_D.field_p, this.field_N.field_i, this.field_N.field_n);
           this.a(1, false);
         } else {
           var4 = param1 * this.field_D.field_p / param0;
           if (this.field_G > var4) {
             var4 = this.field_G;
           }
-          this.field_N.a((byte) -31, this.field_N.field_m, var4, this.field_N.field_i, this.field_N.field_n);
+          this.field_N.setBounds((byte) -31, this.field_N.field_m, var4, this.field_N.field_i, this.field_N.field_n);
           this.a(1, true);
         }
         this.e(param2 ^ 1789710944);
@@ -591,8 +591,8 @@ final class jo extends rva implements tsa {
         stackIn_5_0 = this.field_D;
         stackIn_7_1 = (param1) || (this.field_J);
         stackIn_5_0.field_y = stackIn_7_1;
-        if (this.field_N.field_x instanceof rj) {
-          stackIn_12_0 = (rj) (this.field_N.field_x);
+        if (this.field_N.child instanceof rj) {
+          stackIn_12_0 = (rj) (this.field_N.child);
           stackIn_14_1 = (param1) || (this.field_J);
           stackIn_12_0.field_y = stackIn_14_1;
         }
@@ -635,22 +635,22 @@ final class jo extends rva implements tsa {
         return (this.field_N.field_p << 16) / this.field_D.field_p;
     }
 
-    final boolean a(ae param0, boolean param1) {
+    final boolean requestKeyboardFocus(UiWidget param0, boolean param1) {
         vp var3 = null;
         RuntimeException var3_ref = null;
-        ae var4 = null;
+        UiWidget var4 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            var4 = (ae) null;
-            this.a('\f', (ae) null, -82, true);
+            var4 = (UiWidget) null;
+            this.handleKeyInput('\f', (UiWidget) null, -82, true);
           }
           var3 = this.field_N;
           if (var3 != null &&
-            ((ae) ((Object) var3)).a(param0, false)) {
+            ((UiWidget) ((Object) var3)).requestKeyboardFocus(param0, false)) {
             return true;
           }
           return false;

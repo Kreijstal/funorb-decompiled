@@ -22,7 +22,7 @@ final class bra extends ofa implements tsa {
         this.field_B = false;
     }
 
-    final boolean a(char param0, ae param1, int param2, boolean param3) {
+    final boolean handleKeyInput(char param0, UiWidget param1, int param2, boolean param3) {
         RuntimeException var5 = null;
         boolean stackIn_13_0 = false;
         RuntimeException stackIn_16_0 = null;
@@ -32,20 +32,20 @@ final class bra extends ofa implements tsa {
         try {
           if (param2 == 98) {
             if (this.field_L == null) {
-              this.field_N.a((ae) (this), false);
+              this.field_N.requestKeyboardFocus((UiWidget) (this), false);
               return true;
             }
-            this.field_L.a((ae) (this), false);
+            this.field_L.requestKeyboardFocus((UiWidget) (this), false);
             return true;
           }
           if (param2 == 99) {
-            this.field_N.a((ae) (this), false);
+            this.field_N.requestKeyboardFocus((UiWidget) (this), false);
             return true;
           }
           if (!param3) {
             this.f(-100);
           }
-          stackIn_13_0 = super.a(param0, param1, param2, true);
+          stackIn_13_0 = super.handleKeyInput(param0, param1, param2, true);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -105,17 +105,17 @@ final class bra extends ofa implements tsa {
 
     bra(jta param0) {
         super(param0, 200, 130);
-        ae var2 = null;
+        UiWidget var2 = null;
         try {
-          var2 = new ae(jba.field_l, (qc) null);
+          var2 = new UiWidget(jba.field_l, (qc) null);
           var2.field_m = this.field_m;
           var2.field_i = 0;
           var2.field_p = 80;
           var2.field_n = 50;
           var2.field_r = (isa) ((Object) new vpa(eka.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.a(var2, -1);
+          this.addChild(var2, -1);
           if (vpa.a(94)) {
-            this.field_L = this.a(ae.field_k, (byte) 91, (qc) (this));
+            this.field_L = this.a(UiWidget.field_k, (byte) 91, (qc) (this));
           }
           this.field_N = this.a(BitPacketBuffer.field_j, (byte) 54, (qc) (this));
         } catch (RuntimeException runtimeException) {
@@ -140,9 +140,9 @@ final class bra extends ofa implements tsa {
           var4.field_r = (isa) ((Object) new td());
           var5 = this.field_p - 6;
           this.field_p = this.field_p + 38;
-          var4.a((byte) -31, -30 + this.field_m, 30, 15, var5);
-          this.a(var4, -1);
-          this.c((byte) -72);
+          var4.setBounds((byte) -31, -30 + this.field_m, 30, 15, var5);
+          this.addChild(var4, -1);
+          this.refreshLayout((byte) -72);
           if (param1 > 25) {
             stackIn_4_0 = var4;
             return stackIn_4_0;

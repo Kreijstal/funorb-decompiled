@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jta extends qr {
+final class jta extends SingleChildWidget {
     static int[] field_z;
     private IntrusiveDeque field_y;
 
@@ -15,18 +15,18 @@ final class jta extends qr {
     }
 
     final void g(byte param0) {
-        uja var2;
+        IntrusiveDequeCursor var2;
         gn var3;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
-        var2 = new uja(this.field_y);
-        var3 = (gn) (var2.a(true));
+        var2 = new IntrusiveDequeCursor(this.field_y);
+        var3 = (gn) (var2.first(true));
         if (param0 < -105) {
           while (var3 != null) {
             if (var3.a(127)) {
               var3.unlink(71);
             }
-            var3 = (gn) (var2.a(-1));
+            var3 = (gn) (var2.next(-1));
           }
         } else {
           this.g((byte) 58);
@@ -34,30 +34,30 @@ final class jta extends qr {
             if (var3.a(127)) {
               var3.unlink(71);
             }
-            var3 = (gn) (var2.a(-1));
+            var3 = (gn) (var2.next(-1));
           }
         }
-        this.field_x = (ae) ((Object) this.a((byte) -58));
+        this.child = (UiWidget) ((Object) this.a((byte) -58));
     }
 
     final int g(int param0) {
-        uja var2;
+        IntrusiveDequeCursor var2;
         int var3;
         gn var4;
         int var5;
         var5 = TombRacer.field_G ? 1 : 0;
-        var2 = new uja(this.field_y);
+        var2 = new IntrusiveDequeCursor(this.field_y);
         var3 = -2147483648;
-        var4 = (gn) (var2.a(true));
+        var4 = (gn) (var2.first(true));
         while (var4 != null) {
           if (var4.field_B) {
             if (var3 >= var4.field_m) {
-              var4 = (gn) (var2.a(-1));
+              var4 = (gn) (var2.next(-1));
               continue;
             }
             var3 = var4.field_m;
           }
-          var4 = (gn) (var2.a(-1));
+          var4 = (gn) (var2.next(-1));
         }
         if (param0 < -72) {
           return var3;
@@ -89,18 +89,18 @@ final class jta extends qr {
     }
 
     final void h(int param0) {
-        uja var2;
+        IntrusiveDequeCursor var2;
         gn var3;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
-        var2 = new uja(this.field_y);
-        var3 = (gn) (var2.a(true));
+        var2 = new IntrusiveDequeCursor(this.field_y);
+        var3 = (gn) (var2.first(true));
         if (param0 == -1) {
           while (var3 != null) {
             if (var3.a((byte) -115)) {
               var3.unlink(param0 ^ -111);
             }
-            var3 = (gn) (var2.a(-1));
+            var3 = (gn) (var2.next(-1));
           }
         } else {
           this.d(true);
@@ -108,39 +108,39 @@ final class jta extends qr {
             if (var3.a((byte) -115)) {
               var3.unlink(param0 ^ -111);
             }
-            var3 = (gn) (var2.a(-1));
+            var3 = (gn) (var2.next(-1));
           }
         }
     }
 
     final gn a(byte param0) {
         int var2;
-        uja var3;
+        IntrusiveDequeCursor var3;
         gn var4;
         int var5;
         var5 = TombRacer.field_G ? 1 : 0;
         var2 = -31 % ((6 - param0) / 61);
-        var3 = new uja(this.field_y);
-        var4 = (gn) (var3.a(true));
+        var3 = new IntrusiveDequeCursor(this.field_y);
+        var4 = (gn) (var3.first(true));
         while (var4 != null) {
           if (var4.field_B) {
             return var4;
           }
-          var4 = (gn) (var3.a(-1));
+          var4 = (gn) (var3.next(-1));
         }
         return null;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void renderLayer(int param0, int param1, int param2, int param3) {
         int var7 = TombRacer.field_G ? 1 : 0;
         if (this.field_r != null) {
-          this.field_r.a((ae) (this), param0, 16777215, param1, true);
+          this.field_r.a((UiWidget) (this), param0, 16777215, param1, true);
         }
-        uja var5 = new uja(this.field_y);
-        ae var6 = (ae) (var5.a((byte) 71));
+        IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_y);
+        UiWidget var6 = (UiWidget) (var5.last((byte) 71));
         while (var6 != null) {
-          var6.a(param0 + this.field_i, this.field_n + param1, 0, param3);
-          var6 = (ae) (var5.c(param2 + 42));
+          var6.renderLayer(param0 + this.field_i, this.field_n + param1, 0, param3);
+          var6 = (UiWidget) (var5.previous(param2 + 42));
         }
         if (param2 == 0) {
           return;
@@ -149,63 +149,63 @@ final class jta extends qr {
     }
 
     final int f(int param0) {
-        uja var2;
+        IntrusiveDequeCursor var2;
         int var3;
         gn var4;
         int var5;
         var5 = TombRacer.field_G ? 1 : 0;
-        var2 = new uja(this.field_y);
+        var2 = new IntrusiveDequeCursor(this.field_y);
         var3 = param0;
-        var4 = (gn) (var2.a(true));
+        var4 = (gn) (var2.first(true));
         while (var4 != null) {
           if (var4.field_B) {
             if (var4.field_p <= var3) {
-              var4 = (gn) (var2.a(-1));
+              var4 = (gn) (var2.next(-1));
               continue;
             }
             var3 = var4.field_p;
           }
-          var4 = (gn) (var2.a(-1));
+          var4 = (gn) (var2.next(-1));
         }
         return var3;
     }
 
-    final ae b(boolean param0) {
-        uja var2;
+    final UiWidget getFocusedChild(boolean param0) {
+        IntrusiveDequeCursor var2;
         Object var3;
         gn var3_ref;
         int var4;
-        uja stackIn_3_0 = null;
+        IntrusiveDequeCursor stackIn_3_0 = null;
         boolean stackIn_4_1 = false;
-        uja stackIn_13_0 = null;
+        IntrusiveDequeCursor stackIn_13_0 = null;
         boolean stackIn_14_1 = false;
-        uja var2Lifetime1;
+        IntrusiveDequeCursor var2Lifetime1;
         gn var3_refLifetime1;
         var3 = null;
         var4 = TombRacer.field_G ? 1 : 0;
         if (!param0) {
-          var2 = new uja(this.field_y);
+          var2 = new IntrusiveDequeCursor(this.field_y);
           stackIn_13_0 = var2;
           stackIn_14_1 = (param0) ? false : true;
-          var3_ref = (gn) (((uja) (Object) stackIn_13_0).a(stackIn_14_1));
+          var3_ref = (gn) (((IntrusiveDequeCursor) (Object) stackIn_13_0).first(stackIn_14_1));
           while (var3_ref != null) {
             if (var3_ref.field_B) {
-              return var3_ref.g((byte) 52);
+              return var3_ref.getFocusedChild((byte) 52);
             }
-            var3_ref = (gn) (var2.a(-1));
+            var3_ref = (gn) (var2.next(-1));
           }
           return null;
         }
         this.d(false);
-        var2Lifetime1 = new uja(this.field_y);
+        var2Lifetime1 = new IntrusiveDequeCursor(this.field_y);
         stackIn_3_0 = var2Lifetime1;
         stackIn_4_1 = (param0) ? false : true;
-        var3_refLifetime1 = (gn) (((uja) (Object) stackIn_3_0).a(stackIn_4_1));
+        var3_refLifetime1 = (gn) (((IntrusiveDequeCursor) (Object) stackIn_3_0).first(stackIn_4_1));
         while (var3_refLifetime1 != null) {
           if (var3_refLifetime1.field_B) {
-            return var3_refLifetime1.g((byte) 52);
+            return var3_refLifetime1.getFocusedChild((byte) 52);
           }
-          var3_refLifetime1 = (gn) (var2Lifetime1.a(-1));
+          var3_refLifetime1 = (gn) (var2Lifetime1.next(-1));
         }
         return null;
     }
@@ -265,7 +265,7 @@ final class jta extends qr {
         }
     }
 
-    final void c(ae param0, int param1) {
+    final void c(UiWidget param0, int param1) {
         gn var3 = null;
         if (!(param0 instanceof gn)) {
           throw new IllegalArgumentException();
@@ -277,7 +277,7 @@ final class jta extends qr {
           var3 = (gn) (param0);
           this.field_y.addFirst((byte) 125, (IntrusiveNode) (var3));
           var3.field_B = true;
-          var3.a((ae) (this), false);
+          var3.requestKeyboardFocus((UiWidget) (this), false);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "jta.UA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -285,14 +285,14 @@ final class jta extends qr {
 
     final void e(boolean param0) {
         int var4 = TombRacer.field_G ? 1 : 0;
-        uja var2 = new uja(this.field_y);
-        gn var3 = (gn) (var2.a(param0));
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_y);
+        gn var3 = (gn) (var2.first(param0));
         while (var3 != null) {
           var3.field_B = false;
-          var3 = (gn) (var2.a(-1));
+          var3 = (gn) (var2.next(-1));
         }
         if (param0) {
-          this.field_x = null;
+          this.child = null;
           return;
         }
     }

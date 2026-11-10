@@ -45,8 +45,8 @@ final class uv extends oga {
           jaggl.OpenGL.glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
           if (null != this.field_l) {
             this.field_g.b((ks) (this.field_s), (byte) 81);
-            var5_int = b.a(this.field_t, (byte) 85);
-            var6 = b.a(this.field_n, (byte) 96);
+            var5_int = WidgetContainer.highestOneBit(this.field_t, (byte) 85);
+            var6 = WidgetContainer.highestOneBit(this.field_n, (byte) 96);
             var7_int = 0;
             {
               while ((!(var5_int <= 256) ||
@@ -231,8 +231,8 @@ final class uv extends oga {
         if (param1 != -71) {
           this.field_w = (cua) null;
         }
-        var4 = b.a(this.field_t, (byte) -95);
-        var5 = b.a(this.field_n, (byte) -95);
+        var4 = WidgetContainer.highestOneBit(this.field_t, (byte) -95);
+        var5 = WidgetContainer.highestOneBit(this.field_n, (byte) -95);
         if (this.field_r == var4 &&
           var5 == this.field_p) {
           return;

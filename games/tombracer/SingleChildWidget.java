@@ -3,29 +3,29 @@
  */
 import java.util.*;
 
-abstract class qr extends ae implements tpa {
-    ae field_x;
+abstract class SingleChildWidget extends UiWidget implements tpa {
+    UiWidget child;
     static GameFont field_v;
     static String[] sawDeathMessages;
     static ft field_w;
 
-    final void a(byte param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
-        this.c(97);
+    final void setBounds(byte param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
+        this.refreshChildLayout(97);
     }
 
     final static boolean c(int param0, int param1, int param2) {
         boolean stackIn_5_0 = false;
         boolean stackIn_10_0 = false;
         if (param0 != 458752) {
-          qr.a(95);
+          SingleChildWidget.a(95);
         }
         stackIn_5_0 = ((458752 & param2) != 0);
         stackIn_10_0 = !(!stackIn_5_0 | cga.a(param2, -83, param1)) || (uu.a(true, param2, param1));
         return stackIn_10_0;
     }
 
-    private final boolean b(ae param0, int param1) {
+    private final boolean b(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -36,7 +36,7 @@ abstract class qr extends ae implements tpa {
           if (param1 != 3815994) {
             return false;
           }
-          stackIn_8_0 = (this.field_x != null) && (!this.field_x.b((byte) -34)) && (this.field_x.a(param0, false));
+          stackIn_8_0 = (this.child != null) && (!this.child.hasKeyboardFocus((byte) -34)) && (this.child.requestKeyboardFocus(param0, false));
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -52,7 +52,7 @@ abstract class qr extends ae implements tpa {
         }
     }
 
-    final boolean a(ae param0, boolean param1) {
+    final boolean requestKeyboardFocus(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -63,7 +63,7 @@ abstract class qr extends ae implements tpa {
           if (param1) {
             field_v = (GameFont) null;
           }
-          stackIn_6_0 = (null != this.field_x) && (this.field_x.a(param0, false));
+          stackIn_6_0 = (null != this.child) && (this.child.requestKeyboardFocus(param0, false));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -79,7 +79,7 @@ abstract class qr extends ae implements tpa {
         }
     }
 
-    StringBuilder a(int param0, Hashtable param1, StringBuilder param2, int param3) {
+    StringBuilder appendDiagnostics(int param0, Hashtable param1, StringBuilder param2, int param3) {
         RuntimeException var5 = null;
         StringBuilder stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -89,8 +89,8 @@ abstract class qr extends ae implements tpa {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a((byte) -107, param0, param1, param2)) {
-            this.a(1, param2, param1, param0);
+          if (this.beginDiagnosticVisit((byte) -107, param0, param1, param2)) {
+            this.appendDiagnosticProperties(1, param2, param1, param0);
             this.a(param1, param0, param2, 0);
           }
           if (param3 != 0) {
@@ -118,10 +118,10 @@ abstract class qr extends ae implements tpa {
         }
     }
 
-    final void f(byte param0) {
+    final void clearKeyboardFocus(byte param0) {
         int var2 = -122 % ((-38 - param0) / 60);
-        if (null != this.field_x) {
-          this.field_x.f((byte) 107);
+        if (null != this.child) {
+          this.child.clearKeyboardFocus((byte) 107);
         }
     }
 
@@ -415,7 +415,7 @@ abstract class qr extends ae implements tpa {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, ae param4, int param5, int param6) {
+    final boolean a(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -424,9 +424,9 @@ abstract class qr extends ae implements tpa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param6 != -1) {
-            this.d((byte) -80);
+            this.getHoverText((byte) -80);
           }
-          stackIn_7_0 = (null != this.field_x) && (this.field_x.b((byte) -34)) && (this.field_x.a(param0, param1, param2, param3, param4, param5, -1));
+          stackIn_7_0 = (null != this.child) && (this.child.hasKeyboardFocus((byte) -34)) && (this.child.a(param0, param1, param2, param3, param4, param5, -1));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -442,10 +442,10 @@ abstract class qr extends ae implements tpa {
         }
     }
 
-    ae b(boolean param0) {
-        ae var2 = this.field_x;
+    UiWidget getFocusedChild(boolean param0) {
+        UiWidget var2 = this.child;
         if (var2 != null &&
-          var2.b((byte) -34)) {
+          var2.hasKeyboardFocus((byte) -34)) {
           return var2;
         }
         if (!param0) {
@@ -455,11 +455,11 @@ abstract class qr extends ae implements tpa {
         return null;
     }
 
-    String d(byte param0) {
+    String getHoverText(byte param0) {
         String var3_ref_String = null;
-        String var2 = super.d((byte) 112);
-        if (this.field_x != null) {
-          var3_ref_String = this.field_x.d((byte) 51);
+        String var2 = super.getHoverText((byte) 112);
+        if (this.child != null) {
+          var3_ref_String = this.child.getHoverText((byte) 51);
           if (var3_ref_String != null) {
             return var3_ref_String;
           }
@@ -485,7 +485,7 @@ abstract class qr extends ae implements tpa {
         return stackIn_6_0;
     }
 
-    private final boolean a(ae param0, int param1) {
+    private final boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -496,7 +496,7 @@ abstract class qr extends ae implements tpa {
           if (param1 <= 14) {
             return true;
           }
-          stackIn_8_0 = (null != this.field_x) && (!this.field_x.b((byte) -34)) && (this.field_x.a(param0, false));
+          stackIn_8_0 = (null != this.child) && (!this.child.hasKeyboardFocus((byte) -34)) && (this.child.requestKeyboardFocus(param0, false));
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -512,7 +512,7 @@ abstract class qr extends ae implements tpa {
         }
     }
 
-    boolean a(int param0, int param1, int param2, int param3, int param4, ae param5, int param6) {
+    boolean handlePointerPress(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -523,7 +523,7 @@ abstract class qr extends ae implements tpa {
           if (param0 <= 70) {
             return false;
           }
-          stackIn_7_0 = (null != this.field_x) && (this.field_x.a(111, this.field_i + param1, param2 + this.field_n, param3, param4, param5, param6));
+          stackIn_7_0 = (null != this.child) && (this.child.handlePointerPress(111, this.field_i + param1, param2 + this.field_n, param3, param4, param5, param6));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -539,12 +539,12 @@ abstract class qr extends ae implements tpa {
         }
     }
 
-    void c(int param0) {
+    void refreshChildLayout(int param0) {
         if (param0 < 91) {
-          this.field_x = (ae) null;
+          this.child = (UiWidget) null;
         }
-        if (null != this.field_x) {
-          this.field_x.c((byte) 124);
+        if (null != this.child) {
+          this.child.refreshLayout((byte) 124);
         }
     }
 
@@ -574,10 +574,10 @@ abstract class qr extends ae implements tpa {
           for (var5_int = param3; param1 >= var5_int; var5_int++) {
             discarded$6 = param2.append(' ');
           }
-          if (this.field_x == null) {
+          if (this.child == null) {
             discarded$5 = param2.append("null");
           } else {
-            this.field_x.a(param1 + 1, param0, param2, 0);
+            this.child.appendDiagnostics(param1 + 1, param0, param2, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -600,14 +600,14 @@ abstract class qr extends ae implements tpa {
         }
     }
 
-    final boolean b(byte param0) {
+    final boolean hasKeyboardFocus(byte param0) {
         if (param0 != -34) {
           return false;
         }
-        return this.b(false) != null ? true : false;
+        return this.getFocusedChild(false) != null ? true : false;
     }
 
-    void a(byte param0, ae param1, int param2, int param3, int param4, int param5) {
+    void handlePointerRelease(byte param0, UiWidget param1, int param2, int param3, int param4, int param5) {
         cn var8 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -617,10 +617,10 @@ abstract class qr extends ae implements tpa {
         try {
           if (param0 != 59) {
             var8 = (cn) null;
-            qr.a(false, (int[]) null, (hja[]) null, (cn) null, (cn) null);
+            SingleChildWidget.a(false, (int[]) null, (hja[]) null, (cn) null, (cn) null);
           }
-          if (null != this.field_x) {
-            this.field_x.a((byte) 59, param1, param2, this.field_i + param3, param4 + this.field_n, param5);
+          if (null != this.child) {
+            this.child.handlePointerRelease((byte) 59, param1, param2, this.field_i + param3, param4 + this.field_n, param5);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -637,14 +637,14 @@ abstract class qr extends ae implements tpa {
         }
     }
 
-    final int a(boolean param0) {
+    final int getTopLayer(boolean param0) {
         if (param0) {
           return 77;
         }
-        return null != this.field_x ? this.field_x.a(false) : 0;
+        return null != this.child ? this.child.getTopLayer(false) : 0;
     }
 
-    final boolean a(char param0, ae param1, int param2, boolean param3) {
+    final boolean handleKeyInput(char param0, UiWidget param1, int param2, boolean param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_13_0 = false;
@@ -653,13 +653,13 @@ abstract class qr extends ae implements tpa {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != this.field_x &&
-            this.field_x.b((byte) -34) &&
-            this.field_x.a(param0, param1, param2, true)) {
+          if (null != this.child &&
+            this.child.hasKeyboardFocus((byte) -34) &&
+            this.child.handleKeyInput(param0, param1, param2, true)) {
             return true;
           }
           if (!param3) {
-            this.b((byte) -68);
+            this.hasKeyboardFocus((byte) -68);
           }
           var5_int = param2;
           if (var5_int != 80) {
@@ -685,21 +685,21 @@ abstract class qr extends ae implements tpa {
         }
     }
 
-    void a(int param0, int param1, ae param2, int param3) {
-        ae var6 = null;
+    void updatePointerState(int param0, int param1, UiWidget param2, int param3) {
+        UiWidget var6 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          super.a(param0, param1 + 0, param2, param3);
+          super.updatePointerState(param0, param1 + 0, param2, param3);
           if (param1 != 2097152) {
-            var6 = (ae) null;
-            this.a(55, -69, -121, 107, (ae) null, -94, -43);
+            var6 = (UiWidget) null;
+            this.a(55, -69, -121, 107, (UiWidget) null, -94, -43);
           }
-          if (this.field_x != null) {
-            this.field_x.a(this.field_i + param0, 2097152, param2, this.field_n + param3);
+          if (this.child != null) {
+            this.child.updatePointerState(this.field_i + param0, 2097152, param2, this.field_n + param3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -725,21 +725,21 @@ abstract class qr extends ae implements tpa {
         field_w = null;
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void renderLayer(int param0, int param1, int param2, int param3) {
         if (param3 == 0 &&
           null != this.field_r) {
-          this.field_r.a((ae) (this), param0, 16777215, param1, true);
+          this.field_r.a((UiWidget) (this), param0, 16777215, param1, true);
         }
-        if (null != this.field_x) {
-          this.field_x.a(this.field_i + param0, param1 + this.field_n, 0, param3);
+        if (null != this.child) {
+          this.child.renderLayer(this.field_i + param0, param1 + this.field_n, 0, param3);
         }
         if (param2 != 0) {
           cn var6 = (cn) null;
-          qr.a(false, (int[]) null, (hja[]) null, (cn) null, (cn) null);
+          SingleChildWidget.a(false, (int[]) null, (hja[]) null, (cn) null, (cn) null);
         }
     }
 
-    qr(int param0, int param1, int param2, int param3, isa param4, qc param5) {
+    SingleChildWidget(int param0, int param1, int param2, int param3, isa param4, qc param5) {
         super(param0, param1, param2, param3, param4, param5);
     }
 

@@ -49,7 +49,7 @@ final class sd extends lga {
         }
     }
 
-    final boolean a(ae param0, boolean param1) {
+    final boolean requestKeyboardFocus(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         CharSequence var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -77,16 +77,16 @@ final class sd extends lga {
         }
     }
 
-    final void a(int param0, int param1, ae param2, int param3) {
+    final void updatePointerState(int param0, int param1, UiWidget param2, int param3) {
         try {
           this.field_F = this.field_F + 1;
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sd.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void renderLayer(int param0, int param1, int param2, int param3) {
         it var6;
         int var9;
         int var10;
@@ -186,11 +186,11 @@ final class sd extends lga {
           if (!var17.equals(this.field_o)) {
             this.field_o = var17;
             this.b(18758);
-            super.a(param0, param1, param2, param3);
+            super.renderLayer(param0, param1, param2, param3);
             var6 = this.field_I.b(-4666);
             var54 = (oaa) ((Object) this.field_r);
             var9 = this.field_i + param0;
-            var10 = var54.a(param1, (ae) (this), (byte) -89) + (var54.a((ae) (this), 14157).b(param2 - 117) >> 1);
+            var10 = var54.a(param1, (UiWidget) (this), (byte) -89) + (var54.a((UiWidget) (this), 14157).b(param2 - 117) >> 1);
             if (gla.field_p != var6 &&
               var6 != tea.field_b) {
               if (fp.field_c == var6) {
@@ -222,11 +222,11 @@ final class sd extends lga {
             this.field_H.a(var9 - (var21.field_n >> 1), var10 - var21.field_k, 256);
             return;
           }
-          super.a(param0, param1, param2, param3);
+          super.renderLayer(param0, param1, param2, param3);
           var6 = this.field_I.b(-4666);
           var55 = (oaa) ((Object) this.field_r);
           var9Lifetime5 = this.field_i + param0;
-          var10Lifetime5 = var55.a(param1, (ae) (this), (byte) -89) + (var55.a((ae) (this), 14157).b(param2 - 117) >> 1);
+          var10Lifetime5 = var55.a(param1, (UiWidget) (this), (byte) -89) + (var55.a((UiWidget) (this), 14157).b(param2 - 117) >> 1);
           if (gla.field_p != var6 &&
             var6 != tea.field_b) {
             if (fp.field_c == var6) {
@@ -271,11 +271,11 @@ final class sd extends lga {
           if (!var26.equals(this.field_o)) {
             this.field_o = var26;
             this.b(18758);
-            super.a(param0, param1, param2, param3);
+            super.renderLayer(param0, param1, param2, param3);
             var6 = this.field_I.b(-4666);
             var56 = (oaa) ((Object) this.field_r);
             var9Lifetime1 = this.field_i + param0;
-            var10Lifetime1 = var56.a(param1, (ae) (this), (byte) -89) + (var56.a((ae) (this), 14157).b(param2 - 117) >> 1);
+            var10Lifetime1 = var56.a(param1, (UiWidget) (this), (byte) -89) + (var56.a((UiWidget) (this), 14157).b(param2 - 117) >> 1);
             if (gla.field_p != var6 &&
               var6 != tea.field_b) {
               if (fp.field_c == var6) {
@@ -307,11 +307,11 @@ final class sd extends lga {
             this.field_H.a(var9Lifetime1 - (var30.field_n >> 1), var10Lifetime1 - var30.field_k, 256);
             return;
           }
-          super.a(param0, param1, param2, param3);
+          super.renderLayer(param0, param1, param2, param3);
           var6 = this.field_I.b(-4666);
           var57 = (oaa) ((Object) this.field_r);
           var9Lifetime1Lifetime1 = this.field_i + param0;
-          var10Lifetime1Lifetime1 = var57.a(param1, (ae) (this), (byte) -89) + (var57.a((ae) (this), 14157).b(param2 - 117) >> 1);
+          var10Lifetime1Lifetime1 = var57.a(param1, (UiWidget) (this), (byte) -89) + (var57.a((UiWidget) (this), 14157).b(param2 - 117) >> 1);
           if (gla.field_p != var6 &&
             var6 != tea.field_b) {
             if (fp.field_c == var6) {
@@ -354,11 +354,11 @@ final class sd extends lga {
         var5 = this.field_I.a(101);
         if (var5 != null) {
           if (var5.equals(this.field_o)) {
-            super.a(param0, param1, param2, param3);
+            super.renderLayer(param0, param1, param2, param3);
             var6Lifetime1 = this.field_I.b(-4666);
             var61 = (oaa) ((Object) this.field_r);
             var9Lifetime2 = this.field_i + param0;
-            var10Lifetime2 = var61.a(param1, (ae) (this), (byte) -89) + (var61.a((ae) (this), 14157).b(param2 - 117) >> 1);
+            var10Lifetime2 = var61.a(param1, (UiWidget) (this), (byte) -89) + (var61.a((UiWidget) (this), 14157).b(param2 - 117) >> 1);
             if (gla.field_p != var6Lifetime1 &&
               var6Lifetime1 != tea.field_b) {
               if (fp.field_c == var6Lifetime1) {
@@ -392,11 +392,11 @@ final class sd extends lga {
           }
           this.field_o = var5;
           this.b(18758);
-          super.a(param0, param1, param2, param3);
+          super.renderLayer(param0, param1, param2, param3);
           var6Lifetime1Lifetime1 = this.field_I.b(-4666);
           var60 = (oaa) ((Object) this.field_r);
           var9Lifetime2Lifetime1 = this.field_i + param0;
-          var10Lifetime2Lifetime1 = var60.a(param1, (ae) (this), (byte) -89) + (var60.a((ae) (this), 14157).b(param2 - 117) >> 1);
+          var10Lifetime2Lifetime1 = var60.a(param1, (UiWidget) (this), (byte) -89) + (var60.a((UiWidget) (this), 14157).b(param2 - 117) >> 1);
           if (gla.field_p != var6Lifetime1Lifetime1 &&
             var6Lifetime1Lifetime1 != tea.field_b) {
             if (fp.field_c == var6Lifetime1Lifetime1) {
@@ -442,11 +442,11 @@ final class sd extends lga {
         if (!var35.equals(this.field_o)) {
           this.field_o = var35;
           this.b(18758);
-          super.a(param0, param1, param2, param3);
+          super.renderLayer(param0, param1, param2, param3);
           var6Lifetime2 = this.field_I.b(-4666);
           var58 = (oaa) ((Object) this.field_r);
           var9Lifetime3 = this.field_i + param0;
-          var10Lifetime3 = var58.a(param1, (ae) (this), (byte) -89) + (var58.a((ae) (this), 14157).b(param2 - 117) >> 1);
+          var10Lifetime3 = var58.a(param1, (UiWidget) (this), (byte) -89) + (var58.a((UiWidget) (this), 14157).b(param2 - 117) >> 1);
           if (gla.field_p != var6Lifetime2 &&
             var6Lifetime2 != tea.field_b) {
             if (fp.field_c == var6Lifetime2) {
@@ -478,11 +478,11 @@ final class sd extends lga {
           this.field_H.a(var9Lifetime3 - (var39.field_n >> 1), var10Lifetime3 - var39.field_k, 256);
           return;
         }
-        super.a(param0, param1, param2, param3);
+        super.renderLayer(param0, param1, param2, param3);
         var6Lifetime3 = this.field_I.b(-4666);
         var59 = (oaa) ((Object) this.field_r);
         var9Lifetime4 = this.field_i + param0;
-        var10Lifetime4 = var59.a(param1, (ae) (this), (byte) -89) + (var59.a((ae) (this), 14157).b(param2 - 117) >> 1);
+        var10Lifetime4 = var59.a(param1, (UiWidget) (this), (byte) -89) + (var59.a((UiWidget) (this), 14157).b(param2 - 117) >> 1);
         if (gla.field_p != var6Lifetime3 &&
           var6Lifetime3 != tea.field_b) {
           if (fp.field_c == var6Lifetime3) {
@@ -528,7 +528,7 @@ final class sd extends lga {
         try {
           this.field_I = param0;
           this.field_E = param1;
-          this.a((byte) -31, param4, param5, param2, param3);
+          this.setBounds((byte) -31, param4, param5, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -543,7 +543,7 @@ final class sd extends lga {
         field_J = null;
     }
 
-    final String d(byte param0) {
+    final String getHoverText(byte param0) {
         int var2 = -89 / ((param0 + 58) / 60);
         return null;
     }

@@ -17,7 +17,7 @@ final class poa extends hga {
         this(KeySwitchComponent.field_J, param0);
     }
 
-    final String d(int param0, ae param1) {
+    final String d(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;

@@ -1905,7 +1905,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -24, "rankings");
                 if (null != var2) {
-                  b.field_v = jaa.a((byte) 36, var2);
+                  WidgetContainer.field_v = jaa.a((byte) 36, var2);
                 }
                 var2 = dn.a((byte) 113, "achievements");
                 if (null != var2) {
@@ -2675,7 +2675,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 109, "fs_button_members");
                 if (null != var2) {
-                  ae.field_k = jaa.a((byte) 36, var2);
+                  UiWidget.field_k = jaa.a((byte) 36, var2);
                 }
                 var2 = dn.a((byte) -53, "fs_unavailable");
                 if (null != var2) {

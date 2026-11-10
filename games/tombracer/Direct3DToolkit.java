@@ -164,7 +164,7 @@ public final class Direct3DToolkit extends eo {
           if (param0 == rp.field_g) {
             return 28;
           }
-          if (param0 == qr.field_w) {
+          if (param0 == SingleChildWidget.field_w) {
             return 50;
           }
           if (param0 == wo.field_i) {

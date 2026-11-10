@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class vp extends qr {
+final class vp extends SingleChildWidget {
     private boolean field_z;
     private int field_A;
     private int field_D;
@@ -12,11 +12,11 @@ final class vp extends qr {
     private boolean field_C;
     private int field_y;
 
-    final StringBuilder a(int param0, Hashtable param1, StringBuilder param2, int param3) {
+    final StringBuilder appendDiagnostics(int param0, Hashtable param1, StringBuilder param2, int param3) {
         StringBuilder discarded$62 = null;
         StringBuilder discarded$63 = null;
         RuntimeException var5 = null;
-        ae var6 = null;
+        UiWidget var6 = null;
         StringBuilder stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -25,8 +25,8 @@ final class vp extends qr {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a((byte) -127, param0, param1, param2)) {
-            this.a(1, param2, param1, param0);
+          if (this.beginDiagnosticVisit((byte) -127, param0, param1, param2)) {
+            this.appendDiagnosticProperties(1, param2, param1, param0);
             this.a(param1, param0, param2, 0);
             discarded$62 = param2.append(" revert=").append(this.field_C);
             if (this.field_y != 2147483647 &&
@@ -35,8 +35,8 @@ final class vp extends qr {
             }
           }
           if (param3 != 0) {
-            var6 = (ae) null;
-            this.a(-39, 47, (ae) null, -72);
+            var6 = (UiWidget) null;
+            this.updatePointerState(-39, 47, (UiWidget) null, -72);
           }
           stackIn_9_0 = (StringBuilder) (param2);
           return stackIn_9_0;
@@ -60,7 +60,7 @@ final class vp extends qr {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, ae param5, int param6) {
+    final boolean handlePointerPress(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         int stackIn_7_0 = 0;
@@ -72,12 +72,12 @@ final class vp extends qr {
           if (param0 <= 70) {
             this.field_y = -96;
           }
-          var8_int = super.a(109, param1, param2, param3, param4, param5, param6) ? 1 : 0;
+          var8_int = super.handlePointerPress(109, param1, param2, param3, param4, param5, param6) ? 1 : 0;
           if (var8_int != 0 &&
             this.field_z) {
             return true;
           }
-          if (!this.a(param6, param1, 18, param3, param2)) {
+          if (!this.containsPointer(param6, param1, 18, param3, param2)) {
             stackIn_7_0 = var8_int;
             return stackIn_7_0 != 0;
           }
@@ -102,16 +102,16 @@ final class vp extends qr {
         }
     }
 
-    final void a(byte param0, ae param1, int param2, int param3, int param4, int param5) {
+    final void handlePointerRelease(byte param0, UiWidget param1, int param2, int param3, int param4, int param5) {
         try {
-          super.a(param0, param1, param2, param3, param4, param5);
+          super.handlePointerRelease(param0, param1, param2, param3, param4, param5);
           this.field_s = 0;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vp.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    final void a(int param0, int param1, ae param2, int param3) {
+    final void updatePointerState(int param0, int param1, UiWidget param2, int param3) {
         int stackIn_11_1 = 0;
         int stackIn_12_2 = 0;
         int stackIn_18_1 = 0;
@@ -124,8 +124,8 @@ final class vp extends qr {
         RuntimeException var5 = null;
         int var6 = 0;
         try {
-          if ((!(this.field_x instanceof rj) ||
-            ((rj) (this.field_x)).field_y) &&
+          if ((!(this.child instanceof rj) ||
+            ((rj) (this.child)).field_y) &&
             this.field_s == 1) {
             var5_int = -param0 + jba.field_j - this.field_A;
             var6 = -this.field_D + (sta.field_B - param3);
@@ -169,7 +169,7 @@ final class vp extends qr {
               }
             }
           }
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -201,12 +201,12 @@ final class vp extends qr {
         }
     }
 
-    vp(int param0, int param1, int param2, int param3, isa param4, qc param5, ae param6, boolean param7, boolean param8) {
+    vp(int param0, int param1, int param2, int param3, isa param4, qc param5, UiWidget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_y = 2147483647;
         this.field_E = 2147483647;
         try {
-          this.field_x = param6;
+          this.child = param6;
           this.field_z = param8 ? true : false;
           this.field_C = param7 ? true : false;
         } catch (RuntimeException runtimeException) {
@@ -214,17 +214,17 @@ final class vp extends qr {
         }
     }
 
-    final void c(int param0) {
-        super.c(95);
+    final void refreshChildLayout(int param0) {
+        super.refreshChildLayout(95);
         if (param0 >= 91) {
-          this.field_x.a((byte) -31, this.field_m, this.field_p, 0, 0);
+          this.child.setBounds((byte) -31, this.field_m, this.field_p, 0, 0);
           this.field_E = this.field_n;
           this.field_y = this.field_i;
           return;
         }
-        ae var3 = (ae) null;
-        this.a(-99, 92, -20, -84, 98, (ae) null, 112);
-        this.field_x.a((byte) -31, this.field_m, this.field_p, 0, 0);
+        UiWidget var3 = (UiWidget) null;
+        this.handlePointerPress(-99, 92, -20, -84, 98, (UiWidget) null, 112);
+        this.child.setBounds((byte) -31, this.field_m, this.field_p, 0, 0);
         this.field_E = this.field_n;
         this.field_y = this.field_i;
     }

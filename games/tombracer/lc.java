@@ -10,12 +10,12 @@ abstract class lc extends ofa {
     static String field_L;
     private rg field_P;
     private int field_S;
-    private ae field_T;
+    private UiWidget field_T;
     private int field_U;
 
-    private final void a(boolean param0, ae param1) {
+    private final void a(boolean param0, UiWidget param1) {
         RuntimeException var3 = null;
-        ae var4 = null;
+        UiWidget var4 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -27,16 +27,16 @@ abstract class lc extends ofa {
           if (param1 == null) {
             this.field_P = new rg();
           } else {
-            param1.a((byte) -31, param1.field_m, param1.field_p, 6, this.field_S + 6);
+            param1.setBounds((byte) -31, param1.field_m, param1.field_p, 6, this.field_S + 6);
             this.field_P = new rg(param1);
           }
-          this.a(this.field_P, -1);
+          this.addChild(this.field_P, -1);
           this.field_T = null;
           if (!param0) {
             return;
           }
-          var4 = (ae) null;
-          this.a('￁', (ae) null, 57, true);
+          var4 = (UiWidget) null;
+          this.handleKeyInput('￁', (UiWidget) null, 57, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -71,7 +71,7 @@ abstract class lc extends ofa {
         super.c(param0);
     }
 
-    void a(int param0, ae param1) {
+    void a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -118,7 +118,7 @@ abstract class lc extends ofa {
             if (fieldTemp$0 != this.field_O) {
               this.field_P.field_y = 256 - (this.field_R << 8) / this.field_O;
               if (param0 <= 126) {
-                this.field_T = (ae) null;
+                this.field_T = (UiWidget) null;
                 return super.a(127);
               }
               return super.a(127);
@@ -128,7 +128,7 @@ abstract class lc extends ofa {
             this.field_R = 0;
             this.field_P.field_y = 0;
             if (param0 <= 126) {
-              this.field_T = (ae) null;
+              this.field_T = (UiWidget) null;
               return super.a(127);
             }
             return super.a(127);
@@ -137,7 +137,7 @@ abstract class lc extends ofa {
             if (param0 > 126) {
               return super.a(127);
             }
-            this.field_T = (ae) null;
+            this.field_T = (UiWidget) null;
             return super.a(127);
           }
           fieldTemp$1 = this.field_R + 1;
@@ -148,20 +148,20 @@ abstract class lc extends ofa {
             if (param0 > 126) {
               return super.a(127);
             }
-            this.field_T = (ae) null;
+            this.field_T = (UiWidget) null;
             return super.a(127);
           }
           this.field_P.field_y = (this.field_R << 8) / this.field_U;
           if (param0 > 126) {
             return super.a(127);
           }
-          this.field_T = (ae) null;
+          this.field_T = (UiWidget) null;
           return super.a(127);
         }
         if (param0 > 126) {
           return super.a(127);
         }
-        this.field_T = (ae) null;
+        this.field_T = (UiWidget) null;
         return super.a(127);
     }
 
@@ -194,24 +194,24 @@ abstract class lc extends ofa {
         this.field_T = null;
     }
 
-    boolean a(char param0, ae param1, int param2, boolean param3) {
+    boolean handleKeyInput(char param0, UiWidget param1, int param2, boolean param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKeyInput(param0, param1, param2, param3)) {
             return true;
           }
           if (null == this.field_P) {
             return false;
           }
           if (param2 == 98) {
-            this.field_P.a(param1, false);
+            this.field_P.requestKeyboardFocus(param1, false);
           }
           if (param2 == 99) {
-            this.field_P.a(param1, false);
+            this.field_P.requestKeyboardFocus(param1, false);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -228,7 +228,7 @@ abstract class lc extends ofa {
         }
     }
 
-    lc(jta param0, ae param1, int param2, int param3, int param4) {
+    lc(jta param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, param1.field_m + 12, param1.field_p + param2 + 12);
         try {
           this.field_U = param3;

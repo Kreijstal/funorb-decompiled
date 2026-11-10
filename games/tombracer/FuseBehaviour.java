@@ -259,7 +259,7 @@ final class FuseBehaviour extends Behaviour {
 
     final static boolean k(byte param0) {
         int var1 = -55 / ((-52 - param0) / 59);
-        return uja.field_a.a(false);
+        return IntrusiveDequeCursor.field_a.a(false);
     }
 
     final void tick(int param0) {

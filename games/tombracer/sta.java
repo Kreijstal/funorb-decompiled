@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sta extends rva {
+final class sta extends ArrayWidgetGroup {
     private int[] field_F;
     private int field_x;
     int field_E;
@@ -21,18 +21,18 @@ final class sta extends rva {
         int var3;
         int var4;
         int var6;
-        ae var5;
+        UiWidget var5;
         var6 = TombRacer.field_G ? 1 : 0;
         var2 = 0;
         var3 = 0;
-        while (var2 < this.field_w.length) {
+        while (var2 < this.children.length) {
           if (var3 < this.field_F.length) {
             var4 = 0;
-            while (var2 < this.field_w.length) {
+            while (var2 < this.children.length) {
               if (this.field_C.length > var4) {
                 incrementValue$0 = var2;
                 var2++;
-                var5 = this.field_w[incrementValue$0];
+                var5 = this.children[incrementValue$0];
                 if (var5 != null) {
                   this.a(var3, var5, var4, (byte) 85);
                 }
@@ -51,7 +51,7 @@ final class sta extends rva {
         }
     }
 
-    private final void a(int param0, ae param1, int param2, byte param3) {
+    private final void a(int param0, UiWidget param1, int param2, byte param3) {
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_35_0 = null;
@@ -147,7 +147,7 @@ final class sta extends rva {
           }
           var18 = this.field_z;
           var19 = this.field_x;
-          param1.a((byte) -31, var16 - var18 * 2, -(2 * var19) + var17, var14Lifetime1 + var18, var15Lifetime1 + var19);
+          param1.setBounds((byte) -31, var16 - var18 * 2, -(2 * var19) + var17, var14Lifetime1 + var18, var15Lifetime1 + var19);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -203,8 +203,8 @@ final class sta extends rva {
     private final void f(int param0, int param1, int param2) {
         int var4 = this.field_C != null ? this.field_C.length : 0;
         if (param0 != 28705) {
-          ae var6 = (ae) null;
-          this.b(9, (ae) null, 31);
+          UiWidget var6 = (UiWidget) null;
+          this.b(9, (UiWidget) null, 31);
         }
         int[] var5 = new int[var4 * param2];
         if (this.field_I != null &&
@@ -218,18 +218,18 @@ final class sta extends rva {
 
     private final void c(int param0, int param1, int param2) {
         int var4 = null == this.field_C ? 0 : this.field_C.length;
-        ae[] var5 = new ae[var4 * param0];
-        if (null != this.field_w && this.field_w.length > 0 && var5.length > 0 &&
+        UiWidget[] var5 = new UiWidget[var4 * param0];
+        if (null != this.children && this.children.length > 0 && var5.length > 0 &&
           param1 > 0) {
-          lua.a(this.field_w, 0, var5, 0, var4 * Math.min(param1, param0));
+          lua.a(this.children, 0, var5, 0, var4 * Math.min(param1, param0));
         }
         if (param2 != 0) {
           return;
         }
-        this.field_w = var5;
+        this.children = var5;
     }
 
-    final boolean a(char param0, ae param1, int param2, boolean param3) {
+    final boolean handleKeyInput(char param0, UiWidget param1, int param2, boolean param3) {
         int var5_int = 0;
         int var6 = 0;
         boolean stackIn_12_0 = false;
@@ -243,16 +243,16 @@ final class sta extends rva {
         RuntimeException var5 = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKeyInput(param0, param1, param2, param3)) {
             return true;
           }
           var5_int = param2;
           if (var5_int == 98) {
-            stackIn_12_0 = this.a(param1, (byte) -14, this.field_C.length);
+            stackIn_12_0 = this.focusBackwardFrom(param1, (byte) -14, this.field_C.length);
             return stackIn_12_0;
           }
           if (var5_int == 99) {
-            stackIn_14_0 = this.a(this.field_C.length, param1, 0);
+            stackIn_14_0 = this.focusForwardFrom(this.field_C.length, param1, 0);
             return stackIn_14_0;
           }
           if (96 == var5_int) {
@@ -278,7 +278,7 @@ final class sta extends rva {
         }
     }
 
-    final void b(int param0, ae param1, int param2) {
+    final void b(int param0, UiWidget param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         try {
@@ -288,7 +288,7 @@ final class sta extends rva {
           var4_int = this.field_D % this.field_C.length;
           var5 = this.field_D / this.field_C.length;
           this.field_I[this.field_D] = param2;
-          this.field_w[this.field_D] = param1;
+          this.children[this.field_D] = param1;
           if (param1 != null) {
             this.a(var5, param1, var4_int, (byte) 85);
           }
@@ -298,7 +298,7 @@ final class sta extends rva {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, ae param5, int param6) {
+    final boolean handlePointerPress(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -309,7 +309,7 @@ final class sta extends rva {
           if (param0 <= 70) {
             field_B = -13;
           }
-          stackIn_3_0 = super.a(89, param1, param2, param3, param4, param5, param6);
+          stackIn_3_0 = super.handlePointerPress(89, param1, param2, param3, param4, param5, param6);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -338,17 +338,17 @@ final class sta extends rva {
         int var6 = 0;
         int var7 = TombRacer.field_G ? 1 : 0;
         int var4 = this.field_F != null ? this.field_F.length : 0;
-        ae[] var5 = new ae[param0 * var4];
+        UiWidget[] var5 = new UiWidget[param0 * var4];
         if (param2 != 192) {
           this.field_F = (int[]) null;
         }
-        if (null != this.field_w && this.field_w.length > 0 && var5.length > 0 &&
+        if (null != this.children && this.children.length > 0 && var5.length > 0 &&
           param1 > 0) {
           for (var6 = 0; var4 > var6; var6++) {
-            lua.a(this.field_w, param1 * var6, var5, param0 * var6, Math.min(param1, param0));
+            lua.a(this.children, param1 * var6, var5, param0 * var6, Math.min(param1, param0));
           }
         }
-        this.field_w = var5;
+        this.children = var5;
     }
 
     sta(int param0, int param1, int param2, int param3, isa param4, int param5, int param6) {
@@ -431,8 +431,8 @@ final class sta extends rva {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(byte param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
     }
 
     static {

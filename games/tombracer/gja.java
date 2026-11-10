@@ -865,7 +865,7 @@ final class gja extends ka {
               this.field_eb = fba.a(1, this.field_eb, this.field_fb);
               this.field_t = fba.a(1, this.field_t, this.field_fb);
               if (null != param1.field_l &&
-                qr.d(param2, this.field_h, 32)) {
+                SingleChildWidget.d(param2, this.field_h, 32)) {
                 this.field_D = param1.a(false, (byte) 64);
               }
               if (null != param1.field_m &&
@@ -1562,7 +1562,7 @@ final class gja extends ka {
               }
             }
             if (null != this.field_r &&
-              !qr.c(458752, this.field_h, this.field_Y)) {
+              !SingleChildWidget.c(458752, this.field_h, this.field_Y)) {
               if (null == this.field_ib ||
                 this.field_ib.b(16440)) {
                 var3 = 1;
@@ -1730,7 +1730,7 @@ final class gja extends ka {
           }
           var2_intLifetime1 = -112 / ((47 - param0) / 41);
           if (this.field_D != null &&
-            !qr.d(this.field_Y, this.field_h, 32)) {
+            !SingleChildWidget.d(this.field_Y, this.field_h, 32)) {
             this.field_D = (int[][]) null;
             this.field_hb = null;
           }

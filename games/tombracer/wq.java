@@ -83,10 +83,10 @@ final class wq implements ms {
         }
         if (this.field_c) {
           if (!this.field_c) {
-            qr.field_v.a(-6710887, param1 ^ -20727, this.a(false) / 2 + param2, -16711423, param0 + 30, tra.field_z[ConsoleToken.field_k]);
-            qr.field_v.a(-6710887, -1, this.a(false) / 2 + param2, -16711423, this.a(-8660) + param0 - 10, tra.field_z[fp.field_a]);
-            qr.field_v.a(-6710887, -1, param2 + 20, -16711423, 10 + this.a(-8660) / 2 + param0, tra.field_z[kda.field_hd]);
-            qr.field_v.a(-6710887, param1 - 20727, -20 + (param2 + this.a(false)), -16711423, 10 + (param0 + this.a(param1 ^ -28966) / 2), tra.field_z[mf.field_a]);
+            SingleChildWidget.field_v.a(-6710887, param1 ^ -20727, this.a(false) / 2 + param2, -16711423, param0 + 30, tra.field_z[ConsoleToken.field_k]);
+            SingleChildWidget.field_v.a(-6710887, -1, this.a(false) / 2 + param2, -16711423, this.a(-8660) + param0 - 10, tra.field_z[fp.field_a]);
+            SingleChildWidget.field_v.a(-6710887, -1, param2 + 20, -16711423, 10 + this.a(-8660) / 2 + param0, tra.field_z[kda.field_hd]);
+            SingleChildWidget.field_v.a(-6710887, param1 - 20727, -20 + (param2 + this.a(false)), -16711423, 10 + (param0 + this.a(param1 ^ -28966) / 2), tra.field_z[mf.field_a]);
             this.field_b.b(param2, param0, -82);
           }
           return;
@@ -107,10 +107,10 @@ final class wq implements ms {
             cha.a(-20 + this.a(false) / 2 + param2, 2, tga.field_a, 4, this.a(param1 ^ -28966) + param0 - 40, 40, 1080057857, 2, 40);
           }
           if (!this.field_c) {
-            qr.field_v.a(-6710887, param1 ^ -20727, this.a(false) / 2 + param2, -16711423, param0 + 30, tra.field_z[ConsoleToken.field_k]);
-            qr.field_v.a(-6710887, -1, this.a(false) / 2 + param2, -16711423, this.a(-8660) + param0 - 10, tra.field_z[fp.field_a]);
-            qr.field_v.a(-6710887, -1, param2 + 20, -16711423, 10 + this.a(-8660) / 2 + param0, tra.field_z[kda.field_hd]);
-            qr.field_v.a(-6710887, param1 - 20727, -20 + (param2 + this.a(false)), -16711423, 10 + (param0 + this.a(param1 ^ -28966) / 2), tra.field_z[mf.field_a]);
+            SingleChildWidget.field_v.a(-6710887, param1 ^ -20727, this.a(false) / 2 + param2, -16711423, param0 + 30, tra.field_z[ConsoleToken.field_k]);
+            SingleChildWidget.field_v.a(-6710887, -1, this.a(false) / 2 + param2, -16711423, this.a(-8660) + param0 - 10, tra.field_z[fp.field_a]);
+            SingleChildWidget.field_v.a(-6710887, -1, param2 + 20, -16711423, 10 + this.a(-8660) / 2 + param0, tra.field_z[kda.field_hd]);
+            SingleChildWidget.field_v.a(-6710887, param1 - 20727, -20 + (param2 + this.a(false)), -16711423, 10 + (param0 + this.a(param1 ^ -28966) / 2), tra.field_z[mf.field_a]);
             this.field_b.b(param2, param0, -82);
           }
           return;
@@ -126,29 +126,29 @@ final class wq implements ms {
             cha.a(-20 + (param2 + this.a(false) / 2), 2, tga.field_a, 4, -40 + (param0 + this.a(-8660)), 40, 1080057857, 2, 40);
             cha.a(-20 + this.a(false) / 2 + param2, 2, tga.field_a, 4, this.a(param1 ^ -28966) + param0 - 40, 40, 1080057857, 2, 40);
             if (!this.field_c) {
-              qr.field_v.a(-6710887, param1 ^ -20727, this.a(false) / 2 + param2, -16711423, param0 + 30, tra.field_z[ConsoleToken.field_k]);
-              qr.field_v.a(-6710887, -1, this.a(false) / 2 + param2, -16711423, this.a(-8660) + param0 - 10, tra.field_z[fp.field_a]);
-              qr.field_v.a(-6710887, -1, param2 + 20, -16711423, 10 + this.a(-8660) / 2 + param0, tra.field_z[kda.field_hd]);
-              qr.field_v.a(-6710887, param1 - 20727, -20 + (param2 + this.a(false)), -16711423, 10 + (param0 + this.a(param1 ^ -28966) / 2), tra.field_z[mf.field_a]);
+              SingleChildWidget.field_v.a(-6710887, param1 ^ -20727, this.a(false) / 2 + param2, -16711423, param0 + 30, tra.field_z[ConsoleToken.field_k]);
+              SingleChildWidget.field_v.a(-6710887, -1, this.a(false) / 2 + param2, -16711423, this.a(-8660) + param0 - 10, tra.field_z[fp.field_a]);
+              SingleChildWidget.field_v.a(-6710887, -1, param2 + 20, -16711423, 10 + this.a(-8660) / 2 + param0, tra.field_z[kda.field_hd]);
+              SingleChildWidget.field_v.a(-6710887, param1 - 20727, -20 + (param2 + this.a(false)), -16711423, 10 + (param0 + this.a(param1 ^ -28966) / 2), tra.field_z[mf.field_a]);
               this.field_b.b(param2, param0, -82);
             }
             return;
           }
           if (!this.field_c) {
-            qr.field_v.a(-6710887, param1 ^ -20727, this.a(false) / 2 + param2, -16711423, param0 + 30, tra.field_z[ConsoleToken.field_k]);
-            qr.field_v.a(-6710887, -1, this.a(false) / 2 + param2, -16711423, this.a(-8660) + param0 - 10, tra.field_z[fp.field_a]);
-            qr.field_v.a(-6710887, -1, param2 + 20, -16711423, 10 + this.a(-8660) / 2 + param0, tra.field_z[kda.field_hd]);
-            qr.field_v.a(-6710887, param1 - 20727, -20 + (param2 + this.a(false)), -16711423, 10 + (param0 + this.a(param1 ^ -28966) / 2), tra.field_z[mf.field_a]);
+            SingleChildWidget.field_v.a(-6710887, param1 ^ -20727, this.a(false) / 2 + param2, -16711423, param0 + 30, tra.field_z[ConsoleToken.field_k]);
+            SingleChildWidget.field_v.a(-6710887, -1, this.a(false) / 2 + param2, -16711423, this.a(-8660) + param0 - 10, tra.field_z[fp.field_a]);
+            SingleChildWidget.field_v.a(-6710887, -1, param2 + 20, -16711423, 10 + this.a(-8660) / 2 + param0, tra.field_z[kda.field_hd]);
+            SingleChildWidget.field_v.a(-6710887, param1 - 20727, -20 + (param2 + this.a(false)), -16711423, 10 + (param0 + this.a(param1 ^ -28966) / 2), tra.field_z[mf.field_a]);
             this.field_b.b(param2, param0, -82);
           }
           return;
         }
         if (!oj.field_tb[fp.field_a]) {
           if (!this.field_c) {
-            qr.field_v.a(-6710887, param1 ^ -20727, this.a(false) / 2 + param2, -16711423, param0 + 30, tra.field_z[ConsoleToken.field_k]);
-            qr.field_v.a(-6710887, -1, this.a(false) / 2 + param2, -16711423, this.a(-8660) + param0 - 10, tra.field_z[fp.field_a]);
-            qr.field_v.a(-6710887, -1, param2 + 20, -16711423, 10 + this.a(-8660) / 2 + param0, tra.field_z[kda.field_hd]);
-            qr.field_v.a(-6710887, param1 - 20727, -20 + (param2 + this.a(false)), -16711423, 10 + (param0 + this.a(param1 ^ -28966) / 2), tra.field_z[mf.field_a]);
+            SingleChildWidget.field_v.a(-6710887, param1 ^ -20727, this.a(false) / 2 + param2, -16711423, param0 + 30, tra.field_z[ConsoleToken.field_k]);
+            SingleChildWidget.field_v.a(-6710887, -1, this.a(false) / 2 + param2, -16711423, this.a(-8660) + param0 - 10, tra.field_z[fp.field_a]);
+            SingleChildWidget.field_v.a(-6710887, -1, param2 + 20, -16711423, 10 + this.a(-8660) / 2 + param0, tra.field_z[kda.field_hd]);
+            SingleChildWidget.field_v.a(-6710887, param1 - 20727, -20 + (param2 + this.a(false)), -16711423, 10 + (param0 + this.a(param1 ^ -28966) / 2), tra.field_z[mf.field_a]);
             this.field_b.b(param2, param0, -82);
           }
           return;
@@ -156,10 +156,10 @@ final class wq implements ms {
         cha.a(-20 + (param2 + this.a(false) / 2), 2, tga.field_a, 4, -40 + (param0 + this.a(-8660)), 40, 1080057857, 2, 40);
         cha.a(-20 + this.a(false) / 2 + param2, 2, tga.field_a, 4, this.a(param1 ^ -28966) + param0 - 40, 40, 1080057857, 2, 40);
         if (!this.field_c) {
-          qr.field_v.a(-6710887, param1 ^ -20727, this.a(false) / 2 + param2, -16711423, param0 + 30, tra.field_z[ConsoleToken.field_k]);
-          qr.field_v.a(-6710887, -1, this.a(false) / 2 + param2, -16711423, this.a(-8660) + param0 - 10, tra.field_z[fp.field_a]);
-          qr.field_v.a(-6710887, -1, param2 + 20, -16711423, 10 + this.a(-8660) / 2 + param0, tra.field_z[kda.field_hd]);
-          qr.field_v.a(-6710887, param1 - 20727, -20 + (param2 + this.a(false)), -16711423, 10 + (param0 + this.a(param1 ^ -28966) / 2), tra.field_z[mf.field_a]);
+          SingleChildWidget.field_v.a(-6710887, param1 ^ -20727, this.a(false) / 2 + param2, -16711423, param0 + 30, tra.field_z[ConsoleToken.field_k]);
+          SingleChildWidget.field_v.a(-6710887, -1, this.a(false) / 2 + param2, -16711423, this.a(-8660) + param0 - 10, tra.field_z[fp.field_a]);
+          SingleChildWidget.field_v.a(-6710887, -1, param2 + 20, -16711423, 10 + this.a(-8660) / 2 + param0, tra.field_z[kda.field_hd]);
+          SingleChildWidget.field_v.a(-6710887, param1 - 20727, -20 + (param2 + this.a(false)), -16711423, 10 + (param0 + this.a(param1 ^ -28966) / 2), tra.field_z[mf.field_a]);
           this.field_b.b(param2, param0, -82);
         }
     }

@@ -12,7 +12,7 @@ final class ArrowShooterComponent extends ShooterComponent {
           if (param1 > -66) {
             field_K = (String) null;
           }
-          qr.field_v = param0.a(wb.field_a, MovingPlatformComponent.field_O, true);
+          SingleChildWidget.field_v = param0.a(wb.field_a, MovingPlatformComponent.field_O, true);
           qf.field_j = param0.a(qp.field_r, gga.field_O, true);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wpa.WB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

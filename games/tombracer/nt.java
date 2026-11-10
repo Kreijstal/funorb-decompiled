@@ -39,7 +39,7 @@ final class nt {
               var9 = (java.applet.Applet) null;
               nt.a((java.applet.Applet) null, 34);
             }
-            var8 = uja.field_a.a((ppa) (var7), param0, (ppa) (var6), param4, param2 ^ 5167);
+            var8 = IntrusiveDequeCursor.field_a.a((ppa) (var7), param0, (ppa) (var6), param4, param2 ^ 5167);
             if (param3) {
               var8.a((byte) 115);
             }

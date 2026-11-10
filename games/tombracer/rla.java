@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rla extends b implements tsa {
+final class rla extends WidgetContainer implements tsa {
     cca field_F;
     private rj field_I;
     private boolean field_B;
@@ -18,8 +18,8 @@ final class rla extends b implements tsa {
 
     private final void a(String param0, byte param1) {
         if (param1 != 106) {
-          ae var4 = (ae) null;
-          this.a(36, -37, (ae) null, 57);
+          UiWidget var4 = (UiWidget) null;
+          this.updatePointerState(36, -37, (UiWidget) null, 57);
         }
         if (this.field_z.field_I == null) {
           return;
@@ -62,31 +62,31 @@ final class rla extends b implements tsa {
           this.field_E = new rj();
           this.field_E.field_r = (isa) ((Object) new ema());
           this.field_E.field_h = (qc) (this);
-          this.a(this.field_I, -1);
-          this.a(this.field_E, -1);
+          this.addChild(this.field_I, -1);
+          this.addChild(this.field_E, -1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "rla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     private final void a(int param0, int param1, int param2, boolean param3, int param4) {
-        super.a((byte) -31, param4, param0, param2, param1);
-        this.field_I.a((byte) -31, param4 - 20, this.field_C, 0, 0);
+        super.setBounds((byte) -31, param4, param0, param2, param1);
+        this.field_I.setBounds((byte) -31, param4 - 20, this.field_C, 0, 0);
         if (param3) {
           this.a((byte) -97);
         }
-        this.field_E.a((byte) -31, 20, this.field_C, -20 + param4, 0);
+        this.field_E.setBounds((byte) -31, 20, this.field_C, -20 + param4, 0);
         if (this.field_G) {
-          this.field_F.a((byte) -31, param4, -this.field_C + param0, 0, this.field_C);
+          this.field_F.setBounds((byte) -31, param4, -this.field_C + param0, 0, this.field_C);
         }
     }
 
-    final boolean b(byte param0) {
+    final boolean hasKeyboardFocus(byte param0) {
         boolean stackIn_7_0 = false;
         if (param0 != -34) {
           this.field_w = (String) null;
         }
-        stackIn_7_0 = (this.field_B) || (super.b((byte) -34));
+        stackIn_7_0 = (this.field_B) || (super.hasKeyboardFocus((byte) -34));
         return stackIn_7_0;
     }
 
@@ -102,15 +102,15 @@ final class rla extends b implements tsa {
         }
     }
 
-    final void a(int param0, int param1, ae param2, int param3) {
+    final void updatePointerState(int param0, int param1, UiWidget param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "rla.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, ae param5, int param6) {
+    final boolean handlePointerPress(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -119,7 +119,7 @@ final class rla extends b implements tsa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= 70) {
-            stackIn_4_0 = super.a(107, param1, param2, param3, param4, param5, param6);
+            stackIn_4_0 = super.handlePointerPress(107, param1, param2, param3, param4, param5, param6);
             return stackIn_4_0;
           }
           return false;
@@ -183,7 +183,7 @@ final class rla extends b implements tsa {
           return;
         }
         int var5 = var3 * this.field_z.field_G;
-        int var6 = this.field_F.field_A.field_x.field_n + var5;
+        int var6 = this.field_F.field_A.child.field_n + var5;
         if (param0 <= 35) {
           return;
         }
@@ -217,14 +217,14 @@ final class rla extends b implements tsa {
           var3 = this.field_A;
         }
         this.a(this.field_C + var3, this.field_n, this.field_i, false, this.field_m);
-        this.field_z.a((byte) -31, this.field_m, var2, 0, 0);
+        this.field_z.setBounds((byte) -31, this.field_m, var2, 0, 0);
         this.field_F = new cca(0, 0, 0, 0, new pu(), this.field_z, (isa) null);
         if (var4 != 0) {
           this.field_F.a(1, st.b(-5412), true);
         }
-        this.field_F.a((byte) -31, this.field_m, this.field_p - this.field_C, 0, this.field_C);
+        this.field_F.setBounds((byte) -31, this.field_m, this.field_p - this.field_C, 0, this.field_C);
         this.field_G = true;
-        this.a(this.field_F, -1);
+        this.addChild(this.field_F, -1);
         this.c(43);
     }
 
@@ -247,11 +247,11 @@ final class rla extends b implements tsa {
           ((eaa) ((Object) this.field_h)).a(-3, this);
         }
         if (param0 != 99) {
-          this.b((byte) -17);
+          this.hasKeyboardFocus((byte) -17);
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3, int param4) {
+    final void setBounds(byte param0, int param1, int param2, int param3, int param4) {
         this.field_C = param2;
         if (param0 != -31) {
           return;
@@ -266,13 +266,13 @@ final class rla extends b implements tsa {
         return this.field_z.field_G;
     }
 
-    final void f(byte param0) {
+    final void clearKeyboardFocus(byte param0) {
         int var2 = 1 / ((-38 - param0) / 60);
         this.field_B = false;
-        super.f((byte) 41);
+        super.clearKeyboardFocus((byte) 41);
     }
 
-    final String d(byte param0) {
+    final String getHoverText(byte param0) {
         int var2 = 70 / ((-58 - param0) / 60);
         if (!this.field_f) {
           return null;
@@ -285,17 +285,17 @@ final class rla extends b implements tsa {
         if (this.field_z.d(117) != null) {
           return this.field_z.d(121).toString();
         }
-        return super.d((byte) 79);
+        return super.getHoverText((byte) 79);
     }
 
-    final boolean a(ae param0, boolean param1) {
+    final boolean requestKeyboardFocus(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          param0.f((byte) -120);
+          param0.clearKeyboardFocus((byte) -120);
           if (param1) {
             this.field_w = (String) null;
           }
@@ -305,7 +305,7 @@ final class rla extends b implements tsa {
             if (!(this.field_h instanceof vfa)) {
               return true;
             }
-            ((vfa) (this.field_h)).a((ae) (this), (byte) -75, this.field_B);
+            ((vfa) (this.field_h)).a((UiWidget) (this), (byte) -75, this.field_B);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -322,7 +322,7 @@ final class rla extends b implements tsa {
         }
     }
 
-    final boolean a(char param0, ae param1, int param2, boolean param3) {
+    final boolean handleKeyInput(char param0, UiWidget param1, int param2, boolean param3) {
         boolean stackIn_61_0 = false;
         RuntimeException stackIn_64_0 = null;
         StringBuilder stackIn_64_1 = null;
@@ -336,11 +336,11 @@ final class rla extends b implements tsa {
         int var6_intLifetime1;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          if (!this.b((byte) -34)) {
+          if (!this.hasKeyboardFocus((byte) -34)) {
             return false;
           }
           if (!param3) {
-            this.a((byte) 94, -22, -43, -18, -59);
+            this.setBounds((byte) 94, -22, -43, -18, -59);
           }
           boolean decompiledFrameRemainder0 = true;
           if (null != this.field_z.field_I) {
@@ -413,7 +413,7 @@ final class rla extends b implements tsa {
             }
           }
           if (param2 != 80) {
-            stackIn_61_0 = super.a(param0, param1, param2, true);
+            stackIn_61_0 = super.handleKeyInput(param0, param1, param2, true);
             return stackIn_61_0;
           }
           this.a((byte) 125);

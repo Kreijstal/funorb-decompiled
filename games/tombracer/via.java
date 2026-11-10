@@ -29,7 +29,7 @@ final class via extends java.awt.Canvas implements java.awt.event.FocusListener 
             var7 = (CharSequence) ((Object) param3);
             var4_long = jm.a(var7, 117);
           }
-          stackIn_4_0 = b.a(param0, 0, (String) (var6), param2, var4_long);
+          stackIn_4_0 = WidgetContainer.a(param0, 0, (String) (var6), param2, var4_long);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

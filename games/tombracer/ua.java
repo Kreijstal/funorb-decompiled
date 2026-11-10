@@ -71,7 +71,7 @@ final class ua implements GamePacket {
           }
           if (param0 instanceof byte[]) {
             var4 = (byte[]) (param0);
-            stackIn_5_0 = b.a(param1, 0, param2, var4);
+            stackIn_5_0 = WidgetContainer.copyByteRange(param1, 0, param2, var4);
             return stackIn_5_0;
           }
           if (param0 instanceof qu) {

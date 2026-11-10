@@ -43,7 +43,7 @@ class ij extends lc implements tsa {
         }
     }
 
-    final boolean a(char param0, ae param1, int param2, boolean param3) {
+    final boolean handleKeyInput(char param0, UiWidget param1, int param2, boolean param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -55,7 +55,7 @@ class ij extends lc implements tsa {
             field_X = (ToolkitSprite) null;
           }
           if (13 != param2) {
-            stackIn_7_0 = super.a(param0, param1, param2, true);
+            stackIn_7_0 = super.handleKeyInput(param0, param1, param2, true);
             return stackIn_7_0;
           }
           this.i((byte) -115);
@@ -139,7 +139,7 @@ class ij extends lc implements tsa {
           this.field_V = param3 ? true : false;
           this.field_cb = new rk(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_cb.field_D = true;
-          this.a(this.field_cb, -1);
+          this.addChild(this.field_cb, -1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ij.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -156,7 +156,7 @@ class ij extends lc implements tsa {
         sr var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        ae var6 = null;
+        UiWidget var6 = null;
         sr var7 = null;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
@@ -164,8 +164,8 @@ class ij extends lc implements tsa {
             return;
           }
           if (param1 < 39) {
-            var6 = (ae) null;
-            this.a('F', (ae) null, 118, true);
+            var6 = (UiWidget) null;
+            this.handleKeyInput('F', (UiWidget) null, 118, true);
           }
           this.field_W = true;
           stackIn_9_1 = (param0 == 256);

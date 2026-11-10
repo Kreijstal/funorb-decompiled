@@ -337,7 +337,7 @@ final class vba extends we {
     }
 
     final void a(boolean param0, int param1, byte param2) {
-        qr.field_v.a(63 + param1, false, qja.field_i.toUpperCase(), 65, -14279929, -1);
+        SingleChildWidget.field_v.a(63 + param1, false, qja.field_i.toUpperCase(), 65, -14279929, -1);
         this.j(-119, param1);
         this.c(param1, (byte) -22);
         if (vpa.a(7)) {

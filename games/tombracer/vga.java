@@ -161,8 +161,8 @@ final class vga extends vpa {
         return dupTemp$0;
     }
 
-    public final void a(ae param0, int param1, int param2, int param3, boolean param4) {
-        ae stackIn_3_0 = null;
+    public final void a(UiWidget param0, int param1, int param2, int param3, boolean param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_36_0 = null;
         StringBuilder stackIn_36_1 = null;
         String stackIn_37_2 = null;
@@ -179,7 +179,7 @@ final class vga extends vpa {
           if (!(param0 instanceof rj)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (ae) (param0);
+            stackIn_3_0 = (UiWidget) (param0);
           }
           var10 = (rj) (stackIn_3_0);
           tga.a(param2 - 16799168, param0.field_i + param1, param1 + param0.field_i + param0.field_m, param0.field_n + param3, param0.field_n + param3 + param0.field_p);
@@ -212,7 +212,7 @@ final class vga extends vpa {
               }
             }
           }
-          if (param0.b((byte) -34)) {
+          if (param0.hasKeyboardFocus((byte) -34)) {
             var13 = this.field_o[5];
             if (var13 != null) {
               var13.a(this, param0, 123, param3, param1, this.field_p);

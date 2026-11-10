@@ -163,10 +163,10 @@ final class IntrusiveDeque {
           var3_int = ((iv) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_7_4, stackIn_7_5, stackIn_8_6) ? 1 : 0;
           var4 = dn.field_b.field_tb.field_J;
           var5 = null;
-          if (ae.field_g != 2) {
+          if (UiWidget.field_g != 2) {
             is.field_yb.field_r = PlayerSimulation.field_n;
             dqa.field_e.field_X = false;
-            if (ae.field_g != 1) {
+            if (UiWidget.field_g != 1) {
               dn.field_b.field_vb.field_vb.field_r = nl.field_c;
               if (var19 != 0) {
                 dn.field_b.field_vb.field_vb.field_r = DivisionMazeGenerator.field_b;

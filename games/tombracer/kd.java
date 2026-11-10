@@ -8,7 +8,7 @@ final class kd extends rj {
     static String field_z;
     private tq field_D;
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, ae param5, int param6) {
+    final boolean handlePointerPress(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         int var12 = 0;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
@@ -26,7 +26,7 @@ final class kd extends rj {
           if (param0 < 70) {
             return false;
           }
-          if (!super.a(98, param1, param2, param3, param4, param5, param6)) {
+          if (!super.handlePointerPress(98, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
           var8_int = param6 - (param1 + this.field_E);

@@ -387,7 +387,7 @@ final class SnakePitModel extends TrapModel {
           mka.field_b.a(mka.field_b.field_G, param5, -23776, 0, param2 + pq.field_g.field_G);
           ne.field_d.a(param3 + (2 + param2) + 485, 2, (byte) 127, 5, param3, -5 + var7, 5);
           if (apa.field_c != null) {
-            apa.field_c.a((byte) -31, ne.field_d.field_G, ne.field_d.field_t, ne.field_d.field_qb, ne.field_d.field_T);
+            apa.field_c.setBounds((byte) -31, ne.field_d.field_G, ne.field_d.field_t, ne.field_d.field_qb, ne.field_d.field_T);
           }
           var8 = era.field_e.field_G - (param2 + var6_int);
           var9 = var8 / 2;

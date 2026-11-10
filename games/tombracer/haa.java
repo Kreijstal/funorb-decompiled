@@ -4,10 +4,10 @@
 class haa extends rj {
     static ToolkitSprite field_z;
     static jpa field_A;
-    private ae field_B;
+    private UiWidget field_B;
     static int[][] field_C;
 
-    final boolean a(ae param0, boolean param1) {
+    final boolean requestKeyboardFocus(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -16,9 +16,9 @@ class haa extends rj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            this.field_B = (ae) null;
+            this.field_B = (UiWidget) null;
           }
-          stackIn_3_0 = this.field_B.a(param0, false);
+          stackIn_3_0 = this.field_B.requestKeyboardFocus(param0, false);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -34,7 +34,7 @@ class haa extends rj {
         }
     }
 
-    haa(ae param0) {
+    haa(UiWidget param0) {
         try {
           this.field_B = param0;
         } catch (RuntimeException runtimeException) {

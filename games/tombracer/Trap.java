@@ -501,9 +501,9 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         int var5;
         Locomotor var6;
         TrapModel var7;
-        uja var8;
-        uja var9;
-        uja var10;
+        IntrusiveDequeCursor var8;
+        IntrusiveDequeCursor var9;
+        IntrusiveDequeCursor var10;
         Locomotor var11;
         Behaviour var12;
         var5 = TombRacer.field_G ? 1 : 0;
@@ -549,29 +549,29 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         if (!this.j(-1)) {
           this.field_Q = false;
           this.field_P = false;
-          var8 = new uja(this.locomotors);
+          var8 = new IntrusiveDequeCursor(this.locomotors);
           if (this.field_D &&
             !param1) {
-            var11 = (Locomotor) (var8.a(true));
+            var11 = (Locomotor) (var8.first(true));
             while (var11 != null) {
               if (var11.a((byte) 87)) {
                 var11.unlink(126);
-                var11 = (Locomotor) (var8.a(-1));
+                var11 = (Locomotor) (var8.next(-1));
                 continue;
               }
               if (var11.a(-80)) {
                 var11.tick((byte) -121);
               }
-              var11 = (Locomotor) (var8.a(-1));
+              var11 = (Locomotor) (var8.next(-1));
             }
           }
-          var6 = (Locomotor) (var8.a(true));
+          var6 = (Locomotor) (var8.first(true));
           while (var6 != null) {
             var6.applyConstraint(1);
-            var6 = (Locomotor) (var8.a(-1));
+            var6 = (Locomotor) (var8.next(-1));
           }
-          var9 = new uja(this.behaviours);
-          var12 = (Behaviour) (var9.a(true));
+          var9 = new IntrusiveDequeCursor(this.behaviours);
+          var12 = (Behaviour) (var9.first(true));
           while (var12 != null) {
             if (!var12.a((byte) 87)) {
               if (var12.a(-116)) {
@@ -586,17 +586,17 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
             } else {
               var12.unlink(82);
             }
-            var12 = (Behaviour) (var9.a(-1));
+            var12 = (Behaviour) (var9.next(-1));
           }
-          var10 = new uja(this.children);
-          var4 = (Trap) (var10.a(true));
+          var10 = new IntrusiveDequeCursor(this.children);
+          var4 = (Trap) (var10.first(true));
           while (var4 != null) {
             var4.b(75, param1);
             if (var4.field_C) {
               var4.unlink(2);
               var4.B(-165);
             }
-            var4 = (Trap) (var10.a(-1));
+            var4 = (Trap) (var10.next(-1));
           }
         }
         var7 = (TrapModel) (this.models.first(-80));
@@ -800,8 +800,8 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         Behaviour var8;
         Locomotor var9;
         Trap var10;
-        uja var11;
-        uja var12;
+        IntrusiveDequeCursor var11;
+        IntrusiveDequeCursor var12;
         lj var4Lifetime1;
         lj var4Lifetime2;
         var7 = TombRacer.field_G ? 1 : 0;
@@ -816,26 +816,26 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           }
           var9 = (Locomotor) (this.locomotors.next(119));
         }
-        var11 = new uja(this.behaviours);
-        var8 = (Behaviour) (var11.a(true));
+        var11 = new IntrusiveDequeCursor(this.behaviours);
+        var8 = (Behaviour) (var11.first(true));
         while (var8 != null) {
           var4Lifetime1 = var8.a(0, param1, param0);
           if (var4Lifetime1 != null) {
             return var4Lifetime1;
           }
-          var8 = (Behaviour) (var11.a(-1));
+          var8 = (Behaviour) (var11.next(-1));
         }
-        var12 = new uja(this.children);
+        var12 = new IntrusiveDequeCursor(this.children);
         if (param2 != -26) {
           this.h(122, -84);
         }
-        var10 = (Trap) (var12.a(true));
+        var10 = (Trap) (var12.first(true));
         while (var10 != null) {
           var4Lifetime2 = var10.a(param0, param1, (byte) -26);
           if (var4Lifetime2 != null) {
             return var4Lifetime2;
           }
-          var10 = (Trap) (var12.a(-1));
+          var10 = (Trap) (var12.next(-1));
         }
         return null;
     }
@@ -1077,17 +1077,17 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
 
     final void h(boolean param0) {
         int var4 = TombRacer.field_G ? 1 : 0;
-        uja var2 = new uja(this.behaviours);
-        Behaviour var5 = (Behaviour) (var2.a(true));
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.behaviours);
+        Behaviour var5 = (Behaviour) (var2.first(true));
         while (var5 != null) {
           var5.g(-2);
-          var5 = (Behaviour) (var2.a(-1));
+          var5 = (Behaviour) (var2.next(-1));
         }
-        var2 = new uja(this.children);
-        Trap var6 = (Trap) (var2.a(param0));
+        var2 = new IntrusiveDequeCursor(this.children);
+        Trap var6 = (Trap) (var2.first(param0));
         while (var6 != null) {
           var6.h(true);
-          var6 = (Trap) (var2.a(-1));
+          var6 = (Trap) (var2.next(-1));
         }
     }
 
@@ -1651,11 +1651,11 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           this.switchableId = (SwitchableId) null;
         }
         this.field_lb = this.field_U;
-        uja var2 = new uja(this.children);
-        Trap var3 = (Trap) (var2.a(true));
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
+        Trap var3 = (Trap) (var2.first(true));
         while (var3 != null) {
           var3.D((byte) 118);
-          var3 = (Trap) (var2.a(-1));
+          var3 = (Trap) (var2.next(-1));
         }
     }
 
@@ -1695,7 +1695,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        uja var6 = null;
+        IntrusiveDequeCursor var6 = null;
         Behaviour var7 = null;
         int var8 = 0;
         int stackIn_4_0 = 0;
@@ -1727,11 +1727,11 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
             return stackIn_14_0;
           }
           var5 = 0;
-          var6 = new uja(this.behaviours);
-          var7 = (Behaviour) (var6.a(true));
+          var6 = new IntrusiveDequeCursor(this.behaviours);
+          var7 = (Behaviour) (var6.first(true));
           while (var7 != null) {
             var5 = var5 + var7.a(25940, param1, param0);
-            var7 = (Behaviour) (var6.a(-1));
+            var7 = (Behaviour) (var6.next(-1));
           }
           stackIn_19_0 = var5;
           return stackIn_19_0;
@@ -1774,7 +1774,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
     public final int a(Effect param0, int param1, int param2, int param3, int param4, int param5) {
         int var7_int = 0;
         RuntimeException var7 = null;
-        uja var8 = null;
+        IntrusiveDequeCursor var8 = null;
         Behaviour var9 = null;
         int var10 = 0;
         int stackIn_4_0 = 0;
@@ -1800,11 +1800,11 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
             return stackIn_12_0;
           }
           var7_int = param3;
-          var8 = new uja(this.behaviours);
-          var9 = (Behaviour) (var8.a(true));
+          var8 = new IntrusiveDequeCursor(this.behaviours);
+          var9 = (Behaviour) (var8.first(true));
           while (var9 != null) {
             var7_int = var7_int + var9.a(param5, param1, param0, param2, (byte) 8, param4);
-            var9 = (Behaviour) (var8.a(-1));
+            var9 = (Behaviour) (var8.next(-1));
           }
           stackIn_17_0 = var7_int;
           return stackIn_17_0;
@@ -2093,11 +2093,11 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
     private final void F(byte param0) {
         int var4 = TombRacer.field_G ? 1 : 0;
         this.u((byte) 116);
-        uja var2 = new uja(this.children);
-        Trap var3 = (Trap) (var2.a(true));
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
+        Trap var3 = (Trap) (var2.first(true));
         while (var3 != null) {
           var3.F((byte) -102);
-          var3 = (Trap) (var2.a(-1));
+          var3 = (Trap) (var2.next(-1));
         }
         if (param0 > -90) {
           this.localY = 92;
@@ -2497,16 +2497,16 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
     }
 
     final void a(int param0, byte param1, boolean param2) {
-        uja var4 = null;
+        IntrusiveDequeCursor var4 = null;
         Trap var5 = null;
         int var6 = TombRacer.field_G ? 1 : 0;
         this.field_V = param0;
         if (param2) {
-          var4 = new uja(this.children);
-          var5 = (Trap) (var4.a(true));
+          var4 = new IntrusiveDequeCursor(this.children);
+          var5 = (Trap) (var4.first(true));
           while (var5 != null) {
             var5.a(param0, (byte) -12, param2);
-            var5 = (Trap) (var4.a(param1 ^ 11));
+            var5 = (Trap) (var4.next(param1 ^ 11));
           }
         }
         if (param1 != -12) {
@@ -2724,7 +2724,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        uja var6 = null;
+        IntrusiveDequeCursor var6 = null;
         Behaviour var7 = null;
         int var8 = 0;
         int stackIn_4_0 = 0;
@@ -2754,11 +2754,11 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
             return stackIn_12_0;
           }
           var5 = 0;
-          var6 = new uja(this.behaviours);
-          var7 = (Behaviour) (var6.a(true));
+          var6 = new IntrusiveDequeCursor(this.behaviours);
+          var7 = (Behaviour) (var6.first(true));
           while (var7 != null) {
             var5 = var5 + var7.a(-119, param0, param2);
-            var7 = (Behaviour) (var6.a(-1));
+            var7 = (Behaviour) (var6.next(-1));
           }
           stackIn_17_0 = var5;
           return stackIn_17_0;
@@ -2836,13 +2836,13 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         int var5;
         int var6;
         int var7;
-        uja var8;
+        IntrusiveDequeCursor var8;
         var7 = TombRacer.field_G ? 1 : 0;
-        var8 = new uja(this.children);
+        var8 = new IntrusiveDequeCursor(this.children);
         if (param1 != -3) {
           return true;
         }
-        var4 = (Trap) (var8.a(true));
+        var4 = (Trap) (var8.first(true));
         while (true) {
           if (var4 == null) {
             return false;
@@ -2857,7 +2857,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           }
           if (var4.a(var5, var6, -4648, this.field_L, 0) != 2 &&
             !var4.d(param0, param1 ^ 0)) {
-            var4 = (Trap) (var8.a(-1));
+            var4 = (Trap) (var8.next(-1));
             continue;
           }
           break;

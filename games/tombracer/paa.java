@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class paa extends b implements mk {
+abstract class paa extends WidgetContainer implements mk {
     static lqa field_z;
     static String field_y;
     static int[] field_x;

@@ -184,11 +184,11 @@ final class BlockModel extends TrapModel {
         int var10;
         w var11;
         IntrusiveDeque var12;
-        uja var13;
+        IntrusiveDequeCursor var13;
         IntrusiveDeque var14;
-        uja var15;
+        IntrusiveDequeCursor var15;
         IntrusiveDeque var16;
-        uja var17;
+        IntrusiveDequeCursor var17;
         int var8Lifetime1;
         pc var9Lifetime1;
         var10 = TombRacer.field_G ? 1 : 0;
@@ -218,14 +218,14 @@ final class BlockModel extends TrapModel {
         }
         if (11 == this.field_v) {
           var12 = var3.behaviours;
-          var13 = new uja(var12);
+          var13 = new IntrusiveDequeCursor(var12);
           var7_int = 0;
-          var8_ref_nv = (Behaviour) (var13.a(true));
+          var8_ref_nv = (Behaviour) (var13.first(true));
           while (var8_ref_nv != null) {
             if (var8_ref_nv instanceof WeaponShooterBehaviour) {
               var7_int = var7_int != 0 | ((WeaponShooterBehaviour) (var8_ref_nv)).g((byte) -68) ? 1 : 0;
             }
-            var8_ref_nv = (Behaviour) (var13.a(-1));
+            var8_ref_nv = (Behaviour) (var13.next(-1));
           }
           boolean decompiledFrameRemainder0 = true;
           if (var7_int != 0 && (this.field_x == null ||
@@ -247,8 +247,8 @@ final class BlockModel extends TrapModel {
         }
         if (16 == this.field_v) {
           var14 = var3.behaviours;
-          var15 = new uja(var14);
-          var7 = (Behaviour) (var15.a(true));
+          var15 = new IntrusiveDequeCursor(var14);
+          var7 = (Behaviour) (var15.first(true));
           while (var7 != null) {
             if (var7 instanceof BeamShooterBehaviour) {
               if (((BeamShooterBehaviour) (var7)).b(-98)) {
@@ -265,7 +265,7 @@ final class BlockModel extends TrapModel {
                 if (this.field_w != null &&
                   var8 == this.field_m &&
                   this.field_w.isLinked((byte) 91)) {
-                  var7 = (Behaviour) (var15.a(-1));
+                  var7 = (Behaviour) (var15.next(-1));
                   continue;
                 }
                 if (this.field_m < var8) {
@@ -281,31 +281,31 @@ final class BlockModel extends TrapModel {
                 if (null != this.field_w) {
                   this.field_w.a(-94, var11);
                   this.field_w = null;
-                  var7 = (Behaviour) (var15.a(-1));
+                  var7 = (Behaviour) (var15.next(-1));
                   continue;
                 }
               }
             }
-            var7 = (Behaviour) (var15.a(-1));
+            var7 = (Behaviour) (var15.next(-1));
           }
         }
         if (this.field_v == 15) {
           var16 = var3.behaviours;
-          var17 = new uja(var16);
-          var7 = (Behaviour) (var17.a(true));
+          var17 = new IntrusiveDequeCursor(var16);
+          var7 = (Behaviour) (var17.first(true));
           while (var7 != null) {
             if (!(var7 instanceof BeamShooterBehaviour)) {
-              var7 = (Behaviour) (var17.a(-1));
+              var7 = (Behaviour) (var17.next(-1));
               continue;
             }
             if (!((BeamShooterBehaviour) (var7)).b(-19)) {
               if (this.field_u == null) {
-                var7 = (Behaviour) (var17.a(-1));
+                var7 = (Behaviour) (var17.next(-1));
                 continue;
               }
               this.field_u.a(param0 - 100, var11);
               this.field_u = null;
-              var7 = (Behaviour) (var17.a(-1));
+              var7 = (Behaviour) (var17.next(-1));
               continue;
             }
             var8Lifetime1 = 1;
@@ -333,7 +333,7 @@ final class BlockModel extends TrapModel {
               }
               this.field_u = var11.a(new fm(39 + this.field_p - 1, this.getRenderX((byte) 87), this.getRenderY((byte) 127), this.getRenderZ((byte) -111)), -58);
             }
-            var7 = (Behaviour) (var17.a(-1));
+            var7 = (Behaviour) (var17.next(-1));
           }
         }
         if (var3.j(param0) &&

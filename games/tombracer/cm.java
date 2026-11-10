@@ -369,7 +369,7 @@ final class cm implements GamePacket {
                 if (lga.field_z != null &&
                   lga.field_z[var7] != null &&
                   0 < (~ConsoleToken.field_g & lga.field_z[var7][var9])) {
-                  var15 = b.a(~ConsoleToken.field_g & lga.field_z[var7][var9], (byte) -115);
+                  var15 = WidgetContainer.highestOneBit(~ConsoleToken.field_g & lga.field_z[var7][var9], (byte) -115);
                   var14 = 1;
                 }
                 if (PowerUpItemBehaviour.field_u != null &&

@@ -16,8 +16,8 @@ final class jr implements isa {
     private int field_b;
     private int field_m;
 
-    public final void a(ae param0, int param1, int param2, int param3, boolean param4) {
-        ae stackIn_5_0 = null;
+    public final void a(UiWidget param0, int param1, int param2, int param3, boolean param4) {
+        UiWidget stackIn_5_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -35,7 +35,7 @@ final class jr implements isa {
           if (!(param0 instanceof jla)) {
             stackIn_5_0 = null;
           } else {
-            stackIn_5_0 = (ae) (param0);
+            stackIn_5_0 = (UiWidget) (param0);
           }
           var11 = (jla) (stackIn_5_0);
           if (var11 != null) {

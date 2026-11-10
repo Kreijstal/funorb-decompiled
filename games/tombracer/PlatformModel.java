@@ -410,7 +410,7 @@ final class PlatformModel extends TrapModel {
         double var11 = 0.0;
         double var13 = 0.0;
         IntrusiveDeque var15 = null;
-        uja var16 = null;
+        IntrusiveDequeCursor var16 = null;
         int var17 = 0;
         Object var18 = null;
         Locomotor var18_ref = null;
@@ -473,9 +473,9 @@ final class PlatformModel extends TrapModel {
             stackIn_51_1 = (var3 != 0);
             this.field_p = stackIn_51_1;
             var15 = var5_ref.locomotors;
-            var16 = new uja(var15);
+            var16 = new IntrusiveDequeCursor(var15);
             var17 = 0;
-            var18_ref = (Locomotor) (var16.a(true));
+            var18_ref = (Locomotor) (var16.first(true));
             while (var18_ref != null) {
               if (var18_ref instanceof PathMoveLocomotor) {
                 if (((PathMoveLocomotor) (var18_ref)).d(false) != this.field_y) {
@@ -496,7 +496,7 @@ final class PlatformModel extends TrapModel {
                   var17 = 1;
                 }
               }
-              var18_ref = (Locomotor) (var16.a(-1));
+              var18_ref = (Locomotor) (var16.next(-1));
             }
             if (var17 == 0 &&
               this.field_v != null) {

@@ -1232,7 +1232,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           } else {
             var8 = 64;
           }
-          var8 = b.a(var8, (byte) -118);
+          var8 = WidgetContainer.highestOneBit(var8, (byte) -118);
           jaggl.OpenGL.glVertex2f((float)param2 + var6, var7);
           for (var9 = -var8 + 16384; 0 < var9; var9 = var9 - var8) {
             jaggl.OpenGL.glVertex2f(var6 + (float)param2 * hu.field_c[var9], (float)param2 * hu.field_b[var9] + var7);
@@ -2988,7 +2988,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
             } else {
               var9 = 64;
             }
-            var9 = b.a(var9, (byte) -101);
+            var9 = WidgetContainer.highestOneBit(var9, (byte) -101);
             jaggl.OpenGL.glVertex2f(var6 + (float)param2, var7);
             for (var10 = -var9 + 16384; var10 > 0; var10 = var10 - var9) {
               jaggl.OpenGL.glVertex2f(var6 + (float)param2 * hu.field_c[var10], (float)param2 * hu.field_b[var10] + var7);

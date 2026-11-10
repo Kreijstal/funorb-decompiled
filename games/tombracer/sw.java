@@ -298,10 +298,10 @@ final class sw extends jea {
             }
             return;
           }
-          ModelFactory.field_a.a(sc.field_k, true, ConstrainToFacingArcLocomotor.field_w, param0 ^ -11);
+          ModelFactory.field_a.processPointerFrame(sc.field_k, true, ConstrainToFacingArcLocomotor.field_w, param0 ^ -11);
           ModelFactory.field_a.g((byte) -128);
           while (es.a(true)) {
-            ModelFactory.field_a.a((byte) -53, fna.field_h, kda.field_td);
+            ModelFactory.field_a.dispatchKeyInput((byte) -53, fna.field_h, kda.field_td);
           }
           if (param0 == 100) {
             return;

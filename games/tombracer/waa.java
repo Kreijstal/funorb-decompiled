@@ -36,7 +36,7 @@ final class waa {
             stackIn_8_0 = 6406;
             return stackIn_8_0;
           }
-          if (param0 == qr.field_w) {
+          if (param0 == SingleChildWidget.field_w) {
             stackIn_18_0 = 6409;
             return stackIn_18_0;
           }

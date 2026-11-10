@@ -27,7 +27,7 @@ abstract class rka {
         }
         eda.field_f = null;
         qf.field_j = null;
-        qr.field_v = null;
+        SingleChildWidget.field_v = null;
         System.gc();
     }
 

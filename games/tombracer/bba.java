@@ -63,7 +63,7 @@ final class bba {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var20 = null;
         try {
-          qr.a(false, param16, param18, param11, param14);
+          SingleChildWidget.a(false, param16, param18, param11, param14);
           gj.a(param14, true);
           if (param6 <= 15) {
             return;
@@ -173,7 +173,7 @@ final class bba {
     }
 
     final boolean a(RoomComponent param0, boolean param1, boolean param2) {
-        uja var4 = null;
+        IntrusiveDequeCursor var4 = null;
         RuntimeException var4_ref = null;
         RoomComponent var5 = null;
         int var6 = 0;
@@ -183,8 +183,8 @@ final class bba {
         RuntimeException decompiledCaughtException = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
-          var4 = new uja(this.field_e);
-          var5 = (RoomComponent) (var4.a(param2));
+          var4 = new IntrusiveDequeCursor(this.field_e);
+          var5 = (RoomComponent) (var4.first(param2));
           while (var5 != null) {
             if (var5 == param0) {
               return true;
@@ -193,7 +193,7 @@ final class bba {
               var5.a(true, 0, param0)) {
               return true;
             }
-            var5 = (RoomComponent) (var4.a(-1));
+            var5 = (RoomComponent) (var4.next(-1));
           }
           if (param2) {
             return false;

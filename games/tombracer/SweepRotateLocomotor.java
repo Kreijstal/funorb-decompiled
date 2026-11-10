@@ -107,14 +107,14 @@ final class SweepRotateLocomotor extends Locomotor {
           }
           if (var2 != 1) {
             if (var2 == 2) {
-              if (1 == ae.field_g) {
-                ae.field_g = 2;
+              if (1 == UiWidget.field_g) {
+                UiWidget.field_g = 2;
               }
               return;
             }
             if (var2 == 3) {
-              if (2 == ae.field_g) {
-                ae.field_g = 1;
+              if (2 == UiWidget.field_g) {
+                UiWidget.field_g = 1;
               }
               return;
             }
@@ -126,7 +126,7 @@ final class SweepRotateLocomotor extends Locomotor {
               dea.a(param0 ^ 14168);
               return;
             }
-            ae.field_g = 1;
+            UiWidget.field_g = 1;
             var3 = var1.readString((byte) -76);
             ol.field_b = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(255);

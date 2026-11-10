@@ -167,8 +167,8 @@ final class DoorwayModel extends TrapModel {
     }
 
     final void d(int param0) {
-        uja discarded$0 = null;
-        uja discarded$1 = null;
+        IntrusiveDequeCursor discarded$0 = null;
+        IntrusiveDequeCursor discarded$1 = null;
         Trap var3;
         int var5;
         Object var6;
@@ -192,7 +192,7 @@ final class DoorwayModel extends TrapModel {
             return;
           }
           var8 = var3.locomotors;
-          discarded$0 = new uja(var8);
+          discarded$0 = new IntrusiveDequeCursor(var8);
           var5 = 0;
           if (var3.getX(3) != this.field_r ||
             var3.getY(9648) != this.field_p) {
@@ -207,7 +207,7 @@ final class DoorwayModel extends TrapModel {
             return;
           }
           var7 = var3.locomotors;
-          discarded$1 = new uja(var7);
+          discarded$1 = new IntrusiveDequeCursor(var7);
           var5 = 0;
           if (var3.getX(3) != this.field_r ||
             var3.getY(9648) != this.field_p) {

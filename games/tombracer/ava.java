@@ -340,7 +340,7 @@ final class ava {
                   } else {
                     if (var6 <= var12.field_Jb) {
                       if (0 != (~var12.field_Eb & var8)) {
-                        var25_int = b.a(~var12.field_Eb & var8, (byte) -107);
+                        var25_int = WidgetContainer.highestOneBit(~var12.field_Eb & var8, (byte) -107);
                         var24Lifetime2 = gh.field_f;
                         if (0 < var25_int &&
                           null != BitPacketBuffer.field_l &&
@@ -362,7 +362,7 @@ final class ava {
                   if (var7 <= var12.field_zb) {
                     if (var12.field_Jb >= var6) {
                       if ((var8 & ~var12.field_Eb) != 0) {
-                        var25_int = b.a(~var12.field_Eb & var8, (byte) -125);
+                        var25_int = WidgetContainer.highestOneBit(~var12.field_Eb & var8, (byte) -125);
                         var24Lifetime2 = gl.$cfr$intArgs$a$53ce4ab4c593(86, TrackMountComponent.field_I, new String[]{var20});
                         if (var25_int > 0 &&
                           null != BitPacketBuffer.field_l &&

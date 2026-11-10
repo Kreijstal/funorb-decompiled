@@ -10,7 +10,7 @@ final class mha extends rj {
     static String field_F;
     static int field_E;
 
-    final String d(byte param0) {
+    final String getHoverText(byte param0) {
         int var2 = -38 / ((-58 - param0) / 60);
         if (!this.field_f) {
           return null;
@@ -26,10 +26,10 @@ final class mha extends rj {
         field_F = null;
     }
 
-    final void a(int param0, int param1, ae param2, int param3) {
+    final void updatePointerState(int param0, int param1, UiWidget param2, int param3) {
         try {
           this.field_A = this.field_A + 1;
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "mha.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -43,7 +43,7 @@ final class mha extends rj {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void renderLayer(int param0, int param1, int param2, int param3) {
         Sprite var15 = null;
         Sprite var16 = null;
         Sprite var13 = null;
@@ -52,7 +52,7 @@ final class mha extends rj {
         int var11 = TombRacer.field_G ? 1 : 0;
         int var9Lifetime1;
         int var10Lifetime1;
-        super.a(param0, param1, 0, param3);
+        super.renderLayer(param0, param1, 0, param3);
         if (param3 != param2) {
           return;
         }
@@ -141,7 +141,7 @@ final class mha extends rj {
         var12.a(var5 - (var12.field_m >> 1), -(var12.field_q >> 1) + var6, 256);
     }
 
-    final boolean a(ae param0, boolean param1) {
+    final boolean requestKeyboardFocus(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

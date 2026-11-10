@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cca extends rva {
+final class cca extends ArrayWidgetGroup {
     vua field_A;
     jo field_x;
     private boolean field_y;
@@ -45,19 +45,19 @@ final class cca extends rva {
         if (param0 > -122) {
           this.field_x = (jo) null;
           if (null != this.field_x) {
-            this.field_A.field_x.field_n = -(int)((long)this.field_x.field_O * (long)(this.field_A.field_x.field_p - this.field_A.field_p) >> 16);
+            this.field_A.child.field_n = -(int)((long)this.field_x.field_O * (long)(this.field_A.child.field_p - this.field_A.field_p) >> 16);
           }
           if (null == this.field_D) {
             return;
           }
-          this.field_A.field_x.field_i = -(int)((long)(-this.field_A.field_m + this.field_A.field_x.field_m) * (long)this.field_D.field_C >> 16);
+          this.field_A.child.field_i = -(int)((long)(-this.field_A.field_m + this.field_A.child.field_m) * (long)this.field_D.field_C >> 16);
           return;
         }
         if (null != this.field_x) {
-          this.field_A.field_x.field_n = -(int)((long)this.field_x.field_O * (long)(this.field_A.field_x.field_p - this.field_A.field_p) >> 16);
+          this.field_A.child.field_n = -(int)((long)this.field_x.field_O * (long)(this.field_A.child.field_p - this.field_A.field_p) >> 16);
         }
         if (null != this.field_D) {
-          this.field_A.field_x.field_i = -(int)((long)(-this.field_A.field_m + this.field_A.field_x.field_m) * (long)this.field_D.field_C >> 16);
+          this.field_A.child.field_i = -(int)((long)(-this.field_A.field_m + this.field_A.child.field_m) * (long)this.field_D.field_C >> 16);
           return;
         }
     }
@@ -250,7 +250,7 @@ final class cca extends rva {
                 stackIn_11_0 = this.field_p;
               }
               var5 = stackIn_11_0;
-              this.field_A.a((byte) -31, var4, var5, var2, var3);
+              this.field_A.setBounds((byte) -31, var4, var5, var2, var3);
               if (null != this.field_x) {
                 stackIn_14_0 = this.field_x;
                 stackIn_14_1 = -31;
@@ -261,7 +261,7 @@ final class cca extends rva {
                 } else {
                   stackIn_15_4 = 0;
                 }
-                ((jo) (Object) stackIn_14_0).a((byte) stackIn_14_1, stackIn_14_2, stackIn_14_3, stackIn_15_4, this.field_A.field_n);
+                ((jo) (Object) stackIn_14_0).setBounds((byte) stackIn_14_1, stackIn_14_2, stackIn_14_3, stackIn_15_4, this.field_A.field_n);
               }
               if (null != this.field_D) {
                 stackIn_20_0 = this.field_D;
@@ -274,7 +274,7 @@ final class cca extends rva {
                 } else {
                   stackIn_21_5 = -this.field_D.field_p + this.field_p;
                 }
-                ((jo) (Object) stackIn_20_0).a((byte) stackIn_20_1, stackIn_20_2, stackIn_20_3, stackIn_20_4, stackIn_21_5);
+                ((jo) (Object) stackIn_20_0).setBounds((byte) stackIn_20_1, stackIn_20_2, stackIn_20_3, stackIn_20_4, stackIn_21_5);
               }
               this.c(-31791);
               return;
@@ -296,7 +296,7 @@ final class cca extends rva {
                 stackIn_32_0 = this.field_p;
               }
               var5Lifetime5 = stackIn_32_0;
-              this.field_A.a((byte) -31, var4Lifetime5, var5Lifetime5, var2, var3Lifetime4);
+              this.field_A.setBounds((byte) -31, var4Lifetime5, var5Lifetime5, var2, var3Lifetime4);
               if (null != this.field_x) {
                 stackIn_35_0 = this.field_x;
                 stackIn_35_1 = -31;
@@ -307,7 +307,7 @@ final class cca extends rva {
                 } else {
                   stackIn_36_4 = 0;
                 }
-                ((jo) (Object) stackIn_35_0).a((byte) stackIn_35_1, stackIn_35_2, stackIn_35_3, stackIn_36_4, this.field_A.field_n);
+                ((jo) (Object) stackIn_35_0).setBounds((byte) stackIn_35_1, stackIn_35_2, stackIn_35_3, stackIn_36_4, this.field_A.field_n);
               }
               if (null != this.field_D) {
                 stackIn_41_0 = this.field_D;
@@ -320,7 +320,7 @@ final class cca extends rva {
                 } else {
                   stackIn_42_5 = -this.field_D.field_p + this.field_p;
                 }
-                ((jo) (Object) stackIn_41_0).a((byte) stackIn_41_1, stackIn_41_2, stackIn_41_3, stackIn_41_4, stackIn_42_5);
+                ((jo) (Object) stackIn_41_0).setBounds((byte) stackIn_41_1, stackIn_41_2, stackIn_41_3, stackIn_41_4, stackIn_42_5);
               }
               this.c(-31791);
               return;
@@ -339,7 +339,7 @@ final class cca extends rva {
                 stackIn_69_0 = this.field_p;
               }
               var5Lifetime6 = stackIn_69_0;
-              this.field_A.a((byte) -31, var4Lifetime6, var5Lifetime6, var2, var3Lifetime5);
+              this.field_A.setBounds((byte) -31, var4Lifetime6, var5Lifetime6, var2, var3Lifetime5);
               if (null != this.field_x) {
                 stackIn_72_0 = this.field_x;
                 stackIn_72_1 = -31;
@@ -350,7 +350,7 @@ final class cca extends rva {
                 } else {
                   stackIn_73_4 = 0;
                 }
-                ((jo) (Object) stackIn_72_0).a((byte) stackIn_72_1, stackIn_72_2, stackIn_72_3, stackIn_73_4, this.field_A.field_n);
+                ((jo) (Object) stackIn_72_0).setBounds((byte) stackIn_72_1, stackIn_72_2, stackIn_72_3, stackIn_73_4, this.field_A.field_n);
               }
               if (null != this.field_D) {
                 stackIn_78_0 = this.field_D;
@@ -363,7 +363,7 @@ final class cca extends rva {
                 } else {
                   stackIn_79_5 = -this.field_D.field_p + this.field_p;
                 }
-                ((jo) (Object) stackIn_78_0).a((byte) stackIn_78_1, stackIn_78_2, stackIn_78_3, stackIn_78_4, stackIn_79_5);
+                ((jo) (Object) stackIn_78_0).setBounds((byte) stackIn_78_1, stackIn_78_2, stackIn_78_3, stackIn_78_4, stackIn_79_5);
               }
               this.c(-31791);
               return;
@@ -381,7 +381,7 @@ final class cca extends rva {
               stackIn_51_0 = this.field_p;
             }
             var5Lifetime7 = stackIn_51_0;
-            this.field_A.a((byte) -31, var4Lifetime7, var5Lifetime7, var2, var3Lifetime5);
+            this.field_A.setBounds((byte) -31, var4Lifetime7, var5Lifetime7, var2, var3Lifetime5);
             if (null != this.field_x) {
               stackIn_54_0 = this.field_x;
               stackIn_54_1 = -31;
@@ -392,7 +392,7 @@ final class cca extends rva {
               } else {
                 stackIn_55_4 = 0;
               }
-              ((jo) (Object) stackIn_54_0).a((byte) stackIn_54_1, stackIn_54_2, stackIn_54_3, stackIn_55_4, this.field_A.field_n);
+              ((jo) (Object) stackIn_54_0).setBounds((byte) stackIn_54_1, stackIn_54_2, stackIn_54_3, stackIn_55_4, this.field_A.field_n);
             }
             if (null != this.field_D) {
               stackIn_60_0 = this.field_D;
@@ -405,7 +405,7 @@ final class cca extends rva {
               } else {
                 stackIn_61_5 = -this.field_D.field_p + this.field_p;
               }
-              ((jo) (Object) stackIn_60_0).a((byte) stackIn_60_1, stackIn_60_2, stackIn_60_3, stackIn_60_4, stackIn_61_5);
+              ((jo) (Object) stackIn_60_0).setBounds((byte) stackIn_60_1, stackIn_60_2, stackIn_60_3, stackIn_60_4, stackIn_61_5);
             }
             this.c(-31791);
             return;
@@ -428,7 +428,7 @@ final class cca extends rva {
               stackIn_109_0 = this.field_p;
             }
             var5Lifetime1 = stackIn_109_0;
-            this.field_A.a((byte) -31, var4Lifetime1, var5Lifetime1, var2Lifetime1, var3Lifetime1);
+            this.field_A.setBounds((byte) -31, var4Lifetime1, var5Lifetime1, var2Lifetime1, var3Lifetime1);
             if (null != this.field_x) {
               stackIn_112_0 = this.field_x;
               stackIn_112_1 = -31;
@@ -439,7 +439,7 @@ final class cca extends rva {
               } else {
                 stackIn_113_4 = 0;
               }
-              ((jo) (Object) stackIn_112_0).a((byte) stackIn_112_1, stackIn_112_2, stackIn_112_3, stackIn_113_4, this.field_A.field_n);
+              ((jo) (Object) stackIn_112_0).setBounds((byte) stackIn_112_1, stackIn_112_2, stackIn_112_3, stackIn_113_4, this.field_A.field_n);
             }
             if (null != this.field_D) {
               stackIn_118_0 = this.field_D;
@@ -452,7 +452,7 @@ final class cca extends rva {
               } else {
                 stackIn_119_5 = -this.field_D.field_p + this.field_p;
               }
-              ((jo) (Object) stackIn_118_0).a((byte) stackIn_118_1, stackIn_118_2, stackIn_118_3, stackIn_118_4, stackIn_119_5);
+              ((jo) (Object) stackIn_118_0).setBounds((byte) stackIn_118_1, stackIn_118_2, stackIn_118_3, stackIn_118_4, stackIn_119_5);
             }
             this.c(-31791);
             return;
@@ -470,7 +470,7 @@ final class cca extends rva {
             stackIn_91_0 = this.field_p;
           }
           var5Lifetime1Lifetime1 = stackIn_91_0;
-          this.field_A.a((byte) -31, var4Lifetime1Lifetime1, var5Lifetime1Lifetime1, var2Lifetime1, var3Lifetime1);
+          this.field_A.setBounds((byte) -31, var4Lifetime1Lifetime1, var5Lifetime1Lifetime1, var2Lifetime1, var3Lifetime1);
           if (null != this.field_x) {
             stackIn_94_0 = this.field_x;
             stackIn_94_1 = -31;
@@ -481,7 +481,7 @@ final class cca extends rva {
             } else {
               stackIn_95_4 = 0;
             }
-            ((jo) (Object) stackIn_94_0).a((byte) stackIn_94_1, stackIn_94_2, stackIn_94_3, stackIn_95_4, this.field_A.field_n);
+            ((jo) (Object) stackIn_94_0).setBounds((byte) stackIn_94_1, stackIn_94_2, stackIn_94_3, stackIn_95_4, this.field_A.field_n);
           }
           if (null != this.field_D) {
             stackIn_100_0 = this.field_D;
@@ -494,7 +494,7 @@ final class cca extends rva {
             } else {
               stackIn_101_5 = -this.field_D.field_p + this.field_p;
             }
-            ((jo) (Object) stackIn_100_0).a((byte) stackIn_100_1, stackIn_100_2, stackIn_100_3, stackIn_100_4, stackIn_101_5);
+            ((jo) (Object) stackIn_100_0).setBounds((byte) stackIn_100_1, stackIn_100_2, stackIn_100_3, stackIn_100_4, stackIn_101_5);
           }
           this.c(-31791);
           return;
@@ -514,7 +514,7 @@ final class cca extends rva {
               stackIn_184_0 = this.field_p;
             }
             var5Lifetime2 = stackIn_184_0;
-            this.field_A.a((byte) -31, var4Lifetime2, var5Lifetime2, var2Lifetime1, var3Lifetime2);
+            this.field_A.setBounds((byte) -31, var4Lifetime2, var5Lifetime2, var2Lifetime1, var3Lifetime2);
             if (null != this.field_x) {
               stackIn_187_0 = this.field_x;
               stackIn_187_1 = -31;
@@ -525,7 +525,7 @@ final class cca extends rva {
               } else {
                 stackIn_188_4 = 0;
               }
-              ((jo) (Object) stackIn_187_0).a((byte) stackIn_187_1, stackIn_187_2, stackIn_187_3, stackIn_188_4, this.field_A.field_n);
+              ((jo) (Object) stackIn_187_0).setBounds((byte) stackIn_187_1, stackIn_187_2, stackIn_187_3, stackIn_188_4, this.field_A.field_n);
             }
             if (null != this.field_D) {
               stackIn_193_0 = this.field_D;
@@ -538,7 +538,7 @@ final class cca extends rva {
               } else {
                 stackIn_194_5 = -this.field_D.field_p + this.field_p;
               }
-              ((jo) (Object) stackIn_193_0).a((byte) stackIn_193_1, stackIn_193_2, stackIn_193_3, stackIn_193_4, stackIn_194_5);
+              ((jo) (Object) stackIn_193_0).setBounds((byte) stackIn_193_1, stackIn_193_2, stackIn_193_3, stackIn_193_4, stackIn_194_5);
             }
             this.c(-31791);
             return;
@@ -556,7 +556,7 @@ final class cca extends rva {
             stackIn_166_0 = this.field_p;
           }
           var5Lifetime2Lifetime1 = stackIn_166_0;
-          this.field_A.a((byte) -31, var4Lifetime2Lifetime1, var5Lifetime2Lifetime1, var2Lifetime1, var3Lifetime2);
+          this.field_A.setBounds((byte) -31, var4Lifetime2Lifetime1, var5Lifetime2Lifetime1, var2Lifetime1, var3Lifetime2);
           if (null != this.field_x) {
             stackIn_169_0 = this.field_x;
             stackIn_169_1 = -31;
@@ -567,7 +567,7 @@ final class cca extends rva {
             } else {
               stackIn_170_4 = 0;
             }
-            ((jo) (Object) stackIn_169_0).a((byte) stackIn_169_1, stackIn_169_2, stackIn_169_3, stackIn_170_4, this.field_A.field_n);
+            ((jo) (Object) stackIn_169_0).setBounds((byte) stackIn_169_1, stackIn_169_2, stackIn_169_3, stackIn_170_4, this.field_A.field_n);
           }
           if (null != this.field_D) {
             stackIn_175_0 = this.field_D;
@@ -580,7 +580,7 @@ final class cca extends rva {
             } else {
               stackIn_176_5 = -this.field_D.field_p + this.field_p;
             }
-            ((jo) (Object) stackIn_175_0).a((byte) stackIn_175_1, stackIn_175_2, stackIn_175_3, stackIn_175_4, stackIn_176_5);
+            ((jo) (Object) stackIn_175_0).setBounds((byte) stackIn_175_1, stackIn_175_2, stackIn_175_3, stackIn_175_4, stackIn_176_5);
           }
           this.c(-31791);
           return;
@@ -599,7 +599,7 @@ final class cca extends rva {
             stackIn_147_0 = this.field_p;
           }
           var5Lifetime3 = stackIn_147_0;
-          this.field_A.a((byte) -31, var4Lifetime3, var5Lifetime3, var2Lifetime1, var3Lifetime3);
+          this.field_A.setBounds((byte) -31, var4Lifetime3, var5Lifetime3, var2Lifetime1, var3Lifetime3);
           if (null != this.field_x) {
             stackIn_150_0 = this.field_x;
             stackIn_150_1 = -31;
@@ -610,7 +610,7 @@ final class cca extends rva {
             } else {
               stackIn_151_4 = 0;
             }
-            ((jo) (Object) stackIn_150_0).a((byte) stackIn_150_1, stackIn_150_2, stackIn_150_3, stackIn_151_4, this.field_A.field_n);
+            ((jo) (Object) stackIn_150_0).setBounds((byte) stackIn_150_1, stackIn_150_2, stackIn_150_3, stackIn_151_4, this.field_A.field_n);
           }
           if (null != this.field_D) {
             stackIn_156_0 = this.field_D;
@@ -623,7 +623,7 @@ final class cca extends rva {
             } else {
               stackIn_157_5 = -this.field_D.field_p + this.field_p;
             }
-            ((jo) (Object) stackIn_156_0).a((byte) stackIn_156_1, stackIn_156_2, stackIn_156_3, stackIn_156_4, stackIn_157_5);
+            ((jo) (Object) stackIn_156_0).setBounds((byte) stackIn_156_1, stackIn_156_2, stackIn_156_3, stackIn_156_4, stackIn_157_5);
           }
           this.c(-31791);
           return;
@@ -641,7 +641,7 @@ final class cca extends rva {
           stackIn_129_0 = this.field_p;
         }
         var5Lifetime4 = stackIn_129_0;
-        this.field_A.a((byte) -31, var4Lifetime4, var5Lifetime4, var2Lifetime1, var3Lifetime3);
+        this.field_A.setBounds((byte) -31, var4Lifetime4, var5Lifetime4, var2Lifetime1, var3Lifetime3);
         if (null != this.field_x) {
           stackIn_132_0 = this.field_x;
           stackIn_132_1 = -31;
@@ -652,7 +652,7 @@ final class cca extends rva {
           } else {
             stackIn_133_4 = 0;
           }
-          ((jo) (Object) stackIn_132_0).a((byte) stackIn_132_1, stackIn_132_2, stackIn_132_3, stackIn_133_4, this.field_A.field_n);
+          ((jo) (Object) stackIn_132_0).setBounds((byte) stackIn_132_1, stackIn_132_2, stackIn_132_3, stackIn_133_4, this.field_A.field_n);
         }
         if (null != this.field_D) {
           stackIn_138_0 = this.field_D;
@@ -665,20 +665,20 @@ final class cca extends rva {
           } else {
             stackIn_139_5 = -this.field_D.field_p + this.field_p;
           }
-          ((jo) (Object) stackIn_138_0).a((byte) stackIn_138_1, stackIn_138_2, stackIn_138_3, stackIn_138_4, stackIn_139_5);
+          ((jo) (Object) stackIn_138_0).setBounds((byte) stackIn_138_1, stackIn_138_2, stackIn_138_3, stackIn_138_4, stackIn_139_5);
         }
         this.c(-31791);
         return;
     }
 
-    final boolean a(char param0, ae param1, int param2, boolean param3) {
+    final boolean handleKeyInput(char param0, UiWidget param1, int param2, boolean param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!super.a(param0, param1, param2, param3)) {
+          if (!super.handleKeyInput(param0, param1, param2, param3)) {
             return false;
           }
           this.g((byte) -123);
@@ -705,16 +705,16 @@ final class cca extends rva {
             this.g((byte) 98);
           }
         } else {
-          if (this.field_A.field_p < this.field_A.field_x.field_p) {
-            this.field_x.c(this.field_A.field_x.field_p, this.field_A.field_p, -1789710879);
+          if (this.field_A.field_p < this.field_A.child.field_p) {
+            this.field_x.c(this.field_A.child.field_p, this.field_A.field_p, -1789710879);
             if (param0 != -31791) {
               this.g((byte) 98);
             }
             if (this.field_D != null) {
-              if (this.field_A.field_x.field_m <= this.field_A.field_m) {
+              if (this.field_A.child.field_m <= this.field_A.field_m) {
                 this.field_D.a((byte) -84, 1, 1);
               } else {
-                this.field_D.a((byte) -101, this.field_A.field_m, this.field_A.field_x.field_m);
+                this.field_D.a((byte) -101, this.field_A.field_m, this.field_A.child.field_m);
               }
             }
             return;
@@ -722,10 +722,10 @@ final class cca extends rva {
           this.field_x.c(1, 1, param0 ^ 1789701680);
           if (param0 == -31791) {
             if (this.field_D != null) {
-              if (this.field_A.field_x.field_m <= this.field_A.field_m) {
+              if (this.field_A.child.field_m <= this.field_A.field_m) {
                 this.field_D.a((byte) -84, 1, 1);
               } else {
-                this.field_D.a((byte) -101, this.field_A.field_m, this.field_A.field_x.field_m);
+                this.field_D.a((byte) -101, this.field_A.field_m, this.field_A.child.field_m);
               }
             }
             return;
@@ -735,26 +735,26 @@ final class cca extends rva {
         if (this.field_D == null) {
           return;
         }
-        if (this.field_A.field_x.field_m <= this.field_A.field_m) {
+        if (this.field_A.child.field_m <= this.field_A.field_m) {
           this.field_D.a((byte) -84, 1, 1);
         } else {
-          this.field_D.a((byte) -101, this.field_A.field_m, this.field_A.field_x.field_m);
+          this.field_D.a((byte) -101, this.field_A.field_m, this.field_A.child.field_m);
         }
     }
 
     final void a(int param0, jo param1, boolean param2) {
         try {
           this.field_x = param1;
-          this.field_w[param0] = (ae) ((Object) param1);
+          this.children[param0] = (UiWidget) ((Object) param1);
           this.field_B = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "cca.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final void a(int param0, int param1, ae param2, int param3) {
+    final void updatePointerState(int param0, int param1, UiWidget param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
           this.c(-31791);
           this.g((byte) -125);
         } catch (RuntimeException runtimeException) {
@@ -788,7 +788,7 @@ final class cca extends rva {
         cca.a(-19, (cn) null, 56, -52);
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, ae param4, int param5, int param6) {
+    final boolean a(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -799,7 +799,7 @@ final class cca extends rva {
           if (super.a(param0, param1, param2, param3, param4, param5, param6)) {
             return true;
           }
-          stackIn_8_0 = (this.b((byte) -34)) && (this.a(param0, ~param6));
+          stackIn_8_0 = (this.hasKeyboardFocus((byte) -34)) && (this.a(param0, ~param6));
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -815,14 +815,14 @@ final class cca extends rva {
         }
     }
 
-    cca(int param0, int param1, int param2, int param3, isa param4, ae param5, isa param6) {
+    cca(int param0, int param1, int param2, int param3, isa param4, UiWidget param5, isa param6) {
         super(param0, param1, param2, param3, param4);
         vua dupTemp$0 = null;
         try {
-          this.field_w = new ae[3];
+          this.children = new UiWidget[3];
           dupTemp$0 = new vua(param0, param1, param2, param3, param6, param5);
           this.field_A = dupTemp$0;
-          this.field_w[2] = (ae) ((Object) dupTemp$0);
+          this.children[2] = (UiWidget) ((Object) dupTemp$0);
           this.a((byte) 88);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "cca.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');

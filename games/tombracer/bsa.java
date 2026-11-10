@@ -22,7 +22,7 @@ final class bsa implements isa {
         }
     }
 
-    public final void a(ae param0, int param1, int param2, int param3, boolean param4) {
+    public final void a(UiWidget param0, int param1, int param2, int param3, boolean param4) {
         rr var14 = null;
         int var7 = 0;
         int var8 = 0;

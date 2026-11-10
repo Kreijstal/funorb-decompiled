@@ -26,24 +26,24 @@ final class fe extends paa {
     fe(isa param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
         try {
-          this.a((byte) -31, param4, param5, param2, param3);
+          this.setBounds((byte) -31, param4, param5, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3, int param4) {
-        super.a((byte) -31, param1, param2, param3, param4);
+    final void setBounds(byte param0, int param1, int param2, int param3, int param4) {
+        super.setBounds((byte) -31, param1, param2, param3, param4);
         int var6 = -130 + param1 >> 1;
         if (!this.field_G) {
-          this.field_B.a((byte) -31, 25, param2, var6, 0);
-          this.field_E.a((byte) -31, 25, param2, var6 + 45, 0);
-          this.field_D.a(param0, 40, param2, 90 + var6, 0);
+          this.field_B.setBounds((byte) -31, 25, param2, var6, 0);
+          this.field_E.setBounds((byte) -31, 25, param2, var6 + 45, 0);
+          this.field_D.setBounds(param0, 40, param2, 90 + var6, 0);
           return;
         }
-        this.field_E.a((byte) -31, 25, param2, var6, 0);
-        this.field_B.a((byte) -31, 25, param2, var6 + 45, 0);
-        this.field_D.a(param0, 40, param2, 90 + var6, 0);
+        this.field_E.setBounds((byte) -31, 25, param2, var6, 0);
+        this.field_B.setBounds((byte) -31, 25, param2, var6 + 45, 0);
+        this.field_D.setBounds(param0, 40, param2, 90 + var6, 0);
     }
 
     private fe(isa param0, boolean param1) {
@@ -57,20 +57,20 @@ final class fe extends paa {
           this.field_E.field_r = param0;
           this.field_B.field_r = param0;
           if (!this.field_G) {
-            this.a(this.field_B, -1);
-            this.a(this.field_E, -1);
+            this.addChild(this.field_B, -1);
+            this.addChild(this.field_E, -1);
           } else {
-            this.a(this.field_E, -1);
-            this.a(this.field_B, -1);
+            this.addChild(this.field_E, -1);
+            this.addChild(this.field_B, -1);
           }
-          this.a(this.field_D, -1);
+          this.addChild(this.field_D, -1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void renderLayer(int param0, int param1, int param2, int param3) {
+        super.renderLayer(param0, param1, param2, param3);
         if (param3 == 0) {
           param1 = param1 + this.field_n;
           param0 = param0 + this.field_i;
@@ -86,7 +86,7 @@ final class fe extends paa {
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
         if (param0 != 110) {
-          this.a((byte) 13, 53, -119, 96, 97);
+          this.setBounds((byte) 13, 53, -119, 96, 97);
         }
         try {
           stackIn_3_0 = Integer.parseInt(this.field_D.field_o);
@@ -98,9 +98,9 @@ final class fe extends paa {
         }
     }
 
-    final String d(byte param0) {
+    final String getHoverText(byte param0) {
         int var2 = 46 % ((-58 - param0) / 60);
-        String var3 = this.field_E.d((byte) -127);
+        String var3 = this.field_E.getHoverText((byte) -127);
         if (var3 != null) {
           return var3;
         }
@@ -110,7 +110,7 @@ final class fe extends paa {
         return null;
     }
 
-    private final void a(int param0, int param1, ae param2, int param3, String param4) {
+    private final void a(int param0, int param1, UiWidget param2, int param3, String param4) {
         try {
           if (param0 > -25) {
             this.field_B = (tra) null;

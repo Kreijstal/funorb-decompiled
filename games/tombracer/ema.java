@@ -5,7 +5,7 @@ final class ema implements isa {
     static String field_a;
     static int field_b;
 
-    public final void a(ae param0, int param1, int param2, int param3, boolean param4) {
+    public final void a(UiWidget param0, int param1, int param2, int param3, boolean param4) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;

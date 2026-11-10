@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class efa extends b implements mia, tsa {
+final class efa extends WidgetContainer implements mia, tsa {
     private so field_z;
     static Sprite[][] field_w;
     static int field_y;
@@ -50,9 +50,9 @@ final class efa extends b implements mia, tsa {
         }
     }
 
-    final void a(int param0, int param1, ae param2, int param3) {
+    final void updatePointerState(int param0, int param1, UiWidget param2, int param3) {
         try {
-          super.a(param0, param1 + 0, param2, param3);
+          super.updatePointerState(param0, param1 + 0, param2, param3);
           if (param1 != 2097152) {
             this.field_x = (laa) null;
           }
@@ -109,7 +109,7 @@ final class efa extends b implements mia, tsa {
         super(0, 0, 496, 0, (isa) null);
         this.field_z = new so("", (qc) null, 12);
         vpa var1 = new vpa(eka.field_o, 0, 0, 0, 0, 16777215, -1, 3, 0, KeySwitchComponent.field_J.field_w, -1, 2147483647, true);
-        ae var2 = new ae(cj.field_e, var1, (qc) null);
+        UiWidget var2 = new UiWidget(cj.field_e, var1, (qc) null);
         this.field_A = new rj(nf.field_j, (qc) null);
         this.field_B = new rj(mq.field_d, (qc) null);
         this.field_z.field_q = rma.field_a;
@@ -121,20 +121,20 @@ final class efa extends b implements mia, tsa {
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;
-        var2.a((byte) -31, 270, 50, 20, var3);
-        this.a(var2, -1);
+        var2.setBounds((byte) -31, 270, 50, 20, var3);
+        this.addChild(var2, -1);
         var3 += 50;
         var3 = var3 + (5 + this.a(var3, CrusherBehaviour.field_r, za.field_f, this.field_z, -2239, 170));
-        this.field_A.a((byte) -31, var5, 40, -var5 + 496 >> 1, var3);
-        this.field_B.a((byte) -31, 60, 40, var4 + 3, var3 + 15);
+        this.field_A.setBounds((byte) -31, var5, 40, -var5 + 496 >> 1, var3);
+        this.field_B.setBounds((byte) -31, 60, 40, var4 + 3, var3 + 15);
         this.field_B.field_h = (qc) (this);
         this.field_A.field_h = (qc) (this);
-        this.a(this.field_A, -1);
-        this.a(this.field_B, -1);
+        this.addChild(this.field_A, -1);
+        this.addChild(this.field_B, -1);
         this.field_x = new laa((mia) (this));
-        this.field_x.a((byte) -31, this.field_m - this.field_z.field_i - (this.field_z.field_m + 60), 150, this.field_z.field_i - (-this.field_z.field_m - 60), 20);
-        this.a(this.field_x, -1);
-        this.a((byte) -31, 496, var4 + 55 + var3, 0, 0);
+        this.field_x.setBounds((byte) -31, this.field_m - this.field_z.field_i - (this.field_z.field_m + 60), 150, this.field_z.field_i - (-this.field_z.field_m - 60), 20);
+        this.addChild(this.field_x, -1);
+        this.setBounds((byte) -31, 496, var4 + 55 + var3, 0, 0);
     }
 
     public final void a(String param0, int param1) {
@@ -152,7 +152,7 @@ final class efa extends b implements mia, tsa {
         }
     }
 
-    private final int a(int param0, String param1, String param2, ae param3, int param4, int param5) {
+    private final int a(int param0, String param1, String param2, UiWidget param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -212,7 +212,7 @@ final class efa extends b implements mia, tsa {
         }
     }
 
-    final boolean a(char param0, ae param1, int param2, boolean param3) {
+    final boolean handleKeyInput(char param0, UiWidget param1, int param2, boolean param3) {
         RuntimeException var5 = null;
         boolean stackIn_8_0 = false;
         boolean stackIn_11_0 = false;
@@ -224,17 +224,17 @@ final class efa extends b implements mia, tsa {
           if (!param3) {
             return true;
           }
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKeyInput(param0, param1, param2, param3)) {
             return true;
           }
           if (param2 == 98) {
-            stackIn_8_0 = this.b(param1, (byte) -118);
+            stackIn_8_0 = this.focusPreviousChild(param1, (byte) -118);
             return stackIn_8_0;
           }
           if (param2 != 99) {
             return false;
           }
-          stackIn_11_0 = this.a(param1, (byte) -9);
+          stackIn_11_0 = this.focusNextChild(param1, (byte) -9);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -250,7 +250,7 @@ final class efa extends b implements mia, tsa {
         }
     }
 
-    private final int a(int param0, ae param1, int param2, String param3, String param4, int param5, int param6) {
+    private final int a(int param0, UiWidget param1, int param2, String param3, String param4, int param5, int param6) {
         RuntimeException var8 = null;
         sd var9 = null;
         jsa var10 = null;
@@ -265,10 +265,10 @@ final class efa extends b implements mia, tsa {
         RuntimeException decompiledCaughtException = null;
         try {
           var10 = new jsa(20, param0, 120 + param2, 25, param1, false, 120, param6, KeySwitchComponent.field_J, 16777215, param3);
-          this.a(var10, -1);
+          this.addChild(var10, -1);
           var9 = new sd(((mk) ((Object) param1)).a((byte) 124), param4, 126, param0 + var10.field_p, param2 + 25, param5);
           var9.field_h = (qc) (this);
-          this.a(var9, -1);
+          this.addChild(var9, -1);
           stackIn_1_0 = var10.field_p + var9.field_p;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -304,8 +304,8 @@ final class efa extends b implements mia, tsa {
         if (!param0) {
           return true;
         }
-        ae var3 = (ae) null;
-        this.a('ﾛ', (ae) null, 39, false);
+        UiWidget var3 = (UiWidget) null;
+        this.handleKeyInput('ﾛ', (UiWidget) null, 39, false);
         return true;
     }
 

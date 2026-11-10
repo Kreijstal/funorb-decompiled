@@ -46,7 +46,7 @@ abstract class ob extends IntrusiveNode {
         int var11 = TombRacer.field_G ? 1 : 0;
         int var2_intLifetime1;
         int var2_intLifetime2;
-        WhiteLightShooterComponent.field_K = su.a(rva.field_v, param0, (byte) 127);
+        WhiteLightShooterComponent.field_K = su.a(ArrayWidgetGroup.field_v, param0, (byte) 127);
         Room.field_p = new ToolkitSprite[6][];
         if (param1 != 17186) {
           return;

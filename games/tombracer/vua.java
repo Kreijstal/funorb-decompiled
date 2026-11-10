@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vua extends qr {
+final class vua extends SingleChildWidget {
     static jpa field_y;
     static String field_z;
     static String field_C;
@@ -9,7 +9,7 @@ final class vua extends qr {
     static String[] dartDeathMessages;
     static ToolkitSprite field_A;
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, ae param5, int param6) {
+    final boolean handlePointerPress(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -20,7 +20,7 @@ final class vua extends qr {
           if (param0 <= 70) {
             return true;
           }
-          stackIn_7_0 = (this.a(param6, param1, -123, param3, param2)) && (super.a(119, param1, param2, param3, param4, param5, param6));
+          stackIn_7_0 = (this.containsPointer(param6, param1, -123, param3, param2)) && (super.handlePointerPress(119, param1, param2, param3, param4, param5, param6));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -36,7 +36,7 @@ final class vua extends qr {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void renderLayer(int param0, int param1, int param2, int param3) {
         if (param3 != 0) {
           if (param2 != 0) {
             return;
@@ -46,7 +46,7 @@ final class vua extends qr {
           }
           if (this.field_p != 0) {
             afa.field_c.a((byte) 125, this.field_p + this.field_n + param1, param0 + this.field_i, this.field_n + param1, this.field_i + (param0 + this.field_m));
-            this.field_x.a(param0 + this.field_i, this.field_n + param1, param2 ^ 0, param3);
+            this.child.renderLayer(param0 + this.field_i, this.field_n + param1, param2 ^ 0, param3);
             afa.field_c.a((byte) 38);
             return;
           }
@@ -63,11 +63,11 @@ final class vua extends qr {
             return;
           }
           afa.field_c.a((byte) 125, this.field_p + this.field_n + param1, param0 + this.field_i, this.field_n + param1, this.field_i + (param0 + this.field_m));
-          this.field_x.a(param0 + this.field_i, this.field_n + param1, param2 ^ 0, param3);
+          this.child.renderLayer(param0 + this.field_i, this.field_n + param1, param2 ^ 0, param3);
           afa.field_c.a((byte) 38);
           return;
         }
-        this.field_r.a((ae) (this), param0, 16777215, param1, true);
+        this.field_r.a((UiWidget) (this), param0, 16777215, param1, true);
         if (param2 != 0) {
           return;
         }
@@ -78,7 +78,7 @@ final class vua extends qr {
           return;
         }
         afa.field_c.a((byte) 125, this.field_p + this.field_n + param1, param0 + this.field_i, this.field_n + param1, this.field_i + (param0 + this.field_m));
-        this.field_x.a(param0 + this.field_i, this.field_n + param1, param2 ^ 0, param3);
+        this.child.renderLayer(param0 + this.field_i, this.field_n + param1, param2 ^ 0, param3);
         afa.field_c.a((byte) 38);
     }
 
@@ -95,10 +95,10 @@ final class vua extends qr {
         field_C = null;
     }
 
-    final void c(int param0) {
-        this.field_x.c((byte) -47);
+    final void refreshChildLayout(int param0) {
+        this.child.refreshLayout((byte) -47);
         if (param0 <= 91) {
-          this.c(75);
+          this.refreshChildLayout(75);
         }
     }
 
@@ -131,10 +131,10 @@ final class vua extends qr {
         return stackIn_10_0 & (cra.a(param1, param2 ^ -13642, param0) | wq.b(param1, param0, 8000));
     }
 
-    vua(int param0, int param1, int param2, int param3, isa param4, ae param5) {
+    vua(int param0, int param1, int param2, int param3, isa param4, UiWidget param5) {
         super(param0, param1, param2, param3, param4, (qc) null);
         try {
-          this.field_x = param5;
+          this.child = param5;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vua.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

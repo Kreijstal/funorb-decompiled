@@ -33,7 +33,7 @@ class lga extends rj {
         return null;
     }
 
-    String d(byte param0) {
+    String getHoverText(byte param0) {
         if (null == this.field_A) {
           return null;
         }
@@ -84,7 +84,7 @@ class lga extends rj {
           }
           this.field_C[param1] = param0;
           if (param2 != 0) {
-            this.a((byte) -100, 15, 61, -76, -74);
+            this.setBounds((byte) -100, 15, 61, -76, -74);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -101,7 +101,7 @@ class lga extends rj {
         }
     }
 
-    void a(int param0, int param1, ae param2, int param3) {
+    void updatePointerState(int param0, int param1, UiWidget param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -110,7 +110,7 @@ class lga extends rj {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          super.a(param0, param1 + 0, param2, param3);
+          super.updatePointerState(param0, param1 + 0, param2, param3);
           this.field_A = null;
           if (this.field_f) {
             var5_int = -param0 + (jba.field_j - this.field_i);
@@ -182,7 +182,7 @@ class lga extends rj {
           this.field_D = new IntrusiveDeque();
           var2 = 0;
           var30 = (oaa) ((Object) this.field_r);
-          var27 = var30.a((ae) (this), 14157);
+          var27 = var30.a((UiWidget) (this), 14157);
           while (true) {
             var5 = this.field_o.indexOf("<hotspot=", var2);
             if (-1 == var5) {
@@ -222,12 +222,12 @@ class lga extends rj {
             }
           }
         }
-        this.a((byte) -56, -23, 29, 43, 2);
+        this.setBounds((byte) -56, -23, 29, 43, 2);
         this.field_D = new IntrusiveDeque();
         var2Lifetime1 = 0;
         var17_ref = (oaa) ((Object) this.field_r);
         var3 = var17_ref;
-        var22 = var17_ref.a((ae) (this), 14157);
+        var22 = var17_ref.a((UiWidget) (this), 14157);
         var4 = var22;
         while (true) {
           var5Lifetime1 = this.field_o.indexOf("<hotspot=", var2Lifetime1);
@@ -276,8 +276,8 @@ class lga extends rj {
         int var5 = param2 - this.field_i;
         int var6 = -this.field_n + param0;
         if (param3 > -40) {
-          ae var8 = (ae) null;
-          this.a((ae) null, false);
+          UiWidget var8 = (UiWidget) null;
+          this.requestKeyboardFocus((UiWidget) null, false);
           var7 = this.a(var6, var5, (byte) -20);
           if (var7 == null) {
             return;
@@ -298,18 +298,18 @@ class lga extends rj {
         ((tma) ((Object) this.field_h)).a(this, var7Lifetime1.field_h, 30846, param1);
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void renderLayer(int param0, int param1, int param2, int param3) {
         int var7 = 0;
         int var8 = 0;
-        super.a(param0, param1, param2, param3);
+        super.renderLayer(param0, param1, param2, param3);
         if (param3 != 0) {
           return;
         }
         oaa var5 = (oaa) ((Object) this.field_r);
         bm var6 = this.field_A;
         if (var6 != null) {
-          var7 = var5.a((ae) (this), param0, (byte) 119);
-          var8 = var5.a(param1, (ae) (this), (byte) -49);
+          var7 = var5.a((UiWidget) (this), param0, (byte) 119);
+          var8 = var5.a(param1, (UiWidget) (this), (byte) -49);
           do {
             nn.a(-2 + (var7 + var6.field_g), -2 + (var8 + var6.field_l), var6.field_i + 2, 2 + var6.field_j, false);
             var6 = var6.field_k;
@@ -347,8 +347,8 @@ class lga extends rj {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(byte param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.b(18758);
     }
 
@@ -406,7 +406,7 @@ class lga extends rj {
         }
     }
 
-    boolean a(ae param0, boolean param1) {
+    boolean requestKeyboardFocus(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -432,7 +432,7 @@ class lga extends rj {
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
-        this.a((byte) -31, param2, ((oaa) ((Object) this.field_r)).b((byte) 105, (ae) (this)), param3, param0);
+        this.setBounds((byte) -31, param2, ((oaa) ((Object) this.field_r)).b((byte) 105, (UiWidget) (this)), param3, param0);
         if (param1 != -120) {
           field_B = (cn) null;
           return;

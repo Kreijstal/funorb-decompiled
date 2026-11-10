@@ -96,7 +96,7 @@ final class at extends ofa implements tsa {
         int var6_int = 0;
         String var6 = null;
         rj var6_ref = null;
-        ae var7 = null;
+        UiWidget var7 = null;
         dh var8 = null;
         String var10 = null;
         Object stackIn_51_0Lifetime1;
@@ -188,7 +188,7 @@ final class at extends ofa implements tsa {
           this.field_T = new sta(stackIn_51_3, stackIn_52_4, 410, 105, (isa) null, var3Lifetime1, 1);
           this.field_T.field_E = 83;
           this.field_T.a(5, 5, (byte) 97);
-          this.a(this.field_T, -1);
+          this.addChild(this.field_T, -1);
           this.field_W = this.a(-82, ie.field_f, ke.field_a, (qc) (this));
           if (var2_intLifetime1 != 0) {
             this.field_N = this.a(-87, rra.field_a, kka.field_o, (qc) (this));
@@ -219,8 +219,8 @@ final class at extends ofa implements tsa {
               var5_ref_String__[var7_int] = var8.field_a + "<times>" + var8.field_c;
             }
             this.field_ab = new rla(var5_ref_String__, var6_int, 150);
-            this.field_ab.a((byte) -31, 126, 18, this.field_V.field_i + this.field_T.field_i, -19 + (this.field_V.field_p + (this.field_V.field_n + this.field_T.field_n)));
-            this.field_u.addFirst((byte) 126, (IntrusiveNode) (this.field_ab));
+            this.field_ab.setBounds((byte) -31, 126, 18, this.field_V.field_i + this.field_T.field_i, -19 + (this.field_V.field_p + (this.field_V.field_n + this.field_T.field_n)));
+            this.children.addFirst((byte) 126, (IntrusiveNode) (this.field_ab));
           }
           this.field_Z = this.a((qc) (this), po.field_i, 30815);
           var5Lifetime1 = this.field_Z.field_m / 2 + this.field_Z.field_i;
@@ -239,13 +239,13 @@ final class at extends ofa implements tsa {
             }
             var10 = stackIn_74_0;
             var6 = var10;
-            var7 = new ae(var10, (qc) null);
+            var7 = new UiWidget(var10, (qc) null);
             var7.field_m = this.field_m;
             var7.field_p = 80;
             var7.field_n = 163;
             var7.field_i = 0;
             var7.field_r = (isa) ((Object) new vpa(KeySwitchComponent.field_J, 20, 20, 0, 10, 16777215, -1, 0, 0, 16, 0, 0, true));
-            this.a(var7, -1);
+            this.addChild(var7, -1);
           }
           this.field_O = false;
           var6_ref = this.g(-46);
@@ -267,7 +267,7 @@ final class at extends ofa implements tsa {
         }
     }
 
-    final boolean a(char param0, ae param1, int param2, boolean param3) {
+    final boolean handleKeyInput(char param0, UiWidget param1, int param2, boolean param3) {
         rj stackIn_36_0 = null;
         boolean stackIn_37_2 = false;
         rj stackIn_42_0 = null;
@@ -291,16 +291,16 @@ final class at extends ofa implements tsa {
         var7 = TombRacer.field_G ? 1 : 0;
         try {
           var5 = null;
-          if (!this.field_W.b((byte) -34)) {
+          if (!this.field_W.hasKeyboardFocus((byte) -34)) {
             if (this.field_N != null &&
-              this.field_N.b((byte) -34)) {
+              this.field_N.hasKeyboardFocus((byte) -34)) {
               var5 = this.field_N;
             } else {
-              if (!this.field_V.b((byte) -34)) {
-                if (this.field_Z.b((byte) -34)) {
+              if (!this.field_V.hasKeyboardFocus((byte) -34)) {
+                if (this.field_Z.hasKeyboardFocus((byte) -34)) {
                   var5 = this.field_Z;
                 } else {
-                  if (this.field_L.b((byte) -34)) {
+                  if (this.field_L.hasKeyboardFocus((byte) -34)) {
                     var5 = this.field_L;
                   } else {
                     if (!this.field_W.field_w) {
@@ -328,11 +328,11 @@ final class at extends ofa implements tsa {
           switch (var6) {
             case 98:
               if (var5 == this.field_Z) {
-                this.field_W.a((ae) (this), false);
+                this.field_W.requestKeyboardFocus((UiWidget) (this), false);
                 return true;
               }
               if (this.field_L == var5) {
-                this.field_V.a((ae) (this), false);
+                this.field_V.requestKeyboardFocus((UiWidget) (this), false);
                 return true;
               }
               break;
@@ -345,58 +345,58 @@ final class at extends ofa implements tsa {
                 if (!this.field_L.field_y) {
                   stackIn_86_0 = this.field_Z;
                   stackIn_87_2 = !(param3);
-                  ((rj) (Object) stackIn_86_0).a((ae) (this), stackIn_87_2);
+                  ((rj) (Object) stackIn_86_0).requestKeyboardFocus((UiWidget) (this), stackIn_87_2);
                 } else {
-                  this.field_L.a((ae) (this), false);
+                  this.field_L.requestKeyboardFocus((UiWidget) (this), false);
                 }
                 return true;
               }
               stackIn_77_0 = this.field_Z;
               stackIn_78_2 = !(param3);
-              ((rj) (Object) stackIn_77_0).a((ae) (this), stackIn_78_2);
+              ((rj) (Object) stackIn_77_0).requestKeyboardFocus((UiWidget) (this), stackIn_78_2);
               return true;
             case 97:
               if (var5 == this.field_W) {
                 if (null == this.field_N) {
                   stackIn_51_0 = this.field_V;
                   stackIn_52_2 = !(param3);
-                  ((rj) (Object) stackIn_51_0).a((ae) (this), stackIn_52_2);
+                  ((rj) (Object) stackIn_51_0).requestKeyboardFocus((UiWidget) (this), stackIn_52_2);
                 } else {
-                  this.field_N.a((ae) (this), false);
+                  this.field_N.requestKeyboardFocus((UiWidget) (this), false);
                 }
                 return true;
               }
               if (var5 == this.field_N) {
-                this.field_V.a((ae) (this), false);
+                this.field_V.requestKeyboardFocus((UiWidget) (this), false);
                 return true;
               }
               if (this.field_Z == var5 &&
                 this.field_L.field_y) {
                 stackIn_62_0 = this.field_L;
                 stackIn_63_2 = !(param3);
-                ((rj) (Object) stackIn_62_0).a((ae) (this), stackIn_63_2);
+                ((rj) (Object) stackIn_62_0).requestKeyboardFocus((UiWidget) (this), stackIn_63_2);
                 return true;
               }
               break;
             case 96:
               if (var5 == this.field_V) {
                 if (null == this.field_N) {
-                  this.field_W.a((ae) (this), false);
+                  this.field_W.requestKeyboardFocus((UiWidget) (this), false);
                   return true;
                 }
-                this.field_N.a((ae) (this), false);
+                this.field_N.requestKeyboardFocus((UiWidget) (this), false);
                 return true;
               }
               if (this.field_N == var5) {
                 stackIn_36_0 = this.field_W;
                 stackIn_37_2 = !(param3);
-                ((rj) (Object) stackIn_36_0).a((ae) (this), stackIn_37_2);
+                ((rj) (Object) stackIn_36_0).requestKeyboardFocus((UiWidget) (this), stackIn_37_2);
                 return true;
               }
               if (this.field_L == var5) {
                 stackIn_42_0 = this.field_Z;
                 stackIn_43_2 = !(param3);
-                ((rj) (Object) stackIn_42_0).a((ae) (this), stackIn_43_2);
+                ((rj) (Object) stackIn_42_0).requestKeyboardFocus((UiWidget) (this), stackIn_43_2);
                 return true;
               }
               break;
@@ -406,7 +406,7 @@ final class at extends ofa implements tsa {
           if (!param3) {
             this.field_O = false;
           }
-          stackIn_93_0 = super.a(param0, param1, param2, true);
+          stackIn_93_0 = super.handleKeyInput(param0, param1, param2, true);
           return stackIn_93_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -512,7 +512,7 @@ final class at extends ofa implements tsa {
         RuntimeException var3_ref = null;
         try {
           this.field_S = param1;
-          param1.a((ae) (this), false);
+          param1.requestKeyboardFocus((UiWidget) (this), false);
           var3 = this.g(-46);
           stackIn_2_0 = this.field_L;
           stackIn_3_1 = (param1 != var3);
@@ -582,8 +582,8 @@ final class at extends ofa implements tsa {
             stackIn_2_0 = (rj) null;
             return stackIn_2_0;
           }
-          var4.a((byte) -31, this.field_m - 30, 30, 15, var5);
-          this.a(var4, param2 - 30816);
+          var4.setBounds((byte) -31, this.field_m - 30, 30, 15, var5);
+          this.addChild(var4, param2 - 30816);
           stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -690,7 +690,7 @@ final class at extends ofa implements tsa {
         int var1 = -92 / ((26 - param0) / 46);
     }
 
-    final void a(int param0, int param1, ae param2, int param3) {
+    final void updatePointerState(int param0, int param1, UiWidget param2, int param3) {
         int var6 = 0;
         rj[] var5 = null;
         rj var7 = null;
@@ -704,15 +704,15 @@ final class at extends ofa implements tsa {
         RuntimeException var5_ref = null;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
           if (qma.field_c) {
-            param2.f((byte) -103);
+            param2.clearKeyboardFocus((byte) -103);
             var9 = this.field_U;
             var5 = var9;
             for (var6 = 0; var9.length > var6; var6++) {
               var7 = var9[var6];
               if (var7.field_f) {
-                var7.a((ae) (this), false);
+                var7.requestKeyboardFocus((UiWidget) (this), false);
               }
             }
           }
@@ -767,7 +767,7 @@ final class at extends ofa implements tsa {
           var6 = this.field_T;
           var7 = var5;
           var6.b(0, var7, var6.field_E);
-          this.field_T.c((byte) 124);
+          this.field_T.refreshLayout((byte) 124);
           stackIn_3_0 = var5;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

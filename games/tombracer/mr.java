@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mr extends b implements tma, tsa, mia {
+final class mr extends WidgetContainer implements tma, tsa, mia {
     private so field_E;
     private jla field_D;
     private so field_I;
@@ -58,7 +58,7 @@ final class mr extends b implements tma, tsa, mia {
         }
     }
 
-    private final int a(ae param0, int param1, int param2, byte param3, String param4) {
+    private final int a(UiWidget param0, int param1, int param2, byte param3, String param4) {
         jsa var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_2_0 = 0;
@@ -71,7 +71,7 @@ final class mr extends b implements tma, tsa, mia {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = new jsa(20, param1, param2 + 120, 25, param0, false, 120, 3, KeySwitchComponent.field_J, 16777215, param4);
-          this.a(var6, -1);
+          this.addChild(var6, -1);
           if (param3 >= 33) {
             stackIn_4_0 = var6.field_p;
             return stackIn_4_0;
@@ -204,7 +204,7 @@ final class mr extends b implements tma, tsa, mia {
         var3 = var3 + (this.a(CrusherBehaviour.field_r, za.field_f, this.field_G, -3, 170, var3) + 5);
         var3 = var3 + this.a(this.field_I, var3, (byte) 99, iqa.field_g, 170);
         jsa var4 = new jsa(46, var3, this.field_m - 90, 25, this.field_D, true, this.field_m - 120, 5, eka.field_o, 11579568, jja.field_l);
-        this.a(var4, -1);
+        this.addChild(var4, -1);
         var3 = var3 + var4.field_p;
         vpa var5 = new vpa(KeySwitchComponent.field_J, 0, 0, 0, 0, 16777215, -1, 0, 0, KeySwitchComponent.field_J.field_w, -1, 2147483647, true);
         this.field_A = new lga(var2, var5);
@@ -214,19 +214,19 @@ final class mr extends b implements tma, tsa, mia {
         this.field_A.field_h = (qc) (this);
         this.field_A.a(var3, (byte) -120, -90 + this.field_m, 46);
         var3 = var3 + (this.field_A.field_p + 15);
-        this.a(this.field_A, -1);
+        this.addChild(this.field_A, -1);
         int var6 = 4;
         int var7 = 200;
-        this.field_F.a((byte) -31, var7, 40, -var7 + 496 >> 1, var3);
-        this.field_B.a((byte) -31, 60, 40, var6 + 3, 15 + var3);
+        this.field_F.setBounds((byte) -31, var7, 40, -var7 + 496 >> 1, var3);
+        this.field_B.setBounds((byte) -31, 60, 40, var6 + 3, 15 + var3);
         this.field_B.field_h = (qc) (this);
         this.field_F.field_h = (qc) (this);
-        this.a(this.field_F, -1);
-        this.a(this.field_B, -1);
+        this.addChild(this.field_F, -1);
+        this.addChild(this.field_B, -1);
         this.field_y = new laa((mia) (this));
-        this.field_y.a((byte) -31, -60 - this.field_G.field_m - this.field_G.field_i + this.field_m, 150, 60 + (this.field_G.field_m + this.field_G.field_i), this.field_G.field_n + 20);
-        this.a(this.field_y, -1);
-        this.a((byte) -31, 496, var6 + 55 + var3, 0, 0);
+        this.field_y.setBounds((byte) -31, -60 - this.field_G.field_m - this.field_G.field_i + this.field_m, 150, 60 + (this.field_G.field_m + this.field_G.field_i), this.field_G.field_n + 20);
+        this.addChild(this.field_y, -1);
+        this.setBounds((byte) -31, 496, var6 + 55 + var3, 0, 0);
     }
 
     public final void a(int param0) {
@@ -236,7 +236,7 @@ final class mr extends b implements tma, tsa, mia {
         }
     }
 
-    private final int a(int param0, int param1, ae param2, int param3, int param4, String param5, String param6) {
+    private final int a(int param0, int param1, UiWidget param2, int param3, int param4, String param5, String param6) {
         RuntimeException var8 = null;
         sd var9 = null;
         jsa var10 = null;
@@ -252,10 +252,10 @@ final class mr extends b implements tma, tsa, mia {
         RuntimeException decompiledCaughtException = null;
         try {
           var10 = new jsa(20, param0, param3 + 120, 25, param2, false, 120, 3, KeySwitchComponent.field_J, 16777215, param6);
-          this.a(var10, -1);
+          this.addChild(var10, -1);
           var9 = new sd(((mk) ((Object) param2)).a((byte) 120), param5, 126, var10.field_p + param0, param3 + 50, param4);
           var9.field_h = (qc) (this);
-          this.a(var9, -1);
+          this.addChild(var9, -1);
           if (param1 >= 66) {
             stackIn_4_0 = var9.field_p + var10.field_p;
             return stackIn_4_0;
@@ -288,7 +288,7 @@ final class mr extends b implements tma, tsa, mia {
         }
     }
 
-    final boolean a(char param0, ae param1, int param2, boolean param3) {
+    final boolean handleKeyInput(char param0, UiWidget param1, int param2, boolean param3) {
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
         boolean stackIn_9_0 = false;
@@ -297,17 +297,17 @@ final class mr extends b implements tma, tsa, mia {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKeyInput(param0, param1, param2, param3)) {
             return true;
           }
           if (param2 == 98) {
-            stackIn_5_0 = this.b(param1, (byte) -79);
+            stackIn_5_0 = this.focusPreviousChild(param1, (byte) -79);
             return stackIn_5_0;
           }
           if (param2 != 99) {
             return false;
           }
-          stackIn_9_0 = this.a(param1, (byte) -9);
+          stackIn_9_0 = this.focusNextChild(param1, (byte) -9);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -325,8 +325,8 @@ final class mr extends b implements tma, tsa, mia {
 
     private final String d(int param0) {
         if (param0 != 170) {
-          ae var3 = (ae) null;
-          this.a(27, -27, (ae) null, -94);
+          UiWidget var3 = (UiWidget) null;
+          this.updatePointerState(27, -27, (UiWidget) null, -94);
           return "<u=2164A2><col=2164A2>";
         }
         return "<u=2164A2><col=2164A2>";
@@ -399,9 +399,9 @@ final class mr extends b implements tma, tsa, mia {
         }
     }
 
-    final void a(int param0, int param1, ae param2, int param3) {
+    final void updatePointerState(int param0, int param1, UiWidget param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
           this.field_F.field_y = this.g(param1 - 2095275);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "mr.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -441,7 +441,7 @@ final class mr extends b implements tma, tsa, mia {
         return "</col></u>";
     }
 
-    private final int a(String param0, String param1, ae param2, int param3, int param4, int param5) {
+    private final int a(String param0, String param1, UiWidget param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         lga var8 = null;
         int stackIn_3_0 = 0;
@@ -553,7 +553,7 @@ final class mr extends b implements tma, tsa, mia {
         }
     }
 
-    private final int a(ae param0, int param1, byte param2, String param3, int param4) {
+    private final int a(UiWidget param0, int param1, byte param2, String param3, int param4) {
         RuntimeException var6 = null;
         mha var7 = null;
         jsa var8 = null;
@@ -566,13 +566,13 @@ final class mr extends b implements tma, tsa, mia {
         RuntimeException decompiledCaughtException = null;
         try {
           var8 = new jsa(20, param1, 120 + param4, 25, param0, false, 120, 3, KeySwitchComponent.field_J, 16777215, param3);
-          this.a(var8, -1);
+          this.addChild(var8, -1);
           if (param2 < 51) {
             field_w = (w) null;
           }
           var7 = new mha(((mk) ((Object) param0)).a((byte) 106));
-          this.a(var7, -1);
-          var7.a((byte) -31, 15, 15, 3 + (var8.field_m + var8.field_i), var8.field_n + (var8.field_p - 15 >> 1));
+          this.addChild(var7, -1);
+          var7.setBounds((byte) -31, 15, 15, 3 + (var8.field_m + var8.field_i), var8.field_n + (var8.field_p - 15 >> 1));
           stackIn_3_0 = var8.field_p;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

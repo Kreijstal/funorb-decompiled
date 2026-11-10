@@ -267,7 +267,7 @@ final class lja {
               param1 != 2) {
               return;
             }
-            if (ae.field_g != 2) {
+            if (UiWidget.field_g != 2) {
               return;
             }
             var7 = this.b(-13);

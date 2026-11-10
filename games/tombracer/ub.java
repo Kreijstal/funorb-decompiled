@@ -58,7 +58,7 @@ final class ub {
             var1Lifetime1.unlinkSecondary(-7975);
             var1Lifetime1 = CoinItemComponent.field_G.a((byte) -112);
           }
-          ae.field_g = 0;
+          UiWidget.field_g = 0;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ub.G(" + param0 + ')');
         }

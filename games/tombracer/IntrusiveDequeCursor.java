@@ -1,27 +1,27 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uja {
+final class IntrusiveDequeCursor {
     static int[] field_e;
     static int[] field_c;
     static fma field_a;
-    private IntrusiveDeque field_b;
-    private IntrusiveNode field_d;
+    private IntrusiveDeque deque;
+    private IntrusiveNode nextNode;
 
-    final IntrusiveNode a(boolean param0) {
-        IntrusiveNode var2 = this.field_b.sentinel.next;
-        if (this.field_b.sentinel == var2) {
-          this.field_d = null;
+    final IntrusiveNode first(boolean param0) {
+        IntrusiveNode var2 = this.deque.sentinel.next;
+        if (this.deque.sentinel == var2) {
+          this.nextNode = null;
           return null;
         }
-        this.field_d = var2.next;
+        this.nextNode = var2.next;
         if (param0) {
           return var2;
         }
         return (IntrusiveNode) null;
     }
 
-    final IntrusiveNode a(IntrusiveNode param0, byte param1) {
+    final IntrusiveNode startBackwardAt(IntrusiveNode param0, byte param1) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_8_0 = null;
@@ -34,17 +34,17 @@ final class uja {
           if (param0 != null) {
             var3 = param0;
           } else {
-            var3 = this.field_b.sentinel.previous;
+            var3 = this.deque.sentinel.previous;
           }
           if (param1 != -11) {
-            this.field_b = (IntrusiveDeque) null;
+            this.deque = (IntrusiveDeque) null;
           }
-          if (var3 == this.field_b.sentinel) {
-            this.field_d = null;
+          if (var3 == this.deque.sentinel) {
+            this.nextNode = null;
             stackIn_8_0 = null;
             return (IntrusiveNode) (stackIn_8_0);
           }
-          this.field_d = var3.previous;
+          this.nextNode = var3.previous;
           stackIn_10_0 = var3;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -61,13 +61,13 @@ final class uja {
         }
     }
 
-    final IntrusiveNode a(int param0) {
-        IntrusiveNode var2 = this.field_d;
-        if (var2 == this.field_b.sentinel) {
-          this.field_d = null;
+    final IntrusiveNode next(int param0) {
+        IntrusiveNode var2 = this.nextNode;
+        if (var2 == this.deque.sentinel) {
+          this.nextNode = null;
           return null;
         }
-        this.field_d = var2.next;
+        this.nextNode = var2.next;
         if (param0 == -1) {
           return var2;
         }
@@ -83,35 +83,35 @@ final class uja {
         }
     }
 
-    final IntrusiveNode a(byte param0) {
-        IntrusiveNode var2 = this.field_b.sentinel.previous;
+    final IntrusiveNode last(byte param0) {
+        IntrusiveNode var2 = this.deque.sentinel.previous;
         if (param0 < 37) {
-          this.a((byte) -78);
-          if (this.field_b.sentinel == var2) {
-            this.field_d = null;
+          this.last((byte) -78);
+          if (this.deque.sentinel == var2) {
+            this.nextNode = null;
             return null;
           }
-          this.field_d = var2.previous;
+          this.nextNode = var2.previous;
           return var2;
         }
-        if (this.field_b.sentinel == var2) {
-          this.field_d = null;
+        if (this.deque.sentinel == var2) {
+          this.nextNode = null;
           return null;
         }
-        this.field_d = var2.previous;
+        this.nextNode = var2.previous;
         return var2;
     }
 
-    final IntrusiveNode c(int param0) {
-        IntrusiveNode var2 = this.field_d;
+    final IntrusiveNode previous(int param0) {
+        IntrusiveNode var2 = this.nextNode;
         if (param0 < 28) {
           return (IntrusiveNode) null;
         }
-        if (var2 == this.field_b.sentinel) {
-          this.field_d = null;
+        if (var2 == this.deque.sentinel) {
+          this.nextNode = null;
           return null;
         }
-        this.field_d = var2.previous;
+        this.nextNode = var2.previous;
         return var2;
     }
 
@@ -144,7 +144,7 @@ final class uja {
           }
           if (param0 != 65) {
             var4 = (GraphicsToolkit) null;
-            uja.a((byte) -102, (GraphicsToolkit) null);
+            IntrusiveDequeCursor.a((byte) -102, (GraphicsToolkit) null);
           }
           DelegatingCanvas.field_c = param1;
           sda.field_g = var3;
@@ -378,10 +378,10 @@ final class uja {
           if (param1 != null) {
             var3 = param1;
           } else {
-            var3 = this.field_b.sentinel.next;
+            var3 = this.deque.sentinel.next;
           }
-          if (this.field_b.sentinel == var3) {
-            this.field_d = null;
+          if (this.deque.sentinel == var3) {
+            this.nextNode = null;
             stackIn_6_0 = null;
             return (IntrusiveNode) (stackIn_6_0);
           }
@@ -389,7 +389,7 @@ final class uja {
             stackIn_9_0 = (IntrusiveNode) null;
             return stackIn_9_0;
           }
-          this.field_d = var3.next;
+          this.nextNode = var3.next;
           stackIn_11_0 = var3;
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -406,9 +406,9 @@ final class uja {
         }
     }
 
-    uja(IntrusiveDeque param0) {
+    IntrusiveDequeCursor(IntrusiveDeque param0) {
         try {
-          this.field_b = param0;
+          this.deque = param0;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "uja.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

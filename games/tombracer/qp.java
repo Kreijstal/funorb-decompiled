@@ -241,7 +241,7 @@ final class qp extends we {
         if (param2 > -9) {
           this.a(false, -74, (byte) 102);
         }
-        qr.field_v.a(param1 + 63, false, b.field_v.toUpperCase() + " - " + wg.field_m[this.field_x].toUpperCase(), 65, -14279929, -1);
+        SingleChildWidget.field_v.a(param1 + 63, false, WidgetContainer.field_v.toUpperCase() + " - " + wg.field_m[this.field_x].toUpperCase(), 65, -14279929, -1);
         var4 = 120 + param1;
         eda.field_f.a(-1, -1, es.field_h[0], -14671840, var4, hl.field_a);
         eda.field_f.a(var4, false, ObjectPool.field_g.toUpperCase(), es.field_h[1], -14671840, -1);

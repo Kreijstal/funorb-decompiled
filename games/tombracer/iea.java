@@ -75,8 +75,8 @@ final class iea {
           if (param1 != -56) {
             return;
           }
-          if (ae.field_g != 2 &&
-            ae.field_g != 1) {
+          if (UiWidget.field_g != 2 &&
+            UiWidget.field_g != 1) {
             jja.field_j.field_X = false;
             jja.field_j.field_vb.field_vb.field_r = nl.field_c;
             BridgeModel.a(-93, jja.field_j.field_tb);

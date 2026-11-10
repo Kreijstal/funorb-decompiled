@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jw extends b implements cd, tsa {
+final class jw extends WidgetContainer implements cd, tsa {
     private rj field_y;
     private tra field_A;
     private boolean field_w;
@@ -114,12 +114,12 @@ final class jw extends b implements cd, tsa {
           }
           dupTemp$0 = new jsa(10, this.field_n, -20 + this.field_m, 25, this.field_A, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
-          this.a(dupTemp$0, -1);
-          this.field_n = this.field_n + (((ae) ((Object) var12)).field_p + 5);
+          this.addChild(dupTemp$0, -1);
+          this.field_n = this.field_n + (((UiWidget) ((Object) var12)).field_p + 5);
           dupTemp$1 = new jsa(10, this.field_n, -20 + this.field_m, 25, this.field_C, false, 80, 3, var7, 16777215, rta.field_j);
           var13 = dupTemp$1;
-          this.a(dupTemp$1, -1);
-          this.field_n = this.field_n + (((ae) ((Object) var13)).field_p + 5);
+          this.addChild(dupTemp$1, -1);
+          this.field_n = this.field_n + (((UiWidget) ((Object) var13)).field_p + 5);
           this.field_B.field_h = (qc) (this);
           if (this.field_E != null) {
             this.field_E.field_h = (qc) (this);
@@ -128,33 +128,33 @@ final class jw extends b implements cd, tsa {
             this.field_y.field_h = (qc) (this);
           }
           if (this.field_E != null) {
-            this.field_B.a((byte) -31, this.field_m - 95, 30, 85, this.field_n);
+            this.field_B.setBounds((byte) -31, this.field_m - 95, 30, 85, this.field_n);
             this.field_n = this.field_n + 60;
           } else {
-            this.field_B.a((byte) -31, -10 + (this.field_m - 6), 30, 8, this.field_n);
+            this.field_B.setBounds((byte) -31, -10 + (this.field_m - 6), 30, 8, this.field_n);
             this.field_n = this.field_n + 35;
           }
           if (this.field_E != null) {
-            this.field_E.a((byte) -31, -10 + (this.field_m - 6), 30, 8, this.field_n);
+            this.field_E.setBounds((byte) -31, -10 + (this.field_m - 6), 30, 8, this.field_n);
             this.field_n = this.field_n + 35;
           }
           if (this.field_y != null) {
             if (!this.field_x &&
               !this.field_w) {
-              this.field_y.a((byte) -31, 40, 20, 8, this.field_n);
+              this.field_y.setBounds((byte) -31, 40, 20, 8, this.field_n);
               this.field_n = this.field_n + 25;
             } else {
-              this.field_y.a((byte) -31, -6 + this.field_m - 10, 30, 8, this.field_n);
+              this.field_y.setBounds((byte) -31, -6 + this.field_m - 10, 30, 8, this.field_n);
               this.field_n = this.field_n + 35;
             }
           }
-          this.a((byte) -31, this.field_m, 3 + this.field_n, 0, 0);
-          this.a(this.field_B, -1);
+          this.setBounds((byte) -31, this.field_m, 3 + this.field_n, 0, 0);
+          this.addChild(this.field_B, -1);
           if (this.field_E != null) {
-            this.a(this.field_E, -1);
+            this.addChild(this.field_E, -1);
           }
           if (null != this.field_y) {
-            this.a(this.field_y, -1);
+            this.addChild(this.field_y, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -275,7 +275,7 @@ final class jw extends b implements cd, tsa {
         this.field_C.f(param0 ^ 34);
     }
 
-    final boolean a(char param0, ae param1, int param2, boolean param3) {
+    final boolean handleKeyInput(char param0, UiWidget param1, int param2, boolean param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_9_0 = false;
@@ -284,17 +284,17 @@ final class jw extends b implements cd, tsa {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKeyInput(param0, param1, param2, param3)) {
             return true;
           }
           if (param2 == 98) {
-            stackIn_6_0 = this.b(param1, (byte) -81);
+            stackIn_6_0 = this.focusPreviousChild(param1, (byte) -81);
             return stackIn_6_0;
           }
           if (param2 != 99) {
             return false;
           }
-          stackIn_9_0 = this.a(param1, (byte) -9);
+          stackIn_9_0 = this.focusNextChild(param1, (byte) -9);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -310,14 +310,14 @@ final class jw extends b implements cd, tsa {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void renderLayer(int param0, int param1, int param2, int param3) {
         if (null != this.field_F) {
           KeySwitchComponent.field_J.a(this.field_F, param0 + (this.field_i + 20), param1 + this.field_n + 15, this.field_m - 40, this.field_p, 16777215, -1, 1, 0, KeySwitchComponent.field_J.field_w);
         }
         if (this.field_E != null) {
           SoftwareRasterizer.drawHorizontalLine(param0 + 10, param1 + 134, this.field_m - 20, 4210752);
         }
-        super.a(param0, param1, param2 + param2, param3);
+        super.renderLayer(param0, param1, param2 + param2, param3);
     }
 
     public final void a(int param0, tra param1) {
@@ -331,7 +331,7 @@ final class jw extends b implements cd, tsa {
             this.field_A = (tra) null;
           }
           if (this.field_A == param1) {
-            this.field_C.a((ae) (this), false);
+            this.field_C.requestKeyboardFocus((UiWidget) (this), false);
           }
           if (param1 == this.field_C) {
             this.i((byte) 60);
@@ -354,7 +354,7 @@ final class jw extends b implements cd, tsa {
     final String a(int param0) {
         if (this.field_A.field_o != null) {
           if (param0 < 29) {
-            this.a(-72, 15, 19, 125);
+            this.renderLayer(-72, 15, 19, 125);
           }
           return this.field_A.field_o;
         }

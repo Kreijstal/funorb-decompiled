@@ -3,47 +3,47 @@
  */
 import java.util.*;
 
-class b extends ae implements tpa {
+class WidgetContainer extends UiWidget implements tpa {
     static String field_v;
-    IntrusiveDeque field_u;
+    IntrusiveDeque children;
 
-    final boolean a(ae param0, byte param1) {
+    final boolean focusNextChild(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
-        ae var4 = null;
-        uja var5 = null;
-        ae var6 = null;
+        UiWidget var4 = null;
+        IntrusiveDequeCursor var5 = null;
+        UiWidget var6 = null;
         int var7 = 0;
-        ae var8 = null;
-        uja var9 = null;
+        UiWidget var8 = null;
+        IntrusiveDequeCursor var9 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          if (this.field_u.isEmpty((byte) 14)) {
+          if (this.children.isEmpty((byte) 14)) {
             return false;
           }
-          var9 = new uja(this.field_u);
+          var9 = new IntrusiveDequeCursor(this.children);
           if (param1 != -9) {
-            var8 = (ae) null;
-            this.b((ae) null, (byte) 90);
+            var8 = (UiWidget) null;
+            this.focusPreviousChild((UiWidget) null, (byte) 90);
           }
-          var4 = (ae) (var9.a(true));
+          var4 = (UiWidget) (var9.first(true));
           while (var4 != null) {
-            if (var4.b((byte) -34)) {
-              var5 = new uja(this.field_u);
+            if (var4.hasKeyboardFocus((byte) -34)) {
+              var5 = new IntrusiveDequeCursor(this.children);
               var5.a(0, var4);
-              var6 = (ae) (var5.a(-1));
+              var6 = (UiWidget) (var5.next(-1));
               while (var6 != null) {
-                if (!var6.a(param0, false)) {
-                  var6 = (ae) (var5.a(param1 ^ 8));
+                if (!var6.requestKeyboardFocus(param0, false)) {
+                  var6 = (UiWidget) (var5.next(param1 ^ 8));
                   continue;
                 }
                 return true;
               }
             }
-            var4 = (ae) (var9.a(-1));
+            var4 = (UiWidget) (var9.next(-1));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -60,53 +60,53 @@ class b extends ae implements tpa {
         }
     }
 
-    void f(byte param0) {
+    void clearKeyboardFocus(byte param0) {
         int var5 = TombRacer.field_G ? 1 : 0;
-        uja var2 = new uja(this.field_u);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
         int var4 = -96 % ((param0 + 38) / 60);
-        ae var3 = (ae) (var2.a(true));
+        UiWidget var3 = (UiWidget) (var2.first(true));
         while (var3 != null) {
-          var3.f((byte) -115);
-          var3 = (ae) (var2.a(-1));
+          var3.clearKeyboardFocus((byte) -115);
+          var3 = (UiWidget) (var2.next(-1));
         }
     }
 
-    final boolean b(ae param0, byte param1) {
+    final boolean focusPreviousChild(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
-        ae var4 = null;
-        uja var5 = null;
-        ae var6 = null;
+        UiWidget var4 = null;
+        IntrusiveDequeCursor var5 = null;
+        UiWidget var6 = null;
         int var7 = 0;
-        ae var8 = null;
-        uja var9 = null;
+        UiWidget var8 = null;
+        IntrusiveDequeCursor var9 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          if (this.field_u.isEmpty((byte) 14)) {
+          if (this.children.isEmpty((byte) 14)) {
             return false;
           }
           if (param1 > -45) {
-            var8 = (ae) null;
-            this.a((byte) 112, (ae) null, 60, 11, -7, -44);
+            var8 = (UiWidget) null;
+            this.handlePointerRelease((byte) 112, (UiWidget) null, 60, 11, -7, -44);
           }
-          var9 = new uja(this.field_u);
-          var4 = (ae) (var9.a((byte) 99));
+          var9 = new IntrusiveDequeCursor(this.children);
+          var4 = (UiWidget) (var9.last((byte) 99));
           while (var4 != null) {
-            if (var4.b((byte) -34)) {
-              var5 = new uja(this.field_u);
-              var5.a(var4, (byte) -11);
-              var6 = (ae) (var5.c(60));
+            if (var4.hasKeyboardFocus((byte) -34)) {
+              var5 = new IntrusiveDequeCursor(this.children);
+              var5.startBackwardAt(var4, (byte) -11);
+              var6 = (UiWidget) (var5.previous(60));
               while (var6 != null) {
-                if (var6.a(param0, false)) {
+                if (var6.requestKeyboardFocus(param0, false)) {
                   return true;
                 }
-                var6 = (ae) (var5.c(33));
+                var6 = (UiWidget) (var5.previous(33));
               }
             }
-            var4 = (ae) (var9.c(62));
+            var4 = (UiWidget) (var9.previous(62));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -128,7 +128,7 @@ class b extends ae implements tpa {
         int var1 = -18 / ((param0 - 38) / 48);
     }
 
-    final static byte[] a(int param0, int param1, int param2, byte[] param3) {
+    final static byte[] copyByteRange(int param0, int param1, int param2, byte[] param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -157,7 +157,7 @@ class b extends ae implements tpa {
         }
     }
 
-    final StringBuilder a(int param0, Hashtable param1, StringBuilder param2, int param3) {
+    final StringBuilder appendDiagnostics(int param0, Hashtable param1, StringBuilder param2, int param3) {
         RuntimeException var5 = null;
         StringBuilder stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -167,8 +167,8 @@ class b extends ae implements tpa {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a((byte) -115, param0, param1, param2)) {
-            this.a(1, param2, param1, param0);
+          if (this.beginDiagnosticVisit((byte) -115, param0, param1, param2)) {
+            this.appendDiagnosticProperties(1, param2, param1, param0);
             this.b(param0, param1, param2, 23241);
           }
           if (param3 != 0) {
@@ -196,20 +196,20 @@ class b extends ae implements tpa {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void renderLayer(int param0, int param1, int param2, int param3) {
         int var7 = TombRacer.field_G ? 1 : 0;
         if (param3 == 0 &&
           null != this.field_r) {
-          this.field_r.a((ae) (this), param0, param2 + 16777215, param1, true);
+          this.field_r.a((UiWidget) (this), param0, param2 + 16777215, param1, true);
         }
-        uja var5 = new uja(this.field_u);
+        IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.children);
         if (param2 != 0) {
           return;
         }
-        ae var6 = (ae) (var5.a((byte) 120));
+        UiWidget var6 = (UiWidget) (var5.last((byte) 120));
         while (var6 != null) {
-          var6.a(param0 + this.field_i, this.field_n + param1, 0, param3);
-          var6 = (ae) (var5.c(param2 ^ 46));
+          var6.renderLayer(param0 + this.field_i, this.field_n + param1, 0, param3);
+          var6 = (UiWidget) (var5.previous(param2 ^ 46));
         }
     }
 
@@ -256,46 +256,46 @@ class b extends ae implements tpa {
         }
     }
 
-    String d(byte param0) {
+    String getHoverText(byte param0) {
         String var4 = null;
         int var5 = TombRacer.field_G ? 1 : 0;
-        uja var2 = new uja(this.field_u);
-        ae var6 = (ae) (var2.a(true));
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
+        UiWidget var6 = (UiWidget) (var2.first(true));
         while (var6 != null) {
-          var4 = var6.d((byte) 127);
+          var4 = var6.getHoverText((byte) 127);
           if (var4 != null) {
             return var4;
           }
-          var6 = (ae) (var2.a(-1));
+          var6 = (UiWidget) (var2.next(-1));
         }
         int var3 = 127 % ((param0 + 58) / 60);
         return null;
     }
 
-    final int a(boolean param0) {
+    final int getTopLayer(boolean param0) {
         int var5 = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
         int var2 = 0;
         if (param0) {
-          ae var7 = (ae) null;
-          this.a((ae) null, -99);
+          UiWidget var7 = (UiWidget) null;
+          this.addChild((UiWidget) null, -99);
         }
-        uja var3 = new uja(this.field_u);
-        ae var4 = (ae) (var3.a(true));
+        IntrusiveDequeCursor var3 = new IntrusiveDequeCursor(this.children);
+        UiWidget var4 = (UiWidget) (var3.first(true));
         while (var4 != null) {
-          var5 = var4.a(false);
+          var5 = var4.getTopLayer(false);
           if (var5 > var2) {
             var2 = var5;
           }
-          var4 = (ae) (var3.a(-1));
+          var4 = (UiWidget) (var3.next(-1));
         }
         return var2;
     }
 
-    boolean a(int param0, int param1, int param2, int param3, int param4, ae param5, int param6) {
-        uja var8 = null;
+    boolean handlePointerPress(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
+        IntrusiveDequeCursor var8 = null;
         RuntimeException var8_ref = null;
-        ae var9 = null;
+        UiWidget var9 = null;
         int var10 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -303,15 +303,15 @@ class b extends ae implements tpa {
         RuntimeException decompiledCaughtException = null;
         var10 = TombRacer.field_G ? 1 : 0;
         try {
-          var8 = new uja(this.field_u);
+          var8 = new IntrusiveDequeCursor(this.children);
           if (param0 <= 70) {
             return false;
           }
-          var9 = (ae) (var8.a(true));
+          var9 = (UiWidget) (var8.first(true));
           while (var9 != null) {
             if (var9.isLinked((byte) -114)) {
-              if (!var9.a(121, param1 + this.field_i, this.field_n + param2, param3, param4, param5, param6)) {
-                var9 = (ae) (var8.a(-1));
+              if (!var9.handlePointerPress(121, param1 + this.field_i, this.field_n + param2, param3, param4, param5, param6)) {
+                var9 = (UiWidget) (var8.next(-1));
                 continue;
               }
               return true;
@@ -333,35 +333,35 @@ class b extends ae implements tpa {
         }
     }
 
-    boolean b(byte param0) {
+    boolean hasKeyboardFocus(byte param0) {
         if (param0 != -34) {
           return true;
         }
-        return this.g((byte) 52) != null ? true : false;
+        return this.getFocusedChild((byte) 52) != null ? true : false;
     }
 
-    ae g(byte param0) {
-        uja var2;
-        ae var3;
+    UiWidget getFocusedChild(byte param0) {
+        IntrusiveDequeCursor var2;
+        UiWidget var3;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
-        var2 = new uja(this.field_u);
+        var2 = new IntrusiveDequeCursor(this.children);
         if (param0 != 52) {
           field_v = (String) null;
         }
-        var3 = (ae) (var2.a(true));
+        var3 = (UiWidget) (var2.first(true));
         while (var3 != null) {
-          if (var3.b((byte) -34)) {
+          if (var3.hasKeyboardFocus((byte) -34)) {
             return var3;
           }
-          var3 = (ae) (var2.a(-1));
+          var3 = (UiWidget) (var2.next(-1));
         }
         return null;
     }
 
-    final void a(byte param0, ae param1, int param2, int param3, int param4, int param5) {
-        uja var7 = null;
-        ae var8 = null;
+    final void handlePointerRelease(byte param0, UiWidget param1, int param2, int param3, int param4, int param5) {
+        IntrusiveDequeCursor var7 = null;
+        UiWidget var8 = null;
         int var9 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -370,18 +370,18 @@ class b extends ae implements tpa {
         RuntimeException var7_ref = null;
         var9 = TombRacer.field_G ? 1 : 0;
         try {
-          var7 = new uja(this.field_u);
-          var8 = (ae) (var7.a(true));
+          var7 = new IntrusiveDequeCursor(this.children);
+          var8 = (UiWidget) (var7.first(true));
           while (var8 != null) {
             if (var8.isLinked((byte) -107)) {
-              var8.a((byte) 59, param1, param2, this.field_i + param3, param4 + this.field_n, param5);
-              var8 = (ae) (var7.a(-1));
+              var8.handlePointerRelease((byte) 59, param1, param2, this.field_i + param3, param4 + this.field_n, param5);
+              var8 = (UiWidget) (var7.next(-1));
               continue;
             }
             break;
           }
           if (param0 != 59) {
-            this.g((byte) 119);
+            this.getFocusedChild((byte) 119);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -398,10 +398,10 @@ class b extends ae implements tpa {
         }
     }
 
-    boolean a(ae param0, boolean param1) {
-        uja var3 = null;
+    boolean requestKeyboardFocus(UiWidget param0, boolean param1) {
+        IntrusiveDequeCursor var3 = null;
         RuntimeException var3_ref = null;
-        ae var4 = null;
+        UiWidget var4 = null;
         int var5 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -409,17 +409,17 @@ class b extends ae implements tpa {
         RuntimeException decompiledCaughtException = null;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          var3 = new uja(this.field_u);
+          var3 = new IntrusiveDequeCursor(this.children);
           if (param1) {
             return false;
           }
-          var4 = (ae) (var3.a(true));
+          var4 = (UiWidget) (var3.first(true));
           while (true) {
             if (var4 == null) {
               return false;
             }
-            if (!var4.a(param0, false)) {
-              var4 = (ae) (var3.a(-1));
+            if (!var4.requestKeyboardFocus(param0, false)) {
+              var4 = (UiWidget) (var3.next(-1));
               continue;
             }
             break;
@@ -439,7 +439,7 @@ class b extends ae implements tpa {
         }
     }
 
-    final static int a(int param0, byte param1) {
+    final static int highestOneBit(int param0, byte param1) {
         int var2 = param0 >>> 1;
         var2 = var2 | var2 >>> 1;
         var2 = var2 | var2 >>> 2;
@@ -450,15 +450,15 @@ class b extends ae implements tpa {
         return ~var2 & param0;
     }
 
-    b(int param0, int param1, int param2, int param3, isa param4) {
+    WidgetContainer(int param0, int param1, int param2, int param3, isa param4) {
         super(param0, param1, param2, param3, param4, (qc) null);
-        this.field_u = new IntrusiveDeque();
+        this.children = new IntrusiveDeque();
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, ae param4, int param5, int param6) {
-        uja var8 = null;
+    final boolean a(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {
+        IntrusiveDequeCursor var8 = null;
         RuntimeException var8_ref = null;
-        ae var9 = null;
+        UiWidget var9 = null;
         int var10 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -466,18 +466,18 @@ class b extends ae implements tpa {
         RuntimeException decompiledCaughtException = null;
         var10 = TombRacer.field_G ? 1 : 0;
         try {
-          var8 = new uja(this.field_u);
+          var8 = new IntrusiveDequeCursor(this.children);
           if (param6 != -1) {
             field_v = (String) null;
           }
-          var9 = (ae) (var8.a(true));
+          var9 = (UiWidget) (var8.first(true));
           while (var9 != null) {
             if (var9.isLinked((byte) 30)) {
-              if (var9.b((byte) -34) &&
+              if (var9.hasKeyboardFocus((byte) -34) &&
                 var9.a(param0, param1, param2, param3, param4, param5, -1)) {
                 return true;
               }
-              var9 = (ae) (var8.a(-1));
+              var9 = (UiWidget) (var8.next(-1));
               continue;
             }
             break;
@@ -497,12 +497,12 @@ class b extends ae implements tpa {
         }
     }
 
-    boolean a(char param0, ae param1, int param2, boolean param3) {
-        uja var5 = null;
+    boolean handleKeyInput(char param0, UiWidget param1, int param2, boolean param3) {
+        IntrusiveDequeCursor var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
         int var7 = 0;
-        ae var8 = null;
+        UiWidget var8 = null;
         boolean stackIn_16_0 = false;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -510,18 +510,18 @@ class b extends ae implements tpa {
         RuntimeException decompiledCaughtException = null;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          var5 = new uja(this.field_u);
+          var5 = new IntrusiveDequeCursor(this.children);
           if (!param3) {
             return true;
           }
-          var8 = (ae) (var5.a(param3));
+          var8 = (UiWidget) (var5.first(param3));
           while (var8 != null) {
             if (var8.isLinked((byte) 35)) {
-              if (var8.b((byte) -34) &&
-                var8.a(param0, param1, param2, true)) {
+              if (var8.hasKeyboardFocus((byte) -34) &&
+                var8.handleKeyInput(param0, param1, param2, true)) {
                 return true;
               }
-              var8 = (ae) (var5.a(-1));
+              var8 = (UiWidget) (var5.next(-1));
               continue;
             }
             break;
@@ -531,9 +531,9 @@ class b extends ae implements tpa {
             return false;
           }
           if (oj.field_tb[81]) {
-            stackIn_16_0 = this.b(param1, (byte) -124);
+            stackIn_16_0 = this.focusPreviousChild(param1, (byte) -124);
           } else {
-            stackIn_16_0 = this.a(param1, (byte) -9);
+            stackIn_16_0 = this.focusNextChild(param1, (byte) -9);
           }
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -550,41 +550,41 @@ class b extends ae implements tpa {
         }
     }
 
-    private final void b(int param0) {
+    private final void refreshChildLayouts(int param0) {
         int var4 = TombRacer.field_G ? 1 : 0;
-        uja var2 = new uja(this.field_u);
-        ae var3 = (ae) (var2.a(true));
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
+        UiWidget var3 = (UiWidget) (var2.first(true));
         while (var3 != null) {
-          var3.c((byte) -121);
-          var3 = (ae) (var2.a(-1));
+          var3.refreshLayout((byte) -121);
+          var3 = (UiWidget) (var2.next(-1));
         }
         if (param0 <= 110) {
           field_v = (String) null;
         }
     }
 
-    final void a(ae param0, int param1) {
+    final void addChild(UiWidget param0, int param1) {
         try {
-          this.field_u.addLast((byte) -67, param0);
+          this.children.addLast((byte) -67, param0);
           if (param1 != -1) {
-            this.b(64);
+            this.refreshChildLayouts(64);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "b.UA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    void a(byte param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
-        this.b(param0 ^ -112);
+    void setBounds(byte param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
+        this.refreshChildLayouts(param0 ^ -112);
     }
 
     private final void b(int param0, Hashtable param1, StringBuilder param2, int param3) {
         StringBuilder discarded$3 = null;
         int var7 = 0;
         StringBuilder discarded$4 = null;
-        uja var5 = null;
-        ae var6 = null;
+        IntrusiveDequeCursor var5 = null;
+        UiWidget var6 = null;
         int var8 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -595,18 +595,18 @@ class b extends ae implements tpa {
         RuntimeException var5_ref = null;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
-          var5 = new uja(this.field_u);
+          var5 = new IntrusiveDequeCursor(this.children);
           if (param3 != 23241) {
-            this.field_u = (IntrusiveDeque) null;
+            this.children = (IntrusiveDeque) null;
           }
-          var6 = (ae) (var5.a(true));
+          var6 = (UiWidget) (var5.first(true));
           while (var6 != null) {
             discarded$3 = param2.append('\n');
             for (var7 = 0; param0 >= var7; var7++) {
               discarded$4 = param2.append(' ');
             }
-            var6.a(param0 + 1, param1, param2, 0);
-            var6 = (ae) (var5.a(-1));
+            var6.appendDiagnostics(param0 + 1, param1, param2, 0);
+            var6 = (UiWidget) (var5.next(-1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -629,10 +629,10 @@ class b extends ae implements tpa {
         }
     }
 
-    void a(int param0, int param1, ae param2, int param3) {
+    void updatePointerState(int param0, int param1, UiWidget param2, int param3) {
         RuntimeException runtimeException = null;
-        uja var5 = null;
-        ae var6 = null;
+        IntrusiveDequeCursor var5 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -640,13 +640,13 @@ class b extends ae implements tpa {
         RuntimeException decompiledCaughtException = null;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          super.a(param0, param1, param2, param3);
-          var5 = new uja(this.field_u);
-          var6 = (ae) (var5.a(true));
+          super.updatePointerState(param0, param1, param2, param3);
+          var5 = new IntrusiveDequeCursor(this.children);
+          var6 = (UiWidget) (var5.first(true));
           while (var6 != null) {
             if (var6.isLinked((byte) 70)) {
-              var6.a(this.field_i + param0, 2097152, param2, param3 + this.field_n);
-              var6 = (ae) (var5.a(-1));
+              var6.updatePointerState(this.field_i + param0, 2097152, param2, param3 + this.field_n);
+              var6 = (UiWidget) (var5.next(-1));
               continue;
             }
             break;

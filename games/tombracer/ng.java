@@ -79,7 +79,7 @@ final class ng {
         return this;
     }
 
-    final void a(int param0, int param1, vga param2, int param3, ae param4) {
+    final void a(int param0, int param1, vga param2, int param3, UiWidget param4) {
         BitmapFont stackIn_20_0;
         String stackIn_20_1;
         int stackIn_20_2;
@@ -181,7 +181,7 @@ final class ng {
         }
     }
 
-    final void a(vga param0, ae param1, int param2, int param3, int param4, ng param5) {
+    final void a(vga param0, UiWidget param1, int param2, int param3, int param4, ng param5) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -254,7 +254,7 @@ final class ng {
           return this;
         }
         ng var4 = (ng) null;
-        this.a((vga) null, (ae) null, 76, 31, 78, (ng) null);
+        this.a((vga) null, (UiWidget) null, 76, 31, 78, (ng) null);
         this.field_g = param1 ? true : false;
         return this;
     }

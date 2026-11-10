@@ -18,7 +18,7 @@ final class rr extends rj {
         field_G = (String) null;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, ae param5, int param6) {
+    final boolean handlePointerPress(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -30,7 +30,7 @@ final class rr extends rj {
         int var12 = 0;
         var12 = TombRacer.field_G ? 1 : 0;
         try {
-          if (!super.a(112, param1, param2, param3, param4, param5, param6)) {
+          if (!super.handlePointerPress(112, param1, param2, param3, param4, param5, param6)) {
             if (param0 <= 70) {
               rr.releaseStatics(-11);
             }

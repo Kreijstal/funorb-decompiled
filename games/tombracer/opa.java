@@ -364,16 +364,16 @@ final class opa extends qra {
           var23Lifetime1 = 80 + var9Lifetime1;
           var24Lifetime1 = 32 + var10;
           var32 = String.valueOf(this.field_r[var8Lifetime2].field_m);
-          ts.a(-1, -59, var24Lifetime1, "$", var23Lifetime1, qr.field_v, 2431750);
-          ts.a(0, -28, -1 + var24Lifetime1, var32.toUpperCase(), 18 + var23Lifetime1, qr.field_v, wga.field_a[var8Lifetime2]);
+          ts.a(-1, -59, var24Lifetime1, "$", var23Lifetime1, SingleChildWidget.field_v, 2431750);
+          ts.a(0, -28, -1 + var24Lifetime1, var32.toUpperCase(), 18 + var23Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime2]);
           var26 = this.field_c.field_v[var8Lifetime2];
           if (var8Lifetime2 == this.field_c.e(2) &&
             var7Lifetime2 < -100 + fd.field_e) {
             var26--;
           }
-          oka.a(Integer.toString(var26), wga.field_a[var8Lifetime2], qr.field_v, -1, -47 + (var24Lifetime1 - 1), 55, 0);
-          oka.a(Integer.toString(this.field_c.field_L), wga.field_a[var8Lifetime2], qr.field_v, -1, -12 + (var24Lifetime1 - 1), 55, 0);
-          oka.a("_", wga.field_a[var8Lifetime2], qr.field_v, -1, -40 + var24Lifetime1, 55, 0);
+          oka.a(Integer.toString(var26), wga.field_a[var8Lifetime2], SingleChildWidget.field_v, -1, -47 + (var24Lifetime1 - 1), 55, 0);
+          oka.a(Integer.toString(this.field_c.field_L), wga.field_a[var8Lifetime2], SingleChildWidget.field_v, -1, -12 + (var24Lifetime1 - 1), 55, 0);
+          oka.a("_", wga.field_a[var8Lifetime2], SingleChildWidget.field_v, -1, -40 + var24Lifetime1, 55, 0);
         }
         for (var8Lifetime3 = 0; var8Lifetime3 < this.field_c.field_k; var8Lifetime3++) {
           stackIn_61_0 = 95 * var8Lifetime3 + 105;
@@ -386,9 +386,9 @@ final class opa extends qra {
           if (-100 + fd.field_e <= var7Lifetime2 &&
             var8Lifetime3 == this.field_c.e(2)) {
             if (this.field_c.field_L == this.field_c.field_v[var8Lifetime3]) {
-              oka.a(vu.field_d.toUpperCase(), 2431750, qr.field_v, -1, var9Lifetime2 - 22, (var3 + 50 >> 1) + 20, -1);
+              oka.a(vu.field_d.toUpperCase(), 2431750, SingleChildWidget.field_v, -1, var9Lifetime2 - 22, (var3 + 50 >> 1) + 20, -1);
             } else {
-              oka.a(cha.field_h.toUpperCase(), 2431750, qr.field_v, -1, var9Lifetime2 - 22, (var3 + 50 >> 1) + 20, -1);
+              oka.a(cha.field_h.toUpperCase(), 2431750, SingleChildWidget.field_v, -1, var9Lifetime2 - 22, (var3 + 50 >> 1) + 20, -1);
             }
             var10Lifetime1 = 0;
             for (var11Lifetime1 = 0; this.field_r.length > var11Lifetime1; var11Lifetime1++) {
@@ -443,10 +443,10 @@ final class opa extends qra {
             var17Lifetime1 = stackIn_167_0 + (stackIn_167_1 - stackIn_168_2);
             var18 = var9Lifetime2 - 70;
             eca.field_c[0].a(var17Lifetime1, -5 + var18, eca.field_c[0].a() >> 1, eca.field_c[0].c() >> 1);
-            ts.a(0, -123, 15 + var18, "x", 25 + var17Lifetime1, qr.field_v, wga.field_a[var8Lifetime3]);
-            ts.a(0, -51, 17 + var18, var39, 45 + var17Lifetime1, qr.field_v, wga.field_a[var8Lifetime3]);
-            ts.a(0, -103, var18 + 55, "+", var17Lifetime1 + 2, qr.field_v, wga.field_a[var8Lifetime3]);
-            ts.a(0, -65, var18 + 55, var40, 25 + var17Lifetime1, qr.field_v, wga.field_a[var8Lifetime3]);
+            ts.a(0, -123, 15 + var18, "x", 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+            ts.a(0, -51, 17 + var18, var39, 45 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+            ts.a(0, -103, var18 + 55, "+", var17Lifetime1 + 2, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+            ts.a(0, -65, var18 + 55, var40, 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
             if (var15Lifetime1 != 0) {
               var19Lifetime1 = 25 + wb.field_a.a("x" + var39, (byte) 31) + var17Lifetime1;
               var20 = -11 + var18;
@@ -494,10 +494,10 @@ final class opa extends qra {
             var17Lifetime1 = stackIn_142_0 - stackIn_143_1;
             var18 = var9Lifetime2 - 70;
             eca.field_c[1].a(var17Lifetime1, -5 + var18, eca.field_c[1].a() >> 2, eca.field_c[1].c() >> 2);
-            ts.a(0, -42, 15 + var18, "x", 25 + var17Lifetime1, qr.field_v, wga.field_a[var8Lifetime3]);
-            ts.a(0, -124, var18 + 17, var36, 45 + var17Lifetime1, qr.field_v, wga.field_a[var8Lifetime3]);
-            ts.a(0, -92, 55 + var18, "+", var17Lifetime1 + 2, qr.field_v, wga.field_a[var8Lifetime3]);
-            ts.a(0, -119, 55 + var18, var37, var17Lifetime1 + 25, qr.field_v, wga.field_a[var8Lifetime3]);
+            ts.a(0, -42, 15 + var18, "x", 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+            ts.a(0, -124, var18 + 17, var36, 45 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+            ts.a(0, -92, 55 + var18, "+", var17Lifetime1 + 2, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+            ts.a(0, -119, 55 + var18, var37, var17Lifetime1 + 25, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
             if (var15Lifetime1 != 0) {
               var19Lifetime1 = var17Lifetime1 + (wb.field_a.a("x" + var36, (byte) -122) + 25);
               var20 = var18 - 11;
@@ -542,10 +542,10 @@ final class opa extends qra {
               var17Lifetime1 = stackIn_117_0 + (stackIn_117_1 - stackIn_118_2);
               var18 = -70 + var9Lifetime2;
               eca.field_c[2].a(var17Lifetime1, var18 - 5, eca.field_c[2].a() >> 2, eca.field_c[2].c() >> 2);
-              ts.a(0, -30, 15 + var18, "x", 25 + var17Lifetime1, qr.field_v, wga.field_a[var8Lifetime3]);
-              ts.a(0, -100, var18 + 17, var33, 45 + var17Lifetime1, qr.field_v, wga.field_a[var8Lifetime3]);
-              ts.a(0, -126, 55 + var18, "+", var17Lifetime1 + 2, qr.field_v, wga.field_a[var8Lifetime3]);
-              ts.a(0, -24, 55 + var18, var34, 25 + var17Lifetime1, qr.field_v, wga.field_a[var8Lifetime3]);
+              ts.a(0, -30, 15 + var18, "x", 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+              ts.a(0, -100, var18 + 17, var33, 45 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+              ts.a(0, -126, 55 + var18, "+", var17Lifetime1 + 2, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+              ts.a(0, -24, 55 + var18, var34, 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
               if (var15Lifetime1 != 0) {
                 var19Lifetime1 = var17Lifetime1 + wb.field_a.a("x" + var33, (byte) 36) + 25;
                 var20 = -11 + var18;

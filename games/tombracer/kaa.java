@@ -51,7 +51,7 @@ final class kaa implements isa {
         return false;
     }
 
-    public final void a(ae param0, int param1, int param2, int param3, boolean param4) {
+    public final void a(UiWidget param0, int param1, int param2, int param3, boolean param4) {
         int stackIn_6_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -68,7 +68,7 @@ final class kaa implements isa {
         var11 = TombRacer.field_G ? 1 : 0;
         try {
           if (!param0.field_f &&
-            !param0.b((byte) -34)) {
+            !param0.hasKeyboardFocus((byte) -34)) {
             stackIn_6_0 = 2188450;
           } else {
             stackIn_6_0 = 3249872;
@@ -79,7 +79,7 @@ final class kaa implements isa {
             kaa.a(91, (byte[]) null, 83);
           }
           this.field_c.a("<u=" + Integer.toString(var6_int, 16) + ">" + param0.field_o + "</u>", param0.field_i + param1, param0.field_n + param3, param0.field_m, param0.field_p, var6_int, -1, this.field_a, this.field_b, this.field_c.field_k + this.field_c.field_w);
-          if (!param0.b((byte) -34)) {
+          if (!param0.hasKeyboardFocus((byte) -34)) {
             return;
           }
           var7 = this.field_c.b(param0.field_o);

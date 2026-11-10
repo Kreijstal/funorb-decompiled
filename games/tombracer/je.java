@@ -10,7 +10,7 @@ final class je extends haa {
     private rla field_J;
     private BitmapFont field_F;
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void renderLayer(int param0, int param1, int param2, int param3) {
         int var8 = 0;
         Object var9 = null;
         String var10 = null;
@@ -52,7 +52,7 @@ final class je extends haa {
         return stackIn_7_0;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4) {
+    final boolean containsPointer(int param0, int param1, int param2, int param3, int param4) {
         int var6;
         var6 = 100 / ((-38 - param2) / 50);
         this.field_H = -1;
@@ -63,7 +63,7 @@ final class je extends haa {
           return false;
         }
         if (this.field_I == null) {
-          return super.a(param0, param1, -107, param3, param4);
+          return super.containsPointer(param0, param1, -107, param3, param4);
         }
         param0 = param0 - (param1 + this.field_i);
         param3 = param3 - (this.field_n + param4);

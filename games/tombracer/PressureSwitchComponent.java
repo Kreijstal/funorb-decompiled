@@ -33,7 +33,7 @@ final class PressureSwitchComponent extends SwitchComponent {
             if (!fua.field_g) {
               apa.field_c = null;
             } else {
-              apa.field_c.a(era.field_e.field_A, param0, era.field_e.field_q, -90);
+              apa.field_c.processPointerFrame(era.field_e.field_A, param0, era.field_e.field_q, -90);
             }
           }
           for (var4_int = 0; var4_int < 5; var4_int++) {

@@ -35,7 +35,7 @@ final class fua implements isa {
         behaviourTypeNames = null;
     }
 
-    public final void a(ae param0, int param1, int param2, int param3, boolean param4) {
+    public final void a(UiWidget param0, int param1, int param2, int param3, boolean param4) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -53,7 +53,7 @@ final class fua implements isa {
           var6_int = param1 + param0.field_i;
           var7 = param0.field_n + param3;
           bl.a(param0.field_m, var7, param0.field_p, var6_int, 1);
-          if (param0.b((byte) -34)) {
+          if (param0.hasKeyboardFocus((byte) -34)) {
             nn.a(var6_int + 2, 2 + var7, -4 + param0.field_p, param0.field_m - 4, false);
           }
           SoftwareRasterizer.b(var6_int, var7, var6_int + (param0.field_m - 2), var7 + param0.field_p);
@@ -61,7 +61,7 @@ final class fua implements isa {
           if (var8 != null) {
             var9 = var8.toString();
             this.field_d.field_H.c(var9, var6_int + 2, -1 + (param0.field_p + this.field_d.field_H.field_w >> 1) + var7, 10000536, -1);
-            if (this.field_d.b((byte) -34) &&
+            if (this.field_d.hasKeyboardFocus((byte) -34) &&
               var9.startsWith(this.field_d.field_w)) {
               var10 = this.field_d.field_H.b(this.field_d.field_w);
               SoftwareRasterizer.c(2 + var6_int, var7 + 2, var10, -4 + param0.field_p, 2188450, 100);

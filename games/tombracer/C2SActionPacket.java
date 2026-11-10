@@ -78,7 +78,7 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
           param1.writeBits((byte) -128, this.hash, 8);
           param1.writeBits((byte) 30, this.field_h, 8);
           for (var3_int = 0; this.orders.length > var3_int; var3_int++) {
-            param1.writeBits((byte) 3, uja.a(-113, this.orders[var3_int]), 7);
+            param1.writeBits((byte) 3, IntrusiveDequeCursor.a(-113, this.orders[var3_int]), 7);
           }
           if (param0 != 200) {
             C2SActionPacket.b(-52);
@@ -131,7 +131,7 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
         era.field_e.b(param1 ^ -16792, param0);
         ada var2 = apa.field_c;
         if (var2 != null) {
-          var2.b(-31, era.field_e.field_A, era.field_e.field_q);
+          var2.renderWithTooltip(-31, era.field_e.field_A, era.field_e.field_q);
         }
     }
 

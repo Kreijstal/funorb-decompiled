@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pg extends b implements tma, tsa {
+final class pg extends WidgetContainer implements tma, tsa {
     private lga field_z;
     static String field_A;
     static int field_y;
@@ -91,7 +91,7 @@ final class pg extends b implements tma, tsa {
           if (this.field_B != param2) {
             return;
           }
-          qr.d(-7694);
+          SingleChildWidget.d(-7694);
           this.field_w.i((byte) 111);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -130,13 +130,13 @@ final class pg extends b implements tma, tsa {
           this.field_z.field_h = (qc) (this);
           this.field_z.a(var3, (byte) -120, this.field_m - 40, 26);
           var3 = var3 + (this.field_z.field_p + 15);
-          this.a(this.field_z, -1);
+          this.addChild(this.field_z, -1);
           var5 = 4;
           var6 = 200;
-          this.field_B.a((byte) -31, var6, 40, 300 - var6 >> 1, var3);
+          this.field_B.setBounds((byte) -31, var6, 40, 300 - var6 >> 1, var3);
           this.field_B.field_h = (qc) (this);
-          this.a(this.field_B, -1);
-          this.a((byte) -31, 300, var5 + (55 + var3), 0, 0);
+          this.addChild(this.field_B, -1);
+          this.setBounds((byte) -31, 300, var5 + (55 + var3), 0, 0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -151,7 +151,7 @@ final class pg extends b implements tma, tsa {
         return "</col></u>";
     }
 
-    final boolean a(char param0, ae param1, int param2, boolean param3) {
+    final boolean handleKeyInput(char param0, UiWidget param1, int param2, boolean param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_9_0 = false;
@@ -160,17 +160,17 @@ final class pg extends b implements tma, tsa {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKeyInput(param0, param1, param2, param3)) {
             return true;
           }
           if (98 == param2) {
-            stackIn_6_0 = this.b(param1, (byte) -125);
+            stackIn_6_0 = this.focusPreviousChild(param1, (byte) -125);
             return stackIn_6_0;
           }
           if (99 != param2) {
             return false;
           }
-          stackIn_9_0 = this.a(param1, (byte) -9);
+          stackIn_9_0 = this.focusNextChild(param1, (byte) -9);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

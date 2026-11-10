@@ -23,7 +23,7 @@ final class bi {
         ssa var2 = null;
         jea var3 = null;
         try {
-          var2 = uja.a((byte) 65, param0);
+          var2 = IntrusiveDequeCursor.a((byte) 65, param0);
           var3 = SimpleMoveLocomotor.field_s;
           var2.a(var3.field_q + var3.field_G, var3.field_A, (byte) -12, var3.field_t + var3.field_A, var3.field_q);
           param0.SA(param1, var3.field_A, SoftwareRasterizer.field_g, var3.field_t, SoftwareRasterizer.field_l, SoftwareRasterizer.field_g * var3.field_A, SoftwareRasterizer.field_g);
