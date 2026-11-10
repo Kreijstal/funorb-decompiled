@@ -7,7 +7,7 @@ final class sma {
     static String field_d;
     static joa field_e;
     int[] field_b;
-    static en field_c;
+    static PcmStreamMixer field_c;
     private int[] field_f;
     private MatchState field_a;
 
@@ -81,15 +81,15 @@ final class sma {
             return stackIn_12_0;
           }
           var3 = aqa.field_c + var10;
-          if (!af.field_b.a(var3, "", param1 - 28893)) {
+          if (!SecondaryNodeHashTable.field_b.a(var3, "", param1 - 28893)) {
             stackIn_15_0 = -1;
             return stackIn_15_0;
           }
-          if (!af.field_b.c(var3, -122)) {
-            stackIn_18_0 = af.field_b.a(var3, true);
+          if (!SecondaryNodeHashTable.field_b.c(var3, -122)) {
+            stackIn_18_0 = SecondaryNodeHashTable.field_b.a(var3, true);
             return stackIn_18_0;
           }
-          var15 = af.field_b.a(var3, (byte) 117, "");
+          var15 = SecondaryNodeHashTable.field_b.a(var3, (byte) 117, "");
           var13 = var15;
           var4 = var13;
           var5 = null;
@@ -182,7 +182,7 @@ final class sma {
             var7 = var5[var6];
             if (!this.field_a.f((byte) -83, var7.A(0)) &&
               -1 == this.field_f[var7.A(0)]) {
-              var8 = var7.e(false) + var7.j(false);
+              var8 = var7.getTotal(false) + var7.j(false);
               if (var3 == -1 ||
                 var4 < var8 ||
                 var4 == var8 &&

@@ -60,19 +60,19 @@ final class j extends ToolkitSprite implements e {
         }
     }
 
-    j(oa param0, int[] param1, int param2, int param3, int param4, int param5, boolean param6) {
+    j(NativeSoftwareGraphicsToolkit param0, int[] param1, int param2, int param3, int param4, int param5, boolean param6) {
         this.ua(param0, param1, param2, param3, param4, param5, param6);
     }
 
     private final native int wa(long param0);
 
-    private final native void ma(oa param0, int[] param1, byte[] param2, byte[] param3, int param4, int param5, int param6, int param7);
+    private final native void ma(NativeSoftwareGraphicsToolkit param0, int[] param1, byte[] param2, byte[] param3, int param4, int param5, int param6, int param7);
 
     private final native int JA(long param0);
 
-    private final native void ua(oa param0, int[] param1, int param2, int param3, int param4, int param5, boolean param6);
+    private final native void ua(NativeSoftwareGraphicsToolkit param0, int[] param1, int param2, int param3, int param4, int param5, boolean param6);
 
-    j(oa param0, int[] param1, byte[] param2, byte[] param3, int param4, int param5, int param6, int param7) {
+    j(NativeSoftwareGraphicsToolkit param0, int[] param1, byte[] param2, byte[] param3, int param4, int param5, int param6, int param7) {
         this.ma(param0, param1, param2, param3, param4, param5, param6, param7);
     }
 }

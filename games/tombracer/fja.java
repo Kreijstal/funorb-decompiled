@@ -403,7 +403,7 @@ final class fja extends qra {
               var7 = new int[this.field_c.field_k][3];
               for (var3 = 0; var3 < this.field_c.field_k; var3++) {
                 for (var4 = 0; 3 > var4; var4++) {
-                  var7[var3][var4] = this.field_c.players[var3].c(196608, var4);
+                  var7[var3][var4] = this.field_c.players[var3].getTreasure(196608, var4);
                 }
               }
               this.field_h.a((byte) 101, var7, this.field_h.field_x);
@@ -573,7 +573,7 @@ final class fja extends qra {
             } else {
               if (var9Lifetime1 == 248) {
                 pu.a(di.a(21), 255);
-                io.field_b = qda.field_f;
+                io.field_b = ArchiveNetworkClient.field_f;
                 dea.a(60);
                 PushableBlockMazeComponent.field_L = false;
                 stackIn_33_0 = var9Lifetime1;

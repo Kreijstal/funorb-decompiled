@@ -49,9 +49,9 @@ final class NativeCanvasSurface extends IntrusiveNode implements e {
         }
     }
 
-    private final native void sa(oa param0, java.awt.Canvas param1, int param2, int param3);
+    private final native void sa(NativeSoftwareGraphicsToolkit param0, java.awt.Canvas param1, int param2, int param3);
 
-    NativeCanvasSurface(oa param0, java.awt.Canvas param1, int param2, int param3) {
+    NativeCanvasSurface(NativeSoftwareGraphicsToolkit param0, java.awt.Canvas param1, int param2, int param3) {
         this.field_f = param1;
         this.field_i = param2;
         this.field_h = param3;

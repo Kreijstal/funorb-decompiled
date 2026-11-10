@@ -72,7 +72,7 @@ final class nr implements GamePacket {
         }
     }
 
-    final void a(byte param0, qh param1, v param2) {
+    final void apply(byte param0, qh param1, v param2) {
         try {
           param1.a((byte) 113, this.field_b, this.field_c);
           if (param0 != -78) {

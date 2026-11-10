@@ -8,7 +8,7 @@ final class lm extends ci {
     static ToolkitSprite field_m;
     static String field_o;
     private int field_s;
-    static jpa[] field_p;
+    static SpriteData[] field_p;
 
     public lm() {
         this(0);

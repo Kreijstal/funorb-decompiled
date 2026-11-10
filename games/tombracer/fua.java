@@ -6,7 +6,7 @@ final class fua implements isa {
     static int[] field_h;
     private static String[] behaviourTypeNames;
     static String field_e;
-    static af field_a;
+    static SecondaryNodeHashTable field_a;
     private rla field_d;
     static boolean field_g;
     static Sprite[] field_f;

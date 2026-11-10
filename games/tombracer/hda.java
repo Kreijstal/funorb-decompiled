@@ -23,7 +23,7 @@ final class hda extends tc {
         super(param0, param1);
     }
 
-    final static sc a(int param0, int param1, cg param2) {
+    final static sc a(int param0, int param1, PcmStream param2) {
         RuntimeException var3 = null;
         sc stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

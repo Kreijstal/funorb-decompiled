@@ -7,7 +7,7 @@ final class WallCrusherComponent extends PrefabComponent {
     private int field_L;
     static int field_H;
     private int field_I;
-    static jpa[] field_F;
+    static SpriteData[] field_F;
     static String field_K;
     private TimeSwitchBehaviour field_G;
     private int field_M;
@@ -123,10 +123,10 @@ final class WallCrusherComponent extends PrefabComponent {
         this.field_I = 262144;
         this.field_O = 65536;
         try {
-          this.field_O = ji.a(param2.readBits((byte) 44, 4), 116, 2);
-          this.field_J = ji.a(param2.readBits((byte) 44, 8), 100, 4);
-          this.field_M = ji.a(param2.readBits((byte) 44, 4), 88, 2);
-          this.field_I = ji.a(param2.readBits((byte) 44, 8), 107, 4);
+          this.field_O = NodeHashTable.a(param2.readBits((byte) 44, 4), 116, 2);
+          this.field_J = NodeHashTable.a(param2.readBits((byte) 44, 8), 100, 4);
+          this.field_M = NodeHashTable.a(param2.readBits((byte) 44, 4), 88, 2);
+          this.field_I = NodeHashTable.a(param2.readBits((byte) 44, 8), 107, 4);
           stackIn_4_1 = (1 == param2.readBits((byte) 44, 1));
           this.field_N = stackIn_4_1;
           if (this.field_N) {
@@ -217,7 +217,7 @@ final class WallCrusherComponent extends PrefabComponent {
         field_K = null;
         field_F = null;
         if (param0 != 4096) {
-          field_F = (jpa[]) null;
+          field_F = (SpriteData[]) null;
         }
     }
 

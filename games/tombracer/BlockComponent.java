@@ -139,13 +139,13 @@ final class BlockComponent extends PrefabComponent {
           if (wg.field_l.c(81)) {
             return 0;
           }
-          return qda.b((byte) -66);
+          return ArchiveNetworkClient.b((byte) -66);
         }
         IntrusiveDequeCursor.field_a.a(-121);
         if (wg.field_l.c(81)) {
           return 0;
         }
-        return qda.b((byte) -66);
+        return ArchiveNetworkClient.b((byte) -66);
     }
 
     final int t(int param0) {

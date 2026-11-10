@@ -70,9 +70,9 @@ final class PowerUpItemBehaviour extends ItemBehaviour {
         RuntimeException decompiledCaughtException = null;
         var2 = TombRacer.field_G ? 1 : 0;
         try {
-          ej.field_a.processPointerFrame(gv.field_u, true, oi.field_b, -116);
+          ej.field_a.processPointerFrame(SocketArchiveNetworkClient.field_u, true, oi.field_b, -116);
           ej.field_a.g((byte) -127);
-          while (es.a(true)) {
+          while (NanoTickClock.a(true)) {
             ej.field_a.dispatchKeyInput((byte) 116, fna.field_h, kda.field_td);
           }
           if (bf.field_a != -1) {

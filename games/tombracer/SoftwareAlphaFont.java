@@ -132,7 +132,7 @@ final class SoftwareAlphaFont extends GameFont {
         this.blitCoverageGlyph(this.field_g[param0], this.field_i.field_r, param3, var12, var9, var6, var7, var10, var11);
     }
 
-    SoftwareAlphaFont(SoftwareGraphicsToolkit param0, qla param1, jpa[] param2, int[] param3, int[] param4) {
+    SoftwareAlphaFont(SoftwareGraphicsToolkit param0, qla param1, SpriteData[] param2, int[] param3, int[] param4) {
         super(param0, param1);
         int var6 = 0;
         byte[] array$0 = null;
@@ -140,7 +140,7 @@ final class SoftwareAlphaFont extends GameFont {
         byte[] stackIn_8_0 = null;
         int stackIn_8_1 = 0;
         int stackIn_9_2 = 0;
-        jpa var7;
+        SpriteData var7;
         byte[] var9;
         byte[] var14;
         this.field_i = param0;

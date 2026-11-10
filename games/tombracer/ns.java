@@ -10,7 +10,7 @@ final class ns extends qe {
     private float[] field_e;
     private int field_h;
     private aaa field_m;
-    static nda field_j;
+    static SoundCache field_j;
     private pva field_k;
     static boolean field_f;
 
@@ -149,7 +149,7 @@ final class ns extends qe {
               var4 = Class.forName("de");
               var5 = (cha) (var4.newInstance());
               if (param0 < 100) {
-                field_j = (nda) null;
+                field_j = (SoundCache) null;
               }
               var5.a(param1, param3, param2, (byte) -69);
               stackIn_3_0 = var5;
@@ -186,7 +186,7 @@ final class ns extends qe {
           this.field_a.a(true, param2);
           this.field_a.d(1, param0);
           if (param1 != 32221) {
-            field_j = (nda) null;
+            field_j = (SoundCache) null;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ns.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

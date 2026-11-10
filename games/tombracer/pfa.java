@@ -13,7 +13,7 @@ final class pfa {
     private int field_d;
     static boolean[][] field_b;
 
-    final static void a(cn param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_1831_0;
             StringBuilder stackIn_1831_1;
@@ -23,10 +23,10 @@ final class pfa {
             RuntimeException var2_ref;
             int var3;
             int var4;
-            cn param0;
+            ResourceArchive param0;
             int param1;
             boolean finished;
-            $CfrPartitionedBody(cn initialParam0, int initialParam1) {
+            $CfrPartitionedBody(ResourceArchive initialParam0, int initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_1831_0 = null;
@@ -563,7 +563,7 @@ final class pfa {
                 }
                 var2 = mt.a("tutorial_key", (byte) 102);
                 if (var2 != null) {
-                  uj.field_f = jaa.a((byte) 65, var2);
+                  S2CPlayerSyncPacket.field_f = jaa.a((byte) 65, var2);
                 }
                 var2 = mt.a("tutorial_pushable", (byte) 114);
                 if (var2 != null) {
@@ -1137,7 +1137,7 @@ final class pfa {
                 }
                 var2 = mt.a("weapon_revolver", (byte) 127);
                 if (var2 != null) {
-                  uj.field_e = jaa.a((byte) 37, var2);
+                  S2CPlayerSyncPacket.field_e = jaa.a((byte) 37, var2);
                 }
                 var2 = mt.a("pos_1st", (byte) 113);
                 if (var2 != null) {
@@ -1421,7 +1421,7 @@ final class pfa {
                 }
                 var2 = mt.a("unlock_character", (byte) 100);
                 if (var2 != null) {
-                  gv.field_v = jaa.a((byte) 86, var2);
+                  SocketArchiveNetworkClient.field_v = jaa.a((byte) 86, var2);
                 }
                 var2 = mt.a("unlock_tier", (byte) 109);
                 if (var2 != null) {
@@ -2253,7 +2253,7 @@ final class pfa {
           field_a = null;
           field_i = null;
           if (param0 != 4) {
-            pfa.a((cn) null, 68);
+            pfa.a((ResourceArchive) null, 68);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pfa.A(" + param0 + ')');

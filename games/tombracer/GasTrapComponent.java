@@ -148,7 +148,7 @@ final class GasTrapComponent extends PrefabComponent {
         super(param0, param1, param2, param3);
         this.field_I = 262144;
         try {
-          this.field_I = ji.a(param2.readBits((byte) 44, 6), 87, 2);
+          this.field_I = NodeHashTable.a(param2.readBits((byte) 44, 6), 87, 2);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wqa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

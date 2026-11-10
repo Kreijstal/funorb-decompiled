@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jpa {
+final class SpriteData {
     int field_c;
     byte[] field_h;
     int field_a;
@@ -61,39 +61,39 @@ final class jpa {
         return this.field_i + this.field_d + this.field_b;
     }
 
-    final static jpa[] b(cn param0, String param1, String param2) {
+    final static SpriteData[] loadSheet(ResourceArchive param0, String param1, String param2) {
         byte[] var3 = param0.a(param1, (byte) 127, param2);
         if (var3 == null) {
           return null;
         }
-        return jpa.a(var3);
+        return SpriteData.decodeSpriteSheet(var3);
     }
 
-    final static jpa a(cn param0, int param1) {
+    final static SpriteData loadSprite(ResourceArchive param0, int param1) {
         byte[] var2 = param0.f(param1, -105);
         if (var2 == null) {
           return null;
         }
-        return jpa.a(var2)[0];
+        return SpriteData.decodeSpriteSheet(var2)[0];
     }
 
-    final static jpa a(cn param0, String param1, String param2) {
+    final static SpriteData loadSprite(ResourceArchive param0, String param1, String param2) {
         byte[] var3 = param0.a(param1, (byte) 127, param2);
         if (var3 == null) {
           return null;
         }
-        return jpa.a(var3)[0];
+        return SpriteData.decodeSpriteSheet(var3)[0];
     }
 
-    final static jpa a(cn param0, int param1, int param2) {
+    final static SpriteData loadSprite(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = param0.a(false, param1, param2);
         if (var3 == null) {
           return null;
         }
-        return jpa.a(var3)[0];
+        return SpriteData.decodeSpriteSheet(var3)[0];
     }
 
-    private final static jpa[] a(byte[] param0) {
+    private final static SpriteData[] decodeSpriteSheet(byte[] param0) {
         byte dupTemp$1 = 0;
         byte dupTemp$0 = 0;
         int stackIn_53_0 = 0;
@@ -102,15 +102,15 @@ final class jpa {
         int stackIn_68_1 = 0;
         PacketBuffer var1;
         int var2;
-        jpa[] var3;
+        SpriteData[] var3;
         int var4;
         int var5;
         int var6;
         int var7_int;
         int[] var7;
         int var8;
-        jpa var8_ref_jpa;
-        jpa var9;
+        SpriteData var8_ref_jpa;
+        SpriteData var9;
         int var10;
         int var11;
         int var12;
@@ -129,9 +129,9 @@ final class jpa {
         var1 = new PacketBuffer(param0);
         var1.position = param0.length - 2;
         var2 = var1.readUnsignedShort(127);
-        var3 = new jpa[var2];
+        var3 = new SpriteData[var2];
         for (var4 = 0; var4 < var2; var4++) {
-          var3[var4] = new jpa();
+          var3[var4] = new SpriteData();
         }
         var1.position = param0.length - 7 - var2 * 8;
         var4Lifetime1 = var1.readUnsignedShort(125);

@@ -3,7 +3,7 @@
  */
 final class qka extends qra {
     private int[] field_r;
-    static jpa[] field_o;
+    static SpriteData[] field_o;
     private int field_n;
     static long[] field_m;
     static String field_s;

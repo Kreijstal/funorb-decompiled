@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sq extends cg {
+final class sq extends PcmStream {
     private int[] field_t;
-    l field_y;
-    private l field_k;
+    MidiPcmStream field_y;
+    private MidiPcmStream field_k;
     private int field_r;
-    l field_n;
+    MidiPcmStream field_n;
     private int field_m;
     static String field_x;
-    private l field_l;
+    private MidiPcmStream field_l;
     private qua field_u;
     private boolean field_q;
     private qua field_w;
@@ -19,17 +19,17 @@ final class sq extends cg {
     private int field_j;
     private qua field_v;
 
-    final cg b() {
+    final PcmStream firstSubStream() {
         return null;
     }
 
     final synchronized void a(int param0, int param1, byte param2, int param3, boolean param4, qua param5) {
         boolean stackIn_20_1 = false;
         int stackIn_32_0 = 0;
-        l stackIn_42_0 = null;
+        MidiPcmStream stackIn_42_0 = null;
         qua stackIn_42_1 = null;
         boolean stackIn_43_2 = false;
-        l stackIn_51_0 = null;
+        MidiPcmStream stackIn_51_0 = null;
         qua stackIn_51_1 = null;
         boolean stackIn_52_2 = false;
         RuntimeException stackIn_59_0 = null;
@@ -95,7 +95,7 @@ final class sq extends cg {
               stackIn_51_0 = this.field_y;
               stackIn_51_1 = (qua) (param5);
               stackIn_52_2 = !(param4);
-              ((l) (Object) stackIn_51_0).a(stackIn_51_1, stackIn_52_2, (byte) 80);
+              ((MidiPcmStream) (Object) stackIn_51_0).a(stackIn_51_1, stackIn_52_2, (byte) 80);
               this.a(1048576, param3, param0, this.field_y);
             }
             this.field_m = param1;
@@ -108,7 +108,7 @@ final class sq extends cg {
               stackIn_42_0 = this.field_l;
               stackIn_42_1 = (qua) (param5);
               stackIn_43_2 = !(param4);
-              ((l) (Object) stackIn_42_0).a(stackIn_42_1, stackIn_43_2, (byte) 80);
+              ((MidiPcmStream) (Object) stackIn_42_0).a(stackIn_42_1, stackIn_43_2, (byte) 80);
               this.a(1048576, param3, param0, this.field_l);
             }
             this.field_m = -param1;
@@ -141,7 +141,7 @@ final class sq extends cg {
         field_x = null;
     }
 
-    final void b(int[] param0, int param1, int param2) {
+    final void fill(int[] param0, int param1, int param2) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int var10 = 0;
@@ -165,7 +165,7 @@ final class sq extends cg {
         var11 = TombRacer.field_G ? 1 : 0;
         try {
           if (this.field_s <= 0) {
-            this.a(param2);
+            this.skip(param2);
             return;
           }
           if (this.field_q) {
@@ -222,19 +222,19 @@ final class sq extends cg {
           if (256 > this.field_j && (null != this.field_u ||
             this.field_w != null)) {
             if (var4_int == 256) {
-              this.field_y.b(param0, param1, param2);
+              this.field_y.fill(param0, param1, param2);
             } else {
               if (var5 != 256) {
                 if (this.field_t != null &&
                   this.field_t.length >= var6) {
-                  lua.a(this.field_t, 0, var6);
-                  lua.a(this.field_o, 0, var6);
+                  ArrayUtils.clear(this.field_t, 0, var6);
+                  ArrayUtils.clear(this.field_o, 0, var6);
                 } else {
                   this.field_o = new int[var6];
                   this.field_t = new int[var6];
                 }
-                this.field_y.b(this.field_t, 0, param2);
-                this.field_l.b(this.field_o, 0, param2);
+                this.field_y.fill(this.field_t, 0, param2);
+                this.field_l.fill(this.field_o, 0, param2);
                 if (!AudioOutput.field_h) {
                   stackIn_49_0 = param1;
                 } else {
@@ -247,7 +247,7 @@ final class sq extends cg {
                   param0[var7 + var8] = param0[var7 + var8] + (var4_int * this.field_t[var8] + var5 * this.field_o[var8] >> 8);
                 }
               } else {
-                this.field_l.b(param0, param1, param2);
+                this.field_l.fill(param0, param1, param2);
               }
             }
           }
@@ -257,12 +257,12 @@ final class sq extends cg {
             }
             if (this.field_t != null &&
               this.field_t.length >= var6) {
-              lua.a(this.field_t, 0, var6);
+              ArrayUtils.clear(this.field_t, 0, var6);
             } else {
               this.field_t = new int[var6];
               this.field_o = new int[var6];
             }
-            this.field_k.b(this.field_t, 0, param2);
+            this.field_k.fill(this.field_t, 0, param2);
             if (AudioOutput.field_h) {
               localTemp$1 = param1 << 1;
               param1 = localTemp$1;
@@ -293,7 +293,7 @@ final class sq extends cg {
         }
     }
 
-    private final void a(l param0, l param1, int param2) {
+    private final void a(MidiPcmStream param0, MidiPcmStream param1, int param2) {
         try {
           this.field_l = param0;
           this.field_y = param1;
@@ -342,7 +342,7 @@ final class sq extends cg {
         this.field_s = param1;
     }
 
-    private final void a(int param0, int param1, int param2, l param3) {
+    private final void a(int param0, int param1, int param2, MidiPcmStream param3) {
         try {
           this.field_n = param3;
           param3.a((byte) -105, param2, -1);
@@ -355,21 +355,21 @@ final class sq extends cg {
         }
     }
 
-    final cg c() {
+    final PcmStream nextSubStream() {
         return null;
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skip(int param0) {
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
         if (0 >= this.field_r) {
           if (this.field_r < 1048576 &&
             this.field_w != null) {
-            this.field_l.a(param0);
+            this.field_l.skip(param0);
           }
           if (this.field_j > 0 &&
             null != this.field_v) {
-            this.field_k.a(param0);
+            this.field_k.skip(param0);
           }
           if (this.field_q) {
             if (this.field_m > 0 &&
@@ -482,11 +482,11 @@ final class sq extends cg {
         if (this.field_u == null) {
           if (this.field_r < 1048576 &&
             this.field_w != null) {
-            this.field_l.a(param0);
+            this.field_l.skip(param0);
           }
           if (this.field_j > 0 &&
             null != this.field_v) {
-            this.field_k.a(param0);
+            this.field_k.skip(param0);
           }
           if (this.field_q) {
             if (this.field_m > 0 &&
@@ -596,14 +596,14 @@ final class sq extends cg {
           this.field_u = null;
           return;
         }
-        this.field_y.a(param0);
+        this.field_y.skip(param0);
         if (this.field_r < 1048576 &&
           this.field_w != null) {
-          this.field_l.a(param0);
+          this.field_l.skip(param0);
         }
         if (this.field_j > 0 &&
           null != this.field_v) {
-          this.field_k.a(param0);
+          this.field_k.skip(param0);
         }
         if (this.field_q) {
           if (this.field_m > 0 &&
@@ -690,7 +690,7 @@ final class sq extends cg {
         }
     }
 
-    sq(l param0, l param1) {
+    sq(MidiPcmStream param0, MidiPcmStream param1) {
         this.field_s = 256;
         this.field_p = false;
         this.field_j = 0;

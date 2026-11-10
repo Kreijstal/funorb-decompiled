@@ -28,7 +28,7 @@ abstract class GraphicsToolkit {
 
     void a(ToolkitSprite param0, boolean param1) {
         try {
-          this.a(this.a(param0, !param1 ? null : this.b(param0.a(), param0.c())));
+          this.a(this.createRenderTarget(param0, !param1 ? null : this.b(param0.a(), param0.c())));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ha.AE(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -42,7 +42,7 @@ abstract class GraphicsToolkit {
 
     abstract void a(float param0, float param1, float param2);
 
-    abstract ToolkitSprite a(jpa param0, boolean param1);
+    abstract ToolkitSprite createSprite(SpriteData param0, boolean param1);
 
     final void a(int param0, int param1, int param2, int param3, int param4, byte param5) {
         this.d(param1, param0, param3, param2, param4, 1);
@@ -55,7 +55,7 @@ abstract class GraphicsToolkit {
 
     abstract void ea(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8);
 
-    abstract int[] Y();
+    abstract int[] projectionParameters();
 
     abstract void ZA(int param0, float param1, float param2, float param3, float param4, float param5);
 
@@ -74,11 +74,11 @@ abstract class GraphicsToolkit {
         this.fillRectangle(param1, param3, param2, param5, param0, 1);
     }
 
-    abstract GameFont a(qla param0, jpa[] param1, boolean param2);
+    abstract GameFont createFont(qla param0, SpriteData[] param1, boolean param2);
 
     abstract void HA(int param0, int param1, int param2, int param3, int[] param4);
 
-    final synchronized static GraphicsToolkit a(d param0, int param1, cn param2, int param3, int param4, int param5, java.awt.Canvas param6, int param7) {
+    final synchronized static GraphicsToolkit a(d param0, int param1, ResourceArchive param2, int param3, int param4, int param5, java.awt.Canvas param6, int param7) {
         RuntimeException var8 = null;
         GraphicsToolkit stackIn_2_0 = null;
         GraphicsToolkit stackIn_6_0 = null;
@@ -96,7 +96,7 @@ abstract class GraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           if (0 == param3) {
-            stackIn_2_0 = l.a(param1, 127, param6, param0, param4);
+            stackIn_2_0 = MidiPcmStream.a(param1, 127, param6, param0, param4);
             return stackIn_2_0;
           }
           if (param3 == 2) {
@@ -227,7 +227,7 @@ abstract class GraphicsToolkit {
 
     abstract ob a(int param0, int param1, int param2, int param3, int param4, float param5);
 
-    abstract ToolkitSprite a(int[] param0, int param1, int param2, int param3, int param4, boolean param5);
+    abstract ToolkitSprite createSprite(int[] param0, int param1, int param2, int param3, int param4, boolean param5);
 
     abstract void b(int param0);
 
@@ -248,7 +248,7 @@ abstract class GraphicsToolkit {
           if (param2 < 73) {
             this.a(1.7194017171859741f, 0.590789794921875f, 1.4003089666366577f);
           }
-          stackIn_3_0 = this.a(param0, param5, param3, param4, param1, true);
+          stackIn_3_0 = this.createSprite(param0, param5, param3, param4, param1, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -273,7 +273,7 @@ abstract class GraphicsToolkit {
 
     abstract void a(int param0, ob[] param1);
 
-    abstract void K(int[] param0);
+    abstract void getClip(int[] param0);
 
     abstract void fillRectangle(int param0, int param1, int param2, int param3, int param4, int param5);
 
@@ -283,7 +283,7 @@ abstract class GraphicsToolkit {
 
     abstract void DA(int param0, int param1, int param2, int param3);
 
-    abstract jca a(nha param0, mw param1);
+    abstract jca createRenderTarget(nha param0, mw param1);
 
     abstract void k();
 

@@ -196,7 +196,7 @@ final class fj {
               var31 = 256;
               if (var35 == 0) {
                 if (var36 != 0) {
-                  var9.b(var10.getWidth((byte) -86) / 2, var34 + var32 << 16, 76473160);
+                  var9.setPosition(var10.getWidth((byte) -86) / 2, var34 + var32 << 16, 76473160);
                 }
               } else {
                 var9.b(16384, true);

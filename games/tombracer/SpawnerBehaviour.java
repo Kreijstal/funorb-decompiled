@@ -166,15 +166,15 @@ final class SpawnerBehaviour extends Behaviour {
     final static void a(boolean param0, int param1) {
         if (param1 == 0) {
           hh.a(40, param0);
-          if (null != qda.field_b) {
-            TrackPlayerLocomotor.a(-65, qda.field_b);
+          if (null != ArchiveNetworkClient.field_b) {
+            TrackPlayerLocomotor.a(-65, ArchiveNetworkClient.field_b);
           }
           return;
         }
         SpawnerBehaviour.a(false, 4);
         hh.a(40, param0);
-        if (null != qda.field_b) {
-          TrackPlayerLocomotor.a(-65, qda.field_b);
+        if (null != ArchiveNetworkClient.field_b) {
+          TrackPlayerLocomotor.a(-65, ArchiveNetworkClient.field_b);
         }
     }
 

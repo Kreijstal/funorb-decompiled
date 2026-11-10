@@ -128,7 +128,7 @@ final class cqa extends vw {
         this.a(true, -11);
     }
 
-    cqa(Direct3DToolkit param0, cn param1) {
+    cqa(Direct3DToolkit param0, ResourceArchive param1) {
         super(param0);
         int stackIn_6_0 = 0;
         int stackIn_9_1 = 0;

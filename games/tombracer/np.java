@@ -31,7 +31,7 @@ final class np extends ka {
     private byte[] field_O;
     private short field_eb;
     private short field_v;
-    static cn field_m;
+    static ResourceArchive field_m;
     private short[] field_fb;
     private short field_S;
     private short[] field_hb;
@@ -2312,7 +2312,7 @@ final class np extends ka {
         RuntimeException var1 = null;
         try {
           if (param0 > -19) {
-            field_m = (cn) null;
+            field_m = (ResourceArchive) null;
           }
           var1_int = jv.d(-77);
           var2 = za.a(18998);

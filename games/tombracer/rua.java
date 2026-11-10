@@ -167,7 +167,7 @@ final class rua extends ij implements tsa {
         }
     }
 
-    final static GraphicsToolkit a(boolean param0, d param1, cn param2, java.awt.Canvas param3, int param4) {
+    final static GraphicsToolkit a(boolean param0, d param1, ResourceArchive param2, java.awt.Canvas param3, int param4) {
         RuntimeException var5 = null;
         long var6 = 0L;
         kda var8 = null;

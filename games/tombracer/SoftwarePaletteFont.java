@@ -59,7 +59,7 @@ final class SoftwarePaletteFont extends GameFont {
         }
     }
 
-    SoftwarePaletteFont(SoftwareGraphicsToolkit param0, qla param1, jpa[] param2, int[] param3, int[] param4) {
+    SoftwarePaletteFont(SoftwareGraphicsToolkit param0, qla param1, SpriteData[] param2, int[] param3, int[] param4) {
         super(param0, param1);
         int var6 = 0;
         this.field_g = param0;

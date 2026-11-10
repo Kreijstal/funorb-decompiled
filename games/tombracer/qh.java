@@ -10,7 +10,7 @@ final class qh extends dfa implements rqa {
     static jea field_F;
     int field_x;
     private IntrusiveDeque field_f;
-    static jpa field_q;
+    static SpriteData field_q;
     private boolean[][] field_v;
     private boolean[] field_u;
     private int field_h;
@@ -205,11 +205,11 @@ final class qh extends dfa implements rqa {
           }
         } else {
           if (vpa.a(80)) {
-            ip.field_b = qca.a((byte) 13, pq.field_e);
+            GameClock.field_b = qca.a((byte) 13, pq.field_e);
             stackIn_8_0 = !(this.n((byte) 19) <= 0);
             uma.field_c = stackIn_8_0;
             pna.field_p = stackIn_8_0;
-            if (this.field_k.field_K != 3 && (ip.field_b ||
+            if (this.field_k.field_K != 3 && (GameClock.field_b ||
               uma.field_c ||
               pna.field_p)) {
               ConstrainToRectangleLocomotor.a(param0, 10, (byte) 106);
@@ -379,7 +379,7 @@ final class qh extends dfa implements rqa {
           }
           this.field_o = new int[var14_int];
           this.field_u = new boolean[var14_int];
-          qda.field_b = null;
+          ArchiveNetworkClient.field_b = null;
           if (!this.d((byte) 64)) {
             this.field_h = this.field_x;
           } else {
@@ -600,7 +600,7 @@ final class qh extends dfa implements rqa {
                 var10 = new int[this.field_k.field_k][3];
                 for (var4 = 0; this.field_k.field_k > var4; var4++) {
                   for (var5 = 0; 3 > var5; var5++) {
-                    var10[var4][var5] = this.field_k.players[var4].c(196608, var5);
+                    var10[var4][var5] = this.field_k.players[var4].getTreasure(196608, var5);
                   }
                 }
                 this.a(var10, -9);
@@ -670,7 +670,7 @@ final class qh extends dfa implements rqa {
         if (!this.field_D &&
           this.field_x == 0) {
           var4 = this.field_k.players[this.field_x];
-          if (!var4.C(-1).j(0)) {
+          if (!var4.getSimulation(-1).j(0)) {
             ppa.a(var4.getRoom((byte) -127), 64, this.field_k);
           }
         }
@@ -917,7 +917,7 @@ final class qh extends dfa implements rqa {
             this.field_g = (w[]) null;
           }
           if (this.field_z != null) {
-            stackIn_6_0 = this.field_z.a((byte) 107, this, param2, param0);
+            stackIn_6_0 = this.field_z.handleServerPacket((byte) 107, this, param2, param0);
             return stackIn_6_0;
           }
           return false;
@@ -1441,7 +1441,7 @@ final class qh extends dfa implements rqa {
 
     private final int n(byte param0) {
         if (param0 != 19) {
-          field_q = (jpa) null;
+          field_q = (SpriteData) null;
         }
         return this.field_j;
     }

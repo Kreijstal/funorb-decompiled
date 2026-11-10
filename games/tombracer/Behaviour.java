@@ -16,11 +16,11 @@ abstract class Behaviour extends IntrusiveNode implements lj, Renderable, noa, T
         Player var2Lifetime1;
         if (param0 == 8031) {
           var2 = this.getPlayer((byte) 19);
-          return io.a(var2.getWidth(-47), this.trap.getY(9648), (byte) -57, var2.getHeight((byte) 55), this.trap.getX(3), var2.getY(9648), this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -8057), var2.getX(3));
+          return io.centredBoxesOverlap(var2.getWidth(-47), this.trap.getY(9648), (byte) -57, var2.getHeight((byte) 55), this.trap.getX(3), var2.getY(9648), this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -8057), var2.getX(3));
         }
         this.field_m = (Room) null;
         var2Lifetime1 = this.getPlayer((byte) 19);
-        return io.a(var2Lifetime1.getWidth(-47), this.trap.getY(9648), (byte) -57, var2Lifetime1.getHeight((byte) 55), this.trap.getX(3), var2Lifetime1.getY(9648), this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -8057), var2Lifetime1.getX(3));
+        return io.centredBoxesOverlap(var2Lifetime1.getWidth(-47), this.trap.getY(9648), (byte) -57, var2Lifetime1.getHeight((byte) 55), this.trap.getX(3), var2Lifetime1.getY(9648), this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -8057), var2Lifetime1.getX(3));
     }
 
     int a(int param0, Projectile param1, Effect param2) {
@@ -144,7 +144,7 @@ abstract class Behaviour extends IntrusiveNode implements lj, Renderable, noa, T
         return this.trap.getPlayer(param0 ^ -108);
     }
 
-    int a(int param0, Effect param1, pc param2) {
+    int a(int param0, Effect param1, BeamSegment param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -254,7 +254,7 @@ abstract class Behaviour extends IntrusiveNode implements lj, Renderable, noa, T
         return 0;
     }
 
-    boolean a(int param0, int param1, pc param2, int param3) {
+    boolean a(int param0, int param1, BeamSegment param2, int param3) {
         RuntimeException var5 = null;
         Trap var6 = null;
         RuntimeException stackIn_6_0 = null;

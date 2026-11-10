@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class tra extends rj {
+class TextInputWidget extends rj {
     private long field_H;
     static String field_A;
     private int field_I;
@@ -82,7 +82,7 @@ class tra extends rj {
                   this.field_I = dupTemp$0;
                   this.field_B = dupTemp$0;
                 }
-                this.i(200);
+                this.notifySubmitted(200);
               }
               return true;
             }
@@ -99,7 +99,7 @@ class tra extends rj {
                 }
               } else {
                 if (param2 == 13) {
-                  this.f(23);
+                  this.clearText(23);
                   return true;
                 }
                 if (param2 == 96) {
@@ -145,12 +145,12 @@ class tra extends rj {
                     }
                     if (oj.field_tb[82] &&
                       param2 == 66) {
-                      this.e(0);
+                      this.copySelectedTextToClipboard(0);
                       return true;
                     }
                     if (oj.field_tb[82] &&
                       param2 == 67) {
-                      this.d(31);
+                      this.pasteClipboardText(31);
                       return true;
                     }
                   }
@@ -409,7 +409,7 @@ class tra extends rj {
         }
     }
 
-    private final void e(int param0) {
+    private final void copySelectedTextToClipboard(int param0) {
         try {
           RuntimeException runtimeException = null;
           String var2 = null;
@@ -534,7 +534,7 @@ class tra extends rj {
         int var3 = 0;
         try {
           if (param0 != 0) {
-            tra.g((byte) 76);
+            TextInputWidget.g((byte) 76);
           }
           if (this.field_B != this.field_I) {
             if (this.field_I <= this.field_B) {
@@ -552,7 +552,7 @@ class tra extends rj {
             this.field_I = var2_int;
             this.field_B = var2_int;
             this.field_o = this.field_o.substring(0, var2_int) + this.field_o.substring(var3, this.field_o.length());
-            this.i(200);
+            this.notifySubmitted(200);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -634,7 +634,7 @@ class tra extends rj {
         RuntimeException var8 = null;
         try {
           if (param0 <= 70) {
-            this.f(18);
+            this.clearText(18);
           }
           if (super.handlePointerPress(92, param1, param2, param3, param4, param5, param6) &&
             this.field_r instanceof oaa) {
@@ -693,7 +693,7 @@ class tra extends rj {
         }
     }
 
-    private final void d(int param0) {
+    private final void pasteClipboardText(int param0) {
         try {
           Throwable decompiledCaughtException = null;
           String var2 = null;
@@ -771,7 +771,7 @@ class tra extends rj {
         }
     }
 
-    void i(int param0) {
+    void notifySubmitted(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -814,10 +814,10 @@ class tra extends rj {
           }
           this.field_I = this.field_I + param0.length();
           if (param1) {
-            this.d(104);
+            this.pasteClipboardText(104);
           }
           this.field_B = this.field_I;
-          this.i(200);
+          this.notifySubmitted(200);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -835,7 +835,7 @@ class tra extends rj {
 
     private final void l(int param0) {
         try {
-          this.e(0);
+          this.copySelectedTextToClipboard(0);
           this.k(param0 ^ param0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "tra.QA(" + param0 + ')');
@@ -867,7 +867,7 @@ class tra extends rj {
           this.field_B = dupTemp$1;
           this.field_I = dupTemp$1;
           if (!param0) {
-            this.i(param1 ^ -16775);
+            this.notifySubmitted(param1 ^ -16775);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -902,7 +902,7 @@ class tra extends rj {
             S2CRoundResultPacket.a(-var1_int + MatchState.field_w, param0 - 1);
           }
           if (param0 != -113) {
-            tra.g(-73);
+            TextInputWidget.g(-73);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -912,13 +912,13 @@ class tra extends rj {
         }
     }
 
-    final void f(int param0) {
+    final void clearText(int param0) {
         try {
           this.field_o = "";
           this.field_I = 0;
           int var2_int = -100 % ((param0 + 80) / 39);
           this.field_B = 0;
-          this.i(200);
+          this.notifySubmitted(200);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "tra.KA(" + param0 + ')');
         }
@@ -934,7 +934,7 @@ class tra extends rj {
         }
     }
 
-    tra(String param0, qc param1, int param2) {
+    TextInputWidget(String param0, qc param1, int param2) {
         super(param0, param1);
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;

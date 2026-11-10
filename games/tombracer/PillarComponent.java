@@ -77,7 +77,7 @@ final class PillarComponent extends PrefabComponent {
           return ModelFactory.field_a.e(param0 ^ 7110);
         }
         String var2 = (String) null;
-        PillarComponent.a((String) null, 34, (cn) null, (String) null);
+        PillarComponent.a((String) null, 34, (ResourceArchive) null, (String) null);
         return ModelFactory.field_a.e(param0 ^ 7110);
     }
 
@@ -140,7 +140,7 @@ final class PillarComponent extends PrefabComponent {
         return 7;
     }
 
-    final static dk a(String param0, int param1, cn param2, String param3) {
+    final static dk a(String param0, int param1, ResourceArchive param2, String param3) {
         RuntimeException var4 = null;
         dk stackIn_2_0 = null;
         dk stackIn_4_0 = null;

@@ -4,11 +4,11 @@
 final class op extends ofa implements tsa {
     private UiWidget field_L;
     private rj field_N;
-    static jpa field_O;
+    static SpriteData field_O;
     private rj field_M;
     private long field_P;
 
-    final static void a(cn param0, int param1, int[] param2, byte[] param3, cn param4, String[][] param5, int param6, Sprite[][] param7, boolean param8, int param9, String[][] param10, cn param11, byte[] param12, String[] param13, Sprite[][] param14) {
+    final static void a(ResourceArchive param0, int param1, int[] param2, byte[] param3, ResourceArchive param4, String[][] param5, int param6, Sprite[][] param7, boolean param8, int param9, String[][] param10, ResourceArchive param11, byte[] param12, String[] param13, Sprite[][] param14) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -34,15 +34,15 @@ final class op extends ofa implements tsa {
         String stackIn_37_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var15 = null;
-        hja[] var16 = null;
+        IndexedSprite[] var16 = null;
         int[] var17 = null;
         try {
           if (param1 != 10) {
-            field_O = (jpa) null;
+            field_O = (SpriteData) null;
           }
           var17 = (int[]) null;
-          var16 = (hja[]) null;
-          ta.a(param14, param10, (int[]) null, param6, param0, param9, (hja[]) null, param3, param12, param5, param13, param11, (byte) 116, param2, param7, param4, param8);
+          var16 = (IndexedSprite[]) null;
+          ta.a(param14, param10, (int[]) null, param6, param0, param9, (IndexedSprite[]) null, param3, param12, param5, param13, param11, (byte) 116, param2, param7, param4, param8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -283,9 +283,9 @@ final class op extends ofa implements tsa {
         try {
           var4 = new short[param2];
           var3 = var4;
-          lua.a(param0, 0, var4, 0, param2);
+          ArrayUtils.copy(param0, 0, var4, 0, param2);
           if (param1 <= 104) {
-            op.a((cn) null, 63, (int[]) null, (byte[]) null, (cn) null, (String[][]) null, 112, (Sprite[][]) null, true, 103, (String[][]) null, (cn) null, (byte[]) null, (String[]) null, (Sprite[][]) null);
+            op.a((ResourceArchive) null, 63, (int[]) null, (byte[]) null, (ResourceArchive) null, (String[][]) null, 112, (Sprite[][]) null, true, 103, (String[][]) null, (ResourceArchive) null, (byte[]) null, (String[]) null, (Sprite[][]) null);
           }
           stackIn_3_0 = var4;
           return stackIn_3_0;

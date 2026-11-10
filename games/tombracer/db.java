@@ -138,7 +138,7 @@ final class db extends IntrusiveNode implements Renderable, Collidable, WorldBod
     public final void f(int param0) {
         if (param0 != -4366) {
           Projectile var3 = (Projectile) null;
-          this.a((Effect) null, (Projectile) null, 117);
+          this.applyProjectileEffect((Effect) null, (Projectile) null, 117);
         }
     }
 
@@ -165,7 +165,7 @@ final class db extends IntrusiveNode implements Renderable, Collidable, WorldBod
         return this.field_q;
     }
 
-    public final boolean a(int param0, boolean param1, int param2, int param3, int param4, int param5) {
+    public final boolean tryPush(int param0, boolean param1, int param2, int param3, int param4, int param5) {
         if (param0 <= 68) {
           field_h = (mp) null;
           return false;
@@ -220,7 +220,7 @@ final class db extends IntrusiveNode implements Renderable, Collidable, WorldBod
         }
     }
 
-    public final int a(Effect param0, Projectile param1, int param2) {
+    public final int applyProjectileEffect(Effect param0, Projectile param1, int param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -265,7 +265,7 @@ final class db extends IntrusiveNode implements Renderable, Collidable, WorldBod
         return false;
     }
 
-    public final boolean a(int param0, WorldBody param1, int param2, pc param3) {
+    public final boolean interceptsBeam(int param0, WorldBody param1, int param2, BeamSegment param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -306,7 +306,7 @@ final class db extends IntrusiveNode implements Renderable, Collidable, WorldBod
         }
     }
 
-    public final boolean a(int param0, WorldBody param1, int param2, int param3, int param4, Collidable param5, int param6, int param7) {
+    public final boolean overlapsBox(int param0, WorldBody param1, int param2, int param3, int param4, Collidable param5, int param6, int param7) {
         RuntimeException var9 = null;
         boolean stackIn_12_0 = false;
         RuntimeException stackIn_15_0 = null;
@@ -323,7 +323,7 @@ final class db extends IntrusiveNode implements Renderable, Collidable, WorldBod
             return false;
           }
           if (param2 > 55) {
-            stackIn_12_0 = this.a((byte) 110, param4, param6, param0, param3);
+            stackIn_12_0 = this.intersectsRect((byte) 110, param4, param6, param0, param3);
             return stackIn_12_0;
           }
           return true;
@@ -431,7 +431,7 @@ final class db extends IntrusiveNode implements Renderable, Collidable, WorldBod
         return 0;
     }
 
-    public final int a(Effect param0, int param1, pc param2) {
+    public final int applyBeamEffect(Effect param0, int param1, BeamSegment param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -518,7 +518,7 @@ final class db extends IntrusiveNode implements Renderable, Collidable, WorldBod
 
     private final boolean r(int param0) {
         if (param0 != 24269) {
-          this.a(58, true, 114, 87, -117, -85);
+          this.tryPush(58, true, 114, 87, -117, -85);
         }
         return this.field_m.o((byte) -82);
     }
@@ -554,11 +554,11 @@ final class db extends IntrusiveNode implements Renderable, Collidable, WorldBod
         return this.field_m;
     }
 
-    public final boolean a(byte param0, int param1, int param2, int param3, int param4) {
+    public final boolean intersectsRect(byte param0, int param1, int param2, int param3, int param4) {
         if (param0 != 110) {
           return false;
         }
-        return io.a(param4, this.getY(9648), (byte) -80, param3, this.getX(3), param1, this.field_q, this.field_g, param2);
+        return io.centredBoxesOverlap(param4, this.getY(9648), (byte) -80, param3, this.getX(3), param1, this.field_q, this.field_g, param2);
     }
 
     final void s(int param0) {
@@ -617,7 +617,7 @@ final class db extends IntrusiveNode implements Renderable, Collidable, WorldBod
         }
     }
 
-    public final boolean a(byte param0, boolean param1) {
+    public final boolean isPushable(byte param0, boolean param1) {
         if (param0 != -55) {
           TrapModel var4 = (TrapModel) null;
           this.a((TrapModel) null, true);
@@ -625,7 +625,7 @@ final class db extends IntrusiveNode implements Renderable, Collidable, WorldBod
         return false;
     }
 
-    public final int a(Effect param0, int param1, int param2, int param3, int param4, int param5) {
+    public final int applyAreaEffect(Effect param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;

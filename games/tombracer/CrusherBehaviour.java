@@ -338,9 +338,9 @@ final class CrusherBehaviour extends Behaviour {
         this.field_v = -69;
     }
 
-    final static hja[] a(cn param0, int param1, int param2, byte param3) {
+    final static IndexedSprite[] a(ResourceArchive param0, int param1, int param2, byte param3) {
         RuntimeException var4 = null;
-        hja[] stackIn_6_0 = null;
+        IndexedSprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -352,7 +352,7 @@ final class CrusherBehaviour extends Behaviour {
           if (param3 <= 20) {
             field_r = (String) null;
           }
-          stackIn_6_0 = uj.a(0);
+          stackIn_6_0 = S2CPlayerSyncPacket.a(0);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -473,9 +473,9 @@ final class CrusherBehaviour extends Behaviour {
         this.field_s = param0;
     }
 
-    final boolean a(int param0, int param1, pc param2, int param3) {
+    final boolean a(int param0, int param1, BeamSegment param2, int param3) {
         RuntimeException var5 = null;
-        pc var6 = null;
+        BeamSegment var6 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -485,8 +485,8 @@ final class CrusherBehaviour extends Behaviour {
             return false;
           }
           if (param1 != 1) {
-            var6 = (pc) null;
-            this.a(-121, -9, (pc) null, -81);
+            var6 = (BeamSegment) null;
+            this.a(-121, -9, (BeamSegment) null, -81);
           }
           param2.a(param3, (byte) 47);
           return true;

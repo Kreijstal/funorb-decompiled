@@ -14,7 +14,7 @@ final class pha extends jea {
     long field_yb;
     String field_vb;
     jea field_Db;
-    static jpa field_Bb;
+    static SpriteData field_Bb;
     static int[] field_ub;
     jea field_Kb;
     int field_xb;

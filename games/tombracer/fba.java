@@ -37,7 +37,7 @@ final class fba {
           }
           var5 = new float[param2];
           var3 = var5;
-          lua.a(param1, 0, var5, 0, param2);
+          ArrayUtils.copy(param1, 0, var5, 0, param2);
           stackIn_3_0 = var5;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -4,7 +4,7 @@
 final class nm extends vo implements sca {
     static ToolkitSprite field_l;
     private int field_k;
-    static jpa field_i;
+    static SpriteData field_i;
     static String field_j;
 
     final static void a(Sprite param0, byte param1) {

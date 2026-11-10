@@ -37,7 +37,7 @@ final class oja extends vw {
         }
     }
 
-    oja(Direct3DToolkit param0, cn param1, hk param2) {
+    oja(Direct3DToolkit param0, ResourceArchive param1, hk param2) {
         super(param0);
         boolean stackIn_9_1 = false;
         this.field_f = param2;

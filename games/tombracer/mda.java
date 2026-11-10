@@ -30,7 +30,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
           }
           var4 = (upa) (ina.field_d.first(-80));
           while (var4 != null) {
-            ip.a(var4, param0, 2147);
+            GameClock.a(var4, param0, 2147);
             var4 = (upa) (ina.field_d.next(121));
           }
           return;
@@ -73,7 +73,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
         return 0;
     }
 
-    public final boolean a(int param0, WorldBody param1, int param2, pc param3) {
+    public final boolean interceptsBeam(int param0, WorldBody param1, int param2, BeamSegment param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -154,7 +154,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
         }
     }
 
-    public final int a(Effect param0, int param1, pc param2) {
+    public final int applyBeamEffect(Effect param0, int param1, BeamSegment param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         int stackIn_5_0 = 0;
@@ -191,7 +191,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
         }
     }
 
-    public final boolean a(byte param0, boolean param1) {
+    public final boolean isPushable(byte param0, boolean param1) {
         boolean stackIn_7_0 = false;
         if (param0 != -55) {
           return true;
@@ -207,7 +207,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
         return stackIn_7_0;
     }
 
-    public final boolean a(int param0, WorldBody param1, int param2, int param3, int param4, Collidable param5, int param6, int param7) {
+    public final boolean overlapsBox(int param0, WorldBody param1, int param2, int param3, int param4, Collidable param5, int param6, int param7) {
         RuntimeException var9 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -217,7 +217,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
         RuntimeException decompiledCaughtException = null;
         try {
           if (1 == this.field_s &&
-            this.a((byte) 110, param4, param6, param0, param3)) {
+            this.intersectsRect((byte) 110, param4, param6, param0, param3)) {
             return true;
           }
           if (param2 >= 55) {
@@ -271,7 +271,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
         }
     }
 
-    public final int a(Effect param0, Projectile param1, int param2) {
+    public final int applyProjectileEffect(Effect param0, Projectile param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
@@ -286,7 +286,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
           if (param2 >= -97) {
             this.field_q = (Room) null;
           }
-          stackIn_3_0 = this.a(param0, var4_int, param1.getX(3), 0, param1.getY(9648), var4_int);
+          stackIn_3_0 = this.applyAreaEffect(param0, var4_int, param1.getX(3), 0, param1.getY(9648), var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -335,7 +335,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
           return;
         }
         Projectile var6 = (Projectile) null;
-        this.a((Effect) null, (Projectile) null, -22);
+        this.applyProjectileEffect((Effect) null, (Projectile) null, -22);
         this.field_j = param2;
         this.field_p = param0;
     }
@@ -365,7 +365,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
           return this.field_j;
         }
         Collidable var3 = (Collidable) null;
-        this.a(-103, (WorldBody) null, -104, -49, -55, (Collidable) null, -28, -39);
+        this.overlapsBox(-103, (WorldBody) null, -104, -49, -55, (Collidable) null, -28, -39);
         return this.field_j;
     }
 
@@ -468,13 +468,13 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
         field_v = null;
     }
 
-    public final boolean a(int param0, boolean param1, int param2, int param3, int param4, int param5) {
+    public final boolean tryPush(int param0, boolean param1, int param2, int param3, int param4, int param5) {
         boolean stackIn_17_0 = false;
         boolean stackIn_27_0 = false;
         boolean stackIn_34_0 = false;
         if (param0 <= 68) {
           this.field_t = -15;
-          if (!this.a((byte) -55, param1)) {
+          if (!this.isPushable((byte) -55, param1)) {
             return false;
           }
           if (param4 != 0) {
@@ -499,7 +499,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
           stackIn_17_0 = (this.field_j == this.field_r + param3);
           return stackIn_17_0;
         }
-        if (!this.a((byte) -55, param1)) {
+        if (!this.isPushable((byte) -55, param1)) {
           return false;
         }
         if (param4 != 0) {
@@ -517,12 +517,12 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
         return stackIn_34_0;
     }
 
-    public final boolean a(byte param0, int param1, int param2, int param3, int param4) {
+    public final boolean intersectsRect(byte param0, int param1, int param2, int param3, int param4) {
         if (param0 == 110) {
-          return io.a(param4, this.field_j, (byte) -70, param3, this.field_p, param1, this.field_k, this.field_k, param2);
+          return io.centredBoxesOverlap(param4, this.field_j, (byte) -70, param3, this.field_p, param1, this.field_k, this.field_k, param2);
         }
         this.f(-11);
-        return io.a(param4, this.field_j, (byte) -70, param3, this.field_p, param1, this.field_k, this.field_k, param2);
+        return io.centredBoxesOverlap(param4, this.field_j, (byte) -70, param3, this.field_p, param1, this.field_k, this.field_k, param2);
     }
 
     public final int getPreviousX(int param0) {
@@ -707,7 +707,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
             return;
           }
           var5 = this.field_q.getPlayer(-37);
-          if (this.a((byte) 110, var5.getY(9648), var5.getX(3), var5.getHeight((byte) 55), var5.getWidth(param0 ^ 104))) {
+          if (this.intersectsRect((byte) 110, var5.getY(9648), var5.getX(3), var5.getHeight((byte) 55), var5.getWidth(param0 ^ 104))) {
             var5.G(31027);
           }
           return;
@@ -732,7 +732,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
               return;
             }
             var6 = this.field_q.getPlayer(-37);
-            if (this.a((byte) 110, var6.getY(9648), var6.getX(3), var6.getHeight((byte) 55), var6.getWidth(param0 ^ 104))) {
+            if (this.intersectsRect((byte) 110, var6.getY(9648), var6.getX(3), var6.getHeight((byte) 55), var6.getWidth(param0 ^ 104))) {
               var6.G(31027);
             }
             return;
@@ -749,7 +749,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
           return;
         }
         var7 = this.field_q.getPlayer(-37);
-        if (this.a((byte) 110, var7.getY(9648), var7.getX(3), var7.getHeight((byte) 55), var7.getWidth(param0 ^ 104))) {
+        if (this.intersectsRect((byte) 110, var7.getY(9648), var7.getX(3), var7.getHeight((byte) 55), var7.getWidth(param0 ^ 104))) {
           var7.G(31027);
         }
         return;
@@ -825,7 +825,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
         return this.field_r;
     }
 
-    public final int a(Effect param0, int param1, int param2, int param3, int param4, int param5) {
+    public final int applyAreaEffect(Effect param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_6_0 = 0;
@@ -834,7 +834,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.a((byte) 110, param4, param2, param5, param1)) {
+          if (!this.intersectsRect((byte) 110, param4, param2, param5, param1)) {
             stackIn_2_0 = 0;
             return stackIn_2_0;
           }
@@ -873,7 +873,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
 
     public final boolean j(int param0) {
         if (param0 != -1) {
-          this.a((byte) -105, false);
+          this.isPushable((byte) -105, false);
           return false;
         }
         return false;

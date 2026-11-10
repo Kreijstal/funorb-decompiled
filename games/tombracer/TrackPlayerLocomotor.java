@@ -6,7 +6,7 @@ final class TrackPlayerLocomotor extends Locomotor {
     private int field_p;
     private boolean field_r;
     private ir field_o;
-    static af field_s;
+    static SecondaryNodeHashTable field_s;
     private int field_q;
 
     final void tick(byte param0) {
@@ -126,7 +126,7 @@ final class TrackPlayerLocomotor extends Locomotor {
           SoftwareRasterizer.f(var7, var8, var5, var6, 0);
           SoftwareRasterizer.e(var7 + 1, 1 + var8, var5 - 2, -2 + var6, 16777088);
           if (param0 > -63) {
-            field_s = (af) null;
+            field_s = (SecondaryNodeHashTable) null;
           }
           Corpse.field_i.field_H.a(param1, var7 + 3, -Corpse.field_i.field_H.field_w + (hsa.field_a + 1) + var8, 500, 1000, 0, -1, 0, 0, di.field_a);
         } catch (RuntimeException runtimeException) {
@@ -191,7 +191,7 @@ final class TrackPlayerLocomotor extends Locomotor {
     public static void releaseStatics(int param0) {
         field_s = null;
         if (param0 != 14) {
-          field_s = (af) null;
+          field_s = (SecondaryNodeHashTable) null;
         }
     }
 

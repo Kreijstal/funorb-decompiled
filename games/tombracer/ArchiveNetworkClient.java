@@ -4,7 +4,7 @@
 import java.io.*;
 import java.util.*;
 
-abstract class qda {
+abstract class ArchiveNetworkClient {
     vj field_e;
     static String field_l;
     vj field_m;
@@ -40,7 +40,7 @@ abstract class qda {
 
     final int f(int param0) {
         if (param0 != -3) {
-          qda.b((byte) 52);
+          ArchiveNetworkClient.b((byte) 52);
         }
         return this.field_e.a((byte) -56) + this.field_m.a((byte) -92);
     }
@@ -140,7 +140,7 @@ abstract class qda {
               stackIn_36_0 = -1;
               return stackIn_36_0;
             }
-            wg.field_l.a(jia.field_a, (byte) 54, vga.field_q);
+            wg.field_l.attachConnection(jia.field_a, (byte) 54, vga.field_q);
             cma.field_m = 0;
             jia.field_a = null;
             bga.field_c = null;
@@ -160,11 +160,11 @@ abstract class qda {
 
     abstract void a(int param0);
 
-    abstract void e(int param0);
+    abstract void invalidateConnection(int param0);
 
     abstract boolean c(int param0);
 
-    abstract void a(Object param0, byte param1, boolean param2);
+    abstract void attachConnection(Object param0, byte param1, boolean param2);
 
     final boolean b(int param0) {
         if (param0 != -21) {
@@ -276,7 +276,7 @@ abstract class qda {
         }
     }
 
-    qda() {
+    ArchiveNetworkClient() {
         this.field_e = new vj();
         this.field_m = new vj();
         this.field_c = new vj();

@@ -324,7 +324,7 @@ final class DarknessBehaviour extends Behaviour {
         }
     }
 
-    final int a(int param0, Effect param1, pc param2) {
+    final int a(int param0, Effect param1, BeamSegment param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -332,7 +332,7 @@ final class DarknessBehaviour extends Behaviour {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        pc var10 = null;
+        BeamSegment var10 = null;
         int stackIn_6_0 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -342,8 +342,8 @@ final class DarknessBehaviour extends Behaviour {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -85) {
-            var10 = (pc) null;
-            this.a(26, (Effect) null, (pc) null);
+            var10 = (BeamSegment) null;
+            this.a(26, (Effect) null, (BeamSegment) null);
           }
           var4_int = param2.field_d - this.trap.getX(3) + this.trap.getWidth(-67) / 2;
           var5 = param2.field_e - (this.trap.getX(3) - this.trap.getWidth(-63) / 2);

@@ -269,7 +269,7 @@ final class BridgeModel extends TrapModel {
         }
     }
 
-    final static void a(cn param0, PlatformTaskDispatcher param1, int param2) {
+    final static void a(ResourceArchive param0, PlatformTaskDispatcher param1, int param2) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -283,7 +283,7 @@ final class BridgeModel extends TrapModel {
         try {
           hna.field_a = param1;
           aqa.field_c = "";
-          af.field_b = param0;
+          SecondaryNodeHashTable.field_b = param0;
           if (!oj.field_vb.startsWith("win")) {
             if (oj.field_vb.startsWith("linux")) {
               aqa.field_c = aqa.field_c + "linux/";
@@ -382,7 +382,7 @@ final class BridgeModel extends TrapModel {
         if (var3 == null) {
           return;
         }
-        if (var2.a((byte) 110, var3.getY(param0 ^ -9649), var3.getX(3), var3.getHeight((byte) 55), var3.getWidth(-40))) {
+        if (var2.intersectsRect((byte) 110, var3.getY(param0 ^ -9649), var3.getX(3), var3.getHeight((byte) 55), var3.getWidth(-40))) {
           var4 = var3.n((byte) -56);
           if (var4 == null) {
             return;

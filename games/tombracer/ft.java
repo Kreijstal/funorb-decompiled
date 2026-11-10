@@ -183,7 +183,7 @@ final class ft {
                   var26Lifetime1 = param0.field_J[var23Lifetime2];
                   RecursiveBacktrackerMazeGenerator.field_c[var23Lifetime2] = var9 + (var25Lifetime1 * var15 + var24Lifetime1 * var12 + var18 * var26Lifetime1 >> 16);
                   SecondaryNodeDeque.field_f[var23Lifetime2] = (var25Lifetime1 * var16 + var13 * var24Lifetime1 + var26Lifetime1 * var19 >> 16) + var10;
-                  gv.field_q[var23Lifetime2] = var11 + (var26Lifetime1 * var20 + (var25Lifetime1 * var17 + var14 * var24Lifetime1) >> 16);
+                  SocketArchiveNetworkClient.field_q[var23Lifetime2] = var11 + (var26Lifetime1 * var20 + (var25Lifetime1 * var17 + var14 * var24Lifetime1) >> 16);
                   var24Lifetime1 = param0.field_E[var23Lifetime2];
                   var25Lifetime1 = param0.field_v[var23Lifetime2];
                   var26Lifetime1 = param0.field_L[var23Lifetime2];

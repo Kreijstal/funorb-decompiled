@@ -3,7 +3,7 @@
  */
 final class via extends java.awt.Canvas implements java.awt.event.FocusListener {
     static String[][] field_c;
-    static jpa[] field_a;
+    static SpriteData[] field_a;
     java.awt.Frame field_d;
     static int field_e;
     volatile boolean field_b;
@@ -54,7 +54,7 @@ final class via extends java.awt.Canvas implements java.awt.event.FocusListener 
     public static void releaseStatics(int param0) {
         field_c = (String[][]) null;
         if (param0 != 64) {
-          field_a = (jpa[]) null;
+          field_a = (SpriteData[]) null;
           field_a = null;
           return;
         }

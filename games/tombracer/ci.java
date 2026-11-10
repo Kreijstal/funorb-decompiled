@@ -126,12 +126,12 @@ abstract class ci extends IntrusiveNode {
         this.field_g = param1 ? true : false;
     }
 
-    final static kg a(byte[] param0, byte param1) {
-        kg var2 = null;
+    final static AntialiasedBitmapFont a(byte[] param0, byte param1) {
+        AntialiasedBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         Object stackIn_2_0 = null;
-        kg stackIn_4_0 = null;
+        AntialiasedBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -139,9 +139,9 @@ abstract class ci extends IntrusiveNode {
         try {
           if (param0 == null) {
             stackIn_2_0 = null;
-            return (kg) (stackIn_2_0);
+            return (AntialiasedBitmapFont) (stackIn_2_0);
           }
-          var2 = new kg(param0, ak.field_p, pg.field_C, mq.field_b, iga.field_m, mga.field_g, ck.field_c);
+          var2 = new AntialiasedBitmapFont(param0, ak.field_p, pg.field_C, mq.field_b, iga.field_m, mga.field_g, ck.field_c);
           MazeGenerator.a((byte) -70);
           var3 = -23 % ((-28 - param1) / 37);
           stackIn_4_0 = var2;

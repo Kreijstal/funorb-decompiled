@@ -20,13 +20,13 @@ final class bca {
         field_a = null;
     }
 
-    final static ip a(int param0) {
+    final static GameClock a(int param0) {
         if (param0 != 0) {
           vb var2 = (vb) null;
           bca.a((vb) null, (byte) 31);
-          return (ip) ((Object) new es());
+          return (GameClock) ((Object) new NanoTickClock());
         }
-        return (ip) ((Object) new es());
+        return (GameClock) ((Object) new NanoTickClock());
     }
 
     private final void a(byte param0) {

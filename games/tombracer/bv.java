@@ -20,7 +20,7 @@ final class bv extends jea {
     }
 
     final static void d(byte param0) {
-        tra.g((byte) -113);
+        TextInputWidget.g((byte) -113);
         int var1 = -34 % ((10 - param0) / 47);
     }
 

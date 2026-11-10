@@ -42,7 +42,7 @@ final class pk extends we {
           this.field_E = 1;
           return;
         }
-        var4 = cb.field_i.length;
+        var4 = OpenGlFramebuffer.field_i.length;
         for (var5_int = 0; var5_int < var4; var5_int++) {
           if (jba.field_j >= -(this.field_D[var5_int] >> 1) + this.field_A[var5_int] &&
             jba.field_j <= this.field_A[var5_int] + (this.field_D[var5_int] >> 1) &&
@@ -214,11 +214,11 @@ final class pk extends we {
         if (param2 > -9) {
           return;
         }
-        for (var4 = 0; var4 < cb.field_i.length; var4++) {
+        for (var4 = 0; var4 < OpenGlFramebuffer.field_i.length; var4++) {
           var5 = null;
           var6 = 255;
           if (~this.field_u == ~var4) {
-            var5Lifetime2 = cb.field_i[var4];
+            var5Lifetime2 = OpenGlFramebuffer.field_i[var4];
           } else {
             var6 = var6 >> 1;
             var5Lifetime2 = qf.field_k[var4];
@@ -284,15 +284,15 @@ final class pk extends we {
         this.field_E = 0;
         this.field_x = 0;
         try {
-          var7_int = cb.field_i.length;
+          var7_int = OpenGlFramebuffer.field_i.length;
           this.field_B = new int[var7_int];
           this.field_D = new int[var7_int];
           this.field_A = new int[var7_int];
           this.field_t = new int[var7_int];
           for (var8 = 0; var7_int > var8; var8++) {
-            var9 = cb.field_i[var8].a();
-            var10 = cb.field_i[var8].c();
-            this.field_A[var8] = (aaa.a(false) >> 1) - 32 * (-1 + cb.field_i.length) + var8 * 65;
+            var9 = OpenGlFramebuffer.field_i[var8].a();
+            var10 = OpenGlFramebuffer.field_i[var8].c();
+            this.field_A[var8] = (aaa.a(false) >> 1) - 32 * (-1 + OpenGlFramebuffer.field_i.length) + var8 * 65;
             this.field_B[var8] = 110;
             this.field_D[var8] = 3 * var9 / 4;
             this.field_t[var8] = 3 * var10 / 4;

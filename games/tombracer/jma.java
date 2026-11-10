@@ -10,7 +10,7 @@ final class jma implements noa {
     private int field_e;
     static String field_o;
     private boolean field_p;
-    static cn field_j;
+    static ResourceArchive field_j;
     private int field_f;
     private int field_n;
     private boolean field_g;
@@ -84,7 +84,7 @@ final class jma implements noa {
 
     final boolean b(int param0) {
         if (param0 != 4) {
-          field_j = (cn) null;
+          field_j = (ResourceArchive) null;
           if (this.field_n == 1) {
             return true;
           }
@@ -151,7 +151,7 @@ final class jma implements noa {
     final void a(byte param0, ew param1) {
         try {
           if (param0 != 48) {
-            field_j = (cn) null;
+            field_j = (ResourceArchive) null;
           }
           this.field_d.a(param1, 8);
         } catch (RuntimeException runtimeException) {

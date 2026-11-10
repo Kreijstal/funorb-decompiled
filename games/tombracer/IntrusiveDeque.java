@@ -281,10 +281,10 @@ final class IntrusiveDeque {
                       var5 = var7;
                     } else if (var7.field_xb.field_o &&
                       var15 != 0) {
-                      qda.field_b = var7.field_tb;
+                      ArchiveNetworkClient.field_b = var7.field_tb;
                     }
                   } else {
-                    qda.field_b = var7.field_vb;
+                    ArchiveNetworkClient.field_b = var7.field_vb;
                   }
                   var7 = (mu) (var4.next(111));
                   continue;
@@ -296,13 +296,13 @@ final class IntrusiveDeque {
                 }
               }
               if (decompiledFrameRemainder0) {
-                cn.field_k = 0;
+                ResourceArchive.field_k = 0;
               }
               if (0 == dn.field_b.field_wb.field_y) {
                 break;
               }
               bl.field_a = new is(dn.field_b.field_wb.field_q, dn.field_b.field_wb.field_A, dn.field_b.field_wb.field_G, dn.field_b.field_wb.field_t, PathMoveLocomotor.field_q, lw.field_a, Corpse.field_i, Corpse.field_i);
-              cn.field_k = 1;
+              ResourceArchive.field_k = 1;
               break;
             }
           }

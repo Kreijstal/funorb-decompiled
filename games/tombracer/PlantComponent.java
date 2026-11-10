@@ -260,7 +260,7 @@ final class PlantComponent extends PrefabComponent {
           var3 = 22 / ((param0 + 35) / 63);
           var2 = SpawnerBehaviour.field_n.first(-80);
           while (var2 != null) {
-            dr.a(param1, -75);
+            ArchiveSource.a(param1, -75);
             var2 = SpawnerBehaviour.field_n.next(116);
           }
           return;

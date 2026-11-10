@@ -74,12 +74,12 @@ final class qp extends we {
           if (param0 == -1) {
             var13Lifetime2 = "";
           }
-          var12.a(-1, -1, es.field_h[0], param7, param4, var13Lifetime2);
-          var12.a(param4, false, param8, es.field_h[1], param7, -1);
-          var12.a(param4, false, Integer.toString(param6), es.field_h[2], param7, -1);
-          var12.a(param4, false, var11, es.field_h[3], param7, -1);
-          var12.a(param4, false, param2 + "%", es.field_h[4], param7, -1);
-          var12.a(param4, false, param5 + "%", es.field_h[5], param7, -1);
+          var12.a(-1, -1, NanoTickClock.field_h[0], param7, param4, var13Lifetime2);
+          var12.a(param4, false, param8, NanoTickClock.field_h[1], param7, -1);
+          var12.a(param4, false, Integer.toString(param6), NanoTickClock.field_h[2], param7, -1);
+          var12.a(param4, false, var11, NanoTickClock.field_h[3], param7, -1);
+          var12.a(param4, false, param2 + "%", NanoTickClock.field_h[4], param7, -1);
+          var12.a(param4, false, param5 + "%", NanoTickClock.field_h[5], param7, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -237,18 +237,18 @@ final class qp extends we {
         int var6;
         String var7;
         String var8;
-        es.field_h = new int[]{85, 130, 260, 365, 470, 540};
+        NanoTickClock.field_h = new int[]{85, 130, 260, 365, 470, 540};
         if (param2 > -9) {
           this.a(false, -74, (byte) 102);
         }
         SingleChildWidget.field_v.a(param1 + 63, false, WidgetContainer.field_v.toUpperCase() + " - " + wg.field_m[this.field_x].toUpperCase(), 65, -14279929, -1);
         var4 = 120 + param1;
-        eda.field_f.a(-1, -1, es.field_h[0], -14671840, var4, hl.field_a);
-        eda.field_f.a(var4, false, ObjectPool.field_g.toUpperCase(), es.field_h[1], -14671840, -1);
-        eda.field_f.a(var4, false, ControllerLocomotor.field_o.toUpperCase(), es.field_h[2], -14671840, -1);
-        eda.field_f.a(var4, false, SimpleConditionBehaviour.field_q.toUpperCase(), es.field_h[3], -14671840, -1);
-        eda.field_f.a(var4, false, PlayerProfile.field_u.toUpperCase(), es.field_h[4], -14671840, -1);
-        eda.field_f.a(var4, false, ida.field_a.toUpperCase(), es.field_h[5], -14671840, -1);
+        eda.field_f.a(-1, -1, NanoTickClock.field_h[0], -14671840, var4, hl.field_a);
+        eda.field_f.a(var4, false, ObjectPool.field_g.toUpperCase(), NanoTickClock.field_h[1], -14671840, -1);
+        eda.field_f.a(var4, false, ControllerLocomotor.field_o.toUpperCase(), NanoTickClock.field_h[2], -14671840, -1);
+        eda.field_f.a(var4, false, SimpleConditionBehaviour.field_q.toUpperCase(), NanoTickClock.field_h[3], -14671840, -1);
+        eda.field_f.a(var4, false, PlayerProfile.field_u.toUpperCase(), NanoTickClock.field_h[4], -14671840, -1);
+        eda.field_f.a(var4, false, ida.field_a.toUpperCase(), NanoTickClock.field_h[5], -14671840, -1);
         var5 = null;
         var6 = this.field_w;
         if (0 == var6) {

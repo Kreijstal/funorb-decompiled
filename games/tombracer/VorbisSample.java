@@ -150,7 +150,7 @@ final class VorbisSample extends IntrusiveNode {
         return new u(this.field_s, var12, this.field_J, this.field_f, this.field_A);
     }
 
-    final static VorbisSample a(cn param0, String param1, String param2) {
+    final static VorbisSample a(ResourceArchive param0, String param1, String param2) {
         try {
           VorbisSample var4_ref = null;
           if (!VorbisSample.a(param0)) {
@@ -355,7 +355,7 @@ final class VorbisSample extends IntrusiveNode {
         return var0;
     }
 
-    final static VorbisSample a(cn param0, int param1, int param2) {
+    final static VorbisSample a(ResourceArchive param0, int param1, int param2) {
         try {
           VorbisSample var4_ref = null;
           if (!VorbisSample.a(param0)) {
@@ -380,7 +380,7 @@ final class VorbisSample extends IntrusiveNode {
         }
     }
 
-    private final static boolean a(cn param0) {
+    private final static boolean a(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_j) {
           var1 = param0.a(false, 0, 0);

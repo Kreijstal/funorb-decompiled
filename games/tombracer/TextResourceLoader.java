@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class TextResourceLoader extends eta {
-    static jpa field_b;
+    static SpriteData field_b;
 
-    final static void loadStrings(byte param0, cn param1) {
+    final static void loadStrings(byte param0, ResourceArchive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2620_0;
             StringBuilder stackIn_2620_1;
@@ -15,9 +15,9 @@ final class TextResourceLoader extends eta {
             RuntimeException var2_ref;
             int var3;
             byte param0;
-            cn param1;
+            ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(byte initialParam0, cn initialParam1) {
+            $CfrPartitionedBody(byte initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2620_0 = null;
@@ -69,7 +69,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -19, "create_unable");
                 if (null != var2) {
-                  qda.field_f = jaa.a((byte) 98, var2);
+                  ArchiveNetworkClient.field_f = jaa.a((byte) 98, var2);
                 }
                 var2 = dn.a((byte) -52, "create_ineligible");
                 if (null != var2) {
@@ -501,7 +501,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 110, "rated_game_tips_setup_plural");
                 if (null != var2) {
-                  cn.field_c = jaa.a((byte) 71, var2);
+                  ResourceArchive.field_c = jaa.a((byte) 71, var2);
                 }
                 var2 = dn.a((byte) 105, "waiting_to_start_hint");
                 if (var2 != null) {
@@ -537,7 +537,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -47, "players_x_of_y");
                 if (var2 != null) {
-                  tra.field_A = jaa.a((byte) 96, var2);
+                  TextInputWidget.field_A = jaa.a((byte) 96, var2);
                 }
                 var2 = dn.a((byte) -57, "message_lobby");
                 if (var2 != null) {
@@ -809,7 +809,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 112, "gameopt_playerneedsrating");
                 if (null != var2) {
-                  gv.field_r = jaa.a((byte) 79, var2);
+                  SocketArchiveNetworkClient.field_r = jaa.a((byte) 79, var2);
                 }
                 var2 = dn.a((byte) -71, "gameopt_youneedrating");
                 if (null != var2) {
@@ -845,7 +845,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -98, "gameopt_trychanging2");
                 if (var2 != null) {
-                  qda.field_l = jaa.a((byte) 120, var2);
+                  ArchiveNetworkClient.field_l = jaa.a((byte) 120, var2);
                 }
                 var2 = dn.a((byte) 107, "gameopt_needchanging1");
                 if (null != var2) {
@@ -971,7 +971,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 112, "rule_1_3");
                 if (null != var2) {
-                  tq.field_b = jaa.a((byte) 43, var2);
+                  GrowableIntList.field_b = jaa.a((byte) 43, var2);
                 }
                 var2 = dn.a((byte) -51, "rule_1_4");
                 if (null != var2) {
@@ -1115,7 +1115,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -22, "invalidpass");
                 if (null != var2) {
-                  nda.field_d = jaa.a((byte) 38, var2);
+                  SoundCache.field_d = jaa.a((byte) 38, var2);
                 }
                 var2 = dn.a((byte) 118, "retry");
                 if (null != var2) {
@@ -2009,7 +2009,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 106, "endgame");
                 if (null != var2) {
-                  cn.field_e = jaa.a((byte) 45, var2);
+                  ResourceArchive.field_e = jaa.a((byte) 45, var2);
                 }
                 var2 = dn.a((byte) -102, "endtutorial");
                 if (var2 != null) {
@@ -2069,7 +2069,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -95, "canceldraw");
                 if (var2 != null) {
-                  pc.field_g = jaa.a((byte) 120, var2);
+                  BeamSegment.field_g = jaa.a((byte) 120, var2);
                 }
                 var2 = dn.a((byte) 123, "acceptdraw");
                 if (var2 != null) {
@@ -2125,7 +2125,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -93, "graphics_quality_low");
                 if (var2 != null) {
-                  cn.field_f = jaa.a((byte) 69, var2);
+                  ResourceArchive.field_f = jaa.a((byte) 69, var2);
                 }
                 var2 = dn.a((byte) -97, "graphics_mode");
                 if (var2 != null) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class es extends ip {
+final class NanoTickClock extends GameClock {
     private long field_e;
     private long[] field_i;
     static int[] field_h;
@@ -10,17 +10,17 @@ final class es extends ip {
     private long field_f;
     private long field_d;
 
-    final void a(int param0) {
+    final void resetTiming(int param0) {
         if (this.field_d < this.field_f) {
           this.field_d = this.field_d + (-this.field_d + this.field_f);
         }
         this.field_e = 0L;
         if (param0 <= 100) {
-          es.a(false);
+          NanoTickClock.a(false);
         }
     }
 
-    final int a(long param0, int param1) {
+    final int advanceTicks(long param0, int param1) {
         int var4;
         int var5;
         var5 = TombRacer.field_G ? 1 : 0;
@@ -48,7 +48,7 @@ final class es extends ip {
     final long a(byte param0) {
         this.field_d = this.field_d + this.d(-97);
         if (param0 < 27) {
-          es.a(false);
+          NanoTickClock.a(false);
         }
         if (this.field_f > this.field_d) {
           return (-this.field_d + this.field_f) / 1000000L;
@@ -113,7 +113,7 @@ final class es extends ip {
         return var2;
     }
 
-    es() {
+    NanoTickClock() {
         this.field_g = 0;
         this.field_i = new long[10];
         this.field_e = 0L;

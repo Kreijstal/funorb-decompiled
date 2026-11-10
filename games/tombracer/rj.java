@@ -195,15 +195,15 @@ class rj extends UiWidget {
         sda var4_ref_sda = null;
         Object var5 = null;
         int var6 = 0;
-        cn var7 = null;
+        ResourceArchive var7 = null;
         mm var10 = null;
         BitPacketBuffer var11 = null;
         byte[] var15 = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           if (param0 != 4) {
-            var7 = (cn) null;
-            rj.a((cn) null, 5, -25, (byte) 14);
+            var7 = (ResourceArchive) null;
+            rj.a((ResourceArchive) null, 5, -25, (byte) 14);
           }
           var11 = vc.field_q;
           var2 = var11.readUnsignedByte(255);
@@ -263,7 +263,7 @@ class rj extends UiWidget {
         this.field_r = afa.field_c.field_v;
     }
 
-    final static Sprite[] a(cn param0, int param1, int param2, byte param3) {
+    final static Sprite[] a(ResourceArchive param0, int param1, int param2, byte param3) {
         RuntimeException var4 = null;
         Sprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;

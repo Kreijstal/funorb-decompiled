@@ -16,7 +16,7 @@ final class kc {
         var3 = TombRacer.field_G ? 1 : 0;
         try {
           var1_int = 0;
-          while (es.a(true)) {
+          while (NanoTickClock.a(true)) {
             lp.field_h.c(18);
             if (!lp.field_h.a(false)) {
               continue;

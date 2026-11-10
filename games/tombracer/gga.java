@@ -3,7 +3,7 @@
  */
 final class gga extends ofa implements tsa {
     private rj field_N;
-    static jpa[] field_O;
+    static SpriteData[] field_O;
     static ur field_M;
     static String field_L;
 

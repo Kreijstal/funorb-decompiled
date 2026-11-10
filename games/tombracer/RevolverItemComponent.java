@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class RevolverItemComponent extends ItemComponent {
-    static cn field_H;
+    static ResourceArchive field_H;
     static String field_G;
     static ka[] field_J;
     static String field_I;

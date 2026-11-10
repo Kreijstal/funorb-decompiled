@@ -5,7 +5,7 @@ final class pea {
     static fp field_c;
     static String field_f;
     private DualLinkNode field_d;
-    private ji field_e;
+    private NodeHashTable field_e;
     private vj field_a;
     private int field_b;
 
@@ -82,7 +82,7 @@ final class pea {
               var5.unlinkSecondary(-7975);
             }
           }
-          this.field_e.a(param2, 126, param0);
+          this.field_e.put(param2, 126, param0);
           this.field_a.a(param0, (byte) -77);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pea.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -96,7 +96,7 @@ final class pea {
         this.field_b = param0;
         for (var2 = 1; param0 > var2 + var2; var2 = var2 + var2) {
         }
-        this.field_e = new ji(var2);
+        this.field_e = new NodeHashTable(var2);
     }
 
     static {

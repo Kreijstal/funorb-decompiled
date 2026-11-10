@@ -68,7 +68,7 @@ final class jba extends kca {
         }
     }
 
-    jba(tra param0) {
+    jba(TextInputWidget param0) {
         super(param0);
     }
 

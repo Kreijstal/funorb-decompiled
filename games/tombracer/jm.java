@@ -4,9 +4,9 @@
 final class jm extends kca {
     static int field_m;
     static int field_n;
-    private tra field_j;
+    private TextInputWidget field_j;
     static int field_l;
-    private tra field_o;
+    private TextInputWidget field_o;
     static String[] field_k;
 
     final static void b(byte param0) {
@@ -175,7 +175,7 @@ final class jm extends kca {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -33) {
-            this.field_j = (tra) null;
+            this.field_j = (TextInputWidget) null;
           }
           var3 = this.field_j.field_o.toLowerCase();
           var4 = param1.toLowerCase();
@@ -240,7 +240,7 @@ final class jm extends kca {
             stackIn_5_0 = dva.field_a;
             return stackIn_5_0;
           }
-          if (qda.a((byte) -72, var5)) {
+          if (ArchiveNetworkClient.a((byte) -72, var5)) {
             stackIn_8_0 = qqa.field_o;
             return stackIn_8_0;
           }
@@ -283,7 +283,7 @@ final class jm extends kca {
         }
     }
 
-    jm(tra param0, tra param1, tra param2) {
+    jm(TextInputWidget param0, TextInputWidget param1, TextInputWidget param2) {
         super(param0);
         try {
           this.field_o = param1;

@@ -9,13 +9,13 @@ final class nt {
     static int field_d;
     static int field_b;
 
-    final static cn a(int param0, int param1, int param2, boolean param3, boolean param4, boolean param5) {
+    final static ResourceArchive a(int param0, int param1, int param2, boolean param3, boolean param4, boolean param5) {
         try {
           Object var6 = null;
           Object var7 = null;
-          js var8 = null;
+          CachedArchiveSource var8 = null;
           java.applet.Applet var9 = null;
-          cn stackIn_14_0 = null;
+          ResourceArchive stackIn_14_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             var6 = null;
@@ -43,7 +43,7 @@ final class nt {
             if (param3) {
               var8.a((byte) 115);
             }
-            stackIn_14_0 = new cn(var8, param5, param1);
+            stackIn_14_0 = new ResourceArchive(var8, param5, param1);
             return stackIn_14_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

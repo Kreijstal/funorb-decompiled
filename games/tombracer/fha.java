@@ -9,14 +9,14 @@ final class fha {
         int var1 = -23 % ((param0 - 77) / 44);
     }
 
-    final static void a(boolean param0, cn param1, cn param2, cn param3) {
+    final static void a(boolean param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3) {
         Sprite var17 = null;
-        hja[] var5 = null;
-        hja[][] var6 = null;
+        IndexedSprite[] var5 = null;
+        IndexedSprite[][] var6 = null;
         int[][] var19 = null;
         int[][] var16 = null;
         int[][] var7 = null;
-        hja[] var14 = null;
+        IndexedSprite[] var14 = null;
         int var11_int = 0;
         Sprite var15 = null;
         Sprite var18 = null;
@@ -42,10 +42,10 @@ final class fha {
           var17 = new Sprite(param3.a("button.gif", (byte) 118, ""), (java.awt.Component) ((Object) nma.field_l));
           uv.a("dropdown", param2, "commonui", 8864);
           var5 = tw.a((byte) 127, "screen_options", "commonui", param2);
-          ita.field_e = new hja[4];
-          rra.field_a = new hja[4];
-          ie.field_f = new hja[4];
-          var6 = new hja[][]{ie.field_f, rra.field_a, ita.field_e};
+          ita.field_e = new IndexedSprite[4];
+          rra.field_a = new IndexedSprite[4];
+          ie.field_f = new IndexedSprite[4];
+          var6 = new IndexedSprite[][]{ie.field_f, rra.field_a, ita.field_e};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;
@@ -59,7 +59,7 @@ final class fha {
           var19[3][var8Lifetime1] = 4767999;
           for (var9 = 0; var9 < 3; var9++) {
             var14 = var6[var9];
-            hja[] var10 = var14;
+            IndexedSprite[] var10 = var14;
             for (var11_int = 0; var11_int < var14.length; var11_int++) {
               var14[var11_int] = Corpse.a(21938, var19[var11_int], var5[var9]);
             }

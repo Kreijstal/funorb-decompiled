@@ -406,7 +406,7 @@ final class di {
         }
     }
 
-    private di(cn param0, cn param1, d param2, PlatformTaskDispatcher param3, ei[] param4) {
+    private di(ResourceArchive param0, ResourceArchive param1, d param2, PlatformTaskDispatcher param3, ei[] param4) {
         this.field_e = false;
         try {
           this.field_c = param2;

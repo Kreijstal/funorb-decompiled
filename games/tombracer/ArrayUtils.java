@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lua {
-    final static void a(int[] param0, int param1, int param2) {
+final class ArrayUtils {
+    final static void clear(int[] param0, int param1, int param2) {
         param2 = param1 + param2 - 7;
         while (param1 < param2) {
           param0[param1++] = 0;
@@ -20,7 +20,7 @@ final class lua {
         }
     }
 
-    final static void a(float[] param0, int param1, float[] param2, int param3, int param4) {
+    final static void copy(float[] param0, int param1, float[] param2, int param3, int param4) {
         if (param0 != param2) {
           param4 = param4 + param1;
           param4 -= 7;
@@ -102,7 +102,7 @@ final class lua {
         }
     }
 
-    final static void a(int[] param0, int param1, int[] param2, int param3, int param4) {
+    final static void copy(int[] param0, int param1, int[] param2, int param3, int param4) {
         if (param0 != param2) {
           param4 = param4 + param1;
           param4 -= 7;
@@ -184,7 +184,7 @@ final class lua {
         }
     }
 
-    final static void a(byte[] param0, int param1, byte[] param2, int param3, int param4) {
+    final static void copy(byte[] param0, int param1, byte[] param2, int param3, int param4) {
         if (param0 != param2) {
           param4 = param4 + param1;
           param4 -= 7;
@@ -266,7 +266,7 @@ final class lua {
         }
     }
 
-    final static void a(short[] param0, int param1, short[] param2, int param3, int param4) {
+    final static void copy(short[] param0, int param1, short[] param2, int param3, int param4) {
         if (param0 != param2) {
           param4 = param4 + param1;
           param4 -= 7;
@@ -348,7 +348,7 @@ final class lua {
         }
     }
 
-    final static void a(int[] param0, int param1, int param2, int param3) {
+    final static void fill(int[] param0, int param1, int param2, int param3) {
         param2 = param1 + param2 - 7;
         while (param1 < param2) {
           param0[param1++] = param3;
@@ -366,7 +366,7 @@ final class lua {
         }
     }
 
-    final static void a(Object[] param0, int param1, Object[] param2, int param3, int param4) {
+    final static void copy(Object[] param0, int param1, Object[] param2, int param3, int param4) {
         if (param0 != param2) {
           param4 = param4 + param1;
           param4 -= 7;

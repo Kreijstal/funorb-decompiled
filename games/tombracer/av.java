@@ -71,7 +71,7 @@ final class av {
           joa.field_a = param7;
           ko.field_d = param8;
           du.field_d = param6;
-          wg.field_l = (qda) ((Object) new gv());
+          wg.field_l = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
           Projectile.field_k = new ss(param1);
           IntrusiveDequeCursor.field_a = new fma(wg.field_l, Projectile.field_k);
         } catch (RuntimeException runtimeException) {
@@ -272,7 +272,7 @@ final class av {
         if (param1 != 0) {
           av.a(96, 11);
         }
-        return null != WhiteLightSensorComponent.field_K ? (ht) (WhiteLightSensorComponent.field_K.a(-122, (long)param0)) : null;
+        return null != WhiteLightSensorComponent.field_K ? (ht) (WhiteLightSensorComponent.field_K.get(-122, (long)param0)) : null;
     }
 
     private final boolean b(int param0, int param1, int param2) {

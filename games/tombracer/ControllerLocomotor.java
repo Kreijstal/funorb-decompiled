@@ -11,7 +11,7 @@ final class ControllerLocomotor extends Locomotor {
     private int field_s;
     static oc[] field_p;
     static String field_o;
-    static cn field_v;
+    static ResourceArchive field_v;
 
     final void tick(byte param0) {
         if (this.field_u.length == 0 ||

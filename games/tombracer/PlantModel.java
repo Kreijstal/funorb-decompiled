@@ -221,7 +221,7 @@ final class PlantModel extends TrapModel {
           }
           var5 = (bb) (mg.field_b.first(-80));
           while (var5 != null) {
-            pc.a(param0, param1, var5);
+            BeamSegment.a(param0, param1, var5);
             var5 = (bb) (mg.field_b.next(122));
           }
           return;

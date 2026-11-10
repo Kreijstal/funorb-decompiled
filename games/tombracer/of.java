@@ -4,9 +4,9 @@
 class of {
     static String field_a;
 
-    final static cn a(boolean param0, int param1) {
+    final static ResourceArchive a(boolean param0, int param1) {
         if (param0) {
-          return (cn) null;
+          return (ResourceArchive) null;
         }
         if (ck.field_a != null) {
           return ck.field_a;

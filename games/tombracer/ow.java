@@ -202,7 +202,7 @@ final class ow extends wv {
         }
         int var4 = SecondaryNodeDequeIterator.field_a.field_k.field_b;
         if (1 == (1 & var4 >> SecondaryNodeDequeIterator.field_a.field_x)) {
-          this.field_m[1].field_e = pc.field_g.toUpperCase();
+          this.field_m[1].field_e = BeamSegment.field_g.toUpperCase();
           return;
         }
         if (var4 == 0) {

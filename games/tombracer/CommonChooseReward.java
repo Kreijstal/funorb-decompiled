@@ -163,7 +163,7 @@ final class CommonChooseReward implements dv {
         return this.finished;
     }
 
-    final static cn e(int param0) {
+    final static ResourceArchive e(int param0) {
         if (param0 != -1) {
           CommonChooseReward.e(11);
           return of.a(false, gga.field_M.field_c);

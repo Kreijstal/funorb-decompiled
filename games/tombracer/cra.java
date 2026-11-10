@@ -85,11 +85,11 @@ final class cra {
         return (((24 & param2) != 0 ? 1 : 0) | (544 == (544 & param2) ? 1 : 0)) != 0;
     }
 
-    final static void a(cn param0, cn param1, int param2, boolean param3, cn param4) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, int param2, boolean param3, ResourceArchive param4) {
         try {
           if (param2 != 1) {
-            cn var6 = (cn) null;
-            cra.a((cn) null, (cn) null, -57, true, (cn) null);
+            ResourceArchive var6 = (ResourceArchive) null;
+            cra.a((ResourceArchive) null, (ResourceArchive) null, -57, true, (ResourceArchive) null);
           }
           gva.field_b = ai.a((byte) 121, "");
           gva.field_b.a(-71, false);

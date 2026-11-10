@@ -240,7 +240,7 @@ final class aia extends IntrusiveNode {
             this.field_w = 0;
             this.field_g = this.field_g + 1;
           }
-          stackIn_9_0 = (param4.g(false) < 196608) ? 0 : 1;
+          stackIn_9_0 = (param4.getMoveSpeed(false) < 196608) ? 0 : 1;
           var6_int = stackIn_9_0;
           if (param1) {
             stackIn_13_0 = (15 > this.field_g) ? 0 : 1;
@@ -401,7 +401,7 @@ final class aia extends IntrusiveNode {
           if (param0 != -196609) {
             this.field_r = 31;
           }
-          stackIn_3_0 = io.a(param1.getWidth(-28) / 2, this.field_r + param2, (byte) -63, param1.getHeight((byte) 55) / 2, this.field_n + param3, param1.getY(9648), this.field_q / 2, this.field_q / 2, param1.getX(3));
+          stackIn_3_0 = io.centredBoxesOverlap(param1.getWidth(-28) / 2, this.field_r + param2, (byte) -63, param1.getHeight((byte) 55) / 2, this.field_n + param3, param1.getY(9648), this.field_q / 2, this.field_q / 2, param1.getX(3));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

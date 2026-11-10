@@ -12,11 +12,11 @@ final class SnakePitModel extends TrapModel {
     private int field_u;
     static byte[] field_n;
 
-    final static kg a(cn param0, cn param1, boolean param2, String param3, String param4) {
+    final static AntialiasedBitmapFont a(ResourceArchive param0, ResourceArchive param1, boolean param2, String param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        kg stackIn_3_0 = null;
+        AntialiasedBitmapFont stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -480,7 +480,7 @@ final class SnakePitModel extends TrapModel {
         if (var4 == null) {
           return;
         }
-        if (var3.a((byte) 110, var4.getY(param0 ^ -9649), var4.getX(3), var4.getHeight((byte) 55), var4.getWidth(-30))) {
+        if (var3.intersectsRect((byte) 110, var4.getY(param0 ^ -9649), var4.getX(3), var4.getHeight((byte) 55), var4.getWidth(-30))) {
           var5 = var4.n((byte) -98);
           if (var5 == null) {
             return;

@@ -4,7 +4,7 @@
 final class InvisibleTouchSwitchComponent extends SwitchComponent {
     static int field_L;
     static Sprite[] field_K;
-    static cn field_J;
+    static ResourceArchive field_J;
 
     final boolean n(byte param0) {
         if (param0 != -122) {

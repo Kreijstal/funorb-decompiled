@@ -59,7 +59,7 @@ final class PressureSwitchComponent extends SwitchComponent {
             return;
           }
           if (var8 != null) {
-            qda.field_b = var8;
+            ArchiveNetworkClient.field_b = var8;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -226,7 +226,7 @@ final class PressureSwitchComponent extends SwitchComponent {
     final static GraphicsToolkit a(int param0, java.awt.Canvas param1, int param2, byte param3, d param4) {
         RuntimeException var5 = null;
         GraphicsToolkit stackIn_2_0 = null;
-        oa stackIn_4_0 = null;
+        NativeSoftwareGraphicsToolkit stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -235,7 +235,7 @@ final class PressureSwitchComponent extends SwitchComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 == -62) {
-            stackIn_4_0 = new oa(param1, param4, param2, param0);
+            stackIn_4_0 = new NativeSoftwareGraphicsToolkit(param1, param4, param2, param0);
             return (GraphicsToolkit) ((Object) stackIn_4_0);
           }
           stackIn_2_0 = (GraphicsToolkit) null;

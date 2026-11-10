@@ -137,7 +137,7 @@ final class bk extends ci {
             var8 = stackIn_8_0;
             var8 = var8 >> 4 & 255;
             var9 = BufferedSocket.a(ns.field_g, var6, 44);
-            var10 = BufferedSocket.a(qda.field_i, var6, -127);
+            var10 = BufferedSocket.a(ArchiveNetworkClient.field_i, var6, -127);
             var11 = (this.field_o * lm.field_r[var8] >> 12) + var9;
             var12 = var10 + (ou.field_e[var8] * this.field_o >> 12);
             var13 = var12 - var10;

@@ -8,9 +8,9 @@ final class fma {
     private java.math.BigInteger field_e;
     static iw field_f;
     private ss field_c;
-    private qda field_h;
+    private ArchiveNetworkClient field_h;
     private PacketBuffer field_g;
-    private js[] field_i;
+    private CachedArchiveSource[] field_i;
 
     public static void releaseStatics(byte param0) {
         int var1 = 82 % ((-34 - param0) / 61);
@@ -81,7 +81,7 @@ final class fma {
                   throw new RuntimeException();
                 }
               }
-              this.field_i = new js[var3];
+              this.field_i = new CachedArchiveSource[var3];
               this.field_g = var10;
               return true;
             }
@@ -98,7 +98,7 @@ final class fma {
               throw new RuntimeException();
             }
           }
-          this.field_i = new js[var3];
+          this.field_i = new CachedArchiveSource[var3];
           this.field_g = var10;
           return true;
         }
@@ -122,7 +122,7 @@ final class fma {
               throw new RuntimeException();
             }
           }
-          this.field_i = new js[var3Lifetime1];
+          this.field_i = new CachedArchiveSource[var3Lifetime1];
           this.field_g = var10;
           return true;
         }
@@ -142,19 +142,19 @@ final class fma {
             throw new RuntimeException();
           }
         }
-        this.field_i = new js[var3Lifetime1];
+        this.field_i = new CachedArchiveSource[var3Lifetime1];
         this.field_g = var10;
         return true;
     }
 
-    final js a(ppa param0, int param1, ppa param2, boolean param3, int param4) {
+    final CachedArchiveSource a(ppa param0, int param1, ppa param2, boolean param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        js var9 = null;
+        CachedArchiveSource var9 = null;
         byte[] var13 = null;
-        js stackIn_10_0 = null;
-        js stackIn_14_0 = null;
+        CachedArchiveSource stackIn_10_0 = null;
+        CachedArchiveSource stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -179,7 +179,7 @@ final class fma {
             var7 = this.field_g.readInt(-88);
             var13 = new byte[64];
             this.field_g.readBytes(var13, 0, -107, 64);
-            var9 = new js(param1, param0, param2, this.field_h, this.field_c, var6_int, var13, var7, param3);
+            var9 = new CachedArchiveSource(param1, param0, param2, this.field_h, this.field_c, var6_int, var13, var7, param3);
             this.field_i[param1] = var9;
             stackIn_14_0 = var9;
             return stackIn_14_0;
@@ -223,22 +223,22 @@ final class fma {
         var2Lifetime1 = var4;
         while (this.field_i.length > var4) {
           if (this.field_i[var4] != null) {
-            this.field_i[var4].b(1000);
+            this.field_i[var4].maintainGroups(1000);
           }
           var4++;
         }
         if (param0 < -106) {
           return;
         }
-        this.field_h = (qda) null;
+        this.field_h = (ArchiveNetworkClient) null;
         return;
     }
 
-    fma(qda param0, ss param1) {
+    fma(ArchiveNetworkClient param0, ss param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    private fma(qda param0, ss param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private fma(ArchiveNetworkClient param0, ss param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

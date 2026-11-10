@@ -180,7 +180,7 @@ final class BlockModel extends TrapModel {
         Behaviour var7;
         Behaviour var8_ref_nv;
         int var8;
-        pc var9;
+        BeamSegment var9;
         int var10;
         w var11;
         IntrusiveDeque var12;
@@ -190,7 +190,7 @@ final class BlockModel extends TrapModel {
         IntrusiveDeque var16;
         IntrusiveDequeCursor var17;
         int var8Lifetime1;
-        pc var9Lifetime1;
+        BeamSegment var9Lifetime1;
         var10 = TombRacer.field_G ? 1 : 0;
         var11 = (w) (this.a(111).field_G);
         if (var11 == null) {
@@ -254,9 +254,9 @@ final class BlockModel extends TrapModel {
               if (((BeamShooterBehaviour) (var7)).b(-98)) {
                 var8 = 1;
                 var9 = ((BeamShooterBehaviour) (var7)).c(param0 ^ -105);
-                while (var9.field_h != null) {
+                while (var9.nextSegment != null) {
                   if (4 > var8) {
-                    var9 = var9.field_h;
+                    var9 = var9.nextSegment;
                     var8++;
                     continue;
                   }
@@ -310,9 +310,9 @@ final class BlockModel extends TrapModel {
             }
             var8Lifetime1 = 1;
             var9Lifetime1 = ((BeamShooterBehaviour) (var7)).c(param0 ^ -110);
-            while (var9Lifetime1.field_h != null) {
+            while (var9Lifetime1.nextSegment != null) {
               if (var8Lifetime1 < 4) {
-                var9Lifetime1 = var9Lifetime1.field_h;
+                var9Lifetime1 = var9Lifetime1.nextSegment;
                 var8Lifetime1++;
                 continue;
               }

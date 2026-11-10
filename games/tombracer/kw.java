@@ -3,7 +3,7 @@
  */
 final class kw extends qe {
     private tla field_g;
-    static hea field_e;
+    static BinaryBitmapFont field_e;
     private uga field_d;
     private aaa field_c;
     private static String[] field_f;
@@ -179,7 +179,7 @@ final class kw extends qe {
           var4 = (var3 * param0 >> 12) + 40960;
           return var4 * var2 >> 12;
         }
-        field_e = (hea) null;
+        field_e = (BinaryBitmapFont) null;
         var2Lifetime1 = (param0 * param0 >> 12) * param0 >> 12;
         var3Lifetime1 = 6 * param0 - 61440;
         var4Lifetime1 = (var3Lifetime1 * param0 >> 12) + 40960;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hka {
-    static jpa field_c;
+    static SpriteData field_c;
     static lja field_b;
     static int field_a;
 

@@ -8,7 +8,7 @@ final class S2CRoundResultPacket implements GamePacket {
     private int[] totals;
     static String field_c;
     private int playerCount;
-    private int[][] field_i;
+    private int[][] treasure;
     private int[] field_a;
     static String field_e;
     private int[] field_h;
@@ -39,7 +39,7 @@ final class S2CRoundResultPacket implements GamePacket {
           param1.writeBits((byte) 115, this.playerCount, 3);
           for (var3_int = 0; this.playerCount > var3_int; var3_int++) {
             for (var4 = 0; var4 < 3; var4++) {
-              param1.writeBits((byte) -128, this.field_i[var3_int][var4], 8);
+              param1.writeBits((byte) -128, this.treasure[var3_int][var4], 8);
             }
           }
           for (var3_intLifetime1 = 0; var3_intLifetime1 < this.playerCount; var3_intLifetime1++) {
@@ -98,10 +98,10 @@ final class S2CRoundResultPacket implements GamePacket {
         try {
           param0.beginBitAccess((byte) -71);
           this.playerCount = param0.readBits((byte) 44, 3);
-          this.field_i = new int[this.playerCount][3];
+          this.treasure = new int[this.playerCount][3];
           for (var3_int = 0; this.playerCount > var3_int; var3_int++) {
             for (var4 = 0; var4 < 3; var4++) {
-              this.field_i[var3_int][var4] = param0.readBits((byte) 44, 8);
+              this.treasure[var3_int][var4] = param0.readBits((byte) 44, 8);
             }
           }
           if (param1 != -19) {
@@ -178,7 +178,7 @@ final class S2CRoundResultPacket implements GamePacket {
         }
     }
 
-    final void a(qh param0, int param1) {
+    final void apply(qh param0, int param1) {
         MatchState var8 = null;
         int var4 = 0;
         Player var5 = null;
@@ -189,14 +189,14 @@ final class S2CRoundResultPacket implements GamePacket {
           for (var4 = param1; var8.players.length > var4; var4++) {
             var5 = var8.players[var4];
             for (var6 = 0; 3 > var6; var6++) {
-              var5.a(true, var6, this.field_i[var4][var6]);
+              var5.setTreasure(true, var6, this.treasure[var4][var6]);
             }
-            var5.a((byte) 126, this.totals[var4]);
+            var5.setTotal((byte) 126, this.totals[var4]);
             var5.b(18202625, this.field_a[var4]);
             var5.f(this.field_h[var4], -25915);
           }
           param0.field_k.field_E = this.field_j;
-          param0.a((byte) 101, this.field_i, this.winner);
+          param0.a((byte) 101, this.treasure, this.winner);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "cf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -206,7 +206,7 @@ final class S2CRoundResultPacket implements GamePacket {
         this.playerCount = param0;
         this.field_a = new int[this.playerCount];
         this.field_h = new int[this.playerCount];
-        this.field_i = new int[this.playerCount][3];
+        this.treasure = new int[this.playerCount][3];
         this.totals = new int[this.playerCount];
     }
 

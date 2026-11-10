@@ -45,7 +45,7 @@ final class gu extends me {
             } else {
               var11 = var4;
             }
-            var12 = this.field_g.players[var10].e(false);
+            var12 = this.field_g.players[var10].getTotal(false);
             var13 = this.field_g.players[var10].j(false);
             var14 = var13 + var12;
             oka.a(rka.a(1 + var9, 114) + "  " + this.field_i.a(var10, false) + "  " + PrimMazeGenerator.field_c + ": " + var14 + " (" + var12 + "+" + var13 + ")", var11, kn.field_p, -1, var8 + var9 * var5, this.field_m, 0);

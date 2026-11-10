@@ -319,7 +319,7 @@ final class bma extends ci {
               }
             }
           } else {
-            lua.a(var19, 0, ns.field_g, 0);
+            ArrayUtils.fill(var19, 0, ns.field_g, 0);
           }
         }
         return var3;

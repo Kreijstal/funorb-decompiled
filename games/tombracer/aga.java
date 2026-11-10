@@ -245,7 +245,7 @@ final class aga {
             ItemBehaviour.b(2);
           }
           this.a(param4, param3, param0, param6, 512, param2, param5);
-          var9_int = (-SweepRotateLocomotor.field_q + 2 * param6 >> cn.field_b) + 1;
+          var9_int = (-SweepRotateLocomotor.field_q + 2 * param6 >> ResourceArchive.field_b) + 1;
           this.field_b = new short[var9_int];
           for (var10 = 0; var10 < this.field_b.length; var10++) {
             this.field_b[var10] = (short)var9_int;

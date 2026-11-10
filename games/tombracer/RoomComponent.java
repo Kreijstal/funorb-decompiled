@@ -95,7 +95,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         re.a(-29040);
     }
 
-    public final boolean a(int param0, boolean param1, int param2, int param3, int param4, int param5) {
+    public final boolean tryPush(int param0, boolean param1, int param2, int param3, int param4, int param5) {
         if (param0 < 68) {
           this.i((byte) -75);
           return false;
@@ -268,11 +268,11 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         return this.field_l;
     }
 
-    public final boolean a(byte param0, int param1, int param2, int param3, int param4) {
+    public final boolean intersectsRect(byte param0, int param1, int param2, int param3, int param4) {
         if (param0 != 110) {
           this.field_s = (SwitchableId) null;
         }
-        return io.a(param4, this.getY(9648), (byte) -62, param3, this.getX(3), param1, this.field_k, this.field_l, param2);
+        return io.centredBoxesOverlap(param4, this.getY(9648), (byte) -62, param3, this.getX(3), param1, this.field_k, this.field_l, param2);
     }
 
     void a(Room param0, int param1) {
@@ -321,7 +321,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
 
     public final void f(int param0) {
         if (param0 != -4366) {
-          this.a((byte) -31, 116, -25, -38, 120);
+          this.intersectsRect((byte) -31, 116, -25, -38, 120);
         }
     }
 
@@ -798,7 +798,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
             param1.writeBits((byte) -127, this.field_k / 2097152, 6);
           }
           if (this.n((byte) -122)) {
-            param1.writeBits((byte) 8, cn.a((byte) 103, this.field_r, 8192, 4), 4);
+            param1.writeBits((byte) 8, ResourceArchive.a((byte) 103, this.field_r, 8192, 4), 4);
           }
           if (this.a(6)) {
             stackIn_12_0 = (BitPacketBuffer) (param1);

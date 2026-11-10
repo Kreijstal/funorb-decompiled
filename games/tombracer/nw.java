@@ -205,7 +205,7 @@ final class nw extends ci {
           var5 = var4 >> 12;
           var6 = var5 + 1;
           for (var14 = 0; var14 < ns.field_g; var14++) {
-            js.field_l = 2147483647;
+            CachedArchiveSource.field_l = 2147483647;
             rp.field_h = 2147483647;
             te.field_b = 2147483647;
             kca.field_h = 2147483647;
@@ -299,23 +299,23 @@ final class nw extends ci {
                   var11 = var9 * var9 + var10 * var10 >> 12;
                 }
                 if (var11 < kca.field_h) {
-                  rp.field_h = js.field_l;
-                  js.field_l = te.field_b;
+                  rp.field_h = CachedArchiveSource.field_l;
+                  CachedArchiveSource.field_l = te.field_b;
                   te.field_b = kca.field_h;
                   kca.field_h = var11;
                 } else {
                   if (var11 < te.field_b) {
-                    rp.field_h = js.field_l;
-                    js.field_l = te.field_b;
+                    rp.field_h = CachedArchiveSource.field_l;
+                    CachedArchiveSource.field_l = te.field_b;
                     te.field_b = var11;
                   } else {
-                    if (js.field_l <= var11) {
+                    if (CachedArchiveSource.field_l <= var11) {
                       if (rp.field_h > var11) {
                         rp.field_h = var11;
                       }
                     } else {
-                      rp.field_h = js.field_l;
-                      js.field_l = var11;
+                      rp.field_h = CachedArchiveSource.field_l;
+                      CachedArchiveSource.field_l = var11;
                     }
                   }
                 }
@@ -327,7 +327,7 @@ final class nw extends ci {
             } else {
               if (1 != var18Lifetime1) {
                 if (var18Lifetime1 == 3) {
-                  var3[var14] = js.field_l;
+                  var3[var14] = CachedArchiveSource.field_l;
                 } else {
                   if (var18Lifetime1 != 4) {
                     if (2 == var18Lifetime1) {
@@ -428,7 +428,7 @@ final class nw extends ci {
         this.c(-94);
     }
 
-    final static GraphicsToolkit a(int param0, int param1, d param2, int param3, cn param4, java.awt.Canvas param5) {
+    final static GraphicsToolkit a(int param0, int param1, d param2, int param3, ResourceArchive param4, java.awt.Canvas param5) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;

@@ -4,7 +4,7 @@
 final class MovingPlatformComponent extends PathMoverComponent {
     static String field_P;
     private int field_M;
-    static jpa[] field_O;
+    static SpriteData[] field_O;
     static int field_N;
 
     final boolean z(int param0) {

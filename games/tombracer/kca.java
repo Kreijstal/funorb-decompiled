@@ -4,7 +4,7 @@
 abstract class kca extends kma implements cd {
     static int field_h;
     static int field_g;
-    private tra field_i;
+    private TextInputWidget field_i;
     static int field_f;
 
     abstract it a(byte param0, String param1);
@@ -36,18 +36,18 @@ abstract class kca extends kma implements cd {
         return true;
     }
 
-    public final void a(int param0, tra param1) {
+    public final void a(int param0, TextInputWidget param1) {
         try {
           if (param0 != -6038) {
-            tra var4 = (tra) null;
-            this.a(46, (tra) null);
+            TextInputWidget var4 = (TextInputWidget) null;
+            this.a(46, (TextInputWidget) null);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "kca.KA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final void a(tra param0, int param1) {
+    public final void a(TextInputWidget param0, int param1) {
         if (param1 != -10) {
           return;
         }
@@ -58,7 +58,7 @@ abstract class kca extends kma implements cd {
         }
     }
 
-    kca(tra param0) {
+    kca(TextInputWidget param0) {
         try {
           this.field_i = param0;
         } catch (RuntimeException runtimeException) {

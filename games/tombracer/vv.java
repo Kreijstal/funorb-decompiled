@@ -64,7 +64,7 @@ final class vv extends wv {
         int var7 = kv.field_a.field_h + (kv.field_a.field_g + 4);
         if (param0 < -116) {
           var8 = var7 * 3;
-          var13 = aia.field_v + "<br>" + ConstrainToFacingArcLocomotor.a(ip.field_b, uma.field_c, 21297, pna.field_p);
+          var13 = aia.field_v + "<br>" + ConstrainToFacingArcLocomotor.a(GameClock.field_b, uma.field_c, 21297, pna.field_p);
           var10 = dfa.a('#', "<br>", var13, 0);
           var9 = var10;
           var9Lifetime3 = gl.$cfr$intArgs$a$53ce4ab4c593(85, var10, new String[]{wba.field_q[32]});
@@ -73,7 +73,7 @@ final class vv extends wv {
         }
         this.h(-40, -77);
         var8Lifetime1 = var7 * 3;
-        String var12 = aia.field_v + "<br>" + ConstrainToFacingArcLocomotor.a(ip.field_b, uma.field_c, 21297, pna.field_p);
+        String var12 = aia.field_v + "<br>" + ConstrainToFacingArcLocomotor.a(GameClock.field_b, uma.field_c, 21297, pna.field_p);
         var10Lifetime1 = dfa.a('#', "<br>", var12, 0);
         var9Lifetime1 = var10Lifetime1;
         var9Lifetime2 = gl.$cfr$intArgs$a$53ce4ab4c593(85, var10Lifetime1, new String[]{wba.field_q[32]});

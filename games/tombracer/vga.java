@@ -288,7 +288,7 @@ final class vga extends vpa {
             }
             return;
           }
-          lua.a(this.field_o, 0, param1.field_o, 0, 6);
+          ArrayUtils.copy(this.field_o, 0, param1.field_o, 0, 6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -89,7 +89,7 @@ final class pv extends ci {
               var7[var5] = var4[-var5 + una.field_b];
             }
           } else {
-            lua.a(var4, 0, var7, 0, ns.field_g);
+            ArrayUtils.copy(var4, 0, var7, 0, ns.field_g);
           }
         }
         return var3;

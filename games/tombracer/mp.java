@@ -4,7 +4,7 @@
 final class mp {
     static gb field_a;
     int[] field_c;
-    static jpa field_d;
+    static SpriteData field_d;
     static String field_b;
 
     final static void a(String param0, java.applet.Applet param1, int param2) {

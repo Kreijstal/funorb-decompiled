@@ -3,7 +3,7 @@
  */
 final class fm extends IntrusiveNode {
     static int field_m;
-    static jpa field_h;
+    static SpriteData field_h;
     static int field_j;
     private int field_g;
     private int field_i;
@@ -98,7 +98,7 @@ final class fm extends IntrusiveNode {
 
     final static int a(boolean param0, int param1) {
         if (param0) {
-          field_h = (jpa) null;
+          field_h = (SpriteData) null;
           return jg.a(255, (byte) -96, param1);
         }
         return jg.a(255, (byte) -96, param1);

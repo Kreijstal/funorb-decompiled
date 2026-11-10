@@ -8,7 +8,7 @@ final class nfa extends ci {
     static GameKeyHandler field_n;
     static boolean field_p;
 
-    final static void a(cn param0, String param1, boolean param2, int param3, cn param4, cn param5) {
+    final static void a(ResourceArchive param0, String param1, boolean param2, int param3, ResourceArchive param4, ResourceArchive param5) {
         sra var11 = null;
         String var12 = null;
         int incrementValue$0 = 0;
@@ -369,12 +369,12 @@ final class nfa extends ci {
         var3 = var17;
         if (this.field_h.field_f) {
           var5 = ns.field_g / this.field_m;
-          var6 = qda.field_i / this.field_o;
+          var6 = ArchiveNetworkClient.field_i / this.field_o;
           if (var6 <= 0) {
             var4 = this.a(0, 0, -1);
           } else {
             var7_int = param0 % var6;
-            var4 = this.a(var7_int * qda.field_i / var6, 0, param1 + 0);
+            var4 = this.a(var7_int * ArchiveNetworkClient.field_i / var6, 0, param1 + 0);
           }
           var7 = var4[0];
           var8 = var4[1];
@@ -417,12 +417,12 @@ final class nfa extends ci {
         var3 = this.field_i.a((byte) 78, param1);
         if (this.field_i.field_d) {
           var5 = ns.field_g / this.field_m;
-          var6 = qda.field_i / this.field_o;
+          var6 = ArchiveNetworkClient.field_i / this.field_o;
           if (var6 <= 0) {
             var4 = this.c(0, -84, 0);
           } else {
             var7 = param1 % var6;
-            var4 = this.c(0, -116, var7 * qda.field_i / var6);
+            var4 = this.c(0, -116, var7 * ArchiveNetworkClient.field_i / var6);
           }
           var10 = 0;
           var7Lifetime1 = var10;

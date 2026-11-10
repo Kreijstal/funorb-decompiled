@@ -17,7 +17,7 @@ final class ht extends jea {
     jea field_Hb;
     jea[] field_Ub;
     long field_Ab;
-    static jpa field_Db;
+    static SpriteData field_Db;
     jea field_wb;
     boolean field_Bb;
     jea field_ub;
@@ -172,7 +172,7 @@ final class ht extends jea {
         field_Db = null;
         field_Pb = null;
         if (param0 > -101) {
-          field_Db = (jpa) null;
+          field_Db = (SpriteData) null;
         }
     }
 
@@ -203,7 +203,7 @@ final class ht extends jea {
         int[] var8 = new int[rga.b(26499, param0)];
         int[] var2 = var8;
         if (!param1) {
-          field_Db = (jpa) null;
+          field_Db = (SpriteData) null;
         }
         int var3 = 0;
         g[] var4 = cm.field_a[param0].field_c;

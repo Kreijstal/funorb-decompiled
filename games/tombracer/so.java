@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class so extends tra implements mk {
+final class so extends TextInputWidget implements mk {
     static String field_J;
     private nua field_N;
     private int field_M;
@@ -91,8 +91,8 @@ final class so extends tra implements mk {
         return this.field_N;
     }
 
-    final void i(int param0) {
-        super.i(param0);
+    final void notifySubmitted(int param0) {
+        super.notifySubmitted(param0);
         if (null != this.field_N) {
           this.field_N.c(-74);
         }

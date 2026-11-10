@@ -3,7 +3,7 @@
  */
 class haa extends rj {
     static ToolkitSprite field_z;
-    static jpa field_A;
+    static SpriteData field_A;
     private UiWidget field_B;
     static int[][] field_C;
 
@@ -49,7 +49,7 @@ class haa extends rj {
           field_z = null;
           return;
         }
-        field_A = (jpa) null;
+        field_A = (SpriteData) null;
         field_C = (int[][]) null;
         field_A = null;
         field_z = null;

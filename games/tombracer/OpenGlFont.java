@@ -71,7 +71,7 @@ final class OpenGlFont extends GameFont {
         }
     }
 
-    OpenGlFont(OpenGlToolkit param0, qla param1, jpa[] param2, boolean param3) {
+    OpenGlFont(OpenGlToolkit param0, qla param1, SpriteData[] param2, boolean param3) {
         super(param0, param1);
         int incrementValue$3 = 0;
         int incrementValue$0 = 0;
@@ -112,14 +112,14 @@ final class OpenGlFont extends GameFont {
         int var20_int;
         float var20;
         int var21;
-        jpa var22;
-        jpa var23;
+        SpriteData var22;
+        SpriteData var23;
         byte[] var24;
-        jpa var25;
+        SpriteData var25;
         byte[] var26;
         byte[] var27;
         int[] var28;
-        jpa var29;
+        SpriteData var29;
         byte[] var30;
         byte[] var31;
         byte[] var32;

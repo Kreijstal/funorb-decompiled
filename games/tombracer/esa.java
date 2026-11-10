@@ -16,7 +16,7 @@ final class esa {
         return this.field_b;
     }
 
-    final static boolean a(cn param0, cn param1, int param2, cn param3) {
+    final static boolean a(ResourceArchive param0, ResourceArchive param1, int param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_17_0 = null;

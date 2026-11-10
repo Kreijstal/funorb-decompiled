@@ -3,7 +3,7 @@
  */
 final class qua extends IntrusiveNode {
     byte[] field_g;
-    ji field_f;
+    NodeHashTable field_f;
 
     final void b() {
         int[] var1;
@@ -34,7 +34,7 @@ final class qua extends IntrusiveNode {
         if (this.field_f != null) {
           return;
         }
-        this.field_f = new ji(16);
+        this.field_f = new NodeHashTable(16);
         var21 = new int[16];
         var18 = var21;
         var1 = var18;
@@ -95,7 +95,7 @@ final class qua extends IntrusiveNode {
                 if (var14 == null) {
                   var15 = new jk(new byte[128]);
                   var14 = var15;
-                  this.field_f.a((long)var13, 118, var15);
+                  this.field_f.put((long)var13, 118, var15);
                 }
                 var14.field_f[var11Lifetime2] = (byte) 1;
               }
@@ -110,7 +110,7 @@ final class qua extends IntrusiveNode {
         this.field_f = null;
     }
 
-    final static qua a(cn param0, String param1, String param2) {
+    final static qua a(ResourceArchive param0, String param1, String param2) {
         byte[] var3 = param0.a(param1, (byte) 114, param2);
         if (var3 == null) {
           return null;

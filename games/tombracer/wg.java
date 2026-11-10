@@ -3,7 +3,7 @@
  */
 final class wg extends tu {
     static String[] field_j;
-    static qda field_l;
+    static ArchiveNetworkClient field_l;
     static String[] field_m;
     static String field_k;
     static int field_i;

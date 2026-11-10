@@ -3,12 +3,12 @@
  */
 final class fe extends paa {
     static String[] gasDeathMessages;
-    private tra field_E;
+    private TextInputWidget field_E;
     static int[] field_C;
     static oj field_F;
-    private tra field_B;
+    private TextInputWidget field_B;
     private boolean field_G;
-    private tra field_D;
+    private TextInputWidget field_D;
 
     public static void releaseStatics(int param0) {
         if (param0 == 25) {
@@ -49,9 +49,9 @@ final class fe extends paa {
     private fe(isa param0, boolean param1) {
         super(0, 0, 0, 0, (isa) null);
         try {
-          this.field_B = (tra) ((Object) new so("", (qc) null, 2));
-          this.field_E = (tra) ((Object) new so("", (qc) null, 2));
-          this.field_D = (tra) ((Object) new so("", (qc) null, 4));
+          this.field_B = (TextInputWidget) ((Object) new so("", (qc) null, 2));
+          this.field_E = (TextInputWidget) ((Object) new so("", (qc) null, 2));
+          this.field_D = (TextInputWidget) ((Object) new so("", (qc) null, 4));
           this.field_G = param1 ? true : false;
           this.field_D.field_r = param0;
           this.field_E.field_r = param0;
@@ -113,7 +113,7 @@ final class fe extends paa {
     private final void a(int param0, int param1, UiWidget param2, int param3, String param4) {
         try {
           if (param0 > -25) {
-            this.field_B = (tra) null;
+            this.field_B = (TextInputWidget) null;
           }
           eka.field_o.a(param4, (param2.field_m >> 1) + (param2.field_i + param1), param3 + param2.field_n - 5, 16777215, -1);
         } catch (RuntimeException runtimeException) {

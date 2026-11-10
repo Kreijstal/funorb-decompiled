@@ -5,7 +5,7 @@ final class ie extends qu {
     private java.nio.ByteBuffer field_g;
     static int[] field_i;
     static jea field_h;
-    static hja[] field_f;
+    static IndexedSprite[] field_f;
 
     public static void releaseStatics(int param0) {
         field_i = null;
@@ -52,7 +52,7 @@ final class ie extends qu {
         if (param0 <= -103) {
           return var5;
         }
-        field_f = (hja[]) null;
+        field_f = (IndexedSprite[]) null;
         return var5;
     }
 

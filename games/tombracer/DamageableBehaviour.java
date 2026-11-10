@@ -180,7 +180,7 @@ final class DamageableBehaviour extends Behaviour {
         }
     }
 
-    final static hja a(boolean param0, int param1, cn param2, int param3) {
+    final static IndexedSprite a(boolean param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -311,8 +311,8 @@ final class DamageableBehaviour extends Behaviour {
 
     final static boolean a(int param0, int param1, int param2) {
         if (param0 >= -67) {
-          cn var4 = (cn) null;
-          DamageableBehaviour.a(true, -98, (cn) null, 106);
+          ResourceArchive var4 = (ResourceArchive) null;
+          DamageableBehaviour.a(true, -98, (ResourceArchive) null, 106);
           if (!(TripBeamComponent.c(param1, param2, 52) | ((param1 & 458752) != 0 ? true : false))) {
             return uu.a(true, param1, param2) ? true : false;
           }
@@ -327,7 +327,7 @@ final class DamageableBehaviour extends Behaviour {
         return true;
     }
 
-    final int a(int param0, Effect param1, pc param2) {
+    final int a(int param0, Effect param1, BeamSegment param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;

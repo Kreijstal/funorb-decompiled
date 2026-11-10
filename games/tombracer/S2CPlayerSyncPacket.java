@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uj implements GamePacket {
+final class S2CPlayerSyncPacket implements GamePacket {
     static String field_e;
     private int[] field_a;
     private int field_c;
@@ -35,7 +35,7 @@ final class uj implements GamePacket {
         }
     }
 
-    final void a(qh param0, v param1, byte param2) {
+    final void apply(qh param0, v param1, byte param2) {
         int stackIn_11_0 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -143,12 +143,12 @@ final class uj implements GamePacket {
         }
     }
 
-    final static hja[] a(int param0) {
+    final static IndexedSprite[] a(int param0) {
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
-        hja[] var1 = new hja[fa.field_b];
+        IndexedSprite[] var1 = new IndexedSprite[fa.field_b];
         for (var2 = param0; fa.field_b > var2; var2++) {
-          var1[var2] = new hja(ika.field_a, kba.field_s, ak.field_p[var2], pg.field_C[var2], mq.field_b[var2], iga.field_m[var2], ck.field_c[var2], mga.field_g);
+          var1[var2] = new IndexedSprite(ika.field_a, kba.field_s, ak.field_p[var2], pg.field_C[var2], mq.field_b[var2], iga.field_m[var2], ck.field_c[var2], mga.field_g);
         }
         MazeGenerator.a((byte) 106);
         return var1;
@@ -163,7 +163,7 @@ final class uj implements GamePacket {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 104) {
-            uj.a(-27);
+            S2CPlayerSyncPacket.a(-27);
           }
           stackIn_3_0 = qga.a(125, param1, 0, param1.length);
           return stackIn_3_0;
@@ -181,7 +181,7 @@ final class uj implements GamePacket {
         }
     }
 
-    uj(int param0) {
+    S2CPlayerSyncPacket(int param0) {
         this.field_g = new boolean[param0];
         this.field_b = new int[param0];
         this.field_c = param0;

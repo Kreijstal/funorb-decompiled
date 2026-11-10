@@ -101,10 +101,10 @@ final class gia extends ci {
         var12 = var13;
         var3 = var12;
         if (this.field_h.field_f) {
-          if (qda.field_i == this.field_p) {
+          if (ArchiveNetworkClient.field_i == this.field_p) {
             stackIn_6_0 = param0;
           } else {
-            stackIn_6_0 = this.field_p * param0 / qda.field_i;
+            stackIn_6_0 = this.field_p * param0 / ArchiveNetworkClient.field_i;
           }
           var4 = stackIn_6_0 * this.field_r;
           var5 = var14[0];

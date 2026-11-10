@@ -4,7 +4,7 @@
 interface WorldBody {
     public abstract boolean j(int param0);
 
-    public abstract boolean a(int param0, boolean param1, int param2, int param3, int param4, int param5);
+    public abstract boolean tryPush(int param0, boolean param1, int param2, int param3, int param4, int param5);
 
     public abstract int getPreviousY(int param0);
 
@@ -18,7 +18,7 @@ interface WorldBody {
 
     public abstract boolean l(int param0);
 
-    public abstract boolean a(byte param0, int param1, int param2, int param3, int param4);
+    public abstract boolean intersectsRect(byte param0, int param1, int param2, int param3, int param4);
 
     public abstract int getHeight(byte param0);
 

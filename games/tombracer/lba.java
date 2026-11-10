@@ -51,7 +51,7 @@ class lba extends fi {
         }
     }
 
-    final static void a(int param0, int param1, cn param2, boolean param3, Sprite[][] param4, int[] param5, String[][] param6, cn param7, int[] param8, String[] param9, hja[] param10, String[][] param11, String[] param12, Sprite[][] param13, cn param14, int param15, int param16, byte[] param17, byte[] param18) {
+    final static void a(int param0, int param1, ResourceArchive param2, boolean param3, Sprite[][] param4, int[] param5, String[][] param6, ResourceArchive param7, int[] param8, String[] param9, IndexedSprite[] param10, String[][] param11, String[] param12, Sprite[][] param13, ResourceArchive param14, int param15, int param16, byte[] param17, byte[] param18) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

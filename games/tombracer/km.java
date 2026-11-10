@@ -11,7 +11,7 @@ final class km extends DualLinkNode {
     private int[] field_o;
     private int[] field_q;
 
-    final boolean a(cn param0, d param1, int param2) {
+    final boolean a(ResourceArchive param0, d param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_26_0 = null;
@@ -74,7 +74,7 @@ final class km extends DualLinkNode {
         }
     }
 
-    final float[] a(d param0, byte param1, int param2, int param3, boolean param4, cn param5) {
+    final float[] a(d param0, byte param1, int param2, int param3, boolean param4, ResourceArchive param5) {
         int var7_int = 0;
         int var15 = 0;
         int incrementValue$0 = 0;
@@ -204,7 +204,7 @@ final class km extends DualLinkNode {
         }
     }
 
-    final int[] a(int param0, cn param1, boolean param2, double param3, d param4, byte param5, int param6, boolean param7) {
+    final int[] a(int param0, ResourceArchive param1, boolean param2, double param3, d param4, byte param5, int param6, boolean param7) {
         int var10_int = 0;
         int var19 = 0;
         int[] stackIn_6_0 = null;
@@ -249,7 +249,7 @@ final class km extends DualLinkNode {
             stackIn_6_0 = (int[]) null;
             return stackIn_6_0;
           }
-          js.a(param3, -256);
+          CachedArchiveSource.a(param3, -256);
           uta.a(0, param0, param6);
           var26 = new int[param6 * param0];
           var10 = var26;
@@ -437,7 +437,7 @@ final class km extends DualLinkNode {
         }
     }
 
-    final int[] a(int param0, boolean param1, int param2, double param3, cn param4, d param5, boolean param6) {
+    final int[] a(int param0, boolean param1, int param2, double param3, ResourceArchive param4, d param5, boolean param6) {
         int var9_int = 0;
         int var16 = 0;
         int incrementValue$0 = 0;
@@ -476,7 +476,7 @@ final class km extends DualLinkNode {
           for (var9_int = 0; this.field_l.length > var9_int; var9_int++) {
             this.field_l[var9_int].b(param0, param2, -256);
           }
-          js.a(param3, -256);
+          CachedArchiveSource.a(param3, -256);
           uta.a(0, param2, param0);
           if (param6) {
             this.field_m = (ci) null;

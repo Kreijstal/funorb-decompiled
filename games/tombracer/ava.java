@@ -274,16 +274,16 @@ final class ava {
               var12.field_Db.a(40, di.field_a, -23776, var19, var12.field_G - 40);
               if (var12.field_Nb.field_o &&
                 var22 != 0) {
-                qda.field_b = var12.field_wb;
+                ArchiveNetworkClient.field_b = var12.field_wb;
                 if (null != ql.field_m &&
                   null != ql.field_m[var12.field_Ab]) {
-                  qda.field_b = qda.field_b + " - " + ql.field_m[var12.field_Ab];
+                  ArchiveNetworkClient.field_b = ArchiveNetworkClient.field_b + " - " + ql.field_m[var12.field_Ab];
                 }
               } else {
                 if (var12.field_Nb.field_o &&
                   null != ql.field_m &&
                   null != ql.field_m[var12.field_Ab]) {
-                  qda.field_b = ql.field_m[var12.field_Ab];
+                  ArchiveNetworkClient.field_b = ql.field_m[var12.field_Ab];
                 }
               }
               var19 = var19 + di.field_a;
@@ -372,7 +372,7 @@ final class ava {
                         }
                       }
                     } else {
-                      var24Lifetime2 = gl.$cfr$intArgs$a$53ce4ab4c593(118, gv.field_r, new String[]{var20, Integer.toString(var6)});
+                      var24Lifetime2 = gl.$cfr$intArgs$a$53ce4ab4c593(118, SocketArchiveNetworkClient.field_r, new String[]{var20, Integer.toString(var6)});
                     }
                   } else {
                     var25_int = -var12.field_zb + var7;
@@ -450,7 +450,7 @@ final class ava {
                   if (var26Lifetime1 == 0) {
                     var24Lifetime2 = var34 + "<br>" + gl.$cfr$intArgs$a$53ce4ab4c593(114, IdolItemComponent.field_I, new String[]{(String) (var25)});
                   } else {
-                    var24Lifetime2 = var34 + "<br>" + qda.field_l + (String) (var25);
+                    var24Lifetime2 = var34 + "<br>" + ArchiveNetworkClient.field_l + (String) (var25);
                   }
                 } else {
                   if (var26Lifetime1 != 0) {
@@ -464,7 +464,7 @@ final class ava {
                   var27 = uu.field_a.field_tb;
                   var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + gl.$cfr$intArgs$a$53ce4ab4c593(102, C2SSubmitSettingsPacket.field_c, new String[]{var27});
                 }
-                qda.field_b = (String) (var24Lifetime2);
+                ArchiveNetworkClient.field_b = (String) (var24Lifetime2);
               }
             }
             var11 = var12;

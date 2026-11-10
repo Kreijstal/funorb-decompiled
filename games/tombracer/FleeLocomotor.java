@@ -11,7 +11,7 @@ final class FleeLocomotor extends Locomotor {
     static int field_z;
     private int field_u;
     private int field_A;
-    static jpa field_C;
+    static SpriteData field_C;
     static String field_y;
     private boolean field_r;
     static String field_B;
@@ -333,7 +333,7 @@ final class FleeLocomotor extends Locomotor {
             stackIn_3_2 = 1;
           }
           ((BitPacketBuffer) (Object) stackIn_2_0).writeBits((byte) stackIn_2_1, stackIn_3_2, 1);
-          param0.writeBits((byte) -128, cn.a((byte) -104, this.field_u, 8192, 8), 8);
+          param0.writeBits((byte) -128, ResourceArchive.a((byte) -104, this.field_u, 8192, 8), 8);
           stackIn_5_0 = (BitPacketBuffer) (param0);
           stackIn_5_1 = -128;
           if (this.field_w) {

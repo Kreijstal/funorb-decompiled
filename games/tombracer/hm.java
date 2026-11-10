@@ -4,7 +4,7 @@
 final class hm extends tfa implements gf {
     static String field_m;
     private int field_l;
-    static cn field_n;
+    static ResourceArchive field_n;
     private int field_k;
 
     public final float a(float param0, byte param1) {
@@ -129,7 +129,7 @@ final class hm extends tfa implements gf {
         Projectile.field_n = null;
         int var1 = 60 / ((-20 - param0) / 45);
         MirrorBehaviour.field_r = null;
-        cb.field_i = null;
+        OpenGlFramebuffer.field_i = null;
         dp.field_d = null;
         tv.field_wb = null;
         sta.field_y = null;
@@ -151,7 +151,7 @@ final class hm extends tfa implements gf {
         ng.field_k = null;
         ega.field_e = null;
         vua.field_A = null;
-        dr.field_a = null;
+        ArchiveSource.field_a = null;
         ij.field_X = null;
         fa.field_a = null;
         PlayerProfile.field_r = null;
@@ -401,10 +401,10 @@ final class hm extends tfa implements gf {
               var11 = -param8 + param6;
               var12 = -1;
               if (var11 != 0) {
-                var12 = gv.a(0, param5, param8, param0, var12, param1 ^ -15, param7, var10Lifetime16, var11, param4);
+                var12 = SocketArchiveNetworkClient.a(0, param5, param8, param0, var12, param1 ^ -15, param7, var10Lifetime16, var11, param4);
               }
               if (var10Lifetime16 != 0) {
-                var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10Lifetime16, param3);
+                var12 = SocketArchiveNetworkClient.a(0, param5, param7, param6, var12, 0, param8, var11, var10Lifetime16, param3);
               }
               param0 = param0 - param4;
               param8 = param8 - param3;
@@ -414,10 +414,10 @@ final class hm extends tfa implements gf {
               }
               param6 = param6 - param3;
               if (var11 != 0) {
-                var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10Lifetime16, var11, 0);
+                var12 = SocketArchiveNetworkClient.a(-param4, param5, param8, param0, var12, 0, param7, var10Lifetime16, var11, 0);
               }
               if (0 != var10Lifetime16) {
-                var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10Lifetime16, 0);
+                var12 = SocketArchiveNetworkClient.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10Lifetime16, 0);
               }
               return var12;
             }
@@ -444,10 +444,10 @@ final class hm extends tfa implements gf {
               var11Lifetime4 = -param8 + param6;
               var12Lifetime4 = -1;
               if (var11Lifetime4 != 0) {
-                var12Lifetime4 = gv.a(0, param5, param8, param0, var12Lifetime4, param1 ^ -15, param7, var10Lifetime6Lifetime2, var11Lifetime4, param4);
+                var12Lifetime4 = SocketArchiveNetworkClient.a(0, param5, param8, param0, var12Lifetime4, param1 ^ -15, param7, var10Lifetime6Lifetime2, var11Lifetime4, param4);
               }
               if (var10Lifetime6Lifetime2 != 0) {
-                var12Lifetime4 = gv.a(0, param5, param7, param6, var12Lifetime4, 0, param8, var11Lifetime4, var10Lifetime6Lifetime2, param3);
+                var12Lifetime4 = SocketArchiveNetworkClient.a(0, param5, param7, param6, var12Lifetime4, 0, param8, var11Lifetime4, var10Lifetime6Lifetime2, param3);
               }
               param0 = param0 - param4;
               param8 = param8 - param3;
@@ -457,10 +457,10 @@ final class hm extends tfa implements gf {
               }
               param6 = param6 - param3;
               if (var11Lifetime4 != 0) {
-                var12Lifetime4 = gv.a(-param4, param5, param8, param0, var12Lifetime4, 0, param7, var10Lifetime6Lifetime2, var11Lifetime4, 0);
+                var12Lifetime4 = SocketArchiveNetworkClient.a(-param4, param5, param8, param0, var12Lifetime4, 0, param7, var10Lifetime6Lifetime2, var11Lifetime4, 0);
               }
               if (0 != var10Lifetime6Lifetime2) {
-                var12Lifetime4 = gv.a(-param3, param5, param7, param6, var12Lifetime4, 0, param8, var11Lifetime4, var10Lifetime6Lifetime2, 0);
+                var12Lifetime4 = SocketArchiveNetworkClient.a(-param3, param5, param7, param6, var12Lifetime4, 0, param8, var11Lifetime4, var10Lifetime6Lifetime2, 0);
               }
               return var12Lifetime4;
             }
@@ -487,10 +487,10 @@ final class hm extends tfa implements gf {
               var11Lifetime5 = -param8 + param6;
               var12Lifetime5 = -1;
               if (var11Lifetime5 != 0) {
-                var12Lifetime5 = gv.a(0, param5, param8, param0, var12Lifetime5, param1 ^ -15, param7, var10Lifetime7Lifetime2, var11Lifetime5, param4);
+                var12Lifetime5 = SocketArchiveNetworkClient.a(0, param5, param8, param0, var12Lifetime5, param1 ^ -15, param7, var10Lifetime7Lifetime2, var11Lifetime5, param4);
               }
               if (var10Lifetime7Lifetime2 != 0) {
-                var12Lifetime5 = gv.a(0, param5, param7, param6, var12Lifetime5, 0, param8, var11Lifetime5, var10Lifetime7Lifetime2, param3);
+                var12Lifetime5 = SocketArchiveNetworkClient.a(0, param5, param7, param6, var12Lifetime5, 0, param8, var11Lifetime5, var10Lifetime7Lifetime2, param3);
               }
               param0 = param0 - param4;
               param8 = param8 - param3;
@@ -500,10 +500,10 @@ final class hm extends tfa implements gf {
               }
               param6 = param6 - param3;
               if (var11Lifetime5 != 0) {
-                var12Lifetime5 = gv.a(-param4, param5, param8, param0, var12Lifetime5, 0, param7, var10Lifetime7Lifetime2, var11Lifetime5, 0);
+                var12Lifetime5 = SocketArchiveNetworkClient.a(-param4, param5, param8, param0, var12Lifetime5, 0, param7, var10Lifetime7Lifetime2, var11Lifetime5, 0);
               }
               if (0 != var10Lifetime7Lifetime2) {
-                var12Lifetime5 = gv.a(-param3, param5, param7, param6, var12Lifetime5, 0, param8, var11Lifetime5, var10Lifetime7Lifetime2, 0);
+                var12Lifetime5 = SocketArchiveNetworkClient.a(-param3, param5, param7, param6, var12Lifetime5, 0, param8, var11Lifetime5, var10Lifetime7Lifetime2, 0);
               }
               return var12Lifetime5;
             }
@@ -530,10 +530,10 @@ final class hm extends tfa implements gf {
               var11Lifetime6 = -param8 + param6;
               var12Lifetime6 = -1;
               if (var11Lifetime6 != 0) {
-                var12Lifetime6 = gv.a(0, param5, param8, param0, var12Lifetime6, param1 ^ -15, param7, var10Lifetime8Lifetime2, var11Lifetime6, param4);
+                var12Lifetime6 = SocketArchiveNetworkClient.a(0, param5, param8, param0, var12Lifetime6, param1 ^ -15, param7, var10Lifetime8Lifetime2, var11Lifetime6, param4);
               }
               if (var10Lifetime8Lifetime2 != 0) {
-                var12Lifetime6 = gv.a(0, param5, param7, param6, var12Lifetime6, 0, param8, var11Lifetime6, var10Lifetime8Lifetime2, param3);
+                var12Lifetime6 = SocketArchiveNetworkClient.a(0, param5, param7, param6, var12Lifetime6, 0, param8, var11Lifetime6, var10Lifetime8Lifetime2, param3);
               }
               param0 = param0 - param4;
               param8 = param8 - param3;
@@ -543,10 +543,10 @@ final class hm extends tfa implements gf {
               }
               param6 = param6 - param3;
               if (var11Lifetime6 != 0) {
-                var12Lifetime6 = gv.a(-param4, param5, param8, param0, var12Lifetime6, 0, param7, var10Lifetime8Lifetime2, var11Lifetime6, 0);
+                var12Lifetime6 = SocketArchiveNetworkClient.a(-param4, param5, param8, param0, var12Lifetime6, 0, param7, var10Lifetime8Lifetime2, var11Lifetime6, 0);
               }
               if (0 != var10Lifetime8Lifetime2) {
-                var12Lifetime6 = gv.a(-param3, param5, param7, param6, var12Lifetime6, 0, param8, var11Lifetime6, var10Lifetime8Lifetime2, 0);
+                var12Lifetime6 = SocketArchiveNetworkClient.a(-param3, param5, param7, param6, var12Lifetime6, 0, param8, var11Lifetime6, var10Lifetime8Lifetime2, 0);
               }
               return var12Lifetime6;
             }
@@ -573,10 +573,10 @@ final class hm extends tfa implements gf {
               var11Lifetime7 = -param8 + param6;
               var12Lifetime7 = -1;
               if (var11Lifetime7 != 0) {
-                var12Lifetime7 = gv.a(0, param5, param8, param0, var12Lifetime7, param1 ^ -15, param7, var10Lifetime9Lifetime2, var11Lifetime7, param4);
+                var12Lifetime7 = SocketArchiveNetworkClient.a(0, param5, param8, param0, var12Lifetime7, param1 ^ -15, param7, var10Lifetime9Lifetime2, var11Lifetime7, param4);
               }
               if (var10Lifetime9Lifetime2 != 0) {
-                var12Lifetime7 = gv.a(0, param5, param7, param6, var12Lifetime7, 0, param8, var11Lifetime7, var10Lifetime9Lifetime2, param3);
+                var12Lifetime7 = SocketArchiveNetworkClient.a(0, param5, param7, param6, var12Lifetime7, 0, param8, var11Lifetime7, var10Lifetime9Lifetime2, param3);
               }
               param0 = param0 - param4;
               param8 = param8 - param3;
@@ -586,10 +586,10 @@ final class hm extends tfa implements gf {
               }
               param6 = param6 - param3;
               if (var11Lifetime7 != 0) {
-                var12Lifetime7 = gv.a(-param4, param5, param8, param0, var12Lifetime7, 0, param7, var10Lifetime9Lifetime2, var11Lifetime7, 0);
+                var12Lifetime7 = SocketArchiveNetworkClient.a(-param4, param5, param8, param0, var12Lifetime7, 0, param7, var10Lifetime9Lifetime2, var11Lifetime7, 0);
               }
               if (0 != var10Lifetime9Lifetime2) {
-                var12Lifetime7 = gv.a(-param3, param5, param7, param6, var12Lifetime7, 0, param8, var11Lifetime7, var10Lifetime9Lifetime2, 0);
+                var12Lifetime7 = SocketArchiveNetworkClient.a(-param3, param5, param7, param6, var12Lifetime7, 0, param8, var11Lifetime7, var10Lifetime9Lifetime2, 0);
               }
               return var12Lifetime7;
             }
@@ -616,10 +616,10 @@ final class hm extends tfa implements gf {
               var11Lifetime8 = -param8 + param6;
               var12Lifetime8 = -1;
               if (var11Lifetime8 != 0) {
-                var12Lifetime8 = gv.a(0, param5, param8, param0, var12Lifetime8, param1 ^ -15, param7, var10Lifetime10Lifetime2, var11Lifetime8, param4);
+                var12Lifetime8 = SocketArchiveNetworkClient.a(0, param5, param8, param0, var12Lifetime8, param1 ^ -15, param7, var10Lifetime10Lifetime2, var11Lifetime8, param4);
               }
               if (var10Lifetime10Lifetime2 != 0) {
-                var12Lifetime8 = gv.a(0, param5, param7, param6, var12Lifetime8, 0, param8, var11Lifetime8, var10Lifetime10Lifetime2, param3);
+                var12Lifetime8 = SocketArchiveNetworkClient.a(0, param5, param7, param6, var12Lifetime8, 0, param8, var11Lifetime8, var10Lifetime10Lifetime2, param3);
               }
               param0 = param0 - param4;
               param8 = param8 - param3;
@@ -629,10 +629,10 @@ final class hm extends tfa implements gf {
               }
               param6 = param6 - param3;
               if (var11Lifetime8 != 0) {
-                var12Lifetime8 = gv.a(-param4, param5, param8, param0, var12Lifetime8, 0, param7, var10Lifetime10Lifetime2, var11Lifetime8, 0);
+                var12Lifetime8 = SocketArchiveNetworkClient.a(-param4, param5, param8, param0, var12Lifetime8, 0, param7, var10Lifetime10Lifetime2, var11Lifetime8, 0);
               }
               if (0 != var10Lifetime10Lifetime2) {
-                var12Lifetime8 = gv.a(-param3, param5, param7, param6, var12Lifetime8, 0, param8, var11Lifetime8, var10Lifetime10Lifetime2, 0);
+                var12Lifetime8 = SocketArchiveNetworkClient.a(-param3, param5, param7, param6, var12Lifetime8, 0, param8, var11Lifetime8, var10Lifetime10Lifetime2, 0);
               }
               return var12Lifetime8;
             }
@@ -659,10 +659,10 @@ final class hm extends tfa implements gf {
               var11Lifetime9 = -param8 + param6;
               var12Lifetime9 = -1;
               if (var11Lifetime9 != 0) {
-                var12Lifetime9 = gv.a(0, param5, param8, param0, var12Lifetime9, param1 ^ -15, param7, var10Lifetime11Lifetime2, var11Lifetime9, param4);
+                var12Lifetime9 = SocketArchiveNetworkClient.a(0, param5, param8, param0, var12Lifetime9, param1 ^ -15, param7, var10Lifetime11Lifetime2, var11Lifetime9, param4);
               }
               if (var10Lifetime11Lifetime2 != 0) {
-                var12Lifetime9 = gv.a(0, param5, param7, param6, var12Lifetime9, 0, param8, var11Lifetime9, var10Lifetime11Lifetime2, param3);
+                var12Lifetime9 = SocketArchiveNetworkClient.a(0, param5, param7, param6, var12Lifetime9, 0, param8, var11Lifetime9, var10Lifetime11Lifetime2, param3);
               }
               param0 = param0 - param4;
               param8 = param8 - param3;
@@ -672,10 +672,10 @@ final class hm extends tfa implements gf {
               }
               param6 = param6 - param3;
               if (var11Lifetime9 != 0) {
-                var12Lifetime9 = gv.a(-param4, param5, param8, param0, var12Lifetime9, 0, param7, var10Lifetime11Lifetime2, var11Lifetime9, 0);
+                var12Lifetime9 = SocketArchiveNetworkClient.a(-param4, param5, param8, param0, var12Lifetime9, 0, param7, var10Lifetime11Lifetime2, var11Lifetime9, 0);
               }
               if (0 != var10Lifetime11Lifetime2) {
-                var12Lifetime9 = gv.a(-param3, param5, param7, param6, var12Lifetime9, 0, param8, var11Lifetime9, var10Lifetime11Lifetime2, 0);
+                var12Lifetime9 = SocketArchiveNetworkClient.a(-param3, param5, param7, param6, var12Lifetime9, 0, param8, var11Lifetime9, var10Lifetime11Lifetime2, 0);
               }
               return var12Lifetime9;
             }
@@ -704,10 +704,10 @@ final class hm extends tfa implements gf {
             var11Lifetime10 = -param8 + param6;
             var12Lifetime10 = -1;
             if (var11Lifetime10 != 0) {
-              var12Lifetime10 = gv.a(0, param5, param8, param0, var12Lifetime10, param1 ^ -15, param7, var10Lifetime14, var11Lifetime10, param4);
+              var12Lifetime10 = SocketArchiveNetworkClient.a(0, param5, param8, param0, var12Lifetime10, param1 ^ -15, param7, var10Lifetime14, var11Lifetime10, param4);
             }
             if (var10Lifetime14 != 0) {
-              var12Lifetime10 = gv.a(0, param5, param7, param6, var12Lifetime10, 0, param8, var11Lifetime10, var10Lifetime14, param3);
+              var12Lifetime10 = SocketArchiveNetworkClient.a(0, param5, param7, param6, var12Lifetime10, 0, param8, var11Lifetime10, var10Lifetime14, param3);
             }
             param0 = param0 - param4;
             param8 = param8 - param3;
@@ -717,10 +717,10 @@ final class hm extends tfa implements gf {
             }
             param6 = param6 - param3;
             if (var11Lifetime10 != 0) {
-              var12Lifetime10 = gv.a(-param4, param5, param8, param0, var12Lifetime10, 0, param7, var10Lifetime14, var11Lifetime10, 0);
+              var12Lifetime10 = SocketArchiveNetworkClient.a(-param4, param5, param8, param0, var12Lifetime10, 0, param7, var10Lifetime14, var11Lifetime10, 0);
             }
             if (0 != var10Lifetime14) {
-              var12Lifetime10 = gv.a(-param3, param5, param7, param6, var12Lifetime10, 0, param8, var11Lifetime10, var10Lifetime14, 0);
+              var12Lifetime10 = SocketArchiveNetworkClient.a(-param3, param5, param7, param6, var12Lifetime10, 0, param8, var11Lifetime10, var10Lifetime14, 0);
             }
             return var12Lifetime10;
           }
@@ -757,10 +757,10 @@ final class hm extends tfa implements gf {
               var11Lifetime1 = -param8 + param6;
               var12Lifetime1 = -1;
               if (var11Lifetime1 != 0) {
-                var12Lifetime1 = gv.a(0, param5, param8, param0, var12Lifetime1, param1 ^ -15, param7, var10Lifetime1Lifetime11, var11Lifetime1, param4);
+                var12Lifetime1 = SocketArchiveNetworkClient.a(0, param5, param8, param0, var12Lifetime1, param1 ^ -15, param7, var10Lifetime1Lifetime11, var11Lifetime1, param4);
               }
               if (var10Lifetime1Lifetime11 != 0) {
-                var12Lifetime1 = gv.a(0, param5, param7, param6, var12Lifetime1, 0, param8, var11Lifetime1, var10Lifetime1Lifetime11, param3);
+                var12Lifetime1 = SocketArchiveNetworkClient.a(0, param5, param7, param6, var12Lifetime1, 0, param8, var11Lifetime1, var10Lifetime1Lifetime11, param3);
               }
               param0 = param0 - param4;
               param8 = param8 - param3;
@@ -770,10 +770,10 @@ final class hm extends tfa implements gf {
               }
               param6 = param6 - param3;
               if (var11Lifetime1 != 0) {
-                var12Lifetime1 = gv.a(-param4, param5, param8, param0, var12Lifetime1, 0, param7, var10Lifetime1Lifetime11, var11Lifetime1, 0);
+                var12Lifetime1 = SocketArchiveNetworkClient.a(-param4, param5, param8, param0, var12Lifetime1, 0, param7, var10Lifetime1Lifetime11, var11Lifetime1, 0);
               }
               if (0 != var10Lifetime1Lifetime11) {
-                var12Lifetime1 = gv.a(-param3, param5, param7, param6, var12Lifetime1, 0, param8, var11Lifetime1, var10Lifetime1Lifetime11, 0);
+                var12Lifetime1 = SocketArchiveNetworkClient.a(-param3, param5, param7, param6, var12Lifetime1, 0, param8, var11Lifetime1, var10Lifetime1Lifetime11, 0);
               }
               return var12Lifetime1;
             }
@@ -800,10 +800,10 @@ final class hm extends tfa implements gf {
               var11Lifetime1Lifetime1 = -param8 + param6;
               var12Lifetime1Lifetime1 = -1;
               if (var11Lifetime1Lifetime1 != 0) {
-                var12Lifetime1Lifetime1 = gv.a(0, param5, param8, param0, var12Lifetime1Lifetime1, param1 ^ -15, param7, var10Lifetime1Lifetime1Lifetime2, var11Lifetime1Lifetime1, param4);
+                var12Lifetime1Lifetime1 = SocketArchiveNetworkClient.a(0, param5, param8, param0, var12Lifetime1Lifetime1, param1 ^ -15, param7, var10Lifetime1Lifetime1Lifetime2, var11Lifetime1Lifetime1, param4);
               }
               if (var10Lifetime1Lifetime1Lifetime2 != 0) {
-                var12Lifetime1Lifetime1 = gv.a(0, param5, param7, param6, var12Lifetime1Lifetime1, 0, param8, var11Lifetime1Lifetime1, var10Lifetime1Lifetime1Lifetime2, param3);
+                var12Lifetime1Lifetime1 = SocketArchiveNetworkClient.a(0, param5, param7, param6, var12Lifetime1Lifetime1, 0, param8, var11Lifetime1Lifetime1, var10Lifetime1Lifetime1Lifetime2, param3);
               }
               param0 = param0 - param4;
               param8 = param8 - param3;
@@ -813,10 +813,10 @@ final class hm extends tfa implements gf {
               }
               param6 = param6 - param3;
               if (var11Lifetime1Lifetime1 != 0) {
-                var12Lifetime1Lifetime1 = gv.a(-param4, param5, param8, param0, var12Lifetime1Lifetime1, 0, param7, var10Lifetime1Lifetime1Lifetime2, var11Lifetime1Lifetime1, 0);
+                var12Lifetime1Lifetime1 = SocketArchiveNetworkClient.a(-param4, param5, param8, param0, var12Lifetime1Lifetime1, 0, param7, var10Lifetime1Lifetime1Lifetime2, var11Lifetime1Lifetime1, 0);
               }
               if (0 != var10Lifetime1Lifetime1Lifetime2) {
-                var12Lifetime1Lifetime1 = gv.a(-param3, param5, param7, param6, var12Lifetime1Lifetime1, 0, param8, var11Lifetime1Lifetime1, var10Lifetime1Lifetime1Lifetime2, 0);
+                var12Lifetime1Lifetime1 = SocketArchiveNetworkClient.a(-param3, param5, param7, param6, var12Lifetime1Lifetime1, 0, param8, var11Lifetime1Lifetime1, var10Lifetime1Lifetime1Lifetime2, 0);
               }
               return var12Lifetime1Lifetime1;
             }
@@ -843,10 +843,10 @@ final class hm extends tfa implements gf {
               var11Lifetime1Lifetime2 = -param8 + param6;
               var12Lifetime1Lifetime2 = -1;
               if (var11Lifetime1Lifetime2 != 0) {
-                var12Lifetime1Lifetime2 = gv.a(0, param5, param8, param0, var12Lifetime1Lifetime2, param1 ^ -15, param7, var10Lifetime1Lifetime2Lifetime2, var11Lifetime1Lifetime2, param4);
+                var12Lifetime1Lifetime2 = SocketArchiveNetworkClient.a(0, param5, param8, param0, var12Lifetime1Lifetime2, param1 ^ -15, param7, var10Lifetime1Lifetime2Lifetime2, var11Lifetime1Lifetime2, param4);
               }
               if (var10Lifetime1Lifetime2Lifetime2 != 0) {
-                var12Lifetime1Lifetime2 = gv.a(0, param5, param7, param6, var12Lifetime1Lifetime2, 0, param8, var11Lifetime1Lifetime2, var10Lifetime1Lifetime2Lifetime2, param3);
+                var12Lifetime1Lifetime2 = SocketArchiveNetworkClient.a(0, param5, param7, param6, var12Lifetime1Lifetime2, 0, param8, var11Lifetime1Lifetime2, var10Lifetime1Lifetime2Lifetime2, param3);
               }
               param0 = param0 - param4;
               param8 = param8 - param3;
@@ -856,10 +856,10 @@ final class hm extends tfa implements gf {
               }
               param6 = param6 - param3;
               if (var11Lifetime1Lifetime2 != 0) {
-                var12Lifetime1Lifetime2 = gv.a(-param4, param5, param8, param0, var12Lifetime1Lifetime2, 0, param7, var10Lifetime1Lifetime2Lifetime2, var11Lifetime1Lifetime2, 0);
+                var12Lifetime1Lifetime2 = SocketArchiveNetworkClient.a(-param4, param5, param8, param0, var12Lifetime1Lifetime2, 0, param7, var10Lifetime1Lifetime2Lifetime2, var11Lifetime1Lifetime2, 0);
               }
               if (0 != var10Lifetime1Lifetime2Lifetime2) {
-                var12Lifetime1Lifetime2 = gv.a(-param3, param5, param7, param6, var12Lifetime1Lifetime2, 0, param8, var11Lifetime1Lifetime2, var10Lifetime1Lifetime2Lifetime2, 0);
+                var12Lifetime1Lifetime2 = SocketArchiveNetworkClient.a(-param3, param5, param7, param6, var12Lifetime1Lifetime2, 0, param8, var11Lifetime1Lifetime2, var10Lifetime1Lifetime2Lifetime2, 0);
               }
               return var12Lifetime1Lifetime2;
             }
@@ -886,10 +886,10 @@ final class hm extends tfa implements gf {
               var11Lifetime1Lifetime3 = -param8 + param6;
               var12Lifetime1Lifetime3 = -1;
               if (var11Lifetime1Lifetime3 != 0) {
-                var12Lifetime1Lifetime3 = gv.a(0, param5, param8, param0, var12Lifetime1Lifetime3, param1 ^ -15, param7, var10Lifetime1Lifetime3Lifetime2, var11Lifetime1Lifetime3, param4);
+                var12Lifetime1Lifetime3 = SocketArchiveNetworkClient.a(0, param5, param8, param0, var12Lifetime1Lifetime3, param1 ^ -15, param7, var10Lifetime1Lifetime3Lifetime2, var11Lifetime1Lifetime3, param4);
               }
               if (var10Lifetime1Lifetime3Lifetime2 != 0) {
-                var12Lifetime1Lifetime3 = gv.a(0, param5, param7, param6, var12Lifetime1Lifetime3, 0, param8, var11Lifetime1Lifetime3, var10Lifetime1Lifetime3Lifetime2, param3);
+                var12Lifetime1Lifetime3 = SocketArchiveNetworkClient.a(0, param5, param7, param6, var12Lifetime1Lifetime3, 0, param8, var11Lifetime1Lifetime3, var10Lifetime1Lifetime3Lifetime2, param3);
               }
               param0 = param0 - param4;
               param8 = param8 - param3;
@@ -899,10 +899,10 @@ final class hm extends tfa implements gf {
               }
               param6 = param6 - param3;
               if (var11Lifetime1Lifetime3 != 0) {
-                var12Lifetime1Lifetime3 = gv.a(-param4, param5, param8, param0, var12Lifetime1Lifetime3, 0, param7, var10Lifetime1Lifetime3Lifetime2, var11Lifetime1Lifetime3, 0);
+                var12Lifetime1Lifetime3 = SocketArchiveNetworkClient.a(-param4, param5, param8, param0, var12Lifetime1Lifetime3, 0, param7, var10Lifetime1Lifetime3Lifetime2, var11Lifetime1Lifetime3, 0);
               }
               if (0 != var10Lifetime1Lifetime3Lifetime2) {
-                var12Lifetime1Lifetime3 = gv.a(-param3, param5, param7, param6, var12Lifetime1Lifetime3, 0, param8, var11Lifetime1Lifetime3, var10Lifetime1Lifetime3Lifetime2, 0);
+                var12Lifetime1Lifetime3 = SocketArchiveNetworkClient.a(-param3, param5, param7, param6, var12Lifetime1Lifetime3, 0, param8, var11Lifetime1Lifetime3, var10Lifetime1Lifetime3Lifetime2, 0);
               }
               return var12Lifetime1Lifetime3;
             }
@@ -929,10 +929,10 @@ final class hm extends tfa implements gf {
               var11Lifetime1Lifetime4 = -param8 + param6;
               var12Lifetime1Lifetime4 = -1;
               if (var11Lifetime1Lifetime4 != 0) {
-                var12Lifetime1Lifetime4 = gv.a(0, param5, param8, param0, var12Lifetime1Lifetime4, param1 ^ -15, param7, var10Lifetime1Lifetime4Lifetime2, var11Lifetime1Lifetime4, param4);
+                var12Lifetime1Lifetime4 = SocketArchiveNetworkClient.a(0, param5, param8, param0, var12Lifetime1Lifetime4, param1 ^ -15, param7, var10Lifetime1Lifetime4Lifetime2, var11Lifetime1Lifetime4, param4);
               }
               if (var10Lifetime1Lifetime4Lifetime2 != 0) {
-                var12Lifetime1Lifetime4 = gv.a(0, param5, param7, param6, var12Lifetime1Lifetime4, 0, param8, var11Lifetime1Lifetime4, var10Lifetime1Lifetime4Lifetime2, param3);
+                var12Lifetime1Lifetime4 = SocketArchiveNetworkClient.a(0, param5, param7, param6, var12Lifetime1Lifetime4, 0, param8, var11Lifetime1Lifetime4, var10Lifetime1Lifetime4Lifetime2, param3);
               }
               param0 = param0 - param4;
               param8 = param8 - param3;
@@ -942,10 +942,10 @@ final class hm extends tfa implements gf {
               }
               param6 = param6 - param3;
               if (var11Lifetime1Lifetime4 != 0) {
-                var12Lifetime1Lifetime4 = gv.a(-param4, param5, param8, param0, var12Lifetime1Lifetime4, 0, param7, var10Lifetime1Lifetime4Lifetime2, var11Lifetime1Lifetime4, 0);
+                var12Lifetime1Lifetime4 = SocketArchiveNetworkClient.a(-param4, param5, param8, param0, var12Lifetime1Lifetime4, 0, param7, var10Lifetime1Lifetime4Lifetime2, var11Lifetime1Lifetime4, 0);
               }
               if (0 != var10Lifetime1Lifetime4Lifetime2) {
-                var12Lifetime1Lifetime4 = gv.a(-param3, param5, param7, param6, var12Lifetime1Lifetime4, 0, param8, var11Lifetime1Lifetime4, var10Lifetime1Lifetime4Lifetime2, 0);
+                var12Lifetime1Lifetime4 = SocketArchiveNetworkClient.a(-param3, param5, param7, param6, var12Lifetime1Lifetime4, 0, param8, var11Lifetime1Lifetime4, var10Lifetime1Lifetime4Lifetime2, 0);
               }
               return var12Lifetime1Lifetime4;
             }
@@ -972,10 +972,10 @@ final class hm extends tfa implements gf {
               var11Lifetime1Lifetime5 = -param8 + param6;
               var12Lifetime1Lifetime5 = -1;
               if (var11Lifetime1Lifetime5 != 0) {
-                var12Lifetime1Lifetime5 = gv.a(0, param5, param8, param0, var12Lifetime1Lifetime5, param1 ^ -15, param7, var10Lifetime1Lifetime5Lifetime2, var11Lifetime1Lifetime5, param4);
+                var12Lifetime1Lifetime5 = SocketArchiveNetworkClient.a(0, param5, param8, param0, var12Lifetime1Lifetime5, param1 ^ -15, param7, var10Lifetime1Lifetime5Lifetime2, var11Lifetime1Lifetime5, param4);
               }
               if (var10Lifetime1Lifetime5Lifetime2 != 0) {
-                var12Lifetime1Lifetime5 = gv.a(0, param5, param7, param6, var12Lifetime1Lifetime5, 0, param8, var11Lifetime1Lifetime5, var10Lifetime1Lifetime5Lifetime2, param3);
+                var12Lifetime1Lifetime5 = SocketArchiveNetworkClient.a(0, param5, param7, param6, var12Lifetime1Lifetime5, 0, param8, var11Lifetime1Lifetime5, var10Lifetime1Lifetime5Lifetime2, param3);
               }
               param0 = param0 - param4;
               param8 = param8 - param3;
@@ -985,10 +985,10 @@ final class hm extends tfa implements gf {
               }
               param6 = param6 - param3;
               if (var11Lifetime1Lifetime5 != 0) {
-                var12Lifetime1Lifetime5 = gv.a(-param4, param5, param8, param0, var12Lifetime1Lifetime5, 0, param7, var10Lifetime1Lifetime5Lifetime2, var11Lifetime1Lifetime5, 0);
+                var12Lifetime1Lifetime5 = SocketArchiveNetworkClient.a(-param4, param5, param8, param0, var12Lifetime1Lifetime5, 0, param7, var10Lifetime1Lifetime5Lifetime2, var11Lifetime1Lifetime5, 0);
               }
               if (0 != var10Lifetime1Lifetime5Lifetime2) {
-                var12Lifetime1Lifetime5 = gv.a(-param3, param5, param7, param6, var12Lifetime1Lifetime5, 0, param8, var11Lifetime1Lifetime5, var10Lifetime1Lifetime5Lifetime2, 0);
+                var12Lifetime1Lifetime5 = SocketArchiveNetworkClient.a(-param3, param5, param7, param6, var12Lifetime1Lifetime5, 0, param8, var11Lifetime1Lifetime5, var10Lifetime1Lifetime5Lifetime2, 0);
               }
               return var12Lifetime1Lifetime5;
             }
@@ -1015,10 +1015,10 @@ final class hm extends tfa implements gf {
               var11Lifetime1Lifetime6 = -param8 + param6;
               var12Lifetime1Lifetime6 = -1;
               if (var11Lifetime1Lifetime6 != 0) {
-                var12Lifetime1Lifetime6 = gv.a(0, param5, param8, param0, var12Lifetime1Lifetime6, param1 ^ -15, param7, var10Lifetime1Lifetime6Lifetime2, var11Lifetime1Lifetime6, param4);
+                var12Lifetime1Lifetime6 = SocketArchiveNetworkClient.a(0, param5, param8, param0, var12Lifetime1Lifetime6, param1 ^ -15, param7, var10Lifetime1Lifetime6Lifetime2, var11Lifetime1Lifetime6, param4);
               }
               if (var10Lifetime1Lifetime6Lifetime2 != 0) {
-                var12Lifetime1Lifetime6 = gv.a(0, param5, param7, param6, var12Lifetime1Lifetime6, 0, param8, var11Lifetime1Lifetime6, var10Lifetime1Lifetime6Lifetime2, param3);
+                var12Lifetime1Lifetime6 = SocketArchiveNetworkClient.a(0, param5, param7, param6, var12Lifetime1Lifetime6, 0, param8, var11Lifetime1Lifetime6, var10Lifetime1Lifetime6Lifetime2, param3);
               }
               param0 = param0 - param4;
               param8 = param8 - param3;
@@ -1028,10 +1028,10 @@ final class hm extends tfa implements gf {
               }
               param6 = param6 - param3;
               if (var11Lifetime1Lifetime6 != 0) {
-                var12Lifetime1Lifetime6 = gv.a(-param4, param5, param8, param0, var12Lifetime1Lifetime6, 0, param7, var10Lifetime1Lifetime6Lifetime2, var11Lifetime1Lifetime6, 0);
+                var12Lifetime1Lifetime6 = SocketArchiveNetworkClient.a(-param4, param5, param8, param0, var12Lifetime1Lifetime6, 0, param7, var10Lifetime1Lifetime6Lifetime2, var11Lifetime1Lifetime6, 0);
               }
               if (0 != var10Lifetime1Lifetime6Lifetime2) {
-                var12Lifetime1Lifetime6 = gv.a(-param3, param5, param7, param6, var12Lifetime1Lifetime6, 0, param8, var11Lifetime1Lifetime6, var10Lifetime1Lifetime6Lifetime2, 0);
+                var12Lifetime1Lifetime6 = SocketArchiveNetworkClient.a(-param3, param5, param7, param6, var12Lifetime1Lifetime6, 0, param8, var11Lifetime1Lifetime6, var10Lifetime1Lifetime6Lifetime2, 0);
               }
               return var12Lifetime1Lifetime6;
             }
@@ -1060,10 +1060,10 @@ final class hm extends tfa implements gf {
             var11Lifetime1Lifetime7 = -param8 + param6;
             var12Lifetime1Lifetime7 = -1;
             if (var11Lifetime1Lifetime7 != 0) {
-              var12Lifetime1Lifetime7 = gv.a(0, param5, param8, param0, var12Lifetime1Lifetime7, param1 ^ -15, param7, var10Lifetime1Lifetime9, var11Lifetime1Lifetime7, param4);
+              var12Lifetime1Lifetime7 = SocketArchiveNetworkClient.a(0, param5, param8, param0, var12Lifetime1Lifetime7, param1 ^ -15, param7, var10Lifetime1Lifetime9, var11Lifetime1Lifetime7, param4);
             }
             if (var10Lifetime1Lifetime9 != 0) {
-              var12Lifetime1Lifetime7 = gv.a(0, param5, param7, param6, var12Lifetime1Lifetime7, 0, param8, var11Lifetime1Lifetime7, var10Lifetime1Lifetime9, param3);
+              var12Lifetime1Lifetime7 = SocketArchiveNetworkClient.a(0, param5, param7, param6, var12Lifetime1Lifetime7, 0, param8, var11Lifetime1Lifetime7, var10Lifetime1Lifetime9, param3);
             }
             param0 = param0 - param4;
             param8 = param8 - param3;
@@ -1073,10 +1073,10 @@ final class hm extends tfa implements gf {
             }
             param6 = param6 - param3;
             if (var11Lifetime1Lifetime7 != 0) {
-              var12Lifetime1Lifetime7 = gv.a(-param4, param5, param8, param0, var12Lifetime1Lifetime7, 0, param7, var10Lifetime1Lifetime9, var11Lifetime1Lifetime7, 0);
+              var12Lifetime1Lifetime7 = SocketArchiveNetworkClient.a(-param4, param5, param8, param0, var12Lifetime1Lifetime7, 0, param7, var10Lifetime1Lifetime9, var11Lifetime1Lifetime7, 0);
             }
             if (0 != var10Lifetime1Lifetime9) {
-              var12Lifetime1Lifetime7 = gv.a(-param3, param5, param7, param6, var12Lifetime1Lifetime7, 0, param8, var11Lifetime1Lifetime7, var10Lifetime1Lifetime9, 0);
+              var12Lifetime1Lifetime7 = SocketArchiveNetworkClient.a(-param3, param5, param7, param6, var12Lifetime1Lifetime7, 0, param8, var11Lifetime1Lifetime7, var10Lifetime1Lifetime9, 0);
             }
             return var12Lifetime1Lifetime7;
           }
@@ -1130,10 +1130,10 @@ final class hm extends tfa implements gf {
               var11Lifetime2 = -param8 + param6;
               var12Lifetime2 = -1;
               if (var11Lifetime2 != 0) {
-                var12Lifetime2 = gv.a(0, param5, param8, param0, var12Lifetime2, param1 ^ -15, param7, var10Lifetime2Lifetime2, var11Lifetime2, param4);
+                var12Lifetime2 = SocketArchiveNetworkClient.a(0, param5, param8, param0, var12Lifetime2, param1 ^ -15, param7, var10Lifetime2Lifetime2, var11Lifetime2, param4);
               }
               if (var10Lifetime2Lifetime2 != 0) {
-                var12Lifetime2 = gv.a(0, param5, param7, param6, var12Lifetime2, 0, param8, var11Lifetime2, var10Lifetime2Lifetime2, param3);
+                var12Lifetime2 = SocketArchiveNetworkClient.a(0, param5, param7, param6, var12Lifetime2, 0, param8, var11Lifetime2, var10Lifetime2Lifetime2, param3);
               }
               param0 = param0 - param4;
               param8 = param8 - param3;
@@ -1143,10 +1143,10 @@ final class hm extends tfa implements gf {
               }
               param6 = param6 - param3;
               if (var11Lifetime2 != 0) {
-                var12Lifetime2 = gv.a(-param4, param5, param8, param0, var12Lifetime2, 0, param7, var10Lifetime2Lifetime2, var11Lifetime2, 0);
+                var12Lifetime2 = SocketArchiveNetworkClient.a(-param4, param5, param8, param0, var12Lifetime2, 0, param7, var10Lifetime2Lifetime2, var11Lifetime2, 0);
               }
               if (0 != var10Lifetime2Lifetime2) {
-                var12Lifetime2 = gv.a(-param3, param5, param7, param6, var12Lifetime2, 0, param8, var11Lifetime2, var10Lifetime2Lifetime2, 0);
+                var12Lifetime2 = SocketArchiveNetworkClient.a(-param3, param5, param7, param6, var12Lifetime2, 0, param8, var11Lifetime2, var10Lifetime2Lifetime2, 0);
               }
               return var12Lifetime2;
             }
@@ -1192,10 +1192,10 @@ final class hm extends tfa implements gf {
         var11Lifetime3 = -param8 + param6;
         var12Lifetime3 = -1;
         if (var11Lifetime3 != 0) {
-          var12Lifetime3 = gv.a(0, param5, param8, param0, var12Lifetime3, param1 ^ -15, param7, var10Lifetime5, var11Lifetime3, param4);
+          var12Lifetime3 = SocketArchiveNetworkClient.a(0, param5, param8, param0, var12Lifetime3, param1 ^ -15, param7, var10Lifetime5, var11Lifetime3, param4);
         }
         if (var10Lifetime5 != 0) {
-          var12Lifetime3 = gv.a(0, param5, param7, param6, var12Lifetime3, 0, param8, var11Lifetime3, var10Lifetime5, param3);
+          var12Lifetime3 = SocketArchiveNetworkClient.a(0, param5, param7, param6, var12Lifetime3, 0, param8, var11Lifetime3, var10Lifetime5, param3);
         }
         param0 = param0 - param4;
         param8 = param8 - param3;
@@ -1205,10 +1205,10 @@ final class hm extends tfa implements gf {
         }
         param6 = param6 - param3;
         if (var11Lifetime3 != 0) {
-          var12Lifetime3 = gv.a(-param4, param5, param8, param0, var12Lifetime3, 0, param7, var10Lifetime5, var11Lifetime3, 0);
+          var12Lifetime3 = SocketArchiveNetworkClient.a(-param4, param5, param8, param0, var12Lifetime3, 0, param7, var10Lifetime5, var11Lifetime3, 0);
         }
         if (0 != var10Lifetime5) {
-          var12Lifetime3 = gv.a(-param3, param5, param7, param6, var12Lifetime3, 0, param8, var11Lifetime3, var10Lifetime5, 0);
+          var12Lifetime3 = SocketArchiveNetworkClient.a(-param3, param5, param7, param6, var12Lifetime3, 0, param8, var11Lifetime3, var10Lifetime5, 0);
         }
         return var12Lifetime3;
     }
@@ -1217,7 +1217,7 @@ final class hm extends tfa implements gf {
         try {
           this.field_j.a(true, (iva) (this));
           if (param3 < 101) {
-            field_n = (cn) null;
+            field_n = (ResourceArchive) null;
           }
           jaggl.OpenGL.glPixelStorei(3314, param2);
           jaggl.OpenGL.glTexSubImage2Di(this.field_i, 0, param7, param4, param6, param1, 32993, this.field_j.field_od, param5, param0);

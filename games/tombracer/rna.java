@@ -19,7 +19,7 @@ final class rna extends ela {
           }
           var4 = new short[param2];
           var3 = var4;
-          lua.a(param0, 0, var4, 0, param2);
+          ArrayUtils.copy(param0, 0, var4, 0, param2);
           stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

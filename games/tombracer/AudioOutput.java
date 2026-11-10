@@ -10,7 +10,7 @@ class AudioOutput {
     int[] field_j;
     private static int field_q;
     static int field_d;
-    private cg field_i;
+    private PcmStream field_i;
     private int field_k;
     private int field_f;
     private int field_s;
@@ -18,10 +18,10 @@ class AudioOutput {
     private int field_a;
     private int field_b;
     private int field_r;
-    private cg[] field_u;
+    private PcmStream[] field_u;
     private int field_t;
     private boolean field_o;
-    private cg[] field_c;
+    private PcmStream[] field_c;
     private long field_e;
 
     private final void a(int[] param0, int param1) {
@@ -32,31 +32,31 @@ class AudioOutput {
         int var7_int;
         Object var7;
         int var8_int;
-        cg[] var8;
+        PcmStream[] var8;
         int var9;
         Object var10;
-        cg var11;
+        PcmStream var11;
         ud var12;
         int var13;
-        cg var14;
+        PcmStream var14;
         int var15_int;
-        cg var15;
+        PcmStream var15;
         int var6Lifetime1;
         int var9Lifetime1;
         Object var10Lifetime1;
-        cg var14Lifetime1;
-        cg var14Lifetime2;
+        PcmStream var14Lifetime1;
+        PcmStream var14Lifetime2;
         var3 = param1;
         if (field_h) {
           var3 = var3 << 1;
         }
-        lua.a(param0, 0, var3);
+        ArrayUtils.clear(param0, 0, var3);
         this.field_r = this.field_r - param1;
         if (this.field_i != null &&
           this.field_r <= 0) {
           this.field_r = this.field_r + (field_d >> 4);
           AudioOutput.a(this.field_i);
-          this.a(this.field_i, this.field_i.d());
+          this.a(this.field_i, this.field_i.getLevel());
           var4 = 0;
           var5 = 255;
           var6 = 7;
@@ -86,7 +86,7 @@ class AudioOutput {
                       var11 = var11.field_g;
                       continue;
                     }
-                    var11.field_f = true;
+                    var11.active = true;
                     var13 = var11.a();
                     var4 = var4 + var13;
                     if (var12 != null) {
@@ -95,23 +95,23 @@ class AudioOutput {
                     if (var4 >= this.field_l) {
                       break scanLoop1;
                     }
-                    var14Lifetime2 = var11.b();
+                    var14Lifetime2 = var11.firstSubStream();
                     if (var14Lifetime2 != null) {
                       var15_int = var11.field_h;
                       while (var14Lifetime2 != null) {
-                        this.a(var14Lifetime2, var15_int * var14Lifetime2.d() >> 8);
-                        var14Lifetime2 = var11.c();
+                        this.a(var14Lifetime2, var15_int * var14Lifetime2.getLevel() >> 8);
+                        var14Lifetime2 = var11.nextSubStream();
                       }
                     }
                     var15 = var11.field_g;
                     var11.field_g = null;
                     if (var10 != null) {
-                      ((cg) (var10)).field_g = var15;
+                      ((PcmStream) (var10)).field_g = var15;
                     } else {
                       this.field_c[var7_int] = var15;
                     }
                     if (var15 == null) {
-                      this.field_u[var7_int] = (cg) (var10);
+                      this.field_u[var7_int] = (PcmStream) (var10);
                     }
                     var11 = var15;
                   }
@@ -132,8 +132,8 @@ class AudioOutput {
             this.field_u[var6Lifetime1] = null;
             var8[var9Lifetime1] = null;
             while (var7 != null) {
-              var10Lifetime1 = ((cg) (var7)).field_g;
-              ((cg) (var7)).field_g = null;
+              var10Lifetime1 = ((PcmStream) (var7)).field_g;
+              ((PcmStream) (var7)).field_g = null;
               var7 = var10Lifetime1;
             }
           }
@@ -142,7 +142,7 @@ class AudioOutput {
           this.field_r = 0;
         }
         if (this.field_i != null) {
-          this.field_i.b(param0, 0, param1);
+          this.field_i.fill(param0, 0, param1);
         }
         this.field_n = bva.b((byte) -107);
     }
@@ -310,9 +310,9 @@ class AudioOutput {
         }
     }
 
-    private final void a(cg param0, int param1) {
+    private final void a(PcmStream param0, int param1) {
         int var3 = param1 >> 5;
-        cg var4 = this.field_u[var3];
+        PcmStream var4 = this.field_u[var3];
         if (var4 == null) {
           this.field_c[var3] = param0;
         } else {
@@ -322,19 +322,19 @@ class AudioOutput {
         param0.field_h = param1;
     }
 
-    private final static void a(cg param0) {
-        param0.field_f = false;
+    private final static void a(PcmStream param0) {
+        param0.active = false;
         if (param0.field_i != null) {
           param0.field_i.field_f = 0;
         }
-        cg var1 = param0.b();
+        PcmStream var1 = param0.firstSubStream();
         while (var1 != null) {
           AudioOutput.a(var1);
-          var1 = param0.c();
+          var1 = param0.nextSubStream();
         }
     }
 
-    final synchronized void b(cg param0) {
+    final synchronized void b(PcmStream param0) {
         this.field_i = param0;
     }
 
@@ -373,7 +373,7 @@ class AudioOutput {
           this.field_r = 0;
         }
         if (this.field_i != null) {
-          this.field_i.a(param0);
+          this.field_i.skip(param0);
           return;
         }
     }
@@ -407,10 +407,10 @@ class AudioOutput {
         this.field_n = bva.b((byte) -107);
         this.field_f = 0;
         this.field_m = 0L;
-        this.field_u = new cg[8];
+        this.field_u = new PcmStream[8];
         this.field_b = 0;
         this.field_a = 0;
-        this.field_c = new cg[8];
+        this.field_c = new PcmStream[8];
         this.field_e = 0L;
         this.field_o = true;
         this.field_r = 0;

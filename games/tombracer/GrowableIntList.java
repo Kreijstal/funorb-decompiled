@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tq {
+final class GrowableIntList {
     private int[] field_c;
     private int field_f;
     private boolean field_e;
-    static cn field_g;
+    static ResourceArchive field_g;
     static int[] field_a;
     static String field_b;
     private int field_d;
@@ -17,7 +17,7 @@ final class tq {
         return this.field_d + 1;
     }
 
-    final int b(int param0, int param1) {
+    final int get(int param0, int param1) {
         if (this.field_d < param1) {
           throw new ArrayIndexOutOfBoundsException(param1);
         }
@@ -30,7 +30,7 @@ final class tq {
 
     final void a(int param0, byte param1) {
         int var3 = 91 / ((param1 - 26) / 53);
-        this.a(this.field_d + 1, param0, -1);
+        this.set(this.field_d + 1, param0, -1);
     }
 
     public static void releaseStatics(int param0) {
@@ -42,26 +42,26 @@ final class tq {
         }
     }
 
-    private final void c(int param0, int param1) {
+    private final void ensureCapacity(int param0, int param1) {
         int[] var4 = null;
         int[] var3 = null;
         int[] var4Lifetime1;
         int[] var3Lifetime1;
         if (param1 == -12364) {
-          var4 = new int[this.a((byte) 24, param0)];
+          var4 = new int[this.capacityForIndex((byte) 24, param0)];
           var3 = var4;
-          lua.a(this.field_c, 0, var4, 0, this.field_c.length);
+          ArrayUtils.copy(this.field_c, 0, var4, 0, this.field_c.length);
           this.field_c = var4;
           return;
         }
         this.field_f = 94;
-        var4Lifetime1 = new int[this.a((byte) 24, param0)];
+        var4Lifetime1 = new int[this.capacityForIndex((byte) 24, param0)];
         var3Lifetime1 = var4Lifetime1;
-        lua.a(this.field_c, 0, var4Lifetime1, 0, this.field_c.length);
+        ArrayUtils.copy(this.field_c, 0, var4Lifetime1, 0, this.field_c.length);
         this.field_c = var4Lifetime1;
     }
 
-    private final int a(byte param0, int param1) {
+    private final int capacityForIndex(byte param0, int param1) {
         int var3;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
@@ -97,22 +97,22 @@ final class tq {
           this.field_d = this.field_d - 1;
           return;
         }
-        lua.a(this.field_c, param0 + 1, this.field_c, param0, this.field_d - param0);
+        ArrayUtils.copy(this.field_c, param0 + 1, this.field_c, param0, this.field_d - param0);
         this.field_d = this.field_d - 1;
     }
 
-    private tq() throws Throwable {
+    private GrowableIntList() throws Throwable {
         throw new Error();
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void set(int param0, int param1, int param2) {
         if (this.field_d < param0) {
           this.field_d = param0;
           if (param2 != -1) {
             return;
           }
           if (this.field_c.length <= param0) {
-            this.c(param0, param2 ^ 12363);
+            this.ensureCapacity(param0, param2 ^ 12363);
             this.field_c[param0] = param1;
             return;
           }
@@ -126,7 +126,7 @@ final class tq {
           this.field_c[param0] = param1;
           return;
         }
-        this.c(param0, param2 ^ 12363);
+        this.ensureCapacity(param0, param2 ^ 12363);
         this.field_c[param0] = param1;
     }
 

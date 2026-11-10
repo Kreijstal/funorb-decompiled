@@ -5,12 +5,12 @@ final class cw {
     private int field_o;
     private OpenGlToolkit field_t;
     private int field_q;
-    private cb field_e;
+    private OpenGlFramebuffer field_e;
     private boolean field_a;
     private int field_g;
     private int field_k;
-    private cb field_i;
-    private cb field_d;
+    private OpenGlFramebuffer field_i;
+    private OpenGlFramebuffer field_d;
     private IntrusiveDeque field_j;
     private boolean field_c;
     private kba field_l;
@@ -383,7 +383,7 @@ final class cw {
 
     final boolean b(byte param0) {
         if (param0 != -43) {
-          this.field_d = (cb) null;
+          this.field_d = (OpenGlFramebuffer) null;
         }
         return this.field_d != null ? true : false;
     }
@@ -413,8 +413,8 @@ final class cw {
     }
 
     cw(OpenGlToolkit param0) {
-        cb dupTemp$2 = null;
-        cb dupTemp$3 = null;
+        OpenGlFramebuffer dupTemp$2 = null;
+        OpenGlFramebuffer dupTemp$3 = null;
         RuntimeException runtimeException = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -439,7 +439,7 @@ final class cw {
             if (!this.field_t.field_Cc) {
               return;
             }
-            dupTemp$2 = new cb(this.field_t);
+            dupTemp$2 = new OpenGlFramebuffer(this.field_t);
             this.field_i = dupTemp$2;
             this.field_d = dupTemp$2;
             if (1 < this.field_t.field_gb &&
@@ -447,7 +447,7 @@ final class cw {
               if (!this.field_t.field_ed) {
                 return;
               }
-              dupTemp$3 = new cb(this.field_t);
+              dupTemp$3 = new OpenGlFramebuffer(this.field_t);
               this.field_e = dupTemp$3;
               this.field_d = dupTemp$3;
             }

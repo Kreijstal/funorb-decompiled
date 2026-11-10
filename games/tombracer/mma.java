@@ -16,7 +16,7 @@ final class mma {
         field_d = null;
     }
 
-    mma(int param0, int param1, pc param2, int param3) {
+    mma(int param0, int param1, BeamSegment param2, int param3) {
     }
 
     final void a(int param0, int param1) {

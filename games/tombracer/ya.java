@@ -14,11 +14,11 @@ final class ya extends za implements e {
 
     final native void ga();
 
-    private final native void aa(oa param0, int param1);
+    private final native void aa(NativeSoftwareGraphicsToolkit param0, int param1);
 
     final native void r();
 
-    ya(oa param0, int param1) {
+    ya(NativeSoftwareGraphicsToolkit param0, int param1) {
         this.aa(param0, param1);
     }
 }

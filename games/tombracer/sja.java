@@ -91,7 +91,7 @@ final class sja extends qma {
         return 6402;
     }
 
-    sja(cn param0, cn param1, cn param2) {
+    sja(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2) {
         super(param0, param1, param2);
     }
 

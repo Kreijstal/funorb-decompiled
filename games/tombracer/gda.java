@@ -5,14 +5,14 @@ abstract class gda {
     static int field_b;
     static int field_a;
     static int field_c;
-    static jpa[] field_d;
+    static SpriteData[] field_d;
 
     abstract void b(int param0);
 
     public static void releaseStatics(int param0) {
         field_d = null;
         if (param0 != 27316) {
-          field_d = (jpa[]) null;
+          field_d = (SpriteData[]) null;
         }
     }
 
@@ -39,7 +39,7 @@ abstract class gda {
 
     abstract void a(int param0, int param1, int param2);
 
-    final static void a(cn param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         qg[] var10 = null;
         int var3 = 0;
         qg var4 = null;

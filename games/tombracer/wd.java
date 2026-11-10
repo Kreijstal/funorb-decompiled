@@ -3,7 +3,7 @@
  */
 final class wd implements dv {
     private Player field_d;
-    static jpa field_c;
+    static SpriteData field_c;
     static String field_a;
     private int field_b;
 
@@ -139,7 +139,7 @@ final class wd implements dv {
             param4.addBehaviour((byte) 83, (Behaviour) (new PitBehaviour(param3, param5)));
           }
           if (param0 > -85) {
-            field_c = (jpa) null;
+            field_c = (SpriteData) null;
           }
           if (!param2) {
             return;
@@ -321,7 +321,7 @@ final class wd implements dv {
           }
           var9 = param0 + param4;
           if (param5 != 27) {
-            field_c = (jpa) null;
+            field_c = (SpriteData) null;
           }
           var10 = param1 - param0;
           for (var11Lifetime1 = param6; var8 < var11Lifetime1; var11Lifetime1--) {
@@ -411,8 +411,8 @@ final class wd implements dv {
             return stackIn_5_0;
           }
           jaggl.OpenGL.glProgramRawARB(param3, 34933, param2);
-          jaggl.OpenGL.glGetIntegerv(34379, tq.field_a, 0);
-          if (tq.field_a[0] != -1) {
+          jaggl.OpenGL.glGetIntegerv(34379, GrowableIntList.field_a, 0);
+          if (GrowableIntList.field_a[0] != -1) {
             jaggl.OpenGL.glBindProgramARB(param3, 0);
             stackIn_9_0 = null;
             return (mf) (stackIn_9_0);

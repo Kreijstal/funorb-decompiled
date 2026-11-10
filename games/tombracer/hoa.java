@@ -6,7 +6,7 @@ final class hoa extends kl {
     private int field_q;
     static boolean field_p;
     static String field_m;
-    static jpa field_l;
+    static SpriteData field_l;
     private int field_o;
 
     public final void a(int param0) {

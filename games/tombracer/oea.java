@@ -4,7 +4,7 @@
 final class oea extends IntrusiveNode {
     static volatile boolean field_k;
     Renderable field_h;
-    static jpa field_j;
+    static SpriteData field_j;
     static int field_f;
     static String field_g;
     static jea field_i;

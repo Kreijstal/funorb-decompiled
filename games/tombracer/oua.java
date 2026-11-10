@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oua {
-    final static GraphicsToolkit a(d param0, int param1, byte param2, cn param3, java.awt.Canvas param4) {
+    final static GraphicsToolkit a(d param0, int param1, byte param2, ResourceArchive param3, java.awt.Canvas param4) {
         try {
           Class var5 = null;
           RuntimeException var5_ref = null;
@@ -18,7 +18,7 @@ final class oua {
               throw new RuntimeException("");
             }
             var5 = Class.forName("Direct3DToolkit");
-            var6 = var5.getDeclaredMethod("createToolkit", new Class[]{Class.forName("java.awt.Canvas"), Class.forName("d"), Class.forName("cn"), Class.forName("java.lang.Integer")});
+            var6 = var5.getDeclaredMethod("createToolkit", new Class[]{Class.forName("java.awt.Canvas"), Class.forName("d"), Class.forName("ResourceArchive"), Class.forName("java.lang.Integer")});
             stackIn_5_0 = (GraphicsToolkit) (var6.invoke((Object) null, new Object[]{param4, param0, param3, new Integer(param1)}));
             return stackIn_5_0;
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

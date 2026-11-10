@@ -146,7 +146,7 @@ final class efa extends WidgetContainer implements mia, tsa {
           if (param1 < 18) {
             efa.releaseStatics(false);
           }
-          ((tra) ((Object) var3)).a(false, -16719, var4);
+          ((TextInputWidget) ((Object) var3)).a(false, -16719, var4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "efa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

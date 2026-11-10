@@ -33,7 +33,7 @@ final class gea {
         }
     }
 
-    final static void a(int param0, cn param1, BitmapFont param2) {
+    final static void a(int param0, ResourceArchive param1, BitmapFont param2) {
         int var8 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;

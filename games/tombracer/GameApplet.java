@@ -304,7 +304,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    final static boolean a(boolean param0, int param1, int param2, cn param3) {
+    final static boolean a(boolean param0, int param1, int param2, ResourceArchive param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         RuntimeException stackIn_8_0 = null;
@@ -661,7 +661,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           }
           try {
             if (param0 != 109) {
-              GameApplet.a(false, -94, 60, (cn) null);
+              GameApplet.a(false, -94, 60, (ResourceArchive) null);
             }
             this.shutdownGame(param0 ^ -45);
           } catch (java.lang.Exception decompiledCaughtParameter0) {

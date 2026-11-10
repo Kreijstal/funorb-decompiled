@@ -7,7 +7,7 @@ final class TimeSwitchBehaviour extends Behaviour implements ut {
     static int field_r;
     private mg field_o;
     static long[] field_q;
-    static jpa field_n;
+    static SpriteData field_n;
 
     final static void a(int param0, int param1, int param2, int param3, int[] param4) {
         int[] var5 = null;

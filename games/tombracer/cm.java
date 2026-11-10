@@ -207,9 +207,9 @@ final class cm implements GamePacket {
             }
             if (bf.field_b[0][2].field_pb) {
               if (mka.b(8192)) {
-                qda.field_b = jsa.field_y;
+                ArchiveNetworkClient.field_b = jsa.field_y;
               } else {
-                qda.field_b = gl.$cfr$intArgs$a$53ce4ab4c593(101, EffectEvent.field_i, new String[]{uu.field_a.field_tb});
+                ArchiveNetworkClient.field_b = gl.$cfr$intArgs$a$53ce4ab4c593(101, EffectEvent.field_i, new String[]{uu.field_a.field_tb});
               }
             }
           }
@@ -338,7 +338,7 @@ final class cm implements GamePacket {
                 }
                 var8 = stackIn_139_0;
                 if (var8 != null) {
-                  qda.field_b = var8;
+                  ArchiveNetworkClient.field_b = var8;
                 }
               }
               stackIn_143_0 = var29;
@@ -610,7 +610,7 @@ final class cm implements GamePacket {
                   }
                 }
                 if (var20 != null) {
-                  qda.field_b = (String) (var20);
+                  ArchiveNetworkClient.field_b = (String) (var20);
                 }
               }
               if (!param3) {

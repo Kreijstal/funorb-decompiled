@@ -3,7 +3,7 @@
  */
 final class rc {
     static ei[] field_a;
-    static jpa[] field_b;
+    static SpriteData[] field_b;
 
     final static void a(int param0, int param1, pha param2, byte param3, int param4, int param5, iv param6) {
         lja var12 = null;
@@ -16,7 +16,7 @@ final class rc {
           hka.field_b.a((byte) -22, true);
           hka.field_b.a((int[]) null, 0, 19);
           if (param3 != -93) {
-            field_b = (jpa[]) null;
+            field_b = (SpriteData[]) null;
           }
           hka.field_b.c(0);
           var12 = hka.field_b;

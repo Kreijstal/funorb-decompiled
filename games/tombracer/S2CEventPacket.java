@@ -52,7 +52,7 @@ final class S2CEventPacket implements GamePacket {
         field_c = null;
     }
 
-    final static String a(String param0, String param1, cn param2, byte param3) {
+    final static String a(String param0, String param1, ResourceArchive param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         String stackIn_3_0 = null;

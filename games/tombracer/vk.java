@@ -31,7 +31,7 @@ final class vk implements os {
         try {
           var1_int = 0;
           var2 = 0;
-          while (es.a(true)) {
+          while (NanoTickClock.a(true)) {
             FacePointLocomotor.field_r.c(102);
             if (FacePointLocomotor.field_r.a(false)) {
               var1_int = 1;

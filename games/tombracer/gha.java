@@ -115,7 +115,7 @@ final class gha implements pp {
         field_a = null;
     }
 
-    final static oc a(String param0, String param1, int param2, cn param3) {
+    final static oc a(String param0, String param1, int param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Exception var5 = null;

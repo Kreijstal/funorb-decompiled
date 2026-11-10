@@ -363,7 +363,7 @@ final class io {
         return (byte) var2Lifetime4;
     }
 
-    final static boolean a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static boolean centredBoxesOverlap(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         if (param2 < -51) {
           return pda.a(-(param0 / 2) + param8, (1 + param3) / 2 + param5, -(param7 / 2) + param4, 256, (param0 + 1) / 2 + param8, param1 + (1 + param6) / 2, -(param3 / 2) + param5, param4 + (param7 + 1) / 2, param1 - param6 / 2);
         }

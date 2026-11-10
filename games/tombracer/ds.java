@@ -3,7 +3,7 @@
  */
 final class ds {
     private int[] field_e;
-    static jpa field_g;
+    static SpriteData field_g;
     static String field_k;
     static String field_l;
     private int[] field_b;

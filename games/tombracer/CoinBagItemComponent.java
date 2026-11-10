@@ -309,7 +309,7 @@ final class CoinBagItemComponent extends ItemComponent {
                       var14_ref_String = uda.field_w + (String) (var11_ref);
                     }
                   }
-                  qda.field_b = "<col=A00000>" + var13_ref_String + "<br>" + var14_ref_String;
+                  ArchiveNetworkClient.field_b = "<col=A00000>" + var13_ref_String + "<br>" + var14_ref_String;
                 }
               }
               if ((decompiledFrameRemainder0) && (!(var10 < 2) || var19 != 0) && (null != PowerUpItemBehaviour.field_u ||
@@ -424,12 +424,12 @@ final class CoinBagItemComponent extends ItemComponent {
                   hw.field_a.field_X = false;
                   if (hw.field_a.field_pb) {
                     if (rm.field_e.field_a.field_wb != 0) {
-                      qda.field_b = gl.$cfr$intArgs$a$53ce4ab4c593(126, sta.field_A, new String[]{BitPacketBuffer.field_p});
+                      ArchiveNetworkClient.field_b = gl.$cfr$intArgs$a$53ce4ab4c593(126, sta.field_A, new String[]{BitPacketBuffer.field_p});
                       if (var19 != 0) {
-                        qda.field_b = BitPacketBuffer.field_o;
+                        ArchiveNetworkClient.field_b = BitPacketBuffer.field_o;
                       }
                     } else {
-                      qda.field_b = BitPacketBuffer.field_o;
+                      ArchiveNetworkClient.field_b = BitPacketBuffer.field_o;
                     }
                   }
                 }
@@ -456,7 +456,7 @@ final class CoinBagItemComponent extends ItemComponent {
               }
               var8.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(97, DelegatingCanvas.field_b, new String[]{Integer.toString(var9)});
             }
-            cea.field_a.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(106, tra.field_A, new String[]{Integer.toString(uu.field_a.field_Mb), Integer.toString(uu.field_a.field_Jb)});
+            cea.field_a.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(106, TextInputWidget.field_A, new String[]{Integer.toString(uu.field_a.field_Mb), Integer.toString(uu.field_a.field_Jb)});
           }
           stackIn_168_0 = nra.field_c;
           stackIn_168_1 = -98;

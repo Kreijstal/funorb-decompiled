@@ -50,7 +50,7 @@ final class wp {
             stackIn_13_0 = (mu) null;
             return stackIn_13_0;
           }
-          var3 = (mu) (TrackPlayerLocomotor.field_s.a(-128, (long)var2.hashCode()));
+          var3 = (mu) (TrackPlayerLocomotor.field_s.get(-128, (long)var2.hashCode()));
           while (true) {
             if (var3 == null) {
               return null;

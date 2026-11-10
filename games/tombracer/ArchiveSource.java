@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class dr {
+abstract class ArchiveSource {
     static ToolkitSprite[] field_a;
 
     final static void a(int param0, int param1) {
@@ -17,14 +17,14 @@ abstract class dr {
 
     abstract dla a(boolean param0);
 
-    abstract int b(int param0, int param1);
+    abstract int getGroupProgress(int param0, int param1);
 
-    abstract byte[] a(int param0, byte param1);
+    abstract byte[] getPackedGroup(int param0, byte param1);
 
     public static void a(int param0) {
         field_a = null;
         if (param0 <= 85) {
-          dr.a(102, -17);
+          ArchiveSource.a(102, -17);
         }
     }
 

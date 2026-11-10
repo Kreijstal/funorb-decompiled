@@ -8,7 +8,7 @@ final class WindZoneBehaviour extends Behaviour {
     static Effect field_o;
     static String field_u;
     static String field_s;
-    private pc field_v;
+    private BeamSegment field_v;
     static String field_n;
     private int field_p;
 
@@ -35,7 +35,7 @@ final class WindZoneBehaviour extends Behaviour {
         this.field_r = 2;
         this.field_q = 2;
         this.field_p = 1;
-        this.field_v = new pc();
+        this.field_v = new BeamSegment();
         try {
           this.field_q = param1.readBits((byte) 44, 2);
           this.field_r = param1.readBits((byte) 44, 4);
@@ -171,7 +171,7 @@ final class WindZoneBehaviour extends Behaviour {
             !this.trap.a(var18, true)) {
             var19 = var18.getX(3);
             var20 = var18.getY(param0 + 4230);
-            if (this.trap.a((byte) 110, var20, var19, 1, 1)) {
+            if (this.trap.intersectsRect((byte) 110, var20, var19, 1, 1)) {
               var22 = this.field_q;
               if (var22 == 0) {
                 var21 = var20 + var18.getHeight((byte) 55) / 2;
@@ -212,7 +212,7 @@ final class WindZoneBehaviour extends Behaviour {
                 } else {
                   stackIn_57_3 = 1;
                 }
-                ((Collidable) (Object) stackIn_56_0).a(stackIn_56_1, stackIn_56_2, stackIn_57_3, gqa.a(var7, (byte) 24, var8), gqa.a(var6, (byte) 24, var8), 0);
+                ((Collidable) (Object) stackIn_56_0).tryPush(stackIn_56_1, stackIn_56_2, stackIn_57_3, gqa.a(var7, (byte) 24, var8), gqa.a(var6, (byte) 24, var8), 0);
               }}
           }
         }
@@ -255,7 +255,7 @@ final class WindZoneBehaviour extends Behaviour {
         this.field_r = 2;
         this.field_q = 2;
         this.field_p = 1;
-        this.field_v = new pc();
+        this.field_v = new BeamSegment();
     }
 
     final boolean p(byte param0) {

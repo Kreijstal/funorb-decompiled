@@ -61,7 +61,7 @@ final class ph {
           if (var2 > -1L &&
             var4 > var2) {
             var6 = (int)(var4 - var2);
-            lua.a(this.field_e, (int)(-this.field_l + var2), this.field_h, (int)(-this.field_m + var2), var6);
+            ArrayUtils.copy(this.field_e, (int)(-this.field_l + var2), this.field_h, (int)(-this.field_m + var2), var6);
           }
           this.field_f = 0;
           this.field_l = -1L;
@@ -159,7 +159,7 @@ final class ph {
             if (this.field_l != -1L &&
               (this.field_l + (long)this.field_e.length) < ((long)param3 + this.field_g)) {
               var5_int = (int)((long)this.field_e.length - (-this.field_l + this.field_g));
-              lua.a(param0, param1, this.field_e, (int)(this.field_g - this.field_l), var5_int);
+              ArrayUtils.copy(param0, param1, this.field_e, (int)(this.field_g - this.field_l), var5_int);
               this.field_g = this.field_g + (long)var5_int;
               param1 = param1 + var5_int;
               param3 = param3 - var5_int;
@@ -176,7 +176,7 @@ final class ph {
               if (this.field_l == -1L) {
                 this.field_l = this.field_g;
               }
-              lua.a(param0, param1, this.field_e, (int)(-this.field_l + this.field_g), param3);
+              ArrayUtils.copy(param0, param1, this.field_e, (int)(-this.field_l + this.field_g), param3);
               this.field_g = this.field_g + (long)param3;
               if ((-this.field_l + this.field_g) > (long)this.field_f) {
                 this.field_f = (int)(this.field_g - this.field_l);
@@ -215,7 +215,7 @@ final class ph {
             if (var5_long > -1L &&
               var7 > var5_long) {
               var9 = (int)(var7 - var5_long);
-              lua.a(param0, (int)((long)param1 + (var5_long - this.field_g)), this.field_h, (int)(-this.field_m + var5_long), var9);
+              ArrayUtils.copy(param0, (int)((long)param1 + (var5_long - this.field_g)), this.field_h, (int)(-this.field_m + var5_long), var9);
             }
             this.field_g = this.field_g + (long)param3;
             return;
@@ -267,7 +267,7 @@ final class ph {
             if (this.field_l != -1L &&
               this.field_g >= this.field_l &&
               (this.field_l + (long)this.field_f) >= ((long)param1 + this.field_g)) {
-              lua.a(this.field_e, (int)(-this.field_l + this.field_g), param0, param2, param1);
+              ArrayUtils.copy(this.field_e, (int)(-this.field_l + this.field_g), param0, param2, param1);
               this.field_g = this.field_g + (long)param1;
               return;
             }
@@ -283,7 +283,7 @@ final class ph {
               if (var9_int > param1) {
                 var9_int = param1;
               }
-              lua.a(this.field_h, (int)(-this.field_m + this.field_g), param0, param2, var9_int);
+              ArrayUtils.copy(this.field_h, (int)(-this.field_m + this.field_g), param0, param2, var9_int);
               this.field_g = this.field_g + (long)var9_int;
               param2 = param2 + var9_int;
               param1 = param1 - var9_int;
@@ -314,7 +314,7 @@ final class ph {
               if (this.field_a < var9_intLifetime1Lifetime1) {
                 var9_intLifetime1Lifetime1 = this.field_a;
               }
-              lua.a(this.field_h, 0, param0, param2, var9_intLifetime1Lifetime1);
+              ArrayUtils.copy(this.field_h, 0, param0, param2, var9_intLifetime1Lifetime1);
               param2 = param2 + var9_intLifetime1Lifetime1;
               param1 = param1 - var9_intLifetime1Lifetime1;
               this.field_g = this.field_g + (long)var9_intLifetime1Lifetime1;
@@ -357,7 +357,7 @@ final class ph {
               if (-1L < var9 &&
                 var9 < var11) {
                 var13 = (int)(var11 - var9);
-                lua.a(this.field_e, (int)(-this.field_l + var9), param0, var7 + (int)(-var5_long + var9), var13);
+                ArrayUtils.copy(this.field_e, (int)(-this.field_l + var9), param0, var7 + (int)(-var5_long + var9), var13);
                 if (this.field_g < var11) {
                   param1 = (int)((long)param1 - (var11 - this.field_g));
                   this.field_g = var11;

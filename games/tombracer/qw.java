@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qw extends IntrusiveNode {
-    static hea field_f;
+    static BinaryBitmapFont field_f;
     static String field_g;
     static d field_j;
     private Player field_h;

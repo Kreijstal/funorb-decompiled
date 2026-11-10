@@ -188,7 +188,7 @@ abstract class dfa {
           pq.a(nma.field_l, false);
         }
         ola.f((byte) 101);
-        pc.a(5);
+        BeamSegment.a(5);
         if (param0 == 62) {
           rda.e(0);
           if (bl.b(param0 - 62)) {

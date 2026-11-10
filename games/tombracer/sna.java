@@ -97,7 +97,7 @@ final class sna {
               if ((!(this.field_b)) &&
                 ((var10.u((byte) 127) == 1))) {
                 this.field_b = true;
-                this.a(uj.field_f, (ms) null, 5, -108);
+                this.a(S2CPlayerSyncPacket.field_f, (ms) null, 5, -108);
               }
               decompiledFrameRemainder0 = false;
             }
@@ -112,7 +112,7 @@ final class sna {
         if ((decompiledFrameRemainder0) && (!this.field_b &&
           var10.u((byte) 127) == 1)) {
           this.field_b = true;
-          this.a(uj.field_f, (ms) null, 5, -108);
+          this.a(S2CPlayerSyncPacket.field_f, (ms) null, 5, -108);
         }
 
     }

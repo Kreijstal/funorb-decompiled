@@ -8,8 +8,8 @@ final class lt {
     static Object field_f;
     String field_e;
     int field_d;
-    cn field_h;
-    static jpa field_a;
+    ResourceArchive field_h;
+    static SpriteData field_a;
 
     final static boolean a(String param0, int param1) {
         RuntimeException var2 = null;

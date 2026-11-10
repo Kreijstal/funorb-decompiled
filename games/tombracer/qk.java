@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qk extends rt {
-    static jpa field_u;
+    static SpriteData field_u;
     static double[] field_w;
     float field_v;
     int field_t;

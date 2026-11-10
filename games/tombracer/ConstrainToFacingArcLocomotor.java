@@ -6,7 +6,7 @@ final class ConstrainToFacingArcLocomotor extends ConstraintLocomotor {
     private int field_u;
     static int field_w;
     static String field_t;
-    static cn field_v;
+    static ResourceArchive field_v;
 
     final int hashState(int param0, int param1) {
         if (param0 != 0) {
@@ -75,7 +75,7 @@ final class ConstrainToFacingArcLocomotor extends ConstraintLocomotor {
           if (param1 > -78) {
             this.field_u = -70;
           }
-          param0.writeBits((byte) -3, cn.a((byte) -104, this.field_u, 8192, 8), 8);
+          param0.writeBits((byte) -3, ResourceArchive.a((byte) -104, this.field_u, 8192, 8), 8);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "oqa.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

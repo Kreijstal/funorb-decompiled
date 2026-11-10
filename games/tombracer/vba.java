@@ -191,7 +191,7 @@ final class vba extends we {
         if (param0 != -40) {
           field_v = -0.5121414661407471f;
         }
-        return (pha) (tc.field_d.a(param0 ^ 88, param1));
+        return (pha) (tc.field_d.get(param0 ^ 88, param1));
     }
 
     private final boolean i(int param0, int param1) {
@@ -232,8 +232,8 @@ final class vba extends we {
         }
         var7 = var4;
         var8_int = var5;
-        var11 = dr.field_a;
-        tra.a(1, var11, (byte) -89, var7, var6_ref_ha, 180, 1, 180, var8_int, 0);
+        var11 = ArchiveSource.field_a;
+        TextInputWidget.a(1, var11, (byte) -89, var7, var6_ref_ha, 180, 1, 180, var8_int, 0);
         if (this.field_t != -1) {
           stackIn_5_0 = this.field_t;
         } else {

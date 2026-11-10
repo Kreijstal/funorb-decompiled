@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class WhiteLightSensorComponent extends SwitchComponent {
-    static af field_K;
+    static SecondaryNodeHashTable field_K;
     static String field_J;
 
     final int B(int param0) {
@@ -141,7 +141,7 @@ final class WhiteLightSensorComponent extends SwitchComponent {
 
     final boolean n(byte param0) {
         if (param0 != -122) {
-          field_K = (af) null;
+          field_K = (SecondaryNodeHashTable) null;
           return false;
         }
         return false;

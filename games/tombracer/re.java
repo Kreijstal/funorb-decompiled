@@ -3,7 +3,7 @@
  */
 final class re {
     static String field_b;
-    static jpa field_a;
+    static SpriteData field_a;
 
     public static void releaseStatics(byte param0) {
         int var1 = -87 % ((param0 - 30) / 32);
@@ -16,7 +16,7 @@ final class re {
         int var3 = 0;
         BufferedSocket.field_g = SoftwareRasterizer.field_a;
         ob.field_i = SoftwareRasterizer.field_g;
-        ji.a(16);
+        NodeHashTable.a(16);
         oca.field_b.a(0, 0, 20, nra.field_a.field_G, -2 + (-40 + nra.field_a.field_t));
         lva.field_t.a(hk.field_e.field_G, di.field_a, param0 + 5264, 0, 0);
         int var1 = 2 + di.field_a;
@@ -29,7 +29,7 @@ final class re {
         iia.field_r.a(78, 30, -23776, 5, 75);
         RotateLocomotor.field_o.a(48, 30, -23776, 5, 155);
         if (param0 == -29040) {
-          l.field_K.a(48, 30, -23776, 5, 205);
+          MidiPcmStream.field_K.a(48, 30, -23776, 5, 205);
           var2 = rca.field_p ? 250 : 200;
           MirrorComponent.field_I.a(-var2 + 363, 30, -23776, 5, 5 + var2);
           cq.field_e.a(-365 + (-5 + (OpenGlToolkit.field_fd.field_G - 5)), 30, -23776, 5, 370);

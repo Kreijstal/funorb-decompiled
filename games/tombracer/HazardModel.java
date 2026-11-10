@@ -117,16 +117,16 @@ final class HazardModel extends TrapModel {
                   var4 = bl.field_a.field_r;
                 }
                 var5 = null;
-                if (cn.field_k == 0) {
+                if (ResourceArchive.field_k == 0) {
                   var5 = rf.a(true, var4, param1);
                 }
-                if (1 == cn.field_k) {
+                if (1 == ResourceArchive.field_k) {
                   var5 = uca.a(var4, (byte) 102, param1);
                 }
-                if (cn.field_k == 2) {
+                if (ResourceArchive.field_k == 2) {
                   var5 = nna.a(-3, var4, param1);
                 }
-                if (3 == cn.field_k) {
+                if (3 == ResourceArchive.field_k) {
                   var5 = kc.a(var4, param1, false, var4);
                 }
                 if (var5 != null) {
@@ -135,7 +135,7 @@ final class HazardModel extends TrapModel {
                 }
               }
               bl.field_a = null;
-              cn.field_k = -1;
+              ResourceArchive.field_k = -1;
             }
           }
           if (param0 > -37) {

@@ -14,8 +14,8 @@ final class al extends IntrusiveNode {
           field_g = null;
           return;
         }
-        pc var2 = (pc) null;
-        al.a((pc) null, 17, -109, (pc) null);
+        BeamSegment var2 = (BeamSegment) null;
+        al.a((BeamSegment) null, 17, -109, (BeamSegment) null);
         field_g = null;
     }
 
@@ -23,10 +23,10 @@ final class al extends IntrusiveNode {
         this.field_i = param0;
     }
 
-    final static int a(pc param0, int param1, int param2, pc param3) {
+    final static int a(BeamSegment param0, int param1, int param2, BeamSegment param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        pc var5 = null;
+        BeamSegment var5 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -42,8 +42,8 @@ final class al extends IntrusiveNode {
             System.out.println("collide.lineseg_lineseg(" + param0.field_d + ", " + param0.field_k + ", " + param0.field_e + ", " + param0.field_a + ", " + param3.field_d + ", " + param3.field_k + ", " + param3.field_e + ", " + param3.field_a + ", " + param1 + ")");
           }
           if (param2 != 12) {
-            var5 = (pc) null;
-            al.a((pc) null, 111, 55, (pc) null);
+            var5 = (BeamSegment) null;
+            al.a((BeamSegment) null, 111, 55, (BeamSegment) null);
           }
           stackIn_5_0 = var4_int;
           return stackIn_5_0;

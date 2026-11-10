@@ -417,7 +417,7 @@ final class mr extends WidgetContainer implements tma, tsa, mia {
           if (param1 <= 18) {
             this.field_A = (lga) null;
           }
-          ((tra) ((Object) var3)).a(false, -16719, var4);
+          ((TextInputWidget) ((Object) var3)).a(false, -16719, var4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "mr.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

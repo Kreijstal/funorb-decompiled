@@ -14,7 +14,7 @@ abstract class jg {
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (qda.a((byte) -72, param2)) {
+          if (ArchiveNetworkClient.a((byte) -72, param2)) {
             return false;
           }
           if (eba.a(param2, 6912)) {

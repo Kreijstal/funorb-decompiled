@@ -94,7 +94,7 @@ final class uh extends IntrusiveNode {
           if (var2 == null) {
             var2 = param0;
           }
-          var3 = (mu) (CoinItemComponent.field_G.a(-114, (long)var2.hashCode()));
+          var3 = (mu) (CoinItemComponent.field_G.get(-114, (long)var2.hashCode()));
           var4 = -95 / ((param1 + 46) / 54);
           while (var3 != null) {
             var8 = (CharSequence) ((Object) var3.field_tb);

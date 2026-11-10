@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class du {
-    static jpa field_c;
+    static SpriteData field_c;
     static String field_a;
     static int field_d;
     static boolean field_e;

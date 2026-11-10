@@ -17,7 +17,7 @@ abstract class SimulationObserver {
         }
     }
 
-    final static int a(int param0, int param1, int param2, int param3, pc param4, int param5, int param6) {
+    final static int a(int param0, int param1, int param2, int param3, BeamSegment param4, int param5, int param6) {
         int var7_int = 0;
         int var8 = 0;
         int var9 = 0;
@@ -93,8 +93,8 @@ abstract class SimulationObserver {
     final static void a(byte param0) {
         rfa.field_B = FleeLocomotor.field_B + " <b>" + vc.field_s + "</b> " + cq.field_c + " <b>" + mha.field_F + "</b> " + kka.field_p + "<br>" + "<br>" + wg.field_k;
         if (param0 != -27) {
-          pc var2 = (pc) null;
-          SimulationObserver.a(-114, -20, 86, 69, (pc) null, -36, 11);
+          BeamSegment var2 = (BeamSegment) null;
+          SimulationObserver.a(-114, -20, 86, 69, (BeamSegment) null, -36, 11);
         }
     }
 

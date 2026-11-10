@@ -7,7 +7,7 @@ final class ui {
     private int field_d;
     private int field_b;
 
-    final static void a(cn param0, String param1, int param2, int param3) {
+    final static void a(ResourceArchive param0, String param1, int param2, int param3) {
         int incrementValue$9 = 0;
         int incrementValue$10 = 0;
         int incrementValue$11 = 0;
@@ -378,7 +378,7 @@ final class ui {
         field_c = null;
         if (param0 != 4) {
           String var2 = (String) null;
-          ui.a((cn) null, (String) null, -10, 115);
+          ui.a((ResourceArchive) null, (String) null, -10, 115);
         }
     }
 

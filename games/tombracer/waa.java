@@ -44,7 +44,7 @@ final class waa {
             stackIn_12_0 = 6410;
             return stackIn_12_0;
           }
-          if (param0 != js.field_g) {
+          if (param0 != CachedArchiveSource.field_g) {
             throw new IllegalStateException();
           }
           stackIn_16_0 = 6145;

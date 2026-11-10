@@ -3,16 +3,16 @@
  */
 import java.io.*;
 
-final class gv extends qda {
+final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
     private BufferedSocket field_t;
     static int[] field_q;
-    static jpa field_s;
+    static SpriteData field_s;
     static String field_r;
     static int field_u;
     static String field_v;
     static String[] field_w;
 
-    public gv() {
+    public SocketArchiveNetworkClient() {
     }
 
     public static void releaseStatics(boolean param0) {
@@ -35,7 +35,7 @@ final class gv extends qda {
         }
     }
 
-    final void a(Object param0, byte param1, boolean param2) {
+    final void attachConnection(Object param0, byte param1, boolean param2) {
         try {
           RuntimeException stackIn_26_0 = null;
           StringBuilder stackIn_26_1 = null;
@@ -60,7 +60,7 @@ final class gv extends qda {
               this.field_t = null;
             }
             this.field_t = (BufferedSocket) (param0);
-            this.g(param1 - 104);
+            this.sendInitControlPacket(param1 - 104);
             if (param1 != 54) {
               field_w = (String[]) null;
             }
@@ -174,7 +174,7 @@ final class gv extends qda {
         int var10;
         int var11;
         if (param5 != 0) {
-          gv.releaseStatics(true);
+          SocketArchiveNetworkClient.releaseStatics(true);
         }
         boolean decompiledFrameRemainder0 = true;
         var10 = -(param2 * param7 / param8) + param6;
@@ -394,7 +394,7 @@ final class gv extends qda {
               break;
             }
             if (param0 <= 26) {
-              gv.releaseStatics(false);
+              SocketArchiveNetworkClient.releaseStatics(false);
             }
             return true;
           } catch (java.io.IOException decompiledCaughtParameter1) {
@@ -422,7 +422,7 @@ final class gv extends qda {
         }
     }
 
-    final void e(int param0) {
+    final void invalidateConnection(int param0) {
         try {
           this.field_t.a((byte) 105);
         } catch (Exception exception) {
@@ -433,7 +433,7 @@ final class gv extends qda {
         this.field_d = (byte)(int)(1.0 + Math.random() * 255.0);
     }
 
-    private final void g(int param0) {
+    private final void sendInitControlPacket(int param0) {
         try {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;

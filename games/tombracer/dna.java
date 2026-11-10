@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class dna extends PrefabComponent {
-    static jpa field_F;
+    static SpriteData field_F;
     static String field_I;
     static String field_H;
     static boolean field_G;
@@ -26,7 +26,7 @@ abstract class dna extends PrefabComponent {
 
     final boolean n(byte param0) {
         if (param0 != -122) {
-          field_F = (jpa) null;
+          field_F = (SpriteData) null;
           return true;
         }
         return true;
@@ -63,7 +63,7 @@ abstract class dna extends PrefabComponent {
 
     final boolean s(int param0) {
         if (param0 != -15254) {
-          field_F = (jpa) null;
+          field_F = (SpriteData) null;
           return false;
         }
         return false;

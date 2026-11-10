@@ -476,7 +476,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, t
         }
     }
 
-    public final boolean a(int param0, WorldBody param1, int param2, pc param3) {
+    public final boolean interceptsBeam(int param0, WorldBody param1, int param2, BeamSegment param3) {
         RuntimeException var5 = null;
         iq var6 = null;
         RuntimeException stackIn_6_0 = null;
@@ -540,7 +540,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, t
         this.field_B = param1 ? true : false;
     }
 
-    public final boolean a(byte param0, boolean param1) {
+    public final boolean isPushable(byte param0, boolean param1) {
         if (param0 != -55) {
           return false;
         }
@@ -821,7 +821,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, t
         }
     }
 
-    public final void a(int param0, int param1, int param2) {
+    public final void moveTo(int param0, int param1, int param2) {
         this.field_z.collisionGrid.remove((Collidable) (this), (byte) 98);
         this.setXY(param1, param0, (byte) 114);
         this.g((byte) -99);
@@ -882,7 +882,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, t
         }
     }
 
-    public final boolean a(int param0, boolean param1, int param2, int param3, int param4, int param5) {
+    public final boolean tryPush(int param0, boolean param1, int param2, int param3, int param4, int param5) {
         if (param0 < 68) {
           this.velocityX = -53;
           return false;
@@ -934,7 +934,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, t
         RuntimeException var3 = null;
         try {
           if (param1 != 5465) {
-            this.a((byte) 21, true);
+            this.isPushable((byte) 21, true);
           }
           if (this.z >= 0) {
             param0.a((byte) -116, 7, (Renderable) (this));
@@ -1236,7 +1236,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, t
         return this.y;
     }
 
-    public final int a(Effect param0, int param1, int param2, int param3, int param4, int param5) {
+    public final int applyAreaEffect(Effect param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
@@ -1250,7 +1250,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, t
             stackIn_3_0 = 0;
             return stackIn_3_0;
           }
-          if (!io.a(param1, this.y, (byte) -90, param5, this.x, param4, this.field_o, this.field_o, param2)) {
+          if (!io.centredBoxesOverlap(param1, this.y, (byte) -90, param5, this.x, param4, this.field_o, this.field_o, param2)) {
             stackIn_6_0 = 0;
             return stackIn_6_0;
           }
@@ -1273,7 +1273,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, t
         }
     }
 
-    public final int a(Effect param0, Projectile param1, int param2) {
+    public final int applyProjectileEffect(Effect param0, Projectile param1, int param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -1286,7 +1286,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, t
           if (param2 >= -97) {
             this.field_B = false;
           }
-          stackIn_3_0 = this.a(param0, param1.field_o, param1.x, 0, param1.y, param1.field_o);
+          stackIn_3_0 = this.applyAreaEffect(param0, param1.field_o, param1.x, 0, param1.y, param1.field_o);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1313,14 +1313,14 @@ final class Projectile extends PooledObject implements Renderable, Collidable, t
           dea.field_a.a(param1, false, this);
           if (param0 < 103) {
             Collidable var4 = (Collidable) null;
-            this.a(40, (WorldBody) null, -76, 70, -19, (Collidable) null, -19, 65);
+            this.overlapsBox(40, (WorldBody) null, -76, 70, -19, (Collidable) null, -19, 65);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ep.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final int a(Effect param0, int param1, pc param2) {
+    public final int applyBeamEffect(Effect param0, int param1, BeamSegment param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;
@@ -1397,7 +1397,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, t
         return this.field_j;
     }
 
-    public final boolean a(int param0, WorldBody param1, int param2, int param3, int param4, Collidable param5, int param6, int param7) {
+    public final boolean overlapsBox(int param0, WorldBody param1, int param2, int param3, int param4, Collidable param5, int param6, int param7) {
         RuntimeException var9 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

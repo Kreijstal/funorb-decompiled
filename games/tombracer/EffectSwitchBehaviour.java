@@ -394,7 +394,7 @@ final class EffectSwitchBehaviour extends Behaviour implements ut {
         }
     }
 
-    final int a(int param0, Effect param1, pc param2) {
+    final int a(int param0, Effect param1, BeamSegment param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;

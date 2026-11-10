@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ita implements mw {
-    static hja[] field_e;
+    static IndexedSprite[] field_e;
     int field_d;
     static jea field_c;
     static int[] field_a;

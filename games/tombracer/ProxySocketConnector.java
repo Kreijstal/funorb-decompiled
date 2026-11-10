@@ -6,7 +6,7 @@ import java.util.*;
 
 final class ProxySocketConnector extends SocketConnector {
     static int field_f;
-    static jpa[] field_e;
+    static SpriteData[] field_e;
     private java.net.ProxySelector field_d;
 
     public static void releaseStatics(byte param0) {
@@ -36,7 +36,7 @@ final class ProxySocketConnector extends SocketConnector {
             return stackIn_2_0;
           }
           if (param1 != 8793) {
-            field_e = (jpa[]) null;
+            field_e = (SpriteData[]) null;
           }
           if (param2 == 6) {
             stackIn_7_0 = era.field_f;
@@ -441,7 +441,7 @@ final class ProxySocketConnector extends SocketConnector {
             param6 = param6 >> var10;
           }
           if (param4 >= -63) {
-            field_e = (jpa[]) null;
+            field_e = (SpriteData[]) null;
           }
           var10Lifetime1 = Math.max(Math.max(RandomMazeBehaviour.b(1, param3), RandomMazeBehaviour.b(1, param1)), RandomMazeBehaviour.b(1, param2)) - 14;
           if (var10Lifetime1 > 0) {

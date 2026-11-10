@@ -177,7 +177,7 @@ final class usa extends vw {
         }
     }
 
-    usa(Direct3DToolkit param0, cn param1, hk param2) {
+    usa(Direct3DToolkit param0, ResourceArchive param1, hk param2) {
         super(param0);
         this.field_g = param2;
         this.field_e = param0;

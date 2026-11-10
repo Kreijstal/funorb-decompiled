@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class mna {
-    static jpa[] field_c;
+    static SpriteData[] field_c;
     static String field_b;
     static int[] field_a;
     static int field_d;

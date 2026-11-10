@@ -35,7 +35,7 @@ final class mq {
         int var8 = 0;
         float var10 = 0.0f;
         int var11 = 0;
-        cb var12 = null;
+        OpenGlFramebuffer var12 = null;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;

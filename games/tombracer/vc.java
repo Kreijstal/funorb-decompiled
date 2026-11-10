@@ -6,7 +6,7 @@ final class vc extends ci {
     private int field_r;
     static String field_o;
     static BitPacketBuffer field_q;
-    static cn field_p;
+    static ResourceArchive field_p;
     private int field_m;
     static String field_s;
     private int field_t;

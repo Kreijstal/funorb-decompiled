@@ -62,8 +62,8 @@ final class ema implements isa {
     final static boolean a(boolean param0, int param1, int param2, int param3, int param4) {
         int var6;
         int var7;
-        jpa var8;
-        jpa var9;
+        SpriteData var8;
+        SpriteData var9;
         int stackIn_17_0 = 0;
         int var6Lifetime1;
         var8 = lm.field_p[param3];

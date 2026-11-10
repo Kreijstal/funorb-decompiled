@@ -6,7 +6,7 @@ final class rp extends IntrusiveNode {
     static ft field_g;
     static int field_h;
     static int field_i;
-    static jpa field_f;
+    static SpriteData field_f;
 
     public static void a(boolean param0) {
         field_g = null;

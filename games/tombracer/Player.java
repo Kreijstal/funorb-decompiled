@@ -41,7 +41,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
     private int field_f;
     static String[] loadingQuips;
     static String field_s;
-    private int[] field_x;
+    private int[] treasure;
     private int field_a;
     private on field_jb;
     private int field_kb;
@@ -56,7 +56,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
     private int field_e;
     private int field_j;
     private int[] field_D;
-    private int field_E;
+    private int moveSpeed;
     private int field_ib;
     private boolean field_hb;
     private int field_cb;
@@ -66,7 +66,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
     private int field_B;
     private int field_O;
     private int field_ab;
-    private int field_R;
+    private int total;
 
     public final on c(boolean param0) {
         RuntimeException var2 = null;
@@ -151,7 +151,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
             !this.s((byte) 91)) {
             return;
           }
-          this.C(-1).a(this, param0 - 16385);
+          this.getSimulation(-1).a(this, param0 - 16385);
           if (param0 != 16384) {
             return;
           }
@@ -181,7 +181,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    final int c(int param0, int param1) {
+    final int getTreasure(int param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -189,7 +189,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
           if (param0 != 196608) {
             this.w(49);
           }
-          stackIn_4_0 = this.field_x[param1];
+          stackIn_4_0 = this.treasure[param1];
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -215,7 +215,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
               if (0 < this.lifeStateTimer) {
                 return;
               }
-              this.C(param0 ^ -6).c(-1);
+              this.getSimulation(param0 ^ -6).c(-1);
               if (var4 == 0) {
                 return;
               }
@@ -290,7 +290,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
           }
           boolean decompiledFrameRemainder0 = true;
           if (var3_int == 0) {
-            this.c((byte) 111, param1);
+            this.applyInput((byte) 111, param1);
             if (this.room.a(0, (WorldBody) (this)) != 1) {
             }
           } else {
@@ -348,7 +348,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
                 this.lifeStateTimer = this.lifeStateTimer - 1;
                 if (0 >= this.lifeStateTimer) {
                   this.t(3);
-                  this.C(-1).c(-1);
+                  this.getSimulation(-1).c(-1);
                 }
               }
             }
@@ -401,14 +401,14 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    final void a(byte param0, int param1) {
+    final void setTotal(byte param0, int param1) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
           if (param0 < 16) {
             this.L(-34);
           }
-          this.field_R = param1;
+          this.total = param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -435,13 +435,13 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         RuntimeException var2 = null;
         var3 = TombRacer.field_G ? 1 : 0;
         try {
-          this.C(-1);
+          this.getSimulation(-1);
           if (param0 != 3) {
             this.field_L = false;
           }
           var2_int = 0;
           while (3 > var2_int) {
-            this.field_x[var2_int] = this.field_x[var2_int] + this.field_P[var2_int];
+            this.treasure[var2_int] = this.treasure[var2_int] + this.field_P[var2_int];
             var2_int++;
             if (var3 != 0) {
               return;
@@ -472,7 +472,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    public final boolean a(int param0, boolean param1, int param2, int param3, int param4, int param5) {
+    public final boolean tryPush(int param0, boolean param1, int param2, int param3, int param4, int param5) {
         int stackIn_23_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
@@ -706,7 +706,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    public final int a(Effect param0, int param1, pc param2) {
+    public final int applyBeamEffect(Effect param0, int param1, BeamSegment param2) {
         RuntimeException var4 = null;
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
@@ -894,7 +894,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
               return;
             }
             boolean decompiledFrameRemainder0 = true;
-            this.C(-1).a(this, param0, 1, param2);
+            this.getSimulation(-1).a(this, param0, 1, param2);
             this.room.collisionGrid.remove((Collidable) (this), (byte) 107);
             if (4 == param0) {
               var4 = this.room.j((byte) 52);
@@ -1061,7 +1061,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -95) {
-            this.I(-94);
+            this.isCarryingLargeObject(-94);
           }
           stackIn_4_0 = this.room.getCourseIndex(81);
           return stackIn_4_0;
@@ -1084,7 +1084,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
             return;
           }
           while (var2_int < 3) {
-            this.field_x[var2_int] = 0;
+            this.treasure[var2_int] = 0;
             var2_int++;
             if (var3 != 0) {
               return;
@@ -1153,13 +1153,13 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    public final boolean a(byte param0, int param1, int param2, int param3, int param4) {
+    public final boolean intersectsRect(byte param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         boolean stackIn_4_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 110) {
-            stackIn_4_0 = io.a(param4, this.y, (byte) -118, param3, this.x, param1, this.size, this.size, param2);
+            stackIn_4_0 = io.centredBoxesOverlap(param4, this.y, (byte) -118, param3, this.x, param1, this.size, this.size, param2);
             return stackIn_4_0;
           }
           return false;
@@ -1525,7 +1525,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
             if (null != this.carried) {
               if (!(this.carried instanceof Trap) ||
                 ((Trap) (this.carried)).s((byte) 92)) {
-                if (this.carried.a((byte) 110, var7, var5, 2, 2)) {
+                if (this.carried.intersectsRect((byte) 110, var7, var5, 2, 2)) {
                   this.field_eb = this.carried;
                   if (var20 != 0) {
                     this.field_eb = null;
@@ -1565,7 +1565,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
                     if (stackIn_36_0) {
                       var15 = (Trap) (var14);
                       if (var15.s((byte) -114) &&
-                        var15.a((byte) 110, var8[var10][1], var8[var10][0], 2, 2)) {
+                        var15.intersectsRect((byte) 110, var8[var10][1], var8[var10][0], 2, 2)) {
                         this.field_eb = (WorldBody) ((Object) var14);
                         var16 = this.field_eb.getX(3);
                         var17 = this.field_eb.getY(9648);
@@ -1799,14 +1799,14 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    final int e(boolean param0) {
+    final int getTotal(boolean param0) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            stackIn_4_0 = this.field_R;
+            stackIn_4_0 = this.total;
             return stackIn_4_0;
           }
           stackIn_2_0 = -46;
@@ -1852,14 +1852,14 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    final int g(boolean param0) {
+    final int getMoveSpeed(boolean param0) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            stackIn_4_0 = this.field_E;
+            stackIn_4_0 = this.moveSpeed;
             return stackIn_4_0;
           }
           stackIn_2_0 = -7;
@@ -1936,7 +1936,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
             param2 != 0) {
             this.field_v.addLast((byte) -118, new vl(param2, param0));
           }
-          this.C(-1).getObserver(9262).a(param2, 15818, this, param0);
+          this.getSimulation(-1).getObserver(9262).a(param2, 15818, this, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1952,7 +1952,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    private final void c(byte param0, int param1) {
+    private final void applyInput(byte param0, int param1) {
         int stackIn_5_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_13_0 = 0;
@@ -2033,7 +2033,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
             return;
           }
           this.a(var9 != 0, true);
-          if (this.C(-1).f(1, 10915)) {
+          if (this.getSimulation(-1).f(1, 10915)) {
             var12 = var3_int;
             var3_int = var4;
             var4 = var12;
@@ -2055,9 +2055,9 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
           if (var6 != 0) {
             var13++;
           }
-          var14 = this.C(-1).g(113) ? 1 : 0;
+          var14 = this.getSimulation(-1).g(113) ? 1 : 0;
           var15 = this.field_N;
-          if (this.C(-1).f(0, 10915)) {
+          if (this.getSimulation(-1).f(0, 10915)) {
             var15 = var15 / 2;
           }
           var16 = 0;
@@ -2104,7 +2104,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
             }
             if ((decompiledFrameRemainder2) &&
               (null != this.carried)) {
-              var20 = this.I(5) ? 1 : 0;
+              var20 = this.isCarryingLargeObject(5) ? 1 : 0;
               if (var20 == 0) {
                 var17 = 196608;
                 if (var29 != 0) {
@@ -2136,7 +2136,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
               var17 = 196608;
             }
           }
-          this.field_E = var17;
+          this.moveSpeed = var17;
           if (var12Lifetime1 == 0 ||
             0 == var13) {
             var21 = var13 << 16;
@@ -2199,7 +2199,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
             }
             if (var14 == 0 &&
               0 == var16 &&
-              this.C(-1).f(8, 10915)) {
+              this.getSimulation(-1).f(8, 10915)) {
               this.field_gb = true;
               var22 = 1;
               this.velocityX = this.velocityX + (131072 - this.room.q(-81).nextBounded(262144, 0));
@@ -2540,7 +2540,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
             this.field_K == 0) {
             return;
           }
-          if (this.C(param0 - 3).f(2, 10915)) {
+          if (this.getSimulation(param0 - 3).f(2, 10915)) {
             return;
           }
           if (this.weapon == null) {
@@ -2602,13 +2602,13 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    public final void a(int param0, int param1, int param2) {
+    public final void moveTo(int param0, int param1, int param2) {
         this.room.collisionGrid.remove((Collidable) (this), (byte) 121);
         if (param2 != 2) {
           return;
         }
         try {
-          this.b(param1, param0, 76473160);
+          this.setPosition(param1, param0, 76473160);
           this.savePreviousPosition((byte) -116);
           this.room.collisionGrid.insert((Collidable) (this), 7073);
         } catch (RuntimeException runtimeException) {
@@ -2751,7 +2751,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    public final boolean a(int param0, WorldBody param1, int param2, int param3, int param4, Collidable param5, int param6, int param7) {
+    public final boolean overlapsBox(int param0, WorldBody param1, int param2, int param3, int param4, Collidable param5, int param6, int param7) {
         RuntimeException var9 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -2766,7 +2766,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
           if (param2 <= 55) {
             this.field_B = 46;
           }
-          if (!this.a((byte) 110, param4, param6, param0, param3)) {
+          if (!this.intersectsRect((byte) 110, param4, param6, param0, param3)) {
             return false;
           }
           return true;
@@ -2832,7 +2832,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    public final boolean a(int param0, WorldBody param1, int param2, pc param3) {
+    public final boolean interceptsBeam(int param0, WorldBody param1, int param2, BeamSegment param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -3146,7 +3146,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    public final boolean a(byte param0, boolean param1) {
+    public final boolean isPushable(byte param0, boolean param1) {
         RuntimeException var3 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -3235,7 +3235,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -1) {
-            this.a((Effect) null, 58, -120, 50, 126, -106);
+            this.applyAreaEffect((Effect) null, 58, -120, 50, 126, -106);
           }
           stackIn_10_0 = (1 == this.lifeState) && (this.field_r == 4);
           return stackIn_10_0;
@@ -3300,7 +3300,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    final int B(int param0) {
+    final int getVelocityY(int param0) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -3317,7 +3317,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    final boolean I(int param0) {
+    final boolean isCarryingLargeObject(int param0) {
         RuntimeException var2 = null;
         boolean stackIn_13_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -3340,7 +3340,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 3) {
-            this.e(true);
+            this.getTotal(true);
           }
           stackIn_4_0 = this.x;
           return stackIn_4_0;
@@ -3394,7 +3394,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void setPosition(int param0, int param1, int param2) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
@@ -3462,7 +3462,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    final Weapon K(int param0) {
+    final Weapon getWeapon(int param0) {
         RuntimeException var2 = null;
         Weapon stackIn_2_0 = null;
         Weapon stackIn_4_0 = null;
@@ -3532,7 +3532,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
             param1 < 0) {
             var4_int = 1;
           }
-          this.carried.a(80, false, var4_int, this.velocityY, this.velocityX, 0);
+          this.carried.tryPush(80, false, var4_int, this.velocityY, this.velocityX, 0);
           if (this.x == this.previousX &&
             ~this.y == ~this.previousY) {
             this.a(this.velocityY, this.velocityX, (byte) -103);
@@ -3784,7 +3784,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    public final int a(Effect param0, int param1, int param2, int param3, int param4, int param5) {
+    public final int applyAreaEffect(Effect param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_4_0 = 0;
         int stackIn_9_0 = 0;
@@ -3798,7 +3798,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
             stackIn_4_0 = 0;
             return stackIn_4_0;
           }
-          if (!this.a((byte) 110, param4, param2, param5, param1)) {
+          if (!this.intersectsRect((byte) 110, param4, param2, param5, param1)) {
             stackIn_9_0 = 0;
             return stackIn_9_0;
           }
@@ -3857,7 +3857,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    final PlayerSimulation C(int param0) {
+    final PlayerSimulation getSimulation(int param0) {
         RuntimeException var2 = null;
         PlayerSimulation stackIn_2_0 = null;
         PlayerSimulation stackIn_4_0 = null;
@@ -3904,9 +3904,9 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    final void a(boolean param0, int param1, int param2) {
+    final void setTreasure(boolean param0, int param1, int param2) {
         try {
-          this.field_x[param1] = param2;
+          this.treasure[param1] = param2;
           if (!param0) {
             this.field_bb = 119;
           }
@@ -3915,7 +3915,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    public final int a(Effect param0, Projectile param1, int param2) {
+    public final int applyProjectileEffect(Effect param0, Projectile param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_7_0 = 0;
@@ -3941,7 +3941,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
             return stackIn_10_0;
           }
           var4_int = param1.i(-1);
-          if (!this.a((byte) 110, param1.getY(9648), param1.getX(3), var4_int, var4_int)) {
+          if (!this.intersectsRect((byte) 110, param1.getY(9648), param1.getX(3), var4_int, var4_int)) {
             stackIn_15_0 = 0;
             return stackIn_15_0;
           }
@@ -3997,7 +3997,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         this.field_C = new boolean[6];
         this.field_v = new IntrusiveDeque();
         this.field_N = 65536;
-        this.field_x = new int[3];
+        this.treasure = new int[3];
         this.field_P = new int[3];
         this.field_a = -1;
         this.field_jb = new on();

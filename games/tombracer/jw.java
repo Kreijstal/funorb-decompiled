@@ -3,7 +3,7 @@
  */
 final class jw extends WidgetContainer implements cd, tsa {
     private rj field_y;
-    private tra field_A;
+    private TextInputWidget field_A;
     private boolean field_w;
     private String field_F;
     private rj field_E;
@@ -11,7 +11,7 @@ final class jw extends WidgetContainer implements cd, tsa {
     static int[] field_z;
     private boolean field_x;
     private boolean field_D;
-    private tra field_C;
+    private TextInputWidget field_C;
 
     jw(String param0, String param1, boolean param2, boolean param3, boolean param4) {
         super(0, 0, 310, 190, (isa) null);
@@ -50,8 +50,8 @@ final class jw extends WidgetContainer implements cd, tsa {
             this.field_w)) {
             throw new IllegalStateException();
           }
-          this.field_A = (tra) ((Object) new so(param0, (qc) (this), 100));
-          this.field_C = (tra) ((Object) new so("", (qc) (this), 20));
+          this.field_A = (TextInputWidget) ((Object) new so(param0, (qc) (this), 100));
+          this.field_C = (TextInputWidget) ((Object) new so("", (qc) (this), 20));
           if (this.field_x) {
             this.field_B = new rj(nga.field_q, (qc) null);
             this.field_y = new rj(ControllerLocomotor.field_q, (qc) null);
@@ -230,7 +230,7 @@ final class jw extends WidgetContainer implements cd, tsa {
         }
     }
 
-    public final void a(tra param0, int param1) {
+    public final void a(TextInputWidget param0, int param1) {
         try {
           if (param1 != -10) {
             field_z = (int[]) null;
@@ -241,7 +241,7 @@ final class jw extends WidgetContainer implements cd, tsa {
     }
 
     final void a(String param0, int param1) {
-        tra var3 = null;
+        TextInputWidget var3 = null;
         String var4 = null;
         try {
           var3 = this.field_A;
@@ -250,7 +250,7 @@ final class jw extends WidgetContainer implements cd, tsa {
           if (param1 < 121) {
             jw.releaseStatics(-98);
           }
-          this.field_C.f(-10);
+          this.field_C.clearText(-10);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "jw.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -271,8 +271,8 @@ final class jw extends WidgetContainer implements cd, tsa {
         if (param0 != -92) {
           this.field_w = false;
         }
-        this.field_A.f(-121);
-        this.field_C.f(param0 ^ 34);
+        this.field_A.clearText(-121);
+        this.field_C.clearText(param0 ^ 34);
     }
 
     final boolean handleKeyInput(char param0, UiWidget param1, int param2, boolean param3) {
@@ -320,7 +320,7 @@ final class jw extends WidgetContainer implements cd, tsa {
         super.renderLayer(param0, param1, param2 + param2, param3);
     }
 
-    public final void a(int param0, tra param1) {
+    public final void a(int param0, TextInputWidget param1) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -328,7 +328,7 @@ final class jw extends WidgetContainer implements cd, tsa {
         RuntimeException var3 = null;
         try {
           if (param0 != -6038) {
-            this.field_A = (tra) null;
+            this.field_A = (TextInputWidget) null;
           }
           if (this.field_A == param1) {
             this.field_C.requestKeyboardFocus((UiWidget) (this), false);

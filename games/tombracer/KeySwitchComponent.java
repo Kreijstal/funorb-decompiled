@@ -138,7 +138,7 @@ final class KeySwitchComponent extends SwitchComponent {
         this.b(param0 + 223, 2097152, 2097152);
     }
 
-    final static void a(byte param0, String param1, cn param2, cn param3, int param4) {
+    final static void a(byte param0, String param1, ResourceArchive param2, ResourceArchive param3, int param4) {
         sra var7 = null;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
@@ -180,19 +180,19 @@ final class KeySwitchComponent extends SwitchComponent {
           incrementValue$5 = param4;
           param4++;
           var7.a(incrementValue$5, (byte) 47, param1);
-          rc.field_b = jpa.b(param3, "", "fillfont");
+          rc.field_b = SpriteData.loadSheet(param3, "", "fillfont");
           incrementValue$6 = param4;
           param4++;
           var7.a(incrementValue$6, (byte) 47, param1);
-          gga.field_O = jpa.b(param3, "", "font_small");
+          gga.field_O = SpriteData.loadSheet(param3, "", "font_small");
           incrementValue$7 = param4;
           param4++;
           var7.a(incrementValue$7, (byte) 47, param1);
-          MatchState.field_j = jpa.b(param3, "", "font_med");
+          MatchState.field_j = SpriteData.loadSheet(param3, "", "font_med");
           incrementValue$8 = param4;
           param4++;
           var7.a(incrementValue$8, (byte) 47, param1);
-          MovingPlatformComponent.field_O = jpa.b(param3, "", "font_large");
+          MovingPlatformComponent.field_O = SpriteData.loadSheet(param3, "", "font_large");
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "mj.VB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }

@@ -241,8 +241,8 @@ final class fna {
             var26 = tga.field_a;
             var21_int = this.field_b - 8;
             var22_int = var9 - 8 - 16;
-            var25 = dr.field_a;
-            tra.a(1, var25, (byte) -68, var21_int, var26, 16, 1, 16, var22_int, 0);
+            var25 = ArchiveSource.field_a;
+            TextInputWidget.a(1, var25, (byte) -68, var21_int, var26, 16, 1, 16, var22_int, 0);
             if (param3) {
               var15 = 2236962;
               var5 = 10309393;
@@ -279,8 +279,8 @@ final class fna {
           var29 = tga.field_a;
           var21_intLifetime1 = this.field_b - 8;
           var22_intLifetime1 = var9 - 8 - 16;
-          var28 = dr.field_a;
-          tra.a(1, var28, (byte) -109, var21_intLifetime1, var29, 16, 1, 16, var22_intLifetime1, 0);
+          var28 = ArchiveSource.field_a;
+          TextInputWidget.a(1, var28, (byte) -109, var21_intLifetime1, var29, 16, 1, 16, var22_intLifetime1, 0);
           if (this.field_g == 36) {
             var20_ref_kea = baa.field_e;
           } else {
@@ -421,7 +421,7 @@ final class fna {
     }
 
     final static void a(int param0, int param1, boolean param2, boolean param3, boolean param4, int param5, int param6, int param7, boolean param8, int param9, int param10, boolean param11, int param12, int param13) {
-        qda.field_b = null;
+        ArchiveNetworkClient.field_b = null;
         se.d((byte) 118);
         if (param5 == -22919) {
           param3 = rk.a(param12, param3, (byte) 107, param0, param9, param10, param7);

@@ -89,15 +89,15 @@ final class iia extends ci {
           if (0 >= var10) {
             if (ns.field_g >= param1 + param4) {
               for (var11 = 0; var11 < param0; var11++) {
-                lua.a(param2[param5 + var11], param1, param4, var8_int);
+                ArrayUtils.fill(param2[param5 + var11], param1, param4, var8_int);
               }
               return;
             }
             var11Lifetime2 = -param1 + ns.field_g;
             for (var12 = 0; param0 > var12; var12++) {
               var13_ref_int__ = param2[var12 + param5];
-              lua.a(var13_ref_int__, param1, var11Lifetime2, var8_int);
-              lua.a(var13_ref_int__, 0, param4 - var11Lifetime2, var8_int);
+              ArrayUtils.fill(var13_ref_int__, param1, var11Lifetime2, var8_int);
+              ArrayUtils.fill(var13_ref_int__, 0, param4 - var11Lifetime2, var8_int);
             }
             return;
           }
@@ -123,11 +123,11 @@ final class iia extends ci {
                     var18[SnakePitBehaviour.c(una.field_b, param1 + var20)] = var8_int * var20 / var13;
                   }
                   if (var16 + var15 <= ns.field_g) {
-                    lua.a(var18, var15, var16, var8_int);
+                    ArrayUtils.fill(var18, var15, var16, var8_int);
                   } else {
                     var20 = ns.field_g - var15;
-                    lua.a(var18, var15, var20, var8_int);
-                    lua.a(var18, 0, -var20 + var16, var8_int);
+                    ArrayUtils.fill(var18, var15, var20, var8_int);
+                    ArrayUtils.fill(var18, 0, -var20 + var16, var8_int);
                   }
                   decompiledFrameRemainder0 = false;
                 }
@@ -158,10 +158,10 @@ final class iia extends ci {
                   }
                   if (var16 + var15 > ns.field_g) {
                     var21 = -var15 + ns.field_g;
-                    lua.a(var18, var15, var21, var20);
-                    lua.a(var18, 0, -var21 + var16, var20);
+                    ArrayUtils.fill(var18, var15, var21, var20);
+                    ArrayUtils.fill(var18, 0, -var21 + var16, var20);
                   } else {
-                    lua.a(var18, var15, var16, var20);
+                    ArrayUtils.fill(var18, var15, var16, var20);
                   }
                 }
               } else {
@@ -190,11 +190,11 @@ final class iia extends ci {
                   }
                 }
                 if (ns.field_g >= var15 + var16) {
-                  lua.a(var18, var15, var16, var19);
+                  ArrayUtils.fill(var18, var15, var16, var19);
                 } else {
                   var20 = -var15 + ns.field_g;
-                  lua.a(var18, var15, var20, var19);
-                  lua.a(var18, 0, var16 - var20, var19);
+                  ArrayUtils.fill(var18, var15, var20, var19);
+                  ArrayUtils.fill(var18, 0, var16 - var20, var19);
                 }
               }
             }
@@ -413,8 +413,8 @@ final class iia extends ci {
           var13 = 0;
           var14 = this.field_p * ns.field_g >> 12;
           var15 = ns.field_g * this.field_s >> 12;
-          var16 = qda.field_i * this.field_y >> 12;
-          var17 = this.field_w * qda.field_i >> 12;
+          var16 = ArchiveNetworkClient.field_i * this.field_y >> 12;
+          var17 = this.field_w * ArchiveNetworkClient.field_i >> 12;
           if (var17 <= 1) {
             return var46[param1];
           }
@@ -498,8 +498,8 @@ final class iia extends ci {
               }
               var22 = 0;
             }
-            if (var24 + var22 > qda.field_i) {
-              var24 = qda.field_i - var22;
+            if (var24 + var22 > ArchiveNetworkClient.field_i) {
+              var24 = ArchiveNetworkClient.field_i - var22;
             } else {
               var10 = 0;
             }

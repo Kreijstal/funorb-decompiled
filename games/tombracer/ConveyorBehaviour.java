@@ -28,8 +28,8 @@ final class ConveyorBehaviour extends Behaviour {
           var6 = var3[var5];
           if (var6.a(-77) &&
             var6 != var4 &&
-            io.a(var6.getWidth(param0 - 5435), this.trap.getY(9648), (byte) -55, var6.getHeight((byte) 55), this.trap.getX(param0 - 5415), var6.getY(9648), this.trap.getHeight((byte) 55), this.trap.getWidth(-21), var6.getX(3))) {
-            var6.a(100, true, 1, this.field_o, this.field_n, 0);
+            io.centredBoxesOverlap(var6.getWidth(param0 - 5435), this.trap.getY(9648), (byte) -55, var6.getHeight((byte) 55), this.trap.getX(param0 - 5415), var6.getY(9648), this.trap.getHeight((byte) 55), this.trap.getWidth(-21), var6.getX(3))) {
+            var6.tryPush(100, true, 1, this.field_o, this.field_n, 0);
           }
         }
     }

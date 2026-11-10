@@ -4,20 +4,20 @@
 final class CoinItemComponent extends ItemComponent {
     static long field_I;
     static int[] field_H;
-    static af field_G;
+    static SecondaryNodeHashTable field_G;
 
     CoinItemComponent(Room param0, int param1) {
         super(param0, param1);
     }
 
-    final static void a(hea param0, byte param1) {
+    final static void a(BinaryBitmapFont param0, byte param1) {
         int[] var4 = null;
         try {
           var4 = new int[]{22, 1, 3, 4, 12, 14, 13, 8, 9};
           uw.field_g = new wv[13];
           qpa.a(245, var4, 0, 40, 440, 126, 200);
           qpa.a(440, MirrorComponent.field_H, 1, 40, 440, 125, 290);
-          qpa.a(275, uj.field_d, 3, 40, 440, 126, 200);
+          qpa.a(275, S2CPlayerSyncPacket.field_d, 3, 40, 440, 126, 200);
           qpa.a(275, PathMoverComponent.field_F, 5, 40, 440, 124, 200);
           qpa.a(275, vj.field_a, 6, 40, 440, 125, 200);
           qpa.a(480, oe.field_j, 2, 40, 440, 124, 200);
@@ -92,7 +92,7 @@ final class CoinItemComponent extends ItemComponent {
         if (param0) {
           return param2 - (1 << param1 - 1);
         }
-        field_G = (af) null;
+        field_G = (SecondaryNodeHashTable) null;
         return param2 - (1 << param1 - 1);
     }
 

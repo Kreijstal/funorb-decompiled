@@ -28,10 +28,10 @@ final class Corpse extends IntrusiveNode implements Renderable {
         }
     }
 
-    final static hja a(int param0, int[] param1, hja param2) {
-        hja var3 = null;
+    final static IndexedSprite a(int param0, int[] param1, IndexedSprite param2) {
+        IndexedSprite var3 = null;
         RuntimeException var3_ref = null;
-        hja stackIn_3_0 = null;
+        IndexedSprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -39,7 +39,7 @@ final class Corpse extends IntrusiveNode implements Renderable {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new hja(0, 0, 0);
+          var3 = new IndexedSprite(0, 0, 0);
           var3.field_e = param2.field_e;
           var3.field_b = param2.field_b;
           if (param0 != 21938) {

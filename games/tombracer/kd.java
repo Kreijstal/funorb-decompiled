@@ -6,7 +6,7 @@ final class kd extends rj {
     int field_E;
     int field_C;
     static String field_z;
-    private tq field_D;
+    private GrowableIntList field_D;
 
     final boolean handlePointerPress(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         int var12 = 0;
@@ -45,7 +45,7 @@ final class kd extends rj {
               var10 = 2147483647;
               var11 = -1;
               for (var12 = 0; var12 < this.field_D.b(-1); var12++) {
-                var13 = -var8_int + this.field_D.b(-1, var12);
+                var13 = -var8_int + this.field_D.get(-1, var12);
                 var13 = var13 * var13;
                 if (var13 < var10) {
                   var10 = var13;
@@ -79,9 +79,9 @@ final class kd extends rj {
           return -1;
         }
         if (param1 != -14) {
-          this.field_D = (tq) null;
+          this.field_D = (GrowableIntList) null;
         }
-        return this.field_D.b(param1 ^ 13, param0);
+        return this.field_D.get(param1 ^ 13, param0);
     }
 
     final int c(int param0) {
@@ -93,7 +93,7 @@ final class kd extends rj {
 
     final int b(int param0) {
         if (param0 != 24857) {
-          this.field_D = (tq) null;
+          this.field_D = (GrowableIntList) null;
         }
         return this.field_A;
     }

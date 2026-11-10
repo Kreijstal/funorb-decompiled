@@ -102,7 +102,7 @@ final class rca extends me {
           var2 = aaa.a(false) - kq.field_a.a() >> 1;
           var3 = koa.b(0) - kq.field_a.c() >> 1;
           if (this.field_m.c(16) == 0) {
-            var6 = gv.field_v;
+            var6 = SocketArchiveNetworkClient.field_v;
             var7 = Room.field_m[this.field_m.a(-13939)];
             oka.a(var6.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
             ura.a(-10985);
@@ -115,7 +115,7 @@ final class rca extends me {
           if (this.field_m.c(16) == 1) {
             var4 = this.field_m.a(-13939);
             oka.a(r.field_k.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
-            cb.field_i[var4].a((aaa.a(false) >> 1) - cb.field_i[var4].a() / 2, (koa.b(0) >> 1) - cb.field_i[var4].c() / 2 - 20);
+            OpenGlFramebuffer.field_i[var4].a((aaa.a(false) >> 1) - OpenGlFramebuffer.field_i[var4].a() / 2, (koa.b(0) >> 1) - OpenGlFramebuffer.field_i[var4].c() / 2 - 20);
             kq.field_a.a(var2, var3 + 60);
             oka.a(vj.worldNames[var4].toUpperCase(), 65793, eda.field_f, -1, 92 + var3, aaa.a(false) >> 1, -1);
             return;
@@ -125,7 +125,7 @@ final class rca extends me {
         var2Lifetime1 = aaa.a(false) - kq.field_a.a() >> 1;
         var3Lifetime1 = koa.b(0) - kq.field_a.c() >> 1;
         if (this.field_m.c(16) == 0) {
-          var8 = gv.field_v;
+          var8 = SocketArchiveNetworkClient.field_v;
           var9 = Room.field_m[this.field_m.a(-13939)];
           oka.a(var8.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
           ura.a(-10985);
@@ -138,7 +138,7 @@ final class rca extends me {
         if (this.field_m.c(16) == 1) {
           var4Lifetime1 = this.field_m.a(-13939);
           oka.a(r.field_k.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
-          cb.field_i[var4Lifetime1].a((aaa.a(false) >> 1) - cb.field_i[var4Lifetime1].a() / 2, (koa.b(0) >> 1) - cb.field_i[var4Lifetime1].c() / 2 - 20);
+          OpenGlFramebuffer.field_i[var4Lifetime1].a((aaa.a(false) >> 1) - OpenGlFramebuffer.field_i[var4Lifetime1].a() / 2, (koa.b(0) >> 1) - OpenGlFramebuffer.field_i[var4Lifetime1].c() / 2 - 20);
           kq.field_a.a(var2Lifetime1, var3Lifetime1 + 60);
           oka.a(vj.worldNames[var4Lifetime1].toUpperCase(), 65793, eda.field_f, -1, 92 + var3Lifetime1, aaa.a(false) >> 1, -1);
           return;

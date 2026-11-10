@@ -8,7 +8,7 @@ final class fq {
     private int field_f;
     static pl field_c;
     private boolean field_a;
-    static l field_e;
+    static MidiPcmStream field_e;
 
     final int c(int param0) {
         if (param0 == 1) {
@@ -26,11 +26,11 @@ final class fq {
         field_e = null;
     }
 
-    final static hea a(byte[] param0, byte param1) {
+    final static BinaryBitmapFont a(byte[] param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        hea var3 = null;
-        hea stackIn_4_0 = null;
+        BinaryBitmapFont var3 = null;
+        BinaryBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -40,7 +40,7 @@ final class fq {
             return null;
           }
           var2_int = -71 / ((5 - param1) / 35);
-          var3 = new hea(param0, ak.field_p, pg.field_C, mq.field_b, iga.field_m, ck.field_c);
+          var3 = new BinaryBitmapFont(param0, ak.field_p, pg.field_C, mq.field_b, iga.field_m, ck.field_c);
           MazeGenerator.a((byte) 123);
           stackIn_4_0 = var3;
           return stackIn_4_0;

@@ -226,7 +226,7 @@ final class PitBehaviour extends Behaviour {
         if (0 != param3) {
           return 0;
         }
-        if (!io.a(this.field_u * this.field_t.width, param2, (byte) -115, this.field_u * this.field_t.height, param5, this.trap.getY(9648), param1, param0, this.trap.getX(3))) {
+        if (!io.centredBoxesOverlap(this.field_u * this.field_t.width, param2, (byte) -115, this.field_u * this.field_t.height, param5, this.trap.getY(9648), param1, param0, this.trap.getX(3))) {
           return 0;
         }
         var7 = 0;

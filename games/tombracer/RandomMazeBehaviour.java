@@ -170,7 +170,7 @@ final class RandomMazeBehaviour extends Behaviour {
         return 11;
     }
 
-    private final boolean a(boolean param0, int param1, int param2, int param3, pc param4, int param5) {
+    private final boolean a(boolean param0, int param1, int param2, int param3, BeamSegment param4, int param5) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int var8 = 0;
@@ -205,7 +205,7 @@ final class RandomMazeBehaviour extends Behaviour {
         }
     }
 
-    private final boolean a(pc param0, int param1) {
+    private final boolean a(BeamSegment param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -222,7 +222,7 @@ final class RandomMazeBehaviour extends Behaviour {
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
-        pc var18 = null;
+        BeamSegment var18 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -236,8 +236,8 @@ final class RandomMazeBehaviour extends Behaviour {
           var7 = param0.field_k - (this.field_w + var4);
           var8 = param0.field_a - this.field_w - var4;
           if (param1 != -1) {
-            var18 = (pc) null;
-            this.a(10, -109, (pc) null, 116);
+            var18 = (BeamSegment) null;
+            this.a(10, -109, (BeamSegment) null, 116);
           }
           var9 = new nf();
           var9.a(var6, var7, this.field_z.height, this.field_t, var5, 0, this.field_z.width, var8);
@@ -470,7 +470,7 @@ final class RandomMazeBehaviour extends Behaviour {
         }
     }
 
-    final boolean a(int param0, int param1, pc param2, int param3) {
+    final boolean a(int param0, int param1, BeamSegment param2, int param3) {
         int stackIn_14_0 = 0;
         int stackIn_20_0 = 0;
         int stackIn_29_0 = 0;
@@ -731,8 +731,8 @@ final class RandomMazeBehaviour extends Behaviour {
     final void tick(int param0) {
         boolean discarded$0 = false;
         if (param0 != 5418) {
-          pc var3 = (pc) null;
-          discarded$0 = this.a(false, -81, 38, -44, (pc) null, -15);
+          BeamSegment var3 = (BeamSegment) null;
+          discarded$0 = this.a(false, -81, 38, -44, (BeamSegment) null, -15);
         }
     }
 

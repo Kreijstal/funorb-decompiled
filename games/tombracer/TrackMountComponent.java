@@ -85,7 +85,7 @@ final class TrackMountComponent extends PrefabComponent {
         super(param0, param1, param2, param3);
         this.field_F = 131072;
         try {
-          this.field_F = ji.a(param2.readBits((byte) 44, 8), 104, 4);
+          this.field_F = NodeHashTable.a(param2.readBits((byte) 44, 8), 104, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

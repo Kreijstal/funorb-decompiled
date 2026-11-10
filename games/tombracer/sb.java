@@ -62,13 +62,13 @@ final class sb {
         }
     }
 
-    final static void a(int param0, cn param1, cn param2, cn param3, cn param4) {
+    final static void a(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3, ResourceArchive param4) {
         try {
           bja.field_a = param4;
           qoa.field_b = param1;
           ua.field_a = param2;
           ControllerLocomotor.field_v = param3;
-          ns.field_j = new nda(qoa.field_b, ControllerLocomotor.field_v);
+          ns.field_j = new SoundCache(qoa.field_b, ControllerLocomotor.field_v);
           CauldronComponent.field_J = new u[237];
           int var5_int = -51 % ((param0 - 32) / 59);
           fna.field_j = new qua[4];

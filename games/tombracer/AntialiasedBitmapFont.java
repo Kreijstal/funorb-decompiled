@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kg extends BitmapFont {
+final class AntialiasedBitmapFont extends BitmapFont {
     private byte[][] field_E;
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final void drawGlyphAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
         int var9;
         int var10;
         int var11;
@@ -44,21 +44,21 @@ final class kg extends BitmapFont {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param7) {
-            kg.a(SoftwareRasterizer.field_l, this.field_E[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+            AntialiasedBitmapFont.blitCoverageGlyphAlpha(SoftwareRasterizer.field_l, this.field_E[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           } else {
-            hea.a(SoftwareRasterizer.field_l, this.field_E[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+            BinaryBitmapFont.blitMaskAlpha(SoftwareRasterizer.field_l, this.field_E[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           }
           return;
         }
     }
 
-    kg(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, int[] param5, byte[][] param6) {
+    AntialiasedBitmapFont(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, int[] param5, byte[][] param6) {
         super(param0, param1, param2, param3, param4);
         this.field_E = new byte[256][];
-        this.field_E = kg.a(param5, param6);
+        this.field_E = AntialiasedBitmapFont.convertToCoverage(param5, param6);
     }
 
-    private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitCoverageGlyph(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var9 = 0;
         int var10 = 0;
         int incrementValue$11 = 0;
@@ -87,7 +87,7 @@ final class kg extends BitmapFont {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final void drawGlyph(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         int var8;
         int var9;
         int var10;
@@ -127,15 +127,15 @@ final class kg extends BitmapFont {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param6) {
-            kg.a(SoftwareRasterizer.field_l, this.field_E[param0], param5, var11, var8, param3, param4, var9, var10);
+            AntialiasedBitmapFont.blitCoverageGlyph(SoftwareRasterizer.field_l, this.field_E[param0], param5, var11, var8, param3, param4, var9, var10);
           } else {
-            hea.a(SoftwareRasterizer.field_l, this.field_E[param0], param5, var11, var8, param3, param4, var9, var10);
+            BinaryBitmapFont.blitMask(SoftwareRasterizer.field_l, this.field_E[param0], param5, var11, var8, param3, param4, var9, var10);
           }
           return;
         }
     }
 
-    private final static byte[][] a(int[] param0, byte[][] param1) {
+    private final static byte[][] convertToCoverage(int[] param0, byte[][] param1) {
         int var2_int = 0;
         int var5 = 0;
         byte[][] var2;
@@ -162,7 +162,7 @@ final class kg extends BitmapFont {
         return param1;
     }
 
-    private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitCoverageGlyphAlpha(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$11 = 0;

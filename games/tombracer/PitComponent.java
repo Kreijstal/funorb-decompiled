@@ -4,7 +4,7 @@
 final class PitComponent extends PrefabComponent {
     private int field_F;
     static int field_H;
-    static cn field_G;
+    static ResourceArchive field_G;
     static int[] field_I;
 
     final boolean v(int param0) {
@@ -89,7 +89,7 @@ final class PitComponent extends PrefabComponent {
 
     public static void releaseStatics(byte param0) {
         if (param0 <= 24) {
-          field_G = (cn) null;
+          field_G = (ResourceArchive) null;
           field_I = null;
           field_G = null;
           return;

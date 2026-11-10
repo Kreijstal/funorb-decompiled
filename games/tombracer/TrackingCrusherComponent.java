@@ -27,7 +27,7 @@ final class TrackingCrusherComponent extends PrefabComponent {
           return;
         }
         try {
-          ji.field_d = param0;
+          NodeHashTable.field_d = param0;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wta.TB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -45,7 +45,7 @@ final class TrackingCrusherComponent extends PrefabComponent {
         aca.field_h[11] = aqa.field_b;
         aca.field_h[9] = cda.field_u;
         aca.field_h[21] = rua.field_jb;
-        aca.field_h[19] = tq.field_b;
+        aca.field_h[19] = GrowableIntList.field_b;
         aca.field_h[5] = tw.field_g;
         aca.field_h[4] = sma.field_d;
         aca.field_h[6] = nt.field_c;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fs extends ci {
-    static cn field_p;
+    static ResourceArchive field_p;
     private int field_r;
     private int[] field_q;
     private int[] field_o;
@@ -11,7 +11,7 @@ final class fs extends ci {
 
     public static void releaseStatics(int param0) {
         if (param0 >= -91) {
-          field_p = (cn) null;
+          field_p = (ResourceArchive) null;
         }
         field_p = null;
     }

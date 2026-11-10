@@ -20,7 +20,7 @@ final class gm extends ci {
           var4 = this.field_i.a((byte) -108, param1);
           var3 = var4;
           if (this.field_i.field_d) {
-            lua.a(var4, 0, ns.field_g, sj.field_b[param1]);
+            ArrayUtils.fill(var4, 0, ns.field_g, sj.field_b[param1]);
             return var4;
           }
           return var4;
@@ -30,7 +30,7 @@ final class gm extends ci {
         if (!this.field_i.field_d) {
           return var4Lifetime1;
         }
-        lua.a(var4Lifetime1, 0, ns.field_g, sj.field_b[param1]);
+        ArrayUtils.fill(var4Lifetime1, 0, ns.field_g, sj.field_b[param1]);
         return var4Lifetime1;
     }
 

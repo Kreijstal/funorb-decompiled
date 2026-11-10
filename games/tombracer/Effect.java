@@ -6,7 +6,7 @@ final class Effect implements noa {
     int field_j;
     private int preset;
     WorldBody field_g;
-    static jpa[] field_e;
+    static SpriteData[] field_e;
     private int field_k;
     static String[][] field_h;
     int size;
@@ -199,7 +199,7 @@ final class Effect implements noa {
     final void b(int param0, int param1) {
         this.field_k = param1;
         if (param0 != 1) {
-          field_e = (jpa[]) null;
+          field_e = (SpriteData[]) null;
         }
     }
 

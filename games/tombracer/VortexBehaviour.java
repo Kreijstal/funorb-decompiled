@@ -83,7 +83,7 @@ final class VortexBehaviour extends Behaviour {
             !this.trap.a(var20, true)) {
             var21 = var20.getX(3);
             var22 = var20.getY(9648);
-            if (this.trap.a((byte) 110, var22, var21, var20.getHeight((byte) 55), var20.getWidth(-40))) {
+            if (this.trap.intersectsRect((byte) 110, var22, var21, var20.getHeight((byte) 55), var20.getWidth(-40))) {
               var23 = var21 - var2 >> 16;
               var24 = -var3 + var22 >> 16;
               var25 = ConstrainToRectangleLocomotor.a(var24, var23, 124);
@@ -105,7 +105,7 @@ final class VortexBehaviour extends Behaviour {
                   } else {
                     stackIn_35_3 = 1;
                   }
-                  ((Collidable) (Object) stackIn_34_0).a(stackIn_34_1, stackIn_34_2, stackIn_35_3, -var24 << 16, -var23 << 16, 0);
+                  ((Collidable) (Object) stackIn_34_0).tryPush(stackIn_34_1, stackIn_34_2, stackIn_35_3, -var24 << 16, -var23 << 16, 0);
                 } else {
                   stackIn_29_0 = var20;
                   stackIn_29_1 = 114;
@@ -115,7 +115,7 @@ final class VortexBehaviour extends Behaviour {
                   } else {
                     stackIn_30_3 = 2;
                   }
-                  ((Collidable) (Object) stackIn_29_0).a(stackIn_29_1, stackIn_29_2, stackIn_30_3, var24 * var6 / var25, var6 * var23 / var25, 0);
+                  ((Collidable) (Object) stackIn_29_0).tryPush(stackIn_29_1, stackIn_29_2, stackIn_30_3, var24 * var6 / var25, var6 * var23 / var25, 0);
                 }
               }
             }

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hja extends rka {
+final class IndexedSprite extends rka {
     byte[] field_h;
     int[] field_g;
 
-    private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitIndexedAlpha(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int var12 = 0;
         int incrementValue$12 = 0;
@@ -31,7 +31,7 @@ final class hja extends rka {
         }
     }
 
-    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitIndexed(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;
@@ -134,10 +134,10 @@ final class hja extends rka {
           var5 <= 0) {
           return;
         }
-        hja.a(SoftwareRasterizer.field_l, this.field_h, this.field_g, 0, var4, var3, var6, var5, var7, var8);
+        IndexedSprite.blitIndexed(SoftwareRasterizer.field_l, this.field_h, this.field_g, 0, var4, var3, var6, var5, var7, var8);
     }
 
-    hja(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
+    IndexedSprite(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
         this.field_c = param0;
         this.field_f = param1;
         this.field_d = param2;
@@ -189,10 +189,10 @@ final class hja extends rka {
           var6 <= 0) {
           return;
         }
-        hja.b(SoftwareRasterizer.field_l, this.field_h, this.field_g, var5, var4, var7, var6, var8, var9, param2);
+        IndexedSprite.blitIndexedAlpha(SoftwareRasterizer.field_l, this.field_h, this.field_g, var5, var4, var7, var6, var8, var9, param2);
     }
 
-    hja(int param0, int param1, int param2) {
+    IndexedSprite(int param0, int param1, int param2) {
         this.field_a = param0;
         this.field_c = param0;
         this.field_b = param1;

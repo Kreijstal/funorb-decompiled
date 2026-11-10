@@ -20,7 +20,7 @@ final class uba extends kma implements cd, eaa {
           var2_int = this.field_i.a(param0 - 1780);
           var3 = this.field_i.d(param0 + 20939);
           var4 = this.field_i.j((byte) 110);
-          var5 = cn.a((byte) 60);
+          var5 = ResourceArchive.a((byte) 60);
           if (var4 >= param0 &&
             -3 + var5 >= var4) {
             if (fa.a(var3, var2_int, true, var4)) {
@@ -54,12 +54,12 @@ final class uba extends kma implements cd, eaa {
         }
     }
 
-    public final void a(tra param0, int param1) {
+    public final void a(TextInputWidget param0, int param1) {
         try {
           this.c(-65);
           if (param1 != -10) {
-            tra var4 = (tra) null;
-            this.a((tra) null, -90);
+            TextInputWidget var4 = (TextInputWidget) null;
+            this.a((TextInputWidget) null, -90);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "uba.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -80,7 +80,7 @@ final class uba extends kma implements cd, eaa {
           var2_int = this.field_i.a(111);
           var3 = this.field_i.d(22829);
           var4 = this.field_i.j((byte) 110);
-          var5 = cn.a((byte) 125);
+          var5 = ResourceArchive.a((byte) 125);
           if (~var4 > param0) {
             stackIn_3_0 = fp.field_c;
             return stackIn_3_0;
@@ -115,7 +115,7 @@ final class uba extends kma implements cd, eaa {
     public uba() {
     }
 
-    public final void a(int param0, tra param1) {
+    public final void a(int param0, TextInputWidget param1) {
         try {
           if (param0 != -6038) {
             field_f = -61;

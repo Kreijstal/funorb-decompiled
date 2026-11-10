@@ -152,14 +152,14 @@ final class oka extends wv {
           return;
         }
         var3 = 0;
-        for (var4 = 0; var4 < cb.field_i.length; var4++) {
+        for (var4 = 0; var4 < OpenGlFramebuffer.field_i.length; var4++) {
           if (mca.a((byte) 6, var4)) {
             if (rd.b(false) &&
               !dta.field_g[var4]) {
               var3 = 1;
               qf.field_k[var4].draw(pha.field_ub[var4] + this.field_t, C2SSubmitSettingsPacket.field_b[var4] + this.field_r, 0, -1426063361, 1);
             } else {
-              cb.field_i[var4].a(pha.field_ub[var4] + this.field_t, this.field_r + C2SSubmitSettingsPacket.field_b[var4]);
+              OpenGlFramebuffer.field_i[var4].a(pha.field_ub[var4] + this.field_t, this.field_r + C2SSubmitSettingsPacket.field_b[var4]);
               var5_ref_nh = uta.field_d;
               if (null != mq.field_e) {
                 if (mq.field_e.worldMedals[var4] == 3) {

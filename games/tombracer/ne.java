@@ -16,7 +16,7 @@ final class ne {
         return gj.a((byte) 41, this.a(param1, -1));
     }
 
-    final static void a(cn param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         VorbisSample var2 = null;
         try {
           VorbisSample.b(param0.a("headers.packvorbis", (byte) 124, ""));
@@ -111,7 +111,7 @@ final class ne {
           }
           while (PooledObject.field_g.length > var2) {
             var3 = PooledObject.field_g[var2];
-            lua.a(aia.field_t, var2 << 4, aia.field_t, var1_int, var3);
+            ArrayUtils.copy(aia.field_t, var2 << 4, aia.field_t, var1_int, var3);
             var1_int = var1_int + var3;
             var2++;
           }

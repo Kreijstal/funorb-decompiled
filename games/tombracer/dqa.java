@@ -28,8 +28,8 @@ final class dqa extends mna {
           mka.field_b.field_qb = mka.field_b.field_qb + mka.field_b.field_G;
           mka.field_b.field_G = param1;
           if (param4 < 118) {
-            cn var6 = (cn) null;
-            dqa.a((cn) null, (cn) null, (byte) 102, (cn) null);
+            ResourceArchive var6 = (ResourceArchive) null;
+            dqa.a((ResourceArchive) null, (ResourceArchive) null, (byte) 102, (ResourceArchive) null);
           }
           pq.field_g.field_G = pq.field_g.field_G - mka.field_b.field_G;
           mka.field_b.field_qb = mka.field_b.field_qb - mka.field_b.field_G;
@@ -60,7 +60,7 @@ final class dqa extends mna {
         return (1 << -1 + param2) + param1;
     }
 
-    final static void a(cn param0, cn param1, byte param2, cn param3) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, byte param2, ResourceArchive param3) {
         try {
           qra.field_l = (d) ((Object) new sja(param1, param0, param3));
           if (param2 != 55) {

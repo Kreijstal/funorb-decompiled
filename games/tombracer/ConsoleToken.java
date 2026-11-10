@@ -180,7 +180,7 @@ final class ConsoleToken extends IntrusiveNode {
                 var7[incrementValue$0] = var5.a(-1, param1);
                 var5 = (ConsoleToken) (this.field_i.next(114));
               }
-              stackIn_9_0 = pc.a(param1, 19, this.text, var8);
+              stackIn_9_0 = BeamSegment.a(param1, 19, this.text, var8);
               return stackIn_9_0;
             }
             if (CrusherModel.field_o == this.kind) {

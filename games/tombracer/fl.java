@@ -106,19 +106,19 @@ final class fl extends ci {
         } else if (var6 <= 0.0f &&
           (double)var6 >= -0.7853981633974483) {
           BlockModel.field_o = param0;
-          fv.field_e = qda.field_i - param1;
+          fv.field_e = ArchiveNetworkClient.field_i - param1;
         } else if (0.0f <= var6 &&
           (double)var6 <= 0.7853981633974483) {
-          fv.field_e = qda.field_i - param1;
+          fv.field_e = ArchiveNetworkClient.field_i - param1;
           BlockModel.field_o = ns.field_g - param0;
         } else if ((double)var6 >= 0.7853981633974483 &&
           (double)var6 <= 1.5707963267948966) {
           BlockModel.field_o = ns.field_g - param1;
-          fv.field_e = qda.field_i - param0;
+          fv.field_e = ArchiveNetworkClient.field_i - param0;
         } else if ((double)var6 >= 1.5707963267948966 &&
           2.356194490192345 >= (double)var6) {
           BlockModel.field_o = param1;
-          fv.field_e = qda.field_i - param0;
+          fv.field_e = ArchiveNetworkClient.field_i - param0;
         } else {
           if (2.356194490192345 <= (double)var6 &&
             (double)var6 <= 3.141592653589793) {

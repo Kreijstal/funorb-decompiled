@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pc {
+final class BeamSegment {
     int field_c;
     int field_d;
-    pc field_h;
-    boolean field_l;
+    BeamSegment nextSegment;
+    boolean blocked;
     int field_e;
     int field_i;
     int field_b;
@@ -19,7 +19,7 @@ final class pc {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
         if (param0 != 5) {
-          pc.a(-47);
+          BeamSegment.a(-47);
         }
         if (wna.field_n != null) {
           var1 = wna.field_n;
@@ -54,7 +54,7 @@ final class pc {
         this.field_e = this.field_d + gqa.a(param0, (byte) 24, var3);
         if (param1 != 47) {
           bb var5 = (bb) null;
-          pc.a(false, -126, (bb) null);
+          BeamSegment.a(false, -126, (bb) null);
         }
         this.field_a = this.field_k + gqa.a(param0, (byte) 24, var4);
     }

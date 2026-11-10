@@ -18,9 +18,9 @@ final class FacePointLocomotor extends Locomotor {
         return param1;
     }
 
-    final static cn a(boolean param0, int param1, boolean param2, int param3, byte param4) {
+    final static ResourceArchive a(boolean param0, int param1, boolean param2, int param3, byte param4) {
         if (param4 > -75) {
-          return (cn) null;
+          return (ResourceArchive) null;
         }
         return nt.a(param1, param3, 5200, param2, false, param0);
     }

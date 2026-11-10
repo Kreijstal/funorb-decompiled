@@ -588,7 +588,7 @@ abstract class wv extends dfa {
                   if (this.field_c != 10) {
                     jm.field_n = this.field_c;
                   } else {
-                    if (!ip.field_b) {
+                    if (!GameClock.field_b) {
                       if (uma.field_c) {
                         jm.field_n = 3;
                       } else {

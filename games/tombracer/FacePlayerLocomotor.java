@@ -103,7 +103,7 @@ final class FacePlayerLocomotor extends Locomotor {
           }
           var4 = new byte[param1];
           var3 = var4;
-          lua.a(param0, 0, var4, 0, param1);
+          ArrayUtils.copy(param0, 0, var4, 0, param1);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -205,7 +205,7 @@ final class FacePlayerLocomotor extends Locomotor {
           var6.field_n = param3;
           var6.field_k = param2;
           ina.field_d.addLast((byte) -49, var6);
-          ip.a(var6, param1, 2147);
+          GameClock.a(var6, param1, 2147);
           return var6;
         }
         field_p = (bb) null;
@@ -221,7 +221,7 @@ final class FacePlayerLocomotor extends Locomotor {
         var7.field_n = param3;
         var7.field_k = param2;
         ina.field_d.addLast((byte) -49, var7);
-        ip.a(var7, param1, 2147);
+        GameClock.a(var7, param1, 2147);
         return var7;
     }
 

@@ -85,7 +85,7 @@ public final class Direct3DToolkit extends eo {
         return 5;
     }
 
-    private Direct3DToolkit(int param0, int param1, java.awt.Canvas param2, jaclib.peer.sha param3, jagdx.IDirect3D param4, jagdx.IDirect3DDevice param5, gua param6, jagdx.D3DPRESENT_PARAMETERS param7, jagdx.D3DCAPS param8, d param9, cn param10, int param11) {
+    private Direct3DToolkit(int param0, int param1, java.awt.Canvas param2, jaclib.peer.sha param3, jagdx.IDirect3D param4, jagdx.IDirect3DDevice param5, gua param6, jagdx.D3DPRESENT_PARAMETERS param7, jagdx.D3DCAPS param8, d param9, ResourceArchive param10, int param11) {
         super(param2, param6, param9, param10, param11, 0);
         jagdx.GeometryBuffer discarded$0 = null;
         boolean stackIn_4_1 = false;
@@ -170,7 +170,7 @@ public final class Direct3DToolkit extends eo {
           if (param0 == wo.field_i) {
             return 51;
           }
-          if (js.field_g == param0) {
+          if (CachedArchiveSource.field_g == param0) {
             return 77;
           }
         }
@@ -623,7 +623,7 @@ public final class Direct3DToolkit extends eo {
         throw new IllegalArgumentException();
     }
 
-    final static GraphicsToolkit createToolkit(java.awt.Canvas param0, d param1, cn param2, Integer param3) {
+    final static GraphicsToolkit createToolkit(java.awt.Canvas param0, d param1, ResourceArchive param2, Integer param3) {
         Direct3DToolkit stackIn_37_0 = null;
         Throwable decompiledCaughtException = null;
         Object var4 = null;
@@ -912,7 +912,7 @@ public final class Direct3DToolkit extends eo {
     final float c(byte param0) {
         if (param0 >= -39) {
           mw var3 = (mw) null;
-          this.a((nha) null, (mw) null);
+          this.createRenderTarget((nha) null, (mw) null);
         }
         return -0.5f;
     }
@@ -1069,7 +1069,7 @@ public final class Direct3DToolkit extends eo {
         this.field_jd.SetTransform(256, field_hd);
     }
 
-    final jca a(nha param0, mw param1) {
+    final jca createRenderTarget(nha param0, mw param1) {
         return null;
     }
 

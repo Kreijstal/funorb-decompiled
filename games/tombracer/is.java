@@ -211,7 +211,7 @@ final class is extends jea {
           return this.field_ub;
         }
         while (true) {
-          if (!es.a(true)) {
+          if (!NanoTickClock.a(true)) {
             this.field_tb.field_r = this.field_vb.toString();
             if (!param0) {
               return this.field_ub;

@@ -127,7 +127,7 @@ final class qt {
               var9 = stackIn_12_0;
               if (var21 == null) {
                 var8_ref_pha = new pha(var23, var22, var3_long);
-                fua.field_a.a(-1, var8_ref_pha, var3_long);
+                fua.field_a.put(-1, var8_ref_pha, var3_long);
               } else {
                 if (var9 != 0) {
                   var21.a(var22, 75, var23);
@@ -177,10 +177,10 @@ final class qt {
             }
             if (var2 == 8) {
               var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(125);
-              var4 = (ht) (WhiteLightSensorComponent.field_K.a(-126, (long)var3));
+              var4 = (ht) (WhiteLightSensorComponent.field_K.get(-126, (long)var3));
               if (var4 == null) {
                 var4 = new ht(fk.field_b);
-                WhiteLightSensorComponent.field_K.a(-1, var4, (long)var3);
+                WhiteLightSensorComponent.field_K.put(-1, var4, (long)var3);
               }
               ed.a(32, var4, true, var1);
               cua.a(var4, (byte) 80);
@@ -189,7 +189,7 @@ final class qt {
             if (var2 == 9) {
               var3Lifetime4 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(121);
               var4_int = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
-              var33 = (ht) (WhiteLightSensorComponent.field_K.a(-107, (long)var3Lifetime4));
+              var33 = (ht) (WhiteLightSensorComponent.field_K.get(-107, (long)var3Lifetime4));
               if (var33 != null) {
                 if (0 != var4_int) {
                   var33.field_zb = qsa.field_a;
@@ -215,7 +215,7 @@ final class qt {
               if (13 == var2) {
                 var3Lifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(127);
                 var4_intLifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
-                var17_ref = (ht) (WhiteLightSensorComponent.field_K.a(-112, (long)var3Lifetime5));
+                var17_ref = (ht) (WhiteLightSensorComponent.field_K.get(-112, (long)var3Lifetime5));
                 if (var17_ref != null) {
                   var14 = var17_ref;
                   var6 = var14;
@@ -240,7 +240,7 @@ final class qt {
                     var7 = vba.a((byte) -40, var3_longLifetime2);
                     if (var7 == null) {
                       var7 = new pha(var26, var27, var3_longLifetime2);
-                      tc.field_d.a(-1, var7, var3_longLifetime2);
+                      tc.field_d.put(-1, var7, var3_longLifetime2);
                       uu.field_a.field_Mb = uu.field_a.field_Mb + 1;
                     }
                     var7.field_Jb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(122);
@@ -336,7 +336,7 @@ final class qt {
               return;
             }
             var3Lifetime6 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(123);
-            var19_ref = (ht) (WhiteLightSensorComponent.field_K.a(-111, (long)var3Lifetime6));
+            var19_ref = (ht) (WhiteLightSensorComponent.field_K.get(-111, (long)var3Lifetime6));
             var25 = var19_ref;
             if (var25 == null) {
               return;

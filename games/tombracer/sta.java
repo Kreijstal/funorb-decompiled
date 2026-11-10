@@ -183,7 +183,7 @@ final class sta extends ArrayWidgetGroup {
           var5.length > 0 &&
           param0 > 0) {
           for (var6 = 0; var4 > var6; var6++) {
-            lua.a(this.field_I, var6 * param0, var5, var6 * param2, Math.min(param0, param2));
+            ArrayUtils.copy(this.field_I, var6 * param0, var5, var6 * param2, Math.min(param0, param2));
           }
         }
         this.field_I = var5;
@@ -211,7 +211,7 @@ final class sta extends ArrayWidgetGroup {
           0 < this.field_I.length &&
           var5.length > 0 &&
           param1 > 0) {
-          lua.a(this.field_I, 0, var5, 0, Math.min(param1, param2) * var4);
+          ArrayUtils.copy(this.field_I, 0, var5, 0, Math.min(param1, param2) * var4);
         }
         this.field_I = var5;
     }
@@ -221,7 +221,7 @@ final class sta extends ArrayWidgetGroup {
         UiWidget[] var5 = new UiWidget[var4 * param0];
         if (null != this.children && this.children.length > 0 && var5.length > 0 &&
           param1 > 0) {
-          lua.a(this.children, 0, var5, 0, var4 * Math.min(param1, param0));
+          ArrayUtils.copy(this.children, 0, var5, 0, var4 * Math.min(param1, param0));
         }
         if (param2 != 0) {
           return;
@@ -345,7 +345,7 @@ final class sta extends ArrayWidgetGroup {
         if (null != this.children && this.children.length > 0 && var5.length > 0 &&
           param1 > 0) {
           for (var6 = 0; var4 > var6; var6++) {
-            lua.a(this.children, param1 * var6, var5, param0 * var6, Math.min(param1, param0));
+            ArrayUtils.copy(this.children, param1 * var6, var5, param0 * var6, Math.min(param1, param0));
           }
         }
         this.children = var5;
@@ -360,9 +360,9 @@ final class sta extends ArrayWidgetGroup {
         try {
           var10 = new int[param5];
           int[] var8 = var10;
-          lua.a(var10, 0, param5, 1);
+          ArrayUtils.fill(var10, 0, param5, 1);
           var9 = new int[param6];
-          lua.a(var9, 0, param6, 1);
+          ArrayUtils.fill(var9, 0, param6, 1);
           this.a(var10, (byte) -97);
           this.a(var9, 48);
         } catch (RuntimeException runtimeException) {

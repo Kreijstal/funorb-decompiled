@@ -27,7 +27,7 @@ final class gj {
         throw new IllegalStateException();
     }
 
-    final static void a(cn param0, boolean param1) {
+    final static void a(ResourceArchive param0, boolean param1) {
         jea stackIn_4_0 = null;
         boolean stackIn_5_1 = false;
         jea stackIn_7_0 = null;
@@ -38,7 +38,7 @@ final class gj {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         jea var3 = null;
-        cn var4 = null;
+        ResourceArchive var4 = null;
         jea var6 = null;
         jea var7 = null;
         try {
@@ -54,8 +54,8 @@ final class gj {
           dqa.field_e.b(-122, is.field_yb);
           dqa.field_e.b(-126, qh.field_F);
           if (!param1) {
-            var4 = (cn) null;
-            gj.a((cn) null, true);
+            var4 = (ResourceArchive) null;
+            gj.a((ResourceArchive) null, true);
           }
           dqa.field_e.b(-123, mda.field_v);
           dqa.field_e.b(-123, dn.field_b);

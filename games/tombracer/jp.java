@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class jp extends ota {
-    final static void a(cn param0, byte param1) {
+    final static void a(ResourceArchive param0, byte param1) {
         int var3 = 0;
         int var4 = 0;
         Sprite var2 = new Sprite(param0.a("final_frame.jpg", (byte) 114, ""), (java.awt.Component) ((Object) nma.field_l));

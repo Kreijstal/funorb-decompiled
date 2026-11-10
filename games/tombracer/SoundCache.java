@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nda {
+final class SoundCache {
     static String field_d;
-    private cn field_b;
-    private cn field_c;
-    private ji field_e;
-    private ji field_a;
+    private ResourceArchive field_b;
+    private ResourceArchive field_c;
+    private NodeHashTable field_e;
+    private NodeHashTable field_a;
 
     final u a(String param0, byte param1, String param2) {
         RuntimeException var4 = null;
@@ -20,7 +20,7 @@ final class nda {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 52) {
-            stackIn_4_0 = this.a(false, param2, param0, (int[]) null);
+            stackIn_4_0 = this.getSampleByName(false, param2, param0, (int[]) null);
             return stackIn_4_0;
           }
           stackIn_2_0 = (u) null;
@@ -80,7 +80,7 @@ final class nda {
           }
           var6 = this.field_c.a(true, param0, var5_int);
           if (var6 >= 0) {
-            stackIn_10_0 = this.a(var6, param2, (byte) 101, var5_int);
+            stackIn_10_0 = this.getVorbisSample(var6, param2, (byte) 101, var5_int);
             return stackIn_10_0;
           }
           stackIn_8_0 = null;
@@ -111,7 +111,7 @@ final class nda {
         }
     }
 
-    private final u a(boolean param0, String param1, String param2, int[] param3) {
+    private final u getSampleByName(boolean param0, String param1, String param2, int[] param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -168,7 +168,7 @@ final class nda {
         }
     }
 
-    private final u a(int param0, int[] param1, byte param2, int param3) {
+    private final u getVorbisSample(int param0, int[] param1, byte param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
@@ -202,17 +202,17 @@ final class nda {
               stackIn_11_0 = null;
               return (u) (stackIn_11_0);
             }
-            this.field_e.a(var6, 124, var9);
+            this.field_e.put(var6, 124, var9);
           }
           if (param2 <= 56) {
-            this.field_e = (ji) null;
+            this.field_e = (NodeHashTable) null;
           }
           var8Lifetime1 = var9.a(param1);
           if (var8Lifetime1 == null) {
             return null;
           }
           var9.unlink(113);
-          this.field_a.a(var6, 121, var8Lifetime1);
+          this.field_a.put(var6, 121, var8Lifetime1);
           stackIn_19_0 = var8Lifetime1;
           return stackIn_19_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -241,13 +241,13 @@ final class nda {
         try {
           var4_int = -119 % ((65 - param0) / 35);
           if (this.field_c.c(4) == 1) {
-            stackIn_2_0 = this.a(param2, param1, (byte) 101, 0);
+            stackIn_2_0 = this.getVorbisSample(param2, param1, (byte) 101, 0);
             return stackIn_2_0;
           }
           if (this.field_c.a((byte) 66, param2) != 1) {
             throw new RuntimeException();
           }
-          stackIn_5_0 = this.a(0, param1, (byte) 83, param2);
+          stackIn_5_0 = this.getVorbisSample(0, param1, (byte) 83, param2);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -355,7 +355,7 @@ final class nda {
           var5_int = (param1 >>> 12 | (-805302273 & param1) << 4) ^ param2;
           var5_int = var5_int | param1 << 16;
           if (param0 < 45) {
-            this.field_e = (ji) null;
+            this.field_e = (NodeHashTable) null;
           }
           var6 = (long)var5_int;
           var8 = (u) (this.field_a.a((byte) -110, var6));
@@ -375,7 +375,7 @@ final class nda {
           }
           var10 = var9.a();
           var8Lifetime1 = var10;
-          this.field_a.a(var6, 103, var8Lifetime1);
+          this.field_a.put(var6, 103, var8Lifetime1);
           if (param3 != null) {
             param3[0] = param3[0] - var10.field_i.length;
           }
@@ -395,9 +395,9 @@ final class nda {
         }
     }
 
-    nda(cn param0, cn param1) {
-        this.field_e = new ji(256);
-        this.field_a = new ji(256);
+    SoundCache(ResourceArchive param0, ResourceArchive param1) {
+        this.field_e = new NodeHashTable(256);
+        this.field_a = new NodeHashTable(256);
         try {
           this.field_c = param1;
           this.field_b = param0;

@@ -7,7 +7,7 @@ final class uv extends oga {
     private static String[] field_k;
     static boolean field_o;
     private int field_n;
-    private cb field_s;
+    private OpenGlFramebuffer field_s;
     static String field_u;
     private cua field_v;
     private int field_r;
@@ -16,7 +16,7 @@ final class uv extends oga {
     private cua field_w;
     private int field_p;
     private rt[] field_l;
-    private cb field_q;
+    private OpenGlFramebuffer field_q;
     private cua field_m;
 
     final void a(rt param0, int param1, byte param2, rt param3) {
@@ -262,7 +262,7 @@ final class uv extends oga {
               var7 = var5;
               var8 = 0;
             } else {
-              this.field_s = new cb(this.field_g);
+              this.field_s = new OpenGlFramebuffer(this.field_g);
               var6Lifetime1 = var4;
               this.field_l = new rt[var8];
               var7 = var5;
@@ -305,12 +305,12 @@ final class uv extends oga {
         return 1;
     }
 
-    final static hja a(String param0, cn param1, String param2, int param3) {
+    final static IndexedSprite a(String param0, ResourceArchive param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        hja stackIn_2_0 = null;
-        hja stackIn_4_0 = null;
+        IndexedSprite stackIn_2_0 = null;
+        IndexedSprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -321,7 +321,7 @@ final class uv extends oga {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != 8864) {
-            stackIn_2_0 = (hja) null;
+            stackIn_2_0 = (IndexedSprite) null;
             return stackIn_2_0;
           }
           var4_int = param1.b(param2, -7768);
@@ -359,7 +359,7 @@ final class uv extends oga {
           return this.field_q != null ? true : false;
         }
         String var3 = (String) null;
-        uv.a((String) null, (cn) null, (String) null, -53);
+        uv.a((String) null, (ResourceArchive) null, (String) null, -53);
         return this.field_q != null ? true : false;
     }
 
@@ -387,7 +387,7 @@ final class uv extends oga {
         if (!this.field_g.field_z) {
           return false;
         }
-        this.field_q = new cb(this.field_g);
+        this.field_q = new OpenGlFramebuffer(this.field_g);
         this.field_x = new rt(this.field_g, 3553, 34842, 256, 256);
         this.field_x.a(false, false, -3554);
         this.field_i = new rt(this.field_g, 3553, 34842, 256, 256);

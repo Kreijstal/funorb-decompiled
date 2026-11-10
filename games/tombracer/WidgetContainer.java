@@ -140,7 +140,7 @@ class WidgetContainer extends UiWidget implements tpa {
         try {
           var5 = new byte[param0];
           var4 = var5;
-          lua.a(param3, param2, var5, param1, param0);
+          ArrayUtils.copy(param3, param2, var5, param1, param0);
           stackIn_1_0 = var5;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

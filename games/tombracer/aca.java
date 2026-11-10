@@ -22,8 +22,8 @@ final class aca extends IntrusiveNode {
         try {
           kra.field_c.insertElementAt(param0, 0);
           if (param1 != 19711) {
-            cn var3 = (cn) null;
-            aca.a((cn) null, 32, (cn) null, (byte) -47, 55);
+            ResourceArchive var3 = (ResourceArchive) null;
+            aca.a((ResourceArchive) null, 32, (ResourceArchive) null, (byte) -47, 55);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "aca.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -37,10 +37,10 @@ final class aca extends IntrusiveNode {
         return (param0 & 32768) != 0 ? true : false;
     }
 
-    final static hea a(cn param0, int param1, cn param2, byte param3, int param4) {
+    final static BinaryBitmapFont a(ResourceArchive param0, int param1, ResourceArchive param2, byte param3, int param4) {
         RuntimeException var5 = null;
-        hea stackIn_2_0 = null;
-        hea stackIn_7_0 = null;
+        BinaryBitmapFont stackIn_2_0 = null;
+        BinaryBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -49,7 +49,7 @@ final class aca extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 >= -99) {
-            stackIn_2_0 = (hea) null;
+            stackIn_2_0 = (BinaryBitmapFont) null;
             return stackIn_2_0;
           }
           if (!GameApplet.a(false, param4, param1, param2)) {

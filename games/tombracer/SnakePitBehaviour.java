@@ -7,7 +7,7 @@ final class SnakePitBehaviour extends Behaviour {
     private aia[] field_n;
     static String field_p;
 
-    final int a(int param0, Effect param1, pc param2) {
+    final int a(int param0, Effect param1, BeamSegment param2) {
         int var10 = 0;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -291,7 +291,7 @@ final class SnakePitBehaviour extends Behaviour {
             var10_ref_aia = this.field_n[var9];
             var11 = var10_ref_aia.a((byte) 91) + var7_int;
             var12 = var8 + var10_ref_aia.f(0);
-            if (io.a(param1, var12, (byte) -61, param0, var11, param5, var10_ref_aia.g(0), var10_ref_aia.g(0), param3)) {
+            if (io.centredBoxesOverlap(param1, var12, (byte) -61, param0, var11, param5, var10_ref_aia.g(0), var10_ref_aia.g(0), param3)) {
               this.a(-this.trap.getY(9648) + param5, -this.trap.getX(3) + param3, var10_ref_aia, (byte) -115, param2);
             }
           }

@@ -206,7 +206,7 @@ final class Room implements ew, Renderable, noa {
         while (var9 != null) {
           if (~var9.r(-70) == ~param2) {
             var10 = var9.t(param0 ^ 30096);
-            if (io.a(var6, var9.getY(9648), (byte) -78, var6, var9.getX(3), param3, var10, var10, param4)) {
+            if (io.centredBoxesOverlap(var6, var9.getY(9648), (byte) -78, var6, var9.getX(3), param3, var10, var10, param4)) {
               var9.h((byte) -1);
               return true;
             }
@@ -361,7 +361,7 @@ final class Room implements ew, Renderable, noa {
           field_p = (ToolkitSprite[][]) null;
         }
         if (!param5) {
-          return io.a(this.width, param4, (byte) -123, this.height, param0, this.height / 2, param3, param2, this.width / 2);
+          return io.centredBoxesOverlap(this.width, param4, (byte) -123, this.height, param0, this.height / 2, param3, param2, this.width / 2);
         }
         return ck.a(param0, param3, this.width / 2, this.width, this.height, param4, (byte) 125, this.height / 2, param2);
     }
@@ -549,7 +549,7 @@ final class Room implements ew, Renderable, noa {
         }
     }
 
-    private final int a(boolean param0, pc param1, Effect param2) {
+    private final int a(boolean param0, BeamSegment param1, Effect param2) {
         int var6 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -575,7 +575,7 @@ final class Room implements ew, Renderable, noa {
           var4_int = 0;
           var5 = this.collisionGrid.a(param1, (byte) -103);
           for (var6 = 0; var6 < var5.length; var6++) {
-            var4_int = var4_int + var5[var6].a(param2, 12, param1);
+            var4_int = var4_int + var5[var6].applyBeamEffect(param2, 12, param1);
           }
           stackIn_11_0 = var4_int;
           return stackIn_11_0;
@@ -599,7 +599,7 @@ final class Room implements ew, Renderable, noa {
         }
     }
 
-    final boolean a(int param0, pc param1, WorldBody param2, byte param3) {
+    final boolean a(int param0, BeamSegment param1, WorldBody param2, byte param3) {
         int var8 = 0;
         int var5_int = 0;
         Collidable[] var6 = null;
@@ -617,11 +617,11 @@ final class Room implements ew, Renderable, noa {
         try {
           var5_int = 0;
           var7 = 67 % ((param3 + 40) / 60);
-          param1.field_l = false;
+          param1.blocked = false;
           var6 = this.collisionGrid.a(param1, (byte) -68);
           for (var8 = 0; var6.length > var8; var8++) {
-            if (var6[var8].a(-1, param2, param0, param1)) {
-              param1.field_l = true;
+            if (var6[var8].interceptsBeam(-1, param2, param0, param1)) {
+              param1.blocked = true;
               var5_int = 1;
             }
           }
@@ -799,7 +799,7 @@ final class Room implements ew, Renderable, noa {
         this.projectilePool.printAll(false);
         if (!param0) {
           WorldBody var3 = (WorldBody) null;
-          this.a(2, (pc) null, (WorldBody) null, (byte) 52);
+          this.a(2, (BeamSegment) null, (WorldBody) null, (byte) 52);
         }
     }
 
@@ -926,7 +926,7 @@ final class Room implements ew, Renderable, noa {
         for (var8_int = 0; var7.length > var8_int; var8_int++) {
           if (var7[var8_int] instanceof Trap) {
             var9 = (Trap) (var7[var8_int]);
-            if (var9.a((byte) 110, param1, param4, param3, param0)) {
+            if (var9.intersectsRect((byte) 110, param1, param4, param3, param0)) {
               var6.a((byte) -37, var9);
             }
           }
@@ -1154,7 +1154,7 @@ final class Room implements ew, Renderable, noa {
         return;
     }
 
-    final boolean a(int param0, WorldBody param1, int param2, pc param3, WorldBody param4, Effect param5) {
+    final boolean a(int param0, WorldBody param1, int param2, BeamSegment param3, WorldBody param4, Effect param5) {
         int discarded$3 = 0;
         int var7_int = 0;
         RuntimeException var7 = null;
@@ -1170,7 +1170,7 @@ final class Room implements ew, Renderable, noa {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          param3.field_h = null;
+          param3.nextSegment = null;
           var7_int = 0;
           if (this.a(param0, param3, param4, (byte) -127)) {
             var7_int = 1;
@@ -1240,10 +1240,10 @@ final class Room implements ew, Renderable, noa {
             boolean decompiledFrameRemainder0 = true;
             var12 = var14[var11];
             if (param0 != var12 &&
-              var12.a(param1, param7, 85, param8, param4, param0, param5, param3)) {
+              var12.overlapsBox(param1, param7, 85, param8, param4, param0, param5, param3)) {
               if ((param7 != null &&
                 param6) &&
-                (decompiledFrameRemainder0 = !(var12.a(param7.getHeight((byte) 55), param7, 107, param7.getWidth(-48), param7.getPreviousY(-21185), param0, param7.getPreviousX(103), param3)))) {
+                (decompiledFrameRemainder0 = !(var12.overlapsBox(param7.getHeight((byte) 55), param7, 107, param7.getWidth(-48), param7.getPreviousY(-21185), param0, param7.getPreviousX(103), param3)))) {
                 return true;
               }
               if (decompiledFrameRemainder0) {
@@ -1468,7 +1468,7 @@ final class Room implements ew, Renderable, noa {
           var8 = this.collisionGrid.b(param1, -1, param5, param4, param3);
           var9 = 96 / ((82 - param0) / 41);
           for (var10 = 0; var10 < var8.length; var10++) {
-            var7_int = var7_int + var8[var10].a(param2, param4, param5, 0, param1, param3);
+            var7_int = var7_int + var8[var10].applyAreaEffect(param2, param4, param5, 0, param1, param3);
           }
           stackIn_8_0 = var7_int;
           return stackIn_8_0;
@@ -1815,7 +1815,7 @@ final class Room implements ew, Renderable, noa {
           var4_int = 0;
           var5 = this.collisionGrid.a((byte) -26, param0);
           for (var6 = 0; var6 < var5.length; var6++) {
-            var4_int = var4_int + var5[var6].a(param2, param0, -117);
+            var4_int = var4_int + var5[var6].applyProjectileEffect(param2, param0, -117);
           }
           stackIn_10_0 = var4_int;
           return stackIn_10_0;
@@ -1886,13 +1886,13 @@ final class Room implements ew, Renderable, noa {
           scanLoop1: while (true) {
             if (var18 < var17.length) {
               var16 = 0;
-              if (var17[var18].a(param6, param1, 97, param3, param10, param0, param7, param2)) {
+              if (var17[var18].overlapsBox(param6, param1, 97, param3, param10, param0, param7, param2)) {
                 var14_int = 1;
                 if (param1 == null ||
                   !param12 ||
-                  !var17[var18].a(param1.getHeight((byte) 55), param1, 81, param1.getWidth(-48), param1.getPreviousY(-21185), param0, param1.getPreviousX(param5 + 115), param2)) {
+                  !var17[var18].overlapsBox(param1.getHeight((byte) 55), param1, 81, param1.getWidth(-48), param1.getPreviousY(-21185), param0, param1.getPreviousX(param5 + 115), param2)) {
                   var16 = 1;
-                  if (!var17[var18].a((byte) -55, false)) {
+                  if (!var17[var18].isPushable((byte) -55, false)) {
                     var15 = 1;
                     break scanLoop1;
                   }
@@ -1912,9 +1912,9 @@ final class Room implements ew, Renderable, noa {
           }
           for (var18Lifetime1 = 0; var18Lifetime1 < var17.length; var18Lifetime1++) {
             if (var17[var18Lifetime1] != null) {
-              var17[var18Lifetime1].a(77, false, param8, param4, param9, param11);
+              var17[var18Lifetime1].tryPush(77, false, param8, param4, param9, param11);
               var16Lifetime1 = 1;
-              if (!var17[var18Lifetime1].a(param6, param1, param5 ^ 64, param3, param10, param0, param7, param2)) {
+              if (!var17[var18Lifetime1].overlapsBox(param6, param1, param5 ^ 64, param3, param10, param0, param7, param2)) {
                 var16Lifetime1 = 0;
               } else {
                 if (var15 == 0) {

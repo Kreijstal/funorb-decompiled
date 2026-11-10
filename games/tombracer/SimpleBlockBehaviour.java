@@ -73,8 +73,8 @@ final class SimpleBlockBehaviour extends Behaviour {
     final void a(boolean param0, int param1) {
         this.field_o = param0 ? true : false;
         if (param1 >= -23) {
-          pc var4 = (pc) null;
-          this.a(33, -58, (pc) null, 39);
+          BeamSegment var4 = (BeamSegment) null;
+          this.a(33, -58, (BeamSegment) null, 39);
         }
     }
 
@@ -196,7 +196,7 @@ final class SimpleBlockBehaviour extends Behaviour {
         return 12;
     }
 
-    final boolean a(int param0, int param1, pc param2, int param3) {
+    final boolean a(int param0, int param1, BeamSegment param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;

@@ -458,7 +458,7 @@ final class hf implements ac, gs {
           ) ? var10 : -1) {
           case 0:
             if (1 == this.field_f) {
-              stackIn_51_0 = (this.field_p.K(-163585215) == null) ? 0 : 1;
+              stackIn_51_0 = (this.field_p.getWeapon(-163585215) == null) ? 0 : 1;
               var10 = stackIn_51_0;
               var4 = 0;
               var11 = 20;
@@ -473,7 +473,7 @@ final class hf implements ac, gs {
                 break;
               }
             }
-            stackIn_58_0 = (null == this.field_p.K(-163585215)) ? 0 : 1;
+            stackIn_58_0 = (null == this.field_p.getWeapon(-163585215)) ? 0 : 1;
             {
               var10 = stackIn_58_0;
               if (var10 == 0) {
@@ -489,7 +489,7 @@ final class hf implements ac, gs {
               break;
             }
           case 4:
-            stackIn_65_0 = (this.field_p.K(-163585215) == null) ? 0 : 1;
+            stackIn_65_0 = (this.field_p.getWeapon(-163585215) == null) ? 0 : 1;
             var10 = stackIn_65_0;
             var4 = 1;
             var11 = 19;
@@ -553,7 +553,7 @@ final class hf implements ac, gs {
             }
           case 3:
             var4 = 2;
-            if (!this.field_p.I(param0 ^ 31)) {
+            if (!this.field_p.isCarryingLargeObject(param0 ^ 31)) {
               break;
             }
             var4 = 36;

@@ -14,9 +14,9 @@ final class FuseBehaviour extends Behaviour {
     private kpa field_q;
     private int field_u;
 
-    final int a(int param0, Effect param1, pc param2) {
+    final int a(int param0, Effect param1, BeamSegment param2) {
         RuntimeException var4 = null;
-        pc var5 = null;
+        BeamSegment var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -26,8 +26,8 @@ final class FuseBehaviour extends Behaviour {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -85) {
-            var5 = (pc) null;
-            this.a(102, (Effect) null, (pc) null);
+            var5 = (BeamSegment) null;
+            this.a(102, (Effect) null, (BeamSegment) null);
           }
           stackIn_3_0 = this.a(param1, (byte) -115);
           return stackIn_3_0;
@@ -109,8 +109,8 @@ final class FuseBehaviour extends Behaviour {
 
     final int getTypeId(boolean param0) {
         if (param0) {
-          pc var3 = (pc) null;
-          this.a(-90, (Effect) null, (pc) null);
+          BeamSegment var3 = (BeamSegment) null;
+          this.a(-90, (Effect) null, (BeamSegment) null);
         }
         return 31;
     }

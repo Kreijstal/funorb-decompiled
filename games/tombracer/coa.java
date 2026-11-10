@@ -88,8 +88,8 @@ class coa extends ci {
           var5 = var14[1];
           var6 = var14[2];
           stackIn_6_0 = this.field_m;
-          if (qda.field_i != this.field_r) {
-            stackIn_7_1 = this.field_r * param0 / qda.field_i;
+          if (ArchiveNetworkClient.field_i != this.field_r) {
+            stackIn_7_1 = this.field_r * param0 / ArchiveNetworkClient.field_i;
           } else {
             stackIn_7_1 = param0;
           }
@@ -126,7 +126,7 @@ class coa extends ci {
         if (this.field_o < 0) {
           return false;
         }
-        jpa var2 = gla.field_m >= 0 ? jpa.a(np.field_m, gla.field_m, this.field_o) : jpa.a(np.field_m, this.field_o);
+        SpriteData var2 = gla.field_m >= 0 ? SpriteData.loadSprite(np.field_m, gla.field_m, this.field_o) : SpriteData.loadSprite(np.field_m, this.field_o);
         var2.d();
         this.field_p = var2.e();
         this.field_r = var2.field_a;

@@ -86,7 +86,7 @@ final class rda extends ci {
           if (param0 != -8883) {
             rda.d(56);
           }
-          var4 = qda.field_i;
+          var4 = ArchiveNetworkClient.field_i;
           nfa.a(param1, param0 ^ -8901);
           MazeGenerator.a(una.field_b, false, 0, 0, hba.field_b);
           if (null != this.field_p) {
@@ -214,11 +214,11 @@ final class rda extends ci {
         }
         if (this.field_h.field_f) {
           var4 = ns.field_g;
-          var5 = qda.field_i;
+          var5 = ArchiveNetworkClient.field_i;
           var29 = new int[var5][var4];
           var30 = this.field_h.a((byte) -98);
           this.a(-8883, var29);
-          for (var8 = 0; var8 < qda.field_i; var8++) {
+          for (var8 = 0; var8 < ArchiveNetworkClient.field_i; var8++) {
             var32 = var29[var8];
             var31 = var30[var8];
             var11 = var31[0];

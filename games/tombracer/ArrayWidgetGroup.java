@@ -5,7 +5,7 @@ import java.util.*;
 
 abstract class ArrayWidgetGroup extends UiWidget implements tpa {
     static int[] field_u;
-    static jpa field_v;
+    static SpriteData field_v;
     UiWidget[] children;
 
     private final UiWidget getFocusedChild(int param0) {
@@ -285,7 +285,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements tpa {
           }
           var10 = this.children;
           if (param2 <= 121) {
-            field_v = (jpa) null;
+            field_v = (SpriteData) null;
           }
           for (var6 = 0; var6 < var10.length; var6++) {
             var7 = var10[var6];
@@ -393,7 +393,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements tpa {
           }
         }
         if (param0) {
-          field_v = (jpa) null;
+          field_v = (SpriteData) null;
         }
         return var2;
     }
@@ -454,7 +454,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements tpa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= -44) {
-            field_v = (jpa) null;
+            field_v = (SpriteData) null;
           }
           if (!param0.isArray()) {
             stackIn_6_0 = param0.getName().substring(1 + param0.getName().lastIndexOf("."));

@@ -6,26 +6,26 @@ import java.util.*;
 final class sra implements eb {
     static boolean field_t;
     private boolean field_c;
-    private cn field_g;
-    private cn field_p;
-    private cn field_e;
-    private cn field_m;
+    private ResourceArchive field_g;
+    private ResourceArchive field_p;
+    private ResourceArchive field_e;
+    private ResourceArchive field_m;
     private static String[] field_v;
-    private cn field_j;
-    private cn field_o;
-    private cn field_k;
-    private cn field_d;
-    private cn field_f;
-    private cn field_h;
+    private ResourceArchive field_j;
+    private ResourceArchive field_o;
+    private ResourceArchive field_k;
+    private ResourceArchive field_d;
+    private ResourceArchive field_f;
+    private ResourceArchive field_h;
     static String field_i;
-    private cn field_q;
-    private cn field_a;
-    private cn field_b;
+    private ResourceArchive field_q;
+    private ResourceArchive field_a;
+    private ResourceArchive field_b;
     static String[] connectingTranslations;
     private boolean field_n;
-    private cn field_s;
-    private cn field_l;
-    private cn field_r;
+    private ResourceArchive field_s;
+    private ResourceArchive field_l;
+    private ResourceArchive field_r;
 
     public final void a(byte param0) {
         if (null != ConstrainToFacingArcLocomotor.field_v) {
@@ -52,9 +52,9 @@ final class sra implements eb {
           return;
         }
         this.field_e = dd.a(kn.field_j.field_c, param0 ^ -37);
-        cn var6 = PitComponent.field_G;
-        cn var7 = var6;
-        cn var3 = ota.field_b;
+        ResourceArchive var6 = PitComponent.field_G;
+        ResourceArchive var7 = var6;
+        ResourceArchive var3 = ota.field_b;
         ina dupTemp$0 = new ina(55);
         lba.field_r = dupTemp$0;
         ina var4 = dupTemp$0;
@@ -121,7 +121,7 @@ final class sra implements eb {
     final void a(int param0, byte param1, String param2) {
         try {
           if (param1 != 47) {
-            this.field_e = (cn) null;
+            this.field_e = (ResourceArchive) null;
           }
           ima.a((float)param0, param2, -106);
           ad.field_j.draw(0);
@@ -219,7 +219,7 @@ final class sra implements eb {
           this.field_n = true;
         }
         if (param0 > -124) {
-          this.field_a = (cn) null;
+          this.field_a = (ResourceArchive) null;
         }
         return this.field_n;
     }

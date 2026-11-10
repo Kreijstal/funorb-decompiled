@@ -3,7 +3,7 @@
  */
 final class tla {
     static boolean field_b;
-    static jpa field_g;
+    static SpriteData field_g;
     static String field_d;
     static boolean field_e;
     static String field_j;

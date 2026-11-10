@@ -4,12 +4,12 @@
 final class tr {
     static long field_g;
     static String field_e;
-    private cn field_h;
+    private ResourceArchive field_h;
     static String field_d;
     static int field_f;
     static String field_c;
     private dd field_b;
-    private cn field_a;
+    private ResourceArchive field_a;
 
     public static void releaseStatics(byte param0) {
         field_c = null;
@@ -49,7 +49,7 @@ final class tr {
         return var3Lifetime1;
     }
 
-    tr(int param0, cn param1, cn param2, pp param3) {
+    tr(int param0, ResourceArchive param1, ResourceArchive param2, pp param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

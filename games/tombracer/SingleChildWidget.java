@@ -125,18 +125,18 @@ abstract class SingleChildWidget extends UiWidget implements tpa {
         }
     }
 
-    final static void a(boolean param0, int[] param1, hja[] param2, cn param3, cn param4) {
+    final static void a(boolean param0, int[] param1, IndexedSprite[] param2, ResourceArchive param3, ResourceArchive param4) {
         Sprite[] dupTemp$0 = null;
         Sprite[] dupTemp$1 = null;
         Sprite[] dupTemp$2 = null;
         Sprite[] dupTemp$3 = null;
-        hja[] var5 = null;
-        hja[] var6 = null;
+        IndexedSprite[] var5 = null;
+        IndexedSprite[] var6 = null;
         int[] var6_array = null;
         int var7_int = 0;
         int var18 = 0;
         int[] var19 = null;
-        hja[] var20 = null;
+        IndexedSprite[] var20 = null;
         int[] var21 = null;
         int[] var22 = null;
         int[] var23 = null;
@@ -152,7 +152,7 @@ abstract class SingleChildWidget extends UiWidget implements tpa {
         String stackIn_36_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
-        hea var7 = null;
+        BinaryBitmapFont var7 = null;
         jea var8 = null;
         jea var9 = null;
         jea var10 = null;
@@ -172,7 +172,7 @@ abstract class SingleChildWidget extends UiWidget implements tpa {
           var5 = var20;
           RoomComponent.field_n = var20.length;
           if (param2 != null) {
-            var6 = new hja[param2.length + RoomComponent.field_n];
+            var6 = new IndexedSprite[param2.length + RoomComponent.field_n];
             for (var7_int = 0; var7_int < RoomComponent.field_n; var7_int++) {
               var6[var7_int] = var20[var7_int];
             }
@@ -230,8 +230,8 @@ abstract class SingleChildWidget extends UiWidget implements tpa {
           uda.field_s.field_w = rfa.a(BoulderComponent.a(param4, "lobby", 5, "heading"), 126);
           joa.field_d = new jea(0L, (jea) null);
           joa.field_d.field_w = tba.a(-74, false, 120, 8421504, 4210752, false);
-          ji.field_g = new jea(0L, (jea) null);
-          ji.field_g.field_w = Player.c(114, 1, 3, 6316128, -111, 6316128);
+          NodeHashTable.field_g = new jea(0L, (jea) null);
+          NodeHashTable.field_g.field_w = Player.c(114, 1, 3, 6316128, -111, 6316128);
           lw.field_a = new jea(0L, (jea) null);
           lw.field_a.field_w = rfa.a(BoulderComponent.a(param4, "lobby", 5, "popup"), 113);
           var12 = rfa.a(BoulderComponent.a(param4, "lobby", 5, "popup_mouseover"), 122);
@@ -296,8 +296,8 @@ abstract class SingleChildWidget extends UiWidget implements tpa {
           Effect.field_a.field_w = rfa.a(BoulderComponent.a(param4, "lobby", 5, "tab_inactive"), 113);
           Effect.field_a.field_C = rfa.a(BoulderComponent.a(param4, "lobby", 5, "tab_mouseover"), 113);
           Effect.field_a.field_n = var14;
-          js.field_d = new jea(0L, (jea) null);
-          js.field_d.field_w = Player.c(206, -1, 3, 1856141, -113, 1127256);
+          CachedArchiveSource.field_d = new jea(0L, (jea) null);
+          CachedArchiveSource.field_d.field_w = Player.c(206, -1, 3, 1856141, -113, 1127256);
           CommonChooseReward.field_c = new jea(0L, (jea) null);
           CommonChooseReward.field_c.field_w = Player.c(290, -1, 3, 11579568, -120, 6052956);
           hg.field_g = new jea(0L, var15);
@@ -608,7 +608,7 @@ abstract class SingleChildWidget extends UiWidget implements tpa {
     }
 
     void handlePointerRelease(byte param0, UiWidget param1, int param2, int param3, int param4, int param5) {
-        cn var8 = null;
+        ResourceArchive var8 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -616,8 +616,8 @@ abstract class SingleChildWidget extends UiWidget implements tpa {
         RuntimeException var7 = null;
         try {
           if (param0 != 59) {
-            var8 = (cn) null;
-            SingleChildWidget.a(false, (int[]) null, (hja[]) null, (cn) null, (cn) null);
+            var8 = (ResourceArchive) null;
+            SingleChildWidget.a(false, (int[]) null, (IndexedSprite[]) null, (ResourceArchive) null, (ResourceArchive) null);
           }
           if (null != this.child) {
             this.child.handlePointerRelease((byte) 59, param1, param2, this.field_i + param3, param4 + this.field_n, param5);
@@ -734,8 +734,8 @@ abstract class SingleChildWidget extends UiWidget implements tpa {
           this.child.renderLayer(this.field_i + param0, param1 + this.field_n, 0, param3);
         }
         if (param2 != 0) {
-          cn var6 = (cn) null;
-          SingleChildWidget.a(false, (int[]) null, (hja[]) null, (cn) null, (cn) null);
+          ResourceArchive var6 = (ResourceArchive) null;
+          SingleChildWidget.a(false, (int[]) null, (IndexedSprite[]) null, (ResourceArchive) null, (ResourceArchive) null);
         }
     }
 

@@ -32,7 +32,7 @@ final class ak extends ela {
         }
     }
 
-    final static ToolkitSprite[] a(GraphicsToolkit param0, jpa[] param1, int param2) {
+    final static ToolkitSprite[] a(GraphicsToolkit param0, SpriteData[] param1, int param2) {
         int var4 = 0;
         ToolkitSprite[] var3 = null;
         RuntimeException var3_ref = null;
@@ -112,7 +112,7 @@ final class ak extends ela {
             } else {
               SnakePitBehaviour.field_o = aga.field_a;
             }
-            SnakePitBehaviour.field_o = uj.a((byte) 121, new CharSequence[]{(CharSequence) ((Object) SnakePitBehaviour.field_o), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) rpa.field_j)});
+            SnakePitBehaviour.field_o = S2CPlayerSyncPacket.a((byte) 121, new CharSequence[]{(CharSequence) ((Object) SnakePitBehaviour.field_o), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) rpa.field_j)});
           }
           ci.field_l.i((byte) 101);
           wt.a((byte) -117);
@@ -130,7 +130,7 @@ final class ak extends ela {
             } else {
               SnakePitBehaviour.field_o = aga.field_a;
             }
-            SnakePitBehaviour.field_o = uj.a((byte) 121, new CharSequence[]{(CharSequence) ((Object) SnakePitBehaviour.field_o), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) rpa.field_j)});
+            SnakePitBehaviour.field_o = S2CPlayerSyncPacket.a((byte) 121, new CharSequence[]{(CharSequence) ((Object) SnakePitBehaviour.field_o), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) rpa.field_j)});
           }
           ci.field_l.i((byte) 101);
           wt.a((byte) -117);

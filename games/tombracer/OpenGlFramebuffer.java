@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cb implements ks {
+final class OpenGlFramebuffer implements ks {
     private int field_a;
     private int field_b;
     private int field_e;
@@ -60,16 +60,16 @@ final class cb implements ks {
         return true;
     }
 
-    public final void c(byte param0) {
+    public final void bindReadFramebuffer(byte param0) {
         jaggl.OpenGL.glBindFramebufferEXT(36009, this.field_b);
         this.field_d = this.field_d | 2;
         this.field_a = this.e(0);
         if (param0 < 29) {
-          this.a((byte) -62);
+          this.bindDrawFramebuffer((byte) -62);
         }
     }
 
-    public final void d(byte param0) {
+    public final void unbindDrawFramebuffer(byte param0) {
         jaggl.OpenGL.glBindFramebufferEXT(36008, 0);
         if (param0 >= 10) {
           this.field_d = this.field_d & -2;
@@ -78,7 +78,7 @@ final class cb implements ks {
         }
     }
 
-    public final void a(byte param0) {
+    public final void bindDrawFramebuffer(byte param0) {
         if (param0 < -115) {
           jaggl.OpenGL.glBindFramebufferEXT(36008, this.field_b);
           this.field_d = this.field_d | 1;
@@ -94,14 +94,14 @@ final class cb implements ks {
         jaggl.OpenGL.glReadBuffer(vta.field_d[param1]);
     }
 
-    public final void b(byte param0) {
+    public final void unbindReadFramebuffer(byte param0) {
         if (param0 == -36) {
           jaggl.OpenGL.glBindFramebufferEXT(36160, 0);
           this.field_d = this.field_d & -5;
           this.field_a = this.e(0);
           return;
         }
-        this.c((byte) 91);
+        this.bindReadFramebuffer((byte) 91);
         jaggl.OpenGL.glBindFramebufferEXT(36160, 0);
         this.field_d = this.field_d & -5;
         this.field_a = this.e(0);
@@ -162,7 +162,7 @@ final class cb implements ks {
         try {
           this.a(1, param1, 0, param2);
           if (!param0) {
-            cb.releaseStatics(-3);
+            OpenGlFramebuffer.releaseStatics(-3);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "cb.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -230,7 +230,7 @@ final class cb implements ks {
         field_i = null;
     }
 
-    cb(OpenGlToolkit param0) {
+    OpenGlFramebuffer(OpenGlToolkit param0) {
         this.field_a = -1;
         this.field_h = new wia[9];
         this.field_d = 0;

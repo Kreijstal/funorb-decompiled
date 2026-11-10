@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class aa {
-    static jpa field_a;
+    static SpriteData field_a;
     static String field_b;
     static int field_c;
 
@@ -14,7 +14,7 @@ abstract class aa {
         field_a = null;
         field_b = null;
         if (!param0) {
-          field_a = (jpa) null;
+          field_a = (SpriteData) null;
         }
     }
 

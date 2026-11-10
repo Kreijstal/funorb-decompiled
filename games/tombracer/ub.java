@@ -23,13 +23,13 @@ final class ub {
             this.a(-79, -69, (Object) null);
           }
           if (this.field_f < this.field_e.length) {
-            lua.a(this.field_e, param0, this.field_e, 1 + param0, -param0 + this.field_f - 1);
+            ArrayUtils.copy(this.field_e, param0, this.field_e, 1 + param0, -param0 + this.field_f - 1);
           } else {
             var6 = new Object[this.field_a + this.field_e.length];
             var7 = var6;
             var4 = var7;
-            lua.a(this.field_e, 0, var7, 0, param0);
-            lua.a(this.field_e, param0, var4, 1 + param0, -param0 + this.field_e.length);
+            ArrayUtils.copy(this.field_e, 0, var7, 0, param0);
+            ArrayUtils.copy(this.field_e, param0, var4, 1 + param0, -param0 + this.field_e.length);
             this.field_e = var6;
           }
           this.field_e[param0] = param2;
@@ -75,7 +75,7 @@ final class ub {
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           this.field_e = new Object[param1.length];
-          lua.a(param1, 0, this.field_e, 0, param1.length);
+          ArrayUtils.copy(param1, 0, this.field_e, 0, param1.length);
           this.field_f = param0;
           for (var3_int = 0; this.field_e.length > var3_int; var3_int++) {
             if (this.field_e[var3_int] != null) {

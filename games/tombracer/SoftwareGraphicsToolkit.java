@@ -8,7 +8,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     private int field_O;
     private boolean field_E;
     private java.awt.Canvas field_t;
-    private ji field_G;
+    private NodeHashTable field_G;
     private boolean field_z;
     private boolean field_e;
     int field_g;
@@ -260,7 +260,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         if (var6 != null) {
           var6.unlink(30);
           var7 = tfa.a(param2, param1, param0, 0);
-          this.field_G.a((long)param0.hashCode(), 116, var7);
+          this.field_G.put((long)param0.hashCode(), 116, var7);
           if (this.field_t == param0 &&
             this.field_D == null) {
             var5 = param0.getSize();
@@ -1061,7 +1061,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         return;
     }
 
-    final jca a(nha param0, mw param1) {
+    final jca createRenderTarget(nha param0, mw param1) {
         return (jca) ((Object) new bf(this, (ToolkitSprite) (param0), (ita) (param1)));
     }
 
@@ -1277,14 +1277,14 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
           this.b(param0, param1, param2);
         } else {
           var4 = tfa.a(param2, param1, param0, 0);
-          this.field_G.a((long)param0.hashCode(), 125, var4);
+          this.field_G.put((long)param0.hashCode(), 125, var4);
         }
     }
 
     final void a(int param0, ob[] param1) {
     }
 
-    final ToolkitSprite a(jpa param0, boolean param1) {
+    final ToolkitSprite createSprite(SpriteData param0, boolean param1) {
         int[] stackIn_26_0 = null;
         int stackIn_26_1 = 0;
         int stackIn_27_2 = 0;
@@ -1373,7 +1373,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         super(param0);
         this.field_E = false;
         this.field_z = false;
-        this.field_G = new ji(4);
+        this.field_G = new NodeHashTable(4);
         this.field_g = 50;
         this.field_f = 75518;
         this.field_Q = 512;
@@ -1432,11 +1432,11 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         this.drawLine(this.field_L + (int)((float)this.field_Q * var12 / (float)param6), this.field_w + (int)((float)this.field_C * var13 / (float)param6), this.field_L + (int)((float)this.field_Q * var14 / (float)param6), this.field_w + (int)((float)this.field_C * var15 / (float)param6), param7, param8);
     }
 
-    final int[] Y() {
+    final int[] projectionParameters() {
         return new int[]{this.field_L, this.field_w, this.field_Q, this.field_C};
     }
 
-    final void K(int[] param0) {
+    final void getClip(int[] param0) {
         param0[0] = this.field_J;
         param0[1] = this.field_d;
         param0[2] = this.field_W;
@@ -1537,7 +1537,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final GameFont a(qla param0, jpa[] param1, boolean param2) {
+    final GameFont createFont(qla param0, SpriteData[] param1, boolean param2) {
         int var7 = 0;
         int[] var4;
         int[] var5;
@@ -3123,7 +3123,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         var12.field_m = false;
     }
 
-    final ToolkitSprite a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
+    final ToolkitSprite createSprite(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
         int var10 = 0;
         int incrementValue$4 = 0;
         int var7;

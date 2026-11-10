@@ -4,14 +4,14 @@
 final class ck {
     static byte[][] field_c;
     static String field_b;
-    static cn field_a;
+    static ResourceArchive field_a;
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6, int param7, int param8) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var9 = null;
         try {
           if (param6 <= 65) {
-            ck.a(-121, (String[][]) null, -66, (Sprite[][]) null, (String[]) null, (String[]) null, (byte[]) null, (String[]) null, (String[][]) null, -31, (cn) null, 29, (byte[]) null, (Sprite[][]) null, (int[]) null);
+            ck.a(-121, (String[][]) null, -66, (Sprite[][]) null, (String[]) null, (String[]) null, (byte[]) null, (String[]) null, (String[][]) null, -31, (ResourceArchive) null, 29, (byte[]) null, (Sprite[][]) null, (int[]) null);
           }
           if ((-(param8 / 2) + param0) >= (-(param3 / 2) + param2) &&
             param0 + (param8 + 1) / 2 <= (param3 + 1) / 2 + param2 &&
@@ -27,7 +27,7 @@ final class ck {
         }
     }
 
-    final static void a(int param0, String[][] param1, int param2, Sprite[][] param3, String[] param4, String[] param5, byte[] param6, String[] param7, String[][] param8, int param9, cn param10, int param11, byte[] param12, Sprite[][] param13, int[] param14) {
+    final static void a(int param0, String[][] param1, int param2, Sprite[][] param3, String[] param4, String[] param5, byte[] param6, String[] param7, String[][] param8, int param9, ResourceArchive param10, int param11, byte[] param12, Sprite[][] param13, int[] param14) {
         tv[] array$0 = null;
         tv[] array$1 = null;
         tv[] array$2 = null;
@@ -101,12 +101,12 @@ final class ck {
           wt.field_c = BoulderComponent.a(param10, "lobby", 5, "ratedgame");
           InvisibleTouchSwitchComponent.field_K = BoulderComponent.a(param10, "lobby", 5, "opentome");
           pca.field_k = BoulderComponent.a(param10, "lobby", 5, "allowspectators");
-          gv.field_w = new String[5];
-          gv.field_w[0] = kda.field_cd;
-          gv.field_w[2] = un.field_q;
-          gv.field_w[3] = ObjectPool.field_d;
-          gv.field_w[4] = PacketBuffer.field_f;
-          gv.field_w[1] = cha.field_b;
+          SocketArchiveNetworkClient.field_w = new String[5];
+          SocketArchiveNetworkClient.field_w[0] = kda.field_cd;
+          SocketArchiveNetworkClient.field_w[2] = un.field_q;
+          SocketArchiveNetworkClient.field_w[3] = ObjectPool.field_d;
+          SocketArchiveNetworkClient.field_w[4] = PacketBuffer.field_f;
+          SocketArchiveNetworkClient.field_w[1] = cha.field_b;
           rra.field_e = new jea(0L, (jea) null);
           uh.field_h = new jea(0L, ooa.field_f, ija.field_i);
           vw.field_b = new jea(0L, SecondaryNodeDeque.field_b, dl.field_m);
@@ -128,7 +128,7 @@ final class ck {
           gta.field_b = new jea(0L, ooa.field_f, SnakePitModel.field_m);
           iia.field_r = new jea(0L, cs.field_a, TestModel.field_r);
           RotateLocomotor.field_o = new jea(0L, cs.field_a, du.field_a);
-          l.field_K = new jea(0L, cs.field_a, qo.field_i);
+          MidiPcmStream.field_K = new jea(0L, cs.field_a, qo.field_i);
           MirrorComponent.field_I = new jea(0L, cs.field_a, MatchState.field_N);
           cq.field_e = new jea(0L, SecondaryNodeDeque.field_b, PathMoverComponent.field_G);
           nsa.field_i = new iv(0L, new jea(0L, (jea) null), rfa.field_C, fe.field_F);
@@ -155,7 +155,7 @@ final class ck {
           db.field_s.b(-126, iia.field_r);
           db.field_s.b(-127, RotateLocomotor.field_o);
           if (rca.field_p) {
-            db.field_s.b(-128, l.field_K);
+            db.field_s.b(-128, MidiPcmStream.field_K);
           }
           db.field_s.b(-123, MirrorComponent.field_I);
           db.field_s.b(-128, cq.field_e);
@@ -200,7 +200,7 @@ final class ck {
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var17_int < 5) {
-              bf.field_b[0][1 + var17_int] = new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, w.field_f[var17_int], gv.field_w[var17_int]);
+              bf.field_b[0][1 + var17_int] = new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, w.field_f[var17_int], SocketArchiveNetworkClient.field_w[var17_int]);
               var17_int++;
               if (var21 == 0) {
                 continue;

@@ -6,7 +6,7 @@ final class dk {
     private int[][] field_g;
     int[] field_e;
     int[] field_l;
-    static cn field_c;
+    static ResourceArchive field_c;
     boolean field_h;
     private int[] field_d;
     static String field_k;
@@ -15,11 +15,11 @@ final class dk {
     int field_j;
     boolean field_f;
 
-    private dk(cn param0, int param1, String param2) {
+    private dk(ResourceArchive param0, int param1, String param2) {
         this(param0, param1, param0.a(true, param2, param1));
     }
 
-    dk(cn param0, String param1, String param2) {
+    dk(ResourceArchive param0, String param1, String param2) {
         this(param0, param0.b(param1, -7768), param2);
     }
 
@@ -268,7 +268,7 @@ final class dk {
         }
     }
 
-    private dk(cn param0, int param1, int param2) {
+    private dk(ResourceArchive param0, int param1, int param2) {
         int var7 = 0;
         byte[] var4 = null;
         int var5 = 0;

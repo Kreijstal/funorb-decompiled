@@ -137,10 +137,10 @@ final class ad extends IntrusiveNode {
         GraphicsToolkit var8 = tga.field_a;
         int var4_int = this.field_k;
         int var6 = this.field_g;
-        ToolkitSprite[] var7 = dr.field_a;
+        ToolkitSprite[] var7 = ArchiveSource.field_a;
         String var4Lifetime1;
         int var3Lifetime1;
-        tra.a(1, var7, (byte) -96, var4_int, var8, 64, 1, 64, var6, 0);
+        TextInputWidget.a(1, var7, (byte) -96, var4_int, var8, 64, 1, 64, var6, 0);
         tga.field_a.setClip(this.field_k, this.field_g, this.field_k + 64, -3 + this.field_g + 64);
         if (this.a(-64)) {
           nc.field_e.a(this.field_k, this.field_g);

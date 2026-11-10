@@ -22,7 +22,7 @@ final class su {
         }
     }
 
-    final static ToolkitSprite a(jpa param0, GraphicsToolkit param1, byte param2) {
+    final static ToolkitSprite a(SpriteData param0, GraphicsToolkit param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         ToolkitSprite stackIn_4_0 = null;
@@ -37,7 +37,7 @@ final class su {
           if (param0 == null) {
             return null;
           }
-          stackIn_4_0 = param1.a(param0, true);
+          stackIn_4_0 = param1.createSprite(param0, true);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

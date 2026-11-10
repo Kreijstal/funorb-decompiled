@@ -25,7 +25,7 @@ final class MirrorMoverLocomotor extends Locomotor {
             return;
           }
           var4 = var3.m((byte) -63);
-          var5 = var3.B(0);
+          var5 = var3.getVelocityY(0);
           if (this.field_q) {
             var5 = var5 * -1;
           }

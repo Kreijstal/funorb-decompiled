@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class af {
+final class SecondaryNodeHashTable {
     static fta field_g;
     private DualLinkNode field_c;
     private int field_e;
     private DualLinkNode[] field_d;
     private long field_h;
-    static cn field_b;
+    static ResourceArchive field_b;
     private DualLinkNode field_a;
     private int field_f;
 
@@ -72,7 +72,7 @@ final class af {
         }
     }
 
-    final void a(int param0, DualLinkNode param1, long param2) {
+    final void put(int param0, DualLinkNode param1, long param2) {
         DualLinkNode var5 = null;
         try {
           if (param1.secondaryPrevious != null) {
@@ -91,7 +91,7 @@ final class af {
 
     public static void releaseStatics(int param0) {
         if (param0 <= 72) {
-          af.releaseStatics(-28);
+          SecondaryNodeHashTable.releaseStatics(-28);
           field_g = null;
           field_b = null;
           return;
@@ -127,7 +127,7 @@ final class af {
             this.field_a = var58.secondaryNext;
             return var58;
           }
-          this.a(55, (DualLinkNode) null, 93L);
+          this.put(55, (DualLinkNode) null, 93L);
           do {
             if (this.field_f >= this.field_e) {
               return null;
@@ -158,7 +158,7 @@ final class af {
           this.field_a = var5.secondaryNext;
           return var5;
         }
-        this.a(55, (DualLinkNode) null, 93L);
+        this.put(55, (DualLinkNode) null, 93L);
         do {
           if (this.field_f >= this.field_e) {
             return null;
@@ -178,7 +178,7 @@ final class af {
         return this.a((byte) -112);
     }
 
-    final DualLinkNode a(int param0, long param1) {
+    final DualLinkNode get(int param0, long param1) {
         DualLinkNode var4;
         DualLinkNode var5;
         int var6;
@@ -246,7 +246,7 @@ final class af {
         return null;
     }
 
-    af(int param0) {
+    SecondaryNodeHashTable(int param0) {
         int var2 = 0;
         DualLinkNode dupTemp$1 = null;
         DualLinkNode var3;

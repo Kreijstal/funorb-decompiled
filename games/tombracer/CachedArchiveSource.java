@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class js extends dr {
+final class CachedArchiveSource extends ArchiveSource {
     private ppa field_h;
     private int field_e;
     private hha field_q;
-    private qda field_u;
-    private ji field_p;
+    private ArchiveNetworkClient field_u;
+    private NodeHashTable field_p;
     private byte[] field_n;
     private int field_t;
     private int field_j;
@@ -25,8 +25,8 @@ final class js extends dr {
     private boolean field_v;
     private long field_c;
 
-    final byte[] a(int param0, byte param1) {
-        hha var3 = this.a(0, -116, param0);
+    final byte[] getPackedGroup(int param0, byte param1) {
+        hha var3 = this.requestGroup(0, -116, param0);
         if (var3 == null) {
           return null;
         }
@@ -38,7 +38,7 @@ final class js extends dr {
         return var4;
     }
 
-    final void b(int param0) {
+    final void maintainGroups(int param0) {
         hha discarded$1 = null;
         hha discarded$0 = null;
         hha discarded$3 = null;
@@ -65,7 +65,7 @@ final class js extends dr {
             while (var3 != null) {
               var4 = (int)var3.key;
               if (this.field_n[var4] == 0) {
-                discarded$1 = this.a(1, param0 ^ -991, var4);
+                discarded$1 = this.requestGroup(1, param0 ^ -991, var4);
               }
               if (this.field_n[var4] == 0) {
                 var2_int = 0;
@@ -82,7 +82,7 @@ final class js extends dr {
                     break scanLoop1;
                   }
                   if (0 == this.field_n[this.field_m]) {
-                    discarded$0 = this.a(1, param0 ^ -988, this.field_m);
+                    discarded$0 = this.requestGroup(1, param0 ^ -988, this.field_m);
                   }
                   if (0 == this.field_n[this.field_m]) {
                     var7 = new IntrusiveNode();
@@ -109,7 +109,7 @@ final class js extends dr {
               while (var3Lifetime1 != null) {
                 var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_n[var4Lifetime1] != 1) {
-                  discarded$3 = this.a(2, -52, var4Lifetime1);
+                  discarded$3 = this.requestGroup(2, -52, var4Lifetime1);
                 }
                 if (this.field_n[var4Lifetime1] != 1) {
                   var2_intLifetime1 = 0;
@@ -125,7 +125,7 @@ final class js extends dr {
                 }
                 if (!this.field_u.b(-21)) {
                   if (this.field_n[this.field_m] != 1) {
-                    discarded$2 = this.a(2, 126, this.field_m);
+                    discarded$2 = this.requestGroup(2, 126, this.field_m);
                   }
                   if (this.field_n[this.field_m] != 1) {
                     var6 = new IntrusiveNode();
@@ -164,7 +164,7 @@ final class js extends dr {
                 var2.unlink(46);
               }
             }
-            var2 = (hha) (this.field_p.c(20806));
+            var2 = (hha) (this.field_p.nextWithKey(20806));
           }
           this.field_c = 1000L + bva.b((byte) -107);
         }
@@ -179,7 +179,7 @@ final class js extends dr {
         int var5 = TombRacer.field_G ? 1 : 0;
         try {
           if (param1 != -256) {
-            js.a(0.721841364009857, 28);
+            CachedArchiveSource.a(0.721841364009857, 28);
           }
           if (param0 != ed.field_a) {
             for (var3_int = 0; var3_int < 256; var3_int++) {
@@ -193,9 +193,9 @@ final class js extends dr {
         }
     }
 
-    final int b(int param0, int param1) {
+    final int getGroupProgress(int param0, int param1) {
         if (param0 != 27079) {
-          this.a(115, (byte) -96);
+          this.getPackedGroup(115, (byte) -96);
         }
         hha var3 = (hha) (this.field_p.a((byte) -104, (long)param1));
         if (var3 == null) {
@@ -228,10 +228,10 @@ final class js extends dr {
                 var2.unlink(91);
               } else {
                 if (this.field_n[var3] == 0) {
-                  discarded$0 = this.a(1, 124, var3);
+                  discarded$0 = this.requestGroup(1, 124, var3);
                 }
                 if (this.field_n[var3] == -1) {
-                  discarded$1 = this.a(2, param0 + 28590, var3);
+                  discarded$1 = this.requestGroup(2, param0 + 28590, var3);
                 }
                 if (1 == this.field_n[var3]) {
                   var2.unlink(71);
@@ -263,7 +263,7 @@ final class js extends dr {
           this.field_f = new IntrusiveDeque();
         }
         if (param0 != 115) {
-          js.releaseStatics((byte) 13);
+          CachedArchiveSource.releaseStatics((byte) 13);
         }
     }
 
@@ -304,7 +304,7 @@ final class js extends dr {
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var3 = decompiledCaughtException;
-            this.field_u.e(-1);
+            this.field_u.invalidateConnection(-1);
             this.field_k = null;
             if (!this.field_u.d(-21)) {
               this.field_q = (hha) ((Object) this.field_u.a(this.field_j, true, 255, -21, (byte) 0));
@@ -344,7 +344,7 @@ final class js extends dr {
         return this.field_k;
     }
 
-    private final hha a(int param0, int param1, int param2) {
+    private final hha requestGroup(int param0, int param1, int param2) {
         Object stackIn_58_0 = null;
         Throwable decompiledCaughtException = null;
         Object var4 = null;
@@ -407,7 +407,7 @@ final class js extends dr {
               var4 = this.field_u.a(param2, true, this.field_j, -21, (byte) 2);
             }
           }
-          this.field_p.a((long)param2, 118, (IntrusiveNode) (var4));
+          this.field_p.put((long)param2, 118, (IntrusiveNode) (var4));
         }
         if (((hha) (var4)).field_m) {
           return null;
@@ -464,7 +464,7 @@ final class js extends dr {
               return null;
             }
             var4 = this.field_u.a(param2, true, this.field_j, -21, (byte) 2);
-            this.field_p.a((long)param2, 117, (IntrusiveNode) (var4));
+            this.field_p.put((long)param2, 117, (IntrusiveNode) (var4));
             return null;
           }
         }
@@ -498,14 +498,14 @@ final class js extends dr {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = (RuntimeException) (Object) decompiledCaughtException;
-          this.field_u.e(-1);
+          this.field_u.invalidateConnection(-1);
           ((hha) (var4)).unlink(82);
           if (!((hha) (var4)).field_l) {
             return null;
           }
           if (!this.field_u.d(-21)) {
             var4 = this.field_u.a(param2, true, this.field_j, -21, (byte) 2);
-            this.field_p.a((long)param2, 125, (IntrusiveNode) (var4));
+            this.field_p.put((long)param2, 125, (IntrusiveNode) (var4));
           }
           return null;
         }
@@ -523,7 +523,7 @@ final class js extends dr {
         return (hha) (var4);
     }
 
-    js(int param0, ppa param1, ppa param2, qda param3, ss param4, int param5, byte[] param6, int param7, boolean param8) {
+    CachedArchiveSource(int param0, ppa param1, ppa param2, ArchiveNetworkClient param3, ss param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -538,7 +538,7 @@ final class js extends dr {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var10 = null;
-        this.field_p = new ji(16);
+        this.field_p = new NodeHashTable(16);
         this.field_m = 0;
         this.field_b = new IntrusiveDeque();
         this.field_c = 0L;

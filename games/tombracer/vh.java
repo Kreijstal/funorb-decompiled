@@ -351,7 +351,7 @@ final class vh {
             this.field_k = this.field_k + 1;
             this.field_e[fieldTemp$1] = (byte) 0;
           }
-          lua.a(this.field_d, 0, this.field_e, 32, 32);
+          ArrayUtils.copy(this.field_d, 0, this.field_e, 32, 32);
           this.a(false);
           var4_int = 0;
           var5 = param0;

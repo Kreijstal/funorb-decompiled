@@ -7,7 +7,7 @@ final class ca extends GameFont {
     private qm field_d;
     private boolean field_e;
 
-    ca(eo param0, qla param1, jpa[] param2, boolean param3) {
+    ca(eo param0, qla param1, SpriteData[] param2, boolean param3) {
         super(param0, param1);
         int incrementValue$3 = 0;
         int incrementValue$0 = 0;
@@ -35,7 +35,7 @@ final class ca extends GameFont {
         byte[] var12_ref_byte__;
         int var12;
         int var13_int;
-        jpa var13;
+        SpriteData var13;
         int var14;
         int var15;
         int var16;
@@ -52,11 +52,11 @@ final class ca extends GameFont {
         float var22;
         float var23;
         int var24;
-        jpa var25;
-        jpa var26;
+        SpriteData var25;
+        SpriteData var26;
         byte[] var27;
         int[] var28;
-        jpa var29;
+        SpriteData var29;
         byte[] var30;
         byte[] var31;
         int[] var32;

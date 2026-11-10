@@ -5,7 +5,7 @@ final class ena extends DualLinkNode {
     private byte[][] field_m;
     private int field_k;
     static vs field_p;
-    static jpa field_l;
+    static SpriteData field_l;
     rq[] field_o;
     static volatile int field_n;
 

@@ -7,13 +7,13 @@ final class ArrowShooterComponent extends ShooterComponent {
 
     final static void a(GraphicsToolkit param0, int param1) {
         try {
-          kn.field_p = param0.a(kv.field_a, rc.field_b, true);
-          eda.field_f = param0.a(ds.field_n, MatchState.field_j, true);
+          kn.field_p = param0.createFont(kv.field_a, rc.field_b, true);
+          eda.field_f = param0.createFont(ds.field_n, MatchState.field_j, true);
           if (param1 > -66) {
             field_K = (String) null;
           }
-          SingleChildWidget.field_v = param0.a(wb.field_a, MovingPlatformComponent.field_O, true);
-          qf.field_j = param0.a(qp.field_r, gga.field_O, true);
+          SingleChildWidget.field_v = param0.createFont(wb.field_a, MovingPlatformComponent.field_O, true);
+          qf.field_j = param0.createFont(qp.field_r, gga.field_O, true);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wpa.WB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

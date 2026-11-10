@@ -105,7 +105,7 @@ final class nia extends ci {
         return var3;
     }
 
-    final static Sprite a(cn param0, String param1, String param2, int param3) {
+    final static Sprite a(ResourceArchive param0, String param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -163,7 +163,7 @@ final class nia extends ci {
         hm.h((byte) 45);
         if (param0 != -25405) {
           String var2 = (String) null;
-          nia.a((cn) null, (String) null, (String) null, 78);
+          nia.a((ResourceArchive) null, (String) null, (String) null, 78);
         }
         rka.a(false);
         ina.a(tga.field_a, 0);

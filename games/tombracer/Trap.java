@@ -201,7 +201,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         }
     }
 
-    public final boolean a(byte param0, boolean param1) {
+    public final boolean isPushable(byte param0, boolean param1) {
         if (param0 != -55) {
           this.g(74, 122);
         }
@@ -361,7 +361,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         return param0;
     }
 
-    public final boolean a(int param0, boolean param1, int param2, int param3, int param4, int param5) {
+    public final boolean tryPush(int param0, boolean param1, int param2, int param3, int param4, int param5) {
         int var7;
         int var8;
         int stackIn_20_0 = 0;
@@ -371,7 +371,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           param3 == 0) {
           return true;
         }
-        if (!this.a((byte) -55, param1)) {
+        if (!this.isPushable((byte) -55, param1)) {
           return false;
         }
         if (param2 != 2) {
@@ -544,7 +544,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         if (!param1 &&
           this.field_v &&
           this.getSimulation(15470).f(8, 10915)) {
-          this.a(86, true, 1, 131072 - this.room.q(90).nextBounded(262144, 0), -this.room.q(85).nextBounded(262144, 0) + 131072, 0);
+          this.tryPush(86, true, 1, 131072 - this.room.q(90).nextBounded(262144, 0), -this.room.q(85).nextBounded(262144, 0) + 131072, 0);
         }
         if (!this.j(-1)) {
           this.field_Q = false;
@@ -850,7 +850,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         boolean stackIn_10_0 = false;
         if (param0 != 0) {
           var3 = (Projectile) null;
-          this.a((Effect) null, (Projectile) null, -25);
+          this.applyProjectileEffect((Effect) null, (Projectile) null, -25);
         }
         stackIn_10_0 = ((null != this.parent &&
           this.parent.l(0)) ||
@@ -1288,7 +1288,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           ((BitPacketBuffer) (Object) stackIn_6_0).writeBits((byte) stackIn_6_1, stackIn_7_2, 1);
           param0.writeBits((byte) -125, this.field_N / 50, 6);
           var3_int = -112 / ((param1 + 58) / 39);
-          param0.writeBits((byte) -125, cn.a((byte) 59, this.field_F, 8192, 4), 4);
+          param0.writeBits((byte) -125, ResourceArchive.a((byte) 59, this.field_F, 8192, 4), 4);
           param0.writeBits((byte) -127, this.field_S, 8);
           param0.writeBits((byte) -128, this.field_I, 8);
           stackIn_9_0 = (BitPacketBuffer) (param0);
@@ -1691,7 +1691,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         return stackIn_8_0;
     }
 
-    public final int a(Effect param0, Projectile param1, int param2) {
+    public final int applyProjectileEffect(Effect param0, Projectile param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -1722,7 +1722,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
             this.field_P = false;
           }
           var4_int = param1.i(-1);
-          if (!this.a((byte) 110, param1.getY(9648), param1.getX(3), var4_int, var4_int)) {
+          if (!this.intersectsRect((byte) 110, param1.getY(9648), param1.getX(3), var4_int, var4_int)) {
             stackIn_14_0 = 0;
             return stackIn_14_0;
           }
@@ -1771,7 +1771,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         return var2;
     }
 
-    public final int a(Effect param0, int param1, int param2, int param3, int param4, int param5) {
+    public final int applyAreaEffect(Effect param0, int param1, int param2, int param3, int param4, int param5) {
         int var7_int = 0;
         RuntimeException var7 = null;
         IntrusiveDequeCursor var8 = null;
@@ -1795,7 +1795,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
             stackIn_8_0 = 0;
             return stackIn_8_0;
           }
-          if (!this.a((byte) 110, param4, param2, param5, param1)) {
+          if (!this.intersectsRect((byte) 110, param4, param2, param5, param1)) {
             stackIn_12_0 = 0;
             return stackIn_12_0;
           }
@@ -2171,7 +2171,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         this.b(0, param1, 127, this.field_L, param2);
     }
 
-    public final boolean a(int param0, WorldBody param1, int param2, int param3, int param4, Collidable param5, int param6, int param7) {
+    public final boolean overlapsBox(int param0, WorldBody param1, int param2, int param3, int param4, Collidable param5, int param6, int param7) {
         RuntimeException var9 = null;
         int var10 = 0;
         Behaviour var11 = null;
@@ -2195,7 +2195,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           if (param7 > this.field_f) {
             return false;
           }
-          if (!this.a((byte) 110, param4, param6, param0, param3)) {
+          if (!this.intersectsRect((byte) 110, param4, param6, param0, param3)) {
             return false;
           }
           var11 = (Behaviour) (this.behaviours.first(-80));
@@ -2235,7 +2235,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         if (!this.j(param4, 8192)) {
           return 0;
         }
-        if (!this.a((byte) 110, param2, param3, param5, param1)) {
+        if (!this.intersectsRect((byte) 110, param2, param3, param5, param1)) {
           return 0;
         }
         if (!param0) {
@@ -2282,7 +2282,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         return this.field_Y;
     }
 
-    public final void a(int param0, int param1, int param2) {
+    public final void moveTo(int param0, int param1, int param2) {
         this.room.collisionGrid.remove((Collidable) (this), (byte) 115);
         this.b(437453352, param0, param1);
         this.F((byte) -108);
@@ -2581,12 +2581,12 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
 
     public final int getRenderZ(byte param0) {
         if (param0 >= -86) {
-          this.a(65, 113, 36);
+          this.moveTo(65, 113, 36);
         }
         return this.g((byte) 115);
     }
 
-    public final boolean a(byte param0, int param1, int param2, int param3, int param4) {
+    public final boolean intersectsRect(byte param0, int param1, int param2, int param3, int param4) {
         if (this.field_C) {
           return false;
         }
@@ -2594,7 +2594,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           ui var7 = (ui) null;
           this.a(false, false, (ui) null, (ui) null);
         }
-        return io.a(this.getWidth(-72), param1, (byte) -89, this.getHeight((byte) 55), param2, this.getY(9648), param3, param4, this.getX(3));
+        return io.centredBoxesOverlap(this.getWidth(-72), param1, (byte) -89, this.getHeight((byte) 55), param2, this.getY(9648), param3, param4, this.getX(3));
     }
 
     final int r(byte param0) {
@@ -2720,7 +2720,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         return this.field_Q;
     }
 
-    public final int a(Effect param0, int param1, pc param2) {
+    public final int applyBeamEffect(Effect param0, int param1, BeamSegment param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -2797,7 +2797,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           if (!this.k(param3, 0)) {
             return;
           }
-          if (!this.a((byte) 110, param1.getY(9648), param1.getX(3), param1.getHeight((byte) 55), param1.getWidth(param0 ^ -26685))) {
+          if (!this.intersectsRect((byte) 110, param1.getY(9648), param1.getX(3), param1.getHeight((byte) 55), param1.getWidth(param0 ^ -26685))) {
             return;
           }
           if (param0 != 26689) {
@@ -3072,7 +3072,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         return this.localY;
     }
 
-    public final boolean a(int param0, WorldBody param1, int param2, pc param3) {
+    public final boolean interceptsBeam(int param0, WorldBody param1, int param2, BeamSegment param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;

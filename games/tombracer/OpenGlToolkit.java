@@ -40,11 +40,11 @@ final class OpenGlToolkit extends GraphicsToolkit {
     private ks[] field_ub;
     private jja field_Mb;
     private vj field_F;
-    private cb field_bb;
+    private OpenGlFramebuffer field_bb;
     private int field_Zc;
     private ks field_t;
     private int field_x;
-    private ji field_Wc;
+    private NodeHashTable field_Wc;
     private IntrusiveDeque field_Lc;
     int field_jb;
     int field_mb;
@@ -103,7 +103,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     boolean field_hc;
     private boolean field_S;
     private int field_Xc;
-    cb field_ic;
+    OpenGlFramebuffer field_ic;
     private int field_ac;
     boolean field_Gb;
     private int field_gd;
@@ -938,7 +938,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final jca a(nha param0, mw param1) {
+    final jca createRenderTarget(nha param0, mw param1) {
         RuntimeException var3 = null;
         Object stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -997,7 +997,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
               this.field_Qb = null;
             } else {
               this.field_Qb = this.field_kd[this.field_A];
-              this.field_Qb.c((byte) 111);
+              this.field_Qb.bindReadFramebuffer((byte) 111);
             }
             if (param1 != -1090) {
               this.h((byte) -8);
@@ -1101,7 +1101,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_cc.addLast((byte) -91, var3);
     }
 
-    final ToolkitSprite a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
+    final ToolkitSprite createSprite(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
         RuntimeException var7 = null;
         jja stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -1182,7 +1182,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void K(int[] param0) {
+    final void getClip(int[] param0) {
         try {
           param0[3] = this.field_kc;
           param0[1] = this.field_f;
@@ -1410,7 +1410,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final GameFont a(qla param0, jpa[] param1, boolean param2) {
+    final GameFont createFont(qla param0, SpriteData[] param1, boolean param2) {
         RuntimeException var4 = null;
         OpenGlFont stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -1731,7 +1731,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_x = -1;
         this.field_kd = new ks[4];
         this.field_F = new vj();
-        this.field_Wc = new ji(16);
+        this.field_Wc = new NodeHashTable(16);
         this.field_Lc = new IntrusiveDeque();
         this.field_pd = new IntrusiveDeque();
         this.field_K = new IntrusiveDeque();
@@ -1958,7 +1958,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
               throw new RuntimeException();
             }
             if (this.field_x >= 0) {
-              this.field_ub[this.field_x].b((byte) -36);
+              this.field_ub[this.field_x].unbindReadFramebuffer((byte) -36);
             }
             fieldTemp$1 = this.field_x + 1;
             this.field_x = this.field_x + 1;
@@ -2022,13 +2022,13 @@ final class OpenGlToolkit extends GraphicsToolkit {
             throw new RuntimeException();
           }
           if (this.field_Zc >= 0) {
-            this.field_M[this.field_Zc].d((byte) 93);
+            this.field_M[this.field_Zc].unbindDrawFramebuffer((byte) 93);
           }
           fieldTemp$0 = this.field_Zc + 1;
           this.field_Zc = this.field_Zc + 1;
           this.field_M[fieldTemp$0] = param0;
           this.field_t = param0;
-          this.field_t.a((byte) -120);
+          this.field_t.bindDrawFramebuffer((byte) -120);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "cka.GE(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -2127,7 +2127,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         int var11;
         int var12;
         int var13;
-        jpa var14;
+        SpriteData var14;
         var13 = TombRacer.field_G ? 1 : 0;
         if (param0 != this.field_Yb ||
           this.field_pb != this.field_hb) {
@@ -2167,8 +2167,8 @@ final class OpenGlToolkit extends GraphicsToolkit {
           this.field_Yb = param0;
         }
         if (param3 != -1) {
-          var14 = (jpa) null;
-          this.a((jpa) null, false);
+          var14 = (SpriteData) null;
+          this.createSprite((SpriteData) null, false);
         }
         this.field_y = this.field_y & -8;
     }
@@ -2556,10 +2556,10 @@ final class OpenGlToolkit extends GraphicsToolkit {
             fieldTemp$1 = this.field_Zc;
             this.field_Zc = this.field_Zc - 1;
             this.field_M[fieldTemp$1] = null;
-            param0.d((byte) 60);
+            param0.unbindDrawFramebuffer((byte) 60);
             if (this.field_Zc >= 0) {
               this.field_t = this.field_M[this.field_Zc];
-              this.field_t.a((byte) -124);
+              this.field_t.bindDrawFramebuffer((byte) -124);
             } else {
               this.field_t = null;
             }
@@ -2761,7 +2761,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
 
     final void c(int param0, int param1) {
         if (param1 != 32677) {
-          this.field_ic = (cb) null;
+          this.field_ic = (OpenGlFramebuffer) null;
         }
         this.a((byte) 70, true, param0);
     }
@@ -2785,7 +2785,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           this.field_Mb = (jja) (param0);
           if (this.field_id) {
             if (null == this.field_bb) {
-              this.field_bb = new cb(this);
+              this.field_bb = new OpenGlFramebuffer(this);
             }
             if (this.field_bb == this.field_Qb) {
               throw new RuntimeException();
@@ -2809,7 +2809,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
                   }
                   break;
                 }
-                this.field_Wc.a((long)(this.field_Mb.a() << 16 | this.field_Mb.c()), 124, var9);
+                this.field_Wc.put((long)(this.field_Mb.a() << 16 | this.field_Mb.c()), 124, var9);
               }
               this.field_F.a(97, var3);
               this.field_bb.a(8, var3, true);
@@ -2836,7 +2836,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
                 }
                 break;
               }
-              this.field_Wc.a((long)(this.field_Mb.a() << 16 | this.field_Mb.c()), 112, var7);
+              this.field_Wc.put((long)(this.field_Mb.a() << 16 | this.field_Mb.c()), 112, var7);
             }
             this.field_F.a(75, var3_ref);
             this.field_l.setPbuffer(var3_ref.a((byte) 101));
@@ -2900,7 +2900,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           this.field_A = this.field_A + 1;
           this.field_kd[fieldTemp$0] = param1;
           this.field_Qb = param1;
-          this.field_Qb.c((byte) 86);
+          this.field_Qb.bindReadFramebuffer((byte) 86);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "cka.MC(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -3037,7 +3037,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
               fieldTemp$3 = this.field_x;
               this.field_x = this.field_x - 1;
               this.field_ub[fieldTemp$3] = null;
-              param0.b((byte) -36);
+              param0.unbindReadFramebuffer((byte) -36);
               if (this.field_x < 0) {
                 this.field_Qb = null;
                 this.field_t = null;
@@ -3277,7 +3277,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final int[] Y() {
+    final int[] projectionParameters() {
         return new int[]{this.field_o, this.field_db, this.field_W, this.field_kb};
     }
 
@@ -3287,7 +3287,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         jaggl.OpenGL.glClear(16384);
     }
 
-    final ToolkitSprite a(jpa param0, boolean param1) {
+    final ToolkitSprite createSprite(SpriteData param0, boolean param1) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -3366,7 +3366,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     }
 
     private final void o(byte param0) {
-        cb discarded$2 = null;
+        OpenGlFramebuffer discarded$2 = null;
         this.field_vc = new kl[this.field_Ic];
         this.field_lc = new rt(this, 3553, 6408, 1, 1);
         rt discarded$0 = new rt(this, 3553, 6408, 1, 1);
@@ -3385,8 +3385,8 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_D = new np(this);
         this.field_Xb = new np(this);
         if (this.field_id) {
-          this.field_ic = new cb(this);
-          discarded$2 = new cb(this);
+          this.field_ic = new OpenGlFramebuffer(this);
+          discarded$2 = new OpenGlFramebuffer(this);
         }
     }
 

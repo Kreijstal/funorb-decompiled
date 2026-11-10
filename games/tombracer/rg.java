@@ -38,7 +38,7 @@ final class rg extends SingleChildWidget {
         wba.field_q = new String[42];
         wba.field_q[5] = qf.field_l;
         wba.field_q[12] = wc.field_d;
-        wba.field_q[16] = cn.field_e;
+        wba.field_q[16] = ResourceArchive.field_e;
         wba.field_q[3] = ol.field_a;
         wba.field_q[6] = DamageableBehaviour.field_x;
         wba.field_q[14] = qja.field_i;
@@ -77,9 +77,9 @@ final class rg extends SingleChildWidget {
         wba.field_q[25] = bi.field_b[2];
         wba.field_q[39] = kq.field_d;
         wba.field_q[33] = jja.field_k;
-        wba.field_q[40] = cn.field_f;
+        wba.field_q[40] = ResourceArchive.field_f;
         wba.field_q[29] = SweeperMountComponent.field_F;
-        TripBeamBehaviour.field_w[0][0] = tra.field_z[kda.field_hd] + "<lt> <gt>" + tra.field_z[mf.field_a];
+        TripBeamBehaviour.field_w[0][0] = TextInputWidget.field_z[kda.field_hd] + "<lt> <gt>" + TextInputWidget.field_z[mf.field_a];
         TripBeamBehaviour.field_w[1][0] = lva.field_y;
         wg.field_j = new String[3];
         TripBeamBehaviour.field_w[1][1] = waa.field_b;
@@ -95,7 +95,7 @@ final class rg extends SingleChildWidget {
         bq.field_k[10] = bfa.field_b;
         bq.field_k[9] = tha.field_y;
         bq.field_k[3] = hg.field_d;
-        bq.field_k[4] = uj.field_e;
+        bq.field_k[4] = S2CPlayerSyncPacket.field_e;
         bq.field_k[11] = bf.field_f;
         bq.field_k[6] = ItemModel.field_q;
         bq.field_k[8] = tv.field_ub;

@@ -28,7 +28,7 @@ final class vra implements GamePacket {
         }
     }
 
-    final void a(qh param0, byte param1, v param2) {
+    final void apply(qh param0, byte param1, v param2) {
         try {
           if (param1 >= -81) {
             vra.releaseStatics(-117);

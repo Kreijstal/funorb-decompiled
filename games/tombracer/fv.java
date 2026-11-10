@@ -33,8 +33,8 @@ final class fv {
         int var5 = this.field_c;
         int var6 = this.field_j;
         int var7 = this.field_i;
-        ToolkitSprite[] var8 = dr.field_a;
-        tra.a(1, var8, (byte) -51, var4_int, var3_ref_ha, var6, param0, var7, var5, 0);
+        ToolkitSprite[] var8 = ArchiveSource.field_a;
+        TextInputWidget.a(1, var8, (byte) -51, var4_int, var3_ref_ha, var6, param0, var7, var5, 0);
         if (var2 != -1) {
           var3 = bta.field_n[var2];
           var4 = eca.field_c[var3];

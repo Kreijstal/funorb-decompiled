@@ -3,9 +3,9 @@
  */
 import java.util.*;
 
-final class cn {
+final class ResourceArchive {
     static String field_c;
-    static jpa field_h;
+    static SpriteData field_h;
     boolean field_g;
     private dla field_i;
     static String field_e;
@@ -14,7 +14,7 @@ final class cn {
     private Object[][] field_l;
     static String field_f;
     int field_j;
-    private dr field_d;
+    private ArchiveSource field_d;
     private Object[] field_a;
 
     final boolean b(String param0, byte param1, String param2) {
@@ -74,11 +74,11 @@ final class cn {
         field_e = null;
         field_c = null;
         if (param0 != 0) {
-          cn.e(22);
+          ResourceArchive.e(22);
         }
     }
 
-    final synchronized int a(int param0, byte param1) {
+    final synchronized int getGroupProgress(int param0, byte param1) {
         if (!this.b(-1, param0)) {
           return 0;
         }
@@ -88,7 +88,7 @@ final class cn {
         if (param1 <= 108) {
           return -36;
         }
-        return this.field_d.b(27079, param0);
+        return this.field_d.getGroupProgress(27079, param0);
     }
 
     final synchronized int a(boolean param0) {
@@ -106,7 +106,7 @@ final class cn {
         for (var4 = 0; this.field_a.length > var4; var4++) {
           if (0 < this.field_i.field_c[var4]) {
             var2 += 100;
-            var3 = var3 + this.a(var4, (byte) 118);
+            var3 = var3 + this.getGroupProgress(var4, (byte) 118);
           }
         }
         if (!param0) {
@@ -160,7 +160,7 @@ final class cn {
     final static void e(int param0) {
         sla.b(29585);
         if (param0 != 19470) {
-          cn.e(46);
+          ResourceArchive.e(46);
         }
     }
 
@@ -289,13 +289,13 @@ final class cn {
           return;
         }
         if (this.field_g) {
-          this.field_a[param1] = this.field_d.a(param1, (byte) -39);
+          this.field_a[param1] = this.field_d.getPackedGroup(param1, (byte) -39);
         } else {
-          this.field_a[param1] = bw.a(270, this.field_d.a(param1, (byte) -39), false);
+          this.field_a[param1] = bw.a(270, this.field_d.getPackedGroup(param1, (byte) -39), false);
         }
     }
 
-    private final synchronized boolean a(int param0, int[] param1, int param2, int param3) {
+    private final synchronized boolean unpackGroup(int param0, int[] param1, int param2, int param3) {
         Object[] array$0 = null;
         int var10_int = 0;
         int var21 = 0;
@@ -466,7 +466,7 @@ final class cn {
                     var22 = var21;
                   }
                   if (var22 == param2) {
-                    lua.a(var44, var18Lifetime4, var45, var15Lifetime1, var20Lifetime2);
+                    ArrayUtils.copy(var44, var18Lifetime4, var45, var15Lifetime1, var20Lifetime2);
                     var15Lifetime1 = var15Lifetime1 + var20Lifetime2;
                   }
                   var18Lifetime4 = var18Lifetime4 + var20Lifetime2;
@@ -505,7 +505,7 @@ final class cn {
               var19Lifetime1 = 0;
               for (var20Lifetime1 = 0; var20Lifetime1 < var5_int; var20Lifetime1++) {
                 var19Lifetime1 = var19Lifetime1 + var30.readInt(-98);
-                lua.a(var44, var17Lifetime3, var40[var20Lifetime1], var39[var20Lifetime1], var19Lifetime1);
+                ArrayUtils.copy(var44, var17Lifetime3, var40[var20Lifetime1], var39[var20Lifetime1], var19Lifetime1);
                 var17Lifetime3 = var17Lifetime3 + var19Lifetime1;
                 var15_ref_int__[var20Lifetime1] = var15_ref_int__[var20Lifetime1] + var19Lifetime1;
               }
@@ -841,9 +841,9 @@ final class cn {
           }
           var5 = null;
           if ((null == this.field_l[param3] ||
-            this.field_l[param3][param0] == null) && !this.a(param3, param2, param0, -122)) {
+            this.field_l[param3][param0] == null) && !this.unpackGroup(param3, param2, param0, -122)) {
             this.c(22214, param3);
-            if (!this.a(param3, param2, param0, 43)) {
+            if (!this.unpackGroup(param3, param2, param0, 43)) {
               stackIn_13_0 = null;
               return (byte[]) (stackIn_13_0);
             }
@@ -915,7 +915,7 @@ final class cn {
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
           var3_int = this.field_i.field_b.a(vta.a(var4, -12754), 1);
-          stackIn_6_0 = this.a(var3_int, (byte) 119);
+          stackIn_6_0 = this.getGroupProgress(var3_int, (byte) 119);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -954,7 +954,7 @@ final class cn {
         return this.a(param2, true, (int[]) null, param1);
     }
 
-    cn(dr param0, boolean param1, int param2) {
+    ResourceArchive(ArchiveSource param0, boolean param1, int param2) {
         this.field_i = null;
         try {
           if (0 > param2 ||

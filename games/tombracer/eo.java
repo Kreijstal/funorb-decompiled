@@ -5,7 +5,7 @@ import java.util.*;
 
 abstract class eo extends GraphicsToolkit {
     private IntrusiveDeque field_ic;
-    cn field_I;
+    ResourceArchive field_I;
     Object field_Ub;
     static fta field_w;
     long field_peer;
@@ -455,7 +455,7 @@ abstract class eo extends GraphicsToolkit {
         this.o(16);
     }
 
-    final ToolkitSprite a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
+    final ToolkitSprite createSprite(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
         RuntimeException var7 = null;
         gh stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -924,11 +924,11 @@ abstract class eo extends GraphicsToolkit {
 
     abstract void f(byte param0);
 
-    final int[] Y() {
+    final int[] projectionParameters() {
         return new int[]{this.field_Q, this.field_kc, this.field_Ic, this.field_h};
     }
 
-    final void K(int[] param0) {
+    final void getClip(int[] param0) {
         try {
           param0[3] = this.field_jb;
           param0[1] = this.field_K;
@@ -1920,7 +1920,7 @@ abstract class eo extends GraphicsToolkit {
         return -2 + this.field_e;
     }
 
-    eo(java.awt.Canvas param0, Object param1, d param2, cn param3, int param4, int param5) {
+    eo(java.awt.Canvas param0, Object param1, d param2, ResourceArchive param3, int param4, int param5) {
         super(param2);
         int var8 = 0;
         dw var9 = null;
@@ -2264,7 +2264,7 @@ abstract class eo extends GraphicsToolkit {
         return this.field_ac;
     }
 
-    final GameFont a(qla param0, jpa[] param1, boolean param2) {
+    final GameFont createFont(qla param0, SpriteData[] param1, boolean param2) {
         RuntimeException var4 = null;
         ca stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -2565,7 +2565,7 @@ abstract class eo extends GraphicsToolkit {
         }
     }
 
-    final ToolkitSprite a(jpa param0, boolean param1) {
+    final ToolkitSprite createSprite(SpriteData param0, boolean param1) {
         int incrementValue$2 = 0;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;

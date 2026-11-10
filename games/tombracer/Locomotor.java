@@ -148,9 +148,9 @@ abstract class Locomotor extends IntrusiveNode implements lj, noa, TrapPart {
     final int a(int param0, boolean param1) {
         if (param1) {
           this.field_f = (Room) null;
-          return ji.a(param0, 122, 4);
+          return NodeHashTable.a(param0, 122, 4);
         }
-        return ji.a(param0, 122, 4);
+        return NodeHashTable.a(param0, 122, 4);
     }
 
     Locomotor(Room param0, BitPacketBuffer param1, boolean param2) {

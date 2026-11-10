@@ -110,7 +110,7 @@ final class at extends ofa implements tsa {
         int var2_intLifetime1;
         int var3Lifetime2;
         try {
-          this.field_P = af.a(99, dsa.field_c);
+          this.field_P = SecondaryNodeHashTable.a(99, dsa.field_c);
           if (this.field_P.length > 0) {
             for (var2_int = 0; var2_int < this.field_P.length; var2_int++) {
               if (this.field_P[var2_int] != null) {
@@ -493,7 +493,7 @@ final class at extends ofa implements tsa {
         this.field_B = false;
         if (param0 != -8266) {
           qc var3 = (qc) null;
-          discarded$0 = this.a(-99, (hja[]) null, (String) null, (qc) null);
+          discarded$0 = this.a(-99, (IndexedSprite[]) null, (String) null, (qc) null);
         }
     }
 
@@ -519,7 +519,7 @@ final class at extends ofa implements tsa {
           stackIn_2_0.field_y = stackIn_3_1;
           if (param0 != 20306) {
             var6 = (qc) null;
-            discarded$1 = this.a(-82, (hja[]) null, (String) null, (qc) null);
+            discarded$1 = this.a(-82, (IndexedSprite[]) null, (String) null, (qc) null);
           }
           if (param1 == this.field_V) {
             if (var3 == param1) {
@@ -680,7 +680,7 @@ final class at extends ofa implements tsa {
         }
         if (param0 != -30) {
           qc var6 = (qc) null;
-          discarded$0 = this.a(-33, (hja[]) null, (String) null, (qc) null);
+          discarded$0 = this.a(-33, (IndexedSprite[]) null, (String) null, (qc) null);
         }
     }
 
@@ -744,7 +744,7 @@ final class at extends ofa implements tsa {
         }
     }
 
-    private final rj a(int param0, hja[] param1, String param2, qc param3) {
+    private final rj a(int param0, IndexedSprite[] param1, String param2, qc param3) {
         rj var5 = null;
         RuntimeException var5_ref = null;
         sta var6 = null;

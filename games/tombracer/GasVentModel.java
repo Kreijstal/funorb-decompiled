@@ -24,7 +24,7 @@ final class GasVentModel extends TrapModel {
             }
             return;
           }
-          ji.a(16);
+          NodeHashTable.a(16);
           if (GameKeyHandler.field_a <= 0) {
             if (fp.field_e > 0) {
               dga.a(fp.field_e, 199);
@@ -42,7 +42,7 @@ final class GasVentModel extends TrapModel {
               decompiledFrameRemainder0 = false;
             }
             else {
-              ji.a(16);
+              NodeHashTable.a(16);
               decompiledFrameRemainder0 = !(GameKeyHandler.field_a <= 0);
               if (decompiledFrameRemainder0) {
                 dga.a(GameKeyHandler.field_a, 199);
@@ -58,7 +58,7 @@ final class GasVentModel extends TrapModel {
               fp.field_e = fp.field_e - 1;
             }
             if (param0 < mla.field_a) {
-              ji.a(16);
+              NodeHashTable.a(16);
             }
             if (GameKeyHandler.field_a > 0) {
               dga.a(GameKeyHandler.field_a, 199);

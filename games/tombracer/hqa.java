@@ -81,7 +81,7 @@ final class hqa extends kca {
         field_j = null;
     }
 
-    hqa(tra param0) {
+    hqa(TextInputWidget param0) {
         super(param0);
     }
 

@@ -140,7 +140,7 @@ final class IntrusiveDequeCursor {
               var2.unlink(68);
             }
             var3 = new ssa(param1);
-            hla.field_ub.a((long)param1.field_a, 109, new wl(param1, var3));
+            hla.field_ub.put((long)param1.field_a, 109, new wl(param1, var3));
           }
           if (param0 != 65) {
             var4 = (GraphicsToolkit) null;

@@ -140,11 +140,11 @@ final class sv extends wv {
         return this.field_n + ((param0 - 3) * this.field_i - this.field_m[param0].d(11919));
     }
 
-    final static kg a(cn param0, int param1, cn param2, int param3, int param4) {
+    final static AntialiasedBitmapFont a(ResourceArchive param0, int param1, ResourceArchive param2, int param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
-        kg stackIn_5_0 = null;
-        kg stackIn_7_0 = null;
+        AntialiasedBitmapFont stackIn_5_0 = null;
+        AntialiasedBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -154,13 +154,13 @@ final class sv extends wv {
         try {
           if (!GameApplet.a(false, param4, param1, param2)) {
             stackIn_2_0 = null;
-            return (kg) (stackIn_2_0);
+            return (AntialiasedBitmapFont) (stackIn_2_0);
           }
           if (param3 == 24876) {
             stackIn_7_0 = ci.a(param0.a(false, param1, param4), (byte) -123);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (kg) null;
+          stackIn_5_0 = (AntialiasedBitmapFont) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

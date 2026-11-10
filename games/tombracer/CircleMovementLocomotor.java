@@ -121,7 +121,7 @@ final class CircleMovementLocomotor extends Locomotor {
           super.encode(param0, (byte) -122);
           param0.writeBits((byte) -44, this.field_o >> 16, 10);
           param0.writeBits((byte) 90, dqa.a(true, this.field_r, 12), 12);
-          param0.writeBits((byte) -126, cn.a((byte) 74, this.field_q, 32768, 4), 4);
+          param0.writeBits((byte) -126, ResourceArchive.a((byte) 74, this.field_q, 32768, 4), 4);
           stackIn_2_0 = (BitPacketBuffer) (param0);
           stackIn_2_1 = -128;
           if (!this.field_t) {
@@ -232,7 +232,7 @@ final class CircleMovementLocomotor extends Locomotor {
           }
           uma.field_b = param8.field_J;
           uma.field_b.clear(param2 ^ -59);
-          fua.field_a = new af(param4);
+          fua.field_a = new SecondaryNodeHashTable(param4);
           rda.field_o = 0;
           so.field_K = 0;
           FleeLocomotor.field_z = -1;
@@ -242,13 +242,13 @@ final class CircleMovementLocomotor extends Locomotor {
           }
           asa.field_j = param3.field_J;
           asa.field_j.clear(8);
-          WhiteLightSensorComponent.field_K = new af(param7);
+          WhiteLightSensorComponent.field_K = new SecondaryNodeHashTable(param7);
           if (param0.field_J == null) {
             param0.field_J = new IntrusiveDeque();
           }
           qha.field_g = param0.field_J;
           qha.field_g.clear(8);
-          tc.field_d = new af(param1);
+          tc.field_d = new SecondaryNodeHashTable(param1);
           qsa.field_a = param9;
           uq.field_d = 0L;
           return;

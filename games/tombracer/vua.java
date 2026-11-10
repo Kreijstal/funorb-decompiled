@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vua extends SingleChildWidget {
-    static jpa field_y;
+    static SpriteData field_y;
     static String field_z;
     static String field_C;
     static int field_B;

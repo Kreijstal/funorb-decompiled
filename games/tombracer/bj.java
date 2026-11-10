@@ -56,7 +56,7 @@ final class bj extends ci {
                     var5 = 4096;
                     break scanLoop1;
                   }
-                  lua.a(var13Lifetime1, 0, ns.field_g, var5);
+                  ArrayUtils.fill(var13Lifetime1, 0, ns.field_g, var5);
                   return var3;
                 }
                 var6++;
@@ -64,7 +64,7 @@ final class bj extends ci {
               }
               break;
             }
-            lua.a(var13Lifetime1, 0, ns.field_g, var5);
+            ArrayUtils.fill(var13Lifetime1, 0, ns.field_g, var5);
             decompiledFrameRemainder0 = false;
           }
           else {

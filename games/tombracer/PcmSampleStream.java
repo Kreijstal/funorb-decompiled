@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class PcmSampleStream extends cg {
+final class PcmSampleStream extends PcmStream {
     private int field_j;
     private int field_v;
     private int field_o;
@@ -434,11 +434,11 @@ final class PcmSampleStream extends cg {
         this.unlink(114);
     }
 
-    final cg b() {
+    final PcmStream firstSubStream() {
         return null;
     }
 
-    final int d() {
+    final int getLevel() {
         int var1 = this.field_k * 3 >> 6;
         var1 = (var1 ^ var1 >> 31) + (var1 >>> 31);
         if (this.field_j == 0) {
@@ -504,7 +504,7 @@ final class PcmSampleStream extends cg {
         return param3;
     }
 
-    final cg c() {
+    final PcmStream nextSubStream() {
         return null;
     }
 
@@ -1292,7 +1292,7 @@ final class PcmSampleStream extends cg {
         this.field_p = -this.field_p;
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skip(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -1465,7 +1465,7 @@ final class PcmSampleStream extends cg {
         this.unlink(21);
     }
 
-    final synchronized void b(int[] param0, int param1, int param2) {
+    final synchronized void fill(int[] param0, int param1, int param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -1481,7 +1481,7 @@ final class PcmSampleStream extends cg {
         int var10Lifetime1;
         if (this.field_q == 0 &&
           this.field_x == 0) {
-          this.a(param2);
+          this.skip(param2);
           return;
         }
         var4 = (u) (this.field_i);

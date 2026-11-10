@@ -28,7 +28,7 @@ final class bba {
         throw new Error();
     }
 
-    final static void a(String[] args, String[] param1, boolean param2, int param3, byte[] param4, String[] param5, int param6, int param7, Sprite[][] param8, int[] param9, String[][] param10, cn param11, byte[] param12, cn param13, cn param14, Sprite[][] param15, int[] param16, int param17, hja[] param18, String[][] param19) {
+    final static void a(String[] args, String[] param1, boolean param2, int param3, byte[] param4, String[] param5, int param6, int param7, Sprite[][] param8, int[] param9, String[][] param10, ResourceArchive param11, byte[] param12, ResourceArchive param13, ResourceArchive param14, Sprite[][] param15, int[] param16, int param17, IndexedSprite[] param18, String[][] param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

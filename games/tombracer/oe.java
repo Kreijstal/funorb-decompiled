@@ -3,10 +3,10 @@
  */
 final class oe extends kca {
     static String field_l;
-    private tra field_k;
+    private TextInputWidget field_k;
     static int[] field_j;
 
-    oe(tra param0, tra param1) {
+    oe(TextInputWidget param0, TextInputWidget param1) {
         super(param0);
         try {
           this.field_k = param1;

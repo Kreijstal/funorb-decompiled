@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ua implements GamePacket {
-    static cn field_a;
+    static ResourceArchive field_a;
 
     public final void decode(BitPacketBuffer param0, byte param1) {
         try {
@@ -19,7 +19,7 @@ final class ua implements GamePacket {
         try {
           param1.a(12199, param5, param2, fm.a(false, param4), fm.a(false, param6), param3);
           if (param0 != 4) {
-            field_a = (cn) null;
+            field_a = (ResourceArchive) null;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ua.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
@@ -48,7 +48,7 @@ final class ua implements GamePacket {
     public final void encode(int param0, BitPacketBuffer param1) {
         try {
           if (param0 != 200) {
-            field_a = (cn) null;
+            field_a = (ResourceArchive) null;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ua.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -124,7 +124,7 @@ final class ua implements GamePacket {
         RuntimeException var3 = null;
         try {
           if (param2 >= -9) {
-            field_a = (cn) null;
+            field_a = (ResourceArchive) null;
           }
           if (param0 == 1) {
             stackIn_5_0 = gl.$cfr$intArgs$a$53ce4ab4c593(103, tu.field_e, new String[]{param1});

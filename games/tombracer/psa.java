@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class psa extends l {
+final class psa extends MidiPcmStream {
     private int field_S;
     private int[] field_Q;
     private boolean field_P;
@@ -16,7 +16,7 @@ final class psa extends l {
         this.c(-30515, param1, var5, param0);
     }
 
-    final synchronized void b(int[] param0, int param1, int param2) {
+    final synchronized void fill(int[] param0, int param1, int param2) {
         int var6 = 0;
         int stackIn_11_0 = 0;
         int stackIn_14_1 = 0;
@@ -34,7 +34,7 @@ final class psa extends l {
         try {
           var4_int = this.b((byte) 125);
           this.a(this.field_S * var4_int >> 8, -81);
-          super.b(param0, param1, param2);
+          super.fill(param0, param1, param2);
           if (!this.field_P) {
             var5 = 1;
             for (var6 = 0; var6 < 16; var6++) {
@@ -89,7 +89,7 @@ final class psa extends l {
         }
     }
 
-    psa(l param0) {
+    psa(MidiPcmStream param0) {
         super(param0);
         this.field_Q = new int[16];
         this.field_T = new int[16];

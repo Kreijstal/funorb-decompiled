@@ -5,8 +5,8 @@ final class CollisionGrid {
     private int field_i;
     private boolean field_g;
     static nl field_f;
-    private ji field_h;
-    private af field_e;
+    private NodeHashTable field_h;
+    private SecondaryNodeHashTable field_e;
     private int field_c;
     private nf field_b;
     private int field_d;
@@ -29,7 +29,7 @@ final class CollisionGrid {
           if (param1 <= 72) {
             this.field_g = false;
           }
-          var5 = (q) (this.field_e.a(-128, (long)param0.getCollisionId(true)));
+          var5 = (q) (this.field_e.get(-128, (long)param0.getCollisionId(true)));
           while (var5 != null) {
             if (param0 == var5.a((byte) -128)) {
               var5.unlink(100);
@@ -203,7 +203,7 @@ final class CollisionGrid {
 
     private final Collidable[] copyResults(int param0) {
         Collidable[] var2 = new Collidable[this.field_d];
-        lua.a(this.field_a, param0, var2, 0, this.field_d);
+        ArrayUtils.copy(this.field_a, param0, var2, 0, this.field_d);
         return var2;
     }
 
@@ -235,8 +235,8 @@ final class CollisionGrid {
             for (var8 = var4; var6 >= var8; var8++) {
               boolean decompiledFrameCompleted0 = true;
               if (!this.field_g ||
-                param0.a(32 << this.field_c, (WorldBody) null, 113, 32 << this.field_c, var8 * 32 + 16 << this.field_c, (Collidable) null, 32 * var7 + 16 << this.field_c, 0)) {
-                var9 = (q) (this.field_e.a(-121, (long)param0.getCollisionId(true)));
+                param0.overlapsBox(32 << this.field_c, (WorldBody) null, 113, 32 << this.field_c, var8 * 32 + 16 << this.field_c, (Collidable) null, 32 * var7 + 16 << this.field_c, 0)) {
+                var9 = (q) (this.field_e.get(-121, (long)param0.getCollisionId(true)));
                 while (var9 != null) {
                   if (var9.a(var8, var7, param0, 123)) {
                     decompiledFrameCompleted0 = false;
@@ -246,8 +246,8 @@ final class CollisionGrid {
                 }
                 if (decompiledFrameCompleted0) {
                   var10 = vw.a(var7, param0, var8, true);
-                  this.field_e.a(param1 ^ -7074, var10, (long)param0.getCollisionId(true));
-                  this.field_h.a((long)var10.hashCode(), 115, var10);
+                  this.field_e.put(param1 ^ -7074, var10, (long)param0.getCollisionId(true));
+                  this.field_h.put((long)var10.hashCode(), 115, var10);
                 }
               }
             }
@@ -267,7 +267,7 @@ final class CollisionGrid {
         }
     }
 
-    final Collidable[] a(pc param0, byte param1) {
+    final Collidable[] a(BeamSegment param0, byte param1) {
         RuntimeException var3 = null;
         Collidable[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -314,7 +314,7 @@ final class CollisionGrid {
           var4 = this.toCell(2, param0.getY(9648) - param0.getHeight((byte) 55) / 2);
           var6 = this.toCell(2, -1 + param0.getX(3) + param0.getWidth(-51) / 2);
           var7 = this.toCell(2, -1 + (param0.getY(9648) + param0.getHeight((byte) 55) / 2));
-          var8 = (q) (this.field_e.a(-120, (long)param0.getCollisionId(true)));
+          var8 = (q) (this.field_e.get(-120, (long)param0.getCollisionId(true)));
           while (var8 != null) {
             if (var8.a((byte) -76) == param0 &&
               !var8.a(var7, var6, var4, var3_int, -98)) {
@@ -350,8 +350,8 @@ final class CollisionGrid {
         this.field_b = new nf();
         this.field_a = new Collidable[128];
         this.field_i = 1 << param0;
-        this.field_h = new ji(this.field_i);
-        this.field_e = new af(this.field_i);
+        this.field_h = new NodeHashTable(this.field_i);
+        this.field_e = new SecondaryNodeHashTable(this.field_i);
         this.field_g = param1 ? true : false;
         this.field_c = param2;
     }

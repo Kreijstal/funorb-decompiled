@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class et extends cg {
+final class et extends PcmStream {
     IntrusiveDeque field_l;
-    private l field_k;
-    en field_m;
+    private MidiPcmStream field_k;
+    PcmStreamMixer field_m;
     static long field_j;
 
-    final cg c() {
+    final PcmStream nextSubStream() {
         rta var1_ref = null;
         do {
           var1_ref = (rta) (this.field_l.next(112));
@@ -15,15 +15,15 @@ final class et extends cg {
             return null;
           }
         } while (var1_ref.field_x == null);
-        return (cg) ((Object) var1_ref.field_x);
+        return (PcmStream) ((Object) var1_ref.field_x);
     }
 
-    final void a(int param0) {
+    final void skip(int param0) {
         int var2;
         rta var3;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
-        this.field_m.a(param0);
+        this.field_m.skip(param0);
         var3 = (rta) (this.field_l.first(-80));
         while (var3 != null) {
           if (!this.field_k.c(15, var3)) {
@@ -151,7 +151,7 @@ final class et extends cg {
     }
 
     private final void a(int param0, int param1, rta param2) {
-        l stackIn_8_0 = null;
+        MidiPcmStream stackIn_8_0 = null;
         int stackIn_8_1 = 0;
         rta stackIn_8_2 = null;
         boolean stackIn_9_3;
@@ -175,7 +175,7 @@ final class et extends cg {
                 stackIn_8_1 = -111;
                 stackIn_8_2 = (rta) (param2);
                 stackIn_9_3 = !(0 <= param2.field_y.field_g[param2.field_m]);
-                ((l) (Object) stackIn_8_0).a((byte) stackIn_8_1, stackIn_8_2, stackIn_9_3);
+                ((MidiPcmStream) (Object) stackIn_8_0).a((byte) stackIn_8_1, stackIn_8_2, stackIn_9_3);
               } else {
                 param2.field_x = PcmSampleStream.a(param2.field_n, param2.field_x.j(), param2.field_x.l(), param2.field_x.f());
               }
@@ -188,7 +188,7 @@ final class et extends cg {
           if (param0 != 943) {
             field_j = 126L;
           }
-          param2.field_x.a(param1);
+          param2.field_x.skip(param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -205,7 +205,7 @@ final class et extends cg {
     }
 
     private final void a(int param0, int param1, int[] param2, rta param3, int param4, boolean param5) {
-        l stackIn_12_0 = null;
+        MidiPcmStream stackIn_12_0 = null;
         int stackIn_12_1 = 0;
         rta stackIn_12_2 = null;
         boolean stackIn_13_3;
@@ -233,7 +233,7 @@ final class et extends cg {
                 param3.field_r = param3.field_r + var7_int * param4;
                 break;
               }
-              param3.field_x.b(param2, param1, var8);
+              param3.field_x.fill(param2, param1, var8);
               param4 = param4 - var8;
               param3.field_r = param3.field_r + (var8 * var7_int - 1048576);
               param1 = param1 + var8;
@@ -249,7 +249,7 @@ final class et extends cg {
                 stackIn_12_1 = -35;
                 stackIn_12_2 = (rta) (param3);
                 stackIn_13_3 = !(param3.field_y.field_g[param3.field_m] >= 0);
-                ((l) (Object) stackIn_12_0).a((byte) stackIn_12_1, stackIn_12_2, stackIn_13_3);
+                ((MidiPcmStream) (Object) stackIn_12_0).a((byte) stackIn_12_1, stackIn_12_2, stackIn_13_3);
                 param3.field_x.b(var9, var11.l());
               } else {
                 param3.field_x = PcmSampleStream.a(param3.field_n, var11.j(), var11.l(), var11.f());
@@ -258,7 +258,7 @@ final class et extends cg {
                 param3.field_x.b(-1);
               }
               var11.d(var9);
-              var11.b(param2, param1, param0 - param1);
+              var11.fill(param2, param1, param0 - param1);
               if (!var11.m()) {
                 continue;
               }
@@ -266,9 +266,9 @@ final class et extends cg {
             }
           }
           if (param5) {
-            this.field_m = (en) null;
+            this.field_m = (PcmStreamMixer) null;
           }
-          param3.field_x.b(param2, param1, param4);
+          param3.field_x.fill(param2, param1, param4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -290,7 +290,7 @@ final class et extends cg {
         }
     }
 
-    final void b(int[] param0, int param1, int param2) {
+    final void fill(int[] param0, int param1, int param2) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -302,7 +302,7 @@ final class et extends cg {
         int var7 = 0;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          this.field_m.b(param0, param1, param2);
+          this.field_m.fill(param0, param1, param2);
           var6 = (rta) (this.field_l.first(-80));
           while (var6 != null) {
             if (!this.field_k.c(15, var6)) {
@@ -344,9 +344,9 @@ final class et extends cg {
         var3.writeShort(param1 ^ -1477662122, param2);
     }
 
-    et(l param0) {
+    et(MidiPcmStream param0) {
         this.field_l = new IntrusiveDeque();
-        this.field_m = new en();
+        this.field_m = new PcmStreamMixer();
         try {
           this.field_k = param0;
         } catch (RuntimeException runtimeException) {
@@ -358,15 +358,15 @@ final class et extends cg {
         return 0;
     }
 
-    final cg b() {
+    final PcmStream firstSubStream() {
         rta var1 = (rta) (this.field_l.first(-80));
         if (var1 == null) {
           return null;
         }
         if (null != var1.field_x) {
-          return (cg) ((Object) var1.field_x);
+          return (PcmStream) ((Object) var1.field_x);
         }
-        return this.c();
+        return this.nextSubStream();
     }
 
     static {

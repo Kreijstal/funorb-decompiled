@@ -374,7 +374,7 @@ final class kda extends eo {
         super.g(param0);
     }
 
-    final jca a(nha param0, mw param1) {
+    final jca createRenderTarget(nha param0, mw param1) {
         RuntimeException var3 = null;
         Object stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -1428,7 +1428,7 @@ final class kda extends eo {
         }
     }
 
-    kda(jaggl.OpenGL param0, java.awt.Canvas param1, long param2, d param3, cn param4, int param5) {
+    kda(jaggl.OpenGL param0, java.awt.Canvas param1, long param2, d param3, ResourceArchive param4, int param5) {
         super(param1, new Long(param2), param3, param4, param5, 1);
         int var15 = 0;
         int stackIn_21_1 = 0;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wj {
-    static jpa field_a;
+    static SpriteData field_a;
     static String field_b;
 
     final static void a(cga param0, int param1, int param2) {
@@ -44,7 +44,7 @@ final class wj {
         field_b = null;
         field_a = null;
         if (param0 <= 35) {
-          field_a = (jpa) null;
+          field_a = (SpriteData) null;
         }
     }
 

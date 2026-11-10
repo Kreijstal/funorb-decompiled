@@ -5,7 +5,7 @@ final class baa {
     static String field_f;
     static kea field_e;
     static di field_d;
-    static jpa field_g;
+    static SpriteData field_g;
     static int[] field_b;
     static float field_c;
     static String field_a;

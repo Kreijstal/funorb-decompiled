@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ota {
-    static cn field_b;
+    static ResourceArchive field_b;
     static String[] field_a;
     static int field_c;
 
@@ -62,7 +62,7 @@ abstract class ota {
           var13 = param2 * param2;
           var14 = param1 * param1;
           if (param5 != -1923382751) {
-            field_b = (cn) null;
+            field_b = (ResourceArchive) null;
           }
           var15 = var11 * var11;
           var16 = var12 * var12;

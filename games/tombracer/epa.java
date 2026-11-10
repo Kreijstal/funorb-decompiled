@@ -62,7 +62,7 @@ final class epa extends wv {
               if (!jf.field_r) {
                 param2 = TestModel.field_n;
               } else {
-                param2 = nda.field_d;
+                param2 = SoundCache.field_d;
               }
               param0 = 2;
               vn.field_b.a(jo.field_E, 123);
@@ -95,7 +95,7 @@ final class epa extends wv {
         }
     }
 
-    final static en d(byte param0) {
+    final static PcmStreamMixer d(byte param0) {
         if (param0 != -91) {
           epa.releaseStatics(15);
           return PitModel.field_n;

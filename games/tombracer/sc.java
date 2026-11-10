@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sc extends cg {
-    private cg field_j;
+final class sc extends PcmStream {
+    private PcmStream field_j;
     private int field_l;
     static int field_k;
 
-    final void a(int param0) {
+    final void skip(int param0) {
         if (this.field_l > param0) {
           this.field_l = this.field_l - param0;
           return;
@@ -22,10 +22,10 @@ final class sc extends cg {
         if (param0 <= 0) {
           return;
         }
-        this.field_j.a(param0);
+        this.field_j.skip(param0);
     }
 
-    final void b(int[] param0, int param1, int param2) {
+    final void fill(int[] param0, int param1, int param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -48,7 +48,7 @@ final class sc extends cg {
           if (param2 <= 0) {
             return;
           }
-          this.field_j.b(param0, param1, param2);
+          this.field_j.fill(param0, param1, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -64,19 +64,19 @@ final class sc extends cg {
         }
     }
 
-    final cg b() {
+    final PcmStream firstSubStream() {
         return null;
     }
 
-    final int d() {
-        return this.field_j.d();
+    final int getLevel() {
+        return this.field_j.getLevel();
     }
 
     final int a() {
         return 0;
     }
 
-    sc(cg param0, int param1) {
+    sc(PcmStream param0, int param1) {
         try {
           this.field_j = param0;
           this.field_l = param1;
@@ -86,7 +86,7 @@ final class sc extends cg {
         }
     }
 
-    final cg c() {
+    final PcmStream nextSubStream() {
         return null;
     }
 

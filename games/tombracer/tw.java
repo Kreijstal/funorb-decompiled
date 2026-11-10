@@ -42,12 +42,12 @@ final class tw {
     ww field_m;
     int[] field_q;
 
-    final static hja[] a(byte param0, String param1, String param2, cn param3) {
+    final static IndexedSprite[] a(byte param0, String param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        hja[] stackIn_1_0 = null;
+        IndexedSprite[] stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

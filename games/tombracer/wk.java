@@ -49,15 +49,15 @@ final class wk extends IntrusiveNode {
         }
     }
 
-    final static void a(en param0, int param1, int param2, cn param3) {
+    final static void a(PcmStreamMixer param0, int param1, int param2, ResourceArchive param3) {
         try {
           SwitchableId.field_b = param1 * aqa.a(1188664449) / 1000;
           ne.a(param3, -101);
           gja.a(param3, 0);
           jp.a(param3, (byte) 20);
           if (param2 != 11861) {
-            cn var5 = (cn) null;
-            wk.a((en) null, 0, -42, (cn) null);
+            ResourceArchive var5 = (ResourceArchive) null;
+            wk.a((PcmStreamMixer) null, 0, -42, (ResourceArchive) null);
           }
           mf.a(85);
           ica.a(16777215);

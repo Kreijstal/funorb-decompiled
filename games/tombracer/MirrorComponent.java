@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MirrorComponent extends PrefabComponent {
-    static jpa field_F;
+    static SpriteData field_F;
     static jea field_I;
     static int[] field_H;
     static hs field_G;
 
     final static boolean c(int param0, int param1, int param2) {
         if (param0 != -17275) {
-          field_F = (jpa) null;
+          field_F = (SpriteData) null;
         }
         return (55 & param2) != 0 ? true : false;
     }
@@ -45,7 +45,7 @@ final class MirrorComponent extends PrefabComponent {
         field_H = null;
         field_F = null;
         if (param0 != 4) {
-          field_F = (jpa) null;
+          field_F = (SpriteData) null;
         }
         field_G = null;
         field_I = null;

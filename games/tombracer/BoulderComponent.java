@@ -41,7 +41,7 @@ final class BoulderComponent extends PathMoverComponent {
           return;
         }
         String var7 = (String) null;
-        BoulderComponent.a((cn) null, (String) null, -33, (String) null);
+        BoulderComponent.a((ResourceArchive) null, (String) null, -33, (String) null);
         var3Lifetime1 = IntrusiveDeque.a(param2, param0, -117);
         if (var3Lifetime1 != null) {
           hka.field_b.a((byte) -22, false);
@@ -64,7 +64,7 @@ final class BoulderComponent extends PathMoverComponent {
         }
     }
 
-    final static Sprite[] a(cn param0, String param1, int param2, String param3) {
+    final static Sprite[] a(ResourceArchive param0, String param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

@@ -28,8 +28,8 @@ final class soa {
         GraphicsToolkit var3 = null;
         try {
           var3 = param1.field_d;
-          var3.K(this.field_d);
-          this.field_a = var3.Y();
+          var3.getClip(this.field_d);
+          this.field_a = var3.projectionParameters();
           this.field_b = var3.i();
           this.field_e = var3.XA();
           if (param0 <= 118) {

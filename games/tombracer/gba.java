@@ -106,9 +106,9 @@ final class gba extends IntrusiveNode {
         }
     }
 
-    final static cn a(int param0, int param1) {
+    final static ResourceArchive a(int param0, int param1) {
         if (param0 >= -83) {
-          return (cn) null;
+          return (ResourceArchive) null;
         }
         if (null != lga.field_B) {
           return lga.field_B;

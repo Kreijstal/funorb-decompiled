@@ -430,7 +430,7 @@ final class SimpleMoveLocomotor extends Locomotor {
           if (param1 > -78) {
             this.applyConstraint(95);
           }
-          param0.writeBits((byte) -126, cn.a((byte) 46, this.field_p, 8192, 4), 4);
+          param0.writeBits((byte) -126, ResourceArchive.a((byte) 46, this.field_p, 8192, 4), 4);
           param0.writeBits((byte) 63, this.field_q ? 1 : 0, 1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wi.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

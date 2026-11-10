@@ -151,7 +151,7 @@ final class PressureSwitchBehaviour extends Behaviour implements ut {
             return false;
           }
           if (!this.field_q) {
-            if (!io.a(this.trap.getWidth(-73), param0.getY(9648), (byte) -89, this.trap.getHeight((byte) 55), param0.getX(3), this.trap.getY(9648), param0.getHeight((byte) 55), param0.getWidth(-43), this.trap.getX(3))) {
+            if (!io.centredBoxesOverlap(this.trap.getWidth(-73), param0.getY(9648), (byte) -89, this.trap.getHeight((byte) 55), param0.getX(3), this.trap.getY(9648), param0.getHeight((byte) 55), param0.getWidth(-43), this.trap.getX(3))) {
               return false;
             }
           } else {

@@ -4,7 +4,7 @@
 final class PitModel extends TrapModel {
     private uh field_u;
     private oia[][] field_q;
-    static en field_n;
+    static PcmStreamMixer field_n;
     static String field_r;
     private dpa[][] field_m;
     static jea[] field_p;

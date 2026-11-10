@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hea extends BitmapFont {
+final class BinaryBitmapFont extends BitmapFont {
     private byte[][] field_E;
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final void drawGlyph(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         int var8;
         int var9;
         int var10;
@@ -44,15 +44,15 @@ final class hea extends BitmapFont {
         if (param3 > 0 &&
           param4 > 0) {
           if (SoftwareRasterizer.field_f == null) {
-            hea.a(SoftwareRasterizer.field_l, this.field_E[param0], param5, var11, var8, param3, param4, var9, var10);
+            BinaryBitmapFont.blitMask(SoftwareRasterizer.field_l, this.field_E[param0], param5, var11, var8, param3, param4, var9, var10);
           } else {
-            hea.a(SoftwareRasterizer.field_l, this.field_E[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, SoftwareRasterizer.field_f, SoftwareRasterizer.field_c);
+            BinaryBitmapFont.blitMaskWithinScanlines(SoftwareRasterizer.field_l, this.field_E[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, SoftwareRasterizer.field_f, SoftwareRasterizer.field_c);
           }
           return;
         }
     }
 
-    private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int[] param11, int[] param12) {
+    private final static void blitMaskWithinScanlines(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int[] param11, int[] param12) {
         int var15 = 0;
         int var20 = 0;
         int incrementValue$1 = 0;
@@ -115,7 +115,7 @@ final class hea extends BitmapFont {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final void drawGlyphAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
         int var13 = 0;
         int var9 = param1 + param2 * SoftwareRasterizer.field_g;
         int var10 = SoftwareRasterizer.field_g - param3;
@@ -152,10 +152,10 @@ final class hea extends BitmapFont {
           param4 <= 0) {
           return;
         }
-        hea.a(SoftwareRasterizer.field_l, this.field_E[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+        BinaryBitmapFont.blitMaskAlpha(SoftwareRasterizer.field_l, this.field_E[param0], param5, var12, var9, param3, param4, var10, var11, param6);
     }
 
-    final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final static void blitMaskAlpha(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$12 = 0;
@@ -178,7 +178,7 @@ final class hea extends BitmapFont {
         }
     }
 
-    final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void blitMask(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;
@@ -220,7 +220,7 @@ final class hea extends BitmapFont {
         }
     }
 
-    hea(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, byte[][] param5) {
+    BinaryBitmapFont(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, byte[][] param5) {
         super(param0, param1, param2, param3, param4);
         this.field_E = new byte[256][];
         this.field_E = param5;

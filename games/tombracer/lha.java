@@ -5,7 +5,7 @@ final class lha extends kl {
     int field_r;
     int field_q;
     private int field_n;
-    static jpa field_l;
+    static SpriteData field_l;
     int field_o;
     static String field_m;
     private int field_p;

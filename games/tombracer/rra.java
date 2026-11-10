@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class rra {
-    static hja[] field_a;
+    static IndexedSprite[] field_a;
     int field_b;
     static jea field_e;
     int field_d;
@@ -95,7 +95,7 @@ abstract class rra {
           }
           return false;
         }
-        field_a = (hja[]) null;
+        field_a = (IndexedSprite[]) null;
         if (32 > param1) {
           if (param1 >= 160 &&
             param1 <= 255) {

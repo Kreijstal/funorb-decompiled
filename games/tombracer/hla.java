@@ -7,7 +7,7 @@ final class hla extends jea {
     jea field_wb;
     iv field_vb;
     static int field_xb;
-    static ji field_ub;
+    static NodeHashTable field_ub;
 
     public static void releaseStatics(int param0) {
         if (param0 != 23613) {
@@ -71,6 +71,6 @@ final class hla extends jea {
 
     static {
         field_xb = -1;
-        field_ub = new ji(8);
+        field_ub = new NodeHashTable(8);
     }
 }

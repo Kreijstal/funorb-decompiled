@@ -7,7 +7,7 @@ final class ara extends jea {
     static boolean field_wb;
     static String field_yb;
     private jea field_tb;
-    static jpa field_vb;
+    static SpriteData field_vb;
 
     final boolean a(boolean param0, int param1) {
         boolean stackIn_9_0 = false;

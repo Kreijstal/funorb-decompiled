@@ -18,7 +18,7 @@ final class kaa implements isa {
         try {
           var4 = new byte[param2];
           var3 = var4;
-          lua.a(param1, param0, var4, 0, param2);
+          ArrayUtils.copy(param1, param0, var4, 0, param2);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

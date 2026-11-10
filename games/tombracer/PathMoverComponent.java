@@ -104,7 +104,7 @@ abstract class PathMoverComponent extends PrefabComponent {
           if (!this.C(1760)) {
             return;
           }
-          this.field_J = ji.a(param2.readBits((byte) 44, 8), 107, 4);
+          this.field_J = NodeHashTable.a(param2.readBits((byte) 44, 8), 107, 4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

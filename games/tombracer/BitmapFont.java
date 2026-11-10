@@ -164,7 +164,7 @@ abstract class BitmapFont extends DualLinkNode {
         return var3.toString();
     }
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6);
+    abstract void drawGlyph(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6);
 
     final void c(String param0, int param1, int param2, int param3, int param4) {
         if (param0 == null) {
@@ -369,7 +369,7 @@ abstract class BitmapFont extends DualLinkNode {
         }
     }
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7);
+    abstract void drawGlyphAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7);
 
     final int c(String param0, int param1) {
         int var5 = 0;
@@ -523,14 +523,14 @@ abstract class BitmapFont extends DualLinkNode {
               } else {
                 if (field_v != 256) {
                   if (field_p != -1) {
-                    this.a(var8, param1 + this.field_n[var8] + 1, param2 + this.field_s[var8] + 1, var9, var10, field_p, field_v, true);
+                    this.drawGlyphAlpha(var8, param1 + this.field_n[var8] + 1, param2 + this.field_s[var8] + 1, var9, var10, field_p, field_v, true);
                   }
-                  this.a(var8, param1 + this.field_n[var8], param2 + this.field_s[var8], var9, var10, field_x, field_v, false);
+                  this.drawGlyphAlpha(var8, param1 + this.field_n[var8], param2 + this.field_s[var8], var9, var10, field_x, field_v, false);
                 } else {
                   if (field_p != -1) {
-                    this.a(var8, param1 + this.field_n[var8] + 1, param2 + this.field_s[var8] + 1, var9, var10, field_p, true);
+                    this.drawGlyph(var8, param1 + this.field_n[var8] + 1, param2 + this.field_s[var8] + 1, var9, var10, field_p, true);
                   }
-                  this.a(var8, param1 + this.field_n[var8], param2 + this.field_s[var8], var9, var10, field_x, false);
+                  this.drawGlyph(var8, param1 + this.field_n[var8], param2 + this.field_s[var8], var9, var10, field_x, false);
                 }
               }
               param1 = param1 + this.field_B[var8];

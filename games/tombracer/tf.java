@@ -5,7 +5,7 @@ final class tf extends kca {
     private boolean field_k;
     private String field_j;
 
-    tf(tra param0) {
+    tf(TextInputWidget param0) {
         super(param0);
         this.field_k = false;
     }

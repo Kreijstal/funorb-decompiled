@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class BeamShooterBehaviour extends Behaviour implements mra {
-    private pc field_s;
+    private BeamSegment field_s;
     private Effect field_r;
     private mg field_n;
     private int field_u;
@@ -41,7 +41,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         int var9_int;
         Room var9;
         int var10;
-        pc var11;
+        BeamSegment var11;
         int var12;
         var12 = TombRacer.field_G ? 1 : 0;
         if (this.field_q &&
@@ -99,23 +99,23 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         if (var10 != 0) {
           var11 = this.field_s;
           while (var11 != null) {
-            if (!var11.field_l) {
+            if (!var11.blocked) {
               return;
             }
-            if (null == var11.field_h) {
+            if (null == var11.nextSegment) {
               var9.b(false).a(var11, this.trap, (byte) -123);
               var9.a(param0 ^ 5463, var11.field_a, this.field_r, 524288, 524288, var11.field_e);
             }
-            var11 = var11.field_h;
+            var11 = var11.nextSegment;
           }
           return;
         }
         return;
     }
 
-    final pc c(int param0) {
+    final BeamSegment c(int param0) {
         if (param0 < 99) {
-          return (pc) null;
+          return (BeamSegment) null;
         }
         return this.field_s;
     }
@@ -380,7 +380,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        this.field_s = new pc();
+        this.field_s = new BeamSegment();
         this.field_o = 0;
         try {
           this.field_n = new mg(param0.formatVersion, param1);
@@ -484,7 +484,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
 
     BeamShooterBehaviour(Room param0, boolean param1) {
         super(param0, param1);
-        this.field_s = new pc();
+        this.field_s = new BeamSegment();
         this.field_o = 0;
         try {
           this.field_n = new mg();

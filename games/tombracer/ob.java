@@ -5,7 +5,7 @@ abstract class ob extends IntrusiveNode {
     float field_j;
     static int field_i;
     int field_h;
-    static jpa field_n;
+    static SpriteData field_n;
     int field_l;
     int field_m;
     static String field_f;
@@ -64,7 +64,7 @@ abstract class ob extends IntrusiveNode {
             lm.field_p[var2_intLifetime1].b();
           }
           ik.field_h = su.a(dna.field_F, param0, (byte) 127);
-          dr.field_a = ak.a(param0, bp.field_p, -79);
+          ArchiveSource.field_a = ak.a(param0, bp.field_p, -79);
           bd.field_i = su.a(ara.field_vb, param0, (byte) -20);
           lm.field_m = su.a(tla.field_g, param0, (byte) -99);
           po.field_l = su.a(wd.field_c, param0, (byte) 25);
@@ -82,15 +82,15 @@ abstract class ob extends IntrusiveNode {
           su.a(ds.field_g, param0, (byte) 126);
           za.field_g = su.a(TextResourceLoader.field_b, param0, (byte) -50);
           bca.field_d = su.a(sla.field_a, param0, (byte) -38);
-          rm.field_c = su.a(gv.field_s, param0, (byte) 126);
+          rm.field_c = su.a(SocketArchiveNetworkClient.field_s, param0, (byte) 126);
           uda.field_r = su.a(aa.field_a, param0, (byte) 125);
           je.field_E = su.a(pha.field_Bb, param0, (byte) -119);
           eu.field_a = su.a(ConstrainToRectangleLocomotor.field_t, param0, (byte) -5);
           pq.field_a = su.a(qh.field_q, param0, (byte) 28);
           uta.field_d = su.a(TimeSwitchBehaviour.field_n, param0, (byte) 127);
-          cb.field_i = ak.a(param0, WallCrusherComponent.field_F, -67);
-          qf.field_k = new ToolkitSprite[cb.field_i.length];
-          for (var2_intLifetime2 = 0; cb.field_i.length > var2_intLifetime2; var2_intLifetime2++) {
+          OpenGlFramebuffer.field_i = ak.a(param0, WallCrusherComponent.field_F, -67);
+          qf.field_k = new ToolkitSprite[OpenGlFramebuffer.field_i.length];
+          for (var2_intLifetime2 = 0; OpenGlFramebuffer.field_i.length > var2_intLifetime2; var2_intLifetime2++) {
             var13 = WallCrusherComponent.field_F[var2_intLifetime2].e();
             var12 = var13;
             var3 = var12;
@@ -103,7 +103,7 @@ abstract class ob extends IntrusiveNode {
               var10 = var9 + ((var9 << 16) + (var9 << 8));
               var3[var4] = fh.a(var5 << 24, var10);
             }
-            qf.field_k[var2_intLifetime2] = param0.a(var3, cb.field_i[var2_intLifetime2].c(), 89, cb.field_i[var2_intLifetime2].a(), cb.field_i[var2_intLifetime2].a(), 0);
+            qf.field_k[var2_intLifetime2] = param0.a(var3, OpenGlFramebuffer.field_i[var2_intLifetime2].c(), 89, OpenGlFramebuffer.field_i[var2_intLifetime2].a(), OpenGlFramebuffer.field_i[var2_intLifetime2].a(), 0);
           }
           bsa.field_i = su.a(hoa.field_l, param0, (byte) -107);
           fa.field_a = ak.a(param0, nk.field_k, -99);
@@ -123,7 +123,7 @@ abstract class ob extends IntrusiveNode {
           IntrusiveDeque.field_c = su.a(ko.field_j, param0, (byte) -95);
           tka.field_p = su.a(ht.field_Db, param0, (byte) 27);
           Projectile.field_n = su.a(oea.field_j, param0, (byte) -37);
-          TripBeamBehaviour.field_y = su.a(cn.field_h, param0, (byte) 127);
+          TripBeamBehaviour.field_y = su.a(ResourceArchive.field_h, param0, (byte) 127);
           haa.field_z = su.a(re.field_a, param0, (byte) 126);
           aq.field_a = ak.a(param0, mna.field_c, -55);
           MirrorBehaviour.field_r = su.a(fm.field_h, param0, (byte) 127);

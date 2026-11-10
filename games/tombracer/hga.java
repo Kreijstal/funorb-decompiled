@@ -55,7 +55,7 @@ class hga extends vpa {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        ji var11 = null;
+        NodeHashTable var11 = null;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
@@ -128,12 +128,12 @@ class hga extends vpa {
               }
             }
           }
-          var11 = new ji(8);
+          var11 = new NodeHashTable(8);
           var12 = 0;
           for (var13 = 1; var27.length > var13; var13++) {
             var14 = Integer.parseInt(var27[var13][var3]);
             if (null == var11.a((byte) -100, (long)var14)) {
-              var11.a((long)var14, 109, new IntrusiveNode());
+              var11.put((long)var14, 109, new IntrusiveNode());
               var12++;
             }
           }

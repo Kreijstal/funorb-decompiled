@@ -458,11 +458,11 @@ final class PlayerSensorBehaviour extends Behaviour implements ut {
           super.encode(param0, param1);
           param1.writeBits((byte) -126, this.field_s ? 1 : 0, 1);
           if (this.field_s) {
-            param1.writeBits((byte) -126, cn.a((byte) -120, this.field_u, 8192, 8), 8);
+            param1.writeBits((byte) -126, ResourceArchive.a((byte) -120, this.field_u, 8192, 8), 8);
           }
           param1.writeBits((byte) 5, !this.field_r ? 0 : 1, 1);
           if (this.field_r) {
-            param1.writeBits((byte) -125, cn.a((byte) 111, this.field_o, 8192, 8), 8);
+            param1.writeBits((byte) -125, ResourceArchive.a((byte) 111, this.field_o, 8192, 8), 8);
           }
           param1.writeBits((byte) -127, !this.field_q ? 0 : 1, 1);
           if (this.field_q) {

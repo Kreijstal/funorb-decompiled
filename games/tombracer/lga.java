@@ -4,7 +4,7 @@
 class lga extends rj {
     private IntrusiveDeque field_D;
     static int[][] field_z;
-    static cn field_B;
+    static ResourceArchive field_B;
     private bm field_A;
     private String[] field_C;
 
@@ -352,7 +352,7 @@ class lga extends rj {
         this.b(18758);
     }
 
-    final static oc a(cn param0, String param1, String param2, boolean param3) {
+    final static oc a(ResourceArchive param0, String param1, String param2, boolean param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -434,7 +434,7 @@ class lga extends rj {
     final void a(int param0, byte param1, int param2, int param3) {
         this.setBounds((byte) -31, param2, ((oaa) ((Object) this.field_r)).b((byte) 105, (UiWidget) (this)), param3, param0);
         if (param1 != -120) {
-          field_B = (cn) null;
+          field_B = (ResourceArchive) null;
           return;
         }
     }

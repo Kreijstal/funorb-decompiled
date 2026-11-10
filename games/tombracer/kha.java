@@ -76,7 +76,7 @@ final class kha {
             return (java.awt.Frame) (stackIn_3_0);
           }
           if (param4 == 0) {
-            var10 = af.a(66, param0);
+            var10 = SecondaryNodeHashTable.a(66, param0);
             var6 = var10;
             if (var6 == null) {
               stackIn_7_0 = null;

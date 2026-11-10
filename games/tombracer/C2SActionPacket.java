@@ -16,7 +16,7 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
         int var2 = TombRacer.field_G ? 1 : 0;
         int var1_intLifetime1;
         try {
-          cq.field_a.a(108);
+          cq.field_a.resetTiming(108);
           for (var1_int = 0; var1_int < 32; var1_int++) {
             EffectSwitchBehaviour.field_r[var1_int] = 0L;
           }

@@ -25,8 +25,8 @@ final class ot extends lba {
         if (param1) {
           return this.field_u;
         }
-        cn var6 = (cn) null;
-        ot.a(13, 72, (cn) null, false);
+        ResourceArchive var6 = (ResourceArchive) null;
+        ot.a(13, 72, (ResourceArchive) null, false);
         return this.field_u;
     }
 
@@ -43,7 +43,7 @@ final class ot extends lba {
         ot.releaseStatics((byte) 20);
     }
 
-    final static Sprite a(int param0, int param1, cn param2, boolean param3) {
+    final static Sprite a(int param0, int param1, ResourceArchive param2, boolean param3) {
         RuntimeException var4 = null;
         Sprite stackIn_5_0 = null;
         Sprite stackIn_7_0 = null;

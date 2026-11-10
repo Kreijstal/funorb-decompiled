@@ -68,7 +68,7 @@ final class pja extends vw {
         this.a(11, true);
     }
 
-    pja(kda param0, cn param1, hk param2) {
+    pja(kda param0, ResourceArchive param1, hk param2) {
         super(param0);
         RuntimeException var4 = null;
         RuntimeException stackIn_9_0 = null;

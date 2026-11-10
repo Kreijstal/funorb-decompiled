@@ -2924,7 +2924,7 @@ final class iua {
         if (param22 != this.field_c) {
           this.field_w = this.field_k.h(param22);
           if (this.field_w == null) {
-            this.b((float)(int)param0, (float)(int)param1, (float)(int)param2, (float)(int)param3, (float)(int)param4, (float)(int)param5, (float)(int)param6, (float)(int)param7, (float)(int)param8, l.a(param18 | param19 << 24, param15, 20048), l.a(param18 | param20 << 24, param16, 20048), l.a(param18 | param21 << 24, param17, 20048));
+            this.b((float)(int)param0, (float)(int)param1, (float)(int)param2, (float)(int)param3, (float)(int)param4, (float)(int)param5, (float)(int)param6, (float)(int)param7, (float)(int)param8, MidiPcmStream.a(param18 | param19 << 24, param15, 20048), MidiPcmStream.a(param18 | param20 << 24, param16, 20048), MidiPcmStream.a(param18 | param21 << 24, param17, 20048));
             return;
           }
           if (!this.field_k.j(param22)) {
@@ -4819,7 +4819,7 @@ final class iua {
         if (param22 != this.field_c) {
           this.field_w = this.field_k.h(param22);
           if (this.field_w == null) {
-            this.a((float)(int)param0, (float)(int)param1, (float)(int)param2, (float)(int)param3, (float)(int)param4, (float)(int)param5, (float)(int)param6, (float)(int)param7, (float)(int)param8, l.a(param18 | param19 << 24, param15, 20048), l.a(param18 | param20 << 24, param16, 20048), l.a(param18 | param21 << 24, param17, 20048));
+            this.a((float)(int)param0, (float)(int)param1, (float)(int)param2, (float)(int)param3, (float)(int)param4, (float)(int)param5, (float)(int)param6, (float)(int)param7, (float)(int)param8, MidiPcmStream.a(param18 | param19 << 24, param15, 20048), MidiPcmStream.a(param18 | param20 << 24, param16, 20048), MidiPcmStream.a(param18 | param21 << 24, param17, 20048));
             return;
           }
           if (!this.field_k.j(param22)) {

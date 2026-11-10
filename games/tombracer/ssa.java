@@ -91,7 +91,7 @@ final class ssa {
 
     private final void c(int param0) {
         iea var2 = null;
-        this.field_b.K(this.field_a);
+        this.field_b.getClip(this.field_a);
         if (param0 != -31138) {
           return;
         }

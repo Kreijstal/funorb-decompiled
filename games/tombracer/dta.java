@@ -149,15 +149,15 @@ final class dta {
               ts.a(0, -106, var18 + (param5 + 34), var19.substring(0, -3 + var19.length()), 12 + param0 + var17, SingleChildWidget.field_v, 11903361);
               ts.a(0, -102, var18 + (param5 + 35), var19.substring(var19.length() - 2, var19.length()), 98 + (var17 + param0), eda.field_f, 11903361);
               var20 = 1 + var12.getCourseIndex(-104);
-              var21 = var12.C(-1).f(122);
-              if (var12.C(-1).d(28091)) {
+              var21 = var12.getSimulation(-1).f(122);
+              if (var12.getSimulation(-1).d(28091)) {
                 var21 = (var21 >> 1) + 1;
                 var20 = 1 + (var20 >> 1);
               }
               oka.a(gl.$cfr$intArgs$a$53ce4ab4c593(102, mg.field_k, new String[]{Integer.toString(var20), Integer.toString(var21)}).toUpperCase(), 11903361, eda.field_f, -1, param5 + var18 + 58, var17 + (param0 + 64), 0);
               var18Lifetime1 = -75 + param6 - var8_int;
               var17Lifetime1 = -10;
-              var22 = var12.K(-163585215);
+              var22 = var12.getWeapon(-163585215);
               var23 = var12.s(0) ? 1 : 0;
               if (var22 != null) {
                 uua.field_a.a(var17Lifetime1 + 20, var18Lifetime1 + 5);
@@ -247,9 +247,9 @@ final class dta {
                 var27Lifetime4 = Integer.toString(var12.v(77));
               } else {
                 var29Lifetime1 = 0;
-                var29Lifetime1 = var29Lifetime1 + var12.c(196608, 0) * gp.field_i[0];
-                var29Lifetime1 = var29Lifetime1 + var12.c(196608, 1) * gp.field_i[1];
-                var29Lifetime1 = var29Lifetime1 + var12.c(196608, 2) * gp.field_i[2];
+                var29Lifetime1 = var29Lifetime1 + var12.getTreasure(196608, 0) * gp.field_i[0];
+                var29Lifetime1 = var29Lifetime1 + var12.getTreasure(196608, 1) * gp.field_i[1];
+                var29Lifetime1 = var29Lifetime1 + var12.getTreasure(196608, 2) * gp.field_i[2];
                 var27Lifetime4 = Integer.toString(var29Lifetime1);
               }
               ua.a(4, var28Lifetime1, var27Lifetime4.toUpperCase(), var17Lifetime4 + 130, 0, 26 + var18Lifetime4, 11903361);
@@ -263,7 +263,7 @@ final class dta {
                   stackIn_72_0 = 3;
                 }
                 var31Lifetime1 = -stackIn_72_0 + var29Lifetime2 + 26;
-                var32 = var12.c(196608, var30Lifetime2);
+                var32 = var12.getTreasure(196608, var30Lifetime2);
                 PlayerProfile.field_r[var30Lifetime2].a(var17Lifetime5, var29Lifetime2);
                 oka.a(Integer.toString(var32), 11903361, qf.field_j, -1, var31Lifetime1, var17Lifetime5 - 19, 1);
                 if (var32 != this.field_a[var30Lifetime2]) {
@@ -307,7 +307,7 @@ final class dta {
                       }
                       break;
                     }
-                    if (var35[var36_int].a((byte) -55, false) &&
+                    if (var35[var36_int].isPushable((byte) -55, false) &&
                       var37 != 0 &&
                       0 != var35[var36_int].w(17825792)) {
                       var31Lifetime2 = 1;
@@ -317,7 +317,7 @@ final class dta {
                 if (var12.x(100)) {
                   var32Lifetime1 = 1;
                 }
-                if (var12.K(-163585215) != null) {
+                if (var12.getWeapon(-163585215) != null) {
                   var33 = 1;
                 }
                 var36 = eda.field_f;

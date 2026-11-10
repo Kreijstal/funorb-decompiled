@@ -4,7 +4,7 @@
 final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
     private int field_u;
     private int field_s;
-    static jpa field_t;
+    static SpriteData field_t;
 
     final int getTypeId(int param0) {
         if (param0 != 1) {
@@ -214,7 +214,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
             uma.field_c = false;
             mpa.field_X = false;
             pna.field_p = false;
-            ip.field_b = false;
+            GameClock.field_b = false;
           }
           if (era.field_c) {
             SwitchModel.o((byte) -119);
@@ -417,7 +417,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
 
     public static void releaseStatics(byte param0) {
         if (param0 != 91) {
-          field_t = (jpa) null;
+          field_t = (SpriteData) null;
         }
         field_t = null;
     }

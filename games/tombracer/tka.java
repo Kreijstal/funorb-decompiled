@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tka extends vpa {
-    private hja[] field_o;
+    private IndexedSprite[] field_o;
     static volatile int field_n;
     static ToolkitSprite field_p;
     static jea field_q;
 
-    tka(hja[] param0) {
+    tka(IndexedSprite[] param0) {
         try {
           this.field_e = KeySwitchComponent.field_J;
           this.field_o = param0;
@@ -70,7 +70,7 @@ final class tka extends vpa {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        hja var10 = null;
+        IndexedSprite var10 = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;

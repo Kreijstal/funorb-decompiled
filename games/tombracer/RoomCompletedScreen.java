@@ -120,7 +120,7 @@ final class RoomCompletedScreen extends me {
           if (param4) {
             var6 = var6 | 8;
           }
-          if (ji.field_d != null) {
+          if (NodeHashTable.field_d != null) {
             var6 = var6 | 16;
           }
           ql.field_k.writeByte(var6, 0);
@@ -129,8 +129,8 @@ final class RoomCompletedScreen extends me {
             var7 = "";
           }
           ql.field_k.writeString(var7, false);
-          if (null != ji.field_d) {
-            ql.field_k.writeVersionedString(ji.field_d, (byte) 0);
+          if (null != NodeHashTable.field_d) {
+            ql.field_k.writeVersionedString(NodeHashTable.field_d, (byte) 0);
           }
           bna.a(oca.field_a, false, PooledObject.field_f, ql.field_k, jg.field_a);
           ql.field_k.backpatchShortLength(ql.field_k.position - var5_int, (byte) 114);

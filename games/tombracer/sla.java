@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sla {
-    static jpa field_a;
+    static SpriteData field_a;
     static String[] field_b;
     static String field_c;
     static float[] field_f;

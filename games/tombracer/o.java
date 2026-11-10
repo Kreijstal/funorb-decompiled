@@ -3,7 +3,7 @@
  */
 final class o extends ora implements sca {
     private int field_c;
-    static hea field_d;
+    static BinaryBitmapFont field_d;
 
     public final long b(int param0) {
         if (param0 != 19135) {
@@ -56,7 +56,7 @@ final class o extends ora implements sca {
     public static void releaseStatics(int param0) {
         field_d = null;
         if (param0 != 0) {
-          field_d = (hea) null;
+          field_d = (BinaryBitmapFont) null;
         }
     }
 

@@ -28,7 +28,7 @@ final class MatchState implements dv {
     boolean field_h;
     ds field_D;
     private String[] field_J;
-    static jpa[] field_j;
+    static SpriteData[] field_j;
     int[] field_g;
     private boolean field_s;
     int field_P;

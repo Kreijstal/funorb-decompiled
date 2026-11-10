@@ -32,7 +32,7 @@ final class lh {
           }
           var2_int = param0.length;
           var3 = new byte[var2_int];
-          lua.a(param0, 0, var3, 0, var2_int);
+          ArrayUtils.copy(param0, 0, var3, 0, var2_int);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -3,9 +3,9 @@
  */
 final class nc {
     static ToolkitSprite field_e;
-    private cn field_a;
+    private ResourceArchive field_a;
     private dd field_c;
-    private cn field_d;
+    private ResourceArchive field_d;
     static int[] field_b;
 
     public static void releaseStatics(int param0) {
@@ -49,7 +49,7 @@ final class nc {
         return var6;
     }
 
-    nc(int param0, cn param1, cn param2) {
+    nc(int param0, ResourceArchive param1, ResourceArchive param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

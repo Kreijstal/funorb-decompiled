@@ -21,7 +21,7 @@ final class v {
             this.d(28, -128);
           }
           var4 = new lta();
-          this.a(var4, 112, param1);
+          this.decodePacket(var4, 112, param1);
           var4.a(param2, true, this);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "v.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -36,7 +36,7 @@ final class v {
             v.a((byte) -52, (java.applet.Applet) null);
           }
           var4 = new lf();
-          this.a(var4, 124, param1);
+          this.decodePacket(var4, 124, param1);
           var4.a(param0, 0, this);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "v.M(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -70,7 +70,7 @@ final class v {
         wga var4 = null;
         try {
           var4 = new wga();
-          this.a(var4, -46, param1);
+          this.decodePacket(var4, -46, param1);
           var4.a(4545315, this, param2);
           int var5 = -6 / ((param0 + 78) / 34);
         } catch (RuntimeException runtimeException) {
@@ -96,9 +96,9 @@ final class v {
         return this.field_f;
     }
 
-    private final void a(BitPacketBuffer param0, int param1) {
+    private final void handleActionPacket(BitPacketBuffer param0, int param1) {
         S2CActionPacket var3 = new S2CActionPacket(this.field_e);
-        this.a(var3, -67, param0);
+        this.decodePacket(var3, -67, param0);
         int var4 = this.field_c.a((byte) 36, var3) ? 1 : 0;
         int var5 = 1;
         if (this.field_d < param1) {
@@ -121,7 +121,7 @@ final class v {
         }
     }
 
-    private final void a(BitPacketBuffer param0, qh param1, int param2) {
+    private final void handleRoundResultPacket(BitPacketBuffer param0, qh param1, int param2) {
         S2CRoundResultPacket var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -132,8 +132,8 @@ final class v {
         RuntimeException var4_ref = null;
         try {
           var4 = new S2CRoundResultPacket(param1.field_k.players.length);
-          this.a(var4, 126, param0);
-          var4.a(param1, param2 - 93);
+          this.decodePacket(var4, 126, param0);
+          var4.apply(param1, param2 - 93);
           if (param2 != 93) {
             this.field_a = (bka) null;
           }
@@ -265,14 +265,14 @@ final class v {
           if (param0 != 16) {
             this.a(24, 78, 58, -102, 85);
           }
-          this.a(var4, param0 - 82, param2);
-          var4.a((byte) -78, param1, this);
+          this.decodePacket(var4, param0 - 82, param2);
+          var4.apply((byte) -78, param1, this);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "v.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void a(GamePacket param0, int param1, BitPacketBuffer param2) {
+    private final void decodePacket(GamePacket param0, int param1, BitPacketBuffer param2) {
         try {
           int var4_int = -28 / ((param1 - 61) / 43);
           param0.decode(param2, (byte) -19);
@@ -293,7 +293,7 @@ final class v {
         RuntimeException var4_ref = null;
         try {
           var4 = new foa();
-          this.a(var4, 112, param2);
+          this.decodePacket(var4, 112, param2);
           var4.a(param1, -1, this);
           if (param0 >= -7) {
             var5 = (qh) null;
@@ -320,15 +320,15 @@ final class v {
         }
     }
 
-    private final void a(boolean param0, BitPacketBuffer param1, qh param2) {
+    private final void handleNewRoomPacket(boolean param0, BitPacketBuffer param1, qh param2) {
         S2CNewRoomPacket var4 = null;
         try {
           if (!param0) {
             this.field_h = (IntrusiveDeque) null;
           }
           var4 = new S2CNewRoomPacket();
-          this.a(var4, -53, param1);
-          var4.a(this, 0, param2);
+          this.decodePacket(var4, -53, param1);
+          var4.apply(this, 0, param2);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "v.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -342,7 +342,7 @@ final class v {
         ts.a(0, -122, 10 + var2Lifetime1, "received: " + this.field_c.a((byte) 107), param0, kn.field_p, 16777215);
     }
 
-    final boolean a(byte param0, qh param1, BitPacketBuffer param2, int param3) {
+    final boolean handleServerPacket(byte param0, qh param1, BitPacketBuffer param2, int param3) {
         RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;
         String stackIn_45_2 = null;
@@ -352,23 +352,23 @@ final class v {
         RuntimeException var5 = null;
         try {
           if (77 == param3) {
-            this.a(param2, 0);
+            this.handleActionPacket(param2, 0);
             return true;
           }
           if (param3 == 78) {
-            this.a(param1, param2, (byte) -98);
+            this.handleEventPacket(param1, param2, (byte) -98);
             return true;
           }
           if (param3 == 79) {
-            this.a(true, param2, param1);
+            this.handleNewRoomPacket(true, param2, param1);
             return true;
           }
           if (80 == param3) {
-            this.a(param1, param2, false);
+            this.handlePlayerSyncPacket(param1, param2, false);
             return true;
           }
           if (param3 == 81) {
-            this.a(param2, param1, 93);
+            this.handleRoundResultPacket(param2, param1, 93);
             return true;
           }
           if (82 == param3) {
@@ -437,15 +437,15 @@ final class v {
         }
     }
 
-    private final void a(qh param0, BitPacketBuffer param1, boolean param2) {
-        uj var4 = null;
+    private final void handlePlayerSyncPacket(qh param0, BitPacketBuffer param1, boolean param2) {
+        S2CPlayerSyncPacket var4 = null;
         try {
-          var4 = new uj(param0.field_k.players.length);
+          var4 = new S2CPlayerSyncPacket(param0.field_k.players.length);
           if (param2) {
             this.field_h = (IntrusiveDeque) null;
           }
-          this.a(var4, 117, param1);
-          var4.a(param0, this, (byte) 119);
+          this.decodePacket(var4, 117, param1);
+          var4.apply(param0, this, (byte) 119);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "v.CA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -458,7 +458,7 @@ final class v {
           if (param0 != 30) {
             this.a((byte) -120);
           }
-          this.a(var4, param0 - 129, param2);
+          this.decodePacket(var4, param0 - 129, param2);
           var4.a(2, this, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "v.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -530,14 +530,14 @@ final class v {
         }
     }
 
-    private final void a(qh param0, BitPacketBuffer param1, byte param2) {
+    private final void handleEventPacket(qh param0, BitPacketBuffer param1, byte param2) {
         S2CEventPacket var4 = null;
         try {
           if (param2 > -67) {
             field_g = (String[]) null;
           }
           var4 = new S2CEventPacket();
-          this.a(var4, -4, param1);
+          this.decodePacket(var4, -4, param1);
           param0.field_k.deliverPendingEvent((byte) 121, var4.getEvent((byte) 118));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "v.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -601,8 +601,8 @@ final class v {
         RuntimeException var4_ref = null;
         try {
           var4 = new vra();
-          this.a(var4, param2 ^ -115, param1);
-          var4.a(param0, (byte) -123, this);
+          this.decodePacket(var4, param2 ^ -115, param1);
+          var4.apply(param0, (byte) -123, this);
           if (param2 != -1) {
             this.a(false, 56);
           }
@@ -632,7 +632,7 @@ final class v {
         int var8 = TombRacer.field_G ? 1 : 0;
         if (param0 >= -80) {
           qh var9 = (qh) null;
-          this.a((BitPacketBuffer) null, (qh) null, 41);
+          this.handleRoundResultPacket((BitPacketBuffer) null, (qh) null, 41);
         }
         C2SActionPacket var6 = new C2SActionPacket();
         for (var7 = 0; var7 < 8; var7++) {

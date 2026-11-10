@@ -4,7 +4,7 @@
 class tc extends lu {
     private String field_e;
     private long field_g;
-    static af field_d;
+    static SecondaryNodeHashTable field_d;
     static String field_f;
 
     final static ka[] a(oc[] param0, int param1, GraphicsToolkit param2) {
@@ -79,14 +79,14 @@ class tc extends lu {
     }
 
     final static void a(boolean param0, int param1) {
-        if (null != qda.field_b) {
-          TrackPlayerLocomotor.a(-107, qda.field_b);
+        if (null != ArchiveNetworkClient.field_b) {
+          TrackPlayerLocomotor.a(-107, ArchiveNetworkClient.field_b);
         }
         if (hka.field_b != null) {
           hka.field_b.a(true, param0);
         }
         if (param1 != 0) {
-          field_d = (af) null;
+          field_d = (SecondaryNodeHashTable) null;
         }
         jl.a((byte) -128, param0);
         if (null != fj.field_c) {

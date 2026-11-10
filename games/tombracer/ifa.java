@@ -8,7 +8,7 @@ final class ifa extends ci {
     private int field_t;
     static String field_r;
     static ht field_n;
-    static jpa field_q;
+    static SpriteData field_q;
     static String field_s;
 
     final void b(byte param0) {
@@ -234,7 +234,7 @@ final class ifa extends ci {
           } else {
             stackIn_4_0 = 97;
             stackIn_5_1 = !(wua.field_n >= 13);
-            SnakePitModel.field_t = es.$cfr$intArgs$a$78544449ccb1(stackIn_4_0, stackIn_5_1);
+            SnakePitModel.field_t = NanoTickClock.$cfr$intArgs$a$78544449ccb1(stackIn_4_0, stackIn_5_1);
             var6 = (String[]) null;
             ow.a((byte) -101, (String[]) null);
           }

@@ -11,7 +11,7 @@ final class dp extends vw {
     static jea field_i;
     static su field_g;
 
-    dp(kda param0, cn param1, hk param2) {
+    dp(kda param0, ResourceArchive param1, hk param2) {
         super(param0);
         pr var4 = null;
         RuntimeException var4_ref = null;

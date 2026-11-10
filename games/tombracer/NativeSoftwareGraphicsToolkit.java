@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oa extends GraphicsToolkit implements e {
+final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
     private boolean field_s;
     long field_nativeid;
     private ya field_p;
     private IntrusiveDeque field_o;
     private gda field_i;
     private int field_k;
-    private ji field_r;
+    private NodeHashTable field_r;
     private NativeCanvasSurface field_f;
     private int field_n;
     private gda field_j;
@@ -23,7 +23,7 @@ final class oa extends GraphicsToolkit implements e {
 
     final native void za(int param0, int param1, int param2, int param3, int param4);
 
-    public oa(java.awt.Canvas param0, d param1, int param2, int param3) {
+    public NativeSoftwareGraphicsToolkit(java.awt.Canvas param0, d param1, int param2, int param3) {
         super(param1);
         Throwable decompiledCaughtException = null;
         Throwable var5 = null;
@@ -32,7 +32,7 @@ final class oa extends GraphicsToolkit implements e {
         this.field_o = new IntrusiveDeque();
         this.field_k = 4096;
         this.field_n = 4096;
-        this.field_r = new ji(4);
+        this.field_r = new NodeHashTable(4);
         this.field_h = false;
         try {
           if (!in.a("sw3d", 480)) {
@@ -44,11 +44,11 @@ final class oa extends GraphicsToolkit implements e {
           this.field_h = true;
           this.field_i = (gda) ((Object) new ja());
           this.a(new ja());
-          this.f(1);
+          this.createRenderContexts(1);
           this.g(0);
           if (param0 != null) {
-            this.a(param0, param2, param3);
-            this.a(param0);
+            this.prepareCanvasSurface(param0, param2, param3);
+            this.bindCanvasSurface(param0);
           }
           return;
         } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -116,7 +116,7 @@ final class oa extends GraphicsToolkit implements e {
 
     final native void intersectClip(int param0, int param1, int param2, int param3);
 
-    final GameFont a(qla param0, jpa[] param1, boolean param2) {
+    final GameFont createFont(qla param0, SpriteData[] param1, boolean param2) {
         int var7 = 0;
         int[] var4;
         int[] var5;
@@ -158,7 +158,7 @@ final class oa extends GraphicsToolkit implements e {
     private final native void AA(short param0, short param1, int param2, byte param3, byte param4, int param5, boolean param6, byte param7, byte param8, byte param9, byte param10, boolean param11, boolean param12, boolean param13, boolean param14, boolean param15, byte param16, boolean param17, boolean param18, int param19);
 
     final void d() {
-        this.a(this.field_f.field_f);
+        this.bindCanvasSurface(this.field_f.field_f);
     }
 
     final native int XA();
@@ -201,11 +201,11 @@ final class oa extends GraphicsToolkit implements e {
         if (this.field_l > 1) {
           throw new IllegalStateException("No MT");
         }
-        this.f(this.field_l);
+        this.createRenderContexts(this.field_l);
         this.g(0);
     }
 
-    final jca a(nha param0, mw param1) {
+    final jca createRenderTarget(nha param0, mw param1) {
         return (jca) ((Object) new wa(this, (j) (param0), (xa) (param1)));
     }
 
@@ -240,7 +240,7 @@ final class oa extends GraphicsToolkit implements e {
         return (gda) ((Object) new ja());
     }
 
-    private final boolean c(short param0) {
+    private final boolean uploadTextureMetadata(short param0) {
         Object var2 = null;
         Object var2_ref = null;
         dw var3 = null;
@@ -257,7 +257,7 @@ final class oa extends GraphicsToolkit implements e {
         return true;
     }
 
-    private final void a(java.awt.Canvas param0, int param1, int param2) {
+    private final void prepareCanvasSurface(java.awt.Canvas param0, int param1, int param2) {
         try {
           java.lang.reflect.Method var6 = null;
           Class var7 = null;
@@ -270,7 +270,7 @@ final class oa extends GraphicsToolkit implements e {
             } catch (Exception exception) {
             }
             var4 = new NativeCanvasSurface(this, param0, param1, param2);
-            this.field_r.a((long)param0.hashCode(), 101, var4);
+            this.field_r.put((long)param0.hashCode(), 101, var4);
           } else {
             if (var4.field_i != param1 ||
               var4.field_h != param2) {
@@ -299,7 +299,7 @@ final class oa extends GraphicsToolkit implements e {
         this.P(param0 + param2 - 1, param1 + 1, param3 - 1, param4, param5);
     }
 
-    private final void a(java.awt.Canvas param0) {
+    private final void bindCanvasSurface(java.awt.Canvas param0) {
         NativeCanvasSurface var2 = null;
         if (param0 != null) {
           var2 = (NativeCanvasSurface) (this.field_r.a((byte) -82, (long)param0.hashCode()));
@@ -313,11 +313,11 @@ final class oa extends GraphicsToolkit implements e {
 
     private final native void CA(short param0, int[] param1, short param2, int param3, byte param4, byte param5, int param6, boolean param7, byte param8, byte param9, byte param10, byte param11, boolean param12, boolean param13, boolean param14, boolean param15, boolean param16, byte param17, boolean param18, boolean param19, int param20);
 
-    final native int[] Y();
+    final native int[] projectionParameters();
 
     final native void da(int param0, int param1, int param2, int[] param3);
 
-    final ToolkitSprite a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
+    final ToolkitSprite createSprite(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
         return (ToolkitSprite) ((Object) new j(this, param0, param1, param2, param3, param4, false));
     }
 
@@ -332,9 +332,9 @@ final class oa extends GraphicsToolkit implements e {
         return 4;
     }
 
-    final native void K(int[] param0);
+    final native void getClip(int[] param0);
 
-    private final void f(int param0) {
+    private final void createRenderContexts(int param0) {
         int var2 = 0;
         this.field_l = param0;
         this.field_q = new a[this.field_l];
@@ -343,7 +343,7 @@ final class oa extends GraphicsToolkit implements e {
         }
     }
 
-    final ToolkitSprite a(jpa param0, boolean param1) {
+    final ToolkitSprite createSprite(SpriteData param0, boolean param1) {
         j var3 = new j(this, param0.field_g, param0.field_f, param0.field_h, 0, param0.field_i, param0.field_i, param0.field_a);
         ((ToolkitSprite) ((Object) var3)).b(param0.field_d, param0.field_c, param0.field_b, param0.field_e);
         return (ToolkitSprite) ((Object) var3);

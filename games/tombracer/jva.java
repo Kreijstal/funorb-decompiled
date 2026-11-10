@@ -4,7 +4,7 @@
 abstract class jva extends IntrusiveNode {
     int field_f;
 
-    abstract int a(en param0);
+    abstract int a(PcmStreamMixer param0);
 
     abstract void a();
 

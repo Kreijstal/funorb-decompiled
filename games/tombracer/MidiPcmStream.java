@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class l extends cg {
-    private ji field_r;
+class MidiPcmStream extends PcmStream {
+    private NodeHashTable field_r;
     int[] field_M;
     int[] field_q;
     private int[] field_l;
@@ -202,7 +202,7 @@ class l extends cg {
 
     public static void c(int param0) {
         if (param0 != 0) {
-          l.a(8, -95, (java.awt.Canvas) null, (d) null, -74);
+          MidiPcmStream.a(8, -95, (java.awt.Canvas) null, (d) null, -74);
         }
         field_K = null;
     }
@@ -251,7 +251,7 @@ class l extends cg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 127) {
-            l.c(-1);
+            MidiPcmStream.c(-1);
           }
           stackIn_3_0 = new SoftwareGraphicsToolkit(param2, param3, param4, param0);
           return (GraphicsToolkit) ((Object) stackIn_3_0);
@@ -304,7 +304,7 @@ class l extends cg {
           var4 = 15 & param0;
           var5 = 127 & param0 >> 8;
           var6 = (8386231 & param0) >> 16;
-          this.a(var5, var4, var6, 0);
+          this.noteOff(var5, var4, var6, 0);
           return;
         }
         regionExit1: {
@@ -313,7 +313,7 @@ class l extends cg {
             var5Lifetime1 = 127 & param0 >> 8;
             var6Lifetime1 = (param0 & 8342499) >> 16;
             if (var6Lifetime1 <= 0) {
-              this.a(var5Lifetime1, var4Lifetime1, 64, 0);
+              this.noteOff(var5Lifetime1, var4Lifetime1, 64, 0);
               if (var8 == 0) {
                 break regionExit1;
               }
@@ -351,7 +351,7 @@ class l extends cg {
             if (var3 != 255) {
               return;
             }
-            this.a(true, -121);
+            this.resetSynthesizer(true, -121);
             return;
           }
           var4Lifetime1Lifetime3 = 15 & param0;
@@ -535,7 +535,7 @@ class l extends cg {
         this.field_u[param0] = (int)(2097152.0 * Math.pow(2.0, (double)param1 * 0.00054931640625) + 0.5);
     }
 
-    private final void a(int param0, int param1, int param2, int param3) {
+    private final void noteOff(int param0, int param1, int param2, int param3) {
         rta var6 = null;
         int var7 = 0;
         rta var8 = null;
@@ -605,7 +605,7 @@ class l extends cg {
         }
     }
 
-    private final void a(boolean param0, int param1) {
+    private final void resetSynthesizer(boolean param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         var4 = TombRacer.field_G ? 1 : 0;
@@ -647,7 +647,7 @@ class l extends cg {
         }
     }
 
-    synchronized void b(int[] param0, int param1, int param2) {
+    synchronized void fill(int[] param0, int param1, int param2) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -671,9 +671,9 @@ class l extends cg {
               }
               var7 = (int)((-1L - this.field_E + (this.field_B + (long)var4_int)) / (long)var4_int);
               this.field_E = this.field_E + (long)var4_int * (long)var7;
-              this.field_v.b(param0, param1, var7);
+              this.field_v.fill(param0, param1, var7);
               param2 = param2 - var7;
-              this.d(125);
+              this.advanceMidiEvents(125);
               param1 = param1 + var7;
               if (!this.field_w.g()) {
                 break;
@@ -681,11 +681,11 @@ class l extends cg {
               if (var8 == 0) {
                 continue;
               }
-              this.field_v.b(param0, param1, param2);
+              this.field_v.fill(param0, param1, param2);
               return;
             }
           }
-          this.field_v.b(param0, param1, param2);
+          this.field_v.fill(param0, param1, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -746,7 +746,7 @@ class l extends cg {
         return;
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skip(int param0) {
         int var2;
         long var3;
         int var5;
@@ -766,8 +766,8 @@ class l extends cg {
             var5 = (int)((-1L + (long)var2 + (-this.field_E + this.field_B)) / (long)var2);
             this.field_E = this.field_E + (long)var5 * (long)var2;
             param0 = param0 - var5;
-            this.field_v.a(var5);
-            this.d(124);
+            this.field_v.skip(var5);
+            this.advanceMidiEvents(124);
             if (!this.field_w.g() &&
               var6 == 0) {
               break;
@@ -775,18 +775,18 @@ class l extends cg {
             if (var6 == 0) {
               continue;
             }
-            this.field_v.a(param0);
+            this.field_v.skip(param0);
             decompiledFrameCompleted0 = false;
             break;
           }
         }
         if (decompiledFrameCompleted0) {
-          this.field_v.a(param0);
+          this.field_v.skip(param0);
         }
 
     }
 
-    private final int a(int param0, rta param1) {
+    private final int computeNoteSampleStep(int param0, rta param1) {
         int stackIn_13_0 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -935,7 +935,7 @@ class l extends cg {
             }
             param0.field_u = var6_int;
           }
-          param0.field_x.f(this.a(-74, param0));
+          param0.field_x.f(this.computeNoteSampleStep(-74, param0));
           var7 = param0.field_v;
           param0.field_p = param0.field_p + var7.field_d;
           if (param3 != 6) {
@@ -1033,12 +1033,12 @@ class l extends cg {
           }
           param0.field_x.d(param0.field_B);
           if (param1 == null) {
-            param0.field_x.a(param4);
+            param0.field_x.skip(param4);
             if (var11 != 0) {
-              param0.field_x.b(param1, param2, param4);
+              param0.field_x.fill(param1, param2, param4);
             }
           } else {
-            param0.field_x.b(param1, param2, param4);
+            param0.field_x.fill(param1, param2, param4);
           }
           if (param0.field_x.m()) {
             this.field_v.field_m.a(param0.field_x);
@@ -1072,8 +1072,8 @@ class l extends cg {
         }
     }
 
-    final synchronized cg b() {
-        return (cg) ((Object) this.field_v);
+    final synchronized PcmStream firstSubStream() {
+        return (PcmStream) ((Object) this.field_v);
     }
 
     final synchronized void e(int param0) {
@@ -1083,7 +1083,7 @@ class l extends cg {
         var4 = (tn) (this.field_r.d(param0));
         while (var4 != null) {
           var4.a(false);
-          var4 = (tn) (this.field_r.c(param0 ^ 20806));
+          var4 = (tn) (this.field_r.nextWithKey(param0 ^ 20806));
           if (var3 == 0) {
             continue;
           }
@@ -1091,7 +1091,7 @@ class l extends cg {
         }
     }
 
-    final synchronized boolean a(int param0, qua param1, cn param2, nda param3, int param4) {
+    final synchronized boolean a(int param0, qua param1, ResourceArchive param2, SoundCache param3, int param4) {
         int stackIn_20_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -1130,14 +1130,14 @@ class l extends cg {
                     decompiledFrameRemainder0 = false;
                   }
                   else {
-                    this.field_r.a((long)var9, 102, var10);
+                    this.field_r.put((long)var9, 102, var10);
                   }
                 }
                 if ((decompiledFrameRemainder0) &&
                   (!var10.a(param4 - 5853, var8.field_f, param3, (int[]) (var7)))) {
                   var6_int = 0;
                 }
-                var8 = (jk) (param1.field_f.c(param4 ^ 20806));
+                var8 = (jk) (param1.field_f.nextWithKey(param4 ^ 20806));
                 continue;
               }
             } else {
@@ -1207,7 +1207,7 @@ class l extends cg {
         }
     }
 
-    private final void d(int param0) {
+    private final void advanceMidiEvents(int param0) {
         int stackIn_7_0 = 0;
         int stackIn_7_1 = 0;
         int stackIn_30_0 = 0;
@@ -1227,7 +1227,7 @@ class l extends cg {
         if (this.field_x != null &&
           ~var3 == ~this.field_C) {
           this.a(this.field_t, this.field_x, (byte) 40, this.field_s);
-          this.d(111);
+          this.advanceMidiEvents(111);
           return;
         }
         while (true) {
@@ -1255,7 +1255,7 @@ class l extends cg {
                     }
                     if (this.field_x != null) {
                       this.a(this.field_x, this.field_t, (byte) 80);
-                      this.d(119);
+                      this.advanceMidiEvents(119);
                       return;
                     }
                     if (this.field_t &&
@@ -1263,7 +1263,7 @@ class l extends cg {
                       this.field_w.reset(var4);
                       break scanLoop2;
                     }
-                    this.a(true, -127);
+                    this.resetSynthesizer(true, -127);
                     this.field_w.a();
                     return;
                   }
@@ -1299,7 +1299,7 @@ class l extends cg {
         }
     }
 
-    final synchronized cg c() {
+    final synchronized PcmStream nextSubStream() {
         return null;
     }
 
@@ -1380,7 +1380,7 @@ class l extends cg {
         tn var10;
         tn var11;
         var9 = TombRacer.field_G ? 1 : 0;
-        this.a(param0, param2, 64, 0);
+        this.noteOff(param0, param2, 64, 0);
         if ((this.field_M[param2] & 2) != 0) {
           var5 = (rta) (this.field_v.field_l.last(param1 + 3));
           while (var5 != null) {
@@ -1427,16 +1427,16 @@ class l extends cg {
         var7.field_A = 0;
         var7.field_f = 0;
         if (0 != this.field_q[param2]) {
-          var7.field_x = PcmSampleStream.a(var6, this.a(-101, var7), 0, this.b(-2421, var7));
+          var7.field_x = PcmSampleStream.a(var6, this.computeNoteSampleStep(-101, var7), 0, this.b(-2421, var7));
           stackIn_16_1 = 95;
           stackIn_16_2 = var7;
           stackIn_17_3 = !(0 <= var10.field_g[param0]);
           this.a((byte) stackIn_16_1, stackIn_16_2, stackIn_17_3);
           if (var9 != 0) {
-            var7.field_x = PcmSampleStream.a(var6, this.a(param1 - 71, var7), this.a(var7, 113), this.b(-2421, var7));
+            var7.field_x = PcmSampleStream.a(var6, this.computeNoteSampleStep(param1 - 71, var7), this.a(var7, 113), this.b(-2421, var7));
           }
         } else {
-          var7.field_x = PcmSampleStream.a(var6, this.a(param1 - 71, var7), this.a(var7, 113), this.b(-2421, var7));
+          var7.field_x = PcmSampleStream.a(var6, this.computeNoteSampleStep(param1 - 71, var7), this.a(var7, 113), this.b(-2421, var7));
         }
         if (0 > var10.field_g[param0]) {
           var7.field_x.b(-1);
@@ -1461,7 +1461,7 @@ class l extends cg {
           return;
         }
         this.field_x = null;
-        this.a(param1, -124);
+        this.resetSynthesizer(param1, -124);
     }
 
     final void a(byte param0, rta param1, boolean param2) {
@@ -1508,7 +1508,7 @@ class l extends cg {
         }
     }
 
-    protected l() {
+    protected MidiPcmStream() {
         this.field_l = new int[16];
         this.field_q = new int[16];
         this.field_J = new int[16];
@@ -1531,12 +1531,12 @@ class l extends cg {
         this.field_L = new int[16];
         this.field_w = new MidiFileReader();
         this.field_v = new et(this);
-        this.field_r = new ji(128);
+        this.field_r = new NodeHashTable(128);
         this.a((byte) -105, 256, -1);
-        this.a(true, -116);
+        this.resetSynthesizer(true, -116);
     }
 
-    l(l param0) {
+    MidiPcmStream(MidiPcmStream param0) {
         this.field_l = new int[16];
         this.field_q = new int[16];
         this.field_J = new int[16];
@@ -1562,7 +1562,7 @@ class l extends cg {
         try {
           this.field_r = param0.field_r;
           this.a((byte) -105, 256, -1);
-          this.a(true, -119);
+          this.resetSynthesizer(true, -119);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "l.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

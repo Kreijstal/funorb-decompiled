@@ -22,7 +22,7 @@ final class dda extends IntrusiveNode {
     dda(Player param0, GameEvent param1) {
         try {
           this.field_g = param1;
-          param0.C(-1);
+          param0.getSimulation(-1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "dda.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

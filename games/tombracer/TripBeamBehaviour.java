@@ -9,7 +9,7 @@ final class TripBeamBehaviour extends Behaviour implements ut {
     private int field_q;
     private jma field_C;
     private boolean field_v;
-    private pc field_u;
+    private BeamSegment field_u;
     private int field_x;
     private mma field_p;
     private int field_s;
@@ -109,15 +109,15 @@ final class TripBeamBehaviour extends Behaviour implements ut {
         int var4;
         int var5;
         int var6;
-        pc var7_ref_pc;
+        BeamSegment var7_ref_pc;
         int var7;
-        pc var8;
+        BeamSegment var8;
         int var9;
         int var7Lifetime1;
         int var9Lifetime1;
         int var9Lifetime2;
-        pc var8Lifetime1;
-        pc var8Lifetime2;
+        BeamSegment var8Lifetime1;
+        BeamSegment var8Lifetime2;
         var10 = TombRacer.field_G ? 1 : 0;
         var11 = this.b(true);
         if (!this.i(12340).g(112) &&
@@ -166,8 +166,8 @@ final class TripBeamBehaviour extends Behaviour implements ut {
           var11.a(1, this.trap, -91, this.field_u, this.e(6), this.field_z);
           var11.b(false).a((byte) 119, this.field_u, this.field_z);
           var7_ref_pc = this.field_u;
-          while (var7_ref_pc.field_h != null) {
-            var7_ref_pc = var7_ref_pc.field_h;
+          while (var7_ref_pc.nextSegment != null) {
+            var7_ref_pc = var7_ref_pc.nextSegment;
           }
           var11.b(false).a(var7_ref_pc, this.trap, (byte) -119);
           var5 = this.a(this.field_u, (byte) -65);
@@ -202,17 +202,17 @@ final class TripBeamBehaviour extends Behaviour implements ut {
               var8 = this.field_u;
               var9 = var6;
               while (var8 != null) {
-                if (!var8.field_l) {
+                if (!var8.blocked) {
                   break;
                 }
-                if (null == var8.field_h) {
+                if (null == var8.nextSegment) {
                   if (!this.field_r) {
                     var11.b(false).a(var8.field_a, (byte) -120, 8, var9, 1, 0, 2, 0, var8.field_e, 2, 4);
                   } else {
                     var11.b(false).a(var8.field_a, (byte) -117, 9, var9, 1, 0, 4, 0, var8.field_e, 4, 8);
                   }
                 }
-                var8 = var8.field_h;
+                var8 = var8.nextSegment;
               }
             }
             stackIn_58_0 = this.field_p;
@@ -252,15 +252,15 @@ final class TripBeamBehaviour extends Behaviour implements ut {
               this.field_C.a((byte) -14, this.field_r);
               return;
             }
-            if (var8Lifetime1.field_l) {
-              if (null == var8Lifetime1.field_h) {
+            if (var8Lifetime1.blocked) {
+              if (null == var8Lifetime1.nextSegment) {
                 if (!this.field_r) {
                   var11.b(false).a(var8Lifetime1.field_a, (byte) -120, 8, var9Lifetime1, 1, 0, 2, 0, var8Lifetime1.field_e, 2, 4);
                 } else {
                   var11.b(false).a(var8Lifetime1.field_a, (byte) -117, 9, var9Lifetime1, 1, 0, 4, 0, var8Lifetime1.field_e, 4, 8);
                 }
               }
-              var8Lifetime1 = var8Lifetime1.field_h;
+              var8Lifetime1 = var8Lifetime1.nextSegment;
               continue;
             }
             break;
@@ -300,15 +300,15 @@ final class TripBeamBehaviour extends Behaviour implements ut {
             this.field_C.a((byte) -14, this.field_r);
             return;
           }
-          if (var8Lifetime2.field_l) {
-            if (null == var8Lifetime2.field_h) {
+          if (var8Lifetime2.blocked) {
+            if (null == var8Lifetime2.nextSegment) {
               if (!this.field_r) {
                 var11.b(false).a(var8Lifetime2.field_a, (byte) -120, 8, var9Lifetime2, 1, 0, 2, 0, var8Lifetime2.field_e, 2, 4);
               } else {
                 var11.b(false).a(var8Lifetime2.field_a, (byte) -117, 9, var9Lifetime2, 1, 0, 4, 0, var8Lifetime2.field_e, 4, 8);
               }
             }
-            var8Lifetime2 = var8Lifetime2.field_h;
+            var8Lifetime2 = var8Lifetime2.nextSegment;
             continue;
           }
           break;
@@ -344,7 +344,7 @@ final class TripBeamBehaviour extends Behaviour implements ut {
         return 16711782;
     }
 
-    private final int a(pc param0, byte param1) {
+    private final int a(BeamSegment param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
@@ -359,10 +359,10 @@ final class TripBeamBehaviour extends Behaviour implements ut {
           var3_int = -6 / ((param1 + 5) / 38);
           stackIn_2_0 = ua.a(param0.field_e - param0.field_d, -106);
           stackIn_2_1 = -ua.a(-param0.field_k + param0.field_a, 21);
-          if (param0.field_h == null) {
+          if (param0.nextSegment == null) {
             stackIn_3_2 = 0;
           } else {
-            stackIn_3_2 = this.a(param0.field_h, (byte) -81);
+            stackIn_3_2 = this.a(param0.nextSegment, (byte) -81);
           }
           stackIn_4_0 = stackIn_2_0 - (stackIn_2_1 - stackIn_3_2);
           return stackIn_4_0;
@@ -382,7 +382,7 @@ final class TripBeamBehaviour extends Behaviour implements ut {
 
     TripBeamBehaviour(Room param0, boolean param1) {
         super(param0, param1);
-        this.field_u = new pc();
+        this.field_u = new BeamSegment();
         this.field_s = 0;
         try {
           this.field_C = new jma(15);
@@ -397,7 +397,7 @@ final class TripBeamBehaviour extends Behaviour implements ut {
 
     final void b(int param0, int param1) {
         if (param1 != 636) {
-          this.field_u = (pc) null;
+          this.field_u = (BeamSegment) null;
           this.field_q = param0;
           return;
         }
@@ -432,8 +432,8 @@ final class TripBeamBehaviour extends Behaviour implements ut {
     final boolean p(byte param0) {
         int discarded$0 = 0;
         if (param0 != 120) {
-          pc var3 = (pc) null;
-          discarded$0 = this.a((pc) null, (byte) 1);
+          BeamSegment var3 = (BeamSegment) null;
+          discarded$0 = this.a((BeamSegment) null, (byte) 1);
           return false;
         }
         return false;
@@ -444,7 +444,7 @@ final class TripBeamBehaviour extends Behaviour implements ut {
           super.attachToTrap(param0, param1);
           this.field_p = new mma(0, 16777215, this.field_u, param1.P(0));
           if (!param0) {
-            this.field_u = (pc) null;
+            this.field_u = (BeamSegment) null;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wh.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -486,7 +486,7 @@ final class TripBeamBehaviour extends Behaviour implements ut {
 
     TripBeamBehaviour(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
-        this.field_u = new pc();
+        this.field_u = new BeamSegment();
         this.field_s = 0;
         try {
           this.field_C = new jma(15, param0, param1);

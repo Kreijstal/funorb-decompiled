@@ -7,7 +7,7 @@ final class tba extends IntrusiveNode {
     static String[] reconnectingMessages;
     int field_j;
     static oc field_l;
-    static jpa[] field_f;
+    static SpriteData[] field_f;
     int field_h;
     static String field_g;
 
@@ -101,7 +101,7 @@ final class tba extends IntrusiveNode {
         return var2;
     }
 
-    final static cn a(byte param0) {
+    final static ResourceArchive a(byte param0) {
         int var1 = 79 / ((param0 - 7) / 37);
         return gba.a(-94, S2CEventPacket.field_d.field_c);
     }

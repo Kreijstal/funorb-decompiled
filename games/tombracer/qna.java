@@ -171,9 +171,9 @@ final class qna {
               throw new IllegalStateException();
             }
             cia.field_a = new String[var4];
-            lua.a(lra.field_c, 0, cia.field_a, 0, var4);
+            ArrayUtils.copy(lra.field_c, 0, cia.field_a, 0, var4);
             wr.field_o = new String[-var4 + var3_int - 1];
-            lua.a(lra.field_c, var4 + 1, wr.field_o, 0, -1 + (-var4 + var3_int));
+            ArrayUtils.copy(lra.field_c, var4 + 1, wr.field_o, 0, -1 + (-var4 + var3_int));
             var4 = -1;
             var3_int = ama.a(bfa.field_c, gl.$cfr$intArgs$a$53ce4ab4c593(89, lqa.field_g, new String[]{"<br><%0><br>"}), rg.field_z, 1, lra.field_c);
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -187,9 +187,9 @@ final class qna {
               throw new IllegalStateException();
             }
             pm.field_d = new String[var4];
-            lua.a(lra.field_c, 0, pm.field_d, 0, var4);
+            ArrayUtils.copy(lra.field_c, 0, pm.field_d, 0, var4);
             C2SActionPacket.field_k = new String[-1 + var3_int - var4];
-            lua.a(lra.field_c, 1 + var4, C2SActionPacket.field_k, 0, var3_int - var4 - 1);
+            ArrayUtils.copy(lra.field_c, 1 + var4, C2SActionPacket.field_k, 0, var3_int - var4 - 1);
             if (pm.field_d.length <= cia.field_a.length) {
               stackIn_58_0 = cia.field_a.length;
             } else {

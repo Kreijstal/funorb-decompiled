@@ -3,13 +3,13 @@
  */
 final class qoa {
     static boolean field_a;
-    static cn field_b;
+    static ResourceArchive field_b;
     private static String field_z;
 
     public static void releaseStatics(byte param0) {
         field_b = null;
         if (param0 <= 16) {
-          field_b = (cn) null;
+          field_b = (ResourceArchive) null;
         }
     }
 

@@ -58,7 +58,7 @@ final class bta extends vw {
         field_d = null;
     }
 
-    bta(kda param0, cn param1) {
+    bta(kda param0, ResourceArchive param1) {
         super(param0);
         int stackIn_6_0 = 0;
         int stackIn_9_1 = 0;

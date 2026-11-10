@@ -7,8 +7,8 @@ class qma implements d {
     private dw[] field_b;
     static String field_f;
     private pea field_e;
-    private cn field_d;
-    private cn field_g;
+    private ResourceArchive field_d;
+    private ResourceArchive field_g;
 
     public static void a(byte param0) {
         field_f = null;
@@ -56,7 +56,7 @@ class qma implements d {
 
     public final int[] a(int param0, int param1, boolean param2, int param3, float param4, int param5) {
         if (param0 != 14907) {
-          this.field_d = (cn) null;
+          this.field_d = (ResourceArchive) null;
         }
         return this.a(param1, 0).a(param5, this.field_d, param2, (double)param4, (d) (this), (byte) 104, param3, this.field_b[param1].field_e);
     }
@@ -82,7 +82,7 @@ class qma implements d {
         return this.a(param3, 0).a((d) (this), (byte) -127, param1, param2, this.field_b[param3].field_e, this.field_d);
     }
 
-    qma(cn param0, cn param1, cn param2) {
+    qma(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2) {
         dw stackIn_11_0 = null;
         boolean stackIn_12_1 = false;
         dw stackIn_19_0 = null;

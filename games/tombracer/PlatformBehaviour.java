@@ -133,7 +133,7 @@ final class PlatformBehaviour extends Behaviour {
           }
           var4 = new float[param0];
           var3 = var4;
-          lua.a(param2, 0, var4, 0, param0);
+          ArrayUtils.copy(param2, 0, var4, 0, param0);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -213,10 +213,10 @@ final class PlatformBehaviour extends Behaviour {
             var5_int = this.trap.getX(3) - this.trap.I(-16423);
             var6 = this.trap.getY(9648) - this.trap.y((byte) -91);
             if (var5_int != 0) {
-              param2.a(125, true, 1, var6, var5_int, 0);
+              param2.tryPush(125, true, 1, var6, var5_int, 0);
             } else {
               if (var6 != 0) {
-                param2.a(125, true, 1, var6, var5_int, 0);
+                param2.tryPush(125, true, 1, var6, var5_int, 0);
               }
             }
           }

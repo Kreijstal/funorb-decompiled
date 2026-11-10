@@ -5,7 +5,7 @@ final class nk extends IntrusiveNode {
     int field_j;
     int[] field_h;
     private boolean[] field_g;
-    static jpa[] field_k;
+    static SpriteData[] field_k;
     int[] field_i;
     int field_l;
     int[][] field_f;
@@ -14,7 +14,7 @@ final class nk extends IntrusiveNode {
         lqa var1;
         boolean stackIn_9_0 = false;
         if (param0 > -26) {
-          field_k = (jpa[]) null;
+          field_k = (SpriteData[]) null;
         }
         var1 = uv.b(false);
         if (var1 == null) {
@@ -27,7 +27,7 @@ final class nk extends IntrusiveNode {
     public static void releaseStatics(int param0) {
         field_k = null;
         if (param0 != 20) {
-          field_k = (jpa[]) null;
+          field_k = (SpriteData[]) null;
         }
     }
 
@@ -43,7 +43,7 @@ final class nk extends IntrusiveNode {
 
     final static float a(byte param0, float param1) {
         if (param0 != 14) {
-          field_k = (jpa[]) null;
+          field_k = (SpriteData[]) null;
         }
         return (10.0f + (-15.0f + param1 * 6.0f) * param1) * (param1 * (param1 * param1));
     }

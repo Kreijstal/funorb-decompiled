@@ -49,11 +49,11 @@ final class sba extends ci {
         return var13;
     }
 
-    final static hja d(byte param0) {
+    final static IndexedSprite d(byte param0) {
         if (param0 <= 80) {
           field_n = (String) null;
         }
-        hja var1 = new hja(ika.field_a, kba.field_s, ak.field_p[0], pg.field_C[0], mq.field_b[0], iga.field_m[0], ck.field_c[0], mga.field_g);
+        IndexedSprite var1 = new IndexedSprite(ika.field_a, kba.field_s, ak.field_p[0], pg.field_C[0], mq.field_b[0], iga.field_m[0], ck.field_c[0], mga.field_g);
         MazeGenerator.a((byte) 127);
         return var1;
     }

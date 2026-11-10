@@ -6,7 +6,7 @@ final class ko {
     private boolean field_e;
     static int field_d;
     private int field_b;
-    static jpa field_j;
+    static SpriteData field_j;
     static String field_g;
     int field_i;
     int field_h;

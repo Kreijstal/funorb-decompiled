@@ -10,7 +10,7 @@ final class joa {
     static jea field_d;
     private java.util.zip.Inflater field_b;
 
-    final static qla a(String param0, cn param1, String param2, byte param3) {
+    final static qla a(String param0, ResourceArchive param1, String param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         byte[] var5 = null;
@@ -139,7 +139,7 @@ final class joa {
           mha.field_D = dupTemp$1;
           MiscItemBehaviour.field_s = dupTemp$1;
           if (Room.field_R.field_b != 1) {
-            km.field_p = af.field_g;
+            km.field_p = SecondaryNodeHashTable.field_g;
           } else {
             try {
               oba.field_e = new BufferedSocket((java.net.Socket) (Room.field_R.field_f), kqa.field_a);
@@ -156,7 +156,7 @@ final class joa {
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = (IOException) (Object) decompiledCaughtException;
-              km.field_p = af.field_g;
+              km.field_p = SecondaryNodeHashTable.field_g;
               Room.field_R = null;
               return true;
             }
@@ -177,7 +177,7 @@ final class joa {
           return;
         }
         String var2 = (String) null;
-        joa.a((String) null, (cn) null, (String) null, (byte) 49);
+        joa.a((String) null, (ResourceArchive) null, (String) null, (byte) 49);
         field_c = null;
     }
 

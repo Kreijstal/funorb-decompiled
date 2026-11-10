@@ -13,7 +13,7 @@ final class ng {
     private boolean field_g;
     static String field_e;
     private int field_h;
-    static jpa[] field_f;
+    static SpriteData[] field_f;
 
     public static void releaseStatics(byte param0) {
         field_e = null;
@@ -36,7 +36,7 @@ final class ng {
         this.field_l = -1;
         this.field_h = 0;
         if (!param0) {
-          field_f = (jpa[]) null;
+          field_f = (SpriteData[]) null;
         }
     }
 

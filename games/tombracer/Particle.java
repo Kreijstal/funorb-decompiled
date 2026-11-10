@@ -75,7 +75,7 @@ final class Particle extends PooledObject implements Renderable {
           this.field_B = this.field_B + this.field_q;
           if (param0 != -1) {
             var4 = (String) null;
-            Particle.a((String) null, (cn) null, (String) null, -74);
+            Particle.a((String) null, (ResourceArchive) null, (String) null, -74);
             this.field_l = this.field_l + this.field_v;
             this.field_m = this.field_m + this.field_r;
             this.field_x = this.field_x + this.field_y;
@@ -94,7 +94,7 @@ final class Particle extends PooledObject implements Renderable {
           return;
         }
         var4Lifetime1 = (String) null;
-        Particle.a((String) null, (cn) null, (String) null, -74);
+        Particle.a((String) null, (ResourceArchive) null, (String) null, -74);
         this.field_l = this.field_l + this.field_v;
         this.field_m = this.field_m + this.field_r;
         this.field_x = this.field_x + this.field_y;
@@ -115,7 +115,7 @@ final class Particle extends PooledObject implements Renderable {
         return this.field_B;
     }
 
-    final static Sprite[] a(String param0, cn param1, String param2, int param3) {
+    final static Sprite[] a(String param0, ResourceArchive param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

@@ -33,7 +33,7 @@ abstract class AppletGameShell extends GameApplet {
             ua.b(4, 2);
           }
           if (hd.field_a[4]) {
-            qda.a(5, -21);
+            ArchiveNetworkClient.a(5, -21);
           }
           if (hd.field_a[5]) {
             PlantComponent.b(param0 ^ -109, 6);

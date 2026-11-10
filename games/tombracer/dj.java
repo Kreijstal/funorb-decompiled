@@ -23,11 +23,11 @@ final class dj {
         }
     }
 
-    final void a(pc param0, WorldBody param1, byte param2) {
+    final void a(BeamSegment param0, WorldBody param1, byte param2) {
         try {
           if (param2 >= -99) {
             Effect var5 = (Effect) null;
-            this.a((byte) 23, (pc) null, (Effect) null);
+            this.a((byte) 23, (BeamSegment) null, (Effect) null);
           }
           this.a(param0.field_a, (byte) -101, param0.field_j, param0.field_i, 1, qva.a((byte) -120, -param0.field_k + param0.field_f, param0.field_c - param0.field_d) - 4096, 8, 393216, param0.field_e, 4, 8);
           this.a(param0.field_a, (byte) -110, param0.field_j, param0.field_i, 1, 0, 5, 0, param0.field_e, 6, 12);
@@ -75,7 +75,7 @@ final class dj {
         }
     }
 
-    final void a(byte param0, pc param1, Effect param2) {
+    final void a(byte param0, BeamSegment param1, Effect param2) {
         int var14 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -138,8 +138,8 @@ final class dj {
             }
             break;
           }
-          if (param1.field_h != null) {
-            this.a((byte) 118, param1.field_h, param2);
+          if (param1.nextSegment != null) {
+            this.a((byte) 118, param1.nextSegment, param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

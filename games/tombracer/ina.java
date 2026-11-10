@@ -10,7 +10,7 @@ final class ina {
     static int field_a;
     private int field_g;
     float field_i;
-    static jpa[] field_c;
+    static SpriteData[] field_c;
 
     final static void a(GraphicsToolkit param0, int param1) {
         ka dupTemp$0 = null;
@@ -88,7 +88,7 @@ final class ina {
         }
     }
 
-    final void a(String param0, byte param1, String param2, cn param3, String param4) {
+    final void a(String param0, byte param1, String param2, ResourceArchive param3, String param4) {
         try {
           this.a(param0, -1, param4, param2, param3, (byte) -108);
           if (param1 != -36) {
@@ -99,13 +99,13 @@ final class ina {
         }
     }
 
-    private final void a(String param0, int param1, String param2, String param3, cn param4, byte param5) {
+    private final void a(String param0, int param1, String param2, String param3, ResourceArchive param4, byte param5) {
         lt[] var9 = null;
         int fieldTemp$0 = 0;
         if (this.field_h.length <= this.field_e) {
           var9 = new lt[this.field_e * 2];
           lt[] var7 = var9;
-          lua.a(this.field_h, 0, var9, 0, this.field_e);
+          ArrayUtils.copy(this.field_h, 0, var9, 0, this.field_e);
           this.field_h = var9;
         }
         lt var8 = new lt();
@@ -196,7 +196,7 @@ final class ina {
         }
     }
 
-    final void a(int param0, cn param1, String param2, String param3) {
+    final void a(int param0, ResourceArchive param1, String param2, String param3) {
         try {
           this.a(param3, -1, param2, (String) null, param1, (byte) -108);
           if (param0 != 256) {
@@ -221,7 +221,7 @@ final class ina {
           }
           if (var4.field_d >= 0 &&
             !var4.field_h.e(var4.field_d, -2)) {
-            this.a(var2, param0 ^ 22739, var4.field_h.a(var4.field_d, (byte) 114));
+            this.a(var2, param0 ^ 22739, var4.field_h.getGroupProgress(var4.field_d, (byte) 114));
             return false;
           }
           if (var4.field_g != null &&

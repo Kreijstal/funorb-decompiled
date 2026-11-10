@@ -10,7 +10,7 @@ final class a implements e {
     private i field_g;
     private i field_l;
     Runnable field_h;
-    private oa field_e;
+    private NativeSoftwareGraphicsToolkit field_e;
     long field_nativeid;
     private i field_k;
     private i field_i;
@@ -176,7 +176,7 @@ final class a implements e {
 
     private final native void HA(long param0, GraphicsToolkit param1, int param2, int param3);
 
-    a(oa param0, int param1, int param2) {
+    a(NativeSoftwareGraphicsToolkit param0, int param1, int param2) {
         this.field_e = param0;
         this.field_c = new i(this.field_e);
         this.field_i = new i(this.field_e);

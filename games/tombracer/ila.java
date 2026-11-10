@@ -247,7 +247,7 @@ final class ila {
               var6_intLifetime1 = vc.field_q.readUnsignedByte(param2 + 205);
               vc.field_q.position = 0;
               oka.field_z = var6_intLifetime1;
-              ji.field_d = null;
+              NodeHashTable.field_d = null;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (8 != var6_intLifetime1) {
@@ -552,7 +552,7 @@ final class ila {
         if (!this.field_c) {
           return;
         }
-        cn.e(19470);
+        ResourceArchive.e(19470);
         this.field_c = false;
     }
 

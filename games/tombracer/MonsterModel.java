@@ -199,7 +199,7 @@ final class MonsterModel extends cda {
               if (var12 == null) {
                 return;
               }
-              var7 = var12.a((byte) 110, var12.getPlayer(param0 ^ -4445).getY(param0 ^ -13502), var12.getPlayer(66).getX(param0 ^ -4367), var12.getPlayer(-128).getHeight((byte) 55), var12.getPlayer(-120).getWidth(-125)) ? 1 : 0;
+              var7 = var12.intersectsRect((byte) 110, var12.getPlayer(param0 ^ -4445).getY(param0 ^ -13502), var12.getPlayer(66).getX(param0 ^ -4367), var12.getPlayer(-128).getHeight((byte) 55), var12.getPlayer(-120).getWidth(-125)) ? 1 : 0;
               if (var7 != 0 &&
                 !this.field_w) {
                 var5.a(new fm(81, this.getRenderX((byte) 56), this.getRenderY((byte) 99), this.getRenderZ((byte) -117)), -58);
@@ -218,7 +218,7 @@ final class MonsterModel extends cda {
           if (var13 == null) {
             return;
           }
-          var7Lifetime4 = var13.a((byte) 110, var13.getPlayer(param0 ^ -4445).getY(param0 ^ -13502), var13.getPlayer(66).getX(param0 ^ -4367), var13.getPlayer(-128).getHeight((byte) 55), var13.getPlayer(-120).getWidth(-125)) ? 1 : 0;
+          var7Lifetime4 = var13.intersectsRect((byte) 110, var13.getPlayer(param0 ^ -4445).getY(param0 ^ -13502), var13.getPlayer(66).getX(param0 ^ -4367), var13.getPlayer(-128).getHeight((byte) 55), var13.getPlayer(-120).getWidth(-125)) ? 1 : 0;
           if (var7Lifetime4 != 0) {
             if (this.field_w) {
               if (var7Lifetime4 == 0 &&
@@ -251,7 +251,7 @@ final class MonsterModel extends cda {
           if (var11 == null) {
             return;
           }
-          var7Lifetime1 = var11.a((byte) 110, var11.getPlayer(param0 ^ -4445).getY(param0 ^ -13502), var11.getPlayer(66).getX(param0 ^ -4367), var11.getPlayer(-128).getHeight((byte) 55), var11.getPlayer(-120).getWidth(-125)) ? 1 : 0;
+          var7Lifetime1 = var11.intersectsRect((byte) 110, var11.getPlayer(param0 ^ -4445).getY(param0 ^ -13502), var11.getPlayer(66).getX(param0 ^ -4367), var11.getPlayer(-128).getHeight((byte) 55), var11.getPlayer(-120).getWidth(-125)) ? 1 : 0;
           if (var7Lifetime1 != 0) {
             if (!this.field_w) {
               var5.a(new fm(81, this.getRenderX((byte) 56), this.getRenderY((byte) 99), this.getRenderZ((byte) -117)), -58);
@@ -274,7 +274,7 @@ final class MonsterModel extends cda {
           if (var9 == null) {
             return;
           }
-          var7Lifetime2 = var9.a((byte) 110, var9.getPlayer(param0 ^ -4445).getY(param0 ^ -13502), var9.getPlayer(66).getX(param0 ^ -4367), var9.getPlayer(-128).getHeight((byte) 55), var9.getPlayer(-120).getWidth(-125)) ? 1 : 0;
+          var7Lifetime2 = var9.intersectsRect((byte) 110, var9.getPlayer(param0 ^ -4445).getY(param0 ^ -13502), var9.getPlayer(66).getX(param0 ^ -4367), var9.getPlayer(-128).getHeight((byte) 55), var9.getPlayer(-120).getWidth(-125)) ? 1 : 0;
           if (var7Lifetime2 != 0) {
             if (!this.field_w) {
               var5.a(new fm(81, this.getRenderX((byte) 56), this.getRenderY((byte) 99), this.getRenderZ((byte) -117)), -58);
@@ -299,7 +299,7 @@ final class MonsterModel extends cda {
         if (var10 == null) {
           return;
         }
-        var7Lifetime3 = var10.a((byte) 110, var10.getPlayer(param0 ^ -4445).getY(param0 ^ -13502), var10.getPlayer(66).getX(param0 ^ -4367), var10.getPlayer(-128).getHeight((byte) 55), var10.getPlayer(-120).getWidth(-125)) ? 1 : 0;
+        var7Lifetime3 = var10.intersectsRect((byte) 110, var10.getPlayer(param0 ^ -4445).getY(param0 ^ -13502), var10.getPlayer(66).getX(param0 ^ -4367), var10.getPlayer(-128).getHeight((byte) 55), var10.getPlayer(-120).getWidth(-125)) ? 1 : 0;
         if (var7Lifetime3 == 0) {
           if (this.field_w) {
             this.field_w = false;

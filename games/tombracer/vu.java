@@ -138,7 +138,7 @@ final class vu extends vw {
               stackIn_37_0 = HazardModel.field_t;
               stackIn_37_1 = 114;
               if (var8 != 0) {
-                stackIn_38_2 = cn.field_c;
+                stackIn_38_2 = ResourceArchive.field_c;
               } else {
                 stackIn_38_2 = TombRacer.field_F;
               }
@@ -188,7 +188,7 @@ final class vu extends vw {
                       }
                     }
                   }
-                  qda.field_b = "<col=A00000>" + cra.field_a + "<br>" + WhiteLightSensorComponent.field_J + (String) (var9);
+                  ArchiveNetworkClient.field_b = "<col=A00000>" + cra.field_a + "<br>" + WhiteLightSensorComponent.field_J + (String) (var9);
                 }
               }
             } else {

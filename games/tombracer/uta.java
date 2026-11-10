@@ -282,7 +282,7 @@ abstract class uta implements ShellListener {
           return;
         }
         try {
-          if (param1 != qda.field_i) {
+          if (param1 != ArchiveNetworkClient.field_i) {
             if (param1 == ns.field_g) {
               sj.field_b = ht.field_Fb;
             } else {
@@ -292,7 +292,7 @@ abstract class uta implements ShellListener {
               }
             }
             hba.field_b = -1 + param1;
-            qda.field_i = param1;
+            ArchiveNetworkClient.field_i = param1;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "uta.L(" + param0 + ',' + param1 + ',' + param2 + ')');
@@ -508,7 +508,7 @@ abstract class uta implements ShellListener {
         var5.field_i = param4;
         var5.field_n = param1;
         mg.field_b.addLast((byte) -48, var5);
-        pc.a(false, param0, var5);
+        BeamSegment.a(false, param0, var5);
         return var5;
     }
 

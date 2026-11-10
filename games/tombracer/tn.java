@@ -19,7 +19,7 @@ final class tn extends IntrusiveNode {
         }
     }
 
-    final boolean a(int param0, byte[] param1, nda param2, int[] param3) {
+    final boolean a(int param0, byte[] param1, SoundCache param2, int[] param3) {
         int var8 = 0;
         int stackIn_22_0 = 0;
         RuntimeException stackIn_25_0 = null;

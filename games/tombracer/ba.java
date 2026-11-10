@@ -4,7 +4,7 @@
 final class ba extends r implements e {
     long field_nativeid;
 
-    ba(oa param0) {
+    ba(NativeSoftwareGraphicsToolkit param0) {
     }
 
     protected final void finalize() {

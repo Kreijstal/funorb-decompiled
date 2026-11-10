@@ -142,7 +142,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
                 if (!sr.a(125)) {
                   var2 = 1;
                   var3 = -1;
-                  while (es.a(true)) {
+                  while (NanoTickClock.a(true)) {
                     if (fna.field_h == -1) {
                       if (fna.field_h == -1 &&
                         var3 != -1) {

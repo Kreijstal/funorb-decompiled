@@ -91,7 +91,7 @@ final class mn extends kca {
         }
     }
 
-    mn(tra param0, tra param1) {
+    mn(TextInputWidget param0, TextInputWidget param1) {
         super(param0);
         this.field_l = false;
         this.field_m = "";

@@ -346,7 +346,7 @@ final class bh extends ela {
               var12.field_bc.a(78, di.field_a, param1 ^ -23776, var31, 70);
               if (var12.field_bc.field_o &&
                 !var12.field_bc.field_r.equals(var32)) {
-                qda.field_b = var32;
+                ArchiveNetworkClient.field_b = var32;
               }
               var12.field_Hb.field_r = Integer.toString(var12.field_Mb);
               if (var12.field_Yb) {
@@ -500,9 +500,9 @@ final class bh extends ela {
                   var35 = null;
                 }
                 if (var35 != null) {
-                  qda.field_b = kma.field_e[var34_intLifetime2] + " - " + (String) (var35);
+                  ArchiveNetworkClient.field_b = kma.field_e[var34_intLifetime2] + " - " + (String) (var35);
                 } else {
-                  qda.field_b = kma.field_e[var34_intLifetime2];
+                  ArchiveNetworkClient.field_b = kma.field_e[var34_intLifetime2];
                 }
               }
             }
@@ -510,9 +510,9 @@ final class bh extends ela {
               if (1 == var12.field_cc) {
                 var34 = ala.field_f;
               } else {
-                var34 = gv.field_w[var12.field_cc];
+                var34 = SocketArchiveNetworkClient.field_w[var12.field_cc];
               }
-              qda.field_b = RoomCompletedScreen.field_k + " - " + var34;
+              ArchiveNetworkClient.field_b = RoomCompletedScreen.field_k + " - " + var34;
             }
             if (var12.field_fc.field_o) {
               if (var12.field_Ob) {
@@ -520,7 +520,7 @@ final class bh extends ela {
               } else {
                 stackIn_151_0 = sda.field_i;
               }
-              qda.field_b = stackIn_151_0;
+              ArchiveNetworkClient.field_b = stackIn_151_0;
             }
             if (var12.field_vb.field_o) {
               if (!var12.field_Bb &&
@@ -533,7 +533,7 @@ final class bh extends ela {
               } else {
                 stackIn_160_0 = kba.field_k;
               }
-              qda.field_b = stackIn_160_0;
+              ArchiveNetworkClient.field_b = stackIn_160_0;
             }
             if (var12.field_Zb.field_o) {
               if (2 != var12.field_yb) {
@@ -541,7 +541,7 @@ final class bh extends ela {
               } else {
                 stackIn_165_0 = FleeLocomotor.field_y;
               }
-              qda.field_b = stackIn_165_0;
+              ArchiveNetworkClient.field_b = stackIn_165_0;
             }
             boolean decompiledFrameRemainder0 = true;
             if (var12.field_y != 0 &&

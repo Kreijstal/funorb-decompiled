@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ji {
+final class NodeHashTable {
     private IntrusiveNode field_b;
     private IntrusiveNode field_c;
     private IntrusiveNode[] field_f;
@@ -13,7 +13,7 @@ final class ji {
 
     public static void f(int param0) {
         if (param0 < 123) {
-          ji.a(-27, -70, -10);
+          NodeHashTable.a(-27, -70, -10);
         }
         field_g = null;
         field_d = null;
@@ -43,7 +43,7 @@ final class ji {
 
     final IntrusiveNode d(int param0) {
         this.field_e = param0;
-        return this.c(20806);
+        return this.nextWithKey(20806);
     }
 
     final void e(int param0) {
@@ -66,13 +66,13 @@ final class ji {
         this.field_b = null;
     }
 
-    final IntrusiveNode c(int param0) {
+    final IntrusiveNode nextWithKey(int param0) {
         int fieldTemp$0 = 0;
         IntrusiveNode var2;
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
         if (param0 != 20806) {
-          this.c(17);
+          this.nextWithKey(17);
         }
         if (this.field_e > 0 &&
           this.field_f[this.field_e - 1] != this.field_c) {
@@ -92,7 +92,7 @@ final class ji {
         return var2;
     }
 
-    final void a(long param0, int param1, IntrusiveNode param2) {
+    final void put(long param0, int param1, IntrusiveNode param2) {
         IntrusiveNode var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -127,7 +127,7 @@ final class ji {
         }
     }
 
-    ji(int param0) {
+    NodeHashTable(int param0) {
         int var2 = 0;
         IntrusiveNode dupTemp$0 = null;
         IntrusiveNode var3 = null;

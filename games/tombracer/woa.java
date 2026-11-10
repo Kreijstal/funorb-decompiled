@@ -17,7 +17,7 @@ final class woa extends DualLinkNode {
         }
     }
 
-    final static void a(int param0, cn param1, cn param2, int param3) {
+    final static void a(int param0, ResourceArchive param1, ResourceArchive param2, int param3) {
         jma.field_j = param1;
         if (param0 > -52) {
           return;

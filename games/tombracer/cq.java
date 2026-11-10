@@ -4,9 +4,9 @@
 final class cq {
     static jea field_e;
     static an[] field_b;
-    static ip field_a;
+    static GameClock field_a;
     static String field_c;
-    static hea field_d;
+    static BinaryBitmapFont field_d;
     private static String field_z;
 
     public static void releaseStatics(int param0) {

@@ -5,7 +5,7 @@ final class bp extends qra {
     private int field_n;
     static String field_o;
     static Sprite[] field_m;
-    static jpa[] field_p;
+    static SpriteData[] field_p;
 
     final boolean e(int param0) {
         if (param0 != -9202) {

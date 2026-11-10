@@ -121,7 +121,7 @@ final class qa {
           }
           this.field_d.a(this.field_p, this.field_k, this.field_e, -88, this.field_a, this.field_c, this.field_l);
           if (this.field_a.field_D) {
-            tra.a(0, bm.field_f, (byte) -72, this.field_p, tga.field_a, this.field_k - this.field_p, 1, -this.field_c + this.field_l, this.field_c, -16777216 | wga.field_a[this.field_e]);
+            TextInputWidget.a(0, bm.field_f, (byte) -72, this.field_p, tga.field_a, this.field_k - this.field_p, 1, -this.field_c + this.field_l, this.field_c, -16777216 | wga.field_a[this.field_e]);
             return;
           }
           return;
@@ -136,7 +136,7 @@ final class qa {
         if (!this.field_a.field_D) {
           return;
         }
-        tra.a(0, bm.field_f, (byte) -72, this.field_p, tga.field_a, this.field_k - this.field_p, 1, -this.field_c + this.field_l, this.field_c, -16777216 | wga.field_a[this.field_e]);
+        TextInputWidget.a(0, bm.field_f, (byte) -72, this.field_p, tga.field_a, this.field_k - this.field_p, 1, -this.field_c + this.field_l, this.field_c, -16777216 | wga.field_a[this.field_e]);
     }
 
     final void a(int param0, wm param1, int param2) {

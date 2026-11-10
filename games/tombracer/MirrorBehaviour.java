@@ -7,9 +7,9 @@ final class MirrorBehaviour extends Behaviour {
     private int field_n;
     private int field_v;
     private int field_t;
-    private pc field_u;
+    private BeamSegment field_u;
     private int field_w;
-    private pc field_o;
+    private BeamSegment field_o;
     private int field_s;
     private int field_q;
 
@@ -32,8 +32,8 @@ final class MirrorBehaviour extends Behaviour {
     private final void b(int param0) {
         int var2 = this.trap.g(-25787);
         if (param0 != 1659280738) {
-          pc var3 = (pc) null;
-          this.a(65, 57, (pc) null, 85);
+          BeamSegment var3 = (BeamSegment) null;
+          this.a(65, 57, (BeamSegment) null, 85);
           var2 = dfa.a(2048 + var2, 8192, -34);
           if (var2 != this.field_v) {
             this.field_t = MouseInputHandler.a((byte) 99, var2 >> 2);
@@ -60,7 +60,7 @@ final class MirrorBehaviour extends Behaviour {
         return param0;
     }
 
-    private final int a(boolean param0, pc param1) {
+    private final int a(boolean param0, BeamSegment param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -98,16 +98,16 @@ final class MirrorBehaviour extends Behaviour {
     MirrorBehaviour(Room param0, boolean param1) {
         super(param0, param1);
         this.field_v = -1;
-        this.field_u = new pc();
+        this.field_u = new BeamSegment();
     }
 
     MirrorBehaviour(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         this.field_v = -1;
-        this.field_u = new pc();
+        this.field_u = new BeamSegment();
     }
 
-    final boolean a(int param0, int param1, pc param2, int param3) {
+    final boolean a(int param0, int param1, BeamSegment param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -150,7 +150,7 @@ final class MirrorBehaviour extends Behaviour {
         int var1 = -15 / ((-36 - param0) / 62);
     }
 
-    final int a(int param0, Effect param1, pc param2) {
+    final int a(int param0, Effect param1, BeamSegment param2) {
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -163,7 +163,7 @@ final class MirrorBehaviour extends Behaviour {
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
-        pc var5 = null;
+        BeamSegment var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -189,11 +189,11 @@ final class MirrorBehaviour extends Behaviour {
             stackIn_10_0 = 0;
             return stackIn_10_0;
           }
-          var5 = new pc();
+          var5 = new BeamSegment();
           if (param0 >= -85) {
             field_r = (ToolkitSprite) null;
           }
-          param2.field_h = var5;
+          param2.nextSegment = var5;
           var6 = param2.field_e;
           var5.field_j = param2.field_j;
           var7 = param2.field_a;

@@ -10,7 +10,7 @@ final class SimpleConditionBehaviour extends Behaviour {
     static jea[] field_p;
     static long field_r;
 
-    final static tn a(cn param0, int param1, int param2) {
+    final static tn a(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
