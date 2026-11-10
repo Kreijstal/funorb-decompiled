@@ -157,7 +157,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
                     }
                     var4 = 0;
                     while (kra.field_c.size() > var4) {
-                      if (((ShellListener) (kra.field_c.elementAt(var4))).handleKey((byte) -72, kda.field_td, fna.field_h)) {
+                      if (((ShellListener) (kra.field_c.elementAt(var4))).handleKey((byte) -72, HardwareOpenGlToolkit.field_td, fna.field_h)) {
                         break;
                       }
                       var4++;

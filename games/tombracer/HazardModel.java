@@ -231,8 +231,8 @@ final class HazardModel extends TrapModel {
         try {
           super.d(param0);
           if (this.field_u == 0) {
-            var4 = this.j((byte) 16).getX(3);
-            var5 = this.j((byte) 16).getY(param0 + 9649);
+            var4 = this.getBody((byte) 16).getX(3);
+            var5 = this.getBody((byte) 16).getY(param0 + 9649);
             if (this.field_n) {
               var3_int = 0;
               var2_int = 0;
@@ -254,7 +254,7 @@ final class HazardModel extends TrapModel {
             }
           } else {
             if (this.field_u == 1 && (null == this.part ||
-              this.part.a(-93))) {
+              this.part.isEnabled(-93))) {
               this.field_m = dfa.a(128 + this.field_m, 2048, 122);
             }
           }

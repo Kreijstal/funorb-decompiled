@@ -163,7 +163,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
           var5 = stackIn_16_0;
           if (this.part != null) {
             if (var5 == 0) {
-              if (this.part.a(param0 ^ 12575)) {
+              if (this.part.isEnabled(param0 ^ 12575)) {
                 stackIn_26_0 = (this.part.a((byte) 87)) ? 1 : 0;
               } else {
                 stackIn_26_0 = 1;
@@ -209,7 +209,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
           var5Lifetime1 = stackIn_64_0;
           if (this.part != null) {
             if (var5Lifetime1 == 0) {
-              if (this.part.a(param0 ^ 12575)) {
+              if (this.part.isEnabled(param0 ^ 12575)) {
                 stackIn_78_0 = (this.part.a((byte) 87)) ? 1 : 0;
                 var5Lifetime1 = stackIn_78_0;
               } else {
@@ -266,7 +266,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
                   }
                   break regionExit1;
                 }
-                if (!this.part.a(param0 ^ 12575)) {
+                if (!this.part.isEnabled(param0 ^ 12575)) {
                   var5Lifetime2 = 1;
                   if (var5Lifetime2 == 0) {
                     stackIn_158_0 = 1;
@@ -390,7 +390,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
             this.field_j = true;
             return;
           }
-          if (!this.part.a(param0 ^ 12575)) {
+          if (!this.part.isEnabled(param0 ^ 12575)) {
             var5Lifetime3 = 1;
             regionExit3: {
               if (var5Lifetime3 != 0) {
@@ -538,7 +538,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
         }
     }
 
-    final TrapPart c(int param0) {
+    final TrapPart getPart(int param0) {
         if (param0 > -73) {
           this.category = -95;
           return this.part;
@@ -560,7 +560,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
         return this.category;
     }
 
-    public final boolean d(byte param0) {
+    public final boolean isRenderExpired(byte param0) {
         if (param0 != 48) {
           return true;
         }
@@ -704,7 +704,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
         return null;
     }
 
-    final WorldBody j(byte param0) {
+    final WorldBody getBody(byte param0) {
         if (param0 != 16) {
           this.part = (TrapPart) null;
           return this.body;

@@ -221,7 +221,7 @@ final class QuickChatMenu extends jea {
                 uu.field_a != null) {
                 var6 = 1;
               }
-              if (gda.a(var6, -20011) == 2) {
+              if (Transform3D.a(var6, -20011) == 2) {
                 MazeGenerator.a(var6, param0, (byte) 108, 1);
               }
               var8 = (String) null;
@@ -264,7 +264,7 @@ final class QuickChatMenu extends jea {
           f.b(param1 ^ 48);
           return true;
         }
-        var5 = kda.field_td;
+        var5 = HardwareOpenGlToolkit.field_td;
         if (param1 != -105) {
           return false;
         }

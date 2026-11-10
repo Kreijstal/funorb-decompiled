@@ -14,27 +14,27 @@ final class em extends vw {
           this.field_c.a(0, false, ej.field_c);
         } else {
           this.field_c.e(1, false);
-          this.field_c.a(true, (iva) null);
-          this.field_c.a(ItemModel.field_o, (byte) 0);
+          this.field_c.bindTexture(true, (iva) null);
+          this.field_c.applyTexCoordGeneration(ItemModel.field_o, (byte) 0);
           this.field_c.p((byte) 127);
           if (!this.field_d) {
-            this.field_c.a(iw.field_c, (byte) -110, iw.field_c);
+            this.field_c.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
             this.field_c.a(ej.field_c, 0, -90);
             this.field_c.e(2, false);
-            this.field_c.a(iw.field_c, (byte) -110, iw.field_c);
+            this.field_c.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
             this.field_c.a(ej.field_c, 0, -108);
             this.field_c.a(PlayerContextMenu.field_j, 1, -15);
             this.field_c.a(0, false, ej.field_c);
-            this.field_c.a(true, (iva) null);
+            this.field_c.bindTexture(true, (iva) null);
           } else {
-            this.field_c.a(iw.field_c, (byte) -110, iw.field_c);
+            this.field_c.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
             this.field_c.a(ej.field_c, 0, -94);
             this.field_c.a(0, false, ej.field_c);
           }
           this.field_c.e(0, false);
           this.field_g = false;
         }
-        this.field_c.a(iw.field_c, (byte) -110, iw.field_c);
+        this.field_c.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
         if (param0 > -4) {
           this.a((byte) 55, -114, 112);
         }
@@ -48,7 +48,7 @@ final class em extends vw {
         field_f = null;
     }
 
-    em(eo param0) {
+    em(HardwareGraphicsToolkit param0) {
         super(param0);
         int var14 = 0;
         int var15 = 0;
@@ -152,7 +152,7 @@ final class em extends vw {
     final void a(byte param0, int param1, int param2) {
         if (this.field_g) {
           this.field_c.e(1, false);
-          this.field_c.a(true, this.field_e[-1 + param1]);
+          this.field_c.bindTexture(true, this.field_e[-1 + param1]);
           this.field_c.e(0, false);
         }
         if (param0 != 55) {
@@ -162,28 +162,28 @@ final class em extends vw {
 
     final void a(int param0, boolean param1) {
         int var3;
-        asa var4;
+        AffineTransform3D var4;
         int var5;
         var5 = TombRacer.field_G ? 1 : 0;
         var3 = -121 / ((param0 - 41) / 62);
         if (null != this.field_e &&
           param1) {
           this.field_c.e(1, false);
-          this.field_c.a(IdolItemComponent.field_H, (byte) 0);
+          this.field_c.applyTexCoordGeneration(IdolItemComponent.field_H, (byte) 0);
           var4 = this.field_c.C(0);
           var4.b(-94, 1024);
           this.field_c.a(cva.field_b, false);
           if (!this.field_d) {
-            this.field_c.a(iw.field_c, (byte) -110, PlatformComponent.field_F);
+            this.field_c.setTextureCombineOperations(iw.field_c, (byte) -110, PlatformComponent.field_F);
             this.field_c.a(PlayerContextMenu.field_j, 0, -34);
             this.field_c.e(2, false);
-            this.field_c.a(PlatformComponent.field_F, (byte) -110, jv.field_m);
+            this.field_c.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, jv.field_m);
             this.field_c.a(PlayerContextMenu.field_j, 0, -47);
             this.field_c.a(PlayerContextMenu.field_j, 1, -6219, true, false);
             this.field_c.a(0, false, tla.field_c);
-            this.field_c.a(true, this.field_c.field_Jb);
+            this.field_c.bindTexture(true, this.field_c.field_Jb);
           } else {
-            this.field_c.a(PlatformComponent.field_F, (byte) -110, jv.field_m);
+            this.field_c.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, jv.field_m);
             this.field_c.a(ej.field_c, 0, -6219, true, false);
             this.field_c.a(0, false, tla.field_c);
           }
@@ -198,7 +198,7 @@ final class em extends vw {
         if (param1 != 5744) {
           return;
         }
-        this.field_c.a(PlatformComponent.field_F, (byte) -110, iw.field_c);
+        this.field_c.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, iw.field_c);
     }
 
     final boolean c(int param0) {
@@ -210,7 +210,7 @@ final class em extends vw {
     }
 
     final void a(int param0, iva param1, int param2) {
-        this.field_c.a(true, param1);
+        this.field_c.bindTexture(true, param1);
         if (param2 != 24595) {
           return;
         }

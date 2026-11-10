@@ -482,7 +482,7 @@ final class PlatformModel extends TrapModel {
                   var4_ref.a(new fm(20, this.getRenderX((byte) 39), this.getRenderY((byte) 109), this.getRenderZ((byte) -116)), -58);
                   this.field_y = ((PathMoveLocomotor) (var18_ref)).d(false);
                 }
-                if (var18_ref.a(-58) &&
+                if (var18_ref.isEnabled(-58) &&
                   this.field_y == 0) {
                   if (((PathMoveLocomotor) (var18_ref)).e(69) == 4096 &&
                     this.field_v == null) {

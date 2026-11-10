@@ -4,7 +4,7 @@
 final class kp {
     private d field_e;
     static String field_d;
-    private eo field_a;
+    private HardwareGraphicsToolkit field_a;
     static boolean field_c;
     private SoftReferenceCache field_b;
     static String field_f;
@@ -103,7 +103,7 @@ final class kp {
         return var21Lifetime2;
     }
 
-    kp(eo param0, d param1) {
+    kp(HardwareGraphicsToolkit param0, d param1) {
         this.field_b = new SoftReferenceCache(256);
         try {
           this.field_e = param1;

@@ -175,11 +175,11 @@ final class FuseBehaviour extends Behaviour {
     }
 
     private final void j(byte param0) {
-        Effect var2 = new Effect(this.e(6), this.field_p);
+        Effect var2 = new Effect(this.getRoot(6), this.field_p);
         if (param0 != -67) {
           this.field_q = (kpa) null;
         }
-        this.b(true).a(124, this.trap.getY(param0 ^ -9715), var2, this.trap.getHeight((byte) 55) + this.field_n * 2, this.trap.getWidth(-107) + 2 * this.field_n, this.trap.getX(3));
+        this.getRoom(true).a(124, this.trap.getY(param0 ^ -9715), var2, this.trap.getHeight((byte) 55) + this.field_n * 2, this.trap.getWidth(-107) + 2 * this.field_n, this.trap.getX(3));
         this.c(false);
     }
 

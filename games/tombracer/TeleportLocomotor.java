@@ -47,7 +47,7 @@ final class TeleportLocomotor extends Locomotor {
             this.field_r = this.field_r + 1;
           } else {
             if (var13.length > 0) {
-              this.field_r = this.c(true).getRandom(73).nextBounded(var13.length, 0);
+              this.field_r = this.getRoom(true).getRandom(73).nextBounded(var13.length, 0);
             }
           }
           this.trap.a((byte) 54, this.field_t);
@@ -55,9 +55,9 @@ final class TeleportLocomotor extends Locomotor {
           if (this.trap.getRoom((byte) -70).a(this.trap, this.trap.getHeight((byte) 55), 2, this.trap.g(true), this.field_t.field_d, this.field_t.field_f, false, var5, this.trap.getWidth(-110))) {
             return;
           }
-          this.c(true).collisionGrid.remove((Collidable) (this.trap), (byte) 98);
+          this.getRoom(true).collisionGrid.remove((Collidable) (this.trap), (byte) 98);
           this.trap.b(437453352, var4, var3);
-          this.c(true).collisionGrid.insert(this.trap, 7073);
+          this.getRoom(true).collisionGrid.insert(this.trap, 7073);
           var6 = 98 / ((-69 - param0) / 42);
           if (this.field_u > 0) {
             this.trap.n(this.field_u, -112);
@@ -79,7 +79,7 @@ final class TeleportLocomotor extends Locomotor {
             this.field_r = this.field_r + 1;
           } else {
             if (var13.length > 0) {
-              this.field_r = this.c(true).getRandom(73).nextBounded(var13.length, 0);
+              this.field_r = this.getRoom(true).getRandom(73).nextBounded(var13.length, 0);
             }
           }
           this.trap.a((byte) 54, this.field_t);
@@ -87,9 +87,9 @@ final class TeleportLocomotor extends Locomotor {
           if (this.trap.getRoom((byte) -70).a(this.trap, this.trap.getHeight((byte) 55), 2, this.trap.g(true), this.field_t.field_d, this.field_t.field_f, false, var5Lifetime1, this.trap.getWidth(-110))) {
             return;
           }
-          this.c(true).collisionGrid.remove((Collidable) (this.trap), (byte) 98);
+          this.getRoom(true).collisionGrid.remove((Collidable) (this.trap), (byte) 98);
           this.trap.b(437453352, var4Lifetime1, var3Lifetime1);
-          this.c(true).collisionGrid.insert(this.trap, 7073);
+          this.getRoom(true).collisionGrid.insert(this.trap, 7073);
           var6Lifetime1 = 98 / ((-69 - param0) / 42);
           if (this.field_u > 0) {
             this.trap.n(this.field_u, -112);
@@ -113,9 +113,9 @@ final class TeleportLocomotor extends Locomotor {
           if (this.trap.getRoom((byte) -70).a(this.trap, this.trap.getHeight((byte) 55), 2, this.trap.g(true), this.field_t.field_d, this.field_t.field_f, false, var5Lifetime2, this.trap.getWidth(-110))) {
             return;
           }
-          this.c(true).collisionGrid.remove((Collidable) (this.trap), (byte) 98);
+          this.getRoom(true).collisionGrid.remove((Collidable) (this.trap), (byte) 98);
           this.trap.b(437453352, var4Lifetime2, var3Lifetime2);
-          this.c(true).collisionGrid.insert(this.trap, 7073);
+          this.getRoom(true).collisionGrid.insert(this.trap, 7073);
           var6Lifetime2 = 98 / ((-69 - param0) / 42);
           if (this.field_u <= 0) {
             return;
@@ -129,9 +129,9 @@ final class TeleportLocomotor extends Locomotor {
           if (this.trap.getRoom((byte) -70).a(this.trap, this.trap.getHeight((byte) 55), 2, this.trap.g(true), this.field_t.field_d, this.field_t.field_f, false, var5Lifetime3, this.trap.getWidth(-110))) {
             return;
           }
-          this.c(true).collisionGrid.remove((Collidable) (this.trap), (byte) 98);
+          this.getRoom(true).collisionGrid.remove((Collidable) (this.trap), (byte) 98);
           this.trap.b(437453352, var4Lifetime2, var3Lifetime2);
-          this.c(true).collisionGrid.insert(this.trap, 7073);
+          this.getRoom(true).collisionGrid.insert(this.trap, 7073);
           var6Lifetime3 = 98 / ((-69 - param0) / 42);
           if (this.field_u <= 0) {
             return;
@@ -139,15 +139,15 @@ final class TeleportLocomotor extends Locomotor {
           this.trap.n(this.field_u, -112);
           return;
         }
-        this.field_r = this.c(true).getRandom(73).nextBounded(var13.length, 0);
+        this.field_r = this.getRoom(true).getRandom(73).nextBounded(var13.length, 0);
         this.trap.a((byte) 54, this.field_t);
         var5Lifetime4 = this.trap.getRoot(0);
         if (this.trap.getRoom((byte) -70).a(this.trap, this.trap.getHeight((byte) 55), 2, this.trap.g(true), this.field_t.field_d, this.field_t.field_f, false, var5Lifetime4, this.trap.getWidth(-110))) {
           return;
         }
-        this.c(true).collisionGrid.remove((Collidable) (this.trap), (byte) 98);
+        this.getRoom(true).collisionGrid.remove((Collidable) (this.trap), (byte) 98);
         this.trap.b(437453352, var4Lifetime2, var3Lifetime2);
-        this.c(true).collisionGrid.insert(this.trap, 7073);
+        this.getRoom(true).collisionGrid.insert(this.trap, 7073);
         var6Lifetime4 = 98 / ((-69 - param0) / 42);
         if (this.field_u <= 0) {
           return;

@@ -89,7 +89,7 @@ final class ConstrainToLatticeLocomotor extends ConstraintLocomotor {
         int var12;
         int var13;
         var13 = TombRacer.field_G ? 1 : 0;
-        var2 = this.trap.s(25745) - this.f(10);
+        var2 = this.trap.getLocalX(25745) - this.f(10);
         var3 = this.trap.getLocalY(false) - this.g((byte) 30);
         if (var2 == 0 &&
           0 == var3) {

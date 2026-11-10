@@ -3,14 +3,14 @@
  */
 import java.io.*;
 
-final class ppa {
+final class SectorCacheStore {
     private int field_d;
     private BufferedCacheFile field_c;
     private int field_e;
     private BufferedCacheFile field_b;
     static String field_a;
 
-    final boolean a(int param0, byte[] param1, int param2, byte param3) {
+    final boolean write(int param0, byte[] param1, int param2, byte param3) {
         Object var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
@@ -59,7 +59,7 @@ final class ppa {
         }
     }
 
-    final byte[] a(int param0, int param1) {
+    final byte[] readFile(int param0, int param1) {
         try {
           int var17 = 0;
           int incrementValue$2 = 0;
@@ -238,7 +238,7 @@ final class ppa {
                 this.field_b.seek((byte) -118, (long)(param4 * 6));
                 this.field_b.a(StaticCrusherComponent.field_F, 0, (byte) -17, 6);
                 if (!param3) {
-                  this.a(58, 109);
+                  this.readFile(58, 109);
                 }
                 var8 = 0;
                 var9 = 0;
@@ -396,7 +396,7 @@ final class ppa {
         return "" + this.field_d;
     }
 
-    ppa(int param0, BufferedCacheFile param1, BufferedCacheFile param2, int param3) {
+    SectorCacheStore(int param0, BufferedCacheFile param1, BufferedCacheFile param2, int param3) {
         this.field_c = null;
         this.field_b = null;
         this.field_e = 65000;

@@ -120,7 +120,7 @@ final class GasVentModel extends TrapModel {
           this.field_q = 0;
           return;
         }
-        if (!this.part.a(-61)) {
+        if (!this.part.isEnabled(-61)) {
           this.field_q = 0;
           return;
         }

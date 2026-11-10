@@ -324,7 +324,7 @@ final class oka extends wv {
         int var11;
         var11 = TombRacer.field_G ? 1 : 0;
         if (param0 != 96) {
-          stackIn_6_0 = (param0 == kda.field_hd) ? 1 : 0;
+          stackIn_6_0 = (param0 == HardwareOpenGlToolkit.field_hd) ? 1 : 0;
         } else {
           stackIn_6_0 = 1;
         }

@@ -107,7 +107,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         if (param0 < 105) {
           this.getTypeId(70);
         }
-        return (SwitchableScope) ((Object) this.o((byte) -34));
+        return (SwitchableScope) ((Object) this.getRoot((byte) -34));
     }
 
     public final boolean isExpired(int param0) {
@@ -149,7 +149,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         mka[] var6 = this.field_t;
         mka[] var2 = var6;
         if (param0 != -24) {
-          this.d((byte) -51);
+          this.isRenderExpired((byte) -51);
         }
         for (var3 = 0; var6.length > var3; var3++) {
           var4 = var6[var3];
@@ -623,7 +623,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         return this.getY(9648);
     }
 
-    public final boolean d(byte param0) {
+    public final boolean isRenderExpired(byte param0) {
         if (param0 != 48) {
           this.getFacingAngle(-122);
           return false;
@@ -756,13 +756,13 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         return var2;
     }
 
-    final RoomComponent o(byte param0) {
+    final RoomComponent getRoot(byte param0) {
         boolean discarded$0 = false;
         if (param0 >= -17) {
           discarded$0 = this.p((byte) 101);
         }
         if (this.field_u != null) {
-          return this.field_u.o((byte) -84);
+          return this.field_u.getRoot((byte) -84);
         }
         return this;
     }

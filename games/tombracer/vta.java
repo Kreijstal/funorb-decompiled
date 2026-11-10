@@ -12,7 +12,7 @@ final class vta extends vw {
         }
     }
 
-    vta(eo param0) {
+    vta(HardwareGraphicsToolkit param0) {
         super(param0);
     }
 
@@ -83,7 +83,7 @@ final class vta extends vw {
 
     final void a(int param0, iva param1, int param2) {
         try {
-          this.field_c.a(true, param1);
+          this.field_c.bindTexture(true, param1);
           this.field_c.a((byte) -35, param0);
           if (param2 != 24595) {
             CharSequence var5 = (CharSequence) null;

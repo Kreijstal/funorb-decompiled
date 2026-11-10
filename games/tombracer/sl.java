@@ -19,7 +19,7 @@ final class sl extends vw {
     }
 
     final void a(boolean param0, int param1) {
-        this.field_c.a(PlatformComponent.field_F, (byte) -110, iw.field_c);
+        this.field_c.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, iw.field_c);
         if (param1 != 5744) {
           field_g = (String) null;
         }
@@ -41,19 +41,19 @@ final class sl extends vw {
           this.field_c.a(0, false, ej.field_c);
         } else {
           this.field_c.e(1, false);
-          this.field_c.a(ItemModel.field_o, (byte) 0);
-          this.field_c.a(iw.field_c, (byte) -110, iw.field_c);
+          this.field_c.applyTexCoordGeneration(ItemModel.field_o, (byte) 0);
+          this.field_c.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
           this.field_c.a(pea.field_c, 2, -21);
           this.field_c.a(0, false, ej.field_c);
           this.field_c.p((byte) -87);
-          this.field_c.a(true, (iva) null);
+          this.field_c.bindTexture(true, (iva) null);
           this.field_c.e(0, false);
           this.field_f = false;
         }
-        this.field_c.a(iw.field_c, (byte) -110, iw.field_c);
+        this.field_c.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
     }
 
-    sl(eo param0) {
+    sl(HardwareGraphicsToolkit param0) {
         super(param0);
         this.field_f = false;
     }
@@ -74,13 +74,13 @@ final class sl extends vw {
           return;
         }
         this.field_c.e(1, false);
-        this.field_c.a(true, var3);
-        this.field_c.a(gq.field_u, (byte) 0);
+        this.field_c.bindTexture(true, var3);
+        this.field_c.applyTexCoordGeneration(gq.field_u, (byte) 0);
         this.field_c.e(1, false);
-        this.field_c.a(PlatformComponent.field_F, (byte) -110, r.field_m);
+        this.field_c.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, r.field_m);
         this.field_c.a(PlayerContextMenu.field_j, 2, -6219, true, false);
         this.field_c.a(0, false, tla.field_c);
-        asa var4_ref_asa = this.field_c.C(0);
+        AffineTransform3D var4_ref_asa = this.field_c.C(0);
         var4_ref_asa.a(1217, this.field_c.c(true));
         this.field_c.a(cva.field_b, false);
         this.field_c.e(0, false);
@@ -96,7 +96,7 @@ final class sl extends vw {
 
     final void a(int param0, iva param1, int param2) {
         try {
-          this.field_c.a(true, param1);
+          this.field_c.bindTexture(true, param1);
           if (param2 != 24595) {
             this.a(false, -34);
           }

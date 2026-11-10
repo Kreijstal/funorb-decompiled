@@ -44,7 +44,7 @@ final class o extends ora implements sca {
         if (param0 != 540800) {
           return false;
         }
-        if (oba.field_e == null) {
+        if (OpenGlTransform3D.field_e == null) {
           return false;
         }
         if (km.field_p != uga.field_n) {

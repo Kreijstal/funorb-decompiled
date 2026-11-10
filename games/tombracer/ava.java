@@ -5,7 +5,7 @@ final class ava {
     private int field_g;
     static int field_d;
     int field_b;
-    static vp field_f;
+    static DraggableWidget field_f;
     int field_a;
     private byte field_e;
     int field_c;

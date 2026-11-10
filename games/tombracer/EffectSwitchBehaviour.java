@@ -336,7 +336,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
               param1.a(26492, true, var3_int);
             }
           }
-          if (4 > this.b(true).formatVersion) {
+          if (4 > this.getRoom(true).formatVersion) {
             param1.h(3, 0);
           }
           return;

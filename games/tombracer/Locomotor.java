@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapPart {
-    private Room field_f;
-    boolean field_k;
+    private Room room;
+    boolean enabled;
     private SwitchableId field_g;
     Trap trap;
     boolean field_i;
@@ -12,18 +12,18 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
     static String field_l;
     boolean field_j;
 
-    final Room c(boolean param0) {
+    final Room getRoom(boolean param0) {
         if (!param0) {
           return (Room) null;
         }
-        return this.field_f;
+        return this.room;
     }
 
-    public final boolean a(int param0) {
+    public final boolean isEnabled(int param0) {
         if (param0 >= -49) {
           return false;
         }
-        return this.field_k;
+        return this.enabled;
     }
 
     public final Trap getTrap(byte param0) {
@@ -37,7 +37,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
           return;
         }
         try {
-          param0.writeBits((byte) -126, !this.field_k ? 0 : 1, 1);
+          param0.writeBits((byte) -126, !this.enabled ? 0 : 1, 1);
           param0.writeBits((byte) 107, !this.field_i ? 0 : 1, 1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wda.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -103,7 +103,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
 
     public void toggle(int param0) {
         if (!this.field_i) {
-          this.field_k = !this.field_k ? true : false;
+          this.enabled = !this.enabled ? true : false;
           int var2 = -124 / ((param0 - 28) / 49);
           return;
         }
@@ -111,7 +111,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
 
     final int b(int param0, int param1) {
         if (param0 != 0) {
-          this.field_k = false;
+          this.enabled = false;
           return SpawnerBehaviour.a((byte) 8, 4, param1);
         }
         return SpawnerBehaviour.a((byte) 8, 4, param1);
@@ -127,7 +127,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
 
     void c(byte param0) {
         if (param0 > -116) {
-          this.field_k = false;
+          this.enabled = false;
         }
     }
 
@@ -147,7 +147,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
 
     final int a(int param0, boolean param1) {
         if (param1) {
-          this.field_f = (Room) null;
+          this.room = (Room) null;
           return NodeHashTable.a(param0, 122, 4);
         }
         return NodeHashTable.a(param0, 122, 4);
@@ -166,7 +166,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
         RuntimeException decompiledCaughtException = null;
         try {
           stackIn_4_1 = (param1.readBits((byte) 44, 1) == 1);
-          this.field_k = stackIn_4_1;
+          this.enabled = stackIn_4_1;
           if (param0.formatVersion < 22) {
             return;
           }
@@ -213,7 +213,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
         if (this.field_i) {
           return;
         }
-        this.field_k = param1 ? true : false;
+        this.enabled = param1 ? true : false;
         if (!param0) {
           this.field_j = false;
         }
@@ -269,12 +269,12 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
     }
 
     Locomotor(Room param0, boolean param1) {
-        this.field_k = true;
+        this.enabled = true;
         this.field_i = false;
         this.field_j = false;
         ir discarded$0 = new ir();
         try {
-          this.field_f = param0;
+          this.room = param0;
           this.a(param1, (byte) -119, param0.e(116), (ui) null);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wda.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

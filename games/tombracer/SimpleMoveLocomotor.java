@@ -49,7 +49,7 @@ final class SimpleMoveLocomotor extends Locomotor {
         int var8Lifetime2Lifetime1;
         int var9Lifetime1Lifetime1;
         int var9Lifetime2Lifetime1;
-        var2 = this.field_p + this.trap.q((byte) -80);
+        var2 = this.field_p + this.trap.getAngle((byte) -80);
         if (0 >= this.field_r) {
           var3 = MouseInputHandler.a((byte) 100, var2 >> 2);
           var6 = -112 % ((param0 + 69) / 42);
@@ -58,16 +58,16 @@ final class SimpleMoveLocomotor extends Locomotor {
           var7 = doa.a(2, this.field_t, var4);
           if (var7 == 0) {
             var5 = lw.signum(var5, (byte) -52) * this.field_t;
-            var8 = this.trap.s(25745);
+            var8 = this.trap.getLocalX(25745);
             var9 = this.trap.getLocalY(false);
             this.trap.a((byte) -17, var5, var7);
             if (this.field_q) {
               if (this.trap.p((byte) -103)) {
                 var2 = -var2;
-                this.field_p = dfa.a(-this.trap.q((byte) -80) + var2, 8192, 69);
+                this.field_p = dfa.a(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
               }
               if (!this.trap.C((byte) -43)) {
-                if (this.trap.s(25745) != var8 ||
+                if (this.trap.getLocalX(25745) != var8 ||
                   this.trap.getLocalY(false) != var9) {
                   this.field_o = this.field_o + this.field_t;
                 }
@@ -78,9 +78,9 @@ final class SimpleMoveLocomotor extends Locomotor {
                 return;
               }
               var2 = 4096 - var2;
-              this.field_p = dfa.a(var2 - this.trap.q((byte) -80), 8192, 112);
+              this.field_p = dfa.a(var2 - this.trap.getAngle((byte) -80), 8192, 112);
             }
-            if (this.trap.s(25745) != var8) {
+            if (this.trap.getLocalX(25745) != var8) {
               this.field_o = this.field_o + this.field_t;
               if (this.field_r > 0 &&
                 this.field_o >= this.field_r) {
@@ -106,39 +106,39 @@ final class SimpleMoveLocomotor extends Locomotor {
             return;
           }
           if (var5 != 0) {
-            var8Lifetime4 = this.trap.s(25745);
+            var8Lifetime4 = this.trap.getLocalX(25745);
             var9Lifetime4 = this.trap.getLocalY(false);
             this.trap.a((byte) -17, var5, var7);
             if (this.field_q) {
               if (this.trap.p((byte) -103)) {
                 var2 = -var2;
-                this.field_p = dfa.a(-this.trap.q((byte) -80) + var2, 8192, 69);
+                this.field_p = dfa.a(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
               }
               if (this.trap.C((byte) -43)) {
                 var2 = 4096 - var2;
-                this.field_p = dfa.a(var2 - this.trap.q((byte) -80), 8192, 112);
+                this.field_p = dfa.a(var2 - this.trap.getAngle((byte) -80), 8192, 112);
               }
             }
-            if (this.trap.s(25745) != var8Lifetime4 ||
+            if (this.trap.getLocalX(25745) != var8Lifetime4 ||
               this.trap.getLocalY(false) != var9Lifetime4) {
               this.field_o = this.field_o + this.field_t;
             }
           } else {
             var7 = lw.signum(var7, (byte) -71) * this.field_t;
-            var8Lifetime4 = this.trap.s(25745);
+            var8Lifetime4 = this.trap.getLocalX(25745);
             var9Lifetime4 = this.trap.getLocalY(false);
             this.trap.a((byte) -17, var5, var7);
             if (this.field_q) {
               if (this.trap.p((byte) -103)) {
                 var2 = -var2;
-                this.field_p = dfa.a(-this.trap.q((byte) -80) + var2, 8192, 69);
+                this.field_p = dfa.a(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
               }
               if (this.trap.C((byte) -43)) {
                 var2 = 4096 - var2;
-                this.field_p = dfa.a(var2 - this.trap.q((byte) -80), 8192, 112);
+                this.field_p = dfa.a(var2 - this.trap.getAngle((byte) -80), 8192, 112);
               }
             }
-            if (this.trap.s(25745) != var8Lifetime4 ||
+            if (this.trap.getLocalX(25745) != var8Lifetime4 ||
               this.trap.getLocalY(false) != var9Lifetime4) {
               this.field_o = this.field_o + this.field_t;
             }
@@ -157,16 +157,16 @@ final class SimpleMoveLocomotor extends Locomotor {
           var7Lifetime1 = doa.a(2, this.field_t, var4Lifetime1);
           if (var7Lifetime1 == 0) {
             var5Lifetime1 = lw.signum(var5Lifetime1, (byte) -52) * this.field_t;
-            var8Lifetime1 = this.trap.s(25745);
+            var8Lifetime1 = this.trap.getLocalX(25745);
             var9Lifetime1 = this.trap.getLocalY(false);
             this.trap.a((byte) -17, var5Lifetime1, var7Lifetime1);
             if (this.field_q) {
               if (this.trap.p((byte) -103)) {
                 var2 = -var2;
-                this.field_p = dfa.a(-this.trap.q((byte) -80) + var2, 8192, 69);
+                this.field_p = dfa.a(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
               }
               if (!this.trap.C((byte) -43)) {
-                if (this.trap.s(25745) != var8Lifetime1 ||
+                if (this.trap.getLocalX(25745) != var8Lifetime1 ||
                   this.trap.getLocalY(false) != var9Lifetime1) {
                   this.field_o = this.field_o + this.field_t;
                 }
@@ -177,9 +177,9 @@ final class SimpleMoveLocomotor extends Locomotor {
                 return;
               }
               var2 = 4096 - var2;
-              this.field_p = dfa.a(var2 - this.trap.q((byte) -80), 8192, 112);
+              this.field_p = dfa.a(var2 - this.trap.getAngle((byte) -80), 8192, 112);
             }
-            if (this.trap.s(25745) != var8Lifetime1) {
+            if (this.trap.getLocalX(25745) != var8Lifetime1) {
               this.field_o = this.field_o + this.field_t;
               if (this.field_r > 0 &&
                 this.field_o >= this.field_r) {
@@ -205,39 +205,39 @@ final class SimpleMoveLocomotor extends Locomotor {
             return;
           }
           if (var5Lifetime1 != 0) {
-            var8Lifetime1Lifetime1 = this.trap.s(25745);
+            var8Lifetime1Lifetime1 = this.trap.getLocalX(25745);
             var9Lifetime1Lifetime1 = this.trap.getLocalY(false);
             this.trap.a((byte) -17, var5Lifetime1, var7Lifetime1);
             if (this.field_q) {
               if (this.trap.p((byte) -103)) {
                 var2 = -var2;
-                this.field_p = dfa.a(-this.trap.q((byte) -80) + var2, 8192, 69);
+                this.field_p = dfa.a(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
               }
               if (this.trap.C((byte) -43)) {
                 var2 = 4096 - var2;
-                this.field_p = dfa.a(var2 - this.trap.q((byte) -80), 8192, 112);
+                this.field_p = dfa.a(var2 - this.trap.getAngle((byte) -80), 8192, 112);
               }
             }
-            if (this.trap.s(25745) != var8Lifetime1Lifetime1 ||
+            if (this.trap.getLocalX(25745) != var8Lifetime1Lifetime1 ||
               this.trap.getLocalY(false) != var9Lifetime1Lifetime1) {
               this.field_o = this.field_o + this.field_t;
             }
           } else {
             var7Lifetime1 = lw.signum(var7Lifetime1, (byte) -71) * this.field_t;
-            var8Lifetime1Lifetime1 = this.trap.s(25745);
+            var8Lifetime1Lifetime1 = this.trap.getLocalX(25745);
             var9Lifetime1Lifetime1 = this.trap.getLocalY(false);
             this.trap.a((byte) -17, var5Lifetime1, var7Lifetime1);
             if (this.field_q) {
               if (this.trap.p((byte) -103)) {
                 var2 = -var2;
-                this.field_p = dfa.a(-this.trap.q((byte) -80) + var2, 8192, 69);
+                this.field_p = dfa.a(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
               }
               if (this.trap.C((byte) -43)) {
                 var2 = 4096 - var2;
-                this.field_p = dfa.a(var2 - this.trap.q((byte) -80), 8192, 112);
+                this.field_p = dfa.a(var2 - this.trap.getAngle((byte) -80), 8192, 112);
               }
             }
-            if (this.trap.s(25745) != var8Lifetime1Lifetime1 ||
+            if (this.trap.getLocalX(25745) != var8Lifetime1Lifetime1 ||
               this.trap.getLocalY(false) != var9Lifetime1Lifetime1) {
               this.field_o = this.field_o + this.field_t;
             }
@@ -256,20 +256,20 @@ final class SimpleMoveLocomotor extends Locomotor {
         var7Lifetime2 = doa.a(2, this.field_t, var4Lifetime2);
         if (var7Lifetime2 != 0) {
           if (var5Lifetime2 != 0) {
-            var8Lifetime2 = this.trap.s(25745);
+            var8Lifetime2 = this.trap.getLocalX(25745);
             var9Lifetime2 = this.trap.getLocalY(false);
             this.trap.a((byte) -17, var5Lifetime2, var7Lifetime2);
             if (this.field_q) {
               if (this.trap.p((byte) -103)) {
                 var2 = -var2;
-                this.field_p = dfa.a(-this.trap.q((byte) -80) + var2, 8192, 69);
+                this.field_p = dfa.a(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
               }
               if (this.trap.C((byte) -43)) {
                 var2 = 4096 - var2;
-                this.field_p = dfa.a(var2 - this.trap.q((byte) -80), 8192, 112);
+                this.field_p = dfa.a(var2 - this.trap.getAngle((byte) -80), 8192, 112);
               }
             }
-            if (this.trap.s(25745) != var8Lifetime2 ||
+            if (this.trap.getLocalX(25745) != var8Lifetime2 ||
               this.trap.getLocalY(false) != var9Lifetime2) {
               this.field_o = this.field_o + this.field_t;
             }
@@ -280,20 +280,20 @@ final class SimpleMoveLocomotor extends Locomotor {
             return;
           }
           var7Lifetime2 = lw.signum(var7Lifetime2, (byte) -71) * this.field_t;
-          var8Lifetime2Lifetime1 = this.trap.s(25745);
+          var8Lifetime2Lifetime1 = this.trap.getLocalX(25745);
           var9Lifetime2Lifetime1 = this.trap.getLocalY(false);
           this.trap.a((byte) -17, var5Lifetime2, var7Lifetime2);
           if (this.field_q) {
             if (this.trap.p((byte) -103)) {
               var2 = -var2;
-              this.field_p = dfa.a(-this.trap.q((byte) -80) + var2, 8192, 69);
+              this.field_p = dfa.a(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
             }
             if (this.trap.C((byte) -43)) {
               var2 = 4096 - var2;
-              this.field_p = dfa.a(var2 - this.trap.q((byte) -80), 8192, 112);
+              this.field_p = dfa.a(var2 - this.trap.getAngle((byte) -80), 8192, 112);
             }
           }
-          if (this.trap.s(25745) != var8Lifetime2Lifetime1 ||
+          if (this.trap.getLocalX(25745) != var8Lifetime2Lifetime1 ||
             this.trap.getLocalY(false) != var9Lifetime2Lifetime1) {
             this.field_o = this.field_o + this.field_t;
           }
@@ -307,16 +307,16 @@ final class SimpleMoveLocomotor extends Locomotor {
           return;
         }
         var5Lifetime2 = lw.signum(var5Lifetime2, (byte) -52) * this.field_t;
-        var8Lifetime3 = this.trap.s(25745);
+        var8Lifetime3 = this.trap.getLocalX(25745);
         var9Lifetime3 = this.trap.getLocalY(false);
         this.trap.a((byte) -17, var5Lifetime2, var7Lifetime2);
         if (this.field_q) {
           if (this.trap.p((byte) -103)) {
             var2 = -var2;
-            this.field_p = dfa.a(-this.trap.q((byte) -80) + var2, 8192, 69);
+            this.field_p = dfa.a(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
           }
           if (!this.trap.C((byte) -43)) {
-            if (this.trap.s(25745) != var8Lifetime3) {
+            if (this.trap.getLocalX(25745) != var8Lifetime3) {
               this.field_o = this.field_o + this.field_t;
               if (this.field_r <= 0) {
                 return;
@@ -347,9 +347,9 @@ final class SimpleMoveLocomotor extends Locomotor {
             return;
           }
           var2 = 4096 - var2;
-          this.field_p = dfa.a(var2 - this.trap.q((byte) -80), 8192, 112);
+          this.field_p = dfa.a(var2 - this.trap.getAngle((byte) -80), 8192, 112);
         }
-        if (this.trap.s(25745) != var8Lifetime3) {
+        if (this.trap.getLocalX(25745) != var8Lifetime3) {
           this.field_o = this.field_o + this.field_t;
         } else {
           if (this.trap.getLocalY(false) != var9Lifetime3) {

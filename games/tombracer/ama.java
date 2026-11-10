@@ -138,11 +138,11 @@ final class ama extends lba {
           if (vc.field_q.position >= param0) {
             return true;
           }
-          if (oba.field_e == null) {
+          if (OpenGlTransform3D.field_e == null) {
             return false;
           }
           try {
-            var2_int = oba.field_e.c(~param1);
+            var2_int = OpenGlTransform3D.field_e.c(~param1);
             if (var2_int <= 0) {
               if (~var2_int > param1) {
                 dea.a(60);
@@ -157,7 +157,7 @@ final class ama extends lba {
             if (var2_int > -vc.field_q.position + param0) {
               var2_int = -vc.field_q.position + param0;
             }
-            oba.field_e.a(param1 + 1, vc.field_q.position, vc.field_q.payload, var2_int);
+            OpenGlTransform3D.field_e.a(param1 + 1, vc.field_q.position, vc.field_q.payload, var2_int);
             MiscItemBehaviour.field_s = bva.b((byte) -107);
             vc.field_q.position = vc.field_q.position + var2_int;
             if (param0 > vc.field_q.position) {

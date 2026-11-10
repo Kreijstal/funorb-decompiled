@@ -91,7 +91,7 @@ final class Corpse extends IntrusiveNode implements Renderable {
         return this.field_f;
     }
 
-    public final boolean d(byte param0) {
+    public final boolean isRenderExpired(byte param0) {
         if (param0 != 48) {
           return false;
         }

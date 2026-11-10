@@ -5,7 +5,7 @@ final class sga extends hha {
     byte[] field_p;
     int field_q;
     static su field_n;
-    ppa field_o;
+    SectorCacheStore field_o;
 
     final int a(byte param0) {
         if (param0 >= -7) {
@@ -24,7 +24,7 @@ final class sga extends hha {
         if (param0 == -126) {
           return this.field_p;
         }
-        this.field_o = (ppa) null;
+        this.field_o = (SectorCacheStore) null;
         return this.field_p;
     }
 

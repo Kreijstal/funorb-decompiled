@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dda extends IntrusiveNode {
+final class QueuedPlayerEvent extends IntrusiveNode {
     static int[] field_f;
-    private GameEvent field_g;
+    private GameEvent event;
 
-    final GameEvent a(byte param0) {
+    final GameEvent getEvent(byte param0) {
         if (param0 != -125) {
-          dda.releaseStatics(112);
+          QueuedPlayerEvent.releaseStatics(112);
         }
-        return this.field_g;
+        return this.event;
     }
 
     public static void releaseStatics(int param0) {
@@ -19,9 +19,9 @@ final class dda extends IntrusiveNode {
         }
     }
 
-    dda(Player param0, GameEvent param1) {
+    QueuedPlayerEvent(Player param0, GameEvent param1) {
         try {
-          this.field_g = param1;
+          this.event = param1;
           param0.getSimulation(-1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "dda.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');

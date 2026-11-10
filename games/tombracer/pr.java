@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pr {
-    private kda field_a;
+    private HardwareOpenGlToolkit field_a;
     long field_c;
     private static String[] field_b;
 
@@ -41,7 +41,7 @@ final class pr {
         }
     }
 
-    pr(kda param0, long param1, int param2) {
+    pr(HardwareOpenGlToolkit param0, long param1, int param2) {
         try {
           this.field_a = param0;
           this.field_c = param1;

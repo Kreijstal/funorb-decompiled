@@ -8,7 +8,7 @@ final class i extends ka implements e {
     rga[] field_d;
     ava[] field_e;
 
-    final void a(gda param0, el param1, int param2) {
+    final void a(Transform3D param0, el param1, int param2) {
         if (param1 == null) {
           this.field_f.m().a((ka) (this), param0, (int[]) null, param2);
         } else {
@@ -86,7 +86,7 @@ final class i extends ka implements e {
 
     final native void H(int param0, int param1, int param2);
 
-    final void a(gda param0, el param1, int param2, int param3) {
+    final void a(Transform3D param0, el param1, int param2, int param3) {
         if (param1 == null) {
           this.field_f.m().a((ka) (this), param0, (int[]) null, param2, param3);
         } else {

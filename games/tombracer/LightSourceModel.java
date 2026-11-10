@@ -44,7 +44,7 @@ final class LightSourceModel extends TrapModel {
           this.a(false);
           return;
         }
-        if (!this.part.a(param0 - 85)) {
+        if (!this.part.isEnabled(param0 - 85)) {
           this.i(-34);
           return;
         }

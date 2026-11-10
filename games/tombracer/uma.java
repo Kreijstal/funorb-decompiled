@@ -45,7 +45,7 @@ final class uma {
         if (param0 != -1) {
           return false;
         }
-        if (10 > gda.field_c) {
+        if (10 > Transform3D.field_c) {
           return false;
         }
         if (!qga.field_m) {

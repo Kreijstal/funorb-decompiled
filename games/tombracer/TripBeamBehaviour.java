@@ -37,7 +37,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
             this.field_z = null;
             return;
           }
-          this.field_z = new Effect(this.e(6), 4, 128);
+          this.field_z = new Effect(this.getRoot(6), 4, 128);
           return;
         }
         this.q((byte) 92);
@@ -45,7 +45,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
           this.field_z = null;
           return;
         }
-        this.field_z = new Effect(this.e(6), 4, 128);
+        this.field_z = new Effect(this.getRoot(6), 4, 128);
     }
 
     final void g(int param0) {
@@ -119,8 +119,8 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
         BeamSegment var8Lifetime1;
         BeamSegment var8Lifetime2;
         var10 = TombRacer.field_G ? 1 : 0;
-        var11 = this.b(true);
-        if (!this.i(12340).g(112) &&
+        var11 = this.getRoom(true);
+        if (!this.getSimulation(12340).g(112) &&
           null != this.field_t) {
           this.field_t.d(param0 - 5418);
           if (this.field_t.c(0)) {
@@ -160,10 +160,10 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
           } else {
             stackIn_29_1 = 4;
           }
-          ((Room) (Object) stackIn_28_0).a(stackIn_29_1, this.trap, -44, this.field_u, this.e(6), this.field_z);
+          ((Room) (Object) stackIn_28_0).a(stackIn_29_1, this.trap, -44, this.field_u, this.getRoot(6), this.field_z);
           var4 = this.a(this.field_u, (byte) 72);
           this.q((byte) 92);
-          var11.a(1, this.trap, -91, this.field_u, this.e(6), this.field_z);
+          var11.a(1, this.trap, -91, this.field_u, this.getRoot(6), this.field_z);
           var11.b(false).a((byte) 119, this.field_u, this.field_z);
           var7_ref_pc = this.field_u;
           while (var7_ref_pc.nextSegment != null) {
@@ -179,10 +179,10 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
           } else {
             stackIn_25_1 = 3;
           }
-          ((Room) (Object) stackIn_24_0).a(stackIn_25_1, this.field_u, this.e(6), (byte) -123);
+          ((Room) (Object) stackIn_24_0).a(stackIn_25_1, this.field_u, this.getRoot(6), (byte) -123);
           var4 = this.a(this.field_u, (byte) -68);
           this.q((byte) 92);
-          var11.a(1, this.field_u, this.e(6), (byte) 75);
+          var11.a(1, this.field_u, this.getRoot(6), (byte) 75);
           var5 = this.a(this.field_u, (byte) 57);
         }
         if (param0 != 5418) {

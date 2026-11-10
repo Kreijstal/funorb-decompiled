@@ -24,7 +24,7 @@ final class aha {
         int var11;
         int var12;
         int var13;
-        vq var14;
+        VorbisCodebook var14;
         int var15;
         int[] var19;
         int[] var22;
@@ -50,7 +50,7 @@ final class aha {
           var9 = 0;
           while (var9 < var6) {
             if (var8 == 0) {
-              var10 = VorbisSample.field_n[this.field_e].c();
+              var10 = VorbisSample.field_n[this.field_e].decodeScalar();
               for (var11 = var4Lifetime1 - 1; var11 >= 0; var11--) {
                 if (var9 + var11 < var6) {
                   var7[var9 + var11] = var10 % this.field_g;

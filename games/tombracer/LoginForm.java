@@ -107,7 +107,7 @@ final class LoginForm extends WidgetContainer implements cd, tsa {
           var9 = cc.a((byte) 122, di.a(28));
           if (vw.field_a != var9) {
             if (var9 == ub.field_d) {
-              var8 = ppa.field_a;
+              var8 = SectorCacheStore.field_a;
             }
           } else {
             var8 = daa.field_c;
@@ -196,7 +196,7 @@ final class LoginForm extends WidgetContainer implements cd, tsa {
             if (param2 != this.field_E) {
               if (param2 == this.field_y) {
                 if (this.field_x) {
-                  eo.q(83);
+                  HardwareGraphicsToolkit.q(83);
                 } else {
                   if (!this.field_w) {
                     TextResourceLoader.b(50);

@@ -50,7 +50,7 @@ final class fa {
           }
           if (bta.field_q == 2 &&
             !DisplaySettingsDialog.f(24316)) {
-            if (dda.a(false, mn.field_n)) {
+            if (QueuedPlayerEvent.a(false, mn.field_n)) {
               var2 = gl.$cfr$intArgs$a$53ce4ab4c593(87, ConsoleToken.field_n, new String[]{wp.field_a});
               if (var10 != 0) {
                 var2 = gl.$cfr$intArgs$a$53ce4ab4c593(83, pba.field_a, new String[]{wp.field_a});

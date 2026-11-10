@@ -11,7 +11,7 @@ final class bl {
     final static boolean b(int param0) {
         if (param0 != 0) {
           bl.a(-92, 118);
-          if (null == oba.field_e) {
+          if (null == OpenGlTransform3D.field_e) {
             return false;
           }
           if (km.field_p.a(param0 + 0)) {
@@ -19,7 +19,7 @@ final class bl {
           }
           return false;
         }
-        if (null == oba.field_e) {
+        if (null == OpenGlTransform3D.field_e) {
           return false;
         }
         if (km.field_p.a(param0 + 0)) {
@@ -79,7 +79,7 @@ final class bl {
         try {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
-          if (oba.field_e != null && (param0 < 0 ||
+          if (OpenGlTransform3D.field_e != null && (param0 < 0 ||
             uga.field_n == km.field_p)) {
             if (param1 == ~ql.field_k.position &&
               mha.field_D + 10000L < bva.b((byte) -107)) {
@@ -87,7 +87,7 @@ final class bl {
             }
             if (ql.field_k.position > 0) {
               try {
-                oba.field_e.a(ql.field_k.payload, 0, ql.field_k.position, param1 + 119);
+                OpenGlTransform3D.field_e.a(ql.field_k.payload, 0, ql.field_k.position, param1 + 119);
                 mha.field_D = bva.b((byte) -107);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

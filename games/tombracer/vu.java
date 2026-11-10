@@ -6,13 +6,13 @@ final class vu extends vw {
     static int field_f;
     static String field_d;
 
-    vu(eo param0) {
+    vu(HardwareGraphicsToolkit param0) {
         super(param0);
     }
 
     final void a(int param0, iva param1, int param2) {
         try {
-          this.field_c.a(true, param1);
+          this.field_c.bindTexture(true, param1);
           if (param2 != 24595) {
             field_e = (String) null;
           }

@@ -743,7 +743,7 @@ final class fea {
             decompiledFrameRemainder0 = (null == MazeComponent.field_F);
           }
           if (decompiledFrameRemainder0) {
-            if (!kda.field_pd) {
+            if (!HardwareOpenGlToolkit.field_pd) {
               if (fr.field_c >= bda.field_m) {
                 stackIn_17_0 = (fr.field_c < bda.field_m + LightSourceModel.field_p) ? 1 : 0;
               } else {
@@ -754,7 +754,7 @@ final class fea {
             }
             boolean decompiledFrameRemainder1 = true;
             var2_int = stackIn_17_0;
-            if (param1 != null && (kda.field_pd ||
+            if (param1 != null && (HardwareOpenGlToolkit.field_pd ||
               var2_int != 0)) {
               fr.field_c = bda.field_m;
               decompiledFrameRemainder1 = false;
@@ -764,15 +764,15 @@ final class fea {
             }
             if (param1 == null) {
               if (var2_int != 0) {
-                kda.field_pd = true;
+                HardwareOpenGlToolkit.field_pd = true;
               }
             } else {
-              kda.field_pd = false;
+              HardwareOpenGlToolkit.field_pd = false;
             }
             ConsoleToken.field_f = tqa.field_g;
             vf.field_f = SimpleBlockBehaviour.field_r;
           }
-          if (!kda.field_pd &&
+          if (!HardwareOpenGlToolkit.field_pd &&
             bda.field_m > fr.field_c &&
             qma.field_c) {
             vf.field_f = SimpleBlockBehaviour.field_r;
@@ -785,11 +785,11 @@ final class fea {
             return;
           }
           SimpleBlockBehaviour.field_r = -1;
-          if (kda.field_pd) {
+          if (HardwareOpenGlToolkit.field_pd) {
             if (qha.field_f != fr.field_c) {
               return;
             }
-            kda.field_pd = false;
+            HardwareOpenGlToolkit.field_pd = false;
             fr.field_c = 0;
           }
           return;

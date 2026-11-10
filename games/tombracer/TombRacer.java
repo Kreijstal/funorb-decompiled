@@ -80,7 +80,7 @@ public final class TombRacer extends rfa implements ls {
           return true;
         }
         if (this.field_D != null) {
-          this.field_D.a(fna.field_h, kda.field_td, (byte) 126);
+          this.field_D.a(fna.field_h, HardwareOpenGlToolkit.field_td, (byte) 126);
           return true;
         }
         if (hb.field_t.a(param2, param1, param0 ^ -71)) {
@@ -223,7 +223,7 @@ public final class TombRacer extends rfa implements ls {
         pba.releaseStatics(4096);
         IntrusiveDeque.b((byte) 91);
         SoftwareRasterizer.releaseStatics();
-        gda.releaseStatics(27316);
+        Transform3D.releaseStatics(27316);
         ssa.releaseStatics(-98);
         nba.releaseStatics(false);
         fa.a(-23172);
@@ -305,7 +305,7 @@ public final class TombRacer extends rfa implements ls {
         w.releaseStatics(-101);
         fna.releaseStatics(1);
         ko.b(-100);
-        dda.releaseStatics(30967);
+        QueuedPlayerEvent.releaseStatics(30967);
         vha.a(640);
         me.releaseStatics(17355);
         dl.releaseStatics((byte) 96);
@@ -544,7 +544,7 @@ public final class TombRacer extends rfa implements ls {
         DateFieldsWidget.releaseStatics(25);
         SocketArchiveNetworkClient.releaseStatics(false);
         qqa.releaseStatics(0);
-        ppa.releaseStatics(-1551894744);
+        SectorCacheStore.releaseStatics(-1551894744);
         sga.releaseStatics((byte) -117);
         CachedArchiveSource.releaseStatics((byte) -50);
         AllPlatformsMazeComponent.f(true);
@@ -555,7 +555,7 @@ public final class TombRacer extends rfa implements ls {
         PooledObject.releaseStatics(72);
         WhirlpoolDigest.releaseStatics(param0 + 3560);
         jk.releaseStatics((byte) 76);
-        fka.releaseStatics();
+        SoundTone.releaseStatics();
         aa.releaseStatics(true);
         PerlinNoise2D.releaseStatics((byte) -123);
         uq.releaseStatics(param0 + 3747);
@@ -693,7 +693,7 @@ public final class TombRacer extends rfa implements ls {
         hsa.releaseStatics(param0 ^ -3693);
         uua.releaseStatics((byte) -120);
         uv.releaseStatics(0);
-        oba.releaseStatics((byte) -14);
+        OpenGlTransform3D.releaseStatics((byte) -14);
         mq.releaseStatics(26860);
         OpenGlSprite.releaseStatics(false);
         OpenGlFramebuffer.releaseStatics(param0 ^ -33413);
@@ -703,11 +703,11 @@ public final class TombRacer extends rfa implements ls {
         tj.a(360);
         qf.releaseStatics((byte) -93);
         hoa.releaseStatics(34067);
-        eo.releaseStatics((byte) 3);
+        HardwareGraphicsToolkit.releaseStatics((byte) 3);
         gj.releaseStatics(-119);
         una.a(true);
         hk.releaseStatics(param0 + 3674);
-        asa.releaseStatics(14);
+        AffineTransform3D.releaseStatics(14);
         ura.a(false);
         kp.releaseStatics(false);
         vw.a((byte) 101);
@@ -719,10 +719,10 @@ public final class TombRacer extends rfa implements ls {
         dn.releaseStatics(0);
         ne.releaseStatics(15);
         iw.releaseStatics(false);
-        kda.releaseStatics(32885);
+        HardwareOpenGlToolkit.releaseStatics(32885);
         GrowableIntList.releaseStatics(0);
         CachedTextLayout.releaseStatics(false);
-        vp.releaseStatics(63);
+        DraggableWidget.releaseStatics(63);
         k.e(0);
         FullscreenConfirmationDialog.releaseStatics(-87);
         bra.releaseStatics((byte) 86);
@@ -1006,7 +1006,7 @@ public final class TombRacer extends rfa implements ls {
         tga.field_a.ya();
         tga.field_a.DA(var2 / 2, var3 / 2, 512, 512);
         tga.field_a.f(8, 16384);
-        gda var5 = tga.field_a.b();
+        Transform3D var5 = tga.field_a.b();
         var5.a(0, 0, -1600, 0, 0, 0);
         tga.field_a.a(var5);
     }
@@ -1480,7 +1480,7 @@ public final class TombRacer extends rfa implements ls {
               var7 = 1 & SecondaryNodeDequeIterator.field_a.field_k.field_b >> var5;
               if (var6 != var7 &&
                 1 == var6) {
-                var8 = SecondaryNodeDequeIterator.field_a.field_k.c(var5, 0);
+                var8 = SecondaryNodeDequeIterator.field_a.field_k.getPlayerName(var5, 0);
                 var9 = PortalBehaviour.a(1, gl.$cfr$intArgs$a$53ce4ab4c593(107, ad.field_h, new String[]{var8}), 111, var5, var8);
                 iqa.field_c.a(0, var9);
               }

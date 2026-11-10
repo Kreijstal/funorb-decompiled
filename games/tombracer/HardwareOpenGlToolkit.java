@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kda extends eo {
+final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
     static String field_gd;
     static boolean field_pd;
     private IntrusiveDeque field_bd;
@@ -139,7 +139,7 @@ final class kda extends eo {
         }
     }
 
-    final gf a(int[] param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
+    final gf createIntTexture2D(int[] param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         OpenGlTexture2D var9 = null;
@@ -252,7 +252,7 @@ final class kda extends eo {
         super.resetDriverState(param0);
     }
 
-    final void I(int param0) {
+    final void applyFogParameters(int param0) {
         this.field_Hc = (float)(-this.field_Ac + this.field_k);
         this.field_B = (float)(-this.field_J) + this.field_Hc;
         if (this.field_B < (float)this.field_D) {
@@ -305,15 +305,15 @@ final class kda extends eo {
         this.la();
         jaggl.OpenGL.glReadBuffer(1028);
         jaggl.OpenGL.glDrawBuffer(1029);
-        this.O(256);
-        this.b(false, -70);
+        this.useIdentityProjection(256);
+        this.setFogEnabled(false, -70);
         this.d(0, false);
-        this.f(0, false);
+        this.setLightingEnabled(0, false);
         this.b(false, (byte) 81);
-        this.a(true, (iva) null);
+        this.bindTexture(true, (iva) null);
         this.a((byte) -80, false, false, -2);
         this.a((byte) 118, 1);
-        this.c(0, 1);
+        this.setBlendMode(0, 1);
         jaggl.OpenGL.glMatrixMode(5889);
         jaggl.OpenGL.glLoadIdentity();
         jaggl.OpenGL.glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
@@ -418,7 +418,7 @@ final class kda extends eo {
         return false;
     }
 
-    final gf a(int param0, int param1, ft param2, byte param3, una param4) {
+    final gf createTexture2D(int param0, int param1, ft param2, byte param3, una param4) {
         RuntimeException var6 = null;
         pe stackIn_8_0 = null;
         OpenGlTexture2D stackIn_10_0 = null;
@@ -521,7 +521,7 @@ final class kda extends eo {
         }
     }
 
-    final gf createIntTexture2D(boolean param0, byte[] param1, int param2, int param3, int param4, int param5, ft param6, int param7) {
+    final gf a(boolean param0, byte[] param1, int param2, int param3, int param4, int param5, ft param6, int param7) {
         RuntimeException var9 = null;
         OpenGlTexture2D var10 = null;
         OpenGlTexture2D stackIn_7_0 = null;
@@ -604,7 +604,7 @@ final class kda extends eo {
         }
     }
 
-    final void v(int param0) {
+    final void applyDirectionalLightColors(int param0) {
         dia.field_r[3] = 1.0f;
         dia.field_r[2] = this.field_j * this.field_Kb;
         dia.field_r[1] = this.field_j * this.field_yb;
@@ -635,7 +635,7 @@ final class kda extends eo {
         int var2 = 43 % ((param0 - 69) / 50);
     }
 
-    final void h(byte param0) {
+    final void applyLighting(byte param0) {
         if (param0 != -102) {
           return;
         }
@@ -731,9 +731,9 @@ final class kda extends eo {
 
     final void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
         try {
-          this.J(19822);
-          this.a(true, (iva) null);
-          this.c(0, 1);
+          this.usePixelProjection(19822);
+          this.bindTexture(true, (iva) null);
+          this.setBlendMode(0, 1);
           this.i((byte) 126);
           jaggl.OpenGL.glPixelZoom(1.0f, -1.0f);
           jaggl.OpenGL.glRasterPos2i(param0, param1);
@@ -1068,7 +1068,7 @@ final class kda extends eo {
         }
     }
 
-    final void a(mna param0, int param1) {
+    final void bindVertexLayout(mna param0, int param1) {
         int var15 = 0;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
@@ -1276,7 +1276,7 @@ final class kda extends eo {
         this.field_nd.addLast((byte) -124, var3);
     }
 
-    final Object a(boolean param0, java.awt.Canvas param1) {
+    final Object createSurface(boolean param0, java.awt.Canvas param1) {
         long var3_long = 0L;
         RuntimeException var3 = null;
         Long stackIn_6_0 = null;
@@ -1290,7 +1290,7 @@ final class kda extends eo {
             throw new RuntimeException();
           }
           if (param0) {
-            this.v(42);
+            this.applyDirectionalLightColors(42);
           }
           stackIn_6_0 = new Long(var3_long);
           return stackIn_6_0;
@@ -1308,7 +1308,7 @@ final class kda extends eo {
         }
     }
 
-    final void a(dn param0, byte param1) {
+    final void applyTexCoordGeneration(dn param0, byte param1) {
         int var3_int = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -1330,7 +1330,7 @@ final class kda extends eo {
             jaggl.OpenGL.glDisable(3170);
           }
           if (param1 != 0) {
-            this.v(82);
+            this.applyDirectionalLightColors(82);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1389,7 +1389,7 @@ final class kda extends eo {
         var4 = TombRacer.field_G ? 1 : 0;
         if (param1 < 37) {
           var5 = (dn) null;
-          this.a((dn) null, (byte) 83);
+          this.applyTexCoordGeneration((dn) null, (byte) 83);
         }
         var3 = param0;
         if (var3 == 3) {
@@ -1428,7 +1428,7 @@ final class kda extends eo {
         }
     }
 
-    kda(jaggl.OpenGL param0, java.awt.Canvas param1, long param2, d param3, ResourceArchive param4, int param5) {
+    HardwareOpenGlToolkit(jaggl.OpenGL param0, java.awt.Canvas param1, long param2, d param3, ResourceArchive param4, int param5) {
         super(param1, new Long(param2), param3, param4, param5, 1);
         int var15 = 0;
         int stackIn_21_1 = 0;
@@ -1660,7 +1660,7 @@ final class kda extends eo {
         }
     }
 
-    final synchronized void a(int param0, int param1, byte param2) {
+    final synchronized void queueProgramDeletion(int param0, int param1, byte param2) {
         al var4 = new al(param0);
         var4.key = (long)param1;
         if (param2 <= 41) {
@@ -1829,7 +1829,7 @@ final class kda extends eo {
           var4 = (Long) (param0);
           this.field_Mc.releaseSurface(param2, var4.longValue());
           if (param1) {
-            this.I(-84);
+            this.applyFogParameters(-84);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

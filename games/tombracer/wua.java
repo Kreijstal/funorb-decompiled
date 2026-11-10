@@ -15,7 +15,7 @@ final class wua extends DualLinkNode {
         if (param0 != 49) {
           wua.releaseStatics((byte) 74);
         }
-        stackIn_6_0 = (gda.field_c >= 10) && (cga.field_f >= 13);
+        stackIn_6_0 = (Transform3D.field_c >= 10) && (cga.field_f >= 13);
         return stackIn_6_0;
     }
 

@@ -16,7 +16,7 @@ final class pg extends WidgetContainer implements tma, tsa {
         }
         sra.field_t = true;
         jda.a(true, 262144);
-        gda.field_c = 0;
+        Transform3D.field_c = 0;
         if (!param0) {
           return;
         }

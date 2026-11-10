@@ -669,7 +669,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -11, "multiconst_invite_only");
                 if (var2 != null) {
-                  kda.field_cd = jaa.a((byte) 95, var2);
+                  HardwareOpenGlToolkit.field_cd = jaa.a((byte) 95, var2);
                 }
                 var2 = dn.a((byte) -62, "multiconst_clan");
                 if (null != var2) {
@@ -1063,7 +1063,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -42, "goback");
                 if (null != var2) {
-                  kda.field_gd = jaa.a((byte) 36, var2);
+                  HardwareOpenGlToolkit.field_gd = jaa.a((byte) 36, var2);
                 }
                 var2 = dn.a((byte) -36, "otheroptions");
                 if (null != var2) {
@@ -1467,7 +1467,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -51, "login_username");
                 if (var2 != null) {
-                  ppa.field_a = jaa.a((byte) 49, var2);
+                  SectorCacheStore.field_a = jaa.a((byte) 49, var2);
                 }
                 var2 = dn.a((byte) 119, "login_email");
                 if (var2 != null) {

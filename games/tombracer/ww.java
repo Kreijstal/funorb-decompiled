@@ -517,7 +517,7 @@ final class ww extends ka {
         }
     }
 
-    final void a(gda param0, el param1, int param2) {
+    final void a(Transform3D param0, el param1, int param2) {
         this.b(param0, param1, -1, param2);
     }
 
@@ -2961,7 +2961,7 @@ final class ww extends ka {
         return true;
     }
 
-    private final void b(gda param0, el param1, int param2, int param3) {
+    private final void b(Transform3D param0, el param1, int param2, int param3) {
         try {
           float stackIn_17_0 = 0.0f;
           float stackIn_27_0 = 0.0f;
@@ -3747,7 +3747,7 @@ final class ww extends ka {
         return;
     }
 
-    final void a(gda param0, el param1, int param2, int param3) {
+    final void a(Transform3D param0, el param1, int param2, int param3) {
         this.b(param0, param1, param2, param3);
     }
 

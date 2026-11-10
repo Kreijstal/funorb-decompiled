@@ -34,7 +34,7 @@ final class Room implements SwitchableScope, Renderable, noa {
     private BitPacketBuffer data;
     private ui field_y;
     private bba field_U;
-    private int field_I;
+    private int tick;
     private boolean field_T;
     private ui field_q;
     private Collidable field_o;
@@ -204,7 +204,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         }
         var9 = (Puddle) (var8.first(true));
         while (var9 != null) {
-          if (~var9.r(-70) == ~param2) {
+          if (~var9.getKind(-70) == ~param2) {
             var10 = var9.t(param0 ^ 30096);
             if (io.centredBoxesOverlap(var6, var9.getY(9648), (byte) -78, var6, var9.getX(3), param3, var10, var10, param4)) {
               var9.h((byte) -1);
@@ -1010,11 +1010,11 @@ final class Room implements SwitchableScope, Renderable, noa {
         return null == this.field_U ? -1 : this.field_U.a(false);
     }
 
-    final void a(byte param0, int param1) {
+    final void setTick(byte param0, int param1) {
         if (param0 <= 14) {
           this.field_o = (Collidable) null;
         }
-        this.field_I = param1;
+        this.tick = param1;
     }
 
     final boolean o(byte param0) {
@@ -1549,7 +1549,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         if (null != this.field_G) {
           this.field_G.a(param1 + 82, false);
         }
-        this.field_I = this.field_I + 1;
+        this.tick = this.tick + 1;
         this.field_r = this.field_r + 1;
         return;
     }
@@ -1687,11 +1687,11 @@ final class Room implements SwitchableScope, Renderable, noa {
         }
     }
 
-    final int p(byte param0) {
+    final int getTick(byte param0) {
         if (param0 < 14) {
           return -10;
         }
-        return this.field_I;
+        return this.tick;
     }
 
     private final void encode(BitPacketBuffer param0, int param1) {
@@ -1756,7 +1756,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         }
     }
 
-    public final boolean d(byte param0) {
+    public final boolean isRenderExpired(byte param0) {
         if (param0 != 48) {
           return true;
         }

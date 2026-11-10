@@ -11,7 +11,7 @@ final class dp extends vw {
     static jea field_i;
     static su field_g;
 
-    dp(kda param0, ResourceArchive param1, hk param2) {
+    dp(HardwareOpenGlToolkit param0, ResourceArchive param1, hk param2) {
         super(param0);
         pr var4 = null;
         RuntimeException var4_ref = null;
@@ -100,9 +100,9 @@ final class dp extends vw {
         if (param0 < -4) {
           if (this.field_h) {
             this.field_c.e(1, false);
-            this.field_c.a(true, (iva) null);
+            this.field_c.bindTexture(true, (iva) null);
             this.field_c.e(0, false);
-            this.field_c.a(true, (iva) null);
+            this.field_c.bindTexture(true, (iva) null);
             jaggl.OpenGL.glUseProgramObjectARB(0L);
             this.field_h = false;
           }
@@ -111,9 +111,9 @@ final class dp extends vw {
         this.c(6);
         if (this.field_h) {
           this.field_c.e(1, false);
-          this.field_c.a(true, (iva) null);
+          this.field_c.bindTexture(true, (iva) null);
           this.field_c.e(0, false);
-          this.field_c.a(true, (iva) null);
+          this.field_c.bindTexture(true, (iva) null);
           jaggl.OpenGL.glUseProgramObjectARB(0L);
           this.field_h = false;
         }
@@ -146,9 +146,9 @@ final class dp extends vw {
         if (this.field_e &&
           var3 != null) {
           this.field_c.e(1, false);
-          this.field_c.a(true, var3);
+          this.field_c.bindTexture(true, var3);
           this.field_c.e(0, false);
-          this.field_c.a(true, this.field_f.field_f);
+          this.field_c.bindTexture(true, this.field_f.field_f);
           var5 = this.field_k.field_b;
           jaggl.OpenGL.glUseProgramObjectARB(var5);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var5, "normalSampler"), 0);
@@ -173,7 +173,7 @@ final class dp extends vw {
           if (this.field_h) {
             return;
           }
-          this.field_c.a(true, param1);
+          this.field_c.bindTexture(true, param1);
           this.field_c.a((byte) 10, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

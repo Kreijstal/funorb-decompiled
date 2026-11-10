@@ -141,7 +141,7 @@ final class CommonChooseReward implements dv {
         }
     }
 
-    final int b(byte param0) {
+    final int getCurrentPos(byte param0) {
         if (param0 <= 18) {
           this.currentPlayerId = 121;
           return this.currentPos;

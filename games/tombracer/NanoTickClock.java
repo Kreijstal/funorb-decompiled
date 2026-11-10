@@ -70,7 +70,7 @@ final class NanoTickClock extends GameClock {
             return false;
           }
           fna.field_h = dl.field_o[vha.field_b];
-          kda.field_td = MovingSawComponent.field_O[vha.field_b];
+          HardwareOpenGlToolkit.field_td = MovingSawComponent.field_O[vha.field_b];
           vha.field_b = 1 + vha.field_b & 127;
           stackIn_8_0 = true;
         }

@@ -130,7 +130,7 @@ final class SwitchLinkList {
         }
     }
 
-    final Switchable[] c(int param0) {
+    final Switchable[] getTargets(int param0) {
         if (param0 != 1) {
           field_c = (String) null;
         }

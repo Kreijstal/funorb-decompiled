@@ -67,7 +67,7 @@ final class SimpleActionBehaviour extends Behaviour {
             this.attachToTrap(true, (Trap) null);
           }
           super.attachToTrap(param0, param1);
-          this.field_f = false;
+          this.enabled = false;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wn.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

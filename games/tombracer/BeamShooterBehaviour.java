@@ -49,7 +49,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
           this.field_t = false;
           return;
         }
-        if (!this.i(12340).g(108) &&
+        if (!this.getSimulation(12340).g(108) &&
           null != this.field_n) {
           this.field_n.d(0);
           if (this.field_n.c(0)) {
@@ -93,8 +93,8 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
             this.field_s.field_j = 5;
           }
         }
-        var9 = this.b(true);
-        var10 = var9.a(1, this.trap, -66, this.field_s, this.e(6), this.field_r) ? 1 : 0;
+        var9 = this.getRoom(true);
+        var10 = var9.a(1, this.trap, -66, this.field_s, this.getRoot(6), this.field_r) ? 1 : 0;
         var9.b(false).a((byte) 120, this.field_s, this.field_r);
         if (var10 != 0) {
           var11 = this.field_s;
@@ -446,7 +446,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
           return;
         }
         super.toggle(78);
-        if (!this.field_f) {
+        if (!this.enabled) {
           this.field_t = false;
         }
     }
@@ -465,7 +465,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
     final void attachToTrap(boolean param0, Trap param1) {
         try {
           super.attachToTrap(param0, param1);
-          this.field_r.a(this.e(6), 2348);
+          this.field_r.a(this.getRoot(6), 2348);
           if (!param0) {
             this.field_q = true;
           }

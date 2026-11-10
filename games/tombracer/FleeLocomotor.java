@@ -64,7 +64,7 @@ final class FleeLocomotor extends Locomotor {
         this.field_s.field_f = var14.getX(3);
         this.field_s.field_d = var14.getY(9648);
         this.trap.a(this.field_s, 117);
-        var4 = this.field_s.field_f - this.trap.s(25745);
+        var4 = this.field_s.field_f - this.trap.getLocalX(25745);
         var5 = this.field_s.field_d - this.trap.getLocalY(false);
         var6 = (var5 >> 16) * (var5 >> 16) + (var4 >> 16) * (var4 >> 16);
         if (this.field_D &&
@@ -90,7 +90,7 @@ final class FleeLocomotor extends Locomotor {
               var12 = doa.a(2, this.field_A, var10);
               this.trap.a((byte) -110, var11, var12);
               if (this.field_w) {
-                this.trap.rotateBy(false, -this.trap.q((byte) -80) + var8);
+                this.trap.rotateBy(false, -this.trap.getAngle((byte) -80) + var8);
               }
               return;
             }
@@ -109,7 +109,7 @@ final class FleeLocomotor extends Locomotor {
           if (!this.field_w) {
             return;
           }
-          this.trap.rotateBy(false, -this.trap.q((byte) -80) + var8Lifetime4);
+          this.trap.rotateBy(false, -this.trap.getAngle((byte) -80) + var8Lifetime4);
           return;
         }
         var7Lifetime1 = (this.field_t >> 16) * (this.field_t >> 16);
@@ -143,12 +143,12 @@ final class FleeLocomotor extends Locomotor {
                 var12Lifetime1 = doa.a(2, this.field_A, var10Lifetime1);
                 this.trap.a((byte) -110, var11Lifetime1, var12Lifetime1);
                 if (this.field_w) {
-                  this.trap.rotateBy(false, -this.trap.q((byte) -80) + var8Lifetime1);
+                  this.trap.rotateBy(false, -this.trap.getAngle((byte) -80) + var8Lifetime1);
                 }
               }
               return;
             }
-            this.field_p = this.trap.y(1751085328).nextBounded(this.field_u, 0) - this.field_u / 2;
+            this.field_p = this.trap.getRandom(1751085328).nextBounded(this.field_u, 0) - this.field_u / 2;
           }
           this.field_D = true;
           if (this.field_r) {
@@ -176,7 +176,7 @@ final class FleeLocomotor extends Locomotor {
             var12Lifetime2 = doa.a(2, this.field_A, var10Lifetime2);
             this.trap.a((byte) -110, var11Lifetime2, var12Lifetime2);
             if (this.field_w) {
-              this.trap.rotateBy(false, -this.trap.q((byte) -80) + var8Lifetime2);
+              this.trap.rotateBy(false, -this.trap.getAngle((byte) -80) + var8Lifetime2);
             }
             return;
           }
@@ -195,7 +195,7 @@ final class FleeLocomotor extends Locomotor {
         if (!this.field_w) {
           return;
         }
-        this.trap.rotateBy(false, -this.trap.q((byte) -80) + var8Lifetime3);
+        this.trap.rotateBy(false, -this.trap.getAngle((byte) -80) + var8Lifetime3);
         return;
     }
 

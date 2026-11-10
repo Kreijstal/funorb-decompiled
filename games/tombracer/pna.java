@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pna extends gda {
+final class pna extends Transform3D {
     float field_f;
     float field_e;
     float field_r;

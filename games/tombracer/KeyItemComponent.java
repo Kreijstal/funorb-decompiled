@@ -10,7 +10,7 @@ final class KeyItemComponent extends ItemComponent {
         }
         sra.field_t = param0;
         jda.a(false, 262144);
-        gda.field_c = 0;
+        Transform3D.field_c = 0;
     }
 
     final Trap createTrap(boolean param0, int param1, Room param2) {

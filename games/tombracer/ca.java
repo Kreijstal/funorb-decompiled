@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ca extends GameFont {
-    private eo field_g;
+    private HardwareGraphicsToolkit field_g;
     private gf field_f;
     private qm field_d;
     private boolean field_e;
 
-    ca(eo param0, FontMetrics param1, SpriteData[] param2, boolean param3) {
+    ca(HardwareGraphicsToolkit param0, FontMetrics param1, SpriteData[] param2, boolean param3) {
         super(param0, param1);
         int incrementValue$3 = 0;
         int incrementValue$0 = 0;
@@ -272,14 +272,14 @@ final class ca extends GameFont {
     }
 
     final void drawGlyph(char param0, int param1, int param2, int param3, boolean param4) {
-        asa var6;
+        AffineTransform3D var6;
         this.field_g.H(-122);
-        this.field_g.a(true, this.field_f);
+        this.field_g.bindTexture(true, this.field_f);
         if (!this.field_e &&
           !param4) {
-          this.field_g.a(PlatformComponent.field_F, (byte) -110, PlatformComponent.field_F);
+          this.field_g.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, PlatformComponent.field_F);
         } else {
-          this.field_g.a(iw.field_c, (byte) -110, PlatformComponent.field_F);
+          this.field_g.setTextureCombineOperations(iw.field_c, (byte) -110, PlatformComponent.field_F);
           this.field_g.a(pea.field_c, 0, -121);
           this.field_g.g(3625, param3);
         }
@@ -287,7 +287,7 @@ final class ca extends GameFont {
         var6.a(false, param1, param2, 0);
         this.field_g.F(-1662);
         this.field_g.a(-128, 0, this.field_d);
-        this.field_g.a(this.field_g.field_Db, -32);
+        this.field_g.bindVertexLayout(this.field_g.field_Db, -32);
         this.field_g.a(2, vs.field_T, param0 * 4, 0);
         if (this.field_e ||
           param4) {

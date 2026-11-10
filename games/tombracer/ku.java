@@ -197,7 +197,7 @@ final class ku extends qe {
     }
 
     final void a(byte param0) {
-        oba var2 = this.field_a.field_j;
+        OpenGlTransform3D var2 = this.field_a.field_j;
         if (this.field_e) {
           jaggl.OpenGL.glBindProgramARB(34336, this.field_a.field_N == 2147483647 ? this.field_d.field_a : this.field_k.field_a);
         } else {

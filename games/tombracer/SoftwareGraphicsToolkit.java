@@ -349,7 +349,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         this.field_Y[param0].a((Runnable) ((Object) Thread.currentThread()), (byte) 100);
     }
 
-    final void a(gda param0) {
+    final void a(Transform3D param0) {
         this.field_A = (pna) (param0);
     }
 
@@ -512,9 +512,9 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         return false;
     }
 
-    final gda e() {
+    final Transform3D e() {
         tw var1 = this.a((Runnable) ((Object) Thread.currentThread()));
-        return (gda) ((Object) var1.field_u);
+        return (Transform3D) ((Object) var1.field_u);
     }
 
     final void d() {
@@ -1165,8 +1165,8 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         this.g();
     }
 
-    final gda b() {
-        return (gda) ((Object) new pna());
+    final Transform3D b() {
+        return (Transform3D) ((Object) new pna());
     }
 
     final void xa(float param0) {

@@ -79,7 +79,7 @@ final class eqa implements os {
             null != uu.field_a) {
             var5 = 1;
           }
-          if (gda.a(var5, -20011) == 2) {
+          if (Transform3D.a(var5, -20011) == 2) {
             MazeGenerator.a(var5, param2, (byte) 108, 1);
           }
           opa.a(bta.field_q, var4_ref_String, param0, 32371, wp.field_a, -1);
@@ -96,7 +96,7 @@ final class eqa implements os {
           DarknessBehaviour.a(-1 + vc.field_n.length(), ' ', -11, vc.field_n);
           return true;
         }
-        var4 = kda.field_td;
+        var4 = HardwareOpenGlToolkit.field_td;
         if (!rra.a((byte) -126, (char) var4)) {
           return false;
         }

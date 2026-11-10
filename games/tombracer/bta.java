@@ -33,8 +33,8 @@ final class bta extends vw {
     final void a(int param0, boolean param1) {
         this.field_k = param1 ? true : false;
         this.field_c.e(1, false);
-        this.field_c.a(true, this.field_p);
-        this.field_c.a(PlatformComponent.field_F, (byte) -110, r.field_m);
+        this.field_c.bindTexture(true, this.field_p);
+        this.field_c.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, r.field_m);
         this.field_c.a(pea.field_c, 0, -30);
         this.field_c.a(ej.field_c, 2, -6219, true, false);
         this.field_c.a(0, false, PlayerContextMenu.field_j);
@@ -58,7 +58,7 @@ final class bta extends vw {
         field_d = null;
     }
 
-    bta(kda param0, ResourceArchive param1) {
+    bta(HardwareOpenGlToolkit param0, ResourceArchive param1) {
         super(param0);
         int stackIn_6_0 = 0;
         int stackIn_9_1 = 0;
@@ -170,8 +170,8 @@ final class bta extends vw {
     final void a(int param0) {
         this.field_c.e(1, false);
         if (param0 < -4) {
-          this.field_c.a(true, (iva) null);
-          this.field_c.a(iw.field_c, (byte) -110, iw.field_c);
+          this.field_c.bindTexture(true, (iva) null);
+          this.field_c.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
           this.field_c.a(ej.field_c, 0, -49);
           this.field_c.a(pea.field_c, 2, -53);
           this.field_c.a(0, false, ej.field_c);
@@ -190,8 +190,8 @@ final class bta extends vw {
           return;
         }
         this.a(73);
-        this.field_c.a(true, (iva) null);
-        this.field_c.a(iw.field_c, (byte) -110, iw.field_c);
+        this.field_c.bindTexture(true, (iva) null);
+        this.field_c.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
         this.field_c.a(ej.field_c, 0, -49);
         this.field_c.a(pea.field_c, 2, -53);
         this.field_c.a(0, false, ej.field_c);
@@ -225,11 +225,11 @@ final class bta extends vw {
               this.field_c.a(0, false, ej.field_c);
               this.field_j = false;
             }
-            this.field_c.a(true, param1);
+            this.field_c.bindTexture(true, param1);
             this.field_c.a((byte) 114, param0);
           } else {
             if (!this.field_j) {
-              this.field_c.a(true, this.field_c.field_Jb);
+              this.field_c.bindTexture(true, this.field_c.field_Jb);
               this.field_c.a((byte) 120, 1);
               this.field_c.a(PlayerContextMenu.field_j, 0, -21);
               this.field_c.a(0, false, PlayerContextMenu.field_j);
@@ -266,7 +266,7 @@ final class bta extends vw {
         int stackIn_7_0 = 0;
         int stackIn_8_1 = 0;
         int var2;
-        asa var3;
+        AffineTransform3D var3;
         var2 = this.field_c.d(false);
         var3 = this.field_c.E(43);
         if (this.field_k) {

@@ -9,7 +9,7 @@ abstract class SwitchComponent extends PrefabComponent {
 
     final void w(int param0) {
         super.w(-126);
-        this.field_G.a(this.o((byte) -57), false);
+        this.field_G.a(this.getRoot((byte) -57), false);
         if (param0 >= -122) {
           this.field_G = (f) null;
         }
@@ -20,7 +20,7 @@ abstract class SwitchComponent extends PrefabComponent {
     void encode(boolean param0, BitPacketBuffer param1) {
         try {
           super.encode(param0, param1);
-          this.field_G.a(param1, 115, this.o((byte) -39));
+          this.field_G.a(param1, 115, this.getRoot((byte) -39));
           if (this.r((byte) 93)) {
             param1.writeBits((byte) -19, !this.field_I ? 0 : 1, 1);
           }

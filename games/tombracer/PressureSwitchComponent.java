@@ -42,13 +42,13 @@ final class PressureSwitchComponent extends SwitchComponent {
               if (var5.field_y != 0) {
                 nw.a(false, var4_int, var5);
               }
-              var6 = gda.a(var4_int, -20011);
+              var6 = Transform3D.a(var4_int, -20011);
               oka.field_y[var4_int].field_R = vda.field_m[var6];
               PitModel.field_p[var4_int].field_r = StripedMazeGenerator.field_c[var6];
             }
           }
           if (0 != ara.field_ub.field_y) {
-            fj.field_c = new ReportAbuseDialog(ara.field_ub.field_q, ara.field_ub.field_A, ara.field_ub.field_G, ara.field_ub.field_t, param2, WallModel.field_r, oba.field_f, cga.field_g, Corpse.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p, (String) null, 0L);
+            fj.field_c = new ReportAbuseDialog(ara.field_ub.field_q, ara.field_ub.field_A, ara.field_ub.field_G, ara.field_ub.field_t, param2, WallModel.field_r, OpenGlTransform3D.field_f, cga.field_g, Corpse.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p, (String) null, 0L);
           }
           var9 = mna.a((byte) 73, param3, di.field_a, mna.field_d);
           if (var9 != null) {

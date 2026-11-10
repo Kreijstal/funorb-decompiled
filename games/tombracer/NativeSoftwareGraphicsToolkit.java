@@ -6,12 +6,12 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
     long field_nativeid;
     private ya field_p;
     private IntrusiveDeque field_o;
-    private gda field_i;
+    private Transform3D field_i;
     private int field_k;
     private NodeHashTable field_r;
     private NativeCanvasSurface field_f;
     private int field_n;
-    private gda field_j;
+    private Transform3D field_j;
     private static int[] field_m;
     private static float[] field_e;
     private static float[] field_d;
@@ -42,7 +42,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
           this.MA(this.field_c, 0, 0);
           ija.a(true, (byte) 98, false);
           this.field_h = true;
-          this.field_i = (gda) ((Object) new ja());
+          this.field_i = (Transform3D) ((Object) new ja());
           this.a(new ja());
           this.createRenderContexts(1);
           this.g(0);
@@ -63,7 +63,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
 
     private final native void va(za param0);
 
-    final void a(gda param0) {
+    final void a(Transform3D param0) {
         this.field_j = param0;
         this.ma(((ja) (param0)).field_nativeid);
     }
@@ -226,7 +226,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
 
     private final native void FA();
 
-    final gda e() {
+    final Transform3D e() {
         return this.field_i;
     }
 
@@ -236,8 +236,8 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
 
     final native void setClip(int param0, int param1, int param2, int param3);
 
-    final gda b() {
-        return (gda) ((Object) new ja());
+    final Transform3D b() {
+        return (Transform3D) ((Object) new ja());
     }
 
     private final boolean uploadTextureMetadata(short param0) {

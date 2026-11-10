@@ -198,7 +198,7 @@ final class tqa implements Renderable {
         field_e = null;
     }
 
-    public final boolean d(byte param0) {
+    public final boolean isRenderExpired(byte param0) {
         if (param0 != 48) {
           this.a(8, 65, true, 67, -80, 46, 77);
         }

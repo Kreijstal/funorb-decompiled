@@ -124,7 +124,7 @@ final class cc extends IntrusiveNode {
             return true;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (kda.field_hd != param1 &&
+          if (HardwareOpenGlToolkit.field_hd != param1 &&
             param1 != 96 ||
             var8Lifetime1 >= 0) {
             if (param1 != mf.field_a &&

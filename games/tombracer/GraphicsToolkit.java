@@ -18,7 +18,7 @@ abstract class GraphicsToolkit {
 
     abstract void d(int param0, int param1, int param2, int param3, int param4, int param5);
 
-    abstract gda b();
+    abstract Transform3D b();
 
     abstract void la();
 
@@ -65,7 +65,7 @@ abstract class GraphicsToolkit {
 
     abstract ka a(oc param0, int param1, int param2, int param3, int param4);
 
-    abstract gda e();
+    abstract Transform3D e();
 
     final void c(int param0, int param1, int param2, int param3, int param4, int param5) {
         if (param4 != -22971) {
@@ -235,7 +235,7 @@ abstract class GraphicsToolkit {
 
     abstract int l();
 
-    abstract void a(gda param0);
+    abstract void a(Transform3D param0);
 
     final ToolkitSprite a(int[] param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;

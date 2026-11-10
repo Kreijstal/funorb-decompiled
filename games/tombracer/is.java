@@ -38,7 +38,7 @@ final class is extends jea {
         }
         if (fna.field_h != 85) {
           if (this.field_vb.length() < 12) {
-            var2 = Character.toLowerCase(kda.field_td);
+            var2 = Character.toLowerCase(HardwareOpenGlToolkit.field_td);
             if (var2 == 32) {
               var2 = 95;
             }
@@ -120,7 +120,7 @@ final class is extends jea {
           }
           return true;
         }
-        var2Lifetime1 = Character.toLowerCase(kda.field_td);
+        var2Lifetime1 = Character.toLowerCase(HardwareOpenGlToolkit.field_td);
         if (var2Lifetime1 == 32) {
           var2Lifetime1 = 95;
         }
@@ -229,19 +229,19 @@ final class is extends jea {
             this.field_vb.length() > 0) {
             DarknessBehaviour.a(-1 + this.field_vb.length(), ' ', -11, this.field_vb);
           }
-          if (LaserShooterComponent.a((CharSequence) ((Object) this.field_vb), true, kda.field_td)) {
-            discarded$0 = this.field_vb.append(kda.field_td);
+          if (LaserShooterComponent.a((CharSequence) ((Object) this.field_vb), true, HardwareOpenGlToolkit.field_td)) {
+            discarded$0 = this.field_vb.append(HardwareOpenGlToolkit.field_td);
           } else {
             if (this.field_vb.length() == 0 &&
-              91 == kda.field_td) {
-              discarded$1 = this.field_vb.append(kda.field_td);
+              91 == HardwareOpenGlToolkit.field_td) {
+              discarded$1 = this.field_vb.append(HardwareOpenGlToolkit.field_td);
             } else {
               if (1 == this.field_vb.length() &&
-                kda.field_td == 35) {
-                discarded$2 = this.field_vb.append(kda.field_td);
+                HardwareOpenGlToolkit.field_td == 35) {
+                discarded$2 = this.field_vb.append(HardwareOpenGlToolkit.field_td);
               } else {
-                if (kda.field_td == 93) {
-                  discarded$3 = this.field_vb.append(kda.field_td);
+                if (HardwareOpenGlToolkit.field_td == 93) {
+                  discarded$3 = this.field_vb.append(HardwareOpenGlToolkit.field_td);
                 }
               }
             }

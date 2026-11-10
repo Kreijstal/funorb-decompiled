@@ -170,10 +170,10 @@ final class rua extends MessageDialog implements tsa {
     final static GraphicsToolkit a(boolean param0, d param1, ResourceArchive param2, java.awt.Canvas param3, int param4) {
         RuntimeException var5 = null;
         long var6 = 0L;
-        kda var8 = null;
+        HardwareOpenGlToolkit var8 = null;
         jaggl.OpenGL var9 = null;
         GraphicsToolkit stackIn_8_0 = null;
-        kda stackIn_10_0 = null;
+        HardwareOpenGlToolkit stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -198,8 +198,8 @@ final class rua extends MessageDialog implements tsa {
             stackIn_8_0 = (GraphicsToolkit) null;
             return stackIn_8_0;
           }
-          var8 = new kda(var9, param3, var6, param1, param2, param4);
-          var8.K(-74);
+          var8 = new HardwareOpenGlToolkit(var9, param3, var6, param1, param2, param4);
+          var8.initializeHardwareResources(-74);
           stackIn_10_0 = var8;
           return (GraphicsToolkit) ((Object) stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

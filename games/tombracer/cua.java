@@ -54,16 +54,16 @@ final class cua {
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           param0.unlink(17);
-          var2 = (ht) (asa.field_j.first(-80));
+          var2 = (ht) (AffineTransform3D.field_j.first(-80));
           while (var2 != null) {
             if (var2.a(param0, 71)) {
-              var2 = (ht) (asa.field_j.next(113));
+              var2 = (ht) (AffineTransform3D.field_j.next(113));
               continue;
             }
             break;
           }
           if (var2 == null) {
-            asa.field_j.addLast((byte) -59, param0);
+            AffineTransform3D.field_j.addLast((byte) -59, param0);
           } else {
             PlatformComponent.a(var2, param0, (byte) -120);
           }

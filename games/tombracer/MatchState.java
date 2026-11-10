@@ -17,7 +17,7 @@ final class MatchState implements dv {
     private int field_O;
     int field_A;
     sma field_e;
-    String[] field_l;
+    String[] playerNames;
     int field_C;
     BitSet[] field_x;
     private int field_o;
@@ -27,7 +27,7 @@ final class MatchState implements dv {
     kqa field_c;
     boolean field_h;
     ds field_D;
-    private String[] field_J;
+    private String[] colouredPlayerNames;
     static SpriteData[] field_j;
     int[] field_g;
     private boolean field_s;
@@ -53,7 +53,7 @@ final class MatchState implements dv {
           throw new IllegalStateException("Could not resync player to room: " + param1 + ", " + param0);
         }
         this.simulations[param1].tick = param3;
-        var6.a((byte) 88, param4);
+        var6.setTick((byte) 88, param4);
         var6.restart((byte) -65);
         if (param2 != 1) {
           this.field_k = 37;
@@ -170,7 +170,7 @@ final class MatchState implements dv {
         }
     }
 
-    final int a(String param0, byte param1) {
+    final int findPlayerIndex(String param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -186,7 +186,7 @@ final class MatchState implements dv {
             this.d(-118);
           }
           for (var3_int = 0; this.players.length > var3_int; var3_int++) {
-            if (faa.a(param0, 109, this.field_l[var3_int])) {
+            if (faa.a(param0, 109, this.playerNames[var3_int])) {
               stackIn_8_0 = var3_int;
               return stackIn_8_0;
             }
@@ -351,14 +351,14 @@ final class MatchState implements dv {
         return true;
     }
 
-    final String e(int param0, int param1) {
+    final String getColouredPlayerName(int param0, int param1) {
         if (param1 != 23807) {
           return (String) null;
         }
         if (param0 < 0) {
           return dpa.field_c;
         }
-        return this.field_J[param0];
+        return this.colouredPlayerNames[param0];
     }
 
     final boolean j(int param0) {
@@ -412,11 +412,11 @@ final class MatchState implements dv {
         return this.field_s;
     }
 
-    final dda a(boolean param0, int param1) {
+    final QueuedPlayerEvent a(boolean param0, int param1) {
         if (!param0) {
-          return (dda) null;
+          return (QueuedPlayerEvent) null;
         }
-        return this.simulations[param1].getObserver(9262).a(104);
+        return this.simulations[param1].getObserver(9262).pollQueuedEvent(104);
     }
 
     final void m(int param0, int param1) {
@@ -515,11 +515,11 @@ final class MatchState implements dv {
         return true;
     }
 
-    final String c(int param0, int param1) {
+    final String getPlayerName(int param0, int param1) {
         if (param1 > param0) {
           return dpa.field_c;
         }
-        return this.field_l[param0];
+        return this.playerNames[param0];
     }
 
     final int j(int param0, int param1) {
@@ -551,7 +551,7 @@ final class MatchState implements dv {
 
     final int c(byte param0, int param1) {
         if (param0 != 115) {
-          this.e(-62, 55);
+          this.getColouredPlayerName(-62, 55);
         }
         return this.simulations[param1].tick;
     }
@@ -637,22 +637,22 @@ final class MatchState implements dv {
         try {
           this.field_L = param4;
           this.field_d = param9;
-          this.field_l = param0;
+          this.playerNames = param0;
           this.field_K = param5;
           if (param10 != null) {
             if (this.field_K != 0) {
               var12_int = 1;
             } else {
-              var12_int = this.field_l.length * (-1 + param4) + 1;
+              var12_int = this.playerNames.length * (-1 + param4) + 1;
             }
             this.field_u = new wea[var12_int];
             for (var13 = 0; var13 < var12_int; var13++) {
               this.field_u[var13] = param10.a((byte) 58);
             }
           }
-          this.field_J = new String[this.field_l.length];
-          for (var12_intLifetime1 = 0; var12_intLifetime1 < this.field_l.length; var12_intLifetime1++) {
-            this.field_J[var12_intLifetime1] = "<col=" + PasswordValidator.field_k[var12_intLifetime1] + ">" + this.field_l[var12_intLifetime1] + "</col>";
+          this.colouredPlayerNames = new String[this.playerNames.length];
+          for (var12_intLifetime1 = 0; var12_intLifetime1 < this.playerNames.length; var12_intLifetime1++) {
+            this.colouredPlayerNames[var12_intLifetime1] = "<col=" + PasswordValidator.field_k[var12_intLifetime1] + ">" + this.playerNames[var12_intLifetime1] + "</col>";
           }
           this.field_k = param0.length;
           this.field_a = param3;

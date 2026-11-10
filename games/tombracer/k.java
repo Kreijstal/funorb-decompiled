@@ -7,7 +7,7 @@ final class k extends SingleChildWidget {
     static int field_A;
 
     final void handlePointerRelease(byte param0, UiWidget param1, int param2, int param3, int param4, int param5) {
-        vp var7 = null;
+        DraggableWidget var7 = null;
         try {
           super.handlePointerRelease(param0, param1, param2, param3, param4, param5);
           var7 = ava.field_f;

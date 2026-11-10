@@ -325,7 +325,7 @@ final class SwitchState implements noa {
               if (null == this.field_d) {
                 return;
               }
-              var7 = this.field_d.c(1);
+              var7 = this.field_d.getTargets(1);
               var10 = var7;
               var3 = var7;
               for (var4 = 0; var10.length > var4; var4++) {
@@ -340,7 +340,7 @@ final class SwitchState implements noa {
             if (null == this.field_d) {
               return;
             }
-            var7Lifetime3 = this.field_d.c(1);
+            var7Lifetime3 = this.field_d.getTargets(1);
             var12 = var7Lifetime3;
             var3Lifetime1 = var7Lifetime3;
             for (var4Lifetime3 = 0; var12.length > var4Lifetime3; var4Lifetime3++) {
@@ -357,7 +357,7 @@ final class SwitchState implements noa {
           if (null == this.field_d) {
             return;
           }
-          var7Lifetime1 = this.field_d.c(1);
+          var7Lifetime1 = this.field_d.getTargets(1);
           var16 = var7Lifetime1;
           for (var4Lifetime1 = 0; var16.length > var4Lifetime1; var4Lifetime1++) {
             var17 = var16[var4Lifetime1];
@@ -371,7 +371,7 @@ final class SwitchState implements noa {
         if (null == this.field_d) {
           return;
         }
-        var7Lifetime2 = this.field_d.c(1);
+        var7Lifetime2 = this.field_d.getTargets(1);
         var14 = var7Lifetime2;
         for (var4Lifetime2 = 0; var14.length > var4Lifetime2; var4Lifetime2++) {
           var15 = var14[var4Lifetime2];

@@ -118,7 +118,7 @@ final class ObjectPool implements Renderable {
         this.a((uw) null, (byte) -42, false, 21);
     }
 
-    public final boolean d(byte param0) {
+    public final boolean isRenderExpired(byte param0) {
         if (param0 != 48) {
           this.room = (Room) null;
           return false;

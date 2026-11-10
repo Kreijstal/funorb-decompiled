@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vq {
+final class VorbisCodebook {
     private float[][] field_c;
     private int[] field_a;
     private int field_e;
@@ -10,17 +10,17 @@ final class vq {
     private int[] field_b;
 
     final float[] a() {
-        return this.field_c[this.c()];
+        return this.field_c[this.decodeScalar()];
     }
 
-    private final static int a(int param0, int param1) {
+    private final static int computeLookupValueCount(int param0, int param1) {
         int var2 = 0;
         for (var2 = (int)Math.pow((double)param0, 1.0 / (double)param1) + 1; SweepRotateLocomotor.a(var2, 0, param1) > param0; var2--) {
         }
         return var2;
     }
 
-    final int c() {
+    final int decodeScalar() {
         int var1 = 0;
         while (this.field_f[var1] >= 0) {
           var1 = VorbisSample.c() != 0 ? this.field_f[var1] : var1 + 1;
@@ -28,7 +28,7 @@ final class vq {
         return ~this.field_f[var1];
     }
 
-    private final void b() {
+    private final void buildDecodeTree() {
         int[] var2_ref_int__;
         int var2;
         int var3;
@@ -128,7 +128,7 @@ final class vq {
         }
     }
 
-    vq() {
+    VorbisCodebook() {
         int incrementValue$0 = 0;
         int stackIn_3_0 = 0;
         int stackIn_13_0 = 0;
@@ -186,7 +186,7 @@ final class vq {
             var14++;
           }
         }
-        this.b();
+        this.buildDecodeTree();
         var2Lifetime1 = VorbisSample.readBits(4);
         if (var2Lifetime1 > 0) {
           var3 = VorbisSample.unpackFloat(VorbisSample.readBits(32));
@@ -197,7 +197,7 @@ final class vq {
           if (var2Lifetime1 != 1) {
             var7 = this.field_e * this.field_d;
           } else {
-            var7 = vq.a(this.field_e, this.field_d);
+            var7 = VorbisCodebook.computeLookupValueCount(this.field_e, this.field_d);
           }
           this.field_b = new int[var7];
           for (var8 = 0; var8 < var7; var8++) {

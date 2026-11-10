@@ -333,7 +333,7 @@ final class PlayerSimulation {
           var7 = this.rooms;
           var3 = var7;
           if (param1 != -1) {
-            discarded$1 = this.e(41, -81);
+            discarded$1 = this.getEffectSlot(41, -81);
           }
           for (var4 = 0; var7.length > var4; var4++) {
             var5 = var7[var4];
@@ -410,7 +410,7 @@ final class PlayerSimulation {
         return true;
     }
 
-    private final int e(int param0, int param1) {
+    private final int getEffectSlot(int param0, int param1) {
         if (param1 != 0) {
           this.b(-8);
           return this.effectSlots[param0];
@@ -426,7 +426,7 @@ final class PlayerSimulation {
         return this.rooms[0];
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void setRoomEffectSlot(int param0, int param1, int param2, int param3) {
         if (param2 >= -86) {
           iq var6 = (iq) null;
           this.a((iq) null, 103);
@@ -436,7 +436,7 @@ final class PlayerSimulation {
         this.rooms[param3].setEffectSlot(false, param1, param0);
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void clearRoomEffectSlot(byte param0, int param1, int param2) {
         if (param0 > -11) {
           this.a(96, 125);
           this.rooms[param2].clearEffectSlot(-22490, param1);
@@ -447,10 +447,10 @@ final class PlayerSimulation {
 
     final int b(boolean param0, int param1) {
         if (param0) {
-          this.a((byte) 29, -34, 71);
-          return iia.d(this.e(param1, 0), this.rooms[this.player.getCourseIndex(-101)].getEffectSlot(-121, param1), 2);
+          this.clearRoomEffectSlot((byte) 29, -34, 71);
+          return iia.d(this.getEffectSlot(param1, 0), this.rooms[this.player.getCourseIndex(-101)].getEffectSlot(-121, param1), 2);
         }
-        return iia.d(this.e(param1, 0), this.rooms[this.player.getCourseIndex(-101)].getEffectSlot(-121, param1), 2);
+        return iia.d(this.getEffectSlot(param1, 0), this.rooms[this.player.getCourseIndex(-101)].getEffectSlot(-121, param1), 2);
     }
 
     final boolean h(int param0) {

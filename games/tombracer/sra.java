@@ -146,7 +146,7 @@ final class sra implements eb {
         if (this.field_d != null) {
           SpriteState.a(-18035);
           this.a(30, (byte) 47, uba.loadingQuipsShort[0]);
-          gda.a(this.field_d, 17572);
+          Transform3D.a(this.field_d, 17572);
           uo.b((byte) -125);
           this.field_d = null;
           C2SActionPacket.a(-33);

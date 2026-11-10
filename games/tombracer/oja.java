@@ -77,9 +77,9 @@ final class oja extends vw {
           this.field_i.a((jagdx.IDirect3DVertexShader) null, -1);
           this.field_i.a(-92, (jagdx.IDirect3DPixelShader) null);
           this.field_c.e(1, false);
-          this.field_c.a(true, (iva) null);
+          this.field_c.bindTexture(true, (iva) null);
           this.field_c.e(0, false);
-          this.field_c.a(true, (iva) null);
+          this.field_c.bindTexture(true, (iva) null);
           this.field_j = false;
           if (param0 >= -4) {
             this.field_j = false;
@@ -111,9 +111,9 @@ final class oja extends vw {
           this.field_i.a(this.field_e, -1);
           this.field_i.a(-108, this.field_g);
           this.field_c.e(1, false);
-          this.field_c.a(true, var3);
+          this.field_c.bindTexture(true, var3);
           this.field_c.e(0, false);
-          this.field_c.a(true, this.field_f.field_f);
+          this.field_c.bindTexture(true, this.field_f.field_f);
           this.field_j = true;
           this.b(true);
           this.c(true);
@@ -154,7 +154,7 @@ final class oja extends vw {
         if (param0 > 64) {
           if (this.field_j) {
             var2 = this.field_i.field_jd;
-            var2.a(8, this.field_c.a(field_h, false));
+            var2.a(8, this.field_c.writeTransposedProjection(field_h, false));
           }
           return;
         }
@@ -170,8 +170,8 @@ final class oja extends vw {
 
     final void b(boolean param0) {
         jagdx.IDirect3DDevice var2 = null;
-        asa var3 = null;
-        asa var4 = null;
+        AffineTransform3D var3 = null;
+        AffineTransform3D var4 = null;
         if (param0) {
           if (this.field_j) {
             var2 = this.field_i.field_jd;
@@ -186,7 +186,7 @@ final class oja extends vw {
 
     final void b(byte param0) {
         jagdx.IDirect3DDevice var2 = null;
-        asa var3 = null;
+        AffineTransform3D var3 = null;
         if (this.field_j) {
           var2 = this.field_i.field_jd;
           var3 = this.field_i.n((byte) -124);
@@ -200,10 +200,10 @@ final class oja extends vw {
 
     final void c(boolean param0) {
         jagdx.IDirect3DDevice var2 = null;
-        asa var3 = null;
+        AffineTransform3D var3 = null;
         if (this.field_j) {
           var2 = this.field_i.field_jd;
-          var3 = this.field_c.a((byte) 112);
+          var3 = this.field_c.textureTransform((byte) 112);
           var2.SetVertexShaderConstantF(12, var3.a(field_h, -96), 2);
         }
         if (param0) {

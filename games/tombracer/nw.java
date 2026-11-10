@@ -208,7 +208,7 @@ final class nw extends ci {
             CachedArchiveSource.field_l = 2147483647;
             rp.field_h = 2147483647;
             te.field_b = 2147483647;
-            kca.field_h = 2147483647;
+            TextFieldValidator.field_h = 2147483647;
             var15 = 2048 + ht.field_Fb[var14] * this.field_t;
             var16 = var15 >> 12;
             var17 = var16 + 1;
@@ -298,11 +298,11 @@ final class nw extends ci {
                 } else {
                   var11 = var9 * var9 + var10 * var10 >> 12;
                 }
-                if (var11 < kca.field_h) {
+                if (var11 < TextFieldValidator.field_h) {
                   rp.field_h = CachedArchiveSource.field_l;
                   CachedArchiveSource.field_l = te.field_b;
-                  te.field_b = kca.field_h;
-                  kca.field_h = var11;
+                  te.field_b = TextFieldValidator.field_h;
+                  TextFieldValidator.field_h = var11;
                 } else {
                   if (var11 < te.field_b) {
                     rp.field_h = CachedArchiveSource.field_l;
@@ -323,7 +323,7 @@ final class nw extends ci {
             }
             var18Lifetime1 = this.field_o;
             if (var18Lifetime1 == 0) {
-              var3[var14] = kca.field_h;
+              var3[var14] = TextFieldValidator.field_h;
             } else {
               if (1 != var18Lifetime1) {
                 if (var18Lifetime1 == 3) {
@@ -331,7 +331,7 @@ final class nw extends ci {
                 } else {
                   if (var18Lifetime1 != 4) {
                     if (2 == var18Lifetime1) {
-                      var3[var14] = te.field_b - kca.field_h;
+                      var3[var14] = te.field_b - TextFieldValidator.field_h;
                     }
                   } else {
                     var3[var14] = rp.field_h;

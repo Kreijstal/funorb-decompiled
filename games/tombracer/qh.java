@@ -271,7 +271,7 @@ final class qh extends dfa implements rqa {
           param1 &&
           !iqa.field_c.e(-8832) && (BeamShooterBehaviour.b(-67, -1) ||
           this.c(false))) {
-          this.field_v[0][0] = var9[kda.field_hd];
+          this.field_v[0][0] = var9[HardwareOpenGlToolkit.field_hd];
           this.field_v[0][1] = var9[mf.field_a];
           this.field_v[0][2] = var9[ConsoleToken.field_k];
           this.field_v[0][3] = var9[fp.field_a];
@@ -390,7 +390,7 @@ final class qh extends dfa implements rqa {
           this.field_p = false;
           uca.field_a = -1;
           tb.field_o = 617;
-          gda.field_b = 9170;
+          Transform3D.field_b = 9170;
           ti.field_b = 8768;
           lu.field_a = 5180;
           CommonChooseReward.field_b = 1180282300L;
@@ -507,7 +507,7 @@ final class qh extends dfa implements rqa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            stackIn_4_0 = this.field_k.a(param1, (byte) 114);
+            stackIn_4_0 = this.field_k.findPlayerIndex(param1, (byte) 114);
             return stackIn_4_0;
           }
           stackIn_2_0 = 127;
@@ -671,7 +671,7 @@ final class qh extends dfa implements rqa {
           this.field_x == 0) {
           var4 = this.field_k.players[this.field_x];
           if (!var4.getSimulation(-1).j(0)) {
-            ppa.a(var4.getRoom((byte) -127), 64, this.field_k);
+            SectorCacheStore.a(var4.getRoom((byte) -127), 64, this.field_k);
           }
         }
         if (param2 != 0) {
@@ -828,7 +828,7 @@ final class qh extends dfa implements rqa {
     }
 
     private final void b(boolean param0, int param1, int param2) {
-        dda var4;
+        QueuedPlayerEvent var4;
         PendingEvent var5;
         int var6;
         var6 = TombRacer.field_G ? 1 : 0;
@@ -844,12 +844,12 @@ final class qh extends dfa implements rqa {
         if (!this.field_D) {
           var4 = this.field_k.a(true, param1);
           while (var4 != null) {
-            var5 = new PendingEvent(var4.a((byte) -125), param1, param1, 50 + this.field_k.simulations[param1].tick, var4.a((byte) -125).a((byte) -28), this.field_k.getPlayerCourseIndex(1, param1));
+            var5 = new PendingEvent(var4.getEvent((byte) -125), param1, param1, 50 + this.field_k.simulations[param1].tick, var4.getEvent((byte) -125).a((byte) -28), this.field_k.getPlayerCourseIndex(1, param1));
             this.field_k.deliverPendingEvent((byte) 96, var5);
             var4 = this.field_k.a(true, param1);
           }
         } else {
-          this.field_k.simulations[param1].observer.b(-113);
+          this.field_k.simulations[param1].observer.clearQueuedEvents(-113);
         }
     }
 
@@ -1217,40 +1217,40 @@ final class qh extends dfa implements rqa {
               if (1 != var5) {
                 if (var5 != 2) {
                   if (var5 == 3) {
-                    ti.field_b = ti.field_b - gda.field_b;
+                    ti.field_b = ti.field_b - Transform3D.field_b;
                     lu.field_a = lu.field_a + 1;
                   } else {
                     if (var5 != 4) {
                       if (var5 == 5) {
                         lu.field_a = lu.field_a + 1;
-                        tb.field_o = tb.field_o + gda.field_b;
+                        tb.field_o = tb.field_o + Transform3D.field_b;
                       } else {
                         if (var5 != 6) {
                           if (7 == var5) {
-                            tb.field_o = tb.field_o - gda.field_b;
+                            tb.field_o = tb.field_o - Transform3D.field_b;
                             lu.field_a = lu.field_a - 1;
                           }
                         } else {
                           tb.field_o = tb.field_o - lu.field_a;
-                          gda.field_b = gda.field_b - 1;
+                          Transform3D.field_b = Transform3D.field_b - 1;
                         }
                       }
                     } else {
-                      gda.field_b = gda.field_b + 1;
+                      Transform3D.field_b = Transform3D.field_b + 1;
                       tb.field_o = tb.field_o + lu.field_a;
                     }
                   }
                 } else {
-                  gda.field_b = gda.field_b + 1;
+                  Transform3D.field_b = Transform3D.field_b + 1;
                   ti.field_b = ti.field_b - lu.field_a;
                 }
               } else {
                 lu.field_a = lu.field_a - 1;
-                ti.field_b = ti.field_b + gda.field_b;
+                ti.field_b = ti.field_b + Transform3D.field_b;
               }
             } else {
               ti.field_b = ti.field_b + lu.field_a;
-              gda.field_b = gda.field_b - 1;
+              Transform3D.field_b = Transform3D.field_b - 1;
             }
           }
         }
@@ -1461,7 +1461,7 @@ final class qh extends dfa implements rqa {
           this.field_j > 0 &&
           !this.o((byte) 62) && this.field_E >= 0) {
           var2 = this.field_E;
-          qv.field_o = new kb(var2, var2 ^ 65535, ti.field_b, tb.field_o, lu.field_a, gda.field_b, new int[]{this.field_j});
+          qv.field_o = new kb(var2, var2 ^ 65535, ti.field_b, tb.field_o, lu.field_a, Transform3D.field_b, new int[]{this.field_j});
           if (!TextWidgetPainter.a(66)) {
             su.a(qv.field_o, (byte) -108, 3);
           }
@@ -1518,38 +1518,38 @@ final class qh extends dfa implements rqa {
                   if (var4 != 3) {
                     if (var4 == 4) {
                       tb.field_o = tb.field_o + lu.field_a;
-                      gda.field_b = gda.field_b + 1;
+                      Transform3D.field_b = Transform3D.field_b + 1;
                     } else {
                       if (5 == var4) {
-                        tb.field_o = tb.field_o + gda.field_b;
+                        tb.field_o = tb.field_o + Transform3D.field_b;
                         lu.field_a = lu.field_a + 1;
                       } else {
                         if (var4 != 6) {
                           if (var4 == 7) {
                             lu.field_a = lu.field_a - 1;
-                            tb.field_o = tb.field_o - gda.field_b;
+                            tb.field_o = tb.field_o - Transform3D.field_b;
                           }
                         } else {
                           tb.field_o = tb.field_o - lu.field_a;
-                          gda.field_b = gda.field_b - 1;
+                          Transform3D.field_b = Transform3D.field_b - 1;
                         }
                       }
                     }
                   } else {
                     lu.field_a = lu.field_a + 1;
-                    ti.field_b = ti.field_b - gda.field_b;
+                    ti.field_b = ti.field_b - Transform3D.field_b;
                   }
                 } else {
                   ti.field_b = ti.field_b - lu.field_a;
-                  gda.field_b = gda.field_b + 1;
+                  Transform3D.field_b = Transform3D.field_b + 1;
                 }
               } else {
-                ti.field_b = ti.field_b + gda.field_b;
+                ti.field_b = ti.field_b + Transform3D.field_b;
                 lu.field_a = lu.field_a - 1;
               }
             } else {
               ti.field_b = ti.field_b + lu.field_a;
-              gda.field_b = gda.field_b - 1;
+              Transform3D.field_b = Transform3D.field_b - 1;
             }
           }
         }
@@ -1586,7 +1586,7 @@ final class qh extends dfa implements rqa {
         if (param1) {
           this.field_s = false;
         }
-        return this.field_k.c(param0, 0);
+        return this.field_k.getPlayerName(param0, 0);
     }
 
     final boolean d(byte param0) {
@@ -1601,7 +1601,7 @@ final class qh extends dfa implements rqa {
           BitPacketBuffer var4 = (BitPacketBuffer) null;
           this.b(-82, (BitPacketBuffer) null);
         }
-        return this.field_k.e(param0, 23807);
+        return this.field_k.getColouredPlayerName(param0, 23807);
     }
 
     static {

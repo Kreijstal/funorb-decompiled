@@ -5,7 +5,7 @@ final class og extends OpenGlBuffer implements qm {
     static int field_m;
     private byte field_l;
 
-    og(kda param0, boolean param1) {
+    og(HardwareOpenGlToolkit param0, boolean param1) {
         super(param0, 34962, param1);
     }
 

@@ -383,7 +383,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
     }
 
     final void applyConstraint(int param0) {
-        int var2 = this.trap.s(25745) - this.f(10);
+        int var2 = this.trap.getLocalX(25745) - this.f(10);
         int var3 = this.trap.getLocalY(false) - this.g((byte) 30);
         int var4 = 0;
         if (var2 > this.field_u) {

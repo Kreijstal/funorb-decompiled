@@ -229,7 +229,7 @@ final class fja extends qra {
               }
               var8Lifetime1 = 64;
               var9 = -64 + SwitchLinkList.b(0);
-              var10 = var5.p((byte) 69);
+              var10 = var5.getTick((byte) 69);
               var11 = 16777215;
               ts.a(0, -34, -16 + var9, "Par Time: " + dea.a(var7.field_h, (byte) -8), var8Lifetime1, kn.field_p, 16777215);
               var17 = "Room total: " + dea.a(var10, (byte) -8);
@@ -441,7 +441,7 @@ final class fja extends qra {
         }
         fpa.field_c = true;
         oga.field_f = 15000L + bva.b((byte) -107);
-        return gda.field_c == 11 ? true : false;
+        return Transform3D.field_c == 11 ? true : false;
     }
 
     final static void a(int param0, int param1, byte param2, int param3, int param4, int param5) {
@@ -502,7 +502,7 @@ final class fja extends qra {
           var8 = param0.a(-12851);
           var11_ref_StringLifetime2 = var8;
           var11_ref_StringLifetime3 = var8;
-          if (oba.field_e == null &&
+          if (OpenGlTransform3D.field_e == null &&
             !joa.a(false, (byte) -58)) {
             stackIn_8_0 = -1;
             return stackIn_8_0;
@@ -622,7 +622,7 @@ final class fja extends qra {
             stackIn_57_0 = oka.field_z;
             return stackIn_57_0;
           }
-          if (null == oba.field_e) {
+          if (null == OpenGlTransform3D.field_e) {
             if (PushableBlockMazeComponent.field_L) {
               if (rf.b((byte) -121) > 30000L) {
                 io.field_b = hb.field_u;

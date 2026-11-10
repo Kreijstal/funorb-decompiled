@@ -6,5 +6,5 @@ interface TrapPart {
 
     public abstract boolean a(byte param0);
 
-    public abstract boolean a(int param0);
+    public abstract boolean isEnabled(int param0);
 }

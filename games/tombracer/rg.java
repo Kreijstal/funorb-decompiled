@@ -79,7 +79,7 @@ final class rg extends SingleChildWidget {
         wba.field_q[33] = OpenGlSprite.field_k;
         wba.field_q[40] = ResourceArchive.field_f;
         wba.field_q[29] = SweeperMountComponent.field_F;
-        TripBeamBehaviour.field_w[0][0] = TextInputWidget.field_z[kda.field_hd] + "<lt> <gt>" + TextInputWidget.field_z[mf.field_a];
+        TripBeamBehaviour.field_w[0][0] = TextInputWidget.field_z[HardwareOpenGlToolkit.field_hd] + "<lt> <gt>" + TextInputWidget.field_z[mf.field_a];
         TripBeamBehaviour.field_w[1][0] = PerlinNoise2D.field_y;
         wg.field_j = new String[3];
         TripBeamBehaviour.field_w[1][1] = waa.field_b;
@@ -91,7 +91,7 @@ final class rg extends SingleChildWidget {
         bq.field_k[2] = sl.field_d;
         bq.field_k[7] = TrackingCrusherComponent.field_H;
         bq.field_k[12] = fp.field_b;
-        bq.field_k[0] = vp.field_B;
+        bq.field_k[0] = DraggableWidget.field_B;
         bq.field_k[10] = ConsoleValue.field_b;
         bq.field_k[9] = tha.field_y;
         bq.field_k[3] = hg.field_d;

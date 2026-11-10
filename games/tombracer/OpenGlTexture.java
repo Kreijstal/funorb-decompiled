@@ -6,7 +6,7 @@ abstract class OpenGlTexture implements iva {
     static int[][] field_e;
     private hs field_g;
     private boolean field_b;
-    kda field_j;
+    HardwareOpenGlToolkit field_j;
     private int field_h;
     private int field_c;
     ft field_f;
@@ -295,7 +295,7 @@ abstract class OpenGlTexture implements iva {
     }
 
     private final void d(byte param0) {
-        this.field_j.a(true, (iva) (this));
+        this.field_j.bindTexture(true, (iva) (this));
         if (this.field_g != MirrorComponent.field_G) {
           jaggl.OpenGL.glTexParameteri(this.field_i, 10241, !this.field_b ? 9728 : 9984);
           jaggl.OpenGL.glTexParameteri(this.field_i, 10240, 9728);
@@ -540,7 +540,7 @@ abstract class OpenGlTexture implements iva {
         }
     }
 
-    OpenGlTexture(kda param0, int param1, ft param2, una param3, int param4, boolean param5) {
+    OpenGlTexture(HardwareOpenGlToolkit param0, int param1, ft param2, una param3, int param4, boolean param5) {
         this.field_g = MirrorComponent.field_G;
         try {
           this.field_a = param3;

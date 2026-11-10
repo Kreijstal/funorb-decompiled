@@ -138,16 +138,16 @@ final class dea {
 
     final static void a(int param0) {
         if (param0 == 60) {
-          if (oba.field_e != null) {
-            oba.field_e.a((byte) 105);
-            oba.field_e = null;
+          if (OpenGlTransform3D.field_e != null) {
+            OpenGlTransform3D.field_e.a((byte) 105);
+            OpenGlTransform3D.field_e = null;
           }
           return;
         }
         field_a = (mb) null;
-        if (oba.field_e != null) {
-          oba.field_e.a((byte) 105);
-          oba.field_e = null;
+        if (OpenGlTransform3D.field_e != null) {
+          OpenGlTransform3D.field_e.a((byte) 105);
+          OpenGlTransform3D.field_e = null;
         }
     }
 

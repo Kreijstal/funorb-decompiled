@@ -134,7 +134,7 @@ abstract class AppletGameShell extends GameApplet {
                 if (var5Lifetime2 == 0) {
                   ic.field_b = tr.field_g;
                   ak.g(0);
-                  gda.field_c = 10;
+                  Transform3D.field_c = 10;
                   qga.field_m = false;
                 } else {
                   epa.a(var5Lifetime2, (byte) -84, io.field_b);
@@ -146,7 +146,7 @@ abstract class AppletGameShell extends GameApplet {
           if (var4 == 4) {
             if (!ft.field_a) {
               qga.field_m = true;
-              gda.field_c = 10;
+              Transform3D.field_c = 10;
             } else {
               cua.a((byte) -26, di.a(118));
             }
@@ -156,7 +156,7 @@ abstract class AppletGameShell extends GameApplet {
           }
           if (var4 == 6 &&
             sra.field_t) {
-            gda.field_c = 10;
+            Transform3D.field_c = 10;
           }
           if (var4 == 7) {
             ft.a(89, di.a(113));
@@ -203,7 +203,7 @@ abstract class AppletGameShell extends GameApplet {
             }
           }
           if (var4 == 15) {
-            gda.field_c = 10;
+            Transform3D.field_c = 10;
           }
           if (16 == var4) {
             return 1;
@@ -321,7 +321,7 @@ abstract class AppletGameShell extends GameApplet {
           return -1;
         }
         if (0 == var2) {
-          if (gda.field_c != 11) {
+          if (Transform3D.field_c != 11) {
             return var2;
           }
           if (0 != Trap.field_m) {
@@ -339,7 +339,7 @@ abstract class AppletGameShell extends GameApplet {
             oga.field_f = bva.b((byte) -107) + 15000L;
             return var2;
           }
-          if (gda.field_c == 11 &&
+          if (Transform3D.field_c == 11 &&
             0 == Trap.field_m) {
             ak.g(param0 + 46);
           }
@@ -531,7 +531,7 @@ abstract class AppletGameShell extends GameApplet {
             if (!qk.i(250)) {
               PressureSwitchComponent.C(-5);
             } else {
-              if (0 == gda.field_c) {
+              if (0 == Transform3D.field_c) {
                 discarded$3 = this.a((byte) -111, false, false);
               } else {
                 tc.a(pg.field_y, -2886);
@@ -565,7 +565,7 @@ abstract class AppletGameShell extends GameApplet {
         DisplaySettingsDialog.j(3321);
         BoulderComponent.s((byte) -44);
         if (!wna.c(-112) &&
-          gda.field_c != 11) {
+          Transform3D.field_c != 11) {
           sw.h(100);
         }
         if (null != tja.field_q) {
@@ -592,7 +592,7 @@ abstract class AppletGameShell extends GameApplet {
           Trap.field_m = BlockComponent.A(61);
           if (var3Lifetime1 != 0 &&
             Trap.field_m == 0 &&
-            gda.field_c == 11 &&
+            Transform3D.field_c == 11 &&
             !uma.b(-1)) {
             ak.g(0);
           }
@@ -622,7 +622,7 @@ abstract class AppletGameShell extends GameApplet {
               this.reportError(-6738, "js5crc");
             }
           } else {
-            if (gda.field_c >= 10) {
+            if (Transform3D.field_c >= 10) {
               dw.b((byte) -123);
               if (Trap.field_m != 3) {
                 if (Trap.field_m != 4) {

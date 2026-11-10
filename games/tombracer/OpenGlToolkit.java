@@ -26,8 +26,8 @@ final class OpenGlToolkit extends GraphicsToolkit {
     private uv field_T;
     int field_dc;
     private cw field_L;
-    private oba field_fc;
-    oba field_mc;
+    private OpenGlTransform3D field_fc;
+    OpenGlTransform3D field_mc;
     private boolean field_Ob;
     mq field_zc;
     jaclib.memory.heap.NativeHeap field_md;
@@ -62,11 +62,11 @@ final class OpenGlToolkit extends GraphicsToolkit {
     private int field_ld;
     private boolean field_q;
     private boolean field_Nc;
-    oba field_jd;
+    OpenGlTransform3D field_jd;
     private int field_y;
     private int field_Jb;
-    oba field_j;
-    oba field_Tc;
+    OpenGlTransform3D field_j;
+    OpenGlTransform3D field_Tc;
     private boolean field_pb;
     int field_Gc;
     int field_P;
@@ -197,8 +197,8 @@ final class OpenGlToolkit extends GraphicsToolkit {
         jaggl.OpenGL.glEnd();
     }
 
-    final gda b() {
-        return (gda) ((Object) new oba());
+    final Transform3D b() {
+        return (Transform3D) ((Object) new OpenGlTransform3D());
     }
 
     final void a(jca param0) {
@@ -535,7 +535,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
             this.field_tb = param1;
           }
           if (param0 <= 74) {
-            this.field_fc = (oba) null;
+            this.field_fc = (OpenGlTransform3D) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -566,12 +566,12 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void a(gda param0) {
+    final void a(Transform3D param0) {
         try {
           this.field_jd.a(param0, 124);
           this.field_j.a(this.field_jd, -66);
           this.field_j.c((byte) 57);
-          this.field_Tc.a((gda) (this.field_j), (byte) 112);
+          this.field_Tc.a((Transform3D) (this.field_j), (byte) 112);
           if (this.field_e != 1) {
             this.b(false);
           }
@@ -805,8 +805,8 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_Oc = param0;
     }
 
-    final gda e() {
-        return (gda) ((Object) this.field_fc);
+    final Transform3D e() {
+        return (Transform3D) ((Object) this.field_fc);
     }
 
     final void setTextureConstantArgb(int param0, int param1) {
@@ -1174,9 +1174,9 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void a(oba param0, int param1) {
+    final void a(OpenGlTransform3D param0, int param1) {
         try {
-          jaggl.OpenGL.glLoadMatrixf(param0.e(-45), param1);
+          jaggl.OpenGL.glLoadMatrixf(param0.affineMatrix(-45), param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "cka.CC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -1442,10 +1442,10 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void b(oba param0, int param1) {
+    final void b(OpenGlTransform3D param0, int param1) {
         try {
           jaggl.OpenGL.glPushMatrix();
-          jaggl.OpenGL.glMultMatrixf(param0.e(96), 0);
+          jaggl.OpenGL.glMultMatrixf(param0.affineMatrix(96), 0);
           int var3_int = -49 / ((52 - param1) / 47);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "cka.SC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -1720,8 +1720,8 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_p = new Hashtable();
         this.field_dc = 128;
         this.field_Ec = new doa();
-        this.field_fc = new oba();
-        this.field_mc = new oba();
+        this.field_fc = new OpenGlTransform3D();
+        this.field_mc = new OpenGlTransform3D();
         this.field_Ob = false;
         this.field_qb = new IntrusiveDeque();
         this.field_A = -1;
@@ -1739,9 +1739,9 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_Vb = new IntrusiveDeque();
         this.field_Fc = new IntrusiveDeque();
         this.field_rb = new IntrusiveDeque();
-        this.field_jd = new oba();
-        this.field_j = new oba();
-        this.field_Tc = new oba();
+        this.field_jd = new OpenGlTransform3D();
+        this.field_j = new OpenGlTransform3D();
+        this.field_Tc = new OpenGlTransform3D();
         this.field_Gc = 50;
         this.field_db = 0;
         this.field_bc = 1.0f;
@@ -2609,7 +2609,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           }
         }
         if (param1 != 8960) {
-          this.field_Tc = (oba) null;
+          this.field_Tc = (OpenGlTransform3D) null;
         }
     }
 
@@ -2870,7 +2870,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         if (param0) {
           this.r((byte) 74);
         }
-        jaggl.OpenGL.glMultMatrixf(this.field_j.e(-112), 0);
+        jaggl.OpenGL.glMultMatrixf(this.field_j.affineMatrix(-112), 0);
         if (this.field_hb) {
           this.field_Hb.field_h.a((byte) -120);
         }

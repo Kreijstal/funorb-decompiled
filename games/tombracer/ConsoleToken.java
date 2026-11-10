@@ -33,7 +33,7 @@ final class ConsoleToken extends IntrusiveNode {
         var10 = TombRacer.field_G ? 1 : 0;
         try {
           var1_int = aqa.field_d - wt.field_a;
-          wt.field_a = -(var1_int >> 1) + gda.field_a;
+          wt.field_a = -(var1_int >> 1) + Transform3D.field_a;
           aqa.field_d = wt.field_a + var1_int;
           wp.field_b = -(aa.field_c >> 1) + AllPlatformsMazeComponent.field_N;
           var2 = wp.field_b;
@@ -55,7 +55,7 @@ final class ConsoleToken extends IntrusiveNode {
             stackIn_12_0 = -50;
             stackIn_13_1 = !(var4 < 0);
             var7 = apa.$cfr$intArgs$a$62abead39cee(stackIn_12_0, stackIn_13_1, var6);
-            var8 = -(var7 >> 1) + gda.field_a;
+            var8 = -(var7 >> 1) + Transform3D.field_a;
             if (var4 >= 0) {
               if (lp.field_h.field_h == var4) {
                 stackIn_17_0 = pua.field_c;

@@ -86,7 +86,7 @@ final class SimpleBlockBehaviour extends Behaviour {
         RuntimeException decompiledCaughtException = null;
         try {
           super.attachToTrap(param0, param1);
-          if (4 <= this.b(param0).formatVersion) {
+          if (4 <= this.getRoom(param0).formatVersion) {
             return;
           }
           param1.h(3, 0);
@@ -256,7 +256,7 @@ final class SimpleBlockBehaviour extends Behaviour {
             this.a(-117, 44, 70, 106, 36, -110, (Collidable) null);
             return;
           }
-          this.b(true).r(-36);
+          this.getRoom(true).r(-36);
           if (param0 == 5418) {
             return;
           }

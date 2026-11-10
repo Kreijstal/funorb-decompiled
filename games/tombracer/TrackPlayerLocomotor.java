@@ -28,7 +28,7 @@ final class TrackPlayerLocomotor extends Locomotor {
         this.field_o.field_d = var11.getY(9648);
         var4 = 78 % ((-69 - param0) / 42);
         this.trap.a(this.field_o, 59);
-        var3 = this.field_o.field_f - this.trap.s(25745);
+        var3 = this.field_o.field_f - this.trap.getLocalX(25745);
         var5 = this.field_o.field_d - this.trap.getLocalY(false);
         var6 = 0;
         var7 = 0;

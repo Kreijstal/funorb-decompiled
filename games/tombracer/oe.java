@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oe extends kca {
+final class oe extends TextFieldValidator {
     static String field_l;
     private TextInputWidget field_k;
     static int[] field_j;

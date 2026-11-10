@@ -264,7 +264,7 @@ final class PortalBehaviour extends Behaviour {
         var17 = null;
         var25 = null;
         var26 = TombRacer.field_G ? 1 : 0;
-        var27 = this.field_p.c(1);
+        var27 = this.field_p.getTargets(1);
         var2 = var27;
         if (var27.length == 0) {
           return;
@@ -287,7 +287,7 @@ final class PortalBehaviour extends Behaviour {
         var9 = ((Trap) (var3)).getY(param0 ^ 12442);
         var10 = ((Trap) (var3)).getWidth(param0 - 5510);
         var11 = ((Trap) (var3)).getHeight((byte) 55);
-        var12 = this.b(true);
+        var12 = this.getRoom(true);
         var13 = var12.collisionGrid.b(var5, -1, var4, var6, var7);
         var14 = var13;
         for (var15 = 0; var14.length > var15; var15++) {

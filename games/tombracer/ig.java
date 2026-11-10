@@ -17,9 +17,9 @@ final class ig {
             uma.field_b = null;
           }
           fua.field_a = null;
-          if (asa.field_j != null) {
-            asa.field_j.clear(8);
-            asa.field_j = null;
+          if (AffineTransform3D.field_j != null) {
+            AffineTransform3D.field_j.clear(8);
+            AffineTransform3D.field_j = null;
           }
           WhiteLightSensorComponent.field_K = null;
           if (null != qha.field_g) {

@@ -573,7 +573,7 @@ final class db extends IntrusiveNode implements Renderable, Collidable, WorldBod
         }
     }
 
-    public final boolean d(byte param0) {
+    public final boolean isRenderExpired(byte param0) {
         if (param0 != 48) {
           field_h = (mp) null;
           return false;

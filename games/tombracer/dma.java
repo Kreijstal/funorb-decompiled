@@ -20,7 +20,7 @@ final class dma extends OpenGlTexture implements na {
         }
     }
 
-    dma(kda param0, int param1, boolean param2, int[][] param3) {
+    dma(HardwareOpenGlToolkit param0, int param1, boolean param2, int[][] param3) {
         super(param0, 34067, SwitchableId.field_a, una.field_g, param1 * (param1 * 6), param2);
         int var5_int = 0;
         RuntimeException stackIn_11_0 = null;
@@ -33,7 +33,7 @@ final class dma extends OpenGlTexture implements na {
         int var7 = 0;
         int var5_intLifetime1;
         try {
-          this.field_j.a(true, (iva) (this));
+          this.field_j.bindTexture(true, (iva) (this));
           if (param2) {
             for (var5_int = 0; var5_int < 6; var5_int++) {
               this.a((byte) 99, var5_int + 34069, param1, param3[var5_int], param1);

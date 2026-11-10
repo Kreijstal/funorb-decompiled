@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable, noa, TrapPart {
-    boolean field_f;
+    boolean enabled;
     static String field_h;
     Trap trap;
     private SwitchableId field_j;
     boolean field_k;
     private boolean field_i;
     private SwitchableId field_l;
-    private Room field_m;
+    private Room room;
 
     final boolean d(int param0) {
         Player var2 = null;
@@ -18,7 +18,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
           var2 = this.getPlayer((byte) 19);
           return io.centredBoxesOverlap(var2.getWidth(-47), this.trap.getY(9648), (byte) -57, var2.getHeight((byte) 55), this.trap.getX(3), var2.getY(9648), this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -8057), var2.getX(3));
         }
-        this.field_m = (Room) null;
+        this.room = (Room) null;
         var2Lifetime1 = this.getPlayer((byte) 19);
         return io.centredBoxesOverlap(var2Lifetime1.getWidth(-47), this.trap.getY(9648), (byte) -57, var2Lifetime1.getHeight((byte) 55), this.trap.getX(3), var2Lifetime1.getY(9648), this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -8057), var2Lifetime1.getX(3));
     }
@@ -37,7 +37,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
             stackIn_3_0 = 0;
             return stackIn_3_0;
           }
-          this.field_m = (Room) null;
+          this.room = (Room) null;
           return 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -108,7 +108,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
     void a(Collidable param0, byte param1, WorldBody param2, int param3) {
         try {
           if (param1 < 18) {
-            this.e(-16);
+            this.getRoot(-16);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "nv.SB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -185,14 +185,14 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
         if (this.field_k) {
           return;
         }
-        this.field_f = !this.field_f ? true : false;
+        this.enabled = !this.enabled ? true : false;
     }
 
-    public final boolean a(int param0) {
+    public final boolean isEnabled(int param0) {
         if (param0 > -49) {
           return false;
         }
-        return this.field_f;
+        return this.enabled;
     }
 
     public final SwitchableScope getScope(byte param0) {
@@ -206,7 +206,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
     Behaviour(Room param0, BitPacketBuffer param1, boolean param2) {
         this(param0, param2);
         try {
-          this.field_f = param1.readBits((byte) 44, 1) == 1 ? true : false;
+          this.enabled = param1.readBits((byte) 44, 1) == 1 ? true : false;
           if (param0.formatVersion >= 22) {
             this.field_k = param1.readBits((byte) 44, 1) == 1 ? true : false;
           }
@@ -215,12 +215,12 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
         }
     }
 
-    final Room b(boolean param0) {
+    final Room getRoom(boolean param0) {
         if (!param0) {
           this.a(-83, 93, false);
-          return this.field_m;
+          return this.room;
         }
-        return this.field_m;
+        return this.room;
     }
 
     public final int getRenderX(byte param0) {
@@ -313,11 +313,11 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
         }
     }
 
-    final IsaacCipher o(byte param0) {
+    final IsaacCipher getRandom(byte param0) {
         if (param0 != 46) {
           return (IsaacCipher) null;
         }
-        return this.trap.y(1751085328);
+        return this.trap.getRandom(1751085328);
     }
 
     public final boolean a(byte param0) {
@@ -337,7 +337,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
         return true;
     }
 
-    public final boolean d(byte param0) {
+    public final boolean isRenderExpired(byte param0) {
         if (param0 != 48) {
           return false;
         }
@@ -355,7 +355,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
     void encode(boolean param0, BitPacketBuffer param1) {
         try {
           param1.writeBits((byte) -127, this.getTypeId(param0), 6);
-          param1.writeBits((byte) -126, !this.field_f ? 0 : 1, 1);
+          param1.writeBits((byte) -126, !this.enabled ? 0 : 1, 1);
           param1.writeBits((byte) 112, !this.field_k ? 0 : 1, 1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "nv.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -364,7 +364,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
 
     void h(int param0) {
         if (param0 != 28701) {
-          this.a(46);
+          this.isEnabled(46);
         }
     }
 
@@ -378,14 +378,14 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
         }
     }
 
-    final PlayerSimulation i(int param0) {
+    final PlayerSimulation getSimulation(int param0) {
         if (param0 != 12340) {
           return (PlayerSimulation) null;
         }
         return this.trap.getSimulation(param0 + 3130);
     }
 
-    final Trap e(int param0) {
+    final Trap getRoot(int param0) {
         if (param0 == 6) {
           return this.trap.getRoot(param0 ^ 6);
         }
@@ -450,22 +450,22 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
     final void a(byte param0, boolean param1) {
         this.field_k = param1 ? true : false;
         if (param0 != -24) {
-          this.field_m = (Room) null;
+          this.room = (Room) null;
         }
     }
 
     void n(byte param0) {
         if (param0 < 68) {
-          this.field_f = true;
+          this.enabled = true;
         }
     }
 
     Behaviour(Room param0, boolean param1) {
-        this.field_f = true;
+        this.enabled = true;
         this.field_i = false;
         this.field_k = false;
         try {
-          this.field_m = param0;
+          this.room = param0;
           this.a(48, param0.e(-38), param1, (ui) null);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "nv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

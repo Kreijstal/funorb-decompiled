@@ -97,7 +97,7 @@ final class RandomMazeBehaviour extends Behaviour {
         RuntimeException var3 = null;
         try {
           super.attachToTrap(param0, param1);
-          if (this.b(true).formatVersion < 4) {
+          if (this.getRoom(true).formatVersion < 4) {
             param1.h(4, 0);
           }
           return;
@@ -316,8 +316,8 @@ final class RandomMazeBehaviour extends Behaviour {
         if (this.trap == null) {
           return;
         }
-        var25 = this.b(true);
-        var3 = this.o((byte) 46);
+        var25 = this.getRoom(true);
+        var3 = this.getRandom((byte) 46);
         var4 = this.trap.getWidth(-34) / this.field_t;
         var5 = this.trap.getHeight((byte) 55) / this.field_t;
         if (var4 / 2 * 2 == var4) {
@@ -333,7 +333,7 @@ final class RandomMazeBehaviour extends Behaviour {
         var6 = var4 / 2;
         var7 = -2 + var5;
         if (var6 == 2 * (var6 / 2)) {
-          if (this.b(true).h((byte) -77)) {
+          if (this.getRoom(true).h((byte) -77)) {
             var6++;
           } else {
             var6--;
@@ -546,7 +546,7 @@ final class RandomMazeBehaviour extends Behaviour {
         if (param4 == null) {
           return;
         }
-        Room var7 = this.b(true);
+        Room var7 = this.getRoom(true);
         param4.position = 0;
         if (param3 >= -41) {
           return;

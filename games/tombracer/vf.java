@@ -110,7 +110,7 @@ final class vf {
           }
           var3 = (oea) (this.field_j.first(-80));
           while (var3 != null) {
-            if (var3.field_h.d((byte) 48)) {
+            if (var3.field_h.isRenderExpired((byte) 48)) {
               var3.unlink(92);
             }
             var3 = (oea) (this.field_j.next(param1 ^ 124));

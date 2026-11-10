@@ -388,7 +388,7 @@ final class wd implements dv {
         }
     }
 
-    final static mf a(byte param0, kda param1, byte[] param2, int param3) {
+    final static mf a(byte param0, HardwareOpenGlToolkit param1, byte[] param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         mf stackIn_5_0 = null;

@@ -22,7 +22,7 @@ final class ConstrainToCircleLocomotor extends ConstraintLocomotor {
         int var12 = 0;
         int var2 = this.f(10);
         int var3 = this.g((byte) 30);
-        int var4 = this.trap.s(25745) - var2 >> 16;
+        int var4 = this.trap.getLocalX(25745) - var2 >> 16;
         int var5 = this.trap.getLocalY(false) - var3 >> 16;
         int var6Lifetime1;
         int var7Lifetime1;
@@ -55,7 +55,7 @@ final class ConstrainToCircleLocomotor extends ConstraintLocomotor {
             var10 = bua.a(0, var8 >> 2);
             var11 = gqa.a(var9, (byte) 24, this.field_u >> 8) << 8;
             var12 = gqa.a(var10, (byte) 24, this.field_u >> 8) << 8;
-            this.trap.a((byte) -105, var2 + (var11 - this.trap.s(25745)), -this.trap.getLocalY(false) + (var3 + var12));
+            this.trap.a((byte) -105, var2 + (var11 - this.trap.getLocalX(25745)), -this.trap.getLocalY(false) + (var3 + var12));
             return;
           }
           if (var7 <= var6 * var6) {
@@ -70,7 +70,7 @@ final class ConstrainToCircleLocomotor extends ConstraintLocomotor {
           var10Lifetime3 = bua.a(0, var8Lifetime3 >> 2);
           var11Lifetime3 = gqa.a(var9Lifetime3, (byte) 24, this.field_u >> 8) << 8;
           var12Lifetime3 = gqa.a(var10Lifetime3, (byte) 24, this.field_u >> 8) << 8;
-          this.trap.a((byte) -105, var2 + (var11Lifetime3 - this.trap.s(25745)), -this.trap.getLocalY(false) + (var3 + var12Lifetime3));
+          this.trap.a((byte) -105, var2 + (var11Lifetime3 - this.trap.getLocalX(25745)), -this.trap.getLocalY(false) + (var3 + var12Lifetime3));
           return;
         }
         var6Lifetime1 = this.field_u >> 16;
@@ -85,7 +85,7 @@ final class ConstrainToCircleLocomotor extends ConstraintLocomotor {
           var10Lifetime1 = bua.a(0, var8Lifetime1 >> 2);
           var11Lifetime1 = gqa.a(var9Lifetime1, (byte) 24, this.field_u >> 8) << 8;
           var12Lifetime1 = gqa.a(var10Lifetime1, (byte) 24, this.field_u >> 8) << 8;
-          this.trap.a((byte) -105, var2 + (var11Lifetime1 - this.trap.s(25745)), -this.trap.getLocalY(false) + (var3 + var12Lifetime1));
+          this.trap.a((byte) -105, var2 + (var11Lifetime1 - this.trap.getLocalX(25745)), -this.trap.getLocalY(false) + (var3 + var12Lifetime1));
           return;
         }
         if (var7Lifetime1 <= var6Lifetime1 * var6Lifetime1) {
@@ -100,7 +100,7 @@ final class ConstrainToCircleLocomotor extends ConstraintLocomotor {
         var10Lifetime2 = bua.a(0, var8Lifetime2 >> 2);
         var11Lifetime2 = gqa.a(var9Lifetime2, (byte) 24, this.field_u >> 8) << 8;
         var12Lifetime2 = gqa.a(var10Lifetime2, (byte) 24, this.field_u >> 8) << 8;
-        this.trap.a((byte) -105, var2 + (var11Lifetime2 - this.trap.s(25745)), -this.trap.getLocalY(false) + (var3 + var12Lifetime2));
+        this.trap.a((byte) -105, var2 + (var11Lifetime2 - this.trap.getLocalX(25745)), -this.trap.getLocalY(false) + (var3 + var12Lifetime2));
     }
 
     final void tick(byte param0) {

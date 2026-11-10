@@ -167,7 +167,7 @@ final class FacePointLocomotor extends Locomotor {
         int var8;
         int var9;
         var9 = TombRacer.field_G ? 1 : 0;
-        var2 = this.trap.s(25745) - this.d((byte) -57);
+        var2 = this.trap.getLocalX(25745) - this.d((byte) -57);
         var5 = -32 / ((-69 - param0) / 42);
         var3 = this.trap.getLocalY(false) - this.a(false);
         if (this.field_o) {
@@ -239,7 +239,7 @@ final class FacePointLocomotor extends Locomotor {
           this.field_q = CoinItemComponent.a(true, 12, param1.readBits((byte) 44, 12)) << 16;
           stackIn_4_1 = (param1.readBits((byte) 44, 1) == 1);
           this.field_o = stackIn_4_1;
-          if (this.c(true).formatVersion < 3) {
+          if (this.getRoom(true).formatVersion < 3) {
             this.field_s = 0;
           } else {
             this.field_s = CoinItemComponent.a(true, 12, param1.readBits((byte) 44, 12));

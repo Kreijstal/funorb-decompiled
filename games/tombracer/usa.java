@@ -28,7 +28,7 @@ final class usa extends vw {
 
     final void b(byte param0) {
         jagdx.IDirect3DDevice var2 = null;
-        asa var3 = null;
+        AffineTransform3D var3 = null;
         if (null != this.field_f) {
           var2 = this.field_e.field_jd;
           var3 = this.field_e.n((byte) 95);
@@ -45,7 +45,7 @@ final class usa extends vw {
         jagdx.IDirect3DDevice var2 = null;
         if (null != this.field_f) {
           var2 = this.field_e.field_jd;
-          var2.a(4, this.field_c.a(field_d, false));
+          var2.a(4, this.field_c.writeTransposedProjection(field_d, false));
         }
         if (param0 >= 64) {
           return;
@@ -55,10 +55,10 @@ final class usa extends vw {
 
     final void c(boolean param0) {
         jagdx.IDirect3DDevice var2 = null;
-        asa var3 = null;
+        AffineTransform3D var3 = null;
         if (null != this.field_f) {
           var2 = this.field_e.field_jd;
-          var3 = this.field_c.a((byte) 113);
+          var3 = this.field_c.textureTransform((byte) 113);
           var3.a(field_d, -101);
           field_d[3] = field_d[3] * 0.25f;
           field_d[6] = field_d[6] * 0.25f;
@@ -84,7 +84,7 @@ final class usa extends vw {
 
     final void b(boolean param0) {
         jagdx.IDirect3DDevice var2 = null;
-        asa var3 = null;
+        AffineTransform3D var3 = null;
         if (null != this.field_f) {
           var2 = this.field_e.field_jd;
           var3 = this.field_e.n((byte) -86);
@@ -106,11 +106,11 @@ final class usa extends vw {
           var7 = this.field_e.field_jd;
           if (this.field_g.field_g) {
             var5_float = (float)(this.field_c.field_Dc % 4000) / 4000.0f;
-            this.field_c.a(true, this.field_g.field_c);
+            this.field_c.bindTexture(true, this.field_g.field_c);
             var7.a(11, var5_float, 0.0f, 0.0f, 0.0f);
           } else {
             var5 = 16 * (this.field_c.field_Dc % 4000) / 4000;
-            this.field_c.a(true, this.field_g.field_d[var5]);
+            this.field_c.bindTexture(true, this.field_g.field_d[var5]);
             var7.a(11, 0.0f, 0.0f, 0.0f, 0.0f);
           }
           return;
@@ -119,17 +119,17 @@ final class usa extends vw {
         jagdx.IDirect3DDevice var6 = this.field_e.field_jd;
         if (this.field_g.field_g) {
           var5_floatLifetime1 = (float)(this.field_c.field_Dc % 4000) / 4000.0f;
-          this.field_c.a(true, this.field_g.field_c);
+          this.field_c.bindTexture(true, this.field_g.field_c);
           var6.a(11, var5_floatLifetime1, 0.0f, 0.0f, 0.0f);
         } else {
           var5Lifetime1 = 16 * (this.field_c.field_Dc % 4000) / 4000;
-          this.field_c.a(true, this.field_g.field_d[var5Lifetime1]);
+          this.field_c.bindTexture(true, this.field_g.field_d[var5Lifetime1]);
           var6.a(11, 0.0f, 0.0f, 0.0f, 0.0f);
         }
     }
 
     final void a(boolean param0, int param1) {
-        this.field_c.a(jv.field_m, (byte) -110, r.field_m);
+        this.field_c.setTextureCombineOperations(jv.field_m, (byte) -110, r.field_m);
         if (param1 != 5744) {
           iva var4 = (iva) null;
           this.a(-56, (iva) null, 109);

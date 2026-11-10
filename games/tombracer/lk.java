@@ -132,7 +132,7 @@ final class lk extends IntrusiveNode implements qn, Renderable, noa {
         }
     }
 
-    public final boolean d(byte param0) {
+    public final boolean isRenderExpired(byte param0) {
         if (param0 != 48) {
           return false;
         }
@@ -169,7 +169,7 @@ final class lk extends IntrusiveNode implements qn, Renderable, noa {
     final void b(int param0, int param1) {
         this.field_p = param1;
         if (param0 != 0) {
-          this.d((byte) 90);
+          this.isRenderExpired((byte) 90);
         }
     }
 

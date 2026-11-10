@@ -34,7 +34,7 @@ final class CircleMovementLocomotor extends Locomotor {
           var4 = (cr.a(true, this.field_q >> 2) >> 8) * (this.field_o >> 8) + var2;
           var5 = var3 + (pla.b(35, this.field_q >> 2) >> 8) * (this.field_o >> 8);
         } else {
-          var4 = this.trap.s(25745);
+          var4 = this.trap.getLocalX(25745);
           var5 = this.trap.getLocalY(false);
           this.field_p = false;
         }
@@ -240,8 +240,8 @@ final class CircleMovementLocomotor extends Locomotor {
           if (param3.field_J == null) {
             param3.field_J = new IntrusiveDeque();
           }
-          asa.field_j = param3.field_J;
-          asa.field_j.clear(8);
+          AffineTransform3D.field_j = param3.field_J;
+          AffineTransform3D.field_j.clear(8);
           WhiteLightSensorComponent.field_K = new SecondaryNodeHashTable(param7);
           if (param0.field_J == null) {
             param0.field_J = new IntrusiveDeque();

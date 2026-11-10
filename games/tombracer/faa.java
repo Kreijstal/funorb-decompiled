@@ -103,12 +103,12 @@ final class faa implements Renderable {
         return 78;
     }
 
-    public final boolean d(byte param0) {
+    public final boolean isRenderExpired(byte param0) {
         if (param0 != 48) {
           field_g = (String) null;
-          return this.field_c.d((byte) 48);
+          return this.field_c.isRenderExpired((byte) 48);
         }
-        return this.field_c.d((byte) 48);
+        return this.field_c.isRenderExpired((byte) 48);
     }
 
     public final int getRenderZ(byte param0) {
@@ -129,9 +129,9 @@ final class faa implements Renderable {
         if (param0 <= 103) {
           this.field_f = (bua) null;
         }
-        TrapPart var3 = this.field_c.c(-98);
+        TrapPart var3 = this.field_c.getPart(-98);
         if (var3 != null &&
-          !var3.a(-127)) {
+          !var3.isEnabled(-127)) {
           return;
         }
         if (null == this.field_f) {

@@ -1291,9 +1291,9 @@ final class np extends ka {
         }
     }
 
-    final void a(gda param0, el param1, int param2, int param3) {
-        oba var5 = null;
-        oba var6 = null;
+    final void a(Transform3D param0, el param1, int param2, int param3) {
+        OpenGlTransform3D var5 = null;
+        OpenGlTransform3D var6 = null;
         float var7 = 0.0f;
         float var8 = 0.0f;
         float var9 = 0.0f;
@@ -1327,7 +1327,7 @@ final class np extends ka {
           if (!this.field_l) {
             this.c(2709);
           }
-          var6 = (oba) (param0);
+          var6 = (OpenGlTransform3D) (param0);
           it.field_a = var6.field_h * var5.field_q + (var5.field_j * var6.field_k + var5.field_h * var6.field_r);
           TextLayout.field_b = var5.field_o + (var6.field_o * var5.field_q + (var6.field_p * var5.field_h + var5.field_j * var6.field_m));
           var7 = TextLayout.field_b + it.field_a * (float)this.field_eb;
@@ -2334,7 +2334,7 @@ final class np extends ka {
         int stackIn_21_0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_10_0;
-        oba var2 = null;
+        OpenGlTransform3D var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         pm var4 = null;
@@ -2407,16 +2407,16 @@ final class np extends ka {
         }
     }
 
-    final void a(gda param0, el param1, int param2) {
+    final void a(Transform3D param0, el param1, int param2) {
         RuntimeException stackIn_67_0 = null;
         StringBuilder stackIn_67_1 = null;
         String stackIn_68_2 = null;
         StringBuilder stackIn_71_1 = null;
         String stackIn_72_2 = null;
         RuntimeException decompiledCaughtException = null;
-        oba var4 = null;
+        OpenGlTransform3D var4 = null;
         RuntimeException var4_ref = null;
-        oba var5 = null;
+        OpenGlTransform3D var5 = null;
         float var6 = 0.0f;
         float var7 = 0.0f;
         float var8 = 0.0f;
@@ -2442,7 +2442,7 @@ final class np extends ka {
             return;
           }
           var4 = this.field_R.field_jd;
-          var5 = (oba) (param0);
+          var5 = (OpenGlTransform3D) (param0);
           if (!this.field_l) {
             this.c(2709);
           }
@@ -4148,7 +4148,7 @@ final class np extends ka {
             }
           }
           if (this.field_o != null &&
-            !gda.b(107, this.field_u, this.field_bb)) {
+            !Transform3D.b(107, this.field_u, this.field_bb)) {
             if (null == this.field_kb ||
               null != this.field_kb.field_d) {
               this.field_o = null;
@@ -4206,12 +4206,12 @@ final class np extends ka {
             this.field_fb = null;
           }
           if (null != this.field_d &&
-            !kda.b(this.field_bb, 124, this.field_u)) {
+            !HardwareOpenGlToolkit.b(this.field_bb, 124, this.field_u)) {
             this.field_db = null;
             this.field_d = (int[][]) null;
           }
           if (null != this.field_C &&
-            !eo.a(this.field_u, (byte) -125, this.field_bb)) {
+            !HardwareGraphicsToolkit.a(this.field_u, (byte) -125, this.field_bb)) {
             this.field_C = (int[][]) null;
           }
           if (this.field_p != null &&
@@ -5065,11 +5065,11 @@ final class np extends ka {
                 this.field_n = PlatformBehaviour.a(this.field_L, 50, this.field_n);
                 this.field_y = PlatformBehaviour.a(this.field_L, 50, this.field_y);
                 if (null != param1.field_l &&
-                  kda.b(param2, 104, this.field_u)) {
+                  HardwareOpenGlToolkit.b(param2, 104, this.field_u)) {
                   this.field_d = param1.a(false, (byte) 64);
                 }
                 if (null != param1.field_m &&
-                  eo.a(this.field_u, (byte) 83, param2)) {
+                  HardwareGraphicsToolkit.a(this.field_u, (byte) 83, param2)) {
                   this.field_C = param1.b((byte) -91);
                 }
                 stackIn_353_0 = (oc) (param1);

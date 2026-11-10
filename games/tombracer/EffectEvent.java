@@ -112,7 +112,7 @@ final class EffectEvent extends GameEvent {
             field_j = (Sprite) null;
           }
           if (this.isRoomScoped(false)) {
-            param0.a(this.effectSlot, param3, -121, param2);
+            param0.setRoomEffectSlot(this.effectSlot, param3, -121, param2);
             return;
           }
           param0.a(this.effectSlot, param3, -85);
@@ -134,7 +134,7 @@ final class EffectEvent extends GameEvent {
     final void a(int param0, byte param1, PlayerSimulation param2) {
         try {
           if (this.isRoomScoped(false)) {
-            param2.a((byte) -97, this.effectSlot, param0);
+            param2.clearRoomEffectSlot((byte) -97, this.effectSlot, param0);
           } else {
             param2.setEffectSlot(this.effectSlot, -1);
           }

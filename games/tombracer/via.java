@@ -97,7 +97,7 @@ final class via extends java.awt.Canvas implements java.awt.event.FocusListener 
         RuntimeException var8 = null;
         Exception var9 = null;
         String var10 = null;
-        gda var11 = null;
+        Transform3D var11 = null;
         try {
           if (param0 == null) {
             param0 = AllPlatformsMazeComponent.field_O;

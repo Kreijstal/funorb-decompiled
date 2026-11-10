@@ -47,7 +47,7 @@ final class Particle extends PooledObject implements Renderable {
         return this.field_u;
     }
 
-    public final boolean d(byte param0) {
+    public final boolean isRenderExpired(byte param0) {
         if (param0 != 48) {
           this.field_m = -112;
           return this.expired;
@@ -432,7 +432,7 @@ final class Particle extends PooledObject implements Renderable {
         return this.field_m;
     }
 
-    final int e(int param0) {
+    final int getAge(int param0) {
         if (param0 != 0) {
           this.field_o = -106;
           return this.age;
@@ -442,7 +442,7 @@ final class Particle extends PooledObject implements Renderable {
 
     final int c(int param0) {
         if (param0 > -65) {
-          this.d((byte) -106);
+          this.isRenderExpired((byte) -106);
           return this.field_A;
         }
         return this.field_A;

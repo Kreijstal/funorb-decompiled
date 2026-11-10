@@ -41,7 +41,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
         }
     }
 
-    public final boolean d(byte param0) {
+    public final boolean isRenderExpired(byte param0) {
         if (param0 != 48) {
           return true;
         }
@@ -342,7 +342,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
 
     final static boolean b(int param0, byte param1, int param2, int param3) {
         if (fua.field_g) {
-          return apa.field_c.dispatchKeyInput((byte) -121, fna.field_h, kda.field_td);
+          return apa.field_c.dispatchKeyInput((byte) -121, fna.field_h, HardwareOpenGlToolkit.field_td);
         }
         if (vo.field_b) {
           return KeySwitchComponent.c(param1 + 2097196, param0, param3);
@@ -588,7 +588,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
         return;
     }
 
-    final int r(int param0) {
+    final int getKind(int param0) {
         int var2 = -27 % ((param0 - 55) / 55);
         return this.kind;
     }

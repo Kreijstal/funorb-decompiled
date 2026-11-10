@@ -126,7 +126,7 @@ final class fp {
         via.field_a[2] = SpriteData.loadSprite(param2, "", "hud_idolhead");
         via.field_a[0] = SpriteData.loadSprite(param2, "", "hud_coin");
         via.field_a[1] = SpriteData.loadSprite(param2, "", "hud_bag");
-        gda.field_d = SpriteData.loadSheet(param2, "", "frame_main");
+        Transform3D.field_d = SpriteData.loadSheet(param2, "", "frame_main");
         nm.field_i = SpriteData.loadSprite(param2, "", "map_room");
         int incrementValue$3 = param1;
         param1++;

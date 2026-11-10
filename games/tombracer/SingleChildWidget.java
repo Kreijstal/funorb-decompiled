@@ -237,8 +237,8 @@ abstract class SingleChildWidget extends UiWidget implements tpa {
           var12 = rfa.a(BoulderComponent.a(param4, "lobby", 5, "popup_mouseover"), 122);
           var13 = BoulderComponent.a(param4, "lobby", 5, "button");
           var14 = rfa.a(BoulderComponent.a(param4, "lobby", 5, "tab_active"), 113);
-          oba.field_f = new jea(0L, var8);
-          oba.field_f.field_w = var14;
+          OpenGlTransform3D.field_f = new jea(0L, var8);
+          OpenGlTransform3D.field_f.field_w = var14;
           cga.field_g = new jea(0L, (jea) null);
           cga.field_g.field_R = nia.a(param4, "lobby", "closebutton", 125);
           cga.field_g.field_rb = nia.a(param4, "lobby", "closebutton_mouseover", -112);

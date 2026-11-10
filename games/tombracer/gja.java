@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class gja extends ka {
-    private eo field_S;
+    private HardwareGraphicsToolkit field_S;
     private int field_I;
     private short field_T;
     private gca[] field_nb;
@@ -68,7 +68,7 @@ final class gja extends ka {
     private int field_cb;
     static String field_k;
 
-    gja(eo param0, oc param1, int param2, int param3, int param4, int param5) {
+    gja(HardwareGraphicsToolkit param0, oc param1, int param2, int param3, int param4, int param5) {
         this(param0, param2, param5, true, false);
         int fieldTemp$0 = 0;
         short dupTemp$1 = 0;
@@ -1111,16 +1111,16 @@ final class gja extends ka {
     final void a() {
     }
 
-    final void a(gda param0, el param1, int param2, int param3) {
+    final void a(Transform3D param0, el param1, int param2, int param3) {
         RuntimeException stackIn_50_0 = null;
         StringBuilder stackIn_50_1 = null;
         String stackIn_51_2 = null;
         StringBuilder stackIn_54_1 = null;
         String stackIn_55_2 = null;
         RuntimeException decompiledCaughtException = null;
-        asa var5 = null;
+        AffineTransform3D var5 = null;
         RuntimeException var5_ref = null;
-        asa var6 = null;
+        AffineTransform3D var6 = null;
         float var7 = 0.0f;
         float var8 = 0.0f;
         float var9 = 0.0f;
@@ -1144,7 +1144,7 @@ final class gja extends ka {
             return;
           }
           var5 = this.field_S.field_bb;
-          var6 = (asa) (param0);
+          var6 = (AffineTransform3D) (param0);
           if (!this.field_A) {
             this.f(-913);
           }
@@ -1798,13 +1798,13 @@ final class gja extends ka {
               this.field_S.d(0, true);
               var2_int = 1;
               this.field_S.a(-127, 3, this.field_O.field_e);
-              this.field_S.a(this.field_S.field_nc, -32);
+              this.field_S.bindVertexLayout(this.field_S.field_nc, -32);
               decompiledSharedTail0 = (var7 != 0);
             }
             if (decompiledSharedTail0) {
               this.field_S.d(0, false);
               var2_int = 0;
-              this.field_S.a(this.field_S.field_ob, -32);
+              this.field_S.bindVertexLayout(this.field_S.field_ob, -32);
             }
             var3 = 0;
             while (var3 < this.field_j.length) {
@@ -2120,7 +2120,7 @@ final class gja extends ka {
     private final void c(int param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
-        asa var3 = null;
+        AffineTransform3D var3 = null;
         int var4 = 0;
         ll var5 = null;
         gca var6 = null;
@@ -2133,7 +2133,7 @@ final class gja extends ka {
         float var13 = 0.0f;
         int var14 = 0;
         int var15 = 0;
-        eo stackIn_7_0 = null;
+        HardwareGraphicsToolkit stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
         RuntimeException decompiledCaughtException = null;
         var15 = TombRacer.field_G ? 1 : 0;
@@ -2142,7 +2142,7 @@ final class gja extends ka {
           if (null != this.field_u) {
             stackIn_7_0 = this.field_S;
             stackIn_8_1 = !(this.field_f);
-            ((eo) (Object) stackIn_7_0).a(stackIn_8_1, 0);
+            ((HardwareGraphicsToolkit) (Object) stackIn_7_0).a(stackIn_8_1, 0);
             this.field_S.d(0, false);
             this.field_S.a(pea.field_c, 1, -79);
             this.field_S.a(1, false, pea.field_c);
@@ -2167,7 +2167,7 @@ final class gja extends ka {
                   this.field_S.F(-1662);
                   var14 = var6.field_h;
                   this.field_S.a((byte) -80, false, false, (int) var5.field_l);
-                  this.field_S.c((int) var5.field_f, 1);
+                  this.field_S.setBlendMode((int) var5.field_f, 1);
                   this.field_S.g(3625, var14);
                   this.field_S.y(2);
                 }
@@ -2648,7 +2648,7 @@ final class gja extends ka {
             param0.field_e = this.field_e;
             param0.field_lb = this.field_lb;
           }
-          if (!oba.c(param4, this.field_h, -19531)) {
+          if (!OpenGlTransform3D.c(param4, this.field_h, -19531)) {
             if (vta.a(this.field_h, param4, 2048)) {
               param0.field_O = this.field_O;
               if (var13 != 0) {
@@ -4696,16 +4696,16 @@ final class gja extends ka {
         }
     }
 
-    final void a(gda param0, el param1, int param2) {
+    final void a(Transform3D param0, el param1, int param2) {
         RuntimeException stackIn_70_0 = null;
         StringBuilder stackIn_70_1 = null;
         String stackIn_71_2 = null;
         StringBuilder stackIn_74_1 = null;
         String stackIn_75_2 = null;
         RuntimeException decompiledCaughtException = null;
-        asa var4 = null;
+        AffineTransform3D var4 = null;
         RuntimeException var4_ref = null;
-        asa var5 = null;
+        AffineTransform3D var5 = null;
         float var6 = 0.0f;
         float var7 = 0.0f;
         float var8 = 0.0f;
@@ -4731,7 +4731,7 @@ final class gja extends ka {
             return;
           }
           var4 = this.field_S.field_bb;
-          var5 = (asa) (param0);
+          var5 = (AffineTransform3D) (param0);
           if (!this.field_A) {
             this.f(-913);
           }
@@ -4853,7 +4853,7 @@ final class gja extends ka {
         }
     }
 
-    gja(eo param0, int param1, int param2, boolean param3, boolean param4) {
+    gja(HardwareGraphicsToolkit param0, int param1, int param2, boolean param3, boolean param4) {
         RuntimeException stackIn_36_0 = null;
         StringBuilder stackIn_36_1 = null;
         String stackIn_37_2 = null;
@@ -4887,7 +4887,7 @@ final class gja extends ka {
           }
           if (param3 ||
             vta.a(this.field_h, this.field_Y, 2048)) {
-            this.field_O = new hg(oba.c(this.field_Y, this.field_h, -19531));
+            this.field_O = new hg(OpenGlTransform3D.c(this.field_Y, this.field_h, -19531));
           }
           if (!param3 &&
             !ag.b(-1, this.field_Y, this.field_h)) {

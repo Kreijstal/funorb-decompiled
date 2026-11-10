@@ -484,13 +484,13 @@ final class PlayerContextMenu {
           if (param1 != 17) {
             return false;
           }
-          fj.field_c = new ReportAbuseDialog(this.field_h.field_q, this.field_h.field_A, this.field_h.field_G, this.field_h.field_t, param0, WallModel.field_r, oba.field_f, cga.field_g, Corpse.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p, this.field_i, this.field_g);
+          fj.field_c = new ReportAbuseDialog(this.field_h.field_q, this.field_h.field_A, this.field_h.field_G, this.field_h.field_t, param0, WallModel.field_r, OpenGlTransform3D.field_f, cga.field_g, Corpse.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p, this.field_i, this.field_g);
           return true;
         }
         if (param1 != 17) {
           return false;
         }
-        fj.field_c = new ReportAbuseDialog(this.field_h.field_q, this.field_h.field_A, this.field_h.field_G, this.field_h.field_t, param0, WallModel.field_r, oba.field_f, cga.field_g, Corpse.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p, this.field_i, this.field_g);
+        fj.field_c = new ReportAbuseDialog(this.field_h.field_q, this.field_h.field_A, this.field_h.field_G, this.field_h.field_t, param0, WallModel.field_r, OpenGlTransform3D.field_f, cga.field_g, Corpse.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p, this.field_i, this.field_g);
         return true;
     }
 

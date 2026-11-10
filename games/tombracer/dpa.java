@@ -26,12 +26,12 @@ final class dpa implements Renderable {
         return this.field_e.getRenderX((byte) 95) + this.field_i;
     }
 
-    public final boolean d(byte param0) {
+    public final boolean isRenderExpired(byte param0) {
         if (param0 != 48) {
-          this.d((byte) -51);
-          return this.field_e.d((byte) 48);
+          this.isRenderExpired((byte) -51);
+          return this.field_e.isRenderExpired((byte) 48);
         }
-        return this.field_e.d((byte) 48);
+        return this.field_e.isRenderExpired((byte) 48);
     }
 
     public final int getRenderY(byte param0) {
@@ -56,9 +56,9 @@ final class dpa implements Renderable {
         int var7 = 0;
         int var8 = 0;
         ka var4 = null;
-        TrapPart var3 = this.field_e.c(-85);
+        TrapPart var3 = this.field_e.getPart(-85);
         if (var3 != null &&
-          !var3.a(-102)) {
+          !var3.isEnabled(-102)) {
           return;
         }
         if (param0 <= 103) {

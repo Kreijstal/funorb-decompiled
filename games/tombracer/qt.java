@@ -202,11 +202,11 @@ final class qt {
               return;
             }
             if (var2 == 10) {
-              var34 = (ht) (asa.field_j.first(-80));
+              var34 = (ht) (AffineTransform3D.field_j.first(-80));
               while (var34 != null) {
                 var34.unlink(122);
                 var34.unlinkSecondary(-7975);
-                var34 = (ht) (asa.field_j.next(127));
+                var34 = (ht) (AffineTransform3D.field_j.next(127));
               }
               return;
             }

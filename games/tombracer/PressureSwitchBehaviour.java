@@ -38,7 +38,7 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
           this.c(false);
         }
         var2 = 0;
-        var3 = this.b(true).collisionGrid;
+        var3 = this.getRoom(true).collisionGrid;
         var4 = var3.a((byte) -26, this.trap);
         for (var5 = 0; var5 < var4.length; var5++) {
           if (this.a(var4[var5], (byte) -103)) {

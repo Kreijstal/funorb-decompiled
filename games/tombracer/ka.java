@@ -22,7 +22,7 @@ abstract class ka {
 
     abstract void O(int param0, int param1, int param2);
 
-    final static pr a(byte param0, byte[] param1, int param2, kda param3) {
+    final static pr a(byte param0, byte[] param1, int param2, HardwareOpenGlToolkit param3) {
         Object stackIn_14_0 = null;
         pr stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
@@ -85,13 +85,13 @@ abstract class ka {
         }
     }
 
-    abstract void a(gda param0, el param1, int param2);
+    abstract void a(Transform3D param0, el param1, int param2);
 
     abstract ka a(byte param0, int param1, boolean param2);
 
     abstract void a();
 
-    abstract void a(gda param0, el param1, int param2, int param3);
+    abstract void a(Transform3D param0, el param1, int param2, int param3);
 
     private final void a(int[] param0, int param1, int param2, int[] param3, boolean param4, int param5, int param6, int param7, int param8, byte param9) {
         RuntimeException stackIn_35_0 = null;
@@ -169,7 +169,7 @@ abstract class ka {
           }
           if (param9 <= 81) {
             var13 = (el) null;
-            this.a((gda) null, (el) null, -114);
+            this.a((Transform3D) null, (el) null, -114);
           }
           if (param5 != 65535) {
             this.I(param2, param0, param7, param8, param6, param4, param5, param3);

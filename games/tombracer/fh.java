@@ -589,7 +589,7 @@ final class fh implements Renderable {
               gga.b(320, 240, (byte) 113);
               fga.a(0, false, 0, param1);
             } else {
-              if (0 != gda.field_c) {
+              if (0 != Transform3D.field_c) {
                 C2SSubmitSettingsPacket.a(param1, (byte) 94);
               } else {
                 qja.a(false, param0, param2 ^ -128);
@@ -615,12 +615,12 @@ final class fh implements Renderable {
         }
     }
 
-    public final boolean d(byte param0) {
+    public final boolean isRenderExpired(byte param0) {
         if (param0 != 48) {
           this.field_h = true;
-          return this.field_g.d((byte) 48);
+          return this.field_g.isRenderExpired((byte) 48);
         }
-        return this.field_g.d((byte) 48);
+        return this.field_g.isRenderExpired((byte) 48);
     }
 
     fh() {

@@ -72,7 +72,7 @@ abstract class ob extends IntrusiveNode {
           vua.field_A = su.a(wj.field_a, param0, (byte) 126);
           dn.field_d = ak.a(param0, ProxySocketConnector.field_e, -100);
           PlayerProfile.field_r = ak.a(param0, via.field_a, param1 ^ -17261);
-          bm.field_f = ak.a(param0, gda.field_d, -112);
+          bm.field_f = ak.a(param0, Transform3D.field_d, -112);
           ega.field_e = su.a(nm.field_i, param0, (byte) 126);
           tv.field_wb = su.a(lt.field_a, param0, (byte) 127);
           GridWidgetContainer.field_y = ak.a(param0, ina.field_c, -104);

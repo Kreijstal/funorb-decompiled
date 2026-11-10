@@ -78,7 +78,7 @@ final class ni {
         }
     }
 
-    ni(eo param0) {
+    ni(HardwareGraphicsToolkit param0) {
         int var4_int = 0;
         int var5 = 0;
         jaclib.memory.Buffer var7 = null;
@@ -177,7 +177,7 @@ final class ni {
         }
     }
 
-    final void a(int param0, eo param1) {
+    final void a(int param0, HardwareGraphicsToolkit param1) {
         try {
           this.field_a.a(786336, 24, true);
           int var3_int = -61 / ((param0 + 55) / 41);

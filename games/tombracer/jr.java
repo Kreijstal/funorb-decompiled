@@ -82,7 +82,7 @@ final class jr implements isa {
     }
 
     final static void b(byte param0) {
-        kda.field_pd = false;
+        HardwareOpenGlToolkit.field_pd = false;
         fr.field_c = 0;
         ConsoleToken.field_f = -1;
         if (param0 <= -91) {

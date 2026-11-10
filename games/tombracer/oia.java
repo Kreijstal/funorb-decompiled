@@ -8,12 +8,12 @@ final class oia implements gs {
     private static String[] field_d;
     int field_b;
 
-    public final boolean d(byte param0) {
+    public final boolean isRenderExpired(byte param0) {
         if (param0 != 48) {
           oia.releaseStatics(true);
-          return this.field_c.d((byte) 48);
+          return this.field_c.isRenderExpired((byte) 48);
         }
-        return this.field_c.d((byte) 48);
+        return this.field_c.isRenderExpired((byte) 48);
     }
 
     public final boolean a(boolean param0, uh param1) {
@@ -53,9 +53,9 @@ final class oia implements gs {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        TrapPart var3 = this.field_c.c(-100);
+        TrapPart var3 = this.field_c.getPart(-100);
         if (var3 != null &&
-          !var3.a(-101)) {
+          !var3.isEnabled(-101)) {
           return;
         }
         if (param0 < 103) {

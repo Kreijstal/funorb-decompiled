@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public final class Direct3DToolkit extends eo {
+public final class Direct3DToolkit extends HardwareGraphicsToolkit {
     private int field_Xc;
     private gua field_kd;
     jagdx.PixelBuffer field_Nc;
@@ -35,7 +35,7 @@ public final class Direct3DToolkit extends eo {
         return null;
     }
 
-    final void a(dn param0, byte param1) {
+    final void applyTexCoordGeneration(dn param0, byte param1) {
         int var3;
         var3 = 0;
         if (IdolItemComponent.field_H == param0) {
@@ -279,7 +279,7 @@ public final class Direct3DToolkit extends eo {
     final void c() {
     }
 
-    final void a(mna param0, int param1) {
+    final void bindVertexLayout(mna param0, int param1) {
         if (param1 != -32) {
           this.field_Wc = (jagdx.D3DLIGHT) null;
         }
@@ -346,7 +346,7 @@ public final class Direct3DToolkit extends eo {
         this.field_jd.SetTransform(3, this.field_T);
         if (param0 <= 26) {
           dn var3 = (dn) null;
-          this.a((dn) null, (byte) -5);
+          this.applyTexCoordGeneration((dn) null, (byte) -5);
         }
     }
 
@@ -430,20 +430,20 @@ public final class Direct3DToolkit extends eo {
 
     final void M(int param0) {
         if (param0 != -27581) {
-          this.v(73);
+          this.applyDirectionalLightColors(73);
         }
         this.field_jd.a(27, this.field_Yb);
     }
 
     final void w(byte param0) {
-        this.v(53);
+        this.applyDirectionalLightColors(53);
         if (param0 != -21) {
           this.field_Sc = false;
         }
         this.uploadDirectionalLights((byte) -78);
     }
 
-    final gf createIntTexture2D(boolean param0, byte[] param1, int param2, int param3, int param4, int param5, ft param6, int param7) {
+    final gf a(boolean param0, byte[] param1, int param2, int param3, int param4, int param5, ft param6, int param7) {
         if (param4 != 1) {
           return (gf) null;
         }
@@ -525,7 +525,7 @@ public final class Direct3DToolkit extends eo {
         super.resetDriverState(param0 + 0);
     }
 
-    final gf a(int[] param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
+    final gf createIntTexture2D(int[] param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
         int var8 = -36 / ((param6 - 13) / 46);
         return (gf) ((Object) new pia(this, param3, param5, param2, param0, param1, param4));
     }
@@ -706,7 +706,7 @@ public final class Direct3DToolkit extends eo {
           var13 = new gua(var12_ref.b(0), var12_ref.b());
           var15 = new Direct3DToolkit(var5_int, var6, param0, var7, var8, var12_ref, var13, var10, var9, param1, param2, param3.intValue());
           var4 = var15;
-          var15.K(-107);
+          var15.initializeHardwareResources(-107);
           stackIn_37_0 = var15;
           return (GraphicsToolkit) ((Object) stackIn_37_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -775,7 +775,7 @@ public final class Direct3DToolkit extends eo {
         this.field_jd.SetTextureStageState(this.field_Cc, 1, var2);
     }
 
-    final void I(int param0) {
+    final void applyFogParameters(int param0) {
         this.field_Hc = (float)(-this.field_Ac + this.field_k);
         this.field_B = (float)(-this.field_J) + this.field_Hc;
         if ((float)this.field_D > this.field_B) {
@@ -917,7 +917,7 @@ public final class Direct3DToolkit extends eo {
         return -0.5f;
     }
 
-    final void v(int param0) {
+    final void applyDirectionalLightColors(int param0) {
         if (param0 <= 19) {
           this.field_Yc = (boolean[]) null;
         }
@@ -1098,7 +1098,7 @@ public final class Direct3DToolkit extends eo {
         }
     }
 
-    final gf a(int param0, int param1, ft param2, byte param3, una param4) {
+    final gf createTexture2D(int param0, int param1, ft param2, byte param3, una param4) {
         if (param3 != -63) {
           jagdx.IDirect3DVertexShader var7 = (jagdx.IDirect3DVertexShader) null;
           this.a((jagdx.IDirect3DVertexShader) null, 105);
@@ -1123,7 +1123,7 @@ public final class Direct3DToolkit extends eo {
         this.field_jd.SetTextureStageState(this.field_Cc, 4, var2);
     }
 
-    final void h(byte param0) {
+    final void applyLighting(byte param0) {
         jagdx.IDirect3DDevice stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         boolean stackIn_4_2 = false;
@@ -1163,7 +1163,7 @@ public final class Direct3DToolkit extends eo {
         var12.a(false);
     }
 
-    final Object a(boolean param0, java.awt.Canvas param1) {
+    final Object createSurface(boolean param0, java.awt.Canvas param1) {
         if (!param0) {
           return null;
         }

@@ -179,7 +179,7 @@ final class MiscItemBehaviour extends ItemBehaviour {
           return;
         }
         if (0 == this.itemType) {
-          this.b(true).a(0, 0, 67, 0, (byte) 6);
+          this.getRoom(true).a(0, 0, 67, 0, (byte) 6);
           return;
         }
     }

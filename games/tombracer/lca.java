@@ -10,12 +10,12 @@ final class lca implements Renderable {
     int field_e;
     int field_d;
 
-    public final boolean d(byte param0) {
+    public final boolean isRenderExpired(byte param0) {
         if (param0 != 48) {
           this.getRenderZ((byte) 127);
-          return this.field_a.d((byte) 48);
+          return this.field_a.isRenderExpired((byte) 48);
         }
-        return this.field_a.d((byte) 48);
+        return this.field_a.isRenderExpired((byte) 48);
     }
 
     public final void f(int param0) {
@@ -68,9 +68,9 @@ final class lca implements Renderable {
         if (param0 <= 103) {
           return;
         }
-        TrapPart var3 = this.field_a.c(-114);
+        TrapPart var3 = this.field_a.getPart(-114);
         if (var3 != null &&
-          !var3.a(-50)) {
+          !var3.isEnabled(-50)) {
           return;
         }
         try {

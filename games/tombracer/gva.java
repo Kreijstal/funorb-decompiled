@@ -72,7 +72,7 @@ final class gva implements mb {
           var9 = var9 + MovingPlatformComponent.field_N;
           var11 = (ag) (param0);
           var12 = var11.a(-862393232);
-          var13 = (float)param2.e(0) / (float)param2.b(true);
+          var13 = (float)param2.getAge(0) / (float)param2.b(true);
           var14 = param2.c(param1 - 88);
           var15 = param2.b(-6782);
           var16 = (int)(var13 * (float)(var15 - var14) + (float)var14);
@@ -156,7 +156,7 @@ final class gva implements mb {
               (decompiledFrameRemainder2) &&
               (decompiledFrameRemainder1) &&
               (decompiledFrameRemainder0)) {
-              var26Lifetime2 = param2.e(0) * 255 / param2.b(true);
+              var26Lifetime2 = param2.getAge(0) * 255 / param2.b(true);
               stackIn_85_0 = (RoomCompletedScreen.c(param1 ^ -25)) ? 15 : 14;
               var27 = stackIn_85_0;
               var28 = SpawnerBehaviour.a(var27, param1 ^ -12189, 7).a((byte) 1, 526343, true);
@@ -745,7 +745,7 @@ final class gva implements mb {
           cr.a(var5, param2.e(true), param2.c(true), param2.i(0), (byte) 35);
           var6 = var5[0];
           var7 = var5[1];
-          var8 = (float)param2.e(param0 + 14066) / (float)param2.b(true);
+          var8 = (float)param2.getAge(param0 + 14066) / (float)param2.b(true);
           var9 = (int)(255.0f - 255.0f * var8);
           if (era.field_g != null) {
             var10 = param2.a(false);
@@ -797,7 +797,7 @@ final class gva implements mb {
             gva.a(-15);
           }
           var4_int = param0.t(1);
-          var5 = param0.r(-77);
+          var5 = param0.getKind(-77);
           var6 = param0.getX(3);
           var7 = param0.getY(param1 + 9553);
           if (var5 == 0) {

@@ -171,7 +171,7 @@ final class w extends sqa {
           if (var3_int >= 98) {
             return null;
           }
-          if (this.field_i[var3_int] >= dda.field_f[var3_int]) {
+          if (this.field_i[var3_int] >= QueuedPlayerEvent.field_f[var3_int]) {
             stackIn_11_0 = null;
             return (fla) (stackIn_11_0);
           }

@@ -641,7 +641,7 @@ final class f {
             if (var5 != 0) {
               return;
             }
-            if (param2 != this.field_f[var4_int].o((byte) -48)) {
+            if (param2 != this.field_f[var4_int].getRoot((byte) -48)) {
               param0.writeBits((byte) 73, 0, 1);
               param0.writeBits((byte) 111, this.field_f[var4_int].getGlobalId(31974).getId((byte) 62), 8);
             } else {

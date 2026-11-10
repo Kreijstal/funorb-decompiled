@@ -215,13 +215,13 @@ final class cm implements GamePacket {
           }
           if (SafeZoneBehaviour.field_u.length >= 2) {
             if (param3) {
-              stackIn_42_0 = (kca.field_g != -1) ? 1 : 0;
+              stackIn_42_0 = (TextFieldValidator.field_g != -1) ? 1 : 0;
             } else {
               stackIn_42_0 = 0;
             }
             var6Lifetime1 = stackIn_42_0;
             if (var6Lifetime1 != 0) {
-              var7 = kca.field_g;
+              var7 = TextFieldValidator.field_g;
               for (var8_int = 0; vk.field_b.length > var8_int; var8_int++) {
                 vk.field_b[var8_int] = (byte) 0;
               }
@@ -230,7 +230,7 @@ final class cm implements GamePacket {
             stackIn_50_0 = (!param3) ? 0 : -1;
             for (var7 = stackIn_50_0; SafeZoneBehaviour.field_u.length > var7; var7++) {
               if (var6Lifetime1 != 0) {
-                stackIn_58_0 = (var7 != kca.field_g) ? 1 : 0;
+                stackIn_58_0 = (var7 != TextFieldValidator.field_g) ? 1 : 0;
               } else {
                 stackIn_58_0 = 0;
               }

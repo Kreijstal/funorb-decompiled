@@ -10,7 +10,7 @@ interface Renderable {
 
     public abstract int getRenderX(byte param0);
 
-    public abstract boolean d(byte param0);
+    public abstract boolean isRenderExpired(byte param0);
 
     public abstract void f(int param0);
 }

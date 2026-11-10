@@ -30,7 +30,7 @@ final class gqa {
             return 1;
           }
           if (UiWidget.field_g == 2 &&
-            dda.a(false, this.field_j)) {
+            QueuedPlayerEvent.a(false, this.field_j)) {
             return 1;
           }
           if (!param0) {
@@ -42,7 +42,7 @@ final class gqa {
           return 1;
         }
         if (UiWidget.field_g == 2 &&
-          dda.a(false, this.field_j)) {
+          QueuedPlayerEvent.a(false, this.field_j)) {
           return 1;
         }
         if (!param0) {

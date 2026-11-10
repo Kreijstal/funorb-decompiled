@@ -17,7 +17,7 @@ final class fn extends vw {
         var4.backpatchByteLength(var4.position - var5, (byte) 11);
     }
 
-    fn(eo param0, hk param1) {
+    fn(HardwareGraphicsToolkit param0, hk param1) {
         super(param0);
         this.field_e = 0.0f;
         try {
@@ -36,21 +36,21 @@ final class fn extends vw {
         }
         this.field_c.e(1, false);
         if ((param1 & 128) != 0) {
-          this.field_c.a(true, (iva) null);
+          this.field_c.bindTexture(true, (iva) null);
         } else {
           if ((1 & param2) != 1) {
             if (this.field_d.field_g) {
-              this.field_c.a(true, this.field_d.field_c);
+              this.field_c.bindTexture(true, this.field_d.field_c);
             } else {
-              this.field_c.a(true, this.field_d.field_d[0]);
+              this.field_c.bindTexture(true, this.field_d.field_d[0]);
             }
           } else {
             if (this.field_d.field_g) {
               this.field_e = (float)(this.field_c.field_Dc % 4000) / 4000.0f;
-              this.field_c.a(true, this.field_d.field_c);
+              this.field_c.bindTexture(true, this.field_d.field_c);
             } else {
               var4 = this.field_c.field_Dc % 4000 * 16 / 4000;
-              this.field_c.a(true, this.field_d.field_d[var4]);
+              this.field_c.bindTexture(true, this.field_d.field_d[var4]);
             }
           }
         }
@@ -60,35 +60,35 @@ final class fn extends vw {
     final void a(int param0) {
         if (param0 <= -4) {
           this.field_c.e(1, false);
-          this.field_c.a(iw.field_c, (byte) -110, iw.field_c);
+          this.field_c.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
           this.field_c.a(ej.field_c, 0, -55);
           this.field_c.a(0, false, ej.field_c);
           this.field_c.a(1, (byte) 58);
-          this.field_c.a(true, (iva) null);
+          this.field_c.bindTexture(true, (iva) null);
           this.field_c.e(0, false);
           this.field_c.a(0, false, ej.field_c);
           return;
         }
         field_f = (int[]) null;
         this.field_c.e(1, false);
-        this.field_c.a(iw.field_c, (byte) -110, iw.field_c);
+        this.field_c.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
         this.field_c.a(ej.field_c, 0, -55);
         this.field_c.a(0, false, ej.field_c);
         this.field_c.a(1, (byte) 58);
-        this.field_c.a(true, (iva) null);
+        this.field_c.bindTexture(true, (iva) null);
         this.field_c.e(0, false);
         this.field_c.a(0, false, ej.field_c);
     }
 
     final void c(boolean param0) {
-        asa var2 = null;
-        asa var3 = null;
+        AffineTransform3D var2 = null;
+        AffineTransform3D var3 = null;
         if (param0) {
           if (0 == this.field_c.o((byte) 122)) {
-            var2 = this.field_c.a((byte) 80);
+            var2 = this.field_c.textureTransform((byte) 80);
             this.field_c.e(1, !param0 ? true : false);
             var3 = this.field_c.C(0);
-            var3.a(var2, 1);
+            var3.copyStateFrom(var2, 1);
             var3.b(11403, 1.0f, 0.125f, 0.125f);
             var3.a(0.0f, -120, 0.0f, this.field_e);
             this.field_c.a(cva.field_b, false);
@@ -107,16 +107,16 @@ final class fn extends vw {
 
     final void a(boolean param0, int param1) {
         if (param1 == 5744) {
-          this.field_c.a(PlatformComponent.field_F, (byte) -110, iw.field_c);
+          this.field_c.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, iw.field_c);
           return;
         }
         this.field_e = 1.964166283607483f;
-        this.field_c.a(PlatformComponent.field_F, (byte) -110, iw.field_c);
+        this.field_c.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, iw.field_c);
     }
 
     final void a(int param0, iva param1, int param2) {
         try {
-          this.field_c.a(true, param1);
+          this.field_c.bindTexture(true, param1);
           if (param2 != 24595) {
             this.field_e = -1.8459935188293457f;
           }
@@ -134,7 +134,7 @@ final class fn extends vw {
 
     final void a(int param0, boolean param1) {
         this.field_c.e(1, false);
-        this.field_c.a(PlatformComponent.field_F, (byte) -110, jv.field_m);
+        this.field_c.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, jv.field_m);
         this.field_c.a(ej.field_c, 0, -6219, true, false);
         this.field_c.a(0, false, PlayerContextMenu.field_j);
         this.field_c.a(0, (byte) 77);

@@ -6,7 +6,7 @@ abstract class OpenGlBuffer implements mta {
     private int field_f;
     static String field_i;
     static String field_a;
-    kda field_h;
+    HardwareOpenGlToolkit field_h;
     private int field_g;
     private int field_e;
     private int field_k;
@@ -316,7 +316,7 @@ abstract class OpenGlBuffer implements mta {
           this.a(72);
         }
         if (0 < this.field_f) {
-          this.field_h.a(this.field_g, this.field_f, (byte) 62);
+          this.field_h.queueProgramDeletion(this.field_g, this.field_f, (byte) 62);
           this.field_f = -1;
         }
     }
@@ -386,7 +386,7 @@ abstract class OpenGlBuffer implements mta {
         return this.field_f != 0 ? 0L : this.field_b.getAddress();
     }
 
-    OpenGlBuffer(kda param0, int param1, boolean param2) {
+    OpenGlBuffer(HardwareOpenGlToolkit param0, int param1, boolean param2) {
         this.field_f = -1;
         this.field_e = 0;
         try {

@@ -787,7 +787,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, t
         this.field_m = 81;
     }
 
-    public final boolean d(byte param0) {
+    public final boolean isRenderExpired(byte param0) {
         if (param0 != 48) {
           return false;
         }

@@ -40,7 +40,7 @@ final class cia {
         int var2;
         int var3;
         int var3Lifetime1;
-        if (oj.field_tb[kda.field_hd]) {
+        if (oj.field_tb[HardwareOpenGlToolkit.field_hd]) {
           stackIn_5_0 = -1;
         } else {
           stackIn_5_0 = (!oj.field_tb[mf.field_a]) ? 0 : 1;

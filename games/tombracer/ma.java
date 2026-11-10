@@ -36,7 +36,7 @@ final class ma extends qe {
           this.field_a.e(1, true);
           this.field_a.a(true, var4);
           jaggl.OpenGL.glMatrixMode(5890);
-          jaggl.OpenGL.glLoadMatrixf(this.field_a.field_Tc.b((byte) 57), 0);
+          jaggl.OpenGL.glLoadMatrixf(this.field_a.field_Tc.rotationMatrix((byte) 57), 0);
           jaggl.OpenGL.glMatrixMode(5888);
           this.field_a.e(0, true);
           this.field_c = true;

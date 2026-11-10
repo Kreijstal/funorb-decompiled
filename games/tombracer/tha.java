@@ -141,7 +141,7 @@ final class tha extends WidgetContainer implements tsa {
     public tha() {
         super(0, 0, 476, 225, (isa) null);
         this.field_z = new FocusableWidget(foa.field_a, (qc) null);
-        this.field_w = new FocusableWidget(kda.field_gd, (qc) null);
+        this.field_w = new FocusableWidget(HardwareOpenGlToolkit.field_gd, (qc) null);
         this.field_x = new FocusableWidget(fca.field_d, (qc) null);
         td var1 = new td();
         this.field_z.field_r = (isa) ((Object) var1);

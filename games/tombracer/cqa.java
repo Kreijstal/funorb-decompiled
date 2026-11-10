@@ -22,12 +22,12 @@ final class cqa extends vw {
     }
 
     private final void e(int param0) {
-        asa var4 = null;
+        AffineTransform3D var4 = null;
         jagdx.IDirect3DDevice var3 = null;
         if (this.field_j != null &&
           this.field_d) {
           var4 = this.field_c.c(true);
-          asa var2 = var4;
+          AffineTransform3D var2 = var4;
           var3 = this.field_i.field_jd;
           var3.a(13, this.field_c.field_sc * this.field_c.field_fc, this.field_c.field_fc * this.field_c.field_yb, this.field_c.field_fc * this.field_c.field_Kb, 1.0f);
           var3.a(14, this.field_c.field_sc * this.field_c.field_j, this.field_c.field_yb * this.field_c.field_j, this.field_c.field_j * this.field_c.field_Kb, 1.0f);
@@ -47,8 +47,8 @@ final class cqa extends vw {
         this.field_d = param1 ? true : false;
         this.field_c.e(1, false);
         int var3 = 101 / ((param0 - 41) / 62);
-        this.field_c.a(true, this.field_g);
-        this.field_c.a(PlatformComponent.field_F, (byte) -110, r.field_m);
+        this.field_c.bindTexture(true, this.field_g);
+        this.field_c.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, r.field_m);
         this.field_c.a(pea.field_c, 0, -55);
         this.field_c.a(ej.field_c, 2, -6219, true, false);
         this.field_c.a(0, false, PlayerContextMenu.field_j);
@@ -69,7 +69,7 @@ final class cqa extends vw {
             this.field_c.a(0, false, ej.field_c);
             this.field_e = false;
           }
-          this.field_c.a(true, param1);
+          this.field_c.bindTexture(true, param1);
           this.field_c.a((byte) -124, param0);
           if (param2 != 24595) {
             this.a(true, -82);
@@ -78,7 +78,7 @@ final class cqa extends vw {
           return;
         }
         if (!this.field_e) {
-          this.field_c.a(true, this.field_c.field_Jb);
+          this.field_c.bindTexture(true, this.field_c.field_Jb);
           this.field_c.a((byte) -85, 1);
           this.field_c.a(PlayerContextMenu.field_j, 0, -82);
           this.field_c.a(0, false, PlayerContextMenu.field_j);
@@ -97,13 +97,13 @@ final class cqa extends vw {
 
     final void c(boolean param0) {
         jagdx.IDirect3DDevice var2 = null;
-        asa var3 = null;
+        AffineTransform3D var3 = null;
         jagdx.IDirect3DDevice var2Lifetime1;
-        asa var3Lifetime1;
+        AffineTransform3D var3Lifetime1;
         if (param0) {
           if (this.field_j != null) {
             var2 = this.field_i.field_jd;
-            var3 = this.field_c.a((byte) 116);
+            var3 = this.field_c.textureTransform((byte) 116);
             var2.SetVertexShaderConstantF(8, var3.a(field_f, -118), 2);
           }
           return;
@@ -111,7 +111,7 @@ final class cqa extends vw {
         this.a(-44);
         if (this.field_j != null) {
           var2Lifetime1 = this.field_i.field_jd;
-          var3Lifetime1 = this.field_c.a((byte) 116);
+          var3Lifetime1 = this.field_c.textureTransform((byte) 116);
           var2Lifetime1.SetVertexShaderConstantF(8, var3Lifetime1.a(field_f, -118), 2);
         }
     }
@@ -120,7 +120,7 @@ final class cqa extends vw {
         jagdx.IDirect3DDevice var2 = null;
         if (this.field_j != null) {
           var2 = this.field_i.field_jd;
-          var2.a(4, this.field_c.a(field_f, false));
+          var2.a(4, this.field_c.writeTransposedProjection(field_f, false));
         }
         if (param0 >= 64) {
           return;
@@ -164,8 +164,8 @@ final class cqa extends vw {
 
     final void a(int param0) {
         this.field_c.e(1, false);
-        this.field_c.a(true, (iva) null);
-        this.field_c.a(iw.field_c, (byte) -110, iw.field_c);
+        this.field_c.bindTexture(true, (iva) null);
+        this.field_c.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
         this.field_c.a(ej.field_c, 0, -58);
         this.field_c.a(pea.field_c, 2, -122);
         this.field_c.a(0, false, ej.field_c);
@@ -191,7 +191,7 @@ final class cqa extends vw {
 
     final void b(byte param0) {
         jagdx.IDirect3DDevice var2 = null;
-        asa var3 = null;
+        AffineTransform3D var3 = null;
         if (this.field_j != null) {
           var2 = this.field_i.field_jd;
           var3 = this.field_i.n((byte) -101);
@@ -235,9 +235,9 @@ final class cqa extends vw {
         jagdx.IDirect3DDevice var6 = null;
         jagdx.IDirect3DVertexShader var2 = null;
         int var4 = 0;
-        asa var5 = null;
+        AffineTransform3D var5 = null;
         jagdx.IDirect3DVertexShader var2Lifetime1;
-        asa var5Lifetime1;
+        AffineTransform3D var5Lifetime1;
         int var4Lifetime1;
         if (param0 < 83) {
           this.b(false);
@@ -294,14 +294,14 @@ final class cqa extends vw {
     final void b(boolean param0) {
         jagdx.IDirect3DDevice stackIn_5_0 = null;
         int stackIn_5_1 = 0;
-        asa stackIn_5_2 = null;
+        AffineTransform3D stackIn_5_2 = null;
         boolean stackIn_6_3;
         jagdx.IDirect3DDevice stackIn_12_0 = null;
         int stackIn_12_1 = 0;
-        asa stackIn_12_2 = null;
+        AffineTransform3D stackIn_12_2 = null;
         boolean stackIn_13_3;
         jagdx.IDirect3DDevice var2;
-        asa var3;
+        AffineTransform3D var3;
         if (param0) {
           if (null != this.field_j) {
             var2 = this.field_i.field_jd;
@@ -310,7 +310,7 @@ final class cqa extends vw {
             stackIn_5_1 = 0;
             stackIn_5_2 = var3;
             stackIn_6_3 = (param0) ? false : true;
-            ((jagdx.IDirect3DDevice) (Object) stackIn_5_0).a(stackIn_5_1, ((asa) (Object) stackIn_5_2).a(stackIn_6_3, field_f));
+            ((jagdx.IDirect3DDevice) (Object) stackIn_5_0).a(stackIn_5_1, ((AffineTransform3D) (Object) stackIn_5_2).a(stackIn_6_3, field_f));
           }
         } else {
           this.c(false);
@@ -321,7 +321,7 @@ final class cqa extends vw {
             stackIn_12_1 = 0;
             stackIn_12_2 = var3;
             stackIn_13_3 = (param0) ? false : true;
-            ((jagdx.IDirect3DDevice) (Object) stackIn_12_0).a(stackIn_12_1, ((asa) (Object) stackIn_12_2).a(stackIn_13_3, field_f));
+            ((jagdx.IDirect3DDevice) (Object) stackIn_12_0).a(stackIn_12_1, ((AffineTransform3D) (Object) stackIn_12_2).a(stackIn_13_3, field_f));
           }
         }
     }

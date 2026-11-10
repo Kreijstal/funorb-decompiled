@@ -14,7 +14,7 @@ final class kra {
         if (param0) {
           return;
         }
-        era.field_d = new ara(WallModel.field_r, oba.field_f, cga.field_g, Corpse.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p);
+        era.field_d = new ara(WallModel.field_r, OpenGlTransform3D.field_f, cga.field_g, Corpse.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p);
     }
 
     public static void releaseStatics(int param0) {

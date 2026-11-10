@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class asa extends gda {
+final class AffineTransform3D extends Transform3D {
     float field_n;
     float field_e;
     float field_q;
@@ -33,10 +33,10 @@ final class asa extends gda {
         this.field_l = 0.0f;
     }
 
-    final void a(gda param0, byte param1) {
-        asa var5 = null;
+    final void a(Transform3D param0, byte param1) {
+        AffineTransform3D var5 = null;
         try {
-          var5 = (asa) (param0);
+          var5 = (AffineTransform3D) (param0);
           this.field_g = var5.field_g;
           this.field_f = var5.field_p;
           this.field_l = var5.field_k;
@@ -92,8 +92,8 @@ final class asa extends gda {
         return param0 * this.field_h + (this.field_p * param1 + this.field_o * param3) + this.field_i;
     }
 
-    final void b(gda param0, int param1) {
-        asa var12 = null;
+    final void b(Transform3D param0, int param1) {
+        AffineTransform3D var12 = null;
         float var4 = 0.0f;
         float var5 = 0.0f;
         float var6 = 0.0f;
@@ -103,7 +103,7 @@ final class asa extends gda {
         float var10 = 0.0f;
         float var11 = 0.0f;
         try {
-          var12 = (asa) (param0);
+          var12 = (AffineTransform3D) (param0);
           var4 = this.field_g;
           var5 = this.field_k;
           var6 = this.field_l;
@@ -462,12 +462,12 @@ final class asa extends gda {
         }
     }
 
-    final void a(gda param0, gda param1, byte param2) {
-        asa var6 = null;
-        asa var5 = null;
+    final void a(Transform3D param0, Transform3D param1, byte param2) {
+        AffineTransform3D var6 = null;
+        AffineTransform3D var5 = null;
         try {
-          var6 = (asa) (param0);
-          var5 = (asa) (param1);
+          var6 = (AffineTransform3D) (param0);
+          var5 = (AffineTransform3D) (param1);
           if (param2 < 118) {
             this.field_o = -0.8563432097434998f;
           }
@@ -519,13 +519,13 @@ final class asa extends gda {
         this.field_g = param5;
     }
 
-    final void a(int param0, gda param1) {
-        asa var3 = null;
+    final void a(int param0, Transform3D param1) {
+        AffineTransform3D var3 = null;
         try {
           if (param0 != 1217) {
-            asa.releaseStatics(-51);
+            AffineTransform3D.releaseStatics(-51);
           }
-          var3 = (asa) (param1);
+          var3 = (AffineTransform3D) (param1);
           this.field_p = var3.field_p;
           this.field_f = var3.field_f;
           this.field_l = var3.field_l;
@@ -553,7 +553,7 @@ final class asa extends gda {
 
     final float[] b(float[] param0, int param1) {
         RuntimeException var3 = null;
-        gda var4 = null;
+        Transform3D var4 = null;
         float[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -567,8 +567,8 @@ final class asa extends gda {
           param0[12] = 0.0f;
           param0[8] = this.field_p;
           if (param1 <= 1) {
-            var4 = (gda) null;
-            this.b((gda) null, -14);
+            var4 = (Transform3D) null;
+            this.b((Transform3D) null, -14);
           }
           param0[7] = 0.0f;
           param0[10] = this.field_h;
@@ -631,13 +631,13 @@ final class asa extends gda {
         if (param4 == 2) {
           return;
         }
-        gda var10 = (gda) null;
-        this.a(-20, (gda) null);
+        Transform3D var10 = (Transform3D) null;
+        this.a(-20, (Transform3D) null);
     }
 
     public static void releaseStatics(int param0) {
         if (param0 != 14) {
-          asa.releaseStatics(96);
+          AffineTransform3D.releaseStatics(96);
           field_j = null;
           return;
         }
@@ -665,8 +665,8 @@ final class asa extends gda {
         if (param0 == 1) {
           return this.field_e + (param3 * this.field_f + (this.field_l * param2 + param1 * this.field_g));
         }
-        gda var6 = (gda) null;
-        this.b((gda) null, -20);
+        Transform3D var6 = (Transform3D) null;
+        this.b((Transform3D) null, -20);
         return this.field_e + (param3 * this.field_f + (this.field_l * param2 + param1 * this.field_g));
     }
 
@@ -741,8 +741,8 @@ final class asa extends gda {
           this.field_l = 0.0f;
           return;
         }
-        gda var6 = (gda) null;
-        this.b((gda) null, 20);
+        Transform3D var6 = (Transform3D) null;
+        this.b((Transform3D) null, 20);
         this.field_n = 0.0f;
         this.field_m = 0.0f;
         this.field_h = param0;
@@ -751,10 +751,10 @@ final class asa extends gda {
         this.field_l = 0.0f;
     }
 
-    final void a(gda param0, int param1) {
-        asa var3 = null;
+    final void copyStateFrom(Transform3D param0, int param1) {
+        AffineTransform3D var3 = null;
         try {
-          var3 = (asa) (param0);
+          var3 = (AffineTransform3D) (param0);
           this.field_q = var3.field_q;
           this.field_k = var3.field_k;
           this.field_g = var3.field_g;
@@ -802,7 +802,7 @@ final class asa extends gda {
         this.field_q = 1.0f;
     }
 
-    asa() {
+    AffineTransform3D() {
         this.a();
     }
 

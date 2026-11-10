@@ -199,7 +199,7 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
           this.hash = param0.readBits((byte) 44, 8);
           this.field_h = param0.readBits((byte) 44, 8);
           for (var3_int = 0; this.orders.length > var3_int; var3_int++) {
-            this.orders[var3_int] = vp.a(param0.readBits((byte) 44, 7), -6487);
+            this.orders[var3_int] = DraggableWidget.a(param0.readBits((byte) 44, 7), -6487);
           }
           if (param1 != -19) {
             field_l = (oc[]) null;

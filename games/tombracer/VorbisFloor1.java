@@ -143,7 +143,7 @@ final class VorbisFloor1 {
           var10 = (1 << var9) - 1;
           var11 = 0;
           if (var9 > 0) {
-            var11 = VorbisSample.field_n[this.field_h[var7]].c();
+            var11 = VorbisSample.field_n[this.field_h[var7]].decodeScalar();
           }
           for (var12 = 0; var12 < var8; var12++) {
             var13 = this.field_l[var7][var11 & var10];
@@ -155,7 +155,7 @@ final class VorbisFloor1 {
             if (var13 < 0) {
               stackIn_14_2 = 0;
             } else {
-              stackIn_14_2 = VorbisSample.field_n[var13].c();
+              stackIn_14_2 = VorbisSample.field_n[var13].decodeScalar();
             }
             stackIn_13_0[stackIn_13_1] = stackIn_14_2;
           }

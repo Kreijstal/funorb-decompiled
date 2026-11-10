@@ -80,7 +80,7 @@ final class PitBehaviour extends Behaviour {
           if (param2 instanceof Player) {
             var5_int = param2.getX(3);
             var6 = param2.getY(9648);
-            var7_ref_la = this.b(true);
+            var7_ref_la = this.getRoom(true);
             var8_ref_tqa = var7_ref_la.f((byte) 93);
             var9 = var8_ref_tqa.a(var5_int, false);
             var10 = var8_ref_tqa.a(var6, false);

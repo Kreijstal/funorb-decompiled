@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class fka {
+final class SoundTone {
     private int[] field_u;
     private static int[] field_w;
     private co field_p;
@@ -30,7 +30,7 @@ final class fka {
     int field_i;
     private co field_h;
 
-    final void a(PacketBuffer param0) {
+    final void decode(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_g = new co();
@@ -79,7 +79,7 @@ final class fka {
         this.field_n.a(param0, this.field_d);
     }
 
-    final int[] a(int param0, int param1) {
+    final int[] synthesize(int param0, int param1) {
         int stackIn_41_0 = 0;
         double var3;
         int var5;
@@ -163,20 +163,20 @@ final class fka {
           if (this.field_c != null) {
             var14 = this.field_c.a(param0);
             var15 = this.field_l.a(param0);
-            var12 = var12 + (this.a(var7, var15, this.field_c.field_a) >> 1);
+            var12 = var12 + (this.evaluateWave(var7, var15, this.field_c.field_a) >> 1);
             var7 = var7 + ((var14 * var5 >> 16) + var6);
           }
           if (this.field_e != null) {
             var14Lifetime3 = this.field_e.a(param0);
             var15Lifetime3 = this.field_p.a(param0);
-            var13 = var13 * ((this.a(var10, var15Lifetime3, this.field_e.field_a) >> 1) + 32768) >> 15;
+            var13 = var13 * ((this.evaluateWave(var10, var15Lifetime3, this.field_e.field_a) >> 1) + 32768) >> 15;
             var10 = var10 + ((var14Lifetime3 * var8 >> 16) + var9);
           }
           for (var14Lifetime4 = 0; var14Lifetime4 < 5; var14Lifetime4++) {
             if (this.field_a[var14Lifetime4] != 0) {
               var15Lifetime4 = var11Lifetime1 + field_s[var14Lifetime4];
               if (var15Lifetime4 < param0) {
-                field_x[var15Lifetime4] = field_x[var15Lifetime4] + this.a(field_r[var14Lifetime4], var13 * field_j[var14Lifetime4] >> 15, this.field_g.field_a);
+                field_x[var15Lifetime4] = field_x[var15Lifetime4] + this.evaluateWave(field_r[var14Lifetime4], var13 * field_j[var14Lifetime4] >> 15, this.field_g.field_a);
                 field_r[var14Lifetime4] = field_r[var14Lifetime4] + ((var12 * field_o[var14Lifetime4] >> 16) + field_q[var14Lifetime4]);
               }
             }
@@ -288,7 +288,7 @@ final class fka {
         return field_x;
     }
 
-    private final int a(int param0, int param1, int param2) {
+    private final int evaluateWave(int param0, int param1, int param2) {
         if (param2 == 1) {
           if ((param0 & 32767) < 16384) {
             return param1;
@@ -318,7 +318,7 @@ final class fka {
         field_q = null;
     }
 
-    fka() {
+    SoundTone() {
         this.field_m = 100;
         this.field_u = new int[]{0, 0, 0, 0, 0};
         this.field_a = new int[]{0, 0, 0, 0, 0};

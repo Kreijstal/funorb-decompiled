@@ -90,12 +90,12 @@ final class bt implements Renderable {
         return -param1 + param2 + param3;
     }
 
-    public final boolean d(byte param0) {
+    public final boolean isRenderExpired(byte param0) {
         if (param0 != 48) {
           this.field_e = (aia) null;
-          return this.field_a.d((byte) 48);
+          return this.field_a.isRenderExpired((byte) 48);
         }
-        return this.field_a.d((byte) 48);
+        return this.field_a.isRenderExpired((byte) 48);
     }
 
     bt() {

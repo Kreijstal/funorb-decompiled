@@ -40,7 +40,7 @@ final class fj {
         ag var16_ref = null;
         int var17 = 0;
         int var18 = 0;
-        gda var19 = null;
+        Transform3D var19 = null;
         int var20 = 0;
         int var21 = 0;
         int var22 = 0;

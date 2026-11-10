@@ -43,7 +43,7 @@ final class CrusherBehaviour extends Behaviour {
         RuntimeException var3 = null;
         try {
           super.attachToTrap(param0, param1);
-          if (4 > this.b(true).formatVersion) {
+          if (4 > this.getRoom(true).formatVersion) {
             param1.h(3, 0);
           }
           param1.b((byte) -62, 8);
@@ -282,7 +282,7 @@ final class CrusherBehaviour extends Behaviour {
             if (2 == var6_int) {
               this.field_w = this.field_w + 1;
               if (this.field_w > this.field_o) {
-                var6 = this.b(true);
+                var6 = this.getRoom(true);
                 var6.a(123, var5, this.field_t, this.trap.getHeight((byte) 55), this.trap.getWidth(-79), var4);
                 this.b(0, 3);
                 this.trap.a((byte) -3, this.field_q);

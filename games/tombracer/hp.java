@@ -21,7 +21,7 @@ final class hp {
     }
 
     final static void a(int param0, int param1, int param2, ka param3, int param4, int param5, int param6) {
-        gda var7 = null;
+        Transform3D var7 = null;
         if (param4 != -1918106173) {
           field_a = (int[][]) null;
         }

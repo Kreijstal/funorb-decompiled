@@ -8,7 +8,7 @@ final class gh extends ToolkitSprite {
     private int field_g;
     static String field_f;
     private int field_l;
-    private eo field_c;
+    private HardwareGraphicsToolkit field_c;
     private boolean field_a;
     private int field_j;
     private boolean field_b;
@@ -19,7 +19,7 @@ final class gh extends ToolkitSprite {
     private int field_m;
 
     final void drawAffine(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8, int param9) {
-        asa var12;
+        AffineTransform3D var12;
         float var13;
         float var14;
         float var15;
@@ -34,7 +34,7 @@ final class gh extends ToolkitSprite {
         float var24;
         float var25;
         float var26;
-        asa var27;
+        AffineTransform3D var27;
         gf stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         hs stackIn_5_2 = null;
@@ -51,8 +51,8 @@ final class gh extends ToolkitSprite {
         }
         ((gf) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_5_2);
         this.field_c.k((byte) 121);
-        this.field_c.a(true, this.field_d);
-        this.field_c.c(param8, 1);
+        this.field_c.bindTexture(true, this.field_d);
+        this.field_c.setBlendMode(param8, 1);
         this.field_c.a((byte) -97, param6);
         this.field_c.a(pea.field_c, 1, -82);
         this.field_c.a(1, false, pea.field_c);
@@ -95,14 +95,14 @@ final class gh extends ToolkitSprite {
     }
 
     final void draw(int param0, int param1, int param2, int param3, int param4) {
-        asa var8 = this.field_c.y((byte) -77);
-        asa var7 = this.field_c.C(0);
+        AffineTransform3D var8 = this.field_c.y((byte) -77);
+        AffineTransform3D var7 = this.field_c.C(0);
         param1 = param1 + this.field_j;
         param0 = param0 + this.field_g;
         this.field_d.a(7672, MiscItemBehaviour.field_v);
         this.field_c.k((byte) 105);
-        this.field_c.a(true, this.field_d);
-        this.field_c.c(param4, 1);
+        this.field_c.bindTexture(true, this.field_d);
+        this.field_c.setBlendMode(param4, 1);
         this.field_c.a((byte) -19, param2);
         this.field_c.a(pea.field_c, 1, -26);
         this.field_c.a(1, false, pea.field_c);
@@ -190,8 +190,8 @@ final class gh extends ToolkitSprite {
     }
 
     final void drawScaled(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        asa var10;
-        asa var11;
+        AffineTransform3D var10;
+        AffineTransform3D var11;
         gf stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         hs stackIn_6_2 = null;
@@ -208,8 +208,8 @@ final class gh extends ToolkitSprite {
         }
         ((gf) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_6_2);
         this.field_c.k((byte) 118);
-        this.field_c.a(true, this.field_d);
-        this.field_c.c(param6, 1);
+        this.field_c.bindTexture(true, this.field_d);
+        this.field_c.setBlendMode(param6, 1);
         this.field_c.a((byte) 117, param4);
         this.field_c.a(pea.field_c, 1, -74);
         this.field_c.a(1, false, pea.field_c);
@@ -231,7 +231,7 @@ final class gh extends ToolkitSprite {
         this.field_c.a(1, false, PlayerContextMenu.field_j);
     }
 
-    gh(eo param0, int param1, int param2, int[] param3, int param4, int param5) {
+    gh(HardwareGraphicsToolkit param0, int param1, int param2, int[] param3, int param4, int param5) {
         RuntimeException runtimeException = null;
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
@@ -250,7 +250,7 @@ final class gh extends ToolkitSprite {
           this.field_c = param0;
           this.field_k = param2;
           this.field_l = param1;
-          this.field_d = param0.a(param3, param4, false, param1, param5, param2, -82);
+          this.field_d = param0.createIntTexture2D(param3, param4, false, param1, param5, param2, -82);
           this.field_d.a((byte) -66, true, true);
           stackIn_4_1 = (this.field_d.b(-7070) != param1);
           this.field_a = stackIn_4_1;

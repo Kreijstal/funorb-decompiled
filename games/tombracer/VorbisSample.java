@@ -10,7 +10,7 @@ final class VorbisSample extends IntrusiveNode {
     private int field_L;
     private static float[] field_I;
     private int field_J;
-    static vq[] field_n;
+    static VorbisCodebook[] field_n;
     private static int field_B;
     private int field_o;
     private int field_z;
@@ -303,9 +303,9 @@ final class VorbisSample extends IntrusiveNode {
           }
         }
         var1Lifetime1 = VorbisSample.readBits(8) + 1;
-        field_n = new vq[var1Lifetime1];
+        field_n = new VorbisCodebook[var1Lifetime1];
         for (var2Lifetime1 = 0; var2Lifetime1 < var1Lifetime1; var2Lifetime1++) {
-          field_n[var2Lifetime1] = new vq();
+          field_n[var2Lifetime1] = new VorbisCodebook();
         }
         var2Lifetime2 = VorbisSample.readBits(6) + 1;
         for (var3Lifetime1 = 0; var3Lifetime1 < var2Lifetime2; var3Lifetime1++) {

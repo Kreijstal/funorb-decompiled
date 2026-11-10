@@ -65,7 +65,7 @@ final class PortalComponent extends PrefabComponent {
           return;
         }
         try {
-          this.field_G.a(param1, 120, this.o((byte) -123));
+          this.field_G.a(param1, 120, this.getRoot((byte) -123));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vka.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -73,7 +73,7 @@ final class PortalComponent extends PrefabComponent {
 
     final void w(int param0) {
         super.w(-124);
-        this.field_G.a(this.o((byte) -20), false);
+        this.field_G.a(this.getRoot((byte) -20), false);
         if (param0 >= -122) {
           this.q((byte) -60);
         }

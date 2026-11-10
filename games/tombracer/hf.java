@@ -396,7 +396,7 @@ final class hf implements ac, gs {
         return this.field_p.getElevation((byte) 115);
     }
 
-    public final boolean d(byte param0) {
+    public final boolean isRenderExpired(byte param0) {
         if (param0 != 48) {
           this.field_n = (bua) null;
           return false;

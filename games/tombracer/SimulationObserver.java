@@ -3,11 +3,11 @@
  */
 abstract class SimulationObserver {
     private IntrusiveDeque field_a;
-    private IntrusiveDeque field_b;
+    private IntrusiveDeque queuedEvents;
 
-    final void a(GameEvent param0, Player param1, boolean param2) {
+    final void queueEvent(GameEvent param0, Player param1, boolean param2) {
         try {
-          this.field_b.addLast((byte) -96, new dda(param1, param0));
+          this.queuedEvents.addLast((byte) -96, new QueuedPlayerEvent(param1, param0));
           if (!param2) {
             Room var5 = (Room) null;
             this.a(-124, (Room) null);
@@ -151,26 +151,26 @@ abstract class SimulationObserver {
         }
     }
 
-    final void b(int param0) {
+    final void clearQueuedEvents(int param0) {
         if (param0 > -111) {
           return;
         }
-        this.field_b.clear(8);
+        this.queuedEvents.clear(8);
     }
 
     abstract void a(int param0, Player param1, int param2, Room param3, int param4, int param5);
 
-    final dda a(int param0) {
+    final QueuedPlayerEvent pollQueuedEvent(int param0) {
         if (param0 < 99) {
-          return (dda) null;
+          return (QueuedPlayerEvent) null;
         }
-        return (dda) (this.field_b.removeFirst(23));
+        return (QueuedPlayerEvent) (this.queuedEvents.removeFirst(23));
     }
 
     abstract void a(Player param0, Room param1, boolean param2);
 
     protected SimulationObserver() {
-        this.field_b = new IntrusiveDeque();
+        this.queuedEvents = new IntrusiveDeque();
         this.field_a = new IntrusiveDeque();
     }
 

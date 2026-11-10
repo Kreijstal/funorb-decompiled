@@ -459,7 +459,7 @@ final class pfa {
                 }
                 var2 = mt.a("keycode_player1left", (byte) 122);
                 if (null != var2) {
-                  kda.field_hd = 255 & var2[0];
+                  HardwareOpenGlToolkit.field_hd = 255 & var2[0];
                 }
                 var2 = mt.a("keycode_player1right", (byte) 119);
                 if (null != var2) {
@@ -1089,7 +1089,7 @@ final class pfa {
                 }
                 var2 = mt.a("weapon_dartgun", (byte) 103);
                 if (null != var2) {
-                  vp.field_B = jaa.a((byte) 83, var2);
+                  DraggableWidget.field_B = jaa.a((byte) 83, var2);
                 }
                 var2 = mt.a("weapon_machinegun", (byte) 104);
                 if (var2 != null) {
@@ -1249,7 +1249,7 @@ final class pfa {
                 }
                 var2 = mt.a("msg_didnt_choose_reward", (byte) 125);
                 if (var2 != null) {
-                  oba.field_n = jaa.a((byte) 43, var2);
+                  OpenGlTransform3D.field_n = jaa.a((byte) 43, var2);
                 }
                 var2 = mt.a("roundover_winner", (byte) 123);
                 if (null != var2) {

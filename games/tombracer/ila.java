@@ -200,7 +200,7 @@ final class ila {
           int var8Lifetime1;
           var9 = TombRacer.field_G ? 1 : 0;
           try {
-            if (oba.field_e == null &&
+            if (OpenGlTransform3D.field_e == null &&
               !joa.a(param5, (byte) 121)) {
               stackIn_4_0 = -1;
               return stackIn_4_0;
@@ -263,11 +263,11 @@ final class ila {
                 }
               }
               if (decompiledFrameRemainder0) {
-                km.field_p = eo.field_w;
+                km.field_p = HardwareGraphicsToolkit.field_w;
                 uca.field_d = -1;
               }
             }
-            if (eo.field_w == km.field_p &&
+            if (HardwareGraphicsToolkit.field_w == km.field_p &&
               cla.g(0)) {
               tr.field_g = vc.field_q.readLong(param2 + 290646830);
               gj.field_q = param1;
@@ -362,7 +362,7 @@ final class ila {
               stackIn_93_0 = oka.field_z;
               return stackIn_93_0;
             }
-            if (null == oba.field_e) {
+            if (null == OpenGlTransform3D.field_e) {
               if (PushableBlockMazeComponent.field_L) {
                 if (rf.b((byte) -121) > 30000L) {
                   io.field_b = hb.field_u;

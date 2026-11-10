@@ -31,7 +31,7 @@ final class eca {
           mn.field_n = jd.a(1, var8);
           ica.field_b = param2;
           var7 = FacePointLocomotor.a(oka.field_w, BoulderComponent.field_M, tg.field_c, param3, false);
-          asa.a(-124, var7);
+          AffineTransform3D.a(-124, var7);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -3,7 +3,7 @@
  */
 final class pja extends vw {
     private hk field_f;
-    private kda field_e;
+    private HardwareOpenGlToolkit field_e;
     private mf field_d;
 
     final void a(int param0, boolean param1) {
@@ -27,12 +27,12 @@ final class pja extends vw {
         if (param0 == 1185) {
           return null != this.field_d ? true : false;
         }
-        this.field_e = (kda) null;
+        this.field_e = (HardwareOpenGlToolkit) null;
         return null != this.field_d ? true : false;
     }
 
     final void a(boolean param0, int param1) {
-        this.field_c.a(jv.field_m, (byte) -110, PlatformComponent.field_F);
+        this.field_c.setTextureCombineOperations(jv.field_m, (byte) -110, PlatformComponent.field_F);
         if (param1 != 5744) {
           this.a(false, 34);
         }
@@ -55,11 +55,11 @@ final class pja extends vw {
         float var4_float = 0.0f;
         if (this.field_f.field_g) {
           var4_float = (float)(this.field_c.field_Dc % 4000) / 4000.0f;
-          this.field_c.a(true, this.field_f.field_c);
+          this.field_c.bindTexture(true, this.field_f.field_c);
           jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var4_float, 0.0f, 0.0f, 1.0f);
         } else {
           var4 = 16 * (this.field_c.field_Dc % 4000) / 4000;
-          this.field_c.a(true, this.field_f.field_d[var4]);
+          this.field_c.bindTexture(true, this.field_f.field_d[var4]);
           jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, 0.0f, 0.0f, 0.0f, 1.0f);
         }
         if (param0 == 55) {
@@ -68,7 +68,7 @@ final class pja extends vw {
         this.a(11, true);
     }
 
-    pja(kda param0, ResourceArchive param1, hk param2) {
+    pja(HardwareOpenGlToolkit param0, ResourceArchive param1, hk param2) {
         super(param0);
         RuntimeException var4 = null;
         RuntimeException stackIn_9_0 = null;

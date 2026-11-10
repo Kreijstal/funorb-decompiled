@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-abstract class eo extends GraphicsToolkit {
+abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     private IntrusiveDeque field_ic;
     ResourceArchive field_I;
     Object field_Ub;
@@ -17,15 +17,15 @@ abstract class eo extends GraphicsToolkit {
     int field_Hb;
     private Hashtable field_oc;
     int field_X;
-    asa field_q;
+    AffineTransform3D field_q;
     int field_Xb;
     boolean field_gb;
     int field_Fb;
-    asa field_bb;
-    asa field_Y;
-    asa field_Qb;
-    private asa field_rc;
-    private asa field_xc;
+    AffineTransform3D field_bb;
+    AffineTransform3D field_Y;
+    AffineTransform3D field_Qb;
+    private AffineTransform3D field_rc;
+    private AffineTransform3D field_xc;
     int field_Vb;
     private boolean field_Fc;
     float field_fc;
@@ -85,7 +85,7 @@ abstract class eo extends GraphicsToolkit {
     float field_pc;
     float[] field_M;
     private int field_kc;
-    asa[] field_hc;
+    AffineTransform3D[] field_hc;
     float field_sc;
     private boolean field_s;
     private boolean field_p;
@@ -123,7 +123,7 @@ abstract class eo extends GraphicsToolkit {
     private kp field_Ec;
     private vw[] field_sb;
     gja field_W;
-    private asa field_Ab;
+    private AffineTransform3D field_Ab;
     gja field_n;
     gja field_ec;
     private qm field_cb;
@@ -164,7 +164,7 @@ abstract class eo extends GraphicsToolkit {
             this.r(0);
           }
           this.field_P.setSunColour(this.field_sc, this.field_yb, this.field_Kb, param1, param2);
-          this.v(86);
+          this.applyDirectionalLightColors(86);
         }
         if (this.field_Eb[0] != param3 ||
           param4 != this.field_Eb[1] ||
@@ -198,15 +198,15 @@ abstract class eo extends GraphicsToolkit {
         }
         if (this.field_rb != 16) {
           this.G(22);
-          this.b(true, -69);
-          this.f(0, true);
+          this.setFogEnabled(true, -69);
+          this.setLightingEnabled(0, true);
           this.b(true, (byte) 81);
-          this.c(1, 1);
+          this.setBlendMode(1, 1);
           this.field_rb = 16;
         }
     }
 
-    final void J(int param0) {
+    final void usePixelProjection(int param0) {
         mla var2 = null;
         if (this.field_r != nr.field_d) {
           var2 = this.field_r;
@@ -214,7 +214,7 @@ abstract class eo extends GraphicsToolkit {
           if (var2.a(-101)) {
             this.v((byte) 94);
           }
-          this.P(0);
+          this.buildPixelProjection(0);
           this.field_T = this.field_Lb;
           this.l((byte) 26);
           this.field_rb = this.field_rb & -25;
@@ -230,7 +230,7 @@ abstract class eo extends GraphicsToolkit {
         return (za) ((Object) var2);
     }
 
-    final void c(int param0, int param1) {
+    final void setBlendMode(int param0, int param1) {
         gb var3;
         int var4;
         int var5;
@@ -316,8 +316,8 @@ abstract class eo extends GraphicsToolkit {
 
     abstract void w(int param0);
 
-    final gda b() {
-        return (gda) ((Object) new asa());
+    final Transform3D b() {
+        return (Transform3D) ((Object) new AffineTransform3D());
     }
 
     final void a(byte param0, int param1) {
@@ -328,37 +328,37 @@ abstract class eo extends GraphicsToolkit {
         if (param1 != 1) {
           if (param1 != 0) {
             if (param1 == 2) {
-              this.a(PlatformComponent.field_F, (byte) -110, r.field_m);
+              this.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, r.field_m);
             } else {
               if (param1 != 3) {
                 if (param1 == 4) {
-                  this.a(gq.field_w, (byte) -110, gq.field_w);
+                  this.setTextureCombineOperations(gq.field_w, (byte) -110, gq.field_w);
                 }
               } else {
-                this.a(iw.field_c, (byte) -110, jv.field_m);
+                this.setTextureCombineOperations(iw.field_c, (byte) -110, jv.field_m);
               }
             }
           } else {
-            this.a(iw.field_c, (byte) -110, iw.field_c);
+            this.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
           }
         } else {
-          this.a(PlatformComponent.field_F, (byte) -110, PlatformComponent.field_F);
+          this.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, PlatformComponent.field_F);
         }
     }
 
-    abstract void I(int param0);
+    abstract void applyFogParameters(int param0);
 
     abstract boolean a(una param0, int param1, ft param2);
 
     final void H(int param0) {
         if (4 != this.field_rb) {
-          this.J(19822);
-          this.b(false, -52);
+          this.usePixelProjection(19822);
+          this.setFogEnabled(false, -52);
           this.d(0, false);
-          this.f(0, false);
+          this.setLightingEnabled(0, false);
           this.b(false, (byte) 81);
           this.a((byte) -80, false, false, -2);
-          this.c(1, 1);
+          this.setBlendMode(1, 1);
           this.a((byte) -68, 0);
           this.field_rb = 4;
         }
@@ -390,7 +390,7 @@ abstract class eo extends GraphicsToolkit {
           if (!var2_ref_mla.a(-114)) {
             this.v((byte) 94);
           }
-          this.t((byte) 83);
+          this.buildOrthographicProjection((byte) 83);
           this.field_T = this.field_Ib;
           this.l((byte) 26);
           this.field_rb = this.field_rb & -8;
@@ -400,12 +400,12 @@ abstract class eo extends GraphicsToolkit {
 
     abstract void applyLightPositions(int param0);
 
-    abstract Object a(boolean param0, java.awt.Canvas param1);
+    abstract Object createSurface(boolean param0, java.awt.Canvas param1);
 
     final void d(int param0, boolean param1) {
         if (this.field_l != param1) {
           this.field_l = param1 ? true : false;
-          this.h((byte) -102);
+          this.applyLighting((byte) -102);
           this.field_rb = this.field_rb & -8;
         }
         if (param0 != 0) {
@@ -479,7 +479,7 @@ abstract class eo extends GraphicsToolkit {
         }
     }
 
-    final void O(int param0) {
+    final void useIdentityProjection(int param0) {
         mla var2 = null;
         if (param0 != 256) {
           this.j(-116);
@@ -517,8 +517,8 @@ abstract class eo extends GraphicsToolkit {
 
     abstract void B(byte param0);
 
-    final gda e() {
-        return (gda) ((Object) this.field_Ab);
+    final Transform3D e() {
+        return (Transform3D) ((Object) this.field_Ab);
     }
 
     abstract void e(boolean param0);
@@ -539,9 +539,9 @@ abstract class eo extends GraphicsToolkit {
 
     abstract void r(int param0);
 
-    abstract void v(int param0);
+    abstract void applyDirectionalLightColors(int param0);
 
-    private final void t(byte param0) {
+    private final void buildOrthographicProjection(byte param0) {
         float[] var2;
         float var3;
         float var4;
@@ -627,7 +627,7 @@ abstract class eo extends GraphicsToolkit {
           if (!param0) {
             this.c(-115);
           }
-          stackIn_3_0 = this.a(param4, 0, param2, param3, 0, param1, 75);
+          stackIn_3_0 = this.createIntTexture2D(param4, 0, param2, param3, 0, param1, 75);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -643,7 +643,7 @@ abstract class eo extends GraphicsToolkit {
         }
     }
 
-    final asa E(int param0) {
+    final AffineTransform3D E(int param0) {
         if (param0 < 1) {
           this.field_Jb = (iva) null;
         }
@@ -670,10 +670,10 @@ abstract class eo extends GraphicsToolkit {
     final void s(int param0) {
         if (this.field_rb != 8) {
           this.A((byte) -74);
-          this.b(true, -91);
-          this.f(0, true);
+          this.setFogEnabled(true, -91);
+          this.setLightingEnabled(0, true);
           this.b(true, (byte) 81);
-          this.c(1, 1);
+          this.setBlendMode(1, 1);
           this.field_rb = 8;
         }
         if (param0 != 11) {
@@ -683,11 +683,11 @@ abstract class eo extends GraphicsToolkit {
 
     abstract void f(int param0);
 
-    abstract void a(dn param0, byte param1);
+    abstract void applyTexCoordGeneration(dn param0, byte param1);
 
     abstract void a(Object param0, boolean param1, java.awt.Canvas param2);
 
-    private final void P(int param0) {
+    private final void buildPixelProjection(int param0) {
         float[] var2;
         float[] var3;
         if (param0 != 0) {
@@ -788,7 +788,7 @@ abstract class eo extends GraphicsToolkit {
         }
     }
 
-    final asa y(byte param0) {
+    final AffineTransform3D y(byte param0) {
         if (param0 != -77) {
           this.field_pb = (vw) null;
         }
@@ -800,7 +800,7 @@ abstract class eo extends GraphicsToolkit {
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
         if (param1 <= 37) {
-          this.field_Qb = (asa) null;
+          this.field_Qb = (AffineTransform3D) null;
         }
         var3 = param0;
         if (6 == var3) {
@@ -857,7 +857,7 @@ abstract class eo extends GraphicsToolkit {
         this.field_Dc = param0 & 2147483647;
     }
 
-    final void b(boolean param0, int param1) {
+    final void setFogEnabled(boolean param0, int param1) {
         if (this.field_Bb != param0) {
           this.field_Bb = param0 ? true : false;
           this.D(2);
@@ -939,7 +939,7 @@ abstract class eo extends GraphicsToolkit {
         }
     }
 
-    final float[] a(float[] param0, boolean param1) {
+    final float[] writeTransposedProjection(float[] param0, boolean param1) {
         RuntimeException var3 = null;
         float[] stackIn_2_0 = null;
         float[] stackIn_4_0 = null;
@@ -1002,7 +1002,7 @@ abstract class eo extends GraphicsToolkit {
         if (this.field_pb != null) {
           this.field_pb.a(true);
         }
-        this.I(1);
+        this.applyFogParameters(1);
     }
 
     abstract void z(int param0);
@@ -1016,7 +1016,7 @@ abstract class eo extends GraphicsToolkit {
           return;
         }
         this.field_ab = false;
-        this.t((byte) 83);
+        this.buildOrthographicProjection((byte) 83);
         if (this.field_r == cha.field_d) {
           this.l((byte) 26);
         }
@@ -1044,13 +1044,13 @@ abstract class eo extends GraphicsToolkit {
         }
     }
 
-    final void a(gda param0) {
+    final void a(Transform3D param0) {
         try {
-          this.field_bb = (asa) (param0);
-          this.field_Qb.a(this.field_bb, 1);
+          this.field_bb = (AffineTransform3D) (param0);
+          this.field_Qb.copyStateFrom(this.field_bb, 1);
           this.field_Qb.a((byte) 42);
-          this.field_rc.a((gda) (this.field_Qb), (byte) 127);
-          this.field_Y.a((gda) (this.field_bb), (byte) -31);
+          this.field_rc.a((Transform3D) (this.field_Qb), (byte) 127);
+          this.field_Y.a((Transform3D) (this.field_bb), (byte) -31);
           if (this.field_r.a(-38)) {
             this.v((byte) 94);
           }
@@ -1064,7 +1064,7 @@ abstract class eo extends GraphicsToolkit {
         this.g(3625, param4);
         this.a(pea.field_c, 0, -117);
         this.a(0, false, pea.field_c);
-        this.c(param5, 1);
+        this.setBlendMode(param5, 1);
         this.field_q.a(1.0f, (float)param2, false, (float)param3);
         this.field_q.a(param0, param1, 0);
         this.F(-1662);
@@ -1109,7 +1109,7 @@ abstract class eo extends GraphicsToolkit {
         this.field_h = param3;
         this.R(0);
         this.k(-19320);
-        this.O(256);
+        this.useIdentityProjection(256);
         this.r((byte) -115);
     }
 
@@ -1160,13 +1160,13 @@ abstract class eo extends GraphicsToolkit {
         this.g(3625, param3);
         this.a(pea.field_c, 0, -71);
         this.a(0, false, pea.field_c);
-        this.c(param4, 1);
+        this.setBlendMode(param4, 1);
         this.field_q.a(1.0f, (float)param2, false, (float)param2);
         this.field_q.a(param0, param1, 0);
         this.F(-1662);
         this.b(1, false);
         this.a(-125, 0, this.field_hb);
-        this.a(this.field_Z, -32);
+        this.bindVertexLayout(this.field_Z, -32);
         this.a(256, di.field_d, 1, 0);
         this.b(1, true);
         this.a(0, false, ej.field_c);
@@ -1186,7 +1186,7 @@ abstract class eo extends GraphicsToolkit {
         dw var10;
         int var11;
         int var12;
-        asa var13;
+        AffineTransform3D var13;
         int var14;
         boolean decompiledFrameRemainder0 = true;
         var14 = TombRacer.field_G ? 1 : 0;
@@ -1231,7 +1231,7 @@ abstract class eo extends GraphicsToolkit {
           }
           this.a(var9, var7, var8, param1, param2, -25);
           if (null == this.field_pb) {
-            this.a(true, (iva) (var5));
+            this.bindTexture(true, (iva) (var5));
             this.a((byte) -37, var6);
           } else {
             this.field_pb.a(var6, (iva) (var5), 24595);
@@ -1245,7 +1245,7 @@ abstract class eo extends GraphicsToolkit {
         }
     }
 
-    final void a(boolean param0, iva param1) {
+    final void bindTexture(boolean param0, iva param1) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -1279,11 +1279,11 @@ abstract class eo extends GraphicsToolkit {
         }
     }
 
-    abstract gf a(int[] param0, int param1, boolean param2, int param3, int param4, int param5, int param6);
+    abstract gf createIntTexture2D(int[] param0, int param1, boolean param2, int param3, int param4, int param5, int param6);
 
-    final void a(asa param0, byte param1) {
+    final void a(AffineTransform3D param0, byte param1) {
         try {
-          this.field_q.a(param0, 1);
+          this.field_q.copyStateFrom(param0, 1);
           this.field_gb = false;
           int var3_int = 127 % ((param1 - 23) / 33);
           this.o(16);
@@ -1297,14 +1297,14 @@ abstract class eo extends GraphicsToolkit {
           return;
         }
         if (this.field_rb != 1) {
-          this.J(19822);
-          this.b(false, -63);
+          this.usePixelProjection(19822);
+          this.setFogEnabled(false, -63);
           this.d(0, false);
-          this.f(0, false);
+          this.setLightingEnabled(0, false);
           this.b(false, (byte) 81);
           this.a((byte) -80, false, false, -2);
           this.a((byte) 118, 1);
-          this.a(true, this.field_Jb);
+          this.bindTexture(true, this.field_Jb);
           this.field_rb = 1;
         }
     }
@@ -1330,7 +1330,7 @@ abstract class eo extends GraphicsToolkit {
         this.g(3625, param4);
         this.a(pea.field_c, 0, -61);
         this.a(0, false, pea.field_c);
-        this.c(param5, 1);
+        this.setBlendMode(param5, 1);
         this.i((byte) 106);
         this.b(1, false);
         this.C((byte) -70);
@@ -1436,7 +1436,7 @@ abstract class eo extends GraphicsToolkit {
         if (param0 != -70) {
           this.e((byte) -46);
         }
-        this.a(this.field_mb, -32);
+        this.bindVertexLayout(this.field_mb, -32);
         this.a(1, io.field_c, 0, param0 + 70);
     }
 
@@ -1496,20 +1496,20 @@ abstract class eo extends GraphicsToolkit {
           var3 = this.field_oc.keys();
           while (var3.hasMoreElements()) {
             var4 = (java.awt.Canvas) (var3.nextElement());
-            var2.put(var4, this.a(false, var4));
+            var2.put(var4, this.createSurface(false, var4));
           }
         }
         if (param0 != 6) {
           return;
         }
         this.field_oc = var2;
-        this.l(param0 ^ 138);
+        this.createDynamicGeometryBuffer(param0 ^ 138);
         this.f(true);
-        this.E((byte) 15);
+        this.createCircleBuffer((byte) 15);
         this.field_kb.a(-120, this);
     }
 
-    private final void l(int param0) {
+    private final void createDynamicGeometryBuffer(int param0) {
         int var2;
         jaclib.memory.Buffer var3;
         int var5;
@@ -1647,13 +1647,13 @@ abstract class eo extends GraphicsToolkit {
         }
         if ((!param0 ? 1 : 0) == (this.field_yc ? 1 : 0)) {
           this.field_yc = param0 ? true : false;
-          this.h((byte) -102);
+          this.applyLighting((byte) -102);
         }
     }
 
     abstract void a(int param0, byte param1);
 
-    final asa c(boolean param0) {
+    final AffineTransform3D c(boolean param0) {
         if (!param0) {
           this.field_zb = true;
         }
@@ -1663,7 +1663,7 @@ abstract class eo extends GraphicsToolkit {
     private final void a(iw param0, byte param1, int param2) {
         try {
           this.a(-128, 0, this.field_xb);
-          this.a(this.field_ub, -32);
+          this.bindVertexLayout(this.field_ub, -32);
           this.a(param2, param0, 0, 0);
           if (param1 != -32) {
             this.u(-14);
@@ -1673,7 +1673,7 @@ abstract class eo extends GraphicsToolkit {
         }
     }
 
-    abstract gf a(int param0, int param1, ft param2, byte param3, una param4);
+    abstract gf createTexture2D(int param0, int param1, ft param2, byte param3, una param4);
 
     final void d(int param0, int param1, int param2, int param3, int param4, int param5) {
         float var7 = this.c((byte) -76);
@@ -1681,7 +1681,7 @@ abstract class eo extends GraphicsToolkit {
         this.g(3625, param4);
         this.a(pea.field_c, 0, -126);
         this.a(0, false, pea.field_c);
-        this.c(param5, 1);
+        this.setBlendMode(param5, 1);
         this.field_q.a(1.0f, (float)(param2 - 1), false, (float)(param3 - 1));
         this.field_q.a(-var7 + (float)param1, -39, (float)param0 - var7, 0.0f);
         this.F(-1662);
@@ -1692,9 +1692,9 @@ abstract class eo extends GraphicsToolkit {
         this.a(ej.field_c, 0, -31);
     }
 
-    final asa a(byte param0) {
+    final AffineTransform3D textureTransform(byte param0) {
         if (param0 <= 75) {
-          return (asa) null;
+          return (AffineTransform3D) null;
         }
         return this.field_hc[this.field_Cc];
     }
@@ -1706,13 +1706,13 @@ abstract class eo extends GraphicsToolkit {
         this.g(3625, param3);
         this.a(pea.field_c, 0, -74);
         this.a(0, false, pea.field_c);
-        this.c(param4, 1);
+        this.setBlendMode(param4, 1);
         this.field_q.a(1.0f, (float)param2, false, (float)param2);
         this.field_q.a(param0, param1, 0);
         this.F(-1662);
         this.b(1, false);
         this.a(-125, 0, this.field_hb);
-        this.a(this.field_Z, -32);
+        this.bindVertexLayout(this.field_Z, -32);
         this.a(256, vs.field_T, 0, 0);
         this.b(1, true);
         this.a(0, false, ej.field_c);
@@ -1721,10 +1721,10 @@ abstract class eo extends GraphicsToolkit {
 
     final void k(byte param0) {
         if (this.field_rb != 2) {
-          this.J(19822);
-          this.b(false, -99);
+          this.usePixelProjection(19822);
+          this.setFogEnabled(false, -99);
           this.d(0, false);
-          this.f(0, false);
+          this.setLightingEnabled(0, false);
           this.b(false, (byte) 81);
           this.a((byte) -80, false, false, -2);
           this.field_rb = 2;
@@ -1751,10 +1751,10 @@ abstract class eo extends GraphicsToolkit {
 
     abstract float c(byte param0);
 
-    final void K(int param0) {
+    final void initializeHardwareResources(int param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
         this.field_N = new iva[this.field_Vb];
-        this.field_hc = new asa[this.field_Vb];
+        this.field_hc = new AffineTransform3D[this.field_Vb];
         this.field_db = new ica[this.field_Vb];
         this.field_v = new ura[this.field_Vb];
         this.field_mc = new ica[this.field_Vb];
@@ -1766,11 +1766,11 @@ abstract class eo extends GraphicsToolkit {
           this.field_db[var2] = iw.field_c;
           this.field_mc[var2] = iw.field_c;
           this.field_v[var2] = DualLinkNode.field_h;
-          this.field_hc[var2] = new asa();
+          this.field_hc[var2] = new AffineTransform3D();
           var2++;
         }
         this.field_ib = new ob[-2 + this.field_e];
-        this.field_Jb = (iva) ((Object) this.a(1, 1, SwitchableId.field_a, (byte) -63, una.field_g));
+        this.field_Jb = (iva) ((Object) this.createTexture2D(1, 1, SwitchableId.field_a, (byte) -63, una.field_g));
         this.a(new to(262144));
         this.field_Db = this.a(new ne[]{new ne(new gj[]{gj.field_p, gj.field_n})}, 0);
         this.a(new ne[]{new ne(new gj[]{gj.field_p, gj.field_b})}, 0);
@@ -1818,7 +1818,7 @@ abstract class eo extends GraphicsToolkit {
 
     abstract void a(fp param0, int param1, int param2, boolean param3, boolean param4);
 
-    private final void E(byte param0) {
+    private final void createCircleBuffer(byte param0) {
         int var5 = 0;
         int var2;
         jaclib.memory.Buffer var3;
@@ -1870,14 +1870,14 @@ abstract class eo extends GraphicsToolkit {
         return;
     }
 
-    final void f(int param0, boolean param1) {
+    final void setLightingEnabled(int param0, boolean param1) {
         if ((!this.field_wc ? 1 : 0) == (param1 ? 1 : 0)) {
           this.field_wc = param1 ? true : false;
           this.f((byte) -69);
           this.field_rb = this.field_rb & -32;
         }
         if (param0 != 0) {
-          this.c(0, 83);
+          this.setBlendMode(0, 83);
         }
     }
 
@@ -1897,9 +1897,9 @@ abstract class eo extends GraphicsToolkit {
     final void b(int param0) {
     }
 
-    abstract void a(mna param0, int param1);
+    abstract void bindVertexLayout(mna param0, int param1);
 
-    final asa n(byte param0) {
+    final AffineTransform3D n(byte param0) {
         if (!this.field_p) {
           this.field_xc.a(this.field_Qb, this.field_q, (byte) 127);
           this.field_p = true;
@@ -1920,7 +1920,7 @@ abstract class eo extends GraphicsToolkit {
         return -2 + this.field_e;
     }
 
-    eo(java.awt.Canvas param0, Object param1, d param2, ResourceArchive param3, int param4, int param5) {
+    HardwareGraphicsToolkit(java.awt.Canvas param0, Object param1, d param2, ResourceArchive param3, int param4, int param5) {
         super(param2);
         int var8 = 0;
         dw var9 = null;
@@ -1939,12 +1939,12 @@ abstract class eo extends GraphicsToolkit {
         RuntimeException var7_ref = null;
         this.field_ic = new IntrusiveDeque();
         this.field_gb = true;
-        this.field_q = new asa();
-        this.field_bb = new asa();
-        this.field_Y = new asa();
-        this.field_Qb = new asa();
-        this.field_rc = new asa();
-        this.field_xc = new asa();
+        this.field_q = new AffineTransform3D();
+        this.field_bb = new AffineTransform3D();
+        this.field_Y = new AffineTransform3D();
+        this.field_Qb = new AffineTransform3D();
+        this.field_rc = new AffineTransform3D();
+        this.field_xc = new AffineTransform3D();
         this.field_C = 0;
         this.field_Jc = -1;
         this.field_Lb = new float[16];
@@ -2008,7 +2008,7 @@ abstract class eo extends GraphicsToolkit {
         this.field_g = -1;
         this.field_Tb = 16777215;
         this.field_y = new jaclib.memory.Stream();
-        this.field_Ab = new asa();
+        this.field_Ab = new AffineTransform3D();
         try {
           try {
             this.field_Ub = param1;
@@ -2090,14 +2090,14 @@ abstract class eo extends GraphicsToolkit {
         }
         this.G(-89);
         this.a((float)param6, -229);
-        this.b(false, -103);
+        this.setFogEnabled(false, -103);
         this.d(0, false);
-        this.f(0, false);
+        this.setLightingEnabled(0, false);
         this.b(false, (byte) 81);
-        this.c(param8, 1);
+        this.setBlendMode(param8, 1);
         this.a((byte) -80, false, false, -2);
         this.g(3625, param7);
-        this.a(true, this.field_Jb);
+        this.bindTexture(true, this.field_Jb);
         this.a((byte) -95, 1);
         this.a(pea.field_c, 0, -87);
         this.a(0, false, pea.field_c);
@@ -2183,7 +2183,7 @@ abstract class eo extends GraphicsToolkit {
         }
     }
 
-    abstract gf createIntTexture2D(boolean param0, byte[] param1, int param2, int param3, int param4, int param5, ft param6, int param7);
+    abstract gf a(boolean param0, byte[] param1, int param2, int param3, int param4, int param5, ft param6, int param7);
 
     final void la() {
         this.field_K = 0;
@@ -2223,8 +2223,8 @@ abstract class eo extends GraphicsToolkit {
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
         this.r(0);
-        this.v(40);
-        this.h((byte) -102);
+        this.applyDirectionalLightColors(40);
+        this.applyLighting((byte) -102);
         this.g((byte) 92);
         this.applyLightPositions(-71);
         this.uploadDirectionalLights((byte) -78);
@@ -2232,7 +2232,7 @@ abstract class eo extends GraphicsToolkit {
         this.f((byte) -69);
         this.b((byte) -126);
         this.D(2);
-        this.I(1);
+        this.applyFogParameters(1);
         if (param0 < 83) {
           this.field_nb = 104;
         }
@@ -2307,7 +2307,7 @@ abstract class eo extends GraphicsToolkit {
         return this.field_Cc;
     }
 
-    final asa C(int param0) {
+    final AffineTransform3D C(int param0) {
         if (param0 != 0) {
           this.a(-0.6965478658676147f, 12);
         }
@@ -2405,14 +2405,14 @@ abstract class eo extends GraphicsToolkit {
           return;
         }
         this.A((byte) -74);
-        this.b(false, -68);
+        this.setFogEnabled(false, -68);
         this.d(0, false);
-        this.f(0, false);
+        this.setLightingEnabled(0, false);
         this.b(false, (byte) 81);
-        this.c(param7, 1);
+        this.setBlendMode(param7, 1);
         this.a((byte) -80, false, false, -2);
         this.g(3625, param6);
-        this.a(true, this.field_Jb);
+        this.bindTexture(true, this.field_Jb);
         this.a((byte) -12, 1);
         this.a(pea.field_c, 0, -117);
         this.a(0, false, pea.field_c);
@@ -2424,7 +2424,7 @@ abstract class eo extends GraphicsToolkit {
         this.a(ej.field_c, 0, -85);
     }
 
-    final void a(ica param0, byte param1, ica param2) {
+    final void setTextureCombineOperations(ica param0, byte param1, ica param2) {
         int var4_int = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -2472,7 +2472,7 @@ abstract class eo extends GraphicsToolkit {
         }
     }
 
-    abstract void h(byte param0);
+    abstract void applyLighting(byte param0);
 
     private final void v(byte param0) {
         this.field_p = false;
@@ -2540,7 +2540,7 @@ abstract class eo extends GraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 < -71) {
-            stackIn_4_0 = this.createIntTexture2D(param2, param1, 0, param0, 1, 0, param3, param5);
+            stackIn_4_0 = this.a(param2, param1, 0, param0, 1, 0, param3, param5);
             return stackIn_4_0;
           }
           stackIn_2_0 = (gf) null;

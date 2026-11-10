@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hqa extends kca {
+final class hqa extends TextFieldValidator {
     static ura field_j;
 
     final it a(byte param0, String param1) {

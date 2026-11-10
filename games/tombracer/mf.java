@@ -3,7 +3,7 @@
  */
 final class mf {
     int field_b;
-    private kda field_c;
+    private HardwareOpenGlToolkit field_c;
     static wm field_d;
     static int field_a;
 
@@ -48,7 +48,7 @@ final class mf {
         }
     }
 
-    mf(kda param0, int param1, int param2) {
+    mf(HardwareOpenGlToolkit param0, int param1, int param2) {
         try {
           this.field_b = param2;
           this.field_c = param0;

@@ -492,12 +492,12 @@ class UiWidget extends IntrusiveNode {
     final boolean processPointerFrame(int param0, boolean param1, int param2, int param3) {
         int var5;
         int var7;
-        vp var8;
-        vp var9;
-        vp var10;
-        vp var11;
-        vp var12;
-        vp var13;
+        DraggableWidget var8;
+        DraggableWidget var9;
+        DraggableWidget var10;
+        DraggableWidget var11;
+        DraggableWidget var12;
+        DraggableWidget var13;
         var7 = TombRacer.field_G ? 1 : 0;
         this.updatePointerState(param2, 2097152, this, param0);
         var5 = this.hasKeyboardFocus((byte) -34) ? 1 : 0;
@@ -506,7 +506,7 @@ class UiWidget extends IntrusiveNode {
             hf.field_b != 0) {
             this.clearKeyboardFocus((byte) 119);
           }
-          kca.field_f = ksa.field_p;
+          TextFieldValidator.field_f = ksa.field_p;
           fea.a((byte) -33, this.getHoverText((byte) 68));
           if (param3 <= -86) {
             return param1;
@@ -519,7 +519,7 @@ class UiWidget extends IntrusiveNode {
             if (!this.handlePointerPress(97, param2, param0, lba.field_p, hf.field_b, this, PasswordValidator.field_m)) {
               if (var5 == 0) {
                 if (ksa.field_p == 0 &&
-                  kca.field_f != 0) {
+                  TextFieldValidator.field_f != 0) {
                   this.handlePointerRelease((byte) 59, this, GridWidgetContainer.field_B, param2, param0, jba.field_j);
                   var8 = ava.field_f;
                   if (var8 != null) {
@@ -536,7 +536,7 @@ class UiWidget extends IntrusiveNode {
                     this.clearKeyboardFocus((byte) 119);
                   }
                 }
-                kca.field_f = ksa.field_p;
+                TextFieldValidator.field_f = ksa.field_p;
                 fea.a((byte) -33, this.getHoverText((byte) 68));
                 if (param3 > -86) {
                   this.refreshLayout((byte) -121);
@@ -552,7 +552,7 @@ class UiWidget extends IntrusiveNode {
             }
           }
           if (ksa.field_p == 0 &&
-            kca.field_f != 0) {
+            TextFieldValidator.field_f != 0) {
             this.handlePointerRelease((byte) 59, this, GridWidgetContainer.field_B, param2, param0, jba.field_j);
             var9 = ava.field_f;
             if (var9 != null) {
@@ -566,14 +566,14 @@ class UiWidget extends IntrusiveNode {
               hf.field_b != 0) {
               this.clearKeyboardFocus((byte) 119);
             }
-            kca.field_f = ksa.field_p;
+            TextFieldValidator.field_f = ksa.field_p;
             fea.a((byte) -33, this.getHoverText((byte) 68));
             if (param3 > -86) {
               this.refreshLayout((byte) -121);
             }
             return param1;
           }
-          kca.field_f = ksa.field_p;
+          TextFieldValidator.field_f = ksa.field_p;
           fea.a((byte) -33, this.getHoverText((byte) 68));
           if (param3 <= -86) {
             return param1;
@@ -585,7 +585,7 @@ class UiWidget extends IntrusiveNode {
           if (hf.field_b != 0) {
             if (!this.handlePointerPress(97, param2, param0, lba.field_p, hf.field_b, this, PasswordValidator.field_m)) {
               if (ksa.field_p == 0 &&
-                kca.field_f != 0) {
+                TextFieldValidator.field_f != 0) {
                 this.handlePointerRelease((byte) 59, this, GridWidgetContainer.field_B, param2, param0, jba.field_j);
                 var10 = ava.field_f;
                 if (var10 != null) {
@@ -602,7 +602,7 @@ class UiWidget extends IntrusiveNode {
                   this.clearKeyboardFocus((byte) 119);
                 }
               }
-              kca.field_f = ksa.field_p;
+              TextFieldValidator.field_f = ksa.field_p;
               fea.a((byte) -33, this.getHoverText((byte) 68));
               if (param3 > -86) {
                 this.refreshLayout((byte) -121);
@@ -612,7 +612,7 @@ class UiWidget extends IntrusiveNode {
             param1 = false;
           }
           if (ksa.field_p == 0 &&
-            kca.field_f != 0) {
+            TextFieldValidator.field_f != 0) {
             this.handlePointerRelease((byte) 59, this, GridWidgetContainer.field_B, param2, param0, jba.field_j);
             var11 = ava.field_f;
             if (var11 != null) {
@@ -626,14 +626,14 @@ class UiWidget extends IntrusiveNode {
               hf.field_b != 0) {
               this.clearKeyboardFocus((byte) 119);
             }
-            kca.field_f = ksa.field_p;
+            TextFieldValidator.field_f = ksa.field_p;
             fea.a((byte) -33, this.getHoverText((byte) 68));
             if (param3 > -86) {
               this.refreshLayout((byte) -121);
             }
             return param1;
           }
-          kca.field_f = ksa.field_p;
+          TextFieldValidator.field_f = ksa.field_p;
           fea.a((byte) -33, this.getHoverText((byte) 68));
           if (param3 <= -86) {
             return param1;
@@ -653,7 +653,7 @@ class UiWidget extends IntrusiveNode {
           }
         }
         if (ksa.field_p != 0) {
-          kca.field_f = ksa.field_p;
+          TextFieldValidator.field_f = ksa.field_p;
           fea.a((byte) -33, this.getHoverText((byte) 68));
           if (param3 <= -86) {
             return param1;
@@ -661,8 +661,8 @@ class UiWidget extends IntrusiveNode {
           this.refreshLayout((byte) -121);
           return param1;
         }
-        if (kca.field_f == 0) {
-          kca.field_f = ksa.field_p;
+        if (TextFieldValidator.field_f == 0) {
+          TextFieldValidator.field_f = ksa.field_p;
           fea.a((byte) -33, this.getHoverText((byte) 68));
           if (param3 <= -86) {
             return param1;
@@ -683,7 +683,7 @@ class UiWidget extends IntrusiveNode {
           hf.field_b != 0) {
           this.clearKeyboardFocus((byte) 119);
         }
-        kca.field_f = ksa.field_p;
+        TextFieldValidator.field_f = ksa.field_p;
         fea.a((byte) -33, this.getHoverText((byte) 68));
         if (param3 <= -86) {
           return param1;

@@ -4,7 +4,7 @@
 final class SoundEffect {
     private int field_c;
     private int field_b;
-    private fka[] field_a;
+    private SoundTone[] field_a;
 
     final static SoundEffect a(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = param0.a(false, param1, param2);
@@ -41,7 +41,7 @@ final class SoundEffect {
           if (this.field_a[var4] != null) {
             var5 = this.field_a[var4].field_v * 22050 / 1000;
             var6 = this.field_a[var4].field_i * 22050 / 1000;
-            var13 = this.field_a[var4].a(var5, this.field_a[var4].field_v);
+            var13 = this.field_a[var4].synthesize(var5, this.field_a[var4].field_v);
             for (var8 = 0; var8 < var5; var8++) {
               var9 = var3[var8 + var6] + (var13[var8] >> 8);
               if ((var9 + 128 & -256) != 0) {
@@ -62,13 +62,13 @@ final class SoundEffect {
     private SoundEffect(PacketBuffer param0) {
         int var2 = 0;
         int var3;
-        this.field_a = new fka[10];
+        this.field_a = new SoundTone[10];
         for (var2 = 0; var2 < 10; var2++) {
           var3 = param0.readUnsignedByte(255);
           if (var3 != 0) {
             param0.position = param0.position - 1;
-            this.field_a[var2] = new fka();
-            this.field_a[var2].a(param0);
+            this.field_a[var2] = new SoundTone();
+            this.field_a[var2].decode(param0);
           }
         }
         this.field_c = param0.readUnsignedShort(127);

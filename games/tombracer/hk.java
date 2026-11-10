@@ -9,7 +9,7 @@ final class hk {
     lv field_f;
     boolean field_g;
     static jea field_e;
-    private eo field_b;
+    private HardwareGraphicsToolkit field_b;
     private gf[] field_a;
 
     final boolean c(int param0) {
@@ -306,7 +306,7 @@ final class hk {
         return (param0 & 50560) != 0 ? true : false;
     }
 
-    hk(eo param0) {
+    hk(HardwareGraphicsToolkit param0) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;

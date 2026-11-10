@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ja extends gda implements e {
+final class ja extends Transform3D implements e {
     long field_nativeid;
 
     private final native void P(long param0, int param1, int param2, int param3, int param4, int param5, int param6);

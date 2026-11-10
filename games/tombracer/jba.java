@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jba extends kca {
+final class jba extends TextFieldValidator {
     static float[] field_k;
     static String field_l;
     static int field_j;

@@ -14,12 +14,12 @@ final class OpenGlTexture2D extends OpenGlTexture implements gf {
         return param0 / (float)this.field_k;
     }
 
-    OpenGlTexture2D(kda param0, ft param1, una param2, int param3, int param4) {
+    OpenGlTexture2D(HardwareOpenGlToolkit param0, ft param1, una param2, int param3, int param4) {
         super(param0, 3553, param1, param2, param4 * param3, false);
         try {
           this.field_k = param3;
           this.field_l = param4;
-          this.field_j.a(true, (iva) (this));
+          this.field_j.bindTexture(true, (iva) (this));
           jaggl.OpenGL.glTexImage2Dub(this.field_i, 0, this.d(108), param3, param4, 0, waa.a(this.field_f, 1383), ClientException.a(this.field_a, 5126), (byte[]) null, 0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
@@ -28,7 +28,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements gf {
 
     final void a(int param0, float[] param1, int param2, int param3, int param4, int param5, int param6, ft param7, boolean param8) {
         try {
-          this.field_j.a(param8, (iva) (this));
+          this.field_j.bindTexture(param8, (iva) (this));
           jaggl.OpenGL.glPixelStorei(3314, param6);
           jaggl.OpenGL.glTexSubImage2Df(this.field_i, 0, param0, param2, param3, param4, waa.a(param7, 1383), 5121, param1, param5);
           jaggl.OpenGL.glPixelStorei(3314, 0);
@@ -61,7 +61,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements gf {
         return this.field_l;
     }
 
-    OpenGlTexture2D(kda param0, ft param1, int param2, int param3, boolean param4, byte[] param5, int param6, int param7) {
+    OpenGlTexture2D(HardwareOpenGlToolkit param0, ft param1, int param2, int param3, boolean param4, byte[] param5, int param6, int param7) {
         super(param0, 3553, param1, una.field_g, param3 * param2, param4);
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -75,7 +75,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements gf {
         try {
           this.field_l = param3;
           this.field_k = param2;
-          this.field_j.a(true, (iva) (this));
+          this.field_j.bindTexture(true, (iva) (this));
           jaggl.OpenGL.glPixelStorei(3317, 1);
           if (param4 &&
             param7 == 0 &&
@@ -172,7 +172,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements gf {
         System.gc();
     }
 
-    OpenGlTexture2D(kda param0, int param1, int param2, boolean param3, int[] param4, int param5, int param6) {
+    OpenGlTexture2D(HardwareOpenGlToolkit param0, int param1, int param2, boolean param3, int[] param4, int param5, int param6) {
         super(param0, 3553, SwitchableId.field_a, una.field_g, param1 * param2, param3);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -184,7 +184,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements gf {
         try {
           this.field_k = param1;
           this.field_l = param2;
-          this.field_j.a(true, (iva) (this));
+          this.field_j.bindTexture(true, (iva) (this));
           if (param3 &&
             param6 == 0 &&
             param5 == 0) {
@@ -216,7 +216,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements gf {
     }
 
     public final void a(byte param0, boolean param1, boolean param2) {
-        this.field_j.a(true, (iva) (this));
+        this.field_j.bindTexture(true, (iva) (this));
         jaggl.OpenGL.glTexParameteri(this.field_i, 10242, !param1 ? 33071 : 10497);
         jaggl.OpenGL.glTexParameteri(this.field_i, 10243, !param2 ? 33071 : 10497);
         if (param0 <= -60) {
@@ -226,7 +226,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements gf {
         this.a(-2, (byte) 55, 95, (byte[]) null, -118, 102, (ft) null, -23, 82);
     }
 
-    OpenGlTexture2D(kda param0, ft param1, int param2, int param3, boolean param4, float[] param5, int param6, int param7) {
+    OpenGlTexture2D(HardwareOpenGlToolkit param0, ft param1, int param2, int param3, boolean param4, float[] param5, int param6, int param7) {
         super(param0, 3553, param1, una.field_h, param2 * param3, param4);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -240,7 +240,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements gf {
         try {
           this.field_l = param3;
           this.field_k = param2;
-          this.field_j.a(true, (iva) (this));
+          this.field_j.bindTexture(true, (iva) (this));
           if (!param4 &&
             param7 == 0 &&
             0 == param6) {
@@ -1215,7 +1215,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements gf {
 
     final void a(int param0, int param1, int param2, int param3, int param4, int[] param5, int param6, int param7) {
         try {
-          this.field_j.a(true, (iva) (this));
+          this.field_j.bindTexture(true, (iva) (this));
           if (param3 < 101) {
             field_n = (ResourceArchive) null;
           }
@@ -1237,7 +1237,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements gf {
 
     final void a(int param0, byte param1, int param2, byte[] param3, int param4, int param5, ft param6, int param7, int param8) {
         try {
-          this.field_j.a(true, (iva) (this));
+          this.field_j.bindTexture(true, (iva) (this));
           jaggl.OpenGL.glPixelStorei(3317, 1);
           jaggl.OpenGL.glPixelStorei(3314, param4);
           jaggl.OpenGL.glTexSubImage2Dub(this.field_i, 0, param0, param8, param7, param2, waa.a(param6, 1383), 5121, param3, param5);

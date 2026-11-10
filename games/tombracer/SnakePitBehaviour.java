@@ -448,8 +448,8 @@ final class SnakePitBehaviour extends Behaviour {
           -var4 + var3 > 0) {
           this.field_n = new aia[var5];
           for (var6 = 0; var5 > var6; var6++) {
-            var7 = var4 / 2 + this.o((byte) 46).nextBounded(-var4 + var2, 0) - var2 / 2;
-            var8 = -(var3 / 2) + (this.o((byte) 46).nextBounded(var3 - var4, 0) + var4 / 2);
+            var7 = var4 / 2 + this.getRandom((byte) 46).nextBounded(-var4 + var2, 0) - var2 / 2;
+            var8 = -(var3 / 2) + (this.getRandom((byte) 46).nextBounded(var3 - var4, 0) + var4 / 2);
             this.field_n[var6] = new aia(var7, var8, var4);
           }
         } else {

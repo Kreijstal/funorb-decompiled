@@ -142,7 +142,7 @@ final class joa {
             km.field_p = SecondaryNodeHashTable.field_g;
           } else {
             try {
-              oba.field_e = new BufferedSocket((java.net.Socket) (Room.field_R.field_f), kqa.field_a);
+              OpenGlTransform3D.field_e = new BufferedSocket((java.net.Socket) (Room.field_R.field_f), kqa.field_a);
               ql.field_k.position = 0;
               var4 = vc.field_q;
               km.field_p = RotaterMountComponent.field_G;

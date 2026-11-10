@@ -22,10 +22,10 @@ final class DarknessBehaviour extends Behaviour {
         }
         super.toggle(82);
         var2 = -79 % ((28 - param0) / 49);
-        if (!this.field_f) {
+        if (!this.enabled) {
           this.e(false);
         } else {
-          if (this.b(true).o((byte) -82)) {
+          if (this.getRoom(true).o((byte) -82)) {
             this.a((byte) -115, this.field_p);
           }
         }
@@ -297,7 +297,7 @@ final class DarknessBehaviour extends Behaviour {
         if (this.field_r == null) {
           return;
         }
-        if (!this.field_f) {
+        if (!this.enabled) {
           return;
         }
         var8 = this.field_r.pixels;
@@ -396,7 +396,7 @@ final class DarknessBehaviour extends Behaviour {
         if (param0 != 0) {
           return;
         }
-        if (this.b(true).o((byte) -82)) {
+        if (this.getRoom(true).o((byte) -82)) {
           this.field_p = 128;
         } else {
           this.field_p = 255;
@@ -407,7 +407,7 @@ final class DarknessBehaviour extends Behaviour {
           var2 < 1024 && var3 < 1024) {
           this.field_r = new Sprite(var2 / 8, var3 / 8);
           stackIn_12_1 = -117;
-          if (!this.field_f) {
+          if (!this.enabled) {
             stackIn_13_2 = 0;
           } else {
             stackIn_13_2 = 255;
@@ -428,7 +428,7 @@ final class DarknessBehaviour extends Behaviour {
         if (null == this.field_r) {
           return;
         }
-        if (this.b(true).o((byte) -82)) {
+        if (this.getRoom(true).o((byte) -82)) {
           param1 = param1 / 2;
         }
         int[] var6 = this.field_r.pixels;

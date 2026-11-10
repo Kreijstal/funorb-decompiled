@@ -23,7 +23,7 @@ class of {
     }
 
     final static String a(int param0) {
-        if (kda.field_pd) {
+        if (HardwareOpenGlToolkit.field_pd) {
           if (param0 != 1) {
             of.a(97);
             return null;

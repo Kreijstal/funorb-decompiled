@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qca {
-    private kda field_a;
+    private HardwareOpenGlToolkit field_a;
     long field_b;
 
     protected final void finalize() throws Throwable {
@@ -49,7 +49,7 @@ final class qca {
         }
     }
 
-    qca(kda param0, long param1, pr[] param2) {
+    qca(HardwareOpenGlToolkit param0, long param1, pr[] param2) {
         try {
           this.field_a = param0;
           this.field_b = param1;

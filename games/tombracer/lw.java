@@ -27,7 +27,7 @@ final class lw {
         int stackIn_5_0 = 0;
         int stackIn_10_0 = 0;
         var4 = TombRacer.field_G ? 1 : 0;
-        if (oj.field_tb[kda.field_hd]) {
+        if (oj.field_tb[HardwareOpenGlToolkit.field_hd]) {
           stackIn_5_0 = -1;
         } else {
           stackIn_5_0 = (oj.field_tb[mf.field_a]) ? 1 : 0;

@@ -179,7 +179,7 @@ final class dta {
                   var26 = 750;
                 }
                 var26 = var26 * 2;
-                var27_int = var12.getRoom((byte) 125).p((byte) 118);
+                var27_int = var12.getRoom((byte) 125).getTick((byte) 118);
                 var28_double = 80.0 * (double)var27_int / (double)var26;
                 if (var27_int > -50 + var26) {
                   var25 = -((var27_int - var26) / 4) + 16;

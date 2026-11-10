@@ -38,7 +38,7 @@ abstract class mna {
           var10 = 0;
           if (!fua.field_g &&
             var5 < sd.field_K) {
-            var11_int = gda.a(var15.field_d, -20011);
+            var11_int = Transform3D.a(var15.field_d, -20011);
             if (var15.a(false) >= var11_int && (var15.field_m ||
               !MouseWheelInput.a(2180, var15.field_j))) {
               var10 = 1;

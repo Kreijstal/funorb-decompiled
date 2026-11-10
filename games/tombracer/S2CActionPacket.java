@@ -28,7 +28,7 @@ final class S2CActionPacket extends IntrusiveNode implements GamePacket {
             stackIn_5_0[stackIn_5_1] = stackIn_6_2;
             if (this.hasPlayerOrders[var3_int]) {
               for (var4 = 0; var4 < this.playerOrders[var3_int].length; var4++) {
-                this.playerOrders[var3_int][var4] = vp.a(param0.readBits((byte) 44, 7), param1 - 6468);
+                this.playerOrders[var3_int][var4] = DraggableWidget.a(param0.readBits((byte) 44, 7), param1 - 6468);
               }
             }
           }
@@ -72,10 +72,10 @@ final class S2CActionPacket extends IntrusiveNode implements GamePacket {
         }
         var2 = param1;
         if (4 == var2) {
-          return eo.D((byte) -110);
+          return HardwareGraphicsToolkit.D((byte) -110);
         }
         if (var2 == 0) {
-          return gda.a(true);
+          return Transform3D.a(true);
         }
         if (var2 == 1) {
           return ik.b(-17698);

@@ -102,7 +102,7 @@ final class ck {
           InvisibleTouchSwitchComponent.field_K = BoulderComponent.a(param10, "lobby", 5, "opentome");
           pca.field_k = BoulderComponent.a(param10, "lobby", 5, "allowspectators");
           SocketArchiveNetworkClient.field_w = new String[5];
-          SocketArchiveNetworkClient.field_w[0] = kda.field_cd;
+          SocketArchiveNetworkClient.field_w[0] = HardwareOpenGlToolkit.field_cd;
           SocketArchiveNetworkClient.field_w[2] = un.field_q;
           SocketArchiveNetworkClient.field_w[3] = ObjectPool.field_d;
           SocketArchiveNetworkClient.field_w[4] = PacketBuffer.field_f;
@@ -352,7 +352,7 @@ final class ck {
           dka.field_b.b(-128, pk.field_z);
           dka.field_b.b(-125, hw.field_a);
           dka.field_b.b(-123, dl.field_t);
-          S2CEventPacket.field_e = new jea(0L, oba.field_f, eu.field_b.toUpperCase());
+          S2CEventPacket.field_e = new jea(0L, OpenGlTransform3D.field_f, eu.field_b.toUpperCase());
           Trap.field_q = new jea(0L, dp.field_i, ej.field_b.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

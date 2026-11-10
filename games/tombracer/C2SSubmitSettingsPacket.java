@@ -39,7 +39,7 @@ final class C2SSubmitSettingsPacket implements GamePacket {
 
     final static void a(java.awt.Canvas param0, byte param1) {
         try {
-          if (gda.field_c == 11) {
+          if (Transform3D.field_c == 11) {
             wja.d((byte) 96);
           }
           if (param1 < 84) {
@@ -69,7 +69,7 @@ final class C2SSubmitSettingsPacket implements GamePacket {
         int var3Lifetime1;
         if (param1 >= 83) {
           if ((55 & param0) != 0) {
-            stackIn_4_0 = oba.c(param2, param0, -19531);
+            stackIn_4_0 = OpenGlTransform3D.c(param2, param0, -19531);
           } else {
             stackIn_4_0 = no.a(param0, param2, 36864);
           }
@@ -79,7 +79,7 @@ final class C2SSubmitSettingsPacket implements GamePacket {
         }
         C2SSubmitSettingsPacket.releaseStatics((byte) -61);
         if ((55 & param0) != 0) {
-          stackIn_11_0 = oba.c(param2, param0, -19531);
+          stackIn_11_0 = OpenGlTransform3D.c(param2, param0, -19531);
         } else {
           stackIn_11_0 = no.a(param0, param2, 36864);
         }

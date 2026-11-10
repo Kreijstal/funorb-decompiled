@@ -21,9 +21,9 @@ final class ConveyorBehaviour extends Behaviour {
           this.p((byte) 4);
         }
         this.b(0);
-        var8 = this.b(true).collisionGrid;
+        var8 = this.getRoom(true).collisionGrid;
         var3 = var8.a((byte) -26, this.trap);
-        var4 = this.e(6);
+        var4 = this.getRoot(6);
         for (var5 = 0; var3.length > var5; var5++) {
           var6 = var3[var5];
           if (var6.a(-77) &&

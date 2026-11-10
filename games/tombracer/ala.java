@@ -105,7 +105,7 @@ final class ala extends dfa {
             }
           }
         } else {
-          if (eo.d(73, uu.field_a.field_Mb)) {
+          if (HardwareGraphicsToolkit.d(73, uu.field_a.field_Mb)) {
             var4 = 1;
             if (param2 == 15283) {
               if (param1) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class CachedArchiveSource extends ArchiveSource {
-    private ppa field_h;
+    private SectorCacheStore field_h;
     private int field_e;
     private hha field_q;
     private ArchiveNetworkClient field_u;
@@ -15,7 +15,7 @@ final class CachedArchiveSource extends ArchiveSource {
     static ft field_g;
     private DiskCacheWorker field_i;
     static jea field_d;
-    private ppa field_s;
+    private SectorCacheStore field_s;
     private dla field_k;
     private int field_m;
     private boolean field_r;
@@ -242,7 +242,7 @@ final class CachedArchiveSource extends ArchiveSource {
           var2 = this.field_b.next(param0 ^ -28599);
         }
         if (param0 != -28613) {
-          this.field_s = (ppa) null;
+          this.field_s = (SectorCacheStore) null;
         }
     }
 
@@ -523,7 +523,7 @@ final class CachedArchiveSource extends ArchiveSource {
         return (hha) (var4);
     }
 
-    CachedArchiveSource(int param0, ppa param1, ppa param2, ArchiveNetworkClient param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
+    CachedArchiveSource(int param0, SectorCacheStore param1, SectorCacheStore param2, ArchiveNetworkClient param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;

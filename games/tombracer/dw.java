@@ -33,13 +33,13 @@ final class dw {
     }
 
     final static void b(byte param0) {
-        if (gda.field_c == 10) {
+        if (Transform3D.field_c == 10) {
           MidiVoiceMixer.a(true);
-          gda.field_c = 11;
+          Transform3D.field_c = 11;
         } else {
           if (!TrapModel.b(-1)) {
             MidiVoiceMixer.a(true);
-            gda.field_c = 11;
+            Transform3D.field_c = 11;
           }
         }
         if (param0 > -5) {

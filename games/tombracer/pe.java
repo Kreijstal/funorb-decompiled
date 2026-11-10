@@ -58,12 +58,12 @@ final class pe extends OpenGlTexture implements gf {
         }
     }
 
-    pe(kda param0, ft param1, una param2, int param3, int param4) {
+    pe(HardwareOpenGlToolkit param0, ft param1, una param2, int param3, int param4) {
         super(param0, 34037, param1, param2, param3 * param4, false);
         try {
           this.field_l = param3;
           this.field_n = param4;
-          this.field_j.a(true, (iva) (this));
+          this.field_j.bindTexture(true, (iva) (this));
           jaggl.OpenGL.glTexImage2Dub(this.field_i, 0, this.d(78), param3, param4, 0, waa.a(this.field_f, 1383), ClientException.a(this.field_a, 5126), (byte[]) null, 0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
@@ -133,12 +133,12 @@ final class pe extends OpenGlTexture implements gf {
         return this.field_l;
     }
 
-    pe(kda param0, ft param1, int param2, int param3, byte[] param4, int param5, int param6) {
+    pe(HardwareOpenGlToolkit param0, ft param1, int param2, int param3, byte[] param4, int param5, int param6) {
         super(param0, 34037, param1, una.field_g, param2 * param3, false);
         try {
           this.field_n = param3;
           this.field_l = param2;
-          this.field_j.a(true, (iva) (this));
+          this.field_j.bindTexture(true, (iva) (this));
           jaggl.OpenGL.glPixelStorei(3317, 1);
           jaggl.OpenGL.glPixelStorei(3314, param6);
           jaggl.OpenGL.glTexImage2Dub(this.field_i, 0, this.d(125), param2, param3, 0, waa.a(this.field_f, 1383), 5121, param4, param5);
@@ -156,12 +156,12 @@ final class pe extends OpenGlTexture implements gf {
         return param1;
     }
 
-    pe(kda param0, int param1, int param2, int[] param3, int param4, int param5) {
+    pe(HardwareOpenGlToolkit param0, int param1, int param2, int[] param3, int param4, int param5) {
         super(param0, 34037, SwitchableId.field_a, una.field_g, param1 * param2, false);
         try {
           this.field_l = param1;
           this.field_n = param2;
-          this.field_j.a(true, (iva) (this));
+          this.field_j.bindTexture(true, (iva) (this));
           jaggl.OpenGL.glPixelStorei(3314, param5);
           jaggl.OpenGL.glTexImage2Di(this.field_i, 0, 6408, this.field_l, this.field_n, 0, 32993, this.field_j.field_od, param3, param4 * 4);
           jaggl.OpenGL.glPixelStorei(3314, 0);
@@ -202,12 +202,12 @@ final class pe extends OpenGlTexture implements gf {
         field_m = (fta) null;
     }
 
-    pe(kda param0, ft param1, int param2, int param3, float[] param4, int param5, int param6) {
+    pe(HardwareOpenGlToolkit param0, ft param1, int param2, int param3, float[] param4, int param5, int param6) {
         super(param0, 34037, param1, una.field_h, param2 * param3, false);
         try {
           this.field_n = param3;
           this.field_l = param2;
-          this.field_j.a(true, (iva) (this));
+          this.field_j.bindTexture(true, (iva) (this));
           jaggl.OpenGL.glPixelStorei(3314, param6);
           jaggl.OpenGL.glTexImage2Df(this.field_i, 0, this.d(75), param2, param3, 0, waa.a(this.field_f, 1383), 5126, param4, 4 * param5);
           jaggl.OpenGL.glPixelStorei(3314, 0);

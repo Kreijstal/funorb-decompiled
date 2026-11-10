@@ -46,7 +46,7 @@ final class ConstrainToFacingArcLocomotor extends ConstraintLocomotor {
         if (param0 != 1) {
           return;
         }
-        for (var2 = this.trap.q((byte) -80) - this.e((byte) -43); var2 < 0; var2 += 8192) {
+        for (var2 = this.trap.getAngle((byte) -80) - this.e((byte) -43); var2 < 0; var2 += 8192) {
         }
         while (var2 > 8192) {
           var2 -= 8192;

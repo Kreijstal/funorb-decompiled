@@ -73,7 +73,7 @@ final class nna {
             stackIn_17_0 = GameEvent.field_h;
             return stackIn_17_0;
           }
-          if (dda.a(false, param1)) {
+          if (QueuedPlayerEvent.a(false, param1)) {
             stackIn_20_0 = gl.$cfr$intArgs$a$53ce4ab4c593(94, FleeLocomotor.field_o, new String[]{param1});
             return stackIn_20_0;
           }

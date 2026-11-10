@@ -151,7 +151,7 @@ final class PathMoveLocomotor extends Locomotor {
         if (var17.length > this.field_w) {
           var4 = var15[this.field_w][0] + this.d((byte) -70);
           var5 = var15[this.field_w][1] + this.a(false);
-          var6 = -this.trap.s(25745) + var4;
+          var6 = -this.trap.getLocalX(25745) + var4;
           var7 = var5 - this.trap.getLocalY(false);
           var8 = this.field_r >> 16;
           var8 = var8 * var8;
@@ -219,7 +219,7 @@ final class PathMoveLocomotor extends Locomotor {
         }
         var4Lifetime1 = var15[this.field_w][0] + this.d((byte) -70);
         var5Lifetime1 = var15[this.field_w][1] + this.a(false);
-        var6Lifetime1 = -this.trap.s(25745) + var4Lifetime1;
+        var6Lifetime1 = -this.trap.getLocalX(25745) + var4Lifetime1;
         var7Lifetime1 = var5Lifetime1 - this.trap.getLocalY(false);
         var8Lifetime1 = this.field_r >> 16;
         var8Lifetime1 = var8Lifetime1 * var8Lifetime1;

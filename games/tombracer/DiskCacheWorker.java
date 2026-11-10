@@ -48,11 +48,11 @@ final class DiskCacheWorker implements Runnable {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  var7.field_p = var7.field_o.a((int)var7.secondaryKey, -114);
+                  var7.field_p = var7.field_o.readFile((int)var7.secondaryKey, -114);
                   var7.field_m = false;
                 }
               } else {
-                var7.field_o.a((int)var7.secondaryKey, var7.field_p, var7.field_p.length, (byte) 124);
+                var7.field_o.write((int)var7.secondaryKey, var7.field_p, var7.field_p.length, (byte) 124);
                 var7.field_m = false;
               }
               if (decompiledFrameRemainder0) {
@@ -107,7 +107,7 @@ final class DiskCacheWorker implements Runnable {
         return (param2 & 2048) != 0 ? true : false;
     }
 
-    final sga a(int param0, ppa param1, int param2) {
+    final sga a(int param0, SectorCacheStore param1, int param2) {
         sga var4 = null;
         RuntimeException var4_ref = null;
         Object var5 = null;
@@ -141,7 +141,7 @@ final class DiskCacheWorker implements Runnable {
           if (param0 != 15871) {
             this.field_e = false;
           }
-          var4.field_p = param1.a(param2, -124);
+          var4.field_p = param1.readFile(param2, -124);
           var4.field_m = false;
           var4.field_l = true;
           stackIn_18_0 = var4;
@@ -160,7 +160,7 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final sga a(byte param0, int param1, ppa param2) {
+    final sga a(byte param0, int param1, SectorCacheStore param2) {
         sga var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -178,7 +178,7 @@ final class DiskCacheWorker implements Runnable {
           this.a(-42, var4);
           if (param0 >= -42) {
             var5 = (byte[]) null;
-            this.writeAsync(true, 61, (ppa) null, (byte[]) null);
+            this.writeAsync(true, 61, (SectorCacheStore) null, (byte[]) null);
           }
           stackIn_3_0 = var4;
           return stackIn_3_0;
@@ -215,15 +215,15 @@ final class DiskCacheWorker implements Runnable {
         synchronized (this.field_d) {
           this.field_d.a(param1, (byte) -105);
           if (param0 >= -27) {
-            ppa var5 = (ppa) null;
-            this.a((byte) -87, 82, (ppa) null);
+            SectorCacheStore var5 = (SectorCacheStore) null;
+            this.a((byte) -87, 82, (SectorCacheStore) null);
           }
           this.field_b = this.field_b + 1;
           this.field_d.notifyAll();
         }
     }
 
-    final sga writeAsync(boolean param0, int param1, ppa param2, byte[] param3) {
+    final sga writeAsync(boolean param0, int param1, SectorCacheStore param2, byte[] param3) {
         sga var5 = null;
         RuntimeException var5_ref = null;
         sga stackIn_2_0 = null;

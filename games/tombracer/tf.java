@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tf extends kca {
+final class tf extends TextFieldValidator {
     private boolean field_k;
     private String field_j;
 

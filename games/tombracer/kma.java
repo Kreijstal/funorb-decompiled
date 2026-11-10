@@ -18,7 +18,7 @@ abstract class kma implements nua {
     abstract String e(int param0);
 
     public final String a(int param0) {
-        if (this.a(true)) {
+        if (this.isEmpty(true)) {
           return null;
         }
         if (bva.b((byte) -107) < this.field_b + 350L) {
@@ -68,7 +68,7 @@ abstract class kma implements nua {
     public final it b(int param0) {
         if (param0 != -4666) {
           this.a(82);
-          if (this.a(true)) {
+          if (this.isEmpty(true)) {
             return fk.field_d;
           }
           if (!(bva.b((byte) -107) >= this.field_b + 350L)) {
@@ -76,7 +76,7 @@ abstract class kma implements nua {
           }
           return this.d(-1891);
         }
-        if (this.a(true)) {
+        if (this.isEmpty(true)) {
           return fk.field_d;
         }
         if (!(bva.b((byte) -107) >= this.field_b + 350L)) {

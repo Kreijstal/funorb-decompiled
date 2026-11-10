@@ -33,7 +33,7 @@ final class ns extends qe {
         this.field_i.a(4864, '\0');
         this.field_a.e(1, true);
         jaggl.OpenGL.glMatrixMode(5890);
-        jaggl.OpenGL.glLoadMatrixf(this.field_a.field_Tc.e(-103), 0);
+        jaggl.OpenGL.glLoadMatrixf(this.field_a.field_Tc.affineMatrix(-103), 0);
         int var3 = 5 / ((56 - param1) / 48);
         jaggl.OpenGL.glMatrixMode(5888);
         this.field_a.e(0, true);

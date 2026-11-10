@@ -4,7 +4,7 @@
 abstract class vw {
     static nl field_a;
     static jea field_b;
-    eo field_c;
+    HardwareGraphicsToolkit field_c;
 
     abstract void a(int param0, boolean param1);
 
@@ -81,7 +81,7 @@ abstract class vw {
         }
     }
 
-    vw(eo param0) {
+    vw(HardwareGraphicsToolkit param0) {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {

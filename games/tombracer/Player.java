@@ -860,7 +860,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
           if (this.lifeState != 3) {
             this.lifeState = 3;
             this.lifeStateTimer = param0;
-            this.field_F = this.room.p((byte) 18) + param0;
+            this.field_F = this.room.getTick((byte) 18) + param0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2475,7 +2475,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    public final boolean d(byte param0) {
+    public final boolean isRenderExpired(byte param0) {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {

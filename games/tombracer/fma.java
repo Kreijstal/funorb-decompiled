@@ -147,7 +147,7 @@ final class fma {
         return true;
     }
 
-    final CachedArchiveSource a(ppa param0, int param1, ppa param2, boolean param3, int param4) {
+    final CachedArchiveSource a(SectorCacheStore param0, int param1, SectorCacheStore param2, boolean param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;

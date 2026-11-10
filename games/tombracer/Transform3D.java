@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class gda {
+abstract class Transform3D {
     static int field_b;
     static int field_a;
     static int field_c;
@@ -24,7 +24,7 @@ abstract class gda {
           var2 = k.field_A;
         }
         if (param1 != -20011) {
-          gda.a(-61, -111);
+          Transform3D.a(-61, -111);
         }
         if (param0 == 1) {
           var2 = nba.field_b;

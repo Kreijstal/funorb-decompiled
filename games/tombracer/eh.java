@@ -12,11 +12,11 @@ final class eh implements Renderable {
     int field_d;
     int field_b;
 
-    public final boolean d(byte param0) {
+    public final boolean isRenderExpired(byte param0) {
         if (param0 != 48) {
           return false;
         }
-        return this.field_e.d((byte) 48);
+        return this.field_e.isRenderExpired((byte) 48);
     }
 
     final void a(int param0) {
@@ -88,7 +88,7 @@ final class eh implements Renderable {
         if (param0 >= 91) {
           return this.field_e.getRenderY((byte) 112) + this.field_c + this.field_e.i(1024);
         }
-        this.d((byte) 85);
+        this.isRenderExpired((byte) 85);
         return this.field_e.getRenderY((byte) 112) + this.field_c + this.field_e.i(1024);
     }
 

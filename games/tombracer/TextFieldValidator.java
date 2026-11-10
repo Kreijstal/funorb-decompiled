@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class kca extends kma implements cd {
+abstract class TextFieldValidator extends kma implements cd {
     static int field_h;
     static int field_g;
     private TextInputWidget field_i;
@@ -19,7 +19,7 @@ abstract class kca extends kma implements cd {
         return this.a(-1, this.field_i.field_o);
     }
 
-    public final boolean a(boolean param0) {
+    public final boolean isEmpty(boolean param0) {
         if (!param0) {
           field_g = 101;
           if (null != this.field_i.field_o) {
@@ -58,7 +58,7 @@ abstract class kca extends kma implements cd {
         }
     }
 
-    kca(TextInputWidget param0) {
+    TextFieldValidator(TextInputWidget param0) {
         try {
           this.field_i = param0;
         } catch (RuntimeException runtimeException) {

@@ -27,7 +27,7 @@ final class DamageableBehaviour extends Behaviour {
         if (this.field_n) {
           return this.trap;
         }
-        return this.e(6);
+        return this.getRoot(6);
     }
 
     private final void g(byte param0) {

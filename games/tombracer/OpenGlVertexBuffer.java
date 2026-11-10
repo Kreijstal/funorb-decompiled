@@ -34,7 +34,7 @@ final class OpenGlVertexBuffer extends OpenGlBuffer implements eja {
         return super.a(this.field_h.field_Qc, param0, 1);
     }
 
-    OpenGlVertexBuffer(kda param0, una param1, boolean param2) {
+    OpenGlVertexBuffer(HardwareOpenGlToolkit param0, una param1, boolean param2) {
         super(param0, 34963, param2);
         try {
           this.field_l = param1;

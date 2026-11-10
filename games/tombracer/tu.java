@@ -315,7 +315,7 @@ class tu extends SimulationObserver {
         try {
           var4_int = kq.a(105, param1.getId((byte) -82)).field_h;
           var4_int = var4_int * 2;
-          var5 = param1.p((byte) 83);
+          var5 = param1.getTick((byte) 83);
           if (param2) {
             this.field_f = (MatchState) null;
           }

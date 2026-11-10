@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oba extends gda {
+final class OpenGlTransform3D extends Transform3D {
     float field_j;
     float field_p;
     static BufferedSocket field_e;
@@ -18,7 +18,7 @@ final class oba extends gda {
     static String field_n;
     float field_s;
 
-    final float[] e(int param0) {
+    final float[] affineMatrix(int param0) {
         GameKeyHandler.field_c[10] = this.field_q;
         GameKeyHandler.field_c[14] = this.field_o;
         GameKeyHandler.field_c[12] = this.field_m;
@@ -59,10 +59,10 @@ final class oba extends gda {
         this.field_o = var2 * this.field_o + var7 * var3;
     }
 
-    final void a(gda param0, byte param1) {
-        oba var5 = null;
+    final void a(Transform3D param0, byte param1) {
+        OpenGlTransform3D var5 = null;
         try {
-          var5 = (oba) (param0);
+          var5 = (OpenGlTransform3D) (param0);
           this.field_k = var5.field_i;
           int var4 = -37 % ((-23 - param1) / 33);
           this.field_s = var5.field_j;
@@ -243,7 +243,7 @@ final class oba extends gda {
         this.field_i = 0.0f;
     }
 
-    final float[] b(byte param0) {
+    final float[] rotationMatrix(byte param0) {
         GameKeyHandler.field_c[12] = 0.0f;
         GameKeyHandler.field_c[9] = this.field_g;
         GameKeyHandler.field_c[2] = this.field_j;
@@ -259,8 +259,8 @@ final class oba extends gda {
           GameKeyHandler.field_c[6] = this.field_h;
           return GameKeyHandler.field_c;
         }
-        gda var3 = (gda) null;
-        this.a((gda) null, 114);
+        Transform3D var3 = (Transform3D) null;
+        this.a((Transform3D) null, 114);
         GameKeyHandler.field_c[1] = this.field_i;
         GameKeyHandler.field_c[10] = this.field_q;
         GameKeyHandler.field_c[0] = this.field_l;
@@ -269,10 +269,10 @@ final class oba extends gda {
         return GameKeyHandler.field_c;
     }
 
-    final void a(gda param0, int param1) {
-        oba var3 = null;
+    final void a(Transform3D param0, int param1) {
+        OpenGlTransform3D var3 = null;
         try {
-          var3 = (oba) (param0);
+          var3 = (OpenGlTransform3D) (param0);
           this.field_k = var3.field_k;
           this.field_p = var3.field_p;
           this.field_l = var3.field_l;
@@ -331,7 +331,7 @@ final class oba extends gda {
         this.field_p = -((float)param2 * this.field_g) + ((float)(-param0) * this.field_i - (float)param1 * this.field_r);
     }
 
-    oba() {
+    OpenGlTransform3D() {
         this.a();
     }
 

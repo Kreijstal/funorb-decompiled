@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class PasswordValidator extends kca {
+final class PasswordValidator extends TextFieldValidator {
     static int field_m;
     static int field_n;
     private TextInputWidget field_j;
@@ -20,7 +20,7 @@ final class PasswordValidator extends kca {
         tga.field_a = null;
     }
 
-    final static qca a(pr[] param0, kda param1, int param2) {
+    final static qca a(pr[] param0, HardwareOpenGlToolkit param1, int param2) {
         int var3_int = 0;
         Object stackIn_25_0 = null;
         qca stackIn_27_0 = null;

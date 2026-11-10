@@ -38,7 +38,7 @@ final class uba extends kma implements cd, eaa {
         return nia.field_m;
     }
 
-    public final boolean a(boolean param0) {
+    public final boolean isEmpty(boolean param0) {
         if (!param0) {
           this.field_i = (paa) null;
           return this.field_i.i((byte) 64);

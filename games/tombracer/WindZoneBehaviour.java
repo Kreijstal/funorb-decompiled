@@ -140,7 +140,7 @@ final class WindZoneBehaviour extends Behaviour {
         var14 = this.trap.P(param0 - 5418);
         if (this.field_q != 0 &&
           this.field_q != 2) {
-          var25 = this.b(true).spawnParticle(var11, this.trap.getTop(2) + this.o((byte) 46).nextBounded(var5, 0), (byte) 100, var14);
+          var25 = this.getRoom(true).spawnParticle(var11, this.trap.getTop(2) + this.getRandom((byte) 46).nextBounded(var5, 0), (byte) 100, var14);
           var25.a(false, 2, 3, 8, 10);
           stackIn_22_0 = var25;
           stackIn_22_1 = 72;
@@ -152,7 +152,7 @@ final class WindZoneBehaviour extends Behaviour {
           }
           ((Particle) (Object) stackIn_22_0).b(stackIn_22_1, stackIn_22_2, stackIn_23_3);
         } else {
-          var24 = this.b(true).spawnParticle(this.trap.r((byte) -95) + this.o((byte) 46).nextBounded(var4, 0), var11, (byte) 100, var14);
+          var24 = this.getRoom(true).spawnParticle(this.trap.r((byte) -95) + this.getRandom((byte) 46).nextBounded(var4, 0), var11, (byte) 100, var14);
           var24.a(false, 2, 3, 8, 10);
           stackIn_18_0 = var24;
           stackIn_18_1 = 79;
@@ -163,7 +163,7 @@ final class WindZoneBehaviour extends Behaviour {
           }
           ((Particle) (Object) stackIn_18_0).b(stackIn_18_1, stackIn_19_2, 0);
         }
-        var15 = this.b(true).collisionGrid.b(var3, -1, var2, var4, var5);
+        var15 = this.getRoom(true).collisionGrid.b(var3, -1, var2, var4, var5);
         var16 = var15;
         for (var17 = 0; var17 < var16.length; var17++) {
           var18 = var16[var17];
@@ -200,7 +200,7 @@ final class WindZoneBehaviour extends Behaviour {
                 }
               }
               if (!(var22 > 262144) ||
-                !this.b(true).a(1, this.field_v, this.e(param0 ^ 5420), (byte) 60)) {
+                !this.getRoom(true).a(1, this.field_v, this.getRoot(param0 ^ 5420), (byte) 60)) {
                 var8 = GameEvent.a(var12, param0 ^ -25604, var22);
                 var8 = -gqa.a(var8, (byte) 24, -var9 + var10) + var10;
                 var8 = za.$cfr$intArgs$a$c604db63f465(var9, 113, var10, var8);

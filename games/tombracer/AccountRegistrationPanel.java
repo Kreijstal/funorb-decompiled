@@ -169,7 +169,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements tma, tsa
         int var1 = 1;
         this.field_D = new jla("", (qc) null, var1 != 0);
         this.field_F = new FocusableWidget(sla.field_c, (qc) null);
-        this.field_B = new FocusableWidget(kda.field_gd, (qc) null);
+        this.field_B = new FocusableWidget(HardwareOpenGlToolkit.field_gd, (qc) null);
         this.field_G.field_q = rma.field_a;
         this.field_z.field_q = ema.field_a;
         this.field_J.field_q = ju.field_a;

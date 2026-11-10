@@ -195,7 +195,7 @@ final class ab extends qra {
             var13 = this.field_c.players[var17].z(115);
             if (var13 == -1) {
               var14 = this.field_c.field_c.field_b[var17];
-              var15 = this.field_o.b((byte) 50);
+              var15 = this.field_o.getCurrentPos((byte) 50);
               if (var14 >= var15) {
                 if (var14 != var15) {
                   var12 = 12303291;
@@ -297,14 +297,14 @@ final class ab extends qra {
         jha var6 = null;
         if (this.field_o.getCurrentPlayerId(-1) == param0) {
           if (param2 == -1) {
-            var6 = ab.a(-9, gl.$cfr$intArgs$a$53ce4ab4c593(86, oba.field_n, new String[]{this.field_c.e(param0, 23807)}));
+            var6 = ab.a(-9, gl.$cfr$intArgs$a$53ce4ab4c593(86, OpenGlTransform3D.field_n, new String[]{this.field_c.getColouredPlayerName(param0, 23807)}));
             iqa.field_c.a(0, var6);
             this.field_o.a(param2, (byte) 112);
           } else {
             var4 = this.field_o.a(-108, param2);
             this.field_o.a(param2, (byte) 119);
             this.h(0);
-            var5 = ab.a(-58, gl.$cfr$intArgs$a$53ce4ab4c593(125, RecursiveBacktrackerMazeGenerator.field_b, new String[]{this.field_c.e(param0, 23807), sla.field_b[var4]}));
+            var5 = ab.a(-58, gl.$cfr$intArgs$a$53ce4ab4c593(125, RecursiveBacktrackerMazeGenerator.field_b, new String[]{this.field_c.getColouredPlayerName(param0, 23807), sla.field_b[var4]}));
             iqa.field_c.a(0, var5);
           }
         }

@@ -120,7 +120,7 @@ final class fta {
           if (TestModel.field_o == this) {
             return true;
           }
-          if (eo.field_w != this) {
+          if (HardwareGraphicsToolkit.field_w != this) {
             return this == uga.field_n ? true : false;
           }
           return true;
@@ -128,7 +128,7 @@ final class fta {
         if (TestModel.field_o == this) {
           return true;
         }
-        if (eo.field_w == this) {
+        if (HardwareGraphicsToolkit.field_w == this) {
           return true;
         }
         if (this != uga.field_n) {
