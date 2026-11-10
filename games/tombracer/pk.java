@@ -38,7 +38,7 @@ final class pk extends we {
         if (!param0) {
           return;
         }
-        if (vpa.a(8)) {
+        if (TextWidgetPainter.a(8)) {
           this.field_E = 1;
           return;
         }
@@ -228,7 +228,7 @@ final class pk extends we {
         var4Lifetime1 = 120 + param1 + 50;
         eda.field_f.a(-1, -1, ab.field_t[0], -14671840, var4Lifetime1, OpenGlBuffer.field_a);
         eda.field_f.a(var4Lifetime1, false, ObjectPool.field_g.toUpperCase(), ab.field_t[1], -14671840, -1);
-        eda.field_f.a(12199, var4Lifetime1, lc.field_L.toUpperCase(), -1, -14671840, ab.field_t[2]);
+        eda.field_f.a(12199, var4Lifetime1, ContentTransitionDialog.field_L.toUpperCase(), -1, -14671840, ab.field_t[2]);
         var5Lifetime1 = null;
         var6Lifetime1 = this.field_E;
         if (var6Lifetime1 == 0) {

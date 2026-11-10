@@ -37,7 +37,7 @@ final class bta extends vw {
         this.field_c.a(PlatformComponent.field_F, (byte) -110, r.field_m);
         this.field_c.a(pea.field_c, 0, -30);
         this.field_c.a(ej.field_c, 2, -6219, true, false);
-        this.field_c.a(0, false, lja.field_j);
+        this.field_c.a(0, false, PlayerContextMenu.field_j);
         int var3 = -29 % ((param0 - 41) / 62);
         this.field_c.e(0, false);
         this.d(-124);
@@ -231,8 +231,8 @@ final class bta extends vw {
             if (!this.field_j) {
               this.field_c.a(true, this.field_c.field_Jb);
               this.field_c.a((byte) 120, 1);
-              this.field_c.a(lja.field_j, 0, -21);
-              this.field_c.a(0, false, lja.field_j);
+              this.field_c.a(PlayerContextMenu.field_j, 0, -21);
+              this.field_c.a(0, false, PlayerContextMenu.field_j);
               this.field_j = true;
               return;
             }

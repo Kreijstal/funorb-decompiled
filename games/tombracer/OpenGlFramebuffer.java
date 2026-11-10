@@ -116,7 +116,7 @@ final class OpenGlFramebuffer implements ks {
         this.field_h[param1] = null;
     }
 
-    final void a(int param0, kba param1, boolean param2) {
+    final void a(int param0, OpenGlRenderbuffer param1, boolean param2) {
         RuntimeException runtimeException = null;
         int var4_int = 0;
         RuntimeException stackIn_15_0 = null;

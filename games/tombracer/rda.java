@@ -34,7 +34,7 @@ final class rda extends ci {
                 this.field_p[var4_int] = (rra) ((Object) DualLinkNode.a(0, param1));
               } else {
                 if (var6 == 1) {
-                  this.field_p[var4_int] = (rra) ((Object) lga.a(param1, (byte) -88));
+                  this.field_p[var4_int] = (rra) ((Object) HotspotTextWidget.a(param1, (byte) -88));
                 } else {
                   if (var6 == 2) {
                     this.field_p[var4_int] = (rra) ((Object) SwitchableId.a(4, param1));

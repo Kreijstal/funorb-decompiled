@@ -24,7 +24,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     private float[] field_H;
     int[] field_r;
     int field_k;
-    private dd field_F;
+    private SoftReferenceCache field_F;
     int field_u;
     private int field_y;
     pna field_A;
@@ -46,7 +46,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     int field_q;
     private int field_h;
     float[] field_n;
-    private dd field_X;
+    private SoftReferenceCache field_X;
     private int field_v;
     private ToolkitSprite field_R;
 
@@ -237,11 +237,11 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
           var3 = this.field_F.a((byte) 60);
         }
         this.field_j = param0;
-        this.field_X.b(72, 5);
-        this.field_F.b(119, 5);
+        this.field_X.demoteOldEntries(72, 5);
+        this.field_F.demoteOldEntries(119, 5);
     }
 
-    final void GA(int param0) {
+    final void clear(int param0) {
         this.fillRectangle(0, 0, this.field_K, this.field_h, param0, 0);
     }
 
@@ -256,7 +256,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         ija var7 = null;
         java.awt.Dimension var5 = null;
         float[] array$0 = null;
-        ija var6 = (ija) (this.field_G.a((byte) -112, (long)param0.hashCode()));
+        ija var6 = (ija) (this.field_G.get((byte) -112, (long)param0.hashCode()));
         if (var6 != null) {
           var6.unlink(30);
           var7 = OpenGlTexture.a(param2, param1, param0, 0);
@@ -473,7 +473,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
               stackIn_13_5 = true;
             }
             var2 = new ScrollingTexturePixels(stackIn_12_2, stackIn_12_3, stackIn_12_4, stackIn_13_5);
-            this.field_F.a(29166, var2, (long)param0 | -9223372036854775808L);
+            this.field_F.put(29166, var2, (long)param0 | -9223372036854775808L);
           }
         }
         var2.field_g = true;
@@ -1098,7 +1098,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
               var13 = stackIn_12_0;
               var15 = this.a(var16, var13, 79, var13, var13, 0);
               var11 = var15;
-              this.field_X.a(29166, var15, (long)param6);
+              this.field_X.put(29166, var15, (long)param6);
             }
             this.field_v = param6;
             this.field_R = var11;
@@ -1142,7 +1142,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
               var13 = stackIn_12_0;
               var15 = this.a(var16, var13, 80, var13, var13, 0);
               var11 = var15;
-              this.field_X.a(29166, var15, (long)param6);
+              this.field_X.put(29166, var15, (long)param6);
             }
             this.field_v = param6;
             this.field_R = var11;
@@ -1268,7 +1268,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
 
     private final void a(java.awt.Canvas param0, int param1, int param2) {
         ija var4;
-        var4 = (ija) (this.field_G.a((byte) -104, (long)param0.hashCode()));
+        var4 = (ija) (this.field_G.get((byte) -104, (long)param0.hashCode()));
         if (var4 != null) {
           if (var4.field_h == param1 &&
             var4.field_f == param2) {
@@ -1387,10 +1387,10 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         this.field_e = false;
         this.field_U = 3500;
         this.field_C = 512;
-        this.field_X = new dd(16);
+        this.field_X = new SoftReferenceCache(16);
         this.field_v = -1;
         try {
-          this.field_F = new dd(256);
+          this.field_F = new SoftReferenceCache(256);
           this.field_A = new pna();
           this.i(1);
           this.g(0);
@@ -1600,7 +1600,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
             this.m();
           }
         } else {
-          var2 = (ija) (this.field_G.a((byte) -116, (long)param0.hashCode()));
+          var2 = (ija) (this.field_G.get((byte) -116, (long)param0.hashCode()));
           if (var2 != null) {
             this.field_t = param0;
             var3 = param0.getSize();

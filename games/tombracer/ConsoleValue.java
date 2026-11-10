@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bfa {
+final class ConsoleValue {
     static BitmapFont field_c;
     Object field_d;
     static Sprite field_e;
@@ -23,13 +23,13 @@ final class bfa {
 
     final boolean a(boolean param0) {
         if (param0) {
-          bfa.releaseStatics(-40);
+          ConsoleValue.releaseStatics(-40);
           return ((Boolean) (this.field_d)).booleanValue();
         }
         return ((Boolean) (this.field_d)).booleanValue();
     }
 
-    private final long b(int param0) {
+    private final long asLong(int param0) {
         if (this.field_d instanceof Long) {
           return ((Long) (this.field_d)).longValue();
         }
@@ -61,12 +61,12 @@ final class bfa {
         return ((Float) (this.field_d)).longValue();
     }
 
-    bfa(int param0) {
+    ConsoleValue(int param0) {
         this.field_d = new Integer(param0);
         this.field_a = true;
     }
 
-    bfa(long param0) {
+    ConsoleValue(long param0) {
         this.field_d = new Long(param0);
         this.field_a = true;
     }
@@ -81,37 +81,37 @@ final class bfa {
         return this.field_d.toString();
     }
 
-    final int c(int param0) {
+    final int asInt(int param0) {
         if (param0 != -178) {
           return -29;
         }
         if (!(this.field_d instanceof Integer)) {
-          return (int)this.b(param0 ^ 18564);
+          return (int)this.asLong(param0 ^ 18564);
         }
         return ((Integer) (this.field_d)).intValue();
     }
 
-    bfa(boolean param0) {
+    ConsoleValue(boolean param0) {
         this.field_d = new Boolean(param0);
         this.field_a = true;
     }
 
-    bfa(float param0) {
+    ConsoleValue(float param0) {
         this.field_d = new Float(param0);
         this.field_a = true;
     }
 
-    bfa(double param0) {
+    ConsoleValue(double param0) {
         this.field_d = new Double(param0);
         this.field_a = true;
     }
 
-    bfa(char param0) {
+    ConsoleValue(char param0) {
         this.field_d = new Character(param0);
         this.field_a = true;
     }
 
-    bfa(Object param0) {
+    ConsoleValue(Object param0) {
         try {
           this.field_a = false;
           this.field_d = param0;

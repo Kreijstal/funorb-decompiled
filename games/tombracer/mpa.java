@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mpa extends lc {
+final class mpa extends ContentTransitionDialog {
     static int[] field_W;
     static apa field_V;
     static boolean field_X;

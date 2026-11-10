@@ -15,7 +15,7 @@ final class cs {
           return uaa.field_a;
         }
         if (gva.field_b.b(124)) {
-          return jo.field_E;
+          return ScrollControlWidget.field_E;
         }
         return uaa.field_a;
     }

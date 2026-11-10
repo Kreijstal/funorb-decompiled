@@ -7,7 +7,7 @@ final class fba {
     final static int[] a(int param0, float param1, int param2, boolean param3, int param4, int param5, int param6, int param7) {
         int[] var10 = new int[param6];
         int[] var8 = var10;
-        lva var9 = new lva();
+        PerlinNoise2D var9 = new PerlinNoise2D();
         var9.field_z = param7;
         var9.field_u = param2;
         var9.field_n = param4;
@@ -16,7 +16,7 @@ final class fba {
         var9.field_x = (int)(4096.0f * param1);
         var9.b((byte) 116);
         uta.a(0, param5, param6);
-        var9.a(var10, -1, 0);
+        var9.fillRow(var10, -1, 0);
         return var10;
     }
 

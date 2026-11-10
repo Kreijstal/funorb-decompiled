@@ -14,7 +14,7 @@ final class fw {
         if (var3 != null) {
           var2.a(-1, param0, new PacketBuffer(var3));
         }
-        TrackMountComponent.field_J.a(29166, var2, (long)param0);
+        TrackMountComponent.field_J.put(29166, var2, (long)param0);
         return var2;
     }
 

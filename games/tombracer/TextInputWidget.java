@@ -486,7 +486,7 @@ class TextInputWidget extends FocusableWidget {
             return;
           }
           var2 = (oaa) ((Object) this.field_r);
-          var3 = var2.a((UiWidget) (this), 14157);
+          var3 = var2.ensureTextLayout((UiWidget) (this), 14157);
           var4 = var3.a(0);
           var5 = var2.a((byte) 117, (UiWidget) (this));
           var6 = var2.a((byte) -90) >> 1;

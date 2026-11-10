@@ -38,7 +38,7 @@ final class ena extends DualLinkNode {
         if (null == this.field_m) {
           var2_ref_Object = dk.field_c;
           synchronized (var2_ref_Object) {
-            if (!dk.field_c.e(this.field_k, param0 ^ -107)) {
+            if (!dk.field_c.ensureGroupLoaded(this.field_k, param0 ^ -107)) {
               return false;
             }
             var28 = dk.field_c.d(param0 - 216, this.field_k);

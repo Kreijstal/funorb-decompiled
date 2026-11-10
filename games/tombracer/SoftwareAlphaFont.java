@@ -38,12 +38,12 @@ final class SoftwareAlphaFont extends GameFont {
         }
     }
 
-    final void a(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7) {
+    final void drawMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7) {
         int var16 = 0;
         int var16Lifetime1;
         int var16Lifetime2;
         if (param5 == null) {
-          this.fa(param0, param1, param2, param3, param4);
+          this.drawGlyph(param0, param1, param2, param3, param4);
           return;
         }
         param1 = param1 + this.field_e[param0];
@@ -84,10 +84,10 @@ final class SoftwareAlphaFont extends GameFont {
           var10 <= 0) {
           return;
         }
-        this.a(this.field_g[param0], this.field_i.field_r, param3, var15, var12, var9, var10, var13, var14, param1, param2, this.field_d[param0], param5, param6, param7);
+        this.blitMaskedCoverageGlyph(this.field_g[param0], this.field_i.field_r, param3, var15, var12, var9, var10, var13, var14, param1, param2, this.field_d[param0], param5, param6, param7);
     }
 
-    final void fa(char param0, int param1, int param2, int param3, boolean param4) {
+    final void drawGlyph(char param0, int param1, int param2, int param3, boolean param4) {
         int var13 = 0;
         int var13Lifetime1;
         int var13Lifetime2;
@@ -175,7 +175,7 @@ final class SoftwareAlphaFont extends GameFont {
         }
     }
 
-    private final void a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, aa param12, int param13, int param14) {
+    private final void blitMaskedCoverageGlyph(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, aa param12, int param13, int param14) {
         int var22 = 0;
         int var27 = 0;
         int incrementValue$0 = 0;

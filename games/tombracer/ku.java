@@ -24,13 +24,13 @@ final class ku extends qe {
             if (!this.field_c) {
               this.field_a.a(true, this.field_a.field_lc);
               this.field_a.d(1, 1);
-              this.field_a.c(0, param1 - 32221, 34168, 768);
+              this.field_a.setTextureCombineOperands(0, param1 - 32221, 34168, 768);
               this.field_a.b(34168, param1 - 32218, 0, 770);
               this.field_c = true;
             }
           } else {
             if (this.field_c) {
-              this.field_a.c(0, 0, 5890, 768);
+              this.field_a.setTextureCombineOperands(0, 0, 5890, 768);
               this.field_a.b(5890, 3, 0, 770);
               this.field_c = false;
             }
@@ -60,10 +60,10 @@ final class ku extends qe {
         this.field_e = param0 ? true : false;
         this.field_a.e(1, true);
         this.field_a.a(true, this.field_l);
-        this.field_a.b(34165, 8960, 7681);
+        this.field_a.setTextureCombineOperations(34165, 8960, 7681);
         int var3 = 90 % ((param1 - 56) / 48);
-        this.field_a.c(0, 0, 34166, 768);
-        this.field_a.c(2, 0, 5890, 770);
+        this.field_a.setTextureCombineOperands(0, 0, 34166, 768);
+        this.field_a.setTextureCombineOperands(2, 0, 5890, 770);
         this.field_a.b(34168, 3, 0, 770);
         this.field_a.e(0, true);
         this.a((byte) -120);
@@ -169,9 +169,9 @@ final class ku extends qe {
         stackIn_9_1 = (param0) ? false : true;
         ((OpenGlToolkit) (Object) stackIn_8_0).a(stackIn_9_1, (kl) null);
         if (!param0) {
-          this.field_a.b(8448, 8960, 8448);
-          this.field_a.c(0, 0, 5890, 768);
-          this.field_a.c(2, 0, 34166, 770);
+          this.field_a.setTextureCombineOperations(8448, 8960, 8448);
+          this.field_a.setTextureCombineOperands(0, 0, 5890, 768);
+          this.field_a.setTextureCombineOperands(2, 0, 34166, 770);
           this.field_a.b(5890, 3, 0, 770);
           stackIn_19_0 = this.field_a;
           stackIn_19_1 = 0;
@@ -179,9 +179,9 @@ final class ku extends qe {
           ((OpenGlToolkit) (Object) stackIn_19_0).e(stackIn_19_1, stackIn_20_2);
         } else {
           field_j = (int[]) null;
-          this.field_a.b(8448, 8960, 8448);
-          this.field_a.c(0, 0, 5890, 768);
-          this.field_a.c(2, 0, 34166, 770);
+          this.field_a.setTextureCombineOperations(8448, 8960, 8448);
+          this.field_a.setTextureCombineOperands(0, 0, 5890, 768);
+          this.field_a.setTextureCombineOperands(2, 0, 34166, 770);
           this.field_a.b(5890, 3, 0, 770);
           stackIn_12_0 = this.field_a;
           stackIn_12_1 = 0;
@@ -191,7 +191,7 @@ final class ku extends qe {
         if (!this.field_c) {
           return;
         }
-        this.field_a.c(0, 0, 5890, 768);
+        this.field_a.setTextureCombineOperands(0, 0, 5890, 768);
         this.field_a.b(5890, 3, 0, 770);
         this.field_c = false;
     }
@@ -227,7 +227,7 @@ final class ku extends qe {
           var5 = -((float)(var2 - var3) * 0.25f) + (float)var2;
           jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5, var4, 1.0f / (float)this.field_a.field_vb, (float)this.field_a.field_nb / 255.0f);
           this.field_a.e(1, true);
-          this.field_a.h(1104971864, this.field_a.field_xc);
+          this.field_a.setTextureConstantArgb(1104971864, this.field_a.field_xc);
           this.field_a.e(0, true);
         }
         if (param0 <= -48) {

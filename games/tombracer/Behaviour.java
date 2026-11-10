@@ -426,12 +426,12 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
         if (param0 != 0) {
           ui var5 = (ui) null;
           this.a(-91, (ui) null, true, (ui) null);
-          if (vh.matchesSwitchableId(param1, param2, -27201, (Switchable) (this))) {
+          if (WhirlpoolDigest.matchesSwitchableId(param1, param2, -27201, (Switchable) (this))) {
             return (Switchable) (this);
           }
           return null;
         }
-        if (vh.matchesSwitchableId(param1, param2, -27201, (Switchable) (this))) {
+        if (WhirlpoolDigest.matchesSwitchableId(param1, param2, -27201, (Switchable) (this))) {
           return (Switchable) (this);
         }
         return null;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ur {
-    static vpa field_a;
+    static TextWidgetPainter field_a;
     int field_c;
     static String field_b;
 

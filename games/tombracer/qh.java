@@ -169,7 +169,7 @@ final class qh extends dfa implements rqa {
               if (this.field_p) {
                 return;
               }
-              kq.a(this.field_k.players[this.field_x].r((byte) -125), this.field_E, (byte) 114);
+              kq.a(this.field_k.players[this.field_x].getDeathCount((byte) -125), this.field_E, (byte) 114);
               this.field_p = true;
             }
           }
@@ -204,7 +204,7 @@ final class qh extends dfa implements rqa {
             this.j(1);
           }
         } else {
-          if (vpa.a(80)) {
+          if (TextWidgetPainter.a(80)) {
             GameClock.field_b = qca.a((byte) 13, pq.field_e);
             stackIn_8_0 = !(this.n((byte) 19) <= 0);
             uma.field_c = stackIn_8_0;
@@ -1080,7 +1080,7 @@ final class qh extends dfa implements rqa {
           if (this.field_k.e((byte) -66, param1)) {
             var3 = ab.a(-79, gl.$cfr$intArgs$a$53ce4ab4c593(107, hu.field_a, new String[]{this.j(param1, 9)}) + ": " + dea.a(this.field_k.c((byte) 115, param1), (byte) -8));
           } else {
-            var3 = ab.a(-108, gl.$cfr$intArgs$a$53ce4ab4c593(99, at.field_Q, new String[]{this.j(param1, 9)}));
+            var3 = ab.a(-108, gl.$cfr$intArgs$a$53ce4ab4c593(99, DisplaySettingsDialog.field_Q, new String[]{this.j(param1, 9)}));
           }
         }
         iqa.field_c.a(0, var3);
@@ -1462,7 +1462,7 @@ final class qh extends dfa implements rqa {
           !this.o((byte) 62) && this.field_E >= 0) {
           var2 = this.field_E;
           qv.field_o = new kb(var2, var2 ^ 65535, ti.field_b, tb.field_o, lu.field_a, gda.field_b, new int[]{this.field_j});
-          if (!vpa.a(66)) {
+          if (!TextWidgetPainter.a(66)) {
             su.a(qv.field_o, (byte) -108, 3);
           }
         }

@@ -32,20 +32,20 @@ final class eea extends ela {
         super(param0, param1, param2);
     }
 
-    final bfa a(bfa[] param0, int param1) {
+    final ConsoleValue a(ConsoleValue[] param0, int param1) {
         RuntimeException var3 = null;
-        bfa stackIn_2_0 = null;
-        bfa stackIn_4_0 = null;
+        ConsoleValue stackIn_2_0 = null;
+        ConsoleValue stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 0) {
-            stackIn_4_0 = new bfa(rma.a(-80));
+            stackIn_4_0 = new ConsoleValue(rma.a(-80));
             return stackIn_4_0;
           }
-          stackIn_2_0 = (bfa) null;
+          stackIn_2_0 = (ConsoleValue) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

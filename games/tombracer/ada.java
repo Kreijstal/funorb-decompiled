@@ -18,7 +18,7 @@ final class ada extends ArrayWidgetGroup implements tsa {
         field_z = null;
     }
 
-    public final void a(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
+    public final void onButtonActivated(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
         if (param4 < 44) {
           UiWidget var7 = (UiWidget) null;
           this.updatePointerState(-16, -96, (UiWidget) null, 107);

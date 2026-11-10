@@ -123,7 +123,7 @@ final class gga extends ofa implements tsa {
         }
     }
 
-    public final void a(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
+    public final void onButtonActivated(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -185,7 +185,7 @@ final class gga extends ofa implements tsa {
           var4.field_m = this.field_m;
           var4.field_n = 50;
           var4.field_i = 0;
-          var4.field_r = (isa) ((Object) new vpa(eka.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_r = (isa) ((Object) new TextWidgetPainter(eka.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(var4, -1);
           this.field_N = this.a(BitPacketBuffer.field_j, (qc) (this), -93);
           return;
@@ -218,7 +218,7 @@ final class gga extends ofa implements tsa {
           return;
         }
         FocusableWidget var3 = (FocusableWidget) null;
-        this.a(14, -50, (FocusableWidget) null, -113, (byte) -27);
+        this.onButtonActivated(14, -50, (FocusableWidget) null, -113, (byte) -27);
         this.field_B = false;
     }
 

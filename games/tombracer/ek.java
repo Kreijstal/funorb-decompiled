@@ -53,7 +53,7 @@ final class ek extends nqa implements lv {
     }
 
     public final void bind(byte param0) {
-        this.field_d.a((byte) -125, this);
+        this.field_d.bindTexture3D((byte) -125, this);
         if (param0 < 32) {
           hs var3 = (hs) null;
           this.a(88, (hs) null);

@@ -70,7 +70,7 @@ final class doa {
         tj discarded$3 = null;
         tj discarded$4 = null;
         try {
-          this.field_a = param1.a(196584, (byte[]) null, 24, true, (byte) 88);
+          this.field_a = param1.createVertexBuffer(196584, (byte[]) null, 24, true, (byte) 88);
           discarded$0 = new tj(this.field_a, 5126, 2, 0);
           discarded$3 = new tj(this.field_a, 5126, 3, 8);
           if (param0 != 22091) {

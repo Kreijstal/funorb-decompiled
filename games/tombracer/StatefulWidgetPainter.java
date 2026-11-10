@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vga extends vpa {
-    private ng[] field_o;
+final class StatefulWidgetPainter extends TextWidgetPainter {
+    private WidgetStyleLayer[] field_o;
     static IntrusiveDeque field_n;
     static boolean field_q;
-    private ng field_p;
+    private WidgetStyleLayer field_p;
 
-    public vga() {
-        this.field_o = new ng[6];
-        this.field_p = new ng();
-        ng dupTemp$0 = new ng();
+    public StatefulWidgetPainter() {
+        this.field_o = new WidgetStyleLayer[6];
+        this.field_p = new WidgetStyleLayer();
+        WidgetStyleLayer dupTemp$0 = new WidgetStyleLayer();
         this.field_o[0] = dupTemp$0;
-        ng var1 = dupTemp$0;
+        WidgetStyleLayer var1 = dupTemp$0;
         var1.a(true);
     }
 
@@ -26,7 +26,7 @@ final class vga extends vpa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -96) {
-            vga.b(91);
+            StatefulWidgetPainter.b(91);
           }
           var2 = param0.getParameter("username");
           if (var2 != null) {
@@ -52,11 +52,11 @@ final class vga extends vpa {
 
     final void a(int param0, Sprite[] param1) {
         int var4 = 0;
-        ng[] var3 = null;
-        ng var5 = null;
+        WidgetStyleLayer[] var3 = null;
+        WidgetStyleLayer var5 = null;
         int var6 = 0;
-        vga var7 = null;
-        ng[] var8 = null;
+        StatefulWidgetPainter var7 = null;
+        WidgetStyleLayer[] var8 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -67,8 +67,8 @@ final class vga extends vpa {
           var8 = this.field_o;
           var3 = var8;
           if (param0 != -18379) {
-            var7 = (vga) null;
-            this.a((byte) -79, (vga) null, false);
+            var7 = (StatefulWidgetPainter) null;
+            this.a((byte) -79, (StatefulWidgetPainter) null, false);
           }
           for (var4 = 0; var8.length > var4; var4++) {
             var5 = var8[var4];
@@ -91,13 +91,13 @@ final class vga extends vpa {
         }
     }
 
-    final void a(Sprite param0, byte param1) {
+    final void setIconForAllStates(Sprite param0, byte param1) {
         int var4 = 0;
-        ng[] var3 = null;
+        WidgetStyleLayer[] var3 = null;
         int var5 = 0;
-        ng var6 = null;
+        WidgetStyleLayer var6 = null;
         int var7 = 0;
-        ng[] var8 = null;
+        WidgetStyleLayer[] var8 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -136,15 +136,15 @@ final class vga extends vpa {
         }
     }
 
-    final void a(int param0, int param1, Sprite[] param2) {
+    final void setStateFrameSprites(int param0, int param1, Sprite[] param2) {
         int var4_int = 0;
         try {
           if (param0 != 0) {
-            this.field_p = (ng) null;
+            this.field_p = (WidgetStyleLayer) null;
           }
           var4_int = param1;
           if (null == this.field_o[var4_int]) {
-            this.field_o[var4_int] = new ng();
+            this.field_o[var4_int] = new WidgetStyleLayer();
           }
           this.field_o[param1].field_i = param2;
         } catch (RuntimeException runtimeException) {
@@ -152,11 +152,11 @@ final class vga extends vpa {
         }
     }
 
-    final ng a(int param0, byte param1) {
+    final WidgetStyleLayer createStateLayer(int param0, byte param1) {
         if (param1 < 40) {
-          this.a(100, (byte) 15);
+          this.createStateLayer(100, (byte) 15);
         }
-        ng dupTemp$0 = new ng();
+        WidgetStyleLayer dupTemp$0 = new WidgetStyleLayer();
         this.field_o[param0] = dupTemp$0;
         return dupTemp$0;
     }
@@ -168,13 +168,13 @@ final class vga extends vpa {
         String stackIn_37_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        ng var7 = null;
-        ng var9 = null;
+        WidgetStyleLayer var7 = null;
+        WidgetStyleLayer var9 = null;
         FocusableWidget var10 = null;
-        ng var11 = null;
-        ng var12 = null;
-        ng var13 = null;
-        ng var14 = null;
+        WidgetStyleLayer var11 = null;
+        WidgetStyleLayer var12 = null;
+        WidgetStyleLayer var13 = null;
+        WidgetStyleLayer var14 = null;
         try {
           if (!(param0 instanceof FocusableWidget)) {
             stackIn_3_0 = null;
@@ -189,25 +189,25 @@ final class vga extends vpa {
           var7 = this.field_o[0];
           this.field_p.a(true);
           if (param2 != 16777215) {
-            this.field_o = (ng[]) null;
+            this.field_o = (WidgetStyleLayer[]) null;
           }
-          var7.a(this, param0, 123, param3, param1, this.field_p);
+          var7.mergeIntoWorkingSkin(this, param0, 123, param3, param1, this.field_p);
           if (var10 != null) {
             if (var10.field_w) {
               var11 = this.field_o[1];
               if (var11 != null) {
-                var11.a(this, param0, 125, param3, param1, this.field_p);
+                var11.mergeIntoWorkingSkin(this, param0, 125, param3, param1, this.field_p);
               }
             }
             if (var10.field_f) {
               var12 = this.field_o[3];
               if (0 != var10.field_s &&
                 var12 != null) {
-                var12.a(this, param0, 123, param3, param1, this.field_p);
+                var12.mergeIntoWorkingSkin(this, param0, 123, param3, param1, this.field_p);
               } else {
                 var9 = this.field_o[2];
                 if (var9 != null) {
-                  var9.a(this, param0, param2 ^ 16777092, param3, param1, this.field_p);
+                  var9.mergeIntoWorkingSkin(this, param0, param2 ^ 16777092, param3, param1, this.field_p);
                 }
               }
             }
@@ -215,13 +215,13 @@ final class vga extends vpa {
           if (param0.hasKeyboardFocus((byte) -34)) {
             var13 = this.field_o[5];
             if (var13 != null) {
-              var13.a(this, param0, 123, param3, param1, this.field_p);
+              var13.mergeIntoWorkingSkin(this, param0, 123, param3, param1, this.field_p);
             }
           }
           if (!param4) {
             var14 = this.field_o[4];
             if (var14 != null) {
-              var14.a(this, param0, 126, param3, param1, this.field_p);
+              var14.mergeIntoWorkingSkin(this, param0, 126, param3, param1, this.field_p);
             }
           }
           this.field_p.a(-83, param1, this, param3, param0);
@@ -241,23 +241,23 @@ final class vga extends vpa {
         }
     }
 
-    private final void a(byte param0, vga param1, boolean param2) {
+    private final void a(byte param0, StatefulWidgetPainter param1, boolean param2) {
         int var4_int = 0;
-        ng dupTemp$0 = null;
-        ng stackIn_10_0 = null;
+        WidgetStyleLayer dupTemp$0 = null;
+        WidgetStyleLayer stackIn_10_0 = null;
         boolean stackIn_10_1 = false;
-        ng stackIn_11_2 = null;
+        WidgetStyleLayer stackIn_11_2 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        ng var5 = null;
-        ng var6 = null;
+        WidgetStyleLayer var5 = null;
+        WidgetStyleLayer var6 = null;
         int var7 = 0;
         Sprite[] var8 = null;
-        ng var6Lifetime1;
-        ng var6Lifetime2;
+        WidgetStyleLayer var6Lifetime1;
+        WidgetStyleLayer var6Lifetime2;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
           if (param0 != -16) {
@@ -277,11 +277,11 @@ final class vga extends vpa {
                 if (var6Lifetime2 != null) {
                   stackIn_11_2 = var6Lifetime2;
                 } else {
-                  dupTemp$0 = new ng();
+                  dupTemp$0 = new WidgetStyleLayer();
                   param1.field_o[var4_int] = dupTemp$0;
                   stackIn_11_2 = dupTemp$0;
                 }
-                ((ng) (Object) stackIn_10_0).a(stackIn_10_1, stackIn_11_2);
+                ((WidgetStyleLayer) (Object) stackIn_10_0).copyTo(stackIn_10_1, stackIn_11_2);
               } else {
                 param1.field_o[var4_int] = null;
               }
@@ -304,7 +304,7 @@ final class vga extends vpa {
         }
     }
 
-    vga(vga param0, boolean param1) {
+    StatefulWidgetPainter(StatefulWidgetPainter param0, boolean param1) {
         this();
         try {
           param0.a((byte) -16, this, param1);

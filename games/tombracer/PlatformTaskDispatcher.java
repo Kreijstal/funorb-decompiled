@@ -141,7 +141,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     switch (var2_int) {
                       case 5:
                         if (!this.field_p) {
-                          var8.field_f = Class.forName("pj").getMethod("listmodes", new Class[]{}).invoke(this.field_i, new Object[]{});
+                          var8.field_f = Class.forName("AwtFullscreenController").getMethod("listmodes", new Class[]{}).invoke(this.field_i, new Object[]{});
                         } else {
                           var8.field_f = this.field_w.a((byte) 52);
                         }
@@ -214,7 +214,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         break;
                       case 7:
                         if (!this.field_p) {
-                          Class.forName("pj").getMethod("exit", new Class[]{}).invoke(this.field_i, new Object[]{});
+                          Class.forName("AwtFullscreenController").getMethod("exit", new Class[]{}).invoke(this.field_i, new Object[]{});
                         } else {
                           this.field_w.a((java.awt.Frame) (var8.field_c), (byte) -108);
                         }
@@ -226,7 +226,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         if (this.field_p) {
                           this.field_w.a(var12, var8.field_e >>> 16, var8.field_d >> 16, var8.field_d & 65535, var8.field_e & 65535, true);
                         } else {
-                          Class.forName("pj").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_i, new Object[]{var12, new Integer(var8.field_e >>> 16), new Integer(65535 & var8.field_e), new Integer(var8.field_d >> 16), new Integer(var8.field_d & 65535)});
+                          Class.forName("AwtFullscreenController").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_i, new Object[]{var12, new Integer(var8.field_e >>> 16), new Integer(65535 & var8.field_e), new Integer(var8.field_d >> 16), new Integer(var8.field_d & 65535)});
                         }
                         break;
                       case 21:
@@ -317,7 +317,7 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.a(0, 0, (byte) 104, new Object[]{param3, param2, param1}, 8);
     }
 
-    final boolean a(byte param0) {
+    final boolean isFullscreenAvailable(byte param0) {
         if (!this.field_c) {
           return false;
         }
@@ -330,7 +330,7 @@ final class PlatformTaskDispatcher implements Runnable {
         return null != this.field_i ? true : false;
     }
 
-    final void b(byte param0) {
+    final void shutdown(byte param0) {
         try {
           int var2_int = 0;
           Throwable decompiledCaughtException = null;
@@ -637,7 +637,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           try {
             if (!this.field_p) {
-              this.field_i = Class.forName("pj").newInstance();
+              this.field_i = Class.forName("AwtFullscreenController").newInstance();
             } else {
               var9 = new MicrosoftDisplayController();
               this.field_w = var9;

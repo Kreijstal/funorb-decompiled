@@ -101,7 +101,7 @@ final class uba extends kma implements cd, eaa {
         return uh.field_k;
     }
 
-    public final void a(int param0, rla param1) {
+    public final void a(int param0, DropdownList param1) {
         if (param0 != -3) {
           return;
         }

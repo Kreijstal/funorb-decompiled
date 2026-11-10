@@ -720,8 +720,8 @@ class UiWidget extends IntrusiveNode {
           this.field_h = param2;
           if (this.field_r instanceof oaa) {
             var4 = (oaa) ((Object) this.field_r);
-            this.field_m = var4.a(3459, this);
-            this.field_p = var4.b((byte) -79, this);
+            this.field_m = var4.getPreferredWidth(3459, this);
+            this.field_p = var4.getTextWidth((byte) -79, this);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

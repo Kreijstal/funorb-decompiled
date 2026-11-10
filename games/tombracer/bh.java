@@ -526,12 +526,12 @@ final class bh extends ela {
               if (!var12.field_Bb &&
                 !var12.field_gc) {
                 if (!var12.field_Yb) {
-                  stackIn_160_0 = lva.field_v;
+                  stackIn_160_0 = PerlinNoise2D.field_v;
                 } else {
                   stackIn_160_0 = S2CRoundResultPacket.field_c;
                 }
               } else {
-                stackIn_160_0 = kba.field_k;
+                stackIn_160_0 = OpenGlRenderbuffer.field_k;
               }
               ArchiveNetworkClient.field_b = stackIn_160_0;
             }
@@ -570,20 +570,20 @@ final class bh extends ela {
         }
     }
 
-    final bfa a(bfa[] param0, int param1) {
+    final ConsoleValue a(ConsoleValue[] param0, int param1) {
         RuntimeException var3 = null;
-        bfa stackIn_2_0 = null;
-        bfa stackIn_4_0 = null;
+        ConsoleValue stackIn_2_0 = null;
+        ConsoleValue stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 0) {
-            stackIn_4_0 = new bfa(rua.a((String) (param0[0].field_d), -62));
+            stackIn_4_0 = new ConsoleValue(rua.a((String) (param0[0].field_d), -62));
             return stackIn_4_0;
           }
-          stackIn_2_0 = (bfa) null;
+          stackIn_2_0 = (ConsoleValue) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -148,7 +148,7 @@ final class oka extends wv {
           var10 = (cc) (this.field_q.next(121));
         }
         if (mq.field_e == null &&
-          !vpa.a(param0 + 119)) {
+          !TextWidgetPainter.a(param0 + 119)) {
           return;
         }
         var3 = 0;
@@ -185,7 +185,7 @@ final class oka extends wv {
         var7 = this.field_r - (100 - SwitchLinkList.b(param0 + 28));
         kq.field_a.a(var6 - (kq.field_a.a() >> 1), -(kq.field_a.c() >> 1) + var7);
         SocketConnector.a(vj.worldNames[this.field_v].toUpperCase(), 1, eda.field_f, 2431750, 8 + o.field_d.field_m, var5, 1, var7 - (var5 >> 1), var6 - (var4Lifetime1 >> 1), -1, (byte) 60, var4Lifetime1);
-        if (rd.b(false) && (vpa.a(62) ||
+        if (rd.b(false) && (TextWidgetPainter.a(62) ||
           mq.field_e.field_a ||
           var3 != 0)) {
           var7Lifetime1 = SwitchLinkList.b(0) / 2 + this.field_r;
@@ -194,11 +194,11 @@ final class oka extends wv {
           tga.field_a.c(-1442774783, var6 - (var4Lifetime2 >> 1), var4Lifetime2, -(var5Lifetime1 >> 1) + var7Lifetime1, -22971, var5Lifetime1);
           tga.field_a.a(var7Lifetime1 - (var5Lifetime1 >> 1), -(var4Lifetime2 >> 1) + var6, var5Lifetime1, var4Lifetime2, -1442774783, (byte) -75);
           tga.field_a.a(var7Lifetime1 - (var5Lifetime1 >> 1) + 1, 1 - (var4Lifetime2 >> 1) + var6, -2 + var5Lifetime1, var4Lifetime2 - 2, -1426063361, (byte) -128);
-          if (!vpa.a(42) &&
+          if (!TextWidgetPainter.a(42) &&
             var3 != 0) {
             var8 = qu.field_c;
           } else {
-            if (!vpa.a(109)) {
+            if (!TextWidgetPainter.a(109)) {
               var8 = DivisionMazeGenerator.field_d;
             } else {
               var8 = tc.field_f;

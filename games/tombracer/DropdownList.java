@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rla extends WidgetContainer implements tsa {
-    cca field_F;
+final class DropdownList extends WidgetContainer implements tsa {
+    ScrollContainer field_F;
     private FocusableWidget field_I;
     private boolean field_B;
     private FocusableWidget field_E;
@@ -16,7 +16,7 @@ final class rla extends WidgetContainer implements tsa {
     BitmapFont field_H;
     static String field_y;
 
-    private final void a(String param0, byte param1) {
+    private final void selectItemByPrefix(String param0, byte param1) {
         if (param1 != 106) {
           UiWidget var4 = (UiWidget) null;
           this.updatePointerState(36, -37, (UiWidget) null, 57);
@@ -45,11 +45,11 @@ final class rla extends WidgetContainer implements tsa {
           BrazierComponent.a(param0, param3, param4, param1, false);
         }
         if (param2 != -2) {
-          rla.a(-75, 34, (byte) 59, 71, -47);
+          DropdownList.a(-75, 34, (byte) 59, 71, -47);
         }
     }
 
-    rla(Object[] param0, int param1, int param2) {
+    DropdownList(Object[] param0, int param1, int param2) {
         super(0, 0, 0, 0, (isa) null);
         this.field_H = KeySwitchComponent.field_J;
         this.field_w = "";
@@ -137,7 +137,7 @@ final class rla extends WidgetContainer implements tsa {
         }
     }
 
-    public final void a(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
+    public final void onButtonActivated(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -218,7 +218,7 @@ final class rla extends WidgetContainer implements tsa {
         }
         this.a(this.field_C + var3, this.field_n, this.field_i, false, this.field_m);
         this.field_z.setBounds((byte) -31, this.field_m, var2, 0, 0);
-        this.field_F = new cca(0, 0, 0, 0, new pu(), this.field_z, (isa) null);
+        this.field_F = new ScrollContainer(0, 0, 0, 0, new pu(), this.field_z, (isa) null);
         if (var4 != 0) {
           this.field_F.a(1, st.b(-5412), true);
         }
@@ -242,7 +242,7 @@ final class rla extends WidgetContainer implements tsa {
         field_y = null;
     }
 
-    final void a(int param0) {
+    final void notifySelectionChanged(int param0) {
         if (this.field_h instanceof eaa) {
           ((eaa) ((Object) this.field_h)).a(-3, this);
         }
@@ -369,7 +369,7 @@ final class rla extends WidgetContainer implements tsa {
                 if ((decompiledFrameRemainder0) &&
                   (decompiledFrameRemainder0 = !(param0 >= 128))) {
                   var6 = this.field_w + param0;
-                  this.a(var6, (byte) 106);
+                  this.selectItemByPrefix(var6, (byte) 106);
                   return true;
                 }
               }

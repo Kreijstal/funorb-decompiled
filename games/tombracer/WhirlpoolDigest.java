@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vh {
+final class WhirlpoolDigest {
     private long[] field_m;
     private long[] field_j;
     private long[] field_f;
@@ -16,7 +16,7 @@ final class vh {
     private byte[] field_e;
     static float[] field_h;
 
-    private final void a(boolean param0) {
+    private final void compressBlock(boolean param0) {
         long dupTemp$0 = 0L;
         long arrayValue$1 = 0L;
         int var2;
@@ -37,7 +37,7 @@ final class vh {
         var6 = TombRacer.field_G ? 1 : 0;
         var2 = 0;
         if (param0) {
-          this.a(false);
+          this.compressBlock(false);
         }
         var3 = 0;
         while (var2 < 8) {
@@ -129,7 +129,7 @@ final class vh {
               this.field_a = this.field_a + (8 - var7);
               this.field_k = this.field_k + 1;
               if (this.field_a == 512) {
-                this.a(false);
+                this.compressBlock(false);
                 this.field_k = 0;
                 this.field_a = 0;
               }
@@ -154,7 +154,7 @@ final class vh {
             param1 = param1 - (long)(-var7 + 8);
             this.field_k = this.field_k + 1;
             if (this.field_a == 512) {
-              this.a(false);
+              this.compressBlock(false);
               this.field_a = 0;
               this.field_k = 0;
             }
@@ -219,7 +219,7 @@ final class vh {
           }
           var4 = var14.readUnsignedByte(255);
           if (param0 != -44) {
-            vh.a((byte) 81);
+            WhirlpoolDigest.a((byte) 81);
           }
           if (var4 != 0) {
             bra.field_M[0] = fna.field_k;
@@ -321,7 +321,7 @@ final class vh {
         field_c = null;
     }
 
-    final void a(int param0, int param1, byte[] param2) {
+    final void finishDigest(int param0, int param1, byte[] param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -343,7 +343,7 @@ final class vh {
               this.field_k = this.field_k + 1;
               this.field_e[fieldTemp$0] = (byte) 0;
             }
-            this.a(false);
+            this.compressBlock(false);
             this.field_k = 0;
           }
           while (this.field_k < 32) {
@@ -352,7 +352,7 @@ final class vh {
             this.field_e[fieldTemp$1] = (byte) 0;
           }
           ArrayUtils.copy(this.field_d, 0, this.field_e, 32, 32);
-          this.a(false);
+          this.compressBlock(false);
           var4_int = 0;
           var5 = param0;
           while (var4_int < 8) {
@@ -415,7 +415,7 @@ final class vh {
         }
     }
 
-    vh() {
+    WhirlpoolDigest() {
         this.field_m = new long[8];
         this.field_a = 0;
         this.field_j = new long[8];

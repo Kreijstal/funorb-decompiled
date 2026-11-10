@@ -13,7 +13,7 @@ final class fa {
           if (param0 <= 113) {
             field_a = (ToolkitSprite[]) null;
           }
-          stackIn_4_0 = jja.field_j.field_tb;
+          stackIn_4_0 = OpenGlSprite.field_j.field_tb;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -49,7 +49,7 @@ final class fa {
             var2 = sla.field_e;
           }
           if (bta.field_q == 2 &&
-            !at.f(24316)) {
+            !DisplaySettingsDialog.f(24316)) {
             if (dda.a(false, mn.field_n)) {
               var2 = gl.$cfr$intArgs$a$53ce4ab4c593(87, ConsoleToken.field_n, new String[]{wp.field_a});
               if (var10 != 0) {
@@ -118,7 +118,7 @@ final class fa {
               if (!fua.field_g) {
                 if (PowerDownItemBehaviour.field_s) {
                   var5 = "";
-                  var4 = "<col=999999>" + var4 + lva.field_o + "</col>";
+                  var4 = "<col=999999>" + var4 + PerlinNoise2D.field_o + "</col>";
                   if (var10 != 0) {
                     var5 = "";
                     var4 = "<col=999999>" + var4 + kia.field_a + "</col>";
@@ -135,7 +135,7 @@ final class fa {
                   if (fua.field_g) {
                     var1 = "Broken!";
                   } else {
-                    var1 = lva.field_o;
+                    var1 = PerlinNoise2D.field_o;
                   }
                 }
                 if (pq.field_g.field_y != 0 &&

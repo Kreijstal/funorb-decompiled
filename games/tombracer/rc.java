@@ -6,7 +6,7 @@ final class rc {
     static SpriteData[] field_b;
 
     final static void a(int param0, int param1, pha param2, byte param3, int param4, int param5, iv param6) {
-        lja var12 = null;
+        PlayerContextMenu var12 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;

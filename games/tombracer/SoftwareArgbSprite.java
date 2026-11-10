@@ -4,7 +4,7 @@
 final class SoftwareArgbSprite extends SoftwareToolkitSprite {
     int[] field_E;
 
-    final void b(int param0, int param1) {
+    final void blitAffine(int param0, int param1) {
         int incrementValue$24 = 0;
         int incrementValue$25 = 0;
         int incrementValue$26 = 0;
@@ -2953,7 +2953,7 @@ final class SoftwareArgbSprite extends SoftwareToolkitSprite {
 
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final void drawScaled(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int incrementValue$13 = 0;
         int incrementValue$12 = 0;
         int incrementValue$11 = 0;

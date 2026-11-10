@@ -46,7 +46,7 @@ final class sna {
             if (!this.field_h &&
               var8.s((byte) -119)) {
               this.field_h = true;
-              this.a(vh.field_c, (ms) null, 25, -89);
+              this.a(WhirlpoolDigest.field_c, (ms) null, 25, -89);
             }
             if (!this.field_i) {
               if (var8.E((byte) 3) == 1) {
@@ -67,7 +67,7 @@ final class sna {
             }
           }
         }
-        var5 = var10.r((byte) -102);
+        var5 = var10.getDeathCount((byte) -102);
         if (this.field_e != var5) {
           this.field_a = 0;
           this.field_e = var5;
@@ -83,13 +83,13 @@ final class sna {
           this.a(uw.field_b, (ms) null, 5, -88);
         }
         if (!this.field_f &&
-          var10.a(393216, 2) > 0) {
+          var10.getRoomTreasure(393216, 2) > 0) {
           this.field_f = true;
-          this.a(lja.field_a, (ms) null, 5, -74);
+          this.a(PlayerContextMenu.field_a, (ms) null, 5, -74);
         }
         boolean decompiledFrameRemainder0 = true;
         if (this.field_f) {
-          if (var10.a(393216, 2) != 0) {
+          if (var10.getRoomTreasure(393216, 2) != 0) {
             this.field_a = 0;
           } else {
             this.field_a = this.field_a + 1;

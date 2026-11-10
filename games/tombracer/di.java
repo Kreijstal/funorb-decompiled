@@ -169,7 +169,7 @@ final class di {
               var8_int = var7.field_b;
               if (var8_int != 0) {
                 if (var8_int == 5) {
-                  if (!lga.field_B.b(-35)) {
+                  if (!HotspotTextWidget.field_B.b(-35)) {
                     return;
                   }
                   var8_int = sma.a("hw3d", 28893);
@@ -208,7 +208,7 @@ final class di {
                       if (var8_int != 2) {
                         throw new IllegalStateException("UT" + var7.field_b);
                       }
-                      if (!lga.field_B.b(-63)) {
+                      if (!HotspotTextWidget.field_B.b(-63)) {
                         return;
                       }
                       var8_int = sma.a("jaclib", 28893);
@@ -232,7 +232,7 @@ final class di {
                         }
                       }
                     } else {
-                      if (!lga.field_B.b(-63)) {
+                      if (!HotspotTextWidget.field_B.b(-63)) {
                         return;
                       }
                       var8_int = sma.a("jaclib", 28893);
@@ -267,7 +267,7 @@ final class di {
                       }
                     }
                   } else {
-                    if (!lga.field_B.b(-53)) {
+                    if (!HotspotTextWidget.field_B.b(-53)) {
                       return;
                     }
                     var8_int = sma.a("jaclib", 28893);
@@ -411,7 +411,7 @@ final class di {
         try {
           this.field_c = param2;
           ck.field_a = param1;
-          lga.field_B = param0;
+          HotspotTextWidget.field_B = param0;
           BridgeModel.a(param0, param3, -55);
           this.a(0, param4);
         } catch (RuntimeException runtimeException) {

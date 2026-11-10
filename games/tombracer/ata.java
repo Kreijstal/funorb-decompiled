@@ -12,7 +12,7 @@ final class ata extends rra {
         int var5 = this.field_f * param2 >> 12;
         int var6 = param0 * this.field_h >> 12;
         int var7 = param0 * this.field_g >> 12;
-        cca.a(var7, var5, this.field_c, var6, 936441872, var4);
+        ScrollContainer.a(var7, var5, this.field_c, var6, 936441872, var4);
         int var8 = 127 % ((55 - param1) / 37);
     }
 

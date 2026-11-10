@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lja {
+final class PlayerContextMenu {
     private String field_d;
     private int field_b;
     private long field_g;
@@ -20,7 +20,7 @@ final class lja {
         field_a = null;
     }
 
-    final boolean a(int param0) {
+    final boolean handleEscape(int param0) {
         if (param0 != 13) {
           gqa var3 = (gqa) null;
           this.a((gqa) null, -72);
@@ -41,7 +41,7 @@ final class lja {
         return false;
     }
 
-    private final String b(int param0) {
+    private final String getDisplayName(int param0) {
         String var2 = null;
         if (param0 != -13) {
           return (String) null;
@@ -211,7 +211,7 @@ final class lja {
         int var5;
         var5 = TombRacer.field_G ? 1 : 0;
         if (param1 != -39) {
-          lja.releaseStatics((byte) 36);
+          PlayerContextMenu.releaseStatics((byte) 36);
         }
         if (param0 == 8) {
           no.a(this.field_i, this.field_g, (byte) 120);
@@ -270,7 +270,7 @@ final class lja {
             if (UiWidget.field_g != 2) {
               return;
             }
-            var7 = this.b(-13);
+            var7 = this.getDisplayName(-13);
             var4 = var7;
             var5 = wp.a(127, this.field_i);
             var6 = MouseWheelInput.a(2180, this.field_i) ? 1 : 0;
@@ -352,7 +352,7 @@ final class lja {
           if (param1 == 13) {
             return;
           }
-          discarded$1 = this.b(-106);
+          discarded$1 = this.getDisplayName(-106);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -388,7 +388,7 @@ final class lja {
             }
             var14 = nl.a(true, this.field_g);
             var4 = vba.a((byte) -40, this.field_g);
-            var5 = this.b(-13);
+            var5 = this.getDisplayName(-13);
             if (var4 != null) {
               if (!uu.field_a.field_ec) {
                 this.field_f.addItem((byte) -74, 1, gl.$cfr$intArgs$a$53ce4ab4c593(108, lf.field_a, new String[]{var5}));
@@ -433,7 +433,7 @@ final class lja {
         }
         var13 = nl.a(true, this.field_g);
         var4Lifetime1 = vba.a((byte) -40, this.field_g);
-        var5 = this.b(-13);
+        var5 = this.getDisplayName(-13);
         if (var4Lifetime1 != null) {
           if (uu.field_a.field_ec &&
             uu.field_a.field_Kb < 0) {
@@ -467,7 +467,7 @@ final class lja {
         String var4 = null;
         if (this.field_i != null &&
           this.field_g != SimpleConditionBehaviour.field_r) {
-          var4 = this.b(-13);
+          var4 = this.getDisplayName(-13);
           String var2 = var4;
           this.field_f.addItem((byte) -81, 17, gl.$cfr$intArgs$a$53ce4ab4c593(122, vj.field_c, new String[]{var4}));
         }
@@ -484,17 +484,17 @@ final class lja {
           if (param1 != 17) {
             return false;
           }
-          fj.field_c = new wla(this.field_h.field_q, this.field_h.field_A, this.field_h.field_G, this.field_h.field_t, param0, WallModel.field_r, oba.field_f, cga.field_g, Corpse.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p, this.field_i, this.field_g);
+          fj.field_c = new ReportAbuseDialog(this.field_h.field_q, this.field_h.field_A, this.field_h.field_G, this.field_h.field_t, param0, WallModel.field_r, oba.field_f, cga.field_g, Corpse.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p, this.field_i, this.field_g);
           return true;
         }
         if (param1 != 17) {
           return false;
         }
-        fj.field_c = new wla(this.field_h.field_q, this.field_h.field_A, this.field_h.field_G, this.field_h.field_t, param0, WallModel.field_r, oba.field_f, cga.field_g, Corpse.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p, this.field_i, this.field_g);
+        fj.field_c = new ReportAbuseDialog(this.field_h.field_q, this.field_h.field_A, this.field_h.field_G, this.field_h.field_t, param0, WallModel.field_r, oba.field_f, cga.field_g, Corpse.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p, this.field_i, this.field_g);
         return true;
     }
 
-    lja(jea param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
+    PlayerContextMenu(jea param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
           this.field_f = new ContextMenu(SimpleBlockBehaviour.field_n);
           this.field_i = param2;

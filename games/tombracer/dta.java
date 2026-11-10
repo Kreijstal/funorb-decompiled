@@ -200,20 +200,20 @@ final class dta {
                   }
                   var28_double = 80.0;
                 }
-                qf.field_j.a((aa) null, 12, 0, 0, var18Lifetime2 - (po.field_l.c() - 32), -16777216, (int[]) null, 1, -5599403, bd.field_j.toUpperCase(), (byte) -66, 300, 0, (ToolkitSprite[]) null, -14 + (param1 + var24), 0);
-                var30 = 30 + (-po.field_l.c() + var18Lifetime2) + 80;
-                vua.field_A.a(param1 - (po.field_l.a() - var24), var18Lifetime2 - po.field_l.c() + (-vua.field_A.c() + var25));
+                qf.field_j.a((aa) null, 12, 0, 0, var18Lifetime2 - (CachedTextLayout.field_l.c() - 32), -16777216, (int[]) null, 1, -5599403, bd.field_j.toUpperCase(), (byte) -66, 300, 0, (ToolkitSprite[]) null, -14 + (param1 + var24), 0);
+                var30 = 30 + (-CachedTextLayout.field_l.c() + var18Lifetime2) + 80;
+                vua.field_A.a(param1 - (CachedTextLayout.field_l.a() - var24), var18Lifetime2 - CachedTextLayout.field_l.c() + (-vua.field_A.c() + var25));
                 var31 = (int)(-var28_double + (double)var30);
-                lh.field_b.a(-lh.field_b.a() + (param1 - 1) + var24, var18Lifetime2 - lh.field_b.c() - po.field_l.c());
+                lh.field_b.a(-lh.field_b.a() + (param1 - 1) + var24, var18Lifetime2 - lh.field_b.c() - CachedTextLayout.field_l.c());
                 tga.field_a.setClip(param1 - 28 + var24, 0, var24 - 20 + param1, 10 + var31);
                 if (var28_double < 80.0) {
-                  dn.field_d[(var14 >> 2) % 4 + 3].a(-48 + (param1 - po.field_l.a()), 36 + (var18Lifetime2 - (po.field_l.c() + vua.field_A.c())));
+                  dn.field_d[(var14 >> 2) % 4 + 3].a(-48 + (param1 - CachedTextLayout.field_l.a()), 36 + (var18Lifetime2 - (CachedTextLayout.field_l.c() + vua.field_A.c())));
                 }
                 tga.field_a.la();
                 tga.field_a.setClip(param1 - (30 - var24), var31, -20 + param1 + var24, var30);
                 MirrorBehaviour.field_r.a(var24 + (-30 + param1), var31);
                 tga.field_a.la();
-                po.field_l.a(-1 + param1 - po.field_l.a() + var24, -po.field_l.c() + var18Lifetime2);
+                CachedTextLayout.field_l.a(-1 + param1 - CachedTextLayout.field_l.a() + var24, -CachedTextLayout.field_l.c() + var18Lifetime2);
               }
               if (var24 > 30) {
                 var24 = 35;
@@ -224,7 +224,7 @@ final class dta {
               tv.field_wb.a(26 + (var17Lifetime3 + (-var24 - (tv.field_wb.a() >> 1))), -42 + param6);
               for (var27_intLifetime1 = 0; var27_intLifetime1 < 3; var27_intLifetime1++) {
                 var28_int = -68 + param6;
-                var29 = var12.a(393216, var27_intLifetime1);
+                var29 = var12.getRoomTreasure(393216, var27_intLifetime1);
                 for (var30Lifetime1 = 0; var29 > var30Lifetime1; var30Lifetime1++) {
                   PlayerProfile.field_r[var27_intLifetime1].a(var26Lifetime1, var28_int);
                   var28_int -= 5;

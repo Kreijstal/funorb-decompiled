@@ -59,31 +59,31 @@ final class iea {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        lja var16 = null;
-        lja var17 = null;
+        PlayerContextMenu var16 = null;
+        PlayerContextMenu var17 = null;
         var15 = TombRacer.field_G ? 1 : 0;
         try {
-          stackIn_3_0 = jja.field_j.field_vb;
+          stackIn_3_0 = OpenGlSprite.field_j.field_vb;
           stackIn_3_1 = 2;
           stackIn_3_2 = param0;
           stackIn_3_3 = param1 ^ -78;
           stackIn_3_4 = param2 * 3 * (2 + di.field_a);
           stackIn_3_5 = 2 + di.field_a;
-          stackIn_4_6 = (jja.field_j.field_vb == lu.field_b);
+          stackIn_4_6 = (OpenGlSprite.field_j.field_vb == lu.field_b);
           var3_int = ((iv) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_3_5, stackIn_4_6) ? 1 : 0;
-          var4 = jja.field_j.field_tb.field_J;
+          var4 = OpenGlSprite.field_j.field_tb.field_J;
           if (param1 != -56) {
             return;
           }
           if (UiWidget.field_g != 2 &&
             UiWidget.field_g != 1) {
-            jja.field_j.field_X = false;
-            jja.field_j.field_vb.field_vb.field_r = nl.field_c;
-            BridgeModel.a(-93, jja.field_j.field_tb);
+            OpenGlSprite.field_j.field_X = false;
+            OpenGlSprite.field_j.field_vb.field_vb.field_r = nl.field_c;
+            BridgeModel.a(-93, OpenGlSprite.field_j.field_tb);
             return;
           }
-          jja.field_j.field_X = true;
-          jja.field_j.field_vb.field_vb.field_r = null;
+          OpenGlSprite.field_j.field_X = true;
+          OpenGlSprite.field_j.field_vb.field_vb.field_r = null;
           var5 = null;
           var6 = (mu) (var4.first(-80));
           while (var6 != null) {
@@ -96,20 +96,20 @@ final class iea {
               var7 = 1;
               var6.a(-10966);
             }
-            var6.field_G = jja.field_j.field_tb.field_G;
+            var6.field_G = OpenGlSprite.field_j.field_tb.field_G;
             var6.field_xb.a(var6.field_G, di.field_a, -23776, 0, 0);
             var8 = 0;
             if (var6.field_vb != null &&
               !var6.field_vb.equals("")) {
               var6.field_zb.field_ab = 16737894;
-              var6.field_zb.field_R = bfa.field_e;
-              var6.field_zb.a(bfa.field_e.field_n + 3, di.field_a, -23776, 0, 0);
+              var6.field_zb.field_R = ConsoleValue.field_e;
+              var6.field_zb.a(ConsoleValue.field_e.field_n + 3, di.field_a, -23776, 0, 0);
               var8 = 1;
             }
             var9 = 0;
             var10 = var6.field_G;
             if (var8 != 0) {
-              var9 = 3 + bfa.field_e.field_n;
+              var9 = 3 + ConsoleValue.field_e.field_n;
               var10 = var10 - var9;
             }
             stackIn_22_0 = var6.field_xb;
@@ -126,7 +126,7 @@ final class iea {
               var6.field_O = di.field_a - var6.field_t;
             }
             if (var7 != 0) {
-              jja.field_j.field_tb.a(2, (jea) (var5), var6, (byte) -122);
+              OpenGlSprite.field_j.field_tb.a(2, (jea) (var5), var6, (byte) -122);
             }
             if (null != var6.field_zb &&
               var6.field_zb.field_o) {
@@ -138,7 +138,7 @@ final class iea {
               }
             }
             if (var6.field_y != 0) {
-              paa.a(jja.field_j.field_vb, -1, var6.field_yb, 0L, param1 - 11579, (int[]) null, var6, -1, var6.field_tb);
+              paa.a(OpenGlSprite.field_j.field_vb, -1, var6.field_yb, 0L, param1 - 11579, (int[]) null, var6, -1, var6.field_tb);
               var16 = hka.field_b;
               var13_ref_String = uma.field_a;
               var16.field_f.addItem((byte) -100, 7, var13_ref_String);
@@ -150,14 +150,14 @@ final class iea {
             var5 = var6;
             var6 = (mu) (var4.next(126));
           }
-          if (jja.field_j.field_yb.field_y != 0) {
-            bl.field_a = new is(jja.field_j.field_yb.field_q, jja.field_j.field_yb.field_A, jja.field_j.field_yb.field_G, jja.field_j.field_yb.field_t, pe.field_k, lw.field_a, Corpse.field_i, Corpse.field_i);
+          if (OpenGlSprite.field_j.field_yb.field_y != 0) {
+            bl.field_a = new is(OpenGlSprite.field_j.field_yb.field_q, OpenGlSprite.field_j.field_yb.field_A, OpenGlSprite.field_j.field_yb.field_G, OpenGlSprite.field_j.field_yb.field_t, pe.field_k, lw.field_a, Corpse.field_i, Corpse.field_i);
             ResourceArchive.field_k = 2;
           }
-          if (0 == jja.field_j.field_wb.field_y) {
+          if (0 == OpenGlSprite.field_j.field_wb.field_y) {
             return;
           }
-          bl.field_a = new is(jja.field_j.field_wb.field_q, jja.field_j.field_wb.field_A, jja.field_j.field_wb.field_G, jja.field_j.field_wb.field_t, av.field_b, lw.field_a, Corpse.field_i, Corpse.field_i);
+          bl.field_a = new is(OpenGlSprite.field_j.field_wb.field_q, OpenGlSprite.field_j.field_wb.field_A, OpenGlSprite.field_j.field_wb.field_G, OpenGlSprite.field_j.field_wb.field_t, av.field_b, lw.field_a, Corpse.field_i, Corpse.field_i);
           ResourceArchive.field_k = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -172,7 +172,7 @@ final class iea {
           mp.a(joa.field_d, tka.field_q, param0, una.field_j, DateFieldsWidget.field_F, Corpse.field_i, 0, PressureSwitchBehaviour.field_p, jq.field_o, NodeHashTable.field_g, dn.field_a, kw.field_e);
           vda.field_m = BoulderComponent.a(param1, "lobby", 5, "chatfilter");
           StripedMazeGenerator.field_c[0] = SecondaryNodeDequeIterator.field_b;
-          StripedMazeGenerator.field_c[param2] = hm.field_m;
+          StripedMazeGenerator.field_c[param2] = OpenGlTexture2D.field_m;
           StripedMazeGenerator.field_c[1] = nga.field_o;
           gea.a(0, param3, qw.field_f);
         } catch (RuntimeException runtimeException) {

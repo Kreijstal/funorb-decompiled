@@ -7,7 +7,7 @@ final class je extends haa {
     static ToolkitSprite field_E;
     int field_H;
     Object[] field_I;
-    private rla field_J;
+    private DropdownList field_J;
     private BitmapFont field_F;
 
     final void renderLayer(int param0, int param1, int param2, int param3) {
@@ -94,7 +94,7 @@ final class je extends haa {
         if (param0 != 69) {
           return (Sprite) null;
         }
-        Sprite var4 = new Sprite(ika.field_a, kba.field_s, ak.field_p[0], pg.field_C[0], mq.field_b[0], iga.field_m[0], var3);
+        Sprite var4 = new Sprite(ika.field_a, OpenGlRenderbuffer.field_s, ak.field_p[0], pg.field_C[0], mq.field_b[0], iga.field_m[0], var3);
         MazeGenerator.a((byte) 113);
         return var4;
     }
@@ -143,12 +143,12 @@ final class je extends haa {
           if (var5 >= 0 &&
             var5 < this.field_I.length) {
             this.field_G = var5;
-            this.field_J.a(99);
+            this.field_J.notifySelectionChanged(99);
           }
         }
     }
 
-    je(rla param0, BitmapFont param1, Object[] param2, int param3) {
+    je(DropdownList param0, BitmapFont param1, Object[] param2, int param3) {
         super(param0);
         try {
           this.field_F = param1;

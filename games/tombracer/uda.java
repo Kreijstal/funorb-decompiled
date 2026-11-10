@@ -303,11 +303,11 @@ final class uda extends qra {
         if (param1 >= -29) {
           field_s = (jea) null;
         }
-        if (!vpa.a(119) &&
+        if (!TextWidgetPainter.a(119) &&
           mq.field_e != null) {
           boolean decompiledFrameRemainder0 = true;
           if (!di.field_g[param0] && (!di.field_f[param0] &&
-            wla.field_ub <= 0 ||
+            ReportAbuseDialog.field_ub <= 0 ||
             !mq.field_e.b((byte) 4, param0)) && !SimpleBlockBehaviour.c(0)) {
             stackIn_16_0 = false;
             decompiledFrameRemainder0 = false;

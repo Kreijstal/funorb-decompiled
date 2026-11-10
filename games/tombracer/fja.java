@@ -677,7 +677,7 @@ final class fja extends qra {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
-        vh var5 = null;
+        WhirlpoolDigest var5 = null;
         byte[] var6 = null;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
@@ -690,11 +690,11 @@ final class fja extends qra {
           } else {
             var4 = param1;
           }
-          var5 = new vh();
+          var5 = new WhirlpoolDigest();
           var5.b((byte) -6);
           var5.a(var4, (long)(param3 * param0), (byte) -59);
           var6 = new byte[64];
-          var5.a(0, param3 ^ 40, var6);
+          var5.finishDigest(0, param3 ^ 40, var6);
           stackIn_7_0 = var6;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

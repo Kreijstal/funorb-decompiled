@@ -45,7 +45,7 @@ final class PlatformComponent extends PrefabComponent {
     }
 
     final static void A(int param0) {
-        ij.j((byte) -116);
+        MessageDialog.j((byte) -116);
         int var1 = -6 / ((-10 - param0) / 45);
     }
 

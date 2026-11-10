@@ -14,7 +14,7 @@ final class au extends aa {
         }
         if (nla.field_a != ub.field_c) {
           if (vb.field_i == ub.field_c) {
-            if (!vpa.a(23)) {
+            if (!TextWidgetPainter.a(23)) {
               if (qv.field_o != null) {
                 su.a(qv.field_o, (byte) -108, 3);
               }
@@ -38,7 +38,7 @@ final class au extends aa {
           fieldTemp$7 = PlatformBehaviour.field_o;
           PlatformBehaviour.field_o = PlatformBehaviour.field_o + 1;
           if (fieldTemp$7 >= 16) {
-            if (!dd.field_a) {
+            if (!SoftReferenceCache.field_a) {
               KeyItemComponent.e(true);
             } else {
               pg.b(param0);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class hga extends vpa {
+class hga extends TextWidgetPainter {
     static String field_n;
     private static String[] field_o;
 
@@ -132,7 +132,7 @@ class hga extends vpa {
           var12 = 0;
           for (var13 = 1; var27.length > var13; var13++) {
             var14 = Integer.parseInt(var27[var13][var3]);
-            if (null == var11.a((byte) -100, (long)var14)) {
+            if (null == var11.get((byte) -100, (long)var14)) {
               var11.put((long)var14, 109, new IntrusiveNode());
               var12++;
             }

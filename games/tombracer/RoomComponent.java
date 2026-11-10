@@ -82,7 +82,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
     final static void a(boolean param0) {
         hk.field_e = new jea(0L, (jea) null);
         if (rca.field_p) {
-          hk.field_e.b(-127, lva.field_t);
+          hk.field_e.b(-127, PerlinNoise2D.field_t);
         }
         if (param0) {
           field_n = -21;

@@ -31,7 +31,7 @@ final class SecondaryNodeHashTable {
         int[] var11 = null;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
-          if (!param1.a((byte) 69)) {
+          if (!param1.isFullscreenAvailable((byte) 69)) {
             stackIn_3_0 = new dh[]{};
             return stackIn_3_0;
           }
@@ -172,7 +172,7 @@ final class SecondaryNodeHashTable {
         return var29;
     }
 
-    final DualLinkNode b(int param0) {
+    final DualLinkNode startTraversal(int param0) {
         int var2 = -55 % ((-40 - param0) / 47);
         this.field_f = 0;
         return this.a((byte) -112);

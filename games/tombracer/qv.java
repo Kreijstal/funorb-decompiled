@@ -77,7 +77,7 @@ final class qv extends ci {
         int[][] var14 = var15;
         int[][] var13 = var14;
         int[][] var9 = var13;
-        lva var10 = new lva();
+        PerlinNoise2D var10 = new PerlinNoise2D();
         var10.field_x = (int)(param3 * 4096.0f);
         var10.field_n = param2;
         var10.field_s = param0 ? true : false;
@@ -86,7 +86,7 @@ final class qv extends ci {
         var10.b((byte) 116);
         uta.a(0, param8, param4);
         for (var11 = 0; var11 < param8; var11++) {
-          var10.a(var15[var11], -1, var11);
+          var10.fillRow(var15[var11], -1, var11);
         }
         return var9;
     }

@@ -9,7 +9,7 @@ final class RandomAccessFileHandle {
     private long field_b;
     private RandomAccessFile field_a;
 
-    final int a(byte param0, byte[] param1, int param2, int param3) throws IOException {
+    final int read(byte param0, byte[] param1, int param2, int param3) throws IOException {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_5_0 = 0;
@@ -95,7 +95,7 @@ final class RandomAccessFileHandle {
         }
     }
 
-    final long a(boolean param0) throws IOException {
+    final long length(boolean param0) throws IOException {
         if (param0) {
           this.field_b = 5L;
           return this.field_a.length();
@@ -103,7 +103,7 @@ final class RandomAccessFileHandle {
         return this.field_a.length();
     }
 
-    final void a(int param0, long param1) throws IOException {
+    final void seek(int param0, long param1) throws IOException {
         if (param0 == 0) {
           this.field_a.seek(param1);
           this.field_d = param1;

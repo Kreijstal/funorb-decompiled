@@ -16,7 +16,7 @@ abstract class ela extends DualLinkNode {
         int var1 = 6 / ((param0 - 56) / 60);
     }
 
-    final boolean a(int param0, String param1, bfa[] param2) {
+    final boolean a(int param0, String param1, ConsoleValue[] param2) {
         int var4_int = 0;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
@@ -27,7 +27,7 @@ abstract class ela extends DualLinkNode {
         RuntimeException var4 = null;
         Class var5 = null;
         int var6 = 0;
-        bfa[] var7 = null;
+        ConsoleValue[] var7 = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           if (!this.field_l.equals(param1)) {
@@ -60,8 +60,8 @@ abstract class ela extends DualLinkNode {
           if (param0 <= -49) {
             return true;
           }
-          var7 = (bfa[]) null;
-          this.a(-67, (String) null, (bfa[]) null);
+          var7 = (ConsoleValue[]) null;
+          this.a(-67, (String) null, (ConsoleValue[]) null);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -83,7 +83,7 @@ abstract class ela extends DualLinkNode {
         }
     }
 
-    abstract bfa a(bfa[] param0, int param1);
+    abstract ConsoleValue a(ConsoleValue[] param0, int param1);
 
     ela(String param0, Class[] param1, String param2) {
         StringBuilder var7 = null;

@@ -361,7 +361,7 @@ public final class Direct3DToolkit extends eo {
         return stackIn_6_0;
     }
 
-    final void a(byte param0, ek param1) {
+    final void bindTexture3D(byte param0, ek param1) {
         this.a((byte) -126, (nqa) (param1));
         if (!this.field_bd[this.field_Cc]) {
           this.field_jd.SetSamplerState(this.field_Cc, 1, 1);
@@ -376,7 +376,7 @@ public final class Direct3DToolkit extends eo {
         }
     }
 
-    final void b(boolean param0) {
+    final void applyBlendFactors(boolean param0) {
         if (dfa.field_b == this.field_lb) {
           this.field_jd.SetRenderState(19, 5);
           this.field_jd.SetRenderState(20, 6);
@@ -440,10 +440,10 @@ public final class Direct3DToolkit extends eo {
         if (param0 != -21) {
           this.field_Sc = false;
         }
-        this.q((byte) -78);
+        this.uploadDirectionalLights((byte) -78);
     }
 
-    final gf a(boolean param0, byte[] param1, int param2, int param3, int param4, int param5, ft param6, int param7) {
+    final gf createIntTexture2D(boolean param0, byte[] param1, int param2, int param3, int param4, int param5, ft param6, int param7) {
         if (param4 != 1) {
           return (gf) null;
         }
@@ -487,7 +487,7 @@ public final class Direct3DToolkit extends eo {
         this.field_jd.a(174, this.field_Wb);
     }
 
-    final void h(int param0) {
+    final void resetDriverState(int param0) {
         int var2 = 0;
         boolean[] var3 = null;
         int var4 = 0;
@@ -522,7 +522,7 @@ public final class Direct3DToolkit extends eo {
         this.field_cd.SetType(3);
         this.field_Wc.SetType(1);
         this.field_Pc = false;
-        super.h(param0 + 0);
+        super.resetDriverState(param0 + 0);
     }
 
     final gf a(int[] param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
@@ -530,7 +530,7 @@ public final class Direct3DToolkit extends eo {
         return (gf) ((Object) new pia(this, param3, param5, param2, param0, param1, param4));
     }
 
-    final vw e(int param0, int param1) {
+    final vw createShaderEffect(int param0, int param1) {
         int var3;
         if (param1 <= 37) {
           return (vw) null;
@@ -545,7 +545,7 @@ public final class Direct3DToolkit extends eo {
         if (var3 == 8) {
           return (vw) ((Object) new oja(this, this.field_I, this.field_Mb));
         }
-        return super.e(param0, 106);
+        return super.createShaderEffect(param0, 106);
     }
 
     final void a(fp param0, int param1, boolean param2, int param3) {
@@ -572,7 +572,7 @@ public final class Direct3DToolkit extends eo {
         this.field_jd.SetTextureStageState(this.field_Cc, var5, Direct3DToolkit.a(param0, 117) | var6);
     }
 
-    final eja a(int param0, boolean param1) {
+    final eja createIndexBuffer(int param0, boolean param1) {
         if (param0 != 26) {
           this.field_kd = (gua) null;
         }
@@ -602,7 +602,7 @@ public final class Direct3DToolkit extends eo {
         this.field_jd.SetTextureStageState(this.field_Cc, var6, var7 | Direct3DToolkit.a(param0, 121));
     }
 
-    final void i(int param0) {
+    final void applyLightPositions(int param0) {
         this.field_Zc.SetDirection(-this.field_Gb[0], -this.field_Gb[1], -this.field_Gb[2]);
         int var2 = 35 / ((param0 + 11) / 56);
         this.field_cd.SetDirection(-this.field_M[0], -this.field_M[1], -this.field_M[2]);
@@ -739,7 +739,7 @@ public final class Direct3DToolkit extends eo {
           if (jagdx.ah.a(var4, (byte) 123)) {
             var3.a((byte) -17, this.field_jd.b(0), this.field_jd.b());
             this.s((byte) 6);
-            this.h(-29040);
+            this.resetDriverState(-29040);
             return true;
           }
         }
@@ -801,7 +801,7 @@ public final class Direct3DToolkit extends eo {
 
     private final static int a(int param0, ura param1) {
         ura var3;
-        if (param1 == jja.field_d) {
+        if (param1 == OpenGlSprite.field_d) {
           return 1;
         }
         if (pfa.field_i == param1) {
@@ -849,7 +849,7 @@ public final class Direct3DToolkit extends eo {
         }
     }
 
-    final void GA(int param0) {
+    final void clear(int param0) {
         this.field_jd.Clear(1, param0, 0.0f, 0);
     }
 
@@ -875,7 +875,7 @@ public final class Direct3DToolkit extends eo {
         }
     }
 
-    final void q(byte param0) {
+    final void uploadDirectionalLights(byte param0) {
         if (param0 != -78) {
           this.field_cd = (jagdx.D3DLIGHT) null;
         }
@@ -935,7 +935,7 @@ public final class Direct3DToolkit extends eo {
         this.field_jd.a(7, this.field_wc);
     }
 
-    final void d(int param0) {
+    final void unbindTexture(int param0) {
         if (param0 != 1) {
           ToolkitSprite var3 = (ToolkitSprite) null;
           this.a((ToolkitSprite) null, false);
@@ -1180,7 +1180,7 @@ public final class Direct3DToolkit extends eo {
         if (tla.field_c == param0) {
           return 0;
         }
-        if (param0 == lja.field_j) {
+        if (param0 == PlayerContextMenu.field_j) {
           return 1;
         }
         if (pea.field_c != param0) {

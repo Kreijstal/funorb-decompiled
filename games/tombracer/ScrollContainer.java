@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cca extends ArrayWidgetGroup {
+final class ScrollContainer extends ArrayWidgetGroup {
     vua field_A;
-    jo field_x;
+    ScrollControlWidget field_x;
     private boolean field_y;
-    private jo field_D;
+    private ScrollControlWidget field_D;
     private boolean field_B;
     static long field_z;
 
@@ -41,9 +41,9 @@ final class cca extends ArrayWidgetGroup {
         }
     }
 
-    private final void g(byte param0) {
+    private final void applyScrollPositions(byte param0) {
         if (param0 > -122) {
-          this.field_x = (jo) null;
+          this.field_x = (ScrollControlWidget) null;
           if (null != this.field_x) {
             this.field_A.child.field_n = -(int)((long)this.field_x.field_O * (long)(this.field_A.child.field_p - this.field_A.field_p) >> 16);
           }
@@ -71,12 +71,12 @@ final class cca extends ArrayWidgetGroup {
         boolean discarded$4 = false;
         int stackIn_8_0 = 0;
         int stackIn_11_0 = 0;
-        jo stackIn_14_0;
+        ScrollControlWidget stackIn_14_0;
         int stackIn_14_1;
         int stackIn_14_2;
         int stackIn_14_3;
         int stackIn_15_4;
-        jo stackIn_20_0;
+        ScrollControlWidget stackIn_20_0;
         int stackIn_20_1;
         int stackIn_20_2;
         int stackIn_20_3;
@@ -84,12 +84,12 @@ final class cca extends ArrayWidgetGroup {
         int stackIn_21_5;
         int stackIn_29_0 = 0;
         int stackIn_32_0 = 0;
-        jo stackIn_35_0;
+        ScrollControlWidget stackIn_35_0;
         int stackIn_35_1;
         int stackIn_35_2;
         int stackIn_35_3;
         int stackIn_36_4;
-        jo stackIn_41_0;
+        ScrollControlWidget stackIn_41_0;
         int stackIn_41_1;
         int stackIn_41_2;
         int stackIn_41_3;
@@ -97,12 +97,12 @@ final class cca extends ArrayWidgetGroup {
         int stackIn_42_5;
         int stackIn_48_0 = 0;
         int stackIn_51_0 = 0;
-        jo stackIn_54_0;
+        ScrollControlWidget stackIn_54_0;
         int stackIn_54_1;
         int stackIn_54_2;
         int stackIn_54_3;
         int stackIn_55_4;
-        jo stackIn_60_0;
+        ScrollControlWidget stackIn_60_0;
         int stackIn_60_1;
         int stackIn_60_2;
         int stackIn_60_3;
@@ -110,12 +110,12 @@ final class cca extends ArrayWidgetGroup {
         int stackIn_61_5;
         int stackIn_66_0 = 0;
         int stackIn_69_0 = 0;
-        jo stackIn_72_0;
+        ScrollControlWidget stackIn_72_0;
         int stackIn_72_1;
         int stackIn_72_2;
         int stackIn_72_3;
         int stackIn_73_4;
-        jo stackIn_78_0;
+        ScrollControlWidget stackIn_78_0;
         int stackIn_78_1;
         int stackIn_78_2;
         int stackIn_78_3;
@@ -124,12 +124,12 @@ final class cca extends ArrayWidgetGroup {
         int stackIn_83_0 = 0;
         int stackIn_88_0 = 0;
         int stackIn_91_0 = 0;
-        jo stackIn_94_0;
+        ScrollControlWidget stackIn_94_0;
         int stackIn_94_1;
         int stackIn_94_2;
         int stackIn_94_3;
         int stackIn_95_4;
-        jo stackIn_100_0;
+        ScrollControlWidget stackIn_100_0;
         int stackIn_100_1;
         int stackIn_100_2;
         int stackIn_100_3;
@@ -137,12 +137,12 @@ final class cca extends ArrayWidgetGroup {
         int stackIn_101_5;
         int stackIn_106_0 = 0;
         int stackIn_109_0 = 0;
-        jo stackIn_112_0;
+        ScrollControlWidget stackIn_112_0;
         int stackIn_112_1;
         int stackIn_112_2;
         int stackIn_112_3;
         int stackIn_113_4;
-        jo stackIn_118_0;
+        ScrollControlWidget stackIn_118_0;
         int stackIn_118_1;
         int stackIn_118_2;
         int stackIn_118_3;
@@ -150,12 +150,12 @@ final class cca extends ArrayWidgetGroup {
         int stackIn_119_5;
         int stackIn_126_0 = 0;
         int stackIn_129_0 = 0;
-        jo stackIn_132_0;
+        ScrollControlWidget stackIn_132_0;
         int stackIn_132_1;
         int stackIn_132_2;
         int stackIn_132_3;
         int stackIn_133_4;
-        jo stackIn_138_0;
+        ScrollControlWidget stackIn_138_0;
         int stackIn_138_1;
         int stackIn_138_2;
         int stackIn_138_3;
@@ -163,12 +163,12 @@ final class cca extends ArrayWidgetGroup {
         int stackIn_139_5;
         int stackIn_144_0 = 0;
         int stackIn_147_0 = 0;
-        jo stackIn_150_0;
+        ScrollControlWidget stackIn_150_0;
         int stackIn_150_1;
         int stackIn_150_2;
         int stackIn_150_3;
         int stackIn_151_4;
-        jo stackIn_156_0;
+        ScrollControlWidget stackIn_156_0;
         int stackIn_156_1;
         int stackIn_156_2;
         int stackIn_156_3;
@@ -176,12 +176,12 @@ final class cca extends ArrayWidgetGroup {
         int stackIn_157_5;
         int stackIn_163_0 = 0;
         int stackIn_166_0 = 0;
-        jo stackIn_169_0;
+        ScrollControlWidget stackIn_169_0;
         int stackIn_169_1;
         int stackIn_169_2;
         int stackIn_169_3;
         int stackIn_170_4;
-        jo stackIn_175_0;
+        ScrollControlWidget stackIn_175_0;
         int stackIn_175_1;
         int stackIn_175_2;
         int stackIn_175_3;
@@ -189,12 +189,12 @@ final class cca extends ArrayWidgetGroup {
         int stackIn_176_5;
         int stackIn_181_0 = 0;
         int stackIn_184_0 = 0;
-        jo stackIn_187_0;
+        ScrollControlWidget stackIn_187_0;
         int stackIn_187_1;
         int stackIn_187_2;
         int stackIn_187_3;
         int stackIn_188_4;
-        jo stackIn_193_0;
+        ScrollControlWidget stackIn_193_0;
         int stackIn_193_1;
         int stackIn_193_2;
         int stackIn_193_3;
@@ -261,7 +261,7 @@ final class cca extends ArrayWidgetGroup {
                 } else {
                   stackIn_15_4 = 0;
                 }
-                ((jo) (Object) stackIn_14_0).setBounds((byte) stackIn_14_1, stackIn_14_2, stackIn_14_3, stackIn_15_4, this.field_A.field_n);
+                ((ScrollControlWidget) (Object) stackIn_14_0).setBounds((byte) stackIn_14_1, stackIn_14_2, stackIn_14_3, stackIn_15_4, this.field_A.field_n);
               }
               if (null != this.field_D) {
                 stackIn_20_0 = this.field_D;
@@ -274,7 +274,7 @@ final class cca extends ArrayWidgetGroup {
                 } else {
                   stackIn_21_5 = -this.field_D.field_p + this.field_p;
                 }
-                ((jo) (Object) stackIn_20_0).setBounds((byte) stackIn_20_1, stackIn_20_2, stackIn_20_3, stackIn_20_4, stackIn_21_5);
+                ((ScrollControlWidget) (Object) stackIn_20_0).setBounds((byte) stackIn_20_1, stackIn_20_2, stackIn_20_3, stackIn_20_4, stackIn_21_5);
               }
               this.c(-31791);
               return;
@@ -307,7 +307,7 @@ final class cca extends ArrayWidgetGroup {
                 } else {
                   stackIn_36_4 = 0;
                 }
-                ((jo) (Object) stackIn_35_0).setBounds((byte) stackIn_35_1, stackIn_35_2, stackIn_35_3, stackIn_36_4, this.field_A.field_n);
+                ((ScrollControlWidget) (Object) stackIn_35_0).setBounds((byte) stackIn_35_1, stackIn_35_2, stackIn_35_3, stackIn_36_4, this.field_A.field_n);
               }
               if (null != this.field_D) {
                 stackIn_41_0 = this.field_D;
@@ -320,7 +320,7 @@ final class cca extends ArrayWidgetGroup {
                 } else {
                   stackIn_42_5 = -this.field_D.field_p + this.field_p;
                 }
-                ((jo) (Object) stackIn_41_0).setBounds((byte) stackIn_41_1, stackIn_41_2, stackIn_41_3, stackIn_41_4, stackIn_42_5);
+                ((ScrollControlWidget) (Object) stackIn_41_0).setBounds((byte) stackIn_41_1, stackIn_41_2, stackIn_41_3, stackIn_41_4, stackIn_42_5);
               }
               this.c(-31791);
               return;
@@ -350,7 +350,7 @@ final class cca extends ArrayWidgetGroup {
                 } else {
                   stackIn_73_4 = 0;
                 }
-                ((jo) (Object) stackIn_72_0).setBounds((byte) stackIn_72_1, stackIn_72_2, stackIn_72_3, stackIn_73_4, this.field_A.field_n);
+                ((ScrollControlWidget) (Object) stackIn_72_0).setBounds((byte) stackIn_72_1, stackIn_72_2, stackIn_72_3, stackIn_73_4, this.field_A.field_n);
               }
               if (null != this.field_D) {
                 stackIn_78_0 = this.field_D;
@@ -363,7 +363,7 @@ final class cca extends ArrayWidgetGroup {
                 } else {
                   stackIn_79_5 = -this.field_D.field_p + this.field_p;
                 }
-                ((jo) (Object) stackIn_78_0).setBounds((byte) stackIn_78_1, stackIn_78_2, stackIn_78_3, stackIn_78_4, stackIn_79_5);
+                ((ScrollControlWidget) (Object) stackIn_78_0).setBounds((byte) stackIn_78_1, stackIn_78_2, stackIn_78_3, stackIn_78_4, stackIn_79_5);
               }
               this.c(-31791);
               return;
@@ -392,7 +392,7 @@ final class cca extends ArrayWidgetGroup {
               } else {
                 stackIn_55_4 = 0;
               }
-              ((jo) (Object) stackIn_54_0).setBounds((byte) stackIn_54_1, stackIn_54_2, stackIn_54_3, stackIn_55_4, this.field_A.field_n);
+              ((ScrollControlWidget) (Object) stackIn_54_0).setBounds((byte) stackIn_54_1, stackIn_54_2, stackIn_54_3, stackIn_55_4, this.field_A.field_n);
             }
             if (null != this.field_D) {
               stackIn_60_0 = this.field_D;
@@ -405,7 +405,7 @@ final class cca extends ArrayWidgetGroup {
               } else {
                 stackIn_61_5 = -this.field_D.field_p + this.field_p;
               }
-              ((jo) (Object) stackIn_60_0).setBounds((byte) stackIn_60_1, stackIn_60_2, stackIn_60_3, stackIn_60_4, stackIn_61_5);
+              ((ScrollControlWidget) (Object) stackIn_60_0).setBounds((byte) stackIn_60_1, stackIn_60_2, stackIn_60_3, stackIn_60_4, stackIn_61_5);
             }
             this.c(-31791);
             return;
@@ -439,7 +439,7 @@ final class cca extends ArrayWidgetGroup {
               } else {
                 stackIn_113_4 = 0;
               }
-              ((jo) (Object) stackIn_112_0).setBounds((byte) stackIn_112_1, stackIn_112_2, stackIn_112_3, stackIn_113_4, this.field_A.field_n);
+              ((ScrollControlWidget) (Object) stackIn_112_0).setBounds((byte) stackIn_112_1, stackIn_112_2, stackIn_112_3, stackIn_113_4, this.field_A.field_n);
             }
             if (null != this.field_D) {
               stackIn_118_0 = this.field_D;
@@ -452,7 +452,7 @@ final class cca extends ArrayWidgetGroup {
               } else {
                 stackIn_119_5 = -this.field_D.field_p + this.field_p;
               }
-              ((jo) (Object) stackIn_118_0).setBounds((byte) stackIn_118_1, stackIn_118_2, stackIn_118_3, stackIn_118_4, stackIn_119_5);
+              ((ScrollControlWidget) (Object) stackIn_118_0).setBounds((byte) stackIn_118_1, stackIn_118_2, stackIn_118_3, stackIn_118_4, stackIn_119_5);
             }
             this.c(-31791);
             return;
@@ -481,7 +481,7 @@ final class cca extends ArrayWidgetGroup {
             } else {
               stackIn_95_4 = 0;
             }
-            ((jo) (Object) stackIn_94_0).setBounds((byte) stackIn_94_1, stackIn_94_2, stackIn_94_3, stackIn_95_4, this.field_A.field_n);
+            ((ScrollControlWidget) (Object) stackIn_94_0).setBounds((byte) stackIn_94_1, stackIn_94_2, stackIn_94_3, stackIn_95_4, this.field_A.field_n);
           }
           if (null != this.field_D) {
             stackIn_100_0 = this.field_D;
@@ -494,7 +494,7 @@ final class cca extends ArrayWidgetGroup {
             } else {
               stackIn_101_5 = -this.field_D.field_p + this.field_p;
             }
-            ((jo) (Object) stackIn_100_0).setBounds((byte) stackIn_100_1, stackIn_100_2, stackIn_100_3, stackIn_100_4, stackIn_101_5);
+            ((ScrollControlWidget) (Object) stackIn_100_0).setBounds((byte) stackIn_100_1, stackIn_100_2, stackIn_100_3, stackIn_100_4, stackIn_101_5);
           }
           this.c(-31791);
           return;
@@ -525,7 +525,7 @@ final class cca extends ArrayWidgetGroup {
               } else {
                 stackIn_188_4 = 0;
               }
-              ((jo) (Object) stackIn_187_0).setBounds((byte) stackIn_187_1, stackIn_187_2, stackIn_187_3, stackIn_188_4, this.field_A.field_n);
+              ((ScrollControlWidget) (Object) stackIn_187_0).setBounds((byte) stackIn_187_1, stackIn_187_2, stackIn_187_3, stackIn_188_4, this.field_A.field_n);
             }
             if (null != this.field_D) {
               stackIn_193_0 = this.field_D;
@@ -538,7 +538,7 @@ final class cca extends ArrayWidgetGroup {
               } else {
                 stackIn_194_5 = -this.field_D.field_p + this.field_p;
               }
-              ((jo) (Object) stackIn_193_0).setBounds((byte) stackIn_193_1, stackIn_193_2, stackIn_193_3, stackIn_193_4, stackIn_194_5);
+              ((ScrollControlWidget) (Object) stackIn_193_0).setBounds((byte) stackIn_193_1, stackIn_193_2, stackIn_193_3, stackIn_193_4, stackIn_194_5);
             }
             this.c(-31791);
             return;
@@ -567,7 +567,7 @@ final class cca extends ArrayWidgetGroup {
             } else {
               stackIn_170_4 = 0;
             }
-            ((jo) (Object) stackIn_169_0).setBounds((byte) stackIn_169_1, stackIn_169_2, stackIn_169_3, stackIn_170_4, this.field_A.field_n);
+            ((ScrollControlWidget) (Object) stackIn_169_0).setBounds((byte) stackIn_169_1, stackIn_169_2, stackIn_169_3, stackIn_170_4, this.field_A.field_n);
           }
           if (null != this.field_D) {
             stackIn_175_0 = this.field_D;
@@ -580,7 +580,7 @@ final class cca extends ArrayWidgetGroup {
             } else {
               stackIn_176_5 = -this.field_D.field_p + this.field_p;
             }
-            ((jo) (Object) stackIn_175_0).setBounds((byte) stackIn_175_1, stackIn_175_2, stackIn_175_3, stackIn_175_4, stackIn_176_5);
+            ((ScrollControlWidget) (Object) stackIn_175_0).setBounds((byte) stackIn_175_1, stackIn_175_2, stackIn_175_3, stackIn_175_4, stackIn_176_5);
           }
           this.c(-31791);
           return;
@@ -610,7 +610,7 @@ final class cca extends ArrayWidgetGroup {
             } else {
               stackIn_151_4 = 0;
             }
-            ((jo) (Object) stackIn_150_0).setBounds((byte) stackIn_150_1, stackIn_150_2, stackIn_150_3, stackIn_151_4, this.field_A.field_n);
+            ((ScrollControlWidget) (Object) stackIn_150_0).setBounds((byte) stackIn_150_1, stackIn_150_2, stackIn_150_3, stackIn_151_4, this.field_A.field_n);
           }
           if (null != this.field_D) {
             stackIn_156_0 = this.field_D;
@@ -623,7 +623,7 @@ final class cca extends ArrayWidgetGroup {
             } else {
               stackIn_157_5 = -this.field_D.field_p + this.field_p;
             }
-            ((jo) (Object) stackIn_156_0).setBounds((byte) stackIn_156_1, stackIn_156_2, stackIn_156_3, stackIn_156_4, stackIn_157_5);
+            ((ScrollControlWidget) (Object) stackIn_156_0).setBounds((byte) stackIn_156_1, stackIn_156_2, stackIn_156_3, stackIn_156_4, stackIn_157_5);
           }
           this.c(-31791);
           return;
@@ -652,7 +652,7 @@ final class cca extends ArrayWidgetGroup {
           } else {
             stackIn_133_4 = 0;
           }
-          ((jo) (Object) stackIn_132_0).setBounds((byte) stackIn_132_1, stackIn_132_2, stackIn_132_3, stackIn_133_4, this.field_A.field_n);
+          ((ScrollControlWidget) (Object) stackIn_132_0).setBounds((byte) stackIn_132_1, stackIn_132_2, stackIn_132_3, stackIn_133_4, this.field_A.field_n);
         }
         if (null != this.field_D) {
           stackIn_138_0 = this.field_D;
@@ -665,7 +665,7 @@ final class cca extends ArrayWidgetGroup {
           } else {
             stackIn_139_5 = -this.field_D.field_p + this.field_p;
           }
-          ((jo) (Object) stackIn_138_0).setBounds((byte) stackIn_138_1, stackIn_138_2, stackIn_138_3, stackIn_138_4, stackIn_139_5);
+          ((ScrollControlWidget) (Object) stackIn_138_0).setBounds((byte) stackIn_138_1, stackIn_138_2, stackIn_138_3, stackIn_138_4, stackIn_139_5);
         }
         this.c(-31791);
         return;
@@ -681,7 +681,7 @@ final class cca extends ArrayWidgetGroup {
           if (!super.handleKeyInput(param0, param1, param2, param3)) {
             return false;
           }
-          this.g((byte) -123);
+          this.applyScrollPositions((byte) -123);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -702,13 +702,13 @@ final class cca extends ArrayWidgetGroup {
         var3 = TombRacer.field_G ? 1 : 0;
         if (this.field_x == null) {
           if (param0 != -31791) {
-            this.g((byte) 98);
+            this.applyScrollPositions((byte) 98);
           }
         } else {
           if (this.field_A.field_p < this.field_A.child.field_p) {
             this.field_x.c(this.field_A.child.field_p, this.field_A.field_p, -1789710879);
             if (param0 != -31791) {
-              this.g((byte) 98);
+              this.applyScrollPositions((byte) 98);
             }
             if (this.field_D != null) {
               if (this.field_A.child.field_m <= this.field_A.field_m) {
@@ -730,7 +730,7 @@ final class cca extends ArrayWidgetGroup {
             }
             return;
           }
-          this.g((byte) 98);
+          this.applyScrollPositions((byte) 98);
         }
         if (this.field_D == null) {
           return;
@@ -742,7 +742,7 @@ final class cca extends ArrayWidgetGroup {
         }
     }
 
-    final void a(int param0, jo param1, boolean param2) {
+    final void a(int param0, ScrollControlWidget param1, boolean param2) {
         try {
           this.field_x = param1;
           this.children[param0] = (UiWidget) ((Object) param1);
@@ -756,7 +756,7 @@ final class cca extends ArrayWidgetGroup {
         try {
           super.updatePointerState(param0, param1, param2, param3);
           this.c(-31791);
-          this.g((byte) -125);
+          this.applyScrollPositions((byte) -125);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "cca.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -785,7 +785,7 @@ final class cca extends ArrayWidgetGroup {
           return;
         }
         var7 = (ResourceArchive) null;
-        cca.a(-19, (ResourceArchive) null, 56, -52);
+        ScrollContainer.a(-19, (ResourceArchive) null, 56, -52);
     }
 
     final boolean a(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {
@@ -815,7 +815,7 @@ final class cca extends ArrayWidgetGroup {
         }
     }
 
-    cca(int param0, int param1, int param2, int param3, isa param4, UiWidget param5, isa param6) {
+    ScrollContainer(int param0, int param1, int param2, int param3, isa param4, UiWidget param5, isa param6) {
         super(param0, param1, param2, param3, param4);
         vua dupTemp$0 = null;
         try {

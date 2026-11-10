@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mr extends WidgetContainer implements tma, tsa, mia {
+final class AccountRegistrationPanel extends WidgetContainer implements tma, tsa, mia {
     private so field_E;
     private jla field_D;
     private so field_I;
     private FocusableWidget field_B;
     private FocusableWidget field_F;
-    private lga field_A;
+    private HotspotTextWidget field_A;
     private so field_z;
     UsernameSuggestionsPanel field_y;
     private so field_G;
@@ -17,10 +17,10 @@ final class mr extends WidgetContainer implements tma, tsa, mia {
     static String field_H;
     static String[] dayNames;
 
-    public final void a(lga param0, int param1, int param2, int param3) {
+    public final void a(HotspotTextWidget param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var6 = 0;
-        lga var7 = null;
+        HotspotTextWidget var7 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -28,8 +28,8 @@ final class mr extends WidgetContainer implements tma, tsa, mia {
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           if (param2 != 30846) {
-            var7 = (lga) null;
-            this.a((lga) null, -41, 57, 20);
+            var7 = (HotspotTextWidget) null;
+            this.a((HotspotTextWidget) null, -41, 57, 20);
           }
           if (param1 == 0) {
             gva.a("terms.ws", (byte) -25);
@@ -58,7 +58,7 @@ final class mr extends WidgetContainer implements tma, tsa, mia {
         }
     }
 
-    private final int a(UiWidget param0, int param1, int param2, byte param3, String param4) {
+    private final int addLabeledField(UiWidget param0, int param1, int param2, byte param3, String param4) {
         jsa var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_2_0 = 0;
@@ -98,7 +98,7 @@ final class mr extends WidgetContainer implements tma, tsa, mia {
         }
     }
 
-    private final boolean c(int param0) {
+    private final boolean submitRegistration(int param0) {
         if (!this.g(param0 ^ -1878)) {
           return false;
         }
@@ -124,7 +124,7 @@ final class mr extends WidgetContainer implements tma, tsa, mia {
         }
         var4 = stackIn_3_0;
         if (param2) {
-          mr.f(-14);
+          AccountRegistrationPanel.f(-14);
         }
         if (param1 < 0.0f) {
           stackIn_8_0 = -param1;
@@ -158,7 +158,7 @@ final class mr extends WidgetContainer implements tma, tsa, mia {
         return 5;
     }
 
-    public mr() {
+    public AccountRegistrationPanel() {
         super(0, 0, 496, 0, (isa) null);
         this.field_G = new so("", (qc) null, 12);
         this.field_z = new so("", (qc) null, 100);
@@ -197,17 +197,17 @@ final class mr extends WidgetContainer implements tma, tsa, mia {
         this.field_E.field_r = (isa) ((Object) dupTemp$1);
         String var2 = gl.$cfr$intArgs$a$53ce4ab4c593(90, ConstrainToCircleLocomotor.field_y, new String[]{this.d(170), this.e(127)});
         int var3 = 20;
-        var3 = var3 + this.a(this.field_z, var3, 170, (byte) 74, em.field_f);
+        var3 = var3 + this.addLabeledField(this.field_z, var3, 170, (byte) 74, em.field_f);
         var3 = var3 + (this.a(var3, 77, this.field_J, 170, 20, "", ct.field_d) + 5);
-        var3 = var3 + this.a(this.field_E, var3, 170, (byte) 59, rta.field_j);
+        var3 = var3 + this.addLabeledField(this.field_E, var3, 170, (byte) 59, rta.field_j);
         var3 = var3 + (this.a(gea.field_c, GameKeyHandler.field_d, this.field_C, -3, 170, var3) + 5);
         var3 = var3 + (this.a(CrusherBehaviour.field_r, za.field_f, this.field_G, -3, 170, var3) + 5);
         var3 = var3 + this.a(this.field_I, var3, (byte) 99, iqa.field_g, 170);
-        jsa var4 = new jsa(46, var3, this.field_m - 90, 25, this.field_D, true, this.field_m - 120, 5, eka.field_o, 11579568, jja.field_l);
+        jsa var4 = new jsa(46, var3, this.field_m - 90, 25, this.field_D, true, this.field_m - 120, 5, eka.field_o, 11579568, OpenGlSprite.field_l);
         this.addChild(var4, -1);
         var3 = var3 + var4.field_p;
-        vpa var5 = new vpa(KeySwitchComponent.field_J, 0, 0, 0, 0, 16777215, -1, 0, 0, KeySwitchComponent.field_J.field_w, -1, 2147483647, true);
-        this.field_A = new lga(var2, var5);
+        TextWidgetPainter var5 = new TextWidgetPainter(KeySwitchComponent.field_J, 0, 0, 0, 0, 16777215, -1, 0, 0, KeySwitchComponent.field_J.field_w, -1, 2147483647, true);
+        this.field_A = new HotspotTextWidget(var2, var5);
         this.field_A.field_q = "";
         this.field_A.a(sw.field_Fb, 0, 0);
         this.field_A.a(sw.field_Fb, 1, 0);
@@ -229,7 +229,7 @@ final class mr extends WidgetContainer implements tma, tsa, mia {
         this.setBounds((byte) -31, 496, var6 + 55 + var3, 0, 0);
     }
 
-    public final void a(int param0) {
+    public final void onMoreSuggestionsRequested(int param0) {
         ((tf) (this.field_G.a((byte) 69))).b((byte) -69);
         if (param0 != 10000536) {
           this.field_E = (so) null;
@@ -333,22 +333,22 @@ final class mr extends WidgetContainer implements tma, tsa, mia {
     }
 
     private final boolean g(int param0) {
-        if (!this.a((byte) -10, this.field_G)) {
+        if (!this.validateField((byte) -10, this.field_G)) {
           return false;
         }
-        if (!this.a((byte) -10, this.field_z)) {
+        if (!this.validateField((byte) -10, this.field_z)) {
           return false;
         }
-        if (!this.a((byte) -10, this.field_J)) {
+        if (!this.validateField((byte) -10, this.field_J)) {
           return false;
         }
-        if (!this.a((byte) -10, this.field_E)) {
+        if (!this.validateField((byte) -10, this.field_E)) {
           return false;
         }
-        if (!this.a((byte) -10, this.field_C)) {
+        if (!this.validateField((byte) -10, this.field_C)) {
           return false;
         }
-        if (!this.a((byte) -10, this.field_I)) {
+        if (!this.validateField((byte) -10, this.field_I)) {
           return false;
         }
         if (param0 == 1877) {
@@ -358,7 +358,7 @@ final class mr extends WidgetContainer implements tma, tsa, mia {
         return true;
     }
 
-    private final boolean a(byte param0, mk param1) {
+    private final boolean validateField(byte param0, mk param1) {
         nua var3 = null;
         RuntimeException var3_ref = null;
         it var4 = null;
@@ -415,7 +415,7 @@ final class mr extends WidgetContainer implements tma, tsa, mia {
           var3 = this.field_G;
           var4 = param0;
           if (param1 <= 18) {
-            this.field_A = (lga) null;
+            this.field_A = (HotspotTextWidget) null;
           }
           ((TextInputWidget) ((Object) var3)).a(false, -16719, var4);
         } catch (RuntimeException runtimeException) {
@@ -430,7 +430,7 @@ final class mr extends WidgetContainer implements tma, tsa, mia {
           dayNames = null;
           return;
         }
-        mr.a((byte) 10);
+        AccountRegistrationPanel.a((byte) 10);
         field_w = null;
         field_H = null;
         dayNames = null;
@@ -443,7 +443,7 @@ final class mr extends WidgetContainer implements tma, tsa, mia {
 
     private final int a(String param0, String param1, UiWidget param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
-        lga var8 = null;
+        HotspotTextWidget var8 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -455,8 +455,8 @@ final class mr extends WidgetContainer implements tma, tsa, mia {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != -3) {
-            var8 = (lga) null;
-            this.a((lga) null, -33, -81, -72);
+            var8 = (HotspotTextWidget) null;
+            this.a((HotspotTextWidget) null, -33, -81, -72);
           }
           stackIn_3_0 = this.a(param5, param3 + 112, param2, param4, 35, param1, param0);
           return stackIn_3_0;
@@ -503,7 +503,7 @@ final class mr extends WidgetContainer implements tma, tsa, mia {
           var1.field_l = 2097152;
           return var1;
         }
-        mr.a(-0.43077895045280457f, 0.6055110096931458f, true, 1.4660576581954956f);
+        AccountRegistrationPanel.a(-0.43077895045280457f, 0.6055110096931458f, true, 1.4660576581954956f);
         var1.field_f = new Effect(1, 3);
         var1.field_f.b(1, 12);
         var1.field_n = 655360;
@@ -519,7 +519,7 @@ final class mr extends WidgetContainer implements tma, tsa, mia {
         return var1;
     }
 
-    public final void a(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
+    public final void onButtonActivated(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
         boolean discarded$1 = false;
         RuntimeException var6 = null;
         RuntimeException stackIn_9_0 = null;
@@ -531,7 +531,7 @@ final class mr extends WidgetContainer implements tma, tsa, mia {
             gqa.a((byte) 70);
           } else {
             if (param2 == this.field_F) {
-              discarded$1 = this.c(-1);
+              discarded$1 = this.submitRegistration(-1);
             }
           }
           if (param4 > 44) {

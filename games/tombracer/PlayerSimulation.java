@@ -242,7 +242,7 @@ final class PlayerSimulation {
           if (this.field_a) {
             return;
           }
-          this.field_f = this.player.d((byte) -95, 3);
+          this.field_f = this.player.hasStatusFlag((byte) -95, 3);
           this.field_h = false;
           this.player.getRoom((byte) -64).d(param1, 0);
           if (this.field_a) {
@@ -254,7 +254,7 @@ final class PlayerSimulation {
         if (this.field_a) {
           return;
         }
-        this.field_f = this.player.d((byte) -95, 3);
+        this.field_f = this.player.hasStatusFlag((byte) -95, 3);
         this.field_h = false;
         this.player.getRoom((byte) -64).d(param1, 0);
         if (this.field_a) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pg extends WidgetContainer implements tma, tsa {
-    private lga field_z;
+    private HotspotTextWidget field_z;
     static String field_A;
     static int field_y;
     static String field_x;
@@ -28,7 +28,7 @@ final class pg extends WidgetContainer implements tma, tsa {
         return "<u=2164A2><col=2164A2>";
     }
 
-    public final void a(lga param0, int param1, int param2, int param3) {
+    public final void a(HotspotTextWidget param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -78,7 +78,7 @@ final class pg extends WidgetContainer implements tma, tsa {
         field_x = null;
     }
 
-    public final void a(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
+    public final void onButtonActivated(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -86,7 +86,7 @@ final class pg extends WidgetContainer implements tma, tsa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 <= 44) {
-            this.field_z = (lga) null;
+            this.field_z = (HotspotTextWidget) null;
           }
           if (this.field_B != param2) {
             return;
@@ -112,7 +112,7 @@ final class pg extends WidgetContainer implements tma, tsa {
         super(0, 0, 288, 0, (isa) null);
         String var7 = null;
         int var3 = 0;
-        vpa var4 = null;
+        TextWidgetPainter var4 = null;
         int var5 = 0;
         int var6 = 0;
         try {
@@ -121,8 +121,8 @@ final class pg extends WidgetContainer implements tma, tsa {
           this.field_B.field_r = (isa) ((Object) new td());
           var7 = gl.$cfr$intArgs$a$53ce4ab4c593(108, SafeZoneBehaviour.field_q, new String[]{this.c(-58), this.d(-35)});
           var3 = 20;
-          var4 = new vpa(KeySwitchComponent.field_J, 0, 0, 0, 0, 16777215, -1, 3, 0, KeySwitchComponent.field_J.field_w, -1, 2147483647, true);
-          this.field_z = new lga(var7, var4);
+          var4 = new TextWidgetPainter(KeySwitchComponent.field_J, 0, 0, 0, 0, 16777215, -1, 3, 0, KeySwitchComponent.field_J.field_w, -1, 2147483647, true);
+          this.field_z = new HotspotTextWidget(var7, var4);
           this.field_z.field_q = "";
           this.field_z.a(sw.field_Fb, 0, 0);
           this.field_z.a(sw.field_Fb, 1, 0);

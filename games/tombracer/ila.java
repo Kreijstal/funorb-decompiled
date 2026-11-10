@@ -273,7 +273,7 @@ final class ila {
               gj.field_q = param1;
               ld.field_e = vc.field_q.readUnsignedByte(param2 ^ 205);
               PrimMazeGenerator.field_e = vc.field_q.readUnsignedByte(255);
-              wla.field_ub = vc.field_q.readUnsignedShort(124);
+              ReportAbuseDialog.field_ub = vc.field_q.readUnsignedShort(124);
               var6 = vc.field_q.readNullableString(param2 - 28740);
               var7 = vc.field_q.readUnsignedByte(255);
               if ((var7 & 1) != 0) {
@@ -310,7 +310,7 @@ final class ila {
               if (fd.field_d.a((byte) 113) == BlockModel.field_s) {
                 vw.field_a.a(di.a(120), param2 ^ 55);
               } else {
-                if (fd.field_d.a((byte) 113) == vm.field_f) {
+                if (fd.field_d.a((byte) 113) == ViewportManager.field_f) {
                   ub.field_d.a(di.a(109), 5);
                 }
               }
@@ -318,7 +318,7 @@ final class ila {
               if (var6 != null) {
                 mp.a(var6, di.a(41), -21407);
               }
-              if (0 >= wla.field_ub &&
+              if (0 >= ReportAbuseDialog.field_ub &&
                 !ai.field_a) {
                 try {
                   lb.b(di.a(26), 2864, "unzap");
@@ -334,7 +334,7 @@ final class ila {
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               }
-              if (0 < wla.field_ub) {
+              if (0 < ReportAbuseDialog.field_ub) {
                 ft.field_a = true;
               }
               ql.field_k.initializeCipher(-26185, AllPlatformsMazeComponent.field_K);
@@ -455,7 +455,7 @@ final class ila {
         stackIn_3_0 = ((128 & var3) != 0);
         sb.field_b = stackIn_3_0;
         jda.field_m = var8.readUnsignedByte(255);
-        cca.field_z = var8.readLong(param0 ^ -290628099);
+        ScrollContainer.field_z = var8.readLong(param0 ^ -290628099);
         if (gja.field_x == 2) {
           gb.field_a = var8.readUnsignedShort(127);
           ega.field_b = var8.readUnsignedMedium(-32768);

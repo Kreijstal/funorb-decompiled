@@ -13,7 +13,7 @@ final class NativeCanvasSurface extends IntrusiveNode implements e {
 
     public final native void w(boolean param0);
 
-    private final void a(Exception param0) {
+    private final void handlePresentationFailure(Exception param0) {
         if (!field_g) {
           field_j = bva.b((byte) -107);
           field_g = true;

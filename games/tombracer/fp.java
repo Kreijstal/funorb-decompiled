@@ -131,7 +131,7 @@ final class fp {
         int incrementValue$3 = param1;
         param1++;
         var16_ref.a(incrementValue$3, (byte) 47, param0);
-        ng.field_f = SpriteData.loadSheet(param2, "", "achievements");
+        WidgetStyleLayer.field_f = SpriteData.loadSheet(param2, "", "achievements");
         ds.field_g = SpriteData.loadSprite(PitComponent.field_G, "basic", "unachieved");
         aa.field_a = SpriteData.loadSprite(param2, "", "map_routedot");
         pha.field_Bb = SpriteData.loadSprite(param2, "", "map_coin_gold");
@@ -156,7 +156,7 @@ final class fp {
         var16_ref.a(incrementValue$5, (byte) 47, param0);
         hoa.field_l = SpriteData.loadSprite(param2, "", "silhoutte");
         baa.field_g = SpriteData.loadSprite(param2, "", "slab_small1");
-        op.field_O = SpriteData.loadSprite(param2, "", "slab_small2");
+        FullscreenConfirmationDialog.field_O = SpriteData.loadSprite(param2, "", "slab_small2");
         ifa.field_q = SpriteData.loadSprite(param2, "", "slab_small3");
         ob.field_n = SpriteData.loadSprite(param2, "", "slab_small4");
         vua.field_y = SpriteData.loadSprite(param2, "", "slab_medium");
@@ -321,7 +321,7 @@ final class fp {
               qt.field_a.c(var6, var8Lifetime1, qra.field_j + var1_int, var5, -1);
               var1_int = var1_int + (nt.field_d + GasVentModel.field_p + mha.field_C);
             } else {
-              bfa.field_c.c(var6, var8Lifetime1, var1_int + vi.field_a, var5, -1);
+              ConsoleValue.field_c.c(var6, var8Lifetime1, var1_int + vi.field_a, var5, -1);
               var1_int = var1_int + f.field_b;
             }
           }
@@ -344,7 +344,7 @@ final class fp {
         }
         int var2 = aq.a(-5640);
         int var3 = BufferedSocket.a(2147483647, new Random(), 45);
-        cs.field_c = new qh(false, 0, new String[]{""}, 0, false, var2, -1 + var2, 1, 2, 0, (BitSet[]) null, new boolean[]{wla.field_ub > 0 ? true : false}, new qha(var3));
+        cs.field_c = new qh(false, 0, new String[]{""}, 0, false, var2, -1 + var2, 1, 2, 0, (BitSet[]) null, new boolean[]{ReportAbuseDialog.field_ub > 0 ? true : false}, new qha(var3));
         cs.field_c.k((byte) -25);
         wka.field_d = true;
     }

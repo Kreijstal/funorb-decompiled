@@ -22,7 +22,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
           return;
         }
         if (!av.field_e &&
-          !vpa.a(109)) {
+          !TextWidgetPainter.a(109)) {
           ima.a(100.0f, WindZoneBehaviour.field_u, -75);
           C2SSubmitSettingsPacket.a(var2, (byte) 111);
           return;
@@ -295,7 +295,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
           }
         } else {
           if (!av.field_e) {
-            if (!vpa.a(84)) {
+            if (!TextWidgetPainter.a(84)) {
               if (dma.field_l.a(-127)) {
                 av.field_e = true;
                 this.onLoadingComplete(24230);
@@ -308,7 +308,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
             this.b(true);
           }
         }
-        if (!vpa.a(66)) {
+        if (!TextWidgetPainter.a(66)) {
           while (true) {
             var5 = (cga) (RotaterMountComponent.field_H.removeFirst(119));
             if (var5 == null) {

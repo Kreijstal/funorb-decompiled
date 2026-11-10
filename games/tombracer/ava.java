@@ -93,7 +93,7 @@ final class ava {
           if (uu.field_a != null && (PowerUpItemBehaviour.field_u != null ||
             hp.field_a != null ||
             nra.field_g != null ||
-            lga.field_z != null)) {
+            HotspotTextWidget.field_z != null)) {
             for (var9 = 0; fk.field_b > var9; var9++) {
               var10_int = 255 & uu.field_a.field_ac[var9];
               if (PowerUpItemBehaviour.field_u != null &&
@@ -112,9 +112,9 @@ final class ava {
                   var6 = var11_int;
                 }
               }
-              if (lga.field_z != null &&
-                null != lga.field_z[var9]) {
-                var8 = var8 | lga.field_z[var9][var10_int];
+              if (HotspotTextWidget.field_z != null &&
+                null != HotspotTextWidget.field_z[var9]) {
+                var8 = var8 | HotspotTextWidget.field_z[var9][var10_int];
               }
               if (nra.field_g != null &&
                 null != nra.field_g[var9]) {
@@ -425,9 +425,9 @@ final class ava {
                       var29 = 1;
                     }
                   }
-                  if (lga.field_z != null &&
-                    lga.field_z[var27_int] != null &&
-                    (~var12.field_Eb & lga.field_z[var27_int][var28]) != 0) {
+                  if (HotspotTextWidget.field_z != null &&
+                    HotspotTextWidget.field_z[var27_int] != null &&
+                    (~var12.field_Eb & HotspotTextWidget.field_z[var27_int][var28]) != 0) {
                     var29 = 1;
                   }
                   if (var29 != 0) {

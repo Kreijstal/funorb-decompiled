@@ -160,7 +160,7 @@ final class nia extends ci {
         tga.field_a.b(8192);
         iga.field_o = IntrusiveDequeCursor.a((byte) 65, tga.field_a);
         sw.k((byte) 94);
-        hm.h((byte) 45);
+        OpenGlTexture2D.h((byte) 45);
         if (param0 != -25405) {
           String var2 = (String) null;
           nia.a((ResourceArchive) null, (String) null, (String) null, 78);

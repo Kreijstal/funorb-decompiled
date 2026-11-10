@@ -4,7 +4,7 @@
 final class on {
     private boolean field_c;
     private boolean field_a;
-    static mr field_b;
+    static AccountRegistrationPanel field_b;
 
     final void a(byte param0) {
         this.field_a = true;

@@ -93,7 +93,7 @@ final class IsaacCipher {
           this.results[var2] = dupTemp$2;
         }
         if (param0 != 2) {
-          this.a(false);
+          this.initializeState(false);
         }
     }
 
@@ -125,7 +125,7 @@ final class IsaacCipher {
         return oea.a(var4, param0, -66);
     }
 
-    private final void a(boolean param0) {
+    private final void initializeState(boolean param0) {
         int var2 = 0;
         int var5 = -1640531527;
         int var3 = -1640531527;
@@ -272,7 +272,7 @@ final class IsaacCipher {
             RoomComponent.field_g = param11;
             nn.field_b = param3;
             du.field_h = param13;
-            vh.field_g = param12;
+            WhirlpoolDigest.field_g = param12;
             ClientException.field_c = param1;
             kqa.field_a = param2;
             ConstrainToLatticeLocomotor.field_x = param4;
@@ -324,7 +324,7 @@ final class IsaacCipher {
           for (var2_int = 0; param0.length > var2_int; var2_int++) {
             this.results[var2_int] = param0[var2_int];
           }
-          this.a(true);
+          this.initializeState(true);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "qea.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

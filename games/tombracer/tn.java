@@ -122,11 +122,11 @@ final class tn extends IntrusiveNode {
         if (!tk.field_b.c("commonui", param0 ^ 10971)) {
           return q.field_o + " - " + tk.field_b.a("commonui", true) + "%";
         }
-        if (!hm.field_n.b(-99)) {
+        if (!OpenGlTexture2D.field_n.b(-99)) {
           return MouseInputHandler.field_a;
         }
-        if (!hm.field_n.c("commonui", -128)) {
-          return TrapSpawner.field_b + " - " + hm.field_n.a("commonui", true) + "%";
+        if (!OpenGlTexture2D.field_n.c("commonui", -128)) {
+          return TrapSpawner.field_b + " - " + OpenGlTexture2D.field_n.a("commonui", true) + "%";
         }
         if (!vc.field_p.b(param0 + 10827)) {
           return wt.field_b;

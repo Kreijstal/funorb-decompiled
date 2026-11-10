@@ -16,7 +16,7 @@ abstract class hha extends DualLinkNode {
             return gva.field_b.a((byte) 119);
           }
           if (gsa.field_y != wt.field_d) {
-            return jo.field_E;
+            return ScrollControlWidget.field_E;
           }
           return gva.field_b.a((byte) 100);
         }
@@ -27,7 +27,7 @@ abstract class hha extends DualLinkNode {
           return gva.field_b.a((byte) 119);
         }
         if (gsa.field_y != wt.field_d) {
-          return jo.field_E;
+          return ScrollControlWidget.field_E;
         }
         return gva.field_b.a((byte) 100);
     }

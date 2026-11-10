@@ -249,10 +249,10 @@ final class dla {
           if (!tk.field_b.c("commonui", param0 ^ -122)) {
             return 40;
           }
-          if (!hm.field_n.b(param0 - 100)) {
+          if (!OpenGlTexture2D.field_n.b(param0 - 100)) {
             return 50;
           }
-          if (!hm.field_n.c("commonui", -126)) {
+          if (!OpenGlTexture2D.field_n.c("commonui", -126)) {
             return 60;
           }
           if (!vc.field_p.b(param0 ^ -123)) {
@@ -279,10 +279,10 @@ final class dla {
           if (!tk.field_b.c("commonui", -128)) {
             return 57;
           }
-          if (!hm.field_n.b(param0 - 42)) {
+          if (!OpenGlTexture2D.field_n.b(param0 - 42)) {
             return 71;
           }
-          if (!hm.field_n.c("commonui", -124)) {
+          if (!OpenGlTexture2D.field_n.c("commonui", -124)) {
             return 80;
           }
           if (!vc.field_p.b(-128)) {

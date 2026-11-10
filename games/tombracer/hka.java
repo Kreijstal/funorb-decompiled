@@ -3,7 +3,7 @@
  */
 final class hka {
     static SpriteData field_c;
-    static lja field_b;
+    static PlayerContextMenu field_b;
     static int field_a;
 
     final static taa a(int param0, PacketBuffer param1) {

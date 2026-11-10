@@ -63,7 +63,7 @@ abstract class gda {
               var7.field_e = PillarComponent.a(-1, var7.field_c);
               var7.field_c.endBitAccess((byte) 98);
             }
-            lva.a(var4.field_c, 0, -1 + var4.field_c.length, -1);
+            PerlinNoise2D.a(var4.field_c, 0, -1 + var4.field_c.length, -1);
           }
           if (param1 != 17572) {
             field_a = 31;

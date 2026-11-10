@@ -37,7 +37,7 @@ abstract class SoftwareToolkitSprite extends ToolkitSprite {
         return this.field_a;
     }
 
-    abstract void b(int param0, int param1);
+    abstract void blitAffine(int param0, int param1);
 
     abstract void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8);
 
@@ -205,7 +205,7 @@ abstract class SoftwareToolkitSprite extends ToolkitSprite {
         this.field_v = param3;
     }
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7);
+    abstract void drawScaled(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7);
 
     final int b() {
         return this.field_o + this.field_f + this.field_v;
@@ -224,64 +224,64 @@ abstract class SoftwareToolkitSprite extends ToolkitSprite {
         if (param6 == 1) {
           if (param6 == 1) {
             if (param8 == 0) {
-              this.b(1, 0);
+              this.blitAffine(1, 0);
               return;
             }
             if (param8 == 1) {
-              this.b(1, 1);
+              this.blitAffine(1, 1);
               return;
             }
             if (param8 != 2) {
               return;
             }
-            this.b(1, 2);
+            this.blitAffine(1, 2);
             return;
           }
           if (param6 == 0) {
             if (param8 == 0) {
-              this.b(0, 0);
+              this.blitAffine(0, 0);
               return;
             }
             if (param8 == 1) {
-              this.b(0, 1);
+              this.blitAffine(0, 1);
               return;
             }
             if (param8 != 2) {
               return;
             }
-            this.b(0, 2);
+            this.blitAffine(0, 2);
             return;
           }
           if (param6 == 3) {
             if (param8 == 0) {
-              this.b(3, 0);
+              this.blitAffine(3, 0);
               return;
             }
             if (param8 == 1) {
-              this.b(3, 1);
+              this.blitAffine(3, 1);
               return;
             }
             if (param8 != 2) {
               return;
             }
-            this.b(3, 2);
+            this.blitAffine(3, 2);
             return;
           }
           if (param6 != 2) {
             return;
           }
           if (param8 == 0) {
-            this.b(2, 0);
+            this.blitAffine(2, 0);
             return;
           }
           if (param8 == 1) {
-            this.b(2, 1);
+            this.blitAffine(2, 1);
             return;
           }
           if (param8 != 2) {
             return;
           }
-          this.b(2, 2);
+          this.blitAffine(2, 2);
           return;
         }
         field_k = param7 >>> 24;
@@ -292,64 +292,64 @@ abstract class SoftwareToolkitSprite extends ToolkitSprite {
           field_t = param7 & 255;
           if (param6 == 1) {
             if (param8 == 0) {
-              this.b(1, 0);
+              this.blitAffine(1, 0);
               return;
             }
             if (param8 == 1) {
-              this.b(1, 1);
+              this.blitAffine(1, 1);
               return;
             }
             if (param8 != 2) {
               return;
             }
-            this.b(1, 2);
+            this.blitAffine(1, 2);
             return;
           }
           if (param6 == 0) {
             if (param8 == 0) {
-              this.b(0, 0);
+              this.blitAffine(0, 0);
               return;
             }
             if (param8 == 1) {
-              this.b(0, 1);
+              this.blitAffine(0, 1);
               return;
             }
             if (param8 != 2) {
               return;
             }
-            this.b(0, 2);
+            this.blitAffine(0, 2);
             return;
           }
           if (param6 == 3) {
             if (param8 == 0) {
-              this.b(3, 0);
+              this.blitAffine(3, 0);
               return;
             }
             if (param8 == 1) {
-              this.b(3, 1);
+              this.blitAffine(3, 1);
               return;
             }
             if (param8 != 2) {
               return;
             }
-            this.b(3, 2);
+            this.blitAffine(3, 2);
             return;
           }
           if (param6 != 2) {
             return;
           }
           if (param8 == 0) {
-            this.b(2, 0);
+            this.blitAffine(2, 0);
             return;
           }
           if (param8 == 1) {
-            this.b(2, 1);
+            this.blitAffine(2, 1);
             return;
           }
           if (param8 != 2) {
             return;
           }
-          this.b(2, 2);
+          this.blitAffine(2, 2);
           return;
         }
         if (param6 == 2) {
@@ -361,60 +361,60 @@ abstract class SoftwareToolkitSprite extends ToolkitSprite {
         }
         if (param6 == 1) {
           if (param8 == 0) {
-            this.b(1, 0);
+            this.blitAffine(1, 0);
             return;
           }
           if (param8 == 1) {
-            this.b(1, 1);
+            this.blitAffine(1, 1);
             return;
           }
           if (param8 != 2) {
             return;
           }
-          this.b(1, 2);
+          this.blitAffine(1, 2);
           return;
         }
         if (param6 != 0) {
           if (param6 != 3) {
             if (param6 == 2) {
               if (param8 == 0) {
-                this.b(2, 0);
+                this.blitAffine(2, 0);
                 return;
               }
               if (param8 == 1) {
-                this.b(2, 1);
+                this.blitAffine(2, 1);
                 return;
               }
               if (param8 == 2) {
-                this.b(2, 2);
+                this.blitAffine(2, 2);
                 return;
               }
             }
           } else {
             if (param8 == 0) {
-              this.b(3, 0);
+              this.blitAffine(3, 0);
               return;
             }
             if (param8 == 1) {
-              this.b(3, 1);
+              this.blitAffine(3, 1);
               return;
             }
             if (param8 == 2) {
-              this.b(3, 2);
+              this.blitAffine(3, 2);
               return;
             }
           }
         } else {
           if (param8 == 0) {
-            this.b(0, 0);
+            this.blitAffine(0, 0);
             return;
           }
           if (param8 == 1) {
-            this.b(0, 1);
+            this.blitAffine(0, 1);
             return;
           }
           if (param8 == 2) {
-            this.b(0, 2);
+            this.blitAffine(0, 2);
             return;
           }
         }

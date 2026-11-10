@@ -48,7 +48,7 @@ class um extends DualLinkNode {
         if (~param2 != param1) {
           return epa.field_r[param2];
         }
-        if (kba.a(param1 + 1, param0)) {
+        if (OpenGlRenderbuffer.a(param1 + 1, param0)) {
           return 29;
         }
         return epa.field_r[param2];

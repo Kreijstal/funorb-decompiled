@@ -183,9 +183,9 @@ abstract class eo extends GraphicsToolkit {
           this.field_M[1] = -this.field_Gb[1];
           this.field_M[2] = -this.field_Gb[2];
           this.field_P.setSunDirection(this.field_Gb[0], this.field_Gb[1], this.field_Gb[2]);
-          this.i(-88);
+          this.applyLightPositions(-88);
         }
-        this.q((byte) -78);
+        this.uploadDirectionalLights((byte) -78);
     }
 
     abstract void a(fp param0, int param1, boolean param2, int param3);
@@ -274,7 +274,7 @@ abstract class eo extends GraphicsToolkit {
           }
           if (var3 != this.field_lb) {
             this.field_lb = var3;
-            this.b(false);
+            this.applyBlendFactors(false);
           }
           this.field_rb = this.field_rb & -29;
           this.field_wb = param0;
@@ -398,7 +398,7 @@ abstract class eo extends GraphicsToolkit {
         int var2 = 110 % ((-25 - param0) / 46);
     }
 
-    abstract void i(int param0);
+    abstract void applyLightPositions(int param0);
 
     abstract Object a(boolean param0, java.awt.Canvas param1);
 
@@ -413,9 +413,9 @@ abstract class eo extends GraphicsToolkit {
         }
     }
 
-    abstract eja a(int param0, boolean param1);
+    abstract eja createIndexBuffer(int param0, boolean param1);
 
-    abstract void q(byte param0);
+    abstract void uploadDirectionalLights(byte param0);
 
     private final void l(byte param0) {
         if (param0 != 26) {
@@ -663,7 +663,7 @@ abstract class eo extends GraphicsToolkit {
           this.field_fc = param0;
           this.field_P.setAmbient(param0);
           this.r(0);
-          this.q((byte) -78);
+          this.uploadDirectionalLights((byte) -78);
         }
     }
 
@@ -795,7 +795,7 @@ abstract class eo extends GraphicsToolkit {
         return this.field_q;
     }
 
-    vw e(int param0, int param1) {
+    vw createShaderEffect(int param0, int param1) {
         int var3;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
@@ -991,7 +991,7 @@ abstract class eo extends GraphicsToolkit {
         this.field_gb = true;
         this.o(16);
         if (param0 < 97) {
-          this.a(36, false);
+          this.createIndexBuffer(36, false);
         }
     }
 
@@ -1257,7 +1257,7 @@ abstract class eo extends GraphicsToolkit {
             if (param1 != null) {
               param1.bind((byte) 89);
             } else {
-              this.d(1);
+              this.unbindTexture(1);
             }
             this.field_rb = this.field_rb & -2;
           }
@@ -1360,7 +1360,7 @@ abstract class eo extends GraphicsToolkit {
 
     abstract void N(int param0);
 
-    abstract void b(boolean param0);
+    abstract void applyBlendFactors(boolean param0);
 
     final gf a(float[] param0, ft param1, boolean param2, boolean param3, int param4, int param5) {
         RuntimeException var7 = null;
@@ -1632,14 +1632,14 @@ abstract class eo extends GraphicsToolkit {
         return this.field_sb[3].c(1185);
     }
 
-    void h(int param0) {
+    void resetDriverState(int param0) {
         if (param0 != -29040) {
           this.drawHorizontalLine(-18, -45, 101, 121, 112);
         }
         this.m((byte) 97);
     }
 
-    abstract void d(int param0);
+    abstract void unbindTexture(int param0);
 
     final void a(boolean param0, byte param1) {
         if (param1 < 53) {
@@ -1787,20 +1787,20 @@ abstract class eo extends GraphicsToolkit {
         this.field_ec = new gja(this, 0, 0, false, false);
         this.field_tc = new gja(this, 0, 0, true, true);
         this.field_kb = new ni(this);
-        this.field_z = this.a(26, true);
+        this.field_z = this.createIndexBuffer(26, true);
         this.s((byte) 6);
         this.field_Mb = new hk(this);
-        this.field_sb[1] = this.e(1, 56);
-        this.field_sb[2] = this.e(2, 48);
-        this.field_sb[4] = this.e(4, 46);
-        this.field_sb[5] = this.e(5, 53);
-        this.field_sb[6] = this.e(6, 70);
-        this.field_sb[7] = this.e(7, 54);
-        this.field_sb[3] = this.e(3, 66);
-        this.field_sb[8] = this.e(8, 100);
-        this.field_sb[9] = this.e(9, 76);
+        this.field_sb[1] = this.createShaderEffect(1, 56);
+        this.field_sb[2] = this.createShaderEffect(2, 48);
+        this.field_sb[4] = this.createShaderEffect(4, 46);
+        this.field_sb[5] = this.createShaderEffect(5, 53);
+        this.field_sb[6] = this.createShaderEffect(6, 70);
+        this.field_sb[7] = this.createShaderEffect(7, 54);
+        this.field_sb[3] = this.createShaderEffect(3, 66);
+        this.field_sb[8] = this.createShaderEffect(8, 100);
+        this.field_sb[9] = this.createShaderEffect(9, 76);
         if (!this.field_sb[2].c(1185)) {
-          this.field_sb[2] = this.e(0, 105);
+          this.field_sb[2] = this.createShaderEffect(0, 105);
         }
         if (!this.field_sb[4].c(1185)) {
           this.field_sb[4] = this.field_sb[2];
@@ -1811,7 +1811,7 @@ abstract class eo extends GraphicsToolkit {
         if (!this.field_sb[9].c(1185)) {
           this.field_sb[9] = this.field_sb[8];
         }
-        this.h(-29040);
+        this.resetDriverState(-29040);
         this.la();
         this.a();
     }
@@ -2183,7 +2183,7 @@ abstract class eo extends GraphicsToolkit {
         }
     }
 
-    abstract gf a(boolean param0, byte[] param1, int param2, int param3, int param4, int param5, ft param6, int param7);
+    abstract gf createIntTexture2D(boolean param0, byte[] param1, int param2, int param3, int param4, int param5, ft param6, int param7);
 
     final void la() {
         this.field_K = 0;
@@ -2226,8 +2226,8 @@ abstract class eo extends GraphicsToolkit {
         this.v(40);
         this.h((byte) -102);
         this.g((byte) 92);
-        this.i(-71);
-        this.q((byte) -78);
+        this.applyLightPositions(-71);
+        this.uploadDirectionalLights((byte) -78);
         this.w((byte) -21);
         this.f((byte) -69);
         this.b((byte) -126);
@@ -2237,7 +2237,7 @@ abstract class eo extends GraphicsToolkit {
           this.field_nb = 104;
         }
         this.M(-27581);
-        this.b(false);
+        this.applyBlendFactors(false);
         this.w(-104);
         for (var2 = -1 + this.field_Vb; var2 >= 0; var2--) {
           this.e(var2, false);
@@ -2540,7 +2540,7 @@ abstract class eo extends GraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 < -71) {
-            stackIn_4_0 = this.a(param2, param1, 0, param0, 1, 0, param3, param5);
+            stackIn_4_0 = this.createIntTexture2D(param2, param1, 0, param0, 1, 0, param3, param5);
             return stackIn_4_0;
           }
           stackIn_2_0 = (gf) null;

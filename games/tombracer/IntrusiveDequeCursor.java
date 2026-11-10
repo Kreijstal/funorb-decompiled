@@ -131,7 +131,7 @@ final class IntrusiveDequeCursor {
             stackIn_3_0 = sda.field_g;
             return stackIn_3_0;
           }
-          var2 = (wl) (hla.field_ub.a((byte) -96, (long)param1.field_a));
+          var2 = (wl) (hla.field_ub.get((byte) -96, (long)param1.field_a));
           if (var2 != null &&
             var2.field_g == param1) {
             var3 = var2.field_j;

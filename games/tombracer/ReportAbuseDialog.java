@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wla extends jea {
+final class ReportAbuseDialog extends jea {
     private jea field_zb;
     private int field_Gb;
     private jea[] field_yb;
@@ -72,7 +72,7 @@ final class wla extends jea {
         return this.field_vb.toString();
     }
 
-    wla(int param0, int param1, int param2, int param3, int param4, jea param5, jea param6, jea param7, jea param8, ta param9, jea param10, String param11, long param12) {
+    ReportAbuseDialog(int param0, int param1, int param2, int param3, int param4, jea param5, jea param6, jea param7, jea param8, ta param9, jea param10, String param11, long param12) {
         super(0L, param5);
         StringBuilder discarded$1 = null;
         jea[] var15 = null;
@@ -374,7 +374,7 @@ final class wla extends jea {
         }
     }
 
-    final boolean c(boolean param0) {
+    final boolean isMuteRequested(boolean param0) {
         boolean stackIn_6_0 = false;
         if (param0) {
           this.b(false);
@@ -445,7 +445,7 @@ final class wla extends jea {
         return true;
     }
 
-    final int d(int param0, boolean param1) {
+    final int updateAndPollReason(int param0, boolean param1) {
         int var3 = 0;
         ta stackIn_6_0 = null;
         boolean stackIn_7_1 = false;

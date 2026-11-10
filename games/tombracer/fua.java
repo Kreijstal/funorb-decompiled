@@ -7,7 +7,7 @@ final class fua implements isa {
     private static String[] behaviourTypeNames;
     static String field_e;
     static SecondaryNodeHashTable field_a;
-    private rla field_d;
+    private DropdownList field_d;
     static boolean field_g;
     static Sprite[] field_f;
 
@@ -83,7 +83,7 @@ final class fua implements isa {
         }
     }
 
-    fua(rla param0) {
+    fua(DropdownList param0) {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {

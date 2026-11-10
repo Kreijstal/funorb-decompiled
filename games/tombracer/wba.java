@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wba extends ob {
-    static vm field_o;
+    static ViewportManager field_o;
     static String[] field_q;
     static jea[] field_p;
 

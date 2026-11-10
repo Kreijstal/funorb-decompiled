@@ -182,7 +182,7 @@ final class LoginForm extends WidgetContainer implements cd, tsa {
         int var1 = -9 % ((34 - param0) / 46);
     }
 
-    public final void a(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
+    public final void onButtonActivated(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
         int var7 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;

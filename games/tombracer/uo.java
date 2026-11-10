@@ -42,7 +42,7 @@ final class uo {
           var16 = new ub(200);
           var2 = 0;
           var3 = 0;
-          for (var4 = 0; kba.f(-1) > var4; var4++) {
+          for (var4 = 0; OpenGlRenderbuffer.f(-1) > var4; var4++) {
             var5 = rga.b(26499, var4);
             for (var6 = 0; var6 < var5; var6++) {
               var15 = paa.c(var4, 91, var6);

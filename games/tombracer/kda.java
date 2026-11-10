@@ -80,7 +80,7 @@ final class kda extends eo {
         RuntimeException var8 = null;
         int var9 = 0;
         una var10 = null;
-        sf var11 = null;
+        OpenGlVertexBuffer var11 = null;
         int var12 = 0;
         var12 = TombRacer.field_G ? 1 : 0;
         try {
@@ -112,7 +112,7 @@ final class kda extends eo {
             }
           }
           var10 = param0.b(param1 ^ 13611);
-          var11 = (sf) (param0);
+          var11 = (OpenGlVertexBuffer) (param0);
           var11.c(-3);
           jaggl.OpenGL.glDrawElements(var8_int, var9, ClientException.a(var10, 5126), var11.b(true) + (long)(param3 * var10.field_e));
           if (param1 != -19394) {
@@ -142,10 +142,10 @@ final class kda extends eo {
     final gf a(int[] param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
-        hm var9 = null;
-        hm stackIn_6_0 = null;
+        OpenGlTexture2D var9 = null;
+        OpenGlTexture2D stackIn_6_0 = null;
         pe stackIn_8_0 = null;
-        hm stackIn_10_0 = null;
+        OpenGlTexture2D stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -158,12 +158,12 @@ final class kda extends eo {
               stackIn_8_0 = new pe(this, param3, param5, param0, param1, param4);
               return (gf) ((Object) stackIn_8_0);
             }
-            var9 = new hm(this, SwitchableId.field_a, una.field_g, lla.a(false, param3), lla.a(false, param5));
+            var9 = new OpenGlTexture2D(this, SwitchableId.field_a, una.field_g, lla.a(false, param3), lla.a(false, param5));
             var9.a(param1, param5, param4, 113, 0, param0, param3, 0);
             stackIn_6_0 = var9;
             return (gf) ((Object) stackIn_6_0);
           }
-          stackIn_10_0 = new hm(this, param3, param5, param2, param0, param1, param4);
+          stackIn_10_0 = new OpenGlTexture2D(this, param3, param5, param2, param0, param1, param4);
           return (gf) ((Object) stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -213,7 +213,7 @@ final class kda extends eo {
         }
     }
 
-    final void h(int param0) {
+    final void resetDriverState(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -249,7 +249,7 @@ final class kda extends eo {
         jaggl.OpenGL.glFogi(2917, 9729);
         jaggl.OpenGL.glHint(3156, 4353);
         this.field_Mc.setSwapInterval(0);
-        super.h(param0);
+        super.resetDriverState(param0);
     }
 
     final void I(int param0) {
@@ -334,11 +334,11 @@ final class kda extends eo {
         jaggl.OpenGL.glViewport(this.field_i, this.field_Kc, this.field_Hb, this.field_jc);
     }
 
-    final eja a(int param0, boolean param1) {
+    final eja createIndexBuffer(int param0, boolean param1) {
         if (param0 != 26) {
           this.field_rd = true;
         }
-        return (eja) ((Object) new sf(this, una.field_f, param1));
+        return (eja) ((Object) new OpenGlVertexBuffer(this, una.field_f, param1));
     }
 
     final void g(byte param0) {
@@ -421,8 +421,8 @@ final class kda extends eo {
     final gf a(int param0, int param1, ft param2, byte param3, una param4) {
         RuntimeException var6 = null;
         pe stackIn_8_0 = null;
-        hm stackIn_10_0 = null;
-        hm stackIn_12_0 = null;
+        OpenGlTexture2D stackIn_10_0 = null;
+        OpenGlTexture2D stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -436,13 +436,13 @@ final class kda extends eo {
           if (!this.field_Wc && (!cla.a(9181, param0) ||
             !cla.a(9181, param1))) {
             if (!this.field_sd) {
-              stackIn_10_0 = new hm(this, param2, param4, lla.a(false, param0), lla.a(false, param1));
+              stackIn_10_0 = new OpenGlTexture2D(this, param2, param4, lla.a(false, param0), lla.a(false, param1));
               return (gf) ((Object) stackIn_10_0);
             }
             stackIn_8_0 = new pe(this, param2, param4, param0, param1);
             return (gf) ((Object) stackIn_8_0);
           }
-          stackIn_12_0 = new hm(this, param2, param4, param0, param1);
+          stackIn_12_0 = new OpenGlTexture2D(this, param2, param4, param0, param1);
           return (gf) ((Object) stackIn_12_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -475,7 +475,7 @@ final class kda extends eo {
         }
     }
 
-    final void GA(int param0) {
+    final void clear(int param0) {
         jaggl.OpenGL.glClearColor((float)(param0 & 16711680) / 16711680.0f, (float)(param0 & 65280) / 65280.0f, (float)(param0 & 255) / 255.0f, (float)(param0 >>> 24) / 255.0f);
         jaggl.OpenGL.glClear(16384);
     }
@@ -498,7 +498,7 @@ final class kda extends eo {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            this.i(102);
+            this.applyLightPositions(102);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -521,12 +521,12 @@ final class kda extends eo {
         }
     }
 
-    final gf a(boolean param0, byte[] param1, int param2, int param3, int param4, int param5, ft param6, int param7) {
+    final gf createIntTexture2D(boolean param0, byte[] param1, int param2, int param3, int param4, int param5, ft param6, int param7) {
         RuntimeException var9 = null;
-        hm var10 = null;
-        hm stackIn_7_0 = null;
+        OpenGlTexture2D var10 = null;
+        OpenGlTexture2D stackIn_7_0 = null;
         pe stackIn_10_0 = null;
-        hm stackIn_12_0 = null;
+        OpenGlTexture2D stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -543,12 +543,12 @@ final class kda extends eo {
               stackIn_10_0 = new pe(this, param6, param7, param3, param1, param2, param5);
               return (gf) ((Object) stackIn_10_0);
             }
-            var10 = new hm(this, param6, una.field_g, lla.a(false, param7), lla.a(false, param3));
+            var10 = new OpenGlTexture2D(this, param6, una.field_g, lla.a(false, param7), lla.a(false, param3));
             var10.a(0, (byte) -124, param3, param1, param5, param2, param6, param7, 0);
             stackIn_12_0 = var10;
             return (gf) ((Object) stackIn_12_0);
           }
-          stackIn_7_0 = new hm(this, param6, param7, param3, param0, param1, param2, param5);
+          stackIn_7_0 = new OpenGlTexture2D(this, param6, param7, param3, param0, param1, param2, param5);
           return (gf) ((Object) stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -592,7 +592,7 @@ final class kda extends eo {
         this.field_kd.addLast((byte) -65, var4);
     }
 
-    final void d(int param0) {
+    final void unbindTexture(int param0) {
         if (param0 != 1) {
           this.a((byte) 9, (int[][]) null, false, -5);
         }
@@ -931,7 +931,7 @@ final class kda extends eo {
         super.c(param0);
     }
 
-    final void q(byte param0) {
+    final void uploadDirectionalLights(byte param0) {
         if (param0 != -78) {
           this.field_Vc = true;
         }
@@ -1019,11 +1019,11 @@ final class kda extends eo {
 
     final gf a(ft param0, int param1, int param2, boolean param3, int param4, int param5, float[] param6, int param7) {
         RuntimeException var9 = null;
-        hm var10 = null;
+        OpenGlTexture2D var10 = null;
         gf stackIn_2_0 = null;
-        hm stackIn_9_0 = null;
+        OpenGlTexture2D stackIn_9_0 = null;
         pe stackIn_11_0 = null;
-        hm stackIn_13_0 = null;
+        OpenGlTexture2D stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -1041,12 +1041,12 @@ final class kda extends eo {
               stackIn_11_0 = new pe(this, param0, param4, param7, param6, param5, param1);
               return (gf) ((Object) stackIn_11_0);
             }
-            var10 = new hm(this, param0, una.field_h, lla.a(false, param4), lla.a(false, param7));
+            var10 = new OpenGlTexture2D(this, param0, una.field_h, lla.a(false, param4), lla.a(false, param7));
             var10.a(0, param6, 0, param4, param7, param5, param1, param0, true);
             stackIn_9_0 = var10;
             return (gf) ((Object) stackIn_9_0);
           }
-          stackIn_13_0 = new hm(this, param0, param4, param7, param3, param6, param5, param1);
+          stackIn_13_0 = new OpenGlTexture2D(this, param0, param4, param7, param3, param6, param5, param1);
           return (gf) ((Object) stackIn_13_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1236,7 +1236,7 @@ final class kda extends eo {
         }
     }
 
-    final void b(boolean param0) {
+    final void applyBlendFactors(boolean param0) {
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
         if (param0) {
@@ -1382,7 +1382,7 @@ final class kda extends eo {
         }
     }
 
-    final vw e(int param0, int param1) {
+    final vw createShaderEffect(int param0, int param1) {
         int var3;
         int var4;
         dn var5;
@@ -1399,7 +1399,7 @@ final class kda extends eo {
           return (vw) ((Object) new pja(this, this.field_I, this.field_Mb));
         }
         if (var3 != 8) {
-          return super.e(param0, 115);
+          return super.createShaderEffect(param0, 115);
         }
         return (vw) ((Object) new dp(this, this.field_I, this.field_Mb));
     }
@@ -1691,7 +1691,7 @@ final class kda extends eo {
           if (!this.field_Zc) {
             jaggl.OpenGL.glLoadMatrixf(this.field_Qb.a(jba.field_k, (byte) -37), 0);
             this.field_Zc = true;
-            this.i(70);
+            this.applyLightPositions(70);
             this.g((byte) 92);
           }
           if (this.field_gb) {
@@ -1798,7 +1798,7 @@ final class kda extends eo {
         }
     }
 
-    final void i(int param0) {
+    final void applyLightPositions(int param0) {
         jaggl.OpenGL.glLightfv(16384, 4611, this.field_Gb, 0);
         int var2 = 73 / ((-11 - param0) / 56);
         jaggl.OpenGL.glLightfv(16385, 4611, this.field_M, 0);

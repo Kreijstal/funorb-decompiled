@@ -101,7 +101,7 @@ final class gqa {
     }
 
     gqa(boolean param0) {
-        this.field_i = cca.field_z;
+        this.field_i = ScrollContainer.field_z;
         this.field_d = gja.field_x;
         this.field_m = sb.field_b;
         this.field_o = ega.field_b;

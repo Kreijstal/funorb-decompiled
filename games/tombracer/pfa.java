@@ -451,7 +451,7 @@ final class pfa {
                 }
                 var2 = mt.a("arr", (byte) 127);
                 if (var2 != null) {
-                  lva.field_y = jaa.a((byte) 72, var2);
+                  PerlinNoise2D.field_y = jaa.a((byte) 72, var2);
                 }
                 var2 = mt.a("keys", (byte) 107);
                 if (null != var2) {
@@ -559,7 +559,7 @@ final class pfa {
                 }
                 var2 = mt.a("tutorial_treasureslow", (byte) 117);
                 if (null != var2) {
-                  lja.field_a = jaa.a((byte) 41, var2);
+                  PlayerContextMenu.field_a = jaa.a((byte) 41, var2);
                 }
                 var2 = mt.a("tutorial_key", (byte) 102);
                 if (var2 != null) {
@@ -567,7 +567,7 @@ final class pfa {
                 }
                 var2 = mt.a("tutorial_pushable", (byte) 114);
                 if (var2 != null) {
-                  vh.field_c = jaa.a((byte) 99, var2);
+                  WhirlpoolDigest.field_c = jaa.a((byte) 99, var2);
                 }
                 var2 = mt.a("tutorial_snakes", (byte) 113);
                 if (var2 != null) {
@@ -747,7 +747,7 @@ final class pfa {
                 }
                 var2 = mt.a("instructionTextPressurePads", (byte) 113);
                 if (null != var2) {
-                  at.field_R = jaa.a((byte) 54, var2);
+                  DisplaySettingsDialog.field_R = jaa.a((byte) 54, var2);
                 }
                 var2 = mt.a("instructionTitleRollingJonesboulders", (byte) 115);
                 if (var2 != null) {
@@ -755,7 +755,7 @@ final class pfa {
                 }
                 var2 = mt.a("instructionTextRollingJonesboulders", (byte) 127);
                 if (null != var2) {
-                  vm.field_a = jaa.a((byte) 118, var2);
+                  ViewportManager.field_a = jaa.a((byte) 118, var2);
                 }
                 var2 = mt.a("instructionTitleDiscOfDeathVendingMachines", (byte) 123);
                 if (null != var2) {
@@ -837,7 +837,7 @@ final class pfa {
             void runChunk1() throws java.lang.RuntimeException {
                 var2 = mt.a("instructionsPage1Text3", (byte) 113);
                 if (var2 != null) {
-                  mr.field_H = jaa.a((byte) 36, var2);
+                  AccountRegistrationPanel.field_H = jaa.a((byte) 36, var2);
                 }
                 var2 = mt.a("instructionsPage1Text4", (byte) 126);
                 if (var2 != null) {
@@ -1101,7 +1101,7 @@ final class pfa {
                 }
                 var2 = mt.a("weapon_flaregun", (byte) 117);
                 if (null != var2) {
-                  bfa.field_b = jaa.a((byte) 70, var2);
+                  ConsoleValue.field_b = jaa.a((byte) 70, var2);
                 }
                 var2 = mt.a("weapon_flamer", (byte) 119);
                 if (var2 != null) {
@@ -1149,7 +1149,7 @@ final class pfa {
                 }
                 var2 = mt.a("pos_3rd", (byte) 118);
                 if (var2 != null) {
-                  vh.field_b = jaa.a((byte) 58, var2);
+                  WhirlpoolDigest.field_b = jaa.a((byte) 58, var2);
                 }
                 var2 = mt.a("pos_4th", (byte) 105);
                 if (null != var2) {
@@ -1233,7 +1233,7 @@ final class pfa {
                 }
                 var2 = mt.a("msg_failedtofinish", (byte) 107);
                 if (var2 != null) {
-                  at.field_Q = jaa.a((byte) 115, var2);
+                  DisplaySettingsDialog.field_Q = jaa.a((byte) 115, var2);
                 }
                 var2 = mt.a("msg_timeup", (byte) 114);
                 if (var2 != null) {
@@ -2111,7 +2111,7 @@ final class pfa {
                 }
                 var2 = mt.a("restart_world", (byte) 102);
                 if (null != var2) {
-                  ng.field_e = jaa.a((byte) 52, var2);
+                  WidgetStyleLayer.field_e = jaa.a((byte) 52, var2);
                 }
                 var2 = mt.a("spectator_controls", (byte) 111);
                 if (var2 != null) {

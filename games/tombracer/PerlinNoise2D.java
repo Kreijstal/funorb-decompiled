@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lva extends ci {
+final class PerlinNoise2D extends ci {
     private short[] field_r;
     int field_w;
     int field_n;
@@ -17,7 +17,7 @@ final class lva extends ci {
     int field_u;
     private short[] field_q;
 
-    private final void c(int param0) {
+    private final void buildOctaves(int param0) {
         int var2;
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
@@ -106,7 +106,7 @@ final class lva extends ci {
         }
     }
 
-    final void a(int[] param0, int param1, int param2) {
+    final void fillRow(int[] param0, int param1, int param2) {
         int var7 = 0;
         RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;
@@ -240,7 +240,7 @@ final class lva extends ci {
 
     public static void releaseStatics(byte param0) {
         if (param0 >= -34) {
-          lva.releaseStatics((byte) 124);
+          PerlinNoise2D.releaseStatics((byte) 124);
         }
         field_o = null;
         field_m = null;
@@ -267,7 +267,7 @@ final class lva extends ci {
         if (param0 != 116) {
           this.b((byte) 55);
         }
-        this.c(0);
+        this.buildOctaves(0);
         for (var2 = this.field_n - 1; var2 >= 1; var2--) {
           var3 = this.field_q[var2];
           if (var3 <= 8 &&
@@ -286,7 +286,7 @@ final class lva extends ci {
           this.field_q = (short[]) null;
         }
         if (this.field_i.field_d) {
-          this.a(var4, param0 - 2, param1);
+          this.fillRow(var4, param0 - 2, param1);
         }
         return var4;
     }
@@ -299,9 +299,9 @@ final class lva extends ci {
         }
         try {
           var4_int = param1;
-          var5 = po.a(param2, var4_int, param1, (byte) -65, param0);
-          lva.a(param0, param1, -1 + var5, param3);
-          lva.a(param0, 1 + var5, param2, param3 + 0);
+          var5 = CachedTextLayout.a(param2, var4_int, param1, (byte) -65, param0);
+          PerlinNoise2D.a(param0, param1, -1 + var5, param3);
+          PerlinNoise2D.a(param0, 1 + var5, param2, param3 + 0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "lva.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -416,7 +416,7 @@ final class lva extends ci {
         return var16 + (param2 * (-var16 + var17) >> 12);
     }
 
-    public lva() {
+    public PerlinNoise2D() {
         super(0, true);
         this.field_s = true;
         this.field_z = 0;

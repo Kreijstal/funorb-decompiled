@@ -136,7 +136,7 @@ final class fn extends vw {
         this.field_c.e(1, false);
         this.field_c.a(PlatformComponent.field_F, (byte) -110, jv.field_m);
         this.field_c.a(ej.field_c, 0, -6219, true, false);
-        this.field_c.a(0, false, lja.field_j);
+        this.field_c.a(0, false, PlayerContextMenu.field_j);
         this.field_c.a(0, (byte) 77);
         this.field_c.e(0, false);
         this.field_c.g(3625, -16777216);

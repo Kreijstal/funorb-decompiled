@@ -4226,7 +4226,7 @@ final class ww extends ka {
                     var46 = ((float)var40 * var76[0] + (float)var41 * var76[1] + (float)var42 * var76[2]) / var43;
                     var47 = ((float)var40 * var76[3] + (float)var41 * var76[4] + (float)var42 * var76[5]) / var44;
                     var48 = ((float)var40 * var76[6] + (float)var41 * var76[7] + (float)var42 * var76[8]) / var45;
-                    var21Lifetime1 = mr.a(var48, var47, false, var46);
+                    var21Lifetime1 = AccountRegistrationPanel.a(var48, var47, false, var46);
                     as.a(var27, var75, this.field_rb[var23], var26, var33, var28, var32, this.field_xb[var23], var21Lifetime1, this.field_T[var23], -94, var31, var30, var76);
                     var19[0] = var75[0];
                     var20[0] = var75[1];

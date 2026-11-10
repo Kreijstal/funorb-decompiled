@@ -369,7 +369,7 @@ class FocusableWidget extends UiWidget {
           FocusableWidget.a(14);
           return;
         }
-        ((tsa) (this.field_h)).a(param0, param2, this, param1, (byte) 115);
+        ((tsa) (this.field_h)).onButtonActivated(param0, param2, this, param1, (byte) 115);
         if (param3 <= -40) {
           return;
         }

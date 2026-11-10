@@ -15,7 +15,7 @@ abstract class paa extends WidgetContainer implements mk {
         }
         try {
           lu.field_b = param0;
-          hka.field_b = new lja(param6, param3, param2, param8, param1, param7, param5);
+          hka.field_b = new PlayerContextMenu(param6, param3, param2, param8, param1, param7, param5);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "paa.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }

@@ -16,7 +16,7 @@ final class ow extends wv {
         if (null == SecondaryNodeDequeIterator.field_a) {
           return;
         }
-        if (!vpa.a(54)) {
+        if (!TextWidgetPainter.a(54)) {
           if (!SecondaryNodeDequeIterator.field_a.field_D) {
             this.a(22174, IntrusiveDequeCursor.field_e);
           } else {

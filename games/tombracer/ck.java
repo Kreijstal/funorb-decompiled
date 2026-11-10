@@ -120,8 +120,8 @@ final class ck {
           var15 = bsa.field_j.field_vb;
           bsa.field_j.field_vb.field_bb = 1;
           var15.field_z = 1;
-          lva.field_t = new jea(0L, Corpse.field_i);
-          lva.field_t.field_z = 1;
+          PerlinNoise2D.field_t = new jea(0L, Corpse.field_i);
+          PerlinNoise2D.field_t.field_z = 1;
           st.field_j = new jea(0L, ssa.field_g, S2CActionPacket.field_g.toUpperCase());
           ap.field_a = new jea(0L, uda.field_s, tha.field_B.toUpperCase());
           db.field_s = new jea(0L, CommonChooseReward.field_c);
@@ -188,7 +188,7 @@ final class ck {
             lk.field_l.b(-122, RopeBridgeComponent.field_F);
           }
           lk.field_l.b(-124, tn.field_n);
-          bc.field_b = new jea(0L, ssa.field_g, jja.field_k.toUpperCase());
+          bc.field_b = new jea(0L, ssa.field_g, OpenGlSprite.field_k.toUpperCase());
           wf.field_g = new jea(0L, uda.field_s);
           C2SSubmitSettingsPacket.field_g = new jea(0L, CommonChooseReward.field_c);
           qna.field_b = new jea(0L, KeyLockBehaviour.field_r, DoorwayComponent.field_G.toUpperCase());

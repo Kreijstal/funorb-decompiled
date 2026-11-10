@@ -121,7 +121,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 104, "mu_chat_off");
                 if (var2 != null) {
-                  hm.field_m = jaa.a((byte) 81, var2);
+                  OpenGlTexture2D.field_m = jaa.a((byte) 81, var2);
                 }
                 var2 = dn.a((byte) 107, "mu_chat_lobby");
                 if (null != var2) {
@@ -625,7 +625,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -69, "you_can_join");
                 if (null != var2) {
-                  kba.field_k = jaa.a((byte) 103, var2);
+                  OpenGlRenderbuffer.field_k = jaa.a((byte) 103, var2);
                 }
                 var2 = dn.a((byte) 116, "you_can_ask_to_join");
                 if (null != var2) {
@@ -633,7 +633,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 105, "you_cannot_join_in_progress");
                 if (var2 != null) {
-                  lva.field_v = jaa.a((byte) 72, var2);
+                  PerlinNoise2D.field_v = jaa.a((byte) 72, var2);
                 }
                 var2 = dn.a((byte) -65, "you_can_spectate");
                 if (null != var2) {
@@ -1323,7 +1323,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 113, "year");
                 if (var2 != null) {
-                  rla.field_y = jaa.a((byte) 49, var2);
+                  DropdownList.field_y = jaa.a((byte) 49, var2);
                 }
                 var2 = dn.a((byte) 118, "monthnames,0");
                 if (null != var2) {
@@ -1451,7 +1451,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -54, "create_optin_news");
                 if (var2 != null) {
-                  jja.field_l = jaa.a((byte) 37, var2);
+                  OpenGlSprite.field_l = jaa.a((byte) 37, var2);
                 }
                 var2 = dn.a((byte) -111, "create_agreeterms");
                 if (var2 != null) {
@@ -1655,7 +1655,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -24, "create_account_success");
                 if (null != var2) {
-                  jo.field_K = jaa.a((byte) 102, var2);
+                  ScrollControlWidget.field_K = jaa.a((byte) 102, var2);
                 }
                 var2 = dn.a((byte) -104, "invalid_name");
                 if (null != var2) {
@@ -2081,7 +2081,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -95, "returntolobby");
                 if (null != var2) {
-                  jja.field_k = jaa.a((byte) 62, var2);
+                  OpenGlSprite.field_k = jaa.a((byte) 62, var2);
                 }
                 var2 = dn.a((byte) -54, "cont");
                 if (var2 != null) {
@@ -2305,7 +2305,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 121, "hs_score");
                 if (null != var2) {
-                  lc.field_L = jaa.a((byte) 113, var2);
+                  ContentTransitionDialog.field_L = jaa.a((byte) 113, var2);
                 }
                 var2 = dn.a((byte) 125, "hs_end");
                 if (var2 != null) {
@@ -2449,7 +2449,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 111, "click_to_quickchat");
                 if (null != var2) {
-                  lva.field_o = jaa.a((byte) 56, var2);
+                  PerlinNoise2D.field_o = jaa.a((byte) 56, var2);
                 }
                 var2 = dn.a((byte) -118, "autorespond");
                 if (var2 != null) {
@@ -2791,7 +2791,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -102, "graphics_config_done");
                 if (var2 != null) {
-                  po.field_i = jaa.a((byte) 33, var2);
+                  CachedTextLayout.field_i = jaa.a((byte) 33, var2);
                 }
                 var2 = dn.a((byte) 106, "graphics_config_apply");
                 if (var2 != null) {

@@ -78,7 +78,7 @@ final class sl extends vw {
         this.field_c.a(gq.field_u, (byte) 0);
         this.field_c.e(1, false);
         this.field_c.a(PlatformComponent.field_F, (byte) -110, r.field_m);
-        this.field_c.a(lja.field_j, 2, -6219, true, false);
+        this.field_c.a(PlayerContextMenu.field_j, 2, -6219, true, false);
         this.field_c.a(0, false, tla.field_c);
         asa var4_ref_asa = this.field_c.C(0);
         var4_ref_asa.a(1217, this.field_c.c(true));

@@ -34,7 +34,7 @@ abstract class rra {
           var1 = 103 % ((12 - param0) / 39);
           if (fua.field_b != null) {
             try {
-              fua.field_b.a((byte) 27, 0L);
+              fua.field_b.seek((byte) 27, 0L);
               fua.field_b.a(vc.field_q.payload, vc.field_q.position, (byte) -17, 24);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

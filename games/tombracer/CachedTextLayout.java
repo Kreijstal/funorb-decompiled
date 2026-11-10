@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class po extends TextLayout {
+final class CachedTextLayout extends TextLayout {
     static String field_i;
     private int field_f;
     private boolean field_h;
@@ -218,7 +218,7 @@ final class po extends TextLayout {
           this.field_k = param3;
           this.field_h = true;
           this.field_j = param1;
-          var8 = this.a(param1, 0, param3, param2);
+          var8 = this.createSingleLine(param1, 0, param3, param2);
           var9 = var8;
           var9.field_c[param0] = param4 - param1.b(param3);
           var9.field_c[param3.length()] = param4;
@@ -228,7 +228,7 @@ final class po extends TextLayout {
         }
     }
 
-    private final kha a(BitmapFont param0, int param1, String param2, int param3) {
+    private final kha createSingleLine(BitmapFont param0, int param1, String param2, int param3) {
         kha var5 = null;
         RuntimeException var5_ref = null;
         String var6 = null;
@@ -289,7 +289,7 @@ final class po extends TextLayout {
           this.field_j = param2;
           this.field_h = true;
           this.field_m = 1;
-          var7 = this.a(param2, 0, param3, param0);
+          var7 = this.createSingleLine(param2, 0, param3, param0);
           var8 = param2.b(param3);
           var7.field_c[0] = param1 - (var8 >> 1);
           var7.field_c[param3.length()] = (var8 >> 1) + param1;
@@ -312,7 +312,7 @@ final class po extends TextLayout {
         this.field_h = true;
         this.field_k = param3;
         this.field_m = 0;
-        kha var7 = this.a(param2, 0, param3, param1);
+        kha var7 = this.createSingleLine(param2, 0, param3, param1);
         kha var8 = var7;
         var7.field_c[0] = param4;
         var8.field_c[param3.length()] = param2.b(param3) + param4;
@@ -334,7 +334,7 @@ final class po extends TextLayout {
         field_l = null;
     }
 
-    public po() {
+    public CachedTextLayout() {
     }
 
     static {

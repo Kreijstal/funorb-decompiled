@@ -4,16 +4,16 @@
 final class vr extends ela {
     static boolean field_o;
 
-    final bfa a(bfa[] param0, int param1) {
+    final ConsoleValue a(ConsoleValue[] param0, int param1) {
         RuntimeException var3 = null;
-        bfa stackIn_1_0 = null;
+        ConsoleValue stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          jk.a(param0[param1].c(-178), 0);
-          stackIn_1_0 = new bfa("void");
+          jk.a(param0[param1].asInt(-178), 0);
+          stackIn_1_0 = new ConsoleValue("void");
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

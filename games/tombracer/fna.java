@@ -42,10 +42,10 @@ final class fna {
         ToolkitSprite var2;
         int var3;
         if (this.field_g == 5) {
-          return ng.field_k[5].c() / 2 + this.field_d;
+          return WidgetStyleLayer.field_k[5].c() / 2 + this.field_d;
         }
         if (this.field_g == 6) {
-          return ng.field_k[5].c() / 2 + this.field_d;
+          return WidgetStyleLayer.field_k[5].c() / 2 + this.field_d;
         }
         if (param0 != 11919) {
           field_k = (String) null;
@@ -235,7 +235,7 @@ final class fna {
             var18 = 300;
             var19 = 120;
             if (39 == this.field_g) {
-              ng.field_k[4].a(-89 + this.field_b, -16 + (-(var19 >> 1) + var9), var18, var19, 0, -4144960, 1);
+              WidgetStyleLayer.field_k[4].a(-89 + this.field_b, -16 + (-(var19 >> 1) + var9), var18, var19, 0, -4144960, 1);
               oka.a(bc.field_a, var5, var6, -1, var9 + (-(var19 >> 1) + 25), -94 + (var18 >> 1) + this.field_b, var15);
             }
             var26 = tga.field_a;
@@ -273,7 +273,7 @@ final class fna {
           var18Lifetime2 = 300;
           var19Lifetime2 = 120;
           if (this.field_g == 36) {
-            ng.field_k[5].a(-63 + this.field_b, var9 - (var19Lifetime2 >> 1) - 16, var18Lifetime2, var19Lifetime2, 0, -4144960, 1);
+            WidgetStyleLayer.field_k[5].a(-63 + this.field_b, var9 - (var19Lifetime2 >> 1) - 16, var18Lifetime2, var19Lifetime2, 0, -4144960, 1);
             oka.a(dna.field_I, var5, var6, -1, 25 + (-(var19Lifetime2 >> 1) + var9), -65 + (this.field_b + (var18Lifetime2 >> 1)), var15);
           }
           var29 = tga.field_a;
@@ -314,7 +314,7 @@ final class fna {
         var18Lifetime1 = 300;
         var19Lifetime1 = 100;
         if (this.field_g == 5) {
-          ng.field_k[5].a(this.field_b + (-(var18Lifetime1 >> 1) + 10), var9 - (var19Lifetime1 >> 1) + 13, var18Lifetime1, var19Lifetime1, 0, -4144960, 1);
+          WidgetStyleLayer.field_k[5].a(this.field_b + (-(var18Lifetime1 >> 1) + 10), var9 - (var19Lifetime1 >> 1) + 13, var18Lifetime1, var19Lifetime1, 0, -4144960, 1);
         }
         oka.a(this.field_e, var5, var6, param2 - 2, var9, -64 + this.field_b, var15);
         if (this.field_g != 5) {
@@ -470,12 +470,12 @@ final class fna {
           return ConstantEffectBehaviour.field_q;
         }
         if (this.field_g == 3) {
-          return ij.field_X;
+          return MessageDialog.field_X;
         }
         if (param0 != -28425) {
           fna.a(-43, -1, false, true, false, -66, -12, 75, false, -21, 73, false, -95, 84);
         }
-        return this.field_l ? em.field_h[this.field_f] : ng.field_k[this.field_f];
+        return this.field_l ? em.field_h[this.field_f] : WidgetStyleLayer.field_k[this.field_f];
     }
 
     fna(int param0, String param1, int param2, boolean param3) {

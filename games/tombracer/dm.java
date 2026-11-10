@@ -49,7 +49,7 @@ final class dm implements eja {
         this.field_f = this.field_c;
     }
 
-    public final jaclib.memory.Buffer a(boolean param0, byte param1) {
+    public final jaclib.memory.Buffer map(boolean param0, byte param1) {
         if (this.field_d == null) {
           return null;
         }

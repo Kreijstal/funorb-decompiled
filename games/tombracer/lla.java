@@ -13,7 +13,7 @@ final class lla {
         qh.field_F.a(-82 + (-io.field_a + (dqa.field_e.field_G - 2)), 18, param2 ^ -23756, 2 + di.field_a, 0);
         Puddle.field_v.a(82 + io.field_a, 18, -23776, 2 + di.field_a, -80 + (dqa.field_e.field_G - io.field_a - 2));
         dn.field_b.a(io.field_a, 20, -128, 0, di.field_a + 2 + 20, 2, -20 + (-2 + (dqa.field_e.field_t - di.field_a)), dqa.field_e.field_G);
-        jja.field_j.a(param2, io.field_a, 0, 2);
+        OpenGlSprite.field_j.a(param2, io.field_a, 0, 2);
     }
 
     lla(String param0, jea param1) {
@@ -21,7 +21,7 @@ final class lla {
         jea[] var4 = null;
         try {
           var3 = new String[]{param0, nga.field_o, of.field_a};
-          var4 = new jea[]{param1, dqa.field_e, (jea) ((Object) jja.field_j)};
+          var4 = new jea[]{param1, dqa.field_e, (jea) ((Object) OpenGlSprite.field_j)};
           this.field_a = new bv(0L, Effect.field_a, var3, CachedArchiveSource.field_d, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "lla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');

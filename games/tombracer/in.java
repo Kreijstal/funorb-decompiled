@@ -12,8 +12,8 @@ final class in {
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
         if (param0 == -30600) {
-          if (wla.field_ub <= 0) {
-            if (vpa.a(9)) {
+          if (ReportAbuseDialog.field_ub <= 0) {
+            if (TextWidgetPainter.a(9)) {
               var2 = 0;
             } else {
               var2 = 1;
@@ -44,8 +44,8 @@ final class in {
           }
         } else {
           in.a(118, false);
-          if (wla.field_ub <= 0) {
-            if (vpa.a(9)) {
+          if (ReportAbuseDialog.field_ub <= 0) {
+            if (TextWidgetPainter.a(9)) {
               var2 = 0;
               if (wba.field_o == null &&
                 foa.field_b) {

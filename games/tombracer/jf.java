@@ -42,9 +42,9 @@ final class jf extends ela {
         field_s = null;
     }
 
-    final bfa a(bfa[] param0, int param1) {
+    final ConsoleValue a(ConsoleValue[] param0, int param1) {
         RuntimeException var3 = null;
-        bfa stackIn_3_0 = null;
+        ConsoleValue stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -53,7 +53,7 @@ final class jf extends ela {
           if (param1 != 0) {
             field_p = (dk[]) null;
           }
-          stackIn_3_0 = new bfa(sra.a((String) (param0[0].field_d), 85));
+          stackIn_3_0 = new ConsoleValue(sra.a((String) (param0[0].field_d), 85));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

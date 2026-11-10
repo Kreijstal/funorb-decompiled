@@ -42,9 +42,9 @@ final class gj {
         jea var6 = null;
         jea var7 = null;
         try {
-          bfa.field_e = nia.a(param0, "basic", "display_name_changed", 121);
+          ConsoleValue.field_e = nia.a(param0, "basic", "display_name_changed", 121);
           dn.field_b = new hla(0L, aaa.field_d, kea.field_a, ai.field_d);
-          jja.field_j = new hla(0L, aaa.field_d, dj.field_a, uma.field_a);
+          OpenGlSprite.field_j = new hla(0L, aaa.field_d, dj.field_a, uma.field_a);
           dqa.field_e = new jea(0L, (jea) null);
           is.field_yb = new jea(0L, Corpse.field_i);
           is.field_yb.field_z = 1;
@@ -67,11 +67,11 @@ final class gj {
           var6 = dn.field_b.field_vb.field_vb;
           var7 = var6;
           var7.field_z = 1;
-          stackIn_7_0 = jja.field_j.field_vb.field_vb;
+          stackIn_7_0 = OpenGlSprite.field_j.field_vb.field_vb;
           stackIn_8_1 = !(param1);
           ((jea) (Object) stackIn_7_0).a(stackIn_8_1, Corpse.field_i);
-          jja.field_j.field_vb.field_vb.field_bb = 1;
-          var3 = jja.field_j.field_vb.field_vb;
+          OpenGlSprite.field_j.field_vb.field_vb.field_bb = 1;
+          var3 = OpenGlSprite.field_j.field_vb.field_vb;
           var3.field_z = 1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

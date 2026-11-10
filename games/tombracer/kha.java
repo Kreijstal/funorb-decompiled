@@ -71,7 +71,7 @@ final class kha {
         AsyncRequest var11 = null;
         var9 = TombRacer.field_G ? 1 : 0;
         try {
-          if (!param0.a((byte) 69)) {
+          if (!param0.isFullscreenAvailable((byte) 69)) {
             stackIn_3_0 = null;
             return (java.awt.Frame) (stackIn_3_0);
           }

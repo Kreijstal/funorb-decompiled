@@ -142,10 +142,10 @@ final class IntrusiveDeque {
         int var14 = 0;
         int var15 = 0;
         String var16 = null;
-        lja var17 = null;
+        PlayerContextMenu var17 = null;
         String var18 = null;
         int var19 = 0;
-        lja var17Lifetime1;
+        PlayerContextMenu var17Lifetime1;
         String var18Lifetime1;
         var19 = TombRacer.field_G ? 1 : 0;
         try {
@@ -216,10 +216,10 @@ final class IntrusiveDeque {
                   var12 = 0;
                   if (null != var7.field_vb &&
                     !var7.field_vb.equals("")) {
-                    var7.field_zb.field_R = bfa.field_e;
+                    var7.field_zb.field_R = ConsoleValue.field_e;
                     var7.field_zb.field_ab = var11;
                     var12 = 1;
-                    var7.field_zb.a(3 + bfa.field_e.field_n, di.field_a, -23776, var9, 0);
+                    var7.field_zb.a(3 + ConsoleValue.field_e.field_n, di.field_a, -23776, var9, 0);
                   }
                   var7.field_Ab.field_gb = var11;
                   var7.field_xb.field_gb = var11;
@@ -232,7 +232,7 @@ final class IntrusiveDeque {
                   var13 = 0;
                   var14 = var7.field_G - 80 - 2;
                   if (var12 != 0) {
-                    var13 = 3 + bfa.field_e.field_n;
+                    var13 = 3 + ConsoleValue.field_e.field_n;
                     var14 = var14 - var13;
                   }
                   stackIn_46_0 = var7.field_xb;

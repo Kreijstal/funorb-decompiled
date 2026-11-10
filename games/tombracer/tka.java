@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tka extends vpa {
+final class tka extends TextWidgetPainter {
     private IndexedSprite[] field_o;
     static volatile int field_n;
     static ToolkitSprite field_p;

@@ -14,15 +14,15 @@ final class BoulderComponent extends PathMoverComponent {
 
     final static void b(int param0, int param1, boolean param2) {
         mu var3 = null;
-        lja var4 = null;
+        PlayerContextMenu var4 = null;
         String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
         mu var3Lifetime1;
-        lja var4Lifetime1;
+        PlayerContextMenu var4Lifetime1;
         String var5_ref_StringLifetime1;
-        lja var4Lifetime2;
-        lja var4Lifetime1Lifetime1;
+        PlayerContextMenu var4Lifetime2;
+        PlayerContextMenu var4Lifetime1Lifetime1;
         int var5Lifetime1;
         int var6Lifetime1;
         if (param1 < -76) {
@@ -131,12 +131,12 @@ final class BoulderComponent extends PathMoverComponent {
           ksa.field_p = tka.field_n;
           jba.field_j = ena.field_n;
           GridWidgetContainer.field_B = ee.field_a;
-          qma.field_c = lja.field_c;
-          lja.field_c = false;
-          hf.field_b = at.field_X;
+          qma.field_c = PlayerContextMenu.field_c;
+          PlayerContextMenu.field_c = false;
+          hf.field_b = DisplaySettingsDialog.field_X;
           PasswordValidator.field_m = cr.field_d;
           lba.field_p = TestModel.field_m;
-          at.field_X = 0;
+          DisplaySettingsDialog.field_X = 0;
         }
     }
 

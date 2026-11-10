@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hm extends OpenGlTexture implements gf {
+final class OpenGlTexture2D extends OpenGlTexture implements gf {
     static String field_m;
     private int field_l;
     static ResourceArchive field_n;
     private int field_k;
 
-    public final float a(float param0, byte param1) {
+    public final float textureV(float param0, byte param1) {
         if (param1 != -33) {
           return -0.828248143196106f;
         }
         return param0 / (float)this.field_k;
     }
 
-    hm(kda param0, ft param1, una param2, int param3, int param4) {
+    OpenGlTexture2D(kda param0, ft param1, una param2, int param3, int param4) {
         super(param0, 3553, param1, param2, param4 * param3, false);
         try {
           this.field_k = param3;
@@ -61,7 +61,7 @@ final class hm extends OpenGlTexture implements gf {
         return this.field_l;
     }
 
-    hm(kda param0, ft param1, int param2, int param3, boolean param4, byte[] param5, int param6, int param7) {
+    OpenGlTexture2D(kda param0, ft param1, int param2, int param3, boolean param4, byte[] param5, int param6, int param7) {
         super(param0, 3553, param1, una.field_g, param3 * param2, param4);
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -138,24 +138,24 @@ final class hm extends OpenGlTexture implements gf {
         TripBeamBehaviour.field_y = null;
         Room.field_j = null;
         lm.field_m = null;
-        po.field_l = null;
+        CachedTextLayout.field_l = null;
         pq.field_a = null;
         ik.field_h = null;
         bd.field_i = null;
         uta.field_d = null;
-        ng.field_b = null;
+        WidgetStyleLayer.field_b = null;
         em.field_h = null;
         qf.field_k = null;
         Room.field_p = (ToolkitSprite[][]) null;
         dn.field_d = null;
-        ng.field_k = null;
+        WidgetStyleLayer.field_k = null;
         ega.field_e = null;
         vua.field_A = null;
         ArchiveSource.field_a = null;
-        ij.field_X = null;
+        MessageDialog.field_X = null;
         fa.field_a = null;
         PlayerProfile.field_r = null;
-        lva.field_m = null;
+        PerlinNoise2D.field_m = null;
         WhiteLightShooterComponent.field_K = null;
         aq.field_a = null;
         je.field_E = null;
@@ -172,7 +172,7 @@ final class hm extends OpenGlTexture implements gf {
         System.gc();
     }
 
-    hm(kda param0, int param1, int param2, boolean param3, int[] param4, int param5, int param6) {
+    OpenGlTexture2D(kda param0, int param1, int param2, boolean param3, int[] param4, int param5, int param6) {
         super(param0, 3553, SwitchableId.field_a, una.field_g, param1 * param2, param3);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -226,7 +226,7 @@ final class hm extends OpenGlTexture implements gf {
         this.a(-2, (byte) 55, 95, (byte[]) null, -118, 102, (ft) null, -23, 82);
     }
 
-    hm(kda param0, ft param1, int param2, int param3, boolean param4, float[] param5, int param6, int param7) {
+    OpenGlTexture2D(kda param0, ft param1, int param2, int param3, boolean param4, float[] param5, int param6, int param7) {
         super(param0, 3553, param1, una.field_h, param2 * param3, param4);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -410,7 +410,7 @@ final class hm extends OpenGlTexture implements gf {
               param8 = param8 - param3;
               param7 = param7 - param4;
               if (param1 != -15) {
-                hm.releaseStatics((byte) 96);
+                OpenGlTexture2D.releaseStatics((byte) 96);
               }
               param6 = param6 - param3;
               if (var11 != 0) {
@@ -453,7 +453,7 @@ final class hm extends OpenGlTexture implements gf {
               param8 = param8 - param3;
               param7 = param7 - param4;
               if (param1 != -15) {
-                hm.releaseStatics((byte) 96);
+                OpenGlTexture2D.releaseStatics((byte) 96);
               }
               param6 = param6 - param3;
               if (var11Lifetime4 != 0) {
@@ -496,7 +496,7 @@ final class hm extends OpenGlTexture implements gf {
               param8 = param8 - param3;
               param7 = param7 - param4;
               if (param1 != -15) {
-                hm.releaseStatics((byte) 96);
+                OpenGlTexture2D.releaseStatics((byte) 96);
               }
               param6 = param6 - param3;
               if (var11Lifetime5 != 0) {
@@ -539,7 +539,7 @@ final class hm extends OpenGlTexture implements gf {
               param8 = param8 - param3;
               param7 = param7 - param4;
               if (param1 != -15) {
-                hm.releaseStatics((byte) 96);
+                OpenGlTexture2D.releaseStatics((byte) 96);
               }
               param6 = param6 - param3;
               if (var11Lifetime6 != 0) {
@@ -582,7 +582,7 @@ final class hm extends OpenGlTexture implements gf {
               param8 = param8 - param3;
               param7 = param7 - param4;
               if (param1 != -15) {
-                hm.releaseStatics((byte) 96);
+                OpenGlTexture2D.releaseStatics((byte) 96);
               }
               param6 = param6 - param3;
               if (var11Lifetime7 != 0) {
@@ -625,7 +625,7 @@ final class hm extends OpenGlTexture implements gf {
               param8 = param8 - param3;
               param7 = param7 - param4;
               if (param1 != -15) {
-                hm.releaseStatics((byte) 96);
+                OpenGlTexture2D.releaseStatics((byte) 96);
               }
               param6 = param6 - param3;
               if (var11Lifetime8 != 0) {
@@ -668,7 +668,7 @@ final class hm extends OpenGlTexture implements gf {
               param8 = param8 - param3;
               param7 = param7 - param4;
               if (param1 != -15) {
-                hm.releaseStatics((byte) 96);
+                OpenGlTexture2D.releaseStatics((byte) 96);
               }
               param6 = param6 - param3;
               if (var11Lifetime9 != 0) {
@@ -713,7 +713,7 @@ final class hm extends OpenGlTexture implements gf {
             param8 = param8 - param3;
             param7 = param7 - param4;
             if (param1 != -15) {
-              hm.releaseStatics((byte) 96);
+              OpenGlTexture2D.releaseStatics((byte) 96);
             }
             param6 = param6 - param3;
             if (var11Lifetime10 != 0) {
@@ -766,7 +766,7 @@ final class hm extends OpenGlTexture implements gf {
               param8 = param8 - param3;
               param7 = param7 - param4;
               if (param1 != -15) {
-                hm.releaseStatics((byte) 96);
+                OpenGlTexture2D.releaseStatics((byte) 96);
               }
               param6 = param6 - param3;
               if (var11Lifetime1 != 0) {
@@ -809,7 +809,7 @@ final class hm extends OpenGlTexture implements gf {
               param8 = param8 - param3;
               param7 = param7 - param4;
               if (param1 != -15) {
-                hm.releaseStatics((byte) 96);
+                OpenGlTexture2D.releaseStatics((byte) 96);
               }
               param6 = param6 - param3;
               if (var11Lifetime1Lifetime1 != 0) {
@@ -852,7 +852,7 @@ final class hm extends OpenGlTexture implements gf {
               param8 = param8 - param3;
               param7 = param7 - param4;
               if (param1 != -15) {
-                hm.releaseStatics((byte) 96);
+                OpenGlTexture2D.releaseStatics((byte) 96);
               }
               param6 = param6 - param3;
               if (var11Lifetime1Lifetime2 != 0) {
@@ -895,7 +895,7 @@ final class hm extends OpenGlTexture implements gf {
               param8 = param8 - param3;
               param7 = param7 - param4;
               if (param1 != -15) {
-                hm.releaseStatics((byte) 96);
+                OpenGlTexture2D.releaseStatics((byte) 96);
               }
               param6 = param6 - param3;
               if (var11Lifetime1Lifetime3 != 0) {
@@ -938,7 +938,7 @@ final class hm extends OpenGlTexture implements gf {
               param8 = param8 - param3;
               param7 = param7 - param4;
               if (param1 != -15) {
-                hm.releaseStatics((byte) 96);
+                OpenGlTexture2D.releaseStatics((byte) 96);
               }
               param6 = param6 - param3;
               if (var11Lifetime1Lifetime4 != 0) {
@@ -981,7 +981,7 @@ final class hm extends OpenGlTexture implements gf {
               param8 = param8 - param3;
               param7 = param7 - param4;
               if (param1 != -15) {
-                hm.releaseStatics((byte) 96);
+                OpenGlTexture2D.releaseStatics((byte) 96);
               }
               param6 = param6 - param3;
               if (var11Lifetime1Lifetime5 != 0) {
@@ -1024,7 +1024,7 @@ final class hm extends OpenGlTexture implements gf {
               param8 = param8 - param3;
               param7 = param7 - param4;
               if (param1 != -15) {
-                hm.releaseStatics((byte) 96);
+                OpenGlTexture2D.releaseStatics((byte) 96);
               }
               param6 = param6 - param3;
               if (var11Lifetime1Lifetime6 != 0) {
@@ -1069,7 +1069,7 @@ final class hm extends OpenGlTexture implements gf {
             param8 = param8 - param3;
             param7 = param7 - param4;
             if (param1 != -15) {
-              hm.releaseStatics((byte) 96);
+              OpenGlTexture2D.releaseStatics((byte) 96);
             }
             param6 = param6 - param3;
             if (var11Lifetime1Lifetime7 != 0) {
@@ -1139,7 +1139,7 @@ final class hm extends OpenGlTexture implements gf {
               param8 = param8 - param3;
               param7 = param7 - param4;
               if (param1 != -15) {
-                hm.releaseStatics((byte) 96);
+                OpenGlTexture2D.releaseStatics((byte) 96);
               }
               param6 = param6 - param3;
               if (var11Lifetime2 != 0) {
@@ -1201,7 +1201,7 @@ final class hm extends OpenGlTexture implements gf {
         param8 = param8 - param3;
         param7 = param7 - param4;
         if (param1 != -15) {
-          hm.releaseStatics((byte) 96);
+          OpenGlTexture2D.releaseStatics((byte) 96);
         }
         param6 = param6 - param3;
         if (var11Lifetime3 != 0) {
@@ -1227,9 +1227,9 @@ final class hm extends OpenGlTexture implements gf {
         }
     }
 
-    public final float a(int param0, float param1) {
+    public final float textureU(int param0, float param1) {
         if (param0 <= 60) {
-          hm.releaseStatics((byte) -22);
+          OpenGlTexture2D.releaseStatics((byte) -22);
           return param1 / (float)this.field_l;
         }
         return param1 / (float)this.field_l;

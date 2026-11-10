@@ -5,9 +5,9 @@ final class ak extends ela {
     static int[] field_p;
     static Object field_o;
 
-    final bfa a(bfa[] param0, int param1) {
+    final ConsoleValue a(ConsoleValue[] param0, int param1) {
         RuntimeException var3 = null;
-        bfa stackIn_3_0 = null;
+        ConsoleValue stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -16,7 +16,7 @@ final class ak extends ela {
           if (param1 != 0) {
             field_o = (Object) null;
           }
-          stackIn_3_0 = new bfa(FontMetrics.a(true, (String) (param0[0].field_d)));
+          stackIn_3_0 = new ConsoleValue(FontMetrics.a(true, (String) (param0[0].field_d)));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

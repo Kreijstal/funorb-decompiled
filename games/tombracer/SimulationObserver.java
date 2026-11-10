@@ -33,7 +33,7 @@ abstract class SimulationObserver {
           if (ab.a(var8, param4.field_d, var8 + param3, param4.field_k, param0 + var7_int, var7_int, 112)) {
             var9 = 0;
           } else {
-            var9 = hm.a(param4.field_a, (byte) -15, var7_int, var7_int + param0, var8 + param3, param1, param4.field_e, param4.field_k, param4.field_d, var8);
+            var9 = OpenGlTexture2D.a(param4.field_a, (byte) -15, var7_int, var7_int + param0, var8 + param3, param1, param4.field_e, param4.field_k, param4.field_d, var8);
             if (var9 < -1) {
               System.out.println("Uh oh, collide.lineseg_box returned " + var9);
               System.out.println("collide.lineseg_box(" + param4.field_d + ", " + param4.field_k + ", " + param4.field_e + ", " + param4.field_a + ", " + var7_int + ", " + var8 + ", " + (param0 + var7_int) + ", " + (var8 + param3) + ", " + param1 + ")");

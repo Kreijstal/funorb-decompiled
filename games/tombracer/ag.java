@@ -34,7 +34,7 @@ final class ag implements iq {
         try {
           oga.a(param2);
           ej.field_a.e(true);
-          vn.field_b = new LoginForm(jo.field_E, (String) null, jf.field_r, param1, param0);
+          vn.field_b = new LoginForm(ScrollControlWidget.field_E, (String) null, jf.field_r, param1, param0);
           um.field_l = new mpa(ej.field_a, vn.field_b);
           ej.field_a.c(um.field_l, 114);
         } catch (RuntimeException runtimeException) {

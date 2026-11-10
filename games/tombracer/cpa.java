@@ -35,16 +35,16 @@ final class cpa extends qe {
         jaggl.OpenGL.glRotatef(22.5f, 1.0f, 0.0f, 0.0f);
         jaggl.OpenGL.glMatrixMode(5888);
         if (!this.field_c) {
-          this.field_a.b(7681, param0 + 9035, 8448);
-          this.field_a.c(0, 0, 34168, 768);
+          this.field_a.setTextureCombineOperations(7681, param0 + 9035, 8448);
+          this.field_a.setTextureCombineOperands(0, 0, 34168, 768);
           this.field_a.e(2, true);
-          this.field_a.b(260, param0 ^ -9035, 7681);
-          this.field_a.c(0, 0, 34168, 768);
-          this.field_a.c(1, 0, 34168, 770);
+          this.field_a.setTextureCombineOperations(260, param0 ^ -9035, 7681);
+          this.field_a.setTextureCombineOperands(0, 0, 34168, 768);
+          this.field_a.setTextureCombineOperands(1, 0, 34168, 770);
           this.field_a.b(34167, param0 + 78, 0, 770);
         } else {
-          this.field_a.b(260, 8960, 7681);
-          this.field_a.c(0, 0, 5890, 770);
+          this.field_a.setTextureCombineOperations(260, 8960, 7681);
+          this.field_a.setTextureCombineOperands(0, 0, 5890, 770);
           this.field_a.b(34167, 3, 0, 770);
         }
         this.field_a.e(0, true);
@@ -58,16 +58,16 @@ final class cpa extends qe {
         jaggl.OpenGL.glLoadIdentity();
         jaggl.OpenGL.glMatrixMode(5888);
         if (!this.field_c) {
-          this.field_a.b(8448, param0 + 9035, 8448);
-          this.field_a.c(0, 0, 5890, 768);
+          this.field_a.setTextureCombineOperations(8448, param0 + 9035, 8448);
+          this.field_a.setTextureCombineOperands(0, 0, 5890, 768);
           this.field_a.e(2, true);
-          this.field_a.b(8448, 8960, 8448);
-          this.field_a.c(0, 0, 5890, 768);
-          this.field_a.c(1, param0 ^ -75, 34168, 768);
+          this.field_a.setTextureCombineOperations(8448, 8960, 8448);
+          this.field_a.setTextureCombineOperands(0, 0, 5890, 768);
+          this.field_a.setTextureCombineOperands(1, param0 ^ -75, 34168, 768);
           this.field_a.b(5890, 3, 0, 770);
         } else {
-          this.field_a.b(8448, 8960, 8448);
-          this.field_a.c(0, 0, 5890, 768);
+          this.field_a.setTextureCombineOperations(8448, 8960, 8448);
+          this.field_a.setTextureCombineOperands(0, 0, 5890, 768);
           this.field_a.b(5890, param0 ^ -74, 0, 770);
         }
         this.field_a.e(0, true);
@@ -179,7 +179,7 @@ final class cpa extends qe {
           this.field_f.a(4864, '\001');
           this.field_e = false;
         }
-        this.field_a.b(8448, 8960, 8448);
+        this.field_a.setTextureCombineOperations(8448, 8960, 8448);
         if (param0) {
           this.field_d = (hoa[]) null;
         }
@@ -193,7 +193,7 @@ final class cpa extends qe {
     }
 
     final void b(boolean param0, int param1) {
-        this.field_a.b(8448, 8960, 7681);
+        this.field_a.setTextureCombineOperations(8448, 8960, 7681);
         if (param1 <= 77) {
           this.field_f = (tla) null;
         }

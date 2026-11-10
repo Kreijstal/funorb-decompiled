@@ -82,9 +82,9 @@ final class vba extends we {
         if ((!SimpleBlockBehaviour.c(param1) ||
           !oj.field_tb[82]) &&
           !this.a(false, param0)) {
-          return lva.field_m[42 + this.field_w[param0]];
+          return PerlinNoise2D.field_m[42 + this.field_w[param0]];
         }
-        return lva.field_m[param0];
+        return PerlinNoise2D.field_m[param0];
     }
 
     private final int b(int param0, int param1, boolean param2) {
@@ -340,7 +340,7 @@ final class vba extends we {
         SingleChildWidget.field_v.a(63 + param1, false, qja.field_i.toUpperCase(), 65, -14279929, -1);
         this.j(-119, param1);
         this.c(param1, (byte) -22);
-        if (vpa.a(7)) {
+        if (TextWidgetPainter.a(7)) {
           kn.field_p.a(-1, -1, aaa.a(false) / 2, -14345466, 405 + param1, ooa.field_h);
         }
         if (param2 >= -9) {

@@ -9,12 +9,12 @@ final class kea {
     final static void b(int param0) {
         if (param0 <= -17) {
           ModelFactory.field_a.e(true);
-          ModelFactory.field_a.c(new at(ModelFactory.field_a), 89);
+          ModelFactory.field_a.c(new DisplaySettingsDialog(ModelFactory.field_a), 89);
           return;
         }
         field_a = (String) null;
         ModelFactory.field_a.e(true);
-        ModelFactory.field_a.c(new at(ModelFactory.field_a), 89);
+        ModelFactory.field_a.c(new DisplaySettingsDialog(ModelFactory.field_a), 89);
     }
 
     public static void releaseStatics(int param0) {

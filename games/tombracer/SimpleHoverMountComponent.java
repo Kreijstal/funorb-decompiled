@@ -32,7 +32,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
         var5 = TombRacer.field_G ? 1 : 0;
         NodeHashTable.a(16);
         if (ProxySocketConnector.field_f < 0) {
-          lva.field_t.field_r = null;
+          PerlinNoise2D.field_t.field_r = null;
           stackIn_55_0 = nra.field_a;
           stackIn_55_1 = 65;
           stackIn_56_2 = (param0) && (!param2) && (!uv.field_o) && (null == uu.field_a) && (ifa.field_n == null);
@@ -46,7 +46,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
           stackIn_68_2 = (param0) && (!param2) && (uv.field_o);
           ((jea) (Object) stackIn_67_0).c(stackIn_67_1, stackIn_68_2);
         } else {
-          lva.field_t.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(89, tla.field_d, new String[]{Integer.toString(ProxySocketConnector.field_f)});
+          PerlinNoise2D.field_t.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(89, tla.field_d, new String[]{Integer.toString(ProxySocketConnector.field_f)});
           stackIn_7_0 = nra.field_a;
           stackIn_7_1 = 65;
           stackIn_8_2 = (param0) && (!param2) && (!uv.field_o) && (null == uu.field_a) && (ifa.field_n == null);
@@ -71,7 +71,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
           if (dea.field_c) {
             fh.b(param3, -22243);
           } else {
-            if (wla.field_ub > 0) {
+            if (ReportAbuseDialog.field_ub > 0) {
               fh.b(param3, -22243);
             } else {
               if (2 <= ld.field_e) {

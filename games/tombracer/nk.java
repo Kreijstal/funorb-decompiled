@@ -31,12 +31,12 @@ final class nk extends IntrusiveNode {
         }
     }
 
-    final static vpa a(int param0) {
+    final static TextWidgetPainter a(int param0) {
         if (param0 != -21819) {
-          return (vpa) null;
+          return (TextWidgetPainter) null;
         }
         if (ur.field_a == null) {
-          ur.field_a = new vpa(eka.field_o, 20, 0, 0, 0, 11579568, -1, 0, 0, eka.field_o.field_w, -1, 2147483647, true);
+          ur.field_a = new TextWidgetPainter(eka.field_o, 20, 0, 0, 0, 11579568, -1, 0, 0, eka.field_o.field_w, -1, 2147483647, true);
         }
         return ur.field_a;
     }

@@ -23,7 +23,7 @@ final class em extends vw {
             this.field_c.e(2, false);
             this.field_c.a(iw.field_c, (byte) -110, iw.field_c);
             this.field_c.a(ej.field_c, 0, -108);
-            this.field_c.a(lja.field_j, 1, -15);
+            this.field_c.a(PlayerContextMenu.field_j, 1, -15);
             this.field_c.a(0, false, ej.field_c);
             this.field_c.a(true, (iva) null);
           } else {
@@ -175,11 +175,11 @@ final class em extends vw {
           this.field_c.a(cva.field_b, false);
           if (!this.field_d) {
             this.field_c.a(iw.field_c, (byte) -110, PlatformComponent.field_F);
-            this.field_c.a(lja.field_j, 0, -34);
+            this.field_c.a(PlayerContextMenu.field_j, 0, -34);
             this.field_c.e(2, false);
             this.field_c.a(PlatformComponent.field_F, (byte) -110, jv.field_m);
-            this.field_c.a(lja.field_j, 0, -47);
-            this.field_c.a(lja.field_j, 1, -6219, true, false);
+            this.field_c.a(PlayerContextMenu.field_j, 0, -47);
+            this.field_c.a(PlayerContextMenu.field_j, 1, -6219, true, false);
             this.field_c.a(0, false, tla.field_c);
             this.field_c.a(true, this.field_c.field_Jb);
           } else {

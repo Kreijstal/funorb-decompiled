@@ -11,7 +11,7 @@ final class rma {
           return;
         }
         try {
-          jo.field_E = param1;
+          ScrollControlWidget.field_E = param1;
           vn.a(108, gja.field_bb, param0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "rma.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

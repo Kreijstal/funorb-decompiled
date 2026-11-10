@@ -210,7 +210,7 @@ abstract class wv extends dfa {
           if (param0 != 28) {
             return true;
           }
-          stackIn_5_0 = vpa.a(param1 ^ -30555);
+          stackIn_5_0 = TextWidgetPainter.a(param1 ^ -30555);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -454,7 +454,7 @@ abstract class wv extends dfa {
             }
             if (3 == var7 &&
               var8 == 0) {
-              if (!vpa.a(27)) {
+              if (!TextWidgetPainter.a(27)) {
                 uv.d(30785);
               } else {
                 ConstrainToRectangleLocomotor.a(param1, 11, (byte) 106);
@@ -954,7 +954,7 @@ abstract class wv extends dfa {
           if (param0 >= 0 &&
             param0 < this.field_m.length &&
             28 == this.field_m[param0].field_g) {
-            stackIn_13_0 = vpa.a(83);
+            stackIn_13_0 = TextWidgetPainter.a(83);
             return stackIn_13_0;
           }
           return true;

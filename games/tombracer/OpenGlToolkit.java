@@ -38,7 +38,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     private ks[] field_M;
     private ks[] field_kd;
     private ks[] field_ub;
-    private jja field_Mb;
+    private OpenGlSprite field_Mb;
     private vj field_F;
     private OpenGlFramebuffer field_bb;
     private int field_Zc;
@@ -324,7 +324,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final va a(int param0, byte[] param1, int param2, boolean param3, byte param4) {
+    final va createVertexBuffer(int param0, byte[] param1, int param2, boolean param3, byte param4) {
         RuntimeException var6 = null;
         wo stackIn_5_0 = null;
         lra stackIn_9_0 = null;
@@ -357,7 +357,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    private final void m(byte param0) {
+    private final void applyLighting(byte param0) {
         if (this.field_Ac &&
           !this.field_v) {
           jaggl.OpenGL.glEnable(2896);
@@ -809,7 +809,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         return (gda) ((Object) this.field_fc);
     }
 
-    final void h(int param0, int param1) {
+    final void setTextureConstantArgb(int param0, int param1) {
         gp.field_d[0] = (float)SnakePitBehaviour.c(param1, 16711680) / 16711680.0f;
         gp.field_d[1] = (float)SnakePitBehaviour.c(65280, param1) / 65280.0f;
         gp.field_d[2] = (float)SnakePitBehaviour.c(255, param1) / 255.0f;
@@ -874,7 +874,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
               var3.a((byte) 114, 0.0f);
               var3.a((byte) 114, 0.0f);
             }
-            this.field_X = this.a(var3.position, var3.payload, 20, false, (byte) 108);
+            this.field_X = this.createVertexBuffer(var3.position, var3.payload, 20, false, (byte) 108);
             this.field_Bc = new tj(this.field_X, 5126, 3, 0);
             this.field_Rb = new tj(this.field_X, 5126, 2, 12);
             this.field_Ec.a(22091, this);
@@ -1038,7 +1038,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_K.addLast((byte) -110, var4);
     }
 
-    final void a(float param0, float param1, float param2, byte param3, float param4) {
+    final void setTextureConstantRgba(float param0, float param1, float param2, byte param3, float param4) {
         gp.field_d[0] = param1;
         gp.field_d[1] = param0;
         gp.field_d[2] = param2;
@@ -1103,13 +1103,13 @@ final class OpenGlToolkit extends GraphicsToolkit {
 
     final ToolkitSprite createSprite(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
         RuntimeException var7 = null;
-        jja stackIn_1_0 = null;
+        OpenGlSprite stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_1_0 = new jja(this, param3, param4, param0, param1, param2);
+          stackIn_1_0 = new OpenGlSprite(this, param3, param4, param0, param1, param2);
           return (ToolkitSprite) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1324,10 +1324,10 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void d(int param0, boolean param1) {
+    final void setLightingSuppressed(int param0, boolean param1) {
         if ((!this.field_v ? 1 : 0) == (param1 ? 1 : 0)) {
           this.field_v = param1 ? true : false;
-          this.m((byte) -52);
+          this.applyLighting((byte) -52);
         }
         if (param0 >= -48) {
           va var4 = (va) null;
@@ -1461,7 +1461,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_rb.addLast((byte) -58, var4);
     }
 
-    private final void p(byte param0) {
+    private final void applyFogEnabled(byte param0) {
         if (this.field_qc &&
           this.field_Kb >= 0) {
           jaggl.OpenGL.glEnable(2912);
@@ -1484,8 +1484,8 @@ final class OpenGlToolkit extends GraphicsToolkit {
           this.a(true, (kl) null);
           jaggl.OpenGL.glTexEnvi(8960, 8704, 34160);
         }
-        this.b(8448, 8960, 8448);
-        this.c(2, 0, 34168, 770);
+        this.setTextureCombineOperations(8448, 8960, 8448);
+        this.setTextureCombineOperands(2, 0, 34168, 770);
         this.e((byte) 112);
         this.field_ld = 1;
         jaggl.OpenGL.glEnable(3042);
@@ -1573,7 +1573,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     final void a(int param0, boolean param1) {
         if ((!param1 ? 1 : 0) != (!this.field_Ac ? 1 : 0)) {
           this.field_Ac = param1 ? true : false;
-          this.m((byte) -52);
+          this.applyLighting((byte) -52);
           this.field_y = this.field_y & -8;
         }
         if (param0 < 29) {
@@ -1679,7 +1679,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           this.field_ld = param1;
         }
         if (param0 <= 18) {
-          this.o((byte) -128);
+          this.initializeDeviceResources((byte) -128);
         }
     }
 
@@ -1900,7 +1900,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
             ija.a(true, (byte) 99, false);
             this.field_Ob = true;
             this.field_hd = new hsa(this, this.field_c);
-            this.o((byte) 124);
+            this.initializeDeviceResources((byte) 124);
             this.field_zc = new mq(this);
             this.field_L = new cw(this);
             if (this.field_L.b((byte) -43)) {
@@ -2073,18 +2073,18 @@ final class OpenGlToolkit extends GraphicsToolkit {
         int var7 = TombRacer.field_G ? 1 : 0;
         for (var2 = 0; this.field_sb > var2; var2++) {
           var3 = this.field_Dc[var2];
-          vh.field_h[0] = (float)var3.d(13437);
+          WhirlpoolDigest.field_h[0] = (float)var3.d(13437);
           var4 = 16386 + var2;
-          vh.field_h[1] = (float)var3.a(19848);
-          vh.field_h[2] = (float)var3.b((byte) 11);
-          vh.field_h[3] = 1.0f;
-          jaggl.OpenGL.glLightfv(var4, 4611, vh.field_h, 0);
+          WhirlpoolDigest.field_h[1] = (float)var3.a(19848);
+          WhirlpoolDigest.field_h[2] = (float)var3.b((byte) 11);
+          WhirlpoolDigest.field_h[3] = 1.0f;
+          jaggl.OpenGL.glLightfv(var4, 4611, WhirlpoolDigest.field_h, 0);
           var5 = var3.c(param0 ^ 123);
           var6 = var3.b(0) / 255.0f;
-          vh.field_h[1] = (float)(SnakePitBehaviour.c(65532, var5) >> 8) * var6;
-          vh.field_h[0] = var6 * (float)SnakePitBehaviour.c(var5 >> 16, 255);
-          vh.field_h[2] = (float)SnakePitBehaviour.c(255, var5) * var6;
-          jaggl.OpenGL.glLightfv(var4, 4609, vh.field_h, 0);
+          WhirlpoolDigest.field_h[1] = (float)(SnakePitBehaviour.c(65532, var5) >> 8) * var6;
+          WhirlpoolDigest.field_h[0] = var6 * (float)SnakePitBehaviour.c(var5 >> 16, 255);
+          WhirlpoolDigest.field_h[2] = (float)SnakePitBehaviour.c(255, var5) * var6;
+          jaggl.OpenGL.glLightfv(var4, 4609, WhirlpoolDigest.field_h, 0);
           jaggl.OpenGL.glLightf(var4, 4617, 1.0f / (float)(var3.a((byte) -126) * var3.a((byte) -126)));
           jaggl.OpenGL.glEnable(var4);
         }
@@ -2098,7 +2098,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_pc = this.field_sb;
     }
 
-    final synchronized void d(int param0, int param1, int param2) {
+    final synchronized void queueBufferDeletion(int param0, int param1, int param2) {
         if (param0 != -31014) {
           field_H = -33;
         }
@@ -2107,7 +2107,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_pd.addLast((byte) -96, var4);
     }
 
-    final void c(int param0, int param1, int param2, int param3) {
+    final void setTextureCombineOperands(int param0, int param1, int param2, int param3) {
         jaggl.OpenGL.glTexEnvi(8960, param0 + 34176, param2);
         if (param1 != 0) {
           this.q((byte) 53);
@@ -2260,7 +2260,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         return stackIn_27_0;
     }
 
-    private final void g(byte param0) {
+    private final void applyDirectionalLightColors(byte param0) {
         gp.field_d[3] = 1.0f;
         gp.field_d[1] = this.field_cd * this.field_Fb;
         gp.field_d[0] = this.field_cd * this.field_wc;
@@ -2388,22 +2388,22 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
         if (param1 != 1) {
           if (param1 == 0) {
-            this.b(8448, 8960, 8448);
+            this.setTextureCombineOperations(8448, 8960, 8448);
           } else {
             if (param1 != 2) {
               if (param1 != 3) {
                 if (param1 == 4) {
-                  this.b(34023, param0 + 8959, 34023);
+                  this.setTextureCombineOperations(34023, param0 + 8959, 34023);
                 }
               } else {
-                this.b(260, 8960, 8448);
+                this.setTextureCombineOperations(260, 8960, 8448);
               }
             } else {
-              this.b(34165, 8960, 7681);
+              this.setTextureCombineOperations(34165, 8960, 7681);
             }
           }
         } else {
-          this.b(7681, 8960, 7681);
+          this.setTextureCombineOperations(7681, 8960, 7681);
         }
     }
 
@@ -2455,7 +2455,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
             this.field_Fb = (float)(this.field_ac & 65280) / 65280.0f;
             this.h(16);
           }
-          this.g((byte) -30);
+          this.applyDirectionalLightColors((byte) -30);
         }
         if (param3 != this.field_Pb[0] ||
           this.field_Pb[1] != param4 ||
@@ -2538,7 +2538,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
         if ((!param1 ? 1 : 0) != (!this.field_qc ? 1 : 0)) {
           this.field_qc = param1 ? true : false;
-          this.p((byte) -87);
+          this.applyFogEnabled((byte) -87);
           this.field_y = this.field_y & -32;
         }
     }
@@ -2587,7 +2587,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_L.a(param2, param0, param3, param1, 0);
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void setTextureCombineOperations(int param0, int param1, int param2) {
         int var4;
         if (this.field_r != 0) {
           jaggl.OpenGL.glTexEnvi(8960, 34161, param0);
@@ -2771,18 +2771,18 @@ final class OpenGlToolkit extends GraphicsToolkit {
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
-        kba var3 = null;
+        OpenGlRenderbuffer var3 = null;
         cla var3_ref = null;
         RuntimeException var3_ref2 = null;
         DualLinkNode var4 = null;
         int var6 = 0;
         cla var7 = null;
         cla var8 = null;
-        kba var9 = null;
-        kba var10 = null;
+        OpenGlRenderbuffer var9 = null;
+        OpenGlRenderbuffer var10 = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
-          this.field_Mb = (jja) (param0);
+          this.field_Mb = (OpenGlSprite) (param0);
           if (this.field_id) {
             if (null == this.field_bb) {
               this.field_bb = new OpenGlFramebuffer(this);
@@ -2792,15 +2792,15 @@ final class OpenGlToolkit extends GraphicsToolkit {
             }
             this.b((ks) (this.field_bb), (byte) 81);
             if (param1) {
-              var3 = (kba) (this.field_Wc.a((byte) -106, (long)(this.field_Mb.a() << 16 | this.field_Mb.c())));
+              var3 = (OpenGlRenderbuffer) (this.field_Wc.get((byte) -106, (long)(this.field_Mb.a() << 16 | this.field_Mb.c())));
               if (var3 == null) {
-                var9 = new kba(this, 6402, this.field_Mb.a(), this.field_Mb.c());
+                var9 = new OpenGlRenderbuffer(this, 6402, this.field_Mb.a(), this.field_Mb.c());
                 var3 = var9;
                 this.field_rc = this.field_rc + var9.field_o;
                 while (this.field_rc > 2097152) {
                   var4 = this.field_F.b(-125);
                   if (var4 != null) {
-                    var10 = (kba) (var4);
+                    var10 = (OpenGlRenderbuffer) (var4);
                     var10.unlinkSecondary(-7975);
                     var10.unlink(125);
                     var10.g(77);
@@ -2819,7 +2819,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
             if (!this.field_Yc) {
               throw new RuntimeException("");
             }
-            var3_ref = (cla) (this.field_Wc.a((byte) -109, (long)(this.field_Mb.a() << 16 | this.field_Mb.c())));
+            var3_ref = (cla) (this.field_Wc.get((byte) -109, (long)(this.field_Mb.a() << 16 | this.field_Mb.c())));
             if (var3_ref == null) {
               var7 = new cla(this, this.field_Mb.a(), this.field_Mb.c());
               var3_ref = var7;
@@ -3100,7 +3100,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           this.field_Xc = param2;
           this.field_Kb = param1;
           this.m(2916);
-          this.p((byte) -87);
+          this.applyFogEnabled((byte) -87);
         }
     }
 
@@ -3281,7 +3281,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         return new int[]{this.field_o, this.field_db, this.field_W, this.field_kb};
     }
 
-    final void GA(int param0) {
+    final void clear(int param0) {
         this.a((byte) 65, 0);
         jaggl.OpenGL.glClearColor((float)(16711680 & param0) / 16711680.0f, (float)(65280 & param0) / 65280.0f, (float)(param0 & 255) / 255.0f, (float)(param0 >>> 24) / 255.0f);
         jaggl.OpenGL.glClear(16384);
@@ -3365,7 +3365,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    private final void o(byte param0) {
+    private final void initializeDeviceResources(byte param0) {
         OpenGlFramebuffer discarded$2 = null;
         this.field_vc = new kl[this.field_Ic];
         this.field_lc = new rt(this, 3553, 6408, 1, 1);
@@ -3390,7 +3390,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final sca a(int param0, int param1, int param2, boolean param3, byte[] param4) {
+    final sca createVertexBuffer(int param0, int param1, int param2, boolean param3, byte[] param4) {
         RuntimeException var6 = null;
         sca stackIn_2_0 = null;
         nm stackIn_8_0 = null;

@@ -65,7 +65,7 @@ final class epa extends wv {
                 param2 = SoundCache.field_d;
               }
               param0 = 2;
-              vn.field_b.a(jo.field_E, 123);
+              vn.field_b.a(ScrollControlWidget.field_E, 123);
             }
             if (param0 == 10) {
               ka.a((byte) -33);

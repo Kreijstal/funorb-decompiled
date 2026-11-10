@@ -55,10 +55,10 @@ abstract class ob extends IntrusiveNode {
           for (var2_int = 0; var2_int < 6; var2_int++) {
             Room.field_p[var2_int] = ak.a(param0, eta.field_a[var2_int], -82);
           }
-          ng.field_k = new ToolkitSprite[6];
+          WidgetStyleLayer.field_k = new ToolkitSprite[6];
           em.field_h = new ToolkitSprite[6];
           for (var2_intLifetime1 = 0; var2_intLifetime1 < 6; var2_intLifetime1++) {
-            ng.field_k[var2_intLifetime1] = su.a(lm.field_p[var2_intLifetime1], param0, (byte) -68);
+            WidgetStyleLayer.field_k[var2_intLifetime1] = su.a(lm.field_p[var2_intLifetime1], param0, (byte) -68);
             lm.field_p[var2_intLifetime1].b();
             em.field_h[var2_intLifetime1] = su.a(lm.field_p[var2_intLifetime1], param0, (byte) 125);
             lm.field_p[var2_intLifetime1].b();
@@ -67,7 +67,7 @@ abstract class ob extends IntrusiveNode {
           ArchiveSource.field_a = ak.a(param0, bp.field_p, -79);
           bd.field_i = su.a(ara.field_vb, param0, (byte) -20);
           lm.field_m = su.a(tla.field_g, param0, (byte) -99);
-          po.field_l = su.a(wd.field_c, param0, (byte) 25);
+          CachedTextLayout.field_l = su.a(wd.field_c, param0, (byte) 25);
           lh.field_b = su.a(lha.field_l, param0, (byte) 127);
           vua.field_A = su.a(wj.field_a, param0, (byte) 126);
           dn.field_d = ak.a(param0, ProxySocketConnector.field_e, -100);
@@ -78,7 +78,7 @@ abstract class ob extends IntrusiveNode {
           GridWidgetContainer.field_y = ak.a(param0, ina.field_c, -104);
           kq.field_a = su.a(FleeLocomotor.field_C, param0, (byte) 127);
           id.field_h = ak.a(param0, tba.field_f, -70);
-          lva.field_m = ak.a(param0, ng.field_f, -77);
+          PerlinNoise2D.field_m = ak.a(param0, WidgetStyleLayer.field_f, -77);
           su.a(ds.field_g, param0, (byte) 126);
           za.field_g = su.a(TextResourceLoader.field_b, param0, (byte) -50);
           bca.field_d = su.a(sla.field_a, param0, (byte) -38);
@@ -111,15 +111,15 @@ abstract class ob extends IntrusiveNode {
           uua.field_a = su.a(qk.field_u, param0, (byte) 125);
           su.a(mp.field_d, param0, (byte) 126);
           su.a(baa.field_g, param0, (byte) -43);
-          ConstantEffectBehaviour.field_q = su.a(op.field_O, param0, (byte) 126);
-          ij.field_X = su.a(ifa.field_q, param0, (byte) 125);
+          ConstantEffectBehaviour.field_q = su.a(FullscreenConfirmationDialog.field_O, param0, (byte) 126);
+          MessageDialog.field_X = su.a(ifa.field_q, param0, (byte) 125);
           su.a(field_n, param0, (byte) 125);
           gg.field_f = su.a(vua.field_y, param0, (byte) 127);
           eca.field_c = ak.a(param0, Effect.field_e, -64);
           nm.field_l = su.a(ena.field_l, param0, (byte) 127);
           su.a(MirrorComponent.field_F, param0, (byte) -2);
           gca.field_a = su.a(rp.field_f, param0, (byte) 126);
-          ng.field_b = ak.a(param0, qka.field_o, param1 - 17309);
+          WidgetStyleLayer.field_b = ak.a(param0, qka.field_o, param1 - 17309);
           IntrusiveDeque.field_c = su.a(ko.field_j, param0, (byte) -95);
           tka.field_p = su.a(ht.field_Db, param0, (byte) 27);
           Projectile.field_n = su.a(oea.field_j, param0, (byte) -37);

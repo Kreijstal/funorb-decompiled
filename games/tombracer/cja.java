@@ -277,7 +277,7 @@ final class cja {
     }
 
     final void b(byte param0) {
-        if (vpa.a(param0 ^ -48) ||
+        if (TextWidgetPainter.a(param0 ^ -48) ||
           !dma.field_l.a(param0 - 60)) {
           return;
         }

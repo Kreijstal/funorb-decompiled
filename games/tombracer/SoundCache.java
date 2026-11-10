@@ -140,7 +140,7 @@ final class SoundCache {
           if (0 > var6) {
             return null;
           }
-          stackIn_10_0 = this.a(59, var5_int, var6, param3);
+          stackIn_10_0 = this.loadSoundEffect(59, var5_int, var6, param3);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -186,7 +186,7 @@ final class SoundCache {
           var5_int = param0 ^ (param3 >>> 12 | 65528 & param3 << 4);
           var5_int = var5_int | param3 << 16;
           var6 = (long)var5_int ^ 4294967296L;
-          var8 = (u) (this.field_a.a((byte) -127, var6));
+          var8 = (u) (this.field_a.get((byte) -127, var6));
           if (var8 != null) {
             stackIn_2_0 = var8;
             return stackIn_2_0;
@@ -195,7 +195,7 @@ final class SoundCache {
             param1[0] <= 0) {
             return null;
           }
-          var9 = (VorbisSample) (this.field_e.a((byte) -114, var6));
+          var9 = (VorbisSample) (this.field_e.get((byte) -114, var6));
           if (var9 == null) {
             var9 = VorbisSample.a(this.field_c, param3, param0);
             if (var9 == null) {
@@ -309,11 +309,11 @@ final class SoundCache {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_b.c(param2 + 4) == 1) {
-            stackIn_2_0 = this.a(param2 ^ 52, 0, param0, param1);
+            stackIn_2_0 = this.loadSoundEffect(param2 ^ 52, 0, param0, param1);
             return stackIn_2_0;
           }
           if (this.field_b.a((byte) -96, param0) == 1) {
-            stackIn_6_0 = this.a(param2 + 115, param0, 0, param1);
+            stackIn_6_0 = this.loadSoundEffect(param2 + 115, param0, 0, param1);
             return stackIn_6_0;
           }
           if (param2 == 0) {
@@ -335,7 +335,7 @@ final class SoundCache {
         }
     }
 
-    private final u a(int param0, int param1, int param2, int[] param3) {
+    private final u loadSoundEffect(int param0, int param1, int param2, int[] param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
@@ -358,7 +358,7 @@ final class SoundCache {
             this.field_e = (NodeHashTable) null;
           }
           var6 = (long)var5_int;
-          var8 = (u) (this.field_a.a((byte) -110, var6));
+          var8 = (u) (this.field_a.get((byte) -110, var6));
           if (var8 != null) {
             stackIn_4_0 = var8;
             return stackIn_4_0;

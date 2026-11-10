@@ -110,11 +110,11 @@ final class gba extends IntrusiveNode {
         if (param0 >= -83) {
           return (ResourceArchive) null;
         }
-        if (null != lga.field_B) {
-          return lga.field_B;
+        if (null != HotspotTextWidget.field_B) {
+          return HotspotTextWidget.field_B;
         }
         if (param1 == -1) {
-          return lga.field_B;
+          return HotspotTextWidget.field_B;
         }
         return nt.a(param1, 1, 5200, false, true, true);
     }

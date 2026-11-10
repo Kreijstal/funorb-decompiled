@@ -19,7 +19,7 @@ final class mca {
         if (param0 != 6) {
           mca.a((byte) 65, -116);
         }
-        if (vpa.a(114)) {
+        if (TextWidgetPainter.a(114)) {
           return false;
         }
         if (mq.field_e == null) {

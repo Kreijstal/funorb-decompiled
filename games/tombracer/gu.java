@@ -172,7 +172,7 @@ final class gu extends me {
           return (ci) ((Object) new jv());
         }
         if (var2 == 34) {
-          return (ci) ((Object) new lva());
+          return (ci) ((Object) new PerlinNoise2D());
         }
         if (var2 == 35) {
           return (ci) ((Object) new go());

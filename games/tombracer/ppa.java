@@ -96,7 +96,7 @@ final class ppa {
                 stackIn_3_0 = null;
                 return (byte[]) (stackIn_3_0);
               }
-              this.field_b.a((byte) 20, (long)(6 * param0));
+              this.field_b.seek((byte) 20, (long)(6 * param0));
               this.field_b.a(StaticCrusherComponent.field_F, 6, 0, (byte) -64);
               var6 = -2 / ((param1 + 40) / 57);
               var4_int = (255 & StaticCrusherComponent.field_F[2]) + (((255 & StaticCrusherComponent.field_F[1]) << 8) + (StaticCrusherComponent.field_F[0] << 16 & 16711680));
@@ -122,7 +122,7 @@ final class ppa {
                   stackIn_21_0 = null;
                   return (byte[]) (stackIn_21_0);
                 }
-                this.field_c.a((byte) 67, (long)(520 * var5));
+                this.field_c.seek((byte) 67, (long)(520 * var5));
                 var10 = var4_int - var8;
                 if (65535 < param0) {
                   var15 = 10;
@@ -216,7 +216,7 @@ final class ppa {
                   if (this.field_b.b(true) < (long)(6 * param4 + 6)) {
                     return false;
                   }
-                  this.field_b.a((byte) -124, (long)(6 * param4));
+                  this.field_b.seek((byte) -124, (long)(6 * param4));
                   this.field_b.a(StaticCrusherComponent.field_F, 6, 0, (byte) -34);
                   var7_int = (StaticCrusherComponent.field_F[3] << 16 & 16711680) + ((255 & StaticCrusherComponent.field_F[4]) << 8) + (255 & StaticCrusherComponent.field_F[5]);
                   if (var7_int <= 0 ||
@@ -235,7 +235,7 @@ final class ppa {
                 StaticCrusherComponent.field_F[2] = (byte)param1;
                 StaticCrusherComponent.field_F[3] = (byte)(var7_int >> 16);
                 StaticCrusherComponent.field_F[4] = (byte)(var7_int >> 8);
-                this.field_b.a((byte) -118, (long)(param4 * 6));
+                this.field_b.seek((byte) -118, (long)(param4 * 6));
                 this.field_b.a(StaticCrusherComponent.field_F, 0, (byte) -17, 6);
                 if (!param3) {
                   this.a(58, 109);
@@ -247,7 +247,7 @@ final class ppa {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
                     if (param0) {
-                      this.field_c.a((byte) 91, (long)(var7_int * 520));
+                      this.field_c.seek((byte) 91, (long)(var7_int * 520));
                       if (param4 <= 65535) {
                         try {
                           this.field_c.a(StaticCrusherComponent.field_F, 8, 0, (byte) -115);
@@ -316,7 +316,7 @@ final class ppa {
                       StaticCrusherComponent.field_F[9] = (byte)this.field_d;
                       StaticCrusherComponent.field_F[8] = (byte)var10;
                       StaticCrusherComponent.field_F[2] = (byte)(param4 >> 8);
-                      this.field_c.a((byte) 36, (long)(520 * var7_int));
+                      this.field_c.seek((byte) 36, (long)(520 * var7_int));
                       this.field_c.a(StaticCrusherComponent.field_F, 0, (byte) -17, 10);
                       var11 = param1 - var8;
                       if (var11 > 510) {
@@ -333,7 +333,7 @@ final class ppa {
                       StaticCrusherComponent.field_F[5] = (byte)(var10 >> 8);
                       StaticCrusherComponent.field_F[1] = (byte)param4;
                       StaticCrusherComponent.field_F[7] = (byte)this.field_d;
-                      this.field_c.a((byte) -109, (long)(var7_int * 520));
+                      this.field_c.seek((byte) -109, (long)(var7_int * 520));
                       this.field_c.a(StaticCrusherComponent.field_F, 0, (byte) -17, 8);
                       var11 = param1 - var8;
                       if (var11 > 512) {
@@ -375,7 +375,7 @@ final class ppa {
     }
 
     final static void a(Room param0, int param1, MatchState param2) {
-        if (vpa.a(112) ||
+        if (TextWidgetPainter.a(112) ||
           param2.k(-25319)) {
           return;
         }

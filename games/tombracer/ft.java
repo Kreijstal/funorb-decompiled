@@ -221,7 +221,7 @@ final class ft {
                   var21Lifetime2 = param0.field_r[var18];
                   ada.field_y[var18] = var19 * var9 + var20 * var12 + var21Lifetime2 * var15 >> 16;
                   ie.field_i[var18] = var19 * var10 + (var13 * var20 + var21Lifetime2 * var16) >> 16;
-                  dd.field_d[var18] = var21Lifetime2 * var17 + var14 * var20 + var19 * var11 >> 16;
+                  SoftReferenceCache.field_d[var18] = var21Lifetime2 * var17 + var14 * var20 + var19 * var11 >> 16;
                   var18++;
                 }
               }
@@ -265,8 +265,8 @@ final class ft {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (~vga.field_n.size((byte) -16) > param1) {
-            vga.field_n.addLast((byte) -90, param0);
+          if (~StatefulWidgetPainter.field_n.size((byte) -16) > param1) {
+            StatefulWidgetPainter.field_n.addLast((byte) -90, param0);
           }
           param0.unlinkSecondary(param1 ^ 8174);
           return;

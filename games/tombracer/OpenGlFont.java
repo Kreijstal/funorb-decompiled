@@ -7,15 +7,15 @@ final class OpenGlFont extends GameFont {
     private OpenGlToolkit field_e;
     private tla field_f;
 
-    final void fa(char param0, int param1, int param2, int param3, boolean param4) {
+    final void drawGlyph(char param0, int param1, int param2, int param3, boolean param4) {
         this.field_e.o(-104);
         this.field_e.a(true, this.field_d);
         if (!this.field_g &&
           !param4) {
-          this.field_e.b(7681, 8960, 7681);
+          this.field_e.setTextureCombineOperations(7681, 8960, 7681);
         } else {
-          this.field_e.b(7681, 8960, 8448);
-          this.field_e.c(0, 0, 34168, 768);
+          this.field_e.setTextureCombineOperations(7681, 8960, 8448);
+          this.field_e.setTextureCombineOperands(0, 0, 34168, 768);
         }
         jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));
         jaggl.OpenGL.glTranslatef((float)param1, (float)param2, 0.0f);
@@ -23,11 +23,11 @@ final class OpenGlFont extends GameFont {
         jaggl.OpenGL.glLoadIdentity();
         if (this.field_g ||
           param4) {
-          this.field_e.c(0, 0, 5890, 768);
+          this.field_e.setTextureCombineOperands(0, 0, 5890, 768);
         }
     }
 
-    final void a(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7) {
+    final void drawMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7) {
         au var9;
         qk var10;
         float var11;
@@ -38,15 +38,15 @@ final class OpenGlFont extends GameFont {
         this.field_e.a(true, this.field_d);
         if (!this.field_g &&
           !param4) {
-          this.field_e.b(7681, 8960, 7681);
+          this.field_e.setTextureCombineOperations(7681, 8960, 7681);
         } else {
-          this.field_e.b(7681, 8960, 8448);
-          this.field_e.c(0, 0, 34168, 768);
+          this.field_e.setTextureCombineOperations(7681, 8960, 8448);
+          this.field_e.setTextureCombineOperands(0, 0, 34168, 768);
         }
         this.field_e.e(1, true);
         this.field_e.a(true, var10);
-        this.field_e.b(7681, 8960, 8448);
-        this.field_e.c(0, 0, 34168, 768);
+        this.field_e.setTextureCombineOperations(7681, 8960, 8448);
+        this.field_e.setTextureCombineOperands(0, 0, 34168, 768);
         jaggl.OpenGL.glTexGeni(8192, 9472, 9216);
         jaggl.OpenGL.glTexGeni(8193, 9472, 9216);
         var11 = var10.field_r / (float)var10.field_t;
@@ -61,13 +61,13 @@ final class OpenGlFont extends GameFont {
         jaggl.OpenGL.glLoadIdentity();
         jaggl.OpenGL.glDisable(3168);
         jaggl.OpenGL.glDisable(3169);
-        this.field_e.c(0, 0, 5890, 768);
-        this.field_e.b(8448, 8960, 8448);
+        this.field_e.setTextureCombineOperands(0, 0, 5890, 768);
+        this.field_e.setTextureCombineOperations(8448, 8960, 8448);
         this.field_e.a(true, (kl) null);
         this.field_e.e(0, true);
         if (this.field_g ||
           param4) {
-          this.field_e.c(0, 0, 5890, 768);
+          this.field_e.setTextureCombineOperands(0, 0, 5890, 768);
         }
     }
 

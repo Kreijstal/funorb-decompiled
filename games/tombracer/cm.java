@@ -366,15 +366,15 @@ final class cm implements GamePacket {
               var15 = 0;
               if (var4_int != 0 &&
                 0 <= var9) {
-                if (lga.field_z != null &&
-                  lga.field_z[var7] != null &&
-                  0 < (~ConsoleToken.field_g & lga.field_z[var7][var9])) {
-                  var15 = WidgetContainer.highestOneBit(~ConsoleToken.field_g & lga.field_z[var7][var9], (byte) -115);
+                if (HotspotTextWidget.field_z != null &&
+                  HotspotTextWidget.field_z[var7] != null &&
+                  0 < (~ConsoleToken.field_g & HotspotTextWidget.field_z[var7][var9])) {
+                  var15 = WidgetContainer.highestOneBit(~ConsoleToken.field_g & HotspotTextWidget.field_z[var7][var9], (byte) -115);
                   var14 = 1;
                 }
                 if (PowerUpItemBehaviour.field_u != null &&
                   PowerUpItemBehaviour.field_u[var7] != null &&
-                  wla.field_ub <= 0 &&
+                  ReportAbuseDialog.field_ub <= 0 &&
                   PowerUpItemBehaviour.field_u[var7][var9]) {
                   var10 = 1;
                 }
@@ -383,7 +383,7 @@ final class cm implements GamePacket {
                   var16 = hp.field_a[var7][var9];
                   if (0 != var16 &&
                     !dea.field_c &&
-                    wla.field_ub <= 0) {
+                    ReportAbuseDialog.field_ub <= 0) {
                     var10 = 1;
                   }
                   if (var16 > 0 &&
@@ -396,7 +396,7 @@ final class cm implements GamePacket {
                   var16Lifetime2 = nra.field_g[var7][var9];
                   if (var16Lifetime2 != 0 &&
                     !dea.field_c &&
-                    0 >= wla.field_ub) {
+                    0 >= ReportAbuseDialog.field_ub) {
                     var10 = 1;
                   }
                   if (var16Lifetime2 > 0 &&

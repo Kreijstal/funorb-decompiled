@@ -115,7 +115,7 @@ class tc extends lu {
         if (param0 != 113) {
           return (pl) null;
         }
-        return vm.field_f;
+        return ViewportManager.field_f;
     }
 
     static {

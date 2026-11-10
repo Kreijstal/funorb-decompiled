@@ -85,7 +85,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (rla.field_x != null) {
+          if (DropdownList.field_x != null) {
             stackIn_2_0 = null;
             return (String) (stackIn_2_0);
           }
@@ -110,7 +110,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseAppletResources(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -174,14 +174,14 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             nsa.field_d = nsa.field_d - 50;
             nma.field_l.setSize(mma.field_a, qf.field_i);
             nma.field_l.setVisible(true);
-            boolean decompiledSharedTail0 = (null != rla.field_x &&
+            boolean decompiledSharedTail0 = (null != DropdownList.field_x &&
               null == nb.field_d);
             if (!decompiledSharedTail0) {
               nma.field_l.setLocation(lp.field_g, vu.field_f);
               decompiledSharedTail0 = (TombRacer.field_G);
             }
             if (decompiledSharedTail0) {
-              var6 = rla.field_x.getInsets();
+              var6 = DropdownList.field_x.getInsets();
               nma.field_l.setLocation(lp.field_g + var6.left, var6.top + vu.field_f);
             }
           }
@@ -286,7 +286,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.applet.AppletContext stackIn_14_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (rla.field_x != null) {
+          if (DropdownList.field_x != null) {
             stackIn_4_0 = null;
             return (java.applet.AppletContext) (stackIn_4_0);
           }
@@ -334,7 +334,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     public final java.net.URL getCodeBase() {
         RuntimeException var1;
-        if (rla.field_x != null) {
+        if (DropdownList.field_x != null) {
           return null;
         }
         if (cba.field_a != null &&
@@ -351,7 +351,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.net.URL stackIn_10_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (rla.field_x != null) {
+          if (DropdownList.field_x != null) {
             stackIn_2_0 = null;
             return (java.net.URL) (stackIn_2_0);
           }
@@ -540,7 +540,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    mt.field_a = cq.field_a.a((byte) 12, mga.field_i);
+                    mt.field_a = cq.field_a.waitAndAdvance((byte) 12, mga.field_i);
                     stackIn_99_0 = 0;
                   }
                   var3 = stackIn_99_0;
@@ -597,7 +597,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   return;
                 }
               }
-              wla.field_Cb = true;
+              ReportAbuseDialog.field_Cb = true;
             }
             return;
           }
@@ -679,14 +679,14 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           }
           if (dsa.field_c != null) {
             try {
-              dsa.field_c.b((byte) 59);
+              dsa.field_c.shutdown((byte) 59);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               exception = (Exception) (Object) decompiledCaughtException;
             }
           }
           this.clearAllStatics(-3666);
-          if (rla.field_x != null) {
+          if (DropdownList.field_x != null) {
             try {
               System.exit(0);
             } catch (java.lang.Throwable decompiledCaughtParameter3) {
@@ -839,23 +839,23 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             nma.field_l.getParent().remove((java.awt.Component) ((Object) nma.field_l));
           }
           if (null == nb.field_d) {
-            if (rla.field_x == null) {
+            if (DropdownList.field_x == null) {
               if (null != cba.field_a) {
                 var2 = cba.field_a;
                 if (var4 != 0) {
                   var2 = Corpse.field_j;
-                  var2 = rla.field_x;
+                  var2 = DropdownList.field_x;
                   var2 = nb.field_d;
                 }
               } else {
                 var2 = Corpse.field_j;
                 if (var4 != 0) {
-                  var2 = rla.field_x;
+                  var2 = DropdownList.field_x;
                   var2 = nb.field_d;
                 }
               }
             } else {
-              var2 = rla.field_x;
+              var2 = DropdownList.field_x;
               if (var4 != 0) {
                 var2 = nb.field_d;
               }
@@ -871,13 +871,13 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (param0 <= 9) {
             return;
           }
-          boolean decompiledSharedTail0 = (rla.field_x == var2);
+          boolean decompiledSharedTail0 = (DropdownList.field_x == var2);
           if (!decompiledSharedTail0) {
             nma.field_l.setLocation(lp.field_g, vu.field_f);
             decompiledSharedTail0 = (var4 != 0);
           }
           if (decompiledSharedTail0) {
-            var3 = rla.field_x.getInsets();
+            var3 = DropdownList.field_x.getInsets();
             nma.field_l.setLocation(var3.left + lp.field_g, var3.top + vu.field_f);
           }
           nma.field_l.addFocusListener((java.awt.event.FocusListener) (this));
@@ -885,7 +885,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           oea.field_k = true;
           VortexBehaviour.field_n = true;
           bsa.field_k = true;
-          wla.field_Cb = false;
+          ReportAbuseDialog.field_Cb = false;
           lt.field_b = bva.b((byte) -107);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

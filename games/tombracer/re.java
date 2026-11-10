@@ -18,7 +18,7 @@ final class re {
         ob.field_i = SoftwareRasterizer.field_g;
         NodeHashTable.a(16);
         oca.field_b.a(0, 0, 20, nra.field_a.field_G, -2 + (-40 + nra.field_a.field_t));
-        lva.field_t.a(hk.field_e.field_G, di.field_a, param0 + 5264, 0, 0);
+        PerlinNoise2D.field_t.a(hk.field_e.field_G, di.field_a, param0 + 5264, 0, 0);
         int var1 = 2 + di.field_a;
         rra.field_e.a(hk.field_e.field_G, hk.field_e.field_t - (rca.field_p ? var1 : 0), -23776, !rca.field_p ? 0 : var1, 0);
         GameFont.a(false);

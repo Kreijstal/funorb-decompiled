@@ -198,12 +198,12 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
     final Switchable a(boolean param0, int param1, int param2) {
         if (param1 != 1) {
           this.field_j = false;
-          if (vh.matchesSwitchableId(param2, param0, -27201, (Switchable) (this))) {
+          if (WhirlpoolDigest.matchesSwitchableId(param2, param0, -27201, (Switchable) (this))) {
             return (Switchable) (this);
           }
           return null;
         }
-        if (vh.matchesSwitchableId(param2, param0, -27201, (Switchable) (this))) {
+        if (WhirlpoolDigest.matchesSwitchableId(param2, param0, -27201, (Switchable) (this))) {
           return (Switchable) (this);
         }
         return null;

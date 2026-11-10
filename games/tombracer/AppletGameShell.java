@@ -220,7 +220,7 @@ abstract class AppletGameShell extends GameApplet {
     }
 
     private final void a(byte param0, int param1, boolean param2) {
-        this.a(rd.field_r.field_c, wla.field_Eb.field_c, EffectEvent.field_l.field_c, C2SSubmitSettingsPacket.field_d.field_c, 5000, param1, rm.field_d.field_c, param2);
+        this.a(rd.field_r.field_c, ReportAbuseDialog.field_Eb.field_c, EffectEvent.field_l.field_c, C2SSubmitSettingsPacket.field_d.field_c, 5000, param1, rm.field_d.field_c, param2);
         if (param0 >= -25) {
           this.field_w = 116L;
         }
@@ -256,7 +256,7 @@ abstract class AppletGameShell extends GameApplet {
                 } else {
                   if (var2 != 5) {
                     if (var2 == 6) {
-                      vh.a((byte) -44);
+                      WhirlpoolDigest.a((byte) -44);
                     } else {
                       if (var2 != 7) {
                         if (8 == var2) {
@@ -562,7 +562,7 @@ abstract class AppletGameShell extends GameApplet {
           }
           wba.field_o.a(false);
         }
-        at.j(3321);
+        DisplaySettingsDialog.j(3321);
         BoulderComponent.s((byte) -44);
         if (!wna.c(-112) &&
           gda.field_c != 11) {
@@ -666,14 +666,14 @@ abstract class AppletGameShell extends GameApplet {
         }
         if (cga.field_f == 1) {
           if (0 != ApproachPlayerLocomotor.field_t) {
-            InvisibleTouchSwitchComponent.field_J = dd.a(nga.field_p, 1);
+            InvisibleTouchSwitchComponent.field_J = SoftReferenceCache.a(nga.field_p, 1);
           }
           tk.field_b = FacePointLocomotor.a(true, fq.field_g, false, 1, (byte) -95);
-          hm.field_n = FacePointLocomotor.a(true, bi.field_c, false, 1, (byte) -109);
+          OpenGlTexture2D.field_n = FacePointLocomotor.a(true, bi.field_c, false, 1, (byte) -109);
           vc.field_p = FacePointLocomotor.a(true, fm.field_j, false, 1, (byte) -79);
           cga.field_f = 2;
           PitComponent.field_G = tk.field_b;
-          ota.field_b = hm.field_n;
+          ota.field_b = OpenGlTexture2D.field_n;
         }
         if (cga.field_f == 2) {
           if (null != InvisibleTouchSwitchComponent.field_J &&
@@ -693,13 +693,13 @@ abstract class AppletGameShell extends GameApplet {
           }
         }
         if (cga.field_f == 3 &&
-          esa.a(vc.field_p, tk.field_b, -128, hm.field_n) &&
+          esa.a(vc.field_p, tk.field_b, -128, OpenGlTexture2D.field_n) &&
           S2CActionPacket.a(vc.field_p, (byte) -53)) {
           ee.a(-1);
           SimulationObserver.a((byte) -27);
           ura.field_b = nl.field_c;
           sra.field_t = false;
-          cra.a(tk.field_b, hm.field_n, 1, ft.field_a, vc.field_p);
+          cra.a(tk.field_b, OpenGlTexture2D.field_n, 1, ft.field_a, vc.field_p);
           if (ofa.field_I ||
             null != bma.field_s) {
             stackIn_101_0 = !(ofa.field_I);
@@ -714,16 +714,16 @@ abstract class AppletGameShell extends GameApplet {
             ci.field_k = fta.c(-93);
           }
           wk.a(sma.field_c, ci.field_k, 11861, vc.field_p);
-          hm.field_n = null;
+          OpenGlTexture2D.field_n = null;
           tk.field_b = null;
           vc.field_p = null;
-          vga.a((java.applet.Applet) (this), (byte) -128);
+          StatefulWidgetPainter.a((java.applet.Applet) (this), (byte) -128);
           C2SActionPacket.a(-33);
           cga.field_f = 10;
         }
         if (10 == cga.field_f) {
           if (ApproachPlayerLocomotor.field_t != 0) {
-            ConstrainToFacingArcLocomotor.field_v = dd.a(tj.field_c, 1);
+            ConstrainToFacingArcLocomotor.field_v = SoftReferenceCache.a(tj.field_c, 1);
           }
           cga.field_f = 11;
         }
@@ -756,7 +756,7 @@ abstract class AppletGameShell extends GameApplet {
           }
         }
         if (!param1 &&
-          wla.field_Cb) {
+          ReportAbuseDialog.field_Cb) {
           pq.a(nma.field_l, false);
           this.recreateCanvas((byte) 14);
           fpa.a(nma.field_l, (byte) 75);

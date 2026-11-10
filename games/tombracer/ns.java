@@ -197,8 +197,8 @@ final class ns extends qe {
         this.field_i = new tla(this.field_a, 2);
         this.field_i.a((byte) 6, 0);
         this.field_a.e(1, true);
-        this.field_a.h(1104971864, -16777216);
-        this.field_a.b(260, 8960, 7681);
+        this.field_a.setTextureConstantArgb(1104971864, -16777216);
+        this.field_a.setTextureCombineOperations(260, 8960, 7681);
         this.field_a.b(34166, 3, 0, 770);
         this.field_a.e(0, true);
         int var2 = 67 / ((param0 + 62) / 58);

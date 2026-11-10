@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ng {
+final class WidgetStyleLayer {
     Sprite[] field_i;
     private int field_j;
     private int field_a;
@@ -20,7 +20,7 @@ final class ng {
         field_b = null;
         field_f = null;
         if (param0 != 46) {
-          ng.releaseStatics((byte) -11);
+          WidgetStyleLayer.releaseStatics((byte) -11);
           field_k = null;
           return;
         }
@@ -40,7 +40,7 @@ final class ng {
         }
     }
 
-    final ng b(int param0, int param1) {
+    final WidgetStyleLayer b(int param0, int param1) {
         if (param1 != -2147483648) {
           this.b(119, -53);
           this.field_h = param0;
@@ -50,18 +50,18 @@ final class ng {
         return this;
     }
 
-    final ng c(int param0, int param1) {
+    final WidgetStyleLayer c(int param0, int param1) {
         if (param0 == -1) {
           this.field_d = param1;
           return this;
         }
         Sprite[] var4 = (Sprite[]) null;
-        this.a(-11, (Sprite[]) null);
+        this.setSprites(-11, (Sprite[]) null);
         this.field_d = param1;
         return this;
     }
 
-    final ng a(int param0, int param1) {
+    final WidgetStyleLayer setHorizontalOffset(int param0, int param1) {
         this.field_j = param0;
         if (param1 != 1) {
           this.field_l = 50;
@@ -70,7 +70,7 @@ final class ng {
         return this;
     }
 
-    final ng a(byte param0, int param1) {
+    final WidgetStyleLayer a(byte param0, int param1) {
         this.field_l = param1;
         if (param0 != 7) {
           this.a(50, false);
@@ -79,7 +79,7 @@ final class ng {
         return this;
     }
 
-    final void a(int param0, int param1, vga param2, int param3, UiWidget param4) {
+    final void a(int param0, int param1, StatefulWidgetPainter param2, int param3, UiWidget param4) {
         BitmapFont stackIn_20_0;
         String stackIn_20_1;
         int stackIn_20_2;
@@ -181,7 +181,7 @@ final class ng {
         }
     }
 
-    final void a(vga param0, UiWidget param1, int param2, int param3, int param4, ng param5) {
+    final void mergeIntoWorkingSkin(StatefulWidgetPainter param0, UiWidget param1, int param2, int param3, int param4, WidgetStyleLayer param5) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -248,20 +248,20 @@ final class ng {
         }
     }
 
-    final ng a(int param0, boolean param1) {
+    final WidgetStyleLayer a(int param0, boolean param1) {
         if (param0 == -2) {
           this.field_g = param1 ? true : false;
           return this;
         }
-        ng var4 = (ng) null;
-        this.a((vga) null, (UiWidget) null, 76, 31, 78, (ng) null);
+        WidgetStyleLayer var4 = (WidgetStyleLayer) null;
+        this.mergeIntoWorkingSkin((StatefulWidgetPainter) null, (UiWidget) null, 76, 31, 78, (WidgetStyleLayer) null);
         this.field_g = param1 ? true : false;
         return this;
     }
 
-    final ng a(int param0, Sprite[] param1) {
+    final WidgetStyleLayer setSprites(int param0, Sprite[] param1) {
         RuntimeException var3 = null;
-        ng stackIn_2_0 = null;
+        WidgetStyleLayer stackIn_2_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -271,7 +271,7 @@ final class ng {
           if (param0 == 2) {
             return this;
           }
-          stackIn_2_0 = (ng) null;
+          stackIn_2_0 = (WidgetStyleLayer) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -287,7 +287,7 @@ final class ng {
         }
     }
 
-    final void a(boolean param0, ng param1) {
+    final void copyTo(boolean param0, WidgetStyleLayer param1) {
         param1.field_i = this.field_i;
         param1.field_c = this.field_c;
         param1.field_h = this.field_h;
@@ -305,7 +305,7 @@ final class ng {
         }
     }
 
-    ng() {
+    WidgetStyleLayer() {
         this.field_i = null;
         this.field_l = -2;
         this.field_c = null;

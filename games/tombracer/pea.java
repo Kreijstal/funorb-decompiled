@@ -25,7 +25,7 @@ final class pea {
         if (param0 != 0) {
           return (DualLinkNode) null;
         }
-        DualLinkNode var4 = (DualLinkNode) (this.field_e.a((byte) -104, param1));
+        DualLinkNode var4 = (DualLinkNode) (this.field_e.get((byte) -104, param1));
         if (var4 == null) {
           return var4;
         }

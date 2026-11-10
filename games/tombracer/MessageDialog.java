@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ij extends lc implements tsa {
+class MessageDialog extends ContentTransitionDialog implements tsa {
     private boolean field_W;
     private static String[] field_Z;
     private boolean field_bb;
@@ -12,7 +12,7 @@ class ij extends lc implements tsa {
     private static String[] field_db;
     static ToolkitSprite field_X;
 
-    public void a(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
+    public void onButtonActivated(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -116,7 +116,7 @@ class ij extends lc implements tsa {
         field_Z = null;
         field_X = null;
         if (param0 != 7707) {
-          ij.a(12, -99, 63, -9, 57, 8);
+          MessageDialog.a(12, -99, 63, -9, 57, 8);
         }
     }
 
@@ -125,12 +125,12 @@ class ij extends lc implements tsa {
           tga.field_a.c(fm.a(false, param4), param0, param2, param3, param5 - 22977, param1);
           return;
         }
-        ij.a(-35, -13, -25, -10, -41, -25);
+        MessageDialog.a(-35, -13, -25, -10, -41, -25);
         tga.field_a.c(fm.a(false, param4), param0, param2, param3, param5 - 22977, param1);
     }
 
-    ij(jta param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
-        super(param0, new sr((ij) null, param1, param2), 77, 10, 10);
+    MessageDialog(jta param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+        super(param0, new sr((MessageDialog) null, param1, param2), 77, 10, 10);
         try {
           this.field_ab = param1;
           this.field_bb = param4 ? true : false;

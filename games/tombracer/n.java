@@ -6,7 +6,7 @@ final class n extends GameFont implements e {
 
     private final native void S(NativeSoftwareGraphicsToolkit param0, ya param1, byte[][] param2, int[] param3, int[] param4, int[] param5, int[] param6, int[] param7);
 
-    final void a(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7) {
+    final void drawMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7) {
         this.PA(param0, param1, param2, param3, param4, param5, param6, param7);
     }
 
@@ -32,7 +32,7 @@ final class n extends GameFont implements e {
         this.S(param0, param1, var6, param3[0].field_g, var7, var8, var9, var10);
     }
 
-    final native void fa(char param0, int param1, int param2, int param3, boolean param4);
+    final native void drawGlyph(char param0, int param1, int param2, int param3, boolean param4);
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {

@@ -8,7 +8,7 @@ final class tr {
     static String field_d;
     static int field_f;
     static String field_c;
-    private dd field_b;
+    private SoftReferenceCache field_b;
     private ResourceArchive field_a;
 
     public static void releaseStatics(byte param0) {
@@ -45,7 +45,7 @@ final class tr {
         if (32768 <= param1) {
           var3Lifetime1.a(100);
         }
-        this.field_b.a(29166, var3Lifetime1, (long)param1);
+        this.field_b.put(29166, var3Lifetime1, (long)param1);
         return var3Lifetime1;
     }
 
@@ -59,7 +59,7 @@ final class tr {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_b = new dd(64);
+        this.field_b = new SoftReferenceCache(64);
         try {
           this.field_a = param1;
           this.field_h = param2;

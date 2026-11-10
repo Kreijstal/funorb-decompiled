@@ -140,16 +140,16 @@ final class ConsoleToken extends IntrusiveNode {
         }
     }
 
-    final bfa a(int param0, ela[] param1) throws rv, jj {
+    final ConsoleValue a(int param0, ela[] param1) throws rv, jj {
         int incrementValue$0 = 0;
-        bfa stackIn_9_0 = null;
-        bfa stackIn_13_0 = null;
-        bfa stackIn_17_0 = null;
-        bfa stackIn_20_0 = null;
-        bfa stackIn_22_0 = null;
-        bfa stackIn_26_0 = null;
-        bfa stackIn_33_0 = null;
-        bfa stackIn_37_0 = null;
+        ConsoleValue stackIn_9_0 = null;
+        ConsoleValue stackIn_13_0 = null;
+        ConsoleValue stackIn_17_0 = null;
+        ConsoleValue stackIn_20_0 = null;
+        ConsoleValue stackIn_22_0 = null;
+        ConsoleValue stackIn_26_0 = null;
+        ConsoleValue stackIn_33_0 = null;
+        ConsoleValue stackIn_37_0 = null;
         RuntimeException stackIn_43_0 = null;
         StringBuilder stackIn_43_1 = null;
         String stackIn_44_2 = null;
@@ -160,8 +160,8 @@ final class ConsoleToken extends IntrusiveNode {
         int var4 = 0;
         ConsoleToken var5 = null;
         int var6 = 0;
-        bfa[] var7 = null;
-        bfa[] var8 = null;
+        ConsoleValue[] var7 = null;
+        ConsoleValue[] var8 = null;
         String var9 = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
@@ -170,7 +170,7 @@ final class ConsoleToken extends IntrusiveNode {
           }
           try {
             if (tr.field_f == this.kind) {
-              var7 = new bfa[this.field_i.size((byte) -16)];
+              var7 = new ConsoleValue[this.field_i.size((byte) -16)];
               var8 = var7;
               var4 = 0;
               var5 = (ConsoleToken) (this.field_i.first(-80));
@@ -186,22 +186,22 @@ final class ConsoleToken extends IntrusiveNode {
             if (CrusherModel.field_o == this.kind) {
               var3_int = Character.toLowerCase(this.text.charAt(this.text.length() - 1));
               if (var3_int == 102) {
-                stackIn_13_0 = new bfa(Float.valueOf(this.text).floatValue());
+                stackIn_13_0 = new ConsoleValue(Float.valueOf(this.text).floatValue());
                 return stackIn_13_0;
               }
               if (var3_int == 108) {
-                stackIn_17_0 = new bfa(Long.parseLong(this.text.substring(0, this.text.length() - 1)));
+                stackIn_17_0 = new ConsoleValue(Long.parseLong(this.text.substring(0, this.text.length() - 1)));
                 return stackIn_17_0;
               }
               if (this.text.indexOf('.') == -1) {
-                stackIn_22_0 = new bfa(Integer.parseInt(this.text));
+                stackIn_22_0 = new ConsoleValue(Integer.parseInt(this.text));
                 return stackIn_22_0;
               }
-              stackIn_20_0 = new bfa(Double.valueOf(this.text).doubleValue());
+              stackIn_20_0 = new ConsoleValue(Double.valueOf(this.text).doubleValue());
               return stackIn_20_0;
             }
             if (PressureSwitchBehaviour.field_r == this.kind) {
-              stackIn_26_0 = new bfa(this.text.equals("true"));
+              stackIn_26_0 = new ConsoleValue(this.text.equals("true"));
               return stackIn_26_0;
             }
             if (this.kind == nl.field_d) {
@@ -209,11 +209,11 @@ final class ConsoleToken extends IntrusiveNode {
               if (var9.length() != 1) {
                 throw new rv("Invalid char value: " + var9);
               }
-              stackIn_33_0 = new bfa(var9.charAt(0));
+              stackIn_33_0 = new ConsoleValue(var9.charAt(0));
               return stackIn_33_0;
             }
             if (ma.field_e == this.kind) {
-              stackIn_37_0 = new bfa(this.text.substring(1, -1 + this.text.length()));
+              stackIn_37_0 = new ConsoleValue(this.text.substring(1, -1 + this.text.length()));
               return stackIn_37_0;
             }
           } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {

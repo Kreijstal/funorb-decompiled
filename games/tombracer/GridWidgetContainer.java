@@ -330,7 +330,7 @@ final class GridWidgetContainer extends ArrayWidgetGroup {
         if (param0 != 97) {
           field_G = (String) null;
         }
-        stackIn_6_0 = (wba.field_o != null) && (wba.field_o.a((byte) -127));
+        stackIn_6_0 = (wba.field_o != null) && (wba.field_o.canResizeViewport((byte) -127));
         return stackIn_6_0;
     }
 

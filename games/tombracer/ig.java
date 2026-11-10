@@ -28,7 +28,7 @@ final class ig {
           }
           tc.field_d = null;
           if (fua.field_a != null) {
-            var3 = (pha) (fua.field_a.b(-91));
+            var3 = (pha) (fua.field_a.startTraversal(-91));
             while (var3 != null) {
               var3.unlinkSecondary(-7975);
               var3 = (pha) (fua.field_a.a((byte) -112));

@@ -81,7 +81,7 @@ final class S2CActionPacket extends IntrusiveNode implements GamePacket {
           return ik.b(-17698);
         }
         if (2 == var2) {
-          return mr.a((byte) 125);
+          return AccountRegistrationPanel.a((byte) 125);
         }
         throw new IllegalStateException("Unknown/unimplemented weapon preset: " + param1);
     }

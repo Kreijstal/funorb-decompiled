@@ -65,8 +65,8 @@ final class kw extends qe {
         this.field_g = new tla(this.field_a, 2);
         this.field_g.a((byte) 6, 0);
         this.field_a.e(1, true);
-        this.field_a.b(7681, 8960, 260);
-        this.field_a.c(0, 0, 34168, 768);
+        this.field_a.setTextureCombineOperations(7681, 8960, 260);
+        this.field_a.setTextureCombineOperands(0, 0, 34168, 768);
         jaggl.OpenGL.glTexGeni(8192, 9472, 9216);
         jaggl.OpenGL.glEnable(3168);
         this.field_a.e(0, true);
@@ -81,8 +81,8 @@ final class kw extends qe {
         this.field_g.b((byte) -119);
         this.field_g.a((byte) 6, 1);
         this.field_a.e(1, true);
-        this.field_a.b(8448, 8960, 8448);
-        this.field_a.c(0, 0, 5890, 768);
+        this.field_a.setTextureCombineOperations(8448, 8960, 8448);
+        this.field_a.setTextureCombineOperands(0, 0, 5890, 768);
         jaggl.OpenGL.glDisable(3168);
         this.field_a.e(0, true);
         jaggl.OpenGL.glTexEnvf(8960, 34163, 1.0f);
@@ -200,7 +200,7 @@ final class kw extends qe {
           this.field_a.a(0.0f, true, 1.0f);
           this.field_a.e(0, true);
         }
-        this.field_a.b(8448, 8960, 8448);
+        this.field_a.setTextureCombineOperations(8448, 8960, 8448);
         jaggl.OpenGL.glMatrixMode(5890);
         jaggl.OpenGL.glPopMatrix();
         jaggl.OpenGL.glMatrixMode(5888);
@@ -211,7 +211,7 @@ final class kw extends qe {
     }
 
     final void b(boolean param0, int param1) {
-        this.field_a.b(260, 8960, 8448);
+        this.field_a.setTextureCombineOperations(260, 8960, 8448);
         if (param1 < 77) {
           kw.a(34, false, -44);
         }

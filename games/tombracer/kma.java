@@ -53,10 +53,10 @@ abstract class kma implements nua {
         if (null == fj.field_c) {
           return;
         }
-        int var4 = fj.field_c.d(-1, param0);
+        int var4 = fj.field_c.updateAndPollReason(-1, param0);
         if (var4 != -2) {
           if (var4 != -1) {
-            var5 = fj.field_c.c(false) ? 1 : 0;
+            var5 = fj.field_c.isMuteRequested(false) ? 1 : 0;
             PowerDownItemBehaviour.a(var4, param2, (byte) 87, var5 != 0, fj.field_c.field_Db, fj.field_c.f(80));
           }
           fj.field_c = null;

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pj {
+final class AwtFullscreenController {
     private java.awt.GraphicsDevice field_b;
     private java.awt.DisplayMode field_a;
 
-    private final void a(java.awt.Frame param0, int param1) {
+    private final void setFullscreenWindow(java.awt.Frame param0, int param1) {
         try {
           int decompiledRegionSelector0 = 0;
           Throwable decompiledCaughtException = null;
@@ -30,7 +30,7 @@ final class pj {
           }
           if (param1 <= 3) {
             var8 = (java.awt.Frame) null;
-            this.a((java.awt.Frame) null, -8);
+            this.setFullscreenWindow((java.awt.Frame) null, -8);
           }
           try {
             this.field_b.setFullScreenWindow((java.awt.Window) ((Object) param0));
@@ -65,7 +65,7 @@ final class pj {
               var7_ref = decompiledCaughtException;
             }
           }
-          throw pj.<RuntimeException>$cfr$sneakyThrow(var6);
+          throw AwtFullscreenController.<RuntimeException>$cfr$sneakyThrow(var6);
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -85,7 +85,7 @@ final class pj {
         }
         param0.setUndecorated(true);
         param0.enableInputMethods(false);
-        this.a(param0, 29);
+        this.setFullscreenWindow(param0, 29);
         if (0 == param4) {
           var6 = this.field_a.getRefreshRate();
           var7 = this.field_b.getDisplayModes();
@@ -117,10 +117,10 @@ final class pj {
           }
           this.field_a = null;
         }
-        this.a((java.awt.Frame) null, 84);
+        this.setFullscreenWindow((java.awt.Frame) null, 84);
     }
 
-    public pj() throws Exception {
+    public AwtFullscreenController() throws Exception {
         int var4 = 0;
         java.awt.GraphicsEnvironment var1;
         java.awt.GraphicsDevice[] var2;
@@ -141,7 +141,7 @@ final class pj {
             return;
           }
         }
-        throw pj.<RuntimeException>$cfr$sneakyThrow(new Exception());
+        throw AwtFullscreenController.<RuntimeException>$cfr$sneakyThrow(new Exception());
     }
 
     public final int[] listmodes() {

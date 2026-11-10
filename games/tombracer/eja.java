@@ -10,5 +10,5 @@ interface eja extends mta {
 
     public abstract void a(int param0, int param1);
 
-    public abstract jaclib.memory.Buffer a(boolean param0, byte param1);
+    public abstract jaclib.memory.Buffer map(boolean param0, byte param1);
 }

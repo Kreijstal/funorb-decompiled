@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class at extends ofa implements tsa {
+final class DisplaySettingsDialog extends ofa implements tsa {
     static volatile int field_X;
     private GridWidgetContainer field_T;
     private FocusableWidget field_Z;
@@ -11,7 +11,7 @@ final class at extends ofa implements tsa {
     private FocusableWidget field_W;
     static String field_Q;
     static String field_R;
-    private rla field_ab;
+    private DropdownList field_ab;
     private boolean field_O;
     private FocusableWidget field_L;
     private FocusableWidget field_V;
@@ -64,7 +64,7 @@ final class at extends ofa implements tsa {
         }
     }
 
-    at(jta param0) {
+    DisplaySettingsDialog(jta param0) {
         super(param0, 430, 254);
         int incrementValue$0 = 0;
         int var7_int = 0;
@@ -150,7 +150,7 @@ final class at extends ofa implements tsa {
           this.field_M = stackIn_31_1;
           stackIn_34_0 = (!GridWidgetContainer.g((byte) 97)) ? 0 : 1;
           var2_intLifetime1 = stackIn_34_0;
-          stackIn_37_1 = !(vpa.a(56));
+          stackIn_37_1 = !(TextWidgetPainter.a(56));
           this.field_Y = stackIn_37_1;
           stackIn_40_0 = (var2_intLifetime1 != 0) ? 3 : 2;
           var3Lifetime1 = stackIn_40_0;
@@ -218,11 +218,11 @@ final class at extends ofa implements tsa {
               }
               var5_ref_String__[var7_int] = var8.field_a + "<times>" + var8.field_c;
             }
-            this.field_ab = new rla(var5_ref_String__, var6_int, 150);
+            this.field_ab = new DropdownList(var5_ref_String__, var6_int, 150);
             this.field_ab.setBounds((byte) -31, 126, 18, this.field_V.field_i + this.field_T.field_i, -19 + (this.field_V.field_p + (this.field_V.field_n + this.field_T.field_n)));
             this.children.addFirst((byte) 126, (IntrusiveNode) (this.field_ab));
           }
-          this.field_Z = this.a((qc) (this), po.field_i, 30815);
+          this.field_Z = this.a((qc) (this), CachedTextLayout.field_i, 30815);
           var5Lifetime1 = this.field_Z.field_m / 2 + this.field_Z.field_i;
           this.field_Z.field_m = 150;
           this.field_Z.field_i = -this.field_Z.field_m + (var5Lifetime1 - 20);
@@ -244,7 +244,7 @@ final class at extends ofa implements tsa {
             var7.field_p = 80;
             var7.field_n = 163;
             var7.field_i = 0;
-            var7.field_r = (isa) ((Object) new vpa(KeySwitchComponent.field_J, 20, 20, 0, 10, 16777215, -1, 0, 0, 16, 0, 0, true));
+            var7.field_r = (isa) ((Object) new TextWidgetPainter(KeySwitchComponent.field_J, 20, 20, 0, 10, 16777215, -1, 0, 0, 16, 0, 0, true));
             this.addChild(var7, -1);
           }
           this.field_O = false;
@@ -422,7 +422,7 @@ final class at extends ofa implements tsa {
         }
     }
 
-    public final void a(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
+    public final void onButtonActivated(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
         int stackIn_13_0 = 0;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
@@ -450,7 +450,7 @@ final class at extends ofa implements tsa {
                   if (var6_int == 0 &&
                     this.field_V == param2) {
                     if (this.field_M) {
-                      if (wla.field_ub > 0) {
+                      if (ReportAbuseDialog.field_ub > 0) {
                         this.a(20306, param2);
                       } else {
                         this.field_z.c(new bra(this.field_z), 84);
@@ -648,15 +648,15 @@ final class at extends ofa implements tsa {
                 var2 = this.field_ab.i((byte) 123);
                 if (var2 < 0) {
                   in.a(-30600, true);
-                  this.field_z.c(new op(this.field_z), 89);
+                  this.field_z.c(new FullscreenConfirmationDialog(this.field_z), 89);
                 } else {
                   wba.field_o.a(this.field_P[var2].field_a, this.field_P[var2].field_c, -1);
                   in.a(-30600, true);
-                  this.field_z.c(new op(this.field_z), 89);
+                  this.field_z.c(new FullscreenConfirmationDialog(this.field_z), 89);
                 }
               } else {
                 in.a(-30600, true);
-                this.field_z.c(new op(this.field_z), 89);
+                this.field_z.c(new FullscreenConfirmationDialog(this.field_z), 89);
               }
             }
           }
@@ -717,9 +717,9 @@ final class at extends ofa implements tsa {
             }
           }
           if (!this.field_Y &&
-            !vpa.a(127)) {
+            !TextWidgetPainter.a(127)) {
             this.h(-8266);
-            this.field_z.c(new at(this.field_z), 109);
+            this.field_z.c(new DisplaySettingsDialog(this.field_z), 109);
           }
           if (this.field_ab != null) {
             stackIn_14_0 = (this.field_ab.j((byte) -125)) ? 0 : 1;

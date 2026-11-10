@@ -149,7 +149,7 @@ final class pe extends OpenGlTexture implements gf {
         }
     }
 
-    public final float a(int param0, float param1) {
+    public final float textureU(int param0, float param1) {
         if (param0 <= 60) {
           return -1.0163322687149048f;
         }
@@ -224,7 +224,7 @@ final class pe extends OpenGlTexture implements gf {
         return false;
     }
 
-    public final float a(float param0, byte param1) {
+    public final float textureV(float param0, byte param1) {
         if (param1 != -33) {
           return 1.619486927986145f;
         }

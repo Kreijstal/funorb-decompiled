@@ -235,7 +235,7 @@ final class fga implements ShellListener {
               }
             }
             var3 = tga.field_a;
-            var3.GA(0);
+            var3.clear(0);
             stackIn_18_0 = 22;
             stackIn_18_1 = f.field_e;
             stackIn_19_2 = !(rd.b(false));

@@ -261,7 +261,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
         try {
           java.lang.reflect.Method var6 = null;
           Class var7 = null;
-          NativeCanvasSurface var4 = (NativeCanvasSurface) (this.field_r.a((byte) -110, (long)param0.hashCode()));
+          NativeCanvasSurface var4 = (NativeCanvasSurface) (this.field_r.get((byte) -110, (long)param0.hashCode()));
           if (var4 == null) {
             try {
               var7 = Class.forName("java.awt.Canvas");
@@ -302,7 +302,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
     private final void bindCanvasSurface(java.awt.Canvas param0) {
         NativeCanvasSurface var2 = null;
         if (param0 != null) {
-          var2 = (NativeCanvasSurface) (this.field_r.a((byte) -82, (long)param0.hashCode()));
+          var2 = (NativeCanvasSurface) (this.field_r.get((byte) -82, (long)param0.hashCode()));
           this.field_f = var2;
           this.t(var2);
         } else {
@@ -436,7 +436,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
 
     private final native void MA(d param0, int param1, int param2);
 
-    final native void GA(int param0);
+    final native void clear(int param0);
 
     final void a(ToolkitSprite param0, boolean param1) {
         this.n(((j) (param0)).field_nativeid, 0L);

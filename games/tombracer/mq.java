@@ -30,7 +30,7 @@ final class mq {
     final boolean a(int param0, float param1, lha param2, lha param3) {
         int var9 = 0;
         RuntimeException var5 = null;
-        kba var6 = null;
+        OpenGlRenderbuffer var6 = null;
         int var7 = 0;
         int var8 = 0;
         float var10 = 0.0f;
@@ -50,7 +50,7 @@ final class mq {
           }
           var7 = -116 % ((param0 + 63) / 46);
           var12 = this.field_c.field_ic;
-          var6 = new kba(this.field_c, 6408, param3.field_r, param3.field_q);
+          var6 = new OpenGlRenderbuffer(this.field_c, 6408, param3.field_r, param3.field_q);
           var8 = 0;
           this.field_c.b((ks) (var12), (byte) 81);
           var12.a(0, var6, true);

@@ -10,7 +10,7 @@ final class pja extends vw {
         int var3 = 127 / ((param0 - 41) / 62);
         jaggl.OpenGL.glBindProgramARB(34336, this.field_d.field_b);
         jaggl.OpenGL.glEnable(34336);
-        this.field_c.a(lja.field_j, 0, -37);
+        this.field_c.a(PlayerContextMenu.field_j, 0, -37);
     }
 
     final void a(int param0, iva param1, int param2) {

@@ -678,7 +678,7 @@ final class gja extends ka {
                           var55 = (var38[2] * (float)var51 + (var38[0] * (float)var49 + var38[1] * (float)var50)) / var52;
                           var56 = (var38[4] * (float)var50 + var38[3] * (float)var49 + (float)var51 * var38[5]) / var53;
                           var57 = ((float)var51 * var38[8] + (var38[6] * (float)var49 + var38[7] * (float)var50)) / var54;
-                          var30 = mr.a(var57, var56, false, var55);
+                          var30 = AccountRegistrationPanel.a(var57, var56, false, var55);
                           as.a(var36, RoomComponentFactory.field_a, param1.field_I[var32_int], var35, var42, var37_int, var41, param1.field_b[var32_int], var30, param1.field_p[var32_int], -102, var40, var39, var38);
                           var22_float = RoomComponentFactory.field_a[0];
                           var23 = RoomComponentFactory.field_a[1];
@@ -856,11 +856,11 @@ final class gja extends ka {
                 this.field_U[var16] = this.field_v;
               }
               TimeSwitchBehaviour.field_q = null;
-              this.field_kb = op.a(this.field_kb, 119, this.field_fb);
-              this.field_G = op.a(this.field_G, 112, this.field_fb);
-              this.field_lb = op.a(this.field_lb, 114, this.field_fb);
-              this.field_m = op.a(this.field_m, 114, this.field_fb);
-              this.field_p = op.a(this.field_p, 123, this.field_fb);
+              this.field_kb = FullscreenConfirmationDialog.a(this.field_kb, 119, this.field_fb);
+              this.field_G = FullscreenConfirmationDialog.a(this.field_G, 112, this.field_fb);
+              this.field_lb = FullscreenConfirmationDialog.a(this.field_lb, 114, this.field_fb);
+              this.field_m = FullscreenConfirmationDialog.a(this.field_m, 114, this.field_fb);
+              this.field_p = FullscreenConfirmationDialog.a(this.field_p, 123, this.field_fb);
               this.field_w = kaa.a(0, this.field_w, this.field_fb);
               this.field_eb = fba.a(1, this.field_eb, this.field_fb);
               this.field_t = fba.a(1, this.field_t, this.field_fb);
@@ -1275,7 +1275,7 @@ final class gja extends ka {
               var2.endBitAccess((byte) 98);
               break;
             }
-            cq.field_b[var4] = jo.a(var2, true);
+            cq.field_b[var4] = ScrollControlWidget.a(var2, true);
             var4++;
           } while (var7 == 0);
           var4 = param1;
@@ -1463,14 +1463,14 @@ final class gja extends ka {
             return true;
           }
           if (this.field_g.field_d == null) {
-            this.field_g.field_d = this.field_S.a(26, this.field_F);
+            this.field_g.field_d = this.field_S.createIndexBuffer(26, this.field_F);
           }
           if (param0 != 0) {
             this.a((byte) -37, -100, true);
           }
           var2 = this.field_g.field_d;
           var2.a(param0 + 28, 6 * this.field_v);
-          var3 = var2.a(true, (byte) -10);
+          var3 = var2.map(true, (byte) -10);
           if (null != var3) {
             boolean decompiledFrameCompleted1 = true;
             boolean decompiledFrameCompleted0 = true;
@@ -2177,8 +2177,8 @@ final class gja extends ka {
               break;
             }
             if (decompiledNaturalLoopExit0) {
-              this.field_S.a(1, false, lja.field_j);
-              this.field_S.a(lja.field_j, 1, -117);
+              this.field_S.a(1, false, PlayerContextMenu.field_j);
+              this.field_S.a(PlayerContextMenu.field_j, 1, -117);
             }
             this.field_S.a(true, 0);
             return;

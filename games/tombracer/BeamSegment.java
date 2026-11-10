@@ -77,13 +77,13 @@ final class BeamSegment {
         }
     }
 
-    final static bfa a(ela[] param0, int param1, String param2, bfa[] param3) throws rv {
+    final static ConsoleValue a(ela[] param0, int param1, String param2, ConsoleValue[] param3) throws rv {
         int var6 = 0;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         StringBuilder discarded$0 = null;
-        bfa stackIn_5_0 = null;
+        ConsoleValue stackIn_5_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;

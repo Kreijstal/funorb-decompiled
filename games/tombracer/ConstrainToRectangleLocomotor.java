@@ -287,7 +287,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
           qqa.field_n = new boolean[fa.field_b];
           var17.position = -7 + param1.length - fa.field_b * 8;
           ika.field_a = var17.readUnsignedShort(126);
-          kba.field_s = var17.readUnsignedShort(param0 ^ 126);
+          OpenGlRenderbuffer.field_s = var17.readUnsignedShort(param0 ^ 126);
           var3 = 1 + (var17.readUnsignedByte(255) & 255);
           for (var4 = 0; fa.field_b > var4; var4++) {
             ak.field_p[var4] = var16.readUnsignedShort(121);

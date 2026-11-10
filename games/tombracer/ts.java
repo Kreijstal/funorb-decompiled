@@ -115,7 +115,7 @@ final class ts {
         }
         try {
           ub.field_c = nla.field_a;
-          dd.field_a = param2 ? true : false;
+          SoftReferenceCache.field_a = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ts.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

@@ -5,7 +5,7 @@ final class fj {
     private int field_d;
     static String field_a;
     static String field_b;
-    static wla field_c;
+    static ReportAbuseDialog field_c;
 
     public static void releaseStatics(int param0) {
         field_b = null;
@@ -79,7 +79,7 @@ final class fj {
           var10 = var9.getRoom((byte) 73);
           var11 = -param1 + param2;
           var12 = param4 - param3;
-          ij.a(param1, var12, var11, param3, 0, 6);
+          MessageDialog.a(param1, var12, var11, param3, 0, 6);
           var13 = var11 / 2 + param1;
           var14 = var12 / 2 + param3;
           var15 = var10.j((byte) -81);
@@ -233,7 +233,7 @@ final class fj {
         int var7 = TombRacer.field_G ? 1 : 0;
         Sprite[] var1 = new Sprite[fa.field_b];
         if (param0 != 1500) {
-          field_c = (wla) null;
+          field_c = (ReportAbuseDialog) null;
         }
         for (var2 = 0; fa.field_b > var2; var2++) {
           var3 = iga.field_m[var2] * mq.field_b[var2];
@@ -242,7 +242,7 @@ final class fj {
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = mga.field_g[SnakePitBehaviour.c(255, (int) var4[var6])];
           }
-          var1[var2] = new Sprite(ika.field_a, kba.field_s, ak.field_p[var2], pg.field_C[var2], mq.field_b[var2], iga.field_m[var2], var5);
+          var1[var2] = new Sprite(ika.field_a, OpenGlRenderbuffer.field_s, ak.field_p[var2], pg.field_C[var2], mq.field_b[var2], iga.field_m[var2], var5);
         }
         MazeGenerator.a((byte) -50);
         return var1;

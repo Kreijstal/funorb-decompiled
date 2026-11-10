@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jo extends ArrayWidgetGroup implements tsa {
+final class ScrollControlWidget extends ArrayWidgetGroup implements tsa {
     int field_C;
     private int field_y;
     static String field_K;
@@ -22,7 +22,7 @@ final class jo extends ArrayWidgetGroup implements tsa {
     int field_M;
     private int field_A;
 
-    public final void a(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
+    public final void onButtonActivated(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
         int var7 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -367,7 +367,7 @@ final class jo extends ArrayWidgetGroup implements tsa {
         }
     }
 
-    jo(int param0, int param1, int param2, int param3, isa param4, isa param5, isa param6, int param7, int param8, int param9, int param10, boolean param11, boolean param12, int param13, int param14) {
+    ScrollControlWidget(int param0, int param1, int param2, int param3, isa param4, isa param5, isa param6, int param7, int param8, int param9, int param10, boolean param11, boolean param12, int param13, int param14) {
         super(param0, param1, param2, param3, param4);
         vp dupTemp$0 = null;
         FocusableWidget dupTemp$1 = null;
@@ -624,7 +624,7 @@ final class jo extends ArrayWidgetGroup implements tsa {
         FacePointLocomotor.a(param1, (byte) 88);
         dla.b(23713);
         if (!param0) {
-          jo.releaseStatics((byte) 92);
+          ScrollControlWidget.releaseStatics((byte) 92);
         }
     }
 

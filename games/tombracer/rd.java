@@ -36,15 +36,15 @@ final class rd extends wv {
     final static boolean b(boolean param0) {
         if (param0) {
           field_r = (ur) null;
-          if (!vpa.a(47)) {
-            return wla.field_ub <= 0 ? true : false;
+          if (!TextWidgetPainter.a(47)) {
+            return ReportAbuseDialog.field_ub <= 0 ? true : false;
           }
           return true;
         }
-        if (vpa.a(47)) {
+        if (TextWidgetPainter.a(47)) {
           return true;
         }
-        if (wla.field_ub > 0) {
+        if (ReportAbuseDialog.field_ub > 0) {
           return false;
         }
         return true;

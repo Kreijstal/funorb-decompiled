@@ -4,20 +4,20 @@
 final class wr extends ela {
     static String[] field_o;
 
-    final bfa a(bfa[] param0, int param1) {
+    final ConsoleValue a(ConsoleValue[] param0, int param1) {
         RuntimeException var3 = null;
-        bfa[] var4 = null;
-        bfa stackIn_3_0 = null;
+        ConsoleValue[] var4 = null;
+        ConsoleValue stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            var4 = (bfa[]) null;
-            this.a((bfa[]) null, -90);
+            var4 = (ConsoleValue[]) null;
+            this.a((ConsoleValue[]) null, -90);
           }
-          stackIn_3_0 = new bfa(joa.a(param0[1].a(false), (byte) 77, (String) (param0[0].field_d)));
+          stackIn_3_0 = new ConsoleValue(joa.a(param0[1].a(false), (byte) 77, (String) (param0[0].field_d)));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

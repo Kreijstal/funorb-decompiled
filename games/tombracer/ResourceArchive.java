@@ -248,7 +248,7 @@ final class ResourceArchive {
         }
     }
 
-    final synchronized boolean e(int param0, int param1) {
+    final synchronized boolean ensureGroupLoaded(int param0, int param1) {
         if (!this.b(-1, param0)) {
           return false;
         }
@@ -730,7 +730,7 @@ final class ResourceArchive {
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
           var3_int = this.field_i.field_b.a(vta.a(var4, -12754), 1);
-          stackIn_8_0 = this.e(var3_int, -2);
+          stackIn_8_0 = this.ensureGroupLoaded(var3_int, -2);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

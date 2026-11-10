@@ -54,7 +54,7 @@ final class ma extends qe {
           this.field_a.a(!param0 ? true : false, (kl) null);
           this.field_a.e(0, true);
         }
-        this.field_a.b(8448, 8960, 8448);
+        this.field_a.setTextureCombineOperations(8448, 8960, 8448);
         this.field_c = param0 ? true : false;
     }
 
@@ -79,8 +79,8 @@ final class ma extends qe {
           this.field_d = new tla(param0, 2);
           this.field_d.a((byte) 6, 0);
           this.field_a.e(1, true);
-          this.field_a.b(34165, 8960, 7681);
-          this.field_a.c(2, 0, 34168, 770);
+          this.field_a.setTextureCombineOperations(34165, 8960, 7681);
+          this.field_a.setTextureCombineOperands(2, 0, 34168, 770);
           this.field_a.b(34167, 3, 0, 770);
           jaggl.OpenGL.glTexGeni(8192, 9472, 34066);
           jaggl.OpenGL.glTexGeni(8193, 9472, 34066);
@@ -92,8 +92,8 @@ final class ma extends qe {
           this.field_d.b((byte) 5);
           this.field_d.a((byte) 6, 1);
           this.field_a.e(1, true);
-          this.field_a.b(8448, 8960, 8448);
-          this.field_a.c(2, 0, 34166, 770);
+          this.field_a.setTextureCombineOperations(8448, 8960, 8448);
+          this.field_a.setTextureCombineOperands(2, 0, 34166, 770);
           this.field_a.b(5890, 3, 0, 770);
           jaggl.OpenGL.glDisable(3168);
           jaggl.OpenGL.glDisable(3169);
@@ -139,7 +139,7 @@ final class ma extends qe {
         if (param1 < 77) {
           return;
         }
-        this.field_a.b(8448, 8960, 7681);
+        this.field_a.setTextureCombineOperations(8448, 8960, 7681);
     }
 
     static {

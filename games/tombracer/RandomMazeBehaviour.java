@@ -184,7 +184,7 @@ final class RandomMazeBehaviour extends Behaviour {
           if (param0) {
             return false;
           }
-          var8 = hm.a(param4.field_a, (byte) -15, param2, param2 + param5, param1 + param3, var7_int, param4.field_e, param4.field_k, param4.field_d, param3);
+          var8 = OpenGlTexture2D.a(param4.field_a, (byte) -15, param2, param2 + param5, param1 + param3, var7_int, param4.field_e, param4.field_k, param4.field_d, param3);
           if (var8 <= 0) {
             return false;
           }
@@ -248,7 +248,7 @@ final class RandomMazeBehaviour extends Behaviour {
               var12 = 16;
               var13 = this.field_t * var10;
               var14 = this.field_t * var11;
-              var15 = hm.a(var8, (byte) -15, var13, this.field_t + var13, var14 + this.field_t, var12, var6, var7, var5, var14);
+              var15 = OpenGlTexture2D.a(var8, (byte) -15, var13, this.field_t + var13, var14 + this.field_t, var12, var6, var7, var5, var14);
               if (var15 > 0) {
                 var16 = wm.a(1 << var12, var15, -51);
                 param0.a(var16, (byte) 47);

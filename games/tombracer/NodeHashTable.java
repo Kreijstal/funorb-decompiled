@@ -150,7 +150,7 @@ final class NodeHashTable {
         return param0 << -param2 + 16;
     }
 
-    final IntrusiveNode a(byte param0, long param1) {
+    final IntrusiveNode get(byte param0, long param1) {
         IntrusiveNode var5 = null;
         int var6 = TombRacer.field_G ? 1 : 0;
         if (param0 >= -78) {

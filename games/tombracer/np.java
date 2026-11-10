@@ -1102,7 +1102,7 @@ final class np extends ka {
             }
             if (param1) {
               if (null == this.field_jb) {
-                this.field_jb = this.field_R.a(-81, var3.position, 5123, true, var3.payload);
+                this.field_jb = this.field_R.createVertexBuffer(-81, var3.position, 5123, true, var3.payload);
                 if (var5 != 0) {
                   this.field_jb.a(var3.position, -11783, var3.payload, 5123);
                 }
@@ -1113,7 +1113,7 @@ final class np extends ka {
             }
             if (!param1 ||
               var5 != 0) {
-              this.field_w.field_a = this.field_R.a(-56, var3.position, 5123, false, var3.payload);
+              this.field_w.field_a = this.field_R.createVertexBuffer(-56, var3.position, 5123, false, var3.payload);
             }
             if (!param1) {
               this.field_gb = true;
@@ -3204,14 +3204,14 @@ final class np extends ka {
               decompiledSharedTail0 = (var35 != 0);
             }
             if (decompiledSharedTail0) {
-              this.field_Q = this.field_R.a(var12.position, var12.payload, var7, true, (byte) 117);
+              this.field_Q = this.field_R.createVertexBuffer(var12.position, var12.payload, var7, true, (byte) 117);
             }
             this.field_Z = (byte) 0;
             var13_ref = this.field_Q;
           }
           if (!param1 ||
             var35 != 0) {
-            var13_ref = this.field_R.a(var12.position, var12.payload, var7, false, (byte) 99);
+            var13_ref = this.field_R.createVertexBuffer(var12.position, var12.payload, var7, false, (byte) 99);
             this.field_gb = true;
           }
           if (var5 != 0) {
@@ -4160,7 +4160,7 @@ final class np extends ka {
             }
           }
           if (null != this.field_n &&
-            !lva.a(this.field_bb, (byte) -21, this.field_u)) {
+            !PerlinNoise2D.a(this.field_bb, (byte) -21, this.field_u)) {
             if (null == this.field_ab ||
               this.field_ab.field_d != null) {
               this.field_n = null;
@@ -4854,7 +4854,7 @@ final class np extends ka {
                             var55 = (var38_ref_float__[2] * (float)var51_int + (var38_ref_float__[0] * (float)var49_int + (float)var50_int * var38_ref_float__[1])) / var52;
                             var56 = (var38_ref_float__[4] * (float)var50_int + (float)var49_int * var38_ref_float__[3] + var38_ref_float__[5] * (float)var51_int) / var53;
                             var57 = (var38_ref_float__[8] * (float)var51_int + ((float)var50_int * var38_ref_float__[7] + var38_ref_float__[6] * (float)var49_int)) / var54;
-                            var30 = mr.a(var57, var56, false, var55);
+                            var30 = AccountRegistrationPanel.a(var57, var56, false, var55);
                             as.a(var36, dia.field_p, param1.field_I[var32_int], var35, var42, var37_int, var41, param1.field_b[var32_int], var30, param1.field_p[var32_int], -101, var40, var39_int, var38_ref_float__);
                             var22 = dia.field_p[0];
                             var23 = dia.field_p[1];

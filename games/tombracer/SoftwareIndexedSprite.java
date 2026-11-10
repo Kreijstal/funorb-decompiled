@@ -5,7 +5,7 @@ final class SoftwareIndexedSprite extends SoftwareToolkitSprite {
     private int[] field_F;
     private byte[] field_E;
 
-    final void b(int param0, int param1) {
+    final void blitAffine(int param0, int param1) {
         int incrementValue$16 = 0;
         int incrementValue$17 = 0;
         int incrementValue$12 = 0;
@@ -3805,7 +3805,7 @@ final class SoftwareIndexedSprite extends SoftwareToolkitSprite {
         this.field_F = param2;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final void drawScaled(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int incrementValue$13 = 0;
         int incrementValue$12 = 0;
         int incrementValue$11 = 0;

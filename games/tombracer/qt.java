@@ -7,8 +7,8 @@ final class qt {
     public static void b(int param0) {
         field_a = null;
         if (param0 != -25809) {
-          mr var2 = (mr) null;
-          qt.a((String) null, true, 14, (String) null, (String) null, (mr) null, true);
+          AccountRegistrationPanel var2 = (AccountRegistrationPanel) null;
+          qt.a((String) null, true, 14, (String) null, (String) null, (AccountRegistrationPanel) null, true);
         }
     }
 
@@ -355,7 +355,7 @@ final class qt {
             var3_ref_pha.unlinkSecondary(-7975);
             var3_ref_pha = (pha) (qha.field_g.next(117));
           }
-          var3_ref_phaLifetime1 = (pha) (fua.field_a.b(-119));
+          var3_ref_phaLifetime1 = (pha) (fua.field_a.startTraversal(-119));
           while (var3_ref_phaLifetime1 != null) {
             if (var3_ref_phaLifetime1.field_Hb ||
               var3_ref_phaLifetime1.field_Fb) {
@@ -410,7 +410,7 @@ final class qt {
         }
     }
 
-    final static boolean a(String param0, boolean param1, int param2, String param3, String param4, mr param5, boolean param6) {
+    final static boolean a(String param0, boolean param1, int param2, String param3, String param4, AccountRegistrationPanel param5, boolean param6) {
         RuntimeException var7 = null;
         rua var8 = null;
         RuntimeException stackIn_15_0 = null;

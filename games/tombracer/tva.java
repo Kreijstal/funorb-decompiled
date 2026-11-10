@@ -16,7 +16,7 @@ final class tva extends qe {
     }
 
     final void a(boolean param0) {
-        this.field_a.d(-109, param0);
+        this.field_a.setLightingSuppressed(-109, param0);
     }
 
     public static void c(int param0) {
@@ -78,7 +78,7 @@ final class tva extends qe {
 
     final void a(boolean param0, int param1) {
         int var3 = 73 / ((param1 - 56) / 48);
-        this.field_a.d(-55, true);
+        this.field_a.setLightingSuppressed(-55, true);
     }
 
     static {

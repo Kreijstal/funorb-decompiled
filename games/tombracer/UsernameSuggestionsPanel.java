@@ -63,7 +63,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements tsa {
         }
     }
 
-    public final void a(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
+    public final void onButtonActivated(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
         int var6_int = 0;
         int var7 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -82,7 +82,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements tsa {
             }
           }
           if (param2 == this.field_z[this.field_A.length]) {
-            this.field_w.a(10000536);
+            this.field_w.onMoreSuggestionsRequested(10000536);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

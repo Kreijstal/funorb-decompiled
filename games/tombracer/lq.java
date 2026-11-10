@@ -5,9 +5,9 @@ final class lq extends ela {
     static String[] achievementNames;
     static int[] field_o;
 
-    final bfa a(bfa[] param0, int param1) {
+    final ConsoleValue a(ConsoleValue[] param0, int param1) {
         RuntimeException var3 = null;
-        bfa stackIn_3_0 = null;
+        ConsoleValue stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -17,7 +17,7 @@ final class lq extends ela {
             lq.releaseStatics(10);
           }
           mn.h(30001);
-          stackIn_3_0 = new bfa("void");
+          stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

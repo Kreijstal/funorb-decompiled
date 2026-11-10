@@ -9,7 +9,7 @@ final class SoftwareBinaryFont extends GameFont {
     private int[] field_e;
     private byte[][] field_f;
 
-    private final void b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, aa param12, int param13, int param14) {
+    private final void blitMaskedGlyph(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, aa param12, int param13, int param14) {
         int var21 = 0;
         int var26 = 0;
         int stackIn_5_0 = 0;
@@ -92,7 +92,7 @@ final class SoftwareBinaryFont extends GameFont {
         }
     }
 
-    final void fa(char param0, int param1, int param2, int param3, boolean param4) {
+    final void drawGlyph(char param0, int param1, int param2, int param3, boolean param4) {
         int var13 = 0;
         int var13Lifetime1;
         int var13Lifetime2;
@@ -185,7 +185,7 @@ final class SoftwareBinaryFont extends GameFont {
         }
     }
 
-    private final void a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, aa param12, int param13, int param14) {
+    private final void blitMaskedGlyphAlpha(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, aa param12, int param13, int param14) {
         int var24 = 0;
         int var29 = 0;
         int incrementValue$1 = 0;
@@ -281,12 +281,12 @@ final class SoftwareBinaryFont extends GameFont {
         }
     }
 
-    final void a(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7) {
+    final void drawMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7) {
         int var16 = 0;
         int var16Lifetime1;
         int var16Lifetime2;
         if (param5 == null) {
-          this.fa(param0, param1, param2, param3, param4);
+          this.drawGlyph(param0, param1, param2, param3, param4);
           return;
         }
         param1 = param1 + this.field_e[param0];
@@ -328,9 +328,9 @@ final class SoftwareBinaryFont extends GameFont {
           return;
         }
         if ((param3 & -16777216) == -16777216) {
-          this.b(this.field_f[param0], this.field_g.field_r, param3, var15, var12, var9, var10, var13, var14, param1, param2, this.field_i[param0], param5, param6, param7);
+          this.blitMaskedGlyph(this.field_f[param0], this.field_g.field_r, param3, var15, var12, var9, var10, var13, var14, param1, param2, this.field_i[param0], param5, param6, param7);
         } else {
-          this.a(this.field_f[param0], this.field_g.field_r, param3, var15, var12, var9, var10, var13, var14, param1, param2, this.field_i[param0], param5, param6, param7);
+          this.blitMaskedGlyphAlpha(this.field_f[param0], this.field_g.field_r, param3, var15, var12, var9, var10, var13, var14, param1, param2, this.field_i[param0], param5, param6, param7);
         }
     }
 

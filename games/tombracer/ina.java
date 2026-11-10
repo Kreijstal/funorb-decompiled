@@ -19,7 +19,7 @@ final class ina {
         ka dupTemp$3 = null;
         ka dupTemp$4 = null;
         try {
-          SwitchState.field_a = tc.a(dd.field_b, -8829, param0);
+          SwitchState.field_a = tc.a(SoftReferenceCache.field_b, -8829, param0);
           ContextMenu.field_Ib = tc.a(OpenGlBuffer.field_c, -8829, param0);
           mma.field_b = tc.a(DoorwayComponent.field_K, -8829, param0);
           RevolverItemComponent.field_J = tc.a(C2SActionPacket.field_l, param1 - 8829, param0);
@@ -220,7 +220,7 @@ final class ina {
             return false;
           }
           if (var4.field_d >= 0 &&
-            !var4.field_h.e(var4.field_d, -2)) {
+            !var4.field_h.ensureGroupLoaded(var4.field_d, -2)) {
             this.a(var2, param0 ^ 22739, var4.field_h.getGroupProgress(var4.field_d, (byte) 114));
             return false;
           }

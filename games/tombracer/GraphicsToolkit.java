@@ -166,7 +166,7 @@ abstract class GraphicsToolkit {
 
     abstract int i();
 
-    abstract void GA(int param0);
+    abstract void clear(int param0);
 
     abstract void xa(float param0);
 

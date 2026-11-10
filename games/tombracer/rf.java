@@ -60,7 +60,7 @@ final class rf {
             return stackIn_17_0;
           }
           if (ii.field_a >= 100 &&
-            wla.field_ub <= 0) {
+            ReportAbuseDialog.field_ub <= 0) {
             stackIn_21_0 = bq.field_b;
             return stackIn_21_0;
           }

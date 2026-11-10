@@ -17,15 +17,15 @@ final class hpa extends aa {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        lja var5 = null;
+        PlayerContextMenu var5 = null;
         String var6 = null;
-        lja var7 = null;
+        PlayerContextMenu var7 = null;
         String var8 = null;
-        lja var9 = null;
+        PlayerContextMenu var9 = null;
         String var10 = null;
-        lja var11 = null;
+        PlayerContextMenu var11 = null;
         String var12 = null;
-        lja var13 = null;
+        PlayerContextMenu var13 = null;
         try {
           stackIn_2_0 = null;
           if (1 != param1.field_d) {

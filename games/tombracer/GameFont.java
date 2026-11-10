@@ -6,7 +6,7 @@ abstract class GameFont {
     private FontMetrics field_a;
     private GraphicsToolkit field_b;
 
-    abstract void fa(char param0, int param1, int param2, int param3, boolean param4);
+    abstract void drawGlyph(char param0, int param1, int param2, int param3, boolean param4);
 
     final void a(int param0, int param1, int param2, int param3, int param4, String param5) {
         if (param5 == null) {
@@ -23,7 +23,7 @@ abstract class GameFont {
         }
     }
 
-    abstract void a(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7);
+    abstract void drawMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7);
 
     private final void a(int param0, int param1, int param2) {
         nt.field_b = -1;
@@ -451,14 +451,14 @@ abstract class GameFont {
                 } else {
                   if (param2 == null) {
                     if ((GasTrapComponent.field_G & -16777216) != 0) {
-                      this.fa((char) var14, param1 + 1, 1 + param8, GasTrapComponent.field_G, true);
+                      this.drawGlyph((char) var14, param1 + 1, 1 + param8, GasTrapComponent.field_G, true);
                     }
-                    this.fa((char) var14, param1, param8, v.field_k, false);
+                    this.drawGlyph((char) var14, param1, param8, v.field_k, false);
                   } else {
                     if ((-16777216 & GasTrapComponent.field_G) != 0) {
-                      this.a((char) var14, param1 + 1, 1 + param8, GasTrapComponent.field_G, true, param2, param7, param4);
+                      this.drawMaskedGlyph((char) var14, param1 + 1, 1 + param8, GasTrapComponent.field_G, true, param2, param7, param4);
                     }
-                    this.a((char) var14, param1, param8, v.field_k, false, param2, param7, param4);
+                    this.drawMaskedGlyph((char) var14, param1, param8, v.field_k, false, param2, param7, param4);
                   }
                 }
                 var15 = this.field_a.characterWidth(255, var14);

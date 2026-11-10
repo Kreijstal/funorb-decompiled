@@ -90,7 +90,7 @@ final class cla extends DualLinkNode {
           aca.a(dia.field_o, 19711);
           aca.a(oq.a((byte) 124), 19711);
         }
-        if (vpa.a(83)) {
+        if (TextWidgetPainter.a(83)) {
           UrlDownloadRequest.a((byte) -59);
         }
     }

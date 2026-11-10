@@ -197,8 +197,8 @@ final class ca extends GameFont {
           var33 = this.field_d.a(-15730, true);
           if (var33 != null) {
             var34 = this.field_g.a(var33, 127);
-            var10 = this.field_f.a((float)var6Lifetime1, (byte) -33) / (float)var6Lifetime1;
-            var11 = this.field_f.a(105, (float)var6Lifetime1) / (float)var6Lifetime1;
+            var10 = this.field_f.textureV((float)var6Lifetime1, (byte) -33) / (float)var6Lifetime1;
+            var11 = this.field_f.textureU(105, (float)var6Lifetime1) / (float)var6Lifetime1;
             var24 = 0;
             var12Lifetime1 = var24;
             while (var24 < 256) {
@@ -268,10 +268,10 @@ final class ca extends GameFont {
         return;
     }
 
-    final void a(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7) {
+    final void drawMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7) {
     }
 
-    final void fa(char param0, int param1, int param2, int param3, boolean param4) {
+    final void drawGlyph(char param0, int param1, int param2, int param3, boolean param4) {
         asa var6;
         this.field_g.H(-122);
         this.field_g.a(true, this.field_f);

@@ -26,7 +26,7 @@ final class hw {
         RuntimeException decompiledCaughtException = null;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
-          if (vpa.a(38)) {
+          if (TextWidgetPainter.a(38)) {
             return;
           }
           var9 = ql.field_k;

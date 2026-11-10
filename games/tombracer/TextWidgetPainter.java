@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class vpa implements isa, oaa {
+class TextWidgetPainter implements isa, oaa {
     int field_l;
     private int field_m;
     int field_f;
@@ -16,19 +16,19 @@ class vpa implements isa, oaa {
     int field_k;
     private boolean field_b;
 
-    public final int a(int param0, UiWidget param1) {
+    public final int getPreferredWidth(int param0, UiWidget param1) {
         RuntimeException var3 = null;
-        vpa var4 = null;
+        TextWidgetPainter var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.a(param1, 14157);
+          this.ensureTextLayout(param1, 14157);
           if (param0 != 3459) {
-            var4 = (vpa) null;
-            this.a((vpa) null, -5);
+            var4 = (TextWidgetPainter) null;
+            this.a((TextWidgetPainter) null, -5);
           }
           stackIn_3_0 = param1.field_l.a(0) - (-this.field_h - this.field_c);
           return stackIn_3_0;
@@ -57,8 +57,8 @@ class vpa implements isa, oaa {
           if (param1 != 4) {
             this.field_a = -123;
           }
-          this.a(param0, 14157);
-          stackIn_3_0 = param0.field_l.a(-1, -this.a(param0, param3, (byte) 119) + param5, -this.a(param4, param0, (byte) -48) + param2);
+          this.ensureTextLayout(param0, 14157);
+          stackIn_3_0 = param0.field_l.a(-1, -this.a(param0, param3, (byte) 119) + param5, -this.textTop(param4, param0, (byte) -48) + param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -112,7 +112,7 @@ class vpa implements isa, oaa {
         try {
           if (param0 != -4) {
             var4 = (UiWidget) null;
-            this.a((UiWidget) null, -39);
+            this.ensureTextLayout((UiWidget) null, -39);
           }
           stackIn_3_0 = param1.field_o;
           return stackIn_3_0;
@@ -130,7 +130,7 @@ class vpa implements isa, oaa {
         }
     }
 
-    private final void a(boolean param0, UiWidget param1, int param2, int param3) {
+    private final void drawWidgetText(boolean param0, UiWidget param1, int param2, int param3) {
         try {
           this.a(this.field_m, 0, param1, 0, param3, 12589, param2, this.field_j);
           if (param0) {
@@ -143,7 +143,7 @@ class vpa implements isa, oaa {
 
     final static boolean a(int param0) {
         if (param0 <= 2) {
-          vpa.a(3);
+          TextWidgetPainter.a(3);
         }
         return qga.field_m;
     }
@@ -220,12 +220,12 @@ class vpa implements isa, oaa {
     public final int a(byte param0) {
         if (param0 != -90) {
           UiWidget var3 = (UiWidget) null;
-          this.a(-102, (UiWidget) null);
+          this.getPreferredWidth(-102, (UiWidget) null);
         }
         return this.field_e.field_w + this.field_e.field_k;
     }
 
-    final void a(vpa param0, int param1) {
+    final void a(TextWidgetPainter param0, int param1) {
         int discarded$0 = 0;
         try {
           param0.field_m = this.field_m;
@@ -278,7 +278,7 @@ class vpa implements isa, oaa {
             return;
           }
           if (param1.hasKeyboardFocus((byte) -34)) {
-            var17 = this.a(param1, 14157);
+            var17 = this.ensureTextLayout(param1, 14157);
             var18 = var17;
             if (param4 < param5) {
               var8 = param4;
@@ -328,7 +328,7 @@ class vpa implements isa, oaa {
         }
     }
 
-    public final int a(int param0, UiWidget param1, byte param2) {
+    public final int textTop(int param0, UiWidget param1, byte param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -372,7 +372,7 @@ class vpa implements isa, oaa {
         var7 = TombRacer.field_G ? 1 : 0;
         try {
           if (param1.field_l == null) {
-            param1.field_l = (TextLayout) ((Object) new po());
+            param1.field_l = (TextLayout) ((Object) new CachedTextLayout());
           }
           var3_int = this.a((byte) -83, param1);
           if (param0 <= 65) {
@@ -396,23 +396,23 @@ class vpa implements isa, oaa {
           if (var6Lifetime1 != 0 &&
             3 != var6Lifetime1) {
             if (var6Lifetime1 == 1) {
-              if (!(param1.field_l instanceof po)) {
+              if (!(param1.field_l instanceof CachedTextLayout)) {
                 return;
               }
-              ((po) (param1.field_l)).a(var5, var3_int >> 1, this.field_e, this.d(-4, param1), (byte) -80);
+              ((CachedTextLayout) (param1.field_l)).a(var5, var3_int >> 1, this.field_e, this.d(-4, param1), (byte) -80);
               return;
             }
             if (var6Lifetime1 != 2) {
               return;
             }
-            if (!(param1.field_l instanceof po)) {
+            if (!(param1.field_l instanceof CachedTextLayout)) {
               return;
             }
-            ((po) (param1.field_l)).a(0, this.field_e, var5, this.d(-4, param1), var3_int);
+            ((CachedTextLayout) (param1.field_l)).a(0, this.field_e, var5, this.d(-4, param1), var3_int);
             return;
           }
-          if (param1.field_l instanceof po) {
-            ((po) (param1.field_l)).a(16512, var5, this.field_e, this.d(-4, param1), 0);
+          if (param1.field_l instanceof CachedTextLayout) {
+            ((CachedTextLayout) (param1.field_l)).a(16512, var5, this.field_e, this.d(-4, param1), 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -464,10 +464,10 @@ class vpa implements isa, oaa {
           return;
         }
         try {
-          this.a(false, param0, param3, param1);
+          this.drawWidgetText(false, param0, param3, param1);
           if (param2 != 16777215) {
             UiWidget var7 = (UiWidget) null;
-            this.a(false, (UiWidget) null, 1, 26);
+            this.drawWidgetText(false, (UiWidget) null, 1, 26);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vpa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
@@ -483,7 +483,7 @@ class vpa implements isa, oaa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 119) {
-            vpa.a(-113);
+            TextWidgetPainter.a(-113);
           }
           stackIn_3_0 = this.a(param0, 0, param1, -3);
           return stackIn_3_0;
@@ -556,7 +556,7 @@ class vpa implements isa, oaa {
         }
     }
 
-    public final TextLayout a(UiWidget param0, int param1) {
+    public final TextLayout ensureTextLayout(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         TextLayout stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
@@ -565,7 +565,7 @@ class vpa implements isa, oaa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0.field_l == null) {
-            param0.field_l = (TextLayout) ((Object) new po());
+            param0.field_l = (TextLayout) ((Object) new CachedTextLayout());
           }
           if (param1 != 14157) {
             this.field_e = (BitmapFont) null;
@@ -573,7 +573,7 @@ class vpa implements isa, oaa {
           if (!this.field_b) {
             this.c(param1 ^ 14131, param0);
           } else {
-            ((po) (param0.field_l)).a(this.field_e, (byte) -49, this.d(param1 ^ -14159, param0), this.a((byte) 91, param0), this.field_a, this.b(param1 ^ 2147469490, param0), this.field_l, this.field_f);
+            ((CachedTextLayout) (param0.field_l)).a(this.field_e, (byte) -49, this.d(param1 ^ -14159, param0), this.a((byte) 91, param0), this.field_a, this.b(param1 ^ 2147469490, param0), this.field_l, this.field_f);
           }
           stackIn_9_0 = param0.field_l;
           return stackIn_9_0;
@@ -605,14 +605,14 @@ class vpa implements isa, oaa {
             this.field_a = -110;
           }
           if (param4.hasKeyboardFocus((byte) -34)) {
-            var13 = this.a(param4, 14157);
+            var13 = this.ensureTextLayout(param4, 14157);
             var14 = var13;
             var7 = var14.findLineIndex(param0, 0);
             var8 = var13.field_c[var7];
             var9 = var14.a((byte) -59, param0);
             var10 = this.a(param4, var9, param3, param2 ^ 22503);
-            var11 = this.a(param1, param4, (byte) -110) + Math.max(0, var8.field_d);
-            var12 = this.a(param1, param4, (byte) -44) + Math.min(this.b(2147483647, param4), Math.min(var8.field_b, var7 + 1 >= var14.field_c.length ? var8.field_b : var13.field_c[1 + var7].field_d));
+            var11 = this.textTop(param1, param4, (byte) -110) + Math.max(0, var8.field_d);
+            var12 = this.textTop(param1, param4, (byte) -44) + Math.min(this.b(2147483647, param4), Math.min(var8.field_b, var7 + 1 >= var14.field_c.length ? var8.field_b : var13.field_c[1 + var7].field_d));
             tga.a(-21953, param4.field_i + param3, param4.field_i + (param3 + param4.field_m), param1 + param4.field_n, param4.field_n + (param1 + param4.field_p));
             afa.field_c.a(var11, this.field_k, 8947848, var10, var10, var12);
             pfa.a(1);
@@ -622,7 +622,7 @@ class vpa implements isa, oaa {
         }
     }
 
-    public final int b(byte param0, UiWidget param1) {
+    public final int getTextWidth(byte param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -631,7 +631,7 @@ class vpa implements isa, oaa {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.a(param1, 14157);
+          this.ensureTextLayout(param1, 14157);
           var3_int = -28 % ((param0 - 47) / 52);
           stackIn_1_0 = param1.field_l.getLayoutHeight(127) + (this.field_g + this.field_i);
           return stackIn_1_0;
@@ -649,14 +649,14 @@ class vpa implements isa, oaa {
         }
     }
 
-    vpa(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    TextWidgetPainter(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    protected vpa() {
+    protected TextWidgetPainter() {
     }
 
-    vpa(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    TextWidgetPainter(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_k = param10;
           this.field_l = param7;

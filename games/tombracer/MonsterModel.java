@@ -135,7 +135,7 @@ final class MonsterModel extends cda {
         if (param0 != 28191) {
           return;
         }
-        jo.a(oba.field_f, 0, Corpse.field_i, rfa.field_C, WallModel.field_r);
+        ScrollControlWidget.a(oba.field_f, 0, Corpse.field_i, rfa.field_C, WallModel.field_r);
     }
 
     final void attach(TrapPart param0, WorldBody param1, byte param2) {

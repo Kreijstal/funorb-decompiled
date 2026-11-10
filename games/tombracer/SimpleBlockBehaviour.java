@@ -157,7 +157,7 @@ final class SimpleBlockBehaviour extends Behaviour {
     }
 
     final static boolean c(int param0) {
-        if (vpa.a(79)) {
+        if (TextWidgetPainter.a(79)) {
           return false;
         }
         if (param0 == 0) {

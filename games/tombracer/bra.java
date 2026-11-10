@@ -69,7 +69,7 @@ final class bra extends ofa implements tsa {
         }
     }
 
-    public final void a(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
+    public final void onButtonActivated(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -112,9 +112,9 @@ final class bra extends ofa implements tsa {
           var2.field_i = 0;
           var2.field_p = 80;
           var2.field_n = 50;
-          var2.field_r = (isa) ((Object) new vpa(eka.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var2.field_r = (isa) ((Object) new TextWidgetPainter(eka.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(var2, -1);
-          if (vpa.a(94)) {
+          if (TextWidgetPainter.a(94)) {
             this.field_L = this.a(UiWidget.field_k, (byte) 91, (qc) (this));
           }
           this.field_N = this.a(BitPacketBuffer.field_j, (byte) 54, (qc) (this));

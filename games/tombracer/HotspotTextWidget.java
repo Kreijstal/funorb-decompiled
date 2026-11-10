@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class lga extends FocusableWidget {
+class HotspotTextWidget extends FocusableWidget {
     private IntrusiveDeque field_D;
     static int[][] field_z;
     static ResourceArchive field_B;
@@ -47,7 +47,7 @@ class lga extends FocusableWidget {
         return null;
     }
 
-    lga(String param0, isa param1) {
+    HotspotTextWidget(String param0, isa param1) {
         super(param0, (qc) null);
         this.field_A = null;
         try {
@@ -182,7 +182,7 @@ class lga extends FocusableWidget {
           this.field_D = new IntrusiveDeque();
           var2 = 0;
           var30 = (oaa) ((Object) this.field_r);
-          var27 = var30.a((UiWidget) (this), 14157);
+          var27 = var30.ensureTextLayout((UiWidget) (this), 14157);
           while (true) {
             var5 = this.field_o.indexOf("<hotspot=", var2);
             if (-1 == var5) {
@@ -227,7 +227,7 @@ class lga extends FocusableWidget {
         var2Lifetime1 = 0;
         var17_ref = (oaa) ((Object) this.field_r);
         var3 = var17_ref;
-        var22 = var17_ref.a((UiWidget) (this), 14157);
+        var22 = var17_ref.ensureTextLayout((UiWidget) (this), 14157);
         var4 = var22;
         while (true) {
           var5Lifetime1 = this.field_o.indexOf("<hotspot=", var2Lifetime1);
@@ -309,7 +309,7 @@ class lga extends FocusableWidget {
         bm var6 = this.field_A;
         if (var6 != null) {
           var7 = var5.a((UiWidget) (this), param0, (byte) 119);
-          var8 = var5.a(param1, (UiWidget) (this), (byte) -49);
+          var8 = var5.textTop(param1, (UiWidget) (this), (byte) -49);
           do {
             nn.a(-2 + (var7 + var6.field_g), -2 + (var8 + var6.field_l), var6.field_i + 2, 2 + var6.field_j, false);
             var6 = var6.field_k;
@@ -432,7 +432,7 @@ class lga extends FocusableWidget {
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
-        this.setBounds((byte) -31, param2, ((oaa) ((Object) this.field_r)).b((byte) 105, (UiWidget) (this)), param3, param0);
+        this.setBounds((byte) -31, param2, ((oaa) ((Object) this.field_r)).getTextWidth((byte) 105, (UiWidget) (this)), param3, param0);
         if (param1 != -120) {
           field_B = (ResourceArchive) null;
           return;
@@ -467,21 +467,21 @@ class lga extends FocusableWidget {
         int var3Lifetime1;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          if (null == rla.field_D) {
-            rla.field_D = cna.a(4, 128);
+          if (null == DropdownList.field_D) {
+            DropdownList.field_D = cna.a(4, 128);
           }
           if (param0) {
             var5 = (PacketBuffer) null;
-            lga.a((PacketBuffer) null, (byte) 82);
+            HotspotTextWidget.a((PacketBuffer) null, (byte) 82);
           }
-          if (!rla.field_D.field_g) {
+          if (!DropdownList.field_D.field_g) {
             return false;
           }
           var13 = SimpleConditionBehaviour.field_o;
           var11 = var13;
           var6 = var11;
           var1 = var6;
-          var17 = rla.field_D.field_f;
+          var17 = DropdownList.field_D.field_f;
           for (var3 = 0; var3 < 8; var3++) {
             var6[var3] = fh.a(var13[var3], var17[var3]);
           }
@@ -489,14 +489,14 @@ class lga extends FocusableWidget {
           var12 = var14;
           var8 = var12;
           var1Lifetime1 = var8;
-          var18 = rla.field_D.field_f;
+          var18 = DropdownList.field_D.field_f;
           var10 = 0;
           var3Lifetime1 = var10;
           while (8 > var10) {
             var8[var10] = SnakePitBehaviour.c(var14[var10], ~var18[var10]);
             var10++;
           }
-          rla.field_D = null;
+          DropdownList.field_D = null;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

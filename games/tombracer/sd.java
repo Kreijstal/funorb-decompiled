@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sd extends lga {
+final class sd extends HotspotTextWidget {
     static int field_K;
     private nua field_I;
     static String field_J;
@@ -190,7 +190,7 @@ final class sd extends lga {
             var6 = this.field_I.b(-4666);
             var54 = (oaa) ((Object) this.field_r);
             var9 = this.field_i + param0;
-            var10 = var54.a(param1, (UiWidget) (this), (byte) -89) + (var54.a((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
+            var10 = var54.textTop(param1, (UiWidget) (this), (byte) -89) + (var54.ensureTextLayout((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
             if (gla.field_p != var6 &&
               var6 != tea.field_b) {
               if (fp.field_c == var6) {
@@ -226,7 +226,7 @@ final class sd extends lga {
           var6 = this.field_I.b(-4666);
           var55 = (oaa) ((Object) this.field_r);
           var9Lifetime5 = this.field_i + param0;
-          var10Lifetime5 = var55.a(param1, (UiWidget) (this), (byte) -89) + (var55.a((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
+          var10Lifetime5 = var55.textTop(param1, (UiWidget) (this), (byte) -89) + (var55.ensureTextLayout((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
           if (gla.field_p != var6 &&
             var6 != tea.field_b) {
             if (fp.field_c == var6) {
@@ -275,7 +275,7 @@ final class sd extends lga {
             var6 = this.field_I.b(-4666);
             var56 = (oaa) ((Object) this.field_r);
             var9Lifetime1 = this.field_i + param0;
-            var10Lifetime1 = var56.a(param1, (UiWidget) (this), (byte) -89) + (var56.a((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
+            var10Lifetime1 = var56.textTop(param1, (UiWidget) (this), (byte) -89) + (var56.ensureTextLayout((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
             if (gla.field_p != var6 &&
               var6 != tea.field_b) {
               if (fp.field_c == var6) {
@@ -311,7 +311,7 @@ final class sd extends lga {
           var6 = this.field_I.b(-4666);
           var57 = (oaa) ((Object) this.field_r);
           var9Lifetime1Lifetime1 = this.field_i + param0;
-          var10Lifetime1Lifetime1 = var57.a(param1, (UiWidget) (this), (byte) -89) + (var57.a((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
+          var10Lifetime1Lifetime1 = var57.textTop(param1, (UiWidget) (this), (byte) -89) + (var57.ensureTextLayout((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
           if (gla.field_p != var6 &&
             var6 != tea.field_b) {
             if (fp.field_c == var6) {
@@ -358,7 +358,7 @@ final class sd extends lga {
             var6Lifetime1 = this.field_I.b(-4666);
             var61 = (oaa) ((Object) this.field_r);
             var9Lifetime2 = this.field_i + param0;
-            var10Lifetime2 = var61.a(param1, (UiWidget) (this), (byte) -89) + (var61.a((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
+            var10Lifetime2 = var61.textTop(param1, (UiWidget) (this), (byte) -89) + (var61.ensureTextLayout((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
             if (gla.field_p != var6Lifetime1 &&
               var6Lifetime1 != tea.field_b) {
               if (fp.field_c == var6Lifetime1) {
@@ -396,7 +396,7 @@ final class sd extends lga {
           var6Lifetime1Lifetime1 = this.field_I.b(-4666);
           var60 = (oaa) ((Object) this.field_r);
           var9Lifetime2Lifetime1 = this.field_i + param0;
-          var10Lifetime2Lifetime1 = var60.a(param1, (UiWidget) (this), (byte) -89) + (var60.a((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
+          var10Lifetime2Lifetime1 = var60.textTop(param1, (UiWidget) (this), (byte) -89) + (var60.ensureTextLayout((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
           if (gla.field_p != var6Lifetime1Lifetime1 &&
             var6Lifetime1Lifetime1 != tea.field_b) {
             if (fp.field_c == var6Lifetime1Lifetime1) {
@@ -446,7 +446,7 @@ final class sd extends lga {
           var6Lifetime2 = this.field_I.b(-4666);
           var58 = (oaa) ((Object) this.field_r);
           var9Lifetime3 = this.field_i + param0;
-          var10Lifetime3 = var58.a(param1, (UiWidget) (this), (byte) -89) + (var58.a((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
+          var10Lifetime3 = var58.textTop(param1, (UiWidget) (this), (byte) -89) + (var58.ensureTextLayout((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
           if (gla.field_p != var6Lifetime2 &&
             var6Lifetime2 != tea.field_b) {
             if (fp.field_c == var6Lifetime2) {
@@ -482,7 +482,7 @@ final class sd extends lga {
         var6Lifetime3 = this.field_I.b(-4666);
         var59 = (oaa) ((Object) this.field_r);
         var9Lifetime4 = this.field_i + param0;
-        var10Lifetime4 = var59.a(param1, (UiWidget) (this), (byte) -89) + (var59.a((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
+        var10Lifetime4 = var59.textTop(param1, (UiWidget) (this), (byte) -89) + (var59.ensureTextLayout((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
         if (gla.field_p != var6Lifetime3 &&
           var6Lifetime3 != tea.field_b) {
           if (fp.field_c == var6Lifetime3) {

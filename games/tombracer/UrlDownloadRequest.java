@@ -18,7 +18,7 @@ final class UrlDownloadRequest implements Runnable {
         if (param2 <= 90) {
           UrlDownloadRequest.a(-49, -51, -30, 34, 111, -46);
         }
-        if (vpa.a(54) ||
+        if (TextWidgetPainter.a(54) ||
           param0.k(-25319)) {
           return;
         }

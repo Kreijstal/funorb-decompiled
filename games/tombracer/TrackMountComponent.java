@@ -3,7 +3,7 @@
  */
 final class TrackMountComponent extends PrefabComponent {
     static String field_H;
-    static dd field_J;
+    static SoftReferenceCache field_J;
     private int field_F;
     static String field_G;
     static String field_I;
@@ -98,7 +98,7 @@ final class TrackMountComponent extends PrefabComponent {
 
     final boolean s(int param0) {
         if (param0 != -15254) {
-          field_J = (dd) null;
+          field_J = (SoftReferenceCache) null;
           return true;
         }
         return true;
@@ -144,7 +144,7 @@ final class TrackMountComponent extends PrefabComponent {
 
     static {
         field_H = "<%0> cannot join; the game has started.";
-        field_J = new dd(64);
+        field_J = new SoftReferenceCache(64);
         field_I = "<%0> has not yet unlocked this option for use.";
         field_G = "To <%0>: ";
         waitingForTextTranslations = new String[]{"Waiting for text", "Warte auf Text", "En attente du texte", "Aguardando textos", "Op tekst wachten", "Esperando a texto"};

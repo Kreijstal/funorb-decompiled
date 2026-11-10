@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class op extends ofa implements tsa {
+final class FullscreenConfirmationDialog extends ofa implements tsa {
     private UiWidget field_L;
     private FocusableWidget field_N;
     static SpriteData field_O;
@@ -118,7 +118,7 @@ final class op extends ofa implements tsa {
         }
     }
 
-    op(jta param0) {
+    FullscreenConfirmationDialog(jta param0) {
         super(param0, 200, 200);
         UiWidget var3 = null;
         try {
@@ -128,14 +128,14 @@ final class op extends ofa implements tsa {
           var3.field_p = 100;
           var3.field_n = 50;
           var3.field_i = 0;
-          var3.field_r = (isa) ((Object) new vpa(eka.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var3.field_r = (isa) ((Object) new TextWidgetPainter(eka.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(var3, -1);
           this.field_L = new UiWidget(rfa.field_B, (qc) null);
           this.field_L.field_i = 0;
           this.field_L.field_n = 20 + var3.field_n + var3.field_p;
           this.field_L.field_m = this.field_m;
           this.field_L.field_p = 80;
-          this.field_L.field_r = (isa) ((Object) new vpa(ft.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.field_L.field_r = (isa) ((Object) new TextWidgetPainter(ft.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(this.field_L, -1);
           this.field_N = this.a((qc) (this), 77, vc.field_s);
           this.field_M = this.a((qc) (this), 71, mha.field_F);
@@ -154,7 +154,7 @@ final class op extends ofa implements tsa {
         }
     }
 
-    public final void a(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
+    public final void onButtonActivated(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -285,7 +285,7 @@ final class op extends ofa implements tsa {
           var3 = var4;
           ArrayUtils.copy(param0, 0, var4, 0, param2);
           if (param1 <= 104) {
-            op.a((ResourceArchive) null, 63, (int[]) null, (byte[]) null, (ResourceArchive) null, (String[][]) null, 112, (Sprite[][]) null, true, 103, (String[][]) null, (ResourceArchive) null, (byte[]) null, (String[]) null, (Sprite[][]) null);
+            FullscreenConfirmationDialog.a((ResourceArchive) null, 63, (int[]) null, (byte[]) null, (ResourceArchive) null, (String[][]) null, 112, (Sprite[][]) null, true, 103, (String[][]) null, (ResourceArchive) null, (byte[]) null, (String[]) null, (Sprite[][]) null);
           }
           stackIn_3_0 = var4;
           return stackIn_3_0;

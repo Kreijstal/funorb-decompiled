@@ -48,7 +48,7 @@ final class eqa implements os {
           var3 = 0;
         }
         if (bta.field_q == 2 &&
-          !at.f(24316)) {
+          !DisplaySettingsDialog.f(24316)) {
           var3 = 0;
         }
         if (fna.field_h == 84) {

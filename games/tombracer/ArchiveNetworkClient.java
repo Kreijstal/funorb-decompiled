@@ -140,7 +140,7 @@ abstract class ArchiveNetworkClient {
               stackIn_36_0 = -1;
               return stackIn_36_0;
             }
-            wg.field_l.attachConnection(jia.field_a, (byte) 54, vga.field_q);
+            wg.field_l.attachConnection(jia.field_a, (byte) 54, StatefulWidgetPainter.field_q);
             cma.field_m = 0;
             jia.field_a = null;
             bga.field_c = null;

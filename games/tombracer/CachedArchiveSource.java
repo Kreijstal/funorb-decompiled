@@ -197,7 +197,7 @@ final class CachedArchiveSource extends ArchiveSource {
         if (param0 != 27079) {
           this.getPackedGroup(115, (byte) -96);
         }
-        hha var3 = (hha) (this.field_p.a((byte) -104, (long)param1));
+        hha var3 = (hha) (this.field_p.get((byte) -104, (long)param1));
         if (var3 == null) {
           return 0;
         }
@@ -365,7 +365,7 @@ final class CachedArchiveSource extends ArchiveSource {
         byte[] var30 = null;
         byte[] var31 = null;
         var11 = TombRacer.field_G ? 1 : 0;
-        var13 = (hha) (this.field_p.a((byte) -124, (long)param2));
+        var13 = (hha) (this.field_p.get((byte) -124, (long)param2));
         var4 = var13;
         if (var13 != null &&
           param0 == 0 &&

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vm {
+final class ViewportManager {
     boolean field_h;
     private int field_i;
     int field_p;
@@ -23,13 +23,13 @@ final class vm {
     private sh field_l;
     private int field_b;
 
-    final boolean a(byte param0) {
+    final boolean canResizeViewport(byte param0) {
         if (param0 >= -113) {
           this.field_n = -43;
           if (this.field_i > cba.field_d) {
             return false;
           }
-          if (wla.field_ub > 0) {
+          if (ReportAbuseDialog.field_ub > 0) {
             return true;
           }
           return false;
@@ -37,7 +37,7 @@ final class vm {
         if (this.field_i > cba.field_d) {
           return false;
         }
-        if (wla.field_ub > 0) {
+        if (ReportAbuseDialog.field_ub > 0) {
           return true;
         }
         return false;
@@ -51,7 +51,7 @@ final class vm {
         var5 = TombRacer.field_G ? 1 : 0;
         var2 = this.field_d;
         var3 = this.field_t;
-        if (!this.a((byte) -115)) {
+        if (!this.canResizeViewport((byte) -115)) {
           this.field_h = false;
           return;
         }
@@ -135,7 +135,7 @@ final class vm {
         field_f = null;
         field_a = null;
         if (param0 != 26583) {
-          vm.releaseStatics(-62);
+          ViewportManager.releaseStatics(-62);
         }
     }
 
@@ -147,7 +147,7 @@ final class vm {
           if (null != dq.field_f) {
             return;
           }
-          if (wla.field_ub <= 0) {
+          if (ReportAbuseDialog.field_ub <= 0) {
             this.field_h = false;
           }
           if (this.field_h) {
@@ -184,7 +184,7 @@ final class vm {
         if (null != dq.field_f) {
           return;
         }
-        if (wla.field_ub > 0) {
+        if (ReportAbuseDialog.field_ub > 0) {
           if (this.field_h) {
             fieldTemp$1 = this.field_q - 1;
             this.field_q = this.field_q - 1;
@@ -275,7 +275,7 @@ final class vm {
           this.field_s = -44;
           this.field_c = mma.field_a;
           this.field_l.a(this.field_s, -123, this.field_p);
-          wla.field_Cb = false;
+          ReportAbuseDialog.field_Cb = false;
           var2 = r.a(this.field_p, 0, param0 - 7720, dsa.field_c, this.field_s, 0);
           if (var2 == null) {
             this.a(53);
@@ -285,7 +285,7 @@ final class vm {
         }
         this.field_c = mma.field_a;
         this.field_l.a(this.field_s, -123, this.field_p);
-        wla.field_Cb = false;
+        ReportAbuseDialog.field_Cb = false;
         var2Lifetime1 = r.a(this.field_p, 0, param0 - 7720, dsa.field_c, this.field_s, 0);
         if (var2Lifetime1 != null) {
           return var2Lifetime1;
@@ -350,7 +350,7 @@ final class vm {
     final boolean d(int param0) {
         if (param0 != -1) {
           this.a(-62, true, 91);
-          if (wla.field_ub <= 0) {
+          if (ReportAbuseDialog.field_ub <= 0) {
             return false;
           }
           if (this.field_i > cba.field_d) {
@@ -358,7 +358,7 @@ final class vm {
           }
           return false;
         }
-        if (wla.field_ub <= 0) {
+        if (ReportAbuseDialog.field_ub <= 0) {
           return false;
         }
         if (this.field_i > cba.field_d) {
@@ -367,7 +367,7 @@ final class vm {
         return false;
     }
 
-    private vm() throws Throwable {
+    private ViewportManager() throws Throwable {
         throw new Error();
     }
 

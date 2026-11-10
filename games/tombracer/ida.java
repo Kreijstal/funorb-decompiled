@@ -31,12 +31,12 @@ final class ida {
         if (param1 == -1) {
           var8 = FontMetrics.field_b.get(12);
           var9 = FontMetrics.field_b.get(13);
-          return mr.dayNames[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + pv.shortMonthNames[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+          return AccountRegistrationPanel.dayNames[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + pv.shortMonthNames[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
         field_a = (String) null;
         var8Lifetime1 = FontMetrics.field_b.get(12);
         var9Lifetime1 = FontMetrics.field_b.get(13);
-        return mr.dayNames[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + pv.shortMonthNames[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8Lifetime1 / 10 + var8Lifetime1 % 10 + ":" + var9Lifetime1 / 10 + var9Lifetime1 % 10 + " GMT";
+        return AccountRegistrationPanel.dayNames[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + pv.shortMonthNames[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8Lifetime1 / 10 + var8Lifetime1 % 10 + ":" + var9Lifetime1 / 10 + var9Lifetime1 % 10 + " GMT";
     }
 
     static {

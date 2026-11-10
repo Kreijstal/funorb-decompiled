@@ -30,7 +30,7 @@ final class BufferedCacheFile {
         }
         if (this.field_l != -1L) {
           if (this.field_j != this.field_l) {
-            this.field_b.a(param0 ^ -16, this.field_l);
+            this.field_b.seek(param0 ^ -16, this.field_l);
             this.field_j = this.field_l;
           }
           this.field_b.a(0, 0, this.field_f, this.field_e);
@@ -83,7 +83,7 @@ final class BufferedCacheFile {
         var4 = TombRacer.field_G ? 1 : 0;
         this.field_a = 0;
         if (this.field_g != this.field_j) {
-          this.field_b.a(0, this.field_g);
+          this.field_b.seek(0, this.field_g);
           this.field_j = this.field_g;
         }
         this.field_m = this.field_g;
@@ -92,7 +92,7 @@ final class BufferedCacheFile {
           if (var2 > 200000000) {
             var2 = 200000000;
           }
-          var3 = this.field_b.a((byte) 69, this.field_h, var2, this.field_a);
+          var3 = this.field_b.read((byte) 69, this.field_h, var2, this.field_a);
           if (-1 != var3) {
             this.field_j = this.field_j + (long)var3;
             this.field_a = this.field_a + var3;
@@ -184,7 +184,7 @@ final class BufferedCacheFile {
               return;
             }
             if (this.field_g != this.field_j) {
-              this.field_b.a(0, this.field_g);
+              this.field_b.seek(0, this.field_g);
               this.field_j = this.field_g;
             }
             this.field_b.a(param1, 0, param3, param0);
@@ -291,10 +291,10 @@ final class BufferedCacheFile {
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted0 = true;
             if (this.field_h.length < param1) {
-              this.field_b.a(0, this.field_g);
+              this.field_b.seek(0, this.field_g);
               this.field_j = this.field_g;
               while (param1 > 0) {
-                var9_intLifetime1 = this.field_b.a((byte) 80, param0, param1, param2);
+                var9_intLifetime1 = this.field_b.read((byte) 80, param0, param1, param2);
                 if (var9_intLifetime1 == -1) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -395,7 +395,7 @@ final class BufferedCacheFile {
         this.field_f = 0;
         try {
           this.field_b = param0;
-          dupTemp$0 = param0.a(false);
+          dupTemp$0 = param0.length(false);
           this.field_i = dupTemp$0;
           this.field_d = dupTemp$0;
           this.field_g = 0L;
@@ -406,7 +406,7 @@ final class BufferedCacheFile {
         }
     }
 
-    final void a(byte param0, long param1) throws IOException {
+    final void seek(byte param0, long param1) throws IOException {
         if (param1 < 0L) {
           throw new IOException();
         }

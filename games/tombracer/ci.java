@@ -6,7 +6,7 @@ abstract class ci extends IntrusiveNode {
     boolean field_g;
     static int field_k;
     mv field_i;
-    static ij field_l;
+    static MessageDialog field_l;
     int field_f;
     ci[] field_j;
 

@@ -132,7 +132,7 @@ final class gha implements pp {
         try {
           var4_int = -46 / ((-55 - param2) / 54);
           try {
-            stackIn_2_0 = lga.a(param3, param1, param0, true);
+            stackIn_2_0 = HotspotTextWidget.a(param3, param1, param0, true);
             return stackIn_2_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

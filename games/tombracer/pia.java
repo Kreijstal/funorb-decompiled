@@ -67,14 +67,14 @@ final class pia extends nqa implements gf {
         }
     }
 
-    public final float a(int param0, float param1) {
+    public final float textureU(int param0, float param1) {
         if (param0 <= 60) {
-          this.a(-0.6146475672721863f, (byte) -85);
+          this.textureV(-0.6146475672721863f, (byte) -85);
         }
         return param1 / (float)this.field_i;
     }
 
-    public final float a(float param0, byte param1) {
+    public final float textureV(float param0, byte param1) {
         if (param1 != -33) {
           return -0.45543020963668823f;
         }

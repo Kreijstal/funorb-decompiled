@@ -33,25 +33,25 @@ final class sra implements eb {
           ConstrainToFacingArcLocomotor.field_v = null;
           C2SActionPacket.a(-33);
         }
-        this.field_h = dd.a(16, param0 ^ -37);
-        this.field_q = dd.a(17, param0 ^ -37);
-        this.field_p = dd.a(18, param0 + 39);
-        this.field_j = dd.a(19, 1);
-        this.field_g = dd.a(20, 1);
-        this.field_f = dd.a(21, 1);
-        this.field_a = dd.a(22, param0 + 39);
-        this.field_r = dd.a(23, 1);
-        this.field_m = dd.a(24, 1);
-        this.field_k = dd.a(26, 1);
-        this.field_l = dd.a(27, 1);
-        this.field_o = dd.a(28, 1);
-        this.field_b = dd.a(29, 1);
-        this.field_d = dd.a(30, 1);
-        this.field_s = dd.a(C2SActionPacket.field_i.field_c, 1);
+        this.field_h = SoftReferenceCache.a(16, param0 ^ -37);
+        this.field_q = SoftReferenceCache.a(17, param0 ^ -37);
+        this.field_p = SoftReferenceCache.a(18, param0 + 39);
+        this.field_j = SoftReferenceCache.a(19, 1);
+        this.field_g = SoftReferenceCache.a(20, 1);
+        this.field_f = SoftReferenceCache.a(21, 1);
+        this.field_a = SoftReferenceCache.a(22, param0 + 39);
+        this.field_r = SoftReferenceCache.a(23, 1);
+        this.field_m = SoftReferenceCache.a(24, 1);
+        this.field_k = SoftReferenceCache.a(26, 1);
+        this.field_l = SoftReferenceCache.a(27, 1);
+        this.field_o = SoftReferenceCache.a(28, 1);
+        this.field_b = SoftReferenceCache.a(29, 1);
+        this.field_d = SoftReferenceCache.a(30, 1);
+        this.field_s = SoftReferenceCache.a(C2SActionPacket.field_i.field_c, 1);
         if (param0 != -38) {
           return;
         }
-        this.field_e = dd.a(kn.field_j.field_c, param0 ^ -37);
+        this.field_e = SoftReferenceCache.a(kn.field_j.field_c, param0 ^ -37);
         ResourceArchive var6 = PitComponent.field_G;
         ResourceArchive var7 = var6;
         ResourceArchive var3 = ota.field_b;
@@ -215,7 +215,7 @@ final class sra implements eb {
 
     public final boolean a(int param0) {
         if (!this.field_n &&
-          lga.b(false)) {
+          HotspotTextWidget.b(false)) {
           this.field_n = true;
         }
         if (param0 > -124) {
@@ -374,7 +374,7 @@ final class sra implements eb {
         }
         if (!dna.field_G) {
           dea.field_c = false;
-          op.a(this.field_s, 10, MirrorMoverLocomotor.field_o, fr.field_b, PitComponent.field_G, MouseWheelInput.field_a, 4, var2, true, 2, via.field_c, ota.field_b, jf.field_t, mga.field_f, var2);
+          FullscreenConfirmationDialog.a(this.field_s, 10, MirrorMoverLocomotor.field_o, fr.field_b, PitComponent.field_G, MouseWheelInput.field_a, 4, var2, true, 2, via.field_c, ota.field_b, jf.field_t, mga.field_f, var2);
           cq.field_d = qw.field_f;
           tda.a(200, (byte) -71);
           fta.field_b = MatchState.field_p;

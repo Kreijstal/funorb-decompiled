@@ -38,12 +38,12 @@ final class st extends cha implements java.awt.image.ImageProducer, java.awt.ima
         }
     }
 
-    final static jo b(int param0) {
+    final static ScrollControlWidget b(int param0) {
         if (param0 == -5412) {
-          return new jo(0, 0, afa.field_c.field_m, 0, (isa) null, afa.field_c.field_r, afa.field_c.field_h, afa.field_c.field_m, afa.field_c.field_m, afa.field_c.field_g, afa.field_c.field_l, false, true, 32768, 0);
+          return new ScrollControlWidget(0, 0, afa.field_c.field_m, 0, (isa) null, afa.field_c.field_r, afa.field_c.field_h, afa.field_c.field_m, afa.field_c.field_m, afa.field_c.field_g, afa.field_c.field_l, false, true, 32768, 0);
         }
         st.releaseStatics(-97);
-        return new jo(0, 0, afa.field_c.field_m, 0, (isa) null, afa.field_c.field_r, afa.field_c.field_h, afa.field_c.field_m, afa.field_c.field_m, afa.field_c.field_g, afa.field_c.field_l, false, true, 32768, 0);
+        return new ScrollControlWidget(0, 0, afa.field_c.field_m, 0, (isa) null, afa.field_c.field_r, afa.field_c.field_h, afa.field_c.field_m, afa.field_c.field_m, afa.field_c.field_g, afa.field_c.field_l, false, true, 32768, 0);
     }
 
     public static void releaseStatics(int param0) {
@@ -116,13 +116,13 @@ final class st extends cha implements java.awt.image.ImageProducer, java.awt.ima
         int var5 = 0;
         int var6 = 0;
         String var7 = null;
-        lja var10 = null;
+        PlayerContextMenu var10 = null;
         String var11 = null;
-        lja var12 = null;
+        PlayerContextMenu var12 = null;
         String var13 = null;
-        lja var14 = null;
+        PlayerContextMenu var14 = null;
         String var15 = null;
-        lja var16 = null;
+        PlayerContextMenu var16 = null;
         try {
           paa.a(nsa.field_i, param1.f(0), (String) null, 0L, -11635, (int[]) null, param1, -1, (String) null);
           if (param1.field_ec && (param1.field_yb == 2 ||

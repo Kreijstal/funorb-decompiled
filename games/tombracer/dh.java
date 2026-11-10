@@ -83,7 +83,7 @@ final class dh {
           var64 = new int[param3.field_A];
           var63 = ada.field_y;
           var62 = ie.field_i;
-          var61 = dd.field_d;
+          var61 = SoftReferenceCache.field_d;
           if (param7 != -23) {
             return;
           }

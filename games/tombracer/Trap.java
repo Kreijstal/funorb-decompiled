@@ -805,7 +805,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         Switchable var4Lifetime1;
         Switchable var4Lifetime2;
         var7 = TombRacer.field_G ? 1 : 0;
-        if (vh.matchesSwitchableId(param1, param0, -27201, (Switchable) (this))) {
+        if (WhirlpoolDigest.matchesSwitchableId(param1, param0, -27201, (Switchable) (this))) {
           return (Switchable) (this);
         }
         var9 = (Locomotor) (this.locomotors.first(-80));

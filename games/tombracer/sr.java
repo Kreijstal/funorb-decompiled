@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sr extends WidgetContainer implements tsa {
-    private ij field_y;
+    private MessageDialog field_y;
     private int field_z;
     private String field_C;
     private FocusableWidget[] field_x;
@@ -52,7 +52,7 @@ final class sr extends WidgetContainer implements tsa {
         }
     }
 
-    public final void a(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
+    public final void onButtonActivated(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = TombRacer.field_G ? 1 : 0;
@@ -76,7 +76,7 @@ final class sr extends WidgetContainer implements tsa {
         }
     }
 
-    sr(ij param0, BitmapFont param1, String param2) {
+    sr(MessageDialog param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (isa) null);
         int var4_int = 0;
         this.field_z = 0;

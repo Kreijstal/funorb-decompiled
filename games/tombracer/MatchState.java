@@ -290,7 +290,7 @@ final class MatchState implements dv {
           this.field_A = param0.readBits((byte) 44, 32);
           this.field_C = param0.readBits((byte) 44, 32);
           this.field_y = (wd[]) (gha.a(this.field_y, 1, 8, -16499, nfa.field_q, param0));
-          this.field_u = (wea[]) (gha.a(this.field_u, 1, 8, -16499, kba.field_u, param0));
+          this.field_u = (wea[]) (gha.a(this.field_u, 1, 8, -16499, OpenGlRenderbuffer.field_u, param0));
           this.field_v = fa.a(0, param0, 8, this.field_v);
           this.field_o = uma.a(32, param0, -26803);
           this.field_q = PooledObject.a(8, this.field_q, (byte) 93, param0);

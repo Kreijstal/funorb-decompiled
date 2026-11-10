@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kba extends DualLinkNode implements wia {
+final class OpenGlRenderbuffer extends DualLinkNode implements wia {
     int field_o;
     private int field_q;
     private int field_m;
@@ -16,7 +16,7 @@ final class kba extends DualLinkNode implements wia {
 
     public static void a(byte param0) {
         if (param0 != -48) {
-          kba.f(-96);
+          OpenGlRenderbuffer.f(-96);
           field_u = null;
           field_k = null;
           return;
@@ -64,7 +64,7 @@ final class kba extends DualLinkNode implements wia {
           this.field_r = param0;
           return;
         }
-        kba.f(-114);
+        OpenGlRenderbuffer.f(-114);
         jaggl.OpenGL.glFramebufferRenderbufferEXT(param1, param0, 36161, this.field_m);
         this.field_q = param1;
         this.field_r = param0;
@@ -84,7 +84,7 @@ final class kba extends DualLinkNode implements wia {
         return cm.field_a.length;
     }
 
-    kba(OpenGlToolkit param0, int param1, int param2, int param3) {
+    OpenGlRenderbuffer(OpenGlToolkit param0, int param1, int param2, int param3) {
         this.field_q = -1;
         this.field_r = -1;
         try {
@@ -102,7 +102,7 @@ final class kba extends DualLinkNode implements wia {
         }
     }
 
-    kba(OpenGlToolkit param0, int param1, int param2, int param3, int param4) {
+    OpenGlRenderbuffer(OpenGlToolkit param0, int param1, int param2, int param3, int param4) {
         this.field_q = -1;
         this.field_r = -1;
         try {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jja extends ToolkitSprite {
+final class OpenGlSprite extends ToolkitSprite {
     private int field_i;
     qk field_a;
     static ura field_d;
@@ -19,7 +19,7 @@ final class jja extends ToolkitSprite {
     public static void releaseStatics(boolean param0) {
         field_j = null;
         if (param0) {
-          jja.releaseStatics(true);
+          OpenGlSprite.releaseStatics(true);
         }
         field_l = null;
         field_d = null;
@@ -29,11 +29,11 @@ final class jja extends ToolkitSprite {
     private final void a(int param0) {
         this.field_c.e(1, true);
         this.field_c.a(true, (kl) null);
-        this.field_c.b(8448, 8960, 8448);
-        this.field_c.c(1, param0, 34168, 768);
+        this.field_c.setTextureCombineOperations(8448, 8960, 8448);
+        this.field_c.setTextureCombineOperands(1, param0, 34168, 768);
         this.field_c.b(5890, 3, 0, 770);
         this.field_c.e(0, true);
-        this.field_c.c(1, 0, 34168, 768);
+        this.field_c.setTextureCombineOperands(1, 0, 34168, 768);
     }
 
     private final void a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7) {
@@ -81,7 +81,7 @@ final class jja extends ToolkitSprite {
         return this.field_m + this.field_a.field_s + this.field_e;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final void drawScaled(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var15;
         qk stackIn_2_0 = null;
         boolean stackIn_3_1 = false;
@@ -294,25 +294,25 @@ final class jja extends ToolkitSprite {
         this.field_c.e(1, true);
         var3 = 105 / ((82 - param1) / 35);
         this.field_c.a(true, this.field_a);
-        this.field_c.b(this.field_c.g(1, param0), 8960, 7681);
-        this.field_c.c(1, 0, 34167, 768);
+        this.field_c.setTextureCombineOperations(this.field_c.g(1, param0), 8960, 7681);
+        this.field_c.setTextureCombineOperands(1, 0, 34167, 768);
         this.field_c.b(34168, 3, 0, 770);
         this.field_c.e(0, true);
         this.field_c.a(true, this.field_f);
-        this.field_c.b(34479, 8960, 7681);
-        this.field_c.c(1, 0, 34166, 768);
+        this.field_c.setTextureCombineOperations(34479, 8960, 7681);
+        this.field_c.setTextureCombineOperands(1, 0, 34166, 768);
         if (this.field_g == 0) {
-          this.field_c.a(0.5f, 1.0f, 0.5f, (byte) -76, 0.0f);
+          this.field_c.setTextureConstantRgba(0.5f, 1.0f, 0.5f, (byte) -76, 0.0f);
         } else {
           if (this.field_g == 1) {
-            this.field_c.a(1.0f, 0.5f, 0.5f, (byte) -76, 0.0f);
+            this.field_c.setTextureConstantRgba(1.0f, 0.5f, 0.5f, (byte) -76, 0.0f);
           } else {
             if (this.field_g != 2) {
               if (3 == this.field_g) {
-                this.field_c.a(128.5f, 128.5f, 128.5f, (byte) -76, 0.0f);
+                this.field_c.setTextureConstantRgba(128.5f, 128.5f, 128.5f, (byte) -76, 0.0f);
               }
             } else {
-              this.field_c.a(0.5f, 0.5f, 1.0f, (byte) -76, 0.0f);
+              this.field_c.setTextureConstantRgba(0.5f, 0.5f, 1.0f, (byte) -76, 0.0f);
             }
           }
         }
@@ -322,7 +322,7 @@ final class jja extends ToolkitSprite {
         return this.field_a.field_s;
     }
 
-    jja(OpenGlToolkit param0, int param1, int param2, int[] param3, int param4, int param5) {
+    OpenGlSprite(OpenGlToolkit param0, int param1, int param2, int[] param3, int param4, int param5) {
         this.field_e = 0;
         this.field_h = 0;
         this.field_g = 0;

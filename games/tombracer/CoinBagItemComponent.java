@@ -315,7 +315,7 @@ final class CoinBagItemComponent extends ItemComponent {
               if ((decompiledFrameRemainder0) && (!(var10 < 2) || var19 != 0) && (null != PowerUpItemBehaviour.field_u ||
                 null != hp.field_a ||
                 nra.field_g != null ||
-                null != lga.field_z)) {
+                null != HotspotTextWidget.field_z)) {
                 var11 = 0;
                 var12 = 0;
                 var13Lifetime1 = 0;
@@ -342,9 +342,9 @@ final class CoinBagItemComponent extends ItemComponent {
                         var13Lifetime1 = var18_int;
                       }
                     }
-                    if (lga.field_z != null &&
-                      null != lga.field_z[var16]) {
-                      var15 = var15 | lga.field_z[var16][var17_int];
+                    if (HotspotTextWidget.field_z != null &&
+                      null != HotspotTextWidget.field_z[var16]) {
+                      var15 = var15 | HotspotTextWidget.field_z[var16][var17_int];
                     }
                     if (null != nra.field_g &&
                       nra.field_g[var16] != null) {

@@ -35,7 +35,7 @@ final class ni {
             var2 = var6;
             if (null != fua.field_b) {
               try {
-                fua.field_b.a((byte) 2, 0L);
+                fua.field_b.seek((byte) 2, 0L);
                 fua.field_b.a(var6, 0);
                 for (var3_int = 0; 24 > var3_int; var3_int++) {
                   if (var2[var3_int] == 0) {
@@ -96,9 +96,9 @@ final class ni {
           this.field_a = param0.c(6, true);
           this.field_d = param0.c(6, false);
           this.field_d.a(393168, 12, true);
-          this.field_b = param0.a(26, false);
+          this.field_b = param0.createIndexBuffer(26, false);
           this.field_b.a(18, 49146);
-          var7 = this.field_b.a(true, (byte) -44);
+          var7 = this.field_b.map(true, (byte) -44);
           if (var7 != null) {
             var8 = param0.a(var7, 125);
             if (jaclib.memory.Stream.b()) {

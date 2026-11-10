@@ -36,7 +36,7 @@ abstract class vo {
 
     protected final void finalize() throws Throwable {
         if (!this.field_c) {
-          this.field_h.d(-31014, this.field_e, this.field_g);
+          this.field_h.queueBufferDeletion(-31014, this.field_e, this.field_g);
           this.field_c = true;
         }
         super.finalize();
@@ -51,8 +51,8 @@ abstract class vo {
           this.field_a = param4 ? true : false;
           this.field_d = param1;
           this.field_g = param3;
-          jaggl.OpenGL.glGenBuffersARB(1, lc.field_N, 0);
-          this.field_e = lc.field_N[0];
+          jaggl.OpenGL.glGenBuffersARB(1, ContentTransitionDialog.field_N, 0);
+          this.field_e = ContentTransitionDialog.field_N[0];
           this.d(34963);
           jaggl.OpenGL.glBufferDataARBub(param1, this.field_g, param2, 0, this.field_a ? 35040 : 35044);
           this.field_h.field_mb = this.field_h.field_mb + this.field_g;

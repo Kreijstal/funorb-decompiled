@@ -359,7 +359,7 @@ final class PathMoveLocomotor extends Locomotor {
             stackIn_7_0 = qt.field_a.b(param1);
             return stackIn_7_0;
           }
-          stackIn_5_0 = bfa.field_c.b(param1);
+          stackIn_5_0 = ConsoleValue.field_c.b(param1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -438,7 +438,7 @@ final class PathMoveLocomotor extends Locomotor {
             stackIn_7_0 = qt.field_a.b(param1);
             return stackIn_7_0;
           }
-          stackIn_5_0 = bfa.field_c.b(param1);
+          stackIn_5_0 = ConsoleValue.field_c.b(param1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

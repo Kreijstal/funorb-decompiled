@@ -15,7 +15,7 @@ final class nba {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!vpa.a(76) &&
+          if (!TextWidgetPainter.a(76) &&
             !param0.k(-25319)) {
             if (param1.getId((byte) -82) < 0) {
               return;
@@ -50,9 +50,9 @@ final class nba {
     final static void a(PlatformTaskDispatcher param0, sq param1, int param2, int param3, int param4, java.awt.Component param5, int param6, boolean param7) {
         try {
           AudioOutput.a(param3, param7, 10);
-          WheeledMountComponent.field_P = AudioOutput.a(param0, param5, 0, param4);
+          WheeledMountComponent.field_P = AudioOutput.createOutput(param0, param5, 0, param4);
           int var8_int = 22 % ((50 - param6) / 54);
-          gg.field_b = AudioOutput.a(param0, param5, 1, param2);
+          gg.field_b = AudioOutput.createOutput(param0, param5, 1, param2);
           PitModel.field_n = new PcmStreamMixer();
           BeamShooterBehaviour.field_p = param2;
           gg.field_b.b(PitModel.field_n);

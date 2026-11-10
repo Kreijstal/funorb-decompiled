@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class td extends vpa {
+final class td extends TextWidgetPainter {
     private int field_t;
     private int field_p;
     private int field_s;

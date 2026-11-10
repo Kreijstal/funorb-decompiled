@@ -169,7 +169,7 @@ class WidgetContainer extends UiWidget implements tpa {
         try {
           if (this.beginDiagnosticVisit((byte) -115, param0, param1, param2)) {
             this.appendDiagnosticProperties(1, param2, param1, param0);
-            this.b(param0, param1, param2, 23241);
+            this.appendDebugChildren(param0, param1, param2, 23241);
           }
           if (param3 != 0) {
             field_v = (String) null;
@@ -579,7 +579,7 @@ class WidgetContainer extends UiWidget implements tpa {
         this.refreshChildLayouts(param0 ^ -112);
     }
 
-    private final void b(int param0, Hashtable param1, StringBuilder param2, int param3) {
+    private final void appendDebugChildren(int param0, Hashtable param1, StringBuilder param2, int param3) {
         StringBuilder discarded$3 = null;
         int var7 = 0;
         StringBuilder discarded$4 = null;

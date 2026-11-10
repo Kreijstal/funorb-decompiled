@@ -116,11 +116,11 @@ final class MiscItemBehaviour extends ItemBehaviour {
             }
           } else {
             if (var3_intLifetime1 == 1) {
-              param1.a(this.trap, false, 0);
+              param1.collectTreasure(this.trap, false, 0);
               return true;
             }
             if (var3_intLifetime1 == 2) {
-              param1.a(this.trap, false, 1);
+              param1.collectTreasure(this.trap, false, 1);
               this.c(false);
               return true;
             }
@@ -128,7 +128,7 @@ final class MiscItemBehaviour extends ItemBehaviour {
               return false;
             }
             if (!param1.x(49)) {
-              param1.a(this.trap, false, 2);
+              param1.collectTreasure(this.trap, false, 2);
               param1.a(this.trap.b(-77), (byte) -120, 52428, 0);
               this.c(false);
               return true;

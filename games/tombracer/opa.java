@@ -245,23 +245,23 @@ final class opa extends qra {
         ura.a(-10985);
         Room.field_j.a(0, 0);
         ik.field_h.a(0, 0);
-        ng.field_b[1].a(50, -10);
+        WidgetStyleLayer.field_b[1].a(50, -10);
         var3 = -250 + aaa.a(false);
-        var4 = -10 + ng.field_b[1].c() - 70;
-        ng.field_b[1].a(var3, -10);
+        var4 = -10 + WidgetStyleLayer.field_b[1].c() - 70;
+        WidgetStyleLayer.field_b[1].a(var3, -10);
         nm.field_l.a(var3, 0);
         nm.field_l.a(var3, var4);
         var5 = 3;
         var6 = (var3 - 50) / (var5 + 1);
         for (var7 = 0; var5 > var7; var7++) {
           var8 = 50 + (1 + var7) * var6;
-          ng.field_b[0].a(var8, 0);
+          WidgetStyleLayer.field_b[0].a(var8, 0);
         }
         for (var7Lifetime1 = 0; 3 > var7Lifetime1; var7Lifetime1++) {
           var8Lifetime1 = -30 + (var3 - 50 >> 2) * 3;
           var9 = (var7Lifetime1 + 1) * ((var4 - 0) / 4) + 20;
-          ng.field_b[0].drawRotated((float)var8Lifetime1, (float)var9, 4096, 16384, 3, 1610612736, 1);
-          ng.field_b[0].drawRotated((float)(var8Lifetime1 + 150), (float)var9, 4096, 16384, 3, 1610612736, 1);
+          WidgetStyleLayer.field_b[0].drawRotated((float)var8Lifetime1, (float)var9, 4096, 16384, 3, 1610612736, 1);
+          WidgetStyleLayer.field_b[0].drawRotated((float)(var8Lifetime1 + 150), (float)var9, 4096, 16384, 3, 1610612736, 1);
         }
         var7Lifetime2 = this.field_c.field_E;
         for (var8Lifetime2 = 0; this.field_c.field_k > var8Lifetime2; var8Lifetime2++) {
@@ -688,7 +688,7 @@ final class opa extends qra {
           }
           TripBeamComponent.b(1, 0);
           this.field_s = false;
-          mr.field_w = new w();
+          AccountRegistrationPanel.field_w = new w();
           var5 = 0.0;
           var7 = 0.0;
           var9 = 0.0;
@@ -845,7 +845,7 @@ final class opa extends qra {
         for (var4 = 0; this.field_r.length > var4; var4++) {
           this.field_r[var4].a(0, var3Lifetime1, var4);
         }
-        stackIn_21_0 = mr.field_w;
+        stackIn_21_0 = AccountRegistrationPanel.field_w;
         stackIn_21_1 = param0 + 35;
         stackIn_22_2 = (param1) ? false : true;
         ((w) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_22_2);

@@ -12,8 +12,8 @@ final class tj {
     va field_d;
 
     final static java.awt.Container b(int param0) {
-        if (null != rla.field_x) {
-          return (java.awt.Container) ((Object) rla.field_x);
+        if (null != DropdownList.field_x) {
+          return (java.awt.Container) ((Object) DropdownList.field_x);
         }
         if (param0 == 25128) {
           return (java.awt.Container) ((Object) di.a(param0 - 25099));

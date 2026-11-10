@@ -43,7 +43,7 @@ final class efa extends WidgetContainer implements mia, tsa {
         }
     }
 
-    public final void a(int param0) {
+    public final void onMoreSuggestionsRequested(int param0) {
         ((tf) (this.field_z.a((byte) 93))).b((byte) -69);
         if (param0 != 10000536) {
           field_y = -98;
@@ -62,7 +62,7 @@ final class efa extends WidgetContainer implements mia, tsa {
         }
     }
 
-    public final void a(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
+    public final void onButtonActivated(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
         boolean discarded$0 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -108,7 +108,7 @@ final class efa extends WidgetContainer implements mia, tsa {
     public efa() {
         super(0, 0, 496, 0, (isa) null);
         this.field_z = new so("", (qc) null, 12);
-        vpa var1 = new vpa(eka.field_o, 0, 0, 0, 0, 16777215, -1, 3, 0, KeySwitchComponent.field_J.field_w, -1, 2147483647, true);
+        TextWidgetPainter var1 = new TextWidgetPainter(eka.field_o, 0, 0, 0, 0, 16777215, -1, 3, 0, KeySwitchComponent.field_J.field_w, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(cj.field_e, var1, (qc) null);
         this.field_A = new FocusableWidget(nf.field_j, (qc) null);
         this.field_B = new FocusableWidget(mq.field_d, (qc) null);
@@ -199,7 +199,7 @@ final class efa extends WidgetContainer implements mia, tsa {
 
     private final void a(byte param0) {
         if (param0 < 10) {
-          this.a(74);
+          this.onMoreSuggestionsRequested(74);
           if (this.b(false)) {
             rka.a(this.field_z.field_o, false);
             return;

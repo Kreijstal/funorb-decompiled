@@ -91,7 +91,7 @@ final class qua extends IntrusiveNode {
               var12Lifetime1 = var8 >> 16 & 127;
               if (var12Lifetime1 > 0) {
                 var13 = var19[var10Lifetime2];
-                var14 = (jk) (this.field_f.a((byte) -113, (long)var13));
+                var14 = (jk) (this.field_f.get((byte) -113, (long)var13));
                 if (var14 == null) {
                   var15 = new jk(new byte[128]);
                   var14 = var15;

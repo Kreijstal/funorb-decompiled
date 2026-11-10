@@ -13,9 +13,9 @@ final class cw {
     private OpenGlFramebuffer field_d;
     private IntrusiveDeque field_j;
     private boolean field_c;
-    private kba field_l;
+    private OpenGlRenderbuffer field_l;
     private boolean field_h;
-    private kba field_b;
+    private OpenGlRenderbuffer field_b;
     private boolean field_n;
     private rt[] field_r;
     private rt field_m;
@@ -47,13 +47,13 @@ final class cw {
             this.field_m = null;
           }
           if (this.field_e != null) {
-            this.field_b = new kba(this.field_t, 6402, this.field_k, this.field_g, this.field_t.field_gb);
+            this.field_b = new OpenGlRenderbuffer(this.field_t, 6402, this.field_k, this.field_g, this.field_t.field_gb);
           }
           if (this.field_u) {
             this.field_m = new rt(this.field_t, 34037, 6402, this.field_k, this.field_g);
           } else {
             if (null == this.field_b) {
-              this.field_b = new kba(this.field_t, 6402, this.field_k, this.field_g);
+              this.field_b = new OpenGlRenderbuffer(this.field_t, 6402, this.field_k, this.field_g);
             }
           }
           this.field_n = true;
@@ -74,7 +74,7 @@ final class cw {
             this.field_r[1] = null;
           }
           if (this.field_e != null) {
-            this.field_l = new kba(this.field_t, this.field_s, this.field_k, this.field_g, this.field_t.field_gb);
+            this.field_l = new OpenGlRenderbuffer(this.field_t, this.field_s, this.field_k, this.field_g, this.field_t.field_gb);
           }
           this.field_r[0] = new rt(this.field_t, 34037, this.field_s, this.field_k, this.field_g);
           stackIn_31_0 = this.field_r;

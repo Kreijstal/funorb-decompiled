@@ -4,7 +4,7 @@
 final class nc {
     static ToolkitSprite field_e;
     private ResourceArchive field_a;
-    private dd field_c;
+    private SoftReferenceCache field_c;
     private ResourceArchive field_d;
     static int[] field_b;
 
@@ -37,7 +37,7 @@ final class nc {
             var6.a(10211);
           }
           var5 = -55 / ((param0 + 25) / 35);
-          this.field_c.a(29166, var6, (long)param1);
+          this.field_c.put(29166, var6, (long)param1);
           return var6;
         }
         var6.a(new PacketBuffer(var4), -26706);
@@ -45,7 +45,7 @@ final class nc {
           var6.a(10211);
         }
         var5Lifetime1 = -55 / ((param0 + 25) / 35);
-        this.field_c.a(29166, var6, (long)param1);
+        this.field_c.put(29166, var6, (long)param1);
         return var6;
     }
 
@@ -57,7 +57,7 @@ final class nc {
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_c = new dd(64);
+        this.field_c = new SoftReferenceCache(64);
         try {
           this.field_a = param1;
           this.field_d = param2;

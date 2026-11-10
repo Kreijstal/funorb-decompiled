@@ -84,7 +84,7 @@ final class qka extends qra {
           this.field_p[0].field_i = SwitchLinkList.b(0) - 25;
           this.field_p[0].a(false);
           if (!this.field_h.field_D &&
-            !vpa.a(43)) {
+            !TextWidgetPainter.a(43)) {
             this.field_p[0].field_e = aua.field_d.toUpperCase();
             FacePlayerLocomotor.field_p = uta.a(3, this.field_h.m(-1), 0, 10, 1);
           }
@@ -260,7 +260,7 @@ final class qka extends qra {
           if (var11 != 0) {
             var24 = dea.a(this.field_c.c((byte) 115, this.field_h.field_x), (byte) -8);
             oka.a(cc.field_l.toUpperCase() + " " + var24.toUpperCase(), 2431750, kn.field_p, -1, 20 + var4, -120 + var3, -1);
-            oka.a(lc.field_L.toUpperCase(), 2431750, eda.field_f, -1, var4, 120 + var3, -1);
+            oka.a(ContentTransitionDialog.field_L.toUpperCase(), 2431750, eda.field_f, -1, var4, 120 + var3, -1);
             var13 = this.field_h.field_k.simulations[this.field_h.field_x].player.v(74);
             oka.a(Integer.toString(var13), 2431750, eda.field_f, -1, 20 + var4, 120 + var3, -1);
           } else {
@@ -271,7 +271,7 @@ final class qka extends qra {
             ts.a(-1, -36, var4 + 79, dea.a(var13, (byte) -8), -200 + (var3 + za.field_g.d()) + 5, kn.field_p, 2431750);
             bca.field_d.a(var3 - 110, 60 + var4);
             ts.a(-1, -92, 79 + var4, dea.a(var13 + var13 / 2, (byte) -8), bca.field_d.d() + (var3 - 110) + 5, kn.field_p, 2431750);
-            oka.a(lc.field_L.toUpperCase(), 2431750, eda.field_f, -1, 5 + var4, 120 + var3, -1);
+            oka.a(ContentTransitionDialog.field_L.toUpperCase(), 2431750, eda.field_f, -1, 5 + var4, 120 + var3, -1);
             var14 = this.field_h.field_k.simulations[this.field_h.field_x].player.v(110);
             oka.a(Integer.toString(var14), 2431750, eda.field_f, -1, var4 + 22, var3 + 120, -1);
             if (FacePlayerLocomotor.field_p != null &&

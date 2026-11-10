@@ -1120,7 +1120,7 @@ class MidiPcmStream extends PcmStream {
           scanLoop1: while (true) {
             if (var8 != null) {
               var9 = (int)var8.key;
-              var10 = (tn) (this.field_r.a((byte) -97, (long)var9));
+              var10 = (tn) (this.field_r.get((byte) -97, (long)var9));
               if (var11 == 0) {
                 boolean decompiledFrameRemainder0 = true;
                 if (var10 == null) {
@@ -1402,7 +1402,7 @@ class MidiPcmStream extends PcmStream {
             break;
           }
         }
-        var10 = (tn) (this.field_r.a((byte) -117, (long)this.field_k[param2]));
+        var10 = (tn) (this.field_r.get((byte) -117, (long)this.field_k[param2]));
         var11 = var10;
         if (var11 == null) {
           return;

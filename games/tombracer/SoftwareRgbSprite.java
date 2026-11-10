@@ -581,7 +581,7 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
 
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final void drawScaled(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int incrementValue$13 = 0;
         int incrementValue$12 = 0;
         int incrementValue$11 = 0;
@@ -1205,7 +1205,7 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
         }
     }
 
-    final void b(int param0, int param1) {
+    final void blitAffine(int param0, int param1) {
         int incrementValue$32 = 0;
         int incrementValue$33 = 0;
         int incrementValue$34 = 0;

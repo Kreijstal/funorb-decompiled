@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sf extends OpenGlBuffer implements eja {
+final class OpenGlVertexBuffer extends OpenGlBuffer implements eja {
     private una field_l;
 
     public final void a(int param0, int param1) {
@@ -26,7 +26,7 @@ final class sf extends OpenGlBuffer implements eja {
         return this.field_l;
     }
 
-    public final jaclib.memory.Buffer a(boolean param0, byte param1) {
+    public final jaclib.memory.Buffer map(boolean param0, byte param1) {
         if (param1 < -9) {
           return super.a(this.field_h.field_Qc, param0, 1);
         }
@@ -34,7 +34,7 @@ final class sf extends OpenGlBuffer implements eja {
         return super.a(this.field_h.field_Qc, param0, 1);
     }
 
-    sf(kda param0, una param1, boolean param2) {
+    OpenGlVertexBuffer(kda param0, una param1, boolean param2) {
         super(param0, 34963, param2);
         try {
           this.field_l = param1;

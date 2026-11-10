@@ -36,7 +36,7 @@ abstract class qra {
         if (param1 != 100) {
           field_e = (int[]) null;
         }
-        if (vpa.a(84) ||
+        if (TextWidgetPainter.a(84) ||
           param2.k(param1 - 25419)) {
           return;
         }

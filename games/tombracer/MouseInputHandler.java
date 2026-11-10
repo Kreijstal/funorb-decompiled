@@ -38,7 +38,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             tu.field_h = 0;
             ena.field_n = param0.getX();
             ee.field_a = param0.getY();
-            lja.field_c = true;
+            PlayerContextMenu.field_c = true;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hua.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
@@ -95,7 +95,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           tu.field_h = 0;
           ena.field_n = -1;
           ee.field_a = -1;
-          lja.field_c = true;
+          PlayerContextMenu.field_c = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -124,7 +124,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           tu.field_h = 0;
           ena.field_n = param0.getX();
           ee.field_a = param0.getY();
-          lja.field_c = true;
+          PlayerContextMenu.field_c = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -162,10 +162,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             TestModel.field_m = param0.getY();
             bva.b((byte) -107);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
-              at.field_X = 1;
+              DisplaySettingsDialog.field_X = 1;
               tka.field_n = 1;
             } else {
-              at.field_X = 2;
+              DisplaySettingsDialog.field_X = 2;
               tka.field_n = 2;
             }
             var2_int = param0.getModifiers();
@@ -173,7 +173,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             }
             if (0 != (4 & var2_int)) {
             }
-            lja.field_c = true;
+            PlayerContextMenu.field_c = true;
             if ((8 & var2_int) == 0) {
             }
           }
@@ -207,7 +207,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (null != wna.field_n) {
             tu.field_h = 0;
             tka.field_n = 0;
-            lja.field_c = true;
+            PlayerContextMenu.field_c = true;
             var2_int = param0.getModifiers();
             if ((16 & var2_int) != 0) {
             }
@@ -241,7 +241,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             tu.field_h = 0;
             ena.field_n = param0.getX();
             ee.field_a = param0.getY();
-            lja.field_c = true;
+            PlayerContextMenu.field_c = true;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hua.mouseMoved(" + (param0 != null ? "{...}" : "null") + ')');

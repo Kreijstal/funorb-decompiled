@@ -358,7 +358,7 @@ class tu extends SimulationObserver {
             var13 = 0;
             var9Lifetime1 = var13;
             while (var13 < 3) {
-              this.field_f.field_D.b(param0.A(0), 65408, gp.field_i[var13] * param0.a(393216, var13));
+              this.field_f.field_D.b(param0.A(0), 65408, gp.field_i[var13] * param0.getRoomTreasure(393216, var13));
               var13++;
             }
             return;

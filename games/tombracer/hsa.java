@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hsa {
-    private dd field_d;
+    private SoftReferenceCache field_d;
     private d field_b;
     static int field_a;
     private OpenGlToolkit field_e;
@@ -11,10 +11,10 @@ final class hsa {
     final void c(int param0) {
         if (param0 != -29413) {
           field_a = 14;
-          this.field_d.b(104, 5);
+          this.field_d.demoteOldEntries(104, 5);
           return;
         }
-        this.field_d.b(104, 5);
+        this.field_d.demoteOldEntries(104, 5);
     }
 
     final rt a(int param0, int param1) {
@@ -170,7 +170,7 @@ final class hsa {
             }
             var40 = new rt(stackIn_56_2, stackIn_56_3, stackIn_56_4, stackIn_56_5, stackIn_56_6, stackIn_57_7, var7, 0, 0, false);
             var40.a(var39.field_n, var39.field_b, -3554);
-            this.field_d.a(param1 + 29166, var40, (long)param0);
+            this.field_d.put(param1 + 29166, var40, (long)param0);
             return var40;
           }
           if (this.field_e.f()) {
@@ -196,7 +196,7 @@ final class hsa {
             }
             var4 = new rt(stackIn_61_2, stackIn_61_3, stackIn_61_4, stackIn_61_5, stackIn_61_6, stackIn_62_7, var11, 6408);
             var4.a(var39.field_n, var39.field_b, -3554);
-            this.field_d.a(param1 + 29166, var4, (long)param0);
+            this.field_d.put(param1 + 29166, var4, (long)param0);
             return var4;
           }
           if (2 != var39.field_d &&
@@ -223,7 +223,7 @@ final class hsa {
           }
           var41 = new rt(stackIn_71_2, stackIn_71_3, stackIn_71_4, stackIn_71_5, stackIn_71_6, stackIn_72_7, var7Lifetime2, 0, 0, false);
           var41.a(var39.field_n, var39.field_b, -3554);
-          this.field_d.a(param1 + 29166, var41, (long)param0);
+          this.field_d.put(param1 + 29166, var41, (long)param0);
           return var41;
         }
         hsa.releaseStatics(74);
@@ -269,7 +269,7 @@ final class hsa {
           }
           var13 = new rt(stackIn_17_2, stackIn_17_3, stackIn_17_4, stackIn_17_5, stackIn_17_6, stackIn_18_7, var7Lifetime1, 0, 0, false);
           var13.a(var12.field_n, var12.field_b, -3554);
-          this.field_d.a(param1 + 29166, var13, (long)param0);
+          this.field_d.put(param1 + 29166, var13, (long)param0);
           return var13;
         }
         if (this.field_e.f()) {
@@ -295,7 +295,7 @@ final class hsa {
           }
           var38 = new rt(stackIn_23_2, stackIn_23_3, stackIn_23_4, stackIn_23_5, stackIn_23_6, stackIn_24_7, var11Lifetime1, 6408);
           var38.a(var12.field_n, var12.field_b, -3554);
-          this.field_d.a(param1 + 29166, var38, (long)param0);
+          this.field_d.put(param1 + 29166, var38, (long)param0);
           return var38;
         }
         if (2 == var12.field_d) {
@@ -318,7 +318,7 @@ final class hsa {
           }
           var21 = new rt(stackIn_28_2, stackIn_28_3, stackIn_28_4, stackIn_28_5, stackIn_28_6, stackIn_29_7, var43, 0, 0, false);
           var21.a(var12.field_n, var12.field_b, -3554);
-          this.field_d.a(param1 + 29166, var21, (long)param0);
+          this.field_d.put(param1 + 29166, var21, (long)param0);
           return var21;
         }
         if (!bh.a((int) var12.field_h, false)) {
@@ -341,7 +341,7 @@ final class hsa {
           }
           var28 = new rt(stackIn_38_2, stackIn_38_3, stackIn_38_4, stackIn_38_5, stackIn_38_6, stackIn_39_7, var45, 0, 0, false);
           var28.a(var12.field_n, var12.field_b, -3554);
-          this.field_d.a(param1 + 29166, var28, (long)param0);
+          this.field_d.put(param1 + 29166, var28, (long)param0);
           return var28;
         }
         var47 = this.field_b.a(14907, param0, true, var6Lifetime1, 0.699999988079071f, var6Lifetime1);
@@ -363,7 +363,7 @@ final class hsa {
         }
         var35 = new rt(stackIn_34_2, stackIn_34_3, stackIn_34_4, stackIn_34_5, stackIn_34_6, stackIn_35_7, var47, 0, 0, false);
         var35.a(var12.field_n, var12.field_b, -3554);
-        this.field_d.a(param1 + 29166, var35, (long)param0);
+        this.field_d.put(param1 + 29166, var35, (long)param0);
         return var35;
     }
 
@@ -379,7 +379,7 @@ final class hsa {
     }
 
     final void a(int param0) {
-        this.field_d.c((byte) -118);
+        this.field_d.clear((byte) -118);
         if (param0 != 10659) {
           this.field_e = (OpenGlToolkit) null;
         }
@@ -391,7 +391,7 @@ final class hsa {
     }
 
     hsa(OpenGlToolkit param0, d param1) {
-        this.field_d = new dd(256);
+        this.field_d = new SoftReferenceCache(256);
         try {
           this.field_b = param1;
           this.field_e = param0;

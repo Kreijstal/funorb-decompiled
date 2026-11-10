@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dd {
+final class SoftReferenceCache {
     static oc[] field_b;
     private SecondaryNodeDeque field_f;
     private IterableNodeHashTable field_c;
@@ -101,7 +101,7 @@ final class dd {
         return null;
     }
 
-    final void c(byte param0) {
+    final void clear(byte param0) {
         if (param0 == -118) {
           this.field_f.clear((byte) 84);
           this.field_c.clear(param0 ^ -118);
@@ -156,7 +156,7 @@ final class dd {
         }
     }
 
-    final void b(int param0, int param1) {
+    final void demoteOldEntries(int param0, int param1) {
         long fieldTemp$0 = 0L;
         pb var3;
         eba var4;
@@ -191,7 +191,7 @@ final class dd {
         return;
     }
 
-    final void a(int param0, Object param1, long param2) {
+    final void put(int param0, Object param1, long param2) {
         if (param0 != 29166) {
           return;
         }
@@ -206,7 +206,7 @@ final class dd {
         if (param1 == 1) {
           return nt.a(param0, 1, 5200, false, false, true);
         }
-        dd.releaseStatics(10);
+        SoftReferenceCache.releaseStatics(10);
         return nt.a(param0, 1, 5200, false, false, true);
     }
 
@@ -218,7 +218,7 @@ final class dd {
         field_d = null;
     }
 
-    private final void a(int param0, pb param1) {
+    private final void removeEntry(int param0, pb param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -233,7 +233,7 @@ final class dd {
           if (param0 == 1) {
             return;
           }
-          this.a(85, (Object) null, 32L);
+          this.put(85, (Object) null, 32L);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -267,7 +267,7 @@ final class dd {
           this.field_e = this.field_e - param2;
           while (this.field_e < 0) {
             var8 = (pb) (this.field_f.poll((byte) 60));
-            this.a(param0 ^ -2, var8);
+            this.removeEntry(param0 ^ -2, var8);
           }
           var6 = new tja(param1, param2);
           this.field_c.put(var6, (byte) 114, param3);
@@ -292,11 +292,11 @@ final class dd {
         }
     }
 
-    dd(int param0) {
+    SoftReferenceCache(int param0) {
         this(param0, param0);
     }
 
-    private dd(int param0, int param1) {
+    private SoftReferenceCache(int param0, int param1) {
         int var3;
         this.field_f = new SecondaryNodeDeque();
         this.field_g = param0;
@@ -319,7 +319,7 @@ final class dd {
 
     private final void a(long param0, int param1) {
         pb var4 = (pb) (this.field_c.get(param0, false));
-        this.a(param1, var4);
+        this.removeEntry(param1, var4);
     }
 
     static {

@@ -51,7 +51,7 @@ final class ui {
         try {
           var19_ref = (sra) (dma.field_l);
           var19_ref.a(param2, (byte) 47, param1);
-          dd.field_b = new oc[13];
+          SoftReferenceCache.field_b = new oc[13];
           var5 = gha.a("", "characters/models/deaths/gibs", 33, param0);
           var6 = gha.a("", "characters/models/props/jadeidol", 122, param0);
           var7 = gha.a("", "characters/models/props/jadeidol2", 48, param0);
@@ -71,7 +71,7 @@ final class ui {
             } else {
               var14 = var12;
             }
-            dd.field_b[var13_int] = new oc(new oc[]{gha.a("", "characters/models/" + var20, 81, param0), var14, var11, var5, var8, var9, var10, var6, var7}, 9);
+            SoftReferenceCache.field_b[var13_int] = new oc(new oc[]{gha.a("", "characters/models/" + var20, 81, param0), var14, var11, var5, var8, var9, var10, var6, var7}, 9);
           }
           incrementValue$10 = param2;
           param2++;

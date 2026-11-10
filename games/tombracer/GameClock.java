@@ -5,7 +5,7 @@ abstract class GameClock {
     private static String[] field_a;
     static boolean field_b;
 
-    final int a(byte param0, long param1) {
+    final int waitAndAdvance(byte param0, long param1) {
         long var4 = this.a((byte) 47);
         if (var4 > 0L) {
           TrapSpawner.a(0, var4);

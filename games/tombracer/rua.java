@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rua extends ij implements tsa {
+final class rua extends MessageDialog implements tsa {
     static String field_jb;
     static String field_hb;
     static jea field_gb;
-    private mr field_fb;
+    private AccountRegistrationPanel field_fb;
     private boolean field_eb;
     private boolean field_ib;
 
-    public final void a(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
+    public final void onButtonActivated(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
         if (param4 < 44) {
           jua var7 = (jua) null;
           this.a(-122, true, (jua) null);
@@ -26,7 +26,7 @@ final class rua extends ij implements tsa {
         }
     }
 
-    rua(jta param0, mr param1) {
+    rua(jta param0, AccountRegistrationPanel param1) {
         super(param0, ft.field_c, dsa.field_d, false, false);
         try {
           this.field_fb = param1;
@@ -116,13 +116,13 @@ final class rua extends ij implements tsa {
             } else {
               var4 = qma.field_f;
               if (this.field_fb != null) {
-                this.field_fb.a(10000536);
+                this.field_fb.onMoreSuggestionsRequested(10000536);
               }
             }
           } else {
-            var4 = jo.field_K;
+            var4 = ScrollControlWidget.field_K;
           }
-          var5 = new sr((ij) (this), ft.field_c, var4);
+          var5 = new sr((MessageDialog) (this), ft.field_c, var4);
           if (param0 != 7) {
             return;
           }
@@ -238,7 +238,7 @@ final class rua extends ij implements tsa {
           }
         }
         if (param0 < 126) {
-          this.field_fb = (mr) null;
+          this.field_fb = (AccountRegistrationPanel) null;
         }
         return super.a(127);
     }

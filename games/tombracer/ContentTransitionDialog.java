@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class lc extends ofa {
+abstract class ContentTransitionDialog extends ofa {
     private sla field_M;
     static int[] field_N;
     private int field_R;
@@ -168,7 +168,7 @@ abstract class lc extends ofa {
     public static void releaseStatics(boolean param0) {
         field_N = null;
         if (param0) {
-          lc.releaseStatics(false);
+          ContentTransitionDialog.releaseStatics(false);
           field_L = null;
           return;
         }
@@ -228,7 +228,7 @@ abstract class lc extends ofa {
         }
     }
 
-    lc(jta param0, UiWidget param1, int param2, int param3, int param4) {
+    ContentTransitionDialog(jta param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, param1.field_m + 12, param1.field_p + param2 + 12);
         try {
           this.field_U = param3;

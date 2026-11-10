@@ -297,7 +297,7 @@ final class qp extends we {
           if (!param0) {
             return;
           }
-          if (vpa.a(111)) {
+          if (TextWidgetPainter.a(111)) {
             this.field_w = 1;
             return;
           }
@@ -325,7 +325,7 @@ final class qp extends we {
         if (!param0) {
           return;
         }
-        if (vpa.a(111)) {
+        if (TextWidgetPainter.a(111)) {
           this.field_w = 1;
           return;
         }

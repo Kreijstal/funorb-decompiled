@@ -63,7 +63,7 @@ final class qna {
           qoa.field_a = true;
           mq.field_a = param2;
           if (mq.field_a == 0) {
-            var3_int = ama.a(bfa.field_c, jba.field_l, rg.field_z, 1, lra.field_c);
+            var3_int = ama.a(ConsoleValue.field_c, jba.field_l, rg.field_z, 1, lra.field_c);
             var4 = 3 + var3_int;
             CoinItemComponent.field_H = new int[var4];
             mba.field_g = new String[var4];
@@ -82,7 +82,7 @@ final class qna {
             CoinItemComponent.field_H[-1 + var4] = 1;
             hb.field_w[1] = 5;
           } else if (mq.field_a == 1) {
-            var3_int = ama.a(bfa.field_c, jba.field_l, rg.field_z, 1, lra.field_c);
+            var3_int = ama.a(ConsoleValue.field_c, jba.field_l, rg.field_z, 1, lra.field_c);
             var4 = var3_int + 2;
             CoinItemComponent.field_H = new int[var4];
             mba.field_g = new String[var4];
@@ -100,9 +100,9 @@ final class qna {
           } else if (mq.field_a != 2) {
             if (mq.field_a == 3) {
               if (dsa.field_c.field_c) {
-                var3_int = ama.a(bfa.field_c, IdolItemComponent.field_G, rg.field_z, 1, lra.field_c);
+                var3_int = ama.a(ConsoleValue.field_c, IdolItemComponent.field_G, rg.field_z, 1, lra.field_c);
               } else {
-                var3_int = ama.a(bfa.field_c, SwitchState.field_o, rg.field_z, 1, lra.field_c);
+                var3_int = ama.a(ConsoleValue.field_c, SwitchState.field_o, rg.field_z, 1, lra.field_c);
               }
               var4 = 2 + var3_int;
               CoinItemComponent.field_H = new int[var4];
@@ -119,7 +119,7 @@ final class qna {
               CoinItemComponent.field_H[-1 + var4] = 0;
               hb.field_w[0] = 5;
             } else if (4 == mq.field_a) {
-              var3_int = ama.a(bfa.field_c, S2CEventPacket.field_b, rg.field_z, 1, lra.field_c);
+              var3_int = ama.a(ConsoleValue.field_c, S2CEventPacket.field_b, rg.field_z, 1, lra.field_c);
               var4 = var3_int + 2;
               mba.field_g = new String[var4];
               CoinItemComponent.field_H = new int[var4];
@@ -138,7 +138,7 @@ final class qna {
               if (mq.field_a != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = ama.a(bfa.field_c, WindZoneBehaviour.field_s, rg.field_z, 1, lra.field_c);
+              var3_int = ama.a(ConsoleValue.field_c, WindZoneBehaviour.field_s, rg.field_z, 1, lra.field_c);
               var4 = var3_int + 3;
               CoinItemComponent.field_H = new int[var4];
               mba.field_g = new String[var4];
@@ -158,7 +158,7 @@ final class qna {
               hb.field_w[1] = 5;
             }
           } else {
-            var3_int = ama.a(bfa.field_c, gl.$cfr$intArgs$a$53ce4ab4c593(96, rr.field_G, new String[]{"<br><%0><br>"}), rg.field_z, 1, lra.field_c);
+            var3_int = ama.a(ConsoleValue.field_c, gl.$cfr$intArgs$a$53ce4ab4c593(96, rr.field_G, new String[]{"<br><%0><br>"}), rg.field_z, 1, lra.field_c);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(lra.field_c[var5])) {
@@ -175,7 +175,7 @@ final class qna {
             wr.field_o = new String[-var4 + var3_int - 1];
             ArrayUtils.copy(lra.field_c, var4 + 1, wr.field_o, 0, -1 + (-var4 + var3_int));
             var4 = -1;
-            var3_int = ama.a(bfa.field_c, gl.$cfr$intArgs$a$53ce4ab4c593(89, lqa.field_g, new String[]{"<br><%0><br>"}), rg.field_z, 1, lra.field_c);
+            var3_int = ama.a(ConsoleValue.field_c, gl.$cfr$intArgs$a$53ce4ab4c593(89, lqa.field_g, new String[]{"<br><%0><br>"}), rg.field_z, 1, lra.field_c);
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(lra.field_c[var5])) {
                 continue;

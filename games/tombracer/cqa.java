@@ -51,7 +51,7 @@ final class cqa extends vw {
         this.field_c.a(PlatformComponent.field_F, (byte) -110, r.field_m);
         this.field_c.a(pea.field_c, 0, -55);
         this.field_c.a(ej.field_c, 2, -6219, true, false);
-        this.field_c.a(0, false, lja.field_j);
+        this.field_c.a(0, false, PlayerContextMenu.field_j);
         this.field_c.e(0, false);
         this.d(122);
     }
@@ -80,8 +80,8 @@ final class cqa extends vw {
         if (!this.field_e) {
           this.field_c.a(true, this.field_c.field_Jb);
           this.field_c.a((byte) -85, 1);
-          this.field_c.a(lja.field_j, 0, -82);
-          this.field_c.a(0, false, lja.field_j);
+          this.field_c.a(PlayerContextMenu.field_j, 0, -82);
+          this.field_c.a(0, false, PlayerContextMenu.field_j);
           this.field_e = true;
           if (param2 != 24595) {
             this.a(true, -82);

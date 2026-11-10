@@ -205,7 +205,7 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
 
     final static boolean a(int param0, int param1, byte param2, int param3) {
         if (hka.field_b != null &&
-          hka.field_b.a(13)) {
+          hka.field_b.handleEscape(13)) {
           wp.a(param2 ^ 105);
           return true;
         }
