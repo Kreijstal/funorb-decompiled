@@ -66,7 +66,7 @@ class LongAndTextLoginPayload extends LoginCredentials {
     }
 
     final static void loadTextTable(int param0, Js5Archive param1) {
-        class $CfrPartitionedBody {
+        class ClientTextLoader {
             RuntimeException stackIn_2595_0;
             StringBuilder stackIn_2595_1;
             String stackIn_2596_2;
@@ -78,7 +78,7 @@ class LongAndTextLoginPayload extends LoginCredentials {
             int param0;
             Js5Archive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, Js5Archive initialParam1) {
+            ClientTextLoader(int initialParam0, Js5Archive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2595_0 = null;
@@ -90,7 +90,7 @@ class LongAndTextLoginPayload extends LoginCredentials {
                 this.var3 = 0;
                 this.var4 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLoginLobbyAndAccountText() throws java.lang.RuntimeException {
                 EditableTextWidget.field_K = param1;
                 var2 = RandomAccessCacheFile.getLoadingTextFile("loginm3", 0);
                 if (null != var2) {
@@ -1082,7 +1082,7 @@ class LongAndTextLoginPayload extends LoginCredentials {
                 }
                 var2 = RandomAccessCacheFile.getLoadingTextFile("pleasereenterpass", 0);
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadConnectionAccountAndMenuText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   TextDecodeHelpers.decodeText(var2, (byte) 56);
                 }
@@ -2028,7 +2028,7 @@ class LongAndTextLoginPayload extends LoginCredentials {
                 }
                 var2 = RandomAccessCacheFile.getLoadingTextFile("nextlevel", 0);
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadGameMenuAndMembershipText() throws java.lang.RuntimeException {
                 if (null != var2) {
                   TextDecodeHelpers.decodeText(var2, (byte) 56);
                 }
@@ -2989,7 +2989,7 @@ class LongAndTextLoginPayload extends LoginCredentials {
                   TextDecodeHelpers.decodeText(var2, (byte) 56);
                 }
             }
-            void runChunk3() throws java.lang.RuntimeException {
+            void loadSubscriptionText() throws java.lang.RuntimeException {
                 var2 = RandomAccessCacheFile.getLoadingTextFile("mustlogin_alternate,1", 0);
                 if (null != var2) {
                   AccountPromptTexts.field_g[1] = TextDecodeHelpers.decodeText(var2, (byte) 56);
@@ -3079,13 +3079,13 @@ class LongAndTextLoginPayload extends LoginCredentials {
             void run() {
                 var3 = ZombieDawn.field_J;
                 try {
-                  runChunk0();
+                  loadLoginLobbyAndAccountText();
                   if (finished) return;
-                  runChunk1();
+                  loadConnectionAccountAndMenuText();
                   if (finished) return;
-                  runChunk2();
+                  loadGameMenuAndMembershipText();
                   if (finished) return;
-                  runChunk3();
+                  loadSubscriptionText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3106,7 +3106,7 @@ class LongAndTextLoginPayload extends LoginCredentials {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        ClientTextLoader decompiledBody = new ClientTextLoader(param0, param1);
         decompiledBody.run();
     }
 

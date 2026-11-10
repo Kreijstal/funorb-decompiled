@@ -64,7 +64,7 @@ class FocusDelegatingButton extends TextButton {
     }
 
     final static void loadInterfaceText(Js5Archive param0, int param1) {
-        class $CfrPartitionedBody {
+        class GameTextLoader {
             RuntimeException stackIn_1234_0;
             StringBuilder stackIn_1234_1;
             String stackIn_1235_2;
@@ -75,7 +75,7 @@ class FocusDelegatingButton extends TextButton {
             Js5Archive param0;
             int param1;
             boolean finished;
-            $CfrPartitionedBody(Js5Archive initialParam0, int initialParam1) {
+            GameTextLoader(Js5Archive initialParam0, int initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_1234_0 = null;
@@ -86,7 +86,7 @@ class FocusDelegatingButton extends TextButton {
                 this.var2_ref = null;
                 this.var3 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadAchievementAndInstructionText() throws java.lang.RuntimeException {
                 DirectByteStorage.field_f = param0;
                 var2 = ClientException.getLoadingTextFile(-31, "game_name");
                 if (var2 != null) {
@@ -934,7 +934,7 @@ class FocusDelegatingButton extends TextButton {
                 }
                 var2 = ClientException.getLoadingTextFile(113, "powerup_phantom");
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadPowerupLevelAndTutorialText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   Human.field_bb = TextDecodeHelpers.decodeText(var2, (byte) 56);
                 }
@@ -1498,9 +1498,9 @@ class FocusDelegatingButton extends TextButton {
             void run() {
                 var3 = ZombieDawn.field_J;
                 try {
-                  runChunk0();
+                  loadAchievementAndInstructionText();
                   if (finished) return;
-                  runChunk1();
+                  loadPowerupLevelAndTutorialText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -1520,7 +1520,7 @@ class FocusDelegatingButton extends TextButton {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        GameTextLoader decompiledBody = new GameTextLoader(param0, param1);
         decompiledBody.run();
     }
 

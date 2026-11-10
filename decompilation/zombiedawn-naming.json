@@ -580,6 +580,14 @@
       "renamedSymbol": "C:LongAndTextLoginPayload"
     },
     {
+      "symbol": "C:bn$1$CfrPartitionedBody",
+      "originalName": "$CfrPartitionedBody",
+      "to": "ClientTextLoader",
+      "evidence": "Method-local loader state that LongAndTextLoginPayload.loadTextTable splits into four sections of the localized client text table.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:LongAndTextLoginPayload$1ClientTextLoader"
+    },
+    {
       "symbol": "C:bo",
       "originalName": "bo",
       "to": "AchievementSubmission",
@@ -1226,6 +1234,14 @@
       "evidence": "Button whose focus requests are delegated to an owner widget; base of the dropdown item list.",
       "confidence": "reviewed",
       "renamedSymbol": "C:FocusDelegatingButton"
+    },
+    {
+      "symbol": "C:gl$1$CfrPartitionedBody",
+      "originalName": "$CfrPartitionedBody",
+      "to": "GameTextLoader",
+      "evidence": "Method-local loader state that FocusDelegatingButton.loadInterfaceText splits into two sections of the Zombie Dawn game text.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:FocusDelegatingButton$1GameTextLoader"
     },
     {
       "symbol": "C:gm",
@@ -5746,6 +5762,38 @@
       "evidence": "Decodes Huffman-coded bytes into an output buffer with the code tree, returning the consumed byte count.",
       "confidence": "reviewed",
       "renamedSymbol": "M:HuffmanCodec.decompress([BIIII[B)I"
+    },
+    {
+      "symbol": "M:bn$1$CfrPartitionedBody.runChunk0()V",
+      "originalName": "runChunk0",
+      "to": "loadLoginLobbyAndAccountText",
+      "evidence": "Assigns the login and error messages, multiplayer lobby and game-option strings, rules, account-creation and settings text (keys loginm3 .. mustlogin_alternate).",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:LongAndTextLoginPayload$1ClientTextLoader.loadLoginLobbyAndAccountText()V"
+    },
+    {
+      "symbol": "M:bn$1$CfrPartitionedBody.runChunk1()V",
+      "originalName": "runChunk1",
+      "to": "loadConnectionAccountAndMenuText",
+      "evidence": "Assigns reconnect, account-creation and terms, friend-list, loading-stage, graphics and menu strings (keys playfreeversion .. nextlevel).",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:LongAndTextLoginPayload$1ClientTextLoader.loadConnectionAccountAndMenuText()V"
+    },
+    {
+      "symbol": "M:bn$1$CfrPartitionedBody.runChunk2()V",
+      "originalName": "runChunk2",
+      "to": "loadGameMenuAndMembershipText",
+      "evidence": "Assigns start/resume, highscore, rematch, quick-chat help, fullscreen, membership-benefit and must-login strings (keys startgame .. mustlogin_notloggedin).",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:LongAndTextLoginPayload$1ClientTextLoader.loadGameMenuAndMembershipText()V"
+    },
+    {
+      "symbol": "M:bn$1$CfrPartitionedBody.runChunk3()V",
+      "originalName": "runChunk3",
+      "to": "loadSubscriptionText",
+      "evidence": "Assigns the remaining alternate must-login prompts, the monthly subscription cost labels and the sentence separator.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:LongAndTextLoginPayload$1ClientTextLoader.loadSubscriptionText()V"
     },
     {
       "symbol": "M:bn.a(B)Lnk;",
@@ -10642,6 +10690,22 @@
       "evidence": "Positions and lights the logo models in ic.field_W and renders one logo frame.",
       "confidence": "reviewed",
       "renamedSymbol": "M:BloodSplat.buildLogoModelFrame(I)V"
+    },
+    {
+      "symbol": "M:gl$1$CfrPartitionedBody.runChunk0()V",
+      "originalName": "runChunk0",
+      "to": "loadAchievementAndInstructionText",
+      "evidence": "Assigns the game name, achievement names and criteria, stage names, instructions, intro text and the first level names and tutorial tips.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FocusDelegatingButton$1GameTextLoader.loadAchievementAndInstructionText()V"
+    },
+    {
+      "symbol": "M:gl$1$CfrPartitionedBody.runChunk1()V",
+      "originalName": "runChunk1",
+      "to": "loadPowerupLevelAndTutorialText",
+      "evidence": "Assigns the remaining powerup names, level names, bonus-level text, the ending and the rest of the tutorial tip text.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FocusDelegatingButton$1GameTextLoader.loadPowerupLevelAndTutorialText()V"
     },
     {
       "symbol": "M:gl.a(BLga;)Z",
@@ -25882,9 +25946,9 @@
     },
     {
       "symbol": "C:bn$1$CfrPartitionedBody",
-      "renamedSymbol": "C:LongAndTextLoginPayload$1$CfrPartitionedBody",
+      "renamedSymbol": "C:LongAndTextLoginPayload$1ClientTextLoader",
       "originalName": "$CfrPartitionedBody",
-      "renamedName": "$CfrPartitionedBody",
+      "renamedName": "ClientTextLoader",
       "declaration": {
         "file": "bn.java",
         "start": 2260,
@@ -26784,9 +26848,9 @@
     },
     {
       "symbol": "C:gl$1$CfrPartitionedBody",
-      "renamedSymbol": "C:FocusDelegatingButton$1$CfrPartitionedBody",
+      "renamedSymbol": "C:FocusDelegatingButton$1GameTextLoader",
       "originalName": "$CfrPartitionedBody",
-      "renamedName": "$CfrPartitionedBody",
+      "renamedName": "GameTextLoader",
       "declaration": {
         "file": "gl.java",
         "start": 2582,
@@ -32812,7 +32876,7 @@
     },
     {
       "symbol": "F:bn$1$CfrPartitionedBody.decompiledCaughtException:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:LongAndTextLoginPayload$1$CfrPartitionedBody.decompiledCaughtException:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:LongAndTextLoginPayload$1ClientTextLoader.decompiledCaughtException:Ljava/lang/RuntimeException;",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -32823,7 +32887,7 @@
     },
     {
       "symbol": "F:bn$1$CfrPartitionedBody.finished:Z",
-      "renamedSymbol": "F:LongAndTextLoginPayload$1$CfrPartitionedBody.finished:Z",
+      "renamedSymbol": "F:LongAndTextLoginPayload$1ClientTextLoader.finished:Z",
       "originalName": "finished",
       "renamedName": "finished",
       "declaration": {
@@ -32834,7 +32898,7 @@
     },
     {
       "symbol": "F:bn$1$CfrPartitionedBody.param0:I",
-      "renamedSymbol": "F:LongAndTextLoginPayload$1$CfrPartitionedBody.param0:I",
+      "renamedSymbol": "F:LongAndTextLoginPayload$1ClientTextLoader.param0:I",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -32845,7 +32909,7 @@
     },
     {
       "symbol": "F:bn$1$CfrPartitionedBody.param1:Ldj;",
-      "renamedSymbol": "F:LongAndTextLoginPayload$1$CfrPartitionedBody.param1:LJs5Archive;",
+      "renamedSymbol": "F:LongAndTextLoginPayload$1ClientTextLoader.param1:LJs5Archive;",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -32856,7 +32920,7 @@
     },
     {
       "symbol": "F:bn$1$CfrPartitionedBody.stackIn_2595_0:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:LongAndTextLoginPayload$1$CfrPartitionedBody.stackIn_2595_0:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:LongAndTextLoginPayload$1ClientTextLoader.stackIn_2595_0:Ljava/lang/RuntimeException;",
       "originalName": "stackIn_2595_0",
       "renamedName": "stackIn_2595_0",
       "declaration": {
@@ -32867,7 +32931,7 @@
     },
     {
       "symbol": "F:bn$1$CfrPartitionedBody.stackIn_2595_1:Ljava/lang/StringBuilder;",
-      "renamedSymbol": "F:LongAndTextLoginPayload$1$CfrPartitionedBody.stackIn_2595_1:Ljava/lang/StringBuilder;",
+      "renamedSymbol": "F:LongAndTextLoginPayload$1ClientTextLoader.stackIn_2595_1:Ljava/lang/StringBuilder;",
       "originalName": "stackIn_2595_1",
       "renamedName": "stackIn_2595_1",
       "declaration": {
@@ -32878,7 +32942,7 @@
     },
     {
       "symbol": "F:bn$1$CfrPartitionedBody.stackIn_2596_2:Ljava/lang/String;",
-      "renamedSymbol": "F:LongAndTextLoginPayload$1$CfrPartitionedBody.stackIn_2596_2:Ljava/lang/String;",
+      "renamedSymbol": "F:LongAndTextLoginPayload$1ClientTextLoader.stackIn_2596_2:Ljava/lang/String;",
       "originalName": "stackIn_2596_2",
       "renamedName": "stackIn_2596_2",
       "declaration": {
@@ -32889,7 +32953,7 @@
     },
     {
       "symbol": "F:bn$1$CfrPartitionedBody.var2:[B",
-      "renamedSymbol": "F:LongAndTextLoginPayload$1$CfrPartitionedBody.var2:[B",
+      "renamedSymbol": "F:LongAndTextLoginPayload$1ClientTextLoader.var2:[B",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -32900,7 +32964,7 @@
     },
     {
       "symbol": "F:bn$1$CfrPartitionedBody.var2_ref:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:LongAndTextLoginPayload$1$CfrPartitionedBody.var2_ref:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:LongAndTextLoginPayload$1ClientTextLoader.var2_ref:Ljava/lang/RuntimeException;",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -32911,7 +32975,7 @@
     },
     {
       "symbol": "F:bn$1$CfrPartitionedBody.var3:I",
-      "renamedSymbol": "F:LongAndTextLoginPayload$1$CfrPartitionedBody.var3:I",
+      "renamedSymbol": "F:LongAndTextLoginPayload$1ClientTextLoader.var3:I",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -32922,7 +32986,7 @@
     },
     {
       "symbol": "F:bn$1$CfrPartitionedBody.var4:I",
-      "renamedSymbol": "F:LongAndTextLoginPayload$1$CfrPartitionedBody.var4:I",
+      "renamedSymbol": "F:LongAndTextLoginPayload$1ClientTextLoader.var4:I",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -40424,7 +40488,7 @@
     },
     {
       "symbol": "F:gl$1$CfrPartitionedBody.decompiledCaughtException:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:FocusDelegatingButton$1$CfrPartitionedBody.decompiledCaughtException:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:FocusDelegatingButton$1GameTextLoader.decompiledCaughtException:Ljava/lang/RuntimeException;",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -40435,7 +40499,7 @@
     },
     {
       "symbol": "F:gl$1$CfrPartitionedBody.finished:Z",
-      "renamedSymbol": "F:FocusDelegatingButton$1$CfrPartitionedBody.finished:Z",
+      "renamedSymbol": "F:FocusDelegatingButton$1GameTextLoader.finished:Z",
       "originalName": "finished",
       "renamedName": "finished",
       "declaration": {
@@ -40446,7 +40510,7 @@
     },
     {
       "symbol": "F:gl$1$CfrPartitionedBody.param0:Ldj;",
-      "renamedSymbol": "F:FocusDelegatingButton$1$CfrPartitionedBody.param0:LJs5Archive;",
+      "renamedSymbol": "F:FocusDelegatingButton$1GameTextLoader.param0:LJs5Archive;",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -40457,7 +40521,7 @@
     },
     {
       "symbol": "F:gl$1$CfrPartitionedBody.param1:I",
-      "renamedSymbol": "F:FocusDelegatingButton$1$CfrPartitionedBody.param1:I",
+      "renamedSymbol": "F:FocusDelegatingButton$1GameTextLoader.param1:I",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -40468,7 +40532,7 @@
     },
     {
       "symbol": "F:gl$1$CfrPartitionedBody.stackIn_1234_0:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:FocusDelegatingButton$1$CfrPartitionedBody.stackIn_1234_0:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:FocusDelegatingButton$1GameTextLoader.stackIn_1234_0:Ljava/lang/RuntimeException;",
       "originalName": "stackIn_1234_0",
       "renamedName": "stackIn_1234_0",
       "declaration": {
@@ -40479,7 +40543,7 @@
     },
     {
       "symbol": "F:gl$1$CfrPartitionedBody.stackIn_1234_1:Ljava/lang/StringBuilder;",
-      "renamedSymbol": "F:FocusDelegatingButton$1$CfrPartitionedBody.stackIn_1234_1:Ljava/lang/StringBuilder;",
+      "renamedSymbol": "F:FocusDelegatingButton$1GameTextLoader.stackIn_1234_1:Ljava/lang/StringBuilder;",
       "originalName": "stackIn_1234_1",
       "renamedName": "stackIn_1234_1",
       "declaration": {
@@ -40490,7 +40554,7 @@
     },
     {
       "symbol": "F:gl$1$CfrPartitionedBody.stackIn_1235_2:Ljava/lang/String;",
-      "renamedSymbol": "F:FocusDelegatingButton$1$CfrPartitionedBody.stackIn_1235_2:Ljava/lang/String;",
+      "renamedSymbol": "F:FocusDelegatingButton$1GameTextLoader.stackIn_1235_2:Ljava/lang/String;",
       "originalName": "stackIn_1235_2",
       "renamedName": "stackIn_1235_2",
       "declaration": {
@@ -40501,7 +40565,7 @@
     },
     {
       "symbol": "F:gl$1$CfrPartitionedBody.var2:[B",
-      "renamedSymbol": "F:FocusDelegatingButton$1$CfrPartitionedBody.var2:[B",
+      "renamedSymbol": "F:FocusDelegatingButton$1GameTextLoader.var2:[B",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -40512,7 +40576,7 @@
     },
     {
       "symbol": "F:gl$1$CfrPartitionedBody.var2_ref:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:FocusDelegatingButton$1$CfrPartitionedBody.var2_ref:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:FocusDelegatingButton$1GameTextLoader.var2_ref:Ljava/lang/RuntimeException;",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -40523,7 +40587,7 @@
     },
     {
       "symbol": "F:gl$1$CfrPartitionedBody.var3:I",
-      "renamedSymbol": "F:FocusDelegatingButton$1$CfrPartitionedBody.var3:I",
+      "renamedSymbol": "F:FocusDelegatingButton$1GameTextLoader.var3:I",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -78319,7 +78383,7 @@
     },
     {
       "symbol": "L:bn$1$CfrPartitionedBody.run()V#0",
-      "renamedSymbol": "L:LongAndTextLoginPayload$1$CfrPartitionedBody.run()V#0",
+      "renamedSymbol": "L:LongAndTextLoginPayload$1ClientTextLoader.run()V#0",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -115532,7 +115596,7 @@
     },
     {
       "symbol": "L:gl$1$CfrPartitionedBody.run()V#0",
-      "renamedSymbol": "L:FocusDelegatingButton$1$CfrPartitionedBody.run()V#0",
+      "renamedSymbol": "L:FocusDelegatingButton$1GameTextLoader.run()V#0",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -230966,9 +231030,9 @@
     },
     {
       "symbol": "M:bn$1$CfrPartitionedBody.<init>(ILdj;)V",
-      "renamedSymbol": "M:LongAndTextLoginPayload$1$CfrPartitionedBody.<init>(ILJs5Archive;)V",
+      "renamedSymbol": "M:LongAndTextLoginPayload$1ClientTextLoader.<init>(ILJs5Archive;)V",
       "originalName": "$CfrPartitionedBody",
-      "renamedName": "$CfrPartitionedBody",
+      "renamedName": "ClientTextLoader",
       "declaration": {
         "file": "bn.java",
         "start": 2657,
@@ -230977,7 +231041,7 @@
     },
     {
       "symbol": "M:bn$1$CfrPartitionedBody.run()V",
-      "renamedSymbol": "M:LongAndTextLoginPayload$1$CfrPartitionedBody.run()V",
+      "renamedSymbol": "M:LongAndTextLoginPayload$1ClientTextLoader.run()V",
       "originalName": "run",
       "renamedName": "run",
       "declaration": {
@@ -230988,9 +231052,9 @@
     },
     {
       "symbol": "M:bn$1$CfrPartitionedBody.runChunk0()V",
-      "renamedSymbol": "M:LongAndTextLoginPayload$1$CfrPartitionedBody.runChunk0()V",
+      "renamedSymbol": "M:LongAndTextLoginPayload$1ClientTextLoader.loadLoginLobbyAndAccountText()V",
       "originalName": "runChunk0",
-      "renamedName": "runChunk0",
+      "renamedName": "loadLoginLobbyAndAccountText",
       "declaration": {
         "file": "bn.java",
         "start": 3158,
@@ -230999,9 +231063,9 @@
     },
     {
       "symbol": "M:bn$1$CfrPartitionedBody.runChunk1()V",
-      "renamedSymbol": "M:LongAndTextLoginPayload$1$CfrPartitionedBody.runChunk1()V",
+      "renamedSymbol": "M:LongAndTextLoginPayload$1ClientTextLoader.loadConnectionAccountAndMenuText()V",
       "originalName": "runChunk1",
-      "renamedName": "runChunk1",
+      "renamedName": "loadConnectionAccountAndMenuText",
       "declaration": {
         "file": "bn.java",
         "start": 41070,
@@ -231010,9 +231074,9 @@
     },
     {
       "symbol": "M:bn$1$CfrPartitionedBody.runChunk2()V",
-      "renamedSymbol": "M:LongAndTextLoginPayload$1$CfrPartitionedBody.runChunk2()V",
+      "renamedSymbol": "M:LongAndTextLoginPayload$1ClientTextLoader.loadGameMenuAndMembershipText()V",
       "originalName": "runChunk2",
-      "renamedName": "runChunk2",
+      "renamedName": "loadGameMenuAndMembershipText",
       "declaration": {
         "file": "bn.java",
         "start": 78340,
@@ -231021,9 +231085,9 @@
     },
     {
       "symbol": "M:bn$1$CfrPartitionedBody.runChunk3()V",
-      "renamedSymbol": "M:LongAndTextLoginPayload$1$CfrPartitionedBody.runChunk3()V",
+      "renamedSymbol": "M:LongAndTextLoginPayload$1ClientTextLoader.loadSubscriptionText()V",
       "originalName": "runChunk3",
-      "renamedName": "runChunk3",
+      "renamedName": "loadSubscriptionText",
       "declaration": {
         "file": "bn.java",
         "start": 115810,
@@ -238600,9 +238664,9 @@
     },
     {
       "symbol": "M:gl$1$CfrPartitionedBody.<init>(Ldj;I)V",
-      "renamedSymbol": "M:FocusDelegatingButton$1$CfrPartitionedBody.<init>(LJs5Archive;I)V",
+      "renamedSymbol": "M:FocusDelegatingButton$1GameTextLoader.<init>(LJs5Archive;I)V",
       "originalName": "$CfrPartitionedBody",
-      "renamedName": "$CfrPartitionedBody",
+      "renamedName": "GameTextLoader",
       "declaration": {
         "file": "gl.java",
         "start": 2957,
@@ -238611,7 +238675,7 @@
     },
     {
       "symbol": "M:gl$1$CfrPartitionedBody.run()V",
-      "renamedSymbol": "M:FocusDelegatingButton$1$CfrPartitionedBody.run()V",
+      "renamedSymbol": "M:FocusDelegatingButton$1GameTextLoader.run()V",
       "originalName": "run",
       "renamedName": "run",
       "declaration": {
@@ -238622,9 +238686,9 @@
     },
     {
       "symbol": "M:gl$1$CfrPartitionedBody.runChunk0()V",
-      "renamedSymbol": "M:FocusDelegatingButton$1$CfrPartitionedBody.runChunk0()V",
+      "renamedSymbol": "M:FocusDelegatingButton$1GameTextLoader.loadAchievementAndInstructionText()V",
       "originalName": "runChunk0",
-      "renamedName": "runChunk0",
+      "renamedName": "loadAchievementAndInstructionText",
       "declaration": {
         "file": "gl.java",
         "start": 3427,
@@ -238633,9 +238697,9 @@
     },
     {
       "symbol": "M:gl$1$CfrPartitionedBody.runChunk1()V",
-      "renamedSymbol": "M:FocusDelegatingButton$1$CfrPartitionedBody.runChunk1()V",
+      "renamedSymbol": "M:FocusDelegatingButton$1GameTextLoader.loadPowerupLevelAndTutorialText()V",
       "originalName": "runChunk1",
-      "renamedName": "runChunk1",
+      "renamedName": "loadPowerupLevelAndTutorialText",
       "declaration": {
         "file": "gl.java",
         "start": 39311,
@@ -269015,7 +269079,7 @@
     },
     {
       "symbol": "P:bn$1$CfrPartitionedBody.<init>(ILdj;)V#0",
-      "renamedSymbol": "P:LongAndTextLoginPayload$1$CfrPartitionedBody.<init>(ILJs5Archive;)V#0",
+      "renamedSymbol": "P:LongAndTextLoginPayload$1ClientTextLoader.<init>(ILJs5Archive;)V#0",
       "originalName": "initialParam0",
       "renamedName": "initialParam0",
       "declaration": {
@@ -269026,7 +269090,7 @@
     },
     {
       "symbol": "P:bn$1$CfrPartitionedBody.<init>(ILdj;)V#1",
-      "renamedSymbol": "P:LongAndTextLoginPayload$1$CfrPartitionedBody.<init>(ILJs5Archive;)V#1",
+      "renamedSymbol": "P:LongAndTextLoginPayload$1ClientTextLoader.<init>(ILJs5Archive;)V#1",
       "originalName": "initialParam1",
       "renamedName": "initialParam1",
       "declaration": {
@@ -288144,7 +288208,7 @@
     },
     {
       "symbol": "P:gl$1$CfrPartitionedBody.<init>(Ldj;I)V#0",
-      "renamedSymbol": "P:FocusDelegatingButton$1$CfrPartitionedBody.<init>(LJs5Archive;I)V#0",
+      "renamedSymbol": "P:FocusDelegatingButton$1GameTextLoader.<init>(LJs5Archive;I)V#0",
       "originalName": "initialParam0",
       "renamedName": "initialParam0",
       "declaration": {
@@ -288155,7 +288219,7 @@
     },
     {
       "symbol": "P:gl$1$CfrPartitionedBody.<init>(Ldj;I)V#1",
-      "renamedSymbol": "P:FocusDelegatingButton$1$CfrPartitionedBody.<init>(LJs5Archive;I)V#1",
+      "renamedSymbol": "P:FocusDelegatingButton$1GameTextLoader.<init>(LJs5Archive;I)V#1",
       "originalName": "initialParam1",
       "renamedName": "initialParam1",
       "declaration": {
@@ -376266,7 +376330,7 @@
       "original": "bn.java",
       "renamed": "LongAndTextLoginPayload.java",
       "inputSha256": "b3fc7803a81b6e4220648348ef11af50fdec8ef3acf45a1dbe421d2a15d0c70e",
-      "outputSha256": "11fd51d0a48fe279569b6ebb4aeb672cc417f3713ceb67477d9e1505577b4ed8",
+      "outputSha256": "f717e78b0ca872ef6203541fc23f49734d13ed981129b7d2592facc3416cf677",
       "edits": [
         {
           "start": 44,
@@ -376367,6 +376431,13 @@
           "renamed": "Js5Archive"
         },
         {
+          "start": 2260,
+          "end": 2279,
+          "symbol": "C:bn$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "ClientTextLoader"
+        },
+        {
           "start": 2604,
           "end": 2606,
           "symbol": "C:dj",
@@ -376374,11 +376445,25 @@
           "renamed": "Js5Archive"
         },
         {
+          "start": 2657,
+          "end": 2676,
+          "symbol": "M:bn$1$CfrPartitionedBody.<init>(ILdj;)V",
+          "original": "$CfrPartitionedBody",
+          "renamed": "ClientTextLoader"
+        },
+        {
           "start": 2696,
           "end": 2698,
           "symbol": "C:dj",
           "original": "dj",
           "renamed": "Js5Archive"
+        },
+        {
+          "start": 3158,
+          "end": 3167,
+          "symbol": "M:bn$1$CfrPartitionedBody.runChunk0()V",
+          "original": "runChunk0",
+          "renamed": "loadLoginLobbyAndAccountText"
         },
         {
           "start": 3222,
@@ -383449,6 +383534,13 @@
           "symbol": "M:qn.a(Ljava/lang/String;I)[B",
           "original": "a",
           "renamed": "getLoadingTextFile"
+        },
+        {
+          "start": 41070,
+          "end": 41079,
+          "symbol": "M:bn$1$CfrPartitionedBody.runChunk1()V",
+          "original": "runChunk1",
+          "renamed": "loadConnectionAccountAndMenuText"
         },
         {
           "start": 41172,
@@ -390815,6 +390907,13 @@
           "renamed": "getLoadingTextFile"
         },
         {
+          "start": 78340,
+          "end": 78349,
+          "symbol": "M:bn$1$CfrPartitionedBody.runChunk2()V",
+          "original": "runChunk2",
+          "renamed": "loadGameMenuAndMembershipText"
+        },
+        {
           "start": 78442,
           "end": 78444,
           "symbol": "C:gg",
@@ -398165,6 +398264,13 @@
           "renamed": "decodeText"
         },
         {
+          "start": 115810,
+          "end": 115819,
+          "symbol": "M:bn$1$CfrPartitionedBody.runChunk3()V",
+          "original": "runChunk3",
+          "renamed": "loadSubscriptionText"
+        },
+        {
           "start": 115881,
           "end": 115883,
           "symbol": "C:qn",
@@ -398900,6 +399006,34 @@
           "renamed": "EditableTextWidget"
         },
         {
+          "start": 119686,
+          "end": 119695,
+          "symbol": "M:bn$1$CfrPartitionedBody.runChunk0()V",
+          "original": "runChunk0",
+          "renamed": "loadLoginLobbyAndAccountText"
+        },
+        {
+          "start": 119757,
+          "end": 119766,
+          "symbol": "M:bn$1$CfrPartitionedBody.runChunk1()V",
+          "original": "runChunk1",
+          "renamed": "loadConnectionAccountAndMenuText"
+        },
+        {
+          "start": 119828,
+          "end": 119837,
+          "symbol": "M:bn$1$CfrPartitionedBody.runChunk2()V",
+          "original": "runChunk2",
+          "renamed": "loadGameMenuAndMembershipText"
+        },
+        {
+          "start": 119899,
+          "end": 119908,
+          "symbol": "M:bn$1$CfrPartitionedBody.runChunk3()V",
+          "original": "runChunk3",
+          "renamed": "loadSubscriptionText"
+        },
+        {
           "start": 120531,
           "end": 120533,
           "symbol": "C:sh",
@@ -398926,6 +399060,20 @@
           "symbol": "C:ke",
           "original": "ke",
           "renamed": "GameApplet"
+        },
+        {
+          "start": 120866,
+          "end": 120885,
+          "symbol": "C:bn$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "ClientTextLoader"
+        },
+        {
+          "start": 120907,
+          "end": 120926,
+          "symbol": "C:bn$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "ClientTextLoader"
         },
         {
           "start": 120996,
@@ -457580,7 +457728,7 @@
       "original": "gl.java",
       "renamed": "FocusDelegatingButton.java",
       "inputSha256": "764c42f0263d20c74f046d652e60d497ab36d628e1f7dd3b2237830a931bcc1c",
-      "outputSha256": "2fdf518b9e21a121cf6b794b55879195718f8e4c8906399a69897c93014154ea",
+      "outputSha256": "cf497a95eefa86c5727047191df0b450a8b2f01fdec3e56df702ff31950def41",
       "edits": [
         {
           "start": 44,
@@ -457800,6 +457948,13 @@
           "renamed": "Js5Archive"
         },
         {
+          "start": 2582,
+          "end": 2601,
+          "symbol": "C:gl$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "GameTextLoader"
+        },
+        {
           "start": 2880,
           "end": 2882,
           "symbol": "C:dj",
@@ -457807,11 +457962,25 @@
           "renamed": "Js5Archive"
         },
         {
+          "start": 2957,
+          "end": 2976,
+          "symbol": "M:gl$1$CfrPartitionedBody.<init>(Ldj;I)V",
+          "original": "$CfrPartitionedBody",
+          "renamed": "GameTextLoader"
+        },
+        {
           "start": 2977,
           "end": 2979,
           "symbol": "C:dj",
           "original": "dj",
           "renamed": "Js5Archive"
+        },
+        {
+          "start": 3427,
+          "end": 3436,
+          "symbol": "M:gl$1$CfrPartitionedBody.runChunk0()V",
+          "original": "runChunk0",
+          "renamed": "loadAchievementAndInstructionText"
         },
         {
           "start": 3491,
@@ -465017,6 +465186,13 @@
           "renamed": "getLoadingTextFile"
         },
         {
+          "start": 39311,
+          "end": 39320,
+          "symbol": "M:gl$1$CfrPartitionedBody.runChunk1()V",
+          "original": "runChunk1",
+          "renamed": "loadPowerupLevelAndTutorialText"
+        },
+        {
           "start": 39413,
           "end": 39415,
           "symbol": "C:ah",
@@ -469875,6 +470051,20 @@
           "renamed": "DirectByteStorage"
         },
         {
+          "start": 63115,
+          "end": 63124,
+          "symbol": "M:gl$1$CfrPartitionedBody.runChunk0()V",
+          "original": "runChunk0",
+          "renamed": "loadAchievementAndInstructionText"
+        },
+        {
+          "start": 63186,
+          "end": 63195,
+          "symbol": "M:gl$1$CfrPartitionedBody.runChunk1()V",
+          "original": "runChunk1",
+          "renamed": "loadPowerupLevelAndTutorialText"
+        },
+        {
           "start": 63791,
           "end": 63793,
           "symbol": "C:sh",
@@ -469894,6 +470084,20 @@
           "symbol": "C:ke",
           "original": "ke",
           "renamed": "GameApplet"
+        },
+        {
+          "start": 64130,
+          "end": 64149,
+          "symbol": "C:gl$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "GameTextLoader"
+        },
+        {
+          "start": 64171,
+          "end": 64190,
+          "symbol": "C:gl$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "GameTextLoader"
         },
         {
           "start": 64249,
@@ -646500,10 +646704,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/zombiedawn"
     },
-    "rulesSha256": "78f79ff3df7553133b50174f1c40e270b5afa78ae20f7d32d1071d3c876be0f1",
+    "rulesSha256": "7e5a90b8ad1d81610d423d5df5f24297a107d465af6fd10cade43b4b0cc5436e",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "24c601f41499c4927359bf70b61eea85671ac110b52dcf8a31246a7e10338ffc",
-    "outputTreeSha256": "fa59c69694bb6fa1a1156f8fcad3c0adc06d6ecbc9f308339fba892602d62d0e",
+    "outputTreeSha256": "d59e10831e24addf51914308c028666f5878e4c7bc9e1cf06d687175aecb58c6",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
