@@ -20,11 +20,11 @@ final class CauldronComponent extends SwitchComponent {
         try {
           var10 = new Trap(param2, param0);
           var10.setSize((byte) -11, this.height, this.width);
-          var10.h(3, param1 ^ param1);
-          var10.a(1, (byte) -12, false);
+          var10.setObstructionLevel(3, param1 ^ param1);
+          var10.setCollisionLevel(1, (byte) -12, false);
           var10.setPushable(false, param1 + 112);
-          var10.b((byte) 17, false);
-          var10.a((byte) -3, 6);
+          var10.setFloating((byte) 17, false);
+          var10.setWeight((byte) -3, 6);
           var10.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new EffectSwitchBehaviour(param2, param0);
           var5.a(true, 3, (byte) -122);

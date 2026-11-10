@@ -16,12 +16,12 @@ final class PillarComponent extends PrefabComponent {
         try {
           var4 = new Trap(param2, param0);
           var4.setSize((byte) -11, this.height, this.width);
-          var4.a((byte) -3, 20);
+          var4.setWeight((byte) -3, 20);
           var5 = new SimpleBlockBehaviour(param2, param0);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
-          var4.b((byte) 17, false);
-          var4.a(1, (byte) -12, false);
-          var4.h(3, param1 - 3);
+          var4.setFloating((byte) 17, false);
+          var4.setCollisionLevel(1, (byte) -12, false);
+          var4.setObstructionLevel(3, param1 - 3);
           var6 = rm.field_a;
           var7 = (FurnitureModel) (var6.createModel(4, 108));
           var7.b(param1, (byte) 77);

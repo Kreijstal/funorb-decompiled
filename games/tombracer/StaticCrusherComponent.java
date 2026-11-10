@@ -78,10 +78,10 @@ final class StaticCrusherComponent extends PrefabComponent {
         try {
           var4 = new Trap(param2, param0);
           var4.setSize((byte) -11, this.height, this.width);
-          var4.a((byte) -3, 20);
-          var4.h(param1, param1 ^ 3);
-          var4.b((byte) 17, true);
-          var4.a(4, (byte) -12, true);
+          var4.setWeight((byte) -3, 20);
+          var4.setObstructionLevel(param1, param1 ^ 3);
+          var4.setFloating((byte) 17, true);
+          var4.setCollisionLevel(4, (byte) -12, true);
           var5 = new CrusherBehaviour(param2, param0);
           var5.setTimings(50, 8, param1 ^ 2, 25, 6);
           var5.b((byte) 72, true);

@@ -52,11 +52,11 @@ final class FacePlayerMountComponent extends PrefabComponent {
         try {
           var8 = new Trap(param2, param0);
           var8.setSize((byte) -11, this.height, this.width);
-          var8.h(param1, 0);
-          var8.a(1, (byte) -12, true);
-          var8.a((byte) -3, 6);
-          var8.b((byte) 17, false);
-          var8.g(126, 2);
+          var8.setObstructionLevel(param1, 0);
+          var8.setCollisionLevel(1, (byte) -12, true);
+          var8.setWeight((byte) -3, 6);
+          var8.setFloating((byte) 17, false);
+          var8.setPushMode(126, 2);
           var8.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new FacePlayerLocomotor(param2, param0);
           var5.a(8 * this.field_G, (byte) 127);

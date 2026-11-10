@@ -145,12 +145,12 @@ final class BrazierComponent extends PrefabComponent {
         try {
           var9 = new Trap(param2, param0);
           var9.setSize((byte) -11, this.height, this.width);
-          var9.a((byte) -3, 5);
+          var9.setWeight((byte) -3, 5);
           var5 = new SimpleBlockBehaviour(param2, param0);
           var9.addBehaviour((byte) 83, (Behaviour) (var5));
-          var9.b((byte) 17, false);
-          var9.a(1, (byte) -12, false);
-          var9.h(3, param1 - 3);
+          var9.setFloating((byte) 17, false);
+          var9.setCollisionLevel(1, (byte) -12, false);
+          var9.setObstructionLevel(3, param1 - 3);
           var6 = rm.field_a;
           var7 = (FurnitureModel) (var6.createModel(4, 91));
           var7.b(0, (byte) 77);

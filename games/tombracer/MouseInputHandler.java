@@ -25,11 +25,11 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
     }
 
-    final static int a(byte param0, int param1) {
+    final static int sin2048(byte param0, int param1) {
         if (param0 < 89) {
           return -22;
         }
-        return uoa.field_a[param1 & 2047];
+        return TriangleRasterizer.sinTable[param1 & 2047];
     }
 
     public final synchronized void mouseDragged(java.awt.event.MouseEvent param0) {

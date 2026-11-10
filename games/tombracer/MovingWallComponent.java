@@ -20,11 +20,11 @@ final class MovingWallComponent extends PathMoverComponent {
         try {
           var9 = new Trap(param2, param0);
           var9.setSize((byte) -11, this.height, this.width);
-          var9.h(param1, 0);
-          var9.a(1, (byte) -12, true);
-          var9.g(param1 ^ 109, 2);
-          var9.a((byte) -3, 20);
-          var9.b((byte) 17, true);
+          var9.setObstructionLevel(param1, 0);
+          var9.setCollisionLevel(1, (byte) -12, true);
+          var9.setPushMode(param1 ^ 109, 2);
+          var9.setWeight((byte) -3, 20);
+          var9.setFloating((byte) 17, true);
           var5 = new SimpleBlockBehaviour(param2, param0);
           var9.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = this.createPathMove((byte) 124, param2, param0);

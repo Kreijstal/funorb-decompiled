@@ -98,7 +98,7 @@ final class RandomMazeBehaviour extends Behaviour {
         try {
           super.attachToTrap(param0, param1);
           if (this.getRoom(true).formatVersion < 4) {
-            param1.h(4, 0);
+            param1.setObstructionLevel(4, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -461,7 +461,7 @@ final class RandomMazeBehaviour extends Behaviour {
         try {
           this.field_r = new Trap(param0, false);
           wd.a((byte) -98, 1, true, param0, this.field_r, false);
-          this.field_r.b(false, 11468);
+          this.field_r.setAttachedToParent(false, 11468);
           this.field_A = new Trap(param0, false);
           this.field_o = new Trap(param0, false);
           this.d(true);
@@ -555,7 +555,7 @@ final class RandomMazeBehaviour extends Behaviour {
           param4.beginBitAccess((byte) 123);
           var8 = new Trap(var7, param4, true);
           param4.endBitAccess((byte) 98);
-          var8.d((byte) -97, true);
+          var8.setIndependent((byte) -97, true);
           var8.setLocalX(1, param5 + this.field_t * param0);
           var8.setLocalY(param1 + this.field_t * param2, -19879);
           this.trap.addChild(-97, var8);

@@ -64,7 +64,7 @@ final class PlatformBehaviour extends Behaviour {
           param1.b((byte) 91, 3);
           param1.a(true, (byte) -119, 1);
           param1.a((byte) -112, true, 2);
-          param1.b((byte) 17, param0);
+          param1.setFloating((byte) 17, param0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "lpa.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -223,7 +223,7 @@ final class PlatformBehaviour extends Behaviour {
           if (this.field_u != -1) {
             return;
           }
-          this.field_t = this.field_t + param2.b(-89);
+          this.field_t = this.field_t + param2.getWeight(-89);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

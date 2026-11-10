@@ -125,8 +125,8 @@ final class ft {
           var9 = param3[5] * var23Lifetime1 + (param3[3] * var21Lifetime1 + param3[4] * var22Lifetime1) >> -SecondaryNodeDeque.field_a + 16;
           var10 = param3[8] * var23Lifetime1 + (param3[6] * var21Lifetime1 + param3[7] * var22Lifetime1) >> 16 - SecondaryNodeDeque.field_a;
           var11 = param3[10] * var22Lifetime1 + var21Lifetime1 * param3[9] + var23Lifetime1 * param3[11] >> 16;
-          var21Lifetime2 = uoa.field_f;
-          var22Lifetime2 = uoa.field_g;
+          var21Lifetime2 = TriangleRasterizer.centerX;
+          var22Lifetime2 = TriangleRasterizer.centerY;
           var23Lifetime2 = 0;
           scanLoop1: while (true) {
             if (param0.field_I > var23Lifetime2) {

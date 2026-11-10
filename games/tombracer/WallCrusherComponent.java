@@ -53,11 +53,11 @@ final class WallCrusherComponent extends PrefabComponent {
         try {
           var14 = new Trap(param2, param0);
           var14.setSize((byte) -11, this.height, this.width);
-          var14.h(3, 0);
-          var14.a(1, (byte) -12, true);
-          var14.g(param1 + 122, 2);
-          var14.a((byte) -3, 20);
-          var14.b((byte) 17, true);
+          var14.setObstructionLevel(3, 0);
+          var14.setCollisionLevel(1, (byte) -12, true);
+          var14.setPushMode(param1 + 122, 2);
+          var14.setWeight((byte) -3, 20);
+          var14.setFloating((byte) 17, true);
           var5 = new SimpleBlockBehaviour(param2, param0);
           var14.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = new SimpleMoveLocomotor(param2, param0);

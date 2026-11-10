@@ -67,7 +67,7 @@ final class DamageableBehaviour extends Behaviour {
               this.destroyTarget((byte) 121);
             } else {
               if (this.field_v > 0 &&
-                !this.getTargetTrap(-106).m((byte) -99)) {
+                !this.getTargetTrap(-106).isFrozen((byte) -99)) {
                 this.field_v = this.field_v - param1.size;
                 if (0 >= this.field_v) {
                   this.d(true);

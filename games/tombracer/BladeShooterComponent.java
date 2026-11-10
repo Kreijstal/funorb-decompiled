@@ -60,7 +60,7 @@ final class BladeShooterComponent extends ShooterComponent {
         try {
           var9 = new Trap(param2, param0);
           var9.setSize((byte) -11, this.height, this.width);
-          var9.h(3, param1 ^ param1);
+          var9.setObstructionLevel(3, param1 ^ param1);
           var9.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new WeaponShooterBehaviour(param2, param0);
           var6 = TextureOperator.a(1, -1);

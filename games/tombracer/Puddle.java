@@ -128,7 +128,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
         }
     }
 
-    public final int b(int param0) {
+    public final int getWeight(int param0) {
         int var2 = -50 % ((param0 - 1) / 45);
         if (this.kind != 1) {
           return 0;
@@ -543,7 +543,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
     public final void render(int param0, iq param1) {
         try {
           if (param0 <= 103) {
-            this.b(-91);
+            this.getWeight(-91);
           }
           dea.field_a.a(this, 95, param1);
         } catch (RuntimeException runtimeException) {
@@ -652,7 +652,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
         this.field_m = 0;
     }
 
-    public final boolean a(int param0) {
+    public final boolean restsOnFloor(int param0) {
         int var2 = 7 % ((param0 - 6) / 46);
         return 1 == this.kind ? true : false;
     }
@@ -755,7 +755,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
         return;
     }
 
-    public final boolean a(WorldBody param0, int param1) {
+    public final boolean canBeCrushedBy(WorldBody param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -782,7 +782,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
         }
     }
 
-    public final boolean a(int param0, WorldBody param1) {
+    public final boolean crush(int param0, WorldBody param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;

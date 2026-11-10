@@ -84,8 +84,8 @@ final class FleeLocomotor extends Locomotor {
               } else {
                 var8 = GameScreen.positiveModulo(qva.a((byte) -13, -var5, -var4) + this.field_p, 8192, 78);
               }
-              var9 = MouseInputHandler.a((byte) 95, var8 >> 2);
-              var10 = bua.a(0, var8 >> 2);
+              var9 = MouseInputHandler.sin2048((byte) 95, var8 >> 2);
+              var10 = bua.cos2048(0, var8 >> 2);
               var11 = doa.a(2, this.field_A, var9);
               var12 = doa.a(2, this.field_A, var10);
               this.trap.a((byte) -110, var11, var12);
@@ -101,8 +101,8 @@ final class FleeLocomotor extends Locomotor {
           } else {
             var8Lifetime4 = GameScreen.positiveModulo(qva.a((byte) -13, -var5, -var4) + this.field_p, 8192, 78);
           }
-          var9Lifetime4 = MouseInputHandler.a((byte) 95, var8Lifetime4 >> 2);
-          var10Lifetime4 = bua.a(0, var8Lifetime4 >> 2);
+          var9Lifetime4 = MouseInputHandler.sin2048((byte) 95, var8Lifetime4 >> 2);
+          var10Lifetime4 = bua.cos2048(0, var8Lifetime4 >> 2);
           var11Lifetime4 = doa.a(2, this.field_A, var9Lifetime4);
           var12Lifetime4 = doa.a(2, this.field_A, var10Lifetime4);
           this.trap.a((byte) -110, var11Lifetime4, var12Lifetime4);
@@ -137,8 +137,8 @@ final class FleeLocomotor extends Locomotor {
                 } else {
                   var8Lifetime1 = GameScreen.positiveModulo(qva.a((byte) -13, -var5, -var4) + this.field_p, 8192, 78);
                 }
-                var9Lifetime1 = MouseInputHandler.a((byte) 95, var8Lifetime1 >> 2);
-                var10Lifetime1 = bua.a(0, var8Lifetime1 >> 2);
+                var9Lifetime1 = MouseInputHandler.sin2048((byte) 95, var8Lifetime1 >> 2);
+                var10Lifetime1 = bua.cos2048(0, var8Lifetime1 >> 2);
                 var11Lifetime1 = doa.a(2, this.field_A, var9Lifetime1);
                 var12Lifetime1 = doa.a(2, this.field_A, var10Lifetime1);
                 this.trap.a((byte) -110, var11Lifetime1, var12Lifetime1);
@@ -170,8 +170,8 @@ final class FleeLocomotor extends Locomotor {
             } else {
               var8Lifetime2 = GameScreen.positiveModulo(qva.a((byte) -13, -var5, -var4) + this.field_p, 8192, 78);
             }
-            var9Lifetime2 = MouseInputHandler.a((byte) 95, var8Lifetime2 >> 2);
-            var10Lifetime2 = bua.a(0, var8Lifetime2 >> 2);
+            var9Lifetime2 = MouseInputHandler.sin2048((byte) 95, var8Lifetime2 >> 2);
+            var10Lifetime2 = bua.cos2048(0, var8Lifetime2 >> 2);
             var11Lifetime2 = doa.a(2, this.field_A, var9Lifetime2);
             var12Lifetime2 = doa.a(2, this.field_A, var10Lifetime2);
             this.trap.a((byte) -110, var11Lifetime2, var12Lifetime2);
@@ -187,8 +187,8 @@ final class FleeLocomotor extends Locomotor {
         } else {
           var8Lifetime3 = GameScreen.positiveModulo(qva.a((byte) -13, -var5, -var4) + this.field_p, 8192, 78);
         }
-        var9Lifetime3 = MouseInputHandler.a((byte) 95, var8Lifetime3 >> 2);
-        var10Lifetime3 = bua.a(0, var8Lifetime3 >> 2);
+        var9Lifetime3 = MouseInputHandler.sin2048((byte) 95, var8Lifetime3 >> 2);
+        var10Lifetime3 = bua.cos2048(0, var8Lifetime3 >> 2);
         var11Lifetime3 = doa.a(2, this.field_A, var9Lifetime3);
         var12Lifetime3 = doa.a(2, this.field_A, var10Lifetime3);
         this.trap.a((byte) -110, var11Lifetime3, var12Lifetime3);

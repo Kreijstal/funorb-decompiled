@@ -153,22 +153,22 @@ final class MirrorComponent extends PrefabComponent {
           var11 = new Trap(param2, param0);
           var4 = var11;
           var11.setSize((byte) -11, this.height, this.width);
-          var11.a((byte) -3, 4);
-          var11.h(param1, param1 - 3);
+          var11.setWeight((byte) -3, 4);
+          var11.setObstructionLevel(param1, param1 - 3);
           if (this.typeId != 19) {
             var11.setPushable(false, 120);
           } else {
             var11.setPushable(true, 117);
           }
-          var11.g(104, 1);
-          var11.b((byte) 17, false);
-          var11.a(1, (byte) -12, true);
+          var11.setPushMode(104, 1);
+          var11.setFloating((byte) 17, false);
+          var11.setCollisionLevel(1, (byte) -12, true);
           var5 = new SimpleBlockBehaviour(param2, param0);
           var5.a(-28592, true);
           var11.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = new Trap(param2, param0);
           var6.setSize((byte) -11, this.height, this.width);
-          var6.a((byte) -3, 0);
+          var6.setWeight((byte) -3, 0);
           var7 = new MirrorBehaviour(param2, param0);
           var6.addBehaviour((byte) 83, (Behaviour) (var7));
           var11.addChild(-98, var6);

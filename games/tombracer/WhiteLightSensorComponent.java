@@ -73,11 +73,11 @@ final class WhiteLightSensorComponent extends SwitchComponent {
         try {
           var10 = new Trap(param2, param0);
           var10.setSize((byte) -11, this.height, this.width);
-          var10.h(param1, param1 ^ 3);
-          var10.a(1, (byte) -12, false);
+          var10.setObstructionLevel(param1, param1 ^ 3);
+          var10.setCollisionLevel(1, (byte) -12, false);
           var10.setPushable(false, 124);
-          var10.b((byte) 17, false);
-          var10.a((byte) -3, 6);
+          var10.setFloating((byte) 17, false);
+          var10.setWeight((byte) -3, 6);
           var10.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new EffectSwitchBehaviour(param2, param0);
           var5.a(true, 2, (byte) -122);

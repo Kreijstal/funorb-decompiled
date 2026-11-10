@@ -33,15 +33,15 @@ final class vb extends IntrusiveNode {
         var19 = TombRacer.field_G ? 1 : 0;
         try {
           if (param7 >= 0 &&
-            uoa.field_b > param3) {
+            TriangleRasterizer.viewportHeight > param3) {
             if (0 > param5 &&
               param1 < 0 &&
               param4 < 0) {
               return;
             }
-            if (uoa.field_e <= param5 &&
-              uoa.field_e <= param1 &&
-              param4 >= uoa.field_e) {
+            if (TriangleRasterizer.viewportWidth <= param5 &&
+              TriangleRasterizer.viewportWidth <= param1 &&
+              param4 >= TriangleRasterizer.viewportWidth) {
               return;
             }
             if (param0 != -922437200) {
@@ -79,19 +79,19 @@ final class vb extends IntrusiveNode {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var16Lifetime2 = uoa.field_d[param3];
+                var16Lifetime2 = TriangleRasterizer.rowOffsets[param3];
                 while (param6 > param3) {
                   var17 = var9_int >> 16;
-                  if (uoa.field_e > var17) {
+                  if (TriangleRasterizer.viewportWidth > var17) {
                     var18 = -(var9_int >> 16) + (var10 >> 16);
                     if (0 == var18) {
                       if (var17 >= 0 &&
-                        var17 < uoa.field_e) {
+                        var17 < TriangleRasterizer.viewportWidth) {
                         TimeSwitchBehaviour.a(var16Lifetime2 + var17, var18, param2, 1535993377, param8);
                       }
                     } else {
-                      if (uoa.field_e <= var17 + var18) {
-                        var18 = -var17 + (uoa.field_e - 1);
+                      if (TriangleRasterizer.viewportWidth <= var17 + var18) {
+                        var18 = -var17 + (TriangleRasterizer.viewportWidth - 1);
                       }
                       if (var17 >= 0) {
                         TimeSwitchBehaviour.a(var16Lifetime2 + var17, var18, param2, 1535993377, param8);
@@ -101,7 +101,7 @@ final class vb extends IntrusiveNode {
                     }
                   }
                   param3++;
-                  if (param3 >= uoa.field_b) {
+                  if (param3 >= TriangleRasterizer.viewportHeight) {
                     return;
                   }
                   var9_int = var9_int + var11;
@@ -157,19 +157,19 @@ final class vb extends IntrusiveNode {
               var10 = var10 + param3 * var12;
               param3 = 0;
             }
-            var15Lifetime1 = uoa.field_d[param3];
+            var15Lifetime1 = TriangleRasterizer.rowOffsets[param3];
             while (param7 > param3) {
               var16Lifetime1 = var9_int >> 16;
-              if (uoa.field_e > var16Lifetime1) {
+              if (TriangleRasterizer.viewportWidth > var16Lifetime1) {
                 var17Lifetime1 = (var10 >> 16) - (var9_int >> 16);
                 if (var17Lifetime1 == 0) {
                   if (var16Lifetime1 >= 0 &&
-                    var16Lifetime1 < uoa.field_e) {
+                    var16Lifetime1 < TriangleRasterizer.viewportWidth) {
                     TimeSwitchBehaviour.a(var15Lifetime1 + var16Lifetime1, var17Lifetime1, param2, 1535993377, param8);
                   }
                 } else {
-                  if (uoa.field_e <= var16Lifetime1 + var17Lifetime1) {
-                    var17Lifetime1 = -1 + (-var16Lifetime1 + uoa.field_e);
+                  if (TriangleRasterizer.viewportWidth <= var16Lifetime1 + var17Lifetime1) {
+                    var17Lifetime1 = -1 + (-var16Lifetime1 + TriangleRasterizer.viewportWidth);
                   }
                   if (var16Lifetime1 < 0) {
                     TimeSwitchBehaviour.a(var15Lifetime1, var17Lifetime1 + var16Lifetime1, param2, 1535993377, param8);
@@ -179,7 +179,7 @@ final class vb extends IntrusiveNode {
                 }
               }
               param3++;
-              if (uoa.field_b <= param3) {
+              if (TriangleRasterizer.viewportHeight <= param3) {
                 return;
               }
               var10 = var10 + var12;

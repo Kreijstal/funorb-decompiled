@@ -50,8 +50,8 @@ final class PlantComponent extends PrefabComponent {
         try {
           var9 = new Trap(param2, param0);
           var9.setSize((byte) -11, this.height, this.width);
-          var9.a((byte) -3, 0);
-          var9.b((byte) 17, true);
+          var9.setWeight((byte) -3, 0);
+          var9.setFloating((byte) 17, true);
           var5 = rm.field_a;
           var7_int = this.getTypeId(12);
           switch (var7_int) {

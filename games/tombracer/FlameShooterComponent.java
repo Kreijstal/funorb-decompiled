@@ -141,7 +141,7 @@ final class FlameShooterComponent extends ShooterComponent {
         try {
           var9 = new Trap(param2, param0);
           var9.setSize((byte) -11, this.height, this.width);
-          var9.h(param1, 0);
+          var9.setObstructionLevel(param1, 0);
           var9.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new WeaponShooterBehaviour(param2, param0);
           var6 = TextureOperator.a(2, param1 ^ -4);

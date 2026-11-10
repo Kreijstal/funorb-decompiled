@@ -61,9 +61,9 @@ final class VortexBehaviour extends Behaviour {
         var10 = var5 >> 17;
         var11 = MidiVoiceMixer.min(var10, var9, -1);
         var12 = this.getRandom((byte) 46).nextBounded(8192, 0);
-        var13 = MouseInputHandler.a((byte) 98, var12 >> 2);
-        var14 = bua.a(0, var12 >> 2);
-        var16 = this.trap.P(0);
+        var13 = MouseInputHandler.sin2048((byte) 98, var12 >> 2);
+        var14 = bua.cos2048(0, var12 >> 2);
+        var16 = this.trap.getTopElevation(0);
         if (this.field_q) {
           var17_int = 1 + this.getRandom((byte) 46).nextBounded(5, 0);
           var28 = this.getRoom(true).spawnParticle(var13 * var11 / var17_int + var2, var3 + var11 * var14 / var17_int, (byte) 100, var16);

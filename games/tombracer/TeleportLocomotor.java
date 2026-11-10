@@ -52,7 +52,7 @@ final class TeleportLocomotor extends Locomotor {
           }
           this.trap.a((byte) 54, this.field_t);
           var5 = this.trap.getRoot(0);
-          if (this.trap.getRoom((byte) -70).a(this.trap, this.trap.getHeight((byte) 55), 2, this.trap.g(true), this.field_t.y, this.field_t.x, false, var5, this.trap.getWidth(-110))) {
+          if (this.trap.getRoom((byte) -70).a(this.trap, this.trap.getHeight((byte) 55), 2, this.trap.getCollisionLevel(true), this.field_t.y, this.field_t.x, false, var5, this.trap.getWidth(-110))) {
             return;
           }
           this.getRoom(true).collisionGrid.remove((Collidable) (this.trap), (byte) 98);
@@ -84,7 +84,7 @@ final class TeleportLocomotor extends Locomotor {
           }
           this.trap.a((byte) 54, this.field_t);
           var5Lifetime1 = this.trap.getRoot(0);
-          if (this.trap.getRoom((byte) -70).a(this.trap, this.trap.getHeight((byte) 55), 2, this.trap.g(true), this.field_t.y, this.field_t.x, false, var5Lifetime1, this.trap.getWidth(-110))) {
+          if (this.trap.getRoom((byte) -70).a(this.trap, this.trap.getHeight((byte) 55), 2, this.trap.getCollisionLevel(true), this.field_t.y, this.field_t.x, false, var5Lifetime1, this.trap.getWidth(-110))) {
             return;
           }
           this.getRoom(true).collisionGrid.remove((Collidable) (this.trap), (byte) 98);
@@ -110,7 +110,7 @@ final class TeleportLocomotor extends Locomotor {
           this.field_r = this.field_r + 1;
           this.trap.a((byte) 54, this.field_t);
           var5Lifetime2 = this.trap.getRoot(0);
-          if (this.trap.getRoom((byte) -70).a(this.trap, this.trap.getHeight((byte) 55), 2, this.trap.g(true), this.field_t.y, this.field_t.x, false, var5Lifetime2, this.trap.getWidth(-110))) {
+          if (this.trap.getRoom((byte) -70).a(this.trap, this.trap.getHeight((byte) 55), 2, this.trap.getCollisionLevel(true), this.field_t.y, this.field_t.x, false, var5Lifetime2, this.trap.getWidth(-110))) {
             return;
           }
           this.getRoom(true).collisionGrid.remove((Collidable) (this.trap), (byte) 98);
@@ -126,7 +126,7 @@ final class TeleportLocomotor extends Locomotor {
         if (var13.length <= 0) {
           this.trap.a((byte) 54, this.field_t);
           var5Lifetime3 = this.trap.getRoot(0);
-          if (this.trap.getRoom((byte) -70).a(this.trap, this.trap.getHeight((byte) 55), 2, this.trap.g(true), this.field_t.y, this.field_t.x, false, var5Lifetime3, this.trap.getWidth(-110))) {
+          if (this.trap.getRoom((byte) -70).a(this.trap, this.trap.getHeight((byte) 55), 2, this.trap.getCollisionLevel(true), this.field_t.y, this.field_t.x, false, var5Lifetime3, this.trap.getWidth(-110))) {
             return;
           }
           this.getRoom(true).collisionGrid.remove((Collidable) (this.trap), (byte) 98);
@@ -142,7 +142,7 @@ final class TeleportLocomotor extends Locomotor {
         this.field_r = this.getRoom(true).getRandom(73).nextBounded(var13.length, 0);
         this.trap.a((byte) 54, this.field_t);
         var5Lifetime4 = this.trap.getRoot(0);
-        if (this.trap.getRoom((byte) -70).a(this.trap, this.trap.getHeight((byte) 55), 2, this.trap.g(true), this.field_t.y, this.field_t.x, false, var5Lifetime4, this.trap.getWidth(-110))) {
+        if (this.trap.getRoom((byte) -70).a(this.trap, this.trap.getHeight((byte) 55), 2, this.trap.getCollisionLevel(true), this.field_t.y, this.field_t.x, false, var5Lifetime4, this.trap.getWidth(-110))) {
           return;
         }
         this.getRoom(true).collisionGrid.remove((Collidable) (this.trap), (byte) 98);

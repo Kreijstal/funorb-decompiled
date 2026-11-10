@@ -29,7 +29,7 @@ final class mf {
         int var1_intLifetime1;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          uoa.b();
+          TriangleRasterizer.useRasterClip();
           SecondaryNodeDeque.field_a = 11;
           gta.field_g = new int[260];
           for (var1_int = 0; var1_int < 256; var1_int++) {

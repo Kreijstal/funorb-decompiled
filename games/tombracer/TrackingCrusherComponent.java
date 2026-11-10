@@ -90,10 +90,10 @@ final class TrackingCrusherComponent extends PrefabComponent {
         try {
           var9 = new Trap(param2, param0);
           var9.setSize((byte) -11, this.height, this.width);
-          var9.a((byte) -3, 20);
-          var9.h(param1, 0);
-          var9.b((byte) 17, true);
-          var9.a(4, (byte) -12, true);
+          var9.setWeight((byte) -3, 20);
+          var9.setObstructionLevel(param1, 0);
+          var9.setFloating((byte) 17, true);
+          var9.setCollisionLevel(4, (byte) -12, true);
           var5 = new ApproachPlayerLocomotor(param2, param0);
           var5.c(66, 0);
           var5.a(false, 262144);

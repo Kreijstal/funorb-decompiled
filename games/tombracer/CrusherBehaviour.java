@@ -44,13 +44,13 @@ final class CrusherBehaviour extends Behaviour {
         try {
           super.attachToTrap(param0, param1);
           if (4 > this.getRoom(true).formatVersion) {
-            param1.h(3, 0);
+            param1.setObstructionLevel(3, 0);
           }
           param1.b((byte) -62, 8);
           if (0 == this.field_q) {
-            param1.b((byte) 17, true);
-            this.field_q = param1.b(73);
-            param1.a((byte) -3, 0);
+            param1.setFloating((byte) 17, true);
+            this.field_q = param1.getWeight(73);
+            param1.setWeight((byte) -3, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -254,7 +254,7 @@ final class CrusherBehaviour extends Behaviour {
           if (var3 == 0) {
             this.setPhase(0, 0);
             if (this.field_u) {
-              this.trap.L(-31);
+              this.trap.enableLocomotors(-31);
               if (param0 != 5418) {
                 this.waitTicks = -69;
               }
@@ -263,13 +263,13 @@ final class CrusherBehaviour extends Behaviour {
           } else {
             this.phase = 1;
             if (this.field_u) {
-              this.trap.G(121);
+              this.trap.disableLocomotors(121);
             }
             this.phaseTicks = this.phaseTicks + 1;
             if (this.waitTicks < this.phaseTicks) {
               this.setPhase(param0 ^ 5418, 2);
               if (!this.field_u) {
-                this.trap.G(121);
+                this.trap.disableLocomotors(121);
                 if (param0 != 5418) {
                   this.waitTicks = -69;
                 }
@@ -285,8 +285,8 @@ final class CrusherBehaviour extends Behaviour {
                 var6 = this.getRoom(true);
                 var6.a(123, var5, this.crushEffect, this.trap.getHeight((byte) 55), this.trap.getWidth(-79), var4);
                 this.setPhase(0, 3);
-                this.trap.a((byte) -3, this.field_q);
-                this.trap.b((byte) 17, false);
+                this.trap.setWeight((byte) -3, this.field_q);
+                this.trap.setFloating((byte) 17, false);
                 if (param0 == 5418) {
                   return;
                 }
@@ -299,15 +299,15 @@ final class CrusherBehaviour extends Behaviour {
                   this.phaseTicks = this.phaseTicks + 1;
                   if (this.phaseTicks > this.retractTicks) {
                     this.setPhase(param0 - 5418, 1);
-                    this.trap.L(127);
+                    this.trap.enableLocomotors(127);
                   }
                 }
               } else {
                 this.phaseTicks = this.phaseTicks + 1;
                 if (this.crushedTicks < this.phaseTicks) {
                   this.setPhase(param0 - 5418, 4);
-                  this.trap.a((byte) -3, 0);
-                  this.trap.b((byte) 17, true);
+                  this.trap.setWeight((byte) -3, 0);
+                  this.trap.setFloating((byte) 17, true);
                 }
               }
             }
@@ -315,19 +315,19 @@ final class CrusherBehaviour extends Behaviour {
             if (var3 != 0) {
               this.phase = 1;
               if (this.field_u) {
-                this.trap.G(121);
+                this.trap.disableLocomotors(121);
               }
               this.phaseTicks = this.phaseTicks + 1;
               if (this.waitTicks < this.phaseTicks) {
                 this.setPhase(param0 ^ 5418, 2);
                 if (!this.field_u) {
-                  this.trap.G(121);
+                  this.trap.disableLocomotors(121);
                 }
               }
             } else {
               this.setPhase(0, 0);
               if (this.field_u) {
-                this.trap.L(-31);
+                this.trap.enableLocomotors(-31);
               }
             }
           }

@@ -6,8 +6,8 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
     private SwitchState field_n;
     static int field_r;
     private boolean field_q;
-    private int field_o;
-    private int field_t;
+    private int requiredWeight;
+    private int loadWeight;
     static String[] field_s;
 
     public static void l(int param0) {
@@ -22,7 +22,7 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
         if (param1 >= -48) {
           this.getDimColour(56);
         }
-        param0 = CurveOperator.mixHash((byte) 122, param0, this.field_t);
+        param0 = CurveOperator.mixHash((byte) 122, param0, this.loadWeight);
         return this.field_n.hashState(105, param0);
     }
 
@@ -42,16 +42,16 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
         var4 = var3.a((byte) -26, this.trap);
         for (var5 = 0; var5 < var4.length; var5++) {
           if (this.a(var4[var5], (byte) -103)) {
-            var2 = var2 + var4[var5].b(75);
+            var2 = var2 + var4[var5].getWeight(75);
           }
         }
-        this.field_t = var2;
+        this.loadWeight = var2;
         var5Lifetime1 = 0;
         if (param0 != 5418) {
           return;
         }
         if (0 < var2 &&
-          this.field_o <= var2) {
+          this.requiredWeight <= var2) {
           var5Lifetime1 = 1;
         }
         this.field_n.a((byte) -14, var5Lifetime1 != 0);
@@ -67,7 +67,7 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
     final void encode(boolean param0, BitPacketBuffer param1) {
         try {
           super.encode(param0, param1);
-          param1.writeBits((byte) -127, this.field_o, 8);
+          param1.writeBits((byte) -127, this.requiredWeight, 8);
           param1.writeBits((byte) -128, !this.field_q ? 0 : 1, 1);
           this.field_n.a(this.getScope((byte) 117), (byte) 117, param1);
         } catch (RuntimeException runtimeException) {
@@ -78,9 +78,9 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
     PressureSwitchBehaviour(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
-          this.field_o = param1.readBits((byte) 44, 8);
+          this.requiredWeight = param1.readBits((byte) 44, 8);
           if (param0.formatVersion <= 10) {
-            this.field_o = this.field_o / 5;
+            this.requiredWeight = this.requiredWeight / 5;
           }
           if (9 <= param0.formatVersion) {
             this.field_q = 1 != param1.readBits((byte) 44, 1) ? false : true;
@@ -93,13 +93,13 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
 
     public final int getMaxLevel(int param0) {
         int var2 = 33 % ((param0 + 46) / 45);
-        return this.field_o;
+        return this.requiredWeight;
     }
 
     PressureSwitchBehaviour(Room param0, boolean param1) {
         super(param0, param1);
         try {
-          this.field_o = 50;
+          this.requiredWeight = 50;
           this.field_n = new SwitchState(15);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "dja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -128,7 +128,7 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
     }
 
     final void a(int param0, boolean param1) {
-        this.field_o = param0;
+        this.requiredWeight = param0;
         if (!param1) {
           PressureSwitchBehaviour.l(56);
         }
@@ -141,7 +141,7 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param0.a(124)) {
+          if (!param0.restsOnFloor(124)) {
             return false;
           }
           if (param1 > -73) {
@@ -183,7 +183,7 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
         if (param0 != -108) {
           this.field_q = true;
         }
-        return this.field_t;
+        return this.loadWeight;
     }
 
     final static boolean a(byte param0, char param1) {

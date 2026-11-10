@@ -38,8 +38,8 @@ final class SimpleActionBehaviour extends Behaviour {
           if (var3 == 1) {
             stackIn_6_0 = this.trap;
             stackIn_6_1 = 17;
-            stackIn_7_2 = (this.trap.z((byte) 90)) ? false : true;
-            ((Trap) (Object) stackIn_6_0).b((byte) stackIn_6_1, stackIn_7_2);
+            stackIn_7_2 = (this.trap.isFloating((byte) 90)) ? false : true;
+            ((Trap) (Object) stackIn_6_0).setFloating((byte) stackIn_6_1, stackIn_7_2);
           }
         }
     }

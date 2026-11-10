@@ -69,10 +69,10 @@ final class MovingSawComponent extends PathMoverComponent {
         try {
           var12 = new Trap(param2, param0);
           var12.setSize((byte) -11, this.height, this.width);
-          var12.h(0, param1 ^ param1);
-          var12.a(4, (byte) -12, true);
-          var12.a((byte) -3, 0);
-          var12.b((byte) 17, true);
+          var12.setObstructionLevel(0, param1 ^ param1);
+          var12.setCollisionLevel(4, (byte) -12, true);
+          var12.setWeight((byte) -3, 0);
+          var12.setFloating((byte) 17, true);
           var5 = this.createPathMove((byte) 125, param2, param0);
           var12.addLocomotor(var5, 0);
           var6 = new ConstantEffectBehaviour(param2, param0);
@@ -83,10 +83,10 @@ final class MovingSawComponent extends PathMoverComponent {
           var12.addBehaviour((byte) 83, (Behaviour) (var6));
           var8 = new Trap(param2, param0);
           var8.setSize((byte) -11, 1048576, 1048576);
-          var8.h(3, param1 ^ 3);
-          var8.a(3, (byte) -12, true);
-          var8.a((byte) -3, 0);
-          var8.b((byte) 17, true);
+          var8.setObstructionLevel(3, param1 ^ 3);
+          var8.setCollisionLevel(3, (byte) -12, true);
+          var8.setWeight((byte) -3, 0);
+          var8.setFloating((byte) 17, true);
           var9 = new SimpleBlockBehaviour(param2, param0);
           var8.addBehaviour((byte) 83, (Behaviour) (var9));
           var12.addChild(-128, var8);

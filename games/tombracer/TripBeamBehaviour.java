@@ -149,9 +149,9 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
           }
         }
         this.field_x = this.trap.getFacingAngle(-25787) >> 2;
-        this.field_E = MouseInputHandler.a((byte) 102, this.field_x);
-        this.field_o = bua.a(0, this.field_x);
-        var6 = this.trap.P(0) << 16;
+        this.field_E = MouseInputHandler.sin2048((byte) 102, this.field_x);
+        this.field_o = bua.cos2048(0, this.field_x);
+        var6 = this.trap.getTopElevation(0) << 16;
         if (!this.field_D) {
           this.q((byte) 92);
           stackIn_28_0 = var11;
@@ -442,7 +442,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
     final void attachToTrap(boolean param0, Trap param1) {
         try {
           super.attachToTrap(param0, param1);
-          this.field_p = new mma(0, 16777215, this.field_u, param1.P(0));
+          this.field_p = new mma(0, 16777215, this.field_u, param1.getTopElevation(0));
           if (!param0) {
             this.field_u = (BeamSegment) null;
           }
@@ -469,7 +469,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
         int var3 = this.trap.getY(param0 + 9556) + gqa.a(this.field_o, (byte) 24, this.trap.getWidth(-64) / 2);
         this.field_u.a(var2, var2 + gqa.a(this.field_E, (byte) 24, this.field_s), var3, gqa.a(this.field_o, (byte) 24, this.field_s) + var3, 44);
         this.field_u.field_b = this.field_s;
-        this.field_u.field_i = this.trap.P(param0 ^ 92) << 16;
+        this.field_u.field_i = this.trap.getTopElevation(param0 ^ 92) << 16;
         if (param0 == 92) {
           return;
         }

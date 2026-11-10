@@ -80,7 +80,7 @@ final class DarknessBehaviour extends Behaviour {
           super.attachToTrap(param0, param1);
           this.b(0);
           param1.a(26492, true, 1);
-          param1.a(param0, 35);
+          param1.setAlwaysBlocksBeams(param0, 35);
           param1.b((byte) 112, 8);
           param1.a(true, (byte) 109, 2);
         } catch (RuntimeException runtimeException) {

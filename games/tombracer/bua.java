@@ -148,11 +148,11 @@ final class bua {
         return this.field_k == null ? false : this.field_k.field_o;
     }
 
-    final static int a(int param0, int param1) {
+    final static int cos2048(int param0, int param1) {
         if (param0 != 0) {
           return 9;
         }
-        return uoa.field_c[2047 & param1];
+        return TriangleRasterizer.cosTable[2047 & param1];
     }
 
     final int b(int param0) {
@@ -224,7 +224,7 @@ final class bua {
     public static void a(byte param0) {
         field_c = null;
         if (param0 <= 55) {
-          bua.a(56, 48);
+          bua.cos2048(56, 48);
           field_g = null;
           return;
         }

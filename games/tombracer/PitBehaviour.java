@@ -133,7 +133,7 @@ final class PitBehaviour extends Behaviour {
           if (param1 <= 18) {
             return;
           }
-          var13Lifetime1 = param2.b(-124);
+          var13Lifetime1 = param2.getWeight(-124);
           for (var15 = var9Lifetime1; var11Lifetime1 >= var15; var15++) {
             for (var16 = var10Lifetime1; var16 <= var12Lifetime1; var16++) {
               if (this.field_t.isInBounds(var15, var16, (byte) -128)) {
@@ -199,7 +199,7 @@ final class PitBehaviour extends Behaviour {
           this.trap.b((byte) -102, 4);
           this.trap.a(true, (byte) -25, 0);
           this.trap.a((byte) -114, true, 1);
-          this.trap.b((byte) 17, param0);
+          this.trap.setFloating((byte) 17, param0);
           var3_int = this.trap.getWidth(-56) / this.field_u;
           var4 = this.trap.getHeight((byte) 55) / this.field_u;
           this.field_t = new MazeGrid(var3_int, var4, 0);

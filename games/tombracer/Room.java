@@ -280,7 +280,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           if (param0.n((byte) 121)) {
             this.traps.addLast((byte) -94, param0);
             param0.F(param1 + 82);
-            param0.x((byte) -60);
+            param0.updateParentRotation((byte) -60);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1523,7 +1523,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         var9 = new IntrusiveDequeCursor(this.traps);
         var5_ref_fsa = (Trap) (var9.first(true));
         while (var5_ref_fsa != null) {
-          var5_ref_fsa.b(param1 + 106, false);
+          var5_ref_fsa.tick(param1 + 106, false);
           this.field_a = var5_ref_fsa.hashState(this.field_a, -109);
           if (var5_ref_fsa.isExpired(param1 + 18407)) {
             var5_ref_fsa.unlink(param1 ^ 79);
@@ -1726,7 +1726,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           param0.writeBits((byte) 119, this.traps.size((byte) -16), 8);
           var6 = (Trap) (this.traps.first(-80));
           while (var6 != null) {
-            if (!var6.w((byte) -117)) {
+            if (!var6.isIndependent((byte) -117)) {
               var6.encode(param0, -100);
             }
             var6 = (Trap) (this.traps.next(114));
@@ -1919,7 +1919,7 @@ final class Room implements SwitchableScope, Renderable, noa {
               } else {
                 if (var15 == 0) {
                   if (2 == param8) {
-                    stackIn_45_0 = (var17[var18Lifetime1].a(param1, 0)) ? 0 : 1;
+                    stackIn_45_0 = (var17[var18Lifetime1].canBeCrushedBy(param1, 0)) ? 0 : 1;
                     var15 = stackIn_45_0;
                   } else {
                     var15 = 1;
@@ -1939,7 +1939,7 @@ final class Room implements SwitchableScope, Renderable, noa {
             for (var18Lifetime2 = 0; var17.length > var18Lifetime2; var18Lifetime2++) {
               stackIn_59_0 = var17[var18Lifetime2];
               if (stackIn_59_0 != null) {
-                var17[var18Lifetime2].a(-117, param1);
+                var17[var18Lifetime2].crush(-117, param1);
               }
             }
           }

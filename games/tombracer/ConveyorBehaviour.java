@@ -26,7 +26,7 @@ final class ConveyorBehaviour extends Behaviour {
         var4 = this.getRoot(6);
         for (var5 = 0; var3.length > var5; var5++) {
           var6 = var3[var5];
-          if (var6.a(-77) &&
+          if (var6.restsOnFloor(-77) &&
             var6 != var4 &&
             io.centredBoxesOverlap(var6.getWidth(param0 - 5435), this.trap.getY(9648), (byte) -55, var6.getHeight((byte) 55), this.trap.getX(param0 - 5415), var6.getY(9648), this.trap.getHeight((byte) 55), this.trap.getWidth(-21), var6.getX(3))) {
             var6.tryPush(100, true, 1, this.field_o, this.field_n, 0);
@@ -35,8 +35,8 @@ final class ConveyorBehaviour extends Behaviour {
     }
 
     private final void b(int param0) {
-        int var2 = MouseInputHandler.a((byte) 111, this.trap.getFacingAngle(-25787) >> 2);
-        int var3 = bua.a(param0, this.trap.getFacingAngle(-25787) >> 2);
+        int var2 = MouseInputHandler.sin2048((byte) 111, this.trap.getFacingAngle(-25787) >> 2);
+        int var3 = bua.cos2048(param0, this.trap.getFacingAngle(-25787) >> 2);
         this.field_n = -gqa.a(this.field_r, (byte) 24, var2) + gqa.a(this.field_s, (byte) 24, var3);
         this.field_o = -gqa.a(this.field_s, (byte) 24, var2) + gqa.a(this.field_r, (byte) 24, var3);
     }

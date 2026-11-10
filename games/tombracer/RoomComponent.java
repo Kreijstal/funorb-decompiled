@@ -684,8 +684,8 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         RoomComponent var3;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
-        this.field_f = MouseInputHandler.a((byte) 106, -this.getFacingAngle(-25787) >> 2);
-        this.field_h = bua.a(0, -this.getFacingAngle(-25787) >> 2);
+        this.field_f = MouseInputHandler.sin2048((byte) 106, -this.getFacingAngle(-25787) >> 2);
+        this.field_h = bua.cos2048(0, -this.getFacingAngle(-25787) >> 2);
         for (var2 = 0; this.mounts.length > var2; var2++) {
           this.mounts[var2].rotateBy(this.field_f, this.field_h, (byte) 98);
           var3 = this.mounts[var2].a(-122);
@@ -767,7 +767,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         return this;
     }
 
-    public final int b(int param0) {
+    public final int getWeight(int param0) {
         int var2 = -69 % ((param0 - 1) / 45);
         return 0;
     }

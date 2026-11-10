@@ -51,12 +51,12 @@ final class PushableMountComponent extends PrefabComponent {
         try {
           var4 = new Trap(param2, param0);
           var4.setSize((byte) -11, this.height, this.width);
-          var4.a((byte) -3, 4);
-          var4.h(param1, param1 ^ 3);
+          var4.setWeight((byte) -3, 4);
+          var4.setObstructionLevel(param1, param1 ^ 3);
           var4.setPushable(true, 122);
-          var4.g(112, 1);
-          var4.b((byte) 17, false);
-          var4.a(1, (byte) -12, true);
+          var4.setPushMode(112, 1);
+          var4.setFloating((byte) 17, false);
+          var4.setCollisionLevel(1, (byte) -12, true);
           var5 = new SimpleBlockBehaviour(param2, param0);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;

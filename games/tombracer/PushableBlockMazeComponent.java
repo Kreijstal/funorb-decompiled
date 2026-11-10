@@ -72,16 +72,16 @@ final class PushableBlockMazeComponent extends MazeComponent {
         try {
           var10 = new Trap(param2, param1);
           var10.setSize((byte) -11, 2097152, 2097152);
-          var10.a((byte) -3, 4);
-          var10.h(3, 0);
+          var10.setWeight((byte) -3, 4);
+          var10.setObstructionLevel(3, 0);
           var10.setPushable(true, param0 + 116);
-          var10.g(124, 1);
-          var10.b((byte) 17, false);
-          var10.b(false, 11468);
-          var10.a(1, (byte) -12, true);
+          var10.setPushMode(124, 1);
+          var10.setFloating((byte) 17, false);
+          var10.setAttachedToParent(false, 11468);
+          var10.setCollisionLevel(1, (byte) -12, true);
           var5 = new SimpleBlockBehaviour(param2, param1);
           var10.addBehaviour((byte) 83, (Behaviour) (var5));
-          var10.d(25, -1);
+          var10.setCrushThreshold(25, -1);
           var6 = new DamageableBehaviour(param2, param1);
           var6.b((byte) 0, true);
           var6.b(1, 50, param0 - 5);

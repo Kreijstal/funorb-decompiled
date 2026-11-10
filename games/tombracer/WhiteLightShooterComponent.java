@@ -159,7 +159,7 @@ final class WhiteLightShooterComponent extends ShooterComponent {
         try {
           var4 = new Trap(param2, param0);
           var4.setSize((byte) -11, this.height, this.width);
-          var4.h(param1, 0);
+          var4.setObstructionLevel(param1, 0);
           var4.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new BeamShooterBehaviour(param2, param0);
           var5.a(new Effect(6, 10), true);

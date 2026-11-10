@@ -137,7 +137,7 @@ final class WindZoneBehaviour extends Behaviour {
             }
           }
         }
-        var14 = this.trap.P(param0 - 5418);
+        var14 = this.trap.getTopElevation(param0 - 5418);
         if (this.field_q != 0 &&
           this.field_q != 2) {
           var25 = this.getRoom(true).spawnParticle(var11, this.trap.getTop(2) + this.getRandom((byte) 46).nextBounded(var5, 0), (byte) 100, var14);

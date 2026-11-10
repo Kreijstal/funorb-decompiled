@@ -56,15 +56,15 @@ final class ica {
         var42 = TombRacer.field_G ? 1 : 0;
         try {
           if (param4 <= param15 &&
-            param16 < uoa.field_b) {
+            param16 < TriangleRasterizer.viewportHeight) {
             if (0 > param14 &&
               0 > param8 &&
               param5 < 0) {
               return;
             }
-            if (param14 >= uoa.field_e &&
-              uoa.field_e <= param8 &&
-              uoa.field_e <= param5) {
+            if (param14 >= TriangleRasterizer.viewportWidth &&
+              TriangleRasterizer.viewportWidth <= param8 &&
+              TriangleRasterizer.viewportWidth <= param5) {
               return;
             }
             var34 = param15 - param16;
@@ -198,17 +198,17 @@ final class ica {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var36Lifetime2 = uoa.field_d[param16];
+                var36Lifetime2 = TriangleRasterizer.rowOffsets[param16];
                 while (param16 < param0) {
                   var37 = var17_int >> 16;
-                  if (uoa.field_e > var37) {
+                  if (TriangleRasterizer.viewportWidth > var37) {
                     var38 = -(var17_int >> 16) + (var18 >> 16);
                     if (var38 != 0) {
                       var39 = (-var21 + var22) / var38;
                       var40 = (var26 - var25) / var38;
                       var41 = (-var29 + var30) / var38;
-                      if (uoa.field_e <= var37 + var38) {
-                        var38 = uoa.field_e - var37 - 1;
+                      if (TriangleRasterizer.viewportWidth <= var37 + var38) {
+                        var38 = TriangleRasterizer.viewportWidth - var37 - 1;
                       }
                       if (var37 < 0) {
                         HorizontalGradientOperator.a(-(var37 * var41) + var29, var25 - var37 * var40, param6, var39, var36Lifetime2, -116, var38 + var37, var40, -(var39 * var37) + var21, var41);
@@ -217,13 +217,13 @@ final class ica {
                       }
                     } else {
                       if (var37 >= 0 &&
-                        uoa.field_e > var37) {
+                        TriangleRasterizer.viewportWidth > var37) {
                         HorizontalGradientOperator.a(var29, var25, param6, 0, var37 + var36Lifetime2, param4 ^ -108, var38, 0, var21, 0);
                       }
                     }
                   }
                   param16++;
-                  if (param16 >= uoa.field_b) {
+                  if (param16 >= TriangleRasterizer.viewportHeight) {
                     return;
                   }
                   var25 = var25 + var27;
@@ -285,22 +285,22 @@ final class ica {
               var18 = var18 + param16 * var20;
               param16 = 0;
             }
-            var35Lifetime1 = uoa.field_d[param16];
+            var35Lifetime1 = TriangleRasterizer.rowOffsets[param16];
             while (param15 > param16) {
               var36Lifetime1 = var17_int >> 16;
-              if (var36Lifetime1 < uoa.field_e) {
+              if (var36Lifetime1 < TriangleRasterizer.viewportWidth) {
                 var37Lifetime1 = -(var17_int >> 16) + (var18 >> 16);
                 if (var37Lifetime1 == 0) {
                   if (0 <= var36Lifetime1 &&
-                    uoa.field_e > var36Lifetime1) {
+                    TriangleRasterizer.viewportWidth > var36Lifetime1) {
                     HorizontalGradientOperator.a(var29, var25, param6, 0, var35Lifetime1 + var36Lifetime1, -112, var37Lifetime1, 0, var21, 0);
                   }
                 } else {
                   var38Lifetime1 = (-var21 + var22) / var37Lifetime1;
                   var39Lifetime1 = (var26 - var25) / var37Lifetime1;
                   var40Lifetime1 = (-var29 + var30) / var37Lifetime1;
-                  if (uoa.field_e <= var36Lifetime1 + var37Lifetime1) {
-                    var37Lifetime1 = uoa.field_e - var36Lifetime1 - 1;
+                  if (TriangleRasterizer.viewportWidth <= var36Lifetime1 + var37Lifetime1) {
+                    var37Lifetime1 = TriangleRasterizer.viewportWidth - var36Lifetime1 - 1;
                   }
                   if (var36Lifetime1 >= 0) {
                     HorizontalGradientOperator.a(var29, var25, param6, var38Lifetime1, var36Lifetime1 + var35Lifetime1, -123, var37Lifetime1, var39Lifetime1, var21, var40Lifetime1);
@@ -310,7 +310,7 @@ final class ica {
                 }
               }
               param16++;
-              if (param16 >= uoa.field_b) {
+              if (param16 >= TriangleRasterizer.viewportHeight) {
                 return;
               }
               var18 = var18 + var20;
@@ -348,7 +348,7 @@ final class ica {
         try {
           var1 = new Sprite(540, 140);
           nm.a(var1, (byte) 112);
-          uoa.b();
+          TriangleRasterizer.useRasterClip();
           SoftwareRasterizer.clear();
           TimeSwitchBehaviour.field_r = 0;
           uw.a(false);

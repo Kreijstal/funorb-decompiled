@@ -90,8 +90,8 @@ abstract class MazeComponent extends PrefabComponent {
             return stackIn_2_0;
           }
           var6.setSize((byte) -11, this.height, this.width);
-          var6.a((byte) -3, 0);
-          var6.b((byte) 17, true);
+          var6.setWeight((byte) -3, 0);
+          var6.setFloating((byte) 17, true);
           var5 = new RandomMazeBehaviour(param2, param0);
           var5.b((byte) 105, false);
           var5.a((byte) -128, this.a(param2, false, false));
@@ -204,7 +204,7 @@ abstract class MazeComponent extends PrefabComponent {
           var9 = new Trap(param1, param0);
           var5 = -31 % ((param2 + 48) / 57);
           var9.setSize((byte) -11, 2097152, 2097152);
-          var9.b((byte) 17, false);
+          var9.setFloating((byte) 17, false);
           var7 = this.field_H;
           if (var7 != 0 &&
             var7 == 1) {

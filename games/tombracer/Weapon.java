@@ -156,11 +156,11 @@ final class Weapon {
         try {
           if (0 >= this.cooldown &&
             this.a(12111)) {
-            var11_int = MouseInputHandler.a((byte) 122, param0 >> 2);
+            var11_int = MouseInputHandler.sin2048((byte) 122, param0 >> 2);
             if (param9) {
               this.field_w = 123;
             }
-            var12 = bua.a(0, param0 >> 2);
+            var12 = bua.cos2048(0, param0 >> 2);
             var13 = param3 + gqa.a(var11_int, (byte) 24, param8);
             var14 = param4 + gqa.a(var12, (byte) 24, param8);
             if (!this.field_m) {
@@ -173,8 +173,8 @@ final class Weapon {
               if (0 < this.field_s) {
                 var17 = var17 + (var15.nextBounded(this.field_s, 0) - this.field_s / 2);
               }
-              var18 = MouseInputHandler.a((byte) 110, var17 >> 2);
-              var19 = bua.a(0, var17 >> 2);
+              var18 = MouseInputHandler.sin2048((byte) 110, var17 >> 2);
+              var19 = bua.cos2048(0, var17 >> 2);
               var20 = this.field_n;
               if (this.field_w > 0) {
                 var20 = var20 + var15.nextBounded(this.field_w, 0);

@@ -43,15 +43,15 @@ final class BlockComponent extends PrefabComponent {
             }
             var5 = 4;
           }
-          var15.a((byte) -3, var5);
-          var15.h(param1, 0);
+          var15.setWeight((byte) -3, var5);
+          var15.setObstructionLevel(param1, 0);
           var15.setPushable(true, param1 + 119);
-          var15.g(param1 + 97, 1);
-          var15.b((byte) 17, false);
-          var15.a(1, (byte) -12, true);
+          var15.setPushMode(param1 + 97, 1);
+          var15.setFloating((byte) 17, false);
+          var15.setCollisionLevel(1, (byte) -12, true);
           var9 = new SimpleBlockBehaviour(param2, param0);
           var15.addBehaviour((byte) 83, (Behaviour) (var9));
-          var15.d(var6, -1);
+          var15.setCrushThreshold(var6, -1);
           var10 = new DamageableBehaviour(param2, param0);
           var10.b(1, var8, param1 - 3);
           var11 = var10.getVulnerabilities((byte) -106);

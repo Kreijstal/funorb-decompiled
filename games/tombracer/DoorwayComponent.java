@@ -82,7 +82,7 @@ final class DoorwayComponent extends PrefabComponent {
             var7_ref_fsa = new Trap(param2, param0);
             var7_ref_fsa.setSize((byte) -11, this.height / 3, this.width / 2);
             var7_ref_fsa.b(437453352, -327680, -this.width / 4);
-            var7_ref_fsa.h(3, 0);
+            var7_ref_fsa.setObstructionLevel(3, 0);
             var8 = new SimpleBlockBehaviour(param2, param0);
             var7_ref_fsa.addBehaviour((byte) 83, (Behaviour) (var8));
             var9 = new PathMoveLocomotor(param2, param0);
@@ -95,7 +95,7 @@ final class DoorwayComponent extends PrefabComponent {
             var11 = new Trap(param2, param0);
             var11.setSize((byte) -11, this.height / 3, this.width / 2);
             var11.b(437453352, -327680, this.width / 4);
-            var11.h(3, 0);
+            var11.setObstructionLevel(3, 0);
             var12 = new SimpleBlockBehaviour(param2, param0);
             var11.addBehaviour((byte) 83, (Behaviour) (var12));
             var13 = new PathMoveLocomotor(param2, param0);

@@ -45,7 +45,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
         return this.field_g;
     }
 
-    public final boolean a(int param0, WorldBody param1) {
+    public final boolean crush(int param0, WorldBody param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -113,7 +113,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
         return 0;
     }
 
-    public final boolean a(int param0) {
+    public final boolean restsOnFloor(int param0) {
         int var2 = -91 / ((param0 - 6) / 46);
         return true;
     }
@@ -153,7 +153,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
     public final int getPreviousY(int param0) {
         if (param0 != -21185) {
           WorldBody var3 = (WorldBody) null;
-          this.a(69, (WorldBody) null);
+          this.crush(69, (WorldBody) null);
         }
         return this.field_r;
     }
@@ -347,7 +347,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
         }
     }
 
-    public final boolean a(WorldBody param0, int param1) {
+    public final boolean canBeCrushedBy(WorldBody param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -410,7 +410,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
         }
     }
 
-    public final int b(int param0) {
+    public final int getWeight(int param0) {
         int var2 = -5 / ((1 - param0) / 45);
         return 0;
     }
@@ -656,7 +656,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
     final boolean b(int param0, int param1) {
         if (param1 != 1569) {
           WorldBody var4 = (WorldBody) null;
-          this.a((WorldBody) null, -24);
+          this.canBeCrushedBy((WorldBody) null, -24);
         }
         return this.field_o.a(param0, 14530);
     }

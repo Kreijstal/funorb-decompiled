@@ -64,8 +64,8 @@ final class ParticleEffects {
         }
         for (var16 = 0; var16 < param4; var16++) {
           var12 = param5 - 512 + this.randomBelow((byte) -33, 1024);
-          var13 = MouseInputHandler.a((byte) 125, var12 >> 2);
-          var14 = bua.a(0, var12 >> 2);
+          var13 = MouseInputHandler.sin2048((byte) 125, var12 >> 2);
+          var14 = bua.cos2048(0, var12 >> 2);
           var17 = gqa.a(var13, (byte) 24, param7);
           var18 = gqa.a(var14, (byte) 24, param7);
           var15 = this.room.spawnParticle(param8, param0, (byte) 100, param3);
@@ -106,8 +106,8 @@ final class ParticleEffects {
           }
           var6 = qva.a((byte) -26, var5, var4_int);
           var7 = 8;
-          var8 = var7 * MouseInputHandler.a((byte) 112, var6 >> 2);
-          var9 = bua.a(0, var6 >> 2) * var7;
+          var8 = var7 * MouseInputHandler.sin2048((byte) 112, var6 >> 2);
+          var9 = bua.cos2048(0, var6 >> 2) * var7;
           var10 = 0;
           if (ua.abs(var4_int, -124) > ua.abs(var5, -127)) {
             if (var8 != 0) {
@@ -244,8 +244,8 @@ final class ParticleEffects {
         }
         while (var6 < 8) {
           var7 = this.randomBelow((byte) -33, 8192);
-          var8 = MouseInputHandler.a((byte) 102, var7 >> 2);
-          var9 = bua.a(0, var7 >> 2);
+          var8 = MouseInputHandler.sin2048((byte) 102, var7 >> 2);
+          var9 = bua.cos2048(0, var7 >> 2);
           var10 = this.room.spawnParticle(param1, param0, (byte) 100, param2);
           var11 = var5 + this.randomBelow((byte) -33, var5);
           var12 = gqa.a(var8, (byte) 24, var11);
@@ -272,8 +272,8 @@ final class ParticleEffects {
         int var5 = 262144;
         for (var6 = 0; var6 < 8; var6++) {
           var7 = this.randomBelow((byte) -33, 8192);
-          var8 = MouseInputHandler.a((byte) 126, var7 >> 2);
-          var9 = bua.a(0, var7 >> 2);
+          var8 = MouseInputHandler.sin2048((byte) 126, var7 >> 2);
+          var9 = bua.cos2048(0, var7 >> 2);
           var10 = this.room.spawnParticle(param2, param3, (byte) 100, param1);
           var11 = this.randomBelow((byte) -33, var5) + var5;
           var12 = gqa.a(var8, (byte) 24, var11);
@@ -296,8 +296,8 @@ final class ParticleEffects {
         }
         for (var6 = 0; 5 > var6; var6++) {
           var7 = -256 + (this.randomBelow((byte) -33, 512) + param4);
-          var8 = MouseInputHandler.a((byte) 124, var7 >> 2);
-          var9 = bua.a(0, var7 >> 2);
+          var8 = MouseInputHandler.sin2048((byte) 124, var7 >> 2);
+          var9 = bua.cos2048(0, var7 >> 2);
           var10 = this.room.spawnParticle(param3, param2, (byte) 100, param1);
           var11 = 262144 + this.randomBelow((byte) -33, 262144);
           var10.a(false, 2, 4, 16, 10);

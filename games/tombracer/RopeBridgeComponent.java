@@ -101,14 +101,14 @@ final class RopeBridgeComponent extends PrefabComponent {
             var7.setSize((byte) -11, this.height, 524288);
             var7.b(437453352, 0, 1835008);
           }
-          var6.b((byte) 17, false);
-          var6.h(3, param1 - 3);
+          var6.setFloating((byte) 17, false);
+          var6.setObstructionLevel(3, param1 - 3);
           var8 = new SimpleBlockBehaviour(param2, param0);
           var8.a(true, -45);
           var8.a(-28592, true);
           var6.addBehaviour((byte) 83, (Behaviour) (var8));
-          var7.b((byte) 17, false);
-          var7.h(param1, 0);
+          var7.setFloating((byte) 17, false);
+          var7.setObstructionLevel(param1, 0);
           var9 = new SimpleBlockBehaviour(param2, param0);
           var9.a(true, -128);
           var9.a(-28592, true);

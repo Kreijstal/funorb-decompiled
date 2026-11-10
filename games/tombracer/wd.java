@@ -67,60 +67,60 @@ final class wd implements dv {
         MiscItemBehaviour var10 = null;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          param4.d((byte) -87, param5);
+          param4.setIndependent((byte) -87, param5);
           var6_int = param1;
           if (var6_int != 0) {
             if (1 != var6_int) {
               if (var6_int == 2) {
-                param4.a((byte) -3, 10);
-                param4.h(3, 0);
+                param4.setWeight((byte) -3, 10);
+                param4.setObstructionLevel(3, 0);
                 param4.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param3, param5)));
                 param4.setPushable(true, 117);
-                param4.g(119, 1);
-                param4.a(1, (byte) -12, true);
-                param4.b(false, 11468);
-                param4.b((byte) 17, false);
+                param4.setPushMode(119, 1);
+                param4.setCollisionLevel(1, (byte) -12, true);
+                param4.setAttachedToParent(false, 11468);
+                param4.setFloating((byte) 17, false);
               } else {
                 if (var6_int == 3) {
-                  param4.a((byte) -3, 20);
-                  param4.h(3, 0);
+                  param4.setWeight((byte) -3, 20);
+                  param4.setObstructionLevel(3, 0);
                   var8 = new SimpleBlockBehaviour(param3, param5);
-                  param4.a(3, (byte) -12, true);
+                  param4.setCollisionLevel(3, (byte) -12, true);
                   var8.b((byte) -107, true);
                   param4.addBehaviour((byte) 83, (Behaviour) (var8));
                   param4.addLocomotor(new SimpleMoveLocomotor(param3, 131072, 0, 0, param5), 0);
-                  param4.b((byte) 17, false);
-                  param4.b(false, 11468);
+                  param4.setFloating((byte) 17, false);
+                  param4.setAttachedToParent(false, 11468);
                 } else {
                   if (var6_int != 4) {
                     if (var6_int == 5) {
-                      param4.a((byte) -3, 10);
-                      param4.h(3, 0);
+                      param4.setWeight((byte) -3, 10);
+                      param4.setObstructionLevel(3, 0);
                       param4.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param3, param5)));
                       param4.addBehaviour((byte) 83, (Behaviour) (new BeamShooterBehaviour(param3, param5)));
                       param4.addLocomotor(new FacePlayerLocomotor(param3, param5), 0);
                     } else {
                       if (var6_int == 6) {
-                        param4.a((byte) -3, 20);
-                        param4.h(3, 0);
+                        param4.setWeight((byte) -3, 20);
+                        param4.setObstructionLevel(3, 0);
                         param4.addBehaviour((byte) 83, (Behaviour) (new CrusherBehaviour(param3, param5)));
                         var9 = new ApproachPlayerLocomotor(param3, param5);
                         param4.addLocomotor(var9, 0);
                         var9.c(124, 0);
                       } else {
                         if (var6_int == 7) {
-                          param4.a((byte) -3, 2);
+                          param4.setWeight((byte) -3, 2);
                           var10 = new MiscItemBehaviour(param3, param5);
                           var10.setItemType(0, false);
                           param4.addBehaviour((byte) 83, (Behaviour) (var10));
-                          param4.b(false, 11468);
-                          param4.b((byte) 17, false);
+                          param4.setAttachedToParent(false, 11468);
+                          param4.setFloating((byte) 17, false);
                         }
                       }
                     }
                   } else {
-                    param4.a((byte) -3, 10);
-                    param4.h(3, 0);
+                    param4.setWeight((byte) -3, 10);
+                    param4.setObstructionLevel(3, 0);
                     param4.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param3, param5)));
                     var6 = new WeaponShooterBehaviour(param3, param5);
                     var6.a(TextureOperator.a(2, -1), (byte) 100);
@@ -130,10 +130,10 @@ final class wd implements dv {
                 }
               }
             } else {
-              param4.a((byte) -3, 10);
-              param4.h(3, 0);
+              param4.setWeight((byte) -3, 10);
+              param4.setObstructionLevel(3, 0);
               param4.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param3, param5)));
-              param4.b((byte) 17, true);
+              param4.setFloating((byte) 17, true);
             }
           } else {
             param4.addBehaviour((byte) 83, (Behaviour) (new PitBehaviour(param3, param5)));

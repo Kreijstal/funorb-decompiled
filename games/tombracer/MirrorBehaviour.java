@@ -36,8 +36,8 @@ final class MirrorBehaviour extends Behaviour {
           this.a(65, 57, (BeamSegment) null, 85);
           var2 = GameScreen.positiveModulo(2048 + var2, 8192, -34);
           if (var2 != this.field_v) {
-            this.field_t = MouseInputHandler.a((byte) 99, var2 >> 2);
-            this.field_p = bua.a(0, var2 >> 2);
+            this.field_t = MouseInputHandler.sin2048((byte) 99, var2 >> 2);
+            this.field_p = bua.cos2048(0, var2 >> 2);
             this.field_v = var2;
             return;
           }
@@ -47,8 +47,8 @@ final class MirrorBehaviour extends Behaviour {
         if (var2 == this.field_v) {
           return;
         }
-        this.field_t = MouseInputHandler.a((byte) 99, var2 >> 2);
-        this.field_p = bua.a(0, var2 >> 2);
+        this.field_t = MouseInputHandler.sin2048((byte) 99, var2 >> 2);
+        this.field_p = bua.cos2048(0, var2 >> 2);
         this.field_v = var2;
     }
 
@@ -202,8 +202,8 @@ final class MirrorBehaviour extends Behaviour {
           var9 = GameScreen.positiveModulo(this.field_v + 2048, 8192, -71);
           var10 = S2CRoundResultPacket.a(8192, -16390, var8, var9);
           var11 = GameScreen.positiveModulo(2 * var10 + var8 + 4096, 8192, 126);
-          var12 = MouseInputHandler.a((byte) 99, var11 >> 2);
-          var13 = bua.a(0, var11 >> 2);
+          var12 = MouseInputHandler.sin2048((byte) 99, var11 >> 2);
+          var13 = bua.cos2048(0, var11 >> 2);
           var14 = param2.field_b - gqa.a(param2.field_b, (byte) 24, this.field_w);
           var15 = var14 >> 8;
           var5.a(var6, (var12 >> 8) * var15 + var6, var7, (var13 >> 8) * var15 + var7, 44);
@@ -235,7 +235,7 @@ final class MirrorBehaviour extends Behaviour {
     final void attachToTrap(boolean param0, Trap param1) {
         try {
           super.attachToTrap(true, param1);
-          param1.a(param0, 120);
+          param1.setAlwaysBlocksBeams(param0, 120);
           this.field_n = MidiVoiceMixer.min(param1.getHeight((byte) 55), param1.getWidth(-23), -23);
           this.b(1659280738);
           this.j((byte) 1);

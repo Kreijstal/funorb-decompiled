@@ -102,7 +102,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
         this.z = param3;
         this.x = param0;
         if (param1 != -78) {
-          this.a(53);
+          this.restsOnFloor(53);
         }
     }
 
@@ -725,7 +725,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
         return 0;
     }
 
-    public final int b(int param0) {
+    public final int getWeight(int param0) {
         int var2 = -24 / ((param0 - 1) / 45);
         return 0;
     }
@@ -970,7 +970,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
         }
     }
 
-    public final boolean a(int param0) {
+    public final boolean restsOnFloor(int param0) {
         int var2 = 61 % ((param0 - 6) / 46);
         return false;
     }
@@ -983,7 +983,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
         this.angle = param2;
     }
 
-    public final boolean a(int param0, WorldBody param1) {
+    public final boolean crush(int param0, WorldBody param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -1202,7 +1202,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
         this.effect = (Effect) null;
     }
 
-    public final boolean a(WorldBody param0, int param1) {
+    public final boolean canBeCrushedBy(WorldBody param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

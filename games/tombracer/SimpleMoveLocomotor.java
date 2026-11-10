@@ -51,9 +51,9 @@ final class SimpleMoveLocomotor extends Locomotor {
         int var9Lifetime2Lifetime1;
         var2 = this.field_p + this.trap.getAngle((byte) -80);
         if (0 >= this.field_r) {
-          var3 = MouseInputHandler.a((byte) 100, var2 >> 2);
+          var3 = MouseInputHandler.sin2048((byte) 100, var2 >> 2);
           var6 = -112 % ((param0 + 69) / 42);
-          var4 = bua.a(0, var2 >> 2);
+          var4 = bua.cos2048(0, var2 >> 2);
           var5 = doa.a(2, this.field_t, var3);
           var7 = doa.a(2, this.field_t, var4);
           if (var7 == 0) {
@@ -62,11 +62,11 @@ final class SimpleMoveLocomotor extends Locomotor {
             var9 = this.trap.getLocalY(false);
             this.trap.a((byte) -17, var5, var7);
             if (this.field_q) {
-              if (this.trap.p((byte) -103)) {
+              if (this.trap.wasBlockedX((byte) -103)) {
                 var2 = -var2;
                 this.field_p = GameScreen.positiveModulo(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
               }
-              if (!this.trap.C((byte) -43)) {
+              if (!this.trap.wasBlockedY((byte) -43)) {
                 if (this.trap.getLocalX(25745) != var8 ||
                   this.trap.getLocalY(false) != var9) {
                   this.field_o = this.field_o + this.field_t;
@@ -110,11 +110,11 @@ final class SimpleMoveLocomotor extends Locomotor {
             var9Lifetime4 = this.trap.getLocalY(false);
             this.trap.a((byte) -17, var5, var7);
             if (this.field_q) {
-              if (this.trap.p((byte) -103)) {
+              if (this.trap.wasBlockedX((byte) -103)) {
                 var2 = -var2;
                 this.field_p = GameScreen.positiveModulo(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
               }
-              if (this.trap.C((byte) -43)) {
+              if (this.trap.wasBlockedY((byte) -43)) {
                 var2 = 4096 - var2;
                 this.field_p = GameScreen.positiveModulo(var2 - this.trap.getAngle((byte) -80), 8192, 112);
               }
@@ -129,11 +129,11 @@ final class SimpleMoveLocomotor extends Locomotor {
             var9Lifetime4 = this.trap.getLocalY(false);
             this.trap.a((byte) -17, var5, var7);
             if (this.field_q) {
-              if (this.trap.p((byte) -103)) {
+              if (this.trap.wasBlockedX((byte) -103)) {
                 var2 = -var2;
                 this.field_p = GameScreen.positiveModulo(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
               }
-              if (this.trap.C((byte) -43)) {
+              if (this.trap.wasBlockedY((byte) -43)) {
                 var2 = 4096 - var2;
                 this.field_p = GameScreen.positiveModulo(var2 - this.trap.getAngle((byte) -80), 8192, 112);
               }
@@ -150,9 +150,9 @@ final class SimpleMoveLocomotor extends Locomotor {
           return;
         }
         if (this.field_o + this.field_t <= this.field_r) {
-          var3Lifetime1 = MouseInputHandler.a((byte) 100, var2 >> 2);
+          var3Lifetime1 = MouseInputHandler.sin2048((byte) 100, var2 >> 2);
           var6Lifetime1 = -112 % ((param0 + 69) / 42);
-          var4Lifetime1 = bua.a(0, var2 >> 2);
+          var4Lifetime1 = bua.cos2048(0, var2 >> 2);
           var5Lifetime1 = doa.a(2, this.field_t, var3Lifetime1);
           var7Lifetime1 = doa.a(2, this.field_t, var4Lifetime1);
           if (var7Lifetime1 == 0) {
@@ -161,11 +161,11 @@ final class SimpleMoveLocomotor extends Locomotor {
             var9Lifetime1 = this.trap.getLocalY(false);
             this.trap.a((byte) -17, var5Lifetime1, var7Lifetime1);
             if (this.field_q) {
-              if (this.trap.p((byte) -103)) {
+              if (this.trap.wasBlockedX((byte) -103)) {
                 var2 = -var2;
                 this.field_p = GameScreen.positiveModulo(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
               }
-              if (!this.trap.C((byte) -43)) {
+              if (!this.trap.wasBlockedY((byte) -43)) {
                 if (this.trap.getLocalX(25745) != var8Lifetime1 ||
                   this.trap.getLocalY(false) != var9Lifetime1) {
                   this.field_o = this.field_o + this.field_t;
@@ -209,11 +209,11 @@ final class SimpleMoveLocomotor extends Locomotor {
             var9Lifetime1Lifetime1 = this.trap.getLocalY(false);
             this.trap.a((byte) -17, var5Lifetime1, var7Lifetime1);
             if (this.field_q) {
-              if (this.trap.p((byte) -103)) {
+              if (this.trap.wasBlockedX((byte) -103)) {
                 var2 = -var2;
                 this.field_p = GameScreen.positiveModulo(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
               }
-              if (this.trap.C((byte) -43)) {
+              if (this.trap.wasBlockedY((byte) -43)) {
                 var2 = 4096 - var2;
                 this.field_p = GameScreen.positiveModulo(var2 - this.trap.getAngle((byte) -80), 8192, 112);
               }
@@ -228,11 +228,11 @@ final class SimpleMoveLocomotor extends Locomotor {
             var9Lifetime1Lifetime1 = this.trap.getLocalY(false);
             this.trap.a((byte) -17, var5Lifetime1, var7Lifetime1);
             if (this.field_q) {
-              if (this.trap.p((byte) -103)) {
+              if (this.trap.wasBlockedX((byte) -103)) {
                 var2 = -var2;
                 this.field_p = GameScreen.positiveModulo(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
               }
-              if (this.trap.C((byte) -43)) {
+              if (this.trap.wasBlockedY((byte) -43)) {
                 var2 = 4096 - var2;
                 this.field_p = GameScreen.positiveModulo(var2 - this.trap.getAngle((byte) -80), 8192, 112);
               }
@@ -249,9 +249,9 @@ final class SimpleMoveLocomotor extends Locomotor {
           return;
         }
         this.field_t = this.field_r - this.field_o;
-        var3Lifetime2 = MouseInputHandler.a((byte) 100, var2 >> 2);
+        var3Lifetime2 = MouseInputHandler.sin2048((byte) 100, var2 >> 2);
         var6Lifetime2 = -112 % ((param0 + 69) / 42);
-        var4Lifetime2 = bua.a(0, var2 >> 2);
+        var4Lifetime2 = bua.cos2048(0, var2 >> 2);
         var5Lifetime2 = doa.a(2, this.field_t, var3Lifetime2);
         var7Lifetime2 = doa.a(2, this.field_t, var4Lifetime2);
         if (var7Lifetime2 != 0) {
@@ -260,11 +260,11 @@ final class SimpleMoveLocomotor extends Locomotor {
             var9Lifetime2 = this.trap.getLocalY(false);
             this.trap.a((byte) -17, var5Lifetime2, var7Lifetime2);
             if (this.field_q) {
-              if (this.trap.p((byte) -103)) {
+              if (this.trap.wasBlockedX((byte) -103)) {
                 var2 = -var2;
                 this.field_p = GameScreen.positiveModulo(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
               }
-              if (this.trap.C((byte) -43)) {
+              if (this.trap.wasBlockedY((byte) -43)) {
                 var2 = 4096 - var2;
                 this.field_p = GameScreen.positiveModulo(var2 - this.trap.getAngle((byte) -80), 8192, 112);
               }
@@ -284,11 +284,11 @@ final class SimpleMoveLocomotor extends Locomotor {
           var9Lifetime2Lifetime1 = this.trap.getLocalY(false);
           this.trap.a((byte) -17, var5Lifetime2, var7Lifetime2);
           if (this.field_q) {
-            if (this.trap.p((byte) -103)) {
+            if (this.trap.wasBlockedX((byte) -103)) {
               var2 = -var2;
               this.field_p = GameScreen.positiveModulo(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
             }
-            if (this.trap.C((byte) -43)) {
+            if (this.trap.wasBlockedY((byte) -43)) {
               var2 = 4096 - var2;
               this.field_p = GameScreen.positiveModulo(var2 - this.trap.getAngle((byte) -80), 8192, 112);
             }
@@ -311,11 +311,11 @@ final class SimpleMoveLocomotor extends Locomotor {
         var9Lifetime3 = this.trap.getLocalY(false);
         this.trap.a((byte) -17, var5Lifetime2, var7Lifetime2);
         if (this.field_q) {
-          if (this.trap.p((byte) -103)) {
+          if (this.trap.wasBlockedX((byte) -103)) {
             var2 = -var2;
             this.field_p = GameScreen.positiveModulo(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
           }
-          if (!this.trap.C((byte) -43)) {
+          if (!this.trap.wasBlockedY((byte) -43)) {
             if (this.trap.getLocalX(25745) != var8Lifetime3) {
               this.field_o = this.field_o + this.field_t;
               if (this.field_r <= 0) {

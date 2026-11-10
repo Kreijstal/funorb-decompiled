@@ -38,7 +38,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
     static Sprite field_W;
     private int[] roomTreasure;
     private int field_N;
-    private int field_f;
+    private int heldItemWeight;
     static String[] loadingQuips;
     static String field_s;
     private int[] treasure;
@@ -422,7 +422,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
           this.heldItemKind = param3;
           this.field_N = param2;
           int var5_int = 25 % ((-9 - param1) / 55);
-          this.field_f = param0;
+          this.heldItemWeight = param0;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hca.NE(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -778,7 +778,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         RuntimeException var3 = null;
         try {
           if (!param1) {
-            this.field_f = 91;
+            this.heldItemWeight = 91;
           }
           this.setWeapon(25, (byte) -127, param0);
           return;
@@ -796,7 +796,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         }
     }
 
-    public final int b(int param0) {
+    public final int getWeight(int param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -804,7 +804,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -29 % ((param0 - 1) / 45);
-          var3 = this.field_f + 2;
+          var3 = this.heldItemWeight + 2;
           if (this.weapon != null) {
             var3 = var3 + this.weapon.d(70);
           }
@@ -1239,8 +1239,8 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
           }
           boolean decompiledFrameRemainder0 = true;
           var2.setSize((byte) -11, 2097152, 2097152);
-          var2.b((byte) 17, false);
-          var2.a((byte) -3, this.field_f);
+          var2.setFloating((byte) 17, false);
+          var2.setWeight((byte) -3, this.heldItemWeight);
           var2.a(92, true);
           var3 = new MiscItemBehaviour(this.room, true);
           var4 = this.heldItemKind;
@@ -2588,7 +2588,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         }
     }
 
-    public final boolean a(int param0) {
+    public final boolean restsOnFloor(int param0) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -2790,7 +2790,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         }
     }
 
-    public final boolean a(int param0, WorldBody param1) {
+    public final boolean crush(int param0, WorldBody param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -3102,7 +3102,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         }
     }
 
-    public final boolean a(WorldBody param0, int param1) {
+    public final boolean canBeCrushedBy(WorldBody param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

@@ -28,7 +28,7 @@ interface WorldBody {
 
     public abstract boolean b(boolean param0);
 
-    public abstract int b(int param0);
+    public abstract int getWeight(int param0);
 
     public abstract int getWidth(int param0);
 

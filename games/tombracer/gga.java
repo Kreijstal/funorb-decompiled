@@ -86,7 +86,7 @@ final class gga extends ofa implements ButtonListener {
           var5 = (250 - TimeSwitchBehaviour.field_r << 8) / 50;
         }
         nm.a(vha.field_a, (byte) 108);
-        uoa.b();
+        TriangleRasterizer.useRasterClip();
         SoftwareRasterizer.clear();
         uw.a(false);
         if (var5 < 256) {

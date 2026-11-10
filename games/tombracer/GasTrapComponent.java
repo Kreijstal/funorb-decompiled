@@ -91,11 +91,11 @@ final class GasTrapComponent extends PrefabComponent {
         try {
           var13 = new Trap(param2, param0);
           var13.setSize((byte) -11, this.height, this.width);
-          var13.a((byte) -3, 0);
-          var13.h(3, param1 ^ param1);
+          var13.setWeight((byte) -3, 0);
+          var13.setObstructionLevel(3, param1 ^ param1);
           var13.setPushable(false, param1 + 116);
-          var13.b((byte) 17, true);
-          var13.a(1, (byte) -12, true);
+          var13.setFloating((byte) 17, true);
+          var13.setCollisionLevel(1, (byte) -12, true);
           var5 = new SimpleBlockBehaviour(param2, param0);
           var13.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = new TimeSwitchBehaviour(param2, param0);
@@ -107,8 +107,8 @@ final class GasTrapComponent extends PrefabComponent {
           var9 = param2.getHeight(-127);
           var7.setSize((byte) -11, var9, var8);
           var7.b(437453352, var9 / 2, var8 / 2);
-          var7.a((byte) -3, 0);
-          var7.b((byte) 17, true);
+          var7.setWeight((byte) -3, 0);
+          var7.setFloating((byte) 17, true);
           var10 = new SimpleBlockBehaviour(param2, true);
           var10.b((byte) -106, true);
           var10.a(16, (byte) -22);

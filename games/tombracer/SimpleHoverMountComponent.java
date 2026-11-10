@@ -206,11 +206,11 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
         try {
           var4 = new Trap(param2, param0);
           var4.setSize((byte) -11, this.height, this.width);
-          var4.h(param1, 0);
-          var4.a(1, (byte) -12, true);
-          var4.a((byte) -3, 0);
-          var4.b((byte) 17, true);
-          var4.g(119, 2);
+          var4.setObstructionLevel(param1, 0);
+          var4.setCollisionLevel(1, (byte) -12, true);
+          var4.setWeight((byte) -3, 0);
+          var4.setFloating((byte) 17, true);
+          var4.setPushMode(119, 2);
           var4.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = this.createPathMove((byte) -60, param2, param0);
           var4.addLocomotor(var5, 0);

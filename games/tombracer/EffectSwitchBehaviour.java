@@ -337,7 +337,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
             }
           }
           if (4 > this.getRoom(true).formatVersion) {
-            param1.h(3, 0);
+            param1.setObstructionLevel(3, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

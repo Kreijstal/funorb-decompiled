@@ -58,7 +58,7 @@ abstract class PrefabComponent extends RoomComponent {
           }
           var13 = this.createTrap(param0, 3, param2);
           if (param6 != null) {
-            var13.b(true, 11468);
+            var13.setAttachedToParent(true, 11468);
           }
           var13.a(this.field_z, (byte) 121);
           var13.setLocalX(1, this.x);

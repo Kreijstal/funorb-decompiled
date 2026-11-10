@@ -22,7 +22,7 @@ final class IdolItemComponent extends ItemComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = super.createTrap(param0, param1, param2);
-          var4.a((byte) -3, 2);
+          var4.setWeight((byte) -3, 2);
           var5 = new MiscItemBehaviour(param2, param0);
           var5.setItemType(3, false);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));

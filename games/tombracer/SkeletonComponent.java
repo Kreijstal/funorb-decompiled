@@ -78,12 +78,12 @@ final class SkeletonComponent extends dna {
         try {
           var12 = new Trap(param2, param0);
           var12.setSize((byte) -11, this.height, this.width);
-          var12.h(2, 0);
-          var12.a(2, (byte) -12, true);
-          var12.a((byte) -3, 1);
-          var12.b((byte) 17, false);
+          var12.setObstructionLevel(2, 0);
+          var12.setCollisionLevel(2, (byte) -12, true);
+          var12.setWeight((byte) -3, 1);
+          var12.setFloating((byte) 17, false);
           var12.setPushable(true, 124);
-          var12.d(1, -1);
+          var12.setCrushThreshold(1, -1);
           var5 = new ApproachPlayerLocomotor(param2, param0);
           var5.a(false, 98304);
           var12.addLocomotor(var5, 0);

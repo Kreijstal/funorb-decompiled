@@ -36,11 +36,11 @@ final class TrackMountComponent extends PrefabComponent {
         try {
           var9 = new Trap(param2, param0);
           var9.setSize((byte) -11, this.height, this.width);
-          var9.h(3, 0);
-          var9.a(1, (byte) -12, true);
-          var9.a((byte) -3, 6);
-          var9.b((byte) 17, false);
-          var9.g(119, 2);
+          var9.setObstructionLevel(3, 0);
+          var9.setCollisionLevel(1, (byte) -12, true);
+          var9.setWeight((byte) -3, 6);
+          var9.setFloating((byte) 17, false);
+          var9.setPushMode(119, 2);
           var9.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new TrackPlayerLocomotor(param2, param0);
           stackIn_3_0 = (34 != this.getTypeId(12)) ? 0 : 1;

@@ -89,8 +89,8 @@ final class SimpleBlockBehaviour extends Behaviour {
           if (4 <= this.getRoom(param0).formatVersion) {
             return;
           }
-          param1.h(3, 0);
-          param1.a(3, (byte) -12, false);
+          param1.setObstructionLevel(3, 0);
+          param1.setCollisionLevel(3, (byte) -12, false);
           this.field_q = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

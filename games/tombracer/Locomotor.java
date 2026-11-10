@@ -120,9 +120,9 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
     final int d(byte param0) {
         if (param0 >= -43) {
           this.a(-18, true);
-          return this.trap.O(80);
+          return this.trap.getInitialLocalX(80);
         }
-        return this.trap.O(80);
+        return this.trap.getInitialLocalX(80);
     }
 
     void c(byte param0) {
@@ -237,9 +237,9 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
     final int a(boolean param0) {
         if (param0) {
           field_m = (String) null;
-          return this.trap.o((byte) -124);
+          return this.trap.getInitialLocalY((byte) -124);
         }
-        return this.trap.o((byte) -124);
+        return this.trap.getInitialLocalY((byte) -124);
     }
 
     void attachToTrap(int param0, Trap param1) {
@@ -263,9 +263,9 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
     final int b(boolean param0) {
         if (!param0) {
           this.locked = true;
-          return this.trap.M(0);
+          return this.trap.getInitialAngle(0);
         }
-        return this.trap.M(0);
+        return this.trap.getInitialAngle(0);
     }
 
     Locomotor(Room param0, boolean param1) {

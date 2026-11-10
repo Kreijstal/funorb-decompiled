@@ -157,11 +157,11 @@ final class BoulderComponent extends PathMoverComponent {
         try {
           var11 = new Trap(param2, param0);
           var11.setSize((byte) -11, this.height, this.width);
-          var11.h(param1, 0);
-          var11.a(3, (byte) -12, true);
-          var11.a((byte) -3, 10);
-          var11.b((byte) 17, false);
-          var11.g(108, 2);
+          var11.setObstructionLevel(param1, 0);
+          var11.setCollisionLevel(3, (byte) -12, true);
+          var11.setWeight((byte) -3, 10);
+          var11.setFloating((byte) 17, false);
+          var11.setPushMode(108, 2);
           var11.l(2, 146366800);
           var5 = new ConstantEffectBehaviour(param2, param0);
           var6 = new Effect(0, 10);

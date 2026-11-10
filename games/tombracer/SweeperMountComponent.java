@@ -33,11 +33,11 @@ final class SweeperMountComponent extends PrefabComponent {
         try {
           var9 = new Trap(param2, param0);
           var9.setSize((byte) -11, this.height, this.width);
-          var9.h(param1, param1 - 3);
-          var9.a(1, (byte) -12, true);
-          var9.a((byte) -3, 6);
-          var9.b((byte) 17, false);
-          var9.g(param1 ^ 126, 2);
+          var9.setObstructionLevel(param1, param1 - 3);
+          var9.setCollisionLevel(1, (byte) -12, true);
+          var9.setWeight((byte) -3, 6);
+          var9.setFloating((byte) 17, false);
+          var9.setPushMode(param1 ^ 126, 2);
           var9.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new SweepRotateLocomotor(param2, param0);
           var5.a((byte) -35, 8 * this.field_G);
