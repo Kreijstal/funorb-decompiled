@@ -5,7 +5,7 @@ final class TrackPlayerLocomotor extends Locomotor {
     private boolean field_t;
     private int field_p;
     private boolean field_r;
-    private ir field_o;
+    private IntPoint field_o;
     static SecondaryNodeHashTable field_s;
     private int field_q;
 
@@ -24,12 +24,12 @@ final class TrackPlayerLocomotor extends Locomotor {
         if (var11.u(-25561)) {
           return;
         }
-        this.field_o.field_f = var11.getX(3);
-        this.field_o.field_d = var11.getY(9648);
+        this.field_o.x = var11.getX(3);
+        this.field_o.y = var11.getY(9648);
         var4 = 78 % ((-69 - param0) / 42);
         this.trap.a(this.field_o, 59);
-        var3 = this.field_o.field_f - this.trap.getLocalX(25745);
-        var5 = this.field_o.field_d - this.trap.getLocalY(false);
+        var3 = this.field_o.x - this.trap.getLocalX(25745);
+        var5 = this.field_o.y - this.trap.getLocalY(false);
         var6 = 0;
         var7 = 0;
         var8 = ua.a(var3, -120);
@@ -88,7 +88,7 @@ final class TrackPlayerLocomotor extends Locomotor {
         this.field_t = true;
         this.field_r = false;
         this.field_q = 131072;
-        this.field_o = new ir();
+        this.field_o = new IntPoint();
         try {
           this.field_t = 1 != param1.readBits((byte) 44, 1) ? false : true;
           this.field_r = 1 == param1.readBits((byte) 44, 1) ? true : false;
@@ -104,7 +104,7 @@ final class TrackPlayerLocomotor extends Locomotor {
         this.field_t = true;
         this.field_r = false;
         this.field_q = 131072;
-        this.field_o = new ir();
+        this.field_o = new IntPoint();
     }
 
     final static void a(int param0, String param1) {
@@ -139,7 +139,7 @@ final class TrackPlayerLocomotor extends Locomotor {
           this.field_t = param1 ? true : false;
           return;
         }
-        this.field_o = (ir) null;
+        this.field_o = (IntPoint) null;
         this.field_t = param1 ? true : false;
     }
 

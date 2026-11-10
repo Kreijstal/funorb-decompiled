@@ -93,7 +93,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           if (var2_int >= 0) {
             var3 = UnlockOverlay.field_n + 1 & 127;
             if (var3 != vha.field_b) {
-              AchievementsOverlay.field_o[UnlockOverlay.field_n] = var2_int;
+              MessageOverlay.field_o[UnlockOverlay.field_n] = var2_int;
               MovingSawComponent.field_O[UnlockOverlay.field_n] = (char)0;
               UnlockOverlay.field_n = var3;
             }
@@ -207,7 +207,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               msa.isTypeableCharacter((char) var2_int, (byte) 124)) {
               var3 = 1 + UnlockOverlay.field_n & 127;
               if (vha.field_b != var3) {
-                AchievementsOverlay.field_o[UnlockOverlay.field_n] = -1;
+                MessageOverlay.field_o[UnlockOverlay.field_n] = -1;
                 MovingSawComponent.field_O[UnlockOverlay.field_n] = (char)var2_int;
                 UnlockOverlay.field_n = var3;
               }

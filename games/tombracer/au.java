@@ -12,8 +12,8 @@ final class au extends aa {
         if (param0) {
           return;
         }
-        if (nla.field_a != ub.field_c) {
-          if (vb.field_i == ub.field_c) {
+        if (nla.field_a != ObjectList.field_c) {
+          if (vb.field_i == ObjectList.field_c) {
             if (!TextWidgetPainter.a(23)) {
               if (MandelbrotOperator.field_o != null) {
                 su.a(MandelbrotOperator.field_o, (byte) -108, 3);
@@ -24,13 +24,13 @@ final class au extends aa {
                 StringCursor.a(-30600, false);
               }
             }
-            ub.field_c = nn.field_c;
+            ObjectList.field_c = nn.field_c;
           } else {
-            if (ub.field_c == nn.field_c) {
+            if (ObjectList.field_c == nn.field_c) {
               fieldTemp$6 = PlatformBehaviour.field_o;
               PlatformBehaviour.field_o = PlatformBehaviour.field_o - 1;
               if (fieldTemp$6 <= 0) {
-                ub.field_c = ub.field_h;
+                ObjectList.field_c = ObjectList.field_h;
               }
             }
           }
@@ -43,7 +43,7 @@ final class au extends aa {
             } else {
               pg.b(param0);
             }
-            ub.field_c = vb.field_i;
+            ObjectList.field_c = vb.field_i;
           }
         }
     }

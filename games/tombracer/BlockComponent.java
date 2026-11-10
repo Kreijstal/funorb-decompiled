@@ -171,10 +171,10 @@ final class BlockComponent extends PrefabComponent {
     final void q(byte param0) {
         super.q(param0);
         if (this.typeId != 49) {
-          this.b(-78, 2097152, 2097152);
+          this.setSize(-78, 2097152, 2097152);
           return;
         }
-        this.b(param0 ^ -82, 4194304, 4194304);
+        this.setSize(param0 ^ -82, 4194304, 4194304);
     }
 
     static {

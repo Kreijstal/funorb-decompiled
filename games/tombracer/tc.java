@@ -89,8 +89,8 @@ class tc extends lu {
           field_d = (SecondaryNodeHashTable) null;
         }
         jl.a((byte) -128, param0);
-        if (null != fj.field_c) {
-          fj.field_c.b(param1 + 74, param0);
+        if (null != RoomViewRenderer.field_c) {
+          RoomViewRenderer.field_c.b(param1 + 74, param0);
         }
         hs.a(param0, (byte) -91);
     }

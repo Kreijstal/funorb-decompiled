@@ -69,7 +69,7 @@ final class NanoTickClock extends GameClock {
           if (vha.field_b == nt.field_a) {
             return false;
           }
-          MenuEntry.field_h = AchievementsOverlay.field_o[vha.field_b];
+          MenuEntry.field_h = MessageOverlay.field_o[vha.field_b];
           HardwareOpenGlToolkit.field_td = MovingSawComponent.field_O[vha.field_b];
           vha.field_b = 1 + vha.field_b & 127;
           stackIn_8_0 = true;

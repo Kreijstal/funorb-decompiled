@@ -76,7 +76,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
 
     final native void v(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7);
 
-    final void a(int param0, ob[] param1) {
+    final void setLights(int param0, SceneLight[] param1) {
         int var4 = 0;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
@@ -418,8 +418,8 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
         this.n(var2.field_b.field_nativeid, var2.field_a.field_nativeid);
     }
 
-    final ob a(int param0, int param1, int param2, int param3, int param4, float param5) {
-        return (ob) ((Object) new kka(param0, param1, param2, param3, param4, param5));
+    final SceneLight a(int param0, int param1, int param2, int param3, int param4, float param5) {
+        return (SceneLight) ((Object) new kka(param0, param1, param2, param3, param4, param5));
     }
 
     final native int i();

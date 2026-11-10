@@ -221,7 +221,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -27, "mu_all_players_have_left");
                 if (null != var2) {
-                  ir.field_e = jaa.decodeText((byte) 122, var2);
+                  IntPoint.field_e = jaa.decodeText((byte) 122, var2);
                 }
                 var2 = dn.a((byte) -125, "mu_lobby_name");
                 if (var2 != null) {
@@ -229,7 +229,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -127, "mu_lobby_rating");
                 if (var2 != null) {
-                  AchievementsOverlay.field_m = jaa.decodeText((byte) 36, var2);
+                  MessageOverlay.field_m = jaa.decodeText((byte) 36, var2);
                 }
                 var2 = dn.a((byte) 114, "mu_lobby_friend_add");
                 if (var2 != null) {
@@ -293,7 +293,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 115, "mu_options_whocanjoin");
                 if (var2 != null) {
-                  fj.field_a = jaa.decodeText((byte) 101, var2);
+                  RoomViewRenderer.field_a = jaa.decodeText((byte) 101, var2);
                 }
                 var2 = dn.a((byte) 119, "mu_options_players");
                 if (null != var2) {
@@ -345,11 +345,11 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 119, "send_pm_to_x");
                 if (null != var2) {
-                  fj.field_b = jaa.decodeText((byte) 108, var2);
+                  RoomViewRenderer.field_b = jaa.decodeText((byte) 108, var2);
                 }
                 var2 = dn.a((byte) 115, "send_qc_to_x");
                 if (var2 != null) {
-                  ob.field_f = jaa.decodeText((byte) 113, var2);
+                  SceneLight.field_f = jaa.decodeText((byte) 113, var2);
                 }
                 var2 = dn.a((byte) 113, "send_pm");
                 if (var2 != null) {
@@ -2257,7 +2257,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 118, "achieved");
                 if (null != var2) {
-                  AchievementsOverlay.field_p = jaa.decodeText((byte) 81, var2);
+                  MessageOverlay.field_p = jaa.decodeText((byte) 81, var2);
                 }
                 var2 = dn.a((byte) 112, "orbpoints");
                 if (var2 != null) {

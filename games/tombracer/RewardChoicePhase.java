@@ -293,8 +293,8 @@ final class RewardChoicePhase extends MatchPhase {
 
     final void a(int param0, boolean param1, int param2) {
         int var4 = 0;
-        jha var5 = null;
-        jha var6 = null;
+        FloatingMessage var5 = null;
+        FloatingMessage var6 = null;
         if (this.field_o.getCurrentPlayerId(-1) == param0) {
           if (param2 == -1) {
             var6 = RewardChoicePhase.a(-9, gl.$cfr$intArgs$a$53ce4ab4c593(86, OpenGlTransform3D.field_n, new String[]{this.matchState.getColouredPlayerName(param0, 23807)}));
@@ -433,9 +433,9 @@ final class RewardChoicePhase extends MatchPhase {
         return stackIn_8_0;
     }
 
-    final static jha a(int param0, String param1) {
+    final static FloatingMessage a(int param0, String param1) {
         RuntimeException var2 = null;
-        jha stackIn_3_0 = null;
+        FloatingMessage stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -444,7 +444,7 @@ final class RewardChoicePhase extends MatchPhase {
           if (param0 >= -4) {
             RewardChoicePhase.releaseStatics(-54);
           }
-          stackIn_3_0 = new jha(1, (String) null, param1);
+          stackIn_3_0 = new FloatingMessage(1, (String) null, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -205,7 +205,7 @@ abstract class ConsoleWindow implements ShellListener {
     private final jea a(int param0, byte param1, int param2) {
         jea var4 = new jea(0L, (jea) null);
         int var5 = 39 / ((-89 - param1) / 36);
-        var4.field_w = sva.a(param2, param0, 4);
+        var4.field_w = RoomLighting.a(param2, param0, 4);
         return var4;
     }
 
@@ -305,7 +305,7 @@ abstract class ConsoleWindow implements ShellListener {
           String var4 = (String) null;
           this.a(true, (String) null);
         }
-        var3.field_w = sva.a(param1, 0, 4);
+        var3.field_w = RoomLighting.a(param1, 0, 4);
         return var3;
     }
 

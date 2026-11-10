@@ -523,7 +523,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("wallShadows", (byte) 111);
                 if (var2 != null) {
-                  ir.field_b = jaa.decodeText((byte) 76, var2);
+                  IntPoint.field_b = jaa.decodeText((byte) 76, var2);
                 }
                 var2 = mt.readTextEntry("textures_all", (byte) 104);
                 if (null != var2) {
@@ -635,7 +635,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("instructionTextCrushers", (byte) 116);
                 if (var2 != null) {
-                  ir.field_c = jaa.decodeText((byte) 99, var2);
+                  IntPoint.field_c = jaa.decodeText((byte) 99, var2);
                 }
                 var2 = mt.readTextEntry("instructionTitleLindemannTotems", (byte) 117);
                 if (null != var2) {

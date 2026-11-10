@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ob extends IntrusiveNode {
+abstract class SceneLight extends IntrusiveNode {
     float field_j;
     static int field_i;
     int field_h;
@@ -157,7 +157,7 @@ abstract class ob extends IntrusiveNode {
 
     abstract void a(int param0, int param1, byte param2, int param3);
 
-    ob(int param0, int param1, int param2, int param3, int param4, float param5) {
+    SceneLight(int param0, int param1, int param2, int param3, int param4, float param5) {
         this.field_m = param1;
         this.field_k = param0;
         this.field_l = param2;

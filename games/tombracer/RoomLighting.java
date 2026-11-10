@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sva implements ev {
-    private ob[] field_a;
+final class RoomLighting implements ev {
+    private SceneLight[] activeLights;
     static int field_d;
     private IntrusiveDeque field_b;
-    private Room field_c;
+    private Room room;
 
     public final void a(int param0) {
         if (param0 != 13113) {
-          this.field_a = (ob[]) null;
+          this.activeLights = (SceneLight[]) null;
         }
         this.field_b.clear(8);
     }
@@ -44,7 +44,7 @@ final class sva implements ev {
             var4 = 0.15000000596046448f;
             var5 = 0.6499999761581421f;
           } else {
-            var10 = this.field_c.l((byte) 119);
+            var10 = this.room.l((byte) 119);
             if (var10 != 0 &&
               1 == var10) {
               var8 = -8;
@@ -73,13 +73,13 @@ final class sva implements ev {
             var12 = (uh) (this.field_b.first(-80));
             while (var12 != null) {
               if (!var12.c(param1 - 1459836712)) {
-                var12.a((byte) 100, this.field_c.getSimulation(-1553494544).tick);
+                var12.a((byte) 100, this.room.getSimulation(-1553494544).tick);
               } else {
                 var12.unlink(57);
               }
               var12 = (uh) (this.field_b.next(116));
             }
-            tga.field_a.a(0, (ob[]) null);
+            tga.field_a.setLights(0, (SceneLight[]) null);
           }
           if (param1 != -15530) {
             var14 = (iq) null;
@@ -108,7 +108,7 @@ final class sva implements ev {
         RuntimeException var3 = null;
         try {
           if (uh.a((byte) -7)) {
-            tga.field_a.a(0, (ob[]) null);
+            tga.field_a.setLights(0, (SceneLight[]) null);
           }
           if (param0 != -16188) {
             this.field_b = (IntrusiveDeque) null;
@@ -130,7 +130,7 @@ final class sva implements ev {
 
     final static Sprite[] a(int param0, int param1, int param2) {
         if (param2 != 4) {
-          sva.a(17, 31, 46);
+          RoomLighting.a(17, 31, 46);
         }
         return vl.a((byte) 125, param0, param1, 1);
     }
@@ -147,7 +147,7 @@ final class sva implements ev {
     public final void a(vf param0, int param1, iq param2, boolean param3) {
         try {
           if (!param3) {
-            sva.a(112, -118, 127);
+            RoomLighting.a(112, -118, 127);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sva.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -195,7 +195,7 @@ final class sva implements ev {
           if (uh.a((byte) -7)) {
             var4_int = param1 instanceof Particle ? 1 : 0;
             var5 = 0;
-            var6 = MidiVoiceMixer.b(this.field_a.length, tga.field_a.l(), -97);
+            var6 = MidiVoiceMixer.b(this.activeLights.length, tga.field_a.l(), -97);
             var7 = null;
             if (param1 instanceof gs) {
               var7 = (gs) (param1);
@@ -205,7 +205,7 @@ final class sva implements ev {
             if (var4_int == 0) {
               if (var7 != null &&
                 ((gs) (var7)).a(true)) {
-                tga.field_a.a(var5, this.field_a);
+                tga.field_a.setLights(var5, this.activeLights);
                 return;
               }
               var11 = (uh) (this.field_b.first(-80));
@@ -236,11 +236,11 @@ final class sva implements ev {
                   break;
                 }
                 ((uh) (var10Lifetime1)).a(-1, 81);
-                this.field_a[var5] = ((uh) (var10Lifetime1)).a(47).field_c;
+                this.activeLights[var5] = ((uh) (var10Lifetime1)).a(47).field_c;
                 var5++;
               }
             }
-            tga.field_a.a(var5, this.field_a);
+            tga.field_a.setLights(var5, this.activeLights);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -274,11 +274,11 @@ final class sva implements ev {
         }
     }
 
-    sva(Room param0) {
-        this.field_a = new ob[4];
+    RoomLighting(Room param0) {
+        this.activeLights = new SceneLight[4];
         this.field_b = new IntrusiveDeque();
         try {
-          this.field_c = param0;
+          this.room = param0;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sva.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

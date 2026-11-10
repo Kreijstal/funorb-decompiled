@@ -83,8 +83,8 @@ final class FacePlayerMountComponent extends PrefabComponent {
 
     final void q(byte param0) {
         super.q(param0);
-        this.b(62, 2097152, 2097152);
-        this.a((byte) 109, new mka[]{new mka(0, 0, 2097152, 0, 8)});
+        this.setSize(62, 2097152, 2097152);
+        this.setMounts((byte) 109, new ComponentMount[]{new ComponentMount(0, 0, 2097152, 0, 8)});
     }
 
     final int getRenderLayer(int param0) {

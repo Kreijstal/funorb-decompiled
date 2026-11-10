@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AchievementsOverlay extends MatchOverlay {
+final class MessageOverlay extends MatchOverlay {
     static String field_p;
     private dea field_n;
     static jea field_t;
@@ -122,7 +122,7 @@ final class AchievementsOverlay extends MatchOverlay {
         }
     }
 
-    AchievementsOverlay(MatchScreen param0, ms param1) {
+    MessageOverlay(MatchScreen param0, ms param1) {
         super(param0);
         this.field_n = new dea();
         this.field_l = 20;
@@ -148,7 +148,7 @@ final class AchievementsOverlay extends MatchOverlay {
         field_o = null;
         field_p = null;
         if (param0 != 96) {
-          AchievementsOverlay.releaseStatics((byte) -110);
+          MessageOverlay.releaseStatics((byte) -110);
           field_m = null;
           return;
         }

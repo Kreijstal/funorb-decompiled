@@ -50,16 +50,16 @@ abstract class kma implements nua {
     final static void a(boolean param0, int param1, int param2) {
         int var5 = 0;
         int var3 = 32 % ((43 - param1) / 57);
-        if (null == fj.field_c) {
+        if (null == RoomViewRenderer.field_c) {
           return;
         }
-        int var4 = fj.field_c.updateAndPollReason(-1, param0);
+        int var4 = RoomViewRenderer.field_c.updateAndPollReason(-1, param0);
         if (var4 != -2) {
           if (var4 != -1) {
-            var5 = fj.field_c.isMuteRequested(false) ? 1 : 0;
-            PowerDownItemBehaviour.a(var4, param2, (byte) 87, var5 != 0, fj.field_c.field_Db, fj.field_c.f(80));
+            var5 = RoomViewRenderer.field_c.isMuteRequested(false) ? 1 : 0;
+            PowerDownItemBehaviour.a(var4, param2, (byte) 87, var5 != 0, RoomViewRenderer.field_c.field_Db, RoomViewRenderer.field_c.f(80));
           }
-          fj.field_c = null;
+          RoomViewRenderer.field_c = null;
           wp.a(-1);
           return;
         }

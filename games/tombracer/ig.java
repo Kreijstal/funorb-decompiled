@@ -5,7 +5,7 @@ final class ig {
     final static void a(int param0) {
         pha var3 = null;
         int var2 = TombRacer.field_G ? 1 : 0;
-        qa.field_o = false;
+        PlayerViewport.field_o = false;
         C2SChooseRewardPacket.field_a = null;
         WaveformOperator.field_n = null;
         if (param0 > -94) {

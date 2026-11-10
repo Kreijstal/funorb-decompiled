@@ -237,8 +237,8 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         try {
           discarded$2 = this.hasParent(-76);
           if (param0 <= 103) {
-            ir var4 = (ir) null;
-            this.a((ir) null, -117);
+            IntPoint var4 = (IntPoint) null;
+            this.a((IntPoint) null, -117);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fsa.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -874,7 +874,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
     }
 
     private final int a(int param0, TrapPart param1) {
-        ub var3 = null;
+        ObjectList var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
@@ -892,11 +892,11 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           }
           var4 = 0;
           while (true) {
-            if (var4 >= var3.a(-1)) {
+            if (var4 >= var3.size(-1)) {
               stackIn_10_0 = -1;
               return stackIn_10_0;
             }
-            if (param1 != var3.a(true, var4)) {
+            if (param1 != var3.get(true, var4)) {
               var4++;
               continue;
             }
@@ -1982,10 +1982,10 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
     }
 
     private final TrapPart b(int param0, int param1) {
-        ub var3 = this.collectParts((byte) -30);
+        ObjectList var3 = this.collectParts((byte) -30);
         if (param1 >= 0 &&
-          !(param1 >= var3.a(-1))) {
-          return (TrapPart) (var3.a(true, param1));
+          !(param1 >= var3.size(-1))) {
+          return (TrapPart) (var3.get(true, param1));
         }
         if (param0 == 3) {
           return null;
@@ -2872,17 +2872,17 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         return this.removed;
     }
 
-    private final ub collectParts(byte param0) {
+    private final ObjectList collectParts(byte param0) {
         int var4 = TombRacer.field_G ? 1 : 0;
-        ub var2 = new ub();
+        ObjectList var2 = new ObjectList();
         Locomotor var3 = (Locomotor) (this.locomotors.first(-80));
         while (var3 != null) {
-          var2.a((byte) -37, var3);
+          var2.add((byte) -37, var3);
           var3 = (Locomotor) (this.locomotors.next(param0 ^ -110));
         }
         Behaviour var3_ref = (Behaviour) (this.behaviours.first(param0 - 50));
         while (var3_ref != null) {
-          var2.a((byte) -37, var3_ref);
+          var2.add((byte) -37, var3_ref);
           var3_ref = (Behaviour) (this.behaviours.next(117));
         }
         if (param0 != -30) {
@@ -2964,7 +2964,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         this.field_D = false;
     }
 
-    final void a(ir param0, int param1) {
+    final void a(IntPoint param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -2974,12 +2974,12 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         RuntimeException var3 = null;
         try {
           if (null != this.parent) {
-            param0.field_f = param0.field_f - this.parent.getX(3);
-            param0.field_d = param0.field_d - this.parent.getY(9648);
-            var3_int = param0.field_f >> 8;
-            var4 = param0.field_d >> 8;
-            param0.field_d = var4 * (this.field_w >> 8) - var3_int * (this.field_g >> 8);
-            param0.field_f = var3_int * (this.field_w >> 8) + (this.field_g >> 8) * var4;
+            param0.x = param0.x - this.parent.getX(3);
+            param0.y = param0.y - this.parent.getY(9648);
+            var3_int = param0.x >> 8;
+            var4 = param0.y >> 8;
+            param0.y = var4 * (this.field_w >> 8) - var3_int * (this.field_g >> 8);
+            param0.x = var3_int * (this.field_w >> 8) + (this.field_g >> 8) * var4;
           }
           if (param1 <= 9) {
             this.field_fb = (TeleportState) null;
@@ -3013,7 +3013,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         return this.room.o((byte) -82);
     }
 
-    final void a(byte param0, ir param1) {
+    final void a(byte param0, IntPoint param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -3026,12 +3026,12 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
             this.r((byte) 1);
           }
           if (null != this.parent) {
-            var3_int = param1.field_f >> 8;
-            var4 = param1.field_d >> 8;
-            param1.field_f = -((this.field_g >> 8) * var4) + (this.field_w >> 8) * var3_int;
-            param1.field_d = (this.field_w >> 8) * var4 + var3_int * (this.field_g >> 8);
-            param1.field_f = param1.field_f + this.parent.getX(3);
-            param1.field_d = param1.field_d + this.parent.getY(9648);
+            var3_int = param1.x >> 8;
+            var4 = param1.y >> 8;
+            param1.x = -((this.field_g >> 8) * var4) + (this.field_w >> 8) * var3_int;
+            param1.y = (this.field_w >> 8) * var4 + var3_int * (this.field_g >> 8);
+            param1.x = param1.x + this.parent.getX(3);
+            param1.y = param1.y + this.parent.getY(9648);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

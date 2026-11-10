@@ -56,10 +56,10 @@ final class PortalBehaviour extends Behaviour {
         }
     }
 
-    final static jha a(int param0, String param1, int param2, int param3, String param4) {
+    final static FloatingMessage a(int param0, String param1, int param2, int param3, String param4) {
         int var5_int = 0;
         int var6 = 0;
-        jha stackIn_8_0 = null;
+        FloatingMessage stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -82,7 +82,7 @@ final class PortalBehaviour extends Behaviour {
               }
             }
           }
-          stackIn_8_0 = new jha(0, param4, param1);
+          stackIn_8_0 = new FloatingMessage(0, param4, param1);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

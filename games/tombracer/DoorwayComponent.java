@@ -163,30 +163,30 @@ final class DoorwayComponent extends PrefabComponent {
         if (20 == var2) {
           this.field_J = 1;
           this.field_H = 3;
-          this.b(-67, this.field_H * 2097152, 2097152 * this.field_J);
+          this.setSize(-67, this.field_H * 2097152, 2097152 * this.field_J);
           return;
         }
         if (var2 == 44) {
           this.field_J = 1;
           this.field_H = 3;
-          this.b(-67, this.field_H * 2097152, 2097152 * this.field_J);
+          this.setSize(-67, this.field_H * 2097152, 2097152 * this.field_J);
           return;
         }
         if (var2 == 21) {
           this.field_H = 4;
           this.field_J = 1;
-          this.b(-67, this.field_H * 2097152, 2097152 * this.field_J);
+          this.setSize(-67, this.field_H * 2097152, 2097152 * this.field_J);
           return;
         }
         if (45 != var2) {
           this.field_H = 4;
           this.field_J = 1;
-          this.b(-67, this.field_H * 2097152, 2097152 * this.field_J);
+          this.setSize(-67, this.field_H * 2097152, 2097152 * this.field_J);
           return;
         }
         this.field_H = 4;
         this.field_J = 1;
-        this.b(-67, this.field_H * 2097152, 2097152 * this.field_J);
+        this.setSize(-67, this.field_H * 2097152, 2097152 * this.field_J);
     }
 
     DoorwayComponent(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {

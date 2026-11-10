@@ -158,7 +158,7 @@ final class fp {
         baa.field_g = SpriteData.loadSprite(param2, "", "slab_small1");
         FullscreenConfirmationDialog.field_O = SpriteData.loadSprite(param2, "", "slab_small2");
         WaveformOperator.field_q = SpriteData.loadSprite(param2, "", "slab_small3");
-        ob.field_n = SpriteData.loadSprite(param2, "", "slab_small4");
+        SceneLight.field_n = SpriteData.loadSprite(param2, "", "slab_small4");
         vua.field_y = SpriteData.loadSprite(param2, "", "slab_medium");
         int incrementValue$6 = param1;
         param1++;

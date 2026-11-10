@@ -27,7 +27,7 @@ final class BrazierComponent extends PrefabComponent {
 
     final void q(byte param0) {
         super.q(param0);
-        this.b(param0 + 174, 2097152, 2097152);
+        this.setSize(param0 + 174, 2097152, 2097152);
     }
 
     BrazierComponent(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {

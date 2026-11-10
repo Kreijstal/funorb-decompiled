@@ -15,7 +15,7 @@ final class FleeLocomotor extends Locomotor {
     static String field_y;
     private boolean field_r;
     static String field_B;
-    private ir field_s;
+    private IntPoint field_s;
     private int field_E;
     private int field_p;
     private boolean field_D;
@@ -61,11 +61,11 @@ final class FleeLocomotor extends Locomotor {
           return;
         }
         var3 = -103 / ((-69 - param0) / 42);
-        this.field_s.field_f = var14.getX(3);
-        this.field_s.field_d = var14.getY(9648);
+        this.field_s.x = var14.getX(3);
+        this.field_s.y = var14.getY(9648);
         this.trap.a(this.field_s, 117);
-        var4 = this.field_s.field_f - this.trap.getLocalX(25745);
-        var5 = this.field_s.field_d - this.trap.getLocalY(false);
+        var4 = this.field_s.x - this.trap.getLocalX(25745);
+        var5 = this.field_s.y - this.trap.getLocalY(false);
         var6 = (var5 >> 16) * (var5 >> 16) + (var4 >> 16) * (var4 >> 16);
         if (this.field_D &&
           !this.field_r) {
@@ -211,7 +211,7 @@ final class FleeLocomotor extends Locomotor {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         this.field_u = 1024;
-        this.field_s = new ir();
+        this.field_s = new IntPoint();
         try {
           this.field_t = param1.readBits((byte) 44, 10) << 16;
           if (7 < param0.formatVersion) {

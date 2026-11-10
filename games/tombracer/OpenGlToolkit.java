@@ -159,7 +159,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     private int field_e;
     boolean field_Kc;
     private jp field_Sc;
-    private ob[] field_Dc;
+    private SceneLight[] field_Dc;
     boolean field_Eb;
     np field_E;
     float field_s;
@@ -1767,7 +1767,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_cd = -1.0f;
         this.field_ib = new float[4];
         this.field_ac = -1;
-        this.field_Dc = new ob[tj.field_a];
+        this.field_Dc = new SceneLight[tj.field_a];
         this.field_Pc = 0;
         this.field_kb = 512;
         this.field_hb = false;
@@ -2034,8 +2034,8 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final ob a(int param0, int param1, int param2, int param3, int param4, float param5) {
-        return (ob) ((Object) new wba(param0, param1, param2, param3, param4, param5));
+    final SceneLight a(int param0, int param1, int param2, int param3, int param4, float param5) {
+        return (SceneLight) ((Object) new wba(param0, param1, param2, param3, param4, param5));
     }
 
     final boolean i(int param0) {
@@ -2065,7 +2065,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     }
 
     private final void d(int param0) {
-        ob var3 = null;
+        SceneLight var3 = null;
         int var4 = 0;
         int var5 = 0;
         float var6 = 0.0f;
@@ -3151,7 +3151,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         return 1;
     }
 
-    final void a(int param0, ob[] param1) {
+    final void setLights(int param0, SceneLight[] param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_10_0 = null;

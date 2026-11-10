@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fj {
+final class RoomViewRenderer {
     private int field_d;
     static String field_a;
     static String field_b;
@@ -18,12 +18,12 @@ final class fj {
 
     final void a(int param0, int param1) {
         if (param0 != 0) {
-          fj.takeDecodedOpaqueSprites(17);
+          RoomViewRenderer.takeDecodedOpaqueSprites(17);
         }
         this.field_d = param1;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, MatchScreen param5, int param6) {
+    final void render(int param0, int param1, int param2, int param3, int param4, MatchScreen param5, int param6) {
         RuntimeException stackIn_68_0 = null;
         StringBuilder stackIn_68_1 = null;
         String stackIn_69_2 = null;
@@ -252,7 +252,7 @@ final class fj {
         int var2 = -10 / ((param0 - 61) / 54);
     }
 
-    fj() {
+    RoomViewRenderer() {
         this.field_d = -1;
     }
 

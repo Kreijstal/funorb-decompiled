@@ -108,7 +108,7 @@ final class tn extends IntrusiveNode {
           tn.a(120);
         }
         if (cga.field_f < 2) {
-          return ub.field_b;
+          return ObjectList.field_b;
         }
         if (InvisibleTouchSwitchComponent.field_J != null) {
           if (!InvisibleTouchSwitchComponent.field_J.b(-60)) {

@@ -342,7 +342,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
     }
 
     final void g(byte param0) {
-        ob var3 = null;
+        SceneLight var3 = null;
         int var4 = 0;
         int var5 = 0;
         float var6 = 0.0f;

@@ -289,9 +289,9 @@ final class PlayerContextMenu {
               if (!RewardChoicePhase.isPrivateChatTarget(this.field_i, (byte) -50) &&
                 !fua.field_g) {
                 if (!PowerDownItemBehaviour.field_s) {
-                  this.field_f.addItem((byte) -77, 8, gl.$cfr$intArgs$a$53ce4ab4c593(114, fj.field_b, new String[]{var7}));
+                  this.field_f.addItem((byte) -77, 8, gl.$cfr$intArgs$a$53ce4ab4c593(114, RoomViewRenderer.field_b, new String[]{var7}));
                 }
-                this.field_f.addItem((byte) -118, 18, gl.$cfr$intArgs$a$53ce4ab4c593(108, ob.field_f, new String[]{var7}));
+                this.field_f.addItem((byte) -118, 18, gl.$cfr$intArgs$a$53ce4ab4c593(108, SceneLight.field_f, new String[]{var7}));
                 if (param0 != null) {
                   this.field_e = param0;
                   this.field_f.addItem((byte) -71, 19, gl.$cfr$intArgs$a$53ce4ab4c593(96, gja.field_k, new String[]{var7}));
@@ -383,7 +383,7 @@ final class PlayerContextMenu {
           }
           if (this.field_g != SimpleConditionBehaviour.field_r &&
             null != C2SChooseRewardPacket.field_a) {
-            if (!mka.b(8192)) {
+            if (!ComponentMount.b(8192)) {
               return;
             }
             var14 = nl.a(true, this.field_g);
@@ -428,7 +428,7 @@ final class PlayerContextMenu {
         if (null == C2SChooseRewardPacket.field_a) {
           return;
         }
-        if (!mka.b(8192)) {
+        if (!ComponentMount.b(8192)) {
           return;
         }
         var13 = nl.a(true, this.field_g);
@@ -484,13 +484,13 @@ final class PlayerContextMenu {
           if (param1 != 17) {
             return false;
           }
-          fj.field_c = new ReportAbuseDialog(this.field_h.field_q, this.field_h.field_A, this.field_h.field_G, this.field_h.field_t, param0, WallModel.field_r, OpenGlTransform3D.field_f, cga.field_g, Corpse.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p, this.field_i, this.field_g);
+          RoomViewRenderer.field_c = new ReportAbuseDialog(this.field_h.field_q, this.field_h.field_A, this.field_h.field_G, this.field_h.field_t, param0, WallModel.field_r, OpenGlTransform3D.field_f, cga.field_g, Corpse.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p, this.field_i, this.field_g);
           return true;
         }
         if (param1 != 17) {
           return false;
         }
-        fj.field_c = new ReportAbuseDialog(this.field_h.field_q, this.field_h.field_A, this.field_h.field_G, this.field_h.field_t, param0, WallModel.field_r, OpenGlTransform3D.field_f, cga.field_g, Corpse.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p, this.field_i, this.field_g);
+        RoomViewRenderer.field_c = new ReportAbuseDialog(this.field_h.field_q, this.field_h.field_A, this.field_h.field_G, this.field_h.field_t, param0, WallModel.field_r, OpenGlTransform3D.field_f, cga.field_g, Corpse.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p, this.field_i, this.field_g);
         return true;
     }
 

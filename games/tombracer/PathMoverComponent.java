@@ -10,9 +10,9 @@ abstract class PathMoverComponent extends PrefabComponent {
     private int field_J;
     private boolean field_I;
 
-    final void a(Room param0, int param1) {
+    final void mirror(Room param0, int param1) {
         try {
-          super.a(param0, param1);
+          super.mirror(param0, param1);
           this.field_K.a(true);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ra.BB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

@@ -219,7 +219,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
           if (era.field_c) {
             SwitchModel.o((byte) -119);
             ig.a(-125);
-            ub.b(0);
+            ObjectList.b(0);
             era.field_c = false;
           }
           if (SpriteTileOperator.field_t instanceof MenuScreen &&

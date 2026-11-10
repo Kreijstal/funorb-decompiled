@@ -57,7 +57,7 @@ final class SkeletonComponent extends dna {
 
     final void q(byte param0) {
         super.q(param0);
-        this.b(-71, 2097152, 2097152);
+        this.setSize(-71, 2097152, 2097152);
     }
 
     final Trap createTrap(boolean param0, int param1, Room param2) {

@@ -398,7 +398,7 @@ final class ResourceArchive {
             param1[1] != 0 ||
             param1[2] != 0 ||
             param1[3] != 0)) {
-            var36 = ir.unwrapByteStorage(this.field_a[param0], 13588, true);
+            var36 = IntPoint.unwrapByteStorage(this.field_a[param0], 13588, true);
             var26 = var36;
             var10 = var26;
             var27 = new PacketBuffer(var36);
@@ -406,7 +406,7 @@ final class ResourceArchive {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var10 = ir.unwrapByteStorage(this.field_a[param0], 13588, false);
+            var10 = IntPoint.unwrapByteStorage(this.field_a[param0], 13588, false);
           }
           try {
             var37 = RotaterMountComponent.decompressContainer(var10, -101);
@@ -852,7 +852,7 @@ final class ResourceArchive {
             throw new RuntimeException("");
           }
           if (this.field_l[param3][param0] != null) {
-            var7 = ir.unwrapByteStorage(this.field_l[param3][param0], 13588, false);
+            var7 = IntPoint.unwrapByteStorage(this.field_l[param3][param0], 13588, false);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");

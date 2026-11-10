@@ -242,7 +242,7 @@ final class BoulderComponent extends PathMoverComponent {
 
     final void q(byte param0) {
         super.q(param0);
-        this.b(-110, 4194304, 4194304);
+        this.setSize(-110, 4194304, 4194304);
     }
 
     final boolean A(int param0) {

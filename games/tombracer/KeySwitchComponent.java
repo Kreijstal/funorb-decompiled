@@ -135,7 +135,7 @@ final class KeySwitchComponent extends SwitchComponent {
 
     final void q(byte param0) {
         super.q(param0);
-        this.b(param0 + 223, 2097152, 2097152);
+        this.setSize(param0 + 223, 2097152, 2097152);
     }
 
     final static void a(byte param0, String param1, ResourceArchive param2, ResourceArchive param3, int param4) {

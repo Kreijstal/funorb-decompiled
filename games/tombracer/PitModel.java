@@ -19,7 +19,7 @@ final class PitModel extends TrapModel {
 
     final void a(uw param0, int param1) {
         ev var3 = null;
-        sva var4 = null;
+        RoomLighting var4 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -34,8 +34,8 @@ final class PitModel extends TrapModel {
           this.field_m = (dpa[][]) null;
           if (null != this.field_u) {
             var3 = param0.a((byte) 59);
-            if (var3 instanceof sva) {
-              var4 = (sva) (var3);
+            if (var3 instanceof RoomLighting) {
+              var4 = (RoomLighting) (var3);
               var4.b((byte) -105, this.field_u);
             }
             this.field_u = null;
@@ -807,7 +807,7 @@ final class PitModel extends TrapModel {
     final void b(int param0, uw param1) {
         aga var6 = null;
         ev var4 = null;
-        sva var5 = null;
+        RoomLighting var5 = null;
         try {
           if (null == this.field_m) {
             this.n((byte) -110);
@@ -820,8 +820,8 @@ final class PitModel extends TrapModel {
             this.field_u = new uh(var6);
             this.field_u.a(-17825792 + this.getRenderZ((byte) -118) + 4194304, (byte) 95, this.getRenderY((byte) 108), this.getRenderX((byte) 84));
             var4 = param1.a((byte) 59);
-            if (var4 instanceof sva) {
-              var5 = (sva) (var4);
+            if (var4 instanceof RoomLighting) {
+              var5 = (RoomLighting) (var4);
               var5.a((byte) 45, this.field_u);
             }
           }

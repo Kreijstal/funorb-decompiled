@@ -195,7 +195,7 @@ final class mp {
           VortexBehaviour.field_t = param7;
           BrickOperator.field_t[3] = 16736511;
           BrickOperator.field_t[2] = 16736352;
-          sva.field_d = 8421504;
+          RoomLighting.field_d = 8421504;
           BrickOperator.field_t[param6] = 16764000;
           pm.field_a[4] = 16711935;
           BrickOperator.field_t[1] = 6356832;
@@ -222,9 +222,9 @@ final class mp {
           pq.field_g.field_H = PlatformBehaviour.field_s;
           RotaterMountComponent.field_K.b(param6 - 124, pq.field_g);
           RotaterMountComponent.field_K.a(param6 ^ -10966);
-          mka.field_b = new jea(0L, (jea) null);
-          mka.field_b.field_w = var16;
-          RotaterMountComponent.field_K.b(-125, mka.field_b);
+          ComponentMount.field_b = new jea(0L, (jea) null);
+          ComponentMount.field_b.field_w = var16;
+          RotaterMountComponent.field_K.b(-125, ComponentMount.field_b);
           bt.field_c = new jea[5];
           PitModel.field_p = new jea[5];
           MembersUpsellMenu.field_y = new jea[5];

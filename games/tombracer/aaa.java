@@ -62,13 +62,13 @@ final class aaa {
             }
             return;
           }
-          var20 = ir.unwrapByteStorage(hna.field_e, 13588, false);
+          var20 = IntPoint.unwrapByteStorage(hna.field_e, 13588, false);
           this.field_h = new lha(param0, 6410, 128, 128, 16, var20, 6410);
-          var21 = ir.unwrapByteStorage(TreasureValuesOverlay.field_l, 13588, false);
+          var21 = IntPoint.unwrapByteStorage(TreasureValuesOverlay.field_l, 13588, false);
           this.field_a = new lha(param0, 6410, 128, 128, 16, var21, 6410);
           var10 = param0.field_zc;
           if (var10.a((byte) 11)) {
-            var22 = ir.unwrapByteStorage(uga.field_m, 13588, false);
+            var22 = IntPoint.unwrapByteStorage(uga.field_m, 13588, false);
             this.field_c = new lha(param0, 6408, 128, 128, 16);
             var4 = new lha(param0, 6409, 128, 128, 16, var22, 6409);
             if (var10.a(-112, 2.0f, var4, this.field_c)) {

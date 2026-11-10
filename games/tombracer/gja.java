@@ -869,7 +869,7 @@ final class gja extends ka {
                 this.field_D = param1.a(false, (byte) 64);
               }
               if (null != param1.field_m &&
-                ub.a(this.field_h, param2, (byte) -122)) {
+                ObjectList.a(this.field_h, param2, (byte) -122)) {
                 this.field_mb = param1.b((byte) -124);
               }
               stackIn_351_0 = (oc) (param1);
@@ -1735,7 +1735,7 @@ final class gja extends ka {
             this.field_hb = null;
           }
           if (this.field_mb != null &&
-            !ub.a(this.field_h, this.field_Y, (byte) 21)) {
+            !ObjectList.a(this.field_h, this.field_Y, (byte) 21)) {
             this.field_mb = (int[][]) null;
           }
           if (this.field_U != null &&
@@ -2337,7 +2337,7 @@ final class gja extends ka {
           boolean decompiledFrameCompleted9 = true;
           param0.field_T = this.field_T;
           param0.field_v = this.field_v;
-          var7_int = ir.a(param4, this.field_h, (byte) -100) ? 1 : 0;
+          var7_int = IntPoint.a(param4, this.field_h, (byte) -100) ? 1 : 0;
           var8 = cga.a(param4, -62, this.field_h) ? 1 : 0;
           var9 = TripBeamComponent.c(param4, this.field_h, 52) ? 1 : 0;
           var10 = var8 | var7_int | var9;

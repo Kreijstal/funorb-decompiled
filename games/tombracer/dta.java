@@ -376,7 +376,7 @@ final class dta {
           }
           var9_int = (-param0 + param1 >> 1) + param0;
           var10Lifetime1 = param5 + (param6 - param5 >> 1);
-          qa.a(50, 200, (byte) 94, var9_int - 100, aq.field_a, -34 + var10Lifetime1);
+          PlayerViewport.a(50, 200, (byte) 94, var9_int - 100, aq.field_a, -34 + var10Lifetime1);
           MembersUpsellMenu.a(hu.field_d, 11903361, eda.field_f, -1, var10Lifetime1, var9_int, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

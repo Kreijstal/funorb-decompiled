@@ -1,38 +1,38 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ub {
+final class ObjectList {
     static nl field_d;
-    private int field_f;
+    private int size;
     private static String[] field_g;
-    private Object[] field_e;
+    private Object[] elements;
     static String field_i;
     static int field_h;
-    private int field_a;
+    private int growth;
     static String field_b;
     static int field_c;
 
-    final void a(int param0, int param1, Object param2) {
+    final void insert(int param0, int param1, Object param2) {
         Object[] var6 = null;
         Object[] var7 = null;
         Object[] var4 = null;
         try {
-          this.field_f = this.field_f + 1;
+          this.size = this.size + 1;
           if (param1 != 0) {
             Object var5 = (Object) null;
-            this.a(-79, -69, (Object) null);
+            this.insert(-79, -69, (Object) null);
           }
-          if (this.field_f < this.field_e.length) {
-            ArrayUtils.copy(this.field_e, param0, this.field_e, 1 + param0, -param0 + this.field_f - 1);
+          if (this.size < this.elements.length) {
+            ArrayUtils.copy(this.elements, param0, this.elements, 1 + param0, -param0 + this.size - 1);
           } else {
-            var6 = new Object[this.field_a + this.field_e.length];
+            var6 = new Object[this.growth + this.elements.length];
             var7 = var6;
             var4 = var7;
-            ArrayUtils.copy(this.field_e, 0, var7, 0, param0);
-            ArrayUtils.copy(this.field_e, param0, var4, 1 + param0, -param0 + this.field_e.length);
-            this.field_e = var6;
+            ArrayUtils.copy(this.elements, 0, var7, 0, param0);
+            ArrayUtils.copy(this.elements, param0, var4, 1 + param0, -param0 + this.elements.length);
+            this.elements = var6;
           }
-          this.field_e[param0] = param2;
+          this.elements[param0] = param2;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ub.I(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -74,12 +74,12 @@ final class ub {
         RuntimeException var3 = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          this.field_e = new Object[param1.length];
-          ArrayUtils.copy(param1, 0, this.field_e, 0, param1.length);
-          this.field_f = param0;
-          for (var3_int = 0; this.field_e.length > var3_int; var3_int++) {
-            if (this.field_e[var3_int] != null) {
-              this.field_f = this.field_f + 1;
+          this.elements = new Object[param1.length];
+          ArrayUtils.copy(param1, 0, this.elements, 0, param1.length);
+          this.size = param0;
+          for (var3_int = 0; this.elements.length > var3_int; var3_int++) {
+            if (this.elements[var3_int] != null) {
+              this.size = this.size + 1;
             }
           }
           return;
@@ -107,27 +107,27 @@ final class ub {
         field_b = null;
     }
 
-    public ub() {
+    public ObjectList() {
         this(10, 10);
     }
 
-    final Object a(boolean param0, int param1) {
+    final Object get(boolean param0, int param1) {
         if (!param0) {
-          this.field_e = new Object[5];
+          this.elements = new Object[5];
         }
-        return this.field_e[param1];
+        return this.elements[param1];
     }
 
-    private ub(Object[] param0, int param1) {
+    private ObjectList(Object[] param0, int param1) {
         this(param0);
         try {
-          this.field_a = param1;
+          this.growth = param1;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ub.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(Object[] param0, boolean param1) {
+    final void copyInto(Object[] param0, boolean param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -141,10 +141,10 @@ final class ub {
             field_i = (String) null;
           }
           for (var3_int = 0; var3_int < param0.length; var3_int++) {
-            if (this.field_e.length <= var3_int) {
+            if (this.elements.length <= var3_int) {
               return;
             }
-            param0[var3_int] = this.field_e[var3_int];
+            param0[var3_int] = this.elements[var3_int];
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -161,14 +161,14 @@ final class ub {
         }
     }
 
-    final int a(int param0) {
+    final int size(int param0) {
         if (param0 != -1) {
-          ((int[]) (((Object[]) (this.field_e[0]))[7]))[3] = 68;
+          ((int[]) (((Object[]) (this.elements[0]))[7]))[3] = 68;
         }
-        return this.field_f;
+        return this.size;
     }
 
-    private ub(int param0, int param1) {
+    private ObjectList(int param0, int param1) {
         this(new Object[param0], param1);
     }
 
@@ -177,23 +177,23 @@ final class ub {
         return 0 != (param1 & 1024) ? true : false;
     }
 
-    final void a(byte param0, Object param1) {
+    final void add(byte param0, Object param1) {
         try {
-          this.a(this.field_f, 0, param1);
+          this.insert(this.size, 0, param1);
           if (param0 != -37) {
-            this.field_e = (Object[]) null;
+            this.elements = (Object[]) null;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ub.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    ub(int param0) {
+    ObjectList(int param0) {
         this(new Object[param0]);
     }
 
-    private ub(Object[] param0) {
-        this.field_a = 1;
+    private ObjectList(Object[] param0) {
+        this.growth = 1;
         try {
           this.a(0, param0);
         } catch (RuntimeException runtimeException) {

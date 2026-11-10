@@ -246,7 +246,7 @@ final class ava {
               }
               var25_int = 0;
               if (null != C2SChooseRewardPacket.field_a &&
-                mka.b(8192) &&
+                ComponentMount.b(8192) &&
                 var12.field_yb != SimpleConditionBehaviour.field_r) {
                 if (var12.field_Kb.field_r != null) {
                   var26 = var12.field_Kb.b((byte) 69) + mna.field_d * 2;
@@ -446,7 +446,7 @@ final class ava {
                   }
                 }
                 if (tn.field_n == param0 &&
-                  mka.b(param4 ^ 8194)) {
+                  ComponentMount.b(param4 ^ 8194)) {
                   if (var26Lifetime1 == 0) {
                     var24Lifetime2 = var34 + "<br>" + gl.$cfr$intArgs$a$53ce4ab4c593(114, IdolItemComponent.field_I, new String[]{(String) (var25)});
                   } else {
@@ -460,7 +460,7 @@ final class ava {
                   }
                 }
                 if (tn.field_n == param0 &&
-                  !mka.b(8192)) {
+                  !ComponentMount.b(8192)) {
                   var27 = C2SChooseRewardPacket.field_a.field_tb;
                   var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + gl.$cfr$intArgs$a$53ce4ab4c593(102, C2SSubmitSettingsPacket.field_c, new String[]{var27});
                 }

@@ -338,7 +338,7 @@ final class us {
         }
         try {
           fla.field_f = param1.field_J;
-          ub.b(0);
+          ObjectList.b(0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "us.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

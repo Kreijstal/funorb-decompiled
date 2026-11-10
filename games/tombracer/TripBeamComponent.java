@@ -126,7 +126,7 @@ final class TripBeamComponent extends SwitchComponent {
 
     final void q(byte param0) {
         super.q(param0);
-        this.b(-77, 2097152, 2097152);
+        this.setSize(-77, 2097152, 2097152);
     }
 
     final boolean hasSize(int param0) {

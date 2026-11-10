@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kka extends ob {
+final class kka extends SceneLight {
     static String field_p;
     static String field_o;
     static String field_r;

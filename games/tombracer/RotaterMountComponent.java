@@ -23,9 +23,9 @@ final class RotaterMountComponent extends PrefabComponent {
         field_H = null;
     }
 
-    final void a(Room param0, int param1) {
+    final void mirror(Room param0, int param1) {
         try {
-          super.a(param0, param1);
+          super.mirror(param0, param1);
           this.field_F = -this.field_F;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sua.BB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -34,8 +34,8 @@ final class RotaterMountComponent extends PrefabComponent {
 
     final void q(byte param0) {
         super.q(param0);
-        this.b(-113, 2097152, 2097152);
-        this.a((byte) 89, new mka[]{new mka(0, 0, 2097152, 0, 8)});
+        this.setSize(-113, 2097152, 2097152);
+        this.setMounts((byte) 89, new ComponentMount[]{new ComponentMount(0, 0, 2097152, 0, 8)});
     }
 
     final static void r(byte param0) {
@@ -207,7 +207,7 @@ final class RotaterMountComponent extends PrefabComponent {
     final int getRenderLayer(int param0) {
         if (param0 != 8) {
           Room var3 = (Room) null;
-          this.a((Room) null, -35);
+          this.mirror((Room) null, -35);
           return 7;
         }
         return 7;

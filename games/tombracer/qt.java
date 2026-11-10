@@ -390,10 +390,10 @@ final class qt {
             }
           }
           if (var2 != 3) {
-            qa.field_o = false;
+            PlayerViewport.field_o = false;
             return;
           }
-          qa.field_o = true;
+          PlayerViewport.field_o = true;
           for (var3Lifetime2 = 0; vk.field_b.length > var3Lifetime2; var3Lifetime2++) {
             vk.field_b[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).readByte((byte) 48);
           }
@@ -437,7 +437,7 @@ final class qt {
             return true;
           }
           kl.field_a = gsa.field_y;
-          ub.field_i = param0;
+          ObjectList.field_i = param0;
           al.field_j = param6;
           QuickChatPhraseDefinition.field_n = param2;
           ConstraintLocomotor.field_p = param4;

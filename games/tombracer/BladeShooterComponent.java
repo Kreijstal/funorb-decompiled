@@ -15,7 +15,7 @@ final class BladeShooterComponent extends ShooterComponent {
 
     final void q(byte param0) {
         super.q(param0);
-        this.b(81, 2097152, 2097152);
+        this.setSize(81, 2097152, 2097152);
     }
 
     final boolean hasAngle(byte param0) {

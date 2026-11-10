@@ -88,7 +88,7 @@ abstract class ItemComponent extends PrefabComponent {
 
     final void q(byte param0) {
         super.q(param0);
-        this.b(param0 ^ 14, 2097152, 2097152);
+        this.setSize(param0 ^ 14, 2097152, 2097152);
     }
 
     final boolean z(int param0) {

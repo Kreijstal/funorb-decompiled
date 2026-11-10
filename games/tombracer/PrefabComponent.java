@@ -38,7 +38,7 @@ abstract class PrefabComponent extends RoomComponent {
         Room stackIn_14_3;
         int stackIn_14_4;
         int stackIn_14_5;
-        mka stackIn_14_6;
+        ComponentMount stackIn_14_6;
         boolean stackIn_15_7;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
@@ -47,7 +47,7 @@ abstract class PrefabComponent extends RoomComponent {
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var8 = null;
-        mka var10 = null;
+        ComponentMount var10 = null;
         RoomComponent var11 = null;
         int var12 = 0;
         Trap var13 = null;
@@ -69,8 +69,8 @@ abstract class PrefabComponent extends RoomComponent {
           var13.setAngle(this.angle + param4, (byte) 110);
           var13.f(10, param3);
           var13.z(1);
-          for (var9 = 0; this.field_t.length > var9; var9++) {
-            var10 = this.field_t[var9];
+          for (var9 = 0; this.mounts.length > var9; var9++) {
+            var10 = this.mounts[var9];
             var11 = var10.a(-89);
             if (var11 != null) {
               stackIn_14_0 = var11;
@@ -81,7 +81,7 @@ abstract class PrefabComponent extends RoomComponent {
               stackIn_14_5 = param4;
               stackIn_14_6 = var10;
               stackIn_15_7 = !(param1);
-              ((RoomComponent) (Object) stackIn_14_0).instantiate(stackIn_14_1, stackIn_14_2, stackIn_14_3, stackIn_14_4, stackIn_14_5 + ((mka) (Object) stackIn_14_6).a(stackIn_15_7), param5, var13);
+              ((RoomComponent) (Object) stackIn_14_0).instantiate(stackIn_14_1, stackIn_14_2, stackIn_14_3, stackIn_14_4, stackIn_14_5 + ((ComponentMount) (Object) stackIn_14_6).a(stackIn_15_7), param5, var13);
             }
           }
           if (param6 == null) {

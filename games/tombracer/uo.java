@@ -32,14 +32,14 @@ final class uo {
         int var13 = 0;
         g var14 = null;
         g var15 = null;
-        ub var16 = null;
+        ObjectList var16 = null;
         g var17 = null;
         int var4Lifetime1;
         int var5Lifetime1;
         int var6Lifetime1;
         var13 = TombRacer.field_G ? 1 : 0;
         try {
-          var16 = new ub(200);
+          var16 = new ObjectList(200);
           var2 = 0;
           var3 = 0;
           for (var4 = 0; OpenGlRenderbuffer.f(-1) > var4; var4++) {
@@ -52,20 +52,20 @@ final class uo {
                 if (var8 > 0) {
                   var9 = 0;
                   var10 = 0;
-                  while (var16.a(-1) > var10) {
-                    var11 = (g) (var16.a(true, var10));
+                  while (var16.size(-1) > var10) {
+                    var11 = (g) (var16.get(true, var10));
                     var12 = var11.field_e.c(1);
                     if (var8 >= var12 && (var8 != var12 ||
                       !(var11.field_a > var15.field_a))) {
                       var10++;
                       continue;
                     }
-                    var16.a(var10, 0, var15);
+                    var16.insert(var10, 0, var15);
                     var9 = 1;
                     break;
                   }
                   if (var9 == 0) {
-                    var16.a((byte) -37, var15);
+                    var16.add((byte) -37, var15);
                   }
                   if (!var15.field_e.a(-25584)) {
                     var2++;
@@ -83,8 +83,8 @@ final class uo {
           }
           var4Lifetime1 = 0;
           var5Lifetime1 = 0;
-          for (var6Lifetime1 = 0; var16.a(-1) > var6Lifetime1; var6Lifetime1++) {
-            var14 = (g) (var16.a(true, var6Lifetime1));
+          for (var6Lifetime1 = 0; var16.size(-1) > var6Lifetime1; var6Lifetime1++) {
+            var14 = (g) (var16.get(true, var6Lifetime1));
             var17 = var14;
             if (!var17.field_e.a(-25584)) {
               incrementValue$0 = var4Lifetime1;

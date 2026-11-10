@@ -131,7 +131,7 @@ final class gea {
     }
 
     gea(int[][] param0) {
-        ir discarded$0 = new ir();
+        IntPoint discarded$0 = new IntPoint();
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
@@ -142,7 +142,7 @@ final class gea {
     gea(int param0, BitPacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
-        ir discarded$0 = new ir();
+        IntPoint discarded$0 = new IntPoint();
         try {
           var3_int = param1.readBits((byte) 44, 4);
           this.field_b = new int[var3_int][2];

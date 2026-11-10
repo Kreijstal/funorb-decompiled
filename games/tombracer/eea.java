@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class eea extends ConsoleMethod {
-    final static jha a(String param0, byte param1) {
+    final static FloatingMessage a(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        jha stackIn_1_0 = null;
+        FloatingMessage stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 29 % ((param1 + 22) / 36);
-          stackIn_1_0 = new jha(2, (String) null, param0);
+          stackIn_1_0 = new FloatingMessage(2, (String) null, param0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

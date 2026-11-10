@@ -61,7 +61,7 @@ final class StaticCrusherComponent extends PrefabComponent {
 
     final void q(byte param0) {
         super.q(param0);
-        this.b(117, 4194304, 4194304);
+        this.setSize(117, 4194304, 4194304);
     }
 
     final Trap createTrap(boolean param0, int param1, Room param2) {

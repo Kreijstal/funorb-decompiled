@@ -17,10 +17,10 @@ final class dga {
         try {
           var2_int = param0.readUnsignedByte(param1 + 255);
           RandomMazeBehaviour.field_p = RandomMazeBehaviour.field_p + (var2_int >> 6);
-          ir.field_a = (var2_int & 63) << 15;
-          ir.field_a = ir.field_a + (param0.readUnsignedByte(255) << 7);
+          IntPoint.field_a = (var2_int & 63) << 15;
+          IntPoint.field_a = IntPoint.field_a + (param0.readUnsignedByte(255) << 7);
           var2_int = param0.readUnsignedByte(255);
-          ir.field_a = ir.field_a + (var2_int >> 1);
+          IntPoint.field_a = IntPoint.field_a + (var2_int >> 1);
           DivisionMazeGenerator.field_f = (1 & var2_int) << 16;
           DivisionMazeGenerator.field_f = DivisionMazeGenerator.field_f + param0.readUnsignedShort(127);
         } catch (RuntimeException runtimeException) {
@@ -111,7 +111,7 @@ final class dga {
     }
 
     final static void a(int param0, int param1) {
-        int var2 = (ob.field_i - 640) / 2;
+        int var2 = (SceneLight.field_i - 640) / 2;
         int var3 = pna.field_q * pna.field_q;
         int var4 = var3 - param0 * param0;
         nra.field_c.a(param1, -124 + SoftwareRasterizer.field_a - 90, -23776, 90, -(var4 * 199 / var3) + var2);

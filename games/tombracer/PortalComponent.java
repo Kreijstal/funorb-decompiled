@@ -9,7 +9,7 @@ final class PortalComponent extends PrefabComponent {
 
     final void q(byte param0) {
         super.q(param0);
-        this.b(param0 ^ -14, 4194304, 4194304);
+        this.setSize(param0 ^ -14, 4194304, 4194304);
     }
 
     final boolean hasAngle(byte param0) {

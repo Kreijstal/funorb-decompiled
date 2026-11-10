@@ -190,7 +190,7 @@ final class bba {
               return true;
             }
             if (param1 &&
-              var5.a(true, 0, param0)) {
+              var5.hasDescendant(true, 0, param0)) {
               return true;
             }
             var5 = (RoomComponent) (var4.next(-1));

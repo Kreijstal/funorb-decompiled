@@ -272,7 +272,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
         this.enabled = true;
         this.field_i = false;
         this.field_j = false;
-        ir discarded$0 = new ir();
+        IntPoint discarded$0 = new IntPoint();
         try {
           this.room = param0;
           this.a(param1, (byte) -119, param0.e(116), (ui) null);

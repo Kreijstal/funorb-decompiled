@@ -127,10 +127,10 @@ final class sr extends WidgetContainer implements ButtonListener {
 
     final static boolean a(int param0) {
         if (param0 >= 115) {
-          return ub.field_c != ub.field_h ? true : false;
+          return ObjectList.field_c != ObjectList.field_h ? true : false;
         }
         sr.a(-111);
-        return ub.field_c != ub.field_h ? true : false;
+        return ObjectList.field_c != ObjectList.field_h ? true : false;
     }
 
     final void renderLayer(int param0, int param1, int param2, int param3) {

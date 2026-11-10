@@ -215,7 +215,7 @@ final class PlantComponent extends PrefabComponent {
           var3 = 2;
           var2 = 2;
         }
-        this.b(param0 + 243, var2 * 2097152, 2097152 * var3);
+        this.setSize(param0 + 243, var2 * 2097152, 2097152 * var3);
     }
 
     final int getRenderLayer(int param0) {

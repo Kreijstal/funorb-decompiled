@@ -167,7 +167,7 @@ final class MaskBlendOperator extends TextureOperator {
         }
         rka.a(false);
         ina.a(tga.field_a, 0);
-        ob.a(tga.field_a, 17186);
+        SceneLight.a(tga.field_a, 17186);
         ArrowShooterComponent.createFonts(tga.field_a, -90);
     }
 

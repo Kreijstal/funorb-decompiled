@@ -216,7 +216,7 @@ final class CircleMovementLocomotor extends Locomotor {
           fk.field_b = param6.length;
           C2SChooseRewardPacket.field_a = null;
           WaveformOperator.field_n = null;
-          qa.field_o = false;
+          PlayerViewport.field_o = false;
           vk.field_b = new byte[(7 + hpa.field_g) / 8];
           if (param2 != -51) {
             return;

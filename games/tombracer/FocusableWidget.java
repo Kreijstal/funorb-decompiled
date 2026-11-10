@@ -277,7 +277,7 @@ class FocusableWidget extends UiWidget {
           if (param3 != -82) {
             FocusableWidget.a(23);
           }
-          stackIn_6_0 = fj.takeDecodedOpaqueSprites(1500);
+          stackIn_6_0 = RoomViewRenderer.takeDecodedOpaqueSprites(1500);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

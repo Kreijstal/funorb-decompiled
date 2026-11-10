@@ -94,7 +94,7 @@ final class PillarComponent extends PrefabComponent {
 
     final void q(byte param0) {
         super.q(param0);
-        this.b(-91, 2097152, 2097152);
+        this.setSize(-91, 2097152, 2097152);
     }
 
     final static fq a(int param0, BitPacketBuffer param1) {

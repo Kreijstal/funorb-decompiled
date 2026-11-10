@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mka {
+final class ComponentMount {
     private int field_c;
-    private int field_d;
-    private RoomComponent field_e;
-    private RoomComponent field_g;
+    private int slot;
+    private RoomComponent child;
+    private RoomComponent owner;
     static jea field_b;
-    private ir field_a;
-    private ir field_h;
+    private IntPoint offset;
+    private IntPoint rotatedOffset;
     private int field_f;
 
     final void a(int param0, byte param1, Room param2, int param3) {
@@ -18,16 +18,16 @@ final class mka {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_a.field_f = -this.field_a.field_f;
-          this.a(param0, param3, (byte) -100);
+          this.offset.x = -this.offset.x;
+          this.rotateBy(param0, param3, (byte) -100);
           this.field_f = GameScreen.a(-this.field_f, 8192, 111);
           if (param1 != -61) {
             return;
           }
-          if (this.field_e == null) {
+          if (this.child == null) {
             return;
           }
-          this.field_e.a(param2, 1);
+          this.child.mirror(param2, 1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -43,30 +43,30 @@ final class mka {
         }
     }
 
-    final void a(RoomComponent param0, int param1) {
+    final void attach(RoomComponent param0, int param1) {
         try {
-          this.field_e = param0;
-          param0.a(this.field_g, this.field_d, (byte) -52);
-          param0.setPosition(1434528720, this.field_a.field_d, this.field_a.field_f);
+          this.child = param0;
+          param0.attachToParent(this.owner, this.slot, (byte) -52);
+          param0.setPosition(1434528720, this.offset.y, this.offset.x);
           int var3_int = -62 / ((param1 - 30) / 49);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "mka.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final ir c(byte param0) {
+    final IntPoint getOffset(byte param0) {
         if (param0 < 103) {
-          this.field_h = (ir) null;
-          return this.field_a;
+          this.rotatedOffset = (IntPoint) null;
+          return this.offset;
         }
-        return this.field_a;
+        return this.offset;
     }
 
     final static boolean b(int param0) {
         if (param0 == 8192) {
           return C2SChooseRewardPacket.field_a.field_Ab == SimpleConditionBehaviour.field_r ? true : false;
         }
-        mka.releaseStatics((byte) -112);
+        ComponentMount.releaseStatics((byte) -112);
         return C2SChooseRewardPacket.field_a.field_Ab == SimpleConditionBehaviour.field_r ? true : false;
     }
 
@@ -80,11 +80,11 @@ final class mka {
         MatchProtocol.b(param0, 0);
     }
 
-    final void a(int param0, int param1, RoomComponent param2) {
+    final void setOwner(int param0, int param1, RoomComponent param2) {
         try {
-          this.field_g = param2;
+          this.owner = param2;
           int var4_int = 19 / ((param0 - 76) / 46);
-          this.field_d = param1;
+          this.slot = param1;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "mka.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -105,7 +105,7 @@ final class mka {
 
     final int b(byte param0) {
         if (param0 != -125) {
-          this.field_h = (ir) null;
+          this.rotatedOffset = (IntPoint) null;
           return this.field_c;
         }
         return this.field_c;
@@ -113,21 +113,21 @@ final class mka {
 
     final RoomComponent a(int param0) {
         int var2 = 89 % ((28 - param0) / 54);
-        return this.field_e;
+        return this.child;
     }
 
-    mka(int param0, int param1, int param2, int param3, int param4) {
-        this.field_a = new ir(param0, param1);
+    ComponentMount(int param0, int param1, int param2, int param3, int param4) {
+        this.offset = new IntPoint(param0, param1);
         this.field_c = param4;
         this.field_f = param3;
-        this.field_h = new ir();
-        this.field_e = null;
+        this.rotatedOffset = new IntPoint();
+        this.child = null;
     }
 
-    final void a(int param0, int param1, byte param2) {
+    final void rotateBy(int param0, int param1, byte param2) {
         int var4 = -53 % ((9 - param2) / 58);
-        this.field_h.field_f = this.field_a.field_f * param1 - param0 * this.field_a.field_d;
-        this.field_h.field_d = param0 * this.field_a.field_f + param1 * this.field_a.field_d;
+        this.rotatedOffset.x = this.offset.x * param1 - param0 * this.offset.y;
+        this.rotatedOffset.y = param0 * this.offset.x + param1 * this.offset.y;
     }
 
     final static boolean compareDisplayModes(dh param0, int param1, dh param2) {

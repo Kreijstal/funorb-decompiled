@@ -120,10 +120,10 @@ final class CoinBagItemComponent extends ItemComponent {
             var6 = hw.field_a;
             hw.field_a.field_t = 0;
             var6.field_G = 0;
-            var7 = AchievementsOverlay.field_t;
-            AchievementsOverlay.field_t.field_t = 0;
+            var7 = MessageOverlay.field_t;
+            MessageOverlay.field_t.field_t = 0;
             var7.field_G = 0;
-            if (mka.b(param1 + 8193)) {
+            if (ComponentMount.b(param1 + 8193)) {
               StatusEffect.field_g.field_r = una.field_d.toUpperCase();
               var9 = (2 + dka.field_b.field_G) / 2;
               pk.field_z.a(-2 + var9, 40, -23776, -40 + dka.field_b.field_t, 0);
@@ -437,16 +437,16 @@ final class CoinBagItemComponent extends ItemComponent {
               if (var19 != 0) {
                 var9_ref_String = C2SChooseRewardPacket.field_a.field_tb;
                 StatusEffect.field_g.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(113, jea.field_nb, new String[]{var9_ref_String}).toUpperCase();
-                AchievementsOverlay.field_t.a(dka.field_b.field_G, 40, -23776, dka.field_b.field_t - 40, 0);
-                AchievementsOverlay.field_t.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(107, TextLayout.field_d, new String[]{var9_ref_String});
-                var8 = AchievementsOverlay.field_t;
+                MessageOverlay.field_t.a(dka.field_b.field_G, 40, -23776, dka.field_b.field_t - 40, 0);
+                MessageOverlay.field_t.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(107, TextLayout.field_d, new String[]{var9_ref_String});
+                var8 = MessageOverlay.field_t;
               }
             } else {
               var9_ref_String = C2SChooseRewardPacket.field_a.field_tb;
               StatusEffect.field_g.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(113, jea.field_nb, new String[]{var9_ref_String}).toUpperCase();
-              AchievementsOverlay.field_t.a(dka.field_b.field_G, 40, -23776, dka.field_b.field_t - 40, 0);
-              AchievementsOverlay.field_t.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(107, TextLayout.field_d, new String[]{var9_ref_String});
-              var8 = AchievementsOverlay.field_t;
+              MessageOverlay.field_t.a(dka.field_b.field_G, 40, -23776, dka.field_b.field_t - 40, 0);
+              MessageOverlay.field_t.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(107, TextLayout.field_d, new String[]{var9_ref_String});
+              var8 = MessageOverlay.field_t;
             }
             if (uq.field_d != 0L) {
               var9 = (int)(-bva.currentTimeMillis((byte) -107) + uq.field_d);

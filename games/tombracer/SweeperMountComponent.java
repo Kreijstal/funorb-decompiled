@@ -109,9 +109,9 @@ final class SweeperMountComponent extends PrefabComponent {
         return 7;
     }
 
-    final void a(Room param0, int param1) {
+    final void mirror(Room param0, int param1) {
         try {
-          super.a(param0, param1);
+          super.mirror(param0, param1);
           this.field_G = -this.field_G;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ona.BB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -169,8 +169,8 @@ final class SweeperMountComponent extends PrefabComponent {
 
     final void q(byte param0) {
         super.q(param0);
-        this.b(-107, 2097152, 2097152);
-        this.a((byte) 95, new mka[]{new mka(0, 0, 2097152, 0, 8)});
+        this.setSize(-107, 2097152, 2097152);
+        this.setMounts((byte) 95, new ComponentMount[]{new ComponentMount(0, 0, 2097152, 0, 8)});
     }
 
     final int getRenderLayer(int param0) {

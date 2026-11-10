@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sna {
+final class TutorialHints {
     private MatchScreen field_l;
     private boolean field_m;
     private int field_g;
@@ -37,7 +37,7 @@ final class sna {
         if (var4 != this.field_g) {
           this.field_g = var4;
           if (0 == this.field_g) {
-            this.a(fk.field_j, new wq(), 50, param0 ^ -9907);
+            this.queueHint(fk.field_j, new wq(), 50, param0 ^ -9907);
           }
           var5_ref_fsa__ = var3.getAllTraps(16);
           var6_ref_fsa__ = var5_ref_fsa__;
@@ -46,23 +46,23 @@ final class sna {
             if (!this.field_h &&
               var8.s((byte) -119)) {
               this.field_h = true;
-              this.a(WhirlpoolDigest.field_c, (ms) null, 25, -89);
+              this.queueHint(WhirlpoolDigest.field_c, (ms) null, 25, -89);
             }
             if (!this.field_i) {
               if (var8.E((byte) 3) == 1) {
                 this.field_i = true;
-                this.a(GasTrapComponent.field_F, new jia(), 25, param0 - 10059);
+                this.queueHint(GasTrapComponent.field_F, new jia(), 25, param0 - 10059);
               }
               if (!this.field_m &&
                 3 == var8.E((byte) 3)) {
                 this.field_m = true;
-                this.a(gca.field_l, (ms) null, 25, -61);
+                this.queueHint(gca.field_l, (ms) null, 25, -61);
               }
             } else {
               if (!this.field_m &&
                 3 == var8.E((byte) 3)) {
                 this.field_m = true;
-                this.a(gca.field_l, (ms) null, 25, -61);
+                this.queueHint(gca.field_l, (ms) null, 25, -61);
               }
             }
           }
@@ -73,19 +73,19 @@ final class sna {
           this.field_e = var5;
           var6 = DateFieldsWidget.field_C[4] - 10;
           if (1 == this.field_e) {
-            this.a(tha.field_A, (ms) null, var6, param0 ^ -9888);
+            this.queueHint(tha.field_A, (ms) null, var6, param0 ^ -9888);
           }
         }
         this.field_k = var10.hasCollectedTreasure(-107);
         if (!this.field_d &&
           this.field_k) {
           this.field_d = true;
-          this.a(uw.field_b, (ms) null, 5, -88);
+          this.queueHint(uw.field_b, (ms) null, 5, -88);
         }
         if (!this.field_f &&
           var10.getRoomTreasure(393216, 2) > 0) {
           this.field_f = true;
-          this.a(PlayerContextMenu.field_a, (ms) null, 5, -74);
+          this.queueHint(PlayerContextMenu.field_a, (ms) null, 5, -74);
         }
         boolean decompiledFrameRemainder0 = true;
         if (this.field_f) {
@@ -97,14 +97,14 @@ final class sna {
               if ((!(this.field_b)) &&
                 ((var10.getHeldItemKind((byte) 127) == 1))) {
                 this.field_b = true;
-                this.a(S2CPlayerSyncPacket.field_f, (ms) null, 5, -108);
+                this.queueHint(S2CPlayerSyncPacket.field_f, (ms) null, 5, -108);
               }
               decompiledFrameRemainder0 = false;
             }
             else {
               if (500 < this.field_a) {
                 this.field_j = true;
-                this.a(wd.field_a, (ms) null, 25, param0 ^ -9867);
+                this.queueHint(wd.field_a, (ms) null, 25, param0 ^ -9867);
               }
             }
           }
@@ -112,18 +112,18 @@ final class sna {
         if ((decompiledFrameRemainder0) && (!this.field_b &&
           var10.getHeldItemKind((byte) 127) == 1)) {
           this.field_b = true;
-          this.a(S2CPlayerSyncPacket.field_f, (ms) null, 5, -108);
+          this.queueHint(S2CPlayerSyncPacket.field_f, (ms) null, 5, -108);
         }
 
     }
 
-    private final void a(String param0, ms param1, int param2, int param3) {
-        AchievementsOverlay var5 = null;
+    private final void queueHint(String param0, ms param1, int param2, int param3) {
+        MessageOverlay var5 = null;
         try {
           if (param3 > -56) {
             this.b((byte) 111);
           }
-          var5 = new AchievementsOverlay(this.field_l, param1);
+          var5 = new MessageOverlay(this.field_l, param1);
           var5.a(tea.field_a, param0, ColouriseOperator.field_n, (byte) 21);
           this.field_c.addLast((byte) -125, new mga(var5, param2));
         } catch (RuntimeException runtimeException) {
@@ -158,7 +158,7 @@ final class sna {
         }
     }
 
-    sna(MatchScreen param0) {
+    TutorialHints(MatchScreen param0) {
         this.field_m = false;
         this.field_d = false;
         this.field_g = -1;

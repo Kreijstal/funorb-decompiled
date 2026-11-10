@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qa {
+final class PlayerViewport {
     private boolean field_q;
     private int field_p;
     private int field_m;
@@ -9,7 +9,7 @@ final class qa {
     private int field_e;
     private int field_f;
     private boolean field_i;
-    private fj field_n;
+    private RoomViewRenderer field_n;
     private int field_g;
     private int field_c;
     static int field_b;
@@ -109,10 +109,10 @@ final class qa {
         if (!this.a(0)) {
           return;
         }
-        this.field_n.a(this.field_e, this.field_p, this.field_k, this.field_c, this.field_l, this.field_a, 51);
+        this.field_n.render(this.field_e, this.field_p, this.field_k, this.field_c, this.field_l, this.field_a, 51);
         if (param0 != 23479) {
           ConsoleToken[] var3 = (ConsoleToken[]) null;
-          qa.a(true, (ConsoleToken[]) null, 44);
+          PlayerViewport.a(true, (ConsoleToken[]) null, 44);
           if (this.field_a.f((byte) 33)) {
             return;
           }
@@ -312,7 +312,7 @@ final class qa {
             return;
           }
           var11 = (ToolkitSprite[]) null;
-          qa.a(110, 85, (byte) -45, -18, (ToolkitSprite[]) null, -3);
+          PlayerViewport.a(110, 85, (byte) -45, -18, (ToolkitSprite[]) null, -3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -328,13 +328,13 @@ final class qa {
         }
     }
 
-    qa(MatchScreen param0, int param1) {
+    PlayerViewport(MatchScreen param0, int param1) {
         this.field_i = true;
         this.field_h = 8;
         try {
           this.field_a = param0;
           this.field_e = param1;
-          this.field_n = new fj();
+          this.field_n = new RoomViewRenderer();
           this.field_d = new dta();
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "qa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

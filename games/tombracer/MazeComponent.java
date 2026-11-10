@@ -283,7 +283,7 @@ abstract class MazeComponent extends PrefabComponent {
         int var13 = 0;
         var13 = TombRacer.field_G ? 1 : 0;
         try {
-          ob.field_i = SoftwareRasterizer.field_g;
+          SceneLight.field_i = SoftwareRasterizer.field_g;
           BufferedSocket.field_g = SoftwareRasterizer.field_a;
           if (param0) {
             stackIn_4_0 = GameKeyHandler.field_a;

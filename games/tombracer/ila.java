@@ -16,10 +16,10 @@ final class ila {
         if (!param0) {
           this.field_a = (gqa) null;
         }
-        jha var4 = (jha) (this.field_d.first(-80));
+        FloatingMessage var4 = (FloatingMessage) (this.field_d.first(-80));
         while (var4 != null) {
           var4.b((byte) -111);
-          var4 = (jha) (this.field_d.next(107));
+          var4 = (FloatingMessage) (this.field_d.next(107));
         }
     }
 
@@ -48,13 +48,13 @@ final class ila {
         int var5;
         int var6;
         String[] var7;
-        jha var7_ref;
+        FloatingMessage var7_ref;
         gqa var8_ref_gqa;
         int var9;
         String[] var10;
         gqa var11;
         int var6Lifetime1;
-        jha var7_refLifetime1;
+        FloatingMessage var7_refLifetime1;
         String[] var10Lifetime1;
         var9 = TombRacer.field_G ? 1 : 0;
         if (param1) {
@@ -101,25 +101,25 @@ final class ila {
         }
         var6Lifetime1 = 120;
         if (this.field_e) {
-          var7_ref = (jha) (this.field_b.first(-80));
+          var7_ref = (FloatingMessage) (this.field_b.first(-80));
           while (var7_ref != null) {
             var7_ref.d((byte) 80);
             if (var7_ref.a((byte) -100) <= 0) {
               this.field_d.addLast((byte) -77, var7_ref);
             }
-            var7_ref = (jha) (this.field_b.next(111));
+            var7_ref = (FloatingMessage) (this.field_b.next(111));
           }
-          var7_refLifetime1 = (jha) (this.field_d.first(-80));
+          var7_refLifetime1 = (FloatingMessage) (this.field_d.first(-80));
           while (var7_refLifetime1 != null) {
             var7_refLifetime1.a(var6Lifetime1, 4, aaa.a(false) - var7_refLifetime1.c((byte) -96));
             var7_refLifetime1.a(-43);
             if (var7_refLifetime1.c(-1)) {
               var6Lifetime1 = var6Lifetime1 + var7_refLifetime1.a(true);
             }
-            if (var7_refLifetime1.e((byte) -39)) {
+            if (var7_refLifetime1.isExpired((byte) -39)) {
               var7_refLifetime1.unlink(3);
             }
-            var7_refLifetime1 = (jha) (this.field_d.next(121));
+            var7_refLifetime1 = (FloatingMessage) (this.field_d.next(121));
           }
         }
         if (this.field_c) {
@@ -130,9 +130,9 @@ final class ila {
         }
     }
 
-    final void a(int param0, int param1, jha param2) {
+    final void a(int param0, int param1, FloatingMessage param2) {
         if (param2 == null ||
-          param2.b(29161) == null) {
+          param2.getText(29161) == null) {
           return;
         }
         if (!this.field_e) {
@@ -148,7 +148,7 @@ final class ila {
           if (param1 != 0) {
             this.field_e = true;
           }
-          param2.a(false, 25, 12, 150);
+          param2.setTiming(false, 25, 12, 150);
           param2.a(1, aaa.a(false) / 3);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ila.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -311,7 +311,7 @@ final class ila {
                 vw.field_a.a(di.a(120), param2 ^ 55);
               } else {
                 if (fd.field_d.a((byte) 113) == ViewportManager.field_f) {
-                  ub.field_d.a(di.a(109), 5);
+                  ObjectList.field_d.a(di.a(109), 5);
                 }
               }
               PushableBlockMazeComponent.field_L = false;
@@ -480,7 +480,7 @@ final class ila {
           dga.field_a = var8.readString((byte) -76);
         }
         if (!param1) {
-          ConveyorBehaviour.field_p = AchievementsOverlay.readHuffmanString(var8, 80, -117);
+          ConveyorBehaviour.field_p = MessageOverlay.readHuffmanString(var8, 80, -117);
           MatchPhase.field_e = null;
         } else {
           var5 = var8.readUnsignedShort(121);
@@ -507,7 +507,7 @@ final class ila {
         return new gqa(param1);
     }
 
-    final void a(int param0, jha param1) {
+    final void a(int param0, FloatingMessage param1) {
         try {
           this.a(param0, 0, param1);
         } catch (RuntimeException runtimeException) {

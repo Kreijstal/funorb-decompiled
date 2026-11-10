@@ -175,10 +175,10 @@ final class cm implements GamePacket {
         var26 = TombRacer.field_G ? 1 : 0;
         try {
           if (param3) {
-            stackIn_12_0 = (qa.field_o) ? 0 : 1;
+            stackIn_12_0 = (PlayerViewport.field_o) ? 0 : 1;
             var4_int = stackIn_12_0;
           } else {
-            if (mka.b(8192)) {
+            if (ComponentMount.b(8192)) {
               stackIn_8_0 = (!param1.field_ec) ? 1 : 0;
             } else {
               stackIn_8_0 = 0;
@@ -206,7 +206,7 @@ final class cm implements GamePacket {
               stackIn_29_0.field_cb = stackIn_30_1;
             }
             if (bf.field_b[0][2].field_pb) {
-              if (mka.b(8192)) {
+              if (ComponentMount.b(8192)) {
                 ArchiveNetworkClient.field_b = jsa.field_y;
               } else {
                 ArchiveNetworkClient.field_b = gl.$cfr$intArgs$a$53ce4ab4c593(101, EffectEvent.field_i, new String[]{C2SChooseRewardPacket.field_a.field_tb});
@@ -444,7 +444,7 @@ final class cm implements GamePacket {
               if (var16Lifetime1 == 0 &&
                 var9 >= 0 &&
                 PlatformModel.field_A != null && (!param3 ||
-                !qa.field_o)) {
+                !PlayerViewport.field_o)) {
                 mm.field_g = false;
                 if (null == tba.field_m) {
                   tba.field_m = new byte[fk.field_b];

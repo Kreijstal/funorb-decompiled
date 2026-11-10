@@ -47,7 +47,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     private vw field_pb;
     private float field_lc;
     private float[] field_Eb;
-    ob[] field_ib;
+    SceneLight[] field_ib;
     boolean field_qc;
     gb field_lb;
     int field_i;
@@ -818,7 +818,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         return (vw) ((Object) new sl(this));
     }
 
-    final void a(int param0, ob[] param1) {
+    final void setLights(int param0, SceneLight[] param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_10_0 = null;
@@ -1769,7 +1769,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           this.field_hc[var2] = new AffineTransform3D();
           var2++;
         }
-        this.field_ib = new ob[-2 + this.field_e];
+        this.field_ib = new SceneLight[-2 + this.field_e];
         this.field_Jb = (GpuTexture) ((Object) this.createTexture2D(1, 1, SwitchableId.field_a, (byte) -63, una.field_g));
         this.a(new to(262144));
         this.field_Db = this.createVertexLayout(new ne[]{new ne(new gj[]{gj.field_p, gj.field_n})}, 0);
@@ -2296,8 +2296,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final ob a(int param0, int param1, int param2, int param3, int param4, float param5) {
-        return (ob) ((Object) new jq(param0, param1, param2, param3, param4, param5));
+    final SceneLight a(int param0, int param1, int param2, int param3, int param4, float param5) {
+        return (SceneLight) ((Object) new jq(param0, param1, param2, param3, param4, param5));
     }
 
     final int o(byte param0) {

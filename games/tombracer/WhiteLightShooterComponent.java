@@ -71,7 +71,7 @@ final class WhiteLightShooterComponent extends ShooterComponent {
           return true;
         }
         stackIn_5_0 = ((458752 & param2) != 0);
-        stackIn_10_0 = !(!stackIn_5_0 | ir.a(param2, param0, (byte) -94)) || (C2SChooseRewardPacket.a(true, param2, param0));
+        stackIn_10_0 = !(!stackIn_5_0 | IntPoint.a(param2, param0, (byte) -94)) || (C2SChooseRewardPacket.a(true, param2, param0));
         return stackIn_10_0;
     }
 
@@ -112,7 +112,7 @@ final class WhiteLightShooterComponent extends ShooterComponent {
 
     final void q(byte param0) {
         super.q(param0);
-        this.b(-88, 2097152, 2097152);
+        this.setSize(-88, 2097152, 2097152);
     }
 
     final void encode(boolean param0, BitPacketBuffer param1) {

@@ -225,7 +225,7 @@ abstract class GraphicsToolkit {
 
     abstract RenderBuffer b(int param0, int param1);
 
-    abstract ob a(int param0, int param1, int param2, int param3, int param4, float param5);
+    abstract SceneLight a(int param0, int param1, int param2, int param3, int param4, float param5);
 
     abstract ToolkitSprite createSprite(int[] param0, int param1, int param2, int param3, int param4, boolean param5);
 
@@ -271,7 +271,7 @@ abstract class GraphicsToolkit {
         }
     }
 
-    abstract void a(int param0, ob[] param1);
+    abstract void setLights(int param0, SceneLight[] param1);
 
     abstract void getClip(int[] param0);
 

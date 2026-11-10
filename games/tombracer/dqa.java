@@ -22,17 +22,17 @@ final class dqa extends mna {
     final static void a(String param0, int param1, String param2, int param3, int param4) {
         try {
           pq.field_g.field_sb = param2;
-          pq.field_g.field_G = pq.field_g.field_G + mka.field_b.field_G;
+          pq.field_g.field_G = pq.field_g.field_G + ComponentMount.field_b.field_G;
           pq.field_g.field_ib = param3;
           pq.field_g.field_r = param0;
-          mka.field_b.field_qb = mka.field_b.field_qb + mka.field_b.field_G;
-          mka.field_b.field_G = param1;
+          ComponentMount.field_b.field_qb = ComponentMount.field_b.field_qb + ComponentMount.field_b.field_G;
+          ComponentMount.field_b.field_G = param1;
           if (param4 < 118) {
             ResourceArchive var6 = (ResourceArchive) null;
             dqa.a((ResourceArchive) null, (ResourceArchive) null, (byte) 102, (ResourceArchive) null);
           }
-          pq.field_g.field_G = pq.field_g.field_G - mka.field_b.field_G;
-          mka.field_b.field_qb = mka.field_b.field_qb - mka.field_b.field_G;
+          pq.field_g.field_G = pq.field_g.field_G - ComponentMount.field_b.field_G;
+          ComponentMount.field_b.field_qb = ComponentMount.field_b.field_qb - ComponentMount.field_b.field_G;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "dqa.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

@@ -65,7 +65,7 @@ final class ProxySocketConnector extends SocketConnector {
           if (14 != param2) {
             return null;
           }
-          stackIn_28_0 = gl.$cfr$intArgs$a$53ce4ab4c593(92, ir.field_e, new String[]{param0});
+          stackIn_28_0 = gl.$cfr$intArgs$a$53ce4ab4c593(92, IntPoint.field_e, new String[]{param0});
           return stackIn_28_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

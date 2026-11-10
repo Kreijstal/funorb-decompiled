@@ -120,7 +120,7 @@ final class LightSourceModel extends TrapModel {
     private final void j(int param0) {
         uw var3;
         ev var4;
-        sva var5;
+        RoomLighting var5;
         int var6;
         int var7;
         int var8;
@@ -156,10 +156,10 @@ final class LightSourceModel extends TrapModel {
           return;
         }
         var4 = var3.a((byte) 59);
-        if (!(var4 instanceof sva)) {
+        if (!(var4 instanceof RoomLighting)) {
           return;
         }
-        var5 = (sva) (var4);
+        var5 = (RoomLighting) (var4);
         var6 = 0;
         var7 = this.field_q;
         if (var7 == 0) {

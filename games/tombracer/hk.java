@@ -49,7 +49,7 @@ final class hk {
             var25 = LightSourceModel.a(4.0f, 16.0f, 128, new tda(419684), 8, 128, 0.5f, 16, 4, 4.0f, 0.6000000238418579f);
             ui.field_c = bw.wrapByteStorage(270, var25, false);
           }
-          var22 = ir.unwrapByteStorage(ui.field_c, 13588, false);
+          var22 = IntPoint.unwrapByteStorage(ui.field_c, 13588, false);
           var19 = var22;
           var17 = var19;
           var2_ref_byte__ = var17;
@@ -347,9 +347,9 @@ final class hk {
             }
             return;
           }
-          var15 = ir.unwrapByteStorage(ak.field_o, 13588, false);
+          var15 = IntPoint.unwrapByteStorage(ak.field_o, 13588, false);
           this.field_c = this.field_b.a(var15, wo.field_i, (byte) -97, 128, 128, 16);
-          var16 = ir.unwrapByteStorage(lt.field_f, 13588, false);
+          var16 = IntPoint.unwrapByteStorage(lt.field_f, 13588, false);
           this.field_b.a(var16, wo.field_i, (byte) -84, 128, 128, 16);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

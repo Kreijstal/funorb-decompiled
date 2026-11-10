@@ -30,7 +30,7 @@ final class uaa {
         int var2_intLifetime1;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          var2_int = sva.field_d;
+          var2_int = RoomLighting.field_d;
           if (param1.field_d != 2) {
             if (param1.field_d == 4) {
               var2_intLifetime1 = BrickOperator.field_t[param1.field_d];
@@ -43,7 +43,7 @@ final class uaa {
             }
           } else {
             if (param1.field_m) {
-              var2_intLifetime1 = sva.field_d;
+              var2_intLifetime1 = RoomLighting.field_d;
             } else {
               if (0 == param1.field_c &&
                 param1.field_o == 0) {

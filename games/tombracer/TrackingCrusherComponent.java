@@ -35,7 +35,7 @@ final class TrackingCrusherComponent extends PrefabComponent {
 
     final void q(byte param0) {
         super.q(param0);
-        this.b(param0 ^ 1, 4194304, 4194304);
+        this.setSize(param0 ^ 1, 4194304, 4194304);
     }
 
     final static void A(int param0) {

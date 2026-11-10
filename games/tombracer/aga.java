@@ -8,7 +8,7 @@ final class aga {
     private short[] field_b;
     static String field_a;
     private int field_e;
-    ob field_c;
+    SceneLight field_c;
     private int field_f;
     int field_d;
 
@@ -198,7 +198,7 @@ final class aga {
         if (param0 != -1025) {
           field_a = (String) null;
         }
-        return new nl[]{vw.field_a, ub.field_d, CollisionGrid.field_f};
+        return new nl[]{vw.field_a, ObjectList.field_d, CollisionGrid.field_f};
     }
 
     final static g a(boolean param0, int param1) {

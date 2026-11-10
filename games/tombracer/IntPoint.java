@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ir {
+final class IntPoint {
     static String field_b;
     static String field_c;
-    int field_f;
+    int x;
     static int field_a;
-    int field_d;
+    int y;
     static String field_e;
 
     public static void releaseStatics(byte param0) {
@@ -19,14 +19,14 @@ final class ir {
     }
 
     public final String toString() {
-        return "(" + this.field_f + "," + this.field_d + ")";
+        return "(" + this.x + "," + this.y + ")";
     }
 
     final static boolean a(int param0, int param1, byte param2) {
         if (param2 < -69) {
           return (33 & param0) != 0 ? true : false;
         }
-        ir.releaseStatics((byte) 123);
+        IntPoint.releaseStatics((byte) 123);
         return (33 & param0) != 0 ? true : false;
     }
 
@@ -77,12 +77,12 @@ final class ir {
         }
     }
 
-    public ir() {
+    public IntPoint() {
     }
 
-    ir(int param0, int param1) {
-        this.field_f = param0;
-        this.field_d = param1;
+    IntPoint(int param0, int param1) {
+        this.x = param0;
+        this.y = param1;
     }
 
     static {

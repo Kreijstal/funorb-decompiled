@@ -21,7 +21,7 @@ final class MatchScreen extends GameScreen implements rqa {
     private int[] field_B;
     private kq[] field_C;
     private int field_i;
-    private sna field_n;
+    private TutorialHints field_n;
     boolean field_A;
     int field_r;
     private boolean field_t;
@@ -64,7 +64,7 @@ final class MatchScreen extends GameScreen implements rqa {
             for (var7 = 0; this.matchState.simulations[var3].rooms.length > var7; var7++) {
               var8 = this.matchState.simulations[var3].rooms[var7];
               if (var8 != null) {
-                var8.getScene((byte) 106).a(-28265, new sva(var8));
+                var8.getScene((byte) 106).a(-28265, new RoomLighting(var8));
                 var8.a(4855, var6);
               }
             }
@@ -153,7 +153,7 @@ final class MatchScreen extends GameScreen implements rqa {
           this.b(this.matchState.players[0].getScore(param2 - 15179), param2 + 7821);
           this.a(this.matchState.field_g[0], 5, this.matchState.field_F[0]);
           var4 = uca.cosmeticRandom.nextBounded(7, param2 - 15283);
-          qa.field_b = qa.field_b + var4;
+          PlayerViewport.field_b = PlayerViewport.field_b + var4;
           nta.field_h = nta.field_h + var4;
           var4Lifetime1 = uca.cosmeticRandom.nextBounded(7, 0);
           CommonChooseReward.field_b = CommonChooseReward.field_b + (long)var4Lifetime1;
@@ -242,7 +242,7 @@ final class MatchScreen extends GameScreen implements rqa {
     }
 
     final void e(byte param0) {
-        this.field_n = new sna(this);
+        this.field_n = new TutorialHints(this);
         if (param0 <= 11) {
           return;
         }
@@ -395,7 +395,7 @@ final class MatchScreen extends GameScreen implements rqa {
           lu.field_a = 5180;
           CommonChooseReward.field_b = 1180282300L;
           MidiVoiceMixer.field_j = 17219L;
-          qa.field_b = 1727002282;
+          PlayerViewport.field_b = 1727002282;
           nta.field_h = -2073743619;
           bh.field_o = 17825;
           lra.field_f = 2023746978L;
@@ -636,7 +636,7 @@ final class MatchScreen extends GameScreen implements rqa {
     final void a(int param0, byte param1) {
         int var3 = 0;
         int var5;
-        jha var4;
+        FloatingMessage var4;
         String var6;
         var5 = TombRacer.field_G ? 1 : 0;
         for (var3 = 0; var3 < this.matchState.players.length; var3++) {
@@ -758,7 +758,7 @@ final class MatchScreen extends GameScreen implements rqa {
     final void d(int param0, int param1) {
         int var3;
         int var5;
-        jha var4;
+        FloatingMessage var4;
         var5 = TombRacer.field_G ? 1 : 0;
         var3 = 0;
         if (param0 != 5) {
@@ -810,7 +810,7 @@ final class MatchScreen extends GameScreen implements rqa {
           if (uca.cosmeticRandom.nextBounded(2, 0) == 0) {
             nta.field_h = nta.field_h - OpenGlToolkit.field_Z * (-var9Lifetime1 + var8_intLifetime1);
           } else {
-            qa.field_b = qa.field_b + OpenGlToolkit.field_Z * (var8_intLifetime1 - var9Lifetime1);
+            PlayerViewport.field_b = PlayerViewport.field_b + OpenGlToolkit.field_Z * (var8_intLifetime1 - var9Lifetime1);
           }
         }
         var8Lifetime1 = param2;
@@ -946,7 +946,7 @@ final class MatchScreen extends GameScreen implements rqa {
           if (param1 != 680) {
             this.getPlayerName(-90, false);
           }
-          if (param0 instanceof AchievementsOverlay) {
+          if (param0 instanceof MessageOverlay) {
             this.field_t = true;
           }
           return;
@@ -1069,7 +1069,7 @@ final class MatchScreen extends GameScreen implements rqa {
     }
 
     final void a(int param0, int param1) {
-        jha var3 = null;
+        FloatingMessage var3 = null;
         int var4 = TombRacer.field_G ? 1 : 0;
         if (param0 < 23) {
           this.isInPlayPhase(63);
@@ -1180,7 +1180,7 @@ final class MatchScreen extends GameScreen implements rqa {
             this.field_i = 76;
           }
           param1.unlink(42);
-          if (param1 instanceof AchievementsOverlay) {
+          if (param1 instanceof MessageOverlay) {
             this.field_t = false;
           }
           return;
@@ -1332,7 +1332,7 @@ final class MatchScreen extends GameScreen implements rqa {
         MatchScoringObserver var5;
         PenaltyNotice var6;
         String var7;
-        jha var8;
+        FloatingMessage var8;
         int var9;
         int var2Lifetime1;
         var9 = TombRacer.field_G ? 1 : 0;

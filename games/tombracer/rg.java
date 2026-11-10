@@ -66,7 +66,7 @@ final class rg extends SingleChildWidget {
         wba.field_q[28] = goa.field_c;
         wba.field_q[24] = bi.field_b[1];
         wba.field_q[37] = um.field_k;
-        wba.field_q[31] = ir.field_b;
+        wba.field_q[31] = IntPoint.field_b;
         wba.field_q[30] = bq.field_a;
         wba.field_q[36] = kq.field_b;
         TripBeamBehaviour.field_w = new String[4][2];
@@ -182,7 +182,7 @@ final class rg extends SingleChildWidget {
           Effect.field_h[8] = new String[]{ThresholdOperator.field_o, StaticCrusherComponent.field_G, ClientException.field_e};
           Effect.field_h[9] = new String[]{qna.field_a, MenuScreen.field_h, PrefabComponent.field_D};
           IntrusiveDeque.field_d[10] = new String[]{kd.field_z, qba.field_d, GridWidgetContainer.field_H};
-          Effect.field_h[10] = new String[]{ViewportManager.field_a, ir.field_c, fb.field_b};
+          Effect.field_h[10] = new String[]{ViewportManager.field_a, IntPoint.field_c, fb.field_b};
           return;
         }
         tk.field_a = new String[17][];
@@ -234,7 +234,7 @@ final class rg extends SingleChildWidget {
         Effect.field_h[8] = new String[]{ThresholdOperator.field_o, StaticCrusherComponent.field_G, ClientException.field_e};
         Effect.field_h[9] = new String[]{qna.field_a, MenuScreen.field_h, PrefabComponent.field_D};
         IntrusiveDeque.field_d[10] = new String[]{kd.field_z, qba.field_d, GridWidgetContainer.field_H};
-        Effect.field_h[10] = new String[]{ViewportManager.field_a, ir.field_c, fb.field_b};
+        Effect.field_h[10] = new String[]{ViewportManager.field_a, IntPoint.field_c, fb.field_b};
     }
 
     public rg() {

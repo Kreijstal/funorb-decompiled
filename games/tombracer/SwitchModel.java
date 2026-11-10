@@ -699,7 +699,7 @@ final class SwitchModel extends TrapModel {
     final static void o(byte param0) {
         wp.a(-1);
         RasterizerOperator.d((byte) -128);
-        fj.field_c = null;
+        RoomViewRenderer.field_c = null;
         int var1 = 43 / ((param0 + 55) / 48);
         f.b(-68);
     }

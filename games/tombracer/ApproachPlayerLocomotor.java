@@ -9,7 +9,7 @@ final class ApproachPlayerLocomotor extends Locomotor {
     private int field_v;
     static int field_t;
     private boolean field_r;
-    private ir field_o;
+    private IntPoint field_o;
 
     final void tick(byte param0) {
         int var3;
@@ -41,11 +41,11 @@ final class ApproachPlayerLocomotor extends Locomotor {
         if (var14.u(-25561)) {
           return;
         }
-        this.field_o.field_f = var14.getX(3);
-        this.field_o.field_d = var14.getY(9648);
+        this.field_o.x = var14.getX(3);
+        this.field_o.y = var14.getY(9648);
         this.trap.a(this.field_o, 30);
-        var4 = this.field_o.field_f - this.trap.getLocalX(25745);
-        var5 = this.field_o.field_d - this.trap.getLocalY(false);
+        var4 = this.field_o.x - this.trap.getLocalX(25745);
+        var5 = this.field_o.y - this.trap.getLocalY(false);
         var6 = this.field_q >> 16;
         var6 = var6 * var6;
         var7 = (var4 >> 16) * (var4 >> 16) + (var5 >> 16) * (var5 >> 16);
@@ -205,7 +205,7 @@ final class ApproachPlayerLocomotor extends Locomotor {
     ApproachPlayerLocomotor(Room param0, boolean param1) {
         super(param0, param1);
         this.field_r = true;
-        this.field_o = new ir();
+        this.field_o = new IntPoint();
         try {
           this.field_q = 1048576;
           this.field_v = 131072;
@@ -225,7 +225,7 @@ final class ApproachPlayerLocomotor extends Locomotor {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         this.field_r = true;
-        this.field_o = new ir();
+        this.field_o = new IntPoint();
         try {
           this.field_q = param1.readBits((byte) 44, 10) << 16;
           if (7 < param0.formatVersion) {

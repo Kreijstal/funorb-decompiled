@@ -50,7 +50,7 @@ class MatchScoringObserver extends SimulationObserver {
         int var8 = 0;
         Object var9 = null;
         String var9_ref = null;
-        jha var10 = null;
+        FloatingMessage var10 = null;
         Room var11 = null;
         try {
           if (RewardChoicePhase.field_n != null) {
@@ -252,7 +252,7 @@ class MatchScoringObserver extends SimulationObserver {
                 PenaltyNotice.a((byte) -32, var4_int);
               }
               if (2 == var8.E((byte) 3)) {
-                mka.a(13, var4_int);
+                ComponentMount.a(13, var4_int);
               }
             }
           }
@@ -290,7 +290,7 @@ class MatchScoringObserver extends SimulationObserver {
     }
 
     void onRoomCompleted(Player param0, Room param1, boolean param2) {
-        jha dupTemp$0 = null;
+        FloatingMessage dupTemp$0 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -304,12 +304,12 @@ class MatchScoringObserver extends SimulationObserver {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        jha var9_ref_jha = null;
+        FloatingMessage var9_ref_jha = null;
         int var10 = 0;
         int var11 = 0;
-        jha var12 = null;
+        FloatingMessage var12 = null;
         int var13 = 0;
-        jha var9_ref_jhaLifetime1;
+        FloatingMessage var9_ref_jhaLifetime1;
         int var9Lifetime1;
         var11 = TombRacer.field_G ? 1 : 0;
         try {

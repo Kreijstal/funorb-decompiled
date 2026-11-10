@@ -25,8 +25,8 @@ final class WheeledMountComponent extends PathMoverComponent {
 
     final void q(byte param0) {
         super.q(param0);
-        this.b(104, 2097152, 2097152);
-        this.a((byte) 125, new mka[]{new mka(0, 0, 2097152, 0, 40)});
+        this.setSize(104, 2097152, 2097152);
+        this.setMounts((byte) 125, new ComponentMount[]{new ComponentMount(0, 0, 2097152, 0, 40)});
     }
 
     final boolean isSwitchable(int param0) {

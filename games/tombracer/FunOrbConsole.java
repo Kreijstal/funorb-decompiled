@@ -44,7 +44,7 @@ final class FunOrbConsole extends ConsoleWindow {
           var2 = this.field_o.e((byte) -114);
           var3 = this.field_o.j(-1320);
           var4 = LaserShooterComponent.a((byte) 126, var2);
-          var5 = qa.a(true, var4, var3);
+          var5 = PlayerViewport.a(true, var4, var3);
           var6 = "";
           if (var5 >= 0) {
             var7 = var4[var5];
@@ -338,7 +338,7 @@ final class FunOrbConsole extends ConsoleWindow {
           var2 = this.field_o.e((byte) -115);
           var3 = this.field_o.j(-1320);
           var4 = LaserShooterComponent.a((byte) 126, var2);
-          var5 = qa.a(true, var4, var3);
+          var5 = PlayerViewport.a(true, var4, var3);
           if (param0) {
             this.a((String) null, (byte) -83);
           }

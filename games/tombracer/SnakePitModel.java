@@ -382,9 +382,9 @@ final class SnakePitModel extends TrapModel {
             SnakePitModel.a(-101, -90, 0, -88);
           }
           RotaterMountComponent.field_K.a(2 + (485 + param2 + param3), param5, param1 - 23672, var7 - param5, 5);
-          pq.field_g.a(-param2 + RotaterMountComponent.field_K.field_G - mka.field_b.field_G, param5, -23776, 0, param2);
+          pq.field_g.a(-param2 + RotaterMountComponent.field_K.field_G - ComponentMount.field_b.field_G, param5, -23776, 0, param2);
           var7 = var7 - (2 + param5);
-          mka.field_b.a(mka.field_b.field_G, param5, -23776, 0, param2 + pq.field_g.field_G);
+          ComponentMount.field_b.a(ComponentMount.field_b.field_G, param5, -23776, 0, param2 + pq.field_g.field_G);
           ne.field_d.a(param3 + (2 + param2) + 485, 2, (byte) 127, 5, param3, -5 + var7, 5);
           if (apa.field_c != null) {
             apa.field_c.setBounds((byte) -31, ne.field_d.field_G, ne.field_d.field_t, ne.field_d.field_qb, ne.field_d.field_T);

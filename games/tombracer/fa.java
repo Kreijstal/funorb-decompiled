@@ -70,7 +70,7 @@ final class fa {
           }
           boolean decompiledFrameRemainder0 = true;
           if (null != var2) {
-            dqa.a((String) (var2), 0, (String) null, sva.field_d, 122);
+            dqa.a((String) (var2), 0, (String) null, RoomLighting.field_d, 122);
             decompiledFrameRemainder0 = (var10 != 0);
           }
           if (decompiledFrameRemainder0) {
@@ -83,7 +83,7 @@ final class fa {
             if (var6 == 2) {
               var4 = gl.$cfr$intArgs$a$53ce4ab4c593(88, TrackMountComponent.field_G, new String[]{wp.field_a});
               var8 = gl.$cfr$intArgs$a$53ce4ab4c593(111, li.field_a, new String[]{var3});
-              var7 = mka.field_b.field_G + (pq.field_g.field_G - 485) + PlatformBehaviour.field_s.stringWidth(var8) - PlatformBehaviour.field_s.stringWidth(var4);
+              var7 = ComponentMount.field_b.field_G + (pq.field_g.field_G - 485) + PlatformBehaviour.field_s.stringWidth(var8) - PlatformBehaviour.field_s.stringWidth(var4);
               if (0 > var7) {
                 var7 = 0;
               }
@@ -147,9 +147,9 @@ final class fa {
             }
             dqa.a(var4 + BitmapFont.escapeMarkup(WeaveOperator.field_n.toString()), var7, var5, pm.field_a[var6], 125);
             if (!ni.field_c) {
-              mka.field_b.field_o = false;
+              ComponentMount.field_b.field_o = false;
             }
-            if (mka.field_b.field_o) {
+            if (ComponentMount.field_b.field_o) {
               var1 = gl.$cfr$intArgs$a$53ce4ab4c593(126, vf.field_c, new String[]{var3, wp.field_a});
             }
           }

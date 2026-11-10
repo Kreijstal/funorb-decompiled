@@ -3,13 +3,13 @@
  */
 abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderable, WorldBody, Switchable, SwitchableScope {
     int typeId;
-    private int field_q;
+    private int parentSlot;
     int height;
     int x;
-    mka[] field_t;
+    ComponentMount[] mounts;
     private boolean field_v;
     private int field_h;
-    private RoomComponent field_u;
+    private RoomComponent parent;
     bca field_z;
     int width;
     static int field_n;
@@ -27,7 +27,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
     public final int getRenderZ(byte param0) {
         if (param0 >= -86) {
           RoomComponent var3 = (RoomComponent) null;
-          this.a((RoomComponent) null, -115, (byte) -23);
+          this.attachToParent((RoomComponent) null, -115, (byte) -23);
         }
         return this.getElevation((byte) 115);
     }
@@ -45,8 +45,8 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         if (!param0) {
           this.isSwitchable(-56);
         }
-        while (var3 < this.field_t.length) {
-          var4 = this.field_t[var3].a(108);
+        while (var3 < this.mounts.length) {
+          var4 = this.mounts[var3].a(108);
           if (var4 != null) {
             var4.a(param0, param1);
           }
@@ -60,8 +60,8 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
         this.w(-124);
-        for (var2 = 0; var2 < this.field_t.length; var2++) {
-          var3 = this.field_t[var2].a(94);
+        for (var2 = 0; var2 < this.mounts.length; var2++) {
+          var3 = this.mounts[var2].a(94);
           if (var3 != null) {
             var3.c(true);
           }
@@ -71,12 +71,12 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         }
     }
 
-    private final mka a(int param0, int param1) {
+    private final ComponentMount getMount(int param0, int param1) {
         if (param1 != 8192) {
           RoomComponent var4 = (RoomComponent) null;
-          this.a(false, -41, (RoomComponent) null);
+          this.hasDescendant(false, -41, (RoomComponent) null);
         }
-        return this.field_t[param0];
+        return this.mounts[param0];
     }
 
     final static void a(boolean param0) {
@@ -111,9 +111,9 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
     }
 
     public final boolean isExpired(int param0) {
-        mka discarded$0 = null;
+        ComponentMount discarded$0 = null;
         if (param0 != 18407) {
-          discarded$0 = this.a(20, 6);
+          discarded$0 = this.getMount(20, 6);
           return false;
         }
         return false;
@@ -144,10 +144,10 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
 
     private final void m(byte param0) {
         int var3 = 0;
-        mka var4 = null;
+        ComponentMount var4 = null;
         int var5 = TombRacer.field_G ? 1 : 0;
-        mka[] var6 = this.field_t;
-        mka[] var2 = var6;
+        ComponentMount[] var6 = this.mounts;
+        ComponentMount[] var2 = var6;
         if (param0 != -24) {
           this.isRenderExpired((byte) -51);
         }
@@ -184,8 +184,8 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
           if (param3 != null) {
             this.field_s = param3.a(104, false);
           }
-          for (var5_int = 0; this.field_t.length > var5_int; var5_int++) {
-            var6 = this.field_t[var5_int].a(120);
+          for (var5_int = 0; this.mounts.length > var5_int; var5_int++) {
+            var6 = this.mounts[var5_int].a(120);
             if (var6 != null) {
               var6.a(param0, 6, param2, param3);
             }
@@ -216,14 +216,14 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         if (param0 != 0) {
           return true;
         }
-        stackIn_10_0 = ((null != this.field_u &&
-          this.field_u.l(0)) ||
+        stackIn_10_0 = ((null != this.parent &&
+          this.parent.l(0)) ||
           (this.room.o((byte) -82) &&
           !(this.b(true, this.room.i(6029)))));
         return stackIn_10_0;
     }
 
-    final boolean a(boolean param0, int param1, RoomComponent param2) {
+    final boolean hasDescendant(boolean param0, int param1, RoomComponent param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RoomComponent var5 = null;
@@ -234,14 +234,14 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         RuntimeException decompiledCaughtException = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
-          for (var4_int = param1; this.field_t.length > var4_int; var4_int++) {
-            var5 = this.field_t[var4_int].a(param1 ^ -103);
+          for (var4_int = param1; this.mounts.length > var4_int; var4_int++) {
+            var5 = this.mounts[var4_int].a(param1 ^ -103);
             if (var5 != null) {
               if (param2 == var5) {
                 return true;
               }
               if (param0 &&
-                var5.a(param0, 0, param2)) {
+                var5.hasDescendant(param0, 0, param2)) {
                 return true;
               }
             }
@@ -263,7 +263,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
 
     public final int getWidth(int param0) {
         if (param0 > -11) {
-          this.field_u = (RoomComponent) null;
+          this.parent = (RoomComponent) null;
         }
         return this.width;
     }
@@ -275,18 +275,18 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         return io.centredBoxesOverlap(param4, this.getY(9648), (byte) -62, param3, this.getX(3), param1, this.height, this.width, param2);
     }
 
-    void a(Room param0, int param1) {
+    void mirror(Room param0, int param1) {
         try {
           if (param1 != 1) {
             this.height = -87;
           }
-          if (null == this.field_u) {
+          if (null == this.parent) {
             this.x = param0.mirrorX(this.x, (byte) 71);
           } else {
             this.x = -this.x;
           }
           this.angle = GameScreen.a(-this.angle, 8192, -85);
-          this.d(true);
+          this.updateRotation(true);
           this.field_v = !this.field_v ? true : false;
           this.m((byte) -24);
         } catch (RuntimeException runtimeException) {
@@ -301,11 +301,11 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
           return 20;
         }
         int var2 = this.y;
-        if (null != this.field_u) {
+        if (null != this.parent) {
           var3 = this.x >> 8;
           var4 = var2 >> 8;
-          var2 = var3 * (this.field_u.field_f >> 8) + var4 * (this.field_u.field_h >> 8);
-          var2 = var2 + this.field_u.getY(9648);
+          var2 = var3 * (this.parent.field_f >> 8) + var4 * (this.parent.field_h >> 8);
+          var2 = var2 + this.parent.getY(9648);
         }
         return var2;
     }
@@ -334,7 +334,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
 
     abstract Switchable u(int param0);
 
-    final void a(byte param0, mka[] param1) {
+    final void setMounts(byte param0, ComponentMount[] param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -344,12 +344,12 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         RuntimeException var3 = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          this.field_t = param1;
+          this.mounts = param1;
           if (param0 <= 64) {
             this.toggle(-58);
           }
           for (var3_int = 0; param1.length > var3_int; var3_int++) {
-            this.field_t[var3_int].a(-34, var3_int, this);
+            this.mounts[var3_int].setOwner(-34, var3_int, this);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -383,8 +383,8 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         if (param2) {
           this.angle = 111;
         }
-        for (var4 = 0; this.field_t.length > var4; var4++) {
-          var5 = this.field_t[var4].a(-92);
+        for (var4 = 0; this.mounts.length > var4; var4++) {
+          var5 = this.mounts[var4].a(-92);
           if (var5 != null) {
             var6 = var5.a(param0, param1, false);
             if (var6 != null) {
@@ -430,7 +430,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         RuntimeException var5 = null;
         RoomComponent var6 = null;
         try {
-          this.field_u = param3;
+          this.parent = param3;
           if (param3 == null) {
             if (param0.formatVersion > 20) {
               this.x = 1048576 * CoinItemComponent.a(true, 8, param2.readBits((byte) 44, 8));
@@ -460,18 +460,18 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
           this.field_z = new bca(param0.formatVersion, param2);
           stackIn_20_1 = (param2.readBits((byte) 44, 1) == 1);
           this.field_v = stackIn_20_1;
-          for (var5_int = 0; this.field_t.length > var5_int; var5_int++) {
+          for (var5_int = 0; this.mounts.length > var5_int; var5_int++) {
             if (1 == param2.readBits((byte) 44, 1)) {
               var6 = vha.field_c.readComponent(param2, param0, (byte) -7, this);
-              var6.setPosition(1434528720, this.field_t[var5_int].c((byte) 126).field_d << 16, this.field_t[var5_int].c((byte) 111).field_f << 16);
-              this.field_t[var5_int].a(var6, 126);
+              var6.setPosition(1434528720, this.mounts[var5_int].getOffset((byte) 126).y << 16, this.mounts[var5_int].getOffset((byte) 111).x << 16);
+              this.mounts[var5_int].attach(var6, 126);
             }
           }
           if (this.field_v) {
             this.m((byte) -24);
-            this.d(true);
+            this.updateRotation(true);
           } else {
-            this.d(true);
+            this.updateRotation(true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -533,13 +533,13 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         }
     }
 
-    final void a(RoomComponent param0, int param1, byte param2) {
+    final void attachToParent(RoomComponent param0, int param1, byte param2) {
         try {
-          this.field_q = param1;
+          this.parentSlot = param1;
           if (param2 != -52) {
             this.angle = -73;
           }
-          this.field_u = param0;
+          this.parent = param0;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "csa.OB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -679,22 +679,22 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         }
     }
 
-    private final void d(boolean param0) {
+    private final void updateRotation(boolean param0) {
         int var2 = 0;
         RoomComponent var3;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
         this.field_f = MouseInputHandler.a((byte) 106, -this.getFacingAngle(-25787) >> 2);
         this.field_h = bua.a(0, -this.getFacingAngle(-25787) >> 2);
-        for (var2 = 0; this.field_t.length > var2; var2++) {
-          this.field_t[var2].a(this.field_f, this.field_h, (byte) 98);
-          var3 = this.field_t[var2].a(-122);
+        for (var2 = 0; this.mounts.length > var2; var2++) {
+          this.mounts[var2].rotateBy(this.field_f, this.field_h, (byte) 98);
+          var3 = this.mounts[var2].a(-122);
           if (var3 != null) {
-            var3.d(true);
+            var3.updateRotation(true);
           }
         }
         if (!param0) {
-          this.field_t = (mka[]) null;
+          this.mounts = (ComponentMount[]) null;
         }
     }
 
@@ -713,7 +713,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         return this.height;
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void setSize(int param0, int param1, int param2) {
         int var4 = 28 / ((-12 - param0) / 54);
         this.width = param1;
         this.height = param2;
@@ -736,11 +736,11 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
           this.getGlobalId(107);
         }
         int var2 = this.x;
-        if (null != this.field_u) {
+        if (null != this.parent) {
           var3 = var2 >> 8;
           var4 = this.y >> 8;
-          var2 = (this.field_u.field_h >> 8) * var3 - (this.field_u.field_f >> 8) * var4;
-          var2 = var2 + this.field_u.getX(3);
+          var2 = (this.parent.field_h >> 8) * var3 - (this.parent.field_f >> 8) * var4;
+          var2 = var2 + this.parent.getX(3);
         }
         return var2;
     }
@@ -750,8 +750,8 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
           this.field_f = -1;
         }
         int var2 = this.angle;
-        if (null != this.field_u) {
-          var2 = var2 + (this.field_u.getFacingAngle(-25787) + this.field_u.a(this.field_q, param0 ^ -17595).a(false));
+        if (null != this.parent) {
+          var2 = var2 + (this.parent.getFacingAngle(-25787) + this.parent.getMount(this.parentSlot, param0 ^ -17595).a(false));
         }
         return var2;
     }
@@ -761,8 +761,8 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         if (param0 >= -17) {
           discarded$0 = this.p((byte) 101);
         }
-        if (this.field_u != null) {
-          return this.field_u.getRoot((byte) -84);
+        if (this.parent != null) {
+          return this.parent.getRoot((byte) -84);
         }
         return this;
     }
@@ -789,7 +789,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         int var5 = 0;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          if (this.field_u == null) {
+          if (this.parent == null) {
             param1.writeBits((byte) -128, dqa.a(true, this.x / 1048576, 8), 8);
             param1.writeBits((byte) -125, dqa.a(true, this.y / 1048576, 8), 8);
           }
@@ -823,8 +823,8 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
           if (param0) {
             return;
           }
-          while (var3_int < this.field_t.length) {
-            var4 = this.field_t[var3_int].a(86);
+          while (var3_int < this.mounts.length) {
+            var4 = this.mounts[var3_int].a(86);
             if (var4 != null) {
               param1.writeBits((byte) -42, 1, 1);
               vha.field_c.writeComponent(var4, -16097, param1);
@@ -852,14 +852,14 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
 
     void q(byte param0) {
         if (param0 != -128) {
-          this.d(false);
+          this.updateRotation(false);
         }
     }
 
     abstract void instantiate(boolean param0, boolean param1, Room param2, int param3, int param4, int param5, Trap param6);
 
     RoomComponent(Room param0, int param1) {
-        this.field_t = new mka[]{};
+        this.mounts = new ComponentMount[]{};
         this.field_z = new bca();
         this.field_x = true;
         try {
@@ -867,7 +867,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
           this.typeId = param1;
           this.field_w = param0.d(-31957).a(-54, false);
           this.q((byte) -128);
-          this.d(true);
+          this.updateRotation(true);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "csa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

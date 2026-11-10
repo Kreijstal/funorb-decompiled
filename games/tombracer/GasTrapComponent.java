@@ -46,7 +46,7 @@ final class GasTrapComponent extends PrefabComponent {
         if (pn.h(9807)) {
           return true;
         }
-        if (null != fj.field_c) {
+        if (null != RoomViewRenderer.field_c) {
           return true;
         }
         if (!eba.a(true)) {
@@ -163,7 +163,7 @@ final class GasTrapComponent extends PrefabComponent {
 
     final void q(byte param0) {
         super.q(param0);
-        this.b(82, 4194304, 4194304);
+        this.setSize(82, 4194304, 4194304);
     }
 
     static {

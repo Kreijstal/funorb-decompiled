@@ -148,7 +148,7 @@ final class MovingSawComponent extends PathMoverComponent {
 
     final void q(byte param0) {
         super.q(param0);
-        this.b(66, 4194304, 4194304);
+        this.setSize(66, 4194304, 4194304);
     }
 
     MovingSawComponent(Room param0, int param1) {

@@ -3,7 +3,7 @@
  */
 final class PlayPhase extends MatchPhase {
     private boolean field_p;
-    private qa[] field_n;
+    private PlayerViewport[] viewports;
     private boolean field_o;
     private int field_q;
     private boolean field_m;
@@ -33,11 +33,11 @@ final class PlayPhase extends MatchPhase {
         if (this.matchState.e(2) == -1) {
           this.screen.h(110);
         }
-        for (var4 = 0; this.field_n.length > var4; var4++) {
-          if (!this.field_n[var4].c(1727002282) &&
+        for (var4 = 0; this.viewports.length > var4; var4++) {
+          if (!this.viewports[var4].c(1727002282) &&
             this.matchState.f((byte) -127, var4)) {
-            this.field_n[var4].a(60, true);
-            this.field_n[var4].a(0, (byte) 108, 2 * aaa.a(false));
+            this.viewports[var4].a(60, true);
+            this.viewports[var4].a(0, (byte) 108, 2 * aaa.a(false));
           }
         }
         if (this.screen.d((byte) 95)) {
@@ -62,8 +62,8 @@ final class PlayPhase extends MatchPhase {
         this.b((byte) 101);
         var6 = 0;
         var4Lifetime1 = var6;
-        while (var6 < this.field_n.length) {
-          this.field_n[var6].a((byte) 111);
+        while (var6 < this.viewports.length) {
+          this.viewports[var6].a((byte) 111);
           var6++;
         }
         if (!this.screen.field_D) {
@@ -113,7 +113,7 @@ final class PlayPhase extends MatchPhase {
         int var5_intLifetime1Lifetime1;
         var14 = TombRacer.field_G ? 1 : 0;
         var3 = this.screen.l(81);
-        this.field_n[var3].b(23479);
+        this.viewports[var3].b(23479);
         if (!this.screen.f((byte) 33)) {
           var4_int = 0;
           for (var5_int = 0; this.matchState.field_c.field_e.length > var5_int; var5_int++) {
@@ -135,8 +135,8 @@ final class PlayPhase extends MatchPhase {
                 var6Lifetime2 = var7_int;
               }
             }
-            this.field_n[var6Lifetime2].a(0, qu.field_e, -20186);
-            this.field_n[var6Lifetime2].b(23479);
+            this.viewports[var6Lifetime2].a(0, qu.field_e, -20186);
+            this.viewports[var6Lifetime2].b(23479);
           } else {
             if (var5_int > 2) {
               var19 = new int[var5_int][2];
@@ -154,8 +154,8 @@ final class PlayPhase extends MatchPhase {
                 var8 = this.matchState.field_c.field_e[var19[var4_int][var7_int]];
                 if (var8 != -1 &&
                   var3 != var8) {
-                  this.field_n[var8].a(var7_int, mma.field_c, -20186);
-                  this.field_n[var8].b(23479);
+                  this.viewports[var8].a(var7_int, mma.field_c, -20186);
+                  this.viewports[var8].b(23479);
                 }
               }
             }
@@ -168,12 +168,12 @@ final class PlayPhase extends MatchPhase {
             var5_intLifetime1 = 16;
             var6Lifetime1 = 256;
             var7_intLifetime1 = 64;
-            qa.a(var7_intLifetime1, var6Lifetime1, (byte) 109, var4_intLifetime1, aq.field_a, var5_intLifetime1);
+            PlayerViewport.a(var7_intLifetime1, var6Lifetime1, (byte) 109, var4_intLifetime1, aq.field_a, var5_intLifetime1);
             SocketConnector.a(dpa.field_c, 0, SingleChildWidget.field_v, 11903361, 40, var7_intLifetime1, 1, var5_intLifetime1, var4_intLifetime1, 0, (byte) 60, var6Lifetime1);
             SocketConnector.a(CrossedSineBandsOperator.field_q + ": " + this.screen.getColouredPlayerName(var3, 9), 2, eda.field_f, 11903361, 40, var7_intLifetime1, 1, var5_intLifetime1, var4_intLifetime1, 1, (byte) 60, var6Lifetime1);
             var5_intLifetime1 = var5_intLifetime1 + (var7_intLifetime1 + 16);
             var7_intLifetime1Lifetime2 = 32;
-            qa.a(var7_intLifetime1Lifetime2, var6Lifetime1, (byte) 80, var4_intLifetime1, aq.field_a, var5_intLifetime1);
+            PlayerViewport.a(var7_intLifetime1Lifetime2, var6Lifetime1, (byte) 80, var4_intLifetime1, aq.field_a, var5_intLifetime1);
             kn.field_p.a((aa) null, var6Lifetime1, 40, 0, var5_intLifetime1 + 2, fm.a(false, 0), SpriteState.field_l, 1, fm.a(false, 11903361), WhiteLightShooterComponent.field_J, (byte) 116, var7_intLifetime1Lifetime2, 0, id.field_h, var4_intLifetime1, 1);
           }
           if (!param1) {
@@ -191,7 +191,7 @@ final class PlayPhase extends MatchPhase {
             var5_intLifetime1Lifetime1 = 40 + ds.field_n.a(var4, (byte) 41);
             var6Lifetime1Lifetime1 = aaa.a(false) / 2;
             var7_intLifetime1Lifetime1 = SwitchLinkList.b(0) / 2;
-            qa.a(64, var5_intLifetime1Lifetime1, (byte) 74, -(var5_intLifetime1Lifetime1 / 2) + var6Lifetime1Lifetime1, aq.field_a, -ds.field_n.field_d + (var7_intLifetime1Lifetime1 - 32));
+            PlayerViewport.a(64, var5_intLifetime1Lifetime1, (byte) 74, -(var5_intLifetime1Lifetime1 / 2) + var6Lifetime1Lifetime1, aq.field_a, -ds.field_n.field_d + (var7_intLifetime1Lifetime1 - 32));
             if (this.field_q > 50) {
               if (0 != this.matchState.field_K) {
                 MembersUpsellMenu.a(var4, 16777215, eda.field_f, -1, var7_intLifetime1Lifetime1, var6Lifetime1Lifetime1, 0);
@@ -277,7 +277,7 @@ final class PlayPhase extends MatchPhase {
     final boolean a(char param0, int param1, int param2) {
         boolean stackIn_14_0 = false;
         boolean stackIn_23_1 = false;
-        AchievementsOverlay var5;
+        MessageOverlay var5;
         PlayerSimulation var6;
         if (RasterizerOperator.d(20125)) {
           if (param2 == 28) {
@@ -325,7 +325,7 @@ final class PlayPhase extends MatchPhase {
           }
           if (param2 == 24) {
             if (!this.screen.d(0)) {
-              var5 = new AchievementsOverlay(this.screen, (ms) null);
+              var5 = new MessageOverlay(this.screen, (ms) null);
               var5.a("TITLE!", "Lalala here is some text to test with", "Press fire to continue. Or not.", (byte) 125);
               this.screen.addOverlay(var5, param1 + 655);
               return true;
@@ -371,9 +371,9 @@ final class PlayPhase extends MatchPhase {
     private final void b(byte param0) {
         int var2 = this.screen.l(89);
         if (this.matchState.field_P <= 1) {
-          this.field_n[var2].a(0, mf.field_d, -20186);
+          this.viewports[var2].a(0, mf.field_d, -20186);
         } else {
-          this.field_n[var2].a(0, dp.field_j, -20186);
+          this.viewports[var2].a(0, dp.field_j, -20186);
         }
         if (param0 < 52) {
           this.field_p = false;
@@ -424,10 +424,10 @@ final class PlayPhase extends MatchPhase {
         if (4 <= param0) {
           this.screen.field_A = true;
         }
-        for (var3 = 0; var3 < this.field_n.length; var3++) {
+        for (var3 = 0; var3 < this.viewports.length; var3++) {
           if (~this.screen.l(112) == ~var3 ||
             this.screen.d((byte) 102)) {
-            this.field_n[var3].a((byte) -115, param0);
+            this.viewports[var3].a((byte) -115, param0);
           }
         }
         if (param1 != -109) {
@@ -720,9 +720,9 @@ final class PlayPhase extends MatchPhase {
         this.field_m = false;
         try {
           var3_int = this.screen.matchState.players.length;
-          this.field_n = new qa[var3_int];
+          this.viewports = new PlayerViewport[var3_int];
           for (var4 = 0; var4 < var3_int; var4++) {
-            this.field_n[var4] = new qa(this.screen, var4);
+            this.viewports[var4] = new PlayerViewport(this.screen, var4);
           }
           if (!this.screen.f((byte) 33)) {
             if (this.screen.c(false)) {

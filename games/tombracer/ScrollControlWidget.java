@@ -221,11 +221,11 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
             var5 = kia.field_a;
           }
           var7 = (String) null;
-          dqa.a(var5, 0, (String) null, sva.field_d, 127);
-          pq.field_g.field_N = sva.field_d - (sva.field_d >> 1 & 8355711) + ((VortexBehaviour.field_t.field_N & 16711422) >> 1);
-          pq.field_g.field_ab = (8355711 & VortexBehaviour.field_t.field_ab >> 1) + (-((sva.field_d & 16711423) >> 1) + sva.field_d);
-          pq.field_g.field_gb = ((16711423 & VortexBehaviour.field_t.field_gb) >> 1) + (sva.field_d - (sva.field_d >> 1 & 8355711));
-          rma.field_b = mka.field_b;
+          dqa.a(var5, 0, (String) null, RoomLighting.field_d, 127);
+          pq.field_g.field_N = RoomLighting.field_d - (RoomLighting.field_d >> 1 & 8355711) + ((VortexBehaviour.field_t.field_N & 16711422) >> 1);
+          pq.field_g.field_ab = (8355711 & VortexBehaviour.field_t.field_ab >> 1) + (-((RoomLighting.field_d & 16711423) >> 1) + RoomLighting.field_d);
+          pq.field_g.field_gb = ((16711423 & VortexBehaviour.field_t.field_gb) >> 1) + (RoomLighting.field_d - (RoomLighting.field_d >> 1 & 8355711));
+          rma.field_b = ComponentMount.field_b;
           oea.field_i = pq.field_g;
           SimpleMoveLocomotor.field_s = new jea((long)param1, param4);
           lra.field_e = new jea(0L, param0);
@@ -234,8 +234,8 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
           pq.field_g = new jea(0L, param2);
           pq.field_g.field_H = PlatformBehaviour.field_s;
           dh.field_e.b(-123, pq.field_g);
-          mka.field_b = new jea(0L, rma.field_b);
-          dh.field_e.b(-128, mka.field_b);
+          ComponentMount.field_b = new jea(0L, rma.field_b);
+          dh.field_e.b(-128, ComponentMount.field_b);
           lra.field_d = new jea(0L, VortexBehaviour.field_t, fw.field_a);
           qpa.field_b = new jea(0L, VortexBehaviour.field_t);
           SimpleMoveLocomotor.field_s.b(param1 ^ -122, lra.field_e);

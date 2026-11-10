@@ -396,7 +396,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         }
         RoomComponent var8 = (RoomComponent) (this.components.first(-80));
         while (var8 != null) {
-          var8.a(this, 1);
+          var8.mirror(this, 1);
           var8 = (RoomComponent) (this.components.next(126));
         }
         if (param0 != 7) {
@@ -912,7 +912,7 @@ final class Room implements SwitchableScope, Renderable, noa {
 
     private final Trap[] a(int param0, int param1, int param2, int param3, int param4) {
         int var8_int = 0;
-        ub var6;
+        ObjectList var6;
         Collidable[] var7;
         int var10;
         Trap[] var8;
@@ -921,18 +921,18 @@ final class Room implements SwitchableScope, Renderable, noa {
         if (param2 <= 27) {
           return (Trap[]) null;
         }
-        var6 = new ub();
+        var6 = new ObjectList();
         var7 = this.collisionGrid.b(param1, -1, param4, param0, param3);
         for (var8_int = 0; var7.length > var8_int; var8_int++) {
           if (var7[var8_int] instanceof Trap) {
             var9 = (Trap) (var7[var8_int]);
             if (var9.intersectsRect((byte) 110, param1, param4, param3, param0)) {
-              var6.a((byte) -37, var9);
+              var6.add((byte) -37, var9);
             }
           }
         }
-        var8 = new Trap[var6.a(-1)];
-        var6.a(var8, false);
+        var8 = new Trap[var6.size(-1)];
+        var6.copyInto(var8, false);
         return var8;
     }
 

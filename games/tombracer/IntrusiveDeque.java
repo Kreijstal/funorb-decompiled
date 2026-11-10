@@ -271,11 +271,11 @@ final class IntrusiveDeque {
                         !fua.field_g) {
                         if (!PowerDownItemBehaviour.field_s) {
                           var17 = hka.field_b;
-                          var18 = gl.$cfr$intArgs$a$53ce4ab4c593(114, fj.field_b, new String[]{var16});
+                          var18 = gl.$cfr$intArgs$a$53ce4ab4c593(114, RoomViewRenderer.field_b, new String[]{var16});
                           var17.field_f.addItem((byte) -79, 8, var18);
                         }
                         var17Lifetime1 = hka.field_b;
-                        var18Lifetime1 = gl.$cfr$intArgs$a$53ce4ab4c593(86, ob.field_f, new String[]{var16});
+                        var18Lifetime1 = gl.$cfr$intArgs$a$53ce4ab4c593(86, SceneLight.field_f, new String[]{var16});
                         var17Lifetime1.field_f.addItem((byte) -97, 18, var18Lifetime1);
                       }
                       var5 = var7;

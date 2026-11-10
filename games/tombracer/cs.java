@@ -9,7 +9,7 @@ final class cs {
     final static String a(byte param0) {
         int var1 = 126 % ((param0 + 60) / 52);
         if (kl.field_a == gsa.field_y) {
-          return ub.field_i;
+          return ObjectList.field_i;
         }
         if (wt.field_d == gsa.field_y) {
           return uaa.field_a;

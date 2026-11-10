@@ -368,7 +368,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
     final static void a(int param0, boolean param1, int param2, boolean param3, int param4, boolean param5, int param6, int param7, boolean param8, boolean param9) {
         int var11;
         var11 = TombRacer.field_G ? 1 : 0;
-        if (!param1 && (SoftwareRasterizer.field_g != ob.field_i ||
+        if (!param1 && (SoftwareRasterizer.field_g != SceneLight.field_i ||
           BufferedSocket.field_g != SoftwareRasterizer.field_a) && (SoftwareRasterizer.field_a == gn.field_C.field_e &&
           gn.field_C.field_f == SoftwareRasterizer.field_g)) {
           if (null != C2SChooseRewardPacket.field_a) {
@@ -384,14 +384,14 @@ final class CrossedSineBandsOperator extends TextureOperator {
         if (param1) {
           ava.field_d = ht.field_Xb;
         } else {
-          ava.field_d = (-640 + ob.field_i) / 2;
+          ava.field_d = (-640 + SceneLight.field_i) / 2;
         }
         di.a((byte) -98, param1);
         if (mla.field_a > 0) {
           SimpleHoverMountComponent.a(param5, true, param1, param6);
         }
-        AchievementsOverlay.field_t.field_x = tka.field_q.field_x;
-        AchievementsOverlay.field_t.field_z = 1;
+        MessageOverlay.field_t.field_x = tka.field_q.field_x;
+        MessageOverlay.field_t.field_z = 1;
         if (0 < GameKeyHandler.field_a) {
           vu.a((byte) 1, param5, param1, param6);
         }

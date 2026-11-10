@@ -29,7 +29,7 @@ final class sla {
     final static void b(int param0) {
         qpa.field_b = null;
         if (oea.field_i != null) {
-          mka.field_b = rma.field_b;
+          ComponentMount.field_b = rma.field_b;
           pq.field_g = oea.field_i;
           rma.field_b = null;
           pq.field_g.field_N = -1;

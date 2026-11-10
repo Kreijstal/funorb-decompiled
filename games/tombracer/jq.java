@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jq extends ob {
+final class jq extends SceneLight {
     static jea field_o;
 
     final static void c(byte param0) {

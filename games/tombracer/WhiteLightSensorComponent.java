@@ -165,7 +165,7 @@ final class WhiteLightSensorComponent extends SwitchComponent {
 
     final void q(byte param0) {
         super.q(param0);
-        this.b(80, 4194304, 4194304);
+        this.setSize(80, 4194304, 4194304);
     }
 
     static {

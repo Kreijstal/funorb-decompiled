@@ -109,7 +109,7 @@ final class ck {
           SocketArchiveNetworkClient.field_w[1] = cha.field_b;
           RasterShape.field_e = new jea(0L, (jea) null);
           uh.field_h = new jea(0L, ooa.field_f, ija.field_i);
-          vw.field_b = new jea(0L, SecondaryNodeDeque.field_b, AchievementsOverlay.field_m);
+          vw.field_b = new jea(0L, SecondaryNodeDeque.field_b, MessageOverlay.field_m);
           bsa.field_j = new ScrollPane(0L, new jea(0L, (jea) null), rfa.field_C, DateFieldsWidget.field_F);
           RasterShape.field_e.b(-126, uh.field_h);
           if (UnlockOverlay.field_p) {
@@ -180,7 +180,7 @@ final class ck {
           cea.field_a = new jea(0L, Corpse.field_i);
           cea.field_a.field_z = 1;
           uaa.field_b = new jea(0L, ooa.field_f, ija.field_i);
-          RopeBridgeComponent.field_F = new jea(0L, SecondaryNodeDeque.field_b, AchievementsOverlay.field_m);
+          RopeBridgeComponent.field_F = new jea(0L, SecondaryNodeDeque.field_b, MessageOverlay.field_m);
           tn.field_n = new ScrollPane(0L, new jea(0L, (jea) null), rfa.field_C, DateFieldsWidget.field_F);
           lk.field_l.b(param11 ^ -25371, cea.field_a);
           lk.field_l.b(-124, uaa.field_b);
@@ -194,7 +194,7 @@ final class ck {
           qna.field_b = new jea(0L, KeyLockBehaviour.field_r, DoorwayComponent.field_G.toUpperCase());
           SimpleConditionBehaviour.field_p = new jea[param0 + 4];
           bf.field_b = new tv[4 + param0][];
-          SimpleConditionBehaviour.field_p[0] = new jea(0L, una.field_j, fj.field_a);
+          SimpleConditionBehaviour.field_p[0] = new jea(0L, una.field_j, RoomViewRenderer.field_a);
           bf.field_b[0] = new tv[6];
           var17_int = 0;
           scanLoop1: while (true) {
@@ -316,12 +316,12 @@ final class ck {
             }
             pk.field_z = new jea(0L, hg.field_g);
             hw.field_a = new jea(0L, hg.field_g);
-            AchievementsOverlay.field_t = new jea(0L, tka.field_q);
-            AchievementsOverlay.field_t.applyStyle(false, Corpse.field_i);
-            AchievementsOverlay.field_t.field_bb = 1;
+            MessageOverlay.field_t = new jea(0L, tka.field_q);
+            MessageOverlay.field_t.applyStyle(false, Corpse.field_i);
+            MessageOverlay.field_t.field_bb = 1;
             break;
           }
-          stackIn_98_0Lifetime1 = AchievementsOverlay.field_t;
+          stackIn_98_0Lifetime1 = MessageOverlay.field_t;
           var17 = stackIn_98_0Lifetime1;
           ((jea) (var17)).field_z = 1;
           dka.field_b = new jea(0L, (jea) null);
@@ -351,7 +351,7 @@ final class ck {
           }
           dka.field_b.b(-128, pk.field_z);
           dka.field_b.b(-125, hw.field_a);
-          dka.field_b.b(-123, AchievementsOverlay.field_t);
+          dka.field_b.b(-123, MessageOverlay.field_t);
           S2CEventPacket.field_e = new jea(0L, OpenGlTransform3D.field_f, eu.field_b.toUpperCase());
           Trap.field_q = new jea(0L, dp.field_i, ej.field_b.toUpperCase());
           return;

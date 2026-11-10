@@ -120,8 +120,8 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
 
     final void q(byte param0) {
         super.q(param0);
-        this.b(72, 2097152, 2097152);
-        this.a((byte) 113, new mka[]{new mka(0, 0, 2097152, 0, 40)});
+        this.setSize(72, 2097152, 2097152);
+        this.setMounts((byte) 113, new ComponentMount[]{new ComponentMount(0, 0, 2097152, 0, 40)});
     }
 
     SimpleHoverMountComponent(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {

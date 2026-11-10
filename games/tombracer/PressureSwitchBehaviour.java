@@ -209,9 +209,9 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
           wp.a(param2 ^ 105);
           return true;
         }
-        if (null != fj.field_c &&
-          fj.field_c.b(true)) {
-          fj.field_c = null;
+        if (null != RoomViewRenderer.field_c &&
+          RoomViewRenderer.field_c.b(true)) {
+          RoomViewRenderer.field_c = null;
           wp.a(-1);
           return true;
         }

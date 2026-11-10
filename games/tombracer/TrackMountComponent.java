@@ -121,8 +121,8 @@ final class TrackMountComponent extends PrefabComponent {
 
     final void q(byte param0) {
         super.q(param0);
-        this.b(param0 + 250, 2097152, 2097152);
-        this.a((byte) 112, new mka[]{new mka(0, 0, 2097152, 0, 40)});
+        this.setSize(param0 + 250, 2097152, 2097152);
+        this.setMounts((byte) 112, new ComponentMount[]{new ComponentMount(0, 0, 2097152, 0, 40)});
     }
 
     public static void releaseStatics(byte param0) {

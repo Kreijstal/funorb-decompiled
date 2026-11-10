@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jha extends IntrusiveNode {
+final class FloatingMessage extends IntrusiveNode {
     private String field_n;
     private int field_f;
     private int field_l;
@@ -29,7 +29,7 @@ final class jha extends IntrusiveNode {
         this.field_u = param0;
     }
 
-    final String b(int param0) {
+    final String getText(int param0) {
         if (param0 != 29161) {
           this.a(true);
           return this.field_n;
@@ -168,7 +168,7 @@ final class jha extends IntrusiveNode {
         return this.field_g;
     }
 
-    final void a(boolean param0, int param1, int param2, int param3) {
+    final void setTiming(boolean param0, int param1, int param2, int param3) {
         this.field_i = param1;
         this.field_l = param1 + param3 + param2;
         this.field_f = param2;
@@ -185,7 +185,7 @@ final class jha extends IntrusiveNode {
         }
     }
 
-    final boolean e(byte param0) {
+    final boolean isExpired(byte param0) {
         if (param0 == -39) {
           return this.field_l <= this.field_m ? true : false;
         }
@@ -211,7 +211,7 @@ final class jha extends IntrusiveNode {
 
     final boolean c(int param0) {
         if (param0 != -1) {
-          this.b(-122);
+          this.getText(-122);
           if (this.field_o != 0) {
             return this.field_m < -this.field_i + this.field_l ? true : false;
           }
@@ -226,7 +226,7 @@ final class jha extends IntrusiveNode {
         return true;
     }
 
-    jha(int param0, String param1, String param2) {
+    FloatingMessage(int param0, String param1, String param2) {
         try {
           this.field_h = param1;
           this.field_r = param0;

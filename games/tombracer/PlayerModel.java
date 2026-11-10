@@ -898,7 +898,7 @@ final class PlayerModel implements PlayerAnimator, gs {
     }
 
     public final void a(int param0, Room param1) {
-        sva var5 = null;
+        RoomLighting var5 = null;
         if (param1 == null) {
           return;
         }
@@ -910,11 +910,11 @@ final class PlayerModel implements PlayerAnimator, gs {
           return;
         }
         ev var4 = var3.a((byte) 59);
-        if (!(var4 instanceof sva)) {
+        if (!(var4 instanceof RoomLighting)) {
           return;
         }
         try {
-          var5 = (sva) (var4);
+          var5 = (RoomLighting) (var4);
           var5.a((byte) 45, this.field_l);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hf.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

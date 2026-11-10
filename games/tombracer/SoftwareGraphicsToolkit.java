@@ -1223,7 +1223,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         return null;
     }
 
-    final ob a(int param0, int param1, int param2, int param3, int param4, float param5) {
+    final SceneLight a(int param0, int param1, int param2, int param3, int param4, float param5) {
         return null;
     }
 
@@ -1281,7 +1281,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final void a(int param0, ob[] param1) {
+    final void setLights(int param0, SceneLight[] param1) {
     }
 
     final ToolkitSprite createSprite(SpriteData param0, boolean param1) {
