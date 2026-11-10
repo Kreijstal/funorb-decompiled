@@ -2,23 +2,23 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class SoftwareToolkitSprite extends ToolkitSprite {
-    int insetLeft;
+    int insetTop;
     static int field_u;
     static int field_e;
     static int field_c;
     static int field_i;
-    int insetBottom;
-    static int field_y;
     int insetRight;
+    static int field_y;
+    int insetBottom;
     static int field_x;
     static int field_k;
     static int field_A;
     static int field_C;
     static int field_B;
     static int field_j;
-    int height;
-    static int field_h;
     int width;
+    static int field_h;
+    int height;
     private static int field_q;
     SoftwareGraphicsToolkit field_b;
     static int field_D;
@@ -31,22 +31,22 @@ abstract class SoftwareToolkitSprite extends ToolkitSprite {
     static int field_z;
     static int field_n;
     static int field_t;
-    int insetTop;
+    int insetLeft;
 
-    final int height() {
-        return this.height;
+    final int width() {
+        return this.width;
     }
 
     abstract void blitAffine(int param0, int param1);
 
     abstract void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8);
 
-    final int width() {
-        return this.width;
+    final int height() {
+        return this.height;
     }
 
-    final int paddedHeight() {
-        return this.insetTop + this.height + this.insetBottom;
+    final int paddedWidth() {
+        return this.insetLeft + this.width + this.insetRight;
     }
 
     abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8);
@@ -76,21 +76,21 @@ abstract class SoftwareToolkitSprite extends ToolkitSprite {
         float var14Lifetime1;
         float var15Lifetime1;
         float var16Lifetime1;
-        var7 = this.insetTop + this.height + this.insetBottom;
-        var8 = this.insetLeft + this.width + this.insetRight;
-        if (var7 != this.height) {
+        var7 = this.insetLeft + this.width + this.insetRight;
+        var8 = this.insetTop + this.height + this.insetBottom;
+        if (var7 != this.width) {
           var9 = (param2 - param0) / (float)var7;
           var10 = (param3 - param1) / (float)var7;
           var11 = (param4 - param0) / (float)var8;
           var12 = (param5 - param1) / (float)var8;
-          var13 = var11 * (float)this.insetLeft;
-          var14 = var12 * (float)this.insetLeft;
-          var15 = var9 * (float)this.insetTop;
-          var16 = var10 * (float)this.insetTop;
-          var17 = -var9 * (float)this.insetBottom;
-          var18 = -var10 * (float)this.insetBottom;
-          var19 = -var11 * (float)this.insetRight;
-          var20 = -var12 * (float)this.insetRight;
+          var13 = var11 * (float)this.insetTop;
+          var14 = var12 * (float)this.insetTop;
+          var15 = var9 * (float)this.insetLeft;
+          var16 = var10 * (float)this.insetLeft;
+          var17 = -var9 * (float)this.insetRight;
+          var18 = -var10 * (float)this.insetRight;
+          var19 = -var11 * (float)this.insetBottom;
+          var20 = -var12 * (float)this.insetBottom;
           param0 = param0 + (var15 + var13);
           param1 = param1 + (var16 + var14);
           param2 = param2 + (var17 + var13);
@@ -98,19 +98,19 @@ abstract class SoftwareToolkitSprite extends ToolkitSprite {
           param4 = param4 + (var15 + var19);
           param5 = param5 + (var16 + var20);
         } else {
-          if (var8 != this.width) {
+          if (var8 != this.height) {
             var9 = (param2 - param0) / (float)var7;
             var10 = (param3 - param1) / (float)var7;
             var11 = (param4 - param0) / (float)var8;
             var12 = (param5 - param1) / (float)var8;
-            var13 = var11 * (float)this.insetLeft;
-            var14 = var12 * (float)this.insetLeft;
-            var15 = var9 * (float)this.insetTop;
-            var16 = var10 * (float)this.insetTop;
-            var17 = -var9 * (float)this.insetBottom;
-            var18 = -var10 * (float)this.insetBottom;
-            var19 = -var11 * (float)this.insetRight;
-            var20 = -var12 * (float)this.insetRight;
+            var13 = var11 * (float)this.insetTop;
+            var14 = var12 * (float)this.insetTop;
+            var15 = var9 * (float)this.insetLeft;
+            var16 = var10 * (float)this.insetLeft;
+            var17 = -var9 * (float)this.insetRight;
+            var18 = -var10 * (float)this.insetRight;
+            var19 = -var11 * (float)this.insetBottom;
+            var20 = -var12 * (float)this.insetBottom;
             param0 = param0 + (var15 + var13);
             param1 = param1 + (var16 + var14);
             param2 = param2 + (var17 + var13);
@@ -183,14 +183,14 @@ abstract class SoftwareToolkitSprite extends ToolkitSprite {
         field_e = (int)((float)((int)var13Lifetime1 * field_x) + var11Lifetime1);
         var15Lifetime1 = (param2 - param0) * (param5 - param1) - (param3 - param1) * (param4 - param0);
         var16Lifetime1 = (param4 - param0) * (param3 - param1) - (param5 - param1) * (param2 - param0);
-        field_z = (int)((param5 - param1) * 4096.0f * (float)this.height / var15Lifetime1);
-        field_y = (int)((param3 - param1) * 4096.0f * (float)this.width / var16Lifetime1);
-        field_u = (int)((param4 - param0) * 4096.0f * (float)this.height / var16Lifetime1);
-        field_A = (int)((param2 - param0) * 4096.0f * (float)this.width / var15Lifetime1);
+        field_z = (int)((param5 - param1) * 4096.0f * (float)this.width / var15Lifetime1);
+        field_y = (int)((param3 - param1) * 4096.0f * (float)this.height / var16Lifetime1);
+        field_u = (int)((param4 - param0) * 4096.0f * (float)this.width / var16Lifetime1);
+        field_A = (int)((param2 - param0) * 4096.0f * (float)this.height / var15Lifetime1);
         field_p = (int)(var11Lifetime1 * 16.0f + 8.0f - (param0 + param2 + param4 + var9Lifetime1) / 4.0f * 16.0f);
         field_m = (int)(var13Lifetime1 * 16.0f + 8.0f - (param1 + param3 + param5 + var10Lifetime1) / 4.0f * 16.0f);
-        field_n = (this.height >> 1 << 12) + (field_m * field_u >> 4);
-        field_w = (this.width >> 1 << 12) + (field_m * field_A >> 4);
+        field_n = (this.width >> 1 << 12) + (field_m * field_u >> 4);
+        field_w = (this.height >> 1 << 12) + (field_m * field_A >> 4);
         field_C = field_p * field_z >> 4;
         field_r = field_p * field_y >> 4;
         field_i = (int)var12Lifetime1;
@@ -199,16 +199,16 @@ abstract class SoftwareToolkitSprite extends ToolkitSprite {
     }
 
     final void setInsets(int param0, int param1, int param2, int param3) {
-        this.insetTop = param0;
-        this.insetLeft = param1;
-        this.insetBottom = param2;
-        this.insetRight = param3;
+        this.insetLeft = param0;
+        this.insetTop = param1;
+        this.insetRight = param2;
+        this.insetBottom = param3;
     }
 
     abstract void drawScaled(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7);
 
-    final int paddedWidth() {
-        return this.insetLeft + this.width + this.insetRight;
+    final int paddedHeight() {
+        return this.insetTop + this.height + this.insetBottom;
     }
 
     final void drawAffine(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8, int param9) {
@@ -422,8 +422,8 @@ abstract class SoftwareToolkitSprite extends ToolkitSprite {
 
     SoftwareToolkitSprite(SoftwareGraphicsToolkit param0, int param1, int param2) {
         this.field_b = param0;
-        this.height = param1;
-        this.width = param2;
+        this.width = param1;
+        this.height = param2;
     }
 
     static {

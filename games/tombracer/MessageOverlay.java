@@ -19,8 +19,8 @@ final class MessageOverlay extends MatchOverlay {
     final void draw(byte param0) {
         int var2 = this.field_n.e(-115);
         ToolkitSprite var3 = gg.field_f;
-        int var4 = var3.paddedHeight();
-        int var5 = var3.paddedWidth();
+        int var4 = var3.paddedWidth();
+        int var5 = var3.paddedHeight();
         var3.a(-(var4 / 2) + this.field_s, var2 + (this.field_u - var5 / 2));
         int var6 = 20;
         int var7 = 20;
@@ -165,7 +165,7 @@ final class MessageOverlay extends MatchOverlay {
     final void update(byte param0) {
         if (this.field_v) {
           this.field_u = this.field_u - 32;
-          if (this.field_u < -gg.field_f.width()) {
+          if (this.field_u < -gg.field_f.height()) {
             super.finish(-10968);
             this.field_n.a((byte) -113, true, false);
             if (null != this.field_q) {

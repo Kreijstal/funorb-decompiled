@@ -4,23 +4,23 @@
 final class OpenGlVertexBuffer extends OpenGlBuffer implements VertexBuffer {
     private una field_l;
 
-    public final void a(int param0, int param1) {
+    public final void allocate(int param0, int param1) {
         int var3 = -28 / ((param0 + 30) / 36);
-        super.a(69, this.field_l.field_e * param1);
+        super.allocate(69, this.field_l.field_e * param1);
     }
 
-    public final void a(int param0) {
-        super.a(param0);
+    public final void close(int param0) {
+        super.close(param0);
     }
 
-    public final boolean a(byte param0) {
+    public final boolean unmap(byte param0) {
         int var2 = -26 % ((54 - param0) / 41);
         return super.unmap(this.field_h.field_Qc, 99);
     }
 
-    public final una b(int param0) {
+    public final una getFormat(int param0) {
         if (param0 != -32491) {
-          this.a((byte) -127);
+          this.unmap((byte) -127);
           return this.field_l;
         }
         return this.field_l;
@@ -30,7 +30,7 @@ final class OpenGlVertexBuffer extends OpenGlBuffer implements VertexBuffer {
         if (param1 < -9) {
           return super.a(this.field_h.field_Qc, param0, 1);
         }
-        this.a((byte) 69);
+        this.unmap((byte) 69);
         return super.a(this.field_h.field_Qc, param0, 1);
     }
 

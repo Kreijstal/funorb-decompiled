@@ -23,14 +23,14 @@ final class qp extends we {
         return SwitchLinkList.b(0) - 30;
     }
 
-    final String b(int param0, byte param1) {
+    final String getActionLabel(int param0, byte param1) {
         if (param1 <= 111) {
           return (String) null;
         }
         if (param0 == 0) {
           return fga.field_a;
         }
-        return super.b(param0, (byte) 112);
+        return super.getActionLabel(param0, (byte) 112);
     }
 
     private final void a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6, int param7, String param8) {
@@ -277,12 +277,12 @@ final class qp extends we {
         return;
     }
 
-    final boolean c(int param0, int param1) {
+    final boolean isItemEnabled(int param0, int param1) {
         if (param1 != 0) {
           this.getItemRight(-73, (byte) -31);
-          return super.c(param0, 0);
+          return super.isItemEnabled(param0, 0);
         }
-        return super.c(param0, 0);
+        return super.isItemEnabled(param0, 0);
     }
 
     final void update(boolean param0, boolean param1, int param2) {

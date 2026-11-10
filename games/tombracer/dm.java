@@ -10,7 +10,7 @@ final class dm implements VertexBuffer {
     private int field_c;
     private boolean field_b;
 
-    public final boolean a(byte param0) {
+    public final boolean unmap(byte param0) {
         int var2 = 0;
         int var2Lifetime1;
         if (!this.field_b) {
@@ -25,7 +25,7 @@ final class dm implements VertexBuffer {
         return false;
     }
 
-    public final void a(int param0, int param1) {
+    public final void allocate(int param0, int param1) {
         int var4 = 0;
         this.field_c = this.field_g.field_e * param1;
         int var3 = -99 / ((param0 + 30) / 36);
@@ -72,14 +72,14 @@ final class dm implements VertexBuffer {
         return null;
     }
 
-    public final una b(int param0) {
+    public final una getFormat(int param0) {
         if (param0 != -32491) {
           return (una) null;
         }
         return this.field_g;
     }
 
-    public final void a(int param0) {
+    public final void close(int param0) {
         if (this.field_d != null) {
           this.field_d.a(false);
           this.field_d = null;

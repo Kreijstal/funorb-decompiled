@@ -102,7 +102,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
     }
 
     protected final void finalize() throws Throwable {
-        this.a(12574);
+        this.close(12574);
         super.finalize();
     }
 
@@ -311,9 +311,9 @@ abstract class OpenGlBuffer implements GpuBuffer {
         field_a = null;
     }
 
-    void a(int param0) {
+    void close(int param0) {
         if (param0 != 12574) {
-          this.a(72);
+          this.close(72);
         }
         if (0 < this.field_f) {
           this.field_h.queueProgramDeletion(this.field_g, this.field_f, (byte) 62);
@@ -321,7 +321,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
         }
     }
 
-    void a(int param0, int param1) {
+    void allocate(int param0, int param1) {
         if (this.field_d < param1) {
           this.d(1);
           if (this.field_f > 0) {

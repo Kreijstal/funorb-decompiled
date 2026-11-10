@@ -12,7 +12,7 @@ final class gg {
 
     final void a(int param0) {
         if (this.field_d != null) {
-          this.field_d.a(12574);
+          this.field_d.close(12574);
         }
         this.field_a = false;
         if (param0 == -17253) {

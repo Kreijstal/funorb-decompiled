@@ -28,7 +28,7 @@ abstract class GraphicsToolkit {
 
     void a(ToolkitSprite param0, boolean param1) {
         try {
-          this.a(this.createRenderTarget(param0, !param1 ? null : this.b(param0.height(), param0.width())));
+          this.a(this.createRenderTarget(param0, !param1 ? null : this.b(param0.width(), param0.height())));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ha.AE(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

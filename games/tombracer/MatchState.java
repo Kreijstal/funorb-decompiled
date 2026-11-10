@@ -26,7 +26,7 @@ final class MatchState implements dv {
     int[] roundWins;
     kqa field_c;
     boolean matchOver;
-    ds field_D;
+    MatchStatistics statistics;
     private String[] colouredPlayerNames;
     static SpriteData[] field_j;
     int[] field_g;
@@ -163,8 +163,8 @@ final class MatchState implements dv {
 
     final void setRoundWinner(int param0, int param1) {
         this.roundWinner = param0;
-        this.field_D.a(this.roundWinner, false);
-        this.field_D.a((byte) 74);
+        this.statistics.a(this.roundWinner, false);
+        this.statistics.a((byte) 74);
         if (~this.roundWinner <= param1) {
           this.roundWins[this.roundWinner] = this.roundWins[this.roundWinner] + 1;
         }
@@ -390,7 +390,7 @@ final class MatchState implements dv {
         if (this.declaredWinner < 0) {
           this.roundIndex = this.roundIndex + 1;
           this.roundSeed = this.roundIndex + (this.matchSeed + 1);
-          this.field_D.a((byte) 108);
+          this.statistics.a((byte) 108);
           this.startRound((byte) -89);
         }
         int var2 = -128 % ((80 - param0) / 37);
@@ -695,7 +695,7 @@ final class MatchState implements dv {
             this.field_i.b(28624);
             this.field_E = 0;
           }
-          this.field_D = new ds(this.playerCount);
+          this.statistics = new MatchStatistics(this.playerCount);
           this.field_g = new int[this.playerCount];
           this.field_F = new long[this.playerCount];
           this.field_I = new boolean[this.playerCount];

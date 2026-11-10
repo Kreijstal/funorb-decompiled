@@ -9,7 +9,7 @@ final class og extends OpenGlBuffer implements qm {
         super(param0, 34962, param1);
     }
 
-    public final jaclib.memory.Buffer a(int param0, boolean param1) {
+    public final jaclib.memory.Buffer mapBuffer(int param0, boolean param1) {
         if (param0 != -15730) {
           this.field_l = (byte) -118;
         }
@@ -98,12 +98,12 @@ final class og extends OpenGlBuffer implements qm {
         }
     }
 
-    public final boolean a(int param0, int param1, boolean param2) {
+    public final boolean allocate(int param0, int param1, boolean param2) {
         if (!param2) {
           return false;
         }
         this.field_l = (byte)param1;
-        super.a(-97, param0);
+        super.allocate(-97, param0);
         return true;
     }
 
@@ -114,14 +114,14 @@ final class og extends OpenGlBuffer implements qm {
         return this.field_l;
     }
 
-    public final void a(int param0) {
+    public final void close(int param0) {
         if (param0 != 12574) {
           return;
         }
-        super.a(param0 ^ 0);
+        super.close(param0 ^ 0);
     }
 
-    public final boolean a(boolean param0) {
+    public final boolean unmapBuffer(boolean param0) {
         if (!param0) {
           field_m = 54;
         }

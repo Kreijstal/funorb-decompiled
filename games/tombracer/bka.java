@@ -22,7 +22,7 @@ final class bka {
 
     final static void a(byte param0) {
         int var1 = -1 / ((param0 + 58) / 37);
-        ds.a((byte) 57, true);
+        MatchStatistics.a((byte) 57, true);
     }
 
     final int a(int param0) {

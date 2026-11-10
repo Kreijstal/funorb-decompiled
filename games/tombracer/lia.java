@@ -17,13 +17,13 @@ final class lia implements qm {
         return this.field_d;
     }
 
-    public final void a(int param0) {
+    public final void close(int param0) {
         if (null != this.field_e) {
           this.field_e.a(false);
           this.field_e = null;
           this.field_a = 0;
           if (param0 != 12574) {
-            this.a(51, -94, true);
+            this.allocate(51, -94, true);
             this.field_b = 0;
             return;
           }
@@ -35,11 +35,11 @@ final class lia implements qm {
           this.field_b = 0;
           return;
         }
-        this.a(51, -94, true);
+        this.allocate(51, -94, true);
         this.field_b = 0;
     }
 
-    public final boolean a(int param0, int param1, boolean param2) {
+    public final boolean allocate(int param0, int param1, boolean param2) {
         boolean stackIn_11_0 = false;
         boolean stackIn_15_0 = false;
         boolean stackIn_20_0 = false;
@@ -74,13 +74,13 @@ final class lia implements qm {
         return stackIn_15_0;
     }
 
-    public final jaclib.memory.Buffer a(int param0, boolean param1) {
+    public final jaclib.memory.Buffer mapBuffer(int param0, boolean param1) {
         if (null == this.field_e) {
           return null;
         }
         param1 = param1 & this.field_f;
         if (param0 != -15730) {
-          this.a(52, 89, false);
+          this.allocate(52, 89, false);
           if (this.field_g) {
             return null;
           }
@@ -100,9 +100,9 @@ final class lia implements qm {
         return null;
     }
 
-    public final boolean a(boolean param0) {
+    public final boolean unmapBuffer(boolean param0) {
         if (!param0) {
-          this.a(-68, -25, false);
+          this.allocate(-68, -25, false);
           if (!this.field_g) {
             return false;
           }

@@ -188,10 +188,10 @@ final class PlayPhase extends MatchPhase {
             } else {
               var4 = MouseInputHandler.field_b.toUpperCase();
             }
-            var5_intLifetime1Lifetime1 = 40 + ds.field_n.a(var4, (byte) 41);
+            var5_intLifetime1Lifetime1 = 40 + MatchStatistics.field_n.a(var4, (byte) 41);
             var6Lifetime1Lifetime1 = aaa.a(false) / 2;
             var7_intLifetime1Lifetime1 = SwitchLinkList.b(0) / 2;
-            PlayerViewport.a(64, var5_intLifetime1Lifetime1, (byte) 74, -(var5_intLifetime1Lifetime1 / 2) + var6Lifetime1Lifetime1, aq.field_a, -ds.field_n.field_d + (var7_intLifetime1Lifetime1 - 32));
+            PlayerViewport.a(64, var5_intLifetime1Lifetime1, (byte) 74, -(var5_intLifetime1Lifetime1 / 2) + var6Lifetime1Lifetime1, aq.field_a, -MatchStatistics.field_n.field_d + (var7_intLifetime1Lifetime1 - 32));
             if (this.field_q > 50) {
               if (0 != this.matchState.field_K) {
                 MembersUpsellMenu.a(var4, 16777215, eda.field_f, -1, var7_intLifetime1Lifetime1, var6Lifetime1Lifetime1, 0);

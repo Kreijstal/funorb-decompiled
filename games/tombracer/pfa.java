@@ -1389,7 +1389,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("reward_idol1", (byte) 101);
                 if (var2 != null) {
-                  ds.field_k = jaa.decodeText((byte) 123, var2);
+                  MatchStatistics.field_k = jaa.decodeText((byte) 123, var2);
                 }
                 var2 = mt.readTextEntry("reward_idolx2", (byte) 105);
                 if (null != var2) {

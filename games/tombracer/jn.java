@@ -4,11 +4,11 @@
 final class jn extends we {
     static String field_r;
 
-    final boolean b(int param0, int param1) {
+    final boolean isActionEnabled(int param0, int param1) {
         if (param1 != -30487) {
           return true;
         }
-        return this.c(param0, 0);
+        return this.isItemEnabled(param0, 0);
     }
 
     private final int h(int param0, int param1) {
@@ -43,7 +43,7 @@ final class jn extends we {
         if (this.items.length <= param2) {
           return;
         }
-        if (!this.b(param2, -30487)) {
+        if (!this.isActionEnabled(param2, -30487)) {
           return;
         }
         super.b(param0, param1, param2);
@@ -213,9 +213,9 @@ final class jn extends we {
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         var6 = TombRacer.field_G ? 1 : 0;
-        stackIn_3_0 = (this.c(0, 0)) ? 0 : 1;
+        stackIn_3_0 = (this.isItemEnabled(0, 0)) ? 0 : 1;
         var4 = stackIn_3_0;
-        stackIn_6_0 = (this.c(2, 0)) ? 2 : 1;
+        stackIn_6_0 = (this.isItemEnabled(2, 0)) ? 2 : 1;
         var5 = stackIn_6_0;
         if (13 != param0) {
           if (!this.field_k.a((byte) -127)) {
@@ -235,7 +235,7 @@ final class jn extends we {
                   this.field_k.b(var4, param2 + 94);
                 }
               }
-            } while (!this.b(this.field_k.field_h, -30487));
+            } while (!this.isActionEnabled(this.field_k.field_h, -30487));
           }
           this.field_k.b((byte) -50);
           this.b(false, false, this.field_k.field_h);
@@ -283,7 +283,7 @@ final class jn extends we {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    final boolean c(int param0, int param1) {
+    final boolean isItemEnabled(int param0, int param1) {
         if (param1 != 0) {
           this.b(57, true);
         }
@@ -295,7 +295,7 @@ final class jn extends we {
           10 == td.field_r) {
           return false;
         }
-        return super.c(param0, 0);
+        return super.isItemEnabled(param0, 0);
     }
 
     static {

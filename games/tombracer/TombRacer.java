@@ -367,7 +367,7 @@ public final class TombRacer extends rfa implements ls {
         kqa.a((byte) -120);
         sma.releaseStatics(-98);
         CommonChooseReward.releaseStatics((byte) 103);
-        ds.releaseStatics(false);
+        MatchStatistics.releaseStatics(false);
         bua.a((byte) 97);
         uma.releaseStatics(-1);
         hu.releaseStatics((byte) 119);
@@ -1424,7 +1424,7 @@ public final class TombRacer extends rfa implements ls {
           }
           tga.field_a.setLights(0, (SceneLight[]) null);
           if (HelloCommand.field_o != null &&
-            HelloCommand.field_o.a(param0 + 28579)) {
+            HelloCommand.field_o.isModal(param0 + 28579)) {
             tga.field_a.SA(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
           }
           if (param0 != -28581) {
@@ -1567,7 +1567,7 @@ public final class TombRacer extends rfa implements ls {
         }
         LaserShooterComponent.D(17229);
         cna.field_a = false;
-        if (oq.a((byte) 124).a(~param0)) {
+        if (oq.a((byte) 124).isModal(~param0)) {
           return;
         }
         this.a(true, SecondaryNodeDequeIterator.field_a, (byte) 17);

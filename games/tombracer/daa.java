@@ -31,9 +31,9 @@ final class daa {
           for (var5 = 0; var5 < this.field_a.players.length; var5++) {
             for (var6 = 0; var6 < this.field_a.players.length; var6++) {
               if (~var5 == ~var6) {
-                this.field_a.field_D.a(var5, (byte) -52, this.field_a.field_y[var5].b(80));
+                this.field_a.statistics.a(var5, (byte) -52, this.field_a.field_y[var5].b(80));
               } else {
-                this.field_a.field_D.a(var5, this.field_a.field_y[var6].b(71), true);
+                this.field_a.statistics.a(var5, this.field_a.field_y[var6].b(71), true);
               }
             }
           }

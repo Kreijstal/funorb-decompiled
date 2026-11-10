@@ -1469,7 +1469,7 @@ final class gja extends ka {
             this.a((byte) -37, -100, true);
           }
           var2 = this.field_g.field_d;
-          var2.a(param0 + 28, 6 * this.field_v);
+          var2.allocate(param0 + 28, 6 * this.field_v);
           var3 = var2.map(true, (byte) -10);
           if (null != var3) {
             boolean decompiledFrameCompleted1 = true;
@@ -1510,7 +1510,7 @@ final class gja extends ka {
               (decompiledFrameCompleted0)) {
               var4.a();
             }
-            if (var2.a((byte) 95)) {
+            if (var2.unmap((byte) 95)) {
               this.field_g.field_a = true;
               this.field_g.field_c = var2;
               this.field_N = true;
@@ -1957,13 +1957,13 @@ final class gja extends ka {
               this.field_ib.field_a = this.field_S.c(6, this.field_F);
             }
             var7 = this.field_ib.field_a;
-            var7.a(12 * this.field_fb, 12, true);
-            var8 = var7.a(-15730, true);
+            var7.allocate(12 * this.field_fb, 12, true);
+            var8 = var7.mapBuffer(-15730, true);
             if (var8 == null) {
               var6 = 0;
               if (var13 != 0) {
                 this.field_S.field_P.copyPositions(this.field_Z, this.field_r, this.field_l, this.field_kb, 0, 12, this.field_fb, var8.getAddress());
-                if (var7.a(true)) {
+                if (var7.unmapBuffer(true)) {
                   this.field_ib.field_e = var7;
                   this.field_ib.field_h = true;
                   var6 = 0;
@@ -1973,7 +1973,7 @@ final class gja extends ka {
               }
             } else {
               this.field_S.field_P.copyPositions(this.field_Z, this.field_r, this.field_l, this.field_kb, 0, 12, this.field_fb, var8.getAddress());
-              if (var7.a(true)) {
+              if (var7.unmapBuffer(true)) {
                 this.field_ib.field_e = var7;
                 this.field_ib.field_h = true;
                 if (var13 != 0) {
@@ -1989,8 +1989,8 @@ final class gja extends ka {
               this.field_E.field_a = this.field_S.c(param0 - 60, this.field_F);
             }
             var7Lifetime1 = this.field_E.field_a;
-            var7Lifetime1.a(this.field_fb * 4, 4, true);
-            var8Lifetime1 = var7Lifetime1.a(-15730, true);
+            var7Lifetime1.allocate(this.field_fb * 4, 4, true);
+            var8Lifetime1 = var7Lifetime1.mapBuffer(-15730, true);
             if (var8Lifetime1 != null) {
               boolean decompiledFrameRemainder0 = true;
               if ((55 & this.field_h) != 0) {
@@ -2014,7 +2014,7 @@ final class gja extends ka {
                 }
                 this.field_S.field_P.copyLighting(this.field_P, this.field_C, this.field_gb, var9, var10, var11, var12, (int) this.field_T, (int) this.field_ab, this.field_G, 0, 4, this.field_fb, var8Lifetime1.getAddress());
               }
-              if (var7Lifetime1.a(true)) {
+              if (var7Lifetime1.unmapBuffer(true)) {
                 this.field_E.field_h = true;
                 this.field_E.field_e = var7Lifetime1;
                 if (var13 != 0) {
@@ -2037,8 +2037,8 @@ final class gja extends ka {
               this.field_O.field_a = this.field_S.c(param0 ^ 68, this.field_F);
             }
             var7Lifetime2 = this.field_O.field_a;
-            var7Lifetime2.a(this.field_fb * 12, 12, true);
-            var8Lifetime2 = var7Lifetime2.a(-15730, true);
+            var7Lifetime2.allocate(this.field_fb * 12, 12, true);
+            var8Lifetime2 = var7Lifetime2.mapBuffer(-15730, true);
             if (var8Lifetime2 == null) {
               var6 = 0;
               decompiledFrameRemainder1 = (var13 != 0);
@@ -2062,7 +2062,7 @@ final class gja extends ka {
                 var12Lifetime1 = this.field_e.field_b;
               }
               this.field_S.field_P.copyNormals(var9Lifetime1, var10Lifetime1, var11Lifetime1, var12Lifetime1, 3.0f / (float)this.field_ab, 3.0f / (float)(this.field_ab / 2 + this.field_ab), 0, 12, this.field_fb, var8Lifetime2.getAddress());
-              if (!var7Lifetime2.a(true)) {
+              if (!var7Lifetime2.unmapBuffer(true)) {
                 var6 = 0;
                 if (var13 != 0) {
                   this.field_O.field_e = var7Lifetime2;
@@ -2079,13 +2079,13 @@ final class gja extends ka {
               this.field_d.field_a = this.field_S.c(6, this.field_F);
             }
             var7Lifetime3 = this.field_d.field_a;
-            var7Lifetime3.a(this.field_fb * 8, 8, true);
-            var8Lifetime3 = var7Lifetime3.a(-15730, true);
+            var7Lifetime3.allocate(this.field_fb * 8, 8, true);
+            var8Lifetime3 = var7Lifetime3.mapBuffer(-15730, true);
             if (null == var8Lifetime3) {
               var6 = 0;
               if (var13 != 0) {
                 this.field_S.field_P.copyTexCoords(this.field_eb, this.field_t, 0, 8, this.field_fb, var8Lifetime3.getAddress());
-                if (!var7Lifetime3.a(true)) {
+                if (!var7Lifetime3.unmapBuffer(true)) {
                   var6 = 0;
                   this.field_d.field_h = true;
                   this.field_d.field_e = var7Lifetime3;
@@ -2096,7 +2096,7 @@ final class gja extends ka {
               }
             } else {
               this.field_S.field_P.copyTexCoords(this.field_eb, this.field_t, 0, 8, this.field_fb, var8Lifetime3.getAddress());
-              if (!var7Lifetime3.a(true)) {
+              if (!var7Lifetime3.unmapBuffer(true)) {
                 var6 = 0;
                 if (var13 != 0) {
                   this.field_d.field_h = true;

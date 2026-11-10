@@ -6,9 +6,9 @@ abstract class ToolkitSprite implements RenderSurface {
         this.draw(param0, param1, 1, 0, 1);
     }
 
-    abstract int paddedHeight();
+    abstract int paddedWidth();
 
-    abstract int width();
+    abstract int height();
 
     private final void drawRotatedAround(float param0, float param1, float param2, float param3, int param4, int param5, int param6, int param7, int param8) {
         double var10 = 0.0;
@@ -26,10 +26,10 @@ abstract class ToolkitSprite implements RenderSurface {
           var13 = (float)Math.cos(var10) * (float)param4;
           var14 = (-param2 * var13 + -param3 * var12) / 4096.0f + param0;
           var15 = (-(-param2) * var12 + -param3 * var13) / 4096.0f + param1;
-          var16 = (((float)this.paddedHeight() - param2) * var13 + -param3 * var12) / 4096.0f + param0;
-          var17 = (-((float)this.paddedHeight() - param2) * var12 + -param3 * var13) / 4096.0f + param1;
-          var18 = (-param2 * var13 + ((float)this.paddedWidth() - param3) * var12) / 4096.0f + param0;
-          var19 = (-(-param2) * var12 + ((float)this.paddedWidth() - param3) * var13) / 4096.0f + param1;
+          var16 = (((float)this.paddedWidth() - param2) * var13 + -param3 * var12) / 4096.0f + param0;
+          var17 = (-((float)this.paddedWidth() - param2) * var12 + -param3 * var13) / 4096.0f + param1;
+          var18 = (-param2 * var13 + ((float)this.paddedHeight() - param3) * var12) / 4096.0f + param0;
+          var19 = (-(-param2) * var12 + ((float)this.paddedHeight() - param3) * var13) / 4096.0f + param1;
           this.a(var14, var15, var16, var17, var18, var19, param6, param7, param8);
           return;
         }
@@ -46,14 +46,14 @@ abstract class ToolkitSprite implements RenderSurface {
     }
 
     final void drawRotated(float param0, float param1, int param2, int param3, int param4, int param5, int param6) {
-        this.drawRotatedAround(param0, param1, (float)this.paddedHeight() / 2.0f, (float)this.paddedWidth() / 2.0f, param2, param3, param4, param5, param6);
+        this.drawRotatedAround(param0, param1, (float)this.paddedWidth() / 2.0f, (float)this.paddedHeight() / 2.0f, param2, param3, param4, param5, param6);
     }
 
     abstract void setInsets(int param0, int param1, int param2, int param3);
 
-    abstract int height();
+    abstract int width();
 
-    abstract int paddedWidth();
+    abstract int paddedHeight();
 
     private final void a(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8) {
         this.drawAffine(param0, param1, param2, param3, param4, param5, param6, param7, param8, 1);

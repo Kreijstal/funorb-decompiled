@@ -486,10 +486,10 @@ final class ck {
             stackIn_10_0 = stackOut_9_0;
             if (var19 == 0) {
               if (stackIn_10_0) {
-                var12 = ds.field_f[var9];
+                var12 = MatchStatistics.field_f[var9];
                 var13 = mg.field_e[var9];
-                var14 = ds.field_f[var10] - var12;
-                var15 = ds.field_f[var11] - var12;
+                var14 = MatchStatistics.field_f[var10] - var12;
+                var15 = MatchStatistics.field_f[var11] - var12;
                 var16 = mg.field_e[var10] - var13;
                 var17 = mg.field_e[var11] - var13;
               }

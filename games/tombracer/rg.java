@@ -107,7 +107,7 @@ final class rg extends SingleChildWidget {
         dta.field_b[3] = tda.field_b;
         dta.field_b[0] = ArchiveManager.field_d;
         sla.field_b[1] = mu.field_wb;
-        sla.field_b[5] = ds.field_k;
+        sla.field_b[5] = MatchStatistics.field_k;
         sla.field_b[0] = SnakePitBehaviour.field_p;
         Room.field_m = new String[13];
         sla.field_b[6] = FleeLocomotor.field_x;

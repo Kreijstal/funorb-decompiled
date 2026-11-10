@@ -83,13 +83,13 @@ final class pia extends nqa implements GpuTexture2D {
 
     public final boolean a(int param0) {
         if (param0 != -14634) {
-          this.b(22);
+          this.getWidth(22);
           return true;
         }
         return true;
     }
 
-    public final int b(int param0) {
+    public final int getWidth(int param0) {
         if (param0 != -7070) {
           this.field_h = -30;
         }
@@ -181,14 +181,14 @@ final class pia extends nqa implements GpuTexture2D {
         return (jagdx.IDirect3DBaseTexture) ((Object) this.field_f);
     }
 
-    public final int a(byte param0) {
+    public final int getHeight(byte param0) {
         if (param0 > 0) {
           this.field_h = 121;
         }
         return this.field_i;
     }
 
-    public final void a(byte param0, boolean param1, boolean param2) {
+    public final void setWrap(byte param0, boolean param1, boolean param2) {
         this.field_j = param2 ? true : false;
         if (param0 > -60) {
           this.field_h = -74;
@@ -199,7 +199,7 @@ final class pia extends nqa implements GpuTexture2D {
     public final void bind(byte param0) {
         this.field_d.a(this, true);
         if (param0 <= 32) {
-          this.a((byte) 121, true, false);
+          this.setWrap((byte) 121, true, false);
         }
     }
 }

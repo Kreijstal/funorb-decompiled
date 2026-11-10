@@ -8,7 +8,7 @@ final class ArrowShooterComponent extends ShooterComponent {
     final static void createFonts(GraphicsToolkit param0, int param1) {
         try {
           kn.field_p = param0.createFont(kv.field_a, rc.field_b, true);
-          eda.field_f = param0.createFont(ds.field_n, MatchState.field_j, true);
+          eda.field_f = param0.createFont(MatchStatistics.field_n, MatchState.field_j, true);
           if (param1 > -66) {
             field_K = (String) null;
           }

@@ -199,7 +199,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
           var6 = (ShellListener) (kra.field_c.elementAt(var3Lifetime1));
           var6.updateScreen(true, var2 != 0);
           stackIn_63_0 = var2;
-          if (var6.a(-2)) {
+          if (var6.isModal(-2)) {
             stackIn_64_1 = 0;
           } else {
             stackIn_64_1 = 1;
@@ -210,7 +210,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
 
     public abstract void drawOverlay(int param0);
 
-    public final boolean a(int param0) {
+    public final boolean isModal(int param0) {
         if (param0 != -2) {
           field_C = (jea) null;
           return true;

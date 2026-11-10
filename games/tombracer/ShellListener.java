@@ -4,7 +4,7 @@
 interface ShellListener {
     public abstract void drawOverlay(int param0);
 
-    public abstract boolean a(int param0);
+    public abstract boolean isModal(int param0);
 
     public abstract void updateScreen(boolean param0, boolean param1);
 

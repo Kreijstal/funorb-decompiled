@@ -109,7 +109,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
             return;
           }
           this.field_p = this.owner.a(true, 1, false, 2, new int[]{0, -1});
-          this.field_p.a((byte) -77, false, false);
+          this.field_p.setWrap((byte) -77, false, false);
           this.field_m = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

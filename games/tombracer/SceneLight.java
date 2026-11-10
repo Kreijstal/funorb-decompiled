@@ -79,7 +79,7 @@ abstract class SceneLight extends IntrusiveNode {
           kq.field_a = su.createToolkitSprite(FleeLocomotor.field_C, param0, (byte) 127);
           id.field_h = LoadLevelCommand.a(param0, tba.field_f, -70);
           PerlinNoise2D.field_m = LoadLevelCommand.a(param0, WidgetStyleLayer.field_f, -77);
-          su.createToolkitSprite(ds.field_g, param0, (byte) 126);
+          su.createToolkitSprite(MatchStatistics.field_g, param0, (byte) 126);
           za.field_g = su.createToolkitSprite(TextResourceLoader.field_b, param0, (byte) -50);
           bca.field_d = su.createToolkitSprite(sla.field_a, param0, (byte) -38);
           rm.field_c = su.createToolkitSprite(SocketArchiveNetworkClient.field_s, param0, (byte) 126);
@@ -103,7 +103,7 @@ abstract class SceneLight extends IntrusiveNode {
               var10 = var9 + ((var9 << 16) + (var9 << 8));
               var3[var4] = WallTile.bitwiseOr(var5 << 24, var10);
             }
-            qf.field_k[var2_intLifetime2] = param0.createSpriteCopy(var3, OpenGlFramebuffer.field_i[var2_intLifetime2].width(), 89, OpenGlFramebuffer.field_i[var2_intLifetime2].height(), OpenGlFramebuffer.field_i[var2_intLifetime2].height(), 0);
+            qf.field_k[var2_intLifetime2] = param0.createSpriteCopy(var3, OpenGlFramebuffer.field_i[var2_intLifetime2].height(), 89, OpenGlFramebuffer.field_i[var2_intLifetime2].width(), OpenGlFramebuffer.field_i[var2_intLifetime2].width(), 0);
           }
           bsa.field_i = su.createToolkitSprite(LegacyOpenGlCubeTexture.field_l, param0, (byte) -107);
           fa.field_a = LoadLevelCommand.a(param0, nk.field_k, -99);

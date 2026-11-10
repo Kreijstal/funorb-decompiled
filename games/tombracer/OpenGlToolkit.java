@@ -2792,9 +2792,9 @@ final class OpenGlToolkit extends GraphicsToolkit {
             }
             this.b((Framebuffer) (this.field_bb), (byte) 81);
             if (param1) {
-              var3 = (OpenGlRenderbuffer) (this.field_Wc.get((byte) -106, (long)(this.field_Mb.height() << 16 | this.field_Mb.width())));
+              var3 = (OpenGlRenderbuffer) (this.field_Wc.get((byte) -106, (long)(this.field_Mb.width() << 16 | this.field_Mb.height())));
               if (var3 == null) {
-                var9 = new OpenGlRenderbuffer(this, 6402, this.field_Mb.height(), this.field_Mb.width());
+                var9 = new OpenGlRenderbuffer(this, 6402, this.field_Mb.width(), this.field_Mb.height());
                 var3 = var9;
                 this.field_rc = this.field_rc + var9.field_o;
                 while (this.field_rc > 2097152) {
@@ -2809,7 +2809,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
                   }
                   break;
                 }
-                this.field_Wc.put((long)(this.field_Mb.height() << 16 | this.field_Mb.width()), 124, var9);
+                this.field_Wc.put((long)(this.field_Mb.width() << 16 | this.field_Mb.height()), 124, var9);
               }
               this.field_F.a(97, var3);
               this.field_bb.a(8, var3, true);
@@ -2819,9 +2819,9 @@ final class OpenGlToolkit extends GraphicsToolkit {
             if (!this.field_Yc) {
               throw new RuntimeException("");
             }
-            var3_ref = (cla) (this.field_Wc.get((byte) -109, (long)(this.field_Mb.height() << 16 | this.field_Mb.width())));
+            var3_ref = (cla) (this.field_Wc.get((byte) -109, (long)(this.field_Mb.width() << 16 | this.field_Mb.height())));
             if (var3_ref == null) {
-              var7 = new cla(this, this.field_Mb.height(), this.field_Mb.width());
+              var7 = new cla(this, this.field_Mb.width(), this.field_Mb.height());
               var3_ref = var7;
               this.field_rc = this.field_rc + 4 * var7.field_p;
               while (2097152 < this.field_rc) {
@@ -2836,13 +2836,13 @@ final class OpenGlToolkit extends GraphicsToolkit {
                 }
                 break;
               }
-              this.field_Wc.put((long)(this.field_Mb.height() << 16 | this.field_Mb.width()), 112, var7);
+              this.field_Wc.put((long)(this.field_Mb.width() << 16 | this.field_Mb.height()), 112, var7);
             }
             this.field_F.a(75, var3_ref);
             this.field_l.setPbuffer(var3_ref.a((byte) 101));
           }
-          this.field_Y = param0.height();
-          this.field_I = param0.width();
+          this.field_Y = param0.width();
+          this.field_I = param0.height();
           this.s(3682);
           this.h((byte) 115);
           this.la();

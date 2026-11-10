@@ -125,9 +125,9 @@ final class pe extends OpenGlTexture implements GpuTexture2D {
         }
     }
 
-    public final int b(int param0) {
+    public final int getWidth(int param0) {
         if (param0 != -7070) {
-          this.a((byte) -45, true, false);
+          this.setWrap((byte) -45, true, false);
           return this.field_l;
         }
         return this.field_l;
@@ -170,7 +170,7 @@ final class pe extends OpenGlTexture implements GpuTexture2D {
         }
     }
 
-    public final int a(byte param0) {
+    public final int getHeight(byte param0) {
         if (param0 > 0) {
           return -120;
         }
@@ -186,7 +186,7 @@ final class pe extends OpenGlTexture implements GpuTexture2D {
         super.bind((byte) 72);
     }
 
-    public final void a(byte param0, boolean param1, boolean param2) {
+    public final void setWrap(byte param0, boolean param1, boolean param2) {
         if (param0 <= -60) {
           return;
         }

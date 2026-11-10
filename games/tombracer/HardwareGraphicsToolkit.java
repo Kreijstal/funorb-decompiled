@@ -1077,7 +1077,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     private final void f(boolean param0) {
         this.field_cb = this.c(6, param0);
-        this.field_cb.a(24, 12, param0);
+        this.field_cb.allocate(24, 12, param0);
         this.field_mb = this.createVertexLayout(new ne[]{new ne(gj.field_p)}, 0);
     }
 
@@ -1404,7 +1404,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     abstract void d(byte param0);
 
     private final boolean a(float param0, float param1, float param2, float param3, float param4, float param5, byte param6) {
-        jaclib.memory.Buffer var11 = this.field_cb.a(-15730, true);
+        jaclib.memory.Buffer var11 = this.field_cb.mapBuffer(-15730, true);
         if (var11 == null) {
           return false;
         }
@@ -1426,7 +1426,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
         var9.a();
         int var10 = 16 % ((param6 - 72) / 44);
-        return this.field_cb.a(true);
+        return this.field_cb.unmapBuffer(true);
     }
 
     abstract void applyDepthWrite(byte param0);
@@ -1516,11 +1516,11 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         jaclib.memory.Stream var4;
         var5 = TombRacer.field_G ? 1 : 0;
         this.field_xb = this.c(6, false);
-        this.field_xb.a(param0, 28, true);
+        this.field_xb.allocate(param0, 28, true);
         var2 = 0;
         scanLoop1: while (true) {
           if (var2 < 4) {
-            var3 = this.field_xb.a(param0 - 15870, true);
+            var3 = this.field_xb.mapBuffer(param0 - 15870, true);
             if (var3 != null) {
               var4 = this.a(var3, param0 - 14);
               if (!jaclib.memory.Stream.b()) {
@@ -1597,7 +1597,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
                 var4.b(0.0f);
               }
               var4.a();
-              if (this.field_xb.a(true)) {
+              if (this.field_xb.unmapBuffer(true)) {
                 break scanLoop1;
               }
             }
@@ -1829,14 +1829,14 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         int var10;
         var10 = TombRacer.field_G ? 1 : 0;
         this.field_hb = this.c(6, false);
-        this.field_hb.a(3096, 12, true);
+        this.field_hb.allocate(3096, 12, true);
         if (param0 < 14) {
           this.field_B = -1.9750553369522095f;
         }
         var2 = 0;
         scanLoop1: while (true) {
           if (var2 < 4) {
-            var3 = this.field_hb.a(-15730, true);
+            var3 = this.field_hb.mapBuffer(-15730, true);
             if (var3 != null) {
               var4 = this.a(var3, 125);
               var4.b(0.0f);
@@ -1857,7 +1857,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
                 }
               }
               var4.a();
-              if (this.field_hb.a(true)) {
+              if (this.field_hb.unmapBuffer(true)) {
                 break scanLoop1;
               }
             }
@@ -2513,19 +2513,19 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           var3 = (java.awt.Canvas) (var2.nextElement());
           this.a(this.field_oc.get(var3), false, var3);
         }
-        this.field_xb.a(12574);
-        this.field_cb.a(12574);
+        this.field_xb.close(12574);
+        this.field_cb.close(12574);
         if (param0 != 6) {
           this.setDepthWriteEnabled(false, (byte) -31);
         }
-        this.field_hb.a(12574);
+        this.field_hb.close(12574);
         this.field_tb.e((byte) 112);
         this.field_W.e((byte) 126);
         this.field_E.e((byte) 112);
         this.field_n.e((byte) 114);
         this.field_tc.e((byte) 122);
         this.field_kb.a((byte) 86);
-        this.field_z.a(param0 ^ 12568);
+        this.field_z.close(param0 ^ 12568);
     }
 
     final GpuTexture2D a(int param0, byte[] param1, boolean param2, ft param3, int param4, int param5) {

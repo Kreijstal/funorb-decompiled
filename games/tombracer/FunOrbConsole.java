@@ -447,7 +447,7 @@ final class FunOrbConsole extends ConsoleWindow {
         int var10Lifetime1;
         var11 = TombRacer.field_G ? 1 : 0;
         try {
-          if (!this.a(-2)) {
+          if (!this.isModal(-2)) {
             stackIn_5_0 = super.handleKey((byte) -72, param1, param2);
             return stackIn_5_0;
           }

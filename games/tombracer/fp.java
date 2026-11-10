@@ -132,7 +132,7 @@ final class fp {
         param1++;
         var16_ref.a(incrementValue$3, (byte) 47, param0);
         WidgetStyleLayer.field_f = SpriteData.loadSheet(param2, "", "achievements");
-        ds.field_g = SpriteData.loadSprite(PitComponent.field_G, "basic", "unachieved");
+        MatchStatistics.field_g = SpriteData.loadSprite(PitComponent.field_G, "basic", "unachieved");
         aa.field_a = SpriteData.loadSprite(param2, "", "map_routedot");
         pha.field_Bb = SpriteData.loadSprite(param2, "", "map_coin_gold");
         ConstrainToRectangleLocomotor.field_t = SpriteData.loadSprite(param2, "", "map_coin_silver");

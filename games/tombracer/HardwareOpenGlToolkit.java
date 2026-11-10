@@ -111,7 +111,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
               }
             }
           }
-          var10 = param0.b(param1 ^ 13611);
+          var10 = param0.getFormat(param1 ^ 13611);
           var11 = (OpenGlVertexBuffer) (param0);
           var11.c(-3);
           jaggl.OpenGL.glDrawElements(var8_int, var9, ClientException.glDataType(var10, 5126), var11.b(true) + (long)(param3 * var10.field_e));

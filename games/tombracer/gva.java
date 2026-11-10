@@ -125,7 +125,7 @@ final class gva implements mb {
                           break regionExit1;
                         }
                         var19 = PlayerProfile.field_r[1];
-                        var20 = var16 * 512 * var12 / (var19.paddedHeight() * var10);
+                        var20 = var16 * 512 * var12 / (var19.paddedWidth() * var10);
                         var19.drawRotated((float)var8, (float)var9, var20, GameScreen.positiveModulo(param2.f((byte) -127) << var21, 2048 << var21, -61), 0, var18, 1);
                         if (var29 == 0) {
                           break regionExit1;
@@ -176,7 +176,7 @@ final class gva implements mb {
                 break regionExit1;
               }
               var19 = Room.field_p[1][0];
-              var20 = var16 * 8192 * var12 / (var19.paddedHeight() * var10);
+              var20 = var16 * 8192 * var12 / (var19.paddedWidth() * var10);
               var19.drawRotated((float)var8, (float)var9, var20, GameScreen.positiveModulo(param2.f((byte) -127) << var21, 2048 << var21, 76), 0, var18, 1);
               if (var29 == 0) {
                 break regionExit1;
@@ -190,7 +190,7 @@ final class gva implements mb {
                 break regionExit1;
               }
               var19 = Room.field_p[2][0];
-              var20 = var16 * (8192 * var12) / (var19.paddedHeight() * var10);
+              var20 = var16 * (8192 * var12) / (var19.paddedWidth() * var10);
               var19.drawRotated((float)var8, (float)var9, var20, GameScreen.positiveModulo(param2.f((byte) -127) << var21, 2048 << var21, 83), 0, var18, 1);
               if (var29 == 0) {
                 break regionExit1;
@@ -203,7 +203,7 @@ final class gva implements mb {
                 break regionExit1;
               }
               var19 = Room.field_p[3][0];
-              var20 = var12 * 8192 * var16 / (var10 * var19.paddedHeight());
+              var20 = var12 * 8192 * var16 / (var10 * var19.paddedWidth());
               var19.drawRotated((float)var8, (float)var9, var20, GameScreen.positiveModulo(param2.f((byte) -127) << var21, 2048 << var21, -97), 0, var18, 1);
               if (var29 == 0) {
                 break regionExit1;
@@ -215,7 +215,7 @@ final class gva implements mb {
                 break regionExit1;
               }
               var19Lifetime2 = Room.field_p[4][0];
-              var20Lifetime2 = var12 * 8192 * var16 / (var19Lifetime2.paddedHeight() * var10);
+              var20Lifetime2 = var12 * 8192 * var16 / (var19Lifetime2.paddedWidth() * var10);
               var19Lifetime2.drawRotated((float)var8, (float)var9, var20Lifetime2, GameScreen.positiveModulo(param2.f((byte) -127) << var21, 2048 << var21, 126), 2, var17, 2);
               if (var29 == 0) {
                 break regionExit1;
@@ -226,7 +226,7 @@ final class gva implements mb {
                 break regionExit1;
               }
               var19Lifetime1 = Room.field_p[5][0];
-              var20Lifetime1 = var16 * (8192 * var12) / (var10 * var19Lifetime1.paddedHeight());
+              var20Lifetime1 = var16 * (8192 * var12) / (var10 * var19Lifetime1.paddedWidth());
               var19Lifetime1.drawRotated((float)var8, (float)var9, var20Lifetime1, GameScreen.positiveModulo(param2.f((byte) -127) << var21, 2048 << var21, 95), 0, var18, 1);
               if (var29 == 0) {
                 break regionExit1;

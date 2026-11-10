@@ -1,5 +1,5 @@
 # Reading Tomb Racer
 
-This pass names 533 reviewed classes in 1090 source files. Unresolved roles keep their original names.
+This pass names 534 reviewed classes in 1090 source files. Unresolved roles keep their original names.
 
 Start at `TombRacer`; the shared engine (nodes, sockets, applet shell, input) uses the same role names as other FunOrb games.

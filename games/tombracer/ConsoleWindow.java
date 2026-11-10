@@ -16,7 +16,7 @@ abstract class ConsoleWindow implements ShellListener {
     private jea field_i;
     private IntrusiveDeque field_s;
     private int field_h;
-    private boolean field_j;
+    private boolean open;
     private int field_c;
     private String[] field_b;
     private gka field_g;
@@ -76,7 +76,7 @@ abstract class ConsoleWindow implements ShellListener {
           var4_int = -10 + this.field_a.field_G - 15;
           var5 = rga.splitPreservingEmptyParts(32287, param1, '\n');
           if (param0 != 24219) {
-            this.a(-59);
+            this.isModal(-59);
           }
           var6 = var5;
           for (var7 = 0; var7 < var6.length; var7++) {
@@ -216,11 +216,11 @@ abstract class ConsoleWindow implements ShellListener {
         return var3;
     }
 
-    public final boolean a(int param0) {
+    public final boolean isModal(int param0) {
         if (param0 != -2) {
           return true;
         }
-        return this.field_j;
+        return this.open;
     }
 
     public void drawOverlay(int param0) {
@@ -254,7 +254,7 @@ abstract class ConsoleWindow implements ShellListener {
           this.field_i.b(100, (this.field_h & 8) == 0 ? true : false);
         }
         if (this.field_b != null &&
-          this.field_j) {
+          this.open) {
           var2Lifetime1 = this.field_i.field_t + this.field_i.field_T;
           this.field_p.field_T = var2Lifetime1;
           this.field_p.b(74, false);
@@ -356,7 +356,7 @@ abstract class ConsoleWindow implements ShellListener {
           this.d(2);
           return true;
         }
-        if (!this.field_j) {
+        if (!this.open) {
           return false;
         }
         if (84 != param2) {
@@ -431,12 +431,12 @@ abstract class ConsoleWindow implements ShellListener {
 
     private final void d(int param0) {
         boolean stackIn_3_1 = false;
-        stackIn_3_1 = !(this.field_j);
-        this.field_j = stackIn_3_1;
+        stackIn_3_1 = !(this.open);
+        this.open = stackIn_3_1;
         if (param0 != 2) {
           this.updateScreen(false, false);
         }
-        if (!this.field_j) {
+        if (!this.open) {
           if (null != this.field_i) {
             this.field_i.a(param0 ^ -125, (jea) null);
           }
@@ -454,12 +454,12 @@ abstract class ConsoleWindow implements ShellListener {
         int var5;
         int var6;
         var6 = TombRacer.field_G ? 1 : 0;
-        if (this.field_j &&
+        if (this.open &&
           this.field_q > 0) {
           this.field_q = this.field_q - 1;
           this.field_i.field_T = this.field_q * (this.field_q * -200) / 225;
         } else {
-          if (!this.field_j &&
+          if (!this.open &&
             this.field_i.field_T + 200 > 0) {
             this.field_i.field_T = this.field_i.field_T - 28;
           }
@@ -554,7 +554,7 @@ abstract class ConsoleWindow implements ShellListener {
         jea var15 = null;
         this.field_t = "# ";
         this.field_s = new IntrusiveDeque();
-        this.field_j = false;
+        this.open = false;
         this.field_h = 0;
         this.field_b = null;
         this.field_q = 0;

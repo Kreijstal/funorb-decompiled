@@ -451,7 +451,7 @@ final class PlayTrackCommand extends ConsoleMethod {
               if (var12.field_Cb != null) {
                 var31 += 2;
                 var37 = new StringBuilder(64);
-                discarded$1 = var37.append(ds.field_l);
+                discarded$1 = var37.append(MatchStatistics.field_l);
                 discarded$2 = var37.append(var12.field_Cb[0]);
                 for (var38_intLifetime1 = 1; var12.field_Mb > var38_intLifetime1; var38_intLifetime1++) {
                   discarded$3 = var37.append(", ");

@@ -10,7 +10,7 @@ final class ni {
     private VertexBuffer field_b;
 
     final void a(byte param0) {
-        this.field_a.a(12574);
+        this.field_a.close(12574);
         if (param0 < 22) {
           this.field_d = (qm) null;
         }
@@ -95,9 +95,9 @@ final class ni {
           param0.createVertexLayout(new ne[]{new ne(new gj[]{gj.field_p, gj.field_b, gj.field_n}), new ne(gj.field_e)}, 0);
           this.field_a = param0.c(6, true);
           this.field_d = param0.c(6, false);
-          this.field_d.a(393168, 12, true);
+          this.field_d.allocate(393168, 12, true);
           this.field_b = param0.createIndexBuffer(26, false);
-          this.field_b.a(18, 49146);
+          this.field_b.allocate(18, 49146);
           var7 = this.field_b.map(true, (byte) -44);
           if (var7 != null) {
             var8 = param0.a(var7, 125);
@@ -123,9 +123,9 @@ final class ni {
               }
             }
             var8.a();
-            this.field_b.a((byte) -97);
+            this.field_b.unmap((byte) -97);
           }
-          var9 = this.field_d.a(-15730, true);
+          var9 = this.field_d.mapBuffer(-15730, true);
           if (var9 != null) {
             var4 = param0.a(var9, 127);
             if (!jaclib.memory.Stream.b()) {
@@ -160,7 +160,7 @@ final class ni {
               }
             }
             var4.a();
-            this.field_d.a(true);
+            this.field_d.unmapBuffer(true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -179,7 +179,7 @@ final class ni {
 
     final void a(int param0, HardwareGraphicsToolkit param1) {
         try {
-          this.field_a.a(786336, 24, true);
+          this.field_a.allocate(786336, 24, true);
           int var3_int = -61 / ((param0 + 55) / 41);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ni.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

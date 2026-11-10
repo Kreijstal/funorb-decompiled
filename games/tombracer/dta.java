@@ -168,7 +168,7 @@ final class dta {
                   RemovedFromGameMenu.f((byte) -6);
                 }
               }
-              var17Lifetime2 = param1 - bd.field_i.height();
+              var17Lifetime2 = param1 - bd.field_i.width();
               var18Lifetime2 = -20 + SwitchLinkList.b(0);
               var24 = 0;
               var25 = 16;
@@ -200,20 +200,20 @@ final class dta {
                   }
                   var28_double = 80.0;
                 }
-                qf.field_j.a((aa) null, 12, 0, 0, var18Lifetime2 - (CachedTextLayout.field_l.width() - 32), -16777216, (int[]) null, 1, -5599403, bd.field_j.toUpperCase(), (byte) -66, 300, 0, (ToolkitSprite[]) null, -14 + (param1 + var24), 0);
-                var30 = 30 + (-CachedTextLayout.field_l.width() + var18Lifetime2) + 80;
-                vua.field_A.a(param1 - (CachedTextLayout.field_l.height() - var24), var18Lifetime2 - CachedTextLayout.field_l.width() + (-vua.field_A.width() + var25));
+                qf.field_j.a((aa) null, 12, 0, 0, var18Lifetime2 - (CachedTextLayout.field_l.height() - 32), -16777216, (int[]) null, 1, -5599403, bd.field_j.toUpperCase(), (byte) -66, 300, 0, (ToolkitSprite[]) null, -14 + (param1 + var24), 0);
+                var30 = 30 + (-CachedTextLayout.field_l.height() + var18Lifetime2) + 80;
+                vua.field_A.a(param1 - (CachedTextLayout.field_l.width() - var24), var18Lifetime2 - CachedTextLayout.field_l.height() + (-vua.field_A.height() + var25));
                 var31 = (int)(-var28_double + (double)var30);
-                lh.field_b.a(-lh.field_b.height() + (param1 - 1) + var24, var18Lifetime2 - lh.field_b.width() - CachedTextLayout.field_l.width());
+                lh.field_b.a(-lh.field_b.width() + (param1 - 1) + var24, var18Lifetime2 - lh.field_b.height() - CachedTextLayout.field_l.height());
                 tga.field_a.setClip(param1 - 28 + var24, 0, var24 - 20 + param1, 10 + var31);
                 if (var28_double < 80.0) {
-                  dn.field_d[(var14 >> 2) % 4 + 3].a(-48 + (param1 - CachedTextLayout.field_l.height()), 36 + (var18Lifetime2 - (CachedTextLayout.field_l.width() + vua.field_A.width())));
+                  dn.field_d[(var14 >> 2) % 4 + 3].a(-48 + (param1 - CachedTextLayout.field_l.width()), 36 + (var18Lifetime2 - (CachedTextLayout.field_l.height() + vua.field_A.height())));
                 }
                 tga.field_a.la();
                 tga.field_a.setClip(param1 - (30 - var24), var31, -20 + param1 + var24, var30);
                 MirrorBehaviour.field_r.a(var24 + (-30 + param1), var31);
                 tga.field_a.la();
-                CachedTextLayout.field_l.a(-1 + param1 - CachedTextLayout.field_l.height() + var24, -CachedTextLayout.field_l.width() + var18Lifetime2);
+                CachedTextLayout.field_l.a(-1 + param1 - CachedTextLayout.field_l.width() + var24, -CachedTextLayout.field_l.height() + var18Lifetime2);
               }
               if (var24 > 30) {
                 var24 = 35;
@@ -221,7 +221,7 @@ final class dta {
               var18Lifetime3 = 0;
               var17Lifetime3 = var24 + (param1 - 60);
               var26Lifetime1 = var17Lifetime3;
-              tv.field_wb.a(26 + (var17Lifetime3 + (-var24 - (tv.field_wb.height() >> 1))), -42 + param6);
+              tv.field_wb.a(26 + (var17Lifetime3 + (-var24 - (tv.field_wb.width() >> 1))), -42 + param6);
               for (var27_intLifetime1 = 0; var27_intLifetime1 < 3; var27_intLifetime1++) {
                 var28_int = -68 + param6;
                 var29 = var12.getRoomTreasure(393216, var27_intLifetime1);
@@ -274,9 +274,9 @@ final class dta {
                 if (this.field_f[var30Lifetime2] > 0) {
                   this.field_f[var30Lifetime2] = this.field_f[var30Lifetime2] - 1;
                   var33_float = 1.0f + (0.10000000149011612f + 0.20000000298023224f * (float)Math.sin(0.7 * (double)this.field_f[var30Lifetime2]));
-                  var34_int = (int)((float)PlayerProfile.field_r[var30Lifetime2].height() * var33_float);
-                  var35_int = (int)((float)PlayerProfile.field_r[var30Lifetime2].width() * var33_float);
-                  PlayerProfile.field_r[var30Lifetime2].a(var17Lifetime5 + (-var34_int + PlayerProfile.field_r[var30Lifetime2].height()) / 2, (PlayerProfile.field_r[var30Lifetime2].width() - var35_int) / 2 + var29Lifetime2, var34_int, var35_int, 1, -1, 1);
+                  var34_int = (int)((float)PlayerProfile.field_r[var30Lifetime2].width() * var33_float);
+                  var35_int = (int)((float)PlayerProfile.field_r[var30Lifetime2].height() * var33_float);
+                  PlayerProfile.field_r[var30Lifetime2].a(var17Lifetime5 + (-var34_int + PlayerProfile.field_r[var30Lifetime2].width()) / 2, (PlayerProfile.field_r[var30Lifetime2].height() - var35_int) / 2 + var29Lifetime2, var34_int, var35_int, 1, -1, 1);
                   MembersUpsellMenu.a(this.field_h[var30Lifetime2], 14142651, qf.field_j, -1, var31Lifetime1, -49 + var17Lifetime5, 1);
                 }
                 var31Lifetime1 += 23;

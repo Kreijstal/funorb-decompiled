@@ -191,10 +191,10 @@ final class ca extends GameFont {
         }
         this.field_f.setFilter(7672, MiscItemBehaviour.field_v);
         this.field_d = param0.c(6, false);
-        this.field_d.a(20480, 20, true);
+        this.field_d.allocate(20480, 20, true);
         var7 = 0;
         while (var7 < 4) {
-          var33 = this.field_d.a(-15730, true);
+          var33 = this.field_d.mapBuffer(-15730, true);
           if (var33 != null) {
             var34 = this.field_g.a(var33, 127);
             var10 = this.field_f.textureV((float)var6Lifetime1, (byte) -33) / (float)var6Lifetime1;
@@ -259,7 +259,7 @@ final class ca extends GameFont {
               var24++;
             }
             var34.a();
-            if (this.field_d.a(true)) {
+            if (this.field_d.unmapBuffer(true)) {
               return;
             }
           }

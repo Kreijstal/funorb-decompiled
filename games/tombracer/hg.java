@@ -13,7 +13,7 @@ final class hg {
 
     final void c(int param0) {
         if (null != this.field_a) {
-          this.field_a.a(12574);
+          this.field_a.close(12574);
           this.field_h = false;
           if (param0 != -5941) {
             this.field_a = (qm) null;

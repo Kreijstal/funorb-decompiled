@@ -58,8 +58,8 @@ final class gh extends ToolkitSprite {
         this.field_c.a(1, false, pea.field_c);
         this.field_c.g(3625, param7);
         if (this.field_b) {
-          var13 = (float)this.paddedHeight();
-          var14 = (float)this.paddedWidth();
+          var13 = (float)this.paddedWidth();
+          var14 = (float)this.paddedHeight();
           var15 = (-param0 + param2) / var13;
           var16 = (param3 - param1) / var13;
           var17 = (-param0 + param4) / var14;
@@ -90,7 +90,7 @@ final class gh extends ToolkitSprite {
         this.field_c.a(1, false, PlayerContextMenu.field_j);
     }
 
-    final int height() {
+    final int width() {
         return this.field_l;
     }
 
@@ -161,11 +161,11 @@ final class gh extends ToolkitSprite {
         }
     }
 
-    final int paddedHeight() {
+    final int paddedWidth() {
         return this.field_m + this.field_g + this.field_l;
     }
 
-    final int paddedWidth() {
+    final int paddedHeight() {
         return this.field_i + this.field_j + this.field_k;
     }
 
@@ -175,7 +175,7 @@ final class gh extends ToolkitSprite {
         int var1 = -2 % ((param0 - 70) / 50);
     }
 
-    final int width() {
+    final int height() {
         return this.field_k;
     }
 
@@ -216,8 +216,8 @@ final class gh extends ToolkitSprite {
         this.field_c.g(3625, param5);
         var10.a(1.0f, this.field_d.textureV((float)this.field_l, (byte) -33), false, this.field_d.textureU(81, (float)this.field_k));
         if (this.field_b) {
-          param2 = this.field_l * param2 / this.paddedHeight();
-          param3 = param3 * this.field_k / this.paddedWidth();
+          param2 = this.field_l * param2 / this.paddedWidth();
+          param3 = param3 * this.field_k / this.paddedHeight();
           param0 = param0 + param2 * this.field_g / this.field_l;
           param1 = param1 + param3 * this.field_j / this.field_k;
         }
@@ -251,10 +251,10 @@ final class gh extends ToolkitSprite {
           this.field_k = param2;
           this.field_l = param1;
           this.field_d = param0.createIntTexture2D(param3, param4, false, param1, param5, param2, -82);
-          this.field_d.a((byte) -66, true, true);
-          stackIn_4_1 = (this.field_d.b(-7070) != param1);
+          this.field_d.setWrap((byte) -66, true, true);
+          stackIn_4_1 = (this.field_d.getWidth(-7070) != param1);
           this.field_a = stackIn_4_1;
-          stackIn_7_1 = (param2 != this.field_d.a((byte) -76));
+          stackIn_7_1 = (param2 != this.field_d.getHeight((byte) -76));
           this.field_h = stackIn_7_1;
           if (!this.field_a) {
             this.field_d.a(-14634);

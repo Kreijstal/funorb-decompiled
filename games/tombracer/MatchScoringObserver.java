@@ -67,7 +67,7 @@ class MatchScoringObserver extends SimulationObserver {
             var9_ref = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(107, rf.field_a, new String[]{String.valueOf(var8)});
           }
           param1.addScore(param0 - 15, var8);
-          this.field_f.field_D.a(param5, param1.getPlayerIndex(0), param0 - 19);
+          this.field_f.statistics.recordPenalty(param5, param1.getPlayerIndex(0), param0 - 19);
           if (this.field_f.j(-1878) &&
             !this.field_f.d(-67) &&
             var9_ref != null) {
@@ -199,7 +199,7 @@ class MatchScoringObserver extends SimulationObserver {
           }
           var5 = var3_int;
           if (var5 == 0) {
-            this.field_f.field_D.d(1, 72, var4.getPlayerIndex(0));
+            this.field_f.statistics.addTrapsDestroyed(1, 72, var4.getPlayerIndex(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -358,7 +358,7 @@ class MatchScoringObserver extends SimulationObserver {
             var13 = 0;
             var9Lifetime1 = var13;
             while (var13 < 3) {
-              this.field_f.field_D.b(param0.getPlayerIndex(0), 65408, gp.field_i[var13] * param0.getRoomTreasure(393216, var13));
+              this.field_f.statistics.addTreasureScore(param0.getPlayerIndex(0), 65408, gp.field_i[var13] * param0.getRoomTreasure(393216, var13));
               var13++;
             }
             return;

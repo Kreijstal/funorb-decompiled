@@ -168,7 +168,7 @@ final class KeySwitchComponent extends SwitchComponent {
           incrementValue$2 = param4;
           param4++;
           var7.a(incrementValue$2, (byte) 47, param1);
-          ds.field_n = joa.a("newfont", param2, "", (byte) -111);
+          MatchStatistics.field_n = joa.a("newfont", param2, "", (byte) -111);
           incrementValue$3 = param4;
           param4++;
           var7.a(incrementValue$3, (byte) 47, param1);

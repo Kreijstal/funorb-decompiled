@@ -154,7 +154,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
             this.field_n = false;
           } else {
             this.field_g = this.owner.a(true, 1, false, 2, new int[]{0, -1});
-            this.field_g.a((byte) -128, false, false);
+            this.field_g.setWrap((byte) -128, false, false);
             this.field_n = true;
           }
           return;

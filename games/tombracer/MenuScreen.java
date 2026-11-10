@@ -35,14 +35,14 @@ abstract class MenuScreen extends GameScreen {
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(this.field_k.field_i > var3_int)))) {
             var4 = this.items[var3_int];
-            stackOut_3_0 = this.c(var3_int, param0 + 28);
+            stackOut_3_0 = this.isItemEnabled(var3_int, param0 + 28);
             stackIn_16_0 = stackOut_3_0 ? 1 : 0;
             stackIn_4_0 = stackOut_3_0;
             if (var5 == 0) {
               if (stackIn_4_0) {
                 stackIn_12_0 = var4;
                 stackIn_12_1 = this.a(param0 + 15, var3_int);
-                stackIn_12_2 = this.b(var4.field_g, -30487);
+                stackIn_12_2 = this.isActionEnabled(var4.field_g, -30487);
                 stackIn_12_3 = 1;
                 stackIn_13_4 = (this.field_k.field_h == var3_int);
                 ((MenuEntry) (Object) stackIn_12_0).a(stackIn_12_1, stackIn_12_2, stackIn_12_3, stackIn_13_4);
@@ -198,7 +198,7 @@ abstract class MenuScreen extends GameScreen {
         }
     }
 
-    boolean b(int param0, int param1) {
+    boolean isActionEnabled(int param0, int param1) {
         int discarded$1 = 0;
         RuntimeException var3 = null;
         boolean stackIn_5_0 = false;
@@ -437,7 +437,7 @@ abstract class MenuScreen extends GameScreen {
           if (param2 <= 117) {
             return false;
           }
-          if (!this.b(param0, -30487)) {
+          if (!this.isActionEnabled(param0, -30487)) {
             return true;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -818,7 +818,7 @@ abstract class MenuScreen extends GameScreen {
         }
     }
 
-    String b(int param0, byte param1) {
+    String getActionLabel(int param0, byte param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -943,7 +943,7 @@ abstract class MenuScreen extends GameScreen {
         }
     }
 
-    boolean c(int param0, int param1) {
+    boolean isItemEnabled(int param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_13_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -1012,7 +1012,7 @@ abstract class MenuScreen extends GameScreen {
         var5 = TombRacer.field_G ? 1 : 0;
         try {
           if (this.field_k.field_h >= 0 &&
-            this.c(this.field_k.field_h, 0) &&
+            this.isItemEnabled(this.field_k.field_h, 0) &&
             this.items[this.field_k.field_h].a(-30323, param2, param0)) {
             stackIn_9_0 = this.field_k.field_h;
             return stackIn_9_0;
@@ -1024,7 +1024,7 @@ abstract class MenuScreen extends GameScreen {
           }
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (this.items.length <= var4_int))) {
-            stackOut_14_0 = this.c(var4_int, 0);
+            stackOut_14_0 = this.isItemEnabled(var4_int, 0);
             stackIn_25_0 = stackOut_14_0 ? 1 : 0;
             stackIn_15_0 = stackOut_14_0;
             if (var5 == 0) {
@@ -1088,7 +1088,7 @@ abstract class MenuScreen extends GameScreen {
             boolean decompiledFrameCompleted0 = true;
             boolean decompiledFrameRemainder0 = true;
             if (param1.length > var9) {
-              this.items[var9] = new MenuEntry(param1[var9], this.b(param1[var9], (byte) 125), this.f(0, param1[var9]), this.d(-72, param1[var9]));
+              this.items[var9] = new MenuEntry(param1[var9], this.getActionLabel(param1[var9], (byte) 125), this.f(0, param1[var9]), this.d(-72, param1[var9]));
               this.items[var9].field_b = this.getItemX((byte) 119, var9) + this.getItemRight(var9, (byte) -48) >> 1;
               this.items[var9].c(1701110401);
               stackIn_43_0 = -38;

@@ -609,7 +609,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -45, "players_in_game");
                 if (null != var2) {
-                  ds.field_l = jaa.decodeText((byte) 98, var2);
+                  MatchStatistics.field_l = jaa.decodeText((byte) 98, var2);
                 }
                 var2 = dn.a((byte) 110, "you_are_invited_to_xs_game");
                 if (null != var2) {

@@ -56,21 +56,21 @@ final class kp {
             var13 = this.field_e.a((byte) 40, var6, 0.699999988079071f, param0, false, var6);
             var7 = var13;
             var14 = this.field_a.a(true, var6, var5.field_r != 0 ? true : false, var6, var13);
-            var14.a((byte) -105, var5.field_b, var5.field_n);
+            var14.setWrap((byte) -105, var5.field_b, var5.field_n);
             this.field_b.put(29166, var14, (long)param0);
             return var14;
           }
           if (PlayTrackCommand.a((int) var5.field_h, false)) {
             var22 = this.field_e.a(14907, param0, true, var6, 0.699999988079071f, var6);
             var20 = this.field_a.a(true, var6, var5.field_r != 0 ? true : false, var6, var22);
-            var20.a((byte) -105, var5.field_b, var5.field_n);
+            var20.setWrap((byte) -105, var5.field_b, var5.field_n);
             this.field_b.put(29166, var20, (long)param0);
             return var20;
           }
           var16 = this.field_e.a((byte) 40, var6, 0.699999988079071f, param0, false, var6);
           var7Lifetime4 = var16;
           var17 = this.field_a.a(true, var6, var5.field_r != 0 ? true : false, var6, var16);
-          var17.a((byte) -105, var5.field_b, var5.field_n);
+          var17.setWrap((byte) -105, var5.field_b, var5.field_n);
           this.field_b.put(29166, var17, (long)param0);
           return var17;
         }
@@ -78,27 +78,27 @@ final class kp {
           var9 = this.field_e.a(124, var6, var6, param0, 0.699999988079071f, false);
           float[] var7_array = var9;
           var4 = this.field_a.a(var9, SwitchableId.field_a, true, 0 != var5.field_r ? true : false, var6, var6);
-          var4.a((byte) -105, var5.field_b, var5.field_n);
+          var4.setWrap((byte) -105, var5.field_b, var5.field_n);
           this.field_b.put(29166, var4, (long)param0);
           return var4;
         }
         if (var5.field_d == 2) {
           var7Lifetime1 = this.field_e.a((byte) 40, var6, 0.699999988079071f, param0, false, var6);
           var21 = this.field_a.a(true, var6, var5.field_r != 0 ? true : false, var6, var7Lifetime1);
-          var21.a((byte) -105, var5.field_b, var5.field_n);
+          var21.setWrap((byte) -105, var5.field_b, var5.field_n);
           this.field_b.put(29166, var21, (long)param0);
           return var21;
         }
         if (PlayTrackCommand.a((int) var5.field_h, false)) {
           var7Lifetime2 = this.field_e.a(14907, param0, true, var6, 0.699999988079071f, var6);
           var21Lifetime1 = this.field_a.a(true, var6, var5.field_r != 0 ? true : false, var6, var7Lifetime2);
-          var21Lifetime1.a((byte) -105, var5.field_b, var5.field_n);
+          var21Lifetime1.setWrap((byte) -105, var5.field_b, var5.field_n);
           this.field_b.put(29166, var21Lifetime1, (long)param0);
           return var21Lifetime1;
         }
         var7Lifetime3 = this.field_e.a((byte) 40, var6, 0.699999988079071f, param0, false, var6);
         var21Lifetime2 = this.field_a.a(true, var6, var5.field_r != 0 ? true : false, var6, var7Lifetime3);
-        var21Lifetime2.a((byte) -105, var5.field_b, var5.field_n);
+        var21Lifetime2.setWrap((byte) -105, var5.field_b, var5.field_n);
         this.field_b.put(29166, var21Lifetime2, (long)param0);
         return var21Lifetime2;
     }

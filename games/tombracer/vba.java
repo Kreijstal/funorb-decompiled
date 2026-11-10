@@ -250,7 +250,7 @@ final class vba extends we {
         var7Lifetime1 = var5 + 20 + 180;
         var8 = ShowLevelSetCommand.achievementNames[var6].toUpperCase();
         var12 = kv.achievementDescriptions[var6];
-        var10 = this.a(var8, ds.field_n, -6671872, 180, var4, eda.field_f, 128, var7Lifetime1, 15);
+        var10 = this.a(var8, MatchStatistics.field_n, -6671872, 180, var4, eda.field_f, 128, var7Lifetime1, 15);
         var7Lifetime1 = var7Lifetime1 + (5 + 15 * var10);
         if (!this.a(false, var6)) {
           kn.field_p.a(var7Lifetime1, false, pg.field_x, var4, -6671872, -1);
@@ -326,14 +326,14 @@ final class vba extends we {
         }
     }
 
-    final String b(int param0, byte param1) {
+    final String getActionLabel(int param0, byte param1) {
         if (param1 <= 111) {
           field_u = (boolean[]) null;
         }
         if (0 == param0) {
           return fga.field_a;
         }
-        return super.b(param0, (byte) 121);
+        return super.getActionLabel(param0, (byte) 121);
     }
 
     final void a(boolean param0, int param1, byte param2) {
@@ -374,11 +374,11 @@ final class vba extends we {
         }
     }
 
-    final boolean c(int param0, int param1) {
+    final boolean isItemEnabled(int param0, int param1) {
         if (param1 != 0) {
           return true;
         }
-        return super.c(param0, 0);
+        return super.isItemEnabled(param0, 0);
     }
 
     static {

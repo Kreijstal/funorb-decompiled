@@ -52,7 +52,7 @@ final class MultiplayerLoginMenu extends MenuScreen {
 
     final void draw(byte param0, boolean param1) {
         int var3 = this.field_q.e(param0 + 111);
-        gg.field_f.a(aaa.a(false) - gg.field_f.height() >> 1, var3 + gg.field_f.width() / 2);
+        gg.field_f.a(aaa.a(false) - gg.field_f.width() >> 1, var3 + gg.field_f.height() / 2);
         this.h(var3, 3);
         super.draw(param0, param1);
     }
@@ -77,12 +77,12 @@ final class MultiplayerLoginMenu extends MenuScreen {
           var3 = 500;
           var4 = aaa.a(false) / 2 - var3 / 2;
           var5 = param0 + 100;
-          MembersUpsellMenu.a(ClampOperator.field_o.toUpperCase(), 2497287, SingleChildWidget.field_v, -1, -30 + gg.field_f.width() / 2 + var5, aaa.a(false) / 2, -1);
+          MembersUpsellMenu.a(ClampOperator.field_o.toUpperCase(), 2497287, SingleChildWidget.field_v, -1, -30 + gg.field_f.height() / 2 + var5, aaa.a(false) / 2, -1);
           var6 = kn.field_p;
           var7 = kv.field_a.field_h + (kv.field_a.field_g + 4);
           var8 = 3 * var7;
           var9 = aaa.field_e;
-          SocketConnector.a(var9, 1, var6, 2431750, var7, var8, 1, gg.field_f.width() / 2 + var5, var4, -1, (byte) 60, var3);
+          SocketConnector.a(var9, 1, var6, 2431750, var7, var8, 1, gg.field_f.height() / 2 + var5, var4, -1, (byte) 60, var3);
           return;
         }
     }

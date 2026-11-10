@@ -2502,15 +2502,15 @@ final class Model extends ka {
             if (this.field_Fb[var5] != -1) {
               if (this.field_Fb[var5] != -2) {
                 var3 = this.field_t[var5] & -131072;
-                this.field_t[var5] = var3 | ds.c(-127, var1, var3 >> 17);
+                this.field_t[var5] = var3 | MatchStatistics.c(-127, var1, var3 >> 17);
                 var3 = this.field_o[var5] & -131072;
-                this.field_o[var5] = var3 | ds.c(-127, var1, var3 >> 17);
+                this.field_o[var5] = var3 | MatchStatistics.c(-127, var1, var3 >> 17);
                 var3 = this.field_Fb[var5] & -131072;
-                this.field_Fb[var5] = var3 | ds.c(-127, var1, var3 >> 17);
+                this.field_Fb[var5] = var3 | MatchStatistics.c(-127, var1, var3 >> 17);
               }
             } else {
               var3 = this.field_t[var5] & -131072;
-              this.field_t[var5] = var3 | ds.c(-127, var1, var3 >> 17);
+              this.field_t[var5] = var3 | MatchStatistics.c(-127, var1, var3 >> 17);
             }
           }
         }
@@ -3686,7 +3686,7 @@ final class Model extends ka {
                   stackIn_35_0 = (var17 <= 256) ? var7 : var6;
                   var18 = stackIn_35_0;
                   var16 = (var5 >> 1) + (var18 * var17 >> 17);
-                  this.field_t[var8] = var16 << 17 | ds.c(-127, var14, var16);
+                  this.field_t[var8] = var16 << 17 | MatchStatistics.c(-127, var14, var16);
                   if (this.field_D != null &&
                     this.field_D[this.field_bb[var8]] != null) {
                     var15_ref_oha = this.field_D[this.field_bb[var8]];
@@ -3697,7 +3697,7 @@ final class Model extends ka {
                   stackIn_42_0 = (var17 <= 256) ? var7 : var6;
                   var18 = stackIn_42_0;
                   var16 = (var5 >> 1) + (var18 * var17 >> 17);
-                  this.field_o[var8] = var16 << 17 | ds.c(-127, var14, var16);
+                  this.field_o[var8] = var16 << 17 | MatchStatistics.c(-127, var14, var16);
                   if (this.field_D != null &&
                     this.field_D[this.field_x[var8]] != null) {
                     var15_ref_oha = this.field_D[this.field_x[var8]];
@@ -3708,7 +3708,7 @@ final class Model extends ka {
                   stackIn_49_0 = (var17 <= 256) ? var7 : var6;
                   var18 = stackIn_49_0;
                   var16 = (var5 >> 1) + (var18 * var17 >> 17);
-                  this.field_Fb[var8] = var16 << 17 | ds.c(-127, var14, var16);
+                  this.field_Fb[var8] = var16 << 17 | MatchStatistics.c(-127, var14, var16);
                   break regionExit1;
                 case 1:
                   var12 = this.field_ob[var8] & 65535;
@@ -3719,7 +3719,7 @@ final class Model extends ka {
                   stackIn_55_0 = (var16 <= 256) ? var7 : var6;
                   var17 = stackIn_55_0;
                   var18 = (var5 >> 1) + (var17 * var16 >> 17);
-                  this.field_t[var8] = var18 << 17 | ds.c(-127, var14, var18);
+                  this.field_t[var8] = var18 << 17 | MatchStatistics.c(-127, var14, var18);
                   this.field_Fb[var8] = -1;
                   break regionExit1;
                 case 3:

@@ -1,26 +1,26 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ds {
-    private int[] field_e;
+final class MatchStatistics {
+    private int[] trapsDestroyed;
     static SpriteData field_g;
     static String field_k;
     static String field_l;
     private int[] field_b;
-    private boolean[] field_i;
+    private boolean[] penalised;
     static int[] field_f;
     private int[] field_p;
     static FontMetrics field_n;
     private int[] field_a;
-    private int[] field_c;
+    private int[] treasureScore;
     private int[] field_m;
     private int[] field_j;
     private boolean[] field_d;
     private int[] field_h;
     private int[] field_o;
 
-    final void b(int param0, int param1, int param2) {
-        this.field_c[param0] = this.field_c[param0] + param2;
+    final void addTreasureScore(int param0, int param1, int param2) {
+        this.treasureScore[param0] = this.treasureScore[param0] + param2;
         if (param1 != 65408) {
           this.e(-108, -74);
         }
@@ -31,7 +31,7 @@ final class ds {
         int var3 = 125 % ((param0 + 38) / 60);
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void recordPenalty(int param0, int param1, int param2) {
         int var4;
         int var5;
         var5 = TombRacer.field_G ? 1 : 0;
@@ -70,7 +70,7 @@ final class ds {
             }
           }
         }
-        this.d(param1, -98);
+        this.markPenalised(param1, -98);
         return;
     }
 
@@ -92,8 +92,8 @@ final class ds {
         }
     }
 
-    final void d(int param0, int param1, int param2) {
-        this.field_e[param2] = this.field_e[param2] + param0;
+    final void addTrapsDestroyed(int param0, int param1, int param2) {
+        this.trapsDestroyed[param2] = this.trapsDestroyed[param2] + param0;
         int var4 = 41 % ((param1 + 34) / 36);
     }
 
@@ -145,13 +145,13 @@ final class ds {
     final void a(int param0, byte param1, int param2) {
         this.field_o[param0] = WallTile.bitwiseOr(this.field_o[param0], 1 << param2);
         if (param1 != -52) {
-          ds.releaseStatics(false);
+          MatchStatistics.releaseStatics(false);
         }
     }
 
-    private final void d(int param0, int param1) {
+    private final void markPenalised(int param0, int param1) {
         int var3 = -47 % ((0 - param1) / 59);
-        this.field_i[param0] = true;
+        this.penalised[param0] = true;
     }
 
     final static int c(int param0, int param1, int param2) {
@@ -179,17 +179,17 @@ final class ds {
         return (param1 & 65408) + param2;
     }
 
-    ds(int param0) {
+    MatchStatistics(int param0) {
         this.field_j = new int[param0];
-        this.field_e = new int[param0];
+        this.trapsDestroyed = new int[param0];
         this.field_p = new int[param0];
         this.field_b = new int[param0];
         this.field_m = new int[param0];
         this.field_h = new int[param0];
         this.field_d = new boolean[param0];
-        this.field_i = new boolean[param0];
+        this.penalised = new boolean[param0];
         this.field_a = new int[param0];
-        this.field_c = new int[param0];
+        this.treasureScore = new int[param0];
         this.field_o = new int[param0];
     }
 

@@ -147,11 +147,11 @@ final class dh {
               stackIn_39_0 = null;
             }
             var21 = stackIn_39_0;
-            var22 = ds.field_f[var15Lifetime1];
+            var22 = MatchStatistics.field_f[var15Lifetime1];
             var23 = mg.field_e[var15Lifetime1];
-            var24 = ds.field_f[var16];
+            var24 = MatchStatistics.field_f[var16];
             var25 = mg.field_e[var16];
-            var26 = ds.field_f[var17];
+            var26 = MatchStatistics.field_f[var17];
             var27 = mg.field_e[var17];
             if (var19 == var18 &&
               var19 == var20) {

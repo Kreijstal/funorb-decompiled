@@ -73,11 +73,11 @@ final class OpenGlSprite extends ToolkitSprite {
         }
     }
 
-    final int paddedHeight() {
+    final int paddedWidth() {
         return this.field_h + (this.field_a.field_t + this.field_i);
     }
 
-    final int paddedWidth() {
+    final int paddedHeight() {
         return this.field_m + this.field_a.field_s + this.field_e;
     }
 
@@ -99,8 +99,8 @@ final class OpenGlSprite extends ToolkitSprite {
         this.field_c.a((byte) 25, param6);
         jaggl.OpenGL.glColor4ub((byte)(param5 >> 16), (byte)(param5 >> 8), (byte)param5, (byte)(param5 >> 24));
         if (this.field_b) {
-          var9 = (float)param2 / (float)this.paddedHeight();
-          var10 = (float)param3 / (float)this.paddedWidth();
+          var9 = (float)param2 / (float)this.paddedWidth();
+          var10 = (float)param3 / (float)this.paddedHeight();
           var11 = (float)this.field_h * var9 + (float)param0;
           var12 = (float)param1 + (float)this.field_e * var10;
           var13 = var11 + var9 * (float)this.field_a.field_t;
@@ -191,8 +191,8 @@ final class OpenGlSprite extends ToolkitSprite {
         float var11Lifetime1;
         float var12Lifetime1;
         if (this.field_b) {
-          var11 = (float)this.paddedHeight();
-          var12 = (float)this.paddedWidth();
+          var11 = (float)this.paddedWidth();
+          var12 = (float)this.paddedHeight();
           var13 = (-param0 + param2) / var11;
           var14 = (-param1 + param3) / var11;
           var15 = (param4 - param0) / var12;
@@ -283,7 +283,7 @@ final class OpenGlSprite extends ToolkitSprite {
         }
     }
 
-    final int height() {
+    final int width() {
         return this.field_a.field_t;
     }
 
@@ -318,7 +318,7 @@ final class OpenGlSprite extends ToolkitSprite {
         }
     }
 
-    final int width() {
+    final int height() {
         return this.field_a.field_s;
     }
 

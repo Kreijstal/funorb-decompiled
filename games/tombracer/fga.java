@@ -99,7 +99,7 @@ final class fga implements ShellListener {
         }
     }
 
-    public final boolean a(int param0) {
+    public final boolean isModal(int param0) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException decompiledCaughtException = null;
