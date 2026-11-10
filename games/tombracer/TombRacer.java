@@ -87,7 +87,7 @@ public final class TombRacer extends rfa implements ls {
           return true;
         }
         if (param0 != -72) {
-          this.z(-14);
+          this.beginFrame(-14);
         }
         return false;
     }
@@ -115,7 +115,7 @@ public final class TombRacer extends rfa implements ls {
           if (null == tga.field_a) {
             return;
           }
-          this.z(91);
+          this.beginFrame(91);
           if (null != cs.field_c) {
             cs.field_c.a((byte) -28, false);
           }
@@ -197,9 +197,9 @@ public final class TombRacer extends rfa implements ls {
               tga.field_a.SA(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_a, SoftwareRasterizer.field_l, 0, SoftwareRasterizer.field_g);
               var9.a(99);
             }
-            this.x(-28581);
+            this.finishFrame(-28581);
           } else {
-            this.x(-28581);
+            this.finishFrame(-28581);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -525,10 +525,10 @@ public final class TombRacer extends rfa implements ls {
         wq.releaseStatics(true);
         jia.releaseStatics((byte) 31);
         GameEvent.releaseStatics(param0 ^ -3601);
-        aga.a((byte) -113);
+        AnimatedLight.a((byte) -113);
         TileGridCell.releaseStatics(param0 + 3674);
         baa.a(param0 + 3786);
-        uh.releaseStatics(0);
+        LightSource.releaseStatics(0);
         vf.releaseStatics(-55);
         CharacterSelectPhase.releaseStatics(115);
         daa.releaseStatics(-12224);
@@ -991,7 +991,7 @@ public final class TombRacer extends rfa implements ls {
         this.field_D = null;
     }
 
-    private final void z(int param0) {
+    private final void beginFrame(int param0) {
         int var2 = aaa.a(false);
         int var3 = SwitchLinkList.b(0);
         if (mba.e(-22766)) {
@@ -1106,7 +1106,7 @@ public final class TombRacer extends rfa implements ls {
         this.a(82, 81);
         this.a(new GameAssetLoader(), 119);
         if (param0 > -15) {
-          this.z(125);
+          this.beginFrame(125);
         }
         foa.field_b = false;
         PlatformModel.j(32454);
@@ -1326,7 +1326,7 @@ public final class TombRacer extends rfa implements ls {
               return true;
             }
             if (param0 != 72) {
-              stackIn_116_0 = this.a(param1, param0, (byte) 111);
+              stackIn_116_0 = this.handleGamePacket(param1, param0, (byte) 111);
               return stackIn_116_0;
             }
             var33 = SwitchComponent.e(true);
@@ -1344,7 +1344,7 @@ public final class TombRacer extends rfa implements ls {
             var18 = SimpleConditionBehaviour.field_o;
             var39 = var4;
             for (var8Lifetime2 = 0; var8Lifetime2 < 8; var8Lifetime2++) {
-              var18[var8Lifetime2] = WallTile.a(var18[var8Lifetime2], var39[var8Lifetime2]);
+              var18[var8Lifetime2] = WallTile.bitwiseOr(var18[var8Lifetime2], var39[var8Lifetime2]);
             }
             return true;
           }
@@ -1414,7 +1414,7 @@ public final class TombRacer extends rfa implements ls {
         GameScreen.c((byte) 62);
     }
 
-    private final void x(int param0) {
+    private final void finishFrame(int param0) {
         try {
           qva qva = null;
           Throwable decompiledCaughtException = null;
@@ -1444,7 +1444,7 @@ public final class TombRacer extends rfa implements ls {
         }
     }
 
-    private final boolean a(BitPacketBuffer param0, int param1, byte param2) {
+    private final boolean handleGamePacket(BitPacketBuffer param0, int param1, byte param2) {
         int var5 = 0;
         RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;

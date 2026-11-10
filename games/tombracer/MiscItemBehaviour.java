@@ -111,7 +111,7 @@ final class MiscItemBehaviour extends ItemBehaviour {
           if (var3_intLifetime1 == 0) {
             if (!param1.isHoldingItem(-70)) {
               param1.setHeldItem(this.trap.b(125), (byte) -102, 58982, 1);
-              this.c(false);
+              this.stop(false);
               return true;
             }
           } else {
@@ -121,7 +121,7 @@ final class MiscItemBehaviour extends ItemBehaviour {
             }
             if (var3_intLifetime1 == 2) {
               param1.collectTreasure(this.trap, false, 1);
-              this.c(false);
+              this.stop(false);
               return true;
             }
             if (var3_intLifetime1 != 3) {
@@ -130,7 +130,7 @@ final class MiscItemBehaviour extends ItemBehaviour {
             if (!param1.isHoldingItem(49)) {
               param1.collectTreasure(this.trap, false, 2);
               param1.setHeldItem(this.trap.b(-77), (byte) -120, 52428, 0);
-              this.c(false);
+              this.stop(false);
               return true;
             }
           }

@@ -454,7 +454,7 @@ final class MenuEntry {
           }
           var7 = param1 + var5 / 2 - this.field_b;
           var8 = param2 - (this.field_i - var6 / 2);
-          if (!RewardChoicePhase.a(this.field_i - var6 / 2, param1, this.field_i + var6 / 2, param2, this.field_b + var5 / 2, this.field_b - var5 / 2, 105)) {
+          if (!RewardChoicePhase.isPointInRect(this.field_i - var6 / 2, param1, this.field_i + var6 / 2, param2, this.field_b + var5 / 2, this.field_b - var5 / 2, 105)) {
             return false;
           }
           var9 = ema.a(this.field_l, 0, var7, this.field_f, var8) ? 1 : 0;
@@ -462,7 +462,7 @@ final class MenuEntry {
         }
         var4 = this.e(-163);
         var5Lifetime1 = this.d(11919);
-        return RewardChoicePhase.a(-(var5Lifetime1 / 2) + this.field_i, param1, var5Lifetime1 / 2 + this.field_i, param2, this.field_b + var4 / 2, this.field_b - var4 / 2, 104);
+        return RewardChoicePhase.isPointInRect(-(var5Lifetime1 / 2) + this.field_i, param1, var5Lifetime1 / 2 + this.field_i, param2, this.field_b + var4 / 2, this.field_b - var4 / 2, 104);
     }
 
     private final ToolkitSprite b(int param0) {

@@ -172,8 +172,8 @@ final class nf {
         }
         this.field_q = stackIn_10_1;
         this.field_c = param9;
-        var11 = ua.a(param7 - param4, 47);
-        var12 = ua.a(param6 - param5, 28);
+        var11 = ua.abs(param7 - param4, 47);
+        var12 = ua.abs(param6 - param5, 28);
         var13 = param2 * this.field_n;
         var14 = param2 + var13;
         var15 = this.field_i * param2;
@@ -198,8 +198,8 @@ final class nf {
                 stackIn_18_0 = this;
                 stackIn_18_3 = -param5 + var16;
               }
-              this.field_g = GameEvent.a(stackIn_17_1, stackIn_17_2, stackIn_18_3);
-              this.field_h = GameEvent.a(var12, -28970, param2);
+              this.field_g = GameEvent.divideFixed16(stackIn_17_1, stackIn_17_2, stackIn_18_3);
+              this.field_h = GameEvent.divideFixed16(var12, -28970, param2);
             }
           }
           this.field_e = true;
@@ -237,8 +237,8 @@ final class nf {
                 stackIn_35_0 = this;
                 stackIn_35_3 = -param5 + var16;
               }
-              this.field_g = GameEvent.a(stackIn_34_1, stackIn_34_2, stackIn_35_3);
-              this.field_h = GameEvent.a(var12, -28970, param2);
+              this.field_g = GameEvent.divideFixed16(stackIn_34_1, stackIn_34_2, stackIn_35_3);
+              this.field_h = GameEvent.divideFixed16(var12, -28970, param2);
             }
           }
           this.field_e = true;
@@ -263,8 +263,8 @@ final class nf {
         } else {
           stackIn_51_3 = -param4 + var14;
         }
-        this.field_k = GameEvent.a(stackIn_50_1, stackIn_50_2, stackIn_51_3);
-        this.field_l = GameEvent.a(var11, -28970, param2);
+        this.field_k = GameEvent.divideFixed16(stackIn_50_1, stackIn_50_2, stackIn_51_3);
+        this.field_l = GameEvent.divideFixed16(var11, -28970, param2);
         if (var12 <= 0) {
           this.field_g = 2147483647;
           this.field_h = 0;
@@ -300,8 +300,8 @@ final class nf {
               stackIn_56_0 = this;
               stackIn_56_3 = -param5 + var16;
             }
-            this.field_g = GameEvent.a(stackIn_55_1, stackIn_55_2, stackIn_56_3);
-            this.field_h = GameEvent.a(var12, -28970, param2);
+            this.field_g = GameEvent.divideFixed16(stackIn_55_1, stackIn_55_2, stackIn_56_3);
+            this.field_h = GameEvent.divideFixed16(var12, -28970, param2);
             this.field_e = true;
             this.field_d = false;
             while (!this.field_d) {

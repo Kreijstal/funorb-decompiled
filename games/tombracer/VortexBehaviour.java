@@ -59,7 +59,7 @@ final class VortexBehaviour extends Behaviour {
         var8 = this.field_r << 16;
         var9 = var4 >> 17;
         var10 = var5 >> 17;
-        var11 = MidiVoiceMixer.b(var10, var9, -1);
+        var11 = MidiVoiceMixer.min(var10, var9, -1);
         var12 = this.getRandom((byte) 46).nextBounded(8192, 0);
         var13 = MouseInputHandler.a((byte) 98, var12 >> 2);
         var14 = bua.a(0, var12 >> 2);
@@ -96,7 +96,7 @@ final class VortexBehaviour extends Behaviour {
                   var6 = -var6;
                 }
                 if (this.field_q &&
-                  ua.a(var6, param0 ^ -5442) > var25 << 16) {
+                  ua.abs(var6, param0 ^ -5442) > var25 << 16) {
                   stackIn_34_0 = var20;
                   stackIn_34_1 = param0 - 5313;
                   stackIn_34_2 = false;

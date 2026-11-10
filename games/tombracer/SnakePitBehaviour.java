@@ -168,7 +168,7 @@ final class SnakePitBehaviour extends Behaviour {
         for (var4 = 0; this.snakes.length > var4; var4++) {
           this.snakes[var4].a(var2, this.trap.getWidth(-112), this.trap.getHeight((byte) 55), var3, (byte) -80, this.trap.getRoot(0), this.trap.getRoom((byte) 77));
         }
-        var4Lifetime1 = this.d(8031) ? 1 : 0;
+        var4Lifetime1 = this.isTouchingPlayer(8031) ? 1 : 0;
         for (var5 = 0; var5 < this.snakes.length; var5++) {
           this.snakes[var5].a(111, var4Lifetime1 != 0, var3, var2, this.getPlayer((byte) 19));
         }
@@ -400,7 +400,7 @@ final class SnakePitBehaviour extends Behaviour {
         return var9;
     }
 
-    static int c(int param0, int param1) {
+    static int bitwiseAnd(int param0, int param1) {
         return param0 & param1;
     }
 

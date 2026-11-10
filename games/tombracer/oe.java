@@ -29,7 +29,7 @@ final class oe extends TextFieldValidator {
           if (this.field_k instanceof mk) {
             var3 = ((mk) ((Object) this.field_k)).a((byte) 92);
             if (var3 != null) {
-              if (var3.b(-4666) == uh.field_k &&
+              if (var3.b(-4666) == LightSource.field_k &&
                 !param1.equals(this.field_k.field_o)) {
                 stackIn_7_0 = FleeLocomotor.field_q;
                 return stackIn_7_0;
@@ -84,7 +84,7 @@ final class oe extends TextFieldValidator {
           if (this.field_k instanceof mk) {
             var3 = ((mk) ((Object) this.field_k)).a((byte) 89);
             if (var3 != null &&
-              var3.b(param0 ^ -4664) != uh.field_k) {
+              var3.b(param0 ^ -4664) != LightSource.field_k) {
               stackIn_5_0 = fp.field_c;
               return stackIn_5_0;
             }
@@ -96,7 +96,7 @@ final class oe extends TextFieldValidator {
           if (!param1.equals(this.field_k.field_o)) {
             stackIn_11_0 = fp.field_c;
           } else {
-            stackIn_11_0 = uh.field_k;
+            stackIn_11_0 = LightSource.field_k;
           }
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

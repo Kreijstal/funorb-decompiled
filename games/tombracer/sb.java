@@ -41,7 +41,7 @@ final class sb {
                 if ((1 << var5 & param1[var4]) != 0) {
                   incrementValue$1 = var3;
                   var3++;
-                  var7[incrementValue$1] = WallTile.a(var5, var4 << 5);
+                  var7[incrementValue$1] = WallTile.bitwiseOr(var5, var4 << 5);
                 }
               }
             }

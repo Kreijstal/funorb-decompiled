@@ -41,7 +41,7 @@ final class WhirlpoolDigest {
         }
         var3 = 0;
         while (var2 < 8) {
-          this.field_m[var2] = SnakePitModel.a(SnakePitModel.a(SnakePitModel.a(SnakePitModel.a(vi.a((long)this.field_e[4 + var3] << 24, 4278190080L), SnakePitModel.a(vi.a(255L, (long)this.field_e[3 + var3]) << 32, SnakePitModel.a(SnakePitModel.a((long)this.field_e[var3] << 56, vi.a((long)this.field_e[1 + var3] << 48, 71776119061217280L)), vi.a(280375465082880L, (long)this.field_e[var3 + 2] << 40)))), vi.a((long)this.field_e[5 + var3], 255L) << 16), vi.a(255L, (long)this.field_e[6 + var3]) << 8), vi.a((long)this.field_e[7 + var3], 255L));
+          this.field_m[var2] = SnakePitModel.bitwiseXor(SnakePitModel.bitwiseXor(SnakePitModel.bitwiseXor(SnakePitModel.bitwiseXor(vi.bitwiseAnd((long)this.field_e[4 + var3] << 24, 4278190080L), SnakePitModel.bitwiseXor(vi.bitwiseAnd(255L, (long)this.field_e[3 + var3]) << 32, SnakePitModel.bitwiseXor(SnakePitModel.bitwiseXor((long)this.field_e[var3] << 56, vi.bitwiseAnd((long)this.field_e[1 + var3] << 48, 71776119061217280L)), vi.bitwiseAnd(280375465082880L, (long)this.field_e[var3 + 2] << 40)))), vi.bitwiseAnd((long)this.field_e[5 + var3], 255L) << 16), vi.bitwiseAnd(255L, (long)this.field_e[6 + var3]) << 8), vi.bitwiseAnd((long)this.field_e[7 + var3], 255L));
           var2++;
           var3 += 8;
         }
@@ -49,7 +49,7 @@ final class WhirlpoolDigest {
           dupTemp$0 = this.field_l[var2Lifetime1];
           arrayValue$1 = this.field_m[var2Lifetime1];
           this.field_i[var2Lifetime1] = dupTemp$0;
-          this.field_f[var2Lifetime1] = SnakePitModel.a(arrayValue$1, dupTemp$0);
+          this.field_f[var2Lifetime1] = SnakePitModel.bitwiseXor(arrayValue$1, dupTemp$0);
         }
         for (var2Lifetime2 = 1; var2Lifetime2 <= 10; var2Lifetime2++) {
           for (var3Lifetime1 = 0; 8 > var3Lifetime1; var3Lifetime1++) {
@@ -57,7 +57,7 @@ final class WhirlpoolDigest {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_j[var3Lifetime1] = SnakePitModel.a(this.field_j[var3Lifetime1], PortalComponent.field_I[var4][SnakePitBehaviour.c(255, (int)(this.field_i[SnakePitBehaviour.c(-var4 + var3Lifetime1, 7)] >>> var5))]);
+              this.field_j[var3Lifetime1] = SnakePitModel.bitwiseXor(this.field_j[var3Lifetime1], PortalComponent.field_I[var4][SnakePitBehaviour.bitwiseAnd(255, (int)(this.field_i[SnakePitBehaviour.bitwiseAnd(-var4 + var3Lifetime1, 7)] >>> var5))]);
               var5 -= 8;
               var4++;
             }
@@ -65,14 +65,14 @@ final class WhirlpoolDigest {
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.field_i[var3Lifetime1Lifetime1] = this.field_j[var3Lifetime1Lifetime1];
           }
-          this.field_i[0] = SnakePitModel.a(this.field_i[0], PortalComponent.field_H[var2Lifetime2]);
+          this.field_i[0] = SnakePitModel.bitwiseXor(this.field_i[0], PortalComponent.field_H[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; 8 > var3Lifetime1Lifetime2; var3Lifetime1Lifetime2++) {
             this.field_j[var3Lifetime1Lifetime2] = this.field_i[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (8 > var7) {
-              this.field_j[var3Lifetime1Lifetime2] = SnakePitModel.a(this.field_j[var3Lifetime1Lifetime2], PortalComponent.field_I[var7][SnakePitBehaviour.c(255, (int)(this.field_f[SnakePitBehaviour.c(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1))]);
+              this.field_j[var3Lifetime1Lifetime2] = SnakePitModel.bitwiseXor(this.field_j[var3Lifetime1Lifetime2], PortalComponent.field_I[var7][SnakePitBehaviour.bitwiseAnd(255, (int)(this.field_f[SnakePitBehaviour.bitwiseAnd(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1))]);
               var7++;
               var5Lifetime1 -= 8;
             }
@@ -82,7 +82,7 @@ final class WhirlpoolDigest {
           }
         }
         for (var2Lifetime3 = 0; 8 > var2Lifetime3; var2Lifetime3++) {
-          this.field_l[var2Lifetime3] = SnakePitModel.a(this.field_l[var2Lifetime3], SnakePitModel.a(this.field_m[var2Lifetime3], this.field_f[var2Lifetime3]));
+          this.field_l[var2Lifetime3] = SnakePitModel.bitwiseXor(this.field_l[var2Lifetime3], SnakePitModel.bitwiseXor(this.field_m[var2Lifetime3], this.field_f[var2Lifetime3]));
         }
     }
 
@@ -125,7 +125,7 @@ final class WhirlpoolDigest {
             var8 = param0[var5_int] << var6 & 255 | (param0[var5_int + 1] & 255) >>> -var6 + 8;
             if (var8 >= 0 &&
               var8 < 256) {
-              this.field_e[this.field_k] = (byte)WallTile.a((int) this.field_e[this.field_k], var8 >>> var7);
+              this.field_e[this.field_k] = (byte)WallTile.bitwiseOr((int) this.field_e[this.field_k], var8 >>> var7);
               this.field_a = this.field_a + (8 - var7);
               this.field_k = this.field_k + 1;
               if (this.field_a == 512) {
@@ -133,7 +133,7 @@ final class WhirlpoolDigest {
                 this.field_k = 0;
                 this.field_a = 0;
               }
-              this.field_e[this.field_k] = (byte)SnakePitBehaviour.c(255, var8 << 8 - var7);
+              this.field_e[this.field_k] = (byte)SnakePitBehaviour.bitwiseAnd(255, var8 << 8 - var7);
               var5_int++;
               this.field_a = this.field_a + var7;
               param1 = param1 - 8L;
@@ -145,7 +145,7 @@ final class WhirlpoolDigest {
             stackIn_18_0 = param0[var5_int] << var6;
             stackIn_18_1 = 255;
             var8Lifetime1 = stackIn_18_0 & stackIn_18_1;
-            this.field_e[this.field_k] = (byte)WallTile.a((int) this.field_e[this.field_k], var8Lifetime1 >>> var7);
+            this.field_e[this.field_k] = (byte)WallTile.bitwiseOr((int) this.field_e[this.field_k], var8Lifetime1 >>> var7);
           } else {
             var8Lifetime1 = 0;
           }
@@ -158,7 +158,7 @@ final class WhirlpoolDigest {
               this.field_a = 0;
               this.field_k = 0;
             }
-            this.field_e[this.field_k] = (byte)SnakePitBehaviour.c(255, var8Lifetime1 << 8 - var7);
+            this.field_e[this.field_k] = (byte)SnakePitBehaviour.bitwiseAnd(255, var8Lifetime1 << 8 - var7);
             this.field_a = this.field_a + (int)param1;
           } else {
             this.field_a = (int)((long)this.field_a + param1);
@@ -335,7 +335,7 @@ final class WhirlpoolDigest {
         int var8 = 0;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
-          this.field_e[this.field_k] = (byte)WallTile.a((int) this.field_e[this.field_k], 128 >>> SnakePitBehaviour.c(this.field_a, 7));
+          this.field_e[this.field_k] = (byte)WallTile.bitwiseOr((int) this.field_e[this.field_k], 128 >>> SnakePitBehaviour.bitwiseAnd(this.field_a, 7));
           this.field_k = this.field_k + 1;
           if (this.field_k > param1) {
             while (this.field_k < 64) {

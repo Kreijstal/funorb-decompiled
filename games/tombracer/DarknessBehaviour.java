@@ -17,7 +17,7 @@ final class DarknessBehaviour extends Behaviour {
 
     public final void toggle(int param0) {
         int var2;
-        if (this.field_k) {
+        if (this.locked) {
           return;
         }
         super.toggle(82);
@@ -262,7 +262,7 @@ final class DarknessBehaviour extends Behaviour {
         int var7_intLifetime1;
         try {
           if (param2.type == 1) {
-            var7_int = MidiVoiceMixer.b(param0, param1, -48) / 2;
+            var7_int = MidiVoiceMixer.min(param0, param1, -48) / 2;
             this.a(param3, (byte) 90, param2.size, var7_int, param5);
           }
           var7_intLifetime1 = -5 / ((param4 - 62) / 52);

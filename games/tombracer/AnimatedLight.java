@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aga {
+final class AnimatedLight {
     private int field_g;
     private int field_h;
     private int field_i;
     private short[] field_b;
     static String field_a;
     private int field_e;
-    SceneLight field_c;
+    SceneLight light;
     private int field_f;
-    int field_d;
+    int mode;
 
-    private final void b(byte param0) {
+    private final void applyModeParameters(byte param0) {
         int var2;
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
-        var2 = this.field_d;
+        var2 = this.mode;
         if (2 != var2) {
           if (var2 == 3) {
             this.field_f = 1;
@@ -127,15 +127,15 @@ final class aga {
           this.field_f = 1;
         }
         if (param0 != 87) {
-          this.b((byte) -61);
+          this.applyModeParameters((byte) -61);
         }
     }
 
     private final void a(int param0, int param1, GraphicsToolkit param2, int param3, int param4, int param5, int param6) {
         try {
-          this.field_c = param2.a(param5, param1, param0, param3, param6, 1.0f);
+          this.light = param2.createLight(param5, param1, param0, param3, param6, 1.0f);
           if (param4 != 512) {
-            aga.a(-83);
+            AnimatedLight.a(-83);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "aga.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
@@ -184,12 +184,12 @@ final class aga {
             var4 = 1024 + (qu.field_b[var5 << 3] >> 4);
           }
         }
-        this.field_c.a((byte) 105, (float)((var4 * this.field_h >> 11) + this.field_g) / 2048.0f);
+        this.light.a((byte) 105, (float)((var4 * this.field_h >> 11) + this.field_g) / 2048.0f);
     }
 
     public static void a(byte param0) {
         if (param0 != -113) {
-          aga.a(111);
+          AnimatedLight.a(111);
         }
         field_a = null;
     }
@@ -229,15 +229,15 @@ final class aga {
         return null;
     }
 
-    private final void a(int param0, byte param1) {
+    private final void setMode(int param0, byte param1) {
         if (param1 != -42) {
-          this.a(32, (byte) 21);
+          this.setMode(32, (byte) 21);
         }
-        this.field_d = param0;
-        this.b((byte) 87);
+        this.mode = param0;
+        this.applyModeParameters((byte) 87);
     }
 
-    aga(GraphicsToolkit param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    AnimatedLight(GraphicsToolkit param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var9_int = 0;
         int var10 = 0;
         try {
@@ -250,7 +250,7 @@ final class aga {
           for (var10 = 0; var10 < this.field_b.length; var10++) {
             this.field_b[var10] = (short)var9_int;
           }
-          this.a(param7, (byte) -42);
+          this.setMode(param7, (byte) -42);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "aga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }

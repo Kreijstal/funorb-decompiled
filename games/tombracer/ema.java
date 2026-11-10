@@ -36,10 +36,10 @@ final class ema implements isa {
             if (SoftwareRasterizer.field_h <= var9 &&
               SoftwareRasterizer.field_k > var9) {
               if (var7Lifetime1 > SoftwareRasterizer.field_b) {
-                SoftwareRasterizer.field_l[var9 * SoftwareRasterizer.field_g - (-var7Lifetime1 + 1)] = SnakePitBehaviour.c(16711422, SoftwareRasterizer.field_l[var7Lifetime1 + (SoftwareRasterizer.field_g * var9 - 1)]) >> 1;
+                SoftwareRasterizer.field_l[var9 * SoftwareRasterizer.field_g - (-var7Lifetime1 + 1)] = SnakePitBehaviour.bitwiseAnd(16711422, SoftwareRasterizer.field_l[var7Lifetime1 + (SoftwareRasterizer.field_g * var9 - 1)]) >> 1;
               }
               if (var7Lifetime1 + var8Lifetime1 < SoftwareRasterizer.field_d) {
-                SoftwareRasterizer.field_l[var7Lifetime1 + var9 * SoftwareRasterizer.field_g + var8Lifetime1] = SnakePitBehaviour.c(8355711, SoftwareRasterizer.field_l[var8Lifetime1 + SoftwareRasterizer.field_g * var9 + var7Lifetime1] >> 1);
+                SoftwareRasterizer.field_l[var7Lifetime1 + var9 * SoftwareRasterizer.field_g + var8Lifetime1] = SnakePitBehaviour.bitwiseAnd(8355711, SoftwareRasterizer.field_l[var8Lifetime1 + SoftwareRasterizer.field_g * var9 + var7Lifetime1] >> 1);
               }
             }
             SoftwareRasterizer.drawHorizontalLine(var7Lifetime1, var9, var8Lifetime1, 0);

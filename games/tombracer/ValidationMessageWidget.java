@@ -198,7 +198,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
                 var19.drawAdditive(var9, -(var19.field_q >> 1) + var10, 256);
                 return;
               }
-              if (var6 != uh.field_k) {
+              if (var6 != LightSource.field_k) {
                 return;
               }
               var20 = pq.field_b[1];
@@ -234,7 +234,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
               var23.drawAdditive(var9Lifetime5, -(var23.field_q >> 1) + var10Lifetime5, 256);
               return;
             }
-            if (var6 != uh.field_k) {
+            if (var6 != LightSource.field_k) {
               return;
             }
             var24 = pq.field_b[1];
@@ -283,7 +283,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
                 var28.drawAdditive(var9Lifetime1, -(var28.field_q >> 1) + var10Lifetime1, 256);
                 return;
               }
-              if (var6 != uh.field_k) {
+              if (var6 != LightSource.field_k) {
                 return;
               }
               var29 = pq.field_b[1];
@@ -319,7 +319,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
               var32.drawAdditive(var9Lifetime1Lifetime1, -(var32.field_q >> 1) + var10Lifetime1Lifetime1, 256);
               return;
             }
-            if (var6 != uh.field_k) {
+            if (var6 != LightSource.field_k) {
               return;
             }
             var33 = pq.field_b[1];
@@ -366,7 +366,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
                 var51.drawAdditive(var9Lifetime2, -(var51.field_q >> 1) + var10Lifetime2, 256);
                 return;
               }
-              if (var6Lifetime1 != uh.field_k) {
+              if (var6Lifetime1 != LightSource.field_k) {
                 return;
               }
               var52 = pq.field_b[1];
@@ -404,7 +404,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
               var45.drawAdditive(var9Lifetime2Lifetime1, -(var45.field_q >> 1) + var10Lifetime2Lifetime1, 256);
               return;
             }
-            if (var6Lifetime1Lifetime1 != uh.field_k) {
+            if (var6Lifetime1Lifetime1 != LightSource.field_k) {
               return;
             }
             var46 = pq.field_b[1];
@@ -454,7 +454,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
               var37.drawAdditive(var9Lifetime3, -(var37.field_q >> 1) + var10Lifetime3, 256);
               return;
             }
-            if (var6Lifetime2 != uh.field_k) {
+            if (var6Lifetime2 != LightSource.field_k) {
               return;
             }
             var38 = pq.field_b[1];
@@ -490,7 +490,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             var41.drawAdditive(var9Lifetime4, -(var41.field_q >> 1) + var10Lifetime4, 256);
             return;
           }
-          if (var6Lifetime3 != uh.field_k) {
+          if (var6Lifetime3 != LightSource.field_k) {
             return;
           }
           var42 = pq.field_b[1];

@@ -117,7 +117,7 @@ abstract class MotionTrackingModel extends TrapModel {
           if (this.field_s == var4Lifetime1) {
             if (var5Lifetime1 != this.field_v) {
               var2 = 1;
-              this.field_o = GameScreen.a(-this.field_m + var6Lifetime1, 8192, -60);
+              this.field_o = GameScreen.positiveModulo(-this.field_m + var6Lifetime1, 8192, -60);
               if (this.field_o <= 4096) {
                 this.field_m = var6Lifetime1;
                 stackIn_37_0 = (var3 != 0) ? 0 : 1;
@@ -161,7 +161,7 @@ abstract class MotionTrackingModel extends TrapModel {
             stackIn_55_0 = 1;
           }
           var2 = stackIn_55_0;
-          this.field_o = GameScreen.a(-this.field_m + var6Lifetime1, 8192, -60);
+          this.field_o = GameScreen.positiveModulo(-this.field_m + var6Lifetime1, 8192, -60);
           if (this.field_o <= 4096) {
             this.field_m = var6Lifetime1;
             stackIn_59_0 = (var3 != 0) ? 0 : 1;

@@ -6,7 +6,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
     boolean enabled;
     private SwitchableId field_g;
     Trap trap;
-    boolean field_i;
+    boolean locked;
     private SwitchableId field_h;
     static String field_m;
     static String field_l;
@@ -38,7 +38,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
         }
         try {
           param0.writeBits((byte) -126, !this.enabled ? 0 : 1, 1);
-          param0.writeBits((byte) 107, !this.field_i ? 0 : 1, 1);
+          param0.writeBits((byte) 107, !this.locked ? 0 : 1, 1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wda.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -102,7 +102,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
     }
 
     public void toggle(int param0) {
-        if (!this.field_i) {
+        if (!this.locked) {
           this.enabled = !this.enabled ? true : false;
           int var2 = -124 / ((param0 - 28) / 49);
           return;
@@ -171,7 +171,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
             return;
           }
           stackIn_9_1 = (param1.readBits((byte) 44, 1) == 1);
-          this.field_i = stackIn_9_1;
+          this.locked = stackIn_9_1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -209,8 +209,8 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
         return null;
     }
 
-    final void a(boolean param0, boolean param1) {
-        if (this.field_i) {
+    final void setEnabled(boolean param0, boolean param1) {
+        if (this.locked) {
           return;
         }
         this.enabled = param1 ? true : false;
@@ -262,7 +262,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
 
     final int b(boolean param0) {
         if (!param0) {
-          this.field_i = true;
+          this.locked = true;
           return this.trap.M(0);
         }
         return this.trap.M(0);
@@ -270,7 +270,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
 
     Locomotor(Room param0, boolean param1) {
         this.enabled = true;
-        this.field_i = false;
+        this.locked = false;
         this.field_j = false;
         IntPoint discarded$0 = new IntPoint();
         try {

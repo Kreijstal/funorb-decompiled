@@ -39,7 +39,7 @@ final class CircleMovementLocomotor extends Locomotor {
           this.field_p = false;
         }
         this.field_q = this.field_q - this.field_r;
-        this.field_q = GameScreen.a(this.field_q, 32768, 78);
+        this.field_q = GameScreen.positiveModulo(this.field_q, 32768, 78);
         var7 = 49 % ((param0 + 69) / 42);
         var6 = var2 + (cr.a(true, this.field_q >> 2) >> 8) * (this.field_o >> 8);
         var8 = var3 + (pla.b(102, this.field_q >> 2) >> 8) * (this.field_o >> 8);
@@ -120,7 +120,7 @@ final class CircleMovementLocomotor extends Locomotor {
         try {
           super.encode(param0, (byte) -122);
           param0.writeBits((byte) -44, this.field_o >> 16, 10);
-          param0.writeBits((byte) 90, dqa.a(true, this.field_r, 12), 12);
+          param0.writeBits((byte) 90, dqa.toOffsetBinary(true, this.field_r, 12), 12);
           param0.writeBits((byte) -126, ResourceArchive.a((byte) 74, this.field_q, 32768, 4), 4);
           stackIn_2_0 = (BitPacketBuffer) (param0);
           stackIn_2_1 = -128;
@@ -163,7 +163,7 @@ final class CircleMovementLocomotor extends Locomotor {
         this.field_t = true;
         try {
           this.field_o = param1.readBits((byte) 44, 10) << 16;
-          this.field_r = CoinItemComponent.a(true, 12, param1.readBits((byte) 44, 12));
+          this.field_r = CoinItemComponent.fromOffsetBinary(true, 12, param1.readBits((byte) 44, 12));
           if (param0.formatVersion < 10) {
             this.field_q = SnakePitModel.a(3, 32768, 0, param1.readBits((byte) 44, 3));
             this.field_t = true;

@@ -120,9 +120,9 @@ final class SpriteTileOperator extends SpriteSampleOperator {
         int var7 = this.field_r * (param0 % this.field_r);
         for (var8 = 0; ns.textureWidth > var8; var8++) {
           var9 = this.field_p[var8 % this.field_m + var7];
-          var6[var8] = SnakePitBehaviour.c(4080, var9 << 4);
-          var5[var8] = SnakePitBehaviour.c(var9, 65280) >> 4;
-          var4[var8] = SnakePitBehaviour.c(4080, var9 >> 12);
+          var6[var8] = SnakePitBehaviour.bitwiseAnd(4080, var9 << 4);
+          var5[var8] = SnakePitBehaviour.bitwiseAnd(var9, 65280) >> 4;
+          var4[var8] = SnakePitBehaviour.bitwiseAnd(4080, var9 >> 12);
         }
         if (param1 == -1) {
           return var3;

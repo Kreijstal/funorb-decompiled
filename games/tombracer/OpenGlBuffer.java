@@ -204,10 +204,10 @@ abstract class OpenGlBuffer implements GpuBuffer {
           if (gca.field_d <= param2 &&
             hc.field_h >= param2) {
             var57 = vaa.field_a[param2];
-            var40 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, -param5 + param3);
-            var41 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, param5 + param3);
-            var42 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, param3 - var11);
-            var43 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, param3 + var11);
+            var40 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -param5 + param3);
+            var41 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param5 + param3);
+            var42 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 - var11);
+            var43 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 + var11);
             nra.a((byte) -55, param0, var42, var57, var40);
             nra.a((byte) -55, param1, var43, var57, var42);
             nra.a((byte) -55, param0, var41, var57, var43);
@@ -269,8 +269,8 @@ abstract class OpenGlBuffer implements GpuBuffer {
             if (hc.field_h < var40Lifetime1) {
               continue;
             }
-            var42Lifetime1 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, var8_int + param3);
-            var43Lifetime1 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, param3 - var8_int);
+            var42Lifetime1 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, var8_int + param3);
+            var43Lifetime1 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 - var8_int);
             if (var39 == 0) {
               if (var40Lifetime1 >= gca.field_d) {
                 nra.a((byte) -55, param0, var42Lifetime1, vaa.field_a[var40Lifetime1], var43Lifetime1);
@@ -281,8 +281,8 @@ abstract class OpenGlBuffer implements GpuBuffer {
               nra.a((byte) -55, param0, var42Lifetime1, vaa.field_a[var41Lifetime1], var43Lifetime1);
               continue;
             }
-            var44 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, param3 + var10);
-            var45 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, param3 - var10);
+            var44 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 + var10);
+            var45 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 - var10);
             if (var40Lifetime1 >= gca.field_d) {
               var58 = vaa.field_a[var40Lifetime1];
               nra.a((byte) -55, param0, var45, var58, var43Lifetime1);

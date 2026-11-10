@@ -412,7 +412,7 @@ final class PlayerContextMenu {
                   this.field_f.addItem((byte) -98, 1, gl.$cfr$intArgs$a$53ce4ab4c593(116, CoinBagItemComponent.field_G, new String[]{var5}));
                   return;
                 }
-                this.field_f.addItem((byte) -112, 0, gl.$cfr$intArgs$a$53ce4ab4c593(98, uh.field_i, new String[]{var5}));
+                this.field_f.addItem((byte) -112, 0, gl.$cfr$intArgs$a$53ce4ab4c593(98, LightSource.field_i, new String[]{var5}));
                 return;
               }
             }
@@ -457,7 +457,7 @@ final class PlayerContextMenu {
             this.field_f.addItem((byte) -98, 1, gl.$cfr$intArgs$a$53ce4ab4c593(116, CoinBagItemComponent.field_G, new String[]{var5}));
             return;
           }
-          this.field_f.addItem((byte) -112, 0, gl.$cfr$intArgs$a$53ce4ab4c593(98, uh.field_i, new String[]{var5}));
+          this.field_f.addItem((byte) -112, 0, gl.$cfr$intArgs$a$53ce4ab4c593(98, LightSource.field_i, new String[]{var5}));
           return;
         }
         return;

@@ -83,7 +83,7 @@ final class ControllerLocomotor extends Locomotor {
     }
 
     public final void toggle(int param0) {
-        if (this.field_i) {
+        if (this.locked) {
           return;
         }
         this.e(-114);

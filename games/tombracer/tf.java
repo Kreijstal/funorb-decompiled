@@ -42,7 +42,7 @@ final class tf extends TextFieldValidator {
             }
           }
           if (this.field_k) {
-            stackIn_15_0 = uh.field_k;
+            stackIn_15_0 = LightSource.field_k;
           } else {
             stackIn_15_0 = fp.field_c;
           }

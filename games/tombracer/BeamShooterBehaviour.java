@@ -77,7 +77,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         var3 = this.trap.getFacingAngle(-25787) >> 2;
         var4 = MouseInputHandler.a((byte) 111, var3);
         var5 = bua.a(0, var3);
-        var6 = 131072 + RandomBrickOperator.d(this.trap.getWidth(param0 - 5467), this.trap.getHeight((byte) 55), param0 ^ 5416) / 2;
+        var6 = 131072 + RandomBrickOperator.max(this.trap.getWidth(param0 - 5467), this.trap.getHeight((byte) 55), param0 ^ 5416) / 2;
         var7 = this.trap.getX(3) + gqa.a(var4, (byte) 24, var6);
         var8 = this.trap.getY(9648) + gqa.a(var5, (byte) 24, var6);
         this.field_s.a(var7, gqa.a(var4, (byte) 24, this.field_o) + var7, var8, gqa.a(var5, (byte) 24, this.field_o) + var8, 44);
@@ -252,10 +252,10 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
           if (param2 >= gca.field_d &&
             param2 <= hc.field_h) {
             var39 = vaa.field_a[param2];
-            var16 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, param6 - param1);
-            var17 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, param6 + param1);
-            var18 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, param6 - var8);
-            var19 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, param6 + var8);
+            var16 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param6 - param1);
+            var17 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param6 + param1);
+            var18 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param6 - var8);
+            var19 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param6 + var8);
             nra.a((byte) -55, param4, var18, var39, var16);
             nra.a((byte) -55, param5, var19, var39, var18);
             nra.a((byte) -55, param4, var17, var39, var19);
@@ -284,8 +284,8 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
               if (var16Lifetime1 >= gca.field_d &&
                 hc.field_h >= var15) {
                 if (var8 <= var9) {
-                  var17Lifetime1 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, param6 + var7_int);
-                  var18Lifetime1 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, -var7_int + param6);
+                  var17Lifetime1 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param6 + var7_int);
+                  var18Lifetime1 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -var7_int + param6);
                   if (var16Lifetime1 <= hc.field_h) {
                     nra.a((byte) -55, param4, var17Lifetime1, vaa.field_a[var16Lifetime1], var18Lifetime1);
                   }
@@ -294,10 +294,10 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
                   }
                 } else {
                   var17Lifetime1 = GasVentModel.field_m[var9];
-                  var18Lifetime1 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, param6 + var7_int);
-                  var19Lifetime1 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, -var7_int + param6);
-                  var20 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, var17Lifetime1 + param6);
-                  var21 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, -var17Lifetime1 + param6);
+                  var18Lifetime1 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param6 + var7_int);
+                  var19Lifetime1 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -var7_int + param6);
+                  var20 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, var17Lifetime1 + param6);
+                  var21 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -var17Lifetime1 + param6);
                   if (var16Lifetime1 <= hc.field_h) {
                     var40 = vaa.field_a[var16Lifetime1];
                     nra.a((byte) -55, param4, var21, var40, var19Lifetime1);
@@ -329,8 +329,8 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
             if (var18Lifetime1Lifetime1 > DiskCacheWorker.field_c) {
               continue;
             }
-            var17Lifetime1Lifetime1 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, var17Lifetime1Lifetime1);
-            var18Lifetime1Lifetime1 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, var18Lifetime1Lifetime1);
+            var17Lifetime1Lifetime1 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, var17Lifetime1Lifetime1);
+            var18Lifetime1Lifetime1 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, var18Lifetime1Lifetime1);
             if (var8 <= var7_int) {
               if (hc.field_h >= var16Lifetime1Lifetime1) {
                 nra.a((byte) -55, param4, var17Lifetime1Lifetime1, vaa.field_a[var16Lifetime1Lifetime1], var18Lifetime1Lifetime1);
@@ -347,8 +347,8 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
               stackIn_41_0 = var11;
             }
             var19Lifetime1Lifetime1 = stackIn_41_0;
-            var20Lifetime1 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, param6 + var19Lifetime1Lifetime1);
-            var21Lifetime1 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, -var19Lifetime1Lifetime1 + param6);
+            var20Lifetime1 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param6 + var19Lifetime1Lifetime1);
+            var21Lifetime1 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -var19Lifetime1Lifetime1 + param6);
             if (var16Lifetime1Lifetime1 <= hc.field_h) {
               var42 = vaa.field_a[var16Lifetime1Lifetime1];
               nra.a((byte) -55, param4, var21Lifetime1, var42, var18Lifetime1Lifetime1);
@@ -442,7 +442,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
 
     public final void toggle(int param0) {
         int var2 = 12 % ((param0 - 28) / 49);
-        if (this.field_k) {
+        if (this.locked) {
           return;
         }
         super.toggle(78);

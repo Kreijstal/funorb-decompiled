@@ -30,7 +30,7 @@ abstract class SimulationObserver {
         try {
           var7_int = -(param0 / param6) + param5;
           var8 = -(param3 / 2) + param2;
-          if (RewardChoicePhase.a(var8, param4.field_d, var8 + param3, param4.field_k, param0 + var7_int, var7_int, 112)) {
+          if (RewardChoicePhase.isPointInRect(var8, param4.field_d, var8 + param3, param4.field_k, param0 + var7_int, var7_int, 112)) {
             var9 = 0;
           } else {
             var9 = OpenGlTexture2D.a(param4.field_a, (byte) -15, var7_int, var7_int + param0, var8 + param3, param1, param4.field_e, param4.field_k, param4.field_d, var8);

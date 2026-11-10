@@ -251,31 +251,31 @@ final class PlayerProfile {
         field_u = "Won";
         field_p = new int[256];
         for (var0 = 0; 256 > var0; var0++) {
-          field_p[var0] = WallTile.a(var0 >> 3, WallTile.a(var0 << 16, SnakePitBehaviour.c(1342178300, var0) << 6));
+          field_p[var0] = WallTile.bitwiseOr(var0 >> 3, WallTile.bitwiseOr(var0 << 16, SnakePitBehaviour.bitwiseAnd(1342178300, var0) << 6));
         }
         field_b = new int[256];
         for (var0Lifetime1 = 0; var0Lifetime1 < 256; var0Lifetime1++) {
-          field_b[var0Lifetime1] = WallTile.a(WallTile.a(SnakePitBehaviour.c(65308, var0Lifetime1 << 6), SnakePitBehaviour.c(var0Lifetime1, 762841080) << 13), var0Lifetime1);
+          field_b[var0Lifetime1] = WallTile.bitwiseOr(WallTile.bitwiseOr(SnakePitBehaviour.bitwiseAnd(65308, var0Lifetime1 << 6), SnakePitBehaviour.bitwiseAnd(var0Lifetime1, 762841080) << 13), var0Lifetime1);
         }
         field_j = new int[256];
         for (var0Lifetime2 = 0; var0Lifetime2 < 256; var0Lifetime2++) {
-          field_j[var0Lifetime2] = WallTile.a(WallTile.a(SnakePitBehaviour.c(65306, var0Lifetime2 << 7), SnakePitBehaviour.c(-861666308, var0Lifetime2) << 14), var0Lifetime2);
+          field_j[var0Lifetime2] = WallTile.bitwiseOr(WallTile.bitwiseOr(SnakePitBehaviour.bitwiseAnd(65306, var0Lifetime2 << 7), SnakePitBehaviour.bitwiseAnd(-861666308, var0Lifetime2) << 14), var0Lifetime2);
         }
         field_f = new int[256];
         for (var0Lifetime3 = 0; var0Lifetime3 < 256; var0Lifetime3++) {
-          field_f[var0Lifetime3] = WallTile.a(var0Lifetime3 >> 5, WallTile.a(var0Lifetime3 << 16, SnakePitBehaviour.c(-1207958532, var0Lifetime3) << 6));
+          field_f[var0Lifetime3] = WallTile.bitwiseOr(var0Lifetime3 >> 5, WallTile.bitwiseOr(var0Lifetime3 << 16, SnakePitBehaviour.bitwiseAnd(-1207958532, var0Lifetime3) << 6));
         }
         field_d = new int[256];
         for (var0Lifetime4 = 0; 256 > var0Lifetime4; var0Lifetime4++) {
-          field_d[var0Lifetime4] = WallTile.a(var0Lifetime4, WallTile.a(var0Lifetime4 << 16, SnakePitBehaviour.c(var0Lifetime4, 1795162367) << 8));
+          field_d[var0Lifetime4] = WallTile.bitwiseOr(var0Lifetime4, WallTile.bitwiseOr(var0Lifetime4 << 16, SnakePitBehaviour.bitwiseAnd(var0Lifetime4, 1795162367) << 8));
         }
         field_e = new int[8];
         for (var0Lifetime5 = 0; var0Lifetime5 < 8; var0Lifetime5++) {
-          field_e[var0Lifetime5] = WallTile.a(var0Lifetime5, WallTile.a(var0Lifetime5 << 21, SnakePitBehaviour.c(var0Lifetime5, -480247777) << 11));
+          field_e[var0Lifetime5] = WallTile.bitwiseOr(var0Lifetime5, WallTile.bitwiseOr(var0Lifetime5 << 21, SnakePitBehaviour.bitwiseAnd(var0Lifetime5, -480247777) << 11));
         }
         field_t = new int[8];
         for (var0Lifetime6 = 0; 8 > var0Lifetime6; var0Lifetime6++) {
-          field_t[var0Lifetime6] = WallTile.a(var0Lifetime6, WallTile.a(var0Lifetime6 << 16, SnakePitBehaviour.c(-127926241, var0Lifetime6) << 11));
+          field_t[var0Lifetime6] = WallTile.bitwiseOr(var0Lifetime6, WallTile.bitwiseOr(var0Lifetime6 << 16, SnakePitBehaviour.bitwiseAnd(-127926241, var0Lifetime6) << 11));
         }
         field_q = new String[]{"Move back to the previous menu level.", "Return to the top level of the menu.", "Auto-respond to the last thing in your chat window.", "Open the Quick Chat menu.", "Repeat the last thing you said.", "Close the Quick Chat menu."};
         field_c = -1;

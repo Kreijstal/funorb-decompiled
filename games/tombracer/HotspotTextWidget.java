@@ -483,7 +483,7 @@ class HotspotTextWidget extends FocusableWidget {
           var1 = var6;
           var17 = DropdownList.field_D.field_f;
           for (var3 = 0; var3 < 8; var3++) {
-            var6[var3] = WallTile.a(var13[var3], var17[var3]);
+            var6[var3] = WallTile.bitwiseOr(var13[var3], var17[var3]);
           }
           var14 = pq.field_e;
           var12 = var14;
@@ -493,7 +493,7 @@ class HotspotTextWidget extends FocusableWidget {
           var10 = 0;
           var3Lifetime1 = var10;
           while (8 > var10) {
-            var8[var10] = SnakePitBehaviour.c(var14[var10], ~var18[var10]);
+            var8[var10] = SnakePitBehaviour.bitwiseAnd(var14[var10], ~var18[var10]);
             var10++;
           }
           DropdownList.field_D = null;

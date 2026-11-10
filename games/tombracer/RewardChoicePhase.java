@@ -143,7 +143,7 @@ final class RewardChoicePhase extends MatchPhase {
         var3 = 0;
         var4 = this.field_o.getCurrentPlayerId(-1);
         if (!this.screen.d((byte) 63) &&
-          this.screen.field_x == var4) {
+          this.screen.localPlayerIndex == var4) {
           var3 = 1;
         }
         var5 = 160;
@@ -172,7 +172,7 @@ final class RewardChoicePhase extends MatchPhase {
                 if (this.a(true) &&
                   var10 == this.field_u &&
                   var11_int == this.field_m) {
-                  tga.field_a.c(fm.a(false, wga.field_a[this.screen.field_x]), var12_ref_fv.field_g, var12_ref_fv.field_j, var12_ref_fv.field_c, -22971, var12_ref_fv.field_i);
+                  tga.field_a.c(fm.a(false, wga.field_a[this.screen.localPlayerIndex]), var12_ref_fv.field_g, var12_ref_fv.field_j, var12_ref_fv.field_c, -22971, var12_ref_fv.field_i);
                 }
                 var12_ref_fv.a(1);
               }
@@ -309,7 +309,7 @@ final class RewardChoicePhase extends MatchPhase {
           }
         }
         if (!param1) {
-          RewardChoicePhase.a(-52, 79, -8, 36, 97, 39, -99);
+          RewardChoicePhase.isPointInRect(-52, 79, -8, 36, 97, 39, -99);
         }
     }
 
@@ -344,7 +344,7 @@ final class RewardChoicePhase extends MatchPhase {
         if (!param0) {
           field_n = (sq) null;
         }
-        stackIn_6_0 = (!this.screen.d((byte) 98)) && (this.screen.field_x == this.field_o.getCurrentPlayerId(-1));
+        stackIn_6_0 = (!this.screen.d((byte) 98)) && (this.screen.localPlayerIndex == this.field_o.getCurrentPlayerId(-1));
         return stackIn_6_0;
     }
 
@@ -386,7 +386,7 @@ final class RewardChoicePhase extends MatchPhase {
           this.c(7);
         }
         this.field_v = this.field_v + 1;
-        if (this.field_o.getCurrentPlayerId(-1) == this.screen.field_x &&
+        if (this.field_o.getCurrentPlayerId(-1) == this.screen.localPlayerIndex &&
           !(this.field_o.getCurrentPlayerTicks(-1) <= 500) &&
           (750 - this.field_o.getCurrentPlayerTicks(-1)) % 50 == 0) {
           this.field_o.a((byte) -124);
@@ -424,7 +424,7 @@ final class RewardChoicePhase extends MatchPhase {
         return false;
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static boolean isPointInRect(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         boolean stackIn_8_0 = false;
         if (param6 <= 100) {
           field_t = (int[]) null;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class PlayerModel implements PlayerAnimator, gs {
-    private uh field_l;
+    private LightSource field_l;
     static String field_e;
     private boolean field_o;
     private int field_h;
@@ -55,7 +55,7 @@ final class PlayerModel implements PlayerAnimator, gs {
         }
         this.field_c.a(0);
         this.field_n.a(0);
-        this.field_h = GameScreen.a(8 + this.field_h, 2048, 106);
+        this.field_h = GameScreen.positiveModulo(8 + this.field_h, 2048, 106);
         this.field_l.a(this.field_p.getElevation((byte) 115) + 2097152, (byte) 101, this.field_p.getY(9648), this.field_p.getX(3));
         if (param0 != -4366) {
           return;
@@ -65,13 +65,13 @@ final class PlayerModel implements PlayerAnimator, gs {
         if (!decompiledSharedTail0) {
           this.field_l.c(-10874, 16777130);
           this.field_l.d(160, param0 ^ 4376);
-          this.field_l.a(8).field_d = 0;
+          this.field_l.a(8).mode = 0;
           decompiledSharedTail0 = (TombRacer.field_G);
         }
         if (decompiledSharedTail0) {
           this.field_l.c(param0 ^ 15220, 16633231);
           this.field_l.d(128, -71);
-          this.field_l.a(85).field_d = 11;
+          this.field_l.a(85).mode = 11;
         }
     }
 
@@ -120,7 +120,7 @@ final class PlayerModel implements PlayerAnimator, gs {
               regionExit4: {
                 regionExit5: {
                   regionExit6: {
-                    var5 = GameScreen.a(-this.field_p.getFacingAngle(-25787) >> 2, 2048, -115);
+                    var5 = GameScreen.positiveModulo(-this.field_p.getFacingAngle(-25787) >> 2, 2048, -115);
                     var6 = 0;
                     var7 = this.field_f;
                     switch (var7) {
@@ -844,7 +844,7 @@ final class PlayerModel implements PlayerAnimator, gs {
         return false;
     }
 
-    public final boolean a(boolean param0, uh param1) {
+    public final boolean a(boolean param0, LightSource param1) {
         RuntimeException var3 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -880,7 +880,7 @@ final class PlayerModel implements PlayerAnimator, gs {
     }
 
     PlayerModel(Player param0, int param1) {
-        aga var3 = null;
+        AnimatedLight var3 = null;
         this.field_o = false;
         this.field_h = 0;
         this.field_g = 0;
@@ -890,8 +890,8 @@ final class PlayerModel implements PlayerAnimator, gs {
           this.field_p = param0;
           this.field_i = param1;
           this.a(param1, 1);
-          var3 = new aga(tga.field_a, 0, 0, 0, 0, 0, 0, 0);
-          this.field_l = new uh(var3);
+          var3 = new AnimatedLight(tga.field_a, 0, 0, 0, 0, 0, 0, 0);
+          this.field_l = new LightSource(var3);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

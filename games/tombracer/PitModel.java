@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class PitModel extends TrapModel {
-    private uh field_u;
+    private LightSource field_u;
     private oia[][] field_q;
     static PcmStreamMixer field_n;
     static String field_r;
@@ -491,7 +491,7 @@ final class PitModel extends TrapModel {
                 break;
             }
             var31.field_d = var30.e(true).nextBounded(100, param0 + 110);
-            var31.field_f = GameScreen.a(var21 + ku.field_j[var31.field_j], 2048, param0 ^ -57);
+            var31.field_f = GameScreen.positiveModulo(var21 + ku.field_j[var31.field_j], 2048, param0 ^ -57);
             var31.field_a = -var6 + var7;
             var31.field_i = -var5 + var9;
             var31.field_e = this;
@@ -544,7 +544,7 @@ final class PitModel extends TrapModel {
           for (var3 = 0; var3 < this.field_t; var3++) {
             var4 = this.field_m[var2][var3];
             var5 = ku.field_j[var4.field_j];
-            var4.field_f = GameScreen.a(-var4.field_f + var5, 2048, 93);
+            var4.field_f = GameScreen.positiveModulo(-var4.field_f + var5, 2048, 93);
             var4.field_i = -var4.field_i;
           }
         }
@@ -805,7 +805,7 @@ final class PitModel extends TrapModel {
     }
 
     final void b(int param0, uw param1) {
-        aga var6 = null;
+        AnimatedLight var6 = null;
         ev var4 = null;
         RoomLighting var5 = null;
         try {
@@ -816,8 +816,8 @@ final class PitModel extends TrapModel {
             this.j(9859);
           }
           if (this.field_v == 1) {
-            var6 = new aga(tga.field_a, 0, 0, 0, 0, 16720418, 200, 8);
-            this.field_u = new uh(var6);
+            var6 = new AnimatedLight(tga.field_a, 0, 0, 0, 0, 16720418, 200, 8);
+            this.field_u = new LightSource(var6);
             this.field_u.a(-17825792 + this.getRenderZ((byte) -118) + 4194304, (byte) 95, this.getRenderY((byte) 108), this.getRenderX((byte) 84));
             var4 = param1.a((byte) 59);
             if (var4 instanceof RoomLighting) {
@@ -834,7 +834,7 @@ final class PitModel extends TrapModel {
     final void b(int param0, int param1) {
         this.field_v = param1;
         if (param0 != 2097152) {
-          this.field_u = (uh) null;
+          this.field_u = (LightSource) null;
         }
     }
 

@@ -35,7 +35,7 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
             var5 = var9;
             var6 = param0;
             var7 = param2;
-            var9[var6] = var7 + (SnakePitBehaviour.c(16711422, var9[var6]) >> 1);
+            var9[var6] = var7 + (SnakePitBehaviour.bitwiseAnd(16711422, var9[var6]) >> 1);
             param0++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -203,7 +203,7 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
         if (param0 != 5418) {
           this.getMaxLevel(27);
           if (this.field_s.f((byte) -56)) {
-            this.c(false);
+            this.stop(false);
             this.field_o.d(0);
             this.field_s.a((byte) -14, this.field_o.c(0));
             return;
@@ -217,7 +217,7 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
           this.field_s.a((byte) -14, this.field_o.c(0));
           return;
         }
-        this.c(false);
+        this.stop(false);
         this.field_o.d(0);
         this.field_s.a((byte) -14, this.field_o.c(0));
     }

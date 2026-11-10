@@ -180,8 +180,8 @@ final class ConstrainToCircleLocomotor extends ConstraintLocomotor {
         int var5Lifetime1;
         if (0 != param0) {
           var3 = -38 / ((-50 - param2) / 59);
-          var4 = ua.a(param0, -108);
-          var5 = ua.a(param1, 45);
+          var4 = ua.abs(param0, -108);
+          var5 = ua.abs(param1, 45);
           if (var5 * 2 < var4) {
             if (param0 > 0) {
               return 2;
@@ -209,8 +209,8 @@ final class ConstrainToCircleLocomotor extends ConstraintLocomotor {
           return 0;
         }
         var3Lifetime1 = -38 / ((-50 - param2) / 59);
-        var4Lifetime1 = ua.a(param0, -108);
-        var5Lifetime1 = ua.a(param1, 45);
+        var4Lifetime1 = ua.abs(param0, -108);
+        var5Lifetime1 = ua.abs(param1, 45);
         if (var5Lifetime1 * 2 < var4Lifetime1) {
           if (param0 <= 0) {
             return 6;

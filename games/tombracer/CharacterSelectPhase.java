@@ -155,7 +155,7 @@ final class CharacterSelectPhase extends MatchPhase {
         if (null != this.protocol) {
           this.protocol.sendCharacterChoice(param1, 73);
         } else {
-          this.a(this.screen.field_x, 0, param1);
+          this.a(this.screen.localPlayerIndex, 0, param1);
         }
     }
 
@@ -244,7 +244,7 @@ final class CharacterSelectPhase extends MatchPhase {
         if (param0 != -1) {
           this.field_p = -18;
         }
-        stackIn_6_0 = (!this.screen.d((byte) 111)) && (this.field_m.a(0, this.screen.field_x) == -1);
+        stackIn_6_0 = (!this.screen.d((byte) 111)) && (this.field_m.a(0, this.screen.localPlayerIndex) == -1);
         return stackIn_6_0;
     }
 

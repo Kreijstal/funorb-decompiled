@@ -241,7 +241,7 @@ final class CommonChooseReward implements dv {
         try {
           this.reward = fa.a(0, param0, 8, this.reward);
           this.currentPos = param0.readBits((byte) 44, 3);
-          this.currentPlayerId = uma.a(4, param0, -26803);
+          this.currentPlayerId = uma.readSignedBits(4, param0, -26803);
           this.currentPlayerTicks = param0.readBits((byte) 44, 16);
           if (param1) {
             this.a(99, -112);

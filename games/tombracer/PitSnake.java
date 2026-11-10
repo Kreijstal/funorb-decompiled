@@ -162,7 +162,7 @@ final class PitSnake extends IntrusiveNode {
           }
           if (param6.a((Collidable) null, this.field_q, 2, 1, param3 + this.field_r, param0 + this.field_n, false, param5, this.field_q)) {
             this.field_o = this.field_o + 2;
-            this.field_o = MidiVoiceMixer.b(75, this.field_o, 125);
+            this.field_o = MidiVoiceMixer.min(75, this.field_o, 125);
             if (this.h(21302)) {
               this.field_n = (this.field_n - var12Lifetime2) / 4 + var12Lifetime2;
               this.field_r = var13Lifetime1 + (-var13Lifetime1 + this.field_r) / 4;

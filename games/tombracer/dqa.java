@@ -53,7 +53,7 @@ final class dqa extends mna {
         field_e = null;
     }
 
-    final static int a(boolean param0, int param1, int param2) {
+    final static int toOffsetBinary(boolean param0, int param1, int param2) {
         if (!param0) {
           return 28;
         }

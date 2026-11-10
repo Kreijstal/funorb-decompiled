@@ -110,7 +110,7 @@ final class ak extends ConsoleMethod {
             if (var1 != 1) {
               SnakePitBehaviour.field_o = gl.$cfr$intArgs$a$53ce4ab4c593(100, VoronoiNoiseOperator.field_s, new String[]{Integer.toString(var1)});
             } else {
-              SnakePitBehaviour.field_o = aga.field_a;
+              SnakePitBehaviour.field_o = AnimatedLight.field_a;
             }
             SnakePitBehaviour.field_o = S2CPlayerSyncPacket.a((byte) 121, new CharSequence[]{(CharSequence) ((Object) SnakePitBehaviour.field_o), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) rpa.field_j)});
           }
@@ -128,7 +128,7 @@ final class ak extends ConsoleMethod {
             if (var1 != 1) {
               SnakePitBehaviour.field_o = gl.$cfr$intArgs$a$53ce4ab4c593(100, VoronoiNoiseOperator.field_s, new String[]{Integer.toString(var1)});
             } else {
-              SnakePitBehaviour.field_o = aga.field_a;
+              SnakePitBehaviour.field_o = AnimatedLight.field_a;
             }
             SnakePitBehaviour.field_o = S2CPlayerSyncPacket.a((byte) 121, new CharSequence[]{(CharSequence) ((Object) SnakePitBehaviour.field_o), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) rpa.field_j)});
           }

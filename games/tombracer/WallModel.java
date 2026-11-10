@@ -344,7 +344,7 @@ final class WallModel extends TrapModel {
           for (var3 = 0; this.field_w > var3; var3++) {
             var4 = this.tiles[var2][var3];
             var5 = bl.field_c[var4.field_a];
-            var4.field_o = GameScreen.a(-var4.field_o + var5, 2048, -73);
+            var4.field_o = GameScreen.positiveModulo(-var4.field_o + var5, 2048, -73);
             var4.field_l = -var4.field_l;
             var4.field_i = sw.a(var4.field_i, 6);
             if (var4.field_a == 11) {
@@ -801,7 +801,7 @@ final class WallModel extends TrapModel {
                 }
               }
             }
-            var14.field_o = GameScreen.a(var26 + bl.field_c[var14.field_a], 2048, 120);
+            var14.field_o = GameScreen.positiveModulo(var26 + bl.field_c[var14.field_a], 2048, 120);
             var14.field_i = var27;
             var14.field_f = var10 - var9;
             var14.field_l = var12 - var8;

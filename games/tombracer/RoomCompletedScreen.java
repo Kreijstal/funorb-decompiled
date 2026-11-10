@@ -40,10 +40,10 @@ final class RoomCompletedScreen extends MatchOverlay {
 
     final static int a(int param0, int param1, boolean param2, int param3, int param4) {
         if (param2) {
-          return MidiVoiceMixer.b(param1, param0, -81) - RandomBrickOperator.d(param3, param4, 2);
+          return MidiVoiceMixer.min(param1, param0, -81) - RandomBrickOperator.max(param3, param4, 2);
         }
         field_j = (String) null;
-        return MidiVoiceMixer.b(param1, param0, -81) - RandomBrickOperator.d(param3, param4, 2);
+        return MidiVoiceMixer.min(param1, param0, -81) - RandomBrickOperator.max(param3, param4, 2);
     }
 
     final void a(byte param0) {

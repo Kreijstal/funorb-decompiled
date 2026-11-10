@@ -20,7 +20,7 @@ final class ComponentMount {
         try {
           this.offset.x = -this.offset.x;
           this.rotateBy(param0, param3, (byte) -100);
-          this.field_f = GameScreen.a(-this.field_f, 8192, 111);
+          this.field_f = GameScreen.positiveModulo(-this.field_f, 8192, 111);
           if (param1 != -61) {
             return;
           }

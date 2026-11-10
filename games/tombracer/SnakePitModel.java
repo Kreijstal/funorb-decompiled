@@ -229,7 +229,7 @@ final class SnakePitModel extends TrapModel {
             }
             var9.field_c = var17.e(true).nextBounded(100, param0 + 3440);
             var9.field_a = this;
-            var9.field_e = GameScreen.a(var15 + OpenGlTexture.field_d[var9.field_f], 2048, -78);
+            var9.field_e = GameScreen.positiveModulo(var15 + OpenGlTexture.field_d[var9.field_f], 2048, -78);
             var9.field_d = -var4 + var5;
             var9.field_b = var7 - var3;
             var7 = var7 + C2SSubmitSettingsPacket.field_a;
@@ -350,13 +350,13 @@ final class SnakePitModel extends TrapModel {
           for (var3 = 0; this.field_q > var3; var3++) {
             var4 = this.field_r[var2][var3];
             var5 = OpenGlTexture.field_d[var4.field_f];
-            var4.field_e = GameScreen.a(var5 - var4.field_e, 2048, -102);
+            var4.field_e = GameScreen.positiveModulo(var5 - var4.field_e, 2048, -102);
             var4.field_b = -var4.field_b;
           }
         }
     }
 
-    static long a(long param0, long param1) {
+    static long bitwiseXor(long param0, long param1) {
         return param0 ^ param1;
     }
 

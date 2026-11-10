@@ -118,9 +118,9 @@ final class RandomBrickOperator extends TextureOperator {
                 var19 = -var17 + param0 - 1;
                 if (var14 <= var19) {
                   for (var20 = 0; var13 > var20; var20++) {
-                    dupTemp$0 = SnakePitBehaviour.c(una.textureWidthMask, -var20 + param4 + param1 - 1);
+                    dupTemp$0 = SnakePitBehaviour.bitwiseAnd(una.textureWidthMask, -var20 + param4 + param1 - 1);
                     var18[dupTemp$0] = var8_int * var20 / var13;
-                    var18[SnakePitBehaviour.c(una.textureWidthMask, param1 + var20)] = var8_int * var20 / var13;
+                    var18[SnakePitBehaviour.bitwiseAnd(una.textureWidthMask, param1 + var20)] = var8_int * var20 / var13;
                   }
                   if (var16 + var15 <= ns.textureWidth) {
                     ArrayUtils.fill(var18, var15, var16, var8_int);
@@ -136,17 +136,17 @@ final class RandomBrickOperator extends TextureOperator {
                   if (this.field_t == 0) {
                     for (var21 = 0; var21 < var13; var21++) {
                       var22 = var21 * var8_int / var13;
-                      dupTemp$1 = SnakePitBehaviour.c(una.textureWidthMask, -1 + param4 + param1 - var21);
+                      dupTemp$1 = SnakePitBehaviour.bitwiseAnd(una.textureWidthMask, -1 + param4 + param1 - var21);
                       var18[dupTemp$1] = var20 * var22 >> 12;
-                      var18[SnakePitBehaviour.c(var21 + param1, una.textureWidthMask)] = var20 * var22 >> 12;
+                      var18[SnakePitBehaviour.bitwiseAnd(var21 + param1, una.textureWidthMask)] = var20 * var22 >> 12;
                     }
                   } else {
                     for (var21 = 0; var13 > var21; var21++) {
                       var22 = var8_int * var21 / var13;
                       stackIn_52_0 = var18;
-                      stackIn_52_1 = SnakePitBehaviour.c(param1 + var21, una.textureWidthMask);
+                      stackIn_52_1 = SnakePitBehaviour.bitwiseAnd(param1 + var21, una.textureWidthMask);
                       stackIn_52_2 = var18;
-                      stackIn_52_3 = SnakePitBehaviour.c(-1 - var21 + param1 + param4, una.textureWidthMask);
+                      stackIn_52_3 = SnakePitBehaviour.bitwiseAnd(-1 - var21 + param1 + param4, una.textureWidthMask);
                       if (var22 < var20) {
                         stackIn_53_4 = var22;
                       } else {
@@ -169,17 +169,17 @@ final class RandomBrickOperator extends TextureOperator {
                 if (this.field_t == 0) {
                   for (var20 = 0; var13 > var20; var20++) {
                     var21 = var8_int * var20 / var13;
-                    dupTemp$2 = SnakePitBehaviour.c(-var20 + (param4 + (param1 - 1)), una.textureWidthMask);
+                    dupTemp$2 = SnakePitBehaviour.bitwiseAnd(-var20 + (param4 + (param1 - 1)), una.textureWidthMask);
                     var18[dupTemp$2] = var21 * var19 >> 12;
-                    var18[SnakePitBehaviour.c(var20 + param1, una.textureWidthMask)] = var21 * var19 >> 12;
+                    var18[SnakePitBehaviour.bitwiseAnd(var20 + param1, una.textureWidthMask)] = var21 * var19 >> 12;
                   }
                 } else {
                   for (var20 = 0; var20 < var13; var20++) {
                     var21 = var8_int * var20 / var13;
                     stackIn_41_0 = var18;
-                    stackIn_41_1 = SnakePitBehaviour.c(var20 + param1, una.textureWidthMask);
+                    stackIn_41_1 = SnakePitBehaviour.bitwiseAnd(var20 + param1, una.textureWidthMask);
                     stackIn_41_2 = var18;
-                    stackIn_41_3 = SnakePitBehaviour.c(-var20 + (param1 + param4 - 1), una.textureWidthMask);
+                    stackIn_41_3 = SnakePitBehaviour.bitwiseAnd(-var20 + (param1 + param4 - 1), una.textureWidthMask);
                     if (var21 < var19) {
                       stackIn_42_4 = var21;
                     } else {
@@ -243,7 +243,7 @@ final class RandomBrickOperator extends TextureOperator {
         }
     }
 
-    final static int d(int param0, int param1, int param2) {
+    final static int max(int param0, int param1, int param2) {
         if (param2 != 2) {
           return 39;
         }

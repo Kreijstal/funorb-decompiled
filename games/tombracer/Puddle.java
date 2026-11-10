@@ -56,7 +56,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
           this.field_m = 0;
           this.field_n = param2;
           this.kind = param0;
-          this.field_i = RandomBrickOperator.d(param1 * param5, 786432, 2);
+          this.field_i = RandomBrickOperator.max(param1 * param5, 786432, 2);
           this.field_t = 0;
           this.field_k = this.field_l;
           this.s(0);

@@ -240,7 +240,7 @@ final class RoomViewRenderer {
           var4 = ck.field_c[var2];
           var5 = new int[var3];
           for (var6 = 0; var6 < var3; var6++) {
-            var5[var6] = mga.field_g[SnakePitBehaviour.c(255, (int) var4[var6])];
+            var5[var6] = mga.field_g[SnakePitBehaviour.bitwiseAnd(255, (int) var4[var6])];
           }
           var1[var2] = new Sprite(ika.field_a, OpenGlRenderbuffer.field_s, ak.field_p[var2], pg.field_C[var2], mq.field_b[var2], iga.field_m[var2], var5);
         }

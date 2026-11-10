@@ -88,7 +88,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
         try {
           this.x = param0.mirrorX(this.x, (byte) 71);
           this.velocityX = -this.velocityX;
-          this.angle = GameScreen.a(-this.angle, 8192, 105);
+          this.angle = GameScreen.positiveModulo(-this.angle, 8192, 105);
           if (param1 >= -16) {
             this.field_I = 44;
           }

@@ -50,7 +50,7 @@ final class SimpleConditionBehaviour extends Behaviour {
         this.j((byte) 79);
         this.field_n.a((byte) -14, this.field_s);
         if (param0 != 5418) {
-          this.c(false);
+          this.stop(false);
         }
     }
 
@@ -133,8 +133,8 @@ final class SimpleConditionBehaviour extends Behaviour {
         return;
     }
 
-    final void c(boolean param0) {
-        super.c(param0);
+    final void stop(boolean param0) {
+        super.stop(param0);
         if (this.field_t == 0) {
           this.field_n.a((byte) -14, true);
         }

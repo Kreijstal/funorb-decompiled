@@ -1175,7 +1175,7 @@ final class np extends ka {
               if (-1 != param2) {
                 var9 = ((-var9 + param2) * param3 >> 7) + var9;
               }
-              this.field_X[var5_int] = (short)WallTile.a(WallTile.a(var7_int << 10, var8 << 7), var9);
+              this.field_X[var5_int] = (short)WallTile.bitwiseOr(WallTile.bitwiseOr(var7_int << 10, var8 << 7), var9);
               var5_int++;
               continue;
             }
@@ -1962,7 +1962,7 @@ final class np extends ka {
                       } else {
                         var18 = 0;
                       }
-                      this.field_X[var14_int] = (short)WallTile.a(var18, WallTile.a(var17 << 7, var16 << 10));
+                      this.field_X[var14_int] = (short)WallTile.bitwiseOr(var18, WallTile.bitwiseOr(var17 << 7, var16 << 10));
                       if (null != this.field_kb) {
                         this.field_kb.field_d = null;
                       }
@@ -3643,7 +3643,7 @@ final class np extends ka {
                             var17 = 127;
                           }
                         }
-                        this.field_X[var13_int] = (short)WallTile.a(WallTile.a(var16 << 7, var15 << 10), var17);
+                        this.field_X[var13_int] = (short)WallTile.bitwiseOr(WallTile.bitwiseOr(var16 << 7, var15 << 10), var17);
                         var12++;
                       }
                       if (var11.length > 0 &&

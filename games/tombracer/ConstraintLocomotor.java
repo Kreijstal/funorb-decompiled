@@ -43,8 +43,8 @@ abstract class ConstraintLocomotor extends Locomotor {
             this.field_q = param1.readBits((byte) 44, 10) << 16;
             return;
           }
-          this.field_o = CoinItemComponent.a(true, 12, param1.readBits((byte) 44, 12)) << 16;
-          this.field_q = CoinItemComponent.a(true, 12, param1.readBits((byte) 44, 12)) << 16;
+          this.field_o = CoinItemComponent.fromOffsetBinary(true, 12, param1.readBits((byte) 44, 12)) << 16;
+          this.field_q = CoinItemComponent.fromOffsetBinary(true, 12, param1.readBits((byte) 44, 12)) << 16;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -72,8 +72,8 @@ abstract class ConstraintLocomotor extends Locomotor {
           if (param1 >= -78) {
             ConstraintLocomotor.releaseStatics(2);
           }
-          param0.writeBits((byte) -39, dqa.a(true, this.field_o >> 16, 12), 12);
-          param0.writeBits((byte) 45, dqa.a(true, this.field_q >> 16, 12), 12);
+          param0.writeBits((byte) -39, dqa.toOffsetBinary(true, this.field_o >> 16, 12), 12);
+          param0.writeBits((byte) 45, dqa.toOffsetBinary(true, this.field_q >> 16, 12), 12);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "osa.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

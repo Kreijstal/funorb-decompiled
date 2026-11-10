@@ -12,7 +12,7 @@ final class KeyLockBehaviour extends Behaviour implements SwitchSource {
 
     final void tick(int param0) {
         if (this.field_q.f((byte) -56)) {
-          this.c(false);
+          this.stop(false);
         }
         if (param0 == 5418) {
           this.field_t = this.r(param0 - 5416);
@@ -47,8 +47,8 @@ final class KeyLockBehaviour extends Behaviour implements SwitchSource {
           var3 = var8.getX(3) - this.trap.getX(3);
           var4 = var8.getY(param0 ^ 9650) - this.trap.getY(9648);
           var5 = 262144;
-          if (ua.a(var3, param0 ^ -122) <= this.trap.getWidth(-120) / param0 + var8.getWidth(-59) / 2 + var5 &&
-            ua.a(var4, -121) <= var5 + this.trap.getHeight((byte) 55) / 2 + var8.getHeight((byte) 55) / 2) {
+          if (ua.abs(var3, param0 ^ -122) <= this.trap.getWidth(-120) / param0 + var8.getWidth(-59) / 2 + var5 &&
+            ua.abs(var4, -121) <= var5 + this.trap.getHeight((byte) 55) / 2 + var8.getHeight((byte) 55) / 2) {
             if (this.field_p > this.field_n) {
               return false;
             }
@@ -75,11 +75,11 @@ final class KeyLockBehaviour extends Behaviour implements SwitchSource {
         var3Lifetime1 = var7.getX(3) - this.trap.getX(3);
         var4Lifetime1 = var7.getY(param0 ^ 9650) - this.trap.getY(9648);
         var5Lifetime1 = 262144;
-        if (ua.a(var3Lifetime1, param0 ^ -122) > this.trap.getWidth(-120) / param0 + var7.getWidth(-59) / 2 + var5Lifetime1) {
+        if (ua.abs(var3Lifetime1, param0 ^ -122) > this.trap.getWidth(-120) / param0 + var7.getWidth(-59) / 2 + var5Lifetime1) {
           this.field_n = 0;
           return false;
         }
-        if (ua.a(var4Lifetime1, -121) > var5Lifetime1 + this.trap.getHeight((byte) 55) / 2 + var7.getHeight((byte) 55) / 2) {
+        if (ua.abs(var4Lifetime1, -121) > var5Lifetime1 + this.trap.getHeight((byte) 55) / 2 + var7.getHeight((byte) 55) / 2) {
           this.field_n = 0;
           return false;
         }

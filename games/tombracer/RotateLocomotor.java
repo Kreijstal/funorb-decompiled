@@ -19,7 +19,7 @@ final class RotateLocomotor extends Locomotor {
           if (param1 >= -78) {
             this.applyConstraint(-41);
           }
-          param0.writeBits((byte) -128, dqa.a(true, this.field_p, 12), 12);
+          param0.writeBits((byte) -128, dqa.toOffsetBinary(true, this.field_p, 12), 12);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "spa.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -37,7 +37,7 @@ final class RotateLocomotor extends Locomotor {
     RotateLocomotor(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
-          this.field_p = CoinItemComponent.a(true, 12, param1.readBits((byte) 44, 12));
+          this.field_p = CoinItemComponent.fromOffsetBinary(true, 12, param1.readBits((byte) 44, 12));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "spa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

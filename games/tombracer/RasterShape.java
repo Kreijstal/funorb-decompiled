@@ -8,7 +8,7 @@ abstract class RasterShape {
     int field_d;
     int field_c;
 
-    final static int a(boolean param0, int param1) {
+    final static int atanFixed16(boolean param0, int param1) {
         if (param0) {
           return 45;
         }

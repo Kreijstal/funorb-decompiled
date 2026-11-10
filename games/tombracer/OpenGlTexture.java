@@ -48,11 +48,11 @@ abstract class OpenGlTexture implements GpuTexture {
         var22 = TombRacer.field_G ? 1 : 0;
         try {
           if (~param4 < param0 &&
-            !cla.a(9181, param4)) {
+            !cla.isPowerOfTwoOrZero(9181, param4)) {
             throw new IllegalArgumentException("");
           }
           if (0 < param2 &&
-            !cla.a(param0 + 9182, param2)) {
+            !cla.isPowerOfTwoOrZero(param0 + 9182, param2)) {
             throw new IllegalArgumentException("");
           }
           var6_int = this.field_f.field_b;
@@ -343,11 +343,11 @@ abstract class OpenGlTexture implements GpuTexture {
         var22 = TombRacer.field_G ? 1 : 0;
         try {
           if (param1 > 0 &&
-            !cla.a(9181, param1)) {
+            !cla.isPowerOfTwoOrZero(9181, param1)) {
             throw new IllegalArgumentException("");
           }
           if (param4 > 0 &&
-            !cla.a(9181, param4)) {
+            !cla.isPowerOfTwoOrZero(9181, param4)) {
             throw new IllegalArgumentException("");
           }
           var6_int = this.field_f.field_b;
@@ -444,11 +444,11 @@ abstract class OpenGlTexture implements GpuTexture {
         var26 = TombRacer.field_G ? 1 : 0;
         try {
           if (param4 > 0 &&
-            !cla.a(9181, param4)) {
+            !cla.isPowerOfTwoOrZero(9181, param4)) {
             throw new IllegalArgumentException("");
           }
           if (0 < param2 &&
-            !cla.a(9181, param2)) {
+            !cla.isPowerOfTwoOrZero(9181, param2)) {
             throw new IllegalArgumentException("");
           }
           if (this.field_f != SwitchableId.field_a) {
@@ -497,7 +497,7 @@ abstract class OpenGlTexture implements GpuTexture {
                 var19 = var19 + ((var17 & 65316) >> 8);
                 incrementValue$4 = var13;
                 var13++;
-                var11[incrementValue$4] = WallTile.a(SnakePitBehaviour.c(255, var20 >> 2), WallTile.a(WallTile.a(SnakePitBehaviour.c(var18, 1020) << 14, SnakePitBehaviour.c(1020, var21) << 22), SnakePitBehaviour.c(var19 << 6, 65280)));
+                var11[incrementValue$4] = WallTile.bitwiseOr(SnakePitBehaviour.bitwiseAnd(255, var20 >> 2), WallTile.bitwiseOr(WallTile.bitwiseOr(SnakePitBehaviour.bitwiseAnd(var18, 1020) << 14, SnakePitBehaviour.bitwiseAnd(1020, var21) << 22), SnakePitBehaviour.bitwiseAnd(var19 << 6, 65280)));
               }
               var23 = var23 + param4;
               var22 = var22 + param4;

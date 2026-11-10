@@ -328,7 +328,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_10_0;
           }
           if (!this.b(param0 - 123, param1)) {
-            return uh.field_k;
+            return LightSource.field_k;
           }
           stackIn_14_0 = fp.field_c;
           return stackIn_14_0;

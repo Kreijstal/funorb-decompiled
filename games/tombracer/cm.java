@@ -225,7 +225,7 @@ final class cm implements GamePacket {
               for (var8_int = 0; vk.field_b.length > var8_int; var8_int++) {
                 vk.field_b[var8_int] = (byte) 0;
               }
-              vk.field_b[var7 / 8] = (byte)WallTile.a((int) vk.field_b[var7 / 8], 1 << var7 % 8);
+              vk.field_b[var7 / 8] = (byte)WallTile.bitwiseOr((int) vk.field_b[var7 / 8], 1 << var7 % 8);
             }
             stackIn_50_0 = (!param3) ? 0 : -1;
             for (var7 = stackIn_50_0; SafeZoneBehaviour.field_u.length > var7; var7++) {
@@ -250,7 +250,7 @@ final class cm implements GamePacket {
                         vk.field_b[var9] = (byte) 0;
                       }
                     } else {
-                      vk.field_b[var7 / 8] = (byte)kha.b((int) vk.field_b[var7 / 8], 1 << SnakePitBehaviour.c(var7, 7));
+                      vk.field_b[var7 / 8] = (byte)kha.bitwiseXor((int) vk.field_b[var7 / 8], 1 << SnakePitBehaviour.bitwiseAnd(var7, 7));
                     }
                   }
                 }
@@ -475,16 +475,16 @@ final class cm implements GamePacket {
                 } else {
                   if (var9 == -1) {
                     for (var18 = var6Lifetime4; var18 < -1 + var6Lifetime4 + var30.length; var18++) {
-                      TileGrid.field_e[var18 / 8] = (byte)SnakePitBehaviour.c((int) TileGrid.field_e[var18 / 8], ~(1 << SnakePitBehaviour.c(var18, 7)));
+                      TileGrid.field_e[var18 / 8] = (byte)SnakePitBehaviour.bitwiseAnd((int) TileGrid.field_e[var18 / 8], ~(1 << SnakePitBehaviour.bitwiseAnd(var18, 7)));
                     }
                   } else {
-                    TileGrid.field_e[(var6Lifetime4 + var9) / 8] = (byte)kha.b((int) TileGrid.field_e[(var6Lifetime4 + var9) / 8], 1 << SnakePitBehaviour.c(7, var9 + var6Lifetime4));
+                    TileGrid.field_e[(var6Lifetime4 + var9) / 8] = (byte)kha.bitwiseXor((int) TileGrid.field_e[(var6Lifetime4 + var9) / 8], 1 << SnakePitBehaviour.bitwiseAnd(7, var9 + var6Lifetime4));
                   }
                 }
               }
               if (param3 &&
                 var16Lifetime1 != 0) {
-                TileGrid.field_e[(var9 + var6Lifetime4) / 8] = (byte)SnakePitBehaviour.c((int) TileGrid.field_e[(var9 + var6Lifetime4) / 8], ~(1 << SnakePitBehaviour.c(7, var6Lifetime4 + var9)));
+                TileGrid.field_e[(var9 + var6Lifetime4) / 8] = (byte)SnakePitBehaviour.bitwiseAnd((int) TileGrid.field_e[(var9 + var6Lifetime4) / 8], ~(1 << SnakePitBehaviour.bitwiseAnd(7, var6Lifetime4 + var9)));
               }
               if (var9 >= 0 &&
                 var17.field_pb) {

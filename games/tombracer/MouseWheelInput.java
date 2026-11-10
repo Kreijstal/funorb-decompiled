@@ -26,7 +26,7 @@ abstract class MouseWheelInput {
           if (param0 != 2180) {
             field_a = (String[][]) null;
           }
-          stackIn_5_0 = (null != uh.a(param1, -116));
+          stackIn_5_0 = (null != LightSource.a(param1, -116));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

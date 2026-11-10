@@ -56,7 +56,7 @@ final class StandingsPhase extends MatchPhase {
           if (this.screen.d((byte) 116)) {
             TripBeamComponent.b(1, 0);
           } else {
-            if (0 == this.field_r[this.screen.field_x] &&
+            if (0 == this.field_r[this.screen.localPlayerIndex] &&
               this.matchState.field_z >= 0) {
               TripBeamComponent.b(1, 2);
             } else {
@@ -230,7 +230,7 @@ final class StandingsPhase extends MatchPhase {
             var10_ref_String = vj.worldNames[var9].toUpperCase();
           }
           SocketConnector.a(var10_ref_String, 1, eda.field_f, 2431750, 8 + o.field_d.field_m, var6, 1, -(var6 >> 1) + var8, var7 - (var5 >> 1), -1, (byte) 60, var5);
-          MembersUpsellMenu.a(this.screen.getPlayerName(this.screen.field_x, false).toUpperCase(), wga.field_a[this.screen.field_x], eda.field_f, -1, -15 + var4, var3, -1);
+          MembersUpsellMenu.a(this.screen.getPlayerName(this.screen.localPlayerIndex, false).toUpperCase(), wga.field_a[this.screen.localPlayerIndex], eda.field_f, -1, -15 + var4, var3, -1);
           if (this.matchState.field_z < 0) {
             MembersUpsellMenu.a(ArrowShooterComponent.field_K.toUpperCase(), 2431750, eda.field_f, -1, var4 - 40, var3, -1);
             MembersUpsellMenu.a(SafeZoneBehaviour.field_n.toUpperCase(), 2431750, kn.field_p, -1, 45 + var4, var3, -1);
@@ -258,13 +258,13 @@ final class StandingsPhase extends MatchPhase {
             }
           }
           if (var11 != 0) {
-            var24 = dea.a(this.matchState.c((byte) 115, this.screen.field_x), (byte) -8);
+            var24 = dea.a(this.matchState.c((byte) 115, this.screen.localPlayerIndex), (byte) -8);
             MembersUpsellMenu.a(cc.field_l.toUpperCase() + " " + var24.toUpperCase(), 2431750, kn.field_p, -1, 20 + var4, -120 + var3, -1);
             MembersUpsellMenu.a(ContentTransitionDialog.field_L.toUpperCase(), 2431750, eda.field_f, -1, var4, 120 + var3, -1);
-            var13 = this.screen.matchState.simulations[this.screen.field_x].player.getScore(74);
+            var13 = this.screen.matchState.simulations[this.screen.localPlayerIndex].player.getScore(74);
             MembersUpsellMenu.a(Integer.toString(var13), 2431750, eda.field_f, -1, 20 + var4, 120 + var3, -1);
           } else {
-            var23 = dea.a(this.matchState.c((byte) 115, this.screen.field_x), (byte) -8);
+            var23 = dea.a(this.matchState.c((byte) 115, this.screen.localPlayerIndex), (byte) -8);
             MembersUpsellMenu.a(cc.field_l.toUpperCase() + " " + var23.toUpperCase(), 2431750, kn.field_p, -1, 48 + var4, var3 - 120, -1);
             za.field_g.a(-200 + var3, var4 + 60);
             var13 = as.a(var9, 0);
@@ -272,7 +272,7 @@ final class StandingsPhase extends MatchPhase {
             bca.field_d.a(var3 - 110, 60 + var4);
             RoomEffectTraps.a(-1, -92, 79 + var4, dea.a(var13 + var13 / 2, (byte) -8), bca.field_d.d() + (var3 - 110) + 5, kn.field_p, 2431750);
             MembersUpsellMenu.a(ContentTransitionDialog.field_L.toUpperCase(), 2431750, eda.field_f, -1, 5 + var4, 120 + var3, -1);
-            var14 = this.screen.matchState.simulations[this.screen.field_x].player.getScore(110);
+            var14 = this.screen.matchState.simulations[this.screen.localPlayerIndex].player.getScore(110);
             MembersUpsellMenu.a(Integer.toString(var14), 2431750, eda.field_f, -1, var4 + 22, var3 + 120, -1);
             if (FacePlayerLocomotor.field_p != null &&
               FacePlayerLocomotor.field_p.field_p != null &&
@@ -407,13 +407,13 @@ final class StandingsPhase extends MatchPhase {
         if (this.screen.field_D &&
           !this.screen.d((byte) 69)) {
           var3Lifetime2 = this.screen.matchState.field_t;
-          if ((var3Lifetime2 >> this.screen.field_x & 1) == 1) {
+          if ((var3Lifetime2 >> this.screen.localPlayerIndex & 1) == 1) {
             this.field_p[1].field_e = RevolverItemComponent.field_I.toUpperCase();
           } else {
             if (var3Lifetime2 != 0) {
               this.field_p[1].field_e = ot.field_t.toUpperCase();
             } else {
-              if (this.screen.matchState.a(this.screen.field_x, true)) {
+              if (this.screen.matchState.a(this.screen.localPlayerIndex, true)) {
                 this.field_p[1].field_e = sl.field_g.toUpperCase();
               } else {
                 this.field_p[1].field_e = PrefabComponent.field_E.toUpperCase();

@@ -72,7 +72,7 @@ final class mn extends TextFieldValidator {
             this.field_l = var3.c(81);
           }
           if (this.field_l) {
-            stackIn_13_0 = uh.field_k;
+            stackIn_13_0 = LightSource.field_k;
           } else {
             stackIn_13_0 = fp.field_c;
           }

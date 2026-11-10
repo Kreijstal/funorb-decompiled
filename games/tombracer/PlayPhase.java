@@ -318,7 +318,7 @@ final class PlayPhase extends MatchPhase {
           if (this.screen.field_D) {
             return false;
           }
-          var6 = this.matchState.getSimulation(this.screen.field_x, param1 - 25);
+          var6 = this.matchState.getSimulation(this.screen.localPlayerIndex, param1 - 25);
           if (param2 == 25) {
             var6.getCurrentRoom((byte) -114).b(7, true);
             return true;
@@ -406,9 +406,9 @@ final class PlayPhase extends MatchPhase {
                   var7[var3][var4] = this.matchState.players[var3].getTreasure(196608, var4);
                 }
               }
-              this.screen.onRoundEnded((byte) 101, var7, this.screen.field_x);
+              this.screen.onRoundEnded((byte) 101, var7, this.screen.localPlayerIndex);
             } else {
-              this.a(0, this.screen.field_x);
+              this.a(0, this.screen.localPlayerIndex);
             }
           }
         }

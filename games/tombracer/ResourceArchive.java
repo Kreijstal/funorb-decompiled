@@ -662,7 +662,7 @@ final class ResourceArchive {
         throw new RuntimeException();
     }
 
-    final static int a(byte param0) {
+    final static int currentYear(byte param0) {
         if (param0 < 53) {
           return 20;
         }

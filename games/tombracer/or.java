@@ -21,7 +21,7 @@ class or extends fi {
     void a(int param0, boolean param1, byte param2) {
         int fieldTemp$0 = this.field_k;
         this.field_k = this.field_k + 1;
-        this.field_l[fieldTemp$0] = (byte)(127 + SnakePitBehaviour.c(127, param2 >> 1));
+        this.field_l[fieldTemp$0] = (byte)(127 + SnakePitBehaviour.bitwiseAnd(127, param2 >> 1));
         if (param1) {
           fallingObjectDeathMessages = (String[]) null;
         }

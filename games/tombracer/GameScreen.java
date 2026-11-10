@@ -137,7 +137,7 @@ abstract class GameScreen {
         return false;
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int positiveModulo(int param0, int param1, int param2) {
         int var3 = 118 % ((24 - param2) / 41);
         if (param0 < 0) {
           param0 = param1 + param0 % param1;

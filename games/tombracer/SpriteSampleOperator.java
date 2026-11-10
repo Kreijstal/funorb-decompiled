@@ -98,18 +98,18 @@ class SpriteSampleOperator extends TextureOperator {
             for (var8 = 0; var8 < ns.textureWidth; var8++) {
               var9 = this.field_m * var8 / ns.textureWidth;
               var10 = this.field_p[var7 + var9];
-              var6[var8] = SnakePitBehaviour.c(4080, var10 << 4);
-              var5[var8] = SnakePitBehaviour.c(var10, 65280) >> 4;
-              var4[var8] = SnakePitBehaviour.c(16711680, var10) >> 12;
+              var6[var8] = SnakePitBehaviour.bitwiseAnd(4080, var10 << 4);
+              var5[var8] = SnakePitBehaviour.bitwiseAnd(var10, 65280) >> 4;
+              var4[var8] = SnakePitBehaviour.bitwiseAnd(16711680, var10) >> 12;
             }
           } else {
             for (var8 = 0; ns.textureWidth > var8; var8++) {
               incrementValue$0 = var7;
               var7++;
               var9 = this.field_p[incrementValue$0];
-              var6[var8] = SnakePitBehaviour.c(4080, var9 << 4);
-              var5[var8] = SnakePitBehaviour.c(4080, var9 >> 4);
-              var4[var8] = SnakePitBehaviour.c(var9, 16711680) >> 12;
+              var6[var8] = SnakePitBehaviour.bitwiseAnd(4080, var9 << 4);
+              var5[var8] = SnakePitBehaviour.bitwiseAnd(4080, var9 >> 4);
+              var4[var8] = SnakePitBehaviour.bitwiseAnd(var9, 16711680) >> 12;
             }
           }
         }

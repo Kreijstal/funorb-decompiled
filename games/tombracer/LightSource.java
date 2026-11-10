@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uh extends IntrusiveNode {
+final class LightSource extends IntrusiveNode {
     private int field_q;
     static jea field_h;
     private int field_j;
     private int field_l;
     static it field_k;
     private int field_p;
-    private aga field_o;
+    private AnimatedLight animatedLight;
     private int field_f;
     private int field_n;
     private boolean field_r;
@@ -40,16 +40,16 @@ final class uh extends IntrusiveNode {
         if (this.field_p == 0) {
           return -1;
         }
-        if (this.field_o == null) {
+        if (this.animatedLight == null) {
           return -1;
         }
-        if (null == this.field_o.field_c) {
+        if (null == this.animatedLight.light) {
           return -1;
         }
-        if (0.05000000074505806f >= this.field_o.field_c.b(0)) {
+        if (0.05000000074505806f >= this.animatedLight.light.b(0)) {
           return -1;
         }
-        if (this.field_o.field_c.c(-122) == 0) {
+        if (this.animatedLight.light.c(-122) == 0) {
           return -1;
         }
         var5 = -this.field_j + param1 >> 16;
@@ -62,12 +62,12 @@ final class uh extends IntrusiveNode {
         return -(var7 * var7 + var5 * var5 + var6 * var6 >> 2) + this.field_p;
     }
 
-    final aga a(int param0) {
+    final AnimatedLight a(int param0) {
         if (param0 <= 4) {
           this.a(-31, -23, 62, -98);
-          return this.field_o;
+          return this.animatedLight;
         }
-        return this.field_o;
+        return this.animatedLight;
     }
 
     final static mu a(String param0, int param1) {
@@ -124,18 +124,18 @@ final class uh extends IntrusiveNode {
     }
 
     final void c(int param0, int param1) {
-        if (this.field_o == null) {
+        if (this.animatedLight == null) {
           return;
         }
-        if (null == this.field_o.field_c) {
+        if (null == this.animatedLight.light) {
           return;
         }
         if (param0 == -10874) {
-          this.field_o.field_c.a(255, param1);
+          this.animatedLight.light.a(255, param1);
           return;
         }
         field_k = (it) null;
-        this.field_o.field_c.a(255, param1);
+        this.animatedLight.light.a(255, param1);
     }
 
     final static boolean a(byte param0) {
@@ -144,7 +144,7 @@ final class uh extends IntrusiveNode {
           return false;
         }
         if (param0 != -7) {
-          uh.a((byte) -8);
+          LightSource.a((byte) -8);
           if (ConstrainToLatticeLocomotor.field_s) {
             return false;
           }
@@ -173,33 +173,33 @@ final class uh extends IntrusiveNode {
     final void a(byte param0, int param1) {
         int var3 = 0;
         int var3Lifetime1;
-        if (this.field_o == null ||
-          this.field_o.field_c == null) {
+        if (this.animatedLight == null ||
+          this.animatedLight.light == null) {
           return;
         }
         this.field_m[0] = this.field_j >> 14;
         this.field_m[1] = -this.field_q >> 14;
         this.field_m[2] = -this.field_f >> 14;
-        this.field_o.field_c.a(this.field_m[1], this.field_m[0], (byte) -127, this.field_m[2]);
+        this.animatedLight.light.a(this.field_m[1], this.field_m[0], (byte) -127, this.field_m[2]);
         if (param0 >= 21) {
-          var3 = this.field_o.field_c.a((byte) 107);
+          var3 = this.animatedLight.light.a((byte) 107);
           this.field_p = var3 * (var3 * 2);
-          this.field_o.a(false, param1 + this.field_n, -1814184927);
+          this.animatedLight.a(false, param1 + this.field_n, -1814184927);
           return;
         }
-        uh.a((byte) 98);
-        var3Lifetime1 = this.field_o.field_c.a((byte) 107);
+        LightSource.a((byte) 98);
+        var3Lifetime1 = this.animatedLight.light.a((byte) 107);
         this.field_p = var3Lifetime1 * (var3Lifetime1 * 2);
-        this.field_o.a(false, param1 + this.field_n, -1814184927);
+        this.animatedLight.a(false, param1 + this.field_n, -1814184927);
     }
 
     final void d(int param0, int param1) {
         int var3 = 12 / ((40 - param1) / 59);
-        if (this.field_o == null) {
+        if (this.animatedLight == null) {
           return;
         }
-        if (null != this.field_o.field_c) {
-          this.field_o.field_c.a((byte) 62, param0);
+        if (null != this.animatedLight.light) {
+          this.animatedLight.light.a((byte) 62, param0);
           return;
         }
     }
@@ -232,7 +232,7 @@ final class uh extends IntrusiveNode {
     final void e(int param0) {
         this.field_r = true;
         if (param0 != 2) {
-          this.field_o = (aga) null;
+          this.animatedLight = (AnimatedLight) null;
         }
     }
 
@@ -243,7 +243,7 @@ final class uh extends IntrusiveNode {
           this.field_f = param2;
           return;
         }
-        this.field_o = (aga) null;
+        this.animatedLight = (AnimatedLight) null;
         this.field_q = param0;
         this.field_j = param3;
         this.field_f = param2;
@@ -258,12 +258,12 @@ final class uh extends IntrusiveNode {
         this.field_n = param0;
     }
 
-    uh(aga param0) {
+    LightSource(AnimatedLight param0) {
         this.field_r = false;
         this.field_m = new int[3];
         this.field_g = false;
         try {
-          this.field_o = param0;
+          this.animatedLight = param0;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "uh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

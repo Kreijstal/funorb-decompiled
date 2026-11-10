@@ -16,7 +16,7 @@ final class rp extends IntrusiveNode {
         }
     }
 
-    final static int a(int param0, int param1, int param2, int param3) {
+    final static int clamp(int param0, int param1, int param2, int param3) {
         if (param1 == -16226) {
           return param2 <= param3 ? param3 <= param0 ? param3 : param0 : param2;
         }

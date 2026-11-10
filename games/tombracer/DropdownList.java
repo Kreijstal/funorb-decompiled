@@ -40,8 +40,8 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
     final static void a(int param0, int param1, byte param2, int param3, int param4) {
         if (param4 >= gca.field_d &&
           hc.field_h >= param4) {
-          param1 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, param1);
-          param0 = rp.a(DiskCacheWorker.field_c, param2 ^ 16224, pka.field_b, param0);
+          param1 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param1);
+          param0 = rp.clamp(DiskCacheWorker.field_c, param2 ^ 16224, pka.field_b, param0);
           BrazierComponent.a(param0, param3, param4, param1, false);
         }
         if (param2 != -2) {

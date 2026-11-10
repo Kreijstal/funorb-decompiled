@@ -168,16 +168,16 @@ final class PortalComponent extends PrefabComponent {
                 var10 = var10 ^ 285L;
             }
             var12 = var2 ^ var10;
-            field_I[0][var0] = WhiteLightSensorComponent.a(var12, WhiteLightSensorComponent.a(WhiteLightSensorComponent.a(WhiteLightSensorComponent.a(var10 << 24, WhiteLightSensorComponent.a(var2 << 32, WhiteLightSensorComponent.a(WhiteLightSensorComponent.a(var2 << 56, var2 << 48), var6 << 40))), var8 << 16), var4 << 8));
+            field_I[0][var0] = WhiteLightSensorComponent.bitwiseOr(var12, WhiteLightSensorComponent.bitwiseOr(WhiteLightSensorComponent.bitwiseOr(WhiteLightSensorComponent.bitwiseOr(var10 << 24, WhiteLightSensorComponent.bitwiseOr(var2 << 32, WhiteLightSensorComponent.bitwiseOr(WhiteLightSensorComponent.bitwiseOr(var2 << 56, var2 << 48), var6 << 40))), var8 << 16), var4 << 8));
             for (var14 = 1; 8 > var14; var14++) {
-                field_I[var14][var0] = WhiteLightSensorComponent.a(field_I[-1 + var14][var0] << 56, field_I[var14 - 1][var0] >>> 8);
+                field_I[var14][var0] = WhiteLightSensorComponent.bitwiseOr(field_I[-1 + var14][var0] << 56, field_I[var14 - 1][var0] >>> 8);
             }
             var0++;
         }
         field_H[0] = 0L;
         for (var0 = 1; 10 >= var0; var0++) {
             var1 = (var0 - 1) * 8;
-            field_H[var0] = SnakePitModel.a(SnakePitModel.a(vi.a(65280L, field_I[6][6 + var1]), SnakePitModel.a(vi.a(field_I[5][var1 + 5], 16711680L), SnakePitModel.a(vi.a(4278190080L, field_I[4][4 + var1]), SnakePitModel.a(SnakePitModel.a(SnakePitModel.a(vi.a(field_I[0][var1], -72057594037927936L), vi.a(71776119061217280L, field_I[1][var1 + 1])), vi.a(280375465082880L, field_I[2][2 + var1])), vi.a(field_I[3][var1 + 3], 1095216660480L))))), vi.a(255L, field_I[7][7 + var1]));
+            field_H[var0] = SnakePitModel.bitwiseXor(SnakePitModel.bitwiseXor(vi.bitwiseAnd(65280L, field_I[6][6 + var1]), SnakePitModel.bitwiseXor(vi.bitwiseAnd(field_I[5][var1 + 5], 16711680L), SnakePitModel.bitwiseXor(vi.bitwiseAnd(4278190080L, field_I[4][4 + var1]), SnakePitModel.bitwiseXor(SnakePitModel.bitwiseXor(SnakePitModel.bitwiseXor(vi.bitwiseAnd(field_I[0][var1], -72057594037927936L), vi.bitwiseAnd(71776119061217280L, field_I[1][var1 + 1])), vi.bitwiseAnd(280375465082880L, field_I[2][2 + var1])), vi.bitwiseAnd(field_I[3][var1 + 3], 1095216660480L))))), vi.bitwiseAnd(255L, field_I[7][7 + var1]));
         }
         CauldronComponent.bitLength((byte) 93, 1600);
     }

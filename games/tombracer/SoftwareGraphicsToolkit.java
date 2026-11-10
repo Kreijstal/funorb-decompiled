@@ -1223,7 +1223,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         return null;
     }
 
-    final SceneLight a(int param0, int param1, int param2, int param3, int param4, float param5) {
+    final SceneLight createLight(int param0, int param1, int param2, int param3, int param4, float param5) {
         return null;
     }
 

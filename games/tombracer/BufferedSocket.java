@@ -287,7 +287,7 @@ final class BufferedSocket implements Runnable {
             throw new IllegalArgumentException();
           }
           var3_int = -43 % ((param2 + 14) / 57);
-          if (cla.a(9181, param0)) {
+          if (cla.isPowerOfTwoOrZero(9181, param0)) {
             stackIn_6_0 = (int)((4294967295L & (long)param1.nextInt()) * (long)param0 >> 32);
             return stackIn_6_0;
           }
@@ -295,7 +295,7 @@ final class BufferedSocket implements Runnable {
           do {
             var5 = param1.nextInt();
           } while (var4 <= var5);
-          stackIn_11_0 = oea.a(var5, param0, -127);
+          stackIn_11_0 = oea.floorModulo(var5, param0, -127);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

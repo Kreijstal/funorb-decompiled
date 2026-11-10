@@ -248,7 +248,7 @@ final class SimpleBlockBehaviour extends Behaviour {
             }
             return;
           }
-          if (!this.d(8031)) {
+          if (!this.isTouchingPlayer(8031)) {
             if (param0 == 5418) {
               return;
             }
@@ -264,7 +264,7 @@ final class SimpleBlockBehaviour extends Behaviour {
           this.a(-117, 44, 70, 106, 36, -110, (Collidable) null);
           return;
         }
-        if (this.d(8031)) {
+        if (this.isTouchingPlayer(8031)) {
           this.getPlayer((byte) 19).kill(2, (byte) -123, this.field_s);
           if (param0 == 5418) {
             return;

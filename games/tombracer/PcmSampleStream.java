@@ -514,8 +514,8 @@ final class PcmSampleStream extends PcmStream {
         int var3;
         var1 = this.field_q;
         if (var1 != -2147483648) {
-          var2 = PcmSampleStream.c(var1, this.field_o);
-          var3 = PcmSampleStream.d(var1, this.field_o);
+          var2 = PcmSampleStream.leftChannelVolume(var1, this.field_o);
+          var3 = PcmSampleStream.rightChannelVolume(var1, this.field_o);
         } else {
           var3 = 0;
           var2 = 0;
@@ -783,8 +783,8 @@ final class PcmSampleStream extends PcmStream {
           this.a(param1, param2);
           return;
         }
-        int var4 = PcmSampleStream.c(param1, param2);
-        int var5 = PcmSampleStream.d(param1, param2);
+        int var4 = PcmSampleStream.leftChannelVolume(param1, param2);
+        int var5 = PcmSampleStream.rightChannelVolume(param1, param2);
         if (this.field_n != var4) {
           var6 = param1 - this.field_k;
           if (this.field_k - param1 > var6) {
@@ -1268,15 +1268,15 @@ final class PcmSampleStream extends PcmStream {
 
     private final void n() {
         this.field_k = this.field_q;
-        this.field_n = PcmSampleStream.c(this.field_q, this.field_o);
-        this.field_m = PcmSampleStream.d(this.field_q, this.field_o);
+        this.field_n = PcmSampleStream.leftChannelVolume(this.field_q, this.field_o);
+        this.field_m = PcmSampleStream.rightChannelVolume(this.field_q, this.field_o);
     }
 
     final synchronized boolean e() {
         return this.field_u < 0 || this.field_u >= ((u) (this.field_i)).field_i.length << 8;
     }
 
-    private final static int d(int param0, int param1) {
+    private final static int rightChannelVolume(int param0, int param1) {
         return param1 < 0 ? -param0 : (int)((double)param0 * Math.sqrt((double)param1 * 0.0001220703125) + 0.5);
     }
 
@@ -1708,7 +1708,7 @@ final class PcmSampleStream extends PcmStream {
         return param5;
     }
 
-    private final static int c(int param0, int param1) {
+    private final static int leftChannelVolume(int param0, int param1) {
         return param1 < 0 ? param0 : (int)((double)param0 * Math.sqrt((double)(16384 - param1) * 0.0001220703125) + 0.5);
     }
 

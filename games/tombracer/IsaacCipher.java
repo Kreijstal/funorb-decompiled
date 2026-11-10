@@ -85,10 +85,10 @@ final class IsaacCipher {
             }
           }
           this.field_f = this.field_f + this.field_e[128 + var2 & 255];
-          dupTemp$1 = this.field_a + (this.field_f + this.field_e[SnakePitBehaviour.c(255, var3 >> 2)]);
+          dupTemp$1 = this.field_a + (this.field_f + this.field_e[SnakePitBehaviour.bitwiseAnd(255, var3 >> 2)]);
           var4 = dupTemp$1;
           this.field_e[var2] = dupTemp$1;
-          dupTemp$2 = this.field_e[SnakePitBehaviour.c(var4, 261352) >> 8 >> 2] + var3;
+          dupTemp$2 = this.field_e[SnakePitBehaviour.bitwiseAnd(var4, 261352) >> 8 >> 2] + var3;
           this.field_a = dupTemp$2;
           this.results[var2] = dupTemp$2;
         }
@@ -122,7 +122,7 @@ final class IsaacCipher {
             break;
           }
         }
-        return oea.a(var4, param0, -66);
+        return oea.floorModulo(var4, param0, -66);
     }
 
     private final void initializeState(boolean param0) {

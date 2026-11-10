@@ -121,7 +121,7 @@ final class SweeperMountComponent extends PrefabComponent {
     final void encode(boolean param0, BitPacketBuffer param1) {
         try {
           super.encode(param0, param1);
-          param1.writeBits((byte) -126, dqa.a(true, this.field_G, 5), 5);
+          param1.writeBits((byte) -126, dqa.toOffsetBinary(true, this.field_G, 5), 5);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ona.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -138,7 +138,7 @@ final class SweeperMountComponent extends PrefabComponent {
         super(param0, param1, param2, param3);
         this.field_G = 4;
         try {
-          this.field_G = CoinItemComponent.a(true, 5, param2.readBits((byte) 44, 5));
+          this.field_G = CoinItemComponent.fromOffsetBinary(true, 5, param2.readBits((byte) 44, 5));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ona.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

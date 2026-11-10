@@ -285,7 +285,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
           } else {
             this.x = -this.x;
           }
-          this.angle = GameScreen.a(-this.angle, 8192, -85);
+          this.angle = GameScreen.positiveModulo(-this.angle, 8192, -85);
           this.updateRotation(true);
           this.field_v = !this.field_v ? true : false;
           this.m((byte) -24);
@@ -433,11 +433,11 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
           this.parent = param3;
           if (param3 == null) {
             if (param0.formatVersion > 20) {
-              this.x = 1048576 * CoinItemComponent.a(true, 8, param2.readBits((byte) 44, 8));
-              this.y = 1048576 * CoinItemComponent.a(true, 8, param2.readBits((byte) 44, 8));
+              this.x = 1048576 * CoinItemComponent.fromOffsetBinary(true, 8, param2.readBits((byte) 44, 8));
+              this.y = 1048576 * CoinItemComponent.fromOffsetBinary(true, 8, param2.readBits((byte) 44, 8));
             } else {
-              this.x = CoinItemComponent.a(true, 12, param2.readBits((byte) 44, 12)) << 16;
-              this.y = CoinItemComponent.a(true, 12, param2.readBits((byte) 44, 12)) << 16;
+              this.x = CoinItemComponent.fromOffsetBinary(true, 12, param2.readBits((byte) 44, 12)) << 16;
+              this.y = CoinItemComponent.fromOffsetBinary(true, 12, param2.readBits((byte) 44, 12)) << 16;
             }
           }
           if (this.hasSize(555277520)) {
@@ -790,8 +790,8 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         var5 = TombRacer.field_G ? 1 : 0;
         try {
           if (this.parent == null) {
-            param1.writeBits((byte) -128, dqa.a(true, this.x / 1048576, 8), 8);
-            param1.writeBits((byte) -125, dqa.a(true, this.y / 1048576, 8), 8);
+            param1.writeBits((byte) -128, dqa.toOffsetBinary(true, this.x / 1048576, 8), 8);
+            param1.writeBits((byte) -125, dqa.toOffsetBinary(true, this.y / 1048576, 8), 8);
           }
           if (this.hasSize(555277520)) {
             param1.writeBits((byte) 80, this.width / 2097152, 6);

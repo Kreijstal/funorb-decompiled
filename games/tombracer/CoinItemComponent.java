@@ -88,7 +88,7 @@ final class CoinItemComponent extends ItemComponent {
         }
     }
 
-    final static int a(boolean param0, int param1, int param2) {
+    final static int fromOffsetBinary(boolean param0, int param1, int param2) {
         if (param0) {
           return param2 - (1 << param1 - 1);
         }

@@ -22,7 +22,7 @@ final class hqa extends TextFieldValidator {
           stackIn_5_0 = (MenuEntry.a(param0 ^ -118, param1) != null) ? 0 : 1;
           var3_int = stackIn_5_0;
           if (var3_int != 0) {
-            return uh.field_k;
+            return LightSource.field_k;
           }
           stackIn_8_0 = fp.field_c;
           return stackIn_8_0;

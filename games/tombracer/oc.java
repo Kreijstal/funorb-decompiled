@@ -188,7 +188,7 @@ final class oc {
             if (var5_int == this.field_b[var8] &&
               this.field_I[var8] == var6 &&
               this.field_p[var8] == var7) {
-              this.field_y[var8] = (short)WallTile.a((int) this.field_y[var8], (int) param1);
+              this.field_y[var8] = (short)WallTile.bitwiseOr((int) this.field_y[var8], (int) param1);
               stackIn_10_0 = var8;
               return stackIn_10_0;
             }
@@ -517,7 +517,7 @@ final class oc {
             var51 = this.field_b[var54];
             var52 = this.field_I[var54];
             if (1 == var19) {
-              this.field_l[var54] = var7.readUnsignedByte(kha.b(param1, 255));
+              this.field_l[var54] = var7.readUnsignedByte(kha.bitwiseXor(param1, 255));
             }
           }
           var66.position = var39;
@@ -542,7 +542,7 @@ final class oc {
               this.field_D[var54Lifetime1] = var7.readUnsignedByte(255);
             }
             if (var18 == 1) {
-              this.field_r[var54Lifetime1] = (short)(var8.readUnsignedShort(kha.b(param1, 127)) - 1);
+              this.field_r[var54Lifetime1] = (short)(var8.readUnsignedShort(kha.bitwiseXor(param1, 127)) - 1);
             }
             if (this.field_g != null) {
               if (this.field_r[var54Lifetime1] != -1) {
@@ -645,7 +645,7 @@ final class oc {
                 } else {
                   this.field_f[var58Lifetime2] = var5.readUnsignedMedium(-32768);
                 }
-                this.field_x[var58Lifetime2] = var5.readUnsignedShort(kha.b(param1, 125));
+                this.field_x[var58Lifetime2] = var5.readUnsignedShort(kha.bitwiseXor(param1, 125));
               } else {
                 this.field_j[var58Lifetime2] = var5.readUnsignedMedium(-32768);
                 this.field_f[var58Lifetime2] = var5.readUnsignedMedium(-32768);
@@ -691,8 +691,8 @@ final class oc {
                 }
                 this.field_x[var58Lifetime2] = var5.readUnsignedShort(123);
               } else {
-                this.field_j[var58Lifetime2] = var5.readUnsignedMedium(kha.b(param1, -32768));
-                this.field_f[var58Lifetime2] = var5.readUnsignedMedium(kha.b(param1, -32768));
+                this.field_j[var58Lifetime2] = var5.readUnsignedMedium(kha.bitwiseXor(param1, -32768));
+                this.field_f[var58Lifetime2] = var5.readUnsignedMedium(kha.bitwiseXor(param1, -32768));
                 this.field_x[var58Lifetime2] = var5.readUnsignedMedium(param1 - 32768);
               }
               this.field_i[var58Lifetime2] = var6.readByte((byte) 31);
@@ -1111,9 +1111,9 @@ final class oc {
           }
           while (this.field_F > var40Lifetime2) {
             this.field_u[var40Lifetime2] = (byte) 0;
-            this.field_s[var40Lifetime2] = (short)var5.readUnsignedShort(kha.b(param0, 5407));
+            this.field_s[var40Lifetime2] = (short)var5.readUnsignedShort(kha.bitwiseXor(param0, 5407));
             this.field_q[var40Lifetime2] = (short)var5.readUnsignedShort(126);
-            this.field_K[var40Lifetime2] = (short)var5.readUnsignedShort(kha.b(param0, 5407));
+            this.field_K[var40Lifetime2] = (short)var5.readUnsignedShort(kha.bitwiseXor(param0, 5407));
             var40Lifetime2++;
           }
           if (null != this.field_g) {

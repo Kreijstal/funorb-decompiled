@@ -41,7 +41,7 @@ final class nk extends IntrusiveNode {
         return ur.field_a;
     }
 
-    final static float a(byte param0, float param1) {
+    final static float fade(byte param0, float param1) {
         if (param0 != 14) {
           field_k = (SpriteData[]) null;
         }

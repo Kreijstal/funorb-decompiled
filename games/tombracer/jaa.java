@@ -112,13 +112,13 @@ final class jaa implements noa {
         try {
           var3_int = 1 << -this.field_c + 8;
           var4 = var3_int - 1;
-          param1.writeBits((byte) -128, RandomBrickOperator.d(param0, -var4 + this.field_g, param0 ^ 2) / var3_int, this.field_c);
-          param1.writeBits((byte) 61, RandomBrickOperator.d(0, -var4 + this.field_f, 2) / var3_int, this.field_c);
-          param1.writeBits((byte) -128, RandomBrickOperator.d(0, -var4 + this.field_d, 2) / var3_int, this.field_c);
+          param1.writeBits((byte) -128, RandomBrickOperator.max(param0, -var4 + this.field_g, param0 ^ 2) / var3_int, this.field_c);
+          param1.writeBits((byte) 61, RandomBrickOperator.max(0, -var4 + this.field_f, 2) / var3_int, this.field_c);
+          param1.writeBits((byte) -128, RandomBrickOperator.max(0, -var4 + this.field_d, 2) / var3_int, this.field_c);
           if (!this.field_e) {
             return;
           }
-          param1.writeBits((byte) -127, RandomBrickOperator.d(0, this.field_h - var4, 2) / var3_int, this.field_c);
+          param1.writeBits((byte) -127, RandomBrickOperator.max(0, this.field_h - var4, 2) / var3_int, this.field_c);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

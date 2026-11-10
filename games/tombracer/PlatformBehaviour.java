@@ -157,7 +157,7 @@ final class PlatformBehaviour extends Behaviour {
 
     public final void toggle(int param0) {
         int var2 = -46 % ((28 - param0) / 49);
-        if (this.field_k) {
+        if (this.locked) {
           return;
         }
         super.toggle(117);

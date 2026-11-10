@@ -140,8 +140,8 @@ final class ConveyorBehaviour extends Behaviour {
     ConveyorBehaviour(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
-          this.field_s = CoinItemComponent.a(true, 4, param1.readBits((byte) 44, 4)) << 16;
-          this.field_r = CoinItemComponent.a(true, 4, param1.readBits((byte) 44, 4)) << 16;
+          this.field_s = CoinItemComponent.fromOffsetBinary(true, 4, param1.readBits((byte) 44, 4)) << 16;
+          this.field_r = CoinItemComponent.fromOffsetBinary(true, 4, param1.readBits((byte) 44, 4)) << 16;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -168,8 +168,8 @@ final class ConveyorBehaviour extends Behaviour {
     final void encode(boolean param0, BitPacketBuffer param1) {
         try {
           super.encode(param0, param1);
-          param1.writeBits((byte) -125, dqa.a(true, this.field_s >> 16, 4), 4);
-          param1.writeBits((byte) -127, dqa.a(true, this.field_r >> 16, 4), 4);
+          param1.writeBits((byte) -125, dqa.toOffsetBinary(true, this.field_s >> 16, 4), 4);
+          param1.writeBits((byte) -127, dqa.toOffsetBinary(true, this.field_r >> 16, 4), 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hi.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

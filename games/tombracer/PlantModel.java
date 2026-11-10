@@ -269,7 +269,7 @@ final class PlantModel extends TrapModel {
           if (var6 == null) {
             return;
           }
-          var8Lifetime1 = GameScreen.a(-this.body.getFacingAngle(-25787) + 4096 >> 2, 2048, -111);
+          var8Lifetime1 = GameScreen.positiveModulo(-this.body.getFacingAngle(-25787) + 4096 >> 2, 2048, -111);
           gqa.a(var8Lifetime1, -83584144, param1, param2, (ka) (var6), param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -810,9 +810,9 @@ final class OpenGlToolkit extends GraphicsToolkit {
     }
 
     final void setTextureConstantArgb(int param0, int param1) {
-        gp.field_d[0] = (float)SnakePitBehaviour.c(param1, 16711680) / 16711680.0f;
-        gp.field_d[1] = (float)SnakePitBehaviour.c(65280, param1) / 65280.0f;
-        gp.field_d[2] = (float)SnakePitBehaviour.c(255, param1) / 255.0f;
+        gp.field_d[0] = (float)SnakePitBehaviour.bitwiseAnd(param1, 16711680) / 16711680.0f;
+        gp.field_d[1] = (float)SnakePitBehaviour.bitwiseAnd(65280, param1) / 65280.0f;
+        gp.field_d[2] = (float)SnakePitBehaviour.bitwiseAnd(255, param1) / 255.0f;
         gp.field_d[3] = (float)(param1 >>> 24) / 255.0f;
         if (param0 != 1104971864) {
           return;
@@ -2034,7 +2034,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final SceneLight a(int param0, int param1, int param2, int param3, int param4, float param5) {
+    final SceneLight createLight(int param0, int param1, int param2, int param3, int param4, float param5) {
         return (SceneLight) ((Object) new wba(param0, param1, param2, param3, param4, param5));
     }
 
@@ -2081,9 +2081,9 @@ final class OpenGlToolkit extends GraphicsToolkit {
           jaggl.OpenGL.glLightfv(var4, 4611, WhirlpoolDigest.field_h, 0);
           var5 = var3.c(param0 ^ 123);
           var6 = var3.b(0) / 255.0f;
-          WhirlpoolDigest.field_h[1] = (float)(SnakePitBehaviour.c(65532, var5) >> 8) * var6;
-          WhirlpoolDigest.field_h[0] = var6 * (float)SnakePitBehaviour.c(var5 >> 16, 255);
-          WhirlpoolDigest.field_h[2] = (float)SnakePitBehaviour.c(255, var5) * var6;
+          WhirlpoolDigest.field_h[1] = (float)(SnakePitBehaviour.bitwiseAnd(65532, var5) >> 8) * var6;
+          WhirlpoolDigest.field_h[0] = var6 * (float)SnakePitBehaviour.bitwiseAnd(var5 >> 16, 255);
+          WhirlpoolDigest.field_h[2] = (float)SnakePitBehaviour.bitwiseAnd(255, var5) * var6;
           jaggl.OpenGL.glLightfv(var4, 4609, WhirlpoolDigest.field_h, 0);
           jaggl.OpenGL.glLightf(var4, 4617, 1.0f / (float)(var3.a((byte) -126) * var3.a((byte) -126)));
           jaggl.OpenGL.glEnable(var4);
@@ -2914,9 +2914,9 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
         jaggl.OpenGL.glFogf(2915, this.field_Uc);
         jaggl.OpenGL.glFogf(param0, this.field_xb);
-        gp.field_d[0] = (float)SnakePitBehaviour.c(this.field_gc, 16711680) / 16711680.0f;
-        gp.field_d[1] = (float)SnakePitBehaviour.c(65280, this.field_gc) / 65280.0f;
-        gp.field_d[2] = (float)SnakePitBehaviour.c(255, this.field_gc) / 255.0f;
+        gp.field_d[0] = (float)SnakePitBehaviour.bitwiseAnd(this.field_gc, 16711680) / 16711680.0f;
+        gp.field_d[1] = (float)SnakePitBehaviour.bitwiseAnd(65280, this.field_gc) / 65280.0f;
+        gp.field_d[2] = (float)SnakePitBehaviour.bitwiseAnd(255, this.field_gc) / 255.0f;
         jaggl.OpenGL.glFogfv(2918, gp.field_d, 0);
     }
 
@@ -3324,7 +3324,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
               for (var7 = 0; param0.field_i > var7; var7++) {
                 incrementValue$0 = var5;
                 var5++;
-                var3[incrementValue$0] = WallTile.a(param0.field_h[var4] << 24, param0.field_g[SnakePitBehaviour.c((int) param0.field_f[var4], 255)]);
+                var3[incrementValue$0] = WallTile.bitwiseOr(param0.field_h[var4] << 24, param0.field_g[SnakePitBehaviour.bitwiseAnd((int) param0.field_f[var4], 255)]);
                 var4++;
               }
             }
@@ -3339,7 +3339,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
                 stackIn_8_0 = var10;
                 stackIn_8_1 = incrementValue$2;
                 if (0 != var8) {
-                  stackIn_9_2 = WallTile.a(-16777216, var8);
+                  stackIn_9_2 = WallTile.bitwiseOr(-16777216, var8);
                 } else {
                   stackIn_9_2 = 0;
                 }

@@ -190,7 +190,7 @@ final class WindZoneBehaviour extends Behaviour {
                     break;
                 }
               }
-              var22 = ua.a(-var11 + var21, 2);
+              var22 = ua.abs(-var11 + var21, 2);
               if (var22 > 262144) {
                 if (this.field_q != 0 &&
                   this.field_q != 2) {
@@ -201,7 +201,7 @@ final class WindZoneBehaviour extends Behaviour {
               }
               if (!(var22 > 262144) ||
                 !this.getRoom(true).a(1, this.field_v, this.getRoot(param0 ^ 5420), (byte) 60)) {
-                var8 = GameEvent.a(var12, param0 ^ -25604, var22);
+                var8 = GameEvent.divideFixed16(var12, param0 ^ -25604, var22);
                 var8 = -gqa.a(var8, (byte) 24, -var9 + var10) + var10;
                 var8 = za.$cfr$intArgs$a$c604db63f465(var9, 113, var10, var8);
                 stackIn_56_0 = var18;

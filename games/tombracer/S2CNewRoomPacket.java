@@ -29,7 +29,7 @@ final class S2CNewRoomPacket implements GamePacket {
             for (var5 = 0; 3 > var5; var5++) {
               var7.setTreasure(true, var5, this.treasure[var5]);
             }
-            if (param2.field_x == this.playerId) {
+            if (param2.localPlayerIndex == this.playerId) {
               param0.f(10);
             } else {
               param2.c(this.playerId, 51);

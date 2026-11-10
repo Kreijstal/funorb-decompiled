@@ -351,8 +351,8 @@ final class ui {
         int var5 = -116 / ((param1 + 4) / 43);
         if (pka.field_b <= param3 &&
           !(param3 > DiskCacheWorker.field_c)) {
-          param0 = rp.a(hc.field_h, -16226, gca.field_d, param0);
-          param4 = rp.a(hc.field_h, -16226, gca.field_d, param4);
+          param0 = rp.clamp(hc.field_h, -16226, gca.field_d, param0);
+          param4 = rp.clamp(hc.field_h, -16226, gca.field_d, param4);
           GameScreen.a(param3, param4, param0, param2, 0);
         }
     }

@@ -58,9 +58,9 @@ final class ColourKeyOperator extends TextureOperator {
           }
           if (4 == var5) {
             var4_int = param1.readUnsignedMedium(-32768);
-            this.field_o[2] = SnakePitBehaviour.c(var4_int, 255) >> 12;
-            this.field_o[0] = SnakePitBehaviour.c(267386880, var4_int << 4);
-            this.field_o[1] = SnakePitBehaviour.c(4080, var4_int >> 4);
+            this.field_o[2] = SnakePitBehaviour.bitwiseAnd(var4_int, 255) >> 12;
+            this.field_o[0] = SnakePitBehaviour.bitwiseAnd(267386880, var4_int << 4);
+            this.field_o[1] = SnakePitBehaviour.bitwiseAnd(4080, var4_int >> 4);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -388,7 +388,7 @@ final class RoomEffectTraps {
               }
               var5.setPosition(1434528720, var13, var12);
               var5.instantiate(true, true, this.room, 0, 0, -1, (Trap) null);
-              this.field_d[var10] = (Trap) (var5.u(kha.b((int) param0, -24)));
+              this.field_d[var10] = (Trap) (var5.u(kha.bitwiseXor((int) param0, -24)));
               continue;
             }
             break;
@@ -445,11 +445,11 @@ final class RoomEffectTraps {
         var23 = TombRacer.field_G ? 1 : 0;
         try {
           if (0 < param3 &&
-            !cla.a(9181, param3)) {
+            !cla.isPowerOfTwoOrZero(9181, param3)) {
             throw new IllegalArgumentException("");
           }
           if (param4 > 0 &&
-            !cla.a(9181, param4)) {
+            !cla.isPowerOfTwoOrZero(9181, param4)) {
             throw new IllegalArgumentException("");
           }
           var7_int = jj.glFormatComponents(param5, (byte) -104);

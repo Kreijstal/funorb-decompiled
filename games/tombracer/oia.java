@@ -16,7 +16,7 @@ final class oia implements gs {
         return this.field_c.isRenderExpired((byte) 48);
     }
 
-    public final boolean a(boolean param0, uh param1) {
+    public final boolean a(boolean param0, LightSource param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

@@ -8,7 +8,7 @@ final class MatchScreen extends GameScreen implements rqa {
     MatchState matchState;
     private MatchProtocol protocol;
     static jea field_F;
-    int field_x;
+    int localPlayerIndex;
     private IntrusiveDeque overlays;
     static SpriteData field_q;
     private boolean[][] field_v;
@@ -161,15 +161,15 @@ final class MatchScreen extends GameScreen implements rqa {
         }
         if (this.protocol == null) {
           if (3 != this.matchState.field_K) {
-            if (this.matchState.field_I[this.field_x]) {
+            if (this.matchState.field_I[this.localPlayerIndex]) {
               hba.a(this.field_E, this.field_m, (byte) 64, this.field_i);
-              this.matchState.field_I[this.field_x] = false;
+              this.matchState.field_I[this.localPlayerIndex] = false;
             }
-            if (this.matchState.getSimulation(this.field_x, 0).b(0)) {
+            if (this.matchState.getSimulation(this.localPlayerIndex, 0).b(0)) {
               if (this.field_p) {
                 return;
               }
-              kq.a(this.matchState.players[this.field_x].getDeathCount((byte) -125), this.field_E, (byte) 114);
+              kq.a(this.matchState.players[this.localPlayerIndex].getDeathCount((byte) -125), this.field_E, (byte) 114);
               this.field_p = true;
             }
           }
@@ -247,7 +247,7 @@ final class MatchScreen extends GameScreen implements rqa {
           return;
         }
         iqa.field_c.d(114);
-        this.matchState.field_y[this.field_x].a(0, (byte) 37);
+        this.matchState.field_y[this.localPlayerIndex].a(0, (byte) 37);
         this.startRound(106);
     }
 
@@ -343,7 +343,7 @@ final class MatchScreen extends GameScreen implements rqa {
             throw new IllegalStateException("CA:" + param9);
           }
           this.field_E = param9;
-          this.field_x = param3;
+          this.localPlayerIndex = param3;
           MandelbrotOperator.field_o = null;
           ConsoleToken.field_o = false;
           stackIn_8_1 = (param0);
@@ -375,13 +375,13 @@ final class MatchScreen extends GameScreen implements rqa {
             }
           }
           if (this.field_D) {
-            this.protocol = new MatchProtocol(this.field_x, var14_int);
+            this.protocol = new MatchProtocol(this.localPlayerIndex, var14_int);
           }
           this.field_o = new int[var14_int];
           this.field_u = new boolean[var14_int];
           ArchiveNetworkClient.field_b = null;
           if (!this.d((byte) 64)) {
-            this.field_h = this.field_x;
+            this.field_h = this.localPlayerIndex;
           } else {
             this.field_h = 0;
           }
@@ -668,8 +668,8 @@ final class MatchScreen extends GameScreen implements rqa {
           return;
         }
         if (!this.field_D &&
-          this.field_x == 0) {
-          var4 = this.matchState.players[this.field_x];
+          this.localPlayerIndex == 0) {
+          var4 = this.matchState.players[this.localPlayerIndex];
           if (!var4.getSimulation(-1).j(0)) {
             SectorCacheStore.a(var4.getRoom((byte) -127), 64, this.matchState);
           }
@@ -788,7 +788,7 @@ final class MatchScreen extends GameScreen implements rqa {
         long var8Lifetime1;
         int var9Lifetime1;
         var12 = TombRacer.field_G ? 1 : 0;
-        if (!this.matchState.field_I[this.field_x]) {
+        if (!this.matchState.field_I[this.localPlayerIndex]) {
           return;
         }
         var5 = this.field_i;
@@ -1205,7 +1205,7 @@ final class MatchScreen extends GameScreen implements rqa {
         int var6;
         MatchOverlay var7;
         var6 = TombRacer.field_G ? 1 : 0;
-        if (this.field_x >= 0) {
+        if (this.localPlayerIndex >= 0) {
           var4 = this.field_D ? 1 : 0;
           if (!wka.field_d &&
             var4 == 0 &&
@@ -1341,7 +1341,7 @@ final class MatchScreen extends GameScreen implements rqa {
         }
         if (!this.matchState.field_h) {
           if (!this.d((byte) 80) &&
-            this.matchState.simulations[this.field_x].k(-19271)) {
+            this.matchState.simulations[this.localPlayerIndex].k(-19271)) {
             this.g((byte) -36);
           }
           for (var2 = 0; var2 < this.matchState.players.length; var2++) {
@@ -1486,7 +1486,7 @@ final class MatchScreen extends GameScreen implements rqa {
           var3 = -this.field_j + param0;
           if (!wka.field_d &&
             null != SecondaryNodeDequeIterator.field_a &&
-            SecondaryNodeDequeIterator.field_a.field_x >= 0 &&
+            SecondaryNodeDequeIterator.field_a.localPlayerIndex >= 0 &&
             !SecondaryNodeDequeIterator.field_a.field_D &&
             !SecondaryNodeDequeIterator.field_a.f((byte) 33) &&
             SpriteTileOperator.field_t == SecondaryNodeDequeIterator.field_a) {
@@ -1570,7 +1570,7 @@ final class MatchScreen extends GameScreen implements rqa {
           this.protocol.b(1)) {
           return;
         }
-        this.a(false, this.field_x);
+        this.a(false, this.localPlayerIndex);
     }
 
     final void i(int param0, int param1) {
@@ -1593,7 +1593,7 @@ final class MatchScreen extends GameScreen implements rqa {
         if (param0 < 60) {
           this.field_w = false;
         }
-        return this.field_x == -2 ? true : false;
+        return this.localPlayerIndex == -2 ? true : false;
     }
 
     final String getColouredPlayerName(int param0, int param1) {

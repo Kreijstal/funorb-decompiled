@@ -80,14 +80,14 @@ final class SweepRotateLocomotor extends Locomotor {
               var9 != 0) {
               var5 = var1.readString((byte) -76);
             }
-            var6 = uh.a(var4_ref_String, param0 ^ -14105);
+            var6 = LightSource.a(var4_ref_String, param0 ^ -14105);
             var7_ref = var1.readString((byte) -76);
             var8 = jd.normalizeDisplayName(1, (CharSequence) ((Object) var4_ref_String));
             if (null == var8) {
               var8 = var4_ref_String;
             }
             if (null == var6) {
-              var6 = uh.a(var7_ref, param0 - 14132);
+              var6 = LightSource.a(var7_ref, param0 - 14132);
               if (null != var6) {
                 CoinItemComponent.field_G.put(-1, var6, (long)var8.hashCode());
               }
@@ -267,7 +267,7 @@ final class SweepRotateLocomotor extends Locomotor {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_r = CoinItemComponent.a(true, 12, param1.readBits((byte) 44, 12));
+          this.field_r = CoinItemComponent.fromOffsetBinary(true, 12, param1.readBits((byte) 44, 12));
           this.field_p = SnakePitModel.a(8, 8192, 0, param1.readBits((byte) 44, 8));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -377,7 +377,7 @@ final class SweepRotateLocomotor extends Locomotor {
             return;
           }
           super.encode(param0, (byte) -101);
-          param0.writeBits((byte) -125, dqa.a(true, this.field_r, 12), 12);
+          param0.writeBits((byte) -125, dqa.toOffsetBinary(true, this.field_r, 12), 12);
           param0.writeBits((byte) 108, ResourceArchive.a((byte) -127, this.field_p, 8192, 8), 8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

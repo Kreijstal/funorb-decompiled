@@ -41,7 +41,7 @@ final class ScrollPane extends jea {
               var5 = var12.length << 2;
             }
             for (var7 = 0; var5 > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(255) << SnakePitBehaviour.c(768, var7 << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(255) << SnakePitBehaviour.bitwiseAnd(768, var7 << 8));
             }
             var4.unlink(param0 + 79);
             return;

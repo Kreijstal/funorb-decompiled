@@ -15,7 +15,7 @@ final class no extends MatchOverlay {
     static int[][] field_p;
     static int[][] field_r;
 
-    final static String a(byte param0, char param1) {
+    final static String charToString(byte param0, char param1) {
         int var2 = -36 % ((-5 - param0) / 36);
         return String.valueOf(param1);
     }
@@ -263,7 +263,7 @@ final class no extends MatchOverlay {
         field_k = (int[][]) null;
         field_q = (int[][]) null;
         if (!param0) {
-          no.a((byte) 52, '￐');
+          no.charToString((byte) 52, '￐');
         }
     }
 

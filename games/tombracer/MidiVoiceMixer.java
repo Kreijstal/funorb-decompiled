@@ -42,7 +42,7 @@ final class MidiVoiceMixer extends PcmStream {
         }
     }
 
-    final static int b(int param0, int param1, int param2) {
+    final static int min(int param0, int param1, int param2) {
         int var3 = 4 % ((param2 - 51) / 37);
         if (param1 < param0) {
           return param1;
@@ -128,7 +128,7 @@ final class MidiVoiceMixer extends PcmStream {
           if (param0 >= 0) {
             return;
           }
-          MidiVoiceMixer.b(-92, 42, -49);
+          MidiVoiceMixer.min(-92, 42, -49);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
           decompiledCaughtException = decompiledCaughtParameter2;

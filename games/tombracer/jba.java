@@ -50,7 +50,7 @@ final class jba extends TextFieldValidator {
           var3_int = WhiteLightSensorComponent.parseDecimalInt(var5, (byte) 70);
           if (var3_int > 0 &&
             130 >= var3_int) {
-            return uh.field_k;
+            return LightSource.field_k;
           }
           stackIn_10_0 = fp.field_c;
           return stackIn_10_0;

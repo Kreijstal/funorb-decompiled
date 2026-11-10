@@ -66,7 +66,7 @@ final class OpenGlSprite extends ToolkitSprite {
           var15 = var11;
           if (var11 != null) {
             for (var9 = 0; var9 < var14.length; var9++) {
-              var11[var9] = WallTile.a(var14[var9], -16777216);
+              var11[var9] = WallTile.bitwiseOr(var14[var9], -16777216);
             }
             this.a(param4, param1, 0, 0, var15, param4, param3, param0);
           }

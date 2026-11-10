@@ -166,12 +166,12 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
         return true;
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int atan2FirstQuadrant(int param0, int param1, int param2) {
         int var3 = 31 / ((59 - param0) / 41);
         if (param1 > param2) {
-          return 2048 - RasterShape.a(false, (param2 << 16) / param1);
+          return 2048 - RasterShape.atanFixed16(false, (param2 << 16) / param1);
         }
-        return RasterShape.a(false, (param1 << 16) / param2);
+        return RasterShape.atanFixed16(false, (param1 << 16) / param2);
     }
 
     final boolean g(byte param0) {
@@ -195,7 +195,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
     }
 
     public final void toggle(int param0) {
-        if (this.field_k) {
+        if (this.locked) {
           return;
         }
         super.toggle(-65);
@@ -247,9 +247,9 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
                 field_r = (kia) null;
               }
               if (this.field_s) {
-                this.field_t = this.field_u.a(this.trap.getFacingAngle(-25787), this.trap.P(param0 - 5418) << 16, this.getRoot(param0 - 5412), this.trap.getX(3), this.trap.getY(param0 + 4230), this.getRoom(true), 0, 0, MidiVoiceMixer.b(this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -5478), 123) / 2, false);
+                this.field_t = this.field_u.a(this.trap.getFacingAngle(-25787), this.trap.P(param0 - 5418) << 16, this.getRoot(param0 - 5412), this.trap.getX(3), this.trap.getY(param0 + 4230), this.getRoom(true), 0, 0, MidiVoiceMixer.min(this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -5478), 123) / 2, false);
                 if (!this.field_u.a(12111)) {
-                  this.c(false);
+                  this.stop(false);
                 }
               }
               return;
@@ -262,9 +262,9 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
           if (param0 != 5418) {
             field_r = (kia) null;
             if (this.field_s) {
-              this.field_t = this.field_u.a(this.trap.getFacingAngle(-25787), this.trap.P(param0 - 5418) << 16, this.getRoot(param0 - 5412), this.trap.getX(3), this.trap.getY(param0 + 4230), this.getRoom(true), 0, 0, MidiVoiceMixer.b(this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -5478), 123) / 2, false);
+              this.field_t = this.field_u.a(this.trap.getFacingAngle(-25787), this.trap.P(param0 - 5418) << 16, this.getRoot(param0 - 5412), this.trap.getX(3), this.trap.getY(param0 + 4230), this.getRoom(true), 0, 0, MidiVoiceMixer.min(this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -5478), 123) / 2, false);
               if (!this.field_u.a(12111)) {
-                this.c(false);
+                this.stop(false);
               }
             }
             return;
@@ -279,9 +279,9 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
               if (param0 != 5418) {
                 field_r = (kia) null;
                 if (this.field_s) {
-                  this.field_t = this.field_u.a(this.trap.getFacingAngle(-25787), this.trap.P(param0 - 5418) << 16, this.getRoot(param0 - 5412), this.trap.getX(3), this.trap.getY(param0 + 4230), this.getRoom(true), 0, 0, MidiVoiceMixer.b(this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -5478), 123) / 2, false);
+                  this.field_t = this.field_u.a(this.trap.getFacingAngle(-25787), this.trap.P(param0 - 5418) << 16, this.getRoot(param0 - 5412), this.trap.getX(3), this.trap.getY(param0 + 4230), this.getRoom(true), 0, 0, MidiVoiceMixer.min(this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -5478), 123) / 2, false);
                   if (!this.field_u.a(12111)) {
-                    this.c(false);
+                    this.stop(false);
                   }
                 }
                 return;
@@ -304,11 +304,11 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
         if (!this.field_s) {
           return;
         }
-        this.field_t = this.field_u.a(this.trap.getFacingAngle(-25787), this.trap.P(param0 - 5418) << 16, this.getRoot(param0 - 5412), this.trap.getX(3), this.trap.getY(param0 + 4230), this.getRoom(true), 0, 0, MidiVoiceMixer.b(this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -5478), 123) / 2, false);
+        this.field_t = this.field_u.a(this.trap.getFacingAngle(-25787), this.trap.P(param0 - 5418) << 16, this.getRoot(param0 - 5412), this.trap.getX(3), this.trap.getY(param0 + 4230), this.getRoom(true), 0, 0, MidiVoiceMixer.min(this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -5478), 123) / 2, false);
         if (this.field_u.a(12111)) {
           return;
         }
-        this.c(false);
+        this.stop(false);
     }
 
     final int hashState(int param0, int param1) {

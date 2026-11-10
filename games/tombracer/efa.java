@@ -27,7 +27,7 @@ final class efa extends WidgetContainer implements mia, ButtonListener {
             return true;
           }
           var4 = var3.b(-4666);
-          stackIn_10_0 = (var4 == uh.field_k);
+          stackIn_10_0 = (var4 == LightSource.field_k);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

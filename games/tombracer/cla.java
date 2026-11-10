@@ -9,7 +9,7 @@ final class cla extends DualLinkNode {
     static int[] field_m;
     private OpenGlToolkit field_l;
 
-    final static boolean a(int param0, int param1) {
+    final static boolean isPowerOfTwoOrZero(int param0, int param1) {
         if (param0 == 9181) {
           return (param1 & -param1) == param1 ? true : false;
         }

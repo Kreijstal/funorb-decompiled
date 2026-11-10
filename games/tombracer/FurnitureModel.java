@@ -25,14 +25,14 @@ final class FurnitureModel extends TrapModel {
           var7 = -80 / ((param4 + 38) / 47);
           var9 = this.field_p.b((byte) 74);
           if (var9 != null) {
-            var8 = GameScreen.a(4096 - this.body.getFacingAngle(-25787) >> 2, 2048, -40);
+            var8 = GameScreen.positiveModulo(4096 - this.body.getFacingAngle(-25787) >> 2, 2048, -40);
             gqa.a(var8, -83584144, param1, param2, var9, param3);
           }
           if (this.field_m != 1) {
             return;
           }
           var10 = SpawnerBehaviour.a(49, 12166, 1);
-          var8Lifetime1 = GameScreen.a(4096 - this.body.getFacingAngle(-25787) >> 2, 2048, 86);
+          var8Lifetime1 = GameScreen.positiveModulo(4096 - this.body.getFacingAngle(-25787) >> 2, 2048, 86);
           gqa.a(var8Lifetime1, -83584144, param1, param2, var10, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

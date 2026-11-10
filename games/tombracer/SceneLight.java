@@ -101,7 +101,7 @@ abstract class SceneLight extends IntrusiveNode {
               var8 = (var13[var4] & 16752521) >> 16;
               var9 = (int)(0.3 * (double)var8 + (0.59 * (double)var7 + 0.11 * (double)var6));
               var10 = var9 + ((var9 << 16) + (var9 << 8));
-              var3[var4] = WallTile.a(var5 << 24, var10);
+              var3[var4] = WallTile.bitwiseOr(var5 << 24, var10);
             }
             qf.field_k[var2_intLifetime2] = param0.createSpriteCopy(var3, OpenGlFramebuffer.field_i[var2_intLifetime2].c(), 89, OpenGlFramebuffer.field_i[var2_intLifetime2].a(), OpenGlFramebuffer.field_i[var2_intLifetime2].a(), 0);
           }

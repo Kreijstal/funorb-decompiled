@@ -2296,7 +2296,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final SceneLight a(int param0, int param1, int param2, int param3, int param4, float param5) {
+    final SceneLight createLight(int param0, int param1, int param2, int param3, int param4, float param5) {
         return (SceneLight) ((Object) new jq(param0, param1, param2, param3, param4, param5));
     }
 
@@ -2602,7 +2602,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
                 for (var8 = 0; param0.field_i > var8; var8++) {
                   incrementValue$2 = var6;
                   var6++;
-                  var4[incrementValue$2] = WallTile.a(param0.field_h[var5] << 24, param0.field_g[SnakePitBehaviour.c((int) param0.field_f[var5], 255)]);
+                  var4[incrementValue$2] = WallTile.bitwiseOr(param0.field_h[var5] << 24, param0.field_g[SnakePitBehaviour.bitwiseAnd((int) param0.field_f[var5], 255)]);
                   var5++;
                 }
               }
@@ -2619,7 +2619,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
                   if (0 == var9) {
                     stackIn_19_2 = 0;
                   } else {
-                    stackIn_19_2 = WallTile.a(-16777216, var9);
+                    stackIn_19_2 = WallTile.bitwiseOr(-16777216, var9);
                   }
                   stackIn_18_0[stackIn_18_1] = stackIn_19_2;
                 }

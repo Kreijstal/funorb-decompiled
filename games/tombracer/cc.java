@@ -273,7 +273,7 @@ final class cc extends IntrusiveNode {
             stackIn_4_0 = CollisionGrid.field_f;
             return stackIn_4_0;
           }
-          var4 = aga.a(-1025);
+          var4 = AnimatedLight.a(-1025);
           var5 = 0;
           while (true) {
             if (var5 >= var4.length) {

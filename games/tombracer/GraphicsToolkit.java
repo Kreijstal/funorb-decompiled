@@ -225,7 +225,7 @@ abstract class GraphicsToolkit {
 
     abstract RenderBuffer b(int param0, int param1);
 
-    abstract SceneLight a(int param0, int param1, int param2, int param3, int param4, float param5);
+    abstract SceneLight createLight(int param0, int param1, int param2, int param3, int param4, float param5);
 
     abstract ToolkitSprite createSprite(int[] param0, int param1, int param2, int param3, int param4, boolean param5);
 

@@ -113,7 +113,7 @@ final class SafeZoneBehaviour extends Behaviour {
         if (param0 != 5418) {
           return;
         }
-        if (this.d(8031)) {
+        if (this.isTouchingPlayer(8031)) {
           this.field_r = true;
           var2 = this.getPlayer((byte) 19);
           if (this.field_t) {
@@ -137,7 +137,7 @@ final class SafeZoneBehaviour extends Behaviour {
           return;
         }
         if (this.field_p) {
-          this.c(false);
+          this.stop(false);
           return;
         }
     }

@@ -28,9 +28,9 @@ final class TutorialHints {
         int var9;
         Player var10;
         var9 = TombRacer.field_G ? 1 : 0;
-        var10 = this.field_l.matchState.players[this.field_l.field_x];
+        var10 = this.field_l.matchState.players[this.field_l.localPlayerIndex];
         var3 = var10.getRoom((byte) -106);
-        var4 = this.field_l.matchState.getPlayerCourseIndex(1, this.field_l.field_x);
+        var4 = this.field_l.matchState.getPlayerCourseIndex(1, this.field_l.localPlayerIndex);
         if (param0 != 9981) {
           this.a(77);
         }

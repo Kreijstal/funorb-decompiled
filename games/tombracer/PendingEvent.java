@@ -100,8 +100,8 @@ final class PendingEvent extends IntrusiveNode {
             var6 = param0.getEnd(param1 ^ -30481);
             if (var4 <= var5 &&
               var6 >= var3_int) {
-              var7 = RandomBrickOperator.d(var5, var6, 2);
-              var8 = MidiVoiceMixer.b(var4, var3_int, param1 ^ -120);
+              var7 = RandomBrickOperator.max(var5, var6, 2);
+              var8 = MidiVoiceMixer.min(var4, var3_int, param1 ^ -120);
               if (this.duration < param0.duration) {
                 this.instigator = param0.instigator;
               }

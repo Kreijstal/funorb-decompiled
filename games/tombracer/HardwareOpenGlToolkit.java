@@ -152,8 +152,8 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           var8_int = 82 / ((param6 - 13) / 46);
-          if (!this.field_Wc && (!cla.a(9181, param3) ||
-            !cla.a(9181, param5))) {
+          if (!this.field_Wc && (!cla.isPowerOfTwoOrZero(9181, param3) ||
+            !cla.isPowerOfTwoOrZero(9181, param5))) {
             if (this.field_sd) {
               stackIn_8_0 = new pe(this, param3, param5, param0, param1, param4);
               return (GpuTexture2D) ((Object) stackIn_8_0);
@@ -260,9 +260,9 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
         jaggl.OpenGL.glFogf(2915, this.field_B);
         jaggl.OpenGL.glFogf(2916, this.field_Hc);
-        dia.field_r[2] = (float)SnakePitBehaviour.c(this.field_g, 255) / 255.0f;
-        dia.field_r[param0] = (float)SnakePitBehaviour.c(65280, this.field_g) / 65280.0f;
-        dia.field_r[0] = (float)SnakePitBehaviour.c(16711680, this.field_g) / 16711680.0f;
+        dia.field_r[2] = (float)SnakePitBehaviour.bitwiseAnd(this.field_g, 255) / 255.0f;
+        dia.field_r[param0] = (float)SnakePitBehaviour.bitwiseAnd(65280, this.field_g) / 65280.0f;
+        dia.field_r[0] = (float)SnakePitBehaviour.bitwiseAnd(16711680, this.field_g) / 16711680.0f;
         jaggl.OpenGL.glFogfv(2918, dia.field_r, 0);
     }
 
@@ -360,9 +360,9 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           dia.field_r[3] = 1.0f;
           jaggl.OpenGL.glLightfv(var5, 4611, dia.field_r, 0);
           dia.field_r[3] = 1.0f;
-          dia.field_r[1] = var6 * (float)SnakePitBehaviour.c(255, var4 >> 8);
-          dia.field_r[2] = var6 * (float)SnakePitBehaviour.c(var4, 255);
-          dia.field_r[0] = (float)SnakePitBehaviour.c(255, var4 >> 16) * var6;
+          dia.field_r[1] = var6 * (float)SnakePitBehaviour.bitwiseAnd(255, var4 >> 8);
+          dia.field_r[2] = var6 * (float)SnakePitBehaviour.bitwiseAnd(var4, 255);
+          dia.field_r[0] = (float)SnakePitBehaviour.bitwiseAnd(255, var4 >> 16) * var6;
           jaggl.OpenGL.glLightfv(var5, 4609, dia.field_r, 0);
           jaggl.OpenGL.glLightf(var5, 4617, 1.0f / (float)(var3.a((byte) -23) * var3.a((byte) -84)));
           jaggl.OpenGL.glEnable(var5);
@@ -433,8 +433,8 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           if (param3 != -63) {
             this.field_Uc = false;
           }
-          if (!this.field_Wc && (!cla.a(9181, param0) ||
-            !cla.a(9181, param1))) {
+          if (!this.field_Wc && (!cla.isPowerOfTwoOrZero(9181, param0) ||
+            !cla.isPowerOfTwoOrZero(9181, param1))) {
             if (!this.field_sd) {
               stackIn_10_0 = new OpenGlTexture2D(this, param2, param4, lla.a(false, param0), lla.a(false, param1));
               return (GpuTexture2D) ((Object) stackIn_10_0);
@@ -537,8 +537,8 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           if (param4 != 1) {
             this.field_id = (og[]) null;
           }
-          if (!this.field_Wc && (!cla.a(9181, param7) ||
-            !cla.a(9181, param3))) {
+          if (!this.field_Wc && (!cla.isPowerOfTwoOrZero(9181, param7) ||
+            !cla.isPowerOfTwoOrZero(9181, param3))) {
             if (this.field_sd) {
               stackIn_10_0 = new pe(this, param6, param7, param3, param1, param2, param5);
               return (GpuTexture2D) ((Object) stackIn_10_0);
@@ -971,9 +971,9 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           this.queueProgramDeletion(20, (byte) 35);
         }
         dia.field_r[3] = (float)(this.field_bc >>> 24) / 255.0f;
-        dia.field_r[2] = (float)SnakePitBehaviour.c(this.field_bc, 255) / 255.0f;
-        dia.field_r[1] = (float)SnakePitBehaviour.c(65280, this.field_bc) / 65280.0f;
-        dia.field_r[0] = (float)SnakePitBehaviour.c(16711680, this.field_bc) / 16711680.0f;
+        dia.field_r[2] = (float)SnakePitBehaviour.bitwiseAnd(this.field_bc, 255) / 255.0f;
+        dia.field_r[1] = (float)SnakePitBehaviour.bitwiseAnd(65280, this.field_bc) / 65280.0f;
+        dia.field_r[0] = (float)SnakePitBehaviour.bitwiseAnd(16711680, this.field_bc) / 16711680.0f;
         jaggl.OpenGL.glTexEnvfv(8960, 8705, dia.field_r, 0);
     }
 
@@ -1035,8 +1035,8 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
             stackIn_2_0 = (GpuTexture2D) null;
             return stackIn_2_0;
           }
-          if (!this.field_Wc && (!cla.a(9181, param4) ||
-            !cla.a(9181, param7))) {
+          if (!this.field_Wc && (!cla.isPowerOfTwoOrZero(9181, param4) ||
+            !cla.isPowerOfTwoOrZero(9181, param7))) {
             if (this.field_sd) {
               stackIn_11_0 = new pe(this, param0, param4, param7, param6, param5, param1);
               return (GpuTexture2D) ((Object) stackIn_11_0);

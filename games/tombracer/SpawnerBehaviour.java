@@ -110,7 +110,7 @@ final class SpawnerBehaviour extends Behaviour {
           if (this.field_r != 0) {
             return;
           }
-          this.c(false);
+          this.stop(false);
           return;
         }
         this.a(77, -12, true);
@@ -133,7 +133,7 @@ final class SpawnerBehaviour extends Behaviour {
         if (this.field_r != 0) {
           return;
         }
-        this.c(false);
+        this.stop(false);
     }
 
     final int hashState(int param0, int param1) {

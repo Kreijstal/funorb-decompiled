@@ -165,7 +165,7 @@ final class FacePlayerLocomotor extends Locomotor {
     FacePlayerLocomotor(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
-          this.field_o = CoinItemComponent.a(true, 12, param1.readBits((byte) 44, 12));
+          this.field_o = CoinItemComponent.fromOffsetBinary(true, 12, param1.readBits((byte) 44, 12));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -174,7 +174,7 @@ final class FacePlayerLocomotor extends Locomotor {
     final void encode(BitPacketBuffer param0, byte param1) {
         try {
           super.encode(param0, (byte) -124);
-          param0.writeBits((byte) 37, dqa.a(true, this.field_o, 12), 12);
+          param0.writeBits((byte) 37, dqa.toOffsetBinary(true, this.field_o, 12), 12);
           if (param1 > -78) {
             FacePlayerLocomotor.a(-12, 90, -68, 66);
           }

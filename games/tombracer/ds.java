@@ -78,7 +78,7 @@ final class ds {
         if (!param2) {
           return;
         }
-        this.field_b[param0] = WallTile.a(this.field_b[param0], 1 << param1);
+        this.field_b[param0] = WallTile.bitwiseOr(this.field_b[param0], 1 << param1);
     }
 
     final static void a(byte param0, boolean param1) {
@@ -143,7 +143,7 @@ final class ds {
     }
 
     final void a(int param0, byte param1, int param2) {
-        this.field_o[param0] = WallTile.a(this.field_o[param0], 1 << param2);
+        this.field_o[param0] = WallTile.bitwiseOr(this.field_o[param0], 1 << param2);
         if (param1 != -52) {
           ds.releaseStatics(false);
         }

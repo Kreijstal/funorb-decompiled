@@ -5,7 +5,7 @@ final class EdgeDetectOperator extends TextureOperator {
     static int[] field_m;
     private int field_n;
 
-    final static int e(int param0, int param1, int param2) {
+    final static int floorDivide(int param0, int param1, int param2) {
         if (param0 != -1) {
           return 4;
         }
@@ -20,7 +20,7 @@ final class EdgeDetectOperator extends TextureOperator {
 
     final static boolean d(int param0, int param1, int param2) {
         if (param2 != 26205) {
-          EdgeDetectOperator.e(-33, 75, 49);
+          EdgeDetectOperator.floorDivide(-33, 75, 49);
         }
         return (param1 & 256) != 0 ? true : false;
     }

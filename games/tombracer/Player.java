@@ -1641,8 +1641,8 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
           var10 = 786432 * param4;
           var11 = var9 / 2 + (var7_int + this.x);
           var12 = var10 / 2 + (var8 + this.y);
-          var13 = this.size + ua.a(var9, -113);
-          var14 = this.size + ua.a(var10, 67);
+          var13 = this.size + ua.abs(var9, -113);
+          var14 = this.size + ua.abs(var10, 67);
           if (!this.room.a(var11, 131072, var13, var14, var12, true)) {
             return false;
           }

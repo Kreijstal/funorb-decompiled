@@ -25,7 +25,7 @@ abstract class GameEvent extends IntrusiveNode {
 
     abstract boolean isRoomScoped(boolean param0);
 
-    final static int a(int param0, int param1, int param2) {
+    final static int divideFixed16(int param0, int param1, int param2) {
         long var3 = 0L;
         long var3Lifetime1;
         if (param1 == -28970) {

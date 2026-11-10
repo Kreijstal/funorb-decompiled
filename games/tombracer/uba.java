@@ -20,7 +20,7 @@ final class uba extends kma implements TextInputListener, eaa {
           var2_int = this.field_i.a(param0 - 1780);
           var3 = this.field_i.getYear(param0 + 20939);
           var4 = this.field_i.getDay((byte) 110);
-          var5 = ResourceArchive.a((byte) 60);
+          var5 = ResourceArchive.currentYear((byte) 60);
           if (var4 >= param0 &&
             -3 + var5 >= var4) {
             if (fa.a(var3, var2_int, true, var4)) {
@@ -80,7 +80,7 @@ final class uba extends kma implements TextInputListener, eaa {
           var2_int = this.field_i.a(111);
           var3 = this.field_i.getYear(22829);
           var4 = this.field_i.getDay((byte) 110);
-          var5 = ResourceArchive.a((byte) 125);
+          var5 = ResourceArchive.currentYear((byte) 125);
           if (~var4 > param0) {
             stackIn_3_0 = fp.field_c;
             return stackIn_3_0;
@@ -98,7 +98,7 @@ final class uba extends kma implements TextInputListener, eaa {
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
           return fp.field_c;
         }
-        return uh.field_k;
+        return LightSource.field_k;
     }
 
     public final void a(int param0, DropdownList param1) {

@@ -37,8 +37,8 @@ final class mga extends IntrusiveNode {
             stackIn_2_0 = (qk) null;
             return stackIn_2_0;
           }
-          if (!param7.field_Gb && (!cla.a(9181, param1) ||
-            !cla.a(9181, param0))) {
+          if (!param7.field_Gb && (!cla.isPowerOfTwoOrZero(9181, param1) ||
+            !cla.isPowerOfTwoOrZero(9181, param0))) {
             if (param7.field_Cc) {
               stackIn_11_0 = new qk(param7, 34037, param1, param0, param6, param2, param3, param5);
               return stackIn_11_0;

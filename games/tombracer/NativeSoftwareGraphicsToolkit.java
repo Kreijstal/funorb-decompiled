@@ -418,7 +418,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
         this.n(var2.field_b.field_nativeid, var2.field_a.field_nativeid);
     }
 
-    final SceneLight a(int param0, int param1, int param2, int param3, int param4, float param5) {
+    final SceneLight createLight(int param0, int param1, int param2, int param3, int param4, float param5) {
         return (SceneLight) ((Object) new kka(param0, param1, param2, param3, param4, param5));
     }
 

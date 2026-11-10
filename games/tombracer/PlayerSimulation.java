@@ -448,9 +448,9 @@ final class PlayerSimulation {
     final int b(boolean param0, int param1) {
         if (param0) {
           this.clearRoomEffectSlot((byte) 29, -34, 71);
-          return RandomBrickOperator.d(this.getEffectSlot(param1, 0), this.rooms[this.player.getCourseIndex(-101)].getEffectSlot(-121, param1), 2);
+          return RandomBrickOperator.max(this.getEffectSlot(param1, 0), this.rooms[this.player.getCourseIndex(-101)].getEffectSlot(-121, param1), 2);
         }
-        return RandomBrickOperator.d(this.getEffectSlot(param1, 0), this.rooms[this.player.getCourseIndex(-101)].getEffectSlot(-121, param1), 2);
+        return RandomBrickOperator.max(this.getEffectSlot(param1, 0), this.rooms[this.player.getCourseIndex(-101)].getEffectSlot(-121, param1), 2);
     }
 
     final boolean h(int param0) {

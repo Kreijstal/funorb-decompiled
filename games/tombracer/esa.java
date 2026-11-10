@@ -146,7 +146,7 @@ final class esa {
         for (var2 = 0; aq.a(-5640) > var2; var2++) {
           if (var1 < 30) {
             var3 = ak.a(var2, (byte) 37);
-            if (!aga.a(false, var3).field_d) {
+            if (!AnimatedLight.a(false, var3).field_d) {
               this.field_d.set(var2);
               var1++;
             }

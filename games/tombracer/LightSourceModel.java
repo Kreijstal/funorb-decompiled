@@ -7,7 +7,7 @@ final class LightSourceModel extends TrapModel {
     private jaa field_n;
     private int field_m;
     private int field_o;
-    private uh field_s;
+    private LightSource field_s;
     private boolean field_r;
 
     final void d(int param0) {
@@ -125,22 +125,22 @@ final class LightSourceModel extends TrapModel {
         int var7;
         int var8;
         Room var9;
-        aga var10;
-        aga var11;
-        aga var12;
-        aga var13;
-        aga var14;
-        aga var15;
-        aga var16;
-        aga var17;
-        aga var18;
-        aga var19;
-        aga var20;
-        aga var21;
-        aga var22;
-        aga var23;
-        aga var24;
-        aga var25;
+        AnimatedLight var10;
+        AnimatedLight var11;
+        AnimatedLight var12;
+        AnimatedLight var13;
+        AnimatedLight var14;
+        AnimatedLight var15;
+        AnimatedLight var16;
+        AnimatedLight var17;
+        AnimatedLight var18;
+        AnimatedLight var19;
+        AnimatedLight var20;
+        AnimatedLight var21;
+        AnimatedLight var22;
+        AnimatedLight var23;
+        AnimatedLight var24;
+        AnimatedLight var25;
         int var6Lifetime1;
         int var7Lifetime1;
         var8 = TombRacer.field_G ? 1 : 0;
@@ -164,8 +164,8 @@ final class LightSourceModel extends TrapModel {
         var7 = this.field_q;
         if (var7 == 0) {
           var6 = 0;
-          var11 = new aga(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
-          this.field_s = new uh(var11);
+          var11 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
+          this.field_s = new LightSource(var11);
           this.field_s.a(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
           if (this.field_r) {
             this.field_s.b(uca.cosmeticRandom.nextBounded(50000, 0), 0);
@@ -177,8 +177,8 @@ final class LightSourceModel extends TrapModel {
           var7 = this.field_o;
           if (var7 == 0) {
             var6 = 16;
-            var13 = new aga(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
-            this.field_s = new uh(var13);
+            var13 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
+            this.field_s = new LightSource(var13);
             this.field_s.a(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
             if (this.field_r) {
               this.field_s.b(uca.cosmeticRandom.nextBounded(50000, 0), 0);
@@ -188,8 +188,8 @@ final class LightSourceModel extends TrapModel {
           }
           if (1 == var7) {
             var6 = 15;
-            var14 = new aga(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
-            this.field_s = new uh(var14);
+            var14 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
+            this.field_s = new LightSource(var14);
             this.field_s.a(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
             if (this.field_r) {
               this.field_s.b(uca.cosmeticRandom.nextBounded(50000, 0), 0);
@@ -198,8 +198,8 @@ final class LightSourceModel extends TrapModel {
             return;
           }
           if (2 != var7) {
-            var12 = new aga(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
-            this.field_s = new uh(var12);
+            var12 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
+            this.field_s = new LightSource(var12);
             this.field_s.a(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
             if (this.field_r) {
               this.field_s.b(uca.cosmeticRandom.nextBounded(50000, 0), 0);
@@ -208,8 +208,8 @@ final class LightSourceModel extends TrapModel {
             return;
           }
           var6 = 14;
-          var15 = new aga(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
-          this.field_s = new uh(var15);
+          var15 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
+          this.field_s = new LightSource(var15);
           this.field_s.a(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
           if (this.field_r) {
             this.field_s.b(uca.cosmeticRandom.nextBounded(50000, 0), 0);
@@ -221,8 +221,8 @@ final class LightSourceModel extends TrapModel {
           var7 = this.field_o;
           if (var7 == 0) {
             var6 = 11;
-            var17 = new aga(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
-            this.field_s = new uh(var17);
+            var17 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
+            this.field_s = new LightSource(var17);
             this.field_s.a(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
             if (this.field_r) {
               this.field_s.b(uca.cosmeticRandom.nextBounded(50000, 0), 0);
@@ -232,8 +232,8 @@ final class LightSourceModel extends TrapModel {
           }
           if (var7 == 1) {
             var6 = 7;
-            var18 = new aga(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
-            this.field_s = new uh(var18);
+            var18 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
+            this.field_s = new LightSource(var18);
             this.field_s.a(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
             if (this.field_r) {
               this.field_s.b(uca.cosmeticRandom.nextBounded(50000, 0), 0);
@@ -242,8 +242,8 @@ final class LightSourceModel extends TrapModel {
             return;
           }
           if (2 != var7) {
-            var16 = new aga(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
-            this.field_s = new uh(var16);
+            var16 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
+            this.field_s = new LightSource(var16);
             this.field_s.a(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
             if (this.field_r) {
               this.field_s.b(uca.cosmeticRandom.nextBounded(50000, 0), 0);
@@ -252,8 +252,8 @@ final class LightSourceModel extends TrapModel {
             return;
           }
           var6 = 9;
-          var19 = new aga(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
-          this.field_s = new uh(var19);
+          var19 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
+          this.field_s = new LightSource(var19);
           this.field_s.a(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
           if (this.field_r) {
             this.field_s.b(uca.cosmeticRandom.nextBounded(50000, 0), 0);
@@ -264,8 +264,8 @@ final class LightSourceModel extends TrapModel {
         if (var7 != 3) {
           if (var7 == 4) {
             var6 = 5;
-            var24 = new aga(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
-            this.field_s = new uh(var24);
+            var24 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
+            this.field_s = new LightSource(var24);
             this.field_s.a(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
             if (this.field_r) {
               this.field_s.b(uca.cosmeticRandom.nextBounded(50000, 0), 0);
@@ -274,8 +274,8 @@ final class LightSourceModel extends TrapModel {
             return;
           }
           if (var7 != 5) {
-            var10 = new aga(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
-            this.field_s = new uh(var10);
+            var10 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
+            this.field_s = new LightSource(var10);
             this.field_s.a(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
             if (this.field_r) {
               this.field_s.b(uca.cosmeticRandom.nextBounded(50000, 0), 0);
@@ -284,8 +284,8 @@ final class LightSourceModel extends TrapModel {
             return;
           }
           var6 = 4;
-          var25 = new aga(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
-          this.field_s = new uh(var25);
+          var25 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
+          this.field_s = new LightSource(var25);
           this.field_s.a(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
           if (this.field_r) {
             this.field_s.b(uca.cosmeticRandom.nextBounded(50000, 0), 0);
@@ -296,8 +296,8 @@ final class LightSourceModel extends TrapModel {
         var7Lifetime1 = this.field_o;
         if (var7Lifetime1 == 0) {
           var6 = 10;
-          var21 = new aga(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
-          this.field_s = new uh(var21);
+          var21 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
+          this.field_s = new LightSource(var21);
           this.field_s.a(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
           if (this.field_r) {
             this.field_s.b(uca.cosmeticRandom.nextBounded(50000, 0), 0);
@@ -307,8 +307,8 @@ final class LightSourceModel extends TrapModel {
         }
         if (1 == var7Lifetime1) {
           var6 = 6;
-          var22 = new aga(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
-          this.field_s = new uh(var22);
+          var22 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
+          this.field_s = new LightSource(var22);
           this.field_s.a(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
           if (this.field_r) {
             this.field_s.b(uca.cosmeticRandom.nextBounded(50000, 0), 0);
@@ -317,8 +317,8 @@ final class LightSourceModel extends TrapModel {
           return;
         }
         if (var7Lifetime1 != 2) {
-          var20 = new aga(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
-          this.field_s = new uh(var20);
+          var20 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
+          this.field_s = new LightSource(var20);
           this.field_s.a(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
           if (this.field_r) {
             this.field_s.b(uca.cosmeticRandom.nextBounded(50000, 0), 0);
@@ -327,8 +327,8 @@ final class LightSourceModel extends TrapModel {
           return;
         }
         var6Lifetime1 = 8;
-        var23 = new aga(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6Lifetime1);
-        this.field_s = new uh(var23);
+        var23 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6Lifetime1);
+        this.field_s = new LightSource(var23);
         this.field_s.a(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
         if (this.field_r) {
           this.field_s.b(uca.cosmeticRandom.nextBounded(50000, 0), 0);
@@ -345,7 +345,7 @@ final class LightSourceModel extends TrapModel {
         RuntimeException var4 = null;
         try {
           if (param2 < 40) {
-            this.field_s = (uh) null;
+            this.field_s = (LightSource) null;
             this.k(24642);
           } else {
             this.k(24642);

@@ -398,7 +398,7 @@ final class tn extends IntrusiveNode {
               }
               var22 = var38.readVarInt((byte) -123);
             }
-            this.field_g[var23] = (short)(this.field_g[var23] + (SnakePitBehaviour.c(-1 + var22, 2) << 14));
+            this.field_g[var23] = (short)(this.field_g[var23] + (SnakePitBehaviour.bitwiseAnd(-1 + var22, 2) << 14));
             var20Lifetime2--;
             this.field_k[var23] = var22;
           }
@@ -537,7 +537,7 @@ final class tn extends IntrusiveNode {
               var31 = var15[var29Lifetime3Lifetime1 + 1];
               var32 = (var30 - var27Lifetime6Lifetime1) / 2 + (var30 - var27Lifetime6Lifetime1) * var28_int;
               for (var33 = var27Lifetime6Lifetime1; var30 > var33; var33++) {
-                var34 = EdgeDetectOperator.e(-1, var32, -var27Lifetime6Lifetime1 + var30);
+                var34 = EdgeDetectOperator.floorDivide(-1, var32, -var27Lifetime6Lifetime1 + var30);
                 this.field_j[var33] = (byte)(var34 * this.field_j[var33] + 32 >> 6);
                 var32 = var32 + (-var28_int + var31);
               }
@@ -581,7 +581,7 @@ final class tn extends IntrusiveNode {
               var37 = var27Lifetime7;
               var33Lifetime1 = var37;
               while (var30Lifetime1Lifetime1 > var37) {
-                var34Lifetime1 = EdgeDetectOperator.e(-1, var32Lifetime1, -var27Lifetime7 + var30Lifetime1Lifetime1);
+                var34Lifetime1 = EdgeDetectOperator.floorDivide(-1, var32Lifetime1, -var27Lifetime7 + var30Lifetime1Lifetime1);
                 var35 = var34Lifetime1 + (255 & this.field_l[var37]);
                 if (var35 < 0) {
                   var35 = 0;

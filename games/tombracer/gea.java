@@ -147,8 +147,8 @@ final class gea {
           var3_int = param1.readBits((byte) 44, 4);
           this.field_b = new int[var3_int][2];
           for (var4 = 0; var3_int > var4; var4++) {
-            this.field_b[var4][0] = CoinItemComponent.a(true, 12, param1.readBits((byte) 44, 12)) << 16;
-            this.field_b[var4][1] = CoinItemComponent.a(true, 12, param1.readBits((byte) 44, 12)) << 16;
+            this.field_b[var4][0] = CoinItemComponent.fromOffsetBinary(true, 12, param1.readBits((byte) 44, 12)) << 16;
+            this.field_b[var4][1] = CoinItemComponent.fromOffsetBinary(true, 12, param1.readBits((byte) 44, 12)) << 16;
           }
           if (11 <= param0) {
             this.field_a = param1.readBits((byte) 44, 1) == 1 ? true : false;
@@ -164,8 +164,8 @@ final class gea {
         try {
           param0.writeBits((byte) 20, this.field_b.length, 4);
           for (var3_int = param1; var3_int < this.field_b.length; var3_int++) {
-            param0.writeBits((byte) -128, dqa.a(true, this.field_b[var3_int][0] >> 16, 12), 12);
-            param0.writeBits((byte) -125, dqa.a(true, this.field_b[var3_int][1] >> 16, 12), 12);
+            param0.writeBits((byte) -128, dqa.toOffsetBinary(true, this.field_b[var3_int][0] >> 16, 12), 12);
+            param0.writeBits((byte) -125, dqa.toOffsetBinary(true, this.field_b[var3_int][1] >> 16, 12), 12);
           }
           param0.writeBits((byte) 74, !this.field_a ? 0 : 1, 1);
         } catch (RuntimeException runtimeException) {

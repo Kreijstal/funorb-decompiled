@@ -6,12 +6,12 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
     static String field_h;
     Trap trap;
     private SwitchableId field_j;
-    boolean field_k;
-    private boolean field_i;
+    boolean locked;
+    private boolean stopped;
     private SwitchableId field_l;
     private Room room;
 
-    final boolean d(int param0) {
+    final boolean isTouchingPlayer(int param0) {
         Player var2 = null;
         Player var2Lifetime1;
         if (param0 == 8031) {
@@ -115,11 +115,11 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
         }
     }
 
-    void c(boolean param0) {
+    void stop(boolean param0) {
         if (param0) {
           return;
         }
-        this.field_i = true;
+        this.stopped = true;
     }
 
     void a(int param0, ui param1, boolean param2, ui param3) {
@@ -158,7 +158,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
             stackIn_3_0 = 0;
             return stackIn_3_0;
           }
-          this.d(-76);
+          this.isTouchingPlayer(-76);
           return 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -182,7 +182,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
 
     public void toggle(int param0) {
         int var2 = 98 % ((28 - param0) / 49);
-        if (this.field_k) {
+        if (this.locked) {
           return;
         }
         this.enabled = !this.enabled ? true : false;
@@ -197,7 +197,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
 
     public final SwitchableScope getScope(byte param0) {
         if (param0 <= 105) {
-          this.c(false);
+          this.stop(false);
           return (SwitchableScope) ((Object) this.trap.getRoot(0));
         }
         return (SwitchableScope) ((Object) this.trap.getRoot(0));
@@ -208,7 +208,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
         try {
           this.enabled = param1.readBits((byte) 44, 1) == 1 ? true : false;
           if (param0.formatVersion >= 22) {
-            this.field_k = param1.readBits((byte) 44, 1) == 1 ? true : false;
+            this.locked = param1.readBits((byte) 44, 1) == 1 ? true : false;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "nv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -324,14 +324,14 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
         if (param0 != 87) {
           this.p((byte) -104);
           if (null != this.trap) {
-            return this.field_i ? true : false;
+            return this.stopped ? true : false;
           }
           return true;
         }
         if (null == this.trap) {
           return true;
         }
-        if (!this.field_i) {
+        if (!this.stopped) {
           return false;
         }
         return true;
@@ -341,7 +341,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
         if (param0 != 48) {
           return false;
         }
-        return this.field_i;
+        return this.stopped;
     }
 
     public final int getRenderY(byte param0) {
@@ -356,7 +356,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
         try {
           param1.writeBits((byte) -127, this.getTypeId(param0), 6);
           param1.writeBits((byte) -126, !this.enabled ? 0 : 1, 1);
-          param1.writeBits((byte) 112, !this.field_k ? 0 : 1, 1);
+          param1.writeBits((byte) 112, !this.locked ? 0 : 1, 1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "nv.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -448,7 +448,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
     }
 
     final void a(byte param0, boolean param1) {
-        this.field_k = param1 ? true : false;
+        this.locked = param1 ? true : false;
         if (param0 != -24) {
           this.room = (Room) null;
         }
@@ -462,8 +462,8 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
 
     Behaviour(Room param0, boolean param1) {
         this.enabled = true;
-        this.field_i = false;
-        this.field_k = false;
+        this.stopped = false;
+        this.locked = false;
         try {
           this.room = param0;
           this.a(48, param0.e(-38), param1, (ui) null);

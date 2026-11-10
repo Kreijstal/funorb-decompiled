@@ -108,10 +108,10 @@ final class ck {
           SocketArchiveNetworkClient.field_w[4] = PacketBuffer.field_f;
           SocketArchiveNetworkClient.field_w[1] = cha.field_b;
           RasterShape.field_e = new jea(0L, (jea) null);
-          uh.field_h = new jea(0L, ooa.field_f, ija.field_i);
+          LightSource.field_h = new jea(0L, ooa.field_f, ija.field_i);
           vw.field_b = new jea(0L, SecondaryNodeDeque.field_b, MessageOverlay.field_m);
           bsa.field_j = new ScrollPane(0L, new jea(0L, (jea) null), rfa.field_C, DateFieldsWidget.field_F);
-          RasterShape.field_e.b(-126, uh.field_h);
+          RasterShape.field_e.b(-126, LightSource.field_h);
           if (UnlockOverlay.field_p) {
             RasterShape.field_e.b(param11 - 25575, vw.field_b);
           }
@@ -250,7 +250,7 @@ final class ck {
           scanLoop2: while (true) {
             if (var17_int < param0) {
               SimpleConditionBehaviour.field_p[var17_int + 4] = new jea(0L, una.field_j, kma.field_e[var17_int]);
-              array$2 = new tv[1 + SnakePitBehaviour.c((int) SnakePitModel.field_n[var17_int], 255)];
+              array$2 = new tv[1 + SnakePitBehaviour.bitwiseAnd((int) SnakePitModel.field_n[var17_int], 255)];
               bf.field_b[4 + var17_int] = array$2;
               bf.field_b[var17_int + 4][0] = new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b);
               stackIn_71_0 = 0;

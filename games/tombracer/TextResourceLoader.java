@@ -97,7 +97,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 123, "ticketing_oneunread");
                 if (var2 != null) {
-                  aga.field_a = jaa.decodeText((byte) 80, var2);
+                  AnimatedLight.field_a = jaa.decodeText((byte) 80, var2);
                 }
                 var2 = dn.a((byte) 104, "ticketing_xunread");
                 if (null != var2) {
@@ -393,7 +393,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -86, "mu_gameopt_invite_x_to_game");
                 if (var2 != null) {
-                  uh.field_i = jaa.decodeText((byte) 73, var2);
+                  LightSource.field_i = jaa.decodeText((byte) 73, var2);
                 }
                 var2 = dn.a((byte) -122, "report_x_for_abuse");
                 if (null != var2) {

@@ -286,7 +286,7 @@ final class PlatformModel extends TrapModel {
                           } else {
                             if (var11 == 0) {
                               if (var13 != 0) {
-                                var9.field_a = GameScreen.a(var15 + mpa.field_W[var9.field_h], 2048, -70);
+                                var9.field_a = GameScreen.positiveModulo(var15 + mpa.field_W[var9.field_h], 2048, -70);
                                 var9.field_e = this;
                                 var9.field_b = var17.e(true).nextBounded(100, 0);
                                 var9.field_c = var5 - var4;
@@ -319,7 +319,7 @@ final class PlatformModel extends TrapModel {
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  var9.field_a = GameScreen.a(var15 + mpa.field_W[var9.field_h], 2048, -70);
+                  var9.field_a = GameScreen.positiveModulo(var15 + mpa.field_W[var9.field_h], 2048, -70);
                 }
               } else {
                 var9.field_a = 512;
@@ -449,8 +449,8 @@ final class PlatformModel extends TrapModel {
           var6 = 1;
           var7 = this.getRenderX((byte) 84) - var4_ref.field_h >> 16;
           var8 = this.getRenderY((byte) 126) - var4_ref.field_c >> 16;
-          var9 = (double)ua.a(var7, -118);
-          var11 = (double)ua.a(var8, -125);
+          var9 = (double)ua.abs(var7, -118);
+          var11 = (double)ua.abs(var8, -125);
           var13 = Math.sqrt(var11 * var11 + var9 * var9);
           if (768.0 <= var13) {
             var6 = 0;
@@ -574,7 +574,7 @@ final class PlatformModel extends TrapModel {
             for (var3 = 0; this.field_s > var3; var3++) {
               var4 = this.field_r[var2_int][var3];
               var5 = mpa.field_W[var4.field_h];
-              var4.field_a = GameScreen.a(-var4.field_a + var5, 2048, 65);
+              var4.field_a = GameScreen.positiveModulo(-var4.field_a + var5, 2048, 65);
               var4.field_d = -var4.field_d;
             }
           }

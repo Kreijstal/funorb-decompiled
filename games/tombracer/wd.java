@@ -207,7 +207,7 @@ final class wd implements dv {
         var28 = TombRacer.field_G ? 1 : 0;
         try {
           if (0 < param6 &&
-            !cla.a(9181, param6)) {
+            !cla.isPowerOfTwoOrZero(9181, param6)) {
             throw new IllegalArgumentException("");
           }
           if (param3 <= 49) {
@@ -215,7 +215,7 @@ final class wd implements dv {
             wd.a(127, 113, -99, -33, (int[]) null, 112, 62, 15);
           }
           if (param7 > 0 &&
-            !cla.a(9181, param7)) {
+            !cla.isPowerOfTwoOrZero(9181, param7)) {
             throw new IllegalArgumentException("");
           }
           if (param1 != 32993) {
@@ -260,7 +260,7 @@ final class wd implements dv {
                 var20 = var20 + ((16764137 & var19) >> 16);
                 incrementValue$9 = var15;
                 var15++;
-                var13[incrementValue$9] = WallTile.a(SnakePitBehaviour.c(1020, var22) >> 2, WallTile.a(WallTile.a(SnakePitBehaviour.c(var23 << 22, -16777216), SnakePitBehaviour.c(1020, var20) << 14), SnakePitBehaviour.c(var21 << 6, 65280)));
+                var13[incrementValue$9] = WallTile.bitwiseOr(SnakePitBehaviour.bitwiseAnd(1020, var22) >> 2, WallTile.bitwiseOr(WallTile.bitwiseOr(SnakePitBehaviour.bitwiseAnd(var23 << 22, -16777216), SnakePitBehaviour.bitwiseAnd(1020, var20) << 14), SnakePitBehaviour.bitwiseAnd(var21 << 6, 65280)));
               }
               var25 = var25 + param6;
               var24 = var24 + param6;
@@ -291,7 +291,7 @@ final class wd implements dv {
 
     public final void a(BitPacketBuffer param0, boolean param1) {
         try {
-          this.field_b = uma.a(5, param0, -26803);
+          this.field_b = uma.readSignedBits(5, param0, -26803);
           if (param1) {
             this.field_d = (Player) null;
           }

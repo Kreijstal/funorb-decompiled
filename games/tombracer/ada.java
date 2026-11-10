@@ -23,7 +23,7 @@ final class ada extends ArrayWidgetGroup implements ButtonListener {
           UiWidget var7 = (UiWidget) null;
           this.updatePointerState(-16, -96, (UiWidget) null, 107);
         }
-        if (this.field_x.a((byte) 124).b(-4666) != uh.field_k) {
+        if (this.field_x.a((byte) 124).b(-4666) != LightSource.field_k) {
           return;
         }
         try {
@@ -51,7 +51,7 @@ final class ada extends ArrayWidgetGroup implements ButtonListener {
     final void updatePointerState(int param0, int param1, UiWidget param2, int param3) {
         try {
           super.updatePointerState(param0, param1, param2, param3);
-          this.field_B.field_y = this.field_x.a((byte) 47).b(-4666) == uh.field_k ? true : false;
+          this.field_B.field_y = this.field_x.a((byte) 47).b(-4666) == LightSource.field_k ? true : false;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ada.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

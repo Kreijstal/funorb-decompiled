@@ -201,7 +201,7 @@ final class DrawOfferMenu extends MenuScreen {
           return;
         }
         int var4 = SecondaryNodeDequeIterator.field_a.matchState.field_b;
-        if (1 == (1 & var4 >> SecondaryNodeDequeIterator.field_a.field_x)) {
+        if (1 == (1 & var4 >> SecondaryNodeDequeIterator.field_a.localPlayerIndex)) {
           this.items[1].field_e = BeamSegment.field_g.toUpperCase();
           return;
         }

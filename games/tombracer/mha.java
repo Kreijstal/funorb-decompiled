@@ -134,7 +134,7 @@ final class mha extends FocusableWidget {
           var13.drawAdditive(var5 - (var13.field_m >> 1), var6 - (var13.field_q >> 1), 256);
           return;
         }
-        if (uh.field_k != var8) {
+        if (LightSource.field_k != var8) {
           return;
         }
         Sprite var12 = pq.field_b[1];

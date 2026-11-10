@@ -49,7 +49,7 @@ final class WallTile implements Renderable {
           var3_int = this.getRenderX((byte) -113);
           var4 = this.getRenderY((byte) 115);
           var5 = this.getRenderZ((byte) -108);
-          gqa.a(GameScreen.a(this.field_o, 2048, 87), -83584144, var4, var3_int, this.field_g.a(this, (byte) 76), var5);
+          gqa.a(GameScreen.positiveModulo(this.field_o, 2048, 87), -83584144, var4, var3_int, this.field_g.a(this, (byte) 76), var5);
           if (!nk.c(-115)) {
             return;
           }
@@ -556,7 +556,7 @@ final class WallTile implements Renderable {
         return this.field_g.getRenderZ((byte) -115);
     }
 
-    static int a(int param0, int param1) {
+    static int bitwiseOr(int param0, int param1) {
         return param0 | param1;
     }
 

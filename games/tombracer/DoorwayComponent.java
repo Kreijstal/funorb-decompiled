@@ -90,7 +90,7 @@ final class DoorwayComponent extends PrefabComponent {
             var7_ref_fsa.addLocomotor(var9, 0);
             var10 = new PathMoveLocomotor(param2, param0);
             var10.a(param1 ^ 14, new gea(new int[][]{new int[]{262144 + -this.width / 2, 0}}));
-            var10.a(true, false);
+            var10.setEnabled(true, false);
             var7_ref_fsa.addLocomotor(var10, 0);
             var11 = new Trap(param2, param0);
             var11.setSize((byte) -11, this.height / 3, this.width / 2);
@@ -103,7 +103,7 @@ final class DoorwayComponent extends PrefabComponent {
             var11.addLocomotor(var13, param1 ^ 3);
             var14 = new PathMoveLocomotor(param2, param0);
             var14.a(66, new gea(new int[][]{new int[]{-262144 + this.width / 2, 0}}));
-            var14.a(true, false);
+            var14.setEnabled(true, false);
             var11.addLocomotor(var14, 0);
             var20.addChild(-72, var7_ref_fsa);
             var20.addChild(-42, var11);

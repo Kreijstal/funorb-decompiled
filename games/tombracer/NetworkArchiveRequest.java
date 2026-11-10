@@ -277,7 +277,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
                       }
                     }
                   }
-                  ((Object[]) (var7))[var15] = SnakePitBehaviour.a(var18, var19, 16486, (int) param1.field_K[var15], var17, SnakePitBehaviour.c((int) param1.field_i[var15], 255), (int) param1.field_s[var15], (int) param1.field_q[var15]);
+                  ((Object[]) (var7))[var15] = SnakePitBehaviour.a(var18, var19, 16486, (int) param1.field_K[var15], var17, SnakePitBehaviour.bitwiseAnd((int) param1.field_i[var15], 255), (int) param1.field_s[var15], (int) param1.field_q[var15]);
                 }
                 var15++;
               } while (var23 == 0);

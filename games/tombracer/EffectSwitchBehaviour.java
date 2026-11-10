@@ -356,7 +356,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
 
     final void tick(int param0) {
         if (this.field_q.f((byte) -56)) {
-          this.c(false);
+          this.stop(false);
         }
         this.field_s = this.field_s - this.field_n;
         if (this.field_s < 0) {

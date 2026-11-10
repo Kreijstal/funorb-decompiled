@@ -67,7 +67,7 @@ final class RotaterMountComponent extends PrefabComponent {
     final void encode(boolean param0, BitPacketBuffer param1) {
         try {
           super.encode(param0, param1);
-          param1.writeBits((byte) -38, dqa.a(!param0 ? true : false, this.field_F, 5), 5);
+          param1.writeBits((byte) -38, dqa.toOffsetBinary(!param0 ? true : false, this.field_F, 5), 5);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sua.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -120,7 +120,7 @@ final class RotaterMountComponent extends PrefabComponent {
         super(param0, param1, param2, param3);
         this.field_F = 4;
         try {
-          this.field_F = CoinItemComponent.a(true, 5, param2.readBits((byte) 44, 5));
+          this.field_F = CoinItemComponent.fromOffsetBinary(true, 5, param2.readBits((byte) 44, 5));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

@@ -97,7 +97,7 @@ final class ua implements GamePacket {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int abs(int param0, int param1) {
         int var2 = -61 / ((-53 - param1) / 48);
         if (0 > param0) {
           return -param0;

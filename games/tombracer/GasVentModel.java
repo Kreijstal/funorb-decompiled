@@ -271,7 +271,7 @@ final class GasVentModel extends TrapModel {
         int var7 = 0;
         try {
           int var6_int = 92 % ((param4 + 38) / 47);
-          var7 = GameScreen.a(4096 - this.body.getFacingAngle(-25787) >> 2, 2048, -74);
+          var7 = GameScreen.positiveModulo(4096 - this.body.getFacingAngle(-25787) >> 2, 2048, -74);
           gqa.a(var7, -83584144, param1, param2, RevolverItemComponent.field_J[6], param3);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pqa.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');

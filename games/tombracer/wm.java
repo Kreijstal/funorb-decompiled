@@ -13,7 +13,7 @@ final class wm {
         if (param1 > param0) {
           return 0;
         }
-        return GameEvent.a(param0, -28970, param1);
+        return GameEvent.divideFixed16(param0, -28970, param1);
     }
 
     public static void releaseStatics(byte param0) {

@@ -32,8 +32,8 @@ final class TrackPlayerLocomotor extends Locomotor {
         var5 = this.field_o.y - this.trap.getLocalY(false);
         var6 = 0;
         var7 = 0;
-        var8 = ua.a(var3, -120);
-        var9 = ua.a(var5, 4);
+        var8 = ua.abs(var3, -120);
+        var9 = ua.abs(var5, 4);
         if (!this.field_t) {
           if (this.field_r &&
             var9 > this.field_p) {

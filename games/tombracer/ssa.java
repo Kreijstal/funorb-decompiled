@@ -226,9 +226,9 @@ final class ssa {
               var15 = 0;
               while (true) {
                 var16 = param0.readUnsignedByte(255);
-                var13[var14] = var13[var14] + (SnakePitBehaviour.c(var16, 127) << var15);
+                var13[var14] = var13[var14] + (SnakePitBehaviour.bitwiseAnd(var16, 127) << var15);
                 if (var15 >= 26) {
-                  var13[var14 + 1] = var13[var14 + 1] + (SnakePitBehaviour.c(127, var16) >> -var15 + 32);
+                  var13[var14 + 1] = var13[var14 + 1] + (SnakePitBehaviour.bitwiseAnd(127, var16) >> -var15 + 32);
                 }
                 if (var16 < 128) {
                   var11++;

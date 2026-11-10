@@ -75,7 +75,7 @@ final class ClientException extends RuntimeException {
         }
     }
 
-    final static float a(float param0, int param1, float param2, float param3) {
+    final static float lerp(float param0, int param1, float param2, float param3) {
         if (param1 == 5122) {
           return param0 * (-param3 + param2) + param3;
         }

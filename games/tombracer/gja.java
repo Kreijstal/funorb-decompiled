@@ -1075,7 +1075,7 @@ final class gja extends ka {
               if (-1 != param2) {
                 var9 = var9 + ((param2 - var9) * param3 >> 7);
               }
-              this.field_P[var5_int] = (short)WallTile.a(var9, WallTile.a(var8 << 7, var7_int << 10));
+              this.field_P[var5_int] = (short)WallTile.bitwiseOr(var9, WallTile.bitwiseOr(var8 << 7, var7_int << 10));
               var5_int++;
               continue;
             }
@@ -3345,7 +3345,7 @@ final class gja extends ka {
                             var18 = 127;
                           }
                         }
-                        this.field_P[var14] = (short)WallTile.a(WallTile.a(var17 << 7, var16 << 10), var18);
+                        this.field_P[var14] = (short)WallTile.bitwiseOr(WallTile.bitwiseOr(var17 << 7, var16 << 10), var18);
                         var13_int++;
                         continue;
                       }
@@ -4476,7 +4476,7 @@ final class gja extends ka {
                           var19 = 127;
                         }
                       }
-                      this.field_P[var15] = (short)WallTile.a(var19, WallTile.a(var18 << 7, var17 << 10));
+                      this.field_P[var15] = (short)WallTile.bitwiseOr(var19, WallTile.bitwiseOr(var18 << 7, var17 << 10));
                     }
                     var14_int++;
                   }

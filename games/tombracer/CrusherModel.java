@@ -725,7 +725,7 @@ final class CrusherModel extends TrapModel {
           var6_int = param2 + (this.field_t << 16);
           param3 = param3 + (this.field_r << 16);
           var7 = param1 + (this.field_m << 16);
-          var8 = GameScreen.a(4096 - this.body.getFacingAngle(-25787) >> 2, 2048, -120);
+          var8 = GameScreen.positiveModulo(4096 - this.body.getFacingAngle(-25787) >> 2, 2048, -120);
           var10 = 14 % ((param4 + 38) / 47);
           var11 = this.field_q;
           if (var11 != 0 &&

@@ -180,7 +180,7 @@ final class FuseBehaviour extends Behaviour {
           this.field_q = (FlagSet) null;
         }
         this.getRoom(true).a(124, this.trap.getY(param0 ^ -9715), var2, this.trap.getHeight((byte) 55) + this.field_n * 2, this.trap.getWidth(-107) + 2 * this.field_n, this.trap.getX(3));
-        this.c(false);
+        this.stop(false);
     }
 
     final void encode(boolean param0, BitPacketBuffer param1) {

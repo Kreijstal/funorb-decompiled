@@ -65,12 +65,12 @@ final class oea extends IntrusiveNode {
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int floorModulo(int param0, int param1, int param2) {
         int var3 = param1 - 1 & param0 >> 31;
         if (param2 <= -54) {
           return (param0 + (param0 >>> 31)) % param1 + var3;
         }
-        oea.a(28, -97, -108);
+        oea.floorModulo(28, -97, -108);
         return (param0 + (param0 >>> 31)) % param1 + var3;
     }
 

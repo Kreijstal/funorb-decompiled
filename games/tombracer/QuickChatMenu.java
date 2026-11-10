@@ -129,7 +129,7 @@ final class QuickChatMenu extends jea {
           var12 = "</col>";
           for (var13 = 0; var13 < this.field_Bb; var13++) {
             if (this.field_xb[var13] > 0) {
-              param6[var13] = var11 + no.a((byte) 67, this.field_xb[var13]).toUpperCase() + ": " + var12 + param6[var13];
+              param6[var13] = var11 + no.charToString((byte) 67, this.field_xb[var13]).toUpperCase() + ": " + var12 + param6[var13];
             }
             var14 = null;
             if (null != this.field_zb[var13] ||

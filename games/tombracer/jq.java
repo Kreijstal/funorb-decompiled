@@ -55,8 +55,8 @@ final class jq extends SceneLight {
             var9 = (OpenGlToolkit) null;
             jq.a((byte[]) null, 99, (byte) 8, -3, (OpenGlToolkit) null, -12, false, 23);
           }
-          if (!param4.field_Gb && (!cla.a(9181, param5) ||
-            !cla.a(9181, param7))) {
+          if (!param4.field_Gb && (!cla.isPowerOfTwoOrZero(9181, param5) ||
+            !cla.isPowerOfTwoOrZero(9181, param7))) {
             if (param4.field_Cc) {
               stackIn_10_0 = new qk(param4, 34037, param3, param5, param7, param6, param0, param1);
               return stackIn_10_0;

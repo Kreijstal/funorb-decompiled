@@ -266,7 +266,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           this.d(true)) {
           var3 = this.angle;
           this.angle = this.angle + param1;
-          this.angle = GameScreen.a(this.angle, 8192, -126);
+          this.angle = GameScreen.positiveModulo(this.angle, 8192, -126);
           this.x((byte) -60);
           if (this.d(true, -3)) {
             this.angle = var3;
@@ -274,7 +274,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           }
         } else {
           this.angle = this.angle + param1;
-          this.angle = GameScreen.a(this.angle, 8192, -67);
+          this.angle = GameScreen.positiveModulo(this.angle, 8192, -67);
           this.x((byte) -60);
         }
         if (param0) {
@@ -396,7 +396,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         }
         if (!param1 &&
           var7Lifetime1 != 0 &&
-          8192 <= ua.a(param4, -124) + ua.a(param3, -127) &&
+          8192 <= ua.abs(param4, -124) + ua.abs(param3, -127) &&
           param5 <= 2) {
           this.room.a(false, this.getX(3), 0, 0, this.getY(9648), 0);
         }
@@ -952,8 +952,8 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           if (param1 != null) {
             this.field_cb = false;
           }
-          this.localX = CoinItemComponent.a(true, 12, param2.readBits((byte) 44, 12)) << 16;
-          this.localY = CoinItemComponent.a(true, 12, param2.readBits((byte) 44, 12)) << 16;
+          this.localX = CoinItemComponent.fromOffsetBinary(true, 12, param2.readBits((byte) 44, 12)) << 16;
+          this.localY = CoinItemComponent.fromOffsetBinary(true, 12, param2.readBits((byte) 44, 12)) << 16;
           this.width = param2.readBits((byte) 44, 10) << 16;
           this.height = param2.readBits((byte) 44, 10) << 16;
           stackIn_6_1 = (param2.readBits((byte) 44, 1) == 1);
@@ -1099,7 +1099,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         if (param0 != -25787) {
           this.getCollisionId(false);
         }
-        return GameScreen.a(var2, 8192, 124);
+        return GameScreen.positiveModulo(var2, 8192, 124);
     }
 
     public final int getRenderX(byte param0) {
@@ -1266,8 +1266,8 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         TrapModel var8 = null;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          param0.writeBits((byte) 0, dqa.a(true, this.localX >> 16, 12), 12);
-          param0.writeBits((byte) -126, dqa.a(true, this.localY >> 16, 12), 12);
+          param0.writeBits((byte) 0, dqa.toOffsetBinary(true, this.localX >> 16, 12), 12);
+          param0.writeBits((byte) -126, dqa.toOffsetBinary(true, this.localY >> 16, 12), 12);
           param0.writeBits((byte) -127, this.width >> 16, 10);
           param0.writeBits((byte) 72, this.height >> 16, 10);
           stackIn_3_0 = (BitPacketBuffer) (param0);
@@ -2426,8 +2426,8 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           } else {
             this.field_J = -this.field_J;
           }
-          this.field_ib = GameScreen.a(-this.field_ib, 8192, -35);
-          this.angle = GameScreen.a(-this.angle, 8192, -97);
+          this.field_ib = GameScreen.positiveModulo(-this.field_ib, 8192, -35);
+          this.angle = GameScreen.positiveModulo(-this.angle, 8192, -97);
           param0.collisionGrid.insert((Collidable) (this), 7073);
           var5 = (Locomotor) (this.locomotors.first(-80));
           while (var5 != null) {
@@ -2697,7 +2697,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         this.removed = true;
         Behaviour var5 = (Behaviour) (this.behaviours.first(-80));
         while (var5 != null) {
-          var5.c(false);
+          var5.stop(false);
           var5 = (Behaviour) (this.behaviours.next(120));
         }
         if (param0 != 109) {
