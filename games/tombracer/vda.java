@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vda extends ci {
+final class vda extends TextureOperator {
     private int field_r;
     static boolean field_q;
     private int field_p;

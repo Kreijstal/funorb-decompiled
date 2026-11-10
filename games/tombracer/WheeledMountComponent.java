@@ -172,7 +172,7 @@ final class WheeledMountComponent extends PathMoverComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var8 = new Trap(param2, param0);
-          var8.b((byte) -11, this.field_k, this.field_l);
+          var8.setSize((byte) -11, this.field_k, this.field_l);
           var8.h(param1, 0);
           var8.a(1, (byte) -12, true);
           var8.a((byte) -3, 6);

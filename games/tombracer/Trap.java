@@ -20,20 +20,20 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
     private int field_ib;
     private int field_J;
     private boolean field_M;
-    private int field_s;
+    private int previousLocalX;
     private int angle;
     private int field_f;
     private boolean field_D;
     private int field_n;
-    private int field_E;
+    private int previousY;
     private boolean field_p;
     private int height;
     private boolean field_jb;
     private boolean field_T;
-    private int field_U;
+    private int previousX;
     private boolean field_eb;
     private boolean[] field_h;
-    private int field_bb;
+    private int previousLocalY;
     private int localY;
     private int field_lb;
     private boolean field_cb;
@@ -106,14 +106,14 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         }
     }
 
-    private final void u(byte param0) {
-        this.field_bb = this.localY;
+    private final void savePreviousPosition(byte param0) {
+        this.previousLocalY = this.localY;
         if (param0 != 116) {
           this.b(83, 92, 87, -71, -11);
         }
-        this.field_s = this.localX;
-        this.field_U = this.getX(3);
-        this.field_E = this.getY(9648);
+        this.previousLocalX = this.localX;
+        this.previousX = this.getX(3);
+        this.previousY = this.getY(9648);
     }
 
     final void a(boolean param0, boolean param1, ui param2, ui param3) {
@@ -309,7 +309,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         return stackIn_9_0;
     }
 
-    private final void v(int param0) {
+    private final void clearModels(int param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
         TrapModel var4 = (TrapModel) (this.models.first(-80));
         while (var4 != null) {
@@ -337,7 +337,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         if (param0 < 90) {
           this.field_P = true;
         }
-        return this.field_U;
+        return this.previousX;
     }
 
     final int hashState(int param0, int param1) {
@@ -384,8 +384,8 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           return false;
         }
         this.b(1 + param5, param4, 123, param2, param3);
-        if (this.field_s + param4 == this.localX) {
-          stackIn_20_0 = (this.localY == param3 + this.field_bb) ? 1 : 0;
+        if (this.previousLocalX + param4 == this.localX) {
+          stackIn_20_0 = (this.localY == param3 + this.previousLocalY) ? 1 : 0;
         } else {
           stackIn_20_0 = 0;
         }
@@ -403,7 +403,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         return var7Lifetime1 != 0;
     }
 
-    final void b(byte param0, int param1, int param2) {
+    final void setSize(byte param0, int param1, int param2) {
         if (param0 != -11) {
           return;
         }
@@ -455,8 +455,8 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
             this.localX = this.localX + param1;
           }
           if (var6 != 0 &&
-            this.a(this.getX(3) - this.field_U, 0, -4648, param3, param0) == 2) {
-            this.localX = this.field_s;
+            this.a(this.getX(3) - this.previousX, 0, -4648, param3, param0) == 2) {
+            this.localX = this.previousLocalX;
             this.field_Q = true;
           }
           var6Lifetime1 = 0;
@@ -465,23 +465,23 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
             var6Lifetime1 = 1;
           }
           if (var6Lifetime1 != 0 &&
-            this.a(0, this.getY(9648) - this.field_E, -4648, param3, param0) == 2) {
+            this.a(0, this.getY(9648) - this.previousY, -4648, param3, param0) == 2) {
             this.field_P = true;
-            this.localY = this.field_bb;
+            this.localY = this.previousLocalY;
           }
           if (this.d(false, -3)) {
-            if (this.field_s != this.localX) {
+            if (this.previousLocalX != this.localX) {
               this.field_Q = true;
             }
-            if (this.field_bb != this.localY) {
+            if (this.previousLocalY != this.localY) {
               this.field_P = true;
             }
-            this.localX = this.field_s;
-            this.localY = this.field_bb;
+            this.localX = this.previousLocalX;
+            this.localY = this.previousLocalY;
           }
         }
-        if (this.field_s != this.localX ||
-          this.localY != this.field_bb) {
+        if (this.previousLocalX != this.localX ||
+          this.localY != this.previousLocalY) {
           this.field_M = true;
           this.z(1);
         }
@@ -1182,7 +1182,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
 
     final int getAngle(byte param0) {
         if (param0 != -80) {
-          this.field_s = 121;
+          this.previousLocalX = 121;
         }
         return this.angle;
     }
@@ -1445,7 +1445,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
     final void c(int param0, boolean param1) {
         Trap var3_ref = null;
         int var4 = TombRacer.field_G ? 1 : 0;
-        this.v(-1332);
+        this.clearModels(-1332);
         Behaviour var3 = (Behaviour) (this.behaviours.first(param0 ^ -437453416));
         while (var3 != null) {
           this.a(var3, (byte) 124, rm.field_a.a(var3, (WorldBody) (this), -126));
@@ -1645,12 +1645,12 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
 
     final void D(byte param0) {
         int var4 = TombRacer.field_G ? 1 : 0;
-        this.u((byte) 116);
-        this.field_n = this.field_E;
+        this.savePreviousPosition((byte) 116);
+        this.field_n = this.previousY;
         if (param0 != 118) {
           this.switchableId = (SwitchableId) null;
         }
-        this.field_lb = this.field_U;
+        this.field_lb = this.previousX;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
         Trap var3 = (Trap) (var2.first(true));
         while (var3 != null) {
@@ -2092,7 +2092,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
 
     private final void F(byte param0) {
         int var4 = TombRacer.field_G ? 1 : 0;
-        this.u((byte) 116);
+        this.savePreviousPosition((byte) 116);
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
         Trap var3 = (Trap) (var2.first(true));
         while (var3 != null) {
@@ -2161,7 +2161,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           var4.N(0);
           var4 = (Trap) (this.children.next(126));
         }
-        this.u((byte) 116);
+        this.savePreviousPosition((byte) 116);
     }
 
     final void a(byte param0, int param1, int param2) {
@@ -2413,16 +2413,16 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
             this.localSwitchableId = (SwitchableId) null;
           }
           if (!this.n((byte) 122)) {
-            this.field_s = -this.field_s;
+            this.previousLocalX = -this.previousLocalX;
             this.localX = -this.localX;
           } else {
-            this.localX = param0.a(this.localX, (byte) 71);
-            this.field_s = param0.a(this.field_s, (byte) 71);
+            this.localX = param0.mirrorX(this.localX, (byte) 71);
+            this.previousLocalX = param0.mirrorX(this.previousLocalX, (byte) 71);
           }
-          this.field_lb = param0.a(this.field_lb, (byte) 71);
-          this.field_U = param0.a(this.field_U, (byte) 71);
+          this.field_lb = param0.mirrorX(this.field_lb, (byte) 71);
+          this.previousX = param0.mirrorX(this.previousX, (byte) 71);
           if (this.n((byte) 108)) {
-            this.field_J = param0.a(this.field_J, (byte) 71);
+            this.field_J = param0.mirrorX(this.field_J, (byte) 71);
           } else {
             this.field_J = -this.field_J;
           }
@@ -2482,7 +2482,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           var4 = (Trap) (this.children.next(108));
         }
         this.u(0);
-        this.u((byte) 116);
+        this.savePreviousPosition((byte) 116);
         if (param0 < 96) {
           this.setLocalY(-88, 5);
         }
@@ -2710,7 +2710,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           var6 = (Trap) (this.children.next(111));
         }
         this.B(-165);
-        this.v(-1332);
+        this.clearModels(-1332);
     }
 
     final boolean p(byte param0) {
@@ -2908,7 +2908,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         if (param0 != -21185) {
           return -45;
         }
-        return this.field_E;
+        return this.previousY;
     }
 
     final void c(byte param0, boolean param1) {

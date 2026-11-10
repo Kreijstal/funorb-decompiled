@@ -1258,7 +1258,7 @@ final class gja extends ka {
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
-        an var5 = null;
+        TriangleMesh var5 = null;
         int[] var6 = null;
         int var7 = 0;
         var7 = TombRacer.field_G ? 1 : 0;
@@ -1268,7 +1268,7 @@ final class gja extends ka {
           var2.beginBitAccess((byte) 119);
           ej.field_d = BrazierComponent.a(var2, (byte) 8);
           OpenGlTexture.field_e = new int[var3][];
-          cq.field_b = new an[var3];
+          cq.field_b = new TriangleMesh[var3];
           var4 = 0;
           do {
             if (var3 <= var4) {
@@ -1282,7 +1282,7 @@ final class gja extends ka {
           while (var4 < var3) {
             var5 = cq.field_b[var4];
             var5.a(6, 6, 6, true, 1);
-            var5.a((byte) -120);
+            var5.computeBounds((byte) -120);
             var6 = new int[]{var5.field_i + var5.field_z >> 1, var5.field_b + var5.field_m >> 1, var5.field_a + var5.field_p >> 1};
             OpenGlTexture.field_e[var4] = var6;
             var5.a(-var6[2], -var6[0], (byte) -86, -var6[1]);

@@ -32,7 +32,7 @@ final class SweeperMountComponent extends PrefabComponent {
         TrapBaseModel var8 = null;
         try {
           var9 = new Trap(param2, param0);
-          var9.b((byte) -11, this.field_k, this.field_l);
+          var9.setSize((byte) -11, this.field_k, this.field_l);
           var9.h(param1, param1 - 3);
           var9.a(1, (byte) -12, true);
           var9.a((byte) -3, 6);

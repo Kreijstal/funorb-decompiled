@@ -103,7 +103,7 @@ abstract class ob extends IntrusiveNode {
               var10 = var9 + ((var9 << 16) + (var9 << 8));
               var3[var4] = fh.a(var5 << 24, var10);
             }
-            qf.field_k[var2_intLifetime2] = param0.a(var3, OpenGlFramebuffer.field_i[var2_intLifetime2].c(), 89, OpenGlFramebuffer.field_i[var2_intLifetime2].a(), OpenGlFramebuffer.field_i[var2_intLifetime2].a(), 0);
+            qf.field_k[var2_intLifetime2] = param0.createSpriteCopy(var3, OpenGlFramebuffer.field_i[var2_intLifetime2].c(), 89, OpenGlFramebuffer.field_i[var2_intLifetime2].a(), OpenGlFramebuffer.field_i[var2_intLifetime2].a(), 0);
           }
           bsa.field_i = su.a(hoa.field_l, param0, (byte) -107);
           fa.field_a = ak.a(param0, nk.field_k, -99);

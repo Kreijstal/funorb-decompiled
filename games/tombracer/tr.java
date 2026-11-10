@@ -22,11 +22,11 @@ final class tr {
         field_e = null;
     }
 
-    final wua a(boolean param0, int param1) {
-        wua var3;
+    final QuickChatPhraseDefinition a(boolean param0, int param1) {
+        QuickChatPhraseDefinition var3;
         byte[] var4;
-        wua var3Lifetime1;
-        var3 = (wua) (this.field_b.a((byte) 74, (long)param1));
+        QuickChatPhraseDefinition var3Lifetime1;
+        var3 = (QuickChatPhraseDefinition) (this.field_b.a((byte) 74, (long)param1));
         if (var3 != null) {
           return var3;
         }
@@ -36,9 +36,9 @@ final class tr {
           var4 = this.field_h.a(false, 1, param1 & 32767);
         }
         if (param0) {
-          return (wua) null;
+          return (QuickChatPhraseDefinition) null;
         }
-        var3Lifetime1 = new wua();
+        var3Lifetime1 = new QuickChatPhraseDefinition();
         if (var4 != null) {
           var3Lifetime1.a(new PacketBuffer(var4), (byte) 113);
         }

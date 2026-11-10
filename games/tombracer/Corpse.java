@@ -19,10 +19,10 @@ final class Corpse extends IntrusiveNode implements Renderable {
         return 1;
     }
 
-    final void a(Room param0, byte param1) {
+    final void mirrorInRoom(Room param0, byte param1) {
         try {
           int var3_int = -11 % ((param1 - 39) / 46);
-          this.field_l = param0.a(this.field_l, (byte) 71);
+          this.field_l = param0.mirrorX(this.field_l, (byte) 71);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "kua.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

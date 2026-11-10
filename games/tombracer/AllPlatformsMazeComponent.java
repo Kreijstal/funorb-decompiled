@@ -137,7 +137,7 @@ final class AllPlatformsMazeComponent extends MazeComponent {
             field_O = (ka) null;
           }
           var4 = new Trap(param2, param1);
-          var4.b((byte) -11, 2097152, 2097152);
+          var4.setSize((byte) -11, 2097152, 2097152);
           var5 = new PlatformBehaviour(param2, false);
           var5.b(-5, 2);
           var5.a(1, (byte) 71);
@@ -336,7 +336,7 @@ final class AllPlatformsMazeComponent extends MazeComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new Trap(param0, param2);
-          var4.b((byte) -11, 2097152, 2097152);
+          var4.setSize((byte) -11, 2097152, 2097152);
           var5 = new PlatformBehaviour(param0, param1);
           var5.b(-5, 0);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));

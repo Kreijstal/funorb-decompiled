@@ -37,24 +37,24 @@ final class bsa implements isa {
           var14 = param0 instanceof rr ? (rr) (param0) : null;
           if (var14 != null) {
           }
-          SoftwareRasterizer.e(param0.field_i + param1, param0.field_n + param3, param0.field_m, param0.field_p, this.field_d);
+          SoftwareRasterizer.fillRectangle(param0.field_i + param1, param0.field_n + param3, param0.field_m, param0.field_p, this.field_d);
           var7 = var14.field_E + param0.field_i + param1;
           var8 = var14.field_C + param3 + param0.field_n;
-          SoftwareRasterizer.e(var7, var8, var14.field_F, this.field_f);
+          SoftwareRasterizer.fillCircle(var7, var8, var14.field_F, this.field_f);
           if (var14.field_z != -1) {
             var9 = 3.141592653589793 * (double)var14.field_z * 2.0 / (double)var14.field_B;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_F);
             var12 = (int)(Math.cos(var9) * (double)var14.field_F);
-            SoftwareRasterizer.e(var11 + var7, var8 + var12, 1, this.field_e);
+            SoftwareRasterizer.fillCircle(var11 + var7, var8 + var12, 1, this.field_e);
           }
-          SoftwareRasterizer.e(var7, var8, 2, 1);
+          SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
           var9Lifetime1 = 3.141592653589793 * (double)var14.field_A * 2.0 / (double)var14.field_B;
           if (param2 != 16777215) {
             bsa.releaseStatics((byte) -126);
           }
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_F);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_F);
-          SoftwareRasterizer.a(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
+          SoftwareRasterizer.drawLine(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
           if (this.field_a != null) {
             var13 = var14.field_F + (var14.field_E + this.field_h);
             this.field_a.a(param0.field_o, param1 + param0.field_i + var13, this.field_b + (param3 + param0.field_n), -this.field_h - (var13 - param0.field_m), param0.field_p - (this.field_h << 1), this.field_g, this.field_c, 1, 1, 0);

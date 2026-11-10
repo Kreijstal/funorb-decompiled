@@ -29,7 +29,7 @@ final class GameAssetLoader implements LoadingStage {
 
     public final void openArchives(byte param0) {
         if (null != ConstrainToFacingArcLocomotor.field_v) {
-          pfa.a(ConstrainToFacingArcLocomotor.field_v, param0 + 157);
+          pfa.loadLocalizedText(ConstrainToFacingArcLocomotor.field_v, param0 + 157);
           ConstrainToFacingArcLocomotor.field_v = null;
           C2SActionPacket.a(-33);
         }

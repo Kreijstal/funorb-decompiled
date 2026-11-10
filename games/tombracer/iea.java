@@ -116,7 +116,7 @@ final class iea {
             if (0 >= var10) {
               stackIn_23_1 = var6.field_tb;
             } else {
-              stackIn_23_1 = BitmapFont.a(var6.field_xb.field_H, var6.field_tb, var10);
+              stackIn_23_1 = BitmapFont.truncateWithEllipsis(var6.field_xb.field_H, var6.field_tb, var10);
             }
             stackIn_22_0.field_r = stackIn_23_1;
             stackIn_26_0 = (var6.field_xb.field_r.equals(var6.field_tb)) ? 0 : 1;

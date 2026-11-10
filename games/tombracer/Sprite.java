@@ -211,7 +211,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void a(int param0, int param1, int param2) {
+    void drawAdditive(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -696,7 +696,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void c(int param0, int param1) {
+    void drawHalfSize(int param0, int param1) {
         param0 = param0 + (this.field_o >> 1);
         param1 = param1 + (this.field_p >> 1);
         int var3 = param0 < SoftwareRasterizer.field_b ? SoftwareRasterizer.field_b - param0 << 1 : 0;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class voa extends ci {
+final class voa extends TextureOperator {
     private int field_p;
     static boolean field_v;
     static String field_s;

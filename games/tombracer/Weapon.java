@@ -123,7 +123,7 @@ final class Weapon {
         if (param0 != -1) {
           return (Weapon) null;
         }
-        return ci.a(this.field_r, -1);
+        return TextureOperator.a(this.field_r, -1);
     }
 
     final boolean a(int param0, int param1, WorldBody param2, int param3, int param4, Room param5, int param6, int param7, int param8, boolean param9) {

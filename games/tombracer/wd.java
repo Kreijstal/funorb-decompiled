@@ -123,7 +123,7 @@ final class wd implements dv {
                     param4.h(3, 0);
                     param4.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param3, param5)));
                     var6 = new WeaponShooterBehaviour(param3, param5);
-                    var6.a(ci.a(2, -1), (byte) 100);
+                    var6.a(TextureOperator.a(2, -1), (byte) 100);
                     param4.addBehaviour((byte) 83, (Behaviour) (var6));
                     param4.addLocomotor(new RotateLocomotor(param3, param5), 0);
                   }

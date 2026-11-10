@@ -74,7 +74,7 @@ final class fga implements ShellListener {
                     PasswordValidator.field_m < (40 + this.field_d[var3_int]) &&
                     lba.field_p > this.field_b[var3_int] &&
                     (this.field_b[var3_int] + 30) > lba.field_p &&
-                    !oj.field_tb[82]) {
+                    !VerticalScrollbar.field_tb[82]) {
                     var4 = ak.a(var3_int, (byte) 56);
                     stackIn_32_1 = 74;
                     stackIn_33_2 = !(f.field_e.get(var4));
@@ -156,7 +156,7 @@ final class fga implements ShellListener {
               fga.a(-59, false, -121, (java.awt.Canvas) null);
             }
             var4 = param3.getGraphics();
-            gn.field_C.a(param2, param0, var4, 2);
+            gn.field_C.drawImage(param2, param0, var4, 2);
             var4.dispose();
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

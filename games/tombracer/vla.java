@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vla extends ci {
+final class vla extends TextureOperator {
     static String field_m;
     private int field_n;
 

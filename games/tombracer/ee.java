@@ -20,7 +20,7 @@ final class ee implements isa {
           var8 = pq.field_b[1];
           if (param0 instanceof FocusableWidget &&
             ((FocusableWidget) (param0)).field_w) {
-            var8.a(1 + var6_int + (-var8.field_n + param0.field_m >> 1), var7 + 1 + (-var8.field_k + param0.field_p >> 1), 256);
+            var8.drawAdditive(1 + var6_int + (-var8.field_n + param0.field_m >> 1), var7 + 1 + (-var8.field_k + param0.field_p >> 1), 256);
           }
           if (param2 != 16777215) {
             ee.a(55);

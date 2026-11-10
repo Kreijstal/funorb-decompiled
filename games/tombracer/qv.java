@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qv extends ci {
+final class qv extends TextureOperator {
     private int field_q;
     private int field_n;
     private int field_p;

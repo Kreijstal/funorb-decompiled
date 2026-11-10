@@ -141,7 +141,7 @@ final class uu implements GamePacket {
             return;
           }
           try {
-            lb.a(-96, "resizing", di.a(111), new Object[]{new Integer(param1)});
+            JavaScriptBridge.callWithArguments(-96, "resizing", di.a(111), new Object[]{new Integer(param1)});
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = decompiledCaughtException;

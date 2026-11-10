@@ -161,7 +161,7 @@ final class PitComponent extends PrefabComponent {
         RuntimeException var4 = null;
         try {
           var9 = new Trap(param2, param0);
-          var9.b((byte) -11, this.field_k, this.field_l);
+          var9.setSize((byte) -11, this.field_k, this.field_l);
           var5 = new PitBehaviour(param2, param0);
           if (param1 != 3) {
             this.s(48);

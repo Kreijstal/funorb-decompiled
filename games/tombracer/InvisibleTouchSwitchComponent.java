@@ -30,7 +30,7 @@ final class InvisibleTouchSwitchComponent extends SwitchComponent {
             stackIn_2_0 = (Trap) null;
             return stackIn_2_0;
           }
-          var4.b((byte) -11, this.field_k, this.field_l);
+          var4.setSize((byte) -11, this.field_k, this.field_l);
           var5 = new TouchSwitchBehaviour(param2, param0);
           this.a(var5, (byte) -92);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));

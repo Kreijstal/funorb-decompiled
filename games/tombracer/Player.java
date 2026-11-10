@@ -1124,24 +1124,24 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
           var8 = SoftwareRasterizer.field_a;
           var9 = new Sprite(param2, -(param2 * 2) + param0);
           var9.c();
-          SoftwareRasterizer.b(0, 0, param2, -(param2 * 2) + param0, param3, param5);
+          SoftwareRasterizer.fillVerticalGradient(0, 0, param2, -(param2 * 2) + param0, param3, param5);
           var10 = new Sprite(param2, param2);
           var10.c();
-          SoftwareRasterizer.e(0, 0, param2, param2, param3);
+          SoftwareRasterizer.fillRectangle(0, 0, param2, param2, param3);
           var11 = new Sprite(16, param2);
           var11.c();
-          SoftwareRasterizer.e(0, 0, 16, param2, param3);
+          SoftwareRasterizer.fillRectangle(0, 0, 16, param2, param3);
           var12 = new Sprite(param2, param2);
           var12.c();
-          SoftwareRasterizer.e(0, 0, param2, param2, param5);
+          SoftwareRasterizer.fillRectangle(0, 0, param2, param2, param5);
           var13 = new Sprite(16, param2);
           var13.c();
-          SoftwareRasterizer.e(0, 0, 16, param2, param5);
+          SoftwareRasterizer.fillRectangle(0, 0, 16, param2, param5);
           var14 = null;
           if (param1 > 0) {
             var14 = new Sprite(16, 16);
             ((Sprite) (var14)).c();
-            SoftwareRasterizer.e(0, 0, 16, 16, param1);
+            SoftwareRasterizer.fillRectangle(0, 0, 16, 16, param1);
           }
           SoftwareRasterizer.a(var6, var7, var8);
           stackIn_8_0 = new Sprite[]{var10, var11, var10, var9, (Sprite) (var14), var9, var12, var13, var12};
@@ -1238,7 +1238,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
             this.field_S = -25;
           }
           boolean decompiledFrameRemainder0 = true;
-          var2.b((byte) -11, 2097152, 2097152);
+          var2.setSize((byte) -11, 2097152, 2097152);
           var2.b((byte) 17, false);
           var2.a((byte) -3, this.field_f);
           var2.a(92, true);
@@ -1359,7 +1359,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          this.x = this.room.a(this.x, (byte) 71);
+          this.x = this.room.mirrorX(this.x, (byte) 71);
           this.facingX = -this.facingX;
           if (param0 != -57) {
             this.addStatusEffect((StatusEffect) null, (byte) -39);
@@ -3035,7 +3035,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
             if (var4 != 0) {
               var5 = param0.e(-98);
               if (var5 == 14) {
-                this.b(~param1, param0.field_c);
+                this.b(~param1, param0.source);
               }
               this.kill(var4, (byte) 89, var5);
             }
@@ -3170,7 +3170,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         try {
           var2_int = this.x;
           if (this.field_o) {
-            var2_int = this.room.a(var2_int, (byte) 71);
+            var2_int = this.room.mirrorX(var2_int, (byte) 71);
           }
           if (param0 > -76) {
             loadingQuips = (String[]) null;

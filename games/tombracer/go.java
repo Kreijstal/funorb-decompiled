@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class go extends ci {
+final class go extends TextureOperator {
     static int[] field_m;
     private int field_n;
 

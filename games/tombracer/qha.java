@@ -105,7 +105,7 @@ final class qha extends ou {
           C2SActionPacket.a(param1, -16838);
           return;
         }
-        SoftwareRasterizer.d(rm.field_e.field_a.field_qb, rm.field_e.field_a.field_T, rm.field_e.field_a.field_G, rm.field_e.field_a.field_t);
+        SoftwareRasterizer.darkenRectangle(rm.field_e.field_a.field_qb, rm.field_e.field_a.field_T, rm.field_e.field_a.field_G, rm.field_e.field_a.field_t);
         rm.field_e.field_a.b(121, param1);
         C2SActionPacket.a(param1, -16838);
     }

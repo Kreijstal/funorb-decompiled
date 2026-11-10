@@ -358,10 +358,10 @@ final class ica {
           }
           for (var3 = 0; 15 > var3; var3++) {
             var2.b(-2, -2, 16777215);
-            SoftwareRasterizer.a(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
           bw.field_a.c();
-          var1.c(0, 0);
+          var1.drawHalfSize(0, 0);
           pfa.a(1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ica.B(" + param0 + ')');

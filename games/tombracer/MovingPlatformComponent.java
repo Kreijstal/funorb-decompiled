@@ -87,7 +87,7 @@ final class MovingPlatformComponent extends PathMoverComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new Trap(param2, param0);
-          var4.b((byte) -11, this.field_k, this.field_l);
+          var4.setSize((byte) -11, this.field_k, this.field_l);
           var5 = new PlatformBehaviour(param2, false);
           var5.b(-5, this.field_M);
           var5.a((byte) -24, true);

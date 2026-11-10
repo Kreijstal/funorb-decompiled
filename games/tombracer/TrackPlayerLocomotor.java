@@ -119,12 +119,12 @@ final class TrackPlayerLocomotor extends Locomotor {
           var2_int = jba.field_j;
           var3 = GridWidgetContainer.field_B;
           var4 = Corpse.field_i.field_H.a(param1, 500);
-          var5 = 6 + Corpse.field_i.field_H.c(param1, 500);
+          var5 = 6 + Corpse.field_i.field_H.getWrappedWidth(param1, 500);
           var6 = di.field_a * var4 + 2;
           var7 = bt.a((byte) -8, var5, 12, var2_int);
           var8 = hsa.a(20, var6, var3, (byte) -107);
-          SoftwareRasterizer.f(var7, var8, var5, var6, 0);
-          SoftwareRasterizer.e(var7 + 1, 1 + var8, var5 - 2, -2 + var6, 16777088);
+          SoftwareRasterizer.drawRectangle(var7, var8, var5, var6, 0);
+          SoftwareRasterizer.fillRectangle(var7 + 1, 1 + var8, var5 - 2, -2 + var6, 16777088);
           if (param0 > -63) {
             field_s = (SecondaryNodeHashTable) null;
           }

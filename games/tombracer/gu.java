@@ -61,7 +61,7 @@ final class gu extends me {
         field_l = null;
     }
 
-    final static ci a(byte param0, int param1) {
+    final static TextureOperator a(byte param0, int param1) {
         int var2;
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
@@ -70,124 +70,124 @@ final class gu extends me {
         }
         var2 = param1;
         if (var2 == 0) {
-          return (ci) ((Object) new nga());
+          return (TextureOperator) ((Object) new nga());
         }
         if (var2 == 1) {
-          return (ci) ((Object) new lm());
+          return (TextureOperator) ((Object) new lm());
         }
         if (var2 == 2) {
-          return (ci) ((Object) new qga());
+          return (TextureOperator) ((Object) new qga());
         }
         if (var2 == 3) {
-          return (ci) ((Object) new gm());
+          return (TextureOperator) ((Object) new gm());
         }
         if (var2 == 4) {
-          return (ci) ((Object) new bma());
+          return (TextureOperator) ((Object) new bma());
         }
         if (var2 == 5) {
-          return (ci) ((Object) new cl());
+          return (TextureOperator) ((Object) new cl());
         }
         if (var2 == 6) {
-          return (ci) ((Object) new wja());
+          return (TextureOperator) ((Object) new wja());
         }
         if (var2 == 7) {
-          return (ci) ((Object) new eka());
+          return (TextureOperator) ((Object) new eka());
         }
         if (var2 == 8) {
-          return (ci) ((Object) new fs());
+          return (TextureOperator) ((Object) new fs());
         }
         if (var2 == 9) {
-          return (ci) ((Object) new pv());
+          return (TextureOperator) ((Object) new pv());
         }
         if (var2 == 10) {
-          return (ci) ((Object) new wna());
+          return (TextureOperator) ((Object) new wna());
         }
         if (var2 == 11) {
-          return (ci) ((Object) new vda());
+          return (TextureOperator) ((Object) new vda());
         }
         if (var2 == 12) {
-          return (ci) ((Object) new ifa());
+          return (TextureOperator) ((Object) new ifa());
         }
         if (var2 == 13) {
-          return (ci) ((Object) new bda());
+          return (TextureOperator) ((Object) new bda());
         }
         if (var2 == 14) {
-          return (ci) ((Object) new gla());
+          return (TextureOperator) ((Object) new gla());
         }
         if (var2 == 15) {
-          return (ci) ((Object) new nw());
+          return (TextureOperator) ((Object) new nw());
         }
         if (var2 == 16) {
-          return (ci) ((Object) new vc());
+          return (TextureOperator) ((Object) new vc());
         }
         if (var2 == 17) {
-          return (ci) ((Object) new wsa());
+          return (TextureOperator) ((Object) new wsa());
         }
         if (var2 == 18) {
-          return (ci) ((Object) new hb());
+          return (TextureOperator) ((Object) new hb());
         }
         if (var2 == 19) {
-          return (ci) ((Object) new vla());
+          return (TextureOperator) ((Object) new vla());
         }
         if (var2 == 20) {
-          return (ci) ((Object) new nfa());
+          return (TextureOperator) ((Object) new nfa());
         }
         if (var2 == 21) {
-          return (ci) ((Object) new nia());
+          return (TextureOperator) ((Object) new nia());
         }
         if (var2 == 22) {
-          return (ci) ((Object) new sba());
+          return (TextureOperator) ((Object) new sba());
         }
         if (var2 == 23) {
-          return (ci) ((Object) new fl());
+          return (TextureOperator) ((Object) new fl());
         }
         if (24 == var2) {
-          return (ci) ((Object) new jda());
+          return (TextureOperator) ((Object) new jda());
         }
         if (var2 == 25) {
-          return (ci) ((Object) new cma());
+          return (TextureOperator) ((Object) new cma());
         }
         if (var2 == 26) {
-          return (ci) ((Object) new hv());
+          return (TextureOperator) ((Object) new hv());
         }
         if (var2 == 27) {
-          return (ci) ((Object) new bj());
+          return (TextureOperator) ((Object) new bj());
         }
         if (28 == var2) {
-          return (ci) ((Object) new iia());
+          return (TextureOperator) ((Object) new iia());
         }
         if (29 == var2) {
-          return (ci) ((Object) new rda());
+          return (TextureOperator) ((Object) new rda());
         }
         if (var2 == 30) {
-          return (ci) ((Object) new ksa());
+          return (TextureOperator) ((Object) new ksa());
         }
         if (var2 == 31) {
-          return (ci) ((Object) new qv());
+          return (TextureOperator) ((Object) new qv());
         }
         if (32 == var2) {
-          return (ci) ((Object) new un());
+          return (TextureOperator) ((Object) new un());
         }
         if (var2 == 33) {
-          return (ci) ((Object) new jv());
+          return (TextureOperator) ((Object) new jv());
         }
         if (var2 == 34) {
-          return (ci) ((Object) new PerlinNoise2D());
+          return (TextureOperator) ((Object) new PerlinNoise2D());
         }
         if (var2 == 35) {
-          return (ci) ((Object) new go());
+          return (TextureOperator) ((Object) new go());
         }
         if (var2 == 36) {
-          return (ci) ((Object) new gia());
+          return (TextureOperator) ((Object) new gia());
         }
         if (var2 == 37) {
-          return (ci) ((Object) new voa());
+          return (TextureOperator) ((Object) new voa());
         }
         if (38 == var2) {
-          return (ci) ((Object) new bk());
+          return (TextureOperator) ((Object) new bk());
         }
         if (39 == var2) {
-          return (ci) ((Object) new coa());
+          return (TextureOperator) ((Object) new coa());
         }
         return null;
     }

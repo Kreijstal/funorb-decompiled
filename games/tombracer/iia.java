@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class iia extends ci {
+final class iia extends TextureOperator {
     static String field_q;
     private int field_u;
     private int field_p;

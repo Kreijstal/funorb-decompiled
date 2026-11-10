@@ -46,7 +46,7 @@ final class WeaponItemBehaviour extends ItemBehaviour {
     WeaponItemBehaviour(Room param0, boolean param1) {
         super(param0, param1);
         try {
-          this.field_t = ci.a(4, -1);
+          this.field_t = TextureOperator.a(4, -1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ef.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

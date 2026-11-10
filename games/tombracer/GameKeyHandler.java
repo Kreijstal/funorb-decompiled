@@ -71,7 +71,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           if (null == nfa.field_n) {
             return;
           }
-          cda.field_p = 0;
+          MotionTrackingModel.field_p = 0;
           var2_int = param0.getKeyCode();
           if (0 <= var2_int &&
             var2_int < bba.field_c.length) {
@@ -155,7 +155,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         RuntimeException var2 = null;
         try {
           if (nfa.field_n != null) {
-            cda.field_p = 0;
+            MotionTrackingModel.field_p = 0;
             var2_int = param0.getKeyCode();
             if (0 <= var2_int &&
               var2_int < bba.field_c.length) {

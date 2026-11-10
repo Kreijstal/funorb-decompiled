@@ -70,8 +70,8 @@ final class kla {
           throw new IllegalStateException();
         }
         if (param0 == -72) {
-          if (null != ci.field_l) {
-            ci.field_l.i((byte) -108);
+          if (null != TextureOperator.field_l) {
+            TextureOperator.field_l.i((byte) -108);
           }
           var1 = ooa.a((byte) -107);
           vn.field_b = new LoginForm(var1, (String) null, true, false, false);
@@ -82,8 +82,8 @@ final class kla {
         }
         Object var2 = (Object) null;
         kla.a((PlatformTaskDispatcher) null, (byte) -10, (Object) null);
-        if (null != ci.field_l) {
-          ci.field_l.i((byte) -108);
+        if (null != TextureOperator.field_l) {
+          TextureOperator.field_l.i((byte) -108);
         }
         var1Lifetime1 = ooa.a((byte) -107);
         vn.field_b = new LoginForm(var1Lifetime1, (String) null, true, false, false);

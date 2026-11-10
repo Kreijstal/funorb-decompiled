@@ -91,11 +91,11 @@ final class ArrowShooterComponent extends ShooterComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var9 = new Trap(param2, param0);
-          var9.b((byte) -11, this.field_k, this.field_l);
+          var9.setSize((byte) -11, this.field_k, this.field_l);
           var9.h(param1, 0);
           var9.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new WeaponShooterBehaviour(param2, param0);
-          var6 = ci.a(0, -1);
+          var6 = TextureOperator.a(0, -1);
           var6.refillAmmo(91, true);
           if (this.s((byte) 73)) {
             var7_int = var6.a(true);

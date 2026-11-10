@@ -22,7 +22,7 @@ final class re {
         int var1 = 2 + di.field_a;
         rra.field_e.a(hk.field_e.field_G, hk.field_e.field_t - (rca.field_p ? var1 : 0), -23776, !rca.field_p ? 0 : var1, 0);
         GameFont.a(false);
-        st.field_j.a(nra.field_a.field_G, 40, -23776, nra.field_a.field_t - 40, 0);
+        ImageProducerRasterBuffer.field_j.a(nra.field_a.field_G, 40, -23776, nra.field_a.field_t - 40, 0);
         ap.field_a.a(OpenGlToolkit.field_fd.field_G, 30, -23776, 0, 0);
         db.field_s.a(OpenGlToolkit.field_fd.field_G, OpenGlToolkit.field_fd.field_t - 40 - 2 - 30, param0 + 5264, 30, 0);
         gta.field_b.a(68, 30, -23776, 5, 5);

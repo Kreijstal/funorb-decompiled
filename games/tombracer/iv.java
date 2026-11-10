@@ -5,7 +5,7 @@ final class iv extends jea {
     static int field_ub;
     jea field_tb;
     jea field_vb;
-    oj field_wb;
+    VerticalScrollbar field_wb;
 
     final static void f(int param0) {
         int var7 = 0;
@@ -83,11 +83,11 @@ final class iv extends jea {
         this.field_wb.a(this.field_tb.field_t, -this.field_tb.field_T, param0, false, this.field_G - param0, this.field_t, this.field_vb.field_t, 0);
     }
 
-    iv(long param0, jea param1, jea param2, oj param3) {
+    iv(long param0, jea param1, jea param2, VerticalScrollbar param3) {
         super(param0, (jea) null);
         try {
           this.field_vb = new jea(0L, param2);
-          this.field_wb = new oj(0L, param3);
+          this.field_wb = new VerticalScrollbar(0L, param3);
           this.b(-123, this.field_vb);
           this.b(-128, this.field_wb);
           this.field_tb = param1;
@@ -130,7 +130,7 @@ final class iv extends jea {
             this.field_tb.field_K = -this.field_tb.field_T;
           }
         }
-        if (this.field_wb.h(-1)) {
+        if (this.field_wb.isThumbHeld(-1)) {
           this.field_tb.field_T = -this.field_wb.a(param1, (byte) 108, this.field_vb.field_t, this.field_tb.field_t);
           this.field_tb.field_K = 0;
         }

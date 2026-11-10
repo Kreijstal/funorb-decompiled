@@ -282,9 +282,9 @@ final class rg extends SingleChildWidget {
     final static int g(byte param0) {
         if (param0 < 66) {
           rg.f(79);
-          return cda.field_p;
+          return MotionTrackingModel.field_p;
         }
-        return cda.field_p;
+        return MotionTrackingModel.field_p;
     }
 
     static {

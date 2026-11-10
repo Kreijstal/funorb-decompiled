@@ -13,7 +13,7 @@ abstract class mt {
         return var3;
     }
 
-    final static byte[] a(String param0, byte param1) {
+    final static byte[] readTextEntry(String param0, byte param1) {
         RuntimeException var2 = null;
         byte[] stackIn_2_0 = null;
         byte[] stackIn_4_0 = null;
@@ -23,7 +23,7 @@ abstract class mt {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= 99) {
-            stackIn_4_0 = fs.field_p.a("", (byte) 116, param0);
+            stackIn_4_0 = fs.textArchive.a("", (byte) 116, param0);
             return stackIn_4_0;
           }
           stackIn_2_0 = (byte[]) null;

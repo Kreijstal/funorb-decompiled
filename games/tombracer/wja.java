@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wja extends ci {
+final class wja extends TextureOperator {
     private int field_m;
     private int field_n;
     static String field_o;

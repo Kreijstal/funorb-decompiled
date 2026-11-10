@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class TrapBaseModel extends cda {
+final class TrapBaseModel extends MotionTrackingModel {
     private int field_w;
 
     final void d(int param0) {

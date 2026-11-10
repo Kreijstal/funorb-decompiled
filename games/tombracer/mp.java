@@ -34,7 +34,7 @@ final class mp {
               if (decompiledSharedTail0) {
                 var5 = var5 + "; Expires=" + ida.a(bva.b((byte) -107) + 94608000000L, param2 + 21406) + "; Max-Age=" + 94608000L;
               }
-              lb.a(param1, 19467, "document.cookie=\"" + var5 + "\"");
+              JavaScriptBridge.evaluateScript(param1, 19467, "document.cookie=\"" + var5 + "\"");
               if (param2 != -21407) {
                 mp.a(-2);
               }
@@ -148,7 +148,7 @@ final class mp {
         }
     }
 
-    final static void a(jea param0, jea param1, boolean param2, jea param3, oj param4, jea param5, int param6, jea param7, jea param8, jea param9, jea param10, BitmapFont param11) {
+    final static void a(jea param0, jea param1, boolean param2, jea param3, VerticalScrollbar param4, jea param5, int param6, jea param7, jea param8, jea param9, jea param10, BitmapFont param11) {
         String stackIn_27_0 = null;
         int stackIn_31_0 = 0;
         RuntimeException stackIn_42_0 = null;

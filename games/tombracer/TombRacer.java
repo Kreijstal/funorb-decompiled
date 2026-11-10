@@ -69,7 +69,7 @@ public final class TombRacer extends rfa implements ls {
             return true;
           }
           if (param2 == 52 &&
-            oj.field_tb[81]) {
+            VerticalScrollbar.field_tb[81]) {
             System.out.println("Git hash: 86acd69e33288530ebd1917f2ede5a853f902fe7");
             System.out.println("Git committer date: 2015-09-15 11:23:43 +0100");
             System.out.println("Git author date: 2015-09-15 11:23:43 +0100");
@@ -327,7 +327,7 @@ public final class TombRacer extends rfa implements ls {
         hw.releaseStatics(-75);
         fr.releaseStatics((byte) 1);
         ta.releaseStatics((byte) -17);
-        oj.releaseStatics(false);
+        VerticalScrollbar.releaseStatics(false);
         um.releaseStatics((byte) 18);
         jea.releaseStatics((byte) -107);
         ContextMenu.d((byte) -39);
@@ -496,7 +496,7 @@ public final class TombRacer extends rfa implements ls {
         uoa.releaseStatics();
         VorbisSample.releaseStatics();
         uca.releaseStatics(65);
-        an.releaseStatics(-32768);
+        TriangleMesh.releaseStatics(-32768);
         nn.releaseStatics((byte) 9);
         nea.releaseStatics(0);
         vaa.a(0);
@@ -510,11 +510,11 @@ public final class TombRacer extends rfa implements ls {
         SpriteState.f(0);
         VorbisFloor1.releaseStatics();
         aqa.releaseStatics((byte) -59);
-        wua.releaseStatics((byte) -36);
+        QuickChatPhraseDefinition.releaseStatics((byte) -36);
         SoftReferenceCache.releaseStatics(8476);
         wra.releaseStatics(true);
         NanoTickClock.releaseStatics(param0 + 3571);
-        st.releaseStatics(param0 + 3668);
+        ImageProducerRasterBuffer.releaseStatics(param0 + 3668);
         ada.releaseStatics(param0 ^ 3628);
         MiscItemBehaviour.releaseStatics(param0 ^ -3666);
         cba.releaseStatics((byte) 109);
@@ -594,7 +594,7 @@ public final class TombRacer extends rfa implements ls {
         aia.releaseStatics(-87);
         PlantModel.releaseStatics(false);
         WallModel.releaseStatics((byte) -123);
-        cda.n((byte) 112);
+        MotionTrackingModel.n((byte) 112);
         PlatformModel.l(30389);
         PlatformBehaviour.releaseStatics(1);
         PortalBehaviour.j((byte) 124);
@@ -679,12 +679,12 @@ public final class TombRacer extends rfa implements ls {
         UsernameSuggestionsPanel.releaseStatics(param0 ^ -19478);
         HotspotTextWidget.releaseStatics((byte) -123);
         mha.releaseStatics(-23897);
-        sd.releaseStatics((byte) 10);
+        ValidationMessageWidget.releaseStatics((byte) 10);
         io.releaseStatics((byte) -57);
         pg.a(param0 + 3666);
         bc.a(118);
         esa.releaseStatics((byte) 102);
-        ci.a((byte) -79);
+        TextureOperator.a((byte) -79);
         ija.releaseStatics((byte) 97);
         bf.releaseStatics(true);
         pna.releaseStatics(110);

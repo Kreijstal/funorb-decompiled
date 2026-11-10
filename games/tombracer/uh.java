@@ -106,7 +106,7 @@ final class uh extends IntrusiveNode {
               stackIn_14_0 = var3;
               return stackIn_14_0;
             }
-            var3 = (mu) (CoinItemComponent.field_G.b((byte) 99));
+            var3 = (mu) (CoinItemComponent.field_G.nextWithSameKey((byte) 99));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

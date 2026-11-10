@@ -33,7 +33,7 @@ final class rga {
         var9 = TombRacer.field_G ? 1 : 0;
         try {
           var11 = (CharSequence) ((Object) param1);
-          var3_int = sd.a(param2, (byte) 93, var11);
+          var3_int = ValidationMessageWidget.a(param2, (byte) 93, var11);
           var4 = new String[1 + var3_int];
           var5 = 0;
           var6 = 0;

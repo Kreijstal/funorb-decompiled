@@ -134,7 +134,7 @@ final class jaa implements noa {
         }
     }
 
-    final static String a(byte param0, byte[] param1) {
+    final static String decodeText(byte param0, byte[] param1) {
         RuntimeException var2 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;

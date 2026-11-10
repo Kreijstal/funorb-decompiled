@@ -44,7 +44,7 @@ final class QuickChatMenu extends jea {
         }
         this.field_Eb = null;
         this.field_tb = -1;
-        this.a(12, 6);
+        this.setExpansionTicks(12, 6);
     }
 
     public static void releaseStatics(int param0) {
@@ -71,7 +71,7 @@ final class QuickChatMenu extends jea {
         return var2 != 0;
     }
 
-    private final void a(int param0, int param1) {
+    private final void setExpansionTicks(int param0, int param1) {
         int var5 = 0;
         int var4 = 0;
         int var3 = 0;
@@ -144,7 +144,7 @@ final class QuickChatMenu extends jea {
             }
           }
           this.field_vb = this.field_vb + (10 + EffectEvent.field_j.field_n);
-          this.a(12, 93);
+          this.setExpansionTicks(12, 93);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -208,11 +208,11 @@ final class QuickChatMenu extends jea {
         if (param2 != this.field_tb) {
           if (this.field_zb[param2] != null) {
             this.a(true);
-            this.a(0, 60);
+            this.setExpansionTicks(0, 60);
             this.field_tb = param2;
             this.field_Eb = this.field_zb[this.field_tb];
             MazeGrid.a(this.field_Eb, (byte) 122);
-            this.field_Eb.a(12, 116);
+            this.field_Eb.setExpansionTicks(12, 116);
           } else {
             if (this.field_ub[param2] != -1) {
               var5 = this.field_ub[param2] | 32768;
@@ -236,7 +236,7 @@ final class QuickChatMenu extends jea {
           }
         } else {
           this.a(true);
-          this.a(0, 70);
+          this.setExpansionTicks(0, 70);
         }
     }
 
@@ -253,7 +253,7 @@ final class QuickChatMenu extends jea {
           if (var4 != 0 &&
             this.field_Eb.field_tb == -1) {
             this.a(true);
-            this.a(0, 124);
+            this.setExpansionTicks(0, 124);
             return true;
           }
           return this.field_Eb.a(param0, (byte) -105, param2);
@@ -312,7 +312,7 @@ final class QuickChatMenu extends jea {
           }
         }
         if (this.field_Cb > 0) {
-          this.a(this.field_Cb - 1, 66);
+          this.setExpansionTicks(this.field_Cb - 1, 66);
         }
     }
 
@@ -326,7 +326,7 @@ final class QuickChatMenu extends jea {
         this.a(this.field_Fb, this.field_yb, -23776, -this.field_yb + param4, param1);
         if (param3 != this.field_Db) {
           this.field_Db = param3;
-          this.a(this.field_Cb, 77);
+          this.setExpansionTicks(this.field_Cb, 77);
         }
         for (var7 = 0; this.field_Bb > var7; var7++) {
           this.field_Gb[var7].a(this.field_Fb, 0, param0, this.field_wb, 0, param5, this.field_Gb[var7].field_T);

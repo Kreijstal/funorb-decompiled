@@ -3,7 +3,7 @@
  */
 final class cq {
     static jea field_e;
-    static an[] field_b;
+    static TriangleMesh[] field_b;
     static GameClock field_a;
     static String field_c;
     static BinaryBitmapFont field_d;

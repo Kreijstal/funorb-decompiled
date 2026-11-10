@@ -122,7 +122,7 @@ final class ck {
           var15.field_z = 1;
           PerlinNoise2D.field_t = new jea(0L, Corpse.field_i);
           PerlinNoise2D.field_t.field_z = 1;
-          st.field_j = new jea(0L, ssa.field_g, S2CActionPacket.field_g.toUpperCase());
+          ImageProducerRasterBuffer.field_j = new jea(0L, ssa.field_g, S2CActionPacket.field_g.toUpperCase());
           ap.field_a = new jea(0L, uda.field_s, tha.field_B.toUpperCase());
           db.field_s = new jea(0L, CommonChooseReward.field_c);
           gta.field_b = new jea(0L, ooa.field_f, SnakePitModel.field_m);
@@ -429,7 +429,7 @@ final class ck {
         }
     }
 
-    final static void a(int param0, boolean param1, an param2, int param3, int param4) {
+    final static void a(int param0, boolean param1, TriangleMesh param2, int param3, int param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_10_0 = false;
         int stackIn_22_0 = 0;

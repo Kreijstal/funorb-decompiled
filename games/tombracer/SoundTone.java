@@ -6,60 +6,60 @@ import java.util.*;
 final class SoundTone {
     private int[] field_u;
     private static int[] field_w;
-    private co field_p;
+    private SoundEnvelope field_p;
     private int field_m;
-    private co field_g;
-    private co field_c;
-    private co field_k;
+    private SoundEnvelope field_g;
+    private SoundEnvelope field_c;
+    private SoundEnvelope field_k;
     private static int[] field_b;
-    private co field_e;
+    private SoundEnvelope field_e;
     private AudioFilter field_n;
     private static int[] field_x;
-    private co field_y;
+    private SoundEnvelope field_y;
     int field_v;
     private int field_f;
     private int[] field_a;
-    private co field_d;
+    private SoundEnvelope field_d;
     private static int[] field_q;
     private int[] field_t;
     private static int[] field_r;
     private static int[] field_s;
-    private co field_l;
+    private SoundEnvelope field_l;
     private static int[] field_o;
     private static int[] field_j;
     int field_i;
-    private co field_h;
+    private SoundEnvelope field_h;
 
     final void decode(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
-        this.field_g = new co();
-        this.field_g.b(param0);
-        this.field_y = new co();
-        this.field_y.b(param0);
+        this.field_g = new SoundEnvelope();
+        this.field_g.decode(param0);
+        this.field_y = new SoundEnvelope();
+        this.field_y.decode(param0);
         int var2 = param0.readUnsignedByte(255);
         if (var2 != 0) {
           param0.position = param0.position - 1;
-          this.field_c = new co();
-          this.field_c.b(param0);
-          this.field_l = new co();
-          this.field_l.b(param0);
+          this.field_c = new SoundEnvelope();
+          this.field_c.decode(param0);
+          this.field_l = new SoundEnvelope();
+          this.field_l.decode(param0);
         }
         var2 = param0.readUnsignedByte(255);
         if (var2 != 0) {
           param0.position = param0.position - 1;
-          this.field_e = new co();
-          this.field_e.b(param0);
-          this.field_p = new co();
-          this.field_p.b(param0);
+          this.field_e = new SoundEnvelope();
+          this.field_e.decode(param0);
+          this.field_p = new SoundEnvelope();
+          this.field_p.decode(param0);
         }
         var2 = param0.readUnsignedByte(255);
         if (var2 != 0) {
           param0.position = param0.position - 1;
-          this.field_k = new co();
-          this.field_k.b(param0);
-          this.field_h = new co();
-          this.field_h.b(param0);
+          this.field_k = new SoundEnvelope();
+          this.field_k.decode(param0);
+          this.field_h = new SoundEnvelope();
+          this.field_h.decode(param0);
         }
         for (var3 = 0; var3 < 10; var3++) {
           var4 = param0.readUnsignedSmart((byte) -46);
@@ -75,8 +75,8 @@ final class SoundTone {
         this.field_v = param0.readUnsignedShort(123);
         this.field_i = param0.readUnsignedShort(126);
         this.field_n = new AudioFilter();
-        this.field_d = new co();
-        this.field_n.a(param0, this.field_d);
+        this.field_d = new SoundEnvelope();
+        this.field_n.decode(param0, this.field_d);
     }
 
     final int[] synthesize(int param0, int param1) {
@@ -158,17 +158,17 @@ final class SoundTone {
           }
         }
         for (var11Lifetime1 = 0; var11Lifetime1 < param0; var11Lifetime1++) {
-          var12 = this.field_g.a(param0);
-          var13 = this.field_y.a(param0);
+          var12 = this.field_g.advance(param0);
+          var13 = this.field_y.advance(param0);
           if (this.field_c != null) {
-            var14 = this.field_c.a(param0);
-            var15 = this.field_l.a(param0);
+            var14 = this.field_c.advance(param0);
+            var15 = this.field_l.advance(param0);
             var12 = var12 + (this.evaluateWave(var7, var15, this.field_c.field_a) >> 1);
             var7 = var7 + ((var14 * var5 >> 16) + var6);
           }
           if (this.field_e != null) {
-            var14Lifetime3 = this.field_e.a(param0);
-            var15Lifetime3 = this.field_p.a(param0);
+            var14Lifetime3 = this.field_e.advance(param0);
+            var15Lifetime3 = this.field_p.advance(param0);
             var13 = var13 * ((this.evaluateWave(var10, var15Lifetime3, this.field_e.field_a) >> 1) + 32768) >> 15;
             var10 = var10 + ((var14Lifetime3 * var8 >> 16) + var9);
           }
@@ -189,8 +189,8 @@ final class SoundTone {
           var12Lifetime1 = 0;
           var13Lifetime1 = 1;
           for (var14Lifetime1 = 0; var14Lifetime1 < param0; var14Lifetime1++) {
-            var15Lifetime1 = this.field_k.a(param0);
-            var16 = this.field_h.a(param0);
+            var15Lifetime1 = this.field_k.advance(param0);
+            var16 = this.field_h.advance(param0);
             if (var13Lifetime1 == 0) {
               var12Lifetime1Lifetime1 = this.field_k.field_e + ((this.field_k.field_i - this.field_k.field_e) * var16 >> 8);
             } else {
@@ -217,7 +217,7 @@ final class SoundTone {
         if (!(this.field_n.field_a[0] <= 0) ||
           !(this.field_n.field_a[1] <= 0)) {
           this.field_d.a();
-          var11Lifetime4 = this.field_d.a(param0 + 1);
+          var11Lifetime4 = this.field_d.advance(param0 + 1);
           var12Lifetime3 = this.field_n.computeCoefficients(0, (float)var11Lifetime4 / 65536.0f);
           var13Lifetime2 = this.field_n.computeCoefficients(1, (float)var11Lifetime4 / 65536.0f);
           if (param0 >= var12Lifetime3 + var13Lifetime2) {
@@ -235,7 +235,7 @@ final class SoundTone {
                 var16Lifetime1 = var16Lifetime1 - (int)((long)field_x[var14Lifetime2 - 1 - var17Lifetime3] * (long)AudioFilter.field_g[1][var17Lifetime3] >> 16);
               }
               field_x[var14Lifetime2] = var16Lifetime1;
-              var11Lifetime4 = this.field_d.a(param0 + 1);
+              var11Lifetime4 = this.field_d.advance(param0 + 1);
               var14Lifetime2++;
             }
             var15Lifetime2Lifetime1 = 128;
@@ -252,7 +252,7 @@ final class SoundTone {
                   var16Lifetime1Lifetime1 = var16Lifetime1Lifetime1 - (int)((long)field_x[var14Lifetime2 - 1 - var17Lifetime1Lifetime1] * (long)AudioFilter.field_g[1][var17Lifetime1Lifetime1] >> 16);
                 }
                 field_x[var14Lifetime2] = var16Lifetime1Lifetime1;
-                var11Lifetime4 = this.field_d.a(param0 + 1);
+                var11Lifetime4 = this.field_d.advance(param0 + 1);
                 var14Lifetime2++;
               }
               if (var14Lifetime2 < param0 - var12Lifetime3) {
@@ -272,7 +272,7 @@ final class SoundTone {
                 var16Lifetime1Lifetime2 = var16Lifetime1Lifetime2 - (int)((long)field_x[var14Lifetime2 - 1 - var17Lifetime2Lifetime1] * (long)AudioFilter.field_g[1][var17Lifetime2Lifetime1] >> 16);
               }
               field_x[var14Lifetime2] = var16Lifetime1Lifetime2;
-              var11Lifetime4 = this.field_d.a(param0 + 1);
+              var11Lifetime4 = this.field_d.advance(param0 + 1);
               var14Lifetime2++;
             }
           }

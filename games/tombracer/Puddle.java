@@ -119,7 +119,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
 
     final void mirrorInRoom(Room param0, int param1) {
         try {
-          this.field_p = param0.a(this.field_p, (byte) 71);
+          this.field_p = param0.mirrorX(this.field_p, (byte) 71);
           if (param1 >= -16) {
             Puddle.b(-115, (byte) 124, 61, -21);
           }

@@ -80,7 +80,7 @@ final class vba extends we {
 
     private final ToolkitSprite h(int param0, int param1) {
         if ((!SimpleBlockBehaviour.c(param1) ||
-          !oj.field_tb[82]) &&
+          !VerticalScrollbar.field_tb[82]) &&
           !this.a(false, param0)) {
           return PerlinNoise2D.field_m[42 + this.field_w[param0]];
         }

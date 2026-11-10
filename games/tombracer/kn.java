@@ -94,8 +94,8 @@ final class kn {
           if (var13Lifetime1 + var10 + var6 > SoftwareRasterizer.field_a) {
             var13Lifetime1 = -var6 + param2 - var10;
           }
-          SoftwareRasterizer.f(var12, var13Lifetime1, var5_int + var9, var6 + var10, this.field_a);
-          SoftwareRasterizer.e(var12 + 1, var13Lifetime1 + 1, var9 + (var5_int - 2), var10 + var6 - 2, this.field_c);
+          SoftwareRasterizer.drawRectangle(var12, var13Lifetime1, var5_int + var9, var6 + var10, this.field_a);
+          SoftwareRasterizer.fillRectangle(var12 + 1, var13Lifetime1 + 1, var9 + (var5_int - 2), var10 + var6 - 2, this.field_c);
           this.field_q.a(param1, this.field_i + var12, this.field_t + var13Lifetime1, var9, var10, this.field_s, -1, 0, 0, var7);
           var14Lifetime1 = -78 % ((-56 - param0) / 47);
           return;
@@ -144,7 +144,7 @@ final class kn {
     }
 
     final void a(int param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
-        SoftwareRasterizer.c(param6, param0, param5, param1, param2, param3);
+        SoftwareRasterizer.fillRectangleAlpha(param6, param0, param5, param1, param2, param3);
         if (param4 <= 103) {
           this.field_n = false;
         }
@@ -190,8 +190,8 @@ final class kn {
           if (SoftwareRasterizer.field_a < 6 + var6 + var8) {
             var8 = -var6 + (SoftwareRasterizer.field_a - 6);
           }
-          SoftwareRasterizer.f(var7, var8, 6 + var5_int, 6 + var6, this.field_s);
-          SoftwareRasterizer.e(var7 + 1, 1 + var8, 4 + var5_int, 4 + var6, this.field_c);
+          SoftwareRasterizer.drawRectangle(var7, var8, 6 + var5_int, 6 + var6, this.field_s);
+          SoftwareRasterizer.fillRectangle(var7 + 1, 1 + var8, 4 + var5_int, 4 + var6, this.field_c);
           this.field_q.c(param2, var7 + 3, this.field_q.field_G + (3 + var8), this.field_s, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -212,7 +212,7 @@ final class kn {
         if (param2 != 8947848) {
           this.a((byte) 41, 95, -41, 50, 51);
         }
-        SoftwareRasterizer.a(param3, param0, param4, param5, param1);
+        SoftwareRasterizer.drawLine(param3, param0, param4, param5, param1);
     }
 
     final void a(BitmapFont param0, boolean param1) {

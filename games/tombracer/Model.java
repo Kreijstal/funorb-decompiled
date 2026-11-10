@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ww extends ka {
+final class Model extends ka {
     private tw field_z;
-    private ww field_Gb;
-    private ww field_u;
+    private Model field_Gb;
+    private Model field_u;
     private short[] field_M;
     private int[] field_Ab;
     private short[] field_V;
-    private ww field_qb;
+    private Model field_qb;
     private boolean field_zb;
-    private ww field_n;
+    private Model field_n;
     private float[][] field_l;
-    private ww field_N;
+    private Model field_N;
     private int[] field_v;
-    private ww field_tb;
+    private Model field_tb;
     private int[] field_mb;
     private int[] field_E;
     private rga[] field_kb;
@@ -30,7 +30,7 @@ final class ww extends ka {
     private int[] field_yb;
     private iua field_w;
     private short[] field_ub;
-    private ww field_pb;
+    private Model field_pb;
     private int field_P;
     private int[] field_C;
     private short field_R;
@@ -65,7 +65,7 @@ final class ww extends ka {
     private int[] field_o;
     private int[] field_jb;
     private boolean field_L;
-    private ww field_K;
+    private Model field_K;
     private boolean field_r;
     private boolean field_S;
     private short field_f;
@@ -78,8 +78,8 @@ final class ww extends ka {
     private int field_p;
     private int[] field_J;
     private short[] field_X;
-    private ww field_fb;
-    private ww field_Q;
+    private Model field_fb;
+    private Model field_Q;
     private int[] field_t;
     private int field_g;
     private int[] field_y;
@@ -147,7 +147,7 @@ final class ww extends ka {
         }
     }
 
-    private final void c() {
+    private final void computeNormals() {
         gna dupTemp$0 = null;
         int var1;
         int var2;
@@ -248,7 +248,7 @@ final class ww extends ka {
         }
     }
 
-    private final int d(int param0) {
+    private final int clampHslLightness(int param0) {
         if (param0 < 2) {
           param0 = 2;
         } else {
@@ -521,7 +521,7 @@ final class ww extends ka {
         this.b(param0, param1, -1, param2);
     }
 
-    private final void f() {
+    private final void clearCaches() {
         this.field_lb = null;
         this.field_D = null;
         this.field_I = null;
@@ -800,11 +800,11 @@ final class ww extends ka {
         if (this.field_eb == 0 &&
           this.field_lb == null) {
           if (this.field_d.field_u <= 1) {
-            this.c();
+            this.computeNormals();
           } else {
             var1 = this;
             synchronized (var1) {
-              this.c();
+              this.computeNormals();
             }
           }
           return;
@@ -1195,9 +1195,9 @@ final class ww extends ka {
     }
 
     final ka a(byte param0, int param1, boolean param2) {
-        ww dupTemp$0 = null;
-        ww var5 = null;
-        ww var4 = null;
+        Model dupTemp$0 = null;
+        Model var5 = null;
+        Model var4 = null;
         this.a(Thread.currentThread());
         if (param0 == 1) {
           var5 = this.field_n;
@@ -1219,7 +1219,7 @@ final class ww extends ka {
                   var5 = this.field_fb;
                   var4 = this.field_N;
                 } else {
-                  dupTemp$0 = new ww(this.field_d);
+                  dupTemp$0 = new Model(this.field_d);
                   var5 = dupTemp$0;
                   var4 = dupTemp$0;
                 }
@@ -1406,7 +1406,7 @@ final class ww extends ka {
         return;
     }
 
-    private final ka a(ww param0, ww param1, int param2, boolean param3, boolean param4) {
+    private final ka a(Model param0, Model param1, int param2, boolean param3, boolean param4) {
         int[] array$0 = null;
         int[] array$1 = null;
         int[] array$2 = null;
@@ -1439,8 +1439,8 @@ final class ww extends ka {
         int var8;
         int var9;
         int var10;
-        ww var10_ref_ww;
-        ww var11_ref_ww;
+        Model var10_ref_ww;
+        Model var11_ref_ww;
         int var10Lifetime1;
         int var10Lifetime2;
         int var10Lifetime3;
@@ -2946,7 +2946,7 @@ final class ww extends ka {
             this.field_T[var5] = this.field_rb[var5] * var2 + this.field_T[var5] * var3 >> 14;
             this.field_rb[var5] = var6;
           }
-          this.f();
+          this.clearCaches();
         }
         return;
     }
@@ -3048,7 +3048,7 @@ final class ww extends ka {
           this.field_B = (pna) (param0);
           var5 = this.field_d.field_A;
           if (!this.field_r) {
-            this.d();
+            this.calculateBounds();
           }
           var6 = 0;
           if (this.field_B.field_g == 16384.0f &&
@@ -3401,7 +3401,7 @@ final class ww extends ka {
         }
     }
 
-    private final void d() {
+    private final void calculateBounds() {
         int var9 = 0;
         int var1;
         int var2;
@@ -3634,7 +3634,7 @@ final class ww extends ka {
                 var15 = (var2 * var13.field_a + var3 * var13.field_c + var4 * var13.field_b) / var13.field_d >> 16;
                 stackIn_70_0 = (var15 <= 256) ? var7 : var6;
                 var16 = stackIn_70_0;
-                var14 = this.d((var5 >> 2) + (var16 * var15 >> 18));
+                var14 = this.clampHslLightness((var5 >> 2) + (var16 * var15 >> 18));
                 this.field_t[var8] = var14 << 24 | this.a(var12, (short) var11, var14);
                 if (this.field_D != null &&
                   this.field_D[this.field_bb[var8]] != null) {
@@ -3645,7 +3645,7 @@ final class ww extends ka {
                 var15 = (var2 * var13.field_a + var3 * var13.field_c + var4 * var13.field_b) / var13.field_d >> 16;
                 stackIn_77_0 = (var15 <= 256) ? var7 : var6;
                 var16 = stackIn_77_0;
-                var14 = this.d((var5 >> 2) + (var16 * var15 >> 18));
+                var14 = this.clampHslLightness((var5 >> 2) + (var16 * var15 >> 18));
                 this.field_o[var8] = var14 << 24 | this.a(var12, (short) var11, var14);
                 if (this.field_D != null &&
                   this.field_D[this.field_x[var8]] != null) {
@@ -3656,7 +3656,7 @@ final class ww extends ka {
                 var15 = (var2 * var13.field_a + var3 * var13.field_c + var4 * var13.field_b) / var13.field_d >> 16;
                 stackIn_84_0 = (var15 <= 256) ? var7 : var6;
                 var16 = stackIn_84_0;
-                var14 = this.d((var5 >> 2) + (var16 * var15 >> 18));
+                var14 = this.clampHslLightness((var5 >> 2) + (var16 * var15 >> 18));
                 this.field_Fb[var8] = var14 << 24 | this.a(var12, (short) var11, var14);
                 break regionExit1;
               }
@@ -3665,7 +3665,7 @@ final class ww extends ka {
                 var14 = var2 * var20.field_a + var3 * var20.field_c + var4 * var20.field_b >> 16;
                 stackIn_90_0 = (var14 <= 256) ? var7 : var6;
                 var15 = stackIn_90_0;
-                var16 = this.d((var5 >> 2) + (var15 * var14 >> 18));
+                var16 = this.clampHslLightness((var5 >> 2) + (var15 * var14 >> 18));
                 this.field_t[var8] = var16 << 24 | this.a(var12, (short) var11, var16);
                 this.field_Fb[var8] = -1;
                 break regionExit1;
@@ -3867,7 +3867,7 @@ final class ww extends ka {
 
     }
 
-    ww(SoftwareGraphicsToolkit param0) {
+    Model(SoftwareGraphicsToolkit param0) {
         this.field_zb = false;
         this.field_Z = 0;
         this.field_r = false;
@@ -3880,7 +3880,7 @@ final class ww extends ka {
         this.field_d = param0;
     }
 
-    ww(SoftwareGraphicsToolkit param0, oc param1, int param2, int param3, int param4, int param5) {
+    Model(SoftwareGraphicsToolkit param0, oc param1, int param2, int param3, int param4, int param5) {
         int var9_int = 0;
         int stackIn_6_0 = 0;
         int stackIn_41_0 = 0;

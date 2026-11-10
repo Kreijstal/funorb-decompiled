@@ -501,7 +501,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     }
 
     final ka a(oc param0, int param1, int param2, int param3, int param4) {
-        return (ka) ((Object) new ww(this, param0, param1, param3, param4, param2));
+        return (ka) ((Object) new Model(this, param0, param1, param3, param4, param2));
     }
 
     final boolean n() {
@@ -1096,7 +1096,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
                 stackIn_12_0 = 64;
               }
               var13 = stackIn_12_0;
-              var15 = this.a(var16, var13, 79, var13, var13, 0);
+              var15 = this.createSpriteCopy(var16, var13, 79, var13, var13, 0);
               var11 = var15;
               this.field_X.put(29166, var15, (long)param6);
             }
@@ -1140,7 +1140,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
                 stackIn_12_0 = 64;
               }
               var13 = stackIn_12_0;
-              var15 = this.a(var16, var13, 80, var13, var13, 0);
+              var15 = this.createSpriteCopy(var16, var13, 80, var13, var13, 0);
               var11 = var15;
               this.field_X.put(29166, var15, (long)param6);
             }
@@ -2947,8 +2947,8 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     }
 
     final void b(int param0) {
-        ww.field_q = param0;
-        ww.field_G = param0;
+        Model.field_q = param0;
+        Model.field_G = param0;
         if (this.field_u > 1) {
           throw new IllegalStateException("No MT");
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gla extends ci {
+final class gla extends TextureOperator {
     private int field_n;
     static String field_q;
     static it field_p;

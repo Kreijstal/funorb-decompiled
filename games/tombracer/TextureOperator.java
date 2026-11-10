@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ci extends IntrusiveNode {
+abstract class TextureOperator extends IntrusiveNode {
     fk field_h;
     boolean field_g;
     static int field_k;
     mv field_i;
     static MessageDialog field_l;
     int field_f;
-    ci[] field_j;
+    TextureOperator[] field_j;
 
     void b(int param0, int param1, int param2) {
         int var4 = ~this.field_f == param2 ? param1 : this.field_f;
@@ -91,7 +91,7 @@ abstract class ci extends IntrusiveNode {
         field_l = null;
         if (param0 >= -69) {
           byte[] var2 = (byte[]) null;
-          ci.a((byte[]) null, (byte) 54);
+          TextureOperator.a((byte[]) null, (byte) 54);
         }
     }
 
@@ -121,8 +121,8 @@ abstract class ci extends IntrusiveNode {
         throw new IllegalStateException("This operation does not have a monochrome output");
     }
 
-    ci(int param0, boolean param1) {
-        this.field_j = new ci[param0];
+    TextureOperator(int param0, boolean param1) {
+        this.field_j = new TextureOperator[param0];
         this.field_g = param1 ? true : false;
     }
 

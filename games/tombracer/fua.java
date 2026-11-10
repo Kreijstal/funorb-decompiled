@@ -64,7 +64,7 @@ final class fua implements isa {
             if (this.field_d.hasKeyboardFocus((byte) -34) &&
               var9.startsWith(this.field_d.field_w)) {
               var10 = this.field_d.field_H.b(this.field_d.field_w);
-              SoftwareRasterizer.c(2 + var6_int, var7 + 2, var10, -4 + param0.field_p, 2188450, 100);
+              SoftwareRasterizer.fillRectangleAlpha(2 + var6_int, var7 + 2, var10, -4 + param0.field_p, 2188450, 100);
             }
           }
           SoftwareRasterizer.b();

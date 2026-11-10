@@ -22,7 +22,7 @@ abstract class ItemComponent extends PrefabComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new Trap(param2, param0);
-          var4.b((byte) -11, this.field_k, this.field_l);
+          var4.setSize((byte) -11, this.field_k, this.field_l);
           var4.h(0, 0);
           var4.a(0, (byte) -12, true);
           var4.a((byte) -3, 0);

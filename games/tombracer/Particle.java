@@ -273,7 +273,7 @@ final class Particle extends PooledObject implements Renderable {
         }
     }
 
-    final int b(boolean param0) {
+    final int getLifetime(boolean param0) {
         if (!param0) {
           this.field_u = 98;
           return this.lifetime;
@@ -335,7 +335,7 @@ final class Particle extends PooledObject implements Renderable {
     }
 
     final void mirrorInRoom(Room param0, int param1) {
-        this.field_B = param0.a(this.field_B, (byte) 71);
+        this.field_B = param0.mirrorX(this.field_B, (byte) 71);
         if (param1 >= -16) {
           return;
         }

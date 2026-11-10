@@ -403,12 +403,12 @@ final class Room implements SwitchableScope, Renderable, noa {
           WorldBody var5 = (WorldBody) null;
           this.a(-11, 100, 116, 16, 41, 79, (WorldBody) null);
         }
-        this.entranceX = this.a(this.entranceX, (byte) 71);
+        this.entranceX = this.mirrorX(this.entranceX, (byte) 71);
         if (param1) {
           if (this.simulation.getCurrentRoom((byte) -3) == this) {
             this.getPlayer(-9).q((byte) -57);
           }
-          this.corpses.attachToRoom(this, -110);
+          this.corpses.mirrorInRoom(this, -110);
           this.projectilePool.a(121);
           this.puddlePool.a(119);
           this.particlePool.a(97);
@@ -1631,7 +1631,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         }
     }
 
-    final int a(int param0, byte param1) {
+    final int mirrorX(int param0, byte param1) {
         if (param1 != 71) {
           return 111;
         }

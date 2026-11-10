@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class bma extends ci {
+final class bma extends TextureOperator {
     private int field_m;
     private int field_r;
     private int field_A;

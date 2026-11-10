@@ -105,7 +105,7 @@ class TextInputWidget extends FocusableWidget {
                 if (param2 == 96) {
                   if (0 < this.field_I) {
                     stackIn_104_1 = 95;
-                    if (!oj.field_tb[82]) {
+                    if (!VerticalScrollbar.field_tb[82]) {
                       stackIn_105_2 = -1 + this.field_I;
                     } else {
                       stackIn_105_2 = this.b(param3);
@@ -117,7 +117,7 @@ class TextInputWidget extends FocusableWidget {
                   if (97 == param2) {
                     if (this.field_I < this.field_o.length()) {
                       stackIn_95_1 = -126;
-                      if (oj.field_tb[82]) {
+                      if (VerticalScrollbar.field_tb[82]) {
                         stackIn_96_2 = this.b(-59);
                       } else {
                         stackIn_96_2 = this.field_I + 1;
@@ -138,17 +138,17 @@ class TextInputWidget extends FocusableWidget {
                       this.c(93);
                       return true;
                     }
-                    if (oj.field_tb[82] &&
+                    if (VerticalScrollbar.field_tb[82] &&
                       param2 == 65) {
                       this.l(10571);
                       return true;
                     }
-                    if (oj.field_tb[82] &&
+                    if (VerticalScrollbar.field_tb[82] &&
                       param2 == 66) {
                       this.copySelectedTextToClipboard(0);
                       return true;
                     }
-                    if (oj.field_tb[82] &&
+                    if (VerticalScrollbar.field_tb[82] &&
                       param2 == 67) {
                       this.pasteClipboardText(31);
                       return true;
@@ -569,7 +569,7 @@ class TextInputWidget extends FocusableWidget {
         try {
           var3_int = 36 / ((-89 - param0) / 32);
           this.field_I = param1;
-          if (!oj.field_tb[81]) {
+          if (!VerticalScrollbar.field_tb[81]) {
             this.field_B = this.field_I;
           }
           return;

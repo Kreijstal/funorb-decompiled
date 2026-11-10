@@ -157,7 +157,7 @@ final class sv extends wv {
             return (AntialiasedBitmapFont) (stackIn_2_0);
           }
           if (param3 == 24876) {
-            stackIn_7_0 = ci.a(param0.a(false, param1, param4), (byte) -123);
+            stackIn_7_0 = TextureOperator.a(param0.a(false, param1, param4), (byte) -123);
             return stackIn_7_0;
           }
           stackIn_5_0 = (AntialiasedBitmapFont) null;

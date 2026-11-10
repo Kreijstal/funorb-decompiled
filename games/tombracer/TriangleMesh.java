@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class an {
+final class TriangleMesh {
     byte[] field_q;
     int[] field_J;
     int field_b;
@@ -63,12 +63,12 @@ final class an {
 
     private final void a(boolean param0) {
         if (!param0) {
-          an.releaseStatics(-106);
+          TriangleMesh.releaseStatics(-106);
         }
         this.field_n = false;
     }
 
-    final void a(byte param0) {
+    final void computeBounds(byte param0) {
         int var8 = 0;
         int var2;
         int var3;
@@ -139,7 +139,7 @@ final class an {
         this.a(true);
     }
 
-    an() {
+    TriangleMesh() {
         this.field_n = false;
         this.field_K = (byte) 0;
     }

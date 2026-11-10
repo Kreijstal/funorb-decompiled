@@ -327,7 +327,7 @@ final class bh extends ela {
                 if (!var12.field_Bb &&
                   !var12.field_gc) {
                   if (!var12.field_Tb) {
-                    var12.field_Vb.field_r = wua.field_p;
+                    var12.field_Vb.field_r = QuickChatPhraseDefinition.field_p;
                   } else {
                     var12.field_Vb.field_r = aua.field_c;
                   }
@@ -342,7 +342,7 @@ final class bh extends ela {
               } else {
                 var12.field_Nb.a(68, di.field_a, -23776, var31, 0);
               }
-              var12.field_bc.field_r = BitmapFont.a(var12.field_bc.field_H, var32, 78);
+              var12.field_bc.field_r = BitmapFont.truncateWithEllipsis(var12.field_bc.field_H, var32, 78);
               var12.field_bc.a(78, di.field_a, param1 ^ -23776, var31, 70);
               if (var12.field_bc.field_o &&
                 !var12.field_bc.field_r.equals(var32)) {
@@ -547,7 +547,7 @@ final class bh extends ela {
             if (var12.field_y != 0 &&
               !var12.g(param1 + 0)) {
               if (var12.field_Nb.field_y == 0) {
-                st.a((byte) -62, var12, param2, var32);
+                ImageProducerRasterBuffer.a((byte) -62, var12, param2, var32);
               } else {
                 if (var12.field_ec && (!var12.field_Yb ||
                   !var12.field_Bb &&

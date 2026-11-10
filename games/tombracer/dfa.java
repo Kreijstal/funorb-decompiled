@@ -32,14 +32,14 @@ abstract class dfa {
               }
               if (gm.field_n != 2) {
                 if (2 == gm.field_n) {
-                  if (oj.i(-1)) {
+                  if (VerticalScrollbar.i(-1)) {
                     var4 = (String) null;
                     opa.a(gm.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
                   }
                   return true;
                 }
                 if (var3 == 0) {
-                  if (oj.i(-1)) {
+                  if (VerticalScrollbar.i(-1)) {
                     var4 = (String) null;
                     opa.a(gm.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
                   }
@@ -52,7 +52,7 @@ abstract class dfa {
                   var3 != 0) {
                   return false;
                 }
-                if (oj.i(-1)) {
+                if (VerticalScrollbar.i(-1)) {
                   var4 = (String) null;
                   opa.a(gm.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
                 }
@@ -73,7 +73,7 @@ abstract class dfa {
                 var3 != 0) {
                 return false;
               }
-              if (oj.i(-1)) {
+              if (VerticalScrollbar.i(-1)) {
                 var4Lifetime3 = (String) null;
                 opa.a(gm.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
               }
@@ -108,7 +108,7 @@ abstract class dfa {
               var3 != 0) {
               return false;
             }
-            if (oj.i(-1)) {
+            if (VerticalScrollbar.i(-1)) {
               var4Lifetime1 = (String) null;
               opa.a(gm.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
             }
@@ -128,7 +128,7 @@ abstract class dfa {
             var3 != 0) {
             return false;
           }
-          if (oj.i(-1)) {
+          if (VerticalScrollbar.i(-1)) {
             var4Lifetime2 = (String) null;
             opa.a(gm.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
           }

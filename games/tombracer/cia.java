@@ -40,15 +40,15 @@ final class cia {
         int var2;
         int var3;
         int var3Lifetime1;
-        if (oj.field_tb[HardwareOpenGlToolkit.field_hd]) {
+        if (VerticalScrollbar.field_tb[HardwareOpenGlToolkit.field_hd]) {
           stackIn_5_0 = -1;
         } else {
-          stackIn_5_0 = (!oj.field_tb[mf.field_a]) ? 0 : 1;
+          stackIn_5_0 = (!VerticalScrollbar.field_tb[mf.field_a]) ? 0 : 1;
         }
         var2 = stackIn_5_0;
         if (param0 >= 120) {
-          if (!oj.field_tb[ConsoleToken.field_k]) {
-            stackIn_32_0 = (!oj.field_tb[fp.field_a]) ? 0 : 1;
+          if (!VerticalScrollbar.field_tb[ConsoleToken.field_k]) {
+            stackIn_32_0 = (!VerticalScrollbar.field_tb[fp.field_a]) ? 0 : 1;
           } else {
             stackIn_32_0 = -1;
           }
@@ -82,8 +82,8 @@ final class cia {
           return;
         }
         this.field_e = 123;
-        if (!oj.field_tb[ConsoleToken.field_k]) {
-          stackIn_11_0 = (!oj.field_tb[fp.field_a]) ? 0 : 1;
+        if (!VerticalScrollbar.field_tb[ConsoleToken.field_k]) {
+          stackIn_11_0 = (!VerticalScrollbar.field_tb[fp.field_a]) ? 0 : 1;
         } else {
           stackIn_11_0 = -1;
         }

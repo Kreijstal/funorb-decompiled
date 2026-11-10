@@ -488,8 +488,8 @@ abstract class ka {
         if (param0 != -33) {
           ka.a((byte) 65);
         }
-        if (ci.field_l != null) {
-          ci.field_l.i((byte) -7);
+        if (TextureOperator.field_l != null) {
+          TextureOperator.field_l.i((byte) -7);
         }
         PushableMountComponent.field_F = new efa();
         um.field_l.a(100, PushableMountComponent.field_F);

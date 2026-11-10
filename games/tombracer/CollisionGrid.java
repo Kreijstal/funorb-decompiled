@@ -36,7 +36,7 @@ final class CollisionGrid {
               var5.unlinkSecondary(-7975);
               ft.a(var5, -201);
             }
-            var5 = (q) (this.field_e.b((byte) 27));
+            var5 = (q) (this.field_e.nextWithSameKey((byte) 27));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -242,7 +242,7 @@ final class CollisionGrid {
                     decompiledFrameCompleted0 = false;
                     break;
                   }
-                  var9 = (q) (this.field_e.b((byte) 35));
+                  var9 = (q) (this.field_e.nextWithSameKey((byte) 35));
                 }
                 if (decompiledFrameCompleted0) {
                   var10 = vw.a(var7, param0, var8, true);
@@ -322,7 +322,7 @@ final class CollisionGrid {
               var8.unlinkSecondary(-7975);
               ft.a(var8, -201);
             }
-            var8 = (q) (this.field_e.b((byte) 119));
+            var8 = (q) (this.field_e.nextWithSameKey((byte) 119));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

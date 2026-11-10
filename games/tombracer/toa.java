@@ -15,7 +15,7 @@ final class toa extends IntrusiveNode {
         if (param0) {
           return -128;
         }
-        return wua.field_n;
+        return QuickChatPhraseDefinition.field_n;
     }
 
     public static void a(int param0) {

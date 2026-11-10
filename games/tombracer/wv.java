@@ -989,7 +989,7 @@ abstract class wv extends dfa {
           if (param0 != -6) {
             field_j = 79;
           }
-          cda.a(0, false);
+          MotionTrackingModel.a(0, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

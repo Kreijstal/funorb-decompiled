@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fs extends ci {
-    static ResourceArchive field_p;
+final class fs extends TextureOperator {
+    static ResourceArchive textArchive;
     private int field_r;
     private int[] field_q;
     private int[] field_o;
@@ -11,9 +11,9 @@ final class fs extends ci {
 
     public static void releaseStatics(int param0) {
         if (param0 >= -91) {
-          field_p = (ResourceArchive) null;
+          textArchive = (ResourceArchive) null;
         }
-        field_p = null;
+        textArchive = null;
     }
 
     private final int[] d(int param0, int param1) {

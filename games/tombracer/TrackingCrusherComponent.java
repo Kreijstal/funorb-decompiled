@@ -43,7 +43,7 @@ final class TrackingCrusherComponent extends PrefabComponent {
         aca.field_h[17] = pq.field_d;
         aca.field_h[20] = afa.field_b;
         aca.field_h[11] = aqa.field_b;
-        aca.field_h[9] = cda.field_u;
+        aca.field_h[9] = MotionTrackingModel.field_u;
         aca.field_h[21] = rua.field_jb;
         aca.field_h[19] = GrowableIntList.field_b;
         aca.field_h[5] = tw.field_g;
@@ -89,7 +89,7 @@ final class TrackingCrusherComponent extends PrefabComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var9 = new Trap(param2, param0);
-          var9.b((byte) -11, this.field_k, this.field_l);
+          var9.setSize((byte) -11, this.field_k, this.field_l);
           var9.a((byte) -3, 20);
           var9.h(param1, 0);
           var9.b((byte) 17, true);

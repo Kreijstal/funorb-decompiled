@@ -32,7 +32,7 @@ final class av {
         int var12 = 0;
         lra.field_e.field_r = param4;
         if (2 != bta.field_q) {
-          qpa.field_b.field_r = sd.field_J;
+          qpa.field_b.field_r = ValidationMessageWidget.field_J;
         } else {
           qpa.field_b.field_r = gj.field_a;
         }

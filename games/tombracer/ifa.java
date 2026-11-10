@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ifa extends ci {
+final class ifa extends TextureOperator {
     private int field_o;
     private static long[] field_p;
     private int field_m;
@@ -233,7 +233,7 @@ final class ifa extends ci {
             }
           } else {
             stackIn_4_0 = 97;
-            stackIn_5_1 = !(wua.field_n >= 13);
+            stackIn_5_1 = !(QuickChatPhraseDefinition.field_n >= 13);
             SnakePitModel.field_t = NanoTickClock.$cfr$intArgs$a$78544449ccb1(stackIn_4_0, stackIn_5_1);
             var6 = (String[]) null;
             ow.a((byte) -101, (String[]) null);

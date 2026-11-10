@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lm extends ci {
+final class lm extends TextureOperator {
     private int field_n;
     private int field_q;
     static int[] field_r;

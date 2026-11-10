@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class st extends cha implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
+final class ImageProducerRasterBuffer extends cha implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     private java.awt.image.ImageConsumer field_i;
     static jea field_j;
     private java.awt.image.ColorModel field_k;
@@ -42,13 +42,13 @@ final class st extends cha implements java.awt.image.ImageProducer, java.awt.ima
         if (param0 == -5412) {
           return new ScrollControlWidget(0, 0, afa.field_c.field_m, 0, (isa) null, afa.field_c.field_r, afa.field_c.field_h, afa.field_c.field_m, afa.field_c.field_m, afa.field_c.field_g, afa.field_c.field_l, false, true, 32768, 0);
         }
-        st.releaseStatics(-97);
+        ImageProducerRasterBuffer.releaseStatics(-97);
         return new ScrollControlWidget(0, 0, afa.field_c.field_m, 0, (isa) null, afa.field_c.field_r, afa.field_c.field_h, afa.field_c.field_m, afa.field_c.field_m, afa.field_c.field_g, afa.field_c.field_l, false, true, 32768, 0);
     }
 
     public static void releaseStatics(int param0) {
         if (param0 != 2) {
-          st.releaseStatics(-93);
+          ImageProducerRasterBuffer.releaseStatics(-93);
           field_j = null;
           return;
         }
@@ -148,7 +148,7 @@ final class st extends cha implements java.awt.image.ImageProducer, java.awt.ima
           var6 = lba.field_p;
           if (param0 >= -45) {
             var7 = (String) null;
-            st.a((byte) 0, (ht) null, false, (String) null);
+            ImageProducerRasterBuffer.a((byte) 0, (ht) null, false, (String) null);
           }
           var16.field_f.b(var6, 0, -61, 0, var5);
           return;
@@ -179,13 +179,13 @@ final class st extends cha implements java.awt.image.ImageProducer, java.awt.ima
     public final void requestTopDownLeftRightResend(java.awt.image.ImageConsumer param0) {
     }
 
-    st() {
+    ImageProducerRasterBuffer() {
     }
 
-    final void a(int param0, int param1, java.awt.Graphics param2, int param3) {
+    final void drawImage(int param0, int param1, java.awt.Graphics param2, int param3) {
         try {
           if (param3 != 2) {
-            st.releaseStatics(-107);
+            ImageProducerRasterBuffer.releaseStatics(-107);
           }
           this.a((byte) 10);
           param2.drawImage(this.field_a, param1, param0, (java.awt.image.ImageObserver) (this));

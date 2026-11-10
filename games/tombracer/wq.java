@@ -91,18 +91,18 @@ final class wq implements ms {
           }
           return;
         }
-        if (oj.field_tb[HardwareOpenGlToolkit.field_hd]) {
+        if (VerticalScrollbar.field_tb[HardwareOpenGlToolkit.field_hd]) {
           cha.a(param2, param1 - 20724, tga.field_a, 4, -20 + (param0 + this.a(-8660) / 2), 40, 1080057857, 2, 40);
           cha.a(param2, 2, tga.field_a, 4, this.a(-8660) / 2 + param0 - 20, 40, 1080057857, 2, 40);
-          if (oj.field_tb[ConsoleToken.field_k]) {
+          if (VerticalScrollbar.field_tb[ConsoleToken.field_k]) {
             cha.a(this.a(false) / 2 + (param2 - 20), param1 - 20724, tga.field_a, 4, param0, 40, 1080057857, 2, 40);
             cha.a(param2 + this.a(false) / 2 - 20, param1 - 20724, tga.field_a, 4, param0, 40, 1080057857, 2, 40);
           }
-          if (oj.field_tb[mf.field_a]) {
+          if (VerticalScrollbar.field_tb[mf.field_a]) {
             cha.a(-40 + (param2 + this.a(false)), 2, tga.field_a, 4, this.a(-8660) / 2 + param0 - 20, 40, 1080057857, 2, 40);
             cha.a(-40 + this.a(false) + param2, param1 ^ 20724, tga.field_a, 4, -20 + param0 + this.a(param1 ^ -28966) / 2, 40, 1080057857, 2, 40);
           }
-          if (oj.field_tb[fp.field_a]) {
+          if (VerticalScrollbar.field_tb[fp.field_a]) {
             cha.a(-20 + (param2 + this.a(false) / 2), 2, tga.field_a, 4, -40 + (param0 + this.a(-8660)), 40, 1080057857, 2, 40);
             cha.a(-20 + this.a(false) / 2 + param2, 2, tga.field_a, 4, this.a(param1 ^ -28966) + param0 - 40, 40, 1080057857, 2, 40);
           }
@@ -115,14 +115,14 @@ final class wq implements ms {
           }
           return;
         }
-        if (oj.field_tb[ConsoleToken.field_k]) {
+        if (VerticalScrollbar.field_tb[ConsoleToken.field_k]) {
           cha.a(this.a(false) / 2 + (param2 - 20), param1 - 20724, tga.field_a, 4, param0, 40, 1080057857, 2, 40);
           cha.a(param2 + this.a(false) / 2 - 20, param1 - 20724, tga.field_a, 4, param0, 40, 1080057857, 2, 40);
         }
-        if (oj.field_tb[mf.field_a]) {
+        if (VerticalScrollbar.field_tb[mf.field_a]) {
           cha.a(-40 + (param2 + this.a(false)), 2, tga.field_a, 4, this.a(-8660) / 2 + param0 - 20, 40, 1080057857, 2, 40);
           cha.a(-40 + this.a(false) + param2, param1 ^ 20724, tga.field_a, 4, -20 + param0 + this.a(param1 ^ -28966) / 2, 40, 1080057857, 2, 40);
-          if (oj.field_tb[fp.field_a]) {
+          if (VerticalScrollbar.field_tb[fp.field_a]) {
             cha.a(-20 + (param2 + this.a(false) / 2), 2, tga.field_a, 4, -40 + (param0 + this.a(-8660)), 40, 1080057857, 2, 40);
             cha.a(-20 + this.a(false) / 2 + param2, 2, tga.field_a, 4, this.a(param1 ^ -28966) + param0 - 40, 40, 1080057857, 2, 40);
             if (!this.field_c) {
@@ -143,7 +143,7 @@ final class wq implements ms {
           }
           return;
         }
-        if (!oj.field_tb[fp.field_a]) {
+        if (!VerticalScrollbar.field_tb[fp.field_a]) {
           if (!this.field_c) {
             SingleChildWidget.field_v.a(-6710887, param1 ^ -20727, this.a(false) / 2 + param2, -16711423, param0 + 30, TextInputWidget.field_z[ConsoleToken.field_k]);
             SingleChildWidget.field_v.a(-6710887, -1, this.a(false) / 2 + param2, -16711423, this.a(-8660) + param0 - 10, TextInputWidget.field_z[fp.field_a]);

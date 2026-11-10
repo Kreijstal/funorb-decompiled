@@ -32,7 +32,7 @@ final class FacePointLocomotor extends Locomotor {
         char[] var7 = null;
         QuickChatMenu[] var8 = null;
         int var9 = 0;
-        wua var11 = null;
+        QuickChatPhraseDefinition var11 = null;
         int var12 = 0;
         char[] var13 = null;
         char[] var14 = null;
@@ -67,7 +67,7 @@ final class FacePointLocomotor extends Locomotor {
           try {
             for (var10_int = 0; var10_int < var5_int; var10_int++) {
               var11 = qu.field_a.a(false, param3[var10_int]);
-              var6[var10_int] = var11.b((byte) -5);
+              var6[var10_int] = var11.getPreview((byte) -5);
               var9 = (char)(var9 + 1);
               var7[var10_int] = (char)var9;
               var8[var10_int] = null;
@@ -122,7 +122,7 @@ final class FacePointLocomotor extends Locomotor {
     final static void a(boolean param0, byte param1) {
         if (mla.field_a > 0 &&
           uv.field_o) {
-          SoftwareRasterizer.d(0, 0, SoftwareRasterizer.field_g, era.field_e.field_A);
+          SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, era.field_e.field_A);
           wo.field_k.b(108, param0);
         }
         if (param1 <= 6) {
@@ -131,7 +131,7 @@ final class FacePointLocomotor extends Locomotor {
         }
         if ((GameKeyHandler.field_a > 0 || fp.field_e > 0) &&
           tla.field_e) {
-          SoftwareRasterizer.d(0, 0, SoftwareRasterizer.field_g, era.field_e.field_A);
+          SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, era.field_e.field_A);
           hf.field_a.b(85, param0);
         }
     }

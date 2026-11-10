@@ -90,26 +90,26 @@ final class gga extends ofa implements tsa {
         SoftwareRasterizer.clear();
         uw.a(false);
         if (var5 < 256) {
-          SoftwareRasterizer.c(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_a, 0, 256 - var5);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_a, 0, 256 - var5);
         }
         pfa.a(1);
         if (TimeSwitchBehaviour.field_r >= 150) {
           bra.field_O.c(var3 + 15, var4 + 10, var5);
         } else {
-          vha.field_a.c(var3, var4);
+          vha.field_a.drawHalfSize(var3, var4);
         }
         var6 = -125 + TimeSwitchBehaviour.field_r;
         if (var6 > 0 &&
           50 > var6) {
           if (var6 < 20) {
             var7 = var6 * 256 / 20;
-            bw.field_a.a(var3, var4, var7);
+            bw.field_a.drawAdditive(var3, var4, var7);
           } else {
             if (var6 < 30) {
-              bw.field_a.a(var3, var4, 256);
+              bw.field_a.drawAdditive(var3, var4, 256);
             } else {
               var7 = (50 - var6) * 256 / 20;
-              bw.field_a.a(var3, var4, var7);
+              bw.field_a.drawAdditive(var3, var4, var7);
             }
           }
         }

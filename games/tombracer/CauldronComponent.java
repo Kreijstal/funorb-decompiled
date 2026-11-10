@@ -19,7 +19,7 @@ final class CauldronComponent extends SwitchComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var10 = new Trap(param2, param0);
-          var10.b((byte) -11, this.field_k, this.field_l);
+          var10.setSize((byte) -11, this.field_k, this.field_l);
           var10.h(3, param1 ^ param1);
           var10.a(1, (byte) -12, false);
           var10.setPushable(false, param1 + 112);

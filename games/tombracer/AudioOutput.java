@@ -181,12 +181,12 @@ class AudioOutput {
               }
               ((AudioOutput) ((Object) stackIn_10_0)).field_j = new int[stackIn_10_1 * stackIn_11_2];
               ((AudioOutput) ((Object) var4)).field_t = param3;
-              ((AudioOutput) ((Object) var4)).a(param1);
+              ((AudioOutput) ((Object) var4)).initDevice(param1);
               ((AudioOutput) ((Object) var4)).field_s = (param3 & -1024) + 1024;
               if (((AudioOutput) ((Object) var4)).field_s > 16384) {
                 ((AudioOutput) ((Object) var4)).field_s = 16384;
               }
-              ((AudioOutput) ((Object) var4)).a(((AudioOutput) ((Object) var4)).field_s);
+              ((AudioOutput) ((Object) var4)).openDevice(((AudioOutput) ((Object) var4)).field_s);
               if (field_q > 0 &&
                 field_p == null) {
                 field_p = new ch();
@@ -248,7 +248,7 @@ class AudioOutput {
               if (var1 < this.field_e) {
                 return;
               }
-              this.a(this.field_s);
+              this.openDevice(this.field_s);
               this.field_e = 0L;
               this.field_o = true;
             }
@@ -266,7 +266,7 @@ class AudioOutput {
                 this.field_s = 16384;
               }
               this.d();
-              this.a(this.field_s);
+              this.openDevice(this.field_s);
               var3_int = 0;
               this.field_o = true;
               if (var4 + 256 > this.field_s) {
@@ -364,7 +364,7 @@ class AudioOutput {
         this.field_g = true;
     }
 
-    void a(int param0) throws Exception {
+    void openDevice(int param0) throws Exception {
     }
 
     private final void b(int param0) {
@@ -392,7 +392,7 @@ class AudioOutput {
         field_p = null;
     }
 
-    void a(java.awt.Component param0) throws Exception {
+    void initDevice(java.awt.Component param0) throws Exception {
     }
 
     void d() {

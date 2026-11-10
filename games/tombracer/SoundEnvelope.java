@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class co {
+final class SoundEnvelope {
     private int field_f;
     private int field_h;
     private int field_c;
@@ -14,7 +14,7 @@ final class co {
     int field_i;
     private int field_b;
 
-    final void a(PacketBuffer param0) {
+    final void decodeSegments(PacketBuffer param0) {
         int var2 = 0;
         this.field_f = param0.readUnsignedByte(255);
         this.field_d = new int[this.field_f];
@@ -25,11 +25,11 @@ final class co {
         }
     }
 
-    final void b(PacketBuffer param0) {
+    final void decode(PacketBuffer param0) {
         this.field_a = param0.readUnsignedByte(255);
         this.field_e = param0.readInt(119);
         this.field_i = param0.readInt(110);
-        this.a(param0);
+        this.decodeSegments(param0);
     }
 
     final void a() {
@@ -40,7 +40,7 @@ final class co {
         this.field_j = 0;
     }
 
-    final int a(int param0) {
+    final int advance(int param0) {
         int fieldTemp$0 = 0;
         if (this.field_j >= this.field_h) {
           fieldTemp$0 = this.field_c;
@@ -59,7 +59,7 @@ final class co {
         return this.field_k - this.field_b >> 15;
     }
 
-    co() {
+    SoundEnvelope() {
         this.field_f = 2;
         this.field_d = new int[2];
         this.field_g = new int[2];

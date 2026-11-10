@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class coa extends ci {
+class coa extends TextureOperator {
     private int field_o;
     int field_m;
     int[] field_p;

@@ -8,7 +8,7 @@ final class dh {
     int field_c;
     int field_b;
 
-    final static void a(int param0, int param1, int param2, an param3, int param4, int param5, int param6, byte param7) {
+    final static void a(int param0, int param1, int param2, TriangleMesh param3, int param4, int param5, int param6, byte param7) {
         int stackIn_17_0 = 0;
         int[] stackIn_19_0 = null;
         int stackIn_20_1 = 0;
@@ -53,7 +53,7 @@ final class dh {
         int var39 = 0;
         int var40 = 0;
         int[] var41 = null;
-        an var44 = null;
+        TriangleMesh var44 = null;
         int[] var49 = null;
         int[] var54 = null;
         byte[] var60 = null;

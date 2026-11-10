@@ -40,7 +40,7 @@ final class PortalComponent extends PrefabComponent {
           if (param1 != 3) {
             this.s(88);
           }
-          var4.b((byte) -11, this.field_k, this.field_l);
+          var4.setSize((byte) -11, this.field_k, this.field_l);
           this.field_F = new PortalBehaviour(param2, param0);
           var4.addBehaviour((byte) 83, (Behaviour) (this.field_F));
           stackIn_3_0 = var4;

@@ -21,8 +21,8 @@ final class pr {
 
     final static void a(int param0, String param1, String param2) {
         try {
-          if (ci.field_l != null) {
-            ci.field_l.i((byte) 20);
+          if (TextureOperator.field_l != null) {
+            TextureOperator.field_l.i((byte) 20);
           }
           if (param0 != 0) {
             field_b = (String[]) null;

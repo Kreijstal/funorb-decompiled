@@ -21,7 +21,7 @@ final class ura {
           kl.field_a = mua.field_a;
           if (param0 == 255) {
             stackIn_10_0 = -108;
-            stackIn_11_1 = !(wua.field_n >= 13);
+            stackIn_11_1 = !(QuickChatPhraseDefinition.field_n >= 13);
             PlantModel.field_n = NanoTickClock.$cfr$intArgs$a$78544449ccb1(stackIn_10_0, stackIn_11_1);
           } else {
             if (param0 < 100) {

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class oj extends jea {
+final class VerticalScrollbar extends jea {
     private int field_yb;
     static String field_zb;
     private jea field_Bb;
@@ -137,9 +137,9 @@ final class oj extends jea {
         return true;
     }
 
-    final boolean h(int param0) {
+    final boolean isThumbHeld(int param0) {
         if (param0 != -1) {
-          oj.i(3);
+          VerticalScrollbar.i(3);
         }
         return this.field_wb.field_E != 0 ? true : false;
     }
@@ -176,7 +176,7 @@ final class oj extends jea {
         return var5;
     }
 
-    oj(long param0, oj param1) {
+    VerticalScrollbar(long param0, VerticalScrollbar param1) {
         this(param0, param1.field_Cb, param1.field_Bb, param1.field_Ab, param1.field_wb);
     }
 
@@ -213,7 +213,7 @@ final class oj extends jea {
           }
         }
         if (param0 >= -75) {
-          oj.i(98);
+          VerticalScrollbar.i(98);
           return false;
         }
         return false;
@@ -326,14 +326,14 @@ final class oj extends jea {
         this.field_t = param5;
         this.field_T = param7;
         if (param3) {
-          this.h(78);
+          this.isThumbHeld(78);
         }
         this.field_qb = param4;
         this.field_G = param2;
         this.a(param6, param0, (byte) -87, param1);
     }
 
-    oj(long param0, jea param1, jea param2, jea param3, jea param4) {
+    VerticalScrollbar(long param0, jea param1, jea param2, jea param3, jea param4) {
         super(param0, (jea) null);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;

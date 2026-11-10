@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cma extends ci {
+final class cma extends TextureOperator {
     private int field_p;
     private int field_r;
     private int field_q;

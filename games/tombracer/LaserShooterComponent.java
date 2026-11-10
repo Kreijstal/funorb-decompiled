@@ -16,7 +16,7 @@ final class LaserShooterComponent extends ShooterComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var9 = new Trap(param2, param0);
-          var9.b((byte) -11, this.field_k, this.field_l);
+          var9.setSize((byte) -11, this.field_k, this.field_l);
           var9.h(param1, 0);
           var9.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new BeamShooterBehaviour(param2, param0);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wsa extends ci {
+final class wsa extends TextureOperator {
     private int field_n;
     private int field_u;
     private int field_m;

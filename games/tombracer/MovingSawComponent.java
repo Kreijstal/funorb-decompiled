@@ -68,7 +68,7 @@ final class MovingSawComponent extends PathMoverComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var12 = new Trap(param2, param0);
-          var12.b((byte) -11, this.field_k, this.field_l);
+          var12.setSize((byte) -11, this.field_k, this.field_l);
           var12.h(0, param1 ^ param1);
           var12.a(4, (byte) -12, true);
           var12.a((byte) -3, 0);
@@ -82,7 +82,7 @@ final class MovingSawComponent extends PathMoverComponent {
           var6.a((byte) -24, true);
           var12.addBehaviour((byte) 83, (Behaviour) (var6));
           var8 = new Trap(param2, param0);
-          var8.b((byte) -11, 1048576, 1048576);
+          var8.setSize((byte) -11, 1048576, 1048576);
           var8.h(3, param1 ^ 3);
           var8.a(3, (byte) -12, true);
           var8.a((byte) -3, 0);

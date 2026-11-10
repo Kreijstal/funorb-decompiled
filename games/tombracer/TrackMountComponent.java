@@ -35,7 +35,7 @@ final class TrackMountComponent extends PrefabComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var9 = new Trap(param2, param0);
-          var9.b((byte) -11, this.field_k, this.field_l);
+          var9.setSize((byte) -11, this.field_k, this.field_l);
           var9.h(3, 0);
           var9.a(1, (byte) -12, true);
           var9.a((byte) -3, 6);

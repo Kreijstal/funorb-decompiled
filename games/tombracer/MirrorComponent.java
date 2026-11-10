@@ -71,15 +71,15 @@ final class MirrorComponent extends PrefabComponent {
         super(param0, param1, param2, param3);
     }
 
-    final static ci a(PacketBuffer param0, int param1) {
+    final static TextureOperator a(PacketBuffer param0, int param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
-        ci var3 = null;
+        TextureOperator var3 = null;
         int var4 = 0;
         int var6 = 0;
         int var7 = 0;
-        ci stackIn_5_0 = null;
+        TextureOperator stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -152,7 +152,7 @@ final class MirrorComponent extends PrefabComponent {
         try {
           var11 = new Trap(param2, param0);
           var4 = var11;
-          var11.b((byte) -11, this.field_k, this.field_l);
+          var11.setSize((byte) -11, this.field_k, this.field_l);
           var11.a((byte) -3, 4);
           var11.h(param1, param1 - 3);
           if (this.typeId != 19) {
@@ -167,7 +167,7 @@ final class MirrorComponent extends PrefabComponent {
           var5.a(-28592, true);
           var11.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = new Trap(param2, param0);
-          var6.b((byte) -11, this.field_k, this.field_l);
+          var6.setSize((byte) -11, this.field_k, this.field_l);
           var6.a((byte) -3, 0);
           var7 = new MirrorBehaviour(param2, param0);
           var6.addBehaviour((byte) 83, (Behaviour) (var7));

@@ -25,7 +25,7 @@ final class BlockComponent extends PrefabComponent {
         var14 = TombRacer.field_G ? 1 : 0;
         try {
           var15 = new Trap(param2, param0);
-          var15.b((byte) -11, this.field_k, this.field_l);
+          var15.setSize((byte) -11, this.field_k, this.field_l);
           if (this.typeId == 49) {
             var7 = 10;
             var5 = 8;

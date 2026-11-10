@@ -161,7 +161,7 @@ final class vu extends vw {
                 }
                 cja.a(param0 + 108, fk.field_b, ifa.field_n, 0, -1, -1, -1, true);
                 if (!(ld.field_e < 2) &&
-                  oj.field_tb[12]) {
+                  VerticalScrollbar.field_tb[12]) {
                   TouchSwitchBehaviour.field_s = true;
                 }
               }

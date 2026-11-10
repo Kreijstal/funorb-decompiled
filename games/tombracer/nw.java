@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class nw extends ci {
+final class nw extends TextureOperator {
     static float field_u;
     private int field_n;
     private byte[] field_q;

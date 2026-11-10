@@ -178,7 +178,7 @@ final class PressureSwitchComponent extends SwitchComponent {
               this.field_l = 2097152;
             }
           }
-          var10.b((byte) -11, this.field_k, this.field_l);
+          var10.setSize((byte) -11, this.field_k, this.field_l);
           var5 = new PressureSwitchBehaviour(param2, param0);
           var5.a(this.field_L, true);
           this.a(var5, (byte) -94);

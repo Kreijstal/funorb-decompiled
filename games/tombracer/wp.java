@@ -58,7 +58,7 @@ final class wp {
             var7 = (CharSequence) ((Object) var3.field_tb);
             var4 = jd.a(1, var7);
             if (!var4.equals(var2)) {
-              var3 = (mu) (TrackPlayerLocomotor.field_s.b((byte) 47));
+              var3 = (mu) (TrackPlayerLocomotor.field_s.nextWithSameKey((byte) 47));
               continue;
             }
             break;

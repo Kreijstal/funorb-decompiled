@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wna extends ci {
+final class wna extends TextureOperator {
     static MouseInputHandler field_n;
     private int[][] field_o;
     private int[] field_m;
@@ -369,7 +369,7 @@ final class wna extends ci {
           if (cga.field_f < 20) {
             return true;
           }
-          if (!wua.c((byte) 49)) {
+          if (!QuickChatPhraseDefinition.c((byte) 49)) {
             return true;
           }
           if (lsa.field_a <= 0) {
@@ -383,7 +383,7 @@ final class wna extends ci {
         if (cga.field_f < 20) {
           return true;
         }
-        if (!wua.c((byte) 49)) {
+        if (!QuickChatPhraseDefinition.c((byte) 49)) {
           return true;
         }
         if (lsa.field_a <= 0) {

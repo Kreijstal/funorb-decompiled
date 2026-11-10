@@ -6,7 +6,7 @@ import java.util.*;
 final class de extends cha {
     private java.awt.Component field_i;
 
-    final void a(int param0, int param1, java.awt.Graphics param2, int param3) {
+    final void drawImage(int param0, int param1, java.awt.Graphics param2, int param3) {
         if (param3 != 2) {
           return;
         }

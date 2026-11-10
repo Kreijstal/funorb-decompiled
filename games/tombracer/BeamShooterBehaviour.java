@@ -465,7 +465,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
     final void attachToTrap(boolean param0, Trap param1) {
         try {
           super.attachToTrap(param0, param1);
-          this.field_r.a(this.getRoot(6), 2348);
+          this.field_r.setSource(this.getRoot(6), 2348);
           if (!param0) {
             this.field_q = true;
           }

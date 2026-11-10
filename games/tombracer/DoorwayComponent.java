@@ -64,7 +64,7 @@ final class DoorwayComponent extends PrefabComponent {
         var19 = TombRacer.field_G ? 1 : 0;
         try {
           var20 = new Trap(param2, param0);
-          var20.b((byte) -11, this.field_k, this.field_l);
+          var20.setSize((byte) -11, this.field_k, this.field_l);
           var6_int = this.typeId;
           if (var6_int != 44 &&
             var6_int != 45) {
@@ -80,7 +80,7 @@ final class DoorwayComponent extends PrefabComponent {
           var6 = rm.field_a;
           if (var5 != 0) {
             var7_ref_fsa = new Trap(param2, param0);
-            var7_ref_fsa.b((byte) -11, this.field_k / 3, this.field_l / 2);
+            var7_ref_fsa.setSize((byte) -11, this.field_k / 3, this.field_l / 2);
             var7_ref_fsa.b(437453352, -327680, -this.field_l / 4);
             var7_ref_fsa.h(3, 0);
             var8 = new SimpleBlockBehaviour(param2, param0);
@@ -93,7 +93,7 @@ final class DoorwayComponent extends PrefabComponent {
             var10.a(true, false);
             var7_ref_fsa.addLocomotor(var10, 0);
             var11 = new Trap(param2, param0);
-            var11.b((byte) -11, this.field_k / 3, this.field_l / 2);
+            var11.setSize((byte) -11, this.field_k / 3, this.field_l / 2);
             var11.b(437453352, -327680, this.field_l / 4);
             var11.h(3, 0);
             var12 = new SimpleBlockBehaviour(param2, param0);

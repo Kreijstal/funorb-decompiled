@@ -27,7 +27,7 @@ final class ina {
           PowerUpItemBehaviour.field_t = tc.a(dq.field_h, -8829, param0);
           GameApplet.field_j = tc.a(gta.field_f, param1 ^ -8829, param0);
           gca.field_g = tc.a(cba.field_b, param1 ^ -8829, param0);
-          DoorwayComponent.field_F = tc.a(an.field_g, -8829, param0);
+          DoorwayComponent.field_F = tc.a(TriangleMesh.field_g, -8829, param0);
           SwitchLinkList.field_b = tc.a(ControllerLocomotor.field_p, -8829, param0);
           dupTemp$0 = RevolverItemComponent.field_J[9].a((byte) 0, 654255, false);
           RevolverItemComponent.field_J[9] = dupTemp$0;

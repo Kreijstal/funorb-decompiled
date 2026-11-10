@@ -321,14 +321,14 @@ final class ila {
               if (0 >= ReportAbuseDialog.field_ub &&
                 !ai.field_a) {
                 try {
-                  lb.b(di.a(26), 2864, "unzap");
+                  JavaScriptBridge.callWindowFunction(di.a(26), 2864, "unzap");
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  lb.a(param2 ^ -114, "zap", di.a(param2 + 43), new Object[]{sv.a((byte) -38, tr.field_g)});
+                  JavaScriptBridge.callWithArguments(param2 ^ -114, "zap", di.a(param2 + 43), new Object[]{sv.a((byte) -38, tr.field_g)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -447,7 +447,7 @@ final class ila {
         Exception var6 = null;
         int var7 = 0;
         BitPacketBuffer var8 = null;
-        wua var9 = null;
+        QuickChatPhraseDefinition var9 = null;
         var7 = TombRacer.field_G ? 1 : 0;
         var8 = vc.field_q;
         var3 = var8.readUnsignedByte(param0 + 19042);
@@ -486,7 +486,7 @@ final class ila {
           var5 = var8.readUnsignedShort(121);
           try {
             var9 = qu.field_a.a(false, var5);
-            ConveyorBehaviour.field_p = var9.b((byte) -5);
+            ConveyorBehaviour.field_p = var9.getPreview((byte) -5);
             if (!gia.field_q.equals(fna.field_k)) {
               stackIn_21_0 = var9.field_m;
             } else {

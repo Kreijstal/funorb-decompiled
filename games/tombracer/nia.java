@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nia extends ci {
+final class nia extends TextureOperator {
     static String field_m;
 
     final int[] c(int param0, int param1) {

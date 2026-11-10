@@ -253,7 +253,7 @@ final class CoinBagItemComponent extends ItemComponent {
                   break;
                 }
                 if (!(stackIn_66_0 > ld.field_e) &&
-                  oj.field_tb[12]) {
+                  VerticalScrollbar.field_tb[12]) {
                   var10 = 2;
                 }
               }
@@ -417,7 +417,7 @@ final class CoinBagItemComponent extends ItemComponent {
                   break;
                 }
                 if (stackIn_145_0 >= ~ld.field_e &&
-                  oj.field_tb[12]) {
+                  VerticalScrollbar.field_tb[12]) {
                   var16 = 0;
                 }
                 if (var16 != 0) {

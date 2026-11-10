@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nga extends ci {
+final class nga extends TextureOperator {
     static Sprite[] field_n;
     static String field_q;
     static int field_p;

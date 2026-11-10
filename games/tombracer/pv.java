@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pv extends ci {
+final class pv extends TextureOperator {
     private boolean field_o;
     static String field_q;
     static String[] shortMonthNames;

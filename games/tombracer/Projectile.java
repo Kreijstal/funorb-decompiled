@@ -86,7 +86,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, t
 
     final void mirrorInRoom(Room param0, int param1) {
         try {
-          this.x = param0.a(this.x, (byte) 71);
+          this.x = param0.mirrorX(this.x, (byte) 71);
           this.velocityX = -this.velocityX;
           this.angle = dfa.a(-this.angle, 8192, 105);
           if (param1 >= -16) {
@@ -137,11 +137,11 @@ final class Projectile extends PooledObject implements Renderable, Collidable, t
           }
           this.h((byte) 32);
           if (param1) {
-            this.a(true, 0);
+            this.destroy(true, 0);
           } else {
             this.field_I = this.field_I - 1;
             if (this.field_I <= 0) {
-              this.a(true, 0);
+              this.destroy(true, 0);
             }
           }
           if (!this.field_C) {
@@ -157,10 +157,10 @@ final class Projectile extends PooledObject implements Renderable, Collidable, t
           if (!param1) {
             this.field_I = this.field_I - 1;
             if (this.field_I <= 0) {
-              this.a(true, 0);
+              this.destroy(true, 0);
             }
           } else {
-            this.a(true, 0);
+            this.destroy(true, 0);
           }
         } else {
           if (this.velocityX != 0) {
@@ -181,7 +181,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, t
           }
           this.h((byte) 32);
           if (param1) {
-            this.a(true, 0);
+            this.destroy(true, 0);
             if (!this.field_C) {
               return;
             }
@@ -196,7 +196,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, t
             this.effect.field_g = null;
             return;
           }
-          this.a(true, 0);
+          this.destroy(true, 0);
         }
         if (this.field_C) {
           this.effect.field_g = null;
@@ -424,14 +424,14 @@ final class Projectile extends PooledObject implements Renderable, Collidable, t
           }
           if (this.effect.type == 4 &&
             5 == param1.type) {
-            this.a(false, 0);
+            this.destroy(false, 0);
             this.room.spawnPuddle(30097, 1048576, 1, this.y, this.x);
             stackIn_32_0 = 0;
             return stackIn_32_0;
           }
           if (this.effect.type == 3 && (param1.type == 4 ||
             param1.type == 5)) {
-            this.a(false, 0);
+            this.destroy(false, 0);
             this.room.b(false).c(this.x, 93, this.velocityY, this.z, this.velocityX, this.y);
             if (5 == param1.type) {
               this.room.spawnPuddle(30097, 1048576, 0, this.y, this.x);
@@ -751,24 +751,24 @@ final class Projectile extends PooledObject implements Renderable, Collidable, t
         return this.y;
     }
 
-    private final boolean f(byte param0) {
+    private final boolean isFromPlayer(byte param0) {
         if (param0 >= -114) {
           this.c(false, false);
           if (!(this.effect.field_g instanceof Player)) {
-            return this.effect.field_c instanceof Player ? true : false;
+            return this.effect.source instanceof Player ? true : false;
           }
           return true;
         }
         if (this.effect.field_g instanceof Player) {
           return true;
         }
-        if (!(this.effect.field_c instanceof Player)) {
+        if (!(this.effect.source instanceof Player)) {
           return false;
         }
         return true;
     }
 
-    private final void a(boolean param0, int param1) {
+    private final void destroy(boolean param0, int param1) {
         if (param0) {
           if (this.effect.type != 4) {
             if (this.effect.type == 5) {
@@ -1026,13 +1026,13 @@ final class Projectile extends PooledObject implements Renderable, Collidable, t
         this.g((byte) -99);
         this.field_q.a(param0 + 87);
         if (param1) {
-          if (this.f((byte) -118)) {
+          if (this.isFromPlayer((byte) -118)) {
             var3 = 1;
             this.angle = this.angle + this.field_w;
             if (var3 != 0) {
               this.field_x = this.field_x + 1;
               if (this.field_x >= this.field_j) {
-                this.a(true, param0 + 1);
+                this.destroy(true, param0 + 1);
                 if (this.expired) {
                   return;
                 }
@@ -1129,7 +1129,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, t
         if (var3Lifetime1 != 0) {
           this.field_x = this.field_x + 1;
           if (this.field_x >= this.field_j) {
-            this.a(true, param0 + 1);
+            this.destroy(true, param0 + 1);
             if (this.expired) {
               return;
             }
@@ -1372,7 +1372,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, t
           param0 = fs.mixHash((byte) 85, param0, this.angle);
           return param0;
         }
-        boolean discarded$0 = this.f((byte) 2);
+        boolean discarded$0 = this.isFromPlayer((byte) 2);
         param0 = fs.mixHash((byte) 32, param0, this.velocityX);
         param0 = fs.mixHash((byte) 120, param0, this.velocityY);
         param0 = fs.mixHash((byte) 58, param0, this.endSize);
@@ -1439,8 +1439,8 @@ final class Projectile extends PooledObject implements Renderable, Collidable, t
     Projectile() {
         this.field_i = -1;
         this.field_q = new on();
-        int fieldTemp$0 = sd.field_G;
-        sd.field_G = sd.field_G + 1;
+        int fieldTemp$0 = ValidationMessageWidget.field_G;
+        ValidationMessageWidget.field_G = ValidationMessageWidget.field_G + 1;
         this.serial = fieldTemp$0;
     }
 

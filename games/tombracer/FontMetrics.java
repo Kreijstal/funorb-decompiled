@@ -42,7 +42,7 @@ final class FontMetrics {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        wua var16 = null;
+        QuickChatPhraseDefinition var16 = null;
         int var17 = 0;
         int var12Lifetime1;
         var17 = TombRacer.field_G ? 1 : 0;
@@ -101,7 +101,7 @@ final class FontMetrics {
               if (var15 != -1 ||
                 var17 != 0) {
                 var16 = qu.field_a.a(false, var15);
-                var8[var12Lifetime1 + var14] = var16.b((byte) -5);
+                var8[var12Lifetime1 + var14] = var16.getPreview((byte) -5);
                 var9[var12Lifetime1 + var14] = param3.field_o[var14];
                 if (0 >= var9[var12Lifetime1 + var14]) {
                   var13 = (char)(var13 + 1);
@@ -919,7 +919,7 @@ final class FontMetrics {
             try {
               var2 = param1.getParameter("cookieprefix");
               var3 = var2 + "settings";
-              var4 = (String) (lb.b(param1, 2864, "getcookies"));
+              var4 = (String) (JavaScriptBridge.callWindowFunction(param1, 2864, "getcookies"));
               var5 = rga.a(param0 + 32287, var4, ';');
               var6 = param0;
               while (var6 < var5.length) {

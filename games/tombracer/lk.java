@@ -37,7 +37,7 @@ final class lk extends IntrusiveNode implements qn, Renderable, noa {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          this.field_n = param0.a(this.field_n, (byte) 71);
+          this.field_n = param0.mirrorX(this.field_n, (byte) 71);
           stackIn_3_1 = !(this.field_g);
           this.field_g = stackIn_3_1;
           if (param1 != 104) {

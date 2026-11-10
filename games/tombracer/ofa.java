@@ -70,7 +70,7 @@ abstract class ofa extends gn {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = TombRacer.field_G ? 1 : 0;
-        SoftwareRasterizer.b(6 + param2, 35 + param0, this.field_m - 12, this.field_p - 40, 2105376, 0);
+        SoftwareRasterizer.fillVerticalGradient(6 + param2, 35 + param0, this.field_m - 12, this.field_p - 40, 2105376, 0);
         var4 = 35;
         var5 = 211;
         var6 = 194;

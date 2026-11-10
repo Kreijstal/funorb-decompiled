@@ -76,7 +76,7 @@ final class VorbisSample extends IntrusiveNode {
         var1 = new byte[this.field_r];
         var2 = 0;
         for (var3 = 0; var3 < this.field_t.length; var3++) {
-          var4 = this.b(var3);
+          var4 = this.decodePacket(var3);
           if (var4 != null) {
             var5 = var4.length;
             if (var5 > this.field_r - var2) {
@@ -121,7 +121,7 @@ final class VorbisSample extends IntrusiveNode {
             param0[0] <= 0) {
             return null;
           }
-          var7 = this.b(this.field_L);
+          var7 = this.decodePacket(this.field_L);
           if (var7 != null) {
             var3 = this.field_o;
             var4 = var7.length;
@@ -150,7 +150,7 @@ final class VorbisSample extends IntrusiveNode {
         return new u(this.field_s, var12, this.field_J, this.field_f, this.field_A);
     }
 
-    final static VorbisSample a(ResourceArchive param0, String param1, String param2) {
+    final static VorbisSample load(ResourceArchive param0, String param1, String param2) {
         try {
           VorbisSample var4_ref = null;
           if (!VorbisSample.a(param0)) {
@@ -194,7 +194,7 @@ final class VorbisSample extends IntrusiveNode {
         field_q = null;
     }
 
-    private final void a(byte[] param0) throws IOException {
+    private final void decodePacketContainer(byte[] param0) throws IOException {
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
@@ -225,7 +225,7 @@ final class VorbisSample extends IntrusiveNode {
         }
     }
 
-    final static void b(byte[] param0) {
+    final static void decodeSetup(byte[] param0) {
         int var7_int = 0;
         int var8_int = 0;
         int var9_int = 0;
@@ -355,7 +355,7 @@ final class VorbisSample extends IntrusiveNode {
         return var0;
     }
 
-    final static VorbisSample a(ResourceArchive param0, int param1, int param2) {
+    final static VorbisSample load(ResourceArchive param0, int param1, int param2) {
         try {
           VorbisSample var4_ref = null;
           if (!VorbisSample.a(param0)) {
@@ -387,7 +387,7 @@ final class VorbisSample extends IntrusiveNode {
           if (var1 == null) {
             return false;
           }
-          VorbisSample.b(var1);
+          VorbisSample.decodeSetup(var1);
         }
         return true;
     }
@@ -402,7 +402,7 @@ final class VorbisSample extends IntrusiveNode {
         return (float)((double)var1 * Math.pow(2.0, (double)(var3 - 788)));
     }
 
-    private final float[] b(int param0) {
+    private final float[] decodePacket(int param0) {
         int var32_int = 0;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
@@ -556,7 +556,7 @@ final class VorbisSample extends IntrusiveNode {
         var14 = field_M[field_F[var2]];
         var16 = var14.field_a;
         var17_int = var14.field_d[var16];
-        stackIn_22_0 = (field_K[var17_int].a()) ? 0 : 1;
+        stackIn_22_0 = (field_K[var17_int].decodeFloor()) ? 0 : 1;
         var15 = stackIn_22_0;
         var16Lifetime1 = var15;
         for (var17_intLifetime1 = 0; var17_intLifetime1 < var14.field_b; var17_intLifetime1++) {
@@ -755,7 +755,7 @@ final class VorbisSample extends IntrusiveNode {
     }
 
     private VorbisSample(byte[] param0) throws IOException {
-        this.a(param0);
+        this.decodePacketContainer(param0);
     }
 
     static {

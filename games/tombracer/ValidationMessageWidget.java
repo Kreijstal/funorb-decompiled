@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sd extends HotspotTextWidget {
+final class ValidationMessageWidget extends HotspotTextWidget {
     static int field_K;
     private nua field_I;
     static String field_J;
@@ -61,7 +61,7 @@ final class sd extends HotspotTextWidget {
             return false;
           }
           var4 = (CharSequence) null;
-          sd.a('+', (byte) -127, (CharSequence) null);
+          ValidationMessageWidget.a('+', (byte) -127, (CharSequence) null);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -195,14 +195,14 @@ final class sd extends HotspotTextWidget {
               var6 != tea.field_b) {
               if (fp.field_c == var6) {
                 var19 = pq.field_b[2];
-                var19.a(var9, -(var19.field_q >> 1) + var10, 256);
+                var19.drawAdditive(var9, -(var19.field_q >> 1) + var10, 256);
                 return;
               }
               if (var6 != uh.field_k) {
                 return;
               }
               var20 = pq.field_b[1];
-              var20.a(var9, -(var20.field_q >> 1) + var10, 256);
+              var20.drawAdditive(var9, -(var20.field_q >> 1) + var10, 256);
               return;
             }
             var21 = pq.field_b[0];
@@ -219,7 +219,7 @@ final class sd extends HotspotTextWidget {
             }
             var21.a(112, 144, var21.field_n << 4, var21.field_k << 4, -this.field_F << 10, 4096);
             pfa.a(1);
-            this.field_H.a(var9 - (var21.field_n >> 1), var10 - var21.field_k, 256);
+            this.field_H.drawAdditive(var9 - (var21.field_n >> 1), var10 - var21.field_k, 256);
             return;
           }
           super.renderLayer(param0, param1, param2, param3);
@@ -231,14 +231,14 @@ final class sd extends HotspotTextWidget {
             var6 != tea.field_b) {
             if (fp.field_c == var6) {
               var23 = pq.field_b[2];
-              var23.a(var9Lifetime5, -(var23.field_q >> 1) + var10Lifetime5, 256);
+              var23.drawAdditive(var9Lifetime5, -(var23.field_q >> 1) + var10Lifetime5, 256);
               return;
             }
             if (var6 != uh.field_k) {
               return;
             }
             var24 = pq.field_b[1];
-            var24.a(var9Lifetime5, -(var24.field_q >> 1) + var10Lifetime5, 256);
+            var24.drawAdditive(var9Lifetime5, -(var24.field_q >> 1) + var10Lifetime5, 256);
             return;
           }
           var25 = pq.field_b[0];
@@ -263,7 +263,7 @@ final class sd extends HotspotTextWidget {
           }
           var25.a(112, 144, var25.field_n << 4, var25.field_k << 4, -this.field_F << 10, 4096);
           pfa.a(1);
-          this.field_H.a(var9Lifetime5 - (var25.field_n >> 1), var10Lifetime5 - var25.field_k, 256);
+          this.field_H.drawAdditive(var9Lifetime5 - (var25.field_n >> 1), var10Lifetime5 - var25.field_k, 256);
           return;
         }
         if (tea.field_b == var6) {
@@ -280,14 +280,14 @@ final class sd extends HotspotTextWidget {
               var6 != tea.field_b) {
               if (fp.field_c == var6) {
                 var28 = pq.field_b[2];
-                var28.a(var9Lifetime1, -(var28.field_q >> 1) + var10Lifetime1, 256);
+                var28.drawAdditive(var9Lifetime1, -(var28.field_q >> 1) + var10Lifetime1, 256);
                 return;
               }
               if (var6 != uh.field_k) {
                 return;
               }
               var29 = pq.field_b[1];
-              var29.a(var9Lifetime1, -(var29.field_q >> 1) + var10Lifetime1, 256);
+              var29.drawAdditive(var9Lifetime1, -(var29.field_q >> 1) + var10Lifetime1, 256);
               return;
             }
             var30 = pq.field_b[0];
@@ -304,7 +304,7 @@ final class sd extends HotspotTextWidget {
             }
             var30.a(112, 144, var30.field_n << 4, var30.field_k << 4, -this.field_F << 10, 4096);
             pfa.a(1);
-            this.field_H.a(var9Lifetime1 - (var30.field_n >> 1), var10Lifetime1 - var30.field_k, 256);
+            this.field_H.drawAdditive(var9Lifetime1 - (var30.field_n >> 1), var10Lifetime1 - var30.field_k, 256);
             return;
           }
           super.renderLayer(param0, param1, param2, param3);
@@ -316,14 +316,14 @@ final class sd extends HotspotTextWidget {
             var6 != tea.field_b) {
             if (fp.field_c == var6) {
               var32 = pq.field_b[2];
-              var32.a(var9Lifetime1Lifetime1, -(var32.field_q >> 1) + var10Lifetime1Lifetime1, 256);
+              var32.drawAdditive(var9Lifetime1Lifetime1, -(var32.field_q >> 1) + var10Lifetime1Lifetime1, 256);
               return;
             }
             if (var6 != uh.field_k) {
               return;
             }
             var33 = pq.field_b[1];
-            var33.a(var9Lifetime1Lifetime1, -(var33.field_q >> 1) + var10Lifetime1Lifetime1, 256);
+            var33.drawAdditive(var9Lifetime1Lifetime1, -(var33.field_q >> 1) + var10Lifetime1Lifetime1, 256);
             return;
           }
           var34 = pq.field_b[0];
@@ -348,7 +348,7 @@ final class sd extends HotspotTextWidget {
           }
           var34.a(112, 144, var34.field_n << 4, var34.field_k << 4, -this.field_F << 10, 4096);
           pfa.a(1);
-          this.field_H.a(var9Lifetime1Lifetime1 - (var34.field_n >> 1), var10Lifetime1Lifetime1 - var34.field_k, 256);
+          this.field_H.drawAdditive(var9Lifetime1Lifetime1 - (var34.field_n >> 1), var10Lifetime1Lifetime1 - var34.field_k, 256);
           return;
         }
         var5 = this.field_I.a(101);
@@ -363,14 +363,14 @@ final class sd extends HotspotTextWidget {
               var6Lifetime1 != tea.field_b) {
               if (fp.field_c == var6Lifetime1) {
                 var51 = pq.field_b[2];
-                var51.a(var9Lifetime2, -(var51.field_q >> 1) + var10Lifetime2, 256);
+                var51.drawAdditive(var9Lifetime2, -(var51.field_q >> 1) + var10Lifetime2, 256);
                 return;
               }
               if (var6Lifetime1 != uh.field_k) {
                 return;
               }
               var52 = pq.field_b[1];
-              var52.a(var9Lifetime2, -(var52.field_q >> 1) + var10Lifetime2, 256);
+              var52.drawAdditive(var9Lifetime2, -(var52.field_q >> 1) + var10Lifetime2, 256);
               return;
             }
             var53 = pq.field_b[0];
@@ -387,7 +387,7 @@ final class sd extends HotspotTextWidget {
             }
             var53.a(112, 144, var53.field_n << 4, var53.field_k << 4, -this.field_F << 10, 4096);
             pfa.a(1);
-            this.field_H.a(var9Lifetime2 - (var53.field_n >> 1), var10Lifetime2 - var53.field_k, 256);
+            this.field_H.drawAdditive(var9Lifetime2 - (var53.field_n >> 1), var10Lifetime2 - var53.field_k, 256);
             return;
           }
           this.field_o = var5;
@@ -401,14 +401,14 @@ final class sd extends HotspotTextWidget {
             var6Lifetime1Lifetime1 != tea.field_b) {
             if (fp.field_c == var6Lifetime1Lifetime1) {
               var45 = pq.field_b[2];
-              var45.a(var9Lifetime2Lifetime1, -(var45.field_q >> 1) + var10Lifetime2Lifetime1, 256);
+              var45.drawAdditive(var9Lifetime2Lifetime1, -(var45.field_q >> 1) + var10Lifetime2Lifetime1, 256);
               return;
             }
             if (var6Lifetime1Lifetime1 != uh.field_k) {
               return;
             }
             var46 = pq.field_b[1];
-            var46.a(var9Lifetime2Lifetime1, -(var46.field_q >> 1) + var10Lifetime2Lifetime1, 256);
+            var46.drawAdditive(var9Lifetime2Lifetime1, -(var46.field_q >> 1) + var10Lifetime2Lifetime1, 256);
             return;
           }
           var47 = pq.field_b[0];
@@ -434,7 +434,7 @@ final class sd extends HotspotTextWidget {
           }
           var47.a(112, 144, var47.field_n << 4, var47.field_k << 4, -this.field_F << 10, 4096);
           pfa.a(1);
-          this.field_H.a(var9Lifetime2Lifetime1 - (var47.field_n >> 1), var10Lifetime2Lifetime1 - var47.field_k, 256);
+          this.field_H.drawAdditive(var9Lifetime2Lifetime1 - (var47.field_n >> 1), var10Lifetime2Lifetime1 - var47.field_k, 256);
           return;
         }
         var35 = this.field_E;
@@ -451,14 +451,14 @@ final class sd extends HotspotTextWidget {
             var6Lifetime2 != tea.field_b) {
             if (fp.field_c == var6Lifetime2) {
               var37 = pq.field_b[2];
-              var37.a(var9Lifetime3, -(var37.field_q >> 1) + var10Lifetime3, 256);
+              var37.drawAdditive(var9Lifetime3, -(var37.field_q >> 1) + var10Lifetime3, 256);
               return;
             }
             if (var6Lifetime2 != uh.field_k) {
               return;
             }
             var38 = pq.field_b[1];
-            var38.a(var9Lifetime3, -(var38.field_q >> 1) + var10Lifetime3, 256);
+            var38.drawAdditive(var9Lifetime3, -(var38.field_q >> 1) + var10Lifetime3, 256);
             return;
           }
           var39 = pq.field_b[0];
@@ -475,7 +475,7 @@ final class sd extends HotspotTextWidget {
           }
           var39.a(112, 144, var39.field_n << 4, var39.field_k << 4, -this.field_F << 10, 4096);
           pfa.a(1);
-          this.field_H.a(var9Lifetime3 - (var39.field_n >> 1), var10Lifetime3 - var39.field_k, 256);
+          this.field_H.drawAdditive(var9Lifetime3 - (var39.field_n >> 1), var10Lifetime3 - var39.field_k, 256);
           return;
         }
         super.renderLayer(param0, param1, param2, param3);
@@ -487,14 +487,14 @@ final class sd extends HotspotTextWidget {
           var6Lifetime3 != tea.field_b) {
           if (fp.field_c == var6Lifetime3) {
             var41 = pq.field_b[2];
-            var41.a(var9Lifetime4, -(var41.field_q >> 1) + var10Lifetime4, 256);
+            var41.drawAdditive(var9Lifetime4, -(var41.field_q >> 1) + var10Lifetime4, 256);
             return;
           }
           if (var6Lifetime3 != uh.field_k) {
             return;
           }
           var42 = pq.field_b[1];
-          var42.a(var9Lifetime4, -(var42.field_q >> 1) + var10Lifetime4, 256);
+          var42.drawAdditive(var9Lifetime4, -(var42.field_q >> 1) + var10Lifetime4, 256);
           return;
         }
         var43 = pq.field_b[0];
@@ -519,11 +519,11 @@ final class sd extends HotspotTextWidget {
         }
         var43.a(112, 144, var43.field_n << 4, var43.field_k << 4, -this.field_F << 10, 4096);
         pfa.a(1);
-        this.field_H.a(var9Lifetime4 - (var43.field_n >> 1), var10Lifetime4 - var43.field_k, 256);
+        this.field_H.drawAdditive(var9Lifetime4 - (var43.field_n >> 1), var10Lifetime4 - var43.field_k, 256);
         return;
     }
 
-    sd(nua param0, String param1, int param2, int param3, int param4, int param5) {
+    ValidationMessageWidget(nua param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, nk.a(-21819));
         try {
           this.field_I = param0;

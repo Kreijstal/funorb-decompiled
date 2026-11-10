@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wua extends DualLinkNode {
+final class QuickChatPhraseDefinition extends DualLinkNode {
     static int field_n;
     private int[] field_k;
     static apa field_o;
@@ -13,7 +13,7 @@ final class wua extends DualLinkNode {
     final static boolean c(byte param0) {
         boolean stackIn_6_0 = false;
         if (param0 != 49) {
-          wua.releaseStatics((byte) 74);
+          QuickChatPhraseDefinition.releaseStatics((byte) 74);
         }
         stackIn_6_0 = (Transform3D.field_c >= 10) && (cga.field_f >= 13);
         return stackIn_6_0;
@@ -23,7 +23,7 @@ final class wua extends DualLinkNode {
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
         if (param0 <= 37) {
-          wua.releaseStatics((byte) -54);
+          QuickChatPhraseDefinition.releaseStatics((byte) -54);
         }
         if (this.field_m != null) {
           for (var2 = 0; this.field_m.length > var2; var2++) {
@@ -129,7 +129,7 @@ final class wua extends DualLinkNode {
         }
     }
 
-    final String b(byte param0) {
+    final String getPreview(byte param0) {
         int var3 = 0;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -158,7 +158,7 @@ final class wua extends DualLinkNode {
         }
     }
 
-    wua() {
+    QuickChatPhraseDefinition() {
     }
 
     static {

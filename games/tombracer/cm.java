@@ -420,7 +420,7 @@ final class cm implements GamePacket {
                 var13 = stackIn_205_0;
               }
               if (ld.field_e >= 2 &&
-                oj.field_tb[12]) {
+                VerticalScrollbar.field_tb[12]) {
                 var14 = 0;
                 var13 = 0;
                 var11 = 0;
@@ -456,7 +456,7 @@ final class cm implements GamePacket {
                 }
                 cja.a(125, var7, param1, 0, var9, -1, -1, param3);
                 if (ld.field_e >= 2 &&
-                  oj.field_tb[12]) {
+                  VerticalScrollbar.field_tb[12]) {
                   TouchSwitchBehaviour.field_s = true;
                 }
                 if (!TouchSwitchBehaviour.field_s) {

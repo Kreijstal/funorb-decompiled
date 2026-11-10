@@ -57,7 +57,7 @@ final class OpenGlRenderbuffer extends DualLinkNode implements wia {
         super.finalize();
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void attachFramebuffer(int param0, int param1, int param2) {
         if (param2 == -23992) {
           jaggl.OpenGL.glFramebufferRenderbufferEXT(param1, param0, 36161, this.field_m);
           this.field_q = param1;

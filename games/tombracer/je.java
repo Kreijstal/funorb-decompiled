@@ -20,7 +20,7 @@ final class je extends haa {
         }
         int var5 = param0 + this.field_i;
         int var6 = param1 + this.field_n;
-        SoftwareRasterizer.e(var5, var6, this.field_m, this.field_p, param2);
+        SoftwareRasterizer.fillRectangle(var5, var6, this.field_m, this.field_p, param2);
         int var7 = this.field_G;
         if (this.field_H != -1) {
           var7 = this.field_H;
@@ -30,7 +30,7 @@ final class je extends haa {
             var9 = this.field_I[var8];
             var10 = var9.toString();
             if (var7 == var8) {
-              SoftwareRasterizer.c(2 + var5, 4 + var6, -4 + this.field_m, this.field_K, 2188450, 128);
+              SoftwareRasterizer.fillRectangleAlpha(2 + var5, 4 + var6, -4 + this.field_m, this.field_K, 2188450, 128);
             }
             var6 = var6 + this.field_K;
             this.field_F.c(var10, var5 + 2, var6, 10000536, -1);

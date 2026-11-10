@@ -100,7 +100,7 @@ final class lha extends kl {
               } else {
                 var7Lifetime4 = var9 + "; Discard;";
               }
-              lb.a(param4, 19467, "document.cookie=\"" + var7Lifetime4 + "\"");
+              JavaScriptBridge.evaluateScript(param4, 19467, "document.cookie=\"" + var7Lifetime4 + "\"");
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

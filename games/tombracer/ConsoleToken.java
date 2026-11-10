@@ -60,7 +60,7 @@ final class ConsoleToken extends IntrusiveNode {
               if (lp.field_h.field_h == var4) {
                 stackIn_17_0 = pua.field_c;
               } else {
-                stackIn_17_0 = wua.field_o;
+                stackIn_17_0 = QuickChatPhraseDefinition.field_o;
               }
               var9 = stackIn_17_0;
               var2 = var2 + aqa.field_a;

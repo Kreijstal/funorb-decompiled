@@ -513,7 +513,7 @@ final class SweepRotateLocomotor extends Locomotor {
             var8 = new int[var7 * var6];
             var9 = new java.awt.image.PixelGrabber(var4, 0, 0, var6, var7, var8, 0, var6);
             var9.grabPixels();
-            stackIn_4_0 = param0.a(var8, var7, 122, var6, var6, 0);
+            stackIn_4_0 = param0.createSpriteCopy(var8, var7, 122, var6, var6, 0);
             return stackIn_4_0;
           } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

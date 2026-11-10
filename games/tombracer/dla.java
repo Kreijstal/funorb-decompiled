@@ -300,7 +300,7 @@ final class dla {
 
     final static void b(int param0) {
         if (vo.field_b) {
-          SoftwareRasterizer.d(SoftwareRasterizer.field_b, SoftwareRasterizer.field_h, SoftwareRasterizer.field_d - SoftwareRasterizer.field_b, SoftwareRasterizer.field_k - SoftwareRasterizer.field_h);
+          SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.field_b, SoftwareRasterizer.field_h, SoftwareRasterizer.field_d - SoftwareRasterizer.field_b, SoftwareRasterizer.field_k - SoftwareRasterizer.field_h);
           rua.field_gb.b(36, false);
         }
         if (param0 != 23713) {

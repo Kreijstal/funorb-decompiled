@@ -501,7 +501,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements tsa {
             }
             if (102 == param2) {
               if (this.field_P &&
-                oj.field_tb[82]) {
+                VerticalScrollbar.field_tb[82]) {
                 this.a(0, (byte) -105);
                 return true;
               }
@@ -512,7 +512,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements tsa {
             } else {
               if (param2 == 103) {
                 if (this.field_P &&
-                  oj.field_tb[82]) {
+                  VerticalScrollbar.field_tb[82]) {
                   this.a(65536, (byte) -123);
                   return true;
                 }
@@ -692,9 +692,9 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements tsa {
         this.e(param0 ^ -111);
     }
 
-    final static an a(BitPacketBuffer param0, boolean param1) {
+    final static TriangleMesh a(BitPacketBuffer param0, boolean param1) {
         int var7 = 0;
-        an stackIn_27_0 = null;
+        TriangleMesh stackIn_27_0 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
@@ -703,7 +703,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements tsa {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        an var5 = null;
+        TriangleMesh var5 = null;
         int var6 = 0;
         int var8 = 0;
         var8 = TombRacer.field_G ? 1 : 0;
@@ -717,7 +717,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements tsa {
           }
           var3 = CircleMovementLocomotor.a(5907, param0) ? 1 : 0;
           var4 = CircleMovementLocomotor.a(5907, param0) ? 1 : 0;
-          var5 = new an();
+          var5 = new TriangleMesh();
           var5.field_I = (short)param0.readBits((byte) 44, 16);
           var5.field_l = me.a((byte) 76, 16, param0, var5.field_l);
           var5.field_h = me.a((byte) 88, 16, param0, var5.field_h);

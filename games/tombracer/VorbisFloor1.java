@@ -105,7 +105,7 @@ final class VorbisFloor1 {
         return var3;
     }
 
-    final boolean a() {
+    final boolean decodeFloor() {
         int var6 = 0;
         int var12 = 0;
         int incrementValue$0 = 0;

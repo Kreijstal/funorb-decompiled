@@ -61,15 +61,15 @@ final class eba extends pb {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (oj.field_vb.startsWith("win")) {
+          if (VerticalScrollbar.field_vb.startsWith("win")) {
             stackIn_2_0 = param1 + ".dll";
             return stackIn_2_0;
           }
-          if (oj.field_vb.startsWith("linux")) {
+          if (VerticalScrollbar.field_vb.startsWith("linux")) {
             stackIn_9_0 = "lib" + param1 + ".so";
             return stackIn_9_0;
           }
-          if (oj.field_vb.startsWith("mac")) {
+          if (VerticalScrollbar.field_vb.startsWith("mac")) {
             stackIn_7_0 = "lib" + param1 + ".dylib";
             return stackIn_7_0;
           }

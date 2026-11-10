@@ -11,16 +11,16 @@ final class Effect implements noa {
     static String[][] field_h;
     int size;
     private static String[] field_i;
-    WorldBody field_c;
+    WorldBody source;
     static String[] lavaDeathMessages;
 
-    final void a(WorldBody param0, int param1) {
+    final void setSource(WorldBody param0, int param1) {
         this.field_g = param0;
         if (param1 != 2348) {
           return;
         }
         try {
-          this.field_c = param0;
+          this.source = param0;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "up.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -216,7 +216,7 @@ final class Effect implements noa {
         try {
           this.preset = param1;
           this.size = param2;
-          this.a(param0, 2348);
+          this.setSource(param0, 2348);
           this.updateType(-70);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "up.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

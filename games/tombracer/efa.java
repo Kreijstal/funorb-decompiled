@@ -252,7 +252,7 @@ final class efa extends WidgetContainer implements mia, tsa {
 
     private final int a(int param0, UiWidget param1, int param2, String param3, String param4, int param5, int param6) {
         RuntimeException var8 = null;
-        sd var9 = null;
+        ValidationMessageWidget var9 = null;
         jsa var10 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;
@@ -266,7 +266,7 @@ final class efa extends WidgetContainer implements mia, tsa {
         try {
           var10 = new jsa(20, param0, 120 + param2, 25, param1, false, 120, param6, KeySwitchComponent.field_J, 16777215, param3);
           this.addChild(var10, -1);
-          var9 = new sd(((mk) ((Object) param1)).a((byte) 124), param4, 126, param0 + var10.field_p, param2 + 25, param5);
+          var9 = new ValidationMessageWidget(((mk) ((Object) param1)).a((byte) 124), param4, 126, param0 + var10.field_p, param2 + 25, param5);
           var9.field_h = (qc) (this);
           this.addChild(var9, -1);
           stackIn_1_0 = var10.field_p + var9.field_p;

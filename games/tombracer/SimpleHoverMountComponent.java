@@ -64,7 +64,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
         if (!param1) {
           SimpleHoverMountComponent.a(true, true, false, 75);
         }
-        if (0 != st.field_j.field_y) {
+        if (0 != ImageProducerRasterBuffer.field_j.field_y) {
           du.field_g = true;
         }
         if (0 != uq.field_c.field_y) {
@@ -75,7 +75,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
               fh.b(param3, -22243);
             } else {
               if (2 <= ld.field_e) {
-                if (oj.field_tb[12]) {
+                if (VerticalScrollbar.field_tb[12]) {
                   fh.b(param3, -22243);
                 } else {
                   qp.field_s = true;
@@ -205,7 +205,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new Trap(param2, param0);
-          var4.b((byte) -11, this.field_k, this.field_l);
+          var4.setSize((byte) -11, this.field_k, this.field_l);
           var4.h(param1, 0);
           var4.a(1, (byte) -12, true);
           var4.a((byte) -3, 0);

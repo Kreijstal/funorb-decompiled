@@ -49,7 +49,7 @@ final class PlantComponent extends PrefabComponent {
         var8 = TombRacer.field_G ? 1 : 0;
         try {
           var9 = new Trap(param2, param0);
-          var9.b((byte) -11, this.field_k, this.field_l);
+          var9.setSize((byte) -11, this.field_k, this.field_l);
           var9.a((byte) -3, 0);
           var9.b((byte) 17, true);
           var5 = rm.field_a;

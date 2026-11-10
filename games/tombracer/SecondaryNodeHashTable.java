@@ -224,7 +224,7 @@ final class SecondaryNodeHashTable {
         return var5Lifetime1;
     }
 
-    final DualLinkNode b(byte param0) {
+    final DualLinkNode nextWithSameKey(byte param0) {
         DualLinkNode var3 = null;
         int var4 = TombRacer.field_G ? 1 : 0;
         if (param0 <= 13) {

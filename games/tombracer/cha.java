@@ -95,7 +95,7 @@ abstract class cha {
 
     abstract void a(int param0, int param1, java.awt.Component param2, byte param3);
 
-    abstract void a(int param0, int param1, java.awt.Graphics param2, int param3);
+    abstract void drawImage(int param0, int param1, java.awt.Graphics param2, int param3);
 
     static {
         field_b = "Clan";

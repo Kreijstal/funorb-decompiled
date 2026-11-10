@@ -174,7 +174,7 @@ final class cc extends IntrusiveNode {
               if (0 == param2.length()) {
                 var5 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              lb.a(param1, 19467, "document.cookie=\"" + var5 + "\"");
+              JavaScriptBridge.evaluateScript(param1, 19467, "document.cookie=\"" + var5 + "\"");
             } catch (Throwable throwable) {
             }
             v.a((byte) 64, param1);

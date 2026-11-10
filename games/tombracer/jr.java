@@ -42,17 +42,17 @@ final class jr implements isa {
             param4 = param4 & var11.field_y;
           }
           var7 = 5592405;
-          SoftwareRasterizer.e(param0.field_i + param1, param0.field_n + param3, param0.field_m, param0.field_p, this.field_b);
+          SoftwareRasterizer.fillRectangle(param0.field_i + param1, param0.field_n + param3, param0.field_m, param0.field_p, this.field_b);
           if (param4) {
             var7 = 16777215;
           }
           var8 = param1 + param0.field_i + this.field_l;
           var9 = this.field_d + (param0.field_n + param3);
-          SoftwareRasterizer.d(var8, var9, this.field_e, this.field_c, 5592405);
-          SoftwareRasterizer.e(var8, var9, this.field_e, this.field_c, var7);
+          SoftwareRasterizer.drawDropShadow(var8, var9, this.field_e, this.field_c, 5592405);
+          SoftwareRasterizer.fillRectangle(var8, var9, this.field_e, this.field_c, var7);
           if (var11.field_w) {
-            SoftwareRasterizer.a(var8, var9, var8 + this.field_e, this.field_c + var9, 1);
-            SoftwareRasterizer.a(this.field_e + var8, var9, var8, this.field_c + var9, 1);
+            SoftwareRasterizer.drawLine(var8, var9, var8 + this.field_e, this.field_c + var9, 1);
+            SoftwareRasterizer.drawLine(this.field_e + var8, var9, var8, this.field_c + var9, 1);
           }
           if (null == this.field_k) {
             return;

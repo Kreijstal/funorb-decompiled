@@ -128,7 +128,7 @@ final class PlatformComponent extends PrefabComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new Trap(param2, param0);
-          var4.b((byte) -11, this.field_k, this.field_l);
+          var4.setSize((byte) -11, this.field_k, this.field_l);
           var5 = new PlatformBehaviour(param2, false);
           var5.b(-5, this.field_G);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));

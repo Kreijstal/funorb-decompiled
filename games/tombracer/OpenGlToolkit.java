@@ -2252,7 +2252,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_id = this.field_l.a("GL_EXT_framebuffer_object");
         this.field_hc = this.field_l.a("GL_EXT_framebuffer_blit");
         this.field_ed = this.field_l.a("GL_EXT_framebuffer_multisample");
-        this.field_Eb = oj.field_vb.startsWith("mac");
+        this.field_Eb = VerticalScrollbar.field_vb.startsWith("mac");
         jaggl.OpenGL.glGetFloatv(2834, gp.field_d, 0);
         this.field_Cb = gp.field_d[1];
         this.field_Qc = gp.field_d[0];
@@ -3347,7 +3347,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
               }
             }
           }
-          var6 = this.a(var12, param0.field_a, 96, param0.field_i, param0.field_i, 0);
+          var6 = this.createSpriteCopy(var12, param0.field_a, 96, param0.field_i, param0.field_i, 0);
           var6.b(param0.field_d, param0.field_c, param0.field_b, param0.field_e);
           stackIn_18_0 = var6;
           return stackIn_18_0;

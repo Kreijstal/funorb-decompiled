@@ -147,7 +147,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 12:
-                        var3_ref2 = PlatformTaskDispatcher.a(-20529, field_d, (String) (var8.field_c), field_u);
+                        var3_ref2 = PlatformTaskDispatcher.openPreferencesFile(-20529, field_d, (String) (var8.field_c), field_u);
                         var8.field_f = var3_ref2;
                         break;
                       case 16:
@@ -209,7 +209,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 13:
-                        var3_ref2 = PlatformTaskDispatcher.a(-20529, field_d, (String) (var8.field_c), "");
+                        var3_ref2 = PlatformTaskDispatcher.openPreferencesFile(-20529, field_d, (String) (var8.field_c), "");
                         var8.field_f = var3_ref2;
                         break;
                       case 7:
@@ -297,7 +297,7 @@ final class PlatformTaskDispatcher implements Runnable {
     final AsyncRequest a(int param0, String param1, Class param2) {
         if (param0 != 10355) {
           String var5 = (String) null;
-          PlatformTaskDispatcher.a(-73, 85, (String) null, (String) null);
+          PlatformTaskDispatcher.openPreferencesFile(-73, 85, (String) null, (String) null);
         }
         return this.a(0, 0, (byte) 104, new Object[]{param2, param1}, 9);
     }
@@ -305,7 +305,7 @@ final class PlatformTaskDispatcher implements Runnable {
     private final AsyncRequest a(int param0, String param1, boolean param2, int param3) {
         if (param0 != 1) {
           String var6 = (String) null;
-          PlatformTaskDispatcher.a(-120, 43, (String) null, (String) null);
+          PlatformTaskDispatcher.openPreferencesFile(-120, 43, (String) null, (String) null);
         }
         return this.a(param3, 0, (byte) 104, param1, param2 ? 22 : 1);
     }
@@ -397,7 +397,7 @@ final class PlatformTaskDispatcher implements Runnable {
         }
     }
 
-    private final static RandomAccessFileHandle a(int param0, int param1, String param2, String param3) {
+    private final static RandomAccessFileHandle openPreferencesFile(int param0, int param1, String param2, String param3) {
         try {
           int var6 = 0;
           RandomAccessFileHandle stackIn_15_0 = null;

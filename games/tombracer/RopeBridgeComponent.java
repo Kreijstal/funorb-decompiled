@@ -81,9 +81,9 @@ final class RopeBridgeComponent extends PrefabComponent {
           var13 = new Trap(param2, param0);
           var4 = var13;
           if (this.typeId != 46) {
-            var13.b((byte) -11, this.field_k, 4194304);
+            var13.setSize((byte) -11, this.field_k, 4194304);
           } else {
-            var13.b((byte) -11, 4194304, this.field_l);
+            var13.setSize((byte) -11, 4194304, this.field_l);
           }
           var5 = new PlatformBehaviour(param2, param0);
           var5.b(-5, this.field_H);
@@ -91,14 +91,14 @@ final class RopeBridgeComponent extends PrefabComponent {
           var6 = new Trap(param2, param0);
           var7 = new Trap(param2, param0);
           if (this.typeId == 46) {
-            var6.b((byte) -11, 524288, this.field_l);
+            var6.setSize((byte) -11, 524288, this.field_l);
             var6.b(437453352, -1835008, 0);
-            var7.b((byte) -11, 524288, this.field_l);
+            var7.setSize((byte) -11, 524288, this.field_l);
             var7.b(437453352, 1835008, 0);
           } else {
-            var6.b((byte) -11, this.field_k, 524288);
+            var6.setSize((byte) -11, this.field_k, 524288);
             var6.b(437453352, 0, -1835008);
-            var7.b((byte) -11, this.field_k, 524288);
+            var7.setSize((byte) -11, this.field_k, 524288);
             var7.b(437453352, 0, 1835008);
           }
           var6.b((byte) 17, false);

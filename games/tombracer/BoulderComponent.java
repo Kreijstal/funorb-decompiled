@@ -156,7 +156,7 @@ final class BoulderComponent extends PathMoverComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var11 = new Trap(param2, param0);
-          var11.b((byte) -11, this.field_k, this.field_l);
+          var11.setSize((byte) -11, this.field_k, this.field_l);
           var11.h(param1, 0);
           var11.a(3, (byte) -12, true);
           var11.a((byte) -3, 10);

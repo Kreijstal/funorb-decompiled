@@ -113,7 +113,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
         this.field_o = true;
         try {
           this.field_n = new mg();
-          this.field_u = ci.a(0, -1);
+          this.field_u = TextureOperator.a(0, -1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ska.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

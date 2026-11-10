@@ -33,13 +33,13 @@ final class DisplaySettingsDialog extends ofa implements tsa {
             if (param0 != 3321) {
               return;
             }
-            cda.field_p = cda.field_p + 1;
+            MotionTrackingModel.field_p = MotionTrackingModel.field_p + 1;
             vha.field_b = nt.field_a;
             if (0 > ita.field_f) {
               var5 = 0;
               var2 = var5;
               while (112 > var5) {
-                oj.field_tb[var5] = false;
+                VerticalScrollbar.field_tb[var5] = false;
                 var5++;
               }
               ita.field_f = hka.field_a;
@@ -48,10 +48,10 @@ final class DisplaySettingsDialog extends ofa implements tsa {
                 var2 = cna.field_c[hka.field_a];
                 hka.field_a = 127 & hka.field_a + 1;
                 if (var2 < 0) {
-                  oj.field_tb[~var2] = false;
+                  VerticalScrollbar.field_tb[~var2] = false;
                   continue;
                 }
-                oj.field_tb[var2] = true;
+                VerticalScrollbar.field_tb[var2] = true;
               }
             }
             nt.field_a = rca.field_n;

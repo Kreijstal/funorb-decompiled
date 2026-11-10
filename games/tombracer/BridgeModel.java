@@ -284,11 +284,11 @@ final class BridgeModel extends TrapModel {
           hna.field_a = param1;
           aqa.field_c = "";
           SecondaryNodeHashTable.field_b = param0;
-          if (!oj.field_vb.startsWith("win")) {
-            if (oj.field_vb.startsWith("linux")) {
+          if (!VerticalScrollbar.field_vb.startsWith("win")) {
+            if (VerticalScrollbar.field_vb.startsWith("linux")) {
               aqa.field_c = aqa.field_c + "linux/";
             } else {
-              if (oj.field_vb.startsWith("mac")) {
+              if (VerticalScrollbar.field_vb.startsWith("mac")) {
                 aqa.field_c = aqa.field_c + "macos/";
               }
             }
@@ -299,13 +299,13 @@ final class BridgeModel extends TrapModel {
           if (hna.field_a.field_p) {
             aqa.field_c = aqa.field_c + "msjava/";
           } else {
-            if (!oj.field_zb.startsWith("amd64") &&
-              !oj.field_zb.startsWith("x86_64")) {
-              if (!oj.field_zb.startsWith("i386") &&
-                !oj.field_zb.startsWith("i486") &&
-                !oj.field_zb.startsWith("i586") &&
-                !oj.field_zb.startsWith("x86")) {
-                if (oj.field_zb.startsWith("ppc")) {
+            if (!VerticalScrollbar.field_zb.startsWith("amd64") &&
+              !VerticalScrollbar.field_zb.startsWith("x86_64")) {
+              if (!VerticalScrollbar.field_zb.startsWith("i386") &&
+                !VerticalScrollbar.field_zb.startsWith("i486") &&
+                !VerticalScrollbar.field_zb.startsWith("i586") &&
+                !VerticalScrollbar.field_zb.startsWith("x86")) {
+                if (VerticalScrollbar.field_zb.startsWith("ppc")) {
                   aqa.field_c = aqa.field_c + "ppc/";
                 } else {
                   aqa.field_c = aqa.field_c + "universal/";

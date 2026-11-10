@@ -137,7 +137,7 @@ final class OpenGlFramebuffer implements ks {
             this.field_c = param1.field_n;
             this.field_g = param1.field_l;
           }
-          param1.a(vta.field_d[param0], this.field_a, -23992);
+          param1.attachFramebuffer(vta.field_d[param0], this.field_a, -23992);
           if (!param2) {
             this.a(-122, 86);
           }

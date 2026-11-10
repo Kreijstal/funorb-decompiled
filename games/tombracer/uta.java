@@ -234,18 +234,18 @@ abstract class uta implements ShellListener {
           uta.releaseStatics(24);
         }
         if (!(this.field_i.field_t + this.field_i.field_T <= 0)) {
-          SoftwareRasterizer.c(this.field_i.field_q, this.field_i.field_A, this.field_a.field_qb, this.field_i.field_t, 5592405, 230);
-          SoftwareRasterizer.c(this.field_a.field_q + this.field_a.field_G, this.field_i.field_A, this.field_a.field_qb, this.field_i.field_t, 5592405, 230);
-          SoftwareRasterizer.c(this.field_a.field_q, this.field_i.field_A, this.field_a.field_G, this.field_a.field_T, 5592405, 230);
-          SoftwareRasterizer.c(this.field_a.field_q, this.field_a.field_A + this.field_a.field_t, this.field_a.field_G, -this.field_a.field_t - this.field_a.field_A + this.field_o.field_A, 5592405, 230);
-          SoftwareRasterizer.c(this.field_a.field_q, this.field_o.field_t + this.field_o.field_A, this.field_a.field_G, this.field_i.field_t - this.field_o.field_T - this.field_o.field_t, 5592405, 230);
-          SoftwareRasterizer.c(this.field_a.field_q, this.field_a.field_A, this.field_a.field_G, this.field_a.field_t, 2236962, 240);
-          SoftwareRasterizer.c(this.field_o.field_q, this.field_o.field_A, this.field_o.field_G, this.field_o.field_t, 2236962, 240);
+          SoftwareRasterizer.fillRectangleAlpha(this.field_i.field_q, this.field_i.field_A, this.field_a.field_qb, this.field_i.field_t, 5592405, 230);
+          SoftwareRasterizer.fillRectangleAlpha(this.field_a.field_q + this.field_a.field_G, this.field_i.field_A, this.field_a.field_qb, this.field_i.field_t, 5592405, 230);
+          SoftwareRasterizer.fillRectangleAlpha(this.field_a.field_q, this.field_i.field_A, this.field_a.field_G, this.field_a.field_T, 5592405, 230);
+          SoftwareRasterizer.fillRectangleAlpha(this.field_a.field_q, this.field_a.field_A + this.field_a.field_t, this.field_a.field_G, -this.field_a.field_t - this.field_a.field_A + this.field_o.field_A, 5592405, 230);
+          SoftwareRasterizer.fillRectangleAlpha(this.field_a.field_q, this.field_o.field_t + this.field_o.field_A, this.field_a.field_G, this.field_i.field_t - this.field_o.field_T - this.field_o.field_t, 5592405, 230);
+          SoftwareRasterizer.fillRectangleAlpha(this.field_a.field_q, this.field_a.field_A, this.field_a.field_G, this.field_a.field_t, 2236962, 240);
+          SoftwareRasterizer.fillRectangleAlpha(this.field_o.field_q, this.field_o.field_A, this.field_o.field_G, this.field_o.field_t, 2236962, 240);
           var2 = this.field_i.field_T + 256;
           if (var2 < 0) {
             var2 = 0;
           }
-          SoftwareRasterizer.c(this.field_i.field_q, this.field_i.field_t + this.field_i.field_A, this.field_i.field_G, -this.field_i.field_t + qf.field_i - this.field_i.field_A, 0, var2 >> 1);
+          SoftwareRasterizer.fillRectangleAlpha(this.field_i.field_q, this.field_i.field_t + this.field_i.field_A, this.field_i.field_G, -this.field_i.field_t + qf.field_i - this.field_i.field_A, 0, var2 >> 1);
           var3 = this.field_i.field_t + (this.field_i.field_T + 5);
           for (var4 = 0; 6 > var4; var4++) {
             SoftwareRasterizer.drawHorizontalLineAlpha(0, var3, mma.field_a, 0, var4 << 5);
@@ -549,7 +549,7 @@ abstract class uta implements ShellListener {
         jea var10 = null;
         jea var11 = null;
         jea var12 = null;
-        oj var13 = null;
+        VerticalScrollbar var13 = null;
         jea var14 = null;
         jea var15 = null;
         this.field_t = "# ";
@@ -573,7 +573,7 @@ abstract class uta implements ShellListener {
           var12 = this.a(2236962, (byte) -125, 65793);
           this.field_i = new jea(0L, var5);
           this.field_i.a(mma.field_a, 200, -23776, -200, 0);
-          var13 = new oj(0L, var8, var8, var9, var10);
+          var13 = new VerticalScrollbar(0L, var8, var8, var9, var10);
           var14 = new jea();
           var14.field_J = new IntrusiveDeque();
           this.field_a = new iv(0L, var14, var6, var13);

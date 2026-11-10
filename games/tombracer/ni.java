@@ -92,7 +92,7 @@ final class ni {
         jaclib.memory.Buffer var9 = null;
         int var5Lifetime1;
         try {
-          param0.a(new ne[]{new ne(new gj[]{gj.field_p, gj.field_b, gj.field_n}), new ne(gj.field_e)}, 0);
+          param0.createVertexLayout(new ne[]{new ne(new gj[]{gj.field_p, gj.field_b, gj.field_n}), new ne(gj.field_e)}, 0);
           this.field_a = param0.c(6, true);
           this.field_d = param0.c(6, false);
           this.field_d.a(393168, 12, true);

@@ -166,7 +166,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements tpa {
           if (80 != var5_int) {
             return false;
           }
-          if (oj.field_tb[81]) {
+          if (VerticalScrollbar.field_tb[81]) {
             stackIn_20_0 = this.a(param1, 1);
           } else {
             stackIn_20_0 = this.a((byte) 43, param1);

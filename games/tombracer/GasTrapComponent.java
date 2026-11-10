@@ -90,7 +90,7 @@ final class GasTrapComponent extends PrefabComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var13 = new Trap(param2, param0);
-          var13.b((byte) -11, this.field_k, this.field_l);
+          var13.setSize((byte) -11, this.field_k, this.field_l);
           var13.a((byte) -3, 0);
           var13.h(3, param1 ^ param1);
           var13.setPushable(false, param1 + 116);
@@ -105,7 +105,7 @@ final class GasTrapComponent extends PrefabComponent {
           var7 = new Trap(param2, true);
           var8 = param2.getWidth((byte) -86);
           var9 = param2.getHeight(-127);
-          var7.b((byte) -11, var9, var8);
+          var7.setSize((byte) -11, var9, var8);
           var7.b(437453352, var9 / 2, var8 / 2);
           var7.a((byte) -3, 0);
           var7.b((byte) 17, true);

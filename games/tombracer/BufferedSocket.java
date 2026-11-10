@@ -114,7 +114,7 @@ final class BufferedSocket implements Runnable {
         this(param0, param1, 5000);
     }
 
-    final void b(int param0) throws IOException {
+    final void checkWriteError(int param0) throws IOException {
         if (this.field_a) {
           return;
         }

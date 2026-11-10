@@ -380,7 +380,7 @@ abstract class SingleChildWidget extends UiWidget implements tpa {
           BufferedSocket.field_b.field_rb = nia.a(param4, "lobby", "downbutton_mouseover", -73);
           BufferedSocket.field_b.field_U = nia.a(param4, "lobby", "downbutton_mouseheld", 56);
           BufferedSocket.field_b.field_B = nia.a(param4, "lobby", "downbutton_disabled", 113);
-          DateFieldsWidget.field_F = new oj(0L, pk.field_s, BufferedSocket.field_b, ClientException.field_b, ie.field_h);
+          DateFieldsWidget.field_F = new VerticalScrollbar(0L, pk.field_s, BufferedSocket.field_b, ClientException.field_b, ie.field_h);
           aaa.field_d = new hla(0L, (jea) null, rfa.field_C, DateFieldsWidget.field_F, jk.field_g, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -665,7 +665,7 @@ abstract class SingleChildWidget extends UiWidget implements tpa {
           if (var5_int != 80) {
             return false;
           }
-          if (!oj.field_tb[81]) {
+          if (!VerticalScrollbar.field_tb[81]) {
             stackIn_13_0 = this.a(param1, 71);
           } else {
             stackIn_13_0 = this.b(param1, 3815994);

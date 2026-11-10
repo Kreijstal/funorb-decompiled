@@ -77,7 +77,7 @@ final class SkeletonComponent extends dna {
         RuntimeException decompiledCaughtException = null;
         try {
           var12 = new Trap(param2, param0);
-          var12.b((byte) -11, this.field_k, this.field_l);
+          var12.setSize((byte) -11, this.field_k, this.field_l);
           var12.h(2, 0);
           var12.a(2, (byte) -12, true);
           var12.a((byte) -3, 1);

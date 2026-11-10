@@ -239,7 +239,7 @@ class jea extends um {
         int var3 = 0;
         if (null != this.field_r &&
           null != this.field_H) {
-          var4_int = this.field_H.c(this.field_r, param0);
+          var4_int = this.field_H.getWrappedWidth(this.field_r, param0);
           if (var3 < var4_int) {
             var3 = var4_int;
           }
@@ -655,7 +655,7 @@ class jea extends um {
                 this.field_H.c(var23Lifetime2, (-(this.field_x * 2) + this.field_G) / 2 + this.field_q + this.field_x + var21, this.field_A + var22 + this.field_H.field_w, var18, -1, this.field_s);
               } else {
                 if (2 != this.field_z) {
-                  this.field_H.a(var23Lifetime2, var21 + this.field_q + this.field_x, var22 + this.field_A, -(2 * this.field_x) + this.field_G, this.field_t, var18, -1, this.field_s, this.field_z, this.field_bb, this.field_P);
+                  this.field_H.drawParagraphAlpha(var23Lifetime2, var21 + this.field_q + this.field_x, var22 + this.field_A, -(2 * this.field_x) + this.field_G, this.field_t, var18, -1, this.field_s, this.field_z, this.field_bb, this.field_P);
                 } else {
                   this.field_H.a(var23Lifetime2, var21 + (this.field_q + this.field_x + this.field_G - this.field_x * 2), this.field_A + (var22 + this.field_H.field_w), var18, -1, this.field_s);
                 }
@@ -664,7 +664,7 @@ class jea extends um {
             decompiledFrameRemainder0 = false;
           }
           else {
-            this.field_H.a(var23Lifetime2, var21 + (this.field_x + this.field_q), var22 + this.field_A, this.field_G - 2 * this.field_x, this.field_t, var18, -1, this.field_s, this.field_z, this.field_bb, this.field_P);
+            this.field_H.drawParagraphAlpha(var23Lifetime2, var21 + (this.field_x + this.field_q), var22 + this.field_A, this.field_G - 2 * this.field_x, this.field_t, var18, -1, this.field_s, this.field_z, this.field_bb, this.field_P);
           }
         }
         if (this.field_J != null) {

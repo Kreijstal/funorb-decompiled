@@ -966,7 +966,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         return (lv) ((Object) new ek(this, param1, param4, param3, param5, param0));
     }
 
-    final mna a(ne[] param0, int param1) {
+    final mna createVertexLayout(ne[] param0, int param1) {
         if (param1 != 0) {
           this.field_dd = (jagdx.IDirect3D) null;
         }

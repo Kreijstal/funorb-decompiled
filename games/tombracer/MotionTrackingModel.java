@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class cda extends TrapModel {
+abstract class MotionTrackingModel extends TrapModel {
     private boolean field_r;
     private boolean field_t;
-    private boolean field_q;
+    private boolean moving;
     private int field_m;
     private int field_v;
     private int field_s;
@@ -15,24 +15,24 @@ abstract class cda extends TrapModel {
 
     public static void n(byte param0) {
         if (param0 < 0) {
-          cda.a(-97, true);
+          MotionTrackingModel.a(-97, true);
           field_u = null;
           return;
         }
         field_u = null;
     }
 
-    cda(int param0, Room param1, BitPacketBuffer param2) {
+    MotionTrackingModel(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
         this.field_r = true;
     }
 
-    final boolean a(boolean param0) {
+    final boolean isMoving(boolean param0) {
         if (!param0) {
           this.field_t = true;
-          return this.field_q;
+          return this.moving;
         }
-        return this.field_q;
+        return this.moving;
     }
 
     void d(int param0) {
@@ -95,20 +95,20 @@ abstract class cda extends TrapModel {
           this.field_n = 1;
           this.field_r = false;
           this.field_o = 0;
-          this.field_q = false;
+          this.moving = false;
           this.field_m = var6Lifetime1;
           stackIn_99_0 = (var3 != 0) ? 0 : 1;
           if (stackIn_99_0 == (this.field_t ? 1 : 0)) {
             stackIn_104_1 = (var3 != 0);
             this.field_t = stackIn_104_1;
           }
-          stackIn_107_0 = this.field_q;
+          stackIn_107_0 = this.moving;
           stackIn_108_1 = (var2 != 0) ? 0 : 1;
           if ((stackIn_107_0 ? 1 : 0) != stackIn_108_1) {
             this.field_n = this.field_n + 1;
           } else {
             stackIn_112_1 = (var2 != 0);
-            this.field_q = stackIn_112_1;
+            this.moving = stackIn_112_1;
             this.field_n = 1;
           }
         } else {
@@ -125,13 +125,13 @@ abstract class cda extends TrapModel {
                   stackIn_42_1 = (var3 != 0);
                   this.field_t = stackIn_42_1;
                 }
-                stackIn_45_0 = this.field_q;
+                stackIn_45_0 = this.moving;
                 stackIn_46_1 = (var2 != 0) ? 0 : 1;
                 if ((stackIn_45_0 ? 1 : 0) != stackIn_46_1) {
                   this.field_n = this.field_n + 1;
                 } else {
                   stackIn_50_1 = (var2 != 0);
-                  this.field_q = stackIn_50_1;
+                  this.moving = stackIn_50_1;
                   this.field_n = 1;
                 }
               } else {
@@ -142,13 +142,13 @@ abstract class cda extends TrapModel {
                   stackIn_21_1 = (var3 != 0);
                   this.field_t = stackIn_21_1;
                 }
-                stackIn_24_0 = this.field_q;
+                stackIn_24_0 = this.moving;
                 stackIn_25_1 = (var2 != 0) ? 0 : 1;
                 if ((stackIn_24_0 ? 1 : 0) != stackIn_25_1) {
                   this.field_n = this.field_n + 1;
                 } else {
                   stackIn_29_1 = (var2 != 0);
-                  this.field_q = stackIn_29_1;
+                  this.moving = stackIn_29_1;
                   this.field_n = 1;
                 }
               }
@@ -169,13 +169,13 @@ abstract class cda extends TrapModel {
               stackIn_64_1 = (var3 != 0);
               this.field_t = stackIn_64_1;
             }
-            stackIn_67_0 = this.field_q;
+            stackIn_67_0 = this.moving;
             stackIn_68_1 = (var2 != 0) ? 0 : 1;
             if ((stackIn_67_0 ? 1 : 0) != stackIn_68_1) {
               this.field_n = this.field_n + 1;
             } else {
               stackIn_72_1 = (var2 != 0);
-              this.field_q = stackIn_72_1;
+              this.moving = stackIn_72_1;
               this.field_n = 1;
             }
           } else {
@@ -186,13 +186,13 @@ abstract class cda extends TrapModel {
               stackIn_84_1 = (var3 != 0);
               this.field_t = stackIn_84_1;
             }
-            stackIn_87_0 = this.field_q;
+            stackIn_87_0 = this.moving;
             stackIn_88_1 = (var2 != 0) ? 0 : 1;
             if ((stackIn_87_0 ? 1 : 0) != stackIn_88_1) {
               this.field_n = this.field_n + 1;
             } else {
               stackIn_92_1 = (var2 != 0);
-              this.field_q = stackIn_92_1;
+              this.moving = stackIn_92_1;
               this.field_n = 1;
             }
           }
@@ -204,11 +204,11 @@ abstract class cda extends TrapModel {
     final static void a(int param0, boolean param1) {
         ConstrainToRectangleLocomotor.a(param1, hb.field_t.field_d, (byte) -100);
         if (param0 != 0) {
-          cda.a(50, false);
+          MotionTrackingModel.a(50, false);
         }
     }
 
-    cda(int param0) {
+    MotionTrackingModel(int param0) {
         super(param0);
         this.field_r = true;
     }

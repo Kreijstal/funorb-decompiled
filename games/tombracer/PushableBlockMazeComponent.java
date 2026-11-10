@@ -71,7 +71,7 @@ final class PushableBlockMazeComponent extends MazeComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var10 = new Trap(param2, param1);
-          var10.b((byte) -11, 2097152, 2097152);
+          var10.setSize((byte) -11, 2097152, 2097152);
           var10.a((byte) -3, 4);
           var10.h(3, 0);
           var10.setPushable(true, param0 + 116);

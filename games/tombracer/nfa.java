@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nfa extends ci {
+final class nfa extends TextureOperator {
     private int field_o;
     private int field_m;
     static os field_q;

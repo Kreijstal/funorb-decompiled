@@ -637,9 +637,9 @@ final class RandomMazeBehaviour extends Behaviour {
           this.field_t = 1048576;
         }
         this.field_r.c((byte) 77, false);
-        this.field_r.b((byte) -11, this.field_t, this.field_t);
+        this.field_r.setSize((byte) -11, this.field_t, this.field_t);
         this.field_A.c((byte) 59, false);
-        this.field_A.b((byte) -11, this.field_t, this.field_t);
+        this.field_A.setSize((byte) -11, this.field_t, this.field_t);
         if (!param0) {
           this.field_o = (Trap) null;
         }

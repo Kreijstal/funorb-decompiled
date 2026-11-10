@@ -32,7 +32,7 @@ final class qja extends IntrusiveNode {
           }
           return;
         }
-        SoftwareRasterizer.c(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_a, 0, 192);
+        SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_a, 0, 192);
         if (param2 <= -121) {
           tqa.a(param0, (byte) 106);
           return;

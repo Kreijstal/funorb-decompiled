@@ -137,9 +137,9 @@ final class ns extends qe {
           Throwable var4_ref = null;
           RuntimeException var4_ref2 = null;
           cha var5 = null;
-          st var5_ref = null;
+          ImageProducerRasterBuffer var5_ref = null;
           cha stackIn_3_0 = null;
-          st stackIn_5_0 = null;
+          ImageProducerRasterBuffer stackIn_5_0 = null;
           RuntimeException stackIn_8_0 = null;
           StringBuilder stackIn_8_1 = null;
           String stackIn_9_2 = null;
@@ -157,7 +157,7 @@ final class ns extends qe {
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              var5_ref = new st();
+              var5_ref = new ImageProducerRasterBuffer();
               ((cha) ((Object) var5_ref)).a(param1, param3, param2, (byte) -98);
               stackIn_5_0 = var5_ref;
               return (cha) ((Object) stackIn_5_0);

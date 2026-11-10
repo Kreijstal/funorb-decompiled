@@ -258,7 +258,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             return false;
           }
           try {
-            this.field_t.b(102);
+            this.field_t.checkWriteError(102);
             var2 = (qqa) (this.field_e.b((byte) 38));
             while (var2 != null) {
               this.field_o.position = 0;

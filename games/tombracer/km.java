@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class km extends DualLinkNode {
-    private ci[] field_l;
-    private ci field_r;
-    private ci field_k;
-    private ci field_m;
+    private TextureOperator[] field_l;
+    private TextureOperator field_r;
+    private TextureOperator field_k;
+    private TextureOperator field_m;
     static fta field_p;
     static String field_n;
     private int[] field_o;
@@ -362,9 +362,9 @@ final class km extends DualLinkNode {
         int var9 = 0;
         int var10 = 0;
         int[][] var12 = null;
-        ci var13 = null;
-        ci var14 = null;
-        ci var15 = null;
+        TextureOperator var13 = null;
+        TextureOperator var14 = null;
+        TextureOperator var15 = null;
         int var6Lifetime1;
         int var9Lifetime1;
         int var3Lifetime1;
@@ -375,7 +375,7 @@ final class km extends DualLinkNode {
           var2_int = param0.readUnsignedByte(255);
           var3 = 0;
           var4 = 0;
-          this.field_l = new ci[var2_int];
+          this.field_l = new TextureOperator[var2_int];
           var12 = new int[var2_int][];
           for (var6 = 0; var6 < var2_int; var6++) {
             var13 = MirrorComponent.a(param0, 0);
@@ -479,7 +479,7 @@ final class km extends DualLinkNode {
           CachedArchiveSource.a(param3, -256);
           uta.a(0, param2, param0);
           if (param6) {
-            this.field_m = (ci) null;
+            this.field_m = (TextureOperator) null;
           }
           var9 = new int[param0 * param2];
           var10 = 0;

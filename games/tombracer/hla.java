@@ -48,7 +48,7 @@ final class hla extends jea {
         this.a(param1, param0, 0, param5);
     }
 
-    hla(long param0, jea param1, jea param2, oj param3, jea param4, String param5, String param6) {
+    hla(long param0, jea param1, jea param2, VerticalScrollbar param3, jea param4, String param5, String param6) {
         super(param0, param1);
         try {
           this.field_tb = new jea(0L, (jea) null);

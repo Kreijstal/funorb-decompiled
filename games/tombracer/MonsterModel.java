@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class MonsterModel extends cda {
+final class MonsterModel extends MotionTrackingModel {
     static String field_A;
     private int field_z;
     private bua field_C;
@@ -175,7 +175,7 @@ final class MonsterModel extends cda {
         if (null == this.field_C) {
           return;
         }
-        var2 = this.a(true) ? 1 : 0;
+        var2 = this.isMoving(true) ? 1 : 0;
         var3 = this.b(false);
         var4 = 1;
         var5_int = this.field_x;

@@ -65,7 +65,7 @@ final class jl {
             jl.a((Room) null, false, (BitPacketBuffer) null);
           }
           var3_int = param2.readBits((byte) 44, 5);
-          stackIn_3_0 = ci.a(var3_int, -1);
+          stackIn_3_0 = TextureOperator.a(var3_int, -1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -237,7 +237,7 @@ abstract class GraphicsToolkit {
 
     abstract void a(Transform3D param0);
 
-    final ToolkitSprite a(int[] param0, int param1, int param2, int param3, int param4, int param5) {
+    final ToolkitSprite createSpriteCopy(int[] param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         ToolkitSprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

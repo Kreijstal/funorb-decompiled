@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class PerlinNoise2D extends ci {
+final class PerlinNoise2D extends TextureOperator {
     private short[] field_r;
     int field_w;
     int field_n;

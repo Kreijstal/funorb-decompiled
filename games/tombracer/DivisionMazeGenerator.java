@@ -55,7 +55,7 @@ final class DivisionMazeGenerator extends MazeGenerator {
             boolean decompiledFrameRemainder0 = true;
             if (param1.field_d == wea.field_d[var3].field_d) {
               var4 = wea.field_d[var3].a(false);
-              if (sd.field_K < baa.field_b[var4]) {
+              if (ValidationMessageWidget.field_K < baa.field_b[var4]) {
                 baa.field_b[var4] = baa.field_b[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jv extends ci {
+final class jv extends TextureOperator {
     static ica field_m;
     private int field_o;
     private boolean field_n;

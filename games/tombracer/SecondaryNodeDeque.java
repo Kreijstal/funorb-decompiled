@@ -16,7 +16,7 @@ final class SecondaryNodeDeque implements Iterable {
           return this.a((byte) 121, (DualLinkNode) null);
         }
         DualLinkNode var3 = (DualLinkNode) null;
-        this.a((DualLinkNode) null, -48);
+        this.addLast((DualLinkNode) null, -48);
         return this.a((byte) 121, (DualLinkNode) null);
     }
 
@@ -95,7 +95,7 @@ final class SecondaryNodeDeque implements Iterable {
         }
     }
 
-    final void a(DualLinkNode param0, int param1) {
+    final void addLast(DualLinkNode param0, int param1) {
         if (param0.secondaryPrevious != null) {
           param0.unlinkSecondary(-7975);
         }

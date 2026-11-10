@@ -75,7 +75,7 @@ final class tka extends TextWidgetPainter {
         int var12 = 0;
         int var13 = 0;
         try {
-          SoftwareRasterizer.f(param1 + param0.field_i, param3 + param0.field_n, param0.field_m, param0.field_p, 10197915);
+          SoftwareRasterizer.drawRectangle(param1 + param0.field_i, param3 + param0.field_n, param0.field_m, param0.field_p, 10197915);
           if (param4) {
             stackIn_6_0 = (((FocusableWidget) (param0)).field_w) ? 1 : 0;
           } else {

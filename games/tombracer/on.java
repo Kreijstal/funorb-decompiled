@@ -138,8 +138,8 @@ final class on {
           on.releaseStatics(119);
         }
         boolean decompiledFrameRemainder0 = true;
-        if (!oj.field_tb[82] &&
-          !oj.field_tb[86] && (param1 >= 16 &&
+        if (!VerticalScrollbar.field_tb[82] &&
+          !VerticalScrollbar.field_tb[86] && (param1 >= 16 &&
           27 >= param1 ||
           param1 >= 32 &&
           param1 <= 43 ||

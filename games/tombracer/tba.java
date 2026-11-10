@@ -32,7 +32,7 @@ final class tba extends IntrusiveNode {
           var8 = SoftwareRasterizer.field_a;
           var20 = new Sprite(16, param2);
           var20.c();
-          SoftwareRasterizer.b(0, 0, 16, param2, param3, param4);
+          SoftwareRasterizer.fillVerticalGradient(0, 0, 16, param2, param3, param4);
           var10 = null;
           if (param5) {
             var21 = var20.copy();
@@ -63,7 +63,7 @@ final class tba extends IntrusiveNode {
         var8Lifetime1 = SoftwareRasterizer.field_a;
         Sprite var17 = new Sprite(16, param2);
         var17.c();
-        SoftwareRasterizer.b(0, 0, 16, param2, param3, param4);
+        SoftwareRasterizer.fillVerticalGradient(0, 0, 16, param2, param3, param4);
         var10 = null;
         if (param5) {
           var18 = var17.copy();

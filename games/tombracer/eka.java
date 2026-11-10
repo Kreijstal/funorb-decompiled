@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eka extends ci {
+final class eka extends TextureOperator {
     static BitmapFont field_o;
     private int field_m;
     static String field_n;

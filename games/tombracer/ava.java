@@ -189,7 +189,7 @@ final class ava {
             if (param0 == bsa.field_j) {
               var21 += 42;
             }
-            var33 = BitmapFont.a(var12.field_Nb.field_H, var32, var21);
+            var33 = BitmapFont.truncateWithEllipsis(var12.field_Nb.field_H, var32, var21);
             var20 = var33;
             var20 = var33;
             var20 = var33;

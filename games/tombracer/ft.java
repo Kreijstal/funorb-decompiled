@@ -46,7 +46,7 @@ final class ft {
         }
     }
 
-    final static void a(an param0, int param1, int[] param2, int[] param3, boolean param4, boolean param5, boolean param6) {
+    final static void a(TriangleMesh param0, int param1, int[] param2, int[] param3, boolean param4, boolean param5, boolean param6) {
         int stackIn_69_0 = 0;
         int stackIn_69_1 = 0;
         RuntimeException stackIn_74_0 = null;

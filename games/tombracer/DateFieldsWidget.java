@@ -5,7 +5,7 @@ final class DateFieldsWidget extends paa {
     static String[] gasDeathMessages;
     private TextInputWidget field_E;
     static int[] field_C;
-    static oj field_F;
+    static VerticalScrollbar field_F;
     private TextInputWidget field_B;
     private boolean field_G;
     private TextInputWidget field_D;

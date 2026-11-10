@@ -122,7 +122,7 @@ abstract class BitmapFont extends DualLinkNode {
           return;
         }
         this.a(param3, param4, param5);
-        this.b(param0, param1 - this.b(param0) / 2, param2);
+        this.drawStyledText(param0, param1 - this.b(param0) / 2, param2);
     }
 
     final static String escapeMarkup(String param0) {
@@ -171,7 +171,7 @@ abstract class BitmapFont extends DualLinkNode {
           return;
         }
         this.a(param3, param4);
-        this.b(param0, param1, param2);
+        this.drawStyledText(param0, param1, param2);
     }
 
     final void b(String param0, int param1, int param2, int param3, int param4, int param5) {
@@ -179,7 +179,7 @@ abstract class BitmapFont extends DualLinkNode {
           return;
         }
         this.a(param3, param4, param5);
-        this.b(param0, param1, param2);
+        this.drawStyledText(param0, param1, param2);
     }
 
     final int a(String param0, int param1) {
@@ -371,7 +371,7 @@ abstract class BitmapFont extends DualLinkNode {
 
     abstract void drawGlyphAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7);
 
-    final int c(String param0, int param1) {
+    final int getWrappedWidth(String param0, int param1) {
         int var5 = 0;
         int var3;
         int var4;
@@ -392,7 +392,7 @@ abstract class BitmapFont extends DualLinkNode {
           return;
         }
         this.a(param3, param4);
-        this.b(param0, param1 - this.b(param0), param2);
+        this.drawStyledText(param0, param1 - this.b(param0), param2);
     }
 
     final void a(String param0, int param1, int param2, int param3, int param4, int param5) {
@@ -400,7 +400,7 @@ abstract class BitmapFont extends DualLinkNode {
           return;
         }
         this.a(param3, param4, param5);
-        this.b(param0, param1 - this.b(param0), param2);
+        this.drawStyledText(param0, param1 - this.b(param0), param2);
     }
 
     public static void releaseStatics() {
@@ -409,14 +409,14 @@ abstract class BitmapFont extends DualLinkNode {
     }
 
     final int a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        return this.a(param0, param1, param2, param3, param4, param5, param6, 256, param7, param8, param9);
+        return this.drawParagraphAlpha(param0, param1, param2, param3, param4, param5, param6, 256, param7, param8, param9);
     }
 
     final int a(char param0) {
         return this.field_B[io.a(-377, param0) & 255];
     }
 
-    private final void b(String param0, int param1, int param2) {
+    private final void drawStyledText(String param0, int param1, int param2) {
         int var7 = 0;
         int stackIn_27_0 = 0;
         Throwable decompiledCaughtException = null;
@@ -453,7 +453,7 @@ abstract class BitmapFont extends DualLinkNode {
                           if (!var9_ref_String.equals("copy")) {
                             if (!var9_ref_String.equals("reg")) {
                               if (!var9_ref_String.startsWith("img=")) {
-                                this.a(var9_ref_String);
+                                this.applyStyleTag(var9_ref_String);
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
@@ -755,7 +755,7 @@ abstract class BitmapFont extends DualLinkNode {
         return var11;
     }
 
-    private final void a(String param0) {
+    private final void applyStyleTag(String param0) {
         Throwable decompiledCaughtException = null;
         Exception var2 = null;
         CharSequence var3 = null;
@@ -852,7 +852,7 @@ abstract class BitmapFont extends DualLinkNode {
         field_D = 0;
     }
 
-    final int a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
+    final int drawParagraphAlpha(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
         int[] var12;
         int var13;
         int var14;
@@ -899,22 +899,22 @@ abstract class BitmapFont extends DualLinkNode {
               if (param8 != 2) {
                 if (var15Lifetime1 != var13 - 1) {
                   this.b(field_H[var15Lifetime1], param3);
-                  this.b(field_H[var15Lifetime1], param1, var14);
+                  this.drawStyledText(field_H[var15Lifetime1], param1, var14);
                   field_y = 0;
                 } else {
-                  this.b(field_H[var15Lifetime1], param1, var14);
+                  this.drawStyledText(field_H[var15Lifetime1], param1, var14);
                 }
                 var14 = var14 + param10;
               } else {
-                this.b(field_H[var15Lifetime1], param1 + param3 - this.b(field_H[var15Lifetime1]), var14);
+                this.drawStyledText(field_H[var15Lifetime1], param1 + param3 - this.b(field_H[var15Lifetime1]), var14);
                 var14 = var14 + param10;
               }
             } else {
-              this.b(field_H[var15Lifetime1], param1 + (param3 - this.b(field_H[var15Lifetime1])) / 2, var14);
+              this.drawStyledText(field_H[var15Lifetime1], param1 + (param3 - this.b(field_H[var15Lifetime1])) / 2, var14);
               var14 = var14 + param10;
             }
           } else {
-            this.b(field_H[var15Lifetime1], param1, var14);
+            this.drawStyledText(field_H[var15Lifetime1], param1, var14);
             var14 = var14 + param10;
           }
         }
@@ -926,10 +926,10 @@ abstract class BitmapFont extends DualLinkNode {
           return;
         }
         this.a(param3, param4);
-        this.b(param0, param1 - this.b(param0) / 2, param2);
+        this.drawStyledText(param0, param1 - this.b(param0) / 2, param2);
     }
 
-    final static String a(BitmapFont param0, String param1, int param2) {
+    final static String truncateWithEllipsis(BitmapFont param0, String param1, int param2) {
         int var6 = 0;
         int var3;
         int var4;

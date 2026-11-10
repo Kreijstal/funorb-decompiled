@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sba extends ci {
+final class sba extends TextureOperator {
     static String field_o;
     static String field_n;
     static String field_m;

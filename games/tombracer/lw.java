@@ -27,14 +27,14 @@ final class lw {
         int stackIn_5_0 = 0;
         int stackIn_10_0 = 0;
         var4 = TombRacer.field_G ? 1 : 0;
-        if (oj.field_tb[HardwareOpenGlToolkit.field_hd]) {
+        if (VerticalScrollbar.field_tb[HardwareOpenGlToolkit.field_hd]) {
           stackIn_5_0 = -1;
         } else {
-          stackIn_5_0 = (oj.field_tb[mf.field_a]) ? 1 : 0;
+          stackIn_5_0 = (VerticalScrollbar.field_tb[mf.field_a]) ? 1 : 0;
         }
         var2 = stackIn_5_0;
-        if (!oj.field_tb[ConsoleToken.field_k]) {
-          stackIn_10_0 = (!oj.field_tb[fp.field_a]) ? 0 : 1;
+        if (!VerticalScrollbar.field_tb[ConsoleToken.field_k]) {
+          stackIn_10_0 = (!VerticalScrollbar.field_tb[fp.field_a]) ? 0 : 1;
         } else {
           stackIn_10_0 = -1;
         }
@@ -50,7 +50,7 @@ final class lw {
           return;
         }
         if (!this.field_c) {
-          if (oj.field_tb[hra.field_b]) {
+          if (VerticalScrollbar.field_tb[hra.field_b]) {
             this.field_d.a(0, false, 0, 24, true);
           } else {
             if (!this.field_c) {
@@ -58,7 +58,7 @@ final class lw {
                 this.field_d.a(0, false, 0, 1, true);
               }
             } else {
-              if (!oj.field_tb[hra.field_b]) {
+              if (!VerticalScrollbar.field_tb[hra.field_b]) {
                 this.field_d.a(0, false, 0, 1, true);
               } else {
                 if (!this.field_b) {
@@ -69,9 +69,9 @@ final class lw {
           }
         } else {
           if (!this.field_b) {
-            if (!oj.field_tb[hra.field_b]) {
+            if (!VerticalScrollbar.field_tb[hra.field_b]) {
               if (this.field_c &&
-                !oj.field_tb[hra.field_b]) {
+                !VerticalScrollbar.field_tb[hra.field_b]) {
                 this.field_d.a(0, false, 0, 1, true);
               } else {
                 if (!this.field_b) {
@@ -87,7 +87,7 @@ final class lw {
                 this.field_d.a(0, false, 0, 1, true);
               }
             } else {
-              if (!oj.field_tb[hra.field_b]) {
+              if (!VerticalScrollbar.field_tb[hra.field_b]) {
                 this.field_d.a(0, false, 0, 1, true);
               } else {
                 if (!this.field_b) {
@@ -97,7 +97,7 @@ final class lw {
             }
           }
         }
-        this.field_c = oj.field_tb[hra.field_b];
+        this.field_c = VerticalScrollbar.field_tb[hra.field_b];
         this.field_b = true;
         if (this.field_c) {
           var2 = var2 << 14;

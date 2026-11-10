@@ -162,7 +162,7 @@ final class uw {
         int var1_int = 0;
         int[] var2 = null;
         int var3 = 0;
-        an var4_ref_an = null;
+        TriangleMesh var4_ref_an = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -176,7 +176,7 @@ final class uw {
         int var13 = 0;
         int var14 = 0;
         int var16 = 0;
-        an var17 = null;
+        TriangleMesh var17 = null;
         int var19 = 0;
         int[] var20 = null;
         int[] var21 = null;
@@ -200,7 +200,7 @@ final class uw {
           var2 = var20;
           for (var3 = 0; var1_int > var3; var3++) {
             var4_ref_an = cq.field_b[var3];
-            var4_ref_an.a((byte) -117);
+            var4_ref_an.computeBounds((byte) -117);
             oka.b((byte) 17, var3);
             var5 = var4_ref_an.field_i + var4_ref_an.field_z >> 1;
             var6 = var4_ref_an.field_m + var4_ref_an.field_b >> 1;

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class bk extends ci {
+final class bk extends TextureOperator {
     private int field_q;
     static String[] monthNames;
     private int field_p;

@@ -238,7 +238,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements tma, tsa
 
     private final int a(int param0, int param1, UiWidget param2, int param3, int param4, String param5, String param6) {
         RuntimeException var8 = null;
-        sd var9 = null;
+        ValidationMessageWidget var9 = null;
         jsa var10 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -253,7 +253,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements tma, tsa
         try {
           var10 = new jsa(20, param0, param3 + 120, 25, param2, false, 120, 3, KeySwitchComponent.field_J, 16777215, param6);
           this.addChild(var10, -1);
-          var9 = new sd(((mk) ((Object) param2)).a((byte) 120), param5, 126, var10.field_p + param0, param3 + 50, param4);
+          var9 = new ValidationMessageWidget(((mk) ((Object) param2)).a((byte) 120), param5, 126, var10.field_p + param0, param3 + 50, param4);
           var9.field_h = (qc) (this);
           this.addChild(var9, -1);
           if (param1 >= 66) {

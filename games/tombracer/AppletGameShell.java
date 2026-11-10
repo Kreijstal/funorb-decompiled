@@ -65,7 +65,7 @@ abstract class AppletGameShell extends GameApplet {
         }
         byte[] var5 = new byte[var4];
         vc.field_q.a(0, param0 - 103, var5, var4);
-        SimpleBlockBehaviour.a(param0 ^ -16, di.a(param0 + 82), jaa.a((byte) 64, var5), var3 != 0);
+        SimpleBlockBehaviour.a(param0 ^ -16, di.a(param0 + 82), jaa.decodeText((byte) 64, var5), var3 != 0);
     }
 
     final static boolean isFreeChatAllowed(int param0) {
@@ -523,7 +523,7 @@ abstract class AppletGameShell extends GameApplet {
         if (param0 <= 89) {
           AppletGameShell.n(-80);
         }
-        if (wua.c((byte) 49)) {
+        if (QuickChatPhraseDefinition.c((byte) 49)) {
           discarded$1 = this.a((byte) -72, false, null != dq.field_f ? true : false);
         } else {
           if (cga.field_f < 10) {
@@ -711,9 +711,9 @@ abstract class AppletGameShell extends GameApplet {
           }
           if (null == sma.field_c) {
             sma.field_c = epa.d((byte) -91);
-            ci.field_k = fta.c(-93);
+            TextureOperator.field_k = fta.c(-93);
           }
-          wk.a(sma.field_c, ci.field_k, 11861, vc.field_p);
+          wk.a(sma.field_c, TextureOperator.field_k, 11861, vc.field_p);
           OpenGlTexture2D.field_n = null;
           tk.field_b = null;
           vc.field_p = null;

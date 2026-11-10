@@ -530,7 +530,7 @@ class WidgetContainer extends UiWidget implements tpa {
           if (var6 != 80) {
             return false;
           }
-          if (oj.field_tb[81]) {
+          if (VerticalScrollbar.field_tb[81]) {
             stackIn_16_0 = this.focusPreviousChild(param1, (byte) -124);
           } else {
             stackIn_16_0 = this.focusNextChild(param1, (byte) -9);

@@ -660,7 +660,7 @@ final class sw extends jea {
                     if (this.field_ub >= this.field_wb.length()) {
                       return false;
                     }
-                    if (!oj.field_tb[82]) {
+                    if (!VerticalScrollbar.field_tb[82]) {
                       stackIn_52_0 = this.field_ub + 1;
                     } else {
                       stackIn_52_0 = this.g((byte) 50);
@@ -677,24 +677,24 @@ final class sw extends jea {
                     this.d(param1 ^ -1070, this.field_wb.length());
                     return true;
                   }
-                  if (oj.field_tb[82] &&
+                  if (VerticalScrollbar.field_tb[82] &&
                     param0 == 65) {
                     this.k(param1 ^ 19666);
                     return true;
                   }
-                  if (oj.field_tb[82] &&
+                  if (VerticalScrollbar.field_tb[82] &&
                     param0 == 66) {
                     this.f(82);
                     return true;
                   }
-                  if (oj.field_tb[82] &&
+                  if (VerticalScrollbar.field_tb[82] &&
                     67 == param0) {
                     this.g(100);
                     return true;
                   }
                 } else {
                   if (0 < this.field_ub) {
-                    if (oj.field_tb[82]) {
+                    if (VerticalScrollbar.field_tb[82]) {
                       stackIn_41_0 = this.j((byte) -92);
                     } else {
                       stackIn_41_0 = -1 + this.field_ub;
@@ -787,7 +787,7 @@ final class sw extends jea {
           if (param0 != 18626) {
             this.a(83, (byte) 112, 70);
           }
-          if (oj.field_tb[81]) {
+          if (VerticalScrollbar.field_tb[81]) {
             return;
           }
           this.field_Ab = this.field_ub;

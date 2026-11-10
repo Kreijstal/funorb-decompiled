@@ -63,12 +63,12 @@ final class SoftReferenceCache {
           var8 = var7.f(29243);
           if (var8 != null) {
             if (!var7.a(14646)) {
-              this.field_f.a(var7, -11396);
+              this.field_f.addLast(var7, -11396);
               var7.secondaryKey = 0L;
             } else {
               var6 = new tja(var8, var7.field_m);
               this.field_c.put(var6, (byte) 125, var7.key);
-              this.field_f.a(var6, -11396);
+              this.field_f.addLast(var6, -11396);
               ((pb) ((Object) var6)).secondaryKey = 0L;
               var7.unlink(118);
               var7.unlinkSecondary(-7975);
@@ -83,12 +83,12 @@ final class SoftReferenceCache {
         Object var9 = var7.f(29243);
         if (var9 != null) {
           if (!var7.a(14646)) {
-            this.field_f.a(var7, -11396);
+            this.field_f.addLast(var7, -11396);
             var7.secondaryKey = 0L;
           } else {
             var6Lifetime1 = new tja(var9, var7.field_m);
             this.field_c.put(var6Lifetime1, (byte) 125, var7.key);
-            this.field_f.a(var6Lifetime1, -11396);
+            this.field_f.addLast(var6Lifetime1, -11396);
             ((pb) ((Object) var6Lifetime1)).secondaryKey = 0L;
             var7.unlink(118);
             var7.unlinkSecondary(-7975);
@@ -271,7 +271,7 @@ final class SoftReferenceCache {
           }
           var6 = new tja(param1, param2);
           this.field_c.put(var6, (byte) 114, param3);
-          this.field_f.a(var6, -11396);
+          this.field_f.addLast(var6, -11396);
           ((pb) ((Object) var6)).secondaryKey = 0L;
           if (param0 == -1) {
             return;

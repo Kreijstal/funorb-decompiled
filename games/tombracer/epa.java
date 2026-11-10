@@ -55,8 +55,8 @@ final class epa extends wv {
           }
           gj.field_r = false;
           nfa.field_p = false;
-          if (ci.field_l != null &&
-            ci.field_l.field_B) {
+          if (TextureOperator.field_l != null &&
+            TextureOperator.field_l.field_B) {
             var3_int = 1;
             if (param0 == 8) {
               if (!jf.field_r) {
@@ -78,7 +78,7 @@ final class epa extends wv {
               if (bga.field_d) {
                 param2 = KeySwitchComponent.field_K;
               }
-              ci.field_l.a(param0, (byte) 94, param2);
+              TextureOperator.field_l.a(param0, (byte) 94, param2);
             }
             if (param0 != 256) {
               if (10 == param0) {

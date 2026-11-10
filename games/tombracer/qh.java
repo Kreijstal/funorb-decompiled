@@ -265,7 +265,7 @@ final class qh extends dfa implements rqa {
           this.a((byte) 23, true);
         }
         boolean decompiledFrameRemainder0 = true;
-        var9 = oj.field_tb;
+        var9 = VerticalScrollbar.field_tb;
         var4 = var9;
         if (param0 &&
           param1 &&

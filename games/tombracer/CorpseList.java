@@ -80,7 +80,7 @@ final class CorpseList {
         }
     }
 
-    final void attachToRoom(Room param0, int param1) {
+    final void mirrorInRoom(Room param0, int param1) {
         int var4 = 0;
         Corpse var5 = null;
         RuntimeException stackIn_9_0 = null;
@@ -95,7 +95,7 @@ final class CorpseList {
           }
           var5 = (Corpse) (this.corpses.first(-80));
           while (var5 != null) {
-            var5.a(param0, (byte) -72);
+            var5.mirrorInRoom(param0, (byte) -72);
             var5 = (Corpse) (this.corpses.next(107));
           }
           return;

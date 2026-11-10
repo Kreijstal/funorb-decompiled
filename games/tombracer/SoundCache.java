@@ -197,7 +197,7 @@ final class SoundCache {
           }
           var9 = (VorbisSample) (this.field_e.get((byte) -114, var6));
           if (var9 == null) {
-            var9 = VorbisSample.a(this.field_c, param3, param0);
+            var9 = VorbisSample.load(this.field_c, param3, param0);
             if (var9 == null) {
               stackIn_11_0 = null;
               return (u) (stackIn_11_0);

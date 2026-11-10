@@ -62,7 +62,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           java.awt.Canvas var3 = (java.awt.Canvas) null;
           this.a((Object) null, false, (java.awt.Canvas) null);
         }
-        jaggl.OpenGL.glTexEnvi(8960, 34161, oj.a((byte) 126, this.field_mc[this.field_Cc]));
+        jaggl.OpenGL.glTexEnvi(8960, 34161, VerticalScrollbar.a((byte) 126, this.field_mc[this.field_Cc]));
     }
 
     final boolean f() {
@@ -186,7 +186,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         return (qm) ((Object) new og(this, param1));
     }
 
-    final mna a(ne[] param0, int param1) {
+    final mna createVertexLayout(ne[] param0, int param1) {
         RuntimeException var3 = null;
         dqa stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -959,7 +959,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         if (param0 != -23) {
           this.f(47);
         }
-        jaggl.OpenGL.glTexEnvi(8960, 34162, oj.a((byte) 101, this.field_db[this.field_Cc]));
+        jaggl.OpenGL.glTexEnvi(8960, 34162, VerticalScrollbar.a((byte) 101, this.field_db[this.field_Cc]));
     }
 
     final mw b(int param0, int param1) {

@@ -102,7 +102,7 @@ final class ak extends ela {
         if (param0 == 0) {
           SnakePitBehaviour.field_o = null;
           if (jf.field_r) {
-            ci.field_l.f(true);
+            TextureOperator.field_l.f(true);
             return;
           }
           var1 = lsa.field_a;
@@ -114,14 +114,14 @@ final class ak extends ela {
             }
             SnakePitBehaviour.field_o = S2CPlayerSyncPacket.a((byte) 121, new CharSequence[]{(CharSequence) ((Object) SnakePitBehaviour.field_o), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) rpa.field_j)});
           }
-          ci.field_l.i((byte) 101);
+          TextureOperator.field_l.i((byte) 101);
           wt.a((byte) -117);
           return;
         }
         field_o = (Object) null;
         SnakePitBehaviour.field_o = null;
         if (jf.field_r) {
-          ci.field_l.f(true);
+          TextureOperator.field_l.f(true);
         } else {
           var1 = lsa.field_a;
           if (0 < var1) {
@@ -132,7 +132,7 @@ final class ak extends ela {
             }
             SnakePitBehaviour.field_o = S2CPlayerSyncPacket.a((byte) 121, new CharSequence[]{(CharSequence) ((Object) SnakePitBehaviour.field_o), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) rpa.field_j)});
           }
-          ci.field_l.i((byte) 101);
+          TextureOperator.field_l.i((byte) 101);
           wt.a((byte) -117);
         }
     }

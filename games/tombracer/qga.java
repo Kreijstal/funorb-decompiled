@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qga extends ci {
+final class qga extends TextureOperator {
     static boolean field_m;
 
     final static String a(int param0, CharSequence[] param1, int param2, int param3) {

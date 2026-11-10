@@ -1078,7 +1078,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     private final void f(boolean param0) {
         this.field_cb = this.c(6, param0);
         this.field_cb.a(24, 12, param0);
-        this.field_mb = this.a(new ne[]{new ne(gj.field_p)}, 0);
+        this.field_mb = this.createVertexLayout(new ne[]{new ne(gj.field_p)}, 0);
     }
 
     final void a(boolean param0, int param1) {
@@ -1606,7 +1606,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           }
           break;
         }
-        this.field_ub = this.a(new ne[]{new ne(new gj[]{gj.field_p, gj.field_n, gj.field_n})}, 0);
+        this.field_ub = this.createVertexLayout(new ne[]{new ne(new gj[]{gj.field_p, gj.field_n, gj.field_n})}, 0);
         return;
     }
 
@@ -1772,10 +1772,10 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.field_ib = new ob[-2 + this.field_e];
         this.field_Jb = (iva) ((Object) this.createTexture2D(1, 1, SwitchableId.field_a, (byte) -63, una.field_g));
         this.a(new to(262144));
-        this.field_Db = this.a(new ne[]{new ne(new gj[]{gj.field_p, gj.field_n})}, 0);
-        this.a(new ne[]{new ne(new gj[]{gj.field_p, gj.field_b})}, 0);
-        this.field_nc = this.a(new ne[]{new ne(gj.field_p), new ne(gj.field_b), new ne(gj.field_n), new ne(gj.field_e)}, 0);
-        this.field_ob = this.a(new ne[]{new ne(gj.field_p), new ne(gj.field_b), new ne(gj.field_n)}, 0);
+        this.field_Db = this.createVertexLayout(new ne[]{new ne(new gj[]{gj.field_p, gj.field_n})}, 0);
+        this.createVertexLayout(new ne[]{new ne(new gj[]{gj.field_p, gj.field_b})}, 0);
+        this.field_nc = this.createVertexLayout(new ne[]{new ne(gj.field_p), new ne(gj.field_b), new ne(gj.field_n), new ne(gj.field_e)}, 0);
+        this.field_ob = this.createVertexLayout(new ne[]{new ne(gj.field_p), new ne(gj.field_b), new ne(gj.field_n)}, 0);
         this.field_cc = new gja(this, 0, 0, false, false);
         this.field_tb = new gja(this, 0, 0, true, true);
         this.field_gc = new gja(this, 0, 0, false, false);
@@ -1866,7 +1866,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           }
           break;
         }
-        this.field_Z = this.a(new ne[]{new ne(gj.field_p)}, 0);
+        this.field_Z = this.createVertexLayout(new ne[]{new ne(gj.field_p)}, 0);
         return;
     }
 
@@ -2119,7 +2119,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    abstract mna a(ne[] param0, int param1);
+    abstract mna createVertexLayout(ne[] param0, int param1);
 
     private final void x(int param0) {
         float[] var2;
@@ -2625,9 +2625,9 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
                 }
               }
             }
-            var3 = this.a(var12, param0.field_a, 117, param0.field_i, param0.field_i, 0);
+            var3 = this.createSpriteCopy(var12, param0.field_a, 117, param0.field_i, param0.field_i, 0);
           } else {
-            var3 = this.a(new int[]{0}, 1, 81, 1, 1, 0);
+            var3 = this.createSpriteCopy(new int[]{0}, 1, 81, 1, 1, 0);
           }
           var3.b(param0.field_d, param0.field_c, param0.field_b, param0.field_e);
           stackIn_23_0 = var3;

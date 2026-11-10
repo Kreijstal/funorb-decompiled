@@ -239,7 +239,7 @@ final class IntrusiveDeque {
                   if (var14 <= 0) {
                     stackIn_47_1 = var7.field_tb;
                   } else {
-                    stackIn_47_1 = BitmapFont.a(var7.field_xb.field_H, var7.field_tb, var14);
+                    stackIn_47_1 = BitmapFont.truncateWithEllipsis(var7.field_xb.field_H, var7.field_tb, var14);
                   }
                   stackIn_46_0.field_r = stackIn_47_1;
                   var7.field_xb.a(var14, di.field_a, -23776, var9, var13);

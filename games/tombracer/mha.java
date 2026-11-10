@@ -68,7 +68,7 @@ final class mha extends FocusableWidget {
             nm.a(aj.field_l, (byte) 108);
             var15.a(112, 144, var15.field_n << 4, var15.field_k << 4, -this.field_A << 10, 4096);
             pfa.a(1);
-            aj.field_l.a(-var15.field_n + var5, var6 - var15.field_k, 256);
+            aj.field_l.drawAdditive(-var15.field_n + var5, var6 - var15.field_k, 256);
             return;
           }
           if (aj.field_l.field_m < var9) {
@@ -76,7 +76,7 @@ final class mha extends FocusableWidget {
             nm.a(aj.field_l, (byte) 108);
             var15.a(112, 144, var15.field_n << 4, var15.field_k << 4, -this.field_A << 10, 4096);
             pfa.a(1);
-            aj.field_l.a(-var15.field_n + var5, var6 - var15.field_k, 256);
+            aj.field_l.drawAdditive(-var15.field_n + var5, var6 - var15.field_k, 256);
             return;
           }
           if (var10 > aj.field_l.field_q) {
@@ -84,14 +84,14 @@ final class mha extends FocusableWidget {
             nm.a(aj.field_l, (byte) 108);
             var15.a(112, 144, var15.field_n << 4, var15.field_k << 4, -this.field_A << 10, 4096);
             pfa.a(1);
-            aj.field_l.a(-var15.field_n + var5, var6 - var15.field_k, 256);
+            aj.field_l.drawAdditive(-var15.field_n + var5, var6 - var15.field_k, 256);
             return;
           }
           nm.a(aj.field_l, (byte) 95);
           SoftwareRasterizer.clear();
           var15.a(112, 144, var15.field_n << 4, var15.field_k << 4, -this.field_A << 10, 4096);
           pfa.a(1);
-          aj.field_l.a(-var15.field_n + var5, var6 - var15.field_k, 256);
+          aj.field_l.drawAdditive(-var15.field_n + var5, var6 - var15.field_k, 256);
           return;
         }
         if (tea.field_b == var8) {
@@ -103,7 +103,7 @@ final class mha extends FocusableWidget {
             nm.a(aj.field_l, (byte) 108);
             var16.a(112, 144, var16.field_n << 4, var16.field_k << 4, -this.field_A << 10, 4096);
             pfa.a(1);
-            aj.field_l.a(-var16.field_n + var5, var6 - var16.field_k, 256);
+            aj.field_l.drawAdditive(-var16.field_n + var5, var6 - var16.field_k, 256);
             return;
           }
           if (aj.field_l.field_m < var9Lifetime1) {
@@ -111,7 +111,7 @@ final class mha extends FocusableWidget {
             nm.a(aj.field_l, (byte) 108);
             var16.a(112, 144, var16.field_n << 4, var16.field_k << 4, -this.field_A << 10, 4096);
             pfa.a(1);
-            aj.field_l.a(-var16.field_n + var5, var6 - var16.field_k, 256);
+            aj.field_l.drawAdditive(-var16.field_n + var5, var6 - var16.field_k, 256);
             return;
           }
           if (var10Lifetime1 > aj.field_l.field_q) {
@@ -119,26 +119,26 @@ final class mha extends FocusableWidget {
             nm.a(aj.field_l, (byte) 108);
             var16.a(112, 144, var16.field_n << 4, var16.field_k << 4, -this.field_A << 10, 4096);
             pfa.a(1);
-            aj.field_l.a(-var16.field_n + var5, var6 - var16.field_k, 256);
+            aj.field_l.drawAdditive(-var16.field_n + var5, var6 - var16.field_k, 256);
             return;
           }
           nm.a(aj.field_l, (byte) 95);
           SoftwareRasterizer.clear();
           var16.a(112, 144, var16.field_n << 4, var16.field_k << 4, -this.field_A << 10, 4096);
           pfa.a(1);
-          aj.field_l.a(-var16.field_n + var5, var6 - var16.field_k, 256);
+          aj.field_l.drawAdditive(-var16.field_n + var5, var6 - var16.field_k, 256);
           return;
         }
         if (fp.field_c == var8) {
           var13 = pq.field_b[2];
-          var13.a(var5 - (var13.field_m >> 1), var6 - (var13.field_q >> 1), 256);
+          var13.drawAdditive(var5 - (var13.field_m >> 1), var6 - (var13.field_q >> 1), 256);
           return;
         }
         if (uh.field_k != var8) {
           return;
         }
         Sprite var12 = pq.field_b[1];
-        var12.a(var5 - (var12.field_m >> 1), -(var12.field_q >> 1) + var6, 256);
+        var12.drawAdditive(var5 - (var12.field_m >> 1), -(var12.field_q >> 1) + var6, 256);
     }
 
     final boolean requestKeyboardFocus(UiWidget param0, boolean param1) {

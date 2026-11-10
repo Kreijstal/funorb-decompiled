@@ -439,7 +439,7 @@ final class qt {
           kl.field_a = gsa.field_y;
           ub.field_i = param0;
           al.field_j = param6;
-          wua.field_n = param2;
+          QuickChatPhraseDefinition.field_n = param2;
           ConstraintLocomotor.field_p = param4;
           PlantModel.field_n = null;
           faa.field_g = param3;

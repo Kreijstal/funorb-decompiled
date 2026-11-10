@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jda extends ci {
+final class jda extends TextureOperator {
     static int field_m;
 
     final static void a(boolean param0, int param1) {

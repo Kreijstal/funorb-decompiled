@@ -52,7 +52,7 @@ final class WallCrusherComponent extends PrefabComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var14 = new Trap(param2, param0);
-          var14.b((byte) -11, this.field_k, this.field_l);
+          var14.setSize((byte) -11, this.field_k, this.field_l);
           var14.h(3, 0);
           var14.a(1, (byte) -12, true);
           var14.g(param1 + 122, 2);
