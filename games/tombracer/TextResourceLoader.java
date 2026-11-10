@@ -1327,51 +1327,51 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 118, "monthnames,0");
                 if (null != var2) {
-                  bk.monthNames[0] = jaa.decodeText((byte) 55, var2);
+                  LineNoiseOperator.monthNames[0] = jaa.decodeText((byte) 55, var2);
                 }
                 var2 = dn.a((byte) -17, "monthnames,1");
                 if (null != var2) {
-                  bk.monthNames[1] = jaa.decodeText((byte) 32, var2);
+                  LineNoiseOperator.monthNames[1] = jaa.decodeText((byte) 32, var2);
                 }
                 var2 = dn.a((byte) 127, "monthnames,2");
                 if (null != var2) {
-                  bk.monthNames[2] = jaa.decodeText((byte) 58, var2);
+                  LineNoiseOperator.monthNames[2] = jaa.decodeText((byte) 58, var2);
                 }
                 var2 = dn.a((byte) 127, "monthnames,3");
                 if (var2 != null) {
-                  bk.monthNames[3] = jaa.decodeText((byte) 116, var2);
+                  LineNoiseOperator.monthNames[3] = jaa.decodeText((byte) 116, var2);
                 }
                 var2 = dn.a((byte) -60, "monthnames,4");
                 if (var2 != null) {
-                  bk.monthNames[4] = jaa.decodeText((byte) 91, var2);
+                  LineNoiseOperator.monthNames[4] = jaa.decodeText((byte) 91, var2);
                 }
                 var2 = dn.a((byte) 113, "monthnames,5");
                 if (null != var2) {
-                  bk.monthNames[5] = jaa.decodeText((byte) 103, var2);
+                  LineNoiseOperator.monthNames[5] = jaa.decodeText((byte) 103, var2);
                 }
                 var2 = dn.a((byte) -28, "monthnames,6");
                 if (null != var2) {
-                  bk.monthNames[6] = jaa.decodeText((byte) 26, var2);
+                  LineNoiseOperator.monthNames[6] = jaa.decodeText((byte) 26, var2);
                 }
                 var2 = dn.a((byte) -64, "monthnames,7");
                 if (null != var2) {
-                  bk.monthNames[7] = jaa.decodeText((byte) 60, var2);
+                  LineNoiseOperator.monthNames[7] = jaa.decodeText((byte) 60, var2);
                 }
                 var2 = dn.a((byte) -124, "monthnames,8");
                 if (var2 != null) {
-                  bk.monthNames[8] = jaa.decodeText((byte) 117, var2);
+                  LineNoiseOperator.monthNames[8] = jaa.decodeText((byte) 117, var2);
                 }
                 var2 = dn.a((byte) 124, "monthnames,9");
                 if (var2 != null) {
-                  bk.monthNames[9] = jaa.decodeText((byte) 124, var2);
+                  LineNoiseOperator.monthNames[9] = jaa.decodeText((byte) 124, var2);
                 }
                 var2 = dn.a((byte) -26, "monthnames,10");
                 if (var2 != null) {
-                  bk.monthNames[10] = jaa.decodeText((byte) 99, var2);
+                  LineNoiseOperator.monthNames[10] = jaa.decodeText((byte) 99, var2);
                 }
                 var2 = dn.a((byte) 113, "monthnames,11");
                 if (null != var2) {
-                  bk.monthNames[11] = jaa.decodeText((byte) 51, var2);
+                  LineNoiseOperator.monthNames[11] = jaa.decodeText((byte) 51, var2);
                 }
                 var2 = dn.a((byte) -77, "create_welcome");
                 if (var2 != null) {
@@ -2803,7 +2803,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 106, "graphics_config_instruction");
                 if (var2 != null) {
-                  ab.field_w = jaa.decodeText((byte) 101, var2);
+                  RewardChoicePhase.field_w = jaa.decodeText((byte) 101, var2);
                 }
                 var2 = dn.a((byte) -115, "graphics_config_need_memory");
                 if (null != var2) {

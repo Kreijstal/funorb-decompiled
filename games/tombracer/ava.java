@@ -309,7 +309,7 @@ final class ava {
             if (var12.field_y != 0 &&
               !var12.f(162)) {
               if (var12.field_Kb.field_y != 0) {
-                fv.a((byte) 92, param1, var12.field_yb);
+                RewardChoiceSlot.a((byte) 92, param1, var12.field_yb);
               } else {
                 if (0 == var12.field_Cb.field_y) {
                   rc.a(PasswordValidator.field_m, lba.field_p, var12, (byte) -93, 0, 0, param0);

@@ -80,7 +80,7 @@ abstract class paa extends WidgetContainer implements mk {
           if (3 == param1) {
             fna.field_j[3] = qua.a(TextLayout.field_a, "", "TR_lose_jingle_long");
           }
-          while (!ab.field_n.field_y.a(176400, fna.field_j[param1], ua.field_a, ns.field_j, 0)) {
+          while (!RewardChoicePhase.field_n.field_y.a(176400, fna.field_j[param1], ua.field_a, ns.field_j, 0)) {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

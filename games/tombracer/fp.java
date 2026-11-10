@@ -170,7 +170,7 @@ final class fp {
         ena.field_l = SpriteData.loadSprite(param2, "", "endround_flag");
         MirrorComponent.field_F = SpriteData.loadSprite(param2, "", "endround_divider_line");
         rp.field_f = SpriteData.loadSprite(param2, "", "endround_smoke_trail");
-        qka.field_o = SpriteData.loadSheet(param2, "", "endround_stage_lines");
+        StandingsPhase.field_o = SpriteData.loadSheet(param2, "", "endround_stage_lines");
         ko.field_j = SpriteData.loadSprite(param2, "", "podium");
         int incrementValue$7 = param1;
         param1++;

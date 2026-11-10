@@ -117,8 +117,8 @@ final class rpa extends qe {
           if (!param0) {
             return;
           }
-          fl.field_m = fl.field_m - 1;
-          if (fl.field_m == 0) {
+          KaleidoscopeOperator.field_m = KaleidoscopeOperator.field_m - 1;
+          if (KaleidoscopeOperator.field_m == 0) {
             cla.field_m = null;
             return;
           }
@@ -132,8 +132,8 @@ final class rpa extends qe {
           if (!param0) {
             return;
           }
-          fl.field_m = fl.field_m - 1;
-          if (fl.field_m == 0) {
+          KaleidoscopeOperator.field_m = KaleidoscopeOperator.field_m - 1;
+          if (KaleidoscopeOperator.field_m == 0) {
             cla.field_m = null;
             return;
           }
@@ -146,8 +146,8 @@ final class rpa extends qe {
         if (!param0) {
           return;
         }
-        fl.field_m = fl.field_m - 1;
-        if (fl.field_m == 0) {
+        KaleidoscopeOperator.field_m = KaleidoscopeOperator.field_m - 1;
+        if (KaleidoscopeOperator.field_m == 0) {
           cla.field_m = null;
           return;
         }

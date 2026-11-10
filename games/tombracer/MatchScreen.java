@@ -81,7 +81,7 @@ final class MatchScreen extends GameScreen implements rqa {
         this.field_t = false;
     }
 
-    private final void a(int param0, MatchPhase param1) {
+    private final void setPhase(int param0, MatchPhase param1) {
         try {
           kqa.b(18916);
           if (param0 != 6) {
@@ -229,7 +229,7 @@ final class MatchScreen extends GameScreen implements rqa {
         }
         this.field_s = true;
         this.i((byte) 99);
-        this.a(6, (MatchPhase) null);
+        this.setPhase(6, (MatchPhase) null);
         if (param1 >= -75) {
           this.field_g = (w[]) null;
         }
@@ -540,7 +540,7 @@ final class MatchScreen extends GameScreen implements rqa {
         int var2Lifetime1;
         var4 = TombRacer.field_G ? 1 : 0;
         this.i((byte) 99);
-        this.a(6, new PlayPhase(this, this.protocol));
+        this.setPhase(6, new PlayPhase(this, this.protocol));
         for (var2 = 0; this.field_u.length > var2; var2++) {
           this.field_u[var2] = false;
           var3 = this.matchState.players[var2].getRoom((byte) -73);
@@ -678,7 +678,7 @@ final class MatchScreen extends GameScreen implements rqa {
           this.a(115);
         }
         if (!param1) {
-          this.a(6, new qka(this, this.protocol));
+          this.setPhase(6, new StandingsPhase(this, this.protocol));
         } else {
           this.a(param0, (byte) -89);
         }
@@ -749,7 +749,7 @@ final class MatchScreen extends GameScreen implements rqa {
 
     final void k(int param0) {
         this.i((byte) 99);
-        this.a(param0 ^ -7, new ab(this, this.protocol));
+        this.setPhase(param0 ^ -7, new RewardChoicePhase(this, this.protocol));
         if (param0 != -1) {
           MatchScreen.b(true);
         }
@@ -974,7 +974,7 @@ final class MatchScreen extends GameScreen implements rqa {
     final void h(byte param0) {
         int var2 = 70 % ((37 - param0) / 62);
         this.i((byte) 99);
-        this.a(6, new uda(this, this.protocol));
+        this.setPhase(6, new uda(this, this.protocol));
     }
 
     final static hra a(int param0, String param1) {
@@ -1029,8 +1029,8 @@ final class MatchScreen extends GameScreen implements rqa {
     }
 
     final void a(byte param0, int param1, int param2) {
-        if (this.phase instanceof ab) {
-          ((ab) (this.phase)).a(param1, true, param2);
+        if (this.phase instanceof RewardChoicePhase) {
+          ((RewardChoicePhase) (this.phase)).a(param1, true, param2);
         }
         int var4 = -88 / ((49 - param0) / 53);
     }
@@ -1058,7 +1058,7 @@ final class MatchScreen extends GameScreen implements rqa {
         if (param0) {
           this.field_s = true;
         }
-        this.a(6, new qka(this, this.protocol));
+        this.setPhase(6, new StandingsPhase(this, this.protocol));
     }
 
     final void l(byte param0) {
@@ -1075,12 +1075,12 @@ final class MatchScreen extends GameScreen implements rqa {
           this.f(63);
         }
         if (this.matchState.b((byte) 90, param1)) {
-          var3 = ab.a(-41, gl.$cfr$intArgs$a$53ce4ab4c593(124, ara.field_yb, new String[]{this.j(param1, 9)}) + ": " + dea.a(this.matchState.c((byte) 115, param1), (byte) -8));
+          var3 = RewardChoicePhase.a(-41, gl.$cfr$intArgs$a$53ce4ab4c593(124, ara.field_yb, new String[]{this.j(param1, 9)}) + ": " + dea.a(this.matchState.c((byte) 115, param1), (byte) -8));
         } else {
           if (this.matchState.e((byte) -66, param1)) {
-            var3 = ab.a(-79, gl.$cfr$intArgs$a$53ce4ab4c593(107, hu.field_a, new String[]{this.j(param1, 9)}) + ": " + dea.a(this.matchState.c((byte) 115, param1), (byte) -8));
+            var3 = RewardChoicePhase.a(-79, gl.$cfr$intArgs$a$53ce4ab4c593(107, hu.field_a, new String[]{this.j(param1, 9)}) + ": " + dea.a(this.matchState.c((byte) 115, param1), (byte) -8));
           } else {
-            var3 = ab.a(-108, gl.$cfr$intArgs$a$53ce4ab4c593(99, DisplaySettingsDialog.field_Q, new String[]{this.j(param1, 9)}));
+            var3 = RewardChoicePhase.a(-108, gl.$cfr$intArgs$a$53ce4ab4c593(99, DisplaySettingsDialog.field_Q, new String[]{this.j(param1, 9)}));
           }
         }
         iqa.field_c.a(0, var3);
@@ -1152,7 +1152,7 @@ final class MatchScreen extends GameScreen implements rqa {
           if (param1 != -9) {
             this.a((byte) 46, (int[][]) null, -97);
           }
-          this.a(6, new ResultsPhase(this, this.protocol, param0));
+          this.setPhase(6, new ResultsPhase(this, this.protocol, param0));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "qh.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -1371,7 +1371,7 @@ final class MatchScreen extends GameScreen implements rqa {
             while (var6 != null) {
               if (iqa.field_c.b(4782)) {
                 var7 = this.a(var6.b(-14065), (byte) -9, var6.c(74));
-                var8 = ab.a(-23, var7);
+                var8 = RewardChoicePhase.a(-23, var7);
                 iqa.field_c.a(0, var8);
               }
               var6 = var5.b((byte) -57);
@@ -1403,9 +1403,9 @@ final class MatchScreen extends GameScreen implements rqa {
           this.matchState.k(param2, -1);
           this.i((byte) 99);
           if (0 != this.matchState.field_K) {
-            this.a(6, new bp(this, this.protocol));
+            this.setPhase(6, new bp(this, this.protocol));
           } else {
-            this.a(6, new ResultsPhase(this, this.protocol, param1));
+            this.setPhase(6, new ResultsPhase(this, this.protocol, param1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1579,7 +1579,7 @@ final class MatchScreen extends GameScreen implements rqa {
         if (param1 <= 15) {
           return;
         }
-        this.a(6, new qka(this, this.protocol));
+        this.setPhase(6, new StandingsPhase(this, this.protocol));
     }
 
     final String a(int param0, boolean param1) {

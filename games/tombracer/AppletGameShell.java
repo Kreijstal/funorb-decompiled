@@ -580,7 +580,7 @@ abstract class AppletGameShell extends GameApplet {
             dea.a(60);
             dw.b((byte) -84);
             epa.a(2, (byte) -84, WindZoneBehaviour.field_n);
-            bk.c(9033);
+            LineNoiseOperator.c(9033);
             TrackingCrusherComponent.field_G = true;
             oga.field_f = 15000L + bva.b((byte) -107);
           }

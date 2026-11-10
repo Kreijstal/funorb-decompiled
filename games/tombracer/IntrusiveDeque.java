@@ -267,7 +267,7 @@ final class IntrusiveDeque {
                       var16 = var7.field_tb;
                       paa.a(dn.field_b.field_vb, -1, var16, 0L, -11635, (int[]) null, var7, -1, (String) null);
                       if (var7.field_Cb != null &&
-                        !ab.a(hka.field_b.field_i, (byte) -13) &&
+                        !RewardChoicePhase.a(hka.field_b.field_i, (byte) -13) &&
                         !fua.field_g) {
                         if (!PowerDownItemBehaviour.field_s) {
                           var17 = hka.field_b;

@@ -346,7 +346,7 @@ final class np extends ka {
               if (stackIn_18_0 == 0) {
                 var14 = var15;
               } else {
-                if (~qka.field_m[var15] == ~param0) {
+                if (~StandingsPhase.field_m[var15] == ~param0) {
                   stackIn_15_0 = (short)(-1 + var16);
                   return stackIn_15_0;
                 }
@@ -355,7 +355,7 @@ final class np extends ka {
               }
             }
             this.field_q[var14] = (short)(1 + this.field_L);
-            qka.field_m[var14] = param0;
+            StandingsPhase.field_m[var14] = param0;
             this.field_E[this.field_L] = (short)param6;
             stackIn_18_0 = param4;
             break;
@@ -4626,7 +4626,7 @@ final class np extends ka {
             this.field_B = (short)param3;
             this.field_X = new short[this.field_W];
             this.field_q = new short[var12];
-            qka.field_m = new long[var12];
+            StandingsPhase.field_m = new long[var12];
             var13 = 0;
             var14_int = 0;
             do {
@@ -5057,7 +5057,7 @@ final class np extends ka {
                   break;
                 }
                 this.field_p[var16] = this.field_ib;
-                qka.field_m = null;
+                StandingsPhase.field_m = null;
                 this.field_E = rna.a(this.field_E, true, this.field_L);
                 this.field_Y = rna.a(this.field_Y, true, this.field_L);
                 this.field_cb = rna.a(this.field_cb, true, this.field_L);

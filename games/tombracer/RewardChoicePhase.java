@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ab extends MatchPhase {
+final class RewardChoicePhase extends MatchPhase {
     private int field_q;
     private int field_r;
     private int field_v;
@@ -12,7 +12,7 @@ final class ab extends MatchPhase {
     private CommonChooseReward field_o;
     private int field_u;
     static sq field_n;
-    private fv[][] field_p;
+    private RewardChoiceSlot[][] field_p;
 
     public static void releaseStatics(int param0) {
         field_t = null;
@@ -39,7 +39,7 @@ final class ab extends MatchPhase {
         return false;
     }
 
-    ab(MatchScreen param0, MatchProtocol param1) {
+    RewardChoicePhase(MatchScreen param0, MatchProtocol param1) {
         super(param0, param1);
         int var7 = 0;
         int var8 = 0;
@@ -66,7 +66,7 @@ final class ab extends MatchPhase {
           var3_int = this.field_o.a(-28958);
           this.field_q = 3;
           this.field_s = 1;
-          this.field_p = new fv[this.field_q][this.field_s];
+          this.field_p = new RewardChoiceSlot[this.field_q][this.field_s];
           var4 = 0;
           var5 = aaa.a(false) - this.field_q * 100 + (100 - (this.field_q - 1) * 20);
           var5 = var5 / 2 + 0;
@@ -89,7 +89,7 @@ final class ab extends MatchPhase {
                 var9 = var9 - var11 / 2;
                 var12 = 100;
                 var10 = var10 - var12 / 2;
-                this.field_p[var7][var8] = new fv(this, var4, var9, var10, var11, var12);
+                this.field_p[var7][var8] = new RewardChoiceSlot(this, var4, var9, var10, var11, var12);
                 var4++;
               }
             }
@@ -128,7 +128,7 @@ final class ab extends MatchPhase {
         int var9;
         int var10;
         String var11;
-        fv var12_ref_fv;
+        RewardChoiceSlot var12_ref_fv;
         int var12;
         int var13;
         int var14;
@@ -257,7 +257,7 @@ final class ab extends MatchPhase {
     }
 
     private final boolean b(int param0, int param1, byte param2) {
-        fv var4;
+        RewardChoiceSlot var4;
         if (!this.a(true)) {
           return false;
         }
@@ -297,19 +297,19 @@ final class ab extends MatchPhase {
         jha var6 = null;
         if (this.field_o.getCurrentPlayerId(-1) == param0) {
           if (param2 == -1) {
-            var6 = ab.a(-9, gl.$cfr$intArgs$a$53ce4ab4c593(86, OpenGlTransform3D.field_n, new String[]{this.matchState.getColouredPlayerName(param0, 23807)}));
+            var6 = RewardChoicePhase.a(-9, gl.$cfr$intArgs$a$53ce4ab4c593(86, OpenGlTransform3D.field_n, new String[]{this.matchState.getColouredPlayerName(param0, 23807)}));
             iqa.field_c.a(0, var6);
             this.field_o.a(param2, (byte) 112);
           } else {
             var4 = this.field_o.a(-108, param2);
             this.field_o.a(param2, (byte) 119);
             this.h(0);
-            var5 = ab.a(-58, gl.$cfr$intArgs$a$53ce4ab4c593(125, RecursiveBacktrackerMazeGenerator.field_b, new String[]{this.matchState.getColouredPlayerName(param0, 23807), sla.field_b[var4]}));
+            var5 = RewardChoicePhase.a(-58, gl.$cfr$intArgs$a$53ce4ab4c593(125, RecursiveBacktrackerMazeGenerator.field_b, new String[]{this.matchState.getColouredPlayerName(param0, 23807), sla.field_b[var4]}));
             iqa.field_c.a(0, var5);
           }
         }
         if (!param1) {
-          ab.a(-52, 79, -8, 36, 97, 39, -99);
+          RewardChoicePhase.a(-52, 79, -8, 36, 97, 39, -99);
         }
     }
 
@@ -406,7 +406,7 @@ final class ab extends MatchPhase {
     private final boolean a(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
-        fv var6;
+        RewardChoiceSlot var6;
         int var7;
         var7 = TombRacer.field_G ? 1 : 0;
         if (param1 != 25006) {
@@ -442,7 +442,7 @@ final class ab extends MatchPhase {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -4) {
-            ab.releaseStatics(-54);
+            RewardChoicePhase.releaseStatics(-54);
           }
           stackIn_3_0 = new jha(1, (String) null, param1);
           return stackIn_3_0;
@@ -462,7 +462,7 @@ final class ab extends MatchPhase {
 
     private final void a(int param0, int param1, byte param2) {
         int var4;
-        fv var5;
+        RewardChoiceSlot var5;
         int var6;
         var6 = TombRacer.field_G ? 1 : 0;
         if (!this.a(true)) {

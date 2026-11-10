@@ -520,7 +520,7 @@ public final class TombRacer extends rfa implements ls {
         cba.releaseStatics((byte) 109);
         TeleportState.releaseStatics(32);
         StatusEffect.releaseStatics(2907);
-        qka.releaseStatics((byte) 62);
+        StandingsPhase.releaseStatics((byte) 62);
         gp.releaseStatics(-117);
         wq.releaseStatics(true);
         jia.releaseStatics((byte) 31);
@@ -534,7 +534,7 @@ public final class TombRacer extends rfa implements ls {
         daa.releaseStatics(-12224);
         RoomCompletedScreen.releaseStatics((byte) -77);
         dua.releaseStatics((byte) -128);
-        ab.releaseStatics(6153);
+        RewardChoicePhase.releaseStatics(6153);
         ResultsPhase.releaseStatics(param0 + 3766);
         bp.releaseStatics(0);
         gu.releaseStatics(-28);
@@ -803,7 +803,7 @@ public final class TombRacer extends rfa implements ls {
         jv.releaseStatics(param0 ^ 12863);
         go.releaseStatics((byte) -105);
         voa.releaseStatics(0);
-        bk.releaseStatics((byte) 101);
+        LineNoiseOperator.releaseStatics((byte) 101);
         cna.releaseStatics(param0 ^ 3646);
         ScrollingTexturePixels.releaseStatics();
         ita.a((byte) 48);
@@ -947,7 +947,7 @@ public final class TombRacer extends rfa implements ls {
         rp.a(true);
         ad.releaseStatics(-10);
         wm.releaseStatics((byte) 115);
-        fv.releaseStatics((byte) -101);
+        RewardChoiceSlot.releaseStatics((byte) -101);
         gsa.releaseStatics(1);
         it.releaseStatics(-99);
         kma.releaseStatics((byte) -91);

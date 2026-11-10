@@ -495,7 +495,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("oneplayer_timed", (byte) 113);
                 if (var2 != null) {
-                  qka.field_s = jaa.decodeText((byte) 70, var2);
+                  StandingsPhase.field_s = jaa.decodeText((byte) 70, var2);
                 }
                 var2 = mt.readTextEntry("oneplayer_puzzle", (byte) 114);
                 if (null != var2) {
@@ -679,7 +679,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("instructionTitlePrecariousPlatforms", (byte) 127);
                 if (null != var2) {
-                  fv.field_b = jaa.decodeText((byte) 114, var2);
+                  RewardChoiceSlot.field_b = jaa.decodeText((byte) 114, var2);
                 }
                 var2 = mt.readTextEntry("instructionTextPrecariousPlatforms", (byte) 120);
                 if (null != var2) {
@@ -853,79 +853,79 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("loadingStrings,0", (byte) 100);
                 if (var2 != null) {
-                  fv.loadingQuipsAlternate[0] = jaa.decodeText((byte) 72, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[0] = jaa.decodeText((byte) 72, var2);
                 }
                 var2 = mt.readTextEntry("loadingStrings,1", (byte) 107);
                 if (null != var2) {
-                  fv.loadingQuipsAlternate[1] = jaa.decodeText((byte) 50, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[1] = jaa.decodeText((byte) 50, var2);
                 }
                 var2 = mt.readTextEntry("loadingStrings,2", (byte) 125);
                 if (var2 != null) {
-                  fv.loadingQuipsAlternate[2] = jaa.decodeText((byte) 106, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[2] = jaa.decodeText((byte) 106, var2);
                 }
                 var2 = mt.readTextEntry("loadingStrings,3", (byte) 105);
                 if (var2 != null) {
-                  fv.loadingQuipsAlternate[3] = jaa.decodeText((byte) 92, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[3] = jaa.decodeText((byte) 92, var2);
                 }
                 var2 = mt.readTextEntry("loadingStrings,4", (byte) 110);
                 if (null != var2) {
-                  fv.loadingQuipsAlternate[4] = jaa.decodeText((byte) 46, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[4] = jaa.decodeText((byte) 46, var2);
                 }
                 var2 = mt.readTextEntry("loadingStrings,5", (byte) 101);
                 if (null != var2) {
-                  fv.loadingQuipsAlternate[5] = jaa.decodeText((byte) 101, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[5] = jaa.decodeText((byte) 101, var2);
                 }
                 var2 = mt.readTextEntry("loadingStrings,6", (byte) 124);
                 if (null != var2) {
-                  fv.loadingQuipsAlternate[6] = jaa.decodeText((byte) 81, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[6] = jaa.decodeText((byte) 81, var2);
                 }
                 var2 = mt.readTextEntry("loadingStrings,7", (byte) 126);
                 if (var2 != null) {
-                  fv.loadingQuipsAlternate[7] = jaa.decodeText((byte) 27, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[7] = jaa.decodeText((byte) 27, var2);
                 }
                 var2 = mt.readTextEntry("loadingStrings,8", (byte) 125);
                 if (null != var2) {
-                  fv.loadingQuipsAlternate[8] = jaa.decodeText((byte) 59, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[8] = jaa.decodeText((byte) 59, var2);
                 }
                 var2 = mt.readTextEntry("loadingStrings,9", (byte) 111);
                 if (null != var2) {
-                  fv.loadingQuipsAlternate[9] = jaa.decodeText((byte) 60, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[9] = jaa.decodeText((byte) 60, var2);
                 }
                 var2 = mt.readTextEntry("loadingStrings,10", (byte) 104);
                 if (var2 != null) {
-                  fv.loadingQuipsAlternate[10] = jaa.decodeText((byte) 93, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[10] = jaa.decodeText((byte) 93, var2);
                 }
                 var2 = mt.readTextEntry("loadingStrings,11", (byte) 120);
                 if (var2 != null) {
-                  fv.loadingQuipsAlternate[11] = jaa.decodeText((byte) 84, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[11] = jaa.decodeText((byte) 84, var2);
                 }
                 var2 = mt.readTextEntry("loadingStrings,12", (byte) 119);
                 if (null != var2) {
-                  fv.loadingQuipsAlternate[12] = jaa.decodeText((byte) 93, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[12] = jaa.decodeText((byte) 93, var2);
                 }
                 var2 = mt.readTextEntry("loadingStrings,13", (byte) 127);
                 if (var2 != null) {
-                  fv.loadingQuipsAlternate[13] = jaa.decodeText((byte) 28, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[13] = jaa.decodeText((byte) 28, var2);
                 }
                 var2 = mt.readTextEntry("loadingStrings,14", (byte) 106);
                 if (var2 != null) {
-                  fv.loadingQuipsAlternate[14] = jaa.decodeText((byte) 75, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[14] = jaa.decodeText((byte) 75, var2);
                 }
                 var2 = mt.readTextEntry("loadingStrings,15", (byte) 127);
                 if (var2 != null) {
-                  fv.loadingQuipsAlternate[15] = jaa.decodeText((byte) 39, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[15] = jaa.decodeText((byte) 39, var2);
                 }
                 var2 = mt.readTextEntry("loadingStrings,16", (byte) 121);
                 if (null != var2) {
-                  fv.loadingQuipsAlternate[16] = jaa.decodeText((byte) 65, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[16] = jaa.decodeText((byte) 65, var2);
                 }
                 var2 = mt.readTextEntry("loadingStrings,17", (byte) 120);
                 if (var2 != null) {
-                  fv.loadingQuipsAlternate[17] = jaa.decodeText((byte) 114, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[17] = jaa.decodeText((byte) 114, var2);
                 }
                 var2 = mt.readTextEntry("loadingStrings,18", (byte) 124);
                 if (null != var2) {
-                  fv.loadingQuipsAlternate[18] = jaa.decodeText((byte) 67, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[18] = jaa.decodeText((byte) 67, var2);
                 }
                 var2 = mt.readTextEntry("waitingStrings,0", (byte) 108);
                 if (var2 != null) {

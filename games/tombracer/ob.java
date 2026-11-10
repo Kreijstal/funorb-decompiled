@@ -119,7 +119,7 @@ abstract class ob extends IntrusiveNode {
           nm.field_l = su.a(ena.field_l, param0, (byte) 127);
           su.a(MirrorComponent.field_F, param0, (byte) -2);
           gca.field_a = su.a(rp.field_f, param0, (byte) 126);
-          WidgetStyleLayer.field_b = ak.a(param0, qka.field_o, param1 - 17309);
+          WidgetStyleLayer.field_b = ak.a(param0, StandingsPhase.field_o, param1 - 17309);
           IntrusiveDeque.field_c = su.a(ko.field_j, param0, (byte) -95);
           tka.field_p = su.a(ht.field_Db, param0, (byte) 27);
           Projectile.field_n = su.a(oea.field_j, param0, (byte) -37);

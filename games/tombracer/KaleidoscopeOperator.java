@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fl extends TextureOperator {
+final class KaleidoscopeOperator extends TextureOperator {
     static int field_m;
 
     final int[] getMonochromeRow(int param0, int param1) {
@@ -10,14 +10,14 @@ final class fl extends TextureOperator {
         int var6 = TombRacer.field_G ? 1 : 0;
         if (param0 != 1) {
           CharSequence var7 = (CharSequence) null;
-          fl.a((byte) -31, (CharSequence) null);
+          KaleidoscopeOperator.a((byte) -31, (CharSequence) null);
         }
         int[] var8 = this.field_i.a((byte) -111, param1);
         int[] var3 = var8;
         if (this.field_i.field_d) {
           for (var4 = 0; ns.textureWidth > var4; var4++) {
             this.d(var4, param1, -5455);
-            var5 = this.getInputMonochromeRow(0, -70, fv.field_e);
+            var5 = this.getInputMonochromeRow(0, -70, RewardChoiceSlot.field_e);
             var8[var4] = var5[BlockModel.field_o];
           }
         }
@@ -93,40 +93,40 @@ final class fl extends TextureOperator {
         var6 = (float)Math.atan2((double)(-2048 + var4), (double)(var5 - 2048));
         if ((double)var6 >= -3.141592653589793 &&
           -2.356194490192345 >= (double)var6) {
-          fv.field_e = param1;
+          RewardChoiceSlot.field_e = param1;
           BlockModel.field_o = param0;
         } else if ((double)var6 <= -1.5707963267948966 &&
           (double)var6 >= -2.356194490192345) {
           BlockModel.field_o = param1;
-          fv.field_e = param0;
+          RewardChoiceSlot.field_e = param0;
         } else if (-0.7853981633974483 >= (double)var6 &&
           -1.5707963267948966 <= (double)var6) {
-          fv.field_e = param0;
+          RewardChoiceSlot.field_e = param0;
           BlockModel.field_o = -param1 + ns.textureWidth;
         } else if (var6 <= 0.0f &&
           (double)var6 >= -0.7853981633974483) {
           BlockModel.field_o = param0;
-          fv.field_e = ArchiveNetworkClient.textureHeight - param1;
+          RewardChoiceSlot.field_e = ArchiveNetworkClient.textureHeight - param1;
         } else if (0.0f <= var6 &&
           (double)var6 <= 0.7853981633974483) {
-          fv.field_e = ArchiveNetworkClient.textureHeight - param1;
+          RewardChoiceSlot.field_e = ArchiveNetworkClient.textureHeight - param1;
           BlockModel.field_o = ns.textureWidth - param0;
         } else if ((double)var6 >= 0.7853981633974483 &&
           (double)var6 <= 1.5707963267948966) {
           BlockModel.field_o = ns.textureWidth - param1;
-          fv.field_e = ArchiveNetworkClient.textureHeight - param0;
+          RewardChoiceSlot.field_e = ArchiveNetworkClient.textureHeight - param0;
         } else if ((double)var6 >= 1.5707963267948966 &&
           2.356194490192345 >= (double)var6) {
           BlockModel.field_o = param1;
-          fv.field_e = ArchiveNetworkClient.textureHeight - param0;
+          RewardChoiceSlot.field_e = ArchiveNetworkClient.textureHeight - param0;
         } else {
           if (2.356194490192345 <= (double)var6 &&
             (double)var6 <= 3.141592653589793) {
-            fv.field_e = param1;
+            RewardChoiceSlot.field_e = param1;
             BlockModel.field_o = -param0 + ns.textureWidth;
           }
         }
-        fv.field_e = fv.field_e & hba.textureHeightMask;
+        RewardChoiceSlot.field_e = RewardChoiceSlot.field_e & hba.textureHeightMask;
         BlockModel.field_o = BlockModel.field_o & una.textureWidthMask;
     }
 
@@ -177,7 +177,7 @@ final class fl extends TextureOperator {
           var6 = var13[2];
           for (var7 = 0; var7 < ns.textureWidth; var7++) {
             this.d(var7, param0, -5455);
-            var14 = this.getInputColourRow(fv.field_e, 0, -1);
+            var14 = this.getInputColourRow(RewardChoiceSlot.field_e, 0, -1);
             var4[var7] = var14[0][BlockModel.field_o];
             var5[var7] = var14[1][BlockModel.field_o];
             var6[var7] = var14[2][BlockModel.field_o];
@@ -189,7 +189,7 @@ final class fl extends TextureOperator {
         return var3;
     }
 
-    public fl() {
+    public KaleidoscopeOperator() {
         super(1, false);
     }
 

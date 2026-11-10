@@ -816,8 +816,8 @@ final class PlatformModel extends TrapModel {
           if (param0 != 32454) {
             PlatformModel.l(-98);
           }
-          ab.field_n = new sq(var1, var2);
-          wea.a(22050, 1024, ab.field_n, true, (java.awt.Component) ((Object) nma.field_l), dsa.field_c);
+          RewardChoicePhase.field_n = new sq(var1, var2);
+          wea.a(22050, 1024, RewardChoicePhase.field_n, true, (java.awt.Component) ((Object) nma.field_l), dsa.field_c);
           wra.a(0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ce.R(" + param0 + ')');

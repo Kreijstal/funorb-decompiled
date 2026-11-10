@@ -173,7 +173,7 @@ final class PlayerContextMenu {
         int var5;
         var5 = TombRacer.field_G ? 1 : 0;
         if (param1 == 0) {
-          fv.a((byte) -38, param2, this.field_g);
+          RewardChoiceSlot.a((byte) -38, param2, this.field_g);
         } else {
           if (param1 == 1) {
             fn.a(param2, this.field_g, -120);
@@ -286,7 +286,7 @@ final class PlayerContextMenu {
               }
             }
             if (var5 != null) {
-              if (!ab.a(this.field_i, (byte) -50) &&
+              if (!RewardChoicePhase.a(this.field_i, (byte) -50) &&
                 !fua.field_g) {
                 if (!PowerDownItemBehaviour.field_s) {
                   this.field_f.addItem((byte) -77, 8, gl.$cfr$intArgs$a$53ce4ab4c593(114, fj.field_b, new String[]{var7}));

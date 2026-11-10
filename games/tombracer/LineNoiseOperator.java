@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class bk extends TextureOperator {
+final class LineNoiseOperator extends TextureOperator {
     private int field_q;
     static String[] monthNames;
     private int field_p;
@@ -26,7 +26,7 @@ final class bk extends TextureOperator {
         tka.b((byte) 115);
     }
 
-    public bk() {
+    public LineNoiseOperator() {
         super(0, true);
         this.field_q = 4096;
         this.field_o = 16;

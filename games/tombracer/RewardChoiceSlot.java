@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fv {
+final class RewardChoiceSlot {
     int field_c;
-    private ab field_h;
+    private RewardChoicePhase phase;
     static int field_a;
     int field_i;
     static int field_e;
@@ -27,7 +27,7 @@ final class fv {
     final void a(int param0) {
         int var3 = 0;
         ToolkitSprite var4 = null;
-        int var2 = this.field_h.b((byte) -75).a(param0 ^ 28, this.field_f);
+        int var2 = this.phase.b((byte) -75).a(param0 ^ 28, this.field_f);
         GraphicsToolkit var3_ref_ha = tga.field_a;
         int var4_int = this.field_g;
         int var5 = this.field_c;
@@ -71,14 +71,14 @@ final class fv {
         int var1 = 28 / ((param0 - 3) / 37);
     }
 
-    fv(ab param0, int param1, int param2, int param3, int param4, int param5) {
+    RewardChoiceSlot(RewardChoicePhase param0, int param1, int param2, int param3, int param4, int param5) {
         try {
           this.field_f = param1;
           this.field_j = param4;
           this.field_c = param3;
           this.field_g = param2;
           this.field_i = param5;
-          this.field_h = param0;
+          this.phase = param0;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

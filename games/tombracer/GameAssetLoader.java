@@ -58,25 +58,25 @@ final class GameAssetLoader implements LoadingStage {
         ina dupTemp$0 = new ina(55);
         lba.field_r = dupTemp$0;
         ina var4 = dupTemp$0;
-        var4.a(256, this.field_k, fv.loadingQuipsAlternate[0], Player.loadingQuips[0]);
-        var4.a(256, this.field_l, fv.loadingQuipsAlternate[1], Player.loadingQuips[1]);
-        var4.a(256, this.field_o, fv.loadingQuipsAlternate[2], Player.loadingQuips[2]);
-        var4.a(256, this.field_b, fv.loadingQuipsAlternate[3], Player.loadingQuips[3]);
-        var4.a(256, this.field_h, fv.loadingQuipsAlternate[4], Player.loadingQuips[4]);
-        var4.a(param0 ^ -294, this.field_p, fv.loadingQuipsAlternate[5], Player.loadingQuips[5]);
-        var4.a(256, this.field_s, fv.loadingQuipsAlternate[6], Player.loadingQuips[6]);
-        var4.a(Player.loadingQuips[7], (byte) -36, "basic", var7, fv.loadingQuipsAlternate[7]);
-        var4.a(Player.loadingQuips[8], (byte) -36, "lobby", var7, fv.loadingQuipsAlternate[8]);
-        var4.a(Player.loadingQuips[9], (byte) -36, "lobby", var3, fv.loadingQuipsAlternate[9]);
-        var4.a(256, this.field_d, fv.loadingQuipsAlternate[10], Player.loadingQuips[10]);
-        var4.a(256, this.field_e, fv.loadingQuipsAlternate[11], Player.loadingQuips[11]);
-        var4.a(256, this.field_q, fv.loadingQuipsAlternate[12], Player.loadingQuips[12]);
-        var4.a(256, this.field_r, fv.loadingQuipsAlternate[13], Player.loadingQuips[13]);
-        var4.a(256, this.field_m, fv.loadingQuipsAlternate[14], Player.loadingQuips[14]);
-        var4.a(param0 + 294, this.field_j, fv.loadingQuipsAlternate[15], Player.loadingQuips[15]);
-        var4.a(256, this.field_f, fv.loadingQuipsAlternate[16], Player.loadingQuips[16]);
-        var4.a(param0 ^ -294, this.field_g, fv.loadingQuipsAlternate[17], Player.loadingQuips[17]);
-        var4.a(param0 ^ -294, this.field_a, fv.loadingQuipsAlternate[18], Player.loadingQuips[18]);
+        var4.a(256, this.field_k, RewardChoiceSlot.loadingQuipsAlternate[0], Player.loadingQuips[0]);
+        var4.a(256, this.field_l, RewardChoiceSlot.loadingQuipsAlternate[1], Player.loadingQuips[1]);
+        var4.a(256, this.field_o, RewardChoiceSlot.loadingQuipsAlternate[2], Player.loadingQuips[2]);
+        var4.a(256, this.field_b, RewardChoiceSlot.loadingQuipsAlternate[3], Player.loadingQuips[3]);
+        var4.a(256, this.field_h, RewardChoiceSlot.loadingQuipsAlternate[4], Player.loadingQuips[4]);
+        var4.a(param0 ^ -294, this.field_p, RewardChoiceSlot.loadingQuipsAlternate[5], Player.loadingQuips[5]);
+        var4.a(256, this.field_s, RewardChoiceSlot.loadingQuipsAlternate[6], Player.loadingQuips[6]);
+        var4.a(Player.loadingQuips[7], (byte) -36, "basic", var7, RewardChoiceSlot.loadingQuipsAlternate[7]);
+        var4.a(Player.loadingQuips[8], (byte) -36, "lobby", var7, RewardChoiceSlot.loadingQuipsAlternate[8]);
+        var4.a(Player.loadingQuips[9], (byte) -36, "lobby", var3, RewardChoiceSlot.loadingQuipsAlternate[9]);
+        var4.a(256, this.field_d, RewardChoiceSlot.loadingQuipsAlternate[10], Player.loadingQuips[10]);
+        var4.a(256, this.field_e, RewardChoiceSlot.loadingQuipsAlternate[11], Player.loadingQuips[11]);
+        var4.a(256, this.field_q, RewardChoiceSlot.loadingQuipsAlternate[12], Player.loadingQuips[12]);
+        var4.a(256, this.field_r, RewardChoiceSlot.loadingQuipsAlternate[13], Player.loadingQuips[13]);
+        var4.a(256, this.field_m, RewardChoiceSlot.loadingQuipsAlternate[14], Player.loadingQuips[14]);
+        var4.a(param0 + 294, this.field_j, RewardChoiceSlot.loadingQuipsAlternate[15], Player.loadingQuips[15]);
+        var4.a(256, this.field_f, RewardChoiceSlot.loadingQuipsAlternate[16], Player.loadingQuips[16]);
+        var4.a(param0 ^ -294, this.field_g, RewardChoiceSlot.loadingQuipsAlternate[17], Player.loadingQuips[17]);
+        var4.a(param0 ^ -294, this.field_a, RewardChoiceSlot.loadingQuipsAlternate[18], Player.loadingQuips[18]);
     }
 
     final static String[][] a(byte param0, PacketBuffer param1) {
@@ -194,7 +194,7 @@ final class GameAssetLoader implements LoadingStage {
           for (var3Lifetime1 = 0; var3Lifetime1 < 4; var3Lifetime1++) {
             paa.a(false, var3Lifetime1);
           }
-          ab.field_n.field_y.e(0);
+          RewardChoicePhase.field_n.field_y.e(0);
           this.field_o = null;
           this.field_k = null;
           this.field_l = null;

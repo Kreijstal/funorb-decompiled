@@ -55,7 +55,7 @@ final class rg extends SingleChildWidget {
         wba.field_q[2] = FuseBehaviour.field_t;
         wba.field_q[9] = VortexBehaviour.field_u;
         wba.field_q[10] = pfa.field_a;
-        wba.field_q[1] = qka.field_s;
+        wba.field_q[1] = StandingsPhase.field_s;
         wba.field_q[21] = MiscItemBehaviour.field_t;
         wba.field_q[11] = oia.field_e;
         wba.field_q[20] = wq.field_d;
@@ -168,7 +168,7 @@ final class rg extends SingleChildWidget {
           IntrusiveDeque.field_d[2] = new String[]{kea.field_b, baa.field_a, dk.field_a};
           Effect.field_h[2] = new String[]{bpa.field_a, du.field_f, vua.field_C};
           IntrusiveDeque.field_d[3] = new String[]{QuickChatMenu.field_Ab, rua.field_hb, Player.field_s};
-          IntrusiveDeque.field_d[4] = new String[]{ConstrainToCircleLocomotor.field_t, fv.field_b, RopeBridgeComponent.field_G};
+          IntrusiveDeque.field_d[4] = new String[]{ConstrainToCircleLocomotor.field_t, RewardChoiceSlot.field_b, RopeBridgeComponent.field_G};
           Effect.field_h[3] = new String[]{InvertOperator.field_o, vk.field_a, SwitchLinkList.field_d};
           Effect.field_h[4] = new String[]{DisplaySettingsDialog.field_R, gn.field_y, tr.field_d};
           IntrusiveDeque.field_d[5] = new String[]{TripBeamComponent.field_J, td.field_u, PitModel.field_r};
@@ -220,7 +220,7 @@ final class rg extends SingleChildWidget {
         IntrusiveDeque.field_d[2] = new String[]{kea.field_b, baa.field_a, dk.field_a};
         Effect.field_h[2] = new String[]{bpa.field_a, du.field_f, vua.field_C};
         IntrusiveDeque.field_d[3] = new String[]{QuickChatMenu.field_Ab, rua.field_hb, Player.field_s};
-        IntrusiveDeque.field_d[4] = new String[]{ConstrainToCircleLocomotor.field_t, fv.field_b, RopeBridgeComponent.field_G};
+        IntrusiveDeque.field_d[4] = new String[]{ConstrainToCircleLocomotor.field_t, RewardChoiceSlot.field_b, RopeBridgeComponent.field_G};
         Effect.field_h[3] = new String[]{InvertOperator.field_o, vk.field_a, SwitchLinkList.field_d};
         Effect.field_h[4] = new String[]{DisplaySettingsDialog.field_R, gn.field_y, tr.field_d};
         IntrusiveDeque.field_d[5] = new String[]{TripBeamComponent.field_J, td.field_u, PitModel.field_r};

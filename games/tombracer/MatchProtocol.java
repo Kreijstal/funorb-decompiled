@@ -86,7 +86,7 @@ final class MatchProtocol {
         if (param1 == var2) {
           var2 = 1;
         }
-        ((psa) (ab.field_n.field_n)).a(param0, vba.field_x[param0], (byte) -4, var2);
+        ((psa) (RewardChoicePhase.field_n.field_n)).a(param0, vba.field_x[param0], (byte) -4, var2);
     }
 
     final boolean b(int param0) {

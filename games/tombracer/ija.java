@@ -16,7 +16,7 @@ abstract class ija extends IntrusiveNode {
             f.b((byte) 58);
           }
           if (param0) {
-            fl.field_m = fl.field_m + 1;
+            KaleidoscopeOperator.field_m = KaleidoscopeOperator.field_m + 1;
             tha.a(906);
           }
           return;
@@ -27,7 +27,7 @@ abstract class ija extends IntrusiveNode {
           f.b((byte) 58);
         }
         if (param0) {
-          fl.field_m = fl.field_m + 1;
+          KaleidoscopeOperator.field_m = KaleidoscopeOperator.field_m + 1;
           tha.a(906);
         }
     }

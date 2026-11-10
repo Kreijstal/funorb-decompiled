@@ -46,7 +46,7 @@ final class ConsoleToken extends IntrusiveNode {
               var5 = OpenGlToolkit.field_H;
             } else {
               if (lp.field_h.field_h == var4) {
-                var5 = fv.field_a;
+                var5 = RewardChoiceSlot.field_a;
               } else {
                 var5 = RotaterMountComponent.field_I;
               }

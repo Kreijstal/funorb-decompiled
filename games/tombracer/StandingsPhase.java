@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qka extends MatchPhase {
+final class StandingsPhase extends MatchPhase {
     private int[] field_r;
     static SpriteData[] field_o;
     private int field_n;
@@ -19,7 +19,7 @@ final class qka extends MatchPhase {
         field_s = null;
     }
 
-    qka(MatchScreen param0, MatchProtocol param1) {
+    StandingsPhase(MatchScreen param0, MatchProtocol param1) {
         super(param0, param1);
         int var5 = 0;
         int stackIn_26_0 = 0;

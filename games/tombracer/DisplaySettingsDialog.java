@@ -235,7 +235,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
             if (var2_intLifetime1 == 0) {
               stackIn_74_0 = tla.field_a;
             } else {
-              stackIn_74_0 = ab.field_w;
+              stackIn_74_0 = RewardChoicePhase.field_w;
             }
             var10 = stackIn_74_0;
             var6 = var10;

@@ -53,8 +53,8 @@ class tu extends SimulationObserver {
         jha var10 = null;
         Room var11 = null;
         try {
-          if (ab.field_n != null) {
-            ab.field_n.field_y.a((byte) -105, 77, -1);
+          if (RewardChoicePhase.field_n != null) {
+            RewardChoicePhase.field_n.field_y.a((byte) -105, 77, -1);
           }
           var7 = new qw(param1, param3, param2, param5, param4);
           this.field_c.addLast((byte) -88, var7);
@@ -71,7 +71,7 @@ class tu extends SimulationObserver {
           if (this.field_f.j(-1878) &&
             !this.field_f.d(-67) &&
             var9_ref != null) {
-            var10 = ab.a(-48, var9_ref);
+            var10 = RewardChoicePhase.a(-48, var9_ref);
             iqa.field_c.a(3, param0 - 15, var10);
           }
           if (param0 != 15) {
@@ -166,8 +166,8 @@ class tu extends SimulationObserver {
           Room var4 = (Room) null;
           this.a((Player) null, (Room) null, false);
         }
-        if (null != ab.field_n) {
-          ab.field_n.field_y.a((byte) -105, 256, -1);
+        if (null != RewardChoicePhase.field_n) {
+          RewardChoicePhase.field_n.field_y.a((byte) -105, 256, -1);
         }
         if (null == this.field_f) {
           return;
@@ -340,14 +340,14 @@ class tu extends SimulationObserver {
           if (this.field_f.j(-1878) &&
             !this.field_f.d(-127)) {
             if (0 != var7) {
-              var9_ref_jha = ab.a(-89, gl.$cfr$intArgs$a$53ce4ab4c593(112, ArrowShooterComponent.field_J, new String[]{String.valueOf(var6), String.valueOf(var7)}));
+              var9_ref_jha = RewardChoicePhase.a(-89, gl.$cfr$intArgs$a$53ce4ab4c593(112, ArrowShooterComponent.field_J, new String[]{String.valueOf(var6), String.valueOf(var7)}));
             } else {
-              var9_ref_jha = ab.a(-66, gl.$cfr$intArgs$a$53ce4ab4c593(92, gla.field_q, new String[]{String.valueOf(var6)}));
+              var9_ref_jha = RewardChoicePhase.a(-66, gl.$cfr$intArgs$a$53ce4ab4c593(92, gla.field_q, new String[]{String.valueOf(var6)}));
             }
             iqa.field_c.a(0, var9_ref_jha);
             var10 = param0.F(-7991);
             if (var10 > 0) {
-              dupTemp$0 = ab.a(-96, gl.$cfr$intArgs$a$53ce4ab4c593(82, bca.field_c, new String[]{String.valueOf(var10)}));
+              dupTemp$0 = RewardChoicePhase.a(-96, gl.$cfr$intArgs$a$53ce4ab4c593(82, bca.field_c, new String[]{String.valueOf(var10)}));
               var12 = dupTemp$0;
               var9_ref_jhaLifetime1 = dupTemp$0;
               iqa.field_c.a(3, 0, var12);

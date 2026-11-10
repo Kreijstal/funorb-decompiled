@@ -139,7 +139,7 @@ final class gu extends me {
           return (TextureOperator) ((Object) new InvertOperator());
         }
         if (var2 == 23) {
-          return (TextureOperator) ((Object) new fl());
+          return (TextureOperator) ((Object) new KaleidoscopeOperator());
         }
         if (24 == var2) {
           return (TextureOperator) ((Object) new GreyscaleOperator());
@@ -184,7 +184,7 @@ final class gu extends me {
           return (TextureOperator) ((Object) new voa());
         }
         if (38 == var2) {
-          return (TextureOperator) ((Object) new bk());
+          return (TextureOperator) ((Object) new LineNoiseOperator());
         }
         if (39 == var2) {
           return (TextureOperator) ((Object) new coa());

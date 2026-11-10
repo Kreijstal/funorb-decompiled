@@ -113,9 +113,9 @@ final class pk extends we {
             var8 = "";
           }
           var10 = f.a(2843, true, ApproachPlayerLocomotor.field_t, (long)param2, 0);
-          var11.a(-1, -1, ab.field_t[0], param3 | -16777216, param0, var8);
-          var11.a(param0, false, param5, ab.field_t[1], param3 | -16777216, -1);
-          var12.a(12199, param0, var10, -1, param3 | -16777216, ab.field_t[2]);
+          var11.a(-1, -1, RewardChoicePhase.field_t[0], param3 | -16777216, param0, var8);
+          var11.a(param0, false, param5, RewardChoicePhase.field_t[1], param3 | -16777216, -1);
+          var12.a(12199, param0, var10, -1, param3 | -16777216, RewardChoicePhase.field_t[2]);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pk.FA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
@@ -226,9 +226,9 @@ final class pk extends we {
           ((ToolkitSprite) (var5Lifetime2)).a(this.field_A[var4] - (this.field_D[var4] >> 1), -(this.field_t[var4] >> 1) + (this.field_B[var4] + param1), this.field_D[var4], this.field_t[var4], 0, 16777215 | var6 << 24, 1);
         }
         var4Lifetime1 = 120 + param1 + 50;
-        eda.field_f.a(-1, -1, ab.field_t[0], -14671840, var4Lifetime1, OpenGlBuffer.field_a);
-        eda.field_f.a(var4Lifetime1, false, ObjectPool.field_g.toUpperCase(), ab.field_t[1], -14671840, -1);
-        eda.field_f.a(12199, var4Lifetime1, ContentTransitionDialog.field_L.toUpperCase(), -1, -14671840, ab.field_t[2]);
+        eda.field_f.a(-1, -1, RewardChoicePhase.field_t[0], -14671840, var4Lifetime1, OpenGlBuffer.field_a);
+        eda.field_f.a(var4Lifetime1, false, ObjectPool.field_g.toUpperCase(), RewardChoicePhase.field_t[1], -14671840, -1);
+        eda.field_f.a(12199, var4Lifetime1, ContentTransitionDialog.field_L.toUpperCase(), -1, -14671840, RewardChoicePhase.field_t[2]);
         var5Lifetime1 = null;
         var6Lifetime1 = this.field_E;
         if (var6Lifetime1 == 0) {

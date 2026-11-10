@@ -836,6 +836,14 @@
       "renamedSymbol": "B:Model.e(I)V#0"
     },
     {
+      "symbol": "C:ab",
+      "originalName": "ab",
+      "to": "RewardChoicePhase",
+      "evidence": "MatchPhase laying out the three reward choices of the match's CommonChooseReward as a 3x1 grid of buttons.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:RewardChoicePhase"
+    },
+    {
       "symbol": "C:ae",
       "originalName": "ae",
       "to": "UiWidget",
@@ -1002,6 +1010,14 @@
       "evidence": "Abstract layout of text lines (kha[]) with justification and line lookup. Body matches several games TextLayout (findLineIndex, getLayoutHeight).",
       "confidence": "reviewed",
       "renamedSymbol": "C:TextLayout"
+    },
+    {
+      "symbol": "C:bk",
+      "originalName": "bk",
+      "to": "LineNoiseOperator",
+      "evidence": "TextureOperator drawing a seeded number (default 2000) of short lines (default length 16) at random angles and positions. createTextureOperator builds it for operator id 38.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:LineNoiseOperator"
     },
     {
       "symbol": "C:bla",
@@ -1516,6 +1532,14 @@
       "renamedSymbol": "C:SoundTone"
     },
     {
+      "symbol": "C:fl",
+      "originalName": "fl",
+      "to": "KaleidoscopeOperator",
+      "evidence": "TextureOperator folding each pixel into one octant around the centre by its atan2 angle before sampling its input. createTextureOperator builds it for operator id 23.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:KaleidoscopeOperator"
+    },
+    {
       "symbol": "C:fo",
       "originalName": "fo",
       "to": "Renderable",
@@ -1562,6 +1586,14 @@
       "evidence": "ModelFactory builds it for model category 8, which the category table bb.field_g labels \"Hazard\".",
       "confidence": "reviewed",
       "renamedSymbol": "C:HazardModel"
+    },
+    {
+      "symbol": "C:fv",
+      "originalName": "fv",
+      "to": "RewardChoiceSlot",
+      "evidence": "One cell of the RewardChoicePhase grid with its position and owning phase.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:RewardChoiceSlot"
     },
     {
       "symbol": "C:fva",
@@ -2964,6 +2996,14 @@
       "renamedSymbol": "C:PcmSampleStream"
     },
     {
+      "symbol": "C:qka",
+      "originalName": "qka",
+      "to": "StandingsPhase",
+      "evidence": "MatchPhase that ranks every player by the MatchState scores (field_v) before drawing the standings.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:StandingsPhase"
+    },
+    {
       "symbol": "C:qla",
       "originalName": "qla",
       "to": "FontMetrics",
@@ -3905,7 +3945,7 @@
       "to": "monthNames",
       "evidence": "Static initialiser fills it with literal strings starting \"January\".",
       "confidence": "reviewed",
-      "renamedSymbol": "F:bk.monthNames:[Ljava/lang/String;"
+      "renamedSymbol": "F:LineNoiseOperator.monthNames:[Ljava/lang/String;"
     },
     {
       "symbol": "F:bqa.field_a:I",
@@ -4649,7 +4689,15 @@
       "to": "loadingQuipsAlternate",
       "evidence": "Static initialiser fills it with literal strings starting \"Looking for drums...\".",
       "confidence": "reviewed",
-      "renamedSymbol": "F:fv.loadingQuipsAlternate:[Ljava/lang/String;"
+      "renamedSymbol": "F:RewardChoiceSlot.loadingQuipsAlternate:[Ljava/lang/String;"
+    },
+    {
+      "symbol": "F:fv.field_h:Lab;",
+      "originalName": "field_h",
+      "to": "phase",
+      "evidence": "The RewardChoicePhase that created the slot.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:RewardChoiceSlot.phase:LRewardChoicePhase;"
     },
     {
       "symbol": "F:gca.field_j:[Ljava/lang/String;",
@@ -6305,7 +6353,7 @@
       "to": "releaseStatics",
       "evidence": "TombRacer.clearAllStatics calls it; its body only sets static fields of this class to null.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:ab.releaseStatics(I)V"
+      "renamedSymbol": "M:RewardChoicePhase.releaseStatics(I)V"
     },
     {
       "symbol": "M:aba.a(Z)V",
@@ -7593,7 +7641,7 @@
       "to": "decodeParameter",
       "evidence": "Operators read the parameter with the given index from the PacketBuffer. Resolved override family.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:bk.decodeParameter(BLPacketBuffer;I)V"
+      "renamedSymbol": "M:LineNoiseOperator.decodeParameter(BLPacketBuffer;I)V"
     },
     {
       "symbol": "M:bk.c(II)[I",
@@ -7601,7 +7649,7 @@
       "to": "getMonochromeRow",
       "evidence": "Base throws \"This operation does not have a monochrome output\"; operators return one row of 0-4096 values. Resolved override family.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:bk.getMonochromeRow(II)[I"
+      "renamedSymbol": "M:LineNoiseOperator.getMonochromeRow(II)[I"
     },
     {
       "symbol": "M:bk.d(B)V",
@@ -7609,7 +7657,7 @@
       "to": "releaseStatics",
       "evidence": "TombRacer.clearAllStatics calls it; its body only sets static fields of this class to null.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:bk.releaseStatics(B)V"
+      "renamedSymbol": "M:LineNoiseOperator.releaseStatics(B)V"
     },
     {
       "symbol": "M:bl.a(I)V",
@@ -12121,7 +12169,7 @@
       "to": "decodeParameter",
       "evidence": "Operators read the parameter with the given index from the PacketBuffer. Resolved override family.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:fl.decodeParameter(BLPacketBuffer;I)V"
+      "renamedSymbol": "M:KaleidoscopeOperator.decodeParameter(BLPacketBuffer;I)V"
     },
     {
       "symbol": "M:fl.b(II)[[I",
@@ -12129,7 +12177,7 @@
       "to": "getColourRow",
       "evidence": "Base throws \"This operation does not have a colour output\"; operators return the red, green and blue rows. Resolved override family.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:fl.getColourRow(II)[[I"
+      "renamedSymbol": "M:KaleidoscopeOperator.getColourRow(II)[[I"
     },
     {
       "symbol": "M:fl.c(II)[I",
@@ -12137,7 +12185,7 @@
       "to": "getMonochromeRow",
       "evidence": "Base throws \"This operation does not have a monochrome output\"; operators return one row of 0-4096 values. Resolved override family.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:fl.getMonochromeRow(II)[I"
+      "renamedSymbol": "M:KaleidoscopeOperator.getMonochromeRow(II)[I"
     },
     {
       "symbol": "M:fla.a(I)V",
@@ -12833,7 +12881,7 @@
       "to": "releaseStatics",
       "evidence": "TombRacer.clearAllStatics calls it; its body only sets static fields of this class to null.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:fv.releaseStatics(B)V"
+      "renamedSymbol": "M:RewardChoiceSlot.releaseStatics(B)V"
     },
     {
       "symbol": "M:fva.a(I)V",
@@ -22076,6 +22124,14 @@
       "renamedSymbol": "M:HorizontalGradientOperator.getMonochromeRow(II)[I"
     },
     {
+      "symbol": "M:qh.a(ILqra;)V",
+      "originalName": "a",
+      "to": "setPhase",
+      "evidence": "Replaces the current MatchPhase; the match flow switches between the play, results and other phases through it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MatchScreen.setPhase(ILMatchPhase;)V"
+    },
+    {
       "symbol": "M:qha.c(B)V",
       "originalName": "c",
       "to": "releaseStatics",
@@ -22273,7 +22329,7 @@
       "to": "releaseStatics",
       "evidence": "TombRacer.clearAllStatics calls it; its body only sets static fields of this class to null.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:qka.releaseStatics(B)V"
+      "renamedSymbol": "M:StandingsPhase.releaseStatics(B)V"
     },
     {
       "symbol": "M:ql.a(Z)V",
@@ -29987,9 +30043,9 @@
     },
     {
       "symbol": "C:ab",
-      "renamedSymbol": "C:ab",
+      "renamedSymbol": "C:RewardChoicePhase",
       "originalName": "ab",
-      "renamedName": "ab",
+      "renamedName": "RewardChoicePhase",
       "declaration": {
         "file": "ab.java",
         "start": 50,
@@ -30680,9 +30736,9 @@
     },
     {
       "symbol": "C:bk",
-      "renamedSymbol": "C:bk",
+      "renamedSymbol": "C:LineNoiseOperator",
       "originalName": "bk",
-      "renamedName": "bk",
+      "renamedName": "LineNoiseOperator",
       "declaration": {
         "file": "bk.java",
         "start": 71,
@@ -32715,9 +32771,9 @@
     },
     {
       "symbol": "C:fl",
-      "renamedSymbol": "C:fl",
+      "renamedSymbol": "C:KaleidoscopeOperator",
       "originalName": "fl",
-      "renamedName": "fl",
+      "renamedName": "KaleidoscopeOperator",
       "declaration": {
         "file": "fl.java",
         "start": 50,
@@ -32935,9 +32991,9 @@
     },
     {
       "symbol": "C:fv",
-      "renamedSymbol": "C:fv",
+      "renamedSymbol": "C:RewardChoiceSlot",
       "originalName": "fv",
-      "renamedName": "fv",
+      "renamedName": "RewardChoiceSlot",
       "declaration": {
         "file": "fv.java",
         "start": 50,
@@ -38677,9 +38733,9 @@
     },
     {
       "symbol": "C:qka",
-      "renamedSymbol": "C:qka",
+      "renamedSymbol": "C:StandingsPhase",
       "originalName": "qka",
-      "renamedName": "qka",
+      "renamedName": "StandingsPhase",
       "declaration": {
         "file": "qka.java",
         "start": 50,
@@ -42285,7 +42341,7 @@
     },
     {
       "symbol": "F:ab.field_m:I",
-      "renamedSymbol": "F:ab.field_m:I",
+      "renamedSymbol": "F:RewardChoicePhase.field_m:I",
       "originalName": "field_m",
       "renamedName": "field_m",
       "declaration": {
@@ -42296,7 +42352,7 @@
     },
     {
       "symbol": "F:ab.field_n:Lsq;",
-      "renamedSymbol": "F:ab.field_n:Lsq;",
+      "renamedSymbol": "F:RewardChoicePhase.field_n:Lsq;",
       "originalName": "field_n",
       "renamedName": "field_n",
       "declaration": {
@@ -42307,7 +42363,7 @@
     },
     {
       "symbol": "F:ab.field_o:Lcfa;",
-      "renamedSymbol": "F:ab.field_o:LCommonChooseReward;",
+      "renamedSymbol": "F:RewardChoicePhase.field_o:LCommonChooseReward;",
       "originalName": "field_o",
       "renamedName": "field_o",
       "declaration": {
@@ -42318,7 +42374,7 @@
     },
     {
       "symbol": "F:ab.field_p:[[Lfv;",
-      "renamedSymbol": "F:ab.field_p:[[Lfv;",
+      "renamedSymbol": "F:RewardChoicePhase.field_p:[[LRewardChoiceSlot;",
       "originalName": "field_p",
       "renamedName": "field_p",
       "declaration": {
@@ -42329,7 +42385,7 @@
     },
     {
       "symbol": "F:ab.field_q:I",
-      "renamedSymbol": "F:ab.field_q:I",
+      "renamedSymbol": "F:RewardChoicePhase.field_q:I",
       "originalName": "field_q",
       "renamedName": "field_q",
       "declaration": {
@@ -42340,7 +42396,7 @@
     },
     {
       "symbol": "F:ab.field_r:I",
-      "renamedSymbol": "F:ab.field_r:I",
+      "renamedSymbol": "F:RewardChoicePhase.field_r:I",
       "originalName": "field_r",
       "renamedName": "field_r",
       "declaration": {
@@ -42351,7 +42407,7 @@
     },
     {
       "symbol": "F:ab.field_s:I",
-      "renamedSymbol": "F:ab.field_s:I",
+      "renamedSymbol": "F:RewardChoicePhase.field_s:I",
       "originalName": "field_s",
       "renamedName": "field_s",
       "declaration": {
@@ -42362,7 +42418,7 @@
     },
     {
       "symbol": "F:ab.field_t:[I",
-      "renamedSymbol": "F:ab.field_t:[I",
+      "renamedSymbol": "F:RewardChoicePhase.field_t:[I",
       "originalName": "field_t",
       "renamedName": "field_t",
       "declaration": {
@@ -42373,7 +42429,7 @@
     },
     {
       "symbol": "F:ab.field_u:I",
-      "renamedSymbol": "F:ab.field_u:I",
+      "renamedSymbol": "F:RewardChoicePhase.field_u:I",
       "originalName": "field_u",
       "renamedName": "field_u",
       "declaration": {
@@ -42384,7 +42440,7 @@
     },
     {
       "symbol": "F:ab.field_v:I",
-      "renamedSymbol": "F:ab.field_v:I",
+      "renamedSymbol": "F:RewardChoicePhase.field_v:I",
       "originalName": "field_v",
       "renamedName": "field_v",
       "declaration": {
@@ -42395,7 +42451,7 @@
     },
     {
       "symbol": "F:ab.field_w:Ljava/lang/String;",
-      "renamedSymbol": "F:ab.field_w:Ljava/lang/String;",
+      "renamedSymbol": "F:RewardChoicePhase.field_w:Ljava/lang/String;",
       "originalName": "field_w",
       "renamedName": "field_w",
       "declaration": {
@@ -46586,7 +46642,7 @@
     },
     {
       "symbol": "F:bk.field_m:[Ljava/lang/String;",
-      "renamedSymbol": "F:bk.monthNames:[Ljava/lang/String;",
+      "renamedSymbol": "F:LineNoiseOperator.monthNames:[Ljava/lang/String;",
       "originalName": "field_m",
       "renamedName": "monthNames",
       "declaration": {
@@ -46597,7 +46653,7 @@
     },
     {
       "symbol": "F:bk.field_n:I",
-      "renamedSymbol": "F:bk.field_n:I",
+      "renamedSymbol": "F:LineNoiseOperator.field_n:I",
       "originalName": "field_n",
       "renamedName": "field_n",
       "declaration": {
@@ -46608,7 +46664,7 @@
     },
     {
       "symbol": "F:bk.field_o:I",
-      "renamedSymbol": "F:bk.field_o:I",
+      "renamedSymbol": "F:LineNoiseOperator.field_o:I",
       "originalName": "field_o",
       "renamedName": "field_o",
       "declaration": {
@@ -46619,7 +46675,7 @@
     },
     {
       "symbol": "F:bk.field_p:I",
-      "renamedSymbol": "F:bk.field_p:I",
+      "renamedSymbol": "F:LineNoiseOperator.field_p:I",
       "originalName": "field_p",
       "renamedName": "field_p",
       "declaration": {
@@ -46630,7 +46686,7 @@
     },
     {
       "symbol": "F:bk.field_q:I",
-      "renamedSymbol": "F:bk.field_q:I",
+      "renamedSymbol": "F:LineNoiseOperator.field_q:I",
       "originalName": "field_q",
       "renamedName": "field_q",
       "declaration": {
@@ -46641,7 +46697,7 @@
     },
     {
       "symbol": "F:bk.field_r:I",
-      "renamedSymbol": "F:bk.field_r:I",
+      "renamedSymbol": "F:LineNoiseOperator.field_r:I",
       "originalName": "field_r",
       "renamedName": "field_r",
       "declaration": {
@@ -63086,7 +63142,7 @@
     },
     {
       "symbol": "F:fl.field_m:I",
-      "renamedSymbol": "F:fl.field_m:I",
+      "renamedSymbol": "F:KaleidoscopeOperator.field_m:I",
       "originalName": "field_m",
       "renamedName": "field_m",
       "declaration": {
@@ -64879,7 +64935,7 @@
     },
     {
       "symbol": "F:fv.field_a:I",
-      "renamedSymbol": "F:fv.field_a:I",
+      "renamedSymbol": "F:RewardChoiceSlot.field_a:I",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -64890,7 +64946,7 @@
     },
     {
       "symbol": "F:fv.field_b:Ljava/lang/String;",
-      "renamedSymbol": "F:fv.field_b:Ljava/lang/String;",
+      "renamedSymbol": "F:RewardChoiceSlot.field_b:Ljava/lang/String;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -64901,7 +64957,7 @@
     },
     {
       "symbol": "F:fv.field_c:I",
-      "renamedSymbol": "F:fv.field_c:I",
+      "renamedSymbol": "F:RewardChoiceSlot.field_c:I",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -64912,7 +64968,7 @@
     },
     {
       "symbol": "F:fv.field_d:[Ljava/lang/String;",
-      "renamedSymbol": "F:fv.loadingQuipsAlternate:[Ljava/lang/String;",
+      "renamedSymbol": "F:RewardChoiceSlot.loadingQuipsAlternate:[Ljava/lang/String;",
       "originalName": "field_d",
       "renamedName": "loadingQuipsAlternate",
       "declaration": {
@@ -64923,7 +64979,7 @@
     },
     {
       "symbol": "F:fv.field_e:I",
-      "renamedSymbol": "F:fv.field_e:I",
+      "renamedSymbol": "F:RewardChoiceSlot.field_e:I",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -64934,7 +64990,7 @@
     },
     {
       "symbol": "F:fv.field_f:I",
-      "renamedSymbol": "F:fv.field_f:I",
+      "renamedSymbol": "F:RewardChoiceSlot.field_f:I",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -64945,7 +65001,7 @@
     },
     {
       "symbol": "F:fv.field_g:I",
-      "renamedSymbol": "F:fv.field_g:I",
+      "renamedSymbol": "F:RewardChoiceSlot.field_g:I",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -64956,9 +65012,9 @@
     },
     {
       "symbol": "F:fv.field_h:Lab;",
-      "renamedSymbol": "F:fv.field_h:Lab;",
+      "renamedSymbol": "F:RewardChoiceSlot.phase:LRewardChoicePhase;",
       "originalName": "field_h",
-      "renamedName": "field_h",
+      "renamedName": "phase",
       "declaration": {
         "file": "fv.java",
         "start": 87,
@@ -64967,7 +65023,7 @@
     },
     {
       "symbol": "F:fv.field_i:I",
-      "renamedSymbol": "F:fv.field_i:I",
+      "renamedSymbol": "F:RewardChoiceSlot.field_i:I",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -64978,7 +65034,7 @@
     },
     {
       "symbol": "F:fv.field_j:I",
-      "renamedSymbol": "F:fv.field_j:I",
+      "renamedSymbol": "F:RewardChoiceSlot.field_j:I",
       "originalName": "field_j",
       "renamedName": "field_j",
       "declaration": {
@@ -99001,7 +99057,7 @@
     },
     {
       "symbol": "F:qka.field_m:[J",
-      "renamedSymbol": "F:qka.field_m:[J",
+      "renamedSymbol": "F:StandingsPhase.field_m:[J",
       "originalName": "field_m",
       "renamedName": "field_m",
       "declaration": {
@@ -99012,7 +99068,7 @@
     },
     {
       "symbol": "F:qka.field_n:I",
-      "renamedSymbol": "F:qka.field_n:I",
+      "renamedSymbol": "F:StandingsPhase.field_n:I",
       "originalName": "field_n",
       "renamedName": "field_n",
       "declaration": {
@@ -99023,7 +99079,7 @@
     },
     {
       "symbol": "F:qka.field_o:[Ljpa;",
-      "renamedSymbol": "F:qka.field_o:[LSpriteData;",
+      "renamedSymbol": "F:StandingsPhase.field_o:[LSpriteData;",
       "originalName": "field_o",
       "renamedName": "field_o",
       "declaration": {
@@ -99034,7 +99090,7 @@
     },
     {
       "symbol": "F:qka.field_p:[Lfna;",
-      "renamedSymbol": "F:qka.field_p:[Lfna;",
+      "renamedSymbol": "F:StandingsPhase.field_p:[Lfna;",
       "originalName": "field_p",
       "renamedName": "field_p",
       "declaration": {
@@ -99045,7 +99101,7 @@
     },
     {
       "symbol": "F:qka.field_q:Z",
-      "renamedSymbol": "F:qka.field_q:Z",
+      "renamedSymbol": "F:StandingsPhase.field_q:Z",
       "originalName": "field_q",
       "renamedName": "field_q",
       "declaration": {
@@ -99056,7 +99112,7 @@
     },
     {
       "symbol": "F:qka.field_r:[I",
-      "renamedSymbol": "F:qka.field_r:[I",
+      "renamedSymbol": "F:StandingsPhase.field_r:[I",
       "originalName": "field_r",
       "renamedName": "field_r",
       "declaration": {
@@ -99067,7 +99123,7 @@
     },
     {
       "symbol": "F:qka.field_s:Ljava/lang/String;",
-      "renamedSymbol": "F:qka.field_s:Ljava/lang/String;",
+      "renamedSymbol": "F:StandingsPhase.field_s:Ljava/lang/String;",
       "originalName": "field_s",
       "renamedName": "field_s",
       "declaration": {
@@ -119593,7 +119649,7 @@
     },
     {
       "symbol": "L:ab.<init>(Lqh;Lv;)V#0",
-      "renamedSymbol": "L:ab.<init>(LMatchScreen;LMatchProtocol;)V#0",
+      "renamedSymbol": "L:RewardChoicePhase.<init>(LMatchScreen;LMatchProtocol;)V#0",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -119604,7 +119660,7 @@
     },
     {
       "symbol": "L:ab.<init>(Lqh;Lv;)V#1",
-      "renamedSymbol": "L:ab.<init>(LMatchScreen;LMatchProtocol;)V#1",
+      "renamedSymbol": "L:RewardChoicePhase.<init>(LMatchScreen;LMatchProtocol;)V#1",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -119615,7 +119671,7 @@
     },
     {
       "symbol": "L:ab.<init>(Lqh;Lv;)V#10",
-      "renamedSymbol": "L:ab.<init>(LMatchScreen;LMatchProtocol;)V#10",
+      "renamedSymbol": "L:RewardChoicePhase.<init>(LMatchScreen;LMatchProtocol;)V#10",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -119626,7 +119682,7 @@
     },
     {
       "symbol": "L:ab.<init>(Lqh;Lv;)V#11",
-      "renamedSymbol": "L:ab.<init>(LMatchScreen;LMatchProtocol;)V#11",
+      "renamedSymbol": "L:RewardChoicePhase.<init>(LMatchScreen;LMatchProtocol;)V#11",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -119637,7 +119693,7 @@
     },
     {
       "symbol": "L:ab.<init>(Lqh;Lv;)V#12",
-      "renamedSymbol": "L:ab.<init>(LMatchScreen;LMatchProtocol;)V#12",
+      "renamedSymbol": "L:RewardChoicePhase.<init>(LMatchScreen;LMatchProtocol;)V#12",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -119648,7 +119704,7 @@
     },
     {
       "symbol": "L:ab.<init>(Lqh;Lv;)V#13",
-      "renamedSymbol": "L:ab.<init>(LMatchScreen;LMatchProtocol;)V#13",
+      "renamedSymbol": "L:RewardChoicePhase.<init>(LMatchScreen;LMatchProtocol;)V#13",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -119659,7 +119715,7 @@
     },
     {
       "symbol": "L:ab.<init>(Lqh;Lv;)V#14",
-      "renamedSymbol": "L:ab.<init>(LMatchScreen;LMatchProtocol;)V#14",
+      "renamedSymbol": "L:RewardChoicePhase.<init>(LMatchScreen;LMatchProtocol;)V#14",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -119670,7 +119726,7 @@
     },
     {
       "symbol": "L:ab.<init>(Lqh;Lv;)V#15",
-      "renamedSymbol": "L:ab.<init>(LMatchScreen;LMatchProtocol;)V#15",
+      "renamedSymbol": "L:RewardChoicePhase.<init>(LMatchScreen;LMatchProtocol;)V#15",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -119681,7 +119737,7 @@
     },
     {
       "symbol": "L:ab.<init>(Lqh;Lv;)V#16",
-      "renamedSymbol": "L:ab.<init>(LMatchScreen;LMatchProtocol;)V#16",
+      "renamedSymbol": "L:RewardChoicePhase.<init>(LMatchScreen;LMatchProtocol;)V#16",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -119692,7 +119748,7 @@
     },
     {
       "symbol": "L:ab.<init>(Lqh;Lv;)V#17",
-      "renamedSymbol": "L:ab.<init>(LMatchScreen;LMatchProtocol;)V#17",
+      "renamedSymbol": "L:RewardChoicePhase.<init>(LMatchScreen;LMatchProtocol;)V#17",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -119703,7 +119759,7 @@
     },
     {
       "symbol": "L:ab.<init>(Lqh;Lv;)V#2",
-      "renamedSymbol": "L:ab.<init>(LMatchScreen;LMatchProtocol;)V#2",
+      "renamedSymbol": "L:RewardChoicePhase.<init>(LMatchScreen;LMatchProtocol;)V#2",
       "originalName": "stackIn_18_0",
       "renamedName": "stackIn_18_0",
       "declaration": {
@@ -119714,7 +119770,7 @@
     },
     {
       "symbol": "L:ab.<init>(Lqh;Lv;)V#3",
-      "renamedSymbol": "L:ab.<init>(LMatchScreen;LMatchProtocol;)V#3",
+      "renamedSymbol": "L:RewardChoicePhase.<init>(LMatchScreen;LMatchProtocol;)V#3",
       "originalName": "stackIn_18_1",
       "renamedName": "stackIn_18_1",
       "declaration": {
@@ -119725,7 +119781,7 @@
     },
     {
       "symbol": "L:ab.<init>(Lqh;Lv;)V#4",
-      "renamedSymbol": "L:ab.<init>(LMatchScreen;LMatchProtocol;)V#4",
+      "renamedSymbol": "L:RewardChoicePhase.<init>(LMatchScreen;LMatchProtocol;)V#4",
       "originalName": "stackIn_19_2",
       "renamedName": "stackIn_19_2",
       "declaration": {
@@ -119736,7 +119792,7 @@
     },
     {
       "symbol": "L:ab.<init>(Lqh;Lv;)V#5",
-      "renamedSymbol": "L:ab.<init>(LMatchScreen;LMatchProtocol;)V#5",
+      "renamedSymbol": "L:RewardChoicePhase.<init>(LMatchScreen;LMatchProtocol;)V#5",
       "originalName": "stackIn_21_1",
       "renamedName": "stackIn_21_1",
       "declaration": {
@@ -119747,7 +119803,7 @@
     },
     {
       "symbol": "L:ab.<init>(Lqh;Lv;)V#6",
-      "renamedSymbol": "L:ab.<init>(LMatchScreen;LMatchProtocol;)V#6",
+      "renamedSymbol": "L:RewardChoicePhase.<init>(LMatchScreen;LMatchProtocol;)V#6",
       "originalName": "stackIn_22_2",
       "renamedName": "stackIn_22_2",
       "declaration": {
@@ -119758,7 +119814,7 @@
     },
     {
       "symbol": "L:ab.<init>(Lqh;Lv;)V#7",
-      "renamedSymbol": "L:ab.<init>(LMatchScreen;LMatchProtocol;)V#7",
+      "renamedSymbol": "L:RewardChoicePhase.<init>(LMatchScreen;LMatchProtocol;)V#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -119769,7 +119825,7 @@
     },
     {
       "symbol": "L:ab.<init>(Lqh;Lv;)V#8",
-      "renamedSymbol": "L:ab.<init>(LMatchScreen;LMatchProtocol;)V#8",
+      "renamedSymbol": "L:RewardChoicePhase.<init>(LMatchScreen;LMatchProtocol;)V#8",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -119780,7 +119836,7 @@
     },
     {
       "symbol": "L:ab.<init>(Lqh;Lv;)V#9",
-      "renamedSymbol": "L:ab.<init>(LMatchScreen;LMatchProtocol;)V#9",
+      "renamedSymbol": "L:RewardChoicePhase.<init>(LMatchScreen;LMatchProtocol;)V#9",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -119791,7 +119847,7 @@
     },
     {
       "symbol": "L:ab.a(IIB)V#0",
-      "renamedSymbol": "L:ab.a(IIB)V#0",
+      "renamedSymbol": "L:RewardChoicePhase.a(IIB)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -119802,7 +119858,7 @@
     },
     {
       "symbol": "L:ab.a(IIB)V#1",
-      "renamedSymbol": "L:ab.a(IIB)V#1",
+      "renamedSymbol": "L:RewardChoicePhase.a(IIB)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -119813,7 +119869,7 @@
     },
     {
       "symbol": "L:ab.a(IIB)V#2",
-      "renamedSymbol": "L:ab.a(IIB)V#2",
+      "renamedSymbol": "L:RewardChoicePhase.a(IIB)V#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -119824,7 +119880,7 @@
     },
     {
       "symbol": "L:ab.a(III)Z#0",
-      "renamedSymbol": "L:ab.a(III)Z#0",
+      "renamedSymbol": "L:RewardChoicePhase.a(III)Z#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -119835,7 +119891,7 @@
     },
     {
       "symbol": "L:ab.a(III)Z#1",
-      "renamedSymbol": "L:ab.a(III)Z#1",
+      "renamedSymbol": "L:RewardChoicePhase.a(III)Z#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -119846,7 +119902,7 @@
     },
     {
       "symbol": "L:ab.a(III)Z#2",
-      "renamedSymbol": "L:ab.a(III)Z#2",
+      "renamedSymbol": "L:RewardChoicePhase.a(III)Z#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -119857,7 +119913,7 @@
     },
     {
       "symbol": "L:ab.a(III)Z#3",
-      "renamedSymbol": "L:ab.a(III)Z#3",
+      "renamedSymbol": "L:RewardChoicePhase.a(III)Z#3",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -119868,7 +119924,7 @@
     },
     {
       "symbol": "L:ab.a(IIIIIII)Z#0",
-      "renamedSymbol": "L:ab.a(IIIIIII)Z#0",
+      "renamedSymbol": "L:RewardChoicePhase.a(IIIIIII)Z#0",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -119879,7 +119935,7 @@
     },
     {
       "symbol": "L:ab.a(ILjava/lang/String;)Ljha;#0",
-      "renamedSymbol": "L:ab.a(ILjava/lang/String;)Ljha;#0",
+      "renamedSymbol": "L:RewardChoicePhase.a(ILjava/lang/String;)Ljha;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -119890,7 +119946,7 @@
     },
     {
       "symbol": "L:ab.a(ILjava/lang/String;)Ljha;#1",
-      "renamedSymbol": "L:ab.a(ILjava/lang/String;)Ljha;#1",
+      "renamedSymbol": "L:RewardChoicePhase.a(ILjava/lang/String;)Ljha;#1",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -119901,7 +119957,7 @@
     },
     {
       "symbol": "L:ab.a(ILjava/lang/String;)Ljha;#2",
-      "renamedSymbol": "L:ab.a(ILjava/lang/String;)Ljha;#2",
+      "renamedSymbol": "L:RewardChoicePhase.a(ILjava/lang/String;)Ljha;#2",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -119912,7 +119968,7 @@
     },
     {
       "symbol": "L:ab.a(ILjava/lang/String;)Ljha;#3",
-      "renamedSymbol": "L:ab.a(ILjava/lang/String;)Ljha;#3",
+      "renamedSymbol": "L:RewardChoicePhase.a(ILjava/lang/String;)Ljha;#3",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -119923,7 +119979,7 @@
     },
     {
       "symbol": "L:ab.a(ILjava/lang/String;)Ljha;#4",
-      "renamedSymbol": "L:ab.a(ILjava/lang/String;)Ljha;#4",
+      "renamedSymbol": "L:RewardChoicePhase.a(ILjava/lang/String;)Ljha;#4",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -119934,7 +119990,7 @@
     },
     {
       "symbol": "L:ab.a(ILjava/lang/String;)Ljha;#5",
-      "renamedSymbol": "L:ab.a(ILjava/lang/String;)Ljha;#5",
+      "renamedSymbol": "L:RewardChoicePhase.a(ILjava/lang/String;)Ljha;#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -119945,7 +120001,7 @@
     },
     {
       "symbol": "L:ab.a(ILjava/lang/String;)Ljha;#6",
-      "renamedSymbol": "L:ab.a(ILjava/lang/String;)Ljha;#6",
+      "renamedSymbol": "L:RewardChoicePhase.a(ILjava/lang/String;)Ljha;#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -119956,7 +120012,7 @@
     },
     {
       "symbol": "L:ab.a(IZI)V#0",
-      "renamedSymbol": "L:ab.a(IZI)V#0",
+      "renamedSymbol": "L:RewardChoicePhase.a(IZI)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -119967,7 +120023,7 @@
     },
     {
       "symbol": "L:ab.a(IZI)V#1",
-      "renamedSymbol": "L:ab.a(IZI)V#1",
+      "renamedSymbol": "L:RewardChoicePhase.a(IZI)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -119978,7 +120034,7 @@
     },
     {
       "symbol": "L:ab.a(IZI)V#2",
-      "renamedSymbol": "L:ab.a(IZI)V#2",
+      "renamedSymbol": "L:RewardChoicePhase.a(IZI)V#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -119989,7 +120045,7 @@
     },
     {
       "symbol": "L:ab.a(Ljava/lang/String;B)Z#0",
-      "renamedSymbol": "L:ab.a(Ljava/lang/String;B)Z#0",
+      "renamedSymbol": "L:RewardChoicePhase.a(Ljava/lang/String;B)Z#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -120000,7 +120056,7 @@
     },
     {
       "symbol": "L:ab.a(Ljava/lang/String;B)Z#1",
-      "renamedSymbol": "L:ab.a(Ljava/lang/String;B)Z#1",
+      "renamedSymbol": "L:RewardChoicePhase.a(Ljava/lang/String;B)Z#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -120011,7 +120067,7 @@
     },
     {
       "symbol": "L:ab.a(Ljava/lang/String;B)Z#2",
-      "renamedSymbol": "L:ab.a(Ljava/lang/String;B)Z#2",
+      "renamedSymbol": "L:RewardChoicePhase.a(Ljava/lang/String;B)Z#2",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -120022,7 +120078,7 @@
     },
     {
       "symbol": "L:ab.a(Ljava/lang/String;B)Z#3",
-      "renamedSymbol": "L:ab.a(Ljava/lang/String;B)Z#3",
+      "renamedSymbol": "L:RewardChoicePhase.a(Ljava/lang/String;B)Z#3",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -120033,7 +120089,7 @@
     },
     {
       "symbol": "L:ab.a(Ljava/lang/String;B)Z#4",
-      "renamedSymbol": "L:ab.a(Ljava/lang/String;B)Z#4",
+      "renamedSymbol": "L:RewardChoicePhase.a(Ljava/lang/String;B)Z#4",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -120044,7 +120100,7 @@
     },
     {
       "symbol": "L:ab.a(Ljava/lang/String;B)Z#5",
-      "renamedSymbol": "L:ab.a(Ljava/lang/String;B)Z#5",
+      "renamedSymbol": "L:RewardChoicePhase.a(Ljava/lang/String;B)Z#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -120055,7 +120111,7 @@
     },
     {
       "symbol": "L:ab.a(Ljava/lang/String;B)Z#6",
-      "renamedSymbol": "L:ab.a(Ljava/lang/String;B)Z#6",
+      "renamedSymbol": "L:RewardChoicePhase.a(Ljava/lang/String;B)Z#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -120066,7 +120122,7 @@
     },
     {
       "symbol": "L:ab.a(Z)Z#0",
-      "renamedSymbol": "L:ab.a(Z)Z#0",
+      "renamedSymbol": "L:RewardChoicePhase.a(Z)Z#0",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -120077,7 +120133,7 @@
     },
     {
       "symbol": "L:ab.b(B)Lcfa;#0",
-      "renamedSymbol": "L:ab.b(B)LCommonChooseReward;#0",
+      "renamedSymbol": "L:RewardChoicePhase.b(B)LCommonChooseReward;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -120088,7 +120144,7 @@
     },
     {
       "symbol": "L:ab.b(IIB)Z#0",
-      "renamedSymbol": "L:ab.b(IIB)Z#0",
+      "renamedSymbol": "L:RewardChoicePhase.b(IIB)Z#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -120099,7 +120155,7 @@
     },
     {
       "symbol": "L:ab.b(IZ)V#0",
-      "renamedSymbol": "L:ab.b(IZ)V#0",
+      "renamedSymbol": "L:RewardChoicePhase.b(IZ)V#0",
       "originalName": "var11_int",
       "renamedName": "var11_int",
       "declaration": {
@@ -120110,7 +120166,7 @@
     },
     {
       "symbol": "L:ab.b(IZ)V#1",
-      "renamedSymbol": "L:ab.b(IZ)V#1",
+      "renamedSymbol": "L:RewardChoicePhase.b(IZ)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -120121,7 +120177,7 @@
     },
     {
       "symbol": "L:ab.b(IZ)V#10",
-      "renamedSymbol": "L:ab.b(IZ)V#10",
+      "renamedSymbol": "L:RewardChoicePhase.b(IZ)V#10",
       "originalName": "var12_ref_fv",
       "renamedName": "var12_ref_fv",
       "declaration": {
@@ -120132,7 +120188,7 @@
     },
     {
       "symbol": "L:ab.b(IZ)V#11",
-      "renamedSymbol": "L:ab.b(IZ)V#11",
+      "renamedSymbol": "L:RewardChoicePhase.b(IZ)V#11",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -120143,7 +120199,7 @@
     },
     {
       "symbol": "L:ab.b(IZ)V#12",
-      "renamedSymbol": "L:ab.b(IZ)V#12",
+      "renamedSymbol": "L:RewardChoicePhase.b(IZ)V#12",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -120154,7 +120210,7 @@
     },
     {
       "symbol": "L:ab.b(IZ)V#13",
-      "renamedSymbol": "L:ab.b(IZ)V#13",
+      "renamedSymbol": "L:RewardChoicePhase.b(IZ)V#13",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -120165,7 +120221,7 @@
     },
     {
       "symbol": "L:ab.b(IZ)V#14",
-      "renamedSymbol": "L:ab.b(IZ)V#14",
+      "renamedSymbol": "L:RewardChoicePhase.b(IZ)V#14",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -120176,7 +120232,7 @@
     },
     {
       "symbol": "L:ab.b(IZ)V#15",
-      "renamedSymbol": "L:ab.b(IZ)V#15",
+      "renamedSymbol": "L:RewardChoicePhase.b(IZ)V#15",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -120187,7 +120243,7 @@
     },
     {
       "symbol": "L:ab.b(IZ)V#16",
-      "renamedSymbol": "L:ab.b(IZ)V#16",
+      "renamedSymbol": "L:RewardChoicePhase.b(IZ)V#16",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -120198,7 +120254,7 @@
     },
     {
       "symbol": "L:ab.b(IZ)V#17",
-      "renamedSymbol": "L:ab.b(IZ)V#17",
+      "renamedSymbol": "L:RewardChoicePhase.b(IZ)V#17",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -120209,7 +120265,7 @@
     },
     {
       "symbol": "L:ab.b(IZ)V#18",
-      "renamedSymbol": "L:ab.b(IZ)V#18",
+      "renamedSymbol": "L:RewardChoicePhase.b(IZ)V#18",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -120220,7 +120276,7 @@
     },
     {
       "symbol": "L:ab.b(IZ)V#19",
-      "renamedSymbol": "L:ab.b(IZ)V#19",
+      "renamedSymbol": "L:RewardChoicePhase.b(IZ)V#19",
       "originalName": "var9Lifetime1",
       "renamedName": "var9Lifetime1",
       "declaration": {
@@ -120231,7 +120287,7 @@
     },
     {
       "symbol": "L:ab.b(IZ)V#2",
-      "renamedSymbol": "L:ab.b(IZ)V#2",
+      "renamedSymbol": "L:RewardChoicePhase.b(IZ)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -120242,7 +120298,7 @@
     },
     {
       "symbol": "L:ab.b(IZ)V#3",
-      "renamedSymbol": "L:ab.b(IZ)V#3",
+      "renamedSymbol": "L:RewardChoicePhase.b(IZ)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -120253,7 +120309,7 @@
     },
     {
       "symbol": "L:ab.b(IZ)V#4",
-      "renamedSymbol": "L:ab.b(IZ)V#4",
+      "renamedSymbol": "L:RewardChoicePhase.b(IZ)V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -120264,7 +120320,7 @@
     },
     {
       "symbol": "L:ab.b(IZ)V#5",
-      "renamedSymbol": "L:ab.b(IZ)V#5",
+      "renamedSymbol": "L:RewardChoicePhase.b(IZ)V#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -120275,7 +120331,7 @@
     },
     {
       "symbol": "L:ab.b(IZ)V#6",
-      "renamedSymbol": "L:ab.b(IZ)V#6",
+      "renamedSymbol": "L:RewardChoicePhase.b(IZ)V#6",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -120286,7 +120342,7 @@
     },
     {
       "symbol": "L:ab.b(IZ)V#7",
-      "renamedSymbol": "L:ab.b(IZ)V#7",
+      "renamedSymbol": "L:RewardChoicePhase.b(IZ)V#7",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -120297,7 +120353,7 @@
     },
     {
       "symbol": "L:ab.b(IZ)V#8",
-      "renamedSymbol": "L:ab.b(IZ)V#8",
+      "renamedSymbol": "L:RewardChoicePhase.b(IZ)V#8",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -120308,7 +120364,7 @@
     },
     {
       "symbol": "L:ab.b(IZ)V#9",
-      "renamedSymbol": "L:ab.b(IZ)V#9",
+      "renamedSymbol": "L:RewardChoicePhase.b(IZ)V#9",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -120319,7 +120375,7 @@
     },
     {
       "symbol": "L:ab.i(I)V#0",
-      "renamedSymbol": "L:ab.i(I)V#0",
+      "renamedSymbol": "L:RewardChoicePhase.i(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -143870,7 +143926,7 @@
     },
     {
       "symbol": "L:bk.a(BLuia;I)V#0",
-      "renamedSymbol": "L:bk.decodeParameter(BLPacketBuffer;I)V#0",
+      "renamedSymbol": "L:LineNoiseOperator.decodeParameter(BLPacketBuffer;I)V#0",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -143881,7 +143937,7 @@
     },
     {
       "symbol": "L:bk.a(BLuia;I)V#1",
-      "renamedSymbol": "L:bk.decodeParameter(BLPacketBuffer;I)V#1",
+      "renamedSymbol": "L:LineNoiseOperator.decodeParameter(BLPacketBuffer;I)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -143892,7 +143948,7 @@
     },
     {
       "symbol": "L:bk.a(BLuia;I)V#2",
-      "renamedSymbol": "L:bk.decodeParameter(BLPacketBuffer;I)V#2",
+      "renamedSymbol": "L:LineNoiseOperator.decodeParameter(BLPacketBuffer;I)V#2",
       "originalName": "stackIn_19_0",
       "renamedName": "stackIn_19_0",
       "declaration": {
@@ -143903,7 +143959,7 @@
     },
     {
       "symbol": "L:bk.a(BLuia;I)V#3",
-      "renamedSymbol": "L:bk.decodeParameter(BLPacketBuffer;I)V#3",
+      "renamedSymbol": "L:LineNoiseOperator.decodeParameter(BLPacketBuffer;I)V#3",
       "originalName": "stackIn_19_1",
       "renamedName": "stackIn_19_1",
       "declaration": {
@@ -143914,7 +143970,7 @@
     },
     {
       "symbol": "L:bk.a(BLuia;I)V#4",
-      "renamedSymbol": "L:bk.decodeParameter(BLPacketBuffer;I)V#4",
+      "renamedSymbol": "L:LineNoiseOperator.decodeParameter(BLPacketBuffer;I)V#4",
       "originalName": "stackIn_20_2",
       "renamedName": "stackIn_20_2",
       "declaration": {
@@ -143925,7 +143981,7 @@
     },
     {
       "symbol": "L:bk.a(BLuia;I)V#5",
-      "renamedSymbol": "L:bk.decodeParameter(BLPacketBuffer;I)V#5",
+      "renamedSymbol": "L:LineNoiseOperator.decodeParameter(BLPacketBuffer;I)V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -143936,7 +143992,7 @@
     },
     {
       "symbol": "L:bk.a(BLuia;I)V#6",
-      "renamedSymbol": "L:bk.decodeParameter(BLPacketBuffer;I)V#6",
+      "renamedSymbol": "L:LineNoiseOperator.decodeParameter(BLPacketBuffer;I)V#6",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -143947,7 +144003,7 @@
     },
     {
       "symbol": "L:bk.a(BLuia;I)V#7",
-      "renamedSymbol": "L:bk.decodeParameter(BLPacketBuffer;I)V#7",
+      "renamedSymbol": "L:LineNoiseOperator.decodeParameter(BLPacketBuffer;I)V#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -143958,7 +144014,7 @@
     },
     {
       "symbol": "L:bk.b(B)V#0",
-      "renamedSymbol": "L:bk.b(B)V#0",
+      "renamedSymbol": "L:LineNoiseOperator.b(B)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -143969,7 +144025,7 @@
     },
     {
       "symbol": "L:bk.c(II)[I#0",
-      "renamedSymbol": "L:bk.getMonochromeRow(II)[I#0",
+      "renamedSymbol": "L:LineNoiseOperator.getMonochromeRow(II)[I#0",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -143980,7 +144036,7 @@
     },
     {
       "symbol": "L:bk.c(II)[I#1",
-      "renamedSymbol": "L:bk.getMonochromeRow(II)[I#1",
+      "renamedSymbol": "L:LineNoiseOperator.getMonochromeRow(II)[I#1",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -143991,7 +144047,7 @@
     },
     {
       "symbol": "L:bk.c(II)[I#10",
-      "renamedSymbol": "L:bk.getMonochromeRow(II)[I#10",
+      "renamedSymbol": "L:LineNoiseOperator.getMonochromeRow(II)[I#10",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -144002,7 +144058,7 @@
     },
     {
       "symbol": "L:bk.c(II)[I#11",
-      "renamedSymbol": "L:bk.getMonochromeRow(II)[I#11",
+      "renamedSymbol": "L:LineNoiseOperator.getMonochromeRow(II)[I#11",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -144013,7 +144069,7 @@
     },
     {
       "symbol": "L:bk.c(II)[I#12",
-      "renamedSymbol": "L:bk.getMonochromeRow(II)[I#12",
+      "renamedSymbol": "L:LineNoiseOperator.getMonochromeRow(II)[I#12",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -144024,7 +144080,7 @@
     },
     {
       "symbol": "L:bk.c(II)[I#13",
-      "renamedSymbol": "L:bk.getMonochromeRow(II)[I#13",
+      "renamedSymbol": "L:LineNoiseOperator.getMonochromeRow(II)[I#13",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -144035,7 +144091,7 @@
     },
     {
       "symbol": "L:bk.c(II)[I#14",
-      "renamedSymbol": "L:bk.getMonochromeRow(II)[I#14",
+      "renamedSymbol": "L:LineNoiseOperator.getMonochromeRow(II)[I#14",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -144046,7 +144102,7 @@
     },
     {
       "symbol": "L:bk.c(II)[I#15",
-      "renamedSymbol": "L:bk.getMonochromeRow(II)[I#15",
+      "renamedSymbol": "L:LineNoiseOperator.getMonochromeRow(II)[I#15",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -144057,7 +144113,7 @@
     },
     {
       "symbol": "L:bk.c(II)[I#16",
-      "renamedSymbol": "L:bk.getMonochromeRow(II)[I#16",
+      "renamedSymbol": "L:LineNoiseOperator.getMonochromeRow(II)[I#16",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -144068,7 +144124,7 @@
     },
     {
       "symbol": "L:bk.c(II)[I#17",
-      "renamedSymbol": "L:bk.getMonochromeRow(II)[I#17",
+      "renamedSymbol": "L:LineNoiseOperator.getMonochromeRow(II)[I#17",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -144079,7 +144135,7 @@
     },
     {
       "symbol": "L:bk.c(II)[I#18",
-      "renamedSymbol": "L:bk.getMonochromeRow(II)[I#18",
+      "renamedSymbol": "L:LineNoiseOperator.getMonochromeRow(II)[I#18",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -144090,7 +144146,7 @@
     },
     {
       "symbol": "L:bk.c(II)[I#19",
-      "renamedSymbol": "L:bk.getMonochromeRow(II)[I#19",
+      "renamedSymbol": "L:LineNoiseOperator.getMonochromeRow(II)[I#19",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -144101,7 +144157,7 @@
     },
     {
       "symbol": "L:bk.c(II)[I#2",
-      "renamedSymbol": "L:bk.getMonochromeRow(II)[I#2",
+      "renamedSymbol": "L:LineNoiseOperator.getMonochromeRow(II)[I#2",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -144112,7 +144168,7 @@
     },
     {
       "symbol": "L:bk.c(II)[I#20",
-      "renamedSymbol": "L:bk.getMonochromeRow(II)[I#20",
+      "renamedSymbol": "L:LineNoiseOperator.getMonochromeRow(II)[I#20",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -144123,7 +144179,7 @@
     },
     {
       "symbol": "L:bk.c(II)[I#21",
-      "renamedSymbol": "L:bk.getMonochromeRow(II)[I#21",
+      "renamedSymbol": "L:LineNoiseOperator.getMonochromeRow(II)[I#21",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -144134,7 +144190,7 @@
     },
     {
       "symbol": "L:bk.c(II)[I#22",
-      "renamedSymbol": "L:bk.getMonochromeRow(II)[I#22",
+      "renamedSymbol": "L:LineNoiseOperator.getMonochromeRow(II)[I#22",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -144145,7 +144201,7 @@
     },
     {
       "symbol": "L:bk.c(II)[I#23",
-      "renamedSymbol": "L:bk.getMonochromeRow(II)[I#23",
+      "renamedSymbol": "L:LineNoiseOperator.getMonochromeRow(II)[I#23",
       "originalName": "var24",
       "renamedName": "var24",
       "declaration": {
@@ -144156,7 +144212,7 @@
     },
     {
       "symbol": "L:bk.c(II)[I#24",
-      "renamedSymbol": "L:bk.getMonochromeRow(II)[I#24",
+      "renamedSymbol": "L:LineNoiseOperator.getMonochromeRow(II)[I#24",
       "originalName": "var25",
       "renamedName": "var25",
       "declaration": {
@@ -144167,7 +144223,7 @@
     },
     {
       "symbol": "L:bk.c(II)[I#25",
-      "renamedSymbol": "L:bk.getMonochromeRow(II)[I#25",
+      "renamedSymbol": "L:LineNoiseOperator.getMonochromeRow(II)[I#25",
       "originalName": "var26",
       "renamedName": "var26",
       "declaration": {
@@ -144178,7 +144234,7 @@
     },
     {
       "symbol": "L:bk.c(II)[I#26",
-      "renamedSymbol": "L:bk.getMonochromeRow(II)[I#26",
+      "renamedSymbol": "L:LineNoiseOperator.getMonochromeRow(II)[I#26",
       "originalName": "var27",
       "renamedName": "var27",
       "declaration": {
@@ -144189,7 +144245,7 @@
     },
     {
       "symbol": "L:bk.c(II)[I#27",
-      "renamedSymbol": "L:bk.getMonochromeRow(II)[I#27",
+      "renamedSymbol": "L:LineNoiseOperator.getMonochromeRow(II)[I#27",
       "originalName": "var31",
       "renamedName": "var31",
       "declaration": {
@@ -144200,7 +144256,7 @@
     },
     {
       "symbol": "L:bk.c(II)[I#28",
-      "renamedSymbol": "L:bk.getMonochromeRow(II)[I#28",
+      "renamedSymbol": "L:LineNoiseOperator.getMonochromeRow(II)[I#28",
       "originalName": "var16Lifetime1",
       "renamedName": "var16Lifetime1",
       "declaration": {
@@ -144211,7 +144267,7 @@
     },
     {
       "symbol": "L:bk.c(II)[I#29",
-      "renamedSymbol": "L:bk.getMonochromeRow(II)[I#29",
+      "renamedSymbol": "L:LineNoiseOperator.getMonochromeRow(II)[I#29",
       "originalName": "var16Lifetime2",
       "renamedName": "var16Lifetime2",
       "declaration": {
@@ -144222,7 +144278,7 @@
     },
     {
       "symbol": "L:bk.c(II)[I#3",
-      "renamedSymbol": "L:bk.getMonochromeRow(II)[I#3",
+      "renamedSymbol": "L:LineNoiseOperator.getMonochromeRow(II)[I#3",
       "originalName": "stackIn_21_0",
       "renamedName": "stackIn_21_0",
       "declaration": {
@@ -144233,7 +144289,7 @@
     },
     {
       "symbol": "L:bk.c(II)[I#30",
-      "renamedSymbol": "L:bk.getMonochromeRow(II)[I#30",
+      "renamedSymbol": "L:LineNoiseOperator.getMonochromeRow(II)[I#30",
       "originalName": "var17Lifetime1",
       "renamedName": "var17Lifetime1",
       "declaration": {
@@ -144244,7 +144300,7 @@
     },
     {
       "symbol": "L:bk.c(II)[I#31",
-      "renamedSymbol": "L:bk.getMonochromeRow(II)[I#31",
+      "renamedSymbol": "L:LineNoiseOperator.getMonochromeRow(II)[I#31",
       "originalName": "var17Lifetime2",
       "renamedName": "var17Lifetime2",
       "declaration": {
@@ -144255,7 +144311,7 @@
     },
     {
       "symbol": "L:bk.c(II)[I#4",
-      "renamedSymbol": "L:bk.getMonochromeRow(II)[I#4",
+      "renamedSymbol": "L:LineNoiseOperator.getMonochromeRow(II)[I#4",
       "originalName": "stackIn_29_0",
       "renamedName": "stackIn_29_0",
       "declaration": {
@@ -144266,7 +144322,7 @@
     },
     {
       "symbol": "L:bk.c(II)[I#5",
-      "renamedSymbol": "L:bk.getMonochromeRow(II)[I#5",
+      "renamedSymbol": "L:LineNoiseOperator.getMonochromeRow(II)[I#5",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -144277,7 +144333,7 @@
     },
     {
       "symbol": "L:bk.c(II)[I#6",
-      "renamedSymbol": "L:bk.getMonochromeRow(II)[I#6",
+      "renamedSymbol": "L:LineNoiseOperator.getMonochromeRow(II)[I#6",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -144288,7 +144344,7 @@
     },
     {
       "symbol": "L:bk.c(II)[I#7",
-      "renamedSymbol": "L:bk.getMonochromeRow(II)[I#7",
+      "renamedSymbol": "L:LineNoiseOperator.getMonochromeRow(II)[I#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -144299,7 +144355,7 @@
     },
     {
       "symbol": "L:bk.c(II)[I#8",
-      "renamedSymbol": "L:bk.getMonochromeRow(II)[I#8",
+      "renamedSymbol": "L:LineNoiseOperator.getMonochromeRow(II)[I#8",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -144310,7 +144366,7 @@
     },
     {
       "symbol": "L:bk.c(II)[I#9",
-      "renamedSymbol": "L:bk.getMonochromeRow(II)[I#9",
+      "renamedSymbol": "L:LineNoiseOperator.getMonochromeRow(II)[I#9",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -215139,7 +215195,7 @@
     },
     {
       "symbol": "L:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;#0",
-      "renamedSymbol": "L:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;#0",
+      "renamedSymbol": "L:KaleidoscopeOperator.a(BLjava/lang/CharSequence;)Ljava/lang/String;#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -215150,7 +215206,7 @@
     },
     {
       "symbol": "L:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;#1",
-      "renamedSymbol": "L:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;#1",
+      "renamedSymbol": "L:KaleidoscopeOperator.a(BLjava/lang/CharSequence;)Ljava/lang/String;#1",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -215161,7 +215217,7 @@
     },
     {
       "symbol": "L:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;#10",
-      "renamedSymbol": "L:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;#10",
+      "renamedSymbol": "L:KaleidoscopeOperator.a(BLjava/lang/CharSequence;)Ljava/lang/String;#10",
       "originalName": "stackIn_23_1",
       "renamedName": "stackIn_23_1",
       "declaration": {
@@ -215172,7 +215228,7 @@
     },
     {
       "symbol": "L:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;#11",
-      "renamedSymbol": "L:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;#11",
+      "renamedSymbol": "L:KaleidoscopeOperator.a(BLjava/lang/CharSequence;)Ljava/lang/String;#11",
       "originalName": "stackIn_24_2",
       "renamedName": "stackIn_24_2",
       "declaration": {
@@ -215183,7 +215239,7 @@
     },
     {
       "symbol": "L:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;#12",
-      "renamedSymbol": "L:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;#12",
+      "renamedSymbol": "L:KaleidoscopeOperator.a(BLjava/lang/CharSequence;)Ljava/lang/String;#12",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -215194,7 +215250,7 @@
     },
     {
       "symbol": "L:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;#13",
-      "renamedSymbol": "L:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;#13",
+      "renamedSymbol": "L:KaleidoscopeOperator.a(BLjava/lang/CharSequence;)Ljava/lang/String;#13",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -215205,7 +215261,7 @@
     },
     {
       "symbol": "L:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;#14",
-      "renamedSymbol": "L:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;#14",
+      "renamedSymbol": "L:KaleidoscopeOperator.a(BLjava/lang/CharSequence;)Ljava/lang/String;#14",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -215216,7 +215272,7 @@
     },
     {
       "symbol": "L:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;#2",
-      "renamedSymbol": "L:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;#2",
+      "renamedSymbol": "L:KaleidoscopeOperator.a(BLjava/lang/CharSequence;)Ljava/lang/String;#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -215227,7 +215283,7 @@
     },
     {
       "symbol": "L:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;#3",
-      "renamedSymbol": "L:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;#3",
+      "renamedSymbol": "L:KaleidoscopeOperator.a(BLjava/lang/CharSequence;)Ljava/lang/String;#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -215238,7 +215294,7 @@
     },
     {
       "symbol": "L:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;#4",
-      "renamedSymbol": "L:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;#4",
+      "renamedSymbol": "L:KaleidoscopeOperator.a(BLjava/lang/CharSequence;)Ljava/lang/String;#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -215249,7 +215305,7 @@
     },
     {
       "symbol": "L:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;#5",
-      "renamedSymbol": "L:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;#5",
+      "renamedSymbol": "L:KaleidoscopeOperator.a(BLjava/lang/CharSequence;)Ljava/lang/String;#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -215260,7 +215316,7 @@
     },
     {
       "symbol": "L:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;#6",
-      "renamedSymbol": "L:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;#6",
+      "renamedSymbol": "L:KaleidoscopeOperator.a(BLjava/lang/CharSequence;)Ljava/lang/String;#6",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -215271,7 +215327,7 @@
     },
     {
       "symbol": "L:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;#7",
-      "renamedSymbol": "L:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;#7",
+      "renamedSymbol": "L:KaleidoscopeOperator.a(BLjava/lang/CharSequence;)Ljava/lang/String;#7",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -215282,7 +215338,7 @@
     },
     {
       "symbol": "L:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;#8",
-      "renamedSymbol": "L:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;#8",
+      "renamedSymbol": "L:KaleidoscopeOperator.a(BLjava/lang/CharSequence;)Ljava/lang/String;#8",
       "originalName": "stackIn_20_0",
       "renamedName": "stackIn_20_0",
       "declaration": {
@@ -215293,7 +215349,7 @@
     },
     {
       "symbol": "L:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;#9",
-      "renamedSymbol": "L:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;#9",
+      "renamedSymbol": "L:KaleidoscopeOperator.a(BLjava/lang/CharSequence;)Ljava/lang/String;#9",
       "originalName": "stackIn_23_0",
       "renamedName": "stackIn_23_0",
       "declaration": {
@@ -215304,7 +215360,7 @@
     },
     {
       "symbol": "L:fl.a(BLuia;I)V#0",
-      "renamedSymbol": "L:fl.decodeParameter(BLPacketBuffer;I)V#0",
+      "renamedSymbol": "L:KaleidoscopeOperator.decodeParameter(BLPacketBuffer;I)V#0",
       "originalName": "stackIn_5_1",
       "renamedName": "stackIn_5_1",
       "declaration": {
@@ -215315,7 +215371,7 @@
     },
     {
       "symbol": "L:fl.a(BLuia;I)V#1",
-      "renamedSymbol": "L:fl.decodeParameter(BLPacketBuffer;I)V#1",
+      "renamedSymbol": "L:KaleidoscopeOperator.decodeParameter(BLPacketBuffer;I)V#1",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -215326,7 +215382,7 @@
     },
     {
       "symbol": "L:fl.a(BLuia;I)V#2",
-      "renamedSymbol": "L:fl.decodeParameter(BLPacketBuffer;I)V#2",
+      "renamedSymbol": "L:KaleidoscopeOperator.decodeParameter(BLPacketBuffer;I)V#2",
       "originalName": "stackIn_11_1",
       "renamedName": "stackIn_11_1",
       "declaration": {
@@ -215337,7 +215393,7 @@
     },
     {
       "symbol": "L:fl.a(BLuia;I)V#3",
-      "renamedSymbol": "L:fl.decodeParameter(BLPacketBuffer;I)V#3",
+      "renamedSymbol": "L:KaleidoscopeOperator.decodeParameter(BLPacketBuffer;I)V#3",
       "originalName": "stackIn_12_2",
       "renamedName": "stackIn_12_2",
       "declaration": {
@@ -215348,7 +215404,7 @@
     },
     {
       "symbol": "L:fl.a(BLuia;I)V#4",
-      "renamedSymbol": "L:fl.decodeParameter(BLPacketBuffer;I)V#4",
+      "renamedSymbol": "L:KaleidoscopeOperator.decodeParameter(BLPacketBuffer;I)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -215359,7 +215415,7 @@
     },
     {
       "symbol": "L:fl.a(BLuia;I)V#5",
-      "renamedSymbol": "L:fl.decodeParameter(BLPacketBuffer;I)V#5",
+      "renamedSymbol": "L:KaleidoscopeOperator.decodeParameter(BLPacketBuffer;I)V#5",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -215370,7 +215426,7 @@
     },
     {
       "symbol": "L:fl.a(BLuia;I)V#6",
-      "renamedSymbol": "L:fl.decodeParameter(BLPacketBuffer;I)V#6",
+      "renamedSymbol": "L:KaleidoscopeOperator.decodeParameter(BLPacketBuffer;I)V#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -215381,7 +215437,7 @@
     },
     {
       "symbol": "L:fl.b(II)[[I#0",
-      "renamedSymbol": "L:fl.getColourRow(II)[[I#0",
+      "renamedSymbol": "L:KaleidoscopeOperator.getColourRow(II)[[I#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -215392,7 +215448,7 @@
     },
     {
       "symbol": "L:fl.b(II)[[I#1",
-      "renamedSymbol": "L:fl.getColourRow(II)[[I#1",
+      "renamedSymbol": "L:KaleidoscopeOperator.getColourRow(II)[[I#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -215403,7 +215459,7 @@
     },
     {
       "symbol": "L:fl.b(II)[[I#2",
-      "renamedSymbol": "L:fl.getColourRow(II)[[I#2",
+      "renamedSymbol": "L:KaleidoscopeOperator.getColourRow(II)[[I#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -215414,7 +215470,7 @@
     },
     {
       "symbol": "L:fl.b(II)[[I#3",
-      "renamedSymbol": "L:fl.getColourRow(II)[[I#3",
+      "renamedSymbol": "L:KaleidoscopeOperator.getColourRow(II)[[I#3",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -215425,7 +215481,7 @@
     },
     {
       "symbol": "L:fl.b(II)[[I#4",
-      "renamedSymbol": "L:fl.getColourRow(II)[[I#4",
+      "renamedSymbol": "L:KaleidoscopeOperator.getColourRow(II)[[I#4",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -215436,7 +215492,7 @@
     },
     {
       "symbol": "L:fl.b(II)[[I#5",
-      "renamedSymbol": "L:fl.getColourRow(II)[[I#5",
+      "renamedSymbol": "L:KaleidoscopeOperator.getColourRow(II)[[I#5",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -215447,7 +215503,7 @@
     },
     {
       "symbol": "L:fl.b(II)[[I#6",
-      "renamedSymbol": "L:fl.getColourRow(II)[[I#6",
+      "renamedSymbol": "L:KaleidoscopeOperator.getColourRow(II)[[I#6",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -215458,7 +215514,7 @@
     },
     {
       "symbol": "L:fl.b(II)[[I#7",
-      "renamedSymbol": "L:fl.getColourRow(II)[[I#7",
+      "renamedSymbol": "L:KaleidoscopeOperator.getColourRow(II)[[I#7",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -215469,7 +215525,7 @@
     },
     {
       "symbol": "L:fl.b(II)[[I#8",
-      "renamedSymbol": "L:fl.getColourRow(II)[[I#8",
+      "renamedSymbol": "L:KaleidoscopeOperator.getColourRow(II)[[I#8",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -215480,7 +215536,7 @@
     },
     {
       "symbol": "L:fl.b(II)[[I#9",
-      "renamedSymbol": "L:fl.getColourRow(II)[[I#9",
+      "renamedSymbol": "L:KaleidoscopeOperator.getColourRow(II)[[I#9",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -215491,7 +215547,7 @@
     },
     {
       "symbol": "L:fl.c(II)[I#0",
-      "renamedSymbol": "L:fl.getMonochromeRow(II)[I#0",
+      "renamedSymbol": "L:KaleidoscopeOperator.getMonochromeRow(II)[I#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -215502,7 +215558,7 @@
     },
     {
       "symbol": "L:fl.c(II)[I#1",
-      "renamedSymbol": "L:fl.getMonochromeRow(II)[I#1",
+      "renamedSymbol": "L:KaleidoscopeOperator.getMonochromeRow(II)[I#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -215513,7 +215569,7 @@
     },
     {
       "symbol": "L:fl.c(II)[I#2",
-      "renamedSymbol": "L:fl.getMonochromeRow(II)[I#2",
+      "renamedSymbol": "L:KaleidoscopeOperator.getMonochromeRow(II)[I#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -215524,7 +215580,7 @@
     },
     {
       "symbol": "L:fl.c(II)[I#3",
-      "renamedSymbol": "L:fl.getMonochromeRow(II)[I#3",
+      "renamedSymbol": "L:KaleidoscopeOperator.getMonochromeRow(II)[I#3",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -215535,7 +215591,7 @@
     },
     {
       "symbol": "L:fl.c(II)[I#4",
-      "renamedSymbol": "L:fl.getMonochromeRow(II)[I#4",
+      "renamedSymbol": "L:KaleidoscopeOperator.getMonochromeRow(II)[I#4",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -215546,7 +215602,7 @@
     },
     {
       "symbol": "L:fl.c(II)[I#5",
-      "renamedSymbol": "L:fl.getMonochromeRow(II)[I#5",
+      "renamedSymbol": "L:KaleidoscopeOperator.getMonochromeRow(II)[I#5",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -215557,7 +215613,7 @@
     },
     {
       "symbol": "L:fl.d(III)V#0",
-      "renamedSymbol": "L:fl.d(III)V#0",
+      "renamedSymbol": "L:KaleidoscopeOperator.d(III)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -215568,7 +215624,7 @@
     },
     {
       "symbol": "L:fl.d(III)V#1",
-      "renamedSymbol": "L:fl.d(III)V#1",
+      "renamedSymbol": "L:KaleidoscopeOperator.d(III)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -215579,7 +215635,7 @@
     },
     {
       "symbol": "L:fl.d(III)V#2",
-      "renamedSymbol": "L:fl.d(III)V#2",
+      "renamedSymbol": "L:KaleidoscopeOperator.d(III)V#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -215590,7 +215646,7 @@
     },
     {
       "symbol": "L:fl.d(III)V#3",
-      "renamedSymbol": "L:fl.d(III)V#3",
+      "renamedSymbol": "L:KaleidoscopeOperator.d(III)V#3",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -225831,7 +225887,7 @@
     },
     {
       "symbol": "L:fv.<init>(Lab;IIIII)V#0",
-      "renamedSymbol": "L:fv.<init>(Lab;IIIII)V#0",
+      "renamedSymbol": "L:RewardChoiceSlot.<init>(LRewardChoicePhase;IIIII)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -225842,7 +225898,7 @@
     },
     {
       "symbol": "L:fv.a(B)V#0",
-      "renamedSymbol": "L:fv.releaseStatics(B)V#0",
+      "renamedSymbol": "L:RewardChoiceSlot.releaseStatics(B)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -225853,7 +225909,7 @@
     },
     {
       "symbol": "L:fv.a(BIJ)V#0",
-      "renamedSymbol": "L:fv.a(BIJ)V#0",
+      "renamedSymbol": "L:RewardChoiceSlot.a(BIJ)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -225864,7 +225920,7 @@
     },
     {
       "symbol": "L:fv.a(BIJ)V#1",
-      "renamedSymbol": "L:fv.a(BIJ)V#1",
+      "renamedSymbol": "L:RewardChoiceSlot.a(BIJ)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -225875,7 +225931,7 @@
     },
     {
       "symbol": "L:fv.a(BIJ)V#2",
-      "renamedSymbol": "L:fv.a(BIJ)V#2",
+      "renamedSymbol": "L:RewardChoiceSlot.a(BIJ)V#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -225886,7 +225942,7 @@
     },
     {
       "symbol": "L:fv.a(I)V#0",
-      "renamedSymbol": "L:fv.a(I)V#0",
+      "renamedSymbol": "L:RewardChoiceSlot.a(I)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -225897,7 +225953,7 @@
     },
     {
       "symbol": "L:fv.a(I)V#1",
-      "renamedSymbol": "L:fv.a(I)V#1",
+      "renamedSymbol": "L:RewardChoiceSlot.a(I)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -225908,7 +225964,7 @@
     },
     {
       "symbol": "L:fv.a(I)V#2",
-      "renamedSymbol": "L:fv.a(I)V#2",
+      "renamedSymbol": "L:RewardChoiceSlot.a(I)V#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -225919,7 +225975,7 @@
     },
     {
       "symbol": "L:fv.a(I)V#3",
-      "renamedSymbol": "L:fv.a(I)V#3",
+      "renamedSymbol": "L:RewardChoiceSlot.a(I)V#3",
       "originalName": "var3_ref_ha",
       "renamedName": "var3_ref_ha",
       "declaration": {
@@ -225930,7 +225986,7 @@
     },
     {
       "symbol": "L:fv.a(I)V#4",
-      "renamedSymbol": "L:fv.a(I)V#4",
+      "renamedSymbol": "L:RewardChoiceSlot.a(I)V#4",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -225941,7 +225997,7 @@
     },
     {
       "symbol": "L:fv.a(I)V#5",
-      "renamedSymbol": "L:fv.a(I)V#5",
+      "renamedSymbol": "L:RewardChoiceSlot.a(I)V#5",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -225952,7 +226008,7 @@
     },
     {
       "symbol": "L:fv.a(I)V#6",
-      "renamedSymbol": "L:fv.a(I)V#6",
+      "renamedSymbol": "L:RewardChoiceSlot.a(I)V#6",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -225963,7 +226019,7 @@
     },
     {
       "symbol": "L:fv.a(I)V#7",
-      "renamedSymbol": "L:fv.a(I)V#7",
+      "renamedSymbol": "L:RewardChoiceSlot.a(I)V#7",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -225974,7 +226030,7 @@
     },
     {
       "symbol": "L:fv.a(I)V#8",
-      "renamedSymbol": "L:fv.a(I)V#8",
+      "renamedSymbol": "L:RewardChoiceSlot.a(I)V#8",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -404064,7 +404120,7 @@
     },
     {
       "symbol": "L:qh.a(ILqra;)V#0",
-      "renamedSymbol": "L:MatchScreen.a(ILMatchPhase;)V#0",
+      "renamedSymbol": "L:MatchScreen.setPhase(ILMatchPhase;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -407969,7 +408025,7 @@
     },
     {
       "symbol": "L:qka.<init>(Lqh;Lv;)V#0",
-      "renamedSymbol": "L:qka.<init>(LMatchScreen;LMatchProtocol;)V#0",
+      "renamedSymbol": "L:StandingsPhase.<init>(LMatchScreen;LMatchProtocol;)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -407980,7 +408036,7 @@
     },
     {
       "symbol": "L:qka.<init>(Lqh;Lv;)V#1",
-      "renamedSymbol": "L:qka.<init>(LMatchScreen;LMatchProtocol;)V#1",
+      "renamedSymbol": "L:StandingsPhase.<init>(LMatchScreen;LMatchProtocol;)V#1",
       "originalName": "stackIn_26_0",
       "renamedName": "stackIn_26_0",
       "declaration": {
@@ -407991,7 +408047,7 @@
     },
     {
       "symbol": "L:qka.<init>(Lqh;Lv;)V#10",
-      "renamedSymbol": "L:qka.<init>(LMatchScreen;LMatchProtocol;)V#10",
+      "renamedSymbol": "L:StandingsPhase.<init>(LMatchScreen;LMatchProtocol;)V#10",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -408002,7 +408058,7 @@
     },
     {
       "symbol": "L:qka.<init>(Lqh;Lv;)V#11",
-      "renamedSymbol": "L:qka.<init>(LMatchScreen;LMatchProtocol;)V#11",
+      "renamedSymbol": "L:StandingsPhase.<init>(LMatchScreen;LMatchProtocol;)V#11",
       "originalName": "var3_intLifetime1",
       "renamedName": "var3_intLifetime1",
       "declaration": {
@@ -408013,7 +408069,7 @@
     },
     {
       "symbol": "L:qka.<init>(Lqh;Lv;)V#12",
-      "renamedSymbol": "L:qka.<init>(LMatchScreen;LMatchProtocol;)V#12",
+      "renamedSymbol": "L:StandingsPhase.<init>(LMatchScreen;LMatchProtocol;)V#12",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -408024,7 +408080,7 @@
     },
     {
       "symbol": "L:qka.<init>(Lqh;Lv;)V#2",
-      "renamedSymbol": "L:qka.<init>(LMatchScreen;LMatchProtocol;)V#2",
+      "renamedSymbol": "L:StandingsPhase.<init>(LMatchScreen;LMatchProtocol;)V#2",
       "originalName": "stackIn_34_0",
       "renamedName": "stackIn_34_0",
       "declaration": {
@@ -408035,7 +408091,7 @@
     },
     {
       "symbol": "L:qka.<init>(Lqh;Lv;)V#3",
-      "renamedSymbol": "L:qka.<init>(LMatchScreen;LMatchProtocol;)V#3",
+      "renamedSymbol": "L:StandingsPhase.<init>(LMatchScreen;LMatchProtocol;)V#3",
       "originalName": "stackIn_34_1",
       "renamedName": "stackIn_34_1",
       "declaration": {
@@ -408046,7 +408102,7 @@
     },
     {
       "symbol": "L:qka.<init>(Lqh;Lv;)V#4",
-      "renamedSymbol": "L:qka.<init>(LMatchScreen;LMatchProtocol;)V#4",
+      "renamedSymbol": "L:StandingsPhase.<init>(LMatchScreen;LMatchProtocol;)V#4",
       "originalName": "stackIn_35_2",
       "renamedName": "stackIn_35_2",
       "declaration": {
@@ -408057,7 +408113,7 @@
     },
     {
       "symbol": "L:qka.<init>(Lqh;Lv;)V#5",
-      "renamedSymbol": "L:qka.<init>(LMatchScreen;LMatchProtocol;)V#5",
+      "renamedSymbol": "L:StandingsPhase.<init>(LMatchScreen;LMatchProtocol;)V#5",
       "originalName": "stackIn_37_1",
       "renamedName": "stackIn_37_1",
       "declaration": {
@@ -408068,7 +408124,7 @@
     },
     {
       "symbol": "L:qka.<init>(Lqh;Lv;)V#6",
-      "renamedSymbol": "L:qka.<init>(LMatchScreen;LMatchProtocol;)V#6",
+      "renamedSymbol": "L:StandingsPhase.<init>(LMatchScreen;LMatchProtocol;)V#6",
       "originalName": "stackIn_38_2",
       "renamedName": "stackIn_38_2",
       "declaration": {
@@ -408079,7 +408135,7 @@
     },
     {
       "symbol": "L:qka.<init>(Lqh;Lv;)V#7",
-      "renamedSymbol": "L:qka.<init>(LMatchScreen;LMatchProtocol;)V#7",
+      "renamedSymbol": "L:StandingsPhase.<init>(LMatchScreen;LMatchProtocol;)V#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -408090,7 +408146,7 @@
     },
     {
       "symbol": "L:qka.<init>(Lqh;Lv;)V#8",
-      "renamedSymbol": "L:qka.<init>(LMatchScreen;LMatchProtocol;)V#8",
+      "renamedSymbol": "L:StandingsPhase.<init>(LMatchScreen;LMatchProtocol;)V#8",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -408101,7 +408157,7 @@
     },
     {
       "symbol": "L:qka.<init>(Lqh;Lv;)V#9",
-      "renamedSymbol": "L:qka.<init>(LMatchScreen;LMatchProtocol;)V#9",
+      "renamedSymbol": "L:StandingsPhase.<init>(LMatchScreen;LMatchProtocol;)V#9",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -408112,7 +408168,7 @@
     },
     {
       "symbol": "L:qka.a(II)V#0",
-      "renamedSymbol": "L:qka.a(II)V#0",
+      "renamedSymbol": "L:StandingsPhase.a(II)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -408123,7 +408179,7 @@
     },
     {
       "symbol": "L:qka.a(IZ)V#0",
-      "renamedSymbol": "L:qka.a(IZ)V#0",
+      "renamedSymbol": "L:StandingsPhase.a(IZ)V#0",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -408134,7 +408190,7 @@
     },
     {
       "symbol": "L:qka.a(IZ)V#1",
-      "renamedSymbol": "L:qka.a(IZ)V#1",
+      "renamedSymbol": "L:StandingsPhase.a(IZ)V#1",
       "originalName": "stackIn_5_1",
       "renamedName": "stackIn_5_1",
       "declaration": {
@@ -408145,7 +408201,7 @@
     },
     {
       "symbol": "L:qka.a(IZ)V#10",
-      "renamedSymbol": "L:qka.a(IZ)V#10",
+      "renamedSymbol": "L:StandingsPhase.a(IZ)V#10",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -408156,7 +408212,7 @@
     },
     {
       "symbol": "L:qka.a(IZ)V#11",
-      "renamedSymbol": "L:qka.a(IZ)V#11",
+      "renamedSymbol": "L:StandingsPhase.a(IZ)V#11",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -408167,7 +408223,7 @@
     },
     {
       "symbol": "L:qka.a(IZ)V#12",
-      "renamedSymbol": "L:qka.a(IZ)V#12",
+      "renamedSymbol": "L:StandingsPhase.a(IZ)V#12",
       "originalName": "var3Lifetime2",
       "renamedName": "var3Lifetime2",
       "declaration": {
@@ -408178,7 +408234,7 @@
     },
     {
       "symbol": "L:qka.a(IZ)V#2",
-      "renamedSymbol": "L:qka.a(IZ)V#2",
+      "renamedSymbol": "L:StandingsPhase.a(IZ)V#2",
       "originalName": "stackIn_6_2",
       "renamedName": "stackIn_6_2",
       "declaration": {
@@ -408189,7 +408245,7 @@
     },
     {
       "symbol": "L:qka.a(IZ)V#3",
-      "renamedSymbol": "L:qka.a(IZ)V#3",
+      "renamedSymbol": "L:StandingsPhase.a(IZ)V#3",
       "originalName": "stackIn_24_0",
       "renamedName": "stackIn_24_0",
       "declaration": {
@@ -408200,7 +408256,7 @@
     },
     {
       "symbol": "L:qka.a(IZ)V#4",
-      "renamedSymbol": "L:qka.a(IZ)V#4",
+      "renamedSymbol": "L:StandingsPhase.a(IZ)V#4",
       "originalName": "stackIn_29_0",
       "renamedName": "stackIn_29_0",
       "declaration": {
@@ -408211,7 +408267,7 @@
     },
     {
       "symbol": "L:qka.a(IZ)V#5",
-      "renamedSymbol": "L:qka.a(IZ)V#5",
+      "renamedSymbol": "L:StandingsPhase.a(IZ)V#5",
       "originalName": "stackIn_29_1",
       "renamedName": "stackIn_29_1",
       "declaration": {
@@ -408222,7 +408278,7 @@
     },
     {
       "symbol": "L:qka.a(IZ)V#6",
-      "renamedSymbol": "L:qka.a(IZ)V#6",
+      "renamedSymbol": "L:StandingsPhase.a(IZ)V#6",
       "originalName": "stackIn_30_2",
       "renamedName": "stackIn_30_2",
       "declaration": {
@@ -408233,7 +408289,7 @@
     },
     {
       "symbol": "L:qka.a(IZ)V#7",
-      "renamedSymbol": "L:qka.a(IZ)V#7",
+      "renamedSymbol": "L:StandingsPhase.a(IZ)V#7",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -408244,7 +408300,7 @@
     },
     {
       "symbol": "L:qka.a(IZ)V#8",
-      "renamedSymbol": "L:qka.a(IZ)V#8",
+      "renamedSymbol": "L:StandingsPhase.a(IZ)V#8",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -408255,7 +408311,7 @@
     },
     {
       "symbol": "L:qka.a(IZ)V#9",
-      "renamedSymbol": "L:qka.a(IZ)V#9",
+      "renamedSymbol": "L:StandingsPhase.a(IZ)V#9",
       "originalName": "var4_ref_hf",
       "renamedName": "var4_ref_hf",
       "declaration": {
@@ -408266,7 +408322,7 @@
     },
     {
       "symbol": "L:qka.b(IZ)V#0",
-      "renamedSymbol": "L:qka.b(IZ)V#0",
+      "renamedSymbol": "L:StandingsPhase.b(IZ)V#0",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -408277,7 +408333,7 @@
     },
     {
       "symbol": "L:qka.b(IZ)V#1",
-      "renamedSymbol": "L:qka.b(IZ)V#1",
+      "renamedSymbol": "L:StandingsPhase.b(IZ)V#1",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -408288,7 +408344,7 @@
     },
     {
       "symbol": "L:qka.b(IZ)V#10",
-      "renamedSymbol": "L:qka.b(IZ)V#10",
+      "renamedSymbol": "L:StandingsPhase.b(IZ)V#10",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -408299,7 +408355,7 @@
     },
     {
       "symbol": "L:qka.b(IZ)V#11",
-      "renamedSymbol": "L:qka.b(IZ)V#11",
+      "renamedSymbol": "L:StandingsPhase.b(IZ)V#11",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -408310,7 +408366,7 @@
     },
     {
       "symbol": "L:qka.b(IZ)V#12",
-      "renamedSymbol": "L:qka.b(IZ)V#12",
+      "renamedSymbol": "L:StandingsPhase.b(IZ)V#12",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -408321,7 +408377,7 @@
     },
     {
       "symbol": "L:qka.b(IZ)V#13",
-      "renamedSymbol": "L:qka.b(IZ)V#13",
+      "renamedSymbol": "L:StandingsPhase.b(IZ)V#13",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -408332,7 +408388,7 @@
     },
     {
       "symbol": "L:qka.b(IZ)V#14",
-      "renamedSymbol": "L:qka.b(IZ)V#14",
+      "renamedSymbol": "L:StandingsPhase.b(IZ)V#14",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -408343,7 +408399,7 @@
     },
     {
       "symbol": "L:qka.b(IZ)V#15",
-      "renamedSymbol": "L:qka.b(IZ)V#15",
+      "renamedSymbol": "L:StandingsPhase.b(IZ)V#15",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -408354,7 +408410,7 @@
     },
     {
       "symbol": "L:qka.b(IZ)V#16",
-      "renamedSymbol": "L:qka.b(IZ)V#16",
+      "renamedSymbol": "L:StandingsPhase.b(IZ)V#16",
       "originalName": "var10_ref_String",
       "renamedName": "var10_ref_String",
       "declaration": {
@@ -408365,7 +408421,7 @@
     },
     {
       "symbol": "L:qka.b(IZ)V#17",
-      "renamedSymbol": "L:qka.b(IZ)V#17",
+      "renamedSymbol": "L:StandingsPhase.b(IZ)V#17",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -408376,7 +408432,7 @@
     },
     {
       "symbol": "L:qka.b(IZ)V#18",
-      "renamedSymbol": "L:qka.b(IZ)V#18",
+      "renamedSymbol": "L:StandingsPhase.b(IZ)V#18",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -408387,7 +408443,7 @@
     },
     {
       "symbol": "L:qka.b(IZ)V#19",
-      "renamedSymbol": "L:qka.b(IZ)V#19",
+      "renamedSymbol": "L:StandingsPhase.b(IZ)V#19",
       "originalName": "var12_ref",
       "renamedName": "var12_ref",
       "declaration": {
@@ -408398,7 +408454,7 @@
     },
     {
       "symbol": "L:qka.b(IZ)V#2",
-      "renamedSymbol": "L:qka.b(IZ)V#2",
+      "renamedSymbol": "L:StandingsPhase.b(IZ)V#2",
       "originalName": "stackIn_62_0",
       "renamedName": "stackIn_62_0",
       "declaration": {
@@ -408409,7 +408465,7 @@
     },
     {
       "symbol": "L:qka.b(IZ)V#20",
-      "renamedSymbol": "L:qka.b(IZ)V#20",
+      "renamedSymbol": "L:StandingsPhase.b(IZ)V#20",
       "originalName": "var13_ref_Exception",
       "renamedName": "var13_ref_Exception",
       "declaration": {
@@ -408420,7 +408476,7 @@
     },
     {
       "symbol": "L:qka.b(IZ)V#21",
-      "renamedSymbol": "L:qka.b(IZ)V#21",
+      "renamedSymbol": "L:StandingsPhase.b(IZ)V#21",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -408431,7 +408487,7 @@
     },
     {
       "symbol": "L:qka.b(IZ)V#22",
-      "renamedSymbol": "L:qka.b(IZ)V#22",
+      "renamedSymbol": "L:StandingsPhase.b(IZ)V#22",
       "originalName": "var13_ref_String",
       "renamedName": "var13_ref_String",
       "declaration": {
@@ -408442,7 +408498,7 @@
     },
     {
       "symbol": "L:qka.b(IZ)V#23",
-      "renamedSymbol": "L:qka.b(IZ)V#23",
+      "renamedSymbol": "L:StandingsPhase.b(IZ)V#23",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -408453,7 +408509,7 @@
     },
     {
       "symbol": "L:qka.b(IZ)V#24",
-      "renamedSymbol": "L:qka.b(IZ)V#24",
+      "renamedSymbol": "L:StandingsPhase.b(IZ)V#24",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -408464,7 +408520,7 @@
     },
     {
       "symbol": "L:qka.b(IZ)V#25",
-      "renamedSymbol": "L:qka.b(IZ)V#25",
+      "renamedSymbol": "L:StandingsPhase.b(IZ)V#25",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -408475,7 +408531,7 @@
     },
     {
       "symbol": "L:qka.b(IZ)V#26",
-      "renamedSymbol": "L:qka.b(IZ)V#26",
+      "renamedSymbol": "L:StandingsPhase.b(IZ)V#26",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -408486,7 +408542,7 @@
     },
     {
       "symbol": "L:qka.b(IZ)V#27",
-      "renamedSymbol": "L:qka.b(IZ)V#27",
+      "renamedSymbol": "L:StandingsPhase.b(IZ)V#27",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -408497,7 +408553,7 @@
     },
     {
       "symbol": "L:qka.b(IZ)V#28",
-      "renamedSymbol": "L:qka.b(IZ)V#28",
+      "renamedSymbol": "L:StandingsPhase.b(IZ)V#28",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -408508,7 +408564,7 @@
     },
     {
       "symbol": "L:qka.b(IZ)V#29",
-      "renamedSymbol": "L:qka.b(IZ)V#29",
+      "renamedSymbol": "L:StandingsPhase.b(IZ)V#29",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -408519,7 +408575,7 @@
     },
     {
       "symbol": "L:qka.b(IZ)V#3",
-      "renamedSymbol": "L:qka.b(IZ)V#3",
+      "renamedSymbol": "L:StandingsPhase.b(IZ)V#3",
       "originalName": "stackIn_62_1",
       "renamedName": "stackIn_62_1",
       "declaration": {
@@ -408530,7 +408586,7 @@
     },
     {
       "symbol": "L:qka.b(IZ)V#30",
-      "renamedSymbol": "L:qka.b(IZ)V#30",
+      "renamedSymbol": "L:StandingsPhase.b(IZ)V#30",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -408541,7 +408597,7 @@
     },
     {
       "symbol": "L:qka.b(IZ)V#31",
-      "renamedSymbol": "L:qka.b(IZ)V#31",
+      "renamedSymbol": "L:StandingsPhase.b(IZ)V#31",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -408552,7 +408608,7 @@
     },
     {
       "symbol": "L:qka.b(IZ)V#32",
-      "renamedSymbol": "L:qka.b(IZ)V#32",
+      "renamedSymbol": "L:StandingsPhase.b(IZ)V#32",
       "originalName": "var24",
       "renamedName": "var24",
       "declaration": {
@@ -408563,7 +408619,7 @@
     },
     {
       "symbol": "L:qka.b(IZ)V#33",
-      "renamedSymbol": "L:qka.b(IZ)V#33",
+      "renamedSymbol": "L:StandingsPhase.b(IZ)V#33",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -408574,7 +408630,7 @@
     },
     {
       "symbol": "L:qka.b(IZ)V#4",
-      "renamedSymbol": "L:qka.b(IZ)V#4",
+      "renamedSymbol": "L:StandingsPhase.b(IZ)V#4",
       "originalName": "stackIn_62_2",
       "renamedName": "stackIn_62_2",
       "declaration": {
@@ -408585,7 +408641,7 @@
     },
     {
       "symbol": "L:qka.b(IZ)V#5",
-      "renamedSymbol": "L:qka.b(IZ)V#5",
+      "renamedSymbol": "L:StandingsPhase.b(IZ)V#5",
       "originalName": "stackIn_62_3",
       "renamedName": "stackIn_62_3",
       "declaration": {
@@ -408596,7 +408652,7 @@
     },
     {
       "symbol": "L:qka.b(IZ)V#6",
-      "renamedSymbol": "L:qka.b(IZ)V#6",
+      "renamedSymbol": "L:StandingsPhase.b(IZ)V#6",
       "originalName": "stackIn_63_4",
       "renamedName": "stackIn_63_4",
       "declaration": {
@@ -408607,7 +408663,7 @@
     },
     {
       "symbol": "L:qka.b(IZ)V#7",
-      "renamedSymbol": "L:qka.b(IZ)V#7",
+      "renamedSymbol": "L:StandingsPhase.b(IZ)V#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -408618,7 +408674,7 @@
     },
     {
       "symbol": "L:qka.b(IZ)V#8",
-      "renamedSymbol": "L:qka.b(IZ)V#8",
+      "renamedSymbol": "L:StandingsPhase.b(IZ)V#8",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -408629,7 +408685,7 @@
     },
     {
       "symbol": "L:qka.b(IZ)V#9",
-      "renamedSymbol": "L:qka.b(IZ)V#9",
+      "renamedSymbol": "L:StandingsPhase.b(IZ)V#9",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -537780,9 +537836,9 @@
     },
     {
       "symbol": "M:ab.<init>(Lqh;Lv;)V",
-      "renamedSymbol": "M:ab.<init>(LMatchScreen;LMatchProtocol;)V",
+      "renamedSymbol": "M:RewardChoicePhase.<init>(LMatchScreen;LMatchProtocol;)V",
       "originalName": "ab",
-      "renamedName": "ab",
+      "renamedName": "RewardChoicePhase",
       "declaration": {
         "file": "ab.java",
         "start": 891,
@@ -537791,7 +537847,7 @@
     },
     {
       "symbol": "M:ab.a(CII)Z",
-      "renamedSymbol": "M:ab.a(CII)Z",
+      "renamedSymbol": "M:RewardChoicePhase.a(CII)Z",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -537802,7 +537858,7 @@
     },
     {
       "symbol": "M:ab.a(IIB)V",
-      "renamedSymbol": "M:ab.a(IIB)V",
+      "renamedSymbol": "M:RewardChoicePhase.a(IIB)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -537813,7 +537869,7 @@
     },
     {
       "symbol": "M:ab.a(III)Z",
-      "renamedSymbol": "M:ab.a(III)Z",
+      "renamedSymbol": "M:RewardChoicePhase.a(III)Z",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -537824,7 +537880,7 @@
     },
     {
       "symbol": "M:ab.a(IIIIIII)Z",
-      "renamedSymbol": "M:ab.a(IIIIIII)Z",
+      "renamedSymbol": "M:RewardChoicePhase.a(IIIIIII)Z",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -537835,7 +537891,7 @@
     },
     {
       "symbol": "M:ab.a(ILjava/lang/String;)Ljha;",
-      "renamedSymbol": "M:ab.a(ILjava/lang/String;)Ljha;",
+      "renamedSymbol": "M:RewardChoicePhase.a(ILjava/lang/String;)Ljha;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -537846,7 +537902,7 @@
     },
     {
       "symbol": "M:ab.a(IZ)V",
-      "renamedSymbol": "M:ab.a(IZ)V",
+      "renamedSymbol": "M:RewardChoicePhase.a(IZ)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -537857,7 +537913,7 @@
     },
     {
       "symbol": "M:ab.a(IZI)V",
-      "renamedSymbol": "M:ab.a(IZI)V",
+      "renamedSymbol": "M:RewardChoicePhase.a(IZI)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -537868,7 +537924,7 @@
     },
     {
       "symbol": "M:ab.a(Ljava/lang/String;B)Z",
-      "renamedSymbol": "M:ab.a(Ljava/lang/String;B)Z",
+      "renamedSymbol": "M:RewardChoicePhase.a(Ljava/lang/String;B)Z",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -537879,7 +537935,7 @@
     },
     {
       "symbol": "M:ab.a(Z)Z",
-      "renamedSymbol": "M:ab.a(Z)Z",
+      "renamedSymbol": "M:RewardChoicePhase.a(Z)Z",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -537890,7 +537946,7 @@
     },
     {
       "symbol": "M:ab.b(B)Lcfa;",
-      "renamedSymbol": "M:ab.b(B)LCommonChooseReward;",
+      "renamedSymbol": "M:RewardChoicePhase.b(B)LCommonChooseReward;",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -537901,7 +537957,7 @@
     },
     {
       "symbol": "M:ab.b(IIB)Z",
-      "renamedSymbol": "M:ab.b(IIB)Z",
+      "renamedSymbol": "M:RewardChoicePhase.b(IIB)Z",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -537912,7 +537968,7 @@
     },
     {
       "symbol": "M:ab.b(IZ)V",
-      "renamedSymbol": "M:ab.b(IZ)V",
+      "renamedSymbol": "M:RewardChoicePhase.b(IZ)V",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -537923,7 +537979,7 @@
     },
     {
       "symbol": "M:ab.e(I)Z",
-      "renamedSymbol": "M:ab.e(I)Z",
+      "renamedSymbol": "M:RewardChoicePhase.e(I)Z",
       "originalName": "e",
       "renamedName": "e",
       "declaration": {
@@ -537934,7 +537990,7 @@
     },
     {
       "symbol": "M:ab.f(I)V",
-      "renamedSymbol": "M:ab.releaseStatics(I)V",
+      "renamedSymbol": "M:RewardChoicePhase.releaseStatics(I)V",
       "originalName": "f",
       "renamedName": "releaseStatics",
       "declaration": {
@@ -537945,7 +538001,7 @@
     },
     {
       "symbol": "M:ab.g(I)V",
-      "renamedSymbol": "M:ab.g(I)V",
+      "renamedSymbol": "M:RewardChoicePhase.g(I)V",
       "originalName": "g",
       "renamedName": "g",
       "declaration": {
@@ -537956,7 +538012,7 @@
     },
     {
       "symbol": "M:ab.h(I)V",
-      "renamedSymbol": "M:ab.h(I)V",
+      "renamedSymbol": "M:RewardChoicePhase.h(I)V",
       "originalName": "h",
       "renamedName": "h",
       "declaration": {
@@ -537967,7 +538023,7 @@
     },
     {
       "symbol": "M:ab.i(I)V",
-      "renamedSymbol": "M:ab.i(I)V",
+      "renamedSymbol": "M:RewardChoicePhase.i(I)V",
       "originalName": "i",
       "renamedName": "i",
       "declaration": {
@@ -543379,9 +543435,9 @@
     },
     {
       "symbol": "M:bk.<init>()V",
-      "renamedSymbol": "M:bk.<init>()V",
+      "renamedSymbol": "M:LineNoiseOperator.<init>()V",
       "originalName": "bk",
-      "renamedName": "bk",
+      "renamedName": "LineNoiseOperator",
       "declaration": {
         "file": "bk.java",
         "start": 584,
@@ -543390,7 +543446,7 @@
     },
     {
       "symbol": "M:bk.a(BLuia;I)V",
-      "renamedSymbol": "M:bk.decodeParameter(BLPacketBuffer;I)V",
+      "renamedSymbol": "M:LineNoiseOperator.decodeParameter(BLPacketBuffer;I)V",
       "originalName": "a",
       "renamedName": "decodeParameter",
       "declaration": {
@@ -543401,7 +543457,7 @@
     },
     {
       "symbol": "M:bk.b(B)V",
-      "renamedSymbol": "M:bk.b(B)V",
+      "renamedSymbol": "M:LineNoiseOperator.b(B)V",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -543412,7 +543468,7 @@
     },
     {
       "symbol": "M:bk.c(I)V",
-      "renamedSymbol": "M:bk.c(I)V",
+      "renamedSymbol": "M:LineNoiseOperator.c(I)V",
       "originalName": "c",
       "renamedName": "c",
       "declaration": {
@@ -543423,7 +543479,7 @@
     },
     {
       "symbol": "M:bk.c(II)[I",
-      "renamedSymbol": "M:bk.getMonochromeRow(II)[I",
+      "renamedSymbol": "M:LineNoiseOperator.getMonochromeRow(II)[I",
       "originalName": "c",
       "renamedName": "getMonochromeRow",
       "declaration": {
@@ -543434,7 +543490,7 @@
     },
     {
       "symbol": "M:bk.d(B)V",
-      "renamedSymbol": "M:bk.releaseStatics(B)V",
+      "renamedSymbol": "M:LineNoiseOperator.releaseStatics(B)V",
       "originalName": "d",
       "renamedName": "releaseStatics",
       "declaration": {
@@ -564290,9 +564346,9 @@
     },
     {
       "symbol": "M:fl.<init>()V",
-      "renamedSymbol": "M:fl.<init>()V",
+      "renamedSymbol": "M:KaleidoscopeOperator.<init>()V",
       "originalName": "fl",
-      "renamedName": "fl",
+      "renamedName": "KaleidoscopeOperator",
       "declaration": {
         "file": "fl.java",
         "start": 6683,
@@ -564301,7 +564357,7 @@
     },
     {
       "symbol": "M:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;",
-      "renamedSymbol": "M:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;",
+      "renamedSymbol": "M:KaleidoscopeOperator.a(BLjava/lang/CharSequence;)Ljava/lang/String;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -564312,7 +564368,7 @@
     },
     {
       "symbol": "M:fl.a(BLuia;I)V",
-      "renamedSymbol": "M:fl.decodeParameter(BLPacketBuffer;I)V",
+      "renamedSymbol": "M:KaleidoscopeOperator.decodeParameter(BLPacketBuffer;I)V",
       "originalName": "a",
       "renamedName": "decodeParameter",
       "declaration": {
@@ -564323,7 +564379,7 @@
     },
     {
       "symbol": "M:fl.b(II)[[I",
-      "renamedSymbol": "M:fl.getColourRow(II)[[I",
+      "renamedSymbol": "M:KaleidoscopeOperator.getColourRow(II)[[I",
       "originalName": "b",
       "renamedName": "getColourRow",
       "declaration": {
@@ -564334,7 +564390,7 @@
     },
     {
       "symbol": "M:fl.c(II)[I",
-      "renamedSymbol": "M:fl.getMonochromeRow(II)[I",
+      "renamedSymbol": "M:KaleidoscopeOperator.getMonochromeRow(II)[I",
       "originalName": "c",
       "renamedName": "getMonochromeRow",
       "declaration": {
@@ -564345,7 +564401,7 @@
     },
     {
       "symbol": "M:fl.d(III)V",
-      "renamedSymbol": "M:fl.d(III)V",
+      "renamedSymbol": "M:KaleidoscopeOperator.d(III)V",
       "originalName": "d",
       "renamedName": "d",
       "declaration": {
@@ -567645,9 +567701,9 @@
     },
     {
       "symbol": "M:fv.<init>(Lab;IIIII)V",
-      "renamedSymbol": "M:fv.<init>(Lab;IIIII)V",
+      "renamedSymbol": "M:RewardChoiceSlot.<init>(LRewardChoicePhase;IIIII)V",
       "originalName": "fv",
-      "renamedName": "fv",
+      "renamedName": "RewardChoiceSlot",
       "declaration": {
         "file": "fv.java",
         "start": 2106,
@@ -567656,7 +567712,7 @@
     },
     {
       "symbol": "M:fv.a(B)V",
-      "renamedSymbol": "M:fv.releaseStatics(B)V",
+      "renamedSymbol": "M:RewardChoiceSlot.releaseStatics(B)V",
       "originalName": "a",
       "renamedName": "releaseStatics",
       "declaration": {
@@ -567667,7 +567723,7 @@
     },
     {
       "symbol": "M:fv.a(BIJ)V",
-      "renamedSymbol": "M:fv.a(BIJ)V",
+      "renamedSymbol": "M:RewardChoiceSlot.a(BIJ)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -567678,7 +567734,7 @@
     },
     {
       "symbol": "M:fv.a(I)V",
-      "renamedSymbol": "M:fv.a(I)V",
+      "renamedSymbol": "M:RewardChoiceSlot.a(I)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -567689,7 +567745,7 @@
     },
     {
       "symbol": "M:fv.a(IZI)Z",
-      "renamedSymbol": "M:fv.a(IZI)Z",
+      "renamedSymbol": "M:RewardChoiceSlot.a(IZI)Z",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -616551,9 +616607,9 @@
     },
     {
       "symbol": "M:qh.a(ILqra;)V",
-      "renamedSymbol": "M:MatchScreen.a(ILMatchPhase;)V",
+      "renamedSymbol": "M:MatchScreen.setPhase(ILMatchPhase;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setPhase",
       "declaration": {
         "file": "qh.java",
         "start": 2202,
@@ -617992,9 +618048,9 @@
     },
     {
       "symbol": "M:qka.<init>(Lqh;Lv;)V",
-      "renamedSymbol": "M:qka.<init>(LMatchScreen;LMatchProtocol;)V",
+      "renamedSymbol": "M:StandingsPhase.<init>(LMatchScreen;LMatchProtocol;)V",
       "originalName": "qka",
-      "renamedName": "qka",
+      "renamedName": "StandingsPhase",
       "declaration": {
         "file": "qka.java",
         "start": 453,
@@ -618003,7 +618059,7 @@
     },
     {
       "symbol": "M:qka.a(CII)Z",
-      "renamedSymbol": "M:qka.a(CII)Z",
+      "renamedSymbol": "M:StandingsPhase.a(CII)Z",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -618014,7 +618070,7 @@
     },
     {
       "symbol": "M:qka.a(II)V",
-      "renamedSymbol": "M:qka.a(II)V",
+      "renamedSymbol": "M:StandingsPhase.a(II)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -618025,7 +618081,7 @@
     },
     {
       "symbol": "M:qka.a(IZ)V",
-      "renamedSymbol": "M:qka.a(IZ)V",
+      "renamedSymbol": "M:StandingsPhase.a(IZ)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -618036,7 +618092,7 @@
     },
     {
       "symbol": "M:qka.b(B)V",
-      "renamedSymbol": "M:qka.releaseStatics(B)V",
+      "renamedSymbol": "M:StandingsPhase.releaseStatics(B)V",
       "originalName": "b",
       "renamedName": "releaseStatics",
       "declaration": {
@@ -618047,7 +618103,7 @@
     },
     {
       "symbol": "M:qka.b(IZ)V",
-      "renamedSymbol": "M:qka.b(IZ)V",
+      "renamedSymbol": "M:StandingsPhase.b(IZ)V",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -618058,7 +618114,7 @@
     },
     {
       "symbol": "M:qka.e(I)Z",
-      "renamedSymbol": "M:qka.e(I)Z",
+      "renamedSymbol": "M:StandingsPhase.e(I)Z",
       "originalName": "e",
       "renamedName": "e",
       "declaration": {
@@ -646185,7 +646241,7 @@
     },
     {
       "symbol": "P:ab.<init>(Lqh;Lv;)V#0",
-      "renamedSymbol": "P:ab.<init>(LMatchScreen;LMatchProtocol;)V#0",
+      "renamedSymbol": "P:RewardChoicePhase.<init>(LMatchScreen;LMatchProtocol;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -646196,7 +646252,7 @@
     },
     {
       "symbol": "P:ab.<init>(Lqh;Lv;)V#1",
-      "renamedSymbol": "P:ab.<init>(LMatchScreen;LMatchProtocol;)V#1",
+      "renamedSymbol": "P:RewardChoicePhase.<init>(LMatchScreen;LMatchProtocol;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -646207,7 +646263,7 @@
     },
     {
       "symbol": "P:ab.a(CII)Z#0",
-      "renamedSymbol": "P:ab.a(CII)Z#0",
+      "renamedSymbol": "P:RewardChoicePhase.a(CII)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -646218,7 +646274,7 @@
     },
     {
       "symbol": "P:ab.a(CII)Z#1",
-      "renamedSymbol": "P:ab.a(CII)Z#1",
+      "renamedSymbol": "P:RewardChoicePhase.a(CII)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -646229,7 +646285,7 @@
     },
     {
       "symbol": "P:ab.a(CII)Z#2",
-      "renamedSymbol": "P:ab.a(CII)Z#2",
+      "renamedSymbol": "P:RewardChoicePhase.a(CII)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -646240,7 +646296,7 @@
     },
     {
       "symbol": "P:ab.a(IIB)V#0",
-      "renamedSymbol": "P:ab.a(IIB)V#0",
+      "renamedSymbol": "P:RewardChoicePhase.a(IIB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -646251,7 +646307,7 @@
     },
     {
       "symbol": "P:ab.a(IIB)V#1",
-      "renamedSymbol": "P:ab.a(IIB)V#1",
+      "renamedSymbol": "P:RewardChoicePhase.a(IIB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -646262,7 +646318,7 @@
     },
     {
       "symbol": "P:ab.a(IIB)V#2",
-      "renamedSymbol": "P:ab.a(IIB)V#2",
+      "renamedSymbol": "P:RewardChoicePhase.a(IIB)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -646273,7 +646329,7 @@
     },
     {
       "symbol": "P:ab.a(III)Z#0",
-      "renamedSymbol": "P:ab.a(III)Z#0",
+      "renamedSymbol": "P:RewardChoicePhase.a(III)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -646284,7 +646340,7 @@
     },
     {
       "symbol": "P:ab.a(III)Z#1",
-      "renamedSymbol": "P:ab.a(III)Z#1",
+      "renamedSymbol": "P:RewardChoicePhase.a(III)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -646295,7 +646351,7 @@
     },
     {
       "symbol": "P:ab.a(III)Z#2",
-      "renamedSymbol": "P:ab.a(III)Z#2",
+      "renamedSymbol": "P:RewardChoicePhase.a(III)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -646306,7 +646362,7 @@
     },
     {
       "symbol": "P:ab.a(IIIIIII)Z#0",
-      "renamedSymbol": "P:ab.a(IIIIIII)Z#0",
+      "renamedSymbol": "P:RewardChoicePhase.a(IIIIIII)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -646317,7 +646373,7 @@
     },
     {
       "symbol": "P:ab.a(IIIIIII)Z#1",
-      "renamedSymbol": "P:ab.a(IIIIIII)Z#1",
+      "renamedSymbol": "P:RewardChoicePhase.a(IIIIIII)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -646328,7 +646384,7 @@
     },
     {
       "symbol": "P:ab.a(IIIIIII)Z#2",
-      "renamedSymbol": "P:ab.a(IIIIIII)Z#2",
+      "renamedSymbol": "P:RewardChoicePhase.a(IIIIIII)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -646339,7 +646395,7 @@
     },
     {
       "symbol": "P:ab.a(IIIIIII)Z#3",
-      "renamedSymbol": "P:ab.a(IIIIIII)Z#3",
+      "renamedSymbol": "P:RewardChoicePhase.a(IIIIIII)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -646350,7 +646406,7 @@
     },
     {
       "symbol": "P:ab.a(IIIIIII)Z#4",
-      "renamedSymbol": "P:ab.a(IIIIIII)Z#4",
+      "renamedSymbol": "P:RewardChoicePhase.a(IIIIIII)Z#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -646361,7 +646417,7 @@
     },
     {
       "symbol": "P:ab.a(IIIIIII)Z#5",
-      "renamedSymbol": "P:ab.a(IIIIIII)Z#5",
+      "renamedSymbol": "P:RewardChoicePhase.a(IIIIIII)Z#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -646372,7 +646428,7 @@
     },
     {
       "symbol": "P:ab.a(IIIIIII)Z#6",
-      "renamedSymbol": "P:ab.a(IIIIIII)Z#6",
+      "renamedSymbol": "P:RewardChoicePhase.a(IIIIIII)Z#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -646383,7 +646439,7 @@
     },
     {
       "symbol": "P:ab.a(ILjava/lang/String;)Ljha;#0",
-      "renamedSymbol": "P:ab.a(ILjava/lang/String;)Ljha;#0",
+      "renamedSymbol": "P:RewardChoicePhase.a(ILjava/lang/String;)Ljha;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -646394,7 +646450,7 @@
     },
     {
       "symbol": "P:ab.a(ILjava/lang/String;)Ljha;#1",
-      "renamedSymbol": "P:ab.a(ILjava/lang/String;)Ljha;#1",
+      "renamedSymbol": "P:RewardChoicePhase.a(ILjava/lang/String;)Ljha;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -646405,7 +646461,7 @@
     },
     {
       "symbol": "P:ab.a(IZ)V#0",
-      "renamedSymbol": "P:ab.a(IZ)V#0",
+      "renamedSymbol": "P:RewardChoicePhase.a(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -646416,7 +646472,7 @@
     },
     {
       "symbol": "P:ab.a(IZ)V#1",
-      "renamedSymbol": "P:ab.a(IZ)V#1",
+      "renamedSymbol": "P:RewardChoicePhase.a(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -646427,7 +646483,7 @@
     },
     {
       "symbol": "P:ab.a(IZI)V#0",
-      "renamedSymbol": "P:ab.a(IZI)V#0",
+      "renamedSymbol": "P:RewardChoicePhase.a(IZI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -646438,7 +646494,7 @@
     },
     {
       "symbol": "P:ab.a(IZI)V#1",
-      "renamedSymbol": "P:ab.a(IZI)V#1",
+      "renamedSymbol": "P:RewardChoicePhase.a(IZI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -646449,7 +646505,7 @@
     },
     {
       "symbol": "P:ab.a(IZI)V#2",
-      "renamedSymbol": "P:ab.a(IZI)V#2",
+      "renamedSymbol": "P:RewardChoicePhase.a(IZI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -646460,7 +646516,7 @@
     },
     {
       "symbol": "P:ab.a(Ljava/lang/String;B)Z#0",
-      "renamedSymbol": "P:ab.a(Ljava/lang/String;B)Z#0",
+      "renamedSymbol": "P:RewardChoicePhase.a(Ljava/lang/String;B)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -646471,7 +646527,7 @@
     },
     {
       "symbol": "P:ab.a(Ljava/lang/String;B)Z#1",
-      "renamedSymbol": "P:ab.a(Ljava/lang/String;B)Z#1",
+      "renamedSymbol": "P:RewardChoicePhase.a(Ljava/lang/String;B)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -646482,7 +646538,7 @@
     },
     {
       "symbol": "P:ab.a(Z)Z#0",
-      "renamedSymbol": "P:ab.a(Z)Z#0",
+      "renamedSymbol": "P:RewardChoicePhase.a(Z)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -646493,7 +646549,7 @@
     },
     {
       "symbol": "P:ab.b(B)Lcfa;#0",
-      "renamedSymbol": "P:ab.b(B)LCommonChooseReward;#0",
+      "renamedSymbol": "P:RewardChoicePhase.b(B)LCommonChooseReward;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -646504,7 +646560,7 @@
     },
     {
       "symbol": "P:ab.b(IIB)Z#0",
-      "renamedSymbol": "P:ab.b(IIB)Z#0",
+      "renamedSymbol": "P:RewardChoicePhase.b(IIB)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -646515,7 +646571,7 @@
     },
     {
       "symbol": "P:ab.b(IIB)Z#1",
-      "renamedSymbol": "P:ab.b(IIB)Z#1",
+      "renamedSymbol": "P:RewardChoicePhase.b(IIB)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -646526,7 +646582,7 @@
     },
     {
       "symbol": "P:ab.b(IIB)Z#2",
-      "renamedSymbol": "P:ab.b(IIB)Z#2",
+      "renamedSymbol": "P:RewardChoicePhase.b(IIB)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -646537,7 +646593,7 @@
     },
     {
       "symbol": "P:ab.b(IZ)V#0",
-      "renamedSymbol": "P:ab.b(IZ)V#0",
+      "renamedSymbol": "P:RewardChoicePhase.b(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -646548,7 +646604,7 @@
     },
     {
       "symbol": "P:ab.b(IZ)V#1",
-      "renamedSymbol": "P:ab.b(IZ)V#1",
+      "renamedSymbol": "P:RewardChoicePhase.b(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -646559,7 +646615,7 @@
     },
     {
       "symbol": "P:ab.e(I)Z#0",
-      "renamedSymbol": "P:ab.e(I)Z#0",
+      "renamedSymbol": "P:RewardChoicePhase.e(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -646570,7 +646626,7 @@
     },
     {
       "symbol": "P:ab.f(I)V#0",
-      "renamedSymbol": "P:ab.releaseStatics(I)V#0",
+      "renamedSymbol": "P:RewardChoicePhase.releaseStatics(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -646581,7 +646637,7 @@
     },
     {
       "symbol": "P:ab.g(I)V#0",
-      "renamedSymbol": "P:ab.g(I)V#0",
+      "renamedSymbol": "P:RewardChoicePhase.g(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -646592,7 +646648,7 @@
     },
     {
       "symbol": "P:ab.h(I)V#0",
-      "renamedSymbol": "P:ab.h(I)V#0",
+      "renamedSymbol": "P:RewardChoicePhase.h(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -646603,7 +646659,7 @@
     },
     {
       "symbol": "P:ab.i(I)V#0",
-      "renamedSymbol": "P:ab.i(I)V#0",
+      "renamedSymbol": "P:RewardChoicePhase.i(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -660023,7 +660079,7 @@
     },
     {
       "symbol": "P:bk.a(BLuia;I)V#0",
-      "renamedSymbol": "P:bk.decodeParameter(BLPacketBuffer;I)V#0",
+      "renamedSymbol": "P:LineNoiseOperator.decodeParameter(BLPacketBuffer;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -660034,7 +660090,7 @@
     },
     {
       "symbol": "P:bk.a(BLuia;I)V#1",
-      "renamedSymbol": "P:bk.decodeParameter(BLPacketBuffer;I)V#1",
+      "renamedSymbol": "P:LineNoiseOperator.decodeParameter(BLPacketBuffer;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -660045,7 +660101,7 @@
     },
     {
       "symbol": "P:bk.a(BLuia;I)V#2",
-      "renamedSymbol": "P:bk.decodeParameter(BLPacketBuffer;I)V#2",
+      "renamedSymbol": "P:LineNoiseOperator.decodeParameter(BLPacketBuffer;I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -660056,7 +660112,7 @@
     },
     {
       "symbol": "P:bk.b(B)V#0",
-      "renamedSymbol": "P:bk.b(B)V#0",
+      "renamedSymbol": "P:LineNoiseOperator.b(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -660067,7 +660123,7 @@
     },
     {
       "symbol": "P:bk.c(I)V#0",
-      "renamedSymbol": "P:bk.c(I)V#0",
+      "renamedSymbol": "P:LineNoiseOperator.c(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -660078,7 +660134,7 @@
     },
     {
       "symbol": "P:bk.c(II)[I#0",
-      "renamedSymbol": "P:bk.getMonochromeRow(II)[I#0",
+      "renamedSymbol": "P:LineNoiseOperator.getMonochromeRow(II)[I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -660089,7 +660145,7 @@
     },
     {
       "symbol": "P:bk.c(II)[I#1",
-      "renamedSymbol": "P:bk.getMonochromeRow(II)[I#1",
+      "renamedSymbol": "P:LineNoiseOperator.getMonochromeRow(II)[I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -660100,7 +660156,7 @@
     },
     {
       "symbol": "P:bk.d(B)V#0",
-      "renamedSymbol": "P:bk.releaseStatics(B)V#0",
+      "renamedSymbol": "P:LineNoiseOperator.releaseStatics(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -703825,7 +703881,7 @@
     },
     {
       "symbol": "P:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;#0",
-      "renamedSymbol": "P:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;#0",
+      "renamedSymbol": "P:KaleidoscopeOperator.a(BLjava/lang/CharSequence;)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -703836,7 +703892,7 @@
     },
     {
       "symbol": "P:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;#1",
-      "renamedSymbol": "P:fl.a(BLjava/lang/CharSequence;)Ljava/lang/String;#1",
+      "renamedSymbol": "P:KaleidoscopeOperator.a(BLjava/lang/CharSequence;)Ljava/lang/String;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -703847,7 +703903,7 @@
     },
     {
       "symbol": "P:fl.a(BLuia;I)V#0",
-      "renamedSymbol": "P:fl.decodeParameter(BLPacketBuffer;I)V#0",
+      "renamedSymbol": "P:KaleidoscopeOperator.decodeParameter(BLPacketBuffer;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -703858,7 +703914,7 @@
     },
     {
       "symbol": "P:fl.a(BLuia;I)V#1",
-      "renamedSymbol": "P:fl.decodeParameter(BLPacketBuffer;I)V#1",
+      "renamedSymbol": "P:KaleidoscopeOperator.decodeParameter(BLPacketBuffer;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -703869,7 +703925,7 @@
     },
     {
       "symbol": "P:fl.a(BLuia;I)V#2",
-      "renamedSymbol": "P:fl.decodeParameter(BLPacketBuffer;I)V#2",
+      "renamedSymbol": "P:KaleidoscopeOperator.decodeParameter(BLPacketBuffer;I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -703880,7 +703936,7 @@
     },
     {
       "symbol": "P:fl.b(II)[[I#0",
-      "renamedSymbol": "P:fl.getColourRow(II)[[I#0",
+      "renamedSymbol": "P:KaleidoscopeOperator.getColourRow(II)[[I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -703891,7 +703947,7 @@
     },
     {
       "symbol": "P:fl.b(II)[[I#1",
-      "renamedSymbol": "P:fl.getColourRow(II)[[I#1",
+      "renamedSymbol": "P:KaleidoscopeOperator.getColourRow(II)[[I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -703902,7 +703958,7 @@
     },
     {
       "symbol": "P:fl.c(II)[I#0",
-      "renamedSymbol": "P:fl.getMonochromeRow(II)[I#0",
+      "renamedSymbol": "P:KaleidoscopeOperator.getMonochromeRow(II)[I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -703913,7 +703969,7 @@
     },
     {
       "symbol": "P:fl.c(II)[I#1",
-      "renamedSymbol": "P:fl.getMonochromeRow(II)[I#1",
+      "renamedSymbol": "P:KaleidoscopeOperator.getMonochromeRow(II)[I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -703924,7 +703980,7 @@
     },
     {
       "symbol": "P:fl.d(III)V#0",
-      "renamedSymbol": "P:fl.d(III)V#0",
+      "renamedSymbol": "P:KaleidoscopeOperator.d(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -703935,7 +703991,7 @@
     },
     {
       "symbol": "P:fl.d(III)V#1",
-      "renamedSymbol": "P:fl.d(III)V#1",
+      "renamedSymbol": "P:KaleidoscopeOperator.d(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -703946,7 +704002,7 @@
     },
     {
       "symbol": "P:fl.d(III)V#2",
-      "renamedSymbol": "P:fl.d(III)V#2",
+      "renamedSymbol": "P:KaleidoscopeOperator.d(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -710337,7 +710393,7 @@
     },
     {
       "symbol": "P:fv.<init>(Lab;IIIII)V#0",
-      "renamedSymbol": "P:fv.<init>(Lab;IIIII)V#0",
+      "renamedSymbol": "P:RewardChoiceSlot.<init>(LRewardChoicePhase;IIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -710348,7 +710404,7 @@
     },
     {
       "symbol": "P:fv.<init>(Lab;IIIII)V#1",
-      "renamedSymbol": "P:fv.<init>(Lab;IIIII)V#1",
+      "renamedSymbol": "P:RewardChoiceSlot.<init>(LRewardChoicePhase;IIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -710359,7 +710415,7 @@
     },
     {
       "symbol": "P:fv.<init>(Lab;IIIII)V#2",
-      "renamedSymbol": "P:fv.<init>(Lab;IIIII)V#2",
+      "renamedSymbol": "P:RewardChoiceSlot.<init>(LRewardChoicePhase;IIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -710370,7 +710426,7 @@
     },
     {
       "symbol": "P:fv.<init>(Lab;IIIII)V#3",
-      "renamedSymbol": "P:fv.<init>(Lab;IIIII)V#3",
+      "renamedSymbol": "P:RewardChoiceSlot.<init>(LRewardChoicePhase;IIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -710381,7 +710437,7 @@
     },
     {
       "symbol": "P:fv.<init>(Lab;IIIII)V#4",
-      "renamedSymbol": "P:fv.<init>(Lab;IIIII)V#4",
+      "renamedSymbol": "P:RewardChoiceSlot.<init>(LRewardChoicePhase;IIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -710392,7 +710448,7 @@
     },
     {
       "symbol": "P:fv.<init>(Lab;IIIII)V#5",
-      "renamedSymbol": "P:fv.<init>(Lab;IIIII)V#5",
+      "renamedSymbol": "P:RewardChoiceSlot.<init>(LRewardChoicePhase;IIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -710403,7 +710459,7 @@
     },
     {
       "symbol": "P:fv.a(B)V#0",
-      "renamedSymbol": "P:fv.releaseStatics(B)V#0",
+      "renamedSymbol": "P:RewardChoiceSlot.releaseStatics(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -710414,7 +710470,7 @@
     },
     {
       "symbol": "P:fv.a(BIJ)V#0",
-      "renamedSymbol": "P:fv.a(BIJ)V#0",
+      "renamedSymbol": "P:RewardChoiceSlot.a(BIJ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -710425,7 +710481,7 @@
     },
     {
       "symbol": "P:fv.a(BIJ)V#1",
-      "renamedSymbol": "P:fv.a(BIJ)V#1",
+      "renamedSymbol": "P:RewardChoiceSlot.a(BIJ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -710436,7 +710492,7 @@
     },
     {
       "symbol": "P:fv.a(BIJ)V#2",
-      "renamedSymbol": "P:fv.a(BIJ)V#2",
+      "renamedSymbol": "P:RewardChoiceSlot.a(BIJ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -710447,7 +710503,7 @@
     },
     {
       "symbol": "P:fv.a(I)V#0",
-      "renamedSymbol": "P:fv.a(I)V#0",
+      "renamedSymbol": "P:RewardChoiceSlot.a(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -710458,7 +710514,7 @@
     },
     {
       "symbol": "P:fv.a(IZI)Z#0",
-      "renamedSymbol": "P:fv.a(IZI)Z#0",
+      "renamedSymbol": "P:RewardChoiceSlot.a(IZI)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -710469,7 +710525,7 @@
     },
     {
       "symbol": "P:fv.a(IZI)Z#1",
-      "renamedSymbol": "P:fv.a(IZI)Z#1",
+      "renamedSymbol": "P:RewardChoiceSlot.a(IZI)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -710480,7 +710536,7 @@
     },
     {
       "symbol": "P:fv.a(IZI)Z#2",
-      "renamedSymbol": "P:fv.a(IZI)Z#2",
+      "renamedSymbol": "P:RewardChoiceSlot.a(IZI)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -826981,7 +827037,7 @@
     },
     {
       "symbol": "P:qh.a(ILqra;)V#0",
-      "renamedSymbol": "P:MatchScreen.a(ILMatchPhase;)V#0",
+      "renamedSymbol": "P:MatchScreen.setPhase(ILMatchPhase;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -826992,7 +827048,7 @@
     },
     {
       "symbol": "P:qh.a(ILqra;)V#1",
-      "renamedSymbol": "P:MatchScreen.a(ILMatchPhase;)V#1",
+      "renamedSymbol": "P:MatchScreen.setPhase(ILMatchPhase;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -831535,7 +831591,7 @@
     },
     {
       "symbol": "P:qka.<init>(Lqh;Lv;)V#0",
-      "renamedSymbol": "P:qka.<init>(LMatchScreen;LMatchProtocol;)V#0",
+      "renamedSymbol": "P:StandingsPhase.<init>(LMatchScreen;LMatchProtocol;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -831546,7 +831602,7 @@
     },
     {
       "symbol": "P:qka.<init>(Lqh;Lv;)V#1",
-      "renamedSymbol": "P:qka.<init>(LMatchScreen;LMatchProtocol;)V#1",
+      "renamedSymbol": "P:StandingsPhase.<init>(LMatchScreen;LMatchProtocol;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -831557,7 +831613,7 @@
     },
     {
       "symbol": "P:qka.a(CII)Z#0",
-      "renamedSymbol": "P:qka.a(CII)Z#0",
+      "renamedSymbol": "P:StandingsPhase.a(CII)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -831568,7 +831624,7 @@
     },
     {
       "symbol": "P:qka.a(CII)Z#1",
-      "renamedSymbol": "P:qka.a(CII)Z#1",
+      "renamedSymbol": "P:StandingsPhase.a(CII)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -831579,7 +831635,7 @@
     },
     {
       "symbol": "P:qka.a(CII)Z#2",
-      "renamedSymbol": "P:qka.a(CII)Z#2",
+      "renamedSymbol": "P:StandingsPhase.a(CII)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -831590,7 +831646,7 @@
     },
     {
       "symbol": "P:qka.a(II)V#0",
-      "renamedSymbol": "P:qka.a(II)V#0",
+      "renamedSymbol": "P:StandingsPhase.a(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -831601,7 +831657,7 @@
     },
     {
       "symbol": "P:qka.a(II)V#1",
-      "renamedSymbol": "P:qka.a(II)V#1",
+      "renamedSymbol": "P:StandingsPhase.a(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -831612,7 +831668,7 @@
     },
     {
       "symbol": "P:qka.a(IZ)V#0",
-      "renamedSymbol": "P:qka.a(IZ)V#0",
+      "renamedSymbol": "P:StandingsPhase.a(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -831623,7 +831679,7 @@
     },
     {
       "symbol": "P:qka.a(IZ)V#1",
-      "renamedSymbol": "P:qka.a(IZ)V#1",
+      "renamedSymbol": "P:StandingsPhase.a(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -831634,7 +831690,7 @@
     },
     {
       "symbol": "P:qka.b(B)V#0",
-      "renamedSymbol": "P:qka.releaseStatics(B)V#0",
+      "renamedSymbol": "P:StandingsPhase.releaseStatics(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -831645,7 +831701,7 @@
     },
     {
       "symbol": "P:qka.b(IZ)V#0",
-      "renamedSymbol": "P:qka.b(IZ)V#0",
+      "renamedSymbol": "P:StandingsPhase.b(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -831656,7 +831712,7 @@
     },
     {
       "symbol": "P:qka.b(IZ)V#1",
-      "renamedSymbol": "P:qka.b(IZ)V#1",
+      "renamedSymbol": "P:StandingsPhase.b(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -831667,7 +831723,7 @@
     },
     {
       "symbol": "P:qka.e(I)Z#0",
-      "renamedSymbol": "P:qka.e(I)Z#0",
+      "renamedSymbol": "P:StandingsPhase.e(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -890499,7 +890555,7 @@
       "original": "TombRacer.java",
       "renamed": "TombRacer.java",
       "inputSha256": "7ea25c7c242b079dab92fb5f98648396480d7fc930afc21a031708b6cdb3361f",
-      "outputSha256": "ab09d1343d33e94d7764885e2e03bcce6899a73dff913e3d8f0080f0b04fab35",
+      "outputSha256": "550aa689b16d6be7d45714c7d2c45629d07668d7dfb12eb85c49e91fdce1fd7f",
       "edits": [
         {
           "start": 279,
@@ -893197,6 +893253,13 @@
           "renamed": "releaseStatics"
         },
         {
+          "start": 14219,
+          "end": 14222,
+          "symbol": "C:qka",
+          "original": "qka",
+          "renamed": "StandingsPhase"
+        },
+        {
           "start": 14223,
           "end": 14224,
           "symbol": "M:qka.b(B)V",
@@ -893300,6 +893363,13 @@
           "symbol": "M:dua.d(B)V",
           "original": "d",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 14563,
+          "end": 14565,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
         },
         {
           "start": 14566,
@@ -895927,6 +895997,13 @@
           "renamed": "releaseStatics"
         },
         {
+          "start": 20747,
+          "end": 20749,
+          "symbol": "C:bk",
+          "original": "bk",
+          "renamed": "LineNoiseOperator"
+        },
+        {
           "start": 20750,
           "end": 20751,
           "symbol": "M:bk.d(B)V",
@@ -896828,6 +896905,13 @@
           "symbol": "M:wm.a(B)V",
           "original": "a",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 24129,
+          "end": 24131,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
         },
         {
           "start": 24132,
@@ -898376,10 +898460,17 @@
     },
     {
       "original": "ab.java",
-      "renamed": "ab.java",
+      "renamed": "RewardChoicePhase.java",
       "inputSha256": "64000290a3320256511f1afb36922306328aafe330e591d8d927cfc34d730421",
-      "outputSha256": "de3b8a798511cd6d731767292a6fdbf4fff98bf49e4ce8e2810d2cb06884feb8",
+      "outputSha256": "59e34a307562c9d037b872491bcc1d03ff3f997d36dd57da42d0f35e482b8c70",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
+        },
         {
           "start": 61,
           "end": 64,
@@ -898395,11 +898486,25 @@
           "renamed": "CommonChooseReward"
         },
         {
+          "start": 330,
+          "end": 332,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
           "start": 370,
           "end": 371,
           "symbol": "M:ab.f(I)V",
           "original": "f",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 891,
+          "end": 893,
+          "symbol": "M:ab.<init>(Lqh;Lv;)V",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
         },
         {
           "start": 894,
@@ -898423,6 +898528,13 @@
           "renamed": "matchState"
         },
         {
+          "start": 1762,
+          "end": 1764,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
           "start": 1955,
           "end": 1958,
           "symbol": "C:koa",
@@ -898430,11 +898542,25 @@
           "renamed": "SwitchLinkList"
         },
         {
+          "start": 2718,
+          "end": 2720,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
           "start": 2858,
           "end": 2860,
           "symbol": "C:er",
           "original": "er",
           "renamed": "TripBeamComponent"
+        },
+        {
+          "start": 3948,
+          "end": 3950,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
         },
         {
           "start": 4211,
@@ -898605,11 +898731,25 @@
           "renamed": "SocketConnector"
         },
         {
+          "start": 8960,
+          "end": 8962,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
           "start": 9900,
           "end": 9901,
           "symbol": "M:cfa.g(I)I",
           "original": "g",
           "renamed": "getCurrentPlayerId"
+        },
+        {
+          "start": 9968,
+          "end": 9970,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
         },
         {
           "start": 10012,
@@ -898633,6 +898773,13 @@
           "renamed": "getColouredPlayerName"
         },
         {
+          "start": 10314,
+          "end": 10316,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
+        },
+        {
           "start": 10360,
           "end": 10363,
           "symbol": "C:fva",
@@ -898652,6 +898799,13 @@
           "symbol": "M:ff.e(II)Ljava/lang/String;",
           "original": "e",
           "renamed": "getColouredPlayerName"
+        },
+        {
+          "start": 10530,
+          "end": 10532,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
         },
         {
           "start": 10727,
@@ -898773,11 +898927,32 @@
           "renamed": "CommonChooseReward"
         },
         {
+          "start": 13028,
+          "end": 13030,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
+          "start": 14238,
+          "end": 14240,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
+        },
+        {
           "start": 14241,
           "end": 14242,
           "symbol": "M:ab.f(I)V",
           "original": "f",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 15033,
+          "end": 15035,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
         }
       ]
     },
@@ -905551,7 +905726,7 @@
       "original": "aoa.java",
       "renamed": "aoa.java",
       "inputSha256": "4b51f599041c05f453f78b78c94eba941ed3944e589d248aa39dbd6b2900bc71",
-      "outputSha256": "a52a4524215e3696c18394b6ca739834de1ce0289a4baa24b6057a94f6544f9c",
+      "outputSha256": "5ab9957d3e02d9ade909c4d663e1aa0eddf6decbe5a76066f55155a59ac93523",
       "edits": [
         {
           "start": 65,
@@ -905580,6 +905755,13 @@
           "symbol": "C:kh",
           "original": "kh",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 786,
+          "end": 788,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
         },
         {
           "start": 1022,
@@ -906358,7 +906540,7 @@
       "original": "at.java",
       "renamed": "DisplaySettingsDialog.java",
       "inputSha256": "3905cc2d96cd0db25e1c0ac564cc2467cfcf7eb7537d51b2bf8f83eb36cb61bc",
-      "outputSha256": "58838234a12a8192c724449367933c835ca2807d4ded24d828324d753d3cbfe9",
+      "outputSha256": "b1ec09b0cf9f7768a0346fd3da50a1e427e22086622e3d358cd7dd365cf0e7b4",
       "edits": [
         {
           "start": 50,
@@ -906667,6 +906849,13 @@
           "symbol": "C:qc",
           "original": "qc",
           "renamed": "WidgetListener"
+        },
+        {
+          "start": 8867,
+          "end": 8869,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
         },
         {
           "start": 8976,
@@ -908085,7 +908274,7 @@
       "original": "ava.java",
       "renamed": "ava.java",
       "inputSha256": "b2156bd584c393e42d8da053f66165e1e2bbfe181f9eef73a4246a3c0a6f0cdc",
-      "outputSha256": "c4d5f644bff7394858177343fc00a22a59f519fa0b3dae315e5fabc1a2bb8477",
+      "outputSha256": "c171f4d55c300b7be19d519c2abd0fb278380912c0d7458e86e4257946f0e522",
       "edits": [
         {
           "start": 133,
@@ -908226,6 +908415,13 @@
           "symbol": "C:qda",
           "original": "qda",
           "renamed": "ArchiveNetworkClient"
+        },
+        {
+          "start": 11777,
+          "end": 11779,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
         },
         {
           "start": 11915,
@@ -914830,10 +915026,17 @@
     },
     {
       "original": "bk.java",
-      "renamed": "bk.java",
+      "renamed": "LineNoiseOperator.java",
       "inputSha256": "33c3921d56a82bf94888948efc3a19dc8f9bf46f3413ac6fb802d7c2c3e74594",
-      "outputSha256": "6bfc1fab36a43025b4a342b54390989c4f173193e2c4e6261c6f50467be7dcad",
+      "outputSha256": "4fb2461d7151d6eb9e1073d116cdb96a4b580e3d86c1da6cf417d6161d01d11b",
       "edits": [
+        {
+          "start": 71,
+          "end": 73,
+          "symbol": "C:bk",
+          "original": "bk",
+          "renamed": "LineNoiseOperator"
+        },
         {
           "start": 82,
           "end": 84,
@@ -914896,6 +915099,13 @@
           "symbol": "C:uia",
           "original": "uia",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 584,
+          "end": 586,
+          "symbol": "M:bk.<init>()V",
+          "original": "bk",
+          "renamed": "LineNoiseOperator"
         },
         {
           "start": 774,
@@ -921767,7 +921977,7 @@
       "original": "ce.java",
       "renamed": "PlatformModel.java",
       "inputSha256": "e29323e8f2964249e6f49ed6eec228cea2213c09545e0c82363ff179fd7fcb93",
-      "outputSha256": "a53d05b8210724330ee67a3f4b4d70a523505d20436f5769e6e67107cb5f3780",
+      "outputSha256": "eb3d9b7c4f0d4ef49568979d8f8be7541feeec27406319613e73e80a17443613",
       "edits": [
         {
           "start": 50,
@@ -922482,6 +922692,20 @@
           "symbol": "C:ce",
           "original": "ce",
           "renamed": "PlatformModel"
+        },
+        {
+          "start": 29648,
+          "end": 29650,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
+        },
+        {
+          "start": 29710,
+          "end": 29712,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
         },
         {
           "start": 35261,
@@ -951315,7 +951539,7 @@
       "original": "eha.java",
       "renamed": "SimulationObserver.java",
       "inputSha256": "96ed49acbc8a02846e788d047da28999310da8e69579f6c596033e8da2845b54",
-      "outputSha256": "f31c0b3d868addea686ab3396b4ff222d39a2d30c87fb5736d6ae9fd485b0659",
+      "outputSha256": "f5385e7bf4488cf3351d1f757f60f48bed953b0ba63caf1770fdd8d6b1f37d9a",
       "edits": [
         {
           "start": 53,
@@ -951421,6 +951645,13 @@
           "symbol": "C:pc",
           "original": "pc",
           "renamed": "BeamSegment"
+        },
+        {
+          "start": 1146,
+          "end": 1148,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
         },
         {
           "start": 1301,
@@ -969265,7 +969496,7 @@
       "original": "fja.java",
       "renamed": "PlayPhase.java",
       "inputSha256": "9c67ded2a35321bc2b4518bb96afe3e264ac1fca749a5926de2705f72bf4fa1c",
-      "outputSha256": "8015ba1a159642fd0e51907a52bc38228222e3b930ccabc609befc6abda9e8df",
+      "outputSha256": "3faa0e7cf895397b16e8dac5d24088b268055dc90c42cae988ef28a35927a26e",
       "edits": [
         {
           "start": 50,
@@ -970085,6 +970316,13 @@
           "symbol": "M:uia.a(Ljava/lang/String;B)V",
           "original": "a",
           "renamed": "writeVersionedString"
+        },
+        {
+          "start": 18277,
+          "end": 18279,
+          "symbol": "C:fl",
+          "original": "fl",
+          "renamed": "KaleidoscopeOperator"
         },
         {
           "start": 18338,
@@ -971240,10 +971478,17 @@
     },
     {
       "original": "fl.java",
-      "renamed": "fl.java",
+      "renamed": "KaleidoscopeOperator.java",
       "inputSha256": "a687ba25b8449b1b830add7126ac7d0ef530f89283a0833cc8a1c803fb46d79e",
-      "outputSha256": "ec05336f87f74a1e0f0702625b1bba5fe913088667f8ce2e6a2aa43ab9b25346",
+      "outputSha256": "dd993bfbf1dbbc50be7060faa4cad522db4a72415651abf1d4279fa00ef1e3fd",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:fl",
+          "original": "fl",
+          "renamed": "KaleidoscopeOperator"
+        },
         {
           "start": 61,
           "end": 63,
@@ -971259,6 +971504,13 @@
           "renamed": "getMonochromeRow"
         },
         {
+          "start": 318,
+          "end": 320,
+          "symbol": "C:fl",
+          "original": "fl",
+          "renamed": "KaleidoscopeOperator"
+        },
+        {
           "start": 516,
           "end": 523,
           "symbol": "F:ns.field_g:I",
@@ -971271,6 +971523,13 @@
           "symbol": "M:ci.c(III)[I",
           "original": "c",
           "renamed": "getInputMonochromeRow"
+        },
+        {
+          "start": 617,
+          "end": 619,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
         },
         {
           "start": 660,
@@ -971294,6 +971553,13 @@
           "renamed": "textureRowCoords"
         },
         {
+          "start": 3153,
+          "end": 3155,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
           "start": 3184,
           "end": 3187,
           "symbol": "C:boa",
@@ -971306,6 +971572,20 @@
           "symbol": "C:boa",
           "original": "boa",
           "renamed": "BlockModel"
+        },
+        {
+          "start": 3354,
+          "end": 3356,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
+          "start": 3492,
+          "end": 3494,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
         },
         {
           "start": 3523,
@@ -971329,6 +971609,13 @@
           "renamed": "BlockModel"
         },
         {
+          "start": 3685,
+          "end": 3687,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
           "start": 3698,
           "end": 3701,
           "symbol": "C:qda",
@@ -971341,6 +971628,13 @@
           "symbol": "F:qda.field_i:I",
           "original": "field_i",
           "renamed": "textureHeight"
+        },
+        {
+          "start": 3813,
+          "end": 3815,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
         },
         {
           "start": 3826,
@@ -971385,6 +971679,13 @@
           "renamed": "textureWidth"
         },
         {
+          "start": 4053,
+          "end": 4055,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
           "start": 4066,
           "end": 4069,
           "symbol": "C:qda",
@@ -971406,6 +971707,13 @@
           "renamed": "BlockModel"
         },
         {
+          "start": 4234,
+          "end": 4236,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
           "start": 4247,
           "end": 4250,
           "symbol": "C:qda",
@@ -971420,6 +971728,13 @@
           "renamed": "textureHeight"
         },
         {
+          "start": 4398,
+          "end": 4400,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
           "start": 4431,
           "end": 4434,
           "symbol": "C:boa",
@@ -971432,6 +971747,20 @@
           "symbol": "F:ns.field_g:I",
           "original": "field_g",
           "renamed": "textureWidth"
+        },
+        {
+          "start": 4497,
+          "end": 4499,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
+          "start": 4510,
+          "end": 4512,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
         },
         {
           "start": 4527,
@@ -971511,6 +971840,13 @@
           "renamed": "getInputColourRow"
         },
         {
+          "start": 6390,
+          "end": 6392,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
           "start": 6444,
           "end": 6447,
           "symbol": "C:boa",
@@ -971530,6 +971866,13 @@
           "symbol": "C:boa",
           "original": "boa",
           "renamed": "BlockModel"
+        },
+        {
+          "start": 6683,
+          "end": 6685,
+          "symbol": "M:fl.<init>()V",
+          "original": "fl",
+          "renamed": "KaleidoscopeOperator"
         }
       ]
     },
@@ -972423,7 +972766,7 @@
       "original": "fna.java",
       "renamed": "fna.java",
       "inputSha256": "b1a9693e9bbd08b197167a221e30061a53bb4c7b9e7540849c1611d5aa752c94",
-      "outputSha256": "94ed6d1913959f309453a17f20351417114d627ed6d8933c1720f5f579f99e2e",
+      "outputSha256": "53b6988d46acb0780e40431a0d82be1e94e572dd1d0eb68539e137cde54d1088",
       "edits": [
         {
           "start": 544,
@@ -972741,6 +973084,20 @@
           "renamed": "ToolkitSprite"
         },
         {
+          "start": 14680,
+          "end": 14682,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
+        },
+        {
+          "start": 15043,
+          "end": 15045,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
+        },
+        {
           "start": 15216,
           "end": 15218,
           "symbol": "C:nh",
@@ -972951,7 +973308,7 @@
       "original": "fp.java",
       "renamed": "fp.java",
       "inputSha256": "dada9344e21332b4c14702f7b167392780563ab290e2fddbe9c93b7e79d561c7",
-      "outputSha256": "db675cdf906891e0170a2bba38ba18c5a0599cd17ac88998c9d1117aa394620b",
+      "outputSha256": "23467472eb1394cebca6e04487a7ad95fc1388fd5620c52023dcd2ccd6a0249a",
       "edits": [
         {
           "start": 224,
@@ -974107,6 +974464,13 @@
           "symbol": "M:jpa.a(Lcn;Ljava/lang/String;Ljava/lang/String;)Ljpa;",
           "original": "a",
           "renamed": "loadSprite"
+        },
+        {
+          "start": 7727,
+          "end": 7730,
+          "symbol": "C:qka",
+          "original": "qka",
+          "renamed": "StandingsPhase"
         },
         {
           "start": 7741,
@@ -985262,10 +985626,31 @@
     },
     {
       "original": "fv.java",
-      "renamed": "fv.java",
+      "renamed": "RewardChoiceSlot.java",
       "inputSha256": "78eceeb3e2a3e08f3a7cddbc84c51fcad4333edc878313735740c0f7dd4de32a",
-      "outputSha256": "1bfc33b311757da49585b4aa1f4d3727aef53eba017dd267c1e860a06e0d7bba",
+      "outputSha256": "d50e3bb4296eb3f1b550674396679ed67e656dc48dbe9a588049facc91a3ab10",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
+          "start": 84,
+          "end": 86,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
+        },
+        {
+          "start": 87,
+          "end": 94,
+          "symbol": "F:fv.field_h:Lab;",
+          "original": "field_h",
+          "renamed": "phase"
+        },
         {
           "start": 198,
           "end": 205,
@@ -985344,6 +985729,13 @@
           "renamed": "ToolkitSprite"
         },
         {
+          "start": 731,
+          "end": 738,
+          "symbol": "F:fv.field_h:Lab;",
+          "original": "field_h",
+          "renamed": "phase"
+        },
+        {
           "start": 791,
           "end": 793,
           "symbol": "C:ha",
@@ -985391,6 +985783,27 @@
           "symbol": "F:fv.field_d:[Ljava/lang/String;",
           "original": "field_d",
           "renamed": "loadingQuipsAlternate"
+        },
+        {
+          "start": 2106,
+          "end": 2108,
+          "symbol": "M:fv.<init>(Lab;IIIII)V",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
+          "start": 2109,
+          "end": 2111,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
+        },
+        {
+          "start": 2376,
+          "end": 2383,
+          "symbol": "F:fv.field_h:Lab;",
+          "original": "field_h",
+          "renamed": "phase"
         },
         {
           "start": 2704,
@@ -992981,7 +993394,7 @@
       "original": "gu.java",
       "renamed": "gu.java",
       "inputSha256": "e49b5921fd1fa84ea7cb07f8b088c94293847d315b9b4ffc1f47e241a243e358",
-      "outputSha256": "5adde11c64d826c06c2fd7265d1ec2e732d2fb9e8c9d353bee2b7ac9a5af25c1",
+      "outputSha256": "4345c6923699a733d8984ceba4bbd197950ce7b6d4e3b27f62b0b110a87477b4",
       "edits": [
         {
           "start": 807,
@@ -993306,6 +993719,13 @@
           "renamed": "TextureOperator"
         },
         {
+          "start": 4013,
+          "end": 4015,
+          "symbol": "C:fl",
+          "original": "fl",
+          "renamed": "KaleidoscopeOperator"
+        },
+        {
           "start": 4074,
           "end": 4076,
           "symbol": "C:ci",
@@ -993444,6 +993864,13 @@
           "symbol": "C:ci",
           "original": "ci",
           "renamed": "TextureOperator"
+        },
+        {
+          "start": 5206,
+          "end": 5208,
+          "symbol": "C:bk",
+          "original": "bk",
+          "renamed": "LineNoiseOperator"
         },
         {
           "start": 5267,
@@ -1013953,7 +1014380,7 @@
       "original": "ija.java",
       "renamed": "ija.java",
       "inputSha256": "3315f091ecd48d7c580864b366d9eec14e6ec283918452ef54c5e7e89d14b78b",
-      "outputSha256": "d0f6478ebf85c6ad0dc8db11fc3a714ea9bad32fccbec671fc9a8aa8f673fd23",
+      "outputSha256": "0b52b5f792c60a60806824f94b0a4e0917aecbd0f52dc76e025b2a40a32410c1",
       "edits": [
         {
           "start": 65,
@@ -1013961,6 +1014388,34 @@
           "symbol": "C:vg",
           "original": "vg",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 522,
+          "end": 524,
+          "symbol": "C:fl",
+          "original": "fl",
+          "renamed": "KaleidoscopeOperator"
+        },
+        {
+          "start": 535,
+          "end": 537,
+          "symbol": "C:fl",
+          "original": "fl",
+          "renamed": "KaleidoscopeOperator"
+        },
+        {
+          "start": 784,
+          "end": 786,
+          "symbol": "C:fl",
+          "original": "fl",
+          "renamed": "KaleidoscopeOperator"
+        },
+        {
+          "start": 797,
+          "end": 799,
+          "symbol": "C:fl",
+          "original": "fl",
+          "renamed": "KaleidoscopeOperator"
         },
         {
           "start": 875,
@@ -1021525,7 +1021980,7 @@
       "original": "jga.java",
       "renamed": "TextResourceLoader.java",
       "inputSha256": "ce96100e7ded5b81eca667e60a02c9db5c0a851ec0a17603c4ae1230a2556185",
-      "outputSha256": "139f7d6105abd7063f1f4537483a5cbe4e3ef4a04699e20a9584b50e7881f0de",
+      "outputSha256": "818da0e85b9e8b78f01ac08b9e837599f540a8e4b35aa5fdd49acdddc60b9f87",
       "edits": [
         {
           "start": 50,
@@ -1024531,6 +1024986,13 @@
           "renamed": "decodeText"
         },
         {
+          "start": 56334,
+          "end": 56336,
+          "symbol": "C:bk",
+          "original": "bk",
+          "renamed": "LineNoiseOperator"
+        },
+        {
           "start": 56337,
           "end": 56344,
           "symbol": "F:bk.field_m:[Ljava/lang/String;",
@@ -1024543,6 +1025005,13 @@
           "symbol": "M:jaa.a(B[B)Ljava/lang/String;",
           "original": "a",
           "renamed": "decodeText"
+        },
+        {
+          "start": 56503,
+          "end": 56505,
+          "symbol": "C:bk",
+          "original": "bk",
+          "renamed": "LineNoiseOperator"
         },
         {
           "start": 56506,
@@ -1024559,6 +1025028,13 @@
           "renamed": "decodeText"
         },
         {
+          "start": 56672,
+          "end": 56674,
+          "symbol": "C:bk",
+          "original": "bk",
+          "renamed": "LineNoiseOperator"
+        },
+        {
           "start": 56675,
           "end": 56682,
           "symbol": "F:bk.field_m:[Ljava/lang/String;",
@@ -1024571,6 +1025047,13 @@
           "symbol": "M:jaa.a(B[B)Ljava/lang/String;",
           "original": "a",
           "renamed": "decodeText"
+        },
+        {
+          "start": 56841,
+          "end": 56843,
+          "symbol": "C:bk",
+          "original": "bk",
+          "renamed": "LineNoiseOperator"
         },
         {
           "start": 56844,
@@ -1024587,6 +1025070,13 @@
           "renamed": "decodeText"
         },
         {
+          "start": 57011,
+          "end": 57013,
+          "symbol": "C:bk",
+          "original": "bk",
+          "renamed": "LineNoiseOperator"
+        },
+        {
           "start": 57014,
           "end": 57021,
           "symbol": "F:bk.field_m:[Ljava/lang/String;",
@@ -1024599,6 +1025089,13 @@
           "symbol": "M:jaa.a(B[B)Ljava/lang/String;",
           "original": "a",
           "renamed": "decodeText"
+        },
+        {
+          "start": 57180,
+          "end": 57182,
+          "symbol": "C:bk",
+          "original": "bk",
+          "renamed": "LineNoiseOperator"
         },
         {
           "start": 57183,
@@ -1024615,6 +1025112,13 @@
           "renamed": "decodeText"
         },
         {
+          "start": 57350,
+          "end": 57352,
+          "symbol": "C:bk",
+          "original": "bk",
+          "renamed": "LineNoiseOperator"
+        },
+        {
           "start": 57353,
           "end": 57360,
           "symbol": "F:bk.field_m:[Ljava/lang/String;",
@@ -1024627,6 +1025131,13 @@
           "symbol": "M:jaa.a(B[B)Ljava/lang/String;",
           "original": "a",
           "renamed": "decodeText"
+        },
+        {
+          "start": 57519,
+          "end": 57521,
+          "symbol": "C:bk",
+          "original": "bk",
+          "renamed": "LineNoiseOperator"
         },
         {
           "start": 57522,
@@ -1024643,6 +1025154,13 @@
           "renamed": "decodeText"
         },
         {
+          "start": 57689,
+          "end": 57691,
+          "symbol": "C:bk",
+          "original": "bk",
+          "renamed": "LineNoiseOperator"
+        },
+        {
           "start": 57692,
           "end": 57699,
           "symbol": "F:bk.field_m:[Ljava/lang/String;",
@@ -1024655,6 +1025173,13 @@
           "symbol": "M:jaa.a(B[B)Ljava/lang/String;",
           "original": "a",
           "renamed": "decodeText"
+        },
+        {
+          "start": 57859,
+          "end": 57861,
+          "symbol": "C:bk",
+          "original": "bk",
+          "renamed": "LineNoiseOperator"
         },
         {
           "start": 57862,
@@ -1024671,6 +1025196,13 @@
           "renamed": "decodeText"
         },
         {
+          "start": 58030,
+          "end": 58032,
+          "symbol": "C:bk",
+          "original": "bk",
+          "renamed": "LineNoiseOperator"
+        },
+        {
           "start": 58033,
           "end": 58040,
           "symbol": "F:bk.field_m:[Ljava/lang/String;",
@@ -1024683,6 +1025215,13 @@
           "symbol": "M:jaa.a(B[B)Ljava/lang/String;",
           "original": "a",
           "renamed": "decodeText"
+        },
+        {
+          "start": 58201,
+          "end": 58203,
+          "symbol": "C:bk",
+          "original": "bk",
+          "renamed": "LineNoiseOperator"
         },
         {
           "start": 58204,
@@ -1027679,6 +1028218,13 @@
           "symbol": "M:jaa.a(B[B)Ljava/lang/String;",
           "original": "a",
           "renamed": "decodeText"
+        },
+        {
+          "start": 117634,
+          "end": 117636,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
         },
         {
           "start": 117651,
@@ -1056811,7 +1057357,7 @@
       "original": "lja.java",
       "renamed": "PlayerContextMenu.java",
       "inputSha256": "166a4f92f16110b93fbc35ead7c37279e23464885f24906fca005e7beb74953c",
-      "outputSha256": "75ea538d945c474a19d77086a664e8b2fe5b98ad187e5cca366668d85eef396f",
+      "outputSha256": "babf70bc3b2a2882079770b10b30683ae4338749f3e1da238c93cfc71e13ec71",
       "edits": [
         {
           "start": 50,
@@ -1056896,6 +1057442,13 @@
           "symbol": "C:kna",
           "original": "kna",
           "renamed": "PrefabComponent"
+        },
+        {
+          "start": 5110,
+          "end": 5112,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
         },
         {
           "start": 5416,
@@ -1057015,6 +1057568,13 @@
           "symbol": "M:ola.a(BILjava/lang/String;)V",
           "original": "a",
           "renamed": "addItem"
+        },
+        {
+          "start": 8662,
+          "end": 8664,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
         },
         {
           "start": 8749,
@@ -1067049,7 +1067609,7 @@
       "original": "mi.java",
       "renamed": "ConsoleToken.java",
       "inputSha256": "e9b9365616ec7912430eb4ff5d04399304d28f5578eee11e9d1c7f5262effb67",
-      "outputSha256": "a406cedabcf962320d36d1b0d09d4c97fe28073c062138d52262708605fae15b",
+      "outputSha256": "d9f4b71f3daa46562d9caef0c2f34509be11aa1155b07da19c4e5f46b089a845",
       "edits": [
         {
           "start": 50,
@@ -1067106,6 +1067666,13 @@
           "symbol": "C:cka",
           "original": "cka",
           "renamed": "OpenGlToolkit"
+        },
+        {
+          "start": 1393,
+          "end": 1395,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
         },
         {
           "start": 1451,
@@ -1076140,7 +1076707,7 @@
       "original": "np.java",
       "renamed": "np.java",
       "inputSha256": "5c26c219b1c9559daf84b741364270a1c179b3624bd58c480cf97220eeb9060b",
-      "outputSha256": "ca30b711f1d03ac44d906cbe245dd69c64a2a4b79a08eb8a7ff159a46b83c869",
+      "outputSha256": "078ebd57d9947b160de6f3ac1514474012210a38cd134316ee18da1295e7a5bf",
       "edits": [
         {
           "start": 856,
@@ -1076171,6 +1076738,20 @@
           "original": "L1",
           "renamed": "scanLoop1",
           "kind": "label"
+        },
+        {
+          "start": 11555,
+          "end": 11558,
+          "symbol": "C:qka",
+          "original": "qka",
+          "renamed": "StandingsPhase"
+        },
+        {
+          "start": 11853,
+          "end": 11856,
+          "symbol": "C:qka",
+          "original": "qka",
+          "renamed": "StandingsPhase"
         },
         {
           "start": 23847,
@@ -1077672,6 +1078253,13 @@
           "renamed": "ModelFactory"
         },
         {
+          "start": 184313,
+          "end": 184316,
+          "symbol": "C:qka",
+          "original": "qka",
+          "renamed": "StandingsPhase"
+        },
+        {
           "start": 184947,
           "end": 184950,
           "symbol": "B:np.<init>(Lcka;Loc;IIII)V#0",
@@ -1077754,6 +1078342,13 @@
           "original": "L60",
           "renamed": "scanLoop2",
           "kind": "label"
+        },
+        {
+          "start": 207644,
+          "end": 207647,
+          "symbol": "C:qka",
+          "original": "qka",
+          "renamed": "StandingsPhase"
         },
         {
           "start": 207913,
@@ -1082278,7 +1082873,7 @@
       "original": "ob.java",
       "renamed": "ob.java",
       "inputSha256": "b629303d1c78fe36313efc9b96e28402e9cb455deda78833cf7230badfbf8063",
-      "outputSha256": "53f88f2690a3fb90b9f39f2522d98abc22900a9e01cbb369012012078ea3089e",
+      "outputSha256": "4c9129b4d355d389bcd9b56d620717d4eff498515f020ef7cf4c6faa430cef5c",
       "edits": [
         {
           "start": 64,
@@ -1082622,6 +1083217,13 @@
           "symbol": "C:ng",
           "original": "ng",
           "renamed": "WidgetStyleLayer"
+        },
+        {
+          "start": 5150,
+          "end": 5153,
+          "symbol": "C:qka",
+          "original": "qka",
+          "renamed": "StandingsPhase"
         },
         {
           "start": 5190,
@@ -1092379,7 +1092981,7 @@
       "original": "paa.java",
       "renamed": "paa.java",
       "inputSha256": "ef79caaa2254ab56a575fa0c76ae3057d3e5b4b71efb35b35df9a1df0adddd5b",
-      "outputSha256": "fe9d29897d3b811c01bfa89a003a67d739095f567c79e597d849bcd885855f9d",
+      "outputSha256": "2c6e7a759c65ebc1d8873d38ad8a4192808eabe9fcd63e9556a917824371f3e4",
       "edits": [
         {
           "start": 65,
@@ -1092429,6 +1093031,13 @@
           "symbol": "C:bja",
           "original": "bja",
           "renamed": "TextLayout"
+        },
+        {
+          "start": 2780,
+          "end": 2782,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
         },
         {
           "start": 3200,
@@ -1094671,7 +1095280,7 @@
       "original": "pfa.java",
       "renamed": "pfa.java",
       "inputSha256": "9267e31959f65fd2b8f88443bb1f5171d847e78786da1c5e3fe54ecee88c8a0e",
-      "outputSha256": "2acdcf7d7f7731326cf4b1885222388a2295ca7e0c6b9d3567ab11fcdf3dbb7a",
+      "outputSha256": "6bd0bcf9e1fe97806bdf82f90baee7516bf226641619a18e716730f64e45786c",
       "edits": [
         {
           "start": 68,
@@ -1096928,6 +1097537,13 @@
           "renamed": "readTextEntry"
         },
         {
+          "start": 21320,
+          "end": 21323,
+          "symbol": "C:qka",
+          "original": "qka",
+          "renamed": "StandingsPhase"
+        },
+        {
           "start": 21338,
           "end": 21339,
           "symbol": "M:jaa.a(B[B)Ljava/lang/String;",
@@ -1097670,6 +1098286,13 @@
           "renamed": "readTextEntry"
         },
         {
+          "start": 29359,
+          "end": 29361,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
           "start": 29376,
           "end": 29377,
           "symbol": "M:jaa.a(B[B)Ljava/lang/String;",
@@ -1098391,6 +1099014,13 @@
           "renamed": "readTextEntry"
         },
         {
+          "start": 37274,
+          "end": 37276,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
           "start": 37277,
           "end": 37284,
           "symbol": "F:fv.field_d:[Ljava/lang/String;",
@@ -1098410,6 +1099040,13 @@
           "symbol": "M:mt.a(Ljava/lang/String;B)[B",
           "original": "a",
           "renamed": "readTextEntry"
+        },
+        {
+          "start": 37447,
+          "end": 37449,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
         },
         {
           "start": 37450,
@@ -1098433,6 +1099070,13 @@
           "renamed": "readTextEntry"
         },
         {
+          "start": 37620,
+          "end": 37622,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
           "start": 37623,
           "end": 37630,
           "symbol": "F:fv.field_d:[Ljava/lang/String;",
@@ -1098452,6 +1099096,13 @@
           "symbol": "M:mt.a(Ljava/lang/String;B)[B",
           "original": "a",
           "renamed": "readTextEntry"
+        },
+        {
+          "start": 37794,
+          "end": 37796,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
         },
         {
           "start": 37797,
@@ -1098475,6 +1099126,13 @@
           "renamed": "readTextEntry"
         },
         {
+          "start": 37967,
+          "end": 37969,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
           "start": 37970,
           "end": 37977,
           "symbol": "F:fv.field_d:[Ljava/lang/String;",
@@ -1098494,6 +1099152,13 @@
           "symbol": "M:mt.a(Ljava/lang/String;B)[B",
           "original": "a",
           "renamed": "readTextEntry"
+        },
+        {
+          "start": 38140,
+          "end": 38142,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
         },
         {
           "start": 38143,
@@ -1098517,6 +1099182,13 @@
           "renamed": "readTextEntry"
         },
         {
+          "start": 38314,
+          "end": 38316,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
           "start": 38317,
           "end": 38324,
           "symbol": "F:fv.field_d:[Ljava/lang/String;",
@@ -1098536,6 +1099208,13 @@
           "symbol": "M:mt.a(Ljava/lang/String;B)[B",
           "original": "a",
           "renamed": "readTextEntry"
+        },
+        {
+          "start": 38487,
+          "end": 38489,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
         },
         {
           "start": 38490,
@@ -1098559,6 +1099238,13 @@
           "renamed": "readTextEntry"
         },
         {
+          "start": 38660,
+          "end": 38662,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
           "start": 38663,
           "end": 38670,
           "symbol": "F:fv.field_d:[Ljava/lang/String;",
@@ -1098578,6 +1099264,13 @@
           "symbol": "M:mt.a(Ljava/lang/String;B)[B",
           "original": "a",
           "renamed": "readTextEntry"
+        },
+        {
+          "start": 38833,
+          "end": 38835,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
         },
         {
           "start": 38836,
@@ -1098601,6 +1099294,13 @@
           "renamed": "readTextEntry"
         },
         {
+          "start": 39007,
+          "end": 39009,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
           "start": 39010,
           "end": 39017,
           "symbol": "F:fv.field_d:[Ljava/lang/String;",
@@ -1098620,6 +1099320,13 @@
           "symbol": "M:mt.a(Ljava/lang/String;B)[B",
           "original": "a",
           "renamed": "readTextEntry"
+        },
+        {
+          "start": 39182,
+          "end": 39184,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
         },
         {
           "start": 39185,
@@ -1098643,6 +1099350,13 @@
           "renamed": "readTextEntry"
         },
         {
+          "start": 39357,
+          "end": 39359,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
           "start": 39360,
           "end": 39367,
           "symbol": "F:fv.field_d:[Ljava/lang/String;",
@@ -1098662,6 +1099376,13 @@
           "symbol": "M:mt.a(Ljava/lang/String;B)[B",
           "original": "a",
           "renamed": "readTextEntry"
+        },
+        {
+          "start": 39532,
+          "end": 39534,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
         },
         {
           "start": 39535,
@@ -1098685,6 +1099406,13 @@
           "renamed": "readTextEntry"
         },
         {
+          "start": 39707,
+          "end": 39709,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
           "start": 39710,
           "end": 39717,
           "symbol": "F:fv.field_d:[Ljava/lang/String;",
@@ -1098704,6 +1099432,13 @@
           "symbol": "M:mt.a(Ljava/lang/String;B)[B",
           "original": "a",
           "renamed": "readTextEntry"
+        },
+        {
+          "start": 39882,
+          "end": 39884,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
         },
         {
           "start": 39885,
@@ -1098727,6 +1099462,13 @@
           "renamed": "readTextEntry"
         },
         {
+          "start": 40057,
+          "end": 40059,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
           "start": 40060,
           "end": 40067,
           "symbol": "F:fv.field_d:[Ljava/lang/String;",
@@ -1098748,6 +1099490,13 @@
           "renamed": "readTextEntry"
         },
         {
+          "start": 40232,
+          "end": 40234,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
           "start": 40235,
           "end": 40242,
           "symbol": "F:fv.field_d:[Ljava/lang/String;",
@@ -1098767,6 +1099516,13 @@
           "symbol": "M:mt.a(Ljava/lang/String;B)[B",
           "original": "a",
           "renamed": "readTextEntry"
+        },
+        {
+          "start": 40408,
+          "end": 40410,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
         },
         {
           "start": 40411,
@@ -1106656,7 +1107412,7 @@
       "original": "pk.java",
       "renamed": "pk.java",
       "inputSha256": "0a7812ef23c3ee01767a30fb5111f1ab4d4cbd3450277fd6e75298747c2bae22",
-      "outputSha256": "ad6fb8138ac541c5ad585e7f6cc431c28a092f97c7634f521aecc3e881ac05e8",
+      "outputSha256": "48e9c72b90798e5f78c5577b8ef36ab3c309a4f35c245d17c560e19f5ebe1f95",
       "edits": [
         {
           "start": 989,
@@ -1106736,6 +1107492,27 @@
           "renamed": "ApproachPlayerLocomotor"
         },
         {
+          "start": 3373,
+          "end": 3375,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
+        },
+        {
+          "start": 3464,
+          "end": 3466,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
+        },
+        {
+          "start": 3568,
+          "end": 3570,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
+        },
+        {
           "start": 4615,
           "end": 4617,
           "symbol": "C:qv",
@@ -1106778,6 +1107555,13 @@
           "renamed": "ToolkitSprite"
         },
         {
+          "start": 7182,
+          "end": 7184,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
+        },
+        {
           "start": 7223,
           "end": 7225,
           "symbol": "C:hl",
@@ -1106792,11 +1107576,25 @@
           "renamed": "ObjectPool"
         },
         {
+          "start": 7307,
+          "end": 7309,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
+        },
+        {
           "start": 7382,
           "end": 7384,
           "symbol": "C:lc",
           "original": "lc",
           "renamed": "ContentTransitionDialog"
+        },
+        {
+          "start": 7423,
+          "end": 7425,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
         },
         {
           "start": 7567,
@@ -1114290,7 +1115088,7 @@
       "original": "qh.java",
       "renamed": "MatchScreen.java",
       "inputSha256": "297deb7b6be6c8d5c3ced20a65c12c6f29d1cdf537d06d984c0ca4a0ed3f8ddc",
-      "outputSha256": "3d9dc4cb7585e967b1789b9ed60c07daa79fc286ba94460a21e88745baf82519",
+      "outputSha256": "63a2909e17b2b8b3701b297bd7ac249b1a1e1e09a03a975e30aa49518dc48c66",
       "edits": [
         {
           "start": 71,
@@ -1114473,6 +1115271,13 @@
           "symbol": "M:vna.d(I)V",
           "original": "d",
           "renamed": "clear"
+        },
+        {
+          "start": 2202,
+          "end": 2203,
+          "symbol": "M:qh.a(ILqra;)V",
+          "original": "a",
+          "renamed": "setPhase"
         },
         {
           "start": 2216,
@@ -1114769,6 +1115574,13 @@
           "renamed": "ConstrainToRectangleLocomotor"
         },
         {
+          "start": 6693,
+          "end": 6694,
+          "symbol": "M:qh.a(ILqra;)V",
+          "original": "a",
+          "renamed": "setPhase"
+        },
+        {
           "start": 6699,
           "end": 6702,
           "symbol": "C:qra",
@@ -1115028,6 +1115840,13 @@
           "renamed": "Room"
         },
         {
+          "start": 17545,
+          "end": 17546,
+          "symbol": "M:qh.a(ILqra;)V",
+          "original": "a",
+          "renamed": "setPhase"
+        },
+        {
           "start": 17554,
           "end": 17557,
           "symbol": "C:fja",
@@ -1115273,6 +1116092,20 @@
           "renamed": "matchState"
         },
         {
+          "start": 21806,
+          "end": 21807,
+          "symbol": "M:qh.a(ILqra;)V",
+          "original": "a",
+          "renamed": "setPhase"
+        },
+        {
+          "start": 21815,
+          "end": 21818,
+          "symbol": "C:qka",
+          "original": "qka",
+          "renamed": "StandingsPhase"
+        },
+        {
           "start": 21830,
           "end": 21837,
           "symbol": "F:qh.field_z:Lv;",
@@ -1115334,6 +1116167,20 @@
           "symbol": "F:qh.field_k:Lff;",
           "original": "field_k",
           "renamed": "matchState"
+        },
+        {
+          "start": 23576,
+          "end": 23577,
+          "symbol": "M:qh.a(ILqra;)V",
+          "original": "a",
+          "renamed": "setPhase"
+        },
+        {
+          "start": 23595,
+          "end": 23597,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
         },
         {
           "start": 23609,
@@ -1115749,6 +1116596,13 @@
           "renamed": "addLast"
         },
         {
+          "start": 30783,
+          "end": 30784,
+          "symbol": "M:qh.a(ILqra;)V",
+          "original": "a",
+          "renamed": "setPhase"
+        },
+        {
           "start": 30807,
           "end": 30814,
           "symbol": "F:qh.field_z:Lv;",
@@ -1115761,6 +1116615,20 @@
           "symbol": "F:qh.field_l:Lqra;",
           "original": "field_l",
           "renamed": "phase"
+        },
+        {
+          "start": 32621,
+          "end": 32623,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
+        },
+        {
+          "start": 32639,
+          "end": 32641,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
         },
         {
           "start": 32649,
@@ -1115782,6 +1116650,20 @@
           "symbol": "F:qh.field_z:Lv;",
           "original": "field_z",
           "renamed": "protocol"
+        },
+        {
+          "start": 33277,
+          "end": 33278,
+          "symbol": "M:qh.a(ILqra;)V",
+          "original": "a",
+          "renamed": "setPhase"
+        },
+        {
+          "start": 33286,
+          "end": 33289,
+          "symbol": "C:qka",
+          "original": "qka",
+          "renamed": "StandingsPhase"
         },
         {
           "start": 33301,
@@ -1115819,6 +1116701,13 @@
           "renamed": "matchState"
         },
         {
+          "start": 33698,
+          "end": 33700,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
+        },
+        {
           "start": 33811,
           "end": 33818,
           "symbol": "F:qh.field_k:Lff;",
@@ -1115833,11 +1116722,25 @@
           "renamed": "matchState"
         },
         {
+          "start": 33943,
+          "end": 33945,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
+        },
+        {
           "start": 34054,
           "end": 34061,
           "symbol": "F:qh.field_k:Lff;",
           "original": "field_k",
           "renamed": "matchState"
+        },
+        {
+          "start": 34136,
+          "end": 34138,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
         },
         {
           "start": 34182,
@@ -1115915,6 +1116818,13 @@
           "symbol": "F:qh.field_z:Lv;",
           "original": "field_z",
           "renamed": "protocol"
+        },
+        {
+          "start": 36094,
+          "end": 36095,
+          "symbol": "M:qh.a(ILqra;)V",
+          "original": "a",
+          "renamed": "setPhase"
         },
         {
           "start": 36103,
@@ -1116204,6 +1117114,13 @@
           "renamed": "getObserver"
         },
         {
+          "start": 43721,
+          "end": 43723,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
+        },
+        {
           "start": 43907,
           "end": 43914,
           "symbol": "F:qh.field_k:Lff;",
@@ -1116232,11 +1117149,25 @@
           "renamed": "matchState"
         },
         {
+          "start": 44743,
+          "end": 44744,
+          "symbol": "M:qh.a(ILqra;)V",
+          "original": "a",
+          "renamed": "setPhase"
+        },
+        {
           "start": 44766,
           "end": 44773,
           "symbol": "F:qh.field_z:Lv;",
           "original": "field_z",
           "renamed": "protocol"
+        },
+        {
+          "start": 44813,
+          "end": 44814,
+          "symbol": "M:qh.a(ILqra;)V",
+          "original": "a",
+          "renamed": "setPhase"
         },
         {
           "start": 44822,
@@ -1116517,6 +1117448,20 @@
           "symbol": "F:qh.field_k:Lff;",
           "original": "field_k",
           "renamed": "matchState"
+        },
+        {
+          "start": 50274,
+          "end": 50275,
+          "symbol": "M:qh.a(ILqra;)V",
+          "original": "a",
+          "renamed": "setPhase"
+        },
+        {
+          "start": 50283,
+          "end": 50286,
+          "symbol": "C:qka",
+          "original": "qka",
+          "renamed": "StandingsPhase"
         },
         {
           "start": 50298,
@@ -1117983,10 +1118928,17 @@
     },
     {
       "original": "qka.java",
-      "renamed": "qka.java",
+      "renamed": "StandingsPhase.java",
       "inputSha256": "e0e1f72bc8c3e27c1d426ef2fbfc3b379d2697ff04afc4818285c35e2f55a781",
-      "outputSha256": "636806600fa09c8d18d6defe367fa170b7c7ed8b5afd2dd7b367db8faa204105",
+      "outputSha256": "78857720a9546249e028c362adb351a57dabeaa07d151d35dc76bcef3007523e",
       "edits": [
+        {
+          "start": 50,
+          "end": 53,
+          "symbol": "C:qka",
+          "original": "qka",
+          "renamed": "StandingsPhase"
+        },
         {
           "start": 62,
           "end": 65,
@@ -1118007,6 +1118959,13 @@
           "symbol": "M:qka.b(B)V",
           "original": "b",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 453,
+          "end": 456,
+          "symbol": "M:qka.<init>(Lqh;Lv;)V",
+          "original": "qka",
+          "renamed": "StandingsPhase"
         },
         {
           "start": 457,
@@ -1129434,7 +1130393,7 @@
       "original": "rg.java",
       "renamed": "rg.java",
       "inputSha256": "408895d6a1e7c01473368cd929cc5d2390f955aa1990071cb20f65bf79c126f8",
-      "outputSha256": "dae752443a17e24c5c9526d7ff62b672af761cf103defa00608e87401a0e135d",
+      "outputSha256": "dfc3a588f114968025b7eefbb5735b2fd1d04dbbd8ce7e7debd494c2ab1ea856",
       "edits": [
         {
           "start": 61,
@@ -1129526,6 +1130485,13 @@
           "symbol": "C:bn",
           "original": "bn",
           "renamed": "VortexBehaviour"
+        },
+        {
+          "start": 1973,
+          "end": 1976,
+          "symbol": "C:qka",
+          "original": "qka",
+          "renamed": "StandingsPhase"
         },
         {
           "start": 2012,
@@ -1130102,6 +1131068,13 @@
           "renamed": "ConstrainToCircleLocomotor"
         },
         {
+          "start": 6658,
+          "end": 6660,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
           "start": 6670,
           "end": 6673,
           "symbol": "C:lda",
@@ -1130576,6 +1131549,13 @@
           "symbol": "C:uqa",
           "original": "uqa",
           "renamed": "ConstrainToCircleLocomotor"
+        },
+        {
+          "start": 9429,
+          "end": 9431,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
         },
         {
           "start": 9441,
@@ -1138303,7 +1139283,7 @@
       "original": "rpa.java",
       "renamed": "rpa.java",
       "inputSha256": "83e2dbef965ce52ae0a6f63cb13f33a98d43752100bb45f271b6dbeca069cf56",
-      "outputSha256": "551d7af28f45b4e159f4f64154dfb491a49d4a1cbe1b79822ad625ec20008f04",
+      "outputSha256": "05135486c1e7d7a0a64dfdcb80bdbf00c4a1e9cc07695cb882e0e3018257ba76",
       "edits": [
         {
           "start": 1711,
@@ -1138318,6 +1139298,69 @@
           "symbol": "C:cka",
           "original": "cka",
           "renamed": "OpenGlToolkit"
+        },
+        {
+          "start": 5912,
+          "end": 5914,
+          "symbol": "C:fl",
+          "original": "fl",
+          "renamed": "KaleidoscopeOperator"
+        },
+        {
+          "start": 5925,
+          "end": 5927,
+          "symbol": "C:fl",
+          "original": "fl",
+          "renamed": "KaleidoscopeOperator"
+        },
+        {
+          "start": 5955,
+          "end": 5957,
+          "symbol": "C:fl",
+          "original": "fl",
+          "renamed": "KaleidoscopeOperator"
+        },
+        {
+          "start": 6258,
+          "end": 6260,
+          "symbol": "C:fl",
+          "original": "fl",
+          "renamed": "KaleidoscopeOperator"
+        },
+        {
+          "start": 6271,
+          "end": 6273,
+          "symbol": "C:fl",
+          "original": "fl",
+          "renamed": "KaleidoscopeOperator"
+        },
+        {
+          "start": 6301,
+          "end": 6303,
+          "symbol": "C:fl",
+          "original": "fl",
+          "renamed": "KaleidoscopeOperator"
+        },
+        {
+          "start": 6549,
+          "end": 6551,
+          "symbol": "C:fl",
+          "original": "fl",
+          "renamed": "KaleidoscopeOperator"
+        },
+        {
+          "start": 6562,
+          "end": 6564,
+          "symbol": "C:fl",
+          "original": "fl",
+          "renamed": "KaleidoscopeOperator"
+        },
+        {
+          "start": 6590,
+          "end": 6592,
+          "symbol": "C:fl",
+          "original": "fl",
+          "renamed": "KaleidoscopeOperator"
         },
         {
           "start": 8102,
@@ -1148692,7 +1149735,7 @@
       "original": "sra.java",
       "renamed": "GameAssetLoader.java",
       "inputSha256": "6995010bca06370c530d55f896a5434e05121a65cb42067094121ad977f8ff04",
-      "outputSha256": "a2c33b788263afd18620eba03b26355c42d108ef60b2fe2db00cced3a80482c9",
+      "outputSha256": "a8236678c5a9f468d48d15ff5574827672b1f25999c384cb5a0ca433441c1afd",
       "edits": [
         {
           "start": 71,
@@ -1149129,6 +1150172,13 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 1772,
+          "end": 1774,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
           "start": 1775,
           "end": 1782,
           "symbol": "F:fv.field_d:[Ljava/lang/String;",
@@ -1149148,6 +1150198,13 @@
           "symbol": "F:hca.field_U:[Ljava/lang/String;",
           "original": "field_U",
           "renamed": "loadingQuips"
+        },
+        {
+          "start": 1838,
+          "end": 1840,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
         },
         {
           "start": 1841,
@@ -1149171,6 +1150228,13 @@
           "renamed": "loadingQuips"
         },
         {
+          "start": 1904,
+          "end": 1906,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
           "start": 1907,
           "end": 1914,
           "symbol": "F:fv.field_d:[Ljava/lang/String;",
@@ -1149190,6 +1150254,13 @@
           "symbol": "F:hca.field_U:[Ljava/lang/String;",
           "original": "field_U",
           "renamed": "loadingQuips"
+        },
+        {
+          "start": 1970,
+          "end": 1972,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
         },
         {
           "start": 1973,
@@ -1149213,6 +1150284,13 @@
           "renamed": "loadingQuips"
         },
         {
+          "start": 2036,
+          "end": 2038,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
           "start": 2039,
           "end": 2046,
           "symbol": "F:fv.field_d:[Ljava/lang/String;",
@@ -1149234,6 +1150312,13 @@
           "renamed": "loadingQuips"
         },
         {
+          "start": 2112,
+          "end": 2114,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
           "start": 2115,
           "end": 2122,
           "symbol": "F:fv.field_d:[Ljava/lang/String;",
@@ -1149253,6 +1150338,13 @@
           "symbol": "F:hca.field_U:[Ljava/lang/String;",
           "original": "field_U",
           "renamed": "loadingQuips"
+        },
+        {
+          "start": 2178,
+          "end": 2180,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
         },
         {
           "start": 2181,
@@ -1149290,6 +1150382,13 @@
           "renamed": "loadingQuips"
         },
         {
+          "start": 2268,
+          "end": 2270,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
           "start": 2271,
           "end": 2278,
           "symbol": "F:fv.field_d:[Ljava/lang/String;",
@@ -1149309,6 +1150408,13 @@
           "symbol": "F:hca.field_U:[Ljava/lang/String;",
           "original": "field_U",
           "renamed": "loadingQuips"
+        },
+        {
+          "start": 2342,
+          "end": 2344,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
         },
         {
           "start": 2345,
@@ -1149332,11 +1150438,25 @@
           "renamed": "loadingQuips"
         },
         {
+          "start": 2416,
+          "end": 2418,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
           "start": 2419,
           "end": 2426,
           "symbol": "F:fv.field_d:[Ljava/lang/String;",
           "original": "field_d",
           "renamed": "loadingQuipsAlternate"
+        },
+        {
+          "start": 2466,
+          "end": 2468,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
         },
         {
           "start": 2469,
@@ -1149360,6 +1150480,13 @@
           "renamed": "loadingQuips"
         },
         {
+          "start": 2534,
+          "end": 2536,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
           "start": 2537,
           "end": 2544,
           "symbol": "F:fv.field_d:[Ljava/lang/String;",
@@ -1149379,6 +1150506,13 @@
           "symbol": "F:hca.field_U:[Ljava/lang/String;",
           "original": "field_U",
           "renamed": "loadingQuips"
+        },
+        {
+          "start": 2602,
+          "end": 2604,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
         },
         {
           "start": 2605,
@@ -1149402,6 +1150536,13 @@
           "renamed": "loadingQuips"
         },
         {
+          "start": 2670,
+          "end": 2672,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
           "start": 2673,
           "end": 2680,
           "symbol": "F:fv.field_d:[Ljava/lang/String;",
@@ -1149421,6 +1150562,13 @@
           "symbol": "F:hca.field_U:[Ljava/lang/String;",
           "original": "field_U",
           "renamed": "loadingQuips"
+        },
+        {
+          "start": 2738,
+          "end": 2740,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
         },
         {
           "start": 2741,
@@ -1149444,6 +1150592,13 @@
           "renamed": "loadingQuips"
         },
         {
+          "start": 2815,
+          "end": 2817,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
           "start": 2818,
           "end": 2825,
           "symbol": "F:fv.field_d:[Ljava/lang/String;",
@@ -1149463,6 +1150618,13 @@
           "symbol": "F:hca.field_U:[Ljava/lang/String;",
           "original": "field_U",
           "renamed": "loadingQuips"
+        },
+        {
+          "start": 2883,
+          "end": 2885,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
         },
         {
           "start": 2886,
@@ -1149486,6 +1150648,13 @@
           "renamed": "loadingQuips"
         },
         {
+          "start": 2961,
+          "end": 2963,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
+        },
+        {
           "start": 2964,
           "end": 2971,
           "symbol": "F:fv.field_d:[Ljava/lang/String;",
@@ -1149505,6 +1150674,13 @@
           "symbol": "F:hca.field_U:[Ljava/lang/String;",
           "original": "field_U",
           "renamed": "loadingQuips"
+        },
+        {
+          "start": 3039,
+          "end": 3041,
+          "symbol": "C:fv",
+          "original": "fv",
+          "renamed": "RewardChoiceSlot"
         },
         {
           "start": 3042,
@@ -1149729,6 +1150905,13 @@
           "symbol": "C:ea",
           "original": "ea",
           "renamed": "C2SActionPacket"
+        },
+        {
+          "start": 7294,
+          "end": 7296,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
         },
         {
           "start": 7542,
@@ -1159974,7 +1161157,7 @@
       "original": "tu.java",
       "renamed": "tu.java",
       "inputSha256": "194f36d2c594904f3cf26e59c0f543a7af247da644130adca19a9f6e7e1a5ece",
-      "outputSha256": "fd3c5c51397a7f1263abfcef45156a984a941cca8df46c131b41f0d82e9c07cc",
+      "outputSha256": "e859ebdf67a1d006d3a1ff714628d4edfe7e18f044e2cf7aaa3b348e7a1a57a5",
       "edits": [
         {
           "start": 76,
@@ -1160040,11 +1161223,32 @@
           "renamed": "Room"
         },
         {
+          "start": 1981,
+          "end": 1983,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
+        },
+        {
+          "start": 2015,
+          "end": 2017,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
+        },
+        {
           "start": 2158,
           "end": 2159,
           "symbol": "M:vna.b(BLvg;)V",
           "original": "b",
           "renamed": "addLast"
+        },
+        {
+          "start": 2760,
+          "end": 2762,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
         },
         {
           "start": 2894,
@@ -1160213,6 +1161417,20 @@
           "symbol": "C:la",
           "original": "la",
           "renamed": "Room"
+        },
+        {
+          "start": 6358,
+          "end": 6360,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
+        },
+        {
+          "start": 6382,
+          "end": 6384,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
         },
         {
           "start": 6774,
@@ -1160411,11 +1161629,32 @@
           "renamed": "getId"
         },
         {
+          "start": 12356,
+          "end": 12358,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
+        },
+        {
           "start": 12402,
           "end": 12405,
           "symbol": "C:wpa",
           "original": "wpa",
           "renamed": "ArrowShooterComponent"
+        },
+        {
+          "start": 12525,
+          "end": 12527,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
+        },
+        {
+          "start": 12771,
+          "end": 12773,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
         },
         {
           "start": 13279,
@@ -1162044,7 +1163283,7 @@
       "original": "uda.java",
       "renamed": "uda.java",
       "inputSha256": "518ec38e83a0f7749da5dd58a185c3d01d6993e36d7dba73e949dd673e01d103",
-      "outputSha256": "a36128d1130adbcda1150db6e785f0cf0607951a108acbf5934f72631a5d2329",
+      "outputSha256": "3d70d25d7c5dc906cb5025e2d43f87d8e6e399b5042ff76fb44557ecc0fa71df",
       "edits": [
         {
           "start": 62,
@@ -1162255,6 +1163494,13 @@
           "symbol": "F:ff.field_H:[Lhca;",
           "original": "field_H",
           "renamed": "players"
+        },
+        {
+          "start": 7448,
+          "end": 7450,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
         },
         {
           "start": 7533,
@@ -1163721,7 +1164967,7 @@
       "original": "ug.java",
       "renamed": "AppletGameShell.java",
       "inputSha256": "c14868855cae32c8f46fafb70374535ea02ec8d48aa9e32135cff24c4f135673",
-      "outputSha256": "274ab9a87b6c798b4bf7a0778815b2be771a40a8c74e6f82a8b8c0664f240257",
+      "outputSha256": "3e4284dbe5ec9f6d3c2d670e703ba5ca49667b54add62f6d59f21ef077563a36",
       "edits": [
         {
           "start": 53,
@@ -1164492,6 +1165738,13 @@
           "symbol": "C:th",
           "original": "th",
           "renamed": "WindZoneBehaviour"
+        },
+        {
+          "start": 18406,
+          "end": 18408,
+          "symbol": "C:bk",
+          "original": "bk",
+          "renamed": "LineNoiseOperator"
         },
         {
           "start": 18430,
@@ -1175046,7 +1176299,7 @@
       "original": "v.java",
       "renamed": "MatchProtocol.java",
       "inputSha256": "1a18d4454b3e798711ab90a8a3a31dc818cfb6aef5dcb2eac401cef7528d5136",
-      "outputSha256": "f46b2d99d3315aa7cb71d58306ee499d69079bf1cbd2573b0fb5e845214a2882",
+      "outputSha256": "73e6c95386b596bbfc1e64c037d23543105ef2c6edf2438f104117224a5b2878",
       "edits": [
         {
           "start": 50,
@@ -1175138,6 +1176391,13 @@
           "symbol": "M:v.a(Lbo;ILkh;)V",
           "original": "a",
           "renamed": "decodePacket"
+        },
+        {
+          "start": 2767,
+          "end": 2769,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
         },
         {
           "start": 2915,
@@ -1182111,7 +1183371,7 @@
       "original": "vna.java",
       "renamed": "IntrusiveDeque.java",
       "inputSha256": "5cdbc9ad18b3be14b2a70aa222a5477991687468733b49a92d7409b1190084cd",
-      "outputSha256": "57ed748947b0faefe708981f3f8541f521e70f4fabd800e68ef4975c37758753",
+      "outputSha256": "49e672e4e75c6f94d3949771d6737ad08baee0b0206117f5dc3e4522b574eecb",
       "edits": [
         {
           "start": 50,
@@ -1182560,6 +1183820,13 @@
           "symbol": "C:gd",
           "original": "gd",
           "renamed": "IdolItemComponent"
+        },
+        {
+          "start": 10298,
+          "end": 10300,
+          "symbol": "C:ab",
+          "original": "ab",
+          "renamed": "RewardChoicePhase"
         },
         {
           "start": 10408,
@@ -1198886,10 +1200153,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/tombracer"
     },
-    "rulesSha256": "e8d1860871316322d266b1f97e27260ba0f2647f8d458eaa914a401d3f067248",
+    "rulesSha256": "cb90018fc0512ce2a513ba89e2ba0d42b9e56e529f85017b30461f3a54e5fbe1",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "145b13bc847895948659831ff292c85bf8487ab5cdb2b9615b317b54baf77e7d",
-    "outputTreeSha256": "4c5454d8567b25a6060497586d1391bbb29a13a43e66d09d5ac4d64f42e05ff7",
+    "outputTreeSha256": "e51e376899937889c3f642f89d733791ccd5be3116ccefc93238ded971501e70",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

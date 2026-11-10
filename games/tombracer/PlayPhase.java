@@ -521,7 +521,7 @@ final class PlayPhase extends MatchPhase {
               jg.field_a.writeVersionedString(var14, (byte) 0);
               jg.field_a.writeVersionedString(var8, (byte) 0);
               var15 = (CharSequence) ((Object) param1);
-              jg.field_a.writeVersionedString(fl.a((byte) 126, var15), (byte) 0);
+              jg.field_a.writeVersionedString(KaleidoscopeOperator.a((byte) 126, var15), (byte) 0);
               jg.field_a.writeShort(-1477662136, param6);
               jg.field_a.writeByte(param3, 0);
               jg.field_a.writeByte(var9, 0);
