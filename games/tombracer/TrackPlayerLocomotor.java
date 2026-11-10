@@ -9,7 +9,7 @@ final class TrackPlayerLocomotor extends Locomotor {
     static af field_s;
     private int field_q;
 
-    final void b(byte param0) {
+    final void tick(byte param0) {
         int var3;
         int var4;
         int var5;
@@ -153,14 +153,14 @@ final class TrackPlayerLocomotor extends Locomotor {
         this.field_q = param1;
     }
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         if (param0 != 0) {
           return -126;
         }
         return param1;
     }
 
-    final void b(int param0) {
+    final void applyConstraint(int param0) {
         if (param0 != 1) {
           this.c(-53, false);
         }

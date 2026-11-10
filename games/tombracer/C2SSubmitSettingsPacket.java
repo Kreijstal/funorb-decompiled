@@ -52,7 +52,7 @@ final class C2SSubmitSettingsPacket implements GamePacket {
         }
     }
 
-    final void b(int param0, byte param1) {
+    final void setSoundEffectsVolume(int param0, byte param1) {
         int var3 = 65 % ((param1 - 7) / 60);
         this.soundEffectsVolume = param0;
         if (this.soundEffectsVolume > 255) {
@@ -104,7 +104,7 @@ final class C2SSubmitSettingsPacket implements GamePacket {
         }
     }
 
-    final void a(int param0, byte param1) {
+    final void setGraphicsMode(int param0, byte param1) {
         int var3 = -59 / ((-1 - param1) / 35);
         this.graphicsMode = param0;
     }

@@ -31,12 +31,12 @@ final class ida {
         if (param1 == -1) {
           var8 = qla.field_b.get(12);
           var9 = qla.field_b.get(13);
-          return mr.field_x[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + pv.field_p[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+          return mr.dayNames[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + pv.shortMonthNames[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
         field_a = (String) null;
         var8Lifetime1 = qla.field_b.get(12);
         var9Lifetime1 = qla.field_b.get(13);
-        return mr.field_x[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + pv.field_p[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8Lifetime1 / 10 + var8Lifetime1 % 10 + ":" + var9Lifetime1 / 10 + var9Lifetime1 % 10 + " GMT";
+        return mr.dayNames[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + pv.shortMonthNames[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8Lifetime1 / 10 + var8Lifetime1 % 10 + ":" + var9Lifetime1 / 10 + var9Lifetime1 % 10 + " GMT";
     }
 
     static {

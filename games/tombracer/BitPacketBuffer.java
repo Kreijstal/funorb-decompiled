@@ -21,11 +21,11 @@ final class BitPacketBuffer extends PacketBuffer {
           this.bitPosition = 127;
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
-          return 255 & this.payload[fieldTemp$0] - this.opcodeCipher.b(104);
+          return 255 & this.payload[fieldTemp$0] - this.opcodeCipher.nextInt(104);
         }
         int fieldTemp$1 = this.position;
         this.position = this.position + 1;
-        return 255 & this.payload[fieldTemp$1] - this.opcodeCipher.b(104);
+        return 255 & this.payload[fieldTemp$1] - this.opcodeCipher.nextInt(104);
     }
 
     final void writeBits(byte param0, int param1, int param2) {
@@ -251,7 +251,7 @@ final class BitPacketBuffer extends PacketBuffer {
           while (var5_int < param3) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param2[param0 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.opcodeCipher.b(120));
+            param2[param0 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.opcodeCipher.nextInt(120));
             var5_int++;
           }
           return;
@@ -344,7 +344,7 @@ final class BitPacketBuffer extends PacketBuffer {
         }
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$0] = (byte)(this.opcodeCipher.b(104) + param0);
+        this.payload[fieldTemp$0] = (byte)(this.opcodeCipher.nextInt(104) + param0);
     }
 
     public static void releaseStatics(byte param0) {

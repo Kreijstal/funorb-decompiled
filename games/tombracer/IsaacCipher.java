@@ -5,10 +5,10 @@ import java.io.*;
 
 final class IsaacCipher {
     private int field_a;
-    private int field_d;
+    private int remaining;
     private int field_f;
     static int[] field_b;
-    private int[] field_g;
+    private int[] results;
     private int[] field_e;
     private int field_c;
 
@@ -60,7 +60,7 @@ final class IsaacCipher {
         field_b = null;
     }
 
-    private final void c(int param0) {
+    private final void generateResults(int param0) {
         int var2 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -90,34 +90,34 @@ final class IsaacCipher {
           this.field_e[var2] = dupTemp$1;
           dupTemp$2 = this.field_e[SnakePitBehaviour.c(var4, 261352) >> 8 >> 2] + var3;
           this.field_a = dupTemp$2;
-          this.field_g[var2] = dupTemp$2;
+          this.results[var2] = dupTemp$2;
         }
         if (param0 != 2) {
           this.a(false);
         }
     }
 
-    final int b(int param0) {
+    final int nextInt(int param0) {
         if (param0 < 89) {
-          this.a(89, 120);
+          this.nextBounded(89, 120);
         }
-        if (this.field_d == 0) {
-          this.c(2);
-          this.field_d = 256;
+        if (this.remaining == 0) {
+          this.generateResults(2);
+          this.remaining = 256;
         }
-        int fieldTemp$0 = this.field_d - 1;
-        this.field_d = this.field_d - 1;
-        return this.field_g[fieldTemp$0];
+        int fieldTemp$0 = this.remaining - 1;
+        this.remaining = this.remaining - 1;
+        return this.results[fieldTemp$0];
     }
 
-    final int a(int param0, int param1) {
+    final int nextBounded(int param0, int param1) {
         int var4 = 0;
         if (param1 >= param0) {
           throw new IllegalArgumentException();
         }
         int var3 = -(int)(4294967296L % (long)param0) + 2147483647;
         while (true) {
-          var4 = this.b(107);
+          var4 = this.nextInt(107);
           if (var3 >= var4) {
             break;
           }
@@ -167,14 +167,14 @@ final class IsaacCipher {
           var5 = var5 + var10;
         }
         for (var2Lifetime1 = 0; var2Lifetime1 < 256; var2Lifetime1 += 8) {
-          var3 = var3 + this.field_g[var2Lifetime1];
-          var9 = var9 + this.field_g[var2Lifetime1 + 6];
-          var8 = var8 + this.field_g[5 + var2Lifetime1];
-          var5 = var5 + this.field_g[2 + var2Lifetime1];
-          var7 = var7 + this.field_g[var2Lifetime1 + 4];
-          var6 = var6 + this.field_g[var2Lifetime1 + 3];
-          var4 = var4 + this.field_g[1 + var2Lifetime1];
-          var10 = var10 + this.field_g[var2Lifetime1 + 7];
+          var3 = var3 + this.results[var2Lifetime1];
+          var9 = var9 + this.results[var2Lifetime1 + 6];
+          var8 = var8 + this.results[5 + var2Lifetime1];
+          var5 = var5 + this.results[2 + var2Lifetime1];
+          var7 = var7 + this.results[var2Lifetime1 + 4];
+          var6 = var6 + this.results[var2Lifetime1 + 3];
+          var4 = var4 + this.results[1 + var2Lifetime1];
+          var10 = var10 + this.results[var2Lifetime1 + 7];
           var3 = var3 ^ var4 << 11;
           var4 = var4 + var5;
           var6 = var6 + var3;
@@ -250,8 +250,8 @@ final class IsaacCipher {
           this.field_e[var2Lifetime2 + 6] = var9;
           this.field_e[var2Lifetime2 + 7] = var10;
         }
-        this.c(2);
-        this.field_d = 256;
+        this.generateResults(2);
+        this.remaining = 256;
     }
 
     final static void a(int param0, int param1, PlatformTaskDispatcher param2, int param3, String param4, int param5, int param6, int param7, int param8, boolean param9, boolean param10, int param11, int param12, long param13) {
@@ -319,10 +319,10 @@ final class IsaacCipher {
     IsaacCipher(int[] param0) {
         int var2_int = 0;
         try {
-          this.field_g = new int[256];
+          this.results = new int[256];
           this.field_e = new int[256];
           for (var2_int = 0; param0.length > var2_int; var2_int++) {
-            this.field_g[var2_int] = param0[var2_int];
+            this.results[var2_int] = param0[var2_int];
           }
           this.a(true);
         } catch (RuntimeException runtimeException) {

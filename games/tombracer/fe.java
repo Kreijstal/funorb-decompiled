@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fe extends paa {
-    static String[] field_A;
+    static String[] gasDeathMessages;
     private tra field_E;
     static int[] field_C;
     static oj field_F;
@@ -13,13 +13,13 @@ final class fe extends paa {
     public static void releaseStatics(int param0) {
         if (param0 == 25) {
           field_C = null;
-          field_A = null;
+          gasDeathMessages = null;
           field_F = null;
           return;
         }
         fe.releaseStatics(83);
         field_C = null;
-        field_A = null;
+        gasDeathMessages = null;
         field_F = null;
     }
 
@@ -193,7 +193,7 @@ final class fe extends paa {
     }
 
     static {
-        field_A = new String[]{"<%0> had a touch of the vapours", "<%0> didn't notice the funny smell", "<%0> should have brought a gas mask", "<%0> came for the treasure, but stayed for the deadly gas"};
+        gasDeathMessages = new String[]{"<%0> had a touch of the vapours", "<%0> didn't notice the funny smell", "<%0> should have brought a gas mask", "<%0> came for the treasure, but stayed for the deadly gas"};
         field_C = new int[]{0, 70, 70, 70, 70};
     }
 }

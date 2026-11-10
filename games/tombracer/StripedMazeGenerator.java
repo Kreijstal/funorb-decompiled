@@ -32,7 +32,7 @@ final class StripedMazeGenerator extends MazeGenerator {
             StripedMazeGenerator.releaseStatics(78);
           }
           while (var5_intLifetime1 < -2 + param2.height) {
-            var6Lifetime1 = 1 + this.random.a(param2.width - 2, 0);
+            var6Lifetime1 = 1 + this.random.nextBounded(param2.width - 2, 0);
             param2.setCell(var5_intLifetime1, 0, 0, var6Lifetime1);
             var5_intLifetime1 += 2;
           }

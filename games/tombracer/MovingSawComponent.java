@@ -51,7 +51,7 @@ final class MovingSawComponent extends PathMoverComponent {
         return 7;
     }
 
-    final Trap a(boolean param0, int param1, Room param2) {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         PathMoveLocomotor var5 = null;
         ConstantEffectBehaviour var6 = null;

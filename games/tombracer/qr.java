@@ -6,7 +6,7 @@ import java.util.*;
 abstract class qr extends ae implements tpa {
     ae field_x;
     static GameFont field_v;
-    static String[] field_u;
+    static String[] sawDeathMessages;
     static ft field_w;
 
     final void a(byte param0, int param1, int param2, int param3, int param4) {
@@ -94,7 +94,7 @@ abstract class qr extends ae implements tpa {
             this.a(param1, param0, param2, 0);
           }
           if (param3 != 0) {
-            field_u = (String[]) null;
+            sawDeathMessages = (String[]) null;
           }
           stackIn_6_0 = (StringBuilder) (param2);
           return stackIn_6_0;
@@ -720,7 +720,7 @@ abstract class qr extends ae implements tpa {
         if (param0 != 0) {
           return;
         }
-        field_u = null;
+        sawDeathMessages = null;
         field_v = null;
         field_w = null;
     }
@@ -744,7 +744,7 @@ abstract class qr extends ae implements tpa {
     }
 
     static {
-        field_u = new String[]{"<%0> was sliced", "<%0> was diced", "<%0> was chopped", "<%0> was buzzed by a saw", "<%0> was hacked by a saw", "<%0> didn't see the saw", "<%0> was cut down to size", "<%0> failed the first trial"};
+        sawDeathMessages = new String[]{"<%0> was sliced", "<%0> was diced", "<%0> was chopped", "<%0> was buzzed by a saw", "<%0> was hacked by a saw", "<%0> didn't see the saw", "<%0> was cut down to size", "<%0> failed the first trial"};
         field_w = new ft(1);
     }
 }

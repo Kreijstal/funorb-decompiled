@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class PathMoverComponent extends kna {
+abstract class PathMoverComponent extends PrefabComponent {
     static String field_G;
     static int[] field_F;
     private gea field_K;

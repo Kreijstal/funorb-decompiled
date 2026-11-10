@@ -61,7 +61,7 @@ final class lma extends dg {
             var4 = (uw) null;
             this.a((byte) -105, 15, (uw) null);
           }
-          stackIn_11_0 = this.a(40).e(true).a(100, 0);
+          stackIn_11_0 = this.a(40).e(true).nextBounded(100, 0);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

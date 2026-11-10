@@ -52,8 +52,8 @@ final class MirrorBehaviour extends Behaviour {
         this.field_v = var2;
     }
 
-    final int a(int param0, int param1) {
-        param0 = fs.a((byte) 83, param0, this.field_w);
+    final int hashState(int param0, int param1) {
+        param0 = fs.mixHash((byte) 83, param0, this.field_w);
         if (param1 > -48) {
           return -43;
         }
@@ -260,7 +260,7 @@ final class MirrorBehaviour extends Behaviour {
         }
     }
 
-    final void k(int param0) {
+    final void tick(int param0) {
         this.b(param0 ^ 1659275336);
         if (param0 == 5418) {
           this.j((byte) 1);

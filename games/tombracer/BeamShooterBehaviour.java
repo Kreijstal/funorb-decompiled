@@ -29,7 +29,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         }
     }
 
-    final void k(int param0) {
+    final void tick(int param0) {
         boolean stackIn_12_1 = false;
         int var2;
         int var3;
@@ -431,9 +431,9 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         return stackIn_4_0;
     }
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         param0 = upa.a(this.field_v, param0, (byte) -106);
-        param0 = fs.a((byte) 127, param0, this.field_o);
+        param0 = fs.mixHash((byte) 127, param0, this.field_o);
         if (param1 >= -48) {
           return 84;
         }

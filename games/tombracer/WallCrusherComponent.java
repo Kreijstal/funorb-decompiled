@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class WallCrusherComponent extends kna {
+final class WallCrusherComponent extends PrefabComponent {
     private int field_J;
     private int field_O;
     private int field_L;
@@ -33,7 +33,7 @@ final class WallCrusherComponent extends kna {
         this.field_O = 65536;
     }
 
-    final Trap a(boolean param0, int param1, Room param2) {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         SimpleBlockBehaviour var5 = null;
         SimpleMoveLocomotor var6 = null;
@@ -74,7 +74,7 @@ final class WallCrusherComponent extends kna {
           if (!this.field_N) {
             var10 = this.field_L;
           } else {
-            var10 = param2.q(-86).a(16, 0);
+            var10 = param2.q(-86).nextBounded(16, 0);
           }
           var10 = var10 * var9.a((byte) -94) / 16;
           var9.a(false, var10);
@@ -224,7 +224,7 @@ final class WallCrusherComponent extends kna {
     final boolean n(byte param0) {
         if (param0 != -122) {
           Room var3 = (Room) null;
-          this.a(false, -124, (Room) null);
+          this.createTrap(false, -124, (Room) null);
           return true;
         }
         return true;

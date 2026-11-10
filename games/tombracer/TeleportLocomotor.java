@@ -10,7 +10,7 @@ final class TeleportLocomotor extends Locomotor {
     private boolean field_p;
     private ir field_t;
 
-    final void b(byte param0) {
+    final void tick(byte param0) {
         int var3 = 0;
         int var4 = 0;
         Trap var5 = null;
@@ -47,7 +47,7 @@ final class TeleportLocomotor extends Locomotor {
             this.field_r = this.field_r + 1;
           } else {
             if (var13.length > 0) {
-              this.field_r = this.c(true).q(73).a(var13.length, 0);
+              this.field_r = this.c(true).q(73).nextBounded(var13.length, 0);
             }
           }
           this.trap.a((byte) 54, this.field_t);
@@ -79,7 +79,7 @@ final class TeleportLocomotor extends Locomotor {
             this.field_r = this.field_r + 1;
           } else {
             if (var13.length > 0) {
-              this.field_r = this.c(true).q(73).a(var13.length, 0);
+              this.field_r = this.c(true).q(73).nextBounded(var13.length, 0);
             }
           }
           this.trap.a((byte) 54, this.field_t);
@@ -139,7 +139,7 @@ final class TeleportLocomotor extends Locomotor {
           this.trap.n(this.field_u, -112);
           return;
         }
-        this.field_r = this.c(true).q(73).a(var13.length, 0);
+        this.field_r = this.c(true).q(73).nextBounded(var13.length, 0);
         this.trap.a((byte) 54, this.field_t);
         var5Lifetime4 = this.trap.getRoot(0);
         if (this.trap.getRoom((byte) -70).a(this.trap, this.trap.getHeight((byte) 55), 2, this.trap.g(true), this.field_t.field_d, this.field_t.field_f, false, var5Lifetime4, this.trap.getWidth(-110))) {
@@ -266,15 +266,15 @@ final class TeleportLocomotor extends Locomotor {
         }
     }
 
-    final void b(int param0) {
+    final void applyConstraint(int param0) {
         if (param0 != 1) {
           BitPacketBuffer var3 = (BitPacketBuffer) null;
           this.encode((BitPacketBuffer) null, (byte) 116);
         }
     }
 
-    final int a(int param0, int param1) {
-        param1 = fs.a((byte) 120, param1, this.field_r);
+    final int hashState(int param0, int param1) {
+        param1 = fs.mixHash((byte) 120, param1, this.field_r);
         if (param0 != 0) {
           return -59;
         }

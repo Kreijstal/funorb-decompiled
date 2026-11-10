@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class TorchComponent extends kna {
+final class TorchComponent extends PrefabComponent {
     static boolean field_F;
 
     TorchComponent(Room param0, int param1) {
         super(param0, param1);
     }
 
-    final Trap a(boolean param0, int param1, Room param2) {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         Trap var4 = null;
         RuntimeException var4_ref = null;
         mfa var5 = null;
@@ -92,7 +92,7 @@ final class TorchComponent extends kna {
     final boolean n(byte param0) {
         if (param0 != -122) {
           Room var3 = (Room) null;
-          this.a(true, 119, (Room) null);
+          this.createTrap(true, 119, (Room) null);
           return true;
         }
         return true;
@@ -101,7 +101,7 @@ final class TorchComponent extends kna {
     final boolean v(int param0) {
         if (param0 != 555277520) {
           Room var3 = (Room) null;
-          this.a(false, -64, (Room) null);
+          this.createTrap(false, -64, (Room) null);
           return false;
         }
         return false;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class MirrorComponent extends kna {
+final class MirrorComponent extends PrefabComponent {
     static jpa field_F;
     static jea field_I;
     static int[] field_H;
@@ -131,7 +131,7 @@ final class MirrorComponent extends kna {
         return true;
     }
 
-    final Trap a(boolean param0, int param1, Room param2) {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         Trap var4 = null;
         RuntimeException var4_ref = null;
         SimpleBlockBehaviour var5 = null;

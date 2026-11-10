@@ -125,26 +125,26 @@ final class DivisionMazeGenerator extends MazeGenerator {
         try {
           if (param1 >= 5 &&
             5 <= param4) {
-            var7_int = (this.random.a(param1 / 2 - 1, 0) + param5) * 2 + param2;
-            var8 = param0 - (-(2 * this.random.a(-1 + param4 / 2, 0)) - 2);
+            var7_int = (this.random.nextBounded(param1 / 2 - 1, 0) + param5) * 2 + param2;
+            var8 = param0 - (-(2 * this.random.nextBounded(-1 + param4 / 2, 0)) - 2);
             for (var9 = param2 + 1; var9 < param1 + param2 - 1; var9++) {
               param3.setCell(var8, 1, param5 ^ 1, var9);
             }
             for (var9Lifetime1 = param0 + 1; -1 + param4 + param0 > var9Lifetime1; var9Lifetime1++) {
               param3.setCell(var9Lifetime1, 1, param5 ^ 1, var7_int);
             }
-            var9Lifetime2 = this.random.a(4, param5 ^ 1);
+            var9Lifetime2 = this.random.nextBounded(4, param5 ^ 1);
             if (var9Lifetime2 != 0) {
-              param3.setCell(param0 + 2 * (this.random.a(var8 - param0, 0) / 2) + 1, 0, 0, var7_int);
+              param3.setCell(param0 + 2 * (this.random.nextBounded(var8 - param0, 0) / 2) + 1, 0, 0, var7_int);
             }
             if (1 != var9Lifetime2) {
-              param3.setCell(var8, 0, 0, param2 + (this.random.a(-param2 + var7_int, param5 ^ 1) / 2 * 2 + 1));
+              param3.setCell(var8, 0, 0, param2 + (this.random.nextBounded(-param2 + var7_int, param5 ^ 1) / 2 * 2 + 1));
             }
             if (2 != var9Lifetime2) {
-              param3.setCell(2 * (this.random.a(-1 + (param0 + param4 - var8), 0) / 2) + var8 + 1, 0, 0, var7_int);
+              param3.setCell(2 * (this.random.nextBounded(-1 + (param0 + param4 - var8), 0) / 2) + var8 + 1, 0, 0, var7_int);
             }
             if (var9Lifetime2 != 3) {
-              param3.setCell(var8, 0, 0, 1 + this.random.a(-1 + param2 + (param1 - var7_int), 0) / 2 * 2 + var7_int);
+              param3.setCell(var8, 0, 0, 1 + this.random.nextBounded(-1 + param2 + (param1 - var7_int), 0) / 2 * 2 + var7_int);
             }
             this.a(param0, -param2 + (var7_int + 1), param2, param3, var8 + 1 - param0, 1);
             this.a(param0, param2 + param1 - var7_int, var7_int, param3, var8 + (1 - param0), 1);

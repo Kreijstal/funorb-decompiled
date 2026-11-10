@@ -31,7 +31,7 @@ final class DarknessBehaviour extends Behaviour {
         }
     }
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         if (param1 > -48) {
           this.field_p = 110;
         }
@@ -150,7 +150,7 @@ final class DarknessBehaviour extends Behaviour {
 
     final int getTypeId(boolean param0) {
         if (param0) {
-          this.k(2);
+          this.tick(2);
         }
         return 3;
     }
@@ -282,7 +282,7 @@ final class DarknessBehaviour extends Behaviour {
         }
     }
 
-    final void k(int param0) {
+    final void tick(int param0) {
         int var3_int = 0;
         int[] var2;
         int var4;

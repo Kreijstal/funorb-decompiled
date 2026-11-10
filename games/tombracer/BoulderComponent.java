@@ -140,7 +140,7 @@ final class BoulderComponent extends PathMoverComponent {
         }
     }
 
-    final Trap a(boolean param0, int param1, Room param2) {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         ConstantEffectBehaviour var5 = null;
         Effect var6 = null;

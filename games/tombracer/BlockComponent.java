@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class BlockComponent extends kna {
-    static String[] field_F;
+final class BlockComponent extends PrefabComponent {
+    static String[] restartMessages;
 
-    final Trap a(boolean param0, int param1, Room param2) {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -88,11 +88,11 @@ final class BlockComponent extends kna {
 
     public static void releaseStatics(int param0) {
         if (param0 < 115) {
-          field_F = (String[]) null;
-          field_F = null;
+          restartMessages = (String[]) null;
+          restartMessages = null;
           return;
         }
-        field_F = null;
+        restartMessages = null;
     }
 
     final boolean n(byte param0) {
@@ -114,7 +114,7 @@ final class BlockComponent extends kna {
     final boolean z(int param0) {
         if (param0 != 0) {
           Room var3 = (Room) null;
-          this.a(false, -29, (Room) null);
+          this.createTrap(false, -29, (Room) null);
           return false;
         }
         return false;
@@ -122,7 +122,7 @@ final class BlockComponent extends kna {
 
     final boolean s(int param0) {
         if (param0 != -15254) {
-          field_F = (String[]) null;
+          restartMessages = (String[]) null;
           return false;
         }
         return false;
@@ -162,7 +162,7 @@ final class BlockComponent extends kna {
 
     final static int a(int param0, int param1, int param2, boolean param3) {
         if (param2 <= 94) {
-          field_F = (String[]) null;
+          restartMessages = (String[]) null;
           return PowerUpItemBehaviour.r(-95);
         }
         return PowerUpItemBehaviour.r(-95);
@@ -178,6 +178,6 @@ final class BlockComponent extends kna {
     }
 
     static {
-        field_F = new String[]{"<%0> reset", "<%0> tried again", "<%0> lost the will to carry on", "<%0> goofed", "<%0> decided they were trapped", "<%0> had a rethink", "<%0> restarted the room", "<%0> realised that failure was inevitable", "<%0>'s lack of concentration got them into trouble"};
+        restartMessages = new String[]{"<%0> reset", "<%0> tried again", "<%0> lost the will to carry on", "<%0> goofed", "<%0> decided they were trapped", "<%0> had a rethink", "<%0> restarted the room", "<%0> realised that failure was inevitable", "<%0>'s lack of concentration got them into trouble"};
     }
 }

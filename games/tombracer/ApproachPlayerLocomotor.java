@@ -11,7 +11,7 @@ final class ApproachPlayerLocomotor extends Locomotor {
     private boolean field_r;
     private ir field_o;
 
-    final void b(byte param0) {
+    final void tick(byte param0) {
         int var3;
         int var4;
         int var5;
@@ -260,16 +260,16 @@ final class ApproachPlayerLocomotor extends Locomotor {
         }
     }
 
-    final void b(int param0) {
+    final void applyConstraint(int param0) {
         if (param0 != 1) {
           this.field_q = 125;
         }
     }
 
-    final int a(int param0, int param1) {
-        param1 = fs.a((byte) 75, param1, this.field_v);
+    final int hashState(int param0, int param1) {
+        param1 = fs.mixHash((byte) 75, param1, this.field_v);
         if (param0 != 0) {
-          this.a(-97, -102);
+          this.hashState(-97, -102);
           return param1;
         }
         return param1;
@@ -303,7 +303,7 @@ final class ApproachPlayerLocomotor extends Locomotor {
 
     final int getTypeId(int param0) {
         if (param0 != 1) {
-          this.b((byte) -128);
+          this.tick((byte) -128);
           return 1;
         }
         return 1;

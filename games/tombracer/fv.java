@@ -8,7 +8,7 @@ final class fv {
     int field_i;
     static int field_e;
     int field_j;
-    static String[] field_d;
+    static String[] loadingQuipsAlternate;
     int field_f;
     int field_g;
     static String field_b;
@@ -66,7 +66,7 @@ final class fv {
     }
 
     public static void releaseStatics(byte param0) {
-        field_d = null;
+        loadingQuipsAlternate = null;
         field_b = null;
         int var1 = 28 / ((param0 - 3) / 37);
     }
@@ -86,7 +86,7 @@ final class fv {
 
     static {
         field_e = 0;
-        field_d = new String[]{"Looking for drums...", "Loading pistol", "Compressing orchestra", "Writing music score", "Decyphering cryptic maps", "Looking for Dad's journal", "Lost the Ark", "Evading evil forces", "Masterminding evil schemes", "Decoding hieroglyphs...", "Building ziggurats", "Digging pits", "Digging pits", "Cursing Tomb Libs", "Loading dart shooters", "Conducting historical research", "Hollowing out volcano", "Raising dead", "Buying precious idols"};
+        loadingQuipsAlternate = new String[]{"Looking for drums...", "Loading pistol", "Compressing orchestra", "Writing music score", "Decyphering cryptic maps", "Looking for Dad's journal", "Lost the Ark", "Evading evil forces", "Masterminding evil schemes", "Decoding hieroglyphs...", "Building ziggurats", "Digging pits", "Digging pits", "Cursing Tomb Libs", "Loading dart shooters", "Conducting historical research", "Hollowing out volcano", "Raising dead", "Buying precious idols"};
         field_b = "Precarious platforms";
     }
 }

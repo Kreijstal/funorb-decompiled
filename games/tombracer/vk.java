@@ -5,7 +5,7 @@ final class vk implements os {
     static kia field_d;
     static oc[] field_e;
     static String field_a;
-    static String[] field_c;
+    static String[] boulderDeathMessages;
     static byte[] field_b;
 
     final static boolean b(int param0) {
@@ -85,7 +85,7 @@ final class vk implements os {
     public static void releaseStatics(int param0) {
         field_b = null;
         field_a = null;
-        field_c = null;
+        boulderDeathMessages = null;
         field_d = null;
         field_e = null;
         if (param0 != 0) {
@@ -111,7 +111,7 @@ final class vk implements os {
 
     static {
         field_a = "These aren't just common or garden Lindemann totems. Hold <img=8><img=9> to shove them around like heavy rock flamethrowers.";
-        field_c = new String[]{"<%0> forgot to dodge the boulder", "<%0> rolled with it", "<%0> was bowled over", "<%0> was smeared", "<%0> developed a serious crush", "<%0>'s interests include hard rock", "<%0> made a poor speedbump"};
+        boulderDeathMessages = new String[]{"<%0> forgot to dodge the boulder", "<%0> rolled with it", "<%0> was bowled over", "<%0> was smeared", "<%0> developed a serious crush", "<%0>'s interests include hard rock", "<%0> made a poor speedbump"};
         field_d = new kia();
     }
 }

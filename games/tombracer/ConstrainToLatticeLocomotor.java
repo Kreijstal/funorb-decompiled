@@ -11,14 +11,14 @@ final class ConstrainToLatticeLocomotor extends ConstraintLocomotor {
     private int field_y;
     private int field_t;
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         if (param0 != 0) {
           return -51;
         }
         return param1;
     }
 
-    final void b(byte param0) {
+    final void tick(byte param0) {
         int var2 = -27 / ((param0 + 69) / 42);
     }
 
@@ -75,7 +75,7 @@ final class ConstrainToLatticeLocomotor extends ConstraintLocomotor {
         }
     }
 
-    final void b(int param0) {
+    final void applyConstraint(int param0) {
         int var2;
         int var3;
         int var4;

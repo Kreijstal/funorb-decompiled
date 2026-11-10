@@ -28,8 +28,8 @@ final class SpawnerBehaviour extends Behaviour {
           return;
         }
         C2SSubmitSettingsPacket var4 = new C2SSubmitSettingsPacket();
-        var4.a(param2, (byte) -60);
-        var4.b(param0, (byte) 123);
+        var4.setGraphicsMode(param2, (byte) -60);
+        var4.setSoundEffectsVolume(param0, (byte) 123);
         var4.a(param3, 2097152);
         ql.field_k.writeCipheredOpcode(80, param1 ^ -2984);
         var4.encode(200, ql.field_k);
@@ -87,7 +87,7 @@ final class SpawnerBehaviour extends Behaviour {
         return true;
     }
 
-    final void k(int param0) {
+    final void tick(int param0) {
         int var2;
         int var2Lifetime1;
         if (param0 == 5418) {
@@ -102,7 +102,7 @@ final class SpawnerBehaviour extends Behaviour {
             return;
           }
           var2 = this.trap.g(-25787);
-          this.field_q.a(var2, this.trap.getX(3), this.trap.getY(9648), 4);
+          this.field_q.spawn(var2, this.trap.getX(3), this.trap.getY(9648), 4);
           if (this.field_r <= 0) {
             return;
           }
@@ -125,7 +125,7 @@ final class SpawnerBehaviour extends Behaviour {
           return;
         }
         var2Lifetime1 = this.trap.g(-25787);
-        this.field_q.a(var2Lifetime1, this.trap.getX(3), this.trap.getY(9648), 4);
+        this.field_q.spawn(var2Lifetime1, this.trap.getX(3), this.trap.getY(9648), 4);
         if (this.field_r <= 0) {
           return;
         }
@@ -136,7 +136,7 @@ final class SpawnerBehaviour extends Behaviour {
         this.c(false);
     }
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         if (param1 >= -48) {
           return 116;
         }

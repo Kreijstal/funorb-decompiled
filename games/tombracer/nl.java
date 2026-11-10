@@ -6,7 +6,7 @@ final class nl {
     static String field_c;
     private String field_a;
     static int field_d;
-    static String[] field_e;
+    static String[] loadingTextTranslations;
     static boolean field_b;
 
     final boolean a(String param0, int param1) {
@@ -160,7 +160,7 @@ final class nl {
           nl.a(55, 84, -11, -72, -118, -51);
         }
         field_c = null;
-        field_e = null;
+        loadingTextTranslations = null;
         field_f = null;
     }
 
@@ -175,7 +175,7 @@ final class nl {
         field_d = 5;
         field_c = "Loading...";
         field_f = new IntrusiveDeque();
-        field_e = new String[]{"Loading text", "Lade Text", "Chargement du texte", "Carregando textos", "Tekst laden", "Cargando texto"};
+        loadingTextTranslations = new String[]{"Loading text", "Lade Text", "Chargement du texte", "Carregando textos", "Tekst laden", "Cargando texto"};
         field_b = false;
     }
 }

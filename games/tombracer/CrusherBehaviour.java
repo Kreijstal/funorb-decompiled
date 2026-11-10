@@ -227,7 +227,7 @@ final class CrusherBehaviour extends Behaviour {
         return true;
     }
 
-    final void k(int param0) {
+    final void tick(int param0) {
         int var3;
         int var4;
         int var5;
@@ -380,8 +380,8 @@ final class CrusherBehaviour extends Behaviour {
         this.field_w = param0;
     }
 
-    final int a(int param0, int param1) {
-        param0 = fs.a((byte) 49, param0, this.field_n);
+    final int hashState(int param0, int param1) {
+        param0 = fs.mixHash((byte) 49, param0, this.field_n);
         if (param1 >= -48) {
           return -52;
         }

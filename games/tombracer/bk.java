@@ -5,7 +5,7 @@ import java.util.*;
 
 final class bk extends ci {
     private int field_q;
-    static String[] field_m;
+    static String[] monthNames;
     private int field_p;
     private int field_o;
     private int field_r;
@@ -13,9 +13,9 @@ final class bk extends ci {
 
     public static void releaseStatics(byte param0) {
         if (param0 != 101) {
-          field_m = (String[]) null;
+          monthNames = (String[]) null;
         }
-        field_m = null;
+        monthNames = null;
     }
 
     final void b(byte param0) {
@@ -85,7 +85,7 @@ final class bk extends ci {
 
     final static void c(int param0) {
         if (param0 != 9033) {
-          field_m = (String[]) null;
+          monthNames = (String[]) null;
         }
     }
 
@@ -204,6 +204,6 @@ final class bk extends ci {
     }
 
     static {
-        field_m = new String[]{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+        monthNames = new String[]{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
     }
 }

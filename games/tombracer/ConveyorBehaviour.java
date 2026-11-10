@@ -9,7 +9,7 @@ final class ConveyorBehaviour extends Behaviour {
     private int field_o;
     static int[] field_q;
 
-    final void k(int param0) {
+    final void tick(int param0) {
         int var5 = 0;
         ffa[] var3;
         Trap var4;
@@ -41,7 +41,7 @@ final class ConveyorBehaviour extends Behaviour {
         this.field_o = -gqa.a(this.field_s, (byte) 24, var2) + gqa.a(this.field_r, (byte) 24, var3);
     }
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         if (param1 > -48) {
           this.field_o = -40;
         }

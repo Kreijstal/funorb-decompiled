@@ -60,7 +60,7 @@ final class SkeletonComponent extends dna {
         this.b(-71, 2097152, 2097152);
     }
 
-    final Trap a(boolean param0, int param1, Room param2) {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         ApproachPlayerLocomotor var5 = null;
         FacePlayerLocomotor var6 = null;

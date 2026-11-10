@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class TrackMountComponent extends kna {
+final class TrackMountComponent extends PrefabComponent {
     static String field_H;
     static dd field_J;
     private int field_F;
     static String field_G;
     static String field_I;
-    static String[] field_K;
+    static String[] waitingForTextTranslations;
 
     final boolean v(int param0) {
         if (param0 != 555277520) {
@@ -17,7 +17,7 @@ final class TrackMountComponent extends kna {
         return false;
     }
 
-    final Trap a(boolean param0, int param1, Room param2) {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         TrackPlayerLocomotor var5 = null;
         int var6 = 0;
@@ -129,7 +129,7 @@ final class TrackMountComponent extends kna {
         field_J = null;
         field_H = null;
         field_I = null;
-        field_K = null;
+        waitingForTextTranslations = null;
         field_G = null;
         int var1 = -80 / ((param0 + 32) / 57);
     }
@@ -147,6 +147,6 @@ final class TrackMountComponent extends kna {
         field_J = new dd(64);
         field_I = "<%0> has not yet unlocked this option for use.";
         field_G = "To <%0>: ";
-        field_K = new String[]{"Waiting for text", "Warte auf Text", "En attente du texte", "Aguardando textos", "Op tekst wachten", "Esperando a texto"};
+        waitingForTextTranslations = new String[]{"Waiting for text", "Warte auf Text", "En attente du texte", "Aguardando textos", "Op tekst wachten", "Esperando a texto"};
     }
 }

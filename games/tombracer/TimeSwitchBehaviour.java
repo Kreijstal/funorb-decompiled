@@ -70,7 +70,7 @@ final class TimeSwitchBehaviour extends Behaviour implements ut {
         return 5570594;
     }
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         if (param1 < -48) {
           return this.field_s.a(86, param0);
         }
@@ -199,7 +199,7 @@ final class TimeSwitchBehaviour extends Behaviour implements ut {
         }
     }
 
-    final void k(int param0) {
+    final void tick(int param0) {
         if (param0 != 5418) {
           this.b(27);
           if (this.field_s.f((byte) -56)) {

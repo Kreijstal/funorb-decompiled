@@ -6,7 +6,7 @@ final class hg {
     boolean field_b;
     static jea field_g;
     qm field_e;
-    static String[] field_c;
+    static String[] bladeDeathMessages;
     boolean field_h;
     static int field_f;
     qm field_a;
@@ -63,7 +63,7 @@ final class hg {
 
     final boolean b(int param0) {
         if (param0 != 16440) {
-          field_c = (String[]) null;
+          bladeDeathMessages = (String[]) null;
           if (!this.field_h) {
             return false;
           }
@@ -86,10 +86,10 @@ final class hg {
         field_g = null;
         if (param0 != 13648) {
           field_g = (jea) null;
-          field_c = null;
+          bladeDeathMessages = null;
           return;
         }
-        field_c = null;
+        bladeDeathMessages = null;
     }
 
     hg(boolean param0) {
@@ -98,6 +98,6 @@ final class hg {
 
     static {
         field_d = "Fireball Launcher";
-        field_c = new String[]{"<%0> got a bouncing blade in the face", "<%0> had a very close shave", "<%0> didn't predict the sawblade's trajectory", "<%0> wonders where these endless ceremonial sawblades come from", "<%0> found their body was not blade-proof", "<%0> played catch with a rather sharp flying disc"};
+        bladeDeathMessages = new String[]{"<%0> got a bouncing blade in the face", "<%0> had a very close shave", "<%0> didn't predict the sawblade's trajectory", "<%0> wonders where these endless ceremonial sawblades come from", "<%0> found their body was not blade-proof", "<%0> played catch with a rather sharp flying disc"};
     }
 }

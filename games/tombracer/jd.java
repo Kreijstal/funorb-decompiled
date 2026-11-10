@@ -187,7 +187,7 @@ final class jd extends tfa implements lv {
         int var5;
         var5 = TombRacer.field_G ? 1 : 0;
         var1 = "";
-        var2 = dra.field_b;
+        var2 = dra.musicTrackNames;
         if (param0) {
           return (String) null;
         }

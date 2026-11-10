@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ItemComponent extends kna {
+abstract class ItemComponent extends PrefabComponent {
     static String field_F;
 
     final boolean s(int param0) {
@@ -12,7 +12,7 @@ abstract class ItemComponent extends kna {
         return false;
     }
 
-    Trap a(boolean param0, int param1, Room param2) {
+    Trap createTrap(boolean param0, int param1, Room param2) {
         Trap var4 = null;
         RuntimeException var4_ref = null;
         Trap stackIn_3_0 = null;

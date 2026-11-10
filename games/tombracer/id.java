@@ -5,7 +5,7 @@ final class id extends ou {
     private int field_f;
     private boolean field_j;
     static String field_k;
-    static String[] field_g;
+    static String[] laserDeathMessages;
     static ToolkitSprite[] field_h;
     static String field_i;
 
@@ -43,7 +43,7 @@ final class id extends ou {
     }
 
     public static void releaseStatics(int param0) {
-        field_g = null;
+        laserDeathMessages = null;
         field_i = null;
         if (param0 != 0) {
           return;
@@ -53,7 +53,7 @@ final class id extends ou {
     }
 
     static {
-        field_g = new String[]{"<%0> didn't see the light", "<%0> went into the light", "<%0> was hit by a laser", "<%0> was lasered", "<%0> crossed the beam", "<%0> suddenly remembers that fiery-coloured beams of death should be avoided"};
+        laserDeathMessages = new String[]{"<%0> didn't see the light", "<%0> went into the light", "<%0> was hit by a laser", "<%0> was lasered", "<%0> crossed the beam", "<%0> suddenly remembers that fiery-coloured beams of death should be avoided"};
         field_k = "Tutorial";
         field_i = "Resigned";
     }

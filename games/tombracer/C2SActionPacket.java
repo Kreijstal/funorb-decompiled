@@ -33,14 +33,14 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void setHash(int param0, int param1) {
         if (param0 != -2767) {
           return;
         }
         this.hash = param1;
     }
 
-    final void a(int param0, byte param1) {
+    final void setRound(int param0, byte param1) {
         if (param1 != -113) {
           return;
         }
@@ -58,7 +58,7 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
 
     final void b(int param0, int param1) {
         if (param0 != 8469) {
-          this.a(-55, 80);
+          this.setHash(-55, 80);
         }
         this.field_h = param1;
     }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class BrazierComponent extends kna {
+final class BrazierComponent extends PrefabComponent {
     BrazierComponent(Room param0, int param1) {
         super(param0, param1);
     }
@@ -130,7 +130,7 @@ final class BrazierComponent extends kna {
         return true;
     }
 
-    final Trap a(boolean param0, int param1, Room param2) {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         SimpleBlockBehaviour var5 = null;
         mfa var6 = null;

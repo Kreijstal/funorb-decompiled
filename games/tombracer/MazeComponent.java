@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class MazeComponent extends kna {
+abstract class MazeComponent extends PrefabComponent {
     static String field_F;
     static String field_G;
     private int field_I;
@@ -11,7 +11,7 @@ abstract class MazeComponent extends kna {
     final boolean v(int param0) {
         if (param0 != 555277520) {
           Room var3 = (Room) null;
-          this.a(false, -3, (Room) null);
+          this.createTrap(false, -3, (Room) null);
           return true;
         }
         return true;
@@ -73,7 +73,7 @@ abstract class MazeComponent extends kna {
         }
     }
 
-    final Trap a(boolean param0, int param1, Room param2) {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         RandomMazeBehaviour var5 = null;
         Trap var6 = null;
@@ -177,7 +177,7 @@ abstract class MazeComponent extends kna {
     final int t(int param0) {
         if (param0 != 8) {
           Room var3 = (Room) null;
-          this.a(true, 54, (Room) null);
+          this.createTrap(true, 54, (Room) null);
         }
         return 7;
     }
@@ -209,12 +209,12 @@ abstract class MazeComponent extends kna {
           if (var7 != 0 &&
             var7 == 1) {
             var11 = new MiscItemBehaviour(param1, param0);
-            var11.a(0, false);
+            var11.setItemType(0, false);
             var6 = var11;
             var9.addBehaviour((byte) 83, (Behaviour) (var11));
           } else {
             var10 = new MiscItemBehaviour(param1, param0);
-            var10.a(1, false);
+            var10.setItemType(1, false);
             var6 = var10;
             var9.addBehaviour((byte) 83, (Behaviour) (var10));
           }

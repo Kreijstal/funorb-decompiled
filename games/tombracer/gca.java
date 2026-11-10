@@ -5,7 +5,7 @@ final class gca {
     static ToolkitSprite field_a;
     int field_c;
     static String field_l;
-    static String[] field_j;
+    static String[] skeletonDeathMessages;
     static int field_d;
     int field_k;
     int field_h;
@@ -23,18 +23,18 @@ final class gca {
         field_i = null;
         field_a = null;
         if (param0 == 4) {
-          field_j = null;
+          skeletonDeathMessages = null;
           return;
         }
         gca.releaseStatics(23);
-        field_j = null;
+        skeletonDeathMessages = null;
     }
 
     final gca a(int param0) {
         if (param0 == 6) {
           return new gca(this.field_h, this.field_m, this.field_k, this.field_e, this.field_b, this.field_c);
         }
-        field_j = (String[]) null;
+        skeletonDeathMessages = (String[]) null;
         return new gca(this.field_h, this.field_m, this.field_k, this.field_e, this.field_b, this.field_c);
     }
 
@@ -80,7 +80,7 @@ final class gca {
     }
 
     static {
-        field_j = new String[]{"<%0> communed with the dead", "<%0> stumbled into a skeleton", "<%0> got a bit too close to a skeleton", "<%0> forgot to load their gun", "<%0> finally realised what 'Tomb of the Dead' meant", "Someone had a bone to pick with <%0>", "<%0> messed with the undead", "<%0> now believes in the afterlife", "<%0> now realises that the walking dead aren't friendly"};
+        skeletonDeathMessages = new String[]{"<%0> communed with the dead", "<%0> stumbled into a skeleton", "<%0> got a bit too close to a skeleton", "<%0> forgot to load their gun", "<%0> finally realised what 'Tomb of the Dead' meant", "Someone had a bone to pick with <%0>", "<%0> messed with the undead", "<%0> now believes in the afterlife", "<%0> now realises that the walking dead aren't friendly"};
         field_d = 0;
         field_f = new int[]{28, 32};
         field_l = "Pistols contain unlimited bullets. Try shooting the block across the chasm to move it. Fire using <img=12><img=13><img=14><img=15>";

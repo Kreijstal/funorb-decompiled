@@ -21,7 +21,7 @@ final class sra implements eb {
     private cn field_q;
     private cn field_a;
     private cn field_b;
-    static String[] field_u;
+    static String[] connectingTranslations;
     private boolean field_n;
     private cn field_s;
     private cn field_l;
@@ -58,25 +58,25 @@ final class sra implements eb {
         ina dupTemp$0 = new ina(55);
         lba.field_r = dupTemp$0;
         ina var4 = dupTemp$0;
-        var4.a(256, this.field_k, fv.field_d[0], Player.field_U[0]);
-        var4.a(256, this.field_l, fv.field_d[1], Player.field_U[1]);
-        var4.a(256, this.field_o, fv.field_d[2], Player.field_U[2]);
-        var4.a(256, this.field_b, fv.field_d[3], Player.field_U[3]);
-        var4.a(256, this.field_h, fv.field_d[4], Player.field_U[4]);
-        var4.a(param0 ^ -294, this.field_p, fv.field_d[5], Player.field_U[5]);
-        var4.a(256, this.field_s, fv.field_d[6], Player.field_U[6]);
-        var4.a(Player.field_U[7], (byte) -36, "basic", var7, fv.field_d[7]);
-        var4.a(Player.field_U[8], (byte) -36, "lobby", var7, fv.field_d[8]);
-        var4.a(Player.field_U[9], (byte) -36, "lobby", var3, fv.field_d[9]);
-        var4.a(256, this.field_d, fv.field_d[10], Player.field_U[10]);
-        var4.a(256, this.field_e, fv.field_d[11], Player.field_U[11]);
-        var4.a(256, this.field_q, fv.field_d[12], Player.field_U[12]);
-        var4.a(256, this.field_r, fv.field_d[13], Player.field_U[13]);
-        var4.a(256, this.field_m, fv.field_d[14], Player.field_U[14]);
-        var4.a(param0 + 294, this.field_j, fv.field_d[15], Player.field_U[15]);
-        var4.a(256, this.field_f, fv.field_d[16], Player.field_U[16]);
-        var4.a(param0 ^ -294, this.field_g, fv.field_d[17], Player.field_U[17]);
-        var4.a(param0 ^ -294, this.field_a, fv.field_d[18], Player.field_U[18]);
+        var4.a(256, this.field_k, fv.loadingQuipsAlternate[0], Player.loadingQuips[0]);
+        var4.a(256, this.field_l, fv.loadingQuipsAlternate[1], Player.loadingQuips[1]);
+        var4.a(256, this.field_o, fv.loadingQuipsAlternate[2], Player.loadingQuips[2]);
+        var4.a(256, this.field_b, fv.loadingQuipsAlternate[3], Player.loadingQuips[3]);
+        var4.a(256, this.field_h, fv.loadingQuipsAlternate[4], Player.loadingQuips[4]);
+        var4.a(param0 ^ -294, this.field_p, fv.loadingQuipsAlternate[5], Player.loadingQuips[5]);
+        var4.a(256, this.field_s, fv.loadingQuipsAlternate[6], Player.loadingQuips[6]);
+        var4.a(Player.loadingQuips[7], (byte) -36, "basic", var7, fv.loadingQuipsAlternate[7]);
+        var4.a(Player.loadingQuips[8], (byte) -36, "lobby", var7, fv.loadingQuipsAlternate[8]);
+        var4.a(Player.loadingQuips[9], (byte) -36, "lobby", var3, fv.loadingQuipsAlternate[9]);
+        var4.a(256, this.field_d, fv.loadingQuipsAlternate[10], Player.loadingQuips[10]);
+        var4.a(256, this.field_e, fv.loadingQuipsAlternate[11], Player.loadingQuips[11]);
+        var4.a(256, this.field_q, fv.loadingQuipsAlternate[12], Player.loadingQuips[12]);
+        var4.a(256, this.field_r, fv.loadingQuipsAlternate[13], Player.loadingQuips[13]);
+        var4.a(256, this.field_m, fv.loadingQuipsAlternate[14], Player.loadingQuips[14]);
+        var4.a(param0 + 294, this.field_j, fv.loadingQuipsAlternate[15], Player.loadingQuips[15]);
+        var4.a(256, this.field_f, fv.loadingQuipsAlternate[16], Player.loadingQuips[16]);
+        var4.a(param0 ^ -294, this.field_g, fv.loadingQuipsAlternate[17], Player.loadingQuips[17]);
+        var4.a(param0 ^ -294, this.field_a, fv.loadingQuipsAlternate[18], Player.loadingQuips[18]);
     }
 
     final static String[][] a(byte param0, PacketBuffer param1) {
@@ -145,7 +145,7 @@ final class sra implements eb {
         }
         if (this.field_d != null) {
           SpriteState.a(-18035);
-          this.a(30, (byte) 47, uba.field_g[0]);
+          this.a(30, (byte) 47, uba.loadingQuipsShort[0]);
           gda.a(this.field_d, 17572);
           uo.b((byte) -125);
           this.field_d = null;
@@ -154,15 +154,15 @@ final class sra implements eb {
         }
         if (this.field_h != null &&
           null != this.field_p) {
-          fp.a(uba.field_g[1], 40, this.field_h, (byte) 17);
-          bja.a((byte) -105, this.field_p, 50, uba.field_g[2]);
+          fp.a(uba.loadingQuipsShort[1], 40, this.field_h, (byte) 17);
+          bja.a((byte) -105, this.field_p, 50, uba.loadingQuipsShort[2]);
           this.field_p = null;
-          KeySwitchComponent.a((byte) -86, uba.field_g[3], this.field_q, this.field_h, 60);
-          this.a(65, (byte) 47, uba.field_g[4]);
+          KeySwitchComponent.a((byte) -86, uba.loadingQuipsShort[3], this.field_q, this.field_h, 60);
+          this.a(65, (byte) 47, uba.loadingQuipsShort[4]);
           dqa.a(this.field_r, this.field_m, (byte) 55, this.field_h);
-          this.a(70, (byte) 47, uba.field_g[5]);
+          this.a(70, (byte) 47, uba.loadingQuipsShort[5]);
           this.d(-10242);
-          this.a(75, (byte) 47, uba.field_g[6]);
+          this.a(75, (byte) 47, uba.loadingQuipsShort[6]);
           this.field_r = null;
           this.field_m = null;
           this.field_h = null;
@@ -170,13 +170,13 @@ final class sra implements eb {
           return;
         }
         if (this.field_j != null) {
-          ui.a(this.field_j, uba.field_g[7], 80, -79);
+          ui.a(this.field_j, uba.loadingQuipsShort[7], 80, -79);
           this.field_j = null;
           C2SActionPacket.a(-33);
           return;
         }
         if (null != this.field_f) {
-          nfa.a(this.field_f, uba.field_g[8], false, 90, this.field_g, this.field_a);
+          nfa.a(this.field_f, uba.loadingQuipsShort[8], false, 90, this.field_g, this.field_a);
           this.field_g = null;
           this.field_a = null;
           this.field_f = null;
@@ -202,7 +202,7 @@ final class sra implements eb {
           return;
         }
         if (baa.field_d == null) {
-          this.a(95, (byte) 47, uba.field_g[9]);
+          this.a(95, (byte) 47, uba.loadingQuipsShort[9]);
           FleeLocomotor.e((byte) -33);
           baa.field_d = new di(qra.field_l, rc.field_a);
         }
@@ -327,9 +327,9 @@ final class sra implements eb {
 
     public static void releaseStatics(byte param0) {
         if (param0 != -35) {
-          field_u = (String[]) null;
+          connectingTranslations = (String[]) null;
         }
-        field_u = null;
+        connectingTranslations = null;
         field_v = null;
         field_i = null;
     }
@@ -339,7 +339,7 @@ final class sra implements eb {
         hd.a(50, param0 ^ -78);
         wm.field_a = null;
         hb.field_t = (dfa) ((Object) nl.a(0, (byte) 50));
-        ima.a(100.0f, uba.field_g[10], param0 ^ 115);
+        ima.a(100.0f, uba.loadingQuipsShort[10], param0 ^ 115);
         ad.field_j.draw(param0 ^ -49);
         gn.field_C.a(-19216);
         if (param0 != -49) {
@@ -393,7 +393,7 @@ final class sra implements eb {
         field_v[4] = "Gun";
         field_v[1] = "Coinbag";
         field_v[5] = "Powerup: Misc";
-        field_u = new String[]{"Connecting to update server", "Verbinde mit Aktualisierungsserver", "Connexion au serveur de mise à jour", "Conectando ao servidor de atualização", "Met updateserver verbinden", "Connecting to update server (untranslated)"};
+        connectingTranslations = new String[]{"Connecting to update server", "Verbinde mit Aktualisierungsserver", "Connexion au serveur de mise à jour", "Conectando ao servidor de atualização", "Met updateserver verbinden", "Connecting to update server (untranslated)"};
         field_i = "Return to game";
     }
 }

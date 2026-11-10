@@ -228,7 +228,7 @@ final class Room implements ew, Renderable, noa {
           this.k((byte) 119);
         }
         Particle var5 = (Particle) (this.particlePool.spawn(-2698, param1, param3, this.field_S, param0));
-        var5.a(true, uca.field_c.a(100, 0));
+        var5.a(true, uca.field_c.nextBounded(100, 0));
         return var5;
     }
 
@@ -267,7 +267,7 @@ final class Room implements ew, Renderable, noa {
         }
     }
 
-    final void a(Trap param0, byte param1) {
+    final void addTrap(Trap param0, byte param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -305,7 +305,7 @@ final class Room implements ew, Renderable, noa {
         Trap var3 = (Trap) (this.traps.first(-80));
         while (var3 != null) {
           if (!var3.a(param1, 31749)) {
-            this.a(var3, 2);
+            this.removeTrap(var3, 2);
             var3.v((byte) 109);
           } else {
             var3.d(param1, (byte) -55);
@@ -713,7 +713,7 @@ final class Room implements ew, Renderable, noa {
             this.field_S = null;
             var4 = (RoomComponent) (this.components.first(-80));
             while (var4 != null) {
-              var4.a(false, true, this, 0, 0, 1, (Trap) null);
+              var4.instantiate(false, true, this, 0, 0, 1, (Trap) null);
               var4 = (RoomComponent) (this.components.next(123));
             }
             var4Lifetime1 = (RoomComponent) (this.components.first(-80));
@@ -813,7 +813,7 @@ final class Room implements ew, Renderable, noa {
         }
     }
 
-    final void a(Trap param0, int param1) {
+    final void removeTrap(Trap param0, int param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -1090,7 +1090,7 @@ final class Room implements ew, Renderable, noa {
         var5Lifetime1 = var3.readBits((byte) 44, 8);
         for (var6 = 0; var6 < var5Lifetime1; var6++) {
           var7_ref_fsa = new Trap(this, var3, false);
-          this.a(var7_ref_fsa, (byte) 32);
+          this.addTrap(var7_ref_fsa, (byte) 32);
           var7_ref_fsa.D((byte) 118);
         }
         this.field_B.a((byte) 25, var3, this);
@@ -1430,7 +1430,7 @@ final class Room implements ew, Renderable, noa {
     final boolean b(int param0, byte param1) {
         if (param1 != -44) {
           Trap var4 = (Trap) null;
-          this.a((Trap) null, 48);
+          this.removeTrap((Trap) null, 48);
         }
         return this.field_b[param0] != -1 ? true : false;
     }
@@ -1534,7 +1534,7 @@ final class Room implements ew, Renderable, noa {
         var5 = this.getSimulation(-1553494544).g(param1 + 112) ? 1 : 0;
         if (param1 != 0) {
           var7 = (Trap) null;
-          this.a((Trap) null, -31);
+          this.removeTrap((Trap) null, -31);
         }
         this.projectilePool.update(var5 != 0, (byte) -126);
         this.field_f.update(var5 != 0, (byte) -31);
@@ -1543,7 +1543,7 @@ final class Room implements ew, Renderable, noa {
         if (this.field_S != null) {
           this.field_S.d(0);
           if (this.simulation.f(8, param1 + 10915)) {
-            this.field_S.c(0).a(uca.field_c.a(9, 0) - 4, 0, -4 + uca.field_c.a(9, 0), 26768);
+            this.field_S.c(0).a(uca.field_c.nextBounded(9, 0) - 4, 0, -4 + uca.field_c.nextBounded(9, 0), 26768);
           }
         }
         if (null != this.field_G) {
@@ -1626,7 +1626,7 @@ final class Room implements ew, Renderable, noa {
           field_p = (ToolkitSprite[][]) null;
         }
         if (var7.b(0) ||
-          uca.field_c.a(5, 0) == 0) {
+          uca.field_c.nextBounded(5, 0) == 0) {
           this.field_F.b(param0, param3, param5, param1, 0, param4);
         }
     }
@@ -1769,7 +1769,7 @@ final class Room implements ew, Renderable, noa {
           return;
         }
         if (var7.b(0) &&
-          0 == uca.field_c.a(5, 0)) {
+          0 == uca.field_c.nextBounded(5, 0)) {
           this.field_F.b(param4, param1, param3, param2, 0, param5);
         }
         if (param0) {

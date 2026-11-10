@@ -47,7 +47,7 @@ final class CoinItemComponent extends ItemComponent {
         field_G = null;
     }
 
-    final Trap a(boolean param0, int param1, Room param2) {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         Trap var4 = null;
         RuntimeException var4_ref = null;
         MiscItemBehaviour var5 = null;
@@ -64,9 +64,9 @@ final class CoinItemComponent extends ItemComponent {
             stackIn_2_0 = (Trap) null;
             return stackIn_2_0;
           }
-          var4 = super.a(param0, param1 + 0, param2);
+          var4 = super.createTrap(param0, param1 + 0, param2);
           var5 = new MiscItemBehaviour(param2, param0);
-          var5.a(1, false);
+          var5.setItemType(1, false);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (kga) (var6.a(12, 93));

@@ -23,13 +23,13 @@ final class li {
           v.b(2, 0);
           DoorwayComponent.field_I = -DoorwayComponent.field_I + 1;
           ProxySocketConnector.a(param0, 5);
-          v.b(uca.field_c.a(6, 0) + 3, 0);
+          v.b(uca.field_c.nextBounded(6, 0) + 3, 0);
           return;
         }
         v.b(1, 0);
         DoorwayComponent.field_I = -DoorwayComponent.field_I + 1;
         ProxySocketConnector.a(param0, 5);
-        v.b(uca.field_c.a(6, 0) + 3, 0);
+        v.b(uca.field_c.nextBounded(6, 0) + 3, 0);
     }
 
     final static su a(int param0, byte param1) {

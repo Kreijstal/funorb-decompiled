@@ -4,7 +4,7 @@
 final class uba extends kma implements cd, eaa {
     static int field_f;
     paa field_i;
-    static String[] field_g;
+    static String[] loadingQuipsShort;
     static String field_h;
 
     final String e(int param0) {
@@ -47,7 +47,7 @@ final class uba extends kma implements cd, eaa {
     }
 
     public static void releaseStatics(byte param0) {
-        field_g = null;
+        loadingQuipsShort = null;
         field_h = null;
         if (param0 != -128) {
           uba.releaseStatics((byte) -33);
@@ -126,7 +126,7 @@ final class uba extends kma implements cd, eaa {
     }
 
     static {
-        field_g = new String[]{"Building tombs", "Setting traps", "Scattering bones", "Poking snakes", "Carving statues", "Drawing maps", "Lighting torches", "Inviting archaeologists", "Rolling boulders", "Looking for Tom Bracer...", "Twiddling Thumbs"};
+        loadingQuipsShort = new String[]{"Building tombs", "Setting traps", "Scattering bones", "Poking snakes", "Carving statues", "Drawing maps", "Lighting torches", "Inviting archaeologists", "Rolling boulders", "Looking for Tom Bracer...", "Twiddling Thumbs"};
         field_h = "You are on <%0>";
     }
 }

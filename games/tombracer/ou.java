@@ -19,7 +19,7 @@ abstract class ou {
         if (param0 >= -23) {
           return false;
         }
-        return this.field_c.a(2, 0) == 0 ? true : false;
+        return this.field_c.nextBounded(2, 0) == 0 ? true : false;
     }
 
     private final void b(int param0) {
@@ -29,7 +29,7 @@ abstract class ou {
         this.field_c = new IsaacCipher(new int[]{this.field_b});
         this.field_d = new int[this.field_a];
         for (var2 = 0; var2 < this.field_a; var2++) {
-          this.field_d[var2] = this.field_c.b(95);
+          this.field_d[var2] = this.field_c.nextInt(95);
         }
         var2Lifetime1 = -123 % ((-62 - param0) / 49);
     }

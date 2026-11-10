@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class GasTrapComponent extends kna {
+final class GasTrapComponent extends PrefabComponent {
     private int field_I;
     static String field_J;
     static int field_G;
@@ -24,7 +24,7 @@ final class GasTrapComponent extends kna {
     final int t(int param0) {
         if (param0 != 8) {
           Room var3 = (Room) null;
-          this.a(false, 31, (Room) null);
+          this.createTrap(false, 31, (Room) null);
           return 7;
         }
         return 7;
@@ -72,7 +72,7 @@ final class GasTrapComponent extends kna {
         }
     }
 
-    final Trap a(boolean param0, int param1, Room param2) {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         SimpleBlockBehaviour var5 = null;
         TimeSwitchBehaviour var6 = null;
@@ -114,7 +114,7 @@ final class GasTrapComponent extends kna {
           var10.a(16, (byte) -22);
           var7.addBehaviour((byte) 83, (Behaviour) (var10));
           var7.m(-45);
-          param2.a(var7, (byte) 32);
+          param2.addTrap(var7, (byte) 32);
           var6.k((byte) -115).h(1).a(9, new lj[]{(lj) ((Object) var7)});
           var11 = rm.field_a;
           var12 = (pqa) (var11.a(20, 83));

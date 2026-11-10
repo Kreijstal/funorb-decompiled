@@ -57,7 +57,7 @@ final class WhiteLightSensorComponent extends SwitchComponent {
         }
     }
 
-    final Trap a(boolean param0, int param1, Room param2) {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         EffectSwitchBehaviour var5 = null;
         jma var6 = null;

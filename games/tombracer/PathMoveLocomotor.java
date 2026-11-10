@@ -22,7 +22,7 @@ final class PathMoveLocomotor extends Locomotor {
     final void a(boolean param0, int param1) {
         this.field_o = param0 ? true : false;
         if (param1 != -606738686) {
-          this.b((byte) -25);
+          this.tick((byte) -25);
         }
     }
 
@@ -89,7 +89,7 @@ final class PathMoveLocomotor extends Locomotor {
         this.field_u = param1 ? true : false;
     }
 
-    final void b(byte param0) {
+    final void tick(byte param0) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -285,15 +285,15 @@ final class PathMoveLocomotor extends Locomotor {
         int var3 = 18 % ((37 - param1) / 55);
     }
 
-    final void b(int param0) {
+    final void applyConstraint(int param0) {
         if (param0 != 1) {
           this.e(91);
         }
     }
 
-    final int a(int param0, int param1) {
-        param1 = fs.a((byte) 98, param1, this.field_r);
-        param1 = fs.a((byte) 26, param1, this.field_w);
+    final int hashState(int param0, int param1) {
+        param1 = fs.mixHash((byte) 98, param1, this.field_r);
+        param1 = fs.mixHash((byte) 26, param1, this.field_w);
         if (param0 == 0) {
           return param1;
         }

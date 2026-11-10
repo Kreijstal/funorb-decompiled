@@ -13,7 +13,7 @@ final class KeyItemComponent extends ItemComponent {
         gda.field_c = 0;
     }
 
-    final Trap a(boolean param0, int param1, Room param2) {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         Trap var4 = null;
         RuntimeException var4_ref = null;
         MiscItemBehaviour var5 = null;
@@ -25,10 +25,10 @@ final class KeyItemComponent extends ItemComponent {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = super.a(param0, 3, param2);
+          var4 = super.createTrap(param0, 3, param2);
           var4.a((byte) -3, 1);
           var5 = new MiscItemBehaviour(param2, param0);
-          var5.a(0, false);
+          var5.setItemType(0, false);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (kga) (var6.a(12, param1 + 94));

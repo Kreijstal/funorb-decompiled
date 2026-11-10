@@ -74,7 +74,7 @@ final class TripBeamBehaviour extends Behaviour implements ut {
         return !this.field_C.b((byte) 88) ? 0 : 1;
     }
 
-    final void k(int param0) {
+    final void tick(int param0) {
         int var3;
         int var10;
         Room var11;
@@ -325,15 +325,15 @@ final class TripBeamBehaviour extends Behaviour implements ut {
         return;
     }
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         param0 = upa.a(this.field_r, param0, (byte) -63);
         param0 = upa.a(this.field_A, param0, (byte) -57);
         if (param1 <= -48) {
-          param0 = fs.a((byte) 61, param0, this.field_s);
+          param0 = fs.mixHash((byte) 61, param0, this.field_s);
           return param0;
         }
         this.c(-120);
-        param0 = fs.a((byte) 61, param0, this.field_s);
+        param0 = fs.mixHash((byte) 61, param0, this.field_s);
         return param0;
     }
 

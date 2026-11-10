@@ -14,7 +14,7 @@ final class SimpleBlockBehaviour extends Behaviour {
     final void a(int param0, boolean param1) {
         this.field_t = param1 ? true : false;
         if (param0 != -28592) {
-          this.a(-6, 77);
+          this.hashState(-6, 77);
         }
     }
 
@@ -118,7 +118,7 @@ final class SimpleBlockBehaviour extends Behaviour {
         super(param0, param1);
     }
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         if (param1 > -48) {
           field_p = (int[]) null;
           return param0;
@@ -233,7 +233,7 @@ final class SimpleBlockBehaviour extends Behaviour {
         }
     }
 
-    final void k(int param0) {
+    final void tick(int param0) {
         ffa var3 = null;
         ffa var3Lifetime1;
         ffa var3Lifetime2;

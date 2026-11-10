@@ -184,7 +184,7 @@ final class oka extends wv {
         var4Lifetime1 = 260;
         var7 = this.field_r - (100 - koa.b(param0 + 28));
         kq.field_a.a(var6 - (kq.field_a.a() >> 1), -(kq.field_a.c() >> 1) + var7);
-        SocketConnector.a(vj.field_d[this.field_v].toUpperCase(), 1, eda.field_f, 2431750, 8 + o.field_d.field_m, var5, 1, var7 - (var5 >> 1), var6 - (var4Lifetime1 >> 1), -1, (byte) 60, var4Lifetime1);
+        SocketConnector.a(vj.worldNames[this.field_v].toUpperCase(), 1, eda.field_f, 2431750, 8 + o.field_d.field_m, var5, 1, var7 - (var5 >> 1), var6 - (var4Lifetime1 >> 1), -1, (byte) 60, var4Lifetime1);
         if (rd.b(false) && (vpa.a(62) ||
           mq.field_e.field_a ||
           var3 != 0)) {

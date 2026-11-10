@@ -45,7 +45,7 @@ final class BladeShooterComponent extends ShooterComponent {
         return true;
     }
 
-    final Trap a(boolean param0, int param1, Room param2) {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         WeaponShooterBehaviour var5 = null;
         Weapon var6 = null;
@@ -99,7 +99,7 @@ final class BladeShooterComponent extends ShooterComponent {
     final boolean v(int param0) {
         if (param0 != 555277520) {
           Room var3 = (Room) null;
-          this.a(true, -115, (Room) null);
+          this.createTrap(true, -115, (Room) null);
           return false;
         }
         return false;

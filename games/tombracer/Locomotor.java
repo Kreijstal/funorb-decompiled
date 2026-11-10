@@ -79,7 +79,7 @@ abstract class Locomotor extends IntrusiveNode implements lj, noa, TrapPart {
           if (param1 <= -106) {
             return;
           }
-          this.b((byte) -110);
+          this.tick((byte) -110);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -131,11 +131,11 @@ abstract class Locomotor extends IntrusiveNode implements lj, noa, TrapPart {
         }
     }
 
-    abstract void b(int param0);
+    abstract void applyConstraint(int param0);
 
     abstract int getTypeId(int param0);
 
-    abstract void b(byte param0);
+    abstract void tick(byte param0);
 
     public static void releaseStatics(int param0) {
         field_l = null;
@@ -193,7 +193,7 @@ abstract class Locomotor extends IntrusiveNode implements lj, noa, TrapPart {
         }
     }
 
-    abstract int a(int param0, int param1);
+    abstract int hashState(int param0, int param1);
 
     final lj a(boolean param0, int param1, int param2) {
         if (param1 != 1) {

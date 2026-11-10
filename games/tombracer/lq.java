@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lq extends ela {
-    static String[] field_p;
+    static String[] achievementNames;
     static int[] field_o;
 
     final bfa a(bfa[] param0, int param1) {
@@ -36,11 +36,11 @@ final class lq extends ela {
     public static void releaseStatics(int param0) {
         if (param0 != 29706) {
           lq.releaseStatics(-18);
-          field_p = null;
+          achievementNames = null;
           field_o = null;
           return;
         }
-        field_p = null;
+        achievementNames = null;
         field_o = null;
     }
 
@@ -49,7 +49,7 @@ final class lq extends ela {
     }
 
     static {
-        field_p = new String[]{"CUDDLY TOY!", "Nice to see you, nice!", "Diamond Studded Snail", "Careful Steps", "That Belongs in a Museum", "Tomb Racer", "Tomb Easy", "Grave Robber", "Running Forever", "Glint in the Eye", "Etruscan Vase", "Ruby Eye", "Jade Idol", "Crystal Skull", "Axis Gold!", "Old Bones", "Crypt of the Dead", "Crypt of Doom", "Crypt of Despair", "Necrophobia", "Victorious Collector", "No, the Other Left!", "Around the World", "And Back Again", "It's a Small World", "Don't Call Me Junior", "We Named The Dog Oklahoma", "Devices of Lethal Cunning", "Silver Watch", "Silver Grail", "Gold Watch", "Golden Grail", "Powers You Can't Possibly Comprehend", "Perfection", "Leap of Faith", "Lucky Clover", "I Hate Snakes", "I Can Fly!", "Playing With Matches", "Split Personality", "Flatmate", "He Chose Poorly"};
+        achievementNames = new String[]{"CUDDLY TOY!", "Nice to see you, nice!", "Diamond Studded Snail", "Careful Steps", "That Belongs in a Museum", "Tomb Racer", "Tomb Easy", "Grave Robber", "Running Forever", "Glint in the Eye", "Etruscan Vase", "Ruby Eye", "Jade Idol", "Crystal Skull", "Axis Gold!", "Old Bones", "Crypt of the Dead", "Crypt of Doom", "Crypt of Despair", "Necrophobia", "Victorious Collector", "No, the Other Left!", "Around the World", "And Back Again", "It's a Small World", "Don't Call Me Junior", "We Named The Dog Oklahoma", "Devices of Lethal Cunning", "Silver Watch", "Silver Grail", "Gold Watch", "Golden Grail", "Powers You Can't Possibly Comprehend", "Perfection", "Leap of Faith", "Lucky Clover", "I Hate Snakes", "I Can Fly!", "Playing With Matches", "Split Personality", "Flatmate", "He Chose Poorly"};
         field_o = new int[8192];
     }
 }

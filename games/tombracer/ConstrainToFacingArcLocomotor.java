@@ -8,7 +8,7 @@ final class ConstrainToFacingArcLocomotor extends ConstraintLocomotor {
     static String field_t;
     static cn field_v;
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         if (param0 != 0) {
           this.getTypeId(-68);
           return param1;
@@ -23,7 +23,7 @@ final class ConstrainToFacingArcLocomotor extends ConstraintLocomotor {
         return 13;
     }
 
-    final void b(byte param0) {
+    final void tick(byte param0) {
         int var2 = 6 % ((param0 + 69) / 42);
     }
 
@@ -37,7 +37,7 @@ final class ConstrainToFacingArcLocomotor extends ConstraintLocomotor {
         ConstrainToFacingArcLocomotor.a(true, false, -42, false);
     }
 
-    final void b(int param0) {
+    final void applyConstraint(int param0) {
         int var2;
         int var3;
         int var4;

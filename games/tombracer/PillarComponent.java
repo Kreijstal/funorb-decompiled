@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class PillarComponent extends kna {
-    final Trap a(boolean param0, int param1, Room param2) {
+final class PillarComponent extends PrefabComponent {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         Trap var4 = null;
         RuntimeException var4_ref = null;
         SimpleBlockBehaviour var5 = null;

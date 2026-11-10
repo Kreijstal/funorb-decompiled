@@ -39,7 +39,7 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
     private int[] field_P;
     private int field_N;
     private int field_f;
-    static String[] field_U;
+    static String[] loadingQuips;
     static String field_s;
     private int[] field_x;
     private int field_a;
@@ -47,7 +47,7 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
     private int field_kb;
     private boolean field_o;
     private boolean field_V;
-    private WorldBody field_g;
+    private WorldBody carried;
     private int field_T;
     private int field_y;
     private WorldBody field_eb;
@@ -307,9 +307,9 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
                   if (this.field_w <= -17825792) {
                     if (this.field_T == 6) {
                       var3_ref = this.room.spawnParticle(this.x, this.y, (byte) 100, -17825792);
-                      var3_ref.a(false, 32, 4, 16, 5 + uca.field_c.a(5, 0));
+                      var3_ref.a(false, 32, 4, 16, 5 + uca.field_c.nextBounded(5, 0));
                       var3_ref.b(param0 + 99, 0, 0);
-                      var3_ref.a(uca.field_c.a(8192, param0 ^ 5), -32 + uca.field_c.a(64, param0 - 5), -125);
+                      var3_ref.a(uca.field_c.nextBounded(8192, param0 ^ 5), -32 + uca.field_c.nextBounded(64, param0 - 5), -125);
                     }
                     this.field_w = -17825793;
                   }
@@ -1024,7 +1024,7 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
           this.field_eb = null;
           this.field_kb = 0;
           this.field_w = 0;
-          this.field_g = null;
+          this.carried = null;
           if (param1) {
             this.field_fb.clear(8);
             this.b((byte) 89, 10);
@@ -1246,20 +1246,20 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
           var4 = this.field_a;
           if (0 == var4 &&
             var5 == 0) {
-            var3.a(3, false);
+            var3.setItemType(3, false);
             this.field_P[2] = this.field_P[2] - 1;
             decompiledFrameRemainder0 = false;
           } else {
             decompiledFrameRemainder0 = (var4 == 1);
           }
           if (decompiledFrameRemainder0) {
-            var3.a(0, false);
+            var3.setItemType(0, false);
           }
           var3.a(true, (byte) 2);
           var2.addBehaviour((byte) 83, (Behaviour) (var3));
           var2.c(437453352, true);
           var2.e(true, param0 ^ 30447);
-          this.room.a(var2, (byte) 32);
+          this.room.addTrap(var2, (byte) 32);
           this.J(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1274,7 +1274,7 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
           field_p = null;
           field_s = null;
           field_W = null;
-          field_U = null;
+          loadingQuips = null;
           field_I = null;
           if (param0 != -1) {
             Player.D(-63);
@@ -1522,11 +1522,11 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
             var5 = var3_int * var4 + this.x;
             var6 = lw.a(this.field_K, (byte) -109);
             var7 = var6 * var3_int + this.y;
-            if (null != this.field_g) {
-              if (!(this.field_g instanceof Trap) ||
-                ((Trap) (this.field_g)).s((byte) 92)) {
-                if (this.field_g.a((byte) 110, var7, var5, 2, 2)) {
-                  this.field_eb = this.field_g;
+            if (null != this.carried) {
+              if (!(this.carried instanceof Trap) ||
+                ((Trap) (this.carried)).s((byte) 92)) {
+                if (this.carried.a((byte) 110, var7, var5, 2, 2)) {
+                  this.field_eb = this.carried;
                   if (var20 != 0) {
                     this.field_eb = null;
                     this.field_eb = null;
@@ -1601,16 +1601,16 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
                 }
               }
               if (null == this.field_eb) {
-                this.field_g = null;
+                this.carried = null;
                 if (var20 == 0) {
                   return;
                 }
               }
             }
-            this.field_g = this.field_eb;
+            this.carried = this.field_eb;
             return;
           }
-          this.field_g = null;
+          this.carried = null;
           this.field_eb = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2070,7 +2070,7 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
           stackIn_73_0 = (var11 != 0) ? 65536 : 393216;
           var17 = stackIn_73_0;
           if (var9 != 0 &&
-            this.field_g != null) {
+            this.carried != null) {
             stackIn_80_0 = 1;
           } else {
             stackIn_80_0 = 0;
@@ -2103,7 +2103,7 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
               decompiledFrameRemainder2 = (var29 != 0);
             }
             if ((decompiledFrameRemainder2) &&
-              (null != this.field_g)) {
+              (null != this.carried)) {
               var20 = this.I(5) ? 1 : 0;
               if (var20 == 0) {
                 var17 = 196608;
@@ -2120,8 +2120,8 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
             var16 = -1;
           }
           if (var18 != 0) {
-            if (this.field_g.getWidth(-64) > 2097152 &&
-              2097152 < this.field_g.getHeight((byte) 55)) {
+            if (this.carried.getWidth(-64) > 2097152 &&
+              2097152 < this.carried.getHeight((byte) 55)) {
               stackIn_122_0 = 1;
             } else {
               stackIn_122_0 = 0;
@@ -2202,11 +2202,11 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
               this.C(-1).f(8, 10915)) {
               this.field_gb = true;
               var22 = 1;
-              this.velocityX = this.velocityX + (131072 - this.room.q(-81).a(262144, 0));
-              this.velocityY = this.velocityY + (131072 - this.room.q(-83).a(262144, 0));
+              this.velocityX = this.velocityX + (131072 - this.room.q(-81).nextBounded(262144, 0));
+              this.velocityY = this.velocityY + (131072 - this.room.q(-83).nextBounded(262144, 0));
             }
             var16--;
-            boolean decompiledSharedTail0 = (null == this.field_g);
+            boolean decompiledSharedTail0 = (null == this.carried);
             if (!decompiledSharedTail0) {
               this.a((byte) 56, var21, var20);
               decompiledSharedTail0 = (var29 != 0);
@@ -2244,7 +2244,7 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
             }
           }
           if ((decompiledFrameRemainder1) && (var9 == 0 ||
-            null == this.field_g)) {
+            null == this.carried)) {
             if (var7 != 0) {
             }
             this.c(var21, -86, var20);
@@ -2305,7 +2305,7 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
             }
             if (this.field_ab == 0 &&
               150 < this.field_bb) {
-              if (this.room.q(-91).a(2, 0) == 0) {
+              if (this.room.q(-91).nextBounded(2, 0) == 0) {
                 var26Lifetime1 = 6;
                 if (var29 != 0) {
                   var26Lifetime1 = 18;
@@ -2395,7 +2395,7 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
             this.a(2, (byte) -126, 1);
           }
           if (this.field_C[0]) {
-            var28Lifetime1 = this.room.q(-96).a(32, 0) + 256 << 16;
+            var28Lifetime1 = this.room.q(-96).nextBounded(32, 0) + 256 << 16;
             this.room.a(-116, this.y, new Effect(4, 32), var28Lifetime1, var28Lifetime1, this.x);
           }
           if (this.room.g((byte) -67)) {
@@ -2572,13 +2572,13 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          param0 = fs.a((byte) 114, param0, this.x);
-          param0 = fs.a((byte) 105, param0, this.y);
+          param0 = fs.mixHash((byte) 114, param0, this.x);
+          param0 = fs.mixHash((byte) 105, param0, this.y);
           if (param1 > -22) {
             this.field_w = -19;
           }
-          param0 = fs.a((byte) 44, param0, this.velocityX);
-          param0 = fs.a((byte) 38, param0, this.velocityY);
+          param0 = fs.mixHash((byte) 44, param0, this.velocityX);
+          param0 = fs.mixHash((byte) 38, param0, this.velocityY);
           stackIn_4_0 = param0;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3173,7 +3173,7 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
             var2_int = this.room.a(var2_int, (byte) 71);
           }
           if (param0 > -76) {
-            field_U = (String[]) null;
+            loadingQuips = (String[]) null;
           }
           if (this.lifeState == 1 &&
             this.field_r == 4) {
@@ -3325,7 +3325,7 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
           if (param0 != 5) {
             field_s = (String) null;
           }
-          stackIn_13_0 = (this.field_g != null) && (2097152 < this.field_g.getWidth(-57)) && (this.field_g.getHeight((byte) 55) > 2097152);
+          stackIn_13_0 = (this.carried != null) && (2097152 < this.carried.getWidth(-57)) && (this.carried.getHeight((byte) 55) > 2097152);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3481,7 +3481,7 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
         }
     }
 
-    final boolean a(MiscItemBehaviour param0, byte param1) {
+    final boolean canPickUp(MiscItemBehaviour param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_17_0 = null;
@@ -3489,13 +3489,13 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = param0.j((byte) -106);
+          var3_int = param0.getItemType((byte) -106);
           if (param1 < 69) {
             this.field_L = false;
           }
           if ((var3_int == 0 ||
             var3_int == 3) &&
-            this.field_g != null) {
+            this.carried != null) {
             return false;
           }
           return true;
@@ -3532,7 +3532,7 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
             param1 < 0) {
             var4_int = 1;
           }
-          this.field_g.a(80, false, var4_int, this.velocityY, this.velocityX, 0);
+          this.carried.a(80, false, var4_int, this.velocityY, this.velocityX, 0);
           if (this.x == this.previousX &&
             ~this.y == ~this.previousY) {
             this.a(this.velocityY, this.velocityX, (byte) -103);
@@ -4020,7 +4020,7 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
     static {
         field_p = new fta();
         field_I = new IntrusiveDeque();
-        field_U = new String[]{"Banging drums", "Shooting rival", "Uncompressing orchestra", "Performing dramatic piece", "Plotting route to treasure", "Found mum's diary", "Found the Ark", "Escaping mountain fortress", "Ordering MacGuffin", "Getting bored of hieroglyphs...", "Ordering stair lift", "Filling pits with snakes", "Filling pits with lava", "Ordering fragile rope bridges", "Setting dart shooters to kill", "Disregarding historical research", "Pacifying volcano god", "Killing time", "Leaving idols in tomb"};
+        loadingQuips = new String[]{"Banging drums", "Shooting rival", "Uncompressing orchestra", "Performing dramatic piece", "Plotting route to treasure", "Found mum's diary", "Found the Ark", "Escaping mountain fortress", "Ordering MacGuffin", "Getting bored of hieroglyphs...", "Ordering stair lift", "Filling pits with snakes", "Filling pits with lava", "Ordering fragile rope bridges", "Setting dart shooters to kill", "Disregarding historical research", "Pacifying volcano god", "Killing time", "Leaving idols in tomb"};
         field_s = "Bobby-George Totems";
     }
 }

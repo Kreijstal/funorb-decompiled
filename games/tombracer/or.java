@@ -4,7 +4,7 @@
 class or extends fi {
     private byte[] field_l;
     private int[] field_i;
-    static String[] field_m;
+    static String[] fallingObjectDeathMessages;
     private int field_k;
     static nt field_j;
     private int field_n;
@@ -23,7 +23,7 @@ class or extends fi {
         this.field_k = this.field_k + 1;
         this.field_l[fieldTemp$0] = (byte)(127 + SnakePitBehaviour.c(127, param2 >> 1));
         if (param1) {
-          field_m = (String[]) null;
+          fallingObjectDeathMessages = (String[]) null;
         }
     }
 
@@ -76,7 +76,7 @@ class or extends fi {
         if (param0 != 24451) {
           return;
         }
-        field_m = null;
+        fallingObjectDeathMessages = null;
     }
 
     final void a(byte param0) {
@@ -91,7 +91,7 @@ class or extends fi {
     }
 
     static {
-        field_m = new String[]{"<%0> was pancaked", "<%0> forgot to bring the hard hat", "<%0> entered the land of Moin", "<%0> is quite a bit shorter now", "<%0> should have looked up", "<%0> could not shoulder the burden", "<%0> became pate"};
+        fallingObjectDeathMessages = new String[]{"<%0> was pancaked", "<%0> forgot to bring the hard hat", "<%0> entered the land of Moin", "<%0> is quite a bit shorter now", "<%0> should have looked up", "<%0> could not shoulder the burden", "<%0> became pate"};
         field_j = new nt();
     }
 }

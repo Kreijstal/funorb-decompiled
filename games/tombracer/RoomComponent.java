@@ -398,7 +398,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
     final RoomComponent a(int param0, boolean param1, int param2) {
         if (param2 != 20) {
           Trap var5 = (Trap) null;
-          this.a(true, false, (Room) null, 109, -103, 35, (Trap) null);
+          this.instantiate(true, false, (Room) null, 109, -103, 35, (Trap) null);
         }
         if (!param1) {
           return this.room.a(param1, param0, param2 ^ 18);
@@ -856,7 +856,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         }
     }
 
-    abstract void a(boolean param0, boolean param1, Room param2, int param3, int param4, int param5, Trap param6);
+    abstract void instantiate(boolean param0, boolean param1, Room param2, int param3, int param4, int param5, Trap param6);
 
     RoomComponent(Room param0, int param1) {
         this.field_t = new mka[]{};

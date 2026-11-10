@@ -76,7 +76,7 @@ final class TripBeamComponent extends SwitchComponent {
         super(param0, param1, param2, param3);
     }
 
-    final Trap a(boolean param0, int param1, Room param2) {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         Trap var4 = null;
         RuntimeException var4_ref = null;
         TripBeamBehaviour var5 = null;

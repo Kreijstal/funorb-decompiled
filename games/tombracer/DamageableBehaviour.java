@@ -205,7 +205,7 @@ final class DamageableBehaviour extends Behaviour {
         }
     }
 
-    final void k(int param0) {
+    final void tick(int param0) {
         if (this.field_p > 0) {
           this.field_p = this.field_p - 1;
           if (this.field_p == 0) {
@@ -385,10 +385,10 @@ final class DamageableBehaviour extends Behaviour {
         return this.field_A.a(0, param1);
     }
 
-    final int a(int param0, int param1) {
-        param0 = fs.a((byte) 27, param0, this.field_s);
+    final int hashState(int param0, int param1) {
+        param0 = fs.mixHash((byte) 27, param0, this.field_s);
         if (param1 < -48) {
-          param0 = fs.a((byte) 59, param0, this.field_v);
+          param0 = fs.mixHash((byte) 59, param0, this.field_v);
           return param0;
         }
         return 119;

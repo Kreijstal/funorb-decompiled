@@ -184,7 +184,7 @@ final class fs extends ci {
         return var8;
     }
 
-    final static int a(byte param0, int param1, int param2) {
+    final static int mixHash(byte param0, int param1, int param2) {
         if (param0 < 21) {
           return -58;
         }

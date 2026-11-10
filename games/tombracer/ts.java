@@ -92,7 +92,7 @@ final class ts {
         for (var3 = 0; var3 < var6.length; var3++) {
           var4 = var6[var3];
           if (var4 != null) {
-            this.field_c.a(var4, 2);
+            this.field_c.removeTrap(var4, 2);
           }
         }
         this.field_d = null;
@@ -142,7 +142,7 @@ final class ts {
         }
         this.field_f[0].addBehaviour((byte) 83, (Behaviour) (var5));
         this.field_f[0].c(437453352, false);
-        this.field_c.a(this.field_f[0], (byte) 32);
+        this.field_c.addTrap(this.field_f[0], (byte) 32);
         if (param0) {
           var5.e(false);
         }
@@ -300,7 +300,7 @@ final class ts {
           var14.b(param2 ^ 5, param3);
           var14.a(param0, param1, 19072);
           this.field_e[var11Lifetime1].addBehaviour((byte) 83, (Behaviour) (var14));
-          this.field_c.a(this.field_e[var11Lifetime1], (byte) 32);
+          this.field_c.addTrap(this.field_e[var11Lifetime1], (byte) 32);
         }
     }
 
@@ -333,7 +333,7 @@ final class ts {
         Trap[] var2 = var6;
         for (var3 = 0; var3 < var6.length; var3++) {
           var4 = var6[var3];
-          this.field_c.a(var4, 2);
+          this.field_c.removeTrap(var4, 2);
         }
         this.field_e = null;
     }
@@ -374,8 +374,8 @@ final class ts {
           while (var11 != 0) {
             if (var9 > var8) {
               var8++;
-              var12 = var6 / 2 + this.field_c.q(param0 - 41).a(var3 - var6, 0);
-              var13 = this.field_c.q(param0 - 195).a(var4 - var7, 0) + var7 / 2;
+              var12 = var6 / 2 + this.field_c.q(param0 - 41).nextBounded(var3 - var6, 0);
+              var13 = this.field_c.q(param0 - 195).nextBounded(var4 - var7, 0) + var7 / 2;
               var14 = -var12 + this.field_c.getPlayer(-53).getX(3) >> 16;
               var15 = -var13 + this.field_c.getPlayer(-79).getY(param0 ^ 9698) >> 16;
               if (4096 > var15 * var15 + var14 * var14) {
@@ -387,7 +387,7 @@ final class ts {
                 continue;
               }
               var5.a(1434528720, var13, var12);
-              var5.a(true, true, this.field_c, 0, 0, -1, (Trap) null);
+              var5.instantiate(true, true, this.field_c, 0, 0, -1, (Trap) null);
               this.field_d[var10] = (Trap) (var5.u(kha.b((int) param0, -24)));
               continue;
             }
@@ -412,7 +412,7 @@ final class ts {
         }
         for (var3 = 0; var3 < var6.length; var3++) {
           var4 = var6[var3];
-          this.field_c.a(var4, 2);
+          this.field_c.removeTrap(var4, 2);
         }
         this.field_f = null;
     }

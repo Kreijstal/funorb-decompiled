@@ -6,7 +6,7 @@ final class vua extends qr {
     static String field_z;
     static String field_C;
     static int field_B;
-    static String[] field_D;
+    static String[] dartDeathMessages;
     static ToolkitSprite field_A;
 
     final boolean a(int param0, int param1, int param2, int param3, int param4, ae param5, int param6) {
@@ -84,7 +84,7 @@ final class vua extends qr {
 
     public static void releaseStatics(byte param0) {
         field_A = null;
-        field_D = null;
+        dartDeathMessages = null;
         field_y = null;
         field_z = null;
         if (param0 == -4) {
@@ -143,7 +143,7 @@ final class vua extends qr {
     static {
         field_C = "If you can't take the heat, don't practise your backstroke in the lagoons of lava. I heard Arnie met his end here.";
         field_B = -1;
-        field_D = new String[]{"<%0> was punctured", "<%0> was popped", "<%0> got the point", "<%0> served as an impromptu dartboard", "<%0> didn't judge the timings correctly"};
+        dartDeathMessages = new String[]{"<%0> was punctured", "<%0> was popped", "<%0> got the point", "<%0> served as an impromptu dartboard", "<%0> didn't judge the timings correctly"};
         field_z = "Spectate";
     }
 }

@@ -5,7 +5,7 @@ final class MovingWallComponent extends PathMoverComponent {
     static String field_M;
     static IntrusiveDeque field_N;
 
-    final Trap a(boolean param0, int param1, Room param2) {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         SimpleBlockBehaviour var5 = null;
         PathMoveLocomotor var6 = null;

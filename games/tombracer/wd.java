@@ -111,7 +111,7 @@ final class wd implements dv {
                         if (var6_int == 7) {
                           param4.a((byte) -3, 2);
                           var10 = new MiscItemBehaviour(param3, param5);
-                          var10.a(0, false);
+                          var10.setItemType(0, false);
                           param4.addBehaviour((byte) 83, (Behaviour) (var10));
                           param4.b(false, 11468);
                           param4.b((byte) 17, false);

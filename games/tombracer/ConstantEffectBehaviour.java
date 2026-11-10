@@ -8,10 +8,10 @@ final class ConstantEffectBehaviour extends Behaviour {
     private Effect field_r;
     int field_o;
 
-    final void k(int param0) {
+    final void tick(int param0) {
         this.field_o = this.b(true).a(125, this.trap.getY(9648), this.field_r, this.trap.getHeight((byte) 55), this.trap.getWidth(-111), this.trap.getX(param0 - 5415));
         if (param0 != 5418) {
-          this.k(-67);
+          this.tick(-67);
         }
     }
 
@@ -46,7 +46,7 @@ final class ConstantEffectBehaviour extends Behaviour {
         }
     }
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         if (param1 > -48) {
           return 23;
         }

@@ -4,7 +4,7 @@
 abstract class kma implements nua {
     static String[] field_e;
     static String field_d;
-    static String[] field_c;
+    static String[] defaultPlayerNames;
     private long field_b;
     static String field_a;
 
@@ -35,13 +35,13 @@ abstract class kma implements nua {
         field_e = null;
         if (param0 == -91) {
           field_a = null;
-          field_c = null;
+          defaultPlayerNames = null;
           field_d = null;
           return;
         }
         field_e = (String[]) null;
         field_a = null;
-        field_c = null;
+        defaultPlayerNames = null;
         field_d = null;
     }
 
@@ -87,7 +87,7 @@ abstract class kma implements nua {
 
     static {
         field_d = "Borees";
-        field_c = new String[]{"Player 1", "Player 2", "Player 3", "Player 4"};
+        defaultPlayerNames = new String[]{"Player 1", "Player 2", "Player 3", "Player 4"};
         field_a = "The account name you use to access RuneScape and other Jagex.com games";
     }
 }

@@ -1052,11 +1052,11 @@ final class Projectile extends PooledObject implements Renderable, ffa, t {
                 this.field_i != -1) {
                 var8 = this.field_z.spawnParticle(this.x, this.y, (byte) 100, this.z);
                 var5 = 131072;
-                var6 = -(var5 / 2) + uca.field_c.a(var5, 0);
-                var7 = uca.field_c.a(var5, ~param0) - var5 / 2;
-                var8.a(false, 24, this.field_i, 4, 10 + uca.field_c.a(10, 0));
+                var6 = -(var5 / 2) + uca.field_c.nextBounded(var5, 0);
+                var7 = uca.field_c.nextBounded(var5, ~param0) - var5 / 2;
+                var8.a(false, 24, this.field_i, 4, 10 + uca.field_c.nextBounded(10, 0));
                 var8.b(121, var7, var6);
-                var8.a(uca.field_c.a(8192, 0), -128 + uca.field_c.a(256, 0), param0 - 84);
+                var8.a(uca.field_c.nextBounded(8192, 0), -128 + uca.field_c.nextBounded(256, 0), param0 - 84);
               }
             } else {
               if (this.field_C) {
@@ -1074,11 +1074,11 @@ final class Projectile extends PooledObject implements Renderable, ffa, t {
                   this.field_i != -1) {
                   var10 = this.field_z.spawnParticle(this.x, this.y, (byte) 100, this.z);
                   var5 = 131072;
-                  var6 = -(var5 / 2) + uca.field_c.a(var5, 0);
-                  var7 = uca.field_c.a(var5, ~param0) - var5 / 2;
-                  var10.a(false, 24, this.field_i, 4, 10 + uca.field_c.a(10, 0));
+                  var6 = -(var5 / 2) + uca.field_c.nextBounded(var5, 0);
+                  var7 = uca.field_c.nextBounded(var5, ~param0) - var5 / 2;
+                  var10.a(false, 24, this.field_i, 4, 10 + uca.field_c.nextBounded(10, 0));
                   var10.b(121, var7, var6);
-                  var10.a(uca.field_c.a(8192, 0), -128 + uca.field_c.a(256, 0), param0 - 84);
+                  var10.a(uca.field_c.nextBounded(8192, 0), -128 + uca.field_c.nextBounded(256, 0), param0 - 84);
                 }
               } else {
                 this.field_z.field_u.a((ffa) (this), -66);
@@ -1092,11 +1092,11 @@ final class Projectile extends PooledObject implements Renderable, ffa, t {
                   this.field_i != -1) {
                   var12 = this.field_z.spawnParticle(this.x, this.y, (byte) 100, this.z);
                   var5 = 131072;
-                  var6 = -(var5 / 2) + uca.field_c.a(var5, 0);
-                  var7 = uca.field_c.a(var5, ~param0) - var5 / 2;
-                  var12.a(false, 24, this.field_i, 4, 10 + uca.field_c.a(10, 0));
+                  var6 = -(var5 / 2) + uca.field_c.nextBounded(var5, 0);
+                  var7 = uca.field_c.nextBounded(var5, ~param0) - var5 / 2;
+                  var12.a(false, 24, this.field_i, 4, 10 + uca.field_c.nextBounded(10, 0));
                   var12.b(121, var7, var6);
-                  var12.a(uca.field_c.a(8192, 0), -128 + uca.field_c.a(256, 0), param0 - 84);
+                  var12.a(uca.field_c.nextBounded(8192, 0), -128 + uca.field_c.nextBounded(256, 0), param0 - 84);
                 }
               }
             }
@@ -1172,11 +1172,11 @@ final class Projectile extends PooledObject implements Renderable, ffa, t {
           else {
             var13 = this.field_z.spawnParticle(this.x, this.y, (byte) 100, this.z);
             var5Lifetime1 = 131072;
-            var6Lifetime1 = -(var5Lifetime1 / 2) + uca.field_c.a(var5Lifetime1, 0);
-            var7Lifetime1 = uca.field_c.a(var5Lifetime1, ~param0) - var5Lifetime1 / 2;
-            var13.a(false, 24, this.field_i, 4, 10 + uca.field_c.a(10, 0));
+            var6Lifetime1 = -(var5Lifetime1 / 2) + uca.field_c.nextBounded(var5Lifetime1, 0);
+            var7Lifetime1 = uca.field_c.nextBounded(var5Lifetime1, ~param0) - var5Lifetime1 / 2;
+            var13.a(false, 24, this.field_i, 4, 10 + uca.field_c.nextBounded(10, 0));
             var13.b(121, var7Lifetime1, var6Lifetime1);
-            var13.a(uca.field_c.a(8192, 0), -128 + uca.field_c.a(256, 0), param0 - 84);
+            var13.a(uca.field_c.nextBounded(8192, 0), -128 + uca.field_c.nextBounded(256, 0), param0 - 84);
           }
         }
         if (decompiledFrameRemainder0) {
@@ -1363,20 +1363,20 @@ final class Projectile extends PooledObject implements Renderable, ffa, t {
     }
 
     final int hashState(int param0, byte param1) {
-        param0 = fs.a((byte) 88, param0, this.x);
-        param0 = fs.a((byte) 30, param0, this.y);
+        param0 = fs.mixHash((byte) 88, param0, this.x);
+        param0 = fs.mixHash((byte) 30, param0, this.y);
         if (param1 == -39) {
-          param0 = fs.a((byte) 32, param0, this.velocityX);
-          param0 = fs.a((byte) 120, param0, this.velocityY);
-          param0 = fs.a((byte) 58, param0, this.endSize);
-          param0 = fs.a((byte) 85, param0, this.angle);
+          param0 = fs.mixHash((byte) 32, param0, this.velocityX);
+          param0 = fs.mixHash((byte) 120, param0, this.velocityY);
+          param0 = fs.mixHash((byte) 58, param0, this.endSize);
+          param0 = fs.mixHash((byte) 85, param0, this.angle);
           return param0;
         }
         boolean discarded$0 = this.f((byte) 2);
-        param0 = fs.a((byte) 32, param0, this.velocityX);
-        param0 = fs.a((byte) 120, param0, this.velocityY);
-        param0 = fs.a((byte) 58, param0, this.endSize);
-        param0 = fs.a((byte) 85, param0, this.angle);
+        param0 = fs.mixHash((byte) 32, param0, this.velocityX);
+        param0 = fs.mixHash((byte) 120, param0, this.velocityY);
+        param0 = fs.mixHash((byte) 58, param0, this.endSize);
+        param0 = fs.mixHash((byte) 85, param0, this.angle);
         return param0;
     }
 

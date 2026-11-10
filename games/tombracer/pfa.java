@@ -42,340 +42,340 @@ final class pfa {
                 fs.field_p = param0;
                 var2 = mt.a("achievement_names,0", (byte) 108);
                 if (null != var2) {
-                  lq.field_p[0] = jaa.a((byte) 77, var2);
+                  lq.achievementNames[0] = jaa.a((byte) 77, var2);
                 }
                 var2 = mt.a("achievement_names,1", (byte) 121);
                 if (var2 != null) {
-                  lq.field_p[1] = jaa.a((byte) 97, var2);
+                  lq.achievementNames[1] = jaa.a((byte) 97, var2);
                 }
                 var2 = mt.a("achievement_names,2", (byte) 115);
                 if (null != var2) {
-                  lq.field_p[2] = jaa.a((byte) 73, var2);
+                  lq.achievementNames[2] = jaa.a((byte) 73, var2);
                 }
                 var2 = mt.a("achievement_names,3", (byte) 123);
                 if (null != var2) {
-                  lq.field_p[3] = jaa.a((byte) 69, var2);
+                  lq.achievementNames[3] = jaa.a((byte) 69, var2);
                 }
                 var2 = mt.a("achievement_names,4", (byte) 108);
                 if (var2 != null) {
-                  lq.field_p[4] = jaa.a((byte) 125, var2);
+                  lq.achievementNames[4] = jaa.a((byte) 125, var2);
                 }
                 var2 = mt.a("achievement_names,5", (byte) 121);
                 if (null != var2) {
-                  lq.field_p[5] = jaa.a((byte) 81, var2);
+                  lq.achievementNames[5] = jaa.a((byte) 81, var2);
                 }
                 var2 = mt.a("achievement_names,6", (byte) 118);
                 if (null != var2) {
-                  lq.field_p[6] = jaa.a((byte) 56, var2);
+                  lq.achievementNames[6] = jaa.a((byte) 56, var2);
                 }
                 var2 = mt.a("achievement_names,7", (byte) 124);
                 if (var2 != null) {
-                  lq.field_p[7] = jaa.a((byte) 30, var2);
+                  lq.achievementNames[7] = jaa.a((byte) 30, var2);
                 }
                 var2 = mt.a("achievement_names,8", (byte) 102);
                 if (var2 != null) {
-                  lq.field_p[8] = jaa.a((byte) 77, var2);
+                  lq.achievementNames[8] = jaa.a((byte) 77, var2);
                 }
                 var2 = mt.a("achievement_names,9", (byte) 111);
                 if (null != var2) {
-                  lq.field_p[9] = jaa.a((byte) 26, var2);
+                  lq.achievementNames[9] = jaa.a((byte) 26, var2);
                 }
                 var2 = mt.a("achievement_names,10", (byte) 110);
                 if (var2 != null) {
-                  lq.field_p[10] = jaa.a((byte) 102, var2);
+                  lq.achievementNames[10] = jaa.a((byte) 102, var2);
                 }
                 var2 = mt.a("achievement_names,11", (byte) 121);
                 if (null != var2) {
-                  lq.field_p[11] = jaa.a((byte) 59, var2);
+                  lq.achievementNames[11] = jaa.a((byte) 59, var2);
                 }
                 var2 = mt.a("achievement_names,12", (byte) 112);
                 if (var2 != null) {
-                  lq.field_p[12] = jaa.a((byte) 28, var2);
+                  lq.achievementNames[12] = jaa.a((byte) 28, var2);
                 }
                 var2 = mt.a("achievement_names,13", (byte) 127);
                 if (null != var2) {
-                  lq.field_p[13] = jaa.a((byte) 50, var2);
+                  lq.achievementNames[13] = jaa.a((byte) 50, var2);
                 }
                 var2 = mt.a("achievement_names,14", (byte) 116);
                 if (var2 != null) {
-                  lq.field_p[14] = jaa.a((byte) 113, var2);
+                  lq.achievementNames[14] = jaa.a((byte) 113, var2);
                 }
                 var2 = mt.a("achievement_names,15", (byte) 119);
                 if (var2 != null) {
-                  lq.field_p[15] = jaa.a((byte) 122, var2);
+                  lq.achievementNames[15] = jaa.a((byte) 122, var2);
                 }
                 var2 = mt.a("achievement_names,16", (byte) 123);
                 if (null != var2) {
-                  lq.field_p[16] = jaa.a((byte) 37, var2);
+                  lq.achievementNames[16] = jaa.a((byte) 37, var2);
                 }
                 var2 = mt.a("achievement_names,17", (byte) 102);
                 if (var2 != null) {
-                  lq.field_p[17] = jaa.a((byte) 84, var2);
+                  lq.achievementNames[17] = jaa.a((byte) 84, var2);
                 }
                 var2 = mt.a("achievement_names,18", (byte) 120);
                 if (null != var2) {
-                  lq.field_p[18] = jaa.a((byte) 121, var2);
+                  lq.achievementNames[18] = jaa.a((byte) 121, var2);
                 }
                 var2 = mt.a("achievement_names,19", (byte) 121);
                 if (var2 != null) {
-                  lq.field_p[19] = jaa.a((byte) 75, var2);
+                  lq.achievementNames[19] = jaa.a((byte) 75, var2);
                 }
                 var2 = mt.a("achievement_names,20", (byte) 124);
                 if (var2 != null) {
-                  lq.field_p[20] = jaa.a((byte) 25, var2);
+                  lq.achievementNames[20] = jaa.a((byte) 25, var2);
                 }
                 var2 = mt.a("achievement_names,21", (byte) 104);
                 if (var2 != null) {
-                  lq.field_p[21] = jaa.a((byte) 64, var2);
+                  lq.achievementNames[21] = jaa.a((byte) 64, var2);
                 }
                 var2 = mt.a("achievement_names,22", (byte) 125);
                 if (null != var2) {
-                  lq.field_p[22] = jaa.a((byte) 106, var2);
+                  lq.achievementNames[22] = jaa.a((byte) 106, var2);
                 }
                 var2 = mt.a("achievement_names,23", (byte) 102);
                 if (var2 != null) {
-                  lq.field_p[23] = jaa.a((byte) 28, var2);
+                  lq.achievementNames[23] = jaa.a((byte) 28, var2);
                 }
                 var2 = mt.a("achievement_names,24", (byte) 104);
                 if (var2 != null) {
-                  lq.field_p[24] = jaa.a((byte) 67, var2);
+                  lq.achievementNames[24] = jaa.a((byte) 67, var2);
                 }
                 var2 = mt.a("achievement_names,25", (byte) 116);
                 if (var2 != null) {
-                  lq.field_p[25] = jaa.a((byte) 96, var2);
+                  lq.achievementNames[25] = jaa.a((byte) 96, var2);
                 }
                 var2 = mt.a("achievement_names,26", (byte) 112);
                 if (var2 != null) {
-                  lq.field_p[26] = jaa.a((byte) 86, var2);
+                  lq.achievementNames[26] = jaa.a((byte) 86, var2);
                 }
                 var2 = mt.a("achievement_names,27", (byte) 102);
                 if (var2 != null) {
-                  lq.field_p[27] = jaa.a((byte) 76, var2);
+                  lq.achievementNames[27] = jaa.a((byte) 76, var2);
                 }
                 var2 = mt.a("achievement_names,28", (byte) 113);
                 if (null != var2) {
-                  lq.field_p[28] = jaa.a((byte) 60, var2);
+                  lq.achievementNames[28] = jaa.a((byte) 60, var2);
                 }
                 var2 = mt.a("achievement_names,29", (byte) 118);
                 if (null != var2) {
-                  lq.field_p[29] = jaa.a((byte) 66, var2);
+                  lq.achievementNames[29] = jaa.a((byte) 66, var2);
                 }
                 var2 = mt.a("achievement_names,30", (byte) 101);
                 if (var2 != null) {
-                  lq.field_p[30] = jaa.a((byte) 101, var2);
+                  lq.achievementNames[30] = jaa.a((byte) 101, var2);
                 }
                 var2 = mt.a("achievement_names,31", (byte) 125);
                 if (var2 != null) {
-                  lq.field_p[31] = jaa.a((byte) 67, var2);
+                  lq.achievementNames[31] = jaa.a((byte) 67, var2);
                 }
                 var2 = mt.a("achievement_names,32", (byte) 115);
                 if (null != var2) {
-                  lq.field_p[32] = jaa.a((byte) 64, var2);
+                  lq.achievementNames[32] = jaa.a((byte) 64, var2);
                 }
                 var2 = mt.a("achievement_names,33", (byte) 100);
                 if (var2 != null) {
-                  lq.field_p[33] = jaa.a((byte) 79, var2);
+                  lq.achievementNames[33] = jaa.a((byte) 79, var2);
                 }
                 var2 = mt.a("achievement_names,34", (byte) 125);
                 if (var2 != null) {
-                  lq.field_p[34] = jaa.a((byte) 55, var2);
+                  lq.achievementNames[34] = jaa.a((byte) 55, var2);
                 }
                 var2 = mt.a("achievement_names,35", (byte) 109);
                 if (var2 != null) {
-                  lq.field_p[35] = jaa.a((byte) 56, var2);
+                  lq.achievementNames[35] = jaa.a((byte) 56, var2);
                 }
                 var2 = mt.a("achievement_names,36", (byte) 116);
                 if (null != var2) {
-                  lq.field_p[36] = jaa.a((byte) 69, var2);
+                  lq.achievementNames[36] = jaa.a((byte) 69, var2);
                 }
                 var2 = mt.a("achievement_names,37", (byte) 125);
                 if (null != var2) {
-                  lq.field_p[37] = jaa.a((byte) 40, var2);
+                  lq.achievementNames[37] = jaa.a((byte) 40, var2);
                 }
                 var2 = mt.a("achievement_names,38", (byte) 122);
                 if (var2 != null) {
-                  lq.field_p[38] = jaa.a((byte) 116, var2);
+                  lq.achievementNames[38] = jaa.a((byte) 116, var2);
                 }
                 var2 = mt.a("achievement_names,39", (byte) 123);
                 if (null != var2) {
-                  lq.field_p[39] = jaa.a((byte) 38, var2);
+                  lq.achievementNames[39] = jaa.a((byte) 38, var2);
                 }
                 var2 = mt.a("achievement_names,40", (byte) 100);
                 if (null != var2) {
-                  lq.field_p[40] = jaa.a((byte) 125, var2);
+                  lq.achievementNames[40] = jaa.a((byte) 125, var2);
                 }
                 var2 = mt.a("achievement_names,41", (byte) 113);
                 if (var2 != null) {
-                  lq.field_p[41] = jaa.a((byte) 116, var2);
+                  lq.achievementNames[41] = jaa.a((byte) 116, var2);
                 }
                 var2 = mt.a("achievement_criteria,0", (byte) 105);
                 if (var2 != null) {
-                  kv.field_c[0] = jaa.a((byte) 61, var2);
+                  kv.achievementDescriptions[0] = jaa.a((byte) 61, var2);
                 }
                 var2 = mt.a("achievement_criteria,1", (byte) 114);
                 if (var2 != null) {
-                  kv.field_c[1] = jaa.a((byte) 60, var2);
+                  kv.achievementDescriptions[1] = jaa.a((byte) 60, var2);
                 }
                 var2 = mt.a("achievement_criteria,2", (byte) 110);
                 if (null != var2) {
-                  kv.field_c[2] = jaa.a((byte) 111, var2);
+                  kv.achievementDescriptions[2] = jaa.a((byte) 111, var2);
                 }
                 var2 = mt.a("achievement_criteria,3", (byte) 104);
                 if (var2 != null) {
-                  kv.field_c[3] = jaa.a((byte) 69, var2);
+                  kv.achievementDescriptions[3] = jaa.a((byte) 69, var2);
                 }
                 var2 = mt.a("achievement_criteria,4", (byte) 127);
                 if (null != var2) {
-                  kv.field_c[4] = jaa.a((byte) 54, var2);
+                  kv.achievementDescriptions[4] = jaa.a((byte) 54, var2);
                 }
                 var2 = mt.a("achievement_criteria,5", (byte) 111);
                 if (null != var2) {
-                  kv.field_c[5] = jaa.a((byte) 83, var2);
+                  kv.achievementDescriptions[5] = jaa.a((byte) 83, var2);
                 }
                 var2 = mt.a("achievement_criteria,6", (byte) 113);
                 if (var2 != null) {
-                  kv.field_c[6] = jaa.a((byte) 44, var2);
+                  kv.achievementDescriptions[6] = jaa.a((byte) 44, var2);
                 }
                 var2 = mt.a("achievement_criteria,7", (byte) 127);
                 if (null != var2) {
-                  kv.field_c[7] = jaa.a((byte) 80, var2);
+                  kv.achievementDescriptions[7] = jaa.a((byte) 80, var2);
                 }
                 var2 = mt.a("achievement_criteria,8", (byte) 113);
                 if (var2 != null) {
-                  kv.field_c[8] = jaa.a((byte) 98, var2);
+                  kv.achievementDescriptions[8] = jaa.a((byte) 98, var2);
                 }
                 var2 = mt.a("achievement_criteria,9", (byte) 110);
                 if (null != var2) {
-                  kv.field_c[9] = jaa.a((byte) 45, var2);
+                  kv.achievementDescriptions[9] = jaa.a((byte) 45, var2);
                 }
                 var2 = mt.a("achievement_criteria,10", (byte) 104);
                 if (var2 != null) {
-                  kv.field_c[10] = jaa.a((byte) 44, var2);
+                  kv.achievementDescriptions[10] = jaa.a((byte) 44, var2);
                 }
                 var2 = mt.a("achievement_criteria,11", (byte) 117);
                 if (null != var2) {
-                  kv.field_c[11] = jaa.a((byte) 90, var2);
+                  kv.achievementDescriptions[11] = jaa.a((byte) 90, var2);
                 }
                 var2 = mt.a("achievement_criteria,12", (byte) 104);
                 if (null != var2) {
-                  kv.field_c[12] = jaa.a((byte) 47, var2);
+                  kv.achievementDescriptions[12] = jaa.a((byte) 47, var2);
                 }
                 var2 = mt.a("achievement_criteria,13", (byte) 120);
                 if (var2 != null) {
-                  kv.field_c[13] = jaa.a((byte) 88, var2);
+                  kv.achievementDescriptions[13] = jaa.a((byte) 88, var2);
                 }
                 var2 = mt.a("achievement_criteria,14", (byte) 123);
                 if (null != var2) {
-                  kv.field_c[14] = jaa.a((byte) 54, var2);
+                  kv.achievementDescriptions[14] = jaa.a((byte) 54, var2);
                 }
                 var2 = mt.a("achievement_criteria,15", (byte) 110);
                 if (var2 != null) {
-                  kv.field_c[15] = jaa.a((byte) 43, var2);
+                  kv.achievementDescriptions[15] = jaa.a((byte) 43, var2);
                 }
                 var2 = mt.a("achievement_criteria,16", (byte) 105);
                 if (null != var2) {
-                  kv.field_c[16] = jaa.a((byte) 81, var2);
+                  kv.achievementDescriptions[16] = jaa.a((byte) 81, var2);
                 }
                 var2 = mt.a("achievement_criteria,17", (byte) 123);
                 if (var2 != null) {
-                  kv.field_c[17] = jaa.a((byte) 115, var2);
+                  kv.achievementDescriptions[17] = jaa.a((byte) 115, var2);
                 }
                 var2 = mt.a("achievement_criteria,18", (byte) 123);
                 if (null != var2) {
-                  kv.field_c[18] = jaa.a((byte) 49, var2);
+                  kv.achievementDescriptions[18] = jaa.a((byte) 49, var2);
                 }
                 var2 = mt.a("achievement_criteria,19", (byte) 120);
                 if (var2 != null) {
-                  kv.field_c[19] = jaa.a((byte) 113, var2);
+                  kv.achievementDescriptions[19] = jaa.a((byte) 113, var2);
                 }
                 var2 = mt.a("achievement_criteria,20", (byte) 110);
                 if (var2 != null) {
-                  kv.field_c[20] = jaa.a((byte) 48, var2);
+                  kv.achievementDescriptions[20] = jaa.a((byte) 48, var2);
                 }
                 var2 = mt.a("achievement_criteria,21", (byte) 117);
                 if (null != var2) {
-                  kv.field_c[21] = jaa.a((byte) 86, var2);
+                  kv.achievementDescriptions[21] = jaa.a((byte) 86, var2);
                 }
                 var3 = -99 % ((param1 - 40) / 63);
                 var2 = mt.a("achievement_criteria,22", (byte) 101);
                 if (var2 != null) {
-                  kv.field_c[22] = jaa.a((byte) 108, var2);
+                  kv.achievementDescriptions[22] = jaa.a((byte) 108, var2);
                 }
                 var2 = mt.a("achievement_criteria,23", (byte) 101);
                 if (var2 != null) {
-                  kv.field_c[23] = jaa.a((byte) 115, var2);
+                  kv.achievementDescriptions[23] = jaa.a((byte) 115, var2);
                 }
                 var2 = mt.a("achievement_criteria,24", (byte) 103);
                 if (null != var2) {
-                  kv.field_c[24] = jaa.a((byte) 72, var2);
+                  kv.achievementDescriptions[24] = jaa.a((byte) 72, var2);
                 }
                 var2 = mt.a("achievement_criteria,25", (byte) 125);
                 if (var2 != null) {
-                  kv.field_c[25] = jaa.a((byte) 114, var2);
+                  kv.achievementDescriptions[25] = jaa.a((byte) 114, var2);
                 }
                 var2 = mt.a("achievement_criteria,26", (byte) 112);
                 if (null != var2) {
-                  kv.field_c[26] = jaa.a((byte) 56, var2);
+                  kv.achievementDescriptions[26] = jaa.a((byte) 56, var2);
                 }
                 var2 = mt.a("achievement_criteria,27", (byte) 127);
                 if (null != var2) {
-                  kv.field_c[27] = jaa.a((byte) 61, var2);
+                  kv.achievementDescriptions[27] = jaa.a((byte) 61, var2);
                 }
                 var2 = mt.a("achievement_criteria,28", (byte) 126);
                 if (null != var2) {
-                  kv.field_c[28] = jaa.a((byte) 107, var2);
+                  kv.achievementDescriptions[28] = jaa.a((byte) 107, var2);
                 }
                 var2 = mt.a("achievement_criteria,29", (byte) 116);
                 if (var2 != null) {
-                  kv.field_c[29] = jaa.a((byte) 69, var2);
+                  kv.achievementDescriptions[29] = jaa.a((byte) 69, var2);
                 }
                 var2 = mt.a("achievement_criteria,30", (byte) 107);
                 if (var2 != null) {
-                  kv.field_c[30] = jaa.a((byte) 121, var2);
+                  kv.achievementDescriptions[30] = jaa.a((byte) 121, var2);
                 }
                 var2 = mt.a("achievement_criteria,31", (byte) 101);
                 if (var2 != null) {
-                  kv.field_c[31] = jaa.a((byte) 89, var2);
+                  kv.achievementDescriptions[31] = jaa.a((byte) 89, var2);
                 }
                 var2 = mt.a("achievement_criteria,32", (byte) 108);
                 if (var2 != null) {
-                  kv.field_c[32] = jaa.a((byte) 83, var2);
+                  kv.achievementDescriptions[32] = jaa.a((byte) 83, var2);
                 }
                 var2 = mt.a("achievement_criteria,33", (byte) 105);
                 if (var2 != null) {
-                  kv.field_c[33] = jaa.a((byte) 34, var2);
+                  kv.achievementDescriptions[33] = jaa.a((byte) 34, var2);
                 }
                 var2 = mt.a("achievement_criteria,34", (byte) 124);
                 if (var2 != null) {
-                  kv.field_c[34] = jaa.a((byte) 127, var2);
+                  kv.achievementDescriptions[34] = jaa.a((byte) 127, var2);
                 }
                 var2 = mt.a("achievement_criteria,35", (byte) 123);
                 if (null != var2) {
-                  kv.field_c[35] = jaa.a((byte) 71, var2);
+                  kv.achievementDescriptions[35] = jaa.a((byte) 71, var2);
                 }
                 var2 = mt.a("achievement_criteria,36", (byte) 122);
                 if (null != var2) {
-                  kv.field_c[36] = jaa.a((byte) 63, var2);
+                  kv.achievementDescriptions[36] = jaa.a((byte) 63, var2);
                 }
                 var2 = mt.a("achievement_criteria,37", (byte) 122);
                 if (var2 != null) {
-                  kv.field_c[37] = jaa.a((byte) 108, var2);
+                  kv.achievementDescriptions[37] = jaa.a((byte) 108, var2);
                 }
                 var2 = mt.a("achievement_criteria,38", (byte) 116);
                 if (null != var2) {
-                  kv.field_c[38] = jaa.a((byte) 83, var2);
+                  kv.achievementDescriptions[38] = jaa.a((byte) 83, var2);
                 }
                 var2 = mt.a("achievement_criteria,39", (byte) 121);
                 if (var2 != null) {
-                  kv.field_c[39] = jaa.a((byte) 43, var2);
+                  kv.achievementDescriptions[39] = jaa.a((byte) 43, var2);
                 }
                 var2 = mt.a("achievement_criteria,40", (byte) 117);
                 if (var2 != null) {
-                  kv.field_c[40] = jaa.a((byte) 73, var2);
+                  kv.achievementDescriptions[40] = jaa.a((byte) 73, var2);
                 }
                 var2 = mt.a("achievement_criteria,41", (byte) 101);
                 if (var2 != null) {
-                  kv.field_c[41] = jaa.a((byte) 31, var2);
+                  kv.achievementDescriptions[41] = jaa.a((byte) 31, var2);
                 }
                 var2 = mt.a("no_textures", (byte) 108);
                 if (var2 != null) {
@@ -403,35 +403,35 @@ final class pfa {
                 }
                 var2 = mt.a("player,0", (byte) 110);
                 if (null != var2) {
-                  kma.field_c[0] = jaa.a((byte) 37, var2);
+                  kma.defaultPlayerNames[0] = jaa.a((byte) 37, var2);
                 }
                 var2 = mt.a("player,1", (byte) 105);
                 if (null != var2) {
-                  kma.field_c[1] = jaa.a((byte) 92, var2);
+                  kma.defaultPlayerNames[1] = jaa.a((byte) 92, var2);
                 }
                 var2 = mt.a("player,2", (byte) 102);
                 if (null != var2) {
-                  kma.field_c[2] = jaa.a((byte) 64, var2);
+                  kma.defaultPlayerNames[2] = jaa.a((byte) 64, var2);
                 }
                 var2 = mt.a("player,3", (byte) 124);
                 if (null != var2) {
-                  kma.field_c[3] = jaa.a((byte) 124, var2);
+                  kma.defaultPlayerNames[3] = jaa.a((byte) 124, var2);
                 }
                 var2 = mt.a("positions,0", (byte) 119);
                 if (var2 != null) {
-                  dw.field_u[0] = jaa.a((byte) 102, var2);
+                  dw.ordinals[0] = jaa.a((byte) 102, var2);
                 }
                 var2 = mt.a("positions,1", (byte) 114);
                 if (var2 != null) {
-                  dw.field_u[1] = jaa.a((byte) 30, var2);
+                  dw.ordinals[1] = jaa.a((byte) 30, var2);
                 }
                 var2 = mt.a("positions,2", (byte) 108);
                 if (var2 != null) {
-                  dw.field_u[2] = jaa.a((byte) 96, var2);
+                  dw.ordinals[2] = jaa.a((byte) 96, var2);
                 }
                 var2 = mt.a("positions,3", (byte) 121);
                 if (var2 != null) {
-                  dw.field_u[3] = jaa.a((byte) 97, var2);
+                  dw.ordinals[3] = jaa.a((byte) 97, var2);
                 }
                 var2 = mt.a("roundWinner", (byte) 126);
                 if (var2 != null) {
@@ -771,7 +771,7 @@ final class pfa {
                 }
                 var2 = mt.a("instructionTextPerpetuallySpinningDiscs", (byte) 120);
                 if (var2 != null) {
-                  kna.field_D = jaa.a((byte) 40, var2);
+                  PrefabComponent.field_D = jaa.a((byte) 40, var2);
                 }
                 var2 = mt.a("instructionTitleWhiteLightBeams", (byte) 123);
                 if (var2 != null) {
@@ -853,199 +853,199 @@ final class pfa {
                 }
                 var2 = mt.a("loadingStrings,0", (byte) 100);
                 if (var2 != null) {
-                  fv.field_d[0] = jaa.a((byte) 72, var2);
+                  fv.loadingQuipsAlternate[0] = jaa.a((byte) 72, var2);
                 }
                 var2 = mt.a("loadingStrings,1", (byte) 107);
                 if (null != var2) {
-                  fv.field_d[1] = jaa.a((byte) 50, var2);
+                  fv.loadingQuipsAlternate[1] = jaa.a((byte) 50, var2);
                 }
                 var2 = mt.a("loadingStrings,2", (byte) 125);
                 if (var2 != null) {
-                  fv.field_d[2] = jaa.a((byte) 106, var2);
+                  fv.loadingQuipsAlternate[2] = jaa.a((byte) 106, var2);
                 }
                 var2 = mt.a("loadingStrings,3", (byte) 105);
                 if (var2 != null) {
-                  fv.field_d[3] = jaa.a((byte) 92, var2);
+                  fv.loadingQuipsAlternate[3] = jaa.a((byte) 92, var2);
                 }
                 var2 = mt.a("loadingStrings,4", (byte) 110);
                 if (null != var2) {
-                  fv.field_d[4] = jaa.a((byte) 46, var2);
+                  fv.loadingQuipsAlternate[4] = jaa.a((byte) 46, var2);
                 }
                 var2 = mt.a("loadingStrings,5", (byte) 101);
                 if (null != var2) {
-                  fv.field_d[5] = jaa.a((byte) 101, var2);
+                  fv.loadingQuipsAlternate[5] = jaa.a((byte) 101, var2);
                 }
                 var2 = mt.a("loadingStrings,6", (byte) 124);
                 if (null != var2) {
-                  fv.field_d[6] = jaa.a((byte) 81, var2);
+                  fv.loadingQuipsAlternate[6] = jaa.a((byte) 81, var2);
                 }
                 var2 = mt.a("loadingStrings,7", (byte) 126);
                 if (var2 != null) {
-                  fv.field_d[7] = jaa.a((byte) 27, var2);
+                  fv.loadingQuipsAlternate[7] = jaa.a((byte) 27, var2);
                 }
                 var2 = mt.a("loadingStrings,8", (byte) 125);
                 if (null != var2) {
-                  fv.field_d[8] = jaa.a((byte) 59, var2);
+                  fv.loadingQuipsAlternate[8] = jaa.a((byte) 59, var2);
                 }
                 var2 = mt.a("loadingStrings,9", (byte) 111);
                 if (null != var2) {
-                  fv.field_d[9] = jaa.a((byte) 60, var2);
+                  fv.loadingQuipsAlternate[9] = jaa.a((byte) 60, var2);
                 }
                 var2 = mt.a("loadingStrings,10", (byte) 104);
                 if (var2 != null) {
-                  fv.field_d[10] = jaa.a((byte) 93, var2);
+                  fv.loadingQuipsAlternate[10] = jaa.a((byte) 93, var2);
                 }
                 var2 = mt.a("loadingStrings,11", (byte) 120);
                 if (var2 != null) {
-                  fv.field_d[11] = jaa.a((byte) 84, var2);
+                  fv.loadingQuipsAlternate[11] = jaa.a((byte) 84, var2);
                 }
                 var2 = mt.a("loadingStrings,12", (byte) 119);
                 if (null != var2) {
-                  fv.field_d[12] = jaa.a((byte) 93, var2);
+                  fv.loadingQuipsAlternate[12] = jaa.a((byte) 93, var2);
                 }
                 var2 = mt.a("loadingStrings,13", (byte) 127);
                 if (var2 != null) {
-                  fv.field_d[13] = jaa.a((byte) 28, var2);
+                  fv.loadingQuipsAlternate[13] = jaa.a((byte) 28, var2);
                 }
                 var2 = mt.a("loadingStrings,14", (byte) 106);
                 if (var2 != null) {
-                  fv.field_d[14] = jaa.a((byte) 75, var2);
+                  fv.loadingQuipsAlternate[14] = jaa.a((byte) 75, var2);
                 }
                 var2 = mt.a("loadingStrings,15", (byte) 127);
                 if (var2 != null) {
-                  fv.field_d[15] = jaa.a((byte) 39, var2);
+                  fv.loadingQuipsAlternate[15] = jaa.a((byte) 39, var2);
                 }
                 var2 = mt.a("loadingStrings,16", (byte) 121);
                 if (null != var2) {
-                  fv.field_d[16] = jaa.a((byte) 65, var2);
+                  fv.loadingQuipsAlternate[16] = jaa.a((byte) 65, var2);
                 }
                 var2 = mt.a("loadingStrings,17", (byte) 120);
                 if (var2 != null) {
-                  fv.field_d[17] = jaa.a((byte) 114, var2);
+                  fv.loadingQuipsAlternate[17] = jaa.a((byte) 114, var2);
                 }
                 var2 = mt.a("loadingStrings,18", (byte) 124);
                 if (null != var2) {
-                  fv.field_d[18] = jaa.a((byte) 67, var2);
+                  fv.loadingQuipsAlternate[18] = jaa.a((byte) 67, var2);
                 }
                 var2 = mt.a("waitingStrings,0", (byte) 108);
                 if (var2 != null) {
-                  Player.field_U[0] = jaa.a((byte) 69, var2);
+                  Player.loadingQuips[0] = jaa.a((byte) 69, var2);
                 }
                 var2 = mt.a("waitingStrings,1", (byte) 117);
                 if (null != var2) {
-                  Player.field_U[1] = jaa.a((byte) 94, var2);
+                  Player.loadingQuips[1] = jaa.a((byte) 94, var2);
                 }
                 var2 = mt.a("waitingStrings,2", (byte) 124);
                 if (null != var2) {
-                  Player.field_U[2] = jaa.a((byte) 117, var2);
+                  Player.loadingQuips[2] = jaa.a((byte) 117, var2);
                 }
                 var2 = mt.a("waitingStrings,3", (byte) 107);
                 if (var2 != null) {
-                  Player.field_U[3] = jaa.a((byte) 118, var2);
+                  Player.loadingQuips[3] = jaa.a((byte) 118, var2);
                 }
                 var2 = mt.a("waitingStrings,4", (byte) 114);
                 if (var2 != null) {
-                  Player.field_U[4] = jaa.a((byte) 40, var2);
+                  Player.loadingQuips[4] = jaa.a((byte) 40, var2);
                 }
                 var2 = mt.a("waitingStrings,5", (byte) 117);
                 if (var2 != null) {
-                  Player.field_U[5] = jaa.a((byte) 53, var2);
+                  Player.loadingQuips[5] = jaa.a((byte) 53, var2);
                 }
                 var2 = mt.a("waitingStrings,6", (byte) 107);
                 if (var2 != null) {
-                  Player.field_U[6] = jaa.a((byte) 87, var2);
+                  Player.loadingQuips[6] = jaa.a((byte) 87, var2);
                 }
                 var2 = mt.a("waitingStrings,7", (byte) 105);
                 if (var2 != null) {
-                  Player.field_U[7] = jaa.a((byte) 127, var2);
+                  Player.loadingQuips[7] = jaa.a((byte) 127, var2);
                 }
                 var2 = mt.a("waitingStrings,8", (byte) 112);
                 if (var2 != null) {
-                  Player.field_U[8] = jaa.a((byte) 101, var2);
+                  Player.loadingQuips[8] = jaa.a((byte) 101, var2);
                 }
                 var2 = mt.a("waitingStrings,9", (byte) 110);
                 if (null != var2) {
-                  Player.field_U[9] = jaa.a((byte) 55, var2);
+                  Player.loadingQuips[9] = jaa.a((byte) 55, var2);
                 }
                 var2 = mt.a("waitingStrings,10", (byte) 126);
                 if (null != var2) {
-                  Player.field_U[10] = jaa.a((byte) 96, var2);
+                  Player.loadingQuips[10] = jaa.a((byte) 96, var2);
                 }
                 var2 = mt.a("waitingStrings,11", (byte) 103);
                 if (var2 != null) {
-                  Player.field_U[11] = jaa.a((byte) 100, var2);
+                  Player.loadingQuips[11] = jaa.a((byte) 100, var2);
                 }
                 var2 = mt.a("waitingStrings,12", (byte) 122);
                 if (null != var2) {
-                  Player.field_U[12] = jaa.a((byte) 116, var2);
+                  Player.loadingQuips[12] = jaa.a((byte) 116, var2);
                 }
                 var2 = mt.a("waitingStrings,13", (byte) 110);
                 if (var2 != null) {
-                  Player.field_U[13] = jaa.a((byte) 40, var2);
+                  Player.loadingQuips[13] = jaa.a((byte) 40, var2);
                 }
                 var2 = mt.a("waitingStrings,14", (byte) 100);
                 if (var2 != null) {
-                  Player.field_U[14] = jaa.a((byte) 57, var2);
+                  Player.loadingQuips[14] = jaa.a((byte) 57, var2);
                 }
                 var2 = mt.a("waitingStrings,15", (byte) 104);
                 if (var2 != null) {
-                  Player.field_U[15] = jaa.a((byte) 84, var2);
+                  Player.loadingQuips[15] = jaa.a((byte) 84, var2);
                 }
                 var2 = mt.a("waitingStrings,16", (byte) 107);
                 if (var2 != null) {
-                  Player.field_U[16] = jaa.a((byte) 57, var2);
+                  Player.loadingQuips[16] = jaa.a((byte) 57, var2);
                 }
                 var2 = mt.a("waitingStrings,17", (byte) 102);
                 if (null != var2) {
-                  Player.field_U[17] = jaa.a((byte) 82, var2);
+                  Player.loadingQuips[17] = jaa.a((byte) 82, var2);
                 }
                 var2 = mt.a("waitingStrings,18", (byte) 117);
                 if (var2 != null) {
-                  Player.field_U[18] = jaa.a((byte) 91, var2);
+                  Player.loadingQuips[18] = jaa.a((byte) 91, var2);
                 }
                 var2 = mt.a("unpackingStrings,0", (byte) 108);
                 if (null != var2) {
-                  uba.field_g[0] = jaa.a((byte) 28, var2);
+                  uba.loadingQuipsShort[0] = jaa.a((byte) 28, var2);
                 }
                 var2 = mt.a("unpackingStrings,1", (byte) 109);
                 if (null != var2) {
-                  uba.field_g[1] = jaa.a((byte) 44, var2);
+                  uba.loadingQuipsShort[1] = jaa.a((byte) 44, var2);
                 }
                 var2 = mt.a("unpackingStrings,2", (byte) 112);
                 if (null != var2) {
-                  uba.field_g[2] = jaa.a((byte) 81, var2);
+                  uba.loadingQuipsShort[2] = jaa.a((byte) 81, var2);
                 }
                 var2 = mt.a("unpackingStrings,3", (byte) 126);
                 if (var2 != null) {
-                  uba.field_g[3] = jaa.a((byte) 67, var2);
+                  uba.loadingQuipsShort[3] = jaa.a((byte) 67, var2);
                 }
                 var2 = mt.a("unpackingStrings,4", (byte) 118);
                 if (var2 != null) {
-                  uba.field_g[4] = jaa.a((byte) 26, var2);
+                  uba.loadingQuipsShort[4] = jaa.a((byte) 26, var2);
                 }
                 var2 = mt.a("unpackingStrings,5", (byte) 101);
                 if (var2 != null) {
-                  uba.field_g[5] = jaa.a((byte) 84, var2);
+                  uba.loadingQuipsShort[5] = jaa.a((byte) 84, var2);
                 }
                 var2 = mt.a("unpackingStrings,6", (byte) 123);
                 if (var2 != null) {
-                  uba.field_g[6] = jaa.a((byte) 49, var2);
+                  uba.loadingQuipsShort[6] = jaa.a((byte) 49, var2);
                 }
                 var2 = mt.a("unpackingStrings,7", (byte) 127);
                 if (var2 != null) {
-                  uba.field_g[7] = jaa.a((byte) 42, var2);
+                  uba.loadingQuipsShort[7] = jaa.a((byte) 42, var2);
                 }
                 var2 = mt.a("unpackingStrings,8", (byte) 107);
                 if (null != var2) {
-                  uba.field_g[8] = jaa.a((byte) 106, var2);
+                  uba.loadingQuipsShort[8] = jaa.a((byte) 106, var2);
                 }
                 var2 = mt.a("unpackingStrings,9", (byte) 115);
                 if (var2 != null) {
-                  uba.field_g[9] = jaa.a((byte) 46, var2);
+                  uba.loadingQuipsShort[9] = jaa.a((byte) 46, var2);
                 }
                 var2 = mt.a("unpackingStrings,10", (byte) 118);
                 if (null != var2) {
-                  uba.field_g[10] = jaa.a((byte) 105, var2);
+                  uba.loadingQuipsShort[10] = jaa.a((byte) 105, var2);
                 }
                 var2 = mt.a("error", (byte) 113);
                 if (var2 != null) {
@@ -1481,469 +1481,469 @@ final class pfa {
                 }
                 var2 = mt.a("death_unknown,0", (byte) 102);
                 if (var2 != null) {
-                  kla.field_a[0] = jaa.a((byte) 59, var2);
+                  kla.unknownDeathMessages[0] = jaa.a((byte) 59, var2);
                 }
                 var2 = mt.a("death_unknown,1", (byte) 104);
                 if (var2 != null) {
-                  kla.field_a[1] = jaa.a((byte) 116, var2);
+                  kla.unknownDeathMessages[1] = jaa.a((byte) 116, var2);
                 }
                 var2 = mt.a("death_unknown,2", (byte) 118);
                 if (var2 != null) {
-                  kla.field_a[2] = jaa.a((byte) 121, var2);
+                  kla.unknownDeathMessages[2] = jaa.a((byte) 121, var2);
                 }
                 var2 = mt.a("death_reset,0", (byte) 100);
                 if (var2 != null) {
-                  BlockComponent.field_F[0] = jaa.a((byte) 127, var2);
+                  BlockComponent.restartMessages[0] = jaa.a((byte) 127, var2);
                 }
                 var2 = mt.a("death_reset,1", (byte) 102);
                 if (null != var2) {
-                  BlockComponent.field_F[1] = jaa.a((byte) 61, var2);
+                  BlockComponent.restartMessages[1] = jaa.a((byte) 61, var2);
                 }
                 var2 = mt.a("death_reset,2", (byte) 108);
                 if (null != var2) {
-                  BlockComponent.field_F[2] = jaa.a((byte) 89, var2);
+                  BlockComponent.restartMessages[2] = jaa.a((byte) 89, var2);
                 }
                 var2 = mt.a("death_reset,3", (byte) 107);
                 if (var2 != null) {
-                  BlockComponent.field_F[3] = jaa.a((byte) 37, var2);
+                  BlockComponent.restartMessages[3] = jaa.a((byte) 37, var2);
                 }
                 var2 = mt.a("death_reset,4", (byte) 120);
                 if (var2 != null) {
-                  BlockComponent.field_F[4] = jaa.a((byte) 79, var2);
+                  BlockComponent.restartMessages[4] = jaa.a((byte) 79, var2);
                 }
                 var2 = mt.a("death_reset,5", (byte) 105);
                 if (var2 != null) {
-                  BlockComponent.field_F[5] = jaa.a((byte) 108, var2);
+                  BlockComponent.restartMessages[5] = jaa.a((byte) 108, var2);
                 }
                 var2 = mt.a("death_reset,6", (byte) 110);
                 if (null != var2) {
-                  BlockComponent.field_F[6] = jaa.a((byte) 90, var2);
+                  BlockComponent.restartMessages[6] = jaa.a((byte) 90, var2);
                 }
                 var2 = mt.a("death_reset,7", (byte) 121);
                 if (var2 != null) {
-                  BlockComponent.field_F[7] = jaa.a((byte) 25, var2);
+                  BlockComponent.restartMessages[7] = jaa.a((byte) 25, var2);
                 }
                 var2 = mt.a("death_reset,8", (byte) 123);
                 if (var2 != null) {
-                  BlockComponent.field_F[8] = jaa.a((byte) 88, var2);
+                  BlockComponent.restartMessages[8] = jaa.a((byte) 88, var2);
                 }
                 var2 = mt.a("death_squishedhorizontal,0", (byte) 107);
                 if (null != var2) {
-                  nta.field_b[0] = jaa.a((byte) 127, var2);
+                  nta.crushDeathMessages[0] = jaa.a((byte) 127, var2);
                 }
                 var2 = mt.a("death_squishedhorizontal,1", (byte) 119);
                 if (var2 != null) {
-                  nta.field_b[1] = jaa.a((byte) 121, var2);
+                  nta.crushDeathMessages[1] = jaa.a((byte) 121, var2);
                 }
                 var2 = mt.a("death_squishedhorizontal,2", (byte) 117);
                 if (null != var2) {
-                  nta.field_b[2] = jaa.a((byte) 42, var2);
+                  nta.crushDeathMessages[2] = jaa.a((byte) 42, var2);
                 }
                 var2 = mt.a("death_squishedhorizontal,3", (byte) 126);
                 if (var2 != null) {
-                  nta.field_b[3] = jaa.a((byte) 32, var2);
+                  nta.crushDeathMessages[3] = jaa.a((byte) 32, var2);
                 }
                 var2 = mt.a("death_squishedhorizontal,4", (byte) 109);
                 if (null != var2) {
-                  nta.field_b[4] = jaa.a((byte) 115, var2);
+                  nta.crushDeathMessages[4] = jaa.a((byte) 115, var2);
                 }
                 var2 = mt.a("death_squishedhorizontal,5", (byte) 118);
                 if (var2 != null) {
-                  nta.field_b[5] = jaa.a((byte) 85, var2);
+                  nta.crushDeathMessages[5] = jaa.a((byte) 85, var2);
                 }
                 var2 = mt.a("death_squishedhorizontal,6", (byte) 126);
                 if (var2 != null) {
-                  nta.field_b[6] = jaa.a((byte) 100, var2);
+                  nta.crushDeathMessages[6] = jaa.a((byte) 100, var2);
                 }
                 var2 = mt.a("death_squishedhorizontal,7", (byte) 118);
                 if (var2 != null) {
-                  nta.field_b[7] = jaa.a((byte) 27, var2);
+                  nta.crushDeathMessages[7] = jaa.a((byte) 27, var2);
                 }
                 var2 = mt.a("death_squishedvertical,0", (byte) 125);
                 if (null != var2) {
-                  or.field_m[0] = jaa.a((byte) 98, var2);
+                  or.fallingObjectDeathMessages[0] = jaa.a((byte) 98, var2);
                 }
                 var2 = mt.a("death_squishedvertical,1", (byte) 103);
                 if (var2 != null) {
-                  or.field_m[1] = jaa.a((byte) 36, var2);
+                  or.fallingObjectDeathMessages[1] = jaa.a((byte) 36, var2);
                 }
                 var2 = mt.a("death_squishedvertical,2", (byte) 110);
                 if (var2 != null) {
-                  or.field_m[2] = jaa.a((byte) 87, var2);
+                  or.fallingObjectDeathMessages[2] = jaa.a((byte) 87, var2);
                 }
                 var2 = mt.a("death_squishedvertical,3", (byte) 117);
                 if (var2 != null) {
-                  or.field_m[3] = jaa.a((byte) 113, var2);
+                  or.fallingObjectDeathMessages[3] = jaa.a((byte) 113, var2);
                 }
                 var2 = mt.a("death_squishedvertical,4", (byte) 102);
                 if (null != var2) {
-                  or.field_m[4] = jaa.a((byte) 120, var2);
+                  or.fallingObjectDeathMessages[4] = jaa.a((byte) 120, var2);
                 }
                 var2 = mt.a("death_squishedvertical,5", (byte) 104);
                 if (var2 != null) {
-                  or.field_m[5] = jaa.a((byte) 99, var2);
+                  or.fallingObjectDeathMessages[5] = jaa.a((byte) 99, var2);
                 }
                 var2 = mt.a("death_squishedvertical,6", (byte) 109);
                 if (null != var2) {
-                  or.field_m[6] = jaa.a((byte) 96, var2);
+                  or.fallingObjectDeathMessages[6] = jaa.a((byte) 96, var2);
                 }
                 var2 = mt.a("death_fell,0", (byte) 121);
                 if (var2 != null) {
-                  tia.field_c[0] = jaa.a((byte) 113, var2);
+                  tia.fallDeathMessages[0] = jaa.a((byte) 113, var2);
                 }
                 var2 = mt.a("death_fell,1", (byte) 101);
                 if (null != var2) {
-                  tia.field_c[1] = jaa.a((byte) 59, var2);
+                  tia.fallDeathMessages[1] = jaa.a((byte) 59, var2);
                 }
                 var2 = mt.a("death_fell,2", (byte) 103);
                 if (null != var2) {
-                  tia.field_c[2] = jaa.a((byte) 65, var2);
+                  tia.fallDeathMessages[2] = jaa.a((byte) 65, var2);
                 }
                 var2 = mt.a("death_fell,3", (byte) 117);
                 if (null != var2) {
-                  tia.field_c[3] = jaa.a((byte) 101, var2);
+                  tia.fallDeathMessages[3] = jaa.a((byte) 101, var2);
                 }
                 var2 = mt.a("death_fell,4", (byte) 122);
                 if (null != var2) {
-                  tia.field_c[4] = jaa.a((byte) 26, var2);
+                  tia.fallDeathMessages[4] = jaa.a((byte) 26, var2);
                 }
                 var2 = mt.a("death_fell,5", (byte) 122);
                 if (null != var2) {
-                  tia.field_c[5] = jaa.a((byte) 75, var2);
+                  tia.fallDeathMessages[5] = jaa.a((byte) 75, var2);
                 }
                 var2 = mt.a("death_fell,6", (byte) 118);
                 if (null != var2) {
-                  tia.field_c[6] = jaa.a((byte) 114, var2);
+                  tia.fallDeathMessages[6] = jaa.a((byte) 114, var2);
                 }
                 var2 = mt.a("death_fell,7", (byte) 112);
                 if (null != var2) {
-                  tia.field_c[7] = jaa.a((byte) 38, var2);
+                  tia.fallDeathMessages[7] = jaa.a((byte) 38, var2);
                 }
                 var2 = mt.a("death_lava,0", (byte) 100);
                 if (var2 != null) {
-                  Effect.field_d[0] = jaa.a((byte) 51, var2);
+                  Effect.lavaDeathMessages[0] = jaa.a((byte) 51, var2);
                 }
                 var2 = mt.a("death_lava,1", (byte) 124);
                 if (null != var2) {
-                  Effect.field_d[1] = jaa.a((byte) 81, var2);
+                  Effect.lavaDeathMessages[1] = jaa.a((byte) 81, var2);
                 }
                 var2 = mt.a("death_lava,2", (byte) 110);
                 if (null != var2) {
-                  Effect.field_d[2] = jaa.a((byte) 74, var2);
+                  Effect.lavaDeathMessages[2] = jaa.a((byte) 74, var2);
                 }
                 var2 = mt.a("death_lava,3", (byte) 121);
                 if (var2 != null) {
-                  Effect.field_d[3] = jaa.a((byte) 115, var2);
+                  Effect.lavaDeathMessages[3] = jaa.a((byte) 115, var2);
                 }
                 var2 = mt.a("death_lava,4", (byte) 123);
                 if (null != var2) {
-                  Effect.field_d[4] = jaa.a((byte) 51, var2);
+                  Effect.lavaDeathMessages[4] = jaa.a((byte) 51, var2);
                 }
                 var2 = mt.a("death_lava,5", (byte) 113);
                 if (var2 != null) {
-                  Effect.field_d[5] = jaa.a((byte) 110, var2);
+                  Effect.lavaDeathMessages[5] = jaa.a((byte) 110, var2);
                 }
                 var2 = mt.a("death_snake,0", (byte) 101);
                 if (var2 != null) {
-                  fpa.field_b[0] = jaa.a((byte) 109, var2);
+                  fpa.snakeDeathMessages[0] = jaa.a((byte) 109, var2);
                 }
                 var2 = mt.a("death_snake,1", (byte) 116);
                 if (null != var2) {
-                  fpa.field_b[1] = jaa.a((byte) 89, var2);
+                  fpa.snakeDeathMessages[1] = jaa.a((byte) 89, var2);
                 }
                 var2 = mt.a("death_snake,2", (byte) 101);
                 if (var2 != null) {
-                  fpa.field_b[2] = jaa.a((byte) 30, var2);
+                  fpa.snakeDeathMessages[2] = jaa.a((byte) 30, var2);
                 }
                 var2 = mt.a("death_snake,3", (byte) 111);
                 if (var2 != null) {
-                  fpa.field_b[3] = jaa.a((byte) 121, var2);
+                  fpa.snakeDeathMessages[3] = jaa.a((byte) 121, var2);
                 }
                 var2 = mt.a("death_snake,4", (byte) 107);
                 if (var2 != null) {
-                  fpa.field_b[4] = jaa.a((byte) 93, var2);
+                  fpa.snakeDeathMessages[4] = jaa.a((byte) 93, var2);
                 }
                 var2 = mt.a("death_snake,5", (byte) 126);
                 if (var2 != null) {
-                  fpa.field_b[5] = jaa.a((byte) 126, var2);
+                  fpa.snakeDeathMessages[5] = jaa.a((byte) 126, var2);
                 }
                 var2 = mt.a("death_snake,6", (byte) 116);
                 if (null != var2) {
-                  fpa.field_b[6] = jaa.a((byte) 31, var2);
+                  fpa.snakeDeathMessages[6] = jaa.a((byte) 31, var2);
                 }
                 var2 = mt.a("death_skeleton,0", (byte) 117);
             }
             void runChunk2() throws java.lang.RuntimeException {
                 if (null != var2) {
-                  gca.field_j[0] = jaa.a((byte) 69, var2);
+                  gca.skeletonDeathMessages[0] = jaa.a((byte) 69, var2);
                 }
                 var2 = mt.a("death_skeleton,1", (byte) 101);
                 if (null != var2) {
-                  gca.field_j[1] = jaa.a((byte) 113, var2);
+                  gca.skeletonDeathMessages[1] = jaa.a((byte) 113, var2);
                 }
                 var2 = mt.a("death_skeleton,2", (byte) 106);
                 if (null != var2) {
-                  gca.field_j[2] = jaa.a((byte) 79, var2);
+                  gca.skeletonDeathMessages[2] = jaa.a((byte) 79, var2);
                 }
                 var2 = mt.a("death_skeleton,3", (byte) 109);
                 if (var2 != null) {
-                  gca.field_j[3] = jaa.a((byte) 60, var2);
+                  gca.skeletonDeathMessages[3] = jaa.a((byte) 60, var2);
                 }
                 var2 = mt.a("death_skeleton,4", (byte) 107);
                 if (var2 != null) {
-                  gca.field_j[4] = jaa.a((byte) 69, var2);
+                  gca.skeletonDeathMessages[4] = jaa.a((byte) 69, var2);
                 }
                 var2 = mt.a("death_skeleton,5", (byte) 121);
                 if (null != var2) {
-                  gca.field_j[5] = jaa.a((byte) 120, var2);
+                  gca.skeletonDeathMessages[5] = jaa.a((byte) 120, var2);
                 }
                 var2 = mt.a("death_skeleton,6", (byte) 118);
                 if (null != var2) {
-                  gca.field_j[6] = jaa.a((byte) 37, var2);
+                  gca.skeletonDeathMessages[6] = jaa.a((byte) 37, var2);
                 }
                 var2 = mt.a("death_skeleton,7", (byte) 102);
                 if (var2 != null) {
-                  gca.field_j[7] = jaa.a((byte) 87, var2);
+                  gca.skeletonDeathMessages[7] = jaa.a((byte) 87, var2);
                 }
                 var2 = mt.a("death_skeleton,8", (byte) 113);
                 if (var2 != null) {
-                  gca.field_j[8] = jaa.a((byte) 71, var2);
+                  gca.skeletonDeathMessages[8] = jaa.a((byte) 71, var2);
                 }
                 var2 = mt.a("death_dart,0", (byte) 100);
                 if (null != var2) {
-                  vua.field_D[0] = jaa.a((byte) 54, var2);
+                  vua.dartDeathMessages[0] = jaa.a((byte) 54, var2);
                 }
                 var2 = mt.a("death_dart,1", (byte) 102);
                 if (var2 != null) {
-                  vua.field_D[1] = jaa.a((byte) 124, var2);
+                  vua.dartDeathMessages[1] = jaa.a((byte) 124, var2);
                 }
                 var2 = mt.a("death_dart,2", (byte) 117);
                 if (var2 != null) {
-                  vua.field_D[2] = jaa.a((byte) 96, var2);
+                  vua.dartDeathMessages[2] = jaa.a((byte) 96, var2);
                 }
                 var2 = mt.a("death_dart,3", (byte) 112);
                 if (var2 != null) {
-                  vua.field_D[3] = jaa.a((byte) 100, var2);
+                  vua.dartDeathMessages[3] = jaa.a((byte) 100, var2);
                 }
                 var2 = mt.a("death_dart,4", (byte) 116);
                 if (var2 != null) {
-                  vua.field_D[4] = jaa.a((byte) 63, var2);
+                  vua.dartDeathMessages[4] = jaa.a((byte) 63, var2);
                 }
                 var2 = mt.a("death_littlesaw,0", (byte) 127);
                 if (null != var2) {
-                  hg.field_c[0] = jaa.a((byte) 104, var2);
+                  hg.bladeDeathMessages[0] = jaa.a((byte) 104, var2);
                 }
                 var2 = mt.a("death_littlesaw,1", (byte) 123);
                 if (var2 != null) {
-                  hg.field_c[1] = jaa.a((byte) 53, var2);
+                  hg.bladeDeathMessages[1] = jaa.a((byte) 53, var2);
                 }
                 var2 = mt.a("death_littlesaw,2", (byte) 110);
                 if (null != var2) {
-                  hg.field_c[2] = jaa.a((byte) 108, var2);
+                  hg.bladeDeathMessages[2] = jaa.a((byte) 108, var2);
                 }
                 var2 = mt.a("death_littlesaw,3", (byte) 126);
                 if (var2 != null) {
-                  hg.field_c[3] = jaa.a((byte) 54, var2);
+                  hg.bladeDeathMessages[3] = jaa.a((byte) 54, var2);
                 }
                 var2 = mt.a("death_littlesaw,4", (byte) 110);
                 if (null != var2) {
-                  hg.field_c[4] = jaa.a((byte) 117, var2);
+                  hg.bladeDeathMessages[4] = jaa.a((byte) 117, var2);
                 }
                 var2 = mt.a("death_littlesaw,5", (byte) 114);
                 if (var2 != null) {
-                  hg.field_c[5] = jaa.a((byte) 120, var2);
+                  hg.bladeDeathMessages[5] = jaa.a((byte) 120, var2);
                 }
                 var2 = mt.a("death_bullet,0", (byte) 109);
                 if (var2 != null) {
-                  jr.field_j[0] = jaa.a((byte) 106, var2);
+                  jr.gunshotDeathMessages[0] = jaa.a((byte) 106, var2);
                 }
                 var2 = mt.a("death_bullet,1", (byte) 101);
                 if (var2 != null) {
-                  jr.field_j[1] = jaa.a((byte) 36, var2);
+                  jr.gunshotDeathMessages[1] = jaa.a((byte) 36, var2);
                 }
                 var2 = mt.a("death_bullet,2", (byte) 107);
                 if (null != var2) {
-                  jr.field_j[2] = jaa.a((byte) 108, var2);
+                  jr.gunshotDeathMessages[2] = jaa.a((byte) 108, var2);
                 }
                 var2 = mt.a("death_bullet,3", (byte) 127);
                 if (null != var2) {
-                  jr.field_j[3] = jaa.a((byte) 74, var2);
+                  jr.gunshotDeathMessages[3] = jaa.a((byte) 74, var2);
                 }
                 var2 = mt.a("death_flame,0", (byte) 112);
                 if (var2 != null) {
-                  SwitchComponent.field_F[0] = jaa.a((byte) 55, var2);
+                  SwitchComponent.fireDeathMessages[0] = jaa.a((byte) 55, var2);
                 }
                 var2 = mt.a("death_flame,1", (byte) 105);
                 if (var2 != null) {
-                  SwitchComponent.field_F[1] = jaa.a((byte) 105, var2);
+                  SwitchComponent.fireDeathMessages[1] = jaa.a((byte) 105, var2);
                 }
                 var2 = mt.a("death_flame,2", (byte) 111);
                 if (null != var2) {
-                  SwitchComponent.field_F[2] = jaa.a((byte) 121, var2);
+                  SwitchComponent.fireDeathMessages[2] = jaa.a((byte) 121, var2);
                 }
                 var2 = mt.a("death_flame,3", (byte) 100);
                 if (null != var2) {
-                  SwitchComponent.field_F[3] = jaa.a((byte) 103, var2);
+                  SwitchComponent.fireDeathMessages[3] = jaa.a((byte) 103, var2);
                 }
                 var2 = mt.a("death_flame,4", (byte) 101);
                 if (null != var2) {
-                  SwitchComponent.field_F[4] = jaa.a((byte) 78, var2);
+                  SwitchComponent.fireDeathMessages[4] = jaa.a((byte) 78, var2);
                 }
                 var2 = mt.a("death_flame,5", (byte) 117);
                 if (null != var2) {
-                  SwitchComponent.field_F[5] = jaa.a((byte) 115, var2);
+                  SwitchComponent.fireDeathMessages[5] = jaa.a((byte) 115, var2);
                 }
                 var2 = mt.a("death_flame,6", (byte) 118);
                 if (var2 != null) {
-                  SwitchComponent.field_F[6] = jaa.a((byte) 32, var2);
+                  SwitchComponent.fireDeathMessages[6] = jaa.a((byte) 32, var2);
                 }
                 var2 = mt.a("death_flame,7", (byte) 119);
                 if (var2 != null) {
-                  SwitchComponent.field_F[7] = jaa.a((byte) 107, var2);
+                  SwitchComponent.fireDeathMessages[7] = jaa.a((byte) 107, var2);
                 }
                 var2 = mt.a("death_flame,8", (byte) 124);
                 if (var2 != null) {
-                  SwitchComponent.field_F[8] = jaa.a((byte) 77, var2);
+                  SwitchComponent.fireDeathMessages[8] = jaa.a((byte) 77, var2);
                 }
                 var2 = mt.a("death_flame,9", (byte) 109);
                 if (null != var2) {
-                  SwitchComponent.field_F[9] = jaa.a((byte) 72, var2);
+                  SwitchComponent.fireDeathMessages[9] = jaa.a((byte) 72, var2);
                 }
                 var2 = mt.a("death_flame,10", (byte) 125);
                 if (var2 != null) {
-                  SwitchComponent.field_F[10] = jaa.a((byte) 40, var2);
+                  SwitchComponent.fireDeathMessages[10] = jaa.a((byte) 40, var2);
                 }
                 var2 = mt.a("death_flame,11", (byte) 118);
                 if (var2 != null) {
-                  SwitchComponent.field_F[11] = jaa.a((byte) 93, var2);
+                  SwitchComponent.fireDeathMessages[11] = jaa.a((byte) 93, var2);
                 }
                 var2 = mt.a("death_flame,12", (byte) 123);
                 if (null != var2) {
-                  SwitchComponent.field_F[12] = jaa.a((byte) 110, var2);
+                  SwitchComponent.fireDeathMessages[12] = jaa.a((byte) 110, var2);
                 }
                 var2 = mt.a("death_flame,13", (byte) 105);
                 if (null != var2) {
-                  SwitchComponent.field_F[13] = jaa.a((byte) 50, var2);
+                  SwitchComponent.fireDeathMessages[13] = jaa.a((byte) 50, var2);
                 }
                 var2 = mt.a("death_laser,0", (byte) 117);
                 if (var2 != null) {
-                  id.field_g[0] = jaa.a((byte) 47, var2);
+                  id.laserDeathMessages[0] = jaa.a((byte) 47, var2);
                 }
                 var2 = mt.a("death_laser,1", (byte) 109);
                 if (null != var2) {
-                  id.field_g[1] = jaa.a((byte) 55, var2);
+                  id.laserDeathMessages[1] = jaa.a((byte) 55, var2);
                 }
                 var2 = mt.a("death_laser,2", (byte) 108);
                 if (var2 != null) {
-                  id.field_g[2] = jaa.a((byte) 95, var2);
+                  id.laserDeathMessages[2] = jaa.a((byte) 95, var2);
                 }
                 var2 = mt.a("death_laser,3", (byte) 124);
                 if (null != var2) {
-                  id.field_g[3] = jaa.a((byte) 111, var2);
+                  id.laserDeathMessages[3] = jaa.a((byte) 111, var2);
                 }
                 var2 = mt.a("death_laser,4", (byte) 114);
                 if (null != var2) {
-                  id.field_g[4] = jaa.a((byte) 81, var2);
+                  id.laserDeathMessages[4] = jaa.a((byte) 81, var2);
                 }
                 var2 = mt.a("death_laser,5", (byte) 119);
                 if (null != var2) {
-                  id.field_g[5] = jaa.a((byte) 54, var2);
+                  id.laserDeathMessages[5] = jaa.a((byte) 54, var2);
                 }
                 var2 = mt.a("death_boulder,0", (byte) 111);
                 if (var2 != null) {
-                  vk.field_c[0] = jaa.a((byte) 72, var2);
+                  vk.boulderDeathMessages[0] = jaa.a((byte) 72, var2);
                 }
                 var2 = mt.a("death_boulder,1", (byte) 102);
                 if (null != var2) {
-                  vk.field_c[1] = jaa.a((byte) 122, var2);
+                  vk.boulderDeathMessages[1] = jaa.a((byte) 122, var2);
                 }
                 var2 = mt.a("death_boulder,2", (byte) 113);
                 if (var2 != null) {
-                  vk.field_c[2] = jaa.a((byte) 111, var2);
+                  vk.boulderDeathMessages[2] = jaa.a((byte) 111, var2);
                 }
                 var2 = mt.a("death_boulder,3", (byte) 121);
                 if (null != var2) {
-                  vk.field_c[3] = jaa.a((byte) 85, var2);
+                  vk.boulderDeathMessages[3] = jaa.a((byte) 85, var2);
                 }
                 var2 = mt.a("death_boulder,4", (byte) 109);
                 if (var2 != null) {
-                  vk.field_c[4] = jaa.a((byte) 101, var2);
+                  vk.boulderDeathMessages[4] = jaa.a((byte) 101, var2);
                 }
                 var2 = mt.a("death_boulder,5", (byte) 123);
                 if (var2 != null) {
-                  vk.field_c[5] = jaa.a((byte) 55, var2);
+                  vk.boulderDeathMessages[5] = jaa.a((byte) 55, var2);
                 }
                 var2 = mt.a("death_boulder,6", (byte) 111);
                 if (var2 != null) {
-                  vk.field_c[6] = jaa.a((byte) 69, var2);
+                  vk.boulderDeathMessages[6] = jaa.a((byte) 69, var2);
                 }
                 var2 = mt.a("death_bigsaw,0", (byte) 113);
                 if (var2 != null) {
-                  qr.field_u[0] = jaa.a((byte) 107, var2);
+                  qr.sawDeathMessages[0] = jaa.a((byte) 107, var2);
                 }
                 var2 = mt.a("death_bigsaw,1", (byte) 105);
                 if (var2 != null) {
-                  qr.field_u[1] = jaa.a((byte) 118, var2);
+                  qr.sawDeathMessages[1] = jaa.a((byte) 118, var2);
                 }
                 var2 = mt.a("death_bigsaw,2", (byte) 102);
                 if (var2 != null) {
-                  qr.field_u[2] = jaa.a((byte) 103, var2);
+                  qr.sawDeathMessages[2] = jaa.a((byte) 103, var2);
                 }
                 var2 = mt.a("death_bigsaw,3", (byte) 108);
                 if (var2 != null) {
-                  qr.field_u[3] = jaa.a((byte) 41, var2);
+                  qr.sawDeathMessages[3] = jaa.a((byte) 41, var2);
                 }
                 var2 = mt.a("death_bigsaw,4", (byte) 116);
                 if (var2 != null) {
-                  qr.field_u[4] = jaa.a((byte) 62, var2);
+                  qr.sawDeathMessages[4] = jaa.a((byte) 62, var2);
                 }
                 var2 = mt.a("death_bigsaw,5", (byte) 126);
                 if (null != var2) {
-                  qr.field_u[5] = jaa.a((byte) 80, var2);
+                  qr.sawDeathMessages[5] = jaa.a((byte) 80, var2);
                 }
                 var2 = mt.a("death_bigsaw,6", (byte) 102);
                 if (var2 != null) {
-                  qr.field_u[6] = jaa.a((byte) 60, var2);
+                  qr.sawDeathMessages[6] = jaa.a((byte) 60, var2);
                 }
                 var2 = mt.a("death_bigsaw,7", (byte) 116);
                 if (var2 != null) {
-                  qr.field_u[7] = jaa.a((byte) 75, var2);
+                  qr.sawDeathMessages[7] = jaa.a((byte) 75, var2);
                 }
                 var2 = mt.a("death_skiproom,0", (byte) 117);
                 if (var2 != null) {
-                  dta.field_d[0] = jaa.a((byte) 111, var2);
+                  dta.skipRoomMessages[0] = jaa.a((byte) 111, var2);
                 }
                 var2 = mt.a("death_skiproom,1", (byte) 107);
                 if (var2 != null) {
-                  dta.field_d[1] = jaa.a((byte) 59, var2);
+                  dta.skipRoomMessages[1] = jaa.a((byte) 59, var2);
                 }
                 var2 = mt.a("death_skiproom,2", (byte) 112);
                 if (var2 != null) {
-                  dta.field_d[2] = jaa.a((byte) 105, var2);
+                  dta.skipRoomMessages[2] = jaa.a((byte) 105, var2);
                 }
                 var2 = mt.a("death_skiproom,3", (byte) 101);
                 if (var2 != null) {
-                  dta.field_d[3] = jaa.a((byte) 28, var2);
+                  dta.skipRoomMessages[3] = jaa.a((byte) 28, var2);
                 }
                 var2 = mt.a("death_skiproom,4", (byte) 100);
                 if (null != var2) {
-                  dta.field_d[4] = jaa.a((byte) 58, var2);
+                  dta.skipRoomMessages[4] = jaa.a((byte) 58, var2);
                 }
                 var2 = mt.a("death_gas,0", (byte) 115);
                 if (var2 != null) {
-                  fe.field_A[0] = jaa.a((byte) 85, var2);
+                  fe.gasDeathMessages[0] = jaa.a((byte) 85, var2);
                 }
                 var2 = mt.a("death_gas,1", (byte) 107);
                 if (var2 != null) {
-                  fe.field_A[1] = jaa.a((byte) 91, var2);
+                  fe.gasDeathMessages[1] = jaa.a((byte) 91, var2);
                 }
                 var2 = mt.a("death_gas,2", (byte) 115);
                 if (null != var2) {
-                  fe.field_A[2] = jaa.a((byte) 40, var2);
+                  fe.gasDeathMessages[2] = jaa.a((byte) 40, var2);
                 }
                 var2 = mt.a("death_gas,3", (byte) 119);
                 if (var2 != null) {
-                  fe.field_A[3] = jaa.a((byte) 48, var2);
+                  fe.gasDeathMessages[3] = jaa.a((byte) 48, var2);
                 }
                 var2 = mt.a("next_round", (byte) 127);
                 if (null != var2) {
@@ -2007,39 +2007,39 @@ final class pfa {
                 }
                 var2 = mt.a("tomb_names,0", (byte) 117);
                 if (var2 != null) {
-                  vj.field_d[0] = jaa.a((byte) 95, var2);
+                  vj.worldNames[0] = jaa.a((byte) 95, var2);
                 }
                 var2 = mt.a("tomb_names,1", (byte) 124);
                 if (null != var2) {
-                  vj.field_d[1] = jaa.a((byte) 50, var2);
+                  vj.worldNames[1] = jaa.a((byte) 50, var2);
                 }
                 var2 = mt.a("tomb_names,2", (byte) 107);
                 if (var2 != null) {
-                  vj.field_d[2] = jaa.a((byte) 87, var2);
+                  vj.worldNames[2] = jaa.a((byte) 87, var2);
                 }
                 var2 = mt.a("tomb_names,3", (byte) 120);
                 if (var2 != null) {
-                  vj.field_d[3] = jaa.a((byte) 59, var2);
+                  vj.worldNames[3] = jaa.a((byte) 59, var2);
                 }
                 var2 = mt.a("tomb_names,4", (byte) 111);
                 if (null != var2) {
-                  vj.field_d[4] = jaa.a((byte) 106, var2);
+                  vj.worldNames[4] = jaa.a((byte) 106, var2);
                 }
                 var2 = mt.a("tomb_names,5", (byte) 116);
                 if (null != var2) {
-                  vj.field_d[5] = jaa.a((byte) 36, var2);
+                  vj.worldNames[5] = jaa.a((byte) 36, var2);
                 }
                 var2 = mt.a("tomb_names,6", (byte) 100);
                 if (null != var2) {
-                  vj.field_d[6] = jaa.a((byte) 40, var2);
+                  vj.worldNames[6] = jaa.a((byte) 40, var2);
                 }
                 var2 = mt.a("tomb_names,7", (byte) 125);
                 if (null != var2) {
-                  vj.field_d[7] = jaa.a((byte) 80, var2);
+                  vj.worldNames[7] = jaa.a((byte) 80, var2);
                 }
                 var2 = mt.a("tomb_names,8", (byte) 118);
                 if (var2 != null) {
-                  vj.field_d[8] = jaa.a((byte) 73, var2);
+                  vj.worldNames[8] = jaa.a((byte) 73, var2);
                 }
                 var2 = mt.a("multiplayer_lobby", (byte) 125);
                 if (null != var2) {

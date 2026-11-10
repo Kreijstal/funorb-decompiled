@@ -12,7 +12,7 @@ final class SafeZoneBehaviour extends Behaviour {
     private boolean field_o;
     static String field_s;
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         if (param1 >= -48) {
           field_q = (String) null;
           return param0;
@@ -108,7 +108,7 @@ final class SafeZoneBehaviour extends Behaviour {
         }
     }
 
-    final void k(int param0) {
+    final void tick(int param0) {
         Player var2 = null;
         if (param0 != 5418) {
           return;

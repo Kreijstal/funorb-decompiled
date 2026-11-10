@@ -285,7 +285,7 @@ final class CommonChooseReward implements dv {
         this.reward = new int[3];
         var3 = new boolean[7];
         for (var4 = 0; this.reward.length > var4; var4++) {
-          var5 = var2.a(7, param0 ^ 28624);
+          var5 = var2.nextBounded(7, param0 ^ 28624);
           while (var3[var5]) {
             var5++;
             if (var5 < 7) {

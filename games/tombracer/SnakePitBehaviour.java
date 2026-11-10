@@ -135,7 +135,7 @@ final class SnakePitBehaviour extends Behaviour {
         field_q = null;
     }
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         if (param1 >= -48) {
           return 91;
         }
@@ -155,7 +155,7 @@ final class SnakePitBehaviour extends Behaviour {
         }
     }
 
-    final void k(int param0) {
+    final void tick(int param0) {
         int var5 = 0;
         int var4 = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
@@ -448,8 +448,8 @@ final class SnakePitBehaviour extends Behaviour {
           -var4 + var3 > 0) {
           this.field_n = new aia[var5];
           for (var6 = 0; var5 > var6; var6++) {
-            var7 = var4 / 2 + this.o((byte) 46).a(-var4 + var2, 0) - var2 / 2;
-            var8 = -(var3 / 2) + (this.o((byte) 46).a(var3 - var4, 0) + var4 / 2);
+            var7 = var4 / 2 + this.o((byte) 46).nextBounded(-var4 + var2, 0) - var2 / 2;
+            var8 = -(var3 / 2) + (this.o((byte) 46).nextBounded(var3 - var4, 0) + var4 / 2);
             this.field_n[var6] = new aia(var7, var8, var4);
           }
         } else {

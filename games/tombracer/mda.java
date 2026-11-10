@@ -621,7 +621,7 @@ final class mda extends PooledObject implements Renderable, ffa, WorldBody {
         try {
           var7 = param0.q(-79);
           if (param4 == 0) {
-            var8 = 200 + var7.a(100, 0);
+            var8 = 200 + var7.nextBounded(100, 0);
           } else {
             var8 = 0;
           }

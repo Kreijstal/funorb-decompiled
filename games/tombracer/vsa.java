@@ -371,8 +371,8 @@ final class vsa extends dg {
         super.d(param0);
         if (this.field_o != null &&
           this.field_o.d(false)) {
-          this.field_n = uca.field_c.a(262144, 0) - 131072;
-          this.field_s = -131072 + uca.field_c.a(262144, 0);
+          this.field_n = uca.field_c.nextBounded(262144, 0) - 131072;
+          this.field_s = -131072 + uca.field_c.nextBounded(262144, 0);
         }
         Trap var2 = (Trap) (this.field_h);
         if (var2 == null) {
@@ -540,7 +540,7 @@ final class vsa extends dg {
             var12.field_e = dfa.a(var18 + uja.field_c[var12.field_b], 2048, -54);
             var12.field_a = var7 - var4;
             var12.field_d = var10 - var3;
-            var20.e(true).a(100, 0);
+            var20.e(true).nextBounded(100, 0);
             var10 = var10 + 2097152;
             this.a(true, var12);
           }

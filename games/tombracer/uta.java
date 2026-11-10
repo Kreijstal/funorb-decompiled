@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class uta implements sia {
+abstract class uta implements ShellListener {
     private static String[] field_l;
     private static String[] field_f;
     BitmapFont field_m;
@@ -223,7 +223,7 @@ abstract class uta implements sia {
         return this.field_j;
     }
 
-    public void b(int param0) {
+    public void drawOverlay(int param0) {
         int var4 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -343,7 +343,7 @@ abstract class uta implements sia {
         }
     }
 
-    public boolean a(byte param0, char param1, int param2) {
+    public boolean handleKey(byte param0, char param1, int param2) {
         IntrusiveNode stackIn_19_1 = null;
         jea var5;
         int var6;
@@ -434,7 +434,7 @@ abstract class uta implements sia {
         stackIn_3_1 = !(this.field_j);
         this.field_j = stackIn_3_1;
         if (param0 != 2) {
-          this.a(false, false);
+          this.updateScreen(false, false);
         }
         if (!this.field_j) {
           if (null != this.field_i) {
@@ -448,7 +448,7 @@ abstract class uta implements sia {
         }
     }
 
-    public final void a(boolean param0, boolean param1) {
+    public final void updateScreen(boolean param0, boolean param1) {
         int var4 = 0;
         int var3;
         int var5;

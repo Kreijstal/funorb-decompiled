@@ -167,8 +167,8 @@ final class ad extends IntrusiveNode {
 
     ad(int param0, int param1) {
         this.field_f = -1;
-        this.field_k = -2 + param0 + uca.field_c.a(4, 0);
-        this.field_g = -5 + (uca.field_c.a(10, 0) + param1);
+        this.field_k = -2 + param0 + uca.field_c.nextBounded(4, 0);
+        this.field_g = -5 + (uca.field_c.nextBounded(10, 0) + param1);
     }
 
     static {

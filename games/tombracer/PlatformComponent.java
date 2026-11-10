@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class PlatformComponent extends kna {
+final class PlatformComponent extends PrefabComponent {
     private int field_G;
     static ica field_F;
     static long field_H;
@@ -115,7 +115,7 @@ final class PlatformComponent extends kna {
         return false;
     }
 
-    final Trap a(boolean param0, int param1, Room param2) {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         Trap var4 = null;
         RuntimeException var4_ref = null;
         PlatformBehaviour var5 = null;

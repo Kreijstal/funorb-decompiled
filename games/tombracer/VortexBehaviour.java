@@ -11,7 +11,7 @@ final class VortexBehaviour extends Behaviour {
     static jea field_t;
     private int field_p;
 
-    final void k(int param0) {
+    final void tick(int param0) {
         int var19 = 0;
         ffa stackIn_29_0 = null;
         int stackIn_29_1 = 0;
@@ -60,17 +60,17 @@ final class VortexBehaviour extends Behaviour {
         var9 = var4 >> 17;
         var10 = var5 >> 17;
         var11 = et.b(var10, var9, -1);
-        var12 = this.o((byte) 46).a(8192, 0);
+        var12 = this.o((byte) 46).nextBounded(8192, 0);
         var13 = MouseInputHandler.a((byte) 98, var12 >> 2);
         var14 = bua.a(0, var12 >> 2);
         var16 = this.trap.P(0);
         if (this.field_q) {
-          var17_int = 1 + this.o((byte) 46).a(5, 0);
+          var17_int = 1 + this.o((byte) 46).nextBounded(5, 0);
           var28 = this.b(true).spawnParticle(var13 * var11 / var17_int + var2, var3 + var11 * var14 / var17_int, (byte) 100, var16);
           var28.a(false, 2, 3, 4, 20);
           var28.b(param0 ^ 5392, -(var14 * (this.field_p + this.field_r)), -(var13 * (this.field_p + this.field_r)) / var17_int);
         } else {
-          var17_int = 1 + this.o((byte) 46).a(5, 0);
+          var17_int = 1 + this.o((byte) 46).nextBounded(5, 0);
           var27 = this.b(true).spawnParticle(var2, var3, (byte) 100, var16);
           var27.a(false, 2, 3, 4, 25);
           var27.b(param0 - 5361, var14 * this.field_r / var17_int, this.field_r * var13 / var17_int);
@@ -171,7 +171,7 @@ final class VortexBehaviour extends Behaviour {
         }
     }
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         if (param1 >= -48) {
           return 77;
         }

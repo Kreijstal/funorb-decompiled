@@ -117,7 +117,7 @@ final class rca extends me {
             oka.a(r.field_k.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
             cb.field_i[var4].a((aaa.a(false) >> 1) - cb.field_i[var4].a() / 2, (koa.b(0) >> 1) - cb.field_i[var4].c() / 2 - 20);
             kq.field_a.a(var2, var3 + 60);
-            oka.a(vj.field_d[var4].toUpperCase(), 65793, eda.field_f, -1, 92 + var3, aaa.a(false) >> 1, -1);
+            oka.a(vj.worldNames[var4].toUpperCase(), 65793, eda.field_f, -1, 92 + var3, aaa.a(false) >> 1, -1);
             return;
           }
           return;
@@ -140,7 +140,7 @@ final class rca extends me {
           oka.a(r.field_k.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
           cb.field_i[var4Lifetime1].a((aaa.a(false) >> 1) - cb.field_i[var4Lifetime1].a() / 2, (koa.b(0) >> 1) - cb.field_i[var4Lifetime1].c() / 2 - 20);
           kq.field_a.a(var2Lifetime1, var3Lifetime1 + 60);
-          oka.a(vj.field_d[var4Lifetime1].toUpperCase(), 65793, eda.field_f, -1, 92 + var3Lifetime1, aaa.a(false) >> 1, -1);
+          oka.a(vj.worldNames[var4Lifetime1].toUpperCase(), 65793, eda.field_f, -1, 92 + var3Lifetime1, aaa.a(false) >> 1, -1);
           return;
         }
     }

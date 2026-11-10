@@ -4,7 +4,7 @@
 final class pv extends ci {
     private boolean field_o;
     static String field_q;
-    static String[] field_p;
+    static String[] shortMonthNames;
     static String field_m;
     private boolean field_n;
 
@@ -119,7 +119,7 @@ final class pv extends ci {
         int[][] var26;
         var12 = TombRacer.field_G ? 1 : 0;
         if (param1 != -1) {
-          field_p = (String[]) null;
+          shortMonthNames = (String[]) null;
         }
         var21 = this.field_h.a(param0, (byte) 120);
         var16 = var21;
@@ -165,7 +165,7 @@ final class pv extends ci {
     }
 
     public static void releaseStatics(byte param0) {
-        field_p = null;
+        shortMonthNames = null;
         field_m = null;
         if (param0 > -80) {
           field_m = (String) null;
@@ -174,7 +174,7 @@ final class pv extends ci {
     }
 
     static {
-        field_p = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+        shortMonthNames = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
         field_m = "Password is valid";
         field_q = "Playing";
     }

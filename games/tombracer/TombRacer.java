@@ -10,7 +10,7 @@ public final class TombRacer extends rfa implements ls {
     private rca field_D;
     public static boolean field_G;
 
-    public final boolean a(byte param0, char param1, int param2) {
+    public final boolean handleKey(byte param0, char param1, int param2) {
         boolean stackIn_7_0 = false;
         boolean stackIn_12_0 = false;
         boolean stackIn_17_0 = false;
@@ -609,7 +609,7 @@ public final class TombRacer extends rfa implements ls {
         nk.releaseStatics(20);
         rq.releaseStatics();
         BlockComponent.releaseStatics(118);
-        kna.releaseStatics(0);
+        PrefabComponent.releaseStatics(0);
         DamageableBehaviour.releaseStatics(-1);
         kpa.releaseStatics(70);
         PitComponent.releaseStatics((byte) 112);
@@ -1026,7 +1026,7 @@ public final class TombRacer extends rfa implements ls {
         ad.field_j = this;
     }
 
-    final void v(int param0) {
+    final void onLoadingComplete(int param0) {
         kga.i(98);
         if (param0 != 24230) {
           this.initializeGame(-10);
@@ -1046,7 +1046,7 @@ public final class TombRacer extends rfa implements ls {
         }
     }
 
-    public final void a(boolean param0, boolean param1) {
+    public final void updateScreen(boolean param0, boolean param1) {
         boolean stackIn_10_0 = false;
         ila stackIn_17_0 = null;
         int stackIn_17_1 = 0;
@@ -1147,7 +1147,7 @@ public final class TombRacer extends rfa implements ls {
         }
     }
 
-    final boolean a(int param0, BitPacketBuffer param1, byte param2) {
+    final boolean handleGamePacket(int param0, BitPacketBuffer param1, byte param2) {
         int var11_int = 0;
         int var13 = 0;
         int var15 = 0;
@@ -1404,7 +1404,7 @@ public final class TombRacer extends rfa implements ls {
 
     final void shutdownGame(int param0) {
         if (param0 != -66) {
-          this.v(83);
+          this.onLoadingComplete(83);
         }
         jm.b((byte) 122);
         NodeHashTableIterator.a((byte) 55);
@@ -1560,7 +1560,7 @@ public final class TombRacer extends rfa implements ls {
         }
     }
 
-    public final void b(int param0) {
+    public final void drawOverlay(int param0) {
         if (param0 != 1) {
           rqa var3 = (rqa) null;
           this.a(false, (rqa) null, (byte) 51);

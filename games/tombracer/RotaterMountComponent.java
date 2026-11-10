@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class RotaterMountComponent extends kna {
+final class RotaterMountComponent extends PrefabComponent {
     private int field_F;
     static double field_J;
     static IntrusiveDeque field_H;
@@ -73,7 +73,7 @@ final class RotaterMountComponent extends kna {
         }
     }
 
-    final Trap a(boolean param0, int param1, Room param2) {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         RotateLocomotor var5 = null;
         mfa var6 = null;

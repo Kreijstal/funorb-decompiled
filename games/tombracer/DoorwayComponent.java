@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DoorwayComponent extends kna {
+final class DoorwayComponent extends PrefabComponent {
     private int field_J;
     static String[] field_L;
     static String field_G;
@@ -29,7 +29,7 @@ final class DoorwayComponent extends kna {
         int var1 = -58 % ((param0 + 22) / 62);
     }
 
-    final Trap a(boolean param0, int param1, Room param2) {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         int var6_int = 0;
         Object var17 = null;
         Object var18 = null;

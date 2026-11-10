@@ -10,7 +10,7 @@ final class KeyLockBehaviour extends Behaviour implements ut {
     static jea field_r;
     static String field_o;
 
-    final void k(int param0) {
+    final void tick(int param0) {
         if (this.field_q.f((byte) -56)) {
           this.c(false);
         }
@@ -122,7 +122,7 @@ final class KeyLockBehaviour extends Behaviour implements ut {
 
     public final int c(int param0) {
         if (param0 != 17832) {
-          this.a(97, 98);
+          this.hashState(97, 98);
           return 7820595;
         }
         return 7820595;
@@ -168,7 +168,7 @@ final class KeyLockBehaviour extends Behaviour implements ut {
         return this.field_p;
     }
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         if (param1 >= -48) {
           return -8;
         }

@@ -19,7 +19,7 @@ final class PlayerSensorBehaviour extends Behaviour implements ut {
         return 0;
     }
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         param0 = this.field_n.a(121, param0);
         if (param1 > -48) {
           return 47;
@@ -65,7 +65,7 @@ final class PlayerSensorBehaviour extends Behaviour implements ut {
 
     final int getTypeId(boolean param0) {
         if (param0) {
-          this.a(-15, 107);
+          this.hashState(-15, 107);
           return 22;
         }
         return 22;
@@ -167,7 +167,7 @@ final class PlayerSensorBehaviour extends Behaviour implements ut {
         this.field_n.a((byte) 48, this.h((byte) 127));
     }
 
-    final void k(int param0) {
+    final void tick(int param0) {
         int stackIn_13_0 = 0;
         int stackIn_20_0 = 0;
         int stackIn_26_0 = 0;

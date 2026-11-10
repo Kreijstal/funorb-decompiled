@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class SweeperMountComponent extends kna {
+final class SweeperMountComponent extends PrefabComponent {
     static int field_H;
     private int field_G;
     static String field_F;
@@ -17,7 +17,7 @@ final class SweeperMountComponent extends kna {
         field_F = null;
     }
 
-    final Trap a(boolean param0, int param1, Room param2) {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         SweepRotateLocomotor var5 = null;
         int var6 = 0;
         int var7_int = 0;
@@ -161,7 +161,7 @@ final class SweeperMountComponent extends kna {
     final boolean z(int param0) {
         if (param0 != 0) {
           Room var3 = (Room) null;
-          this.a(true, -127, (Room) null);
+          this.createTrap(true, -127, (Room) null);
           return false;
         }
         return false;

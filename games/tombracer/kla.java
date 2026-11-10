@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kla {
-    static String[] field_a;
+    static String[] unknownDeathMessages;
 
     final static void a(PlatformTaskDispatcher param0, byte param1, Object param2) {
         int var3_int = 0;
@@ -102,13 +102,13 @@ final class kla {
     }
 
     public static void releaseStatics(int param0) {
-        field_a = null;
+        unknownDeathMessages = null;
         if (param0 != -9520) {
-          field_a = (String[]) null;
+          unknownDeathMessages = (String[]) null;
         }
     }
 
     static {
-        field_a = new String[]{"<%0> mysteriously dropped dead", "<%0> died of unnatural causes", "<%0> ate munchy crunchy chocolatey cocoa death"};
+        unknownDeathMessages = new String[]{"<%0> mysteriously dropped dead", "<%0> died of unnatural causes", "<%0> ate munchy crunchy chocolatey cocoa death"};
     }
 }

@@ -6,7 +6,7 @@ final class dw {
     byte field_s;
     boolean field_b;
     int field_q;
-    static String[] field_u;
+    static String[] ordinals;
     boolean field_l;
     byte field_c;
     byte field_o;
@@ -29,7 +29,7 @@ final class dw {
         if (param0 != 101) {
           return;
         }
-        field_u = null;
+        ordinals = null;
     }
 
     final static void b(byte param0) {
@@ -49,7 +49,7 @@ final class dw {
     }
 
     static {
-        field_u = new String[]{"1st", "2nd", "3rd", "4th"};
+        ordinals = new String[]{"1st", "2nd", "3rd", "4th"};
         field_j = "Game End Imminent";
     }
 }

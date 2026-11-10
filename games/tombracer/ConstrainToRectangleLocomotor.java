@@ -8,7 +8,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
 
     final int getTypeId(int param0) {
         if (param0 != 1) {
-          this.b(31);
+          this.applyConstraint(31);
         }
         return 11;
     }
@@ -382,7 +382,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
         }
     }
 
-    final void b(int param0) {
+    final void applyConstraint(int param0) {
         int var2 = this.trap.s(25745) - this.f(10);
         int var3 = this.trap.getLocalY(false) - this.g((byte) 30);
         int var4 = 0;
@@ -422,16 +422,16 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
         field_t = null;
     }
 
-    final void b(byte param0) {
+    final void tick(byte param0) {
         int var2 = 27 / ((-69 - param0) / 42);
     }
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         if (param0 != 0) {
           return 20;
         }
-        param1 = fs.a((byte) 68, param1, this.field_u);
-        param1 = fs.a((byte) 90, param1, this.field_s);
+        param1 = fs.mixHash((byte) 68, param1, this.field_u);
+        param1 = fs.mixHash((byte) 90, param1, this.field_s);
         return param1;
     }
 

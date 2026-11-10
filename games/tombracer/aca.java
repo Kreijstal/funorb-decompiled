@@ -13,12 +13,12 @@ final class aca extends IntrusiveNode {
         field_g = null;
         field_h = null;
         if (param0) {
-          sia var2 = (sia) null;
-          aca.a((sia) null, 1);
+          ShellListener var2 = (ShellListener) null;
+          aca.a((ShellListener) null, 1);
         }
     }
 
-    final static void a(sia param0, int param1) {
+    final static void a(ShellListener param0, int param1) {
         try {
           kra.field_c.insertElementAt(param0, 0);
           if (param1 != 19711) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class PlantComponent extends kna {
+final class PlantComponent extends PrefabComponent {
     final boolean z(int param0) {
         if (param0 != 0) {
           return false;
@@ -32,7 +32,7 @@ final class PlantComponent extends kna {
         }
     }
 
-    final Trap a(boolean param0, int param1, Room param2) {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         mfa var5 = null;
         int var7_int = 0;
         int var8 = 0;

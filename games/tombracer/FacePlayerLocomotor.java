@@ -17,17 +17,17 @@ final class FacePlayerLocomotor extends Locomotor {
         }
     }
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         if (param0 == 0) {
-          param1 = fs.a((byte) 61, param1, this.field_o);
+          param1 = fs.mixHash((byte) 61, param1, this.field_o);
           return param1;
         }
         field_p = (bb) null;
-        param1 = fs.a((byte) 61, param1, this.field_o);
+        param1 = fs.mixHash((byte) 61, param1, this.field_o);
         return param1;
     }
 
-    final void b(int param0) {
+    final void applyConstraint(int param0) {
         if (param0 == 1) {
           return;
         }
@@ -52,7 +52,7 @@ final class FacePlayerLocomotor extends Locomotor {
         return true;
     }
 
-    final void b(byte param0) {
+    final void tick(byte param0) {
         int var2;
         Player var3;
         int var4;
@@ -132,15 +132,15 @@ final class FacePlayerLocomotor extends Locomotor {
 
     final static void b(int param0, byte param1) {
         if (param1 == 65) {
-          ub.field_b = sra.field_u[param0];
-          hra.field_c = TrackMountComponent.field_K[param0];
-          voa.field_s = nl.field_e[param0];
+          ub.field_b = sra.connectingTranslations[param0];
+          hra.field_c = TrackMountComponent.waitingForTextTranslations[param0];
+          voa.field_s = nl.loadingTextTranslations[param0];
           return;
         }
         FacePlayerLocomotor.a(-7, 14, 68);
-        ub.field_b = sra.field_u[param0];
-        hra.field_c = TrackMountComponent.field_K[param0];
-        voa.field_s = nl.field_e[param0];
+        ub.field_b = sra.connectingTranslations[param0];
+        hra.field_c = TrackMountComponent.waitingForTextTranslations[param0];
+        voa.field_s = nl.loadingTextTranslations[param0];
     }
 
     public static void releaseStatics(int param0) {

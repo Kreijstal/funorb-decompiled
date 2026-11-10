@@ -192,7 +192,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
         return 7;
     }
 
-    final Trap a(boolean param0, int param1, Room param2) {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         Trap var4 = null;
         RuntimeException var4_ref = null;
         PathMoveLocomotor var5 = null;

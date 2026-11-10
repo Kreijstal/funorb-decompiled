@@ -5,11 +5,11 @@ final class RotateLocomotor extends Locomotor {
     private int field_p;
     static jea field_o;
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         if (param0 != 0) {
           return -115;
         }
-        param1 = fs.a((byte) 23, param1, this.field_p);
+        param1 = fs.mixHash((byte) 23, param1, this.field_p);
         return param1;
     }
 
@@ -17,7 +17,7 @@ final class RotateLocomotor extends Locomotor {
         try {
           super.encode(param0, (byte) -109);
           if (param1 >= -78) {
-            this.b(-41);
+            this.applyConstraint(-41);
           }
           param0.writeBits((byte) -128, dqa.a(true, this.field_p, 12), 12);
         } catch (RuntimeException runtimeException) {
@@ -52,12 +52,12 @@ final class RotateLocomotor extends Locomotor {
         }
     }
 
-    final void b(byte param0) {
+    final void tick(byte param0) {
         this.trap.c(false, this.field_p);
         int var2 = 24 % ((param0 + 69) / 42);
     }
 
-    final void b(int param0) {
+    final void applyConstraint(int param0) {
         if (param0 != 1) {
           this.a((byte) 79, 28);
         }
@@ -65,7 +65,7 @@ final class RotateLocomotor extends Locomotor {
 
     final int getTypeId(int param0) {
         if (param0 != 1) {
-          this.a(40, 31);
+          this.hashState(40, 31);
           return 6;
         }
         return 6;

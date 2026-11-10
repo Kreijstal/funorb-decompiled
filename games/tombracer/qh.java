@@ -152,10 +152,10 @@ final class qh extends dfa implements rqa {
         if (!this.field_D) {
           this.b(this.field_k.players[0].v(param2 - 15179), param2 + 7821);
           this.a(this.field_k.field_g[0], 5, this.field_k.field_F[0]);
-          var4 = uca.field_c.a(7, param2 - 15283);
+          var4 = uca.field_c.nextBounded(7, param2 - 15283);
           qa.field_b = qa.field_b + var4;
           nta.field_h = nta.field_h + var4;
-          var4Lifetime1 = uca.field_c.a(7, 0);
+          var4Lifetime1 = uca.field_c.nextBounded(7, 0);
           CommonChooseReward.field_b = CommonChooseReward.field_b + (long)var4Lifetime1;
           lra.field_f = lra.field_f + (long)var4Lifetime1;
         }
@@ -794,11 +794,11 @@ final class qh extends dfa implements rqa {
         var5 = this.field_i;
         var6 = this.field_m;
         var8_int = var5;
-        var9 = uca.field_c.a(param1, 0);
+        var9 = uca.field_c.nextBounded(param1, 0);
         bh.field_o = bh.field_o + var8_int * var9;
         OpenGlToolkit.field_Z = OpenGlToolkit.field_Z + var9;
         var8 = var6;
-        var10_int = uca.field_c.a(5, 0);
+        var10_int = uca.field_c.nextBounded(5, 0);
         et.field_j = et.field_j + var8 * (long)var10_int;
         nb.field_c = nb.field_c + (long)var10_int;
         if (param0 == var5) {
@@ -807,7 +807,7 @@ final class qh extends dfa implements rqa {
         var8_intLifetime1 = param0;
         var9Lifetime1 = var5;
         if (var8_intLifetime1 != var9Lifetime1) {
-          if (uca.field_c.a(2, 0) == 0) {
+          if (uca.field_c.nextBounded(2, 0) == 0) {
             nta.field_h = nta.field_h - OpenGlToolkit.field_Z * (-var9Lifetime1 + var8_intLifetime1);
           } else {
             qa.field_b = qa.field_b + OpenGlToolkit.field_Z * (var8_intLifetime1 - var9Lifetime1);
@@ -816,7 +816,7 @@ final class qh extends dfa implements rqa {
         var8Lifetime1 = param2;
         var10 = var6;
         if (~var8Lifetime1 != ~var10) {
-          if (0 != uca.field_c.a(2, param1 ^ 5)) {
+          if (0 != uca.field_c.nextBounded(2, param1 ^ 5)) {
             lra.field_f = lra.field_f + nb.field_c * (var8Lifetime1 - var10);
           } else {
             CommonChooseReward.field_b = CommonChooseReward.field_b - nb.field_c * (-var10 + var8Lifetime1);
@@ -1212,7 +1212,7 @@ final class qh extends dfa implements rqa {
             SecondaryNodeDequeIterator.field_a != null &&
             !SecondaryNodeDequeIterator.field_a.f((byte) 33) &&
             SecondaryNodeDequeIterator.field_a == hb.field_t) {
-            var5 = uca.field_c.a(8, 0);
+            var5 = uca.field_c.nextBounded(8, 0);
             if (0 != var5) {
               if (1 != var5) {
                 if (var5 != 2) {
@@ -1304,7 +1304,7 @@ final class qh extends dfa implements rqa {
             this.field_h = -6;
           }
           var5 = param0.A(0);
-          var6 = var4[uca.field_c.a(var8.length, param1 + 9)];
+          var6 = var4[uca.field_c.nextBounded(var8.length, param1 + 9)];
           var7 = this.a(var5, false);
           dupTemp$1 = "<col=" + jm.field_k[var5] + ">" + var6 + "</col>";
           var9 = dupTemp$1;
@@ -1490,7 +1490,7 @@ final class qh extends dfa implements rqa {
             !SecondaryNodeDequeIterator.field_a.field_D &&
             !SecondaryNodeDequeIterator.field_a.f((byte) 33) &&
             hb.field_t == SecondaryNodeDequeIterator.field_a) {
-            var4 = uca.field_c.a(3, 0);
+            var4 = uca.field_c.nextBounded(3, 0);
             if (0 != var4) {
               if (var4 == 1) {
                 tb.field_o = tb.field_o - var3;
@@ -1511,7 +1511,7 @@ final class qh extends dfa implements rqa {
             SecondaryNodeDequeIterator.field_a != null &&
             !SecondaryNodeDequeIterator.field_a.f((byte) 33) &&
             hb.field_t == SecondaryNodeDequeIterator.field_a) {
-            var4 = uca.field_c.a(8, 0);
+            var4 = uca.field_c.nextBounded(8, 0);
             if (0 != var4) {
               if (var4 != 1) {
                 if (var4 != 2) {

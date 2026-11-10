@@ -147,7 +147,7 @@ final class ua implements GamePacket {
             return stackIn_21_0;
           }
           if (param0 == 6) {
-            stackIn_24_0 = gl.$cfr$intArgs$a$53ce4ab4c593(93, kna.field_C, new String[]{param1});
+            stackIn_24_0 = gl.$cfr$intArgs$a$53ce4ab4c593(93, PrefabComponent.field_C, new String[]{param1});
             return stackIn_24_0;
           }
           if (param0 == 7) {

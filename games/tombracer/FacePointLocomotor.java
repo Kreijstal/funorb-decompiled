@@ -8,13 +8,13 @@ final class FacePointLocomotor extends Locomotor {
     private int field_s;
     static ko field_r;
 
-    final int a(int param0, int param1) {
-        param1 = fs.a((byte) 75, param1, this.field_p);
+    final int hashState(int param0, int param1) {
+        param1 = fs.mixHash((byte) 75, param1, this.field_p);
         if (param0 != 0) {
           return -7;
         }
-        param1 = fs.a((byte) 117, param1, this.field_q);
-        param1 = fs.a((byte) 121, param1, this.field_s);
+        param1 = fs.mixHash((byte) 117, param1, this.field_q);
+        param1 = fs.mixHash((byte) 121, param1, this.field_s);
         return param1;
     }
 
@@ -151,13 +151,13 @@ final class FacePointLocomotor extends Locomotor {
         }
     }
 
-    final void b(int param0) {
+    final void applyConstraint(int param0) {
         if (param0 != 1) {
           field_r = (ko) null;
         }
     }
 
-    final void b(byte param0) {
+    final void tick(byte param0) {
         int var2;
         int var3;
         int var4;

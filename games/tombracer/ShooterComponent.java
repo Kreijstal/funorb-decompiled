@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ShooterComponent extends kna {
+abstract class ShooterComponent extends PrefabComponent {
     private boolean field_I;
     static String field_G;
     private int field_F;
@@ -115,7 +115,7 @@ abstract class ShooterComponent extends kna {
           if (this.B(-23309)) {
             if (this.field_I) {
               var5 = param2.q(-85);
-              this.field_H = var5.a(16, param0 - 43);
+              this.field_H = var5.nextBounded(16, param0 - 43);
               if (!(param1 instanceof WeaponShooterBehaviour)) {
                 var8.a(false, this.field_H * var8.a((byte) -94) / 16);
                 param1.a(102, var8);
@@ -125,7 +125,7 @@ abstract class ShooterComponent extends kna {
               if (var6 != null) {
                 var7 = var6.a(true);
                 if (var7 > 0) {
-                  var6.b(var5.a(var7, 0), false);
+                  var6.b(var5.nextBounded(var7, 0), false);
                 }
               }
             }

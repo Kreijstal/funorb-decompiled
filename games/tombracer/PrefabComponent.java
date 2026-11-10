@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class kna extends RoomComponent {
+abstract class PrefabComponent extends RoomComponent {
     private Trap field_A;
     static String field_E;
     static String field_C;
@@ -14,11 +14,11 @@ abstract class kna extends RoomComponent {
         field_C = null;
         field_B = null;
         if (param0 != 0) {
-          kna.releaseStatics(74);
+          PrefabComponent.releaseStatics(74);
         }
     }
 
-    kna(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
+    PrefabComponent(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 
@@ -30,7 +30,7 @@ abstract class kna extends RoomComponent {
         return (lj) ((Object) this.field_A);
     }
 
-    final void a(boolean param0, boolean param1, Room param2, int param3, int param4, int param5, Trap param6) {
+    final void instantiate(boolean param0, boolean param1, Room param2, int param3, int param4, int param5, Trap param6) {
         int var9 = 0;
         RoomComponent stackIn_14_0;
         boolean stackIn_14_1;
@@ -56,7 +56,7 @@ abstract class kna extends RoomComponent {
           if (!this.field_z.a(param5, 14530)) {
             return;
           }
-          var13 = this.a(param0, 3, param2);
+          var13 = this.createTrap(param0, 3, param2);
           if (param6 != null) {
             var13.b(true, 11468);
           }
@@ -81,14 +81,14 @@ abstract class kna extends RoomComponent {
               stackIn_14_5 = param4;
               stackIn_14_6 = var10;
               stackIn_15_7 = !(param1);
-              ((RoomComponent) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_14_2, stackIn_14_3, stackIn_14_4, stackIn_14_5 + ((mka) (Object) stackIn_14_6).a(stackIn_15_7), param5, var13);
+              ((RoomComponent) (Object) stackIn_14_0).instantiate(stackIn_14_1, stackIn_14_2, stackIn_14_3, stackIn_14_4, stackIn_14_5 + ((mka) (Object) stackIn_14_6).a(stackIn_15_7), param5, var13);
             }
           }
           if (param6 == null) {
             if (this.z(0)) {
               var13.c(437453352, true);
             }
-            param2.a(var13, (byte) 32);
+            param2.addTrap(var13, (byte) 32);
           } else {
             param6.addChild(-39, var13);
           }
@@ -118,7 +118,7 @@ abstract class kna extends RoomComponent {
         }
     }
 
-    kna(Room param0, int param1) {
+    PrefabComponent(Room param0, int param1) {
         super(param0, param1);
     }
 
@@ -130,7 +130,7 @@ abstract class kna extends RoomComponent {
         return true;
     }
 
-    abstract Trap a(boolean param0, int param1, Room param2);
+    abstract Trap createTrap(boolean param0, int param1, Room param2);
 
     static {
         field_C = "<%0> cannot join; the game is full.";

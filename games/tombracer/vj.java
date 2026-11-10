@@ -6,7 +6,7 @@ import java.io.*;
 final class vj {
     static String field_c;
     private DualLinkNode field_e;
-    static String[] field_d;
+    static String[] worldNames;
     static int[] field_a;
     private DualLinkNode field_b;
 
@@ -57,7 +57,7 @@ final class vj {
         DualLinkNode var2 = null;
         DualLinkNode var2Lifetime1;
         if (param0 <= 110) {
-          field_d = (String[]) null;
+          worldNames = (String[]) null;
           var2 = this.field_e.secondaryNext;
           if (this.field_e != var2) {
             var2.unlinkSecondary(-7975);
@@ -146,13 +146,13 @@ final class vj {
     public static void a(int param0) {
         field_c = null;
         if (param0 < -1) {
-          field_d = null;
+          worldNames = null;
           field_a = null;
           return;
         }
         String var2 = (String) null;
         vj.a((String) null, 47);
-        field_d = null;
+        worldNames = null;
         field_a = null;
     }
 
@@ -187,6 +187,6 @@ final class vj {
     static {
         field_c = "Report <%0> for abuse";
         field_a = new int[]{0, 28};
-        field_d = new String[]{"Ziggurat of Zest", "Serpent's Sepulchre", "Abyss of Peril", "Brimstone Catacomb", "Path of Penitence", "Common Pyramid", "Cadaver Caves", "Beacon of Beams", "Crypt of Conclusion"};
+        worldNames = new String[]{"Ziggurat of Zest", "Serpent's Sepulchre", "Abyss of Peril", "Brimstone Catacomb", "Path of Penitence", "Common Pyramid", "Cadaver Caves", "Beacon of Beams", "Crypt of Conclusion"};
     }
 }

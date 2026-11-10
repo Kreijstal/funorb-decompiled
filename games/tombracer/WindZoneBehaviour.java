@@ -14,7 +14,7 @@ final class WindZoneBehaviour extends Behaviour {
 
     final void a(int param0, int param1, int param2) {
         if (param2 != 19072) {
-          this.a(120, -24);
+          this.hashState(120, -24);
         }
         this.field_p = param0;
         this.field_r = param1;
@@ -45,7 +45,7 @@ final class WindZoneBehaviour extends Behaviour {
         }
     }
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         if (param1 >= -48) {
           return 84;
         }
@@ -67,7 +67,7 @@ final class WindZoneBehaviour extends Behaviour {
         }
     }
 
-    final void k(int param0) {
+    final void tick(int param0) {
         int var17 = 0;
         Particle stackIn_18_0 = null;
         int stackIn_18_1 = 0;
@@ -140,7 +140,7 @@ final class WindZoneBehaviour extends Behaviour {
         var14 = this.trap.P(param0 - 5418);
         if (this.field_q != 0 &&
           this.field_q != 2) {
-          var25 = this.b(true).spawnParticle(var11, this.trap.Q(2) + this.o((byte) 46).a(var5, 0), (byte) 100, var14);
+          var25 = this.b(true).spawnParticle(var11, this.trap.Q(2) + this.o((byte) 46).nextBounded(var5, 0), (byte) 100, var14);
           var25.a(false, 2, 3, 8, 10);
           stackIn_22_0 = var25;
           stackIn_22_1 = 72;
@@ -152,7 +152,7 @@ final class WindZoneBehaviour extends Behaviour {
           }
           ((Particle) (Object) stackIn_22_0).b(stackIn_22_1, stackIn_22_2, stackIn_23_3);
         } else {
-          var24 = this.b(true).spawnParticle(this.trap.r((byte) -95) + this.o((byte) 46).a(var4, 0), var11, (byte) 100, var14);
+          var24 = this.b(true).spawnParticle(this.trap.r((byte) -95) + this.o((byte) 46).nextBounded(var4, 0), var11, (byte) 100, var14);
           var24.a(false, 2, 3, 8, 10);
           stackIn_18_0 = var24;
           stackIn_18_1 = 79;

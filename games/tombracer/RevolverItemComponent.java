@@ -19,7 +19,7 @@ final class RevolverItemComponent extends ItemComponent {
         field_G = null;
     }
 
-    final Trap a(boolean param0, int param1, Room param2) {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         Trap var4 = null;
         RuntimeException var4_ref = null;
         WeaponItemBehaviour var5 = null;
@@ -31,7 +31,7 @@ final class RevolverItemComponent extends ItemComponent {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = super.a(param0, 3, param2);
+          var4 = super.createTrap(param0, 3, param2);
           var5 = new WeaponItemBehaviour(param2, param0);
           var5.a(ci.a(4, -1), 5);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));

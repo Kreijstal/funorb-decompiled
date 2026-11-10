@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class FacePlayerMountComponent extends kna {
+final class FacePlayerMountComponent extends PrefabComponent {
     static ta field_F;
     private int field_G;
     static String field_H;
@@ -38,7 +38,7 @@ final class FacePlayerMountComponent extends kna {
         this.field_G = 4;
     }
 
-    final Trap a(boolean param0, int param1, Room param2) {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         FacePlayerLocomotor var5 = null;
         mfa var6 = null;

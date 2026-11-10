@@ -63,7 +63,7 @@ final class TextSpewerBehaviour extends Behaviour {
         }
     }
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         if (param1 > -48) {
           this.field_p = 75;
           return param0;
@@ -96,7 +96,7 @@ final class TextSpewerBehaviour extends Behaviour {
         }
     }
 
-    final void k(int param0) {
+    final void tick(int param0) {
         Player var9 = null;
         Particle var10 = null;
         Player var11 = null;
@@ -137,7 +137,7 @@ final class TextSpewerBehaviour extends Behaviour {
         if (0 >= this.field_p) {
           var2 = this.field_t >> 16;
           if (param0 != 5418) {
-            this.a(-91, 115);
+            this.hashState(-91, 115);
             var2 = var2 * var2;
             var9 = this.getPlayer((byte) 19);
             var4 = this.trap.getX(3) - var9.getX(param0 ^ 5417) >> 16;
@@ -145,7 +145,7 @@ final class TextSpewerBehaviour extends Behaviour {
             var6 = var4 * var4 + var5 * var5;
             if (var2 > var6) {
               if (this.field_q) {
-                var7 = this.o((byte) 46).a(this.field_n.length, 0);
+                var7 = this.o((byte) 46).nextBounded(this.field_n.length, 0);
               } else {
                 var7 = this.field_u;
                 this.field_u = this.field_u + 1;
@@ -170,7 +170,7 @@ final class TextSpewerBehaviour extends Behaviour {
             return;
           }
           if (this.field_q) {
-            var7Lifetime4 = this.o((byte) 46).a(this.field_n.length, 0);
+            var7Lifetime4 = this.o((byte) 46).nextBounded(this.field_n.length, 0);
             var12 = this.b(true).spawnParticle(this.trap.getX(3), this.trap.getY(param0 ^ 12442), (byte) 100, this.trap.P(0));
             var12.a(false, 8388608, 0, 8388608, this.field_s);
             var12.a(0, 16777215, this.field_n[var7Lifetime4]);
@@ -202,7 +202,7 @@ final class TextSpewerBehaviour extends Behaviour {
         }
         var2Lifetime1 = this.field_t >> 16;
         if (param0 != 5418) {
-          this.a(-91, 115);
+          this.hashState(-91, 115);
           var2Lifetime1 = var2Lifetime1 * var2Lifetime1;
           var15 = this.getPlayer((byte) 19);
           var4Lifetime1 = this.trap.getX(3) - var15.getX(param0 ^ 5417) >> 16;
@@ -212,7 +212,7 @@ final class TextSpewerBehaviour extends Behaviour {
             return;
           }
           if (this.field_q) {
-            var7Lifetime1 = this.o((byte) 46).a(this.field_n.length, 0);
+            var7Lifetime1 = this.o((byte) 46).nextBounded(this.field_n.length, 0);
             var16 = this.b(true).spawnParticle(this.trap.getX(3), this.trap.getY(param0 ^ 12442), (byte) 100, this.trap.P(0));
             var16.a(false, 8388608, 0, 8388608, this.field_s);
             var16.a(0, 16777215, this.field_n[var7Lifetime1]);
@@ -247,7 +247,7 @@ final class TextSpewerBehaviour extends Behaviour {
           return;
         }
         if (this.field_q) {
-          var7Lifetime2 = this.o((byte) 46).a(this.field_n.length, 0);
+          var7Lifetime2 = this.o((byte) 46).nextBounded(this.field_n.length, 0);
           var22 = this.b(true).spawnParticle(this.trap.getX(3), this.trap.getY(param0 ^ 12442), (byte) 100, this.trap.P(0));
           var22.a(false, 8388608, 0, 8388608, this.field_s);
           var22.a(0, 16777215, this.field_n[var7Lifetime2]);

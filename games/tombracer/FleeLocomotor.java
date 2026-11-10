@@ -20,7 +20,7 @@ final class FleeLocomotor extends Locomotor {
     private int field_p;
     private boolean field_D;
 
-    final void b(byte param0) {
+    final void tick(byte param0) {
         int var3;
         int var4;
         int var5;
@@ -148,7 +148,7 @@ final class FleeLocomotor extends Locomotor {
               }
               return;
             }
-            this.field_p = this.trap.y(1751085328).a(this.field_u, 0) - this.field_u / 2;
+            this.field_p = this.trap.y(1751085328).nextBounded(this.field_u, 0) - this.field_u / 2;
           }
           this.field_D = true;
           if (this.field_r) {
@@ -277,17 +277,17 @@ final class FleeLocomotor extends Locomotor {
         }
     }
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         param1 = upa.a(this.field_D, param1, (byte) -41);
-        param1 = fs.a((byte) 37, param1, this.field_p);
+        param1 = fs.mixHash((byte) 37, param1, this.field_p);
         if (param0 == 0) {
           return param1;
         }
-        this.b((byte) -46);
+        this.tick((byte) -46);
         return param1;
     }
 
-    final void b(int param0) {
+    final void applyConstraint(int param0) {
         if (param0 != 1) {
           field_o = (String) null;
         }

@@ -46,7 +46,7 @@ final class SimpleConditionBehaviour extends Behaviour {
         }
     }
 
-    final void k(int param0) {
+    final void tick(int param0) {
         this.j((byte) 79);
         this.field_n.a((byte) -14, this.field_s);
         if (param0 != 5418) {
@@ -140,7 +140,7 @@ final class SimpleConditionBehaviour extends Behaviour {
         }
     }
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         if (param1 <= -48) {
           param0 = upa.a(this.field_s, param0, (byte) -53);
           return param0;

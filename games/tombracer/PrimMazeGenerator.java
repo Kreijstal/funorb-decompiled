@@ -31,7 +31,7 @@ final class PrimMazeGenerator extends MazeGenerator {
             if (this.field_d.isEmpty((byte) 14)) {
               return;
             }
-            var6 = this.random.a(this.field_d.size((byte) -16), 0);
+            var6 = this.random.nextBounded(this.field_d.size((byte) -16), 0);
             var7 = 0;
             var5 = (oda) (this.field_d.first(-80));
             while (var6 != var7) {

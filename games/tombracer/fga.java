@@ -4,7 +4,7 @@
 import java.util.*;
 import java.util.BitSet;
 
-final class fga implements sia {
+final class fga implements ShellListener {
     private boolean field_c;
     static String field_a;
     private int[] field_d;
@@ -42,7 +42,7 @@ final class fga implements sia {
         }
     }
 
-    public final void a(boolean param0, boolean param1) {
+    public final void updateScreen(boolean param0, boolean param1) {
         int stackIn_32_1 = 0;
         boolean stackIn_33_2 = false;
         Throwable decompiledCaughtException = null;
@@ -178,7 +178,7 @@ final class fga implements sia {
         }
     }
 
-    public final void b(int param0) {
+    public final void drawOverlay(int param0) {
         try {
           int stackIn_18_0 = 0;
           BitSet stackIn_18_1 = null;
@@ -329,7 +329,7 @@ final class fga implements sia {
         }
     }
 
-    public final boolean a(byte param0, char param1, int param2) {
+    public final boolean handleKey(byte param0, char param1, int param2) {
         int stackIn_32_0 = 0;
         int stackIn_45_0 = 0;
         RuntimeException decompiledCaughtException = null;

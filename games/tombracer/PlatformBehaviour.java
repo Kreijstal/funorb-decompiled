@@ -50,11 +50,11 @@ final class PlatformBehaviour extends Behaviour {
         return this.field_u <= 0 ? true : false;
     }
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         if (param1 >= -48) {
           return 39;
         }
-        param0 = fs.a((byte) 71, param0, this.field_u);
+        param0 = fs.mixHash((byte) 71, param0, this.field_u);
         return param0;
     }
 
@@ -79,7 +79,7 @@ final class PlatformBehaviour extends Behaviour {
 
     final int getTypeId(boolean param0) {
         if (param0) {
-          this.a(-87, -106);
+          this.hashState(-87, -106);
           return 9;
         }
         return 9;
@@ -163,7 +163,7 @@ final class PlatformBehaviour extends Behaviour {
         super.m(117);
     }
 
-    final void k(int param0) {
+    final void tick(int param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
         if (param0 != 5418) {
           return;

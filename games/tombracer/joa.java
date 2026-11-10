@@ -203,7 +203,7 @@ final class joa {
               stackIn_15_0 = "Learn to spell";
               return stackIn_15_0;
             }
-            if (!dra.field_b[var3_int].equalsIgnoreCase(param2)) {
+            if (!dra.musicTrackNames[var3_int].equalsIgnoreCase(param2)) {
               var3_int++;
               continue;
             }

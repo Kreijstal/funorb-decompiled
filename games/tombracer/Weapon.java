@@ -171,22 +171,22 @@ final class Weapon {
             for (var16 = 0; this.field_g > var16; var16++) {
               var17 = param0;
               if (0 < this.field_s) {
-                var17 = var17 + (var15.a(this.field_s, 0) - this.field_s / 2);
+                var17 = var17 + (var15.nextBounded(this.field_s, 0) - this.field_s / 2);
               }
               var18 = MouseInputHandler.a((byte) 110, var17 >> 2);
               var19 = bua.a(0, var17 >> 2);
               var20 = this.field_n;
               if (this.field_w > 0) {
-                var20 = var20 + var15.a(this.field_w, 0);
+                var20 = var20 + var15.nextBounded(this.field_w, 0);
               }
               var21 = param6 + gqa.a(var18, (byte) 24, var20);
               var22 = param7 + gqa.a(var19, (byte) 24, var20);
               var23 = param5.spawnProjectile(var14, var13, 127, param1);
               var23.a(this.field_a, param5, this.field_l, 66, this.field_b, this.field_k);
               var23.setVelocity(var21, var22, (byte) -92);
-              var24 = var15.a(8192, 0);
+              var24 = var15.nextBounded(8192, 0);
               if (3 == this.field_b) {
-                var25 = -512 + var15.a(1024, 0);
+                var25 = -512 + var15.nextBounded(1024, 0);
                 var23.b(7, var25, var24);
               } else {
                 if (this.field_b == 2) {

@@ -3,11 +3,11 @@
  */
 import java.util.*;
 
-abstract class rfa extends AppletGameShell implements sia {
+abstract class rfa extends AppletGameShell implements ShellListener {
     static String field_B;
     static jea field_C;
 
-    abstract boolean a(int param0, BitPacketBuffer param1, byte param2);
+    abstract boolean handleGamePacket(int param0, BitPacketBuffer param1, byte param2);
 
     final void draw(int param0) {
         int var3 = 0;
@@ -32,7 +32,7 @@ abstract class rfa extends AppletGameShell implements sia {
           return;
         }
         for (var3 = -1 + kra.field_c.size(); var3 >= 0; var3--) {
-          ((sia) (kra.field_c.elementAt(var3))).b(param0 + 1);
+          ((ShellListener) (kra.field_c.elementAt(var3))).drawOverlay(param0 + 1);
         }
         if (!cna.field_a) {
           this.c(true);
@@ -59,7 +59,7 @@ abstract class rfa extends AppletGameShell implements sia {
             S2CEventPacket.field_c[9] = -1;
             S2CEventPacket.field_c[10] = -1;
             kra.field_c = new Vector();
-            aca.a((sia) (this), 19711);
+            aca.a((ShellListener) (this), 19711);
           } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) ((Object) runtimeException), "rfa.GB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
           }
@@ -79,7 +79,7 @@ abstract class rfa extends AppletGameShell implements sia {
         }
     }
 
-    public abstract void a(boolean param0, boolean param1);
+    public abstract void updateScreen(boolean param0, boolean param1);
 
     public static void w(int param0) {
         field_C = null;
@@ -102,13 +102,13 @@ abstract class rfa extends AppletGameShell implements sia {
         int var3;
         int var4;
         int var5;
-        sia var6;
+        ShellListener var6;
         int var3Lifetime1;
         var5 = TombRacer.field_G ? 1 : 0;
         var2 = 0;
         stackIn_3_0 = !param0;
         if (lca.a(stackIn_3_0)) {
-          this.a(param0, false);
+          this.updateScreen(param0, false);
         } else {
           if (!una.a((byte) 127)) {
             if (fja.h(105)) {
@@ -117,7 +117,7 @@ abstract class rfa extends AppletGameShell implements sia {
               var3 = this.a(stackIn_46_1, stackIn_47_2);
               if (var3 != 1 &&
                 var3 != 2) {
-                this.a(true, false);
+                this.updateScreen(true, false);
               } else {
                 if (dq.field_f != null) {
                   og.b(0);
@@ -125,7 +125,7 @@ abstract class rfa extends AppletGameShell implements sia {
                 if (2 == var3) {
                   hha.a(di.a(110), (byte) -95);
                 }
-                this.a(true, false);
+                this.updateScreen(true, false);
               }
             } else {
               if (ofa.d(true)) {
@@ -136,7 +136,7 @@ abstract class rfa extends AppletGameShell implements sia {
                   if (var3 == 1) {
                     ts.a((byte) -63, ura.field_a, true);
                   }
-                  this.a(true, false);
+                  this.updateScreen(true, false);
                 }
               } else {
                 if (!sr.a(125)) {
@@ -157,7 +157,7 @@ abstract class rfa extends AppletGameShell implements sia {
                     }
                     var4 = 0;
                     while (kra.field_c.size() > var4) {
-                      if (((sia) (kra.field_c.elementAt(var4))).a((byte) -72, kda.field_td, fna.field_h)) {
+                      if (((ShellListener) (kra.field_c.elementAt(var4))).handleKey((byte) -72, kda.field_td, fna.field_h)) {
                         break;
                       }
                       var4++;
@@ -176,14 +176,14 @@ abstract class rfa extends AppletGameShell implements sia {
               if (var3 != 2) {
                 if (var3 == 3) {
                   in.a(-30600, true);
-                  this.a(true, false);
+                  this.updateScreen(true, false);
                 } else {
                   if (var3 == 4) {
                     ts.a((byte) -63, ck.field_b, false);
                     kpa.field_c = true;
-                    this.a(true, false);
+                    this.updateScreen(true, false);
                   } else {
-                    this.a(true, false);
+                    this.updateScreen(true, false);
                   }
                 }
               } else {
@@ -196,8 +196,8 @@ abstract class rfa extends AppletGameShell implements sia {
           return;
         }
         for (var3Lifetime1 = 0; kra.field_c.size() > var3Lifetime1; var3Lifetime1++) {
-          var6 = (sia) (kra.field_c.elementAt(var3Lifetime1));
-          var6.a(true, var2 != 0);
+          var6 = (ShellListener) (kra.field_c.elementAt(var3Lifetime1));
+          var6.updateScreen(true, var2 != 0);
           stackIn_63_0 = var2;
           if (var6.a(-2)) {
             stackIn_64_1 = 0;
@@ -208,7 +208,7 @@ abstract class rfa extends AppletGameShell implements sia {
         }
     }
 
-    public abstract void b(int param0);
+    public abstract void drawOverlay(int param0);
 
     public final boolean a(int param0) {
         if (param0 != -2) {
@@ -298,7 +298,7 @@ abstract class rfa extends AppletGameShell implements sia {
             if (!vpa.a(84)) {
               if (dma.field_l.a(-127)) {
                 av.field_e = true;
-                this.v(24230);
+                this.onLoadingComplete(24230);
                 PlatformComponent.A(116);
               }
             } else {
@@ -341,7 +341,7 @@ abstract class rfa extends AppletGameShell implements sia {
         }
     }
 
-    abstract void v(int param0);
+    abstract void onLoadingComplete(int param0);
 
     private final void u(int param0) {
         int var2;
@@ -349,14 +349,14 @@ abstract class rfa extends AppletGameShell implements sia {
         var3 = TombRacer.field_G ? 1 : 0;
         var2 = 68 % ((param0 - 52) / 40);
         while (cj.a(S2CEventPacket.field_c, 0)) {
-          if (this.a(oka.field_z, vc.field_q, (byte) 105)) {
+          if (this.handleGamePacket(oka.field_z, vc.field_q, (byte) 105)) {
             continue;
           }
           this.m(-5);
         }
     }
 
-    public abstract boolean a(byte param0, char param1, int param2);
+    public abstract boolean handleKey(byte param0, char param1, int param2);
 
     abstract boolean h(byte param0);
 

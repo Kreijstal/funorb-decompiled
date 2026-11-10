@@ -490,7 +490,7 @@ final class kva extends dg {
                 var29.field_j = 3;
                 break;
             }
-            var31.field_d = var30.e(true).a(100, param0 + 110);
+            var31.field_d = var30.e(true).nextBounded(100, param0 + 110);
             var31.field_f = dfa.a(var21 + ku.field_j[var31.field_j], 2048, param0 ^ -57);
             var31.field_a = -var6 + var7;
             var31.field_i = -var5 + var9;

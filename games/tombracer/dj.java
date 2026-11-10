@@ -40,7 +40,7 @@ final class dj {
         if (param0 != -33) {
           return 65;
         }
-        return uca.field_c.a(param1, 0);
+        return uca.field_c.nextBounded(param1, 0);
     }
 
     public static void releaseStatics(int param0) {
@@ -186,12 +186,12 @@ final class dj {
         Particle var9 = null;
         int var10 = TombRacer.field_G ? 1 : 0;
         int var5 = 262144;
-        for (var6 = 0; var6 < 4 + uca.field_c.a(4, param2 ^ 46); var6++) {
+        for (var6 = 0; var6 < 4 + uca.field_c.nextBounded(4, param2 ^ 46); var6++) {
           var7 = -(var5 / 2) + this.a((byte) -33, var5);
           var8 = this.a((byte) -33, var5) - var5 / 2;
           var9 = this.field_c.spawnParticle(param3, param0, (byte) 100, param1);
-          var9.a(false, 16, 14, 16, 25 + uca.field_c.a(25, param2 ^ 46));
-          var9.a(var8, -var8 / 64, var7, -var7 / 64, 131072 + uca.field_c.a(131072, 0), -8192, (byte) -20);
+          var9.a(false, 16, 14, 16, 25 + uca.field_c.nextBounded(25, param2 ^ 46));
+          var9.a(var8, -var8 / 64, var7, -var7 / 64, 131072 + uca.field_c.nextBounded(131072, 0), -8192, (byte) -20);
           var9.a(this.a((byte) -33, 2048), this.a((byte) -33, 32) - 16, -110);
         }
         if (param2 != 46) {

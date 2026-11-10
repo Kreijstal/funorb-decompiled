@@ -14,7 +14,7 @@ final class SimpleActionBehaviour extends Behaviour {
         }
     }
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         if (param1 > -48) {
           field_n = (String) null;
         }
@@ -147,7 +147,7 @@ final class SimpleActionBehaviour extends Behaviour {
         }
     }
 
-    final void k(int param0) {
+    final void tick(int param0) {
         if (param0 != 5418) {
           String var3 = (String) null;
           SimpleActionBehaviour.a(-40, (String) null);

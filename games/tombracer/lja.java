@@ -103,7 +103,7 @@ final class lja {
             }
           }
           if (var5.field_Sb) {
-            this.field_f.a((byte) -102, 3, gl.$cfr$intArgs$a$53ce4ab4c593(86, kna.field_B, new String[]{var3}));
+            this.field_f.a((byte) -102, 3, gl.$cfr$intArgs$a$53ce4ab4c593(86, PrefabComponent.field_B, new String[]{var3}));
           }
         }
         if (param0 <= -10) {

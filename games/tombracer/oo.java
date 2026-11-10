@@ -227,7 +227,7 @@ final class oo extends dg {
                 var9.field_f = 1;
                 break;
             }
-            var9.field_c = var17.e(true).a(100, param0 + 3440);
+            var9.field_c = var17.e(true).nextBounded(100, param0 + 3440);
             var9.field_a = this;
             var9.field_e = dfa.a(var15 + tfa.field_d[var9.field_f], 2048, -78);
             var9.field_d = -var4 + var5;
@@ -461,8 +461,8 @@ final class oo extends dg {
         if (0 < this.field_u) {
           this.field_u = this.field_u - 1;
         } else {
-          this.field_u = uca.field_c.a(100, 0) + 50;
-          var3_int = uca.field_c.a(this.field_s.length, ~param0);
+          this.field_u = uca.field_c.nextBounded(100, 0) + 50;
+          var3_int = uca.field_c.nextBounded(this.field_s.length, ~param0);
           if (this.field_s[var3_int].field_e.a(0)) {
             var2.a(new fm(24, this.field_s[var3_int].getRenderX((byte) -123), this.field_s[var3_int].getRenderY((byte) 94), this.field_s[var3_int].getRenderZ((byte) -112)), param0 - 57);
           } else {

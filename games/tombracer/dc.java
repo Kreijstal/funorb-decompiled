@@ -371,9 +371,9 @@ final class dc extends dg {
         this.field_m = 0;
         var3 = 1;
         if (this.field_v.c(76)) {
-          this.field_t = -2 + uca.field_c.a(5, 0);
+          this.field_t = -2 + uca.field_c.nextBounded(5, 0);
           var3 = 0;
-          this.field_m = uca.field_c.a(5, ~param0) - 2;
+          this.field_m = uca.field_c.nextBounded(5, ~param0) - 2;
         } else {
           if (this.field_v.r(-98)) {
             var3 = 0;

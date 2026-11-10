@@ -3,7 +3,7 @@
  */
 final class jr implements isa {
     private BitmapFont field_k;
-    static String[] field_j;
+    static String[] gunshotDeathMessages;
     private int field_d;
     private int field_g;
     private int field_i;
@@ -75,7 +75,7 @@ final class jr implements isa {
     }
 
     public static void releaseStatics(byte param0) {
-        field_j = null;
+        gunshotDeathMessages = null;
         if (param0 != -87) {
           jr.releaseStatics((byte) -24);
         }
@@ -115,6 +115,6 @@ final class jr implements isa {
     }
 
     static {
-        field_j = new String[]{"<%0> ate lead", "<%0> managed to commit suicide", "<%0> found a tannhauser gate", "<%0> suffered a mysterious gunshot wound"};
+        gunshotDeathMessages = new String[]{"<%0> ate lead", "<%0> managed to commit suicide", "<%0> found a tannhauser gate", "<%0> suffered a mysterious gunshot wound"};
     }
 }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class RopeBridgeComponent extends kna {
+final class RopeBridgeComponent extends PrefabComponent {
     static jea field_F;
     private int field_H;
     static String field_I;
@@ -59,7 +59,7 @@ final class RopeBridgeComponent extends kna {
         }
     }
 
-    final Trap a(boolean param0, int param1, Room param2) {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         Trap var4 = null;
         RuntimeException var4_ref = null;
         PlatformBehaviour var5 = null;

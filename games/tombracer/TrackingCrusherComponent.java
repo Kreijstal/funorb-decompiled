@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class TrackingCrusherComponent extends kna {
+final class TrackingCrusherComponent extends PrefabComponent {
     static String field_H;
     static int field_F;
     static boolean field_G;
@@ -75,7 +75,7 @@ final class TrackingCrusherComponent extends kna {
         super(param0, param1);
     }
 
-    final Trap a(boolean param0, int param1, Room param2) {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         ApproachPlayerLocomotor var5 = null;
         CrusherBehaviour var6 = null;

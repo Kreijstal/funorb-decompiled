@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dra {
-    static String[] field_b;
+    static String[] musicTrackNames;
     static String[] field_a;
 
     public static void releaseStatics(int param0) {
         field_a = null;
-        field_b = null;
+        musicTrackNames = null;
         if (param0 > -108) {
           field_a = (String[]) null;
         }
@@ -23,7 +23,7 @@ final class dra {
         var3 = TombRacer.field_G ? 1 : 0;
         try {
           if (!param0) {
-            field_b = (String[]) null;
+            musicTrackNames = (String[]) null;
           }
           var1 = ql.field_k;
           while (SnakePitBehaviour.l(10371)) {
@@ -43,7 +43,7 @@ final class dra {
     }
 
     static {
-        field_b = new String[]{"Rhythm", "Basic1", "Basic2", "Flavour1", "Flavour2", "Flavour3", "Flavour4", "Flavour5", "Flavour6", "Music1", "Music2", "Music3", "Music4", "Boulder", "Danger", "Snakes"};
+        musicTrackNames = new String[]{"Rhythm", "Basic1", "Basic2", "Flavour1", "Flavour2", "Flavour3", "Flavour4", "Flavour5", "Flavour6", "Music1", "Music2", "Music3", "Music4", "Boulder", "Danger", "Snakes"};
         field_a = new String[100];
     }
 }

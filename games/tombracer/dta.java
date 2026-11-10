@@ -6,18 +6,18 @@ final class dta {
     private bua field_c;
     static boolean[] field_g;
     private int[] field_a;
-    static String[] field_d;
+    static String[] skipRoomMessages;
     private int[] field_f;
     static String[] field_b;
     private String[] field_h;
 
     public static void releaseStatics(int param0) {
         field_e = null;
-        field_d = null;
+        skipRoomMessages = null;
         field_b = null;
         field_g = null;
         if (param0 != 0) {
-          field_d = (String[]) null;
+          skipRoomMessages = (String[]) null;
         }
     }
 
@@ -409,7 +409,7 @@ final class dta {
 
     static {
         field_g = new boolean[]{true, true, false, true, false, false, true, false, false};
-        field_d = new String[]{"<%0> wimped out", "<%0> skipped the room", "<%0> gave up on that one", "<%0> scorned the ancient gods of room design", "<%0> hopes the next room is easier"};
+        skipRoomMessages = new String[]{"<%0> wimped out", "<%0> skipped the room", "<%0> gave up on that one", "<%0> scorned the ancient gods of room design", "<%0> hopes the next room is easier"};
         field_e = "Type your age in years";
     }
 }

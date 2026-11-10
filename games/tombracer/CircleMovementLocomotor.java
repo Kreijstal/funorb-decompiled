@@ -9,17 +9,17 @@ final class CircleMovementLocomotor extends Locomotor {
     private int field_q;
     static String field_s;
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         if (param0 != 0) {
           return -79;
         }
-        param1 = fs.a((byte) 54, param1, this.field_o);
-        param1 = fs.a((byte) 100, param1, this.field_q);
-        param1 = fs.a((byte) 107, param1, this.field_r);
+        param1 = fs.mixHash((byte) 54, param1, this.field_o);
+        param1 = fs.mixHash((byte) 100, param1, this.field_q);
+        param1 = fs.mixHash((byte) 107, param1, this.field_r);
         return param1;
     }
 
-    final void b(byte param0) {
+    final void tick(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -85,9 +85,9 @@ final class CircleMovementLocomotor extends Locomotor {
         }
     }
 
-    final void b(int param0) {
+    final void applyConstraint(int param0) {
         if (param0 != 1) {
-          this.a(116, 3);
+          this.hashState(116, 3);
         }
     }
 

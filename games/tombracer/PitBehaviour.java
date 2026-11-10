@@ -18,7 +18,7 @@ final class PitBehaviour extends Behaviour {
         return dn.field_b.field_tb;
     }
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         if (param1 > -48) {
           return -114;
         }
@@ -27,12 +27,12 @@ final class PitBehaviour extends Behaviour {
 
     final void a(int param0, boolean param1) {
         if (param0 != 16) {
-          this.a(-128, 105);
+          this.hashState(-128, 105);
         }
         this.field_p = param1 ? true : false;
     }
 
-    final void k(int param0) {
+    final void tick(int param0) {
         if (param0 != 5418) {
           this.getTypeId(true);
         }

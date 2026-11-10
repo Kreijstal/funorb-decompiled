@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class PitComponent extends kna {
+final class PitComponent extends PrefabComponent {
     private int field_F;
     static int field_H;
     static cn field_G;
@@ -147,7 +147,7 @@ final class PitComponent extends kna {
         return false;
     }
 
-    final Trap a(boolean param0, int param1, Room param2) {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         PitBehaviour var5 = null;
         mfa var6 = null;
         kva var7 = null;

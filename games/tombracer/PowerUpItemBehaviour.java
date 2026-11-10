@@ -109,7 +109,7 @@ final class PowerUpItemBehaviour extends ItemBehaviour {
         }
     }
 
-    final boolean a(int param0, Player param1) {
+    final boolean tryCollect(int param0, Player param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

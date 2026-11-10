@@ -155,7 +155,7 @@ abstract class MazeGenerator {
         var8[0] = 0;
         if (param1 == -2352) {
           for (var4 = 1; param0 > var4; var4++) {
-            var5 = this.random.a(var4 + 1, param1 + 2352);
+            var5 = this.random.nextBounded(var4 + 1, param1 + 2352);
             for (var6 = var4; var5 < var6; var6--) {
               var3[var6] = var3[var6 - 1];
             }
@@ -165,7 +165,7 @@ abstract class MazeGenerator {
         }
         this.random = (IsaacCipher) null;
         for (var4Lifetime1 = 1; param0 > var4Lifetime1; var4Lifetime1++) {
-          var5Lifetime1 = this.random.a(var4Lifetime1 + 1, param1 + 2352);
+          var5Lifetime1 = this.random.nextBounded(var4Lifetime1 + 1, param1 + 2352);
           for (var6Lifetime1 = var4Lifetime1; var5Lifetime1 < var6Lifetime1; var6Lifetime1--) {
             var3[var6Lifetime1] = var3[var6Lifetime1 - 1];
           }

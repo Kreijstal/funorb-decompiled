@@ -142,7 +142,7 @@ final class PortalBehaviour extends Behaviour {
         }
     }
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         if (param1 > -48) {
           qua var4 = (qua) null;
           PortalBehaviour.a(89, false, (qua) null, -34);
@@ -232,7 +232,7 @@ final class PortalBehaviour extends Behaviour {
         return 1024;
     }
 
-    final void k(int param0) {
+    final void tick(int param0) {
         int var15 = 0;
         lj[] var2;
         Object var3;

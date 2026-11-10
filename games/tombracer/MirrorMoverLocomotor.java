@@ -7,14 +7,14 @@ final class MirrorMoverLocomotor extends Locomotor {
     private boolean field_q;
     static int[] field_o;
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         if (param0 != 0) {
           return 81;
         }
         return param1;
     }
 
-    final void b(byte param0) {
+    final void tick(byte param0) {
         Player var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -46,7 +46,7 @@ final class MirrorMoverLocomotor extends Locomotor {
     final void encode(BitPacketBuffer param0, byte param1) {
         try {
           if (param1 >= -78) {
-            this.b((byte) 11);
+            this.tick((byte) 11);
           }
           super.encode(param0, (byte) -116);
           param0.writeBits((byte) -128, !this.field_p ? 0 : 1, 1);
@@ -56,9 +56,9 @@ final class MirrorMoverLocomotor extends Locomotor {
         }
     }
 
-    final void b(int param0) {
+    final void applyConstraint(int param0) {
         if (param0 != 1) {
-          this.a(-86, 99);
+          this.hashState(-86, 99);
         }
     }
 

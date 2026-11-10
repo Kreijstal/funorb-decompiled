@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class StaticCrusherComponent extends kna {
+final class StaticCrusherComponent extends PrefabComponent {
     static String field_G;
     static byte[] field_F;
 
@@ -64,7 +64,7 @@ final class StaticCrusherComponent extends kna {
         this.b(117, 4194304, 4194304);
     }
 
-    final Trap a(boolean param0, int param1, Room param2) {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         Trap var4 = null;
         RuntimeException var4_ref = null;
         CrusherBehaviour var5 = null;

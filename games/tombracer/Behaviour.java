@@ -283,7 +283,7 @@ abstract class Behaviour extends IntrusiveNode implements lj, Renderable, noa, T
 
     void g(int param0) {
         if (param0 != -2) {
-          this.a(-30, -37);
+          this.hashState(-30, -37);
         }
     }
 
@@ -402,7 +402,7 @@ abstract class Behaviour extends IntrusiveNode implements lj, Renderable, noa, T
         return this.trap.g((byte) 115);
     }
 
-    abstract int a(int param0, int param1);
+    abstract int hashState(int param0, int param1);
 
     public final void f(int param0) {
         if (param0 != -4366) {
@@ -420,7 +420,7 @@ abstract class Behaviour extends IntrusiveNode implements lj, Renderable, noa, T
         return false;
     }
 
-    abstract void k(int param0);
+    abstract void tick(int param0);
 
     lj a(int param0, int param1, boolean param2) {
         if (param0 != 0) {

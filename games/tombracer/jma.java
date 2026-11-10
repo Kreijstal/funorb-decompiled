@@ -436,13 +436,13 @@ final class jma implements noa {
     }
 
     final int a(int param0, int param1) {
-        param1 = fs.a((byte) 85, param1, this.field_n);
+        param1 = fs.mixHash((byte) 85, param1, this.field_n);
         if (param0 > 59) {
-          param1 = fs.a((byte) 93, param1, this.field_b);
+          param1 = fs.mixHash((byte) 93, param1, this.field_b);
           return param1;
         }
         this.field_c = 32;
-        param1 = fs.a((byte) 93, param1, this.field_b);
+        param1 = fs.mixHash((byte) 93, param1, this.field_b);
         return param1;
     }
 

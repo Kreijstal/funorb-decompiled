@@ -4,7 +4,7 @@
 final class tba extends IntrusiveNode {
     static int field_k;
     static byte[] field_m;
-    static String[] field_i;
+    static String[] reconnectingMessages;
     int field_j;
     static oc field_l;
     static jpa[] field_f;
@@ -114,7 +114,7 @@ final class tba extends IntrusiveNode {
         if (param0 != 0) {
           return;
         }
-        field_i = null;
+        reconnectingMessages = null;
     }
 
     tba(int param0, int param1) {
@@ -123,6 +123,6 @@ final class tba extends IntrusiveNode {
     }
 
     static {
-        field_i = new String[]{"Connection lost - attempting to reconnect", "Connection lost - attempting to reconnect.", "Connection lost - attempting to reconnect..", "Connection lost - attempting to reconnect..."};
+        reconnectingMessages = new String[]{"Connection lost - attempting to reconnect", "Connection lost - attempting to reconnect.", "Connection lost - attempting to reconnect..", "Connection lost - attempting to reconnect..."};
     }
 }

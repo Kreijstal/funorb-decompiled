@@ -13,7 +13,7 @@ abstract class bja {
         qv.field_o = null;
         String var3 = fna.field_k;
         if (var3 == null) {
-          var3 = kma.field_c[0];
+          var3 = kma.defaultPlayerNames[0];
         }
         String[] var4 = new String[1];
         var4[0] = var3;

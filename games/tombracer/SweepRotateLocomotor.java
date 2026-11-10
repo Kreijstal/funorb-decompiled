@@ -206,7 +206,7 @@ final class SweepRotateLocomotor extends Locomotor {
         }
     }
 
-    final void b(byte param0) {
+    final void tick(byte param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         int var3 = 0;
@@ -247,7 +247,7 @@ final class SweepRotateLocomotor extends Locomotor {
         }
     }
 
-    final void b(int param0) {
+    final void applyConstraint(int param0) {
         try {
           if (param0 != 1) {
             field_q = 91;
@@ -460,7 +460,7 @@ final class SweepRotateLocomotor extends Locomotor {
         }
     }
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -468,7 +468,7 @@ final class SweepRotateLocomotor extends Locomotor {
           if (param0 != 0) {
             this.field_r = 54;
           }
-          param1 = fs.a((byte) 26, param1, this.field_r);
+          param1 = fs.mixHash((byte) 26, param1, this.field_r);
           stackIn_4_0 = param1;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

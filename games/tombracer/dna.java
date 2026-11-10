@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class dna extends kna {
+abstract class dna extends PrefabComponent {
     static jpa field_F;
     static String field_I;
     static String field_H;

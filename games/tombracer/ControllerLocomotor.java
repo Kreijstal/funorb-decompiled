@@ -13,7 +13,7 @@ final class ControllerLocomotor extends Locomotor {
     static String field_o;
     static cn field_v;
 
-    final void b(byte param0) {
+    final void tick(byte param0) {
         if (this.field_u.length == 0 ||
           null == this.field_u) {
           this.field_j = true;
@@ -25,7 +25,7 @@ final class ControllerLocomotor extends Locomotor {
         if (this.field_u.length <= this.field_s) {
           this.field_s = this.field_u.length - 1;
         }
-        this.field_u[this.field_s].b((byte) 71);
+        this.field_u[this.field_s].tick((byte) 71);
         int var2 = 52 / ((param0 + 69) / 42);
     }
 
@@ -39,7 +39,7 @@ final class ControllerLocomotor extends Locomotor {
         }
     }
 
-    final void b(int param0) {
+    final void applyConstraint(int param0) {
         if (param0 != 1) {
           Trap var3 = (Trap) null;
           this.attachToTrap(32, (Trap) null);
@@ -90,8 +90,8 @@ final class ControllerLocomotor extends Locomotor {
         int var2 = 94 % ((28 - param0) / 49);
     }
 
-    final int a(int param0, int param1) {
-        param1 = fs.a((byte) 63, param1, this.field_s);
+    final int hashState(int param0, int param1) {
+        param1 = fs.mixHash((byte) 63, param1, this.field_s);
         if (param0 != 0) {
           this.field_u = (Locomotor[]) null;
         }
@@ -133,7 +133,7 @@ final class ControllerLocomotor extends Locomotor {
           super.encode(param0, (byte) -128);
           param0.writeBits((byte) 7, this.field_u.length, 2);
           if (param1 > -78) {
-            this.b(-101);
+            this.applyConstraint(-101);
           }
           for (var3_int = 0; var3_int < this.field_u.length; var3_int++) {
             this.field_u[var3_int].encode(param0, (byte) -117);
@@ -187,7 +187,7 @@ final class ControllerLocomotor extends Locomotor {
             var5.attachToTrap(36, param1);
           }
           if (param0 <= 35) {
-            this.b((byte) -51);
+            this.tick((byte) -51);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

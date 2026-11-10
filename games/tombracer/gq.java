@@ -420,7 +420,7 @@ final class gq extends uta {
         }
     }
 
-    public final boolean a(byte param0, char param1, int param2) {
+    public final boolean handleKey(byte param0, char param1, int param2) {
         boolean discarded$0 = false;
         boolean stackIn_5_0 = false;
         int stackIn_23_0 = 0;
@@ -448,7 +448,7 @@ final class gq extends uta {
         var11 = TombRacer.field_G ? 1 : 0;
         try {
           if (!this.a(-2)) {
-            stackIn_5_0 = super.a((byte) -72, param1, param2);
+            stackIn_5_0 = super.handleKey((byte) -72, param1, param2);
             return stackIn_5_0;
           }
           var4 = this.field_o.e((byte) -106);
@@ -548,7 +548,7 @@ final class gq extends uta {
               39 == var10Lifetime1)) {
               this.field_o.a(101, -19696, '￿');
             }
-            discarded$0 = super.a((byte) -72, param1, param2);
+            discarded$0 = super.handleKey((byte) -72, param1, param2);
             var4Lifetime1 = this.field_o.e((byte) -124);
             var5Lifetime1 = this.field_o.j(-1320);
             if (var6 == 0 &&
@@ -582,12 +582,12 @@ final class gq extends uta {
         }
     }
 
-    public final void b(int param0) {
+    public final void drawOverlay(int param0) {
         String var2 = null;
         try {
           var2 = this.field_o.field_Cb.field_r;
           this.field_o.field_Cb.field_r = gsa.field_w;
-          super.b(param0);
+          super.drawOverlay(param0);
           this.field_o.field_Cb.field_r = var2;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "gq.B(" + param0 + ')');

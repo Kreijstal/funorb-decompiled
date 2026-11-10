@@ -4,7 +4,7 @@
 final class tia {
     static kea field_d;
     static int field_a;
-    static String[] field_c;
+    static String[] fallDeathMessages;
     static String field_b;
 
     final static void a(int param0, java.awt.Component param1) {
@@ -22,11 +22,11 @@ final class tia {
         field_d = null;
         if (param0 >= -91) {
           field_d = (kea) null;
-          field_c = null;
+          fallDeathMessages = null;
           field_b = null;
           return;
         }
-        field_c = null;
+        fallDeathMessages = null;
         field_b = null;
     }
 
@@ -101,7 +101,7 @@ final class tia {
     }
 
     static {
-        field_c = new String[]{"<%0> took a tumble", "<%0> slipped and fell", "<%0> fought with gravity and lost", "<%0> fought with Newton's law and the law won", "<%0>'s attempt was pitiful", "<%0> became the fall-guy", "<%0>'s velocity was definitely terminal", "<%0> has fallen and cannot get up"};
+        fallDeathMessages = new String[]{"<%0> took a tumble", "<%0> slipped and fell", "<%0> fought with gravity and lost", "<%0> fought with Newton's law and the law won", "<%0>'s attempt was pitiful", "<%0> became the fall-guy", "<%0>'s velocity was definitely terminal", "<%0> has fallen and cannot get up"};
         field_d = new kea();
     }
 }

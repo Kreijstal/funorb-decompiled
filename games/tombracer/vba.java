@@ -17,7 +17,7 @@ final class vba extends we {
         this.field_r = new int[42];
         try {
           for (var7_int = 0; var7_int < this.field_w.length; var7_int++) {
-            this.field_w[var7_int] = uca.field_c.a(3, 0);
+            this.field_w[var7_int] = uca.field_c.nextBounded(3, 0);
           }
           this.field_o = false;
         } catch (RuntimeException runtimeException) {
@@ -248,8 +248,8 @@ final class vba extends we {
         }
         this.h(var6, 0).a(var4 + var3, var3 + var5);
         var7Lifetime1 = var5 + 20 + 180;
-        var8 = lq.field_p[var6].toUpperCase();
-        var12 = kv.field_c[var6];
+        var8 = lq.achievementNames[var6].toUpperCase();
+        var12 = kv.achievementDescriptions[var6];
         var10 = this.a(var8, ds.field_n, -6671872, 180, var4, eda.field_f, 128, var7Lifetime1, 15);
         var7Lifetime1 = var7Lifetime1 + (5 + 15 * var10);
         if (!this.a(false, var6)) {

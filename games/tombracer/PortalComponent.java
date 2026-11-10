@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class PortalComponent extends kna {
+final class PortalComponent extends PrefabComponent {
     static long[][] field_I;
     private f field_G;
     static long[] field_H;
@@ -27,7 +27,7 @@ final class PortalComponent extends kna {
         return true;
     }
 
-    final Trap a(boolean param0, int param1, Room param2) {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         Trap var4 = null;
         RuntimeException var4_ref = null;
         Trap stackIn_3_0 = null;

@@ -62,7 +62,7 @@ final class aia extends IntrusiveNode {
           }
           var17 = param6.q(57);
           if (param6.getSimulation(-1553494544).f(8, 10915)) {
-            this.field_o = 100 + var17.a(50, 0);
+            this.field_o = 100 + var17.nextBounded(50, 0);
           }
           var9 = this.a(0) ? 1 : 0;
           var10 = this.h(21302) ? 1 : 0;
@@ -72,7 +72,7 @@ final class aia extends IntrusiveNode {
           var11 = 0;
           if (var9 == 0 &&
             var10 == 0 &&
-            var17.a(500, 0) == 0) {
+            var17.nextBounded(500, 0) == 0) {
             var11 = 1;
           }
           if (this.field_h > 0) {
@@ -103,11 +103,11 @@ final class aia extends IntrusiveNode {
           if (0 == this.field_s &&
             0 == this.field_p) {
             if (var9 == 0) {
-              var13 = var17.a(8, 0);
-              var12Lifetime1 = var17.a(32768, 0) + 32768;
+              var13 = var17.nextBounded(8, 0);
+              var12Lifetime1 = var17.nextBounded(32768, 0) + 32768;
             } else {
               var12Lifetime1 = 196608;
-              var13 = var17.a(8, 0);
+              var13 = var17.nextBounded(8, 0);
             }
             this.field_f = var13;
             this.field_s = var12Lifetime1 * ne.field_f[this.field_f][0];
@@ -129,7 +129,7 @@ final class aia extends IntrusiveNode {
               this.field_s = 180 * (this.field_s >> 8);
               this.field_p = 180 * (this.field_p >> 8);
             }
-            this.field_h = var17.a(75, 0) + 25;
+            this.field_h = var17.nextBounded(75, 0) + 25;
           }
           if (0 < this.field_i) {
             this.field_i = this.field_i - 1;
@@ -422,7 +422,7 @@ final class aia extends IntrusiveNode {
           if (param1 > -72) {
             this.g(-8);
           }
-          this.field_k = 50 + param0.q(-120).a(50, 0);
+          this.field_k = 50 + param0.q(-120).nextBounded(50, 0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "aia.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

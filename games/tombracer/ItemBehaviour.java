@@ -25,16 +25,16 @@ abstract class ItemBehaviour extends Behaviour {
         return this.field_o;
     }
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         param0 = upa.a(this.field_o, param0, (byte) -53);
         param0 = upa.a(this.field_n, param0, (byte) -111);
         if (param1 < -48) {
-          param0 = fs.a((byte) 37, param0, this.field_r);
+          param0 = fs.mixHash((byte) 37, param0, this.field_r);
           return param0;
         }
         Player var4 = (Player) null;
-        this.a(-22, (Player) null);
-        param0 = fs.a((byte) 37, param0, this.field_r);
+        this.tryCollect(-22, (Player) null);
+        param0 = fs.mixHash((byte) 37, param0, this.field_r);
         return param0;
     }
 
@@ -58,9 +58,9 @@ abstract class ItemBehaviour extends Behaviour {
         }
     }
 
-    abstract boolean a(int param0, Player param1);
+    abstract boolean tryCollect(int param0, Player param1);
 
-    final void k(int param0) {
+    final void tick(int param0) {
         Player var3;
         Player var4;
         Player var5;
@@ -84,7 +84,7 @@ abstract class ItemBehaviour extends Behaviour {
               if (!this.trap.a((byte) 110, var4.getY(9648), var4.getX(3), var4.getHeight((byte) 55), var4.getWidth(-125))) {
                 return;
               }
-              if (this.a(param0 - 5533, var4)) {
+              if (this.tryCollect(param0 - 5533, var4)) {
                 if (0 < this.field_q) {
                   this.field_r = this.field_q;
                 }
@@ -116,7 +116,7 @@ abstract class ItemBehaviour extends Behaviour {
                 if (!this.trap.a((byte) 110, var5.getY(9648), var5.getX(3), var5.getHeight((byte) 55), var5.getWidth(-125))) {
                   return;
                 }
-                if (this.a(param0 - 5533, var5)) {
+                if (this.tryCollect(param0 - 5533, var5)) {
                   if (0 < this.field_q) {
                     this.field_r = this.field_q;
                   }
@@ -158,7 +158,7 @@ abstract class ItemBehaviour extends Behaviour {
           if (!this.trap.a((byte) 110, var6.getY(9648), var6.getX(3), var6.getHeight((byte) 55), var6.getWidth(-125))) {
             return;
           }
-          if (!this.a(param0 - 5533, var6)) {
+          if (!this.tryCollect(param0 - 5533, var6)) {
             return;
           }
           if (0 < this.field_q) {
@@ -188,7 +188,7 @@ abstract class ItemBehaviour extends Behaviour {
           if (!this.trap.a((byte) 110, var7.getY(9648), var7.getX(3), var7.getHeight((byte) 55), var7.getWidth(-125))) {
             return;
           }
-          if (!this.a(param0 - 5533, var7)) {
+          if (!this.tryCollect(param0 - 5533, var7)) {
             return;
           }
           if (0 < this.field_q) {
@@ -219,7 +219,7 @@ abstract class ItemBehaviour extends Behaviour {
           if (!this.trap.a((byte) 110, var8.getY(9648), var8.getX(3), var8.getHeight((byte) 55), var8.getWidth(-125))) {
             return;
           }
-          if (!this.a(param0 - 5533, var8)) {
+          if (!this.tryCollect(param0 - 5533, var8)) {
             return;
           }
           if (0 < this.field_q) {
@@ -235,7 +235,7 @@ abstract class ItemBehaviour extends Behaviour {
             if (!this.field_n) {
               if (!var10.q(81) &&
                 this.trap.a((byte) 110, var10.getY(9648), var10.getX(3), var10.getHeight((byte) 55), var10.getWidth(-125))) {
-                if (!this.a(param0 - 5533, var10)) {
+                if (!this.tryCollect(param0 - 5533, var10)) {
                   return;
                 }
                 if (0 < this.field_q) {
@@ -261,7 +261,7 @@ abstract class ItemBehaviour extends Behaviour {
           if (!this.field_n) {
             if (!var9.q(81) &&
               this.trap.a((byte) 110, var9.getY(9648), var9.getX(3), var9.getHeight((byte) 55), var9.getWidth(-125))) {
-              if (!this.a(param0 - 5533, var9)) {
+              if (!this.tryCollect(param0 - 5533, var9)) {
                 return;
               }
               if (0 < this.field_q) {

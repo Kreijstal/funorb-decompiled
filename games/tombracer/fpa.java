@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fpa {
-    static String[] field_b;
+    static String[] snakeDeathMessages;
     static String field_a;
     static boolean field_c;
 
@@ -38,9 +38,9 @@ final class fpa {
     }
 
     public static void releaseStatics(int param0) {
-        field_b = null;
+        snakeDeathMessages = null;
         if (param0 != 1451) {
-          field_b = (String[]) null;
+          snakeDeathMessages = (String[]) null;
           field_a = null;
           return;
         }
@@ -52,7 +52,7 @@ final class fpa {
     }
 
     static {
-        field_b = new String[]{"<%0> was bitten by a snake", "<%0> hates snakes", "<%0> thought hissing was a sign of friendship", "<%0> was popped by a python", "<%0> was chomped by a cobra", "<%0> ran headlong into a pit of poisonous snakes", "<%0>'s ankles were nibbled"};
+        snakeDeathMessages = new String[]{"<%0> was bitten by a snake", "<%0> hates snakes", "<%0> thought hissing was a sign of friendship", "<%0> was popped by a python", "<%0> was chomped by a cobra", "<%0> ran headlong into a pit of poisonous snakes", "<%0>'s ankles were nibbled"};
         field_a = "To report a player, click on the most suitable option from the Rules of Conduct. Please do not abuse this form.";
     }
 }

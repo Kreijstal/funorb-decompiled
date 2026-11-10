@@ -55,7 +55,7 @@ final class PowerDownItemBehaviour extends ItemBehaviour {
         }
     }
 
-    final boolean a(int param0, Player param1) {
+    final boolean tryCollect(int param0, Player param1) {
         RuntimeException var3 = null;
         BitPacketBuffer var4 = null;
         RuntimeException stackIn_6_0 = null;

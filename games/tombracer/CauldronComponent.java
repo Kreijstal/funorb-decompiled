@@ -4,7 +4,7 @@
 final class CauldronComponent extends SwitchComponent {
     static u[] field_J;
 
-    final Trap a(boolean param0, int param1, Room param2) {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         EffectSwitchBehaviour var5 = null;
         jma var6 = null;
@@ -126,7 +126,7 @@ final class CauldronComponent extends SwitchComponent {
     final int t(int param0) {
         if (param0 != 8) {
           Room var3 = (Room) null;
-          this.a(false, -105, (Room) null);
+          this.createTrap(false, -105, (Room) null);
           return 7;
         }
         return 7;

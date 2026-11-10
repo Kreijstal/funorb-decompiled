@@ -342,20 +342,20 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
 
     final int i(int param0, int param1) {
         int var4 = TombRacer.field_G ? 1 : 0;
-        param0 = fs.a((byte) 79, param0, this.localX);
+        param0 = fs.mixHash((byte) 79, param0, this.localX);
         if (param1 >= -100) {
           this.field_db = -42;
         }
-        param0 = fs.a((byte) 64, param0, this.localY);
-        param0 = fs.a((byte) 84, param0, this.field_F);
+        param0 = fs.mixHash((byte) 64, param0, this.localY);
+        param0 = fs.mixHash((byte) 84, param0, this.field_F);
         Locomotor var5 = (Locomotor) (this.locomotors.first(-80));
         while (var5 != null) {
-          param0 = var5.a(0, param0);
+          param0 = var5.hashState(0, param0);
           var5 = (Locomotor) (this.locomotors.next(121));
         }
         Behaviour var6 = (Behaviour) (this.behaviours.first(-80));
         while (var6 != null) {
-          param0 = var6.a(param0, -109);
+          param0 = var6.hashState(param0, -109);
           var6 = (Behaviour) (this.behaviours.next(115));
         }
         return param0;
@@ -513,7 +513,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         this.field_fb.a(86);
         if (this.field_l) {
           if (0 == this.field_R) {
-            this.field_R = this.room.q(-88).a(3, 0);
+            this.field_R = this.room.q(-88).nextBounded(3, 0);
           } else {
             this.field_R = this.field_R + 1;
           }
@@ -544,7 +544,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         if (!param1 &&
           this.field_v &&
           this.getSimulation(15470).f(8, 10915)) {
-          this.a(86, true, 1, 131072 - this.room.q(90).a(262144, 0), -this.room.q(85).a(262144, 0) + 131072, 0);
+          this.a(86, true, 1, 131072 - this.room.q(90).nextBounded(262144, 0), -this.room.q(85).nextBounded(262144, 0) + 131072, 0);
         }
         if (!this.j(-1)) {
           this.field_Q = false;
@@ -560,14 +560,14 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
                 continue;
               }
               if (var11.a(-80)) {
-                var11.b((byte) -121);
+                var11.tick((byte) -121);
               }
               var11 = (Locomotor) (var8.a(-1));
             }
           }
           var6 = (Locomotor) (var8.a(true));
           while (var6 != null) {
-            var6.b(1);
+            var6.applyConstraint(1);
             var6 = (Locomotor) (var8.a(-1));
           }
           var9 = new uja(this.behaviours);
@@ -577,10 +577,10 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
               if (var12.a(-116)) {
                 if (param1) {
                   if (!var12.p((byte) 120)) {
-                    var12.k(5418);
+                    var12.tick(5418);
                   }
                 } else {
-                  var12.k(5418);
+                  var12.tick(5418);
                 }
               }
             } else {

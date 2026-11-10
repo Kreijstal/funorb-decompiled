@@ -89,7 +89,7 @@ final class TrapSpawner extends Spawner {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void spawn(int param0, int param1, int param2, int param3) {
         Trap var6 = null;
         Trap var6Lifetime1;
         if (this.template.J(96)) {
@@ -107,7 +107,7 @@ final class TrapSpawner extends Spawner {
           var6.m(1, param1);
           var6.c(param2, -19879);
           var6.c(false, param0);
-          this.field_a.a(var6, (byte) 32);
+          this.field_a.addTrap(var6, (byte) 32);
           return;
         }
         this.getTypeId(false);
@@ -116,7 +116,7 @@ final class TrapSpawner extends Spawner {
         var6Lifetime1.m(1, param1);
         var6Lifetime1.c(param2, -19879);
         var6Lifetime1.c(false, param0);
-        this.field_a.a(var6Lifetime1, (byte) 32);
+        this.field_a.addTrap(var6Lifetime1, (byte) 32);
     }
 
     final static void b(boolean param0) {

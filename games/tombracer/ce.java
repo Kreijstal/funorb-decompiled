@@ -288,7 +288,7 @@ final class ce extends dg {
                               if (var13 != 0) {
                                 var9.field_a = dfa.a(var15 + mpa.field_W[var9.field_h], 2048, -70);
                                 var9.field_e = this;
-                                var9.field_b = var17.e(true).a(100, 0);
+                                var9.field_b = var17.e(true).nextBounded(100, 0);
                                 var9.field_c = var5 - var4;
                                 var9.field_d = -var3 + var7;
                                 var9.field_f = this.a(var9, 2);
@@ -326,7 +326,7 @@ final class ce extends dg {
               }
               if (decompiledFrameRemainder0) {
                 var9.field_e = this;
-                var9.field_b = var17.e(true).a(100, 0);
+                var9.field_b = var17.e(true).nextBounded(100, 0);
                 var9.field_c = var5 - var4;
                 var9.field_d = -var3 + var7;
                 var9.field_f = this.a(var9, 2);
@@ -425,8 +425,8 @@ final class ce extends dg {
           var3 = 0;
           if (this.field_m != null &&
             this.field_m.d(false)) {
-            this.field_u = -131072 + uca.field_c.a(262144, ~param0);
-            this.field_x = uca.field_c.a(262144, param0 + 1) - 131072;
+            this.field_u = -131072 + uca.field_c.nextBounded(262144, ~param0);
+            this.field_x = uca.field_c.nextBounded(262144, param0 + 1) - 131072;
             var2_int = 1;
             if (this.field_m.g((byte) 120)) {
               var2_int = 0;
@@ -678,7 +678,7 @@ final class ce extends dg {
           var2.field_d = 0;
           var2.field_h = 0;
           var2.field_e = this;
-          var2.field_b = this.a(53).e(true).a(100, 0);
+          var2.field_b = this.a(53).e(true).nextBounded(100, 0);
           var2.field_f = this.a(var3, 2);
           this.field_r[0][0] = var3;
         } catch (RuntimeException runtimeException) {

@@ -78,7 +78,7 @@ final class TouchSwitchBehaviour extends Behaviour implements ut {
         return 0;
     }
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         if (param1 >= -48) {
           field_s = true;
           return this.field_p.a(122, param0);
@@ -95,7 +95,7 @@ final class TouchSwitchBehaviour extends Behaviour implements ut {
         }
     }
 
-    final void k(int param0) {
+    final void tick(int param0) {
         if (this.field_p.f((byte) -56)) {
           this.c(false);
           this.field_p.a((byte) -14, this.d(8031));

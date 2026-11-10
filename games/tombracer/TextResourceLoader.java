@@ -169,7 +169,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -118, "mu_x_cannot_join_full");
                 if (var2 != null) {
-                  kna.field_C = jaa.a((byte) 65, var2);
+                  PrefabComponent.field_C = jaa.a((byte) 65, var2);
                 }
                 var2 = dn.a((byte) 110, "mu_x_cannot_join_inprogress");
                 if (null != var2) {
@@ -373,7 +373,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 111, "join_withdraw_request_xs_game");
                 if (null != var2) {
-                  kna.field_B = jaa.a((byte) 84, var2);
+                  PrefabComponent.field_B = jaa.a((byte) 84, var2);
                 }
                 var2 = dn.a((byte) 117, "mu_gameopt_kick_x_from_this_game");
                 if (null != var2) {
@@ -1327,51 +1327,51 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 118, "monthnames,0");
                 if (null != var2) {
-                  bk.field_m[0] = jaa.a((byte) 55, var2);
+                  bk.monthNames[0] = jaa.a((byte) 55, var2);
                 }
                 var2 = dn.a((byte) -17, "monthnames,1");
                 if (null != var2) {
-                  bk.field_m[1] = jaa.a((byte) 32, var2);
+                  bk.monthNames[1] = jaa.a((byte) 32, var2);
                 }
                 var2 = dn.a((byte) 127, "monthnames,2");
                 if (null != var2) {
-                  bk.field_m[2] = jaa.a((byte) 58, var2);
+                  bk.monthNames[2] = jaa.a((byte) 58, var2);
                 }
                 var2 = dn.a((byte) 127, "monthnames,3");
                 if (var2 != null) {
-                  bk.field_m[3] = jaa.a((byte) 116, var2);
+                  bk.monthNames[3] = jaa.a((byte) 116, var2);
                 }
                 var2 = dn.a((byte) -60, "monthnames,4");
                 if (var2 != null) {
-                  bk.field_m[4] = jaa.a((byte) 91, var2);
+                  bk.monthNames[4] = jaa.a((byte) 91, var2);
                 }
                 var2 = dn.a((byte) 113, "monthnames,5");
                 if (null != var2) {
-                  bk.field_m[5] = jaa.a((byte) 103, var2);
+                  bk.monthNames[5] = jaa.a((byte) 103, var2);
                 }
                 var2 = dn.a((byte) -28, "monthnames,6");
                 if (null != var2) {
-                  bk.field_m[6] = jaa.a((byte) 26, var2);
+                  bk.monthNames[6] = jaa.a((byte) 26, var2);
                 }
                 var2 = dn.a((byte) -64, "monthnames,7");
                 if (null != var2) {
-                  bk.field_m[7] = jaa.a((byte) 60, var2);
+                  bk.monthNames[7] = jaa.a((byte) 60, var2);
                 }
                 var2 = dn.a((byte) -124, "monthnames,8");
                 if (var2 != null) {
-                  bk.field_m[8] = jaa.a((byte) 117, var2);
+                  bk.monthNames[8] = jaa.a((byte) 117, var2);
                 }
                 var2 = dn.a((byte) 124, "monthnames,9");
                 if (var2 != null) {
-                  bk.field_m[9] = jaa.a((byte) 124, var2);
+                  bk.monthNames[9] = jaa.a((byte) 124, var2);
                 }
                 var2 = dn.a((byte) -26, "monthnames,10");
                 if (var2 != null) {
-                  bk.field_m[10] = jaa.a((byte) 99, var2);
+                  bk.monthNames[10] = jaa.a((byte) 99, var2);
                 }
                 var2 = dn.a((byte) 113, "monthnames,11");
                 if (null != var2) {
-                  bk.field_m[11] = jaa.a((byte) 51, var2);
+                  bk.monthNames[11] = jaa.a((byte) 51, var2);
                 }
                 var2 = dn.a((byte) -77, "create_welcome");
                 if (var2 != null) {
@@ -2325,7 +2325,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -15, "mp_offerrematch");
                 if (var2 != null) {
-                  kna.field_E = jaa.a((byte) 58, var2);
+                  PrefabComponent.field_E = jaa.a((byte) 58, var2);
                 }
                 var2 = dn.a((byte) 104, "mp_offerrematch_unrated");
                 if (var2 != null) {
@@ -2573,19 +2573,19 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -19, "reconnect_lost_seq,0");
                 if (null != var2) {
-                  tba.field_i[0] = jaa.a((byte) 102, var2);
+                  tba.reconnectingMessages[0] = jaa.a((byte) 102, var2);
                 }
                 var2 = dn.a((byte) 121, "reconnect_lost_seq,1");
                 if (var2 != null) {
-                  tba.field_i[1] = jaa.a((byte) 54, var2);
+                  tba.reconnectingMessages[1] = jaa.a((byte) 54, var2);
                 }
                 var2 = dn.a((byte) -74, "reconnect_lost_seq,2");
                 if (null != var2) {
-                  tba.field_i[2] = jaa.a((byte) 63, var2);
+                  tba.reconnectingMessages[2] = jaa.a((byte) 63, var2);
                 }
                 var2 = dn.a((byte) -106, "reconnect_lost_seq,3");
                 if (null != var2) {
-                  tba.field_i[3] = jaa.a((byte) 96, var2);
+                  tba.reconnectingMessages[3] = jaa.a((byte) 96, var2);
                 }
                 var2 = dn.a((byte) 120, "reconnect_lost");
                 if (null != var2) {

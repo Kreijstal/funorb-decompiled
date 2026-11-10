@@ -159,7 +159,7 @@ final class WheeledMountComponent extends PathMoverComponent {
         }
     }
 
-    final Trap a(boolean param0, int param1, Room param2) {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         PathMoveLocomotor var5 = null;
         mfa var6 = null;

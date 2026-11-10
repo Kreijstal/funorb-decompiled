@@ -13,7 +13,7 @@ final class WeaponItemBehaviour extends ItemBehaviour {
         }
     }
 
-    final boolean a(int param0, Player param1) {
+    final boolean tryCollect(int param0, Player param1) {
         RuntimeException var3 = null;
         Player var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -27,7 +27,7 @@ final class WeaponItemBehaviour extends ItemBehaviour {
             return true;
           }
           var4 = (Player) null;
-          this.a(66, (Player) null);
+          this.tryCollect(66, (Player) null);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

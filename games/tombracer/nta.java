@@ -7,7 +7,7 @@ final class nta implements Renderable {
     private int field_a;
     private bua field_f;
     private int field_i;
-    static String[] field_b;
+    static String[] crushDeathMessages;
     private int field_c;
     static int field_d;
     private int field_j;
@@ -38,7 +38,7 @@ final class nta implements Renderable {
         if (param0 != -25821) {
           return;
         }
-        field_b = null;
+        crushDeathMessages = null;
     }
 
     public final void f(int param0) {
@@ -91,7 +91,7 @@ final class nta implements Renderable {
 
     public final boolean d(byte param0) {
         if (param0 != 48) {
-          field_b = (String[]) null;
+          crushDeathMessages = (String[]) null;
           if (this.field_a != 0) {
             return false;
           }
@@ -122,7 +122,7 @@ final class nta implements Renderable {
     }
 
     static {
-        field_b = new String[]{"<%0> went squish", "<%0> was smushed", "<%0> became two-dimensional", "<%0> was pulverised", "<%0> got stuck between a rock and a hard place", "<%0> couldn't take the pressure", "<%0> felt the squeeze", "<%0> always wanted to be thinner"};
+        crushDeathMessages = new String[]{"<%0> went squish", "<%0> was smushed", "<%0> became two-dimensional", "<%0> was pulverised", "<%0> got stuck between a rock and a hard place", "<%0> couldn't take the pressure", "<%0> felt the squeeze", "<%0> always wanted to be thinner"};
         field_e = "The invitation has been withdrawn.";
         field_h = -2073743619;
     }

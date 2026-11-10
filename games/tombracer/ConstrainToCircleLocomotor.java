@@ -12,7 +12,7 @@ final class ConstrainToCircleLocomotor extends ConstraintLocomotor {
     static String field_z;
     private boolean field_s;
 
-    final void b(int param0) {
+    final void applyConstraint(int param0) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -103,14 +103,14 @@ final class ConstrainToCircleLocomotor extends ConstraintLocomotor {
         this.trap.a((byte) -105, var2 + (var11Lifetime2 - this.trap.s(25745)), -this.trap.getLocalY(false) + (var3 + var12Lifetime2));
     }
 
-    final void b(byte param0) {
+    final void tick(byte param0) {
         int var2 = -27 / ((param0 + 69) / 42);
     }
 
-    final int a(int param0, int param1) {
-        param1 = fs.a((byte) 30, param1, this.field_u);
+    final int hashState(int param0, int param1) {
+        param1 = fs.mixHash((byte) 30, param1, this.field_u);
         if (param0 != 0) {
-          this.b(-37);
+          this.applyConstraint(-37);
           return param1;
         }
         return param1;

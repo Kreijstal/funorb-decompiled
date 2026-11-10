@@ -429,11 +429,11 @@ final class RandomMazeBehaviour extends Behaviour {
           for (var20 = 0; var20 < this.field_v; var20++) {
             if (var36.length <= var20) {
               while (0 != this.field_z.getCell((byte) -5, var37[var20][1], var37[var20][0])) {
-                var37[var20][0] = 1 + var3.a(-2 + this.field_z.width, 0);
-                var37[var20][1] = 1 + var3.a(-2 + this.field_z.height, 0);
+                var37[var20][0] = 1 + var3.nextBounded(-2 + this.field_z.width, 0);
+                var37[var20][1] = 1 + var3.nextBounded(-2 + this.field_z.height, 0);
               }
             } else {
-              var21 = var3.a(var36.length, 0);
+              var21 = var3.nextBounded(var36.length, 0);
               while (var36[var21][0] == -1) {
                 var21++;
                 if (var21 < var36.length) {
@@ -728,7 +728,7 @@ final class RandomMazeBehaviour extends Behaviour {
         qna.a(param0, false, 4);
     }
 
-    final void k(int param0) {
+    final void tick(int param0) {
         boolean discarded$0 = false;
         if (param0 != 5418) {
           pc var3 = (pc) null;
@@ -736,7 +736,7 @@ final class RandomMazeBehaviour extends Behaviour {
         }
     }
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         if (param1 >= -48) {
           this.field_A = (Trap) null;
         }

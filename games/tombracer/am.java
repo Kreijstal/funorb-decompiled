@@ -72,27 +72,27 @@ final class am extends dg {
             field_n = -110;
           }
           var9 = this.a(46).e(true);
-          this.field_g = var9.a(100, 0);
+          this.field_g = var9.nextBounded(100, 0);
           var5 = 0;
           var7 = this.field_m;
           if (var7 == 1) {
             this.field_p = new bua(1, 48);
             this.field_p.a(3, true, (byte) -109, 1);
-            var5Lifetime1 = var9.a(20, 0);
+            var5Lifetime1 = var9.nextBounded(20, 0);
             this.field_p.b(-125, var5Lifetime1);
             return;
           }
           if (2 == var7) {
             this.field_p = new bua(1, 50);
             this.field_p.a(3, true, (byte) 62, 2);
-            var5Lifetime2 = var9.a(20, 0);
+            var5Lifetime2 = var9.nextBounded(20, 0);
             this.field_p.b(-83, var5Lifetime2);
             return;
           }
           if (0 == var7) {
             this.field_p = new bua(1, 47);
             this.field_p.a(3, true, (byte) -90, 0);
-            var5Lifetime3 = var9.a(20, 0);
+            var5Lifetime3 = var9.nextBounded(20, 0);
             this.field_p.b(125, var5Lifetime3);
             return;
           }

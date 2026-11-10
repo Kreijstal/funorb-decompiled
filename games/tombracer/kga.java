@@ -79,7 +79,7 @@ final class kga extends dg {
             return;
           }
           var7 = (MiscItemBehaviour) (param2);
-          var5 = var7.j((byte) -77);
+          var5 = var7.getItemType((byte) -77);
           if (var5 == 0) {
             this.field_t = 3;
             return;

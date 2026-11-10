@@ -231,7 +231,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
         }
     }
 
-    final void k(int param0) {
+    final void tick(int param0) {
         boolean stackIn_15_1 = false;
         boolean stackIn_45_1 = false;
         if (this.field_p) {
@@ -311,17 +311,17 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
         this.c(false);
     }
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         param0 = upa.a(this.field_s, param0, (byte) -55);
         if (param1 <= -48) {
           param0 = upa.a(this.field_t, param0, (byte) -119);
-          param0 = fs.a((byte) 89, param0, this.field_u.b(524288));
+          param0 = fs.mixHash((byte) 89, param0, this.field_u.b(524288));
           return param0;
         }
         in var4 = (in) null;
         WeaponShooterBehaviour.a(-27, (in) null);
         param0 = upa.a(this.field_t, param0, (byte) -119);
-        param0 = fs.a((byte) 89, param0, this.field_u.b(524288));
+        param0 = fs.mixHash((byte) 89, param0, this.field_u.b(524288));
         return param0;
     }
 

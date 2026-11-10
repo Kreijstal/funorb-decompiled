@@ -12,7 +12,7 @@ final class Effect implements noa {
     int size;
     private static String[] field_i;
     WorldBody field_c;
-    static String[] field_d;
+    static String[] lavaDeathMessages;
 
     final void a(WorldBody param0, int param1) {
         this.field_g = param0;
@@ -28,7 +28,7 @@ final class Effect implements noa {
 
     final static boolean a(char param0, boolean param1) {
         if (!param1) {
-          field_d = (String[]) null;
+          lavaDeathMessages = (String[]) null;
           if (param0 == 32) {
             return true;
           }
@@ -73,7 +73,7 @@ final class Effect implements noa {
           return;
         }
         field_e = null;
-        field_d = null;
+        lavaDeathMessages = null;
     }
 
     final void a(BitPacketBuffer param0, byte param1) {
@@ -231,6 +231,6 @@ final class Effect implements noa {
         field_i = new String[1];
         field_i[0] = "Normal";
         field_h = new String[11][];
-        field_d = new String[]{"<%0> took a nice hot bath", "<%0> took a dip", "<%0> felt the heat", "<%0> needs to cool off", "<%0> melted", "<%0> found that lava was bad to touch"};
+        lavaDeathMessages = new String[]{"<%0> took a nice hot bath", "<%0> took a dip", "<%0> felt the heat", "<%0> needs to cool off", "<%0> melted", "<%0> found that lava was bad to touch"};
     }
 }

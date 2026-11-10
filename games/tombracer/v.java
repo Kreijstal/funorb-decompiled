@@ -638,9 +638,9 @@ final class v {
         for (var7 = 0; var7 < 8; var7++) {
           var6.a(17, var7, this.field_a.a(-44));
         }
-        var6.a(-2767, param4);
+        var6.setHash(-2767, param4);
         var6.b(8469, param3);
-        var6.a(param1, (byte) -113);
+        var6.setRound(param1, (byte) -113);
         this.field_h.addLast((byte) -104, var6);
         hw.a((byte) -111, 0, 71, var6);
     }

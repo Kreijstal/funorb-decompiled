@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class SwitchComponent extends kna {
+abstract class SwitchComponent extends PrefabComponent {
     private f field_G;
     private jma field_H;
     private boolean field_I;
-    static String[] field_F;
+    static String[] fireDeathMessages;
 
     final void w(int param0) {
         super.w(-126);
@@ -38,7 +38,7 @@ abstract class SwitchComponent extends kna {
     }
 
     public static void A(int param0) {
-        field_F = null;
+        fireDeathMessages = null;
         if (param0 != 1) {
           SwitchComponent.a(false, 'ￆ');
         }
@@ -134,6 +134,6 @@ abstract class SwitchComponent extends kna {
     }
 
     static {
-        field_F = new String[]{"<%0> was burnt", "<%0> was flamed", "<%0> was immolated", "<%0> was barbecued", "<%0> was carbonised", "<%0> was toasted", "<%0> was roasted", "<%0> was fired", "<%0> was slightly more than well-done", "<%0> felt the burn", "<%0> got a little hot under the collar", "<%0> couldn't take the heat", "<%0> should stay out of the kitchen", "<%0> smelled the napalm"};
+        fireDeathMessages = new String[]{"<%0> was burnt", "<%0> was flamed", "<%0> was immolated", "<%0> was barbecued", "<%0> was carbonised", "<%0> was toasted", "<%0> was roasted", "<%0> was fired", "<%0> was slightly more than well-done", "<%0> felt the burn", "<%0> got a little hot under the collar", "<%0> couldn't take the heat", "<%0> should stay out of the kitchen", "<%0> smelled the napalm"};
     }
 }

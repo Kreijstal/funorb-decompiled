@@ -3,13 +3,13 @@
  */
 final class MiscItemBehaviour extends ItemBehaviour {
     static long field_s;
-    private int field_u;
+    private int itemType;
     static String field_t;
     static hs field_v;
 
     final void g(byte param0) {
         if (param0 != 3) {
-          this.field_u = 4;
+          this.itemType = 4;
         }
     }
 
@@ -52,11 +52,11 @@ final class MiscItemBehaviour extends ItemBehaviour {
         }
     }
 
-    final int j(byte param0) {
+    final int getItemType(byte param0) {
         if (param0 >= -26) {
           return -74;
         }
-        return this.field_u;
+        return this.itemType;
     }
 
     MiscItemBehaviour(Room param0, boolean param1) {
@@ -66,13 +66,13 @@ final class MiscItemBehaviour extends ItemBehaviour {
     MiscItemBehaviour(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
-          this.field_u = param1.readBits((byte) 44, 6);
+          this.itemType = param1.readBits((byte) 44, 6);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ue.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final boolean a(int param0, Player param1) {
+    final boolean tryCollect(int param0, Player param1) {
         RuntimeException stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;
         String stackIn_41_2 = null;
@@ -83,10 +83,10 @@ final class MiscItemBehaviour extends ItemBehaviour {
         int var3_intLifetime1;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          if (!param1.a(this, (byte) 76)) {
+          if (!param1.canPickUp(this, (byte) 76)) {
             return false;
           }
-          var3_int = this.field_u;
+          var3_int = this.itemType;
           if (var3_int == 0) {
             param1.g(62, 106);
           } else {
@@ -107,7 +107,7 @@ final class MiscItemBehaviour extends ItemBehaviour {
           if (param0 > -114) {
             return false;
           }
-          var3_intLifetime1 = this.field_u;
+          var3_intLifetime1 = this.itemType;
           if (var3_intLifetime1 == 0) {
             if (!param1.x(-70)) {
               param1.a(this.trap.b(125), (byte) -102, 58982, 1);
@@ -149,11 +149,11 @@ final class MiscItemBehaviour extends ItemBehaviour {
         }
     }
 
-    final void a(int param0, boolean param1) {
+    final void setItemType(int param0, boolean param1) {
         if (param1) {
           return;
         }
-        this.field_u = param0;
+        this.itemType = param0;
     }
 
     final int getTypeId(boolean param0) {
@@ -167,7 +167,7 @@ final class MiscItemBehaviour extends ItemBehaviour {
     final void encode(boolean param0, BitPacketBuffer param1) {
         try {
           super.encode(param0, param1);
-          param1.writeBits((byte) -128, this.field_u, 6);
+          param1.writeBits((byte) -128, this.itemType, 6);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ue.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -178,7 +178,7 @@ final class MiscItemBehaviour extends ItemBehaviour {
         if (!param0) {
           return;
         }
-        if (0 == this.field_u) {
+        if (0 == this.itemType) {
           this.b(true).a(0, 0, 67, 0, (byte) 6);
           return;
         }

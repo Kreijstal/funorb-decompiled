@@ -188,7 +188,7 @@ final class w extends sqa {
           }
           var5 = to.field_i[var3_int];
           if (0 < var5) {
-            var4 = var4 + uca.field_c.a(var5, 0);
+            var4 = var4 + uca.field_c.nextBounded(var5, 0);
           }
           var6 = 0;
           if (var3_int == 28) {

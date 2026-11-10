@@ -43,13 +43,13 @@ final class EffectSwitchBehaviour extends Behaviour implements ut {
         field_r = null;
     }
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         if (param1 > -48) {
           Trap var4 = (Trap) null;
           this.attachToTrap(false, (Trap) null);
         }
-        param0 = fs.a((byte) 87, param0, this.field_s);
-        param0 = fs.a((byte) 82, param0, this.field_p);
+        param0 = fs.mixHash((byte) 87, param0, this.field_s);
+        param0 = fs.mixHash((byte) 82, param0, this.field_p);
         return this.field_q.a(89, param0);
     }
 
@@ -81,7 +81,7 @@ final class EffectSwitchBehaviour extends Behaviour implements ut {
 
     private final boolean a(boolean param0, int param1) {
         if (!param0) {
-          this.k(85);
+          this.tick(85);
         }
         if (!this.field_u.a(0, param1)) {
           return false;
@@ -354,7 +354,7 @@ final class EffectSwitchBehaviour extends Behaviour implements ut {
         }
     }
 
-    final void k(int param0) {
+    final void tick(int param0) {
         if (this.field_q.f((byte) -56)) {
           this.c(false);
         }

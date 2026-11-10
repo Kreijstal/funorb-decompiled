@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class PushableMountComponent extends kna {
+final class PushableMountComponent extends PrefabComponent {
     static efa field_F;
 
     final void encode(boolean param0, BitPacketBuffer param1) {
@@ -37,7 +37,7 @@ final class PushableMountComponent extends kna {
         return false;
     }
 
-    final Trap a(boolean param0, int param1, Room param2) {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         Trap var4 = null;
         RuntimeException var4_ref = null;
         SimpleBlockBehaviour var5 = null;

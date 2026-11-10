@@ -15,7 +15,7 @@ final class mr extends b implements tma, tsa, mia {
     private so field_J;
     private so field_C;
     static String field_H;
-    static String[] field_x;
+    static String[] dayNames;
 
     public final void a(lga param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
@@ -427,13 +427,13 @@ final class mr extends b implements tma, tsa, mia {
         if (param0 == 0) {
           field_w = null;
           field_H = null;
-          field_x = null;
+          dayNames = null;
           return;
         }
         mr.a((byte) 10);
         field_w = null;
         field_H = null;
-        field_x = null;
+        dayNames = null;
     }
 
     private final String e(int param0) {
@@ -597,6 +597,6 @@ final class mr extends b implements tma, tsa, mia {
 
     static {
         field_H = "Creep carefully over snakes.";
-        field_x = new String[]{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
+        dayNames = new String[]{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
     }
 }

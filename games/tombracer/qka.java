@@ -227,7 +227,7 @@ final class qka extends qra {
           if (var11 != 0) {
             var10_ref_String = id.field_k.toUpperCase();
           } else {
-            var10_ref_String = vj.field_d[var9].toUpperCase();
+            var10_ref_String = vj.worldNames[var9].toUpperCase();
           }
           SocketConnector.a(var10_ref_String, 1, eda.field_f, 2431750, 8 + o.field_d.field_m, var6, 1, -(var6 >> 1) + var8, var7 - (var5 >> 1), -1, (byte) 60, var5);
           oka.a(this.field_h.a(this.field_h.field_x, false).toUpperCase(), wga.field_a[this.field_h.field_x], eda.field_f, -1, -15 + var4, var3, -1);
@@ -416,7 +416,7 @@ final class qka extends qra {
               if (this.field_h.field_k.a(this.field_h.field_x, true)) {
                 this.field_p[1].field_e = sl.field_g.toUpperCase();
               } else {
-                this.field_p[1].field_e = kna.field_E.toUpperCase();
+                this.field_p[1].field_e = PrefabComponent.field_E.toUpperCase();
               }
             }
           }

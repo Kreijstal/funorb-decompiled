@@ -27,7 +27,7 @@ abstract class Spawner implements noa {
 
     abstract lj a(boolean param0, int param1, int param2);
 
-    abstract void a(int param0, int param1, int param2, int param3);
+    abstract void spawn(int param0, int param1, int param2, int param3);
 
     private Spawner(Room param0) {
         try {

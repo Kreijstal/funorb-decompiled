@@ -76,7 +76,7 @@ final class ArrowShooterComponent extends ShooterComponent {
         return 7;
     }
 
-    final Trap a(boolean param0, int param1, Room param2) {
+    final Trap createTrap(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         WeaponShooterBehaviour var5 = null;
         Weapon var6 = null;
@@ -100,7 +100,7 @@ final class ArrowShooterComponent extends ShooterComponent {
           if (this.s((byte) 73)) {
             var7_int = var6.a(true);
             if (var7_int > 0) {
-              var6.b(param2.q(122).a(var7_int, 0), false);
+              var6.b(param2.q(122).nextBounded(var7_int, 0), false);
             }
           }
           var5.a(var6, (byte) 66);

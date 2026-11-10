@@ -65,7 +65,7 @@ final class mba extends uq {
         int var2Lifetime2;
         var5 = TombRacer.field_G ? 1 : 0;
         if (0 == this.h(16094)) {
-          this.field_k = this.a(10685).e(true).a(100, 0);
+          this.field_k = this.a(10685).e(true).nextBounded(100, 0);
           this.field_m = -1;
           this.field_n = 0;
           this.field_i = -1;

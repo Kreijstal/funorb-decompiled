@@ -99,11 +99,11 @@ final class FuseBehaviour extends Behaviour {
         }
     }
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         if (param1 >= -48) {
           return 57;
         }
-        param0 = fs.a((byte) 122, param0, this.field_s);
+        param0 = fs.mixHash((byte) 122, param0, this.field_s);
         return param0;
     }
 
@@ -262,7 +262,7 @@ final class FuseBehaviour extends Behaviour {
         return uja.field_a.a(false);
     }
 
-    final void k(int param0) {
+    final void tick(int param0) {
         int discarded$0 = 0;
         if (param0 != 5418) {
           Effect var3 = (Effect) null;

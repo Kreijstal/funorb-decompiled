@@ -9,16 +9,16 @@ final class SimpleMoveLocomotor extends Locomotor {
     static jea field_s;
     private int field_o;
 
-    final int a(int param0, int param1) {
-        param1 = fs.a((byte) 35, param1, this.field_o);
+    final int hashState(int param0, int param1) {
+        param1 = fs.mixHash((byte) 35, param1, this.field_o);
         if (param0 != 0) {
-          this.b((byte) -115);
+          this.tick((byte) -115);
           return param1;
         }
         return param1;
     }
 
-    final void b(byte param0) {
+    final void tick(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -400,7 +400,7 @@ final class SimpleMoveLocomotor extends Locomotor {
         }
     }
 
-    final void b(int param0) {
+    final void applyConstraint(int param0) {
         if (param0 != 1) {
           this.field_o = 76;
         }
@@ -415,7 +415,7 @@ final class SimpleMoveLocomotor extends Locomotor {
 
     final void c(int param0, int param1) {
         if (param1 != 26621) {
-          this.b(99);
+          this.applyConstraint(99);
           this.field_t = param0;
           return;
         }
@@ -428,7 +428,7 @@ final class SimpleMoveLocomotor extends Locomotor {
           param0.writeBits((byte) 75, this.b(0, this.field_t), 8);
           param0.writeBits((byte) -127, this.field_r >> 16, 10);
           if (param1 > -78) {
-            this.b(95);
+            this.applyConstraint(95);
           }
           param0.writeBits((byte) -126, cn.a((byte) 46, this.field_p, 8192, 4), 4);
           param0.writeBits((byte) 63, this.field_q ? 1 : 0, 1);

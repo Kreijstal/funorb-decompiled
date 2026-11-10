@@ -18,15 +18,15 @@ final class PressureSwitchBehaviour extends Behaviour implements ut {
         field_p = null;
     }
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         if (param1 >= -48) {
           this.c(56);
         }
-        param0 = fs.a((byte) 122, param0, this.field_t);
+        param0 = fs.mixHash((byte) 122, param0, this.field_t);
         return this.field_n.a(105, param0);
     }
 
-    final void k(int param0) {
+    final void tick(int param0) {
         int var2;
         npa var3;
         ffa[] var4;
@@ -59,7 +59,7 @@ final class PressureSwitchBehaviour extends Behaviour implements ut {
 
     public final int c(int param0) {
         if (param0 != 17832) {
-          this.k(121);
+          this.tick(121);
         }
         return 3364198;
     }
@@ -145,7 +145,7 @@ final class PressureSwitchBehaviour extends Behaviour implements ut {
             return false;
           }
           if (param1 > -73) {
-            this.k(15);
+            this.tick(15);
           }
           if (this.trap == param0) {
             return false;
