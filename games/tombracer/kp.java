@@ -60,7 +60,7 @@ final class kp {
             this.field_b.put(29166, var14, (long)param0);
             return var14;
           }
-          if (bh.a((int) var5.field_h, false)) {
+          if (PlayTrackCommand.a((int) var5.field_h, false)) {
             var22 = this.field_e.a(14907, param0, true, var6, 0.699999988079071f, var6);
             var20 = this.field_a.a(true, var6, var5.field_r != 0 ? true : false, var6, var22);
             var20.a((byte) -105, var5.field_b, var5.field_n);
@@ -89,7 +89,7 @@ final class kp {
           this.field_b.put(29166, var21, (long)param0);
           return var21;
         }
-        if (bh.a((int) var5.field_h, false)) {
+        if (PlayTrackCommand.a((int) var5.field_h, false)) {
           var7Lifetime2 = this.field_e.a(14907, param0, true, var6, 0.699999988079071f, var6);
           var21Lifetime1 = this.field_a.a(true, var6, var5.field_r != 0 ? true : false, var6, var7Lifetime2);
           var21Lifetime1.a((byte) -105, var5.field_b, var5.field_n);

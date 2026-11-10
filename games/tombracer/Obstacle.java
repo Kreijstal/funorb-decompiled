@@ -743,8 +743,8 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
             this.n(-8195);
           }
           this.field_o = new bca(param0.formatVersion, param1);
-          fieldTemp$0 = fi.field_c;
-          fi.field_c = fi.field_c + 1;
+          fieldTemp$0 = FixedPointPerlinNoise3D.field_c;
+          FixedPointPerlinNoise3D.field_c = FixedPointPerlinNoise3D.field_c + 1;
           this.field_n = fieldTemp$0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

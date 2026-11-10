@@ -196,7 +196,7 @@ final class no extends MatchOverlay {
           var11 = -var9 - var8 + var2;
           var12 = var3 - var10 * 2;
           var13 = -var8 + (-var9 - 24 + var11);
-          var18 = lq.achievementNames[this.field_n].toUpperCase();
+          var18 = ShowLevelSetCommand.achievementNames[this.field_n].toUpperCase();
           var15 = ds.field_n.a(var18, (byte) -117);
           while (var15 > var13) {
             var13 = var13 + var4;
@@ -214,7 +214,7 @@ final class no extends MatchOverlay {
         var11Lifetime1 = -var9Lifetime1 - var8 + var2;
         var12Lifetime1 = var3 - var10Lifetime1 * 2;
         var13Lifetime1 = -var8 + (-var9Lifetime1 - 24 + var11Lifetime1);
-        String var17 = lq.achievementNames[this.field_n].toUpperCase();
+        String var17 = ShowLevelSetCommand.achievementNames[this.field_n].toUpperCase();
         var15Lifetime1 = ds.field_n.a(var17, (byte) -117);
         while (var15Lifetime1 > var13Lifetime1) {
           var13Lifetime1 = var13Lifetime1 + var4;

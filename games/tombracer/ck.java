@@ -106,7 +106,7 @@ final class ck {
           SocketArchiveNetworkClient.field_w[2] = EmbossOperator.field_q;
           SocketArchiveNetworkClient.field_w[3] = ObjectPool.field_d;
           SocketArchiveNetworkClient.field_w[4] = PacketBuffer.field_f;
-          SocketArchiveNetworkClient.field_w[1] = cha.field_b;
+          SocketArchiveNetworkClient.field_w[1] = RasterBuffer.field_b;
           RasterShape.field_e = new jea(0L, (jea) null);
           LightSource.field_h = new jea(0L, ooa.field_f, ija.field_i);
           vw.field_b = new jea(0L, SecondaryNodeDeque.field_b, MessageOverlay.field_m);

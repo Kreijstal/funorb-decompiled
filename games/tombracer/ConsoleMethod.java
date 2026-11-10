@@ -83,7 +83,7 @@ abstract class ConsoleMethod extends DualLinkNode {
         }
     }
 
-    abstract ConsoleValue a(ConsoleValue[] param0, int param1);
+    abstract ConsoleValue invoke(ConsoleValue[] param0, int param1);
 
     ConsoleMethod(String param0, Class[] param1, String param2) {
         StringBuilder var7 = null;

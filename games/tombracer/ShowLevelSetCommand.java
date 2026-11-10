@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lq extends ConsoleMethod {
+final class ShowLevelSetCommand extends ConsoleMethod {
     static String[] achievementNames;
     static int[] field_o;
 
-    final ConsoleValue a(ConsoleValue[] param0, int param1) {
+    final ConsoleValue invoke(ConsoleValue[] param0, int param1) {
         RuntimeException var3 = null;
         ConsoleValue stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -14,7 +14,7 @@ final class lq extends ConsoleMethod {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            lq.releaseStatics(10);
+            ShowLevelSetCommand.releaseStatics(10);
           }
           mn.h(30001);
           stackIn_3_0 = new ConsoleValue("void");
@@ -35,7 +35,7 @@ final class lq extends ConsoleMethod {
 
     public static void releaseStatics(int param0) {
         if (param0 != 29706) {
-          lq.releaseStatics(-18);
+          ShowLevelSetCommand.releaseStatics(-18);
           achievementNames = null;
           field_o = null;
           return;
@@ -44,7 +44,7 @@ final class lq extends ConsoleMethod {
         field_o = null;
     }
 
-    lq(String param0, Class[] param1, String param2) {
+    ShowLevelSetCommand(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
     }
 

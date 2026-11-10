@@ -64,7 +64,7 @@ final class VoronoiNoiseOperator extends TextureOperator {
           return;
         }
         try {
-          paa.a((ScrollPane) null, -1, (String) null, 0L, -11635, (int[]) null, param2, param1, (String) null);
+          DateInputWidget.a((ScrollPane) null, -1, (String) null, 0L, -11635, (int[]) null, param2, param1, (String) null);
           if (param1 == 0) {
             var10 = hka.field_b;
             var11 = ColouriseOperator.field_m[0];
@@ -102,7 +102,7 @@ final class VoronoiNoiseOperator extends TextureOperator {
             var26 = ColouriseOperator.field_m[2];
             var29Lifetime1Lifetime4 = var26;
             var29Lifetime1Lifetime5 = var26;
-            var27 = ot.field_w;
+            var27 = HardwareRidgedWaterNoise.field_w;
             var25.field_f.addIconItem(var26, 13, var27, false);
           }
           if (param1 == 2) {

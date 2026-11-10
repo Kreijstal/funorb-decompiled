@@ -70,11 +70,11 @@ abstract class SimulationObserver {
           if (param2 <= 52) {
             this.field_a = (IntrusiveDeque) null;
           }
-          if (!param0.h(126)) {
+          if (!param0.isRacing(126)) {
             return;
           }
           this.a((byte) -27, param0);
-          param0.a(-1, param1);
+          param0.step(-1, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

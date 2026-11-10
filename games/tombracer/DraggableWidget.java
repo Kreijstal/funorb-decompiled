@@ -127,7 +127,7 @@ final class DraggableWidget extends SingleChildWidget {
           if ((!(this.child instanceof FocusableWidget) ||
             ((FocusableWidget) (this.child)).field_y) &&
             this.field_s == 1) {
-            var5_int = -param0 + jba.field_j - this.field_A;
+            var5_int = -param0 + AgeValidator.field_j - this.field_A;
             var6 = -this.field_D + (GridWidgetContainer.field_B - param3);
             if (this.field_i != var5_int ||
               var6 != this.field_n) {

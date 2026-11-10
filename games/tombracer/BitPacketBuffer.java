@@ -294,7 +294,7 @@ final class BitPacketBuffer extends PacketBuffer {
               baa.field_d.a(0, new ei[]{(ei) ((Object) kra.field_a)});
             } else {
               if (tia.field_d == FontMetrics.field_f) {
-                baa.field_d.a(0, new ei[]{(ei) ((Object) paa.field_z)});
+                baa.field_d.a(0, new ei[]{(ei) ((Object) DateInputWidget.field_z)});
               } else {
                 if (FontMetrics.field_f == PitModel.field_s) {
                   baa.field_d.a(0, new ei[]{(ei) ((Object) UsernameSuggestionsPanel.field_x)});

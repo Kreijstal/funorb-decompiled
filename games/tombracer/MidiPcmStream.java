@@ -33,7 +33,7 @@ class MidiPcmStream extends PcmStream {
     private boolean field_t;
     private int field_C;
     private boolean field_s;
-    private qua field_x;
+    private MusicTrack field_x;
 
     final synchronized void d(int param0, int param1, int param2) {
         this.c(param1, 125, param0);
@@ -516,7 +516,7 @@ class MidiPcmStream extends PcmStream {
         this.field_H = param0;
     }
 
-    final synchronized void a(qua param0, boolean param1, byte param2) {
+    final synchronized void a(MusicTrack param0, boolean param1, byte param2) {
         if (param2 != 80) {
           return;
         }
@@ -1091,7 +1091,7 @@ class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized boolean a(int param0, qua param1, ResourceArchive param2, SoundCache param3, int param4) {
+    final synchronized boolean a(int param0, MusicTrack param1, ResourceArchive param2, SoundCache param3, int param4) {
         int stackIn_20_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -1145,7 +1145,7 @@ class MidiPcmStream extends PcmStream {
                 break scanLoop1;
               }
             }
-            param1.a();
+            param1.releasePatchUsage();
             break;
           }
           stackIn_20_0 = var6_int;
@@ -1309,7 +1309,7 @@ class MidiPcmStream extends PcmStream {
         }
     }
 
-    synchronized void a(boolean param0, qua param1, byte param2, boolean param3) {
+    synchronized void a(boolean param0, MusicTrack param1, byte param2, boolean param3) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         int var6 = 0;

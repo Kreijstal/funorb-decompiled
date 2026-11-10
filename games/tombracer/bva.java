@@ -23,21 +23,21 @@ final class bva {
         if (param0 != -107) {
           bva.releaseStatics((byte) 0);
           var1 = System.currentTimeMillis();
-          if (var1 < dca.field_o) {
-            QuickChatCategory.field_p = QuickChatCategory.field_p + (-var1 + dca.field_o);
-            dca.field_o = var1;
+          if (var1 < LegacyTurbulentWaterNoise.field_o) {
+            QuickChatCategory.field_p = QuickChatCategory.field_p + (-var1 + LegacyTurbulentWaterNoise.field_o);
+            LegacyTurbulentWaterNoise.field_o = var1;
             return var1 + QuickChatCategory.field_p;
           }
-          dca.field_o = var1;
+          LegacyTurbulentWaterNoise.field_o = var1;
           return var1 + QuickChatCategory.field_p;
         }
         var1Lifetime1 = System.currentTimeMillis();
-        if (var1Lifetime1 >= dca.field_o) {
-          dca.field_o = var1Lifetime1;
+        if (var1Lifetime1 >= LegacyTurbulentWaterNoise.field_o) {
+          LegacyTurbulentWaterNoise.field_o = var1Lifetime1;
           return var1Lifetime1 + QuickChatCategory.field_p;
         }
-        QuickChatCategory.field_p = QuickChatCategory.field_p + (-var1Lifetime1 + dca.field_o);
-        dca.field_o = var1Lifetime1;
+        QuickChatCategory.field_p = QuickChatCategory.field_p + (-var1Lifetime1 + LegacyTurbulentWaterNoise.field_o);
+        LegacyTurbulentWaterNoise.field_o = var1Lifetime1;
         return var1Lifetime1 + QuickChatCategory.field_p;
     }
 

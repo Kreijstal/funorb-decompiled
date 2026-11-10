@@ -10,7 +10,7 @@ abstract class oga extends IntrusiveNode {
 
     final static void a(boolean param0) {
         TileOperator.field_p = param0 ? true : false;
-        jf.field_r = false;
+        LoadProfileCommand.field_r = false;
         jsa.a(false, -1);
         kl.field_a = fta.field_c;
         wt.field_d = fta.field_c;

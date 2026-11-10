@@ -8,9 +8,9 @@ final class tk {
     final static int a(int param0) {
         if (param0 != -22636) {
           field_b = (ResourceArchive) null;
-          return ot.field_v;
+          return HardwareRidgedWaterNoise.field_v;
         }
-        return ot.field_v;
+        return HardwareRidgedWaterNoise.field_v;
     }
 
     public static void releaseStatics(boolean param0) {

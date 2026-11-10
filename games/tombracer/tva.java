@@ -46,7 +46,7 @@ final class tva extends qe {
         if (3 != var4) {
           throw new IllegalArgumentException("Animation category not recognised");
         }
-        return jf.field_p[param1];
+        return LoadProfileCommand.field_p[param1];
     }
 
     final void b(boolean param0, int param1) {

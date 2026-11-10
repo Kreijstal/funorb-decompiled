@@ -293,7 +293,7 @@ final class PitSnake extends IntrusiveNode {
         if (ControllerLocomotor.field_t == baa.field_d.field_i.field_b) {
           return 2;
         }
-        if (baa.field_d.field_i.field_b == paa.field_z) {
+        if (baa.field_d.field_i.field_b == DateInputWidget.field_z) {
           return 1;
         }
         if (baa.field_d.field_i.field_b == vea.field_c) {

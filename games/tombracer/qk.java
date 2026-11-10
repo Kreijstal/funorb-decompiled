@@ -84,7 +84,7 @@ final class qk extends rt {
           if (param3 < 34) {
             qk.h(-73);
           }
-          cha.a(param7, 2, param1, param6, param2, param5, param0, 1, param4);
+          RasterBuffer.a(param7, 2, param1, param6, param2, param5, param0, 1, param4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "qk.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }

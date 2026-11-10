@@ -3,35 +3,35 @@
  */
 import java.util.*;
 
-abstract class fi {
-    private short[] field_e;
-    private int field_d;
-    private int field_f;
-    private short[] field_g;
-    private int field_b;
+abstract class FixedPointPerlinNoise3D {
+    private short[] permutation;
+    private int periodY;
+    private int periodX;
+    private short[] octaveFrequencies;
+    private int periodZ;
     static int field_c;
-    int field_a;
-    private int field_h;
+    int octaveCount;
+    private int seed;
 
-    abstract void a(int param0, byte param1, int param2);
+    abstract void accumulateOctave(int param0, byte param1, int param2);
 
     private final void initializePowersOfTwo(int param0) {
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
-        this.field_g = new short[this.field_a];
+        this.octaveFrequencies = new short[this.octaveCount];
         if (param0 != -15063) {
           this.initializePowersOfTwo(-68);
         }
-        for (var2 = 0; var2 < this.field_a; var2++) {
-          this.field_g[var2] = (short)(int)Math.pow(2.0, (double)var2);
+        for (var2 = 0; var2 < this.octaveCount; var2++) {
+          this.octaveFrequencies[var2] = (short)(int)Math.pow(2.0, (double)var2);
         }
     }
 
-    abstract void c(int param0);
+    abstract void finishVoxel(int param0);
 
-    abstract void a(byte param0);
+    abstract void resetOutput(byte param0);
 
-    private final void b(int param0) {
+    private final void initializePermutation(int param0) {
         Random var2;
         int var3;
         int var4;
@@ -40,26 +40,26 @@ abstract class fi {
         int var7;
         int var3Lifetime1;
         var7 = TombRacer.field_G ? 1 : 0;
-        var2 = new Random((long)this.field_h);
+        var2 = new Random((long)this.seed);
         var3 = 0;
         if (param0 != -256) {
           field_c = 100;
         }
         while (var3 < 255) {
-          this.field_e[var3] = (short)var3;
+          this.permutation[var3] = (short)var3;
           var3++;
         }
         for (var3Lifetime1 = 0; var3Lifetime1 < 255; var3Lifetime1++) {
           var4 = -var3Lifetime1 + 255;
           var5 = BufferedSocket.a(var4, var2, -120);
-          var6 = this.field_e[var5];
-          this.field_e[var5] = this.field_e[var4];
-          this.field_e[256 + var4] = (short) var6;
-          this.field_e[var4] = (short) var6;
+          var6 = this.permutation[var5];
+          this.permutation[var5] = this.permutation[var4];
+          this.permutation[256 + var4] = (short) var6;
+          this.permutation[var4] = (short) var6;
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
+    final void generateVolume(int param0, int param1, int param2, byte param3) {
         int var37 = 0;
         int var36 = 0;
         int var35 = 0;
@@ -117,7 +117,7 @@ abstract class fi {
         int var42Lifetime2;
         int var42Lifetime3;
         if (param3 > -87) {
-          this.field_f = 92;
+          this.periodX = 92;
         }
         for (var42 = 0; var42 < param2; var42++) {
           var39[var42] = (var42 << 12) / param2;
@@ -128,21 +128,21 @@ abstract class fi {
         for (var42Lifetime2 = 0; param1 > var42Lifetime2; var42Lifetime2++) {
           var41[var42Lifetime2] = (var42Lifetime2 << 12) / param1;
         }
-        this.a((byte) 50);
+        this.resetOutput((byte) 50);
         for (var37 = 0; var37 < param1; var37++) {
           for (var36 = 0; var36 < param0; var36++) {
             for (var35 = 0; param2 > var35; var35++) {
-              for (var38 = 0; var38 < this.field_a; var38++) {
-                var42Lifetime3 = this.field_g[var38] << 12;
-                var9 = var42Lifetime3 * this.field_d >> 12;
+              for (var38 = 0; var38 < this.octaveCount; var38++) {
+                var42Lifetime3 = this.octaveFrequencies[var38] << 12;
+                var9 = var42Lifetime3 * this.periodY >> 12;
                 var6 = var42Lifetime3 * var47[var36] >> 12;
                 var5 = var48[var35] * var42Lifetime3 >> 12;
                 var7 = var49[var37] * var42Lifetime3 >> 12;
-                var8 = this.field_f * var42Lifetime3 >> 12;
-                var10 = var42Lifetime3 * this.field_b >> 12;
-                var6 = var6 * this.field_d;
-                var5 = var5 * this.field_f;
-                var7 = var7 * this.field_b;
+                var8 = this.periodX * var42Lifetime3 >> 12;
+                var10 = var42Lifetime3 * this.periodZ >> 12;
+                var6 = var6 * this.periodY;
+                var5 = var5 * this.periodX;
+                var7 = var7 * this.periodZ;
                 var11 = var5 >> 12;
                 var12 = var11 + 1;
                 var13 = var6 >> 12;
@@ -171,53 +171,53 @@ abstract class fi {
                   var16 = 0;
                 }
                 var19 = pba.field_b[var7];
-                var24 = this.field_e[var16];
+                var24 = this.permutation[var16];
                 var17 = pba.field_b[var5];
                 var20 = -4096 + var5;
                 var22 = -4096 + var7;
                 var21 = var6 - 4096;
                 var18 = pba.field_b[var6];
-                var23 = this.field_e[var15];
-                var25 = this.field_e[var13 + var23];
-                var28 = this.field_e[var14 + var24];
-                var26 = this.field_e[var23 + var14];
-                var27 = this.field_e[var24 + var13];
-                var29 = HslAdjustOperator.a(var6, var5, 0, (int) this.field_e[var25 + var11], var7);
-                var30 = HslAdjustOperator.a(var6, var20, 0, (int) this.field_e[var25 + var12], var7);
+                var23 = this.permutation[var15];
+                var25 = this.permutation[var13 + var23];
+                var28 = this.permutation[var14 + var24];
+                var26 = this.permutation[var23 + var14];
+                var27 = this.permutation[var24 + var13];
+                var29 = HslAdjustOperator.a(var6, var5, 0, (int) this.permutation[var25 + var11], var7);
+                var30 = HslAdjustOperator.a(var6, var20, 0, (int) this.permutation[var25 + var12], var7);
                 var31 = var29 + (var17 * (-var29 + var30) >> 12);
-                var29Lifetime1 = HslAdjustOperator.a(var21, var5, 0, (int) this.field_e[var11 + var26], var7);
-                var30Lifetime1 = HslAdjustOperator.a(var21, var20, 0, (int) this.field_e[var26 + var12], var7);
+                var29Lifetime1 = HslAdjustOperator.a(var21, var5, 0, (int) this.permutation[var11 + var26], var7);
+                var30Lifetime1 = HslAdjustOperator.a(var21, var20, 0, (int) this.permutation[var26 + var12], var7);
                 var32 = (var17 * (-var29Lifetime1 + var30Lifetime1) >> 12) + var29Lifetime1;
-                var29Lifetime2 = HslAdjustOperator.a(var6, var5, 0, (int) this.field_e[var27 + var11], var22);
+                var29Lifetime2 = HslAdjustOperator.a(var6, var5, 0, (int) this.permutation[var27 + var11], var22);
                 var33 = ((-var31 + var32) * var18 >> 12) + var31;
-                var30Lifetime2 = HslAdjustOperator.a(var6, var20, 0, (int) this.field_e[var12 + var27], var22);
+                var30Lifetime2 = HslAdjustOperator.a(var6, var20, 0, (int) this.permutation[var12 + var27], var22);
                 var31Lifetime1 = ((-var29Lifetime2 + var30Lifetime2) * var17 >> 12) + var29Lifetime2;
-                var29Lifetime3 = HslAdjustOperator.a(var21, var5, 0, (int) this.field_e[var28 + var11], var22);
-                var30Lifetime3 = HslAdjustOperator.a(var21, var20, 0, (int) this.field_e[var28 + var12], var22);
+                var29Lifetime3 = HslAdjustOperator.a(var21, var5, 0, (int) this.permutation[var28 + var11], var22);
+                var30Lifetime3 = HslAdjustOperator.a(var21, var20, 0, (int) this.permutation[var28 + var12], var22);
                 var32Lifetime1 = var29Lifetime3 + ((-var29Lifetime3 + var30Lifetime3) * var17 >> 12);
                 var34 = ((-var31Lifetime1 + var32Lifetime1) * var18 >> 12) + var31Lifetime1;
-                this.a(((var34 - var33) * var19 >> 12) + var33, (byte) -96, var38);
+                this.accumulateOctave(((var34 - var33) * var19 >> 12) + var33, (byte) -96, var38);
               }
-              this.c(32164);
+              this.finishVoxel(32164);
             }
           }
         }
     }
 
-    fi(int param0, int param1, int param2, int param3, int param4) {
-        this.field_d = 4;
-        this.field_f = 4;
-        this.field_a = 4;
-        this.field_e = new short[512];
-        this.field_h = 0;
-        this.field_b = 4;
-        this.field_b = param4;
-        this.field_h = param0;
-        this.field_a = param1;
-        this.field_f = param2;
-        this.field_d = param3;
+    FixedPointPerlinNoise3D(int param0, int param1, int param2, int param3, int param4) {
+        this.periodY = 4;
+        this.periodX = 4;
+        this.octaveCount = 4;
+        this.permutation = new short[512];
+        this.seed = 0;
+        this.periodZ = 4;
+        this.periodZ = param4;
+        this.seed = param0;
+        this.octaveCount = param1;
+        this.periodX = param2;
+        this.periodY = param3;
         this.initializePowersOfTwo(-15063);
-        this.b(-256);
+        this.initializePermutation(-256);
     }
 
     static {

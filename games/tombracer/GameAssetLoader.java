@@ -56,7 +56,7 @@ final class GameAssetLoader implements LoadingStage {
         ResourceArchive var7 = var6;
         ResourceArchive var3 = ota.field_b;
         ina dupTemp$0 = new ina(55);
-        lba.field_r = dupTemp$0;
+        RidgedNoise3D.field_r = dupTemp$0;
         ina var4 = dupTemp$0;
         var4.a(256, this.field_k, RewardChoiceSlot.loadingQuipsAlternate[0], Player.loadingQuips[0]);
         var4.a(256, this.field_l, RewardChoiceSlot.loadingQuipsAlternate[1], Player.loadingQuips[1]);
@@ -192,7 +192,7 @@ final class GameAssetLoader implements LoadingStage {
             fea.a(false, var3);
           }
           for (var3Lifetime1 = 0; var3Lifetime1 < 4; var3Lifetime1++) {
-            paa.a(false, var3Lifetime1);
+            DateInputWidget.a(false, var3Lifetime1);
           }
           RewardChoicePhase.field_n.field_y.e(0);
           this.field_o = null;
@@ -374,7 +374,7 @@ final class GameAssetLoader implements LoadingStage {
         }
         if (!dna.field_G) {
           dea.field_c = false;
-          FullscreenConfirmationDialog.initializeLobbyAssets(this.field_s, 10, MirrorMoverLocomotor.field_o, fr.field_b, PitComponent.field_G, MouseWheelInput.field_a, 4, var2, true, 2, via.field_c, ota.field_b, jf.field_t, mga.field_f, var2);
+          FullscreenConfirmationDialog.initializeLobbyAssets(this.field_s, 10, MirrorMoverLocomotor.field_o, fr.field_b, PitComponent.field_G, MouseWheelInput.field_a, 4, var2, true, 2, via.field_c, ota.field_b, LoadProfileCommand.field_t, mga.field_f, var2);
           cq.field_d = PenaltyNotice.field_f;
           tda.initializeChatHistory(200, (byte) -71);
           fta.field_b = MatchState.field_p;

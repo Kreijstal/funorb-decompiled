@@ -247,23 +247,23 @@ final class TileOperator extends TextureOperator {
           cva.field_c[1] = PillarComponent.a("end", -127, param5, var15);
           cva.field_c[2] = PillarComponent.a("loop_start", -127, param5, var15);
           cva.field_c[3] = PillarComponent.a("loop_section", -126, param5, var15);
-          jf.field_p = new dk[13];
+          LoadProfileCommand.field_p = new dk[13];
           if (param2) {
             field_p = false;
           }
-          jf.field_p[0] = PillarComponent.a("fire", -128, param5, "brazier");
-          jf.field_p[1] = PillarComponent.a("fire", -126, param5, "torch");
-          jf.field_p[2] = PillarComponent.a("fire", -126, param5, "spitting_torch");
-          jf.field_p[3] = PillarComponent.a("platform1_crumble", -124, param5, "platform");
-          jf.field_p[4] = PillarComponent.a("platform2_crumble", -124, param5, "platform");
-          jf.field_p[5] = PillarComponent.a("platform3_crumble", -126, param5, "platform");
-          jf.field_p[6] = PillarComponent.a("key_turn", -128, param5, "keyblock");
-          jf.field_p[7] = PillarComponent.a("cauldron_bubbles", -124, param5, "bubbles");
-          jf.field_p[8] = PillarComponent.a("lava_bubbles", -127, param5, "bubbles");
-          jf.field_p[9] = PillarComponent.a("coin_collect", -128, param5, "coin");
-          jf.field_p[10] = PillarComponent.a("platform1_crumble_grey", -125, param5, "platform_grey");
-          jf.field_p[11] = PillarComponent.a("platform2_crumble_grey", -128, param5, "platform_grey");
-          jf.field_p[12] = PillarComponent.a("platform3_crumble_grey", -124, param5, "platform_grey");
+          LoadProfileCommand.field_p[0] = PillarComponent.a("fire", -128, param5, "brazier");
+          LoadProfileCommand.field_p[1] = PillarComponent.a("fire", -126, param5, "torch");
+          LoadProfileCommand.field_p[2] = PillarComponent.a("fire", -126, param5, "spitting_torch");
+          LoadProfileCommand.field_p[3] = PillarComponent.a("platform1_crumble", -124, param5, "platform");
+          LoadProfileCommand.field_p[4] = PillarComponent.a("platform2_crumble", -124, param5, "platform");
+          LoadProfileCommand.field_p[5] = PillarComponent.a("platform3_crumble", -126, param5, "platform");
+          LoadProfileCommand.field_p[6] = PillarComponent.a("key_turn", -128, param5, "keyblock");
+          LoadProfileCommand.field_p[7] = PillarComponent.a("cauldron_bubbles", -124, param5, "bubbles");
+          LoadProfileCommand.field_p[8] = PillarComponent.a("lava_bubbles", -127, param5, "bubbles");
+          LoadProfileCommand.field_p[9] = PillarComponent.a("coin_collect", -128, param5, "coin");
+          LoadProfileCommand.field_p[10] = PillarComponent.a("platform1_crumble_grey", -125, param5, "platform_grey");
+          LoadProfileCommand.field_p[11] = PillarComponent.a("platform2_crumble_grey", -128, param5, "platform_grey");
+          LoadProfileCommand.field_p[12] = PillarComponent.a("platform3_crumble_grey", -124, param5, "platform_grey");
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "nfa.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

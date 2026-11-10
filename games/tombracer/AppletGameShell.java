@@ -52,7 +52,7 @@ abstract class AppletGameShell extends GameApplet {
         if (param0 <= 95) {
           this.field_v = 64;
         }
-        String var2 = dca.f(12);
+        String var2 = LegacyTurbulentWaterNoise.f(12);
         cc.a(55, di.a(78), var2);
     }
 
@@ -101,7 +101,7 @@ abstract class AppletGameShell extends GameApplet {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5 = cha.a(pla.a(-1), RotaterMountComponent.A(49), 2);
+            var5 = RasterBuffer.a(pla.a(-1), RotaterMountComponent.A(49), 2);
             if (-1 != var5) {
               WaveformOperator.a(PressureSwitchBehaviour.field_s, var5, io.field_b, (byte) 100);
               io.field_b = null;
@@ -133,7 +133,7 @@ abstract class AppletGameShell extends GameApplet {
               if (var5Lifetime2 != -1) {
                 if (var5Lifetime2 == 0) {
                   ic.field_b = tr.field_g;
-                  ak.g(0);
+                  LoadLevelCommand.g(0);
                   Transform3D.field_c = 10;
                   HorizontalGradientOperator.field_m = false;
                 } else {
@@ -327,7 +327,7 @@ abstract class AppletGameShell extends GameApplet {
           if (0 != Trap.field_m) {
             return var2;
           }
-          ak.g(param0 + 46);
+          LoadLevelCommand.g(param0 + 46);
         } else {
           if (var2 != 1) {
             if (!fpa.field_c) {
@@ -341,7 +341,7 @@ abstract class AppletGameShell extends GameApplet {
           }
           if (Transform3D.field_c == 11 &&
             0 == Trap.field_m) {
-            ak.g(param0 + 46);
+            LoadLevelCommand.g(param0 + 46);
           }
         }
         return var2;
@@ -510,7 +510,7 @@ abstract class AppletGameShell extends GameApplet {
         if (param0 != -18) {
           return;
         }
-        wr.field_o = null;
+        ToggleMusicChannelCommand.field_o = null;
         cia.field_a = null;
         C2SActionPacket.field_k = null;
         pm.field_d = null;
@@ -594,7 +594,7 @@ abstract class AppletGameShell extends GameApplet {
             Trap.field_m == 0 &&
             Transform3D.field_c == 11 &&
             !uma.b(-1)) {
-            ak.g(0);
+            LoadLevelCommand.g(0);
           }
           if (Trap.field_m != -1 &&
             Trap.field_m != 0) {
@@ -639,7 +639,7 @@ abstract class AppletGameShell extends GameApplet {
                   epa.a(256, (byte) -84, ConsoleWindow.field_e);
                 }
               } else {
-                epa.a(256, (byte) -84, oe.field_l);
+                epa.a(256, (byte) -84, MatchingTextValidator.field_l);
               }
               TrackingCrusherComponent.field_G = true;
             }
@@ -746,10 +746,10 @@ abstract class AppletGameShell extends GameApplet {
         }
         if (cga.field_f == 13) {
           var4 = 1;
-          if (null != lba.field_r) {
-            stackIn_133_0 = (!lba.field_r.a((byte) 37)) ? 0 : 1;
+          if (null != RidgedNoise3D.field_r) {
+            stackIn_133_0 = (!RidgedNoise3D.field_r.a((byte) 37)) ? 0 : 1;
             var4 = stackIn_133_0;
-            ima.a(lba.field_r.field_i, lba.field_r.field_b, -65);
+            ima.a(RidgedNoise3D.field_r.field_i, RidgedNoise3D.field_r.field_b, -65);
           }
           if (var4 != 0) {
             cga.field_f = 20;

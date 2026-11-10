@@ -177,7 +177,7 @@ final class ft {
                   var26Lifetime1 = param0.field_o[var23Lifetime2];
                   ArrayWidgetGroup.field_u[var23Lifetime2] = var9 + (var18 * var26Lifetime1 + (var15 * var25Lifetime1 + var24Lifetime1 * var12) >> 16);
                   EmbossOperator.field_r[var23Lifetime2] = var10 + (var16 * var25Lifetime1 + var24Lifetime1 * var13 + var26Lifetime1 * var19 >> 16);
-                  lq.field_o[var23Lifetime2] = (var25Lifetime1 * var17 + (var24Lifetime1 * var14 + var26Lifetime1 * var20) >> 16) + var11;
+                  ShowLevelSetCommand.field_o[var23Lifetime2] = (var25Lifetime1 * var17 + (var24Lifetime1 * var14 + var26Lifetime1 * var20) >> 16) + var11;
                   var24Lifetime1 = param0.field_x[var23Lifetime2];
                   var25Lifetime1 = param0.field_G[var23Lifetime2];
                   var26Lifetime1 = param0.field_J[var23Lifetime2];
@@ -220,7 +220,7 @@ final class ft {
                   var20 = param0.field_c[var18];
                   var21Lifetime2 = param0.field_r[var18];
                   ada.field_y[var18] = var19 * var9 + var20 * var12 + var21Lifetime2 * var15 >> 16;
-                  ie.field_i[var18] = var19 * var10 + (var13 * var20 + var21Lifetime2 * var16) >> 16;
+                  DirectByteStorage.field_i[var18] = var19 * var10 + (var13 * var20 + var21Lifetime2 * var16) >> 16;
                   SoftReferenceCache.field_d[var18] = var21Lifetime2 * var17 + var14 * var20 + var19 * var11 >> 16;
                   var18++;
                 }

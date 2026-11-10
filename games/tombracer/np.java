@@ -290,8 +290,8 @@ final class np extends ka {
         RuntimeException decompiledCaughtException = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
-          var2_int = qu.field_b[param0];
-          var3 = qu.field_d[param0];
+          var2_int = ByteStorage.field_b[param0];
+          var3 = ByteStorage.field_d[param0];
           var4 = 0;
           do {
             if (this.field_lb <= var4) {
@@ -561,7 +561,7 @@ final class np extends ka {
             }
           }
           if (decompiledFrameCompleted9) {
-            stackIn_79_0 = so.a(param1, (byte) -106, this.field_u) ? 1 : 0;
+            stackIn_79_0 = ValidatedTextInputWidget.a(param1, (byte) -106, this.field_u) ? 1 : 0;
           }
           if (stackIn_79_0 == 0) {
             if (!ArchiveRequest.a(this.field_u, 0, param1)) {
@@ -2020,22 +2020,22 @@ final class np extends ka {
                         this.field_K[var14_int] = this.field_K[var14_int] - via.field_e;
                         this.field_A[var14_int] = this.field_A[var14_int] - ParticleEffects.field_b;
                         if (param4 != 0) {
-                          var15 = qu.field_b[param4];
-                          var16 = qu.field_d[param4];
+                          var15 = ByteStorage.field_b[param4];
+                          var16 = ByteStorage.field_d[param4];
                           var17 = var15 * this.field_K[var14_int] - (-(this.field_P[var14_int] * var16) - 16383) >> 14;
                           this.field_K[var14_int] = 16383 + (var16 * this.field_K[var14_int] - var15 * this.field_P[var14_int]) >> 14;
                           this.field_P[var14_int] = var17;
                         }
                         if (param2 != 0) {
-                          var15 = qu.field_b[param2];
-                          var16 = qu.field_d[param2];
+                          var15 = ByteStorage.field_b[param2];
+                          var16 = ByteStorage.field_d[param2];
                           var17 = 16383 + (var16 * this.field_K[var14_int] - this.field_A[var14_int] * var15) >> 14;
                           this.field_A[var14_int] = 16383 + (var15 * this.field_K[var14_int] + var16 * this.field_A[var14_int]) >> 14;
                           this.field_K[var14_int] = var17;
                         }
                         if (param3 != 0) {
-                          var15 = qu.field_b[param3];
-                          var16 = qu.field_d[param3];
+                          var15 = ByteStorage.field_b[param3];
+                          var16 = ByteStorage.field_d[param3];
                           var17 = 16383 + this.field_P[var14_int] * var16 + var15 * this.field_A[var14_int] >> 14;
                           this.field_A[var14_int] = 16383 + var16 * this.field_A[var14_int] - this.field_P[var14_int] * var15 >> 14;
                           this.field_P[var14_int] = var17;
@@ -2092,22 +2092,22 @@ final class np extends ka {
                             break;
                           }
                           if (param4 != 0) {
-                            var19 = qu.field_b[param4];
-                            var20 = qu.field_d[param4];
+                            var19 = ByteStorage.field_b[param4];
+                            var20 = ByteStorage.field_d[param4];
                             var21 = 16383 + this.field_E[var18] * var20 + var19 * this.field_Y[var18] >> 14;
                             this.field_Y[var18] = (short)(-(var19 * this.field_E[var18]) + (var20 * this.field_Y[var18] + 16383) >> 14);
                             this.field_E[var18] = (short)var21;
                           }
                           if (0 != param2) {
-                            var19 = qu.field_b[param2];
-                            var20 = qu.field_d[param2];
+                            var19 = ByteStorage.field_b[param2];
+                            var20 = ByteStorage.field_d[param2];
                             var21 = var20 * this.field_Y[var18] - var19 * this.field_cb[var18] + 16383 >> 14;
                             this.field_cb[var18] = (short)(16383 + (this.field_cb[var18] * var20 + this.field_Y[var18] * var19) >> 14);
                             this.field_Y[var18] = (short)var21;
                           }
                           if (param3 != 0) {
-                            var19 = qu.field_b[param3];
-                            var20 = qu.field_d[param3];
+                            var19 = ByteStorage.field_b[param3];
+                            var20 = ByteStorage.field_d[param3];
                             var21 = 16383 + this.field_cb[var18] * var19 + var20 * this.field_E[var18] >> 14;
                             this.field_cb[var18] = (short)(this.field_cb[var18] * var20 + (-(var19 * this.field_E[var18]) + 16383) >> 14);
                             this.field_E[var18] = (short)var21;
@@ -2155,12 +2155,12 @@ final class np extends ka {
             ParticleEffects.field_b = var18;
           }
           var16_ref_int__ = new int[9];
-          var17 = qu.field_d[param2];
-          var18 = qu.field_b[param2];
-          var19 = qu.field_d[param3];
-          var20 = qu.field_b[param3];
-          var21 = qu.field_d[param4];
-          var22 = qu.field_b[param4];
+          var17 = ByteStorage.field_d[param2];
+          var18 = ByteStorage.field_b[param2];
+          var19 = ByteStorage.field_d[param3];
+          var20 = ByteStorage.field_b[param3];
+          var21 = ByteStorage.field_d[param4];
+          var22 = ByteStorage.field_b[param4];
           var23 = 8192 + var21 * var18 >> 14;
           var24 = 8192 + var18 * var22 >> 14;
           var16_ref_int__[7] = var19 * var23 + var22 * var20 + 8192 >> 14;
@@ -2316,7 +2316,7 @@ final class np extends ka {
           }
           var1_int = NormalMapOperator.d(-77);
           var2 = za.a(18998);
-          aoa.field_b.a((byte) 57, var1_int + (jf.field_q << 1), -VerticalGradientOperator.field_m + wp.field_b, wt.field_a - jf.field_q, (VerticalGradientOperator.field_m << 1) + var2);
+          aoa.field_b.a((byte) 57, var1_int + (LoadProfileCommand.field_q << 1), -VerticalGradientOperator.field_m + wp.field_b, wt.field_a - LoadProfileCommand.field_q, (VerticalGradientOperator.field_m << 1) + var2);
           ConsoleToken.a(125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3801,22 +3801,22 @@ final class np extends ka {
                       stackIn_45_0 = ~param2;
                       stackIn_45_1 = -1;
                       if (stackIn_45_0 != stackIn_45_1) {
-                        var14 = qu.field_b[param2];
-                        var15 = qu.field_d[param2];
+                        var14 = ByteStorage.field_b[param2];
+                        var15 = ByteStorage.field_d[param2];
                         var16 = -(this.field_A[var13_int] * var14) + (var15 * this.field_K[var13_int] + 16383) >> 14;
                         this.field_A[var13_int] = this.field_A[var13_int] * var15 + this.field_K[var13_int] * var14 + 16383 >> 14;
                         this.field_K[var13_int] = var16;
                       }
                       if (param4 != 0) {
-                        var14 = qu.field_b[param4];
-                        var15 = qu.field_d[param4];
+                        var14 = ByteStorage.field_b[param4];
+                        var15 = ByteStorage.field_d[param4];
                         var16 = 16383 + var14 * this.field_K[var13_int] + this.field_P[var13_int] * var15 >> 14;
                         this.field_K[var13_int] = this.field_K[var13_int] * var15 - var14 * this.field_P[var13_int] + 16383 >> 14;
                         this.field_P[var13_int] = var16;
                       }
                       if (param3 != 0) {
-                        var14 = qu.field_b[param3];
-                        var15 = qu.field_d[param3];
+                        var14 = ByteStorage.field_b[param3];
+                        var15 = ByteStorage.field_d[param3];
                         var16 = 16383 + this.field_A[var13_int] * var14 + var15 * this.field_P[var13_int] >> 14;
                         this.field_A[var13_int] = 16383 + var15 * this.field_A[var13_int] - var14 * this.field_P[var13_int] >> 14;
                         this.field_P[var13_int] = var16;
@@ -3836,22 +3836,22 @@ final class np extends ka {
                       stackIn_45_0 = 0;
                       stackIn_45_1 = param4;
                       if (stackIn_45_0 != stackIn_45_1) {
-                        var14 = qu.field_b[param4];
-                        var15 = qu.field_d[param4];
+                        var14 = ByteStorage.field_b[param4];
+                        var15 = ByteStorage.field_d[param4];
                         var16 = this.field_P[var13_int] * var15 + this.field_K[var13_int] * var14 + 16383 >> 14;
                         this.field_K[var13_int] = 16383 + (var15 * this.field_K[var13_int] - var14 * this.field_P[var13_int]) >> 14;
                         this.field_P[var13_int] = var16;
                       }
                       if (param2 != 0) {
-                        var14 = qu.field_b[param2];
-                        var15 = qu.field_d[param2];
+                        var14 = ByteStorage.field_b[param2];
+                        var15 = ByteStorage.field_d[param2];
                         var16 = var15 * this.field_K[var13_int] - var14 * this.field_A[var13_int] + 16383 >> 14;
                         this.field_A[var13_int] = var14 * this.field_K[var13_int] + this.field_A[var13_int] * var15 + 16383 >> 14;
                         this.field_K[var13_int] = var16;
                       }
                       if (0 != param3) {
-                        var14 = qu.field_b[param3];
-                        var15 = qu.field_d[param3];
+                        var14 = ByteStorage.field_b[param3];
+                        var15 = ByteStorage.field_d[param3];
                         var16 = this.field_A[var13_int] * var14 - (-(var15 * this.field_P[var13_int]) - 16383) >> 14;
                         this.field_A[var13_int] = -(var14 * this.field_P[var13_int]) + (this.field_A[var13_int] * var15 + 16383) >> 14;
                         this.field_P[var13_int] = var16;
@@ -3906,22 +3906,22 @@ final class np extends ka {
                       if (stackIn_90_0Lifetime1 != stackIn_90_1Lifetime1 ||
                         var21 != 0) {
                         if (param4 != 0) {
-                          var18 = qu.field_b[param4];
-                          var19 = qu.field_d[param4];
+                          var18 = ByteStorage.field_b[param4];
+                          var19 = ByteStorage.field_d[param4];
                           var20 = 16383 + var19 * this.field_E[var17] + this.field_Y[var17] * var18 >> 14;
                           this.field_Y[var17] = (short)(var19 * this.field_Y[var17] - var18 * this.field_E[var17] + 16383 >> 14);
                           this.field_E[var17] = (short)var20;
                         }
                         if (param2 != 0) {
-                          var18Lifetime1 = qu.field_b[param2];
-                          var19Lifetime1 = qu.field_d[param2];
+                          var18Lifetime1 = ByteStorage.field_b[param2];
+                          var19Lifetime1 = ByteStorage.field_d[param2];
                           var20Lifetime1 = 16383 + this.field_Y[var17] * var19Lifetime1 - var18Lifetime1 * this.field_cb[var17] >> 14;
                           this.field_cb[var17] = (short)(this.field_Y[var17] * var18Lifetime1 + var19Lifetime1 * this.field_cb[var17] + 16383 >> 14);
                           this.field_Y[var17] = (short)var20Lifetime1;
                         }
                         if (param3 != 0) {
-                          var18Lifetime2 = qu.field_b[param3];
-                          var19Lifetime2 = qu.field_d[param3];
+                          var18Lifetime2 = ByteStorage.field_b[param3];
+                          var19Lifetime2 = ByteStorage.field_d[param3];
                           var20Lifetime2 = 16383 + (var19Lifetime2 * this.field_E[var17] + var18Lifetime2 * this.field_cb[var17]) >> 14;
                           this.field_cb[var17] = (short)(16383 + var19Lifetime2 * this.field_cb[var17] - var18Lifetime2 * this.field_E[var17] >> 14);
                           this.field_E[var17] = (short)var20Lifetime2;
@@ -4789,15 +4789,15 @@ final class np extends ka {
                         var40 = (float)param1.field_d[var19_int] / 256.0f;
                         switch (var31) {
                           case 3:
-                            WaveformOperator.a(param1.field_p[var32_int], param1.field_b[var32_int], var36, var37_int, dia.field_p, var40, var39_int, var35, var38_ref_float__, (byte) -44, param1.field_I[var32_int]);
-                            var22 = dia.field_p[0];
-                            var23 = dia.field_p[1];
-                            WaveformOperator.a(param1.field_p[var33_int], param1.field_b[var33_int], var36, var37_int, dia.field_p, var40, var39_int, var35, var38_ref_float__, (byte) -44, param1.field_I[var33_int]);
-                            var25 = dia.field_p[1];
-                            var24 = dia.field_p[0];
-                            WaveformOperator.a(param1.field_p[var34], param1.field_b[var34], var36, var37_int, dia.field_p, var40, var39_int, var35, var38_ref_float__, (byte) -44, param1.field_I[var34]);
-                            var27 = dia.field_p[1];
-                            var26 = dia.field_p[0];
+                            WaveformOperator.a(param1.field_p[var32_int], param1.field_b[var32_int], var36, var37_int, HelloCommand.field_p, var40, var39_int, var35, var38_ref_float__, (byte) -44, param1.field_I[var32_int]);
+                            var22 = HelloCommand.field_p[0];
+                            var23 = HelloCommand.field_p[1];
+                            WaveformOperator.a(param1.field_p[var33_int], param1.field_b[var33_int], var36, var37_int, HelloCommand.field_p, var40, var39_int, var35, var38_ref_float__, (byte) -44, param1.field_I[var33_int]);
+                            var25 = HelloCommand.field_p[1];
+                            var24 = HelloCommand.field_p[0];
+                            WaveformOperator.a(param1.field_p[var34], param1.field_b[var34], var36, var37_int, HelloCommand.field_p, var40, var39_int, var35, var38_ref_float__, (byte) -44, param1.field_I[var34]);
+                            var27 = HelloCommand.field_p[1];
+                            var26 = HelloCommand.field_p[0];
                             if ((var39_int & 1) == 0) {
                               if (var26 - var22 > 0.5f) {
                                 var29 = 1;
@@ -4855,27 +4855,27 @@ final class np extends ka {
                             var56 = (var38_ref_float__[4] * (float)var50_int + (float)var49_int * var38_ref_float__[3] + var38_ref_float__[5] * (float)var51_int) / var53;
                             var57 = (var38_ref_float__[8] * (float)var51_int + ((float)var50_int * var38_ref_float__[7] + var38_ref_float__[6] * (float)var49_int)) / var54;
                             var30 = AccountRegistrationPanel.a(var57, var56, false, var55);
-                            as.a(var36, dia.field_p, param1.field_I[var32_int], var35, var42, var37_int, var41, param1.field_b[var32_int], var30, param1.field_p[var32_int], -101, var40, var39_int, var38_ref_float__);
-                            var22 = dia.field_p[0];
-                            var23 = dia.field_p[1];
-                            as.a(var36, dia.field_p, param1.field_I[var33_int], var35, var42, var37_int, var41, param1.field_b[var33_int], var30, param1.field_p[var33_int], -95, var40, var39_int, var38_ref_float__);
-                            var25 = dia.field_p[1];
-                            var24 = dia.field_p[0];
-                            as.a(var36, dia.field_p, param1.field_I[var34], var35, var42, var37_int, var41, param1.field_b[var34], var30, param1.field_p[var34], -99, var40, var39_int, var38_ref_float__);
-                            var26 = dia.field_p[0];
-                            var27 = dia.field_p[1];
+                            as.a(var36, HelloCommand.field_p, param1.field_I[var32_int], var35, var42, var37_int, var41, param1.field_b[var32_int], var30, param1.field_p[var32_int], -101, var40, var39_int, var38_ref_float__);
+                            var22 = HelloCommand.field_p[0];
+                            var23 = HelloCommand.field_p[1];
+                            as.a(var36, HelloCommand.field_p, param1.field_I[var33_int], var35, var42, var37_int, var41, param1.field_b[var33_int], var30, param1.field_p[var33_int], -95, var40, var39_int, var38_ref_float__);
+                            var25 = HelloCommand.field_p[1];
+                            var24 = HelloCommand.field_p[0];
+                            as.a(var36, HelloCommand.field_p, param1.field_I[var34], var35, var42, var37_int, var41, param1.field_b[var34], var30, param1.field_p[var34], -99, var40, var39_int, var38_ref_float__);
+                            var26 = HelloCommand.field_p[0];
+                            var27 = HelloCommand.field_p[1];
                             break;
                           case 1:
                             var41 = (float)param1.field_x[var19_int] / 1024.0f;
-                            MazeGenerator.a(var39_int, dia.field_p, var41, param1.field_p[var32_int], param1.field_I[var32_int], 86, var38_ref_float__, var40, var36, var37_int, param1.field_b[var32_int], var35);
-                            var23 = dia.field_p[1];
-                            var22 = dia.field_p[0];
-                            MazeGenerator.a(var39_int, dia.field_p, var41, param1.field_p[var33_int], param1.field_I[var33_int], -68, var38_ref_float__, var40, var36, var37_int, param1.field_b[var33_int], var35);
-                            var25 = dia.field_p[1];
-                            var24 = dia.field_p[0];
-                            MazeGenerator.a(var39_int, dia.field_p, var41, param1.field_p[var34], param1.field_I[var34], 113, var38_ref_float__, var40, var36, var37_int, param1.field_b[var34], var35);
-                            var26 = dia.field_p[0];
-                            var27 = dia.field_p[1];
+                            MazeGenerator.a(var39_int, HelloCommand.field_p, var41, param1.field_p[var32_int], param1.field_I[var32_int], 86, var38_ref_float__, var40, var36, var37_int, param1.field_b[var32_int], var35);
+                            var23 = HelloCommand.field_p[1];
+                            var22 = HelloCommand.field_p[0];
+                            MazeGenerator.a(var39_int, HelloCommand.field_p, var41, param1.field_p[var33_int], param1.field_I[var33_int], -68, var38_ref_float__, var40, var36, var37_int, param1.field_b[var33_int], var35);
+                            var25 = HelloCommand.field_p[1];
+                            var24 = HelloCommand.field_p[0];
+                            MazeGenerator.a(var39_int, HelloCommand.field_p, var41, param1.field_p[var34], param1.field_I[var34], 113, var38_ref_float__, var40, var36, var37_int, param1.field_b[var34], var35);
+                            var26 = HelloCommand.field_p[0];
+                            var27 = HelloCommand.field_p[1];
                             var42 = var41 / 2.0f;
                             if ((var39_int & 1) == 0) {
                               if (var26 - var22 > var42) {
@@ -5058,9 +5058,9 @@ final class np extends ka {
                 }
                 this.field_p[var16] = this.field_ib;
                 StandingsPhase.field_m = null;
-                this.field_E = rna.a(this.field_E, true, this.field_L);
-                this.field_Y = rna.a(this.field_Y, true, this.field_L);
-                this.field_cb = rna.a(this.field_cb, true, this.field_L);
+                this.field_E = ListChannelsCommand.a(this.field_E, true, this.field_L);
+                this.field_Y = ListChannelsCommand.a(this.field_Y, true, this.field_L);
+                this.field_cb = ListChannelsCommand.a(this.field_cb, true, this.field_L);
                 this.field_O = FacePlayerLocomotor.a(this.field_O, this.field_L, 4096);
                 this.field_n = PlatformBehaviour.a(this.field_L, 50, this.field_n);
                 this.field_y = PlatformBehaviour.a(this.field_L, 50, this.field_y);

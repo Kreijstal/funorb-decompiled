@@ -2,18 +2,18 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AccountRegistrationPanel extends WidgetContainer implements HotspotListener, ButtonListener, mia {
-    private so field_E;
+    private ValidatedTextInputWidget field_E;
     private jla field_D;
-    private so field_I;
+    private ValidatedTextInputWidget field_I;
     private FocusableWidget field_B;
     private FocusableWidget field_F;
     private HotspotTextWidget field_A;
-    private so field_z;
+    private ValidatedTextInputWidget field_z;
     UsernameSuggestionsPanel field_y;
-    private so field_G;
+    private ValidatedTextInputWidget field_G;
     static w field_w;
-    private so field_J;
-    private so field_C;
+    private ValidatedTextInputWidget field_J;
+    private ValidatedTextInputWidget field_C;
     static String field_H;
     static String[] dayNames;
 
@@ -160,12 +160,12 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
 
     public AccountRegistrationPanel() {
         super(0, 0, 496, 0, (isa) null);
-        this.field_G = new so("", (WidgetListener) null, 12);
-        this.field_z = new so("", (WidgetListener) null, 100);
-        this.field_J = new so("", (WidgetListener) null, 100);
-        this.field_E = new so("", (WidgetListener) null, 20);
-        this.field_C = new so("", (WidgetListener) null, 20);
-        this.field_I = new so("", (WidgetListener) null, 3);
+        this.field_G = new ValidatedTextInputWidget("", (WidgetListener) null, 12);
+        this.field_z = new ValidatedTextInputWidget("", (WidgetListener) null, 100);
+        this.field_J = new ValidatedTextInputWidget("", (WidgetListener) null, 100);
+        this.field_E = new ValidatedTextInputWidget("", (WidgetListener) null, 20);
+        this.field_C = new ValidatedTextInputWidget("", (WidgetListener) null, 20);
+        this.field_I = new ValidatedTextInputWidget("", (WidgetListener) null, 3);
         int var1 = 1;
         this.field_D = new jla("", (WidgetListener) null, var1 != 0);
         this.field_F = new FocusableWidget(sla.field_c, (WidgetListener) null);
@@ -178,11 +178,11 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         this.field_I.field_q = dta.field_e;
         this.field_D.field_q = vf.field_e;
         this.field_G.a(-13861, new tf(this.field_G));
-        this.field_z.a(-13861, new hqa(this.field_z));
+        this.field_z.a(-13861, new EmailSyntaxValidator(this.field_z));
         this.field_J.a(-13861, new mn(this.field_J, this.field_z));
         this.field_E.a(-13861, new PasswordValidator(this.field_E, this.field_G, this.field_z));
-        this.field_C.a(-13861, new oe(this.field_C, this.field_E));
-        this.field_I.a(-13861, new jba(this.field_I));
+        this.field_C.a(-13861, new MatchingTextValidator(this.field_C, this.field_E));
+        this.field_I.a(-13861, new AgeValidator(this.field_I));
         this.field_F.field_y = false;
         this.field_F.field_r = (isa) ((Object) new td());
         this.field_B.field_r = (isa) ((Object) new kaa());
@@ -230,9 +230,9 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
     }
 
     public final void onMoreSuggestionsRequested(int param0) {
-        ((tf) (this.field_G.a((byte) 69))).b((byte) -69);
+        ((tf) (this.field_G.getValidationSource((byte) 69))).b((byte) -69);
         if (param0 != 10000536) {
-          this.field_E = (so) null;
+          this.field_E = (ValidatedTextInputWidget) null;
         }
     }
 
@@ -253,7 +253,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         try {
           var10 = new jsa(20, param0, param3 + 120, 25, param2, false, 120, 3, KeySwitchComponent.field_J, 16777215, param6);
           this.addChild(var10, -1);
-          var9 = new ValidationMessageWidget(((mk) ((Object) param2)).a((byte) 120), param5, 126, var10.field_p + param0, param3 + 50, param4);
+          var9 = new ValidationMessageWidget(((ValidationProvider) ((Object) param2)).getValidationSource((byte) 120), param5, 126, var10.field_p + param0, param3 + 50, param4);
           var9.field_h = (WidgetListener) (this);
           this.addChild(var9, -1);
           if (param1 >= 66) {
@@ -354,11 +354,11 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         if (param0 == 1877) {
           return true;
         }
-        this.field_E = (so) null;
+        this.field_E = (ValidatedTextInputWidget) null;
         return true;
     }
 
-    private final boolean validateField(byte param0, mk param1) {
+    private final boolean validateField(byte param0, ValidationProvider param1) {
         nua var3 = null;
         RuntimeException var3_ref = null;
         it var4 = null;
@@ -370,7 +370,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
           if (param0 != -10) {
             return true;
           }
-          var3 = param1.a((byte) 127);
+          var3 = param1.getValidationSource((byte) 127);
           if (var3 == null) {
             return true;
           }
@@ -409,7 +409,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
     }
 
     public final void a(String param0, int param1) {
-        so var3 = null;
+        ValidatedTextInputWidget var3 = null;
         String var4 = null;
         try {
           var3 = this.field_G;
@@ -537,7 +537,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
           if (param4 > 44) {
             return;
           }
-          this.field_J = (so) null;
+          this.field_J = (ValidatedTextInputWidget) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -570,7 +570,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
           if (param2 < 51) {
             field_w = (w) null;
           }
-          var7 = new mha(((mk) ((Object) param0)).a((byte) 106));
+          var7 = new mha(((ValidationProvider) ((Object) param0)).getValidationSource((byte) 106));
           this.addChild(var7, -1);
           var7.setBounds((byte) -31, 15, 15, 3 + (var8.field_m + var8.field_i), var8.field_n + (var8.field_p - 15 >> 1));
           stackIn_3_0 = var8.field_p;

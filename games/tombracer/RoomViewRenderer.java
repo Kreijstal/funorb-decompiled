@@ -72,7 +72,7 @@ final class RoomViewRenderer {
           }
           var38 = param5.matchState;
           var39 = var38;
-          if (var39.b((byte) 90, param0)) {
+          if (var39.hasFinishedCourse((byte) 90, param0)) {
             return;
           }
           var9 = var38.players[param0];
@@ -242,7 +242,7 @@ final class RoomViewRenderer {
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = mga.field_g[SnakePitBehaviour.bitwiseAnd(255, (int) var4[var6])];
           }
-          var1[var2] = new Sprite(ika.field_a, OpenGlRenderbuffer.field_s, ak.field_p[var2], pg.field_C[var2], mq.field_b[var2], iga.field_m[var2], var5);
+          var1[var2] = new Sprite(ika.field_a, OpenGlRenderbuffer.field_s, LoadLevelCommand.field_p[var2], pg.field_C[var2], mq.field_b[var2], iga.field_m[var2], var5);
         }
         MazeGenerator.a((byte) -50);
         return var1;

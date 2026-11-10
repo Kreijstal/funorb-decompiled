@@ -435,25 +435,25 @@ class TextInputWidget extends FocusableWidget {
         }
     }
 
-    final static void g(int param0) {
+    final static void ensureHardwareWaterNoise(int param0) {
         RuntimeException runtimeException = null;
-        pn var1 = null;
+        HardwareTurbulentWaterNoise var1 = null;
         byte[] var2 = null;
         RuntimeException decompiledCaughtException = null;
-        ot var1_ref = null;
+        HardwareRidgedWaterNoise var1_ref = null;
         byte[] var2Lifetime1;
         try {
-          if (null == ak.field_o) {
-            var1_ref = new ot();
-            var2 = var1_ref.a(128, true, 16, 128);
-            ak.field_o = bw.wrapByteStorage(270, var2, false);
+          if (null == LoadLevelCommand.field_o) {
+            var1_ref = new HardwareRidgedWaterNoise();
+            var2 = var1_ref.generate(128, true, 16, 128);
+            LoadLevelCommand.field_o = bw.wrapByteStorage(270, var2, false);
           }
           if (param0 != 12890) {
             return;
           }
           if (lt.field_f == null) {
-            var1 = new pn();
-            var2Lifetime1 = var1.a(128, 0, 16, 128);
+            var1 = new HardwareTurbulentWaterNoise();
+            var2Lifetime1 = var1.generate(128, 0, 16, 128);
             lt.field_f = bw.wrapByteStorage(270, var2Lifetime1, false);
           }
           return;
@@ -594,7 +594,7 @@ class TextInputWidget extends FocusableWidget {
           if (this.field_s == 1) {
             if (this.field_r instanceof oaa) {
               var5 = (oaa) ((Object) this.field_r);
-              var6 = var5.a((UiWidget) (this), (byte) 4, GridWidgetContainer.field_B, param0, param3, jba.field_j);
+              var6 = var5.a((UiWidget) (this), (byte) 4, GridWidgetContainer.field_B, param0, param3, AgeValidator.field_j);
               if (var6 != -1) {
                 if (this.field_E &&
                   var6 < this.field_F &&
@@ -638,7 +638,7 @@ class TextInputWidget extends FocusableWidget {
           }
           if (super.handlePointerPress(92, param1, param2, param3, param4, param5, param6) &&
             this.field_r instanceof oaa) {
-            var8_int = ((oaa) ((Object) this.field_r)).a((UiWidget) (this), (byte) 4, GridWidgetContainer.field_B, param1, param2, jba.field_j);
+            var8_int = ((oaa) ((Object) this.field_r)).a((UiWidget) (this), (byte) 4, GridWidgetContainer.field_B, param1, param2, AgeValidator.field_j);
             stackIn_10_1 = 60;
             if (-1 == var8_int) {
               stackIn_11_2 = 0;
@@ -902,7 +902,7 @@ class TextInputWidget extends FocusableWidget {
             S2CRoundResultPacket.a(-var1_int + MatchState.field_w, param0 - 1);
           }
           if (param0 != -113) {
-            TextInputWidget.g(-73);
+            TextInputWidget.ensureHardwareWaterNoise(-73);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

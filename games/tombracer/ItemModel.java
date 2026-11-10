@@ -297,21 +297,21 @@ final class ItemModel extends TrapModel {
     }
 
     final static void a(OpenGlToolkit param0, int param1) {
-        ama var7 = null;
+        LegacyRidgedWaterNoise var7 = null;
         byte[] var19 = null;
-        dca var9 = null;
+        LegacyTurbulentWaterNoise var9 = null;
         byte[] var20 = null;
         mq var11 = null;
         byte[] var21 = null;
         try {
           if (hna.field_e == null) {
-            var7 = new ama();
-            var19 = var7.a(16, 128, 0, 128);
+            var7 = new LegacyRidgedWaterNoise();
+            var19 = var7.generate(16, 128, 0, 128);
             hna.field_e = bw.wrapByteStorage(270, var19, false);
           }
           if (null == TreasureValuesOverlay.field_l) {
-            var9 = new dca();
-            var20 = var9.a(128, 16, 123, 128);
+            var9 = new LegacyTurbulentWaterNoise();
+            var20 = var9.generate(128, 16, 123, 128);
             TreasureValuesOverlay.field_l = bw.wrapByteStorage(270, var20, false);
           }
           var11 = param0.field_zc;

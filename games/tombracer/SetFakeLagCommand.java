@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vr extends ConsoleMethod {
+final class SetFakeLagCommand extends ConsoleMethod {
     static boolean field_o;
 
-    final ConsoleValue a(ConsoleValue[] param0, int param1) {
+    final ConsoleValue invoke(ConsoleValue[] param0, int param1) {
         RuntimeException var3 = null;
         ConsoleValue stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -12,7 +12,7 @@ final class vr extends ConsoleMethod {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          jk.a(param0[param1].asInt(-178), 0);
+          jk.setFakeLag(param0[param1].asInt(-178), 0);
           stackIn_1_0 = new ConsoleValue("void");
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -29,7 +29,7 @@ final class vr extends ConsoleMethod {
         }
     }
 
-    vr(String param0, Class[] param1, String param2) {
+    SetFakeLagCommand(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
     }
 

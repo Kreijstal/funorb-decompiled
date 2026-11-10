@@ -34,7 +34,7 @@ final class BoulderComponent extends PathMoverComponent {
             var4.field_f.addItem((byte) -101, 5, var5_ref_String);
             var4Lifetime2 = hka.field_b;
             var5 = PasswordValidator.field_m;
-            var6 = lba.field_p;
+            var6 = RidgedNoise3D.field_p;
             var4Lifetime2.field_f.b(var6, 0, -100, 0, var5);
           }
           iea.a(param2, (byte) -56, param0);
@@ -50,7 +50,7 @@ final class BoulderComponent extends PathMoverComponent {
           var4Lifetime1.field_f.addItem((byte) -101, 5, var5_ref_StringLifetime1);
           var4Lifetime1Lifetime1 = hka.field_b;
           var5Lifetime1 = PasswordValidator.field_m;
-          var6Lifetime1 = lba.field_p;
+          var6Lifetime1 = RidgedNoise3D.field_p;
           var4Lifetime1Lifetime1.field_f.b(var6Lifetime1, 0, -100, 0, var5Lifetime1);
         }
         iea.a(param2, (byte) -56, param0);
@@ -129,13 +129,13 @@ final class BoulderComponent extends PathMoverComponent {
           }
           MatchScoringObserver.field_h = MatchScoringObserver.field_h + 1;
           RangeOperator.field_p = tka.field_n;
-          jba.field_j = ena.field_n;
+          AgeValidator.field_j = ena.field_n;
           GridWidgetContainer.field_B = ee.field_a;
           qma.field_c = PlayerContextMenu.field_c;
           PlayerContextMenu.field_c = false;
           PlayerModel.field_b = DisplaySettingsDialog.field_X;
           PasswordValidator.field_m = cr.field_d;
-          lba.field_p = TestModel.field_m;
+          RidgedNoise3D.field_p = TestModel.field_m;
           DisplaySettingsDialog.field_X = 0;
         }
     }

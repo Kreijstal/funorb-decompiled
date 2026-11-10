@@ -49,7 +49,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
           this.field_t = false;
           return;
         }
-        if (!this.getSimulation(12340).g(108) &&
+        if (!this.getSimulation(12340).isTimeFrozen(108) &&
           null != this.field_n) {
           this.field_n.d(0);
           if (this.field_n.c(0)) {

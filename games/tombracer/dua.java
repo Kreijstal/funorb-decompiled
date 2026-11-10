@@ -108,7 +108,7 @@ final class dua extends MatchOverlay {
           var11 = var9;
           tga.field_a.setClip(10, -6 + var10, var3 + 16 + 6, var10 + var7 * var4 + 4);
           for (var12 = var6; var7 > var12; var12++) {
-            var24 = var23.a(true, var12);
+            var24 = var23.getRoomAt(true, var12);
             if (var24 != null &&
               !var24.j(0)) {
               var13 = 16;
@@ -129,7 +129,7 @@ final class dua extends MatchOverlay {
           var9Lifetime3 = var11;
           var19 = 0;
           var12Lifetime3 = var19;
-          while (this.field_g.field_P > var19) {
+          while (this.field_g.playersRemaining > var19) {
             var13Lifetime3 = this.field_g.field_c.field_e[var19];
             var25 = this.field_g.players[var13Lifetime3].getRoom((byte) 113);
             if (var25.getCourseIndex(72) >= var6 &&
@@ -173,7 +173,7 @@ final class dua extends MatchOverlay {
         var11Lifetime1 = var9Lifetime1;
         tga.field_a.setClip(10, -6 + var10Lifetime1, var3Lifetime1 + 16 + 6, var10Lifetime1 + var7Lifetime1 * var4Lifetime1 + 4);
         for (var12Lifetime1 = var6Lifetime1; var7Lifetime1 > var12Lifetime1; var12Lifetime1++) {
-          var21 = var20.a(true, var12Lifetime1);
+          var21 = var20.getRoomAt(true, var12Lifetime1);
           if (var21 != null &&
             !var21.j(0)) {
             var13Lifetime1 = 16;
@@ -194,7 +194,7 @@ final class dua extends MatchOverlay {
         var9Lifetime2 = var11Lifetime1;
         var19Lifetime1 = 0;
         var12Lifetime2 = var19Lifetime1;
-        while (this.field_g.field_P > var19Lifetime1) {
+        while (this.field_g.playersRemaining > var19Lifetime1) {
           var13Lifetime2 = this.field_g.field_c.field_e[var19Lifetime1];
           var22 = this.field_g.players[var13Lifetime2].getRoom((byte) 113);
           if (var22.getCourseIndex(72) >= var6Lifetime1 &&

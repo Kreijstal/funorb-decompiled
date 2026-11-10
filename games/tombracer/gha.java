@@ -60,7 +60,7 @@ final class gha implements pp {
                 var10 = param5;
                 switch (var8) {
                   case 1:
-                    var9.a(var10, false);
+                    var9.decode(var10, false);
                     break;
                   case 2:
                     ((qs) (var9)).b(var10, true);

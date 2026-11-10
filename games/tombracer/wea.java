@@ -8,7 +8,7 @@ final class wea implements dv {
     static gqa[] field_d;
     private boolean[] field_b;
 
-    public final void a(BitPacketBuffer param0, boolean param1) {
+    public final void decode(BitPacketBuffer param0, boolean param1) {
         this.field_b = PooledObject.a(8, this.field_b, (byte) -84, param0);
         if (param1) {
           return;

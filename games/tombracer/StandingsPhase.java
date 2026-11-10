@@ -35,18 +35,18 @@ final class StandingsPhase extends MatchPhase {
         int var3_intLifetime1;
         this.field_n = -1;
         try {
-          this.field_r = new int[this.matchState.field_k];
-          for (var3_int = 0; this.matchState.field_k > var3_int; var3_int++) {
+          this.field_r = new int[this.matchState.playerCount];
+          for (var3_int = 0; this.matchState.playerCount > var3_int; var3_int++) {
             var4 = 0;
             for (var5 = 0; this.matchState.roundWins.length > var5; var5++) {
               if (~var5 != ~var3_int &&
                 this.matchState.roundWins[var5] > this.matchState.roundWins[var3_int] &&
-                !this.matchState.f((byte) -96, var5)) {
+                !this.matchState.hasResigned((byte) -96, var5)) {
                 var4++;
               }
             }
-            if (this.matchState.f((byte) -117, var3_int)) {
-              var4 = this.matchState.field_k - 1;
+            if (this.matchState.hasResigned((byte) -117, var3_int)) {
+              var4 = this.matchState.playerCount - 1;
             }
             if (this.matchState.field_z == -2) {
               var4 = 0;
@@ -175,7 +175,7 @@ final class StandingsPhase extends MatchPhase {
           var3 = aaa.a(false) >> 1;
           var4 = (aaa.a(false) >> 1) / 3 + 37;
           var5 = 56;
-          var6 = this.matchState.field_k;
+          var6 = this.matchState.playerCount;
           var22 = 0;
           var7 = var22;
           while (var22 < var6) {
@@ -189,7 +189,7 @@ final class StandingsPhase extends MatchPhase {
               GridWidgetContainer.field_y[-1 + GridWidgetContainer.field_y.length].a(-(GridWidgetContainer.field_y[GridWidgetContainer.field_y.length - 1].a() >> 1) + var11 - 1, var10 - 12);
             }
             var12 = 150;
-            cha.a(-60 + var11, 2, tga.field_a, 4, var10 - 250, 120, 65793 | var12 << 24, 1, 100);
+            RasterBuffer.a(-60 + var11, 2, tga.field_a, 4, var10 - 250, 120, 65793 | var12 << 24, 1, 100);
             MembersUpsellMenu.a(this.screen.getPlayerName(var22, false).toUpperCase(), wga.field_a[var22], kn.field_p, -1, var10 - 230, var11, 0);
             try {
               tga.field_a.a(var11, var10 - 140, 10 + var11, -151 + var10, var11, var10 - 151, 65793 | var12 << 24, var12 << 24 | 65793, var12 << 24 | 65793, 1);
@@ -197,12 +197,12 @@ final class StandingsPhase extends MatchPhase {
               decompiledCaughtException = decompiledCaughtParameter0;
               var13_ref_Exception = (Exception) (Object) decompiledCaughtException;
             }
-            if (!this.matchState.f((byte) -102, var22)) {
+            if (!this.matchState.hasResigned((byte) -102, var22)) {
               var13 = 7829367;
               if (-2 != this.matchState.field_z) {
                 SocketConnector.a(gl.$cfr$intArgs$a$53ce4ab4c593(93, WallCrusherComponent.field_K.toUpperCase(), new String[]{Integer.toString(this.matchState.roundWins[var22])}).toUpperCase(), 1, kn.field_p, var13, 16, 60, 1, var10 - 243, -50 + var11, 0, (byte) 60, 100);
               } else {
-                SocketConnector.a(paa.field_y.toUpperCase(), 1, kn.field_p, var13, 16, 70, 1, var10 - 243, -50 + var11, 0, (byte) 60, 100);
+                SocketConnector.a(DateInputWidget.field_y.toUpperCase(), 1, kn.field_p, var13, 16, 70, 1, var10 - 243, -50 + var11, 0, (byte) 60, 100);
               }
               if (this.matchState.g(69, var22)) {
                 SocketConnector.a(w.field_d.toUpperCase(), 1, kn.field_p, 3385907, 16, 40, 1, var10 - 203, -50 + var11, 0, (byte) 60, 100);
@@ -258,13 +258,13 @@ final class StandingsPhase extends MatchPhase {
             }
           }
           if (var11 != 0) {
-            var24 = dea.a(this.matchState.c((byte) 115, this.screen.localPlayerIndex), (byte) -8);
+            var24 = dea.a(this.matchState.getSimulationTick((byte) 115, this.screen.localPlayerIndex), (byte) -8);
             MembersUpsellMenu.a(cc.field_l.toUpperCase() + " " + var24.toUpperCase(), 2431750, kn.field_p, -1, 20 + var4, -120 + var3, -1);
             MembersUpsellMenu.a(ContentTransitionDialog.field_L.toUpperCase(), 2431750, eda.field_f, -1, var4, 120 + var3, -1);
             var13 = this.screen.matchState.simulations[this.screen.localPlayerIndex].player.getScore(74);
             MembersUpsellMenu.a(Integer.toString(var13), 2431750, eda.field_f, -1, 20 + var4, 120 + var3, -1);
           } else {
-            var23 = dea.a(this.matchState.c((byte) 115, this.screen.localPlayerIndex), (byte) -8);
+            var23 = dea.a(this.matchState.getSimulationTick((byte) 115, this.screen.localPlayerIndex), (byte) -8);
             MembersUpsellMenu.a(cc.field_l.toUpperCase() + " " + var23.toUpperCase(), 2431750, kn.field_p, -1, 48 + var4, var3 - 120, -1);
             za.field_g.a(-200 + var3, var4 + 60);
             var13 = as.a(var9, 0);
@@ -280,7 +280,7 @@ final class StandingsPhase extends MatchPhase {
               var15 = FacePlayerLocomotor.field_p.field_p[1][0];
               var16 = -var15 + var14;
               if (var15 != 0) {
-                MembersUpsellMenu.a(gl.$cfr$intArgs$a$53ce4ab4c593(103, ItemComponent.field_F, new String[]{Integer.toString(var15).toUpperCase() + " " + qu.a(var16, -1)}), 2431750, kn.field_p, -1, 50 + var4, 120 + var3, -1);
+                MembersUpsellMenu.a(gl.$cfr$intArgs$a$53ce4ab4c593(103, ItemComponent.field_F, new String[]{Integer.toString(var15).toUpperCase() + " " + ByteStorage.a(var16, -1)}), 2431750, kn.field_p, -1, 50 + var4, 120 + var3, -1);
               }
               var17 = 0;
               var18 = null;
@@ -295,7 +295,7 @@ final class StandingsPhase extends MatchPhase {
               }
               if (var18 != null) {
                 var16 = var14 - var17;
-                SocketConnector.a(gl.$cfr$intArgs$a$53ce4ab4c593(121, PenaltyNotice.field_g, new String[]{Integer.toString(var17).toUpperCase() + " " + qu.a(var16, -1), (String) (var18)}), 0, kn.field_p, 2431750, 13, 50, 1, var4 + 60, var3, -1, (byte) 60, 240);
+                SocketConnector.a(gl.$cfr$intArgs$a$53ce4ab4c593(121, PenaltyNotice.field_g, new String[]{Integer.toString(var17).toUpperCase() + " " + ByteStorage.a(var16, -1), (String) (var18)}), 0, kn.field_p, 2431750, 13, 50, 1, var4 + 60, var3, -1, (byte) 60, 240);
               }
             }
           }
@@ -374,8 +374,8 @@ final class StandingsPhase extends MatchPhase {
         }
         for (var3Lifetime1 = 0; this.field_p.length > var3Lifetime1; var3Lifetime1++) {
           if (param1) {
-            if (this.field_p[var3Lifetime1].field_b - 80 <= jba.field_j) {
-              if (jba.field_j < 80 + this.field_p[var3Lifetime1].field_b) {
+            if (this.field_p[var3Lifetime1].field_b - 80 <= AgeValidator.field_j) {
+              if (AgeValidator.field_j < 80 + this.field_p[var3Lifetime1].field_b) {
                 if (-25 + this.field_p[var3Lifetime1].field_i <= GridWidgetContainer.field_B) {
                   stackIn_24_0 = (this.field_p[var3Lifetime1].field_i + 25 > GridWidgetContainer.field_B) ? 1 : 0;
                 } else {
@@ -411,9 +411,9 @@ final class StandingsPhase extends MatchPhase {
             this.field_p[1].field_e = RevolverItemComponent.field_I.toUpperCase();
           } else {
             if (var3Lifetime2 != 0) {
-              this.field_p[1].field_e = ot.field_t.toUpperCase();
+              this.field_p[1].field_e = HardwareRidgedWaterNoise.field_t.toUpperCase();
             } else {
-              if (this.screen.matchState.a(this.screen.localPlayerIndex, true)) {
+              if (this.screen.matchState.haveAllOthersResigned(this.screen.localPlayerIndex, true)) {
                 this.field_p[1].field_e = sl.field_g.toUpperCase();
               } else {
                 this.field_p[1].field_e = PrefabComponent.field_E.toUpperCase();

@@ -3,7 +3,7 @@
  */
 final class mn extends TextFieldValidator {
     private String field_m;
-    private oe field_j;
+    private MatchingTextValidator field_j;
     private boolean field_l;
     static String field_n;
     static int field_k;
@@ -96,7 +96,7 @@ final class mn extends TextFieldValidator {
         this.field_l = false;
         this.field_m = "";
         try {
-          this.field_j = new oe(param0, param1);
+          this.field_j = new MatchingTextValidator(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "mn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

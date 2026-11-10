@@ -439,14 +439,14 @@ final class uv extends oga {
         if (param1 != 1) {
           field_k = (String[]) null;
           if (!(jj.a(param0, param2, -32842) | (0 != (458752 & param2) ? true : false))) {
-            return so.a(param2, (byte) -105, param0) ? true : false;
+            return ValidatedTextInputWidget.a(param2, (byte) -105, param0) ? true : false;
           }
           return true;
         }
         if (jj.a(param0, param2, -32842) | (0 != (458752 & param2) ? true : false)) {
           return true;
         }
-        if (!so.a(param2, (byte) -105, param0)) {
+        if (!ValidatedTextInputWidget.a(param2, (byte) -105, param0)) {
           return false;
         }
         return true;

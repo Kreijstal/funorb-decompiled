@@ -810,7 +810,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         if (param1 == cva.field_b) {
           return 3;
         }
-        if (param1 == hqa.field_j) {
+        if (param1 == EmailSyntaxValidator.field_j) {
           return 4;
         }
         if (ada.field_z == param1) {

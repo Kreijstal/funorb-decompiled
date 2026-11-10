@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class efa extends WidgetContainer implements mia, ButtonListener {
-    private so field_z;
+    private ValidatedTextInputWidget field_z;
     static Sprite[][] field_w;
     static int field_y;
     UsernameSuggestionsPanel field_x;
     private FocusableWidget field_B;
     private FocusableWidget field_A;
 
-    private final boolean a(int param0, mk param1) {
+    private final boolean a(int param0, ValidationProvider param1) {
         nua var3 = null;
         RuntimeException var3_ref = null;
         it var4 = null;
@@ -22,7 +22,7 @@ final class efa extends WidgetContainer implements mia, ButtonListener {
           if (param0 > -25) {
             return false;
           }
-          var3 = param1.a((byte) 127);
+          var3 = param1.getValidationSource((byte) 127);
           if (var3 == null) {
             return true;
           }
@@ -44,7 +44,7 @@ final class efa extends WidgetContainer implements mia, ButtonListener {
     }
 
     public final void onMoreSuggestionsRequested(int param0) {
-        ((tf) (this.field_z.a((byte) 93))).b((byte) -69);
+        ((tf) (this.field_z.getValidationSource((byte) 93))).b((byte) -69);
         if (param0 != 10000536) {
           field_y = -98;
         }
@@ -69,10 +69,10 @@ final class efa extends WidgetContainer implements mia, ButtonListener {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        mk var7 = null;
+        ValidationProvider var7 = null;
         try {
           if (this.field_B == param2) {
-            pn.f(-804227775);
+            HardwareTurbulentWaterNoise.f(-804227775);
           } else {
             if (param2 == this.field_A) {
               this.a((byte) 89);
@@ -81,8 +81,8 @@ final class efa extends WidgetContainer implements mia, ButtonListener {
           if (param4 > 44) {
             return;
           }
-          var7 = (mk) null;
-          discarded$0 = this.a(-113, (mk) null);
+          var7 = (ValidationProvider) null;
+          discarded$0 = this.a(-113, (ValidationProvider) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -107,7 +107,7 @@ final class efa extends WidgetContainer implements mia, ButtonListener {
 
     public efa() {
         super(0, 0, 496, 0, (isa) null);
-        this.field_z = new so("", (WidgetListener) null, 12);
+        this.field_z = new ValidatedTextInputWidget("", (WidgetListener) null, 12);
         TextWidgetPainter var1 = new TextWidgetPainter(BlendModeOperator.field_o, 0, 0, 0, 0, 16777215, -1, 3, 0, KeySwitchComponent.field_J.field_w, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(cj.field_e, var1, (WidgetListener) null);
         this.field_A = new FocusableWidget(nf.field_j, (WidgetListener) null);
@@ -138,7 +138,7 @@ final class efa extends WidgetContainer implements mia, ButtonListener {
     }
 
     public final void a(String param0, int param1) {
-        so var3 = null;
+        ValidatedTextInputWidget var3 = null;
         String var4 = null;
         try {
           var3 = this.field_z;
@@ -266,7 +266,7 @@ final class efa extends WidgetContainer implements mia, ButtonListener {
         try {
           var10 = new jsa(20, param0, 120 + param2, 25, param1, false, 120, param6, KeySwitchComponent.field_J, 16777215, param3);
           this.addChild(var10, -1);
-          var9 = new ValidationMessageWidget(((mk) ((Object) param1)).a((byte) 124), param4, 126, param0 + var10.field_p, param2 + 25, param5);
+          var9 = new ValidationMessageWidget(((ValidationProvider) ((Object) param1)).getValidationSource((byte) 124), param4, 126, param0 + var10.field_p, param2 + 25, param5);
           var9.field_h = (WidgetListener) (this);
           this.addChild(var9, -1);
           stackIn_1_0 = var10.field_p + var9.field_p;

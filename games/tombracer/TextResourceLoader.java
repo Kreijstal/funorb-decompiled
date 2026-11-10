@@ -49,7 +49,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -98, "error_js5crc");
                 if (var2 != null) {
-                  oe.field_l = jaa.decodeText((byte) 63, var2);
+                  MatchingTextValidator.field_l = jaa.decodeText((byte) 63, var2);
                 }
                 var2 = dn.a((byte) 116, "error_js5io");
                 if (var2 != null) {
@@ -213,7 +213,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 109, "mu_request_declined");
                 if (null != var2) {
-                  cha.field_c = jaa.decodeText((byte) 81, var2);
+                  RasterBuffer.field_c = jaa.decodeText((byte) 81, var2);
                 }
                 var2 = dn.a((byte) 124, "mu_request_withdrawn");
                 if (null != var2) {
@@ -337,7 +337,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -119, "rm_x_from_friends");
                 if (null != var2) {
-                  dca.field_q = jaa.decodeText((byte) 25, var2);
+                  LegacyTurbulentWaterNoise.field_q = jaa.decodeText((byte) 25, var2);
                 }
                 var2 = dn.a((byte) 112, "rm_x_from_ignore");
                 if (var2 != null) {
@@ -437,7 +437,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 119, "mu_chat_game_hide");
                 if (null != var2) {
-                  ot.field_w = jaa.decodeText((byte) 38, var2);
+                  HardwareRidgedWaterNoise.field_w = jaa.decodeText((byte) 38, var2);
                 }
                 var2 = dn.a((byte) -90, "mu_chat_pm_show_all");
                 if (null != var2) {
@@ -613,7 +613,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 110, "you_are_invited_to_xs_game");
                 if (null != var2) {
-                  jf.field_o = jaa.decodeText((byte) 104, var2);
+                  LoadProfileCommand.field_o = jaa.decodeText((byte) 104, var2);
                 }
                 var2 = dn.a((byte) -10, "asking_to_join_xs_game");
                 if (null != var2) {
@@ -673,7 +673,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -62, "multiconst_clan");
                 if (null != var2) {
-                  cha.field_b = jaa.decodeText((byte) 79, var2);
+                  RasterBuffer.field_b = jaa.decodeText((byte) 79, var2);
                 }
                 var2 = dn.a((byte) 121, "multiconst_friends");
                 if (var2 != null) {
@@ -2073,7 +2073,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 123, "acceptdraw");
                 if (var2 != null) {
-                  jf.field_s = jaa.decodeText((byte) 64, var2);
+                  LoadProfileCommand.field_s = jaa.decodeText((byte) 64, var2);
                 }
                 var2 = dn.a((byte) -71, "resign");
                 if (var2 != null) {
@@ -2333,7 +2333,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 127, "mp_acceptrematch");
                 if (null != var2) {
-                  ot.field_t = jaa.decodeText((byte) 115, var2);
+                  HardwareRidgedWaterNoise.field_t = jaa.decodeText((byte) 115, var2);
                 }
                 var2 = dn.a((byte) -55, "mp_acceptrematch_unrated");
                 if (var2 != null) {
@@ -2413,7 +2413,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 125, "mp_gamedrawn");
                 if (null != var2) {
-                  paa.field_y = jaa.decodeText((byte) 88, var2);
+                  DateInputWidget.field_y = jaa.decodeText((byte) 88, var2);
                 }
                 var2 = dn.a((byte) 107, "mp_timeremaining");
                 if (var2 != null) {
@@ -2667,7 +2667,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 107, "fs_nonmember");
                 if (var2 != null) {
-                  jba.field_l = jaa.decodeText((byte) 81, var2);
+                  AgeValidator.field_l = jaa.decodeText((byte) 81, var2);
                 }
                 var2 = dn.a((byte) -56, "fs_button_close");
                 if (var2 != null) {

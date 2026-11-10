@@ -44,7 +44,7 @@ final class FinishOrderOverlay extends MatchOverlay {
         var5 = 10309393;
         var6 = 11184810;
         var7 = 20;
-        var8 = var7 * this.field_g.field_P + 50;
+        var8 = var7 * this.field_g.playersRemaining + 50;
         var9 = var3;
         var10 = 40 + var9;
         PlayerViewport.a(var8, 300, (byte) 65, -150 + var2, aq.field_a, var9 - 16);
@@ -57,11 +57,11 @@ final class FinishOrderOverlay extends MatchOverlay {
             } else {
               var13 = var6;
             }
-            if (this.field_g.simulations[var12].b(0)) {
+            if (this.field_g.simulations[var12].isFinished(0)) {
               MembersUpsellMenu.a((dta.field_b[var11] + "  " + this.field_i.getPlayerName(var12, false) + "  " + dea.a(this.field_g.simulations[var12].tick, (byte) -8)).toUpperCase(), var13, qf.field_j, -1, var7 * var11 + var10, var2, 0);
             } else {
-              if (!this.field_g.simulations[var12].e(-31170) &&
-                this.field_i.matchState.e(2) < 0) {
+              if (!this.field_g.simulations[var12].hasTimedOut(-31170) &&
+                this.field_i.matchState.getRoundWinner(2) < 0) {
                 MembersUpsellMenu.a((dta.field_b[var11] + "  ...").toUpperCase(), 16777215, qf.field_j, -1, var11 * var7 + var10, var2, 0);
                 return;
               }

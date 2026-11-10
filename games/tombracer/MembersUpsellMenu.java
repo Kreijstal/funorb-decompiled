@@ -91,8 +91,8 @@ final class MembersUpsellMenu extends MenuScreen {
               var6 = LoginForm.field_z[var5] + (this.field_t + (ConsoleWindow.field_d.a() >> 1));
               var7 = this.field_r - (-hq.field_b[var5] - (ConsoleWindow.field_d.c() >> 1));
               var8 = 20;
-              if (jba.field_j > var6 - var8 &&
-                var8 + var6 > jba.field_j &&
+              if (AgeValidator.field_j > var6 - var8 &&
+                var8 + var6 > AgeValidator.field_j &&
                 GridWidgetContainer.field_B > -var8 + var7 &&
                 var8 + var7 > GridWidgetContainer.field_B) {
                 this.field_v = var5;
@@ -196,7 +196,7 @@ final class MembersUpsellMenu extends MenuScreen {
           tga.field_a.a(var7Lifetime1 - (var5Lifetime1 >> 1) + 1, 1 - (var4Lifetime2 >> 1) + var6, -2 + var5Lifetime1, var4Lifetime2 - 2, -1426063361, (byte) -128);
           if (!TextWidgetPainter.a(42) &&
             var3 != 0) {
-            var8 = qu.field_c;
+            var8 = ByteStorage.field_c;
           } else {
             if (!TextWidgetPainter.a(109)) {
               var8 = DivisionMazeGenerator.field_d;

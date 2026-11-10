@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dca extends or {
+final class LegacyTurbulentWaterNoise extends TurbulenceNoise3D {
     private byte[] field_p;
     static String field_q;
     static long field_o;
 
-    dca() {
+    LegacyTurbulentWaterNoise() {
         super(12, 5, 16, 2, 2, 0.44999998807907104f);
     }
 
-    final void a(int param0, boolean param1, byte param2) {
+    final void writeVoxel(int param0, boolean param1, byte param2) {
         int incrementValue$0 = 0;
         int var4 = param0 * 2;
         if (!param1) {
@@ -21,7 +21,7 @@ final class dca extends or {
           this.field_p[var4] = (byte)param2;
           return;
         }
-        dca.releaseStatics(-128);
+        LegacyTurbulentWaterNoise.releaseStatics(-128);
         param2 = (byte)(127 + (param2 >> 1 & 127));
         int incrementValue$1 = var4;
         var4++;
@@ -29,16 +29,16 @@ final class dca extends or {
         this.field_p[var4] = (byte)param2;
     }
 
-    final byte[] a(int param0, int param1, int param2, int param3) {
+    final byte[] generate(int param0, int param1, int param2, int param3) {
         this.field_p = new byte[2 * (param3 * param0) * param1];
         int var5 = 53 / ((77 - param2) / 36);
-        this.a(param0, param1, param3, (byte) -102);
+        this.generateVolume(param0, param1, param3, (byte) -102);
         return this.field_p;
     }
 
     final static String f(int param0) {
         if (param0 != 12) {
-          dca.f(68);
+          LegacyTurbulentWaterNoise.f(68);
           return WeaveOperator.field_q.readString((byte) -76);
         }
         return WeaveOperator.field_q.readString((byte) -76);

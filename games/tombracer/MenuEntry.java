@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MenuEntry {
-    static qua[] field_j;
+    static MusicTrack[] field_j;
     static int field_h;
     dea field_c;
     static String field_k;
@@ -26,7 +26,7 @@ final class MenuEntry {
         BitPacketBuffer var3 = null;
         try {
           if (param1 != -23814) {
-            field_j = (qua[]) null;
+            field_j = (MusicTrack[]) null;
           }
           var3 = ql.field_k;
           var3.writeCipheredOpcode(param0, -2988);
@@ -61,7 +61,7 @@ final class MenuEntry {
 
     public static void releaseStatics(int param0) {
         if (param0 != 1) {
-          field_j = (qua[]) null;
+          field_j = (MusicTrack[]) null;
         }
         field_k = null;
         field_j = null;

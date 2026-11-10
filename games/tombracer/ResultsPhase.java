@@ -264,11 +264,11 @@ final class ResultsPhase extends MatchPhase {
           WidgetStyleLayer.field_b[0].drawRotated((float)(var8Lifetime1 + 150), (float)var9, 4096, 16384, 3, 1610612736, 1);
         }
         var7Lifetime2 = this.matchState.field_E;
-        for (var8Lifetime2 = 0; this.matchState.field_k > var8Lifetime2; var8Lifetime2++) {
+        for (var8Lifetime2 = 0; this.matchState.playerCount > var8Lifetime2; var8Lifetime2++) {
           var9Lifetime1 = var3 + 32;
           stackIn_12_0 = 95 * var8Lifetime2;
           stackIn_12_1 = 70;
-          if (this.matchState.field_k >= 3) {
+          if (this.matchState.playerCount >= 3) {
             stackIn_13_2 = 0;
           } else {
             stackIn_13_2 = 95;
@@ -367,7 +367,7 @@ final class ResultsPhase extends MatchPhase {
           RoomEffectTraps.a(-1, -59, var24Lifetime1, "$", var23Lifetime1, SingleChildWidget.field_v, 2431750);
           RoomEffectTraps.a(0, -28, -1 + var24Lifetime1, var32.toUpperCase(), 18 + var23Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime2]);
           var26 = this.matchState.roundWins[var8Lifetime2];
-          if (var8Lifetime2 == this.matchState.e(2) &&
+          if (var8Lifetime2 == this.matchState.getRoundWinner(2) &&
             var7Lifetime2 < -100 + fd.field_e) {
             var26--;
           }
@@ -375,20 +375,20 @@ final class ResultsPhase extends MatchPhase {
           MembersUpsellMenu.a(Integer.toString(this.matchState.roundsToWin), wga.field_a[var8Lifetime2], SingleChildWidget.field_v, -1, -12 + (var24Lifetime1 - 1), 55, 0);
           MembersUpsellMenu.a("_", wga.field_a[var8Lifetime2], SingleChildWidget.field_v, -1, -40 + var24Lifetime1, 55, 0);
         }
-        for (var8Lifetime3 = 0; var8Lifetime3 < this.matchState.field_k; var8Lifetime3++) {
+        for (var8Lifetime3 = 0; var8Lifetime3 < this.matchState.playerCount; var8Lifetime3++) {
           stackIn_61_0 = 95 * var8Lifetime3 + 105;
-          if (this.matchState.field_k < 3) {
+          if (this.matchState.playerCount < 3) {
             stackIn_62_1 = 95;
           } else {
             stackIn_62_1 = 0;
           }
           var9Lifetime2 = stackIn_61_0 + stackIn_62_1;
           if (-100 + fd.field_e <= var7Lifetime2 &&
-            var8Lifetime3 == this.matchState.e(2)) {
+            var8Lifetime3 == this.matchState.getRoundWinner(2)) {
             if (this.matchState.roundsToWin == this.matchState.roundWins[var8Lifetime3]) {
               MembersUpsellMenu.a(vu.field_d.toUpperCase(), 2431750, SingleChildWidget.field_v, -1, var9Lifetime2 - 22, (var3 + 50 >> 1) + 20, -1);
             } else {
-              MembersUpsellMenu.a(cha.field_h.toUpperCase(), 2431750, SingleChildWidget.field_v, -1, var9Lifetime2 - 22, (var3 + 50 >> 1) + 20, -1);
+              MembersUpsellMenu.a(RasterBuffer.field_h.toUpperCase(), 2431750, SingleChildWidget.field_v, -1, var9Lifetime2 - 22, (var3 + 50 >> 1) + 20, -1);
             }
             var10Lifetime1 = 0;
             for (var11Lifetime1 = 0; this.field_r.length > var11Lifetime1; var11Lifetime1++) {
@@ -409,7 +409,7 @@ final class ResultsPhase extends MatchPhase {
           MembersUpsellMenu.a(this.matchState.playerNames[var8Lifetime3].toUpperCase(), var10Lifetime1Lifetime1, kn.field_p, -1, var9Lifetime2, (int)this.field_r[var8Lifetime3].field_q, -1);
           if (!this.field_p &&
             var7Lifetime2 >= var8Lifetime3 * 50 + efa.field_y &&
-            var7Lifetime2 < 50 + efa.field_y + this.matchState.field_k * 50) {
+            var7Lifetime2 < 50 + efa.field_y + this.matchState.playerCount * 50) {
             stackIn_151_0 = (var8Lifetime3 * 50 + efa.field_y + 25 > var7Lifetime2) ? 0 : 1;
             var11Lifetime1Lifetime1 = stackIn_151_0;
             var39 = Integer.toString(this.field_r[var8Lifetime3].field_p);
@@ -456,7 +456,7 @@ final class ResultsPhase extends MatchPhase {
             }
           } else if (!this.field_m &&
             var7Lifetime2 >= var8Lifetime3 * 50 + nta.field_d &&
-            50 + (this.matchState.field_k * 50 + nta.field_d) > var7Lifetime2) {
+            50 + (this.matchState.playerCount * 50 + nta.field_d) > var7Lifetime2) {
             stackIn_126_0 = (25 + (nta.field_d + var8Lifetime3 * 50) > var7Lifetime2) ? 0 : 1;
             var11Lifetime1Lifetime1 = stackIn_126_0;
             var36 = Integer.toString(this.field_r[var8Lifetime3].field_r);
@@ -508,7 +508,7 @@ final class ResultsPhase extends MatchPhase {
           } else {
             if (!this.field_o &&
               var7Lifetime2 >= var8Lifetime3 * 50 + ScrollPane.field_ub &&
-              var7Lifetime2 < this.matchState.field_k * 50 + ScrollPane.field_ub + 50) {
+              var7Lifetime2 < this.matchState.playerCount * 50 + ScrollPane.field_ub + 50) {
               stackIn_101_0 = (50 * var8Lifetime3 + ScrollPane.field_ub + 25 > var7Lifetime2) ? 0 : 1;
               var11Lifetime1Lifetime1 = stackIn_101_0;
               var33 = Integer.toString(this.field_r[var8Lifetime3].field_c);
@@ -779,7 +779,7 @@ final class ResultsPhase extends MatchPhase {
             SweeperMountComponent.field_H = var17Lifetime2;
             var17Lifetime2 += 100;
             var18 = var15 / 100.0;
-            this.field_r[this.matchState.e(2)].field_i = var18;
+            this.field_r[this.matchState.getRoundWinner(2)].field_i = var18;
           }
           var17Lifetime2 += 100;
           fd.field_e = var17Lifetime2;

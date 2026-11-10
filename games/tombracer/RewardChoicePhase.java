@@ -188,7 +188,7 @@ final class RewardChoicePhase extends MatchPhase {
           var9Lifetime1 = -(this.matchState.players.length * var5Lifetime1 / 2) + var6 + var5Lifetime1 * var17;
           var10 = -200 + var7;
           SocketConnector.a(this.screen.getPlayerName(var17, false).toUpperCase(), 1, kn.field_p, wga.field_a[var17], 0, 32, 1, var10, var9Lifetime1, 1, (byte) 60, var5Lifetime1);
-          if (!this.matchState.b((byte) 90, var17)) {
+          if (!this.matchState.hasFinishedCourse((byte) 90, var17)) {
             var11 = cs.field_b;
             var12 = 8947848;
           } else {
@@ -318,7 +318,7 @@ final class RewardChoicePhase extends MatchPhase {
           return;
         }
         if (qma.field_c &&
-          this.a(GridWidgetContainer.field_B, 25006, jba.field_j) &&
+          this.a(GridWidgetContainer.field_B, 25006, AgeValidator.field_j) &&
           PlayerModel.field_b == 1) {
           this.i(12721);
         }

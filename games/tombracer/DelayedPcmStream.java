@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sc extends PcmStream {
+final class DelayedPcmStream extends PcmStream {
     private PcmStream field_j;
     private int field_l;
     static int field_k;
@@ -76,7 +76,7 @@ final class sc extends PcmStream {
         return 0;
     }
 
-    sc(PcmStream param0, int param1) {
+    DelayedPcmStream(PcmStream param0, int param1) {
         try {
           this.field_j = param0;
           this.field_l = param1;

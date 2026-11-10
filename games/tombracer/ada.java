@@ -23,7 +23,7 @@ final class ada extends ArrayWidgetGroup implements ButtonListener {
           UiWidget var7 = (UiWidget) null;
           this.updatePointerState(-16, -96, (UiWidget) null, 107);
         }
-        if (this.field_x.a((byte) 124).b(-4666) != LightSource.field_k) {
+        if (this.field_x.getValidationSource((byte) 124).b(-4666) != LightSource.field_k) {
           return;
         }
         try {
@@ -41,7 +41,7 @@ final class ada extends ArrayWidgetGroup implements ButtonListener {
     ada(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3, (isa) null);
         this.field_x = new DateFieldsWidget(new hga(10000536), GraphicsToolkit.field_b, 0, 0, 140, 25);
-        this.field_x.a((byte) 111, new uba());
+        this.field_x.setValidator((byte) 111, new uba());
         this.field_B = new FocusableWidget(aua.field_d, (WidgetListener) (this));
         this.children = new UiWidget[]{(UiWidget) ((Object) this.field_x), (UiWidget) ((Object) this.field_B)};
         this.field_B.field_r = (isa) ((Object) new td());
@@ -51,7 +51,7 @@ final class ada extends ArrayWidgetGroup implements ButtonListener {
     final void updatePointerState(int param0, int param1, UiWidget param2, int param3) {
         try {
           super.updatePointerState(param0, param1, param2, param3);
-          this.field_B.field_y = this.field_x.a((byte) 47).b(-4666) == LightSource.field_k ? true : false;
+          this.field_B.field_y = this.field_x.getValidationSource((byte) 47).b(-4666) == LightSource.field_k ? true : false;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ada.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

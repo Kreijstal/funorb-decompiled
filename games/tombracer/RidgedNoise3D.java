@@ -1,52 +1,52 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class lba extends fi {
-    private int field_l;
-    private int field_s;
-    private int field_o;
+class RidgedNoise3D extends FixedPointPerlinNoise3D {
+    private int ridgeWeightQ12;
+    private int amplitudeQ12;
+    private int ridgeGainQ12;
     static int field_p;
-    private int field_m;
-    private int field_k;
-    private int field_i;
-    private byte[] field_n;
-    private int field_q;
+    private int accumulatedQ12;
+    private int amplitudeMultiplierQ12;
+    private int outputIndex;
+    private byte[] samples;
+    private int ridgeSignalQ12;
     static ina field_r;
-    private int field_j;
+    private int ridgeOffsetQ12;
 
-    final void a(int param0, byte param1, int param2) {
+    final void accumulateOctave(int param0, byte param1, int param2) {
         int var5 = TombRacer.field_G ? 1 : 0;
         if (param1 >= -37) {
-          lba.releaseStatics(-7);
+          RidgedNoise3D.releaseStatics(-7);
         }
         if (0 == param2) {
-          this.field_q = this.field_j - (param0 >= 0 ? param0 : -param0);
-          this.field_q = this.field_q * this.field_q >> 12;
-          this.field_l = 4096;
-          this.field_m = this.field_q;
+          this.ridgeSignalQ12 = this.ridgeOffsetQ12 - (param0 >= 0 ? param0 : -param0);
+          this.ridgeSignalQ12 = this.ridgeSignalQ12 * this.ridgeSignalQ12 >> 12;
+          this.ridgeWeightQ12 = 4096;
+          this.accumulatedQ12 = this.ridgeSignalQ12;
         } else {
-          this.field_l = this.field_q * this.field_o >> 12;
-          this.field_q = this.field_j - (param0 >= 0 ? param0 : -param0);
-          if (this.field_l < 0) {
-            this.field_l = 0;
-            this.field_q = this.field_q * this.field_q >> 12;
-            this.field_q = this.field_l * this.field_q >> 12;
-            this.field_m = this.field_m + (this.field_s * this.field_q >> 12);
-            this.field_s = this.field_k * this.field_s >> 12;
+          this.ridgeWeightQ12 = this.ridgeSignalQ12 * this.ridgeGainQ12 >> 12;
+          this.ridgeSignalQ12 = this.ridgeOffsetQ12 - (param0 >= 0 ? param0 : -param0);
+          if (this.ridgeWeightQ12 < 0) {
+            this.ridgeWeightQ12 = 0;
+            this.ridgeSignalQ12 = this.ridgeSignalQ12 * this.ridgeSignalQ12 >> 12;
+            this.ridgeSignalQ12 = this.ridgeWeightQ12 * this.ridgeSignalQ12 >> 12;
+            this.accumulatedQ12 = this.accumulatedQ12 + (this.amplitudeQ12 * this.ridgeSignalQ12 >> 12);
+            this.amplitudeQ12 = this.amplitudeMultiplierQ12 * this.amplitudeQ12 >> 12;
             return;
           }
-          if (4096 < this.field_l) {
-            this.field_l = 4096;
-            this.field_q = this.field_q * this.field_q >> 12;
-            this.field_q = this.field_l * this.field_q >> 12;
-            this.field_m = this.field_m + (this.field_s * this.field_q >> 12);
-            this.field_s = this.field_k * this.field_s >> 12;
+          if (4096 < this.ridgeWeightQ12) {
+            this.ridgeWeightQ12 = 4096;
+            this.ridgeSignalQ12 = this.ridgeSignalQ12 * this.ridgeSignalQ12 >> 12;
+            this.ridgeSignalQ12 = this.ridgeWeightQ12 * this.ridgeSignalQ12 >> 12;
+            this.accumulatedQ12 = this.accumulatedQ12 + (this.amplitudeQ12 * this.ridgeSignalQ12 >> 12);
+            this.amplitudeQ12 = this.amplitudeMultiplierQ12 * this.amplitudeQ12 >> 12;
             return;
           }
-          this.field_q = this.field_q * this.field_q >> 12;
-          this.field_q = this.field_l * this.field_q >> 12;
-          this.field_m = this.field_m + (this.field_s * this.field_q >> 12);
-          this.field_s = this.field_k * this.field_s >> 12;
+          this.ridgeSignalQ12 = this.ridgeSignalQ12 * this.ridgeSignalQ12 >> 12;
+          this.ridgeSignalQ12 = this.ridgeWeightQ12 * this.ridgeSignalQ12 >> 12;
+          this.accumulatedQ12 = this.accumulatedQ12 + (this.amplitudeQ12 * this.ridgeSignalQ12 >> 12);
+          this.amplitudeQ12 = this.amplitudeMultiplierQ12 * this.amplitudeQ12 >> 12;
           return;
         }
     }
@@ -229,16 +229,16 @@ class lba extends fi {
         }
     }
 
-    final void a(byte param0) {
+    final void resetOutput(byte param0) {
         if (param0 == 50) {
-          this.field_m = 0;
-          this.field_i = 0;
+          this.accumulatedQ12 = 0;
+          this.outputIndex = 0;
           return;
         }
         IsaacCipher var3 = (IsaacCipher) null;
-        lba.createMazeGenerator((byte) 11, (IsaacCipher) null, 6);
-        this.field_m = 0;
-        this.field_i = 0;
+        RidgedNoise3D.createMazeGenerator((byte) 11, (IsaacCipher) null, 6);
+        this.accumulatedQ12 = 0;
+        this.outputIndex = 0;
     }
 
     final static MazeGenerator createMazeGenerator(byte param0, IsaacCipher param1, int param2) {
@@ -295,79 +295,79 @@ class lba extends fi {
     public static void releaseStatics(int param0) {
         field_r = null;
         if (param0 != 1713718860) {
-          lba.releaseStatics(-50);
+          RidgedNoise3D.releaseStatics(-50);
         }
     }
 
-    void a(boolean param0, byte param1, int param2) {
-        this.field_n[param2] = (byte)param1;
+    void writeVoxel(boolean param0, byte param1, int param2) {
+        this.samples[param2] = (byte)param1;
         if (param0) {
-          this.field_l = 34;
+          this.ridgeWeightQ12 = 34;
         }
     }
 
-    final void c(int param0) {
+    final void finishVoxel(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
         int fieldTemp$4 = 0;
-        this.field_s = this.field_k;
+        this.amplitudeQ12 = this.amplitudeMultiplierQ12;
         if (param0 != 32164) {
-          this.field_s = -4;
-          this.field_m = this.field_m >> 4;
-          if (this.field_m < 0) {
-            this.field_m = 0;
-            fieldTemp$0 = this.field_i;
-            this.field_i = this.field_i + 1;
-            this.a(false, (byte)this.field_m, fieldTemp$0);
-            this.field_m = 0;
+          this.amplitudeQ12 = -4;
+          this.accumulatedQ12 = this.accumulatedQ12 >> 4;
+          if (this.accumulatedQ12 < 0) {
+            this.accumulatedQ12 = 0;
+            fieldTemp$0 = this.outputIndex;
+            this.outputIndex = this.outputIndex + 1;
+            this.writeVoxel(false, (byte)this.accumulatedQ12, fieldTemp$0);
+            this.accumulatedQ12 = 0;
             return;
           }
-          if (255 < this.field_m) {
-            this.field_m = 255;
-            fieldTemp$1 = this.field_i;
-            this.field_i = this.field_i + 1;
-            this.a(false, (byte)this.field_m, fieldTemp$1);
-            this.field_m = 0;
+          if (255 < this.accumulatedQ12) {
+            this.accumulatedQ12 = 255;
+            fieldTemp$1 = this.outputIndex;
+            this.outputIndex = this.outputIndex + 1;
+            this.writeVoxel(false, (byte)this.accumulatedQ12, fieldTemp$1);
+            this.accumulatedQ12 = 0;
             return;
           }
-          fieldTemp$2 = this.field_i;
-          this.field_i = this.field_i + 1;
-          this.a(false, (byte)this.field_m, fieldTemp$2);
-          this.field_m = 0;
+          fieldTemp$2 = this.outputIndex;
+          this.outputIndex = this.outputIndex + 1;
+          this.writeVoxel(false, (byte)this.accumulatedQ12, fieldTemp$2);
+          this.accumulatedQ12 = 0;
           return;
         }
-        this.field_m = this.field_m >> 4;
-        if (this.field_m < 0) {
-          this.field_m = 0;
-          fieldTemp$3 = this.field_i;
-          this.field_i = this.field_i + 1;
-          this.a(false, (byte)this.field_m, fieldTemp$3);
-          this.field_m = 0;
+        this.accumulatedQ12 = this.accumulatedQ12 >> 4;
+        if (this.accumulatedQ12 < 0) {
+          this.accumulatedQ12 = 0;
+          fieldTemp$3 = this.outputIndex;
+          this.outputIndex = this.outputIndex + 1;
+          this.writeVoxel(false, (byte)this.accumulatedQ12, fieldTemp$3);
+          this.accumulatedQ12 = 0;
           return;
         }
-        if (255 >= this.field_m) {
-          fieldTemp$4 = this.field_i;
-          this.field_i = this.field_i + 1;
-          this.a(false, (byte)this.field_m, fieldTemp$4);
-          this.field_m = 0;
+        if (255 >= this.accumulatedQ12) {
+          fieldTemp$4 = this.outputIndex;
+          this.outputIndex = this.outputIndex + 1;
+          this.writeVoxel(false, (byte)this.accumulatedQ12, fieldTemp$4);
+          this.accumulatedQ12 = 0;
           return;
         }
-        this.field_m = 255;
-        int fieldTemp$5 = this.field_i;
-        this.field_i = this.field_i + 1;
-        this.a(false, (byte)this.field_m, fieldTemp$5);
-        this.field_m = 0;
+        this.accumulatedQ12 = 255;
+        int fieldTemp$5 = this.outputIndex;
+        this.outputIndex = this.outputIndex + 1;
+        this.writeVoxel(false, (byte)this.accumulatedQ12, fieldTemp$5);
+        this.accumulatedQ12 = 0;
     }
 
-    lba(int param0, int param1, int param2, int param3, int param4, float param5, float param6, float param7) {
+    RidgedNoise3D(int param0, int param1, int param2, int param3, int param4, float param5, float param6, float param7) {
         super(param0, param1, param2, param3, param4);
-        this.field_j = (int)(param6 * 4096.0f);
-        this.field_o = (int)(param7 * 4096.0f);
+        this.ridgeOffsetQ12 = (int)(param6 * 4096.0f);
+        this.ridgeGainQ12 = (int)(param7 * 4096.0f);
         int dupTemp$0 = (int)(4096.0 * Math.pow(0.5, (double)(-param5)));
-        this.field_k = dupTemp$0;
-        this.field_s = dupTemp$0;
+        this.amplitudeMultiplierQ12 = dupTemp$0;
+        this.amplitudeQ12 = dupTemp$0;
     }
 
     static {

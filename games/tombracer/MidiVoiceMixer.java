@@ -52,7 +52,7 @@ final class MidiVoiceMixer extends PcmStream {
 
     final static void a(boolean param0) {
         oga.a(!param0 ? true : false);
-        jf.field_r = param0 ? true : false;
+        LoadProfileCommand.field_r = param0 ? true : false;
         gj.field_r = true;
         ej.field_a.e(true);
         vn.a(86, KeySwitchComponent.field_M, false);

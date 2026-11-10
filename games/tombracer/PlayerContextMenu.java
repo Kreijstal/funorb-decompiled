@@ -297,7 +297,7 @@ final class PlayerContextMenu {
                   this.field_f.addItem((byte) -71, 19, gl.$cfr$intArgs$a$53ce4ab4c593(96, gja.field_k, new String[]{var7}));
                 }
               }
-              this.field_f.addItem((byte) -104, 5, gl.$cfr$intArgs$a$53ce4ab4c593(90, dca.field_q, new String[]{var7}));
+              this.field_f.addItem((byte) -104, 5, gl.$cfr$intArgs$a$53ce4ab4c593(90, LegacyTurbulentWaterNoise.field_q, new String[]{var7}));
             }
             if (var6 == 0) {
               return;
@@ -341,7 +341,7 @@ final class PlayerContextMenu {
             if (0 == nba.field_b) {
               this.field_f.addItem((byte) -77, 12, jl.field_a);
             }
-            this.field_f.addItem((byte) -82, 13, ot.field_w);
+            this.field_f.addItem((byte) -82, 13, HardwareRidgedWaterNoise.field_w);
           }
           if (param0.field_d == 2) {
             if (UrlDownloadRequest.field_i == 0) {

@@ -85,7 +85,7 @@ final class sw extends jea {
           String var8 = null;
           var6 = TombRacer.field_G ? 1 : 0;
           try {
-            var2_int = this.b(-2, -this.field_Cb.field_S + (-this.field_q + jba.field_j));
+            var2_int = this.b(-2, -this.field_Cb.field_S + (-this.field_q + AgeValidator.field_j));
             if (this.field_y != 1) {
               if (RangeOperator.field_p == 1 &&
                 this.field_tb) {
@@ -294,11 +294,11 @@ final class sw extends jea {
             if (dq.field_f != null &&
               dq.field_f.field_b) {
               og.b(0);
-              ModelFactory.field_a.c(new gga(ModelFactory.field_a, or.field_j), 122);
+              ModelFactory.field_a.c(new gga(ModelFactory.field_a, TurbulenceNoise3D.field_j), 122);
             }
             return;
           }
-          ModelFactory.field_a.processPointerFrame(sc.field_k, true, ConstrainToFacingArcLocomotor.field_w, param0 ^ -11);
+          ModelFactory.field_a.processPointerFrame(DelayedPcmStream.field_k, true, ConstrainToFacingArcLocomotor.field_w, param0 ^ -11);
           ModelFactory.field_a.g((byte) -128);
           while (NanoTickClock.pollKeyEvent(true)) {
             ModelFactory.field_a.dispatchKeyInput((byte) -53, MenuEntry.field_h, HardwareOpenGlToolkit.field_td);

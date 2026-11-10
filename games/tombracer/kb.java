@@ -23,7 +23,7 @@ final class kb extends IntrusiveNode {
         }
         var5 = param4;
         if (0 == var5) {
-          return dia.a(param2, param0, param1, (byte) 124);
+          return HelloCommand.a(param2, param0, param1, (byte) 124);
         }
         if (var5 == 1) {
           return RevolverItemComponent.field_J[param0];

@@ -364,19 +364,19 @@ final class FleeLocomotor extends Locomotor {
         kra.field_a = new lqa(3, 4, true, true, true, true, true, true, true, false, true);
         ControllerLocomotor.field_t = new lqa(3, 1, true, false, false, true, true, true, true, false, true);
         if (param0 == -33) {
-          paa.field_z = new lqa(1, 4, true, true, true, true, true, true, true, false, true);
+          DateInputWidget.field_z = new lqa(1, 4, true, true, true, true, true, true, true, false, true);
           vea.field_c = new lqa(1, 1, true, false, false, true, true, true, true, false, true);
           UsernameSuggestionsPanel.field_x = new lqa(0, 1, true, false, false, false, false, false, false, true, false);
           daa.field_d = new lqa(0, 1, false, false, false, false, false, false, false, true, false);
-          rc.field_a = new ei[]{(ei) ((Object) kra.field_a), (ei) ((Object) paa.field_z), (ei) ((Object) ControllerLocomotor.field_t), (ei) ((Object) vea.field_c), (ei) ((Object) UsernameSuggestionsPanel.field_x), (ei) ((Object) daa.field_d)};
+          rc.field_a = new ei[]{(ei) ((Object) kra.field_a), (ei) ((Object) DateInputWidget.field_z), (ei) ((Object) ControllerLocomotor.field_t), (ei) ((Object) vea.field_c), (ei) ((Object) UsernameSuggestionsPanel.field_x), (ei) ((Object) daa.field_d)};
           return;
         }
         field_B = (String) null;
-        paa.field_z = new lqa(1, 4, true, true, true, true, true, true, true, false, true);
+        DateInputWidget.field_z = new lqa(1, 4, true, true, true, true, true, true, true, false, true);
         vea.field_c = new lqa(1, 1, true, false, false, true, true, true, true, false, true);
         UsernameSuggestionsPanel.field_x = new lqa(0, 1, true, false, false, false, false, false, false, true, false);
         daa.field_d = new lqa(0, 1, false, false, false, false, false, false, false, true, false);
-        rc.field_a = new ei[]{(ei) ((Object) kra.field_a), (ei) ((Object) paa.field_z), (ei) ((Object) ControllerLocomotor.field_t), (ei) ((Object) vea.field_c), (ei) ((Object) UsernameSuggestionsPanel.field_x), (ei) ((Object) daa.field_d)};
+        rc.field_a = new ei[]{(ei) ((Object) kra.field_a), (ei) ((Object) DateInputWidget.field_z), (ei) ((Object) ControllerLocomotor.field_t), (ei) ((Object) vea.field_c), (ei) ((Object) UsernameSuggestionsPanel.field_x), (ei) ((Object) daa.field_d)};
     }
 
     static {

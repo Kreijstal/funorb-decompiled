@@ -61,7 +61,7 @@ final class cj implements isa {
           while (true) {
             if (GameKeyHandler.field_b < 0) {
               WeaveOperator.field_q.position = 0;
-              if (!ama.a(1, -1)) {
+              if (!LegacyRidgedWaterNoise.a(1, -1)) {
                 return false;
               }
               GameKeyHandler.field_b = WeaveOperator.field_q.readCipheredOpcode(-83);

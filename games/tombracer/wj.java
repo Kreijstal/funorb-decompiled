@@ -37,7 +37,7 @@ final class wj {
         } else {
           var7 = jaa.field_a;
         }
-        lba.a(param6, param5, param1, (byte) 53, param0, param2, var7, param4);
+        RidgedNoise3D.a(param6, param5, param1, (byte) 53, param0, param2, var7, param4);
     }
 
     public static void releaseStatics(byte param0) {

@@ -10,7 +10,7 @@ final class mla {
 
     final boolean a(int param0) {
         if (param0 < -22) {
-          return ((SpriteSampleOperator.field_s == this ? 1 : 0) | (this == cha.field_d ? 1 : 0)) != 0;
+          return ((SpriteSampleOperator.field_s == this ? 1 : 0) | (this == RasterBuffer.field_d ? 1 : 0)) != 0;
         }
         return false;
     }

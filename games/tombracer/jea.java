@@ -419,10 +419,10 @@ class jea extends um {
           0 != PlayerModel.field_b &&
           PasswordValidator.field_m >= SoftwareRasterizer.field_b &&
           PasswordValidator.field_m < SoftwareRasterizer.field_d &&
-          SoftwareRasterizer.field_h <= lba.field_p &&
-          SoftwareRasterizer.field_k > lba.field_p) {
+          SoftwareRasterizer.field_h <= RidgedNoise3D.field_p &&
+          SoftwareRasterizer.field_k > RidgedNoise3D.field_p) {
           this.field_E = PlayerModel.field_b;
-          this.field_kb = -this.field_A + lba.field_p;
+          this.field_kb = -this.field_A + RidgedNoise3D.field_p;
           var12 = 1;
           this.field_p = PasswordValidator.field_m - this.field_q;
           this.field_y = PlayerModel.field_b;
@@ -432,7 +432,7 @@ class jea extends um {
           }
           this.field_y = 0;
         }
-        stackIn_31_1 = (!FuseBehaviour.field_w) && (jba.field_j >= SoftwareRasterizer.field_b) && (jba.field_j < SoftwareRasterizer.field_d) && (GridWidgetContainer.field_B >= SoftwareRasterizer.field_h) && (SoftwareRasterizer.field_k > GridWidgetContainer.field_B);
+        stackIn_31_1 = (!FuseBehaviour.field_w) && (AgeValidator.field_j >= SoftwareRasterizer.field_b) && (AgeValidator.field_j < SoftwareRasterizer.field_d) && (GridWidgetContainer.field_B >= SoftwareRasterizer.field_h) && (SoftwareRasterizer.field_k > GridWidgetContainer.field_B);
         this.field_pb = stackIn_31_1;
         if (RangeOperator.field_p == 0) {
           this.field_E = 0;
@@ -455,7 +455,7 @@ class jea extends um {
         SoftwareRasterizer.b(var8, var9, var10, var11);
         if (0 != this.field_E &&
           this.field_F) {
-          this.field_qb = -param4 + jba.field_j - this.field_p;
+          this.field_qb = -param4 + AgeValidator.field_j - this.field_p;
           this.field_T = -param5 - this.field_kb + GridWidgetContainer.field_B;
           if (this.field_qb < 0) {
             this.field_qb = 0;

@@ -116,7 +116,7 @@ final class TrackPlayerLocomotor extends Locomotor {
         int var7 = 0;
         int var8 = 0;
         try {
-          var2_int = jba.field_j;
+          var2_int = AgeValidator.field_j;
           var3 = GridWidgetContainer.field_B;
           var4 = Corpse.field_i.field_H.a(param1, 500);
           var5 = 6 + Corpse.field_i.field_H.getWrappedWidth(param1, 500);

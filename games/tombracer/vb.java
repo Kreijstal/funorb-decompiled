@@ -210,7 +210,7 @@ final class vb extends IntrusiveNode {
           field_i = 102;
         }
         this.field_g = param1;
-        this.field_f.a(128 + param1 * ot.field_v >> 8, param0);
+        this.field_f.a(128 + param1 * HardwareRidgedWaterNoise.field_v >> 8, param0);
     }
 
     vb(PcmSampleStream param0, IntrusiveNode param1) {
@@ -218,7 +218,7 @@ final class vb extends IntrusiveNode {
           this.field_f = param0;
           this.field_g = param0.l();
           this.field_h = param1;
-          this.field_f.e(128 + ot.field_v * this.field_g >> 8);
+          this.field_f.e(128 + HardwareRidgedWaterNoise.field_v * this.field_g >> 8);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

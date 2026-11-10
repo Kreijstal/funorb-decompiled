@@ -260,10 +260,10 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
         jaggl.OpenGL.glFogf(2915, this.field_B);
         jaggl.OpenGL.glFogf(2916, this.field_Hc);
-        dia.field_r[2] = (float)SnakePitBehaviour.bitwiseAnd(this.field_g, 255) / 255.0f;
-        dia.field_r[param0] = (float)SnakePitBehaviour.bitwiseAnd(65280, this.field_g) / 65280.0f;
-        dia.field_r[0] = (float)SnakePitBehaviour.bitwiseAnd(16711680, this.field_g) / 16711680.0f;
-        jaggl.OpenGL.glFogfv(2918, dia.field_r, 0);
+        HelloCommand.field_r[2] = (float)SnakePitBehaviour.bitwiseAnd(this.field_g, 255) / 255.0f;
+        HelloCommand.field_r[param0] = (float)SnakePitBehaviour.bitwiseAnd(65280, this.field_g) / 65280.0f;
+        HelloCommand.field_r[0] = (float)SnakePitBehaviour.bitwiseAnd(16711680, this.field_g) / 16711680.0f;
+        jaggl.OpenGL.glFogfv(2918, HelloCommand.field_r, 0);
     }
 
     final na a(byte param0, int[][] param1, boolean param2, int param3) {
@@ -354,16 +354,16 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           var4 = var3.c(param0 ^ -43);
           var5 = 16386 + var2;
           var6 = var3.b(0) / 255.0f;
-          dia.field_r[0] = (float)var3.d(13437);
-          dia.field_r[1] = (float)var3.a(19848);
-          dia.field_r[2] = (float)var3.b((byte) 11);
-          dia.field_r[3] = 1.0f;
-          jaggl.OpenGL.glLightfv(var5, 4611, dia.field_r, 0);
-          dia.field_r[3] = 1.0f;
-          dia.field_r[1] = var6 * (float)SnakePitBehaviour.bitwiseAnd(255, var4 >> 8);
-          dia.field_r[2] = var6 * (float)SnakePitBehaviour.bitwiseAnd(var4, 255);
-          dia.field_r[0] = (float)SnakePitBehaviour.bitwiseAnd(255, var4 >> 16) * var6;
-          jaggl.OpenGL.glLightfv(var5, 4609, dia.field_r, 0);
+          HelloCommand.field_r[0] = (float)var3.d(13437);
+          HelloCommand.field_r[1] = (float)var3.a(19848);
+          HelloCommand.field_r[2] = (float)var3.b((byte) 11);
+          HelloCommand.field_r[3] = 1.0f;
+          jaggl.OpenGL.glLightfv(var5, 4611, HelloCommand.field_r, 0);
+          HelloCommand.field_r[3] = 1.0f;
+          HelloCommand.field_r[1] = var6 * (float)SnakePitBehaviour.bitwiseAnd(255, var4 >> 8);
+          HelloCommand.field_r[2] = var6 * (float)SnakePitBehaviour.bitwiseAnd(var4, 255);
+          HelloCommand.field_r[0] = (float)SnakePitBehaviour.bitwiseAnd(255, var4 >> 16) * var6;
+          jaggl.OpenGL.glLightfv(var5, 4609, HelloCommand.field_r, 0);
           jaggl.OpenGL.glLightf(var5, 4617, 1.0f / (float)(var3.a((byte) -23) * var3.a((byte) -84)));
           jaggl.OpenGL.glEnable(var5);
         }
@@ -407,11 +407,11 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
     }
 
     final void r(int param0) {
-        dia.field_r[3] = 1.0f;
-        dia.field_r[param0] = this.field_fc * this.field_sc;
-        dia.field_r[2] = this.field_Kb * this.field_fc;
-        dia.field_r[1] = this.field_yb * this.field_fc;
-        jaggl.OpenGL.glLightModelfv(2899, dia.field_r, 0);
+        HelloCommand.field_r[3] = 1.0f;
+        HelloCommand.field_r[param0] = this.field_fc * this.field_sc;
+        HelloCommand.field_r[2] = this.field_Kb * this.field_fc;
+        HelloCommand.field_r[1] = this.field_yb * this.field_fc;
+        jaggl.OpenGL.glLightModelfv(2899, HelloCommand.field_r, 0);
     }
 
     final boolean h() {
@@ -578,7 +578,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         if (DualLinkNode.field_h == this.field_v[this.field_Cc]) {
           jaggl.OpenGL.glLoadIdentity();
         } else {
-          jaggl.OpenGL.glLoadMatrixf(this.field_hc[this.field_Cc].a(jba.field_k, (byte) -37), 0);
+          jaggl.OpenGL.glLoadMatrixf(this.field_hc[this.field_Cc].a(AgeValidator.field_k, (byte) -37), 0);
         }
         jaggl.OpenGL.glMatrixMode(5888);
     }
@@ -605,19 +605,19 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
     }
 
     final void applyDirectionalLightColors(int param0) {
-        dia.field_r[3] = 1.0f;
-        dia.field_r[2] = this.field_j * this.field_Kb;
-        dia.field_r[1] = this.field_j * this.field_yb;
-        dia.field_r[0] = this.field_j * this.field_sc;
-        jaggl.OpenGL.glLightfv(16384, 4609, dia.field_r, 0);
-        dia.field_r[0] = -this.field_pc * this.field_sc;
-        dia.field_r[3] = 1.0f;
-        dia.field_r[2] = -this.field_pc * this.field_Kb;
+        HelloCommand.field_r[3] = 1.0f;
+        HelloCommand.field_r[2] = this.field_j * this.field_Kb;
+        HelloCommand.field_r[1] = this.field_j * this.field_yb;
+        HelloCommand.field_r[0] = this.field_j * this.field_sc;
+        jaggl.OpenGL.glLightfv(16384, 4609, HelloCommand.field_r, 0);
+        HelloCommand.field_r[0] = -this.field_pc * this.field_sc;
+        HelloCommand.field_r[3] = 1.0f;
+        HelloCommand.field_r[2] = -this.field_pc * this.field_Kb;
         if (param0 <= 19) {
           return;
         }
-        dia.field_r[1] = this.field_yb * -this.field_pc;
-        jaggl.OpenGL.glLightfv(16385, 4609, dia.field_r, 0);
+        HelloCommand.field_r[1] = this.field_yb * -this.field_pc;
+        jaggl.OpenGL.glLightfv(16385, 4609, HelloCommand.field_r, 0);
     }
 
     final void a(RenderTarget param0) {
@@ -970,11 +970,11 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         if (param0 >= -10) {
           this.queueProgramDeletion(20, (byte) 35);
         }
-        dia.field_r[3] = (float)(this.field_bc >>> 24) / 255.0f;
-        dia.field_r[2] = (float)SnakePitBehaviour.bitwiseAnd(this.field_bc, 255) / 255.0f;
-        dia.field_r[1] = (float)SnakePitBehaviour.bitwiseAnd(65280, this.field_bc) / 65280.0f;
-        dia.field_r[0] = (float)SnakePitBehaviour.bitwiseAnd(16711680, this.field_bc) / 16711680.0f;
-        jaggl.OpenGL.glTexEnvfv(8960, 8705, dia.field_r, 0);
+        HelloCommand.field_r[3] = (float)(this.field_bc >>> 24) / 255.0f;
+        HelloCommand.field_r[2] = (float)SnakePitBehaviour.bitwiseAnd(this.field_bc, 255) / 255.0f;
+        HelloCommand.field_r[1] = (float)SnakePitBehaviour.bitwiseAnd(65280, this.field_bc) / 65280.0f;
+        HelloCommand.field_r[0] = (float)SnakePitBehaviour.bitwiseAnd(16711680, this.field_bc) / 16711680.0f;
+        jaggl.OpenGL.glTexEnvfv(8960, 8705, HelloCommand.field_r, 0);
     }
 
     final float c(byte param0) {
@@ -1689,7 +1689,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
         if (this.field_r.a(-43)) {
           if (!this.field_Zc) {
-            jaggl.OpenGL.glLoadMatrixf(this.field_Qb.a(jba.field_k, (byte) -37), 0);
+            jaggl.OpenGL.glLoadMatrixf(this.field_Qb.a(AgeValidator.field_k, (byte) -37), 0);
             this.field_Zc = true;
             this.applyLightPositions(70);
             this.g((byte) 92);
@@ -1698,14 +1698,14 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
             this.field_rd = false;
           } else {
             jaggl.OpenGL.glPushMatrix();
-            jaggl.OpenGL.glMultMatrixf(this.field_q.a(jba.field_k, (byte) -37), 0);
+            jaggl.OpenGL.glMultMatrixf(this.field_q.a(AgeValidator.field_k, (byte) -37), 0);
             this.field_rd = true;
           }
         } else {
           if (this.field_gb) {
             jaggl.OpenGL.glLoadIdentity();
           } else {
-            jaggl.OpenGL.glLoadMatrixf(this.field_q.a(jba.field_k, (byte) -37), 0);
+            jaggl.OpenGL.glLoadMatrixf(this.field_q.a(AgeValidator.field_k, (byte) -37), 0);
           }
           this.field_rd = false;
         }

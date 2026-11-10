@@ -31,7 +31,7 @@ final class foa implements GamePacket {
         if (param0 < 86) {
           return false;
         }
-        return jf.field_r;
+        return LoadProfileCommand.field_r;
     }
 
     final static boolean a(int param0, int param1, int param2) {

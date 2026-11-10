@@ -91,12 +91,12 @@ final class HorizontalGradientOperator extends TextureOperator {
 
     final static void decreaseMusicVolume(int param0) {
         int var1 = 0;
-        if (ot.field_v > 32) {
-          var1 = ot.field_v % 32;
+        if (HardwareRidgedWaterNoise.field_v > 32) {
+          var1 = HardwareRidgedWaterNoise.field_v % 32;
           if (var1 == 0) {
             var1 = 32;
           }
-          mp.setMusicVolume(2, ot.field_v - var1);
+          mp.setMusicVolume(2, HardwareRidgedWaterNoise.field_v - var1);
         } else {
           mp.setMusicVolume(2, 0);
         }

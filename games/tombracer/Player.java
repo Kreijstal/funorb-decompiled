@@ -215,7 +215,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
               if (0 < this.lifeStateTimer) {
                 return;
               }
-              this.getSimulation(param0 ^ -6).c(-1);
+              this.getSimulation(param0 ^ -6).advanceToNextRoom(-1);
               if (var4 == 0) {
                 return;
               }
@@ -348,7 +348,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
                 this.lifeStateTimer = this.lifeStateTimer - 1;
                 if (0 >= this.lifeStateTimer) {
                   this.bankRoomTreasure(3);
-                  this.getSimulation(-1).c(-1);
+                  this.getSimulation(-1).advanceToNextRoom(-1);
                 }
               }
             }
@@ -2055,7 +2055,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
           if (var6 != 0) {
             var13++;
           }
-          var14 = this.getSimulation(-1).g(113) ? 1 : 0;
+          var14 = this.getSimulation(-1).isTimeFrozen(113) ? 1 : 0;
           var15 = this.field_N;
           if (this.getSimulation(-1).isEffectActive(0, 10915)) {
             var15 = var15 / 2;

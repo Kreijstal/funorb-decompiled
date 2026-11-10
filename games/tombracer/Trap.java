@@ -531,7 +531,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           this.D((byte) 118);
         }
         if (!param1) {
-          stackIn_20_0 = (this.getSimulation(15470).g(99));
+          stackIn_20_0 = (this.getSimulation(15470).isTimeFrozen(99));
         } else {
           stackIn_20_0 = true;
         }

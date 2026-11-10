@@ -48,7 +48,7 @@ final class qha extends ou {
             if (var7 == 0) {
               var9 = MazeComponent.b(param0 - 58, var6).field_f;
             } else {
-              var10 = ak.a(var5, (byte) 127);
+              var10 = LoadLevelCommand.a(var5, (byte) 127);
               var14 = ta.d(var10, false);
               var9 = var14.field_f;
             }
@@ -74,7 +74,7 @@ final class qha extends ou {
           if (var7 == 0) {
             var9Lifetime1 = MazeComponent.b(param0 - 58, var6).field_f;
           } else {
-            var10Lifetime1 = ak.a(var5, (byte) 127);
+            var10Lifetime1 = LoadLevelCommand.a(var5, (byte) 127);
             var13 = ta.d(var10Lifetime1, false);
             var9Lifetime1 = var13.field_f;
           }

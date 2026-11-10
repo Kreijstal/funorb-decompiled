@@ -82,7 +82,7 @@ final class dh {
           var8 = var41;
           var64 = new int[param3.field_A];
           var63 = ada.field_y;
-          var62 = ie.field_i;
+          var62 = DirectByteStorage.field_i;
           var61 = SoftReferenceCache.field_d;
           if (param7 != -23) {
             return;

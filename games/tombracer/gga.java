@@ -166,7 +166,7 @@ final class gga extends ofa implements ButtonListener {
           if (gj.field_o == param1) {
             var3 = SwitchState.field_o;
           } else {
-            if (or.field_j == param1) {
+            if (TurbulenceNoise3D.field_j == param1) {
               this.field_p = this.field_p + 10;
               var3 = S2CEventPacket.field_b;
               if (GridWidgetContainer.g((byte) 97)) {

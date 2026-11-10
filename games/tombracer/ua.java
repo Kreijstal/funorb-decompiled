@@ -58,7 +58,7 @@ final class ua implements GamePacket {
     final static byte[] a(Object param0, int param1, int param2, boolean param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
-        qu var5 = null;
+        ByteStorage var5 = null;
         byte[] stackIn_5_0 = null;
         byte[] stackIn_9_0 = null;
         RuntimeException stackIn_15_0 = null;
@@ -74,8 +74,8 @@ final class ua implements GamePacket {
             stackIn_5_0 = WidgetContainer.copyByteRange(param1, 0, param2, var4);
             return stackIn_5_0;
           }
-          if (param0 instanceof qu) {
-            var5 = (qu) (param0);
+          if (param0 instanceof ByteStorage) {
+            var5 = (ByteStorage) (param0);
             stackIn_9_0 = var5.a((byte) -104, param1, param2);
             return stackIn_9_0;
           }

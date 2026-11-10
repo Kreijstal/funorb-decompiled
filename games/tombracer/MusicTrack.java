@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qua extends IntrusiveNode {
+final class MusicTrack extends IntrusiveNode {
     byte[] field_g;
     NodeHashTable field_f;
 
@@ -106,19 +106,19 @@ final class qua extends IntrusiveNode {
         }
     }
 
-    final void a() {
+    final void releasePatchUsage() {
         this.field_f = null;
     }
 
-    final static qua a(ResourceArchive param0, String param1, String param2) {
+    final static MusicTrack load(ResourceArchive param0, String param1, String param2) {
         byte[] var3 = param0.a(param1, (byte) 114, param2);
         if (var3 == null) {
           return null;
         }
-        return new qua(new PacketBuffer(var3));
+        return new MusicTrack(new PacketBuffer(var3));
     }
 
-    private qua(PacketBuffer param0) {
+    private MusicTrack(PacketBuffer param0) {
         int incrementValue$0 = 0;
         int incrementValue$25 = 0;
         int incrementValue$26 = 0;

@@ -220,9 +220,9 @@ final class uw {
           var7Lifetime1 = 0;
           var8Lifetime1 = cr.a(true, var6Lifetime1) >> 8;
           var9Lifetime1 = pla.b(119, var6Lifetime1) >> 8;
-          if (jba.field_j != -1 &&
+          if (AgeValidator.field_j != -1 &&
             GridWidgetContainer.field_B != -1) {
-            var7Lifetime1 = -320 + jba.field_j;
+            var7Lifetime1 = -320 + AgeValidator.field_j;
             var8Lifetime1 = 240 - GridWidgetContainer.field_B;
             var9Lifetime1 = -128;
           }

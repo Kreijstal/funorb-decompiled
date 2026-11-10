@@ -123,7 +123,7 @@ final class MaskBlendOperator extends TextureOperator {
           var4_int = param0.b(param1, -7768);
           var6 = 88 / ((-9 - param3) / 60);
           var5 = param0.a(true, param2, var4_int);
-          stackIn_1_0 = ot.a(var4_int, var5, param0, true);
+          stackIn_1_0 = HardwareRidgedWaterNoise.a(var4_int, var5, param0, true);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

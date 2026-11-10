@@ -33,7 +33,7 @@ final class IntPoint {
     final static byte[] unwrapByteStorage(Object param0, int param1, boolean param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
-        qu var4 = null;
+        ByteStorage var4 = null;
         byte[] stackIn_8_0 = null;
         byte[] stackIn_10_0 = null;
         byte[] stackIn_14_0 = null;
@@ -49,10 +49,10 @@ final class IntPoint {
             field_c = (String) null;
           }
           if (!(param0 instanceof byte[])) {
-            if (!(param0 instanceof qu)) {
+            if (!(param0 instanceof ByteStorage)) {
               throw new IllegalArgumentException();
             }
-            var4 = (qu) (param0);
+            var4 = (ByteStorage) (param0);
             stackIn_14_0 = var4.toByteArray(false);
             return stackIn_14_0;
           }

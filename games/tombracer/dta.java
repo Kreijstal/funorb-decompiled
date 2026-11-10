@@ -122,12 +122,12 @@ final class dta {
             var15 = var9.field_c.field_b[param2];
             stackIn_12_0 = (var11 != param2) ? 0 : 1;
             var16 = stackIn_12_0;
-            if (var9.field_P > 1) {
-              if (var9.b((byte) 90, param2)) {
+            if (var9.playersRemaining > 1) {
+              if (var9.hasFinishedCourse((byte) 90, param2)) {
                 tga.field_a.setClip(param0, param5, param1, param6);
                 Room.field_j.a(0, 0);
                 SocketConnector.a(ad.field_i.toUpperCase(), 1, SingleChildWidget.field_v, 10981495, 20, -param5 + param6, 1, param5, param0, 1, (byte) 60, -param0 + param1);
-                SocketConnector.a(dea.a(var9.c((byte) 115, param2), (byte) -8), 1, eda.field_f, 10981495, 20, param6 - param5, 1, param5 + 30, param0, 1, (byte) 60, param1 - param0);
+                SocketConnector.a(dea.a(var9.getSimulationTick((byte) 115, param2), (byte) -8), 1, eda.field_f, 10981495, 20, param6 - param5, 1, param5 + 30, param0, 1, (byte) 60, param1 - param0);
                 tga.field_a.la();
                 return;
               }
@@ -149,7 +149,7 @@ final class dta {
               RoomEffectTraps.a(0, -106, var18 + (param5 + 34), var19.substring(0, -3 + var19.length()), 12 + param0 + var17, SingleChildWidget.field_v, 11903361);
               RoomEffectTraps.a(0, -102, var18 + (param5 + 35), var19.substring(var19.length() - 2, var19.length()), 98 + (var17 + param0), eda.field_f, 11903361);
               var20 = 1 + var12.getCourseIndex(-104);
-              var21 = var12.getSimulation(-1).f(122);
+              var21 = var12.getSimulation(-1).getRoomArrayLength(122);
               if (var12.getSimulation(-1).d(28091)) {
                 var21 = (var21 >> 1) + 1;
                 var20 = 1 + (var20 >> 1);
@@ -323,7 +323,7 @@ final class dta {
                 var36 = eda.field_f;
                 var37Lifetime1 = 16;
                 var38 = 1;
-                if (1 >= var9.field_k) {
+                if (1 >= var9.playerCount) {
                   param6 -= 20;
                 } else {
                   param1 -= 10;
@@ -358,7 +358,7 @@ final class dta {
               var42 = dw.field_j;
               var31Lifetime3 = (int)(128.0 - Math.sin((double)bva.currentTimeMillis((byte) -107) / 512.0) * 128.0);
               NotLoggedInMenu.a(var31Lifetime3, (byte) -73, var31Lifetime3, 1, SingleChildWidget.field_v, var42.toUpperCase(), 40 + (SwitchLinkList.b(0) >> 1) + (SwitchLinkList.b(0) >> 2), 11903361, param1 + param0 >> 1);
-              var32Lifetime2 = param4.field_r - param4.matchState.c((byte) 115, param2);
+              var32Lifetime2 = param4.field_r - param4.matchState.getSimulationTick((byte) 115, param2);
               if (var32Lifetime2 >= 250) {
                 return;
               }

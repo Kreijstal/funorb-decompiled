@@ -28,13 +28,13 @@ final class kqa {
         for (var3 = 0; var3 < this.field_d.players.length; var3++) {
           stackIn_4_0 = this.field_c;
           stackIn_4_1 = var3;
-          if (this.field_d.simulations[var3].b(0)) {
+          if (this.field_d.simulations[var3].isFinished(0)) {
             stackIn_5_2 = -999;
           } else {
             stackIn_5_2 = this.field_d.simulations[var3].b(false) + this.field_d.players[var3].i((byte) -72);
           }
           stackIn_4_0[stackIn_4_1] = stackIn_5_2;
-          if (this.field_d.f((byte) -99, var3)) {
+          if (this.field_d.hasResigned((byte) -99, var3)) {
             this.field_c[var3] = 2147483647;
           }
         }

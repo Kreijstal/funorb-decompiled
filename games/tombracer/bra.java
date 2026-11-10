@@ -107,7 +107,7 @@ final class bra extends ofa implements ButtonListener {
         super(param0, 200, 130);
         UiWidget var2 = null;
         try {
-          var2 = new UiWidget(jba.field_l, (WidgetListener) null);
+          var2 = new UiWidget(AgeValidator.field_l, (WidgetListener) null);
           var2.field_m = this.field_m;
           var2.field_i = 0;
           var2.field_p = 80;

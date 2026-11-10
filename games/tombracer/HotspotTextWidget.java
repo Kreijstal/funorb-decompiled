@@ -113,7 +113,7 @@ class HotspotTextWidget extends FocusableWidget {
           super.updatePointerState(param0, param1 + 0, param2, param3);
           this.field_A = null;
           if (this.field_f) {
-            var5_int = -param0 + (jba.field_j - this.field_i);
+            var5_int = -param0 + (AgeValidator.field_j - this.field_i);
             var6 = GridWidgetContainer.field_B - param3 - this.field_n;
             this.field_A = this.a(var6, var5_int, (byte) -20);
           }

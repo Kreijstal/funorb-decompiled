@@ -378,7 +378,7 @@ class UiWidget extends IntrusiveNode {
           if (param1 != 2097152) {
             field_k = (String) null;
           }
-          var5_int = this.containsPointer(jba.field_j, param0, -105, GridWidgetContainer.field_B, param3) ? 1 : 0;
+          var5_int = this.containsPointer(AgeValidator.field_j, param0, -105, GridWidgetContainer.field_B, param3) ? 1 : 0;
           stackIn_5_0 = (this.field_f) ? 0 : 1;
           if (var5_int != 0) {
             stackIn_8_1 = 0;
@@ -516,11 +516,11 @@ class UiWidget extends IntrusiveNode {
         }
         if (0 == pg.field_y) {
           if (PlayerModel.field_b != 0) {
-            if (!this.handlePointerPress(97, param2, param0, lba.field_p, PlayerModel.field_b, this, PasswordValidator.field_m)) {
+            if (!this.handlePointerPress(97, param2, param0, RidgedNoise3D.field_p, PlayerModel.field_b, this, PasswordValidator.field_m)) {
               if (var5 == 0) {
                 if (RangeOperator.field_p == 0 &&
                   TextFieldValidator.field_f != 0) {
-                  this.handlePointerRelease((byte) 59, this, GridWidgetContainer.field_B, param2, param0, jba.field_j);
+                  this.handlePointerRelease((byte) 59, this, GridWidgetContainer.field_B, param2, param0, AgeValidator.field_j);
                   var8 = ava.field_f;
                   if (var8 != null) {
                     if (!(var8.field_h instanceof kja)) {
@@ -553,7 +553,7 @@ class UiWidget extends IntrusiveNode {
           }
           if (RangeOperator.field_p == 0 &&
             TextFieldValidator.field_f != 0) {
-            this.handlePointerRelease((byte) 59, this, GridWidgetContainer.field_B, param2, param0, jba.field_j);
+            this.handlePointerRelease((byte) 59, this, GridWidgetContainer.field_B, param2, param0, AgeValidator.field_j);
             var9 = ava.field_f;
             if (var9 != null) {
               if (var9.field_h instanceof kja) {
@@ -583,10 +583,10 @@ class UiWidget extends IntrusiveNode {
         }
         if (var5 == 0) {
           if (PlayerModel.field_b != 0) {
-            if (!this.handlePointerPress(97, param2, param0, lba.field_p, PlayerModel.field_b, this, PasswordValidator.field_m)) {
+            if (!this.handlePointerPress(97, param2, param0, RidgedNoise3D.field_p, PlayerModel.field_b, this, PasswordValidator.field_m)) {
               if (RangeOperator.field_p == 0 &&
                 TextFieldValidator.field_f != 0) {
-                this.handlePointerRelease((byte) 59, this, GridWidgetContainer.field_B, param2, param0, jba.field_j);
+                this.handlePointerRelease((byte) 59, this, GridWidgetContainer.field_B, param2, param0, AgeValidator.field_j);
                 var10 = ava.field_f;
                 if (var10 != null) {
                   if (!(var10.field_h instanceof kja)) {
@@ -613,7 +613,7 @@ class UiWidget extends IntrusiveNode {
           }
           if (RangeOperator.field_p == 0 &&
             TextFieldValidator.field_f != 0) {
-            this.handlePointerRelease((byte) 59, this, GridWidgetContainer.field_B, param2, param0, jba.field_j);
+            this.handlePointerRelease((byte) 59, this, GridWidgetContainer.field_B, param2, param0, AgeValidator.field_j);
             var11 = ava.field_f;
             if (var11 != null) {
               if (var11.field_h instanceof kja) {
@@ -641,9 +641,9 @@ class UiWidget extends IntrusiveNode {
           this.refreshLayout((byte) -121);
           return param1;
         }
-        this.handleMouseWheel(pg.field_y, param0, param2, GridWidgetContainer.field_B, this, jba.field_j, -1);
+        this.handleMouseWheel(pg.field_y, param0, param2, GridWidgetContainer.field_B, this, AgeValidator.field_j, -1);
         if (PlayerModel.field_b != 0) {
-          if (!this.handlePointerPress(97, param2, param0, lba.field_p, PlayerModel.field_b, this, PasswordValidator.field_m)) {
+          if (!this.handlePointerPress(97, param2, param0, RidgedNoise3D.field_p, PlayerModel.field_b, this, PasswordValidator.field_m)) {
             this.clearKeyboardFocus((byte) -98);
             if (var7 != 0) {
               param1 = false;
@@ -670,7 +670,7 @@ class UiWidget extends IntrusiveNode {
           this.refreshLayout((byte) -121);
           return param1;
         }
-        this.handlePointerRelease((byte) 59, this, GridWidgetContainer.field_B, param2, param0, jba.field_j);
+        this.handlePointerRelease((byte) 59, this, GridWidgetContainer.field_B, param2, param0, AgeValidator.field_j);
         var13 = ava.field_f;
         if (var13 != null) {
           if (var13.field_h instanceof kja) {

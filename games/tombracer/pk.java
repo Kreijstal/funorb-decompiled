@@ -44,8 +44,8 @@ final class pk extends we {
         }
         var4 = OpenGlFramebuffer.field_i.length;
         for (var5_int = 0; var5_int < var4; var5_int++) {
-          if (jba.field_j >= -(this.field_D[var5_int] >> 1) + this.field_A[var5_int] &&
-            jba.field_j <= this.field_A[var5_int] + (this.field_D[var5_int] >> 1) &&
+          if (AgeValidator.field_j >= -(this.field_D[var5_int] >> 1) + this.field_A[var5_int] &&
+            AgeValidator.field_j <= this.field_A[var5_int] + (this.field_D[var5_int] >> 1) &&
             -(this.field_t[var5_int] >> 1) + this.field_B[var5_int] <= GridWidgetContainer.field_B &&
             (this.field_t[var5_int] >> 1) + this.field_B[var5_int] >= GridWidgetContainer.field_B &&
             1 == PlayerModel.field_b) {

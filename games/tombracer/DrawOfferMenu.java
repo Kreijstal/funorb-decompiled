@@ -209,7 +209,7 @@ final class DrawOfferMenu extends MenuScreen {
           this.items[1].field_e = RopeBridgeComponent.field_I.toUpperCase();
           return;
         }
-        this.items[1].field_e = jf.field_s.toUpperCase();
+        this.items[1].field_e = LoadProfileCommand.field_s.toUpperCase();
     }
 
     static {

@@ -384,9 +384,9 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     private final void G(int param0) {
         mla var2_ref_mla = null;
-        if (this.field_r != cha.field_d) {
+        if (this.field_r != RasterBuffer.field_d) {
           var2_ref_mla = this.field_r;
-          this.field_r = cha.field_d;
+          this.field_r = RasterBuffer.field_d;
           if (!var2_ref_mla.a(-114)) {
             this.v((byte) 94);
           }
@@ -484,9 +484,9 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         if (param0 != 256) {
           this.j(-116);
         }
-        if (tb.field_p != this.field_r) {
+        if (ListTracksCommand.field_p != this.field_r) {
           var2 = this.field_r;
-          this.field_r = tb.field_p;
+          this.field_r = ListTracksCommand.field_p;
           if (var2.a(-65)) {
             this.v((byte) 94);
           }
@@ -1017,7 +1017,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
         this.field_ab = false;
         this.buildOrthographicProjection((byte) 83);
-        if (this.field_r == cha.field_d) {
+        if (this.field_r == RasterBuffer.field_d) {
           this.l((byte) 26);
         }
     }
@@ -1980,7 +1980,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.field_pc = -1.0f;
         this.field_d = 3584.0f;
         this.field_Yb = true;
-        this.field_r = tb.field_p;
+        this.field_r = ListTracksCommand.field_p;
         this.field_Ac = 0;
         this.field_jb = 0;
         this.field_yb = 1.0f;

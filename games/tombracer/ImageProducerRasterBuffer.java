@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ImageProducerRasterBuffer extends cha implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
+final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     private java.awt.image.ImageConsumer field_i;
     static jea field_j;
     private java.awt.image.ColorModel field_k;
@@ -124,7 +124,7 @@ final class ImageProducerRasterBuffer extends cha implements java.awt.image.Imag
         String var15 = null;
         PlayerContextMenu var16 = null;
         try {
-          paa.a(nsa.field_i, param1.f(0), (String) null, 0L, -11635, (int[]) null, param1, -1, (String) null);
+          DateInputWidget.a(nsa.field_i, param1.f(0), (String) null, 0L, -11635, (int[]) null, param1, -1, (String) null);
           if (param1.field_ec && (param1.field_yb == 2 ||
             !(ld.field_e < 2))) {
             var10 = hka.field_b;
@@ -145,7 +145,7 @@ final class ImageProducerRasterBuffer extends cha implements java.awt.image.Imag
           }
           var16 = hka.field_b;
           var5 = PasswordValidator.field_m;
-          var6 = lba.field_p;
+          var6 = RidgedNoise3D.field_p;
           if (param0 >= -45) {
             var7 = (String) null;
             ImageProducerRasterBuffer.a((byte) 0, (ht) null, false, (String) null);

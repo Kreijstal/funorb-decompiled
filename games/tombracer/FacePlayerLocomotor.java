@@ -46,7 +46,7 @@ final class FacePlayerLocomotor extends Locomotor {
         if (((458752 & param1) != 0 ? true : false) | mg.a((byte) -53, param2, param1)) {
           return true;
         }
-        if (!so.a(param1, (byte) 90, param2)) {
+        if (!ValidatedTextInputWidget.a(param1, (byte) 90, param2)) {
           return false;
         }
         return true;

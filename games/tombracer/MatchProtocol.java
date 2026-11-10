@@ -201,8 +201,8 @@ final class MatchProtocol {
               var5_ref_la = var8.getPlayerRoom(0, this.field_d);
               stackIn_12_0 = this;
               stackIn_12_1 = -115;
-              stackIn_12_2 = var8.field_A;
-              stackIn_12_3 = var8.c((byte) 115, this.field_d);
+              stackIn_12_2 = var8.roundIndex;
+              stackIn_12_3 = var8.getSimulationTick((byte) 115, this.field_d);
               if (var5_ref_la != null) {
                 stackIn_13_0 = this;
                 stackIn_13_4 = var5_ref_la.getId((byte) -82) + 1;
@@ -234,11 +234,11 @@ final class MatchProtocol {
             var4 = this.d(param1 - 17);
           }
           if (!param0.d((byte) 106)) {
-            if (var8.simulations[this.field_d].b(param1 - 1)) {
+            if (var8.simulations[this.field_d].isFinished(param1 - 1)) {
               this.a(var8, (byte) -73);
               return;
             }
-            if (var8.simulations[this.field_d].e(-31170)) {
+            if (var8.simulations[this.field_d].hasTimedOut(-31170)) {
               this.a(var8, (byte) -73);
               return;
             }
@@ -429,7 +429,7 @@ final class MatchProtocol {
         try {
           while (!this.field_a.b((byte) -26)) {
             var3 = param0.getPlayerRoom(0, this.field_d);
-            this.a(-92, param0.field_A, 0, var3 == null ? 0 : var3.getId((byte) -82) + 1, 0);
+            this.a(-92, param0.roundIndex, 0, var3 == null ? 0 : var3.getId((byte) -82) + 1, 0);
           }
           int var3_int = 110 % ((param1 - 27) / 62);
         } catch (RuntimeException runtimeException) {

@@ -45,7 +45,7 @@ final class WheeledMountComponent extends PathMoverComponent {
         RuntimeException var1 = null;
         var3 = TombRacer.field_G ? 1 : 0;
         try {
-          so.pumpAudio(-16310);
+          ValidatedTextInputWidget.pumpAudio(-16310);
           var1_int = -106 / ((-7 - param0) / 37);
           var2 = (fla) (nl.field_f.first(-80));
           while (var2 != null) {
@@ -98,7 +98,7 @@ final class WheeledMountComponent extends PathMoverComponent {
               stackIn_11_0 = UsernameSuggestionsPanel.field_x.field_c;
               return stackIn_11_0;
             }
-            stackIn_9_0 = paa.field_z.field_c;
+            stackIn_9_0 = DateInputWidget.field_z.field_c;
             return stackIn_9_0;
           }
           if (param0 == baa.field_e) {

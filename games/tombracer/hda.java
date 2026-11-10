@@ -23,9 +23,9 @@ final class hda extends tc {
         super(param0, param1);
     }
 
-    final static sc delayStreamByMillis(int param0, int param1, PcmStream param2) {
+    final static DelayedPcmStream delayStreamByMillis(int param0, int param1, PcmStream param2) {
         RuntimeException var3 = null;
-        sc stackIn_3_0 = null;
+        DelayedPcmStream stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -34,7 +34,7 @@ final class hda extends tc {
           if (param1 != 1303) {
             hda.releaseStatics((byte) 32);
           }
-          stackIn_3_0 = new sc(param2, param0 * AudioOutput.field_d / 1000);
+          stackIn_3_0 = new DelayedPcmStream(param2, param0 * AudioOutput.field_d / 1000);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

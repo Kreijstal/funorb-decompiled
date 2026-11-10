@@ -312,7 +312,7 @@ final class ava {
                 RewardChoiceSlot.a((byte) 92, param1, var12.field_yb);
               } else {
                 if (0 == var12.field_Cb.field_y) {
-                  rc.a(PasswordValidator.field_m, lba.field_p, var12, (byte) -93, 0, 0, param0);
+                  rc.a(PasswordValidator.field_m, RidgedNoise3D.field_p, var12, (byte) -93, 0, 0, param0);
                 } else {
                   fn.a(param1, var12.field_yb, -118);
                 }

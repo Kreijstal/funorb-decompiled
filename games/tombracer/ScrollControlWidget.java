@@ -323,7 +323,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
                   this.a(this.field_O + this.field_B, (byte) -109);
                 }
               } else {
-                var5_intLifetime1 = -(this.field_N.field_m >> 1) - (this.field_N.field_i + this.field_i - jba.field_j + param0);
+                var5_intLifetime1 = -(this.field_N.field_m >> 1) - (this.field_N.field_i + this.field_i - AgeValidator.field_j + param0);
                 var6 = GridWidgetContainer.field_B - param3 - this.field_n - ((this.field_N.field_p >> 1) + this.field_N.field_n);
                 if (Math.abs(var6) <= Math.abs(var5_intLifetime1)) {
                   if (var5_intLifetime1 <= 0) {
@@ -341,7 +341,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
               }
             } else {
               if (this.field_J) {
-                if ((this.field_N.field_m >> 1) + param0 + this.field_N.field_i < jba.field_j) {
+                if ((this.field_N.field_m >> 1) + param0 + this.field_N.field_i < AgeValidator.field_j) {
                   this.b(param1 ^ 2110480, this.field_y + this.field_C);
                 } else {
                   this.b(param1 - 2083824, this.field_C - this.field_y);

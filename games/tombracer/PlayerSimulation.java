@@ -7,13 +7,13 @@ final class PlayerSimulation {
     private int field_e;
     Player player;
     SimulationObserver observer;
-    private boolean field_a;
+    private boolean finished;
     Room[] rooms;
     private int field_l;
-    private boolean field_k;
+    private boolean timedOut;
     int tick;
     static String field_n;
-    private boolean field_f;
+    private boolean timeFrozen;
     private int roomCount;
     private int field_d;
 
@@ -74,7 +74,7 @@ final class PlayerSimulation {
           if (param1 != -9774) {
             this.a(false);
           }
-          this.field_f = false;
+          this.timeFrozen = false;
           this.field_h = true;
           var3 = this.getObserver(9262);
           if (var3 != null) {
@@ -118,7 +118,7 @@ final class PlayerSimulation {
     }
 
     final int a(boolean param0) {
-        if (this.field_a) {
+        if (this.finished) {
           return 0;
         }
         if (!param0) {
@@ -134,32 +134,32 @@ final class PlayerSimulation {
         return this.roomCount;
     }
 
-    final boolean g(int param0) {
+    final boolean isTimeFrozen(int param0) {
         if (param0 < 67) {
-          this.j(84);
-          return this.field_f;
+          this.isCourseComplete(84);
+          return this.timeFrozen;
         }
-        return this.field_f;
+        return this.timeFrozen;
     }
 
-    final boolean b(int param0) {
+    final boolean isFinished(int param0) {
         if (param0 != 0) {
           field_n = (String) null;
-          return this.field_a;
+          return this.finished;
         }
-        return this.field_a;
+        return this.finished;
     }
 
     final boolean i(int param0) {
         if (param0 != -14886) {
-          this.field_k = true;
+          this.timedOut = true;
           return this.field_h;
         }
         return this.field_h;
     }
 
-    final void a(int param0, boolean param1) {
-        this.field_a = param1 ? true : false;
+    final void setFinished(int param0, boolean param1) {
+        this.finished = param1 ? true : false;
         if (param0 <= 35) {
           this.field_l = 58;
         }
@@ -204,19 +204,19 @@ final class PlayerSimulation {
         field_n = null;
     }
 
-    final boolean e(int param0) {
+    final boolean hasTimedOut(int param0) {
         if (param0 != -31170) {
           return false;
         }
-        return this.field_k;
+        return this.timedOut;
     }
 
-    final boolean j(int param0) {
+    final boolean isCourseComplete(int param0) {
         if (param0 != 0) {
           this.roomCount = 36;
-          return this.field_a;
+          return this.finished;
         }
-        return this.field_a;
+        return this.finished;
     }
 
     final int b(boolean param0) {
@@ -234,30 +234,30 @@ final class PlayerSimulation {
         return this.field_d > 0 ? true : false;
     }
 
-    final void a(int param0, int param1) {
+    final void step(int param0, int param1) {
         Room discarded$2 = null;
         if (param0 != -1) {
           Room var4 = (Room) null;
           discarded$2 = this.getNextRoom((byte) -105, (Room) null);
-          if (this.field_a) {
+          if (this.finished) {
             return;
           }
-          this.field_f = this.player.hasStatusFlag((byte) -95, 3);
+          this.timeFrozen = this.player.hasStatusFlag((byte) -95, 3);
           this.field_h = false;
           this.player.getRoom((byte) -64).d(param1, 0);
-          if (this.field_a) {
+          if (this.finished) {
             return;
           }
           this.tick = this.tick + 1;
           return;
         }
-        if (this.field_a) {
+        if (this.finished) {
           return;
         }
-        this.field_f = this.player.hasStatusFlag((byte) -95, 3);
+        this.timeFrozen = this.player.hasStatusFlag((byte) -95, 3);
         this.field_h = false;
         this.player.getRoom((byte) -64).d(param1, 0);
-        if (this.field_a) {
+        if (this.finished) {
           return;
         }
         this.tick = this.tick + 1;
@@ -270,7 +270,7 @@ final class PlayerSimulation {
         }
     }
 
-    final void c(int param0) {
+    final void advanceToNextRoom(int param0) {
         Room var2;
         Room var3;
         Room var5;
@@ -290,7 +290,7 @@ final class PlayerSimulation {
             var7.onRoomCompleted(this.player, var2, false);
           }
           if (var3 == null) {
-            this.a(89, true);
+            this.setFinished(89, true);
           } else {
             var3.restart((byte) -98);
           }
@@ -309,7 +309,7 @@ final class PlayerSimulation {
           var6.onRoomCompleted(this.player, var2, false);
         }
         if (var3Lifetime1 == null) {
-          this.a(89, true);
+          this.setFinished(89, true);
         } else {
           var3Lifetime1.restart((byte) -98);
         }
@@ -390,21 +390,21 @@ final class PlayerSimulation {
         System.out.println("DUMPING STATE on tick " + this.tick);
         System.out.println("Player: " + this.player.toString());
         if (param0 != 114) {
-          this.field_k = false;
+          this.timedOut = false;
           this.player.getRoom((byte) 65).dumpDebug(true);
           return;
         }
         this.player.getRoom((byte) 65).dumpDebug(true);
     }
 
-    final boolean k(int param0) {
+    final boolean isActive(int param0) {
         if (param0 != -19271) {
           return false;
         }
-        if (this.field_a) {
+        if (this.finished) {
           return false;
         }
-        if (this.field_k) {
+        if (this.timedOut) {
           return false;
         }
         return true;
@@ -412,7 +412,7 @@ final class PlayerSimulation {
 
     private final int getEffectSlot(int param0, int param1) {
         if (param1 != 0) {
-          this.b(-8);
+          this.isFinished(-8);
           return this.effectSlots[param0];
         }
         return this.effectSlots[param0];
@@ -420,7 +420,7 @@ final class PlayerSimulation {
 
     final Room getFirstRoom(int param0) {
         if (param0 >= -22) {
-          this.b(-15);
+          this.isFinished(-15);
           return this.rooms[0];
         }
         return this.rooms[0];
@@ -438,14 +438,14 @@ final class PlayerSimulation {
 
     final void clearRoomEffectSlot(byte param0, int param1, int param2) {
         if (param0 > -11) {
-          this.a(96, 125);
+          this.step(96, 125);
           this.rooms[param2].clearEffectSlot(-22490, param1);
           return;
         }
         this.rooms[param2].clearEffectSlot(-22490, param1);
     }
 
-    final int b(boolean param0, int param1) {
+    final int getCombinedEffectSlot(boolean param0, int param1) {
         if (param0) {
           this.clearRoomEffectSlot((byte) 29, -34, 71);
           return RandomBrickOperator.max(this.getEffectSlot(param1, 0), this.rooms[this.player.getCourseIndex(-101)].getEffectSlot(-121, param1), 2);
@@ -453,12 +453,12 @@ final class PlayerSimulation {
         return RandomBrickOperator.max(this.getEffectSlot(param1, 0), this.rooms[this.player.getCourseIndex(-101)].getEffectSlot(-121, param1), 2);
     }
 
-    final boolean h(int param0) {
+    final boolean isRacing(int param0) {
         if (param0 < 118) {
           this.field_h = true;
-          return !this.field_a ? true : false;
+          return !this.finished ? true : false;
         }
-        return !this.field_a ? true : false;
+        return !this.finished ? true : false;
     }
 
     final Room getCurrentRoom(byte param0) {
@@ -466,12 +466,12 @@ final class PlayerSimulation {
         return this.rooms[this.player.getCourseIndex(-108)];
     }
 
-    final int f(int param0) {
+    final int getRoomArrayLength(int param0) {
         int var2 = -97 % ((34 - param0) / 56);
         return this.rooms.length;
     }
 
-    final void a(int param0, int param1, Room param2) {
+    final void setRoom(int param0, int param1, Room param2) {
         try {
           param2.setCourseIndex(param1, false);
           if (param0 != -28088) {
@@ -495,7 +495,7 @@ final class PlayerSimulation {
         this.effectSlots[param0] = param1;
     }
 
-    final Room a(boolean param0, int param1) {
+    final Room getRoomAt(boolean param0, int param1) {
         if (!param0) {
           return (Room) null;
         }

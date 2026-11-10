@@ -100,7 +100,7 @@ final class FontMetrics {
               }
               if (var15 != -1 ||
                 var17 != 0) {
-                var16 = qu.field_a.a(false, var15);
+                var16 = ByteStorage.field_a.a(false, var15);
                 var8[var12Lifetime1 + var14] = var16.getPreview((byte) -5);
                 var9[var12Lifetime1 + var14] = param3.field_o[var14];
                 if (0 >= var9[var12Lifetime1 + var14]) {

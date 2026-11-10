@@ -43,7 +43,7 @@ final class GasTrapComponent extends PrefabComponent {
         if (hka.field_b != null) {
           return true;
         }
-        if (pn.h(9807)) {
+        if (HardwareTurbulentWaterNoise.h(9807)) {
           return true;
         }
         if (null != RoomViewRenderer.field_c) {

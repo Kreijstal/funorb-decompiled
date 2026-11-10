@@ -6,11 +6,11 @@ final class bw {
     static Sprite field_a;
 
     final static Object wrapByteStorage(int param0, byte[] param1, boolean param2) {
-        ie var3 = null;
+        DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        ie stackIn_9_0 = null;
+        DirectByteStorage stackIn_9_0 = null;
         byte[] stackIn_12_0 = null;
         byte[] stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
@@ -27,8 +27,8 @@ final class bw {
             return stackIn_5_0;
           }
           if (param1.length > 136) {
-            var3 = new ie();
-            ((qu) ((Object) var3)).setBytes(true, param1);
+            var3 = new DirectByteStorage();
+            ((ByteStorage) ((Object) var3)).setBytes(true, param1);
             stackIn_9_0 = var3;
             return stackIn_9_0;
           }

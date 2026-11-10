@@ -71,7 +71,7 @@ final class sb {
           ns.field_j = new SoundCache(qoa.field_b, ControllerLocomotor.field_v);
           CauldronComponent.field_J = new u[237];
           int var5_int = -51 % ((param0 - 32) / 59);
-          MenuEntry.field_j = new qua[4];
+          MenuEntry.field_j = new MusicTrack[4];
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

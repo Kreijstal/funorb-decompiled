@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class de extends cha {
+final class BufferedImageRasterBuffer extends RasterBuffer {
     private java.awt.Component field_i;
 
     final void drawImage(int param0, int param1, java.awt.Graphics param2, int param3) {
@@ -26,6 +26,6 @@ final class de extends cha {
         this.a(-19216);
     }
 
-    public de() {
+    public BufferedImageRasterBuffer() {
     }
 }

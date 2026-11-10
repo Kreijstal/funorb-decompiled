@@ -112,7 +112,7 @@ final class rg extends SingleChildWidget {
         Room.field_m = new String[13];
         sla.field_b[6] = FleeLocomotor.field_x;
         sla.field_b[4] = sda.field_h;
-        sla.field_b[2] = so.field_J;
+        sla.field_b[2] = ValidatedTextInputWidget.field_J;
         sla.field_b[3] = tja.field_p;
         Room.field_m[1] = gh.field_e;
         Room.field_m[10] = pha.field_Ib;
@@ -160,10 +160,10 @@ final class rg extends SingleChildWidget {
           tk.field_a[13] = id.laserDeathMessages;
           tk.field_a[15] = SingleChildWidget.sawDeathMessages;
           tk.field_a[7] = fpa.snakeDeathMessages;
-          tk.field_a[4] = or.fallingObjectDeathMessages;
+          tk.field_a[4] = TurbulenceNoise3D.fallingObjectDeathMessages;
           IntrusiveDeque.field_d[0] = new String[]{ConsoleMethod.field_m, fr.field_a, null, null, null, null, qfa.field_a};
           Effect.field_h[0] = new String[]{daa.field_f, LegacySwitchModel.field_o, AccountRegistrationPanel.field_H, PushableBlockMazeComponent.field_K, pba.field_c, hsa.field_c};
-          IntrusiveDeque.field_d[1] = new String[]{ct.field_c, pn.field_o, dka.field_c};
+          IntrusiveDeque.field_d[1] = new String[]{ct.field_c, HardwareTurbulentWaterNoise.field_o, dka.field_c};
           Effect.field_h[1] = new String[]{dk.field_k, BitPacketBuffer.field_m, ne.field_e};
           IntrusiveDeque.field_d[2] = new String[]{kea.field_b, baa.field_a, dk.field_a};
           Effect.field_h[2] = new String[]{bpa.field_a, du.field_f, vua.field_C};
@@ -212,10 +212,10 @@ final class rg extends SingleChildWidget {
         tk.field_a[13] = id.laserDeathMessages;
         tk.field_a[15] = SingleChildWidget.sawDeathMessages;
         tk.field_a[7] = fpa.snakeDeathMessages;
-        tk.field_a[4] = or.fallingObjectDeathMessages;
+        tk.field_a[4] = TurbulenceNoise3D.fallingObjectDeathMessages;
         IntrusiveDeque.field_d[0] = new String[]{ConsoleMethod.field_m, fr.field_a, null, null, null, null, qfa.field_a};
         Effect.field_h[0] = new String[]{daa.field_f, LegacySwitchModel.field_o, AccountRegistrationPanel.field_H, PushableBlockMazeComponent.field_K, pba.field_c, hsa.field_c};
-        IntrusiveDeque.field_d[1] = new String[]{ct.field_c, pn.field_o, dka.field_c};
+        IntrusiveDeque.field_d[1] = new String[]{ct.field_c, HardwareTurbulentWaterNoise.field_o, dka.field_c};
         Effect.field_h[1] = new String[]{dk.field_k, BitPacketBuffer.field_m, ne.field_e};
         IntrusiveDeque.field_d[2] = new String[]{kea.field_b, baa.field_a, dk.field_a};
         Effect.field_h[2] = new String[]{bpa.field_a, du.field_f, vua.field_C};

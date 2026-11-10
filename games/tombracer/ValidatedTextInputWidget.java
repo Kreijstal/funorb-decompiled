@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class so extends TextInputWidget implements mk {
+final class ValidatedTextInputWidget extends TextInputWidget implements ValidationProvider {
     static String field_J;
     private nua field_N;
     private int field_M;
@@ -10,7 +10,7 @@ final class so extends TextInputWidget implements mk {
 
     public static void m(int param0) {
         if (param0 != 200) {
-          so.a(-98, (byte) 40, -89);
+          ValidatedTextInputWidget.a(-98, (byte) 40, -89);
           field_J = null;
           field_L = null;
           return;
@@ -22,7 +22,7 @@ final class so extends TextInputWidget implements mk {
     final void updatePointerState(int param0, int param1, UiWidget param2, int param3) {
         try {
           super.updatePointerState(param0, param1, param2, param3);
-          this.field_M = -param0 + jba.field_j - this.field_i;
+          this.field_M = -param0 + AgeValidator.field_j - this.field_i;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "so.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -50,7 +50,7 @@ final class so extends TextInputWidget implements mk {
         try {
           WheeledMountComponent.field_P.serviceOutput();
           if (param0 != -16310) {
-            so.pumpAudio(117);
+            ValidatedTextInputWidget.pumpAudio(117);
           }
           gg.field_b.serviceOutput();
           bga.field_b = bga.field_b - 1;
@@ -84,7 +84,7 @@ final class so extends TextInputWidget implements mk {
         }
     }
 
-    public final nua a(byte param0) {
+    public final nua getValidationSource(byte param0) {
         if (param0 < 44) {
           return (nua) null;
         }
@@ -98,7 +98,7 @@ final class so extends TextInputWidget implements mk {
         }
     }
 
-    so(String param0, WidgetListener param1, int param2) {
+    ValidatedTextInputWidget(String param0, WidgetListener param1, int param2) {
         super(param0, param1, param2);
     }
 
@@ -113,7 +113,7 @@ final class so extends TextInputWidget implements mk {
         }
         if (this.field_q != null) {
           int var2 = -81 % ((param0 + 58) / 60);
-          gca.a(2533, jba.field_j - (this.field_M - this.field_m), GridWidgetContainer.field_B);
+          gca.a(2533, AgeValidator.field_j - (this.field_M - this.field_m), GridWidgetContainer.field_B);
           return this.field_q;
         }
         return null;

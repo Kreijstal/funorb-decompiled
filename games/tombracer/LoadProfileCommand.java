@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jf extends ConsoleMethod {
+final class LoadProfileCommand extends ConsoleMethod {
     static String field_o;
     static dk[] field_p;
     static String field_s;
@@ -9,7 +9,7 @@ final class jf extends ConsoleMethod {
     static byte[] field_t;
     static boolean field_r;
 
-    jf(String param0, Class[] param1, String param2) {
+    LoadProfileCommand(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
     }
 
@@ -25,7 +25,7 @@ final class jf extends ConsoleMethod {
           }
           return var3;
         }
-        jf.a(44, 69, 69);
+        LoadProfileCommand.a(44, 69, 69);
         for (var4Lifetime1 = 0; var3.pixels.length > var4Lifetime1; var4Lifetime1++) {
           var6.pixels[var4Lifetime1] = param0;
         }
@@ -42,7 +42,7 @@ final class jf extends ConsoleMethod {
         field_s = null;
     }
 
-    final ConsoleValue a(ConsoleValue[] param0, int param1) {
+    final ConsoleValue invoke(ConsoleValue[] param0, int param1) {
         RuntimeException var3 = null;
         ConsoleValue stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

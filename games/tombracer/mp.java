@@ -79,7 +79,7 @@ final class mp {
         boolean stackIn_23_0Lifetime1;
         var3 = TombRacer.field_G ? 1 : 0;
         try {
-          ot.field_v = param1;
+          HardwareRidgedWaterNoise.field_v = param1;
           if (param0 != 2) {
             return;
           }
@@ -89,7 +89,7 @@ final class mp {
             if (var3 != 0) {
               while (true) {
                 if (stackIn_23_0) {
-                  var2.field_f.e(var2.field_g * ot.field_v + 128 >> 8);
+                  var2.field_f.e(var2.field_g * HardwareRidgedWaterNoise.field_v + 128 >> 8);
                 }
                 var2.unlink(param0 + 2);
                 var2 = (vb) (Obstacle.field_f.next(113));
@@ -101,7 +101,7 @@ final class mp {
             }
             if (stackIn_23_0 ||
               var3 != 0) {
-              var2.field_f.e(var2.field_g * ot.field_v + 128 >> 8);
+              var2.field_f.e(var2.field_g * HardwareRidgedWaterNoise.field_v + 128 >> 8);
             }
             var2 = (vb) (DivisionMazeGenerator.field_e.next(112));
             if (var3 == 0) {
@@ -117,7 +117,7 @@ final class mp {
               }
               stackIn_23_0Lifetime1 = var2Lifetime1.field_h.isLinked((byte) 44);
               if (stackIn_23_0Lifetime1) {
-                var2Lifetime1.field_f.e(var2Lifetime1.field_g * ot.field_v + 128 >> 8);
+                var2Lifetime1.field_f.e(var2Lifetime1.field_g * HardwareRidgedWaterNoise.field_v + 128 >> 8);
               } else {
                 var2Lifetime1.unlink(param0 + 2);
               }

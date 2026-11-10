@@ -65,9 +65,9 @@ final class vba extends we {
         if (!this.field_q.b(20)) {
           return;
         }
-        this.field_s = this.b(GridWidgetContainer.field_B, jba.field_j, true);
+        this.field_s = this.b(GridWidgetContainer.field_B, AgeValidator.field_j, true);
         if (PlayerModel.field_b == 1) {
-          var4Lifetime1 = this.b(lba.field_p, PasswordValidator.field_m, true);
+          var4Lifetime1 = this.b(RidgedNoise3D.field_p, PasswordValidator.field_m, true);
           if (var4Lifetime1 != this.field_t) {
             if (var4Lifetime1 != -1) {
               this.field_t = var4Lifetime1;
@@ -248,7 +248,7 @@ final class vba extends we {
         }
         this.h(var6, 0).a(var4 + var3, var3 + var5);
         var7Lifetime1 = var5 + 20 + 180;
-        var8 = lq.achievementNames[var6].toUpperCase();
+        var8 = ShowLevelSetCommand.achievementNames[var6].toUpperCase();
         var12 = kv.achievementDescriptions[var6];
         var10 = this.a(var8, ds.field_n, -6671872, 180, var4, eda.field_f, 128, var7Lifetime1, 15);
         var7Lifetime1 = var7Lifetime1 + (5 + 15 * var10);

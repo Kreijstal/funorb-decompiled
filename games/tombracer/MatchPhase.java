@@ -111,14 +111,14 @@ abstract class MatchPhase {
         int var3Lifetime1;
         int var3Lifetime2;
         this.field_i = true;
-        if (this.field_k.field_b - 80 > jba.field_j) {
+        if (this.field_k.field_b - 80 > AgeValidator.field_j) {
           var2 = 0;
           stackIn_4_1 = (var2 != 0);
           this.field_b = stackIn_4_1;
           if (this.field_k.field_b <= PasswordValidator.field_m) {
             if (PasswordValidator.field_m < 100 + this.field_k.field_b) {
-              if (lba.field_p >= this.field_k.field_i) {
-                stackIn_14_0 = (20 + this.field_k.field_i > lba.field_p) ? 1 : 0;
+              if (RidgedNoise3D.field_p >= this.field_k.field_i) {
+                stackIn_14_0 = (20 + this.field_k.field_i > RidgedNoise3D.field_p) ? 1 : 0;
               } else {
                 stackIn_14_0 = 0;
               }
@@ -149,14 +149,14 @@ abstract class MatchPhase {
           ConstrainToRectangleLocomotor.a(stackIn_27_0, stackIn_28_1, (byte) 97);
           return;
         }
-        if (this.field_k.field_b + 80 <= jba.field_j) {
+        if (this.field_k.field_b + 80 <= AgeValidator.field_j) {
           var2Lifetime1 = 0;
           stackIn_35_1 = (var2Lifetime1 != 0);
           this.field_b = stackIn_35_1;
           if (this.field_k.field_b <= PasswordValidator.field_m) {
             if (PasswordValidator.field_m < 100 + this.field_k.field_b) {
-              if (lba.field_p >= this.field_k.field_i) {
-                stackIn_45_0 = (20 + this.field_k.field_i > lba.field_p) ? 1 : 0;
+              if (RidgedNoise3D.field_p >= this.field_k.field_i) {
+                stackIn_45_0 = (20 + this.field_k.field_i > RidgedNoise3D.field_p) ? 1 : 0;
               } else {
                 stackIn_45_0 = 0;
               }
@@ -197,8 +197,8 @@ abstract class MatchPhase {
         this.field_b = stackIn_70_1;
         if (this.field_k.field_b <= PasswordValidator.field_m) {
           if (PasswordValidator.field_m < 100 + this.field_k.field_b) {
-            if (lba.field_p >= this.field_k.field_i) {
-              stackIn_79_0 = (20 + this.field_k.field_i <= lba.field_p) ? 0 : 1;
+            if (RidgedNoise3D.field_p >= this.field_k.field_i) {
+              stackIn_79_0 = (20 + this.field_k.field_i <= RidgedNoise3D.field_p) ? 0 : 1;
             } else {
               stackIn_79_0 = 0;
             }

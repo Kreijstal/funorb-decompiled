@@ -138,13 +138,13 @@ final class iea {
               }
             }
             if (var6.field_y != 0) {
-              paa.a(OpenGlSprite.field_j.field_vb, -1, var6.field_yb, 0L, param1 - 11579, (int[]) null, var6, -1, var6.field_tb);
+              DateInputWidget.a(OpenGlSprite.field_j.field_vb, -1, var6.field_yb, 0L, param1 - 11579, (int[]) null, var6, -1, var6.field_tb);
               var16 = hka.field_b;
               var13_ref_String = uma.field_a;
               var16.field_f.addItem((byte) -100, 7, var13_ref_String);
               var17 = hka.field_b;
               var13 = PasswordValidator.field_m;
-              var14 = lba.field_p;
+              var14 = RidgedNoise3D.field_p;
               var17.field_f.b(var14, 0, -69, 0, var13);
             }
             var5 = var6;

@@ -37,7 +37,7 @@ final class RoomEffectTraps {
           stackIn_20_1 = -1;
           stackIn_20_2 = var4;
           stackIn_21_3 = !(param0);
-          stackIn_24_1 = (stackIn_20_1 == ~((PlayerSimulation) (Object) stackIn_20_2).b(stackIn_21_3, 5));
+          stackIn_24_1 = (stackIn_20_1 == ~((PlayerSimulation) (Object) stackIn_20_2).getCombinedEffectSlot(stackIn_21_3, 5));
           this.spawnDarknessTrap(stackIn_24_1, (byte) 25);
         } else {
           if (this.darknessTraps != null &&

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class cha {
+abstract class RasterBuffer {
     java.awt.Image field_a;
     static String field_b;
     static String field_h;
@@ -47,7 +47,7 @@ abstract class cha {
         try {
           if (param2 != 2) {
             var4 = (goa) null;
-            cha.a((goa) null, (goa) null, -60);
+            RasterBuffer.a((goa) null, (goa) null, -60);
           }
           var5 = (String) null;
           stackIn_3_0 = PlayPhase.a(param0, (String) null, false, 0, param1, 94, 0);

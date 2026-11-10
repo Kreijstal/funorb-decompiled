@@ -66,7 +66,7 @@ final class FacePointLocomotor extends Locomotor {
           var9 = 49;
           try {
             for (var10_int = 0; var10_int < var5_int; var10_int++) {
-              var11 = qu.field_a.a(false, param3[var10_int]);
+              var11 = ByteStorage.field_a.a(false, param3[var10_int]);
               var6[var10_int] = var11.getPreview((byte) -5);
               var9 = (char)(var9 + 1);
               var7[var10_int] = (char)var9;

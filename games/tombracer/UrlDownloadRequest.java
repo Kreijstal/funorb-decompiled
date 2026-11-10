@@ -145,7 +145,7 @@ final class UrlDownloadRequest implements Runnable {
     }
 
     final static void a(byte param0) {
-        bh.field_p = true;
+        PlayTrackCommand.field_p = true;
         TextLayout.a(pl.a((byte) 64), (byte) 126, 3);
         int var1 = 72 / ((param0 - 55) / 46);
         SecondaryNodeDequeIterator.field_a.e((byte) 106);

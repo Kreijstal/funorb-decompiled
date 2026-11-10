@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class qu {
+abstract class ByteStorage {
     static int[] field_b;
     static int[] field_d;
     static wm field_e;
@@ -23,7 +23,7 @@ abstract class qu {
         if (param1 == -1) {
           return " (" + (param0 <= 0 ? "+" : "-") + Math.abs(param0) + ")";
         }
-        qu.releaseStatics(-48);
+        ByteStorage.releaseStatics(-48);
         return " (" + (param0 <= 0 ? "+" : "-") + Math.abs(param0) + ")";
     }
 

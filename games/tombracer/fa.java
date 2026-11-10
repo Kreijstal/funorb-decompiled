@@ -131,7 +131,7 @@ final class fa {
               var9 = PlatformBehaviour.field_s.stringWidth(var4);
               if (!RoomComponentFactory.a(27)) {
                 if (pq.field_g.field_o &&
-                  var9 > jba.field_j - pq.field_g.field_q) {
+                  var9 > AgeValidator.field_j - pq.field_g.field_q) {
                   if (fua.field_g) {
                     var1 = "Broken!";
                   } else {

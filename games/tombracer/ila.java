@@ -94,7 +94,7 @@ final class ila {
           for (var8 = 9; var8 >= 0; var8--) {
             if (null != var10Lifetime1[var8] &&
               "" != var10Lifetime1[var8]) {
-              this.a(0, eea.a(var10Lifetime1[var8], (byte) -62));
+              this.a(0, BannerCommand.a(var10Lifetime1[var8], (byte) -62));
             }
           }
           this.field_a = var11;
@@ -223,7 +223,7 @@ final class ila {
               km.field_p = bva.field_b;
             }
             if (km.field_p == bva.field_b &&
-              ama.a(1, -1)) {
+              LegacyRidgedWaterNoise.a(1, -1)) {
               var6_int = WeaveOperator.field_q.readUnsignedByte(255);
               if (var6_int == 0) {
                 km.field_p = ContextMenu.field_yb;
@@ -235,7 +235,7 @@ final class ila {
               WeaveOperator.field_q.position = 0;
             }
             if (ContextMenu.field_yb == km.field_p &&
-              ama.a(8, -1)) {
+              LegacyRidgedWaterNoise.a(8, -1)) {
               PathMoverComponent.field_L = WeaveOperator.field_q.readLong(290646880);
               WeaveOperator.field_q.position = 0;
               RoomCompletedScreen.a((byte) 121, param5, param3, fd.field_d, param0);
@@ -243,7 +243,7 @@ final class ila {
             }
             boolean decompiledFrameRemainder0 = true;
             if (km.field_p == TestModel.field_o &&
-              ama.a(1, param2 - 51)) {
+              LegacyRidgedWaterNoise.a(1, param2 - 51)) {
               var6_intLifetime1 = WeaveOperator.field_q.readUnsignedByte(param2 + 205);
               WeaveOperator.field_q.position = 0;
               MembersUpsellMenu.field_z = var6_intLifetime1;
@@ -485,7 +485,7 @@ final class ila {
         } else {
           var5 = var8.readUnsignedShort(121);
           try {
-            var9 = qu.field_a.a(false, var5);
+            var9 = ByteStorage.field_a.a(false, var5);
             ConveyorBehaviour.field_p = var9.getPreview((byte) -5);
             if (!TextureSampleOperator.field_q.equals(MenuEntry.field_k)) {
               stackIn_21_0 = var9.field_m;

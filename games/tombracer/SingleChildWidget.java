@@ -365,11 +365,11 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           ClientException.field_b.field_C = ArrowShooterComponent.createCentreOnlyFrame((byte) -60, MaskBlendOperator.a(param4, "lobby", "slideregion_mouseover", 75));
           ClientException.field_b.field_db = ArrowShooterComponent.createCentreOnlyFrame((byte) -118, MaskBlendOperator.a(param4, "lobby", "slideregion_mouseheld", 123));
           ClientException.field_b.field_M = ArrowShooterComponent.createCentreOnlyFrame((byte) -87, MaskBlendOperator.a(param4, "lobby", "slideregion_disabled", 106));
-          ie.field_h = new jea(0L, (jea) null);
-          ie.field_h.field_w = rfa.a(BoulderComponent.a(param4, "lobby", 5, "dragbar"), 122);
-          ie.field_h.field_C = rfa.a(BoulderComponent.a(param4, "lobby", 5, "dragbar_mouseover"), 121);
-          ie.field_h.field_db = rfa.a(BoulderComponent.a(param4, "lobby", 5, "dragbar_mouseheld"), 113);
-          ie.field_h.field_M = rfa.a(BoulderComponent.a(param4, "lobby", 5, "dragbar_disabled"), 116);
+          DirectByteStorage.field_h = new jea(0L, (jea) null);
+          DirectByteStorage.field_h.field_w = rfa.a(BoulderComponent.a(param4, "lobby", 5, "dragbar"), 122);
+          DirectByteStorage.field_h.field_C = rfa.a(BoulderComponent.a(param4, "lobby", 5, "dragbar_mouseover"), 121);
+          DirectByteStorage.field_h.field_db = rfa.a(BoulderComponent.a(param4, "lobby", 5, "dragbar_mouseheld"), 113);
+          DirectByteStorage.field_h.field_M = rfa.a(BoulderComponent.a(param4, "lobby", 5, "dragbar_disabled"), 116);
           pk.field_s = new jea(0L, (jea) null);
           pk.field_s.field_R = MaskBlendOperator.a(param4, "lobby", "upbutton", -121);
           pk.field_s.field_rb = MaskBlendOperator.a(param4, "lobby", "upbutton_mouseover", -87);
@@ -380,7 +380,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           BufferedSocket.field_b.field_rb = MaskBlendOperator.a(param4, "lobby", "downbutton_mouseover", -73);
           BufferedSocket.field_b.field_U = MaskBlendOperator.a(param4, "lobby", "downbutton_mouseheld", 56);
           BufferedSocket.field_b.field_B = MaskBlendOperator.a(param4, "lobby", "downbutton_disabled", 113);
-          DateFieldsWidget.field_F = new VerticalScrollbar(0L, pk.field_s, BufferedSocket.field_b, ClientException.field_b, ie.field_h);
+          DateFieldsWidget.field_F = new VerticalScrollbar(0L, pk.field_s, BufferedSocket.field_b, ClientException.field_b, DirectByteStorage.field_h);
           aaa.field_d = new hla(0L, (jea) null, rfa.field_C, DateFieldsWidget.field_F, jk.field_g, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

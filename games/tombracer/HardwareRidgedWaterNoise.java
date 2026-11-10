@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ot extends lba {
+final class HardwareRidgedWaterNoise extends RidgedNoise3D {
     static String field_t;
     static int field_v;
     private byte[] field_u;
     static String field_w;
 
-    ot() {
+    HardwareRidgedWaterNoise() {
         super(8, 5, 8, 8, 2, 0.10000000149011612f, 0.550000011920929f, 3.0f);
     }
 
@@ -19,18 +19,18 @@ final class ot extends lba {
         }
     }
 
-    final byte[] a(int param0, boolean param1, int param2, int param3) {
+    final byte[] generate(int param0, boolean param1, int param2, int param3) {
         this.field_u = new byte[param3 * (param0 * (param2 * 2))];
-        this.a(param0, param2, param3, (byte) -93);
+        this.generateVolume(param0, param2, param3, (byte) -93);
         if (param1) {
           return this.field_u;
         }
         ResourceArchive var6 = (ResourceArchive) null;
-        ot.a(13, 72, (ResourceArchive) null, false);
+        HardwareRidgedWaterNoise.a(13, 72, (ResourceArchive) null, false);
         return this.field_u;
     }
 
-    final void a(boolean param0, byte param1, int param2) {
+    final void writeVoxel(boolean param0, byte param1, int param2) {
         int var4 = param2 * 2;
         int incrementValue$0 = var4;
         var4++;
@@ -40,7 +40,7 @@ final class ot extends lba {
         if (!param0) {
           return;
         }
-        ot.releaseStatics((byte) 20);
+        HardwareRidgedWaterNoise.releaseStatics((byte) 20);
     }
 
     final static Sprite a(int param0, int param1, ResourceArchive param2, boolean param3) {

@@ -179,7 +179,7 @@ abstract class MazeGenerator {
     final static void a(byte param0) {
         mga.field_g = null;
         mq.field_b = null;
-        ak.field_p = null;
+        LoadLevelCommand.field_p = null;
         iga.field_m = null;
         int var1 = 85 % ((57 - param0) / 49);
         ck.field_c = (byte[][]) null;

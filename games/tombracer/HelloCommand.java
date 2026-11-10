@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dia extends ConsoleMethod {
+final class HelloCommand extends ConsoleMethod {
     static FunOrbConsole field_o;
     static float[] field_p;
     static char field_q;
@@ -36,7 +36,7 @@ final class dia extends ConsoleMethod {
         return SwitchState.field_a[param1];
     }
 
-    final ConsoleValue a(ConsoleValue[] param0, int param1) {
+    final ConsoleValue invoke(ConsoleValue[] param0, int param1) {
         RuntimeException var3 = null;
         ConsoleValue stackIn_2_0 = null;
         ConsoleValue stackIn_4_0 = null;
@@ -65,7 +65,7 @@ final class dia extends ConsoleMethod {
         }
     }
 
-    dia(String param0, Class[] param1, String param2) {
+    HelloCommand(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
     }
 

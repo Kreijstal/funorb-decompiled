@@ -181,7 +181,7 @@ final class AnimatedLight {
               }
             }
           } else {
-            var4 = 1024 + (qu.field_b[var5 << 3] >> 4);
+            var4 = 1024 + (ByteStorage.field_b[var5 << 3] >> 4);
           }
         }
         this.light.a((byte) 105, (float)((var4 * this.field_h >> 11) + this.field_g) / 2048.0f);

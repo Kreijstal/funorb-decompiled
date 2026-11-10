@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class paa extends WidgetContainer implements mk {
+abstract class DateInputWidget extends WidgetContainer implements ValidationProvider {
     static lqa field_z;
     static String field_y;
     static int[] field_x;
@@ -30,7 +30,7 @@ abstract class paa extends WidgetContainer implements mk {
         return var5.field_c[param2];
     }
 
-    public final nua a(byte param0) {
+    public final nua getValidationSource(byte param0) {
         if (param0 <= 44) {
           return (nua) null;
         }
@@ -44,12 +44,12 @@ abstract class paa extends WidgetContainer implements mk {
           field_x = null;
           return;
         }
-        paa.c(81, -67, 72);
+        DateInputWidget.c(81, -67, 72);
         field_z = null;
         field_x = null;
     }
 
-    void a(byte param0, uba param1) {
+    void setValidator(byte param0, uba param1) {
         try {
           int var3_int = 126 % ((-36 - param0) / 59);
           this.field_w = param1;
@@ -66,19 +66,19 @@ abstract class paa extends WidgetContainer implements mk {
         var3 = TombRacer.field_G ? 1 : 0;
         try {
           if (0 == param1) {
-            MenuEntry.field_j[0] = qua.a(TextLayout.field_a, "", "TR_theme");
+            MenuEntry.field_j[0] = MusicTrack.load(TextLayout.field_a, "", "TR_theme");
           }
           if (1 == param1) {
-            MenuEntry.field_j[1] = qua.a(TextLayout.field_a, "", "TR_temple_music");
+            MenuEntry.field_j[1] = MusicTrack.load(TextLayout.field_a, "", "TR_temple_music");
           }
           if (param1 == 2) {
-            MenuEntry.field_j[2] = qua.a(TextLayout.field_a, "", "TR_win_jingle_long");
+            MenuEntry.field_j[2] = MusicTrack.load(TextLayout.field_a, "", "TR_win_jingle_long");
           }
           if (param0) {
             return;
           }
           if (3 == param1) {
-            MenuEntry.field_j[3] = qua.a(TextLayout.field_a, "", "TR_lose_jingle_long");
+            MenuEntry.field_j[3] = MusicTrack.load(TextLayout.field_a, "", "TR_lose_jingle_long");
           }
           while (!RewardChoicePhase.field_n.field_y.a(176400, MenuEntry.field_j[param1], ua.field_a, ns.field_j, 0)) {
           }
@@ -101,7 +101,7 @@ abstract class paa extends WidgetContainer implements mk {
         return it.a(255, 141 + uca.cosmeticRandom.nextBounded(2, param0 ^ 141));
     }
 
-    paa(int param0, int param1, int param2, int param3, isa param4) {
+    DateInputWidget(int param0, int param1, int param2, int param3, isa param4) {
         super(param0, param1, param2, param3, param4);
     }
 

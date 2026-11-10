@@ -72,10 +72,10 @@ final class fga implements ShellListener {
                 if (var5 == 0) {
                   if (this.field_d[var3_int] < PasswordValidator.field_m &&
                     PasswordValidator.field_m < (40 + this.field_d[var3_int]) &&
-                    lba.field_p > this.field_b[var3_int] &&
-                    (this.field_b[var3_int] + 30) > lba.field_p &&
+                    RidgedNoise3D.field_p > this.field_b[var3_int] &&
+                    (this.field_b[var3_int] + 30) > RidgedNoise3D.field_p &&
                     !VerticalScrollbar.field_tb[82]) {
-                    var4 = ak.a(var3_int, (byte) 56);
+                    var4 = LoadLevelCommand.a(var3_int, (byte) 56);
                     stackIn_32_1 = 74;
                     stackIn_33_2 = !(f.field_e.get(var4));
                     this.a((byte) stackIn_32_1, stackIn_33_2, var4);
@@ -250,7 +250,7 @@ final class fga implements ShellListener {
                 stackIn_61_0 = 0;
                 break;
               }
-              var6_intLifetime1 = ak.a(var5Lifetime1, (byte) 95);
+              var6_intLifetime1 = LoadLevelCommand.a(var5Lifetime1, (byte) 95);
               var7 = f.field_e.get(var6_intLifetime1) ? 1 : 0;
               var8 = -10079437;
               stackIn_61_0 = var7;
@@ -364,7 +364,7 @@ final class fga implements ShellListener {
                   break scanLoop1;
                 }
                 if (stackIn_45_0 < 10) {
-                  var6 = ak.a(var5, (byte) 125);
+                  var6 = LoadLevelCommand.a(var5, (byte) 125);
                   if (AnimatedLight.a(false, var6).field_d) {
                     this.a((byte) 110, true, var5);
                     var4_int++;
@@ -395,7 +395,7 @@ final class fga implements ShellListener {
                 break scanLoop2;
               }
               if (stackIn_32_0 > var4_int) {
-                var6Lifetime1 = ak.a(var5Lifetime1, (byte) 111);
+                var6Lifetime1 = LoadLevelCommand.a(var5Lifetime1, (byte) 111);
                 if (!AnimatedLight.a(false, var6Lifetime1).field_d ||
                   var7 != 0) {
                   this.a((byte) 46, true, var5Lifetime1);

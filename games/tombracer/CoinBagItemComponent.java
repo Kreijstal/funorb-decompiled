@@ -139,14 +139,14 @@ final class CoinBagItemComponent extends ItemComponent {
                 pk.field_z.field_X = true;
               }
               pk.field_z.field_w = hg.field_g.field_w;
-              if (so.field_K > 0) {
-                boolean decompiledSharedTail0 = (1 != so.field_K);
+              if (ValidatedTextInputWidget.field_K > 0) {
+                boolean decompiledSharedTail0 = (1 != ValidatedTextInputWidget.field_K);
                 if (!decompiledSharedTail0) {
                   var10_ref_String = sj.field_a;
                   decompiledSharedTail0 = (var19 != 0);
                 }
                 if (decompiledSharedTail0) {
-                  var10_ref_String = gl.$cfr$intArgs$a$53ce4ab4c593(84, ld.field_f, new String[]{Integer.toString(so.field_K)});
+                  var10_ref_String = gl.$cfr$intArgs$a$53ce4ab4c593(84, ld.field_f, new String[]{Integer.toString(ValidatedTextInputWidget.field_K)});
                 }
                 if ((lh.field_a & 16) == 0 &&
                   !tla.field_e) {

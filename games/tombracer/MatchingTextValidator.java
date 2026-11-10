@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oe extends TextFieldValidator {
+final class MatchingTextValidator extends TextFieldValidator {
     static String field_l;
     private TextInputWidget field_k;
     static int[] field_j;
 
-    oe(TextInputWidget param0, TextInputWidget param1) {
+    MatchingTextValidator(TextInputWidget param0, TextInputWidget param1) {
         super(param0);
         try {
           this.field_k = param1;
@@ -26,8 +26,8 @@ final class oe extends TextFieldValidator {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_k instanceof mk) {
-            var3 = ((mk) ((Object) this.field_k)).a((byte) 92);
+          if (this.field_k instanceof ValidationProvider) {
+            var3 = ((ValidationProvider) ((Object) this.field_k)).getValidationSource((byte) 92);
             if (var3 != null) {
               if (var3.b(-4666) == LightSource.field_k &&
                 !param1.equals(this.field_k.field_o)) {
@@ -81,8 +81,8 @@ final class oe extends TextFieldValidator {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_k instanceof mk) {
-            var3 = ((mk) ((Object) this.field_k)).a((byte) 89);
+          if (this.field_k instanceof ValidationProvider) {
+            var3 = ((ValidationProvider) ((Object) this.field_k)).getValidationSource((byte) 89);
             if (var3 != null &&
               var3.b(param0 ^ -4664) != LightSource.field_k) {
               stackIn_5_0 = fp.field_c;

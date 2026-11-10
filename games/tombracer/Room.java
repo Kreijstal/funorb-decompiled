@@ -434,7 +434,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         if (param0 != 53) {
           this.spawnPuddle(31, 62, -43, -109, -2);
         }
-        return this.getSimulation(-1553494544).g(110);
+        return this.getSimulation(-1553494544).isTimeFrozen(110);
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -1510,7 +1510,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         if (this != var8.getRoom((byte) -83)) {
           return;
         }
-        if (!this.getSimulation(param1 - 1553494544).k(-19271)) {
+        if (!this.getSimulation(param1 - 1553494544).isActive(-19271)) {
           return;
         }
         this.field_a = 6029;
@@ -1531,7 +1531,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           var5_ref_fsa = (Trap) (var9.next(-1));
         }
         this.effectTraps.update(true);
-        var5 = this.getSimulation(-1553494544).g(param1 + 112) ? 1 : 0;
+        var5 = this.getSimulation(-1553494544).isTimeFrozen(param1 + 112) ? 1 : 0;
         if (param1 != 0) {
           var7 = (Trap) null;
           this.removeTrap((Trap) null, -31);

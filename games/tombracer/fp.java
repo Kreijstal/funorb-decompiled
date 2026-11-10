@@ -280,16 +280,16 @@ final class fp {
                 }
                 var6 = stackIn_24_0;
               }
-              if (C2SActionPacket.field_k.length <= wr.field_o.length) {
-                stackIn_28_0 = wr.field_o.length;
+              if (C2SActionPacket.field_k.length <= ToggleMusicChannelCommand.field_o.length) {
+                stackIn_28_0 = ToggleMusicChannelCommand.field_o.length;
               } else {
                 stackIn_28_0 = C2SActionPacket.field_k.length;
               }
               var8 = stackIn_28_0;
               if (var3 >= 7 + var7 &&
                 7 + var7 + var8 > var3) {
-                if (wr.field_o.length > -7 + (var3 - var7)) {
-                  stackIn_33_0 = wr.field_o[-7 + var3 - var7];
+                if (ToggleMusicChannelCommand.field_o.length > -7 + (var3 - var7)) {
+                  stackIn_33_0 = ToggleMusicChannelCommand.field_o[-7 + var3 - var7];
                 } else {
                   stackIn_33_0 = "";
                 }

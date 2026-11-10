@@ -59,7 +59,7 @@ final class epa extends MenuScreen {
             TextureOperator.field_l.field_B) {
             var3_int = 1;
             if (param0 == 8) {
-              if (!jf.field_r) {
+              if (!LoadProfileCommand.field_r) {
                 param2 = TestModel.field_n;
               } else {
                 param2 = SoundCache.field_d;
@@ -84,7 +84,7 @@ final class epa extends MenuScreen {
               if (10 == param0) {
                 return;
               }
-              if (!jf.field_r) {
+              if (!LoadProfileCommand.field_r) {
                 vn.field_b.a((byte) -92);
                 return;
               }

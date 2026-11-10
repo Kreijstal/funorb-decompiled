@@ -305,7 +305,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
           if (stackIn_3_0 | stackIn_4_1) {
             return true;
           }
-          stackIn_9_0 = !(!so.a(param2, (byte) -100, param0));
+          stackIn_9_0 = !(!ValidatedTextInputWidget.a(param2, (byte) -100, param0));
           return stackIn_9_0;
         }
         stackIn_12_0 = gha.a(param0, param2, 97);
@@ -313,7 +313,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
         if (stackIn_12_0 | stackIn_13_1) {
           stackIn_18_0 = true;
         } else {
-          if (so.a(param2, (byte) -100, param0)) {
+          if (ValidatedTextInputWidget.a(param2, (byte) -100, param0)) {
             return true;
           }
           stackIn_18_0 = false;

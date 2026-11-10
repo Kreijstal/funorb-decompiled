@@ -108,7 +108,7 @@ final class MatchScreen extends GameScreen implements rqa {
         var5 = TombRacer.field_G ? 1 : 0;
         msa.field_a = this.l(95);
         if (this.d((byte) 65) &&
-          this.matchState.f((byte) -90, this.l(94))) {
+          this.matchState.hasResigned((byte) -90, this.l(94))) {
           this.e(1, 17219);
         }
         if (!this.f((byte) 33) &&
@@ -165,7 +165,7 @@ final class MatchScreen extends GameScreen implements rqa {
               hba.a(this.field_E, this.field_m, (byte) 64, this.field_i);
               this.matchState.field_I[this.localPlayerIndex] = false;
             }
-            if (this.matchState.getSimulation(this.localPlayerIndex, 0).b(0)) {
+            if (this.matchState.getSimulation(this.localPlayerIndex, 0).isFinished(0)) {
               if (this.field_p) {
                 return;
               }
@@ -363,7 +363,7 @@ final class MatchScreen extends GameScreen implements rqa {
             }
             this.matchState = new MatchState(param2, param1, param5, param6, param7, param8, this.field_E, param10, param11, (mt) (var15), param12);
             if (!param0) {
-              this.matchState.c((byte) -89);
+              this.matchState.startRound((byte) -89);
             }
             this.field_C = new kq[var14_int];
             this.matchState.field_x = null;
@@ -389,7 +389,7 @@ final class MatchScreen extends GameScreen implements rqa {
           C2SActionPacket.field_j = -1;
           this.field_p = false;
           uca.field_a = -1;
-          tb.field_o = 617;
+          ListTracksCommand.field_o = 617;
           Transform3D.field_b = 9170;
           ti.field_b = 8768;
           lu.field_a = 5180;
@@ -397,7 +397,7 @@ final class MatchScreen extends GameScreen implements rqa {
           MidiVoiceMixer.field_j = 17219L;
           PlayerViewport.field_b = 1727002282;
           nta.field_h = -2073743619;
-          bh.field_o = 17825;
+          PlayTrackCommand.field_o = 17825;
           lra.field_f = 2023746978L;
           nb.field_c = 22238L;
           OpenGlToolkit.field_Z = 22238;
@@ -583,7 +583,7 @@ final class MatchScreen extends GameScreen implements rqa {
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           param1.beginBitAccess((byte) -94);
-          this.matchState.a(param1, false);
+          this.matchState.decode(param1, false);
           param1.endBitAccess((byte) 98);
           this.j((byte) -115);
           if (!this.matchState.g(0)) {
@@ -596,9 +596,9 @@ final class MatchScreen extends GameScreen implements rqa {
             this.showCharacterSelect((byte) 120);
           } else {
             if (this.matchState.field_z < 0) {
-              if (this.matchState.b(0)) {
-                var10 = new int[this.matchState.field_k][3];
-                for (var4 = 0; this.matchState.field_k > var4; var4++) {
+              if (this.matchState.allFinishedRound(0)) {
+                var10 = new int[this.matchState.playerCount][3];
+                for (var4 = 0; this.matchState.playerCount > var4; var4++) {
                   for (var5 = 0; 3 > var5; var5++) {
                     var10[var4][var5] = this.matchState.players[var4].getTreasure(196608, var5);
                   }
@@ -640,10 +640,10 @@ final class MatchScreen extends GameScreen implements rqa {
         String var6;
         var5 = TombRacer.field_G ? 1 : 0;
         for (var3 = 0; var3 < this.matchState.players.length; var3++) {
-          if (!this.matchState.l(param1 ^ -28, var3) &&
+          if (!this.matchState.hasLeft(param1 ^ -28, var3) &&
             (1 << var3 & param0) > 0) {
-            this.matchState.d((byte) -95, var3);
-            var4 = eea.a(gl.$cfr$intArgs$a$53ce4ab4c593(87, RemovedFromGameMenu.field_r, new String[]{this.getPlayerName(var3, false)}), (byte) -72);
+            this.matchState.markLeft((byte) -95, var3);
+            var4 = BannerCommand.a(gl.$cfr$intArgs$a$53ce4ab4c593(87, RemovedFromGameMenu.field_r, new String[]{this.getPlayerName(var3, false)}), (byte) -72);
             iqa.field_c.a(param1 + 23, var4);
           }
         }
@@ -670,7 +670,7 @@ final class MatchScreen extends GameScreen implements rqa {
         if (!this.field_D &&
           this.localPlayerIndex == 0) {
           var4 = this.matchState.players[this.localPlayerIndex];
-          if (!var4.getSimulation(-1).j(0)) {
+          if (!var4.getSimulation(-1).isCourseComplete(0)) {
             SectorCacheStore.a(var4.getRoom((byte) -127), 64, this.matchState);
           }
         }
@@ -736,7 +736,7 @@ final class MatchScreen extends GameScreen implements rqa {
           if (this.l(114) >= this.matchState.players.length) {
             this.field_h = 0;
           }
-          if (this.matchState.f((byte) -111, this.l(127))) {
+          if (this.matchState.hasResigned((byte) -111, this.l(127))) {
             continue;
           }
           var4 = 1;
@@ -765,10 +765,10 @@ final class MatchScreen extends GameScreen implements rqa {
           return;
         }
         while (this.matchState.players.length > var3) {
-          if (!this.matchState.f((byte) -93, var3) &&
+          if (!this.matchState.hasResigned((byte) -93, var3) &&
             (param1 & 1 << var3) > 0) {
-            this.matchState.m(param0 ^ 4, var3);
-            var4 = eea.a(gl.$cfr$intArgs$a$53ce4ab4c593(84, lu.field_c, new String[]{this.getPlayerName(var3, false)}), (byte) -124);
+            this.matchState.markResigned(param0 ^ 4, var3);
+            var4 = BannerCommand.a(gl.$cfr$intArgs$a$53ce4ab4c593(84, lu.field_c, new String[]{this.getPlayerName(var3, false)}), (byte) -124);
             iqa.field_c.a(0, var4);
           }
           var3++;
@@ -795,7 +795,7 @@ final class MatchScreen extends GameScreen implements rqa {
         var6 = this.field_m;
         var8_int = var5;
         var9 = uca.cosmeticRandom.nextBounded(param1, 0);
-        bh.field_o = bh.field_o + var8_int * var9;
+        PlayTrackCommand.field_o = PlayTrackCommand.field_o + var8_int * var9;
         OpenGlToolkit.field_Z = OpenGlToolkit.field_Z + var9;
         var8 = var6;
         var10_int = uca.cosmeticRandom.nextBounded(5, 0);
@@ -836,17 +836,17 @@ final class MatchScreen extends GameScreen implements rqa {
         if (param0) {
           this.protocol = (MatchProtocol) null;
         }
-        if (!this.field_u[param1] && (this.matchState.b((byte) 90, param1) ||
-          this.matchState.e((byte) -117, param1))) {
+        if (!this.field_u[param1] && (this.matchState.hasFinishedCourse((byte) 90, param1) ||
+          this.matchState.hasTimedOut((byte) -117, param1))) {
           this.a(122, param1);
           this.field_u[param1] = true;
         }
         if (!this.field_D) {
-          var4 = this.matchState.a(true, param1);
+          var4 = this.matchState.pollQueuedEvent(true, param1);
           while (var4 != null) {
             var5 = new PendingEvent(var4.getEvent((byte) -125), param1, param1, 50 + this.matchState.simulations[param1].tick, var4.getEvent((byte) -125).getValue((byte) -28), this.matchState.getPlayerCourseIndex(1, param1));
             this.matchState.deliverPendingEvent((byte) 96, var5);
-            var4 = this.matchState.a(true, param1);
+            var4 = this.matchState.pollQueuedEvent(true, param1);
           }
         } else {
           this.matchState.simulations[param1].observer.clearQueuedEvents(-113);
@@ -1074,11 +1074,11 @@ final class MatchScreen extends GameScreen implements rqa {
         if (param0 < 23) {
           this.isInPlayPhase(63);
         }
-        if (this.matchState.b((byte) 90, param1)) {
-          var3 = RewardChoicePhase.a(-41, gl.$cfr$intArgs$a$53ce4ab4c593(124, ara.field_yb, new String[]{this.getColouredPlayerName(param1, 9)}) + ": " + dea.a(this.matchState.c((byte) 115, param1), (byte) -8));
+        if (this.matchState.hasFinishedCourse((byte) 90, param1)) {
+          var3 = RewardChoicePhase.a(-41, gl.$cfr$intArgs$a$53ce4ab4c593(124, ara.field_yb, new String[]{this.getColouredPlayerName(param1, 9)}) + ": " + dea.a(this.matchState.getSimulationTick((byte) 115, param1), (byte) -8));
         } else {
-          if (this.matchState.e((byte) -66, param1)) {
-            var3 = RewardChoicePhase.a(-79, gl.$cfr$intArgs$a$53ce4ab4c593(107, hu.field_a, new String[]{this.getColouredPlayerName(param1, 9)}) + ": " + dea.a(this.matchState.c((byte) 115, param1), (byte) -8));
+          if (this.matchState.hasTimedOut((byte) -66, param1)) {
+            var3 = RewardChoicePhase.a(-79, gl.$cfr$intArgs$a$53ce4ab4c593(107, hu.field_a, new String[]{this.getColouredPlayerName(param1, 9)}) + ": " + dea.a(this.matchState.getSimulationTick((byte) 115, param1), (byte) -8));
           } else {
             var3 = RewardChoicePhase.a(-108, gl.$cfr$intArgs$a$53ce4ab4c593(99, DisplaySettingsDialog.field_Q, new String[]{this.getColouredPlayerName(param1, 9)}));
           }
@@ -1132,8 +1132,8 @@ final class MatchScreen extends GameScreen implements rqa {
         }
         var3 = lf.a(var3, 4);
         if (null == this.field_C) {
-          this.field_C = new kq[this.matchState.field_k];
-          for (var4 = 0; var4 < this.matchState.field_k; var4++) {
+          this.field_C = new kq[this.matchState.playerCount];
+          for (var4 = 0; var4 < this.matchState.playerCount; var4++) {
             var5 = this.matchState.players[var4];
             if (var5 != null) {
               this.field_C[var4] = new kq();
@@ -1223,21 +1223,21 @@ final class MatchScreen extends GameScreen implements rqa {
                     if (var5 != 4) {
                       if (var5 == 5) {
                         lu.field_a = lu.field_a + 1;
-                        tb.field_o = tb.field_o + Transform3D.field_b;
+                        ListTracksCommand.field_o = ListTracksCommand.field_o + Transform3D.field_b;
                       } else {
                         if (var5 != 6) {
                           if (7 == var5) {
-                            tb.field_o = tb.field_o - Transform3D.field_b;
+                            ListTracksCommand.field_o = ListTracksCommand.field_o - Transform3D.field_b;
                             lu.field_a = lu.field_a - 1;
                           }
                         } else {
-                          tb.field_o = tb.field_o - lu.field_a;
+                          ListTracksCommand.field_o = ListTracksCommand.field_o - lu.field_a;
                           Transform3D.field_b = Transform3D.field_b - 1;
                         }
                       }
                     } else {
                       Transform3D.field_b = Transform3D.field_b + 1;
-                      tb.field_o = tb.field_o + lu.field_a;
+                      ListTracksCommand.field_o = ListTracksCommand.field_o + lu.field_a;
                     }
                   }
                 } else {
@@ -1341,7 +1341,7 @@ final class MatchScreen extends GameScreen implements rqa {
         }
         if (!this.matchState.field_h) {
           if (!this.d((byte) 80) &&
-            this.matchState.simulations[this.localPlayerIndex].k(-19271)) {
+            this.matchState.simulations[this.localPlayerIndex].isActive(-19271)) {
             this.g((byte) -36);
           }
           for (var2 = 0; var2 < this.matchState.players.length; var2++) {
@@ -1377,7 +1377,7 @@ final class MatchScreen extends GameScreen implements rqa {
               var6 = var5.pollPenaltyNotice((byte) -57);
             }
           }
-          var2Lifetime1 = this.field_r - this.matchState.c((byte) 115, this.field_h);
+          var2Lifetime1 = this.field_r - this.matchState.getSimulationTick((byte) 115, this.field_h);
           if (this.field_r != -1 &&
             var2Lifetime1 <= 500 &&
             var2Lifetime1 % 50 == 0) {
@@ -1461,7 +1461,7 @@ final class MatchScreen extends GameScreen implements rqa {
           this.field_j > 0 &&
           !this.o((byte) 62) && this.field_E >= 0) {
           var2 = this.field_E;
-          MandelbrotOperator.field_o = new kb(var2, var2 ^ 65535, ti.field_b, tb.field_o, lu.field_a, Transform3D.field_b, new int[]{this.field_j});
+          MandelbrotOperator.field_o = new kb(var2, var2 ^ 65535, ti.field_b, ListTracksCommand.field_o, lu.field_a, Transform3D.field_b, new int[]{this.field_j});
           if (!TextWidgetPainter.a(66)) {
             su.a(MandelbrotOperator.field_o, (byte) -108, 3);
           }
@@ -1493,10 +1493,10 @@ final class MatchScreen extends GameScreen implements rqa {
             var4 = uca.cosmeticRandom.nextBounded(3, 0);
             if (0 != var4) {
               if (var4 == 1) {
-                tb.field_o = tb.field_o - var3;
+                ListTracksCommand.field_o = ListTracksCommand.field_o - var3;
               } else {
                 var5 = var3 / 3;
-                tb.field_o = tb.field_o - (-var5 + var3);
+                ListTracksCommand.field_o = ListTracksCommand.field_o - (-var5 + var3);
                 ti.field_b = ti.field_b + var5;
               }
             } else {
@@ -1517,20 +1517,20 @@ final class MatchScreen extends GameScreen implements rqa {
                 if (var4 != 2) {
                   if (var4 != 3) {
                     if (var4 == 4) {
-                      tb.field_o = tb.field_o + lu.field_a;
+                      ListTracksCommand.field_o = ListTracksCommand.field_o + lu.field_a;
                       Transform3D.field_b = Transform3D.field_b + 1;
                     } else {
                       if (5 == var4) {
-                        tb.field_o = tb.field_o + Transform3D.field_b;
+                        ListTracksCommand.field_o = ListTracksCommand.field_o + Transform3D.field_b;
                         lu.field_a = lu.field_a + 1;
                       } else {
                         if (var4 != 6) {
                           if (var4 == 7) {
                             lu.field_a = lu.field_a - 1;
-                            tb.field_o = tb.field_o - Transform3D.field_b;
+                            ListTracksCommand.field_o = ListTracksCommand.field_o - Transform3D.field_b;
                           }
                         } else {
-                          tb.field_o = tb.field_o - lu.field_a;
+                          ListTracksCommand.field_o = ListTracksCommand.field_o - lu.field_a;
                           Transform3D.field_b = Transform3D.field_b - 1;
                         }
                       }

@@ -108,7 +108,7 @@ final class pka {
           return var1 != 0;
         }
         var1 = 1;
-        or.d(-1226152383);
+        TurbulenceNoise3D.d(-1226152383);
         if (PlayPhase.beginReconnectGracePeriod(89)) {
           if (una.a((byte) -87)) {
             if (!sr.a(125)) {

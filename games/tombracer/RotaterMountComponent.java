@@ -40,9 +40,9 @@ final class RotaterMountComponent extends PrefabComponent {
 
     final static void r(byte param0) {
         int var1 = 0;
-        if (ot.field_v < 224) {
-          var1 = ot.field_v % 32;
-          mp.setMusicVolume(2, -var1 + (ot.field_v + 32));
+        if (HardwareRidgedWaterNoise.field_v < 224) {
+          var1 = HardwareRidgedWaterNoise.field_v % 32;
+          mp.setMusicVolume(2, -var1 + (HardwareRidgedWaterNoise.field_v + 32));
           if (param0 != 63) {
             RotaterMountComponent.A(63);
             return;

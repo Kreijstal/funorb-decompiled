@@ -9,21 +9,21 @@ final class jk extends IntrusiveNode {
     byte[] field_f;
     static jea field_g;
 
-    final static IntrusiveDeque a(byte param0) {
+    final static IntrusiveDeque createConsoleMethods(byte param0) {
         IntrusiveDeque var1 = new IntrusiveDeque();
         if (param0 != 122) {
-          jk.a((byte) 64);
+          jk.createConsoleMethods((byte) 64);
         }
-        var1.addLast((byte) -117, new ak("load", new Class[]{String.class}, "Run a test level from the freelevels directory."));
-        var1.addLast((byte) -47, new dia("hello", new Class[]{}, "Be friendly."));
-        var1.addLast((byte) -91, new eea("banner", new Class[]{}, "Load the banner corridor."));
-        var1.addLast((byte) -56, new lq("showLevelSet", new Class[]{}, "Show the level set editor"));
-        var1.addLast((byte) -100, new vr("setFakeLag", new Class[]{Integer.TYPE}, (String) null));
-        var1.addLast((byte) -112, new wr("toggleMusicChannel", new Class[]{String.class, Boolean.TYPE}, (String) null));
-        var1.addLast((byte) -82, new rna("listChannels", new Class[]{}, (String) null));
-        var1.addLast((byte) -73, new bh("playTrack", new Class[]{String.class}, (String) null));
-        var1.addLast((byte) -83, new tb("listTracks", new Class[]{}, (String) null));
-        var1.addLast((byte) -81, new jf("loadProfile", new Class[]{String.class}, (String) null));
+        var1.addLast((byte) -117, new LoadLevelCommand("load", new Class[]{String.class}, "Run a test level from the freelevels directory."));
+        var1.addLast((byte) -47, new HelloCommand("hello", new Class[]{}, "Be friendly."));
+        var1.addLast((byte) -91, new BannerCommand("banner", new Class[]{}, "Load the banner corridor."));
+        var1.addLast((byte) -56, new ShowLevelSetCommand("showLevelSet", new Class[]{}, "Show the level set editor"));
+        var1.addLast((byte) -100, new SetFakeLagCommand("setFakeLag", new Class[]{Integer.TYPE}, (String) null));
+        var1.addLast((byte) -112, new ToggleMusicChannelCommand("toggleMusicChannel", new Class[]{String.class, Boolean.TYPE}, (String) null));
+        var1.addLast((byte) -82, new ListChannelsCommand("listChannels", new Class[]{}, (String) null));
+        var1.addLast((byte) -73, new PlayTrackCommand("playTrack", new Class[]{String.class}, (String) null));
+        var1.addLast((byte) -83, new ListTracksCommand("listTracks", new Class[]{}, (String) null));
+        var1.addLast((byte) -81, new LoadProfileCommand("loadProfile", new Class[]{String.class}, (String) null));
         return var1;
     }
 
@@ -94,7 +94,7 @@ final class jk extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void setFakeLag(int param0, int param1) {
         if (param1 != 0) {
           BitSet var3 = (BitSet) null;
           jk.$cfr$intArgs$a$922851b022bc(69, (BitSet) null, true);

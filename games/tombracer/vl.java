@@ -26,14 +26,14 @@ final class vl extends IntrusiveNode {
         int var6 = TombRacer.field_G ? 1 : 0;
         Sprite[] var7 = new Sprite[9];
         Sprite[] var4 = var7;
-        var7[0] = jf.a(param1, 121, param3);
+        var7[0] = LoadProfileCommand.a(param1, 121, param3);
         if (param0 <= 111) {
           vl.a((byte) 34, 94, 33, 36);
         }
         for (var5 = 1; var5 < 9; var5++) {
           var7[var5] = var7[0];
         }
-        var4[4] = jf.a(param2, 43, 64);
+        var4[4] = LoadProfileCommand.a(param2, 43, 64);
         return var4;
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qj extends com.ms.dll.Callback {
+final class MicrosoftCursorController extends com.ms.dll.Callback {
     private volatile int field_b;
     private volatile boolean field_d;
     private boolean field_c;
@@ -67,7 +67,7 @@ final class qj extends com.ms.dll.Callback {
         return;
     }
 
-    qj() {
+    MicrosoftCursorController() {
         this.field_d = true;
     }
 

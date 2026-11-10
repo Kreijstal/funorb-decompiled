@@ -280,7 +280,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
           fa.field_b = var17.readUnsignedShort(123);
           pg.field_C = new int[fa.field_b];
           ck.field_c = new byte[fa.field_b][];
-          ak.field_p = new int[fa.field_b];
+          LoadLevelCommand.field_p = new int[fa.field_b];
           iga.field_m = new int[fa.field_b];
           mq.field_b = new int[fa.field_b];
           pb.field_l = new byte[fa.field_b][];
@@ -290,7 +290,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
           OpenGlRenderbuffer.field_s = var17.readUnsignedShort(param0 ^ 126);
           var3 = 1 + (var17.readUnsignedByte(255) & 255);
           for (var4 = 0; fa.field_b > var4; var4++) {
-            ak.field_p[var4] = var16.readUnsignedShort(121);
+            LoadLevelCommand.field_p[var4] = var16.readUnsignedShort(121);
           }
           for (var4Lifetime1 = param0; var4Lifetime1 < fa.field_b; var4Lifetime1++) {
             pg.field_C[var4Lifetime1] = var17.readUnsignedShort(127);

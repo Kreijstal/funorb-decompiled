@@ -66,7 +66,7 @@ final class kla {
     final static void a(byte param0) {
         String var1 = null;
         String var1Lifetime1;
-        if (!jf.field_r) {
+        if (!LoadProfileCommand.field_r) {
           throw new IllegalStateException();
         }
         if (param0 == -72) {

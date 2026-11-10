@@ -45,7 +45,7 @@ final class vk implements os {
             stackIn_10_0 = 95;
             return stackIn_10_0;
           }
-          FacePointLocomotor.field_r.a(wg.a(1541709953, PasswordValidator.field_m, lba.field_p), 73, wg.a(1541709953, jba.field_j, GridWidgetContainer.field_B));
+          FacePointLocomotor.field_r.a(wg.a(1541709953, PasswordValidator.field_m, RidgedNoise3D.field_p), 73, wg.a(1541709953, AgeValidator.field_j, GridWidgetContainer.field_B));
           if (FacePointLocomotor.field_r.a(false)) {
             var1_int = 1;
           }

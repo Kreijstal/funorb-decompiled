@@ -131,14 +131,14 @@ final class ns extends qe {
         }
     }
 
-    final static cha a(int param0, int param1, java.awt.Component param2, int param3) {
+    final static RasterBuffer a(int param0, int param1, java.awt.Component param2, int param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
           RuntimeException var4_ref2 = null;
-          cha var5 = null;
+          RasterBuffer var5 = null;
           ImageProducerRasterBuffer var5_ref = null;
-          cha stackIn_3_0 = null;
+          RasterBuffer stackIn_3_0 = null;
           ImageProducerRasterBuffer stackIn_5_0 = null;
           RuntimeException stackIn_8_0 = null;
           StringBuilder stackIn_8_1 = null;
@@ -146,8 +146,8 @@ final class ns extends qe {
           Throwable decompiledCaughtException = null;
           try {
             try {
-              var4 = Class.forName("de");
-              var5 = (cha) (var4.newInstance());
+              var4 = Class.forName("BufferedImageRasterBuffer");
+              var5 = (RasterBuffer) (var4.newInstance());
               if (param0 < 100) {
                 field_j = (SoundCache) null;
               }
@@ -158,9 +158,9 @@ final class ns extends qe {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
               var5_ref = new ImageProducerRasterBuffer();
-              ((cha) ((Object) var5_ref)).initialize(param1, param3, param2, (byte) -98);
+              ((RasterBuffer) ((Object) var5_ref)).initialize(param1, param3, param2, (byte) -98);
               stackIn_5_0 = var5_ref;
-              return (cha) ((Object) stackIn_5_0);
+              return (RasterBuffer) ((Object) stackIn_5_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

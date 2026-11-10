@@ -120,7 +120,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
         BeamSegment var8Lifetime2;
         var10 = TombRacer.field_G ? 1 : 0;
         var11 = this.getRoom(true);
-        if (!this.getSimulation(12340).g(112) &&
+        if (!this.getSimulation(12340).isTimeFrozen(112) &&
           null != this.field_t) {
           this.field_t.d(param0 - 5418);
           if (this.field_t.c(0)) {

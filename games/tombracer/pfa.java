@@ -42,171 +42,171 @@ final class pfa {
                 CurveOperator.textArchive = param0;
                 var2 = mt.readTextEntry("achievement_names,0", (byte) 108);
                 if (null != var2) {
-                  lq.achievementNames[0] = jaa.decodeText((byte) 77, var2);
+                  ShowLevelSetCommand.achievementNames[0] = jaa.decodeText((byte) 77, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,1", (byte) 121);
                 if (var2 != null) {
-                  lq.achievementNames[1] = jaa.decodeText((byte) 97, var2);
+                  ShowLevelSetCommand.achievementNames[1] = jaa.decodeText((byte) 97, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,2", (byte) 115);
                 if (null != var2) {
-                  lq.achievementNames[2] = jaa.decodeText((byte) 73, var2);
+                  ShowLevelSetCommand.achievementNames[2] = jaa.decodeText((byte) 73, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,3", (byte) 123);
                 if (null != var2) {
-                  lq.achievementNames[3] = jaa.decodeText((byte) 69, var2);
+                  ShowLevelSetCommand.achievementNames[3] = jaa.decodeText((byte) 69, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,4", (byte) 108);
                 if (var2 != null) {
-                  lq.achievementNames[4] = jaa.decodeText((byte) 125, var2);
+                  ShowLevelSetCommand.achievementNames[4] = jaa.decodeText((byte) 125, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,5", (byte) 121);
                 if (null != var2) {
-                  lq.achievementNames[5] = jaa.decodeText((byte) 81, var2);
+                  ShowLevelSetCommand.achievementNames[5] = jaa.decodeText((byte) 81, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,6", (byte) 118);
                 if (null != var2) {
-                  lq.achievementNames[6] = jaa.decodeText((byte) 56, var2);
+                  ShowLevelSetCommand.achievementNames[6] = jaa.decodeText((byte) 56, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,7", (byte) 124);
                 if (var2 != null) {
-                  lq.achievementNames[7] = jaa.decodeText((byte) 30, var2);
+                  ShowLevelSetCommand.achievementNames[7] = jaa.decodeText((byte) 30, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,8", (byte) 102);
                 if (var2 != null) {
-                  lq.achievementNames[8] = jaa.decodeText((byte) 77, var2);
+                  ShowLevelSetCommand.achievementNames[8] = jaa.decodeText((byte) 77, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,9", (byte) 111);
                 if (null != var2) {
-                  lq.achievementNames[9] = jaa.decodeText((byte) 26, var2);
+                  ShowLevelSetCommand.achievementNames[9] = jaa.decodeText((byte) 26, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,10", (byte) 110);
                 if (var2 != null) {
-                  lq.achievementNames[10] = jaa.decodeText((byte) 102, var2);
+                  ShowLevelSetCommand.achievementNames[10] = jaa.decodeText((byte) 102, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,11", (byte) 121);
                 if (null != var2) {
-                  lq.achievementNames[11] = jaa.decodeText((byte) 59, var2);
+                  ShowLevelSetCommand.achievementNames[11] = jaa.decodeText((byte) 59, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,12", (byte) 112);
                 if (var2 != null) {
-                  lq.achievementNames[12] = jaa.decodeText((byte) 28, var2);
+                  ShowLevelSetCommand.achievementNames[12] = jaa.decodeText((byte) 28, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,13", (byte) 127);
                 if (null != var2) {
-                  lq.achievementNames[13] = jaa.decodeText((byte) 50, var2);
+                  ShowLevelSetCommand.achievementNames[13] = jaa.decodeText((byte) 50, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,14", (byte) 116);
                 if (var2 != null) {
-                  lq.achievementNames[14] = jaa.decodeText((byte) 113, var2);
+                  ShowLevelSetCommand.achievementNames[14] = jaa.decodeText((byte) 113, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,15", (byte) 119);
                 if (var2 != null) {
-                  lq.achievementNames[15] = jaa.decodeText((byte) 122, var2);
+                  ShowLevelSetCommand.achievementNames[15] = jaa.decodeText((byte) 122, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,16", (byte) 123);
                 if (null != var2) {
-                  lq.achievementNames[16] = jaa.decodeText((byte) 37, var2);
+                  ShowLevelSetCommand.achievementNames[16] = jaa.decodeText((byte) 37, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,17", (byte) 102);
                 if (var2 != null) {
-                  lq.achievementNames[17] = jaa.decodeText((byte) 84, var2);
+                  ShowLevelSetCommand.achievementNames[17] = jaa.decodeText((byte) 84, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,18", (byte) 120);
                 if (null != var2) {
-                  lq.achievementNames[18] = jaa.decodeText((byte) 121, var2);
+                  ShowLevelSetCommand.achievementNames[18] = jaa.decodeText((byte) 121, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,19", (byte) 121);
                 if (var2 != null) {
-                  lq.achievementNames[19] = jaa.decodeText((byte) 75, var2);
+                  ShowLevelSetCommand.achievementNames[19] = jaa.decodeText((byte) 75, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,20", (byte) 124);
                 if (var2 != null) {
-                  lq.achievementNames[20] = jaa.decodeText((byte) 25, var2);
+                  ShowLevelSetCommand.achievementNames[20] = jaa.decodeText((byte) 25, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,21", (byte) 104);
                 if (var2 != null) {
-                  lq.achievementNames[21] = jaa.decodeText((byte) 64, var2);
+                  ShowLevelSetCommand.achievementNames[21] = jaa.decodeText((byte) 64, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,22", (byte) 125);
                 if (null != var2) {
-                  lq.achievementNames[22] = jaa.decodeText((byte) 106, var2);
+                  ShowLevelSetCommand.achievementNames[22] = jaa.decodeText((byte) 106, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,23", (byte) 102);
                 if (var2 != null) {
-                  lq.achievementNames[23] = jaa.decodeText((byte) 28, var2);
+                  ShowLevelSetCommand.achievementNames[23] = jaa.decodeText((byte) 28, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,24", (byte) 104);
                 if (var2 != null) {
-                  lq.achievementNames[24] = jaa.decodeText((byte) 67, var2);
+                  ShowLevelSetCommand.achievementNames[24] = jaa.decodeText((byte) 67, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,25", (byte) 116);
                 if (var2 != null) {
-                  lq.achievementNames[25] = jaa.decodeText((byte) 96, var2);
+                  ShowLevelSetCommand.achievementNames[25] = jaa.decodeText((byte) 96, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,26", (byte) 112);
                 if (var2 != null) {
-                  lq.achievementNames[26] = jaa.decodeText((byte) 86, var2);
+                  ShowLevelSetCommand.achievementNames[26] = jaa.decodeText((byte) 86, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,27", (byte) 102);
                 if (var2 != null) {
-                  lq.achievementNames[27] = jaa.decodeText((byte) 76, var2);
+                  ShowLevelSetCommand.achievementNames[27] = jaa.decodeText((byte) 76, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,28", (byte) 113);
                 if (null != var2) {
-                  lq.achievementNames[28] = jaa.decodeText((byte) 60, var2);
+                  ShowLevelSetCommand.achievementNames[28] = jaa.decodeText((byte) 60, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,29", (byte) 118);
                 if (null != var2) {
-                  lq.achievementNames[29] = jaa.decodeText((byte) 66, var2);
+                  ShowLevelSetCommand.achievementNames[29] = jaa.decodeText((byte) 66, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,30", (byte) 101);
                 if (var2 != null) {
-                  lq.achievementNames[30] = jaa.decodeText((byte) 101, var2);
+                  ShowLevelSetCommand.achievementNames[30] = jaa.decodeText((byte) 101, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,31", (byte) 125);
                 if (var2 != null) {
-                  lq.achievementNames[31] = jaa.decodeText((byte) 67, var2);
+                  ShowLevelSetCommand.achievementNames[31] = jaa.decodeText((byte) 67, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,32", (byte) 115);
                 if (null != var2) {
-                  lq.achievementNames[32] = jaa.decodeText((byte) 64, var2);
+                  ShowLevelSetCommand.achievementNames[32] = jaa.decodeText((byte) 64, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,33", (byte) 100);
                 if (var2 != null) {
-                  lq.achievementNames[33] = jaa.decodeText((byte) 79, var2);
+                  ShowLevelSetCommand.achievementNames[33] = jaa.decodeText((byte) 79, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,34", (byte) 125);
                 if (var2 != null) {
-                  lq.achievementNames[34] = jaa.decodeText((byte) 55, var2);
+                  ShowLevelSetCommand.achievementNames[34] = jaa.decodeText((byte) 55, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,35", (byte) 109);
                 if (var2 != null) {
-                  lq.achievementNames[35] = jaa.decodeText((byte) 56, var2);
+                  ShowLevelSetCommand.achievementNames[35] = jaa.decodeText((byte) 56, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,36", (byte) 116);
                 if (null != var2) {
-                  lq.achievementNames[36] = jaa.decodeText((byte) 69, var2);
+                  ShowLevelSetCommand.achievementNames[36] = jaa.decodeText((byte) 69, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,37", (byte) 125);
                 if (null != var2) {
-                  lq.achievementNames[37] = jaa.decodeText((byte) 40, var2);
+                  ShowLevelSetCommand.achievementNames[37] = jaa.decodeText((byte) 40, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,38", (byte) 122);
                 if (var2 != null) {
-                  lq.achievementNames[38] = jaa.decodeText((byte) 116, var2);
+                  ShowLevelSetCommand.achievementNames[38] = jaa.decodeText((byte) 116, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,39", (byte) 123);
                 if (null != var2) {
-                  lq.achievementNames[39] = jaa.decodeText((byte) 38, var2);
+                  ShowLevelSetCommand.achievementNames[39] = jaa.decodeText((byte) 38, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,40", (byte) 100);
                 if (null != var2) {
-                  lq.achievementNames[40] = jaa.decodeText((byte) 125, var2);
+                  ShowLevelSetCommand.achievementNames[40] = jaa.decodeText((byte) 125, var2);
                 }
                 var2 = mt.readTextEntry("achievement_names,41", (byte) 113);
                 if (var2 != null) {
-                  lq.achievementNames[41] = jaa.decodeText((byte) 116, var2);
+                  ShowLevelSetCommand.achievementNames[41] = jaa.decodeText((byte) 116, var2);
                 }
                 var2 = mt.readTextEntry("achievement_criteria,0", (byte) 105);
                 if (var2 != null) {
@@ -435,7 +435,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("roundWinner", (byte) 126);
                 if (var2 != null) {
-                  cha.field_h = jaa.decodeText((byte) 40, var2);
+                  RasterBuffer.field_h = jaa.decodeText((byte) 40, var2);
                 }
                 var2 = mt.readTextEntry("gameWinner", (byte) 123);
                 if (var2 != null) {
@@ -591,7 +591,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("instructionTitleBagsOLoot", (byte) 109);
                 if (var2 != null) {
-                  pn.field_o = jaa.decodeText((byte) 104, var2);
+                  HardwareTurbulentWaterNoise.field_o = jaa.decodeText((byte) 104, var2);
                 }
                 var2 = mt.readTextEntry("instructionTextBagsOLoot", (byte) 103);
                 if (var2 != null) {
@@ -1049,7 +1049,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("error", (byte) 113);
                 if (var2 != null) {
-                  so.field_L = jaa.decodeText((byte) 73, var2);
+                  ValidatedTextInputWidget.field_L = jaa.decodeText((byte) 73, var2);
                 }
                 var2 = mt.readTextEntry("pleaselogin", (byte) 105);
                 if (null != var2) {
@@ -1377,7 +1377,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("reward_coin5", (byte) 108);
                 if (null != var2) {
-                  so.field_J = jaa.decodeText((byte) 27, var2);
+                  ValidatedTextInputWidget.field_J = jaa.decodeText((byte) 27, var2);
                 }
                 var2 = mt.readTextEntry("reward_bag2", (byte) 103);
                 if (null != var2) {
@@ -1561,31 +1561,31 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("death_squishedvertical,0", (byte) 125);
                 if (null != var2) {
-                  or.fallingObjectDeathMessages[0] = jaa.decodeText((byte) 98, var2);
+                  TurbulenceNoise3D.fallingObjectDeathMessages[0] = jaa.decodeText((byte) 98, var2);
                 }
                 var2 = mt.readTextEntry("death_squishedvertical,1", (byte) 103);
                 if (var2 != null) {
-                  or.fallingObjectDeathMessages[1] = jaa.decodeText((byte) 36, var2);
+                  TurbulenceNoise3D.fallingObjectDeathMessages[1] = jaa.decodeText((byte) 36, var2);
                 }
                 var2 = mt.readTextEntry("death_squishedvertical,2", (byte) 110);
                 if (var2 != null) {
-                  or.fallingObjectDeathMessages[2] = jaa.decodeText((byte) 87, var2);
+                  TurbulenceNoise3D.fallingObjectDeathMessages[2] = jaa.decodeText((byte) 87, var2);
                 }
                 var2 = mt.readTextEntry("death_squishedvertical,3", (byte) 117);
                 if (var2 != null) {
-                  or.fallingObjectDeathMessages[3] = jaa.decodeText((byte) 113, var2);
+                  TurbulenceNoise3D.fallingObjectDeathMessages[3] = jaa.decodeText((byte) 113, var2);
                 }
                 var2 = mt.readTextEntry("death_squishedvertical,4", (byte) 102);
                 if (null != var2) {
-                  or.fallingObjectDeathMessages[4] = jaa.decodeText((byte) 120, var2);
+                  TurbulenceNoise3D.fallingObjectDeathMessages[4] = jaa.decodeText((byte) 120, var2);
                 }
                 var2 = mt.readTextEntry("death_squishedvertical,5", (byte) 104);
                 if (var2 != null) {
-                  or.fallingObjectDeathMessages[5] = jaa.decodeText((byte) 99, var2);
+                  TurbulenceNoise3D.fallingObjectDeathMessages[5] = jaa.decodeText((byte) 99, var2);
                 }
                 var2 = mt.readTextEntry("death_squishedvertical,6", (byte) 109);
                 if (null != var2) {
-                  or.fallingObjectDeathMessages[6] = jaa.decodeText((byte) 96, var2);
+                  TurbulenceNoise3D.fallingObjectDeathMessages[6] = jaa.decodeText((byte) 96, var2);
                 }
                 var2 = mt.readTextEntry("death_fell,0", (byte) 121);
                 if (var2 != null) {
@@ -2075,7 +2075,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("previous_member", (byte) 102);
                 if (null != var2) {
-                  qu.field_c = jaa.decodeText((byte) 25, var2);
+                  ByteStorage.field_c = jaa.decodeText((byte) 25, var2);
                 }
                 var2 = mt.readTextEntry("freecontent_compelted", (byte) 125);
                 if (null != var2) {

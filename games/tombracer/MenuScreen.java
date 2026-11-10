@@ -112,7 +112,7 @@ abstract class MenuScreen extends GameScreen {
               }
               if (this.field_k.a((byte) -128)) {
                 var8 = -24 + (aaa.a(false) >> 1);
-                var9 = -var8 + jba.field_j;
+                var9 = -var8 + AgeValidator.field_j;
                 var10 = var9 << 1;
                 if (var10 > 0) {
                   if (!(CircleMovementLocomotor.e((byte) 68) > var10)) {
@@ -142,7 +142,7 @@ abstract class MenuScreen extends GameScreen {
                 return;
               }
               if (this.field_k.a((byte) -127) &&
-                jba.field_j % 5 != 0) {
+                AgeValidator.field_j % 5 != 0) {
                 return;
               }
               it.a(255, 198);
@@ -159,7 +159,7 @@ abstract class MenuScreen extends GameScreen {
             }
             if (this.field_k.a((byte) -128)) {
               var8Lifetime1 = -24 + (aaa.a(false) >> 1);
-              var9Lifetime1 = -var8Lifetime1 + jba.field_j;
+              var9Lifetime1 = -var8Lifetime1 + AgeValidator.field_j;
               var10Lifetime1 = var9Lifetime1 << 1;
               if (var10Lifetime1 <= 0) {
                 mqa.a(0, (byte) 121);
@@ -309,7 +309,7 @@ abstract class MenuScreen extends GameScreen {
               if (ColouriseOperator.field_q) {
                 break scanLoop1;
               }
-              this.field_k.a(this.b(lba.field_p, true, PasswordValidator.field_m), 71, this.b(GridWidgetContainer.field_B, true, jba.field_j));
+              this.field_k.a(this.b(RidgedNoise3D.field_p, true, PasswordValidator.field_m), 71, this.b(GridWidgetContainer.field_B, true, AgeValidator.field_j));
             }
             if (this.field_k.field_h != -1) {
               this.b(false, true, this.field_k.field_h);
@@ -735,7 +735,7 @@ abstract class MenuScreen extends GameScreen {
         RuntimeException decompiledCaughtException = null;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          this.field_k.a(param2, param0 + 29954, param1, this.b(GridWidgetContainer.field_B, true, jba.field_j));
+          this.field_k.a(param2, param0 + 29954, param1, this.b(GridWidgetContainer.field_B, true, AgeValidator.field_j));
           var4_int = param0;
           while (var4_int < this.items.length) {
             this.items[var4_int].c(1701110401);

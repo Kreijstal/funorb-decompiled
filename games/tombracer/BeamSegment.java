@@ -105,7 +105,7 @@ final class BeamSegment {
               var4_int++;
               continue;
             }
-            stackIn_5_0 = param0[var4_int].a(param3, 0);
+            stackIn_5_0 = param0[var4_int].invoke(param3, 0);
             return stackIn_5_0;
           }
           var8 = new StringBuilder("The method " + param2 + "(");

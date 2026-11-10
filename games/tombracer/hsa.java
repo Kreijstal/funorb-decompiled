@@ -147,7 +147,7 @@ final class hsa {
           var6 = stackIn_49_0;
           if (!var39.field_l) {
             if (2 != var39.field_d &&
-              bh.a((int) var39.field_h, false)) {
+              PlayTrackCommand.a((int) var39.field_h, false)) {
               var7 = this.field_b.a(14907, param0, true, var6, 0.699999988079071f, var6);
             } else {
               var7 = this.field_b.a((byte) 40, var6, 0.699999988079071f, param0, false, var6);
@@ -200,7 +200,7 @@ final class hsa {
             return var4;
           }
           if (2 != var39.field_d &&
-            bh.a((int) var39.field_h, false)) {
+            PlayTrackCommand.a((int) var39.field_h, false)) {
             var7Lifetime2 = this.field_b.a(14907, param0, true, var6, 0.699999988079071f, var6);
           } else {
             var7Lifetime2 = this.field_b.a((byte) 40, var6, 0.699999988079071f, param0, false, var6);
@@ -245,7 +245,7 @@ final class hsa {
           if (2 == var12.field_d) {
             var7Lifetime1 = this.field_b.a((byte) 40, var6Lifetime1, 0.699999988079071f, param0, false, var6Lifetime1);
           } else {
-            if (!bh.a((int) var12.field_h, false)) {
+            if (!PlayTrackCommand.a((int) var12.field_h, false)) {
               var7Lifetime1 = this.field_b.a((byte) 40, var6Lifetime1, 0.699999988079071f, param0, false, var6Lifetime1);
             } else {
               var7Lifetime1 = this.field_b.a(14907, param0, true, var6Lifetime1, 0.699999988079071f, var6Lifetime1);
@@ -321,7 +321,7 @@ final class hsa {
           this.field_d.put(param1 + 29166, var21, (long)param0);
           return var21;
         }
-        if (!bh.a((int) var12.field_h, false)) {
+        if (!PlayTrackCommand.a((int) var12.field_h, false)) {
           var45 = this.field_b.a((byte) 40, var6Lifetime1, 0.699999988079071f, param0, false, var6Lifetime1);
           stackIn_38_0 = null;
           stackIn_38_1 = null;

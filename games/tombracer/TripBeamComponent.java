@@ -15,7 +15,7 @@ final class TripBeamComponent extends SwitchComponent {
 
     final static void b(int param0, int param1) {
         int var4 = 0;
-        qua var2 = null;
+        MusicTrack var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var5 = 0;
@@ -27,7 +27,7 @@ final class TripBeamComponent extends SwitchComponent {
           }
           var2 = MenuEntry.field_j[param1];
           if (var2 == null) {
-            paa.a(false, param1);
+            DateInputWidget.a(false, param1);
             var2 = MenuEntry.field_j[param1];
           }
           var3 = 32;

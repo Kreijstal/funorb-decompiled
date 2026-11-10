@@ -108,11 +108,11 @@ class FocusableWidget extends UiWidget {
             if (this.field_s == RangeOperator.field_p) {
               return;
             }
-            if (this.containsPointer(jba.field_j, param0, param1 ^ -2097252, GridWidgetContainer.field_B, param3) &&
+            if (this.containsPointer(AgeValidator.field_j, param0, param1 ^ -2097252, GridWidgetContainer.field_B, param3) &&
               RangeOperator.field_p == 0) {
-              this.b(GridWidgetContainer.field_B - param3, this.field_s, -param0 + jba.field_j, -86);
+              this.b(GridWidgetContainer.field_B - param3, this.field_s, -param0 + AgeValidator.field_j, -86);
             }
-            this.handlePointerRelease((byte) 59, param2, GridWidgetContainer.field_B, param0, param3, jba.field_j);
+            this.handlePointerRelease((byte) 59, param2, GridWidgetContainer.field_B, param0, param3, AgeValidator.field_j);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "rj.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

@@ -80,7 +80,7 @@ final class psa extends MidiPcmStream {
         }
     }
 
-    final synchronized void a(boolean param0, qua param1, byte param2, boolean param3) {
+    final synchronized void a(boolean param0, MusicTrack param1, byte param2, boolean param3) {
         try {
           this.f(-377538388);
           super.a(param0, param1, param2, param3);
@@ -120,8 +120,8 @@ final class psa extends MidiPcmStream {
         }
         this.field_Q[param3] = var8 == 0 ? var7 : -var7;
         if (param0 != -30515) {
-          qua var9 = (qua) null;
-          this.a(true, (qua) null, (byte) -65, false);
+          MusicTrack var9 = (MusicTrack) null;
+          this.a(true, (MusicTrack) null, (byte) -65, false);
         }
     }
 

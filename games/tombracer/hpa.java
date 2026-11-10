@@ -33,7 +33,7 @@ final class hpa extends aa {
           } else {
             stackIn_3_1 = param1.field_e;
           }
-          paa.a((ScrollPane) (stackIn_2_0), stackIn_3_1, param1.field_j, param1.field_i, -11635, (int[]) null, param1.field_l, param1.field_d, param1.field_g);
+          DateInputWidget.a((ScrollPane) (stackIn_2_0), stackIn_3_1, param1.field_j, param1.field_i, -11635, (int[]) null, param1.field_l, param1.field_d, param1.field_g);
           if (0 == param1.field_d &&
             !MonochromeFillOperator.c(param0 + 2) &&
             null == C2SChooseRewardPacket.field_a &&
@@ -70,7 +70,7 @@ final class hpa extends aa {
           if (param0 != -2) {
             return;
           }
-          var4 = lba.field_p;
+          var4 = RidgedNoise3D.field_p;
           var13.field_f.b(var4, 0, -89, 0, var3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

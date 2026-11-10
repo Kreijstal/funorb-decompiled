@@ -3,17 +3,17 @@
  */
 import java.io.*;
 
-final class ama extends lba {
+final class LegacyRidgedWaterNoise extends RidgedNoise3D {
     private byte[] field_t;
 
-    final byte[] a(int param0, int param1, int param2, int param3) {
+    final byte[] generate(int param0, int param1, int param2, int param3) {
         this.field_t = new byte[2 * (param0 * param1 * param3)];
         if (param2 == 0) {
-          this.a(param3, param0, param1, (byte) -90);
+          this.generateVolume(param3, param0, param1, (byte) -90);
           return this.field_t;
         }
-        this.a(true, (byte) 84, 122);
-        this.a(param3, param0, param1, (byte) -90);
+        this.writeVoxel(true, (byte) 84, 122);
+        this.generateVolume(param3, param0, param1, (byte) -90);
         return this.field_t;
     }
 
@@ -47,7 +47,7 @@ final class ama extends lba {
         try {
           if (param3 != 1) {
             var14 = (String[]) null;
-            ama.a((BitmapFont) null, (String) null, -117, -80, (String[]) null);
+            LegacyRidgedWaterNoise.a((BitmapFont) null, (String) null, -117, -80, (String[]) null);
           }
           var5_int = param0.stringWidth(param1);
           if (var5_int <= param2 &&
@@ -115,7 +115,7 @@ final class ama extends lba {
         }
     }
 
-    final void a(boolean param0, byte param1, int param2) {
+    final void writeVoxel(boolean param0, byte param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         int incrementValue$0 = 0;
@@ -178,7 +178,7 @@ final class ama extends lba {
         }
     }
 
-    ama() {
+    LegacyRidgedWaterNoise() {
         super(8, 5, 8, 8, 2, 0.10000000149011612f, 0.550000011920929f, 3.0f);
     }
 

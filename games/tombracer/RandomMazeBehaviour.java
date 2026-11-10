@@ -353,7 +353,7 @@ final class RandomMazeBehaviour extends Behaviour {
         var10 = 0;
         var11 = null;
         while (var9 == 0) {
-          var12_ref_loa = lba.createMazeGenerator((byte) 27, var3, this.field_s);
+          var12_ref_loa = RidgedNoise3D.createMazeGenerator((byte) 27, var3, this.field_s);
           this.field_z = var12_ref_loa.a(var5, var6, var4, -122, var8);
           this.field_z.setCell(1 + var7, 0, 0, var6);
           this.field_z.setCell(0, 0, 0, var6);

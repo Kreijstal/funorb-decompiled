@@ -163,7 +163,7 @@ final class PlayerViewport {
             this.a(0, 0, param2 + 20194, var4_int, SwitchLinkList.b(param2 ^ -20186));
             return;
           }
-          if (qu.field_e == param1) {
+          if (ByteStorage.field_e == param1) {
             this.a(var4_int, 0, 8, aaa.a(false), var5 << 1);
             return;
           }

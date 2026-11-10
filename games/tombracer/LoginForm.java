@@ -50,8 +50,8 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             this.field_w)) {
             throw new IllegalStateException();
           }
-          this.field_A = (TextInputWidget) ((Object) new so(param0, (WidgetListener) (this), 100));
-          this.field_C = (TextInputWidget) ((Object) new so("", (WidgetListener) (this), 20));
+          this.field_A = (TextInputWidget) ((Object) new ValidatedTextInputWidget(param0, (WidgetListener) (this), 100));
+          this.field_C = (TextInputWidget) ((Object) new ValidatedTextInputWidget("", (WidgetListener) (this), 20));
           if (this.field_x) {
             this.field_B = new FocusableWidget(MonochromeFillOperator.field_q, (WidgetListener) null);
             this.field_y = new FocusableWidget(ControllerLocomotor.field_q, (WidgetListener) null);

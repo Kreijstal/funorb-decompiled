@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hqa extends TextFieldValidator {
+final class EmailSyntaxValidator extends TextFieldValidator {
     static ura field_j;
 
     final it validateText(byte param0, String param1) {
@@ -81,7 +81,7 @@ final class hqa extends TextFieldValidator {
         field_j = null;
     }
 
-    hqa(TextInputWidget param0) {
+    EmailSyntaxValidator(TextInputWidget param0) {
         super(param0);
     }
 

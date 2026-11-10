@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pn extends or {
+final class HardwareTurbulentWaterNoise extends TurbulenceNoise3D {
     static String field_o;
     private byte[] field_p;
 
     final static void f(int param0) {
         if (param0 != -804227775) {
-          pn.createDecodedSprites(-62);
+          HardwareTurbulentWaterNoise.createDecodedSprites(-62);
         }
         String var2 = (String) null;
         pr.a(0, "", (String) null);
     }
 
-    final void a(int param0, boolean param1, byte param2) {
+    final void writeVoxel(int param0, boolean param1, byte param2) {
         if (param1) {
           return;
         }
@@ -25,16 +25,16 @@ final class pn extends or {
         this.field_p[var4] = (byte)param2;
     }
 
-    final byte[] a(int param0, int param1, int param2, int param3) {
+    final byte[] generate(int param0, int param1, int param2, int param3) {
         if (param1 != 0) {
           return (byte[]) null;
         }
         this.field_p = new byte[param2 * (param3 * param0 * 2)];
-        this.a(param0, param2, param3, (byte) -119);
+        this.generateVolume(param0, param2, param3, (byte) -119);
         return this.field_p;
     }
 
-    pn() {
+    HardwareTurbulentWaterNoise() {
         super(12, 5, 16, 2, 2, 0.44999998807907104f);
     }
 
@@ -76,7 +76,7 @@ final class pn extends or {
             for (var6 = 0; var3 > var6; var6++) {
               var10[var6] = mga.field_g[SnakePitBehaviour.bitwiseAnd(255, (int) var21[var6])];
             }
-            var1[var2] = new Sprite(ika.field_a, OpenGlRenderbuffer.field_s, ak.field_p[var2], pg.field_C[var2], mq.field_b[var2], iga.field_m[var2], var22);
+            var1[var2] = new Sprite(ika.field_a, OpenGlRenderbuffer.field_s, LoadLevelCommand.field_p[var2], pg.field_C[var2], mq.field_b[var2], iga.field_m[var2], var22);
           } else {
             var15 = pb.field_l[var2];
             var11 = var15;
@@ -88,7 +88,7 @@ final class pn extends or {
             for (var7 = 0; var3 > var7; var7++) {
               var6_ref_int__[var7] = WallTile.bitwiseOr(SnakePitBehaviour.bitwiseAnd(-16777216, var15[var7] << 24), mga.field_g[SnakePitBehaviour.bitwiseAnd(255, (int) var21[var7])]);
             }
-            var1[var2] = (Sprite) ((Object) new ArgbSprite(ika.field_a, OpenGlRenderbuffer.field_s, ak.field_p[var2], pg.field_C[var2], mq.field_b[var2], iga.field_m[var2], var17));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(ika.field_a, OpenGlRenderbuffer.field_s, LoadLevelCommand.field_p[var2], pg.field_C[var2], mq.field_b[var2], iga.field_m[var2], var17));
           }
         }
         MazeGenerator.a((byte) 2);
@@ -97,7 +97,7 @@ final class pn extends or {
 
     final static boolean h(int param0) {
         if (param0 != 9807) {
-          pn.h(127);
+          HardwareTurbulentWaterNoise.h(127);
         }
         return bl.field_a != null ? true : false;
     }

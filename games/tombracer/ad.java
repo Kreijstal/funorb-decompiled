@@ -12,10 +12,10 @@ final class ad extends IntrusiveNode {
     final boolean a(byte param0) {
         if (param0 >= -62) {
           this.field_k = -99;
-          if (this.field_k > jba.field_j) {
+          if (this.field_k > AgeValidator.field_j) {
             return false;
           }
-          if (this.field_k + 64 < jba.field_j) {
+          if (this.field_k + 64 < AgeValidator.field_j) {
             return false;
           }
           if (GridWidgetContainer.field_B < this.field_g) {
@@ -26,10 +26,10 @@ final class ad extends IntrusiveNode {
           }
           return false;
         }
-        if (this.field_k > jba.field_j) {
+        if (this.field_k > AgeValidator.field_j) {
           return false;
         }
-        if (this.field_k + 64 < jba.field_j) {
+        if (this.field_k + 64 < AgeValidator.field_j) {
           return false;
         }
         if (GridWidgetContainer.field_B < this.field_g) {

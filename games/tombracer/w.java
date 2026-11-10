@@ -77,7 +77,7 @@ final class w extends sqa {
           while (true) {
             if (param0.position < param0.payload.length) {
               var5 = param0.readUnsignedByte(255);
-              if ((~var5 != ~dia.field_q ||
+              if ((~var5 != ~HelloCommand.field_q ||
                 var4 != 0) &&
                 (!NetworkArchiveRequest.a(param0, mga.field_j, var5, true) ||
                 var4 != 0)) {
@@ -92,7 +92,7 @@ final class w extends sqa {
                   }
                   var6 = param0.readByte((byte) 52);
                   if (!NetworkArchiveRequest.a(param0, mga.field_j, var6, true) &&
-                    dia.field_q != var6) {
+                    HelloCommand.field_q != var6) {
                     if (ConstrainToCircleLocomotor.field_w == var6) {
                       discarded$0 = var8.append((char)var6);
                     } else {
@@ -205,7 +205,7 @@ final class w extends sqa {
           var9 = -1;
           var10 = to.field_n[var3_int];
           if (var8 == 0) {
-            var9 = jba.a(this.field_h, true, param0.b(param1 - 52));
+            var9 = AgeValidator.a(this.field_h, true, param0.b(param1 - 52));
             var10 = ol.a(param0.b(-118), var3_int, (byte) -91, this.field_h, param0.a(-121), this.field_c);
           }
           var11 = MatchProtocol.a(100, (byte) -58, var9, var4, var6, var10);

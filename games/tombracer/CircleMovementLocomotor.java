@@ -234,7 +234,7 @@ final class CircleMovementLocomotor extends Locomotor {
           uma.field_b.clear(param2 ^ -59);
           fua.field_a = new SecondaryNodeHashTable(param4);
           RasterizerOperator.field_o = 0;
-          so.field_K = 0;
+          ValidatedTextInputWidget.field_K = 0;
           FleeLocomotor.field_z = -1;
           ProxySocketConnector.field_f = -1;
           if (param3.field_J == null) {

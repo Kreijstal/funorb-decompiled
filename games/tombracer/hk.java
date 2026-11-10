@@ -333,11 +333,11 @@ final class hk {
             !this.field_b.a(false, una.field_g, wo.field_i)) {
             return;
           }
-          TextInputWidget.g(12890);
+          TextInputWidget.ensureHardwareWaterNoise(12890);
           if (!this.field_g) {
             this.field_d = new GpuTexture2D[16];
             for (var2_int = 0; var2_int < 16; var2_int++) {
-              var17 = ua.a(ak.field_o, 32768, 32768 * var2_int, false);
+              var17 = ua.a(LoadLevelCommand.field_o, 32768, 32768 * var2_int, false);
               this.field_d[var2_int] = this.field_b.a(128, var17, true, wo.field_i, -117, 128);
             }
             this.field_a = new GpuTexture2D[16];
@@ -347,7 +347,7 @@ final class hk {
             }
             return;
           }
-          var15 = IntPoint.unwrapByteStorage(ak.field_o, 13588, false);
+          var15 = IntPoint.unwrapByteStorage(LoadLevelCommand.field_o, 13588, false);
           this.field_c = this.field_b.a(var15, wo.field_i, (byte) -97, 128, 128, 16);
           var16 = IntPoint.unwrapByteStorage(lt.field_f, 13588, false);
           this.field_b.a(var16, wo.field_i, (byte) -84, 128, 128, 16);

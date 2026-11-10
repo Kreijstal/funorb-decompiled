@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class gn extends WidgetContainer {
-    static cha field_C;
+    static RasterBuffer field_C;
     static String field_y;
     private int field_x;
     jta field_z;

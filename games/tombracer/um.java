@@ -9,7 +9,7 @@ class um extends DualLinkNode {
     final static vb a(int param0, int param1, u param2, int param3, int param4) {
         PcmSampleStream var5 = null;
         RuntimeException var5_ref = null;
-        sc var6 = null;
+        DelayedPcmStream var6 = null;
         vb var7 = null;
         vb stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

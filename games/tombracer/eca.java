@@ -68,7 +68,7 @@ final class eca {
     final static Sprite[] a(int param0, int param1) {
         Sprite[] var3 = new Sprite[9];
         Sprite[] var2 = var3;
-        var3[param0] = jf.a(param1, 124, 64);
+        var3[param0] = LoadProfileCommand.a(param1, 124, 64);
         return var2;
     }
 

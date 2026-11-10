@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ie extends qu {
+final class DirectByteStorage extends ByteStorage {
     private java.nio.ByteBuffer field_g;
     static int[] field_i;
     static jea field_h;
@@ -10,7 +10,7 @@ final class ie extends qu {
     public static void releaseStatics(int param0) {
         field_i = null;
         if (param0 != -13170) {
-          ie.releaseStatics(98);
+          DirectByteStorage.releaseStatics(98);
           field_f = null;
           field_h = null;
           return;
@@ -56,7 +56,7 @@ final class ie extends qu {
         return var5;
     }
 
-    ie() {
+    DirectByteStorage() {
     }
 
     static {

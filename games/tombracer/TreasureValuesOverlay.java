@@ -31,7 +31,7 @@ final class TreasureValuesOverlay extends MatchOverlay {
         var3 = 16776960;
         var4 = 11184810;
         var5 = 20;
-        var6 = 50 + this.field_g.field_P * var5;
+        var6 = 50 + this.field_g.playersRemaining * var5;
         var7 = this.field_j;
         var8 = var7 + 40;
         SecondaryNodeDequeIterator.a(192, var6, 3145728, this.field_n, (byte) 47, var7 - 16, this.field_m - this.field_n / 2);

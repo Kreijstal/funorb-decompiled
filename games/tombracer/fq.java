@@ -40,7 +40,7 @@ final class fq {
             return null;
           }
           var2_int = -71 / ((5 - param1) / 35);
-          var3 = new BinaryBitmapFont(param0, ak.field_p, pg.field_C, mq.field_b, iga.field_m, ck.field_c);
+          var3 = new BinaryBitmapFont(param0, LoadLevelCommand.field_p, pg.field_C, mq.field_b, iga.field_m, ck.field_c);
           MazeGenerator.a((byte) 123);
           stackIn_4_0 = var3;
           return stackIn_4_0;

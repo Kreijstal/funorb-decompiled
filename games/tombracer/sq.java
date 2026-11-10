@@ -10,27 +10,27 @@ final class sq extends PcmStream {
     private int field_m;
     static String field_x;
     private MidiPcmStream field_l;
-    private qua field_u;
+    private MusicTrack field_u;
     private boolean field_q;
-    private qua field_w;
+    private MusicTrack field_w;
     private int[] field_o;
     private boolean field_p;
     private int field_s;
     private int field_j;
-    private qua field_v;
+    private MusicTrack field_v;
 
     final PcmStream firstSubStream() {
         return null;
     }
 
-    final synchronized void a(int param0, int param1, byte param2, int param3, boolean param4, qua param5) {
+    final synchronized void a(int param0, int param1, byte param2, int param3, boolean param4, MusicTrack param5) {
         boolean stackIn_20_1 = false;
         int stackIn_32_0 = 0;
         MidiPcmStream stackIn_42_0 = null;
-        qua stackIn_42_1 = null;
+        MusicTrack stackIn_42_1 = null;
         boolean stackIn_43_2 = false;
         MidiPcmStream stackIn_51_0 = null;
-        qua stackIn_51_1 = null;
+        MusicTrack stackIn_51_1 = null;
         boolean stackIn_52_2 = false;
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
@@ -93,7 +93,7 @@ final class sq extends PcmStream {
             this.field_u = param5;
             if (param5 != null) {
               stackIn_51_0 = this.field_y;
-              stackIn_51_1 = (qua) (param5);
+              stackIn_51_1 = (MusicTrack) (param5);
               stackIn_52_2 = !(param4);
               ((MidiPcmStream) (Object) stackIn_51_0).a(stackIn_51_1, stackIn_52_2, (byte) 80);
               this.a(1048576, param3, param0, this.field_y);
@@ -106,7 +106,7 @@ final class sq extends PcmStream {
             this.field_w = param5;
             if (param5 != null) {
               stackIn_42_0 = this.field_l;
-              stackIn_42_1 = (qua) (param5);
+              stackIn_42_1 = (MusicTrack) (param5);
               stackIn_43_2 = !(param4);
               ((MidiPcmStream) (Object) stackIn_42_0).a(stackIn_42_1, stackIn_43_2, (byte) 80);
               this.a(1048576, param3, param0, this.field_l);
@@ -116,7 +116,7 @@ final class sq extends PcmStream {
           if (param2 == -44) {
             return;
           }
-          this.field_u = (qua) null;
+          this.field_u = (MusicTrack) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

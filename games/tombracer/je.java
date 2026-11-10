@@ -94,7 +94,7 @@ final class je extends haa {
         if (param0 != 69) {
           return (Sprite) null;
         }
-        Sprite var4 = new Sprite(ika.field_a, OpenGlRenderbuffer.field_s, ak.field_p[0], pg.field_C[0], mq.field_b[0], iga.field_m[0], var3);
+        Sprite var4 = new Sprite(ika.field_a, OpenGlRenderbuffer.field_s, LoadLevelCommand.field_p[0], pg.field_C[0], mq.field_b[0], iga.field_m[0], var3);
         MazeGenerator.a((byte) 113);
         return var4;
     }

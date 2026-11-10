@@ -981,22 +981,22 @@ final class Model extends ka {
                   this.field_rb[var13_intLifetime2] = this.field_rb[var13_intLifetime2] - this.field_H;
                   this.field_T[var13_intLifetime2] = this.field_T[var13_intLifetime2] - this.field_Y;
                   if (param2 != 0) {
-                    var14Lifetime1 = qu.field_b[param2];
-                    var15 = qu.field_d[param2];
+                    var14Lifetime1 = ByteStorage.field_b[param2];
+                    var15 = ByteStorage.field_d[param2];
                     var16 = this.field_rb[var13_intLifetime2] * var15 - this.field_T[var13_intLifetime2] * var14Lifetime1 + 16383 >> 14;
                     this.field_T[var13_intLifetime2] = this.field_rb[var13_intLifetime2] * var14Lifetime1 + this.field_T[var13_intLifetime2] * var15 + 16383 >> 14;
                     this.field_rb[var13_intLifetime2] = var16;
                   }
                   if (param4 != 0) {
-                    var14Lifetime1 = qu.field_b[param4];
-                    var15 = qu.field_d[param4];
+                    var14Lifetime1 = ByteStorage.field_b[param4];
+                    var15 = ByteStorage.field_d[param4];
                     var16 = this.field_rb[var13_intLifetime2] * var14Lifetime1 + this.field_xb[var13_intLifetime2] * var15 + 16383 >> 14;
                     this.field_rb[var13_intLifetime2] = this.field_rb[var13_intLifetime2] * var15 - this.field_xb[var13_intLifetime2] * var14Lifetime1 + 16383 >> 14;
                     this.field_xb[var13_intLifetime2] = var16;
                   }
                   if (param3 != 0) {
-                    var14Lifetime1 = qu.field_b[param3];
-                    var15 = qu.field_d[param3];
+                    var14Lifetime1 = ByteStorage.field_b[param3];
+                    var15 = ByteStorage.field_d[param3];
                     var16 = this.field_T[var13_intLifetime2] * var14Lifetime1 + this.field_xb[var13_intLifetime2] * var15 + 16383 >> 14;
                     this.field_T[var13_intLifetime2] = this.field_T[var13_intLifetime2] * var15 - this.field_xb[var13_intLifetime2] * var14Lifetime1 + 16383 >> 14;
                     this.field_xb[var13_intLifetime2] = var16;
@@ -1012,22 +1012,22 @@ final class Model extends ka {
                   this.field_rb[var13_intLifetime2] = this.field_rb[var13_intLifetime2] - this.field_H;
                   this.field_T[var13_intLifetime2] = this.field_T[var13_intLifetime2] - this.field_Y;
                   if (param4 != 0) {
-                    var14Lifetime1 = qu.field_b[param4];
-                    var15 = qu.field_d[param4];
+                    var14Lifetime1 = ByteStorage.field_b[param4];
+                    var15 = ByteStorage.field_d[param4];
                     var16 = this.field_rb[var13_intLifetime2] * var14Lifetime1 + this.field_xb[var13_intLifetime2] * var15 + 16383 >> 14;
                     this.field_rb[var13_intLifetime2] = this.field_rb[var13_intLifetime2] * var15 - this.field_xb[var13_intLifetime2] * var14Lifetime1 + 16383 >> 14;
                     this.field_xb[var13_intLifetime2] = var16;
                   }
                   if (param2 != 0) {
-                    var14Lifetime1 = qu.field_b[param2];
-                    var15 = qu.field_d[param2];
+                    var14Lifetime1 = ByteStorage.field_b[param2];
+                    var15 = ByteStorage.field_d[param2];
                     var16 = this.field_rb[var13_intLifetime2] * var15 - this.field_T[var13_intLifetime2] * var14Lifetime1 + 16383 >> 14;
                     this.field_T[var13_intLifetime2] = this.field_rb[var13_intLifetime2] * var14Lifetime1 + this.field_T[var13_intLifetime2] * var15 + 16383 >> 14;
                     this.field_rb[var13_intLifetime2] = var16;
                   }
                   if (param3 != 0) {
-                    var14Lifetime1 = qu.field_b[param3];
-                    var15 = qu.field_d[param3];
+                    var14Lifetime1 = ByteStorage.field_b[param3];
+                    var15 = ByteStorage.field_d[param3];
                     var16 = this.field_T[var13_intLifetime2] * var14Lifetime1 + this.field_xb[var13_intLifetime2] * var15 + 16383 >> 14;
                     this.field_T[var13_intLifetime2] = this.field_T[var13_intLifetime2] * var15 - this.field_xb[var13_intLifetime2] * var14Lifetime1 + 16383 >> 14;
                     this.field_xb[var13_intLifetime2] = var16;
@@ -2077,22 +2077,22 @@ final class Model extends ka {
                     this.field_rb[var14_intLifetime2] = this.field_rb[var14_intLifetime2] - this.field_H;
                     this.field_T[var14_intLifetime2] = this.field_T[var14_intLifetime2] - this.field_Y;
                     if (param4 != 0) {
-                      var15Lifetime1 = qu.field_b[param4];
-                      var16 = qu.field_d[param4];
+                      var15Lifetime1 = ByteStorage.field_b[param4];
+                      var16 = ByteStorage.field_d[param4];
                       var17 = this.field_rb[var14_intLifetime2] * var15Lifetime1 + this.field_xb[var14_intLifetime2] * var16 + 16383 >> 14;
                       this.field_rb[var14_intLifetime2] = this.field_rb[var14_intLifetime2] * var16 - this.field_xb[var14_intLifetime2] * var15Lifetime1 + 16383 >> 14;
                       this.field_xb[var14_intLifetime2] = var17;
                     }
                     if (param2 != 0) {
-                      var15Lifetime1Lifetime2 = qu.field_b[param2];
-                      var16Lifetime4 = qu.field_d[param2];
+                      var15Lifetime1Lifetime2 = ByteStorage.field_b[param2];
+                      var16Lifetime4 = ByteStorage.field_d[param2];
                       var17Lifetime5 = this.field_rb[var14_intLifetime2] * var16Lifetime4 - this.field_T[var14_intLifetime2] * var15Lifetime1Lifetime2 + 16383 >> 14;
                       this.field_T[var14_intLifetime2] = this.field_rb[var14_intLifetime2] * var15Lifetime1Lifetime2 + this.field_T[var14_intLifetime2] * var16Lifetime4 + 16383 >> 14;
                       this.field_rb[var14_intLifetime2] = var17Lifetime5;
                     }
                     if (param3 != 0) {
-                      var15Lifetime1Lifetime3 = qu.field_b[param3];
-                      var16Lifetime5 = qu.field_d[param3];
+                      var15Lifetime1Lifetime3 = ByteStorage.field_b[param3];
+                      var16Lifetime5 = ByteStorage.field_d[param3];
                       var17Lifetime6 = this.field_T[var14_intLifetime2] * var15Lifetime1Lifetime3 + this.field_xb[var14_intLifetime2] * var16Lifetime5 + 16383 >> 14;
                       this.field_T[var14_intLifetime2] = this.field_T[var14_intLifetime2] * var16Lifetime5 - this.field_xb[var14_intLifetime2] * var15Lifetime1Lifetime3 + 16383 >> 14;
                       this.field_xb[var14_intLifetime2] = var17Lifetime6;
@@ -2135,12 +2135,12 @@ final class Model extends ka {
           var71 = new int[9];
           var50 = var71;
           var16_ref_int__ = var50;
-          var17Lifetime4 = qu.field_d[param2];
-          var18Lifetime3 = qu.field_b[param2];
-          var19 = qu.field_d[param3];
-          var20 = qu.field_b[param3];
-          var21 = qu.field_d[param4];
-          var22 = qu.field_b[param4];
+          var17Lifetime4 = ByteStorage.field_d[param2];
+          var18Lifetime3 = ByteStorage.field_b[param2];
+          var19 = ByteStorage.field_d[param3];
+          var20 = ByteStorage.field_b[param3];
+          var21 = ByteStorage.field_d[param4];
+          var22 = ByteStorage.field_b[param4];
           var23 = var18Lifetime3 * var21 + 8192 >> 14;
           var24 = var18Lifetime3 * var22 + 8192 >> 14;
           var16_ref_int__[0] = var19 * var21 + var20 * var24 + 8192 >> 14;
@@ -2937,8 +2937,8 @@ final class Model extends ka {
         if ((this.field_P & 6) != 6) {
           throw new IllegalStateException();
         }
-        var2 = qu.field_b[param0];
-        var3 = qu.field_d[param0];
+        var2 = ByteStorage.field_b[param0];
+        var3 = ByteStorage.field_d[param0];
         var4 = this;
         synchronized (var4) {
           for (var5 = 0; var5 < this.field_p; var5++) {

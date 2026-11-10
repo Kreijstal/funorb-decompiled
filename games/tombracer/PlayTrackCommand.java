@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bh extends ConsoleMethod {
+final class PlayTrackCommand extends ConsoleMethod {
     static int field_o;
     static boolean field_p;
 
-    bh(String param0, Class[] param1, String param2) {
+    PlayTrackCommand(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
     }
 
@@ -120,7 +120,7 @@ final class bh extends ConsoleMethod {
         var41 = TombRacer.field_G ? 1 : 0;
         try {
           if (param1 != 0) {
-            bh.a(75, true);
+            PlayTrackCommand.a(75, true);
           }
           stackIn_5_0 = nsa.field_i;
           stackIn_5_1 = 2;
@@ -464,7 +464,7 @@ final class bh extends ConsoleMethod {
                 var31 = var31 + di.field_a * var39Lifetime1;
               }
               if (var12.field_gc) {
-                var12.field_hc.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(123, jf.field_o, new String[]{var32});
+                var12.field_hc.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(123, LoadProfileCommand.field_o, new String[]{var32});
                 var12.field_hc.a(var12.field_G - 2 * mna.field_d, di.field_a, -23776, var31, mna.field_d);
                 var31 = var31 + di.field_a;
               }
@@ -570,7 +570,7 @@ final class bh extends ConsoleMethod {
         }
     }
 
-    final ConsoleValue a(ConsoleValue[] param0, int param1) {
+    final ConsoleValue invoke(ConsoleValue[] param0, int param1) {
         RuntimeException var3 = null;
         ConsoleValue stackIn_2_0 = null;
         ConsoleValue stackIn_4_0 = null;

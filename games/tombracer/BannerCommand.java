@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eea extends ConsoleMethod {
+final class BannerCommand extends ConsoleMethod {
     final static FloatingMessage a(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -28,11 +28,11 @@ final class eea extends ConsoleMethod {
         }
     }
 
-    eea(String param0, Class[] param1, String param2) {
+    BannerCommand(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
     }
 
-    final ConsoleValue a(ConsoleValue[] param0, int param1) {
+    final ConsoleValue invoke(ConsoleValue[] param0, int param1) {
         RuntimeException var3 = null;
         ConsoleValue stackIn_2_0 = null;
         ConsoleValue stackIn_4_0 = null;

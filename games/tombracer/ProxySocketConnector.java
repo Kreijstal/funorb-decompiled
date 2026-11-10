@@ -55,7 +55,7 @@ final class ProxySocketConnector extends SocketConnector {
             return stackIn_17_0;
           }
           if (param2 == 10) {
-            stackIn_21_0 = cha.field_c;
+            stackIn_21_0 = RasterBuffer.field_c;
             return stackIn_21_0;
           }
           if (param2 == 11) {
@@ -90,7 +90,7 @@ final class ProxySocketConnector extends SocketConnector {
           field_f = 50;
         }
         if (kra.field_a != var1) {
-          if (var1 != paa.field_z) {
+          if (var1 != DateInputWidget.field_z) {
             if (ControllerLocomotor.field_t == var1) {
               baa.field_d.a(0, new ei[]{(ei) ((Object) vea.field_c)});
             } else {
@@ -110,7 +110,7 @@ final class ProxySocketConnector extends SocketConnector {
             baa.field_d.a(0, new ei[]{(ei) ((Object) ControllerLocomotor.field_t)});
           }
         } else {
-          baa.field_d.a(0, new ei[]{(ei) ((Object) paa.field_z)});
+          baa.field_d.a(0, new ei[]{(ei) ((Object) DateInputWidget.field_z)});
         }
         System.gc();
         if (!uv.b(false).field_c) {

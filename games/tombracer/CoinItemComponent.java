@@ -20,12 +20,12 @@ final class CoinItemComponent extends ItemComponent {
           qpa.a(275, S2CPlayerSyncPacket.field_d, 3, 40, 440, 126, 200);
           qpa.a(275, PathMoverComponent.field_F, 5, 40, 440, 124, 200);
           qpa.a(275, vj.field_a, 6, 40, 440, 125, 200);
-          qpa.a(480, oe.field_j, 2, 40, 440, 124, 200);
+          qpa.a(480, MatchingTextValidator.field_j, 2, 40, 440, 124, 200);
           qpa.a(185, ll.field_g, 4, 40, 440, 126, 200);
           qpa.a(185, hh.field_c, 12, 40, 440, 124, 200);
           int var3 = -120 % ((param1 + 61) / 53);
           qpa.a(205, ma.field_f, 7, 35, 440, 125, 200);
-          qpa.a(480, paa.field_x, 8, 40, 440, 126, 200);
+          qpa.a(480, DateInputWidget.field_x, 8, 40, 440, 126, 200);
           qpa.a(335, mna.field_a, 9, 40, 440, 126, 200);
           qpa.a(400, gca.field_f, 10, 40, 440, 124, 200);
           qpa.a(400, hd.field_b, 11, 40, 440, 125, 200);

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ak extends ConsoleMethod {
+final class LoadLevelCommand extends ConsoleMethod {
     static int[] field_p;
     static Object field_o;
 
-    final ConsoleValue a(ConsoleValue[] param0, int param1) {
+    final ConsoleValue invoke(ConsoleValue[] param0, int param1) {
         RuntimeException var3 = null;
         ConsoleValue stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -90,7 +90,7 @@ final class ak extends ConsoleMethod {
         field_p = null;
     }
 
-    ak(String param0, Class[] param1, String param2) {
+    LoadLevelCommand(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
     }
 
@@ -101,7 +101,7 @@ final class ak extends ConsoleMethod {
         TileOperator.field_p = false;
         if (param0 == 0) {
           SnakePitBehaviour.field_o = null;
-          if (jf.field_r) {
+          if (LoadProfileCommand.field_r) {
             TextureOperator.field_l.f(true);
             return;
           }
@@ -120,7 +120,7 @@ final class ak extends ConsoleMethod {
         }
         field_o = (Object) null;
         SnakePitBehaviour.field_o = null;
-        if (jf.field_r) {
+        if (LoadProfileCommand.field_r) {
           TextureOperator.field_l.f(true);
         } else {
           var1 = lsa.field_a;

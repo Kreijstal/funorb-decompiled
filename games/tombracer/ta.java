@@ -141,7 +141,7 @@ final class ta extends jea {
         String[] var18 = null;
         try {
           var18 = (String[]) null;
-          lba.a(param5, 1, param4, param16, param0, param13, param1, param11, param2, param10, param6, param9, (String[]) null, param14, param15, param3, 1, param7, param8);
+          RidgedNoise3D.a(param5, 1, param4, param16, param0, param13, param1, param11, param2, param10, param6, param9, (String[]) null, param14, param15, param3, 1, param7, param8);
           var17_int = -112 / ((66 - param12) / 41);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

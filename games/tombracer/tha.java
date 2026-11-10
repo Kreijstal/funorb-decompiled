@@ -183,7 +183,7 @@ final class tha extends WidgetContainer implements ButtonListener {
             tha.a(-94);
           }
           if (param2 == this.field_w) {
-            pn.f(-804227775);
+            HardwareTurbulentWaterNoise.f(-804227775);
             return;
           }
           if (this.field_z == param2) {

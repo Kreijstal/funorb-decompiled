@@ -19,7 +19,7 @@ final class PlatformTaskDispatcher implements Runnable {
     RandomAccessFileHandle field_n;
     java.awt.EventQueue field_r;
     private MicrosoftDisplayController field_w;
-    private qj field_g;
+    private MicrosoftCursorController field_g;
     static java.lang.reflect.Method field_b;
     private static String field_u;
     RandomAccessFileHandle field_q;
@@ -650,7 +650,7 @@ final class PlatformTaskDispatcher implements Runnable {
             if (!this.field_p) {
               this.field_t = Class.forName("CursorController").newInstance();
             } else {
-              this.field_g = new qj();
+              this.field_g = new MicrosoftCursorController();
             }
           } catch (java.lang.Throwable decompiledCaughtParameter10) {
             decompiledCaughtException = decompiledCaughtParameter10;

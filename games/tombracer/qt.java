@@ -153,7 +153,7 @@ final class qt {
                 return;
               }
               if (var31.field_Fb) {
-                so.field_K = so.field_K - 1;
+                ValidatedTextInputWidget.field_K = ValidatedTextInputWidget.field_K - 1;
                 var31.field_Fb = false;
               }
               if (0 == var5) {
@@ -172,7 +172,7 @@ final class qt {
                 var32.unlinkSecondary(-7975);
                 var32 = (pha) (uma.field_b.next(118));
               }
-              so.field_K = 0;
+              ValidatedTextInputWidget.field_K = 0;
               return;
             }
             if (var2 == 8) {
@@ -312,7 +312,7 @@ final class qt {
                   var29.field_Hb = false;
                 } else {
                   if (var29.field_Fb) {
-                    so.field_K = so.field_K - 1;
+                    ValidatedTextInputWidget.field_K = ValidatedTextInputWidget.field_K - 1;
                     var29.field_Fb = false;
                   }
                 }
@@ -328,7 +328,7 @@ final class qt {
                 var30.field_Hb = true;
               } else {
                 if (!var30.field_Fb) {
-                  so.field_K = so.field_K + 1;
+                  ValidatedTextInputWidget.field_K = ValidatedTextInputWidget.field_K + 1;
                   var30.field_Fb = true;
                 }
               }
@@ -361,7 +361,7 @@ final class qt {
               var3_ref_phaLifetime1.field_Fb) {
               var3_ref_phaLifetime1.field_Hb = false;
               if (var3_ref_phaLifetime1.field_Fb) {
-                so.field_K = so.field_K - 1;
+                ValidatedTextInputWidget.field_K = ValidatedTextInputWidget.field_K - 1;
                 var3_ref_phaLifetime1.field_Fb = false;
               }
               ql.a(114, var3_ref_phaLifetime1);

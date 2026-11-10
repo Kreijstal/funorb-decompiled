@@ -289,7 +289,7 @@ final class wd implements dv {
         }
     }
 
-    public final void a(BitPacketBuffer param0, boolean param1) {
+    public final void decode(BitPacketBuffer param0, boolean param1) {
         try {
           this.field_b = uma.readSignedBits(5, param0, -26803);
           if (param1) {

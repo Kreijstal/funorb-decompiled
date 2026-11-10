@@ -408,7 +408,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
           bsa.field_j.field_vb.field_r = null;
           ava.a(bsa.field_j, param6, param0, param9, 2);
         }
-        bh.a(param7, 0, param3, param0, param4, param6, param9);
+        PlayTrackCommand.a(param7, 0, param3, param0, param4, param6, param9);
         if (param2 != 4096) {
           return;
         }

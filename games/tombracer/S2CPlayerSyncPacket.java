@@ -60,11 +60,11 @@ final class S2CPlayerSyncPacket implements GamePacket {
               param0.matchState.field_c.field_b[var4_intLifetime1] = this.field_b[var4_intLifetime1];
               param0.matchState.field_c.field_e[this.field_b[var4_intLifetime1]] = var4_intLifetime1;
               if (this.field_a[var4_intLifetime1] == 0) {
-                param0.matchState.simulations[var4_intLifetime1].a(94, false);
+                param0.matchState.simulations[var4_intLifetime1].setFinished(94, false);
               } else {
-                stackIn_11_0 = (param0.matchState.simulations[var4_intLifetime1].b(0)) ? 0 : 1;
+                stackIn_11_0 = (param0.matchState.simulations[var4_intLifetime1].isFinished(0)) ? 0 : 1;
                 var5 = stackIn_11_0;
-                param0.matchState.simulations[var4_intLifetime1].a(84, true);
+                param0.matchState.simulations[var4_intLifetime1].setFinished(84, true);
                 param0.matchState.simulations[var4_intLifetime1].tick = this.field_a[var4_intLifetime1];
                 if (var5 != 0) {
                   param0.a(98, var4_intLifetime1);
@@ -148,7 +148,7 @@ final class S2CPlayerSyncPacket implements GamePacket {
         int var3 = TombRacer.field_G ? 1 : 0;
         IndexedSprite[] var1 = new IndexedSprite[fa.field_b];
         for (var2 = param0; fa.field_b > var2; var2++) {
-          var1[var2] = new IndexedSprite(ika.field_a, OpenGlRenderbuffer.field_s, ak.field_p[var2], pg.field_C[var2], mq.field_b[var2], iga.field_m[var2], ck.field_c[var2], mga.field_g);
+          var1[var2] = new IndexedSprite(ika.field_a, OpenGlRenderbuffer.field_s, LoadLevelCommand.field_p[var2], pg.field_C[var2], mq.field_b[var2], iga.field_m[var2], ck.field_c[var2], mga.field_g);
         }
         MazeGenerator.a((byte) 106);
         return var1;

@@ -2252,8 +2252,8 @@ final class gja extends ka {
         RuntimeException decompiledCaughtException = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
-          var2_int = qu.field_b[param0];
-          var3 = qu.field_d[param0];
+          var2_int = ByteStorage.field_b[param0];
+          var3 = ByteStorage.field_d[param0];
           var4 = 0;
           while (var4 < this.field_W) {
             var5 = -(this.field_l[var4] * var2_int) + var3 * this.field_r[var4] >> 14;
@@ -3422,22 +3422,22 @@ final class gja extends ka {
                           this.field_l[var13_int] = this.field_l[var13_int] - C2SChooseRewardPacket.field_c;
                           stackIn_44_0 = param2;
                           if (stackIn_44_0 != 0) {
-                            var14 = qu.field_b[param2];
-                            var15 = qu.field_d[param2];
+                            var14 = ByteStorage.field_b[param2];
+                            var15 = ByteStorage.field_d[param2];
                             var16 = -(this.field_l[var13_int] * var14) + (this.field_r[var13_int] * var15 + 16383) >> 14;
                             this.field_l[var13_int] = this.field_r[var13_int] * var14 + (var15 * this.field_l[var13_int] + 16383) >> 14;
                             this.field_r[var13_int] = var16;
                           }
                           if (param4 != 0) {
-                            var14 = qu.field_b[param4];
-                            var15 = qu.field_d[param4];
+                            var14 = ByteStorage.field_b[param4];
+                            var15 = ByteStorage.field_d[param4];
                             var16 = 16383 + var14 * this.field_r[var13_int] + this.field_Z[var13_int] * var15 >> 14;
                             this.field_r[var13_int] = 16383 + (-(this.field_Z[var13_int] * var14) + var15 * this.field_r[var13_int]) >> 14;
                             this.field_Z[var13_int] = var16;
                           }
                           if (param3 != 0) {
-                            var14 = qu.field_b[param3];
-                            var15 = qu.field_d[param3];
+                            var14 = ByteStorage.field_b[param3];
+                            var15 = ByteStorage.field_d[param3];
                             var16 = 16383 + var14 * this.field_l[var13_int] + var15 * this.field_Z[var13_int] >> 14;
                             this.field_l[var13_int] = this.field_l[var13_int] * var15 - (this.field_Z[var13_int] * var14 - 16383) >> 14;
                             this.field_Z[var13_int] = var16;
@@ -3457,22 +3457,22 @@ final class gja extends ka {
                           stackIn_45_0 = -1;
                           stackIn_45_1 = ~param4;
                           if (stackIn_45_0 != stackIn_45_1) {
-                            var14 = qu.field_b[param4];
-                            var15 = qu.field_d[param4];
+                            var14 = ByteStorage.field_b[param4];
+                            var15 = ByteStorage.field_d[param4];
                             var16 = 16383 + (this.field_r[var13_int] * var14 + this.field_Z[var13_int] * var15) >> 14;
                             this.field_r[var13_int] = -(var14 * this.field_Z[var13_int]) + this.field_r[var13_int] * var15 + 16383 >> 14;
                             this.field_Z[var13_int] = var16;
                           }
                           if (param2 != 0) {
-                            var14 = qu.field_b[param2];
-                            var15 = qu.field_d[param2];
+                            var14 = ByteStorage.field_b[param2];
+                            var15 = ByteStorage.field_d[param2];
                             var16 = 16383 - var14 * this.field_l[var13_int] + var15 * this.field_r[var13_int] >> 14;
                             this.field_l[var13_int] = 16383 + var14 * this.field_r[var13_int] + this.field_l[var13_int] * var15 >> 14;
                             this.field_r[var13_int] = var16;
                           }
                           if (param3 != 0) {
-                            var14 = qu.field_b[param3];
-                            var15 = qu.field_d[param3];
+                            var14 = ByteStorage.field_b[param3];
+                            var15 = ByteStorage.field_d[param3];
                             var16 = 16383 + var15 * this.field_Z[var13_int] + this.field_l[var13_int] * var14 >> 14;
                             this.field_l[var13_int] = this.field_l[var13_int] * var15 + (-(this.field_Z[var13_int] * var14) + 16383) >> 14;
                             this.field_Z[var13_int] = var16;
@@ -3525,22 +3525,22 @@ final class gja extends ka {
                           if (stackIn_95_0Lifetime1 != stackIn_95_1Lifetime1 ||
                             var21 != 0) {
                             if (param4 != 0) {
-                              var18 = qu.field_b[param4];
-                              var19 = qu.field_d[param4];
+                              var18 = ByteStorage.field_b[param4];
+                              var19 = ByteStorage.field_d[param4];
                               var20 = 16383 + (this.field_lb[var17] * var19 + this.field_m[var17] * var18) >> 14;
                               this.field_m[var17] = (short)(-(var18 * this.field_lb[var17]) + this.field_m[var17] * var19 + 16383 >> 14);
                               this.field_lb[var17] = (short)var20;
                             }
                             if (param2 != 0) {
-                              var18 = qu.field_b[param2];
-                              var19Lifetime1 = qu.field_d[param2];
+                              var18 = ByteStorage.field_b[param2];
+                              var19Lifetime1 = ByteStorage.field_d[param2];
                               var20Lifetime1 = var19Lifetime1 * this.field_m[var17] + (-(this.field_p[var17] * var18) + 16383) >> 14;
                               this.field_p[var17] = (short)(this.field_m[var17] * var18 + (var19Lifetime1 * this.field_p[var17] + 16383) >> 14);
                               this.field_m[var17] = (short)var20Lifetime1;
                             }
                             if (param3 != 0) {
-                              var18 = qu.field_b[param3];
-                              var19Lifetime2 = qu.field_d[param3];
+                              var18 = ByteStorage.field_b[param3];
+                              var19Lifetime2 = ByteStorage.field_d[param3];
                               var20Lifetime2 = var18 * this.field_p[var17] - (-(this.field_lb[var17] * var19Lifetime2) - 16383) >> 14;
                               this.field_p[var17] = (short)(-(this.field_lb[var17] * var18) + (this.field_p[var17] * var19Lifetime2 + 16383) >> 14);
                               this.field_lb[var17] = (short)var20Lifetime2;
@@ -3767,7 +3767,7 @@ final class gja extends ka {
                   return;
                 }
               }
-              vr.field_o = true;
+              SetFakeLagCommand.field_o = true;
               C2SChooseRewardPacket.field_c = param4 + C2SChooseRewardPacket.field_c / var10;
               ina.field_a = ina.field_a / var10 + param2;
               stackIn_32_0 = param3;
@@ -3849,22 +3849,22 @@ final class gja extends ka {
                           this.field_r[var14_int] = this.field_r[var14_int] - pb.field_k;
                           this.field_l[var14_int] = this.field_l[var14_int] - C2SChooseRewardPacket.field_c;
                           if (0 != param4) {
-                            var15 = qu.field_b[param4];
-                            var16 = qu.field_d[param4];
+                            var15 = ByteStorage.field_b[param4];
+                            var16 = ByteStorage.field_d[param4];
                             var17 = var16 * this.field_Z[var14_int] + var15 * this.field_r[var14_int] + 16383 >> 14;
                             this.field_r[var14_int] = 16383 + var16 * this.field_r[var14_int] - this.field_Z[var14_int] * var15 >> 14;
                             this.field_Z[var14_int] = var17;
                           }
                           if (param2 != 0) {
-                            var15 = qu.field_b[param2];
-                            var16 = qu.field_d[param2];
+                            var15 = ByteStorage.field_b[param2];
+                            var16 = ByteStorage.field_d[param2];
                             var17 = 16383 + (var16 * this.field_r[var14_int] - var15 * this.field_l[var14_int]) >> 14;
                             this.field_l[var14_int] = var16 * this.field_l[var14_int] + var15 * this.field_r[var14_int] + 16383 >> 14;
                             this.field_r[var14_int] = var17;
                           }
                           if (param3 != 0) {
-                            var15 = qu.field_b[param3];
-                            var16 = qu.field_d[param3];
+                            var15 = ByteStorage.field_b[param3];
+                            var16 = ByteStorage.field_d[param3];
                             var17 = var16 * this.field_Z[var14_int] + var15 * this.field_l[var14_int] + 16383 >> 14;
                             this.field_l[var14_int] = 16383 + var16 * this.field_l[var14_int] - var15 * this.field_Z[var14_int] >> 14;
                             this.field_Z[var14_int] = var17;
@@ -3919,22 +3919,22 @@ final class gja extends ka {
                               break;
                             }
                             if (0 != param4) {
-                              var19 = qu.field_b[param4];
-                              var20 = qu.field_d[param4];
+                              var19 = ByteStorage.field_b[param4];
+                              var20 = ByteStorage.field_d[param4];
                               var21 = var19 * this.field_m[var18] + this.field_lb[var18] * var20 + 16383 >> 14;
                               this.field_m[var18] = (short)(-(this.field_lb[var18] * var19) + this.field_m[var18] * var20 + 16383 >> 14);
                               this.field_lb[var18] = (short)var21;
                             }
                             if (param2 != 0) {
-                              var19 = qu.field_b[param2];
-                              var20 = qu.field_d[param2];
+                              var19 = ByteStorage.field_b[param2];
+                              var20 = ByteStorage.field_d[param2];
                               var21 = var20 * this.field_m[var18] - this.field_p[var18] * var19 + 16383 >> 14;
                               this.field_p[var18] = (short)(16383 + (this.field_m[var18] * var19 + var20 * this.field_p[var18]) >> 14);
                               this.field_m[var18] = (short)var21;
                             }
                             if (0 != param3) {
-                              var19 = qu.field_b[param3];
-                              var20 = qu.field_d[param3];
+                              var19 = ByteStorage.field_b[param3];
+                              var20 = ByteStorage.field_d[param3];
                               var21 = 16383 + var19 * this.field_p[var18] + this.field_lb[var18] * var20 >> 14;
                               this.field_p[var18] = (short)(16383 + this.field_p[var18] * var20 - this.field_lb[var18] * var19 >> 14);
                               this.field_lb[var18] = (short)var21;
@@ -3961,7 +3961,7 @@ final class gja extends ka {
             var13 = param7[12] << 4;
             var14_int = param7[13] << 4;
             var15 = param7[14] << 4;
-            if (vr.field_o) {
+            if (SetFakeLagCommand.field_o) {
               var16 = 8192 + ina.field_a * param7[0] + (param7[3] * pb.field_k + param7[6] * C2SChooseRewardPacket.field_c) >> 14;
               var17 = 8192 + ina.field_a * param7[1] + param7[4] * pb.field_k + C2SChooseRewardPacket.field_c * param7[7] >> 14;
               var18 = param7[8] * C2SChooseRewardPacket.field_c + param7[5] * pb.field_k + param7[2] * ina.field_a + 8192 >> 14;
@@ -3970,16 +3970,16 @@ final class gja extends ka {
               ina.field_a = var16;
               pb.field_k = var17;
               var18 = var18 + var15;
-              vr.field_o = false;
+              SetFakeLagCommand.field_o = false;
               C2SChooseRewardPacket.field_c = var18;
             }
             var16_ref_int__ = new int[9];
-            var17 = qu.field_d[param2];
-            var18 = qu.field_b[param2];
-            var19 = qu.field_d[param3];
-            var20 = qu.field_b[param3];
-            var21 = qu.field_d[param4];
-            var22 = qu.field_b[param4];
+            var17 = ByteStorage.field_d[param2];
+            var18 = ByteStorage.field_b[param2];
+            var19 = ByteStorage.field_d[param3];
+            var20 = ByteStorage.field_b[param3];
+            var21 = ByteStorage.field_d[param4];
+            var22 = ByteStorage.field_b[param4];
             var23 = 8192 + var18 * var21 >> 14;
             var24 = var18 * var22 + 8192 >> 14;
             var16_ref_int__[8] = var17 * var19 + 8192 >> 14;
@@ -4146,7 +4146,7 @@ final class gja extends ka {
             var13 = param7[12] << 4;
             var14_int = param7[13] << 4;
             var15 = param7[14] << 4;
-            if (vr.field_o) {
+            if (SetFakeLagCommand.field_o) {
               var16 = 8192 + ina.field_a * param7[0] + (pb.field_k * param7[3] + param7[6] * C2SChooseRewardPacket.field_c) >> 14;
               var17 = 8192 + (param7[1] * ina.field_a - (-(pb.field_k * param7[4]) - C2SChooseRewardPacket.field_c * param7[7])) >> 14;
               var18 = C2SChooseRewardPacket.field_c * param7[8] + (param7[2] * ina.field_a + param7[5] * pb.field_k + 8192) >> 14;
@@ -4155,7 +4155,7 @@ final class gja extends ka {
               var18 = var18 + var15;
               ina.field_a = var16;
               pb.field_k = var17;
-              vr.field_o = false;
+              SetFakeLagCommand.field_o = false;
               C2SChooseRewardPacket.field_c = var18;
             }
             var16 = param2 << 15 >> 7;

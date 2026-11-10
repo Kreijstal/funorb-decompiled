@@ -84,14 +84,14 @@ final class CommonChooseReward implements dv {
           if (this.takenCount >= this.reward.length) {
             this.currentPlayerId = -1;
           } else {
-            if (this.field_j.field_P <= this.currentPos) {
+            if (this.field_j.playersRemaining <= this.currentPos) {
               this.currentPlayerId = -1;
             } else {
               this.currentPlayerId = this.field_j.field_c.field_e[this.currentPos];
               if (this.currentPlayerId == -1) {
                 this.currentPlayerId = -1;
               } else {
-                if (!this.field_j.b((byte) 90, this.currentPlayerId)) {
+                if (!this.field_j.hasFinishedCourse((byte) 90, this.currentPlayerId)) {
                   this.currentPlayerId = -1;
                 }
               }
@@ -111,7 +111,7 @@ final class CommonChooseReward implements dv {
           this.finished = true;
           return;
         }
-        if (this.field_j.field_P <= this.currentPos) {
+        if (this.field_j.playersRemaining <= this.currentPos) {
           this.currentPlayerId = -1;
           if (this.currentPlayerId != -1) {
             return;
@@ -128,7 +128,7 @@ final class CommonChooseReward implements dv {
           this.finished = true;
           return;
         }
-        if (this.field_j.b((byte) 90, this.currentPlayerId)) {
+        if (this.field_j.hasFinishedCourse((byte) 90, this.currentPlayerId)) {
           if (this.currentPlayerId != -1) {
             return;
           }
@@ -237,7 +237,7 @@ final class CommonChooseReward implements dv {
         return this.currentPlayerId;
     }
 
-    public final void a(BitPacketBuffer param0, boolean param1) {
+    public final void decode(BitPacketBuffer param0, boolean param1) {
         try {
           this.reward = fa.a(0, param0, 8, this.reward);
           this.currentPos = param0.readBits((byte) 44, 3);
@@ -281,7 +281,7 @@ final class CommonChooseReward implements dv {
         int var6;
         BitPacketBuffer var7;
         var6 = TombRacer.field_G ? 1 : 0;
-        var2 = new IsaacCipher(new int[]{this.field_j.field_C});
+        var2 = new IsaacCipher(new int[]{this.field_j.roundSeed});
         this.reward = new int[3];
         var3 = new boolean[7];
         for (var4 = 0; this.reward.length > var4; var4++) {
@@ -300,7 +300,7 @@ final class CommonChooseReward implements dv {
           return;
         }
         var7 = (BitPacketBuffer) null;
-        this.a((BitPacketBuffer) null, false);
+        this.decode((BitPacketBuffer) null, false);
     }
 
     final void a(byte param0) {

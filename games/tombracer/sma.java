@@ -14,8 +14,8 @@ final class sma {
     private final void a(byte param0) {
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
-        this.field_f = new int[this.field_a.field_P];
-        this.field_b = new int[this.field_a.field_P];
+        this.field_f = new int[this.field_a.playersRemaining];
+        this.field_b = new int[this.field_a.playersRemaining];
         if (param0 >= -43) {
           return;
         }
@@ -180,7 +180,7 @@ final class sma {
           var5 = this.field_a.players;
           for (var6 = 0; var5.length > var6; var6++) {
             var7 = var5[var6];
-            if (!this.field_a.f((byte) -83, var7.getPlayerIndex(0)) &&
+            if (!this.field_a.hasResigned((byte) -83, var7.getPlayerIndex(0)) &&
               -1 == this.field_f[var7.getPlayerIndex(0)]) {
               var8 = var7.getTotal(false) + var7.j(false);
               if (var3 == -1 ||

@@ -328,12 +328,12 @@ final class FullscreenConfirmationDialog extends ofa implements ButtonListener {
           if (this.field_B &&
             null == dq.field_f) {
             this.i((byte) 109);
-            this.field_z.c(new gga(this.field_z, or.field_j), 102);
+            this.field_z.c(new gga(this.field_z, TurbulenceNoise3D.field_j), 102);
           }
           if (null != dq.field_f &&
             dq.field_f.field_b) {
             this.i((byte) 109);
-            this.field_z.c(new gga(this.field_z, or.field_j), 85);
+            this.field_z.c(new gga(this.field_z, TurbulenceNoise3D.field_j), 85);
             return;
           }
           return;

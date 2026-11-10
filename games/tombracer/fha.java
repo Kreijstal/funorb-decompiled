@@ -44,8 +44,8 @@ final class fha {
           var5 = tw.a((byte) 127, "screen_options", "commonui", param2);
           ita.field_e = new IndexedSprite[4];
           RasterShape.field_a = new IndexedSprite[4];
-          ie.field_f = new IndexedSprite[4];
-          var6 = new IndexedSprite[][]{ie.field_f, RasterShape.field_a, ita.field_e};
+          DirectByteStorage.field_f = new IndexedSprite[4];
+          var6 = new IndexedSprite[][]{DirectByteStorage.field_f, RasterShape.field_a, ita.field_e};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;

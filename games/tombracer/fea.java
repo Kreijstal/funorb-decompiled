@@ -732,7 +732,7 @@ final class fea {
         try {
           if (SimpleBlockBehaviour.field_r == -1 &&
             TileGrid.field_g == -1) {
-            SimpleBlockBehaviour.field_r = jba.field_j;
+            SimpleBlockBehaviour.field_r = AgeValidator.field_j;
             TileGrid.field_g = GridWidgetContainer.field_B;
           }
           boolean decompiledFrameRemainder0 = true;

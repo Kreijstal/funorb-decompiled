@@ -6,9 +6,9 @@ final class PortalBehaviour extends Behaviour {
     static int[] field_o;
     private SwitchLinkList field_p;
 
-    final static void a(int param0, boolean param1, qua param2, int param3) {
+    final static void a(int param0, boolean param1, MusicTrack param2, int param3) {
         RuntimeException var4 = null;
-        qua var5 = null;
+        MusicTrack var5 = null;
         sq stackIn_2_0;
         int stackIn_2_1;
         int stackIn_2_2;
@@ -30,8 +30,8 @@ final class PortalBehaviour extends Behaviour {
           if (param0 == 9) {
             return;
           }
-          var5 = (qua) null;
-          PortalBehaviour.a(70, false, (qua) null, -114);
+          var5 = (MusicTrack) null;
+          PortalBehaviour.a(70, false, (MusicTrack) null, -114);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -144,8 +144,8 @@ final class PortalBehaviour extends Behaviour {
 
     final int hashState(int param0, int param1) {
         if (param1 > -48) {
-          qua var4 = (qua) null;
-          PortalBehaviour.a(89, false, (qua) null, -34);
+          MusicTrack var4 = (MusicTrack) null;
+          PortalBehaviour.a(89, false, (MusicTrack) null, -34);
           return param0;
         }
         return param0;

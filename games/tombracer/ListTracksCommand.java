@@ -1,12 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wr extends ConsoleMethod {
-    static String[] field_o;
+final class ListTracksCommand extends ConsoleMethod {
+    static mla field_p;
+    static int field_o;
 
-    final ConsoleValue a(ConsoleValue[] param0, int param1) {
+    public static void releaseStatics(byte param0) {
+        field_p = null;
+        if (param0 > -120) {
+          ListTracksCommand.releaseStatics((byte) 123);
+        }
+    }
+
+    ListTracksCommand(String param0, Class[] param1, String param2) {
+        super(param0, param1, param2);
+    }
+
+    final ConsoleValue invoke(ConsoleValue[] param0, int param1) {
         RuntimeException var3 = null;
-        ConsoleValue[] var4 = null;
         ConsoleValue stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -14,16 +25,15 @@ final class wr extends ConsoleMethod {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            var4 = (ConsoleValue[]) null;
-            this.a((ConsoleValue[]) null, -90);
+            field_p = (mla) null;
           }
-          stackIn_3_0 = new ConsoleValue(joa.a(param0[1].a(false), (byte) 77, (String) (param0[0].field_d)));
+          stackIn_3_0 = new ConsoleValue(ata.b(-32));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("wr.A(");
+          stackIn_6_1 = new StringBuilder().append("tb.A(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {
@@ -33,15 +43,7 @@ final class wr extends ConsoleMethod {
         }
     }
 
-    wr(String param0, Class[] param1, String param2) {
-        super(param0, param1, param2);
-    }
-
-    public static void releaseStatics(byte param0) {
-        int var1 = -38 / ((-34 - param0) / 34);
-        field_o = null;
-    }
-
     static {
+        field_p = new mla();
     }
 }

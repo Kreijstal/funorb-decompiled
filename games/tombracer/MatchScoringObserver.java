@@ -173,7 +173,7 @@ class MatchScoringObserver extends SimulationObserver {
           return;
         }
         try {
-          this.field_f.a(true, param1);
+          this.field_f.copyCorpsesToRoom(true, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "tu.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

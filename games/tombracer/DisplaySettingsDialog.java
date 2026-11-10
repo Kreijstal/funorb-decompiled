@@ -189,7 +189,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
           this.field_T.field_E = 83;
           this.field_T.a(5, 5, (byte) 97);
           this.addChild(this.field_T, -1);
-          this.field_W = this.a(-82, ie.field_f, ke.field_a, (WidgetListener) (this));
+          this.field_W = this.a(-82, DirectByteStorage.field_f, ke.field_a, (WidgetListener) (this));
           if (var2_intLifetime1 != 0) {
             this.field_N = this.a(-87, RasterShape.field_a, kka.field_o, (WidgetListener) (this));
           }

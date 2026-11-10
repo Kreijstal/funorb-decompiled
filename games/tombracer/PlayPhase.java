@@ -30,12 +30,12 @@ final class PlayPhase extends MatchPhase {
           this.screen.e(118)) {
           return;
         }
-        if (this.matchState.e(2) == -1) {
+        if (this.matchState.getRoundWinner(2) == -1) {
           this.screen.h(110);
         }
         for (var4 = 0; this.viewports.length > var4; var4++) {
           if (!this.viewports[var4].c(1727002282) &&
-            this.matchState.f((byte) -127, var4)) {
+            this.matchState.hasResigned((byte) -127, var4)) {
             this.viewports[var4].a(60, true);
             this.viewports[var4].a(0, (byte) 108, 2 * aaa.a(false));
           }
@@ -49,7 +49,7 @@ final class PlayPhase extends MatchPhase {
             this.screen.e(-1, 17219);
           }
         } else {
-          if (this.matchState.b((byte) 90, var3) &&
+          if (this.matchState.hasFinishedCourse((byte) 90, var3) &&
             !this.field_m) {
             this.field_m = true;
             if (this.screen.c(false)) {
@@ -123,19 +123,19 @@ final class PlayPhase extends MatchPhase {
           }
           var5_int = 0;
           for (var6 = 0; var6 < this.matchState.players.length; var6++) {
-            if (!this.matchState.f((byte) -81, var6)) {
+            if (!this.matchState.hasResigned((byte) -81, var6)) {
               var5_int++;
             }
           }
           if (var5_int == 2) {
             var6Lifetime2 = 0;
             for (var7_int = 0; this.matchState.players.length > var7_int; var7_int++) {
-              if (!this.matchState.f((byte) -85, var7_int) &&
+              if (!this.matchState.hasResigned((byte) -85, var7_int) &&
                 var3 != var7_int) {
                 var6Lifetime2 = var7_int;
               }
             }
-            this.viewports[var6Lifetime2].a(0, qu.field_e, -20186);
+            this.viewports[var6Lifetime2].a(0, ByteStorage.field_e, -20186);
             this.viewports[var6Lifetime2].b(23479);
           } else {
             if (var5_int > 2) {
@@ -196,7 +196,7 @@ final class PlayPhase extends MatchPhase {
               if (0 != this.matchState.field_K) {
                 MembersUpsellMenu.a(var4, 16777215, eda.field_f, -1, var7_intLifetime1Lifetime1, var6Lifetime1Lifetime1, 0);
               } else {
-                MembersUpsellMenu.a(ConstrainToCircleLocomotor.field_z + " " + (1 + this.matchState.field_A), 16777215, eda.field_f, -1, 225, var6Lifetime1Lifetime1, 0);
+                MembersUpsellMenu.a(ConstrainToCircleLocomotor.field_z + " " + (1 + this.matchState.roundIndex), 16777215, eda.field_f, -1, 225, var6Lifetime1Lifetime1, 0);
                 MembersUpsellMenu.a(var4, 16777215, eda.field_f, -1, 255, var6Lifetime1Lifetime1, 0);
               }
             } else {
@@ -370,7 +370,7 @@ final class PlayPhase extends MatchPhase {
 
     private final void b(byte param0) {
         int var2 = this.screen.l(89);
-        if (this.matchState.field_P <= 1) {
+        if (this.matchState.playersRemaining <= 1) {
           this.viewports[var2].a(0, mf.field_d, -20186);
         } else {
           this.viewports[var2].a(0, dp.field_j, -20186);
@@ -395,13 +395,13 @@ final class PlayPhase extends MatchPhase {
         int[][] var7;
         var5 = TombRacer.field_G ? 1 : 0;
         if (!this.screen.c(false) &&
-          this.matchState.b(0)) {
-          if (this.matchState.simulations[0].e(-31170)) {
+          this.matchState.allFinishedRound(0)) {
+          if (this.matchState.simulations[0].hasTimedOut(-31170)) {
             this.a(0, -2);
           } else {
             if (this.matchState.roundsToWin > 1) {
-              var7 = new int[this.matchState.field_k][3];
-              for (var3 = 0; var3 < this.matchState.field_k; var3++) {
+              var7 = new int[this.matchState.playerCount][3];
+              for (var3 = 0; var3 < this.matchState.playerCount; var3++) {
                 for (var4 = 0; 3 > var4; var4++) {
                   var7[var3][var4] = this.matchState.players[var3].getTreasure(196608, var4);
                 }
@@ -563,7 +563,7 @@ final class PlayPhase extends MatchPhase {
             km.field_p = Player.field_p;
           }
           if (Player.field_p == km.field_p &&
-            ama.a(1, -1)) {
+            LegacyRidgedWaterNoise.a(1, -1)) {
             var9Lifetime1 = WeaveOperator.field_q.readUnsignedByte(255);
             WeaveOperator.field_q.position = 0;
             if (var9Lifetime1 >= 100 &&
@@ -580,7 +580,7 @@ final class PlayPhase extends MatchPhase {
                 return stackIn_33_0;
               }
               if (99 == var9Lifetime1) {
-                ama.a(FleeLocomotor.f(1), -1);
+                LegacyRidgedWaterNoise.a(FleeLocomotor.f(1), -1);
                 kia.field_b = new Boolean(di.a(WeaveOperator.field_q, (byte) 107));
                 WeaveOperator.field_q.position = 0;
               } else {
@@ -592,10 +592,10 @@ final class PlayPhase extends MatchPhase {
           }
           if (km.field_p == ne.field_c) {
             var9Lifetime2 = 2;
-            if (ama.a(var9Lifetime2, -1)) {
+            if (LegacyRidgedWaterNoise.a(var9Lifetime2, -1)) {
               var10Lifetime1 = WeaveOperator.field_q.readUnsignedShort(124);
               WeaveOperator.field_q.position = 0;
-              if (ama.a(var10Lifetime1, -1)) {
+              if (LegacyRidgedWaterNoise.a(var10Lifetime1, -1)) {
                 var11 = PressureSwitchBehaviour.field_s.length;
                 for (var12 = 0; var11 > var12; var12++) {
                   PressureSwitchBehaviour.field_s[var12] = WeaveOperator.field_q.readVersionedString(121);

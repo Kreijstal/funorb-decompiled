@@ -3,7 +3,7 @@
  */
 final class uba extends kma implements TextInputListener, eaa {
     static int field_f;
-    paa field_i;
+    DateInputWidget field_i;
     static String[] loadingQuipsShort;
     static String field_h;
 
@@ -40,7 +40,7 @@ final class uba extends kma implements TextInputListener, eaa {
 
     public final boolean isEmpty(boolean param0) {
         if (!param0) {
-          this.field_i = (paa) null;
+          this.field_i = (DateInputWidget) null;
           return this.field_i.i((byte) 64);
         }
         return this.field_i.i((byte) 64);
