@@ -10,7 +10,7 @@ final class li extends qc {
     static int field_C;
     byte[] field_D;
 
-    final byte[] e(int param0) {
+    final byte[] getBytes(int param0) {
         if (this.field_t) {
           throw new RuntimeException();
         }
@@ -31,12 +31,12 @@ final class li extends qc {
         }
     }
 
-    final int f(int param0) {
+    final int getProgress(int param0) {
         if (this.field_t) {
           return 0;
         }
         if (param0 != 100) {
-          this.f(44);
+          this.getProgress(44);
           return 100;
         }
         return 100;

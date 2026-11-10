@@ -10,9 +10,9 @@ final class uc {
     private boolean field_e;
     private boolean field_a;
 
-    final boolean d(int param0) {
+    final boolean isFlagAssigned(int param0) {
         if (param0 >= -75) {
-          this.b(-57);
+          this.isFlagged(-57);
           return this.field_a;
         }
         return this.field_a;
@@ -33,7 +33,7 @@ final class uc {
         field_g = null;
     }
 
-    final String a(int param0) {
+    final String getText(int param0) {
         if (param0 != 31027) {
           field_d = (String) null;
           return this.field_f;
@@ -41,25 +41,25 @@ final class uc {
         return this.field_f;
     }
 
-    final void a(int param0, boolean param1) {
+    final void setFlag(int param0, boolean param1) {
         this.field_e = param1 ? true : false;
         if (param0 == -17853) {
           this.field_a = true;
           return;
         }
-        this.a(-102, true);
+        this.setFlag(-102, true);
         this.field_a = true;
     }
 
-    final boolean b(int param0) {
+    final boolean isFlagged(int param0) {
         if (param0 != 18307) {
           return true;
         }
         return this.field_e;
     }
 
-    final static void b(int param0, boolean param1) {
-        tg.field_g.a(param0 ^ -1081, param1);
+    final static void setLoginTextFlag(int param0, boolean param1) {
+        tg.field_g.setFlag(param0 ^ -1081, param1);
         if (param0 != 16772) {
           uc.releaseStatics(69);
         }

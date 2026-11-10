@@ -68,7 +68,7 @@ final class NodeHashTableIterator implements Iterator {
               }
               var9 = stackIn_16_0;
               if (var9 != null) {
-                var9.a(var2, -GameCharacter.field_db + var8, (GameCharacter.field_db << 1) + var7, (MessageDialog.field_tb << 1) + MusicPatch.field_n, 12018);
+                var9.drawFrame(var2, -GameCharacter.field_db + var8, (GameCharacter.field_db << 1) + var7, (MessageDialog.field_tb << 1) + MusicPatch.field_n, 12018);
               }
               var2 = var2 + MessageDialog.field_tb;
             }
@@ -121,7 +121,7 @@ final class NodeHashTableIterator implements Iterator {
         if (param0) {
           field_g = (UiComponent) null;
         }
-        hf.field_e.a(DualLinkNode.field_o, 2, pd.field_b.field_zb, 0, pd.field_b.field_z - 20, -31465, 20);
+        hf.field_e.setBoundsAndLayout(DualLinkNode.field_o, 2, pd.field_b.field_zb, 0, pd.field_b.field_z - 20, -31465, 20);
     }
 
     public final boolean hasNext() {

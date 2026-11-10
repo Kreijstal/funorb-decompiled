@@ -68,12 +68,12 @@ final class g {
     }
 
     final static void c() {
-        oh var0 = (oh) (field_c.a(true));
+        oh var0 = (oh) (field_c.removeFirst(true));
         if (var0 == null) {
           var0 = new oh();
         }
-        var0.a(SoftwareRasterizer.pixels, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipBottom);
-        field_b.a(var0, false);
+        var0.capture(SoftwareRasterizer.pixels, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipBottom);
+        field_b.addFirst(var0, false);
     }
 
     final static Sprite b(Sprite param0) {
@@ -138,19 +138,19 @@ final class g {
     }
 
     final static void b() {
-        oh var0 = (oh) (field_b.a(true));
+        oh var0 = (oh) (field_b.removeFirst(true));
         if (var0 == null) {
           throw new IllegalStateException(field_z);
         }
         SoftwareRasterizer.setTarget(var0.field_g, var0.field_i, var0.field_h);
         SoftwareRasterizer.setClip(var0.field_l, var0.field_f, var0.field_j, var0.field_k);
         var0.field_g = null;
-        field_c.a(var0, false);
+        field_c.addFirst(var0, false);
     }
 
     private final static boolean b(IntrusiveDeque param0) {
         IntrusiveNode var1;
-        var1 = param0.c(51);
+        var1 = param0.last(51);
         while (var1 instanceof SceneObject) {
           if (var1.previous instanceof SceneObject) {
             if (((SceneObject) (var1)).positionY > ((SceneObject) (var1.previous)).positionY) {
@@ -258,7 +258,7 @@ final class g {
         IntrusiveNode var1_ref;
         IntrusiveNode var2;
         while (!g.b(param0)) {
-          var1_ref = param0.c(51);
+          var1_ref = param0.last(51);
           while (var1_ref instanceof SceneObject) {
             if (!(var1_ref.previous instanceof SceneObject)) {
               break;

@@ -27,13 +27,13 @@ final class StateIconLabel extends UiComponent {
         this(param0, param1.field_Lb, param1.field_Fb, param2);
     }
 
-    final void a(int param0, byte param1, int param2, int param3, int param4, int param5) {
+    final void setIconLabelBounds(int param0, byte param1, int param2, int param3, int param4, int param5) {
         this.setBounds(param5, param0, param3, param4, -3344);
         int var7 = 121 / ((param1 + 34) / 45);
         this.layoutIconLabel(true, param2);
     }
 
-    final int a(byte param0, int param1) {
+    final int measureLabelWidth(byte param0, int param1) {
         if (param0 <= 92) {
           this.layoutIconLabel(false, -106);
           return param1 + (this.field_Lb.e(0) + this.field_Fb.e(0));
@@ -45,7 +45,7 @@ final class StateIconLabel extends UiComponent {
         int var3 = 0;
         int var3Lifetime1;
         if (!param0) {
-          StateIconLabel.b(-119, -84);
+          StateIconLabel.sendByteRequest(-119, -84);
           this.field_Lb.setBounds(this.field_z, 0, this.field_Lb.e(0), 0, -3344);
           var3 = param1 + this.field_Lb.field_zb;
           this.field_Fb.setBounds(this.field_z, 0, this.field_zb - var3, var3, -3344);
@@ -71,7 +71,7 @@ final class StateIconLabel extends UiComponent {
         field_Jb = null;
     }
 
-    final static void a(jh param0, int param1) {
+    final static void insertLobbyGameSorted(jh param0, int param1) {
         jh var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -85,16 +85,16 @@ final class StateIconLabel extends UiComponent {
             return;
           }
           param0.unlink(true);
-          var2 = (jh) (tn.field_C.c(79));
+          var2 = (jh) (tn.field_C.last(79));
           while (var2 != null) {
             if (var2.a(param0, (byte) -53)) {
-              var2 = (jh) (tn.field_C.b(6));
+              var2 = (jh) (tn.field_C.previous(6));
               continue;
             }
             break;
           }
           if (var2 == null) {
-            tn.field_C.a(param0, false);
+            tn.field_C.addFirst(param0, false);
             return;
           }
           vc.a(var2, param0, true);
@@ -127,9 +127,9 @@ final class StateIconLabel extends UiComponent {
         }
     }
 
-    final static void b(int param0, int param1) {
+    final static void sendByteRequest(int param0, int param1) {
         CipherPacketBuffer var2 = ma.field_a;
-        var2.b((byte) -35, param1);
+        var2.writeCipheredOpcode((byte) -35, param1);
         var2.writeByte(109, param0);
         var2.writeByte(-116, 0);
     }

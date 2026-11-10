@@ -6,11 +6,11 @@ abstract class MouseWheelInput {
     static ip field_c;
     static String field_a;
 
-    abstract int b(int param0);
+    abstract int takeRotation(int param0);
 
-    abstract void a(byte param0, java.awt.Component param1);
+    abstract void addTo(byte param0, java.awt.Component param1);
 
-    final static void a(int param0, boolean param1) {
+    final static void layoutLobbySlidePanels(int param0, boolean param1) {
         int var3 = 0;
         int var4 = 0;
         int var2 = (-640 + kp.field_l) / 2;
@@ -23,7 +23,7 @@ abstract class MouseWheelInput {
           LevelData.field_a.setBounds(-120 + (SoftwareRasterizer.height - 4), 0, 438, var2 + (202 + 438 * var4 / var3), -3344);
           return;
         }
-        MouseWheelInput.a(56, false);
+        MouseWheelInput.layoutLobbySlidePanels(56, false);
         var3Lifetime1 = b.field_d * b.field_d;
         var4Lifetime1 = var3Lifetime1 - param0 * param0;
         JaggrabDownloader.field_i.setBounds(-90 + (-120 + SoftwareRasterizer.height) - 4, 90, 199, -(var4Lifetime1 * 199 / var3Lifetime1) + var2, -3344);
@@ -33,7 +33,7 @@ abstract class MouseWheelInput {
     public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 <= 51) {
-          MouseWheelInput.a(-72, false);
+          MouseWheelInput.layoutLobbySlidePanels(-72, false);
           field_c = null;
           field_a = null;
           return;
@@ -42,7 +42,7 @@ abstract class MouseWheelInput {
         field_a = null;
     }
 
-    abstract void a(java.awt.Component param0, byte param1);
+    abstract void removeFrom(java.awt.Component param0, byte param1);
 
     static {
         field_b = new IntrusiveDeque();

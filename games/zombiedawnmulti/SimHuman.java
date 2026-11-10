@@ -69,8 +69,8 @@ abstract class SimHuman extends SimUnit {
           if (var7 <= var5 * var5 + var6 * var6) {
             var8 = 8;
             if (!this.a((byte) 117, var4, var3_int)) {
-              var3_int = var3_int + (hp.a((byte) -107, g.field_a, 2 * var8) + (12 - var8));
-              var4 = var4 + (12 + (hp.a((byte) 108, g.field_a, 2 * var8) - var8));
+              var3_int = var3_int + (hp.nextBoundedInt((byte) -107, g.field_a, 2 * var8) + (12 - var8));
+              var4 = var4 + (12 + (hp.nextBoundedInt((byte) 108, g.field_a, 2 * var8) - var8));
             }
             if (this.a((byte) 125, var4, var3_int) &&
               this.simulation.navigation.traceLine(this.getY(1829947600), this.getX((byte) -112), -17201, var3_int, var4, false, false) != -1) {
@@ -114,7 +114,7 @@ abstract class SimHuman extends SimUnit {
         if (param2 != 5690) {
           this.field_qb = (int[]) null;
         }
-        var4 = this.simulation.entities.c(57);
+        var4 = this.simulation.entities.last(57);
         while (var4 instanceof SimEntity) {
           if (!(var4 instanceof SimZombie)) {
             var4 = var4.previous;
@@ -122,7 +122,7 @@ abstract class SimHuman extends SimUnit {
           }
           var5 = (SimZombie) (var4);
           if (var5 != null &&
-            var5.o(param2 ^ 5700)) {
+            var5.isCharmed(param2 ^ 5700)) {
             var6 = var5.getX((byte) -112) - this.getX((byte) -112);
             var7 = var5.getY(param2 ^ 1829953258) - this.getY(1829947600);
             if (var6 * var6 + var7 * var7 < param1 * param1 && (param0 ||
@@ -231,10 +231,10 @@ abstract class SimHuman extends SimUnit {
         if (param0 != -7) {
           this.b(-71, -11, -39);
         }
-        SimEntity var3 = (SimEntity) (this.simulation.entities.c(100));
+        SimEntity var3 = (SimEntity) (this.simulation.entities.last(100));
         while (var3 != null) {
           if (var3 instanceof SimZombie &&
-            ((SimZombie) (var3)).p((byte) 56)) {
+            ((SimZombie) (var3)).isFeared((byte) 56)) {
             var4 = this.field_ub[-1 + this.field_lb] - var3.getX((byte) -112);
             var5 = this.field_qb[-1 + this.field_lb] - var3.getY(1829947600);
             var6 = var4 * var4;
@@ -245,7 +245,7 @@ abstract class SimHuman extends SimUnit {
               break;
             }
           }
-          var3 = (SimEntity) (this.simulation.entities.b(~param0));
+          var3 = (SimEntity) (this.simulation.entities.previous(~param0));
         }
         return var2 != 0;
     }
@@ -377,7 +377,7 @@ abstract class SimHuman extends SimUnit {
                 this.field_rb = 53;
               } else {
                 if (!this.field_vb) {
-                  stackIn_65_1 = hp.a((byte) -77, g.field_a, 200) + 20;
+                  stackIn_65_1 = hp.nextBoundedInt((byte) -77, g.field_a, 200) + 20;
                 } else {
                   stackIn_65_1 = 65;
                 }
@@ -391,7 +391,7 @@ abstract class SimHuman extends SimUnit {
             this.field_kb = this.field_kb + 1;
             if (20 <= fieldTemp$1) {
               this.field_kb = 0;
-              this.l((byte) 111);
+              this.decideAction((byte) 111);
             }
           } else {
             if (this.state == 2) {
@@ -429,9 +429,9 @@ abstract class SimHuman extends SimUnit {
               if (fieldTemp$2 >= 20) {
                 this.field_kb = 0;
                 var2 = 0;
-                var3 = this.simulation.world.field_A.c(106);
+                var3 = this.simulation.world.field_A.last(106);
                 while (var3 instanceof bf) {
-                  var2 = var2 != 0 | ((bf) (var3)).a(this, 0) ? 1 : 0;
+                  var2 = var2 != 0 | ((bf) (var3)).containsUnit(this, 0) ? 1 : 0;
                   var3 = var3.previous;
                 }
                 if (!this.field_wb &&
@@ -449,7 +449,7 @@ abstract class SimHuman extends SimUnit {
               this.applyVelocity((byte) 38);
               if (!(!this.stepTowardTarget(2))) {
                 this.setState(0, (byte) -89);
-                this.l((byte) 111);
+                this.decideAction((byte) 111);
               }
               break regionExit1;
             }
@@ -458,7 +458,7 @@ abstract class SimHuman extends SimUnit {
               this.field_kb = this.field_kb + 1;
               if (!(fieldTemp$3 < 20)) {
                 this.field_kb = 0;
-                this.l((byte) 111);
+                this.decideAction((byte) 111);
               }
               break regionExit1;
             }
@@ -467,7 +467,7 @@ abstract class SimHuman extends SimUnit {
               this.field_kb = this.field_kb + 1;
               if (!(fieldTemp$4 < 20)) {
                 this.field_kb = 0;
-                if (!(!this.field_mb.b(true))) {
+                if (!(!this.field_mb.isFinished(true))) {
                   this.field_mb = null;
                   this.setState(0, (byte) -89);
                   this.needsSync = true;
@@ -492,7 +492,7 @@ abstract class SimHuman extends SimUnit {
                 this.field_kb = this.field_kb + 1;
                 if (20 <= fieldTemp$6) {
                   this.field_kb = 0;
-                  this.l((byte) 111);
+                  this.decideAction((byte) 111);
                 }
               }
             }
@@ -528,9 +528,9 @@ abstract class SimHuman extends SimUnit {
             }
           } else {
             var9 = (SimZombie) (param1);
-            if (var9.q(param3 ^ -126)) {
+            if (var9.isVisibleToHumans(param3 ^ -126)) {
               if (param0 &&
-                !var9.p((byte) 76)) {
+                !var9.isFeared((byte) 76)) {
                 return;
               }
               var6 = this.field_ub[param2] - param1.getX((byte) -112);
@@ -595,11 +595,11 @@ abstract class SimHuman extends SimUnit {
         this.field_rb = 0;
         this.field_nb = null;
         this.field_xb = 0;
-        this.field_rb = hp.a((byte) 43, g.field_a, 200);
+        this.field_rb = hp.nextBoundedInt((byte) 43, g.field_a, 200);
         this.field_ub = new int[43];
         this.field_qb = new int[43];
         this.resetFleePoints((byte) 119);
-        this.field_kb = hp.a((byte) 20, g.field_a, 20);
+        this.field_kb = hp.nextBoundedInt((byte) 20, g.field_a, 20);
     }
 
     final boolean isZombieWithin(boolean param0, int param1, int param2) {
@@ -636,7 +636,7 @@ abstract class SimHuman extends SimUnit {
               while (var13 instanceof SimEntity) {
                 var14 = (SimEntity) (var13);
                 if (var13 instanceof SimZombie &&
-                  ((SimZombie) (var13)).q(-127) || var14 instanceof og) {
+                  ((SimZombie) (var13)).isVisibleToHumans(-127) || var14 instanceof og) {
                   var15 = var14.getX((byte) -112);
                   var16 = var14.getY(1829947600);
                   var17 = -var8 + var15;
@@ -704,7 +704,7 @@ abstract class SimHuman extends SimUnit {
         int var3 = this.getY(1829947600);
         int var4 = 0;
         if (param0 < 90) {
-          this.l((byte) 59);
+          this.decideAction((byte) 59);
         }
         while (-1 + this.field_lb > var4) {
           this.field_ub[var4] = var2 + LobbyPlayer.field_dc[var4];
@@ -764,7 +764,7 @@ abstract class SimHuman extends SimUnit {
         this.setState(0, (byte) -89);
     }
 
-    abstract void l(byte param0);
+    abstract void decideAction(byte param0);
 
     static {
         field_jb = "";

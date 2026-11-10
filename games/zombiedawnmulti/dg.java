@@ -44,10 +44,10 @@ final class dg extends WidgetContainer implements ButtonActivationListener {
           if (this.field_N != param2) {
             if (param2 != this.field_P) {
               if (param2 == this.field_H) {
-                bo.b(4);
+                bo.requestPlayAsGuest(4);
               }
             } else {
-              hb.a(0);
+              hb.openAccountCreation(0);
             }
           } else {
             qe.c((byte) 106);
@@ -131,9 +131,9 @@ final class dg extends WidgetContainer implements ButtonActivationListener {
         this.field_P.field_x = LoginForm.field_I;
         this.field_H.field_A = (WidgetListener) (this);
         this.field_H.field_x = de.field_a;
-        this.b((byte) 45, this.field_N);
-        this.b((byte) 70, this.field_P);
-        this.b((byte) 60, this.field_H);
+        this.addChild((byte) 45, this.field_N);
+        this.addChild((byte) 70, this.field_P);
+        this.addChild((byte) 60, this.field_H);
     }
 
     final boolean handleKeyInput(int param0, char param1, UiWidget param2, int param3) {
@@ -149,13 +149,13 @@ final class dg extends WidgetContainer implements ButtonActivationListener {
             return true;
           }
           if (98 == param0) {
-            stackIn_6_0 = this.a((byte) -1, param2);
+            stackIn_6_0 = this.focusPreviousChild((byte) -1, param2);
             return stackIn_6_0;
           }
           if (param0 != 99) {
             return false;
           }
-          stackIn_10_0 = this.a(78, param2);
+          stackIn_10_0 = this.focusNextChild(78, param2);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

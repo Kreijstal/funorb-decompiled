@@ -268,7 +268,7 @@ final class jj extends SceneObject {
           var5 = this.field_Q;
           var6 = PortalEntryEvent.field_m.field_D[var5][0];
           var7 = PortalEntryEvent.field_m.field_D[var5][1];
-          var8 = am.a(this.field_R, var7, this.field_C, param0 ^ -10135, var6);
+          var8 = am.createTeamColouredSprite(this.field_R, var7, this.field_C, param0 ^ -10135, var6);
           if (this.field_G) {
             stackIn_9_0 = QuickChatCategoryRegistry.field_d[1];
             if (3 != this.field_J) {

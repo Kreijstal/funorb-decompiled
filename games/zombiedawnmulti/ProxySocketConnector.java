@@ -10,7 +10,7 @@ final class ProxySocketConnector extends SocketConnector {
     private java.net.ProxySelector field_l;
     static String field_k;
 
-    final static java.net.URL a(String param0, int param1, byte param2, String param3, java.net.URL param4) {
+    final static java.net.URL applyUrlPathParameters(String param0, int param1, byte param2, String param3, java.net.URL param4) {
         try {
           StringBuilder discarded$0 = null;
           StringBuilder discarded$1 = null;
@@ -149,7 +149,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void layoutChatPanel(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var12 = 0;
         int var6_int = 0;
         int var7 = 0;
@@ -171,7 +171,7 @@ final class ProxySocketConnector extends SocketConnector {
           ec.field_b.setBounds(param5, 0, -DraggableWidget.field_E.field_zb + (SimEntity.field_z.field_zb - param2), param2, -3344);
           DraggableWidget.field_E.setBounds(param5, 0, DraggableWidget.field_E.field_zb, param2 + ec.field_b.field_zb, param0 - 3346);
           var7 = var7 - (2 + param5);
-          tn.field_A.a(param3, 2, param3 + (param0 + param2) + 485, 5, var7 - 5, param0 ^ -31467, 5);
+          tn.field_A.setBoundsAndLayout(param3, 2, param3 + (param0 + param2) + 485, 5, var7 - 5, param0 ^ -31467, 5);
           if (ra.field_f != null) {
             ra.field_f.setWidgetBounds(tn.field_A.field_x, tn.field_A.field_Q, 28972, tn.field_A.field_zb, tn.field_A.field_z);
           }
@@ -399,7 +399,7 @@ final class ProxySocketConnector extends SocketConnector {
         this.field_l = java.net.ProxySelector.getDefault();
     }
 
-    final java.net.Socket b(int param0) throws IOException {
+    final java.net.Socket connect(int param0) throws IOException {
         int var9 = 0;
         int stackIn_7_0 = 0;
         java.net.ProxySelector stackIn_10_0;
@@ -433,7 +433,7 @@ final class ProxySocketConnector extends SocketConnector {
         int var13 = 0;
         var13 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param0 != 4646) {
-          ProxySocketConnector.a(-21, 110, 106, 109, 24, -20);
+          ProxySocketConnector.layoutChatPanel(-21, 110, 106, 109, 24, -20);
         }
         if (!Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
           System.setProperty("java.net.useSystemProxies", "true");

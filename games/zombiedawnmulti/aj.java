@@ -7,7 +7,7 @@ final class aj extends GameEvent {
     static String field_i;
     private int field_k;
 
-    final void a(int param0, GameScreen param1) {
+    final void apply(int param0, GameScreen param1) {
         if (param0 != 0) {
           return;
         }
@@ -18,7 +18,7 @@ final class aj extends GameEvent {
         }
     }
 
-    final static void a(pd param0, int param1, int param2, int param3, int param4, int param5, int param6, BitmapFont param7, int param8, int param9, int param10, int param11, pd param12, int param13, pd param14, BitmapFont param15, int param16, int param17, int param18, byte param19) {
+    final static void initializeLobbyUi(pd param0, int param1, int param2, int param3, int param4, int param5, int param6, BitmapFont param7, int param8, int param9, int param10, int param11, pd param12, int param13, pd param14, BitmapFont param15, int param16, int param17, int param18, byte param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -36,13 +36,13 @@ final class aj extends GameEvent {
           wn.field_u = param7;
           SecondaryNodeDeque.field_c = param15;
           if (param19 <= 50) {
-            aj.a(-22, false, -26);
+            aj.findMenuOptionAt(-22, false, -26);
           }
-          MessageDialog.c(param13, 20341, param3, param8, param11);
-          cb.a(param17, param10, -8388, param0);
+          MessageDialog.setMenuLayoutMetrics(param13, 20341, param3, param8, param11);
+          cb.setMenuFrameAndPadding(param17, param10, -8388, param0);
           wq.a(param5, param14, param1, param12, param9, false);
           ei.a(param4, 25938, param2);
-          p.a(param18, param6, false, param16);
+          p.setMenuOptionMetrics(param18, param6, false, param16);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -82,7 +82,7 @@ final class aj extends GameEvent {
         }
     }
 
-    final static int a(int param0, boolean param1, int param2) {
+    final static int findMenuOptionAt(int param0, boolean param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -110,7 +110,7 @@ final class aj extends GameEvent {
               var6 = vh.measureText(true, -121, eo.field_e[var3_int]);
               var7 = NetworkGameClient.field_x - (var6 >> 1);
               var4 = var4 + pb.field_b;
-              if (IntrusiveDeque.a(param0, -GameCharacter.field_db + var7, param2, (GameCharacter.field_db << 1) + var6, var4, MusicPatch.field_n + (MessageDialog.field_tb << 1), 93)) {
+              if (IntrusiveDeque.isPointInRect(param0, -GameCharacter.field_db + var7, param2, (GameCharacter.field_db << 1) + var6, var4, MusicPatch.field_n + (MessageDialog.field_tb << 1), 93)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }
@@ -127,9 +127,9 @@ final class aj extends GameEvent {
         }
     }
 
-    final void a(int param0, boolean param1, int param2, int param3) {
+    final void drawDebugOverlay(int param0, boolean param1, int param2, int param3) {
         if (!param1) {
-          this.a(-96, true, 85, -17);
+          this.drawDebugOverlay(-96, true, 85, -17);
         }
     }
 
@@ -146,7 +146,7 @@ final class aj extends GameEvent {
         field_l = null;
     }
 
-    final static void a(int param0, int param1, byte param2) {
+    final static void setTooltipAnchor(int param0, int param1, byte param2) {
         int var3 = -79 / ((param2 + 42) / 32);
         hl.field_a = param1;
         tn.field_z = param0;

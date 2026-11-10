@@ -14,7 +14,7 @@ final class sa extends IntrusiveNode {
     private int field_g;
     private int field_m;
 
-    final static String a(String param0, int param1, String param2, String param3) {
+    final static String replaceLiteral(String param0, int param1, String param2, String param3) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -44,7 +44,7 @@ final class sa extends IntrusiveNode {
           var5 = param2.length();
           var6 = param3.length();
           if (param1 <= 53) {
-            sa.a((TriangleMesh) null, (int[]) null, false, (int[]) null, (byte) -11, true, true);
+            sa.transformAndProjectMesh((TriangleMesh) null, (int[]) null, false, (int[]) null, (byte) -11, true, true);
           }
           if (0 == var5) {
             throw new IllegalArgumentException("Key cannot have zero length");
@@ -109,13 +109,13 @@ final class sa extends IntrusiveNode {
         }
     }
 
-    final boolean b(boolean param0) {
+    final boolean isFinished(boolean param0) {
         RuntimeException var2 = null;
         boolean stackIn_10_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            this.a(-16, -55, 69);
+            this.containsPoint(-16, -55, 69);
           }
           stackIn_10_0 = (this.field_h >= this.field_l) && (this.field_k == 0);
           return stackIn_10_0;
@@ -126,7 +126,7 @@ final class sa extends IntrusiveNode {
         }
     }
 
-    final void d(int param0) {
+    final void finish(int param0) {
         this.field_k = 0;
         if (param0 >= -89) {
           return;
@@ -138,7 +138,7 @@ final class sa extends IntrusiveNode {
         }
     }
 
-    final void c(int param0) {
+    final void tick(int param0) {
         int fieldTemp$0 = 0;
         boolean stackIn_8_0 = false;
         int stackIn_17_0 = 0;
@@ -153,7 +153,7 @@ final class sa extends IntrusiveNode {
         int var6 = 0;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          if (this.b(true)) {
+          if (this.isFinished(true)) {
             return;
           }
           boolean decompiledFrameCompleted0 = true;
@@ -161,7 +161,7 @@ final class sa extends IntrusiveNode {
           this.field_m = this.field_m + 1;
           if (fieldTemp$0 > 10) {
             this.field_m = 0;
-            var2 = this.field_i.entities.c(87);
+            var2 = this.field_i.entities.last(87);
             while (var2 instanceof SimEntity) {
               stackOut_7_0 = var2 instanceof SimHuman;
               stackIn_17_0 = stackOut_7_0 ? 1 : 0;
@@ -218,7 +218,7 @@ final class sa extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 >= -53) {
           return;
         }
@@ -229,7 +229,7 @@ final class sa extends IntrusiveNode {
         }
     }
 
-    final static void a(TriangleMesh param0, int[] param1, boolean param2, int[] param3, byte param4, boolean param5, boolean param6) {
+    final static void transformAndProjectMesh(TriangleMesh param0, int[] param1, boolean param2, int[] param3, byte param4, boolean param5, boolean param6) {
         int stackIn_60_0 = 0;
         int stackIn_60_1 = 0;
         RuntimeException stackIn_70_0 = null;
@@ -412,7 +412,7 @@ final class sa extends IntrusiveNode {
             }
             break;
           }
-          ho.a(param0, var8, var7_int, param6, 16634);
+          ho.sortMeshFacesByDepth(param0, var8, var7_int, param6, 16634);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -440,7 +440,7 @@ final class sa extends IntrusiveNode {
         }
     }
 
-    final void a(int param0, byte param1, int param2) {
+    final void setPosition(int param0, byte param1, int param2) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
@@ -488,7 +488,7 @@ final class sa extends IntrusiveNode {
         }
     }
 
-    final boolean a(int param0, int param1, int param2) {
+    final boolean containsPoint(int param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -496,7 +496,7 @@ final class sa extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 17310) {
-            this.c(-105);
+            this.tick(-105);
           }
           var4_int = -this.field_p + param0;
           var5 = -this.field_o + param2;

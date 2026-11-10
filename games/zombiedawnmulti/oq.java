@@ -67,7 +67,7 @@ final class oq extends TextWidgetPainter {
         }
     }
 
-    final static void c(byte param0) {
+    final static void toggleNoticeBar(byte param0) {
         if (PowerupCommand.field_p) {
           WidgetContainer.field_E = 0;
           PowerupCommand.field_p = false;
@@ -75,13 +75,13 @@ final class oq extends TextWidgetPainter {
         } else {
           PowerupCommand.field_p = true;
           if (pp.field_n) {
-            TranslatedUiText.a((byte) -86, 21);
+            TranslatedUiText.openPowerupInfoPage((byte) -86, 21);
           }
         }
         if (param0 >= 117) {
           return;
         }
-        oq.c((byte) -11);
+        oq.toggleNoticeBar((byte) -11);
     }
 
     public oq() {

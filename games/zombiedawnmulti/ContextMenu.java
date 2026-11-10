@@ -54,7 +54,7 @@ final class ContextMenu extends UiComponent {
           return;
         }
         var8Lifetime1 = MatchingTextValidator.a(param1, (byte) 30, var6, param4);
-        var9 = IntrusiveNode.a(true, param3, param2, var7Lifetime1);
+        var9 = IntrusiveNode.placePopupVertically(true, param3, param2, var7Lifetime1);
         this.setBounds(var7Lifetime1, var9, var6, var8Lifetime1, -3344);
         for (var10 = 0; this.field_Vb > var10; var10++) {
           this.field_Tb[var10].setIconLabelBounds(this.field_Kb, param0 - 4540, this.field_Wb, var6 - this.field_Jb * 2, this.field_Jb, this.field_Wb * var10 + this.field_Qb, this.field_Pb);
@@ -62,7 +62,7 @@ final class ContextMenu extends UiComponent {
         return;
     }
 
-    final int e(boolean param0, int param1) {
+    final int updateAndPollAction(boolean param0, int param1) {
         int var3 = 0;
         int var4 = ZombieDawnMulti.field_E ? 1 : 0;
         this.a(-11838, param0);
@@ -76,7 +76,7 @@ final class ContextMenu extends UiComponent {
         }
         if (param1 != -1839469055) {
           String var5 = (String) null;
-          this.a((byte) 97, (String) null, -128);
+          this.addItem((byte) 97, (String) null, -128);
         }
         if (kd.field_b != 0) {
           return -1;
@@ -88,10 +88,10 @@ final class ContextMenu extends UiComponent {
         this(param0, param0.field_Ub, param0.field_Fb, param0.field_Rb, param0.field_Jb, param0.field_Pb, param0.field_Kb, param0.field_Qb, param0.field_Wb);
     }
 
-    final boolean d(byte param0) {
+    final boolean isWaitingForAction(byte param0) {
         if (param0 < 71) {
           PacketBuffer var3 = (PacketBuffer) null;
-          ContextMenu.a(3, (PacketBuffer) null);
+          ContextMenu.decodePackedRankedEntry(3, (PacketBuffer) null);
         }
         if (this.field_Ob != -2) {
           return false;
@@ -116,7 +116,7 @@ final class ContextMenu extends UiComponent {
         field_Nb = null;
     }
 
-    final static void a(int param0, PacketBuffer param1) {
+    final static void decodePackedRankedEntry(int param0, PacketBuffer param1) {
         int var2_int = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;
@@ -161,7 +161,7 @@ final class ContextMenu extends UiComponent {
         }
     }
 
-    final void a(byte param0, String param1, int param2) {
+    final void addItem(byte param0, String param1, int param2) {
         try {
           this.field_Tb[this.field_Vb] = new AlignedIconLabel(0L, (UiComponent) null, (UiComponent) null, this.field_Rb, (Sprite) null, param1);
           this.field_Tb[this.field_Vb].field_X = this.field_Ub;
@@ -171,14 +171,14 @@ final class ContextMenu extends UiComponent {
           this.field_Xb[this.field_Vb] = param2;
           this.field_Vb = this.field_Vb + 1;
           if (param0 != -118) {
-            this.d((byte) 122);
+            this.isWaitingForAction((byte) 122);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "sn.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final void a(Sprite param0, int param1, String param2, boolean param3) {
+    final void addItemWithIcon(Sprite param0, int param1, String param2, boolean param3) {
         try {
           this.field_Tb[this.field_Vb] = new AlignedIconLabel(0L, (UiComponent) null, (UiComponent) null, this.field_Rb, param0, param2);
           this.field_Tb[this.field_Vb].field_X = this.field_Ub;

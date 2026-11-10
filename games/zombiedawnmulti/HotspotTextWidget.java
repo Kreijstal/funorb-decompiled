@@ -131,7 +131,7 @@ class HotspotTextWidget extends ButtonWidget {
         wi var5;
         int var6;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
-        var4 = (wi) (this.field_T.c(105));
+        var4 = (wi) (this.field_T.last(105));
         if (param0 != 23) {
           return (wi) null;
         }
@@ -146,7 +146,7 @@ class HotspotTextWidget extends ButtonWidget {
             }
             var5 = var5.field_i;
           }
-          var4 = (wi) (this.field_T.b(6));
+          var4 = (wi) (this.field_T.previous(6));
         }
         return null;
     }
@@ -191,7 +191,7 @@ class HotspotTextWidget extends ButtonWidget {
         if (param2 != -4) {
           field_S = 74;
         }
-        this.setWidgetBounds(param3, param1, param2 ^ -28976, param0, ((rk) ((Object) this.painter)).a((byte) 39, (UiWidget) (this)));
+        this.setWidgetBounds(param3, param1, param2 ^ -28976, param0, ((rk) ((Object) this.painter)).getPreferredHeight((byte) 39, (UiWidget) (this)));
     }
 
     final void rebuildHotspotBounds(byte param0) {
@@ -220,7 +220,7 @@ class HotspotTextWidget extends ButtonWidget {
           this.rebuildHotspotBounds((byte) -110);
         }
         var3 = (rk) ((Object) this.painter);
-        var4 = var3.a((UiWidget) (this), -102);
+        var4 = var3.getTextLayout((UiWidget) (this), -102);
         while (true) {
           var5 = this.field_j.indexOf("<hotspot=", var2);
           if (var5 == -1) {
@@ -230,19 +230,19 @@ class HotspotTextWidget extends ButtonWidget {
           var6 = this.field_j.substring(var5 + 9, var7);
           var7Lifetime1 = Integer.parseInt(var6);
           var2 = this.field_j.indexOf("</hotspot>", var5);
-          var8 = var4.a((byte) -126, var5);
-          var9 = var4.a((byte) -126, var2);
+          var8 = var4.lineIndexForCharacter((byte) -126, var5);
+          var9 = var4.lineIndexForCharacter((byte) -126, var2);
           var10 = null;
           for (var11 = var8; var9 >= var11; var11++) {
             var12 = var4.field_e[var11];
             if (var8 == var11) {
-              stackIn_10_0 = var4.a(52224, var5);
+              stackIn_10_0 = var4.characterX(52224, var5);
             } else {
               stackIn_10_0 = var12.field_e[0];
             }
             var13 = stackIn_10_0;
             if (var9 == var11) {
-              stackIn_15_0 = var4.a(52224, var2);
+              stackIn_15_0 = var4.characterX(52224, var2);
             } else {
               if (var12 == null) {
                 stackIn_15_0 = 0;
@@ -251,12 +251,12 @@ class HotspotTextWidget extends ButtonWidget {
               }
             }
             var14 = stackIn_15_0;
-            var15 = new wi(var7Lifetime1, var13, var12.field_d, -var13 + var14, Math.max(var3.a(0), var12.field_h - var12.field_d));
+            var15 = new wi(var7Lifetime1, var13, var12.field_d, -var13 + var14, Math.max(var3.getLineHeight(0), var12.field_h - var12.field_d));
             if (var10 != null) {
               ((wi) (var10)).field_i = var15;
             }
             var10 = var15;
-            this.field_T.a(var15, false);
+            this.field_T.addFirst(var15, false);
           }
         }
     }
@@ -328,10 +328,10 @@ class HotspotTextWidget extends ButtonWidget {
         rk var5 = (rk) ((Object) this.painter);
         wi var6 = this.field_V;
         if (var6 != null) {
-          var7 = var5.a(false, param3, (UiWidget) (this));
-          var8 = var5.a((UiWidget) (this), 0, param1);
+          var7 = var5.getTextOriginX(false, param3, (UiWidget) (this));
+          var8 = var5.getTextOriginY((UiWidget) (this), 0, param1);
           do {
-            hl.a(-2 + var6.field_f + var8, var7 - (-var6.field_k + 2), (byte) 126, var6.field_j + 2, 2 + var6.field_n);
+            hl.drawDottedRectangle(-2 + var6.field_f + var8, var7 - (-var6.field_k + 2), (byte) 126, var6.field_j + 2, 2 + var6.field_n);
             var6 = var6.field_i;
           } while (var6 != null);
         }
@@ -399,7 +399,7 @@ class HotspotTextWidget extends ButtonWidget {
           var1_int = ce.field_k;
           var2 = 0;
           if (ho.field_q == 2) {
-            var3_long = bl.a((byte) 49) - UnitStateEvent.field_s;
+            var3_long = bl.monotonicMillis((byte) 49) - UnitStateEvent.field_s;
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (var2 < 0) {
               var2 = 0;
@@ -456,7 +456,7 @@ class HotspotTextWidget extends ButtonWidget {
             stackIn_39_0 = 0;
             stackIn_39_1 = var6;
             stackIn_40_2 = !(var4 < 0);
-            var7Lifetime1 = hn.a(stackIn_39_0, stackIn_39_1, stackIn_40_2);
+            var7Lifetime1 = hn.measureMenuText(stackIn_39_0, stackIn_39_1, stackIn_40_2);
             var8Lifetime1 = am.field_c - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
               var1_int = var1_int + ResizableDialog.field_bb;
@@ -467,7 +467,7 @@ class HotspotTextWidget extends ButtonWidget {
               }
               var9 = stackIn_44_0;
               if (var9 != null) {
-                var9.a(var1_int, -QuickChatHelpDialog.field_Gb + var8Lifetime1, var7Lifetime1 + (QuickChatHelpDialog.field_Gb << 1), me.field_h + (DateInputWidget.field_G << 1), 12018);
+                var9.drawFrame(var1_int, -QuickChatHelpDialog.field_Gb + var8Lifetime1, var7Lifetime1 + (QuickChatHelpDialog.field_Gb << 1), me.field_h + (DateInputWidget.field_G << 1), 12018);
               }
               var1_int = var1_int + DateInputWidget.field_G;
             }

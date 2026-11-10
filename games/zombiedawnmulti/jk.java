@@ -114,7 +114,7 @@ final class jk {
 
     final static void a(int param0, int param1) {
         CipherPacketBuffer var2 = ma.field_a;
-        var2.b((byte) -35, param0);
+        var2.writeCipheredOpcode((byte) -35, param0);
         var2.writeByte(-120, param1);
         var2.writeByte(121, 1);
     }

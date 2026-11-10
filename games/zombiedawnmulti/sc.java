@@ -14,10 +14,10 @@ final class sc {
     static UiComponent field_d;
     private DualLinkNode field_b;
 
-    final static void a(int param0, Sprite[] param1, String param2, boolean param3, int param4, int param5, int param6, BitmapFont param7, int param8, byte param9, int param10, int param11, int param12, boolean param13, Sprite[] param14) {
+    final static void showFramedMessage(int param0, Sprite[] param1, String param2, boolean param3, int param4, int param5, int param6, BitmapFont param7, int param8, byte param9, int param10, int param11, int param12, boolean param13, Sprite[] param14) {
         try {
-          aj.a(qf.field_c, param8, param4, param0, param5, param10, kk.field_x, param7, param0, param6, SecondaryNodeDeque.field_a, param12, new pd(param14), param12, new pd(param1), param7, DraggableWidget.field_N, ic.field_g, IndexedSpriteState.field_c, (byte) 70);
-          gk.a(param13, 2, param2, param11, param3);
+          aj.initializeLobbyUi(qf.field_c, param8, param4, param0, param5, param10, kk.field_x, param7, param0, param6, SecondaryNodeDeque.field_a, param12, new pd(param14), param12, new pd(param1), param7, DraggableWidget.field_N, ic.field_g, IndexedSpriteState.field_c, (byte) 70);
+          gk.showNoticeMenu(param13, 2, param2, param11, param3);
           if (param9 != -103) {
             field_a = true;
           }
@@ -26,7 +26,7 @@ final class sc {
         }
     }
 
-    final DualLinkNode c(byte param0) {
+    final DualLinkNode nextInTraversal(byte param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int var3;
@@ -69,7 +69,7 @@ final class sc {
         return var8;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_j = null;
         field_c = null;
         if (!param0) {
@@ -80,7 +80,7 @@ final class sc {
         field_d = null;
     }
 
-    final void a(int param0, DualLinkNode param1, long param2) {
+    final void put(int param0, DualLinkNode param1, long param2) {
         DualLinkNode var5 = null;
         try {
           if (param1.secondaryNext != null) {
@@ -97,7 +97,7 @@ final class sc {
         }
     }
 
-    final DualLinkNode b(byte param0) {
+    final DualLinkNode nextWithSameKey(byte param0) {
         DualLinkNode var2 = null;
         DualLinkNode var3 = null;
         int var4 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -107,7 +107,7 @@ final class sc {
           return null;
         }
         if (param0 != 68) {
-          sc.a(false);
+          sc.releaseStatics(false);
           var2 = this.field_k[(int)(this.field_h & (long)(this.field_i - 1))];
           while (this.field_b != var2) {
             if (this.field_h == this.field_b.secondaryKey) {
@@ -133,16 +133,16 @@ final class sc {
         return null;
     }
 
-    final DualLinkNode a(byte param0) {
+    final DualLinkNode firstInTraversal(byte param0) {
         this.field_g = 0;
         if (param0 != 7) {
-          sc.d((byte) -11);
-          return this.c((byte) 108);
+          sc.closeChatContextState((byte) -11);
+          return this.nextInTraversal((byte) 108);
         }
-        return this.c((byte) 108);
+        return this.nextInTraversal((byte) 108);
     }
 
-    final DualLinkNode a(long param0, int param1) {
+    final DualLinkNode findByKey(long param0, int param1) {
         DualLinkNode var4;
         DualLinkNode var5;
         int var6;
@@ -188,7 +188,7 @@ final class sc {
         return var5Lifetime1;
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void showLoginDialog(int param0, boolean param1) {
         if (param0 >= -71) {
           field_f = -61;
           io.a(-21113, false, param1);
@@ -197,7 +197,7 @@ final class sc {
         io.a(-21113, false, param1);
     }
 
-    final static void d(byte param0) {
+    final static void closeChatContextState(byte param0) {
         if (NavigationGrid.field_m != null) {
           ec.field_b = NavigationGrid.field_m;
           DraggableWidget.field_E = ke.field_j;
@@ -222,7 +222,7 @@ final class sc {
         IntrusiveNode.field_c = null;
     }
 
-    final static void a(int param0) {
+    final static void drawFramedMenu(int param0) {
         int var1 = 0;
         int var2 = 0;
         int var1Lifetime1;
@@ -230,14 +230,14 @@ final class sc {
         if (param0 != 0) {
           field_d = (UiComponent) null;
           var1 = ReportAbuseDialog.d(false);
-          var2 = UiTheme.a((byte) -99);
-          MusicPatch.field_l.a(-la.field_m + ce.field_k, -um.field_a + ZombieDawnMulti.field_H, var1 + (um.field_a << 1), (la.field_m << 1) + var2, 12018);
+          var2 = UiTheme.getMenuHeight((byte) -99);
+          MusicPatch.field_l.drawFrame(-la.field_m + ce.field_k, -um.field_a + ZombieDawnMulti.field_H, var1 + (um.field_a << 1), (la.field_m << 1) + var2, 12018);
           HotspotTextWidget.g(param0 + 114);
           return;
         }
         var1Lifetime1 = ReportAbuseDialog.d(false);
-        var2Lifetime1 = UiTheme.a((byte) -99);
-        MusicPatch.field_l.a(-la.field_m + ce.field_k, -um.field_a + ZombieDawnMulti.field_H, var1Lifetime1 + (um.field_a << 1), (la.field_m << 1) + var2Lifetime1, 12018);
+        var2Lifetime1 = UiTheme.getMenuHeight((byte) -99);
+        MusicPatch.field_l.drawFrame(-la.field_m + ce.field_k, -um.field_a + ZombieDawnMulti.field_H, var1Lifetime1 + (um.field_a << 1), (la.field_m << 1) + var2Lifetime1, 12018);
         HotspotTextWidget.g(param0 + 114);
     }
 

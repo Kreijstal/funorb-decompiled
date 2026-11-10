@@ -6,12 +6,12 @@ final class QuickChatPhraseRegistry {
     private ResourceArchive field_b;
     private ResourceArchive field_c;
 
-    final static void a(byte param0, QuickChatMenu param1) {
+    final static void addQuickChatSubmenu(byte param0, QuickChatMenu param1) {
         try {
           rp.field_l.a((byte) 50, param1);
           if (param0 < 42) {
             QuickChatMenu var3 = (QuickChatMenu) null;
-            QuickChatPhraseRegistry.a((byte) 16, (QuickChatMenu) null);
+            QuickChatPhraseRegistry.addQuickChatSubmenu((byte) 16, (QuickChatMenu) null);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "an.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -34,9 +34,9 @@ final class QuickChatPhraseRegistry {
         }
         QuickChatPhraseDefinition var5 = new QuickChatPhraseDefinition();
         if (var4 != null) {
-          var5.a(new PacketBuffer(var4), (byte) 118);
+          var5.decode(new PacketBuffer(var4), (byte) 118);
           if (param0 >= 32768) {
-            var5.c((byte) 100);
+            var5.applyGlobalIds((byte) 100);
             this.field_a.a(var5, (long)param0, 1);
             return var5;
           }
@@ -47,28 +47,28 @@ final class QuickChatPhraseRegistry {
           this.field_a.a(var5, (long)param0, 1);
           return var5;
         }
-        var5.c((byte) 100);
+        var5.applyGlobalIds((byte) 100);
         this.field_a.a(var5, (long)param0, 1);
         return var5;
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void drawRootUiAndOverlay(int param0, boolean param1) {
         BirthDateEntryPanel var2 = null;
         ImageProducerRasterBuffer.field_k.c(param1, -1);
         if (param0 == 1) {
           var2 = ra.field_f;
           if (var2 != null) {
-            var2.a(param0 ^ -112, ImageProducerRasterBuffer.field_k.field_qb, ImageProducerRasterBuffer.field_k.field_w);
+            var2.renderWidgetPassesAndTooltip(param0 ^ -112, ImageProducerRasterBuffer.field_k.field_qb, ImageProducerRasterBuffer.field_k.field_w);
           }
           return;
         }
     }
 
-    final static hf a(int param0) {
+    final static hf createLoginCredentials(int param0) {
         if (param0 != 1) {
           return (hf) null;
         }
-        return new hf(gg.a(91), MusicPatch.c(128));
+        return new hf(gg.getPendingEmail(91), MusicPatch.c(128));
     }
 
     QuickChatPhraseRegistry(int param0, ResourceArchive param1, ResourceArchive param2, dr param3) {

@@ -38,7 +38,7 @@ final class hp extends IntrusiveNode {
         field_h = null;
     }
 
-    final static int a(byte param0, Random param1, int param2) {
+    final static int nextBoundedInt(byte param0, Random param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -62,7 +62,7 @@ final class hp extends IntrusiveNode {
           do {
             var5 = param1.nextInt();
           } while (var5 >= var3_int);
-          stackIn_11_0 = MidiPcmStream.a(var5, (byte) -87, param2);
+          stackIn_11_0 = MidiPcmStream.floorMod(var5, (byte) -87, param2);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -78,7 +78,7 @@ final class hp extends IntrusiveNode {
         }
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean isFriend(String param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -89,7 +89,7 @@ final class hp extends IntrusiveNode {
           if (param1 != 1020) {
             hp.releaseStatics(-13);
           }
-          stackIn_5_0 = (TriangleMesh.a((byte) -11, param0) != null);
+          stackIn_5_0 = (TriangleMesh.findIgnoreEntry((byte) -11, param0) != null);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -126,14 +126,14 @@ final class hp extends IntrusiveNode {
         var2Lifetime1 = var4;
         while (field_j[0].length > var4) {
           var3 = 16 * var4;
-          field_j[0][var4] = cr.b(ScrollPane.b(var3, 255), ScrollPane.b(-1174404865, var3) << 8);
+          field_j[0][var4] = cr.b(ScrollPane.bitAnd(var3, 255), ScrollPane.bitAnd(-1174404865, var3) << 8);
           field_j[1][var4] = cr.b(var3 << 16, var3 << 8);
-          field_j[2][var4] = cr.b(ScrollPane.b(255, var3 / 2), ScrollPane.b(var3, -234880769) << 8);
+          field_j[2][var4] = cr.b(ScrollPane.bitAnd(255, var3 / 2), ScrollPane.bitAnd(var3, -234880769) << 8);
           field_j[3][var4] = var3 * 65793;
-          field_j[4][var4] = cr.b(ScrollPane.b(1744830974, var3) << 7, var3 << 16);
+          field_j[4][var4] = cr.b(ScrollPane.bitAnd(1744830974, var3) << 7, var3 << 16);
           field_j[5][var4] = var3 << 16;
           field_j[6][var4] = var3 << 16;
-          field_j[7][var4] = cr.b(cr.b(ScrollPane.b(var3, 1020) << 6, ScrollPane.b(var3 << 14, 16718971)), var3);
+          field_j[7][var4] = cr.b(cr.b(ScrollPane.bitAnd(var3, 1020) << 6, ScrollPane.bitAnd(var3 << 14, 16718971)), var3);
           var4++;
         }
         field_i = "You can ask to join this game";

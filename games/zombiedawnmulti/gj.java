@@ -9,13 +9,13 @@ final class gj {
     static boolean field_f;
     static String field_a;
 
-    final static boolean b(int param0) {
+    final static boolean isHighMemoryModeAvailable(int param0) {
         if (param0 != -26966) {
-          gj.b(17);
+          gj.isHighMemoryModeAvailable(17);
           if (ng.field_g == null) {
             return false;
           }
-          if (ng.field_g.a(0)) {
+          if (ng.field_g.isResizeAllowed(0)) {
             return true;
           }
           return false;
@@ -23,40 +23,40 @@ final class gj {
         if (ng.field_g == null) {
           return false;
         }
-        if (ng.field_g.a(0)) {
+        if (ng.field_g.isResizeAllowed(0)) {
           return true;
         }
         return false;
     }
 
-    final static void a(int param0) {
+    final static void stopAllSounds(int param0) {
         IntrusiveNode var1 = null;
         int var2 = ZombieDawnMulti.field_E ? 1 : 0;
         if (!FadingDialog.field_H) {
           return;
         }
         try {
-          var1 = fd.field_M.c(54);
+          var1 = fd.field_M.last(54);
           while (var1 instanceof wj) {
-            aa.a(true, ((wj) (var1)).field_m);
+            aa.removeSoundStream(true, ((wj) (var1)).field_m);
             var1 = var1.previous;
           }
-          var1 = qo.field_q.c(53);
+          var1 = qo.field_q.last(53);
           while (var1 instanceof wj) {
-            aa.a(true, ((wj) (var1)).field_m);
+            aa.removeSoundStream(true, ((wj) (var1)).field_m);
             var1 = var1.previous;
           }
           if (param0 != 6962) {
             gj.releaseStatics((byte) 105);
           }
-          var1 = jp.field_c.c(83);
+          var1 = jp.field_c.last(83);
           while (var1 instanceof wj) {
-            aa.a(true, ((wj) (var1)).field_m);
+            aa.removeSoundStream(true, ((wj) (var1)).field_m);
             var1 = var1.previous;
           }
-          fd.field_M.e(-30986);
-          qo.field_q.e(-30986);
-          jp.field_c.e(param0 ^ -25148);
+          fd.field_M.clear(-30986);
+          qo.field_q.clear(-30986);
+          jp.field_c.clear(param0 ^ -25148);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "gj.A(" + param0 + ')');
         }

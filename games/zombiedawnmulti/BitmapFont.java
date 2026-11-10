@@ -82,7 +82,7 @@ abstract class BitmapFont extends DualLinkNode {
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                                  var10 = TriangleMesh.a(var13, -9159);
+                                  var10 = TriangleMesh.parseDecimalInt(var13, -9159);
                                   var11_ref_sb = this.inlineSprites[var10];
                                   if (this.inlineSpriteBaselines == null) {
                                     stackIn_27_0 = var11_ref_sb.field_a;
@@ -131,7 +131,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(MouseInputHandler.a((char) var8, (byte) -126) & 255);
+              var8 = (char)(MouseInputHandler.encodeExtendedChar((char) var8, (byte) -126) & 255);
               if (this.kerning != null &&
                 var5 != 0) {
                 param1 = param1 + this.kerning[(var5 << 8) + var8];
@@ -216,7 +216,7 @@ abstract class BitmapFont extends DualLinkNode {
     }
 
     final int charWidth(char param0) {
-        return this.glyphAdvances[MouseInputHandler.a(param0, (byte) -41) & 255];
+        return this.glyphAdvances[MouseInputHandler.encodeExtendedChar(param0, (byte) -41) & 255];
     }
 
     final void c(String param0, int param1, int param2, int param3, int param4) {
@@ -288,7 +288,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 if (var15.startsWith("img=")) {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
-                                    var16_int = TriangleMesh.a(var18, -9159);
+                                    var16_int = TriangleMesh.parseDecimalInt(var18, -9159);
                                     var4 = var4 + this.inlineSprites[var16_int].field_f;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -373,7 +373,7 @@ abstract class BitmapFont extends DualLinkNode {
             if (var9 == -1) {
               if (var14 != 0) {
                 discarded$3 = field_q.append((char) var14);
-                var14 = (char)(MouseInputHandler.a((char) var14, (byte) -89) & 255);
+                var14 = (char)(MouseInputHandler.encodeExtendedChar((char) var14, (byte) -89) & 255);
                 var4 = var4 + this.glyphAdvances[var14];
                 if (this.kerning != null &&
                   var10 != 0) {
@@ -434,7 +434,7 @@ abstract class BitmapFont extends DualLinkNode {
         int var5 = 0;
         if (param0 != 32) {
           param2 = param2 - this.baselineHeight;
-          var5 = MouseInputHandler.a(param0, (byte) -99) & 255;
+          var5 = MouseInputHandler.encodeExtendedChar(param0, (byte) -99) & 255;
           this.drawGlyph(var5, param1 + this.field_B[var5], param2 + this.field_G[var5], this.field_y[var5], this.field_x[var5], param3, false);
         }
     }
@@ -472,7 +472,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 }
                               } else {
                                 var7 = (CharSequence) ((Object) param0.substring(5));
-                                currentShadowColor = ho.a(var7, 16, 3);
+                                currentShadowColor = ho.parseInteger(var7, 16, 3);
                               }
                             } else {
                               underlineColor = -1;
@@ -482,7 +482,7 @@ abstract class BitmapFont extends DualLinkNode {
                           }
                         } else {
                           var6 = (CharSequence) ((Object) param0.substring(2));
-                          underlineColor = ho.a(var6, 16, 3);
+                          underlineColor = ho.parseInteger(var6, 16, 3);
                         }
                       } else {
                         field_u = -1;
@@ -492,21 +492,21 @@ abstract class BitmapFont extends DualLinkNode {
                     }
                   } else {
                     var5 = (CharSequence) ((Object) param0.substring(4));
-                    field_u = ho.a(var5, 16, 3);
+                    field_u = ho.parseInteger(var5, 16, 3);
                   }
                 } else {
                   currentAlpha = defaultAlpha;
                 }
               } else {
                 var4 = (CharSequence) ((Object) param0.substring(6));
-                currentAlpha = TriangleMesh.a(var4, -9159);
+                currentAlpha = TriangleMesh.parseDecimalInt(var4, -9159);
               }
             } else {
               currentTextColor = defaultTextColor;
             }
           } else {
             var3 = (CharSequence) ((Object) param0.substring(4));
-            currentTextColor = ho.a(var3, 16, 3);
+            currentTextColor = ho.parseInteger(var3, 16, 3);
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -662,7 +662,7 @@ abstract class BitmapFont extends DualLinkNode {
                               if (!(!var8.startsWith("img="))) {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
-                                  var9_int = TriangleMesh.a(var10, -9159);
+                                  var9_int = TriangleMesh.parseDecimalInt(var10, -9159);
                                   var4 = var4 + this.inlineSprites[var9_int].field_f;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -699,7 +699,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var2 == -1)) {
-              var7 = (char)(MouseInputHandler.a((char) var7, (byte) -117) & 255);
+              var7 = (char)(MouseInputHandler.encodeExtendedChar((char) var7, (byte) -117) & 255);
               var4 = var4 + this.glyphAdvances[var7];
               if (this.kerning != null &&
                 var3 != 0) {

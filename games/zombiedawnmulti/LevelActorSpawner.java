@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class LevelActorSpawner extends LevelData {
-    private final boolean c(int param0, int param1, int param2) {
+    private final boolean isOpenTile(int param0, int param1, int param2) {
         RuntimeException var4 = null;
         boolean stackIn_10_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -12,7 +12,7 @@ final class LevelActorSpawner extends LevelData {
           if (param0 != 33554432) {
             this.createObjects(-55);
           }
-          stackIn_10_0 = ((33554432 & this.b(param2, (byte) -124, param1)) == 0) || !((this.b(param2, (byte) -75, param1) >> 7 & 511) <= 64);
+          stackIn_10_0 = ((33554432 & this.getTile(param2, (byte) -124, param1)) == 0) || !((this.getTile(param2, (byte) -75, param1) >> 7 & 511) <= 64);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -21,7 +21,7 @@ final class LevelActorSpawner extends LevelData {
         }
     }
 
-    private final int b(int param0, int param1, int param2) {
+    private final int computeWallTile(int param0, int param1, int param2) {
         int discarded$0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_17_0 = 0;
@@ -47,179 +47,179 @@ final class LevelActorSpawner extends LevelData {
         int var10Lifetime1;
         var12 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var4_int = this.b(param1, (byte) -83, param0);
+          var4_int = this.getTile(param1, (byte) -83, param0);
           var4_int = var4_int & -67108865;
           if (param2 != -8130) {
-            discarded$0 = this.b(-33, (byte) 40, -88);
+            discarded$0 = this.getTile(-33, (byte) 40, -88);
           }
           var5 = (var4_int & 65408) >> 7;
           if ((var4_int & 33554432) != 0 &&
             var5 == 0) {
             var4_int = var4_int & -65409;
-            if (!this.c(33554432, param0 + 1, param1) &&
-              !this.a(param1, (byte) 2, 1 + param0)) {
+            if (!this.isOpenTile(33554432, param0 + 1, param1) &&
+              !this.isBlockedBelow(param1, (byte) 2, 1 + param0)) {
               stackIn_17_0 = 1;
             } else {
               stackIn_17_0 = 0;
             }
             var6 = stackIn_17_0;
-            var7 = this.c(33554432, param0, param1 + 3) ? 1 : 0;
-            var8 = this.c(33554432, param0, param1 - 1) ? 1 : 0;
-            if (!this.c(33554432, param0 - 1, param1) &&
-              this.a(param1, (byte) 2, param0 - 1)) {
+            var7 = this.isOpenTile(33554432, param0, param1 + 3) ? 1 : 0;
+            var8 = this.isOpenTile(33554432, param0, param1 - 1) ? 1 : 0;
+            if (!this.isOpenTile(33554432, param0 - 1, param1) &&
+              this.isBlockedBelow(param1, (byte) 2, param0 - 1)) {
               stackIn_24_0 = 0;
             } else {
               stackIn_24_0 = 1;
             }
             boolean decompiledFrameRemainder0 = true;
             var9 = stackIn_24_0;
-            var10 = this.c(param2 ^ -33562562, 1 + param0, param1) ? 1 : 0;
-            if (this.a(param1, (byte) 2, param0) &&
+            var10 = this.isOpenTile(param2 ^ -33562562, 1 + param0, param1) ? 1 : 0;
+            if (this.isBlockedBelow(param1, (byte) 2, param0) &&
               var6 == 0) {
               if (var7 != 0 &&
                 var8 != 0 &&
                 var9 != 0 &&
                 var10 != 0) {
-                var4_int = var4_int | this.a(9, 0);
+                var4_int = var4_int | this.encodeTileSprite(9, 0);
               }
               if (var7 != 0 &&
                 var8 != 0 &&
                 var9 != 0 &&
                 var10 == 0) {
-                var4_int = var4_int | this.a(10, 0);
+                var4_int = var4_int | this.encodeTileSprite(10, 0);
               }
               if (var7 != 0 &&
                 var8 != 0 &&
                 var9 == 0 &&
                 var10 != 0) {
-                var4_int = var4_int | this.a(11, 0);
+                var4_int = var4_int | this.encodeTileSprite(11, 0);
               }
               if (var7 != 0 &&
                 var8 != 0 &&
                 var9 == 0 &&
                 var10 == 0) {
-                var4_int = var4_int | this.a(18, param2 ^ -8130);
+                var4_int = var4_int | this.encodeTileSprite(18, param2 ^ -8130);
               }
               if (var7 != 0 &&
                 var8 == 0 &&
                 var9 != 0 &&
                 var10 != 0) {
-                var4_int = var4_int | this.a(12, 0);
+                var4_int = var4_int | this.encodeTileSprite(12, 0);
               }
               if (var7 != 0 &&
                 var8 == 0 &&
                 var9 != 0 &&
                 var10 == 0) {
-                var4_int = var4_int | this.a(14, 0);
+                var4_int = var4_int | this.encodeTileSprite(14, 0);
               }
               if (var7 != 0 &&
                 var8 == 0 &&
                 var9 == 0 &&
                 var10 != 0) {
-                var4_int = var4_int | this.a(15, 0);
+                var4_int = var4_int | this.encodeTileSprite(15, 0);
               }
               if (var7 != 0 &&
                 var8 == 0 &&
                 var9 == 0 &&
                 var10 == 0) {
-                var4_int = var4_int | this.a(21, param2 ^ -8130);
+                var4_int = var4_int | this.encodeTileSprite(21, param2 ^ -8130);
               }
               if (var7 == 0 &&
                 var8 != 0 &&
                 var9 != 0 &&
                 var10 != 0) {
-                var4_int = var4_int | this.a(13, 0);
+                var4_int = var4_int | this.encodeTileSprite(13, 0);
               }
               if (var7 == 0 &&
                 var8 != 0 &&
                 var9 != 0 &&
                 var10 == 0) {
-                var4_int = var4_int | this.a(16, 0);
+                var4_int = var4_int | this.encodeTileSprite(16, 0);
               }
               if (var7 == 0 &&
                 var8 != 0 &&
                 var9 == 0 &&
                 var10 != 0) {
-                var4_int = var4_int | this.a(17, 0);
+                var4_int = var4_int | this.encodeTileSprite(17, 0);
               }
               if (var7 == 0 &&
                 var8 != 0 &&
                 var9 == 0 &&
                 var10 == 0) {
-                var4_int = var4_int | this.a(20, param2 + 8130);
+                var4_int = var4_int | this.encodeTileSprite(20, param2 + 8130);
               }
               if (var7 == 0 &&
                 var8 == 0 &&
                 var9 != 0 &&
                 var10 != 0) {
-                var4_int = var4_int | this.a(19, 0);
+                var4_int = var4_int | this.encodeTileSprite(19, 0);
               }
               if (var7 == 0 &&
                 var8 == 0 &&
                 var9 != 0 &&
                 var10 == 0) {
-                var4_int = var4_int | this.a(22, param2 + 8130);
+                var4_int = var4_int | this.encodeTileSprite(22, param2 + 8130);
               }
               if (var7 == 0 &&
                 var8 == 0 &&
                 var9 == 0 &&
                 var10 != 0) {
-                var4_int = var4_int | this.a(23, 0);
+                var4_int = var4_int | this.encodeTileSprite(23, 0);
               }
               decompiledFrameRemainder0 = (var7 == 0);
               if ((decompiledFrameRemainder0) &&
                 (decompiledFrameRemainder0 = (var8 == 0)) &&
                 (decompiledFrameRemainder0 = (var9 == 0)) &&
                 (decompiledFrameRemainder0 = (var10 == 0))) {
-                var4_int = var4_int | this.a(24, 0);
+                var4_int = var4_int | this.encodeTileSprite(24, 0);
                 decompiledFrameRemainder0 = (var12 != 0);
               }
             }
             if (decompiledFrameRemainder0) {
-              if (!this.a(param1, (byte) 2, param0) ||
+              if (!this.isBlockedBelow(param1, (byte) 2, param0) ||
                 var6 == 0) {
-                if ((!this.c(param2 ^ -33562562, param0, 1 + param1)) &&
-                  (decompiledFrameRemainder0 = !(!this.c(param2 + 33562562, param0, param1 + 2)))) {
-                  if (this.c(param2 ^ -33562562, 1 + param0, param1) &&
-                    this.c(33554432, -1 + param0, param1)) {
-                    var4_int = var4_int | this.a(6, param2 + 8130);
+                if ((!this.isOpenTile(param2 ^ -33562562, param0, 1 + param1)) &&
+                  (decompiledFrameRemainder0 = !(!this.isOpenTile(param2 + 33562562, param0, param1 + 2)))) {
+                  if (this.isOpenTile(param2 ^ -33562562, 1 + param0, param1) &&
+                    this.isOpenTile(33554432, -1 + param0, param1)) {
+                    var4_int = var4_int | this.encodeTileSprite(6, param2 + 8130);
                     decompiledFrameRemainder0 = (var12 != 0);
                   }
                   if (decompiledFrameRemainder0) {
-                    if (this.c(param2 + 33562562, param0 + 1, param1)) {
-                      var4_int = var4_int | this.a(8, 0);
+                    if (this.isOpenTile(param2 + 33562562, param0 + 1, param1)) {
+                      var4_int = var4_int | this.encodeTileSprite(8, 0);
                       decompiledFrameRemainder0 = (var12 != 0);
                     }
                     if (decompiledFrameRemainder0) {
-                      if (this.c(param2 ^ -33562562, param0 - 1, param1)) {
-                        var4_int = var4_int | this.a(4, 0);
+                      if (this.isOpenTile(param2 ^ -33562562, param0 - 1, param1)) {
+                        var4_int = var4_int | this.encodeTileSprite(4, 0);
                         decompiledFrameRemainder0 = (var12 != 0);
                       }
                       if (decompiledFrameRemainder0) {
-                        var4_int = var4_int | this.a(2, param2 + 8130);
+                        var4_int = var4_int | this.encodeTileSprite(2, param2 + 8130);
                         decompiledFrameRemainder0 = (var12 != 0);
                       }
                     }
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  if (this.c(33554432, param0 + 1, param1) &&
-                    this.c(33554432, -1 + param0, param1)) {
-                    var4_int = var4_int | this.a(5, 0);
+                  if (this.isOpenTile(33554432, param0 + 1, param1) &&
+                    this.isOpenTile(33554432, -1 + param0, param1)) {
+                    var4_int = var4_int | this.encodeTileSprite(5, 0);
                     decompiledFrameRemainder0 = (var12 != 0);
                   }
                   if (decompiledFrameRemainder0) {
-                    if (this.c(33554432, param0 + 1, param1)) {
-                      var4_int = var4_int | this.a(7, 0);
+                    if (this.isOpenTile(33554432, param0 + 1, param1)) {
+                      var4_int = var4_int | this.encodeTileSprite(7, 0);
                       decompiledFrameRemainder0 = (var12 != 0);
                     }
                     if (decompiledFrameRemainder0) {
-                      if (!this.c(param2 + 33562562, param0 - 1, param1)) {
-                        var4_int = var4_int | this.a(1, param2 + 8130);
+                      if (!this.isOpenTile(param2 + 33562562, param0 - 1, param1)) {
+                        var4_int = var4_int | this.encodeTileSprite(1, param2 + 8130);
                         decompiledFrameRemainder0 = (var12 != 0);
                       }
                       if (decompiledFrameRemainder0) {
-                        var4_int = var4_int | this.a(3, 0);
+                        var4_int = var4_int | this.encodeTileSprite(3, 0);
                         decompiledFrameRemainder0 = (var12 != 0);
                       }
                     }
@@ -228,39 +228,39 @@ final class LevelActorSpawner extends LevelData {
               }
               if (decompiledFrameRemainder0) {
                 stackIn_270_0 = var10;
-                if (!this.c(33554432, param0 + 1, 2 + param1) &&
-                  !this.c(33554432, param0 + 1, param1 + 1)) {
+                if (!this.isOpenTile(33554432, param0 + 1, 2 + param1) &&
+                  !this.isOpenTile(33554432, param0 + 1, param1 + 1)) {
                   stackIn_273_1 = 0;
                 } else {
                   stackIn_273_1 = 1;
                 }
                 var10Lifetime1 = stackIn_270_0 | stackIn_273_1;
                 stackIn_277_0 = var9;
-                if (!this.c(param2 ^ -33562562, param0 - 1, 2 + param1) &&
-                  !this.c(param2 + 33562562, -1 + param0, param1 + 1)) {
+                if (!this.isOpenTile(param2 ^ -33562562, param0 - 1, 2 + param1) &&
+                  !this.isOpenTile(param2 + 33562562, -1 + param0, param1 + 1)) {
                   stackIn_280_1 = 0;
                 } else {
                   stackIn_280_1 = 1;
                 }
                 var9Lifetime1 = stackIn_277_0 | stackIn_280_1;
-                stackIn_284_0 = (!this.c(33554432, param0 + 1, 1 + param1)) ? 0 : 128;
+                stackIn_284_0 = (!this.isOpenTile(33554432, param0 + 1, 1 + param1)) ? 0 : 128;
                 var11 = stackIn_284_0;
                 if (var7 == 0 &&
                   var8 == 0 &&
                   var9Lifetime1 != 0 &&
                   var10Lifetime1 != 0) {
-                  var4_int = var4_int | this.a(26, 0) - var11;
+                  var4_int = var4_int | this.encodeTileSprite(26, 0) - var11;
                 }
                 if (var7 == 0 &&
                   var8 == 0 &&
                   var9Lifetime1 == 0 &&
                   var10Lifetime1 != 0) {
-                  var4_int = var4_int | -var11 + this.a(28, 0);
+                  var4_int = var4_int | -var11 + this.encodeTileSprite(28, 0);
                 }
               }
             }
             if ((65408 & var4_int) == 0) {
-              var4_int = var4_int | this.a(24, 0);
+              var4_int = var4_int | this.encodeTileSprite(24, 0);
             }
             stackIn_311_0 = var4_int;
             return stackIn_311_0;
@@ -280,7 +280,7 @@ final class LevelActorSpawner extends LevelData {
           return;
         }
         try {
-          this.a((byte) -117, this.field_g);
+          this.markGeneratedWallTiles((byte) -117, this.field_g);
           this.field_d = this.field_g[0].length;
           this.field_e = this.field_g.length;
         } catch (RuntimeException runtimeException) {
@@ -324,7 +324,7 @@ final class LevelActorSpawner extends LevelData {
               var5 = 0;
               break;
             }
-            var5 = hp.a((byte) 10, g.field_a, param0.teamCount - var4) + var4;
+            var5 = hp.nextBoundedInt((byte) 10, g.field_a, param0.teamCount - var4) + var4;
             var6_int = param0.field_y[var5];
             param0.field_y[var5] = param0.field_y[var4];
             param0.field_y[var4] = var6_int;
@@ -333,7 +333,7 @@ final class LevelActorSpawner extends LevelData {
           if (param1 <= 7) {
             return;
           }
-          var6 = (SimEntity) (var3.c(48));
+          var6 = (SimEntity) (var3.last(48));
           while (null != var6) {
             if (var11 != 0) {
               return;
@@ -362,24 +362,24 @@ final class LevelActorSpawner extends LevelData {
                     var5 = var5 + var8;
                     var9 = 0;
                     while (var8 > var9) {
-                      var10 = new SimZombie(var7.getX((byte) -112) + (-3 + var9 % 5) * 2, var7.getY(1829947600) + (var9 * 11 % 7 - 3) * 2, var7.d(true));
+                      var10 = new SimZombie(var7.getX((byte) -112) + (-3 + var9 % 5) * 2, var7.getY(1829947600) + (var9 * 11 % 7 - 3) * 2, var7.isFemale(true));
                       var10.field_gb = var7.field_gb;
                       var10.objectId = param0.nextObjectId(-16777216);
                       stackIn_21_0 = var4;
                       if (stackIn_21_0 != 0) {
                         System.out.println("Zombie! oid " + var10.objectId);
                       }
-                      param0.characters.a(var10, false);
+                      param0.characters.addFirst(var10, false);
                       var9++;
                     }
                   }
                 }
               } else {
                 var6.objectId = param0.nextObjectId(-16777216);
-                param0.characters.a(var6, false);
+                param0.characters.addFirst(var6, false);
               }
             }
-            var6 = (SimEntity) (var3.b(6));
+            var6 = (SimEntity) (var3.previous(6));
             continue;
           }
           return;
@@ -397,7 +397,7 @@ final class LevelActorSpawner extends LevelData {
         }
     }
 
-    final static void a(int param0, ResourceArchive param1) {
+    final static void loadFinalFrame(int param0, ResourceArchive param1) {
         RuntimeException runtimeException = null;
         Sprite var2 = null;
         int var3 = 0;
@@ -410,7 +410,7 @@ final class LevelActorSpawner extends LevelData {
           var2 = new Sprite(param1.a("final_frame.jpg", "", false), (java.awt.Component) ((Object) NameEntryPopup.field_Ib));
           var3 = var2.width;
           var4 = var2.height;
-          m.c(540);
+          m.pushRasterState(540);
           if (param0 != 30651) {
             return;
           }
@@ -437,7 +437,7 @@ final class LevelActorSpawner extends LevelData {
         }
     }
 
-    private final boolean a(int param0, byte param1, int param2) {
+    private final boolean isBlockedBelow(int param0, byte param1, int param2) {
         RuntimeException var4 = null;
         boolean stackIn_10_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -445,7 +445,7 @@ final class LevelActorSpawner extends LevelData {
           if (param1 != 2) {
             return false;
           }
-          stackIn_10_0 = (!this.c(33554432, param2, param0 + 1)) && (!this.c(33554432, param2, param0 + 2));
+          stackIn_10_0 = (!this.isOpenTile(33554432, param2, param0 + 1)) && (!this.isOpenTile(33554432, param2, param0 + 2));
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -496,7 +496,7 @@ final class LevelActorSpawner extends LevelData {
         }
     }
 
-    private final void a(byte param0, int[][] param1) {
+    private final void markGeneratedWallTiles(byte param0, int[][] param1) {
         int stackIn_4_0 = 0;
         int stackIn_4_1 = 0;
         RuntimeException stackIn_32_0 = null;
@@ -525,7 +525,7 @@ final class LevelActorSpawner extends LevelData {
               }
               var4 = 0;
               while (param1[0].length > var4) {
-                var5 = this.b(var4, var3_int, -8130);
+                var5 = this.computeWallTile(var4, var3_int, -8130);
                 var6 = (65408 & var5) >> 7;
                 var7 = (33488896 & var5) >> 16;
                 stackIn_4_0 = 0;
@@ -534,7 +534,7 @@ final class LevelActorSpawner extends LevelData {
                   var6 <= 32 ||
                   9 <= var7 &&
                   var7 <= 32 ||
-                  (this.b(var4, 1 + var3_int, -8130) >> 7 & 511) == 16)) {
+                  (this.computeWallTile(var4, 1 + var3_int, -8130) >> 7 & 511) == 16)) {
                   var5 = var5 | 67108864;
                 }
                 this.field_f[var3_int][var4] = var5;
@@ -560,7 +560,7 @@ final class LevelActorSpawner extends LevelData {
         }
     }
 
-    final static void a(boolean param0, int param1, int param2, int param3) {
+    final static void requestMenuScreen(boolean param0, int param1, int param2, int param3) {
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -611,11 +611,11 @@ final class LevelActorSpawner extends LevelData {
             if (sp.field_g == 8) {
               var4_int = -1;
             }
-            if (null == gk.a(2, sp.field_g)) {
-              MouseInputHandler.a("no target_menu ", (Throwable) null, false);
+            if (null == gk.lookupMenuScreen(2, sp.field_g)) {
+              MouseInputHandler.reportClientError("no target_menu ", (Throwable) null, false);
               return;
             }
-            gk.a(2, sp.field_g).onEnter(0, param0, var4_int);
+            gk.lookupMenuScreen(2, sp.field_g).onEnter(0, param0, var4_int);
             if (8 == sp.field_g) {
               LevelData.a((byte) 127, param0);
             }
@@ -653,7 +653,7 @@ final class LevelActorSpawner extends LevelData {
             var8 = this.field_l[3 + var4];
             var9 = this.createEntity(var7, var8, -8944, var6, var5);
             if (var9 != null) {
-              var3.a(var9, false);
+              var3.addFirst(var9, false);
             }
             var4 += 4;
             if (var10 == 0) {
@@ -670,7 +670,7 @@ final class LevelActorSpawner extends LevelData {
         }
     }
 
-    private final int b(int param0, byte param1, int param2) {
+    private final int getTile(int param0, byte param1, int param2) {
         int discarded$1 = 0;
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
@@ -685,7 +685,7 @@ final class LevelActorSpawner extends LevelData {
             return stackIn_2_0;
           }
           if (param1 >= -59) {
-            discarded$1 = this.a(-21, -32);
+            discarded$1 = this.encodeTileSprite(-21, -32);
           }
           if (param0 < 0) {
             stackIn_8_0 = 0;
@@ -708,14 +708,14 @@ final class LevelActorSpawner extends LevelData {
         }
     }
 
-    private final int a(int param0, int param1) {
+    private final int encodeTileSprite(int param0, int param1) {
         int discarded$1 = 0;
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            discarded$1 = this.b(-118, (byte) -56, 0);
+            discarded$1 = this.getTile(-118, (byte) -56, 0);
           }
           stackIn_4_0 = param0 << 7;
           return stackIn_4_0;

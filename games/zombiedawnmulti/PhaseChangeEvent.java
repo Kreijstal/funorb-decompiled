@@ -9,7 +9,7 @@ final class PhaseChangeEvent extends GameEvent {
     static java.awt.Image field_i;
     private int field_m;
 
-    final void a(int param0, GameScreen param1) {
+    final void apply(int param0, GameScreen param1) {
         try {
           if (param0 != 0) {
             PacketBuffer var4 = (PacketBuffer) null;
@@ -33,7 +33,7 @@ final class PhaseChangeEvent extends GameEvent {
         field_k = null;
     }
 
-    final void a(int param0, boolean param1, int param2, int param3) {
+    final void drawDebugOverlay(int param0, boolean param1, int param2, int param3) {
         if (param1) {
           pb.field_e.c("state " + this.field_l + " in " + (-param3 + this.field_f), 5, 20, 16777215, 0);
           return;

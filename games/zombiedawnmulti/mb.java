@@ -29,7 +29,7 @@ final class mb extends IntrusiveNode {
     int field_s;
     int field_z;
 
-    final static int a(BitmapFont param0, boolean param1, String param2, String[] param3, int param4) {
+    final static int wrapBalancedText(BitmapFont param0, boolean param1, String param2, String[] param3, int param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -127,7 +127,7 @@ final class mb extends IntrusiveNode {
         }
     }
 
-    final static int a(byte param0, int param1) {
+    final static int bitLength(byte param0, int param1) {
         if (param0 != -31) {
           return -96;
         }
@@ -156,7 +156,7 @@ final class mb extends IntrusiveNode {
         return var2 + param1;
     }
 
-    final void a(byte param0) {
+    final void releaseReferences(byte param0) {
         this.field_x = null;
         if (param0 != 71) {
           this.field_l = -91;

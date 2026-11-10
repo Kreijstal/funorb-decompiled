@@ -15,7 +15,7 @@ final class bf extends IntrusiveNode {
     static UiComponent field_h;
     static int field_g;
 
-    final boolean a(SimHuman param0, int param1) {
+    final boolean containsUnit(SimHuman param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -28,16 +28,16 @@ final class bf extends IntrusiveNode {
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param1 != 0) {
-            this.c(-49);
+            this.tick(-49);
           }
           var3_int = param0.getX((byte) -112);
           var4 = param0.getY(param1 ^ 1829947600);
-          var5 = (ui) (this.field_p.c(69));
+          var5 = (ui) (this.field_p.last(69));
           while (var5 != null) {
-            if (var5.a(param1 + 40, var3_int, var4)) {
+            if (var5.isNearPoint(param1 + 40, var3_int, var4)) {
               return true;
             }
-            var5 = (ui) (this.field_p.b(6));
+            var5 = (ui) (this.field_p.previous(6));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -54,7 +54,7 @@ final class bf extends IntrusiveNode {
         }
     }
 
-    final static void a(ChatMessage param0, int param1) {
+    final static void acceptChatMessage(ChatMessage param0, int param1) {
         int var2_int = 0;
         ChatMessage var3 = null;
         int var4 = 0;
@@ -114,42 +114,42 @@ final class bf extends IntrusiveNode {
         field_q = null;
     }
 
-    final boolean a(int param0, int param1, byte param2) {
+    final boolean containsPoint(int param0, int param1, byte param2) {
         int var5 = ZombieDawnMulti.field_E ? 1 : 0;
-        ui var7 = (ui) (this.field_p.c(param2 ^ 100));
+        ui var7 = (ui) (this.field_p.last(param2 ^ 100));
         while (var7 != null) {
-          if (var7.a(param2 - 146, param0, param1)) {
+          if (var7.isNearPoint(param2 - 146, param0, param1)) {
             return true;
           }
-          var7 = (ui) (this.field_p.b(6));
+          var7 = (ui) (this.field_p.previous(6));
         }
         if (param2 == 29) {
           return false;
         }
         String var6 = (String) null;
-        bf.a(false, -90, (String) null);
+        bf.showLoginResponse(false, -90, (String) null);
         return false;
     }
 
-    final void c(int param0) {
+    final void tick(int param0) {
         ui var4 = null;
         int var3 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param0 == 0) {
-          var4 = (ui) (this.field_p.c(43));
+          var4 = (ui) (this.field_p.last(43));
           while (var4 != null) {
-            var4.c(9307);
-            var4 = (ui) (this.field_p.b(6));
+            var4.tick(9307);
+            var4 = (ui) (this.field_p.previous(6));
           }
           return;
         }
     }
 
-    final void a(int param0) {
+    final void removeEffect(int param0) {
         int var2 = -43 / ((param0 + 32) / 47);
         this.unlink(true);
     }
 
-    final static void a(boolean param0, int param1, String param2) {
+    final static void showLoginResponse(boolean param0, int param1, String param2) {
         int var3_int = 0;
         try {
           nj.field_f = false;
@@ -171,7 +171,7 @@ final class bf extends IntrusiveNode {
             }
             if (param1 == 10) {
               var3_int = 0;
-              DraggableWidget.i(-2);
+              DraggableWidget.showDisplayNameForm(-2);
             }
             if (var3_int != 0) {
               if (ud.field_ab) {
@@ -273,7 +273,7 @@ final class bf extends IntrusiveNode {
               var13Lifetime1 = (param3 - var12Lifetime1) * (-var12Lifetime1 + param3) + (param2 - var11Lifetime1) * (param2 - var11Lifetime1);
               if (64 > var13Lifetime1 &&
                 var5[var9Lifetime1][var16]) {
-                this.field_p.a(new ui(var11Lifetime1, var12Lifetime1, var13Lifetime1), false);
+                this.field_p.addFirst(new ui(var11Lifetime1, var12Lifetime1, var13Lifetime1), false);
               }
               var16++;
             }

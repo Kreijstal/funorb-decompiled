@@ -63,7 +63,7 @@ final class wj extends IntrusiveNode {
     }
 
     final static void b(boolean param0, int param1) {
-        nb.field_a.a(39, 0, 0);
+        nb.field_a.renderWidgetPassesAndTooltip(39, 0, 0);
         if (param1 >= -109) {
           String var3 = (String) null;
           wj.createProxyConnector((byte) 68, -37, (String) null);
@@ -73,7 +73,7 @@ final class wj extends IntrusiveNode {
     wj(int param0) {
         if (FadingDialog.field_H) {
           this.field_m = PcmSampleStream.createAtRatePercent(ei.field_a[param0], 100, 256);
-          AccountCreationDialog.a(this.field_m, (byte) -93);
+          AccountCreationDialog.playStream(this.field_m, (byte) -93);
         }
         if (93 == param0) {
         }

@@ -251,7 +251,7 @@ final class eq {
         if (this.field_h.field_t) {
           return false;
         }
-        var10 = new PacketBuffer(this.field_h.e(0));
+        var10 = new PacketBuffer(this.field_h.getBytes(0));
         var10.position = 5;
         var3 = var10.readUnsignedByte(31365);
         var10.position = var10.position + var3 * 72;
@@ -270,7 +270,7 @@ final class eq {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var15 = ho.a(4246, 5, var10.payload, -var13.length + (var10.position - 5));
+        var15 = ho.computeWhirlpoolDigest(4246, 5, var10.payload, -var13.length + (var10.position - 5));
         for (var7 = 0; 64 > var7; var7++) {
           if (var15[var7] != var5[var7 + 1]) {
             throw new RuntimeException();

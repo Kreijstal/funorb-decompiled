@@ -34,7 +34,7 @@ class LevelData {
           return;
         }
         UsernameSuggestionsPanel.field_H = new hh(2);
-        UsernameSuggestionsPanel.field_H.a(-1, param1, -31458, ResizableDialog.c(bo.field_d, -1, MouseInputHandler.field_g));
+        UsernameSuggestionsPanel.field_H.initializeSelection(-1, param1, -31458, ResizableDialog.hitTestPairedSprites(bo.field_d, -1, MouseInputHandler.field_g));
     }
 
     private final SceneObject createObject(int param0, int param1, byte param2, int param3, int param4) {
@@ -51,7 +51,7 @@ class LevelData {
           return (SceneObject) ((Object) var8);
         }
         if (param1 == 1) {
-          return (SceneObject) ((Object) pg.a(param0, (byte) -128, param3, param4));
+          return (SceneObject) ((Object) pg.createArmedHumanView(param0, (byte) -128, param3, param4));
         }
         if (2 == param1) {
           var6_ref = new fd(param0, param4, param3 & -1610612737);
@@ -105,7 +105,7 @@ class LevelData {
           var7 = this.field_l[2 + var4];
           var8 = this.field_l[3 + var4];
           var9 = this.createObject(var7, var5, (byte) -97, var6, var8);
-          var3.a(var9, false);
+          var3.addFirst(var9, false);
         }
         return var3;
     }
@@ -124,12 +124,12 @@ class LevelData {
         if (param0 != -8927) {
           this.field_h = (int[][]) null;
         }
-        this.field_k[param1][param2] = cr.b(param3 ? 1 : 0, ScrollPane.b(14, this.field_k[param1][param2]));
+        this.field_k[param1][param2] = cr.b(param3 ? 1 : 0, ScrollPane.bitAnd(14, this.field_k[param1][param2]));
         if (this.field_k[param1].length > param2 + 1) {
-          this.field_k[param1][param2 + 1] = cr.b(ScrollPane.b(this.field_k[param1][1 + param2], -3), param3 ? 2 : 0);
+          this.field_k[param1][param2 + 1] = cr.b(ScrollPane.bitAnd(this.field_k[param1][1 + param2], -3), param3 ? 2 : 0);
         }
         if (0 < param2 - 1) {
-          this.field_k[param1][-1 + param2] = cr.b(ScrollPane.b(this.field_k[param1][-1 + param2], -5), param3 ? 4 : 0);
+          this.field_k[param1][-1 + param2] = cr.b(ScrollPane.bitAnd(this.field_k[param1][-1 + param2], -5), param3 ? 4 : 0);
         }
     }
 

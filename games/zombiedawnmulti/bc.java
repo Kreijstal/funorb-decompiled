@@ -15,7 +15,7 @@ final class bc {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 22382) {
           field_d = (String) null;
         }
@@ -25,10 +25,10 @@ final class bc {
         field_a = null;
     }
 
-    final static void a(int param0, int param1, byte param2, boolean param3) {
+    final static void drawGlintingButton(int param0, int param1, byte param2, boolean param3) {
         int var4;
         if (param2 != -59) {
-          bc.a((byte) 86);
+          bc.updateToggleLabelWidths((byte) 86);
         }
         er.field_j.drawTransparent(param0, param1);
         if (param3) {
@@ -43,24 +43,24 @@ final class bc {
               var4 = -40 + er.field_j.width;
             }
           }
-          CheckboxPainter.a(param1, 30, 0, param0, false, var4, 0, er.field_j, 80);
+          CheckboxPainter.drawGlowOutline(param1, 30, 0, param0, false, var4, 0, er.field_j, 80);
         }
     }
 
-    final static void a(byte param0) {
+    final static void updateToggleLabelWidths(byte param0) {
         iq.a((byte) -78);
         ok.field_l = TranslatedUiText.field_e.textWidth(we.field_g[12]);
         int var1 = TranslatedUiText.field_e.textWidth(we.field_g[13]);
         if (!(var1 <= ok.field_l)) {
           ok.field_l = var1;
         }
-        ((ho) (mj.field_Hb[1])).c((byte) 74);
+        ((ho) (mj.field_Hb[1])).measureItemWidths((byte) 74);
         if (param0 < 8) {
-          bc.a((byte) -52);
+          bc.updateToggleLabelWidths((byte) -52);
         }
     }
 
-    final static IndexedSprite[] a(int param0) {
+    final static IndexedSprite[] buildIndexedSprites(int param0) {
         int var3 = ZombieDawnMulti.field_E ? 1 : 0;
         IndexedSprite[] var1 = new IndexedSprite[qc.field_v];
         int var2 = 0;
@@ -83,10 +83,10 @@ final class bc {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$c6021a39f7cf(int param0, int param1, int param2, boolean param3) {
+    final static void drawGlintingButton(int param0, int param1, int param2, boolean param3) {
         int var4;
         if (param2 != -59) {
-          bc.a((byte) 86);
+          bc.updateToggleLabelWidths((byte) 86);
         }
         er.field_j.drawTransparent(param0, param1);
         if (param3) {
@@ -101,7 +101,7 @@ final class bc {
               var4 = -40 + er.field_j.width;
             }
           }
-          CheckboxPainter.a(param1, 30, 0, param0, false, var4, 0, er.field_j, 80);
+          CheckboxPainter.drawGlowOutline(param1, 30, 0, param0, false, var4, 0, er.field_j, 80);
         }
     }
 }

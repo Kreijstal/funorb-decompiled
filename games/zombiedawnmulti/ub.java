@@ -9,7 +9,7 @@ final class ub extends ContentTransitionDialog {
     static int field_yb;
     static int[] field_ub;
 
-    final static int p(int param0) {
+    final static int getHazeIntensity(int param0) {
         int var3 = 0;
         int var1_int = 0;
         int var2 = 0;
@@ -50,7 +50,7 @@ final class ub extends ContentTransitionDialog {
         }
     }
 
-    final static void a(String[][] param0, ResourceArchive param1, boolean param2, String[][] param3, String[] param4, ResourceArchive param5, int param6, byte[] param7, ResourceArchive param8, int param9, int[] param10, byte[] param11, boolean param12, Sprite[][] param13, Sprite[][] param14) {
+    final static void initializeLobbyAssets(String[][] param0, ResourceArchive param1, boolean param2, String[][] param3, String[] param4, ResourceArchive param5, int param6, byte[] param7, ResourceArchive param8, int param9, int[] param10, byte[] param11, boolean param12, Sprite[][] param13, Sprite[][] param14) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -174,7 +174,7 @@ final class ub extends ContentTransitionDialog {
         field_vb = null;
     }
 
-    final static void n(int param0) {
+    final static void closeChatInputIfOpen(int param0) {
         if (param0 != 33423425) {
           ub.releaseStatics(-45);
         }
@@ -183,12 +183,12 @@ final class ub extends ContentTransitionDialog {
         }
     }
 
-    final static void m(int param0) {
+    final static void finishUiAnimations(int param0) {
         int var1 = -122 / ((param0 + 60) / 48);
-        GameSimulation.b((byte) -128);
+        GameSimulation.settleUiAnimations((byte) -128);
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, int[] param4, int param5, int param6, int param7, int param8, int param9) {
+    final static void drawHalfBlendGouraudSpan(int param0, int param1, int param2, byte param3, int[] param4, int param5, int param6, int param7, int param8, int param9) {
         int[] var17 = null;
         int[] var10 = null;
         int var11 = 0;
@@ -210,7 +210,7 @@ final class ub extends ContentTransitionDialog {
             var13 = param7;
             var14 = param2;
             var15 = (var17[var11] & 16711422) >> 1;
-            var10[var11] = var15 - (-(ScrollPane.b(var14, 33428544) >> 17) + (-(ScrollPane.b(var12, 33423360) >> 1) - (ScrollPane.b(33423425, var13) >> 9)));
+            var10[var11] = var15 - (-(ScrollPane.bitAnd(var14, 33428544) >> 17) + (-(ScrollPane.bitAnd(var12, 33423360) >> 1) - (ScrollPane.bitAnd(33423425, var13) >> 9)));
             param2 = param2 + param6;
             param1 = param1 + param9;
             param7 = param7 + param5;
@@ -222,9 +222,9 @@ final class ub extends ContentTransitionDialog {
         }
     }
 
-    final void a(UiWidget param0, byte param1) {
+    final void transitionToContent(UiWidget param0, byte param1) {
         try {
-          super.a(param0, (byte) -32);
+          super.transitionToContent(param0, (byte) -32);
           int var3_int = -36 / ((param1 - 61) / 56);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ub.FA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

@@ -6,7 +6,7 @@ final class gk {
     static String field_a;
     static int field_b;
 
-    final static MenuScreen a(int param0, int param1) {
+    final static MenuScreen lookupMenuScreen(int param0, int param1) {
         if (param0 != 2) {
           field_c = 127;
         }
@@ -20,14 +20,14 @@ final class gk {
         field_a = null;
     }
 
-    final static void a(byte param0) {
-        sc.d((byte) 87);
+    final static void closeChatContext(byte param0) {
+        sc.closeChatContextState((byte) 87);
         if (param0 != 16) {
           gk.releaseStatics(-7);
         }
     }
 
-    final static void a(boolean param0, int param1, String param2, int param3, boolean param4) {
+    final static void showNoticeMenu(boolean param0, int param1, String param2, int param3, boolean param4) {
         String stackIn_4_0 = null;
         boolean stackIn_26_0 = false;
         int stackIn_38_0 = 0;
@@ -60,7 +60,7 @@ final class gk {
           }
           var6 = stackIn_4_0;
           if (ic.field_d == 0) {
-            var7 = mb.a(SecondaryNodeDeque.field_c, false, var11, ClickMarker.field_t, 480);
+            var7 = mb.wrapBalancedText(SecondaryNodeDeque.field_c, false, var11, ClickMarker.field_t, 480);
             var8 = 3 + var7;
             dn.field_a = new int[var8];
             eo.field_e = new String[var8];
@@ -82,7 +82,7 @@ final class gk {
             if (1 != ic.field_d) {
               throw new IllegalArgumentException();
             }
-            var7 = mb.a(SecondaryNodeDeque.field_c, false, var11, ClickMarker.field_t, 480);
+            var7 = mb.wrapBalancedText(SecondaryNodeDeque.field_c, false, var11, ClickMarker.field_t, 480);
             var8 = var7 + 2;
             dn.field_a = new int[var8];
             eo.field_e = new String[var8];
@@ -126,10 +126,10 @@ final class gk {
             var8Lifetime2++;
           }
           if (param1 != 2) {
-            gk.a((byte) -33);
+            gk.closeChatContext((byte) -33);
           }
           eb.field_M = -(ArrayWidgetGroup.field_F >> 1) + TextInputWidget.field_Q;
-          AlignedIconLabel.field_Jb.a(0, param0, -31458, aj.a(bo.field_d, false, MouseInputHandler.field_g));
+          AlignedIconLabel.field_Jb.initializeSelection(0, param0, -31458, aj.findMenuOptionAt(bo.field_d, false, MouseInputHandler.field_g));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

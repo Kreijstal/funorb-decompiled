@@ -21,7 +21,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
     static String field_X;
 
     public final void onMoreSuggestionsRequested(int param0) {
-        ((UsernameAvailabilityValidator) (this.field_V.getValidationProvider((byte) -43))).i(param0 ^ -22725);
+        ((UsernameAvailabilityValidator) (this.field_V.getValidationProvider((byte) -43))).resetCheckedName(param0 ^ -22725);
         if (param0 == 496) {
           return;
         }
@@ -80,15 +80,15 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
           if (param0 > -87) {
             return;
           }
-          var4 = (n) (SpriteState.field_s.c(86));
+          var4 = (n) (SpriteState.field_s.last(86));
           while (var4 != null) {
             ih.a(var4, 1, param1);
-            var4 = (n) (SpriteState.field_s.b(6));
+            var4 = (n) (SpriteState.field_s.previous(6));
           }
-          var2 = TabbedPane.field_Gb.c(84);
+          var2 = TabbedPane.field_Gb.last(84);
           while (var2 != null) {
-            StateIconLabel.b(1, param1);
-            var2 = TabbedPane.field_Gb.b(6);
+            StateIconLabel.sendByteRequest(1, param1);
+            var2 = TabbedPane.field_Gb.previous(6);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -145,11 +145,11 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
             return true;
           }
           if (param0 == 98) {
-            stackIn_7_0 = this.a((byte) -1, param2);
+            stackIn_7_0 = this.focusPreviousChild((byte) -1, param2);
             return stackIn_7_0;
           }
           if (param0 == 99) {
-            stackIn_11_0 = this.a(param3 + 6267, param2);
+            stackIn_11_0 = this.focusNextChild(param3 + 6267, param2);
             return stackIn_11_0;
           }
           if (param3 == -6208) {
@@ -191,14 +191,14 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         try {
           if (param3 != 0) {
             if (param3 == 1) {
-              SimZombie.a("privacy.ws", (byte) 125);
+              SimZombie.openPolicyPage("privacy.ws", (byte) 125);
             } else {
               if (param3 == 2) {
-                SimZombie.a("conduct.ws", (byte) 127);
+                SimZombie.openPolicyPage("conduct.ws", (byte) 127);
               }
             }
           } else {
-            SimZombie.a("terms.ws", (byte) 127);
+            SimZombie.openPolicyPage("terms.ws", (byte) 127);
           }
           if (param2 < -16) {
             return;
@@ -304,7 +304,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
           var2 = Integer.parseInt(this.field_N.field_j);
         } catch (NumberFormatException numberFormatException) {
         }
-        return cc.a(this.field_P.field_j, this.field_V.field_j, this.field_M.field_j, var2, -10663, this, this.field_H.field_G);
+        return cc.startAccountCreation(this.field_P.field_j, this.field_V.field_j, this.field_M.field_j, var2, -10663, this, this.field_H.field_G);
     }
 
     private final int a(UiWidget param0, int param1, int param2, String param3, int param4) {
@@ -321,9 +321,9 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         RuntimeException decompiledCaughtException = null;
         try {
           var9 = new LabeledChildWidget(20, param4, 120 + param2, 25, param0, false, 120, 3, ke.field_h, 16777215, param3);
-          this.b((byte) 45, var9);
+          this.addChild((byte) 45, var9);
           var7 = new uk(((ValidationProviderSource) ((Object) param0)).getValidationProvider((byte) -109));
-          this.b((byte) 57, var7);
+          this.addChild((byte) 57, var7);
           var7.setWidgetBounds(3 + (var9.field_y + var9.field_n), (var9.field_w - 15 >> 1) + var9.field_i, 28972, 15, 15);
           var8 = -40 / ((param1 - 34) / 43);
           stackIn_1_0 = var9.field_w;
@@ -408,10 +408,10 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
           if (!param1) {
             this.field_J = (UsernameSuggestionsPanel) null;
           }
-          this.b((byte) 86, var10);
+          this.addChild((byte) 86, var10);
           var9 = new ValidationMessageWidget(((ValidationProviderSource) ((Object) param2)).getValidationProvider((byte) -109), param4, 126, param5 + var10.field_w, 50 + param6, param0);
           var9.field_A = (WidgetListener) (this);
-          this.b((byte) 49, var9);
+          this.addChild((byte) 49, var9);
           stackIn_3_0 = var9.field_w + var10.field_w;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -453,7 +453,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = new LabeledChildWidget(20, param2, param0 + 120, 25, param1, false, 120, 3, ke.field_h, 16777215, param4);
-          this.b((byte) 86, var6);
+          this.addChild((byte) 86, var6);
           if (param3 > 38) {
             stackIn_4_0 = var6.field_w;
             return stackIn_4_0;
@@ -499,12 +499,12 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         this.field_I.field_x = bh.field_e;
         this.field_N.field_x = SocketConnector.field_g;
         this.field_H.field_x = ip.field_b;
-        this.field_V.a((byte) -27, new UsernameAvailabilityValidator(this.field_V));
-        this.field_M.a((byte) -27, new EmailValidator(this.field_M));
-        this.field_T.a((byte) -27, new EmailAvailabilityValidator(this.field_T, this.field_M));
-        this.field_P.a((byte) -27, new PasswordValidator(this.field_P, this.field_V, this.field_M));
-        this.field_I.a((byte) -27, new MatchingTextValidator(this.field_I, this.field_P));
-        this.field_N.a((byte) -27, new AgeValidator(this.field_N));
+        this.field_V.setValidationProvider((byte) -27, new UsernameAvailabilityValidator(this.field_V));
+        this.field_M.setValidationProvider((byte) -27, new EmailValidator(this.field_M));
+        this.field_T.setValidationProvider((byte) -27, new EmailAvailabilityValidator(this.field_T, this.field_M));
+        this.field_P.setValidationProvider((byte) -27, new PasswordValidator(this.field_P, this.field_V, this.field_M));
+        this.field_I.setValidationProvider((byte) -27, new MatchingTextValidator(this.field_I, this.field_P));
+        this.field_N.setValidationProvider((byte) -27, new AgeValidator(this.field_N));
         this.field_S.field_F = false;
         this.field_S.painter = (WidgetPainter) ((Object) new oq());
         this.field_O.painter = (WidgetPainter) ((Object) new LinkButtonPainter());
@@ -526,7 +526,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         var3 = var3 + (this.addLabeledFieldWithDefaultMessageWidth(r.field_e, PasswordValidator.field_w, var3, 170, this.field_V, 35) + 5);
         var3 = var3 + this.a(this.field_N, -99, 170, gj.field_a, var3);
         LabeledChildWidget var4 = new LabeledChildWidget(46, var3, -90 + this.field_n, 25, this.field_H, true, -120 + this.field_n, 5, DisplayNamePanel.field_H, 11579568, uq.field_e);
-        this.b((byte) 115, var4);
+        this.addChild((byte) 115, var4);
         var3 = var3 + var4.field_w;
         TextWidgetPainter var5 = new TextWidgetPainter(ke.field_h, 0, 0, 0, 0, 16777215, -1, 0, 0, ke.field_h.maxAscent, -1, 2147483647, true);
         this.field_G = new HotspotTextWidget(var2, var5);
@@ -536,18 +536,18 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         this.field_G.field_A = (WidgetListener) (this);
         this.field_G.a(this.field_n - 90, var3, (byte) -4, 46);
         var3 = var3 + (this.field_G.field_w + 15);
-        this.b((byte) 61, this.field_G);
+        this.addChild((byte) 61, this.field_G);
         int var6 = 4;
         int var7 = 200;
         this.field_S.setWidgetBounds(496 - var7 >> 1, var3, 28972, var7, 40);
         this.field_O.setWidgetBounds(3 + var6, var3 + 15, 28972, 60, 40);
         this.field_O.field_A = (WidgetListener) (this);
         this.field_S.field_A = (WidgetListener) (this);
-        this.b((byte) 78, this.field_S);
-        this.b((byte) 75, this.field_O);
+        this.addChild((byte) 78, this.field_S);
+        this.addChild((byte) 75, this.field_O);
         this.field_J = new UsernameSuggestionsPanel((UsernameSuggestionListener) (this));
         this.field_J.setWidgetBounds(60 + this.field_V.field_n + this.field_V.field_y, 20 + this.field_V.field_i, 28972, -60 + (-this.field_V.field_n + (this.field_n - this.field_V.field_y)), 150);
-        this.b((byte) 97, this.field_J);
+        this.addChild((byte) 97, this.field_J);
         this.setWidgetBounds(0, 0, 28972, 496, var3 + 55 + var6);
     }
 

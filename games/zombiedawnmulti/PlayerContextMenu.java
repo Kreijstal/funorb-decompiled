@@ -39,7 +39,7 @@ final class PlayerContextMenu {
           this.c(123);
         }
         if (param1 == 8) {
-          HumanView.a(this.field_i, this.field_f, -1);
+          HumanView.openPrivateChatTo(this.field_i, this.field_f, -1);
           return true;
         }
         if (param1 == 18) {
@@ -59,7 +59,7 @@ final class PlayerContextMenu {
           return true;
         }
         if (param1 == 14) {
-          mg.b(false);
+          mg.selectPublicChat(false);
           return true;
         }
         if (param1 == 20) {
@@ -69,7 +69,7 @@ final class PlayerContextMenu {
         if (param1 != 19) {
           return false;
         }
-        na.a(this.field_g, (byte) -50, this.field_f, this.field_i, this.field_h);
+        na.beginPrivateQuickChat(this.field_g, (byte) -50, this.field_f, this.field_i, this.field_h);
         return true;
     }
 
@@ -100,7 +100,7 @@ final class PlayerContextMenu {
           this.c(-88);
           return;
         }
-        if (!hl.b(0)) {
+        if (!hl.isLocalPlayerGameHost(0)) {
           if (param1 < -80) {
             return;
           }
@@ -112,10 +112,10 @@ final class PlayerContextMenu {
         var5 = this.getTargetName(-20516);
         if (var4 != null) {
           if (!JaggrabDownloader.field_c.field_Fb) {
-            this.field_j.a((byte) -118, vl.a(lk.field_I, new String[]{var5}, 2), 1);
+            this.field_j.addItem((byte) -118, vl.a(lk.field_I, new String[]{var5}, 2), 1);
           } else {
             if (JaggrabDownloader.field_c.field_Sb >= 0) {
-              this.field_j.a((byte) -118, vl.a(lk.field_I, new String[]{var5}, 2), 1);
+              this.field_j.addItem((byte) -118, vl.a(lk.field_I, new String[]{var5}, 2), 1);
             }
           }
         } else {
@@ -123,16 +123,16 @@ final class PlayerContextMenu {
             JaggrabDownloader.field_c.field_Wb &&
             JaggrabDownloader.field_c.field_cc < JaggrabDownloader.field_c.field_mc) {
             if (var7.field_Pb) {
-              this.field_j.a((byte) -118, vl.a(bl.field_f, new String[]{var5}, 2), 1);
+              this.field_j.addItem((byte) -118, vl.a(bl.field_f, new String[]{var5}, 2), 1);
             } else {
               if (!param0) {
-                this.field_j.a((byte) -118, vl.a(SimZombie.field_qb, new String[]{var5}, 2), 0);
+                this.field_j.addItem((byte) -118, vl.a(SimZombie.field_qb, new String[]{var5}, 2), 0);
               } else {
                 if (!var7.field_Ob) {
-                  this.field_j.a((byte) -118, vl.a(SimZombie.field_qb, new String[]{var5}, 2), 0);
+                  this.field_j.addItem((byte) -118, vl.a(SimZombie.field_qb, new String[]{var5}, 2), 0);
                 } else {
-                  this.field_j.a((byte) -118, vl.a(mq.field_p, new String[]{var5}, 2), 0);
-                  this.field_j.a((byte) -118, vl.a(r.field_g, new String[]{var5}, 2), 1);
+                  this.field_j.addItem((byte) -118, vl.a(mq.field_p, new String[]{var5}, 2), 0);
+                  this.field_j.addItem((byte) -118, vl.a(r.field_g, new String[]{var5}, 2), 1);
                 }
               }
             }
@@ -151,11 +151,11 @@ final class PlayerContextMenu {
           return false;
         }
         if (param2 == 0) {
-          UnitStateEvent.a(-21148, this.field_i, param0);
+          UnitStateEvent.sendPlayerIdCommand(-21148, this.field_i, param0);
           return true;
         }
         if (param2 == 1) {
-          cg.a(param0, -27404, this.field_i);
+          cg.requestRemoveOrRejectPlayer(param0, -27404, this.field_i);
           return true;
         }
         if (2 == param2) {
@@ -163,7 +163,7 @@ final class PlayerContextMenu {
           return true;
         }
         if (param2 == 3) {
-          ml.a(this.field_b, param0, -76);
+          ml.sendPlayerActionRequest(this.field_b, param0, -76);
           return true;
         }
         if (10 == param2) {
@@ -193,7 +193,7 @@ final class PlayerContextMenu {
           this.field_i = -51L;
           return;
         }
-        var5 = on.c(false, this.field_b);
+        var5 = on.findLobbyGame(false, this.field_b);
         if (var5 == null) {
           if (param0 <= -8) {
             return;
@@ -203,25 +203,25 @@ final class PlayerContextMenu {
         }
         var3 = var5.field_Nb;
         if (var5.field_lc) {
-          this.field_j.a((byte) -118, vl.a(ke.field_d, new String[]{var3}, 2), 2);
-          this.field_j.a((byte) -118, vl.a(gg.field_e, new String[]{var3}, 2), 3);
+          this.field_j.addItem((byte) -118, vl.a(ke.field_d, new String[]{var3}, 2), 2);
+          this.field_j.addItem((byte) -118, vl.a(gg.field_e, new String[]{var3}, 2), 3);
         } else {
           if (var5.field_Ob) {
-            this.field_j.a((byte) -118, vl.a(jo.field_c, new String[]{var3}, 2), 2);
+            this.field_j.addItem((byte) -118, vl.a(jo.field_c, new String[]{var3}, 2), 2);
           } else {
             if (!var5.field_rc &&
               var5.field_Wb) {
               if (!var5.field_Fb) {
-                this.field_j.a((byte) -118, vl.a(hp.field_o, new String[]{var3}, 2), 2);
+                this.field_j.addItem((byte) -118, vl.a(hp.field_o, new String[]{var3}, 2), 2);
               } else {
                 if (var5.field_Ob) {
-                  this.field_j.a((byte) -118, vl.a(hp.field_o, new String[]{var3}, 2), 2);
+                  this.field_j.addItem((byte) -118, vl.a(hp.field_o, new String[]{var3}, 2), 2);
                 }
               }
             }
           }
           if (var5.field_rc) {
-            this.field_j.a((byte) -118, vl.a(b.field_e, new String[]{var3}, 2), 3);
+            this.field_j.addItem((byte) -118, vl.a(b.field_e, new String[]{var3}, 2), 3);
           }
         }
         if (param0 <= -8) {
@@ -238,7 +238,7 @@ final class PlayerContextMenu {
           if (this.field_j == null) {
             return false;
           }
-          if (this.field_j.d((byte) 90)) {
+          if (this.field_j.isWaitingForAction((byte) 90)) {
             return true;
           }
           return false;
@@ -246,7 +246,7 @@ final class PlayerContextMenu {
         if (this.field_j == null) {
           return false;
         }
-        if (this.field_j.d((byte) 90)) {
+        if (this.field_j.isWaitingForAction((byte) 90)) {
           return true;
         }
         return false;
@@ -257,7 +257,7 @@ final class PlayerContextMenu {
         boolean discarded$1 = false;
         boolean discarded$2 = false;
         boolean discarded$3 = false;
-        int var6 = this.field_j.e(param3, param2 ^ 1839469049);
+        int var6 = this.field_j.updateAndPollAction(param3, param2 ^ 1839469049);
         if (-2 == var6) {
           return false;
         }
@@ -292,23 +292,23 @@ final class PlayerContextMenu {
           this.field_h = param0.field_l;
           if (param0.field_l == 0) {
             if (0 == li.field_C) {
-              this.field_j.a((byte) -118, ha.field_k, 12);
+              this.field_j.addItem((byte) -118, ha.field_k, 12);
             }
-            this.field_j.a((byte) -118, rq.field_g, 13);
+            this.field_j.addItem((byte) -118, rq.field_g, 13);
           }
           if (param0.field_l == 1) {
             if (0 == qe.field_g) {
-              this.field_j.a((byte) -118, bg.field_n, 12);
+              this.field_j.addItem((byte) -118, bg.field_n, 12);
             }
-            this.field_j.a((byte) -118, jk.field_c, 13);
+            this.field_j.addItem((byte) -118, jk.field_c, 13);
           }
           if (param0.field_l != 2) {
             return;
           }
           if (0 == MusicPatchPcmStream.field_q) {
-            this.field_j.a((byte) -118, aj.field_i, 12);
+            this.field_j.addItem((byte) -118, aj.field_i, 12);
           }
-          this.field_j.a((byte) -118, gg.field_n, 13);
+          this.field_j.addItem((byte) -118, gg.field_n, 13);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -340,7 +340,7 @@ final class PlayerContextMenu {
         String var6Lifetime3;
         var4 = null;
         if (param1 == 4) {
-          var7 = ii.a(this.field_f, (byte) 116, param0);
+          var7 = ii.requestAddFriend(this.field_f, (byte) 116, param0);
           if (var7 != null) {
             var6 = (String) null;
             vm.a(this.field_f, 0, (String) null, var7, 2, 0);
@@ -349,7 +349,7 @@ final class PlayerContextMenu {
           return true;
         }
         if (5 == param1) {
-          var8 = ButtonWidget.a(this.field_f, 113, param0);
+          var8 = ButtonWidget.requestRemoveFriend(this.field_f, 113, param0);
           if (var8 != null) {
             var6Lifetime1 = (String) null;
             vm.a(this.field_f, 0, (String) null, var8, 2, 0);
@@ -358,7 +358,7 @@ final class PlayerContextMenu {
           return true;
         }
         if (param1 == 6) {
-          var9 = sf.a(-107, param0, this.field_f);
+          var9 = sf.requestAddIgnoredPlayer(-107, param0, this.field_f);
           if (var9 != null) {
             var6Lifetime2 = (String) null;
             vm.a(this.field_f, 0, (String) null, var9, 2, 0);
@@ -369,7 +369,7 @@ final class PlayerContextMenu {
         if (7 != param1) {
           return false;
         }
-        var10 = ng.a(this.field_f, this.field_d, -69, param0);
+        var10 = ng.removeIgnoredName(this.field_f, this.field_d, -69, param0);
         if (var10 != null) {
           var6Lifetime3 = (String) null;
           vm.a(this.field_f, 0, (String) null, var10, 2, 0);
@@ -415,7 +415,7 @@ final class PlayerContextMenu {
             ~ContentTransitionDialog.field_sb != ~this.field_i) {
             var3 = this.getTargetName(-20516);
             var2 = var3;
-            this.field_j.a((byte) -118, vl.a(StateIconLabel.field_Jb, new String[]{var3}, 2), 17);
+            this.field_j.addItem((byte) -118, vl.a(StateIconLabel.field_Jb, new String[]{var3}, 2), 17);
           }
           return;
         }
@@ -424,7 +424,7 @@ final class PlayerContextMenu {
           ~ContentTransitionDialog.field_sb != ~this.field_i) {
           var3 = this.getTargetName(-20516);
           var2Lifetime1 = var3;
-          this.field_j.a((byte) -118, vl.a(StateIconLabel.field_Jb, new String[]{var3}, 2), 17);
+          this.field_j.addItem((byte) -118, vl.a(StateIconLabel.field_Jb, new String[]{var3}, 2), 17);
         }
     }
 
@@ -444,34 +444,34 @@ final class PlayerContextMenu {
             var7 = this.getTargetName(-20516);
             var4 = var7;
             var5 = dn.a(this.field_f, false);
-            var6 = hp.a(this.field_f, param2 ^ 1009) ? 1 : 0;
+            var6 = hp.isFriend(this.field_f, param2 ^ 1009) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
-              this.field_j.a((byte) -118, vl.a(IntrusiveDeque.field_e, new String[]{var7}, param2 - 11), 4);
-              this.field_j.a((byte) -118, vl.a(IndexedSpriteState.field_g, new String[]{var7}, 2), 6);
+              this.field_j.addItem((byte) -118, vl.a(IntrusiveDeque.field_e, new String[]{var7}, param2 - 11), 4);
+              this.field_j.addItem((byte) -118, vl.a(IndexedSpriteState.field_g, new String[]{var7}, 2), 6);
               if (param1 != null &&
                 param0 != 2 &&
                 !nh.field_m) {
                 this.field_g = param1;
-                this.field_j.a((byte) -118, vl.a(TertiaryLinkNode.field_u, new String[]{var7}, 2), 19);
+                this.field_j.addItem((byte) -118, vl.a(TertiaryLinkNode.field_u, new String[]{var7}, 2), 19);
               }
             }
             if (var5 != null) {
               if (!cq.a(this.field_f, -118) &&
                 !nh.field_m) {
                 if (!SimPortal.field_L) {
-                  this.field_j.a((byte) -118, vl.a(jk.field_i, new String[]{var7}, 2), 8);
+                  this.field_j.addItem((byte) -118, vl.a(jk.field_i, new String[]{var7}, 2), 8);
                 }
-                this.field_j.a((byte) -118, vl.a(mp.field_c, new String[]{var7}, 2), 18);
+                this.field_j.addItem((byte) -118, vl.a(mp.field_c, new String[]{var7}, 2), 18);
                 if (param1 != null) {
                   this.field_g = param1;
-                  this.field_j.a((byte) -118, vl.a(TertiaryLinkNode.field_u, new String[]{var7}, 2), 19);
+                  this.field_j.addItem((byte) -118, vl.a(TertiaryLinkNode.field_u, new String[]{var7}, 2), 19);
                 }
               }
-              this.field_j.a((byte) -118, vl.a(nk.field_j, new String[]{var7}, 2), 5);
+              this.field_j.addItem((byte) -118, vl.a(nk.field_j, new String[]{var7}, 2), 5);
             }
             if (var6 != 0) {
-              this.field_j.a((byte) -118, vl.a(we.field_l, new String[]{var7}, 2), 7);
+              this.field_j.addItem((byte) -118, vl.a(we.field_l, new String[]{var7}, 2), 7);
             }
           }
           if (param2 == 13) {

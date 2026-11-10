@@ -85,16 +85,16 @@ final class kp extends MenuScreen {
         this.field_m = 3;
     }
 
-    final void a(boolean param0) {
+    final void drawScreen(boolean param0) {
         int var4Lifetime1;
-        super.a(param0);
+        super.drawScreen(param0);
         PaletteBitmapFont var2 = TranslatedUiText.field_e;
         int var3 = 500;
         int var4 = 200;
         int var5 = 320 - var3 / 2;
         int var6 = 240 - var4 / 2;
         var4Lifetime1 = ((BitmapFont) ((Object) var2)).measureWrappedHeight(vh.field_Fb, var3, 0);
-        s.a(var6 - 10, 0, cc.field_b, -10 + var5, var4Lifetime1 + 20, 20 + var3);
+        s.drawNineSliceFrame(var6 - 10, 0, cc.field_b, -10 + var5, var4Lifetime1 + 20, 20 + var3);
         ((BitmapFont) ((Object) var2)).drawParagraph(vh.field_Fb, var5, var6, var3, var4Lifetime1, this.field_m, this.field_p, 1, 1, 0);
     }
 

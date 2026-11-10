@@ -7,7 +7,7 @@ final class oa {
     static ao field_a;
     static String field_b;
 
-    final static PhaseChangeEvent a(CipherPacketBuffer param0, int param1) {
+    final static PhaseChangeEvent readPhaseChangeEvent(CipherPacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -40,7 +40,7 @@ final class oa {
         }
     }
 
-    final static int b(byte param0) {
+    final static int getCurrentYear(byte param0) {
         if (param0 <= -11) {
           return new Date().getYear() + 1900;
         }
@@ -48,12 +48,12 @@ final class oa {
         return new Date().getYear() + 1900;
     }
 
-    final static void a(int param0) {
+    final static void tickUiTimers(int param0) {
         ki.a(26);
-        hh.b(param0);
+        hh.tickLobbyTransitions(param0);
     }
 
-    final static boolean a(int param0, int[] param1) {
+    final static boolean isAllZero(int param0, int[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -64,7 +64,7 @@ final class oa {
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param0 != -9) {
-            oa.a(-15);
+            oa.tickUiTimers(-15);
           }
           var2_int = 0;
           while (true) {
@@ -92,7 +92,7 @@ final class oa {
         }
     }
 
-    final static int a(byte param0) {
+    final static int computeScreenShake(byte param0) {
         int var2 = 0;
         int var1_int = 0;
         int var3 = 0;
@@ -114,7 +114,7 @@ final class oa {
           var1_int = 0;
           if (param0 <= 4) {
             var6 = (int[]) null;
-            oa.a(114, (int[]) null);
+            oa.isAllZero(114, (int[]) null);
           }
           for (var2 = 0; PortalEntryEvent.field_m.field_z.length > var2; var2++) {
             var3 = PortalEntryEvent.field_m.field_z[var2];

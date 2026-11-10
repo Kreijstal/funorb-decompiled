@@ -75,7 +75,7 @@ class UiComponent extends qo {
           if (null == this.field_Cb) {
             this.field_Cb = new IntrusiveDeque();
           }
-          this.field_Cb.a(param1, false);
+          this.field_Cb.addFirst(param1, false);
           if (param0 != 50) {
             this.field_y = 24;
           }
@@ -124,11 +124,11 @@ class UiComponent extends qo {
         int var8 = var7 + this.field_I;
         if (!param3) {
           var9 = 0;
-          var10_ref_cj = (UiComponent) (this.field_Cb.c(84));
+          var10_ref_cj = (UiComponent) (this.field_Cb.last(84));
           while (var10_ref_cj != null) {
             var10_ref_cj.field_mb = var9 - var10_ref_cj.field_Q;
             var9 = var9 + (param2 + (var10_ref_cj.field_z + var10_ref_cj.field_I));
-            var10_ref_cj = (UiComponent) (this.field_Cb.b(6));
+            var10_ref_cj = (UiComponent) (this.field_Cb.previous(6));
           }
           var8 = -param2 + var9;
         }
@@ -443,9 +443,9 @@ class UiComponent extends qo {
         var21 = var19 + this.field_D;
         var22 = var20 + this.field_v;
         if (!this.field_ib) {
-          s.a(this.field_qb, 0, var16, this.field_w, this.field_z, this.field_zb);
+          s.drawNineSliceFrame(this.field_qb, 0, var16, this.field_w, this.field_z, this.field_zb);
         } else {
-          s.a(param8, 0, var16, param10, param2, param0);
+          s.drawNineSliceFrame(param8, 0, var16, param10, param2, param0);
         }
         if (var17 != null) {
           var23_int = var21 + this.field_w;
@@ -508,10 +508,10 @@ class UiComponent extends qo {
           }
         }
         if (null != this.field_Cb) {
-          var23_ref = (UiComponent) (this.field_Cb.c(39));
+          var23_ref = (UiComponent) (this.field_Cb.last(39));
           while (var23_ref != null) {
             var23_ref.drawTree(this.field_zb, param1, this.field_z, this.field_bb, param4, param5, param6, param7, var20 + this.field_qb, 80, var19 + this.field_w);
-            var23_ref = (UiComponent) (this.field_Cb.b(6));
+            var23_ref = (UiComponent) (this.field_Cb.previous(6));
           }
         }
         SoftwareRasterizer.setClip(var12, var13, var14, var15);
@@ -557,11 +557,11 @@ class UiComponent extends qo {
           this.field_z = -78;
         }
         if (null != this.field_Cb) {
-          var4 = (UiComponent) (this.field_Cb.a((byte) -81));
+          var4 = (UiComponent) (this.field_Cb.first((byte) -81));
           while (var4 != null) {
             var4.field_W = true;
             var4.markDescendantsToInheritVisualState(-128);
-            var4 = (UiComponent) (this.field_Cb.c((byte) 123));
+            var4 = (UiComponent) (this.field_Cb.next((byte) 123));
           }
         }
     }
@@ -644,10 +644,10 @@ class UiComponent extends qo {
         stackIn_39_1 = (this.field_pb) && (this.field_jb == pq.field_f) && (param1);
         this.field_L = stackIn_39_1;
         if (this.field_Cb != null) {
-          var13 = (UiComponent) (this.field_Cb.a((byte) -44));
+          var13 = (UiComponent) (this.field_Cb.first((byte) -44));
           while (var13 != null) {
             var13.updateTree(-120, param1, this.field_z, this.field_w, this.field_qb, this.field_zb);
-            var13 = (UiComponent) (this.field_Cb.c((byte) 109));
+            var13 = (UiComponent) (this.field_Cb.next((byte) 109));
           }
         }
         if (this.field_pb) {
@@ -807,13 +807,13 @@ class UiComponent extends qo {
           }
         }
         if (this.field_Cb != null) {
-          var4 = (UiComponent) (this.field_Cb.c(param0 + 112));
+          var4 = (UiComponent) (this.field_Cb.last(param0 + 112));
           while (var4 != null) {
             var5 = var4.field_zb + var4.field_x;
             if (var3 < var5) {
               var3 = var5;
             }
-            var4 = (UiComponent) (this.field_Cb.b(6));
+            var4 = (UiComponent) (this.field_Cb.previous(6));
           }
         }
         if (param0 != -1) {

@@ -17,7 +17,7 @@ final class WidgetStyleLayer {
     static ResourceArchive field_b;
     static String field_l;
 
-    final WidgetStyleLayer a(int param0, int param1) {
+    final WidgetStyleLayer setHorizontalOffset(int param0, int param1) {
         this.field_f = param0;
         if (param1 != 2147483647) {
           this.field_a = 30;
@@ -26,7 +26,7 @@ final class WidgetStyleLayer {
         return this;
     }
 
-    final WidgetStyleLayer a(boolean param0, int param1) {
+    final WidgetStyleLayer setFlushBeforeOverlay(boolean param0, int param1) {
         this.field_i = param0 ? true : false;
         if (param1 != 2521) {
           return (WidgetStyleLayer) null;
@@ -71,7 +71,7 @@ final class WidgetStyleLayer {
         }
     }
 
-    final static String[] a(char param0, boolean param1, String param2) {
+    final static String[] splitAtCharacter(char param0, boolean param1, String param2) {
         int var7 = 0;
         int incrementValue$1 = 0;
         int var3_int = 0;
@@ -90,7 +90,7 @@ final class WidgetStyleLayer {
         var9 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           var10 = (CharSequence) ((Object) param2);
-          var3_int = ro.a(-125, param0, var10);
+          var3_int = ro.countCharacter(-125, param0, var10);
           var4 = new String[var3_int + 1];
           var5 = 0;
           var6 = 0;
@@ -122,7 +122,7 @@ final class WidgetStyleLayer {
         }
     }
 
-    final void a(byte param0) {
+    final void reset(byte param0) {
         if (param0 == 11) {
           this.field_f = 0;
           this.field_j = 0;
@@ -144,7 +144,7 @@ final class WidgetStyleLayer {
         this.field_h = -1;
     }
 
-    final WidgetStyleLayer a(byte param0, int param1) {
+    final WidgetStyleLayer setTextShadowColour(byte param0, int param1) {
         this.field_h = param1;
         int var3 = 73 / ((param0 + 40) / 34);
         return this;
@@ -175,7 +175,7 @@ final class WidgetStyleLayer {
         RuntimeException var6_ref = null;
         int var7 = 0;
         try {
-          s.a(param3.field_i + param4, 0, this.field_e, param3.field_y + param0, param3.field_w, param3.field_n);
+          s.drawNineSliceFrame(param3.field_i + param4, 0, this.field_e, param3.field_y + param0, param3.field_w, param3.field_n);
           if (param1) {
             this.field_m = -63;
           }
@@ -196,7 +196,7 @@ final class WidgetStyleLayer {
             }
             this.field_k.drawTransparent(var6_int, var7);
           }
-          var6 = param2.d(param3, -9327);
+          var6 = param2.getDisplayText(param3, -9327);
           if (var6 != null &&
             param2.field_j != null) {
             if (this.field_m < 0) {
@@ -263,7 +263,7 @@ final class WidgetStyleLayer {
         try {
           if (this.field_i) {
             param5.draw(param1, false, param3, param4, param2);
-            param5.a((byte) 11);
+            param5.reset((byte) 11);
           }
           if (this.field_h >= -1) {
             param5.field_h = this.field_h;
@@ -281,7 +281,7 @@ final class WidgetStyleLayer {
             param5.field_f = this.field_f;
           }
           if (param0 != -11108) {
-            this.b(-59, -41);
+            this.setTextColour(-59, -41);
           }
           if (null != this.field_e) {
             param5.field_e = this.field_e;
@@ -335,9 +335,9 @@ final class WidgetStyleLayer {
         }
     }
 
-    final WidgetStyleLayer b(int param0, int param1) {
+    final WidgetStyleLayer setTextColour(int param0, int param1) {
         if (param1 != 0) {
-          this.b(92, -13);
+          this.setTextColour(92, -13);
           this.field_m = param0;
           return this;
         }

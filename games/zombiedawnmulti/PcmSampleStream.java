@@ -163,7 +163,7 @@ final class PcmSampleStream extends PcmStream {
         return null;
     }
 
-    final synchronized void f(int param0) {
+    final synchronized void setPan(int param0) {
         this.setVolumeAndPan(this.getVolume(), param0 << 6);
     }
 
@@ -1262,7 +1262,7 @@ final class PcmSampleStream extends PcmStream {
         return false;
     }
 
-    final PcmStream d() {
+    final PcmStream nextSubStream() {
         return null;
     }
 

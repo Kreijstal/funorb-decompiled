@@ -18,7 +18,7 @@ final class nj {
 
     public static void releaseStatics(byte param0) {
         if (param0 != 78) {
-          nj.a(false, (byte) -38);
+          nj.readChatMessage(false, (byte) -38);
           field_d = null;
           field_a = null;
           return;
@@ -27,7 +27,7 @@ final class nj {
         field_a = null;
     }
 
-    final static ChatMessage a(boolean param0, byte param1) {
+    final static ChatMessage readChatMessage(boolean param0, byte param1) {
         boolean stackIn_5_0 = false;
         int stackIn_11_0 = 0;
         int[] stackIn_25_0 = null;
@@ -87,7 +87,7 @@ final class nj {
         var5 = var8.readUnsignedShort((byte) 69);
         try {
           var9 = MouseInputHandler.field_c.getDefinition(var5, -11452);
-          pg.field_b = var9.e(-18572);
+          pg.field_b = var9.getPreview(-18572);
           if (!IntrusiveDequeCursor.field_h.equals(ProgressDialog.field_lb)) {
             stackIn_25_0 = var9.field_r;
           } else {
@@ -97,7 +97,7 @@ final class nj {
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
-          MouseInputHandler.a("CC1", (Throwable) ((Object) var6), false);
+          MouseInputHandler.reportClientError("CC1", (Throwable) ((Object) var6), false);
           pg.field_b = null;
           af.field_g = null;
           return new ChatMessage(param0);

@@ -148,7 +148,7 @@ final class QuickChatMenu extends UiComponent {
             stackIn_12_0 = (la.field_k) ? 0 : 1;
             var4_int = stackIn_12_0;
           } else {
-            if (hl.b(0)) {
+            if (hl.isLocalPlayerGameHost(0)) {
               stackIn_8_0 = (!param0.field_Fb) ? 1 : 0;
             } else {
               stackIn_8_0 = 0;
@@ -176,7 +176,7 @@ final class QuickChatMenu extends UiComponent {
               stackIn_29_0.field_Ab = stackIn_30_1;
             }
             if (ma.field_b[0][2].field_pb) {
-              if (hl.b(0)) {
+              if (hl.isLocalPlayerGameHost(0)) {
                 ui.field_j = pd.field_f;
               } else {
                 ui.field_j = vl.a(vc.field_e, new String[]{JaggrabDownloader.field_c.field_Nb}, 2);
@@ -214,7 +214,7 @@ final class QuickChatMenu extends UiComponent {
                         ScoreUpdateEvent.field_k[var9] = (byte) 0;
                       }
                     } else {
-                      ScoreUpdateEvent.field_k[var7 / 8] = (byte)vg.a((int) ScoreUpdateEvent.field_k[var7 / 8], 1 << ScrollPane.b(var7, 7));
+                      ScoreUpdateEvent.field_k[var7 / 8] = (byte)vg.a((int) ScoreUpdateEvent.field_k[var7 / 8], 1 << ScrollPane.bitAnd(var7, 7));
                     }
                   }
                 } else {
@@ -423,7 +423,7 @@ final class QuickChatMenu extends UiComponent {
                 for (var17_int = 0; var17_int < var7; var17_int++) {
                   FullscreenFocusCanvas.field_c[var17_int] = false;
                 }
-                bh.a(-1712, var9, 0, param0, param1, var7, -1, -1);
+                bh.findValidSettingCombination(-1712, var9, 0, param0, param1, var7, -1, -1);
                 if (kj.field_q >= 2 &&
                   lc.field_m[12]) {
                   BirthDateValidator.field_l = true;
@@ -438,10 +438,10 @@ final class QuickChatMenu extends UiComponent {
                 if (param1) {
                   if (-1 == var9) {
                     for (var18 = var6Lifetime4; var18 < var30.length + var6Lifetime4 - 1; var18++) {
-                      tg.field_a[var18 / 8] = (byte)ScrollPane.b((int) tg.field_a[var18 / 8], ~(1 << ScrollPane.b(var18, 7)));
+                      tg.field_a[var18 / 8] = (byte)ScrollPane.bitAnd((int) tg.field_a[var18 / 8], ~(1 << ScrollPane.bitAnd(var18, 7)));
                     }
                   } else {
-                    tg.field_a[(var6Lifetime4 + var9) / 8] = (byte)vg.a((int) tg.field_a[(var6Lifetime4 + var9) / 8], 1 << ScrollPane.b(var6Lifetime4 + var9, 7));
+                    tg.field_a[(var6Lifetime4 + var9) / 8] = (byte)vg.a((int) tg.field_a[(var6Lifetime4 + var9) / 8], 1 << ScrollPane.bitAnd(var6Lifetime4 + var9, 7));
                   }
                 } else {
                   if (var16Lifetime1 == 0 &&
@@ -453,7 +453,7 @@ final class QuickChatMenu extends UiComponent {
               }
               if (param1 &&
                 var16Lifetime1 != 0) {
-                tg.field_a[(var9 + var6Lifetime4) / 8] = (byte)ScrollPane.b((int) tg.field_a[(var9 + var6Lifetime4) / 8], ~(1 << ScrollPane.b(var9 + var6Lifetime4, 7)));
+                tg.field_a[(var9 + var6Lifetime4) / 8] = (byte)ScrollPane.bitAnd((int) tg.field_a[(var9 + var6Lifetime4) / 8], ~(1 << ScrollPane.bitAnd(var9 + var6Lifetime4, 7)));
               }
               if (var9 >= 0 &&
                 var17.field_pb) {
@@ -557,7 +557,7 @@ final class QuickChatMenu extends UiComponent {
                 }
                 if (var21 != null) {
                   var21 = "<col=A00000>" + (String) (var21);
-                  var32 = sa.a((String) (var21), param3 + 123, "<br>", "<br><col=A00000>");
+                  var32 = sa.replaceLiteral((String) (var21), param3 + 123, "<br>", "<br><col=A00000>");
                   if (var20 == null) {
                     var20 = var32;
                   } else {
@@ -612,7 +612,7 @@ final class QuickChatMenu extends UiComponent {
             if (param1) {
               return;
             }
-            og.b(param2, 115);
+            og.sendGameOptions(param2, 115);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -671,7 +671,7 @@ final class QuickChatMenu extends UiComponent {
           var12 = "</col>";
           for (var13 = 0; this.field_Ob > var13; var13++) {
             if (this.field_Pb[var13] > 0) {
-              param6[var13] = var11 + EmailValidator.a(-81, this.field_Pb[var13]).toUpperCase() + ": " + var12 + param6[var13];
+              param6[var13] = var11 + EmailValidator.charToString(-81, this.field_Pb[var13]).toUpperCase() + ": " + var12 + param6[var13];
             }
             var14 = null;
             if (null != this.field_Fb[var13] ||
@@ -785,7 +785,7 @@ final class QuickChatMenu extends UiComponent {
             var3 = (jh) null;
             QuickChatMenu.a((jh) null, false, 60, 111);
           }
-          var2 = RandomAccessCacheFile.a(cq.a(0, param1), (byte) 26);
+          var2 = RandomAccessCacheFile.decodeBase37(cq.a(0, param1), (byte) 26);
           if (var2 == null) {
             var2 = "";
           }
@@ -964,14 +964,14 @@ final class QuickChatMenu extends UiComponent {
                         var18 = -1 - var17 + TriangleRasterizer.field_i;
                       }
                       if (var17 < 0) {
-                        UnitStateEvent.a(param7, true, var16Lifetime2, var18 + var17, param8);
+                        UnitStateEvent.blendHalfSpan(param7, true, var16Lifetime2, var18 + var17, param8);
                       } else {
-                        UnitStateEvent.a(param7, true, var17 + var16Lifetime2, var18, param8);
+                        UnitStateEvent.blendHalfSpan(param7, true, var17 + var16Lifetime2, var18, param8);
                       }
                     } else {
                       if (0 <= var17 &&
                         TriangleRasterizer.field_i > var17) {
-                        UnitStateEvent.a(param7, true, var16Lifetime2 + var17, var18, param8);
+                        UnitStateEvent.blendHalfSpan(param7, true, var16Lifetime2 + var17, var18, param8);
                       }
                     }
                   }
@@ -1015,14 +1015,14 @@ final class QuickChatMenu extends UiComponent {
                     var17Lifetime1 = -1 - var16Lifetime1 + TriangleRasterizer.field_i;
                   }
                   if (var16Lifetime1 >= 0) {
-                    UnitStateEvent.a(param7, true, var15Lifetime1 + var16Lifetime1, var17Lifetime1, param8);
+                    UnitStateEvent.blendHalfSpan(param7, true, var15Lifetime1 + var16Lifetime1, var17Lifetime1, param8);
                   } else {
-                    UnitStateEvent.a(param7, true, var15Lifetime1, var17Lifetime1 + var16Lifetime1, param8);
+                    UnitStateEvent.blendHalfSpan(param7, true, var15Lifetime1, var17Lifetime1 + var16Lifetime1, param8);
                   }
                 } else {
                   if (var16Lifetime1 >= 0 &&
                     var16Lifetime1 < TriangleRasterizer.field_i) {
-                    UnitStateEvent.a(param7, true, var16Lifetime1 + var15Lifetime1, var17Lifetime1, param8);
+                    UnitStateEvent.blendHalfSpan(param7, true, var16Lifetime1 + var15Lifetime1, var17Lifetime1, param8);
                   }
                 }
               }
@@ -1100,7 +1100,7 @@ final class QuickChatMenu extends UiComponent {
             this.setExpansionTicks(0, 11183);
             this.field_Tb = param1;
             this.field_Ib = this.field_Fb[this.field_Tb];
-            QuickChatPhraseRegistry.a((byte) 75, this.field_Ib);
+            QuickChatPhraseRegistry.addQuickChatSubmenu((byte) 75, this.field_Ib);
             this.field_Ib.setExpansionTicks(12, 11183);
           } else {
             if (this.field_Qb[param1] == -1) {
@@ -1113,12 +1113,12 @@ final class QuickChatMenu extends UiComponent {
                 JaggrabDownloader.field_c != null) {
                 var6 = 1;
               }
-              if (CipherPacketBuffer.a(var6, true) == 2) {
+              if (CipherPacketBuffer.getChatFilterMode(var6, true) == 2) {
                 kp.a(var6, param3, 1, true);
               }
               var8 = (String) null;
               GameWorld.a(var5, qf.field_g, param2, (String) null, va.field_a, 29602);
-              ii.a(va.field_a, (byte) -128, var5, qf.field_g, jj.field_M);
+              ii.rememberRepeatMessage(va.field_a, (byte) -128, var5, qf.field_g, jj.field_M);
               NavigationGrid.b(31706);
               lh.a(true);
             }

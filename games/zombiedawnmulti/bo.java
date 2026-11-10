@@ -9,7 +9,7 @@ final class bo {
     static boolean field_e;
     static int field_d;
 
-    final static af[] a(int param0, CipherPacketBuffer param1) {
+    final static af[] readMeshMaterials(int param0, CipherPacketBuffer param1) {
         int var5 = 0;
         af[] stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
@@ -68,7 +68,7 @@ final class bo {
         }
     }
 
-    final void a(int param0, java.applet.Applet param1) {
+    final void saveAsLastLoginMethod(int param0, java.applet.Applet param1) {
         try {
           TabbedPane.a(31536000L, param1, "jagex-last-login-method", -120, this.field_f);
           if (param0 > -63) {
@@ -79,7 +79,7 @@ final class bo {
         }
     }
 
-    final static void a(int param0, int param1, int param2, String[] param3, int param4, java.applet.Applet param5) {
+    final static void readGameAppletParameters(int param0, int param1, int param2, String[] param3, int param4, java.applet.Applet param5) {
         int var7 = 0;
         String var6 = null;
         int var8 = 0;
@@ -104,10 +104,10 @@ final class bo {
           if (var6 == null) {
             hj.field_f = 2;
           } else {
-            if (!UnitView.a((byte) -120, (CharSequence) ((Object) var6))) {
+            if (!UnitView.isValidNameText((byte) -120, (CharSequence) ((Object) var6))) {
               hj.field_f = 2;
             } else {
-              hj.field_f = TriangleMesh.a((CharSequence) ((Object) var6), param2 ^ -9159);
+              hj.field_f = TriangleMesh.parseDecimalInt((CharSequence) ((Object) var6), param2 ^ -9159);
             }
           }
           PlayerLoadout.field_e = param0;
@@ -139,8 +139,8 @@ final class bo {
         }
     }
 
-    final static void b(int param0) {
-        sp.c(param0 - 4);
+    final static void requestPlayAsGuest(int param0) {
+        sp.showLoadingProgressDialog(param0 - 4);
         PowerupButton.a(param0, 65);
     }
 
@@ -185,7 +185,7 @@ final class bo {
           var7 = var8;
           var3 = var7;
           for (var2_intLifetime1 = 0; var2_intLifetime1 < 4; var2_intLifetime1++) {
-            IntrusiveNode.a(var2_intLifetime1, var3, -85, ValidationState.a(param0, var2_intLifetime1, (byte) 112));
+            IntrusiveNode.writeIntAt(var2_intLifetime1, var3, -85, ValidationState.a(param0, var2_intLifetime1, (byte) 112));
           }
           incrementValue$0 = var2_intLifetime1;
           var2_intLifetime1++;
@@ -193,18 +193,18 @@ final class bo {
           incrementValue$1 = var2_intLifetime1;
           var2_intLifetime1++;
           var5 = ValidationState.a(param0, incrementValue$1, (byte) 78);
-          IntrusiveNode.a(4, var8, -116, var4);
-          IntrusiveNode.a(5, var8, -88, var5);
-          IntrusiveNode.a(6, var8, -74, var4);
-          IntrusiveNode.a(7, var8, -79, var5);
-          IntrusiveNode.a(8, var8, -91, var4);
-          IntrusiveNode.a(9, var8, param1 ^ -88, var5);
-          IntrusiveNode.a(10, var8, -111, var4);
-          IntrusiveNode.a(11, var8, -85, var5);
+          IntrusiveNode.writeIntAt(4, var8, -116, var4);
+          IntrusiveNode.writeIntAt(5, var8, -88, var5);
+          IntrusiveNode.writeIntAt(6, var8, -74, var4);
+          IntrusiveNode.writeIntAt(7, var8, -79, var5);
+          IntrusiveNode.writeIntAt(8, var8, -91, var4);
+          IntrusiveNode.writeIntAt(9, var8, param1 ^ -88, var5);
+          IntrusiveNode.writeIntAt(10, var8, -111, var4);
+          IntrusiveNode.writeIntAt(11, var8, -85, var5);
           for (var2_intLifetime2 = 6; param0.length / 4 > var2_intLifetime2; var2_intLifetime2++) {
-            IntrusiveNode.a(6 + var2_intLifetime2, var3, -111, ValidationState.a(param0, var2_intLifetime2, (byte) 112));
+            IntrusiveNode.writeIntAt(6 + var2_intLifetime2, var3, -111, ValidationState.a(param0, var2_intLifetime2, (byte) 112));
           }
-          stackIn_10_0 = QuickChatHelpDialog.a((byte) 104, var8);
+          stackIn_10_0 = QuickChatHelpDialog.decodeLevelData((byte) 104, var8);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -220,7 +220,7 @@ final class bo {
         }
     }
 
-    final boolean a(String param0, byte param1) {
+    final boolean hasName(String param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         boolean stackIn_1_0 = false;

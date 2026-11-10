@@ -32,9 +32,9 @@ final class qi {
           var2 = var11.readUnsignedByte(31365);
           var3 = var11.readUnsignedByte(31365);
           if (var2 == 0) {
-            var4_ref_u = (u) (DisplayNamePanel.field_T.c(83));
+            var4_ref_u = (u) (DisplayNamePanel.field_T.last(83));
             if (var4_ref_u == null) {
-              ak.a((byte) -119);
+              ak.closeGameSocket((byte) -119);
               return;
             }
             var5_int = -var11.position + EmailAvailabilityValidator.field_q;
@@ -45,28 +45,28 @@ final class qi {
               var5_int = var13.length << 2;
             }
             for (var7 = 0; var5_int > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var11.readUnsignedByte(31365) << ScrollPane.b(768, var7 << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var11.readUnsignedByte(31365) << ScrollPane.bitAnd(768, var7 << 8));
             }
             var4_ref_u.unlink(true);
             return;
           }
           if (var2 != 1) {
-            MouseInputHandler.a("LR1: " + ci.a(0), (Throwable) null, false);
-            ak.a((byte) -115);
+            MouseInputHandler.reportClientError("LR1: " + ci.a(0), (Throwable) null, false);
+            ak.closeGameSocket((byte) -115);
             return;
           }
           var4 = var11.readSignedSmart(22219);
-          var5 = (hp) (JaggrabDownloader.field_l.c(83));
+          var5 = (hp) (JaggrabDownloader.field_l.last(83));
           while (var5 != null) {
             if (var5.field_v != var3 ||
               var4 != var5.field_f) {
-              var5 = (hp) (JaggrabDownloader.field_l.b(6));
+              var5 = (hp) (JaggrabDownloader.field_l.previous(6));
               continue;
             }
             break;
           }
           if (var5 == null) {
-            ak.a((byte) -117);
+            ak.closeGameSocket((byte) -117);
             return;
           }
           var5.unlink(true);
@@ -89,11 +89,11 @@ final class qi {
           if (param0 != 100) {
             qi.releaseStatics((byte) 52);
           }
-          UnitStateEvent.a((java.awt.Component) ((Object) param1), 127);
+          UnitStateEvent.attachMouseInput((java.awt.Component) ((Object) param1), 127);
           if (null == FullscreenFocusCanvas.field_a) {
             return;
           }
-          FullscreenFocusCanvas.field_a.a((byte) 127, (java.awt.Component) ((Object) param1));
+          FullscreenFocusCanvas.field_a.addTo((byte) 127, (java.awt.Component) ((Object) param1));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

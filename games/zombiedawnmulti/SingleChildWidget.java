@@ -66,8 +66,8 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param1, 9, param3, param2)) {
-            this.a(param2, param3, (byte) 26, param1);
+          if (this.beginWidgetDiagnosticVisit(param1, 9, param3, param2)) {
+            this.appendWidgetDiagnosticProperties(param2, param3, (byte) 26, param1);
             this.appendChildDiagnostics(param1, true, param3, param2);
           }
           if (param0 != 7) {
@@ -100,7 +100,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
           this.field_B = (UiWidget) null;
         }
         if (null != this.field_B) {
-          this.field_B.e(-1);
+          this.field_B.refreshLayout(-1);
         }
     }
 
@@ -117,11 +117,11 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
         return var2;
     }
 
-    final int f(byte param0) {
+    final int getTopLayer(byte param0) {
         if (param0 != 44) {
           return -111;
         }
-        return null != this.field_B ? this.field_B.f((byte) 44) : 0;
+        return null != this.field_B ? this.field_B.getTopLayer((byte) 44) : 0;
     }
 
     void handlePointerRelease(int param0, UiWidget param1, int param2, int param3, boolean param4, int param5) {
@@ -326,7 +326,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
 
     void renderWidget(int param0, int param1, int param2, int param3) {
         if (param0 != -2) {
-          this.f((byte) 0);
+          this.getTopLayer((byte) 0);
         }
         if (param2 == 0 &&
           null != this.painter) {

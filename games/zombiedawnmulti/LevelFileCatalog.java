@@ -62,7 +62,7 @@ final class LevelFileCatalog {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
         try {
-          ma.field_a.b((byte) -35, param2);
+          ma.field_a.writeCipheredOpcode((byte) -35, param2);
           ma.field_a.position = ma.field_a.position + 1;
           var7_int = ma.field_a.position;
           ma.field_a.a(param1, true);

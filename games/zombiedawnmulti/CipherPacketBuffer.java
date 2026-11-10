@@ -12,7 +12,7 @@ final class CipherPacketBuffer extends PacketBuffer {
     static int[] field_v;
     private int field_o;
 
-    final void a(byte param0, int[] param1) {
+    final void installCipher(byte param0, int[] param1) {
         try {
           int var3_int = -83 / ((26 - param0) / 43);
           this.field_p = new IsaacRandom(param1);
@@ -21,14 +21,14 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final void l(int param0) {
+    final void endBitAccess(int param0) {
         if (param0 != -3093) {
           field_u = (PcmPlayerService) null;
         }
         this.position = (7 + this.field_o) / 8;
     }
 
-    final static void i(byte param0) {
+    final static void readRankingsResponse(byte param0) {
         String[][] dupTemp$0 = null;
         int[][] dupTemp$1 = null;
         RuntimeException decompiledCaughtException = null;
@@ -60,16 +60,16 @@ final class CipherPacketBuffer extends PacketBuffer {
           var13 = s.field_e;
           var15 = var13;
           var2 = var15.readUnsignedByte(31365);
-          var3 = (vg) (GameApplet.field_i.c(116));
+          var3 = (vg) (GameApplet.field_i.last(116));
           while (var3 != null) {
             if (var2 != var3.field_i) {
-              var3 = (vg) (GameApplet.field_i.b(6));
+              var3 = (vg) (GameApplet.field_i.previous(6));
               continue;
             }
             break;
           }
           if (var3 == null) {
-            ak.a((byte) -123);
+            ak.closeGameSocket((byte) -123);
             return;
           }
           var4 = var15.readUnsignedByte(31365);
@@ -79,9 +79,9 @@ final class CipherPacketBuffer extends PacketBuffer {
             for (var6_int = 1; var4 > var6_int; var6_int++) {
               kk.field_v[var6_int] = var13.readString((byte) -116);
             }
-            s.a(var4, (byte) 111, var5);
+            s.ensureRankingArrays(var4, (byte) 111, var5);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
-              ContextMenu.a(4050, var15);
+              ContextMenu.decodePackedRankedEntry(4050, var15);
               if (var6_intLifetime1 != 0) {
                 PacketBuffer.a(1000, ao.field_c, vn.field_e, qc.field_q, var6_intLifetime1, jq.field_a);
               } else {
@@ -92,7 +92,7 @@ final class CipherPacketBuffer extends PacketBuffer {
                 PacketBuffer.a(1000, ao.field_c, vn.field_e, qc.field_q, var6_intLifetime1, jq.field_a);
               }
             }
-            TriangleMesh.a(var5, -109);
+            TriangleMesh.sortRankingRows(var5, -109);
             dupTemp$0 = new String[2][var5];
             var3.field_t = dupTemp$0;
             var6 = dupTemp$0;
@@ -109,7 +109,7 @@ final class CipherPacketBuffer extends PacketBuffer {
               var7[0][1 + 4 * var10] = DialogLayer.field_J[var11];
               var7[0][2 + var10 * 4] = kj.field_p[var11];
               var7[0][3 + 4 * var10] = ContentTransitionDialog.field_ob[var11];
-              if (sf.a(1, kk.field_v[var11]) &&
+              if (sf.isCurrentUser(1, kk.field_v[var11]) &&
                 DialogLayer.field_J[var11] + kj.field_p[var11] + ContentTransitionDialog.field_ob[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
@@ -127,7 +127,7 @@ final class CipherPacketBuffer extends PacketBuffer {
               var7[1][4 * var14 + 1] = DialogLayer.field_J[var11Lifetime1];
               var7[1][2 + 4 * var14] = kj.field_p[var11Lifetime1];
               var7[1][3 + var14 * 4] = ContentTransitionDialog.field_ob[var11Lifetime1];
-              if (sf.a(1, kk.field_v[var11Lifetime1]) &&
+              if (sf.isCurrentUser(1, kk.field_v[var11Lifetime1]) &&
                 0 == DialogLayer.field_J[var11Lifetime1] + kj.field_p[var11Lifetime1] + ContentTransitionDialog.field_ob[var11Lifetime1]) {
                 var6[1][var14] = null;
                 var14--;
@@ -146,13 +146,13 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final void b(byte param0, int param1) {
+    final void writeCipheredOpcode(byte param0, int param1) {
         if (param0 != -35) {
           return;
         }
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$0] = (byte)(param1 + this.field_p.a(-48));
+        this.payload[fieldTemp$0] = (byte)(param1 + this.field_p.nextInt(-48));
     }
 
     final void readCipheredBytes(int param0, int param1, int param2, byte[] param3) {
@@ -169,7 +169,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           for (var5_int = param1; param0 > var5_int; var5_int++) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param3[var5_int + param2] = (byte)(this.payload[fieldTemp$0] - this.field_p.a(-90));
+            param3[var5_int + param2] = (byte)(this.payload[fieldTemp$0] - this.field_p.nextInt(-90));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -186,7 +186,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final static uc a(String param0, boolean param1) {
+    final static uc startEmailValidation(String param0, boolean param1) {
         RuntimeException var2 = null;
         String stackIn_5_0 = null;
         boolean stackIn_6_1 = false;
@@ -197,11 +197,11 @@ final class CipherPacketBuffer extends PacketBuffer {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (tg.field_g.d(-99) &&
-            !param0.equals(tg.field_g.a(31027))) {
+          if (tg.field_g.isFlagAssigned(-99) &&
+            !param0.equals(tg.field_g.getText(31027))) {
             stackIn_5_0 = (String) (param0);
             stackIn_6_1 = !(param1);
-            tg.field_g = tg.a(stackIn_5_0, stackIn_6_1);
+            tg.field_g = tg.createConditionalText(stackIn_5_0, stackIn_6_1);
           }
           if (!param1) {
             stackIn_11_0 = tg.field_g;
@@ -248,7 +248,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         return var5;
     }
 
-    final static int a(int param0, boolean param1) {
+    final static int getChatFilterMode(int param0, boolean param1) {
         int var2 = 0;
         if (param0 == 0) {
           var2 = li.field_C;
@@ -269,10 +269,10 @@ final class CipherPacketBuffer extends PacketBuffer {
         int var2 = 114 % ((param0 + 34) / 50);
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        return this.payload[fieldTemp$0] - this.field_p.a(-25) & 255;
+        return this.payload[fieldTemp$0] - this.field_p.nextInt(-25) & 255;
     }
 
-    final void k(int param0) {
+    final void startBitAccess(int param0) {
         this.field_o = this.position * 8;
         if (param0 != -1136) {
           field_u = (PcmPlayerService) null;
@@ -288,7 +288,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         field_w = null;
         field_v = null;
         if (param0 > -34) {
-          CipherPacketBuffer.a(-13, true);
+          CipherPacketBuffer.getChatFilterMode(-13, true);
         }
     }
 

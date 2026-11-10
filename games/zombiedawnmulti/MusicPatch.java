@@ -64,14 +64,14 @@ final class MusicPatch extends IntrusiveNode {
         if (param0 != 12949) {
           return -35;
         }
-        return hp.a((byte) -122, g.field_a, 16) + 4;
+        return hp.nextBoundedInt((byte) -122, g.field_a, 16) + 4;
     }
 
     final static boolean c(int param0) {
         if (param0 != 128) {
           return true;
         }
-        return !tg.field_g.d(-86) ? true : false;
+        return !tg.field_g.isFlagAssigned(-86) ? true : false;
     }
 
     MusicPatch(byte[] param0) {
@@ -335,7 +335,7 @@ final class MusicPatch extends IntrusiveNode {
               }
               var22 = var38.readVarInt(0);
             }
-            this.field_g[var23] = (short)(this.field_g[var23] + (ScrollPane.b(2, -1 + var22) << 14));
+            this.field_g[var23] = (short)(this.field_g[var23] + (ScrollPane.bitAnd(2, -1 + var22) << 14));
             var20Lifetime2--;
             this.field_r[var23] = var22;
           }
@@ -618,9 +618,9 @@ final class MusicPatch extends IntrusiveNode {
                   var6 = var9;
                   var9--;
                   if ((1 & var9) == 0) {
-                    var7 = param0.a(var9 >> 2, param3, 115);
+                    var7 = param0.getSoundEffectById(var9 >> 2, param3, 115);
                   } else {
-                    var7 = param0.a(var9 >> 2, (byte) -64, param3);
+                    var7 = param0.getVorbisSampleById(var9 >> 2, (byte) -64, param3);
                   }
                   if (var7 == null) {
                     var5_int = 0;

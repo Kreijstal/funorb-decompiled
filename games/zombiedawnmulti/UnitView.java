@@ -83,7 +83,7 @@ abstract class UnitView extends SceneObject {
         }
     }
 
-    final static boolean a(byte param0, CharSequence param1) {
+    final static boolean isValidNameText(byte param0, CharSequence param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
@@ -93,7 +93,7 @@ abstract class UnitView extends SceneObject {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -115 / ((param0 + 53) / 59);
-          stackIn_1_0 = ng.a(-49, true, param1, 10);
+          stackIn_1_0 = ng.isValidInteger(-49, true, param1, 10);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -165,13 +165,13 @@ abstract class UnitView extends SceneObject {
         super(param0, param1, param2);
         this.field_U = null;
         this.state = !(this instanceof HumanView) ? 4 : 0;
-        this.facing = 1 != hp.a((byte) 21, g.field_a, 2) ? 1 : 3;
+        this.facing = 1 != hp.nextBoundedInt((byte) 21, g.field_a, 2) ? 1 : 3;
         this.animationFrame = 0;
         this.animationTicks = 0;
         this.speed = param3;
     }
 
-    final void a(int param0, int param1, int param2, byte param3, int param4, int param5) {
+    final void setPositionAndTarget(int param0, int param1, int param2, byte param3, int param4, int param5) {
         int var7 = -88 % ((param3 + 32) / 57);
         this.field_R = false;
         this.positionX = param0;

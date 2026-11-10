@@ -12,7 +12,7 @@ final class InfectionEvent extends GameEvent {
     private int field_n;
     static int field_m;
 
-    final static void a(String[] args, int param1, int param2, String param3) {
+    final static void handleAccountCreationResult(String[] args, int param1, int param2, String param3) {
         int var5 = 0;
         boolean stackIn_9_0 = false;
         boolean stackIn_10_1 = false;
@@ -29,13 +29,13 @@ final class InfectionEvent extends GameEvent {
           if (param2 == 255) {
             stackIn_9_0 = false;
             stackIn_10_1 = !(rj.field_J >= 13);
-            iq.field_c = CheckboxPainter.a(stackIn_9_0, stackIn_10_1);
+            iq.field_c = CheckboxPainter.createFlagResult(stackIn_9_0, stackIn_10_1);
           } else {
             if (param2 < 100) {
-              iq.field_c = p.a(-38, param3, param2);
+              iq.field_c = p.createRequestResult(-38, param3, param2);
             } else {
               if (105 < param2) {
-                iq.field_c = p.a(-38, param3, param2);
+                iq.field_c = p.createRequestResult(-38, param3, param2);
               } else {
                 iq.field_c = kn.a(args, -111);
               }
@@ -76,7 +76,7 @@ final class InfectionEvent extends GameEvent {
         this.field_l = param1;
     }
 
-    final static void a(int param0, int param1, byte param2) {
+    final static void registerSoundAlias(int param0, int param1, byte param2) {
         int[] var7 = null;
         int[] var3 = null;
         int[] var4 = null;
@@ -102,7 +102,7 @@ final class InfectionEvent extends GameEvent {
         }
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
+    final static void sortRankingRange(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
         int var11 = 0;
         int incrementValue$0 = 0;
         int stackIn_26_0 = 0;
@@ -158,8 +158,8 @@ final class InfectionEvent extends GameEvent {
                 }
               }
             }
-            InfectionEvent.a(param0, param1 + 0, param2, param3, var8, param5, var9);
-            InfectionEvent.a(var10, param1 + 0, param2, param3, param4, var8, param6);
+            InfectionEvent.sortRankingRange(param0, param1 + 0, param2, param3, var8, param5, var9);
+            InfectionEvent.sortRankingRange(var10, param1 + 0, param2, param3, param4, var8, param6);
             return;
           }
           for (var7_intLifetime1 = param4 - 1; var7_intLifetime1 > param5; var7_intLifetime1--) {
@@ -180,7 +180,7 @@ final class InfectionEvent extends GameEvent {
         }
     }
 
-    final void a(int param0, GameScreen param1) {
+    final void apply(int param0, GameScreen param1) {
         GameCharacter stackIn_4_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -229,7 +229,7 @@ final class InfectionEvent extends GameEvent {
         }
     }
 
-    final void a(int param0, boolean param1, int param2, int param3) {
+    final void drawDebugOverlay(int param0, boolean param1, int param2, int param3) {
         if (!param1) {
           this.field_q = 6;
         }
@@ -238,11 +238,11 @@ final class InfectionEvent extends GameEvent {
     public static void releaseStatics(boolean param0) {
         field_j = null;
         if (!param0) {
-          InfectionEvent.a(-121, -52, -61, false, 25, -17, -24);
+          InfectionEvent.sortRankingRange(-121, -52, -61, false, 25, -17, -24);
         }
     }
 
-    final static boolean a(CharSequence param0, int param1) {
+    final static boolean isValidPlayerNameText(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -251,7 +251,7 @@ final class InfectionEvent extends GameEvent {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 12319) {
-            InfectionEvent.a(97, -25, -42, true, 8, 4, 118);
+            InfectionEvent.sortRankingRange(97, -25, -42, true, 8, 4, 118);
           }
           stackIn_3_0 = dp.a(0, false, param0);
           return stackIn_3_0;

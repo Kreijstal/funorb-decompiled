@@ -53,7 +53,7 @@ final class vo extends MenuScreen {
           if (param0 != -46) {
             field_q = false;
           }
-          stackIn_3_0 = ZombieDawnMulti.a(var5_int, (byte) -19, param3, param4, var6);
+          stackIn_3_0 = ZombieDawnMulti.loadAntialiasedFont(var5_int, (byte) -19, param3, param4, var6);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -87,7 +87,7 @@ final class vo extends MenuScreen {
         }
     }
 
-    final void a(int param0) {
+    final void updateScreen(int param0) {
         int var2;
         int var4;
         int stackIn_3_0 = 0;
@@ -96,7 +96,7 @@ final class vo extends MenuScreen {
         this.field_t = this.field_t + 1;
         stackIn_3_0 = (kd.field_b != 1) ? 0 : 1;
         var2 = stackIn_3_0;
-        while (MusicPatchPcmStream.c(-1)) {
+        while (MusicPatchPcmStream.pollKeyEvent(-1)) {
           if (InfectionEvent.field_p != 13) {
             continue;
           }
@@ -121,7 +121,7 @@ final class vo extends MenuScreen {
         }
     }
 
-    final void b(byte param0) {
+    final void onExit(byte param0) {
         if (param0 != 69) {
           field_o = (PlatformTask) null;
         }
@@ -140,7 +140,7 @@ final class vo extends MenuScreen {
         if (param0 > -59) {
           field_o = (PlatformTask) null;
         }
-        LevelActorSpawner.a(true, 1, 127, sp.field_g);
+        LevelActorSpawner.requestMenuScreen(true, 1, 127, sp.field_g);
     }
 
     private final void b(int param0, int param1, int param2) {
@@ -151,7 +151,7 @@ final class vo extends MenuScreen {
         eq.field_c.draw(param0 + 150, param1 + 50);
     }
 
-    final void a(boolean param0) {
+    final void drawScreen(boolean param0) {
         int var2;
         int var3;
         int var4;

@@ -27,7 +27,7 @@ class UiWidget extends IntrusiveNode {
     static boolean field_r;
     int field_i;
 
-    final static void d(int param0) {
+    final static void resetLobbyLists(int param0) {
         DualLinkNode var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -37,27 +37,27 @@ class UiWidget extends IntrusiveNode {
           TabbedPane.field_Fb = 0;
           ClientException.field_d = 0;
           ProgressDialog.field_ob = null;
-          ro.field_M.e(param0 ^ 22926);
-          jf.field_d.e(-30986);
+          ro.field_M.clear(param0 ^ 22926);
+          jf.field_d.clear(-30986);
           if (param0 != -8328) {
             field_o = (String) null;
           }
-          var1 = ol.field_o.a((byte) 7);
+          var1 = ol.field_o.firstInTraversal((byte) 7);
           while (true) {
             if (var1 != null) {
               var1.a(-4564);
-              var1 = ol.field_o.c((byte) 112);
+              var1 = ol.field_o.nextInTraversal((byte) 112);
               if (var2 == 0) {
                 continue;
               }
               break;
             }
-            var1 = bh.field_f.a((byte) 7);
+            var1 = bh.field_f.firstInTraversal((byte) 7);
             break;
           }
           while (var1 != null) {
             var1.a(param0 ^ 12628);
-            var1 = bh.field_f.c((byte) 104);
+            var1 = bh.field_f.nextInTraversal((byte) 104);
             if (var2 != 0) {
               return;
             }
@@ -71,7 +71,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    final static void a(byte param0, String param1) {
+    final static void showMessageDialogText(byte param0, String param1) {
         sc.field_j.field_wb = param1;
         ee.field_a = true;
         int var2_int = SocketConnector.field_h.field_h;
@@ -79,7 +79,7 @@ class UiWidget extends IntrusiveNode {
         int var4 = sc.field_j.field_yb.measureWrappedHeight(param1, 272, sc.field_j.field_J);
         int var5 = -(var4 / 2) + 7 + (-110 + var3 / 2);
         SimHuman.field_gb.setBounds(-(2 * var5) + var3 - 120, var5, 320, (-320 + var2_int) / 2, -3344);
-        SimHuman.field_gb.field_ab = tg.a(2105376, SimHuman.field_gb.field_z, 8421504, 3, 11579568, 114);
+        SimHuman.field_gb.field_ab = tg.createGradientFrameSprites(2105376, SimHuman.field_gb.field_z, 8421504, 3, 11579568, 114);
         sc.field_j.setBounds(-20 + (SimHuman.field_gb.field_z - 24), 16, -24 + SimHuman.field_gb.field_zb - 24, 24, -3344);
         if (param0 >= -6) {
           return;
@@ -91,7 +91,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    final void e(int param0) {
+    final void refreshLayout(int param0) {
         this.setWidgetBounds(this.field_y, this.field_i, 28972, this.field_n, this.field_w);
         if (param0 != -1) {
           field_m = (String) null;
@@ -114,8 +114,8 @@ class UiWidget extends IntrusiveNode {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param1, -24, param3, param2)) {
-            this.a(param2, param3, (byte) 26, param1);
+          if (this.beginWidgetDiagnosticVisit(param1, -24, param3, param2)) {
+            this.appendWidgetDiagnosticProperties(param2, param3, (byte) 26, param1);
           }
           if (param0 == 7) {
             stackIn_6_0 = (StringBuilder) (param3);
@@ -178,7 +178,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    final boolean a(int param0, byte param1, int param2, boolean param3) {
+    final boolean processPointerFrame(int param0, byte param1, int param2, boolean param3) {
         int var5;
         int var7;
         DraggableWidget var8;
@@ -213,7 +213,7 @@ class UiWidget extends IntrusiveNode {
                   }
                 }
                 aj.field_j = pq.field_f;
-                ii.a(-16898, this.getHoverText((byte) -51));
+                ii.updateTooltip(-16898, this.getHoverText((byte) -51));
                 if (param1 != -27) {
                   this.field_w = -89;
                 }
@@ -240,7 +240,7 @@ class UiWidget extends IntrusiveNode {
                     }
                   }
                   aj.field_j = pq.field_f;
-                  ii.a(-16898, this.getHoverText((byte) -51));
+                  ii.updateTooltip(-16898, this.getHoverText((byte) -51));
                   if (param1 != -27) {
                     this.field_w = -89;
                   }
@@ -266,7 +266,7 @@ class UiWidget extends IntrusiveNode {
                       this.clearKeyboardFocus((byte) 32);
                     }
                     aj.field_j = pq.field_f;
-                    ii.a(-16898, this.getHoverText((byte) -51));
+                    ii.updateTooltip(-16898, this.getHoverText((byte) -51));
                     if (param1 != -27) {
                       this.field_w = -89;
                     }
@@ -280,7 +280,7 @@ class UiWidget extends IntrusiveNode {
                     this.clearKeyboardFocus((byte) 32);
                   }
                   aj.field_j = pq.field_f;
-                  ii.a(-16898, this.getHoverText((byte) -51));
+                  ii.updateTooltip(-16898, this.getHoverText((byte) -51));
                   if (param1 != -27) {
                     this.field_w = -89;
                   }
@@ -291,7 +291,7 @@ class UiWidget extends IntrusiveNode {
                   0 != kd.field_b) {
                   this.clearKeyboardFocus((byte) 32);
                   aj.field_j = pq.field_f;
-                  ii.a(-16898, this.getHoverText((byte) -51));
+                  ii.updateTooltip(-16898, this.getHoverText((byte) -51));
                   if (param1 != -27) {
                     this.field_w = -89;
                   }
@@ -306,7 +306,7 @@ class UiWidget extends IntrusiveNode {
             if (kd.field_b == 0) {
               if (0 != pq.field_f) {
                 aj.field_j = pq.field_f;
-                ii.a(-16898, this.getHoverText((byte) -51));
+                ii.updateTooltip(-16898, this.getHoverText((byte) -51));
                 if (param1 != -27) {
                   this.field_w = -89;
                 }
@@ -330,7 +330,7 @@ class UiWidget extends IntrusiveNode {
                 }
               }
               aj.field_j = pq.field_f;
-              ii.a(-16898, this.getHoverText((byte) -51));
+              ii.updateTooltip(-16898, this.getHoverText((byte) -51));
               if (param1 != -27) {
                 this.field_w = -89;
               }
@@ -403,7 +403,7 @@ class UiWidget extends IntrusiveNode {
           }
         }
         aj.field_j = pq.field_f;
-        ii.a(-16898, this.getHoverText((byte) -51));
+        ii.updateTooltip(-16898, this.getHoverText((byte) -51));
         if (param1 == -27) {
           return param3;
         }
@@ -413,13 +413,13 @@ class UiWidget extends IntrusiveNode {
 
     boolean hasKeyboardFocus(int param0) {
         if (param0 <= 123) {
-          this.f((byte) -51);
+          this.getTopLayer((byte) -51);
           return false;
         }
         return false;
     }
 
-    final void a(int param0, StringBuilder param1, byte param2, Hashtable param3) {
+    final void appendWidgetDiagnosticProperties(int param0, StringBuilder param1, byte param2, Hashtable param3) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -494,14 +494,14 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void renderWidgetPassesAndTooltip(int param0, int param1, int param2) {
         int var4;
         int var5_int;
         String var5;
         int var6;
         int var7;
         var7 = ZombieDawnMulti.field_E ? 1 : 0;
-        var4 = this.f((byte) 44);
+        var4 = this.getTopLayer((byte) 44);
         var5_int = 0;
         while (var5_int <= var4) {
           this.renderWidget(-2, param1, var5_int, param2);
@@ -513,7 +513,7 @@ class UiWidget extends IntrusiveNode {
         }
         var5 = NodeHashTableIterator.a(-19);
         if (var5 != null) {
-          ra.field_o.a(AccountCreationDialog.field_Db, var5, bl.field_c, (byte) 95);
+          ra.field_o.drawTooltip(AccountCreationDialog.field_Db, var5, bl.field_c, (byte) 95);
         }
         var6 = 46 % ((param0 + 30) / 47);
     }
@@ -563,7 +563,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    int f(byte param0) {
+    int getTopLayer(byte param0) {
         if (param0 == 44) {
           return 0;
         }
@@ -610,7 +610,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4) {
+    final boolean containsPointer(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 72 % ((44 - param0) / 36);
         if (param1 + this.field_y > param2) {
           return false;
@@ -639,13 +639,13 @@ class UiWidget extends IntrusiveNode {
           if (param0 != -5407) {
             return;
           }
-          var5_int = this.a(param0 ^ 5437, param2, MouseInputHandler.field_g, bo.field_d, param3) ? 1 : 0;
+          var5_int = this.containsPointer(param0 ^ 5437, param2, MouseInputHandler.field_g, bo.field_d, param3) ? 1 : 0;
           if ((this.field_l ? 1 : 0) != var5_int) {
             stackIn_7_1 = (var5_int != 0);
             this.field_l = stackIn_7_1;
             if (this.field_A != null &&
               this.field_A instanceof ar) {
-              ((ar) (this.field_A)).a(this, -14339, var5_int != 0);
+              ((ar) (this.field_A)).onPointerInsideChanged(this, -14339, var5_int != 0);
               return;
             }
           }
@@ -664,7 +664,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    final boolean a(Hashtable param0, int param1, StringBuilder param2, int param3) {
+    final boolean beginWidgetDiagnosticVisit(Hashtable param0, int param1, StringBuilder param2, int param3) {
         StringBuilder discarded$1 = null;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -716,7 +716,7 @@ class UiWidget extends IntrusiveNode {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(-88, param5, param1, param0, param6)) {
+          if (this.containsPointer(-88, param5, param1, param0, param6)) {
             this.field_u = param2;
           }
           if (param4 == -24) {
@@ -738,7 +738,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, boolean param1, boolean param2) {
+    final static void updateReportAbuseDialog(int param0, boolean param1, boolean param2) {
         int var4 = 0;
         String var5 = null;
         String var5Lifetime1;
@@ -746,7 +746,7 @@ class UiWidget extends IntrusiveNode {
         if (bk.field_i == null) {
           if (!param2) {
             var5 = (String) null;
-            UiWidget.a((byte) -35, (String) null);
+            UiWidget.showMessageDialogText((byte) -35, (String) null);
             return;
           }
           return;
@@ -755,7 +755,7 @@ class UiWidget extends IntrusiveNode {
         if (var3 == -2) {
           if (!param2) {
             var5Lifetime1 = (String) null;
-            UiWidget.a((byte) -35, (String) null);
+            UiWidget.showMessageDialogText((byte) -35, (String) null);
             return;
           }
           return;
@@ -768,7 +768,7 @@ class UiWidget extends IntrusiveNode {
         q.b(80);
         if (!param2) {
           var5Lifetime2 = (String) null;
-          UiWidget.a((byte) -35, (String) null);
+          UiWidget.showMessageDialogText((byte) -35, (String) null);
           return;
         }
     }
@@ -785,7 +785,7 @@ class UiWidget extends IntrusiveNode {
         return this.field_x;
     }
 
-    final boolean a(int param0, char param1, int param2) {
+    final boolean dispatchKeyInput(int param0, char param1, int param2) {
         int var4 = 0;
         int var4Lifetime1;
         if (!this.hasKeyboardFocus(param0 ^ 126)) {
@@ -796,7 +796,7 @@ class UiWidget extends IntrusiveNode {
           if (param0 == 0) {
             return false;
           }
-          this.f((byte) 66);
+          this.getTopLayer((byte) 66);
           return false;
         }
         if (this.handleKeyInput(param2, param1, this, param0 - 6208)) {
@@ -809,7 +809,7 @@ class UiWidget extends IntrusiveNode {
         if (param0 == 0) {
           return false;
         }
-        this.f((byte) 66);
+        this.getTopLayer((byte) 66);
         return false;
     }
 
@@ -852,7 +852,7 @@ class UiWidget extends IntrusiveNode {
           if (this.painter instanceof rk) {
             var4 = (rk) ((Object) this.painter);
             this.field_n = var4.contentHeight(this, -126);
-            this.field_w = var4.a((byte) 39, this);
+            this.field_w = var4.getPreferredHeight((byte) 39, this);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

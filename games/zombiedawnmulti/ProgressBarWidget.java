@@ -204,7 +204,7 @@ final class ProgressBarWidget extends UiWidget {
         int var6 = this.field_i + param1;
         this.drawRoundedStripes((byte) 116, this.field_F[0], var5, var6);
         if (this.field_B < 65536) {
-          Camera.a(var5 + (this.field_n * this.field_B >> 16), this.field_w + var6, (byte) 105, this.field_n + var5, var6);
+          Camera.pushClip(var5 + (this.field_n * this.field_B >> 16), this.field_w + var6, (byte) 105, this.field_n + var5, var6);
           this.drawRoundedStripes((byte) 116, this.field_F[1], var5, var6);
           ql.a(true);
         }
@@ -239,7 +239,7 @@ final class ProgressBarWidget extends UiWidget {
           if (param0 != 116) {
             this.field_N = -99;
           }
-          Camera.a(param2 + this.field_M.width, this.field_w + param3, (byte) 105, -this.field_M.width + var5_int, param3);
+          Camera.pushClip(param2 + this.field_M.width, this.field_w + param3, (byte) 105, -this.field_M.width + var5_int, param3);
           for (var6 = param2 - this.field_J; var6 < var5_int; var6 = var6 + param1.width) {
             param1.drawTransparent(var6, param3);
           }

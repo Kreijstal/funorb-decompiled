@@ -9,7 +9,7 @@ final class u extends IntrusiveNode {
     static String field_f;
     int field_g;
 
-    final static int b(int param0, int param1) {
+    final static int handleConnectionFailure(int param0, int param1) {
         int var3 = ZombieDawnMulti.field_E ? 1 : 0;
         vh.field_Gb = null;
         vo.field_o = null;
@@ -194,14 +194,14 @@ final class u extends IntrusiveNode {
         return -1;
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
+    final static Sprite[] createFrameSprites(int param0, int param1, int param2, int param3, int param4) {
         if (param0 != 21242) {
           return (Sprite[]) null;
         }
         return DualLinkNode.a(param3, param4, 1, 3, (byte) 127, param2, param1, 1, 1);
     }
 
-    final static ResourceArchive a(int param0, int param1) {
+    final static ResourceArchive createResourceArchive(int param0, int param1) {
         if (param0 == 5) {
           return wm.a(param1, 1, true, false, 19, false);
         }
@@ -220,7 +220,7 @@ final class u extends IntrusiveNode {
         field_j = null;
     }
 
-    final static int a(byte param0) {
+    final static int pollFullscreenDialogAction(byte param0) {
         int stackIn_10_0 = 0;
         int stackIn_30_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -235,9 +235,9 @@ final class u extends IntrusiveNode {
         try {
           var1_int = 0;
           var2 = 0;
-          while (MusicPatchPcmStream.c(-1)) {
-            NetworkGameClient.field_B.d(99);
-            if (NetworkGameClient.field_B.c(-85)) {
+          while (MusicPatchPcmStream.pollKeyEvent(-1)) {
+            NetworkGameClient.field_B.handleVerticalNavigation(99);
+            if (NetworkGameClient.field_B.isActivated(-85)) {
               var1_int = 1;
             }
             if (InfectionEvent.field_p != 13) {
@@ -245,12 +245,12 @@ final class u extends IntrusiveNode {
             }
             var2 = 1;
           }
-          NetworkGameClient.field_B.a(iq.a(bo.field_d, -1, MouseInputHandler.field_g), 76, iq.a(ChatMessage.field_t, -1, vb.field_f));
+          NetworkGameClient.field_B.updatePointer(iq.a(bo.field_d, -1, MouseInputHandler.field_g), 76, iq.a(ChatMessage.field_t, -1, vb.field_f));
           if (param0 > -50) {
             stackIn_10_0 = 119;
             return stackIn_10_0;
           }
-          if (NetworkGameClient.field_B.c(-85)) {
+          if (NetworkGameClient.field_B.isActivated(-85)) {
             var1_int = 1;
           }
           var3 = 0;
@@ -269,7 +269,7 @@ final class u extends IntrusiveNode {
           }
           if (var3 == 0 &&
             ho.field_q == 2) {
-            var4 = bl.a((byte) 118) - UnitStateEvent.field_s;
+            var4 = bl.monotonicMillis((byte) 118) - UnitStateEvent.field_s;
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (var6 <= 0) {
               eb.a(false, true, 5);
@@ -297,7 +297,7 @@ final class u extends IntrusiveNode {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = m.a(param5, param1, param4, param3, param2, 88);
+          var8 = m.openFullscreenFrame(param5, param1, param4, param3, param2, 88);
           var6 = var8;
           if (param0 != 10386) {
             stackIn_2_0 = (FullscreenFocusCanvas) null;

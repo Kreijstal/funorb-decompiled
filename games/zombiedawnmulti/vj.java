@@ -22,15 +22,15 @@ final class vj extends MenuScreen {
         }
     }
 
-    final void b(byte param0) {
+    final void onExit(byte param0) {
         rp var3 = FullscreenFocusCanvas.field_k;
         rp var2 = var3;
         var3.field_c[0] = this.field_o;
         var3.field_p[0] = this.field_n;
         var3.field_c[1] = this.field_l;
         var3.field_p[1] = this.field_s;
-        IntrusiveDeque.b((byte) -61);
-        super.b(param0);
+        IntrusiveDeque.saveProfile((byte) -61);
+        super.onExit(param0);
     }
 
     public static void e(int param0) {
@@ -55,7 +55,7 @@ final class vj extends MenuScreen {
         return -87;
     }
 
-    final void a(boolean param0) {
+    final void drawScreen(boolean param0) {
         BinaryBitmapFont var20 = null;
         Sprite var21 = null;
         Sprite var22 = null;
@@ -205,8 +205,8 @@ final class vj extends MenuScreen {
         int var14Lifetime7;
         int var14Lifetime8;
         SoftwareRasterizer.clear();
-        this.b(0);
-        super.a(param0);
+        this.drawBackground(0);
+        super.drawScreen(param0);
         SoftwareRasterizer.drawRect(30, 60, 60, 52, 3381555);
         SoftwareRasterizer.fillRectAlpha(32, 62, 56, 48, 8947814, 128);
         SoftwareRasterizer.drawRect(30, 142, 60, 52, 3381555);
@@ -244,17 +244,17 @@ final class vj extends MenuScreen {
           var12 = gg.field_l[var10];
           var13 = gg.field_j[var10];
           var14 = var12 + PowerupEvent.field_m / var11 % var13;
-          var21 = am.a(var14, this.field_o, var9, 1, this.field_n);
-          og.h((byte) 110);
+          var21 = am.createTeamColouredSprite(var14, this.field_o, var9, 1, this.field_n);
+          og.bindScreenBuffer((byte) 110);
           var21.drawTransparent(47, 57);
-          var22 = am.a(var14, this.field_o, 1, 1, this.field_n);
-          og.h((byte) 117);
+          var22 = am.createTeamColouredSprite(var14, this.field_o, 1, 1, this.field_n);
+          og.bindScreenBuffer((byte) 117);
           var22.drawTransparent(17, 57);
-          var23 = am.a(var14, this.field_l, var9, 1, this.field_s);
-          og.h((byte) 118);
+          var23 = am.createTeamColouredSprite(var14, this.field_l, var9, 1, this.field_s);
+          og.bindScreenBuffer((byte) 118);
           var23.drawTransparent(47, 139);
-          var24 = am.a(var14, this.field_l, 1, 1, this.field_s);
-          og.h((byte) 113);
+          var24 = am.createTeamColouredSprite(var14, this.field_l, 1, 1, this.field_s);
+          og.bindScreenBuffer((byte) 113);
           var24.drawTransparent(17, 139);
           this.field_r.i(-31);
           return;
@@ -292,17 +292,17 @@ final class vj extends MenuScreen {
           var12Lifetime1 = gg.field_l[var10Lifetime1];
           var13Lifetime1 = gg.field_j[var10Lifetime1];
           var14Lifetime1 = var12Lifetime1 + PowerupEvent.field_m / var11Lifetime1 % var13Lifetime1;
-          var26 = am.a(var14Lifetime1, this.field_o, var9Lifetime1, 1, this.field_n);
-          og.h((byte) 110);
+          var26 = am.createTeamColouredSprite(var14Lifetime1, this.field_o, var9Lifetime1, 1, this.field_n);
+          og.bindScreenBuffer((byte) 110);
           var26.drawTransparent(47, 57);
-          var27 = am.a(var14Lifetime1, this.field_o, 1, 1, this.field_n);
-          og.h((byte) 117);
+          var27 = am.createTeamColouredSprite(var14Lifetime1, this.field_o, 1, 1, this.field_n);
+          og.bindScreenBuffer((byte) 117);
           var27.drawTransparent(17, 57);
-          var28 = am.a(var14Lifetime1, this.field_l, var9Lifetime1, 1, this.field_s);
-          og.h((byte) 118);
+          var28 = am.createTeamColouredSprite(var14Lifetime1, this.field_l, var9Lifetime1, 1, this.field_s);
+          og.bindScreenBuffer((byte) 118);
           var28.drawTransparent(47, 139);
-          var29 = am.a(var14Lifetime1, this.field_l, 1, 1, this.field_s);
-          og.h((byte) 113);
+          var29 = am.createTeamColouredSprite(var14Lifetime1, this.field_l, 1, 1, this.field_s);
+          og.bindScreenBuffer((byte) 113);
           var29.drawTransparent(17, 139);
           this.field_r.i(-31);
           return;
@@ -340,17 +340,17 @@ final class vj extends MenuScreen {
           var12Lifetime2 = gg.field_l[var10Lifetime2];
           var13Lifetime2 = gg.field_j[var10Lifetime2];
           var14Lifetime2 = var12Lifetime2 + PowerupEvent.field_m / var11Lifetime2 % var13Lifetime2;
-          var31 = am.a(var14Lifetime2, this.field_o, var9Lifetime2, 1, this.field_n);
-          og.h((byte) 110);
+          var31 = am.createTeamColouredSprite(var14Lifetime2, this.field_o, var9Lifetime2, 1, this.field_n);
+          og.bindScreenBuffer((byte) 110);
           var31.drawTransparent(47, 57);
-          var32 = am.a(var14Lifetime2, this.field_o, 1, 1, this.field_n);
-          og.h((byte) 117);
+          var32 = am.createTeamColouredSprite(var14Lifetime2, this.field_o, 1, 1, this.field_n);
+          og.bindScreenBuffer((byte) 117);
           var32.drawTransparent(17, 57);
-          var33 = am.a(var14Lifetime2, this.field_l, var9Lifetime2, 1, this.field_s);
-          og.h((byte) 118);
+          var33 = am.createTeamColouredSprite(var14Lifetime2, this.field_l, var9Lifetime2, 1, this.field_s);
+          og.bindScreenBuffer((byte) 118);
           var33.drawTransparent(47, 139);
-          var34 = am.a(var14Lifetime2, this.field_l, 1, 1, this.field_s);
-          og.h((byte) 113);
+          var34 = am.createTeamColouredSprite(var14Lifetime2, this.field_l, 1, 1, this.field_s);
+          og.bindScreenBuffer((byte) 113);
           var34.drawTransparent(17, 139);
           this.field_r.i(-31);
           return;
@@ -388,17 +388,17 @@ final class vj extends MenuScreen {
           var12Lifetime3 = gg.field_l[var10Lifetime3];
           var13Lifetime3 = gg.field_j[var10Lifetime3];
           var14Lifetime3 = var12Lifetime3 + PowerupEvent.field_m / var11Lifetime3 % var13Lifetime3;
-          var36 = am.a(var14Lifetime3, this.field_o, var9Lifetime3, 1, this.field_n);
-          og.h((byte) 110);
+          var36 = am.createTeamColouredSprite(var14Lifetime3, this.field_o, var9Lifetime3, 1, this.field_n);
+          og.bindScreenBuffer((byte) 110);
           var36.drawTransparent(47, 57);
-          var37 = am.a(var14Lifetime3, this.field_o, 1, 1, this.field_n);
-          og.h((byte) 117);
+          var37 = am.createTeamColouredSprite(var14Lifetime3, this.field_o, 1, 1, this.field_n);
+          og.bindScreenBuffer((byte) 117);
           var37.drawTransparent(17, 57);
-          var38 = am.a(var14Lifetime3, this.field_l, var9Lifetime3, 1, this.field_s);
-          og.h((byte) 118);
+          var38 = am.createTeamColouredSprite(var14Lifetime3, this.field_l, var9Lifetime3, 1, this.field_s);
+          og.bindScreenBuffer((byte) 118);
           var38.drawTransparent(47, 139);
-          var39 = am.a(var14Lifetime3, this.field_l, 1, 1, this.field_s);
-          og.h((byte) 113);
+          var39 = am.createTeamColouredSprite(var14Lifetime3, this.field_l, 1, 1, this.field_s);
+          og.bindScreenBuffer((byte) 113);
           var39.drawTransparent(17, 139);
           this.field_r.i(-31);
           return;
@@ -432,17 +432,17 @@ final class vj extends MenuScreen {
           var12Lifetime4 = gg.field_l[var10Lifetime4];
           var13Lifetime4 = gg.field_j[var10Lifetime4];
           var14Lifetime4 = var12Lifetime4 + PowerupEvent.field_m / var11Lifetime4 % var13Lifetime4;
-          var41 = am.a(var14Lifetime4, this.field_o, var9Lifetime4, 1, this.field_n);
-          og.h((byte) 110);
+          var41 = am.createTeamColouredSprite(var14Lifetime4, this.field_o, var9Lifetime4, 1, this.field_n);
+          og.bindScreenBuffer((byte) 110);
           var41.drawTransparent(47, 57);
-          var42 = am.a(var14Lifetime4, this.field_o, 1, 1, this.field_n);
-          og.h((byte) 117);
+          var42 = am.createTeamColouredSprite(var14Lifetime4, this.field_o, 1, 1, this.field_n);
+          og.bindScreenBuffer((byte) 117);
           var42.drawTransparent(17, 57);
-          var43 = am.a(var14Lifetime4, this.field_l, var9Lifetime4, 1, this.field_s);
-          og.h((byte) 118);
+          var43 = am.createTeamColouredSprite(var14Lifetime4, this.field_l, var9Lifetime4, 1, this.field_s);
+          og.bindScreenBuffer((byte) 118);
           var43.drawTransparent(47, 139);
-          var44 = am.a(var14Lifetime4, this.field_l, 1, 1, this.field_s);
-          og.h((byte) 113);
+          var44 = am.createTeamColouredSprite(var14Lifetime4, this.field_l, 1, 1, this.field_s);
+          og.bindScreenBuffer((byte) 113);
           var44.drawTransparent(17, 139);
           this.field_r.i(-31);
           return;
@@ -472,17 +472,17 @@ final class vj extends MenuScreen {
           var12Lifetime5 = gg.field_l[var10Lifetime5];
           var13Lifetime5 = gg.field_j[var10Lifetime5];
           var14Lifetime5 = var12Lifetime5 + PowerupEvent.field_m / var11Lifetime5 % var13Lifetime5;
-          var46 = am.a(var14Lifetime5, this.field_o, var9Lifetime5, 1, this.field_n);
-          og.h((byte) 110);
+          var46 = am.createTeamColouredSprite(var14Lifetime5, this.field_o, var9Lifetime5, 1, this.field_n);
+          og.bindScreenBuffer((byte) 110);
           var46.drawTransparent(47, 57);
-          var47 = am.a(var14Lifetime5, this.field_o, 1, 1, this.field_n);
-          og.h((byte) 117);
+          var47 = am.createTeamColouredSprite(var14Lifetime5, this.field_o, 1, 1, this.field_n);
+          og.bindScreenBuffer((byte) 117);
           var47.drawTransparent(17, 57);
-          var48 = am.a(var14Lifetime5, this.field_l, var9Lifetime5, 1, this.field_s);
-          og.h((byte) 118);
+          var48 = am.createTeamColouredSprite(var14Lifetime5, this.field_l, var9Lifetime5, 1, this.field_s);
+          og.bindScreenBuffer((byte) 118);
           var48.drawTransparent(47, 139);
-          var49 = am.a(var14Lifetime5, this.field_l, 1, 1, this.field_s);
-          og.h((byte) 113);
+          var49 = am.createTeamColouredSprite(var14Lifetime5, this.field_l, 1, 1, this.field_s);
+          og.bindScreenBuffer((byte) 113);
           var49.drawTransparent(17, 139);
           this.field_r.i(-31);
           return;
@@ -512,17 +512,17 @@ final class vj extends MenuScreen {
           var12Lifetime6 = gg.field_l[var10Lifetime6];
           var13Lifetime6 = gg.field_j[var10Lifetime6];
           var14Lifetime6 = var12Lifetime6 + PowerupEvent.field_m / var11Lifetime6 % var13Lifetime6;
-          var51 = am.a(var14Lifetime6, this.field_o, var9Lifetime6, 1, this.field_n);
-          og.h((byte) 110);
+          var51 = am.createTeamColouredSprite(var14Lifetime6, this.field_o, var9Lifetime6, 1, this.field_n);
+          og.bindScreenBuffer((byte) 110);
           var51.drawTransparent(47, 57);
-          var52 = am.a(var14Lifetime6, this.field_o, 1, 1, this.field_n);
-          og.h((byte) 117);
+          var52 = am.createTeamColouredSprite(var14Lifetime6, this.field_o, 1, 1, this.field_n);
+          og.bindScreenBuffer((byte) 117);
           var52.drawTransparent(17, 57);
-          var53 = am.a(var14Lifetime6, this.field_l, var9Lifetime6, 1, this.field_s);
-          og.h((byte) 118);
+          var53 = am.createTeamColouredSprite(var14Lifetime6, this.field_l, var9Lifetime6, 1, this.field_s);
+          og.bindScreenBuffer((byte) 118);
           var53.drawTransparent(47, 139);
-          var54 = am.a(var14Lifetime6, this.field_l, 1, 1, this.field_s);
-          og.h((byte) 113);
+          var54 = am.createTeamColouredSprite(var14Lifetime6, this.field_l, 1, 1, this.field_s);
+          og.bindScreenBuffer((byte) 113);
           var54.drawTransparent(17, 139);
           this.field_r.i(-31);
           return;
@@ -552,17 +552,17 @@ final class vj extends MenuScreen {
           var12Lifetime7 = gg.field_l[var10Lifetime7];
           var13Lifetime7 = gg.field_j[var10Lifetime7];
           var14Lifetime7 = var12Lifetime7 + PowerupEvent.field_m / var11Lifetime7 % var13Lifetime7;
-          var56 = am.a(var14Lifetime7, this.field_o, var9Lifetime7, 1, this.field_n);
-          og.h((byte) 110);
+          var56 = am.createTeamColouredSprite(var14Lifetime7, this.field_o, var9Lifetime7, 1, this.field_n);
+          og.bindScreenBuffer((byte) 110);
           var56.drawTransparent(47, 57);
-          var57 = am.a(var14Lifetime7, this.field_o, 1, 1, this.field_n);
-          og.h((byte) 117);
+          var57 = am.createTeamColouredSprite(var14Lifetime7, this.field_o, 1, 1, this.field_n);
+          og.bindScreenBuffer((byte) 117);
           var57.drawTransparent(17, 57);
-          var58 = am.a(var14Lifetime7, this.field_l, var9Lifetime7, 1, this.field_s);
-          og.h((byte) 118);
+          var58 = am.createTeamColouredSprite(var14Lifetime7, this.field_l, var9Lifetime7, 1, this.field_s);
+          og.bindScreenBuffer((byte) 118);
           var58.drawTransparent(47, 139);
-          var59 = am.a(var14Lifetime7, this.field_l, 1, 1, this.field_s);
-          og.h((byte) 113);
+          var59 = am.createTeamColouredSprite(var14Lifetime7, this.field_l, 1, 1, this.field_s);
+          og.bindScreenBuffer((byte) 113);
           var59.drawTransparent(17, 139);
           this.field_r.i(-31);
           return;
@@ -595,17 +595,17 @@ final class vj extends MenuScreen {
         var12Lifetime8 = gg.field_l[var10Lifetime8];
         var13Lifetime8 = gg.field_j[var10Lifetime8];
         var14Lifetime8 = var12Lifetime8 + PowerupEvent.field_m / var11Lifetime8 % var13Lifetime8;
-        Sprite var61 = am.a(var14Lifetime8, this.field_o, var9Lifetime8, 1, this.field_n);
-        og.h((byte) 110);
+        Sprite var61 = am.createTeamColouredSprite(var14Lifetime8, this.field_o, var9Lifetime8, 1, this.field_n);
+        og.bindScreenBuffer((byte) 110);
         var61.drawTransparent(47, 57);
-        Sprite var62 = am.a(var14Lifetime8, this.field_o, 1, 1, this.field_n);
-        og.h((byte) 117);
+        Sprite var62 = am.createTeamColouredSprite(var14Lifetime8, this.field_o, 1, 1, this.field_n);
+        og.bindScreenBuffer((byte) 117);
         var62.drawTransparent(17, 57);
-        Sprite var63 = am.a(var14Lifetime8, this.field_l, var9Lifetime8, 1, this.field_s);
-        og.h((byte) 118);
+        Sprite var63 = am.createTeamColouredSprite(var14Lifetime8, this.field_l, var9Lifetime8, 1, this.field_s);
+        og.bindScreenBuffer((byte) 118);
         var63.drawTransparent(47, 139);
-        Sprite var64 = am.a(var14Lifetime8, this.field_l, 1, 1, this.field_s);
-        og.h((byte) 113);
+        Sprite var64 = am.createTeamColouredSprite(var14Lifetime8, this.field_l, 1, 1, this.field_s);
+        og.bindScreenBuffer((byte) 113);
         var64.drawTransparent(17, 139);
         this.field_r.i(-31);
     }
@@ -620,12 +620,12 @@ final class vj extends MenuScreen {
         this.field_l = var5.field_c[1];
     }
 
-    final void a(int param0) {
+    final void updateScreen(int param0) {
         int var2;
         int var3;
         int var2Lifetime1;
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
-        super.a(0);
+        super.updateScreen(0);
         this.field_r.j(1);
         if (param0 == 0) {
           var2 = this.field_q;

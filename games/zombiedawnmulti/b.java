@@ -17,7 +17,7 @@ final class b {
         field_f = null;
     }
 
-    final static int a(boolean param0) {
+    final static int getIdleTicks(boolean param0) {
         if (!param0) {
           field_a = (mj) null;
           return gi.field_m;

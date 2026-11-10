@@ -177,14 +177,14 @@ final class ki {
           if (32 > param0 ||
             param0 > 38) {
             var6 = 1993752;
-            if (FullscreenFocusCanvas.field_k.c(127, param0)) {
+            if (FullscreenFocusCanvas.field_k.isResearchable(127, param0)) {
               var7 = MarkerSliderPainter.field_b[-44 + (param0 + 26)];
             }
             var4 = 280577;
             var5 = 2306851;
             var8 = NavigationGrid.field_g;
             var9 = FullscreenFocusCanvas.field_k.field_t[param0];
-            if (FullscreenFocusCanvas.field_k.d(param0, 53)) {
+            if (FullscreenFocusCanvas.field_k.isUpgradeUnlocked(param0, 53)) {
               var8 = vo.field_n;
               var9 = cr.a(param0, -117);
             } else {
@@ -202,7 +202,7 @@ final class ki {
             if (var7 != null) {
               ((Sprite) (var7)).drawTransparent(108, 5);
             }
-            if (!FullscreenFocusCanvas.field_k.c(127, param0)) {
+            if (!FullscreenFocusCanvas.field_k.isResearchable(127, param0)) {
               var10 = ro.field_N;
             } else {
               var10 = gh.field_f[param0];
@@ -212,7 +212,7 @@ final class ki {
             g.d();
             return;
           }
-          if (FullscreenFocusCanvas.field_k.c(127, param0)) {
+          if (FullscreenFocusCanvas.field_k.isResearchable(127, param0)) {
             var7 = MarkerSliderPainter.field_b[-13 + param0];
           }
           var6Lifetime3 = 8783880;
@@ -220,7 +220,7 @@ final class ki {
           var4Lifetime3 = 8135424;
           var8Lifetime3 = NavigationGrid.field_g;
           var9 = FullscreenFocusCanvas.field_k.field_t[param0];
-          if (FullscreenFocusCanvas.field_k.d(param0, 53)) {
+          if (FullscreenFocusCanvas.field_k.isUpgradeUnlocked(param0, 53)) {
             var8Lifetime3 = vo.field_n;
             var10Lifetime4 = var8Lifetime3;
             var8Lifetime3 = var10Lifetime4;
@@ -235,7 +235,7 @@ final class ki {
             if (var7 != null) {
               ((Sprite) (var7)).drawTransparent(108, 5);
             }
-            if (!FullscreenFocusCanvas.field_k.c(127, param0)) {
+            if (!FullscreenFocusCanvas.field_k.isResearchable(127, param0)) {
               var10Lifetime4 = ro.field_N;
             } else {
               var10Lifetime4 = gh.field_f[param0];
@@ -261,7 +261,7 @@ final class ki {
           if (var7 != null) {
             ((Sprite) (var7)).drawTransparent(108, 5);
           }
-          if (!FullscreenFocusCanvas.field_k.c(127, param0)) {
+          if (!FullscreenFocusCanvas.field_k.isResearchable(127, param0)) {
             var10Lifetime6 = ro.field_N;
           } else {
             var10Lifetime6 = gh.field_f[param0];
@@ -277,14 +277,14 @@ final class ki {
           if (32 > param0 ||
             param0 > 38) {
             var6Lifetime1 = 1993752;
-            if (FullscreenFocusCanvas.field_k.c(127, param0)) {
+            if (FullscreenFocusCanvas.field_k.isResearchable(127, param0)) {
               var7 = MarkerSliderPainter.field_b[-44 + (param0 + 26)];
             }
             var4Lifetime1 = 280577;
             var5Lifetime1 = 2306851;
             var8Lifetime1 = NavigationGrid.field_g;
             var9 = FullscreenFocusCanvas.field_k.field_t[param0];
-            if (FullscreenFocusCanvas.field_k.d(param0, 53)) {
+            if (FullscreenFocusCanvas.field_k.isUpgradeUnlocked(param0, 53)) {
               var8Lifetime1 = vo.field_n;
               var9 = cr.a(param0, -117);
             } else {
@@ -302,7 +302,7 @@ final class ki {
             if (var7 != null) {
               ((Sprite) (var7)).drawTransparent(108, 5);
             }
-            if (!FullscreenFocusCanvas.field_k.c(127, param0)) {
+            if (!FullscreenFocusCanvas.field_k.isResearchable(127, param0)) {
               var10Lifetime1 = ro.field_N;
             } else {
               var10Lifetime1 = gh.field_f[param0];
@@ -312,7 +312,7 @@ final class ki {
             g.d();
             return;
           }
-          if (FullscreenFocusCanvas.field_k.c(127, param0)) {
+          if (FullscreenFocusCanvas.field_k.isResearchable(127, param0)) {
             var7 = MarkerSliderPainter.field_b[-13 + param0];
           }
           var6Lifetime1Lifetime1 = 8783880;
@@ -320,7 +320,7 @@ final class ki {
           var4Lifetime1Lifetime1 = 8135424;
           var8Lifetime1Lifetime1 = NavigationGrid.field_g;
           var9 = FullscreenFocusCanvas.field_k.field_t[param0];
-          if (FullscreenFocusCanvas.field_k.d(param0, 53)) {
+          if (FullscreenFocusCanvas.field_k.isUpgradeUnlocked(param0, 53)) {
             var8Lifetime1Lifetime1 = vo.field_n;
             var10Lifetime1Lifetime1 = var8Lifetime1Lifetime1;
             var8Lifetime1Lifetime1 = var10Lifetime1Lifetime1;
@@ -335,7 +335,7 @@ final class ki {
             if (var7 != null) {
               ((Sprite) (var7)).drawTransparent(108, 5);
             }
-            if (!FullscreenFocusCanvas.field_k.c(127, param0)) {
+            if (!FullscreenFocusCanvas.field_k.isResearchable(127, param0)) {
               var10Lifetime1Lifetime1 = ro.field_N;
             } else {
               var10Lifetime1Lifetime1 = gh.field_f[param0];
@@ -360,7 +360,7 @@ final class ki {
           if (var7 != null) {
             ((Sprite) (var7)).drawTransparent(108, 5);
           }
-          if (!FullscreenFocusCanvas.field_k.c(127, param0)) {
+          if (!FullscreenFocusCanvas.field_k.isResearchable(127, param0)) {
             var10Lifetime1Lifetime2 = ro.field_N;
           } else {
             var10Lifetime1Lifetime2 = gh.field_f[param0];
@@ -370,7 +370,7 @@ final class ki {
           g.d();
           return;
         }
-        if (FullscreenFocusCanvas.field_k.c(127, param0)) {
+        if (FullscreenFocusCanvas.field_k.isResearchable(127, param0)) {
           var7 = MarkerSliderPainter.field_b[param0];
         }
         var4Lifetime2 = 6575425;
@@ -378,7 +378,7 @@ final class ki {
         var6Lifetime2 = 5524287;
         var8Lifetime2 = NavigationGrid.field_g;
         var9 = FullscreenFocusCanvas.field_k.field_t[param0];
-        if (FullscreenFocusCanvas.field_k.d(param0, 53)) {
+        if (FullscreenFocusCanvas.field_k.isUpgradeUnlocked(param0, 53)) {
           var8Lifetime2 = vo.field_n;
           var9 = cr.a(param0, -117);
           var9 = var9 * 131 / cr.a(param0, -110);
@@ -391,7 +391,7 @@ final class ki {
           if (var7 != null) {
             ((Sprite) (var7)).drawTransparent(108, 5);
           }
-          if (!FullscreenFocusCanvas.field_k.c(127, param0)) {
+          if (!FullscreenFocusCanvas.field_k.isResearchable(127, param0)) {
             var10Lifetime2 = ro.field_N;
           } else {
             var10Lifetime2 = gh.field_f[param0];
@@ -414,7 +414,7 @@ final class ki {
         if (var7 != null) {
           ((Sprite) (var7)).drawTransparent(108, 5);
         }
-        if (!FullscreenFocusCanvas.field_k.c(127, param0)) {
+        if (!FullscreenFocusCanvas.field_k.isResearchable(127, param0)) {
           var10Lifetime3 = ro.field_N;
         } else {
           var10Lifetime3 = gh.field_f[param0];

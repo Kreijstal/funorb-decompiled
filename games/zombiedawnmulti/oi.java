@@ -14,14 +14,14 @@ final class oi {
     String field_d;
     static String field_e;
 
-    final static void a(int param0) {
+    final static void requestQuitToWebsite(int param0) {
         int var1 = 21 % ((27 - param0) / 47);
         PowerupButton.a(17, 115);
     }
 
-    final static void a(String param0, boolean param1, byte param2, boolean param3) {
+    final static void openLoginDialog(String param0, boolean param1, byte param2, boolean param3) {
         try {
-          ResizableDialog.j(-1);
+          ResizableDialog.resetAccountFlowState(-1);
           nb.field_a.h(-92);
           b.field_c = new LoginForm(ReportAbuseDialog.field_Ib, (String) null, IntrusiveDequeCursor.field_e, param1, param3);
           wj.field_i = new ub(nb.field_a, b.field_c);
@@ -57,9 +57,9 @@ final class oi {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$88c6728ee5b1(String param0, boolean param1, int param2, boolean param3) {
+    final static void openLoginDialog(String param0, boolean param1, int param2, boolean param3) {
         try {
-          ResizableDialog.j(-1);
+          ResizableDialog.resetAccountFlowState(-1);
           nb.field_a.h(-92);
           b.field_c = new LoginForm(ReportAbuseDialog.field_Ib, (String) null, IntrusiveDequeCursor.field_e, param1, param3);
           wj.field_i = new ub(nb.field_a, b.field_c);

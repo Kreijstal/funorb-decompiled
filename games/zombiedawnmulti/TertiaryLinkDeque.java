@@ -11,7 +11,7 @@ final class TertiaryLinkDeque {
     static boolean field_b;
     static String field_d;
 
-    final static void a(int param0, byte param1) {
+    final static void updateLogoPiecePose(int param0, byte param1) {
         int var2;
         int var3;
         int var4;
@@ -80,7 +80,7 @@ final class TertiaryLinkDeque {
             var4 = 1;
             var5 = 1;
           }
-          hl.field_c = me.a(var5 * var2, -2106461552, var2 * var4);
+          hl.field_c = me.buildRotationTransform(var5 * var2, -2106461552, var2 * var4);
           return;
         }
         if (var3 < 105) {
@@ -136,7 +136,7 @@ final class TertiaryLinkDeque {
             var4Lifetime1 = 1;
             var5Lifetime1 = 1;
           }
-          hl.field_c = me.a(var5Lifetime1 * var2, -2106461552, var2 * var4Lifetime1);
+          hl.field_c = me.buildRotationTransform(var5Lifetime1 * var2, -2106461552, var2 * var4Lifetime1);
           return;
         }
         if (120 <= var3) {
@@ -191,7 +191,7 @@ final class TertiaryLinkDeque {
             var4Lifetime2 = 1;
             var5Lifetime2 = 1;
           }
-          hl.field_c = me.a(var5Lifetime2 * var2, -2106461552, var2 * var4Lifetime2);
+          hl.field_c = me.buildRotationTransform(var5Lifetime2 * var2, -2106461552, var2 * var4Lifetime2);
           return;
         }
         var3 = 120 - var3;
@@ -247,11 +247,11 @@ final class TertiaryLinkDeque {
           var4Lifetime3 = 1;
           var5Lifetime3 = 1;
         }
-        hl.field_c = me.a(var5Lifetime3 * var2Lifetime1, -2106461552, var2Lifetime1 * var4Lifetime3);
+        hl.field_c = me.buildRotationTransform(var5Lifetime3 * var2Lifetime1, -2106461552, var2Lifetime1 * var4Lifetime3);
         return;
     }
 
-    final static boolean a(byte param0) {
+    final static boolean isMasterIndexReady(byte param0) {
         if (param0 != 98) {
           return true;
         }
@@ -266,7 +266,7 @@ final class TertiaryLinkDeque {
         field_d = null;
     }
 
-    final static int a(byte[] param0, int param1, boolean param2, int param3) {
+    final static int crc32(byte[] param0, int param1, boolean param2, int param3) {
         int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -321,7 +321,7 @@ final class TertiaryLinkDeque {
         return var2;
     }
 
-    final static void a(boolean param0, byte param1, float param2, String param3) {
+    final static void showLoadingProgress(boolean param0, byte param1, float param2, String param3) {
         try {
           if (null == Under13NoticePanel.field_I) {
             Under13NoticePanel.field_I = new ProgressDialog(nb.field_a, TextInputWidget.field_P);

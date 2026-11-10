@@ -28,7 +28,7 @@ final class vd {
           var3_int = param1.length();
           if (1 <= var3_int &&
             12 >= var3_int) {
-            var4 = tg.a(param1, false);
+            var4 = tg.normalizePlayerName(param1, false);
             if (var4 != null &&
               var4.length() >= 1) {
               var5 = 76 % ((25 - param2) / 53);
@@ -89,11 +89,11 @@ final class vd {
           return;
         }
         if (param1 % 10L != 0L) {
-          ArchiveIndex.a(param1, true);
+          ArchiveIndex.sleep(param1, true);
           return;
         }
-        ArchiveIndex.a(-1L + param1, true);
-        ArchiveIndex.a(1L, !param0 ? true : false);
+        ArchiveIndex.sleep(-1L + param1, true);
+        ArchiveIndex.sleep(1L, !param0 ? true : false);
     }
 
     static {

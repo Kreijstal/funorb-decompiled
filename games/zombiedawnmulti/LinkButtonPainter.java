@@ -59,7 +59,7 @@ final class LinkButtonPainter implements WidgetPainter {
                 var10 = var10 + (param4.field_w - var8 >> 1);
               }
             }
-            hl.a(var10 + 2, -2 + var9, (byte) 97, 4 + var7, var8);
+            hl.drawDottedRectangle(var10 + 2, -2 + var9, (byte) 97, 4 + var7, var8);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -76,7 +76,7 @@ final class LinkButtonPainter implements WidgetPainter {
         }
     }
 
-    final static void a(int param0) {
+    final static void readSavedDataReply(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -93,14 +93,14 @@ final class LinkButtonPainter implements WidgetPainter {
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param0 != -9355) {
-            LinkButtonPainter.a(-53);
+            LinkButtonPainter.readSavedDataReply(-53);
           }
           var10 = s.field_e;
           var2 = var10.readUnsignedByte(31365);
           if (var2 == 0) {
-            var9 = (cr) (TabbedPane.field_Gb.c(param0 + 9430));
+            var9 = (cr) (TabbedPane.field_Gb.last(param0 + 9430));
             if (var9 == null) {
-              ak.a((byte) -128);
+              ak.closeGameSocket((byte) -128);
               return;
             }
             var4 = var10.readUnsignedByte(param0 + 40720);
@@ -115,7 +115,7 @@ final class LinkButtonPainter implements WidgetPainter {
             }
             var10.position = var10.position + 4;
             if (!var10.c(false)) {
-              ak.a((byte) -113);
+              ak.closeGameSocket((byte) -113);
               return;
             }
             var9.field_f = (byte[]) (var5);
@@ -124,23 +124,23 @@ final class LinkButtonPainter implements WidgetPainter {
           } else {
             if (var2 == 1) {
               var3 = var10.readInt(-1478490344);
-              var4_ref_n = (n) (SpriteState.field_s.c(param0 ^ -9398));
+              var4_ref_n = (n) (SpriteState.field_s.last(param0 ^ -9398));
               while (var4_ref_n != null) {
                 if (var4_ref_n.field_h != var3) {
-                  var4_ref_n = (n) (SpriteState.field_s.b(param0 + 9361));
+                  var4_ref_n = (n) (SpriteState.field_s.previous(param0 + 9361));
                   continue;
                 }
                 break;
               }
               if (var4_ref_n == null) {
-                ak.a((byte) -114);
+                ak.closeGameSocket((byte) -114);
                 return;
               }
               var4_ref_n.unlink(true);
               return;
             }
-            MouseInputHandler.a("A1: " + ci.a(0), (Throwable) null, false);
-            ak.a((byte) -111);
+            MouseInputHandler.reportClientError("A1: " + ci.a(0), (Throwable) null, false);
+            ak.closeGameSocket((byte) -111);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -178,11 +178,11 @@ final class LinkButtonPainter implements WidgetPainter {
         }
     }
 
-    final static long b(byte param0) {
+    final static long millisSinceLastReceive(byte param0) {
         if (param0 != -22) {
           field_e = 45L;
         }
-        return -AlignedIconLabel.field_Gb + bl.a((byte) 56);
+        return -AlignedIconLabel.field_Gb + bl.monotonicMillis((byte) 56);
     }
 
     static {

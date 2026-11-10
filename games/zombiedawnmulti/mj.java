@@ -19,16 +19,16 @@ final class mj extends UiComponent {
     static UiComponent field_Mb;
     private UiComponent field_Lb;
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void layoutScrollbar(int param0, int param1, int param2, int param3) {
         int var5 = 23 % ((-22 - param0) / 57);
         if (!this.field_Jb) {
-          this.b(param2, param1, param3, 126);
+          this.layoutHorizontal(param2, param1, param3, 126);
           return;
         }
-        this.c(0, param1, param3, param2);
+        this.layoutVertical(0, param1, param3, param2);
     }
 
-    private final int b(int param0, boolean param1, int param2, int param3) {
+    private final int getVerticalDragOffset(int param0, boolean param1, int param2, int param3) {
         int var7 = 0;
         int var8 = 0;
         int var5 = 0;
@@ -71,7 +71,7 @@ final class mj extends UiComponent {
         return -51;
     }
 
-    final boolean k(int param0) {
+    final boolean pollLineBack(int param0) {
         if (0 != this.field_Tb.field_T) {
           this.field_Kb = 20;
           return true;
@@ -109,13 +109,13 @@ final class mj extends UiComponent {
         }
     }
 
-    final boolean h(int param0) {
+    final boolean pollLineForward(int param0) {
         if (this.field_Nb.field_T != 0) {
           this.field_Kb = 20;
           return true;
         }
         if (param0 != 4690) {
-          this.a(14, 117, 55);
+          this.getDraggedScrollOffset(14, 117, 55);
         }
         if (this.field_Nb.field_jb == 0) {
           return false;
@@ -130,21 +130,21 @@ final class mj extends UiComponent {
         return true;
     }
 
-    final int a(int param0, int param1, int param2) {
+    final int getDraggedScrollOffset(int param0, int param1, int param2) {
         if (param2 != -18367) {
-          this.k(33);
+          this.pollLineBack(33);
           if (!this.field_Jb) {
-            return this.a(param0, false, 69, param1);
+            return this.getHorizontalDragOffset(param0, false, 69, param1);
           }
-          return this.b(param0, false, param1, -10596);
+          return this.getVerticalDragOffset(param0, false, param1, -10596);
         }
         if (!this.field_Jb) {
-          return this.a(param0, false, 69, param1);
+          return this.getHorizontalDragOffset(param0, false, 69, param1);
         }
-        return this.b(param0, false, param1, -10596);
+        return this.getVerticalDragOffset(param0, false, param1, -10596);
     }
 
-    final boolean c(byte param0) {
+    final boolean pollPageForward(byte param0) {
         if (this.field_Qb.field_T != 0) {
           this.field_Kb = 20;
           return true;
@@ -176,7 +176,7 @@ final class mj extends UiComponent {
         return false;
     }
 
-    private final void b(int param0, int param1, int param2, int param3) {
+    private final void layoutHorizontal(int param0, int param1, int param2, int param3) {
         int var6 = 0;
         int var5 = 0;
         int var9 = 0;
@@ -410,7 +410,7 @@ final class mj extends UiComponent {
         var20Lifetime3.field_Q = 0;
     }
 
-    private final void c(int param0, int param1, int param2, int param3) {
+    private final void layoutVertical(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = 0;
         int var9 = 0;
@@ -536,7 +536,7 @@ final class mj extends UiComponent {
         this.field_Tb.field_Z = param1 < param3 ? true : false;
     }
 
-    private final int a(int param0, boolean param1, int param2, int param3) {
+    private final int getHorizontalDragOffset(int param0, boolean param1, int param2, int param3) {
         int var8 = 0;
         int var9 = 0;
         int var5 = 0;
@@ -576,9 +576,9 @@ final class mj extends UiComponent {
         }
     }
 
-    final boolean j(int param0) {
+    final boolean pollPageBack(int param0) {
         if (param0 < 53) {
-          this.j(-8);
+          this.pollPageBack(-8);
         }
         if (this.field_Pb.field_T != 0) {
           this.field_Kb = 20;

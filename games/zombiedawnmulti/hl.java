@@ -9,7 +9,7 @@ final class hl {
     static int field_a;
     static int[] field_f;
 
-    final static void a(int param0, int param1, byte param2, int param3, int param4) {
+    final static void drawDottedRectangle(int param0, int param1, byte param2, int param3, int param4) {
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -122,7 +122,7 @@ final class hl {
         }
     }
 
-    final static void a(byte[] param0, byte param1, UiComponent param2, int param3, UiComponent param4, int param5, int param6, UiComponent param7, int param8, int param9) {
+    final static void initializeLobbyState(byte[] param0, byte param1, UiComponent param2, int param3, UiComponent param4, int param5, int param6, UiComponent param7, int param8, int param9) {
         int var11 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -157,7 +157,7 @@ final class hl {
             param2.field_Cb = new IntrusiveDeque();
           }
           cg.field_i = param2.field_Cb;
-          cg.field_i.e(-30986);
+          cg.field_i.clear(-30986);
           TextWidgetPainter.field_c = new sc(param8);
           ao.field_e = 0;
           if (param1 != 75) {
@@ -170,13 +170,13 @@ final class hl {
             param7.field_Cb = new IntrusiveDeque();
           }
           tn.field_C = param7.field_Cb;
-          tn.field_C.e(-30986);
+          tn.field_C.clear(-30986);
           af.field_h = new sc(param9);
           if (param4.field_Cb == null) {
             param4.field_Cb = new IntrusiveDeque();
           }
           nh.field_g = param4.field_Cb;
-          nh.field_g.e(param1 - 31061);
+          nh.field_g.clear(param1 - 31061);
           kp.field_o = new sc(param6);
           UnitStateEvent.field_r = param3;
           qi.field_c = 0L;
@@ -224,7 +224,7 @@ final class hl {
         field_b = null;
     }
 
-    final static boolean b(int param0) {
+    final static boolean isLocalPlayerGameHost(int param0) {
         if (param0 != 0) {
           field_b = (db) null;
         }

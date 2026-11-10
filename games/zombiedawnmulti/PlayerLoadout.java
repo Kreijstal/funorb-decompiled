@@ -10,7 +10,7 @@ final class PlayerLoadout {
     int[] field_c;
     static int field_e;
 
-    final void a(int param0, PacketBuffer param1) {
+    final void readPowerupReadyTicks(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -45,7 +45,7 @@ final class PlayerLoadout {
 
     PlayerLoadout() {
         this.powerupReadyTick = new int[5];
-        bl.a((byte) 49);
+        bl.monotonicMillis((byte) 49);
         this.field_c = new int[3];
         this.powerupTypes = new int[5];
         this.powerupLevels = new int[5];

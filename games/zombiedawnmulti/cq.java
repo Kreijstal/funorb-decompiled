@@ -11,7 +11,7 @@ final class cq {
 
     final static boolean a(int param0) {
         q.field_e = true;
-        SocketConnector.field_e = bl.a((byte) 115) + (long)param0;
+        SocketConnector.field_e = bl.monotonicMillis((byte) 115) + (long)param0;
         return a.field_b == 11 ? true : false;
     }
 
@@ -45,7 +45,7 @@ final class cq {
               stackIn_4_0 = param0.getAppletContext();
               stackIn_4_1 = (java.applet.AppletContext) ((Object) param0);
               stackIn_5_2 = !(param1);
-              ((java.applet.AppletContext) (Object) stackIn_4_0).showDocument(DebouncedValidationProvider.a((java.applet.Applet) ((Object) stackIn_4_1), stackIn_5_2, var2), "_top");
+              ((java.applet.AppletContext) (Object) stackIn_4_0).showDocument(DebouncedValidationProvider.applySessionOverridesToUrl((java.applet.Applet) ((Object) stackIn_4_1), stackIn_5_2, var2), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -89,7 +89,7 @@ final class cq {
           if (va.field_a == 2 &&
             null != ql.field_a) {
             var3 = (CharSequence) ((Object) param0);
-            if (!ql.field_a.equals(tg.a(var3, false))) {
+            if (!ql.field_a.equals(tg.normalizePlayerName(var3, false))) {
               return false;
             }
             return true;

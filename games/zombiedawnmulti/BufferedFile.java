@@ -21,10 +21,10 @@ final class BufferedFile {
     static int field_g;
     private long field_l;
 
-    final void a(long param0, byte param1) throws IOException {
+    final void seek(long param0, byte param1) throws IOException {
         if (param1 != -70) {
           java.awt.Component var5 = (java.awt.Component) null;
-          BufferedFile.a(-66, (java.awt.Component) null);
+          BufferedFile.detachMouseInput(-66, (java.awt.Component) null);
         }
         if (param0 >= 0L) {
           this.field_h = param0;
@@ -33,7 +33,7 @@ final class BufferedFile {
         throw new IOException();
     }
 
-    final void a(int param0, int param1, byte[] param2, int param3) throws IOException {
+    final void read(int param0, int param1, byte[] param2, int param3) throws IOException {
         int incrementValue$0 = 0;
         RuntimeException stackIn_63_0 = null;
         StringBuilder stackIn_63_1 = null;
@@ -84,7 +84,7 @@ final class BufferedFile {
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted0 = true;
             if (this.field_i.length < param0) {
-              this.field_o.a((byte) -127, this.field_h);
+              this.field_o.seek((byte) -127, this.field_h);
               this.field_c = this.field_h;
               while (param0 > 0) {
                 var10_intLifetime1 = this.field_o.read(param0, param2, -1, param1);
@@ -102,7 +102,7 @@ final class BufferedFile {
             if ((decompiledFrameRemainder0) &&
               (decompiledFrameCompleted0) &&
               (0 < param0)) {
-              this.b(-8855);
+              this.fillReadBuffer(-8855);
               var10_intLifetime1Lifetime1 = param0;
               if (var10_intLifetime1Lifetime1 > this.field_n) {
                 var10_intLifetime1Lifetime1 = this.field_n;
@@ -181,23 +181,23 @@ final class BufferedFile {
         }
     }
 
-    final static void b(byte param0) {
+    final static void clearReflectionChecks(byte param0) {
         we.field_k = new IntrusiveDeque();
         if (param0 < 97) {
           java.awt.Component var2 = (java.awt.Component) null;
-          BufferedFile.a(116, (java.awt.Component) null);
+          BufferedFile.detachMouseInput(116, (java.awt.Component) null);
         }
     }
 
-    final void a(byte param0) throws IOException {
-        this.c((byte) -23);
-        this.field_o.b((byte) 38);
+    final void close(byte param0) throws IOException {
+        this.flush((byte) -23);
+        this.field_o.close((byte) 38);
         if (param0 >= -84) {
-          BufferedFile.a(-119);
+          BufferedFile.releaseStatics(-119);
         }
     }
 
-    private final void c(byte param0) throws IOException {
+    private final void flush(byte param0) throws IOException {
         long var2;
         long var4;
         int var6;
@@ -205,10 +205,10 @@ final class BufferedFile {
         var7 = ZombieDawnMulti.field_E ? 1 : 0;
         if (this.field_m != -1L) {
           if (~this.field_c != ~this.field_m) {
-            this.field_o.a((byte) -127, this.field_m);
+            this.field_o.seek((byte) -127, this.field_m);
             this.field_c = this.field_m;
           }
-          this.field_o.a((byte) 74, 0, this.field_a, this.field_f);
+          this.field_o.write((byte) 74, 0, this.field_a, this.field_f);
           this.field_c = this.field_c + (long)this.field_a;
           if (this.field_c > this.field_b) {
             this.field_b = this.field_c;
@@ -242,11 +242,11 @@ final class BufferedFile {
           this.field_m = -1L;
         }
         if (param0 != -23) {
-          BufferedFile.a(34);
+          BufferedFile.releaseStatics(34);
         }
     }
 
-    final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
+    final void write(int param0, int param1, int param2, byte[] param3) throws IOException {
         RuntimeException stackIn_54_0 = null;
         StringBuilder stackIn_54_1 = null;
         String stackIn_55_2 = null;
@@ -267,10 +267,10 @@ final class BufferedFile {
             if (this.field_m != -1L) {
               if (this.field_m <= this.field_h) {
                 if (this.field_h > ((long)this.field_a + this.field_m)) {
-                  this.c((byte) -23);
+                  this.flush((byte) -23);
                 }
               } else {
-                this.c((byte) -23);
+                this.flush((byte) -23);
               }
             }
             if (this.field_m != (long)param0 &&
@@ -281,7 +281,7 @@ final class BufferedFile {
               param1 = param1 - var5_int;
               this.field_h = this.field_h + (long)var5_int;
               this.field_a = this.field_f.length;
-              this.c((byte) -23);
+              this.flush((byte) -23);
             }
             if (param1 <= this.field_f.length) {
               if (0 >= param1) {
@@ -298,10 +298,10 @@ final class BufferedFile {
               return;
             }
             if (~this.field_h != ~this.field_c) {
-              this.field_o.a((byte) -126, this.field_h);
+              this.field_o.seek((byte) -126, this.field_h);
               this.field_c = this.field_h;
             }
-            this.field_o.a((byte) 110, param2, param1, param3);
+            this.field_o.write((byte) 110, param2, param1, param3);
             this.field_c = this.field_c + (long)param1;
             if (this.field_b < this.field_c) {
               this.field_b = this.field_c;
@@ -353,23 +353,23 @@ final class BufferedFile {
         }
     }
 
-    final void a(byte[] param0, byte param1) throws IOException {
+    final void readFully(byte[] param0, byte param1) throws IOException {
         try {
-          this.a(param0.length, 0, param0, -117);
+          this.read(param0.length, 0, param0, -117);
           int var3_int = -85 % ((70 - param1) / 44);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "of.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    private final void b(int param0) throws IOException {
+    private final void fillReadBuffer(int param0) throws IOException {
         int var2;
         int var3;
         int var4;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         this.field_n = 0;
         if (~this.field_h != ~this.field_c) {
-          this.field_o.a((byte) -128, this.field_h);
+          this.field_o.seek((byte) -128, this.field_h);
           this.field_c = this.field_h;
         }
         this.field_l = this.field_h;
@@ -387,11 +387,11 @@ final class BufferedFile {
           break;
         }
         if (param0 != -8855) {
-          BufferedFile.d(56);
+          BufferedFile.takeRegistrationResponse(56);
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -1) {
           field_g = 68;
         }
@@ -401,14 +401,14 @@ final class BufferedFile {
         field_e = null;
     }
 
-    final long c(int param0) {
+    final long length(int param0) {
         if (param0 != -1) {
           this.field_j = -25L;
         }
         return this.field_j;
     }
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void detachMouseInput(int param0, java.awt.Component param1) {
         try {
           param1.removeMouseListener(on.field_Z);
           param1.removeMouseMotionListener(on.field_Z);
@@ -429,7 +429,7 @@ final class BufferedFile {
         this.field_l = -1L;
         try {
           this.field_o = param0;
-          dupTemp$0 = param0.a(-111);
+          dupTemp$0 = param0.length(-111);
           this.field_b = dupTemp$0;
           this.field_j = dupTemp$0;
           this.field_f = new byte[param2];
@@ -440,7 +440,7 @@ final class BufferedFile {
         }
     }
 
-    final static gh d(int param0) {
+    final static gh takeRegistrationResponse(int param0) {
         if (mp.field_b == SceneObject.field_B) {
           throw new IllegalStateException();
         }

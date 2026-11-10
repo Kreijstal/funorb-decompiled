@@ -9,7 +9,7 @@ final class p {
     static String field_b;
     static long[][] field_f;
 
-    final static gh a(int param0, String param1, int param2) {
+    final static gh createRequestResult(int param0, String param1, int param2) {
         gh var3 = null;
         RuntimeException var3_ref = null;
         gh stackIn_3_0 = null;
@@ -40,7 +40,7 @@ final class p {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3) {
+    final static void setMenuOptionMetrics(int param0, int param1, boolean param2, int param3) {
         IndexedSpriteState.field_c = param0;
         if (param2) {
           p.releaseStatics(35);
@@ -56,15 +56,15 @@ final class p {
         field_a = null;
         field_c = null;
         if (param0 != 5) {
-          p.a(6, 69, -42, false);
+          p.createDebrisParticle(6, 69, -42, false);
         }
     }
 
-    final static lk a(int param0, int param1, int param2, boolean param3) {
+    final static lk createDebrisParticle(int param0, int param1, int param2, boolean param3) {
         if (!param3) {
           return (lk) null;
         }
-        lk var4 = (lk) (bo.field_a.g(83));
+        lk var4 = (lk) (bo.field_a.removeLast(83));
         if (var4 == null) {
           var4 = new lk();
         }
@@ -112,7 +112,7 @@ final class p {
         field_d[0] = 0L;
         for (var0 = 1; 10 >= var0; var0++) {
             var1 = 8 * (-1 + var0);
-            field_d[var0] = ScrollPane.a(en.longAnd(255L, field_f[7][var1 + 7]), ScrollPane.a(en.longAnd(65280L, field_f[6][var1 + 6]), ScrollPane.a(ScrollPane.a(ScrollPane.a(ScrollPane.a(en.longAnd(field_f[2][var1 + 2], 280375465082880L), ScrollPane.a(en.longAnd(-72057594037927936L, field_f[0][var1]), en.longAnd(field_f[1][var1 + 1], 71776119061217280L))), en.longAnd(field_f[3][var1 + 3], 1095216660480L)), en.longAnd(4278190080L, field_f[4][4 + var1])), en.longAnd(field_f[5][5 + var1], 16711680L))));
+            field_d[var0] = ScrollPane.bitXor(en.longAnd(255L, field_f[7][var1 + 7]), ScrollPane.bitXor(en.longAnd(65280L, field_f[6][var1 + 6]), ScrollPane.bitXor(ScrollPane.bitXor(ScrollPane.bitXor(ScrollPane.bitXor(en.longAnd(field_f[2][var1 + 2], 280375465082880L), ScrollPane.bitXor(en.longAnd(-72057594037927936L, field_f[0][var1]), en.longAnd(field_f[1][var1 + 1], 71776119061217280L))), en.longAnd(field_f[3][var1 + 3], 1095216660480L)), en.longAnd(4278190080L, field_f[4][4 + var1])), en.longAnd(field_f[5][5 + var1], 16711680L))));
         }
     }
 }

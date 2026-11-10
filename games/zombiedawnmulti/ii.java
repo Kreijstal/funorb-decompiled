@@ -8,7 +8,7 @@ abstract class ii {
     static Sprite field_c;
     static long field_d;
 
-    final static void a(int param0, byte param1, int param2, String param3, long param4) {
+    final static void rememberRepeatMessage(int param0, byte param1, int param2, String param3, long param4) {
         try {
           v.field_a = param3;
           InflaterDecompressor.field_c = param4;
@@ -16,14 +16,14 @@ abstract class ii {
           NavigationGrid.field_n = param0;
           StateIconLabel.field_Gb = param2;
           if (param1 > -108) {
-            ii.b((byte) -126);
+            ii.getContextMenuHeight((byte) -126);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ii.J(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
-    abstract long a(byte param0);
+    abstract long getMillisUntilNextTick(byte param0);
 
     public static void releaseStatics(int param0) {
         if (param0 == -26028) {
@@ -33,17 +33,17 @@ abstract class ii {
           return;
         }
         String var2 = (String) null;
-        ii.a((String) null, (byte) -103, -24);
+        ii.requestAddFriend((String) null, (byte) -103, -24);
         field_c = null;
         field_a = null;
         field_b = null;
     }
 
-    abstract int a(long param0, boolean param1);
+    abstract int advanceTicks(long param0, boolean param1);
 
-    abstract void b(int param0);
+    abstract void resetTiming(int param0);
 
-    final static void a(int param0) {
+    final static void initializeAllMenuScreens(int param0) {
         int var2 = 0;
         MenuScreen[] var1 = null;
         MenuScreen var3 = null;
@@ -63,14 +63,14 @@ abstract class ii {
           for (var2 = 0; var6.length > var2; var2++) {
             var3 = var6[var2];
             if (var3 != null) {
-              var3.c(1);
+              var3.initializeItems(1);
             }
           }
           if (param0 > 62) {
             return;
           }
           var5 = (String) null;
-          ii.a((String) null, (byte) 19, -44);
+          ii.requestAddFriend((String) null, (byte) 19, -44);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -79,7 +79,7 @@ abstract class ii {
         }
     }
 
-    final static String a(String param0, byte param1, int param2) {
+    final static String requestAddFriend(String param0, byte param1, int param2) {
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
         String stackIn_10_0 = null;
@@ -106,7 +106,7 @@ abstract class ii {
             stackIn_6_0 = ProgressBarWidget.field_G;
             return stackIn_6_0;
           }
-          if (sf.a(1, param0)) {
+          if (sf.isCurrentUser(1, param0)) {
             stackIn_10_0 = hf.field_b;
             return stackIn_10_0;
           }
@@ -115,7 +115,7 @@ abstract class ii {
             return stackIn_13_0;
           }
           if (param1 != 116) {
-            ii.b((byte) -55);
+            ii.getContextMenuHeight((byte) -55);
           }
           if (100 <= TabbedPane.field_Fb &&
             0 >= vl.field_h) {
@@ -126,12 +126,12 @@ abstract class ii {
             stackIn_23_0 = HuffmanCodec.field_g;
             return stackIn_23_0;
           }
-          if (hp.a(param0, param1 + 904)) {
+          if (hp.isFriend(param0, param1 + 904)) {
             stackIn_26_0 = vl.a(PowerupEvent.field_r, new String[]{param0}, param1 - 114);
             return stackIn_26_0;
           }
           var5 = ma.field_a;
-          var5.b((byte) -35, param2);
+          var5.writeCipheredOpcode((byte) -35, param2);
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(124, 0);
@@ -153,7 +153,7 @@ abstract class ii {
         }
     }
 
-    final static void a(int param0, String param1) {
+    final static void updateTooltip(int param0, String param1) {
         int stackIn_17_0 = 0;
         RuntimeException stackIn_42_0 = null;
         StringBuilder stackIn_42_1 = null;
@@ -219,7 +219,7 @@ abstract class ii {
             AccountCreationDialog.field_Db = hl.field_a;
           }
           if (param0 != -16898) {
-            ii.b((byte) -126);
+            ii.getContextMenuHeight((byte) -126);
           }
           if (cb.field_l &&
             UnitView.field_I == RasterBuffer.field_a) {
@@ -243,37 +243,37 @@ abstract class ii {
         }
     }
 
-    final static int b(byte param0) {
+    final static int getContextMenuHeight(byte param0) {
         int var1 = 96 / ((param0 + 12) / 33);
         return ArrayWidgetGroup.field_F;
     }
 
-    final int b(long param0, boolean param1) {
-        long var4 = this.a((byte) -64);
+    final int waitAndAdvanceTicks(long param0, boolean param1) {
+        long var4 = this.getMillisUntilNextTick((byte) -64);
         if (param1) {
           field_b = (String) null;
           if (0L < var4) {
             vd.a(false, var4);
-            return this.a(param0, true);
+            return this.advanceTicks(param0, true);
           }
-          return this.a(param0, true);
+          return this.advanceTicks(param0, true);
         }
         if (0L >= var4) {
-          return this.a(param0, true);
+          return this.advanceTicks(param0, true);
         }
         vd.a(false, var4);
-        return this.a(param0, true);
+        return this.advanceTicks(param0, true);
     }
 
-    final static void a(int param0, int param1) {
+    final static void sendZeroBytePacket(int param0, int param1) {
         CipherPacketBuffer var2 = ma.field_a;
-        var2.b((byte) -35, param0);
+        var2.writeCipheredOpcode((byte) -35, param0);
         var2.writeByte(126, 1);
         var2.writeByte(-24, 0);
         if (param1 == -1) {
           return;
         }
-        ii.a(64, (byte) 88, -76, (String) null, 34L);
+        ii.rememberRepeatMessage(64, (byte) 88, -76, (String) null, 34L);
     }
 
     static {

@@ -27,7 +27,7 @@ class TextInputWidget extends ButtonWidget {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          this.field_T = bl.a((byte) 45);
+          this.field_T = bl.monotonicMillis((byte) 45);
           if (param1 != 60 &&
             param1 != 62) {
             if (param1 >= 32 &&
@@ -49,7 +49,7 @@ class TextInputWidget extends ButtonWidget {
                 this.field_O = this.field_O + 1;
                 this.field_S = this.field_O;
               }
-              this.j(param3 ^ -14400);
+              this.notifyTextChanged(param3 ^ -14400);
               return true;
             }
             if (param0 == 85) {
@@ -186,7 +186,7 @@ class TextInputWidget extends ButtonWidget {
         try {
           if (super.handlePointerPress(param0, param1, param2, param3, param4, param5, param6) &&
             this.painter instanceof rk) {
-            var8_int = ((rk) ((Object) this.painter)).b(param5, param6, MouseInputHandler.field_g, bo.field_d, 98, (UiWidget) (this));
+            var8_int = ((rk) ((Object) this.painter)).hitTestCaretIndex(param5, param6, MouseInputHandler.field_g, bo.field_d, 98, (UiWidget) (this));
             stackIn_4_1 = false;
             if (-1 == var8_int) {
               stackIn_5_2 = 0;
@@ -194,7 +194,7 @@ class TextInputWidget extends ButtonWidget {
               stackIn_5_2 = var8_int;
             }
             this.b(stackIn_4_1, stackIn_5_2);
-            var8_long = bl.a((byte) 115);
+            var8_long = bl.monotonicMillis((byte) 115);
             stackIn_8_1 = !(-this.field_X + var8_long >= 250L);
             this.field_M = stackIn_8_1;
             if (this.field_M) {
@@ -231,7 +231,7 @@ class TextInputWidget extends ButtonWidget {
         }
         this.field_j = "";
         this.field_O = 0;
-        this.j(8192);
+        this.notifyTextChanged(8192);
     }
 
     private final int findNextWordBoundary(int param0) {
@@ -269,9 +269,9 @@ class TextInputWidget extends ButtonWidget {
             if (this.field_S != this.field_O) {
               var8.drawSelection(this.field_S, param1, this.field_O, param3, param0 ^ -93, (UiWidget) (this));
             }
-            var6 = bl.a((byte) 56);
+            var6 = bl.monotonicMillis((byte) 56);
             if (500L > (-this.field_T + var6) % 1000L) {
-              var8.a((UiWidget) (this), (byte) 2, param3, this.field_O, param1);
+              var8.drawCaret((UiWidget) (this), (byte) 2, param3, this.field_O, param1);
             }
           }
         }
@@ -286,7 +286,7 @@ class TextInputWidget extends ButtonWidget {
           this.field_S = var2;
           this.field_O = var2;
           this.field_j = this.field_j.substring(0, var2) + this.field_j.substring(var3, this.field_j.length());
-          this.j(8192);
+          this.notifyTextChanged(8192);
         }
         if (param0) {
           this.field_V = 105;
@@ -311,19 +311,19 @@ class TextInputWidget extends ButtonWidget {
           return;
         }
         var9 = (rk) ((Object) this.painter);
-        var3 = var9.a((UiWidget) (this), -112);
+        var3 = var9.getTextLayout((UiWidget) (this), -112);
         if (param0 >= -60) {
           this.field_W = -107;
         }
-        var4 = var3.b(101);
-        var5 = var9.a((UiWidget) (this), true);
-        var6 = var9.a(0) >> 1;
+        var4 = var3.width(101);
+        var5 = var9.getAvailableTextWidth((UiWidget) (this), true);
+        var6 = var9.getLineHeight(0) >> 1;
         if (var4 < var5 - var6) {
           this.field_z = 0;
           this.field_q = 0;
           return;
         }
-        var7 = this.field_z + var3.a(52224, this.field_O);
+        var7 = this.field_z + var3.characterX(52224, this.field_O);
         if (var5 - var6 >= var7) {
           if (var7 < var6) {
             this.field_z = this.field_z + var6 - var7;
@@ -351,7 +351,7 @@ class TextInputWidget extends ButtonWidget {
           this.painter = ra.field_o.field_o;
           this.setInputText(true, param0, (byte) 108);
           this.field_U = true;
-          this.field_T = bl.a((byte) 106);
+          this.field_T = bl.monotonicMillis((byte) 106);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "pm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -399,7 +399,7 @@ class TextInputWidget extends ButtonWidget {
           if (1 == this.field_u) {
             if (this.painter instanceof rk) {
               var5 = (rk) ((Object) this.painter);
-              var6 = var5.b(param2, param3, MouseInputHandler.field_g, bo.field_d, 98, (UiWidget) (this));
+              var6 = var5.hitTestCaretIndex(param2, param3, MouseInputHandler.field_g, bo.field_d, 98, (UiWidget) (this));
               if (var6 != -1) {
                 if (this.field_M &&
                   var6 < this.field_V &&
@@ -409,14 +409,14 @@ class TextInputWidget extends ButtonWidget {
                 this.field_O = var6;
               }
             }
-            this.field_T = bl.a((byte) 121);
+            this.field_T = bl.monotonicMillis((byte) 121);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "pm.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    void j(int param0) {
+    void notifyTextChanged(int param0) {
         if (this.field_A instanceof TextInputListener) {
           ((TextInputListener) (this.field_A)).onTextInputChanged(this, 0);
         }
@@ -475,7 +475,7 @@ class TextInputWidget extends ButtonWidget {
         }
         try {
           this.field_S = this.field_O;
-          this.j(8192);
+          this.notifyTextChanged(8192);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "pm.OA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -500,7 +500,7 @@ class TextInputWidget extends ButtonWidget {
         if (null != pk.field_b) {
           pk.field_b.b(param1, (byte) 47);
         }
-        EmailAvailabilityValidator.a(param1, -19);
+        EmailAvailabilityValidator.drawNameEntryPopup(param1, -19);
         if (null != bk.field_i) {
           bk.field_i.c(param1, -1);
         }
@@ -517,13 +517,13 @@ class TextInputWidget extends ButtonWidget {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!ud.a(param2, param3, param1, (byte) -42)) {
+          if (!ud.loadSpriteSheet(param2, param3, param1, (byte) -42)) {
             return null;
           }
           if (param4 != -29435) {
             field_R = (PacketBuffer) null;
           }
-          stackIn_6_0 = me.a(param0.a(param2, true, param1), true);
+          stackIn_6_0 = me.createPaletteFont(param0.a(param2, true, param1), true);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -576,7 +576,7 @@ class TextInputWidget extends ButtonWidget {
           this.field_S = dupTemp$1;
           this.field_O = dupTemp$1;
           if (!param0) {
-            this.j(8192);
+            this.notifyTextChanged(8192);
           }
           if (param2 <= 102) {
             this.renderWidget(91, 117, 22, -113);

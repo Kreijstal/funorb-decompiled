@@ -11,7 +11,7 @@ final class ui extends IntrusiveNode {
     private int field_g;
     static int[] field_f;
 
-    final static void a(int param0, ResourceArchive param1) {
+    final static void loadLogoJingle(int param0, ResourceArchive param1) {
         RuntimeException runtimeException = null;
         VorbisSample var2 = null;
         RuntimeException stackIn_7_0 = null;
@@ -23,7 +23,7 @@ final class ui extends IntrusiveNode {
           if (param0 != 7478) {
             field_k = (Sprite[]) null;
           }
-          var2 = VorbisSample.a(param1, "jagex logo2.packvorbis", "");
+          var2 = VorbisSample.load(param1, "jagex logo2.packvorbis", "");
           var2.decodeAllToPcm();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -40,24 +40,24 @@ final class ui extends IntrusiveNode {
         }
     }
 
-    final void c(int param0) {
+    final void tick(int param0) {
         int discarded$0 = 0;
         try {
           if (param0 != 9307) {
-            discarded$0 = this.a(105);
+            discarded$0 = this.getCellOffset(105);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ui.H(" + param0 + ')');
         }
     }
 
-    final static int a(int param0, boolean param1) {
+    final static int darkenColour(int param0, boolean param1) {
         RuntimeException var2 = null;
         int stackIn_3_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            ui.a(true, false);
+            ui.drawChatToggleButton(true, false);
           }
           stackIn_3_0 = 16711935 & 15 * (16711935 & param0) >> 4 | (param0 & 65280) * 15 >> 4 & 65280;
           return stackIn_3_0;
@@ -68,7 +68,7 @@ final class ui extends IntrusiveNode {
         }
     }
 
-    final boolean a(int param0, int param1, int param2) {
+    final boolean isNearPoint(int param0, int param1, int param2) {
         int var4_int = 0;
         boolean stackIn_5_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -84,7 +84,7 @@ final class ui extends IntrusiveNode {
         }
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void drawChatToggleButton(boolean param0, boolean param1) {
         int stackIn_8_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_26_0 = 0;
@@ -141,7 +141,7 @@ final class ui extends IntrusiveNode {
             var5 = stackIn_30_0;
             var6 = var5[0].width + nf.field_d + var5[2].width;
             var7 = MatchingTextValidator.field_w.maxAscent + var5[6].height + var5[0].height;
-            s.a(-var7 + ImageProducerRasterBuffer.field_k.field_qb - 5, 0, var5, -5 - var6 + 640, var7, var6);
+            s.drawNineSliceFrame(-var7 + ImageProducerRasterBuffer.field_k.field_qb - 5, 0, var5, -5 - var6 + 640, var7, var6);
             var13 = new int[4];
             SoftwareRasterizer.saveClip(var13);
             SoftwareRasterizer.intersectClip(-5 - nf.field_d + 640 - var5[0].width, ImageProducerRasterBuffer.field_k.field_qb - var7 + var5[0].height - 5, 635 - var5[2].width, ImageProducerRasterBuffer.field_k.field_qb - var5[6].height);
@@ -182,7 +182,7 @@ final class ui extends IntrusiveNode {
         }
     }
 
-    private final int a(int param0) {
+    private final int getCellOffset(int param0) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -201,7 +201,7 @@ final class ui extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         try {
           field_f = null;
           field_i = null;
@@ -215,7 +215,7 @@ final class ui extends IntrusiveNode {
         }
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void advanceLobbyTransitions(byte param0, boolean param1) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -305,8 +305,8 @@ final class ui extends IntrusiveNode {
         try {
           this.field_l = param0;
           this.field_g = param1;
-          this.field_h = 24 * this.field_l - (-12 - this.a(-29394));
-          this.field_m = 12 + (24 * this.field_g + this.a(-29394));
+          this.field_h = 24 * this.field_l - (-12 - this.getCellOffset(-29394));
+          this.field_m = 12 + (24 * this.field_g + this.getCellOffset(-29394));
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ui.<init>(" + param0 + ',' + param1 + ',' + param2 + ')');
         }

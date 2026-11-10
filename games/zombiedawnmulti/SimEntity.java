@@ -35,7 +35,7 @@ abstract class SimEntity extends TertiaryLinkNode {
           var9 = -51 % ((param3 + 75) / 50);
           var7 = new hf(param5);
           var8 = new hf(param2);
-          stackIn_1_0 = mg.a(param0, var7, param6, var8, param4, param1, (byte) -92);
+          stackIn_1_0 = mg.performAccountServerRequest(param0, var7, param6, var8, param4, param1, (byte) -92);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

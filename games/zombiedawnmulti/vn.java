@@ -23,7 +23,7 @@ final class vn {
     }
 
     final static void a(int param0) {
-        if (!n.a((byte) -74)) {
+        if (!n.isMessageBoxOpen((byte) -74)) {
           return;
         }
         eb.a(false, false, 4);

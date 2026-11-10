@@ -21,7 +21,7 @@ final class nh extends IntrusiveNode {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = PortalView.a(kj.field_q, 19313, am.field_b);
+          var2_int = PortalView.getModeratorCrownType(kj.field_q, 19313, am.field_b);
           if (var2_int == 1) {
             param1 = "<img=0>" + param1;
           }
@@ -44,7 +44,7 @@ final class nh extends IntrusiveNode {
         }
     }
 
-    final static boolean c(byte param0) {
+    final static boolean getNewsletterOptIn(byte param0) {
         if (param0 >= -25) {
           return true;
         }

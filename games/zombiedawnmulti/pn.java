@@ -62,7 +62,7 @@ final class pn {
           if (param0 != -9) {
             field_g = (UiComponent) null;
           }
-          stackIn_3_0 = param1.a(-53);
+          stackIn_3_0 = param1.supportsFullscreen(-53);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

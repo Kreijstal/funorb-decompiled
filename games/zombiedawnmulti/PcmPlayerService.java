@@ -32,7 +32,7 @@ class PcmPlayerService {
         PcmStream var1 = param0.firstSubStream();
         while (var1 != null) {
           PcmPlayerService.deactivateTree(var1);
-          var1 = param0.d();
+          var1 = param0.nextSubStream();
         }
     }
 
@@ -43,7 +43,7 @@ class PcmPlayerService {
             this.flushDevice();
           } catch (Exception exception) {
             this.closeDevice();
-            this.field_o = bl.a((byte) 103) + 2000L;
+            this.field_o = bl.monotonicMillis((byte) 103) + 2000L;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -102,12 +102,12 @@ class PcmPlayerService {
               if (((PcmPlayerService) ((Object) var4)).field_a > 16384) {
                 ((PcmPlayerService) ((Object) var4)).field_a = 16384;
               }
-              ((PcmPlayerService) ((Object) var4)).a(((PcmPlayerService) ((Object) var4)).field_a);
+              ((PcmPlayerService) ((Object) var4)).openDevice(((PcmPlayerService) ((Object) var4)).field_a);
               if (field_b > 0 &&
                 field_q == null) {
                 field_q = new tg();
                 field_q.field_b = param0;
-                param0.a(22, (Runnable) ((Object) field_q), field_b);
+                param0.startThread(22, (Runnable) ((Object) field_q), field_b);
               }
               if (field_q != null) {
                 if (field_q.field_f[param2] != null) {
@@ -142,7 +142,7 @@ class PcmPlayerService {
         }
     }
 
-    void a(int param0) throws Exception {
+    void openDevice(int param0) throws Exception {
     }
 
     final synchronized void service() {
@@ -155,7 +155,7 @@ class PcmPlayerService {
           if (this.field_r) {
             return;
           }
-          var1 = bl.a((byte) 79);
+          var1 = bl.monotonicMillis((byte) 79);
           try {
             if (var1 > this.field_i + 6000L) {
               this.field_i = var1 - 6000L;
@@ -163,7 +163,7 @@ class PcmPlayerService {
             while (var1 > this.field_i + 5000L) {
               this.skip(256);
               this.field_i = this.field_i + (long)(256000 / sampleRate);
-              var1 = bl.a((byte) 66);
+              var1 = bl.monotonicMillis((byte) 66);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -178,7 +178,7 @@ class PcmPlayerService {
               if (var1 < this.field_o) {
                 return;
               }
-              this.a(this.field_a);
+              this.openDevice(this.field_a);
               this.field_o = 0L;
               this.field_g = true;
             }
@@ -196,7 +196,7 @@ class PcmPlayerService {
                 this.field_a = 16384;
               }
               this.closeDevice();
-              this.a(this.field_a);
+              this.openDevice(this.field_a);
               var3_int = 0;
               this.field_g = true;
               if (var4 + 256 > this.field_a) {
@@ -363,7 +363,7 @@ class PcmPlayerService {
                       var15_int = var11.field_g;
                       while (var14Lifetime2 != null) {
                         this.addTimedStream(var14Lifetime2, var15_int * var14Lifetime2.priority() >> 8);
-                        var14Lifetime2 = var11.d();
+                        var14Lifetime2 = var11.nextSubStream();
                       }
                     }
                     var15 = var11.field_h;
@@ -407,7 +407,7 @@ class PcmPlayerService {
         if (this.field_s != null) {
           this.field_s.mixInto(param0, 0, param1);
         }
-        this.field_i = bl.a((byte) 108);
+        this.field_i = bl.monotonicMillis((byte) 108);
     }
 
     void writeFrames() throws Exception {
@@ -423,7 +423,7 @@ class PcmPlayerService {
     PcmPlayerService() {
         this.field_r = false;
         this.field_e = 32;
-        this.field_i = bl.a((byte) 98);
+        this.field_i = bl.monotonicMillis((byte) 98);
         this.field_o = 0L;
         this.field_d = 0L;
         this.field_h = 0;

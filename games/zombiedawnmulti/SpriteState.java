@@ -14,8 +14,8 @@ abstract class SpriteState extends DualLinkNode {
     int offsetX;
     static int[] field_q;
 
-    final static void f(int param0) {
-        og.a(0, StatefulTextPainter.b(0));
+    final static void clearAppletStatusCookie(int param0) {
+        og.clearStatusCookie(0, StatefulTextPainter.b(0));
         int var1 = -5 % ((33 - param0) / 60);
     }
 
@@ -30,7 +30,7 @@ abstract class SpriteState extends DualLinkNode {
         field_v = null;
     }
 
-    final static void a(int param0, java.awt.Canvas param1) {
+    final static void detachCanvasInput(int param0, java.awt.Canvas param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -38,14 +38,14 @@ abstract class SpriteState extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         try {
           eq.a((java.awt.Component) ((Object) param1), (byte) 127);
-          BufferedFile.a(-1693, (java.awt.Component) ((Object) param1));
+          BufferedFile.detachMouseInput(-1693, (java.awt.Component) ((Object) param1));
           if (param0 != 95) {
             field_s = (IntrusiveDeque) null;
           }
           if (FullscreenFocusCanvas.field_a == null) {
             return;
           }
-          FullscreenFocusCanvas.field_a.a((java.awt.Component) ((Object) param1), (byte) 62);
+          FullscreenFocusCanvas.field_a.removeFrom((java.awt.Component) ((Object) param1), (byte) 62);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -61,7 +61,7 @@ abstract class SpriteState extends DualLinkNode {
         }
     }
 
-    final static GameEvent a(int param0, CipherPacketBuffer param1) {
+    final static GameEvent readChaseEvent(int param0, CipherPacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -78,7 +78,7 @@ abstract class SpriteState extends DualLinkNode {
           var2_int = param1.readUnsignedShort((byte) 69);
           var3 = param1.readUnsignedShort((byte) 69);
           var4 = param1.readUnsignedShort((byte) 69);
-          stackIn_3_0 = NetworkGameClient.a(var2_int, false, var4, var3);
+          stackIn_3_0 = NetworkGameClient.obtainChaseEvent(var2_int, false, var4, var3);
           return (GameEvent) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -94,7 +94,7 @@ abstract class SpriteState extends DualLinkNode {
         }
     }
 
-    final static String a(int param0, CharSequence param1) {
+    final static String normalizeAccountName(int param0, CharSequence param1) {
         int var4 = 0;
         int var2_int = 0;
         char[] var3 = null;
@@ -114,7 +114,7 @@ abstract class SpriteState extends DualLinkNode {
           var2_int = param1.length();
           if (param0 > -21) {
             var7 = (CipherPacketBuffer) null;
-            SpriteState.a(-8, (CipherPacketBuffer) null);
+            SpriteState.readChaseEvent(-8, (CipherPacketBuffer) null);
           }
           if (var2_int > 20) {
             var2_int = 20;

@@ -19,7 +19,7 @@ public class CacheFileLocator {
         return net.alterorb.launcher.Hook.cacheRedirect(param2, param0);
     }
 
-    public static void a(String param0, int param1, int param2) {
+    public static void initializeCacheEnvironment(String param0, int param1, int param2) {
         Exception exception = null;
         Throwable decompiledCaughtException = null;
         if (param2 != -7682) {
@@ -42,12 +42,12 @@ public class CacheFileLocator {
         field_c = true;
     }
 
-    public static File a(String param0, int param1) {
+    public static File resolveGameCacheFile(String param0, int param1) {
         if (param1 == 0) {
           return CacheFileLocator.resolveRedirectedCacheFile(param0, -25157, field_b, field_e);
         }
         String var3 = (String) null;
-        CacheFileLocator.a((String) null, -93);
+        CacheFileLocator.resolveGameCacheFile((String) null, -93);
         return CacheFileLocator.resolveRedirectedCacheFile(param0, -25157, field_b, field_e);
     }
 

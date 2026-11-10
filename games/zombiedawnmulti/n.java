@@ -7,27 +7,27 @@ final class n extends IntrusiveNode {
     byte[] field_f;
     static boolean field_g;
 
-    final static void b(boolean param0) {
-        rn.a(-54);
+    final static void shutdownSession(boolean param0) {
+        rn.exitActiveFullscreen(-54);
         if (NameEntryPopup.field_Ib != null) {
-          SpriteState.a(95, NameEntryPopup.field_Ib);
+          SpriteState.detachCanvasInput(95, NameEntryPopup.field_Ib);
         }
-        GradientOutlineTextPainter.b(4862);
+        GradientOutlineTextPainter.disableKeyboardInput(4862);
         if (param0) {
           return;
         }
         qb.b(31);
         InflaterDecompressor.b(-8);
         if (!ib.b(23517)) {
-          ak.a((byte) -111);
+          ak.closeGameSocket((byte) -111);
           return;
         }
-        ma.field_a.b((byte) -35, 1);
-        cb.a(0, false);
-        ak.a((byte) -111);
+        ma.field_a.writeCipheredOpcode((byte) -35, 1);
+        cb.flushPackets(0, false);
+        ak.closeGameSocket((byte) -111);
     }
 
-    final static boolean c(byte param0) {
+    final static boolean isPlayerDataReady(byte param0) {
         if (param0 != 107) {
           field_g = true;
           if (!PasswordValidator.field_r) {
@@ -58,7 +58,7 @@ final class n extends IntrusiveNode {
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean isMessageBoxOpen(byte param0) {
         if (param0 >= -16) {
           return true;
         }

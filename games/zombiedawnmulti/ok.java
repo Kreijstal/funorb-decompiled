@@ -38,7 +38,7 @@ final class ok {
         field_t = null;
     }
 
-    final void b(int param0) {
+    final void updateViewport(int param0) {
         if (null != rn.field_f) {
           return;
         }
@@ -56,7 +56,7 @@ final class ok {
           }
           if (this.field_k != ng.field_d ||
             pi.field_i != this.field_w) {
-            this.field_u.a((byte) -89, this.field_w, this.field_k);
+            this.field_u.onCanvasResize((byte) -89, this.field_w, this.field_k);
           }
           return;
         }
@@ -71,12 +71,12 @@ final class ok {
           return;
         }
         if (param0 == -12371) {
-          this.c(0);
+          this.applyDesiredSize(0);
           return;
         }
     }
 
-    final static void a(boolean param0) {
+    final static void drawBenefitsScreen(boolean param0) {
         Sprite var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -143,8 +143,8 @@ final class ok {
             PasswordValidator.field_y = fl.a("benefits", "menu_text", ArrayWidgetGroup.field_C, 11091);
             er.field_j = fl.a("benefits", "button_frame", ArrayWidgetGroup.field_C, 11091);
             ReportAbuseDialog.field_Tb = fl.a("benefits", "arrow", ArrayWidgetGroup.field_C, 11091);
-            TabbedPane.field_Lb = (BitmapFont) ((Object) Under13NoticePanel.a(ArrayWidgetGroup.field_C, 4, lb.field_d, "large_font", "benefits"));
-            DebouncedValidationProvider.field_e = (BitmapFont) ((Object) Under13NoticePanel.a(ArrayWidgetGroup.field_C, 4, lb.field_d, "small_font", "benefits"));
+            TabbedPane.field_Lb = (BitmapFont) ((Object) Under13NoticePanel.loadBinaryFontByName(ArrayWidgetGroup.field_C, 4, lb.field_d, "large_font", "benefits"));
+            DebouncedValidationProvider.field_e = (BitmapFont) ((Object) Under13NoticePanel.loadBinaryFontByName(ArrayWidgetGroup.field_C, 4, lb.field_d, "small_font", "benefits"));
             var27 = SoftwareRasterizer.pixels;
             var2 = SoftwareRasterizer.width;
             var3 = SoftwareRasterizer.height;
@@ -175,7 +175,7 @@ final class ok {
             nj.field_a = null;
             kg.field_j = QuickChatCategoryRegistry.field_e.copy();
             kg.field_j.bindAsRenderTarget();
-            pi.a((byte) -115, 0, 64, SoftwareRasterizer.width, SoftwareRasterizer.height * 2 / 3, 0);
+            pi.recolorGreenPixelsInRect((byte) -115, 0, 64, SoftwareRasterizer.width, SoftwareRasterizer.height * 2 / 3, 0);
             SoftwareRasterizer.setTarget(var27, var2, var3);
             SoftwareRasterizer.restoreClip(b.field_f);
             jp.field_d = (ha.field_l.width - er.field_j.width) / 2 + 231;
@@ -332,20 +332,20 @@ final class ok {
             stackIn_55_1 = cr.field_j;
             stackIn_55_2 = -59;
             stackIn_56_3 = (UsernameSuggestionsPanel.field_H.field_d == 0);
-            bc.$cfr$intArgs$a$c6021a39f7cf(stackIn_55_0, stackIn_55_1, stackIn_55_2, stackIn_56_3);
+            bc.drawGlintingButton(stackIn_55_0, stackIn_55_1, stackIn_55_2, stackIn_56_3);
           }
           if (null != ha.field_l &&
             er.field_j != null) {
             ha.field_l.drawTransparent(434, 390);
             PasswordValidator.field_y.drawTransparent(0, 0);
             if (1 == UsernameSuggestionsPanel.field_H.field_d) {
-              pi.a((byte) -122, 436, 64, -4 + ha.field_l.width, ha.field_l.height * 7 / 12, 392);
+              pi.recolorGreenPixelsInRect((byte) -122, 436, 64, -4 + ha.field_l.width, ha.field_l.height * 7 / 12, 392);
             }
             stackIn_63_0 = RasterSnapshot.field_k;
             stackIn_63_1 = HotspotTextWidget.field_O;
             stackIn_63_2 = -59;
             stackIn_64_3 = (1 == UsernameSuggestionsPanel.field_H.field_d);
-            bc.$cfr$intArgs$a$c6021a39f7cf(stackIn_63_0, stackIn_63_1, stackIn_63_2, stackIn_64_3);
+            bc.drawGlintingButton(stackIn_63_0, stackIn_63_1, stackIn_63_2, stackIn_64_3);
           }
           if (null != ReportAbuseDialog.field_Tb) {
             var1_int = -(ReportAbuseDialog.field_Tb.field_u / 2) + 357;
@@ -373,7 +373,7 @@ final class ok {
               }
             }
           }
-          ScrollPaneWithFooter.c((byte) -57);
+          ScrollPaneWithFooter.drawScreenshotSlideshow((byte) -57);
           if (!param0) {
             return;
           }
@@ -386,25 +386,25 @@ final class ok {
         }
     }
 
-    final FullscreenFocusCanvas f(int param0) {
+    final FullscreenFocusCanvas enterFullscreen(int param0) {
         this.field_x = pi.field_i;
         this.field_j = ng.field_d;
-        this.field_u.a((byte) -26, this.field_q, this.field_e);
+        this.field_u.onCanvasResize((byte) -26, this.field_q, this.field_e);
         hn.field_h = false;
         FullscreenFocusCanvas var2 = u.openFullscreenWindow(param0 + 10386, ArrayWidgetGroup.field_J, this.field_q, 0, param0, this.field_e);
         if (var2 == null) {
-          this.d(param0 - 44);
+          this.restoreWindowedSize(param0 - 44);
         }
         return var2;
     }
 
-    final void a(int param0, byte param1, int param2) {
+    final void setDesiredSize(int param0, byte param1, int param2) {
         int var4 = 71 % ((param1 - 20) / 54);
         this.field_b = param0;
         this.field_d = param2;
     }
 
-    private final void c(int param0) {
+    private final void applyDesiredSize(int param0) {
         int var2;
         int var3;
         int var4;
@@ -412,7 +412,7 @@ final class ok {
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
         var2 = this.field_b;
         var3 = this.field_d;
-        if (!this.a(0)) {
+        if (!this.isResizeAllowed(0)) {
           this.field_a = false;
           return;
         }
@@ -442,7 +442,7 @@ final class ok {
         }
         if (var2 != ng.field_d ||
           var3 != pi.field_i) {
-          this.field_u.a((byte) -27, var3, var2);
+          this.field_u.onCanvasResize((byte) -27, var3, var2);
         }
         if (this.field_b > param0) {
           bl.field_a = (-ng.field_d + this.field_b) / 2;
@@ -453,14 +453,14 @@ final class ok {
         throw new Error();
     }
 
-    final void d(int param0) {
+    final void restoreWindowedSize(int param0) {
         if (param0 > -3) {
           return;
         }
-        this.field_u.a((byte) -85, this.field_x, this.field_j);
+        this.field_u.onCanvasResize((byte) -85, this.field_x, this.field_j);
     }
 
-    final static void a(int param0, int param1, CipherPacketBuffer param2, int param3, int param4, int param5) {
+    final static void sendPowerupRequest(int param0, int param1, CipherPacketBuffer param2, int param3, int param4, int param5) {
         if (PortalEntryEvent.field_m.field_c) {
           return;
         }
@@ -472,7 +472,7 @@ final class ok {
           if (param0 >= -95) {
             ok.releaseStatics(112);
           }
-          param2.b((byte) -35, 59);
+          param2.writeCipheredOpcode((byte) -35, 59);
           param2.writeShort(param3, (byte) -87);
           param2.writeByte(123, param5);
           param2.writeShort(param4, (byte) -112);
@@ -482,7 +482,7 @@ final class ok {
         }
     }
 
-    final boolean a(int param0) {
+    final boolean isResizeAllowed(int param0) {
         boolean stackIn_5_0 = false;
         if (param0 != 0) {
           return true;

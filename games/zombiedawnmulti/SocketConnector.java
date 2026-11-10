@@ -13,7 +13,7 @@ abstract class SocketConnector {
     static String field_g;
     static String field_d;
 
-    abstract java.net.Socket b(int param0) throws IOException;
+    abstract java.net.Socket connect(int param0) throws IOException;
 
     public static void releaseStatics(byte param0) {
         field_c = null;
@@ -93,7 +93,7 @@ abstract class SocketConnector {
           stackIn_31_0 = ((var4_int & 2) == 0) ? 0 : 1;
           var6 = stackIn_31_0;
           param0.field_Ub = param2.readUnsignedShort((byte) 69);
-          param0.field_qc = bl.a((byte) 108) - (long)param2.readInt(-1478490344);
+          param0.field_qc = bl.monotonicMillis((byte) 108) - (long)param2.readInt(-1478490344);
           if (var5 == 0) {
             param0.field_Sb = -1;
           } else {

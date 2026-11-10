@@ -19,7 +19,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             var2_int = param0.getKeyChar();
             if (0 != var2_int &&
               var2_int != 65535 &&
-              am.a((char) var2_int, (byte) 91)) {
+              am.isTypeableCharacter((char) var2_int, (byte) 91)) {
               var3 = f.field_c + 1 & 127;
               if (var3 != lp.field_j) {
                 td.field_a[f.field_c] = -1;
@@ -160,7 +160,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         field_c = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, byte param4) {
+    final static void drawBlurredBackdrop(int param0, int param1, int param2, int param3, byte param4) {
         SoftwareRasterizer.fillRectAlpha(param1, param0, param3, param2, 0, 96);
         int var5 = 3;
         SoftwareRasterizer.blurRectangle(var5, var5, param1, param0, param3, param2);
@@ -170,7 +170,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         field_b = (byte[][][]) null;
     }
 
-    final static boolean a(int param0) {
+    final static boolean isTitleAnimationComplete(int param0) {
         if (param0 != 250) {
           return true;
         }

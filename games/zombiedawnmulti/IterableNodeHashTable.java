@@ -78,7 +78,7 @@ final class IterableNodeHashTable implements Iterable {
             return stackIn_4_0;
           }
           if (var2_int == 4) {
-            stackIn_15_0 = nn.a(-99, param0);
+            stackIn_15_0 = nn.decodeLegacyLevel(-99, param0);
             return stackIn_15_0;
           }
           if (var2_int == 5) {
@@ -88,7 +88,7 @@ final class IterableNodeHashTable implements Iterable {
           if (var2_int != 6) {
             return null;
           }
-          stackIn_10_0 = gi.a(param0, -115);
+          stackIn_10_0 = gi.parseLevelDataV6(param0, -115);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -22,7 +22,7 @@ final class UiTheme {
     int field_l;
     private boolean field_g;
 
-    final static int a(byte param0) {
+    final static int getMenuHeight(byte param0) {
         int var1 = -15 % ((-16 - param0) / 38);
         return Waypoint.field_j;
     }
@@ -62,7 +62,7 @@ final class UiTheme {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6) {
+    final void fillRectAlpha(int param0, int param1, int param2, byte param3, int param4, int param5, int param6) {
         int var8 = -11 % ((param3 + 28) / 57);
         SoftwareRasterizer.fillRectAlpha(param0, param6, param2, param1, param4, param5);
     }
@@ -107,9 +107,9 @@ final class UiTheme {
           this.field_m = 3;
           this.field_c = 3;
           this.field_e = 3;
-          var4.createStateLayer(0, (byte) -36).b(15658734, 0).setFrameSprites(vn.a(43, 7829367, 10066329, 8947848), 2147483647);
+          var4.createStateLayer(0, (byte) -36).setTextColour(15658734, 0).setFrameSprites(vn.a(43, 7829367, 10066329, 8947848), 2147483647);
           var4.createStateLayer(1, (byte) -36).setFrameSprites(vn.a(62, 13421772, 10066329, 11184810), 2147483647);
-          var4.createStateLayer(3, (byte) -36).setFrameSprites(vn.a(67, 10066329, 7829367, 8947848), 2147483647).a(1, 2147483647).setOffsetX(1, (byte) 47);
+          var4.createStateLayer(3, (byte) -36).setFrameSprites(vn.a(67, 10066329, 7829367, 8947848), 2147483647).setHorizontalOffset(1, 2147483647).setOffsetX(1, (byte) 47);
           var5 = new Sprite[9];
           var17 = new ArgbSprite(32, 32);
           var19 = var17;
@@ -117,22 +117,22 @@ final class UiTheme {
             var17.pixels[var7_int] = 1077952576;
           }
           var5[4] = (Sprite) ((Object) var19);
-          var4.createStateLayer(4, (byte) -36).a(true, 2521).setFrameSprites(var5, 2147483647);
-          var4.createStateLayer(5, (byte) -36).setFrameSprites(u.a(21242, 0, 65793, 0, 0), 2147483647).a(true, 2521).b(-1, 0);
+          var4.createStateLayer(4, (byte) -36).setFlushBeforeOverlay(true, 2521).setFrameSprites(var5, 2147483647);
+          var4.createStateLayer(5, (byte) -36).setFrameSprites(u.createFrameSprites(21242, 0, 65793, 0, 0), 2147483647).setFlushBeforeOverlay(true, 2521).setTextColour(-1, 0);
           this.field_n = (WidgetPainter) ((Object) var4);
           var6 = new StatefulTextPainter(var4, true);
           var6.field_d = 0;
           var7 = new StatefulTextPainter(var4, true);
           var7.field_d = 0;
-          var7.setFrameSpritesForAllStates(nk.a(8947848, (byte) -98), false);
-          var7.createStateLayer(1, (byte) -36).setFrameSprites(nk.a(11184810, (byte) 108), 2147483647).b(2236962, 0);
+          var7.setFrameSpritesForAllStates(nk.createSolidCentreFrame(8947848, (byte) -98), false);
+          var7.createStateLayer(1, (byte) -36).setFrameSprites(nk.createSolidCentreFrame(11184810, (byte) 108), 2147483647).setTextColour(2236962, 0);
           this.field_k = (WidgetPainter) ((Object) new CheckboxPainter(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new bg(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new MarkerSliderPainter(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new StatefulTextPainter();
           var18.copyStyleTo(-3, var8);
-          var8.createStateLayer(0, (byte) -36).setFrameSprites(vn.a(120, 10066329, 7829367, 15658734), 2147483647).b(1118481, 0).a((byte) 44, -1);
-          var8.createStateLayer(4, (byte) -36).a(true, 2521).setFrameSprites(var5, 2147483647);
+          var8.createStateLayer(0, (byte) -36).setFrameSprites(vn.a(120, 10066329, 7829367, 15658734), 2147483647).setTextColour(1118481, 0).setTextShadowColour((byte) 44, -1);
+          var8.createStateLayer(4, (byte) -36).setFlushBeforeOverlay(true, 2521).setFrameSprites(var5, 2147483647);
           this.field_o = (WidgetPainter) ((Object) var8);
           var9 = new Sprite[9];
           var10 = new Sprite[9];
@@ -146,7 +146,7 @@ final class UiTheme {
           var11.setStateFrameSprites(var9, 0, false);
           if (param0 != 125269879) {
             String var16 = (String) null;
-            this.a(21, (String) null, -114, (byte) -66);
+            this.drawTooltip(21, (String) null, -114, (byte) -66);
           }
           var12.setStateFrameSprites(var10, 0, false);
           var13 = new Sprite(7, 4);
@@ -167,7 +167,7 @@ final class UiTheme {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void setChatPanelY(boolean param0, int param1) {
         int var2 = 0;
         int var3 = 0;
         vj.field_t = param1;
@@ -181,10 +181,10 @@ final class UiTheme {
         if (!param0) {
           return;
         }
-        UiTheme.a((byte) -33);
+        UiTheme.getMenuHeight((byte) -33);
     }
 
-    final void a(int param0, String param1, int param2, byte param3) {
+    final void drawTooltip(int param0, String param1, int param2, byte param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -214,7 +214,7 @@ final class UiTheme {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, byte param4, int param5) {
+    final void drawLine(int param0, int param1, int param2, int param3, byte param4, int param5) {
         if (param4 == 100) {
           SoftwareRasterizer.drawLine(param1, param2, param5, param0, param3);
           return;

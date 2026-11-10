@@ -14,7 +14,7 @@ abstract class IndexedSpriteState {
     int field_f;
     static String field_d;
 
-    final static ma a(int param0, String param1) {
+    final static ma validateEmailLocalPart(int param0, String param1) {
         ma stackIn_3_0 = null;
         ma stackIn_9_0 = null;
         ma stackIn_13_0 = null;

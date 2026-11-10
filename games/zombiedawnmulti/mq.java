@@ -12,21 +12,21 @@ final class mq extends MenuScreen {
     private int[] field_s;
     private int[] field_m;
 
-    final int d(int param0, int param1) {
+    final int getItemRight(int param0, int param1) {
         if (param0 >= -65) {
           field_p = (String) null;
         }
         if (!wc.j(106) ||
           this.field_d == 6) {
-          return this.a((byte) -118, param1) + this.field_k;
+          return this.getItemX((byte) -118, param1) + this.field_k;
         }
         if (param1 == 0) {
-          return 350 + this.a((byte) -118, param1);
+          return 350 + this.getItemX((byte) -118, param1);
         }
-        return 100 + this.a((byte) -118, param1);
+        return 100 + this.getItemX((byte) -118, param1);
     }
 
-    final void a(boolean param0) {
+    final void drawScreen(boolean param0) {
         int var17 = 0;
         String[] var3;
         String var4;
@@ -49,7 +49,7 @@ final class mq extends MenuScreen {
         int var9Lifetime1;
         int var11Lifetime1;
         var18 = ZombieDawnMulti.field_E ? 1 : 0;
-        super.a(param0);
+        super.drawScreen(param0);
         var19 = dg.field_G;
         var3 = ih.field_e;
         var4 = vg.field_n;
@@ -62,8 +62,8 @@ final class mq extends MenuScreen {
         var8 = ng.field_e;
         for (var9 = 0; sf.field_b > var9; var9++) {
           if ((this.field_d != 6 ||
-            this.h(var9, 86)) &&
-            this.f(-1, var9)) {
+            this.isAchievementEarned(var9, 86)) &&
+            this.isAchievementVisible(-1, var9)) {
             var10_int = this.field_m[var9];
             var11 = this.field_s[var9];
             if (this.field_t == var9) {
@@ -72,7 +72,7 @@ final class mq extends MenuScreen {
             if (this.field_n == var9) {
               SoftwareRasterizer.drawRoundedRect(var10_int - 3, var11 - 3, 38, 38, 6, 16777215);
             }
-            var12_ref_ri = this.g(0, var9);
+            var12_ref_ri = this.getAchievementIcon(0, var9);
             var12_ref_ri.drawQuarterSize(var10_int, var11);
           }
         }
@@ -87,7 +87,7 @@ final class mq extends MenuScreen {
           var9Lifetime1 = this.field_t;
         }
         if (var9Lifetime1 != -1) {
-          var10 = this.g(0, var9Lifetime1);
+          var10 = this.getAchievementIcon(0, var9Lifetime1);
           var10.draw(110, 140);
           var6.drawParagraph(var19[var9Lifetime1], 260, 105, 300, 85, 0, 0, 1, 2, 35);
           var11Lifetime1 = 280;
@@ -126,7 +126,7 @@ final class mq extends MenuScreen {
         this.field_n = -1;
         var4 = 0;
         for (var5 = 0; var5 < sf.field_b; var5++) {
-          if (this.f(-1, var5)) {
+          if (this.isAchievementVisible(-1, var5)) {
             var4++;
           }
         }
@@ -135,7 +135,7 @@ final class mq extends MenuScreen {
         var6 = ng.field_e;
         var7 = param0;
         for (var8 = 0; var8 < sf.field_b; var8++) {
-          if (this.f(~param0, var8)) {
+          if (this.isAchievementVisible(~param0, var8)) {
             var9 = var5Lifetime1;
             var10 = var6;
             this.field_m[var8] = var9;
@@ -154,7 +154,7 @@ final class mq extends MenuScreen {
         }
     }
 
-    final int a(byte param0, int param1) {
+    final int getItemX(byte param0, int param1) {
         if (this.field_d == 6) {
           return param1 != 0 ? 350 : 100;
         }
@@ -244,8 +244,8 @@ final class mq extends MenuScreen {
         }
     }
 
-    private final IndexedSprite g(int param0, int param1) {
-        if (this.h(param1, 29)) {
+    private final IndexedSprite getAchievementIcon(int param0, int param1) {
+        if (this.isAchievementEarned(param1, 29)) {
           return la.field_l[param1];
         }
         if (param0 != 0) {
@@ -254,7 +254,7 @@ final class mq extends MenuScreen {
         return WhirlpoolHasher.field_l;
     }
 
-    private final boolean h(int param0, int param1) {
+    private final boolean isAchievementEarned(int param0, int param1) {
         if (param1 <= 10) {
           field_l = (UiComponent) null;
         }
@@ -269,7 +269,7 @@ final class mq extends MenuScreen {
         this.field_t = -1;
     }
 
-    private final boolean e(int param0, int param1) {
+    private final boolean isSecretAchievement(int param0, int param1) {
         boolean stackIn_8_0 = false;
         if (param0 != -17) {
           mq.releaseStatics(-71);
@@ -286,22 +286,22 @@ final class mq extends MenuScreen {
         return stackIn_8_0;
     }
 
-    private final boolean f(int param0, int param1) {
+    private final boolean isAchievementVisible(int param0, int param1) {
         boolean stackIn_7_0 = false;
         if (param0 != -1) {
           this.field_n = -73;
         }
-        stackIn_7_0 = (this.h(param1, 119)) || !(this.e(-17, param1));
+        stackIn_7_0 = (this.isAchievementEarned(param1, 119)) || !(this.isSecretAchievement(-17, param1));
         return stackIn_7_0;
     }
 
-    final void a(int param0) {
+    final void updateScreen(int param0) {
         int var2;
         int var3;
         int var4;
         int var5;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
-        super.a(param0);
+        super.updateScreen(param0);
         this.field_n = -1;
         var2 = sf.field_e - sf.field_g >> 1;
         if (ng.field_e < bo.field_d &&
@@ -330,7 +330,7 @@ final class mq extends MenuScreen {
             if (this.field_n < 0) {
               break;
             }
-            if (this.h(this.field_n, 47)) {
+            if (this.isAchievementEarned(this.field_n, 47)) {
               break;
             }
             this.field_n = -1;

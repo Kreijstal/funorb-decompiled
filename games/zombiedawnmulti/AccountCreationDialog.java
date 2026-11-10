@@ -31,16 +31,16 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
         gh var2Lifetime1;
         if (param0 != -27388) {
           PcmSampleStream var3 = (PcmSampleStream) null;
-          AccountCreationDialog.a((PcmSampleStream) null, (byte) -100);
+          AccountCreationDialog.playStream((PcmSampleStream) null, (byte) -100);
           if (!this.field_R) {
             return super.advanceDialogAnimation(-27388);
           }
           if (this.field_Fb) {
             return super.advanceDialogAnimation(-27388);
           }
-          var2 = BufferedFile.d(param0 ^ -27388);
+          var2 = BufferedFile.takeRegistrationResponse(param0 ^ -27388);
           if (var2 != null) {
-            this.a(-6, false, var2);
+            this.handleRegistrationResult(-6, false, var2);
             return super.advanceDialogAnimation(-27388);
           }
           return super.advanceDialogAnimation(-27388);
@@ -51,15 +51,15 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
         if (this.field_Fb) {
           return super.advanceDialogAnimation(-27388);
         }
-        var2Lifetime1 = BufferedFile.d(param0 ^ -27388);
+        var2Lifetime1 = BufferedFile.takeRegistrationResponse(param0 ^ -27388);
         if (var2Lifetime1 != null) {
-          this.a(-6, false, var2Lifetime1);
+          this.handleRegistrationResult(-6, false, var2Lifetime1);
           return super.advanceDialogAnimation(-27388);
         }
         return super.advanceDialogAnimation(-27388);
     }
 
-    private final void a(int param0, boolean param1, gh param2) {
+    private final void handleRegistrationResult(int param0, boolean param1, gh param2) {
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -84,7 +84,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
               var4 = param2.field_h;
               if (param2.field_c == 248) {
                 if (!param1) {
-                  SpriteState.f(-42);
+                  SpriteState.clearAppletStatusCookie(-42);
                 }
                 var4 = MusicPatchPcmStream.field_p;
                 this.field_Ib = true;
@@ -114,12 +114,12 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
             }
           } else {
             if (param2.field_e) {
-              this.a((UiWidget) (new Under13NoticePanel(this)), (byte) 122);
+              this.transitionToContent((UiWidget) (new Under13NoticePanel(this)), (byte) 122);
               return;
             }
             var5.addButton(ub.field_xb, -112, (WidgetListener) (this));
           }
-          this.a((UiWidget) (var5), (byte) 125);
+          this.transitionToContent((UiWidget) (var5), (byte) 125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -135,7 +135,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
         }
     }
 
-    final static we a(PcmSampleStream param0, byte param1) {
+    final static we playStream(PcmSampleStream param0, byte param1) {
         we var2 = null;
         RuntimeException var2_ref = null;
         PcmSampleStream var3 = null;
@@ -147,10 +147,10 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
         try {
           if (param1 > -62) {
             var3 = (PcmSampleStream) null;
-            AccountCreationDialog.a((PcmSampleStream) null, (byte) 86);
+            AccountCreationDialog.playStream((PcmSampleStream) null, (byte) 86);
           }
           var2 = new we(param0, param0);
-          GameKeyHandler.field_e.a(var2, false);
+          GameKeyHandler.field_e.addFirst(var2, false);
           bh.field_a.b(param0);
           stackIn_3_0 = var2;
           return stackIn_3_0;
@@ -177,8 +177,8 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
         }
     }
 
-    final void p(int param0) {
-        this.a(-6, true, p.a(-97, MusicPatchPcmStream.field_p, param0));
+    final void showIneligibleResult(int param0) {
+        this.handleRegistrationResult(-6, true, p.createRequestResult(-97, MusicPatchPcmStream.field_p, param0));
     }
 
     public static void releaseStatics(int param0) {

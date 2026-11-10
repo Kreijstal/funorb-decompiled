@@ -99,7 +99,7 @@ final class InflaterDecompressor {
           var3 = ZombieDawnMulti.field_E ? 1 : 0;
           try {
             if (null != i.field_a) {
-              i.field_a.f(31);
+              i.field_a.closeConnection(31);
             }
             if (null != rn.field_d) {
               rn.field_d.shutdown((byte) 77);
@@ -109,7 +109,7 @@ final class InflaterDecompressor {
             }
             if (null != hc.field_b) {
               try {
-                hc.field_b.a((byte) -106);
+                hc.field_b.close((byte) -106);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var1 = (IOException) (Object) decompiledCaughtException;
@@ -121,7 +121,7 @@ final class InflaterDecompressor {
             for (var1_int = 0; GameSimulation.field_r.length > var1_int; var1_int++) {
               if (GameSimulation.field_r[var1_int] != null) {
                 try {
-                  GameSimulation.field_r[var1_int].a((byte) -125);
+                  GameSimulation.field_r[var1_int].close((byte) -125);
                 } catch (java.io.IOException decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var2 = (IOException) (Object) decompiledCaughtException;
@@ -154,7 +154,7 @@ final class InflaterDecompressor {
             field_c = 35L;
           }
           var3 = new n(param2);
-          SpriteState.field_s.a(var3, false);
+          SpriteState.field_s.addFirst(var3, false);
           ih.a(var3, 1, param1);
           stackIn_3_0 = var3;
           return stackIn_3_0;
@@ -195,7 +195,7 @@ final class InflaterDecompressor {
           }
           var4_int = param1.a(param3, (byte) -65);
           var5 = param1.a(param0, var4_int, param2 ^ -20);
-          stackIn_3_0 = pf.a(var4_int, param1, -75, var5);
+          stackIn_3_0 = pf.loadIndexedSprites(var4_int, param1, -75, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -28,7 +28,7 @@ final class cm {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = ma.field_a;
-          var6.b((byte) -35, param5);
+          var6.writeCipheredOpcode((byte) -35, param5);
           var6.position = var6.position + 1;
           var7 = var6.position;
           var6.writeByte(-55, 4);
@@ -106,48 +106,48 @@ final class cm {
             var32 = var14;
             var32Lifetime2 = var14;
             var15 = wj.field_k;
-            var13.field_j.a(var14, 11, var15, true);
+            var13.field_j.addItemWithIcon(var14, 11, var15, true);
             var16 = pk.field_b;
             var17 = wp.field_j[1];
             var32Lifetime3 = var17;
             var32Lifetime4 = var17;
             var18 = LaboratoryScreen.field_o;
-            var16.field_j.a(var17, 12, var18, true);
+            var16.field_j.addItemWithIcon(var17, 12, var18, true);
             var19 = pk.field_b;
             var20 = wp.field_j[2];
             var32Lifetime5 = var20;
             var32Lifetime6 = var20;
             var21 = rq.field_g;
-            var19.field_j.a(var20, 13, var21, true);
+            var19.field_j.addItemWithIcon(var20, 13, var21, true);
           }
           if (param1 == 1) {
             var22 = pk.field_b;
             var23 = wp.field_j[0];
             var24 = io.field_h;
-            var22.field_j.a(var23, 11, var24, true);
+            var22.field_j.addItemWithIcon(var23, 11, var24, true);
             var25 = pk.field_b;
             var26 = wp.field_j[1];
             var27 = rq.field_r;
-            var25.field_j.a(var26, 12, var27, true);
+            var25.field_j.addItemWithIcon(var26, 12, var27, true);
             var28 = pk.field_b;
             var29 = wp.field_j[2];
             var30 = jk.field_c;
-            var28.field_j.a(var29, 13, var30, true);
+            var28.field_j.addItemWithIcon(var29, 13, var30, true);
           }
           int var3_int = -34 % ((-60 - param0) / 40);
           if (2 == param1) {
             var31 = pk.field_b;
             var32Lifetime1 = wp.field_j[0];
             var33 = ao.field_a;
-            var31.field_j.a(var32Lifetime1, 11, var33, true);
+            var31.field_j.addItemWithIcon(var32Lifetime1, 11, var33, true);
             var34 = pk.field_b;
             var35 = wp.field_j[1];
             var36 = ji.field_d;
-            var34.field_j.a(var35, 12, var36, true);
+            var34.field_j.addItemWithIcon(var35, 12, var36, true);
             var37 = pk.field_b;
             var38 = wp.field_j[2];
             var39 = gg.field_n;
-            var37.field_j.a(var38, 13, var39, true);
+            var37.field_j.addItemWithIcon(var38, 13, var39, true);
           }
           var40 = pk.field_b;
           var5 = param2.field_w;

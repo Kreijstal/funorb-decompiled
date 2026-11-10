@@ -25,9 +25,9 @@ final class MusicPatchPcmStream extends PcmStream {
         var7 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           this.field_o.mixInto(param0, param1, param2);
-          var6 = (mb) (this.field_k.c(76));
+          var6 = (mb) (this.field_k.last(76));
           while (var6 != null) {
-            stackIn_4_0 = this.field_n.a(-1, var6);
+            stackIn_4_0 = this.field_n.discardInactiveVoice(-1, var6);
             boolean decompiledFrameCompleted0 = true;
             if (!stackIn_4_0) {
               var4_int = param1;
@@ -36,7 +36,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 this.renderNote(var4_int, 14531, var6.field_D, var6, param0, var5 + var4_int);
                 var5 = var5 - var6.field_D;
                 var4_int = var4_int + var6.field_D;
-                if (this.field_n.a(var6, var5, var4_int, param0, -115)) {
+                if (this.field_n.updateNote(var6, var5, var4_int, param0, -115)) {
                   decompiledFrameCompleted0 = false;
                   break;
                 }
@@ -46,7 +46,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 var6.field_D = var6.field_D - var5;
               }
             }
-            var6 = (mb) (this.field_k.b(6));
+            var6 = (mb) (this.field_k.previous(6));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -109,7 +109,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 param3.field_C = PcmSampleStream.createAtStepQ8(param3.field_f, var11.getSampleStepMagnitude(), 0, var11.getPan());
                 stackIn_13_0 = this.field_n;
                 stackIn_14_1 = !(param3.field_x.field_g[param3.field_p] >= 0);
-                ((MidiPcmStream) (Object) stackIn_13_0).a(stackIn_14_1, (byte) -76, param3);
+                ((MidiPcmStream) (Object) stackIn_13_0).applyNoteSampleOffset(stackIn_14_1, (byte) -76, param3);
                 param3.field_C.rampVolume(var9, var11.getVolume());
               }
               if (param3.field_x.field_g[param3.field_p] < 0) {
@@ -146,14 +146,14 @@ final class MusicPatchPcmStream extends PcmStream {
     }
 
     final PcmStream firstSubStream() {
-        mb var1 = (mb) (this.field_k.c(76));
+        mb var1 = (mb) (this.field_k.last(76));
         if (var1 == null) {
           return null;
         }
         if (null != var1.field_C) {
           return (PcmStream) ((Object) var1.field_C);
         }
-        return this.d();
+        return this.nextSubStream();
     }
 
     private final void skipNote(mb param0, int param1, boolean param2) {
@@ -177,7 +177,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 param0.field_C = PcmSampleStream.createAtStepQ8(param0.field_f, param0.field_C.getSampleStepMagnitude(), 0, param0.field_C.getPan());
                 stackIn_7_0 = this.field_n;
                 stackIn_8_1 = !(0 <= param0.field_x.field_g[param0.field_p]);
-                ((MidiPcmStream) (Object) stackIn_7_0).a(stackIn_8_1, (byte) -80, param0);
+                ((MidiPcmStream) (Object) stackIn_7_0).applyNoteSampleOffset(stackIn_8_1, (byte) -80, param0);
               } else {
                 param0.field_C = PcmSampleStream.createAtStepQ8(param0.field_f, param0.field_C.getSampleStepMagnitude(), param0.field_C.getVolume(), param0.field_C.getPan());
               }
@@ -211,7 +211,7 @@ final class MusicPatchPcmStream extends PcmStream {
         field_j = null;
         field_p = null;
         if (param0 != 16652) {
-          MusicPatchPcmStream.c(-110);
+          MusicPatchPcmStream.pollKeyEvent(-110);
           field_l = null;
           return;
         }
@@ -224,9 +224,9 @@ final class MusicPatchPcmStream extends PcmStream {
         int var4;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         this.field_o.skip(param0);
-        var3 = (mb) (this.field_k.c(91));
+        var3 = (mb) (this.field_k.last(91));
         while (var3 != null) {
-          if (!this.field_n.a(-1, var3)) {
+          if (!this.field_n.discardInactiveVoice(-1, var3)) {
             var2 = param0;
             do {
               if (var3.field_D >= var2) {
@@ -236,9 +236,9 @@ final class MusicPatchPcmStream extends PcmStream {
               }
               this.skipNote(var3, var3.field_D, false);
               var2 = var2 - var3.field_D;
-            } while (!this.field_n.a(var3, var2, 0, (int[]) null, 22));
+            } while (!this.field_n.updateNote(var3, var2, 0, (int[]) null, 22));
           }
-          var3 = (mb) (this.field_k.b(6));
+          var3 = (mb) (this.field_k.previous(6));
         }
     }
 
@@ -246,10 +246,10 @@ final class MusicPatchPcmStream extends PcmStream {
         return 0;
     }
 
-    final PcmStream d() {
+    final PcmStream nextSubStream() {
         mb var1;
         while (true) {
-          var1 = (mb) (this.field_k.b(6));
+          var1 = (mb) (this.field_k.previous(6));
           if (var1 == null) {
             return null;
           }
@@ -259,7 +259,7 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    final static boolean c(int param0) {
+    final static boolean pollKeyEvent(int param0) {
         Object var1 = null;
         Object var1_ref = null;
         Throwable var2 = null;

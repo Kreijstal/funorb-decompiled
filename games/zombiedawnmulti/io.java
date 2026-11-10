@@ -129,7 +129,7 @@ final class io {
 
     final static void a(int param0, boolean param1, boolean param2) {
         String var5 = (String) null;
-        oi.$cfr$intArgs$a$88c6728ee5b1((String) null, param2, -67, param1);
+        oi.openLoginDialog((String) null, param2, -67, param1);
         if (param0 != -21113) {
           UiComponent var4 = (UiComponent) null;
           io.a(3, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null);

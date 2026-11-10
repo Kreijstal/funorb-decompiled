@@ -70,7 +70,7 @@ final class Waypoint extends IntrusiveNode {
           var5 = vo.field_m.field_yb.maxLineWidth(param0, 500) + 6;
           var6 = 2 + var4 * jk.field_f;
           var7 = MatchingTextValidator.a(var2_int, (byte) 126, var5, 12);
-          var8 = IntrusiveNode.a(true, var3, 20, var6);
+          var8 = IntrusiveNode.placePopupVertically(true, var3, 20, var6);
           SoftwareRasterizer.drawRect(var7, var8, var5, var6, 0);
           SoftwareRasterizer.fillRect(var7 + 1, var8 + 1, -2 + var5, var6 - 2, 16777088);
           if (param1 > -109) {

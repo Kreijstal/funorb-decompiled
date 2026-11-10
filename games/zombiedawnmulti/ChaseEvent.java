@@ -5,7 +5,7 @@ final class ChaseEvent extends GameEvent {
     private int field_j;
     private int field_i;
 
-    final void a(int param0, boolean param1, int param2, int param3) {
+    final void drawDebugOverlay(int param0, boolean param1, int param2, int param3) {
         GameCharacter var5 = null;
         HumanView var5_ref = null;
         try {
@@ -23,7 +23,7 @@ final class ChaseEvent extends GameEvent {
         }
     }
 
-    final static byte[] a(String param0, byte param1) {
+    final static byte[] readTextResourceBytes(String param0, byte param1) {
         RuntimeException var2 = null;
         byte[] stackIn_2_0 = null;
         byte[] stackIn_4_0 = null;
@@ -52,8 +52,8 @@ final class ChaseEvent extends GameEvent {
         }
     }
 
-    final void a(int param0, int param1, boolean param2, int param3) {
-        super.a(0, param3);
+    final void setEventData(int param0, int param1, boolean param2, int param3) {
+        super.setTick(0, param3);
         this.field_j = param1;
         if (param2) {
           return;
@@ -61,7 +61,7 @@ final class ChaseEvent extends GameEvent {
         this.field_i = param0;
     }
 
-    final void a(int param0, GameScreen param1) {
+    final void apply(int param0, GameScreen param1) {
         try {
           param1.startChase((byte) 118, this.field_j, this.field_i);
           if (param0 != 0) {
@@ -72,15 +72,15 @@ final class ChaseEvent extends GameEvent {
         }
     }
 
-    final void a(byte param0) {
+    final void removeFromQueue(byte param0) {
         if (param0 < -47) {
-          super.a((byte) -86);
-          a.field_c.a((IntrusiveNode) (this), false);
+          super.removeFromQueue((byte) -86);
+          a.field_c.addFirst((IntrusiveNode) (this), false);
           return;
         }
         this.field_j = -37;
-        super.a((byte) -86);
-        a.field_c.a((IntrusiveNode) (this), false);
+        super.removeFromQueue((byte) -86);
+        a.field_c.addFirst((IntrusiveNode) (this), false);
     }
 
     ChaseEvent() {

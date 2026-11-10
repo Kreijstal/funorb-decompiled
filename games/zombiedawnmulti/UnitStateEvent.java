@@ -17,15 +17,15 @@ final class UnitStateEvent extends GameEvent {
     static ao field_o;
     static long field_s;
 
-    final void a(byte param0) {
-        super.a((byte) -111);
+    final void removeFromQueue(byte param0) {
+        super.removeFromQueue((byte) -111);
         if (param0 >= -47) {
-          UnitStateEvent.a(true, -39, (CharSequence) null);
+          UnitStateEvent.validateNameText(true, -39, (CharSequence) null);
         }
-        fk.field_n.a((IntrusiveNode) (this), false);
+        fk.field_n.addFirst((IntrusiveNode) (this), false);
     }
 
-    final static boolean a(int param0, String param1) {
+    final static boolean containsFilterText(int param0, String param1) {
         RuntimeException var2 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -64,7 +64,7 @@ final class UnitStateEvent extends GameEvent {
         int var1 = -125 / ((param0 + 13) / 41);
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void attachMouseInput(java.awt.Component param0, int param1) {
         try {
           param0.addMouseListener(on.field_Z);
           int var2_int = 51 % ((param1 - 75) / 47);
@@ -75,7 +75,7 @@ final class UnitStateEvent extends GameEvent {
         }
     }
 
-    final static void d(int param0) {
+    final static void initializeUiStringTables(int param0) {
         if (null != we.field_g) {
           return;
         }
@@ -260,7 +260,7 @@ final class UnitStateEvent extends GameEvent {
         wq.field_g[38][1] = UiTheme.field_q;
     }
 
-    final static String a(boolean param0, int param1, CharSequence param2) {
+    final static String validateNameText(boolean param0, int param1, CharSequence param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -275,7 +275,7 @@ final class UnitStateEvent extends GameEvent {
         RuntimeException decompiledCaughtException = null;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var3 = QuickChatHelpDialog.a(param0, -107, param2);
+          var3 = QuickChatHelpDialog.validatePlayerNameFormat(param0, -107, param2);
           if (var3 != null) {
             stackIn_4_0 = var3;
             return stackIn_4_0;
@@ -308,9 +308,9 @@ final class UnitStateEvent extends GameEvent {
         }
     }
 
-    final static void a(int param0, long param1, int param2) {
+    final static void sendPlayerIdCommand(int param0, long param1, int param2) {
         CipherPacketBuffer var4 = ma.field_a;
-        var4.b((byte) -35, param2);
+        var4.writeCipheredOpcode((byte) -35, param2);
         var4.position = var4.position + 1;
         int var5 = var4.position;
         if (param0 != -21148) {
@@ -321,7 +321,7 @@ final class UnitStateEvent extends GameEvent {
         var4.e(44, var4.position - var5);
     }
 
-    final static void a(int param0, boolean param1, boolean param2, boolean param3, int param4) {
+    final static void updateGameRoomPanel(int param0, boolean param1, boolean param2, boolean param3, int param4) {
         UiComponent stackIn_20_0 = null;
         boolean stackIn_21_1 = false;
         int stackIn_35_0 = 0;
@@ -387,7 +387,7 @@ final class UnitStateEvent extends GameEvent {
         var19 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           boolean decompiledFrameCompleted0 = true;
-          MouseWheelInput.a(InflaterDecompressor.field_a, false);
+          MouseWheelInput.layoutLobbySlidePanels(InflaterDecompressor.field_a, false);
           if (null != JaggrabDownloader.field_c) {
             jp.field_b.field_Z = true;
             en.field_b.field_z = 0;
@@ -400,7 +400,7 @@ final class UnitStateEvent extends GameEvent {
             eb.field_B.field_z = 0;
             var7 = eb.field_B;
             var7.field_zb = 0;
-            if (hl.b(0)) {
+            if (hl.isLocalPlayerGameHost(0)) {
               gg.field_m.field_wb = ClientException.field_l.toUpperCase();
               var9 = (2 + LevelData.field_a.field_zb) / 2;
               en.field_b.setBounds(40, LevelData.field_a.field_z - 40, var9 - 2, 0, -3344);
@@ -644,7 +644,7 @@ final class UnitStateEvent extends GameEvent {
                 if (decompiledFrameCompleted0) {
                   var16 = 0;
                   var17 = bf.field_n.field_Gb.field_Cb;
-                  var18_ref = (LobbyPlayer) (var17.c(81));
+                  var18_ref = (LobbyPlayer) (var17.last(81));
                   while (true) {
                     boolean decompiledFrameRemainder1 = true;
                     boolean decompiledFrameRemainder2 = true;
@@ -686,7 +686,7 @@ final class UnitStateEvent extends GameEvent {
                           }
                         }
                         if (decompiledFrameRemainder2) {
-                          var18_ref = (LobbyPlayer) (var17.b(6));
+                          var18_ref = (LobbyPlayer) (var17.previous(6));
                           continue;
                         }
                       }
@@ -733,7 +733,7 @@ final class UnitStateEvent extends GameEvent {
             }
             if (decompiledFrameCompleted0) {
               if (qi.field_c != 0L) {
-                var9 = (int)(-bl.a((byte) 97) + qi.field_c);
+                var9 = (int)(-bl.monotonicMillis((byte) 97) + qi.field_c);
                 var9 = (var9 + 999) / 1000;
                 if (var9 < 1) {
                   var9 = 1;
@@ -764,7 +764,7 @@ final class UnitStateEvent extends GameEvent {
           }
           if (stackIn_188_0 != JaggrabDownloader.field_c) {
             if (jp.field_b.field_T != 0) {
-              ml.a(JaggrabDownloader.field_c.i(6), param4, -76);
+              ml.sendPlayerActionRequest(JaggrabDownloader.field_c.i(6), param4, -76);
             }
             if (0 != en.field_b.field_T) {
               io.field_b = true;
@@ -785,7 +785,7 @@ final class UnitStateEvent extends GameEvent {
         }
     }
 
-    final static boolean c(int param0) {
+    final static boolean isReflectionCheckReady(int param0) {
         lp var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -794,7 +794,7 @@ final class UnitStateEvent extends GameEvent {
         RuntimeException decompiledCaughtException = null;
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var4 = (lp) (we.field_k.c(74));
+          var4 = (lp) (we.field_k.last(74));
           var1 = var4;
           if (var1 == null) {
             return false;
@@ -829,7 +829,7 @@ final class UnitStateEvent extends GameEvent {
         }
     }
 
-    final void a(int param0, boolean param1, int param2, int param3) {
+    final void drawDebugOverlay(int param0, boolean param1, int param2, int param3) {
         if (this.field_p == 1) {
           return;
         }
@@ -838,10 +838,10 @@ final class UnitStateEvent extends GameEvent {
         if (!param1) {
           field_k = (PacketBuffer) null;
         }
-        SoftwareRasterizer.d(this.field_q >> 16 - param2, this.field_u >> 16 - param0, this.field_i - param2, -param0 + this.field_m, 16711680, 10);
+        SoftwareRasterizer.drawThickLine(this.field_q >> 16 - param2, this.field_u >> 16 - param0, this.field_i - param2, -param0 + this.field_m, 16711680, 10);
     }
 
-    final static void a(int[] param0, boolean param1, int param2, int param3, int param4) {
+    final static void blendHalfSpan(int[] param0, boolean param1, int param2, int param3, int param4) {
         int[] var5 = null;
         int var6 = 0;
         int var7 = 0;
@@ -861,7 +861,7 @@ final class UnitStateEvent extends GameEvent {
               var5 = var9;
               var6 = param2;
               var7 = param4;
-              var9[var6] = var7 + ScrollPane.b(8355711, var9[var6] >> 1);
+              var9[var6] = var7 + ScrollPane.bitAnd(8355711, var9[var6] >> 1);
               param2++;
               if (var8 != 0) {
                 return;
@@ -889,22 +889,22 @@ final class UnitStateEvent extends GameEvent {
         }
     }
 
-    final void a(int param0, GameScreen param1) {
+    final void apply(int param0, GameScreen param1) {
         try {
           param1.applyUnitState(this.field_v, this.field_q, false, this.field_m, this.field_n, this.field_u, this.field_p, this.field_i);
           if (param0 != 0) {
-            UnitStateEvent.a(-46, (String) null);
+            UnitStateEvent.containsFilterText(-46, (String) null);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "so.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7, int param8) {
+    final void initialize(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7, int param8) {
         if (param7) {
-          this.a((byte) 113);
+          this.removeFromQueue((byte) 113);
         }
-        super.a(0, param2);
+        super.setTick(0, param2);
         this.field_p = param8;
         this.field_n = param3;
         this.field_v = param0;

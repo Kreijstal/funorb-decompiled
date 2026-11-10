@@ -21,7 +21,7 @@ final class rj extends SceneObject {
         int var4;
         this.field_G = false;
         this.field_H = false;
-        var4 = hp.a((byte) 104, g.field_a, 2);
+        var4 = hp.nextBoundedInt((byte) 104, g.field_a, 2);
         if (var4 == 1) {
           this.field_G = true;
         } else {
@@ -139,16 +139,16 @@ final class rj extends SceneObject {
           var2 = var28.readUnsignedByte(param0 + 31362);
           if (var2 == 0) {
             var3 = var28.readUnsignedShort((byte) 69);
-            var4 = (nh) (pn.field_f.c(71));
+            var4 = (nh) (pn.field_f.last(71));
             while (var4 != null) {
               if (var3 != var4.field_l) {
-                var4 = (nh) (pn.field_f.b(6));
+                var4 = (nh) (pn.field_f.previous(6));
                 continue;
               }
               break;
             }
             if (var4 == null) {
-              ak.a((byte) -119);
+              ak.closeGameSocket((byte) -119);
               return;
             }
             var5 = var28.readUnsignedByte(param0 ^ 31366);
@@ -202,7 +202,7 @@ final class rj extends SceneObject {
                 }
               }
               if (var21 != null &&
-                sf.a(1, var21)) {
+                sf.isCurrentUser(1, var21)) {
                 var8[1][var13] = ProgressDialog.field_lb;
                 var9[1][var13] = null;
                 var35[1][var13] = var22;
@@ -235,23 +235,23 @@ final class rj extends SceneObject {
           if (var2 == 1) {
             var3Lifetime1 = var28.readUnsignedShort((byte) 69);
             var28.readLong((byte) -30);
-            var4_ref = (kj) (TriangleMesh.field_u.c(102));
+            var4_ref = (kj) (TriangleMesh.field_u.last(102));
             while (var4_ref != null) {
               if (var4_ref.field_i != var3Lifetime1) {
-                var4_ref = (kj) (TriangleMesh.field_u.b(6));
+                var4_ref = (kj) (TriangleMesh.field_u.previous(6));
                 continue;
               }
               break;
             }
             if (var4_ref == null) {
-              ak.a((byte) -115);
+              ak.closeGameSocket((byte) -115);
               return;
             }
             var4_ref.unlink(true);
             return;
           }
-          MouseInputHandler.a("HS1: " + ci.a(param0 ^ 3), (Throwable) null, false);
-          ak.a((byte) -123);
+          MouseInputHandler.reportClientError("HS1: " + ci.a(param0 ^ 3), (Throwable) null, false);
+          ak.closeGameSocket((byte) -123);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -26,8 +26,8 @@ final class CheckboxWidget extends ButtonWidget {
         try {
           if (null != bg.field_e) {
             try {
-              bg.field_e.a(0L, (byte) -70);
-              bg.field_e.a(-1, 24, s.field_e.position, s.field_e.payload);
+              bg.field_e.seek(0L, (byte) -70);
+              bg.field_e.write(-1, 24, s.field_e.position, s.field_e.payload);
             } catch (Exception exception) {
             }
           }
@@ -113,7 +113,7 @@ final class CheckboxWidget extends ButtonWidget {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = pb.a(param1, param3, -256, param0);
+          var5 = pb.loadSpritesByName(param1, param3, -256, param0);
           var4 = var5;
           var5[param2].field_u = var5[3].height;
           var5[1].fullWidth = var5[1].width;

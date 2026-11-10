@@ -104,14 +104,14 @@ final class ee {
           var3 = 10;
           var4 = 0;
           var5 = new byte[param0.length + 12];
-          nn.a(-107, 0, var5, ql.a(param1, 0, param0));
-          nn.a(-124, 1, var5, var4);
-          nn.a(-101, 2, var5, var2_int);
-          nn.a(-113, 3, var5, var3);
+          nn.putInt(-107, 0, var5, ql.a(param1, 0, param0));
+          nn.putInt(-124, 1, var5, var4);
+          nn.putInt(-101, 2, var5, var2_int);
+          nn.putInt(-113, 3, var5, var3);
           for (var6 = 1; var6 < param0.length / 4; var6++) {
-            nn.a(-115, 3 + var6, var5, ql.a(true, var6, param0));
+            nn.putInt(-115, 3 + var6, var5, ql.a(true, var6, param0));
           }
-          stackIn_5_0 = nn.a(-93, var5);
+          stackIn_5_0 = nn.decodeLegacyLevel(-93, var5);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -130,12 +130,12 @@ final class ee {
     final static boolean a(boolean param0, boolean param1) {
         long dupTemp$2 = 0L;
         if (wp.field_g == null) {
-          wp.field_g = ok.field_m.a(tm.field_c, jo.field_b, (byte) -120);
+          wp.field_g = ok.field_m.requestSocket(tm.field_c, jo.field_b, (byte) -120);
         }
         if (wp.field_g.field_f == 0) {
           return false;
         }
-        dupTemp$2 = bl.a((byte) 90);
+        dupTemp$2 = bl.monotonicMillis((byte) 90);
         UiWidget.field_g = dupTemp$2;
         AlignedIconLabel.field_Gb = dupTemp$2;
         if (param1) {
@@ -160,13 +160,13 @@ final class ee {
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4, boolean param5, boolean param6, int param7, boolean param8, int param9, int param10, boolean param11, int param12, boolean param13) {
         ui.field_j = null;
-        QuickChatHelpDialog.c((byte) 75);
+        QuickChatHelpDialog.showKickedFromGameNotice((byte) 75);
         param8 = ih.a(param10, 4, param3, param2, param7, param8, param4);
         LabeledChildWidget.a(param9, param13, param12, 2, param8, param0, param6, param2, param5, param11);
         if (!param1) {
           ee.a(-102, true, -123, -91, -93, false, false, -65, false, 82, -99, true, 54, true);
         }
-        bg.a(param12, (byte) 101, param6);
+        bg.updateLobbyPlayerList(param12, (byte) 101, param6);
         QuickChatCategoryRegistry.a((byte) -114, param12, param8, param7);
     }
 

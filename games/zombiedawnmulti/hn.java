@@ -15,7 +15,7 @@ final class hn {
     static String field_b;
     static IndexedSprite field_i;
 
-    final void a(boolean param0) {
+    final void advance(boolean param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
@@ -100,7 +100,7 @@ final class hn {
         this.field_g = this.field_e;
     }
 
-    final static int a(int param0, String param1, boolean param2) {
+    final static int measureMenuText(int param0, String param1, boolean param2) {
         RuntimeException var3 = null;
         String var4 = null;
         int stackIn_4_0 = 0;
@@ -112,7 +112,7 @@ final class hn {
         try {
           if (param0 != 0) {
             var4 = (String) null;
-            hn.a(-104, (String) null, false);
+            hn.measureMenuText(-104, (String) null, false);
           }
           if (param2) {
             stackIn_6_0 = m.field_C.textWidth(param1);
@@ -134,7 +134,7 @@ final class hn {
         }
     }
 
-    final static ii a(byte param0) {
+    final static ii createTickClock(byte param0) {
         if (param0 > -60) {
           field_f = (int[]) null;
           return (ii) ((Object) new aa());

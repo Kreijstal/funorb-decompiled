@@ -74,7 +74,7 @@ final class VorbisSample extends IntrusiveNode {
         return new PcmSample(this.sampleRate, var1, this.loopStart, this.loopEnd, this.loopModeFlag);
     }
 
-    private final void a(byte[] param0) throws IOException {
+    private final void decodeContainer(byte[] param0) throws IOException {
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
@@ -128,7 +128,7 @@ final class VorbisSample extends IntrusiveNode {
         return var1;
     }
 
-    private final static boolean a(ResourceArchive param0) {
+    private final static boolean ensureSetup(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_u) {
           var1 = param0.a(0, true, 0);
@@ -148,10 +148,10 @@ final class VorbisSample extends IntrusiveNode {
         return var0;
     }
 
-    final static VorbisSample a(ResourceArchive param0, int param1, int param2) {
+    final static VorbisSample load(ResourceArchive param0, int param1, int param2) {
         try {
           VorbisSample var4_ref = null;
-          if (!VorbisSample.a(param0)) {
+          if (!VorbisSample.ensureSetup(param0)) {
             param0.b(param2, param1, 0);
             return null;
           }
@@ -240,7 +240,7 @@ final class VorbisSample extends IntrusiveNode {
             var8[2 * var9_int + 1] = -(float)Math.sin((double)(4 * var9_int + 2) * 3.141592653589793 / (double)var2);
           }
           var9 = new int[var5];
-          var10 = mb.a((byte) -31, var5 - 1);
+          var10 = mb.bitLength((byte) -31, var5 - 1);
           for (var11 = 0; var11 < var5; var11++) {
             var9[var11] = SimHuman.reverseBits(var11, -19863, var10);
           }
@@ -462,7 +462,7 @@ final class VorbisSample extends IntrusiveNode {
         int var18_intLifetime2;
         VorbisSample.setBitstream(this.packets[param0], 0);
         VorbisSample.readBit();
-        var2 = VorbisSample.readBits(mb.a((byte) -31, field_q.length - 1));
+        var2 = VorbisSample.readBits(mb.bitLength((byte) -31, field_q.length - 1));
         var3 = field_B[var2] ? 1 : 0;
         if (var3 == 0) {
           stackIn_3_0 = field_J;
@@ -581,7 +581,7 @@ final class VorbisSample extends IntrusiveNode {
             var20_ref_float__[4 * var25Lifetime1 + 3] = (var26_floatLifetime1 - var28Lifetime1) * var30 - (var27Lifetime1 - var29Lifetime1) * var31;
             var20_ref_float__[4 * var25Lifetime1 + 1] = (var27Lifetime1 - var29Lifetime1) * var30 + (var26_floatLifetime1 - var28Lifetime1) * var31;
           }
-          var25Lifetime2 = mb.a((byte) -31, var4 - 1);
+          var25Lifetime2 = mb.bitLength((byte) -31, var4 - 1);
           for (var26 = 0; var26 < var25Lifetime2 - 3; var26++) {
             var27_int = var4 >> var26 + 2;
             var28_int = 8 << var26;
@@ -700,10 +700,10 @@ final class VorbisSample extends IntrusiveNode {
         return (float[]) (var17);
     }
 
-    final static VorbisSample a(ResourceArchive param0, String param1, String param2) {
+    final static VorbisSample load(ResourceArchive param0, String param1, String param2) {
         try {
           VorbisSample var4_ref = null;
-          if (!VorbisSample.a(param0)) {
+          if (!VorbisSample.ensureSetup(param0)) {
             param0.a((byte) -28, param2, param1);
             return null;
           }
@@ -755,7 +755,7 @@ final class VorbisSample extends IntrusiveNode {
     }
 
     private VorbisSample(byte[] param0) throws IOException {
-        this.a(param0);
+        this.decodeContainer(param0);
     }
 
     static {

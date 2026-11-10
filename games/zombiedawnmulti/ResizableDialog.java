@@ -17,7 +17,7 @@ abstract class ResizableDialog extends FadingDialog {
     private int field_T;
     static int field_Z;
 
-    final static void b(boolean param0, int param1) {
+    final static void notifyBrowserResize(boolean param0, int param1) {
         try {
           Throwable decompiledCaughtException = null;
           Throwable var2 = null;
@@ -37,7 +37,7 @@ abstract class ResizableDialog extends FadingDialog {
         }
     }
 
-    void j(byte param0) {
+    void onResizeComplete(byte param0) {
         if (param0 > -70) {
           field_ab = (String) null;
         }
@@ -65,21 +65,21 @@ abstract class ResizableDialog extends FadingDialog {
             var3 = this.field_T + var4 * (-this.field_T + this.field_Y) / var5;
           } else {
             this.field_db = 0;
-            this.j((byte) -101);
+            this.onResizeComplete((byte) -101);
           }
           this.b(var2, var3, param0 + 27505);
         }
         return super.advanceDialogAnimation(-27388);
     }
 
-    final static String k(int param0) {
+    final static String readPacketString(int param0) {
         if (param0 <= 68) {
           return (String) null;
         }
         return s.field_e.readString((byte) -24);
     }
 
-    final static void j(int param0) {
+    final static void resetAccountFlowState(int param0) {
         IntrusiveDequeCursor.field_e = false;
         nj.field_f = false;
         PowerupButton.a(param0, 99);
@@ -215,7 +215,7 @@ abstract class ResizableDialog extends FadingDialog {
         }
     }
 
-    final static int c(int param0, int param1, int param2) {
+    final static int hitTestPairedSprites(int param0, int param1, int param2) {
         if (null == er.field_j) {
           return -1;
         }
@@ -239,11 +239,11 @@ abstract class ResizableDialog extends FadingDialog {
         if (param0 != -6134) {
           field_U = (String) null;
         }
-        this.h((byte) 113);
+        this.finishTransition((byte) 113);
         return super.h(-6134);
     }
 
-    void h(byte param0) {
+    void finishTransition(byte param0) {
         if (param0 <= 29) {
           field_cb = (String) null;
         }
@@ -252,7 +252,7 @@ abstract class ResizableDialog extends FadingDialog {
         }
         this.b(this.field_V, this.field_Y, 69);
         this.field_db = 0;
-        this.j((byte) -116);
+        this.onResizeComplete((byte) -116);
     }
 
     final void startResizeTransition(int param0, byte param1, int param2, int param3) {

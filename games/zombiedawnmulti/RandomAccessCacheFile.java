@@ -14,7 +14,7 @@ final class RandomAccessCacheFile {
     private long field_d;
     private RandomAccessFile field_f;
 
-    final void a(byte param0, long param1) throws IOException {
+    final void seek(byte param0, long param1) throws IOException {
         this.field_f.seek(param1);
         this.field_c = param1;
         if (param0 >= -123) {
@@ -69,11 +69,11 @@ final class RandomAccessCacheFile {
     protected final void finalize() throws Throwable {
         if (this.field_f != null) {
           System.out.println("");
-          this.b((byte) 38);
+          this.close((byte) 38);
         }
     }
 
-    final static String a(long param0, byte param1) {
+    final static String decodeBase37(long param0, byte param1) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         int var3;
@@ -140,7 +140,7 @@ final class RandomAccessCacheFile {
         return var13.toString();
     }
 
-    final void a(byte param0, int param1, int param2, byte[] param3) throws IOException {
+    final void write(byte param0, int param1, int param2, byte[] param3) throws IOException {
         if (this.field_d < this.field_c + (long)param2) {
           this.field_f.seek(this.field_d);
           this.field_f.write(1);
@@ -157,7 +157,7 @@ final class RandomAccessCacheFile {
         }
     }
 
-    final long a(int param0) throws IOException {
+    final long length(int param0) throws IOException {
         if (param0 > -97) {
           field_e = 20;
           return this.field_f.length();
@@ -165,7 +165,7 @@ final class RandomAccessCacheFile {
         return this.field_f.length();
     }
 
-    final void b(byte param0) throws IOException {
+    final void close(byte param0) throws IOException {
         if (param0 != 38) {
           field_i = (vg) null;
           if (null != this.field_f) {

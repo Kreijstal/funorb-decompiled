@@ -10,7 +10,7 @@ final class m extends GradientOutlineTextPainter {
     static int field_y;
     static Sprite field_w;
 
-    final static void a(boolean param0, int param1, int param2) {
+    final static void handleNameEntryResult(boolean param0, int param1, int param2) {
         int var3;
         Object var4;
         Object var5;
@@ -49,7 +49,7 @@ final class m extends GradientOutlineTextPainter {
           }
           if (gi.field_i.field_wb.charAt(0) != 91) {
             var9 = (CharSequence) ((Object) gi.field_i.field_wb);
-            var4 = tg.a(var9, false);
+            var4 = tg.normalizePlayerName(var9, false);
             var5 = var4;
             var5 = var4;
           } else {
@@ -57,16 +57,16 @@ final class m extends GradientOutlineTextPainter {
           }
           var5Lifetime2 = null;
           if (0 == ic.field_e) {
-            var5Lifetime2 = ii.a((String) (var4), (byte) 116, param2);
+            var5Lifetime2 = ii.requestAddFriend((String) (var4), (byte) 116, param2);
           }
           if (1 == ic.field_e) {
-            var5Lifetime2 = ButtonWidget.a((String) (var4), 103, param2);
+            var5Lifetime2 = ButtonWidget.requestRemoveFriend((String) (var4), 103, param2);
           }
           if (ic.field_e == 2) {
-            var5Lifetime2 = sf.a(param1 - 86, param2, (String) (var4));
+            var5Lifetime2 = sf.requestAddIgnoredPlayer(param1 - 86, param2, (String) (var4));
           }
           if (ic.field_e == 3) {
-            var5Lifetime2 = ng.a((String) (var4), (String) (var4), param1 - 25, param2);
+            var5Lifetime2 = ng.removeIgnoredName((String) (var4), (String) (var4), param1 - 25, param2);
           }
           if (var5Lifetime2 == null) {
             gi.field_i = null;
@@ -80,7 +80,7 @@ final class m extends GradientOutlineTextPainter {
           return;
         }
         var6 = (PlatformTaskDispatcher) null;
-        m.a(-30, (PlatformTaskDispatcher) null, 112, 17, -89, 48);
+        m.openFullscreenFrame(-30, (PlatformTaskDispatcher) null, 112, 17, -89, 48);
         if (gi.field_i == null) {
           return;
         }
@@ -93,7 +93,7 @@ final class m extends GradientOutlineTextPainter {
           !gi.field_i.field_wb.equals("")) {
           if (gi.field_i.field_wb.charAt(0) != 91) {
             var8 = (CharSequence) ((Object) gi.field_i.field_wb);
-            var4Lifetime1 = tg.a(var8, false);
+            var4Lifetime1 = tg.normalizePlayerName(var8, false);
             var5Lifetime1 = var4Lifetime1;
             var4Lifetime1 = var5Lifetime1;
             var5Lifetime1 = var4Lifetime1;
@@ -102,16 +102,16 @@ final class m extends GradientOutlineTextPainter {
           }
           var5Lifetime1Lifetime1 = null;
           if (0 == ic.field_e) {
-            var5Lifetime1Lifetime1 = ii.a((String) (var4Lifetime1), (byte) 116, param2);
+            var5Lifetime1Lifetime1 = ii.requestAddFriend((String) (var4Lifetime1), (byte) 116, param2);
           }
           if (1 == ic.field_e) {
-            var5Lifetime1Lifetime1 = ButtonWidget.a((String) (var4Lifetime1), 103, param2);
+            var5Lifetime1Lifetime1 = ButtonWidget.requestRemoveFriend((String) (var4Lifetime1), 103, param2);
           }
           if (ic.field_e == 2) {
-            var5Lifetime1Lifetime1 = sf.a(param1 - 86, param2, (String) (var4Lifetime1));
+            var5Lifetime1Lifetime1 = sf.requestAddIgnoredPlayer(param1 - 86, param2, (String) (var4Lifetime1));
           }
           if (ic.field_e == 3) {
-            var5Lifetime1Lifetime1 = ng.a((String) (var4Lifetime1), (String) (var4Lifetime1), param1 - 25, param2);
+            var5Lifetime1Lifetime1 = ng.removeIgnoredName((String) (var4Lifetime1), (String) (var4Lifetime1), param1 - 25, param2);
             var4Lifetime1 = var5Lifetime1Lifetime1;
             var5Lifetime1Lifetime1 = var4Lifetime1;
             var4Lifetime1 = var5Lifetime1Lifetime1;
@@ -130,7 +130,7 @@ final class m extends GradientOutlineTextPainter {
         super(param0, param1);
     }
 
-    final String d(UiWidget param0, int param1) {
+    final String getDisplayText(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         PlatformTaskDispatcher var4 = null;
         String stackIn_3_0 = null;
@@ -141,7 +141,7 @@ final class m extends GradientOutlineTextPainter {
         try {
           if (param1 != -9327) {
             var4 = (PlatformTaskDispatcher) null;
-            m.a(-33, (PlatformTaskDispatcher) null, 73, 31, -76, 61);
+            m.openFullscreenFrame(-33, (PlatformTaskDispatcher) null, 73, 31, -76, 61);
           }
           stackIn_3_0 = ArmedHumanView.repeatChar(40, '*', param0.field_j.length());
           return stackIn_3_0;
@@ -173,19 +173,19 @@ final class m extends GradientOutlineTextPainter {
         field_B = null;
     }
 
-    final static void c(int param0) {
-        RasterSnapshot var1 = (RasterSnapshot) (db.field_a.a(true));
+    final static void pushRasterState(int param0) {
+        RasterSnapshot var1 = (RasterSnapshot) (db.field_a.removeFirst(true));
         if (var1 == null) {
           var1 = new RasterSnapshot();
         }
         var1.capture(SoftwareRasterizer.clipTop, SoftwareRasterizer.clipBottom, SoftwareRasterizer.clipRight, (byte) -120, SoftwareRasterizer.pixels, SoftwareRasterizer.clipLeft, SoftwareRasterizer.width, SoftwareRasterizer.height);
         if (param0 == 540) {
-          AlignedIconLabel.field_Fb.a(var1, false);
+          AlignedIconLabel.field_Fb.addFirst(var1, false);
           return;
         }
     }
 
-    final static java.awt.Frame a(int param0, PlatformTaskDispatcher param1, int param2, int param3, int param4, int param5) {
+    final static java.awt.Frame openFullscreenFrame(int param0, PlatformTaskDispatcher param1, int param2, int param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_25_0 = null;
         Object stackIn_33_0 = null;
@@ -204,7 +204,7 @@ final class m extends GradientOutlineTextPainter {
         PlatformTask var11 = null;
         var9 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          if (!param1.a(-96)) {
+          if (!param1.supportsFullscreen(-96)) {
             return null;
           }
           if (param3 == 0) {
@@ -229,7 +229,7 @@ final class m extends GradientOutlineTextPainter {
               return (java.awt.Frame) (stackIn_25_0);
             }
           }
-          var11 = param1.a(param0, (byte) 126, param2, param3, param4);
+          var11 = param1.requestEnterFullscreen(param0, (byte) 126, param2, param3, param4);
           while (var11.field_f == 0) {
             vd.a(false, 10L);
           }
@@ -245,7 +245,7 @@ final class m extends GradientOutlineTextPainter {
             stackIn_38_0 = var7;
             return stackIn_38_0;
           }
-          sp.a(param1, 1, var7);
+          sp.exitFullscreenAndDisposeFrame(param1, 1, var7);
           stackIn_36_0 = null;
           return (java.awt.Frame) (stackIn_36_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

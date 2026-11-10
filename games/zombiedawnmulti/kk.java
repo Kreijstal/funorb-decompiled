@@ -21,7 +21,7 @@ abstract class kk extends DualLinkNode {
           DualLinkDeque.field_d = param6 * 1000 / param0;
           CipherPacketBuffer.field_u.setSourceStream(bh.field_a);
           MessageDialogContent.field_L = param7;
-          MessageDialogContent.field_L.a(uk.field_S, (byte) 116);
+          MessageDialogContent.field_L.setMasterVolume(uk.field_S, (byte) 116);
           int var8_int = 37 / ((param3 - 49) / 49);
           rm.field_b.setSourceStream(MessageDialogContent.field_L);
         } catch (RuntimeException runtimeException) {
@@ -50,7 +50,7 @@ abstract class kk extends DualLinkNode {
 
     final static void a(int param0, int param1, int param2) {
         CipherPacketBuffer var3 = ma.field_a;
-        var3.b((byte) -35, param2);
+        var3.writeCipheredOpcode((byte) -35, param2);
         var3.writeByte(109, 3);
         var3.writeByte(-59, 10);
         var3.writeShort(param1, (byte) -110);

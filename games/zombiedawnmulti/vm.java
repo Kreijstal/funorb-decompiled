@@ -13,7 +13,7 @@ final class vm extends ResizableDialog implements ButtonActivationListener {
         if (param1 > -35) {
           return (LobbyPlayer) null;
         }
-        return (LobbyPlayer) (kp.field_o.a(param0, -22877));
+        return (LobbyPlayer) (kp.field_o.findByKey(param0, -22877));
     }
 
     private final void l(int param0) {
@@ -47,7 +47,7 @@ final class vm extends ResizableDialog implements ButtonActivationListener {
             if (hl.field_b == param1) {
               this.field_w = this.field_w + 10;
               var3 = on.field_cb;
-              if (gj.b(-26966)) {
+              if (gj.isHighMemoryModeAvailable(-26966)) {
                 var3 = UiTheme.field_r;
                 this.field_w = this.field_w + 20;
               }
@@ -66,7 +66,7 @@ final class vm extends ResizableDialog implements ButtonActivationListener {
           var4.field_w = 80;
           var4.field_y = 0;
           var4.painter = (WidgetPainter) ((Object) new TextWidgetPainter(DisplayNamePanel.field_H, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.b((byte) 70, var4);
+          this.addChild((byte) 70, var4);
           this.field_kb = this.a((byte) -103, (WidgetListener) (this), ic.field_f);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -118,11 +118,11 @@ final class vm extends ResizableDialog implements ButtonActivationListener {
           var5 = -6 + this.field_w;
           this.field_w = this.field_w + 38;
           var4.setWidgetBounds(15, var5, 28972, -16 + (-14 + this.field_n), 30);
-          this.b((byte) 83, var4);
+          this.addChild((byte) 83, var4);
           if (param0 >= -71) {
             field_jb = (String) null;
           }
-          this.e(-1);
+          this.refreshLayout(-1);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

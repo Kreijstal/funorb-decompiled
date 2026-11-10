@@ -16,7 +16,7 @@ final class me {
     static String field_j;
     private f field_a;
 
-    final PcmSample a(int param0, byte param1, int[] param2) {
+    final PcmSample getVorbisSampleById(int param0, byte param1, int[] param2) {
         RuntimeException var4 = null;
         byte[] var5 = null;
         PcmSample stackIn_2_0 = null;
@@ -27,16 +27,16 @@ final class me {
         RuntimeException decompiledCaughtException = null;
         try {
           if (1 == this.field_l.c(-1)) {
-            stackIn_2_0 = this.a(0, param0, false, param2);
+            stackIn_2_0 = this.getVorbisSample(0, param0, false, param2);
             return stackIn_2_0;
           }
           if (this.field_l.d(param0, -2) == 1) {
-            stackIn_5_0 = this.a(param0, 0, false, param2);
+            stackIn_5_0 = this.getVorbisSample(param0, 0, false, param2);
             return stackIn_5_0;
           }
           if (param1 != -64) {
             var5 = (byte[]) null;
-            me.a((byte[]) null, false);
+            me.createPaletteFont((byte[]) null, false);
           }
           throw new RuntimeException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -53,7 +53,7 @@ final class me {
         }
     }
 
-    final PcmSample a(int param0, int[] param1, int param2) {
+    final PcmSample getSoundEffectById(int param0, int[] param1, int param2) {
         RuntimeException var4 = null;
         PcmSample stackIn_3_0 = null;
         PcmSample stackIn_9_0 = null;
@@ -63,7 +63,7 @@ final class me {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_b.c(-1) == 1) {
-            stackIn_3_0 = this.a(-1991540092, param1, 0, param0);
+            stackIn_3_0 = this.getSoundEffect(-1991540092, param1, 0, param0);
             return stackIn_3_0;
           }
           if (param2 <= 99) {
@@ -72,7 +72,7 @@ final class me {
           if (this.field_b.d(param0, -2) != 1) {
             throw new RuntimeException();
           }
-          stackIn_9_0 = this.a(-1991540092, param1, param0, 0);
+          stackIn_9_0 = this.getSoundEffect(-1991540092, param1, param0, 0);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -88,7 +88,7 @@ final class me {
         }
     }
 
-    final static bo a(int param0, java.applet.Applet param1) {
+    final static bo readLastLoginMethod(int param0, java.applet.Applet param1) {
         int var5 = 0;
         String var2 = null;
         RuntimeException var2_ref = null;
@@ -114,7 +114,7 @@ final class me {
           var4 = 53 % ((param0 - 52) / 37);
           for (var5 = 0; var5 < var3.length; var5++) {
             var6 = var3[var5];
-            if (var6.a(var2, (byte) -107)) {
+            if (var6.hasName(var2, (byte) -107)) {
               stackIn_10_0 = var6;
               return stackIn_10_0;
             }
@@ -148,10 +148,10 @@ final class me {
         field_k = null;
     }
 
-    final static int[] a(int param0, int param1, int param2) {
-        int var3 = on.a(param2, -18924);
+    final static int[] buildRotationTransform(int param0, int param1, int param2) {
+        int var3 = on.sine(param2, -18924);
         int var4 = wn.a(-126, param2);
-        int var5 = on.a(param0, -18924);
+        int var5 = on.sine(param0, -18924);
         if (param1 != -2106461552) {
           return (int[]) null;
         }
@@ -163,7 +163,7 @@ final class me {
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
-    final static PaletteBitmapFont a(byte[] param0, boolean param1) {
+    final static PaletteBitmapFont createPaletteFont(byte[] param0, boolean param1) {
         PaletteBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         PaletteBitmapFont stackIn_6_0 = null;
@@ -196,7 +196,7 @@ final class me {
         }
     }
 
-    private final PcmSample a(int param0, int param1, boolean param2, int[] param3) {
+    private final PcmSample getVorbisSample(int param0, int param1, boolean param2, int[] param3) {
         PcmSample stackIn_4_0 = null;
         Object stackIn_8_0 = null;
         f stackIn_15_0 = null;
@@ -233,7 +233,7 @@ final class me {
           }
           var9 = (VorbisSample) (this.field_i.a(0, var6));
           if (var9 == null) {
-            var9 = VorbisSample.a(this.field_l, param0, param1);
+            var9 = VorbisSample.load(this.field_l, param0, param1);
             if (var9 == null) {
               return null;
             }
@@ -265,7 +265,7 @@ final class me {
         }
     }
 
-    private final PcmSample a(int param0, int[] param1, int param2, int param3) {
+    private final PcmSample getSoundEffect(int param0, int[] param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;

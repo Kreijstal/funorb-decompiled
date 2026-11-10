@@ -27,7 +27,7 @@ final class tm {
         field_d = null;
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void drawLobbyAndChatPanels(boolean param0, boolean param1) {
         if (cr.a((byte) -114)) {
           param0 = false;
         }
@@ -37,18 +37,18 @@ final class tm {
           BirthDateInputWidget.field_U.field_c.c(param0, -1);
           if (param1) {
             field_a = (String[]) null;
-            QuickChatPhraseRegistry.a(1, param0);
+            QuickChatPhraseRegistry.drawRootUiAndOverlay(1, param0);
             return;
           }
-          QuickChatPhraseRegistry.a(1, param0);
+          QuickChatPhraseRegistry.drawRootUiAndOverlay(1, param0);
           return;
         }
         if (!param1) {
-          QuickChatPhraseRegistry.a(1, param0);
+          QuickChatPhraseRegistry.drawRootUiAndOverlay(1, param0);
           return;
         }
         field_a = (String[]) null;
-        QuickChatPhraseRegistry.a(1, param0);
+        QuickChatPhraseRegistry.drawRootUiAndOverlay(1, param0);
     }
 
     static {

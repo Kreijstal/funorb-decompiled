@@ -28,7 +28,7 @@ final class jg {
             if (param2 != 3460) {
               jg.releaseStatics(43);
             }
-            var5 = oe.a(var3_int, var4, false, 0);
+            var5 = oe.decodeSingleByteText(var3_int, var4, false, 0);
             stackIn_6_0 = var5;
             return stackIn_6_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -76,7 +76,7 @@ final class jg {
           var7 = var8;
           var3 = var7;
           for (var2_intLifetime1 = 0; var2_intLifetime1 < 4; var2_intLifetime1++) {
-            nn.a(-128, var2_intLifetime1, var3, ql.a(true, var2_intLifetime1, param1));
+            nn.putInt(-128, var2_intLifetime1, var3, ql.a(true, var2_intLifetime1, param1));
           }
           incrementValue$0 = var2_intLifetime1;
           var2_intLifetime1++;
@@ -84,23 +84,23 @@ final class jg {
           incrementValue$1 = var2_intLifetime1;
           var2_intLifetime1++;
           var5 = ql.a(true, incrementValue$1, param1);
-          nn.a(-114, 4, var8, var4);
-          nn.a(-128, 5, var8, var5);
-          nn.a(-111, 6, var8, var4);
-          nn.a(-118, 7, var8, var5);
-          nn.a(-113, 8, var8, var4);
-          nn.a(-106, 9, var8, var5);
-          nn.a(-123, 10, var8, var4);
-          nn.a(-127, 11, var8, var5);
+          nn.putInt(-114, 4, var8, var4);
+          nn.putInt(-128, 5, var8, var5);
+          nn.putInt(-111, 6, var8, var4);
+          nn.putInt(-118, 7, var8, var5);
+          nn.putInt(-113, 8, var8, var4);
+          nn.putInt(-106, 9, var8, var5);
+          nn.putInt(-123, 10, var8, var4);
+          nn.putInt(-127, 11, var8, var5);
           var2_intLifetime2 = 6;
           if (param0 != 30270) {
             field_b = (String) null;
           }
           while (param1.length / 4 > var2_intLifetime2) {
-            nn.a(param0 ^ -30281, var2_intLifetime2 + 6, var3, ql.a(true, var2_intLifetime2, param1));
+            nn.putInt(param0 ^ -30281, var2_intLifetime2 + 6, var3, ql.a(true, var2_intLifetime2, param1));
             var2_intLifetime2++;
           }
-          stackIn_9_0 = gi.a(var8, -113);
+          stackIn_9_0 = gi.parseLevelDataV6(var8, -113);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -136,11 +136,11 @@ final class jg {
         int[] var11 = null;
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          if (!param1.a(-36)) {
+          if (!param1.supportsFullscreen(-36)) {
             stackIn_3_0 = new sm[]{};
             return stackIn_3_0;
           }
-          var9 = param1.c(0);
+          var9 = param1.requestDisplayModes(0);
           while (0 == var9.field_f) {
             vd.a(false, 10L);
           }
@@ -182,7 +182,7 @@ final class jg {
           throw new IllegalStateException();
         }
         hh.field_m = true;
-        sc.a(param0 ^ -75, true);
+        sc.showLoginDialog(param0 ^ -75, true);
         a.field_b = param0;
     }
 

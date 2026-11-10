@@ -76,13 +76,13 @@ final class cr extends IntrusiveNode {
         if (null != pk.field_b) {
           return true;
         }
-        if (oe.a(123)) {
+        if (oe.isNameEntryPopupOpen(123)) {
           return true;
         }
         if (null != bk.field_i) {
           return true;
         }
-        if (!MenuScreen.a((byte) 68)) {
+        if (!MenuScreen.isQuickChatOpen((byte) 68)) {
           return false;
         }
         return true;

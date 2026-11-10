@@ -92,7 +92,7 @@ final class ChatMessage {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!ud.a(param2, param3, param1, (byte) -42)) {
+          if (!ud.loadSpriteSheet(param2, param3, param1, (byte) -42)) {
             return null;
           }
           if (param0 != -1) {

@@ -15,21 +15,21 @@ final class bl {
         field_e = null;
         field_d = null;
         if (param0 != 0) {
-          bl.a(-38);
+          bl.switchToRequestedScreen(-38);
         }
         field_b = null;
         field_g = null;
         field_f = null;
     }
 
-    final static int c(int param0) {
+    final static int getMenuWidth(int param0) {
         if (param0 >= -38) {
           return -76;
         }
         return RandomAccessCacheFile.field_e - IntrusiveDequeCursor.field_i;
     }
 
-    final static Sprite a(byte param0, int param1, ResourceArchive param2, int param3) {
+    final static Sprite loadSprite(byte param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         Sprite stackIn_5_0 = null;
@@ -39,12 +39,12 @@ final class bl {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!ud.a(param1, param2, param3, (byte) -42)) {
+          if (!ud.loadSpriteSheet(param1, param2, param3, (byte) -42)) {
             stackIn_2_0 = null;
             return (Sprite) (stackIn_2_0);
           }
           if (param0 == 50) {
-            stackIn_7_0 = UsernameSuggestionsPanel.a(15);
+            stackIn_7_0 = UsernameSuggestionsPanel.buildFirstDecodedSprite(15);
             return stackIn_7_0;
           }
           stackIn_5_0 = (Sprite) null;
@@ -63,7 +63,7 @@ final class bl {
         }
     }
 
-    final synchronized static long a(byte param0) {
+    final synchronized static long monotonicMillis(byte param0) {
         long var1 = System.currentTimeMillis();
         if (param0 < 38) {
           return 127L;
@@ -75,7 +75,7 @@ final class bl {
         return vn.field_b + var1;
     }
 
-    final static void a(int param0) {
+    final static void switchToRequestedScreen(int param0) {
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -96,7 +96,7 @@ final class bl {
             return;
           }
           if (lb.a((byte) 53, ArrayWidgetGroup.field_I)) {
-            gk.a(2, ArrayWidgetGroup.field_I).b((byte) 69);
+            gk.lookupMenuScreen(2, ArrayWidgetGroup.field_I).onExit((byte) 69);
           }
           gk.field_b = 0;
           if (param0 != -9) {
@@ -136,7 +136,7 @@ final class bl {
           if (IntrusiveDequeCursor.field_k) {
             QuickChatMenu.j(param0 + 1481707577);
             wc.i(-28264);
-            UiWidget.d(-8328);
+            UiWidget.resetLobbyLists(-8328);
             IntrusiveDequeCursor.field_k = false;
           }
           return;

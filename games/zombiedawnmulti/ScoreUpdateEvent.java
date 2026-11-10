@@ -24,7 +24,7 @@ final class ScoreUpdateEvent extends GameEvent {
         }
     }
 
-    final void a(int param0, boolean param1, int param2, int param3) {
+    final void drawDebugOverlay(int param0, boolean param1, int param2, int param3) {
         if (!param1) {
           field_j = -107;
         }
@@ -36,7 +36,7 @@ final class ScoreUpdateEvent extends GameEvent {
         }
     }
 
-    final void a(int param0, GameScreen param1) {
+    final void apply(int param0, GameScreen param1) {
         try {
           param1.setTeamScores(this.field_i, false);
           if (param0 != 0) {
@@ -56,7 +56,7 @@ final class ScoreUpdateEvent extends GameEvent {
           }
           va.field_a = 2;
           var5 = (CharSequence) ((Object) param2);
-          ql.field_a = tg.a(var5, false);
+          ql.field_a = tg.normalizePlayerName(var5, false);
           jj.field_M = param1;
           lp.a((byte) 69);
         } catch (RuntimeException runtimeException) {

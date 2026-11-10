@@ -17,7 +17,7 @@ final class gg {
     ResourceArchive field_d;
     static int field_c;
 
-    final static void a(int param0, boolean param1, boolean param2, boolean param3) {
+    final static void updateGameSetupPanel(int param0, boolean param1, boolean param2, boolean param3) {
         int stackIn_10_0 = 0;
         UiComponent stackIn_24_0 = null;
         String stackIn_25_1 = null;
@@ -55,7 +55,7 @@ final class gg {
         int var10Lifetime1;
         var12 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          MouseWheelInput.a(HotspotTextWidget.field_Q, false);
+          MouseWheelInput.layoutLobbySlidePanels(HotspotTextWidget.field_Q, false);
           if (BufferedSocket.field_n != null) {
             var15 = en.field_b;
             var17 = var15;
@@ -158,7 +158,7 @@ final class gg {
                   FullscreenFocusCanvas.field_c[var13] = false;
                   var13++;
                 }
-                bh.a(-1712, -1, 0, BufferedSocket.field_n, true, kj.field_h, -1, -1);
+                bh.findValidSettingCombination(-1712, -1, 0, BufferedSocket.field_n, true, kj.field_h, -1, -1);
                 if (!(2 > kj.field_q) &&
                   lc.field_m[12]) {
                   BirthDateValidator.field_l = true;
@@ -214,7 +214,7 @@ final class gg {
             }
             if (GameKeyHandler.field_a.field_T != 0) {
               if (la.field_k) {
-                GameApplet.a(param0, (byte) 98);
+                GameApplet.writeCancelSearchPacket(param0, (byte) 98);
               } else {
                 AttackEvent.b(true, param0);
               }
@@ -229,18 +229,18 @@ final class gg {
         }
     }
 
-    final static String a(int param0) {
+    final static String getPendingEmail(int param0) {
         if (BirthDateValidator.field_k == SceneObject.field_B) {
           return RandomAccessCacheFile.field_g;
         }
         if (param0 <= 0) {
           return (String) null;
         }
-        if (!tg.field_g.d(-88)) {
-          return tg.field_g.a(31027);
+        if (!tg.field_g.isFlagAssigned(-88)) {
+          return tg.field_g.getText(31027);
         }
         if (BirthDateValidator.field_k == ProgressDialog.field_hb) {
-          return tg.field_g.a(31027);
+          return tg.field_g.getText(31027);
         }
         return ReportAbuseDialog.field_Ib;
     }
@@ -262,7 +262,7 @@ final class gg {
         throw new Error();
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void drawGameSetupPanels(int param0, boolean param1) {
         if (JaggrabDownloader.field_h > 0 &&
           ee.field_a) {
           SoftwareRasterizer.clearRect(0, 0, SoftwareRasterizer.width, ImageProducerRasterBuffer.field_k.field_qb);

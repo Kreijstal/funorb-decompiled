@@ -21,17 +21,17 @@ final class rn {
         int var1 = 40 % ((21 - param0) / 39);
     }
 
-    final static void a(int param0) {
+    final static void exitActiveFullscreen(int param0) {
         if (field_f == null) {
           return;
         }
-        SpriteState.a(95, field_f);
+        SpriteState.detachCanvasInput(95, field_f);
         if (param0 > -26) {
           field_a = (Sprite[]) null;
           field_f.a(8192, ArrayWidgetGroup.field_J);
           field_f = null;
           if (null != ng.field_g) {
-            ng.field_g.d(-33);
+            ng.field_g.restoreWindowedSize(-33);
             NameEntryPopup.field_Ib.requestFocus();
             return;
           }
@@ -44,11 +44,11 @@ final class rn {
           NameEntryPopup.field_Ib.requestFocus();
           return;
         }
-        ng.field_g.d(-33);
+        ng.field_g.restoreWindowedSize(-33);
         NameEntryPopup.field_Ib.requestFocus();
     }
 
-    final static UiComponent b(int param0) {
+    final static UiComponent getIgnoreListContent(int param0) {
         if (param0 != 28579) {
           return (UiComponent) null;
         }

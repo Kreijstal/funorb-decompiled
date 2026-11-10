@@ -15,7 +15,7 @@ final class ao {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         if (param0 > -21) {
           field_e = -25;
@@ -24,7 +24,7 @@ final class ao {
         field_a = null;
     }
 
-    final static int[] a(int[] param0, int param1, int[] param2) {
+    final static int[] buildGradientPalette(int[] param0, int param1, int[] param2) {
         int var4_int = 0;
         int[] stackIn_19_0 = null;
         RuntimeException stackIn_22_0 = null;

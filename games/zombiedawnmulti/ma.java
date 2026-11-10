@@ -16,7 +16,7 @@ final class ma {
         }
     }
 
-    final static void a(UiComponent param0, UiComponent param1, boolean param2) {
+    final static void initializeSocialLists(UiComponent param0, UiComponent param1, boolean param2) {
         if (param0.field_Cb == null) {
           param0.field_Cb = new IntrusiveDeque();
         }
@@ -35,7 +35,7 @@ final class ma {
         try {
           jf.field_d = param1.field_Cb;
           ro.field_M = param0.field_Cb;
-          UiWidget.d(-8328);
+          UiWidget.resetLobbyLists(-8328);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ma.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

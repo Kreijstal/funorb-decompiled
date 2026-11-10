@@ -95,7 +95,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           }
           vl.a(param18, param8, 127, param2, param12, param11);
           qb.a(param17, (byte) -115, param7, param14);
-          nn.a((byte) 55, param3, param19, param5);
+          nn.setMessageBoxColours((byte) 55, param3, param19, param5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -207,12 +207,12 @@ final class StatefulTextPainter extends TextWidgetPainter {
             stackIn_3_0 = null;
           }
           var11 = (ButtonWidget) (stackIn_3_0);
-          Camera.a(param3 + param4.field_y, param4.field_w + (param4.field_i + param1), (byte) 105, param3 + param4.field_y + param4.field_n, param1 + param4.field_i);
+          Camera.pushClip(param3 + param4.field_y, param4.field_w + (param4.field_i + param1), (byte) 105, param3 + param4.field_y + param4.field_n, param1 + param4.field_i);
           if (var11 != null) {
             param0 = param0 & var11.field_F;
           }
           var7 = this.field_s[0];
-          this.field_w.a((byte) 11);
+          this.field_w.reset((byte) 11);
           var7.applyTo(-11108, param3, param1, this, param4, this.field_w);
           if (var11 != null) {
             if (var11.field_G) {
@@ -313,7 +313,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         } else {
           var7 = MenuScreen.field_c;
         }
-        DebouncedValidationProvider.a(127, param2, param4, param5, var7, param6, param0, param3);
+        DebouncedValidationProvider.updateChatComposer(127, param2, param4, param5, var7, param6, param0, param3);
         if (param1 == -97) {
           return;
         }
@@ -367,7 +367,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         WidgetStyleLayer dupTemp$0 = new WidgetStyleLayer();
         this.field_s[0] = dupTemp$0;
         WidgetStyleLayer var1 = dupTemp$0;
-        var1.a((byte) 11);
+        var1.reset((byte) 11);
     }
 
     public static void releaseStatics(boolean param0) {

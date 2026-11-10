@@ -21,7 +21,7 @@ final class hf {
         this(param0, false);
     }
 
-    final boolean a(byte param0) {
+    final boolean isSelected(byte param0) {
         if (param0 < 55) {
           this.field_d = (String) null;
           return this.field_c;
@@ -62,7 +62,7 @@ final class hf {
         }
     }
 
-    final String c(byte param0) {
+    final String getText(byte param0) {
         if (param0 != 99) {
           return (String) null;
         }

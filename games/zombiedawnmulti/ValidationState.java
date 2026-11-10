@@ -10,12 +10,12 @@ final class ValidationState {
         ProgressDialog.field_lb = s.field_e.readString((byte) -107);
         if (!param0) {
           var3 = (CharSequence) ((Object) ProgressDialog.field_lb);
-          ProxySocketConnector.field_k = tg.a(var3, param0);
+          ProxySocketConnector.field_k = tg.normalizePlayerName(var3, param0);
           return;
         }
         field_a = (UiComponent) null;
         CharSequence var2 = (CharSequence) ((Object) ProgressDialog.field_lb);
-        ProxySocketConnector.field_k = tg.a(var2, param0);
+        ProxySocketConnector.field_k = tg.normalizePlayerName(var2, param0);
     }
 
     final static boolean b(int param0) {

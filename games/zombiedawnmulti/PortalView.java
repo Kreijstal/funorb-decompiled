@@ -17,7 +17,7 @@ final class PortalView extends SceneObject {
     int field_I;
     static int[] field_K;
 
-    final static byte[] a(Object param0, int param1, boolean param2) {
+    final static byte[] unwrapArchiveBytes(Object param0, int param1, boolean param2) {
         byte[] var3 = null;
         t var3_ref = null;
         RuntimeException var3_ref2 = null;
@@ -44,7 +44,7 @@ final class PortalView extends SceneObject {
               throw new IllegalArgumentException();
             }
             var3_ref = (t) (param0);
-            stackIn_14_0 = var3_ref.a(-111);
+            stackIn_14_0 = var3_ref.getBytes(-111);
             return stackIn_14_0;
           }
           var3 = (byte[]) (param0);
@@ -68,7 +68,7 @@ final class PortalView extends SceneObject {
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int getModeratorCrownType(int param0, int param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
         int stackIn_8_0 = 0;
@@ -148,7 +148,7 @@ final class PortalView extends SceneObject {
         }
     }
 
-    final void c(int param0, int param1) {
+    final void setPortalState(int param0, int param1) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
@@ -183,7 +183,7 @@ final class PortalView extends SceneObject {
         }
     }
 
-    final static void b(int param0, int param1) {
+    final static void selectLevelGraphics(int param0, int param1) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -2388,7 +2388,7 @@ final class PortalView extends SceneObject {
         decompiledBody.run();
     }
 
-    final void a(Camera param0, int param1) {
+    final void drawTeamGlow(Camera param0, int param1) {
         RuntimeException stackIn_48_0 = null;
         StringBuilder stackIn_48_1 = null;
         String stackIn_49_2 = null;
@@ -2469,7 +2469,7 @@ final class PortalView extends SceneObject {
         }
     }
 
-    final static Sprite[] a(byte param0, int param1, int param2, int param3) {
+    final static Sprite[] createSolidFrameSprites(byte param0, int param1, int param2, int param3) {
         Sprite[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -2484,7 +2484,7 @@ final class PortalView extends SceneObject {
           do {
             if (var5 >= 9) {
               if (param0 > -85) {
-                PortalView.a((Object) null, 65, true);
+                PortalView.unwrapArchiveBytes((Object) null, 65, true);
               }
               var4[4] = PacketBuffer.a(-128, 64, param1);
               break;
@@ -2530,8 +2530,8 @@ final class PortalView extends SceneObject {
           var3_int = param1.worldToScreenX(this.getX(113), -20126);
           var4 = param1.worldToScreenY(this.getY(123), 121);
           if (null != this.field_N) {
-            this.field_N.setVolume(DropTargetWidget.b(param0 ^ -10218, var4, var3_int));
-            this.field_N.f(pb.a(var4, var3_int, false));
+            this.field_N.setVolume(DropTargetWidget.computeScreenVolume(param0 ^ -10218, var4, var3_int));
+            this.field_N.setPan(pb.computeStereoPan(var4, var3_int, false));
           }
           if (!io.a(var3_int, var4, (byte) -86, param1) &&
             !io.a(var3_int, var4 - 48, (byte) -73, param1)) {
@@ -2603,11 +2603,11 @@ final class PortalView extends SceneObject {
               if (stackIn_67_0 != stackIn_67_1) {
                 if (0 == (65535 & var10)) {
                   var11 = var10 >> 16;
-                  var8[var9] = cr.b(ScrollPane.b(var11 * ScrollPane.b(var7 >> 16, 255), -855572736) << 8, cr.b(ScrollPane.b(var7, 255) * var11 >> 8, ScrollPane.b(var11 * ScrollPane.b(var7 >> 8, 255), 65280)));
+                  var8[var9] = cr.b(ScrollPane.bitAnd(var11 * ScrollPane.bitAnd(var7 >> 16, 255), -855572736) << 8, cr.b(ScrollPane.bitAnd(var7, 255) * var11 >> 8, ScrollPane.bitAnd(var11 * ScrollPane.bitAnd(var7 >> 8, 255), 65280)));
                 } else {
                   if ((16711935 & var10) == 0) {
                     var11 = var10 >> 8;
-                    var8[var9] = cr.b(ScrollPane.b(var11 * (ScrollPane.b(var6, 16730352) >> 16), -201261312) << 8, cr.b(ScrollPane.b(65280, ScrollPane.b(var6 >> 8, 255) * var11), var11 * ScrollPane.b(var6, 255) >> 8));
+                    var8[var9] = cr.b(ScrollPane.bitAnd(var11 * (ScrollPane.bitAnd(var6, 16730352) >> 16), -201261312) << 8, cr.b(ScrollPane.bitAnd(65280, ScrollPane.bitAnd(var6 >> 8, 255) * var11), var11 * ScrollPane.bitAnd(var6, 255) >> 8));
                   }
                 }
               }
@@ -2635,7 +2635,7 @@ final class PortalView extends SceneObject {
           if (this.field_O == null) {
             this.field_O = new ea();
           }
-          this.field_P = nk.a(var7, 455739624, 1);
+          this.field_P = nk.createColorRamp(var7, 455739624, 1);
           if (FullscreenFocusCanvas.field_k.field_k != 1) {
             stackIn_83_0 = this.field_O;
             if (FullscreenFocusCanvas.field_k.field_k != 2) {
@@ -2717,7 +2717,7 @@ final class PortalView extends SceneObject {
         }
     }
 
-    final static boolean i(int param0) {
+    final static boolean isGuestOrNonMember(int param0) {
         RuntimeException var1 = null;
         boolean stackIn_10_0 = false;
         RuntimeException decompiledCaughtException = null;

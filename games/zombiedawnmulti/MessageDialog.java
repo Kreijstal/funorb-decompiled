@@ -57,7 +57,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
             } else {
               if (6 != param2) {
                 if (param2 != 9) {
-                  this.a((UiWidget) (var7), (byte) 119);
+                  this.transitionToContent((UiWidget) (var7), (byte) 119);
                   var5 = -3 % ((-15 - param1) / 46);
                   return;
                 }
@@ -69,7 +69,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
           } else {
             var7.addActionButton(SimArmedHuman.field_zb, 7, true);
           }
-          this.a((UiWidget) (var7), (byte) 119);
+          this.transitionToContent((UiWidget) (var7), (byte) 119);
           var5Lifetime1 = -3 % ((-15 - param1) / 46);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -101,10 +101,10 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
         if (!this.field_xb) {
           return;
         }
-        ce.c((byte) -123);
+        ce.showLoginFormForUser((byte) -123);
     }
 
-    final static void c(int param0, int param1, int param2, int param3, int param4) {
+    final static void setMenuLayoutMetrics(int param0, int param1, int param2, int param3, int param4) {
         if (param1 == 20341) {
           mg.field_H = param0;
           ImageProducerRasterBuffer.field_l = param2;
@@ -123,16 +123,16 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
         field_Ab = null;
         field_vb = null;
         if (param0 != 10) {
-          MessageDialog.c(10, -105, -88, -20, 64);
+          MessageDialog.setMenuLayoutMetrics(10, -105, -88, -20, 64);
         }
     }
 
-    final void c(boolean param0) {
+    final void showConnectionRestoredContent(boolean param0) {
         this.field_Bb.a(4210752, 2121792, (byte) 116);
         MessageDialogContent var2 = new MessageDialogContent(this, this.field_zb, DualLinkDeque.field_c);
         if (!param0) {
           var2.addActionButton(og.field_T, 15, true);
-          this.a((UiWidget) (var2), (byte) -18);
+          this.transitionToContent((UiWidget) (var2), (byte) -18);
           return;
         }
     }
@@ -179,7 +179,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
           this.field_zb = param1;
           this.field_Bb = new ProgressBarWidget(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_Bb.field_L = true;
-          this.b((byte) 104, this.field_Bb);
+          this.addChild((byte) 104, this.field_Bb);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ne.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

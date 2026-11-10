@@ -7,7 +7,7 @@ final class cc {
     static String field_a;
     static String field_d;
 
-    final static boolean a(String param0, String param1, String param2, int param3, int param4, AccountCreationForm param5, boolean param6) {
+    final static boolean startAccountCreation(String param0, String param1, String param2, int param3, int param4, AccountCreationForm param5, boolean param6) {
         RuntimeException var7 = null;
         AccountCreationDialog var8 = null;
         RuntimeException stackIn_14_0 = null;
@@ -29,8 +29,8 @@ final class cc {
           }
           var8 = new AccountCreationDialog(nb.field_a, param5);
           nb.field_a.showDialog(param4 ^ -8815, var8);
-          if (DropTargetWidget.h(3853)) {
-            var8.p(param4 ^ -10591);
+          if (DropTargetWidget.hasStatButtonCookie(3853)) {
+            var8.showIneligibleResult(param4 ^ -10591);
             return true;
           }
           iq.field_c = null;

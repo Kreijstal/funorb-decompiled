@@ -38,7 +38,7 @@ final class pq extends IntrusiveNode {
         try {
           var3_int = param1.worldToScreenX(this.field_g, -20126);
           var4 = param1.worldToScreenY(this.field_l, param0 ^ 130);
-          this.field_q.setVolume(DropTargetWidget.b(12, var4, var3_int));
+          this.field_q.setVolume(DropTargetWidget.computeScreenVolume(12, var4, var3_int));
           if (param0 >= ~var3_int &&
             var4 >= -256 &&
             var3_int <= 896 &&
@@ -183,7 +183,7 @@ final class pq extends IntrusiveNode {
         this.field_j = 0;
         this.field_h = 0;
         this.field_i = param2;
-        this.field_q = Camera.b(-128, 17);
+        this.field_q = Camera.createMixerStream(-128, 17);
     }
 
     static {

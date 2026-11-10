@@ -66,7 +66,7 @@ final class eb {
           var4 = MatchingTextValidator.field_t[var2];
           var5 = new int[var3];
           for (var6 = 0; var3 > var6; var6++) {
-            var5[var6] = UsernameAvailabilityValidator.field_t[ScrollPane.b((int) var4[var6], 255)];
+            var5[var6] = UsernameAvailabilityValidator.field_t[ScrollPane.bitAnd((int) var4[var6], 255)];
           }
           var1[var2] = new Sprite(ContentTransitionDialog.field_nb, hj.field_a, PacketBuffer.field_i[var2], PowerupCommand.field_o[var2], oq.field_w[var2], vj.field_p[var2], var5);
         }
@@ -83,7 +83,7 @@ final class eb {
         }
         if (param1 &&
           0 <= param0) {
-          return HumanView.a(param0, param1, 10, -1);
+          return HumanView.toRadixString(param0, param1, 10, -1);
         }
         return Integer.toString(param0);
     }
@@ -138,7 +138,7 @@ final class eb {
           ho.field_q = param2;
           SectorCacheStore.field_c = true;
           if (ho.field_q == 0) {
-            var3_int = mb.a(uq.field_f, false, oi.field_e, cq.field_e, ib.field_b);
+            var3_int = mb.wrapBalancedText(uq.field_f, false, oi.field_e, cq.field_e, ib.field_b);
             var4 = 3 + var3_int;
             TextWidgetPainter.field_m = new String[var4];
             MessageDialogContent.field_Q = new int[var4];
@@ -157,7 +157,7 @@ final class eb {
             MessageDialogContent.field_Q[var4 - 1] = 1;
             v.field_b[1] = 5;
           } else if (ho.field_q == 1) {
-            var3_int = mb.a(uq.field_f, false, oi.field_e, cq.field_e, ib.field_b);
+            var3_int = mb.wrapBalancedText(uq.field_f, false, oi.field_e, cq.field_e, ib.field_b);
             var4 = var3_int + 2;
             MessageDialogContent.field_Q = new int[var4];
             TextWidgetPainter.field_m = new String[var4];
@@ -175,9 +175,9 @@ final class eb {
           } else if (ho.field_q != 2) {
             if (ho.field_q == 3) {
               if (ArrayWidgetGroup.field_J.field_d) {
-                var3_int = mb.a(uq.field_f, param0, ArmedHumanView.field_sb, cq.field_e, ib.field_b);
+                var3_int = mb.wrapBalancedText(uq.field_f, param0, ArmedHumanView.field_sb, cq.field_e, ib.field_b);
               } else {
-                var3_int = mb.a(uq.field_f, false, aa.field_j, cq.field_e, ib.field_b);
+                var3_int = mb.wrapBalancedText(uq.field_f, false, aa.field_j, cq.field_e, ib.field_b);
               }
               var4 = 2 + var3_int;
               MessageDialogContent.field_Q = new int[var4];
@@ -194,7 +194,7 @@ final class eb {
               MessageDialogContent.field_Q[-1 + var4] = 0;
               v.field_b[0] = 5;
             } else if (ho.field_q == 4) {
-              var3_int = mb.a(uq.field_f, false, on.field_cb, cq.field_e, ib.field_b);
+              var3_int = mb.wrapBalancedText(uq.field_f, false, on.field_cb, cq.field_e, ib.field_b);
               var4 = 2 + var3_int;
               TextWidgetPainter.field_m = new String[var4];
               MessageDialogContent.field_Q = new int[var4];
@@ -213,7 +213,7 @@ final class eb {
               if (ho.field_q != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = mb.a(uq.field_f, false, CipherPacketBuffer.field_t, cq.field_e, ib.field_b);
+              var3_int = mb.wrapBalancedText(uq.field_f, false, CipherPacketBuffer.field_t, cq.field_e, ib.field_b);
               var4 = 3 + var3_int;
               MessageDialogContent.field_Q = new int[var4];
               TextWidgetPainter.field_m = new String[var4];
@@ -233,7 +233,7 @@ final class eb {
               v.field_b[1] = 5;
             }
           } else {
-            var3_int = mb.a(uq.field_f, param0, vl.a(MusicPatchPcmStream.field_l, new String[]{"<br><%0><br>"}, 2), cq.field_e, ib.field_b);
+            var3_int = mb.wrapBalancedText(uq.field_f, param0, vl.a(MusicPatchPcmStream.field_l, new String[]{"<br><%0><br>"}, 2), cq.field_e, ib.field_b);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(cq.field_e[var5])) {
@@ -250,7 +250,7 @@ final class eb {
             ik.field_a = new String[var3_int - var4 - 1];
             ArrayOperations.copy(cq.field_e, var4 + 1, ik.field_a, 0, var3_int - var4 - 1);
             var4 = -1;
-            var3_int = mb.a(uq.field_f, false, vl.a(rn.field_g, new String[]{"<br><%0><br>"}, 2), cq.field_e, ib.field_b);
+            var3_int = mb.wrapBalancedText(uq.field_f, false, vl.a(rn.field_g, new String[]{"<br><%0><br>"}, 2), cq.field_e, ib.field_b);
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(cq.field_e[var5])) {
                 continue;
@@ -318,7 +318,7 @@ final class eb {
               }
               stackIn_72_0[stackIn_72_1] = stackIn_75_2;
             }
-            UnitStateEvent.field_s = bl.a((byte) 41);
+            UnitStateEvent.field_s = bl.monotonicMillis((byte) 41);
           }
           NetworkGameClient.field_B.field_c = v.field_b.length;
           var3_intLifetime1 = 0;
@@ -326,7 +326,7 @@ final class eb {
             stackIn_88_0 = 0;
             stackIn_88_1 = TextWidgetPainter.field_m[var4Lifetime1];
             stackIn_89_2 = !(0 > MessageDialogContent.field_Q[var4Lifetime1]);
-            var5Lifetime1 = hn.a(stackIn_88_0, stackIn_88_1, stackIn_89_2);
+            var5Lifetime1 = hn.measureMenuText(stackIn_88_0, stackIn_88_1, stackIn_89_2);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -336,7 +336,7 @@ final class eb {
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var10.length > var5Lifetime2; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];
-              var7Lifetime1 = hn.a(0, var11, false);
+              var7Lifetime1 = hn.measureMenuText(0, var11, false);
               if (var3_intLifetime1 < var7Lifetime1) {
                 var3_intLifetime1 = var7Lifetime1;
               }
@@ -344,7 +344,7 @@ final class eb {
             var4_ref_String__Lifetime1 = ik.field_a;
             for (var5Lifetime2Lifetime1 = 0; var4_ref_String__Lifetime1.length > var5Lifetime2Lifetime1; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
-              var7Lifetime1Lifetime1 = hn.a(0, var12, false);
+              var7Lifetime1Lifetime1 = hn.measureMenuText(0, var12, false);
               if (var7Lifetime1Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1Lifetime1;
               }
@@ -374,7 +374,7 @@ final class eb {
             if (var6Lifetime1 < 0) {
               var5Lifetime3 = var5Lifetime3 + WidgetContainer.field_C;
             } else {
-              var7Lifetime2 = hn.a(0, TextWidgetPainter.field_m[var4Lifetime3], true);
+              var7Lifetime2 = hn.measureMenuText(0, TextWidgetPainter.field_m[var4Lifetime3], true);
               var8Lifetime1 = am.field_c - (var7Lifetime2 >> 1);
               var5Lifetime3 = var5Lifetime3 + ResizableDialog.field_bb;
               uf.field_b[var4Lifetime3] = new int[4];
@@ -387,9 +387,9 @@ final class eb {
             var4Lifetime3++;
           }
           if (ho.field_q != 2) {
-            NetworkGameClient.field_B.a(0, param1, -31458, iq.a(bo.field_d, -1, MouseInputHandler.field_g));
+            NetworkGameClient.field_B.initializeSelection(0, param1, -31458, iq.a(bo.field_d, -1, MouseInputHandler.field_g));
           } else {
-            NetworkGameClient.field_B.a(-1, param1, -31458, -1);
+            NetworkGameClient.field_B.initializeSelection(-1, param1, -31458, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

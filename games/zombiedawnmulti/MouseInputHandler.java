@@ -89,7 +89,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
     }
 
-    final static byte a(char param0, byte param1) {
+    final static byte encodeExtendedChar(char param0, byte param1) {
         int var2;
         int var3;
         int var2Lifetime1;
@@ -680,7 +680,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           return;
         }
         Throwable var2 = (Throwable) null;
-        MouseInputHandler.a((String) null, (Throwable) null, false);
+        MouseInputHandler.reportClientError((String) null, (Throwable) null, false);
         field_c = null;
         field_e = null;
         field_a = null;
@@ -727,7 +727,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             gi.field_m = 0;
             de.field_g = param0.getX();
             s.field_b = param0.getY();
-            bl.a((byte) 41);
+            bl.monotonicMillis((byte) 41);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               s.field_f = 1;
               hh.field_e = 1;
@@ -793,7 +793,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
     }
 
-    final static void a(String param0, Throwable param1, boolean param2) {
+    final static void reportClientError(String param0, Throwable param1, boolean param2) {
         try {
           PlatformTaskDispatcher stackIn_14_0;
           int stackIn_14_1;
@@ -852,7 +852,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               stackIn_15_3 = null;
               stackIn_15_6 = RasterSnapshot.field_j;
             }
-            var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).a((byte) stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(PlatformTaskDispatcher.field_r).append("&v2=").append(PlatformTaskDispatcher.field_q).append("&e=").append(var10).toString()));
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).requestUrlStream((byte) stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(PlatformTaskDispatcher.field_r).append("&v2=").append(PlatformTaskDispatcher.field_q).append("&e=").append(var10).toString()));
             while (var4.field_f == 0) {
               vd.a(false, 1L);
             }

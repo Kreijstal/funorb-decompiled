@@ -11,7 +11,7 @@ final class ro extends GameWorld {
         super(param0, param1);
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_N = null;
         field_M = null;
         if (param0 <= 37) {
@@ -22,7 +22,7 @@ final class ro extends GameWorld {
         field_O = null;
     }
 
-    final static int a(int param0, char param1, CharSequence param2) {
+    final static int countCharacter(int param0, char param1, CharSequence param2) {
         int var5 = 0;
         int var3_int = 0;
         int var4 = 0;
@@ -63,7 +63,7 @@ final class ro extends GameWorld {
         }
     }
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void writeWorldState(PacketBuffer param0, byte param1) {
         PacketBuffer stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         int stackIn_4_2 = 0;
@@ -108,7 +108,7 @@ final class ro extends GameWorld {
             param0.writeShort(this.field_a[var3_int], (byte) -85);
             param0.writeShort(this.field_z[var3_int], (byte) -78);
           }
-          var3 = (SimEntity) (this.characters.c(40));
+          var3 = (SimEntity) (this.characters.last(40));
           while (var3 != null) {
             boolean decompiledFrameRemainder0 = true;
             if (var3 instanceof SimUnit) {
@@ -119,7 +119,7 @@ final class ro extends GameWorld {
               }
             }
             if (decompiledFrameRemainder0) {
-              param0.writeByte(108, this.a(var3, (byte) -105));
+              param0.writeByte(108, this.getEntityTypeCode(var3, (byte) -105));
               param0.writeByte(110, var3.objectId);
               param0.writeShort(var3.getX((byte) -112), (byte) -67);
               param0.writeShort(var3.getY(1829947600), (byte) -95);
@@ -138,23 +138,23 @@ final class ro extends GameWorld {
               var4_int = var4_int & 255 | (-16777216 & var4_int) >> 16;
               param0.writeShort(var4_int, (byte) -104);
             }
-            var3 = (SimEntity) (this.characters.b(6));
+            var3 = (SimEntity) (this.characters.previous(6));
           }
-          var3_ref = (ce) (this.field_s.c(102));
+          var3_ref = (ce) (this.field_s.last(102));
           while (var3_ref != null) {
             param0.writeByte(-64, 5);
             param0.writeByte(112, var3_ref.field_q);
             param0.writeShort((var3_ref.field_m + ip.field_f) * 24, (byte) -69);
             param0.writeShort((ip.field_f + var3_ref.field_t) * 24, (byte) -54);
             param0.writeShort(var3_ref.field_s, (byte) -103);
-            var3_ref = (ce) (this.field_s.b(6));
+            var3_ref = (ce) (this.field_s.previous(6));
           }
-          var3_intLifetime1 = 11 + 16 * this.teamCount + (this.characters.a(0) + this.field_s.a(0) + this.field_A.a(0)) * 8;
+          var3_intLifetime1 = 11 + 16 * this.teamCount + (this.characters.size(0) + this.field_s.size(0) + this.field_A.size(0)) * 8;
           if (57 + var3_intLifetime1 > 2000) {
             param0.writeByte(117, 0);
             return;
           }
-          var4 = (bf) (this.field_A.c(59));
+          var4 = (bf) (this.field_A.last(59));
           if (param1 >= -107) {
             return;
           }
@@ -166,7 +166,7 @@ final class ro extends GameWorld {
             var5 = 0;
             var5 = var5 | var4.field_o << 30;
             param0.writeShort(var5, (byte) -105);
-            var4 = (bf) (this.field_A.b(6));
+            var4 = (bf) (this.field_A.previous(6));
           }
           param0.writeByte(-106, 0);
           return;
@@ -184,7 +184,7 @@ final class ro extends GameWorld {
         }
     }
 
-    private final int a(SimEntity param0, byte param1) {
+    private final int getEntityTypeCode(SimEntity param0, byte param1) {
         RuntimeException var3 = null;
         PacketBuffer var4 = null;
         int stackIn_5_0 = 0;
@@ -198,7 +198,7 @@ final class ro extends GameWorld {
         try {
           if (param1 >= -80) {
             var4 = (PacketBuffer) null;
-            this.a((PacketBuffer) null, (byte) 11);
+            this.writeWorldState((PacketBuffer) null, (byte) 11);
           }
           if (param0 instanceof SimZombie) {
             stackIn_12_0 = 1;
@@ -228,7 +228,7 @@ final class ro extends GameWorld {
         }
     }
 
-    final static int c(byte param0) {
+    final static int packChatFilterSettings(byte param0) {
         if (param0 < 116) {
           return 69;
         }

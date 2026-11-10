@@ -142,11 +142,11 @@ final class vi {
           stackIn_48_2 = param4;
           stackIn_48_3 = (2 + jk.field_f) * 2;
           stackIn_49_4 = (vc.field_d == param3);
-          stackIn_52_0 = (!((ScrollPane) (Object) stackIn_48_0).a(stackIn_48_1, stackIn_48_2, stackIn_48_3, stackIn_49_4, 4 * (2 + jk.field_f) * param0, param2 ^ -126)) ? 0 : 1;
+          stackIn_52_0 = (!((ScrollPane) (Object) stackIn_48_0).updateContentLayout(stackIn_48_1, stackIn_48_2, stackIn_48_3, stackIn_49_4, 4 * (2 + jk.field_f) * param0, param2 ^ -126)) ? 0 : 1;
           var9Lifetime1 = stackIn_52_0;
           var10 = param3.field_Gb.field_Cb;
           var11 = null;
-          var12 = (LobbyPlayer) (var10.c(124));
+          var12 = (LobbyPlayer) (var10.last(124));
           while (var12 != null) {
             var13 = 0;
             if (var12.field_Cb == null) {
@@ -252,7 +252,7 @@ final class vi {
               }
               var25_int = 0;
               if (null != JaggrabDownloader.field_c &&
-                hl.b(param2 ^ 45) &&
+                hl.isLocalPlayerGameHost(param2 ^ 45) &&
                 ~ContentTransitionDialog.field_sb != ~var12.field_ec) {
                 if (null != var12.field_Tb.field_wb) {
                   var26 = var12.field_Tb.e(param2 - 45) + 2 * nj.field_h;
@@ -298,7 +298,7 @@ final class vi {
               }
               var19 = var19 + jk.field_f;
             }
-            var23 = DraggableWidget.a((byte) -61, var12.field_Fb, var20);
+            var23 = DraggableWidget.formatPresenceMessage((byte) -61, var12.field_Fb, var20);
             var24 = var23;
             var30 = var24;
             var25 = var30;
@@ -319,12 +319,12 @@ final class vi {
             if (var12.field_T != 0 &&
               !var12.c((byte) 15)) {
               if (var12.field_Tb.field_T != 0) {
-                UnitStateEvent.a(-21148, var12.field_ec, param1);
+                UnitStateEvent.sendPlayerIdCommand(-21148, var12.field_ec, param1);
               } else {
                 if (var12.field_cc.field_T == 0) {
                   WhirlpoolHasher.a(ChatMessage.field_t, param3, 0, 0, (byte) 81, vb.field_f, var12);
                 } else {
-                  cg.a(param1, -27404, var12.field_ec);
+                  cg.requestRemoveOrRejectPlayer(param1, -27404, var12.field_ec);
                 }
               }
             }
@@ -456,7 +456,7 @@ final class vi {
                   }
                 }
                 if (bf.field_n == param3 &&
-                  hl.b(0)) {
+                  hl.isLocalPlayerGameHost(0)) {
                   if (var26Lifetime1 != 0) {
                     var24Lifetime2 = var35 + "<br>" + RandomAccessCacheFile.field_b + (String) (var25);
                   } else {
@@ -470,7 +470,7 @@ final class vi {
                   }
                 }
                 if (bf.field_n == param3 &&
-                  !hl.b(0)) {
+                  !hl.isLocalPlayerGameHost(0)) {
                   var27 = JaggrabDownloader.field_c.field_Nb;
                   var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + vl.a(mj.field_Ob, new String[]{var27}, param2 - 43);
                 }
@@ -478,7 +478,7 @@ final class vi {
               }
             }
             var11 = var12;
-            var12 = (LobbyPlayer) (var10.b(6));
+            var12 = (LobbyPlayer) (var10.previous(6));
           }
           if (param2 != 45) {
             var32 = (ScrollPane) null;
@@ -505,7 +505,7 @@ final class vi {
           return;
         }
         try {
-          var3.b((byte) -35, param0);
+          var3.writeCipheredOpcode((byte) -35, param0);
           var3.writeByte(119, param1.field_i);
           var3.writeByte(-21, param1.field_p);
         } catch (RuntimeException runtimeException) {

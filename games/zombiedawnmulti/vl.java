@@ -50,7 +50,7 @@ final class vl extends IntrusiveNode {
                 break;
               }
               var7_ref_String = param0.substring(2 + var6_int, var5);
-              if (!UnitView.a((byte) 87, (CharSequence) ((Object) var7_ref_String))) {
+              if (!UnitView.isValidNameText((byte) 87, (CharSequence) ((Object) var7_ref_String))) {
                 continue;
               }
               if (var5 >= var3_int) {
@@ -60,7 +60,7 @@ final class vl extends IntrusiveNode {
                 continue;
               }
               var5++;
-              var8 = TriangleMesh.a((CharSequence) ((Object) var7_ref_String), -9159);
+              var8 = TriangleMesh.parseDecimalInt((CharSequence) ((Object) var7_ref_String), -9159);
               var4 = var4 + (var6_int - (var5 - param1[var8].length()));
               continue;
             }
@@ -87,7 +87,7 @@ final class vl extends IntrusiveNode {
               break;
             }
             var9 = param0.substring(var8Lifetime1 + 2, var5Lifetime1);
-            if (!UnitView.a((byte) 74, (CharSequence) ((Object) var9))) {
+            if (!UnitView.isValidNameText((byte) 74, (CharSequence) ((Object) var9))) {
               continue;
             }
             if (var5Lifetime1 >= var3_int) {
@@ -97,7 +97,7 @@ final class vl extends IntrusiveNode {
               continue;
             }
             var5Lifetime1++;
-            var10 = TriangleMesh.a((CharSequence) ((Object) var9), param2 ^ -9157);
+            var10 = TriangleMesh.parseDecimalInt((CharSequence) ((Object) var9), param2 ^ -9157);
             discarded$1 = var6.append(param0.substring(var7, var8Lifetime1));
             var7 = var5Lifetime1;
             discarded$2 = var6.append(param1[var10]);

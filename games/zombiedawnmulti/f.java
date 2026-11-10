@@ -147,7 +147,7 @@ final class f {
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-              MouseInputHandler.a("MGR1: " + param3, (Throwable) null, false);
+              MouseInputHandler.reportClientError("MGR1: " + param3, (Throwable) null, false);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

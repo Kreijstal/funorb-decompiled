@@ -12,17 +12,17 @@ class TertiaryLinkNode extends DualLinkNode {
 
     final static void f(int param0) {
         int var2 = 0;
-        int var1 = bl.c(-42);
+        int var1 = bl.getMenuWidth(-42);
         int var2Lifetime1;
         if (param0 == -4604) {
-          var2 = ii.b((byte) -126);
-          qf.field_c.a(-ic.field_g + eb.field_M, IntrusiveDequeCursor.field_i - SecondaryNodeDeque.field_a, (SecondaryNodeDeque.field_a << 1) + var1, var2 + (ic.field_g << 1), 12018);
+          var2 = ii.getContextMenuHeight((byte) -126);
+          qf.field_c.drawFrame(-ic.field_g + eb.field_M, IntrusiveDequeCursor.field_i - SecondaryNodeDeque.field_a, (SecondaryNodeDeque.field_a << 1) + var1, var2 + (ic.field_g << 1), 12018);
           NodeHashTableIterator.b(-125);
           return;
         }
         field_t = (String) null;
-        var2Lifetime1 = ii.b((byte) -126);
-        qf.field_c.a(-ic.field_g + eb.field_M, IntrusiveDequeCursor.field_i - SecondaryNodeDeque.field_a, (SecondaryNodeDeque.field_a << 1) + var1, var2Lifetime1 + (ic.field_g << 1), 12018);
+        var2Lifetime1 = ii.getContextMenuHeight((byte) -126);
+        qf.field_c.drawFrame(-ic.field_g + eb.field_M, IntrusiveDequeCursor.field_i - SecondaryNodeDeque.field_a, (SecondaryNodeDeque.field_a << 1) + var1, var2Lifetime1 + (ic.field_g << 1), 12018);
         NodeHashTableIterator.b(-125);
     }
 
@@ -55,7 +55,7 @@ class TertiaryLinkNode extends DualLinkNode {
           }
           return;
         }
-        MessageDialogContent.field_L.a(param0, (byte) 116);
+        MessageDialogContent.field_L.setMasterVolume(param0, (byte) 116);
         var2Lifetime1 = 8 % ((-28 - param1) / 48);
         if (ra.field_m != null) {
           ra.field_m.a(param0, 18813);
@@ -75,10 +75,10 @@ class TertiaryLinkNode extends DualLinkNode {
           if (param0 != 126) {
             TertiaryLinkNode.a(-116, -3);
           }
-          var4 = (vg) (GameApplet.field_i.c(param0 - 74));
+          var4 = (vg) (GameApplet.field_i.last(param0 - 74));
           while (var4 != null) {
             vi.a(param1, var4, (byte) -123);
-            var4 = (vg) (GameApplet.field_i.b(6));
+            var4 = (vg) (GameApplet.field_i.previous(6));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

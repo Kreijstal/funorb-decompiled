@@ -20,15 +20,15 @@ final class FightEvent extends GameEvent {
         SoftwareRasterizer.blurRectangle(4, 4, 0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
     }
 
-    final void a(byte param0) {
-        super.a((byte) -54);
+    final void removeFromQueue(byte param0) {
+        super.removeFromQueue((byte) -54);
         if (param0 > -47) {
           FightEvent.releaseStatics((byte) 116);
         }
-        MouseWheelInput.field_b.a((IntrusiveNode) (this), false);
+        MouseWheelInput.field_b.addFirst((IntrusiveNode) (this), false);
     }
 
-    final void a(int param0, GameScreen param1) {
+    final void apply(int param0, GameScreen param1) {
         if (param0 != 0) {
           return;
         }
@@ -44,14 +44,14 @@ final class FightEvent extends GameEvent {
         jh var7 = null;
         CipherPacketBuffer var4 = null;
         if (ao.field_e != param0) {
-          var6 = (jh) (af.field_h.a((long)ao.field_e, -22877));
+          var6 = (jh) (af.field_h.findByKey((long)ao.field_e, -22877));
           var7 = var6;
           if (var7 != null) {
             var7.field_bc = null;
           }
           ao.field_e = param0;
           var4 = ma.field_a;
-          var4.b((byte) -35, param1);
+          var4.writeCipheredOpcode((byte) -35, param1);
           var4.writeByte(-39, 3);
           var4.writeByte(125, 11);
           var4.writeShort(param0, (byte) -43);
@@ -72,7 +72,7 @@ final class FightEvent extends GameEvent {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        super.a(0, param2);
+        super.setTick(0, param2);
         this.field_q = param6;
         this.field_i = param3;
         this.field_o = param7;
@@ -92,7 +92,7 @@ final class FightEvent extends GameEvent {
         if (null == ki.field_e ||
           InfectionEvent.field_p != 13) {
           if (HotspotTextWidget.field_N) {
-            if (!uk.a((byte) -120)) {
+            if (!uk.canSendChat((byte) -120)) {
               return false;
             }
             var4 = WhirlpoolHasher.a(param3, 60, param0) ? 1 : 0;
@@ -102,7 +102,7 @@ final class FightEvent extends GameEvent {
               HotspotTextWidget.field_N = false;
             }
             if (InfectionEvent.field_p == 13) {
-              pf.a(-77);
+              pf.clearChatInput(-77);
               var4 = 1;
               HotspotTextWidget.field_N = false;
             }
@@ -113,13 +113,13 @@ final class FightEvent extends GameEvent {
             InfectionEvent.field_p != 10 &&
             11 != InfectionEvent.field_p) {
             if (InfectionEvent.field_p == 80 &&
-              uk.a((byte) -111)) {
+              uk.canSendChat((byte) -111)) {
               HotspotTextWidget.field_N = true;
               return true;
             }
             return false;
           }
-          return DiskCacheWorker.a(false, param0, param2);
+          return DiskCacheWorker.handleQuickChatKey(false, param0, param2);
         }
         ki.field_e = null;
         return true;
@@ -189,7 +189,7 @@ final class FightEvent extends GameEvent {
         return pg.field_d[var4];
     }
 
-    final void a(int param0, boolean param1, int param2, int param3) {
+    final void drawDebugOverlay(int param0, boolean param1, int param2, int param3) {
         if (!param1) {
           this.a(123, -52, -122, -36, 97, -37, 99, 33);
         }

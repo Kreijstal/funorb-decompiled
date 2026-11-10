@@ -345,9 +345,9 @@ final class NavigationGrid {
             for (var7 = 0; var7 < var6; var7++) {
               var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(-1478490344);
             }
-            var12 = (ra) (UnitStateEvent.field_j.c(param0 ^ 60));
+            var12 = (ra) (UnitStateEvent.field_j.last(param0 ^ 60));
             if (var12 == null) {
-              ak.a((byte) -111);
+              ak.closeGameSocket((byte) -111);
               return;
             }
             var12.field_h = var3;
@@ -356,20 +356,20 @@ final class NavigationGrid {
             return;
           }
           if (1 == var2) {
-            var13 = (MusicPatchNode) (QuickChatCategoryRegistry.field_a.c(param0 ^ 73));
+            var13 = (MusicPatchNode) (QuickChatCategoryRegistry.field_a.last(param0 ^ 73));
             if (var13 == null) {
-              ak.a((byte) -117);
+              ak.closeGameSocket((byte) -117);
               return;
             }
             var13.unlink(true);
           } else {
             if (var2 != 2) {
-              MouseInputHandler.a("A1: " + ci.a(0), (Throwable) null, false);
-              ak.a((byte) -118);
+              MouseInputHandler.reportClientError("A1: " + ci.a(0), (Throwable) null, false);
+              ak.closeGameSocket((byte) -118);
             } else {
-              var15 = (ra) (UnitStateEvent.field_j.c(param0 ^ 76));
+              var15 = (ra) (UnitStateEvent.field_j.last(param0 ^ 76));
               if (var15 == null) {
-                ak.a((byte) -128);
+                ak.closeGameSocket((byte) -128);
                 return;
               }
               var15.field_h = InflaterDecompressor.a(8);
@@ -607,7 +607,7 @@ final class NavigationGrid {
           this.field_p = new int[var8.length][var8[0].length];
           for (var3 = 0; var8.length > var3; var3++) {
             for (var4 = 0; var4 < var8[0].length; var4++) {
-              this.field_p[var3][var4] = ScrollPane.b(1, var8[var3][var4]) == 0 ? 33554432 : 0;
+              this.field_p[var3][var4] = ScrollPane.bitAnd(1, var8[var3][var4]) == 0 ? 33554432 : 0;
             }
           }
           this.field_k = new boolean[this.level.field_e][this.level.field_d];
@@ -690,7 +690,7 @@ final class NavigationGrid {
         }
         var9 = new Waypoint(param3, param1);
         var10 = new IntrusiveDeque();
-        var10.a(var9, false);
+        var10.addFirst(var9, false);
         var11 = this.a(var9, var8, (byte) -71);
         if (var11 >= 0) {
           return var10;
@@ -748,7 +748,7 @@ final class NavigationGrid {
           if (var15Lifetime2 == var24[var15Lifetime2]) {
             return null;
           }
-          var10.a(-25612, this.field_q[var15Lifetime2].copy(30544));
+          var10.addLast(-25612, this.field_q[var15Lifetime2].copy(30544));
           var15Lifetime2 = var24[var15Lifetime2];
         }
         return var10;
@@ -760,7 +760,7 @@ final class NavigationGrid {
           mj.field_Ib.resetSelection((byte) 123);
         }
         if (0 != va.field_a) {
-          pf.a(89);
+          pf.clearChatInput(89);
         }
         UnitView.field_Y = 0;
         if (param0 != 31706) {

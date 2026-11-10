@@ -77,9 +77,9 @@ final class PowerupBar {
           }
           this.field_m = this.field_m + 1;
           if (param1 != 255 &&
-            param1 < 19 && (!FullscreenFocusCanvas.field_k.a(45, -128) ||
+            param1 < 19 && (!FullscreenFocusCanvas.field_k.isUpgradeEquipped(45, -128) ||
             param1 == 17)) {
-            if (PortalView.i(51603) && (jk.a((byte) -73, param1) ||
+            if (PortalView.isGuestOrNonMember(51603) && (jk.a((byte) -73, param1) ||
               jk.a((byte) -122, param2))) {
               return false;
             }
@@ -225,7 +225,7 @@ final class PowerupBar {
               decompiledFrameRemainder0 = false;
             }
             else {
-              ii.a(param1, -1);
+              ii.sendZeroBytePacket(param1, -1);
             }
           }
           if (ArrayWidgetGroup.field_L.field_T != 0) {
@@ -542,7 +542,7 @@ final class PowerupBar {
             if (!FadingDialog.field_I) {
               return true;
             }
-            TranslatedUiText.a((byte) -86, var3_int);
+            TranslatedUiText.openPowerupInfoPage((byte) -86, var3_int);
             iq.a(var3_int, (byte) 99);
           } else {
             this.deselectActive(1);
@@ -646,7 +646,7 @@ final class PowerupBar {
                       param0 = -1;
                       param2 = var6_ref.objectId;
                     }
-                    ok.a(-101, param0, ma.field_a, PortalEntryEvent.field_m.currentTick, param2, this.field_l);
+                    ok.sendPowerupRequest(-101, param0, ma.field_a, PortalEntryEvent.field_m.currentTick, param2, this.field_l);
                     break regionExit1;
                   }
                   if (3 == var8) {
@@ -678,10 +678,10 @@ final class PowerupBar {
                   }
                   return;
                 }
-                ok.a(-117, param0, ma.field_a, PortalEntryEvent.field_m.currentTick, param2, this.field_l);
+                ok.sendPowerupRequest(-117, param0, ma.field_a, PortalEntryEvent.field_m.currentTick, param2, this.field_l);
                 break regionExit1;
               }
-              nn.a(ma.field_a, PortalEntryEvent.field_m.currentTick, this.field_l, (byte) 102);
+              nn.sendUntargetedPowerupRequest(ma.field_a, PortalEntryEvent.field_m.currentTick, this.field_l, (byte) 102);
             } else {
               MessageDialogContent.a(param1.objectId, -1, this.field_l, PortalEntryEvent.field_m.currentTick, ma.field_a);
             }

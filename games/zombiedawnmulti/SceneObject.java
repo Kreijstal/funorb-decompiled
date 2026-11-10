@@ -25,7 +25,7 @@ abstract class SceneObject extends TertiaryLinkNode {
           if (param0 != 20) {
             field_D = -84;
           }
-          var1 = fd.field_M.c(49);
+          var1 = fd.field_M.last(49);
           while (var1 instanceof wj) {
             var2 = var1.previous;
             if (((wj) (var1)).field_m.isSamplePositionOutOfRange()) {
@@ -33,7 +33,7 @@ abstract class SceneObject extends TertiaryLinkNode {
             }
             var1 = var2;
           }
-          var1 = qo.field_q.c(param0 ^ 68);
+          var1 = qo.field_q.last(param0 ^ 68);
           while (var1 instanceof wj) {
             var2Lifetime1 = var1.previous;
             if (((wj) (var1)).field_m.isSamplePositionOutOfRange()) {
@@ -41,7 +41,7 @@ abstract class SceneObject extends TertiaryLinkNode {
             }
             var1 = var2Lifetime1;
           }
-          var1 = jp.field_c.c(80);
+          var1 = jp.field_c.last(80);
           while (var1 instanceof wj) {
             var2Lifetime2 = var1.previous;
             if (((wj) (var1)).field_m.isSamplePositionOutOfRange()) {
@@ -51,7 +51,7 @@ abstract class SceneObject extends TertiaryLinkNode {
           }
           wp.b(127);
           if (null != td.field_b &&
-            !MessageDialogContent.field_L.c(-37)) {
+            !MessageDialogContent.field_L.hasMidiData(-37)) {
             fk.a(td.field_b, true);
             td.field_b = null;
             return;
@@ -115,7 +115,7 @@ abstract class SceneObject extends TertiaryLinkNode {
           try {
             for (var10_int = 0; var5_int > var10_int; var10_int++) {
               var11 = MouseInputHandler.field_c.getDefinition(param3[var10_int], -11452);
-              var6[var10_int] = var11.e(-18572);
+              var6[var10_int] = var11.getPreview(-18572);
               var9 = (char)(var9 + 1);
               var7[var10_int] = (char)var9;
               var8[var10_int] = null;

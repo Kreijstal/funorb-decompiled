@@ -178,7 +178,7 @@ final class ReportAbuseDialog extends UiComponent {
               var2_int = param1 - s.field_e.position;
             }
             ki.field_h.a(var2_int, s.field_e.position, s.field_e.payload, 120);
-            AlignedIconLabel.field_Gb = bl.a((byte) 80);
+            AlignedIconLabel.field_Gb = bl.monotonicMillis((byte) 80);
             s.field_e.position = s.field_e.position + var2_int;
             if (s.field_e.position < param1) {
               return false;
@@ -192,12 +192,12 @@ final class ReportAbuseDialog extends UiComponent {
               field_Gb = (String) null;
             }
             if (var2_int >= 0 &&
-              LinkButtonPainter.b((byte) -22) <= 30000L) {
+              LinkButtonPainter.millisSinceLastReceive((byte) -22) <= 30000L) {
               return false;
             }
-            ak.a((byte) -124);
+            ak.closeGameSocket((byte) -124);
           } catch (IOException iOException) {
-            ak.a((byte) -111);
+            ak.closeGameSocket((byte) -111);
           }
           return false;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -423,7 +423,7 @@ final class ReportAbuseDialog extends UiComponent {
               var19 = var20;
             }
             if (null != this.field_Hb) {
-              var20Lifetime2 = this.field_Hb.a((byte) 122, 4);
+              var20Lifetime2 = this.field_Hb.measureLabelWidth((byte) 122, 4);
               if (var19 < var20Lifetime2) {
                 var19 = var20Lifetime2;
               }
@@ -438,8 +438,8 @@ final class ReportAbuseDialog extends UiComponent {
             this.field_Sb.setBounds(jk.field_f, var21, 0, 0, -3344);
             var21 = var21 + (10 + jk.field_f);
             if (null != this.field_Hb) {
-              var20Lifetime3 = this.field_Hb.a((byte) 102, 4);
-              this.field_Hb.a(var21, (byte) -96, 4, var20Lifetime3, 13 + (-var20Lifetime3 + var19) / 2, jk.field_f);
+              var20Lifetime3 = this.field_Hb.measureLabelWidth((byte) 102, 4);
+              this.field_Hb.setIconLabelBounds(var21, (byte) -96, 4, var20Lifetime3, 13 + (-var20Lifetime3 + var19) / 2, jk.field_f);
               var21 = var21 + (10 + jk.field_f);
             }
             var28[0].setBounds(var17Lifetime5, var21, var16Lifetime2, 13, -3344);
@@ -447,11 +447,11 @@ final class ReportAbuseDialog extends UiComponent {
             var28[2].setBounds(var17Lifetime5, var21, var16Lifetime2, 2 * var16Lifetime2 + 13 + 26, -3344);
             var22 = var21;
             this.field_Rb.setBounds(var22 + var17Lifetime5 + 10, 24, 13 + (var19 + 13), 0, -3344);
-            this.field_Rb.field_ab = tg.a(2105376, this.field_Rb.field_z, 8421504, 3, 11579568, 30);
+            this.field_Rb.field_ab = tg.createGradientFrameSprites(2105376, this.field_Rb.field_z, 8421504, 3, 11579568, 30);
             var23 = 13 + (13 + var19);
             var24 = var22 + 24 + var17Lifetime5 + 10;
             var25 = MatchingTextValidator.a(param0, (byte) 109, var23, param2);
-            var26 = IntrusiveNode.a(true, param1, param3, var24);
+            var26 = IntrusiveNode.placePopupVertically(true, param1, param3, var24);
             this.setBounds(var24, var26, var23, var25, -3344);
             return;
           }
@@ -465,11 +465,11 @@ final class ReportAbuseDialog extends UiComponent {
           this.field_Vb.setBounds(var17Lifetime1 * jk.field_f, var16Lifetime1, var15_int, 13, -3344);
           var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * jk.field_f;
           this.field_Rb.setBounds(10 + var16Lifetime1, 24, 13 + (var15_int + 13), 0, -3344);
-          this.field_Rb.field_ab = tg.a(2105376, this.field_Rb.field_z, 8421504, 3, 11579568, 92);
+          this.field_Rb.field_ab = tg.createGradientFrameSprites(2105376, this.field_Rb.field_z, 8421504, 3, 11579568, 92);
           var18Lifetime1 = 13 - (-var15_int - 13);
           var19Lifetime1 = 34 + var16Lifetime1;
           var20Lifetime1 = MatchingTextValidator.a(param0, (byte) 25, var18Lifetime1, param2);
-          var21Lifetime1 = IntrusiveNode.a(true, param1, param3, var19Lifetime1);
+          var21Lifetime1 = IntrusiveNode.placePopupVertically(true, param1, param3, var19Lifetime1);
           this.setBounds(var19Lifetime1, var21Lifetime1, var18Lifetime1, var20Lifetime1, -3344);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

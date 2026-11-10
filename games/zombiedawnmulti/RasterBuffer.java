@@ -30,12 +30,12 @@ abstract class RasterBuffer {
     final static hf a(byte param0) {
         String var1 = null;
         if (param0 == -118) {
-          var1 = s.a((byte) 32);
+          var1 = s.getStatusMessage((byte) 32);
           if (var1 != null &&
             var1.indexOf('@') >= 0) {
             var1 = "";
           }
-          return new hf(s.a((byte) 32), bg.a(2));
+          return new hf(s.getStatusMessage((byte) 32), bg.isNameCheckPending(2));
         }
         return (hf) null;
     }
@@ -53,11 +53,11 @@ abstract class RasterBuffer {
 
     final static void a(int param0, byte param1) {
         CipherPacketBuffer var2 = ma.field_a;
-        var2.b((byte) -35, param0);
+        var2.writeCipheredOpcode((byte) -35, param0);
         var2.writeByte(-65, 2);
         if (param1 < -43) {
           var2.writeByte(109, 4);
-          var2.writeByte(-119, ro.c((byte) 126));
+          var2.writeByte(-119, ro.packChatFilterSettings((byte) 126));
           return;
         }
     }

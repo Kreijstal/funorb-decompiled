@@ -10,14 +10,14 @@ final class uk extends ButtonWidget {
     static boolean field_O;
     static boolean field_N;
 
-    final static void a(byte param0, vl param1, int param2) {
+    final static void sendListRequest(byte param0, vl param1, int param2) {
         CipherPacketBuffer var3 = null;
         try {
           if (param0 != 127) {
             field_M = (ChatMessage[]) null;
           }
           var3 = ma.field_a;
-          var3.b((byte) -35, param2);
+          var3.writeCipheredOpcode((byte) -35, param2);
           var3.writeByte(param0 ^ -41, param1.field_g);
           var3.writeShort(param1.field_i, (byte) -92);
         } catch (RuntimeException runtimeException) {
@@ -182,9 +182,9 @@ final class uk extends ButtonWidget {
         field_M = null;
     }
 
-    final static boolean a(byte param0) {
+    final static boolean canSendChat(byte param0) {
         if (param0 >= -36) {
-          uk.a((byte) 99);
+          uk.canSendChat((byte) 99);
           return !SimPortal.field_L ? true : false;
         }
         return !SimPortal.field_L ? true : false;

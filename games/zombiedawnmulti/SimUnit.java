@@ -790,7 +790,7 @@ abstract class SimUnit extends SimEntity {
         return true;
     }
 
-    final static TextWidgetPainter g(byte param0) {
+    final static TextWidgetPainter getDefaultTextPainter(byte param0) {
         int var1 = 0;
         int var1Lifetime1;
         if (hj.field_d != null) {
@@ -806,7 +806,7 @@ abstract class SimUnit extends SimEntity {
         super(param0, param1, param2);
         this.state = this instanceof SimHuman ? 0 : 4;
         this.field_X = false;
-        hp.a((byte) 105, g.field_a, 2);
+        hp.nextBoundedInt((byte) 105, g.field_a, 2);
         this.animationFrame = 0;
         this.removed = false;
         this.speedEffectTicks = 400;

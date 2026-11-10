@@ -39,11 +39,11 @@ final class eo {
               return false;
             }
           } else {
-            if (!pd.a(InflaterDecompressor.field_c, v.field_a, 2)) {
+            if (!pd.isOnlineFriendOrLobbyPlayer(InflaterDecompressor.field_c, v.field_a, 2)) {
               return false;
             }
             if (NavigationGrid.field_n == 2) {
-              if (ob.d((byte) 88)) {
+              if (ob.tryAcquireChatSendPermit((byte) 88)) {
                 var4 = (String) null;
                 GameWorld.a(StateIconLabel.field_Gb, v.field_a, param0, (String) null, NavigationGrid.field_n, 29602);
               }
@@ -54,12 +54,12 @@ final class eo {
             }
           }
         } else {
-          if (tn.a(SectorCacheStore.field_f, QuickChatMenu.field_Kb, (byte) -81, en.field_c, GradientOutlineTextPainter.field_t)) {
+          if (tn.canMessage(SectorCacheStore.field_f, QuickChatMenu.field_Kb, (byte) -81, en.field_c, GradientOutlineTextPainter.field_t)) {
             if (en.field_c == 2) {
-              return na.a(GradientOutlineTextPainter.field_t, (byte) -46, SectorCacheStore.field_f, QuickChatMenu.field_Kb, en.field_c);
+              return na.beginPrivateQuickChat(GradientOutlineTextPainter.field_t, (byte) -46, SectorCacheStore.field_f, QuickChatMenu.field_Kb, en.field_c);
             }
             if (var3 == 0) {
-              return na.a(GradientOutlineTextPainter.field_t, (byte) -46, SectorCacheStore.field_f, QuickChatMenu.field_Kb, en.field_c);
+              return na.beginPrivateQuickChat(GradientOutlineTextPainter.field_t, (byte) -46, SectorCacheStore.field_f, QuickChatMenu.field_Kb, en.field_c);
             }
             return false;
           }
@@ -81,7 +81,7 @@ final class eo {
             return false;
           }
           if (NavigationGrid.field_n == 2 &&
-            !pd.a(InflaterDecompressor.field_c, v.field_a, 2)) {
+            !pd.isOnlineFriendOrLobbyPlayer(InflaterDecompressor.field_c, v.field_a, 2)) {
             return false;
           }
           if (NavigationGrid.field_n != 2 &&
@@ -89,7 +89,7 @@ final class eo {
             return false;
           }
         }
-        if (ob.d((byte) 88)) {
+        if (ob.tryAcquireChatSendPermit((byte) 88)) {
           var4Lifetime1 = (String) null;
           GameWorld.a(StateIconLabel.field_Gb, v.field_a, param0, (String) null, NavigationGrid.field_n, 29602);
         }

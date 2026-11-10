@@ -36,7 +36,7 @@ final class jp {
             var2 = bc.field_d;
           }
           if (va.field_a == 2 &&
-            !QuickChatPhraseDefinition.d((byte) -20)) {
+            !QuickChatPhraseDefinition.isPrivateRecipientReachable((byte) -20)) {
             if (!kj.a((byte) -94, ql.field_a)) {
               var2 = vl.a(ProgressDialog.field_jb, new String[]{qf.field_g}, 2);
               if (var10 != 0) {
@@ -47,7 +47,7 @@ final class jp {
             }
             if (ee.field_b) {
               vm.a((String) null, 0, (String) null, (String) (var2), 2, 0);
-              ub.n(33423425);
+              ub.closeChatInputIfOpen(33423425);
             }
           }
           if (var2 == null &&
@@ -95,7 +95,7 @@ final class jp {
                   }
                 }
               }
-              if (!DualLinkDeque.b(param0 + 104)) {
+              if (!DualLinkDeque.isChatOverlayOpen(param0 + 104)) {
                 stackIn_67_0 = "<img=3>: ";
               } else {
                 stackIn_67_0 = ": ";
@@ -114,7 +114,7 @@ final class jp {
                 var5 = "";
               }
               var9 = w.field_A.textWidth(var4);
-              if (!DualLinkDeque.b(0)) {
+              if (!DualLinkDeque.isChatOverlayOpen(0)) {
                 if (ec.field_b.field_L &&
                   var9 > (-ec.field_b.field_w + MouseInputHandler.field_g)) {
                   if (nh.field_m) {

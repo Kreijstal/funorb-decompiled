@@ -37,7 +37,7 @@ final class ib implements WidgetPainter {
         try {
           var6_int = param4.field_y + param3;
           var7 = param4.field_i + param1;
-          ng.a(1, var6_int, param4.field_n, var7, param4.field_w);
+          ng.drawInsetFieldBorder(1, var6_int, param4.field_n, var7, param4.field_w);
           if (param2 != -15112) {
             return;
           }
@@ -49,7 +49,7 @@ final class ib implements WidgetPainter {
           if (!param4.hasKeyboardFocus(124)) {
             return;
           }
-          hl.a(2 + var7, 2 + var6_int, (byte) 111, param4.field_n - 4, param4.field_w - 4);
+          hl.drawDottedRectangle(2 + var7, 2 + var6_int, (byte) 111, param4.field_n - 4, param4.field_w - 4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -101,7 +101,7 @@ final class ib implements WidgetPainter {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 112) {
-            stackIn_4_0 = AccountCreationDialog.a(PcmSampleStream.createAtRatePercent(param1, 100, 96), (byte) -98);
+            stackIn_4_0 = AccountCreationDialog.playStream(PcmSampleStream.createAtRatePercent(param1, 100, 96), (byte) -98);
             return stackIn_4_0;
           }
           stackIn_2_0 = (we) null;

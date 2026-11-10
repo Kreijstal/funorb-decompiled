@@ -27,7 +27,7 @@ final class ha extends IntrusiveNode {
         }
     }
 
-    final static ob b(boolean param0) {
+    final static ob findFirstActiveDefinition(boolean param0) {
         int var1_int = 0;
         ob stackIn_2_0 = null;
         QuickChatCategoryRegistry stackIn_5_0 = null;

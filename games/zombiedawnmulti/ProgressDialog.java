@@ -49,7 +49,7 @@ final class ProgressDialog extends ResizableDialog {
           this.field_kb = false;
           this.field_qb.field_L = true;
           this.field_nb = false;
-          this.b((byte) 107, this.field_qb);
+          this.addChild((byte) 107, this.field_qb);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ta.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -99,7 +99,7 @@ final class ProgressDialog extends ResizableDialog {
         }
     }
 
-    final static void b(byte param0, String param1) {
+    final static void receiveCountryList(byte param0, String param1) {
         try {
           int var2_int = 34 / ((param0 + 20) / 42);
         } catch (RuntimeException runtimeException) {

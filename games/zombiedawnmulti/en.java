@@ -86,7 +86,7 @@ final class en extends IOException {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 50) {
-            stackIn_4_0 = (LobbyPlayer) (TextWidgetPainter.field_c.a(param1, -22877));
+            stackIn_4_0 = (LobbyPlayer) (TextWidgetPainter.field_c.findByKey(param1, -22877));
             return stackIn_4_0;
           }
           stackIn_2_0 = (LobbyPlayer) null;

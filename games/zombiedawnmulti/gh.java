@@ -11,7 +11,7 @@ final class gh {
     String[] field_b;
     String field_h;
 
-    final static boolean a(int param0) {
+    final static boolean isLoggedInWithAccount(int param0) {
         boolean stackIn_7_0 = false;
         if (param0 < 48) {
           return true;
@@ -20,7 +20,7 @@ final class gh {
         return stackIn_7_0;
     }
 
-    final static void a(TriangleMesh param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void drawLitMeshFaces(TriangleMesh param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7) {
         int stackIn_18_0 = 0;
         int[] stackIn_20_0 = null;
         int stackIn_21_1 = 0;
@@ -84,12 +84,12 @@ final class gh {
           if (var44.field_z != null &&
             var44.field_m > 1) {
             var60 = var44.field_z;
-            si.a(0, 255, var60, nn.field_c, 0);
+            si.groupFaceBucketsByPriority(0, 255, var60, nn.field_c, 0);
           } else {
             pn.b(8);
           }
           if (param2 < 44) {
-            gh.a(-93);
+            gh.isLoggedInWithAccount(-93);
           }
           var54 = new int[param0.field_o];
           var49 = var54;
@@ -219,16 +219,16 @@ final class gh {
         }
     }
 
-    final static double a(double param0, byte param1) {
+    final static double sinLookup(double param0, byte param1) {
         if (param1 <= 4) {
           field_a = -9;
         }
         return TranslatedUiText.field_a[(int)(32768.0 * param0 / 3.141592653589793) & 65535];
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean hasTutorialEventOccurred(int param0, int param1) {
         if (param1 != 11653) {
-          gh.a(-108, 3);
+          gh.hasTutorialEventOccurred(-108, 3);
         }
         return 0 != (w.field_m & 1 << -param0) ? true : false;
     }

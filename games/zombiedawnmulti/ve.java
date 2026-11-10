@@ -69,7 +69,7 @@ final class ve {
           int[] var3 = (int[]) null;
           ve.a(-109L, -96, (String) null, (ScrollPane) null, (String) null, (UiComponent) null, 73, (int[]) null, 6);
         }
-        return (double)hp.a((byte) 115, this.field_l, 1000) / 1000.0;
+        return (double)hp.nextBoundedInt((byte) 115, this.field_l, 1000) / 1000.0;
     }
 
     private final void a(boolean param0, int param1, int param2, double param3, int param4, int param5, int param6, byte param7, int param8) {
@@ -82,9 +82,9 @@ final class ve {
         var16 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param8 <= 5 &&
           param2 >= 1) {
-          var11 = param6 + (int)(Camera.a(0, param3) * (double)param2);
-          var12 = param4 + (int)((double)param2 * gh.a(param3, (byte) 19));
-          var13 = hp.a((byte) -86, this.field_l, (int)(2.0 * this.field_g));
+          var11 = param6 + (int)(Camera.fastSine(0, param3) * (double)param2);
+          var12 = param4 + (int)((double)param2 * gh.sinLookup(param3, (byte) 19));
+          var13 = hp.nextBoundedInt((byte) -86, this.field_l, (int)(2.0 * this.field_g));
           var14 = param2 * 126 / this.field_i + 60;
           if (param0) {
             SoftwareRasterizer.fillRadialGlow(var11 << 4, var12 << 4, param2 << 4, var14, this.field_c);

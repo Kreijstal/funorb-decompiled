@@ -23,7 +23,7 @@ final class s {
         field_h = null;
     }
 
-    final static TriangleMesh a(CipherPacketBuffer param0, byte param1) {
+    final static TriangleMesh decodeMesh(CipherPacketBuffer param0, byte param1) {
         int var8 = 0;
         TriangleMesh stackIn_21_0 = null;
         RuntimeException stackIn_24_0 = null;
@@ -106,7 +106,7 @@ final class s {
         }
     }
 
-    final static void a(int param0, int param1, Sprite[] param2, int param3, int param4, int param5) {
+    final static void drawNineSliceFrame(int param0, int param1, Sprite[] param2, int param3, int param4, int param5) {
         int var21 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
@@ -269,7 +269,7 @@ final class s {
         }
     }
 
-    final static String a(byte param0) {
+    final static String getStatusMessage(byte param0) {
         if (BirthDateValidator.field_k == SceneObject.field_B) {
           return IntrusiveDequeCursor.field_j;
         }
@@ -279,13 +279,13 @@ final class s {
         if (BirthDateValidator.field_k == ProgressDialog.field_hb) {
           return ih.field_a;
         }
-        if (!tg.field_g.d(-107)) {
+        if (!tg.field_g.isFlagAssigned(-107)) {
           return ih.field_a;
         }
         return ReportAbuseDialog.field_Ib;
     }
 
-    final static void a(int param0, byte param1, int param2) {
+    final static void ensureRankingArrays(int param0, byte param1, int param2) {
         int var3;
         if (ChatMessage.field_f == null ||
           !(ChatMessage.field_f.length >= param0)) {

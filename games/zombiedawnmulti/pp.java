@@ -16,7 +16,7 @@ class pp extends ic {
         }
     }
 
-    pi b(int param0) {
+    pi getCredentialKind(int param0) {
         if (param0 != 7) {
           field_o = (String) null;
           return ArrayWidgetGroup.field_G;
@@ -33,11 +33,11 @@ class pp extends ic {
         }
     }
 
-    final void a(PacketBuffer param0, int param1) {
+    final void writeTo(PacketBuffer param0, int param1) {
         try {
           param0.a(this.field_p, true);
           if (param1 != -1) {
-            this.b(-111);
+            this.getCredentialKind(-111);
           }
           param0.a(13066, this.field_m);
         } catch (RuntimeException runtimeException) {

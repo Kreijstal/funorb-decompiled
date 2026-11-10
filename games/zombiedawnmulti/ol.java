@@ -9,7 +9,7 @@ final class ol extends MenuScreen {
     static int field_p;
     static String field_l;
 
-    final void e(int param0) {
+    final void resetToFirstPage(int param0) {
         this.field_g.field_d = 2;
         this.field_m = 0;
         if (param0 < 26) {
@@ -22,7 +22,7 @@ final class ol extends MenuScreen {
         this.field_m = 0;
     }
 
-    final boolean c(int param0, int param1) {
+    final boolean isItemEnabled(int param0, int param1) {
         boolean stackIn_10_0 = false;
         if (param1 != 16777215) {
           this.field_m = -35;
@@ -42,14 +42,14 @@ final class ol extends MenuScreen {
         int var1 = 11 % ((58 - param0) / 35);
     }
 
-    final int d(int param0, int param1) {
+    final int getItemRight(int param0, int param1) {
         if (param0 > -65) {
           return -64;
         }
-        return 180 + this.a((byte) -118, param1);
+        return 180 + this.getItemX((byte) -118, param1);
     }
 
-    final void c(boolean param0) {
+    final void handleNavigationKeys(boolean param0) {
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int var2;
@@ -60,61 +60,61 @@ final class ol extends MenuScreen {
         var3 = stackIn_6_0;
         if (var2 == 0 &&
           var3 == 0) {
-          this.field_g.a(1, param0);
+          this.field_g.handleHorizontalNavigation(1, param0);
           return;
         }
         if (InfectionEvent.field_p == 96) {
-          this.field_g.a(1, false);
+          this.field_g.handleHorizontalNavigation(1, false);
           if (var2 != 0) {
             if (this.field_g.field_d == 0) {
-              this.field_g.a(1, false);
+              this.field_g.handleHorizontalNavigation(1, false);
               if (ZombieDawnMulti.field_E &&
                 var3 != 0 &&
                 this.field_g.field_d == 2) {
-                this.field_g.a(1, false);
+                this.field_g.handleHorizontalNavigation(1, false);
               }
             } else {
               if (var3 != 0 &&
                 this.field_g.field_d == 2) {
-                this.field_g.a(1, false);
+                this.field_g.handleHorizontalNavigation(1, false);
               }
             }
           } else {
             if (var3 != 0 &&
               this.field_g.field_d == 2) {
-              this.field_g.a(1, false);
+              this.field_g.handleHorizontalNavigation(1, false);
             }
           }
         } else {
           if (97 != InfectionEvent.field_p) {
-            this.field_g.a(1, param0);
+            this.field_g.handleHorizontalNavigation(1, param0);
           } else {
-            this.field_g.a(1, false);
+            this.field_g.handleHorizontalNavigation(1, false);
             if (var2 != 0) {
               if (this.field_g.field_d == 0) {
-                this.field_g.a(1, false);
+                this.field_g.handleHorizontalNavigation(1, false);
                 if (ZombieDawnMulti.field_E &&
                   var3 != 0 &&
                   this.field_g.field_d == 2) {
-                  this.field_g.a(1, false);
+                  this.field_g.handleHorizontalNavigation(1, false);
                 }
               } else {
                 if (var3 != 0 &&
                   this.field_g.field_d == 2) {
-                  this.field_g.a(1, false);
+                  this.field_g.handleHorizontalNavigation(1, false);
                 }
               }
             } else {
               if (var3 != 0 &&
                 this.field_g.field_d == 2) {
-                this.field_g.a(1, false);
+                this.field_g.handleHorizontalNavigation(1, false);
               }
             }
           }
         }
     }
 
-    final void b(int param0, boolean param1) {
+    final void showNextPage(int param0, boolean param1) {
         int var3 = 0;
         this.field_m = this.field_m + 1;
         if (param0 != 1) {
@@ -124,12 +124,12 @@ final class ol extends MenuScreen {
           DisplayNamePanel.field_S.length == this.field_m) {
           var3 = InfectionEvent.field_p;
           InfectionEvent.field_p = 96;
-          this.field_g.a(1, false);
+          this.field_g.handleHorizontalNavigation(1, false);
           InfectionEvent.field_p = var3;
         }
     }
 
-    final void a(boolean param0) {
+    final void drawScreen(boolean param0) {
         int stackIn_3_0 = 0;
         BinaryBitmapFont stackIn_18_0;
         String stackIn_18_1;
@@ -161,7 +161,7 @@ final class ol extends MenuScreen {
         int var15;
         int var16;
         var16 = ZombieDawnMulti.field_E ? 1 : 0;
-        super.a(param0);
+        super.drawScreen(param0);
         var2 = 3 + (pb.field_e.maxAscent + pb.field_e.maxDescent);
         var3 = 600;
         var6 = 200;
@@ -374,22 +374,22 @@ final class ol extends MenuScreen {
         }
     }
 
-    final void a(boolean param0, byte param1) {
+    final void showPreviousPage(boolean param0, byte param1) {
         int var3 = 0;
         this.field_m = this.field_m - 1;
         if (!param0 &&
           this.field_m == 0) {
           var3 = InfectionEvent.field_p;
           InfectionEvent.field_p = 97;
-          this.field_g.a(1, false);
+          this.field_g.handleHorizontalNavigation(1, false);
           InfectionEvent.field_p = var3;
         }
         if (param1 > -110) {
-          this.a(false, (byte) -86);
+          this.showPreviousPage(false, (byte) -86);
         }
     }
 
-    final static boolean a(String param0, boolean param1) {
+    final static boolean containsNonAlphanumeric(String param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -410,7 +410,7 @@ final class ol extends MenuScreen {
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(var2_int < param0.length())))) {
             var3 = param0.charAt(var2_int);
-            stackOut_5_0 = EmailAvailabilityValidator.a(-24315, (char) var3);
+            stackOut_5_0 = EmailAvailabilityValidator.isAsciiLetter(-24315, (char) var3);
             stackIn_13_0 = stackOut_5_0;
             stackIn_6_0 = stackOut_5_0;
             if (var4 == 0) {

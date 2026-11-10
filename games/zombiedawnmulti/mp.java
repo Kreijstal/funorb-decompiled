@@ -8,7 +8,7 @@ abstract class mp {
     td[] field_e;
     static String field_d;
 
-    final int a(int param0, int param1) {
+    final int characterX(int param0, int param1) {
         td[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -52,7 +52,7 @@ abstract class mp {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void sendBirthDateSubmission(int param0, int param1, int param2, int param3) {
         int fieldTemp$0 = 0;
         int var4_int = 0;
         try {
@@ -64,7 +64,7 @@ abstract class mp {
           TextInputWidget.field_R.writeByte(-67, param1);
           TextInputWidget.field_R.writeShort(param3, (byte) -128);
           TextInputWidget.field_R.a(UsernameAvailabilityValidator.field_v, -2628, ButtonWidget.field_L);
-          ma.field_a.b((byte) -35, 18);
+          ma.field_a.writeCipheredOpcode((byte) -35, 18);
           fieldTemp$0 = ma.field_a.position + 1;
           ma.field_a.position = ma.field_a.position + 1;
           var4_int = fieldTemp$0;
@@ -75,13 +75,13 @@ abstract class mp {
         }
     }
 
-    final int a(byte param0) {
+    final int height(byte param0) {
         RuntimeException var2 = null;
         int stackIn_10_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -111) {
-            mp.a(68);
+            mp.releaseStatics(68);
           }
           if (this.field_e != null &&
             this.field_e.length > 0) {
@@ -97,7 +97,7 @@ abstract class mp {
         }
     }
 
-    final static ml a(int param0, boolean param1, byte param2) {
+    final static ml updateFriendListRows(int param0, boolean param1, byte param2) {
         ScrollPane stackIn_4_0;
         int stackIn_4_1;
         boolean stackIn_4_2;
@@ -138,7 +138,7 @@ abstract class mp {
           stackIn_4_3 = 2 + jk.field_f;
           stackIn_5_4 = (eg.field_B.field_Jb == vc.field_d);
           boolean decompiledFrameRemainder0 = true;
-          var3_int = ((ScrollPane) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_5_4, (jk.field_f * 3 + 6) * param0, -106) ? 1 : 0;
+          var3_int = ((ScrollPane) (Object) stackIn_4_0).updateContentLayout(stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_5_4, (jk.field_f * 3 + 6) * param0, -106) ? 1 : 0;
           var4 = eg.field_B.field_Ib.field_Cb;
           var5 = null;
           if (2 == SimZombie.field_zb) {
@@ -146,7 +146,7 @@ abstract class mp {
             dp.field_b.field_wb = vl.a(kg.field_m, new String[]{ProgressDialog.field_ob}, 2);
             eg.field_B.field_Jb.field_Jb.field_wb = null;
             var6 = null;
-            var7 = (ml) (var4.c(42));
+            var7 = (ml) (var4.last(42));
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (var7 == null))) {
               var8 = 0;
@@ -237,11 +237,11 @@ abstract class mp {
                       if (!SimPortal.field_L) {
                         var17 = pk.field_b;
                         var18 = vl.a(jk.field_i, new String[]{var16}, 2);
-                        var17.field_j.a((byte) -118, var18, 8);
+                        var17.field_j.addItem((byte) -118, var18, 8);
                       }
                       var17Lifetime1 = pk.field_b;
                       var18Lifetime1 = vl.a(field_c, new String[]{var16}, param2 ^ -117);
-                      var17Lifetime1.field_j.a((byte) -118, var18Lifetime1, 18);
+                      var17Lifetime1.field_j.addItem((byte) -118, var18Lifetime1, 18);
                     }
                     var5 = var7;
                   }
@@ -249,7 +249,7 @@ abstract class mp {
                   ui.field_j = var7.field_Kb;
                 }
                 var6 = var7;
-                var7 = (ml) (var4.b(6));
+                var7 = (ml) (var4.previous(6));
                 continue;
               }
               break;
@@ -276,10 +276,10 @@ abstract class mp {
             } else {
               eg.field_B.field_Jb.field_Jb.field_wb = hj.field_e;
             }
-            ob.a(eg.field_B.field_Ib, 41);
+            ob.resetChildBounds(eg.field_B.field_Ib, 41);
           }
           if (param2 != -119) {
-            mp.a(81, true, (byte) -50);
+            mp.updateFriendListRows(81, true, (byte) -50);
           }
           stackIn_101_0 = var5;
           return (ml) (stackIn_101_0);
@@ -290,7 +290,7 @@ abstract class mp {
         }
     }
 
-    final int a(String param0, int param1, int param2, int param3) {
+    final int justificationSpacing(String param0, int param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -357,7 +357,7 @@ abstract class mp {
         }
     }
 
-    final int a(byte param0, int param1) {
+    final int lineIndexForCharacter(byte param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         td var4 = null;
@@ -368,7 +368,7 @@ abstract class mp {
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param0 != -126) {
-            this.b(-6);
+            this.width(-6);
           }
           var3_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
@@ -397,7 +397,7 @@ abstract class mp {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_c = null;
         if (param0 != 12) {
@@ -411,7 +411,7 @@ abstract class mp {
         }
     }
 
-    final int b(int param0) {
+    final int width(int param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var7 = 0;
@@ -433,7 +433,7 @@ abstract class mp {
             while (var3.length > var4) {
               var5 = var3[var4];
               if (null != var5) {
-                var6 = var5.a(-27328);
+                var6 = var5.width(-27328);
                 if (var6 > var2_int) {
                   var2_int = var6;
                 }
@@ -454,7 +454,7 @@ abstract class mp {
         }
     }
 
-    final int a(int param0, byte param1, int param2) {
+    final int characterIndexAt(int param0, byte param1, int param2) {
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_15_0 = 0;
@@ -483,7 +483,7 @@ abstract class mp {
               return stackIn_15_0;
             }
             if (1 == this.field_e.length) {
-              stackIn_20_0 = this.field_e[0].a(false, param0);
+              stackIn_20_0 = this.field_e[0].characterIndexAtX(false, param0);
               return stackIn_20_0;
             }
             var4_int = 0;
@@ -495,7 +495,7 @@ abstract class mp {
               if (var8 == 0) {
                 if (stackIn_39_0 >= var6.field_d &&
                   param2 <= var6.field_h) {
-                  var7 = var6.a(false, param0);
+                  var7 = var6.characterIndexAtX(false, param0);
                   if (-1 == var7) {
                     stackIn_34_0 = -1;
                     return stackIn_34_0;

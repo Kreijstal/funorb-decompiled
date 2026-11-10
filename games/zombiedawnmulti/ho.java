@@ -11,7 +11,7 @@ final class ho extends MenuScreen {
     static int field_l;
     static int field_s;
 
-    final int a(byte param0, int param1) {
+    final int getItemX(byte param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -28,7 +28,7 @@ final class ho extends MenuScreen {
         }
     }
 
-    final static void a(byte param0, NavigationGrid param1) {
+    final static void prepareLevelMarkers(byte param0, NavigationGrid param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -38,7 +38,7 @@ final class ho extends MenuScreen {
           oq.field_u = param1.level.field_k;
           SocketConnector.a(-91);
           if (param0 >= -121) {
-            ho.e(-95);
+            ho.releaseStatics(-95);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -55,7 +55,7 @@ final class ho extends MenuScreen {
         }
     }
 
-    final static void a(TriangleMesh param0, int param1, int param2, boolean param3, int param4) {
+    final static void sortMeshFacesByDepth(TriangleMesh param0, int param1, int param2, boolean param3, int param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_13_0 = false;
         int stackIn_30_0 = 0;
@@ -92,7 +92,7 @@ final class ho extends MenuScreen {
         int var13Lifetime1;
         var19 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var5_int = mb.a((byte) -31, 3 * (-param2 + param1));
+          var5_int = mb.bitLength((byte) -31, 3 * (-param2 + param1));
           var6 = 3 * param2;
           dd.a((byte) 8);
           var7 = var5_int - 10;
@@ -204,7 +204,7 @@ final class ho extends MenuScreen {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -220,7 +220,7 @@ final class ho extends MenuScreen {
         }
     }
 
-    final static int a(CharSequence param0, int param1, int param2) {
+    final static int parseInteger(CharSequence param0, int param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -231,7 +231,7 @@ final class ho extends MenuScreen {
           if (param2 != 3) {
             field_p = (String) null;
           }
-          stackIn_4_0 = TriangleMesh.a(param0, param1, -105, true);
+          stackIn_4_0 = TriangleMesh.parseInteger(param0, param1, -105, true);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -247,7 +247,7 @@ final class ho extends MenuScreen {
         }
     }
 
-    final static boolean a(java.applet.Applet param0, int param1) {
+    final static boolean hasTuhstatbutCookie(java.applet.Applet param0, int param1) {
         try {
           String var2 = null;
           RuntimeException var2_ref = null;
@@ -273,9 +273,9 @@ final class ho extends MenuScreen {
               var2 = "tuhstatbut";
               var3 = (String) (JavaScriptBridge.callJavaScript(param0, 13093, "getcookies"));
               if (param1 != 61) {
-                ho.a(122, 9, (byte[]) null, 88);
+                ho.computeWhirlpoolDigest(122, 9, (byte[]) null, 88);
               }
-              var4 = WidgetStyleLayer.a(';', false, var3);
+              var4 = WidgetStyleLayer.splitAtCharacter(';', false, var3);
               var5 = 0;
               while (var4.length > var5) {
                 var6 = var4[var5].indexOf('=');
@@ -322,7 +322,7 @@ final class ho extends MenuScreen {
         }
     }
 
-    final static byte[] a(int param0, int param1, byte[] param2, int param3) {
+    final static byte[] computeWhirlpoolDigest(int param0, int param1, byte[] param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         int var5_int = 0;
@@ -381,26 +381,26 @@ final class ho extends MenuScreen {
         }
     }
 
-    final void a(boolean param0) {
+    final void drawScreen(boolean param0) {
         int var2_int = 0;
         try {
-          var2_int = (wn.a(-125, PowerupEvent.field_m << 3) * 24 >> 16) + (175 + (4 * on.a(PowerupEvent.field_m << 7, -18924) >> 16));
+          var2_int = (wn.a(-125, PowerupEvent.field_m << 3) * 24 >> 16) + (175 + (4 * on.sine(PowerupEvent.field_m << 7, -18924) >> 16));
           SoftwareRasterizer.fillRectAlpha(0, 0, 640, 480, 0, var2_int);
           SoftwareRasterizer.setClip(5, 5, 635, 475);
-          GameKeyHandler.a(6, 3 + this.field_n, 469, 640 + (-this.field_n - this.field_n), (byte) 122);
+          GameKeyHandler.drawBlurredBackdrop(6, 3 + this.field_n, 469, 640 + (-this.field_n - this.field_n), (byte) 122);
           SoftwareRasterizer.resetClip();
           vh.field_Lb.draw(this.field_n, 136);
           vh.field_Lb.draw(this.field_n, 6);
           LobbyPlayer.field_Wb.draw(640 - this.field_n, 6);
           LobbyPlayer.field_Wb.draw(-this.field_n + 640, 134);
           QuickChatHelpDialog.field_Jb.draw(0, 0);
-          super.a(param0);
+          super.drawScreen(param0);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ho.H(" + param0 + ')');
         }
     }
 
-    final void c(byte param0) {
+    final void measureItemWidths(byte param0) {
         int stackIn_12_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_29_0 = 0;
@@ -456,7 +456,7 @@ final class ho extends MenuScreen {
             stackIn_29_1 = 74;
           }
           if (stackIn_29_0 != stackIn_29_1) {
-            ho.$cfr$intArgs$a$b55aceaa55ac(-52, (NavigationGrid) null);
+            ho.prepareLevelMarkers(-52, (NavigationGrid) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -466,7 +466,7 @@ final class ho extends MenuScreen {
         }
     }
 
-    final int d(int param0, int param1) {
+    final int getItemRight(int param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -495,7 +495,7 @@ final class ho extends MenuScreen {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$b55aceaa55ac(int param0, NavigationGrid param1) {
+    final static void prepareLevelMarkers(int param0, NavigationGrid param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -505,7 +505,7 @@ final class ho extends MenuScreen {
           oq.field_u = param1.level.field_k;
           SocketConnector.a(-91);
           if (param0 >= -121) {
-            ho.e(-95);
+            ho.releaseStatics(-95);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -46,7 +46,7 @@ final class JaggrabDownloader implements Runnable {
         this.field_d = null;
     }
 
-    final synchronized boolean b(int param0) {
+    final synchronized boolean poll(int param0) {
         Throwable decompiledCaughtException = null;
         IOException var2 = null;
         OutputStream var3 = null;
@@ -57,7 +57,7 @@ final class JaggrabDownloader implements Runnable {
         }
         if (this.field_k == 0) {
           if (this.field_e == null) {
-            this.field_e = this.field_j.a((byte) -12, this.field_a);
+            this.field_e = this.field_j.requestUrlStream((byte) -12, this.field_a);
           }
           if (0 == this.field_e.field_f) {
             return false;
@@ -70,7 +70,7 @@ final class JaggrabDownloader implements Runnable {
         }
         if (this.field_k == 1) {
           if (this.field_b == null) {
-            this.field_b = this.field_j.a(this.field_a.getHost(), 443, (byte) -120);
+            this.field_b = this.field_j.requestSocket(this.field_a.getHost(), 443, (byte) -120);
           }
           if (this.field_b.field_f == 0) {
             return false;
@@ -86,7 +86,7 @@ final class JaggrabDownloader implements Runnable {
         }
         if (null != this.field_f) {
           if (null == this.field_d) {
-            this.field_d = this.field_j.a(117, (Runnable) (this), 5);
+            this.field_d = this.field_j.startThread(117, (Runnable) (this), 5);
           }
           if (0 == this.field_d.field_f) {
             return false;
@@ -118,7 +118,7 @@ final class JaggrabDownloader implements Runnable {
           this.finalize();
           this.field_k = this.field_k + 1;
           if (null == this.field_d) {
-            this.field_d = this.field_j.a(117, (Runnable) (this), 5);
+            this.field_d = this.field_j.startThread(117, (Runnable) (this), 5);
           }
           if (0 == this.field_d.field_f) {
             return false;
@@ -130,7 +130,7 @@ final class JaggrabDownloader implements Runnable {
           return false;
         }
         if (null == this.field_d) {
-          this.field_d = this.field_j.a(117, (Runnable) (this), 5);
+          this.field_d = this.field_j.startThread(117, (Runnable) (this), 5);
         }
         if (0 == this.field_d.field_f) {
           return false;
@@ -186,16 +186,16 @@ final class JaggrabDownloader implements Runnable {
         }
     }
 
-    final static void c(int param0) {
+    final static void consumeQueuedRequestReply(int param0) {
         vl var1 = null;
         CipherPacketBuffer var2 = null;
         vl var1Lifetime1;
         CipherPacketBuffer var2Lifetime1;
         if (param0 != 0) {
           field_l = (IntrusiveDeque) null;
-          var1 = (vl) (lf.field_e.c(param0 + 69));
+          var1 = (vl) (lf.field_e.last(param0 + 69));
           if (var1 == null) {
-            ak.a((byte) -112);
+            ak.closeGameSocket((byte) -112);
             return;
           }
           var2 = s.field_e;
@@ -206,9 +206,9 @@ final class JaggrabDownloader implements Runnable {
           var1.unlink(true);
           return;
         }
-        var1Lifetime1 = (vl) (lf.field_e.c(param0 + 69));
+        var1Lifetime1 = (vl) (lf.field_e.last(param0 + 69));
         if (var1Lifetime1 == null) {
-          ak.a((byte) -112);
+          ak.closeGameSocket((byte) -112);
           return;
         }
         var2Lifetime1 = s.field_e;
@@ -219,7 +219,7 @@ final class JaggrabDownloader implements Runnable {
         var1Lifetime1.unlink(true);
     }
 
-    final PacketBuffer a(byte param0) {
+    final PacketBuffer getResponse(byte param0) {
         if (param0 != 21) {
           field_i = (UiComponent) null;
           if (3 == this.field_k) {
@@ -236,7 +236,7 @@ final class JaggrabDownloader implements Runnable {
     public static void releaseStatics(int param0) {
         field_l = null;
         if (param0 != 17) {
-          JaggrabDownloader.c(29);
+          JaggrabDownloader.consumeQueuedRequestReply(29);
           field_c = null;
           field_i = null;
           return;

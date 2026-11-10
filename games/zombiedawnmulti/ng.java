@@ -10,17 +10,17 @@ abstract class ng {
     static String field_f;
     static int field_d;
 
-    final static UnitStateEvent a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        UnitStateEvent var9 = (UnitStateEvent) (fk.field_n.g(75));
+    final static UnitStateEvent createUnitStateEvent(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        UnitStateEvent var9 = (UnitStateEvent) (fk.field_n.removeLast(75));
         if (var9 == null) {
           var9 = new UnitStateEvent();
         }
-        var9.a(param3, param4, param5, param7, param6, param8, param0, false, param2);
+        var9.initialize(param3, param4, param5, param7, param6, param8, param0, false, param2);
         int var10 = -109 % ((-78 - param1) / 44);
         return var9;
     }
 
-    final static boolean a(int param0, boolean param1, CharSequence param2, int param3) {
+    final static boolean isValidInteger(int param0, boolean param1, CharSequence param2, int param3) {
         int var8 = 0;
         int stackIn_42_0 = 0;
         RuntimeException stackIn_45_0 = null;
@@ -100,11 +100,11 @@ abstract class ng {
         }
     }
 
-    abstract byte[] a(int param0, int param1);
+    abstract byte[] getPackedGroup(int param0, int param1);
 
-    abstract int b(int param0, int param1);
+    abstract int getGroupProgress(int param0, int param1);
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawInsetFieldBorder(int param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         int var5_int = 0;
         int var6 = 0;
@@ -150,9 +150,9 @@ abstract class ng {
         }
     }
 
-    abstract ArchiveIndex a(byte param0);
+    abstract ArchiveIndex getIndex(byte param0);
 
-    final static String a(String param0, String param1, int param2, int param3) {
+    final static String removeIgnoredName(String param0, String param1, int param2, int param3) {
         RuntimeException var4 = null;
         CipherPacketBuffer var5 = null;
         int var6 = 0;
@@ -178,7 +178,7 @@ abstract class ng {
             stackIn_7_0 = SceneObject.field_A;
             return stackIn_7_0;
           }
-          var7 = TriangleMesh.a((byte) 90, param1);
+          var7 = TriangleMesh.findIgnoreEntry((byte) 90, param1);
           if (var7 == null) {
             stackIn_11_0 = vl.a(MouseWheelInput.field_a, new String[]{param1}, 2);
             return stackIn_11_0;
@@ -190,7 +190,7 @@ abstract class ng {
             ng.releaseStatics(-125);
           }
           var5 = ma.field_a;
-          var5.b((byte) -35, param3);
+          var5.writeCipheredOpcode((byte) -35, param3);
           var5.position = var5.position + 1;
           var6 = var5.position;
           var5.writeByte(113, 3);

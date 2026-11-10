@@ -51,18 +51,18 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             !(kj.field_q < 2))) {
             var7 = pk.field_b;
             var8 = vl.a(wj.field_f, new String[]{param2}, 2);
-            var7.field_j.a((byte) -118, var8, 10);
+            var7.field_j.addItem((byte) -118, var8, 10);
           }
           pk.field_b.a((byte) -120);
           if (param1) {
             if (ao.field_e == pk.field_b.field_b) {
               var11 = pk.field_b;
               var12 = vl.a(GameApplet.field_g, new String[]{param2}, 2);
-              var11.field_j.a((byte) -118, var12, 16);
+              var11.field_j.addItem((byte) -118, var12, 16);
             } else {
               var9 = pk.field_b;
               var10 = vl.a(kj.field_f, new String[]{param2}, 2);
-              var9.field_j.a((byte) -118, var10, 15);
+              var9.field_j.addItem((byte) -118, var10, 15);
             }
           }
           var13 = pk.field_b;
@@ -109,7 +109,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             this.submitLogin((byte) -95);
           } else {
             if (this.field_P == param2) {
-              hb.a(0);
+              hb.openAccountCreation(0);
             } else {
               if (param2 == this.field_J) {
                 if (!this.field_K) {
@@ -119,7 +119,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
                     ImageProducerRasterBuffer.c(-118);
                   }
                 } else {
-                  oi.a(-124);
+                  oi.requestQuitToWebsite(-124);
                 }
               }
             }
@@ -259,7 +259,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             this.field_i = this.field_i + (var7.measureWrappedHeight(this.field_O, this.field_n - 40, var7.maxAscent) + 5);
           }
           var8 = SimPortal.field_M;
-          var9 = me.a(-57, StatefulTextPainter.b(0));
+          var9 = me.readLastLoginMethod(-57, StatefulTextPainter.b(0));
           if (wp.field_b != var9) {
             if (RasterBuffer.field_c == var9) {
               var8 = ClickMarker.field_f;
@@ -269,11 +269,11 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           }
           dupTemp$0 = new LabeledChildWidget(10, this.field_i, -20 + this.field_n, 25, this.field_H, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
-          this.b((byte) 112, dupTemp$0);
+          this.addChild((byte) 112, dupTemp$0);
           this.field_i = this.field_i + (((UiWidget) ((Object) var12)).field_w + 5);
           dupTemp$1 = new LabeledChildWidget(10, this.field_i, -20 + this.field_n, 25, this.field_M, false, 80, 3, var7, 16777215, ButtonWidget.field_D);
           var13 = dupTemp$1;
-          this.b((byte) 108, dupTemp$1);
+          this.addChild((byte) 108, dupTemp$1);
           this.field_i = this.field_i + (5 + ((UiWidget) ((Object) var13)).field_w);
           this.field_G.field_A = (WidgetListener) (this);
           if (null != this.field_P) {
@@ -304,12 +304,12 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             }
           }
           this.setWidgetBounds(0, 0, 28972, this.field_n, 3 + this.field_i);
-          this.b((byte) 70, this.field_G);
+          this.addChild((byte) 70, this.field_G);
           if (null != this.field_P) {
-            this.b((byte) 71, this.field_P);
+            this.addChild((byte) 71, this.field_P);
           }
           if (this.field_J != null) {
-            this.b((byte) 126, this.field_J);
+            this.addChild((byte) 126, this.field_J);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -351,13 +351,13 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             return true;
           }
           if (param0 == 98) {
-            stackIn_6_0 = this.a((byte) -1, param2);
+            stackIn_6_0 = this.focusPreviousChild((byte) -1, param2);
             return stackIn_6_0;
           }
           if (param0 != 99) {
             return false;
           }
-          stackIn_10_0 = this.a(66, param2);
+          stackIn_10_0 = this.focusNextChild(66, param2);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -457,12 +457,12 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         int var5;
         vg var4Lifetime1;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
-        var4 = (vg) (GameApplet.field_i.c(78));
+        var4 = (vg) (GameApplet.field_i.last(78));
         while (var4 != null) {
           if (param2 == var4.field_i) {
             return var4;
           }
-          var4 = (vg) (GameApplet.field_i.b(6));
+          var4 = (vg) (GameApplet.field_i.previous(6));
         }
         if (param0 <= 97) {
           field_I = (String) null;
@@ -470,7 +470,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         var4Lifetime1 = new vg();
         var4Lifetime1.field_p = param3;
         var4Lifetime1.field_i = param2;
-        GameApplet.field_i.a(var4Lifetime1, false);
+        GameApplet.field_i.addFirst(var4Lifetime1, false);
         vi.a(param1, var4Lifetime1, (byte) -126);
         return var4Lifetime1;
     }
@@ -491,10 +491,10 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
     private final void submitLogin(byte param0) {
         int var2;
         var2 = 12 % ((param0 - 8) / 49);
-        if (aa.e(0) ||
+        if (aa.isReconnecting(0) ||
           !(this.field_H.field_j.length() <= 0) &&
           !(this.field_M.field_j.length() <= 0)) {
-          TextWidgetPainter.a(this.field_H.field_j, (byte) -125, this.field_M.field_j);
+          TextWidgetPainter.startLogin(this.field_H.field_j, (byte) -125, this.field_M.field_j);
         }
     }
 

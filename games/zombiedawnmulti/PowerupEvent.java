@@ -38,11 +38,11 @@ final class PowerupEvent extends GameEvent {
         }
     }
 
-    final void a(int param0, boolean param1, int param2, int param3) {
+    final void drawDebugOverlay(int param0, boolean param1, int param2, int param3) {
         SoftwareRasterizer.fillCircleAlpha(-24 + (this.field_p >> 16) - param2, -24 - param0 + (this.field_s >> 16), 1 + (-param3 + this.field_f) / 5, 16711680, 128);
         if (!param1) {
           GameScreen var6 = (GameScreen) null;
-          this.a(106, (GameScreen) null);
+          this.apply(106, (GameScreen) null);
         }
     }
 
@@ -61,7 +61,7 @@ final class PowerupEvent extends GameEvent {
             field_t = 10;
           }
           var4 = (String) null;
-          stackIn_3_0 = mg.a(false, param0, 0, param1, (String) null, 0, (byte) -92);
+          stackIn_3_0 = mg.performAccountServerRequest(false, param0, 0, param1, (String) null, 0, (byte) -92);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -83,7 +83,7 @@ final class PowerupEvent extends GameEvent {
         }
     }
 
-    final void a(int param0, GameScreen param1) {
+    final void apply(int param0, GameScreen param1) {
         GameCharacter stackIn_76_0 = null;
         boolean stackIn_77_1 = false;
         GameScreen stackIn_80_0 = null;
@@ -108,53 +108,53 @@ final class PowerupEvent extends GameEvent {
           if (this.field_i) {
             var3_int = this.field_q;
             if (var3_int == 9) {
-              Camera.b(-126, 81);
+              Camera.createMixerStream(-126, 81);
             } else {
               switch (var3_int) {
                 case 10:
-                  Camera.b(-126, 83);
+                  Camera.createMixerStream(-126, 83);
                   break;
                 case 4:
-                  Camera.b(-127, 46);
+                  Camera.createMixerStream(-127, 46);
                   break;
                 case 8:
-                  Camera.b(-127, 35);
+                  Camera.createMixerStream(-127, 35);
                   break;
                 case 18:
-                  Camera.b(-128, 46);
+                  Camera.createMixerStream(-128, 46);
                   break;
                 case 15:
-                  Camera.b(param0 ^ -127, 80);
+                  Camera.createMixerStream(param0 ^ -127, 80);
                   break;
                 case 5:
-                  Camera.b(-126, 17);
+                  Camera.createMixerStream(-126, 17);
                   break;
                 case 2:
-                  Camera.b(-127, 46);
+                  Camera.createMixerStream(-127, 46);
                   break;
                 case 1:
-                  Camera.b(-127, 67);
+                  Camera.createMixerStream(-127, 67);
                   break;
                 case 11:
-                  Camera.b(param0 ^ -126, 86);
+                  Camera.createMixerStream(param0 ^ -126, 86);
                   break;
                 case 13:
-                  Camera.b(-128, 85);
+                  Camera.createMixerStream(-128, 85);
                   break;
                 case 14:
-                  Camera.b(param0 - 128, 92);
+                  Camera.createMixerStream(param0 - 128, 92);
                   break;
                 case 3:
-                  Camera.b(param0 - 128, 46);
+                  Camera.createMixerStream(param0 - 128, 46);
                   break;
                 case 7:
-                  Camera.b(-127, 46);
+                  Camera.createMixerStream(-127, 46);
                   break;
                 case 17:
-                  Camera.b(param0 - 127, 75);
+                  Camera.createMixerStream(param0 - 127, 75);
                   break;
                 case 16:
-                  Camera.b(param0 ^ -128, 84);
+                  Camera.createMixerStream(param0 ^ -128, 84);
                   break;
                 default:
                   break;
@@ -227,7 +227,7 @@ final class PowerupEvent extends GameEvent {
             this.field_f = this.field_f + 50;
             this.field_i = true;
             param1.receiveEvent(false, (GameEvent) (this));
-            Camera.b(-127, 67);
+            Camera.createMixerStream(-127, 67);
           }
           if (param0 != 0) {
             PowerupEvent.a(11);
@@ -251,7 +251,7 @@ final class PowerupEvent extends GameEvent {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        super.a(param2 + 32, param1);
+        super.setTick(param2 + 32, param1);
         if (param6 != 255) {
         }
         this.field_j = param7;
@@ -284,12 +284,12 @@ final class PowerupEvent extends GameEvent {
         field_n = null;
     }
 
-    final void a(byte param0) {
-        super.a((byte) -86);
-        dg.field_K.a((IntrusiveNode) (this), false);
+    final void removeFromQueue(byte param0) {
+        super.removeFromQueue((byte) -86);
+        dg.field_K.addFirst((IntrusiveNode) (this), false);
         if (param0 > -47) {
           GameScreen var3 = (GameScreen) null;
-          this.a(96, (GameScreen) null);
+          this.apply(96, (GameScreen) null);
         }
     }
 

@@ -12,15 +12,15 @@ final class PortalEntryEvent extends GameEvent {
     static int field_i;
     static GameWorld field_m;
 
-    final void a(byte param0) {
-        super.a((byte) -54);
-        StateIconLabel.field_Kb.a((IntrusiveNode) (this), false);
+    final void removeFromQueue(byte param0) {
+        super.removeFromQueue((byte) -54);
+        StateIconLabel.field_Kb.addFirst((IntrusiveNode) (this), false);
         if (param0 > -47) {
           field_l = (String) null;
         }
     }
 
-    final static void c(int param0) {
+    final static void updateDialogLayer(int param0) {
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -29,18 +29,18 @@ final class PortalEntryEvent extends GameEvent {
           if (param0 != 2) {
             field_l = (String) null;
           }
-          if (!PortalEntryEvent.a(120)) {
+          if (!PortalEntryEvent.hasOpenDialog(120)) {
             if (rn.field_f != null &&
               rn.field_f.field_e) {
-              rn.a(param0 ^ -79);
+              rn.exitActiveFullscreen(param0 ^ -79);
               me.field_k.showDialog(3016, new vm(me.field_k, hl.field_b));
             }
             return;
           }
-          me.field_k.a(jk.field_g, (byte) -27, ScoreUpdateEvent.field_j, true);
+          me.field_k.processPointerFrame(jk.field_g, (byte) -27, ScoreUpdateEvent.field_j, true);
           me.field_k.h((byte) -109);
-          while (MusicPatchPcmStream.c(-1)) {
-            me.field_k.a(param0 - 2, pn.field_d, InfectionEvent.field_p);
+          while (MusicPatchPcmStream.pollKeyEvent(-1)) {
+            me.field_k.dispatchKeyInput(param0 - 2, pn.field_d, InfectionEvent.field_p);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -50,7 +50,7 @@ final class PortalEntryEvent extends GameEvent {
         }
     }
 
-    final static String a(boolean param0, boolean param1, int param2, boolean param3) {
+    final static String chooseDiscardPrompt(boolean param0, boolean param1, int param2, boolean param3) {
         int var4 = 0;
         if (param2 == 4) {
           if (param1) {
@@ -67,27 +67,27 @@ final class PortalEntryEvent extends GameEvent {
         return (String) null;
     }
 
-    final void a(int param0, boolean param1, int param2, int param3) {
+    final void drawDebugOverlay(int param0, boolean param1, int param2, int param3) {
         if (!param1) {
           GameScreen var6 = (GameScreen) null;
-          this.a(-70, (GameScreen) null);
+          this.apply(-70, (GameScreen) null);
         }
     }
 
-    final void b(boolean param0, int param1, int param2, int param3) {
+    final void setEventData(boolean param0, int param1, int param2, int param3) {
         if (!param0) {
-          super.a(0, param1);
+          super.setTick(0, param1);
           this.field_p = param2;
           this.field_q = param3;
           return;
         }
         field_n = (String) null;
-        super.a(0, param1);
+        super.setTick(0, param1);
         this.field_p = param2;
         this.field_q = param3;
     }
 
-    private final static boolean a(int param0) {
+    private final static boolean hasOpenDialog(int param0) {
         int var1 = -19 / ((70 - param0) / 45);
         if (me.field_k == null) {
           return false;
@@ -98,7 +98,7 @@ final class PortalEntryEvent extends GameEvent {
         return false;
     }
 
-    final void a(int param0, GameScreen param1) {
+    final void apply(int param0, GameScreen param1) {
         try {
           param1.onUnitEnteredPortal(this.field_p, (byte) 127, this.field_q);
           if (param0 != 0) {
@@ -119,7 +119,7 @@ final class PortalEntryEvent extends GameEvent {
           field_k = null;
           return;
         }
-        PortalEntryEvent.a(-97);
+        PortalEntryEvent.hasOpenDialog(-97);
         field_k = null;
     }
 

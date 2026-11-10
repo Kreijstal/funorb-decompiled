@@ -15,12 +15,12 @@ final class IsaacRandom {
     private int field_e;
     static String field_d;
 
-    final static void d(int param0) {
+    final static void resetFrameTimingHistory(int param0) {
         int var1_int = 0;
         int var2 = ZombieDawnMulti.field_E ? 1 : 0;
         int var1_intLifetime1;
         try {
-          kj.field_r.b(-102);
+          kj.field_r.resetTiming(-102);
           for (var1_int = 0; var1_int < 32; var1_int++) {
             TabbedPane.field_Ib[var1_int] = 0L;
           }
@@ -36,7 +36,7 @@ final class IsaacRandom {
         }
     }
 
-    private final void c(int param0) {
+    private final void generateResults(int param0) {
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
         int var2;
@@ -67,22 +67,22 @@ final class IsaacRandom {
             }
           }
           this.field_a = this.field_a + this.field_c[255 & var2 + 128];
-          dupTemp$1 = this.field_c[ScrollPane.b(var3 >> 2, 255)] - (-this.field_a - this.field_e);
+          dupTemp$1 = this.field_c[ScrollPane.bitAnd(var3 >> 2, 255)] - (-this.field_a - this.field_e);
           var4 = dupTemp$1;
           this.field_c[var2] = dupTemp$1;
-          dupTemp$2 = var3 + this.field_c[ScrollPane.b(var4 >> 8, 1020) >> 2];
+          dupTemp$2 = var3 + this.field_c[ScrollPane.bitAnd(var4 >> 8, 1020) >> 2];
           this.field_e = dupTemp$2;
           this.field_g[var2] = dupTemp$2;
           var2++;
         }
     }
 
-    final int a(int param0) {
+    final int nextInt(int param0) {
         if (param0 > -20) {
           field_b = -115;
         }
         if (this.field_k == 0) {
-          this.c(2);
+          this.generateResults(2);
           this.field_k = 256;
         }
         int fieldTemp$0 = this.field_k - 1;
@@ -99,7 +99,7 @@ final class IsaacRandom {
         }
     }
 
-    private final void a(boolean param0) {
+    private final void seed(boolean param0) {
         int var2 = 0;
         int var11 = ZombieDawnMulti.field_E ? 1 : 0;
         int var3 = -1640531527;
@@ -223,9 +223,9 @@ final class IsaacRandom {
           this.field_c[7 + var2Lifetime2] = var10;
         }
         if (param0) {
-          this.c(104);
+          this.generateResults(104);
         }
-        this.c(2);
+        this.generateResults(2);
         this.field_k = 256;
     }
 
@@ -237,15 +237,15 @@ final class IsaacRandom {
           for (var2_int = 0; var2_int < param0.length; var2_int++) {
             this.field_g[var2_int] = param0[var2_int];
           }
-          this.a(false);
+          this.seed(false);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "o.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(u param0, int param1, int param2) {
+    final static void writeResendRequest(u param0, int param1, int param2) {
         CipherPacketBuffer var3 = ma.field_a;
-        var3.b((byte) -35, param1);
+        var3.writeCipheredOpcode((byte) -35, param1);
         var3.writeByte(-54, 2);
         if (param2 >= -69) {
           return;

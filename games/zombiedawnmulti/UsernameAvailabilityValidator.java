@@ -34,7 +34,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = (CharSequence) ((Object) param1);
-          if (!InfectionEvent.a(var5, 12319)) {
+          if (!InfectionEvent.isValidPlayerNameText(var5, 12319)) {
             stackIn_2_0 = jq.field_b;
             return stackIn_2_0;
           }
@@ -131,7 +131,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
         this.field_q = false;
     }
 
-    final void i(int param0) {
+    final void resetCheckedName(int param0) {
         if (param0 != -22837) {
           UsernameAvailabilityValidator.releaseStatics(-36);
           this.field_r = null;

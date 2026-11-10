@@ -138,7 +138,7 @@ class PacketBuffer extends IntrusiveNode {
         if (param1 < 111) {
           this.e(-90, -121);
         }
-        int var3 = TertiaryLinkDeque.a(this.payload, this.position, true, param0);
+        int var3 = TertiaryLinkDeque.crc32(this.payload, this.position, true, param0);
         this.writeInt(8, var3);
         return var3;
     }
@@ -156,7 +156,7 @@ class PacketBuffer extends IntrusiveNode {
             this.readVarInt(68);
           }
           var4 = (CharSequence) ((Object) value);
-          this.position = this.position + tg.a(this.position, var4, 0, obfuscationGuard ^ -151, this.payload, value.length());
+          this.position = this.position + tg.encodeWindowsCodePageText(this.position, var4, 0, obfuscationGuard ^ -151, this.payload, value.length());
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
@@ -407,7 +407,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
           var4 = (CharSequence) ((Object) param1);
-          this.position = this.position + tg.a(this.position, var4, 0, -256, this.payload, param1.length());
+          this.position = this.position + tg.encodeWindowsCodePageText(this.position, var4, 0, -256, this.payload, param1.length());
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte) 0;
@@ -448,7 +448,7 @@ class PacketBuffer extends IntrusiveNode {
         if (0 == var4) {
           return "";
         }
-        return oe.a(var4, this.payload, false, var3);
+        return oe.decodeSingleByteText(var4, this.payload, false, var3);
     }
 
     final String readString(byte obfuscationGuard) {
@@ -465,7 +465,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (this.payload[fieldTemp$0] != 0);
         var3 = -1 + this.position - var2;
         if (var3 != 0) {
-          return oe.a(var3, this.payload, false, var2);
+          return oe.decodeSingleByteText(var3, this.payload, false, var2);
         }
         return "";
     }
@@ -616,7 +616,7 @@ class PacketBuffer extends IntrusiveNode {
         if (param0) {
           field_f = true;
         }
-        int var2 = TertiaryLinkDeque.a(this.payload, this.position, true, 0);
+        int var2 = TertiaryLinkDeque.crc32(this.payload, this.position, true, 0);
         int var3 = this.readInt(-1478490344);
         if (var2 != var3) {
           return false;

@@ -267,13 +267,13 @@ final class BirthDateInputWidget extends DateInputWidget {
           this.field_R.painter = param0;
           this.field_Z = param1 ? true : false;
           if (!this.field_Z) {
-            this.b((byte) 111, this.field_R);
-            this.b((byte) 76, this.field_T);
+            this.addChild((byte) 111, this.field_R);
+            this.addChild((byte) 76, this.field_T);
           } else {
-            this.b((byte) 123, this.field_T);
-            this.b((byte) 94, this.field_R);
+            this.addChild((byte) 123, this.field_T);
+            this.addChild((byte) 94, this.field_R);
           }
-          this.b((byte) 124, this.field_Q);
+          this.addChild((byte) 124, this.field_Q);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "em.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -326,7 +326,7 @@ final class BirthDateInputWidget extends DateInputWidget {
                 var4 = var4 + var2.substring(var3);
               }
               var5 = new java.net.URL(param1.getCodeBase(), var4);
-              param1.getAppletContext().showDocument(DebouncedValidationProvider.a(param1, true, var5), "_self");
+              param1.getAppletContext().showDocument(DebouncedValidationProvider.applySessionOverridesToUrl(param1, true, var5), "_self");
               if (param0) {
                 field_bb = 102;
               }

@@ -27,7 +27,7 @@ final class dd implements dr {
     }
 
     final static void a(boolean param0, int param1) {
-        MenuScreen.a(param1 ^ -122, param0);
+        MenuScreen.drawLobbyOverlays(param1 ^ -122, param0);
         if (param1 != 0) {
           return;
         }
@@ -88,13 +88,13 @@ final class dd implements dr {
           if (pi.field_a != vo.field_l) {
             return false;
           }
-          var2_long = bl.a((byte) 94);
+          var2_long = bl.monotonicMillis((byte) 94);
           if (param1 > -77) {
             return true;
           }
           if (SimArmedHuman.field_Db != 0 &&
             fd.field_F < 0) {
-            var4_ref_bb = (DelayedPacket) (LinkButtonPainter.field_k.c(60));
+            var4_ref_bb = (DelayedPacket) (LinkButtonPainter.field_k.last(60));
             if (var4_ref_bb != null &&
               var4_ref_bb.field_j < var2_long) {
               var4_ref_bb.unlink(true);
@@ -156,7 +156,7 @@ final class dd implements dr {
             for (var6 = 0; EmailAvailabilityValidator.field_q > var6; var6++) {
               var5.field_f[var6] = s.field_e.payload[var6];
             }
-            LinkButtonPainter.field_k.a(var5, false);
+            LinkButtonPainter.field_k.addFirst(var5, false);
             fd.field_F = -1;
             stackIn_20_0 = fd.field_F;
           }
@@ -210,20 +210,20 @@ final class dd implements dr {
           ProgressDialog.field_hb = oi.field_j;
           if (param3 != 255) {
             if (param3 < 100) {
-              DiskCacheWorker.field_g = p.a(-28, param2, param3);
+              DiskCacheWorker.field_g = p.createRequestResult(-28, param2, param3);
             } else {
               if (param3 <= 105) {
                 var7 = param1;
                 jk.a(param0 ^ 0, var7);
                 DiskCacheWorker.field_g = kn.a(param1, param0 ^ -107);
               } else {
-                DiskCacheWorker.field_g = p.a(-28, param2, param3);
+                DiskCacheWorker.field_g = p.createRequestResult(-28, param2, param3);
               }
             }
           } else {
             stackIn_4_0 = false;
             stackIn_5_1 = !(rj.field_J >= 13);
-            DiskCacheWorker.field_g = CheckboxPainter.a(stackIn_4_0, stackIn_5_1);
+            DiskCacheWorker.field_g = CheckboxPainter.createFlagResult(stackIn_4_0, stackIn_5_1);
             var6 = (String[]) null;
             jk.a(0, (String[]) null);
           }

@@ -50,7 +50,7 @@ final class lp extends IntrusiveNode {
           if (0 != kd.field_b &&
             var4 == 0) {
             param2 = false;
-            ub.n(33423425);
+            ub.closeChatInputIfOpen(33423425);
           }
           if (param2) {
             mj.field_Ib.processPressedItems(param3, 255, param1);
@@ -79,7 +79,7 @@ final class lp extends IntrusiveNode {
         if (0 != kd.field_b &&
           var4Lifetime1 == 0) {
           param2 = false;
-          ub.n(33423425);
+          ub.closeChatInputIfOpen(33423425);
         }
         if (param2) {
           mj.field_Ib.processPressedItems(param3, 255, param1);
@@ -145,8 +145,8 @@ final class lp extends IntrusiveNode {
             return;
           }
           if (ng.field_g != null) {
-            rn.field_f = ng.field_g.f(0);
-            ResizableDialog.b(true, 2);
+            rn.field_f = ng.field_g.enterFullscreen(0);
+            ResizableDialog.notifyBrowserResize(true, 2);
             if (null == rn.field_f) {
               var2 = 3;
             } else {
@@ -180,8 +180,8 @@ final class lp extends IntrusiveNode {
             return;
           }
           if (ng.field_g != null) {
-            rn.field_f = ng.field_g.f(0);
-            ResizableDialog.b(true, 2);
+            rn.field_f = ng.field_g.enterFullscreen(0);
+            ResizableDialog.notifyBrowserResize(true, 2);
             if (null == rn.field_f) {
               var2 = 3;
             } else {

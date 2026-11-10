@@ -44,21 +44,21 @@ final class TriangleMesh {
     short field_B;
     int[] field_w;
 
-    final static void a(int param0, int param1) {
+    final static void sortRankingRows(int param0, int param1) {
         int var2_int = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          InfectionEvent.a(NodeHashTableIterator.field_d, -891231071, param0, true, ClickMarker.field_n, 0, MusicPatchNode.field_j);
+          InfectionEvent.sortRankingRange(NodeHashTableIterator.field_d, -891231071, param0, true, ClickMarker.field_n, 0, MusicPatchNode.field_j);
           for (var2_int = 0; var2_int < ClickMarker.field_n; var2_int++) {
             la.field_c[var2_int + param0] = var2_int;
           }
           if (param1 > -27) {
             field_u = (IntrusiveDeque) null;
           }
-          InfectionEvent.a(MusicPatchPcmStream.field_m, -891231071, param0 + param0, false, param0 + ClickMarker.field_n, param0, mj.field_Ub);
+          InfectionEvent.sortRankingRange(MusicPatchPcmStream.field_m, -891231071, param0 + param0, false, param0 + ClickMarker.field_n, param0, mj.field_Ub);
           if (param0 < ClickMarker.field_n) {
             ClickMarker.field_n = param0;
           }
@@ -101,7 +101,7 @@ final class TriangleMesh {
         var5 = -32768;
         var6 = -32768;
         if (param0 >= -20) {
-          TriangleMesh.a(-5, 114);
+          TriangleMesh.sortRankingRows(-5, 114);
         }
         var7 = -32768;
         for (var8 = 0; this.field_n > var8; var8++) {
@@ -135,7 +135,7 @@ final class TriangleMesh {
         this.field_r = var4;
     }
 
-    final static ml a(byte param0, String param1) {
+    final static ml findIgnoreEntry(byte param0, String param1) {
         String var2 = null;
         int var3 = 0;
         ml var4 = null;
@@ -157,15 +157,15 @@ final class TriangleMesh {
             return (ml) (stackIn_3_0);
           }
           var7 = (CharSequence) ((Object) param1);
-          var2 = tg.a(var7, false);
+          var2 = tg.normalizePlayerName(var7, false);
           var3 = 24 / ((47 - param0) / 43);
           if (var2 == null) {
             var2 = param1;
           }
-          var4 = (ml) (bh.field_f.a((long)var2.hashCode(), -22877));
+          var4 = (ml) (bh.field_f.findByKey((long)var2.hashCode(), -22877));
           while (var4 != null) {
             var8 = (CharSequence) ((Object) var4.field_Hb);
-            var5 = tg.a(var8, false);
+            var5 = tg.normalizePlayerName(var8, false);
             if (var5 == null) {
               var5 = var4.field_Hb;
             }
@@ -173,7 +173,7 @@ final class TriangleMesh {
               stackIn_15_0 = var4;
               return stackIn_15_0;
             }
-            var4 = (ml) (bh.field_f.b((byte) 68));
+            var4 = (ml) (bh.field_f.nextWithSameKey((byte) 68));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -190,7 +190,7 @@ final class TriangleMesh {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void scaleVertices(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = ZombieDawnMulti.field_E ? 1 : 0;
         for (var6 = 0; var6 < this.field_n; var6++) {
@@ -204,7 +204,7 @@ final class TriangleMesh {
         this.invalidateBounds(255);
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void translateVertices(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = ZombieDawnMulti.field_E ? 1 : 0;
         for (var5 = 0; var5 < this.field_n; var5++) {
@@ -218,7 +218,7 @@ final class TriangleMesh {
         }
     }
 
-    final static int a(CharSequence param0, int param1) {
+    final static int parseDecimalInt(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -229,7 +229,7 @@ final class TriangleMesh {
           if (param1 != -9159) {
             field_N = (Sprite[]) null;
           }
-          stackIn_3_0 = TriangleMesh.a(param0, 10, -31, true);
+          stackIn_3_0 = TriangleMesh.parseInteger(param0, 10, -31, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -245,7 +245,7 @@ final class TriangleMesh {
         }
     }
 
-    final static boolean a(ml param0, byte param1, ml param2) {
+    final static boolean precedesSocialRow(ml param0, byte param1, ml param2) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -296,7 +296,7 @@ final class TriangleMesh {
         }
     }
 
-    final static void a(String[] args, int param1, int[] param2, ResourceArchive param3, String[] param4, Sprite[][] param5, Sprite[][] param6, String[][] param7, byte[] param8, int param9, boolean param10, byte[] param11, String[] param12, int param13, String[][] param14) {
+    final static void initializeLobbyWidgets(String[] args, int param1, int[] param2, ResourceArchive param3, String[] param4, Sprite[][] param5, Sprite[][] param6, String[][] param7, byte[] param8, int param9, boolean param10, byte[] param11, String[] param12, int param13, String[][] param14) {
         AlignedIconLabel[] array$0 = null;
         AlignedIconLabel[] array$1 = null;
         AlignedIconLabel[] array$2 = null;
@@ -363,10 +363,10 @@ final class TriangleMesh {
           um.field_g = param6;
           kp.field_n = param7;
           r.field_f = param13;
-          MatchingTextValidator.field_u = pb.a("lobby", param3, -256, "gameprivacy");
-          ke.field_i = pb.a("lobby", param3, -256, "ratedgame");
-          na.field_G = pb.a("lobby", param3, -256, "opentome");
-          we.field_j = pb.a("lobby", param3, -256, "allowspectators");
+          MatchingTextValidator.field_u = pb.loadSpritesByName("lobby", param3, -256, "gameprivacy");
+          ke.field_i = pb.loadSpritesByName("lobby", param3, -256, "ratedgame");
+          na.field_G = pb.loadSpritesByName("lobby", param3, -256, "opentome");
+          we.field_j = pb.loadSpritesByName("lobby", param3, -256, "allowspectators");
           t.field_c = new String[5];
           t.field_c[2] = ResizableDialog.field_W;
           t.field_c[3] = LobbyPlayer.field_Xb;
@@ -419,7 +419,7 @@ final class TriangleMesh {
           cm.field_a.a((byte) 50, ro.field_O);
           if (!param10) {
             var22 = (CharSequence) null;
-            TriangleMesh.a((CharSequence) null, -24);
+            TriangleMesh.parseDecimalInt((CharSequence) null, -24);
           }
           cm.field_a.a((byte) 50, ml.field_Lb);
           ml.field_Lb.a((byte) 50, PacketBuffer.field_g);
@@ -492,7 +492,7 @@ final class TriangleMesh {
           }
           for (var17_intLifetime3 = 0; param9 > var17_intLifetime3; var17_intLifetime3++) {
             StateIconLabel.field_Ib[4 + var17_intLifetime3] = new UiComponent(0L, m.field_B, UiWidget.field_f[var17_intLifetime3]);
-            array$2 = new AlignedIconLabel[1 + ScrollPane.b(255, (int) ng.field_b[var17_intLifetime3])];
+            array$2 = new AlignedIconLabel[1 + ScrollPane.bitAnd(255, (int) ng.field_b[var17_intLifetime3])];
             ma.field_b[var17_intLifetime3 + 4] = array$2;
             ma.field_b[var17_intLifetime3 + 4][0] = new AlignedIconLabel(0L, uq.field_d, (UiComponent) null, cm.field_b, (Sprite) null, VerticalScrollbar.field_Mb);
             for (var18 = 0; var18 < (255 & ng.field_b[var17_intLifetime3]); var18++) {
@@ -640,7 +640,7 @@ final class TriangleMesh {
         }
     }
 
-    final static int a(CharSequence param0, int param1, int param2, boolean param3) {
+    final static int parseInteger(CharSequence param0, int param1, int param2, boolean param3) {
         int var8 = 0;
         int stackIn_42_0 = 0;
         RuntimeException stackIn_45_0 = null;
@@ -661,7 +661,7 @@ final class TriangleMesh {
             param1 <= 36) {
             var4_int = 0;
             if (param2 >= -12) {
-              TriangleMesh.a((String[]) null, -25, (int[]) null, (ResourceArchive) null, (String[]) null, (Sprite[][]) null, (Sprite[][]) null, (String[][]) null, (byte[]) null, -121, true, (byte[]) null, (String[]) null, 73, (String[][]) null);
+              TriangleMesh.initializeLobbyWidgets((String[]) null, -25, (int[]) null, (ResourceArchive) null, (String[]) null, (Sprite[][]) null, (Sprite[][]) null, (String[][]) null, (byte[]) null, -121, true, (byte[]) null, (String[]) null, 73, (String[][]) null);
             }
             var5 = 0;
             var6 = 0;

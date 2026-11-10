@@ -5,15 +5,15 @@ final class hb {
     static String[] field_b;
     static String field_a;
 
-    final static void b(int param0) {
+    final static void relayoutChatPanel(int param0) {
         lk.g((byte) 89);
-        ProxySocketConnector.a(2, wp.field_j[0].fullWidth, nj.field_h, DualLinkNode.field_o, jo.field_f, jk.field_f);
+        ProxySocketConnector.layoutChatPanel(2, wp.field_j[0].fullWidth, nj.field_h, DualLinkNode.field_o, jo.field_f, jk.field_f);
         if (param0 <= 31) {
           field_a = (String) null;
         }
     }
 
-    final static byte[] a(byte[] param0, int param1) {
+    final static byte[] decompressContainer(byte[] param0, int param1) {
         byte[] stackIn_19_0 = null;
         byte[] stackIn_21_0 = null;
         RuntimeException stackIn_24_0 = null;
@@ -82,7 +82,7 @@ final class hb {
 
     public static void releaseStatics(boolean param0) {
         if (param0) {
-          hb.b(87);
+          hb.relayoutChatPanel(87);
           field_b = null;
           field_a = null;
           return;
@@ -91,9 +91,9 @@ final class hb {
         field_a = null;
     }
 
-    final static void a(int param0) {
+    final static void openAccountCreation(int param0) {
         EmailAvailabilityValidator.field_s = new AccountCreationForm();
-        wj.field_i.a((UiWidget) (EmailAvailabilityValidator.field_s), (byte) 121);
+        wj.field_i.transitionToContent((UiWidget) (EmailAvailabilityValidator.field_s), (byte) 121);
         if (param0 != 0) {
           field_a = (String) null;
         }

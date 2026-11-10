@@ -24,10 +24,10 @@ final class QuickChatCategoryRegistry {
         }
         var3 = new ob();
         if (var4 != null) {
-          var3.a(64, new PacketBuffer(var4));
+          var3.decode(64, new PacketBuffer(var4));
         }
         if (param0 >= 32768) {
-          var3.e((byte) -72);
+          var3.markGlobalIds((byte) -72);
         }
         this.field_c.a(var3, (long)param0, 1);
         if (param1 != 32767) {
@@ -112,7 +112,7 @@ final class QuickChatCategoryRegistry {
           ImageProducerRasterBuffer.field_k.a(-11838, param2);
           if (ra.field_f != null) {
             if (nh.field_m) {
-              ra.field_f.a(ImageProducerRasterBuffer.field_k.field_w, (byte) -27, ImageProducerRasterBuffer.field_k.field_qb, param2);
+              ra.field_f.processPointerFrame(ImageProducerRasterBuffer.field_k.field_w, (byte) -27, ImageProducerRasterBuffer.field_k.field_qb, param2);
             } else {
               ra.field_f = null;
             }
@@ -123,7 +123,7 @@ final class QuickChatCategoryRegistry {
               if (var5.field_T != 0) {
                 cm.a(-105, var4_int, var5);
               }
-              var6 = CipherPacketBuffer.a(var4_int, true);
+              var6 = CipherPacketBuffer.getChatFilterMode(var4_int, true);
               pf.field_d[var4_int].field_rb = wp.field_j[var6];
               hh.field_l[var4_int].field_wb = vg.field_h[var6];
             }

@@ -162,7 +162,7 @@ final class TabbedPane extends UiComponent {
               if (0L > param0) {
                 var7Lifetime4 = var9 + "; Discard;";
               } else {
-                var7Lifetime4 = var9 + "; Expires=" + ke.formatCookieDate(-29971, bl.a((byte) 101) + 1000L * param0) + "; Max-Age=" + param0;
+                var7Lifetime4 = var9 + "; Expires=" + ke.formatCookieDate(-29971, bl.monotonicMillis((byte) 101) + 1000L * param0) + "; Max-Age=" + param0;
               }
               if (param3 >= -91) {
                 return;

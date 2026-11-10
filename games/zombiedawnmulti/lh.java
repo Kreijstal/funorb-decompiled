@@ -84,24 +84,24 @@ final class lh {
           var9 = new CipherPacketBuffer(param1.a("logo.fo3d", "", false));
           var11 = var9;
           var3 = var11.readUnsignedByte(31365);
-          var11.k(-1136);
-          qh.field_f = bo.a(30816, var11);
+          var11.startBitAccess(-1136);
+          qh.field_f = bo.readMeshMaterials(30816, var11);
           lk.field_G = new int[var3][];
           vn.field_c = new TriangleMesh[var3];
           for (var4 = 0; var4 < var3; var4++) {
-            vn.field_c[var4] = s.a(var9, (byte) -111);
+            vn.field_c[var4] = s.decodeMesh(var9, (byte) -111);
           }
-          var11.l(-3093);
+          var11.endBitAccess(-3093);
           var10 = 0;
           var4Lifetime1 = var10;
           var5 = 60 / ((62 - param0) / 39);
           while (var10 < var3) {
             var6 = vn.field_c[var10];
-            var6.a(6, 1, 6, 6, 2122);
+            var6.scaleVertices(6, 1, 6, 6, 2122);
             var6.updateBounds((byte) -102);
             var7 = new int[]{var6.field_C + var6.field_D >> 1, var6.field_G + var6.field_l >> 1, var6.field_j + var6.field_r >> 1};
             lk.field_G[var10] = var7;
-            var6.a(-var7[2], 3, -var7[0], -var7[1]);
+            var6.translateVertices(-var7[2], 3, -var7[0], -var7[1]);
             var10++;
           }
           return;
@@ -120,7 +120,7 @@ final class lh {
     }
 
     final static void a(boolean param0) {
-        wn.field_r = bl.a((byte) 41);
+        wn.field_r = bl.monotonicMillis((byte) 41);
         vd.field_c = 0;
         if (!param0) {
           lh.a((byte) -46, -87);

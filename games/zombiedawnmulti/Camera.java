@@ -26,7 +26,7 @@ final class Camera {
     private int field_v;
     float zoom;
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final void setPanPath(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         this.field_v = (param1 * 54 + (6 * param3 + param2 * -15) - param8 * 27) / 18;
         this.field_p = (-(27 * param0) + 6 * param4 + (-15 * param5 + 54 * param7)) / 18;
         this.field_s = param2;
@@ -35,7 +35,7 @@ final class Camera {
         this.field_e = param3;
         this.field_o = param5;
         if (param6 != 0) {
-          this.a(-46, 18, 71, -61, 29, -12, 103, -61, 65);
+          this.setPanPath(-46, 18, 71, -61, 29, -12, 103, -61, 65);
         } else {
           this.field_l = param4;
           return;
@@ -111,20 +111,20 @@ final class Camera {
         this.centerY = var5Lifetime1;
     }
 
-    final static PcmSampleStream b(int param0, int param1) {
+    final static PcmSampleStream createMixerStream(int param0, int param1) {
         wj var2 = new wj(param1);
-        fd.field_M.a(var2, false);
+        fd.field_M.addFirst(var2, false);
         if (param0 <= -125) {
           return var2.field_m;
         }
         return (PcmSampleStream) null;
     }
 
-    final static void a(int param0, int param1, byte param2, int param3, int param4) {
+    final static void pushClip(int param0, int param1, byte param2, int param3, int param4) {
         if (param2 != 105) {
           return;
         }
-        m.c(540);
+        m.pushRasterState(540);
         SoftwareRasterizer.intersectClip(param0, param4, param3, param1);
     }
 
@@ -155,7 +155,7 @@ final class Camera {
         }
     }
 
-    final void a(byte param0) {
+    final void startPan(byte param0) {
         if (param0 <= 41) {
           this.worldToScreenX(-95, 100);
           if (DebouncedValidationProvider.field_h) {
@@ -193,7 +193,7 @@ final class Camera {
         return (int)(this.zoom * (float)(param0 - 320) + (float)this.centerX);
     }
 
-    final static double a(int param0, double param1) {
+    final static double fastSine(int param0, double param1) {
         if (param0 == 0) {
           return TranslatedUiText.field_d[65535 & (int)(32768.0 * param1 / 3.141592653589793)];
         }
@@ -339,7 +339,7 @@ final class Camera {
         if (param1 >= 104) {
           return (int)((float)(-this.centerY) + (this.zoom * 240.0f + (float)param0));
         }
-        Camera.a(-81, -0.29647944214546124);
+        Camera.fastSine(-81, -0.29647944214546124);
         return (int)((float)(-this.centerY) + (this.zoom * 240.0f + (float)param0));
     }
 
@@ -352,7 +352,7 @@ final class Camera {
         this.field_q = -320 + param0;
     }
 
-    final void a(boolean param0) {
+    final void centerOnLevel(boolean param0) {
         if (param0) {
           return;
         }
@@ -364,7 +364,7 @@ final class Camera {
         this.centerX = param2;
         this.clampToBounds(27);
         if (param1 > -35) {
-          Camera.a(-48, -0.08284056706899026);
+          Camera.fastSine(-48, -0.08284056706899026);
         }
     }
 

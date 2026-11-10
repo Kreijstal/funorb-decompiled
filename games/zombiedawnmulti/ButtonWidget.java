@@ -28,7 +28,7 @@ class ButtonWidget extends UiWidget {
           super.updatePointerState(param0, param1, param2, param3);
           if (this.field_u != 0 &&
             this.field_u != pq.field_f) {
-            if (this.a(92, param2, MouseInputHandler.field_g, bo.field_d, param3) &&
+            if (this.containsPointer(92, param2, MouseInputHandler.field_g, bo.field_d, param3) &&
               pq.field_f == 0) {
               this.activateButton((byte) -49, this.field_u, MouseInputHandler.field_g - param2, bo.field_d - param3);
             }
@@ -52,7 +52,7 @@ class ButtonWidget extends UiWidget {
             this.field_H = true;
             if (null != this.field_A &&
               this.field_A instanceof om) {
-              ((om) (this.field_A)).a(this.field_H, true, (UiWidget) (this));
+              ((om) (this.field_A)).onFocusChanged(this.field_H, true, (UiWidget) (this));
             }
             if (param1 == 0) {
               return true;
@@ -81,7 +81,7 @@ class ButtonWidget extends UiWidget {
         return this.field_H;
     }
 
-    final static boolean b(byte param0, String param1) {
+    final static boolean hasValidPasswordLength(byte param0, String param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -142,7 +142,7 @@ class ButtonWidget extends UiWidget {
         }
     }
 
-    final static boolean a(char param0, int param1) {
+    final static boolean isAlphanumeric(char param0, int param1) {
         boolean stackIn_27_0 = false;
         if (param1 != 16413) {
           return false;
@@ -177,7 +177,7 @@ class ButtonWidget extends UiWidget {
         return true;
     }
 
-    final static GameEvent a(int param0, CipherPacketBuffer param1) {
+    final static GameEvent readPortalEntryEvent(int param0, CipherPacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -194,7 +194,7 @@ class ButtonWidget extends UiWidget {
           }
           var3 = param1.readUnsignedShort((byte) 69);
           var4 = param1.readUnsignedByte(31365);
-          stackIn_3_0 = ak.a(var4, (byte) -94, var2_int, var3);
+          stackIn_3_0 = ak.obtainPortalEntryEvent(var4, (byte) -94, var2_int, var3);
           return (GameEvent) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -214,7 +214,7 @@ class ButtonWidget extends UiWidget {
         try {
           if (null != this.field_A &&
             this.field_A instanceof ph) {
-            ((ph) (this.field_A)).a(param2, param3, -108, param0, param5, this);
+            ((ph) (this.field_A)).onButtonPointerReleased(param2, param3, -108, param0, param5, this);
           }
           if (!param4) {
             field_L = (java.math.BigInteger) null;
@@ -237,7 +237,7 @@ class ButtonWidget extends UiWidget {
             return;
           }
           if (this.field_A instanceof om) {
-            ((om) (this.field_A)).a(this.field_H, true, (UiWidget) (this));
+            ((om) (this.field_A)).onFocusChanged(this.field_H, true, (UiWidget) (this));
             return;
           }
           return;
@@ -250,7 +250,7 @@ class ButtonWidget extends UiWidget {
           return;
         }
         if (this.field_A instanceof om) {
-          ((om) (this.field_A)).a(this.field_H, true, (UiWidget) (this));
+          ((om) (this.field_A)).onFocusChanged(this.field_H, true, (UiWidget) (this));
           return;
         }
     }
@@ -269,19 +269,19 @@ class ButtonWidget extends UiWidget {
         try {
           if (param4 != -24) {
             var9 = (String) null;
-            ButtonWidget.b((byte) -31, (String) null);
+            ButtonWidget.hasValidPasswordLength((byte) -31, (String) null);
           }
           if (!this.field_F) {
             return false;
           }
-          if (!this.a(89, param5, param1, param0, param6)) {
+          if (!this.containsPointer(89, param5, param1, param0, param6)) {
             return false;
           }
           this.requestKeyboardFocus(param3, param4 ^ -24);
           this.field_u = param2;
           if (null != this.field_A &&
             this.field_A instanceof ph) {
-            ((ph) (this.field_A)).a(param6, param1, param2, this, param5, param4 - 25285, param0);
+            ((ph) (this.field_A)).onButtonPointerPressed(param6, param1, param2, this, param5, param4 - 25285, param0);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -298,7 +298,7 @@ class ButtonWidget extends UiWidget {
         }
     }
 
-    final static String a(String param0, int param1, int param2) {
+    final static String requestRemoveFriend(String param0, int param1, int param2) {
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
         String stackIn_9_0 = null;
@@ -335,9 +335,9 @@ class ButtonWidget extends UiWidget {
             stackIn_13_0 = vl.a(ki.field_i, new String[]{param0}, 2);
             return stackIn_13_0;
           }
-          ro.field_M.a((byte) 120, (IntrusiveNode) (var8));
+          ro.field_M.startBackwardFrom((byte) 120, (IntrusiveNode) (var8));
           while (true) {
-            var7 = (ml) (ro.field_M.b(6));
+            var7 = (ml) (ro.field_M.previous(6));
             if (var7 != null) {
               var7.field_Mb = var7.field_Mb - 1;
               continue;
@@ -348,7 +348,7 @@ class ButtonWidget extends UiWidget {
           var8.a(-4564);
           TabbedPane.field_Fb = TabbedPane.field_Fb - 1;
           var9 = ma.field_a;
-          var9.b((byte) -35, param2);
+          var9.writeCipheredOpcode((byte) -35, param2);
           var9.position = var9.position + 1;
           var5 = var9.position;
           var9.writeByte(-93, 1);
@@ -416,8 +416,8 @@ class ButtonWidget extends UiWidget {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param1, 117, param3, param2)) {
-            this.a(param2, param3, (byte) 26, param1);
+          if (this.beginWidgetDiagnosticVisit(param1, 117, param3, param2)) {
+            this.appendWidgetDiagnosticProperties(param2, param3, (byte) 26, param1);
             if (this.field_G) {
               discarded$2 = param3.append(" active");
             }
@@ -426,7 +426,7 @@ class ButtonWidget extends UiWidget {
             }
           }
           if (param0 != 7) {
-            ButtonWidget.a(',', -13);
+            ButtonWidget.isAlphanumeric(',', -13);
           }
           stackIn_8_0 = (StringBuilder) (param3);
           return stackIn_8_0;

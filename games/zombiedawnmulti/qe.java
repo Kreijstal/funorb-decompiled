@@ -60,7 +60,7 @@ final class qe {
           1550 >= this.field_l &&
           49 == this.field_l % 50) {
           this.field_n = 2.0f;
-          Camera.b(-127, 47);
+          Camera.createMixerStream(-127, 47);
         }
         if (this.field_j) {
           if (1.0f < this.field_n) {
@@ -114,10 +114,10 @@ final class qe {
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-          ContextMenu.field_Nb = pb.a("commonui", param2, -256, "frame_top");
-          jh.field_Hb = pb.a("commonui", param2, -256, "frame_bottom");
+          ContextMenu.field_Nb = pb.loadSpritesByName("commonui", param2, -256, "frame_top");
+          jh.field_Hb = pb.loadSpritesByName("commonui", param2, -256, "frame_bottom");
           TextWidgetPainter.field_e = fl.a("commonui", "jagex_logo_grey", param2, 11091);
-          ui.field_k = pb.a("commonui", param2, -256, "button");
+          ui.field_k = pb.loadSpritesByName("commonui", param2, -256, "button");
           rj.field_I = cn.a(true, "validation", param2, "commonui");
           DisplayNamePanel.field_H = (BitmapFont) ((Object) vo.a((byte) -46, "commonui", "arezzo12", param0, param2));
           ke.field_h = (BitmapFont) ((Object) vo.a((byte) -46, "commonui", "arezzo14", param0, param2));
@@ -151,7 +151,7 @@ final class qe {
             }
           }
           var9Lifetime1 = var17.height;
-          m.c(540);
+          m.pushRasterState(540);
           var17.bindAsRenderTarget();
           SoftwareRasterizer.desaturateRect(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);
@@ -253,7 +253,7 @@ final class qe {
         var13 = var10 + var11;
         SoftwareRasterizer.fillRectGradient(var11, 0, -var11 + var13, 38, 65793, 1981188);
         SoftwareRasterizer.drawVerticalLine(var13, 0, 38, 3102221);
-        var14 = am.a(0, var18.field_D[param1][1], 0, 1, var18.field_D[param1][0]);
+        var14 = am.createTeamColouredSprite(0, var18.field_D[param1][1], 0, 1, var18.field_D[param1][0]);
         var14.drawTransparent(var11, -1 + (-24 + var12));
         var21 = var18.field_b[param1];
         var22 = BitmapFont.truncateText(var9, var21, -2 + var10 - 48);
@@ -394,7 +394,7 @@ final class qe {
         if (param0 != 2) {
           this.field_j = false;
         }
-        IntrusiveNode var2 = PowerupButton.field_e.sceneObjects.c(83);
+        IntrusiveNode var2 = PowerupButton.field_e.sceneObjects.last(83);
         while (var2 instanceof SceneObject) {
           if (var2 instanceof GameCharacter) {
             this.field_h = this.field_h + 1;
@@ -419,7 +419,7 @@ final class qe {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -2739) {
-            stackIn_4_0 = oe.a(param1.length, param1, false, 0);
+            stackIn_4_0 = oe.decodeSingleByteText(param1.length, param1, false, 0);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;
@@ -477,7 +477,7 @@ final class qe {
     final static void c(byte param0) {
         int var1 = -58 % ((param0 - 45) / 56);
         String var2 = (String) null;
-        cb.a((String) null, 32, "");
+        cb.showLoginForm((String) null, 32, "");
     }
 
     private final void e(int param0) {

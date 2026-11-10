@@ -4,7 +4,7 @@
 final class EmailValidator extends TextInputValidator {
     static String[] field_q;
 
-    final static String a(int param0, char param1) {
+    final static String charToString(int param0, char param1) {
         int var2 = -82 / ((param0 - 2) / 53);
         return String.valueOf(param1);
     }
@@ -46,7 +46,7 @@ final class EmailValidator extends TextInputValidator {
     public static void releaseStatics(boolean param0) {
         field_q = null;
         if (param0) {
-          EmailValidator.a(-45, '\035');
+          EmailValidator.charToString(-45, '\035');
         }
     }
 
@@ -68,7 +68,7 @@ final class EmailValidator extends TextInputValidator {
           if (param0) {
             EmailValidator.releaseStatics(true);
           }
-          stackIn_5_0 = (null != gi.a(4, param1)) ? 0 : 1;
+          stackIn_5_0 = (null != gi.validateEmailAddress(4, param1)) ? 0 : 1;
           var3_int = stackIn_5_0;
           if (var3_int != 0) {
             stackIn_9_0 = db.field_b;

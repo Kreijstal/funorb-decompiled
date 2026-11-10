@@ -44,7 +44,7 @@ final class jq {
         SoftwareRasterizer.fillRectAlpha(param5, param1, 8, 21 - var6, 0, param4);
         Random var7 = new Random();
         if (param3 >= param0 &&
-          hp.a((byte) 11, var7, 7) == 0) {
+          hp.nextBoundedInt((byte) 11, var7, 7) == 0) {
           var8 = new ve(3 + param5, param1 - 12, 5, 0.0, 8.0, 1.5, 1, 1.5, 0.99, 1);
           var8.field_k = param1 * 79 + 13 * param5 + PowerupEvent.field_m;
           var9 = 200;
@@ -83,8 +83,8 @@ final class jq {
             }
             if (null != bg.field_e) {
               try {
-                bg.field_e.a(0L, (byte) -70);
-                bg.field_e.a(var6, (byte) -50);
+                bg.field_e.seek(0L, (byte) -70);
+                bg.field_e.readFully(var6, (byte) -50);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (0 == var6[var3_int]) {
                     continue;

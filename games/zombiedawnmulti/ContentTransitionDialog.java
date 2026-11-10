@@ -133,7 +133,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         field_ob = (int[]) null;
     }
 
-    final void j(byte param0) {
+    final void onResizeComplete(byte param0) {
         if (param0 >= -70) {
           field_ob = (int[]) null;
           if (QuickChatMenu.field_Rb != this.field_pb) {
@@ -157,7 +157,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
     }
 
     final boolean h(int param0) {
-        this.h((byte) 30);
+        this.finishTransition((byte) 30);
         if (param0 != -6134) {
           return false;
         }
@@ -177,9 +177,9 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         }
     }
 
-    final void h(byte param0) {
+    final void finishTransition(byte param0) {
         if (this.field_pb == null) {
-          super.h((byte) 63);
+          super.finishTransition((byte) 63);
           if (param0 < 29) {
             this.h(-78);
             return;
@@ -192,7 +192,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         } else {
           this.field_pb = null;
           this.field_hb.field_E = 256;
-          super.h((byte) 63);
+          super.finishTransition((byte) 63);
           if (param0 < 29) {
             this.h(-78);
             return;
@@ -201,14 +201,14 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         }
         this.field_pb = null;
         this.field_hb.field_E = 256;
-        super.h((byte) 63);
+        super.finishTransition((byte) 63);
         if (param0 >= 29) {
           return;
         }
         this.h(-78);
     }
 
-    void a(UiWidget param0, byte param1) {
+    void transitionToContent(UiWidget param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
@@ -257,7 +257,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
           } else {
             this.field_hb = new na();
           }
-          this.b((byte) 95, this.field_hb);
+          this.addChild((byte) 95, this.field_hb);
           this.field_kb = null;
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ie.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

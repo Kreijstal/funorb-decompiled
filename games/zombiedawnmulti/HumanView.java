@@ -20,7 +20,7 @@ abstract class HumanView extends UnitView {
     private int field_lb;
     int field_kb;
 
-    final static void f(int param0, int param1) {
+    final static void selectLanguageStrings(int param0, int param1) {
         lo.field_f = NetworkGameClient.field_l[param1];
         ud.field_Y = AgeValidator.field_v[param1];
         if (param0 != -7733) {
@@ -32,15 +32,15 @@ abstract class HumanView extends UnitView {
     final void setState(int param0, int param1) {
         if (this.state == 0 &&
           param0 == 1 &&
-          hp.a((byte) 29, g.field_a, 4) == 0) {
-          this.field_U = pb.$cfr$intArgs$a$90ed9136db05(62, this.field_mb);
+          hp.nextBoundedInt((byte) 29, g.field_a, 4) == 0) {
+          this.field_U = pb.createEffectStream(62, this.field_mb);
         }
         super.setState(param0, param1);
     }
 
     abstract void drawDebugFleePoints(Camera param0, byte param1);
 
-    final int q(int param0) {
+    final int getInfectionScore(int param0) {
         if (param0 != -5183) {
           return 32;
         }
@@ -87,19 +87,19 @@ abstract class HumanView extends UnitView {
         this.field_eb = 0;
         this.field_jb = false;
         this.field_qb = -1;
-        this.field_ib = hp.a((byte) 89, g.field_a, 200);
+        this.field_ib = hp.nextBoundedInt((byte) 89, g.field_a, 200);
         this.field_cb = new int[61];
         this.field_hb = new int[61];
         this.resetFleePoints(118);
-        this.field_lb = hp.a((byte) -122, g.field_a, 5);
-        if (this.m(15684)) {
-          this.field_mb = hp.a((byte) -119, g.field_a, 4) + 49;
+        this.field_lb = hp.nextBoundedInt((byte) -122, g.field_a, 5);
+        if (this.isFemale(15684)) {
+          this.field_mb = hp.nextBoundedInt((byte) -119, g.field_a, 4) + 49;
         } else {
-          this.field_mb = 26 + hp.a((byte) 124, g.field_a, 3);
+          this.field_mb = 26 + hp.nextBoundedInt((byte) 124, g.field_a, 3);
         }
     }
 
-    final void b(boolean param0) {
+    final void becomeInfected(boolean param0) {
         if (this.state == 18) {
           return;
         }
@@ -143,8 +143,8 @@ abstract class HumanView extends UnitView {
             if (this.field_U.isSamplePositionOutOfRange()) {
               this.field_U = null;
             } else {
-              this.field_U.setVolume(DropTargetWidget.b(124, var4, var3_int));
-              this.field_U.f(pb.a(var4, var3_int, false));
+              this.field_U.setVolume(DropTargetWidget.computeScreenVolume(124, var4, var3_int));
+              this.field_U.setPan(pb.computeStereoPan(var4, var3_int, false));
             }
           }
           if (i.field_b) {
@@ -265,7 +265,7 @@ abstract class HumanView extends UnitView {
         }
     }
 
-    final static String a(int param0, boolean param1, int param2, int param3) {
+    final static String toRadixString(int param0, boolean param1, int param2, int param3) {
         int var7 = 0;
         int var4;
         int var5;
@@ -330,7 +330,7 @@ abstract class HumanView extends UnitView {
           }
           var2 = PowerupEvent.field_m - this.field_qb;
           if (150 < var2) {
-            this.b(false);
+            this.becomeInfected(false);
           }
         }
         boolean decompiledFrameRemainder0 = true;
@@ -345,7 +345,7 @@ abstract class HumanView extends UnitView {
               this.field_ib = 53;
             } else {
               if (!this.field_gb) {
-                stackIn_54_1 = 20 + hp.a((byte) -67, g.field_a, 200);
+                stackIn_54_1 = 20 + hp.nextBoundedInt((byte) -67, g.field_a, 200);
               } else {
                 stackIn_54_1 = 65;
               }
@@ -383,9 +383,9 @@ abstract class HumanView extends UnitView {
             if (fieldTemp$2 >= 5) {
               this.field_lb = 0;
               var2Lifetime1 = 0;
-              var3 = PortalEntryEvent.field_m.field_A.c(103);
+              var3 = PortalEntryEvent.field_m.field_A.last(103);
               while (var3 instanceof cg) {
-                var2Lifetime1 = var2Lifetime1 != 0 | ((cg) (var3)).a(this, false) ? 1 : 0;
+                var2Lifetime1 = var2Lifetime1 != 0 | ((cg) (var3)).containsUnit(this, false) ? 1 : 0;
                 var3 = var3.previous;
               }
               if (!this.field_db &&
@@ -416,11 +416,11 @@ abstract class HumanView extends UnitView {
 
     }
 
-    final void n(int param0) {
+    final void forceState(int param0) {
         this.setState(param0, -27655);
     }
 
-    final boolean m(int param0) {
+    final boolean isFemale(int param0) {
         boolean stackIn_37_0 = false;
         int var2;
         int var3;
@@ -490,7 +490,7 @@ abstract class HumanView extends UnitView {
                   break;
                 }
                 if (param0 != 15684) {
-                  this.l(127);
+                  this.releaseToIdle(127);
                 }
                 return true;
               }
@@ -505,12 +505,12 @@ abstract class HumanView extends UnitView {
         return stackIn_37_0;
     }
 
-    final void l(int param0) {
+    final void releaseToIdle(int param0) {
         int var2 = -57 % ((0 - param0) / 33);
         this.setState(0, -27655);
     }
 
-    final static void a(long param0, String param1, int param2) {
+    final static void openPrivateChatTo(long param0, String param1, int param2) {
         CharSequence var5 = null;
         try {
           va.field_a = 2;
@@ -519,7 +519,7 @@ abstract class HumanView extends UnitView {
           }
           qf.field_g = param1;
           var5 = (CharSequence) ((Object) param1);
-          ql.field_a = tg.a(var5, false);
+          ql.field_a = tg.normalizePlayerName(var5, false);
           HotspotTextWidget.field_N = true;
           jj.field_M = param0;
         } catch (RuntimeException runtimeException) {

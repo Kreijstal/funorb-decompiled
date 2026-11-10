@@ -8,7 +8,7 @@ final class bk extends t {
     static String field_j;
     static String field_k;
 
-    final byte[] a(int param0) {
+    final byte[] getBytes(int param0) {
         int var2 = 82 / ((-69 - param0) / 36);
         byte[] var3 = new byte[this.field_h.capacity()];
         this.field_h.position(0);
@@ -16,19 +16,19 @@ final class bk extends t {
         return var3;
     }
 
-    final static Sprite[] a(int param0, int param1, byte param2) {
+    final static Sprite[] createSolidFrameSprites(int param0, int param1, byte param2) {
         if (param2 != 28) {
           field_i = (ReportAbuseDialog) null;
-          return PortalView.a((byte) -112, param0, 1, param1);
+          return PortalView.createSolidFrameSprites((byte) -112, param0, 1, param1);
         }
-        return PortalView.a((byte) -112, param0, 1, param1);
+        return PortalView.createSolidFrameSprites((byte) -112, param0, 1, param1);
     }
 
-    final void a(byte[] param0, byte param1) {
+    final void setBytes(byte[] param0, byte param1) {
         try {
           this.field_h = java.nio.ByteBuffer.allocateDirect(param0.length);
           if (param1 > -68) {
-            bk.a(112, 60, (byte) -105);
+            bk.createSolidFrameSprites(112, 60, (byte) -105);
           }
           this.field_h.position(0);
           this.field_h.put(param0);
@@ -37,7 +37,7 @@ final class bk extends t {
         }
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void readUsernameParameter(java.applet.Applet param0, int param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         CharSequence var3 = null;

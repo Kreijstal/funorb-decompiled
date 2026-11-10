@@ -138,7 +138,7 @@ class GameWorld {
         }
         boolean decompiledFrameRemainder0 = true;
         if (!this.hasUpgrade((byte) -83, 45, param1) && (!this.hasUpgrade((byte) -83, 46, param1) ||
-          !(hp.a((byte) 7, g.field_a, 100) < 40))) {
+          !(hp.nextBoundedInt((byte) 7, g.field_a, 100) < 40))) {
           stackIn_8_0 = false;
           decompiledFrameRemainder0 = false;
         }
@@ -153,22 +153,22 @@ class GameWorld {
         int var4;
         SceneObject var3Lifetime1;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
-        var3 = (SceneObject) (this.characters.c(param1 ^ 27));
+        var3 = (SceneObject) (this.characters.last(param1 ^ 27));
         while (var3 != null) {
           if (var3.objectId == param0) {
             return var3;
           }
-          var3 = (SceneObject) (this.characters.b(6));
+          var3 = (SceneObject) (this.characters.previous(6));
         }
         if (param1 != 33) {
           this.field_A = (IntrusiveDeque) null;
         }
-        var3Lifetime1 = (SceneObject) (this.field_u.c(47));
+        var3Lifetime1 = (SceneObject) (this.field_u.last(47));
         while (var3Lifetime1 != null) {
           if (param0 == var3Lifetime1.objectId) {
             return var3Lifetime1;
           }
-          var3Lifetime1 = (SceneObject) (this.field_u.b(param1 - 27));
+          var3Lifetime1 = (SceneObject) (this.field_u.previous(param1 - 27));
         }
         return null;
     }
@@ -256,7 +256,7 @@ class GameWorld {
               this.teamCharacterCounts[var9] = this.teamCharacterCounts[var9] + 1;
             } else {
               if (var14 == 2) {
-                var11 = pg.a(var6, (byte) -83, var8, var7);
+                var11 = pg.createArmedHumanView(var6, (byte) -83, var8, var7);
                 var4Lifetime1 = var11;
               } else {
                 if (3 == var14) {
@@ -286,11 +286,11 @@ class GameWorld {
                     var14 = var5;
                     var15 = var8 & 255 | var8 >> 16;
                     this.a(var6, var14, 117, var7, var15, (NavigationGrid) null);
-                    var19 = (ce) (this.field_s.a((byte) -127));
+                    var19 = (ce) (this.field_s.first((byte) -127));
                     var19.field_l = var15 * 2;
                   } else {
                     var13 = new cg((var8 & -1073741824) >>> 30, var6, var7);
-                    this.field_A.a(var13, false);
+                    this.field_A.addFirst(var13, false);
                     var4Lifetime1 = null;
                   }
                 }
@@ -301,7 +301,7 @@ class GameWorld {
             }
             ((SceneObject) (var4Lifetime1)).objectId = var5;
             this.nextObjectId = 1 + var5;
-            this.characters.a((IntrusiveNode) (var4Lifetime1), false);
+            this.characters.addFirst((IntrusiveNode) (var4Lifetime1), false);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -323,7 +323,7 @@ class GameWorld {
         try {
           var8 = ma.field_a;
           CipherPacketBuffer var6 = var8;
-          var8.b((byte) -35, param2);
+          var8.writeCipheredOpcode((byte) -35, param2);
           if (param5 != 29602) {
             field_w = (String) null;
           }
@@ -336,7 +336,7 @@ class GameWorld {
           if (param3 == null) {
             var8.writeShort(param0, (byte) -71);
           } else {
-            GameEvent.a(var8, param3, -31746);
+            GameEvent.writeCompressedString(var8, param3, -31746);
           }
           var8.e(41, var8.position - var7);
         } catch (RuntimeException runtimeException) {
@@ -352,7 +352,7 @@ class GameWorld {
             this.field_g = 51;
           }
           param1.unlinkTertiary((byte) -70);
-          this.field_u.a(param1, false);
+          this.field_u.addFirst(param1, false);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "kb.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -405,7 +405,7 @@ class GameWorld {
         RuntimeException var7_ref = null;
         try {
           var7 = new ce(param5, param0, param3, param4, param1);
-          this.field_s.a(var7, false);
+          this.field_s.addFirst(var7, false);
           if (param2 <= 98) {
             var8 = (Sprite[]) null;
             GameWorld.a(-11, 108, (Sprite[]) null, -106, (Sprite[]) null, (BitmapFont) null, -103, -20, -90, 29, (Sprite[]) null, (byte) 50, 82, -116, 28);

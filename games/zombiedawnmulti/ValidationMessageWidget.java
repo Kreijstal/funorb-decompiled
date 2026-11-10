@@ -45,7 +45,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         var6Lifetime1 = this.field_Y.getDebouncedValidationState(97);
         var8 = (rk) ((Object) this.painter);
         var9 = this.field_y + param3;
-        var10 = var8.a((UiWidget) (this), 0, param1) + (var8.a((UiWidget) (this), param0 - 99).a((byte) -111) >> 1);
+        var10 = var8.getTextOriginY((UiWidget) (this), 0, param1) + (var8.getTextLayout((UiWidget) (this), param0 - 99).height((byte) -111) >> 1);
         if (PortalView.field_H == var6Lifetime1) {
           var18 = rj.field_I[0];
           var11 = var18.fullWidth << 1;
@@ -119,16 +119,16 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         RuntimeException var2 = null;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var5 = (MusicPatchNode) (QuickChatCategoryRegistry.field_a.c(92));
+          var5 = (MusicPatchNode) (QuickChatCategoryRegistry.field_a.last(92));
           while (var5 != null) {
             ih.a((byte) 99, var5, param0);
-            var5 = (MusicPatchNode) (QuickChatCategoryRegistry.field_a.b(6));
+            var5 = (MusicPatchNode) (QuickChatCategoryRegistry.field_a.previous(6));
           }
           var2_int = -37 / ((-63 - param1) / 58);
-          var3 = UnitStateEvent.field_j.c(48);
+          var3 = UnitStateEvent.field_j.last(48);
           while (var3 != null) {
             qo.b(true, param0);
-            var3 = UnitStateEvent.field_j.b(6);
+            var3 = UnitStateEvent.field_j.previous(6);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -229,7 +229,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           throw new IllegalStateException();
         }
         hh.field_m = true;
-        sc.a(-86, false);
+        sc.showLoginDialog(-86, false);
         a.field_b = param0;
     }
 
@@ -263,7 +263,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         int var10Lifetime1Lifetime1;
         var13 = ZombieDawnMulti.field_E ? 1 : 0;
         var4 = null;
-        tn.field_A.field_Gb.field_Cb.e(-30986);
+        tn.field_A.field_Gb.field_Cb.clear(-30986);
         var5 = 0;
         var6 = 0;
         for (var7 = -1 + uf.field_g; var7 >= 0; var7--) {
@@ -271,9 +271,9 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           var9 = 0;
           if (!nh.field_m &&
             var5 < InfectionEvent.field_m) {
-            var10 = CipherPacketBuffer.a(var8_ref_ka.field_l, true);
+            var10 = CipherPacketBuffer.getChatFilterMode(var8_ref_ka.field_l, true);
             if (var8_ref_ka.a(true) >= var10 && (var8_ref_ka.field_k ||
-              !hp.a(var8_ref_ka.field_e, 1020))) {
+              !hp.isFriend(var8_ref_ka.field_e, 1020))) {
               var9 = 1;
             }
           }
@@ -283,7 +283,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
               if (null == var8_ref_ka.field_q) {
                 SceneObject.field_D = SceneObject.field_D + 1;
               }
-              var10_ref_String = bh.a(-126, var8_ref_ka);
+              var10_ref_String = bh.formatChatPrefix(-126, var8_ref_ka);
               var11 = var10_ref_String + BitmapFont.escapeMarkup(var8_ref_ka.field_d);
               var12 = UiComponent.a(var8_ref_ka, (byte) -63);
               var8_ref_ka.field_q = new UiComponent(0L, qq.field_f, var11);
@@ -323,12 +323,12 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             if (null == ClickMarker.field_v) {
               var10Lifetime1 = tn.field_A.field_Jb.field_z + (-tn.field_A.field_Gb.field_z - tn.field_A.field_Gb.field_I);
               if (!sp.field_h) {
-                tn.field_A.a(2 * (param2 * param1), 112, param2, true);
+                tn.field_A.scrollContent(2 * (param2 * param1), 112, param2, true);
                 stackIn_68_0 = (tn.field_A.field_Gb.field_Q + tn.field_A.field_Gb.field_mb == var10Lifetime1);
                 sp.field_h = stackIn_68_0;
               } else {
                 tn.field_A.field_Gb.field_mb = var10Lifetime1 - tn.field_A.field_Gb.field_Q;
-                tn.field_A.a(2 * (param2 * param1), 112, param2, true);
+                tn.field_A.scrollContent(2 * (param2 * param1), 112, param2, true);
                 stackIn_72_0 = (tn.field_A.field_Gb.field_Q + tn.field_A.field_Gb.field_mb == var10Lifetime1);
                 sp.field_h = stackIn_72_0;
               }
@@ -338,12 +338,12 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           }
           var10Lifetime1Lifetime1 = tn.field_A.field_Jb.field_z + (-tn.field_A.field_Gb.field_z - tn.field_A.field_Gb.field_I);
           if (!sp.field_h) {
-            tn.field_A.a(2 * (param2 * param1), 112, param2, true);
+            tn.field_A.scrollContent(2 * (param2 * param1), 112, param2, true);
             stackIn_79_0 = (tn.field_A.field_Gb.field_Q + tn.field_A.field_Gb.field_mb == var10Lifetime1Lifetime1);
             sp.field_h = stackIn_79_0;
           } else {
             tn.field_A.field_Gb.field_mb = var10Lifetime1Lifetime1 - tn.field_A.field_Gb.field_Q;
-            tn.field_A.a(2 * (param2 * param1), 112, param2, true);
+            tn.field_A.scrollContent(2 * (param2 * param1), 112, param2, true);
             stackIn_83_0 = (tn.field_A.field_Gb.field_Q + tn.field_A.field_Gb.field_mb == var10Lifetime1Lifetime1);
             sp.field_h = stackIn_83_0;
           }
@@ -356,12 +356,12 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         if (!HotspotTextWidget.field_N) {
           var10Lifetime2 = tn.field_A.field_Jb.field_z + (-tn.field_A.field_Gb.field_z - tn.field_A.field_Gb.field_I);
           if (!sp.field_h) {
-            tn.field_A.a(2 * (param2 * param1), 112, param2, true);
+            tn.field_A.scrollContent(2 * (param2 * param1), 112, param2, true);
             stackIn_43_0 = (tn.field_A.field_Gb.field_Q + tn.field_A.field_Gb.field_mb == var10Lifetime2);
             sp.field_h = stackIn_43_0;
           } else {
             tn.field_A.field_Gb.field_mb = var10Lifetime2 - tn.field_A.field_Gb.field_Q;
-            tn.field_A.a(2 * (param2 * param1), 112, param2, true);
+            tn.field_A.scrollContent(2 * (param2 * param1), 112, param2, true);
             stackIn_47_0 = (tn.field_A.field_Gb.field_Q + tn.field_A.field_Gb.field_mb == var10Lifetime2);
             sp.field_h = stackIn_47_0;
           }
@@ -371,12 +371,12 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           }
           var10Lifetime2 = tn.field_A.field_Jb.field_z + (-tn.field_A.field_Gb.field_z - tn.field_A.field_Gb.field_I);
           if (!sp.field_h) {
-            tn.field_A.a(2 * (param2 * param1), 112, param2, true);
+            tn.field_A.scrollContent(2 * (param2 * param1), 112, param2, true);
             stackIn_60_0 = (tn.field_A.field_Gb.field_Q + tn.field_A.field_Gb.field_mb == var10Lifetime2);
             sp.field_h = stackIn_60_0;
           } else {
             tn.field_A.field_Gb.field_mb = var10Lifetime2 - tn.field_A.field_Gb.field_Q;
-            tn.field_A.a(2 * (param2 * param1), 112, param2, true);
+            tn.field_A.scrollContent(2 * (param2 * param1), 112, param2, true);
             stackIn_56_0 = (tn.field_A.field_Gb.field_Q + tn.field_A.field_Gb.field_mb == var10Lifetime2);
             sp.field_h = stackIn_56_0;
           }
@@ -385,7 +385,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
     }
 
     ValidationMessageWidget(ValidationProvider param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, SimUnit.g((byte) 120));
+        super(param1, SimUnit.getDefaultTextPainter((byte) 120));
         try {
           this.field_bb = param1;
           this.field_Y = param0;

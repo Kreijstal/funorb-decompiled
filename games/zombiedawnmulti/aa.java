@@ -19,15 +19,15 @@ final class aa extends ii {
         ra var2 = new ra();
         if (param0 != -19300) {
           PcmSampleStream var3 = (PcmSampleStream) null;
-          aa.a(true, (PcmSampleStream) null);
+          aa.removeSoundStream(true, (PcmSampleStream) null);
         }
-        UnitStateEvent.field_j.a(var2, false);
+        UnitStateEvent.field_j.addFirst(var2, false);
         qo.b(true, param1);
         return var2;
     }
 
-    final long a(byte param0) {
-        this.field_k = this.field_k + this.d(1);
+    final long getMillisUntilNextTick(byte param0) {
+        this.field_k = this.field_k + this.sampleElapsedNanos(1);
         if (this.field_k < this.field_i) {
           return (this.field_i - this.field_k) / 1000000L;
         }
@@ -35,7 +35,7 @@ final class aa extends ii {
         return 0L;
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void updateActivePopup(byte param0, boolean param1) {
         if (ki.field_e != null &&
           ki.field_e.updateAndPollDismissal(0, param1)) {
           ki.field_e = null;
@@ -45,7 +45,7 @@ final class aa extends ii {
         }
     }
 
-    final static boolean e(int param0) {
+    final static boolean isReconnecting(int param0) {
         if (param0 != 0) {
           field_n = (String[]) null;
         }
@@ -63,7 +63,7 @@ final class aa extends ii {
         field_j = null;
     }
 
-    private final long d(int param0) {
+    private final long sampleElapsedNanos(int param0) {
         int var8 = 0;
         int var9 = ZombieDawnMulti.field_E ? 1 : 0;
         long var2 = System.nanoTime();
@@ -84,7 +84,7 @@ final class aa extends ii {
         return var6 / (long)this.field_f;
     }
 
-    final int a(long param0, boolean param1) {
+    final int advanceTicks(long param0, boolean param1) {
         int var4;
         int var5;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -109,7 +109,7 @@ final class aa extends ii {
         return var4;
     }
 
-    final static void a(boolean param0, PcmSampleStream param1) {
+    final static void removeSoundStream(boolean param0, PcmSampleStream param1) {
         if (!param0) {
           return;
         }
@@ -120,7 +120,7 @@ final class aa extends ii {
         }
     }
 
-    final void b(int param0) {
+    final void resetTiming(int param0) {
         if (this.field_i > this.field_k) {
           this.field_k = this.field_k + (this.field_i - this.field_k);
         }

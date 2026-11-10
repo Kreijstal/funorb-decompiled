@@ -198,8 +198,8 @@ final class fd extends SceneObject {
               }
               ma.field_a.position = 0;
               ma.field_a.writeByte(-94, 14);
-              ma.field_a.writeByte(126, ki.field_a.b(param0 - 7).field_d);
-              cb.a(-1, false);
+              ma.field_a.writeByte(126, ki.field_a.getCredentialKind(param0 - 7).field_d);
+              cb.flushPackets(-1, false);
               vo.field_l = de.field_h;
             }
             if (param0 != 14) {
@@ -222,7 +222,7 @@ final class fd extends SceneObject {
               ReportAbuseDialog.b(10, 8)) {
               Camera.field_c = s.field_e.readLong((byte) -30);
               s.field_e.position = 0;
-              pi.a((byte) -59, param2, param1, ki.field_a, param5);
+              pi.sendLoginPacket((byte) -59, param2, param1, ki.field_a, param5);
               vo.field_l = lc.field_l;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -240,7 +240,7 @@ final class fd extends SceneObject {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  ak.a((byte) -111);
+                  ak.closeGameSocket((byte) -111);
                   UiTheme.field_j = false;
                   stackIn_32_0 = var6_intLifetime1;
                   return stackIn_32_0;
@@ -301,15 +301,15 @@ final class fd extends SceneObject {
               }
               ProgressDialog.field_lb = s.field_e.readString((byte) -48);
               var12 = (CharSequence) ((Object) ProgressDialog.field_lb);
-              ProxySocketConnector.field_k = tg.a(var12, false);
+              ProxySocketConnector.field_k = tg.normalizePlayerName(var12, false);
               qq.field_a = s.field_e.readUnsignedByte(31365);
               vo.field_l = pi.field_a;
-              if (ki.field_a.b(7) != uq.field_b) {
-                if (ki.field_a.b(7) == ArrayWidgetGroup.field_G) {
-                  RasterBuffer.field_c.a(-100, StatefulTextPainter.b(0));
+              if (ki.field_a.getCredentialKind(7) != uq.field_b) {
+                if (ki.field_a.getCredentialKind(7) == ArrayWidgetGroup.field_G) {
+                  RasterBuffer.field_c.saveAsLastLoginMethod(-100, StatefulTextPainter.b(0));
                 }
               } else {
-                wp.field_b.a(-108, StatefulTextPainter.b(0));
+                wp.field_b.saveAsLastLoginMethod(-108, StatefulTextPainter.b(0));
               }
               UiTheme.field_j = false;
               if (var11 != null) {
@@ -325,7 +325,7 @@ final class fd extends SceneObject {
                 }
               } else {
                 try {
-                  JavaScriptBridge.callFunctionWithArgs(StatefulTextPainter.b(0), "zap", (byte) 23, new Object[]{RandomAccessCacheFile.a(ii.field_d, (byte) 26)});
+                  JavaScriptBridge.callFunctionWithArgs(StatefulTextPainter.b(0), "zap", (byte) 23, new Object[]{RandomAccessCacheFile.decodeBase37(ii.field_d, (byte) 26)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -334,17 +334,17 @@ final class fd extends SceneObject {
               if (vl.field_h > 0) {
                 cm.field_e = true;
               }
-              ma.field_a.a((byte) -77, mj.field_Fb);
+              ma.field_a.installCipher((byte) -77, mj.field_Fb);
               for (var8Lifetime1 = 0; 4 > var8Lifetime1; var8Lifetime1++) {
                 mj.field_Fb[var8Lifetime1] = mj.field_Fb[var8Lifetime1] + 50;
               }
-              s.field_e.a((byte) -116, mj.field_Fb);
+              s.field_e.installCipher((byte) -116, mj.field_Fb);
               stackIn_90_0 = PortalEntryEvent.field_i;
               return stackIn_90_0;
             }
             if (vo.field_l == ButtonWidget.field_K &&
               dd.a(0)) {
-              ak.a((byte) -124);
+              ak.closeGameSocket((byte) -124);
               if (PortalEntryEvent.field_i == 7 &&
                 !UiTheme.field_j) {
                 UiTheme.field_j = true;
@@ -361,7 +361,7 @@ final class fd extends SceneObject {
             }
             if (ki.field_h == null) {
               if (UiTheme.field_j) {
-                if (LinkButtonPainter.b((byte) -22) > 30000L) {
+                if (LinkButtonPainter.millisSinceLastReceive((byte) -22) > 30000L) {
                   ol.field_q = aj.field_l;
                 } else {
                   ol.field_q = CipherPacketBuffer.field_w;

@@ -19,21 +19,21 @@ final class pd {
         field_e = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void drawFrame(int param0, int param1, int param2, int param3, int param4) {
         if (param4 != 12018) {
           return;
         }
-        s.a(param0, 0, this.field_d, param1, param3, param2);
+        s.drawNineSliceFrame(param0, 0, this.field_d, param1, param3, param2);
     }
 
-    final static int a(int param0) {
+    final static int randomColour(int param0) {
         if (param0 != -27486) {
           return -94;
         }
-        return hp.a((byte) 99, g.field_a, 256) << 16 | hp.a((byte) -91, g.field_a, 256) << 8 | hp.a((byte) -97, g.field_a, 256);
+        return hp.nextBoundedInt((byte) 99, g.field_a, 256) << 16 | hp.nextBoundedInt((byte) -91, g.field_a, 256) << 8 | hp.nextBoundedInt((byte) -97, g.field_a, 256);
     }
 
-    final static boolean a(long param0, String param1, int param2) {
+    final static boolean isOnlineFriendOrLobbyPlayer(long param0, String param1, int param2) {
         ml var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -45,7 +45,7 @@ final class pd {
         try {
           if (param2 != 2) {
             var5 = (byte[]) null;
-            pd.a((byte) 9, (byte[]) null);
+            pd.decodeSpriteSheet((byte) 9, (byte[]) null);
           }
           var4 = dn.a(param1, false);
           if (var4 != null &&
@@ -76,7 +76,7 @@ final class pd {
         }
     }
 
-    final static void a(byte param0, byte[] param1) {
+    final static void decodeSpriteSheet(byte param0, byte[] param1) {
         byte dupTemp$1 = 0;
         byte dupTemp$0 = 0;
         int stackIn_24_0 = 0;

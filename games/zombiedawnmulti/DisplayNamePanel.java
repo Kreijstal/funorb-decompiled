@@ -36,13 +36,13 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
             return true;
           }
           if (param0 == 98) {
-            stackIn_6_0 = this.a((byte) -1, param2);
+            stackIn_6_0 = this.focusPreviousChild((byte) -1, param2);
             return stackIn_6_0;
           }
           if (param0 != 99) {
             return false;
           }
-          stackIn_10_0 = this.a(param3 + 6241, param2);
+          stackIn_10_0 = this.focusNextChild(param3 + 6241, param2);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -63,7 +63,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         if (!this.h(param0 - 16777195)) {
           return;
         }
-        DiskCacheWorker.a(this.field_G.field_j, (byte) 126);
+        DiskCacheWorker.startDisplayNameLogin(this.field_G.field_j, (byte) 126);
         if (param0 != 16777215) {
           discarded$0 = this.h(-58);
         }
@@ -73,7 +73,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         if (param0 != 496) {
           return;
         }
-        ((UsernameAvailabilityValidator) (this.field_G.getValidationProvider((byte) -67))).i(-22837);
+        ((UsernameAvailabilityValidator) (this.field_G.getValidationProvider((byte) -67))).resetCheckedName(-22837);
     }
 
     public final void onButtonActivated(int param0, int param1, ButtonWidget param2, int param3, int param4) {
@@ -150,7 +150,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         this.field_M = new ButtonWidget(ji.field_e, (WidgetListener) null);
         this.field_W = new ButtonWidget(gk.field_a, (WidgetListener) null);
         this.field_G.field_x = bi.field_d;
-        this.field_G.a((byte) -27, new UsernameAvailabilityValidator(this.field_G));
+        this.field_G.setValidationProvider((byte) -27, new UsernameAvailabilityValidator(this.field_G));
         this.field_M.field_F = false;
         this.field_M.painter = (WidgetPainter) ((Object) new oq());
         this.field_W.painter = (WidgetPainter) ((Object) new LinkButtonPainter());
@@ -160,17 +160,17 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         var2.setWidgetBounds(20, var3, 28972, 270, 50);
         int var5 = 200;
         var3 += 50;
-        this.b((byte) 101, var2);
+        this.addChild((byte) 101, var2);
         var3 = var3 + (this.a(var3, PasswordValidator.field_w, 170, this.field_G, -43, r.field_e) + 5);
         this.field_M.setWidgetBounds(-var5 + 496 >> 1, var3, 28972, var5, 40);
         this.field_W.setWidgetBounds(3 + var4, var3 + 15, 28972, 60, 40);
         this.field_W.field_A = (WidgetListener) (this);
         this.field_M.field_A = (WidgetListener) (this);
-        this.b((byte) 61, this.field_M);
-        this.b((byte) 81, this.field_W);
+        this.addChild((byte) 61, this.field_M);
+        this.addChild((byte) 81, this.field_W);
         this.field_V = new UsernameSuggestionsPanel((UsernameSuggestionListener) (this));
         this.field_V.setWidgetBounds(60 + this.field_G.field_n + this.field_G.field_y, 20, 28972, -60 + (this.field_n - this.field_G.field_y - this.field_G.field_n), 150);
-        this.b((byte) 120, this.field_V);
+        this.addChild((byte) 120, this.field_V);
         this.setWidgetBounds(0, 0, 28972, 496, var4 + 55 + var3);
     }
 
@@ -296,10 +296,10 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
             field_U = (Calendar) null;
           }
           var10 = new LabeledChildWidget(20, param0, 120 + param6, 25, param1, false, 120, 3, ke.field_h, 16777215, param4);
-          this.b((byte) 115, var10);
+          this.addChild((byte) 115, var10);
           var9 = new ValidationMessageWidget(((ValidationProviderSource) ((Object) param1)).getValidationProvider((byte) -61), param2, 126, var10.field_w + param0, 25 + param6, param3);
           var9.field_A = (WidgetListener) (this);
-          this.b((byte) 91, var9);
+          this.addChild((byte) 91, var9);
           stackIn_3_0 = var9.field_w + var10.field_w;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

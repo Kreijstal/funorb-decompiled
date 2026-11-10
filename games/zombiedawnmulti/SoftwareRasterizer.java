@@ -140,7 +140,7 @@ final class SoftwareRasterizer {
         }
     }
 
-    final static void d(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawThickLine(int param0, int param1, int param2, int param3, int param4, int param5) {
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int var6;

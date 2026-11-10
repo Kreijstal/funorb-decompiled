@@ -135,7 +135,7 @@ final class BufferedSocket implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             var1_ref = (Exception) (Object) decompiledCaughtException;
             var7 = (String) null;
-            MouseInputHandler.a((String) null, (Throwable) ((Object) var1_ref), false);
+            MouseInputHandler.reportClientError((String) null, (Throwable) ((Object) var1_ref), false);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -149,8 +149,8 @@ final class BufferedSocket implements Runnable {
           BufferedSocket.b((byte) 24);
         }
         cr var2 = new cr();
-        TabbedPane.field_Gb.a(var2, false);
-        StateIconLabel.b(1, param1);
+        TabbedPane.field_Gb.addFirst(var2, false);
+        StateIconLabel.sendByteRequest(1, param1);
         return var2;
     }
 
@@ -343,7 +343,7 @@ final class BufferedSocket implements Runnable {
               }
             }
             if (null == this.field_c) {
-              this.field_c = this.field_s.a(47, (Runnable) (this), 3);
+              this.field_c = this.field_s.startThread(47, (Runnable) (this), 3);
             }
             this.notifyAll();
           }

@@ -9,12 +9,12 @@ final class oe {
     static String field_e;
     static String field_b;
 
-    final static boolean a(int param0) {
+    final static boolean isNameEntryPopupOpen(int param0) {
         int var1 = 26 % ((-17 - param0) / 52);
         return gi.field_i != null ? true : false;
     }
 
-    final static String a(int param0, byte[] param1, boolean param2, int param3) {
+    final static String decodeSingleByteText(int param0, byte[] param1, boolean param2, int param3) {
         int var6 = 0;
         int incrementValue$1 = 0;
         char[] var4 = null;
@@ -38,7 +38,7 @@ final class oe {
           var4 = var11;
           if (param2) {
             var10 = (byte[]) null;
-            oe.a(-96, (byte[]) null, true, 87);
+            oe.decodeSingleByteText(-96, (byte[]) null, true, 87);
           }
           var5 = 0;
           for (var6 = 0; var6 < param0; var6++) {
@@ -85,7 +85,7 @@ final class oe {
         field_c = null;
     }
 
-    final static void a(int param0, int param1, Sprite[] param2, byte param3) {
+    final static void setMenuFrameStyle(int param0, int param1, Sprite[] param2, byte param3) {
         try {
           qf.field_c = new pd(param2);
           if (param3 != -21) {

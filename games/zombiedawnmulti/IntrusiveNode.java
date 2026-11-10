@@ -19,12 +19,12 @@ class IntrusiveNode {
           this.previous = null;
           return;
         }
-        IntrusiveNode.a(false, 40, -48, -58);
+        IntrusiveNode.placePopupVertically(false, 40, -48, -58);
         this.next = null;
         this.previous = null;
     }
 
-    final boolean b(int param0) {
+    final boolean isLinked(int param0) {
         if (param0 != 4) {
           return true;
         }
@@ -34,7 +34,7 @@ class IntrusiveNode {
         return false;
     }
 
-    final static int a(boolean param0, int param1, int param2, int param3) {
+    final static int placePopupVertically(boolean param0, int param1, int param2, int param3) {
         if (!(param1 + param2 + param3 > SoftwareRasterizer.height)) {
           return param2 + param1;
         }
@@ -44,23 +44,23 @@ class IntrusiveNode {
         if (param0) {
           return SoftwareRasterizer.height - param3;
         }
-        IntrusiveNode.a(false, -49, -96, 42);
+        IntrusiveNode.placePopupVertically(false, -49, -96, 42);
         return SoftwareRasterizer.height - param3;
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void drawLobbyPanels(boolean param0, int param1) {
         if (cr.a((byte) 27)) {
           param0 = false;
         }
-        gg.a(124, param0);
-        TextWidgetPainter.b((byte) 117);
+        gg.drawGameSetupPanels(124, param0);
+        TextWidgetPainter.drawQuickChatOverlay((byte) 117);
         if (param1 != 2) {
           field_a = -119;
           return;
         }
     }
 
-    final static void a(int param0, byte[] param1, int param2, int param3) {
+    final static void writeIntAt(int param0, byte[] param1, int param2, int param3) {
         param1[param0 * 4] = (byte)(param3 >>> 24);
         if (param2 >= -71) {
           return;

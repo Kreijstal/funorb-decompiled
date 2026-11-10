@@ -25,7 +25,7 @@ final class ci {
           if (var3.field_j != 2 &&
             var3.field_j != 4) {
           }
-          this.field_b.a(var3, false);
+          this.field_b.addFirst(var3, false);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ci.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -83,12 +83,12 @@ final class ci {
         if (param0 != -85) {
           return (byte[]) null;
         }
-        gi var4_ref = (gi) (var3.c(113));
+        gi var4_ref = (gi) (var3.last(113));
         while (var4_ref != null) {
           if (var4_ref.field_k == param1) {
             break;
           }
-          var4_ref = (gi) (var3.b(6));
+          var4_ref = (gi) (var3.previous(6));
         }
         if (var4_ref == null) {
           return null;
@@ -133,7 +133,7 @@ final class ci {
           } else {
             stackIn_4_0 = InflaterDecompressor.field_a;
           }
-          MouseWheelInput.a(stackIn_4_0, false);
+          MouseWheelInput.layoutLobbySlidePanels(stackIn_4_0, false);
           BirthDateInputWidget.field_U.a(0, JaggrabDownloader.field_i.field_zb, 0, (byte) -74, -2 + (-40 + JaggrabDownloader.field_i.field_z));
           ClientException.field_h.setBounds(jk.field_f, 0, CipherPacketBuffer.field_r.field_zb, 0, -3344);
           stackIn_6_0 = ContentTransitionDialog.field_jb;
@@ -146,7 +146,7 @@ final class ci {
           }
           ((UiComponent) (Object) stackIn_6_0).setBounds(stackIn_6_1, stackIn_6_2, -stackIn_7_3 + CipherPacketBuffer.field_r.field_zb, 0, -3344);
           bf.field_h.setBounds(18, 2 + jk.field_f, 42 + DualLinkNode.field_o, -42 - DualLinkNode.field_o + CipherPacketBuffer.field_r.field_zb, -3344);
-          bf.field_n.a(DualLinkNode.field_o, 2, CipherPacketBuffer.field_r.field_zb, 0, -2 - jk.field_f + (CipherPacketBuffer.field_r.field_z - 20), -31465, 20 + (2 + jk.field_f));
+          bf.field_n.setBoundsAndLayout(DualLinkNode.field_o, 2, CipherPacketBuffer.field_r.field_zb, 0, -2 - jk.field_f + (CipherPacketBuffer.field_r.field_z - 20), -31465, 20 + (2 + jk.field_f));
           jp.field_b.setBounds(40, JaggrabDownloader.field_i.field_z - 40, JaggrabDownloader.field_i.field_zb, 0, -3344);
           gg.field_m.setBounds(30, 0, LevelData.field_a.field_zb, 0, -3344);
           SocketConnector.field_a.setBounds(-2 + LevelData.field_a.field_z - 70, 30, LevelData.field_a.field_zb, 0, -3344);
@@ -250,7 +250,7 @@ final class ci {
           qf.field_b.setBounds(-10 + (-4 + SoftwareRasterizer.height - 130), 10, 360, SoftwareRasterizer.width - 360 >> 1, -3344);
           mq.field_l.setBounds(24, 0, qf.field_b.field_zb, 0, -3344);
           vb.field_c.setBounds(-24 + qf.field_b.field_z, 24, qf.field_b.field_zb, 0, -3344);
-          vb.field_c.field_ab = tg.a(1, vb.field_c.field_z, 8421504, 3, 11579568, 35);
+          vb.field_c.field_ab = tg.createGradientFrameSprites(1, vb.field_c.field_z, 8421504, 3, 11579568, 35);
           pd.field_b.setBounds(-26 + (-10 + vb.field_c.field_z), 5, -10 + vb.field_c.field_zb, 5, -3344);
           pg.field_a.setBounds(24, -24 + vb.field_c.field_z - 5, 80, (-80 + vb.field_c.field_zb) / 2, -3344);
           if (param1 > -6) {

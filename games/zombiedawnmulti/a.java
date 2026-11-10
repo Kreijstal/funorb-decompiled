@@ -13,12 +13,12 @@ final class a {
           return;
         }
         ResourceArchive var2 = (ResourceArchive) null;
-        a.a(-28, (byte) -5, (ResourceArchive) null, -70);
+        a.loadSprites(-28, (byte) -5, (ResourceArchive) null, -70);
         field_a = (IndexedSprite[][]) null;
         field_c = null;
     }
 
-    final static void b(int param0) {
+    final static void handleLoginSuccess(int param0) {
         int var1;
         int var2;
         String var3;
@@ -27,12 +27,12 @@ final class a {
         TextInputWidget.field_P = null;
         nj.field_f = false;
         if (IntrusiveDequeCursor.field_e) {
-          PortalView.field_L.c(false);
+          PortalView.field_L.showConnectionRestoredContent(false);
           if (param0 == -1) {
             return;
           }
           var3 = (String) null;
-          a.a((String) null, (String) null, (byte) 24);
+          a.containsForwardOrReversed((String) null, (String) null, (byte) 24);
           return;
         }
         var1 = qq.field_a;
@@ -45,15 +45,15 @@ final class a {
           TextInputWidget.field_P = wi.a(new CharSequence[]{(CharSequence) ((Object) TextInputWidget.field_P), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) StateIconLabel.field_Nb)}, 77);
         }
         PortalView.field_L.dismissDialog(-7435);
-        sp.c(param0 + 1);
+        sp.showLoadingProgressDialog(param0 + 1);
         if (param0 == -1) {
           return;
         }
         var3Lifetime1 = (String) null;
-        a.a((String) null, (String) null, (byte) 24);
+        a.containsForwardOrReversed((String) null, (String) null, (byte) 24);
     }
 
-    final static boolean a(int param0) {
+    final static boolean hasInputFocus(int param0) {
         if (param0 >= -38) {
           field_c = (IntrusiveDeque) null;
           return rn.field_f == null ? ro.field_L : true;
@@ -61,7 +61,7 @@ final class a {
         return rn.field_f == null ? ro.field_L : true;
     }
 
-    final static Sprite[] a(int param0, byte param1, ResourceArchive param2, int param3) {
+    final static Sprite[] loadSprites(int param0, byte param1, ResourceArchive param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Sprite[] stackIn_4_0 = null;
@@ -70,11 +70,11 @@ final class a {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!ud.a(param3, param2, param0, (byte) -42)) {
+          if (!ud.loadSpriteSheet(param3, param2, param0, (byte) -42)) {
             return null;
           }
           var4_int = -18 / ((param1 + 16) / 62);
-          stackIn_4_0 = tg.a(0);
+          stackIn_4_0 = tg.createDecodedSprites(0);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -90,7 +90,7 @@ final class a {
         }
     }
 
-    final static boolean a(String param0, String param1, byte param2) {
+    final static boolean containsForwardOrReversed(String param0, String param1, byte param2) {
         String var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;

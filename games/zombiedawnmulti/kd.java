@@ -32,7 +32,7 @@ final class kd {
           var3 = 0;
           var4 = 96 / ((65 - param1) / 49);
           for (var5 = 0; var2_int > var5; var5++) {
-            var3 = MouseInputHandler.a(param0.charAt(var5), (byte) -68) + (-var3 + (var3 << 5));
+            var3 = MouseInputHandler.encodeExtendedChar(param0.charAt(var5), (byte) -68) + (-var3 + (var3 << 5));
           }
           stackIn_5_0 = var3;
           return stackIn_5_0;

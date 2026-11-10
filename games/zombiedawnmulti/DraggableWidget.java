@@ -32,8 +32,8 @@ final class DraggableWidget extends SingleChildWidget {
             stackIn_2_0 = (StringBuilder) null;
             return stackIn_2_0;
           }
-          if (this.a(param1, param0 ^ 126, param3, param2)) {
-            this.a(param2, param3, (byte) 26, param1);
+          if (this.beginWidgetDiagnosticVisit(param1, param0 ^ 126, param3, param2)) {
+            this.appendWidgetDiagnosticProperties(param2, param3, (byte) 26, param1);
             this.appendChildDiagnostics(param1, true, param3, param2);
             discarded$62 = param3.append(" revert=").append(this.field_H);
             if (this.field_G != 2147483647 &&
@@ -63,10 +63,10 @@ final class DraggableWidget extends SingleChildWidget {
         }
     }
 
-    final static int h(int param0) {
+    final static int pollClientConnections(int param0) {
         int var1 = -104 % ((59 - param0) / 49);
         tj.field_a.b(0);
-        if (i.field_a.b((byte) 99)) {
+        if (i.field_a.poll((byte) 99)) {
           return 0;
         }
         return IntrusiveDequeCursor.b(19352);
@@ -88,7 +88,7 @@ final class DraggableWidget extends SingleChildWidget {
         this.field_M = this.field_i;
     }
 
-    final static String a(byte param0, int param1, String param2) {
+    final static String formatPresenceMessage(byte param0, int param1, String param2) {
         String stackIn_2_0 = null;
         String stackIn_5_0 = null;
         String stackIn_8_0 = null;
@@ -121,7 +121,7 @@ final class DraggableWidget extends SingleChildWidget {
           }
           if (param0 != -61) {
             var4 = (ResourceArchive) null;
-            DraggableWidget.a((ResourceArchive) null, (ResourceArchive) null, (byte) 0);
+            DraggableWidget.setBenefitsArchives((ResourceArchive) null, (ResourceArchive) null, (byte) 0);
           }
           if (4 == param1) {
             stackIn_14_0 = vl.a(NavigationGrid.field_f, new String[]{param2}, 2);
@@ -184,7 +184,7 @@ final class DraggableWidget extends SingleChildWidget {
             this.field_O) {
             return true;
           }
-          if (!this.a(-94, param5, param1, param0, param6)) {
+          if (!this.containsPointer(-94, param5, param1, param0, param6)) {
             stackIn_6_0 = var8_int;
             return stackIn_6_0 != 0;
           }
@@ -210,17 +210,17 @@ final class DraggableWidget extends SingleChildWidget {
         }
     }
 
-    final static void i(int param0) {
+    final static void showDisplayNameForm(int param0) {
         if (PortalView.field_L != null) {
           PortalView.field_L.dismissDialog(-7435);
         }
         qe.field_e = new DisplayNamePanel();
         if (param0 == -2) {
-          wj.field_i.a((UiWidget) (qe.field_e), (byte) 123);
+          wj.field_i.transitionToContent((UiWidget) (qe.field_e), (byte) 123);
           return;
         }
-        DraggableWidget.h(-84);
-        wj.field_i.a((UiWidget) (qe.field_e), (byte) 123);
+        DraggableWidget.pollClientConnections(-84);
+        wj.field_i.transitionToContent((UiWidget) (qe.field_e), (byte) 123);
     }
 
     final void handlePointerRelease(int param0, UiWidget param1, int param2, int param3, boolean param4, int param5) {
@@ -245,7 +245,7 @@ final class DraggableWidget extends SingleChildWidget {
         }
     }
 
-    final static void a(ResourceArchive param0, ResourceArchive param1, byte param2) {
+    final static void setBenefitsArchives(ResourceArchive param0, ResourceArchive param1, byte param2) {
         try {
           if (param2 != 23) {
             field_N = 91;
@@ -280,7 +280,7 @@ final class DraggableWidget extends SingleChildWidget {
               this.field_i = var6;
               this.field_y = var5_int;
               if (this.field_A instanceof ad) {
-                ((ad) (this.field_A)).a(param2, false, this, param3);
+                ((ad) (this.field_A)).onDragMoved(param2, false, this, param3);
               }
             }
           } else if (this.field_H) {

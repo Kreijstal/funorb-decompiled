@@ -56,7 +56,7 @@ final class BirthDateValidator extends DebouncedValidationProvider implements Te
           var2_int = this.field_n.i(1);
           var3 = this.field_n.j(param0 - 191);
           var4 = this.field_n.getMonthIndex((byte) -118);
-          var5 = oa.b((byte) -63);
+          var5 = oa.getCurrentYear((byte) -63);
           if (var4 < 1890) {
             stackIn_2_0 = jq.field_b;
             return stackIn_2_0;
@@ -104,7 +104,7 @@ final class BirthDateValidator extends DebouncedValidationProvider implements Te
           var2_int = this.field_n.i(1);
           var3 = this.field_n.j(param0 - 191);
           var4 = this.field_n.getMonthIndex((byte) -86);
-          var5 = oa.b((byte) -44);
+          var5 = oa.getCurrentYear((byte) -44);
           if (var4 >= 1890 &&
             var4 <= var5 - 3) {
             if (ImageProducerRasterBuffer.a((byte) -65, var3, var2_int, var4)) {

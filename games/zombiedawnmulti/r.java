@@ -11,7 +11,7 @@ final class r {
     static int field_f;
 
     final static void a(int param0, Sprite param1) {
-        m.c(540);
+        m.pushRasterState(540);
         if (param0 != 0) {
           return;
         }

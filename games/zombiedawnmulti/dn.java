@@ -90,19 +90,19 @@ final class dn {
             return null;
           }
           var6 = (CharSequence) ((Object) param0);
-          var2 = tg.a(var6, param1);
+          var2 = tg.normalizePlayerName(var6, param1);
           if (var2 == null) {
             return null;
           }
-          var3 = (ml) (ol.field_o.a((long)var2.hashCode(), -22877));
+          var3 = (ml) (ol.field_o.findByKey((long)var2.hashCode(), -22877));
           while (true) {
             if (var3 == null) {
               return null;
             }
             var7 = (CharSequence) ((Object) var3.field_Hb);
-            var4 = tg.a(var7, false);
+            var4 = tg.normalizePlayerName(var7, false);
             if (!var4.equals(var2)) {
-              var3 = (ml) (ol.field_o.b((byte) 68));
+              var3 = (ml) (ol.field_o.nextWithSameKey((byte) 68));
               continue;
             }
             break;

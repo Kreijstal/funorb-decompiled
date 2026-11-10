@@ -37,7 +37,7 @@ final class bg implements WidgetPainter {
         field_o = null;
     }
 
-    final static void a(int param0, byte param1, boolean param2) {
+    final static void updateLobbyPlayerList(int param0, byte param1, boolean param2) {
         ml var3 = null;
         PlayerContextMenu var4 = null;
         String var5_ref_String = null;
@@ -51,33 +51,33 @@ final class bg implements WidgetPainter {
         int var5Lifetime1;
         int var6Lifetime1;
         if (param1 > 43) {
-          var3 = mp.a(param0, param2, (byte) -119);
+          var3 = mp.updateFriendListRows(param0, param2, (byte) -119);
           if (var3 != null) {
             pk.field_b.a(false, (byte) -110);
             var4 = pk.field_b;
             var5_ref_String = dg.field_I;
-            var4.field_j.a((byte) -118, var5_ref_String, 5);
+            var4.field_j.addItem((byte) -118, var5_ref_String, 5);
             var4Lifetime2 = pk.field_b;
             var5 = vb.field_f;
             var6 = ChatMessage.field_t;
             var4Lifetime2.field_j.layoutAtAnchor(4542, var5, 0, var6, 0);
           }
-          uf.a(param0, param2, (byte) 39);
+          uf.updateIgnoreListPanel(param0, param2, (byte) 39);
           return;
         }
-        bg.a(-59);
-        var3Lifetime1 = mp.a(param0, param2, (byte) -119);
+        bg.isNameCheckPending(-59);
+        var3Lifetime1 = mp.updateFriendListRows(param0, param2, (byte) -119);
         if (var3Lifetime1 != null) {
           pk.field_b.a(false, (byte) -110);
           var4Lifetime1 = pk.field_b;
           var5_ref_StringLifetime1 = dg.field_I;
-          var4Lifetime1.field_j.a((byte) -118, var5_ref_StringLifetime1, 5);
+          var4Lifetime1.field_j.addItem((byte) -118, var5_ref_StringLifetime1, 5);
           var4Lifetime1Lifetime1 = pk.field_b;
           var5Lifetime1 = vb.field_f;
           var6Lifetime1 = ChatMessage.field_t;
           var4Lifetime1Lifetime1.field_j.layoutAtAnchor(4542, var5Lifetime1, 0, var6Lifetime1, 0);
         }
-        uf.a(param0, param2, (byte) 39);
+        uf.updateIgnoreListPanel(param0, param2, (byte) 39);
     }
 
     public final void paintWidget(boolean param0, int param1, int param2, int param3, UiWidget param4) {
@@ -123,11 +123,11 @@ final class bg implements WidgetPainter {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean isNameCheckPending(int param0) {
         if (param0 == 2) {
           return BirthDateValidator.field_k == ProgressDialog.field_hb ? true : false;
         }
-        bg.a(-5, (byte) 74, true);
+        bg.updateLobbyPlayerList(-5, (byte) 74, true);
         return BirthDateValidator.field_k == ProgressDialog.field_hb ? true : false;
     }
 

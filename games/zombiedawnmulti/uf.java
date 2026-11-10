@@ -14,9 +14,9 @@ final class uf {
     private boolean field_k;
     static Sprite field_h;
 
-    final void a(boolean param0) {
+    final void markUnreachable(boolean param0) {
         this.field_k = param0 ? true : false;
-        Camera.b(-128, 59);
+        Camera.createMixerStream(-128, 59);
     }
 
     public static void releaseStatics(int param0) {
@@ -30,7 +30,7 @@ final class uf {
         field_d = null;
     }
 
-    final void a(Camera param0, byte param1) {
+    final void draw(Camera param0, byte param1) {
         IndexedSprite[] stackIn_3_0 = null;
         int stackIn_4_1 = 0;
         RuntimeException stackIn_10_0 = null;
@@ -66,23 +66,23 @@ final class uf {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void place(int param0, int param1, int param2) {
         this.field_a = 256;
         this.field_f = (float)param0;
         this.field_j = param2;
         this.field_e = param1;
     }
 
-    final void b(boolean param0) {
+    final void markReachable(boolean param0) {
         this.field_k = false;
         if (!param0) {
           Camera var3 = (Camera) null;
-          this.a((Camera) null, (byte) 30);
+          this.draw((Camera) null, (byte) 30);
         }
-        Camera.b(-126, 20);
+        Camera.createMixerStream(-126, 20);
     }
 
-    final void a(int param0) {
+    final void tick(int param0) {
         if (this.field_f != -1.0f) {
           this.field_f = this.field_f + 0.5f;
           if (this.field_a > 25) {
@@ -104,7 +104,7 @@ final class uf {
         this.field_k = false;
     }
 
-    final static void a(int param0, boolean param1, byte param2) {
+    final static void updateIgnoreListPanel(int param0, boolean param1, byte param2) {
         ScrollPane stackIn_5_0;
         int stackIn_5_1;
         boolean stackIn_5_2;
@@ -140,19 +140,19 @@ final class uf {
           stackIn_5_2 = param1;
           stackIn_5_3 = 2 + jk.field_f;
           stackIn_6_4 = (vc.field_d == UsernameSuggestionsPanel.field_L.field_Jb);
-          var3_int = ((ScrollPane) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_6_4, param0 * (3 * jk.field_f + 6), -90) ? 1 : 0;
+          var3_int = ((ScrollPane) (Object) stackIn_5_0).updateContentLayout(stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_6_4, param0 * (3 * jk.field_f + 6), -90) ? 1 : 0;
           var4 = UsernameSuggestionsPanel.field_L.field_Ib.field_Cb;
           if (SimZombie.field_zb != 2 &&
             SimZombie.field_zb != 1) {
             UsernameSuggestionsPanel.field_L.field_Z = false;
             UsernameSuggestionsPanel.field_L.field_Jb.field_Jb.field_wb = hj.field_e;
-            ob.a(UsernameSuggestionsPanel.field_L.field_Ib, 37);
+            ob.resetChildBounds(UsernameSuggestionsPanel.field_L.field_Ib, 37);
             return;
           }
           UsernameSuggestionsPanel.field_L.field_Z = true;
           UsernameSuggestionsPanel.field_L.field_Jb.field_Jb.field_wb = null;
           var5 = null;
-          var6 = (ml) (var4.c(43));
+          var6 = (ml) (var4.last(43));
           while (var6 != null) {
             var7 = 0;
             if (var6.field_Cb == null) {
@@ -208,14 +208,14 @@ final class uf {
               ve.a(0L, 196, var6.field_Hb, UsernameSuggestionsPanel.field_L.field_Jb, var6.field_Pb, var6, -1, (int[]) null, -1);
               var17 = pk.field_b;
               var13_ref_String = qh.field_d;
-              var17.field_j.a((byte) -118, var13_ref_String, 7);
+              var17.field_j.addItem((byte) -118, var13_ref_String, 7);
               var18 = pk.field_b;
               var13 = vb.field_f;
               var14 = ChatMessage.field_t;
               var18.field_j.layoutAtAnchor(4542, var13, 0, var14, 0);
             }
             var5 = var6;
-            var6 = (ml) (var4.b(6));
+            var6 = (ml) (var4.previous(6));
           }
           if (0 != UsernameSuggestionsPanel.field_L.field_Gb.field_T) {
             gi.field_i = new NameEntryPopup(UsernameSuggestionsPanel.field_L.field_Gb.field_w, UsernameSuggestionsPanel.field_L.field_Gb.field_qb, UsernameSuggestionsPanel.field_L.field_Gb.field_zb, UsernameSuggestionsPanel.field_L.field_Gb.field_z, ArrayWidgetGroup.field_K, kd.field_a, vo.field_m, vo.field_m);

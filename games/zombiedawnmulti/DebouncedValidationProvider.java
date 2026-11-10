@@ -28,7 +28,7 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
         if (this.isInputEmpty(-3)) {
           return null;
         }
-        if (this.field_i + 350L > bl.a((byte) 64)) {
+        if (this.field_i + 350L > bl.monotonicMillis((byte) 64)) {
           return null;
         }
         if (param0 <= -102) {
@@ -41,10 +41,10 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
         if (param0 != -1306) {
           return;
         }
-        this.field_i = bl.a((byte) 114);
+        this.field_i = bl.monotonicMillis((byte) 114);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, String param4, int param5, int param6, boolean param7) {
+    final static void updateChatComposer(int param0, int param1, int param2, int param3, String param4, int param5, int param6, boolean param7) {
         try {
           if (SimEntity.field_z.field_T != 0 &&
             !nh.field_m) {
@@ -58,7 +58,7 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
             DebouncedValidationProvider.releaseStatics(true);
           }
           if (HotspotTextWidget.field_N) {
-            ce.a(param6, param5, param3, 20, (byte) 110, param2, param1, param6, param4);
+            ce.layoutChatComposerPopup(param6, param5, param3, 20, (byte) 110, param2, param1, param6, param4);
             ClickMarker.field_v.a(-11838, param7);
             if (!param7) {
               return;
@@ -67,7 +67,7 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
               HotspotTextWidget.field_N = false;
             }
             if (jk.field_d.field_T != 0) {
-              pf.a(-103);
+              pf.clearChatInput(-103);
               HotspotTextWidget.field_N = false;
               return;
             }
@@ -84,7 +84,7 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
         if (this.isInputEmpty(-3)) {
           return WidgetContainer.field_F;
         }
-        if (bl.a((byte) 40) >= 350L + this.field_i) {
+        if (bl.monotonicMillis((byte) 40) >= 350L + this.field_i) {
           return this.currentValidationState(-3);
         }
         return PortalView.field_H;
@@ -94,7 +94,7 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
 
     abstract String currentValidationMessage(int param0);
 
-    final static java.net.URL a(java.applet.Applet param0, boolean param1, java.net.URL param2) {
+    final static java.net.URL applySessionOverridesToUrl(java.applet.Applet param0, boolean param1, java.net.URL param2) {
         Object var3 = null;
         Object var4 = null;
         String var5 = null;
@@ -110,7 +110,7 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
           var4 = null;
           if (!param1) {
             var5 = (String) null;
-            DebouncedValidationProvider.a(-46, 36, -74, -104, (String) null, 64, 13, true);
+            DebouncedValidationProvider.updateChatComposer(-46, 36, -74, -104, (String) null, 64, 13, true);
           }
           if (oe.field_c != null &&
             !oe.field_c.equals(param0.getParameter("settings"))) {
@@ -122,7 +122,7 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
             !TextInputValidator.field_p.equals(param0.getParameter("session"))) {
             var4 = TextInputValidator.field_p;
           }
-          stackIn_9_0 = ProxySocketConnector.a((String) (var4), -1, (byte) 126, (String) (var3), param2);
+          stackIn_9_0 = ProxySocketConnector.applyUrlPathParameters((String) (var4), -1, (byte) 126, (String) (var3), param2);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

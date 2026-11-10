@@ -85,7 +85,7 @@ final class wn extends pp {
           var2 = !GradientOutlineTextPainter.field_u ? 200 : 250;
           InflaterDecompressor.field_h.setBounds(30, 5, -var2 + 363, var2 + 5, -3344);
           AgeValidator.field_w.setBounds(30, 5, cm.field_a.field_zb - 5 - 5 - 365, 370, -3344);
-          SimEntity.field_H.a(DualLinkNode.field_o, 2, -10 + ml.field_Lb.field_zb, 5, -37 + ml.field_Lb.field_z - 5, param0 ^ -31468, 37);
+          SimEntity.field_H.setBoundsAndLayout(DualLinkNode.field_o, 2, -10 + ml.field_Lb.field_zb, 5, -37 + ml.field_Lb.field_z - 5, param0 ^ -31468, 37);
           var3 = (2 + cm.field_a.field_zb) / 2;
           PasswordValidator.field_t.setBounds(40, -40 + cm.field_a.field_z, var3 - 2, 0, param0 - 3347);
           if (!GradientOutlineTextPainter.field_u) {
@@ -103,7 +103,7 @@ final class wn extends pp {
         var2Lifetime1 = !GradientOutlineTextPainter.field_u ? 200 : 250;
         InflaterDecompressor.field_h.setBounds(30, 5, -var2Lifetime1 + 363, var2Lifetime1 + 5, -3344);
         AgeValidator.field_w.setBounds(30, 5, cm.field_a.field_zb - 5 - 5 - 365, 370, -3344);
-        SimEntity.field_H.a(DualLinkNode.field_o, 2, -10 + ml.field_Lb.field_zb, 5, -37 + ml.field_Lb.field_z - 5, param0 ^ -31468, 37);
+        SimEntity.field_H.setBoundsAndLayout(DualLinkNode.field_o, 2, -10 + ml.field_Lb.field_zb, 5, -37 + ml.field_Lb.field_z - 5, param0 ^ -31468, 37);
         var3Lifetime1 = (2 + cm.field_a.field_zb) / 2;
         PasswordValidator.field_t.setBounds(40, -40 + cm.field_a.field_z, var3Lifetime1 - 2, 0, param0 - 3347);
         if (!GradientOutlineTextPainter.field_u) {
@@ -112,7 +112,7 @@ final class wn extends pp {
         ArrayWidgetGroup.field_L.setBounds(40, -40 + cm.field_a.field_z, -var3Lifetime1 + cm.field_a.field_zb, var3Lifetime1, -3344);
     }
 
-    final pi b(int param0) {
+    final pi getCredentialKind(int param0) {
         if (param0 != 7) {
           return (pi) null;
         }

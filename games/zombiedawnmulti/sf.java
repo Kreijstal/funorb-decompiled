@@ -19,7 +19,7 @@ final class sf {
         field_f = null;
     }
 
-    final static LevelData a(byte param0, byte[] param1) {
+    final static LevelData decodeLevelData(byte param0, byte[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         LevelData stackIn_2_0 = null;
@@ -39,11 +39,11 @@ final class sf {
           }
           var2_int = ValidationState.a(param1, 0, (byte) 77);
           if (var2_int == 3) {
-            stackIn_16_0 = MidiPcmStream.a(param1, (byte) 46);
+            stackIn_16_0 = MidiPcmStream.upgradeActorSpawnerDataV3(param1, (byte) 46);
             return (LevelData) ((Object) stackIn_16_0);
           }
           if (4 == var2_int) {
-            stackIn_14_0 = CheckboxPainter.a(param1, 7);
+            stackIn_14_0 = CheckboxPainter.upgradeActorSpawnerDataV4(param1, 7);
             return (LevelData) ((Object) stackIn_14_0);
           }
           if (5 == var2_int) {
@@ -51,7 +51,7 @@ final class sf {
             return (LevelData) ((Object) stackIn_7_0);
           }
           if (var2_int == 6) {
-            stackIn_12_0 = QuickChatHelpDialog.a((byte) 104, param1);
+            stackIn_12_0 = QuickChatHelpDialog.decodeLevelData((byte) 104, param1);
             return (LevelData) ((Object) stackIn_12_0);
           }
           stackIn_10_0 = null;
@@ -70,7 +70,7 @@ final class sf {
         }
     }
 
-    final static String a(int param0, int param1, String param2) {
+    final static String requestAddIgnoredPlayer(int param0, int param1, String param2) {
         RuntimeException var3 = null;
         int var4 = 0;
         CipherPacketBuffer var5 = null;
@@ -92,7 +92,7 @@ final class sf {
             stackIn_3_0 = u.field_f;
             return stackIn_3_0;
           }
-          if (sf.a(1, param2)) {
+          if (sf.isCurrentUser(1, param2)) {
             stackIn_6_0 = hf.field_b;
             return stackIn_6_0;
           }
@@ -100,7 +100,7 @@ final class sf {
             stackIn_9_0 = bg.field_d;
             return stackIn_9_0;
           }
-          if (hp.a(param2, 1020)) {
+          if (hp.isFriend(param2, 1020)) {
             stackIn_12_0 = vl.a(lo.field_i, new String[]{param2}, 2);
             return stackIn_12_0;
           }
@@ -116,7 +116,7 @@ final class sf {
             field_d = (ao) null;
           }
           var5 = ma.field_a;
-          var5.b((byte) -35, param1);
+          var5.writeCipheredOpcode((byte) -35, param1);
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(125, 2);
@@ -138,7 +138,7 @@ final class sf {
         }
     }
 
-    final static boolean a(int param0, String param1) {
+    final static boolean isCurrentUser(int param0, String param1) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         boolean stackIn_4_0 = false;
@@ -151,7 +151,7 @@ final class sf {
             return false;
           }
           var3 = (CharSequence) ((Object) param1);
-          stackIn_4_0 = ProxySocketConnector.field_k.equals(tg.a(var3, false));
+          stackIn_4_0 = ProxySocketConnector.field_k.equals(tg.normalizePlayerName(var3, false));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

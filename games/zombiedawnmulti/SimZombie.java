@@ -31,7 +31,7 @@ final class SimZombie extends SimUnit {
     boolean field_eb;
     private int field_ub;
 
-    private final void a(int param0, int param1, int param2) {
+    private final void wanderTo(int param0, int param1, int param2) {
         this.targetX = param2;
         this.targetY = param0;
         this.moveToward(85, this.speedMultiplier * 14336);
@@ -98,7 +98,7 @@ final class SimZombie extends SimUnit {
           this.state == 33 ||
           29 == this.state) &&
           (23 != this.state &&
-          !this.o(126) &&
+          !this.isCharmed(126) &&
           this.state != 9 &&
           21 != this.state));
         boolean decompiledFrameRemainder1 = true;
@@ -118,19 +118,19 @@ final class SimZombie extends SimUnit {
             if (this.field_nb != 1 && (!(this.speedMultiplier > 2) ||
               this.field_Bb)) {
               if ((this.field_nb == 0)) {
-                this.field_nb = hp.a((byte) 114, g.field_a, 60) + 60;
+                this.field_nb = hp.nextBoundedInt((byte) 114, g.field_a, 60) + 60;
                 if (!(!this.simulation.world.hasUpgrade((byte) -98, 55, this.field_gb))) {
                   this.field_nb = 0;
                 }
               }
               break regionExit1;
             }
-            var2 = -24 + this.getX((byte) -112) + hp.a((byte) 22, g.field_a, 48);
-            var3 = -24 + (this.getY(1829947600) + hp.a((byte) -66, g.field_a, 48));
+            var2 = -24 + this.getX((byte) -112) + hp.nextBoundedInt((byte) 22, g.field_a, 48);
+            var3 = -24 + (this.getY(1829947600) + hp.nextBoundedInt((byte) -66, g.field_a, 48));
             if (!this.simulation.navigation.a(var2, true, true, var3)) {
               this.field_nb = this.field_nb + 1;
             } else {
-              this.a(var3, 750, var2);
+              this.wanderTo(var3, 750, var2);
             }
           }
           this.seekAndBiteHumans(-26310);
@@ -176,7 +176,7 @@ final class SimZombie extends SimUnit {
                           }
                           if (this.animationFrame == 5) {
                             this.simulation.world.addEntity(-99, (TertiaryLinkNode) (this));
-                            this.t(4);
+                            this.stopScreech(4);
                           }
                         } else {
                           if (12 == this.state) {
@@ -206,10 +206,10 @@ final class SimZombie extends SimUnit {
                                     this.field_Bb = false;
                                     if (this.field_vb == null) {
                                       this.field_vb = new sa(this, this.getX((byte) -112), -30 + this.getY(1829947600), this.simulation.world.computeEffectDuration((byte) 32, this.field_gb, 750));
-                                      this.simulation.world.field_G.a(this.field_vb, false);
+                                      this.simulation.world.field_G.addFirst(this.field_vb, false);
                                     } else {
-                                      if (this.field_vb.b(true)) {
-                                        this.t(4);
+                                      if (this.field_vb.isFinished(true)) {
+                                        this.stopScreech(4);
                                         this.setState(4, (byte) -89);
                                       } else {
                                         if ((this.velocityX != 0 ||
@@ -218,11 +218,11 @@ final class SimZombie extends SimUnit {
                                           if ((this.stepTowardTarget(2) ||
                                             this.velocityX == 0 &&
                                             this.velocityY == 0) && (this.field_Cb != null &&
-                                            !this.field_Cb.f(28113))) {
+                                            !this.field_Cb.isEmpty(28113))) {
                                             this.followPath((byte) 27);
                                             this.needsSync = true;
                                           }
-                                          this.field_vb.a(this.getX((byte) -112), (byte) 121, -30 + this.getY(1829947600));
+                                          this.field_vb.setPosition(this.getX((byte) -112), (byte) 121, -30 + this.getY(1829947600));
                                         }
                                       }
                                     }
@@ -235,10 +235,10 @@ final class SimZombie extends SimUnit {
                                       this.field_xb = 0;
                                       if (this.field_vb == null) {
                                         this.field_vb = new sa(this, this.getX((byte) -112), -30 + this.getY(1829947600), this.simulation.world.computeEffectDuration((byte) 32, this.field_gb, 750));
-                                        this.simulation.world.field_G.a(this.field_vb, false);
+                                        this.simulation.world.field_G.addFirst(this.field_vb, false);
                                       }
-                                      if (!(!this.field_vb.b(true))) {
-                                        this.t(4);
+                                      if (!(!this.field_vb.isFinished(true))) {
+                                        this.stopScreech(4);
                                         this.setState(4, (byte) -89);
                                       }
                                     }
@@ -299,7 +299,7 @@ final class SimZombie extends SimUnit {
                                   this.setState(4, (byte) -89);
                                   this.field_nb = 2;
                                   var5 = new og(this.getX((byte) -112), this.getY(1829947600), this.field_D, this.field_gb);
-                                  this.simulation.world.characters.a(var5, false);
+                                  this.simulation.world.characters.addFirst(var5, false);
                                   var5.attachToSimulation(-9019, this.simulation);
                                 }
                               }
@@ -310,7 +310,7 @@ final class SimZombie extends SimUnit {
                               if (this.animationFrame == 2) {
                                 this.field_Bb = false;
                                 this.animationFrame = 0;
-                                this.simulation.a((byte) 65, this, this.field_X);
+                                this.simulation.spawnZombieExplosion((byte) 65, this, this.field_X);
                               }
                             }
                           }
@@ -320,14 +320,14 @@ final class SimZombie extends SimUnit {
                       this.field_Bb = false;
                       if ((this.animationFrame == 0 ||
                         this.animationFrame == 2) && this.animationTicks == 0) {
-                        if (hp.a((byte) 63, g.field_a, 3) != 0) {
-                          hp.a((byte) 124, g.field_a, 5);
+                        if (hp.nextBoundedInt((byte) 63, g.field_a, 3) != 0) {
+                          hp.nextBoundedInt((byte) 124, g.field_a, 5);
                         } else {
                           if (this.field_tb != null &&
                             !this.field_tb.k((byte) -7)) {
-                            hp.a((byte) -106, g.field_a, 3);
+                            hp.nextBoundedInt((byte) -106, g.field_a, 3);
                           } else {
-                            hp.a((byte) -111, g.field_a, 4);
+                            hp.nextBoundedInt((byte) -111, g.field_a, 4);
                           }
                         }
                       }
@@ -392,7 +392,7 @@ final class SimZombie extends SimUnit {
               if (this.field_fb > 0) {
                 this.field_fb = this.field_fb - 1;
               }
-              this.k((byte) 92);
+              this.noOperation((byte) 92);
               this.applyVelocity((byte) 40);
               if (this.stepTowardTarget(2) ||
                 0 == this.velocityX &&
@@ -410,7 +410,7 @@ final class SimZombie extends SimUnit {
 
     }
 
-    final static void s(int param0) {
+    final static void advanceFrameCycleAnimations(int param0) {
         int var2 = 0;
         hn[] var1 = null;
         hn var3 = null;
@@ -424,10 +424,10 @@ final class SimZombie extends SimUnit {
           var1 = var5;
           for (var2 = 0; var5.length > var2; var2++) {
             var3 = var5[var2];
-            var3.a(false);
+            var3.advance(false);
           }
           if (param0 != 9) {
-            SimZombie.s(101);
+            SimZombie.advanceFrameCycleAnimations(101);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -503,7 +503,7 @@ final class SimZombie extends SimUnit {
         this.needsSync = true;
     }
 
-    final static void a(String param0, byte param1) {
+    final static void openPolicyPage(String param0, byte param1) {
         if (param1 < 124) {
           return;
         }
@@ -532,7 +532,7 @@ final class SimZombie extends SimUnit {
         }
         if (this.field_vb != null && (param0 == 9 ||
           param0 == 21)) {
-          this.t(4);
+          this.stopScreech(4);
         }
         boolean decompiledFrameRemainder0 = true;
         super.setState(param0, param1);
@@ -587,8 +587,8 @@ final class SimZombie extends SimUnit {
         this.field_vb = null;
         this.velocityY = 0;
         this.velocityX = 0;
-        this.field_mb = hp.a((byte) -103, g.field_a, 10);
-        this.field_nb = hp.a((byte) -80, g.field_a, 120);
+        this.field_mb = hp.nextBoundedInt((byte) -103, g.field_a, 10);
+        this.field_nb = hp.nextBoundedInt((byte) -80, g.field_a, 120);
     }
 
     final void startCharm(int param0) {
@@ -638,7 +638,7 @@ final class SimZombie extends SimUnit {
         while (true) {
           if (this.cellX + 1 < var5) {
             if (param0 < 4) {
-              this.q(-53);
+              this.isVisibleToHumans(-53);
             }
             return;
           }
@@ -702,7 +702,7 @@ final class SimZombie extends SimUnit {
         }
     }
 
-    final void j(byte param0) {
+    final void refreshMovement(byte param0) {
         if (7 == this.state) {
           this.chaseTargetHuman((byte) -110);
         } else {
@@ -737,10 +737,10 @@ final class SimZombie extends SimUnit {
         this.simulation.field_p[this.field_gb] = this.simulation.field_p[this.field_gb] + 1;
     }
 
-    final void t(int param0) {
+    final void stopScreech(int param0) {
         if (null != this.field_vb) {
           this.state = 15;
-          this.field_vb.d(-108);
+          this.field_vb.finish(-108);
           this.field_vb.unlink(true);
           this.field_vb = null;
           this.setState(4, (byte) -89);
@@ -768,7 +768,7 @@ final class SimZombie extends SimUnit {
           return;
         }
         if (param0 != 34) {
-          SimZombie.s(47);
+          SimZombie.advanceFrameCycleAnimations(47);
         }
         this.setState(28, (byte) -89);
         this.needsSync = true;
@@ -782,9 +782,9 @@ final class SimZombie extends SimUnit {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != null &&
-            !param1.f(28113)) {
+            !param1.isEmpty(28113)) {
             this.field_nb = 0;
-            this.field_wb = (Waypoint) (param1.a((byte) 115));
+            this.field_wb = (Waypoint) (param1.first((byte) 115));
             this.field_Cb = param1;
             if (!this.isBusy(param0)) {
               this.followPath((byte) 27);
@@ -806,7 +806,7 @@ final class SimZombie extends SimUnit {
         }
     }
 
-    private final void k(byte param0) {
+    private final void noOperation(byte param0) {
         if (param0 != 92) {
           this.field_yb = -27;
         }
@@ -817,8 +817,8 @@ final class SimZombie extends SimUnit {
         int var4;
         Waypoint var5;
         if (null != this.field_Cb &&
-          !this.field_Cb.f(param0 ^ 28106)) {
-          var5 = (Waypoint) (this.field_Cb.g(77));
+          !this.field_Cb.isEmpty(param0 ^ 28106)) {
+          var5 = (Waypoint) (this.field_Cb.removeLast(77));
           this.targetX = var5.x;
           this.targetY = var5.y;
           this.setState(5, (byte) -89);
@@ -963,16 +963,16 @@ final class SimZombie extends SimUnit {
         return 0 != (this.field_hb & 1 << param1) ? true : false;
     }
 
-    final void r(byte param0) {
+    final void clearStunTimer(byte param0) {
         if (param0 >= -47) {
           return;
         }
         this.field_Db = 0;
     }
 
-    final boolean p(byte param0) {
+    final boolean isFeared(byte param0) {
         if (param0 <= 12) {
-          this.j((byte) -27);
+          this.refreshMovement((byte) -27);
         }
         return this.field_ub > 0 ? true : false;
     }
@@ -985,11 +985,11 @@ final class SimZombie extends SimUnit {
         this.needsSync = true;
         this.field_Db = param0;
         if (param1 > -93) {
-          this.o(49);
+          this.isCharmed(49);
         }
     }
 
-    final boolean q(int param0) {
+    final boolean isVisibleToHumans(int param0) {
         if (param0 >= -126) {
           return false;
         }
@@ -1010,7 +1010,7 @@ final class SimZombie extends SimUnit {
         }
     }
 
-    final static boolean p(int param0) {
+    final static boolean isSessionReady(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 >= -59) {
           field_zb = -82;
@@ -1019,7 +1019,7 @@ final class SimZombie extends SimUnit {
         return stackIn_6_0;
     }
 
-    final boolean o(int param0) {
+    final boolean isCharmed(int param0) {
         int var2 = 35 % ((param0 - 75) / 44);
         return this.field_xb > 0 ? true : false;
     }
@@ -1047,7 +1047,7 @@ final class SimZombie extends SimUnit {
         return stackIn_18_0;
     }
 
-    final boolean d(boolean param0) {
+    final boolean isFemale(boolean param0) {
         if (!param0) {
           this.field_gb = -9;
         }

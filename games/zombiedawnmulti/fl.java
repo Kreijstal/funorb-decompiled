@@ -86,7 +86,7 @@ final class fl {
           }
           var4_int = param2.a(param0, (byte) 118);
           var5 = param2.a(param1, var4_int, -1);
-          stackIn_3_0 = bl.a((byte) 50, var4_int, param2, var5);
+          stackIn_3_0 = bl.loadSprite((byte) 50, var4_int, param2, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -121,7 +121,7 @@ final class fl {
         if (Character.isISOControl(param1)) {
           return false;
         }
-        if (ButtonWidget.a(param1, 16413)) {
+        if (ButtonWidget.isAlphanumeric(param1, 16413)) {
           return true;
         }
         if (param1 != 45 &&

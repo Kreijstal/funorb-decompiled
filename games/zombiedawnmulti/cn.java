@@ -96,10 +96,10 @@ final class cn extends ng {
         if (null == this.field_v) {
           return;
         }
-        if (null == this.a((byte) -101)) {
+        if (null == this.getIndex((byte) -101)) {
           return;
         }
-        var2 = this.field_q.c(65);
+        var2 = this.field_q.last(65);
         while (var2 != null) {
           var3 = (int)var2.key;
           if (var3 >= 0) {
@@ -123,7 +123,7 @@ final class cn extends ng {
           } else {
             var2.unlink(true);
           }
-          var2 = this.field_q.b(6);
+          var2 = this.field_q.previous(6);
         }
         if (param0 <= 64) {
           cn.a((ResourceArchive) null, -84, (byte[]) null, (int[]) null, (byte[]) null, -44, (String[]) null, (ResourceArchive) null, (IndexedSprite[]) null, (ResourceArchive) null, 116, (Sprite[][]) null, true, (String[][]) null, (int[]) null, (Sprite[][]) null, (String[][]) null);
@@ -131,7 +131,7 @@ final class cn extends ng {
         return;
     }
 
-    final ArchiveIndex a(byte param0) {
+    final ArchiveIndex getIndex(byte param0) {
         RuntimeException decompiledCaughtException = null;
         byte[] var2 = null;
         RuntimeException var3 = null;
@@ -152,7 +152,7 @@ final class cn extends ng {
         if (this.field_l.field_t) {
           return null;
         }
-        var7 = this.field_l.e(0);
+        var7 = this.field_l.getBytes(0);
         var6 = var7;
         var5 = var6;
         var2 = var5;
@@ -188,7 +188,7 @@ final class cn extends ng {
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3 = decompiledCaughtException;
-            this.field_h.a((byte) 113);
+            this.field_h.resetAfterValidationFailure((byte) 113);
             this.field_s = null;
             if (this.field_h.e(98)) {
               this.field_l = null;
@@ -229,7 +229,7 @@ final class cn extends ng {
             return stackIn_2_0;
           }
           var5 = param2.a(param1, var4_int, -1);
-          stackIn_4_0 = a.a(var5, (byte) -93, param2, var4_int);
+          stackIn_4_0 = a.loadSprites(var5, (byte) -93, param2, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -258,17 +258,17 @@ final class cn extends ng {
     }
 
     final static void a(int param0, boolean param1, int param2, byte param3) {
-        aa.a((byte) 124, param1);
+        aa.updateActivePopup((byte) 124, param1);
         lp.a((byte) -45, param0, param1, param2);
         if (param3 > -79) {
           field_u = (String) null;
         }
     }
 
-    final int b(int param0, int param1) {
+    final int getGroupProgress(int param0, int param1) {
         qc var3 = (qc) (this.field_p.a(param1 ^ param1, (long)param0));
         if (var3 != null) {
-          return var3.f(param1 + 103);
+          return var3.getProgress(param1 + 103);
         }
         return 0;
     }
@@ -294,12 +294,12 @@ final class cn extends ng {
         }
         boolean decompiledFrameRemainder0 = true;
         if (null != this.field_v) {
-          if (null == this.a((byte) -110)) {
+          if (null == this.getIndex((byte) -110)) {
             return;
           }
           if (this.field_y) {
             var2_int = 1;
-            var3 = this.field_v.c(46);
+            var3 = this.field_v.last(46);
             while (var3 != null) {
               var4 = (int)var3.key;
               if (this.field_A[var4] == 0) {
@@ -310,7 +310,7 @@ final class cn extends ng {
               } else {
                 var3.unlink(true);
               }
-              var3 = this.field_v.b(6);
+              var3 = this.field_v.previous(6);
             }
             scanLoop1: while (true) {
               if (this.field_i < this.field_s.field_s.length) {
@@ -325,7 +325,7 @@ final class cn extends ng {
                   if (this.field_A[this.field_i] == 0) {
                     var6 = new IntrusiveNode();
                     var6.key = (long)this.field_i;
-                    this.field_v.a(var6, false);
+                    this.field_v.addFirst(var6, false);
                     var2_int = 0;
                   }
                 }
@@ -343,7 +343,7 @@ final class cn extends ng {
           else {
             if (this.field_m) {
               var2_intLifetime1 = 1;
-              var3Lifetime1 = this.field_v.c(105);
+              var3Lifetime1 = this.field_v.last(105);
               while (var3Lifetime1 != null) {
                 var4Lifetime1 = (int)var3Lifetime1.key;
                 if (1 != this.field_A[var4Lifetime1]) {
@@ -354,7 +354,7 @@ final class cn extends ng {
                 } else {
                   var3Lifetime1.unlink(true);
                 }
-                var3Lifetime1 = this.field_v.b(6);
+                var3Lifetime1 = this.field_v.previous(6);
               }
               scanLoop2: while (true) {
                 if (this.field_i < this.field_s.field_s.length) {
@@ -370,7 +370,7 @@ final class cn extends ng {
                       var7 = new IntrusiveNode();
                       var7.key = (long)this.field_i;
                       var2_intLifetime1 = 0;
-                      this.field_v.a(var7, false);
+                      this.field_v.addFirst(var7, false);
                     }
                   }
                   this.field_i = this.field_i + 1;
@@ -390,7 +390,7 @@ final class cn extends ng {
           }
         }
         if (this.field_n &&
-          bl.a((byte) 48) >= this.field_r) {
+          bl.monotonicMillis((byte) 48) >= this.field_r) {
           var2 = (qc) (this.field_p.a(0));
           while (var2 != null) {
             if (!var2.field_t) {
@@ -405,7 +405,7 @@ final class cn extends ng {
             }
             var2 = (qc) (this.field_p.b(param0 ^ 122));
           }
-          this.field_r = bl.a((byte) 114) + 1000L;
+          this.field_r = bl.monotonicMillis((byte) 114) + 1000L;
         }
     }
 
@@ -458,7 +458,7 @@ final class cn extends ng {
               if (this.field_x == null) {
                 throw new RuntimeException();
               }
-              var4 = this.field_z.b(param2, this.field_x, 10);
+              var4 = this.field_z.queueRead(param2, this.field_x, 10);
             }
           } else {
             if (this.field_x != null &&
@@ -476,7 +476,7 @@ final class cn extends ng {
         if (((qc) (var4)).field_t) {
           return null;
         }
-        var18 = ((qc) (var4)).e(param1);
+        var18 = ((qc) (var4)).getBytes(param1);
         var13 = var18;
         var5 = var13;
         if (var4 instanceof li) {
@@ -492,7 +492,7 @@ final class cn extends ng {
               if (null != this.field_s.field_a &&
                 this.field_s.field_a[param2] != null) {
                 var27 = this.field_s.field_a[param2];
-                var28 = ho.a(4246, 0, var5, var18.length - 2);
+                var28 = ho.computeWhirlpoolDigest(4246, 0, var5, var18.length - 2);
                 for (var9 = 0; var9 < 64; var9++) {
                   if (~var27[var9] != ~var28[var9]) {
                     throw new RuntimeException();
@@ -543,7 +543,7 @@ final class cn extends ng {
             if (this.field_s.field_a != null &&
               this.field_s.field_a[param2] != null) {
               var30 = this.field_s.field_a[param2];
-              var29 = ho.a(4246, 0, var5, -2 + var18.length);
+              var29 = ho.computeWhirlpoolDigest(4246, 0, var5, -2 + var18.length);
               var11 = 0;
               var9 = var11;
               while (var11 < 64) {
@@ -561,7 +561,7 @@ final class cn extends ng {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (RuntimeException) (Object) decompiledCaughtException;
-          this.field_h.a((byte) 95);
+          this.field_h.resetAfterValidationFailure((byte) 95);
           ((qc) (var4)).unlink(true);
           if (!((qc) (var4)).field_r) {
             return null;
@@ -720,7 +720,7 @@ final class cn extends ng {
         }
     }
 
-    final byte[] a(int param0, int param1) {
+    final byte[] getPackedGroup(int param0, int param1) {
         qc var3 = this.b(0, 0, param1);
         if (var3 == null) {
           return null;
@@ -728,7 +728,7 @@ final class cn extends ng {
         if (param0 != -123) {
           return (byte[]) null;
         }
-        byte[] var4 = var3.e(0);
+        byte[] var4 = var3.getBytes(0);
         var3.unlink(true);
         return var4;
     }

@@ -11,10 +11,10 @@ final class og extends SimEntity {
     int field_O;
     static String field_S;
 
-    final static void h(byte param0) {
+    final static void bindScreenBuffer(byte param0) {
         SocketConnector.field_h.b((byte) 106);
         if (param0 < 109) {
-          og.b(26, 121);
+          og.sendGameOptions(26, 121);
         }
     }
 
@@ -31,9 +31,9 @@ final class og extends SimEntity {
         }
     }
 
-    final static void b(int param0, int param1) {
+    final static void sendGameOptions(int param0, int param1) {
         CipherPacketBuffer var2 = ma.field_a;
-        var2.b((byte) -35, param0);
+        var2.writeCipheredOpcode((byte) -35, param0);
         int var3 = -1 / ((param1 - 57) / 55);
         var2.position = var2.position + 1;
         int var4 = var2.position;
@@ -55,7 +55,7 @@ final class og extends SimEntity {
         field_M = null;
     }
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean isRenderableCharacter(char param0, byte param1) {
         if (param0 >= 32 &&
           param0 <= 126) {
           return true;
@@ -65,7 +65,7 @@ final class og extends SimEntity {
           return true;
         }
         if (param1 <= 98) {
-          og.b(64, 2);
+          og.sendGameOptions(64, 2);
         }
         if (8364 != param0 &&
           338 != param0 &&
@@ -83,7 +83,7 @@ final class og extends SimEntity {
         try {
           super.attachToSimulation(param0 ^ 0, param1);
           if (param0 != -9019) {
-            og.b(-123, -15);
+            og.sendGameOptions(-123, -15);
           }
           this.field_R = this.simulation.world.computeEffectDuration((byte) 32, this.field_O, 3000);
         } catch (RuntimeException runtimeException) {
@@ -97,7 +97,7 @@ final class og extends SimEntity {
         this.field_R = 3000;
     }
 
-    final static void a(boolean param0, byte param1, int param2, int param3, int param4, boolean param5, int param6) {
+    final static void updateLobbyGameList(boolean param0, byte param1, int param2, int param3, int param4, boolean param5, int param6) {
         int var18_int = 0;
         int var22_int = 0;
         UiComponent dupTemp$0 = null;
@@ -210,11 +210,11 @@ final class og extends SimEntity {
           stackIn_3_2 = param5;
           stackIn_3_3 = 2 * (jk.field_f + 2);
           stackIn_4_4 = (vc.field_d == SimEntity.field_H);
-          var7_int = ((ScrollPane) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_4_4, (4 * jk.field_f + 8) * param6, -108) ? 1 : 0;
+          var7_int = ((ScrollPane) (Object) stackIn_3_0).updateContentLayout(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_4_4, (4 * jk.field_f + 8) * param6, -108) ? 1 : 0;
           var8 = SimEntity.field_H.field_Gb.field_Cb;
-          var9 = bl.a((byte) 99);
+          var9 = bl.monotonicMillis((byte) 99);
           var11 = null;
-          var12 = (jh) (var8.c(105));
+          var12 = (jh) (var8.last(105));
           while (var12 != null) {
             var13 = 0;
             if (null == var12.field_Cb) {
@@ -553,7 +553,7 @@ final class og extends SimEntity {
                 var31 = var31 + jk.field_f;
               }
             }
-            var33 = EmailAvailabilityValidator.a(var12.field_Vb, var32, -9);
+            var33 = EmailAvailabilityValidator.getJoinFailureMessage(var12.field_Vb, var32, -9);
             var34 = var33;
             var34Lifetime1 = var33;
             if (var33 != null) {
@@ -627,7 +627,7 @@ final class og extends SimEntity {
             boolean decompiledFrameRemainder0 = true;
             if (0 != var12.field_T) {
               if (var12.isUnlisted(2)) {
-                var12 = (jh) (var8.b(6));
+                var12 = (jh) (var8.previous(6));
                 continue;
               }
               if (0 != var12.field_oc.field_T) {
@@ -644,7 +644,7 @@ final class og extends SimEntity {
                 LoginForm.a(var12, param0, var32, -123);
               }
             }
-            var12 = (jh) (var8.b(6));
+            var12 = (jh) (var8.previous(6));
           }
           if (param1 < 111) {
             field_M = (String) null;
@@ -657,7 +657,7 @@ final class og extends SimEntity {
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int integerPower(int param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -667,7 +667,7 @@ final class og extends SimEntity {
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param1 != 200) {
-            og.b(-87, 110);
+            og.sendGameOptions(-87, 110);
           }
           var3_int = 1;
           while (1 < param2) {
@@ -690,12 +690,12 @@ final class og extends SimEntity {
         }
     }
 
-    final boolean b(int param0, int param1, int param2) {
+    final boolean containsPoint(int param0, int param1, int param2) {
         int var4;
         int var5;
         boolean stackIn_8_0 = false;
         if (param2 > -114) {
-          og.a(96, -108, -22);
+          og.integerPower(96, -108, -22);
         }
         var4 = this.positionX >> 16;
         var5 = this.positionY >> 16;
@@ -703,7 +703,7 @@ final class og extends SimEntity {
         return stackIn_8_0;
     }
 
-    final static void a(int param0, java.applet.Applet param1) {
+    final static void clearStatusCookie(int param0, java.applet.Applet param1) {
         String var2 = null;
         String var3 = null;
         long var4 = 0L;

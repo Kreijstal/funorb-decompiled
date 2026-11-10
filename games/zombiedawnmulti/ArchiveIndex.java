@@ -22,7 +22,7 @@ final class ArchiveIndex {
     private int[] field_j;
     int[] field_r;
 
-    private final void a(int param0, byte[] param1) {
+    private final void decode(int param0, byte[] param1) {
         int dupTemp$0 = 0;
         int dupTemp$1 = 0;
         int[] array$2 = null;
@@ -68,7 +68,7 @@ final class ArchiveIndex {
         int var13Lifetime1Lifetime1;
         var16 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var17 = new PacketBuffer(hb.a(param1, param0));
+          var17 = new PacketBuffer(hb.decompressContainer(param1, param0));
           var4 = var17.readUnsignedByte(31365);
           if (5 <= var4 &&
             7 >= var4) {
@@ -238,7 +238,7 @@ final class ArchiveIndex {
         }
     }
 
-    final static void a(long param0, boolean param1) {
+    final static void sleep(long param0, boolean param1) {
         try {
           Throwable decompiledCaughtException = null;
           InterruptedException var3 = null;
@@ -270,7 +270,7 @@ final class ArchiveIndex {
     ArchiveIndex(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
-          this.field_o = pb.a(param0, param0.length, (byte) -120);
+          this.field_o = pb.computeCrc(param0, param0.length, (byte) -120);
           if (this.field_o != param1) {
             throw new RuntimeException();
           }
@@ -278,14 +278,14 @@ final class ArchiveIndex {
             if (64 != param2.length) {
               throw new RuntimeException();
             }
-            this.field_g = ho.a(4246, 0, param0, param0.length);
+            this.field_g = ho.computeWhirlpoolDigest(4246, 0, param0, param0.length);
             for (var4_int = 0; var4_int < 64; var4_int++) {
               if (this.field_g[var4_int] != param2[var4_int]) {
                 throw new RuntimeException();
               }
             }
           }
-          this.a(0, param0);
+          this.decode(0, param0);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "be.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

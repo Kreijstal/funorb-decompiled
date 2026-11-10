@@ -59,12 +59,12 @@ final class IntrusiveDequeCursor {
           }
           try {
             if (la.field_d == 0) {
-              vo.field_o = p.field_a.a(vg.field_r, qe.field_f, (byte) -120);
+              vo.field_o = p.field_a.requestSocket(vg.field_r, qe.field_f, (byte) -120);
               la.field_d = la.field_d + 1;
             }
             if (la.field_d == 1) {
               if (vo.field_o.field_f == 2) {
-                stackIn_15_0 = u.b(-1, 5);
+                stackIn_15_0 = u.handleConnectionFailure(-1, 5);
                 return stackIn_15_0;
               }
               if (1 == vo.field_o.field_f) {
@@ -79,7 +79,7 @@ final class IntrusiveDequeCursor {
               var2.writeInt(-128, kk.field_q);
               vh.field_Gb.a(0, -100, 13, var2.payload);
               la.field_d = la.field_d + 1;
-              li.field_A = 30000L + bl.a((byte) 43);
+              li.field_A = 30000L + bl.monotonicMillis((byte) 43);
             }
             if (param0 != 19352) {
               stackIn_23_0 = 36;
@@ -89,13 +89,13 @@ final class IntrusiveDequeCursor {
               if (vh.field_Gb.a(116) > 0) {
                 var1_int = vh.field_Gb.c((byte) 59);
                 if (var1_int != 0) {
-                  stackIn_32_0 = u.b(var1_int, 5);
+                  stackIn_32_0 = u.handleConnectionFailure(var1_int, 5);
                   return stackIn_32_0;
                 }
                 la.field_d = la.field_d + 1;
               } else {
-                if (bl.a((byte) 124) > li.field_A) {
-                  stackIn_29_0 = u.b(-2, param0 - 19347);
+                if (bl.monotonicMillis((byte) 124) > li.field_A) {
+                  stackIn_29_0 = u.handleConnectionFailure(-2, param0 - 19347);
                   return stackIn_29_0;
                 }
               }
@@ -104,7 +104,7 @@ final class IntrusiveDequeCursor {
               stackIn_38_0 = -1;
               return stackIn_38_0;
             }
-            i.field_a.a(PacketBuffer.field_f, vh.field_Gb, 104);
+            i.field_a.setConnection(PacketBuffer.field_f, vh.field_Gb, 104);
             vo.field_o = null;
             la.field_d = 0;
             vh.field_Gb = null;
@@ -113,7 +113,7 @@ final class IntrusiveDequeCursor {
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (IOException) (Object) decompiledCaughtException;
-            return u.b(-3, 5);
+            return u.handleConnectionFailure(-3, 5);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

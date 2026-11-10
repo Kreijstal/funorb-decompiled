@@ -22,7 +22,7 @@ abstract class NetworkGameClient extends GameApplet {
     private int field_q;
     private int field_o;
 
-    private final void e(byte param0) {
+    private final void enableRequestReplyPackets(byte param0) {
         if (param0 < 116) {
           field_w = (java.applet.Applet) null;
         }
@@ -41,18 +41,18 @@ abstract class NetworkGameClient extends GameApplet {
         field_n = null;
     }
 
-    private final int i(int param0) {
+    private final int pollReconnect(int param0) {
         int var2;
         if (this.field_f) {
           return -1;
         }
-        if (!gh.a(100)) {
+        if (!gh.isLoggedInWithAccount(100)) {
           return -1;
         }
         if (bi.field_a) {
           return -1;
         }
-        var2 = fd.a(14, true, this.field_s, DelayedPacket.c(-19385), s.a((byte) 32), this.field_q);
+        var2 = fd.a(14, true, this.field_s, DelayedPacket.getPendingPassword(-19385), s.getStatusMessage((byte) 32), this.field_q);
         if (var2 == -1) {
           return -1;
         }
@@ -62,28 +62,28 @@ abstract class NetworkGameClient extends GameApplet {
             this.reportError(param0 + 13654, "reconnect");
           }
           ib.a(-114);
-          bf.a(true, var2, ol.field_q);
+          bf.showLoginResponse(true, var2, ol.field_q);
           if (param0 != 13546) {
             field_B = (hh) null;
           }
           bi.field_a = true;
-          SocketConnector.field_e = bl.a((byte) 39) + 15000L;
+          SocketConnector.field_e = bl.monotonicMillis((byte) 39) + 15000L;
           return var2;
         }
         if (a.field_b == 11 &&
           gh.field_a == 0) {
-          a.b(-1);
+          a.handleLoginSuccess(-1);
         }
         return var2;
     }
 
-    final void a(int param0, boolean param1, int param2, int param3, int param4, int param5, int param6, byte param7) {
+    final void initializeFramework(int param0, boolean param1, int param2, int param3, int param4, int param5, int param6, byte param7) {
         java.awt.Frame var10 = new java.awt.Frame("Jagex");
         var10.pack();
         var10.dispose();
         this.setBackground(java.awt.Color.black);
         p.field_e = this.field_C;
-        HumanView.f(-7733, p.field_e);
+        HumanView.selectLanguageStrings(-7733, p.field_e);
         lf.a(param1, -5989, this.field_D, this.field_A, this.field_p, p.field_e, ArrayWidgetGroup.field_J, param5, this.field_m, this.field_o, 5000, 5000, this.field_v, this.field_y);
         jj.a(this.field_p, this.field_y, this.field_v, p.field_e, this.field_A, ArrayWidgetGroup.field_J, param5, this.field_o, (byte) -106);
         vc.a((byte) 116);
@@ -93,7 +93,7 @@ abstract class NetworkGameClient extends GameApplet {
         ContextMenu.field_Lb = param2;
         PortalView.field_G = param0;
         if (param7 > -35) {
-          this.e((byte) 2);
+          this.enableRequestReplyPackets((byte) 2);
         }
         HotspotTextWidget.field_R = param6;
         m.field_y = param4;
@@ -101,29 +101,29 @@ abstract class NetworkGameClient extends GameApplet {
         jo.a((byte) 81);
     }
 
-    private final void n(int param0) {
+    private final void enableChatResponses(int param0) {
         if (param0 != -26837) {
-          this.p(-7);
+          this.updateLoginFlow(-7);
         }
         wj.field_l[13] = true;
         wj.field_l[12] = true;
         wj.field_l[11] = true;
     }
 
-    final static UiComponent k(int param0) {
+    final static UiComponent getPlayerListContent(int param0) {
         if (param0 >= -45) {
           return (UiComponent) null;
         }
         return eg.field_B.field_Ib;
     }
 
-    final static ChaseEvent a(int param0, boolean param1, int param2, int param3) {
-        ChaseEvent var4 = (ChaseEvent) (a.field_c.g(69));
+    final static ChaseEvent obtainChaseEvent(int param0, boolean param1, int param2, int param3) {
+        ChaseEvent var4 = (ChaseEvent) (a.field_c.removeLast(69));
         if (var4 == null) {
           var4 = new ChaseEvent();
         }
         if (!param1) {
-          var4.a(param3, param2, param1, param0);
+          var4.setEventData(param3, param2, param1, param0);
           return var4;
         }
         return (ChaseEvent) null;
@@ -132,7 +132,7 @@ abstract class NetworkGameClient extends GameApplet {
     private final void enableBaseResponses(boolean param0, int param1) {
         wj.field_l[3] = true;
         if (param1 != -7793) {
-          NetworkGameClient.k(-38);
+          NetworkGameClient.getPlayerListContent(-38);
         }
         wj.field_l[16] = true;
         wj.field_l[0] = true;
@@ -142,7 +142,7 @@ abstract class NetworkGameClient extends GameApplet {
         wj.field_l[17] = true;
     }
 
-    private final void a(String param0, int param1, int param2, int param3, byte param4) {
+    private final void readAppletParameters(String param0, int param1, int param2, int param3, byte param4) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -157,7 +157,7 @@ abstract class NetworkGameClient extends GameApplet {
         String var10 = null;
         try {
           try {
-            if (!this.b(0)) {
+            if (!this.isHostAllowed(0)) {
               return;
             }
             this.field_v = this.getCodeBase().getHost();
@@ -188,12 +188,12 @@ abstract class NetworkGameClient extends GameApplet {
               this.field_q = Integer.parseInt(var9);
             }
             ii.field_e = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
-            this.a(this.field_p, param1, 32, 32000, param2, param0, param3);
+            this.startAppletShell(this.field_p, param1, 32, 32000, param2, param0, param3);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
-            MouseInputHandler.a((String) null, (Throwable) ((Object) var6_ref), false);
+            MouseInputHandler.reportClientError((String) null, (Throwable) ((Object) var6_ref), false);
             this.reportError(27200, "crash");
           }
           return;
@@ -218,15 +218,15 @@ abstract class NetworkGameClient extends GameApplet {
         }
     }
 
-    private final void c(boolean param0) {
+    private final void readSessionCookieResponse(boolean param0) {
         if (param0) {
           return;
         }
-        String var2 = ResizableDialog.k(103);
+        String var2 = ResizableDialog.readPacketString(103);
         ra.a(StatefulTextPainter.b(0), -44, var2);
     }
 
-    private final void h(int param0) {
+    private final void readBrowserUrlResponse(int param0) {
         int var2 = s.field_e.readUnsignedByte(31365);
         int var3 = (1 & var2) != 0 ? 1 : 0;
         int var5 = 84 % ((param0 - 53) / 42);
@@ -236,10 +236,10 @@ abstract class NetworkGameClient extends GameApplet {
         f.a(StatefulTextPainter.b(0), var3 != 0, (byte) -45, qe.a(-2739, var6));
     }
 
-    final void a(String param0, int param1, byte param2) {
+    final void startWithDefaultSize(String param0, int param1, byte param2) {
         try {
           int var4_int = 121 % ((-11 - param2) / 51);
-          this.a(param0, 640, 480, param1, (byte) -126);
+          this.readAppletParameters(param0, 640, 480, param1, (byte) -126);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "aq.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -267,21 +267,21 @@ abstract class NetworkGameClient extends GameApplet {
         }
     }
 
-    private final void d(byte param0) {
+    private final void enableListResponsePackets(byte param0) {
         if (param0 != 40) {
           this.field_m = true;
         }
         wj.field_l[4] = true;
     }
 
-    final void j(int param0) {
+    final void dispatchServerPacket(int param0) {
         boolean stackIn_33_0 = false;
         int var2;
         ChatMessage var3;
         int var4;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param0 != -13) {
-          this.h(-72);
+          this.readBrowserUrlResponse(-72);
         }
         var2 = PortalEntryEvent.field_i;
         if (var2 < 64 &&
@@ -290,7 +290,7 @@ abstract class NetworkGameClient extends GameApplet {
             return;
           }
           if (var2 == 1) {
-            JaggrabDownloader.c(0);
+            JaggrabDownloader.consumeQueuedRequestReply(0);
           } else {
             if (var2 != 2) {
               if (var2 != 3) {
@@ -299,7 +299,7 @@ abstract class NetworkGameClient extends GameApplet {
                 } else {
                   if (var2 != 5) {
                     if (var2 == 6) {
-                      CipherPacketBuffer.i((byte) 104);
+                      CipherPacketBuffer.readRankingsResponse((byte) 104);
                     } else {
                       if (var2 != 7) {
                         if (var2 != 8) {
@@ -309,34 +309,34 @@ abstract class NetworkGameClient extends GameApplet {
                             if (var2 != 11 &&
                               var2 != 12) {
                               if (var2 == 13) {
-                                rp.e((byte) 96);
+                                rp.handleFriendListPacket((byte) 96);
                                 return;
                               }
                               if (var2 == 17) {
-                                this.h(110);
+                                this.readBrowserUrlResponse(110);
                                 return;
                               }
                               if (var2 == 18) {
                                 pn.a((byte) 124);
                                 return;
                               }
-                              MouseInputHandler.a("MGS1: " + ci.a(0), (Throwable) null, false);
-                              ak.a((byte) -114);
+                              MouseInputHandler.reportClientError("MGS1: " + ci.a(0), (Throwable) null, false);
+                              ak.closeGameSocket((byte) -114);
                               return;
                             }
                             stackIn_33_0 = (var2 == 12);
-                            var3 = nj.a(stackIn_33_0, (byte) 107);
-                            bf.a(var3, -53);
+                            var3 = nj.readChatMessage(stackIn_33_0, (byte) 107);
+                            bf.acceptChatMessage(var3, -53);
                           }
                         } else {
-                          AgeValidator.a(EmailAvailabilityValidator.field_q, s.field_e, ArrayWidgetGroup.field_J, -4);
+                          AgeValidator.handleReflectionCheck(EmailAvailabilityValidator.field_q, s.field_e, ArrayWidgetGroup.field_J, -4);
                         }
                       } else {
-                        this.c(false);
+                        this.readSessionCookieResponse(false);
                       }
                     }
                   } else {
-                    LinkButtonPainter.a(param0 ^ 9350);
+                    LinkButtonPainter.readSavedDataReply(param0 ^ 9350);
                   }
                 }
               } else {
@@ -348,18 +348,18 @@ abstract class NetworkGameClient extends GameApplet {
           }
           return;
         }
-        MouseInputHandler.a("MGS2: " + ci.a(0), (Throwable) null, false);
-        ak.a((byte) -125);
+        MouseInputHandler.reportClientError("MGS2: " + ci.a(0), (Throwable) null, false);
+        ak.closeGameSocket((byte) -125);
     }
 
-    private final void q(int param0) {
+    private final void enableSavedDataResponses(int param0) {
         wj.field_l[5] = true;
         if (param0 < 120) {
           this.field_y = 46;
         }
     }
 
-    private final int a(int param0, boolean param1, boolean param2) {
+    private final int processAccountUiActions(int param0, boolean param1, boolean param2) {
         try {
           Throwable decompiledCaughtException = null;
           int var4 = 0;
@@ -374,12 +374,12 @@ abstract class NetworkGameClient extends GameApplet {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = ZombieDawnMulti.field_E ? 1 : 0;
-          var4 = ak.a(p.field_e, -5, param2, t.field_d);
+          var4 = ak.pollAccountDialogResult(p.field_e, -5, param2, t.field_d);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = PowerupEvent.a(RasterBuffer.a((byte) -118), QuickChatPhraseRegistry.a(param0 ^ -2198), 32475);
+            var5_int = PowerupEvent.a(RasterBuffer.a((byte) -118), QuickChatPhraseRegistry.createLoginCredentials(param0 ^ -2198), 32475);
             if (var5_int != -1) {
               dd.a(0, hb.field_b, ol.field_q, var5_int);
               ol.field_q = null;
@@ -387,13 +387,13 @@ abstract class NetworkGameClient extends GameApplet {
             }
             var11 = SocketConnector.c((byte) -125);
             if (var11 != null) {
-              uc.b(16772, var11.booleanValue());
+              uc.setLoginTextFlag(16772, var11.booleanValue());
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = SimEntity.a(nh.c((byte) -98), this.field_q, gg.a(param0 ^ -2218), -125, DelayedPacket.c(-19385), s.a((byte) 32), GameCharacter.h((byte) -80));
+            var5_intLifetime1 = SimEntity.a(nh.getNewsletterOptIn((byte) -98), this.field_q, gg.getPendingEmail(param0 ^ -2218), -125, DelayedPacket.getPendingPassword(-19385), s.getStatusMessage((byte) 32), GameCharacter.h((byte) -80));
             if (var5_intLifetime1 != -1) {
-              InfectionEvent.a(hb.field_b, 31407, var5_intLifetime1, ol.field_q);
+              InfectionEvent.handleAccountCreationResult(hb.field_b, 31407, var5_intLifetime1, ol.field_q);
               hb.field_b = null;
               ol.field_q = null;
             }
@@ -407,14 +407,14 @@ abstract class NetworkGameClient extends GameApplet {
             if (param1) {
               bi.field_a = false;
             } else {
-              var5_intLifetime2 = fd.a(param0 + 2211, false, this.field_s, DelayedPacket.c(param0 ^ 17196), s.a((byte) 32), this.field_q);
+              var5_intLifetime2 = fd.a(param0 + 2211, false, this.field_s, DelayedPacket.getPendingPassword(param0 ^ 17196), s.getStatusMessage((byte) 32), this.field_q);
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
-                  bf.a(true, var5_intLifetime2, ol.field_q);
+                  bf.showLoginResponse(true, var5_intLifetime2, ol.field_q);
                   ol.field_q = null;
                 } else {
                   cm.field_d = ii.field_d;
-                  a.b(-1);
+                  a.handleLoginSuccess(-1);
                   a.field_b = 10;
                   og.field_N = false;
                 }
@@ -446,7 +446,7 @@ abstract class NetworkGameClient extends GameApplet {
             ji.a(8355711, StatefulTextPainter.b(0));
           }
           if (var4 == 10) {
-            ma.field_a.b((byte) -35, 17);
+            ma.field_a.writeCipheredOpcode((byte) -35, 17);
           }
           if (var4 == 11) {
             BirthDateInputWidget.a(false, StatefulTextPainter.b(0));
@@ -459,23 +459,23 @@ abstract class NetworkGameClient extends GameApplet {
               if (null == DateInputWidget.field_I) {
                 DateInputWidget.field_I = new JaggrabDownloader(ArrayWidgetGroup.field_J, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
-              if (DateInputWidget.field_I.b(-90)) {
-                var12 = DateInputWidget.field_I.a((byte) 21);
+              if (DateInputWidget.field_I.poll(-90)) {
+                var12 = DateInputWidget.field_I.getResponse((byte) 21);
                 if (var12 != null) {
-                  var7 = oe.a(var12.position, var12.payload, false, 0);
-                  ProgressDialog.b((byte) 126, var7);
+                  var7 = oe.decodeSingleByteText(var12.position, var12.payload, false, 0);
+                  ProgressDialog.receiveCountryList((byte) 126, var7);
                 } else {
                   var9 = (String) null;
-                  ProgressDialog.b((byte) -110, (String) null);
+                  ProgressDialog.receiveCountryList((byte) -110, (String) null);
                 }
                 DateInputWidget.field_I = null;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5 = (Exception) (Object) decompiledCaughtException;
-              MouseInputHandler.a("S1", (Throwable) ((Object) var5), false);
+              MouseInputHandler.reportClientError("S1", (Throwable) ((Object) var5), false);
               var10 = (String) null;
-              ProgressDialog.b((byte) -69, (String) null);
+              ProgressDialog.receiveCountryList((byte) -69, (String) null);
               DateInputWidget.field_I = null;
             }
           }
@@ -499,14 +499,14 @@ abstract class NetworkGameClient extends GameApplet {
         }
     }
 
-    private final void c(byte param0) {
+    private final void enableRankingsPackets(byte param0) {
         wj.field_l[6] = true;
         if (param0 > -35) {
           field_t = false;
         }
     }
 
-    final void b(byte param0, boolean param1) {
+    final void serviceFramework(byte param0, boolean param1) {
         int stackIn_23_0 = 0;
         String stackIn_103_0 = null;
         boolean stackIn_104_1 = false;
@@ -522,49 +522,49 @@ abstract class NetworkGameClient extends GameApplet {
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
         if (ng.field_g != null) {
           if (rn.field_f == null) {
-            var6 = nn.a(30);
+            var6 = nn.getTopLevelContainer(30);
             var4 = var6.getSize();
-            ng.field_g.a(var4.width, (byte) -119, var4.height);
+            ng.field_g.setDesiredSize(var4.width, (byte) -119, var4.height);
           }
-          ng.field_g.b(-12371);
+          ng.field_g.updateViewport(-12371);
         }
         ik.a(param0 ^ 50);
         ArmedHumanView.latchInputState((byte) -126);
         if (!DialogLayer.l((byte) -126) &&
           11 != a.field_b) {
-          PortalEntryEvent.c(param0 - 93);
+          PortalEntryEvent.updateDialogLayer(param0 - 93);
         }
         if (FullscreenFocusCanvas.field_a != null) {
-          t.field_d = FullscreenFocusCanvas.field_a.b(param0 - 216);
+          t.field_d = FullscreenFocusCanvas.field_a.takeRotation(param0 - 216);
         }
         if (vo.e(1)) {
           var3 = wq.a((byte) 63) * 1200;
           if (this.field_z ||
-            !(var3 >= t.b(param0 - 220)) &&
-            !(b.a(true) <= var3)) {
+            !(var3 >= t.getKeyboardIdleTicks(param0 - 220)) &&
+            !(b.getIdleTicks(true) <= var3)) {
             this.field_z = false;
-            ak.a((byte) -113);
+            ak.closeGameSocket((byte) -113);
             ib.a(-107);
-            bf.a(true, 2, ei.field_c);
+            bf.showLoginResponse(true, 2, ei.field_c);
             wp.c(param0 ^ 8287);
             bi.field_a = true;
-            SocketConnector.field_e = bl.a((byte) 102) + 15000L;
+            SocketConnector.field_e = bl.monotonicMillis((byte) 102) + 15000L;
           }
         }
         if (gh.field_a == -1 ||
           0 == gh.field_a) {
           stackIn_23_0 = (gh.field_a != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_23_0;
-          gh.field_a = DraggableWidget.h(param0 - 104);
+          gh.field_a = DraggableWidget.pollClientConnections(param0 - 104);
           if (var3Lifetime1 != 0 &&
             gh.field_a == 0 &&
             11 == a.field_b &&
-            !gh.a(111)) {
-            a.b(param0 - 96);
+            !gh.isLoggedInWithAccount(111)) {
+            a.handleLoginSuccess(param0 - 96);
           }
           if (-1 != gh.field_a &&
             0 != gh.field_a) {
-            SocketConnector.field_e = 15000L + bl.a((byte) 113);
+            SocketConnector.field_e = 15000L + bl.monotonicMillis((byte) 113);
           }
         }
         if (gh.field_a != -1 &&
@@ -591,19 +591,19 @@ abstract class NetworkGameClient extends GameApplet {
             if (a.field_b >= 10) {
               ib.a(-69);
               if (gh.field_a == 3) {
-                bf.a(true, 256, IndexedSpriteState.field_d);
+                bf.showLoginResponse(true, 256, IndexedSpriteState.field_d);
               } else {
                 if (gh.field_a == 4) {
-                  bf.a(true, 256, wq.field_b);
+                  bf.showLoginResponse(true, 256, wq.field_b);
                 } else {
                   if (gh.field_a != 2) {
                     if (5 == gh.field_a) {
-                      bf.a(true, 5, MouseInputHandler.field_a);
+                      bf.showLoginResponse(true, 5, MouseInputHandler.field_a);
                     } else {
-                      bf.a(true, 256, PowerupBar.field_j);
+                      bf.showLoginResponse(true, 256, PowerupBar.field_j);
                     }
                   } else {
-                    bf.a(true, 256, qq.field_g);
+                    bf.showLoginResponse(true, 256, qq.field_g);
                   }
                 }
               }
@@ -616,8 +616,8 @@ abstract class NetworkGameClient extends GameApplet {
         }
         if ((gh.field_a != -1 &&
           gh.field_a != 0 ||
-          gh.a(86)) &&
-          bl.a((byte) 79) >= SocketConnector.field_e) {
+          gh.isLoggedInWithAccount(86)) &&
+          bl.monotonicMillis((byte) 79) >= SocketConnector.field_e) {
           bi.field_a = false;
           if (gh.field_a != -1 &&
             gh.field_a != 0) {
@@ -626,20 +626,20 @@ abstract class NetworkGameClient extends GameApplet {
           }
         }
         if (gh.field_a == 0 &&
-          !gh.a(119)) {
+          !gh.isLoggedInWithAccount(119)) {
           eb.field_p = false;
         }
         if (ClientException.field_i == 0 &&
-          TertiaryLinkDeque.a((byte) 98)) {
+          TertiaryLinkDeque.isMasterIndexReady((byte) 98)) {
           ClientException.field_i = 1;
         }
         if (ClientException.field_i == 1) {
           if (p.field_e != 0) {
-            DisplayNamePanel.field_P = u.a(5, ContextMenu.field_Lb);
+            DisplayNamePanel.field_P = u.createResourceArchive(5, ContextMenu.field_Lb);
           }
-          ra.field_l = BirthDateEntryPanel.a(false, PortalView.field_G, 1, -24285, true);
-          AccountCreationForm.field_L = BirthDateEntryPanel.a(false, m.field_y, 1, -24285, true);
-          wm.field_V = BirthDateEntryPanel.a(false, m.field_z, 1, -24285, true);
+          ra.field_l = BirthDateEntryPanel.openArchive(false, PortalView.field_G, 1, -24285, true);
+          AccountCreationForm.field_L = BirthDateEntryPanel.openArchive(false, m.field_y, 1, -24285, true);
+          wm.field_V = BirthDateEntryPanel.openArchive(false, m.field_z, 1, -24285, true);
           ClientException.field_i = 2;
           LinkButtonPainter.field_f = AccountCreationForm.field_L;
           ResizableDialog.field_eb = ra.field_l;
@@ -649,9 +649,9 @@ abstract class NetworkGameClient extends GameApplet {
             DisplayNamePanel.field_P.a((byte) -126)) {
             if (DisplayNamePanel.field_P.a("", 2)) {
               if (DisplayNamePanel.field_P.a(false, "")) {
-                TranslatedUiText.a(true, DisplayNamePanel.field_P);
+                TranslatedUiText.loadTranslatedStrings(true, DisplayNamePanel.field_P);
                 DisplayNamePanel.field_P = null;
-                IsaacRandom.d(26673);
+                IsaacRandom.resetFrameTimingHistory(26673);
               }
             } else {
               DisplayNamePanel.field_P = null;
@@ -668,33 +668,33 @@ abstract class NetworkGameClient extends GameApplet {
           lc.a(62);
           hh.field_m = false;
           SimArmedHuman.field_Bb = hj.field_e;
-          si.a(false, cm.field_e, wm.field_V, ra.field_l, AccountCreationForm.field_L);
+          si.initializeLoginUi(false, cm.field_e, wm.field_V, ra.field_l, AccountCreationForm.field_L);
           if (gj.field_f ||
             null != kj.field_g) {
             stackIn_103_0 = kj.field_g;
             stackIn_104_1 = !(gj.field_f);
             stackIn_106_2 = 127;
             stackIn_107_3 = !(gj.field_f);
-            oi.$cfr$intArgs$a$88c6728ee5b1(stackIn_103_0, stackIn_104_1, stackIn_106_2, stackIn_107_3);
+            oi.openLoginDialog(stackIn_103_0, stackIn_104_1, stackIn_106_2, stackIn_107_3);
           }
           if (ii.field_e) {
-            bo.b(4);
+            bo.requestPlayAsGuest(4);
           }
           if (null == PacketBuffer.field_l) {
             PacketBuffer.field_l = dg.a(30);
             TertiaryLinkDeque.field_e = vh.h(32);
           }
-          ud.a(-3758, TertiaryLinkDeque.field_e, wm.field_V, PacketBuffer.field_l);
+          ud.prepareLogoAnimation(-3758, TertiaryLinkDeque.field_e, wm.field_V, PacketBuffer.field_l);
           wm.field_V = null;
           AccountCreationForm.field_L = null;
           ra.field_l = null;
-          bk.a((java.applet.Applet) (this), -17708);
-          IsaacRandom.d(26673);
+          bk.readUsernameParameter((java.applet.Applet) (this), -17708);
+          IsaacRandom.resetFrameTimingHistory(26673);
           ClientException.field_i = 10;
         }
         if (ClientException.field_i == 10) {
           if (p.field_e != 0) {
-            qc.field_s = u.a(5, HotspotTextWidget.field_R);
+            qc.field_s = u.createResourceArchive(5, HotspotTextWidget.field_R);
           }
           ClientException.field_i = 11;
         }
@@ -727,8 +727,8 @@ abstract class NetworkGameClient extends GameApplet {
         }
         if (!param1 &&
           hn.field_h) {
-          SpriteState.a(95, NameEntryPopup.field_Ib);
-          this.f(-58);
+          SpriteState.detachCanvasInput(95, NameEntryPopup.field_Ib);
+          this.recreateCanvas(-58);
           qi.a(100, NameEntryPopup.field_Ib);
         }
         if (wj.field_l[8]) {
@@ -739,12 +739,12 @@ abstract class NetworkGameClient extends GameApplet {
     protected NetworkGameClient() {
     }
 
-    final int a(boolean param0, int param1) {
+    final int updateAccountUi(boolean param0, int param1) {
         int var3 = -56 / ((6 - param1) / 38);
-        return this.a(-2197, true, param0);
+        return this.processAccountUiActions(-2197, true, param0);
     }
 
-    final void p(int param0) {
+    final void updateLoginFlow(int param0) {
         int discarded$10 = 0;
         int discarded$11 = 0;
         int var3;
@@ -756,15 +756,15 @@ abstract class NetworkGameClient extends GameApplet {
         if (param0 <= 17) {
           return;
         }
-        if (!SimZombie.p(-86)) {
+        if (!SimZombie.isSessionReady(-86)) {
           if (10 <= ClientException.field_i) {
-            if (!GameKeyHandler.a(250)) {
+            if (!GameKeyHandler.isTitleAnimationComplete(250)) {
               LevelData.b((byte) -9);
             } else {
               if (a.field_b == 0) {
-                discarded$10 = this.a(-2197, false, false);
+                discarded$10 = this.processAccountUiActions(-2197, false, false);
               } else {
-                ud.a(t.field_d, 1000);
+                ud.updateLoginDialog(t.field_d, 1000);
               }
             }
           }
@@ -778,37 +778,37 @@ abstract class NetworkGameClient extends GameApplet {
             stackIn_5_0 = this;
             stackIn_5_3 = true;
           }
-          discarded$11 = this.a(stackIn_4_1, stackIn_4_2, stackIn_5_3);
+          discarded$11 = this.processAccountUiActions(stackIn_4_1, stackIn_4_2, stackIn_5_3);
         }
     }
 
-    final void a(boolean param0, byte param1, boolean param2, boolean param3, boolean param4, boolean param5, boolean param6) {
+    final void enableOptionalPacketHandlers(boolean param0, byte param1, boolean param2, boolean param3, boolean param4, boolean param5, boolean param6) {
         this.enableBaseResponses(true, -7793);
         if (param1 != -27) {
-          NetworkGameClient.a(-38, false, -82, 45);
+          NetworkGameClient.obtainChaseEvent(-38, false, -82, 45);
         }
         if (param5) {
-          this.e((byte) 119);
+          this.enableRequestReplyPackets((byte) 119);
         }
         if (param3) {
           this.enableMessageGroup1(-105);
         }
         if (param2) {
-          this.d((byte) 40);
+          this.enableListResponsePackets((byte) 40);
         }
         if (param4) {
-          this.q(param1 + 154);
+          this.enableSavedDataResponses(param1 + 154);
         }
         if (param0) {
-          this.c((byte) -128);
+          this.enableRankingsPackets((byte) -128);
         }
         if (param6) {
-          this.n(param1 ^ 26830);
+          this.enableChatResponses(param1 ^ 26830);
         }
     }
 
-    final int m(int param0) {
-        int var2 = this.i(13546);
+    final int pollReconnectAndResend(int param0) {
+        int var2 = this.pollReconnect(13546);
         if (var2 == 0 ||
           1 == var2) {
           if (wj.field_l[1]) {
@@ -821,7 +821,7 @@ abstract class NetworkGameClient extends GameApplet {
             ValidationMessageWidget.a(4, (byte) 73);
           }
           if (wj.field_l[4]) {
-            UsernameSuggestionsPanel.b(true, 5);
+            UsernameSuggestionsPanel.resendPendingRequests(true, 5);
           }
           if (wj.field_l[5]) {
             AccountCreationForm.a((byte) -121, 6);
@@ -830,7 +830,7 @@ abstract class NetworkGameClient extends GameApplet {
             TertiaryLinkNode.a((byte) 126, 7);
           }
           if (wj.field_l[8]) {
-            BufferedFile.b((byte) 105);
+            BufferedFile.clearReflectionChecks((byte) 105);
           }
         }
         if (param0 == 10) {

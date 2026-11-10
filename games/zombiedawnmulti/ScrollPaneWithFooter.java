@@ -46,7 +46,7 @@ final class ScrollPaneWithFooter extends UiComponent {
     final void layoutPaneFooter(int param0, byte param1, int param2, int param3) {
         int var5 = (this.field_zb + param0) / 2;
         int var6 = -param3 + this.field_z;
-        this.field_Jb.a(param2, param0, this.field_zb, 0, -param0 + var6, -31465, 0);
+        this.field_Jb.setBoundsAndLayout(param2, param0, this.field_zb, 0, -param0 + var6, -31465, 0);
         this.field_Gb.field_z = param3;
         int var7 = 42 % ((param1 + 27) / 39);
         this.field_Gb.field_zb = -param0 + var5;
@@ -58,7 +58,7 @@ final class ScrollPaneWithFooter extends UiComponent {
         this.field_Hb.field_z = param3;
     }
 
-    final static void c(byte param0) {
+    final static void drawScreenshotSlideshow(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2_int = 0;
@@ -97,9 +97,9 @@ final class ScrollPaneWithFooter extends UiComponent {
               var2_int = lb.field_a * (var7.fullWidth + 60) / nf.field_a;
               var3 = var2_int - 30;
               if (qh.field_a) {
-                cb.a(199, false, var3 * -256 / 30, 245, var7, 256 * (-var3 + var7.fullWidth) / 30);
+                cb.drawHorizontalFadeSprite(199, false, var3 * -256 / 30, 245, var7, 256 * (-var3 + var7.fullWidth) / 30);
               } else {
-                cb.a(199, false, 256 * (var7.fullWidth - var3) / 30, 245, var7, -256 * var3 / 30);
+                cb.drawHorizontalFadeSprite(199, false, 256 * (var7.fullWidth - var3) / 30, 245, var7, -256 * var3 / 30);
               }
             }
           }

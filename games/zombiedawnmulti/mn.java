@@ -10,10 +10,10 @@ final class mn extends ic {
     static String field_s;
     private String field_o;
 
-    final pi b(int param0) {
+    final pi getCredentialKind(int param0) {
         if (param0 != 7) {
           PacketBuffer var3 = (PacketBuffer) null;
-          this.a((PacketBuffer) null, -78);
+          this.writeTo((PacketBuffer) null, -78);
           return uq.field_b;
         }
         return uq.field_b;
@@ -28,7 +28,7 @@ final class mn extends ic {
         }
     }
 
-    final void a(PacketBuffer param0, int param1) {
+    final void writeTo(PacketBuffer param0, int param1) {
         try {
           if (param1 != -1) {
             field_q = (String) null;

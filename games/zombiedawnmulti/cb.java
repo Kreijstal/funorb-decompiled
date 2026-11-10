@@ -20,7 +20,7 @@ final class cb extends IntrusiveNode {
     static int[] field_j;
     private int field_k;
 
-    final static void a(int param0, boolean param1) {
+    final static void flushPackets(int param0, boolean param1) {
         try {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
@@ -30,17 +30,17 @@ final class cb extends IntrusiveNode {
               field_g = (String) null;
             }
             if (ma.field_a.position == 0 &&
-              UiWidget.field_g + 10000L < bl.a((byte) 59)) {
-              ma.field_a.b((byte) -35, param0);
+              UiWidget.field_g + 10000L < bl.monotonicMillis((byte) 59)) {
+              ma.field_a.writeCipheredOpcode((byte) -35, param0);
             }
             if (0 < ma.field_a.position) {
               try {
                 ki.field_h.a(0, -100, ma.field_a.position, ma.field_a.payload);
-                UiWidget.field_g = bl.a((byte) 125);
+                UiWidget.field_g = bl.monotonicMillis((byte) 125);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
-                ak.a((byte) -121);
+                ak.closeGameSocket((byte) -121);
               }
               ma.field_a.position = 0;
             }
@@ -54,15 +54,15 @@ final class cb extends IntrusiveNode {
         }
     }
 
-    final void c(byte param0) {
+    final void resetDisplayedProgress(byte param0) {
         this.field_n = this.field_q;
         if (param0 != 99) {
           pd var3 = (pd) null;
-          cb.a(96, 89, 115, (pd) null);
+          cb.setMenuFrameAndPadding(96, 89, 115, (pd) null);
         }
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3, Sprite param4, int param5) {
+    final static void drawHorizontalFadeSprite(int param0, boolean param1, int param2, int param3, Sprite param4, int param5) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
@@ -147,7 +147,7 @@ final class cb extends IntrusiveNode {
                     if (255 >= var15) {
                       var18 = SoftwareRasterizer.pixels[var8];
                       var19 = (var18 & 16711935) * var16 + var15 * (var17 & 16711935) >> 8 & 16711935;
-                      SoftwareRasterizer.pixels[var8] = (ScrollPane.b(var15 * ScrollPane.b(var17, 65280) + var16 * ScrollPane.b(var18, 65280), 16711705) >> 8) + var19;
+                      SoftwareRasterizer.pixels[var8] = (ScrollPane.bitAnd(var15 * ScrollPane.bitAnd(var17, 65280) + var16 * ScrollPane.bitAnd(var18, 65280), 16711705) >> 8) + var19;
                     } else {
                       SoftwareRasterizer.pixels[var8] = var17;
                     }
@@ -177,18 +177,18 @@ final class cb extends IntrusiveNode {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void setupForPowerup(int param0, int param1, int param2, int param3) {
         int stackIn_5_1 = 0;
         this.field_m = param2;
         this.field_h = param3;
         this.field_k = 70;
         this.field_p = new Sprite(this.field_k, this.field_h);
-        if (!FullscreenFocusCanvas.field_k.c(param3 ^ 57, this.field_m)) {
+        if (!FullscreenFocusCanvas.field_k.isResearchable(param3 ^ 57, this.field_m)) {
           this.field_s = 0;
           this.field_n = 0;
         } else {
           this.field_s = cr.a(this.field_m, param3 - 193);
-          if (FullscreenFocusCanvas.field_k.d(this.field_m, 53)) {
+          if (FullscreenFocusCanvas.field_k.isUpgradeUnlocked(this.field_m, 53)) {
             stackIn_5_1 = this.field_s;
           } else {
             stackIn_5_1 = FullscreenFocusCanvas.field_k.field_t[this.field_m];
@@ -200,10 +200,10 @@ final class cb extends IntrusiveNode {
         }
         this.field_f = 0;
         this.field_q = this.field_n;
-        this.a((byte) -117);
+        this.renderCard((byte) -117);
     }
 
-    final void d(byte param0) {
+    final void advanceProgressAnimation(byte param0) {
         if (param0 != -102) {
           field_g = (String) null;
         }
@@ -215,7 +215,7 @@ final class cb extends IntrusiveNode {
         }
     }
 
-    final static void a(String param0, int param1, String param2) {
+    final static void showLoginForm(String param0, int param1, String param2) {
         if (param1 != 32) {
           return;
         }
@@ -224,7 +224,7 @@ final class cb extends IntrusiveNode {
             PortalView.field_L.dismissDialog(-7435);
           }
           b.field_c = new LoginForm(param2, param0, false, true, true);
-          wj.field_i.a((UiWidget) (b.field_c), (byte) -110);
+          wj.field_i.transitionToContent((UiWidget) (b.field_c), (byte) -110);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "cb.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -242,7 +242,7 @@ final class cb extends IntrusiveNode {
         field_j = null;
     }
 
-    final static int b(int param0, int param1) {
+    final static int nextPowerOfTwo(int param0, int param1) {
         param1--;
         param1 = param1 | param1 >>> 1;
         param1 = param1 | param1 >>> 2;
@@ -256,7 +256,7 @@ final class cb extends IntrusiveNode {
         return 1 + param1;
     }
 
-    private final void a(byte param0) {
+    private final void renderCard(byte param0) {
         int var2;
         Sprite var3;
         int var5;
@@ -390,7 +390,7 @@ final class cb extends IntrusiveNode {
         g.d();
     }
 
-    final void a(int param0, int param1) {
+    final void setTargetProgress(int param0, int param1) {
         this.field_f = this.field_n + param1;
         if (param0 != 0) {
           this.field_q = -95;
@@ -403,12 +403,12 @@ final class cb extends IntrusiveNode {
         this.field_p = new Sprite(this.field_k, this.field_h);
     }
 
-    final static void a(int param0, int param1, int param2, pd param3) {
+    final static void setMenuFrameAndPadding(int param0, int param1, int param2, pd param3) {
         try {
           SecondaryNodeDeque.field_a = param1;
           if (param2 != -8388) {
             Sprite var5 = (Sprite) null;
-            cb.a(97, false, 53, -73, (Sprite) null, -43);
+            cb.drawHorizontalFadeSprite(97, false, 53, -73, (Sprite) null, -43);
           }
           ic.field_g = param0;
           qf.field_c = param3;

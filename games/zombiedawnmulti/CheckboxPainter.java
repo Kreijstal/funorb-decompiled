@@ -25,11 +25,11 @@ final class CheckboxPainter implements WidgetPainter {
         field_f = null;
         if (!param0) {
           byte[] var2 = (byte[]) null;
-          CheckboxPainter.a((byte[]) null, 45);
+          CheckboxPainter.upgradeActorSpawnerDataV4((byte[]) null, 45);
         }
     }
 
-    final static LevelActorSpawner a(byte[] param0, int param1) {
+    final static LevelActorSpawner upgradeActorSpawnerDataV4(byte[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -48,12 +48,12 @@ final class CheckboxPainter implements WidgetPainter {
           var3 = 100;
           var4 = new byte[param0.length + 8];
           for (var5 = 0; var5 < 6; var5++) {
-            IntrusiveNode.a(var5, var4, -117, ValidationState.a(param0, var5, (byte) 110));
+            IntrusiveNode.writeIntAt(var5, var4, -117, ValidationState.a(param0, var5, (byte) 110));
           }
-          IntrusiveNode.a(6, var4, -93, var2_int);
-          IntrusiveNode.a(param1, var4, -123, var3);
+          IntrusiveNode.writeIntAt(6, var4, -93, var2_int);
+          IntrusiveNode.writeIntAt(param1, var4, -123, var3);
           for (var5Lifetime1 = 6; param0.length / 4 > var5Lifetime1; var5Lifetime1++) {
-            IntrusiveNode.a(2 + var5Lifetime1, var4, -72, ValidationState.a(param0, var5Lifetime1, (byte) 51));
+            IntrusiveNode.writeIntAt(2 + var5Lifetime1, var4, -72, ValidationState.a(param0, var5Lifetime1, (byte) 51));
           }
           stackIn_8_0 = bo.a(var4, param1 + 17);
           return stackIn_8_0;
@@ -71,7 +71,7 @@ final class CheckboxPainter implements WidgetPainter {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6, Sprite param7, int param8) {
+    final static void drawGlowOutline(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6, Sprite param7, int param8) {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
@@ -107,11 +107,11 @@ final class CheckboxPainter implements WidgetPainter {
         }
     }
 
-    final static gh a(boolean param0, boolean param1) {
+    final static gh createFlagResult(boolean param0, boolean param1) {
         gh var2 = new gh(true);
         if (param0) {
           byte[] var3 = (byte[]) null;
-          CheckboxPainter.a((byte[]) null, 33);
+          CheckboxPainter.upgradeActorSpawnerDataV4((byte[]) null, 33);
         }
         var2.field_e = param1 ? true : false;
         return var2;
@@ -151,7 +151,7 @@ final class CheckboxPainter implements WidgetPainter {
           SoftwareRasterizer.fillRect(var8, var9, this.field_l, this.field_i, var7);
           if (param2 != -15112) {
             var11 = (Sprite) null;
-            CheckboxPainter.a(100, -43, 108, -70, true, -27, -48, (Sprite) null, -23);
+            CheckboxPainter.drawGlowOutline(100, -43, 108, -70, true, -27, -48, (Sprite) null, -23);
           }
           if (var12.field_G) {
             SoftwareRasterizer.drawLine(var8, var9, this.field_l + var8, var9 + this.field_i, 1);

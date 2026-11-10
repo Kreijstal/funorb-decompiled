@@ -10,7 +10,7 @@ final class oh extends IntrusiveNode {
     int[] field_g;
     int field_l;
 
-    final void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final void capture(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         this.field_g = param0;
         this.field_i = param1;
         this.field_h = param2;

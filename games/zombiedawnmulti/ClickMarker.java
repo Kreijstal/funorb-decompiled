@@ -76,7 +76,7 @@ final class ClickMarker extends IntrusiveNode {
             this.field_i == null) {
             stackIn_5_0 = 0;
           } else {
-            stackIn_5_0 = DropTargetWidget.b(126, var4, var3_int);
+            stackIn_5_0 = DropTargetWidget.computeScreenVolume(126, var4, var3_int);
           }
           var5 = stackIn_5_0;
           if (this.field_g != null) {
@@ -183,7 +183,7 @@ final class ClickMarker extends IntrusiveNode {
           stackIn_11_1 = 90;
         }
         this.field_j = stackIn_11_1;
-        this.field_g = Camera.b(-127, 0);
+        this.field_g = Camera.createMixerStream(-127, 0);
     }
 
     static {

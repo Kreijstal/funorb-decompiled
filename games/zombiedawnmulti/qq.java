@@ -89,11 +89,11 @@ final class qq {
         if (!FadingDialog.field_H) {
           return null;
         }
-        if (4 <= jp.field_c.a(param0 ^ param0)) {
+        if (4 <= jp.field_c.size(param0 ^ param0)) {
           return null;
         }
         wj var2 = new wj(param1);
-        jp.field_c.a(var2, false);
+        jp.field_c.addFirst(var2, false);
         return var2.field_m;
     }
 

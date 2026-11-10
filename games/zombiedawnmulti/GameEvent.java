@@ -6,9 +6,9 @@ abstract class GameEvent extends IntrusiveNode {
     static ao field_h;
     static String field_g;
 
-    abstract void a(int param0, GameScreen param1);
+    abstract void apply(int param0, GameScreen param1);
 
-    final static int a(PacketBuffer param0, String param1, int param2) {
+    final static int writeCompressedString(PacketBuffer param0, String param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;
@@ -53,7 +53,7 @@ abstract class GameEvent extends IntrusiveNode {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void setTick(int param0, int param1) {
         if (param0 != 0) {
           field_g = (String) null;
           this.field_f = param1;
@@ -65,7 +65,7 @@ abstract class GameEvent extends IntrusiveNode {
     GameEvent() {
     }
 
-    final static Sprite[] a(Sprite param0, int param1) {
+    final static Sprite[] createCentreOnlyFrame(Sprite param0, int param1) {
         Sprite[] var2 = null;
         RuntimeException var2_ref = null;
         Sprite[] var3 = null;
@@ -104,15 +104,15 @@ abstract class GameEvent extends IntrusiveNode {
           return;
         }
         String var2 = (String) null;
-        GameEvent.a((PacketBuffer) null, (String) null, -18);
+        GameEvent.writeCompressedString((PacketBuffer) null, (String) null, -18);
         field_g = null;
         field_h = null;
     }
 
-    void a(byte param0) {
+    void removeFromQueue(byte param0) {
         if (param0 >= -47) {
           GameScreen var3 = (GameScreen) null;
-          this.a(-7, (GameScreen) null);
+          this.apply(-7, (GameScreen) null);
           this.unlink(true);
           return;
         }
@@ -120,10 +120,10 @@ abstract class GameEvent extends IntrusiveNode {
     }
 
     GameEvent(int param0) {
-        this.a(0, param0);
+        this.setTick(0, param0);
     }
 
-    abstract void a(int param0, boolean param1, int param2, int param3);
+    abstract void drawDebugOverlay(int param0, boolean param1, int param2, int param3);
 
     static {
         field_g = "<%0>'s game";

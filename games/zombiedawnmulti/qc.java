@@ -114,7 +114,7 @@ abstract class qc extends DualLinkNode {
         }
     }
 
-    abstract byte[] e(int param0);
+    abstract byte[] getBytes(int param0);
 
     final static void insertBefore(IntrusiveNode param0, IntrusiveNode param1, int param2) {
         if (param2 != 0) {
@@ -179,7 +179,7 @@ abstract class qc extends DualLinkNode {
         }
     }
 
-    abstract int f(int param0);
+    abstract int getProgress(int param0);
 
     qc() {
         this.field_t = true;

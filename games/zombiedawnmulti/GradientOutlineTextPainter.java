@@ -16,7 +16,7 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            ng.a(1, param3 + param4.field_y, param4.field_n, param4.field_i + param1, param4.field_w);
+            ng.drawInsetFieldBorder(1, param3 + param4.field_y, param4.field_n, param4.field_i + param1, param4.field_w);
           }
           super.paintWidget(param0, param1, param2 ^ 0, param3, param4);
           if (param2 == -15112) {
@@ -58,7 +58,7 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.maxAscent, -1, 2147483647, false);
     }
 
-    final static void b(int param0) {
+    final static void disableKeyboardInput(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;

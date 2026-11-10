@@ -106,7 +106,7 @@ final class wq {
           var7 = param0.readUnsignedShort((byte) 69);
           var8 = param0.readUnsignedShort((byte) 69);
           var9 = param0.readUnsignedShort((byte) 69);
-          stackIn_1_0 = rm.a(var2_int, var8, var9, var4, var6, var3, 8128, var7);
+          stackIn_1_0 = rm.createPowerupEvent(var2_int, var8, var9, var4, var6, var3, 8128, var7);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -31,7 +31,7 @@ final class wg {
               var2 = param1.getParameter("cookieprefix");
               var3 = var2 + "settings";
               var4 = (String) (JavaScriptBridge.callJavaScript(param1, 13093, "getcookies"));
-              var5 = WidgetStyleLayer.a(';', false, var4);
+              var5 = WidgetStyleLayer.splitAtCharacter(';', false, var4);
               for (var6 = param0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');
                 if (var7 >= 0 &&
@@ -80,19 +80,19 @@ final class wg {
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           var1_int = 0;
-          while (MusicPatchPcmStream.c(-1)) {
-            AlignedIconLabel.field_Jb.d(99);
-            if (!AlignedIconLabel.field_Jb.c(-85)) {
+          while (MusicPatchPcmStream.pollKeyEvent(-1)) {
+            AlignedIconLabel.field_Jb.handleVerticalNavigation(99);
+            if (!AlignedIconLabel.field_Jb.isActivated(-85)) {
               continue;
             }
             var1_int = 1;
           }
-          AlignedIconLabel.field_Jb.a(aj.a(bo.field_d, false, MouseInputHandler.field_g), 56, aj.a(ChatMessage.field_t, false, vb.field_f));
+          AlignedIconLabel.field_Jb.updatePointer(aj.findMenuOptionAt(bo.field_d, false, MouseInputHandler.field_g), 56, aj.findMenuOptionAt(ChatMessage.field_t, false, vb.field_f));
           if (param0 >= -26) {
             stackIn_7_0 = 112;
             return stackIn_7_0;
           }
-          if (AlignedIconLabel.field_Jb.c(-85)) {
+          if (AlignedIconLabel.field_Jb.isActivated(-85)) {
             var1_int = 1;
           }
           var2 = 0;

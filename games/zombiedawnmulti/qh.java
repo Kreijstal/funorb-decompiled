@@ -46,7 +46,7 @@ final class qh {
           if (param5 < 255) {
             BirthDateInputWidget.field_X.drawAlpha(22 + param4, param3 + 77, param5);
           } else {
-            BirthDateInputWidget.field_X.drawFadedToColour(param4 + 22, param3 + 77, 150 + (on.a(PowerupEvent.field_m * 128, -18924) >> 11), 65535);
+            BirthDateInputWidget.field_X.drawFadedToColour(param4 + 22, param3 + 77, 150 + (on.sine(PowerupEvent.field_m * 128, -18924) >> 11), 65535);
           }
           if (hh.field_h == null) {
             hh.field_h = new Sprite(12, 32);
@@ -65,7 +65,7 @@ final class qh {
           ((BitmapFont) ((Object) var6)).drawParagraphAlpha(gh.field_f[param0], param4 + 4, -7 + param3, 54, 90, 16777215, 1, param5, 1, 1, ((BitmapFont) ((Object) var6)).maxAscent + ((BitmapFont) ((Object) var6)).maxDescent);
           var10 = new Random();
           if (var7 >= var8) {
-            if (hp.a((byte) -98, var10, 7) != 0) {
+            if (hp.nextBoundedInt((byte) -98, var10, 7) != 0) {
               return;
             }
             var11 = new ve(85 + param4, param3 + 18, 8, 0.0, 8.0, 1.5, 1, 1.5, 0.99, 1);

@@ -15,7 +15,7 @@ final class BirthDateEntryPanel extends ArrayWidgetGroup implements ButtonActiva
           return;
         }
         try {
-          mp.a(0, this.field_P.j(-194), this.field_P.i(1), this.field_P.getMonthIndex((byte) -126));
+          mp.sendBirthDateSubmission(0, this.field_P.j(-194), this.field_P.i(1), this.field_P.getMonthIndex((byte) -126));
           if (param3 >= -83) {
             BirthDateEntryPanel.clearSharedReferences(103);
           }
@@ -42,10 +42,10 @@ final class BirthDateEntryPanel extends ArrayWidgetGroup implements ButtonActiva
         this.field_B = new ButtonWidget(ub.field_xb, (WidgetListener) (this));
         this.field_E = new UiWidget[]{(UiWidget) ((Object) this.field_P), (UiWidget) ((Object) this.field_B)};
         this.field_B.painter = (WidgetPainter) ((Object) new oq());
-        this.e(-1);
+        this.refreshLayout(-1);
     }
 
-    final static ResourceArchive a(boolean param0, int param1, int param2, int param3, boolean param4) {
+    final static ResourceArchive openArchive(boolean param0, int param1, int param2, int param3, boolean param4) {
         if (param3 == -24285) {
           return wm.a(param1, param2, param4, false, -127, param0);
         }

@@ -12,7 +12,7 @@ final class VerticalScrollbar extends UiComponent {
     private UiComponent field_Kb;
     private int field_Fb;
 
-    final boolean d(boolean param0) {
+    final boolean pollLineDown(boolean param0) {
         if (this.field_Jb.field_T != 0) {
           this.field_Fb = 20;
           return true;
@@ -166,7 +166,7 @@ final class VerticalScrollbar extends UiComponent {
           var5 = param3 - param2;
           return var5;
         }
-        VerticalScrollbar.h(-114);
+        VerticalScrollbar.tickLobbyHighlights(-114);
         var6Lifetime1 = -this.field_Kb.field_z + this.field_Gb.field_z;
         if (var6Lifetime1 > 0) {
           var7Lifetime1 = this.field_Kb.field_Q;
@@ -193,12 +193,12 @@ final class VerticalScrollbar extends UiComponent {
         return var5Lifetime1;
     }
 
-    final boolean j(int param0) {
+    final boolean isThumbHeld(int param0) {
         int var2 = 116 / ((66 - param0) / 53);
         return this.field_Kb.field_jb != 0 ? true : false;
     }
 
-    final boolean d(byte param0) {
+    final boolean pollPageUp(byte param0) {
         if (param0 != 37) {
           this.field_Hb = (UiComponent) null;
         }
@@ -297,7 +297,7 @@ final class VerticalScrollbar extends UiComponent {
           var17.field_z = var12;
           var17.field_zb = this.field_zb;
           if (param2 <= 109) {
-            VerticalScrollbar.h(27);
+            VerticalScrollbar.tickLobbyHighlights(27);
             var17.field_x = 0;
             var17.field_Q = 0;
             var18 = this.field_Lb;
@@ -380,7 +380,7 @@ final class VerticalScrollbar extends UiComponent {
             this.field_Jb.field_Z = param0 > param3 ? true : false;
             return;
           }
-          VerticalScrollbar.h(27);
+          VerticalScrollbar.tickLobbyHighlights(27);
           var17Lifetime1.field_x = 0;
           var17Lifetime1.field_Q = 0;
           var18Lifetime1Lifetime1 = this.field_Lb;
@@ -425,7 +425,7 @@ final class VerticalScrollbar extends UiComponent {
         var17Lifetime2.field_z = var12Lifetime2;
         var17Lifetime2.field_zb = this.field_zb;
         if (param2 <= 109) {
-          VerticalScrollbar.h(27);
+          VerticalScrollbar.tickLobbyHighlights(27);
           var17Lifetime2.field_x = 0;
           var17Lifetime2.field_Q = 0;
           var18Lifetime2 = this.field_Lb;
@@ -469,12 +469,12 @@ final class VerticalScrollbar extends UiComponent {
           this.layoutScrollbar(param0, param5, (byte) 119, param2);
           return;
         }
-        VerticalScrollbar.h(-9);
+        VerticalScrollbar.tickLobbyHighlights(-9);
         this.field_zb = param6;
         this.layoutScrollbar(param0, param5, (byte) 119, param2);
     }
 
-    final static void h(int param0) {
+    final static void tickLobbyHighlights(int param0) {
         RuntimeException decompiledCaughtException = null;
         LobbyPlayer var1 = null;
         jh var1_ref = null;
@@ -483,7 +483,7 @@ final class VerticalScrollbar extends UiComponent {
         LobbyPlayer var1Lifetime1;
         var2 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var1 = (LobbyPlayer) (cg.field_i.c(param0 ^ 120));
+          var1 = (LobbyPlayer) (cg.field_i.last(param0 ^ 120));
           while (var1 != null) {
             if (0 < var1.field_bc) {
               var1.field_bc = var1.field_bc - 1;
@@ -494,14 +494,14 @@ final class VerticalScrollbar extends UiComponent {
                 }
               }
             }
-            var1 = (LobbyPlayer) (cg.field_i.b(6));
+            var1 = (LobbyPlayer) (cg.field_i.previous(6));
           }
-          var1_ref = (jh) (tn.field_C.c(97));
+          var1_ref = (jh) (tn.field_C.last(97));
           while (var1_ref != null) {
             if (var1_ref.field_Jb > 0) {
               var1_ref.field_Jb = var1_ref.field_Jb - 1;
               if (var1_ref.field_Jb != 0) {
-                var1_ref = (jh) (tn.field_C.b(6));
+                var1_ref = (jh) (tn.field_C.previous(6));
                 continue;
               }
               var1_ref.field_Vb = 0;
@@ -509,9 +509,9 @@ final class VerticalScrollbar extends UiComponent {
                 var1_ref.unlink(true);
               }
             }
-            var1_ref = (jh) (tn.field_C.b(6));
+            var1_ref = (jh) (tn.field_C.previous(6));
           }
-          var1Lifetime1 = (LobbyPlayer) (nh.field_g.c(65));
+          var1Lifetime1 = (LobbyPlayer) (nh.field_g.last(65));
           if (param0 != 2) {
             return;
           }
@@ -525,7 +525,7 @@ final class VerticalScrollbar extends UiComponent {
                 }
               }
             }
-            var1Lifetime1 = (LobbyPlayer) (nh.field_g.b(6));
+            var1Lifetime1 = (LobbyPlayer) (nh.field_g.previous(6));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -535,7 +535,7 @@ final class VerticalScrollbar extends UiComponent {
         }
     }
 
-    final boolean i(int param0) {
+    final boolean pollPageDown(int param0) {
         if (~this.field_Lb.field_T != param0) {
           this.field_Fb = 20;
           return true;

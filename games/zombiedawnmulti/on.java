@@ -25,19 +25,19 @@ final class on extends TextInputWidget implements ValidationProviderSource {
         field_cb = null;
         field_Z = null;
         if (param0 != 29829) {
-          on.c(true, 18);
+          on.findLobbyGame(true, 18);
         }
     }
 
-    final static jh c(boolean param0, int param1) {
+    final static jh findLobbyGame(boolean param0, int param1) {
         if (!param0) {
-          return null == af.field_h ? null : (jh) (af.field_h.a((long)param1, -22877));
+          return null == af.field_h ? null : (jh) (af.field_h.findByKey((long)param1, -22877));
         }
         on.releaseStatics(47);
-        return null == af.field_h ? null : (jh) (af.field_h.a((long)param1, -22877));
+        return null == af.field_h ? null : (jh) (af.field_h.findByKey((long)param1, -22877));
     }
 
-    final static String a(boolean param0, boolean param1, boolean param2, boolean param3) {
+    final static String chooseClickPrompt(boolean param0, boolean param1, boolean param2, boolean param3) {
         int var4;
         var4 = 0;
         if (param1) {
@@ -65,7 +65,7 @@ final class on extends TextInputWidget implements ValidationProviderSource {
         super(param0, param1, param2);
     }
 
-    final void a(byte param0, ValidationProvider param1) {
+    final void setValidationProvider(byte param0, ValidationProvider param1) {
         try {
           this.field_ab = param1;
           if (param0 != -27) {
@@ -76,7 +76,7 @@ final class on extends TextInputWidget implements ValidationProviderSource {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int sine(int param0, int param1) {
         int stackIn_5_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_15_0 = 0;
@@ -116,8 +116,8 @@ final class on extends TextInputWidget implements ValidationProviderSource {
         return stackIn_5_0;
     }
 
-    final void j(int param0) {
-        super.j(param0);
+    final void notifyTextChanged(int param0) {
+        super.notifyTextChanged(param0);
         if (null != this.field_ab) {
           this.field_ab.resetValidationDelay(-1306);
         }
@@ -128,14 +128,14 @@ final class on extends TextInputWidget implements ValidationProviderSource {
           return null;
         }
         if (this.field_x != null) {
-          aj.a(bo.field_d, MouseInputHandler.field_g - this.field_Y + this.field_n, (byte) -76);
+          aj.setTooltipAnchor(bo.field_d, MouseInputHandler.field_g - this.field_Y + this.field_n, (byte) -76);
           int var2 = 30 % ((param0 - 53) / 57);
           return this.field_x;
         }
         return null;
     }
 
-    final static void j(byte param0) {
+    final static void dismissNoticeBar(byte param0) {
         DiskCacheWorker.field_b = -1;
         if (param0 > 43) {
           WidgetContainer.field_E = 0;
@@ -143,7 +143,7 @@ final class on extends TextInputWidget implements ValidationProviderSource {
           w.field_m = 0;
           return;
         }
-        on.a(true, true, false, true);
+        on.chooseClickPrompt(true, true, false, true);
         WidgetContainer.field_E = 0;
         io.field_g = false;
         w.field_m = 0;

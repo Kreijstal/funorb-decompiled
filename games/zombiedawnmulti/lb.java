@@ -17,13 +17,13 @@ final class lb {
         String stackIn_35_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ol.a(param1, false)) {
+          if (ol.containsNonAlphanumeric(param1, false)) {
             return false;
           }
           if (DualLinkNode.a((byte) 29, param1)) {
             return false;
           }
-          if (ButtonWidget.b((byte) 62, param1)) {
+          if (ButtonWidget.hasValidPasswordLength((byte) 62, param1)) {
             return false;
           }
           if (param0.length() == 0) {
@@ -35,7 +35,7 @@ final class lb {
           if (param2 != -10) {
             return true;
           }
-          if (a.a(param1, param0, (byte) -74)) {
+          if (a.containsForwardOrReversed(param1, param0, (byte) -74)) {
             return false;
           }
           if (!PasswordValidator.a(127, param0, param1)) {
@@ -104,16 +104,16 @@ final class lb {
         if (PortalView.field_L != null) {
           PortalView.field_L.dismissDialog(-7435);
         }
-        String var1 = ob.e(-24093);
+        String var1 = ob.getLoginIdentifier(-24093);
         b.field_c = new LoginForm(var1, (String) null, true, false, false);
         nb.field_a.showDialog(3016, wj.field_i);
-        wj.field_i.a((UiWidget) (b.field_c), (byte) -123);
+        wj.field_i.transitionToContent((UiWidget) (b.field_c), (byte) -123);
         if (param0 == 9047) {
-          wj.field_i.h((byte) 49);
+          wj.field_i.finishTransition((byte) 49);
           return;
         }
         lb.releaseStatics((byte) -43);
-        wj.field_i.h((byte) 49);
+        wj.field_i.finishTransition((byte) 49);
     }
 
     public static void releaseStatics(byte param0) {

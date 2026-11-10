@@ -9,7 +9,7 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
     private ButtonWidget field_G;
     static String field_J;
 
-    private final String a(int param0) {
+    private final String getLinkCloseMarkup(int param0) {
         if (param0 < 92) {
           return (String) null;
         }
@@ -26,13 +26,13 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param3 == 0) {
-            SimZombie.a("terms.ws", (byte) 125);
+            SimZombie.openPolicyPage("terms.ws", (byte) 125);
           } else {
             if (param3 == 1) {
-              SimZombie.a("privacy.ws", (byte) 125);
+              SimZombie.openPolicyPage("privacy.ws", (byte) 125);
             } else {
               if (2 == param3) {
-                SimZombie.a("conduct.ws", (byte) 125);
+                SimZombie.openPolicyPage("conduct.ws", (byte) 125);
               }
             }
           }
@@ -66,7 +66,7 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
           this.field_H = param0;
           this.field_G = new ButtonWidget(ub.field_xb, (WidgetListener) null);
           this.field_G.painter = (WidgetPainter) ((Object) new oq());
-          var7 = vl.a(ng.field_a, new String[]{this.h(-1), this.a(111)}, 2);
+          var7 = vl.a(ng.field_a, new String[]{this.getLinkOpenMarkup(-1), this.getLinkCloseMarkup(111)}, 2);
           var3 = 20;
           var4 = new TextWidgetPainter(ke.field_h, 0, 0, 0, 0, 16777215, -1, 3, 0, ke.field_h.maxAscent, -1, 2147483647, true);
           this.field_L = new HotspotTextWidget(var7, var4);
@@ -77,12 +77,12 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
           this.field_L.field_n = -40 + this.field_n;
           this.field_L.a(this.field_n - 40, var3, (byte) -4, 26);
           var3 = var3 + (this.field_L.field_w + 15);
-          this.b((byte) 108, this.field_L);
+          this.addChild((byte) 108, this.field_L);
           var5 = 4;
           var6 = 200;
           this.field_G.setWidgetBounds(300 - var6 >> 1, var3, 28972, var6, 40);
           this.field_G.field_A = (WidgetListener) (this);
-          this.b((byte) 59, this.field_G);
+          this.addChild((byte) 59, this.field_G);
           this.setWidgetBounds(0, 0, 28972, 300, var5 + (var3 + 55));
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "pj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
@@ -100,7 +100,7 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
         field_J = null;
     }
 
-    private final String h(int param0) {
+    private final String getLinkOpenMarkup(int param0) {
         if (param0 != -1) {
           UiWidget var3 = (UiWidget) null;
           this.handleKeyInput(-29, '.', (UiWidget) null, 60);
@@ -109,7 +109,7 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
         return "<u=2164A2><col=2164A2>";
     }
 
-    final static BinaryBitmapFont a(ResourceArchive param0, int param1, ResourceArchive param2, String param3, String param4) {
+    final static BinaryBitmapFont loadBinaryFontByName(ResourceArchive param0, int param1, ResourceArchive param2, String param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -177,13 +177,13 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
             return true;
           }
           if (param0 == 98) {
-            stackIn_6_0 = this.a((byte) -1, param2);
+            stackIn_6_0 = this.focusPreviousChild((byte) -1, param2);
             return stackIn_6_0;
           }
           if (param0 != 99) {
             return false;
           }
-          stackIn_9_0 = this.a(24, param2);
+          stackIn_9_0 = this.focusNextChild(24, param2);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -231,7 +231,7 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
+    final static void addTileAnimation(int param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
         hn[] var11 = null;
         hn[] var7 = null;
         int var8 = 0;

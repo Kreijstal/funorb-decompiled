@@ -6,19 +6,19 @@ final class DropTargetWidget extends SingleChildWidget {
     static String field_E;
     static int[][] field_G;
 
-    final static int b(int param0, int param1, int param2) {
+    final static int computeScreenVolume(int param0, int param1, int param2) {
         int var3 = -g.b((param1 - 240) * (param1 - 240) + (-320 + param2) * (-320 + param2)) + 1024;
         int var4 = 88 % ((param0 - 83) / 41);
         var3 = var3 < 0 ? 0 : var3 >> 2;
         return db.field_c * var3 / 224;
     }
 
-    final static boolean a(int param0, byte param1, int param2, int param3) {
+    final static boolean dispatchKeyInput(int param0, byte param1, int param2, int param3) {
         if (nh.field_m) {
-          return ra.field_f.a(0, pn.field_d, InfectionEvent.field_p);
+          return ra.field_f.dispatchKeyInput(0, pn.field_d, InfectionEvent.field_p);
         }
         if (ee.field_b) {
-          return DiskCacheWorker.a(false, param2, param3);
+          return DiskCacheWorker.handleQuickChatKey(false, param2, param3);
         }
         if (eo.a(param3, true, param2)) {
           return true;
@@ -29,19 +29,19 @@ final class DropTargetWidget extends SingleChildWidget {
         if (param1 > 67) {
           return WhirlpoolHasher.a(param0, 59, param2);
         }
-        DropTargetWidget.a((byte) 79, 66, 86);
+        DropTargetWidget.multiplyFixed16((byte) 79, 66, 86);
         return WhirlpoolHasher.a(param0, 59, param2);
     }
 
-    final static boolean h(int param0) {
+    final static boolean hasStatButtonCookie(int param0) {
         if (param0 != 3853) {
-          DropTargetWidget.h(-41);
-          return ho.a(StatefulTextPainter.b(0), 61);
+          DropTargetWidget.hasStatButtonCookie(-41);
+          return ho.hasTuhstatbutCookie(StatefulTextPainter.b(0), 61);
         }
-        return ho.a(StatefulTextPainter.b(0), 61);
+        return ho.hasTuhstatbutCookie(StatefulTextPainter.b(0), 61);
     }
 
-    final static int a(byte param0, int param1, int param2) {
+    final static int multiplyFixed16(byte param0, int param1, int param2) {
         int var3 = param1 >> 16;
         int var5 = -61 % ((73 - param0) / 44);
         int var4 = param1 & 65535;
@@ -67,7 +67,7 @@ final class DropTargetWidget extends SingleChildWidget {
           super.handlePointerRelease(param0, param1, param2, param3, param4, param5);
           var7 = qi.field_a;
           if (var7 != null &&
-            this.a(81, param5, param0, param3, param2)) {
+            this.containsPointer(81, param5, param0, param3, param2)) {
             if (this.field_A instanceof vq) {
               ((vq) (this.field_A)).a(var7, (byte) 5, this);
               qi.field_a = null;

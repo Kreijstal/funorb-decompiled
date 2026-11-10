@@ -9,14 +9,14 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
     private String[] field_u;
     private int[] field_q;
 
-    final static boolean d(byte param0) {
+    final static boolean isPrivateRecipientReachable(byte param0) {
         if (param0 != -20) {
           field_v = 88;
         }
-        return pd.a(jj.field_M, ql.field_a, param0 + 22);
+        return pd.isOnlineFriendOrLobbyPlayer(jj.field_M, ql.field_a, param0 + 22);
     }
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void decode(PacketBuffer param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -29,7 +29,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           while (true) {
             var3_int = param0.readUnsignedByte(31365);
             if (var3_int != 0) {
-              this.a(88, param0, var3_int);
+              this.decodeOpcode(88, param0, var3_int);
               continue;
             }
             break;
@@ -52,7 +52,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         }
     }
 
-    final void c(byte param0) {
+    final void applyGlobalIds(byte param0) {
         int var2 = 0;
         int var3 = ZombieDawnMulti.field_E ? 1 : 0;
         if (this.field_r != null) {
@@ -65,7 +65,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         }
     }
 
-    final String e(int param0) {
+    final String getPreview(int param0) {
         int var3 = 0;
         StringBuilder discarded$16 = null;
         StringBuilder discarded$17 = null;
@@ -86,7 +86,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         return var2.toString();
     }
 
-    private final void a(int param0, PacketBuffer param1, int param2) {
+    private final void decodeOpcode(int param0, PacketBuffer param1, int param2) {
         int[] array$0 = null;
         int var9 = 0;
         RuntimeException stackIn_21_0 = null;
@@ -132,7 +132,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
               }
             }
           } else {
-            this.field_u = WidgetStyleLayer.a('<', false, param1.readString((byte) -62));
+            this.field_u = WidgetStyleLayer.splitAtCharacter('<', false, param1.readString((byte) -62));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -149,7 +149,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         }
     }
 
-    final static void a(int param0, byte param1, CipherPacketBuffer param2, int param3, int param4, int param5) {
+    final static void sendCheatCommand(int param0, byte param1, CipherPacketBuffer param2, int param3, int param4, int param5) {
         if (PortalEntryEvent.field_m.field_c) {
           return;
         }
@@ -158,12 +158,12 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           return;
         }
         try {
-          param2.b((byte) -35, 65);
+          param2.writeCipheredOpcode((byte) -35, 65);
           param2.writeByte(param1 ^ -102, param0);
           param2.writeShort(param5, (byte) -45);
           if (param1 != -11) {
             CipherPacketBuffer var7 = (CipherPacketBuffer) null;
-            QuickChatPhraseDefinition.a(-103, (byte) 41, (CipherPacketBuffer) null, -22, 121, -61);
+            QuickChatPhraseDefinition.sendCheatCommand(-103, (byte) 41, (CipherPacketBuffer) null, -22, 121, -61);
           }
           param2.writeShort(param3, (byte) -110);
           param2.writeShort(param4, (byte) -64);

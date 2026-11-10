@@ -11,14 +11,14 @@ final class LaboratoryScreen extends MenuScreen {
     static java.awt.Canvas field_q;
     private int field_p;
 
-    private final void e(int param0) {
+    private final void resetUpgradeNodes(int param0) {
         if (param0 >= -88) {
-          this.e(-105);
+          this.resetUpgradeNodes(-105);
         }
         on.field_bb = new ki[63];
     }
 
-    private final void b(int param0, int param1, int param2) {
+    private final void drawUpgradeSlots(int param0, int param1, int param2) {
         int var4 = 0;
         int stackIn_17_0;
         int stackIn_17_1;
@@ -43,10 +43,10 @@ final class LaboratoryScreen extends MenuScreen {
           var6 = FullscreenFocusCanvas.field_k.field_s[var4];
           if (255 != var6 &&
             var6 < 63) {
-            var7 = FullscreenFocusCanvas.field_k.d(var6, param2 + 2992) ? 1 : 0;
+            var7 = FullscreenFocusCanvas.field_k.isUpgradeUnlocked(var6, param2 + 2992) ? 1 : 0;
             MarkerSliderPainter.field_b[var6 - 18].drawTransparent(429 + var5, 357);
             var8 = FullscreenFocusCanvas.field_k.field_t[var6];
-            if (FullscreenFocusCanvas.field_k.d(var6, 53)) {
+            if (FullscreenFocusCanvas.field_k.isUpgradeUnlocked(var6, 53)) {
               var8 = cr.a(var6, -97);
             }
             var8 = var8 * 29 / cr.a(var6, -109);
@@ -60,7 +60,7 @@ final class LaboratoryScreen extends MenuScreen {
               stackIn_18_4 = param0;
             }
             SoftwareRasterizer.fillRect(stackIn_17_0, stackIn_17_1, stackIn_17_2, stackIn_17_3, stackIn_18_4);
-            if (PortalView.i(51603) &&
+            if (PortalView.isGuestOrNonMember(51603) &&
               jk.a((byte) -70, var6)) {
               LabeledChildWidget.field_E.draw(var5 + 419, 345);
             }
@@ -68,7 +68,7 @@ final class LaboratoryScreen extends MenuScreen {
         }
     }
 
-    final void a(boolean param0) {
+    final void drawScreen(boolean param0) {
         int stackIn_22_0 = 0;
         int stackIn_28_0 = 0;
         int stackIn_34_0 = 0;
@@ -93,8 +93,8 @@ final class LaboratoryScreen extends MenuScreen {
         int var4Lifetime1;
         int var5Lifetime1;
         var7 = ZombieDawnMulti.field_E ? 1 : 0;
-        super.a(param0);
-        b.field_a.a(41, b.field_a.field_zb, 850, MarkerSliderPainter.field_g);
+        super.drawScreen(param0);
+        b.field_a.layoutScrollbar(41, b.field_a.field_zb, 850, MarkerSliderPainter.field_g);
         b.field_a.c(false, -1);
         DisplayNamePanel.field_O = -1;
         kn.field_b = -1;
@@ -129,7 +129,7 @@ final class LaboratoryScreen extends MenuScreen {
           pb.field_e.drawCentered(fl.field_b[var3], 60 + var2, 69, 16646020, -1);
           var2 += 141;
         }
-        this.a(56, 86, 172, 18, (byte) -92);
+        this.drawUpgradeTree(56, 86, 172, 18, (byte) -92);
         var3Lifetime1 = 0;
         var4Lifetime1 = 0;
         var5Lifetime1 = 0;
@@ -171,10 +171,10 @@ final class LaboratoryScreen extends MenuScreen {
         SoftwareRasterizer.fillRectGradient(340, 340, 72, 74, 1989419, 597262);
         MatchingTextValidator.field_w.drawParagraph(ve.field_a, 10, 340, 72, 74, 16777215, -1, 1, 1, 0);
         MatchingTextValidator.field_w.drawParagraph(en.field_f, 339, 339, 72, 74, 16777215, -1, 1, 1, 0);
-        this.a(var5Lifetime1 != 0, (byte) -120, 14680064, 53248);
-        this.b(14680064, 53248, -2939);
-        this.d((byte) -104);
-        this.e((byte) -67);
+        this.drawPowerupSlots(var5Lifetime1 != 0, (byte) -120, 14680064, 53248);
+        this.drawUpgradeSlots(14680064, 53248, -2939);
+        this.drawHelpOverlay((byte) -104);
+        this.drawItemTooltip((byte) -67);
         if (lh.field_l != 255) {
           var6 = null;
           if (lh.field_l >= 0 &&
@@ -195,7 +195,7 @@ final class LaboratoryScreen extends MenuScreen {
         }
     }
 
-    final void c(boolean param0) {
+    final void handleNavigationKeys(boolean param0) {
         int var8 = 0;
         int stackIn_3_0 = 0;
         int var2;
@@ -228,99 +228,99 @@ final class LaboratoryScreen extends MenuScreen {
             var4 = 8;
             for (var7 = 0; var7 < 5; var7++) {
               var3 = FullscreenFocusCanvas.field_k.field_m[var7];
-              if (FullscreenFocusCanvas.field_k.c(127, var3) &&
-                !FullscreenFocusCanvas.field_k.d(var3, 53)) {
-                FullscreenFocusCanvas.field_k.a(34, var4, var3);
+              if (FullscreenFocusCanvas.field_k.isResearchable(127, var3) &&
+                !FullscreenFocusCanvas.field_k.isUpgradeUnlocked(var3, 53)) {
+                FullscreenFocusCanvas.field_k.addUpgradeProgress(34, var4, var3);
               }
               var3Lifetime2 = FullscreenFocusCanvas.field_k.field_g[var7];
-              if (FullscreenFocusCanvas.field_k.c(127, var3Lifetime2) &&
-                !FullscreenFocusCanvas.field_k.d(var3Lifetime2, 53)) {
-                FullscreenFocusCanvas.field_k.a(-88, var4, var3Lifetime2);
+              if (FullscreenFocusCanvas.field_k.isResearchable(127, var3Lifetime2) &&
+                !FullscreenFocusCanvas.field_k.isUpgradeUnlocked(var3Lifetime2, 53)) {
+                FullscreenFocusCanvas.field_k.addUpgradeProgress(-88, var4, var3Lifetime2);
               }
             }
             for (var7 = 0; var7 < 3; var7++) {
               var3Lifetime1 = FullscreenFocusCanvas.field_k.field_s[var7];
-              if (FullscreenFocusCanvas.field_k.c(127, var3Lifetime1) &&
-                !FullscreenFocusCanvas.field_k.d(var3Lifetime1, 53)) {
-                FullscreenFocusCanvas.field_k.a(-98, var4, var3Lifetime1);
+              if (FullscreenFocusCanvas.field_k.isResearchable(127, var3Lifetime1) &&
+                !FullscreenFocusCanvas.field_k.isUpgradeUnlocked(var3Lifetime1, 53)) {
+                FullscreenFocusCanvas.field_k.addUpgradeProgress(-98, var4, var3Lifetime1);
               }
             }
-            this.e(-100);
+            this.resetUpgradeNodes(-100);
           }
         } else {
           if (10 == var7) {
             if (var2 != 0) {
-              var5 = hp.a((byte) 29, g.field_a, 63);
-              if (FullscreenFocusCanvas.field_k.c(127, var5) &&
-                !FullscreenFocusCanvas.field_k.d(var5, 53)) {
-                FullscreenFocusCanvas.field_k.a(40, 10, var5);
-                this.e(-125);
+              var5 = hp.nextBoundedInt((byte) 29, g.field_a, 63);
+              if (FullscreenFocusCanvas.field_k.isResearchable(127, var5) &&
+                !FullscreenFocusCanvas.field_k.isUpgradeUnlocked(var5, 53)) {
+                FullscreenFocusCanvas.field_k.addUpgradeProgress(40, 10, var5);
+                this.resetUpgradeNodes(-125);
               }
-              var5Lifetime1 = hp.a((byte) -77, g.field_a, 63);
-              if (FullscreenFocusCanvas.field_k.c(127, var5Lifetime1) &&
-                !FullscreenFocusCanvas.field_k.d(var5Lifetime1, 53)) {
-                FullscreenFocusCanvas.field_k.a(-106, 10, var5Lifetime1);
-                this.e(-106);
+              var5Lifetime1 = hp.nextBoundedInt((byte) -77, g.field_a, 63);
+              if (FullscreenFocusCanvas.field_k.isResearchable(127, var5Lifetime1) &&
+                !FullscreenFocusCanvas.field_k.isUpgradeUnlocked(var5Lifetime1, 53)) {
+                FullscreenFocusCanvas.field_k.addUpgradeProgress(-106, 10, var5Lifetime1);
+                this.resetUpgradeNodes(-106);
               }
-              var5Lifetime2 = hp.a((byte) -74, g.field_a, 63);
-              if (FullscreenFocusCanvas.field_k.c(127, var5Lifetime2) &&
-                !FullscreenFocusCanvas.field_k.d(var5Lifetime2, 53)) {
-                FullscreenFocusCanvas.field_k.a(91, 10, var5Lifetime2);
-                this.e(-95);
+              var5Lifetime2 = hp.nextBoundedInt((byte) -74, g.field_a, 63);
+              if (FullscreenFocusCanvas.field_k.isResearchable(127, var5Lifetime2) &&
+                !FullscreenFocusCanvas.field_k.isUpgradeUnlocked(var5Lifetime2, 53)) {
+                FullscreenFocusCanvas.field_k.addUpgradeProgress(91, 10, var5Lifetime2);
+                this.resetUpgradeNodes(-95);
               }
-              var5Lifetime3 = hp.a((byte) -91, g.field_a, 63);
-              if (FullscreenFocusCanvas.field_k.c(127, var5Lifetime3) &&
-                !FullscreenFocusCanvas.field_k.d(var5Lifetime3, 53)) {
-                FullscreenFocusCanvas.field_k.a(117, 10, var5Lifetime3);
-                this.e(-121);
+              var5Lifetime3 = hp.nextBoundedInt((byte) -91, g.field_a, 63);
+              if (FullscreenFocusCanvas.field_k.isResearchable(127, var5Lifetime3) &&
+                !FullscreenFocusCanvas.field_k.isUpgradeUnlocked(var5Lifetime3, 53)) {
+                FullscreenFocusCanvas.field_k.addUpgradeProgress(117, 10, var5Lifetime3);
+                this.resetUpgradeNodes(-121);
               }
-              var5Lifetime4 = hp.a((byte) 123, g.field_a, 63);
-              if (FullscreenFocusCanvas.field_k.c(127, var5Lifetime4) &&
-                !FullscreenFocusCanvas.field_k.d(var5Lifetime4, 53)) {
-                FullscreenFocusCanvas.field_k.a(125, 10, var5Lifetime4);
-                this.e(-122);
+              var5Lifetime4 = hp.nextBoundedInt((byte) 123, g.field_a, 63);
+              if (FullscreenFocusCanvas.field_k.isResearchable(127, var5Lifetime4) &&
+                !FullscreenFocusCanvas.field_k.isUpgradeUnlocked(var5Lifetime4, 53)) {
+                FullscreenFocusCanvas.field_k.addUpgradeProgress(125, 10, var5Lifetime4);
+                this.resetUpgradeNodes(-122);
               }
-              var5Lifetime5 = hp.a((byte) -115, g.field_a, 63);
-              if (FullscreenFocusCanvas.field_k.c(127, var5Lifetime5) &&
-                !FullscreenFocusCanvas.field_k.d(var5Lifetime5, 53)) {
-                FullscreenFocusCanvas.field_k.a(-100, 10, var5Lifetime5);
-                this.e(-90);
+              var5Lifetime5 = hp.nextBoundedInt((byte) -115, g.field_a, 63);
+              if (FullscreenFocusCanvas.field_k.isResearchable(127, var5Lifetime5) &&
+                !FullscreenFocusCanvas.field_k.isUpgradeUnlocked(var5Lifetime5, 53)) {
+                FullscreenFocusCanvas.field_k.addUpgradeProgress(-100, 10, var5Lifetime5);
+                this.resetUpgradeNodes(-90);
               }
-              var5Lifetime6 = hp.a((byte) -69, g.field_a, 63);
-              if (FullscreenFocusCanvas.field_k.c(127, var5Lifetime6) &&
-                !FullscreenFocusCanvas.field_k.d(var5Lifetime6, 53)) {
-                FullscreenFocusCanvas.field_k.a(56, 10, var5Lifetime6);
-                this.e(-100);
+              var5Lifetime6 = hp.nextBoundedInt((byte) -69, g.field_a, 63);
+              if (FullscreenFocusCanvas.field_k.isResearchable(127, var5Lifetime6) &&
+                !FullscreenFocusCanvas.field_k.isUpgradeUnlocked(var5Lifetime6, 53)) {
+                FullscreenFocusCanvas.field_k.addUpgradeProgress(56, 10, var5Lifetime6);
+                this.resetUpgradeNodes(-100);
               }
-              var5Lifetime7 = hp.a((byte) -125, g.field_a, 63);
-              if (FullscreenFocusCanvas.field_k.c(127, var5Lifetime7) &&
-                !FullscreenFocusCanvas.field_k.d(var5Lifetime7, 53)) {
-                FullscreenFocusCanvas.field_k.a(97, 10, var5Lifetime7);
-                this.e(-117);
+              var5Lifetime7 = hp.nextBoundedInt((byte) -125, g.field_a, 63);
+              if (FullscreenFocusCanvas.field_k.isResearchable(127, var5Lifetime7) &&
+                !FullscreenFocusCanvas.field_k.isUpgradeUnlocked(var5Lifetime7, 53)) {
+                FullscreenFocusCanvas.field_k.addUpgradeProgress(97, 10, var5Lifetime7);
+                this.resetUpgradeNodes(-117);
               }
-              var5Lifetime8 = hp.a((byte) 82, g.field_a, 63);
-              if (FullscreenFocusCanvas.field_k.c(127, var5Lifetime8) &&
-                !FullscreenFocusCanvas.field_k.d(var5Lifetime8, 53)) {
-                FullscreenFocusCanvas.field_k.a(76, 10, var5Lifetime8);
-                this.e(-101);
+              var5Lifetime8 = hp.nextBoundedInt((byte) 82, g.field_a, 63);
+              if (FullscreenFocusCanvas.field_k.isResearchable(127, var5Lifetime8) &&
+                !FullscreenFocusCanvas.field_k.isUpgradeUnlocked(var5Lifetime8, 53)) {
+                FullscreenFocusCanvas.field_k.addUpgradeProgress(76, 10, var5Lifetime8);
+                this.resetUpgradeNodes(-101);
               }
-              var5Lifetime9 = hp.a((byte) 104, g.field_a, 63);
-              if (FullscreenFocusCanvas.field_k.c(127, var5Lifetime9) &&
-                !FullscreenFocusCanvas.field_k.d(var5Lifetime9, 53)) {
-                FullscreenFocusCanvas.field_k.a(76, 10, var5Lifetime9);
-                this.e(-109);
+              var5Lifetime9 = hp.nextBoundedInt((byte) 104, g.field_a, 63);
+              if (FullscreenFocusCanvas.field_k.isResearchable(127, var5Lifetime9) &&
+                !FullscreenFocusCanvas.field_k.isUpgradeUnlocked(var5Lifetime9, 53)) {
+                FullscreenFocusCanvas.field_k.addUpgradeProgress(76, 10, var5Lifetime9);
+                this.resetUpgradeNodes(-109);
               }
-              var5Lifetime10 = hp.a((byte) -85, g.field_a, 63);
-              if (FullscreenFocusCanvas.field_k.c(127, var5Lifetime10)) {
-                if (!FullscreenFocusCanvas.field_k.d(var5Lifetime10, 53)) {
-                  FullscreenFocusCanvas.field_k.a(-100, 10, var5Lifetime10);
-                  this.e(-92);
-                  FullscreenFocusCanvas.field_k.c((byte) -108);
+              var5Lifetime10 = hp.nextBoundedInt((byte) -85, g.field_a, 63);
+              if (FullscreenFocusCanvas.field_k.isResearchable(127, var5Lifetime10)) {
+                if (!FullscreenFocusCanvas.field_k.isUpgradeUnlocked(var5Lifetime10, 53)) {
+                  FullscreenFocusCanvas.field_k.addUpgradeProgress(-100, 10, var5Lifetime10);
+                  this.resetUpgradeNodes(-92);
+                  FullscreenFocusCanvas.field_k.updateResearchableMask((byte) -108);
                 } else {
-                  FullscreenFocusCanvas.field_k.c((byte) -108);
+                  FullscreenFocusCanvas.field_k.updateResearchableMask((byte) -108);
                 }
               } else {
-                FullscreenFocusCanvas.field_k.c((byte) -108);
+                FullscreenFocusCanvas.field_k.updateResearchableMask((byte) -108);
               }
             }
           } else {
@@ -328,24 +328,24 @@ final class LaboratoryScreen extends MenuScreen {
               if (var7 != 5) {
                 if (var7 == 12 &&
                   var2 != 0) {
-                  FullscreenFocusCanvas.field_k.e(-6821, 33);
-                  FullscreenFocusCanvas.field_k.e(-6821, 2);
-                  FullscreenFocusCanvas.field_k.e(-6821, 57);
-                  FullscreenFocusCanvas.field_k.e(-6821, 0);
-                  FullscreenFocusCanvas.field_k.e(-6821, 1);
-                  FullscreenFocusCanvas.field_k.e(-6821, 58);
-                  FullscreenFocusCanvas.field_k.c((byte) -93);
-                  FullscreenFocusCanvas.field_k.e(-6821, 16);
+                  FullscreenFocusCanvas.field_k.completeUpgrade(-6821, 33);
+                  FullscreenFocusCanvas.field_k.completeUpgrade(-6821, 2);
+                  FullscreenFocusCanvas.field_k.completeUpgrade(-6821, 57);
+                  FullscreenFocusCanvas.field_k.completeUpgrade(-6821, 0);
+                  FullscreenFocusCanvas.field_k.completeUpgrade(-6821, 1);
+                  FullscreenFocusCanvas.field_k.completeUpgrade(-6821, 58);
+                  FullscreenFocusCanvas.field_k.updateResearchableMask((byte) -93);
+                  FullscreenFocusCanvas.field_k.completeUpgrade(-6821, 16);
                   for (var7 = 0; var7 < 19; var7++) {
-                    FullscreenFocusCanvas.field_k.e(-6821, var7);
+                    FullscreenFocusCanvas.field_k.completeUpgrade(-6821, var7);
                   }
                   for (var7 = 44; var7 < 62; var7++) {
-                    FullscreenFocusCanvas.field_k.e(-6821, var7);
+                    FullscreenFocusCanvas.field_k.completeUpgrade(-6821, var7);
                   }
                   for (var7 = 32; var7 <= 38; var7++) {
-                    FullscreenFocusCanvas.field_k.e(-6821, var7);
+                    FullscreenFocusCanvas.field_k.completeUpgrade(-6821, var7);
                   }
-                  this.e(-109);
+                  this.resetUpgradeNodes(-109);
                 }
               } else {
                 if (var2 != 0) {
@@ -353,7 +353,7 @@ final class LaboratoryScreen extends MenuScreen {
                   var7_ref_int__ = var6;
                   for (var8 = 0; var7_ref_int__.length > var8; var8++) {
                     var9 = var7_ref_int__[var8];
-                    FullscreenFocusCanvas.field_k.a(-86, 9999, var9);
+                    FullscreenFocusCanvas.field_k.addUpgradeProgress(-86, 9999, var9);
                   }
                 }
               }
@@ -364,15 +364,15 @@ final class LaboratoryScreen extends MenuScreen {
                 for (var7 = 0; FullscreenFocusCanvas.field_k.field_t.length > var7; var7++) {
                   FullscreenFocusCanvas.field_k.field_t[var7] = 0;
                 }
-                this.e(-100);
+                this.resetUpgradeNodes(-100);
               }
             }
           }
         }
-        super.c(param0);
+        super.handleNavigationKeys(param0);
     }
 
-    private final void a(boolean param0, byte param1, int param2, int param3) {
+    private final void drawPowerupSlots(boolean param0, byte param1, int param2, int param3) {
         int stackIn_27_0;
         int stackIn_27_1;
         int stackIn_27_2;
@@ -394,7 +394,7 @@ final class LaboratoryScreen extends MenuScreen {
         int var13;
         int var12Lifetime1;
         var13 = ZombieDawnMulti.field_E ? 1 : 0;
-        var5 = FullscreenFocusCanvas.field_k.g((byte) 125);
+        var5 = FullscreenFocusCanvas.field_k.getPowerupSlotCount((byte) 125);
         var6 = 0;
         if (param1 != -120) {
           return;
@@ -406,7 +406,7 @@ final class LaboratoryScreen extends MenuScreen {
           }
           if (var5 > var6) {
             if (param0 &&
-              pb.a(FullscreenFocusCanvas.field_k.field_m[var6], -20, lh.field_l)) {
+              pb.hasPowerupFlag(FullscreenFocusCanvas.field_k.field_m[var6], -20, lh.field_l)) {
               pf.field_a.drawFadedToColour(var7 + 84, 340, 128, 8388608);
             } else {
               pf.field_a.draw(var7 + 84, 340);
@@ -415,8 +415,8 @@ final class LaboratoryScreen extends MenuScreen {
             var9 = FullscreenFocusCanvas.field_k.field_g[var6];
             if (var8 != 255) {
               if (var8 < 63) {
-                var10 = FullscreenFocusCanvas.field_k.d(var8, 53) ? 1 : 0;
-                var11 = FullscreenFocusCanvas.field_k.d(var9, param1 ^ -67) ? 1 : 0;
+                var10 = FullscreenFocusCanvas.field_k.isUpgradeUnlocked(var8, 53) ? 1 : 0;
+                var11 = FullscreenFocusCanvas.field_k.isUpgradeUnlocked(var9, param1 ^ -67) ? 1 : 0;
                 MarkerSliderPainter.field_b[var8].drawTransparent(90 + var7, 354);
                 var12 = FullscreenFocusCanvas.field_k.field_t[var8];
                 if (var10 != 0) {
@@ -439,7 +439,7 @@ final class LaboratoryScreen extends MenuScreen {
                     if (var6 != q.field_d) {
                     }
                     var12Lifetime1 = FullscreenFocusCanvas.field_k.field_t[var9];
-                    if (FullscreenFocusCanvas.field_k.d(var9, 53)) {
+                    if (FullscreenFocusCanvas.field_k.isUpgradeUnlocked(var9, 53)) {
                       var12Lifetime1 = cr.a(var9, param1 ^ 10);
                     }
                     var12Lifetime1 = var12Lifetime1 * 28 / cr.a(var9, -115);
@@ -454,33 +454,33 @@ final class LaboratoryScreen extends MenuScreen {
                     }
                     SoftwareRasterizer.fillRect(stackIn_41_0, stackIn_41_1, stackIn_41_2, stackIn_41_3, stackIn_42_4);
                   }
-                  if (FullscreenFocusCanvas.field_k.a(45, -126) &&
+                  if (FullscreenFocusCanvas.field_k.isUpgradeEquipped(45, -126) &&
                     var8 != 255 &&
                     17 != var8) {
                     LabeledChildWidget.field_E.draw(84 + var7, 340);
                   }
                 } else {
-                  if (FullscreenFocusCanvas.field_k.a(45, -126) &&
+                  if (FullscreenFocusCanvas.field_k.isUpgradeEquipped(45, -126) &&
                     var8 != 255 &&
                     17 != var8) {
                     LabeledChildWidget.field_E.draw(84 + var7, 340);
                   }
                 }
               } else {
-                if (FullscreenFocusCanvas.field_k.a(45, -126) &&
+                if (FullscreenFocusCanvas.field_k.isUpgradeEquipped(45, -126) &&
                   var8 != 255 &&
                   17 != var8) {
                   LabeledChildWidget.field_E.draw(84 + var7, 340);
                 }
               }
             } else {
-              if (FullscreenFocusCanvas.field_k.a(45, -126) &&
+              if (FullscreenFocusCanvas.field_k.isUpgradeEquipped(45, -126) &&
                 var8 != 255 &&
                 17 != var8) {
                 LabeledChildWidget.field_E.draw(84 + var7, 340);
               }
             }
-            if (PortalView.i(51603) && (jk.a((byte) -51, var8) ||
+            if (PortalView.isGuestOrNonMember(51603) && (jk.a((byte) -51, var8) ||
               jk.a((byte) -103, var9))) {
               LabeledChildWidget.field_E.draw(84 + var7, 340);
             }
@@ -493,13 +493,13 @@ final class LaboratoryScreen extends MenuScreen {
 
     final void onEnter(int param0, boolean param1, int param2) {
         super.onEnter(param0, param1, param2);
-        this.e(-107);
+        this.resetUpgradeNodes(-107);
         this.field_p = 0;
     }
 
-    final void b(byte param0) {
-        IntrusiveDeque.b((byte) -61);
-        super.b(param0);
+    final void onExit(byte param0) {
+        IntrusiveDeque.saveProfile((byte) -61);
+        super.onExit(param0);
     }
 
     LaboratoryScreen(int param0, boolean param1, int param2, int param3, int param4, int param5, int[] param6) {
@@ -529,7 +529,7 @@ final class LaboratoryScreen extends MenuScreen {
         }
     }
 
-    private final void b(int param0, int param1, int param2, int param3, int param4, int param5) {
+    private final void drawLinkPulse(int param0, int param1, int param2, int param3, int param4, int param5) {
         if (param1 != -562798775) {
           this.field_p = 119;
         }
@@ -541,7 +541,7 @@ final class LaboratoryScreen extends MenuScreen {
         SoftwareRasterizer.fillRadialGlow(var10, var11, 64, var9, rq.field_u);
     }
 
-    private final void e(byte param0) {
+    private final void drawItemTooltip(byte param0) {
         int var17 = 0;
         int stackIn_37_0 = 0;
         int var2;
@@ -580,7 +580,7 @@ final class LaboratoryScreen extends MenuScreen {
         } else {
           if (q.field_d < 5) {
             if (0 <= q.field_d) {
-              if (q.field_d >= var6.g((byte) -80)) {
+              if (q.field_d >= var6.getPowerupSlotCount((byte) -80)) {
                 var7 = -2;
               } else {
                 var8 = var6.field_g[q.field_d];
@@ -590,7 +590,7 @@ final class LaboratoryScreen extends MenuScreen {
           } else {
             var7 = var6.field_s[-5 + q.field_d];
           }
-          if (PortalView.i(51603) &&
+          if (PortalView.isGuestOrNonMember(51603) &&
             jk.a((byte) -51, var7)) {
             var7 = -3;
           }
@@ -605,7 +605,7 @@ final class LaboratoryScreen extends MenuScreen {
           DebouncedValidationProvider.field_f = 0;
         } else {
           if (DebouncedValidationProvider.field_f == 0 &&
-            10 < b.a(true)) {
+            10 < b.getIdleTicks(true)) {
             DebouncedValidationProvider.field_f = DebouncedValidationProvider.field_f + 1;
           }
           if (DebouncedValidationProvider.field_f > 0) {
@@ -613,7 +613,7 @@ final class LaboratoryScreen extends MenuScreen {
             if (255 < DebouncedValidationProvider.field_f) {
               DebouncedValidationProvider.field_f = 255;
             }
-            stackIn_37_0 = (!var6.c(127, var7)) ? 0 : 1;
+            stackIn_37_0 = (!var6.isResearchable(127, var7)) ? 0 : 1;
             var9 = stackIn_37_0;
             if (var7 == -2) {
               var10 = vc.field_b;
@@ -631,7 +631,7 @@ final class LaboratoryScreen extends MenuScreen {
             var11 = MatchingTextValidator.field_w;
             var12 = var11.textWidth(var10);
             var13 = 8 * DebouncedValidationProvider.field_f;
-            var4 = MatchingTextValidator.field_w.baselineHeight * (1 + ro.a(-124, '<', (CharSequence) ((Object) var10)));
+            var4 = MatchingTextValidator.field_w.baselineHeight * (1 + ro.countCharacter(-124, '<', (CharSequence) ((Object) var10)));
             if (var13 > 255) {
               var13 = 255;
             }
@@ -673,16 +673,16 @@ final class LaboratoryScreen extends MenuScreen {
         }
     }
 
-    final static void a(hp param0, int param1, int param2) {
+    final static void sendStatSubmission(hp param0, int param1, int param2) {
         CipherPacketBuffer var6 = null;
         int var4 = 0;
         try {
           if (param1 < 13) {
             hp var5 = (hp) null;
-            LaboratoryScreen.a((hp) null, -88, 107);
+            LaboratoryScreen.sendStatSubmission((hp) null, -88, 107);
           }
           var6 = ma.field_a;
-          var6.b((byte) -35, param2);
+          var6.writeCipheredOpcode((byte) -35, param2);
           var6.position = var6.position + 1;
           var4 = var6.position;
           var6.writeByte(121, 1);
@@ -699,7 +699,7 @@ final class LaboratoryScreen extends MenuScreen {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, byte param4) {
+    private final void drawUpgradeTree(int param0, int param1, int param2, int param3, byte param4) {
         int var16 = 0;
         ki stackIn_21_0 = null;
         int var7;
@@ -747,7 +747,7 @@ final class LaboratoryScreen extends MenuScreen {
             for (var12Lifetime1 = 0; var10 > var12Lifetime1; var12Lifetime1++) {
               var13 = var35[var12Lifetime1];
               if (255 != var13 &&
-                FullscreenFocusCanvas.field_k.g(var13, 4)) {
+                FullscreenFocusCanvas.field_k.isNearlyResearchable(var13, 4)) {
                 stackIn_21_0 = on.field_bb[var13];
                 if (stackIn_21_0 == null) {
                   var14 = param3 + var7 * param2 - MarkerSliderPainter.field_g;
@@ -763,12 +763,12 @@ final class LaboratoryScreen extends MenuScreen {
                   on.field_bb[var13].field_b.drawAdditive(on.field_bb[var13].field_q, on.field_bb[var13].field_g, (q.$cfr$intArgs$a$f0c91481eb80(-60, PowerupEvent.field_m << 4) >> 9) + 128);
                 }
                 var14Lifetime1 = on.field_bb[var13].field_c;
-                if (FullscreenFocusCanvas.field_k.g(var14Lifetime1, 4)) {
+                if (FullscreenFocusCanvas.field_k.isNearlyResearchable(var14Lifetime1, 4)) {
                   var36 = BirthDateInputWidget.field_ab[var14Lifetime1];
                   for (var16 = 0; var36.length > var16; var16++) {
                     var17 = var36[var16];
                     if (var17 != 255 &&
-                      FullscreenFocusCanvas.field_k.g(var17, 4)) {
+                      FullscreenFocusCanvas.field_k.isNearlyResearchable(var17, 4)) {
                       var18 = -1;
                       var19 = 0;
                       while (var19 < on.field_bb.length) {
@@ -788,9 +788,9 @@ final class LaboratoryScreen extends MenuScreen {
                         for (var23 = -1; var23 < 1; var23++) {
                           SoftwareRasterizer.drawLine(var19Lifetime1, var20 + var23, var21, var23 + var22, 11528032);
                         }
-                        if (FullscreenFocusCanvas.field_k.c(127, var14Lifetime1)) {
+                        if (FullscreenFocusCanvas.field_k.isResearchable(127, var14Lifetime1)) {
                           for (var23Lifetime1 = 0; var23Lifetime1 < 3; var23Lifetime1++) {
-                            this.b(var19Lifetime1, -562798775, var23Lifetime1, var20, var22, var21);
+                            this.drawLinkPulse(var19Lifetime1, -562798775, var23Lifetime1, var20, var22, var21);
                           }
                         }
                         SoftwareRasterizer.drawRect(var19Lifetime1, -4 + var20, 4, 9, 1);
@@ -815,22 +815,22 @@ final class LaboratoryScreen extends MenuScreen {
         field_q = null;
         if (param0 >= -62) {
           hp var2 = (hp) null;
-          LaboratoryScreen.a((hp) null, -91, 7);
+          LaboratoryScreen.sendStatSubmission((hp) null, -91, 7);
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    private final void drawPanelFrame(int param0, int param1, int param2, int param3, int param4, int param5) {
         SoftwareRasterizer.setClip(param5, param2, param4 + param5 + (param1 << 1), (param1 << 1) + param2 + param0);
         IsaacRandom.field_h.drawOpaque(param5, param2);
         SoftwareRasterizer.fillRectAlpha(param5, param2, param4 + (param1 << 1), param0 + (param1 << 1), 2560, 160);
-        ak.a((param1 << 1) + param4, param0 + (param1 << 1), -5, param5, param2);
+        ak.drawPanelFrame((param1 << 1) + param4, param0 + (param1 << 1), -5, param5, param2);
         SoftwareRasterizer.resetClip();
         if (param3 >= -55) {
-          this.b((byte) 22);
+          this.onExit((byte) 22);
         }
     }
 
-    final void a(int param0) {
+    final void updateScreen(int param0) {
         boolean stackIn_6_0 = false;
         boolean stackIn_27_0 = false;
         boolean stackIn_56_0 = false;
@@ -878,10 +878,10 @@ final class LaboratoryScreen extends MenuScreen {
           this.field_p = 2000;
         }
         boolean decompiledFrameRemainder0 = true;
-        super.a(param0 ^ 0);
+        super.updateScreen(param0 ^ 0);
         var8 = FullscreenFocusCanvas.field_k;
         var10 = var8;
-        var3Lifetime1 = var10.g((byte) 123);
+        var3Lifetime1 = var10.getPowerupSlotCount((byte) 123);
         en.a(~param0, 4);
         if (lh.field_l != 255 &&
           q.field_d != -1) {
@@ -905,7 +905,7 @@ final class LaboratoryScreen extends MenuScreen {
               if (32 <= lh.field_l &&
                 lh.field_l < 38 && (!(q.field_d >= 0) ||
                 !(var3Lifetime1 > q.field_d) ||
-                !pb.a(var8.field_m[q.field_d], -20, lh.field_l))) {
+                !pb.hasPowerupFlag(var8.field_m[q.field_d], -20, lh.field_l))) {
                 en.a(param0 - 1, 6);
               }
             }
@@ -923,10 +923,10 @@ final class LaboratoryScreen extends MenuScreen {
         TertiaryLinkDeque.field_b = stackIn_60_0;
         if (kk.field_u) {
           regionExit1: {
-            if (FullscreenFocusCanvas.field_k.c(127, DisplayNamePanel.field_O)) {
+            if (FullscreenFocusCanvas.field_k.isResearchable(127, DisplayNamePanel.field_O)) {
               if (0 <= DisplayNamePanel.field_O &&
                 DisplayNamePanel.field_O < 19) {
-                var4 = var10.g((byte) -42);
+                var4 = var10.getPowerupSlotCount((byte) -42);
                 var5 = 0;
                 if ((var5 == 0)) {
                   var6 = 0;
@@ -941,7 +941,7 @@ final class LaboratoryScreen extends MenuScreen {
                     break;
                   }
                   var10.field_m[var6] = DisplayNamePanel.field_O;
-                  Camera.b(-128, 87);
+                  Camera.createMixerStream(-128, 87);
                 }
                 break regionExit1;
               }
@@ -963,7 +963,7 @@ final class LaboratoryScreen extends MenuScreen {
                       continue;
                     }
                     var10.field_s[var5Lifetime2Lifetime1] = DisplayNamePanel.field_O;
-                    Camera.b(-127, 87);
+                    Camera.createMixerStream(-127, 87);
                     break;
                   }
                 }
@@ -983,20 +983,20 @@ final class LaboratoryScreen extends MenuScreen {
           }
         }
         b.field_a.a(-11838, true);
-        MarkerSliderPainter.field_g = b.field_a.a(850, b.field_a.field_zb, -18367);
+        MarkerSliderPainter.field_g = b.field_a.getDraggedScrollOffset(850, b.field_a.field_zb, -18367);
         var4Lifetime1 = -10;
         MarkerSliderPainter.field_g = MarkerSliderPainter.field_g + var4Lifetime1 * t.field_d;
         var5Lifetime1 = -100;
-        if (b.field_a.k(20)) {
+        if (b.field_a.pollLineBack(20)) {
           MarkerSliderPainter.field_g = MarkerSliderPainter.field_g + var4Lifetime1;
         }
-        if (b.field_a.h(4690)) {
+        if (b.field_a.pollLineForward(4690)) {
           MarkerSliderPainter.field_g = MarkerSliderPainter.field_g - var4Lifetime1;
         }
-        if (b.field_a.j(param0 ^ 64)) {
+        if (b.field_a.pollPageBack(param0 ^ 64)) {
           MarkerSliderPainter.field_g = MarkerSliderPainter.field_g + var5Lifetime1;
         }
-        if (b.field_a.c((byte) -104)) {
+        if (b.field_a.pollPageForward((byte) -104)) {
           MarkerSliderPainter.field_g = MarkerSliderPainter.field_g - var5Lifetime1;
         }
         if (MarkerSliderPainter.field_g < 0) {
@@ -1007,9 +1007,9 @@ final class LaboratoryScreen extends MenuScreen {
         }
         if (1 == kd.field_b) {
           if (255 != DisplayNamePanel.field_O &&
-            var10.c(127, DisplayNamePanel.field_O)) {
+            var10.isResearchable(127, DisplayNamePanel.field_O)) {
             lh.field_l = DisplayNamePanel.field_O;
-            Camera.b(-126, 90);
+            Camera.createMixerStream(-126, 90);
           }
           if (kn.field_b == -1) {
             if (lh.field_l == 255 &&
@@ -1017,22 +1017,22 @@ final class LaboratoryScreen extends MenuScreen {
               if (q.field_d < 5) {
                 if (bo.field_d >= 380) {
                   lh.field_l = var10.field_g[q.field_d];
-                  Camera.b(param0 ^ -128, 90);
+                  Camera.createMixerStream(param0 ^ -128, 90);
                 } else {
                   lh.field_l = var10.field_m[q.field_d];
-                  Camera.b(-128, 90);
+                  Camera.createMixerStream(-128, 90);
                   var10.field_m[q.field_d] = 255;
                 }
                 var10.field_g[q.field_d] = 255;
               } else {
                 lh.field_l = var10.field_s[q.field_d - 5];
-                Camera.b(-128, 90);
+                Camera.createMixerStream(-128, 90);
                 var10.field_s[q.field_d - 5] = 255;
               }
             }
           } else {
             ao.field_d = kn.field_b;
-            Camera.b(-126, 91);
+            Camera.createMixerStream(-126, 91);
           }
         }
         if (pq.field_f != 1) {
@@ -1051,24 +1051,24 @@ final class LaboratoryScreen extends MenuScreen {
                     var9++;
                   }
                   var10.field_s[-5 + q.field_d] = lh.field_l;
-                  Camera.b(param0 - 127, 87);
+                  Camera.createMixerStream(param0 - 127, 87);
                 }
               } else {
                 if (q.field_d < var3Lifetime1) {
                   if (lh.field_l >= 0 &&
                     lh.field_l < 19) {
                     var10.field_m[q.field_d] = lh.field_l;
-                    if (!(pb.a(lh.field_l, -20, var10.field_g[q.field_d]))) {
+                    if (!(pb.hasPowerupFlag(lh.field_l, -20, var10.field_g[q.field_d]))) {
                       var10.field_g[q.field_d] = 255;
-                      Camera.b(-126, 87);
+                      Camera.createMixerStream(-126, 87);
                     }
                     break regionExit2;
                   }
                   if (lh.field_l >= 32 &&
                     lh.field_l <= 38 &&
-                    pb.a(var10.field_m[q.field_d], -20, lh.field_l)) {
+                    pb.hasPowerupFlag(var10.field_m[q.field_d], -20, lh.field_l)) {
                     var10.field_g[q.field_d] = lh.field_l;
-                    Camera.b(-128, 87);
+                    Camera.createMixerStream(-128, 87);
                   }
                 }
               }
@@ -1078,7 +1078,7 @@ final class LaboratoryScreen extends MenuScreen {
         }
     }
 
-    private final void d(byte param0) {
+    private final void drawHelpOverlay(byte param0) {
         int var7;
         int var2;
         int var3;
@@ -1125,7 +1125,7 @@ final class LaboratoryScreen extends MenuScreen {
           var3 = 2;
           var4 = 120;
           var5 = pb.field_e.measureWrappedHeight(cc.field_a, var4, 0);
-          this.a(var5, var6, var3, -79, var4, var2);
+          this.drawPanelFrame(var5, var6, var3, -79, var4, var2);
           pb.field_e.drawParagraph(cc.field_a, var2 + var6, var6 + var3, var4, var5, 16777215, -1, 0, 0, 0);
           lh.field_m.draw(-3 + ((var6 << 1) + (var2 + var4)), 8 + var3);
           if (this.field_p > 0) {
@@ -1133,7 +1133,7 @@ final class LaboratoryScreen extends MenuScreen {
             var4Lifetime1 = 390;
             var3Lifetime1 = 100;
             var5Lifetime1 = pb.field_e.measureWrappedHeight(uc.field_g, var4Lifetime1, 0);
-            this.a(var5Lifetime1, var6, var3Lifetime1, -105, var4Lifetime1, var2Lifetime1);
+            this.drawPanelFrame(var5Lifetime1, var6, var3Lifetime1, -105, var4Lifetime1, var2Lifetime1);
             pb.field_e.drawParagraph(uc.field_g, var2Lifetime1 + var6, var3Lifetime1 + var6, var4Lifetime1, var5Lifetime1, 16777215, -1, 0, 0, 0);
             ip.field_e.draw(var2Lifetime1 + 50, var3Lifetime1 + 3 - ip.field_e.field_b);
             oi.field_k.draw(var2Lifetime1 + 50, var5Lifetime1 + var3Lifetime1 - 3 + (var6 << 1));
@@ -1146,7 +1146,7 @@ final class LaboratoryScreen extends MenuScreen {
             var4Lifetime2 = 250;
             var3Lifetime2 = 280;
             var5Lifetime2Lifetime1 = pb.field_e.measureWrappedHeight(wq.field_d, var4Lifetime2, 0);
-            this.a(var5Lifetime2Lifetime1, var6, var3Lifetime2, -126, var4Lifetime2, var2Lifetime2);
+            this.drawPanelFrame(var5Lifetime2Lifetime1, var6, var3Lifetime2, -126, var4Lifetime2, var2Lifetime2);
             pb.field_e.drawParagraph(wq.field_d, var6 + var2Lifetime2, var3Lifetime2 + var6, var4Lifetime2, var5Lifetime2Lifetime1, 16777215, -1, 0, 0, 0);
             oi.field_k.draw(var2Lifetime2 + 50, var5Lifetime2Lifetime1 + var3Lifetime2 + (-3 + (var6 << 1)));
           }
@@ -1160,7 +1160,7 @@ final class LaboratoryScreen extends MenuScreen {
               var3Lifetime3 -= 10;
             }
             var5Lifetime3Lifetime1 = pb.field_e.measureWrappedHeight(jf.field_c, var4Lifetime3, 0);
-            this.a(var5Lifetime3Lifetime1, var6, var3Lifetime3, -71, var4Lifetime3, var2Lifetime3);
+            this.drawPanelFrame(var5Lifetime3Lifetime1, var6, var3Lifetime3, -71, var4Lifetime3, var2Lifetime3);
             pb.field_e.drawParagraph(jf.field_c, var6 + var2Lifetime3, var3Lifetime3 + var6, var4Lifetime3, var5Lifetime3Lifetime1, 16777215, -1, 0, 0, 0);
             ip.field_e.draw(50 + var2Lifetime3, -ip.field_e.field_b + (var3Lifetime3 + 3));
           }
@@ -1170,7 +1170,7 @@ final class LaboratoryScreen extends MenuScreen {
             var5Lifetime4 = 80;
             var2Lifetime4 = 350;
             var5Lifetime4Lifetime1 = pb.field_e.measureWrappedHeight(pi.field_h, var4Lifetime4, 0);
-            this.a(var5Lifetime4Lifetime1, var6, var3Lifetime4, -118, var4Lifetime4, var2Lifetime4);
+            this.drawPanelFrame(var5Lifetime4Lifetime1, var6, var3Lifetime4, -118, var4Lifetime4, var2Lifetime4);
             pb.field_e.drawParagraph(pi.field_h, var2Lifetime4 + var6, var6 + var3Lifetime4, var4Lifetime4, var5Lifetime4Lifetime1, 16777215, -1, 0, 0, 0);
             oi.field_k.draw(80 + var2Lifetime4, var5Lifetime4Lifetime1 - 3 + (var3Lifetime4 + (var6 << 1)));
           }

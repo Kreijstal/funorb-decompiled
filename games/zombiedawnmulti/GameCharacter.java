@@ -52,12 +52,12 @@ final class GameCharacter extends UnitView {
             GameCharacter.l((byte) 29);
           }
           if (!this.m(-2)) {
-            this.field_U = qq.b(1481485697, 72 + hp.a((byte) -68, g.field_a, 2));
+            this.field_U = qq.b(1481485697, 72 + hp.nextBoundedInt((byte) -68, g.field_a, 2));
             if (!ZombieDawnMulti.field_E) {
               return;
             }
           }
-          this.field_U = qq.b(1481485697, 70 + hp.a((byte) -90, g.field_a, 2));
+          this.field_U = qq.b(1481485697, 70 + hp.nextBoundedInt((byte) -90, g.field_a, 2));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -154,7 +154,7 @@ final class GameCharacter extends UnitView {
             if (4 != this.state) {
               if (this.state != 7) {
                 if (this.state == 9) {
-                  this.field_U = Camera.b(-126, 66);
+                  this.field_U = Camera.createMixerStream(-126, 66);
                   if (var5 == 0) {
                     return;
                   }
@@ -193,7 +193,7 @@ final class GameCharacter extends UnitView {
                   }
                   var3_int = (this.field_Eb.getX(-97) - this.getX(-47)) / 2;
                   var4 = (this.field_Eb.getY(123) - this.getY(-99)) / 2;
-                  this.field_Eb.n(20);
+                  this.field_Eb.forceState(20);
                   this.field_cb = var4;
                   this.field_mb = var3_int;
                   if (var5 == 0) {
@@ -432,7 +432,7 @@ final class GameCharacter extends UnitView {
         int var27 = 0;
         var27 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var3_int = ub.p(-124);
+          var3_int = ub.getHazeIntensity(-124);
           stackIn_5_0 = (var3_int <= 0) ? 0 : 1;
           var4 = stackIn_5_0;
           if (param0 != -10136) {
@@ -441,7 +441,7 @@ final class GameCharacter extends UnitView {
           var5 = this.state;
           var6 = this.animationFrame;
           if (var4 != 0 &&
-            hp.a((byte) 59, g.field_a, 30) == 0) {
+            hp.nextBoundedInt((byte) 59, g.field_a, 30) == 0) {
             stackIn_17_1 = !(this.field_wb);
             this.field_wb = stackIn_17_1;
           }
@@ -580,7 +580,7 @@ final class GameCharacter extends UnitView {
                 AlignedIconLabel.field_Ib = PortalEntryEvent.field_m.field_D[this.team][1];
                 this.n(0);
                 this.s(2);
-                var12_ref_ja = nk.a(QuickChatCategoryRegistry.field_d[var6 + (gg.field_l[var5] + this.field_fb)], AlignedIconLabel.field_Ib, 255, MidiPcmStream.field_B);
+                var12_ref_ja = nk.createTintedSprite(QuickChatCategoryRegistry.field_d[var6 + (gg.field_l[var5] + this.field_fb)], AlignedIconLabel.field_Ib, 255, MidiPcmStream.field_B);
                 var12_ref_ja.drawTransparent(var7 + this.field_mb - 3, var8 + this.field_cb - 3);
                 return;
               }
@@ -588,8 +588,8 @@ final class GameCharacter extends UnitView {
               }
               if (null != this.field_U) {
                 if (!this.field_U.isSamplePositionOutOfRange()) {
-                  this.field_U.setVolume(DropTargetWidget.b(-49, var8, var7));
-                  this.field_U.f(pb.a(var8, var7, false));
+                  this.field_U.setVolume(DropTargetWidget.computeScreenVolume(-49, var8, var7));
+                  this.field_U.setPan(pb.computeStereoPan(var8, var7, false));
                 } else {
                   this.field_U = null;
                 }
@@ -622,10 +622,10 @@ final class GameCharacter extends UnitView {
                 SoftwareRasterizer.clear();
                 SoftwareRasterizer.fillCircle(SoftwareRasterizer.height / 2, SoftwareRasterizer.height / 2, SoftwareRasterizer.height / 2, 1);
                 if (0 >= this.field_yb) {
-                  var14_ref_int__ = nk.a(1052800, 455739624, 8454143);
+                  var14_ref_int__ = nk.createColorRamp(1052800, 455739624, 8454143);
                   var15 = 1073741824 + this.objectId - PowerupEvent.field_m;
                 } else {
-                  var14_ref_int__ = nk.a(8392720, 455739624, 16744448);
+                  var14_ref_int__ = nk.createColorRamp(8392720, 455739624, 16744448);
                   var15 = -this.objectId + PowerupEvent.field_m;
                 }
                 nk.field_h.a(2, (double)var15 / 7.0, var14_ref_int__);
@@ -752,7 +752,7 @@ final class GameCharacter extends UnitView {
               }
               var18 = stackIn_330_0;
               if (var18 == 0) {
-                nk.a(var17[var16][var15], AlignedIconLabel.field_Ib, param0 + 10391, MidiPcmStream.field_B);
+                nk.createTintedSprite(var17[var16][var15], AlignedIconLabel.field_Ib, param0 + 10391, MidiPcmStream.field_B);
               } else {
                 g.c(vb.field_b);
                 var19 = 117;
@@ -781,11 +781,11 @@ final class GameCharacter extends UnitView {
                     if ((var25 & 65535) != 0) {
                       if (0 == (16711935 & var25)) {
                         var26 = var25 >> 8;
-                        var23[var24] = cr.b(cr.b(ScrollPane.b(65280, ScrollPane.b(255, AlignedIconLabel.field_Ib >> 8) * var26), ScrollPane.b(AlignedIconLabel.field_Ib, 255) * var26 >> 8), ScrollPane.b(16711777, (ScrollPane.b(AlignedIconLabel.field_Ib, 16754034) >> 16) * var26 << 8));
+                        var23[var24] = cr.b(cr.b(ScrollPane.bitAnd(65280, ScrollPane.bitAnd(255, AlignedIconLabel.field_Ib >> 8) * var26), ScrollPane.bitAnd(AlignedIconLabel.field_Ib, 255) * var26 >> 8), ScrollPane.bitAnd(16711777, (ScrollPane.bitAnd(AlignedIconLabel.field_Ib, 16754034) >> 16) * var26 << 8));
                       }
                     } else {
                       var26 = var25 >> 16;
-                      var23[var24] = cr.b(cr.b(var26 * ScrollPane.b(255, MidiPcmStream.field_B) >> 8, ScrollPane.b(65280, var26 * (ScrollPane.b(65430, MidiPcmStream.field_B) >> 8))), ScrollPane.b(1895890688, var26 * ScrollPane.b(255, MidiPcmStream.field_B >> 16)) << 8);
+                      var23[var24] = cr.b(cr.b(var26 * ScrollPane.bitAnd(255, MidiPcmStream.field_B) >> 8, ScrollPane.bitAnd(65280, var26 * (ScrollPane.bitAnd(65430, MidiPcmStream.field_B) >> 8))), ScrollPane.bitAnd(1895890688, var26 * ScrollPane.bitAnd(255, MidiPcmStream.field_B >> 16)) << 8);
                     }
                   }
                   var24++;
@@ -958,7 +958,7 @@ final class GameCharacter extends UnitView {
           }
           var8 = PortalEntryEvent.field_m.field_D[this.team][0];
           var9 = PortalEntryEvent.field_m.field_D[this.team][1];
-          var10 = am.a(0, var9, this.field_C, 1, var8);
+          var10 = am.createTeamColouredSprite(0, var9, this.field_C, 1, var8);
           var10.c(-24 + var4, -24 + var5, var7 * 2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1034,7 +1034,7 @@ final class GameCharacter extends UnitView {
         RuntimeException var1_ref = null;
         try {
           try {
-            gj.a(6962);
+            gj.stopAllSounds(6962);
             bi.field_e = true;
             UiWidget.field_s = null;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -1128,8 +1128,8 @@ final class GameCharacter extends UnitView {
         try {
           var3_int = 95 / ((36 - param1) / 40);
           if (null != param0 &&
-            !param0.f(28113)) {
-            this.field_Db = (Waypoint) (param0.a((byte) -39));
+            !param0.isEmpty(28113)) {
+            this.field_Db = (Waypoint) (param0.first((byte) -39));
             if (this.field_Db != null) {
             }
             this.field_qb = 0;
@@ -1366,22 +1366,22 @@ final class GameCharacter extends UnitView {
                     if ((this.animationFrame == 0 ||
                       this.animationFrame == 2) && this.animationTicks == 0) {
                       var2_int = 0;
-                      if (0 == hp.a((byte) -112, g.field_a, 3)) {
+                      if (0 == hp.nextBoundedInt((byte) -112, g.field_a, 3)) {
                         if (this.field_Eb != null &&
-                          !this.field_Eb.m(15684)) {
-                          var2_intLifetime2 = 37 + hp.a((byte) 14, g.field_a, 3);
+                          !this.field_Eb.isFemale(15684)) {
+                          var2_intLifetime2 = 37 + hp.nextBoundedInt((byte) 14, g.field_a, 3);
                           if (var3 != 0) {
-                            var2_intLifetime2 = 40 + hp.a((byte) -118, g.field_a, 4);
-                            var2_intLifetime2 = hp.a((byte) -103, g.field_a, 5) + 30;
+                            var2_intLifetime2 = 40 + hp.nextBoundedInt((byte) -118, g.field_a, 4);
+                            var2_intLifetime2 = hp.nextBoundedInt((byte) -103, g.field_a, 5) + 30;
                           }
                         } else {
-                          var2_intLifetime2 = 40 + hp.a((byte) -118, g.field_a, 4);
+                          var2_intLifetime2 = 40 + hp.nextBoundedInt((byte) -118, g.field_a, 4);
                           if (var3 != 0) {
-                            var2_intLifetime2 = hp.a((byte) -103, g.field_a, 5) + 30;
+                            var2_intLifetime2 = hp.nextBoundedInt((byte) -103, g.field_a, 5) + 30;
                           }
                         }
                       } else {
-                        var2_intLifetime2 = hp.a((byte) -103, g.field_a, 5) + 30;
+                        var2_intLifetime2 = hp.nextBoundedInt((byte) -103, g.field_a, 5) + 30;
                       }
                       this.field_U = qq.b(1481485697, var2_intLifetime2);
                     }
@@ -1438,7 +1438,7 @@ final class GameCharacter extends UnitView {
                             stackIn_159_2 = null;
                             stackIn_159_7 = true;
                           }
-                          ((IntrusiveDeque) (Object) stackIn_158_0).a(new jj(stackIn_158_3, stackIn_158_4, stackIn_158_5, stackIn_158_6, stackIn_159_7), false);
+                          ((IntrusiveDeque) (Object) stackIn_158_0).addFirst(new jj(stackIn_158_3, stackIn_158_4, stackIn_158_5, stackIn_158_6, stackIn_159_7), false);
                           this.setState(4, -27655);
                           if (var3 == 0) {
                             break regionExit1;
@@ -1452,7 +1452,7 @@ final class GameCharacter extends UnitView {
                           this.field_xb = false;
                           if (this.field_jb == null) {
                             this.field_jb = new pq(this.getX(-74), this.getY(-61) - 30, PortalEntryEvent.field_m.computeEffectDuration((byte) 32, this.team, 750));
-                            PortalEntryEvent.field_m.field_G.a(this.field_jb, false);
+                            PortalEntryEvent.field_m.field_G.addFirst(this.field_jb, false);
                             if (var3 == 0) {
                               break regionExit1;
                             }
@@ -1543,7 +1543,7 @@ final class GameCharacter extends UnitView {
                         this.field_xb = false;
                         if (this.field_jb == null) {
                           this.field_jb = new pq(this.getX(73), this.getY(-104) - 30, PortalEntryEvent.field_m.computeEffectDuration((byte) 32, this.team, 750));
-                          PortalEntryEvent.field_m.field_G.a(this.field_jb, false);
+                          PortalEntryEvent.field_m.field_G.addFirst(this.field_jb, false);
                         }
                         if (!this.field_jb.d(124)) {
                           break regionExit1;
@@ -1613,7 +1613,7 @@ final class GameCharacter extends UnitView {
                   if (this.animationTicks != 0) {
                     break regionExit1;
                   }
-                  var2_intLifetime1 = 30 + hp.a((byte) 22, g.field_a, 5);
+                  var2_intLifetime1 = 30 + hp.nextBoundedInt((byte) 22, g.field_a, 5);
                   this.field_U = qq.b(1481485697, var2_intLifetime1);
                   if (var3 == 0) {
                     break regionExit1;
@@ -1719,8 +1719,8 @@ final class GameCharacter extends UnitView {
         try {
           this.velocityX = 0;
           this.velocityY = 0;
-          hp.a((byte) 57, g.field_a, 5);
-          hp.a((byte) 82, g.field_a, 120);
+          hp.nextBoundedInt((byte) 57, g.field_a, 5);
+          hp.nextBoundedInt((byte) 82, g.field_a, 120);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wb.<init>(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
@@ -1809,7 +1809,7 @@ final class GameCharacter extends UnitView {
             this.state != 9) {
             if (this.state == 8 &&
               this.field_Eb != null) {
-              this.field_Eb.l(-95);
+              this.field_Eb.releaseToIdle(-95);
             }
             if (param0) {
               field_hb = (java.awt.Font) null;

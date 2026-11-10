@@ -28,7 +28,7 @@ final class PcmStreamMixer extends PcmStream {
           param0 = param0 - var2;
           this.field_j = this.field_j + var2;
           this.normalizeListenerDeadlines();
-          var3 = (PcmMixerListener) (this.field_k.c(126));
+          var3 = (PcmMixerListener) (this.field_k.last(126));
           var4 = var3;
           synchronized (var4) {
             var5 = var3.a(this);
@@ -62,8 +62,8 @@ final class PcmStreamMixer extends PcmStream {
         return;
     }
 
-    final PcmStream d() {
-        return (PcmStream) (this.field_l.b(6));
+    final PcmStream nextSubStream() {
+        return (PcmStream) (this.field_l.previous(6));
     }
 
     private final void removeListener(PcmMixerListener param0) {
@@ -82,11 +82,11 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     final synchronized void b(PcmStream param0) {
-        this.field_l.a(-25612, param0);
+        this.field_l.addLast(-25612, param0);
     }
 
     final PcmStream firstSubStream() {
-        return (PcmStream) (this.field_l.c(44));
+        return (PcmStream) (this.field_l.last(44));
     }
 
     final synchronized void removeSubStream(PcmStream param0) {
@@ -115,7 +115,7 @@ final class PcmStreamMixer extends PcmStream {
           param2 = param2 - var4;
           this.field_j = this.field_j + var4;
           this.normalizeListenerDeadlines();
-          var5 = (PcmMixerListener) (this.field_k.c(84));
+          var5 = (PcmMixerListener) (this.field_k.last(84));
           var6 = var5;
           synchronized (var6) {
             var7 = var5.a(this);
@@ -134,10 +134,10 @@ final class PcmStreamMixer extends PcmStream {
     private final void normalizeListenerDeadlines() {
         PcmMixerListener var1 = null;
         if (this.field_j > 0) {
-          var1 = (PcmMixerListener) (this.field_k.c(39));
+          var1 = (PcmMixerListener) (this.field_k.last(39));
           while (var1 != null) {
             var1.field_f = var1.field_f - this.field_j;
-            var1 = (PcmMixerListener) (this.field_k.b(6));
+            var1 = (PcmMixerListener) (this.field_k.previous(6));
           }
           this.field_m = this.field_m - this.field_j;
           this.field_j = 0;
@@ -145,18 +145,18 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     private final void skipSubstreams(int param0) {
-        PcmStream var2 = (PcmStream) (this.field_l.c(67));
+        PcmStream var2 = (PcmStream) (this.field_l.last(67));
         while (var2 != null) {
           var2.skip(param0);
-          var2 = (PcmStream) (this.field_l.b(6));
+          var2 = (PcmStream) (this.field_l.previous(6));
         }
     }
 
     private final void mixSubstreams(int[] param0, int param1, int param2) {
-        PcmStream var4 = (PcmStream) (this.field_l.c(97));
+        PcmStream var4 = (PcmStream) (this.field_l.last(97));
         while (var4 != null) {
           var4.process(param0, param1, param2);
-          var4 = (PcmStream) (this.field_l.b(6));
+          var4 = (PcmStream) (this.field_l.previous(6));
         }
     }
 

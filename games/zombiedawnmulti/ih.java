@@ -30,7 +30,7 @@ final class ih {
 
     final static void a(boolean param0, int param1, MusicTrack param2) {
         try {
-          MenuScreen.a(param0, param1, 92, param2);
+          MenuScreen.changeMusicTrack(param0, param1, 92, param2);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ih.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -58,8 +58,8 @@ final class ih {
           cn.a(param0, param5, param6, (byte) -120);
           if (pk.field_b != null) {
             if (!pk.field_b.handleMenuSelection(param3, param4, (byte) -8, param5, param0)) {
-              m.a(param5, 0, param0);
-              UiWidget.a(param2, param5, true);
+              m.handleNameEntryResult(param5, 0, param0);
+              UiWidget.updateReportAbuseDialog(param2, param5, true);
               param5 = false;
               if (param1 != 4) {
                 ih.a(29);
@@ -70,8 +70,8 @@ final class ih {
             param5 = false;
             q.b(89);
           }
-          m.a(param5, 0, param0);
-          UiWidget.a(param2, param5, true);
+          m.handleNameEntryResult(param5, 0, param0);
+          UiWidget.updateReportAbuseDialog(param2, param5, true);
           param5 = false;
         }
         if (param1 == 4) {
@@ -86,7 +86,7 @@ final class ih {
         int var4 = 0;
         try {
           var5 = ma.field_a;
-          var5.b((byte) -35, param2);
+          var5.writeCipheredOpcode((byte) -35, param2);
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(param1 ^ 112, param1);
@@ -110,7 +110,7 @@ final class ih {
         int var4 = 0;
         try {
           var6 = ma.field_a;
-          var6.b((byte) -35, param2);
+          var6.writeCipheredOpcode((byte) -35, param2);
           int var5 = -62 / ((20 - param0) / 57);
           var6.position = var6.position + 1;
           var4 = var6.position;

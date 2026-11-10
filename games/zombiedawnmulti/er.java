@@ -170,7 +170,7 @@ final class er extends IntrusiveNode {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!ud.a(param1, param4, param3, (byte) -42)) {
+          if (!ud.loadSpriteSheet(param1, param4, param3, (byte) -42)) {
             stackIn_2_0 = null;
             return (BinaryBitmapFont) (stackIn_2_0);
           }

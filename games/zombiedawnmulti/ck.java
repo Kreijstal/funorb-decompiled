@@ -115,9 +115,9 @@ final class ck {
                 }
               } else {
                 var8_ref_dm = new LobbyPlayer(var20, var21, var3_long);
-                TextWidgetPainter.field_c.a(param0 + 2060, var8_ref_dm, var3_long);
+                TextWidgetPainter.field_c.put(param0 + 2060, var8_ref_dm, var3_long);
               }
-              var8_ref_dm.field_Kb = bl.a((byte) 98) - (long)((PacketBuffer) ((Object) var1)).readInt(-1478490344);
+              var8_ref_dm.field_Kb = bl.monotonicMillis((byte) 98) - (long)((PacketBuffer) ((Object) var1)).readInt(-1478490344);
               var8_ref_dm.field_Mb = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 69);
               var10 = ((PacketBuffer) ((Object) var1)).readVarInt(param0 ^ -2061);
               stackIn_18_0 = var8_ref_dm;
@@ -150,30 +150,30 @@ final class ck {
               return;
             }
             if (7 == var2) {
-              var3_ref_dm = (LobbyPlayer) (cg.field_i.c(66));
+              var3_ref_dm = (LobbyPlayer) (cg.field_i.last(66));
               while (var3_ref_dm != null) {
                 var3_ref_dm.unlink(true);
                 var3_ref_dm.a(-4564);
-                var3_ref_dm = (LobbyPlayer) (cg.field_i.b(param0 + 2067));
+                var3_ref_dm = (LobbyPlayer) (cg.field_i.previous(param0 + 2067));
               }
               cb.field_i = 0;
               return;
             }
             if (var2 == 8) {
               var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 69);
-              var4 = (jh) (af.field_h.a((long)var3, -22877));
+              var4 = (jh) (af.field_h.findByKey((long)var3, -22877));
               if (var4 == null) {
                 var4 = new jh(kj.field_h);
-                af.field_h.a(-1, var4, (long)var3);
+                af.field_h.put(-1, var4, (long)var3);
               }
               SocketConnector.a(var4, true, var1, false);
-              StateIconLabel.a(var4, param0 ^ 2144);
+              StateIconLabel.insertLobbyGameSorted(var4, param0 ^ 2144);
               return;
             }
             if (var2 == 9) {
               var3Lifetime4 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 69);
               var4_int = ((PacketBuffer) ((Object) var1)).readUnsignedByte(31365);
-              var17_ref = (jh) (af.field_h.a((long)var3Lifetime4, -22877));
+              var17_ref = (jh) (af.field_h.findByKey((long)var3Lifetime4, -22877));
               var31 = var17_ref;
               if (var17_ref == null) {
                 return;
@@ -188,11 +188,11 @@ final class ck {
               return;
             }
             if (var2 == 10) {
-              var3_ref_jh = (jh) (tn.field_C.c(param0 + 2175));
+              var3_ref_jh = (jh) (tn.field_C.last(param0 + 2175));
               while (var3_ref_jh != null) {
                 var3_ref_jh.unlink(true);
                 var3_ref_jh.a(param0 ^ 6623);
-                var3_ref_jh = (jh) (tn.field_C.b(param0 + 2067));
+                var3_ref_jh = (jh) (tn.field_C.previous(param0 + 2067));
               }
               return;
             }
@@ -201,7 +201,7 @@ final class ck {
               if (var2 == 13) {
                 var3Lifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 69);
                 var4_intLifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(param0 + 33426);
-                var30_ref = (jh) (af.field_h.a((long)var3Lifetime5, -22877));
+                var30_ref = (jh) (af.field_h.findByKey((long)var3Lifetime5, -22877));
                 if (var30_ref != null) {
                   var16 = var30_ref;
                   var30_ref.field_rc = false;
@@ -210,7 +210,7 @@ final class ck {
                     var30_ref.field_Vb = var4_intLifetime1;
                   }
                   var16.field_lc = false;
-                  StateIconLabel.a(var30_ref, -57);
+                  StateIconLabel.insertLobbyGameSorted(var30_ref, -57);
                 }
                 return;
               }
@@ -225,7 +225,7 @@ final class ck {
                     var7 = vm.a(var3_longLifetime2, (byte) -99);
                     if (var7 == null) {
                       var7 = new LobbyPlayer(var27, var28, var3_longLifetime2);
-                      kp.field_o.a(-1, var7, var3_longLifetime2);
+                      kp.field_o.put(-1, var7, var3_longLifetime2);
                       JaggrabDownloader.field_c.field_cc = JaggrabDownloader.field_c.field_cc + 1;
                     }
                     var7.field_Mb = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 69);
@@ -236,7 +236,7 @@ final class ck {
                     stackIn_83_0.field_Nb = stackIn_84_1;
                     var7.field_Yb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(31365);
                     var7.field_Vb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(31365);
-                    nh.field_g.a(var7, false);
+                    nh.field_g.addFirst(var7, false);
                     return;
                   }
                   if (var2 == 19) {
@@ -263,7 +263,7 @@ final class ck {
                   if (var2 == 21) {
                     var3Lifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 69);
                     if (var3Lifetime5 != 0) {
-                      qi.field_c = bl.a((byte) 97) + (long)var3Lifetime5;
+                      qi.field_c = bl.monotonicMillis((byte) 97) + (long)var3Lifetime5;
                       return;
                     }
                     qi.field_c = 0L;
@@ -278,8 +278,8 @@ final class ck {
                     ContentTransitionDialog.field_sb = ((PacketBuffer) ((Object) var1)).readLong((byte) -30);
                     return;
                   }
-                  MouseInputHandler.a("L1: " + ci.a(0), (Throwable) null, false);
-                  ak.a((byte) -125);
+                  MouseInputHandler.reportClientError("L1: " + ci.a(0), (Throwable) null, false);
+                  ak.closeGameSocket((byte) -125);
                   return;
                 }
                 var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong((byte) -30);
@@ -321,7 +321,7 @@ final class ck {
               return;
             }
             var3Lifetime6 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 69);
-            var18_ref = (jh) (af.field_h.a((long)var3Lifetime6, -22877));
+            var18_ref = (jh) (af.field_h.findByKey((long)var3Lifetime6, -22877));
             var24 = var18_ref;
             if (var24 == null) {
               return;
@@ -331,16 +331,16 @@ final class ck {
             } else {
               var24.field_rc = true;
             }
-            StateIconLabel.a(var24, -126);
+            StateIconLabel.insertLobbyGameSorted(var24, -126);
             return;
           }
-          var3_ref_dmLifetime1 = (LobbyPlayer) (nh.field_g.c(113));
+          var3_ref_dmLifetime1 = (LobbyPlayer) (nh.field_g.last(113));
           while (var3_ref_dmLifetime1 != null) {
             var3_ref_dmLifetime1.unlink(true);
             var3_ref_dmLifetime1.a(-4564);
-            var3_ref_dmLifetime1 = (LobbyPlayer) (nh.field_g.b(6));
+            var3_ref_dmLifetime1 = (LobbyPlayer) (nh.field_g.previous(6));
           }
-          var3_ref_dmLifetime2 = (LobbyPlayer) (TextWidgetPainter.field_c.a((byte) 7));
+          var3_ref_dmLifetime2 = (LobbyPlayer) (TextWidgetPainter.field_c.firstInTraversal((byte) 7));
           while (var3_ref_dmLifetime2 != null) {
             if (var3_ref_dmLifetime2.field_Pb ||
               var3_ref_dmLifetime2.field_Ob) {
@@ -351,7 +351,7 @@ final class ck {
               var3_ref_dmLifetime2.field_Pb = false;
               lf.a(var3_ref_dmLifetime2, true);
             }
-            var3_ref_dmLifetime2 = (LobbyPlayer) (TextWidgetPainter.field_c.c((byte) 123));
+            var3_ref_dmLifetime2 = (LobbyPlayer) (TextWidgetPainter.field_c.nextInTraversal((byte) 123));
           }
           if (var2 == 1 &&
             null != JaggrabDownloader.field_c) {

@@ -9,17 +9,17 @@ final class QuickChatHelpDialog extends UiComponent {
     static String field_Kb;
     static IndexedSprite field_Jb;
 
-    final static void c(byte param0) {
+    final static void showKickedFromGameNotice(byte param0) {
         String var2 = null;
         int var1 = -7 % ((-1 - param0) / 63);
         if (null != IndexedSpriteState.field_k) {
           var2 = IndexedSpriteState.field_k;
-          UiWidget.a((byte) -61, vl.a(lp.field_h, new String[]{var2}, 2));
+          UiWidget.showMessageDialogText((byte) -61, vl.a(lp.field_h, new String[]{var2}, 2));
           IndexedSpriteState.field_k = null;
         }
     }
 
-    final static String a(boolean param0, int param1, CharSequence param2) {
+    final static String validatePlayerNameFormat(boolean param0, int param1, CharSequence param2) {
         int var6 = 0;
         String stackIn_4_0 = null;
         String stackIn_9_0 = null;
@@ -47,7 +47,7 @@ final class QuickChatHelpDialog extends UiComponent {
           var3_int = param2.length();
           if (var3_int >= 1 &&
             var3_int <= 12) {
-            var4 = tg.a(param2, false);
+            var4 = tg.normalizePlayerName(param2, false);
             if (var4 != null &&
               var4.length() >= 1) {
               if (!eb.a((byte) -104, var4.charAt(0)) &&
@@ -98,7 +98,7 @@ final class QuickChatHelpDialog extends UiComponent {
         }
     }
 
-    final static LevelActorSpawner a(byte param0, byte[] param1) {
+    final static LevelActorSpawner decodeLevelData(byte param0, byte[] param1) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -222,7 +222,7 @@ final class QuickChatHelpDialog extends UiComponent {
         field_Jb = null;
         if (param0 != 15) {
           CharSequence var2 = (CharSequence) null;
-          QuickChatHelpDialog.a(false, -117, (CharSequence) null);
+          QuickChatHelpDialog.validatePlayerNameFormat(false, -117, (CharSequence) null);
         }
         field_Hb = (Sprite[][]) null;
         field_Kb = null;
@@ -300,7 +300,7 @@ final class QuickChatHelpDialog extends UiComponent {
           this.field_Ib.setBounds(15, 5, 15, -20 + var17.field_zb, -3344);
           var8.setBounds(this.field_z - var17.field_z, var17.field_z, this.field_zb, 0, -3344);
           var9.setBounds(15, 20, this.field_zb, 0, -3344);
-          var8.field_ab = tg.a(2105376, var8.field_z, 8421504, 3, 11579568, 102);
+          var8.field_ab = tg.createGradientFrameSprites(2105376, var8.field_z, 8421504, 3, 11579568, 102);
           var17.a((byte) 50, this.field_Ib);
           var8.a((byte) 50, var9);
           this.a((byte) 50, var17);

@@ -10,7 +10,7 @@ final class ap extends qb {
     static Sprite field_t;
     private BufferedSocket field_q;
 
-    private final void a(boolean param0, boolean param1) {
+    private final void sendStateControlPacket(boolean param0, boolean param1) {
         try {
           PacketBuffer stackIn_5_0 = null;
           int stackIn_5_1 = 0;
@@ -34,7 +34,7 @@ final class ap extends qb {
             this.field_b.b(0L, param1);
             this.field_q.a(0, -100, this.field_b.payload.length, this.field_b.payload);
             if (!param1) {
-              this.a(false, false);
+              this.sendStateControlPacket(false, false);
             }
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -56,7 +56,7 @@ final class ap extends qb {
         }
     }
 
-    final static void a(ResourceArchive param0, byte param1, BitmapFont param2) {
+    final static void initializeQuickChat(ResourceArchive param0, byte param1, BitmapFont param2) {
         int var6 = 0;
         int var7 = 0;
         int[] var17 = null;
@@ -67,17 +67,17 @@ final class ap extends qb {
         int var4 = 97 / ((param1 - 46) / 63);
         if (param0 == null) {
           Throwable var11 = (Throwable) null;
-          MouseInputHandler.a("QC1", (Throwable) null, false);
+          MouseInputHandler.reportClientError("QC1", (Throwable) null, false);
           return;
         }
         param0.field_j = false;
         param0.field_b = 0;
         ok.field_p = new QuickChatCategoryRegistry(var3_int, param0, param0);
         MouseInputHandler.field_c = new QuickChatPhraseRegistry(var3_int, param0, param0, new dd());
-        ob var5 = ha.b(false);
+        ob var5 = ha.findFirstActiveDefinition(false);
         if (var5 == null) {
           Throwable var12 = (Throwable) null;
-          MouseInputHandler.a("QC2", (Throwable) null, false);
+          MouseInputHandler.reportClientError("QC2", (Throwable) null, false);
           return;
         }
         try {
@@ -102,7 +102,7 @@ final class ap extends qb {
         }
     }
 
-    final boolean b(byte param0) {
+    final boolean poll(byte param0) {
         try {
           int stackIn_50_0 = 0;
           int stackIn_67_0 = 0;
@@ -131,7 +131,7 @@ final class ap extends qb {
           int var2_intLifetime1;
           var16 = ZombieDawnMulti.field_E ? 1 : 0;
           if (this.field_q != null) {
-            var2_long = bl.a((byte) 115);
+            var2_long = bl.monotonicMillis((byte) 115);
             var4 = (int)(var2_long - this.field_f);
             if (var4 > 200) {
               var4 = 200;
@@ -322,7 +322,7 @@ final class ap extends qb {
         }
     }
 
-    final static PaletteBitmapFont a(ResourceArchive param0, ResourceArchive param1, String param2, int param3, String param4) {
+    final static PaletteBitmapFont loadPaletteFont(ResourceArchive param0, ResourceArchive param1, String param2, int param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -379,7 +379,7 @@ final class ap extends qb {
         }
     }
 
-    private final void g(int param0) {
+    private final void sendInitControlPacket(int param0) {
         try {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
@@ -416,7 +416,7 @@ final class ap extends qb {
     public ap() {
     }
 
-    final void a(byte param0) {
+    final void resetAfterValidationFailure(byte param0) {
         try {
           int var2_int = 0 / ((param0 - 53) / 41);
           this.field_q.c(-101);
@@ -428,16 +428,16 @@ final class ap extends qb {
         this.field_i = (byte)(int)(1.0 + Math.random() * 255.0);
     }
 
-    final void f(int param0) {
+    final void closeConnection(int param0) {
         if (param0 != 31) {
-          this.a(false, true);
+          this.sendStateControlPacket(false, true);
         }
         if (this.field_q != null) {
           this.field_q.c(88);
         }
     }
 
-    final void a(boolean param0, Object param1, int param2) {
+    final void setConnection(boolean param0, Object param1, int param2) {
         try {
           RuntimeException stackIn_24_0 = null;
           StringBuilder stackIn_24_1 = null;
@@ -463,12 +463,12 @@ final class ap extends qb {
               this.field_q = null;
             }
             this.field_q = (BufferedSocket) (param1);
-            this.g(0);
-            this.a(param0, true);
+            this.sendInitControlPacket(0);
+            this.sendStateControlPacket(param0, true);
             this.field_m = null;
             this.field_k.position = 0;
             while (true) {
-              var4_ref = (tn) (this.field_j.a(11356));
+              var4_ref = (tn) (this.field_j.removeLast(11356));
               if (var4_ref != null) {
                 this.field_g.add(29664, var4_ref);
                 continue;
@@ -476,7 +476,7 @@ final class ap extends qb {
               break;
             }
             while (true) {
-              var4_refLifetime1 = (tn) (this.field_l.a(11356));
+              var4_refLifetime1 = (tn) (this.field_l.removeLast(11356));
               if (var4_refLifetime1 != null) {
                 this.field_c.add(29664, var4_refLifetime1);
                 continue;
@@ -506,7 +506,7 @@ final class ap extends qb {
             }
             var4_int = 12 % ((param2 - 63) / 33);
             this.field_d = 0;
-            this.field_f = bl.a((byte) 110);
+            this.field_f = bl.monotonicMillis((byte) 110);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
@@ -527,7 +527,7 @@ final class ap extends qb {
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 16682) {
           field_s = false;
         }

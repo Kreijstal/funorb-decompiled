@@ -12,7 +12,7 @@ final class tg implements Runnable {
     static PlayerLoadout field_e;
     static uc field_g;
 
-    final static int a(int param0, CharSequence param1, int param2, int param3, byte[] param4, int param5) {
+    final static int encodeWindowsCodePageText(int param0, CharSequence param1, int param2, int param3, byte[] param4, int param5) {
         int var7 = 0;
         int stackIn_3_0 = 0;
         int stackIn_70_0 = 0;
@@ -152,7 +152,7 @@ final class tg implements Runnable {
         }
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static Sprite[] createGradientFrameSprites(int param0, int param1, int param2, int param3, int param4, int param5) {
         Sprite var16 = null;
         int[] var18 = SoftwareRasterizer.pixels;
         int[] var17 = var18;
@@ -189,7 +189,7 @@ final class tg implements Runnable {
         return new Sprite[]{var10, var11, var10, var9, (Sprite) (var14), var9, var12, var13, var12};
     }
 
-    final static int b(int param0) {
+    final static int getCommonUiLoadProgress(int param0) {
         if (ClientException.field_i < 2) {
           return 0;
         }
@@ -249,7 +249,7 @@ final class tg implements Runnable {
         return 100;
     }
 
-    final static uc a(String param0, boolean param1) {
+    final static uc createConditionalText(String param0, boolean param1) {
         RuntimeException var2 = null;
         uc stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -258,7 +258,7 @@ final class tg implements Runnable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            tg.a((byte) 33, false);
+            tg.startLocalGame((byte) 33, false);
           }
           stackIn_3_0 = new uc(param0);
           return stackIn_3_0;
@@ -276,7 +276,7 @@ final class tg implements Runnable {
         }
     }
 
-    final static String a(CharSequence param0, boolean param1) {
+    final static String normalizePlayerName(CharSequence param0, boolean param1) {
         int var6 = 0;
         StringBuilder discarded$0 = null;
         Object stackIn_3_0 = null;
@@ -336,7 +336,7 @@ final class tg implements Runnable {
             }
           }
           if (param1) {
-            tg.b(83);
+            tg.getCommonUiLoadProgress(83);
           }
           if (var5.length() != 0) {
             stackIn_30_0 = var5.toString();
@@ -358,7 +358,7 @@ final class tg implements Runnable {
         }
     }
 
-    final static void a(byte param0, boolean param1, int param2) {
+    final static void drawScreenOverlays(byte param0, boolean param1, int param2) {
         int var4;
         int var5;
         int var6;
@@ -415,7 +415,7 @@ final class tg implements Runnable {
           }
         } else {
           if (param2 == -2) {
-            gk.a(2, 1).b(0);
+            gk.lookupMenuScreen(2, 1).drawBackground(0);
             SoftwareRasterizer.fillRectAlpha(0, 0, 640, 480, 0, 128);
             var18 = vb.a(21262);
             if (var18 != null) {
@@ -425,20 +425,20 @@ final class tg implements Runnable {
               SecondaryNodeDeque.field_e.centerY = 0;
               SecondaryNodeDeque.field_e.centerX = 420 - var4 - var18.field_zb / 4;
               kk.field_w.draw(-10136, SecondaryNodeDeque.field_e);
-              kk.field_w.field_P = nk.a(1052688, 455739624, FullscreenFocusCanvas.field_k.field_p[1]);
+              kk.field_w.field_P = nk.createColorRamp(1052688, 455739624, FullscreenFocusCanvas.field_k.field_p[1]);
               var6 = 0;
               var7 = 30;
               var8 = 0;
               var9 = 7;
               var10 = PowerupEvent.field_m / var7 % var9 + var8;
-              var19 = nk.a(QuickChatHelpDialog.field_Hb[var6][var10], FullscreenFocusCanvas.field_k.field_c[0], 255, FullscreenFocusCanvas.field_k.field_p[0]);
-              og.h((byte) 126);
+              var19 = nk.createTintedSprite(QuickChatHelpDialog.field_Hb[var6][var10], FullscreenFocusCanvas.field_k.field_c[0], 255, FullscreenFocusCanvas.field_k.field_p[0]);
+              og.bindScreenBuffer((byte) 126);
               var19.drawTransparent(var4 - var18.field_zb / 4, var5);
               var7Lifetime2 = 45;
               var6Lifetime2 = 1;
               var10Lifetime1 = (PowerupEvent.field_m + 3) / var7Lifetime2 % var9 + var8;
-              var20 = nk.a(QuickChatHelpDialog.field_Hb[var6Lifetime2][var10Lifetime1], FullscreenFocusCanvas.field_k.field_c[1], 255, FullscreenFocusCanvas.field_k.field_p[1]);
-              og.h((byte) 119);
+              var20 = nk.createTintedSprite(QuickChatHelpDialog.field_Hb[var6Lifetime2][var10Lifetime1], FullscreenFocusCanvas.field_k.field_c[1], 255, FullscreenFocusCanvas.field_k.field_p[1]);
+              og.bindScreenBuffer((byte) 119);
               var20.drawHorizontalFlip(var18.field_zb / 4 + var4, var5);
               SoftwareRasterizer.setClip(3 + var18.field_w, var18.field_qb, var18.field_zb + (var18.field_w - 6), -3 + (var18.field_qb + var18.field_z));
               var12 = 1;
@@ -476,8 +476,8 @@ final class tg implements Runnable {
               if (400 > PowerupEvent.field_m % 1000) {
                 MatchingTextValidator.field_w.drawParagraph(SpriteState.field_A, 80 + var4, -30 + var5, 100, 50, 16777215, 65793, 1, 0, 0);
                 SoftwareRasterizer.resetClip();
-                tm.a(DialogLayer.i((byte) -39), false);
-                IntrusiveNode.a(DialogLayer.i((byte) -39), 2);
+                tm.drawLobbyAndChatPanels(DialogLayer.i((byte) -39), false);
+                IntrusiveNode.drawLobbyPanels(DialogLayer.i((byte) -39), 2);
                 TextInputWidget.a(false, DialogLayer.i((byte) -39));
                 decompiledFrameRemainder0 = false;
               }
@@ -485,8 +485,8 @@ final class tg implements Runnable {
                 if ((500 + PowerupEvent.field_m) % 1000 < 400) {
                   MatchingTextValidator.field_w.drawParagraph(wm.field_P, -130 + var4, var5 - 30, 100, 50, 16777215, 65793, 1, 0, 0);
                   SoftwareRasterizer.resetClip();
-                  tm.a(DialogLayer.i((byte) -39), false);
-                  IntrusiveNode.a(DialogLayer.i((byte) -39), 2);
+                  tm.drawLobbyAndChatPanels(DialogLayer.i((byte) -39), false);
+                  IntrusiveNode.drawLobbyPanels(DialogLayer.i((byte) -39), 2);
                   TextInputWidget.a(false, DialogLayer.i((byte) -39));
                   decompiledFrameRemainder0 = false;
                 }
@@ -496,23 +496,23 @@ final class tg implements Runnable {
               }
             }
             if (decompiledFrameRemainder0) {
-              tm.a(DialogLayer.i((byte) -39), false);
-              IntrusiveNode.a(DialogLayer.i((byte) -39), 2);
+              tm.drawLobbyAndChatPanels(DialogLayer.i((byte) -39), false);
+              IntrusiveNode.drawLobbyPanels(DialogLayer.i((byte) -39), 2);
               TextInputWidget.a(false, DialogLayer.i((byte) -39));
             }
           } else {
-            gk.a(2, param2).b(0);
-            gk.a(2, param2).a(true);
-            gk.a(2, param2).d(4);
+            gk.lookupMenuScreen(2, param2).drawBackground(0);
+            gk.lookupMenuScreen(2, param2).drawScreen(true);
+            gk.lookupMenuScreen(2, param2).drawTitle(4);
           }
         }
-        if (am.a(-110)) {
-          ui.a(param1, false);
+        if (am.isGameScreenActive(-110)) {
+          ui.drawChatToggleButton(param1, false);
         }
-        var17_ref = (er) (bh.field_d.c(104));
+        var17_ref = (er) (bh.field_d.last(104));
         var3 = var17_ref;
         if (param0 > -8) {
-          tg.a((byte) -77, false);
+          tg.startLocalGame((byte) -77, false);
         }
         if (var3 != null) {
           var4Lifetime1 = 10;
@@ -553,13 +553,13 @@ final class tg implements Runnable {
           }
         } catch (Exception exception) {
           String var6 = (String) null;
-          MouseInputHandler.a((String) null, (Throwable) ((Object) exception), false);
+          MouseInputHandler.reportClientError((String) null, (Throwable) ((Object) exception), false);
         } finally {
           this.field_c = false;
         }
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void startLocalGame(byte param0, boolean param1) {
         ci stackIn_8_0 = null;
         int stackIn_8_1 = 0;
         int stackIn_9_2 = 0;
@@ -605,14 +605,14 @@ final class tg implements Runnable {
               stackIn_9_2 = 1;
             }
             var20 = ((ci) (Object) stackIn_8_0).a((byte) stackIn_8_1, stackIn_9_2);
-            var5 = (LevelActorSpawner) (sf.a((byte) -96, var20));
+            var5 = (LevelActorSpawner) (sf.decodeLevelData((byte) -96, var20));
             var6 = IterableNodeHashTable.a(var20, -67);
             var7 = new ro(var3, var5);
             var8 = new PlayerLoadout[4];
             var8[0] = new PlayerLoadout();
             for (var9_int = 0; var9_int < 3; var9_int++) {
               boolean decompiledFrameRemainder0 = true;
-              if (!pp.field_n && (!PortalView.i(51603) ||
+              if (!pp.field_n && (!PortalView.isGuestOrNonMember(51603) ||
                 !jk.a((byte) -128, FullscreenFocusCanvas.field_k.field_s[var9_int]))) {
                 var8[0].field_c[var9_int] = FullscreenFocusCanvas.field_k.field_s[var9_int];
                 var7.teamUpgradeMask[0] = DisplayNamePanel.a(var7.teamUpgradeMask[0], 1L << FullscreenFocusCanvas.field_k.field_s[var9_int]);
@@ -649,7 +649,7 @@ final class tg implements Runnable {
             var9 = new GameWorld(var3, var6);
             var7.currentTick = 1000;
             var16 = new PacketBuffer(4096);
-            var7.a(var16, (byte) -122);
+            var7.writeWorldState(var16, (byte) -122);
             var16.position = 1;
             var9.decodeFromPacket(2, var16);
             var9.field_C = 2147483646;
@@ -676,12 +676,12 @@ final class tg implements Runnable {
         field_d = null;
         if (param0 > -35) {
           CharSequence var2 = (CharSequence) null;
-          tg.a((CharSequence) null, false);
+          tg.normalizePlayerName((CharSequence) null, false);
         }
         field_e = null;
     }
 
-    final static Sprite[] a(int param0) {
+    final static Sprite[] createDecodedSprites(int param0) {
         int var2 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -707,7 +707,7 @@ final class tg implements Runnable {
             var10 = new int[var3];
             var22 = var10;
             for (var6 = 0; var3 > var6; var6++) {
-              var10[var6] = UsernameAvailabilityValidator.field_t[ScrollPane.b(255, (int) var21[var6])];
+              var10[var6] = UsernameAvailabilityValidator.field_t[ScrollPane.bitAnd(255, (int) var21[var6])];
             }
             var1[var2] = new Sprite(ContentTransitionDialog.field_nb, hj.field_a, PacketBuffer.field_i[var2], PowerupCommand.field_o[var2], oq.field_w[var2], vj.field_p[var2], var22);
           } else {
@@ -719,7 +719,7 @@ final class tg implements Runnable {
             var13 = var17;
             var6_ref_int__ = var13;
             for (var7 = 0; var3 > var7; var7++) {
-              var6_ref_int__[var7] = cr.b(UsernameAvailabilityValidator.field_t[ScrollPane.b((int) var21[var7], 255)], ScrollPane.b(255, (int) var16[var7]) << 24);
+              var6_ref_int__[var7] = cr.b(UsernameAvailabilityValidator.field_t[ScrollPane.bitAnd((int) var21[var7], 255)], ScrollPane.bitAnd(255, (int) var16[var7]) << 24);
             }
             var1[var2] = (Sprite) ((Object) new ArgbSprite(ContentTransitionDialog.field_nb, hj.field_a, PacketBuffer.field_i[var2], PowerupCommand.field_o[var2], oq.field_w[var2], vj.field_p[var2], var17));
           }

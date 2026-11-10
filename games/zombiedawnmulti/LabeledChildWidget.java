@@ -56,23 +56,23 @@ final class LabeledChildWidget extends SingleChildWidget {
         if (param9) {
           if (param9) {
             ck.field_a = ho.field_m;
-            ui.a((byte) -109, param9);
+            ui.advanceLobbyTransitions((byte) -109, param9);
             if (JaggrabDownloader.field_h > 0) {
               PowerupBar.a(param4, param7, false, param9);
             }
             eb.field_B.field_R = 1;
             eb.field_B.field_V = qc.field_u.field_V;
             if (HotspotTextWidget.field_Q > 0) {
-              gg.a(param7, param4, param9, true);
+              gg.updateGameSetupPanel(param7, param4, param9, true);
             }
             if (0 < InflaterDecompressor.field_a) {
-              UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
+              UnitStateEvent.updateGameRoomPanel(param3 ^ 48, param4, param9, param1, param7);
             }
             if (io.field_b &&
               JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
               pd.field_b.field_Z = false;
               hf.field_e.field_Jb.field_wb = ChatMessage.field_p;
-              ob.a(hf.field_e.field_Gb, 97);
+              ob.resetChildBounds(hf.field_e.field_Gb, 97);
             } else {
               hf.field_e.field_Jb.field_wb = null;
               pd.field_b.field_Z = true;
@@ -80,22 +80,22 @@ final class LabeledChildWidget extends SingleChildWidget {
             }
           } else {
             ck.field_a = (-640 + kp.field_l) / 2;
-            ui.a((byte) -109, param9);
+            ui.advanceLobbyTransitions((byte) -109, param9);
             if (JaggrabDownloader.field_h > 0) {
               PowerupBar.a(param4, param7, false, param9);
               eb.field_B.field_R = 1;
               eb.field_B.field_V = qc.field_u.field_V;
               if (HotspotTextWidget.field_Q > 0) {
-                gg.a(param7, param4, param9, true);
+                gg.updateGameSetupPanel(param7, param4, param9, true);
               }
               if (0 < InflaterDecompressor.field_a) {
-                UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
+                UnitStateEvent.updateGameRoomPanel(param3 ^ 48, param4, param9, param1, param7);
               }
               if (io.field_b &&
                 JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
                 pd.field_b.field_Z = false;
                 hf.field_e.field_Jb.field_wb = ChatMessage.field_p;
-                ob.a(hf.field_e.field_Gb, 97);
+                ob.resetChildBounds(hf.field_e.field_Gb, 97);
               } else {
                 hf.field_e.field_Jb.field_wb = null;
                 pd.field_b.field_Z = true;
@@ -105,15 +105,15 @@ final class LabeledChildWidget extends SingleChildWidget {
               eb.field_B.field_R = 1;
               eb.field_B.field_V = qc.field_u.field_V;
               if (HotspotTextWidget.field_Q > 0) {
-                gg.a(param7, param4, param9, true);
+                gg.updateGameSetupPanel(param7, param4, param9, true);
                 if (0 < InflaterDecompressor.field_a) {
-                  UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
+                  UnitStateEvent.updateGameRoomPanel(param3 ^ 48, param4, param9, param1, param7);
                 }
                 if (io.field_b &&
                   JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
                   pd.field_b.field_Z = false;
                   hf.field_e.field_Jb.field_wb = ChatMessage.field_p;
-                  ob.a(hf.field_e.field_Gb, 97);
+                  ob.resetChildBounds(hf.field_e.field_Gb, 97);
                 } else {
                   hf.field_e.field_Jb.field_wb = null;
                   pd.field_b.field_Z = true;
@@ -121,7 +121,7 @@ final class LabeledChildWidget extends SingleChildWidget {
                 }
               } else {
                 if (0 < InflaterDecompressor.field_a) {
-                  UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
+                  UnitStateEvent.updateGameRoomPanel(param3 ^ 48, param4, param9, param1, param7);
                 }
                 if (!io.field_b) {
                   hf.field_e.field_Jb.field_wb = null;
@@ -131,7 +131,7 @@ final class LabeledChildWidget extends SingleChildWidget {
                   if (JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
                     pd.field_b.field_Z = false;
                     hf.field_e.field_Jb.field_wb = ChatMessage.field_p;
-                    ob.a(hf.field_e.field_Gb, 97);
+                    ob.resetChildBounds(hf.field_e.field_Gb, 97);
                   } else {
                     hf.field_e.field_Jb.field_wb = null;
                     pd.field_b.field_Z = true;
@@ -158,23 +158,23 @@ final class LabeledChildWidget extends SingleChildWidget {
             }
             if (param9) {
               ck.field_a = ho.field_m;
-              ui.a((byte) -109, param9);
+              ui.advanceLobbyTransitions((byte) -109, param9);
               if (JaggrabDownloader.field_h > 0) {
                 PowerupBar.a(param4, param7, false, param9);
               }
               eb.field_B.field_R = 1;
               eb.field_B.field_V = qc.field_u.field_V;
               if (HotspotTextWidget.field_Q > 0) {
-                gg.a(param7, param4, param9, true);
+                gg.updateGameSetupPanel(param7, param4, param9, true);
               }
               if (0 < InflaterDecompressor.field_a) {
-                UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
+                UnitStateEvent.updateGameRoomPanel(param3 ^ 48, param4, param9, param1, param7);
               }
               if (io.field_b &&
                 JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
                 pd.field_b.field_Z = false;
                 hf.field_e.field_Jb.field_wb = ChatMessage.field_p;
-                ob.a(hf.field_e.field_Gb, 97);
+                ob.resetChildBounds(hf.field_e.field_Gb, 97);
               } else {
                 hf.field_e.field_Jb.field_wb = null;
                 pd.field_b.field_Z = true;
@@ -182,17 +182,17 @@ final class LabeledChildWidget extends SingleChildWidget {
               }
             } else {
               ck.field_a = (-640 + kp.field_l) / 2;
-              ui.a((byte) -109, param9);
+              ui.advanceLobbyTransitions((byte) -109, param9);
               if (JaggrabDownloader.field_h > 0) {
                 PowerupBar.a(param4, param7, false, param9);
               }
               eb.field_B.field_R = 1;
               eb.field_B.field_V = qc.field_u.field_V;
               if (HotspotTextWidget.field_Q > 0) {
-                gg.a(param7, param4, param9, true);
+                gg.updateGameSetupPanel(param7, param4, param9, true);
               }
               if (0 < InflaterDecompressor.field_a) {
-                UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
+                UnitStateEvent.updateGameRoomPanel(param3 ^ 48, param4, param9, param1, param7);
               }
               if (!io.field_b) {
                 hf.field_e.field_Jb.field_wb = null;
@@ -202,7 +202,7 @@ final class LabeledChildWidget extends SingleChildWidget {
                 if (JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
                   pd.field_b.field_Z = false;
                   hf.field_e.field_Jb.field_wb = ChatMessage.field_p;
-                  ob.a(hf.field_e.field_Gb, 97);
+                  ob.resetChildBounds(hf.field_e.field_Gb, 97);
                 } else {
                   hf.field_e.field_Jb.field_wb = null;
                   pd.field_b.field_Z = true;
@@ -225,23 +225,23 @@ final class LabeledChildWidget extends SingleChildWidget {
             }
             if (param9) {
               ck.field_a = ho.field_m;
-              ui.a((byte) -109, param9);
+              ui.advanceLobbyTransitions((byte) -109, param9);
               if (JaggrabDownloader.field_h > 0) {
                 PowerupBar.a(param4, param7, false, param9);
               }
               eb.field_B.field_R = 1;
               eb.field_B.field_V = qc.field_u.field_V;
               if (HotspotTextWidget.field_Q > 0) {
-                gg.a(param7, param4, param9, true);
+                gg.updateGameSetupPanel(param7, param4, param9, true);
               }
               if (0 < InflaterDecompressor.field_a) {
-                UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
+                UnitStateEvent.updateGameRoomPanel(param3 ^ 48, param4, param9, param1, param7);
               }
               if (io.field_b &&
                 JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
                 pd.field_b.field_Z = false;
                 hf.field_e.field_Jb.field_wb = ChatMessage.field_p;
-                ob.a(hf.field_e.field_Gb, 97);
+                ob.resetChildBounds(hf.field_e.field_Gb, 97);
               } else {
                 hf.field_e.field_Jb.field_wb = null;
                 pd.field_b.field_Z = true;
@@ -249,22 +249,22 @@ final class LabeledChildWidget extends SingleChildWidget {
               }
             } else {
               ck.field_a = (-640 + kp.field_l) / 2;
-              ui.a((byte) -109, param9);
+              ui.advanceLobbyTransitions((byte) -109, param9);
               if (JaggrabDownloader.field_h > 0) {
                 PowerupBar.a(param4, param7, false, param9);
                 eb.field_B.field_R = 1;
                 eb.field_B.field_V = qc.field_u.field_V;
                 if (HotspotTextWidget.field_Q > 0) {
-                  gg.a(param7, param4, param9, true);
+                  gg.updateGameSetupPanel(param7, param4, param9, true);
                 }
                 if (0 < InflaterDecompressor.field_a) {
-                  UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
+                  UnitStateEvent.updateGameRoomPanel(param3 ^ 48, param4, param9, param1, param7);
                 }
                 if (io.field_b &&
                   JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
                   pd.field_b.field_Z = false;
                   hf.field_e.field_Jb.field_wb = ChatMessage.field_p;
-                  ob.a(hf.field_e.field_Gb, 97);
+                  ob.resetChildBounds(hf.field_e.field_Gb, 97);
                 } else {
                   hf.field_e.field_Jb.field_wb = null;
                   pd.field_b.field_Z = true;
@@ -274,15 +274,15 @@ final class LabeledChildWidget extends SingleChildWidget {
                 eb.field_B.field_R = 1;
                 eb.field_B.field_V = qc.field_u.field_V;
                 if (HotspotTextWidget.field_Q > 0) {
-                  gg.a(param7, param4, param9, true);
+                  gg.updateGameSetupPanel(param7, param4, param9, true);
                   if (0 < InflaterDecompressor.field_a) {
-                    UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
+                    UnitStateEvent.updateGameRoomPanel(param3 ^ 48, param4, param9, param1, param7);
                   }
                   if (io.field_b &&
                     JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
                     pd.field_b.field_Z = false;
                     hf.field_e.field_Jb.field_wb = ChatMessage.field_p;
-                    ob.a(hf.field_e.field_Gb, 97);
+                    ob.resetChildBounds(hf.field_e.field_Gb, 97);
                   } else {
                     hf.field_e.field_Jb.field_wb = null;
                     pd.field_b.field_Z = true;
@@ -290,7 +290,7 @@ final class LabeledChildWidget extends SingleChildWidget {
                   }
                 } else {
                   if (0 < InflaterDecompressor.field_a) {
-                    UnitStateEvent.a(param3 ^ 48, param4, param9, param1, param7);
+                    UnitStateEvent.updateGameRoomPanel(param3 ^ 48, param4, param9, param1, param7);
                   }
                   if (!io.field_b) {
                     hf.field_e.field_Jb.field_wb = null;
@@ -300,7 +300,7 @@ final class LabeledChildWidget extends SingleChildWidget {
                     if (JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
                       pd.field_b.field_Z = false;
                       hf.field_e.field_Jb.field_wb = ChatMessage.field_p;
-                      ob.a(hf.field_e.field_Gb, 97);
+                      ob.resetChildBounds(hf.field_e.field_Gb, 97);
                     } else {
                       hf.field_e.field_Jb.field_wb = null;
                       pd.field_b.field_Z = true;
@@ -312,7 +312,7 @@ final class LabeledChildWidget extends SingleChildWidget {
             }
           }
         }
-        og.a(param8, (byte) 120, param0, param7, param5, param6, param2);
+        og.updateLobbyGameList(param8, (byte) 120, param0, param7, param5, param6, param2);
         vi.a(param2, param7, (byte) 45, bf.field_n, param6);
         if (param3 != 2) {
           return;

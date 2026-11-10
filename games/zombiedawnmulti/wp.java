@@ -26,12 +26,12 @@ final class wp {
             wp.c(117);
           }
           var1 = ma.field_a;
-          while (UnitStateEvent.c(1)) {
-            var1.b((byte) -35, 8);
+          while (UnitStateEvent.isReflectionCheckReady(1)) {
+            var1.writeCipheredOpcode((byte) -35, 8);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
-            EmailAvailabilityValidator.a(var1, param0 + 10995);
+            EmailAvailabilityValidator.writeReflectionCheckReply(var1, param0 + 10995);
             ma.field_a.e(param0 + 11021, var1.position - var2);
           }
           return;
@@ -91,26 +91,26 @@ final class wp {
           mn.field_p = mn.field_p - 1;
           if (mn.field_p == 0) {
             mn.field_p = 200;
-            var1 = (we) (GameKeyHandler.field_e.c(75));
+            var1 = (we) (GameKeyHandler.field_e.last(75));
             while (var1 != null) {
-              if (!var1.field_h.b(4)) {
+              if (!var1.field_h.isLinked(4)) {
                 var1.unlink(true);
               }
-              var1 = (we) (GameKeyHandler.field_e.b(6));
+              var1 = (we) (GameKeyHandler.field_e.previous(6));
             }
             if (wc.field_K != null) {
-              var1Lifetime1 = (we) (wc.field_K.c(51));
+              var1Lifetime1 = (we) (wc.field_K.last(51));
               while (var1Lifetime1 != null) {
-                if (!var1Lifetime1.field_h.b(4)) {
+                if (!var1Lifetime1.field_h.isLinked(4)) {
                   var1Lifetime1.unlink(true);
                 }
-                var1Lifetime1 = (we) (wc.field_K.b(6));
+                var1Lifetime1 = (we) (wc.field_K.previous(6));
               }
             }
           }
           var1_int = 107 / ((param0 - 76) / 39);
           if (MessageDialogContent.field_L != null) {
-            if (MessageDialogContent.field_L.c(-119)) {
+            if (MessageDialogContent.field_L.hasMidiData(-119)) {
               return;
             }
             DelayedPacket.field_g = null;

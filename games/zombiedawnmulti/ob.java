@@ -17,7 +17,7 @@ final class ob extends DualLinkNode {
     String field_s;
     static String field_A;
 
-    final static String e(int param0) {
+    final static String getLoginIdentifier(int param0) {
         String var1 = "";
         if (param0 != -24093) {
           return (String) null;
@@ -34,7 +34,7 @@ final class ob extends DualLinkNode {
         return var1;
     }
 
-    private final void a(int param0, PacketBuffer param1, int param2) {
+    private final void decodeOpcode(int param0, PacketBuffer param1, int param2) {
         char[] stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         int stackIn_15_2 = 0;
@@ -66,7 +66,7 @@ final class ob extends DualLinkNode {
                 stackIn_20_0 = this.field_r;
                 stackIn_20_1 = var5;
                 if (var6 != 0) {
-                  stackIn_21_2 = ob.a((byte) var6, -1);
+                  stackIn_21_2 = ob.decodeExtendedByteChar((byte) var6, -1);
                 } else {
                   stackIn_21_2 = 0;
                 }
@@ -89,7 +89,7 @@ final class ob extends DualLinkNode {
                 stackIn_14_0 = this.field_D;
                 stackIn_14_1 = var5;
                 if (0 != var6) {
-                  stackIn_15_2 = ob.a((byte) var6, -1);
+                  stackIn_15_2 = ob.decodeExtendedByteChar((byte) var6, -1);
                 } else {
                   stackIn_15_2 = 0;
                 }
@@ -114,7 +114,7 @@ final class ob extends DualLinkNode {
         }
     }
 
-    final void e(byte param0) {
+    final void markGlobalIds(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -128,7 +128,7 @@ final class ob extends DualLinkNode {
               var4++;
             }
             if (param0 != -72) {
-              ob.a((byte) -85, -72);
+              ob.decodeExtendedByteChar((byte) -85, -72);
             }
             return;
           }
@@ -148,10 +148,10 @@ final class ob extends DualLinkNode {
         if (param0 == -72) {
           return;
         }
-        ob.a((byte) -85, -72);
+        ob.decodeExtendedByteChar((byte) -85, -72);
     }
 
-    final static boolean d(byte param0) {
+    final static boolean tryAcquireChatSendPermit(byte param0) {
         long var1;
         long var3;
         int var5;
@@ -161,7 +161,7 @@ final class ob extends DualLinkNode {
         int var5Lifetime1;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param0 >= 3) {
-          var1 = bl.a((byte) 55);
+          var1 = bl.monotonicMillis((byte) 55);
           var3 = -wn.field_r + var1;
           if (var3 > 30000L) {
             vd.field_c = 0;
@@ -187,8 +187,8 @@ final class ob extends DualLinkNode {
           vd.field_c = vd.field_c + 1;
           return true;
         }
-        ob.e(52);
-        var1Lifetime1 = bl.a((byte) 55);
+        ob.getLoginIdentifier(52);
+        var1Lifetime1 = bl.monotonicMillis((byte) 55);
         var3Lifetime1 = -wn.field_r + var1Lifetime1;
         if (var3Lifetime1 > 30000L) {
           vd.field_c = 0;
@@ -215,7 +215,7 @@ final class ob extends DualLinkNode {
         return true;
     }
 
-    final void a(int param0, PacketBuffer param1) {
+    final void decode(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = ZombieDawnMulti.field_E ? 1 : 0;
         int var3_intLifetime1;
@@ -225,7 +225,7 @@ final class ob extends DualLinkNode {
             if (0 == var3_int) {
               break;
             }
-            this.a(-56, param1, var3_int);
+            this.decodeOpcode(-56, param1, var3_int);
           }
           var3_intLifetime1 = -23 / ((param0 - 19) / 42);
         } catch (RuntimeException runtimeException) {
@@ -233,7 +233,7 @@ final class ob extends DualLinkNode {
         }
     }
 
-    final static char a(byte param0, int param1) {
+    final static char decodeExtendedByteChar(byte param0, int param1) {
         int var3 = 0;
         int var2 = param0 & 255;
         if (param1 == ~var2) {
@@ -272,20 +272,20 @@ final class ob extends DualLinkNode {
         field_v = null;
     }
 
-    final static void a(UiComponent param0, int param1) {
+    final static void resetChildBounds(UiComponent param0, int param1) {
         UiComponent var4 = null;
         int var3 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var4 = (UiComponent) (param0.field_Cb.c(87));
+          var4 = (UiComponent) (param0.field_Cb.last(87));
           if (param1 < 30) {
-            ob.e(34);
+            ob.getLoginIdentifier(34);
           }
           while (var4 != null) {
             var4.field_mb = 0;
             var4.field_z = 0;
             var4.field_I = 0;
             var4.field_Q = 0;
-            var4 = (UiComponent) (param0.field_Cb.b(6));
+            var4 = (UiComponent) (param0.field_Cb.previous(6));
           }
           param0.field_I = 0;
           param0.field_Q = 0;

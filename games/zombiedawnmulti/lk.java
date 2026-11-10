@@ -51,9 +51,9 @@ final class lk extends SceneObject {
           this.field_Q = param0;
           this.h((byte) -11);
           var5 = SimArmedHuman.field_Fb.length;
-          this.field_H = hp.a((byte) 68, g.field_a, 10);
-          this.field_K = hp.a((byte) 107, g.field_a, param1);
-          this.field_M = hp.a((byte) -68, g.field_a, var5);
+          this.field_H = hp.nextBoundedInt((byte) 68, g.field_a, 10);
+          this.field_K = hp.nextBoundedInt((byte) 107, g.field_a, param1);
+          this.field_M = hp.nextBoundedInt((byte) -68, g.field_a, var5);
           return;
         }
         lk.g((byte) -21);
@@ -62,9 +62,9 @@ final class lk extends SceneObject {
         this.field_Q = param0;
         this.h((byte) -11);
         var5Lifetime1 = SimArmedHuman.field_Fb.length;
-        this.field_H = hp.a((byte) 68, g.field_a, 10);
-        this.field_K = hp.a((byte) 107, g.field_a, param1);
-        this.field_M = hp.a((byte) -68, g.field_a, var5Lifetime1);
+        this.field_H = hp.nextBoundedInt((byte) 68, g.field_a, 10);
+        this.field_K = hp.nextBoundedInt((byte) 107, g.field_a, param1);
+        this.field_M = hp.nextBoundedInt((byte) -68, g.field_a, var5Lifetime1);
     }
 
     final void draw(int param0, Camera param1) {
@@ -143,10 +143,10 @@ final class lk extends SceneObject {
           if (param0) {
             lk.b(true);
           }
-          nb.field_a.a(hj.field_c, (byte) -27, nk.field_s, true);
+          nb.field_a.processPointerFrame(hj.field_c, (byte) -27, nk.field_s, true);
           nb.field_a.h((byte) -104);
-          while (MusicPatchPcmStream.c(-1)) {
-            nb.field_a.a(0, pn.field_d, InfectionEvent.field_p);
+          while (MusicPatchPcmStream.pollKeyEvent(-1)) {
+            nb.field_a.dispatchKeyInput(0, pn.field_d, InfectionEvent.field_p);
           }
           if (-1 != jk.field_j) {
             var1_int = jk.field_j;
@@ -162,7 +162,7 @@ final class lk extends SceneObject {
             stackIn_14_0 = 1;
             return stackIn_14_0;
           }
-          if (!tg.field_g.d(-96)) {
+          if (!tg.field_g.isFlagAssigned(-96)) {
             stackIn_18_0 = 1;
             return stackIn_18_0;
           }
@@ -210,17 +210,17 @@ final class lk extends SceneObject {
     final void j(int param0) {
         this.unlink(true);
         this.a(-4564);
-        bo.field_a.a(-25612, (IntrusiveNode) (this));
+        bo.field_a.addLast(-25612, (IntrusiveNode) (this));
         if (param0 != 23068) {
           this.tick((byte) -105);
         }
     }
 
     private final void h(byte param0) {
-        this.field_F = 128 + hp.a((byte) -85, g.field_a, 127);
+        this.field_F = 128 + hp.nextBoundedInt((byte) -85, g.field_a, 127);
         this.field_M = 0;
-        this.positionX = this.field_Q - 12 + hp.a((byte) -106, g.field_a, 24) << 16;
-        this.positionY = this.field_N - 12 + hp.a((byte) 40, g.field_a, 24) << 16;
+        this.positionX = this.field_Q - 12 + hp.nextBoundedInt((byte) -106, g.field_a, 24) << 16;
+        this.positionY = this.field_N - 12 + hp.nextBoundedInt((byte) 40, g.field_a, 24) << 16;
         if (param0 != -11) {
           this.field_N = 22;
         }

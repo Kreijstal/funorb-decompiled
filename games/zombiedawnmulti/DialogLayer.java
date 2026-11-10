@@ -21,7 +21,7 @@ final class DialogLayer extends SingleChildWidget {
         }
         try {
           var3 = (FadingDialog) (param1);
-          this.field_H.a(-25612, var3);
+          this.field_H.addLast(-25612, var3);
           var3.field_R = true;
           var3.requestKeyboardFocus((UiWidget) (this), 0);
         } catch (RuntimeException runtimeException) {
@@ -38,7 +38,7 @@ final class DialogLayer extends SingleChildWidget {
         }
         boolean decompiledFrameRemainder0 = true;
         if (ClientException.field_i >= 20 &&
-          SimZombie.p(-86) && (!(qq.field_a > 0) ||
+          SimZombie.isSessionReady(-86) && (!(qq.field_a > 0) ||
           ValidationState.b(-118))) {
           stackIn_9_0 = false;
           decompiledFrameRemainder0 = false;
@@ -155,7 +155,7 @@ final class DialogLayer extends SingleChildWidget {
             var3 = (int[]) null;
             DialogLayer.a((int[]) null, true, 94, 30, (byte) 84, (int[]) null, 90, 72, -73);
           }
-          stackIn_3_0 = UnitStateEvent.a(false, -52, param1);
+          stackIn_3_0 = UnitStateEvent.validateNameText(false, -52, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -178,7 +178,7 @@ final class DialogLayer extends SingleChildWidget {
           var2 = (int[]) null;
           DialogLayer.a((int[]) null, false, -127, -95, (byte) -9, (int[]) null, -29, -30, -79);
         }
-        stackIn_6_0 = (a.a(-107)) && ((8 & PowerupEvent.field_m) == 0);
+        stackIn_6_0 = (a.hasInputFocus(-107)) && ((8 & PowerupEvent.field_m) == 0);
         return stackIn_6_0;
     }
 
@@ -255,7 +255,7 @@ final class DialogLayer extends SingleChildWidget {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!ud.a(param3, param2, param1, (byte) -42)) {
+          if (!ud.loadSpriteSheet(param3, param2, param1, (byte) -42)) {
             return null;
           }
           if (param0 < 32) {

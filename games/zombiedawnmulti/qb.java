@@ -19,7 +19,7 @@ abstract class qb {
     volatile int field_n;
     tn field_m;
 
-    abstract void a(boolean param0, Object param1, int param2);
+    abstract void setConnection(boolean param0, Object param1, int param2);
 
     final static void b(int param0) {
         Object var1 = null;
@@ -94,13 +94,13 @@ abstract class qb {
           return var8;
         }
         Object var9 = (Object) null;
-        this.a(false, (Object) null, 52);
+        this.setConnection(false, (Object) null, 52);
         return var8;
     }
 
-    abstract void f(int param0);
+    abstract void closeConnection(int param0);
 
-    abstract void a(byte param0);
+    abstract void resetAfterValidationFailure(byte param0);
 
     final boolean e(int param0) {
         if (param0 > 13) {
@@ -118,7 +118,7 @@ abstract class qb {
         return this.d(20) >= 20 ? true : false;
     }
 
-    abstract boolean b(byte param0);
+    abstract boolean poll(byte param0);
 
     final int a(int param0) {
         if (param0 != 0) {

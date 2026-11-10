@@ -23,7 +23,7 @@ final class rq extends IntrusiveNode {
     static IndexedSprite field_l;
     private int field_p;
 
-    final boolean a(int param0, byte param1, int param2) {
+    final boolean isNearPoint(int param0, byte param1, int param2) {
         boolean stackIn_6_0 = false;
         if (param1 <= 2) {
           return true;
@@ -45,14 +45,14 @@ final class rq extends IntrusiveNode {
         field_l = null;
     }
 
-    private final int d(int param0) {
+    private final int randomCellOffset(int param0) {
         if (param0 != -30019) {
-          this.a((byte) -99);
+          this.tick((byte) -99);
         }
-        return -9 + hp.a((byte) 112, g.field_a, 18);
+        return -9 + hp.nextBoundedInt((byte) 112, g.field_a, 18);
     }
 
-    final void a(byte param0) {
+    final void tick(byte param0) {
         int fieldTemp$0 = this.field_h;
         this.field_h = this.field_h + 1;
         if (fieldTemp$0 > 1) {
@@ -73,11 +73,11 @@ final class rq extends IntrusiveNode {
         int fieldTemp$1 = this.field_p + 1;
         this.field_p = this.field_p + 1;
         if (fieldTemp$1 >= 8) {
-          this.c(12);
+          this.respawnBubble(12);
         }
     }
 
-    final void a(Camera param0, byte param1) {
+    final void draw(Camera param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_10_0 = null;
@@ -91,7 +91,7 @@ final class rq extends IntrusiveNode {
           }
           pk.field_c.c(-30 + param0.worldToScreenX(this.field_k, -20126), param0.worldToScreenY(this.field_f, 121) - 30, this.field_t);
           if (param1 >= -24) {
-            this.a((byte) 103);
+            this.tick((byte) 103);
           }
           if (this.field_p >= 0) {
             var3_int = param0.worldToScreenX(this.field_j, -20126);
@@ -113,7 +113,7 @@ final class rq extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0) {
+    final static void drawTutorialOverlay(int param0) {
         Camera stackIn_7_0 = null;
         int stackIn_7_1 = 0;
         int stackIn_8_2 = 0;
@@ -149,7 +149,7 @@ final class rq extends IntrusiveNode {
           if (var1 == -4 &&
             ResourceArchive.field_e) {
             ResourceArchive.field_e = false;
-            Camera.b(param0 - 137, 47);
+            Camera.createMixerStream(param0 - 137, 47);
           }
           QuickChatCategoryRegistry.field_b.e(var4_int, var5_int, 128, 61264);
         }
@@ -174,7 +174,7 @@ final class rq extends IntrusiveNode {
           rp.field_r[3].drawTransparent(-5 + var1Lifetime1 + var2Lifetime1, var3Lifetime1 + hj.field_g - 5);
           var4 = ei.field_g[ma.field_d][ml.field_Jb];
           if (ma.field_d == 21 &&
-            1 == FullscreenFocusCanvas.field_k.b((byte) -1) &&
+            1 == FullscreenFocusCanvas.field_k.getControlScheme((byte) -1) &&
             ml.field_Jb < ci.field_c.length &&
             null != ci.field_c[ml.field_Jb]) {
             var4 = ci.field_c[ml.field_Jb];
@@ -202,13 +202,13 @@ final class rq extends IntrusiveNode {
           if (var1Lifetime2 == -4 &&
             ResourceArchive.field_e) {
             ResourceArchive.field_e = false;
-            Camera.b(-127, 47);
+            Camera.createMixerStream(-127, 47);
           }
           QuickChatCategoryRegistry.field_b.e(var2Lifetime2, var3Lifetime2, 128, 61264);
         }
     }
 
-    final static void a(Sprite[] param0, int param1) {
+    final static void createPopupSprites(Sprite[] param0, int param1) {
         int var2_int = 0;
         String var3 = null;
         int var4 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -251,23 +251,23 @@ final class rq extends IntrusiveNode {
         }
     }
 
-    private final void c(int param0) {
-        this.field_j = param0 + (this.field_s * 24 + this.d(-30019));
-        this.field_i = this.field_m * 24 + 12 + this.d(-30019);
-        this.field_p = -hp.a((byte) 39, g.field_a, 50);
+    private final void respawnBubble(int param0) {
+        this.field_j = param0 + (this.field_s * 24 + this.randomCellOffset(-30019));
+        this.field_i = this.field_m * 24 + 12 + this.randomCellOffset(-30019);
+        this.field_p = -hp.nextBoundedInt((byte) 39, g.field_a, 50);
     }
 
     rq(int param0, int param1, int param2) {
         this.field_s = param0;
         this.field_m = param1;
-        this.c(12);
-        this.field_o = 25 + hp.a((byte) 37, g.field_a, 10) >> 2;
+        this.respawnBubble(12);
+        this.field_o = 25 + hp.nextBoundedInt((byte) 37, g.field_a, 10) >> 2;
         this.field_t = 0;
-        this.field_k = 12 + 24 * this.field_s + this.d(-30019);
-        this.field_f = 12 + (this.field_m * 24 + this.d(-30019));
-        this.field_w = param2 + hp.a((byte) 58, g.field_a, 10);
+        this.field_k = 12 + 24 * this.field_s + this.randomCellOffset(-30019);
+        this.field_f = 12 + (this.field_m * 24 + this.randomCellOffset(-30019));
+        this.field_w = param2 + hp.nextBoundedInt((byte) 58, g.field_a, 10);
         this.field_p = 0;
-        this.field_h = hp.a((byte) -110, g.field_a, 1);
+        this.field_h = hp.nextBoundedInt((byte) -110, g.field_a, 1);
     }
 
     static {

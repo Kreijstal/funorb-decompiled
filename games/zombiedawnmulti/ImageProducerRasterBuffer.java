@@ -187,11 +187,11 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
 
     final static void c(int param0) {
         if (param0 < -117) {
-          wj.field_i.a((UiWidget) (new dg()), (byte) -41);
+          wj.field_i.transitionToContent((UiWidget) (new dg()), (byte) -41);
           return;
         }
         field_j = (int[][]) null;
-        wj.field_i.a((UiWidget) (new dg()), (byte) -41);
+        wj.field_i.transitionToContent((UiWidget) (new dg()), (byte) -41);
     }
 
     public final void requestTopDownLeftRightResend(java.awt.image.ImageConsumer param0) {

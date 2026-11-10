@@ -10,7 +10,7 @@ final class mg extends SceneObject {
     static double field_J;
     private int field_I;
 
-    final static int a(boolean param0, hf param1, int param2, hf param3, String param4, int param5, byte param6) {
+    final static int performAccountServerRequest(boolean param0, hf param1, int param2, hf param3, String param4, int param5, byte param6) {
         int var12 = 0;
         int stackIn_5_0 = 0;
         PacketBuffer stackIn_15_0 = null;
@@ -52,10 +52,10 @@ final class mg extends SceneObject {
         int var9Lifetime3;
         var13 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var14 = param1.c((byte) 99);
+          var14 = param1.getText((byte) 99);
           var11_ref_String = var14;
           var11_ref_StringLifetime1 = var14;
-          var8 = param3.c((byte) 99);
+          var8 = param3.getText((byte) 99);
           var11_ref_StringLifetime2 = var8;
           var11_ref_StringLifetime3 = var8;
           if (ki.field_h == null &&
@@ -72,7 +72,7 @@ final class mg extends SceneObject {
               TextInputWidget.field_R.writeInt(-114, TertiaryLinkDeque.field_c.nextInt());
               stackIn_15_0 = TextInputWidget.field_R;
               stackIn_15_1 = -16171;
-              if (param1.a((byte) 105)) {
+              if (param1.isSelected((byte) 105)) {
                 stackIn_16_2 = var14;
               } else {
                 stackIn_16_2 = "";
@@ -80,7 +80,7 @@ final class mg extends SceneObject {
               ((PacketBuffer) (Object) stackIn_15_0).b(stackIn_15_1, stackIn_16_2);
               stackIn_18_0 = TextInputWidget.field_R;
               stackIn_18_1 = -16171;
-              if (param3.a((byte) 57)) {
+              if (param3.isSelected((byte) 57)) {
                 stackIn_19_2 = var8;
               } else {
                 stackIn_19_2 = "";
@@ -89,7 +89,7 @@ final class mg extends SceneObject {
               ma.field_a.writeByte(-99, 16);
               ma.field_a.position = ma.field_a.position + 1;
               var9 = ma.field_a.position;
-              EmailAvailabilityValidator.a(ButtonWidget.field_L, (byte) 110, UsernameAvailabilityValidator.field_v, TextInputWidget.field_R, ma.field_a);
+              EmailAvailabilityValidator.writeEncryptedPayload(ButtonWidget.field_L, (byte) 110, UsernameAvailabilityValidator.field_v, TextInputWidget.field_R, ma.field_a);
               ma.field_a.e(param6 + 173, -var9 + ma.field_a.position);
             } else {
               var9 = 0;
@@ -102,7 +102,7 @@ final class mg extends SceneObject {
               TextInputWidget.field_R.b(-16171, var14);
               TextInputWidget.field_R.b(-16171, var8);
               var15 = (CharSequence) ((Object) param4);
-              TextInputWidget.field_R.b(-16171, SpriteState.a(-50, var15));
+              TextInputWidget.field_R.b(-16171, SpriteState.normalizeAccountName(-50, var15));
               TextInputWidget.field_R.writeShort(param5, (byte) -91);
               TextInputWidget.field_R.writeByte(param6 ^ 37, param2);
               TextInputWidget.field_R.writeByte(param6 ^ 19, var9);
@@ -114,10 +114,10 @@ final class mg extends SceneObject {
                 var11_ref_StringLifetime4 = "";
               }
               ma.field_a.writeString(var11_ref_StringLifetime4, (byte) 105);
-              EmailAvailabilityValidator.a(ButtonWidget.field_L, (byte) -123, UsernameAvailabilityValidator.field_v, TextInputWidget.field_R, ma.field_a);
+              EmailAvailabilityValidator.writeEncryptedPayload(ButtonWidget.field_L, (byte) -123, UsernameAvailabilityValidator.field_v, TextInputWidget.field_R, ma.field_a);
               ma.field_a.b(false, ma.field_a.position - var10);
             }
-            cb.a(-1, false);
+            cb.flushPackets(-1, false);
             vo.field_l = MouseWheelInput.field_c;
           }
           if (MouseWheelInput.field_c == vo.field_l &&
@@ -130,9 +130,9 @@ final class mg extends SceneObject {
               vo.field_l = sa.field_n;
             } else {
               if (248 == var9Lifetime1) {
-                og.a(param6 ^ -92, StatefulTextPainter.b(0));
+                og.clearStatusCookie(param6 ^ -92, StatefulTextPainter.b(0));
                 ol.field_q = SimUnit.field_Y;
-                ak.a((byte) -115);
+                ak.closeGameSocket((byte) -115);
                 UiTheme.field_j = false;
                 stackIn_31_0 = var9Lifetime1;
                 return stackIn_31_0;
@@ -158,7 +158,7 @@ final class mg extends SceneObject {
                 for (var12 = 0; var12 < var11; var12++) {
                   hb.field_b[var12] = s.field_e.c(0);
                 }
-                ak.a((byte) -123);
+                ak.closeGameSocket((byte) -123);
                 UiTheme.field_j = false;
                 stackIn_41_0 = var11 + 100;
                 return stackIn_41_0;
@@ -175,7 +175,7 @@ final class mg extends SceneObject {
             } else {
               ol.field_q = s.field_e.readString((byte) -71);
             }
-            ak.a((byte) -118);
+            ak.closeGameSocket((byte) -118);
             UiTheme.field_j = false;
             stackIn_50_0 = PortalEntryEvent.field_i;
             return stackIn_50_0;
@@ -185,7 +185,7 @@ final class mg extends SceneObject {
           }
           if (ki.field_h == null) {
             if (UiTheme.field_j) {
-              if (LinkButtonPainter.b((byte) -22) > 30000L) {
+              if (LinkButtonPainter.millisSinceLastReceive((byte) -22) > 30000L) {
                 ol.field_q = aj.field_l;
               } else {
                 ol.field_q = CipherPacketBuffer.field_w;
@@ -230,7 +230,7 @@ final class mg extends SceneObject {
     mg(int param0, int param1, int param2) {
         super(param0, param1, param2);
         this.field_G = 0;
-        this.field_I = hp.a((byte) 44, g.field_a, 5);
+        this.field_I = hp.nextBoundedInt((byte) 44, g.field_a, 5);
     }
 
     final void tick(byte param0) {
@@ -253,7 +253,7 @@ final class mg extends SceneObject {
         this.field_I = this.field_I + 1;
         if (fieldTemp$0 > 5) {
           this.field_I = 0;
-          var2_ref_br = PowerupButton.field_e.sceneObjects.c(109);
+          var2_ref_br = PowerupButton.field_e.sceneObjects.last(109);
           while (var2_ref_br instanceof SceneObject) {
             if (var2_ref_br instanceof GameCharacter) {
               var3 = (GameCharacter) (var2_ref_br);
@@ -261,7 +261,7 @@ final class mg extends SceneObject {
               var5 = var3.getY(122) - this.getY(-70);
               if (var4 * var4 + var5 * var5 < 576 &&
                 PowerupButton.field_e.field_I.a(69, this.field_C, 255)) {
-                Camera.b(-127, 9);
+                Camera.createMixerStream(-127, 9);
                 iq.a(this.field_C, (byte) 99);
                 this.unlink(true);
                 return;
@@ -283,19 +283,19 @@ final class mg extends SceneObject {
         }
         for (var4Lifetime2 = 0; hp.field_j[0].length > var4Lifetime2; var4Lifetime2++) {
           var5Lifetime1 = 16 * var4Lifetime2;
-          hp.field_j[0][var4Lifetime2] = cr.b(ScrollPane.b(65410, var5Lifetime1 << 8), ScrollPane.b(var5Lifetime1, 255));
+          hp.field_j[0][var4Lifetime2] = cr.b(ScrollPane.bitAnd(65410, var5Lifetime1 << 8), ScrollPane.bitAnd(var5Lifetime1, 255));
           hp.field_j[1][var4Lifetime2] = cr.b(var5Lifetime1 << 8, var5Lifetime1 << 16);
-          hp.field_j[2][var4Lifetime2] = cr.b(ScrollPane.b(65493, var5Lifetime1 << 8), ScrollPane.b(255, var5Lifetime1 / 2));
+          hp.field_j[2][var4Lifetime2] = cr.b(ScrollPane.bitAnd(65493, var5Lifetime1 << 8), ScrollPane.bitAnd(255, var5Lifetime1 / 2));
           hp.field_j[3][var4Lifetime2] = var5Lifetime1 * 65793;
-          hp.field_j[4][var4Lifetime2] = cr.b(ScrollPane.b(var5Lifetime1, 771752446) << 7, var5Lifetime1 << 16);
+          hp.field_j[4][var4Lifetime2] = cr.b(ScrollPane.bitAnd(var5Lifetime1, 771752446) << 7, var5Lifetime1 << 16);
           hp.field_j[5][var4Lifetime2] = var5Lifetime1 << 16;
           hp.field_j[6][var4Lifetime2] = var5Lifetime1 << 16;
-          hp.field_j[7][var4Lifetime2] = cr.b(var5Lifetime1, cr.b(ScrollPane.b(var5Lifetime1 << 6, 65326), ScrollPane.b(var5Lifetime1, 1477444604) << 14));
+          hp.field_j[7][var4Lifetime2] = cr.b(var5Lifetime1, cr.b(ScrollPane.bitAnd(var5Lifetime1 << 6, 65326), ScrollPane.bitAnd(var5Lifetime1, 1477444604) << 14));
         }
         return;
     }
 
-    final static void a(int param0, int param1, byte param2, int param3, rp param4, int param5, int param6) {
+    final static void drawAbilitySlot(int param0, int param1, byte param2, int param3, rp param4, int param5, int param6) {
         BinaryBitmapFont var8 = null;
         try {
           int var7_int = 73 % ((param2 + 45) / 36);
@@ -313,10 +313,10 @@ final class mg extends SceneObject {
         }
     }
 
-    final static void b(boolean param0) {
+    final static void selectPublicChat(boolean param0) {
         if (param0) {
           rp var2 = (rp) null;
-          mg.a(-13, 21, (byte) 127, 95, (rp) null, 24, -18);
+          mg.drawAbilitySlot(-13, 21, (byte) 127, 95, (rp) null, 24, -18);
         }
         HotspotTextWidget.field_N = true;
         va.field_a = 0;

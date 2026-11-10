@@ -9,7 +9,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
     static ScrollPaneWithFooter field_L;
     private UsernameSuggestionListener field_J;
 
-    final static void b(boolean param0, int param1) {
+    final static void resendPendingRequests(boolean param0, int param1) {
         int var3 = 0;
         hp var4 = null;
         u var5 = null;
@@ -17,18 +17,18 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
         RuntimeException var2 = null;
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var4 = (hp) (JaggrabDownloader.field_l.c(108));
+          var4 = (hp) (JaggrabDownloader.field_l.last(108));
           while (var4 != null) {
-            LaboratoryScreen.a(var4, 58, param1);
-            var4 = (hp) (JaggrabDownloader.field_l.b(6));
+            LaboratoryScreen.sendStatSubmission(var4, 58, param1);
+            var4 = (hp) (JaggrabDownloader.field_l.previous(6));
           }
           if (!param0) {
             UsernameSuggestionsPanel.releaseStatics(false);
           }
-          var5 = (u) (DisplayNamePanel.field_T.c(59));
+          var5 = (u) (DisplayNamePanel.field_T.last(59));
           while (var5 != null) {
-            IsaacRandom.a(var5, param1, -85);
-            var5 = (u) (DisplayNamePanel.field_T.b(6));
+            IsaacRandom.writeResendRequest(var5, param1, -85);
+            var5 = (u) (DisplayNamePanel.field_T.previous(6));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -63,7 +63,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
           if (param0 != -112) {
             this.field_G = (String[]) null;
           }
-          this.field_B.e(-30986);
+          this.field_B.clear(-30986);
           if (param1 != null &&
             param1.length != 0) {
             var3_int = param1.length;
@@ -78,12 +78,12 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
               this.field_I[var5].painter = (WidgetPainter) ((Object) var4);
               this.field_I[var5].field_x = MessageDialogContent.field_I;
               this.field_I[var5].setWidgetBounds(0, 20 + var5 * 16, 28972, 80, 15);
-              this.b((byte) 94, this.field_I[var5]);
+              this.addChild((byte) 94, this.field_I[var5]);
             }
             this.field_I[var3_int] = new ButtonWidget(ResizableDialog.field_ab, (WidgetListener) (this));
             this.field_I[var3_int].painter = (WidgetPainter) ((Object) var4);
             this.field_I[var3_int].setWidgetBounds(0, 16 * var3_int + 16 + 20, 28972, 100, 15);
-            this.b((byte) 55, this.field_I[var3_int]);
+            this.addChild((byte) 55, this.field_I[var3_int]);
             return;
           }
           this.field_G = null;
@@ -116,7 +116,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
         }
     }
 
-    final static Sprite a(int param0) {
+    final static Sprite buildFirstDecodedSprite(int param0) {
         int var5 = ZombieDawnMulti.field_E ? 1 : 0;
         int var1 = oq.field_w[0] * vj.field_p[0];
         byte[] var2 = MatchingTextValidator.field_t[0];
@@ -126,7 +126,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
           field_K = (String) null;
         }
         while (var1 > var4_int) {
-          var3[var4_int] = UsernameAvailabilityValidator.field_t[ScrollPane.b(255, (int) var2[var4_int])];
+          var3[var4_int] = UsernameAvailabilityValidator.field_t[ScrollPane.bitAnd(255, (int) var2[var4_int])];
           var4_int++;
         }
         Sprite var4 = new Sprite(ContentTransitionDialog.field_nb, hj.field_a, PacketBuffer.field_i[0], PowerupCommand.field_o[0], oq.field_w[0], vj.field_p[0], var3);
@@ -136,7 +136,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
 
     public static void releaseStatics(boolean param0) {
         if (!param0) {
-          UsernameSuggestionsPanel.b(true, -119);
+          UsernameSuggestionsPanel.resendPendingRequests(true, -119);
         }
         field_H = null;
         field_L = null;
@@ -156,13 +156,13 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
             return true;
           }
           if (param0 == 98) {
-            stackIn_7_0 = this.a((byte) -1, param2);
+            stackIn_7_0 = this.focusPreviousChild((byte) -1, param2);
             return stackIn_7_0;
           }
           if (param0 != 99) {
             return false;
           }
-          stackIn_10_0 = this.a(99, param2);
+          stackIn_10_0 = this.focusNextChild(99, param2);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -232,14 +232,14 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
                         var38 = -1 + (TriangleRasterizer.field_i - var37);
                       }
                       if (var37 >= 0) {
-                        ub.a(var38, var21, var29, (byte) 116, param0, var40, var41, var25, var37 + var36Lifetime2, var39);
+                        ub.drawHalfBlendGouraudSpan(var38, var21, var29, (byte) 116, param0, var40, var41, var25, var37 + var36Lifetime2, var39);
                       } else {
-                        ub.a(var37 + var38, var21 - var39 * var37, var29 - var37 * var41, (byte) -126, param0, var40, var41, -(var37 * var40) + var25, var36Lifetime2, var39);
+                        ub.drawHalfBlendGouraudSpan(var37 + var38, var21 - var39 * var37, var29 - var37 * var41, (byte) -126, param0, var40, var41, -(var37 * var40) + var25, var36Lifetime2, var39);
                       }
                     } else {
                       if (0 <= var37 &&
                         var37 < TriangleRasterizer.field_i) {
-                        ub.a(var38, var21, var29, (byte) 102, param0, 0, 0, var25, var37 + var36Lifetime2, 0);
+                        ub.drawHalfBlendGouraudSpan(var38, var21, var29, (byte) 102, param0, 0, 0, var25, var37 + var36Lifetime2, 0);
                       }
                     }
                   }
@@ -388,14 +388,14 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
                     var37Lifetime1 = -1 + (TriangleRasterizer.field_i - var36Lifetime1);
                   }
                   if (var36Lifetime1 >= 0) {
-                    ub.a(var37Lifetime1, var21, var29, (byte) -24, param0, var39Lifetime1, var40Lifetime1, var25, var35Lifetime1 + var36Lifetime1, var38Lifetime1);
+                    ub.drawHalfBlendGouraudSpan(var37Lifetime1, var21, var29, (byte) -24, param0, var39Lifetime1, var40Lifetime1, var25, var35Lifetime1 + var36Lifetime1, var38Lifetime1);
                   } else {
-                    ub.a(var37Lifetime1 + var36Lifetime1, var21 - var38Lifetime1 * var36Lifetime1, var29 - var36Lifetime1 * var40Lifetime1, (byte) 81, param0, var39Lifetime1, var40Lifetime1, -(var39Lifetime1 * var36Lifetime1) + var25, var35Lifetime1, var38Lifetime1);
+                    ub.drawHalfBlendGouraudSpan(var37Lifetime1 + var36Lifetime1, var21 - var38Lifetime1 * var36Lifetime1, var29 - var36Lifetime1 * var40Lifetime1, (byte) 81, param0, var39Lifetime1, var40Lifetime1, -(var39Lifetime1 * var36Lifetime1) + var25, var35Lifetime1, var38Lifetime1);
                   }
                 } else {
                   if (var36Lifetime1 >= 0 &&
                     TriangleRasterizer.field_i > var36Lifetime1) {
-                    ub.a(var37Lifetime1, var21, var29, (byte) -84, param0, 0, 0, var25, var35Lifetime1 + var36Lifetime1, 0);
+                    ub.drawHalfBlendGouraudSpan(var37Lifetime1, var21, var29, (byte) -84, param0, 0, 0, var25, var35Lifetime1 + var36Lifetime1, 0);
                   }
                 }
               }

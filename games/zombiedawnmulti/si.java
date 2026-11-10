@@ -23,7 +23,7 @@ final class si extends MenuScreen {
     private int field_q;
     private boolean field_o;
 
-    final int a(byte param0, int param1) {
+    final int getItemX(byte param0, int param1) {
         int var3;
         int var4;
         int var5;
@@ -52,12 +52,12 @@ final class si extends MenuScreen {
           return 240;
         }
         if (var4Lifetime1 != 2) {
-          return super.a((byte) -118, param1);
+          return super.getItemX((byte) -118, param1);
         }
         return 430;
     }
 
-    final void a(int param0, int param1, int param2, int[] param3, GameWorld param4) {
+    final void showGameResults(int param0, int param1, int param2, int[] param3, GameWorld param4) {
         int var9 = 0;
         boolean stackIn_4_1 = false;
         int[] stackIn_14_1 = null;
@@ -104,7 +104,7 @@ final class si extends MenuScreen {
           } else {
             this.field_l = nh.field_h;
           }
-          gj.a(6962);
+          gj.stopAllSounds(6962);
           if (this.field_o) {
             this.field_j = cq.field_c;
           } else {
@@ -116,7 +116,7 @@ final class si extends MenuScreen {
             }
             this.field_j = stackIn_14_1;
           }
-          this.field_g.a(-9049, true, this.a(-6003, bo.field_d, MouseInputHandler.field_g));
+          this.field_g.setPointerSelection(-9049, true, this.findItemAt(-6003, bo.field_d, MouseInputHandler.field_g));
           this.field_g.field_c = this.field_j.length;
           this.field_y = (int[]) ((Object) param3.clone());
           for (var6_int = 0; this.field_y.length > var6_int; var6_int++) {
@@ -150,18 +150,18 @@ final class si extends MenuScreen {
           this.field_v = 0;
           if (!DebouncedValidationProvider.field_h) {
             var13 = FullscreenFocusCanvas.field_k;
-            var7Lifetime2 = var13.g((byte) -32);
+            var7Lifetime2 = var13.getPowerupSlotCount((byte) -32);
             for (var8Lifetime1 = 0; var7Lifetime2 > var8Lifetime1; var8Lifetime1++) {
               if (FullscreenFocusCanvas.field_k.field_m[var8Lifetime1] != 255) {
-                this.e(FullscreenFocusCanvas.field_k.field_m[var8Lifetime1], param1 + 4);
+                this.addResearchIcon(FullscreenFocusCanvas.field_k.field_m[var8Lifetime1], param1 + 4);
                 if (255 != FullscreenFocusCanvas.field_k.field_g[var8Lifetime1]) {
-                  this.e(FullscreenFocusCanvas.field_k.field_g[var8Lifetime1], 4);
+                  this.addResearchIcon(FullscreenFocusCanvas.field_k.field_g[var8Lifetime1], 4);
                 }
               }
             }
             for (var8Lifetime1Lifetime1 = 0; var8Lifetime1Lifetime1 < 3; var8Lifetime1Lifetime1++) {
               if (255 != FullscreenFocusCanvas.field_k.field_s[var8Lifetime1Lifetime1]) {
-                this.e(FullscreenFocusCanvas.field_k.field_s[var8Lifetime1Lifetime1], 4);
+                this.addResearchIcon(FullscreenFocusCanvas.field_k.field_s[var8Lifetime1Lifetime1], 4);
               }
             }
             if (0 >= this.field_v) {
@@ -172,12 +172,12 @@ final class si extends MenuScreen {
             for (var9 = 0; var9 < this.field_v; var9++) {
               var10 = var8Lifetime1Lifetime2 / (this.field_v - var9);
               var11 = this.field_u[var9].field_m;
-              FullscreenFocusCanvas.field_k.a(-126, var10, var11);
-              this.field_u[var9].a(0, var10);
+              FullscreenFocusCanvas.field_k.addUpgradeProgress(-126, var10, var11);
+              this.field_u[var9].setTargetProgress(0, var10);
               var8Lifetime1Lifetime2 = var8Lifetime1Lifetime2 - var10;
               this.field_r[var9] = var10;
             }
-            IntrusiveDeque.b((byte) -61);
+            IntrusiveDeque.saveProfile((byte) -61);
             return;
           }
           return;
@@ -201,7 +201,7 @@ final class si extends MenuScreen {
         }
     }
 
-    private final String e(int param0) {
+    private final String formatGameTime(int param0) {
         if (param0 >= -85) {
           return (String) null;
         }
@@ -210,10 +210,10 @@ final class si extends MenuScreen {
         return var2 + ":" + (10 > var3 ? "0" : "") + var3;
     }
 
-    final static void a(boolean param0, boolean param1, ResourceArchive param2, ResourceArchive param3, ResourceArchive param4) {
+    final static void initializeLoginUi(boolean param0, boolean param1, ResourceArchive param2, ResourceArchive param3, ResourceArchive param4) {
         try {
-          tg.field_g = tg.a("", !param0 ? true : false);
-          tg.field_g.a(-17853, param0);
+          tg.field_g = tg.createConditionalText("", !param0 ? true : false);
+          tg.field_g.setFlag(-17853, param0);
           qe.a(param4, -8995, param3, param2);
           dg.i(4);
           SceneObject.field_B = mp.field_b;
@@ -223,7 +223,7 @@ final class si extends MenuScreen {
         }
     }
 
-    final int a(int param0, int param1) {
+    final int getItemY(int param0, int param1) {
         if (param1 != 23697) {
           return 127;
         }
@@ -243,22 +243,22 @@ final class si extends MenuScreen {
         var4 = this.field_j[param2];
         var5 = var4;
         if (var5 == 43) {
-          if (this.field_g.c(-85)) {
+          if (this.field_g.isActivated(-85)) {
             if (this.field_o) {
               return;
             }
             stackIn_12_0 = (this.field_B != 0) ? 0 : 1;
             stackIn_15_1 = (this.field_n <= 0) ? 0 : 1;
             if ((stackIn_12_0 ^ stackIn_15_1) != 0) {
-              this.b(false, 1);
+              this.switchResultsPage(false, 1);
             } else {
-              this.b(false, 0);
+              this.switchResultsPage(false, 0);
             }
           }
         } else {
           if (var5 == 42) {
-            if (this.field_g.c(-85)) {
-              ma.field_a.b((byte) -35, 61);
+            if (this.field_g.isActivated(-85)) {
+              ma.field_a.writeCipheredOpcode((byte) -35, 61);
             }
           } else {
             super.handleMenuAction(-110, param1, param2);
@@ -266,7 +266,7 @@ final class si extends MenuScreen {
         }
     }
 
-    final static void a(int param0, int param1, byte[] param2, int[] param3, int param4) {
+    final static void groupFaceBucketsByPriority(int param0, int param1, byte[] param2, int[] param3, int param4) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         byte dupTemp$2 = 0;
@@ -358,7 +358,7 @@ final class si extends MenuScreen {
         }
     }
 
-    final void a(boolean param0) {
+    final void drawScreen(boolean param0) {
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int incrementValue$0 = 0;
@@ -461,7 +461,7 @@ final class si extends MenuScreen {
         int var13Lifetime1Lifetime1Lifetime1;
         int var13Lifetime1Lifetime1Lifetime2;
         var26 = ZombieDawnMulti.field_E ? 1 : 0;
-        super.a(param0);
+        super.drawScreen(param0);
         var2 = 378;
         var3 = 0;
         var4 = TranslatedUiText.field_e.maxAscent + TranslatedUiText.field_e.maxDescent;
@@ -587,8 +587,8 @@ final class si extends MenuScreen {
             var24 = PowerupEvent.field_m / gg.field_b[var23];
             var24 = var24 % gg.field_j[var23];
             var24 = var24 + gg.field_l[var23];
-            am.a(var24, var22, var11, 1, var21).c(8, var10 - 11, var6);
-            var25 = am.a(var24, var22, -var11 + 1, 1, var21);
+            am.createTeamColouredSprite(var24, var22, var11, 1, var21).c(8, var10 - 11, var6);
+            var25 = am.createTeamColouredSprite(var24, var22, -var11 + 1, 1, var21);
             var25.flipHorizontal();
             var11 = -var11 + 1;
             var25.c(575, -11 + var10, var6);
@@ -604,7 +604,7 @@ final class si extends MenuScreen {
           }
           var7 = var7 + (1 + var4);
           if (!this.field_o) {
-            pb.field_e.drawCenteredAlpha(vl.a(wi.field_o, new String[]{this.e(-95)}, 2), 320, 380, 16556032, var3, var6);
+            pb.field_e.drawCenteredAlpha(vl.a(wi.field_o, new String[]{this.formatGameTime(-95)}, 2), 320, 380, 16556032, var3, var6);
           }
           if (this.field_n <= 0) {
             var7Lifetime2 = var2;
@@ -618,7 +618,7 @@ final class si extends MenuScreen {
               pb.field_e.drawCenteredAlpha(aa.field_p, 320, 410, 16777096, var3, var6);
             }
           }
-          this.f(var6, 96);
+          this.drawHoverTooltip(var6, 96);
         }
         if (this.field_B == 1 ||
           this.field_n > 0) {
@@ -657,7 +657,7 @@ final class si extends MenuScreen {
           rq.field_l.drawAlpha(239, 231, var6Lifetime1);
           rq.field_l.drawAlpha(448, 231, var6Lifetime1);
           var9Lifetime1Lifetime3 = 0;
-          var10Lifetime1Lifetime2 = FullscreenFocusCanvas.field_k.g((byte) 125);
+          var10Lifetime1Lifetime2 = FullscreenFocusCanvas.field_k.getPowerupSlotCount((byte) 125);
           for (var11Lifetime1 = 0; var11Lifetime1 < var10Lifetime1Lifetime2; var11Lifetime1++) {
             var12Lifetime1 = FullscreenFocusCanvas.field_k.field_m[var11Lifetime1];
             var13Lifetime1 = FullscreenFocusCanvas.field_k.field_g[var11Lifetime1];
@@ -669,7 +669,7 @@ final class si extends MenuScreen {
                 SoftwareRasterizer.fillRadialGlow(10 + CipherPacketBuffer.field_v[var11Lifetime1] << 4, -(((var14Lifetime1 / 5 + 19) * PowerupEvent.field_m + var14Lifetime1 * 300) % 960) + 3728, 96, 125 * var6Lifetime1 >> 8, wp.field_f);
               }
               w.field_z.drawAlpha(CipherPacketBuffer.field_v[var11Lifetime1], 166, var6Lifetime1);
-              mg.a(var12Lifetime1, var13Lifetime1, (byte) 46, 106, FullscreenFocusCanvas.field_k, var6Lifetime1, -28 + CipherPacketBuffer.field_v[var11Lifetime1]);
+              mg.drawAbilitySlot(var12Lifetime1, var13Lifetime1, (byte) 46, 106, FullscreenFocusCanvas.field_k, var6Lifetime1, -28 + CipherPacketBuffer.field_v[var11Lifetime1]);
               var14Lifetime1Lifetime2 = FullscreenFocusCanvas.field_k.field_t[var12Lifetime1];
               var15Lifetime1 = cr.a(var12Lifetime1, -107);
               incrementValue$1 = var9Lifetime1Lifetime3;
@@ -745,14 +745,14 @@ final class si extends MenuScreen {
         }
     }
 
-    public static void d(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           field_C = 0.5614934243533339;
         }
         field_D = null;
     }
 
-    private final void f(int param0, int param1) {
+    private final void drawHoverTooltip(int param0, int param1) {
         int var3;
         int var4;
         int var5;
@@ -763,11 +763,11 @@ final class si extends MenuScreen {
         int var10;
         var10 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param1 <= 2) {
-          si.d(true);
+          si.releaseStatics(true);
         }
         if (this.field_E != 255) {
           if (this.field_m == 0 &&
-            10 < b.a(true)) {
+            10 < b.getIdleTicks(true)) {
             this.field_m = this.field_m + 1;
           }
           if (this.field_m > 0) {
@@ -808,12 +808,12 @@ final class si extends MenuScreen {
         }
     }
 
-    private final void e(int param0, int param1) {
-        this.field_u[this.field_v].a(this.field_v / 4 * 75 + 130, 35 + 640 * (this.field_v % param1) / 5, param0, 70);
+    private final void addResearchIcon(int param0, int param1) {
+        this.field_u[this.field_v].setupForPowerup(this.field_v / 4 * 75 + 130, 35 + 640 * (this.field_v % param1) / 5, param0, 70);
         this.field_v = this.field_v + 1;
     }
 
-    private final void b(boolean param0, int param1) {
+    private final void switchResultsPage(boolean param0, int param1) {
         int var3;
         int var4;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -837,7 +837,7 @@ final class si extends MenuScreen {
         }
     }
 
-    final int d(int param0, int param1) {
+    final int getItemRight(int param0, int param1) {
         int var4;
         int var5;
         int stackIn_10_0 = 0;
@@ -866,12 +866,12 @@ final class si extends MenuScreen {
           return 400;
         }
         if (var4Lifetime1 != 2) {
-          return super.d(-93, param1);
+          return super.getItemRight(-93, param1);
         }
         return 560;
     }
 
-    final void f(int param0) {
+    final void updatePlayAgainCaption(int param0) {
         int var3 = ZombieDawnMulti.field_E ? 1 : 0;
         if (0 != (PortalEntryEvent.field_m.field_j & 1 << PowerupButton.field_e.localTeam)) {
           we.field_g[42] = ih.field_c;
@@ -887,7 +887,7 @@ final class si extends MenuScreen {
         }
     }
 
-    final void a(int param0) {
+    final void updateScreen(int param0) {
         cb[] var2;
         int var3;
         int var5;
@@ -898,7 +898,7 @@ final class si extends MenuScreen {
         cb var10;
         boolean decompiledFrameRemainder0 = true;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
-        super.a(0);
+        super.updateScreen(0);
         if (this.field_n > param0) {
           this.field_n = this.field_n - 1;
           if (this.field_n <= 0) {
@@ -910,12 +910,12 @@ final class si extends MenuScreen {
               var3 = var8;
               while (var7.length > var8) {
                 var10 = var7[var8];
-                var10.c((byte) 99);
+                var10.resetDisplayedProgress((byte) 99);
                 var8++;
               }
               if (((this.field_g.field_d == 0)) &&
                 ((39 == this.field_j[0]))) {
-                this.field_g.a(1, ~param0);
+                this.field_g.selectIndex(1, ~param0);
               }
               decompiledFrameRemainder0 = false;
             }
@@ -924,7 +924,7 @@ final class si extends MenuScreen {
           if (this.field_B != 1) {
             if (((this.field_g.field_d == 0)) &&
               ((39 == this.field_j[0]))) {
-              this.field_g.a(1, ~param0);
+              this.field_g.selectIndex(1, ~param0);
             }
             decompiledFrameRemainder0 = false;
           }
@@ -936,11 +936,11 @@ final class si extends MenuScreen {
                 var9 = var6[var3];
                 var10 = var9;
                 var10 = var9;
-                var9.d((byte) -102);
+                var9.advanceProgressAnimation((byte) -102);
               }
               if (((this.field_g.field_d == 0)) &&
                 ((39 == this.field_j[0]))) {
-                this.field_g.a(1, ~param0);
+                this.field_g.selectIndex(1, ~param0);
               }
               decompiledFrameRemainder0 = false;
             }
@@ -948,7 +948,7 @@ final class si extends MenuScreen {
         }
         if ((decompiledFrameRemainder0) && (this.field_g.field_d == 0 &&
           39 == this.field_j[0])) {
-          this.field_g.a(1, ~param0);
+          this.field_g.selectIndex(1, ~param0);
         }
         int fieldTemp$0 = this.field_x - 1;
         this.field_x = this.field_x - 1;

@@ -33,7 +33,7 @@ final class ke {
             ke.formatCookieDate(92, -5L);
           }
           for (var5_int = 1; wm.field_Q.length > var5_int; var5_int++) {
-            TranslatedUiText.field_e.colorPalettes[param1][wm.field_Q[var5_int]] = ui.a(TranslatedUiText.field_e.colorPalettes[param1][wm.field_Q[var5_int - 1]], false);
+            TranslatedUiText.field_e.colorPalettes[param1][wm.field_Q[var5_int]] = ui.darkenColour(TranslatedUiText.field_e.colorPalettes[param1][wm.field_Q[var5_int - 1]], false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

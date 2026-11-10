@@ -12,7 +12,7 @@ final class DiskCacheWorker implements Runnable {
     static int field_b;
     int field_h;
 
-    final li b(int param0, SectorCacheStore param1, int param2) {
+    final li queueRead(int param0, SectorCacheStore param1, int param2) {
         li var4 = null;
         RuntimeException var4_ref = null;
         SectorCacheStore var5 = null;
@@ -31,7 +31,7 @@ final class DiskCacheWorker implements Runnable {
           var4.field_r = false;
           var4.field_y = 3;
           var4.secondaryKey = (long)param0;
-          this.a(false, var4);
+          this.enqueue(false, var4);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -48,7 +48,7 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final static void a(String param0, byte param1) {
+    final static void startDisplayNameLogin(String param0, byte param1) {
         try {
           DateInputWidget.a(param0, (byte) 48);
           PowerupCommand.a(StatefulTextPainter.field_v, false, 102);
@@ -73,7 +73,7 @@ final class DiskCacheWorker implements Runnable {
           while (!this.field_f) {
             var2 = this.field_e;
             synchronized (var2) {
-              var7 = (li) (this.field_e.a(11356));
+              var7 = (li) (this.field_e.removeLast(11356));
               if (var7 != null) {
                 this.field_h = this.field_h - 1;
                 decompiledRegionSelector0 = 1;
@@ -93,7 +93,7 @@ final class DiskCacheWorker implements Runnable {
             try {
               boolean decompiledFrameRemainder0 = true;
               if (var7.field_y == 2) {
-                var7.field_B.a((byte) 118, var7.field_D, var7.field_D.length, (int)var7.secondaryKey);
+                var7.field_B.write((byte) 118, var7.field_D, var7.field_D.length, (int)var7.secondaryKey);
                 var7.field_t = false;
               } else {
                 if (var7.field_y != 3) {
@@ -101,7 +101,7 @@ final class DiskCacheWorker implements Runnable {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  var7.field_D = var7.field_B.a(1, (int)var7.secondaryKey);
+                  var7.field_D = var7.field_B.read(1, (int)var7.secondaryKey);
                   var7.field_t = false;
                 }
               }
@@ -112,7 +112,7 @@ final class DiskCacheWorker implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              MouseInputHandler.a((String) null, (Throwable) ((Object) var2_ref), false);
+              MouseInputHandler.reportClientError((String) null, (Throwable) ((Object) var2_ref), false);
               decompiledRegionSelector1 = 0;
             }
             if (decompiledRegionSelector1 != 0) {
@@ -145,7 +145,7 @@ final class DiskCacheWorker implements Runnable {
           var5.field_D = param2;
           var5.field_y = 2;
           var5.field_B = param1;
-          this.a(false, var5);
+          this.enqueue(false, var5);
           if (param3 > 26) {
             stackIn_4_0 = var5;
             return stackIn_4_0;
@@ -172,7 +172,7 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final static int a(boolean param0, byte param1) {
+    final static int advanceSlideshow(boolean param0, byte param1) {
         int stackIn_63_0 = 0;
         int stackIn_66_0 = 0;
         int stackIn_72_0 = 0;
@@ -191,7 +191,7 @@ final class DiskCacheWorker implements Runnable {
           if (param1 != 110) {
             field_d = (String) null;
           }
-          while (65536 <= DropTargetWidget.a((byte) 120, DualLinkDeque.field_b, nf.field_b)) {
+          while (65536 <= DropTargetWidget.multiplyFixed16((byte) 120, DualLinkDeque.field_b, nf.field_b)) {
             ClientException.field_c = ClientException.field_c + 1;
             DualLinkDeque.field_b = DualLinkDeque.field_b - nf.field_b;
           }
@@ -274,8 +274,8 @@ final class DiskCacheWorker implements Runnable {
           if (!param0) {
             return 0;
           }
-          UsernameSuggestionsPanel.field_H.a(ResizableDialog.c(bo.field_d, -1, MouseInputHandler.field_g), 104, ResizableDialog.c(ChatMessage.field_t, param1 - 111, vb.field_f));
-          if (UsernameSuggestionsPanel.field_H.c(-85)) {
+          UsernameSuggestionsPanel.field_H.updatePointer(ResizableDialog.hitTestPairedSprites(bo.field_d, -1, MouseInputHandler.field_g), 104, ResizableDialog.hitTestPairedSprites(ChatMessage.field_t, param1 - 111, vb.field_f));
+          if (UsernameSuggestionsPanel.field_H.isActivated(-85)) {
             if (UsernameSuggestionsPanel.field_H.field_d == 0) {
               stackIn_63_0 = 3;
               return stackIn_63_0;
@@ -286,12 +286,12 @@ final class DiskCacheWorker implements Runnable {
             }
           }
           while (true) {
-            if (!MusicPatchPcmStream.c(param1 ^ -111)) {
+            if (!MusicPatchPcmStream.pollKeyEvent(param1 ^ -111)) {
               stackIn_81_0 = 0;
               return stackIn_81_0;
             }
-            UsernameSuggestionsPanel.field_H.a(0, false);
-            if (UsernameSuggestionsPanel.field_H.c(-85)) {
+            UsernameSuggestionsPanel.field_H.handleHorizontalNavigation(0, false);
+            if (UsernameSuggestionsPanel.field_H.isActivated(-85)) {
               if (UsernameSuggestionsPanel.field_H.field_d == 0) {
                 stackIn_72_0 = 3;
                 return stackIn_72_0;
@@ -363,7 +363,7 @@ final class DiskCacheWorker implements Runnable {
               var6 = (li) (this.field_e.next((byte) 118));
             }
           }
-          var4.field_D = param1.a(1, param0);
+          var4.field_D = param1.read(1, param0);
           var4.field_t = false;
           var4.field_r = true;
           stackIn_19_0 = var4;
@@ -382,7 +382,7 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final static Object a(int param0, boolean param1, byte[] param2) {
+    final static Object wrapBytes(int param0, boolean param1, byte[] param2) {
         bk var3 = null;
         RuntimeException var3_ref = null;
         bk stackIn_5_0 = null;
@@ -398,7 +398,7 @@ final class DiskCacheWorker implements Runnable {
           }
           if (param0 > ~param2.length) {
             var3 = new bk();
-            ((t) ((Object) var3)).a(param2, (byte) -72);
+            ((t) ((Object) var3)).setBytes(param2, (byte) -72);
             stackIn_5_0 = var3;
             return stackIn_5_0;
           }
@@ -422,7 +422,7 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    private final void a(boolean param0, li param1) {
+    private final void enqueue(boolean param0, li param1) {
         synchronized (this.field_e) {
           this.field_e.add(29664, param1);
           if (param0) {
@@ -441,7 +441,7 @@ final class DiskCacheWorker implements Runnable {
             this.field_e.notifyAll();
             if (param0 != 77) {
               var4 = (String) null;
-              DiskCacheWorker.a((String) null, (byte) 75);
+              DiskCacheWorker.startDisplayNameLogin((String) null, (byte) 75);
             }
           }
           try {
@@ -456,9 +456,9 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final static boolean a(boolean param0, int param1, int param2) {
+    final static boolean handleQuickChatKey(boolean param0, int param1, int param2) {
         if (InfectionEvent.field_p == 13) {
-          ub.n(33423425);
+          ub.closeChatInputIfOpen(33423425);
           return true;
         }
         if (InfectionEvent.field_p == 102) {
@@ -466,7 +466,7 @@ final class DiskCacheWorker implements Runnable {
           return true;
         }
         if (param0) {
-          DiskCacheWorker.a(true, (byte) 112);
+          DiskCacheWorker.advanceSlideshow(true, (byte) 112);
           if (null == mj.field_Ib) {
             return false;
           }
@@ -490,7 +490,7 @@ final class DiskCacheWorker implements Runnable {
         this.field_f = false;
         this.field_h = 0;
         try {
-          var2 = param0.a(121, (Runnable) (this), 5);
+          var2 = param0.startThread(121, (Runnable) (this), 5);
           while (var2.field_f == 0) {
             vd.a(false, 10L);
           }

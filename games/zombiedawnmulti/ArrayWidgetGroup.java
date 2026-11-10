@@ -54,7 +54,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
         }
     }
 
-    final int f(byte param0) {
+    final int getTopLayer(byte param0) {
         int var4 = 0;
         int var2;
         UiWidget[] var3;
@@ -67,7 +67,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
         for (var4 = 0; var3.length > var4; var4++) {
           var5 = var3[var4];
           if (var5 != null) {
-            var6 = var5.f((byte) 44);
+            var6 = var5.getTopLayer((byte) 44);
             if (var6 > var2) {
               var2 = var6;
             }
@@ -319,7 +319,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
 
     final static void a(int param0, byte param1, int param2) {
         CipherPacketBuffer var3 = ma.field_a;
-        var3.b((byte) -35, param0);
+        var3.writeCipheredOpcode((byte) -35, param0);
         var3.writeByte(112, 3);
         var3.writeByte(117, 8);
         if (param1 <= 89) {
@@ -484,8 +484,8 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param1, -116, param3, param2)) {
-            this.a(param2, param3, (byte) 26, param1);
+          if (this.beginWidgetDiagnosticVisit(param1, -116, param3, param2)) {
+            this.appendWidgetDiagnosticProperties(param2, param3, (byte) 26, param1);
             this.appendChildrenDiagnostics(param1, param2, 1, param3);
           }
           if (param0 != 7) {

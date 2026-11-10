@@ -6,18 +6,18 @@ final class nn {
     static int[] field_c;
     static String field_a;
 
-    final static void a(byte param0, int param1, int param2, int param3) {
+    final static void setMessageBoxColours(byte param0, int param1, int param2, int param3) {
         PhaseChangeEvent.field_n = param2;
         qh.field_e = param3;
         hp.field_k = param1;
         int var4 = -111 % ((param0 + 71) / 49);
     }
 
-    final static void a(CipherPacketBuffer param0, int param1, int param2, byte param3) {
+    final static void sendUntargetedPowerupRequest(CipherPacketBuffer param0, int param1, int param2, byte param3) {
         try {
-          ok.a(-105, -1, param0, param1, -1, param2);
+          ok.sendPowerupRequest(-105, -1, param0, param1, -1, param2);
           if (param3 != 102) {
-            nn.a(true);
+            nn.drawDimmedPanel(true);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "nn.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -31,7 +31,7 @@ final class nn {
         field_c = null;
     }
 
-    final static LevelData a(int param0, byte[] param1) {
+    final static LevelData decodeLegacyLevel(int param0, byte[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -51,12 +51,12 @@ final class nn {
           var3 = 100;
           var4 = new byte[param1.length + 8];
           for (var5 = 0; 6 > var5; var5++) {
-            nn.a(-113, var5, var4, ql.a(true, var5, param1));
+            nn.putInt(-113, var5, var4, ql.a(true, var5, param1));
           }
-          nn.a(-99, 6, var4, var2_int);
-          nn.a(-110, 7, var4, var3);
+          nn.putInt(-99, 6, var4, var2_int);
+          nn.putInt(-110, 7, var4, var3);
           for (var5Lifetime1 = 6; param1.length / 4 > var5Lifetime1; var5Lifetime1++) {
-            nn.a(-109, 2 + var5Lifetime1, var4, ql.a(true, var5Lifetime1, param1));
+            nn.putInt(-109, 2 + var5Lifetime1, var4, ql.a(true, var5Lifetime1, param1));
           }
           var6 = 52 % ((-44 - param0) / 34);
           stackIn_8_0 = jg.a(30270, var4);
@@ -75,7 +75,7 @@ final class nn {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void drawDimmedPanel(boolean param0) {
         SoftwareRasterizer.fillRectAlpha(0, 84, 640, 335, 0, 128);
         cc.field_c.draw(0, 84);
         if (param0) {
@@ -83,7 +83,7 @@ final class nn {
         }
     }
 
-    final static java.awt.Container a(int param0) {
+    final static java.awt.Container getTopLevelContainer(int param0) {
         if (null != cg.field_m) {
           return (java.awt.Container) ((Object) cg.field_m);
         }
@@ -94,7 +94,7 @@ final class nn {
         return (java.awt.Container) ((Object) StatefulTextPainter.b(0));
     }
 
-    final static void a(int param0, int param1, byte[] param2, int param3) {
+    final static void putInt(int param0, int param1, byte[] param2, int param3) {
         try {
           if (param0 >= -92) {
             field_c = (int[]) null;

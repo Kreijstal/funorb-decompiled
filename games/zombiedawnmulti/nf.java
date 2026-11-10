@@ -7,7 +7,7 @@ final class nf {
     static int field_c;
     static int field_d;
 
-    final static ma a(byte param0, String param1) {
+    final static ma validateEmailDomain(byte param0, String param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -37,7 +37,7 @@ final class nf {
             stackIn_6_0 = er.field_f;
             return stackIn_6_0;
           }
-          var3 = WidgetStyleLayer.a('.', false, param1);
+          var3 = WidgetStyleLayer.splitAtCharacter('.', false, param1);
           if (2 > var3.length) {
             stackIn_9_0 = jo.field_e;
             return stackIn_9_0;
@@ -55,7 +55,7 @@ final class nf {
               return stackIn_18_0;
             }
           }
-          stackIn_21_0 = pg.a(var3[-1 + var3.length], (byte) -86);
+          stackIn_21_0 = pg.checkNotAllDigits(var3[-1 + var3.length], (byte) -86);
           return stackIn_21_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

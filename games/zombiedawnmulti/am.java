@@ -9,11 +9,11 @@ final class am {
     public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != -7) {
-          am.a(102, 53, -113, 106, 29);
+          am.createTeamColouredSprite(102, 53, -113, 106, 29);
         }
     }
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean isTypeableCharacter(char param0, byte param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -55,7 +55,7 @@ final class am {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean isGameScreenActive(int param0) {
         boolean stackIn_8_0 = false;
         if (param0 >= -97) {
           return true;
@@ -72,11 +72,11 @@ final class am {
         return stackIn_8_0;
     }
 
-    final static Sprite a(int param0, int param1, int param2, int param3, int param4) {
+    final static Sprite createTeamColouredSprite(int param0, int param1, int param2, int param3, int param4) {
         if (param3 != 1) {
-          am.a('ﾘ', (byte) -57);
+          am.isTypeableCharacter('ﾘ', (byte) -57);
         }
-        return nk.a(QuickChatHelpDialog.field_Hb[param2][param0], param1, 255, param4);
+        return nk.createTintedSprite(QuickChatHelpDialog.field_Hb[param2][param0], param1, 255, param4);
     }
 
     static {

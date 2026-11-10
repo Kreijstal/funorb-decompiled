@@ -75,7 +75,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           var10 = new IntrusiveDequeCursor(this.field_B);
           var9 = (UiWidget) (var10.c(-3));
           while (var9 != null) {
-            if (var9.b(4)) {
+            if (var9.isLinked(4)) {
               if (var9.hasKeyboardFocus(127) &&
                 var9.handleKeyInput(param0, param1, param2, -6208)) {
                 return true;
@@ -87,16 +87,16 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           }
           if (param3 != -6208) {
             var8 = (UiWidget) null;
-            this.b((byte) 124, (UiWidget) null);
+            this.addChild((byte) 124, (UiWidget) null);
           }
           var6 = param0;
           if (var6 != 80) {
             return false;
           }
           if (!lc.field_m[81]) {
-            stackIn_15_0 = this.a(param3 + 6319, param2);
+            stackIn_15_0 = this.focusNextChild(param3 + 6319, param2);
           } else {
-            stackIn_15_0 = this.a((byte) -1, param2);
+            stackIn_15_0 = this.focusPreviousChild((byte) -1, param2);
           }
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -132,7 +132,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           var7 = new IntrusiveDequeCursor(this.field_B);
           var8 = (UiWidget) (var7.c(-3));
           while (var8 != null) {
-            if (var8.b(4)) {
+            if (var8.isLinked(4)) {
               var8.handlePointerRelease(param0, param1, param2 + this.field_i, param3, true, param5 + this.field_y);
               var8 = (UiWidget) (var7.a((byte) -80));
               continue;
@@ -154,7 +154,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         }
     }
 
-    final boolean a(int param0, UiWidget param1) {
+    final boolean focusNextChild(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
         IntrusiveDequeCursor var5 = null;
@@ -167,7 +167,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         RuntimeException decompiledCaughtException = null;
         var7 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          if (this.field_B.f(28113)) {
+          if (this.field_B.isEmpty(28113)) {
             return false;
           }
           if (param0 <= 20) {
@@ -241,18 +241,18 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         }
     }
 
-    private final void f(int param0) {
+    private final void relayoutChildren(int param0) {
         int var5 = ZombieDawnMulti.field_E ? 1 : 0;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_B);
         int var4 = -105 % ((param0 - 36) / 61);
         UiWidget var3 = (UiWidget) (var2.c(-3));
         while (var3 != null) {
-          var3.e(-1);
+          var3.refreshLayout(-1);
           var3 = (UiWidget) (var2.a((byte) -34));
         }
     }
 
-    final boolean a(byte param0, UiWidget param1) {
+    final boolean focusPreviousChild(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
         IntrusiveDequeCursor var5 = null;
@@ -266,7 +266,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         RuntimeException decompiledCaughtException = null;
         var7 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          if (this.field_B.f(28113)) {
+          if (this.field_B.isEmpty(28113)) {
             return false;
           }
           var9 = new IntrusiveDequeCursor(this.field_B);
@@ -315,9 +315,9 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param1, -81, param3, param2)) {
-            this.a(param2, param3, (byte) 26, param1);
-            this.a(param1, param2, -92, param3);
+          if (this.beginWidgetDiagnosticVisit(param1, -81, param3, param2)) {
+            this.appendWidgetDiagnosticProperties(param2, param3, (byte) 26, param1);
+            this.appendChildrenDiagnostics(param1, param2, -92, param3);
           }
           if (param0 != 7) {
             field_E = 118;
@@ -344,7 +344,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         }
     }
 
-    private final void a(Hashtable param0, int param1, int param2, StringBuilder param3) {
+    private final void appendChildrenDiagnostics(Hashtable param0, int param1, int param2, StringBuilder param3) {
         StringBuilder discarded$2 = null;
         int var7 = 0;
         StringBuilder discarded$3 = null;
@@ -409,7 +409,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           var5 = new IntrusiveDequeCursor(this.field_B);
           var6 = (UiWidget) (var5.c(-3));
           while (var6 != null) {
-            if (var6.b(4)) {
+            if (var6.isLinked(4)) {
               var6.updatePointerState(-5407, param1, param2 + this.field_y, param3 + this.field_i);
               var6 = (UiWidget) (var5.a((byte) -59));
               continue;
@@ -447,7 +447,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           var8 = new IntrusiveDequeCursor(this.field_B);
           var10 = (UiWidget) (var8.c(-3));
           while (var10 != null) {
-            if (var10.b(4)) {
+            if (var10.isLinked(4)) {
               if (var10.hasKeyboardFocus(126) &&
                 var10.requestKeyboardFocus((byte) 105, param1, param2, param3, param4, param5, param6)) {
                 return true;
@@ -480,18 +480,18 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         field_D = null;
     }
 
-    final void b(byte param0, UiWidget param1) {
+    final void addChild(byte param0, UiWidget param1) {
         try {
           if (param0 <= 38) {
             field_D = (String) null;
           }
-          this.field_B.a(param1, false);
+          this.field_B.addFirst(param1, false);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "se.EB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final int f(byte param0) {
+    final int getTopLayer(byte param0) {
         int var2;
         IntrusiveDequeCursor var3;
         UiWidget var4;
@@ -503,7 +503,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         var3 = new IntrusiveDequeCursor(this.field_B);
         var4 = (UiWidget) (var3.c(param0 - 47));
         while (var4 != null) {
-          var5 = var4.f((byte) 44);
+          var5 = var4.getTopLayer((byte) 44);
           if (var5 > var2) {
             var2 = var5;
           }
@@ -511,7 +511,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         }
         if (param0 != 44) {
           var7 = (StringBuilder) null;
-          this.a((Hashtable) null, 57, 123, (StringBuilder) null);
+          this.appendChildrenDiagnostics((Hashtable) null, 57, 123, (StringBuilder) null);
         }
         return var2;
     }
@@ -570,7 +570,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           }
           var9 = (UiWidget) (var8.c(-3));
           while (var9 != null) {
-            if (var9.b(4)) {
+            if (var9.isLinked(4)) {
               if (!var9.handlePointerPress(param0, param1, param2, param3, -24, param5 + this.field_y, param6 + this.field_i)) {
                 var9 = (UiWidget) (var8.a((byte) -81));
                 continue;
@@ -596,7 +596,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
 
     void setWidgetBounds(int param0, int param1, int param2, int param3, int param4) {
         super.setWidgetBounds(param0, param1, param2, param3, param4);
-        this.f(param2 - 29048);
+        this.relayoutChildren(param2 - 29048);
     }
 
     static {

@@ -33,7 +33,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
 
     final static void a(int param0, int param1, int param2, int param3, CipherPacketBuffer param4) {
         try {
-          ok.a(param1 - 126, param1, param4, param3, param0, param2);
+          ok.sendPowerupRequest(param1 - 126, param1, param4, param3, param0, param2);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wd.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -72,7 +72,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
           return;
         }
         try {
-          param2.b((byte) -35, 58);
+          param2.writeCipheredOpcode((byte) -35, 58);
           param2.writeShort(param1, (byte) -110);
           param2.writeShort(param0, (byte) -125);
           param2.writeShort(param3, (byte) -47);
@@ -117,7 +117,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
           if (param1 >= -59) {
             MessageDialogContent.releaseStatics((byte) -6);
           }
-          this.b((byte) 122, var4);
+          this.addChild((byte) 122, var4);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

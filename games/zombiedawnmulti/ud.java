@@ -20,7 +20,7 @@ final class ud extends ButtonWidget {
     static String field_Z;
     static String[] field_O;
 
-    final static boolean a(int param0, ResourceArchive param1, int param2, byte param3) {
+    final static boolean loadSpriteSheet(int param0, ResourceArchive param1, int param2, byte param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -37,7 +37,7 @@ final class ud extends ButtonWidget {
           if (param3 != -42) {
             field_V = (int[]) null;
           }
-          pd.a((byte) 108, var5);
+          pd.decodeSpriteSheet((byte) 108, var5);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -69,7 +69,7 @@ final class ud extends ButtonWidget {
           if (!super.handlePointerPress(param0, param1, param2, param3, param4 ^ 0, param5, param6)) {
             if (param4 != -24) {
               var13 = (PcmStreamMixer) null;
-              ud.a(17, -37, (ResourceArchive) null, (PcmStreamMixer) null);
+              ud.prepareLogoAnimation(17, -37, (ResourceArchive) null, (PcmStreamMixer) null);
             }
             return false;
           }
@@ -108,16 +108,16 @@ final class ud extends ButtonWidget {
         }
     }
 
-    final static void a(int param0, int param1, ResourceArchive param2, PcmStreamMixer param3) {
+    final static void prepareLogoAnimation(int param0, int param1, ResourceArchive param2, PcmStreamMixer param3) {
         try {
           if (param0 != -3758) {
             field_Q = (IndexedSprite) null;
           }
           vm.field_hb = param1 * wq.a((byte) 72) / 1000;
-          ui.a(7478, param2);
+          ui.loadLogoJingle(7478, param2);
           lh.a(-30, param2);
-          LevelActorSpawner.a(30651, param2);
-          pg.a(false);
+          LevelActorSpawner.loadFinalFrame(30651, param2);
+          pg.initializeSpecularTable(false);
           HuffmanCodec.a(-1741);
           f.field_a = 0 - vm.field_hb;
         } catch (RuntimeException runtimeException) {
@@ -125,7 +125,7 @@ final class ud extends ButtonWidget {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void updateLoginDialog(int param0, int param1) {
         lk.b(false);
         if (param1 == 1000) {
           return;

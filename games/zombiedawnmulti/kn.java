@@ -70,7 +70,7 @@ final class kn {
             kn.a(-24, false, (String) null, (String) null);
           }
           var9 = param1.readInt(-1478490344);
-          stackIn_3_0 = ng.a(var5, 47, var4, var3, var7, var2_int, var8, var9, var6);
+          stackIn_3_0 = ng.createUnitStateEvent(var5, 47, var4, var3, var7, var2_int, var8, var9, var6);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

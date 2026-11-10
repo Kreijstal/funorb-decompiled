@@ -29,7 +29,7 @@ final class ji {
           try {
             try {
               var2 = new java.net.URL(param1.getCodeBase(), "tosupport.ws");
-              param1.getAppletContext().showDocument(DebouncedValidationProvider.a(param1, true, var2), "_top");
+              param1.getAppletContext().showDocument(DebouncedValidationProvider.applySessionOverridesToUrl(param1, true, var2), "_top");
               if (param0 == 8355711) {
                 return;
               }
@@ -61,7 +61,7 @@ final class ji {
     }
 
     final static void b(int param0) {
-        ResizableDialog.j(-1);
+        ResizableDialog.resetAccountFlowState(-1);
         int var1 = -108 / ((param0 - 38) / 61);
         ud.field_ab = true;
         IntrusiveDequeCursor.field_e = true;

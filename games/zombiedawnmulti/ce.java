@@ -18,7 +18,7 @@ final class ce extends IntrusiveNode {
     int field_q;
     int field_m;
 
-    final void a(NavigationGrid param0, int param1) {
+    final void attachToNavigation(NavigationGrid param0, int param1) {
         boolean stackIn_30_0 = false;
         int stackIn_37_0 = 0;
         int stackIn_51_0 = 0;
@@ -88,7 +88,7 @@ final class ce extends IntrusiveNode {
               }
               this.field_i.a(1, false, var6_ref_nm, -1);
               var7 = PowerupButton.field_e.sceneObjects;
-              var8 = var7.c(46);
+              var8 = var7.last(46);
               boolean decompiledNaturalLoopExit0 = false;
               while (!(decompiledNaturalLoopExit0 = (null == var8))) {
                 stackOut_29_0 = var8 instanceof fd;
@@ -98,7 +98,7 @@ final class ce extends IntrusiveNode {
                   if (stackIn_30_0) {
                     ((SceneObject) (var8)).draw(-10136, var6_ref_nm);
                   }
-                  var8 = var7.b(6);
+                  var8 = var7.previous(6);
                   continue;
                 }
                 break;
@@ -142,9 +142,9 @@ final class ce extends IntrusiveNode {
                   this.field_i.field_k[var4Lifetime1][var5Lifetime1]) {
                   var6Lifetime1 = 0;
                   while (2 > var6Lifetime1) {
-                    var7_ref = p.a(var5Lifetime1 * 24, var4Lifetime1 * 24, 100, true);
+                    var7_ref = p.createDebrisParticle(var5Lifetime1 * 24, var4Lifetime1 * 24, 100, true);
                     this.field_p.add(29664, var7_ref);
-                    PortalEntryEvent.field_m.characters.a(-25612, var7_ref);
+                    PortalEntryEvent.field_m.characters.addLast(-25612, var7_ref);
                     var6Lifetime1++;
                   }
                 }
@@ -169,7 +169,7 @@ final class ce extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, byte param4, int param5, int param6, int param7, String param8) {
+    final static void layoutChatComposerPopup(int param0, int param1, int param2, int param3, byte param4, int param5, int param6, int param7, String param8) {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
@@ -182,7 +182,7 @@ final class ce extends IntrusiveNode {
         try {
           SpriteState.field_t.field_wb = param8;
           if (param4 < 109) {
-            ce.a(-64);
+            ce.releaseStatics(-64);
           }
           if (va.field_a != 2) {
             jk.field_d.field_wb = io.field_e;
@@ -205,7 +205,7 @@ final class ce extends IntrusiveNode {
           var12 = 5 + var10 + param7;
           ValidationState.field_a.setBounds(var12, param3, var9_int, 0, -3344);
           var12 = var12 + param3;
-          ValidationState.field_a.field_ab = tg.a(2105376, ValidationState.field_a.field_z, 8421504, 3, 11579568, 49);
+          ValidationState.field_a.field_ab = tg.createGradientFrameSprites(2105376, ValidationState.field_a.field_z, 8421504, 3, 11579568, 49);
           ClickMarker.field_v.setBounds(var12, -(var12 / 2) + param5, var9_int, param2 - var9_int / 2, -3344);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -222,15 +222,15 @@ final class ce extends IntrusiveNode {
         }
     }
 
-    final void a(byte param0) {
+    final void reapplyIfActive(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
           if (this.field_j != 0) {
-            this.b(false);
+            this.applyToTiles(false);
           }
           if (param0 != -60) {
-            ce.c((byte) -16);
+            ce.showLoginFormForUser((byte) -16);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -240,7 +240,7 @@ final class ce extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         try {
           field_o = null;
           field_g = null;
@@ -252,7 +252,7 @@ final class ce extends IntrusiveNode {
         }
     }
 
-    final boolean a(int param0, int param1, int param2) {
+    final boolean containsPoint(int param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -273,7 +273,7 @@ final class ce extends IntrusiveNode {
         }
     }
 
-    final void a(byte param0, Camera param1) {
+    final void draw(byte param0, Camera param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         int var4 = 0;
@@ -328,7 +328,7 @@ final class ce extends IntrusiveNode {
         }
     }
 
-    private final void d(byte param0) {
+    private final void restoreTiles(byte param0) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -342,7 +342,7 @@ final class ce extends IntrusiveNode {
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param0 <= 40) {
-            this.a(79, -32, -25);
+            this.containsPoint(79, -32, -25);
           }
           var2_int = this.field_t;
           while (this.field_n >= var2_int) {
@@ -370,7 +370,7 @@ final class ce extends IntrusiveNode {
         }
     }
 
-    final boolean d(int param0) {
+    final boolean tick(int param0) {
         boolean stackIn_41_0 = false;
         int stackIn_48_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -391,7 +391,7 @@ final class ce extends IntrusiveNode {
               this.field_f.adjustColourChannels(0, 1, 0);
             }
             if (this.field_l - 50 >= this.field_s) {
-              this.b(false);
+              this.applyToTiles(false);
               this.field_j = 1;
               return true;
             }
@@ -433,14 +433,14 @@ final class ce extends IntrusiveNode {
                 stackIn_48_0 = ~this.field_s;
               }
               if (stackIn_48_0 >= -1) {
-                this.d((byte) 87);
+                this.restoreTiles((byte) 87);
                 this.unlink(true);
                 return true;
               }
             }
           }
           if (param0 != -20232) {
-            this.c(-117);
+            this.beginExpiry(-117);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -450,7 +450,7 @@ final class ce extends IntrusiveNode {
         }
     }
 
-    private final void b(boolean param0) {
+    private final void applyToTiles(boolean param0) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -469,7 +469,7 @@ final class ce extends IntrusiveNode {
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param0) {
-            ce.a(-36, 94, -24, 32, (byte) 68, -15, -48, 125, (String) null);
+            ce.layoutChatComposerPopup(-36, 94, -24, 32, (byte) 68, -15, -48, 125, (String) null);
           }
           var2_int = this.field_t;
           scanLoop1: while (true) {
@@ -510,18 +510,18 @@ final class ce extends IntrusiveNode {
         }
     }
 
-    final static void c(byte param0) {
+    final static void showLoginFormForUser(byte param0) {
         try {
-          cb.a((String) null, 32, RandomAccessCacheFile.field_g);
+          cb.showLoginForm((String) null, 32, RandomAccessCacheFile.field_g);
           if (param0 != -123) {
-            ce.a(79);
+            ce.releaseStatics(79);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ce.G(" + param0 + ')');
         }
     }
 
-    final void c(int param0) {
+    final void beginExpiry(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -562,7 +562,7 @@ final class ce extends IntrusiveNode {
             this.field_m = 0;
           }
           if (null != this.field_i) {
-            this.a(this.field_i, 118);
+            this.attachToNavigation(this.field_i, 118);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

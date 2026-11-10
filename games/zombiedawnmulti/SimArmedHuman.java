@@ -23,7 +23,7 @@ final class SimArmedHuman extends SimHuman {
         }
     }
 
-    final void l(byte param0) {
+    final void decideAction(byte param0) {
         int stackIn_3_0 = 0;
         int var2;
         int var3;
@@ -44,7 +44,7 @@ final class SimArmedHuman extends SimHuman {
           if (null != this.field_nb) {
             var4 = this.field_nb.getX((byte) -112) - this.getX((byte) -112);
             var5 = this.field_nb.getY(1829947600) - this.getY(1829947600);
-            if (this.field_nb.o(124) &&
+            if (this.field_nb.isCharmed(124) &&
               var4 * var4 + var5 * var5 <= 125000) {
               if (this.simulation.navigation.traceLine(this.getY(param0 ^ 1829947583), this.getX((byte) -112), -17201, this.field_nb.getX((byte) -112), this.field_nb.getY(1829947600), false, false) != -1) {
                 this.a(false, this.field_nb);
@@ -90,7 +90,7 @@ final class SimArmedHuman extends SimHuman {
             if (this.field_nb != null) {
               this.setState(30, (byte) -89);
               this.b(this.targetY, (byte) -61, this.targetX);
-              this.l((byte) 111);
+              this.decideAction((byte) 111);
               if (param0 != 111) {
                 field_zb = (String) null;
               }
@@ -112,7 +112,7 @@ final class SimArmedHuman extends SimHuman {
           if (null != this.field_nb) {
             var4Lifetime1 = this.field_nb.getX((byte) -112) - this.getX((byte) -112);
             var5Lifetime1 = this.field_nb.getY(1829947600) - this.getY(1829947600);
-            if (this.field_nb.o(124) &&
+            if (this.field_nb.isCharmed(124) &&
               var4Lifetime1 * var4Lifetime1 + var5Lifetime1 * var5Lifetime1 <= 125000) {
               if (this.simulation.navigation.traceLine(this.getY(param0 ^ 1829947583), this.getX((byte) -112), -17201, this.field_nb.getX((byte) -112), this.field_nb.getY(1829947600), false, false) != -1) {
                 this.a(false, this.field_nb);
@@ -136,7 +136,7 @@ final class SimArmedHuman extends SimHuman {
             if (this.field_nb != null) {
               this.setState(30, (byte) -89);
               this.b(this.targetY, (byte) -61, this.targetX);
-              this.l((byte) 111);
+              this.decideAction((byte) 111);
             } else {
               if (3 == this.state) {
                 this.setState(0, (byte) -89);
@@ -185,7 +185,7 @@ final class SimArmedHuman extends SimHuman {
         if (null != this.field_nb) {
           var4Lifetime2 = this.field_nb.getX((byte) -112) - this.getX((byte) -112);
           var5Lifetime2 = this.field_nb.getY(1829947600) - this.getY(1829947600);
-          if (this.field_nb.o(124) &&
+          if (this.field_nb.isCharmed(124) &&
             var4Lifetime2 * var4Lifetime2 + var5Lifetime2 * var5Lifetime2 <= 125000) {
             if (this.simulation.navigation.traceLine(this.getY(param0 ^ 1829947583), this.getX((byte) -112), -17201, this.field_nb.getX((byte) -112), this.field_nb.getY(1829947600), false, false) != -1) {
               this.a(false, this.field_nb);
@@ -209,7 +209,7 @@ final class SimArmedHuman extends SimHuman {
           if (this.field_nb != null) {
             this.setState(30, (byte) -89);
             this.b(this.targetY, (byte) -61, this.targetX);
-            this.l((byte) 111);
+            this.decideAction((byte) 111);
           } else {
             if (3 == this.state) {
               this.setState(0, (byte) -89);

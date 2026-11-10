@@ -59,16 +59,16 @@ final class lf {
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           param0.unlink(param1);
-          var2 = (LobbyPlayer) (cg.field_i.c(104));
+          var2 = (LobbyPlayer) (cg.field_i.last(104));
           while (var2 != null) {
             if (var2.a((byte) -117, param0)) {
-              var2 = (LobbyPlayer) (cg.field_i.b(6));
+              var2 = (LobbyPlayer) (cg.field_i.previous(6));
               continue;
             }
             break;
           }
           if (var2 == null) {
-            cg.field_i.a(param0, false);
+            cg.field_i.addFirst(param0, false);
             return;
           }
           vc.a(var2, param0, param1);

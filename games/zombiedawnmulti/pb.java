@@ -12,7 +12,7 @@ final class pb {
     static volatile int field_a;
     static int field_d;
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean hasPowerupFlag(int param0, int param1, int param2) {
         if (!IntrusiveDequeCursor.a(param2, false)) {
           return false;
         }
@@ -28,7 +28,7 @@ final class pb {
         return false;
     }
 
-    final static Sprite[] a(String param0, ResourceArchive param1, int param2, String param3) {
+    final static Sprite[] loadSpritesByName(String param0, ResourceArchive param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -43,7 +43,7 @@ final class pb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != -256) {
-            pb.$cfr$intArgs$a$90ed9136db05(-65, -95);
+            pb.createEffectStream(-65, -95);
           }
           var4_int = param1.a(param0, (byte) -70);
           var5 = param1.a(param3, var4_int, -1);
@@ -75,7 +75,7 @@ final class pb {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         field_c = null;
         if (param0 == -116) {
@@ -88,7 +88,7 @@ final class pb {
         field_g = null;
     }
 
-    final static int a(byte[] param0, int param1, byte param2) {
+    final static int computeCrc(byte[] param0, int param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -98,7 +98,7 @@ final class pb {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = -117 / ((param2 + 83) / 37);
-          stackIn_1_0 = TertiaryLinkDeque.a(param0, param1, true, 0);
+          stackIn_1_0 = TertiaryLinkDeque.crc32(param0, param1, true, 0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -114,24 +114,24 @@ final class pb {
         }
     }
 
-    final static PcmSampleStream a(byte param0, int param1) {
+    final static PcmSampleStream createEffectStream(byte param0, int param1) {
         if (!FadingDialog.field_H) {
           return null;
         }
-        if (qo.field_q.a(0) >= 4) {
+        if (qo.field_q.size(0) >= 4) {
           return null;
         }
         wj var2 = new wj(param1);
         if (param0 == 62) {
-          qo.field_q.a(var2, false);
+          qo.field_q.addFirst(var2, false);
           return var2.field_m;
         }
         field_a = 52;
-        qo.field_q.a(var2, false);
+        qo.field_q.addFirst(var2, false);
         return var2.field_m;
     }
 
-    final static int a(int param0, int param1, boolean param2) {
+    final static int computeStereoPan(int param0, int param1, boolean param2) {
         int var3 = 256 * (-320 + param1) / 320;
         var3 = var3 / 2;
         var3 += 128;
@@ -159,20 +159,20 @@ final class pb {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static PcmSampleStream $cfr$intArgs$a$90ed9136db05(int param0, int param1) {
+    final static PcmSampleStream createEffectStream(int param0, int param1) {
         if (!FadingDialog.field_H) {
           return null;
         }
-        if (qo.field_q.a(0) >= 4) {
+        if (qo.field_q.size(0) >= 4) {
           return null;
         }
         wj var2 = new wj(param1);
         if (param0 == 62) {
-          qo.field_q.a(var2, false);
+          qo.field_q.addFirst(var2, false);
           return var2.field_m;
         }
         field_a = 52;
-        qo.field_q.a(var2, false);
+        qo.field_q.addFirst(var2, false);
         return var2.field_m;
     }
 }

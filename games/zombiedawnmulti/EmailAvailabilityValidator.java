@@ -42,13 +42,13 @@ final class EmailAvailabilityValidator extends TextInputValidator {
             return stackIn_2_0;
           }
           if (!param1.equals(this.field_v)) {
-            var3 = CipherPacketBuffer.a(param1, false);
-            if (!var3.d(-99)) {
+            var3 = CipherPacketBuffer.startEmailValidation(param1, false);
+            if (!var3.isFlagAssigned(-99)) {
               stackIn_7_0 = DraggableWidget.field_I;
               return stackIn_7_0;
             }
             this.field_v = param1;
-            this.field_y = var3.b(18307);
+            this.field_y = var3.isFlagged(18307);
           }
           if (!this.field_y) {
             stackIn_12_0 = jq.field_b;
@@ -109,7 +109,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
         }
     }
 
-    final static boolean a(int param0, char param1) {
+    final static boolean isAsciiLetter(int param0, char param1) {
         boolean stackIn_10_0 = false;
         if (param0 != -24315) {
           field_r = (ao) null;
@@ -121,7 +121,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
         return stackIn_10_0;
     }
 
-    final static void a(java.math.BigInteger param0, byte param1, java.math.BigInteger param2, PacketBuffer param3, PacketBuffer param4) {
+    final static void writeEncryptedPayload(java.math.BigInteger param0, byte param1, java.math.BigInteger param2, PacketBuffer param3, PacketBuffer param4) {
         try {
           qi.a(0, true, param0, param3.position, param2, param3.payload, param4);
           int var5_int = 19 % ((-76 - param1) / 44);
@@ -136,13 +136,13 @@ final class EmailAvailabilityValidator extends TextInputValidator {
         field_t = null;
         if (param0 != 11702) {
           String var2 = (String) null;
-          EmailAvailabilityValidator.a(-23, (String) null, 34);
+          EmailAvailabilityValidator.getJoinFailureMessage(-23, (String) null, 34);
         }
         field_x = null;
         field_s = null;
     }
 
-    final static void a(CipherPacketBuffer param0, int param1) {
+    final static void writeReflectionCheckReply(CipherPacketBuffer param0, int param1) {
         try {
           int var5 = 0;
           int var10_int = 0;
@@ -191,7 +191,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
           var22 = null;
           var12 = ZombieDawnMulti.field_E ? 1 : 0;
           try {
-            var13 = (lp) (we.field_k.c(76));
+            var13 = (lp) (we.field_k.last(76));
             var17 = var13;
             if (var17 == null) {
               return;
@@ -347,17 +347,17 @@ final class EmailAvailabilityValidator extends TextInputValidator {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void drawNameEntryPopup(boolean param0, int param1) {
         if (gi.field_i != null) {
           gi.field_i.c(param0, -1);
         }
         if (param1 != -19) {
           PacketBuffer var3 = (PacketBuffer) null;
-          EmailAvailabilityValidator.a((java.math.BigInteger) null, (byte) -46, (java.math.BigInteger) null, (PacketBuffer) null, (PacketBuffer) null);
+          EmailAvailabilityValidator.writeEncryptedPayload((java.math.BigInteger) null, (byte) -46, (java.math.BigInteger) null, (PacketBuffer) null, (PacketBuffer) null);
         }
     }
 
-    final static String a(int param0, String param1, int param2) {
+    final static String getJoinFailureMessage(int param0, String param1, int param2) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         String stackIn_7_0 = null;

@@ -15,9 +15,9 @@ abstract class ic {
     static String field_j;
     static int field_g;
 
-    abstract void a(PacketBuffer param0, int param1);
+    abstract void writeTo(PacketBuffer param0, int param1);
 
-    abstract pi b(int param0);
+    abstract pi getCredentialKind(int param0);
 
     final static void a(java.applet.Applet param0, String param1, int param2) {
         try {
@@ -36,7 +36,7 @@ abstract class ic {
                 field_a = -65;
               }
               var3 = new java.net.URL(param0.getCodeBase(), param1);
-              var3 = DebouncedValidationProvider.a(param0, true, var3);
+              var3 = DebouncedValidationProvider.applySessionOverridesToUrl(param0, true, var3);
               f.a(param0, true, (byte) 125, var3.toString());
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {

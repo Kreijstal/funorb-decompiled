@@ -50,7 +50,7 @@ final class WhirlpoolHasher {
         LobbyPlayer var9 = null;
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          this.field_m[this.field_c] = (byte)cr.b((int) this.field_m[this.field_c], 128 >>> ScrollPane.b(this.field_f, 7));
+          this.field_m[this.field_c] = (byte)cr.b((int) this.field_m[this.field_c], 128 >>> ScrollPane.bitAnd(this.field_f, 7));
           this.field_c = this.field_c + 1;
           if (this.field_c > 32) {
             while (this.field_c < 64) {
@@ -127,7 +127,7 @@ final class WhirlpoolHasher {
         }
         var3 = 0;
         while (var2 < 8) {
-          this.field_h[var2] = ScrollPane.a(en.longAnd(255L, (long)this.field_m[7 + var3]), ScrollPane.a(en.longAnd(255L, (long)this.field_m[6 + var3]) << 8, ScrollPane.a(en.longAnd(255L, (long)this.field_m[var3 + 5]) << 16, ScrollPane.a(ScrollPane.a(ScrollPane.a(en.longAnd(280375465082880L, (long)this.field_m[var3 + 2] << 40), ScrollPane.a((long)this.field_m[var3] << 56, en.longAnd((long)this.field_m[var3 + 1], 255L) << 48)), en.longAnd((long)this.field_m[var3 + 3] << 32, 1095216660480L)), en.longAnd((long)this.field_m[var3 + 4] << 24, 4278190080L)))));
+          this.field_h[var2] = ScrollPane.bitXor(en.longAnd(255L, (long)this.field_m[7 + var3]), ScrollPane.bitXor(en.longAnd(255L, (long)this.field_m[6 + var3]) << 8, ScrollPane.bitXor(en.longAnd(255L, (long)this.field_m[var3 + 5]) << 16, ScrollPane.bitXor(ScrollPane.bitXor(ScrollPane.bitXor(en.longAnd(280375465082880L, (long)this.field_m[var3 + 2] << 40), ScrollPane.bitXor((long)this.field_m[var3] << 56, en.longAnd((long)this.field_m[var3 + 1], 255L) << 48)), en.longAnd((long)this.field_m[var3 + 3] << 32, 1095216660480L)), en.longAnd((long)this.field_m[var3 + 4] << 24, 4278190080L)))));
           var2++;
           var3 += 8;
         }
@@ -135,7 +135,7 @@ final class WhirlpoolHasher {
           dupTemp$0 = this.field_j[var2Lifetime1];
           arrayValue$1 = this.field_h[var2Lifetime1];
           this.field_d[var2Lifetime1] = dupTemp$0;
-          this.field_b[var2Lifetime1] = ScrollPane.a(arrayValue$1, dupTemp$0);
+          this.field_b[var2Lifetime1] = ScrollPane.bitXor(arrayValue$1, dupTemp$0);
         }
         for (var2Lifetime2 = 1; var2Lifetime2 <= 10; var2Lifetime2++) {
           for (var3Lifetime1 = 0; var3Lifetime1 < 8; var3Lifetime1++) {
@@ -143,7 +143,7 @@ final class WhirlpoolHasher {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_a[var3Lifetime1] = ScrollPane.a(this.field_a[var3Lifetime1], p.field_f[var4][ScrollPane.b(255, (int)(this.field_d[ScrollPane.b(7, -var4 + var3Lifetime1)] >>> var5))]);
+              this.field_a[var3Lifetime1] = ScrollPane.bitXor(this.field_a[var3Lifetime1], p.field_f[var4][ScrollPane.bitAnd(255, (int)(this.field_d[ScrollPane.bitAnd(7, -var4 + var3Lifetime1)] >>> var5))]);
               var4++;
               var5 -= 8;
             }
@@ -151,14 +151,14 @@ final class WhirlpoolHasher {
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.field_d[var3Lifetime1Lifetime1] = this.field_a[var3Lifetime1Lifetime1];
           }
-          this.field_d[0] = ScrollPane.a(this.field_d[0], p.field_d[var2Lifetime2]);
+          this.field_d[0] = ScrollPane.bitXor(this.field_d[0], p.field_d[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.field_a[var3Lifetime1Lifetime2] = this.field_d[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_a[var3Lifetime1Lifetime2] = ScrollPane.a(this.field_a[var3Lifetime1Lifetime2], p.field_f[var7][ScrollPane.b((int)(this.field_b[ScrollPane.b(7, var3Lifetime1Lifetime2 - var7)] >>> var5Lifetime1), 255)]);
+              this.field_a[var3Lifetime1Lifetime2] = ScrollPane.bitXor(this.field_a[var3Lifetime1Lifetime2], p.field_f[var7][ScrollPane.bitAnd((int)(this.field_b[ScrollPane.bitAnd(7, var3Lifetime1Lifetime2 - var7)] >>> var5Lifetime1), 255)]);
               var7++;
               var5Lifetime1 -= 8;
             }
@@ -168,7 +168,7 @@ final class WhirlpoolHasher {
           }
         }
         for (var2Lifetime3 = 0; 8 > var2Lifetime3; var2Lifetime3++) {
-          this.field_j[var2Lifetime3] = ScrollPane.a(this.field_j[var2Lifetime3], ScrollPane.a(this.field_h[var2Lifetime3], this.field_b[var2Lifetime3]));
+          this.field_j[var2Lifetime3] = ScrollPane.bitXor(this.field_j[var2Lifetime3], ScrollPane.bitXor(this.field_h[var2Lifetime3], this.field_b[var2Lifetime3]));
         }
     }
 
@@ -228,7 +228,7 @@ final class WhirlpoolHasher {
                 this.field_f = 0;
                 this.field_c = 0;
               }
-              this.field_m[this.field_c] = (byte)ScrollPane.b(var9 << 8 - var8, 255);
+              this.field_m[this.field_c] = (byte)ScrollPane.bitAnd(var9 << 8 - var8, 255);
               param2 = param2 - 8L;
               this.field_f = this.field_f + var8;
               var6++;
@@ -253,7 +253,7 @@ final class WhirlpoolHasher {
               this.field_c = 0;
               this.field_f = 0;
             }
-            this.field_m[this.field_c] = (byte)ScrollPane.b(255, var9Lifetime1 << -var8 + 8);
+            this.field_m[this.field_c] = (byte)ScrollPane.bitAnd(255, var9Lifetime1 << -var8 + 8);
             this.field_f = this.field_f + (int)param2;
           } else {
             this.field_f = (int)((long)this.field_f + param2);
@@ -314,20 +314,20 @@ final class WhirlpoolHasher {
           var3 = 0;
         }
         if (va.field_a == 2 &&
-          !QuickChatPhraseDefinition.d((byte) -20)) {
+          !QuickChatPhraseDefinition.isPrivateRecipientReachable((byte) -20)) {
           var3 = 0;
         }
         if (InfectionEvent.field_p == 84) {
           if (var3 != 0) {
             if (rm.field_a.length() > 0) {
               var4_ref_String = rm.field_a.toString();
-              if (!UnitStateEvent.a(-115, var4_ref_String)) {
+              if (!UnitStateEvent.containsFilterText(-115, var4_ref_String)) {
                 var5 = va.field_a;
                 if (var5 == 0 &&
                   JaggrabDownloader.field_c != null) {
                   var5 = 1;
                 }
-                if (CipherPacketBuffer.a(var5, true) == 2) {
+                if (CipherPacketBuffer.getChatFilterMode(var5, true) == 2) {
                   kp.a(var5, param2, 1, true);
                 }
                 GameWorld.a(-1, qf.field_g, param0, var4_ref_String, va.field_a, 29602);
@@ -340,10 +340,10 @@ final class WhirlpoolHasher {
                 vm.a((String) null, 0, (String) null, IsaacRandom.field_l, 2, 0);
               }
             }
-            pf.a(64);
+            pf.clearChatInput(64);
           } else {
             if (0 != va.field_a) {
-              pf.a(48);
+              pf.clearChatInput(48);
             }
           }
           return true;
@@ -356,7 +356,7 @@ final class WhirlpoolHasher {
           return true;
         }
         var4 = pn.field_d;
-        if (!og.a((char) var4, (byte) 123)) {
+        if (!og.isRenderableCharacter((char) var4, (byte) 123)) {
           if (param1 < 30) {
             field_i = (String) null;
           }

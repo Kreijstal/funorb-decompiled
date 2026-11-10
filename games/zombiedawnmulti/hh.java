@@ -16,7 +16,7 @@ final class hh {
     int field_d;
     static UiComponent[] field_l;
 
-    final boolean b(boolean param0) {
+    final boolean isPointerHeld(boolean param0) {
         if (!param0) {
           return this.field_k != 0 ? true : false;
         }
@@ -24,14 +24,14 @@ final class hh {
         return this.field_k != 0 ? true : false;
     }
 
-    final boolean g(int param0) {
+    final boolean isHomePressed(int param0) {
         int var2 = -121 % ((param0 + 74) / 35);
         return this.field_i == 102 ? true : false;
     }
 
-    final boolean c(int param0) {
+    final boolean isActivated(int param0) {
         if (param0 != -85) {
-          this.b(false);
+          this.isPointerHeld(false);
           if (this.field_g != 0) {
             return true;
           }
@@ -52,7 +52,7 @@ final class hh {
         return true;
     }
 
-    final void a(int param0, boolean param1, int param2) {
+    final void setPointerSelection(int param0, boolean param1, int param2) {
         this.field_a = param1 ? true : false;
         if (param0 == -9049) {
           this.field_k = 0;
@@ -68,7 +68,7 @@ final class hh {
         }
     }
 
-    final boolean b(byte param0) {
+    final boolean isBackwardAction(byte param0) {
         if (param0 != -66) {
           return true;
         }
@@ -88,7 +88,7 @@ final class hh {
         return this.field_i == 97 ? true : false;
     }
 
-    final boolean e(int param0) {
+    final boolean isLeftPressed(int param0) {
         if (param0 == 96) {
           return this.field_i == 96 ? true : false;
         }
@@ -96,7 +96,7 @@ final class hh {
         return this.field_i == 96 ? true : false;
     }
 
-    final void d(int param0) {
+    final void handleVerticalNavigation(int param0) {
         if (param0 != 99) {
           return;
         }
@@ -127,7 +127,7 @@ final class hh {
         this.field_a = false;
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void updatePointer(int param0, int param1, int param2) {
         if (param1 >= 41) {
           if (this.field_c <= param0) {
             throw new IllegalArgumentException();
@@ -447,10 +447,10 @@ final class hh {
         }
     }
 
-    final void a(int param0, boolean param1, int param2, int param3) {
+    final void initializeSelection(int param0, boolean param1, int param2, int param3) {
         this.field_a = param1 ? true : false;
         if (param2 != -31458) {
-          hh.b(-34);
+          hh.tickLobbyTransitions(-34);
           this.field_k = 0;
           if (this.field_a) {
             this.field_d = param3;
@@ -467,7 +467,7 @@ final class hh {
         this.field_d = param0;
     }
 
-    final static void b(int param0) {
+    final static void tickLobbyTransitions(int param0) {
         int var2;
         var2 = ZombieDawnMulti.field_E ? 1 : 0;
         if (JaggrabDownloader.field_h > 0) {
@@ -485,15 +485,15 @@ final class hh {
           v.a(param0 + 199);
         }
         if (HotspotTextWidget.field_Q > 0) {
-          MouseWheelInput.a(HotspotTextWidget.field_Q, false);
+          MouseWheelInput.layoutLobbySlidePanels(HotspotTextWidget.field_Q, false);
         }
         if (param0 >= InflaterDecompressor.field_a) {
           return;
         }
-        MouseWheelInput.a(InflaterDecompressor.field_a, false);
+        MouseWheelInput.layoutLobbySlidePanels(InflaterDecompressor.field_a, false);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_h = null;
         if (!param0) {
           field_e = -10;
@@ -503,14 +503,14 @@ final class hh {
         field_l = null;
     }
 
-    final boolean f(int param0) {
+    final boolean isEndKeyPressed(int param0) {
         if (param0 != -23954) {
           return false;
         }
         return this.field_i == 103 ? true : false;
     }
 
-    final void a(int param0, boolean param1) {
+    final void handleHorizontalNavigation(int param0, boolean param1) {
         this.field_i = 0;
         this.field_f = 0;
         this.field_g = 0;
@@ -598,7 +598,7 @@ final class hh {
         field_m = false;
     }
 
-    final void a(int param0, int param1) {
+    final void selectIndex(int param0, int param1) {
         if (param1 == -1) {
           if (this.field_k == 0) {
             this.field_d = param0;
@@ -606,7 +606,7 @@ final class hh {
           }
           return;
         }
-        this.g(-127);
+        this.isHomePressed(-127);
         if (this.field_k == 0) {
           this.field_d = param0;
           this.field_a = false;
@@ -619,7 +619,7 @@ final class hh {
         this.field_c = param0;
     }
 
-    final boolean a(byte param0) {
+    final boolean isForwardAction(byte param0) {
         if (param0 != -106) {
           return false;
         }

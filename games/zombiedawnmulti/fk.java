@@ -89,7 +89,7 @@ final class fk extends MenuScreen {
         }
     }
 
-    final void a(boolean param0) {
+    final void drawScreen(boolean param0) {
         PaletteBitmapFont var2;
         int var3;
         String var4;
@@ -144,7 +144,7 @@ final class fk extends MenuScreen {
         int[] var12Lifetime2;
         String[] var11Lifetime1;
         var16 = ZombieDawnMulti.field_E ? 1 : 0;
-        super.a(param0);
+        super.drawScreen(param0);
         var2 = TranslatedUiText.field_e;
         var3 = ((BitmapFont) ((Object) var2)).maxAscent + ((BitmapFont) ((Object) var2)).maxDescent;
         if (RandomAccessCacheFile.field_i != null) {
@@ -172,7 +172,7 @@ final class fk extends MenuScreen {
                   TranslatedUiText.field_e.drawCentered("%W", SpriteState.field_q[3], var7, var10, 1);
                   TranslatedUiText.field_e.drawCentered("%L", SpriteState.field_q[4], var7, var10, 1);
                   TranslatedUiText.field_e.drawCentered("%D", SpriteState.field_q[5], var7, var10, 1);
-                  ak.a(586, 231, -5, 27, var7 - 38);
+                  ak.drawPanelFrame(586, 231, -5, 27, var7 - 38);
                   var7 = var7 + (4 + var6);
                   var4 = GameKeyHandler.field_d;
                   var17 = RandomAccessCacheFile.field_i.field_t[DropTargetWidget.field_F];
@@ -181,7 +181,7 @@ final class fk extends MenuScreen {
                   for (var14 = 0; var14 < 10; var14++) {
                     var18 = var17[var14];
                     if (var18 != null) {
-                      if (!sf.a(1, var18)) {
+                      if (!sf.isCurrentUser(1, var18)) {
                         stackIn_14_0 = ((var14 & 1) != 0) ? 4246528 : 16776992;
                         var8Lifetime5 = stackIn_14_0;
                       } else {
@@ -232,7 +232,7 @@ final class fk extends MenuScreen {
                   TranslatedUiText.field_e.drawCentered("%W", SpriteState.field_q[3], var7Lifetime1, var10Lifetime1, 1);
                   TranslatedUiText.field_e.drawCentered("%L", SpriteState.field_q[4], var7Lifetime1, var10Lifetime1, 1);
                   TranslatedUiText.field_e.drawCentered("%D", SpriteState.field_q[5], var7Lifetime1, var10Lifetime1, 1);
-                  ak.a(586, 231, -5, 27, var7Lifetime1 - 38);
+                  ak.drawPanelFrame(586, 231, -5, 27, var7Lifetime1 - 38);
                   var7Lifetime1 = var7Lifetime1 + (4 + var6Lifetime1);
                   var4Lifetime1 = GameKeyHandler.field_d;
                   var19 = RandomAccessCacheFile.field_i.field_t[DropTargetWidget.field_F];
@@ -242,7 +242,7 @@ final class fk extends MenuScreen {
                   for (var14Lifetime1 = 0; var14Lifetime1 < 10; var14Lifetime1++) {
                     var20 = var19[var14Lifetime1];
                     if (var20 != null) {
-                      if (!sf.a(1, var20)) {
+                      if (!sf.isCurrentUser(1, var20)) {
                         stackIn_36_0 = ((var14Lifetime1 & 1) != 0) ? 4246528 : 16776992;
                         var8Lifetime1Lifetime1 = stackIn_36_0;
                       } else {
@@ -300,7 +300,7 @@ final class fk extends MenuScreen {
         TranslatedUiText.field_e.drawCentered("%W", SpriteState.field_q[3], var7Lifetime2, var10Lifetime2, 1);
         TranslatedUiText.field_e.drawCentered("%L", SpriteState.field_q[4], var7Lifetime2, var10Lifetime2, 1);
         TranslatedUiText.field_e.drawCentered("%D", SpriteState.field_q[5], var7Lifetime2, var10Lifetime2, 1);
-        ak.a(586, 231, -5, 27, var7Lifetime2 - 38);
+        ak.drawPanelFrame(586, 231, -5, 27, var7Lifetime2 - 38);
         var7Lifetime2 = var7Lifetime2 + (4 + var6Lifetime2);
         var4Lifetime3 = GameKeyHandler.field_d;
         var23 = RandomAccessCacheFile.field_i.field_t[DropTargetWidget.field_F];
@@ -310,7 +310,7 @@ final class fk extends MenuScreen {
         for (var14Lifetime2 = 0; var14Lifetime2 < 10; var14Lifetime2++) {
           var24 = var23[var14Lifetime2];
           if (var24 != null) {
-            if (!sf.a(1, var24)) {
+            if (!sf.isCurrentUser(1, var24)) {
               stackIn_60_0 = ((var14Lifetime2 & 1) != 0) ? 4246528 : 16776992;
               var8Lifetime3 = stackIn_60_0;
             } else {
@@ -343,7 +343,7 @@ final class fk extends MenuScreen {
         return 20 + TranslatedUiText.field_e.textWidth(var3Lifetime1);
     }
 
-    final int d(int param0, int param1) {
+    final int getItemRight(int param0, int param1) {
         this.field_i = 50;
         if (param0 >= -65) {
           field_l = (String) null;
@@ -425,7 +425,7 @@ final class fk extends MenuScreen {
         }
     }
 
-    final int a(byte param0, int param1) {
+    final int getItemX(byte param0, int param1) {
         this.field_i = 50;
         if (param0 != -118) {
           field_o = (String) null;
@@ -444,7 +444,7 @@ final class fk extends MenuScreen {
         return 0;
     }
 
-    final void b(byte param0) {
+    final void onExit(byte param0) {
         if (param0 != 69) {
           field_l = (String) null;
           RandomAccessCacheFile.field_i = null;

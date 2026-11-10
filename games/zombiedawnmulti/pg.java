@@ -7,7 +7,7 @@ final class pg {
     static String[] field_d;
     static int field_c;
 
-    final static void a(boolean param0) {
+    final static void initializeSpecularTable(boolean param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         double var2 = 0.0;
@@ -42,16 +42,16 @@ final class pg {
         }
     }
 
-    final static HumanView a(int param0, byte param1, int param2, int param3) {
+    final static HumanView createArmedHumanView(int param0, byte param1, int param2, int param3) {
         if (param1 < -65) {
           return (HumanView) ((Object) new ArmedHumanView(param0, param3, param2));
         }
         String var5 = (String) null;
-        pg.a((String) null, (byte) -66);
+        pg.checkNotAllDigits((String) null, (byte) -66);
         return (HumanView) ((Object) new ArmedHumanView(param0, param3, param2));
     }
 
-    final static ma a(String param0, byte param1) {
+    final static ma checkNotAllDigits(String param0, byte param1) {
         int var3 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -102,7 +102,7 @@ final class pg {
         if (param0) {
           return;
         }
-        pg.a(77, (byte) -46, -11, 35);
+        pg.createArmedHumanView(77, (byte) -46, -11, 35);
     }
 
     static {

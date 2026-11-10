@@ -13,14 +13,14 @@ final class pf {
         field_b = null;
         field_e = (Sprite[][]) null;
         if (param0 != 6345) {
-          pf.a(-125);
+          pf.clearChatInput(-125);
           field_d = null;
           return;
         }
         field_d = null;
     }
 
-    final static IndexedSprite[] a(int param0, ResourceArchive param1, int param2, int param3) {
+    final static IndexedSprite[] loadIndexedSprites(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         IndexedSprite[] stackIn_5_0 = null;
@@ -30,12 +30,12 @@ final class pf {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!ud.a(param0, param1, param3, (byte) -42)) {
+          if (!ud.loadSpriteSheet(param0, param1, param3, (byte) -42)) {
             stackIn_2_0 = null;
             return (IndexedSprite[]) (stackIn_2_0);
           }
           if (param2 <= -50) {
-            stackIn_7_0 = bc.a(2);
+            stackIn_7_0 = bc.buildIndexedSprites(2);
             return stackIn_7_0;
           }
           stackIn_5_0 = (IndexedSprite[]) null;
@@ -54,7 +54,7 @@ final class pf {
         }
     }
 
-    final static void a(int param0) {
+    final static void clearChatInput(int param0) {
         rm.field_a.setLength(0);
         va.field_a = 0;
         int var1 = -16 % ((param0 + 23) / 36);

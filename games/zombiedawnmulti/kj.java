@@ -117,11 +117,11 @@ final class kj extends IntrusiveNode {
             if (!SimPortal.field_L) {
               var5 = pk.field_b;
               var6 = ki.field_j;
-              var5.field_j.a((byte) -118, var6, 14);
+              var5.field_j.addItem((byte) -118, var6, 14);
             }
             var7 = pk.field_b;
             var8 = HotspotTextWidget.field_P;
-            var7.field_j.a((byte) -118, var8, 20);
+            var7.field_j.addItem((byte) -118, var8, 20);
           }
           if (param0 != -31806) {
             return;
@@ -133,11 +133,11 @@ final class kj extends IntrusiveNode {
             if (!SimPortal.field_L) {
               var9 = pk.field_b;
               var10 = pi.field_e;
-              var9.field_j.a((byte) -118, var10, 14);
+              var9.field_j.addItem((byte) -118, var10, 14);
             }
             var11 = pk.field_b;
             var12 = v.field_g;
-            var11.field_j.a((byte) -118, var12, 20);
+            var11.field_j.addItem((byte) -118, var12, 20);
           }
           pk.field_b.a((byte) -75);
           pk.field_b.a(false, (byte) -101);

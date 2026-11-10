@@ -146,7 +146,7 @@ final class LobbyPlayer extends UiComponent {
           this.field_Lb = param1;
           this.field_ec = param2;
           var6 = (CharSequence) ((Object) this.field_Jb);
-          tg.a(var6, false);
+          tg.normalizePlayerName(var6, false);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "dm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -161,7 +161,7 @@ final class LobbyPlayer extends UiComponent {
             this.field_Kb = -111L;
           }
           var5 = (CharSequence) ((Object) this.field_Jb);
-          tg.a(var5, false);
+          tg.normalizePlayerName(var5, false);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "dm.BA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

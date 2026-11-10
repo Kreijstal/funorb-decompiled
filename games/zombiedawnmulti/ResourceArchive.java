@@ -143,9 +143,9 @@ final class ResourceArchive {
 
     private final synchronized void c(int param0, int param1) {
         if (!this.field_j) {
-          this.field_g[param1] = DiskCacheWorker.a(-137, false, this.field_a.a(-123, param1));
+          this.field_g[param1] = DiskCacheWorker.wrapBytes(-137, false, this.field_a.getPackedGroup(-123, param1));
         } else {
-          this.field_g[param1] = this.field_a.a(-123, param1);
+          this.field_g[param1] = this.field_a.getPackedGroup(-123, param1);
         }
         if (param0 >= -85) {
           this.field_k = (ArchiveIndex) null;
@@ -190,7 +190,7 @@ final class ResourceArchive {
             throw new RuntimeException("");
           }
           if (null != this.field_l[param0][param1]) {
-            var7 = PortalView.a(this.field_l[param0][param1], -110, false);
+            var7 = PortalView.unwrapArchiveBytes(this.field_l[param0][param1], -110, false);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");
@@ -315,7 +315,7 @@ final class ResourceArchive {
             param2[1] != 0 ||
             param2[2] != 0 ||
             param2[3] != 0)) {
-            var35 = PortalView.a(this.field_g[param0], -42, true);
+            var35 = PortalView.unwrapArchiveBytes(this.field_g[param0], -42, true);
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
@@ -323,10 +323,10 @@ final class ResourceArchive {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = PortalView.a(this.field_g[param0], -124, false);
+            var9 = PortalView.unwrapArchiveBytes(this.field_g[param0], -124, false);
           }
           try {
-            var36 = hb.a(var9, 0);
+            var36 = hb.decompressContainer(var9, 0);
             var27 = var36;
             var23 = var27;
             var43 = var23;
@@ -336,7 +336,7 @@ final class ResourceArchive {
             stackIn_34_0 = var11_ref_RuntimeException;
             stackIn_34_1 = new StringBuilder();
             stackIn_35_2 = (param2 != null);
-            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(" ").append(param0).append(" ").append(var9.length).append(" ").append(pb.a(var9, var9.length, (byte) -42)).append(" ").append(pb.a(var9, -2 + var9.length, (byte) 109)).append(" ").append(this.field_k.field_r[param0]).append(" ").append(this.field_k.field_o).toString());
+            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(" ").append(param0).append(" ").append(var9.length).append(" ").append(pb.computeCrc(var9, var9.length, (byte) -42)).append(" ").append(pb.computeCrc(var9, -2 + var9.length, (byte) 109)).append(" ").append(this.field_k.field_r[param0]).append(" ").append(this.field_k.field_o).toString());
           }
           if (this.field_j) {
             this.field_g[param0] = null;
@@ -435,7 +435,7 @@ final class ResourceArchive {
                 if (this.field_b != 0) {
                   var7[var18] = var40[var17];
                 } else {
-                  var7[var18] = DiskCacheWorker.a(-137, false, var40[var17]);
+                  var7[var18] = DiskCacheWorker.wrapBytes(-137, false, var40[var17]);
                 }
               }
             }
@@ -446,7 +446,7 @@ final class ResourceArchive {
               var11 = var34[0];
             }
             if (this.field_b == 0) {
-              var7[var11] = DiskCacheWorker.a(-137, false, var36);
+              var7[var11] = DiskCacheWorker.wrapBytes(-137, false, var36);
               return true;
             }
             var7[var11] = var43;
@@ -594,7 +594,7 @@ final class ResourceArchive {
           return false;
         }
         if (null == this.field_k) {
-          this.field_k = this.field_a.a((byte) -106);
+          this.field_k = this.field_a.getIndex((byte) -106);
           if (this.field_k == null) {
             return false;
           }
@@ -778,7 +778,7 @@ final class ResourceArchive {
         if (param1 < 96) {
           this.field_b = ((int[]) (this.field_g[16]))[7];
         }
-        return this.field_a.b(param0, -3);
+        return this.field_a.getGroupProgress(param0, -3);
     }
 
     final int a(String param0, int param1, int param2) {

@@ -36,7 +36,7 @@ final class HuffmanCodec {
         r.a(0, m.field_w);
         TriangleRasterizer.e();
         SoftwareRasterizer.clear();
-        GameSimulation.a((byte) 125);
+        GameSimulation.renderLogoMeshes((byte) 125);
         if (var5 < 256) {
           SoftwareRasterizer.fillRectAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, -var5 + 256);
         }
@@ -159,7 +159,7 @@ final class HuffmanCodec {
                 var10[var12Lifetime1 + var14] = param4.field_B[var14];
               } else {
                 var16 = MouseInputHandler.field_c.getDefinition(var15, -11452);
-                var8[var12Lifetime1 + var14] = var16.e(-18572);
+                var8[var12Lifetime1 + var14] = var16.getPreview(-18572);
                 var9[var12Lifetime1 + var14] = param4.field_D[var14];
                 if (var9[var12Lifetime1 + var14] <= 0) {
                   var13 = (char)(var13 + 1);
@@ -214,7 +214,7 @@ final class HuffmanCodec {
           TriangleRasterizer.e();
           SoftwareRasterizer.clear();
           f.field_a = 0;
-          GameSimulation.a((byte) 120);
+          GameSimulation.renderLogoMeshes((byte) 120);
           var2 = var1.copy();
           for (var3 = 0; var3 < 15; var3++) {
             var2.drawSilhouette(-2, -2, 16777215);

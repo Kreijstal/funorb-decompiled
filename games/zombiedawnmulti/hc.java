@@ -6,7 +6,7 @@ final class hc {
     static int field_c;
     static BufferedFile field_b;
 
-    final static AntialiasedBitmapFont a(boolean param0, byte[] param1) {
+    final static AntialiasedBitmapFont createAntialiasedFont(boolean param0, byte[] param1) {
         AntialiasedBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
@@ -87,7 +87,7 @@ final class hc {
         }
     }
 
-    final static GameEvent a(int param0, CipherPacketBuffer param1) {
+    final static GameEvent readUnitFlashEvent(int param0, CipherPacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

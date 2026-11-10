@@ -9,7 +9,7 @@ final class IntrusiveDeque {
     private IntrusiveNode cursor;
     static String field_a;
 
-    final IntrusiveNode c(byte param0) {
+    final IntrusiveNode next(byte param0) {
         IntrusiveNode var2 = this.cursor;
         if (var2 == this.sentinel) {
           this.cursor = null;
@@ -23,19 +23,19 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    final boolean f(int param0) {
+    final boolean isEmpty(int param0) {
         if (param0 == 28113) {
           return this.sentinel == this.sentinel.previous ? true : false;
         }
-        this.c(-26);
+        this.last(-26);
         return this.sentinel == this.sentinel.previous ? true : false;
     }
 
-    final IntrusiveNode a(boolean param0) {
+    final IntrusiveNode removeFirst(boolean param0) {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (!param0) {
-          this.b(-47);
+          this.previous(-47);
           var2 = this.sentinel.next;
           if (var2 != this.sentinel) {
             var2.unlink(param0);
@@ -51,7 +51,7 @@ final class IntrusiveDeque {
         return null;
     }
 
-    final int a(int param0) {
+    final int size(int param0) {
         int var4 = ZombieDawnMulti.field_E ? 1 : 0;
         int var2 = param0;
         IntrusiveNode var3 = this.sentinel.previous;
@@ -62,11 +62,11 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    final IntrusiveNode c(int param0) {
+    final IntrusiveNode last(int param0) {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (param0 <= 38) {
-          this.c(-100);
+          this.last(-100);
           var2 = this.sentinel.previous;
           if (this.sentinel == var2) {
             this.cursor = null;
@@ -84,7 +84,7 @@ final class IntrusiveDeque {
         return var2Lifetime1;
     }
 
-    final IntrusiveNode a(byte param0, IntrusiveNode param1) {
+    final IntrusiveNode startBackwardFrom(byte param0, IntrusiveNode param1) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -123,7 +123,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final void a(IntrusiveNode param0, boolean param1) {
+    final void addFirst(IntrusiveNode param0, boolean param1) {
         if (param0.next != null) {
           param0.unlink(!param1 ? true : false);
         }
@@ -153,7 +153,7 @@ final class IntrusiveDeque {
         field_a = null;
     }
 
-    final IntrusiveNode g(int param0) {
+    final IntrusiveNode removeLast(int param0) {
         IntrusiveNode var2 = this.sentinel.previous;
         if (var2 == this.sentinel) {
           return null;
@@ -162,11 +162,11 @@ final class IntrusiveDeque {
         if (param0 > 33) {
           return var2;
         }
-        this.f(-15);
+        this.isEmpty(-15);
         return var2;
     }
 
-    final void e(int param0) {
+    final void clear(int param0) {
         IntrusiveNode var2;
         int var3;
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -185,17 +185,17 @@ final class IntrusiveDeque {
         return;
     }
 
-    final static void b(byte param0) {
+    final static void saveProfile(byte param0) {
         byte[] var2 = null;
         byte[] var1 = null;
         byte[] var2Lifetime1;
         byte[] var1Lifetime1;
         if (param0 != -61) {
-          IntrusiveDeque.a(30, 99, -87, 29, -54, -51, -90);
+          IntrusiveDeque.isPointInRect(30, 99, -87, 29, -54, -51, -90);
           if (wc.j(112)) {
             ClientException.field_b = true;
           } else {
-            var2 = FullscreenFocusCanvas.field_k.f(-16613);
+            var2 = FullscreenFocusCanvas.field_k.encodeProfile(-16613);
             var1 = var2;
             InflaterDecompressor.a(-55, 6, var2);
             return;
@@ -205,14 +205,14 @@ final class IntrusiveDeque {
         if (wc.j(112)) {
           ClientException.field_b = true;
         } else {
-          var2Lifetime1 = FullscreenFocusCanvas.field_k.f(-16613);
+          var2Lifetime1 = FullscreenFocusCanvas.field_k.encodeProfile(-16613);
           var1Lifetime1 = var2Lifetime1;
           InflaterDecompressor.a(-55, 6, var2Lifetime1);
           return;
         }
     }
 
-    final IntrusiveNode a(byte param0) {
+    final IntrusiveNode first(byte param0) {
         IntrusiveNode var2 = this.sentinel.next;
         if (var2 != this.sentinel) {
           this.cursor = var2.next;
@@ -223,7 +223,7 @@ final class IntrusiveDeque {
         return null;
     }
 
-    final void a(int param0, IntrusiveNode param1) {
+    final void addLast(int param0, IntrusiveNode param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -240,7 +240,7 @@ final class IntrusiveDeque {
           if (param0 == -25612) {
             return;
           }
-          this.b(78);
+          this.previous(78);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -256,7 +256,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static boolean isPointInRect(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var7 = -3 / ((param6 - 47) / 40);
         if (param2 < param1) {
           return false;
@@ -279,7 +279,7 @@ final class IntrusiveDeque {
         this.sentinel.previous = this.sentinel;
     }
 
-    final IntrusiveNode b(int param0) {
+    final IntrusiveNode previous(int param0) {
         IntrusiveNode var2 = this.cursor;
         if (this.sentinel == var2) {
           this.cursor = null;

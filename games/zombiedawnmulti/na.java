@@ -62,7 +62,7 @@ final class na extends SingleChildWidget {
         this.field_E = 256;
     }
 
-    final static boolean b(int param0, int param1, int param2) {
+    final static boolean handleNoticeBarClick(int param0, int param1, int param2) {
         int var3;
         int var4;
         int var5;
@@ -84,7 +84,7 @@ final class na extends SingleChildWidget {
         return false;
     }
 
-    final static void a(byte param0, NavigationGrid param1) {
+    final static void buildTileFlagGrid(byte param0, NavigationGrid param1) {
         int var4 = 0;
         int[][] var2 = null;
         int var3 = 0;
@@ -111,7 +111,7 @@ final class na extends SingleChildWidget {
             for (var4 = 0; var4 < var2[0].length; var4++) {
               stackIn_8_0 = ImageProducerRasterBuffer.field_j[var3];
               stackIn_8_1 = var4;
-              if (0 != ScrollPane.b(1, var2[var3][var4])) {
+              if (0 != ScrollPane.bitAnd(1, var2[var3][var4])) {
                 stackIn_9_2 = 0;
               } else {
                 stackIn_9_2 = -1;
@@ -135,7 +135,7 @@ final class na extends SingleChildWidget {
         }
     }
 
-    final static boolean a(int[] param0, byte param1, String param2, long param3, int param4) {
+    final static boolean beginPrivateQuickChat(int[] param0, byte param1, String param2, long param3, int param4) {
         QuickChatMenu var6 = null;
         RuntimeException var6_ref = null;
         CharSequence var7 = null;
@@ -147,9 +147,9 @@ final class na extends SingleChildWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -35) {
-            na.b(-55, -5, 10);
+            na.handleNoticeBarClick(-55, -5, 10);
           }
-          if (!tn.a(param2, param3, (byte) -91, param4, param0)) {
+          if (!tn.canMessage(param2, param3, (byte) -91, param4, param0)) {
             return false;
           }
           if (1 == param4) {
@@ -158,7 +158,7 @@ final class na extends SingleChildWidget {
           qf.field_g = param2;
           va.field_a = param4;
           var7 = (CharSequence) ((Object) param2);
-          ql.field_a = tg.a(var7, false);
+          ql.field_a = tg.normalizePlayerName(var7, false);
           jj.field_M = param3;
           var6 = SceneObject.a(GameWorld.field_x, DelayedPacket.field_k, (byte) -65, param0, tg.field_d);
           wi.a((byte) 4, var6);

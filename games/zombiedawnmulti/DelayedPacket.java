@@ -24,7 +24,7 @@ final class DelayedPacket extends IntrusiveNode {
           field_k = null;
           return;
         }
-        DelayedPacket.c(-69);
+        DelayedPacket.getPendingPassword(-69);
         field_h = null;
         field_g = null;
         field_n = null;
@@ -34,7 +34,7 @@ final class DelayedPacket extends IntrusiveNode {
         field_k = null;
     }
 
-    final static String c(int param0) {
+    final static String getPendingPassword(int param0) {
         if (BirthDateValidator.field_k == SceneObject.field_B) {
           return am.field_a;
         }

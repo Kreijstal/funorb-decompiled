@@ -29,7 +29,7 @@ final class DualLinkDeque {
         if (param0 >= 74) {
           return;
         }
-        DualLinkDeque.b(1);
+        DualLinkDeque.isChatOverlayOpen(1);
     }
 
     final DualLinkNode next(byte param0) {
@@ -160,7 +160,7 @@ final class DualLinkDeque {
         return var2Lifetime1;
     }
 
-    final static boolean b(int param0) {
+    final static boolean isChatOverlayOpen(int param0) {
         if (param0 != 0) {
           DualLinkDeque.releaseStatics(72);
           return NavigationGrid.field_m != null ? true : false;
@@ -168,11 +168,11 @@ final class DualLinkDeque {
         return NavigationGrid.field_m != null ? true : false;
     }
 
-    final DualLinkNode a(int param0) {
+    final DualLinkNode removeLast(int param0) {
         DualLinkNode var2 = null;
         DualLinkNode var2Lifetime1;
         if (param0 != 11356) {
-          DualLinkDeque.b(-38);
+          DualLinkDeque.isChatOverlayOpen(-38);
           var2 = this.field_e.secondaryPrevious;
           if (var2 != this.field_e) {
             var2.a(-4564);

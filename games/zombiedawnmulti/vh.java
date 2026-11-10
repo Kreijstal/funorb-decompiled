@@ -122,7 +122,7 @@ final class vh extends UiComponent {
             for (var4 = 0; var4 < param0.width; var4++) {
               var5 = var4 * 256 / param0.width;
               var6 = -(var3_int * 256 / param0.height) + 255;
-              param0.pixels[var3_int * param0.width + var4] = gi.a(var6, this.field_Jb, var5, (byte) -115);
+              param0.pixels[var3_int * param0.width + var4] = gi.hsvToRgb(var6, this.field_Jb, var5, (byte) -115);
             }
             var3_int++;
           }

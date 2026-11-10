@@ -58,10 +58,10 @@ final class dp {
           if (param0 != 80) {
             return;
           }
-          var4 = (vl) (lf.field_e.c(param0 - 18));
+          var4 = (vl) (lf.field_e.last(param0 - 18));
           while (var4 != null) {
-            uk.a((byte) 127, var4, param1);
-            var4 = (vl) (lf.field_e.b(param0 ^ 86));
+            uk.sendListRequest((byte) 127, var4, param1);
+            var4 = (vl) (lf.field_e.previous(param0 ^ 86));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

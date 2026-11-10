@@ -9,7 +9,7 @@ final class tn extends qc {
     static ScrollPane field_A;
     PacketBuffer field_y;
 
-    final static void a(boolean param0, int param1, java.awt.Canvas param2) {
+    final static void renderStartupScreen(boolean param0, int param1, java.awt.Canvas param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -27,13 +27,13 @@ final class tn extends qc {
               UiComponent.field_ub = false;
               var4 = 1;
             }
-            ip.a(tg.b(8218), af.field_b, var4 != 0, UiComponent.g(18006), 34);
+            ip.a(tg.getCommonUiLoadProgress(8218), af.field_b, var4 != 0, UiComponent.g(18006), 34);
             return;
           }
-          if (!GameKeyHandler.a(250)) {
+          if (!GameKeyHandler.isTitleAnimationComplete(250)) {
             SoftwareRasterizer.clear();
             HuffmanCodec.a(320, 240, 122);
-            t.a(false, 0, param2, 0);
+            t.drawRasterToCanvas(false, 0, param2, 0);
             return;
           }
           if (a.field_b != 0) {
@@ -41,7 +41,7 @@ final class tn extends qc {
             return;
           }
           ec.a(false, param0, -126);
-          t.a(false, 0, param2, 0);
+          t.drawRasterToCanvas(false, 0, param2, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -57,7 +57,7 @@ final class tn extends qc {
         }
     }
 
-    final int f(int param0) {
+    final int getProgress(int param0) {
         if (this.field_y == null) {
           return 0;
         }
@@ -65,7 +65,7 @@ final class tn extends qc {
           return 100 * this.field_y.position / (this.field_y.payload.length - this.field_B);
         }
         java.awt.Canvas var3 = (java.awt.Canvas) null;
-        tn.a(true, 113, (java.awt.Canvas) null);
+        tn.renderStartupScreen(true, 113, (java.awt.Canvas) null);
         return 100 * this.field_y.position / (this.field_y.payload.length - this.field_B);
     }
 
@@ -79,7 +79,7 @@ final class tn extends qc {
         field_C = null;
     }
 
-    final byte[] e(int param0) {
+    final byte[] getBytes(int param0) {
         if (this.field_t) {
           throw new RuntimeException();
         }
@@ -93,7 +93,7 @@ final class tn extends qc {
         return this.field_y.payload;
     }
 
-    final static boolean a(String param0, long param1, byte param2, int param3, int[] param4) {
+    final static boolean canMessage(String param0, long param1, byte param2, int param3, int[] param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         boolean stackIn_6_0 = false;
@@ -107,7 +107,7 @@ final class tn extends qc {
           boolean decompiledFrameRemainder0 = true;
           var6_int = -63 / ((param2 + 32) / 42);
           if (param4 != null && (2 != param3 ||
-            pd.a(param1, param0, 2))) {
+            pd.isOnlineFriendOrLobbyPlayer(param1, param0, 2))) {
             stackIn_6_0 = true;
             decompiledFrameRemainder0 = false;
           }

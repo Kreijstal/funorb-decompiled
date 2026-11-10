@@ -63,25 +63,25 @@ final class iq {
 
     final static void a(byte param0) {
         try {
-          pi.a(135, true, 170, true, new int[]{46, 40, 44, 3, 12, 13, 4, 50, 2, 14, 11}, 470, 1, 30);
-          pi.a(118, true, 170, true, new int[]{1, 12, 13, 34, 47, 50, 3, 7}, 460, 2, 34);
-          pi.a(430, false, 0, true, new int[]{15, 5}, 640, 3, 40);
+          pi.createMenuScreen(135, true, 170, true, new int[]{46, 40, 44, 3, 12, 13, 4, 50, 2, 14, 11}, 470, 1, 30);
+          pi.createMenuScreen(118, true, 170, true, new int[]{1, 12, 13, 34, 47, 50, 3, 7}, 460, 2, 34);
+          pi.createMenuScreen(430, false, 0, true, new int[]{15, 5}, 640, 3, 40);
           if (param0 > -76) {
             iq.a((byte) -70, -75);
           }
-          pi.a(430, false, 30, true, new int[]{17, 6, 18}, 468, 4, 200);
-          pi.a(430, false, 0, true, new int[]{15, 5}, 640, 5, 120);
-          pi.a(430, false, 100, true, new int[]{2, 5}, 440, 6, 220);
-          pi.a(200, true, 194, true, new int[]{15, 16}, 446, 7, 100);
-          pi.a(400, false, 50, true, new int[]{5}, 288, 14, 40);
-          pi.a(400, false, 50, true, new int[]{5}, 288, 8, 40);
+          pi.createMenuScreen(430, false, 30, true, new int[]{17, 6, 18}, 468, 4, 200);
+          pi.createMenuScreen(430, false, 0, true, new int[]{15, 5}, 640, 5, 120);
+          pi.createMenuScreen(430, false, 100, true, new int[]{2, 5}, 440, 6, 220);
+          pi.createMenuScreen(200, true, 194, true, new int[]{15, 16}, 446, 7, 100);
+          pi.createMenuScreen(400, false, 50, true, new int[]{5}, 288, 14, 40);
+          pi.createMenuScreen(400, false, 50, true, new int[]{5}, 288, 8, 40);
           DialogLayer.a(new int[]{5, 39, 26, 27, 28, 29, 30, 31, 32, 33}, false, 9, 240, (byte) 123, new int[]{5, 39, 22, 23, 24, 25}, 400, 160, 428);
           int[] var2 = (int[]) null;
-          pi.a(310, false, 180, true, (int[]) null, 440, 10, 60);
-          pi.a(0, true, 0, true, new int[]{}, 0, 11, 0);
-          pi.a(0, true, 0, true, new int[]{19}, 0, 12, 0);
-          pi.a(430, true, 170, true, new int[]{6}, 470, 13, 0);
-          pi.a(430, false, 30, true, new int[]{45, 5}, 468, 15, 330);
+          pi.createMenuScreen(310, false, 180, true, (int[]) null, 440, 10, 60);
+          pi.createMenuScreen(0, true, 0, true, new int[]{}, 0, 11, 0);
+          pi.createMenuScreen(0, true, 0, true, new int[]{19}, 0, 12, 0);
+          pi.createMenuScreen(430, true, 170, true, new int[]{6}, 470, 13, 0);
+          pi.createMenuScreen(430, false, 30, true, new int[]{45, 5}, 468, 15, 330);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "iq.E(" + param0 + ')');
         }
@@ -181,28 +181,28 @@ final class iq {
           if (-12 == param0) {
             FadingDialog.a(-17306, 0);
           }
-          if (ArmedHumanView.field_rb == 0 && (gh.a(-3, param1 + 11554) ||
+          if (ArmedHumanView.field_rb == 0 && (gh.hasTutorialEventOccurred(-3, param1 + 11554) ||
             param0 == -14)) {
             FadingDialog.a(-17306, jh.field_ic);
           }
           if (1 == ArmedHumanView.field_rb &&
-            gh.a(-8, 11653)) {
+            gh.hasTutorialEventOccurred(-8, 11653)) {
             FadingDialog.a(param1 ^ -17403, 2);
           }
           if (2 == ArmedHumanView.field_rb &&
-            gh.a(-7, 11653)) {
+            gh.hasTutorialEventOccurred(-7, 11653)) {
             FadingDialog.a(param1 - 17405, 3);
           }
           if (ArmedHumanView.field_rb == 3 &&
-            gh.a(-3, 11653)) {
+            gh.hasTutorialEventOccurred(-3, 11653)) {
             FadingDialog.a(-17306, 4);
           }
           if (4 == ArmedHumanView.field_rb &&
-            gh.a(-13, 11653)) {
+            gh.hasTutorialEventOccurred(-13, 11653)) {
             FadingDialog.a(param1 ^ -17403, 5);
           }
           if (5 == ArmedHumanView.field_rb &&
-            gh.a(-4, 11653)) {
+            gh.hasTutorialEventOccurred(-4, 11653)) {
             if (PowerupButton.field_e.selection.size((byte) 98) > 0) {
               FadingDialog.a(param1 ^ -17403, 6);
             } else {
@@ -210,33 +210,33 @@ final class iq {
             }
           }
           if (ArmedHumanView.field_rb == 6 &&
-            gh.a(-6, 11653)) {
+            gh.hasTutorialEventOccurred(-6, 11653)) {
             FadingDialog.a(-17306, 7);
           }
           if (ArmedHumanView.field_rb == 7 &&
-            gh.a(-5, 11653)) {
+            gh.hasTutorialEventOccurred(-5, 11653)) {
             FadingDialog.a(-17306, 6);
           }
           if ((6 == ArmedHumanView.field_rb ||
             ArmedHumanView.field_rb == 7) &&
-            (gh.a(-6, 11653) &&
-            gh.a(-5, 11653))) {
+            (gh.hasTutorialEventOccurred(-6, 11653) &&
+            gh.hasTutorialEventOccurred(-5, 11653))) {
             FadingDialog.a(-17306, 8);
           }
           if (8 == ArmedHumanView.field_rb &&
-            gh.a(-9, 11653)) {
+            gh.hasTutorialEventOccurred(-9, 11653)) {
             FadingDialog.a(param1 - 17405, 9);
           }
           if (ArmedHumanView.field_rb == 9 &&
-            gh.a(-10, 11653)) {
+            gh.hasTutorialEventOccurred(-10, 11653)) {
             FadingDialog.a(-17306, 10);
           }
           if (ArmedHumanView.field_rb == 10 &&
-            gh.a(-11, 11653)) {
+            gh.hasTutorialEventOccurred(-11, 11653)) {
             FadingDialog.a(-17306, 11);
           }
           if (ArmedHumanView.field_rb == 4 &&
-            !gh.a(-3, param1 + 11554)) {
+            !gh.hasTutorialEventOccurred(-3, param1 + 11554)) {
             FadingDialog.a(-17306, 3);
           }
           if (ArmedHumanView.field_rb != var2_int) {
@@ -278,10 +278,10 @@ final class iq {
             if (var5 < 0) {
               var4 = var4 + WidgetContainer.field_C;
             } else {
-              var6 = hn.a(0, TextWidgetPainter.field_m[var3_int], true);
+              var6 = hn.measureMenuText(0, TextWidgetPainter.field_m[var3_int], true);
               var7 = am.field_c - (var6 >> 1);
               var4 = var4 + ResizableDialog.field_bb;
-              if (IntrusiveDeque.a(param0, var7 - QuickChatHelpDialog.field_Gb, param2, var6 + (QuickChatHelpDialog.field_Gb << 1), var4, (DateInputWidget.field_G << 1) + me.field_h, -18)) {
+              if (IntrusiveDeque.isPointInRect(param0, var7 - QuickChatHelpDialog.field_Gb, param2, var6 + (QuickChatHelpDialog.field_Gb << 1), var4, (DateInputWidget.field_G << 1) + me.field_h, -18)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }

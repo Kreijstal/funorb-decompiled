@@ -31,7 +31,7 @@ final class ClientException extends RuntimeException {
     final static AttackEvent a(int param0, int param1, int param2, byte param3, int param4, int param5) {
         AttackEvent var6 = null;
         if (param3 > 86) {
-          var6 = (AttackEvent) (ic.field_c.g(62));
+          var6 = (AttackEvent) (ic.field_c.removeLast(62));
           if (var6 == null) {
             var6 = new AttackEvent();
           }

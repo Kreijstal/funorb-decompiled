@@ -22,11 +22,11 @@ final class gi extends IntrusiveNode {
         field_g = null;
         if (param0 != -1569388056) {
           String var2 = (String) null;
-          gi.a(49, (String) null);
+          gi.validateEmailAddress(49, (String) null);
         }
     }
 
-    final static LevelData a(byte[] param0, int param1) {
+    final static LevelData parseLevelDataV6(byte[] param0, int param1) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -72,7 +72,7 @@ final class gi extends IntrusiveNode {
         var16 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param1 >= -86) {
-            gi.a(92, 124, -54, (byte) -50);
+            gi.hsvToRgb(92, 124, -54, (byte) -50);
           }
           var2_int = 1;
           incrementValue$0 = var2_int;
@@ -145,7 +145,7 @@ final class gi extends IntrusiveNode {
         }
     }
 
-    final static void a(byte param0, int param1) {
+    final static void unpackChatFilterSettings(byte param0, int param1) {
         li.field_C = 3 & param1 >> 4;
         qe.field_g = 3 & param1 >> 2;
         if (li.field_C > 2) {
@@ -163,7 +163,7 @@ final class gi extends IntrusiveNode {
         }
     }
 
-    final static int a(int param0, int param1, int param2, byte param3) {
+    final static int hsvToRgb(int param0, int param1, int param2, byte param3) {
         int var4;
         int var5;
         int var6;
@@ -235,7 +235,7 @@ final class gi extends IntrusiveNode {
         return 255 & var6 | ((255 & var4) << 16 | (var5 & 255) << 8);
     }
 
-    final static ma a(int param0, String param1) {
+    final static ma validateEmailAddress(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
@@ -262,9 +262,9 @@ final class gi extends IntrusiveNode {
             }
             var3 = param1.substring(0, var2_int);
             var4 = param1.substring(1 + var2_int);
-            var5 = IndexedSpriteState.a(32351, var3);
+            var5 = IndexedSpriteState.validateEmailLocalPart(32351, var3);
             if (var5 == null) {
-              stackIn_15_0 = nf.a((byte) 125, var4);
+              stackIn_15_0 = nf.validateEmailDomain((byte) 125, var4);
               return stackIn_15_0;
             }
             stackIn_13_0 = var5;

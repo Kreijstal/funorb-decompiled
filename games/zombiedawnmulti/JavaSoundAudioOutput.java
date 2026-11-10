@@ -55,7 +55,7 @@ final class JavaSoundAudioOutput extends PcmPlayerService {
         }
     }
 
-    final void a(int param0) throws javax.sound.sampled.LineUnavailableException {
+    final void openDevice(int param0) throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info var2 = null;
         try {
           var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, this.audioFormat, param0 << (field_j ? 2 : 1));
@@ -65,7 +65,7 @@ final class JavaSoundAudioOutput extends PcmPlayerService {
           this.lineCapacityFrames = param0;
         } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
           if (cm.a(param0, true) != 1) {
-            this.a(cb.b(-113, param0));
+            this.openDevice(cb.nextPowerOfTwo(-113, param0));
             return;
           }
           this.line = null;

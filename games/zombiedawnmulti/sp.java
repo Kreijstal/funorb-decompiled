@@ -13,7 +13,7 @@ final class sp extends mp {
     private int field_l;
     private String field_i;
 
-    private final td a(BitmapFont param0, String param1, int param2, int param3) {
+    private final td createSingleLine(BitmapFont param0, String param1, int param2, int param3) {
         td var5 = null;
         RuntimeException var5_ref = null;
         td var6 = null;
@@ -53,7 +53,7 @@ final class sp extends mp {
         }
     }
 
-    final void a(int param0, int param1, boolean param2, String param3, BitmapFont param4) {
+    final void layoutRightAlignedLine(int param0, int param1, boolean param2, String param3, BitmapFont param4) {
         td var8 = null;
         td var9 = null;
         if (param3 == null) {
@@ -69,7 +69,7 @@ final class sp extends mp {
           this.field_o = param2 ? true : false;
           this.field_i = param3;
           this.field_f = param4;
-          var8 = this.a(param4, param3, param1, 1);
+          var8 = this.createSingleLine(param4, param3, param1, 1);
           var9 = var8;
           var9.field_e[0] = -param4.textWidth(param3) + param0;
           var9.field_e[param3.length()] = param0;
@@ -79,7 +79,7 @@ final class sp extends mp {
         }
     }
 
-    final void a(int param0, byte param1, BitmapFont param2, String param3, int param4) {
+    final void layoutLeftAlignedLine(int param0, byte param1, BitmapFont param2, String param3, int param4) {
         td var8 = null;
         td var9 = null;
         if (param3 == null) {
@@ -96,7 +96,7 @@ final class sp extends mp {
           this.field_i = param3;
           int var7 = -125 / ((-24 - param1) / 46);
           this.field_f = param2;
-          var8 = this.a(param2, param3, param4, 1);
+          var8 = this.createSingleLine(param2, param3, param4, 1);
           var9 = var8;
           var8.field_e[0] = param0;
           var9.field_e[param3.length()] = param0 + param2.textWidth(param3);
@@ -106,19 +106,19 @@ final class sp extends mp {
         }
     }
 
-    final static void c(int param0) {
+    final static void showLoadingProgressDialog(int param0) {
         nb.field_a.h(param0 ^ -123);
         if (Under13NoticePanel.field_I == null) {
           Under13NoticePanel.field_I = new ProgressDialog(nb.field_a, TextInputWidget.field_P);
         }
         if (param0 != 0) {
           java.awt.Frame var2 = (java.awt.Frame) null;
-          sp.a((PlatformTaskDispatcher) null, -50, (java.awt.Frame) null);
+          sp.exitFullscreenAndDisposeFrame((PlatformTaskDispatcher) null, -50, (java.awt.Frame) null);
         }
         nb.field_a.showDialog(param0 + 3016, Under13NoticePanel.field_I);
     }
 
-    final void a(String param0, int param1, int param2, int param3, byte param4, int param5, int param6, BitmapFont param7) {
+    final void layoutWrappedText(String param0, int param1, int param2, int param3, byte param4, int param5, int param6, BitmapFont param7) {
         td stackIn_37_0;
         td stackIn_37_1;
         int stackIn_37_2;
@@ -224,7 +224,7 @@ final class sp extends mp {
               if (param1 != 3) {
                 stackIn_43_1 = 0;
               } else {
-                stackIn_43_1 = this.a(var13, 0, param7.textWidth(var13), param6);
+                stackIn_43_1 = this.justificationSpacing(var13, 0, param7.textWidth(var13), param6);
               }
               GameScreen.a(stackIn_42_0, stackIn_43_1, var13, 120, var14);
             }
@@ -252,7 +252,7 @@ final class sp extends mp {
         }
     }
 
-    final void a(BitmapFont param0, String param1, int param2, byte param3, int param4) {
+    final void layoutCenteredLine(BitmapFont param0, String param1, int param2, byte param3, int param4) {
         td var8 = null;
         int var7 = 0;
         if (param1 == null) {
@@ -270,7 +270,7 @@ final class sp extends mp {
           if (param3 != 65) {
             this.field_o = false;
           }
-          var8 = this.a(param0, param1, param2, 1);
+          var8 = this.createSingleLine(param0, param1, param2, 1);
           var7 = param0.textWidth(param1);
           var8.field_e[0] = param4 - (var7 >> 1);
           var8.field_e[param1.length()] = param4 + (var7 >> 1);
@@ -280,7 +280,7 @@ final class sp extends mp {
         }
     }
 
-    final static void a(PlatformTaskDispatcher param0, int param1, java.awt.Frame param2) {
+    final static void exitFullscreenAndDisposeFrame(PlatformTaskDispatcher param0, int param1, java.awt.Frame param2) {
         PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -293,7 +293,7 @@ final class sp extends mp {
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           while (true) {
-            var3 = param0.a(param2, true);
+            var3 = param0.requestExitFullscreen(param2, true);
             while (0 == var3.field_f) {
               vd.a(false, 10L);
             }

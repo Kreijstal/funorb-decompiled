@@ -29,7 +29,7 @@ final class pi {
         field_e = null;
     }
 
-    final static void a(int param0, boolean param1, int param2, boolean param3, int[] param4, int param5, int param6, int param7) {
+    final static void createMenuScreen(int param0, boolean param1, int param2, boolean param3, int[] param4, int param5, int param6, int param7) {
         if (!param3) {
           return;
         }
@@ -41,7 +41,7 @@ final class pi {
         }
     }
 
-    final static void a(byte param0, boolean param1, boolean param2, ic param3, int param4) {
+    final static void sendLoginPacket(byte param0, boolean param1, boolean param2, ic param3, int param4) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -65,7 +65,7 @@ final class pi {
           if (param0 != -59) {
             field_c = (String) null;
           }
-          param3.a(TextInputWidget.field_R, -1);
+          param3.writeTo(TextInputWidget.field_R, -1);
           ma.field_a.position = 0;
           if (!param2) {
             ma.field_a.writeByte(param0 ^ -68, 16);
@@ -98,9 +98,9 @@ final class pi {
           if (null != oe.field_f) {
             ma.field_a.b(-16171, oe.field_f);
           }
-          EmailAvailabilityValidator.a(ButtonWidget.field_L, (byte) -122, UsernameAvailabilityValidator.field_v, TextInputWidget.field_R, ma.field_a);
+          EmailAvailabilityValidator.writeEncryptedPayload(ButtonWidget.field_L, (byte) -122, UsernameAvailabilityValidator.field_v, TextInputWidget.field_R, ma.field_a);
           ma.field_a.b(false, -var5_int + ma.field_a.position);
-          cb.a(-1, false);
+          cb.flushPackets(-1, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -120,7 +120,7 @@ final class pi {
         throw new IllegalStateException();
     }
 
-    final static void a(byte param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void recolorGreenPixelsInRect(byte param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;

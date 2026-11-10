@@ -21,15 +21,15 @@ final class uq {
           if (param1 > -6) {
             uq.a(-91, -34);
           }
-          var4 = (kj) (TriangleMesh.field_u.c(121));
+          var4 = (kj) (TriangleMesh.field_u.last(121));
           while (var4 != null) {
-            AgeValidator.a(var4, true, param0);
-            var4 = (kj) (TriangleMesh.field_u.b(6));
+            AgeValidator.writeScoreSubmission(var4, true, param0);
+            var4 = (kj) (TriangleMesh.field_u.previous(6));
           }
-          var5 = (nh) (pn.field_f.c(83));
+          var5 = (nh) (pn.field_f.last(83));
           while (var5 != null) {
-            GameApplet.a((byte) 73, var5, param0);
-            var5 = (nh) (pn.field_f.b(6));
+            GameApplet.writeRankingsRequestPacket((byte) 73, var5, param0);
+            var5 = (nh) (pn.field_f.previous(6));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -54,7 +54,7 @@ final class uq {
               if (param0 != 3) {
                 return;
               }
-              param1.getAppletContext().showDocument(DebouncedValidationProvider.a(param1, true, var2), "_top");
+              param1.getAppletContext().showDocument(DebouncedValidationProvider.applySessionOverridesToUrl(param1, true, var2), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -109,7 +109,7 @@ final class uq {
                 return;
               }
               var2 = new java.net.URL(param0.getCodeBase(), "toserverlist.ws");
-              param0.getAppletContext().showDocument(DebouncedValidationProvider.a(param0, true, var2), "_top");
+              param0.getAppletContext().showDocument(DebouncedValidationProvider.applySessionOverridesToUrl(param0, true, var2), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

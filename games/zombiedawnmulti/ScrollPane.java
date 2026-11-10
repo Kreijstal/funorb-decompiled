@@ -8,7 +8,7 @@ final class ScrollPane extends UiComponent {
     static String field_Hb;
     UiComponent field_Jb;
 
-    static long a(long param0, long param1) {
+    static long bitXor(long param0, long param1) {
         return param0 ^ param1;
     }
 
@@ -20,7 +20,7 @@ final class ScrollPane extends UiComponent {
         this.field_Ib.setScrollbarBounds(this.field_Gb.field_z, 0, this.field_Jb.field_z, this.field_z, -1, -this.field_Gb.field_Q, param1, -param1 + this.field_zb);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final void setBoundsAndLayout(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         if (param5 == -31465) {
           this.field_x = param3;
           this.field_Q = param6;
@@ -29,7 +29,7 @@ final class ScrollPane extends UiComponent {
           this.layoutScrollPane(0, param0, param1);
           return;
         }
-        this.a(67, 91, -23, -43, 80, -90, 37);
+        this.setBoundsAndLayout(67, 91, -23, -43, 80, -90, 37);
         this.field_x = param3;
         this.field_Q = param6;
         this.field_z = param4;
@@ -37,7 +37,7 @@ final class ScrollPane extends UiComponent {
         this.layoutScrollPane(0, param0, param1);
     }
 
-    private final boolean a(boolean param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
+    private final boolean layoutAndScroll(boolean param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
         int var8 = 0;
         int var8Lifetime1;
         int var8Lifetime2;
@@ -78,7 +78,7 @@ final class ScrollPane extends UiComponent {
         return true;
     }
 
-    final void a(int param0, int param1, int param2, boolean param3) {
+    final void scrollContent(int param0, int param1, int param2, boolean param3) {
         this.applyScrollInput(param2, 0, this.field_Jb.field_z, param3, param0);
         if (param1 < 104) {
           field_Hb = (String) null;
@@ -95,24 +95,24 @@ final class ScrollPane extends UiComponent {
         field_Hb = null;
     }
 
-    final boolean a(int param0, boolean param1, int param2, boolean param3, int param4, int param5) {
+    final boolean updateContentLayout(int param0, boolean param1, int param2, boolean param3, int param4, int param5) {
         if (param5 < -22) {
-          return this.a(param3, param0, this.field_Jb.field_z, param2, -4719, param1, param4);
+          return this.layoutAndScroll(param3, param0, this.field_Jb.field_z, param2, -4719, param1, param4);
         }
-        boolean discarded$0 = this.a(false, -109, -80, -22, -26, true, -105);
-        return this.a(param3, param0, this.field_Jb.field_z, param2, -4719, param1, param4);
+        boolean discarded$0 = this.layoutAndScroll(false, -109, -80, -22, -26, true, -105);
+        return this.layoutAndScroll(param3, param0, this.field_Jb.field_z, param2, -4719, param1, param4);
     }
 
     private final void applyScrollInput(int param0, int param1, int param2, boolean param3, int param4) {
-        if (this.field_Ib.d(false)) {
+        if (this.field_Ib.pollLineDown(false)) {
           this.field_Gb.field_mb = this.field_Gb.field_mb + param0;
         }
         if (this.field_Ib.pollLineUp((byte) -37)) {
           this.field_Gb.field_mb = this.field_Gb.field_mb - param0;
         }
-        if (this.field_Ib.d((byte) 37)) {
+        if (this.field_Ib.pollPageUp((byte) 37)) {
           this.field_Gb.field_mb = this.field_Gb.field_mb + param2;
-          if (this.field_Ib.i(param1 - 1)) {
+          if (this.field_Ib.pollPageDown(param1 - 1)) {
             this.field_Gb.field_mb = this.field_Gb.field_mb - param2;
           }
           if (this.field_L) {
@@ -134,7 +134,7 @@ final class ScrollPane extends UiComponent {
             }
           }
         } else {
-          if (this.field_Ib.i(param1 - 1)) {
+          if (this.field_Ib.pollPageDown(param1 - 1)) {
             this.field_Gb.field_mb = this.field_Gb.field_mb - param2;
           }
           if (this.field_L) {
@@ -159,14 +159,14 @@ final class ScrollPane extends UiComponent {
         if (param1 != 0) {
           return;
         }
-        if (this.field_Ib.j(120)) {
+        if (this.field_Ib.isThumbHeld(120)) {
           this.field_Gb.field_Q = -this.field_Ib.getDraggedScrollOffset(param3, (byte) -66, this.field_Jb.field_z, this.field_Gb.field_z);
           this.field_Gb.field_mb = 0;
         }
         this.field_Ib.layoutScrollbar(this.field_Gb.field_z, -this.field_Gb.field_Q, (byte) 124, this.field_Jb.field_z);
     }
 
-    static int b(int param0, int param1) {
+    static int bitAnd(int param0, int param1) {
         return param0 & param1;
     }
 

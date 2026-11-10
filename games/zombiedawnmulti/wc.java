@@ -18,7 +18,7 @@ final class wc extends SceneObject {
     final static PcmSampleStream b(int param0, int param1) {
         wj var2 = new wj(param1);
         var2.field_m.setLoopCount(param0);
-        fd.field_M.a(var2, false);
+        fd.field_M.addFirst(var2, false);
         return var2.field_m;
     }
 
@@ -33,25 +33,25 @@ final class wc extends SceneObject {
           JaggrabDownloader.field_c = null;
           la.field_k = false;
           if (cg.field_i != null) {
-            cg.field_i.e(-30986);
+            cg.field_i.clear(-30986);
             cg.field_i = null;
           }
           TextWidgetPainter.field_c = null;
           if (tn.field_C != null) {
-            tn.field_C.e(-30986);
+            tn.field_C.clear(-30986);
             tn.field_C = null;
           }
           af.field_h = null;
           if (null != nh.field_g) {
-            nh.field_g.e(-30986);
+            nh.field_g.clear(-30986);
             nh.field_g = null;
           }
           kp.field_o = null;
           if (TextWidgetPainter.field_c != null) {
-            var1 = (LobbyPlayer) (TextWidgetPainter.field_c.a((byte) 7));
+            var1 = (LobbyPlayer) (TextWidgetPainter.field_c.firstInTraversal((byte) 7));
             while (var1 != null) {
               var1.a(param0 ^ 32692);
-              var1 = (LobbyPlayer) (TextWidgetPainter.field_c.c((byte) 97));
+              var1 = (LobbyPlayer) (TextWidgetPainter.field_c.nextInTraversal((byte) 97));
             }
             TextWidgetPainter.field_c = null;
           }
@@ -115,7 +115,7 @@ final class wc extends SceneObject {
         boolean stackIn_167_1 = false;
         boolean stackIn_168_2 = false;
         int var2;
-        VerticalScrollbar.h(2);
+        VerticalScrollbar.tickLobbyHighlights(2);
         if (null == JaggrabDownloader.field_c) {
           var2 = 0;
           stackIn_17_0 = 1;
@@ -156,11 +156,11 @@ final class wc extends SceneObject {
               }
             }
             if (UiWidget.field_r) {
-              ma.field_a.b((byte) -35, 57);
+              ma.field_a.writeCipheredOpcode((byte) -35, 57);
               UiWidget.field_r = false;
             }
             if (uk.field_N) {
-              ma.field_a.b((byte) -35, 10);
+              ma.field_a.writeCipheredOpcode((byte) -35, 10);
               uk.field_N = false;
             }
             if (pb.field_f) {
@@ -210,11 +210,11 @@ final class wc extends SceneObject {
           }
         }
         if (UiWidget.field_r) {
-          ma.field_a.b((byte) -35, 57);
+          ma.field_a.writeCipheredOpcode((byte) -35, 57);
           UiWidget.field_r = false;
         }
         if (uk.field_N) {
-          ma.field_a.b((byte) -35, 10);
+          ma.field_a.writeCipheredOpcode((byte) -35, 10);
           uk.field_N = false;
         }
         if (pb.field_f) {
@@ -268,7 +268,7 @@ final class wc extends SceneObject {
               this.field_R = null;
               this.field_L = null;
             } else {
-              var5 = DropTargetWidget.b(125, var4, var3_int);
+              var5 = DropTargetWidget.computeScreenVolume(125, var4, var3_int);
               this.field_R.setVolume(var5);
               if (this.field_L != null) {
                 this.field_L.setVolume(var5);
@@ -307,7 +307,7 @@ final class wc extends SceneObject {
         this.field_P = Integer.toString(param2);
         this.field_F = 255;
         if (!param3) {
-          this.field_R = Camera.b(-128, 55);
+          this.field_R = Camera.createMixerStream(-128, 55);
         }
     }
 

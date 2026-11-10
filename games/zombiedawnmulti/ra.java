@@ -21,8 +21,8 @@ final class ra extends IntrusiveNode {
           if (11 == a.field_b) {
             ScoreUpdateEvent.a(-29956);
           }
-          TertiaryLinkDeque.a(eb.field_p, (byte) -100, lh.field_i, SimArmedHuman.field_Bb);
-          t.a(false, 0, param0, 0);
+          TertiaryLinkDeque.showLoadingProgress(eb.field_p, (byte) -100, lh.field_i, SimArmedHuman.field_Bb);
+          t.drawRasterToCanvas(false, 0, param0, 0);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ra.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -56,7 +56,7 @@ final class ra extends IntrusiveNode {
               JavaScriptBridge.evaluateScript(param0, 14575, "document.cookie=\"" + var5Lifetime4 + "\"");
             } catch (Throwable throwable) {
             }
-            ak.a(14158, param0);
+            ak.updatePageLinks(14158, param0);
           } catch (RuntimeException runtimeException) {
             throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ra.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
           }

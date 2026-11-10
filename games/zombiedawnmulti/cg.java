@@ -12,45 +12,45 @@ final class cg extends IntrusiveNode {
     private int field_h;
     static boolean field_l;
 
-    final void a(int param0) {
+    final void removePuddle(int param0) {
         if (param0 != -1) {
           field_f = (UiComponent) null;
         }
         this.unlink(true);
     }
 
-    final void b(boolean param0) {
+    final void updateBlobs(boolean param0) {
         int var3 = ZombieDawnMulti.field_E ? 1 : 0;
-        rq var4 = (rq) (this.field_k.c(125));
+        rq var4 = (rq) (this.field_k.last(125));
         while (var4 != null) {
-          var4.a((byte) 95);
-          var4 = (rq) (this.field_k.b(6));
+          var4.tick((byte) 95);
+          var4 = (rq) (this.field_k.previous(6));
         }
         if (param0) {
-          cg.a(80, -116, 26L);
+          cg.requestRemoveOrRejectPlayer(80, -116, 26L);
         }
     }
 
-    final boolean a(byte param0, int param1, int param2) {
+    final boolean containsPoint(byte param0, int param1, int param2) {
         int var5 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param0 < 54) {
           return true;
         }
-        rq var6 = (rq) (this.field_k.c(87));
+        rq var6 = (rq) (this.field_k.last(87));
         while (var6 != null) {
-          if (var6.a(param1, (byte) 5, param2)) {
+          if (var6.isNearPoint(param1, (byte) 5, param2)) {
             return true;
           }
-          var6 = (rq) (this.field_k.b(6));
+          var6 = (rq) (this.field_k.previous(6));
         }
         return false;
     }
 
-    final static void a(int param0, int param1, long param2) {
+    final static void requestRemoveOrRejectPlayer(int param0, int param1, long param2) {
         CipherPacketBuffer var4 = ma.field_a;
-        var4.b((byte) -35, param0);
+        var4.writeCipheredOpcode((byte) -35, param0);
         if (param1 != -27404) {
-          cg.a(-60, -93, 81L);
+          cg.requestRemoveOrRejectPlayer(-60, -93, 81L);
         }
         var4.position = var4.position + 1;
         int var5 = var4.position;
@@ -63,7 +63,7 @@ final class cg extends IntrusiveNode {
         this.field_h = param1;
         this.field_g = param2;
         if (oq.field_u != null) {
-          this.a((byte) 108);
+          this.buildBlobs((byte) 108);
         }
     }
 
@@ -78,7 +78,7 @@ final class cg extends IntrusiveNode {
         field_i = null;
     }
 
-    final void a(Camera param0, int param1) {
+    final void draw(Camera param0, int param1) {
         int var3_int = 0;
         rq var4 = null;
         int var5 = 0;
@@ -90,10 +90,10 @@ final class cg extends IntrusiveNode {
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           var3_int = 81 / ((param1 + 32) / 51);
-          var4 = (rq) (this.field_k.c(123));
+          var4 = (rq) (this.field_k.last(123));
           while (var4 != null) {
-            var4.a(param0, (byte) -75);
-            var4 = (rq) (this.field_k.b(6));
+            var4.draw(param0, (byte) -75);
+            var4 = (rq) (this.field_k.previous(6));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -110,7 +110,7 @@ final class cg extends IntrusiveNode {
         }
     }
 
-    final boolean a(HumanView param0, boolean param1) {
+    final boolean containsUnit(HumanView param0, boolean param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -127,13 +127,13 @@ final class cg extends IntrusiveNode {
             field_l = true;
           }
           var4 = param0.getY(81);
-          var5 = (rq) (this.field_k.c(80));
+          var5 = (rq) (this.field_k.last(80));
           while (true) {
             if (var5 == null) {
               return false;
             }
-            if (!var5.a(var4, (byte) 111, var3_int)) {
-              var5 = (rq) (this.field_k.b(6));
+            if (!var5.isNearPoint(var4, (byte) 111, var3_int)) {
+              var5 = (rq) (this.field_k.previous(6));
               continue;
             }
             break;
@@ -153,7 +153,7 @@ final class cg extends IntrusiveNode {
         }
     }
 
-    final void a(byte param0) {
+    final void buildBlobs(byte param0) {
         int var2;
         int var3;
         boolean[][] var4;
@@ -228,7 +228,7 @@ final class cg extends IntrusiveNode {
             var13Lifetime1 = (var3 - var12Lifetime1) * (var3 - var12Lifetime1) + (var2 - var11Lifetime1) * (var2 - var11Lifetime1);
             if (var13Lifetime1 < 81 &&
               var4[var9Lifetime1][var16]) {
-              this.field_k.a(new rq(var11Lifetime1, var12Lifetime1, var13Lifetime1), false);
+              this.field_k.addFirst(new rq(var11Lifetime1, var12Lifetime1, var13Lifetime1), false);
             }
             var16++;
           }

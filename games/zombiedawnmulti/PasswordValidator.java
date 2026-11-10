@@ -46,11 +46,11 @@ final class PasswordValidator extends TextInputValidator {
             return null;
           }
           var5 = var4;
-          if (ButtonWidget.b((byte) 62, var5)) {
+          if (ButtonWidget.hasValidPasswordLength((byte) 62, var5)) {
             stackIn_5_0 = PlayerContextMenu.field_k;
             return stackIn_5_0;
           }
-          if (ol.a(var5, false)) {
+          if (ol.containsNonAlphanumeric(var5, false)) {
             stackIn_9_0 = bi.field_c;
             return stackIn_9_0;
           }
@@ -74,7 +74,7 @@ final class PasswordValidator extends TextInputValidator {
             stackIn_22_0 = kc.field_b;
             return stackIn_22_0;
           }
-          if (a.a(var5, var6, (byte) -86)) {
+          if (a.containsForwardOrReversed(var5, var6, (byte) -86)) {
             stackIn_26_0 = ScrollPane.field_Hb;
             return stackIn_26_0;
           }

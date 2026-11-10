@@ -18,7 +18,7 @@ final class nk extends IntrusiveNode {
     static String[] field_n;
     private boolean field_g;
 
-    final static void a(int param0, double param1, int param2, int param3, double param4) {
+    final static void configureSimulatedNetworkLag(int param0, double param1, int param2, int param3, double param4) {
         IntrusiveDeque discarded$0 = null;
         if (SimArmedHuman.field_Db == 0 &&
           param2 > 0) {
@@ -41,7 +41,7 @@ final class nk extends IntrusiveNode {
         MusicPatchNode.field_o = param0;
     }
 
-    final static GameEvent a(int param0, CipherPacketBuffer param1) {
+    final static GameEvent readFightEvent(int param0, CipherPacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -68,7 +68,7 @@ final class nk extends IntrusiveNode {
           var6 = param1.readUnsignedShort((byte) 69);
           var7 = param1.readUnsignedShort((byte) 69);
           var8 = param1.readUnsignedShort((byte) 69);
-          stackIn_3_0 = td.a(var5, var2_int, var4, (byte) 125, var8, var6, var7, var3);
+          stackIn_3_0 = td.createFightEvent(var5, var2_int, var4, (byte) 125, var8, var6, var7, var3);
           return (GameEvent) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -88,7 +88,7 @@ final class nk extends IntrusiveNode {
         this(param0.simulation, param1, param2, param3);
         try {
           this.field_t = param0;
-          this.field_l.a(this.field_t, false);
+          this.field_l.addFirst(this.field_t, false);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "nk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -141,7 +141,7 @@ final class nk extends IntrusiveNode {
         }
     }
 
-    final static Sprite a(Sprite param0, int param1, int param2, int param3) {
+    final static Sprite createTintedSprite(Sprite param0, int param1, int param2, int param3) {
         int var5 = 0;
         Sprite stackIn_14_0 = null;
         Sprite stackIn_16_0 = null;
@@ -170,11 +170,11 @@ final class nk extends IntrusiveNode {
               if (0 != (65535 & var6)) {
                 if ((16711935 & var6) == 0) {
                   var7 = var6 >> 8;
-                  var4[var5] = cr.b(ScrollPane.b(16711696, var7 * ScrollPane.b(255, param1 >> 16) << 8), cr.b(ScrollPane.b(255, param1) * var7 >> 8, ScrollPane.b(ScrollPane.b(param1 >> 8, 255) * var7, 65280)));
+                  var4[var5] = cr.b(ScrollPane.bitAnd(16711696, var7 * ScrollPane.bitAnd(255, param1 >> 16) << 8), cr.b(ScrollPane.bitAnd(255, param1) * var7 >> 8, ScrollPane.bitAnd(ScrollPane.bitAnd(param1 >> 8, 255) * var7, 65280)));
                 }
               } else {
                 var7 = var6 >> 16;
-                var4[var5] = cr.b(ScrollPane.b(1107361536, var7 * ScrollPane.b(255, param3 >> 16)) << 8, cr.b(var7 * ScrollPane.b(255, param3) >> 8, ScrollPane.b(65280, var7 * (ScrollPane.b(65362, param3) >> 8))));
+                var4[var5] = cr.b(ScrollPane.bitAnd(1107361536, var7 * ScrollPane.bitAnd(255, param3 >> 16)) << 8, cr.b(var7 * ScrollPane.bitAnd(255, param3) >> 8, ScrollPane.bitAnd(65280, var7 * (ScrollPane.bitAnd(65362, param3) >> 8))));
               }
             }
           }
@@ -199,14 +199,14 @@ final class nk extends IntrusiveNode {
         }
     }
 
-    final static Sprite[] a(int param0, byte param1) {
+    final static Sprite[] createSolidCentreFrame(int param0, byte param1) {
         int var2 = -119 / ((43 - param1) / 47);
         Sprite[] var3 = new Sprite[9];
         var3[4] = PacketBuffer.a(-111, 64, param0);
         return var3;
     }
 
-    final void a(int param0) {
+    final void advanceShockwave(int param0) {
         int var2;
         IntrusiveNode var3;
         IntrusiveNode var4;
@@ -225,7 +225,7 @@ final class nk extends IntrusiveNode {
         if (param0 < 91) {
           nk.releaseStatics((byte) -1);
         }
-        var3 = this.field_l.c(49);
+        var3 = this.field_l.last(49);
         while (var3 instanceof ha) {
           var4 = var3.previous;
           if (((ha) (var3)).field_f < var2) {
@@ -262,7 +262,7 @@ final class nk extends IntrusiveNode {
         int var1 = -54 / ((21 - param0) / 40);
     }
 
-    final static int[] a(int param0, int param1, int param2) {
+    final static int[] createColorRamp(int param0, int param1, int param2) {
         int var10 = 0;
         int var11 = 0;
         int var12 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -326,7 +326,7 @@ final class nk extends IntrusiveNode {
           this.field_o = param1;
           this.field_l = new IntrusiveDeque();
           var5_int = this.field_r * this.field_r;
-          var6 = this.field_m.entities.c(76);
+          var6 = this.field_m.entities.last(76);
           while (var6 instanceof SimEntity) {
             boolean decompiledFrameRemainder0 = true;
             if (((!(var6 instanceof SimZombie) ||
@@ -367,12 +367,12 @@ final class nk extends IntrusiveNode {
                 if (var6 instanceof SimZombie) {
                   var13 = (SimZombie) (var6);
                   if (this.field_m.world.b(0, var13.field_gb)) {
-                    this.field_m.a((byte) -100, var13);
+                    this.field_m.emitPowerupResisted((byte) -100, var13);
                     decompiledFrameRemainder0 = false;
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  this.field_l.a(new ha((SimEntity) (var6), var11), false);
+                  this.field_l.addFirst(new ha((SimEntity) (var6), var11), false);
                 }
               }
             }

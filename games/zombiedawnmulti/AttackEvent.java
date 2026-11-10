@@ -21,7 +21,7 @@ final class AttackEvent extends GameEvent {
         int var3 = 0;
         CipherPacketBuffer var2 = ma.field_a;
         int var3Lifetime1;
-        var2.b((byte) -35, param1);
+        var2.writeCipheredOpcode((byte) -35, param1);
         var2.position = var2.position + 1;
         if (param0) {
           var3 = var2.position;
@@ -43,19 +43,19 @@ final class AttackEvent extends GameEvent {
         var2.e(113, var2.position - var3Lifetime1);
     }
 
-    final void a(byte param0) {
+    final void removeFromQueue(byte param0) {
         if (param0 <= -47) {
-          super.a((byte) -82);
-          ic.field_c.a((IntrusiveNode) (this), false);
+          super.removeFromQueue((byte) -82);
+          ic.field_c.addFirst((IntrusiveNode) (this), false);
           return;
         }
         GameScreen var3 = (GameScreen) null;
-        this.a(70, (GameScreen) null);
-        super.a((byte) -82);
-        ic.field_c.a((IntrusiveNode) (this), false);
+        this.apply(70, (GameScreen) null);
+        super.removeFromQueue((byte) -82);
+        ic.field_c.addFirst((IntrusiveNode) (this), false);
     }
 
-    final void a(int param0, GameScreen param1) {
+    final void apply(int param0, GameScreen param1) {
         try {
           param1.applyAttack(-1181, this.field_l, this.field_m, this.field_i, this.field_k);
           if (param0 != 0) {
@@ -66,14 +66,14 @@ final class AttackEvent extends GameEvent {
         }
     }
 
-    final void a(int param0, boolean param1, int param2, int param3) {
+    final void drawDebugOverlay(int param0, boolean param1, int param2, int param3) {
         if (!param1) {
           this.field_l = 93;
         }
     }
 
     final void a(int param0, int param1, int param2, int param3, byte param4, int param5) {
-        super.a(param4 - 14, param0);
+        super.setTick(param4 - 14, param0);
         this.field_m = param3;
         if (param4 == 14) {
           this.field_k = param2;

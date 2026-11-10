@@ -21,7 +21,7 @@ final class bh {
         field_f = null;
     }
 
-    final static String a(int param0, ChatMessage param1) {
+    final static String formatChatPrefix(int param0, ChatMessage param1) {
         String stackIn_32_0 = null;
         Object stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
@@ -49,7 +49,7 @@ final class bh {
           }
           if (param0 >= -125) {
             var5 = (jh) null;
-            bh.a(-58, -66, -108, (jh) null, true, 107, -83, 97);
+            bh.findValidSettingCombination(-58, -66, -108, (jh) null, true, 107, -83, 97);
           }
           var3 = "";
           if (2 != param1.field_l) {
@@ -96,7 +96,7 @@ final class bh {
         }
     }
 
-    final static void a(int param0, int param1, int param2, jh param3, boolean param4, int param5, int param6, int param7) {
+    final static void findValidSettingCombination(int param0, int param1, int param2, jh param3, boolean param4, int param5, int param6, int param7) {
         AlignedIconLabel[][] stackIn_6_0 = null;
         int stackIn_7_1 = 0;
         int stackIn_25_0 = 0;
@@ -129,7 +129,7 @@ final class bh {
         try {
           if (param0 != -1712) {
             var16 = (ChatMessage) null;
-            bh.a(-40, (ChatMessage) null);
+            bh.formatChatPrefix(-40, (ChatMessage) null);
           }
           if (param7 >= param5) {
             var8_int = 1;
@@ -240,7 +240,7 @@ final class bh {
                   } else {
                     GameSimulation.field_v[param7] = (byte)var11;
                   }
-                  bh.a(-1712, param1, param2, param3, param4, param5, param6, param7 + 1);
+                  bh.findValidSettingCombination(-1712, param1, param2, param3, param4, param5, param6, param7 + 1);
                   if (BirthDateValidator.field_l) {
                     return;
                   }
@@ -281,7 +281,7 @@ final class bh {
             }
             if (var12 != 0) {
               var10_intLifetime1 = 1;
-              bh.a(-1712, param1, param2, param3, param4, param5, param6, param7 + 1);
+              bh.findValidSettingCombination(-1712, param1, param2, param3, param4, param5, param6, param7 + 1);
             }
             if (BirthDateValidator.field_l) {
               return;

@@ -20,7 +20,7 @@ final class TriangleRasterizer {
         field_h = param3 - param1;
         TriangleRasterizer.b();
         if (field_a.length < field_h) {
-          field_a = new int[cb.b(-74, field_h)];
+          field_a = new int[cb.nextPowerOfTwo(-74, field_h)];
         }
         int var4 = param1 * SoftwareRasterizer.width + param0;
         for (var5 = 0; var5 < field_h; var5++) {
