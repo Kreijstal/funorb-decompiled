@@ -5,7 +5,7 @@ final class mga extends IntrusiveNode {
     static char[] field_j;
     int field_k;
     static String[] field_f;
-    dl field_h;
+    AchievementsOverlay field_h;
     static long field_i;
     static int[] field_g;
 
@@ -68,7 +68,7 @@ final class mga extends IntrusiveNode {
         }
     }
 
-    mga(dl param0, int param1) {
+    mga(AchievementsOverlay param0, int param1) {
         try {
           this.field_h = param0;
           this.field_k = param1;

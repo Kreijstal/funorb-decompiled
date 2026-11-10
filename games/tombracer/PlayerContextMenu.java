@@ -141,7 +141,7 @@ final class PlayerContextMenu {
             return true;
           }
           var5 = (String) null;
-          gu.a(0, true, this.field_i, var4_ref, (String) null, 2);
+          TreasureValuesOverlay.a(0, true, this.field_i, var4_ref, (String) null, 2);
           if (param1 != -121) {
             return false;
           }
@@ -161,7 +161,7 @@ final class PlayerContextMenu {
         }
         if (var4_refLifetime1 != null) {
           var5Lifetime1 = (String) null;
-          gu.a(0, true, this.field_i, var4_refLifetime1, (String) null, 2);
+          TreasureValuesOverlay.a(0, true, this.field_i, var4_refLifetime1, (String) null, 2);
         }
         if (param1 != -121) {
           return false;

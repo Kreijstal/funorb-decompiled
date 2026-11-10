@@ -31,7 +31,7 @@ final class ie extends qu {
         return (byte[]) null;
     }
 
-    final void a(boolean param0, byte[] param1) {
+    final void setBytes(boolean param0, byte[] param1) {
         this.field_g = java.nio.ByteBuffer.allocateDirect(param1.length);
         if (!param0) {
           return;

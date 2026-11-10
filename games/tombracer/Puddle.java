@@ -342,7 +342,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
 
     final static boolean b(int param0, byte param1, int param2, int param3) {
         if (fua.field_g) {
-          return apa.field_c.dispatchKeyInput((byte) -121, fna.field_h, HardwareOpenGlToolkit.field_td);
+          return apa.field_c.dispatchKeyInput((byte) -121, MenuEntry.field_h, HardwareOpenGlToolkit.field_td);
         }
         if (vo.field_b) {
           return KeySwitchComponent.c(param1 + 2097196, param0, param3);

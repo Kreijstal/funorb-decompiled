@@ -29,7 +29,7 @@ final class vba extends we {
         if (param1 != -48) {
           return 48;
         }
-        return this.a((byte) 126, param0) + this.field_m[param0].e(param1 ^ 141);
+        return this.a((byte) 126, param0) + this.items[param0].e(param1 ^ 141);
     }
 
     final void a(boolean param0, boolean param1, int param2) {
@@ -205,7 +205,7 @@ final class vba extends we {
         if (param0 <= 111) {
           return 68;
         }
-        return aaa.a(false) / 2 - (-15 + this.field_m[param1].e(-163) / 2 * this.field_m.length) + this.field_m[param1].e(-163) * param1;
+        return aaa.a(false) / 2 - (-15 + this.items[param1].e(-163) / 2 * this.items.length) + this.items[param1].e(-163) * param1;
     }
 
     private final void c(int param0, byte param1) {
@@ -255,7 +255,7 @@ final class vba extends we {
         if (!this.a(false, var6)) {
           kn.field_p.a(var7Lifetime1, false, pg.field_x, var4, -6671872, -1);
         } else {
-          kn.field_p.a(var7Lifetime1, false, dl.field_p, var4, -14671840, -1);
+          kn.field_p.a(var7Lifetime1, false, AchievementsOverlay.field_p, var4, -14671840, -1);
         }
         var7Lifetime1 += 20;
         discarded$0 = this.a(var12 + "<br><br>" + jn.field_r + sw.field_zb[var6] + "       " + DisplacementOperator.field_m + sw.field_zb[var6] / 100, kv.field_a, -14671840, 180, var4, kn.field_p, param1 ^ -150, var7Lifetime1, 15);

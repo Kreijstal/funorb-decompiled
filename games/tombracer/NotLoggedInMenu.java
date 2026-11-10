@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vv extends wv {
+final class NotLoggedInMenu extends MenuScreen {
     static gb field_q;
     static boolean field_r;
     private dea field_s;
 
     final int a(byte param0, int param1) {
         if (param0 > 111) {
-          return aaa.a(false) / 2 - this.field_m.length * this.field_m[param1].e(-163) / 2 + this.field_m[param1].e(-163) * param1;
+          return aaa.a(false) / 2 - this.items.length * this.items[param1].e(-163) / 2 + this.items[param1].e(-163) * param1;
         }
         this.g(16, -28);
-        return aaa.a(false) / 2 - this.field_m.length * this.field_m[param1].e(-163) / 2 + this.field_m[param1].e(-163) * param1;
+        return aaa.a(false) / 2 - this.items.length * this.items[param1].e(-163) / 2 + this.items[param1].e(-163) * param1;
     }
 
-    vv(int param0, int param1, int param2, int param3, int param4, int[] param5) {
+    NotLoggedInMenu(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_s = new dea(0);
         try {
@@ -59,7 +59,7 @@ final class vv extends wv {
         String var9Lifetime2;
         String var9Lifetime3;
         int var8Lifetime1;
-        oka.a(ClampOperator.field_o.toUpperCase(), 2497287, SingleChildWidget.field_v, -1, gg.field_f.c() / 2 + var5 - 30, aaa.a(false) / 2, -1);
+        MembersUpsellMenu.a(ClampOperator.field_o.toUpperCase(), 2497287, SingleChildWidget.field_v, -1, gg.field_f.c() / 2 + var5 - 30, aaa.a(false) / 2, -1);
         GameFont var6 = kn.field_p;
         int var7 = kv.field_a.field_h + (kv.field_a.field_g + 4);
         if (param0 < -116) {
@@ -94,10 +94,10 @@ final class vv extends wv {
 
     final int a(int param0, byte param1) {
         if (param1 == -48) {
-          return this.a((byte) 114, param0) + this.field_m[param0].e(param1 ^ 141);
+          return this.a((byte) 114, param0) + this.items[param0].e(param1 ^ 141);
         }
         field_r = true;
-        return this.a((byte) 114, param0) + this.field_m[param0].e(param1 ^ 141);
+        return this.a((byte) 114, param0) + this.items[param0].e(param1 ^ 141);
     }
 
     static {

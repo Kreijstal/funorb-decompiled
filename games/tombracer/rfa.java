@@ -123,7 +123,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
                   og.b(0);
                 }
                 if (2 == var3) {
-                  hha.openQuitPage(di.a(110), (byte) -95);
+                  ArchiveRequest.openQuitPage(di.a(110), (byte) -95);
                 }
                 this.updateScreen(true, false);
               }
@@ -142,22 +142,22 @@ abstract class rfa extends AppletGameShell implements ShellListener {
                 if (!sr.a(125)) {
                   var2 = 1;
                   var3 = -1;
-                  while (NanoTickClock.a(true)) {
-                    if (fna.field_h == -1) {
-                      if (fna.field_h == -1 &&
+                  while (NanoTickClock.pollKeyEvent(true)) {
+                    if (MenuEntry.field_h == -1) {
+                      if (MenuEntry.field_h == -1 &&
                         var3 != -1) {
-                        fna.field_h = var3;
+                        MenuEntry.field_h = var3;
                         var3 = -1;
                       }
                     } else {
-                      if (TeleportState.a((byte) 15, fna.field_h)) {
-                        var3 = fna.field_h;
+                      if (TeleportState.a((byte) 15, MenuEntry.field_h)) {
+                        var3 = MenuEntry.field_h;
                         continue;
                       }
                     }
                     var4 = 0;
                     while (kra.field_c.size() > var4) {
-                      if (((ShellListener) (kra.field_c.elementAt(var4))).handleKey((byte) -72, HardwareOpenGlToolkit.field_td, fna.field_h)) {
+                      if (((ShellListener) (kra.field_c.elementAt(var4))).handleKey((byte) -72, HardwareOpenGlToolkit.field_td, MenuEntry.field_h)) {
                         break;
                       }
                       var4++;
@@ -349,7 +349,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
         var3 = TombRacer.field_G ? 1 : 0;
         var2 = 68 % ((param0 - 52) / 40);
         while (cj.a(S2CEventPacket.field_c, 0)) {
-          if (this.handleGamePacket(oka.field_z, WeaveOperator.field_q, (byte) 105)) {
+          if (this.handleGamePacket(MembersUpsellMenu.field_z, WeaveOperator.field_q, (byte) 105)) {
             continue;
           }
           this.dispatchServerPacket(-5);

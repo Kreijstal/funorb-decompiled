@@ -172,7 +172,7 @@ final class PlatformBehaviour extends Behaviour {
           this.field_u = this.field_u - 1;
           if (this.field_u <= 0) {
             this.field_r = true;
-            this.trap.i(true);
+            this.trap.startFalling(true);
             return;
           }
           return;

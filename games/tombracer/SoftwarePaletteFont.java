@@ -53,7 +53,7 @@ final class SoftwarePaletteFont extends GameFont {
           return;
         }
         if (param4) {
-          this.a(this.field_e[param0], this.field_g.field_r, param3, var12, var9, var6, var7, var10, var11);
+          this.blitMask(this.field_e[param0], this.field_g.field_r, param3, var12, var9, var6, var7, var10, var11);
         } else {
           this.blitPaletteGlyph(this.field_e[param0], this.field_g.field_r, this.field_f, var12, var9, var6, var7, var10, var11);
         }
@@ -77,7 +77,7 @@ final class SoftwarePaletteFont extends GameFont {
         this.field_f = param2[0].field_g;
     }
 
-    private final void a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final void blitMask(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var11 = 0;
         int var10;
         int var12;

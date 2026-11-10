@@ -128,7 +128,7 @@ final class nl {
         }
     }
 
-    final static wv a(int param0, byte param1) {
+    final static MenuScreen a(int param0, byte param1) {
         if (param1 != 50) {
           field_f = (IntrusiveDeque) null;
         }

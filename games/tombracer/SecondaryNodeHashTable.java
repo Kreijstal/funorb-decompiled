@@ -11,7 +11,7 @@ final class SecondaryNodeHashTable {
     private DualLinkNode field_a;
     private int field_f;
 
-    final static dh[] a(int param0, PlatformTaskDispatcher param1) {
+    final static dh[] queryDisplayModes(int param0, PlatformTaskDispatcher param1) {
         int var5 = 0;
         dh[] stackIn_3_0 = null;
         dh[] stackIn_9_0 = null;

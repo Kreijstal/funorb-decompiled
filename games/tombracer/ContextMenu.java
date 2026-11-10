@@ -61,7 +61,7 @@ final class ContextMenu extends jea {
         if (this.field_xb != param0) {
           return false;
         }
-        if (fna.field_h == 13) {
+        if (MenuEntry.field_h == 13) {
           this.field_xb = -1;
           return true;
         }

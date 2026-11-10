@@ -135,13 +135,13 @@ final class BlockComponent extends PrefabComponent {
     final static int A(int param0) {
         if (param0 <= 12) {
           BlockComponent.A(-47);
-          IntrusiveDequeCursor.field_a.a(-121);
+          IntrusiveDequeCursor.field_a.processSources(-121);
           if (wg.field_l.c(81)) {
             return 0;
           }
           return ArchiveNetworkClient.b((byte) -66);
         }
-        IntrusiveDequeCursor.field_a.a(-121);
+        IntrusiveDequeCursor.field_a.processSources(-121);
         if (wg.field_l.c(81)) {
           return 0;
         }

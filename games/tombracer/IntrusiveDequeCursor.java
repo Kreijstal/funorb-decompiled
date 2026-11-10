@@ -4,7 +4,7 @@
 final class IntrusiveDequeCursor {
     static int[] field_e;
     static int[] field_c;
-    static fma field_a;
+    static ArchiveManager field_a;
     private IntrusiveDeque deque;
     private IntrusiveNode nextNode;
 
@@ -79,7 +79,7 @@ final class IntrusiveDequeCursor {
         field_a = null;
         field_c = null;
         if (param0 != 2) {
-          field_a = (fma) null;
+          field_a = (ArchiveManager) null;
         }
     }
 

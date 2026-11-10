@@ -197,7 +197,7 @@ final class cm implements GamePacket {
               stackIn_23_0 = bf.field_b[0][var6 + 1];
               stackIn_24_1 = (var4_int != 0);
               stackIn_23_0.field_X = stackIn_24_1;
-              if (!rca.field_p &&
+              if (!UnlockOverlay.field_p &&
                 var6 == 3) {
                 bf.field_b[0][1 + var6].field_X = false;
               }

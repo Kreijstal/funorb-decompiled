@@ -7,7 +7,7 @@ final class dka {
     static String field_c;
     static String field_d;
 
-    final static MouseWheelInput a(byte param0) {
+    final static MouseWheelInput createMouseWheelInput(byte param0) {
         try {
           Throwable var1 = null;
           MouseWheelInput stackIn_3_0 = null;

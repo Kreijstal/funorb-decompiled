@@ -210,7 +210,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    final String a(int param0, String param1) {
+    final String validationMessageForText(int param0, String param1) {
         RuntimeException var3 = null;
         String var4 = null;
         String var5 = null;
@@ -241,7 +241,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_5_0;
           }
           if (ArchiveNetworkClient.a((byte) -72, var5)) {
-            stackIn_8_0 = qqa.field_o;
+            stackIn_8_0 = NetworkArchiveRequest.field_o;
             return stackIn_8_0;
           }
           if (eba.hasUniformCharacters(var5, 6912)) {
@@ -300,7 +300,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    final it a(byte param0, String param1) {
+    final it validateText(byte param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;

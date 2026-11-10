@@ -35,12 +35,12 @@ final class DamageableBehaviour extends Behaviour {
         Trap var2Lifetime1;
         if (param0 > 54) {
           var2 = this.getTargetTrap(123);
-          var2.c(2, (byte) 9);
+          var2.destroy(2, (byte) 9);
           return;
         }
         this.field_q = 119;
         var2Lifetime1 = this.getTargetTrap(123);
-        var2Lifetime1.c(2, (byte) 9);
+        var2Lifetime1.destroy(2, (byte) 9);
     }
 
     private final int a(int param0, Effect param1) {
@@ -180,7 +180,7 @@ final class DamageableBehaviour extends Behaviour {
         }
     }
 
-    final static IndexedSprite a(boolean param0, int param1, ResourceArchive param2, int param3) {
+    final static IndexedSprite loadIndexedSprite(boolean param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -312,7 +312,7 @@ final class DamageableBehaviour extends Behaviour {
     final static boolean a(int param0, int param1, int param2) {
         if (param0 >= -67) {
           ResourceArchive var4 = (ResourceArchive) null;
-          DamageableBehaviour.a(true, -98, (ResourceArchive) null, 106);
+          DamageableBehaviour.loadIndexedSprite(true, -98, (ResourceArchive) null, 106);
           if (!(TripBeamComponent.c(param1, param2, 52) | ((param1 & 458752) != 0 ? true : false))) {
             return uu.a(true, param1, param2) ? true : false;
           }

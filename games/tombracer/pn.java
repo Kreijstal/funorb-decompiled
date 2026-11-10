@@ -70,7 +70,7 @@ final class pn extends or {
         for (var2 = 0; var2 < fa.field_b; var2++) {
           var3 = mq.field_b[var2] * iga.field_m[var2];
           var21 = ck.field_c[var2];
-          if (!qqa.field_n[var2]) {
+          if (!NetworkArchiveRequest.field_n[var2]) {
             var10 = new int[var3];
             var22 = var10;
             for (var6 = 0; var3 > var6; var6++) {

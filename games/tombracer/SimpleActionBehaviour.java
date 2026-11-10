@@ -33,7 +33,7 @@ final class SimpleActionBehaviour extends Behaviour {
         var2 = 81 % ((28 - param0) / 49);
         var3 = this.field_o;
         if (var3 == 0) {
-          this.trap.v((byte) 109);
+          this.trap.remove((byte) 109);
         } else {
           if (var3 == 1) {
             stackIn_6_0 = this.trap;
@@ -120,7 +120,7 @@ final class SimpleActionBehaviour extends Behaviour {
           while (true) {
             if (var5 >= var4.length) {
               var6 = -62 / ((param0 + 53) / 56);
-              stackIn_20_0 = MatchScreen.a(-58, var3[var3.length - 1]);
+              stackIn_20_0 = MatchScreen.validateDigits(-58, var3[var3.length - 1]);
               return stackIn_20_0;
             }
             var6_ref_String = var4[var5];

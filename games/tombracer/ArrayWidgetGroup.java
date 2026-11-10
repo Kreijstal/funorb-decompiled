@@ -594,7 +594,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements WidgetParent {
         try {
           if (param1 != 1) {
             var4 = (UiWidget) null;
-            this.a(-74, -77, 93, 125, (UiWidget) null, -41, 108);
+            this.handleMouseWheel(-74, -77, 93, 125, (UiWidget) null, -41, 108);
           }
           stackIn_3_0 = this.focusBackwardFrom(param0, (byte) -14, 1);
           return stackIn_3_0;
@@ -617,7 +617,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements WidgetParent {
         this.layoutChildren((byte) 88);
     }
 
-    boolean a(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {
+    boolean handleMouseWheel(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {
         int var9 = 0;
         UiWidget[] var8 = null;
         RuntimeException var8_ref = null;
@@ -642,7 +642,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements WidgetParent {
             var10 = var12[var9];
             if (var10 != null &&
               var10.hasKeyboardFocus((byte) -34) &&
-              var10.a(param0, param1, param2, param3, param4, param5, param6 + 0)) {
+              var10.handleMouseWheel(param0, param1, param2, param3, param4, param5, param6 + 0)) {
               return true;
             }
           }

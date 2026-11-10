@@ -151,7 +151,7 @@ final class LightSourceModel extends TrapModel {
           return;
         }
         var9 = this.body.getRoom((byte) -86);
-        var3 = var9.j((byte) -105);
+        var3 = var9.getScene((byte) -105);
         if (var3 == null) {
           return;
         }

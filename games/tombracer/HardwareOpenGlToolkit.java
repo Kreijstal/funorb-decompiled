@@ -92,7 +92,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
               var8_int = 3;
               var9 = 1 + param6;
             } else {
-              if (fma.field_f != param4) {
+              if (ArchiveManager.field_f != param4) {
                 if (param4 != vs.field_T) {
                   if (param4 == nb.field_b) {
                     var9 = param6 + 2;
@@ -685,7 +685,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
             var5_int = 1;
           } else {
             if (param1 != di.field_d) {
-              if (param1 != fma.field_f) {
+              if (param1 != ArchiveManager.field_f) {
                 if (param1 == vs.field_T) {
                   var5_int = 6;
                   var6 = param0 + 2;

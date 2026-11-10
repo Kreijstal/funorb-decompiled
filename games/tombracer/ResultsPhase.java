@@ -26,7 +26,7 @@ final class ResultsPhase extends MatchPhase {
             var8.writeString(param4, false);
           }
           if (param1 != null) {
-            wq.a(param1, var8, 0);
+            wq.writeHuffmanString(param1, var8, 0);
           } else {
             var8.writeShort(-1477662136, param5);
           }
@@ -366,14 +366,14 @@ final class ResultsPhase extends MatchPhase {
           var32 = String.valueOf(this.field_r[var8Lifetime2].field_m);
           RoomEffectTraps.a(-1, -59, var24Lifetime1, "$", var23Lifetime1, SingleChildWidget.field_v, 2431750);
           RoomEffectTraps.a(0, -28, -1 + var24Lifetime1, var32.toUpperCase(), 18 + var23Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime2]);
-          var26 = this.matchState.field_v[var8Lifetime2];
+          var26 = this.matchState.roundWins[var8Lifetime2];
           if (var8Lifetime2 == this.matchState.e(2) &&
             var7Lifetime2 < -100 + fd.field_e) {
             var26--;
           }
-          oka.a(Integer.toString(var26), wga.field_a[var8Lifetime2], SingleChildWidget.field_v, -1, -47 + (var24Lifetime1 - 1), 55, 0);
-          oka.a(Integer.toString(this.matchState.field_L), wga.field_a[var8Lifetime2], SingleChildWidget.field_v, -1, -12 + (var24Lifetime1 - 1), 55, 0);
-          oka.a("_", wga.field_a[var8Lifetime2], SingleChildWidget.field_v, -1, -40 + var24Lifetime1, 55, 0);
+          MembersUpsellMenu.a(Integer.toString(var26), wga.field_a[var8Lifetime2], SingleChildWidget.field_v, -1, -47 + (var24Lifetime1 - 1), 55, 0);
+          MembersUpsellMenu.a(Integer.toString(this.matchState.roundsToWin), wga.field_a[var8Lifetime2], SingleChildWidget.field_v, -1, -12 + (var24Lifetime1 - 1), 55, 0);
+          MembersUpsellMenu.a("_", wga.field_a[var8Lifetime2], SingleChildWidget.field_v, -1, -40 + var24Lifetime1, 55, 0);
         }
         for (var8Lifetime3 = 0; var8Lifetime3 < this.matchState.field_k; var8Lifetime3++) {
           stackIn_61_0 = 95 * var8Lifetime3 + 105;
@@ -385,10 +385,10 @@ final class ResultsPhase extends MatchPhase {
           var9Lifetime2 = stackIn_61_0 + stackIn_62_1;
           if (-100 + fd.field_e <= var7Lifetime2 &&
             var8Lifetime3 == this.matchState.e(2)) {
-            if (this.matchState.field_L == this.matchState.field_v[var8Lifetime3]) {
-              oka.a(vu.field_d.toUpperCase(), 2431750, SingleChildWidget.field_v, -1, var9Lifetime2 - 22, (var3 + 50 >> 1) + 20, -1);
+            if (this.matchState.roundsToWin == this.matchState.roundWins[var8Lifetime3]) {
+              MembersUpsellMenu.a(vu.field_d.toUpperCase(), 2431750, SingleChildWidget.field_v, -1, var9Lifetime2 - 22, (var3 + 50 >> 1) + 20, -1);
             } else {
-              oka.a(cha.field_h.toUpperCase(), 2431750, SingleChildWidget.field_v, -1, var9Lifetime2 - 22, (var3 + 50 >> 1) + 20, -1);
+              MembersUpsellMenu.a(cha.field_h.toUpperCase(), 2431750, SingleChildWidget.field_v, -1, var9Lifetime2 - 22, (var3 + 50 >> 1) + 20, -1);
             }
             var10Lifetime1 = 0;
             for (var11Lifetime1 = 0; this.field_r.length > var11Lifetime1; var11Lifetime1++) {
@@ -398,7 +398,7 @@ final class ResultsPhase extends MatchPhase {
               }
             }
             if (var10Lifetime1 != 0) {
-              oka.a(uda.field_o.toUpperCase(), 2431750, eda.field_f, -1, var9Lifetime2, 20 + (50 + var3 >> 1), -1);
+              MembersUpsellMenu.a(CharacterSelectPhase.field_o.toUpperCase(), 2431750, eda.field_f, -1, var9Lifetime2, 20 + (50 + var3 >> 1), -1);
             }
           }
           tga.field_a.setClip(0, var9Lifetime2 - 100, (int)(2.0 + this.field_r[var8Lifetime3].field_q), var9Lifetime2 + 50);
@@ -406,7 +406,7 @@ final class ResultsPhase extends MatchPhase {
           gca.field_a.draw(62, 10 + var9Lifetime2 - 95, 0, var10Lifetime1Lifetime1 | -1006632960, 1);
           tga.field_a.la();
           this.matchState.players[var8Lifetime3].getAnimator((byte) -42).a(-1, (int)this.field_r[var8Lifetime3].field_q, 1400, 1536, var9Lifetime2);
-          oka.a(this.matchState.playerNames[var8Lifetime3].toUpperCase(), var10Lifetime1Lifetime1, kn.field_p, -1, var9Lifetime2, (int)this.field_r[var8Lifetime3].field_q, -1);
+          MembersUpsellMenu.a(this.matchState.playerNames[var8Lifetime3].toUpperCase(), var10Lifetime1Lifetime1, kn.field_p, -1, var9Lifetime2, (int)this.field_r[var8Lifetime3].field_q, -1);
           if (!this.field_p &&
             var7Lifetime2 >= var8Lifetime3 * 50 + efa.field_y &&
             var7Lifetime2 < 50 + efa.field_y + this.matchState.field_k * 50) {
@@ -556,7 +556,7 @@ final class ResultsPhase extends MatchPhase {
             }
           }
         }
-        se.f((byte) -6);
+        RemovedFromGameMenu.f((byte) -6);
         this.d(-27142);
     }
 

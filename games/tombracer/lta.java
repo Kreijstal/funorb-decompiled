@@ -37,9 +37,9 @@ final class lta implements GamePacket {
         try {
           if (!param1) {
             field_a = (jea) null;
-            param0.c(121);
+            param0.startRound(121);
           } else {
-            param0.c(121);
+            param0.startRound(121);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

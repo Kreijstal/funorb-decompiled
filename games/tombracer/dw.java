@@ -45,7 +45,7 @@ final class dw {
         if (param0 > -5) {
           dw.releaseStatics((byte) -100);
         }
-        rca.field_l = true;
+        UnlockOverlay.field_l = true;
     }
 
     static {

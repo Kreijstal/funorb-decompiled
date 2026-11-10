@@ -58,7 +58,7 @@ abstract class SimulationObserver {
 
     abstract void onTreasureCollected(int param0, int param1, Player param2, Trap param3);
 
-    abstract void a(Trap param0, int param1);
+    abstract void onTrapDestroyed(Trap param0, int param1);
 
     final void a(PlayerSimulation param0, int param1, int param2) {
         RuntimeException var4 = null;

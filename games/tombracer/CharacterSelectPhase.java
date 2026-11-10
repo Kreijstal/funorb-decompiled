@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uda extends MatchPhase {
+final class CharacterSelectPhase extends MatchPhase {
     static ToolkitSprite field_r;
     private daa field_m;
     private IntrusiveDeque field_n;
@@ -98,10 +98,10 @@ final class uda extends MatchPhase {
           } else {
             bsa.field_i.draw(-(bsa.field_i.a() >> 1) + var8, -(bsa.field_i.c() >> 1) + var9, 0, 1627389951, 1);
           }
-          SocketConnector.a(this.screen.a(var11, false).toUpperCase(), 1, qf.field_j, wga.field_a[var11], 0, 32, 1, 55 + var9, var8 - 64, -1, (byte) 60, 128);
+          SocketConnector.a(this.screen.getPlayerName(var11, false).toUpperCase(), 1, qf.field_j, wga.field_a[var11], 0, 32, 1, 55 + var9, var8 - 64, -1, (byte) 60, 128);
           var11++;
         }
-        se.f((byte) -6);
+        RemovedFromGameMenu.f((byte) -6);
         this.d(-27142);
     }
 
@@ -127,7 +127,7 @@ final class uda extends MatchPhase {
             if (this.screen.field_D) {
               return;
             }
-            this.screen.c(111);
+            this.screen.startRound(111);
           }
           return;
         }
@@ -159,7 +159,7 @@ final class uda extends MatchPhase {
         }
     }
 
-    uda(MatchScreen param0, MatchProtocol param1) {
+    CharacterSelectPhase(MatchScreen param0, MatchProtocol param1) {
         super(param0, param1);
         int stackIn_5_0 = 0;
         int stackIn_6_1 = 0;
@@ -332,7 +332,7 @@ final class uda extends MatchPhase {
         field_w = null;
         field_s = null;
         if (param0 < 9) {
-          uda.releaseStatics(105);
+          CharacterSelectPhase.releaseStatics(105);
         }
         field_r = null;
     }

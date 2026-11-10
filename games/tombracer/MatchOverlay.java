@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class me extends IntrusiveNode {
-    boolean field_h;
+abstract class MatchOverlay extends IntrusiveNode {
+    boolean finished;
     MatchScreen field_i;
     static String field_f;
     MatchState field_g;
@@ -13,11 +13,11 @@ abstract class me extends IntrusiveNode {
 
     abstract boolean a(boolean param0);
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         if (param0 > -109) {
-          me.releaseStatics(109);
+          MatchOverlay.releaseStatics(109);
         }
-        return this.field_h;
+        return this.finished;
     }
 
     public static void releaseStatics(int param0) {
@@ -27,16 +27,16 @@ abstract class me extends IntrusiveNode {
         field_f = null;
     }
 
-    void b(int param0) {
+    void finish(int param0) {
         if (param0 != -10968) {
-          this.c((byte) -2);
+          this.isFinished((byte) -2);
         }
-        this.field_h = true;
+        this.finished = true;
     }
 
     abstract void b(byte param0);
 
-    me(MatchScreen param0) {
+    MatchOverlay(MatchScreen param0) {
         try {
           this.field_i = param0;
           this.field_g = param0.matchState;

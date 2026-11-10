@@ -120,8 +120,8 @@ final class CoinBagItemComponent extends ItemComponent {
             var6 = hw.field_a;
             hw.field_a.field_t = 0;
             var6.field_G = 0;
-            var7 = dl.field_t;
-            dl.field_t.field_t = 0;
+            var7 = AchievementsOverlay.field_t;
+            AchievementsOverlay.field_t.field_t = 0;
             var7.field_G = 0;
             if (mka.b(param1 + 8193)) {
               StatusEffect.field_g.field_r = una.field_d.toUpperCase();
@@ -303,10 +303,10 @@ final class CoinBagItemComponent extends ItemComponent {
                     if (var12 == 0) {
                       var14_ref_String = gl.$cfr$intArgs$a$53ce4ab4c593(102, bl.field_b, new String[]{(String) (var11_ref)});
                       if (var19 != 0) {
-                        var14_ref_String = uda.field_w + (String) (var11_ref);
+                        var14_ref_String = CharacterSelectPhase.field_w + (String) (var11_ref);
                       }
                     } else {
-                      var14_ref_String = uda.field_w + (String) (var11_ref);
+                      var14_ref_String = CharacterSelectPhase.field_w + (String) (var11_ref);
                     }
                   }
                   ArchiveNetworkClient.field_b = "<col=A00000>" + var13_ref_String + "<br>" + var14_ref_String;
@@ -437,16 +437,16 @@ final class CoinBagItemComponent extends ItemComponent {
               if (var19 != 0) {
                 var9_ref_String = uu.field_a.field_tb;
                 StatusEffect.field_g.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(113, jea.field_nb, new String[]{var9_ref_String}).toUpperCase();
-                dl.field_t.a(dka.field_b.field_G, 40, -23776, dka.field_b.field_t - 40, 0);
-                dl.field_t.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(107, TextLayout.field_d, new String[]{var9_ref_String});
-                var8 = dl.field_t;
+                AchievementsOverlay.field_t.a(dka.field_b.field_G, 40, -23776, dka.field_b.field_t - 40, 0);
+                AchievementsOverlay.field_t.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(107, TextLayout.field_d, new String[]{var9_ref_String});
+                var8 = AchievementsOverlay.field_t;
               }
             } else {
               var9_ref_String = uu.field_a.field_tb;
               StatusEffect.field_g.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(113, jea.field_nb, new String[]{var9_ref_String}).toUpperCase();
-              dl.field_t.a(dka.field_b.field_G, 40, -23776, dka.field_b.field_t - 40, 0);
-              dl.field_t.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(107, TextLayout.field_d, new String[]{var9_ref_String});
-              var8 = dl.field_t;
+              AchievementsOverlay.field_t.a(dka.field_b.field_G, 40, -23776, dka.field_b.field_t - 40, 0);
+              AchievementsOverlay.field_t.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(107, TextLayout.field_d, new String[]{var9_ref_String});
+              var8 = AchievementsOverlay.field_t;
             }
             if (uq.field_d != 0L) {
               var9 = (int)(-bva.currentTimeMillis((byte) -107) + uq.field_d);

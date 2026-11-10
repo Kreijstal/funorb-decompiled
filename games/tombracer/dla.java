@@ -65,7 +65,7 @@ final class dla {
         int var13Lifetime1Lifetime1;
         var16 = TombRacer.field_G ? 1 : 0;
         try {
-          var17 = new PacketBuffer(RotaterMountComponent.a(param1, -106));
+          var17 = new PacketBuffer(RotaterMountComponent.decompressContainer(param1, -106));
           if (param0 != -23918) {
             return;
           }

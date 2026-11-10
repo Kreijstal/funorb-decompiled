@@ -33,7 +33,7 @@ final class fga implements ShellListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 78 % ((-55 - param0) / 60);
-          stackIn_7_0 = (rd.b(false)) && (aga.a(false, param1).field_d);
+          stackIn_7_0 = (MultiplayerLoginMenu.b(false)) && (aga.a(false, param1).field_d);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -238,7 +238,7 @@ final class fga implements ShellListener {
             var3.clear(0);
             stackIn_18_0 = 22;
             stackIn_18_1 = f.field_e;
-            stackIn_19_2 = !(rd.b(false));
+            stackIn_19_2 = !(MultiplayerLoginMenu.b(false));
             var4Lifetime1 = jk.$cfr$intArgs$a$922851b022bc(stackIn_18_0, stackIn_18_1, stackIn_19_2);
             if (param0 != 1) {
               this.field_b = (int[]) null;
@@ -273,14 +273,14 @@ final class fga implements ShellListener {
                   var9 = Integer.toString(var6_intLifetime1);
                 }
                 if (var9 != null) {
-                  oka.a((String) (var9), 16777215, kn.field_p, -1, this.field_b[var5Lifetime1] + 15, 20 + this.field_d[var5Lifetime1], 0);
+                  MembersUpsellMenu.a((String) (var9), 16777215, kn.field_p, -1, this.field_b[var5Lifetime1] + 15, 20 + this.field_d[var5Lifetime1], 0);
                 }
                 var9Lifetime1 = null;
                 if (aga.a(false, var6_intLifetime1).field_d) {
                   var9Lifetime1 = "M";
                 }
                 if (null != var9Lifetime1) {
-                  oka.a((String) (var9Lifetime1), 16777215, kn.field_p, -1, 26 + this.field_b[var5Lifetime1], this.field_d[var5Lifetime1] + 20, 0);
+                  MembersUpsellMenu.a((String) (var9Lifetime1), 16777215, kn.field_p, -1, 26 + this.field_b[var5Lifetime1], this.field_d[var5Lifetime1] + 20, 0);
                 }
                 var5Lifetime1++;
                 continue;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class we extends wv {
+abstract class we extends MenuScreen {
     dea field_q;
 
     void a(boolean param0, boolean param1, int param2) {

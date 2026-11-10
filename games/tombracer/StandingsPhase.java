@@ -8,7 +8,7 @@ final class StandingsPhase extends MatchPhase {
     static long[] field_m;
     static String field_s;
     private boolean field_q;
-    private fna[] field_p;
+    private MenuEntry[] field_p;
 
     public static void releaseStatics(byte param0) {
         field_m = null;
@@ -38,9 +38,9 @@ final class StandingsPhase extends MatchPhase {
           this.field_r = new int[this.matchState.field_k];
           for (var3_int = 0; this.matchState.field_k > var3_int; var3_int++) {
             var4 = 0;
-            for (var5 = 0; this.matchState.field_v.length > var5; var5++) {
+            for (var5 = 0; this.matchState.roundWins.length > var5; var5++) {
               if (~var5 != ~var3_int &&
-                this.matchState.field_v[var5] > this.matchState.field_v[var3_int] &&
+                this.matchState.roundWins[var5] > this.matchState.roundWins[var3_int] &&
                 !this.matchState.f((byte) -96, var5)) {
                 var4++;
               }
@@ -65,21 +65,21 @@ final class StandingsPhase extends MatchPhase {
           }
           if (this.screen.field_D &&
             !this.screen.d((byte) 82)) {
-            this.field_p = new fna[2];
-            this.field_p[0] = new fna(33, wba.field_q[33], 1, false);
+            this.field_p = new MenuEntry[2];
+            this.field_p[0] = new MenuEntry(33, wba.field_q[33], 1, false);
             this.field_p[0].field_b = aaa.a(false) - 110;
             this.field_p[0].field_i = SwitchLinkList.b(0) - 25;
             this.field_p[0].a(false);
-            this.field_p[1] = new fna(34, wba.field_q[34], 1, false);
+            this.field_p[1] = new MenuEntry(34, wba.field_q[34], 1, false);
             this.field_p[1].field_b = 100;
             this.field_p[1].field_i = SwitchLinkList.b(0) - 25;
             this.field_p[1].a(false);
             return;
           }
-          this.field_p = new fna[1];
+          this.field_p = new MenuEntry[1];
           stackIn_26_0 = (this.screen.field_D) ? 33 : 16;
           var3_intLifetime1 = stackIn_26_0;
-          this.field_p[0] = new fna(var3_intLifetime1, wba.field_q[var3_intLifetime1], 0, false);
+          this.field_p[0] = new MenuEntry(var3_intLifetime1, wba.field_q[var3_intLifetime1], 0, false);
           this.field_p[0].field_b = -100 + aaa.a(false);
           this.field_p[0].field_i = SwitchLinkList.b(0) - 25;
           this.field_p[0].a(false);
@@ -137,7 +137,7 @@ final class StandingsPhase extends MatchPhase {
     final void b(int param0, boolean param1) {
         int var19 = 0;
         int stackIn_4_0 = 0;
-        fna stackIn_62_0;
+        MenuEntry stackIn_62_0;
         boolean stackIn_62_1;
         boolean stackIn_62_2;
         int stackIn_62_3;
@@ -190,7 +190,7 @@ final class StandingsPhase extends MatchPhase {
             }
             var12 = 150;
             cha.a(-60 + var11, 2, tga.field_a, 4, var10 - 250, 120, 65793 | var12 << 24, 1, 100);
-            oka.a(this.screen.a(var22, false).toUpperCase(), wga.field_a[var22], kn.field_p, -1, var10 - 230, var11, 0);
+            MembersUpsellMenu.a(this.screen.getPlayerName(var22, false).toUpperCase(), wga.field_a[var22], kn.field_p, -1, var10 - 230, var11, 0);
             try {
               tga.field_a.a(var11, var10 - 140, 10 + var11, -151 + var10, var11, var10 - 151, 65793 | var12 << 24, var12 << 24 | 65793, var12 << 24 | 65793, 1);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -200,7 +200,7 @@ final class StandingsPhase extends MatchPhase {
             if (!this.matchState.f((byte) -102, var22)) {
               var13 = 7829367;
               if (-2 != this.matchState.field_z) {
-                SocketConnector.a(gl.$cfr$intArgs$a$53ce4ab4c593(93, WallCrusherComponent.field_K.toUpperCase(), new String[]{Integer.toString(this.matchState.field_v[var22])}).toUpperCase(), 1, kn.field_p, var13, 16, 60, 1, var10 - 243, -50 + var11, 0, (byte) 60, 100);
+                SocketConnector.a(gl.$cfr$intArgs$a$53ce4ab4c593(93, WallCrusherComponent.field_K.toUpperCase(), new String[]{Integer.toString(this.matchState.roundWins[var22])}).toUpperCase(), 1, kn.field_p, var13, 16, 60, 1, var10 - 243, -50 + var11, 0, (byte) 60, 100);
               } else {
                 SocketConnector.a(paa.field_y.toUpperCase(), 1, kn.field_p, var13, 16, 70, 1, var10 - 243, -50 + var11, 0, (byte) 60, 100);
               }
@@ -208,7 +208,7 @@ final class StandingsPhase extends MatchPhase {
                 SocketConnector.a(w.field_d.toUpperCase(), 1, kn.field_p, 3385907, 16, 40, 1, var10 - 203, -50 + var11, 0, (byte) 60, 100);
               }
             } else {
-              oka.a(id.field_i.toUpperCase(), 11141120, kn.field_p, -1, var10 - 190, var11, 0);
+              MembersUpsellMenu.a(id.field_i.toUpperCase(), 11141120, kn.field_p, -1, var10 - 190, var11, 0);
             }
             var22++;
           }
@@ -230,12 +230,12 @@ final class StandingsPhase extends MatchPhase {
             var10_ref_String = vj.worldNames[var9].toUpperCase();
           }
           SocketConnector.a(var10_ref_String, 1, eda.field_f, 2431750, 8 + o.field_d.field_m, var6, 1, -(var6 >> 1) + var8, var7 - (var5 >> 1), -1, (byte) 60, var5);
-          oka.a(this.screen.a(this.screen.field_x, false).toUpperCase(), wga.field_a[this.screen.field_x], eda.field_f, -1, -15 + var4, var3, -1);
+          MembersUpsellMenu.a(this.screen.getPlayerName(this.screen.field_x, false).toUpperCase(), wga.field_a[this.screen.field_x], eda.field_f, -1, -15 + var4, var3, -1);
           if (this.matchState.field_z < 0) {
-            oka.a(ArrowShooterComponent.field_K.toUpperCase(), 2431750, eda.field_f, -1, var4 - 40, var3, -1);
-            oka.a(SafeZoneBehaviour.field_n.toUpperCase(), 2431750, kn.field_p, -1, 45 + var4, var3, -1);
+            MembersUpsellMenu.a(ArrowShooterComponent.field_K.toUpperCase(), 2431750, eda.field_f, -1, var4 - 40, var3, -1);
+            MembersUpsellMenu.a(SafeZoneBehaviour.field_n.toUpperCase(), 2431750, kn.field_p, -1, 45 + var4, var3, -1);
           } else {
-            oka.a(iaa.field_a.toUpperCase(), 2431750, eda.field_f, -1, -40 + var4, var3, -1);
+            MembersUpsellMenu.a(iaa.field_a.toUpperCase(), 2431750, eda.field_f, -1, -40 + var4, var3, -1);
             if (var9 == uca.field_a) {
               var12_ref = null;
               var13_ref_String = SpriteTileOperator.field_v;
@@ -254,33 +254,33 @@ final class StandingsPhase extends MatchPhase {
               if (var12_ref != null) {
                 ((ToolkitSprite) (var12_ref)).a(var3 - (120 + ((ToolkitSprite) (var12_ref)).d() / 2), var4 - 10);
               }
-              oka.a(var13_ref_String, 65793, kn.field_p, -1, 35 + var4, var3 - 120, -1);
+              MembersUpsellMenu.a(var13_ref_String, 65793, kn.field_p, -1, 35 + var4, var3 - 120, -1);
             }
           }
           if (var11 != 0) {
             var24 = dea.a(this.matchState.c((byte) 115, this.screen.field_x), (byte) -8);
-            oka.a(cc.field_l.toUpperCase() + " " + var24.toUpperCase(), 2431750, kn.field_p, -1, 20 + var4, -120 + var3, -1);
-            oka.a(ContentTransitionDialog.field_L.toUpperCase(), 2431750, eda.field_f, -1, var4, 120 + var3, -1);
+            MembersUpsellMenu.a(cc.field_l.toUpperCase() + " " + var24.toUpperCase(), 2431750, kn.field_p, -1, 20 + var4, -120 + var3, -1);
+            MembersUpsellMenu.a(ContentTransitionDialog.field_L.toUpperCase(), 2431750, eda.field_f, -1, var4, 120 + var3, -1);
             var13 = this.screen.matchState.simulations[this.screen.field_x].player.getScore(74);
-            oka.a(Integer.toString(var13), 2431750, eda.field_f, -1, 20 + var4, 120 + var3, -1);
+            MembersUpsellMenu.a(Integer.toString(var13), 2431750, eda.field_f, -1, 20 + var4, 120 + var3, -1);
           } else {
             var23 = dea.a(this.matchState.c((byte) 115, this.screen.field_x), (byte) -8);
-            oka.a(cc.field_l.toUpperCase() + " " + var23.toUpperCase(), 2431750, kn.field_p, -1, 48 + var4, var3 - 120, -1);
+            MembersUpsellMenu.a(cc.field_l.toUpperCase() + " " + var23.toUpperCase(), 2431750, kn.field_p, -1, 48 + var4, var3 - 120, -1);
             za.field_g.a(-200 + var3, var4 + 60);
             var13 = as.a(var9, 0);
             RoomEffectTraps.a(-1, -36, var4 + 79, dea.a(var13, (byte) -8), -200 + (var3 + za.field_g.d()) + 5, kn.field_p, 2431750);
             bca.field_d.a(var3 - 110, 60 + var4);
             RoomEffectTraps.a(-1, -92, 79 + var4, dea.a(var13 + var13 / 2, (byte) -8), bca.field_d.d() + (var3 - 110) + 5, kn.field_p, 2431750);
-            oka.a(ContentTransitionDialog.field_L.toUpperCase(), 2431750, eda.field_f, -1, 5 + var4, 120 + var3, -1);
+            MembersUpsellMenu.a(ContentTransitionDialog.field_L.toUpperCase(), 2431750, eda.field_f, -1, 5 + var4, 120 + var3, -1);
             var14 = this.screen.matchState.simulations[this.screen.field_x].player.getScore(110);
-            oka.a(Integer.toString(var14), 2431750, eda.field_f, -1, var4 + 22, var3 + 120, -1);
+            MembersUpsellMenu.a(Integer.toString(var14), 2431750, eda.field_f, -1, var4 + 22, var3 + 120, -1);
             if (FacePlayerLocomotor.field_p != null &&
               FacePlayerLocomotor.field_p.field_p != null &&
               FacePlayerLocomotor.field_p.field_h) {
               var15 = FacePlayerLocomotor.field_p.field_p[1][0];
               var16 = -var15 + var14;
               if (var15 != 0) {
-                oka.a(gl.$cfr$intArgs$a$53ce4ab4c593(103, ItemComponent.field_F, new String[]{Integer.toString(var15).toUpperCase() + " " + qu.a(var16, -1)}), 2431750, kn.field_p, -1, 50 + var4, 120 + var3, -1);
+                MembersUpsellMenu.a(gl.$cfr$intArgs$a$53ce4ab4c593(103, ItemComponent.field_F, new String[]{Integer.toString(var15).toUpperCase() + " " + qu.a(var16, -1)}), 2431750, kn.field_p, -1, 50 + var4, 120 + var3, -1);
               }
               var17 = 0;
               var18 = null;
@@ -300,14 +300,14 @@ final class StandingsPhase extends MatchPhase {
             }
           }
         }
-        se.f((byte) -6);
+        RemovedFromGameMenu.f((byte) -6);
         for (var3 = 0; var3 < this.field_p.length; var3++) {
           stackIn_62_0 = this.field_p[var3];
           stackIn_62_1 = false;
           stackIn_62_2 = true;
           stackIn_62_3 = 1;
           stackIn_63_4 = (this.field_n == var3);
-          ((fna) (Object) stackIn_62_0).a(stackIn_62_1, stackIn_62_2, stackIn_62_3, stackIn_63_4);
+          ((MenuEntry) (Object) stackIn_62_0).a(stackIn_62_1, stackIn_62_2, stackIn_62_3, stackIn_63_4);
         }
         if (param0 >= -50) {
           field_m = (long[]) null;
@@ -342,7 +342,7 @@ final class StandingsPhase extends MatchPhase {
         int stackIn_5_1 = 0;
         int stackIn_6_2 = 0;
         int stackIn_24_0 = 0;
-        fna stackIn_29_0 = null;
+        MenuEntry stackIn_29_0 = null;
         boolean stackIn_29_1 = false;
         boolean stackIn_30_2 = false;
         int var3;
@@ -397,7 +397,7 @@ final class StandingsPhase extends MatchPhase {
           stackIn_29_0 = this.field_p[var3Lifetime1];
           stackIn_29_1 = true;
           stackIn_30_2 = (this.field_n == var3Lifetime1);
-          ((fna) (Object) stackIn_29_0).a(stackIn_29_1, stackIn_30_2, true, 6);
+          ((MenuEntry) (Object) stackIn_29_0).a(stackIn_29_1, stackIn_30_2, true, 6);
           if (param1 &&
             var4 != 0 &&
             0 != PlayerModel.field_b) {

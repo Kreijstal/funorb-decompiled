@@ -54,7 +54,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
                 VerticalScrollbar.field_tb[var2] = true;
               }
             }
-            nt.field_a = rca.field_n;
+            nt.field_a = UnlockOverlay.field_n;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -110,7 +110,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
         int var2_intLifetime1;
         int var3Lifetime2;
         try {
-          this.field_P = SecondaryNodeHashTable.a(99, dsa.field_c);
+          this.field_P = SecondaryNodeHashTable.queryDisplayModes(99, dsa.field_c);
           if (this.field_P.length > 0) {
             for (var2_int = 0; var2_int < this.field_P.length; var2_int++) {
               if (this.field_P[var2_int] != null) {

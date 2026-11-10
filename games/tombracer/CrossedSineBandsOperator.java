@@ -240,7 +240,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
             var5 = var28.readUnsignedByte(255);
             if (var5 != 0) {
               var6 = var4.field_j;
-              StripesOperator.field_s[0].field_a = fna.field_k;
+              StripesOperator.field_s[0].field_a = MenuEntry.field_k;
               StripesOperator.field_s[0].field_c = null;
               StripesOperator.field_s[0].field_d = false;
               var7 = var4.field_i;
@@ -289,7 +289,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
                   }
                   if (var21 != null &&
                     MiscItemBehaviour.a(var21, 0)) {
-                    var8[1][var13] = fna.field_k;
+                    var8[1][var13] = MenuEntry.field_k;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
                     var28.position = var24;
@@ -390,8 +390,8 @@ final class CrossedSineBandsOperator extends TextureOperator {
         if (mla.field_a > 0) {
           SimpleHoverMountComponent.a(param5, true, param1, param6);
         }
-        dl.field_t.field_x = tka.field_q.field_x;
-        dl.field_t.field_z = 1;
+        AchievementsOverlay.field_t.field_x = tka.field_q.field_x;
+        AchievementsOverlay.field_t.field_z = 1;
         if (0 < GameKeyHandler.field_a) {
           vu.a((byte) 1, param5, param1, param6);
         }

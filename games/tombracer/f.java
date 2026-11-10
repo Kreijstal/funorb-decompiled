@@ -400,7 +400,7 @@ final class f {
         if (bta.field_q != 0) {
           PlayerProfile.a(true);
         }
-        wv.field_j = 0;
+        MenuScreen.field_j = 0;
     }
 
     final static void b(byte param0) {

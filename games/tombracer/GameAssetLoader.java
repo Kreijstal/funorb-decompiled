@@ -366,7 +366,7 @@ final class GameAssetLoader implements LoadingStage {
           for (var5 = 0; var5 < haa.field_C[var4].length; var5++) {
             incrementValue$1 = var3;
             var3++;
-            var2[var4][var5] = bp.field_m[incrementValue$1];
+            var2[var4][var5] = RoundWinnerPhase.field_m[incrementValue$1];
           }
         }
         if (param0 != -10242) {

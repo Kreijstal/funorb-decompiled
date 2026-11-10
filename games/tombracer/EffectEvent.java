@@ -63,7 +63,7 @@ final class EffectEvent extends GameEvent {
         }
     }
 
-    final int a(byte param0) {
+    final int getValue(byte param0) {
         if (param0 != -28) {
           field_j = (Sprite) null;
           return this.value;

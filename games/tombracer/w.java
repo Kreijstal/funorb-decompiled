@@ -79,7 +79,7 @@ final class w extends sqa {
               var5 = param0.readUnsignedByte(255);
               if ((~var5 != ~dia.field_q ||
                 var4 != 0) &&
-                (!qqa.a(param0, mga.field_j, var5, true) ||
+                (!NetworkArchiveRequest.a(param0, mga.field_j, var5, true) ||
                 var4 != 0)) {
                 if (ConstrainToCircleLocomotor.field_w != var5) {
                   discarded$2 = var8.append((char)var5);
@@ -91,7 +91,7 @@ final class w extends sqa {
                     throw new RuntimeException("Unterminated quote!");
                   }
                   var6 = param0.readByte((byte) 52);
-                  if (!qqa.a(param0, mga.field_j, var6, true) &&
+                  if (!NetworkArchiveRequest.a(param0, mga.field_j, var6, true) &&
                     dia.field_q != var6) {
                     if (ConstrainToCircleLocomotor.field_w == var6) {
                       discarded$0 = var8.append((char)var6);

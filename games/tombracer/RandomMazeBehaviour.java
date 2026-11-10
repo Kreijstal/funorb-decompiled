@@ -391,7 +391,7 @@ final class RandomMazeBehaviour extends Behaviour {
         var16 = null;
         var17 = null;
         if (this.field_r != null &&
-          !this.field_r.J(90)) {
+          !this.field_r.isEmpty(90)) {
           var26 = new BitPacketBuffer(30000);
           var15 = var26;
           var26.beginBitWrite(8);
@@ -399,7 +399,7 @@ final class RandomMazeBehaviour extends Behaviour {
           var26.endBitWrite(-1826190686);
         }
         if (null != this.field_A &&
-          !this.field_A.J(51)) {
+          !this.field_A.isEmpty(51)) {
           var27 = new BitPacketBuffer(30000);
           var16 = var27;
           var27.beginBitWrite(8);
@@ -407,7 +407,7 @@ final class RandomMazeBehaviour extends Behaviour {
           var27.endBitWrite(-1826190686);
         }
         if (null != this.field_o &&
-          !this.field_o.J(73)) {
+          !this.field_o.isEmpty(73)) {
           var28 = new BitPacketBuffer(30000);
           var17 = var28;
           var28.beginBitWrite(8);
@@ -556,7 +556,7 @@ final class RandomMazeBehaviour extends Behaviour {
           var8 = new Trap(var7, param4, true);
           param4.endBitAccess((byte) 98);
           var8.d((byte) -97, true);
-          var8.m(1, param5 + this.field_t * param0);
+          var8.setLocalX(1, param5 + this.field_t * param0);
           var8.setLocalY(param1 + this.field_t * param2, -19879);
           this.trap.addChild(-97, var8);
         } catch (RuntimeException runtimeException) {

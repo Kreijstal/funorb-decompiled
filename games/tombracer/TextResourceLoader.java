@@ -229,7 +229,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -127, "mu_lobby_rating");
                 if (var2 != null) {
-                  dl.field_m = jaa.decodeText((byte) 36, var2);
+                  AchievementsOverlay.field_m = jaa.decodeText((byte) 36, var2);
                 }
                 var2 = dn.a((byte) 114, "mu_lobby_friend_add");
                 if (var2 != null) {
@@ -891,7 +891,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -29, "gameopt_inviteplayers_or_trychanging2");
                 if (null != var2) {
-                  uda.field_w = jaa.decodeText((byte) 37, var2);
+                  CharacterSelectPhase.field_w = jaa.decodeText((byte) 37, var2);
                 }
                 var2 = dn.a((byte) 123, "gameopt_novalidcombos");
                 if (null != var2) {
@@ -967,7 +967,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 127, "rule_1_2");
                 if (var2 != null) {
-                  se.field_q = jaa.decodeText((byte) 52, var2);
+                  RemovedFromGameMenu.field_q = jaa.decodeText((byte) 52, var2);
                 }
                 var2 = dn.a((byte) 112, "rule_1_3");
                 if (null != var2) {
@@ -1519,7 +1519,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 125, "create_password_tooltip");
                 if (null != var2) {
-                  me.field_f = jaa.decodeText((byte) 71, var2);
+                  MatchOverlay.field_f = jaa.decodeText((byte) 71, var2);
                 }
                 var2 = dn.a((byte) 120, "create_password_hint");
                 if (null != var2) {
@@ -1595,7 +1595,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 119, "create_alert_passchars");
                 if (null != var2) {
-                  qqa.field_o = jaa.decodeText((byte) 72, var2);
+                  NetworkArchiveRequest.field_o = jaa.decodeText((byte) 72, var2);
                 }
                 var2 = dn.a((byte) 123, "create_alert_passrepeated");
                 if (var2 != null) {
@@ -2257,7 +2257,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 118, "achieved");
                 if (null != var2) {
-                  dl.field_p = jaa.decodeText((byte) 81, var2);
+                  AchievementsOverlay.field_p = jaa.decodeText((byte) 81, var2);
                 }
                 var2 = dn.a((byte) 112, "orbpoints");
                 if (var2 != null) {
@@ -2401,7 +2401,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 123, "mp_x_hasleft");
                 if (var2 != null) {
-                  se.field_r = jaa.decodeText((byte) 88, var2);
+                  RemovedFromGameMenu.field_r = jaa.decodeText((byte) 88, var2);
                 }
                 var2 = dn.a((byte) 105, "mp_x_haswon");
                 if (null != var2) {
@@ -2553,15 +2553,15 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 114, "members_expansion_benefits,0");
                 if (var2 != null) {
-                  oka.field_A[0] = jaa.decodeText((byte) 57, var2);
+                  MembersUpsellMenu.field_A[0] = jaa.decodeText((byte) 57, var2);
                 }
                 var2 = dn.a((byte) 117, "members_expansion_benefits,1");
                 if (var2 != null) {
-                  oka.field_A[1] = jaa.decodeText((byte) 108, var2);
+                  MembersUpsellMenu.field_A[1] = jaa.decodeText((byte) 108, var2);
                 }
                 var2 = dn.a((byte) -54, "members_expansion_benefits,2");
                 if (var2 != null) {
-                  oka.field_A[2] = jaa.decodeText((byte) 84, var2);
+                  MembersUpsellMenu.field_A[2] = jaa.decodeText((byte) 84, var2);
                 }
                 var2 = dn.a((byte) -12, "members_expansion_price_top");
                 if (var2 != null) {

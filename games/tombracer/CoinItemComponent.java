@@ -14,7 +14,7 @@ final class CoinItemComponent extends ItemComponent {
         int[] var4 = null;
         try {
           var4 = new int[]{22, 1, 3, 4, 12, 14, 13, 8, 9};
-          uw.field_g = new wv[13];
+          uw.field_g = new MenuScreen[13];
           qpa.a(245, var4, 0, 40, 440, 126, 200);
           qpa.a(440, MirrorComponent.field_H, 1, 40, 440, 125, 290);
           qpa.a(275, S2CPlayerSyncPacket.field_d, 3, 40, 440, 126, 200);
@@ -29,8 +29,8 @@ final class CoinItemComponent extends ItemComponent {
           qpa.a(335, mna.field_a, 9, 40, 440, 126, 200);
           qpa.a(400, gca.field_f, 10, 40, 440, 124, 200);
           qpa.a(400, hd.field_b, 11, 40, 440, 125, 200);
-          param0.b(qf.field_l);
-          param0.b(DamageableBehaviour.field_x);
+          param0.stringWidth(qf.field_l);
+          param0.stringWidth(DamageableBehaviour.field_x);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "bla.SB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -91,21 +91,21 @@ final class PlayerProfile {
             return;
           }
           param0.beginBitAccess((byte) -11);
-          this.field_l = CircleMovementLocomotor.a(5907, param0);
+          this.field_l = CircleMovementLocomotor.readBitFlag(5907, param0);
           var4 = param0.readBits((byte) 44, 8);
           for (var5 = 0; var4 > var5; var5++) {
-            if (CircleMovementLocomotor.a(5907, param0)) {
+            if (CircleMovementLocomotor.readBitFlag(5907, param0)) {
               this.roomsComplete.set(var5);
             }
           }
           var6 = -25 % ((69 - param1) / 53);
           for (var5Lifetime1 = 0; var5Lifetime1 < 13; var5Lifetime1++) {
-            if (CircleMovementLocomotor.a(5907, param0)) {
+            if (CircleMovementLocomotor.readBitFlag(5907, param0)) {
               this.charactersUnlocked.set(var5Lifetime1);
             }
           }
           for (var5Lifetime2 = 0; var5Lifetime2 < 9; var5Lifetime2++) {
-            if (CircleMovementLocomotor.a(5907, param0)) {
+            if (CircleMovementLocomotor.readBitFlag(5907, param0)) {
               this.coursesUnlocked.set(var5Lifetime2);
             }
           }

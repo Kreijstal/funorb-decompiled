@@ -137,7 +137,7 @@ final class gh extends ToolkitSprite {
           f.field_e = new BitSet(var2_int);
           param0.beginBitAccess((byte) -89);
           for (var3 = 0; var3 < var2_int; var3++) {
-            if (CircleMovementLocomotor.a(5907, param0)) {
+            if (CircleMovementLocomotor.readBitFlag(5907, param0)) {
               f.field_e.set(var3);
             }
           }

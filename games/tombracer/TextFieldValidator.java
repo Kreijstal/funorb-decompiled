@@ -7,16 +7,16 @@ abstract class TextFieldValidator extends kma implements TextInputListener {
     private TextInputWidget field_i;
     static int field_f;
 
-    abstract it a(byte param0, String param1);
+    abstract it validateText(byte param0, String param1);
 
-    abstract String a(int param0, String param1);
+    abstract String validationMessageForText(int param0, String param1);
 
     final String e(int param0) {
         if (param0 == 1890) {
-          return this.a(-1, this.field_i.field_o);
+          return this.validationMessageForText(-1, this.field_i.field_o);
         }
         field_h = -23;
-        return this.a(-1, this.field_i.field_o);
+        return this.validationMessageForText(-1, this.field_i.field_o);
     }
 
     public final boolean isEmpty(boolean param0) {
@@ -68,10 +68,10 @@ abstract class TextFieldValidator extends kma implements TextInputListener {
 
     final it d(int param0) {
         if (param0 == -1891) {
-          return this.a((byte) 14, this.field_i.field_o);
+          return this.validateText((byte) 14, this.field_i.field_o);
         }
         this.d(102);
-        return this.a((byte) 14, this.field_i.field_o);
+        return this.validateText((byte) 14, this.field_i.field_o);
     }
 
     static {

@@ -455,7 +455,7 @@ class WidgetContainer extends UiWidget implements WidgetParent {
         this.children = new IntrusiveDeque();
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {
+    final boolean handleMouseWheel(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {
         IntrusiveDequeCursor var8 = null;
         RuntimeException var8_ref = null;
         UiWidget var9 = null;
@@ -474,7 +474,7 @@ class WidgetContainer extends UiWidget implements WidgetParent {
           while (var9 != null) {
             if (var9.isLinked((byte) 30)) {
               if (var9.hasKeyboardFocus((byte) -34) &&
-                var9.a(param0, param1, param2, param3, param4, param5, -1)) {
+                var9.handleMouseWheel(param0, param1, param2, param3, param4, param5, -1)) {
                 return true;
               }
               var9 = (UiWidget) (var8.next(-1));

@@ -42,12 +42,12 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
           String stackIn_27_2 = null;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
-          qqa var4_ref = null;
+          NetworkArchiveRequest var4_ref = null;
           IOException var4_ref2 = null;
           RuntimeException var4_ref3 = null;
           Exception var5 = null;
           int var6 = 0;
-          qqa var4_refLifetime1;
+          NetworkArchiveRequest var4_refLifetime1;
           var6 = TombRacer.field_G ? 1 : 0;
           try {
             if (this.field_t != null) {
@@ -68,7 +68,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             this.field_h.position = 0;
             this.field_g = null;
             while (true) {
-              var4_ref = (qqa) (this.field_m.c((byte) 121));
+              var4_ref = (NetworkArchiveRequest) (this.field_m.c((byte) 121));
               if (var4_ref != null) {
                 this.field_e.a(var4_ref, (byte) -81);
                 continue;
@@ -76,7 +76,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
               break;
             }
             while (true) {
-              var4_refLifetime1 = (qqa) (this.field_k.c((byte) 111));
+              var4_refLifetime1 = (NetworkArchiveRequest) (this.field_k.c((byte) 111));
               if (var4_refLifetime1 != null) {
                 this.field_c.a(var4_refLifetime1, (byte) -104);
                 continue;
@@ -210,7 +210,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
           int stackIn_75_0 = 0;
           Throwable decompiledCaughtException = null;
           long var2_long = 0L;
-          qqa var2 = null;
+          NetworkArchiveRequest var2 = null;
           IOException var2_ref = null;
           int var3_int = 0;
           Exception var3 = null;
@@ -225,10 +225,10 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
           int var11 = 0;
           long var12 = 0L;
           Object var14 = null;
-          qqa var14_ref = null;
+          NetworkArchiveRequest var14_ref = null;
           int var15 = 0;
           int var16 = 0;
-          qqa var2Lifetime1;
+          NetworkArchiveRequest var2Lifetime1;
           var16 = TombRacer.field_G ? 1 : 0;
           if (null != this.field_t) {
             var2_long = bva.currentTimeMillis((byte) -107);
@@ -259,23 +259,23 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
           }
           try {
             this.field_t.checkWriteError(102);
-            var2 = (qqa) (this.field_e.b((byte) 38));
+            var2 = (NetworkArchiveRequest) (this.field_e.b((byte) 38));
             while (var2 != null) {
               this.field_o.position = 0;
               this.field_o.writeByte(1, 0);
               this.field_o.writeLong40(true, var2.secondaryKey);
               this.field_t.a(this.field_o.payload, 0, this.field_o.payload.length, 119);
               this.field_m.a(var2, (byte) -100);
-              var2 = (qqa) (this.field_e.c(28));
+              var2 = (NetworkArchiveRequest) (this.field_e.c(28));
             }
-            var2Lifetime1 = (qqa) (this.field_c.b((byte) 38));
+            var2Lifetime1 = (NetworkArchiveRequest) (this.field_c.b((byte) 38));
             while (var2Lifetime1 != null) {
               this.field_o.position = 0;
               this.field_o.writeByte(0, 0);
               this.field_o.writeLong40(true, var2Lifetime1.secondaryKey);
               this.field_t.a(this.field_o.payload, 0, this.field_o.payload.length, 101);
               this.field_k.a(var2Lifetime1, (byte) -99);
-              var2Lifetime1 = (qqa) (this.field_c.c(28));
+              var2Lifetime1 = (NetworkArchiveRequest) (this.field_c.c(28));
             }
             for (var2_int = 0; var2_int < 100; var2_int++) {
               var3_int = this.field_t.c(0);
@@ -329,24 +329,24 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                       var12 = ((long)var6 << 32) + (long)var7;
                       var14 = null;
                       if (var11 != 0) {
-                        var14_ref = (qqa) (this.field_k.b((byte) 38));
+                        var14_ref = (NetworkArchiveRequest) (this.field_k.b((byte) 38));
                         while (var14_ref != null) {
                           if (~var14_ref.secondaryKey == ~var12) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
-                          var14_ref = (qqa) (this.field_k.c(28));
+                          var14_ref = (NetworkArchiveRequest) (this.field_k.c(28));
                         }
                         decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                       }
                       if ((decompiledFrameRemainder0) &&
                         (decompiledFrameCompleted0)) {
-                        var14_ref = (qqa) (this.field_m.b((byte) 38));
+                        var14_ref = (NetworkArchiveRequest) (this.field_m.b((byte) 38));
                         while (var14_ref != null) {
                           if (~var14_ref.secondaryKey == ~var12) {
                             break;
                           }
-                          var14_ref = (qqa) (this.field_m.c(28));
+                          var14_ref = (NetworkArchiveRequest) (this.field_m.c(28));
                         }
                       }
                       if (var14_ref == null) {

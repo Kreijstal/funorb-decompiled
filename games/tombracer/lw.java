@@ -123,13 +123,13 @@ final class lw {
         if (param0 > 11) {
           ura.a(-10985);
           hp.a(2048, this.field_h, 1900, this.field_d.b((byte) 74), -1918106173, (this.field_f >> 16) + param1, param2 + (this.field_e >> 16));
-          se.f((byte) -6);
+          RemovedFromGameMenu.f((byte) -6);
           return;
         }
         this.field_b = false;
         ura.a(-10985);
         hp.a(2048, this.field_h, 1900, this.field_d.b((byte) 74), -1918106173, (this.field_f >> 16) + param1, param2 + (this.field_e >> 16));
-        se.f((byte) -6);
+        RemovedFromGameMenu.f((byte) -6);
     }
 
     final int a(int param0) {

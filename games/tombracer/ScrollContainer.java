@@ -788,7 +788,7 @@ final class ScrollContainer extends ArrayWidgetGroup {
         ScrollContainer.a(-19, (ResourceArchive) null, 56, -52);
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {
+    final boolean handleMouseWheel(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -796,7 +796,7 @@ final class ScrollContainer extends ArrayWidgetGroup {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          if (super.handleMouseWheel(param0, param1, param2, param3, param4, param5, param6)) {
             return true;
           }
           stackIn_8_0 = (this.hasKeyboardFocus((byte) -34)) && (this.a(param0, ~param6));

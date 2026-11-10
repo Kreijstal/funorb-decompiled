@@ -10,7 +10,7 @@ final class aha {
     private int field_b;
     private int[] field_c;
 
-    final void a(float[] param0, int param1, boolean param2) {
+    final void decode(float[] param0, int param1, boolean param2) {
         int var8 = 0;
         int var17 = 0;
         int var16 = 0;

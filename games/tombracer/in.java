@@ -20,7 +20,7 @@ final class in {
             }
           } else {
             if (wba.field_o == null) {
-              dq.field_f = r.a(480, 0, param0 ^ -15579, dsa.field_c, 640, 0);
+              dq.field_f = r.createFullscreenCanvas(480, 0, param0 ^ -15579, dsa.field_c, 640, 0);
               if (dq.field_f == null) {
                 var2 = 3;
               } else {
@@ -63,7 +63,7 @@ final class in {
             return;
           }
           if (wba.field_o == null) {
-            dq.field_f = r.a(480, 0, param0 ^ -15579, dsa.field_c, 640, 0);
+            dq.field_f = r.createFullscreenCanvas(480, 0, param0 ^ -15579, dsa.field_c, 640, 0);
             if (dq.field_f == null) {
               var2 = 3;
               if (wba.field_o == null &&

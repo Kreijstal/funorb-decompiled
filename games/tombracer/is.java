@@ -36,7 +36,7 @@ final class is extends jea {
         if (this.field_ub != 0) {
           return false;
         }
-        if (fna.field_h != 85) {
+        if (MenuEntry.field_h != 85) {
           if (this.field_vb.length() < 12) {
             var2 = Character.toLowerCase(HardwareOpenGlToolkit.field_td);
             if (var2 == 32) {
@@ -48,7 +48,7 @@ final class is extends jea {
             }
             if (PressureSwitchBehaviour.a((byte) -17, (char) var2)) {
               discarded$4 = this.field_vb.append((char) var2);
-              if (fna.field_h == 84) {
+              if (MenuEntry.field_h == 84) {
                 if (this.field_vb.length() <= 0) {
                   this.field_ub = 1;
                 } else {
@@ -56,7 +56,7 @@ final class is extends jea {
                   this.field_ub = 2;
                 }
               }
-              if (fna.field_h == 13) {
+              if (MenuEntry.field_h == 13) {
                 this.field_ub = 1;
               }
               if (!param0) {
@@ -67,7 +67,7 @@ final class is extends jea {
             }
             if (dp.a(125, (char) var2)) {
               discarded$5 = this.field_vb.append((char) var2);
-              if (fna.field_h == 84) {
+              if (MenuEntry.field_h == 84) {
                 if (this.field_vb.length() <= 0) {
                   this.field_ub = 1;
                 } else {
@@ -75,7 +75,7 @@ final class is extends jea {
                   this.field_ub = 2;
                 }
               }
-              if (fna.field_h == 13) {
+              if (MenuEntry.field_h == 13) {
                 this.field_ub = 1;
               }
               if (param0) {
@@ -84,7 +84,7 @@ final class is extends jea {
               return true;
             }
           }
-          if (fna.field_h == 84) {
+          if (MenuEntry.field_h == 84) {
             if (this.field_vb.length() <= 0) {
               this.field_ub = 1;
             } else {
@@ -92,7 +92,7 @@ final class is extends jea {
               this.field_ub = 2;
             }
           }
-          if (fna.field_h == 13) {
+          if (MenuEntry.field_h == 13) {
             this.field_ub = 1;
           }
           if (param0) {
@@ -104,7 +104,7 @@ final class is extends jea {
           DarknessBehaviour.a(-1 + this.field_vb.length(), ' ', -11, this.field_vb);
         }
         if (this.field_vb.length() >= 12) {
-          if (fna.field_h == 84) {
+          if (MenuEntry.field_h == 84) {
             if (this.field_vb.length() <= 0) {
               this.field_ub = 1;
             } else {
@@ -112,7 +112,7 @@ final class is extends jea {
               this.field_ub = 2;
             }
           }
-          if (fna.field_h == 13) {
+          if (MenuEntry.field_h == 13) {
             this.field_ub = 1;
           }
           if (param0) {
@@ -130,7 +130,7 @@ final class is extends jea {
         }
         if (PressureSwitchBehaviour.a((byte) -17, (char) var2Lifetime1)) {
           discarded$1 = this.field_vb.append((char) var2Lifetime1);
-          if (fna.field_h == 84) {
+          if (MenuEntry.field_h == 84) {
             if (this.field_vb.length() <= 0) {
               this.field_ub = 1;
             } else {
@@ -138,7 +138,7 @@ final class is extends jea {
               this.field_ub = 2;
             }
           }
-          if (fna.field_h == 13) {
+          if (MenuEntry.field_h == 13) {
             this.field_ub = 1;
           }
           if (!param0) {
@@ -148,7 +148,7 @@ final class is extends jea {
           return true;
         }
         if (!dp.a(125, (char) var2Lifetime1)) {
-          if (fna.field_h == 84) {
+          if (MenuEntry.field_h == 84) {
             if (this.field_vb.length() <= 0) {
               this.field_ub = 1;
             } else {
@@ -156,7 +156,7 @@ final class is extends jea {
               this.field_ub = 2;
             }
           }
-          if (fna.field_h == 13) {
+          if (MenuEntry.field_h == 13) {
             this.field_ub = 1;
           }
           if (!param0) {
@@ -166,10 +166,10 @@ final class is extends jea {
           return true;
         }
         discarded$2 = this.field_vb.append((char) var2Lifetime1);
-        if (fna.field_h == 84) {
+        if (MenuEntry.field_h == 84) {
           if (this.field_vb.length() <= 0) {
             this.field_ub = 1;
-            if (fna.field_h == 13) {
+            if (MenuEntry.field_h == 13) {
               this.field_ub = 1;
             }
             if (param0) {
@@ -180,7 +180,7 @@ final class is extends jea {
           this.field_r = this.field_vb.toString();
           this.field_ub = 2;
         }
-        if (fna.field_h == 13) {
+        if (MenuEntry.field_h == 13) {
           this.field_ub = 1;
         }
         if (!param0) {
@@ -211,7 +211,7 @@ final class is extends jea {
           return this.field_ub;
         }
         while (true) {
-          if (!NanoTickClock.a(true)) {
+          if (!NanoTickClock.pollKeyEvent(true)) {
             this.field_tb.field_r = this.field_vb.toString();
             if (!param0) {
               return this.field_ub;
@@ -225,7 +225,7 @@ final class is extends jea {
             this.field_ub = 1;
             return this.field_ub;
           }
-          if (fna.field_h == 85 &&
+          if (MenuEntry.field_h == 85 &&
             this.field_vb.length() > 0) {
             DarknessBehaviour.a(-1 + this.field_vb.length(), ' ', -11, this.field_vb);
           }
@@ -246,8 +246,8 @@ final class is extends jea {
               }
             }
           }
-          if (fna.field_h != 84) {
-            if (13 == fna.field_h) {
+          if (MenuEntry.field_h != 84) {
+            if (13 == MenuEntry.field_h) {
               return 1;
             }
             continue;

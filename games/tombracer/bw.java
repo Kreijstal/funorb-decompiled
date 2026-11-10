@@ -28,7 +28,7 @@ final class bw {
           }
           if (param1.length > 136) {
             var3 = new ie();
-            ((qu) ((Object) var3)).a(true, param1);
+            ((qu) ((Object) var3)).setBytes(true, param1);
             stackIn_9_0 = var3;
             return stackIn_9_0;
           }

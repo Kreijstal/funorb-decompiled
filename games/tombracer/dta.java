@@ -135,7 +135,7 @@ final class dta {
                 RoomEffectTraps.a(0, -34, param6 - 26, ik.field_j, param0 + var8_int, eda.field_f, 16777215);
               } else {
                 RoomEffectTraps.a(0, -50, param6 - 13, Integer.toString(1 + var15), param0 + var8_int, SingleChildWidget.field_v, wga.field_a[param2]);
-                RoomEffectTraps.a(0, -70, param6 - 12, param4.a(param2, false).toUpperCase(), 25 + (param0 + var8_int), eda.field_f, wga.field_a[param2]);
+                RoomEffectTraps.a(0, -70, param6 - 12, param4.getPlayerName(param2, false).toUpperCase(), 25 + (param0 + var8_int), eda.field_f, wga.field_a[param2]);
               }
             }
             if (param4.d((byte) 118)) {
@@ -154,7 +154,7 @@ final class dta {
                 var21 = (var21 >> 1) + 1;
                 var20 = 1 + (var20 >> 1);
               }
-              oka.a(gl.$cfr$intArgs$a$53ce4ab4c593(102, mg.field_k, new String[]{Integer.toString(var20), Integer.toString(var21)}).toUpperCase(), 11903361, eda.field_f, -1, param5 + var18 + 58, var17 + (param0 + 64), 0);
+              MembersUpsellMenu.a(gl.$cfr$intArgs$a$53ce4ab4c593(102, mg.field_k, new String[]{Integer.toString(var20), Integer.toString(var21)}).toUpperCase(), 11903361, eda.field_f, -1, param5 + var18 + 58, var17 + (param0 + 64), 0);
               var18Lifetime1 = -75 + param6 - var8_int;
               var17Lifetime1 = -10;
               var22 = var12.getWeapon(-163585215);
@@ -165,7 +165,7 @@ final class dta {
                 if (var23 != 0) {
                   ura.a(-10985);
                   hp.a(1024, 512, 0, this.field_c.b((byte) 74), -1918106173, 70 + var18Lifetime1, var17Lifetime1 + 55);
-                  se.f((byte) -6);
+                  RemovedFromGameMenu.f((byte) -6);
                 }
               }
               var17Lifetime2 = param1 - bd.field_i.a();
@@ -265,7 +265,7 @@ final class dta {
                 var31Lifetime1 = -stackIn_72_0 + var29Lifetime2 + 26;
                 var32 = var12.getTreasure(196608, var30Lifetime2);
                 PlayerProfile.field_r[var30Lifetime2].a(var17Lifetime5, var29Lifetime2);
-                oka.a(Integer.toString(var32), 11903361, qf.field_j, -1, var31Lifetime1, var17Lifetime5 - 19, 1);
+                MembersUpsellMenu.a(Integer.toString(var32), 11903361, qf.field_j, -1, var31Lifetime1, var17Lifetime5 - 19, 1);
                 if (var32 != this.field_a[var30Lifetime2]) {
                   this.field_h[var30Lifetime2] = Integer.toString(-this.field_a[var30Lifetime2] + var32) + "+";
                   this.field_a[var30Lifetime2] = var32;
@@ -277,7 +277,7 @@ final class dta {
                   var34_int = (int)((float)PlayerProfile.field_r[var30Lifetime2].a() * var33_float);
                   var35_int = (int)((float)PlayerProfile.field_r[var30Lifetime2].c() * var33_float);
                   PlayerProfile.field_r[var30Lifetime2].a(var17Lifetime5 + (-var34_int + PlayerProfile.field_r[var30Lifetime2].a()) / 2, (PlayerProfile.field_r[var30Lifetime2].c() - var35_int) / 2 + var29Lifetime2, var34_int, var35_int, 1, -1, 1);
-                  oka.a(this.field_h[var30Lifetime2], 14142651, qf.field_j, -1, var31Lifetime1, -49 + var17Lifetime5, 1);
+                  MembersUpsellMenu.a(this.field_h[var30Lifetime2], 14142651, qf.field_j, -1, var31Lifetime1, -49 + var17Lifetime5, 1);
                 }
                 var31Lifetime1 += 23;
                 var29Lifetime2 += 24;
@@ -357,14 +357,14 @@ final class dta {
               }
               var42 = dw.field_j;
               var31Lifetime3 = (int)(128.0 - Math.sin((double)bva.currentTimeMillis((byte) -107) / 512.0) * 128.0);
-              vv.a(var31Lifetime3, (byte) -73, var31Lifetime3, 1, SingleChildWidget.field_v, var42.toUpperCase(), 40 + (SwitchLinkList.b(0) >> 1) + (SwitchLinkList.b(0) >> 2), 11903361, param1 + param0 >> 1);
+              NotLoggedInMenu.a(var31Lifetime3, (byte) -73, var31Lifetime3, 1, SingleChildWidget.field_v, var42.toUpperCase(), 40 + (SwitchLinkList.b(0) >> 1) + (SwitchLinkList.b(0) >> 2), 11903361, param1 + param0 >> 1);
               var32Lifetime2 = param4.field_r - param4.matchState.c((byte) 115, param2);
               if (var32Lifetime2 >= 250) {
                 return;
               }
               var43 = Integer.toString(var32Lifetime2 / 50 + 1);
               var31Lifetime4 = 255 - (var32Lifetime2 % 50 << 2) % 255;
-              vv.a(var31Lifetime4, (byte) -80, var31Lifetime4, 1, SingleChildWidget.field_v, var43.toUpperCase(), SwitchLinkList.b(0) >> 1, 11903361, param1 + param0 >> 1);
+              NotLoggedInMenu.a(var31Lifetime4, (byte) -80, var31Lifetime4, 1, SingleChildWidget.field_v, var43.toUpperCase(), SwitchLinkList.b(0) >> 1, 11903361, param1 + param0 >> 1);
               return;
             }
             return;
@@ -377,7 +377,7 @@ final class dta {
           var9_int = (-param0 + param1 >> 1) + param0;
           var10Lifetime1 = param5 + (param6 - param5 >> 1);
           qa.a(50, 200, (byte) 94, var9_int - 100, aq.field_a, -34 + var10Lifetime1);
-          oka.a(hu.field_d, 11903361, eda.field_f, -1, var10Lifetime1, var9_int, 0);
+          MembersUpsellMenu.a(hu.field_d, 11903361, eda.field_f, -1, var10Lifetime1, var9_int, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

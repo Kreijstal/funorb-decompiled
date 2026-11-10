@@ -326,7 +326,7 @@ final class TileGrid implements Renderable {
         return false;
     }
 
-    final Room b(int param0) {
+    final Room getRoom(int param0) {
         if (param0 != 0) {
           field_g = -85;
         }

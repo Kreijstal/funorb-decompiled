@@ -443,7 +443,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("roundWinner_draw", (byte) 113);
                 if (var2 != null) {
-                  uda.field_o = jaa.decodeText((byte) 43, var2);
+                  CharacterSelectPhase.field_o = jaa.decodeText((byte) 43, var2);
                 }
                 var2 = mt.readTextEntry("milliseconds", (byte) 111);
                 if (var2 != null) {
@@ -763,7 +763,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("instructionTextDiscOfDeathVendingMachines", (byte) 116);
                 if (var2 != null) {
-                  wv.field_h = jaa.decodeText((byte) 96, var2);
+                  MenuScreen.field_h = jaa.decodeText((byte) 96, var2);
                 }
                 var2 = mt.readTextEntry("instructionTitlePerpetuallySpinningDiscs", (byte) 111);
                 if (var2 != null) {
@@ -803,7 +803,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("instructionTextMoveableBlocks", (byte) 123);
                 if (var2 != null) {
-                  gu.field_k = jaa.decodeText((byte) 113, var2);
+                  TreasureValuesOverlay.field_k = jaa.decodeText((byte) 113, var2);
                 }
                 var2 = mt.readTextEntry("instructionTitlePistols", (byte) 104);
                 if (var2 != null) {
@@ -1141,7 +1141,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("pos_1st", (byte) 113);
                 if (var2 != null) {
-                  fma.field_d = jaa.decodeText((byte) 39, var2);
+                  ArchiveManager.field_d = jaa.decodeText((byte) 39, var2);
                 }
                 var2 = mt.readTextEntry("pos_2nd", (byte) 101);
                 if (var2 != null) {
@@ -1205,7 +1205,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("slowmovemove", (byte) 127);
                 if (null != var2) {
-                  qqa.field_p = jaa.decodeText((byte) 102, var2);
+                  NetworkArchiveRequest.field_p = jaa.decodeText((byte) 102, var2);
                 }
                 var2 = mt.readTextEntry("room_X_of_Y", (byte) 116);
                 if (null != var2) {
@@ -1417,7 +1417,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("reward_none_choosing", (byte) 113);
                 if (var2 != null) {
-                  bp.field_o = jaa.decodeText((byte) 79, var2);
+                  RoundWinnerPhase.field_o = jaa.decodeText((byte) 79, var2);
                 }
                 var2 = mt.readTextEntry("unlock_character", (byte) 100);
                 if (var2 != null) {

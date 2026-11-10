@@ -194,7 +194,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (this.payload[fieldTemp$0] != 0);
         var3 = this.position - (var2 + 1);
         if (var3 != 0) {
-          return MaskBlendOperator.a(this.payload, var2, var3, 255);
+          return MaskBlendOperator.decodeCp1252(this.payload, var2, var3, 255);
         }
         return "";
     }
@@ -559,7 +559,7 @@ class PacketBuffer extends IntrusiveNode {
         }
         var4 = this.position - (var3 + 1);
         if (var4 != 0) {
-          return MaskBlendOperator.a(this.payload, var3, var4, 255);
+          return MaskBlendOperator.decodeCp1252(this.payload, var3, var4, 255);
         }
         return "";
     }

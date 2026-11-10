@@ -351,7 +351,7 @@ final class gq extends uta {
             if (~var7.kind == ~tr.field_f &&
               var8_int > 0) {
               var6 = var7.text.substring(0, Math.min(var7.text.length(), var8_int));
-              this.field_p.field_qb = this.field_m.b(var2.substring(0, var7.field_h));
+              this.field_p.field_qb = this.field_m.stringWidth(var2.substring(0, var7.field_h));
               decompiledFrameRemainder1 = (var11 != 0);
             }
             if (decompiledFrameRemainder1) {
@@ -388,7 +388,7 @@ final class gq extends uta {
                   break;
                 }
                 var6 = var4[var9 - 1].text;
-                this.field_p.field_qb = this.field_m.b(var2.substring(0, var4[var9 - 1].field_h));
+                this.field_p.field_qb = this.field_m.stringWidth(var2.substring(0, var4[var9 - 1].field_h));
                 break;
               }
             }

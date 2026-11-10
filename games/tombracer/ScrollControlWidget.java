@@ -692,7 +692,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
         this.e(param0 ^ -111);
     }
 
-    final static TriangleMesh a(BitPacketBuffer param0, boolean param1) {
+    final static TriangleMesh decodeMesh(BitPacketBuffer param0, boolean param1) {
         int var7 = 0;
         TriangleMesh stackIn_27_0 = null;
         RuntimeException stackIn_30_0 = null;
@@ -715,38 +715,38 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
           if (!param1) {
             field_E = (String) null;
           }
-          var3 = CircleMovementLocomotor.a(5907, param0) ? 1 : 0;
-          var4 = CircleMovementLocomotor.a(5907, param0) ? 1 : 0;
+          var3 = CircleMovementLocomotor.readBitFlag(5907, param0) ? 1 : 0;
+          var4 = CircleMovementLocomotor.readBitFlag(5907, param0) ? 1 : 0;
           var5 = new TriangleMesh();
           var5.field_I = (short)param0.readBits((byte) 44, 16);
-          var5.field_l = me.readPackedShorts((byte) 76, 16, param0, var5.field_l);
-          var5.field_h = me.readPackedShorts((byte) 88, 16, param0, var5.field_h);
-          var5.field_t = me.readPackedShorts((byte) 73, 16, param0, var5.field_t);
+          var5.field_l = MatchOverlay.readPackedShorts((byte) 76, 16, param0, var5.field_l);
+          var5.field_h = MatchOverlay.readPackedShorts((byte) 88, 16, param0, var5.field_h);
+          var5.field_t = MatchOverlay.readPackedShorts((byte) 73, 16, param0, var5.field_t);
           var5.field_u = (short)param0.readBits((byte) 44, 16);
-          var5.field_B = me.readPackedShorts((byte) 102, 16, param0, var5.field_B);
-          var5.field_w = me.readPackedShorts((byte) 98, 16, param0, var5.field_w);
-          var5.field_f = me.readPackedShorts((byte) 94, 16, param0, var5.field_f);
+          var5.field_B = MatchOverlay.readPackedShorts((byte) 102, 16, param0, var5.field_B);
+          var5.field_w = MatchOverlay.readPackedShorts((byte) 98, 16, param0, var5.field_w);
+          var5.field_f = MatchOverlay.readPackedShorts((byte) 94, 16, param0, var5.field_f);
           if (var3 != 0) {
             var5.field_A = (short)param0.readBits((byte) 44, 16);
-            var5.field_k = me.readPackedShorts((byte) 96, 16, param0, var5.field_k);
-            var5.field_c = me.readPackedShorts((byte) 89, 16, param0, var5.field_c);
-            var5.field_r = me.readPackedShorts((byte) 91, 16, param0, var5.field_r);
-            var5.field_C = me.readPackedShorts((byte) 73, 16, param0, var5.field_C);
-            var5.field_s = me.readPackedShorts((byte) 111, 16, param0, var5.field_s);
-            var5.field_y = me.readPackedShorts((byte) 101, 16, param0, var5.field_y);
+            var5.field_k = MatchOverlay.readPackedShorts((byte) 96, 16, param0, var5.field_k);
+            var5.field_c = MatchOverlay.readPackedShorts((byte) 89, 16, param0, var5.field_c);
+            var5.field_r = MatchOverlay.readPackedShorts((byte) 91, 16, param0, var5.field_r);
+            var5.field_C = MatchOverlay.readPackedShorts((byte) 73, 16, param0, var5.field_C);
+            var5.field_s = MatchOverlay.readPackedShorts((byte) 111, 16, param0, var5.field_s);
+            var5.field_y = MatchOverlay.readPackedShorts((byte) 101, 16, param0, var5.field_y);
           }
           if (var4 != 0) {
             param0.readBits((byte) 44, 16);
-            var5.field_H = me.readPackedShorts((byte) 76, 16, param0, var5.field_H);
-            var5.field_e = me.readPackedShorts((byte) 73, 16, param0, var5.field_e);
-            var5.field_d = me.readPackedShorts((byte) 105, 16, param0, var5.field_d);
-            var5.field_N = me.readPackedShorts((byte) 101, 16, param0, var5.field_N);
-            var5.field_D = me.readPackedShorts((byte) 100, 16, param0, var5.field_D);
+            var5.field_H = MatchOverlay.readPackedShorts((byte) 76, 16, param0, var5.field_H);
+            var5.field_e = MatchOverlay.readPackedShorts((byte) 73, 16, param0, var5.field_e);
+            var5.field_d = MatchOverlay.readPackedShorts((byte) 105, 16, param0, var5.field_d);
+            var5.field_N = MatchOverlay.readPackedShorts((byte) 101, 16, param0, var5.field_N);
+            var5.field_D = MatchOverlay.readPackedShorts((byte) 100, 16, param0, var5.field_D);
           }
-          if (CircleMovementLocomotor.a(5907, param0)) {
-            var5.field_M = me.readPackedShorts((byte) 74, 16, param0, var5.field_M);
+          if (CircleMovementLocomotor.readBitFlag(5907, param0)) {
+            var5.field_M = MatchOverlay.readPackedShorts((byte) 74, 16, param0, var5.field_M);
           }
-          if (CircleMovementLocomotor.a(5907, param0)) {
+          if (CircleMovementLocomotor.readBitFlag(5907, param0)) {
             var5.field_q = goa.readPackedByteArray(16, -4854, param0, var5.field_q);
             var6 = 0;
             for (var7 = 0; var7 < var5.field_q.length; var7++) {

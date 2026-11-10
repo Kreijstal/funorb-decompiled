@@ -16,7 +16,7 @@ final class S2CNewRoomPacket implements GamePacket {
         Player var7 = null;
         int var5 = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
-        if (!param2.f(param1 ^ param1)) {
+        if (!param2.isInPlayPhase(param1 ^ param1)) {
           return;
         }
         try {

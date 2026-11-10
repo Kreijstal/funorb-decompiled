@@ -138,7 +138,7 @@ final class QuickChatMenu extends jea {
             }
             this.field_Gb[var13] = new tv(0L, param2, (jea) null, param3, (Sprite) (var14), param6[var13]);
             this.b(-123, this.field_Gb[var13]);
-            var15 = var17.b(param6[var13]);
+            var15 = var17.stringWidth(param6[var13]);
             if (this.field_vb < var15) {
               this.field_vb = var15;
             }
@@ -247,7 +247,7 @@ final class QuickChatMenu extends jea {
         int var7;
         int stackIn_3_0 = 0;
         var7 = TombRacer.field_G ? 1 : 0;
-        stackIn_3_0 = (fna.field_h != 85) ? 0 : 1;
+        stackIn_3_0 = (MenuEntry.field_h != 85) ? 0 : 1;
         var4 = stackIn_3_0;
         if (this.field_Eb != null) {
           if (var4 != 0 &&

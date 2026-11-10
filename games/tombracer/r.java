@@ -29,7 +29,7 @@ abstract class r extends DualLinkNode {
         ColouriseOperator.field_q = true;
     }
 
-    final static via a(int param0, int param1, int param2, PlatformTaskDispatcher param3, int param4, int param5) {
+    final static via createFullscreenCanvas(int param0, int param1, int param2, PlatformTaskDispatcher param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         via var7 = null;

@@ -74,7 +74,7 @@ final class S2CPlayerSyncPacket implements GamePacket {
           }
           var4_intLifetime2 = 125 % ((57 - param2) / 55);
           if (param0.matchState.field_K == 0) {
-            param0.k(-1);
+            param0.showRewardChoice(-1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -143,7 +143,7 @@ final class S2CPlayerSyncPacket implements GamePacket {
         }
     }
 
-    final static IndexedSprite[] a(int param0) {
+    final static IndexedSprite[] createDecodedIndexedSprites(int param0) {
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
         IndexedSprite[] var1 = new IndexedSprite[fa.field_b];
@@ -163,9 +163,9 @@ final class S2CPlayerSyncPacket implements GamePacket {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 104) {
-            S2CPlayerSyncPacket.a(-27);
+            S2CPlayerSyncPacket.createDecodedIndexedSprites(-27);
           }
-          stackIn_3_0 = HorizontalGradientOperator.a(125, param1, 0, param1.length);
+          stackIn_3_0 = HorizontalGradientOperator.joinRange(125, param1, 0, param1.length);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -113,7 +113,7 @@ final class SoftwareRasterizer {
         }
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void blurRowsHorizontally(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var13 = 0;
         int incrementValue$0 = 0;
         int incrementValue$5 = 0;
@@ -296,7 +296,7 @@ final class SoftwareRasterizer {
         }
         int var4 = field_g - param2;
         int var5 = param0 + param1 * field_g;
-        SoftwareRasterizer.a(var5, field_l, 0, param2, -param3, var4);
+        SoftwareRasterizer.halveRowBrightness(var5, field_l, 0, param2, -param3, var4);
     }
 
     private final static void drawVerticalLineAlpha(int param0, int param1, int param2, int param3, int param4) {
@@ -347,8 +347,8 @@ final class SoftwareRasterizer {
     }
 
     final static void blurRectangle(int param0, int param1, int param2, int param3, int param4, int param5) {
-        SoftwareRasterizer.a(field_l, 0, param2 + param3 * field_g, param0, param2, param4, field_g - param4, param5);
-        SoftwareRasterizer.a(field_l, 0, param2 + param3 * field_g, param1, param3, param5, field_g - param4, param2, param4);
+        SoftwareRasterizer.blurRowsHorizontally(field_l, 0, param2 + param3 * field_g, param0, param2, param4, field_g - param4, param5);
+        SoftwareRasterizer.blurColumnsVertically(field_l, 0, param2 + param3 * field_g, param1, param3, param5, field_g - param4, param2, param4);
     }
 
     final static void a(int[] param0, int param1, int param2) {
@@ -808,7 +808,7 @@ final class SoftwareRasterizer {
         }
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blurColumnsVertically(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int incrementValue$7 = 0;
         int incrementValue$6 = 0;
         int incrementValue$2 = 0;
@@ -1066,7 +1066,7 @@ final class SoftwareRasterizer {
         SoftwareRasterizer.c();
     }
 
-    private final static void a(int param0, int[] param1, int param2, int param3, int param4, int param5) {
+    private final static void halveRowBrightness(int param0, int[] param1, int param2, int param3, int param4, int param5) {
         while (param4 < 0) {
           param2 = param0 + param3 - 7;
           while (param0 < param2) {

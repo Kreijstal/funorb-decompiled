@@ -90,12 +90,12 @@ final class vu extends vw {
             hw.field_a.field_t = 0;
             var5 = hw.field_a;
             var5.field_G = 0;
-            var6 = dl.field_t;
-            dl.field_t.field_t = 0;
+            var6 = AchievementsOverlay.field_t;
+            AchievementsOverlay.field_t.field_t = 0;
             var6.field_G = 0;
             StatusEffect.field_g.field_r = dka.field_a.toUpperCase();
             var7 = (dka.field_b.field_G + 2) / 2;
-            dl.field_t.a(-2 + var7, 40, -23776, -40 + dka.field_b.field_t, 0);
+            AchievementsOverlay.field_t.a(-2 + var7, 40, -23776, -40 + dka.field_b.field_t, 0);
             hw.field_a.a(dka.field_b.field_G - var7, 40, param0 - 23777, -40 + dka.field_b.field_t, var7);
             if (SafeZoneBehaviour.field_u.length == 1 &&
               SafeZoneBehaviour.field_u[0] == 2) {
@@ -143,7 +143,7 @@ final class vu extends vw {
                 stackIn_38_2 = TombRacer.field_F;
               }
               stackIn_37_0.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(stackIn_37_1, stackIn_38_2, new String[]{hw.field_a.field_r});
-              dl.field_t.field_r = vf.field_h;
+              AchievementsOverlay.field_t.field_r = vf.field_h;
               bc.field_b.field_X = true;
               TouchSwitchBehaviour.field_s = true;
               if (null != PlatformModel.field_A) {
@@ -203,19 +203,19 @@ final class vu extends vw {
               var9 = var16;
               var9 = var16;
               var9 = var16;
-              var10Lifetime1 = dl.field_t.field_H.b(var16) + 3 * dl.field_t.field_H.a('.');
+              var10Lifetime1 = AchievementsOverlay.field_t.field_H.stringWidth(var16) + 3 * AchievementsOverlay.field_t.field_H.a('.');
               if ((lh.field_a & 48) == 16) {
                 var9 = var16 + ".";
               }
-              dl.field_t.field_x = (dl.field_t.field_G - var10Lifetime1) / 2;
-              dl.field_t.field_z = 0;
+              AchievementsOverlay.field_t.field_x = (AchievementsOverlay.field_t.field_G - var10Lifetime1) / 2;
+              AchievementsOverlay.field_t.field_z = 0;
               if ((lh.field_a & 48) == 32) {
                 var9 = (String) (var9) + "..";
               }
               if (48 == (lh.field_a & 48)) {
                 var9 = (String) (var9) + "...";
               }
-              dl.field_t.field_r = (String) (var9);
+              AchievementsOverlay.field_t.field_r = (String) (var9);
               hw.field_a.field_r = mq.field_d.toUpperCase();
             }
           }

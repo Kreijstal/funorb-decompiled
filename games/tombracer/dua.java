@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dua extends me {
+final class dua extends MatchOverlay {
     static String field_j;
 
     final boolean a(int param0, char param1, byte param2) {

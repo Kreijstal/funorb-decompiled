@@ -46,7 +46,7 @@ final class CircleMovementLocomotor extends Locomotor {
         this.trap.a((byte) -94, -var4 + var6, var8 - var5);
     }
 
-    final static boolean a(int param0, BitPacketBuffer param1) {
+    final static boolean readBitFlag(int param0, BitPacketBuffer param1) {
         RuntimeException var2 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;

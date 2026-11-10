@@ -20,7 +20,7 @@ final class aoa implements GamePacket {
         if (param0 < 38) {
           return;
         }
-        if (null == fna.field_j) {
+        if (null == MenuEntry.field_j) {
           return;
         }
         int var2 = (int)(qk.field_w[param1] * 20000.0);

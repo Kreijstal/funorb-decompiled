@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qqa extends hha {
+final class NetworkArchiveRequest extends ArchiveRequest {
     static String field_p;
     PacketBuffer field_r;
     static boolean[] field_n;
@@ -10,7 +10,7 @@ final class qqa extends hha {
     static apa field_t;
     byte field_q;
 
-    final byte[] b(byte param0) {
+    final byte[] getBytes(byte param0) {
         if (param0 != -126) {
           return (byte[]) null;
         }
@@ -316,7 +316,7 @@ final class qqa extends hha {
         field_o = null;
     }
 
-    qqa() {
+    NetworkArchiveRequest() {
     }
 
     static {

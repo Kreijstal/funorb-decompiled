@@ -120,11 +120,11 @@ final class sw extends jea {
               this.field_Ab = dupTemp$0;
               this.field_ub = dupTemp$0;
             }
-            this.field_Eb.field_qb = this.field_Cb.field_H.b(this.field_wb.toString().substring(0, this.field_ub));
+            this.field_Eb.field_qb = this.field_Cb.field_H.stringWidth(this.field_wb.toString().substring(0, this.field_ub));
             if (this.field_Ab == this.field_ub) {
               this.field_xb.a(0, this.field_Gb, -23776, 2, this.field_Eb.field_qb);
             } else {
-              var3 = this.field_Cb.field_qb + this.field_Cb.field_H.b(this.field_wb.toString().substring(0, this.field_Ab));
+              var3 = this.field_Cb.field_qb + this.field_Cb.field_H.stringWidth(this.field_wb.toString().substring(0, this.field_Ab));
               if (this.field_Eb.field_qb <= var3) {
                 stackIn_35_0 = this.field_Eb.field_qb;
               } else {
@@ -300,8 +300,8 @@ final class sw extends jea {
           }
           ModelFactory.field_a.processPointerFrame(sc.field_k, true, ConstrainToFacingArcLocomotor.field_w, param0 ^ -11);
           ModelFactory.field_a.g((byte) -128);
-          while (NanoTickClock.a(true)) {
-            ModelFactory.field_a.dispatchKeyInput((byte) -53, fna.field_h, HardwareOpenGlToolkit.field_td);
+          while (NanoTickClock.pollKeyEvent(true)) {
+            ModelFactory.field_a.dispatchKeyInput((byte) -53, MenuEntry.field_h, HardwareOpenGlToolkit.field_td);
           }
           if (param0 == 100) {
             return;

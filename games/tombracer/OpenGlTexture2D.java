@@ -123,7 +123,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
 
     final static void h(byte param0) {
         gg.field_f = null;
-        uda.field_r = null;
+        CharacterSelectPhase.field_r = null;
         uua.field_a = null;
         nm.field_l = null;
         Projectile.field_n = null;

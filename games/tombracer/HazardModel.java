@@ -131,7 +131,7 @@ final class HazardModel extends TrapModel {
                 }
                 if (var5 != null) {
                   var6 = (String) null;
-                  gu.a(0, true, var4, (String) (var5), (String) null, 2);
+                  TreasureValuesOverlay.a(0, true, var4, (String) (var5), (String) null, 2);
                 }
               }
               bl.field_a = null;

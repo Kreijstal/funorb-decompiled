@@ -297,7 +297,7 @@ final class ssa {
         RuntimeException var1_ref = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          var5 = ow.field_q;
+          var5 = DrawOfferMenu.field_q;
           var1 = var5;
           var2 = param0;
           var3 = var5.length;

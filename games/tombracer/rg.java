@@ -105,7 +105,7 @@ final class rg extends SingleChildWidget {
         dta.field_b[2] = WhirlpoolDigest.field_b;
         sla.field_b = new String[7];
         dta.field_b[3] = tda.field_b;
-        dta.field_b[0] = fma.field_d;
+        dta.field_b[0] = ArchiveManager.field_d;
         sla.field_b[1] = mu.field_wb;
         sla.field_b[5] = ds.field_k;
         sla.field_b[0] = SnakePitBehaviour.field_p;
@@ -172,7 +172,7 @@ final class rg extends SingleChildWidget {
           Effect.field_h[3] = new String[]{InvertOperator.field_o, vk.field_a, SwitchLinkList.field_d};
           Effect.field_h[4] = new String[]{DisplaySettingsDialog.field_R, gn.field_y, tr.field_d};
           IntrusiveDeque.field_d[5] = new String[]{TripBeamComponent.field_J, td.field_u, PitModel.field_r};
-          Effect.field_h[5] = new String[]{gu.field_k, MazeComponent.field_G, du.field_b};
+          Effect.field_h[5] = new String[]{TreasureValuesOverlay.field_k, MazeComponent.field_G, du.field_b};
           IntrusiveDeque.field_d[6] = new String[]{ConstrainToCircleLocomotor.field_v, VortexBehaviour.field_o, PowerUpItemBehaviour.field_s};
           Effect.field_h[6] = new String[]{apa.field_b, pna.field_k, bq.field_e};
           IntrusiveDeque.field_d[7] = new String[]{TouchSwitchBehaviour.field_q, MatchScoringObserver.field_d};
@@ -180,7 +180,7 @@ final class rg extends SingleChildWidget {
           Effect.field_h[7] = new String[]{km.field_n, ld.field_d};
           IntrusiveDeque.field_d[9] = new String[]{td.field_n, nea.field_b, gga.field_L};
           Effect.field_h[8] = new String[]{ThresholdOperator.field_o, StaticCrusherComponent.field_G, ClientException.field_e};
-          Effect.field_h[9] = new String[]{qna.field_a, wv.field_h, PrefabComponent.field_D};
+          Effect.field_h[9] = new String[]{qna.field_a, MenuScreen.field_h, PrefabComponent.field_D};
           IntrusiveDeque.field_d[10] = new String[]{kd.field_z, qba.field_d, GridWidgetContainer.field_H};
           Effect.field_h[10] = new String[]{ViewportManager.field_a, ir.field_c, fb.field_b};
           return;
@@ -224,7 +224,7 @@ final class rg extends SingleChildWidget {
         Effect.field_h[3] = new String[]{InvertOperator.field_o, vk.field_a, SwitchLinkList.field_d};
         Effect.field_h[4] = new String[]{DisplaySettingsDialog.field_R, gn.field_y, tr.field_d};
         IntrusiveDeque.field_d[5] = new String[]{TripBeamComponent.field_J, td.field_u, PitModel.field_r};
-        Effect.field_h[5] = new String[]{gu.field_k, MazeComponent.field_G, du.field_b};
+        Effect.field_h[5] = new String[]{TreasureValuesOverlay.field_k, MazeComponent.field_G, du.field_b};
         IntrusiveDeque.field_d[6] = new String[]{ConstrainToCircleLocomotor.field_v, VortexBehaviour.field_o, PowerUpItemBehaviour.field_s};
         Effect.field_h[6] = new String[]{apa.field_b, pna.field_k, bq.field_e};
         IntrusiveDeque.field_d[7] = new String[]{TouchSwitchBehaviour.field_q, MatchScoringObserver.field_d};
@@ -232,7 +232,7 @@ final class rg extends SingleChildWidget {
         Effect.field_h[7] = new String[]{km.field_n, ld.field_d};
         IntrusiveDeque.field_d[9] = new String[]{td.field_n, nea.field_b, gga.field_L};
         Effect.field_h[8] = new String[]{ThresholdOperator.field_o, StaticCrusherComponent.field_G, ClientException.field_e};
-        Effect.field_h[9] = new String[]{qna.field_a, wv.field_h, PrefabComponent.field_D};
+        Effect.field_h[9] = new String[]{qna.field_a, MenuScreen.field_h, PrefabComponent.field_D};
         IntrusiveDeque.field_d[10] = new String[]{kd.field_z, qba.field_d, GridWidgetContainer.field_H};
         Effect.field_h[10] = new String[]{ViewportManager.field_a, ir.field_c, fb.field_b};
     }

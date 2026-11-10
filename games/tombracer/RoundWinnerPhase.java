@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bp extends MatchPhase {
+final class RoundWinnerPhase extends MatchPhase {
     private int field_n;
     static String field_o;
     static Sprite[] field_m;
@@ -40,9 +40,9 @@ final class bp extends MatchPhase {
         SecondaryNodeDequeIterator.a(192, var5, 3145728, 340, (byte) 39, var4, 150);
         WhiteLightShooterComponent.a(150, (byte) -85, var4, 5242880, 2, var5, 340);
         var8 = var4 + 20 + 8;
-        oka.a(gl.$cfr$intArgs$a$53ce4ab4c593(113, ru.field_a, new String[]{this.screen.a(this.matchState.e(2), false)}).toUpperCase(), 16777215, eda.field_f, -1, var8, 320, 0);
+        MembersUpsellMenu.a(gl.$cfr$intArgs$a$53ce4ab4c593(113, ru.field_a, new String[]{this.screen.getPlayerName(this.matchState.e(2), false)}).toUpperCase(), 16777215, eda.field_f, -1, var8, 320, 0);
         var8 += 40;
-        oka.a(nsa.field_f + ":", 16777215, kn.field_p, -1, var8, 320, 0);
+        MembersUpsellMenu.a(nsa.field_f + ":", 16777215, kn.field_p, -1, var8, 320, 0);
         var8 += 20;
         for (var9 = 0; var9 < this.matchState.players.length; var9++) {
           if (this.matchState.players[var9] != null) {
@@ -51,7 +51,7 @@ final class bp extends MatchPhase {
             } else {
               var10 = var7;
             }
-            oka.a(this.screen.a(var9, false).toUpperCase() + ": " + this.matchState.field_v[var9], var10, kn.field_p, -1, var8, 320, 0);
+            MembersUpsellMenu.a(this.screen.getPlayerName(var9, false).toUpperCase() + ": " + this.matchState.roundWins[var9], var10, kn.field_p, -1, var8, 320, 0);
             var8 += 20;
           }
         }
@@ -61,13 +61,13 @@ final class bp extends MatchPhase {
     public static void releaseStatics(int param0) {
         field_o = null;
         if (param0 != 0) {
-          bp.releaseStatics(69);
+          RoundWinnerPhase.releaseStatics(69);
         }
         field_p = null;
         field_m = null;
     }
 
-    bp(MatchScreen param0, MatchProtocol param1) {
+    RoundWinnerPhase(MatchScreen param0, MatchProtocol param1) {
         super(param0, param1);
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -79,10 +79,10 @@ final class bp extends MatchPhase {
         this.field_n = 200;
         try {
           if (this.matchState.field_K == 1) {
-            this.screen.a(new gi(this.screen), 680);
+            this.screen.addOverlay(new FinishOrderOverlay(this.screen), 680);
           } else {
             this.matchState.field_e.a(false);
-            this.screen.a(new gu(this.screen), 680);
+            this.screen.addOverlay(new TreasureValuesOverlay(this.screen), 680);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -121,7 +121,7 @@ final class bp extends MatchPhase {
         } else {
           this.field_n = this.field_n - 1;
           if (this.field_n == 0) {
-            var3 = this.matchState.b((byte) 98);
+            var3 = this.matchState.getMatchWinner((byte) 98);
             if (-1 != var3) {
               this.screen.i(var3, 85);
             } else {

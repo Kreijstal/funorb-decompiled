@@ -196,7 +196,7 @@ final class S2CRoundResultPacket implements GamePacket {
             var5.f(this.field_h[var4], -25915);
           }
           param0.matchState.field_E = this.field_j;
-          param0.a((byte) 101, this.treasure, this.winner);
+          param0.onRoundEnded((byte) 101, this.treasure, this.winner);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "cf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

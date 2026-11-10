@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class hha extends DualLinkNode {
+abstract class ArchiveRequest extends DualLinkNode {
     volatile boolean field_m;
     boolean field_l;
     boolean field_k;
 
     final static String a(boolean param0) {
         if (param0) {
-          hha.a(-49, 62, -28);
+          ArchiveRequest.a(-49, 62, -28);
           if (kl.field_a == gsa.field_y) {
             return faa.field_g;
           }
@@ -74,7 +74,7 @@ abstract class hha extends DualLinkNode {
         }
     }
 
-    abstract byte[] b(byte param0);
+    abstract byte[] getBytes(byte param0);
 
     final static boolean a(int param0, int param1, int param2) {
         if (param1 != 0) {
@@ -85,7 +85,7 @@ abstract class hha extends DualLinkNode {
 
     abstract int getProgress(byte param0);
 
-    hha() {
+    ArchiveRequest() {
         this.field_m = true;
     }
 

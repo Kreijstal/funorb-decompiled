@@ -905,7 +905,7 @@ final class PlayerModel implements PlayerAnimator, gs {
         if (param0 != 30355) {
           return;
         }
-        uw var3 = param1.j((byte) -128);
+        uw var3 = param1.getScene((byte) -128);
         if (var3 == null) {
           return;
         }

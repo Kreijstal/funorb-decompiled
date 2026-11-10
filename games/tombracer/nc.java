@@ -18,10 +18,10 @@ final class nc {
         field_e = null;
     }
 
-    final br a(byte param0, int param1) {
+    final QuickChatCategory a(byte param0, int param1) {
         byte[] var4 = null;
         int var5 = 0;
-        br var3 = (br) (this.field_c.a((byte) 114, (long)param1));
+        QuickChatCategory var3 = (QuickChatCategory) (this.field_c.a((byte) 114, (long)param1));
         int var5Lifetime1;
         if (var3 != null) {
           return var3;
@@ -31,7 +31,7 @@ final class nc {
         } else {
           var4 = this.field_a.a(false, 0, param1);
         }
-        br var6 = new br();
+        QuickChatCategory var6 = new QuickChatCategory();
         if (var4 == null) {
           if (param1 >= 32768) {
             var6.applyGlobalIds(10211);

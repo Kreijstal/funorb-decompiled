@@ -26,7 +26,7 @@ final class ch implements Runnable {
               for (var1_int = 0; 2 > var1_int; var1_int++) {
                 var2 = this.field_c[var1_int];
                 if (var2 != null) {
-                  var2.c();
+                  var2.serviceOutput();
                 }
               }
               TrapSpawner.sleepMillis(0, 10L);

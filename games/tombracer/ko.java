@@ -286,7 +286,7 @@ final class ko {
         this.field_b = 0;
         this.field_c = 0;
         if (0 == this.field_f) {
-          this.field_c = fna.field_h;
+          this.field_c = MenuEntry.field_h;
         }
         if (param0 == -50) {
           return;
@@ -338,13 +338,13 @@ final class ko {
         this.field_b = 0;
         this.field_c = 0;
         if (this.field_f == 0) {
-          this.field_c = fna.field_h;
+          this.field_c = MenuEntry.field_h;
         }
         if (param0 <= 3) {
           this.a(-50, 52);
         }
         if (this.field_f == 0 &&
-          fna.field_h == 98) {
+          MenuEntry.field_h == 98) {
           if (0 >= this.field_h) {
             this.field_h = this.field_i;
           }
@@ -352,7 +352,7 @@ final class ko {
           this.field_e = false;
         }
         if (0 == this.field_f &&
-          fna.field_h == 99) {
+          MenuEntry.field_h == 99) {
           this.field_h = this.field_h + 1;
           if (this.field_h >= this.field_i) {
             this.field_h = 0;
@@ -396,10 +396,10 @@ final class ko {
         var3 = 77 / ((param1 + 33) / 39);
         this.field_c = 0;
         if (this.field_f == 0) {
-          this.field_c = fna.field_h;
+          this.field_c = MenuEntry.field_h;
         }
         if (this.field_f == 0 &&
-          fna.field_h == 96) {
+          MenuEntry.field_h == 96) {
           if (this.field_h <= 0) {
             this.field_h = this.field_i;
           }
@@ -407,7 +407,7 @@ final class ko {
           this.field_h = this.field_h - 1;
         }
         if (0 == this.field_f &&
-          fna.field_h == 97) {
+          MenuEntry.field_h == 97) {
           this.field_h = this.field_h + 1;
           this.field_e = false;
           if (this.field_h >= this.field_i) {
@@ -417,8 +417,8 @@ final class ko {
         if (this.field_f != 0) {
           return;
         }
-        if (fna.field_h != 98 &&
-          fna.field_h != 99) {
+        if (MenuEntry.field_h != 98 &&
+          MenuEntry.field_h != 99) {
           return;
         }
         if (this.field_h < 0) {

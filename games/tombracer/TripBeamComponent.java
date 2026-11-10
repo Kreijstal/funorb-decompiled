@@ -22,13 +22,13 @@ final class TripBeamComponent extends SwitchComponent {
         RuntimeException decompiledCaughtException = null;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          if (null == fna.field_j) {
+          if (null == MenuEntry.field_j) {
             return;
           }
-          var2 = fna.field_j[param1];
+          var2 = MenuEntry.field_j[param1];
           if (var2 == null) {
             paa.a(false, param1);
-            var2 = fna.field_j[param1];
+            var2 = MenuEntry.field_j[param1];
           }
           var3 = 32;
           if (param1 == 2 ||

@@ -4118,7 +4118,7 @@ final class Model extends ka {
         }
         this.field_W = new float[this.field_g][];
         this.field_l = new float[this.field_g][];
-        var11 = qqa.a(var74, param1, this.field_g, (byte) -6);
+        var11 = NetworkArchiveRequest.a(var74, param1, this.field_g, (byte) -6);
         var61 = this.field_d.contextForThread((Runnable) ((Object) Thread.currentThread()));
         var75 = var61.field_d;
         var14Lifetime2 = 0;

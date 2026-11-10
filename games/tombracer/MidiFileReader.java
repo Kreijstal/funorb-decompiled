@@ -24,7 +24,7 @@ final class MidiFileReader {
     }
 
     final int b(int param0) {
-        int var2 = this.a(param0);
+        int var2 = this.readNextMessage(param0);
         return var2;
     }
 
@@ -32,7 +32,7 @@ final class MidiFileReader {
         this.field_d.position = -1;
     }
 
-    final void a(byte[] param0) {
+    final void parse(byte[] param0) {
         int var4 = 0;
         int var5 = 0;
         int var3Lifetime1;
@@ -73,7 +73,7 @@ final class MidiFileReader {
         this.field_a[param0] = this.field_a[param0] + var2;
     }
 
-    private final int a(int param0) {
+    private final int readNextMessage(int param0) {
         int var2;
         int var3;
         int var4;
@@ -87,7 +87,7 @@ final class MidiFileReader {
         }
         if (var2 != 240 &&
           var2 != 247) {
-          return this.a(param0, var2);
+          return this.readMessageBody(param0, var2);
         }
         var3 = this.field_d.readVarInt((byte) -125);
         if (var2 == 247 &&
@@ -99,14 +99,14 @@ final class MidiFileReader {
             !(var4 > 252) || var4 == 254) {
             this.field_d.position = this.field_d.position + 1;
             this.field_f[param0] = var4;
-            return this.a(param0, var4);
+            return this.readMessageBody(param0, var4);
           }
         }
         this.field_d.position = this.field_d.position + var3;
         return 0;
     }
 
-    private final int a(int param0, int param1) {
+    private final int readMessageBody(int param0, int param1) {
         int var5 = 0;
         int var6 = 0;
         int var3 = 0;
@@ -208,7 +208,7 @@ final class MidiFileReader {
 
     MidiFileReader(byte[] param0) {
         this.field_d = new PacketBuffer((byte[]) null);
-        this.a(param0);
+        this.parse(param0);
     }
 
     static {

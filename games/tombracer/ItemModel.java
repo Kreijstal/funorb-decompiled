@@ -253,7 +253,7 @@ final class ItemModel extends TrapModel {
     final static void i(int param0) {
         qpa.a(275, ht.field_Pb, 3, 40, 440, 126, 200);
         qpa.a(275, cla.field_n, 5, 40, 440, 126, 200);
-        qpa.a(275, se.field_s, 6, 40, 440, 124, 200);
+        qpa.a(275, RemovedFromGameMenu.field_s, 6, 40, 440, 124, 200);
         qpa.a(335, jta.field_z, 9, 40, 440, 125, 200);
         if (param0 < 97) {
           OpenGlToolkit var2 = (OpenGlToolkit) null;
@@ -309,10 +309,10 @@ final class ItemModel extends TrapModel {
             var19 = var7.a(16, 128, 0, 128);
             hna.field_e = bw.wrapByteStorage(270, var19, false);
           }
-          if (null == gu.field_l) {
+          if (null == TreasureValuesOverlay.field_l) {
             var9 = new dca();
             var20 = var9.a(128, 16, 123, 128);
-            gu.field_l = bw.wrapByteStorage(270, var20, false);
+            TreasureValuesOverlay.field_l = bw.wrapByteStorage(270, var20, false);
           }
           var11 = param0.field_zc;
           if (param1 < 116) {

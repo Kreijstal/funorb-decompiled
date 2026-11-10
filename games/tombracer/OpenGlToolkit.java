@@ -992,7 +992,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
             fieldTemp$1 = this.field_A;
             this.field_A = this.field_A - 1;
             this.field_kd[fieldTemp$1] = null;
-            param0.a(4245);
+            param0.unbindFramebuffer(4245);
             if (this.field_A < 0) {
               this.field_Qb = null;
             } else {
@@ -1912,7 +1912,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
             }
             this.field_Hb = new uua(this);
             this.v(-3159);
-            this.b((byte) -99);
+            this.exitFullscreen((byte) -99);
             this.a();
             return;
           } catch (java.lang.Throwable decompiledCaughtParameter2) {
@@ -2894,7 +2894,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
             throw new RuntimeException();
           }
           if (param0 <= this.field_A) {
-            this.field_kd[this.field_A].a(4245);
+            this.field_kd[this.field_A].unbindFramebuffer(4245);
           }
           fieldTemp$0 = this.field_A + 1;
           this.field_A = this.field_A + 1;
@@ -3191,7 +3191,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    private final void b(byte param0) {
+    private final void exitFullscreen(byte param0) {
         java.awt.Dimension var2 = null;
         if (null == this.field_ad) {
           this.field_R = 0;

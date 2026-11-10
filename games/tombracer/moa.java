@@ -5,7 +5,7 @@ final class moa {
     static int field_b;
     static int field_a;
 
-    final static String a(gqa param0, int param1) {
+    final static String formatChatPrefix(gqa param0, int param1) {
         String stackIn_33_0 = null;
         String stackIn_35_0 = null;
         Object stackIn_38_0 = null;

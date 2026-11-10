@@ -564,7 +564,7 @@ final class np extends ka {
             stackIn_79_0 = so.a(param1, (byte) -106, this.field_u) ? 1 : 0;
           }
           if (stackIn_79_0 == 0) {
-            if (!hha.a(this.field_u, 0, param1)) {
+            if (!ArchiveRequest.a(this.field_u, 0, param1)) {
               param5.field_g = null;
               if (var13 != 0) {
                 param5.field_g = this.field_g;
@@ -4407,7 +4407,7 @@ final class np extends ka {
           this.field_bb = param2;
           this.field_R = param0;
           this.field_u = param5;
-          if (hha.a(param5, 0, param2)) {
+          if (ArchiveRequest.a(param5, 0, param2)) {
             this.field_g = new tj((va) null, 5126, 3, 0);
           }
           if (ModelFactory.a(-17, param5, param2)) {
@@ -4640,7 +4640,7 @@ final class np extends ka {
               var11[var14_int] = new pa();
               var14_int++;
             } while (var63 == 0);
-            var14_ref = qqa.a(var8, param1, this.field_W, (byte) -6);
+            var14_ref = NetworkArchiveRequest.a(var8, param1, this.field_W, (byte) -6);
             var15 = new uo[param1.field_o];
             var16 = 0;
             scanLoop1: while (true) {

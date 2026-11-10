@@ -10,7 +10,7 @@ final class tf extends TextFieldValidator {
         this.field_k = false;
     }
 
-    final it a(byte param0, String param1) {
+    final it validateText(byte param0, String param1) {
         jua var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
@@ -61,7 +61,7 @@ final class tf extends TextFieldValidator {
         }
     }
 
-    final String a(int param0, String param1) {
+    final String validationMessageForText(int param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         jua var4 = null;

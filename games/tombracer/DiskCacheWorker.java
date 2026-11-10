@@ -13,7 +13,7 @@ final class DiskCacheWorker implements Runnable {
           InterruptedException interruptedException = null;
           Object var2 = null;
           int var5 = 0;
-          sga var7 = null;
+          DiskArchiveRequest var7 = null;
           int decompiledRegionSelector0 = 0;
           int decompiledRegionSelector1 = 0;
           Throwable decompiledCaughtException = null;
@@ -23,7 +23,7 @@ final class DiskCacheWorker implements Runnable {
           while (!this.field_e) {
             var2 = this.field_d;
             synchronized (var2) {
-              var7 = (sga) (this.field_d.c((byte) 116));
+              var7 = (DiskArchiveRequest) (this.field_d.c((byte) 116));
               if (var7 == null) {
                 try {
                   this.field_d.wait();
@@ -107,25 +107,25 @@ final class DiskCacheWorker implements Runnable {
         return (param2 & 2048) != 0 ? true : false;
     }
 
-    final sga a(int param0, SectorCacheStore param1, int param2) {
-        sga var4 = null;
+    final DiskArchiveRequest a(int param0, SectorCacheStore param1, int param2) {
+        DiskArchiveRequest var4 = null;
         RuntimeException var4_ref = null;
         Object var5 = null;
-        sga var6 = null;
+        DiskArchiveRequest var6 = null;
         int var8 = 0;
-        sga stackIn_9_0 = null;
-        sga stackIn_18_0 = null;
+        DiskArchiveRequest stackIn_9_0 = null;
+        DiskArchiveRequest stackIn_18_0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
         Throwable decompiledCaughtException = null;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
-          var4 = new sga();
+          var4 = new DiskArchiveRequest();
           var4.field_q = 1;
           var5 = this.field_d;
           synchronized (var5) {
-            var6 = (sga) (this.field_d.b((byte) 38));
+            var6 = (DiskArchiveRequest) (this.field_d.b((byte) 38));
             while (var6 != null) {
               if ((long)param2 == var6.secondaryKey &&
                 var6.field_o == param1 &&
@@ -135,7 +135,7 @@ final class DiskCacheWorker implements Runnable {
                 stackIn_9_0 = var4;
                 return stackIn_9_0;
               }
-              var6 = (sga) (this.field_d.c(28));
+              var6 = (DiskArchiveRequest) (this.field_d.c(28));
             }
           }
           if (param0 != 15871) {
@@ -160,17 +160,17 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final sga a(byte param0, int param1, SectorCacheStore param2) {
-        sga var4 = null;
+    final DiskArchiveRequest a(byte param0, int param1, SectorCacheStore param2) {
+        DiskArchiveRequest var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
-        sga stackIn_3_0 = null;
+        DiskArchiveRequest stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new sga();
+          var4 = new DiskArchiveRequest();
           var4.field_o = param2;
           var4.secondaryKey = (long)param1;
           var4.field_q = 3;
@@ -211,7 +211,7 @@ final class DiskCacheWorker implements Runnable {
         return var1.field_h;
     }
 
-    private final void a(int param0, sga param1) {
+    private final void a(int param0, DiskArchiveRequest param1) {
         synchronized (this.field_d) {
           this.field_d.a(param1, (byte) -105);
           if (param0 >= -27) {
@@ -223,12 +223,12 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final sga writeAsync(boolean param0, int param1, SectorCacheStore param2, byte[] param3) {
-        sga var5 = null;
+    final DiskArchiveRequest writeAsync(boolean param0, int param1, SectorCacheStore param2, byte[] param3) {
+        DiskArchiveRequest var5 = null;
         RuntimeException var5_ref = null;
-        sga stackIn_2_0 = null;
+        DiskArchiveRequest stackIn_2_0 = null;
         boolean stackIn_3_1 = false;
-        sga stackIn_4_0 = null;
+        DiskArchiveRequest stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -236,7 +236,7 @@ final class DiskCacheWorker implements Runnable {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = new sga();
+          var5 = new DiskArchiveRequest();
           var5.field_p = param3;
           var5.field_q = 2;
           var5.secondaryKey = (long)param1;

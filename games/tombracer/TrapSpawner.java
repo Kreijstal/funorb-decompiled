@@ -92,7 +92,7 @@ final class TrapSpawner extends Spawner {
     final void spawn(int param0, int param1, int param2, int param3) {
         Trap var6 = null;
         Trap var6Lifetime1;
-        if (this.template.J(96)) {
+        if (this.template.isEmpty(96)) {
           return;
         }
         if (this.template.isExpired(18407)) {
@@ -104,7 +104,7 @@ final class TrapSpawner extends Spawner {
         if (param3 == 4) {
           var5.endBitWrite(-1826190686);
           var6 = this.template.cloneInto(param3 - 14406, this.field_a, true);
-          var6.m(1, param1);
+          var6.setLocalX(1, param1);
           var6.setLocalY(param2, -19879);
           var6.rotateBy(false, param0);
           this.field_a.addTrap(var6, (byte) 32);
@@ -113,7 +113,7 @@ final class TrapSpawner extends Spawner {
         this.getTypeId(false);
         var5.endBitWrite(-1826190686);
         var6Lifetime1 = this.template.cloneInto(param3 - 14406, this.field_a, true);
-        var6Lifetime1.m(1, param1);
+        var6Lifetime1.setLocalX(1, param1);
         var6Lifetime1.setLocalY(param2, -19879);
         var6Lifetime1.rotateBy(false, param0);
         this.field_a.addTrap(var6Lifetime1, (byte) 32);

@@ -14,9 +14,9 @@ abstract class GameScreen {
         String var4Lifetime1;
         String var4Lifetime2;
         String var4Lifetime3;
-        if (fna.field_h == 9) {
+        if (MenuEntry.field_h == 9) {
           if (!sqa.a(uba.field_f, 110, fp.field_d, tba.field_g, CoinItemComponent.field_I)) {
-            if (fna.field_h == 10) {
+            if (MenuEntry.field_h == 10) {
               if (var3 != 0) {
                 return false;
               }
@@ -24,7 +24,7 @@ abstract class GameScreen {
               return true;
             }
             if (!param1) {
-              if (fna.field_h != 11) {
+              if (MenuEntry.field_h != 11) {
                 return false;
               }
               if (!ns.field_f) {
@@ -34,14 +34,14 @@ abstract class GameScreen {
                 if (2 == VerticalGradientOperator.field_n) {
                   if (VerticalScrollbar.i(-1)) {
                     var4 = (String) null;
-                    ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
+                    ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
                   }
                   return true;
                 }
                 if (var3 == 0) {
                   if (VerticalScrollbar.i(-1)) {
                     var4 = (String) null;
-                    ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
+                    ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
                   }
                   return true;
                 }
@@ -54,14 +54,14 @@ abstract class GameScreen {
                 }
                 if (VerticalScrollbar.i(-1)) {
                   var4 = (String) null;
-                  ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
+                  ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
                 }
                 return true;
               }
               return false;
             }
             field_e = (java.applet.Applet) null;
-            if (fna.field_h != 11) {
+            if (MenuEntry.field_h != 11) {
               return false;
             }
             if (ns.field_f) {
@@ -75,7 +75,7 @@ abstract class GameScreen {
               }
               if (VerticalScrollbar.i(-1)) {
                 var4Lifetime3 = (String) null;
-                ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
+                ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
               }
               return true;
             }
@@ -87,7 +87,7 @@ abstract class GameScreen {
           }
           return eca.a((byte) -121, uba.field_f, CoinItemComponent.field_I, fp.field_d, tba.field_g);
         }
-        if (fna.field_h == 10) {
+        if (MenuEntry.field_h == 10) {
           if (var3 != 0) {
             return false;
           }
@@ -96,7 +96,7 @@ abstract class GameScreen {
         }
         if (param1) {
           field_e = (java.applet.Applet) null;
-          if (fna.field_h == 11) {
+          if (MenuEntry.field_h == 11) {
             if (!ns.field_f) {
               return false;
             }
@@ -110,13 +110,13 @@ abstract class GameScreen {
             }
             if (VerticalScrollbar.i(-1)) {
               var4Lifetime1 = (String) null;
-              ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
+              ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
             }
             return true;
           }
           return false;
         }
-        if (fna.field_h == 11) {
+        if (MenuEntry.field_h == 11) {
           if (!ns.field_f) {
             return false;
           }
@@ -130,7 +130,7 @@ abstract class GameScreen {
           }
           if (VerticalScrollbar.i(-1)) {
             var4Lifetime2 = (String) null;
-            ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
+            ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
           }
           return true;
         }

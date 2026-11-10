@@ -11,7 +11,7 @@ abstract class TextLayout {
 
     final static void a(int param0, byte param1, int param2) {
         MandelbrotOperator.field_o = null;
-        String var3 = fna.field_k;
+        String var3 = MenuEntry.field_k;
         if (var3 == null) {
           var3 = kma.defaultPlayerNames[0];
         }
@@ -22,7 +22,7 @@ abstract class TextLayout {
         id var6 = new id(param0, var5);
         SecondaryNodeDequeIterator.field_a = new MatchScreen(false, var5, var4, 0, false, rga.b(26499, param0), 0, 1, param2, param0, (BitSet[]) null, new boolean[]{ReportAbuseDialog.field_ub > 0 ? true : false}, var6);
         SecondaryNodeDequeIterator.field_a.j((byte) -64);
-        SecondaryNodeDequeIterator.field_a.h((byte) -52);
+        SecondaryNodeDequeIterator.field_a.showCharacterSelect((byte) -52);
         int var7 = -125 / ((param1 - 57) / 38);
         iqa.field_c.g(0);
         ConstrainToRectangleLocomotor.a(false, -1, (byte) 92);

@@ -9,7 +9,7 @@ final class MatchScreen extends GameScreen implements rqa {
     private MatchProtocol protocol;
     static jea field_F;
     int field_x;
-    private IntrusiveDeque field_f;
+    private IntrusiveDeque overlays;
     static SpriteData field_q;
     private boolean[][] field_v;
     private boolean[] field_u;
@@ -64,7 +64,7 @@ final class MatchScreen extends GameScreen implements rqa {
             for (var7 = 0; this.matchState.simulations[var3].rooms.length > var7; var7++) {
               var8 = this.matchState.simulations[var3].rooms[var7];
               if (var8 != null) {
-                var8.j((byte) 106).a(-28265, new sva(var8));
+                var8.getScene((byte) 106).a(-28265, new sva(var8));
                 var8.a(4855, var6);
               }
             }
@@ -74,7 +74,7 @@ final class MatchScreen extends GameScreen implements rqa {
     }
 
     private final void i(byte param0) {
-        this.field_f.clear(8);
+        this.overlays.clear(8);
         if (param0 != 99) {
           this.field_i = 64;
         }
@@ -103,7 +103,7 @@ final class MatchScreen extends GameScreen implements rqa {
     final void a(boolean param0, boolean param1, int param2) {
         int var4;
         int var5;
-        me var6;
+        MatchOverlay var6;
         int var4Lifetime1;
         var5 = TombRacer.field_G ? 1 : 0;
         msa.field_a = this.l(95);
@@ -131,17 +131,17 @@ final class MatchScreen extends GameScreen implements rqa {
           this.phase.a(80, param1);
         }
         this.field_w = false;
-        var6 = (me) (this.field_f.first(-80));
+        var6 = (MatchOverlay) (this.overlays.first(-80));
         while (var6 != null) {
           var6.a((byte) -120);
-          if (!var6.c((byte) -121)) {
+          if (!var6.isFinished((byte) -121)) {
             if (var6.a(true)) {
               this.field_w = true;
             }
           } else {
-            this.a(-19805, var6);
+            this.removeOverlay(-19805, var6);
           }
-          var6 = (me) (this.field_f.next(param2 - 15171));
+          var6 = (MatchOverlay) (this.overlays.next(param2 - 15171));
         }
         if (null != this.field_n) {
           this.field_n.a((byte) 44);
@@ -248,7 +248,7 @@ final class MatchScreen extends GameScreen implements rqa {
         }
         iqa.field_c.d(114);
         this.matchState.field_y[this.field_x].a(0, (byte) 37);
-        this.c(106);
+        this.startRound(106);
     }
 
     private final void a(boolean param0, boolean param1, boolean param2) {
@@ -331,7 +331,7 @@ final class MatchScreen extends GameScreen implements rqa {
         Object var15 = null;
         Player var17 = null;
         this.field_s = false;
-        this.field_f = new IntrusiveDeque();
+        this.overlays = new IntrusiveDeque();
         this.field_A = false;
         this.field_t = false;
         this.field_r = -1;
@@ -463,7 +463,7 @@ final class MatchScreen extends GameScreen implements rqa {
         }
         var2.b(true, true);
         this.j((byte) -99);
-        this.c(param0 ^ 102);
+        this.startRound(param0 ^ 102);
     }
 
     final void b(int param0, BitPacketBuffer param1) {
@@ -497,7 +497,7 @@ final class MatchScreen extends GameScreen implements rqa {
         }
     }
 
-    final int a(boolean param0, String param1) {
+    final int findPlayerIndex(boolean param0, String param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -533,7 +533,7 @@ final class MatchScreen extends GameScreen implements rqa {
         return this.field_y[param1] == 1 ? true : false;
     }
 
-    final void c(int param0) {
+    final void startRound(int param0) {
         int var2;
         Room var3;
         int var4;
@@ -565,7 +565,7 @@ final class MatchScreen extends GameScreen implements rqa {
         field_F = null;
         if (param0) {
           String var2 = (String) null;
-          MatchScreen.a(-7, (String) null);
+          MatchScreen.validateDigits(-7, (String) null);
         }
         field_q = null;
     }
@@ -593,7 +593,7 @@ final class MatchScreen extends GameScreen implements rqa {
             this.e(-34, -99);
           }
           if (!this.matchState.a(14)) {
-            this.h((byte) 120);
+            this.showCharacterSelect((byte) 120);
           } else {
             if (this.matchState.field_z < 0) {
               if (this.matchState.b(0)) {
@@ -603,12 +603,12 @@ final class MatchScreen extends GameScreen implements rqa {
                     var10[var4][var5] = this.matchState.players[var4].getTreasure(196608, var5);
                   }
                 }
-                this.a(var10, -9);
+                this.showResults(var10, -9);
                 return;
               }
-              this.c(102);
+              this.startRound(102);
             } else {
-              this.a(false);
+              this.showStandings(false);
             }
           }
           return;
@@ -643,13 +643,13 @@ final class MatchScreen extends GameScreen implements rqa {
           if (!this.matchState.l(param1 ^ -28, var3) &&
             (1 << var3 & param0) > 0) {
             this.matchState.d((byte) -95, var3);
-            var4 = eea.a(gl.$cfr$intArgs$a$53ce4ab4c593(87, se.field_r, new String[]{this.a(var3, false)}), (byte) -72);
+            var4 = eea.a(gl.$cfr$intArgs$a$53ce4ab4c593(87, RemovedFromGameMenu.field_r, new String[]{this.getPlayerName(var3, false)}), (byte) -72);
             iqa.field_c.a(param1 + 23, var4);
           }
         }
         if (param1 != -23) {
           var6 = (String) null;
-          MatchScreen.a(-21, (String) null);
+          MatchScreen.validateDigits(-21, (String) null);
         }
     }
 
@@ -657,7 +657,7 @@ final class MatchScreen extends GameScreen implements rqa {
         if (param0 != -54) {
           return;
         }
-        if (param1 != this.matchState.b((byte) 91)) {
+        if (param1 != this.matchState.getMatchWinner((byte) 91)) {
           this.i(param1, 108);
         }
     }
@@ -747,7 +747,7 @@ final class MatchScreen extends GameScreen implements rqa {
         }
     }
 
-    final void k(int param0) {
+    final void showRewardChoice(int param0) {
         this.i((byte) 99);
         this.setPhase(param0 ^ -7, new RewardChoicePhase(this, this.protocol));
         if (param0 != -1) {
@@ -768,7 +768,7 @@ final class MatchScreen extends GameScreen implements rqa {
           if (!this.matchState.f((byte) -93, var3) &&
             (param1 & 1 << var3) > 0) {
             this.matchState.m(param0 ^ 4, var3);
-            var4 = eea.a(gl.$cfr$intArgs$a$53ce4ab4c593(84, lu.field_c, new String[]{this.a(var3, false)}), (byte) -124);
+            var4 = eea.a(gl.$cfr$intArgs$a$53ce4ab4c593(84, lu.field_c, new String[]{this.getPlayerName(var3, false)}), (byte) -124);
             iqa.field_c.a(0, var4);
           }
           var3++;
@@ -844,7 +844,7 @@ final class MatchScreen extends GameScreen implements rqa {
         if (!this.field_D) {
           var4 = this.matchState.a(true, param1);
           while (var4 != null) {
-            var5 = new PendingEvent(var4.getEvent((byte) -125), param1, param1, 50 + this.matchState.simulations[param1].tick, var4.getEvent((byte) -125).a((byte) -28), this.matchState.getPlayerCourseIndex(1, param1));
+            var5 = new PendingEvent(var4.getEvent((byte) -125), param1, param1, 50 + this.matchState.simulations[param1].tick, var4.getEvent((byte) -125).getValue((byte) -28), this.matchState.getPlayerCourseIndex(1, param1));
             this.matchState.deliverPendingEvent((byte) 96, var5);
             var4 = this.matchState.a(true, param1);
           }
@@ -877,7 +877,7 @@ final class MatchScreen extends GameScreen implements rqa {
 
     public final void a(byte param0, boolean param1) {
         boolean discarded$0 = false;
-        me var5 = null;
+        MatchOverlay var5 = null;
         int var4 = TombRacer.field_G ? 1 : 0;
         if (null != this.phase) {
           this.phase.b(param0 ^ 97, param1);
@@ -889,23 +889,23 @@ final class MatchScreen extends GameScreen implements rqa {
           if (param0 != -28) {
             discarded$0 = this.o((byte) 26);
           }
-          var5 = (me) (this.field_f.first(param0 ^ 84));
+          var5 = (MatchOverlay) (this.overlays.first(param0 ^ 84));
           while (var5 != null) {
             var5.b((byte) -66);
-            var5 = (me) (this.field_f.next(123));
+            var5 = (MatchOverlay) (this.overlays.next(123));
           }
           return;
         }
     }
 
-    final boolean f(int param0) {
+    final boolean isInPlayPhase(int param0) {
         if (param0 != 0) {
           this.a(-75, 'n', 84);
         }
         return this.phase instanceof PlayPhase;
     }
 
-    final boolean a(int param0, int param1, BitPacketBuffer param2) {
+    final boolean handleServerPacket(int param0, int param1, BitPacketBuffer param2) {
         RuntimeException var4 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -935,18 +935,18 @@ final class MatchScreen extends GameScreen implements rqa {
         }
     }
 
-    final void a(me param0, int param1) {
+    final void addOverlay(MatchOverlay param0, int param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          this.field_f.addLast((byte) -120, param0);
+          this.overlays.addLast((byte) -120, param0);
           if (param1 != 680) {
-            this.a(-90, false);
+            this.getPlayerName(-90, false);
           }
-          if (param0 instanceof dl) {
+          if (param0 instanceof AchievementsOverlay) {
             this.field_t = true;
           }
           return;
@@ -971,13 +971,13 @@ final class MatchScreen extends GameScreen implements rqa {
         return this.field_s;
     }
 
-    final void h(byte param0) {
+    final void showCharacterSelect(byte param0) {
         int var2 = 70 % ((37 - param0) / 62);
         this.i((byte) 99);
-        this.setPhase(6, new uda(this, this.protocol));
+        this.setPhase(6, new CharacterSelectPhase(this, this.protocol));
     }
 
-    final static hra a(int param0, String param1) {
+    final static hra validateDigits(int param0, String param1) {
         int var3 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -1053,7 +1053,7 @@ final class MatchScreen extends GameScreen implements rqa {
         return this.protocol.b(1);
     }
 
-    private final void a(boolean param0) {
+    private final void showStandings(boolean param0) {
         this.i((byte) 99);
         if (param0) {
           this.field_s = true;
@@ -1072,15 +1072,15 @@ final class MatchScreen extends GameScreen implements rqa {
         jha var3 = null;
         int var4 = TombRacer.field_G ? 1 : 0;
         if (param0 < 23) {
-          this.f(63);
+          this.isInPlayPhase(63);
         }
         if (this.matchState.b((byte) 90, param1)) {
-          var3 = RewardChoicePhase.a(-41, gl.$cfr$intArgs$a$53ce4ab4c593(124, ara.field_yb, new String[]{this.j(param1, 9)}) + ": " + dea.a(this.matchState.c((byte) 115, param1), (byte) -8));
+          var3 = RewardChoicePhase.a(-41, gl.$cfr$intArgs$a$53ce4ab4c593(124, ara.field_yb, new String[]{this.getColouredPlayerName(param1, 9)}) + ": " + dea.a(this.matchState.c((byte) 115, param1), (byte) -8));
         } else {
           if (this.matchState.e((byte) -66, param1)) {
-            var3 = RewardChoicePhase.a(-79, gl.$cfr$intArgs$a$53ce4ab4c593(107, hu.field_a, new String[]{this.j(param1, 9)}) + ": " + dea.a(this.matchState.c((byte) 115, param1), (byte) -8));
+            var3 = RewardChoicePhase.a(-79, gl.$cfr$intArgs$a$53ce4ab4c593(107, hu.field_a, new String[]{this.getColouredPlayerName(param1, 9)}) + ": " + dea.a(this.matchState.c((byte) 115, param1), (byte) -8));
           } else {
-            var3 = RewardChoicePhase.a(-108, gl.$cfr$intArgs$a$53ce4ab4c593(99, DisplaySettingsDialog.field_Q, new String[]{this.j(param1, 9)}));
+            var3 = RewardChoicePhase.a(-108, gl.$cfr$intArgs$a$53ce4ab4c593(99, DisplaySettingsDialog.field_Q, new String[]{this.getColouredPlayerName(param1, 9)}));
           }
         }
         iqa.field_c.a(0, var3);
@@ -1118,7 +1118,7 @@ final class MatchScreen extends GameScreen implements rqa {
           var3 = var3 | 64;
         }
         if (this.field_y[8] > 0) {
-          if (this.f(0)) {
+          if (this.isInPlayPhase(0)) {
             if (!this.d((byte) 92) &&
               this.matchState.players[param1].s((byte) 85)) {
               var3 = var3 | 256;
@@ -1128,7 +1128,7 @@ final class MatchScreen extends GameScreen implements rqa {
           }
         }
         if (param0) {
-          this.field_f = (IntrusiveDeque) null;
+          this.overlays = (IntrusiveDeque) null;
         }
         var3 = lf.a(var3, 4);
         if (null == this.field_C) {
@@ -1146,11 +1146,11 @@ final class MatchScreen extends GameScreen implements rqa {
         }
     }
 
-    private final void a(int[][] param0, int param1) {
+    private final void showResults(int[][] param0, int param1) {
         try {
           this.i((byte) 99);
           if (param1 != -9) {
-            this.a((byte) 46, (int[][]) null, -97);
+            this.onRoundEnded((byte) 46, (int[][]) null, -97);
           }
           this.setPhase(6, new ResultsPhase(this, this.protocol, param0));
         } catch (RuntimeException runtimeException) {
@@ -1166,10 +1166,10 @@ final class MatchScreen extends GameScreen implements rqa {
         this.matchState.a((byte) -82);
         this.j((byte) -108);
         int var2 = -66 / ((-65 - param0) / 39);
-        this.c(-33);
+        this.startRound(-33);
     }
 
-    private final void a(int param0, me param1) {
+    private final void removeOverlay(int param0, MatchOverlay param1) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -1180,7 +1180,7 @@ final class MatchScreen extends GameScreen implements rqa {
             this.field_i = 76;
           }
           param1.unlink(42);
-          if (param1 instanceof dl) {
+          if (param1 instanceof AchievementsOverlay) {
             this.field_t = false;
           }
           return;
@@ -1203,7 +1203,7 @@ final class MatchScreen extends GameScreen implements rqa {
         int var4;
         int var5;
         int var6;
-        me var7;
+        MatchOverlay var7;
         var6 = TombRacer.field_G ? 1 : 0;
         if (this.field_x >= 0) {
           var4 = this.field_D ? 1 : 0;
@@ -1273,7 +1273,7 @@ final class MatchScreen extends GameScreen implements rqa {
         if (param2 != 1) {
           return true;
         }
-        var7 = (me) (this.field_f.first(param2 ^ -79));
+        var7 = (MatchOverlay) (this.overlays.first(param2 ^ -79));
         if (var7 == null) {
           return true;
         }
@@ -1305,7 +1305,7 @@ final class MatchScreen extends GameScreen implements rqa {
           }
           var5 = param0.getPlayerIndex(0);
           var6 = var4[uca.cosmeticRandom.nextBounded(var8.length, param1 + 9)];
-          var7 = this.a(var5, false);
+          var7 = this.getPlayerName(var5, false);
           dupTemp$1 = "<col=" + PasswordValidator.field_k[var5] + ">" + var6 + "</col>";
           var9 = dupTemp$1;
           var6Lifetime1 = dupTemp$1;
@@ -1390,7 +1390,7 @@ final class MatchScreen extends GameScreen implements rqa {
         }
     }
 
-    final void a(byte param0, int[][] param1, int param2) {
+    final void onRoundEnded(byte param0, int[][] param1, int param2) {
         int var4_int = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -1400,10 +1400,10 @@ final class MatchScreen extends GameScreen implements rqa {
         try {
           var4_int = 119 % ((param0 - 56) / 44);
           this.i(-1);
-          this.matchState.k(param2, -1);
+          this.matchState.setRoundWinner(param2, -1);
           this.i((byte) 99);
           if (0 != this.matchState.field_K) {
-            this.setPhase(6, new bp(this, this.protocol));
+            this.setPhase(6, new RoundWinnerPhase(this, this.protocol));
           } else {
             this.setPhase(6, new ResultsPhase(this, this.protocol, param1));
           }
@@ -1433,8 +1433,8 @@ final class MatchScreen extends GameScreen implements rqa {
     }
 
     final void c(int param0, int param1, int param2) {
-        if (this.phase instanceof uda) {
-          ((uda) (this.phase)).a(param2, 0, param0);
+        if (this.phase instanceof CharacterSelectPhase) {
+          ((CharacterSelectPhase) (this.phase)).a(param2, 0, param0);
         }
         int var4 = 25 % ((param1 - 54) / 49);
     }
@@ -1582,7 +1582,7 @@ final class MatchScreen extends GameScreen implements rqa {
         this.setPhase(6, new StandingsPhase(this, this.protocol));
     }
 
-    final String a(int param0, boolean param1) {
+    final String getPlayerName(int param0, boolean param1) {
         if (param1) {
           this.field_s = false;
         }
@@ -1596,7 +1596,7 @@ final class MatchScreen extends GameScreen implements rqa {
         return this.field_x == -2 ? true : false;
     }
 
-    final String j(int param0, int param1) {
+    final String getColouredPlayerName(int param0, int param1) {
         if (param1 != 9) {
           BitPacketBuffer var4 = (BitPacketBuffer) null;
           this.b(-82, (BitPacketBuffer) null);

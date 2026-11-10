@@ -43,7 +43,7 @@ final class PressureSwitchComponent extends SwitchComponent {
                 VoronoiNoiseOperator.a(false, var4_int, var5);
               }
               var6 = Transform3D.a(var4_int, -20011);
-              oka.field_y[var4_int].field_R = ColouriseOperator.field_m[var6];
+              MembersUpsellMenu.field_y[var4_int].field_R = ColouriseOperator.field_m[var6];
               PitModel.field_p[var4_int].field_r = StripedMazeGenerator.field_c[var6];
             }
           }

@@ -253,7 +253,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
               if (param0 != 128) {
                 var4 = 0;
                 var5 = 0;
-                var3 = vv.field_q;
+                var3 = NotLoggedInMenu.field_q;
               } else {
                 var5 = 1;
                 var4 = 1;

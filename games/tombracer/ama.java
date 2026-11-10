@@ -49,7 +49,7 @@ final class ama extends lba {
             var14 = (String[]) null;
             ama.a((BitmapFont) null, (String) null, -117, -80, (String[]) null);
           }
-          var5_int = param0.b(param1);
+          var5_int = param0.stringWidth(param1);
           if (var5_int <= param2 &&
             param1.indexOf("<br>") == -1) {
             param4[0] = param1;
@@ -66,7 +66,7 @@ final class ama extends lba {
             if (var10 == 32 ||
               45 == var10) {
               var11 = param1.substring(var7, 1 + var9).trim();
-              var12 = param0.b(var11);
+              var12 = param0.stringWidth(var11);
               if (param2 <= var12) {
                 incrementValue$1 = var6Lifetime1;
                 var6Lifetime1++;

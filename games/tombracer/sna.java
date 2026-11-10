@@ -118,12 +118,12 @@ final class sna {
     }
 
     private final void a(String param0, ms param1, int param2, int param3) {
-        dl var5 = null;
+        AchievementsOverlay var5 = null;
         try {
           if (param3 > -56) {
             this.b((byte) 111);
           }
-          var5 = new dl(this.field_l, param1);
+          var5 = new AchievementsOverlay(this.field_l, param1);
           var5.a(tea.field_a, param0, ColouriseOperator.field_n, (byte) 21);
           this.field_c.addLast((byte) -125, new mga(var5, param2));
         } catch (RuntimeException runtimeException) {
@@ -141,7 +141,7 @@ final class sna {
             var2.field_k = var2.field_k - 1;
           } else {
             if (!this.field_l.d(0)) {
-              this.field_l.a(var2.field_h, param0 ^ 644);
+              this.field_l.addOverlay(var2.field_h, param0 ^ 644);
               var2.unlink(param0 ^ 18);
             }
           }

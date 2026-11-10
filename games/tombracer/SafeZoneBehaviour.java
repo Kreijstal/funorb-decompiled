@@ -43,7 +43,7 @@ final class SafeZoneBehaviour extends Behaviour {
         }
     }
 
-    final static Class a(String param0, int param1) throws ClassNotFoundException {
+    final static Class resolveReflectionType(String param0, int param1) throws ClassNotFoundException {
         RuntimeException var2 = null;
         Class stackIn_3_0 = null;
         Class stackIn_7_0 = null;

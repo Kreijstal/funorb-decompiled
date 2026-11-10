@@ -79,7 +79,7 @@ final class MatchProtocol {
     }
 
     final static void b(int param0, int param1) {
-        if (null == fna.field_j) {
+        if (null == MenuEntry.field_j) {
           return;
         }
         int var2 = (int)(1000.0 * qk.field_w[param0]);

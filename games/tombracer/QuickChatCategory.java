@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class br extends DualLinkNode {
+final class QuickChatCategory extends DualLinkNode {
     char[] field_k;
     int[] field_l;
     static long field_p;
@@ -150,7 +150,7 @@ final class br extends DualLinkNode {
         }
     }
 
-    br() {
+    QuickChatCategory() {
         this.field_m = false;
     }
 

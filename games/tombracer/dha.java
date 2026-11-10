@@ -17,16 +17,16 @@ final class dha {
               if (vo.field_b) {
                 return KeySwitchComponent.c(2097152, param0, param3);
               }
-              if (fna.field_h == 9) {
+              if (MenuEntry.field_h == 9) {
                 return KeySwitchComponent.c(2097152, param0, param3);
               }
-              if (fna.field_h == 10) {
+              if (MenuEntry.field_h == 10) {
                 return KeySwitchComponent.c(2097152, param0, param3);
               }
-              if (fna.field_h == 11) {
+              if (MenuEntry.field_h == 11) {
                 return KeySwitchComponent.c(2097152, param0, param3);
               }
-              if (fna.field_h != 80) {
+              if (MenuEntry.field_h != 80) {
                 return false;
               }
               if (!AppletGameShell.isFreeChatAllowed(-1)) {
@@ -41,7 +41,7 @@ final class dha {
             stackIn_129_0 = (!eqa.a(param1, true, param0)) ? 0 : 1;
             var4 = stackIn_129_0;
           } else {
-            if (13 == fna.field_h) {
+            if (13 == MenuEntry.field_h) {
               era.field_d = null;
               return true;
             }
@@ -49,16 +49,16 @@ final class dha {
               if (vo.field_b) {
                 return KeySwitchComponent.c(2097152, param0, param3);
               }
-              if (fna.field_h == 9) {
+              if (MenuEntry.field_h == 9) {
                 return KeySwitchComponent.c(2097152, param0, param3);
               }
-              if (fna.field_h == 10) {
+              if (MenuEntry.field_h == 10) {
                 return KeySwitchComponent.c(2097152, param0, param3);
               }
-              if (fna.field_h == 11) {
+              if (MenuEntry.field_h == 11) {
                 return KeySwitchComponent.c(2097152, param0, param3);
               }
-              if (fna.field_h != 80) {
+              if (MenuEntry.field_h != 80) {
                 return false;
               }
               if (!AppletGameShell.isFreeChatAllowed(-1)) {
@@ -76,7 +76,7 @@ final class dha {
         } else {
           dha.a(38, -115, (byte) 27, 44);
           if (era.field_d != null) {
-            if (13 == fna.field_h) {
+            if (13 == MenuEntry.field_h) {
               era.field_d = null;
               return true;
             }
@@ -84,16 +84,16 @@ final class dha {
               if (vo.field_b) {
                 return KeySwitchComponent.c(2097152, param0, param3);
               }
-              if (fna.field_h == 9) {
+              if (MenuEntry.field_h == 9) {
                 return KeySwitchComponent.c(2097152, param0, param3);
               }
-              if (fna.field_h == 10) {
+              if (MenuEntry.field_h == 10) {
                 return KeySwitchComponent.c(2097152, param0, param3);
               }
-              if (fna.field_h == 11) {
+              if (MenuEntry.field_h == 11) {
                 return KeySwitchComponent.c(2097152, param0, param3);
               }
-              if (fna.field_h != 80) {
+              if (MenuEntry.field_h != 80) {
                 return false;
               }
               if (!AppletGameShell.isFreeChatAllowed(-1)) {
@@ -112,16 +112,16 @@ final class dha {
               if (vo.field_b) {
                 return KeySwitchComponent.c(2097152, param0, param3);
               }
-              if (fna.field_h == 9) {
+              if (MenuEntry.field_h == 9) {
                 return KeySwitchComponent.c(2097152, param0, param3);
               }
-              if (fna.field_h == 10) {
+              if (MenuEntry.field_h == 10) {
                 return KeySwitchComponent.c(2097152, param0, param3);
               }
-              if (fna.field_h == 11) {
+              if (MenuEntry.field_h == 11) {
                 return KeySwitchComponent.c(2097152, param0, param3);
               }
-              if (fna.field_h != 80) {
+              if (MenuEntry.field_h != 80) {
                 return false;
               }
               if (!AppletGameShell.isFreeChatAllowed(-1)) {
@@ -137,16 +137,16 @@ final class dha {
             var4 = stackIn_23_0;
           }
         }
-        if (fna.field_h == 80) {
+        if (MenuEntry.field_h == 80) {
           var4 = 1;
           ni.field_c = false;
         } else {
-          if (fna.field_h == 84) {
+          if (MenuEntry.field_h == 84) {
             var4 = 1;
             ni.field_c = false;
           }
         }
-        if (13 == fna.field_h) {
+        if (13 == MenuEntry.field_h) {
           PlayerProfile.a(true);
           var4 = 1;
           ni.field_c = false;

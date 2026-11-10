@@ -25,11 +25,11 @@ final class vha {
               rua.field_gb.c(30, param2);
               var5 = ItemModel.field_n.getOpenChainWidth(param1 + 22419) + ItemModel.field_n.field_q;
               if (640 < var5) {
-                wv.field_j = wv.field_j + 5;
+                MenuScreen.field_j = MenuScreen.field_j + 5;
               } else {
                 if (var5 < 635 &&
-                  wv.field_j > 0) {
-                  wv.field_j = wv.field_j - 5;
+                  MenuScreen.field_j > 0) {
+                  MenuScreen.field_j = MenuScreen.field_j - 5;
                 }
               }
               return;
@@ -53,21 +53,21 @@ final class vha {
         }
         var5Lifetime1 = ItemModel.field_n.getOpenChainWidth(param1 + 22419) + ItemModel.field_n.field_q;
         if (640 < var5Lifetime1) {
-          wv.field_j = wv.field_j + 5;
+          MenuScreen.field_j = MenuScreen.field_j + 5;
           return;
         }
         if (var5Lifetime1 >= 635) {
           return;
         }
-        if (wv.field_j <= 0) {
+        if (MenuScreen.field_j <= 0) {
           return;
         }
-        wv.field_j = wv.field_j - 5;
+        MenuScreen.field_j = MenuScreen.field_j - 5;
         return;
     }
 
     final static void a(boolean param0, int param1, int param2, boolean param3, int param4, int param5, boolean param6, int param7, int param8, boolean param9, int param10, boolean param11) {
-        fna.a(param4, 16777215, param9, param11, param3, -22919, 16777215, param7, param0, param1, param8, param6, param10, param2);
+        MenuEntry.a(param4, 16777215, param9, param11, param3, -22919, 16777215, param7, param0, param1, param8, param6, param10, param2);
         if (param5 < 12) {
           vha.a(true, -67, 8, false, -52, 39, true, -85, -41, false, -10, true);
         }

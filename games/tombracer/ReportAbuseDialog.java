@@ -215,15 +215,15 @@ final class ReportAbuseDialog extends jea {
               discarded$1 = this.field_vb.append(param11);
             }
             var16Lifetime2 = 0;
-            var17 = param6.field_H.b(ai.field_c);
+            var17 = param6.field_H.stringWidth(ai.field_c);
             if (var17 > var16Lifetime2) {
               var16Lifetime2 = var17;
             }
-            var17Lifetime2 = param6.field_H.b(qba.field_b);
+            var17Lifetime2 = param6.field_H.stringWidth(qba.field_b);
             if (var16Lifetime2 < var17Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
-            var17Lifetime3 = param6.field_H.b(TeleportLocomotor.field_o);
+            var17Lifetime3 = param6.field_H.stringWidth(TeleportLocomotor.field_o);
             if (var17Lifetime3 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime3;
             }
@@ -436,7 +436,7 @@ final class ReportAbuseDialog extends jea {
         if (this.field_Gb != -2) {
           return false;
         }
-        if (fna.field_h == 13) {
+        if (MenuEntry.field_h == 13) {
           this.field_Gb = -1;
         }
         if (!param0) {
@@ -456,7 +456,7 @@ final class ReportAbuseDialog extends jea {
         this.c(44, param1);
         if (null != this.field_xb) {
           this.field_xb.field_r = this.field_vb.toString();
-          this.field_xb.field_qb = (this.field_G - this.field_xb.field_H.b(this.field_xb.field_r)) / 2;
+          this.field_xb.field_qb = (this.field_G - this.field_xb.field_H.stringWidth(this.field_xb.field_r)) / 2;
           this.field_xb.field_G = -this.field_xb.field_qb + this.field_G;
           if (this.field_Ab != null &&
             this.field_Ab.field_y != 0) {

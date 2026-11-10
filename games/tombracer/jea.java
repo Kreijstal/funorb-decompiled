@@ -306,7 +306,7 @@ class jea extends um {
     final void c(int param0, boolean param1) {
         FuseBehaviour.field_w = !param1 ? true : false;
         int var3 = -103 / ((-16 - param0) / 34);
-        ow.field_s = !param1 ? true : false;
+        DrawOfferMenu.field_s = !param1 ? true : false;
         this.a(-1, true, SoftwareRasterizer.field_a, SoftwareRasterizer.field_g, 0, 0);
     }
 
@@ -414,7 +414,7 @@ class jea extends um {
         var11 = SoftwareRasterizer.field_k;
         SoftwareRasterizer.g(this.field_q, this.field_A, this.field_G + this.field_q, this.field_t + this.field_A);
         var12 = 0;
-        if (!ow.field_s &&
+        if (!DrawOfferMenu.field_s &&
           param1 &&
           0 != PlayerModel.field_b &&
           PasswordValidator.field_m >= SoftwareRasterizer.field_b &&
@@ -450,7 +450,7 @@ class jea extends um {
           FuseBehaviour.field_w = true;
         }
         if (var12 != 0) {
-          ow.field_s = true;
+          DrawOfferMenu.field_s = true;
         }
         SoftwareRasterizer.b(var8, var9, var10, var11);
         if (0 != this.field_E &&
@@ -603,9 +603,9 @@ class jea extends um {
         var21 = var19 + this.field_S;
         var22 = var20 + this.field_V;
         if (this.field_eb) {
-          ConstrainToLatticeLocomotor.a(param2, var16, param8, -117, param10, param7);
+          ConstrainToLatticeLocomotor.drawNineSlice(param2, var16, param8, -117, param10, param7);
         } else {
-          ConstrainToLatticeLocomotor.a(this.field_t, var16, this.field_A, param1 ^ -120, this.field_G, this.field_q);
+          ConstrainToLatticeLocomotor.drawNineSlice(this.field_t, var16, this.field_A, param1 ^ -120, this.field_G, this.field_q);
         }
         if (var17 != null) {
           var23_int = this.field_q + var21;
@@ -639,7 +639,7 @@ class jea extends um {
             this.field_sb != null) {
             var23Lifetime2 = var26 + this.field_sb;
           }
-          if (this.field_H.b(var23Lifetime2) <= -(2 * this.field_x) + this.field_G &&
+          if (this.field_H.stringWidth(var23Lifetime2) <= -(2 * this.field_x) + this.field_G &&
             var23Lifetime2.indexOf("<br>") < 0) {
             if (this.field_bb != 1) {
               if (2 == this.field_bb) {

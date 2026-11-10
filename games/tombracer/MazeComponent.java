@@ -295,7 +295,7 @@ abstract class MazeComponent extends PrefabComponent {
           cea.field_a.a(lk.field_l.field_G, di.field_a, param1 ^ -23774, 0, 0);
           stackIn_6_0 = uaa.field_b;
           stackIn_6_1 = lk.field_l.field_G;
-          if (!rca.field_p) {
+          if (!UnlockOverlay.field_p) {
             stackIn_7_2 = 0;
           } else {
             stackIn_7_2 = 2 + (io.field_a + 40) + 2;

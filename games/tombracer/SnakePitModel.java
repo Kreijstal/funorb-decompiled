@@ -404,7 +404,7 @@ final class SnakePitModel extends TrapModel {
               } else {
                 wba.field_p[var12].a(var8, var7Lifetime1, -23776, var13, var6_int);
                 bt.field_c[var12].a(var9 - param2, var7Lifetime1, -23776, 0, param2);
-                oka.field_y[var12].a(param0, -param4 + (var7Lifetime1 - param4), -23776, param4, var9);
+                MembersUpsellMenu.field_y[var12].a(param0, -param4 + (var7Lifetime1 - param4), -23776, param4, var9);
                 PitModel.field_p[var12].a(-var10 + (var8 - param2), -param4 + (var7Lifetime1 - param4), -23776, param4, var10);
               }
             }

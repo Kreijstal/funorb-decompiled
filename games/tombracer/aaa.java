@@ -57,18 +57,18 @@ final class aaa {
             }
             this.field_i = new rt[16];
             for (var2_intLifetime1 = 0; var2_intLifetime1 < 16; var2_intLifetime1++) {
-              var24 = ua.a(gu.field_l, 32768, var2_intLifetime1 * 32768, false);
+              var24 = ua.a(TreasureValuesOverlay.field_l, 32768, var2_intLifetime1 * 32768, false);
               this.field_i[var2_intLifetime1] = new rt(param0, 3553, 6410, 128, 128, true, var24, 6410, false);
             }
             return;
           }
-          var20 = ir.a(hna.field_e, 13588, false);
+          var20 = ir.unwrapByteStorage(hna.field_e, 13588, false);
           this.field_h = new lha(param0, 6410, 128, 128, 16, var20, 6410);
-          var21 = ir.a(gu.field_l, 13588, false);
+          var21 = ir.unwrapByteStorage(TreasureValuesOverlay.field_l, 13588, false);
           this.field_a = new lha(param0, 6410, 128, 128, 16, var21, 6410);
           var10 = param0.field_zc;
           if (var10.a((byte) 11)) {
-            var22 = ir.a(uga.field_m, 13588, false);
+            var22 = ir.unwrapByteStorage(uga.field_m, 13588, false);
             this.field_c = new lha(param0, 6408, 128, 128, 16);
             var4 = new lha(param0, 6409, 128, 128, 16, var22, 6409);
             if (var10.a(-112, 2.0f, var4, this.field_c)) {

@@ -48,11 +48,11 @@ final class so extends TextInputWidget implements mk {
         vb var1Lifetime1;
         var2 = TombRacer.field_G ? 1 : 0;
         try {
-          WheeledMountComponent.field_P.c();
+          WheeledMountComponent.field_P.serviceOutput();
           if (param0 != -16310) {
             so.pumpAudio(117);
           }
-          gg.field_b.c();
+          gg.field_b.serviceOutput();
           bga.field_b = bga.field_b - 1;
           if (0 == bga.field_b) {
             bga.field_b = 200;
@@ -104,7 +104,7 @@ final class so extends TextInputWidget implements mk {
 
     final static boolean a(int param0, byte param1, int param2) {
         int var3 = 118 / ((-39 - param1) / 53);
-        return (jj.a(param2, param0, -32842) | mg.a((byte) -53, param2, param0) | gha.a(param2, param0, 86)) & hha.a(param2, 0, param0);
+        return (jj.a(param2, param0, -32842) | mg.a((byte) -53, param2, param0) | gha.a(param2, param0, 86)) & ArchiveRequest.a(param2, 0, param0);
     }
 
     final String getHoverText(byte param0) {

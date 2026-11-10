@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class epa extends wv {
+final class epa extends MenuScreen {
     static int[] field_r;
     static String field_q;
 
@@ -39,12 +39,12 @@ final class epa extends wv {
           if (param0 < 5) {
             return this.field_n + this.e(0, 125) - cq.field_d.field_w;
           }
-          return (param0 > 4 ? 30 : -1 + this.field_m.length == param0 ? 60 : 30) - cq.field_d.field_w + (this.field_n + (-2 + param0) * this.field_i);
+          return (param0 > 4 ? 30 : -1 + this.items.length == param0 ? 60 : 30) - cq.field_d.field_w + (this.field_n + (-2 + param0) * this.field_i);
         }
         if (param0 < 5) {
           return this.field_n + this.e(0, 125) - cq.field_d.field_w;
         }
-        return (param0 > 4 ? 30 : -1 + this.field_m.length == param0 ? 60 : 30) - cq.field_d.field_w + (this.field_n + (-2 + param0) * this.field_i);
+        return (param0 > 4 ? 30 : -1 + this.items.length == param0 ? 60 : 30) - cq.field_d.field_w + (this.field_n + (-2 + param0) * this.field_i);
     }
 
     final static void a(int param0, byte param1, String param2) {

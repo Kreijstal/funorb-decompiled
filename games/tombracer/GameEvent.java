@@ -17,7 +17,7 @@ abstract class GameEvent extends IntrusiveNode {
         }
     }
 
-    abstract int a(byte param0);
+    abstract int getValue(byte param0);
 
     abstract void a(int param0, byte param1, PlayerSimulation param2);
 

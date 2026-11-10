@@ -10,7 +10,7 @@ final class ol {
         field_b = null;
         if (param0 != 0) {
           mu var2 = (mu) null;
-          ol.a((mu) null, false, (mu) null);
+          ol.comesBefore((mu) null, false, (mu) null);
         }
     }
 
@@ -39,7 +39,7 @@ final class ol {
         return 56;
     }
 
-    final static boolean a(mu param0, boolean param1, mu param2) {
+    final static boolean comesBefore(mu param0, boolean param1, mu param2) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_20_0 = null;

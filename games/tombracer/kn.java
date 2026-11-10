@@ -62,7 +62,7 @@ final class kn {
             var7 = this.field_q.field_k + this.field_q.field_w;
           }
           var8 = SoftwareRasterizer.field_g >> 2;
-          var9 = this.field_q.b(param1);
+          var9 = this.field_q.stringWidth(param1);
           var10 = this.field_q.field_w + this.field_q.field_k;
           var11 = 1;
           if (var8 < var9 ||
@@ -76,11 +76,11 @@ final class kn {
             if (uo.field_d == null) {
               uo.field_d = new String[16];
             }
-            var11Lifetime1 = this.field_q.a(param1, new int[]{var12}, uo.field_d);
+            var11Lifetime1 = this.field_q.wrapText(param1, new int[]{var12}, uo.field_d);
             var10 = var10 + var7 * (var11Lifetime1 - 1);
             var9 = 0;
             for (var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
-              var14 = this.field_q.b(uo.field_d[var13Lifetime2]);
+              var14 = this.field_q.stringWidth(uo.field_d[var13Lifetime2]);
               if (var9 < var14) {
                 var9 = var14;
               }
@@ -177,7 +177,7 @@ final class kn {
         int var7 = 0;
         int var8 = 0;
         try {
-          var5_int = this.field_q.b(param2);
+          var5_int = this.field_q.stringWidth(param2);
           if (param3 < 67) {
             this.field_m = -58;
           }

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class wv extends GameScreen {
+abstract class MenuScreen extends GameScreen {
     static int field_j;
     int field_i;
     int field_p;
     int field_g;
-    fna[] field_m;
+    MenuEntry[] items;
     int field_n;
     ko field_k;
     int field_f;
@@ -18,10 +18,10 @@ abstract class wv extends GameScreen {
         int discarded$1 = 0;
         RuntimeException runtimeException = null;
         int var3_int = 0;
-        fna var4 = null;
+        MenuEntry var4 = null;
         int var5 = 0;
         boolean stackIn_4_0 = false;
-        fna stackIn_12_0;
+        MenuEntry stackIn_12_0;
         boolean stackIn_12_1;
         boolean stackIn_12_2;
         int stackIn_12_3;
@@ -34,7 +34,7 @@ abstract class wv extends GameScreen {
           var3_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(this.field_k.field_i > var3_int)))) {
-            var4 = this.field_m[var3_int];
+            var4 = this.items[var3_int];
             stackOut_3_0 = this.c(var3_int, param0 + 28);
             stackIn_16_0 = stackOut_3_0 ? 1 : 0;
             stackIn_4_0 = stackOut_3_0;
@@ -45,7 +45,7 @@ abstract class wv extends GameScreen {
                 stackIn_12_2 = this.b(var4.field_g, -30487);
                 stackIn_12_3 = 1;
                 stackIn_13_4 = (this.field_k.field_h == var3_int);
-                ((fna) (Object) stackIn_12_0).a(stackIn_12_1, stackIn_12_2, stackIn_12_3, stackIn_13_4);
+                ((MenuEntry) (Object) stackIn_12_0).a(stackIn_12_1, stackIn_12_2, stackIn_12_3, stackIn_13_4);
               }
               var3_int++;
               continue;
@@ -85,8 +85,8 @@ abstract class wv extends GameScreen {
         var11 = TombRacer.field_G ? 1 : 0;
         try {
           if (0 <= param2 &&
-            this.field_m.length > param2) {
-            var4_int = this.field_m[param2].field_g;
+            this.items.length > param2) {
+            var4_int = this.items[param2].field_g;
             var5 = this.field_k.a(param0) ? 1 : 0;
             if (var5 != 0) {
               dsa.a(-80);
@@ -219,7 +219,7 @@ abstract class wv extends GameScreen {
         }
     }
 
-    wv(int param0, int param1, int param2, int param3, int param4, int[] param5) {
+    MenuScreen(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0);
         RuntimeException runtimeException = null;
         RuntimeException stackIn_8_0 = null;
@@ -235,7 +235,7 @@ abstract class wv extends GameScreen {
             param5 = new int[]{};
           }
           this.field_n = param3;
-          this.a(22174, param5);
+          this.setItems(22174, param5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -269,7 +269,7 @@ abstract class wv extends GameScreen {
     }
 
     void a(boolean param0, boolean param1, int param2) {
-        fna stackIn_11_0 = null;
+        MenuEntry stackIn_11_0 = null;
         boolean stackIn_11_1 = false;
         boolean stackIn_12_2 = false;
         RuntimeException decompiledCaughtException = null;
@@ -286,12 +286,12 @@ abstract class wv extends GameScreen {
           scanLoop1: while (true) {
             if (this.field_k.field_i > var4_int) {
               if (var5 == 0) {
-                stackIn_11_0 = this.field_m[var4_int];
+                stackIn_11_0 = this.items[var4_int];
                 stackIn_11_1 = param0;
                 stackIn_12_2 = (~this.field_k.field_h == ~var4_int);
-                ((fna) (Object) stackIn_11_0).a(stackIn_11_1, stackIn_12_2, param1, 6);
-                if (6 == this.field_m[var4_int].field_g) {
-                  this.field_m[var4_int].field_i = this.field_m[var4_int - 1].field_i + 33;
+                ((MenuEntry) (Object) stackIn_11_0).a(stackIn_11_1, stackIn_12_2, param1, 6);
+                if (6 == this.items[var4_int].field_g) {
+                  this.items[var4_int].field_i = this.items[var4_int - 1].field_i + 33;
                 }
                 var4_int++;
                 continue;
@@ -345,7 +345,7 @@ abstract class wv extends GameScreen {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -48) {
-            this.field_m = (fna[]) null;
+            this.items = (MenuEntry[]) null;
           }
           stackIn_4_0 = this.field_f;
           return stackIn_4_0;
@@ -394,7 +394,7 @@ abstract class wv extends GameScreen {
         }
     }
 
-    final boolean a(boolean param0, wv param1) {
+    final boolean a(boolean param0, MenuScreen param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -522,7 +522,7 @@ abstract class wv extends GameScreen {
                 return true;
               }
               if (var7 == 9) {
-                hha.openQuitPage(di.a(94), (byte) -112);
+                ArchiveRequest.openQuitPage(di.a(94), (byte) -112);
                 return true;
               }
               if (var7 == 16) {
@@ -537,7 +537,7 @@ abstract class wv extends GameScreen {
                 TextLayout.a(var4_int, (byte) 101, var6);
                 SecondaryNodeDequeIterator.field_a.b(var5, 50, 0);
                 SecondaryNodeDequeIterator.field_a.j((byte) -49);
-                SecondaryNodeDequeIterator.field_a.c(125);
+                SecondaryNodeDequeIterator.field_a.startRound(125);
                 if (3 == var6) {
                   SecondaryNodeDequeIterator.field_a.e((byte) 110);
                 }
@@ -737,8 +737,8 @@ abstract class wv extends GameScreen {
         try {
           this.field_k.a(param2, param0 + 29954, param1, this.b(GridWidgetContainer.field_B, true, jba.field_j));
           var4_int = param0;
-          while (var4_int < this.field_m.length) {
-            this.field_m[var4_int].c(1701110401);
+          while (var4_int < this.items.length) {
+            this.items[var4_int].c(1701110401);
             var4_int++;
             if (var5 != 0) {
               return;
@@ -769,7 +769,7 @@ abstract class wv extends GameScreen {
         try {
           field_l = null;
           if (param0) {
-            wv.a(false);
+            MenuScreen.a(false);
           }
           field_h = null;
           return;
@@ -909,7 +909,7 @@ abstract class wv extends GameScreen {
           if (param1 < 121) {
             this.b(false, false, 75);
           }
-          stackIn_4_0 = this.field_m[param0].d(11919);
+          stackIn_4_0 = this.items[param0].d(11919);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -952,8 +952,8 @@ abstract class wv extends GameScreen {
             return false;
           }
           if (param0 >= 0 &&
-            param0 < this.field_m.length &&
-            28 == this.field_m[param0].field_g) {
+            param0 < this.items.length &&
+            28 == this.items[param0].field_g) {
             stackIn_13_0 = TextWidgetPainter.a(83);
             return stackIn_13_0;
           }
@@ -1013,7 +1013,7 @@ abstract class wv extends GameScreen {
         try {
           if (this.field_k.field_h >= 0 &&
             this.c(this.field_k.field_h, 0) &&
-            this.field_m[this.field_k.field_h].a(-30323, param2, param0)) {
+            this.items[this.field_k.field_h].a(-30323, param2, param0)) {
             stackIn_9_0 = this.field_k.field_h;
             return stackIn_9_0;
           }
@@ -1023,13 +1023,13 @@ abstract class wv extends GameScreen {
             return stackIn_12_0;
           }
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (this.field_m.length <= var4_int))) {
+          while (!(decompiledNaturalLoopExit0 = (this.items.length <= var4_int))) {
             stackOut_14_0 = this.c(var4_int, 0);
             stackIn_25_0 = stackOut_14_0 ? 1 : 0;
             stackIn_15_0 = stackOut_14_0;
             if (var5 == 0) {
               if (stackIn_15_0 &&
-                this.field_m[var4_int].a(-30323, param2, param0)) {
+                this.items[var4_int].a(-30323, param2, param0)) {
                 stackIn_22_0 = var4_int;
                 return stackIn_22_0;
               }
@@ -1049,7 +1049,7 @@ abstract class wv extends GameScreen {
         }
     }
 
-    final void a(int param0, int[] param1) {
+    final void setItems(int param0, int[] param1) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -1072,7 +1072,7 @@ abstract class wv extends GameScreen {
         int stackIn_43_1Lifetime1;
         var10 = TombRacer.field_G ? 1 : 0;
         try {
-          this.field_m = new fna[param1.length];
+          this.items = new MenuEntry[param1.length];
           var3_int = 0;
           if (param0 != 22174) {
             return;
@@ -1088,14 +1088,14 @@ abstract class wv extends GameScreen {
             boolean decompiledFrameCompleted0 = true;
             boolean decompiledFrameRemainder0 = true;
             if (param1.length > var9) {
-              this.field_m[var9] = new fna(param1[var9], this.b(param1[var9], (byte) 125), this.f(0, param1[var9]), this.d(-72, param1[var9]));
-              this.field_m[var9].field_b = this.a((byte) 119, var9) + this.a(var9, (byte) -48) >> 1;
-              this.field_m[var9].c(1701110401);
+              this.items[var9] = new MenuEntry(param1[var9], this.b(param1[var9], (byte) 125), this.f(0, param1[var9]), this.d(-72, param1[var9]));
+              this.items[var9].field_b = this.a((byte) 119, var9) + this.a(var9, (byte) -48) >> 1;
+              this.items[var9].c(1701110401);
               stackIn_43_0 = -38;
               stackIn_43_1 = ~param1[var9];
               if (var10 != 0) {
                 if (stackIn_43_0 < stackIn_43_1) {
-                  this.field_m[var9].field_i = this.g(var9, param0 ^ 22144);
+                  this.items[var9].field_i = this.g(var9, param0 ^ 22144);
                   var9++;
                   decompiledFrameRemainder1 = false;
                 }
@@ -1146,7 +1146,7 @@ abstract class wv extends GameScreen {
                 if (stackIn_43_0Lifetime1 >= stackIn_43_1Lifetime1) {
                   break;
                 }
-                this.field_m[var9].field_i = this.g(var9, param0 ^ 22144);
+                this.items[var9].field_i = this.g(var9, param0 ^ 22144);
                 var9++;
                 if (var10 != 0) {
                   decompiledFrameCompleted0 = false;
@@ -1159,16 +1159,16 @@ abstract class wv extends GameScreen {
               (var6 == null)) {
               break scanLoop1;
             }
-            TextSpewerBehaviour.a((byte) -91, new fna[]{this.field_m[((int[]) (var6))[0]], this.field_m[((int[]) (var6))[1]], this.field_m[((int[]) (var6))[2]]});
+            TextSpewerBehaviour.a((byte) -91, new MenuEntry[]{this.items[((int[]) (var6))[0]], this.items[((int[]) (var6))[1]], this.items[((int[]) (var6))[2]]});
             break;
           }
           if (var8 != null) {
-            TextSpewerBehaviour.a((byte) -91, new fna[]{this.field_m[((int[]) (var8))[0]], this.field_m[((int[]) (var8))[1]]});
+            TextSpewerBehaviour.a((byte) -91, new MenuEntry[]{this.items[((int[]) (var8))[0]], this.items[((int[]) (var8))[1]]});
           }
           if (null != var4) {
-            TextSpewerBehaviour.a((byte) -91, new fna[]{this.field_m[((int[]) (var4))[0]], this.field_m[((int[]) (var4))[1]]});
+            TextSpewerBehaviour.a((byte) -91, new MenuEntry[]{this.items[((int[]) (var4))[0]], this.items[((int[]) (var4))[1]]});
           }
-          this.field_k = new ko(this.field_m.length);
+          this.field_k = new ko(this.items.length);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

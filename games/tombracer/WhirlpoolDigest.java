@@ -222,7 +222,7 @@ final class WhirlpoolDigest {
             WhirlpoolDigest.a((byte) 81);
           }
           if (var4 != 0) {
-            bra.field_M[0] = fna.field_k;
+            bra.field_M[0] = MenuEntry.field_k;
             var5 = var3.field_k;
             for (var6_int = 1; var6_int < var4; var6_int++) {
               bra.field_M[var6_int] = var14.readString((byte) -76);

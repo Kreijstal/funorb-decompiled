@@ -117,7 +117,7 @@ final class CachedTextLayout extends TextLayout {
           this.field_h = false;
           var17 = new String[param0.a(param2, param3) + 1];
           var18 = var17;
-          var10 = Math.max(1, param0.a(param2, new int[]{param3}, var18));
+          var10 = Math.max(1, param0.wrapText(param2, new int[]{param3}, var18));
           if (3 == this.field_e &&
             var10 == 1) {
             this.field_e = 1;
@@ -159,7 +159,7 @@ final class CachedTextLayout extends TextLayout {
             var14 = new kha(stackIn_35_2, stackIn_35_3, stackIn_36_4);
             var14.field_c[0] = 0;
             if (var13 != null) {
-              var14.field_c[var13.length()] = param0.b(var13);
+              var14.field_c[var13.length()] = param0.stringWidth(var13);
               stackIn_39_0 = param1 ^ -2097201;
               stackIn_39_1 = var13;
               stackIn_39_2 = (BitmapFont) (param0);
@@ -167,7 +167,7 @@ final class CachedTextLayout extends TextLayout {
               if (param6 != 3) {
                 stackIn_40_4 = 0;
               } else {
-                stackIn_40_4 = this.computeJustifySpacing(0, var13, param3, param0.b(var13));
+                stackIn_40_4 = this.computeJustifySpacing(0, var13, param3, param0.stringWidth(var13));
               }
               FlameShooterComponent.a(stackIn_39_0, stackIn_39_1, stackIn_39_2, stackIn_39_3, stackIn_40_4);
             }
@@ -220,7 +220,7 @@ final class CachedTextLayout extends TextLayout {
           this.field_j = param1;
           var8 = this.createSingleLine(param1, 0, param3, param2);
           var9 = var8;
-          var9.field_c[param0] = param4 - param1.b(param3);
+          var9.field_c[param0] = param4 - param1.stringWidth(param3);
           var9.field_c[param3.length()] = param4;
           FlameShooterComponent.a(2097152, param3, param1, var9, 0);
         } catch (RuntimeException runtimeException) {
@@ -290,7 +290,7 @@ final class CachedTextLayout extends TextLayout {
           this.field_h = true;
           this.field_m = 1;
           var7 = this.createSingleLine(param2, 0, param3, param0);
-          var8 = param2.b(param3);
+          var8 = param2.stringWidth(param3);
           var7.field_c[0] = param1 - (var8 >> 1);
           var7.field_c[param3.length()] = (var8 >> 1) + param1;
           FlameShooterComponent.a(2097152, param3, param2, var7, 0);
@@ -315,7 +315,7 @@ final class CachedTextLayout extends TextLayout {
         kha var7 = this.createSingleLine(param2, 0, param3, param1);
         kha var8 = var7;
         var7.field_c[0] = param4;
-        var8.field_c[param3.length()] = param2.b(param3) + param4;
+        var8.field_c[param3.length()] = param2.stringWidth(param3) + param4;
         if (param0 != 16512) {
           return;
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oka extends wv {
+final class MembersUpsellMenu extends MenuScreen {
     private pfa field_x;
     private int field_r;
     static int field_z;
@@ -115,10 +115,10 @@ final class oka extends wv {
           this.field_v = -113;
         }
         if (param1 == 1 &&
-          this.field_m.length == 3) {
-          return aaa.a(false) - this.field_m[param1].e(-163) >> 1;
+          this.items.length == 3) {
+          return aaa.a(false) - this.items[param1].e(-163) >> 1;
         }
-        return aaa.a(false) - this.field_m[param1].e(-163) - 10;
+        return aaa.a(false) - this.items[param1].e(-163) - 10;
     }
 
     final void a(byte param0, boolean param1) {
@@ -154,7 +154,7 @@ final class oka extends wv {
         var3 = 0;
         for (var4 = 0; var4 < OpenGlFramebuffer.field_i.length; var4++) {
           if (mca.a((byte) 6, var4)) {
-            if (rd.b(false) &&
+            if (MultiplayerLoginMenu.b(false) &&
               !dta.field_g[var4]) {
               var3 = 1;
               qf.field_k[var4].draw(pha.field_ub[var4] + this.field_t, C2SSubmitSettingsPacket.field_b[var4] + this.field_r, 0, -1426063361, 1);
@@ -178,14 +178,14 @@ final class oka extends wv {
         }
         ura.a(-10985);
         this.field_x.b(this.field_r, 11327, this.field_t);
-        se.f((byte) -6);
+        RemovedFromGameMenu.f((byte) -6);
         var6 = aaa.a(false) >> 1;
         var5 = 40;
         var4Lifetime1 = 260;
         var7 = this.field_r - (100 - SwitchLinkList.b(param0 + 28));
         kq.field_a.a(var6 - (kq.field_a.a() >> 1), -(kq.field_a.c() >> 1) + var7);
         SocketConnector.a(vj.worldNames[this.field_v].toUpperCase(), 1, eda.field_f, 2431750, 8 + o.field_d.field_m, var5, 1, var7 - (var5 >> 1), var6 - (var4Lifetime1 >> 1), -1, (byte) 60, var4Lifetime1);
-        if (rd.b(false) && (TextWidgetPainter.a(62) ||
+        if (MultiplayerLoginMenu.b(false) && (TextWidgetPainter.a(62) ||
           mq.field_e.field_a ||
           var3 != 0)) {
           var7Lifetime1 = SwitchLinkList.b(0) / 2 + this.field_r;
@@ -207,8 +207,8 @@ final class oka extends wv {
           SocketConnector.a(var8, 1, kn.field_p, 16777215, 16, var5Lifetime1, 1, var7Lifetime1 - (var5Lifetime1 >> 1), 10 + (var6 - (var4Lifetime2 >> 1)), -1, (byte) 60, -20 + var4Lifetime2);
         }
         if (SimpleBlockBehaviour.c(0)) {
-          oka.a("Unlock: Key 2-9", 16777215, kn.field_p, -1, this.field_r + SwitchLinkList.b(param0 + 28) - 100, -100 + aaa.a(false), -1);
-          oka.a("Play All: Insert", 16777215, kn.field_p, -1, -80 + (this.field_r + SwitchLinkList.b(0)), aaa.a(false) - 100, -1);
+          MembersUpsellMenu.a("Unlock: Key 2-9", 16777215, kn.field_p, -1, this.field_r + SwitchLinkList.b(param0 + 28) - 100, -100 + aaa.a(false), -1);
+          MembersUpsellMenu.a("Play All: Insert", 16777215, kn.field_p, -1, -80 + (this.field_r + SwitchLinkList.b(0)), aaa.a(false) - 100, -1);
         }
         return;
     }
@@ -266,7 +266,7 @@ final class oka extends wv {
         }
     }
 
-    oka(int param0, int param1, int param2, int param3, int param4, int[] param5) {
+    MembersUpsellMenu(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_s = -30;
         try {
@@ -280,7 +280,7 @@ final class oka extends wv {
         if (param1 != -48) {
           this.a((byte) 114, true);
         }
-        return this.a((byte) 112, param0) + this.field_m[param0].e(-163);
+        return this.a((byte) 112, param0) + this.items[param0].e(-163);
     }
 
     private final void f(int param0) {
@@ -291,10 +291,10 @@ final class oka extends wv {
 
     final void b(boolean param0, boolean param1, int param2) {
         if (param2 >= 0 &&
-          param2 < this.field_m.length) {
+          param2 < this.items.length) {
           super.b(param0, param1, param2);
           if (this.field_k.a(param0) &&
-            this.field_m[param2].field_g == 21) {
+            this.items[param2].field_g == 21) {
             this.b(false);
           }
           return;
@@ -443,7 +443,7 @@ final class oka extends wv {
         var4 = 1;
         var5 = 0;
         if (param0 < 6) {
-          oka.b((byte) 90, -70);
+          MembersUpsellMenu.b((byte) 90, -70);
         }
         if (param1 == 1) {
           var5 = 1;

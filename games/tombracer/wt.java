@@ -16,7 +16,7 @@ final class wt {
         }
     }
 
-    final static String a(int param0, CharSequence param1) {
+    final static String normalizeBase37Name(int param0, CharSequence param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         String stackIn_6_0 = null;

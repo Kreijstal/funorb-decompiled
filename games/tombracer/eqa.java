@@ -51,7 +51,7 @@ final class eqa implements os {
           !DisplaySettingsDialog.f(24316)) {
           var3 = 0;
         }
-        if (fna.field_h == 84) {
+        if (MenuEntry.field_h == 84) {
           if (var3 == 0) {
             if (bta.field_q == 0) {
               return true;
@@ -67,10 +67,10 @@ final class eqa implements os {
           if (lt.containsFilterText(var4_ref_String, -1)) {
             var13 = (String) null;
             var12 = (String) null;
-            gu.a(0, param1, (String) null, InvertOperator.field_m, (String) null, 2);
+            TreasureValuesOverlay.a(0, param1, (String) null, InvertOperator.field_m, (String) null, 2);
             var15 = (String) null;
             var14 = (String) null;
-            gu.a(0, true, (String) null, mm.field_f, (String) null, 2);
+            TreasureValuesOverlay.a(0, true, (String) null, mm.field_f, (String) null, 2);
             PlayerProfile.a(true);
             return true;
           }
@@ -86,7 +86,7 @@ final class eqa implements os {
           PlayerProfile.a(true);
           return true;
         }
-        if (fna.field_h == 85) {
+        if (MenuEntry.field_h == 85) {
           if (var3 == 0) {
             return true;
           }
@@ -108,7 +108,7 @@ final class eqa implements os {
         }
         discarded$0 = WeaveOperator.field_n.append((char) var4);
         var5Lifetime1 = 485;
-        var60 = fna.field_k;
+        var60 = MenuEntry.field_k;
         var16 = ima.a(var60, (byte) 8);
         var64 = var16;
         if (bta.field_q != 2) {
@@ -121,8 +121,8 @@ final class eqa implements os {
                     tla.field_f != null) {
                     var63 = "[" + tla.field_f + "] ";
                     var65 = var63 + var64 + ": ";
-                    var5Lifetime1 = var5Lifetime1 - PlatformBehaviour.field_s.b(var65);
-                    if (var5Lifetime1 >= PlatformBehaviour.field_s.b(WeaveOperator.field_n.toString())) {
+                    var5Lifetime1 = var5Lifetime1 - PlatformBehaviour.field_s.stringWidth(var65);
+                    if (var5Lifetime1 >= PlatformBehaviour.field_s.stringWidth(WeaveOperator.field_n.toString())) {
                       return true;
                     }
                     DarknessBehaviour.a(WeaveOperator.field_n.length() - 1, ' ', -11, WeaveOperator.field_n);
@@ -131,8 +131,8 @@ final class eqa implements os {
                   var7 = "[" + gl.$cfr$intArgs$a$53ce4ab4c593(94, jea.field_nb, new String[]{uu.field_a.field_tb}) + "] ";
                 }
                 var66 = var7 + var64 + ": ";
-                var5Lifetime1 = var5Lifetime1 - PlatformBehaviour.field_s.b(var66);
-                if (var5Lifetime1 >= PlatformBehaviour.field_s.b(WeaveOperator.field_n.toString())) {
+                var5Lifetime1 = var5Lifetime1 - PlatformBehaviour.field_s.stringWidth(var66);
+                if (var5Lifetime1 >= PlatformBehaviour.field_s.stringWidth(WeaveOperator.field_n.toString())) {
                   return true;
                 }
                 DarknessBehaviour.a(WeaveOperator.field_n.length() - 1, ' ', -11, WeaveOperator.field_n);
@@ -145,8 +145,8 @@ final class eqa implements os {
                 tla.field_f != null) {
                 var67 = "[" + tla.field_f + "] ";
                 var68 = var67 + var64 + ": ";
-                var5Lifetime1 = var5Lifetime1 - PlatformBehaviour.field_s.b(var68);
-                if (var5Lifetime1 >= PlatformBehaviour.field_s.b(WeaveOperator.field_n.toString())) {
+                var5Lifetime1 = var5Lifetime1 - PlatformBehaviour.field_s.stringWidth(var68);
+                if (var5Lifetime1 >= PlatformBehaviour.field_s.stringWidth(WeaveOperator.field_n.toString())) {
                   return true;
                 }
                 DarknessBehaviour.a(WeaveOperator.field_n.length() - 1, ' ', -11, WeaveOperator.field_n);
@@ -156,20 +156,20 @@ final class eqa implements os {
             }
           }
           var69 = var7 + var64 + ": ";
-          var5Lifetime1 = var5Lifetime1 - PlatformBehaviour.field_s.b(var69);
+          var5Lifetime1 = var5Lifetime1 - PlatformBehaviour.field_s.stringWidth(var69);
         } else {
           var73 = (CharSequence) ((Object) wp.field_a);
-          var61 = gl.$cfr$intArgs$a$53ce4ab4c593(115, TrackMountComponent.field_G, new String[]{wt.a(30433, var73)});
+          var61 = gl.$cfr$intArgs$a$53ce4ab4c593(115, TrackMountComponent.field_G, new String[]{wt.normalizeBase37Name(30433, var73)});
           var62 = gl.$cfr$intArgs$a$53ce4ab4c593(102, li.field_a, new String[]{var16});
-          var9 = PlatformBehaviour.field_s.b(var61);
-          var10 = PlatformBehaviour.field_s.b(var62);
+          var9 = PlatformBehaviour.field_s.stringWidth(var61);
+          var10 = PlatformBehaviour.field_s.stringWidth(var62);
           if (var9 > var10) {
             var5Lifetime1 = var5Lifetime1 - var9;
           } else {
             var5Lifetime1 = var5Lifetime1 - var10;
           }
         }
-        if (var5Lifetime1 >= PlatformBehaviour.field_s.b(WeaveOperator.field_n.toString())) {
+        if (var5Lifetime1 >= PlatformBehaviour.field_s.stringWidth(WeaveOperator.field_n.toString())) {
           return true;
         }
         DarknessBehaviour.a(WeaveOperator.field_n.length() - 1, ' ', -11, WeaveOperator.field_n);

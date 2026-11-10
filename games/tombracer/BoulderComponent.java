@@ -119,7 +119,7 @@ final class BoulderComponent extends PathMoverComponent {
         return true;
     }
 
-    final static void s(byte param0) {
+    final static void snapshotMouseInput(byte param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
         var1 = ColourGradientOperator.field_n;
@@ -234,7 +234,7 @@ final class BoulderComponent extends PathMoverComponent {
 
     final int getRenderLayer(int param0) {
         if (param0 != 8) {
-          BoulderComponent.s((byte) -23);
+          BoulderComponent.snapshotMouseInput((byte) -23);
           return 7;
         }
         return 7;

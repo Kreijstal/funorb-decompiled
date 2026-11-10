@@ -121,7 +121,7 @@ final class ProxySocketConnector extends SocketConnector {
     final static void a(int param0, int param1) {
         if (msa.field_a == param0 &&
           SecondaryNodeDequeIterator.field_a != null) {
-          if (fna.field_j == null) {
+          if (MenuEntry.field_j == null) {
             return;
           }
           aoa.a(83, 3);
@@ -215,7 +215,7 @@ final class ProxySocketConnector extends SocketConnector {
           var11 = (java.net.Proxy) (var10);
           try {
             if (false) throw (wra) null;
-            var12 = this.a(var11, 443);
+            var12 = this.connectViaProxy(var11, 443);
             if (var12 != null) {
               stackIn_22_0 = var12;
               return stackIn_22_0;
@@ -238,7 +238,7 @@ final class ProxySocketConnector extends SocketConnector {
         return (java.net.Socket) null;
     }
 
-    private final java.net.Socket a(java.net.Proxy param0, int param1) throws IOException {
+    private final java.net.Socket connectViaProxy(java.net.Proxy param0, int param1) throws IOException {
         java.net.Socket stackIn_3_0 = null;
         Object stackIn_8_0 = null;
         java.net.Socket stackIn_17_0 = null;
@@ -308,7 +308,7 @@ final class ProxySocketConnector extends SocketConnector {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
           }
-          stackIn_17_0 = this.a(73, var4.getPort(), var4.getHostName(), (String) (var5));
+          stackIn_17_0 = this.connectViaHttpProxy(73, var4.getPort(), var4.getHostName(), (String) (var5));
           return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -324,7 +324,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    private final java.net.Socket a(int param0, int param1, String param2, String param3) throws IOException {
+    private final java.net.Socket connectViaHttpProxy(int param0, int param1, String param2, String param3) throws IOException {
         java.net.Socket stackIn_12_0 = null;
         Object stackIn_27_0 = null;
         RuntimeException stackIn_30_0 = null;

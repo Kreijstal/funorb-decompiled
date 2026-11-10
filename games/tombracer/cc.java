@@ -22,7 +22,7 @@ final class cc extends IntrusiveNode {
         }
         if (this.b(true)) {
           this.a(this.field_f, var5, param1 + LoginForm.field_z[this.field_g], hq.field_b[this.field_g] + param2, var4, (byte) 35);
-          uda.field_r.a(this.field_j + param1 + uda.field_r.a(), param2 + (this.field_k + uda.field_r.c()));
+          CharacterSelectPhase.field_r.a(this.field_j + param1 + CharacterSelectPhase.field_r.a(), param2 + (this.field_k + CharacterSelectPhase.field_r.c()));
         }
     }
 
@@ -42,7 +42,7 @@ final class cc extends IntrusiveNode {
           this.field_g = -113;
         }
         while (var12 < param0) {
-          uda.field_r.draw((var9 * (1 + var12) >> 16) + (param4 + uda.field_r.a()), param1 + (var10 * (var12 + 1) >> 16) + uda.field_r.c(), var11, -1695485712, 1);
+          CharacterSelectPhase.field_r.draw((var9 * (1 + var12) >> 16) + (param4 + CharacterSelectPhase.field_r.a()), param1 + (var10 * (var12 + 1) >> 16) + CharacterSelectPhase.field_r.c(), var11, -1695485712, 1);
           var12++;
         }
     }

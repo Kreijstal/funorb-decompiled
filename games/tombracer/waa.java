@@ -78,13 +78,13 @@ final class waa {
         if (param1 == 6) {
           ura.a(param1 ^ -10991);
           hp.a(1024, 4095 & this.field_a * this.field_c, 1996, this.field_d.b((byte) 74), -1918106173, param2 + this.field_c, this.field_a + param0);
-          se.f((byte) -6);
+          RemovedFromGameMenu.f((byte) -6);
           return;
         }
         this.field_c = -128;
         ura.a(param1 ^ -10991);
         hp.a(1024, 4095 & this.field_a * this.field_c, 1996, this.field_d.b((byte) 74), -1918106173, param2 + this.field_c, this.field_a + param0);
-        se.f((byte) -6);
+        RemovedFromGameMenu.f((byte) -6);
     }
 
     final void b(int param0) {

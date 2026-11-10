@@ -113,7 +113,7 @@ abstract class AppletGameShell extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5Lifetime1 = pe.a(vk.b(69), toa.a(false), hha.a(false), this.field_u, cs.a((byte) 105), cja.a(0), (byte) 53);
+            var5Lifetime1 = pe.a(vk.b(69), toa.a(false), ArchiveRequest.a(false), this.field_u, cs.a((byte) 105), cja.a(0), (byte) 53);
             if (var5Lifetime1 != -1) {
               ura.a(var5Lifetime1, PressureSwitchBehaviour.field_s, (byte) -103, io.field_b);
               PressureSwitchBehaviour.field_s = null;
@@ -152,7 +152,7 @@ abstract class AppletGameShell extends GameApplet {
             }
           }
           if (5 == var4) {
-            hha.openQuitPage(di.a(104), (byte) -117);
+            ArchiveRequest.openQuitPage(di.a(104), (byte) -117);
           }
           if (var4 == 6 &&
             GameAssetLoader.field_t) {
@@ -185,7 +185,7 @@ abstract class AppletGameShell extends GameApplet {
               if (DarknessBehaviour.field_o.poll(false)) {
                 var7 = DarknessBehaviour.field_o.getResult((byte) -123);
                 if (var7 != null) {
-                  var8 = MaskBlendOperator.a(var7.payload, 0, var7.position, 255);
+                  var8 = MaskBlendOperator.decodeCp1252(var7.payload, 0, var7.position, 255);
                   NodeHashTableIterator.a(var8, -1);
                 } else {
                   var10 = (String) null;
@@ -220,7 +220,7 @@ abstract class AppletGameShell extends GameApplet {
     }
 
     private final void a(byte param0, int param1, boolean param2) {
-        this.initializeSharedServices(rd.field_r.field_c, ReportAbuseDialog.field_Eb.field_c, EffectEvent.field_l.field_c, C2SSubmitSettingsPacket.field_d.field_c, 5000, param1, rm.field_d.field_c, param2);
+        this.initializeSharedServices(MultiplayerLoginMenu.field_r.field_c, ReportAbuseDialog.field_Eb.field_c, EffectEvent.field_l.field_c, C2SSubmitSettingsPacket.field_d.field_c, 5000, param1, rm.field_d.field_c, param2);
         if (param0 >= -25) {
           this.field_w = 116L;
         }
@@ -233,7 +233,7 @@ abstract class AppletGameShell extends GameApplet {
         gqa var3;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
-        var2 = oka.field_z;
+        var2 = MembersUpsellMenu.field_z;
         if (param0 != -5) {
           this.field_z = 113;
         }
@@ -418,7 +418,7 @@ abstract class AppletGameShell extends GameApplet {
         IsaacCipher.configureClientConnection(this.field_s, this.field_v, dsa.field_c, this.field_p, this.field_x, this.field_t, 5000, param4, -1367135824, param7, this.field_A, ApproachPlayerLocomotor.field_t, param5, this.field_w);
         av.a(ApproachPlayerLocomotor.field_t, dsa.field_c, 103, this.field_x, this.field_v, param5, this.field_p, this.field_s, this.field_t);
         wka.patchJavaKeyCodeMap(520);
-        tja.field_q = dka.a((byte) -86);
+        tja.field_q = dka.createMouseWheelInput((byte) -86);
         fpa.a(nma.field_l, (byte) 75);
         bi.field_c = param2;
         MonochromeFillOperator.field_p = param3;
@@ -481,7 +481,7 @@ abstract class AppletGameShell extends GameApplet {
             if (var9 != null) {
               this.field_u = Integer.parseInt(var9);
             }
-            vv.field_r = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
+            NotLoggedInMenu.field_r = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
             this.startAppletShell(false, param2, param1, param0, this.field_v, 32, param3);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -563,7 +563,7 @@ abstract class AppletGameShell extends GameApplet {
           wba.field_o.a(false);
         }
         DisplaySettingsDialog.j(3321);
-        BoulderComponent.s((byte) -44);
+        BoulderComponent.snapshotMouseInput((byte) -44);
         if (!ColourGradientOperator.c(-112) &&
           Transform3D.field_c != 11) {
           sw.h(100);
@@ -658,7 +658,7 @@ abstract class AppletGameShell extends GameApplet {
         }
         if (Trap.field_m == 0 &&
           !uma.b(-1)) {
-          rca.field_l = false;
+          UnlockOverlay.field_l = false;
         }
         if (cga.field_f == 0 &&
           FuseBehaviour.k((byte) -117)) {
@@ -706,7 +706,7 @@ abstract class AppletGameShell extends GameApplet {
             stackIn_104_1 = !(ofa.field_I);
             ag.a(stackIn_101_0, stackIn_104_1, false, BrickOperator.field_s);
           }
-          if (vv.field_r) {
+          if (NotLoggedInMenu.field_r) {
             aoa.b(true);
           }
           if (null == sma.field_c) {

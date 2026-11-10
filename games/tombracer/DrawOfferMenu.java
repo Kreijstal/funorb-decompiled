@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ow extends wv {
+final class DrawOfferMenu extends MenuScreen {
     static boolean field_s;
     private dea field_r;
     static int[] field_q;
@@ -18,22 +18,22 @@ final class ow extends wv {
         }
         if (!TextWidgetPainter.a(54)) {
           if (!SecondaryNodeDequeIterator.field_a.field_D) {
-            this.a(22174, IntrusiveDequeCursor.field_e);
+            this.setItems(22174, IntrusiveDequeCursor.field_e);
           } else {
             if (!SecondaryNodeDequeIterator.field_a.d((byte) 100)) {
-              this.a(22174, ConsoleToken.field_l);
+              this.setItems(22174, ConsoleToken.field_l);
             } else {
-              this.a(22174, sja.field_h);
+              this.setItems(22174, sja.field_h);
             }
           }
         } else {
           if (!SecondaryNodeDequeIterator.field_a.field_D) {
-            this.a(22174, ma.field_f);
+            this.setItems(22174, ma.field_f);
           } else {
             if (!SecondaryNodeDequeIterator.field_a.d((byte) 68)) {
-              this.a(22174, ConveyorBehaviour.field_q);
+              this.setItems(22174, ConveyorBehaviour.field_q);
             } else {
-              this.a(22174, IterableNodeHashTable.field_f);
+              this.setItems(22174, IterableNodeHashTable.field_f);
             }
           }
         }
@@ -44,11 +44,11 @@ final class ow extends wv {
         if (param0 < 111) {
           return 125;
         }
-        if (this.field_m[param1].field_g == 5) {
+        if (this.items[param1].field_g == 5) {
           var3 -= 10;
           return var3;
         }
-        if (this.field_m[param1].field_g != 6) {
+        if (this.items[param1].field_g != 6) {
           return var3;
         }
         var3 -= 10;
@@ -69,24 +69,24 @@ final class ow extends wv {
           return -25;
         }
         for (var4 = 0; param0 > var4; var4++) {
-          if (this.field_m[var4].field_g != 5) {
-            stackIn_11_0 = (6 == this.field_m[var4].field_g) ? 1 : 0;
+          if (this.items[var4].field_g != 5) {
+            stackIn_11_0 = (6 == this.items[var4].field_g) ? 1 : 0;
           } else {
             stackIn_11_0 = 1;
           }
           var5 = stackIn_11_0;
           stackIn_13_0 = var3;
           if (var5 != 0) {
-            stackIn_14_1 = this.field_m[var4].d(11919) / 2;
+            stackIn_14_1 = this.items[var4].d(11919) / 2;
           } else {
             stackIn_14_1 = this.field_i;
           }
           var3 = stackIn_13_0 + stackIn_14_1;
-          if (this.field_m[var4].field_g == 5) {
+          if (this.items[var4].field_g == 5) {
             var3 += 10;
           }
         }
-        if (this.field_m[param0].field_g != 5) {
+        if (this.items[param0].field_g != 5) {
           return var3;
         }
         var3 += 10;
@@ -112,7 +112,7 @@ final class ow extends wv {
         }
     }
 
-    ow(int param0, int param1, int param2, int param3, int param4, int[] param5) {
+    DrawOfferMenu(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_r = new dea();
     }
@@ -126,11 +126,11 @@ final class ow extends wv {
 
     final int a(int param0, byte param1) {
         int var3 = super.a(param0, param1);
-        if (5 == this.field_m[param0].field_g) {
+        if (5 == this.items[param0].field_g) {
           var3 -= 10;
           return var3;
         }
-        if (this.field_m[param0].field_g != 6) {
+        if (this.items[param0].field_g != 6) {
           return var3;
         }
         var3 -= 10;
@@ -139,7 +139,7 @@ final class ow extends wv {
 
     final void a(byte param0, boolean param1) {
         super.a(param0, param1);
-        int var3 = this.field_m[1].field_i - 70 + this.field_r.e(93) - 150;
+        int var3 = this.items[1].field_i - 70 + this.field_r.e(93) - 150;
         WhiteLightShooterComponent.field_K.a((aaa.a(false) >> 1) - (WhiteLightShooterComponent.field_K.a() >> 1), var3);
     }
 
@@ -202,14 +202,14 @@ final class ow extends wv {
         }
         int var4 = SecondaryNodeDequeIterator.field_a.matchState.field_b;
         if (1 == (1 & var4 >> SecondaryNodeDequeIterator.field_a.field_x)) {
-          this.field_m[1].field_e = BeamSegment.field_g.toUpperCase();
+          this.items[1].field_e = BeamSegment.field_g.toUpperCase();
           return;
         }
         if (var4 == 0) {
-          this.field_m[1].field_e = RopeBridgeComponent.field_I.toUpperCase();
+          this.items[1].field_e = RopeBridgeComponent.field_I.toUpperCase();
           return;
         }
-        this.field_m[1].field_e = jf.field_s.toUpperCase();
+        this.items[1].field_e = jf.field_s.toUpperCase();
     }
 
     static {

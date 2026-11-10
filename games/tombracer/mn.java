@@ -8,7 +8,7 @@ final class mn extends TextFieldValidator {
     static String field_n;
     static int field_k;
 
-    final String a(int param0, String param1) {
+    final String validationMessageForText(int param0, String param1) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_5_0 = null;
@@ -19,15 +19,15 @@ final class mn extends TextFieldValidator {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_j.a((byte) 14, param1) == fp.field_c) {
-            stackIn_2_0 = this.field_j.a(param0 + 0, param1);
+          if (this.field_j.validateText((byte) 14, param1) == fp.field_c) {
+            stackIn_2_0 = this.field_j.validationMessageForText(param0 + 0, param1);
             return stackIn_2_0;
           }
           if (param0 != -1) {
             stackIn_5_0 = (String) null;
             return stackIn_5_0;
           }
-          if (this.a((byte) 14, param1) != fp.field_c) {
+          if (this.validateText((byte) 14, param1) != fp.field_c) {
             stackIn_10_0 = dua.field_j;
             return stackIn_10_0;
           }
@@ -47,7 +47,7 @@ final class mn extends TextFieldValidator {
         }
     }
 
-    final it a(byte param0, String param1) {
+    final it validateText(byte param0, String param1) {
         us var3 = null;
         RuntimeException var3_ref = null;
         it stackIn_3_0 = null;
@@ -58,7 +58,7 @@ final class mn extends TextFieldValidator {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_j.a(param0, param1) == fp.field_c) {
+          if (this.field_j.validateText(param0, param1) == fp.field_c) {
             stackIn_3_0 = fp.field_c;
             return stackIn_3_0;
           }

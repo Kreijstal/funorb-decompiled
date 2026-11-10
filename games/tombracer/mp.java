@@ -227,7 +227,7 @@ final class mp {
           RotaterMountComponent.field_K.b(-125, mka.field_b);
           bt.field_c = new jea[5];
           PitModel.field_p = new jea[5];
-          oka.field_y = new jea[5];
+          MembersUpsellMenu.field_y = new jea[5];
           wba.field_p = new jea[5];
           var18 = 0;
           boolean decompiledNaturalLoopExit0 = false;
@@ -256,12 +256,12 @@ final class mp {
               if (decompiledFrameRemainder0) {
                 wba.field_p[var18] = new jea(0L, param10);
                 bt.field_c[var18] = new jea(0L, VortexBehaviour.field_t, var19);
-                oka.field_y[var18] = new jea(0L, (jea) null);
-                oka.field_y[var18].field_bb = 1;
+                MembersUpsellMenu.field_y[var18] = new jea(0L, (jea) null);
+                MembersUpsellMenu.field_y[var18].field_bb = 1;
                 PitModel.field_p[var18] = new jea(0L, VortexBehaviour.field_t);
                 PitModel.field_p[var18].field_bb = 1;
                 wba.field_p[var18].b(-122, bt.field_c[var18]);
-                wba.field_p[var18].b(param6 - 125, oka.field_y[var18]);
+                wba.field_p[var18].b(param6 - 125, MembersUpsellMenu.field_y[var18]);
                 wba.field_p[var18].b(-125, PitModel.field_p[var18]);
                 wba.field_p[var18].a(-10966);
                 era.field_e.b(-127, wba.field_p[var18]);

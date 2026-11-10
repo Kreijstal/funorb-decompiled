@@ -88,7 +88,7 @@ final class MirrorComponent extends PrefabComponent {
         try {
           param0.readUnsignedByte(255);
           var2_int = param0.readUnsignedByte(param1 + 255);
-          var3 = gu.createTextureOperator((byte) -62, var2_int);
+          var3 = TreasureValuesOverlay.createTextureOperator((byte) -62, var2_int);
           var3.field_f = param0.readUnsignedByte(param1 + 255);
           var4 = param0.readUnsignedByte(param1 ^ 255);
           for (var5 = param1; var5 < var4; var5++) {

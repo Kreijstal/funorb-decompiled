@@ -61,12 +61,12 @@ abstract class PrefabComponent extends RoomComponent {
             var13.b(true, 11468);
           }
           var13.a(this.field_z, (byte) 121);
-          var13.m(1, this.x);
+          var13.setLocalX(1, this.x);
           if (!param1) {
             this.field_A = (Trap) null;
           }
           var13.setLocalY(this.y, -19879);
-          var13.a(this.angle + param4, (byte) 110);
+          var13.setAngle(this.angle + param4, (byte) 110);
           var13.f(10, param3);
           var13.z(1);
           for (var9 = 0; this.field_t.length > var9; var9++) {

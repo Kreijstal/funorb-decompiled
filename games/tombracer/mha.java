@@ -66,7 +66,7 @@ final class mha extends FocusableWidget {
           if (null == aj.field_l) {
             aj.field_l = new Sprite(var9, var10);
             nm.a(aj.field_l, (byte) 108);
-            var15.a(112, 144, var15.field_n << 4, var15.field_k << 4, -this.field_A << 10, 4096);
+            var15.drawRotatedScaled(112, 144, var15.field_n << 4, var15.field_k << 4, -this.field_A << 10, 4096);
             pfa.a(1);
             aj.field_l.drawAdditive(-var15.field_n + var5, var6 - var15.field_k, 256);
             return;
@@ -74,7 +74,7 @@ final class mha extends FocusableWidget {
           if (aj.field_l.field_m < var9) {
             aj.field_l = new Sprite(var9, var10);
             nm.a(aj.field_l, (byte) 108);
-            var15.a(112, 144, var15.field_n << 4, var15.field_k << 4, -this.field_A << 10, 4096);
+            var15.drawRotatedScaled(112, 144, var15.field_n << 4, var15.field_k << 4, -this.field_A << 10, 4096);
             pfa.a(1);
             aj.field_l.drawAdditive(-var15.field_n + var5, var6 - var15.field_k, 256);
             return;
@@ -82,14 +82,14 @@ final class mha extends FocusableWidget {
           if (var10 > aj.field_l.field_q) {
             aj.field_l = new Sprite(var9, var10);
             nm.a(aj.field_l, (byte) 108);
-            var15.a(112, 144, var15.field_n << 4, var15.field_k << 4, -this.field_A << 10, 4096);
+            var15.drawRotatedScaled(112, 144, var15.field_n << 4, var15.field_k << 4, -this.field_A << 10, 4096);
             pfa.a(1);
             aj.field_l.drawAdditive(-var15.field_n + var5, var6 - var15.field_k, 256);
             return;
           }
           nm.a(aj.field_l, (byte) 95);
           SoftwareRasterizer.clear();
-          var15.a(112, 144, var15.field_n << 4, var15.field_k << 4, -this.field_A << 10, 4096);
+          var15.drawRotatedScaled(112, 144, var15.field_n << 4, var15.field_k << 4, -this.field_A << 10, 4096);
           pfa.a(1);
           aj.field_l.drawAdditive(-var15.field_n + var5, var6 - var15.field_k, 256);
           return;
@@ -101,7 +101,7 @@ final class mha extends FocusableWidget {
           if (null == aj.field_l) {
             aj.field_l = new Sprite(var9Lifetime1, var10Lifetime1);
             nm.a(aj.field_l, (byte) 108);
-            var16.a(112, 144, var16.field_n << 4, var16.field_k << 4, -this.field_A << 10, 4096);
+            var16.drawRotatedScaled(112, 144, var16.field_n << 4, var16.field_k << 4, -this.field_A << 10, 4096);
             pfa.a(1);
             aj.field_l.drawAdditive(-var16.field_n + var5, var6 - var16.field_k, 256);
             return;
@@ -109,7 +109,7 @@ final class mha extends FocusableWidget {
           if (aj.field_l.field_m < var9Lifetime1) {
             aj.field_l = new Sprite(var9Lifetime1, var10Lifetime1);
             nm.a(aj.field_l, (byte) 108);
-            var16.a(112, 144, var16.field_n << 4, var16.field_k << 4, -this.field_A << 10, 4096);
+            var16.drawRotatedScaled(112, 144, var16.field_n << 4, var16.field_k << 4, -this.field_A << 10, 4096);
             pfa.a(1);
             aj.field_l.drawAdditive(-var16.field_n + var5, var6 - var16.field_k, 256);
             return;
@@ -117,14 +117,14 @@ final class mha extends FocusableWidget {
           if (var10Lifetime1 > aj.field_l.field_q) {
             aj.field_l = new Sprite(var9Lifetime1, var10Lifetime1);
             nm.a(aj.field_l, (byte) 108);
-            var16.a(112, 144, var16.field_n << 4, var16.field_k << 4, -this.field_A << 10, 4096);
+            var16.drawRotatedScaled(112, 144, var16.field_n << 4, var16.field_k << 4, -this.field_A << 10, 4096);
             pfa.a(1);
             aj.field_l.drawAdditive(-var16.field_n + var5, var6 - var16.field_k, 256);
             return;
           }
           nm.a(aj.field_l, (byte) 95);
           SoftwareRasterizer.clear();
-          var16.a(112, 144, var16.field_n << 4, var16.field_k << 4, -this.field_A << 10, 4096);
+          var16.drawRotatedScaled(112, 144, var16.field_n << 4, var16.field_k << 4, -this.field_A << 10, 4096);
           pfa.a(1);
           aj.field_l.drawAdditive(-var16.field_n + var5, var6 - var16.field_k, 256);
           return;

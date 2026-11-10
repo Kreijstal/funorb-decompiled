@@ -24,7 +24,7 @@ final class jba extends TextFieldValidator {
         return var4Lifetime1;
     }
 
-    final it a(byte param0, String param1) {
+    final it validateText(byte param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -72,7 +72,7 @@ final class jba extends TextFieldValidator {
         super(param0);
     }
 
-    final String a(int param0, String param1) {
+    final String validationMessageForText(int param0, String param1) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         Object stackIn_6_0 = null;
@@ -81,7 +81,7 @@ final class jba extends TextFieldValidator {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a((byte) 14, param1) == fp.field_c) {
+          if (this.validateText((byte) 14, param1) == fp.field_c) {
             stackIn_2_0 = fm.field_l;
             return stackIn_2_0;
           }

@@ -147,7 +147,7 @@ final class ava {
               var12.field_Nb = new jea(0L, lta.field_a);
               var12.b(-128, var12.field_Nb);
               var12.field_Db = new jea(0L, iea.field_g);
-              if (rca.field_p) {
+              if (UnlockOverlay.field_p) {
                 var12.b(-123, var12.field_Db);
               }
               var12.field_Db.field_z = 2;
@@ -264,7 +264,7 @@ final class ava {
                 }
               }
               stackIn_94_0 = var12.field_Nb;
-              if (rca.field_p) {
+              if (UnlockOverlay.field_p) {
                 stackIn_95_1 = 42;
               } else {
                 stackIn_95_1 = 0;

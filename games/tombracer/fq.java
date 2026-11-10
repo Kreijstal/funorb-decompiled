@@ -60,15 +60,15 @@ final class fq {
 
     final static void a(byte param0) {
         CharSequence var4 = null;
-        fna.field_k = WeaveOperator.field_q.readString((byte) -76);
+        MenuEntry.field_k = WeaveOperator.field_q.readString((byte) -76);
         if (param0 == -68) {
-          var4 = (CharSequence) ((Object) fna.field_k);
+          var4 = (CharSequence) ((Object) MenuEntry.field_k);
           tia.field_b = jd.normalizeDisplayName(1, var4);
           return;
         }
         byte[] var2 = (byte[]) null;
         fq.a((byte[]) null, (byte) 68);
-        CharSequence var3 = (CharSequence) ((Object) fna.field_k);
+        CharSequence var3 = (CharSequence) ((Object) MenuEntry.field_k);
         tia.field_b = jd.normalizeDisplayName(1, var3);
     }
 

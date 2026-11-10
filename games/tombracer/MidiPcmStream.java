@@ -721,7 +721,7 @@ class MidiPcmStream extends PcmStream {
             if (stackIn_16_0 < 0 ||
               param1 == var3.field_k) {
               if (null != var3.field_x) {
-                var3.field_x.d(AudioOutput.field_d / 100);
+                var3.field_x.fadeOut(AudioOutput.field_d / 100);
                 if (var3.field_x.m()) {
                   this.field_v.field_m.a(var3.field_x);
                 }
@@ -1028,10 +1028,10 @@ class MidiPcmStream extends PcmStream {
             }
           }
           if (var8 == 0) {
-            param0.field_x.a(param0.field_B, this.a(param0, 83), this.b(-2421, param0));
+            param0.field_x.rampVolume(param0.field_B, this.a(param0, 83), this.b(-2421, param0));
             return false;
           }
-          param0.field_x.d(param0.field_B);
+          param0.field_x.fadeOut(param0.field_B);
           if (param1 == null) {
             param0.field_x.skip(param4);
             if (var11 != 0) {
@@ -1322,7 +1322,7 @@ class MidiPcmStream extends PcmStream {
         var7 = TombRacer.field_G ? 1 : 0;
         try {
           this.a(-191040664, param3);
-          this.field_w.a(param1.field_g);
+          this.field_w.parse(param1.field_g);
           this.field_E = 0L;
           stackIn_4_1 = (param0);
           this.field_t = stackIn_4_1;

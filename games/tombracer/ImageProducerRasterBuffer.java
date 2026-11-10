@@ -38,7 +38,7 @@ final class ImageProducerRasterBuffer extends cha implements java.awt.image.Imag
         }
     }
 
-    final static ScrollControlWidget b(int param0) {
+    final static ScrollControlWidget createVerticalScrollControl(int param0) {
         if (param0 == -5412) {
           return new ScrollControlWidget(0, 0, afa.field_c.field_m, 0, (isa) null, afa.field_c.field_r, afa.field_c.field_h, afa.field_c.field_m, afa.field_c.field_m, afa.field_c.field_g, afa.field_c.field_l, false, true, 32768, 0);
         }

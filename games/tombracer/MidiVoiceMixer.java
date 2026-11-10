@@ -257,7 +257,7 @@ final class MidiVoiceMixer extends PcmStream {
               if (param3.field_y.field_g[param3.field_m] < 0) {
                 param3.field_x.b(-1);
               }
-              var11.d(var9);
+              var11.fadeOut(var9);
               var11.fill(param2, param1, param0 - param1);
               if (!var11.m()) {
                 continue;

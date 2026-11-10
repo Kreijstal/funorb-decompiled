@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sga extends hha {
+final class DiskArchiveRequest extends ArchiveRequest {
     byte[] field_p;
     int field_q;
     static su field_n;
@@ -17,7 +17,7 @@ final class sga extends hha {
         return 100;
     }
 
-    final byte[] b(byte param0) {
+    final byte[] getBytes(byte param0) {
         if (this.field_m) {
           throw new RuntimeException();
         }
@@ -35,7 +35,7 @@ final class sga extends hha {
         field_n = null;
     }
 
-    sga() {
+    DiskArchiveRequest() {
     }
 
     static {

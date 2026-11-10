@@ -65,7 +65,7 @@ final class VorbisFloor1 {
         return var6 < 0 ? param1 - var10 : param1 + var10;
     }
 
-    private final static int a(int[] param0, int param1) {
+    private final static int highNeighbour(int[] param0, int param1) {
         int var5 = 0;
         int var2;
         int var3;
@@ -85,7 +85,7 @@ final class VorbisFloor1 {
         return var3;
     }
 
-    private final static int b(int[] param0, int param1) {
+    private final static int lowNeighbour(int[] param0, int param1) {
         int var5 = 0;
         int var2;
         int var3;
@@ -163,7 +163,7 @@ final class VorbisFloor1 {
         return true;
     }
 
-    private final void a(int param0, int param1, int param2, int param3, float[] param4, int param5) {
+    private final void renderLine(int param0, int param1, int param2, int param3, float[] param4, int param5) {
         int var14 = 0;
         int var7 = param3 - param1;
         int var8 = param2 - param0;
@@ -273,7 +273,7 @@ final class VorbisFloor1 {
         return;
     }
 
-    final void a(float[] param0, int param1) {
+    final void applyFloor(float[] param0, int param1) {
         int stackIn_5_0 = 0;
         int[] stackIn_9_0 = null;
         int stackIn_9_1 = 0;
@@ -308,8 +308,8 @@ final class VorbisFloor1 {
         field_b[1] = true;
         var5[0] = true;
         for (var6 = 2; var6 < var3; var6++) {
-          var7 = VorbisFloor1.b(field_j, var6);
-          var8_int = VorbisFloor1.a(field_j, var6);
+          var7 = VorbisFloor1.lowNeighbour(field_j, var6);
+          var8_int = VorbisFloor1.highNeighbour(field_j, var6);
           var9 = this.interpolatePoint(field_j[var7], field_c[var7], field_j[var8_int], field_c[var8_int], field_j[var6]);
           var10 = field_c[var6];
           var11 = var4 - var9;
@@ -355,7 +355,7 @@ final class VorbisFloor1 {
           if (field_b[var16]) {
             var9Lifetime1 = field_j[var16];
             var10Lifetime1 = field_c[var16] * this.field_i;
-            this.a(var6Lifetime1, var7Lifetime1, var9Lifetime1, var10Lifetime1, param0, param1);
+            this.renderLine(var6Lifetime1, var7Lifetime1, var9Lifetime1, var10Lifetime1, param0, param1);
             if (var9Lifetime1 >= param1) {
               return;
             }

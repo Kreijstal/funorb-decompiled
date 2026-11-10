@@ -279,7 +279,7 @@ final class PlayerSimulation {
         Room var3Lifetime1;
         var2 = this.getCurrentRoom((byte) 123);
         if (param0 == -1) {
-          var2.g(58);
+          var2.dispose(58);
           var3 = this.getNextRoom((byte) 104, var2);
           if (this.player.l(false) &&
             var3 == null) {
@@ -298,7 +298,7 @@ final class PlayerSimulation {
         }
         var5 = (Room) null;
         this.onRoomReset((Room) null, -52);
-        var2.g(58);
+        var2.dispose(58);
         var3Lifetime1 = this.getNextRoom((byte) 104, var2);
         if (this.player.l(false) &&
           var3Lifetime1 == null) {
@@ -338,7 +338,7 @@ final class PlayerSimulation {
           for (var4 = 0; var7.length > var4; var4++) {
             var5 = var7[var4];
             if (var5 != null) {
-              var5.a(param0, param1 ^ -6);
+              var5.createScene(param0, param1 ^ -6);
             }
           }
           return;

@@ -63,7 +63,7 @@ final class MonsterModel extends MotionTrackingModel {
         if (var3 != 0) {
           var5_intLifetime1 = this.i(-6874);
           var6 = new nta(this.getRenderX((byte) 40), this.getRenderY((byte) 123), this.getRenderZ((byte) -96), this.field_C, var5_intLifetime1, var3);
-          var6.a((byte) -113, this.body.getRoom((byte) -109).j((byte) -118), this.k((byte) -99));
+          var6.a((byte) -113, this.body.getRoom((byte) -109).getScene((byte) -118), this.k((byte) -99));
         }
         var5 = (w) (this.body.getRoom((byte) -99).field_G);
         if (var5 == null) {

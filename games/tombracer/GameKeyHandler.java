@@ -40,10 +40,10 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int var1 = 0;
         int var1Lifetime1;
         if (WheeledMountComponent.field_P != null) {
-          WheeledMountComponent.field_P.a();
+          WheeledMountComponent.field_P.shutdown();
           var1 = 1 % ((-17 - param0) / 60);
           if (null != gg.field_b) {
-            gg.field_b.a();
+            gg.field_b.shutdown();
             return;
           }
           return;
@@ -52,7 +52,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         if (null == gg.field_b) {
           return;
         }
-        gg.field_b.a();
+        gg.field_b.shutdown();
     }
 
     public final void focusGained(java.awt.event.FocusEvent param0) {
@@ -91,11 +91,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             }
           }
           if (var2_int >= 0) {
-            var3 = rca.field_n + 1 & 127;
+            var3 = UnlockOverlay.field_n + 1 & 127;
             if (var3 != vha.field_b) {
-              dl.field_o[rca.field_n] = var2_int;
-              MovingSawComponent.field_O[rca.field_n] = (char)0;
-              rca.field_n = var3;
+              AchievementsOverlay.field_o[UnlockOverlay.field_n] = var2_int;
+              MovingSawComponent.field_O[UnlockOverlay.field_n] = (char)0;
+              UnlockOverlay.field_n = var3;
             }
           }
           var3Lifetime1 = param0.getModifiers();
@@ -205,11 +205,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             if (var2_int != 0 &&
               var2_int != 65535 &&
               msa.isTypeableCharacter((char) var2_int, (byte) 124)) {
-              var3 = 1 + rca.field_n & 127;
+              var3 = 1 + UnlockOverlay.field_n & 127;
               if (vha.field_b != var3) {
-                dl.field_o[rca.field_n] = -1;
-                MovingSawComponent.field_O[rca.field_n] = (char)var2_int;
-                rca.field_n = var3;
+                AchievementsOverlay.field_o[UnlockOverlay.field_n] = -1;
+                MovingSawComponent.field_O[UnlockOverlay.field_n] = (char)var2_int;
+                UnlockOverlay.field_n = var3;
               }
             }
           }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rca extends me {
+final class UnlockOverlay extends MatchOverlay {
     private bua field_o;
     private taa field_m;
     private boolean field_k;
@@ -71,7 +71,7 @@ final class rca extends me {
         }
     }
 
-    rca(MatchScreen param0, taa param1) {
+    UnlockOverlay(MatchScreen param0, taa param1) {
         super(param0);
         this.field_k = false;
         try {
@@ -104,20 +104,20 @@ final class rca extends me {
           if (this.field_m.c(16) == 0) {
             var6 = SocketArchiveNetworkClient.field_v;
             var7 = Room.field_m[this.field_m.a(-13939)];
-            oka.a(var6.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
+            MembersUpsellMenu.a(var6.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
             ura.a(-10985);
             hp.a(1024, 0, 0, this.field_o.b((byte) 74), -1918106173, 300, 320);
-            se.f((byte) -6);
+            RemovedFromGameMenu.f((byte) -6);
             kq.field_a.a(var2, var3 + 85);
-            oka.a(var7.toUpperCase(), 65793, eda.field_f, -1, (SwitchLinkList.b(0) >> 1) + 92, aaa.a(false) >> 1, -1);
+            MembersUpsellMenu.a(var7.toUpperCase(), 65793, eda.field_f, -1, (SwitchLinkList.b(0) >> 1) + 92, aaa.a(false) >> 1, -1);
             return;
           }
           if (this.field_m.c(16) == 1) {
             var4 = this.field_m.a(-13939);
-            oka.a(r.field_k.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
+            MembersUpsellMenu.a(r.field_k.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
             OpenGlFramebuffer.field_i[var4].a((aaa.a(false) >> 1) - OpenGlFramebuffer.field_i[var4].a() / 2, (SwitchLinkList.b(0) >> 1) - OpenGlFramebuffer.field_i[var4].c() / 2 - 20);
             kq.field_a.a(var2, var3 + 60);
-            oka.a(vj.worldNames[var4].toUpperCase(), 65793, eda.field_f, -1, 92 + var3, aaa.a(false) >> 1, -1);
+            MembersUpsellMenu.a(vj.worldNames[var4].toUpperCase(), 65793, eda.field_f, -1, 92 + var3, aaa.a(false) >> 1, -1);
             return;
           }
           return;
@@ -127,20 +127,20 @@ final class rca extends me {
         if (this.field_m.c(16) == 0) {
           var8 = SocketArchiveNetworkClient.field_v;
           var9 = Room.field_m[this.field_m.a(-13939)];
-          oka.a(var8.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
+          MembersUpsellMenu.a(var8.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
           ura.a(-10985);
           hp.a(1024, 0, 0, this.field_o.b((byte) 74), -1918106173, 300, 320);
-          se.f((byte) -6);
+          RemovedFromGameMenu.f((byte) -6);
           kq.field_a.a(var2Lifetime1, var3Lifetime1 + 85);
-          oka.a(var9.toUpperCase(), 65793, eda.field_f, -1, (SwitchLinkList.b(0) >> 1) + 92, aaa.a(false) >> 1, -1);
+          MembersUpsellMenu.a(var9.toUpperCase(), 65793, eda.field_f, -1, (SwitchLinkList.b(0) >> 1) + 92, aaa.a(false) >> 1, -1);
           return;
         }
         if (this.field_m.c(16) == 1) {
           var4Lifetime1 = this.field_m.a(-13939);
-          oka.a(r.field_k.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
+          MembersUpsellMenu.a(r.field_k.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
           OpenGlFramebuffer.field_i[var4Lifetime1].a((aaa.a(false) >> 1) - OpenGlFramebuffer.field_i[var4Lifetime1].a() / 2, (SwitchLinkList.b(0) >> 1) - OpenGlFramebuffer.field_i[var4Lifetime1].c() / 2 - 20);
           kq.field_a.a(var2Lifetime1, var3Lifetime1 + 60);
-          oka.a(vj.worldNames[var4Lifetime1].toUpperCase(), 65793, eda.field_f, -1, 92 + var3Lifetime1, aaa.a(false) >> 1, -1);
+          MembersUpsellMenu.a(vj.worldNames[var4Lifetime1].toUpperCase(), 65793, eda.field_f, -1, 92 + var3Lifetime1, aaa.a(false) >> 1, -1);
           return;
         }
     }

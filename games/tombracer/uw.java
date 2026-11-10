@@ -7,7 +7,7 @@ final class uw {
     private ev field_d;
     private iq field_f;
     static String field_b;
-    static wv[] field_g;
+    static MenuScreen[] field_g;
     private vf[] field_c;
 
     final iq c(int param0) {
@@ -82,7 +82,7 @@ final class uw {
 
     public static void releaseStatics(int param0) {
         if (param0 != 0) {
-          field_g = (wv[]) null;
+          field_g = (MenuScreen[]) null;
         }
         field_g = null;
         field_b = null;
@@ -201,7 +201,7 @@ final class uw {
           for (var3 = 0; var1_int > var3; var3++) {
             var4_ref_an = cq.field_b[var3];
             var4_ref_an.computeBounds((byte) -117);
-            oka.b((byte) 17, var3);
+            MembersUpsellMenu.b((byte) 17, var3);
             var5 = var4_ref_an.field_i + var4_ref_an.field_z >> 1;
             var6 = var4_ref_an.field_m + var4_ref_an.field_b >> 1;
             var7 = var4_ref_an.field_p + var4_ref_an.field_a >> 1;
@@ -249,7 +249,7 @@ final class uw {
             }
             var21[var16] = -2147483648;
             var17 = cq.field_b[var16];
-            oka.b((byte) 86, var16);
+            MembersUpsellMenu.b((byte) 86, var16);
             for (var18 = 0; var18 < 3; var18++) {
               nba.field_a[var18] = nba.field_a[var18] + OpenGlTexture.field_e[var15][var18];
             }

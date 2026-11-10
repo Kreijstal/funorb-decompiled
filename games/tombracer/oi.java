@@ -14,7 +14,7 @@ final class oi {
           VerticalGradientOperator.field_n = param4;
           apa.field_a = param0;
           cr.field_b = param3;
-          uda.field_q = param1;
+          CharacterSelectPhase.field_q = param1;
           ns.field_f = true;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "oi.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');

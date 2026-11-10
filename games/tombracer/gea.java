@@ -43,7 +43,7 @@ final class gea {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        br var4 = null;
+        QuickChatCategory var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var9 = 0;
@@ -72,9 +72,9 @@ final class gea {
           }
           DraggableWidget.a(-1, var4);
           var12 = (BitmapFont) null;
-          oka.field_w = ow.a(1127256, 1513239, 1513239, 0, (BitmapFont) null, 2245737, 4020342, 65793, 65793, 5138823, 8947848, 65793, (byte) -78);
-          BoulderComponent.field_M = ow.a(0, 0, 0, 16764006, param2, 0, param0, 0, 0, 0, 0, 0, (byte) -81);
-          tg.field_c = ow.a(0, 0, 0, 16777215, param2, 0, 0, 0, 0, 0, 0, 0, (byte) -123);
+          MembersUpsellMenu.field_w = DrawOfferMenu.a(1127256, 1513239, 1513239, 0, (BitmapFont) null, 2245737, 4020342, 65793, 65793, 5138823, 8947848, 65793, (byte) -78);
+          BoulderComponent.field_M = DrawOfferMenu.a(0, 0, 0, 16764006, param2, 0, param0, 0, 0, 0, 0, 0, (byte) -81);
+          tg.field_c = DrawOfferMenu.a(0, 0, 0, 16777215, param2, 0, 0, 0, 0, 0, 0, 0, (byte) -123);
           var5 = SoftwareRasterizer.field_g;
           var6 = SoftwareRasterizer.field_a;
           var16 = SoftwareRasterizer.field_l;
@@ -84,7 +84,7 @@ final class gea {
             SoftwareRasterizer.drawVerticalLine(var8, var8 + 1, -(var8 << 1) + 14, 16777215);
           }
           SoftwareRasterizer.a(var16, var5, var6);
-          cia.field_g = FontMetrics.a(true, BoulderComponent.field_M, oka.field_w, var4, tg.field_c);
+          cia.field_g = FontMetrics.a(true, BoulderComponent.field_M, MembersUpsellMenu.field_w, var4, tg.field_c);
           rua.field_gb.field_J = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

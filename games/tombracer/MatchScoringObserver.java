@@ -179,7 +179,7 @@ class MatchScoringObserver extends SimulationObserver {
         }
     }
 
-    final void a(Trap param0, int param1) {
+    final void onTrapDestroyed(Trap param0, int param1) {
         int var3_int = 0;
         Player var4 = null;
         int var5 = 0;

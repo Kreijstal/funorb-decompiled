@@ -59,7 +59,7 @@ final class fa {
               var2 = gl.$cfr$intArgs$a$53ce4ab4c593(83, pba.field_a, new String[]{wp.field_a});
             }
             if (vo.field_b) {
-              gu.a(0, true, (String) null, (String) (var2), (String) null, 2);
+              TreasureValuesOverlay.a(0, true, (String) null, (String) (var2), (String) null, 2);
               Room.l(2097152);
             }
           }
@@ -74,7 +74,7 @@ final class fa {
             decompiledFrameRemainder0 = (var10 != 0);
           }
           if (decompiledFrameRemainder0) {
-            var3 = fna.field_k;
+            var3 = MenuEntry.field_k;
             var3 = ima.a(var3, (byte) 8);
             var4 = "";
             var5 = "|";
@@ -83,7 +83,7 @@ final class fa {
             if (var6 == 2) {
               var4 = gl.$cfr$intArgs$a$53ce4ab4c593(88, TrackMountComponent.field_G, new String[]{wp.field_a});
               var8 = gl.$cfr$intArgs$a$53ce4ab4c593(111, li.field_a, new String[]{var3});
-              var7 = mka.field_b.field_G + (pq.field_g.field_G - 485) + PlatformBehaviour.field_s.b(var8) - PlatformBehaviour.field_s.b(var4);
+              var7 = mka.field_b.field_G + (pq.field_g.field_G - 485) + PlatformBehaviour.field_s.stringWidth(var8) - PlatformBehaviour.field_s.stringWidth(var4);
               if (0 > var7) {
                 var7 = 0;
               }
@@ -128,7 +128,7 @@ final class fa {
                 var5 = "";
                 var4 = "<col=999999>" + var4 + kia.field_a + "</col>";
               }
-              var9 = PlatformBehaviour.field_s.b(var4);
+              var9 = PlatformBehaviour.field_s.stringWidth(var4);
               if (!RoomComponentFactory.a(27)) {
                 if (pq.field_g.field_o &&
                   var9 > jba.field_j - pq.field_g.field_q) {

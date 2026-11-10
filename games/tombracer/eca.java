@@ -30,7 +30,7 @@ final class eca {
           var8 = (CharSequence) ((Object) param4);
           mn.field_n = jd.normalizeDisplayName(1, var8);
           ica.field_b = param2;
-          var7 = FacePointLocomotor.a(oka.field_w, BoulderComponent.field_M, tg.field_c, param3, false);
+          var7 = FacePointLocomotor.a(MembersUpsellMenu.field_w, BoulderComponent.field_M, tg.field_c, param3, false);
           AffineTransform3D.a(-124, var7);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -30,7 +30,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonLi
             var3_int = param1.length;
             this.field_A = new String[var3_int];
             for (var4_int = 0; var4_int < var3_int; var4_int++) {
-              this.field_A[var4_int] = wt.a(kha.b(param0, 17404), (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
+              this.field_A[var4_int] = wt.normalizeBase37Name(kha.b(param0, 17404), (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
             }
             var4 = new kaa(KeySwitchComponent.field_J, 0, 1);
             this.field_z = new FocusableWidget[1 + var3_int];

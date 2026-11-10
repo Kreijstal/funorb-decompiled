@@ -135,7 +135,7 @@ final class SoftwareBinaryFont extends GameFont {
           return;
         }
         if ((param3 & -16777216) == -16777216) {
-          this.b(this.field_f[param0], this.field_g.field_r, param3, var12, var9, var6, var7, var10, var11);
+          this.blitMask(this.field_f[param0], this.field_g.field_r, param3, var12, var9, var6, var7, var10, var11);
         } else {
           if ((param3 & -16777216) != 0) {
             this.blitGlyphAlpha(this.field_f[param0], this.field_g.field_r, param3, var12, var9, var6, var7, var10, var11);
@@ -143,7 +143,7 @@ final class SoftwareBinaryFont extends GameFont {
         }
     }
 
-    private final void b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final void blitMask(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var11 = 0;
         int var10;
         int var12;

@@ -192,7 +192,7 @@ final class DraggableWidget extends SingleChildWidget {
         }
     }
 
-    final static void a(int param0, br param1) {
+    final static void a(int param0, QuickChatCategory param1) {
         try {
           param1.field_l = new int[]{param0};
           param1.field_o = new char[]{(char)63};

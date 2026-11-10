@@ -98,7 +98,7 @@ final class SweepRotateLocomotor extends Locomotor {
               fieldTemp$1 = tba.field_k;
               tba.field_k = tba.field_k + 1;
               var6.field_Db = fieldTemp$1;
-              wv.field_l.addLast((byte) -116, var6);
+              MenuScreen.field_l.addLast((byte) -116, var6);
             }
             var6.field_yb = var5;
             var6.field_tb = var4_ref_String;
@@ -172,7 +172,7 @@ final class SweepRotateLocomotor extends Locomotor {
               if (var9 != 0) {
                 break scanLoop1;
               }
-              if (ol.a(stackIn_55_0, true, var6Lifetime1)) {
+              if (ol.comesBefore(stackIn_55_0, true, var6Lifetime1)) {
                 var7 = (mu) (fla.field_f.next(param0 - 14058));
                 continue;
               }

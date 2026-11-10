@@ -16,7 +16,7 @@ final class NanoTickClock extends GameClock {
         }
         this.field_e = 0L;
         if (param0 <= 100) {
-          NanoTickClock.a(false);
+          NanoTickClock.pollKeyEvent(false);
         }
     }
 
@@ -48,7 +48,7 @@ final class NanoTickClock extends GameClock {
     final long getMillisUntilNextTick(byte param0) {
         this.field_d = this.field_d + this.d(-97);
         if (param0 < 27) {
-          NanoTickClock.a(false);
+          NanoTickClock.pollKeyEvent(false);
         }
         if (this.field_f > this.field_d) {
           return (-this.field_d + this.field_f) / 1000000L;
@@ -56,7 +56,7 @@ final class NanoTickClock extends GameClock {
         return 0L;
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean pollKeyEvent(boolean param0) {
         Object var1 = null;
         Throwable var2 = null;
         boolean stackIn_8_0 = false;
@@ -69,7 +69,7 @@ final class NanoTickClock extends GameClock {
           if (vha.field_b == nt.field_a) {
             return false;
           }
-          fna.field_h = dl.field_o[vha.field_b];
+          MenuEntry.field_h = AchievementsOverlay.field_o[vha.field_b];
           HardwareOpenGlToolkit.field_td = MovingSawComponent.field_O[vha.field_b];
           vha.field_b = 1 + vha.field_b & 127;
           stackIn_8_0 = true;

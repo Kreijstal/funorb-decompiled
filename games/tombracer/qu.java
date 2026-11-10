@@ -27,7 +27,7 @@ abstract class qu {
         return " (" + (param0 <= 0 ? "+" : "-") + Math.abs(param0) + ")";
     }
 
-    abstract void a(boolean param0, byte[] param1);
+    abstract void setBytes(boolean param0, byte[] param1);
 
     abstract byte[] toByteArray(boolean param0);
 

@@ -201,11 +201,11 @@ final class KeySwitchComponent extends SwitchComponent {
     final static boolean c(int param0, int param1, int param2) {
         if (param0 != 2097152) {
           field_M = (String) null;
-          if (fna.field_h == 13) {
+          if (MenuEntry.field_h == 13) {
             Room.l(param0 + 0);
             return true;
           }
-          if (fna.field_h == 102) {
+          if (MenuEntry.field_h == 102) {
             ItemModel.field_n.a(true);
             return true;
           }
@@ -217,11 +217,11 @@ final class KeySwitchComponent extends SwitchComponent {
           }
           return false;
         }
-        if (fna.field_h == 13) {
+        if (MenuEntry.field_h == 13) {
           Room.l(param0 + 0);
           return true;
         }
-        if (fna.field_h == 102) {
+        if (MenuEntry.field_h == 102) {
           ItemModel.field_n.a(true);
           return true;
         }

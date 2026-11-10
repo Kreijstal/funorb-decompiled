@@ -24,7 +24,7 @@ class AudioOutput {
     private PcmStream[] field_c;
     private long field_e;
 
-    private final void a(int[] param0, int param1) {
+    private final void mixBlock(int[] param0, int param1) {
         int var3;
         int var4;
         int var5;
@@ -215,7 +215,7 @@ class AudioOutput {
         }
     }
 
-    final synchronized void c() {
+    final synchronized void serviceOutput() {
         try {
           Throwable decompiledCaughtException = null;
           long var1 = 0L;
@@ -275,7 +275,7 @@ class AudioOutput {
               }
             }
             while (var3_int < var4) {
-              this.a(this.field_j, 256);
+              this.mixBlock(this.field_j, 256);
               this.f();
               var3_int += 256;
             }
@@ -338,7 +338,7 @@ class AudioOutput {
         this.field_i = param0;
     }
 
-    final synchronized void a() {
+    final synchronized void shutdown() {
         int var2 = 0;
         int var1;
         if (field_p != null) {

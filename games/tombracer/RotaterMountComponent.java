@@ -134,7 +134,7 @@ final class RotaterMountComponent extends PrefabComponent {
         return false;
     }
 
-    final static byte[] a(byte[] param0, int param1) {
+    final static byte[] decompressContainer(byte[] param0, int param1) {
         byte[] stackIn_21_0 = null;
         byte[] stackIn_23_0 = null;
         RuntimeException stackIn_26_0 = null;
@@ -177,7 +177,7 @@ final class RotaterMountComponent extends PrefabComponent {
               var10 = var12;
               var6 = var10;
               if (var3 == 1) {
-                Bzip2Decompressor.a(var12, var5_int, param0, var4, 9);
+                Bzip2Decompressor.decompress(var12, var5_int, param0, var4, 9);
               } else {
                 var7 = sma.field_e;
                 synchronized (var7) {

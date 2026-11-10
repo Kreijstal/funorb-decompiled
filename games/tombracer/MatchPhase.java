@@ -11,7 +11,7 @@ abstract class MatchPhase {
     MatchScreen screen;
     static d field_l;
     static int field_j;
-    private fna field_k;
+    private MenuEntry field_k;
     MatchProtocol protocol;
     private ko field_a;
 
@@ -63,7 +63,7 @@ abstract class MatchPhase {
     }
 
     private final void a(byte param0) {
-        this.field_k = new fna(0, wba.field_q[0], 0, false);
+        this.field_k = new MenuEntry(0, wba.field_q[0], 0, false);
         if (param0 == -78) {
           this.field_k.field_b = this.field_k.e(-163) / 2 + 10;
           this.field_k.field_i = -25 + SwitchLinkList.b(0);

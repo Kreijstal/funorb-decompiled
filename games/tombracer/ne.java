@@ -21,7 +21,7 @@ final class ne {
         try {
           VorbisSample.decodeSetup(param0.a("headers.packvorbis", (byte) 124, ""));
           var2 = VorbisSample.load(param0, "jagex logo2.packvorbis", "");
-          var2.a();
+          var2.decodeAll();
           int var3 = -87 % ((param1 - 12) / 50);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ne.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

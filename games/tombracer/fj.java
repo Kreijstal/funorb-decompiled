@@ -82,7 +82,7 @@ final class fj {
           MessageDialog.a(param1, var12, var11, param3, 0, 6);
           var13 = var11 / 2 + param1;
           var14 = var12 / 2 + param3;
-          var15 = var10.j((byte) -81);
+          var15 = var10.getScene((byte) -81);
           if (var15 == null) {
             return;
           }

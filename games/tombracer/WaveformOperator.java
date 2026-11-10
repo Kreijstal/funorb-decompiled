@@ -226,7 +226,7 @@ final class WaveformOperator extends TextureOperator {
             if (param1 >= 100 &&
               param1 <= 105) {
               var4 = args;
-              ow.a((byte) -109, var4);
+              DrawOfferMenu.a((byte) -109, var4);
               SnakePitModel.field_t = pla.a(90, args);
             } else {
               SnakePitModel.field_t = doa.a(param2, param1, (byte) 114);
@@ -236,7 +236,7 @@ final class WaveformOperator extends TextureOperator {
             stackIn_5_1 = !(QuickChatPhraseDefinition.field_n >= 13);
             SnakePitModel.field_t = NanoTickClock.$cfr$intArgs$a$78544449ccb1(stackIn_4_0, stackIn_5_1);
             var6 = (String[]) null;
-            ow.a((byte) -101, (String[]) null);
+            DrawOfferMenu.a((byte) -101, (String[]) null);
           }
           var4_int = -13 % ((param3 + 59) / 56);
           return;

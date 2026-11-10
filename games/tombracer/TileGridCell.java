@@ -16,7 +16,7 @@ final class TileGridCell {
     static Sprite[] field_k;
     private int[] field_d;
 
-    final TileGrid a(int param0) {
+    final TileGrid getGrid(int param0) {
         if (param0 != 18641) {
           return (TileGrid) null;
         }
@@ -77,7 +77,7 @@ final class TileGridCell {
           this.field_e = param1;
           param1.a(30711, this);
           if (param0 != 3) {
-            this.a(-124);
+            this.getGrid(-124);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pca.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -133,14 +133,14 @@ final class TileGridCell {
 
     final boolean a(int param0, int param1) {
         if (param1 != 0) {
-          this.a(21);
+          this.getGrid(21);
         }
         return 0 < this.field_d[param0] ? true : false;
     }
 
     final boolean b(boolean param0) {
         if (param0) {
-          this.a(106);
+          this.getGrid(106);
         }
         return this.field_g > 0 ? true : false;
     }
@@ -191,7 +191,7 @@ final class TileGridCell {
         if (param0 != 0) {
           return (Room) null;
         }
-        return this.grid.b(0);
+        return this.grid.getRoom(0);
     }
 
     final void a(uw param0, byte param1) {

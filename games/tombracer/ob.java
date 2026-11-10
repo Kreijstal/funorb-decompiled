@@ -64,7 +64,7 @@ abstract class ob extends IntrusiveNode {
             ColourFillOperator.field_p[var2_intLifetime1].b();
           }
           ik.field_h = su.createToolkitSprite(dna.field_F, param0, (byte) 127);
-          ArchiveSource.field_a = ak.a(param0, bp.field_p, -79);
+          ArchiveSource.field_a = ak.a(param0, RoundWinnerPhase.field_p, -79);
           bd.field_i = su.createToolkitSprite(ara.field_vb, param0, (byte) -20);
           ColourFillOperator.field_m = su.createToolkitSprite(tla.field_g, param0, (byte) -99);
           CachedTextLayout.field_l = su.createToolkitSprite(wd.field_c, param0, (byte) 25);
@@ -83,7 +83,7 @@ abstract class ob extends IntrusiveNode {
           za.field_g = su.createToolkitSprite(TextResourceLoader.field_b, param0, (byte) -50);
           bca.field_d = su.createToolkitSprite(sla.field_a, param0, (byte) -38);
           rm.field_c = su.createToolkitSprite(SocketArchiveNetworkClient.field_s, param0, (byte) 126);
-          uda.field_r = su.createToolkitSprite(aa.field_a, param0, (byte) 125);
+          CharacterSelectPhase.field_r = su.createToolkitSprite(aa.field_a, param0, (byte) 125);
           je.field_E = su.createToolkitSprite(pha.field_Bb, param0, (byte) -119);
           eu.field_a = su.createToolkitSprite(ConstrainToRectangleLocomotor.field_t, param0, (byte) -5);
           pq.field_a = su.createToolkitSprite(MatchScreen.field_q, param0, (byte) 28);

@@ -156,7 +156,7 @@ final class RewardChoicePhase extends MatchPhase {
           var9 = (SwitchLinkList.b(0) >> 1) - (gg.field_f.c() >> 1);
           gg.field_f.a(var8, var9);
           if (var3 == 0) {
-            SocketConnector.a(gl.$cfr$intArgs$a$53ce4ab4c593(83, cba.field_c, new String[]{this.screen.j(var4, 9)}).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, 32 + var9, var8, 1, (byte) 60, gg.field_f.a());
+            SocketConnector.a(gl.$cfr$intArgs$a$53ce4ab4c593(83, cba.field_c, new String[]{this.screen.getColouredPlayerName(var4, 9)}).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, 32 + var9, var8, 1, (byte) 60, gg.field_f.a());
           } else {
             SocketConnector.a(us.field_c.toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, var9 + 32, var8, 1, (byte) 60, gg.field_f.a());
             var10 = (-this.field_o.getCurrentPlayerTicks(-1) + 750) / 50 + 1;
@@ -187,7 +187,7 @@ final class RewardChoicePhase extends MatchPhase {
         while (this.matchState.players.length > var17) {
           var9Lifetime1 = -(this.matchState.players.length * var5Lifetime1 / 2) + var6 + var5Lifetime1 * var17;
           var10 = -200 + var7;
-          SocketConnector.a(this.screen.a(var17, false).toUpperCase(), 1, kn.field_p, wga.field_a[var17], 0, 32, 1, var10, var9Lifetime1, 1, (byte) 60, var5Lifetime1);
+          SocketConnector.a(this.screen.getPlayerName(var17, false).toUpperCase(), 1, kn.field_p, wga.field_a[var17], 0, 32, 1, var10, var9Lifetime1, 1, (byte) 60, var5Lifetime1);
           if (!this.matchState.b((byte) 90, var17)) {
             var11 = cs.field_b;
             var12 = 8947848;
@@ -202,7 +202,7 @@ final class RewardChoicePhase extends MatchPhase {
                   var11 = g.field_i;
                 } else {
                   var12 = 16777215;
-                  var11 = bp.field_o;
+                  var11 = RoundWinnerPhase.field_o;
                 }
               } else {
                 var11 = cga.field_l;
@@ -216,7 +216,7 @@ final class RewardChoicePhase extends MatchPhase {
           SocketConnector.a(var11.toUpperCase(), 1, kn.field_p, var12, 0, 32, 1, 32 + var10, var9Lifetime1, 1, (byte) 60, var5Lifetime1);
           var17++;
         }
-        se.f((byte) -6);
+        RemovedFromGameMenu.f((byte) -6);
         this.d(-27142);
     }
 

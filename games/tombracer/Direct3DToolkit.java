@@ -73,7 +73,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         if (param1 == ControllerLocomotor.field_r) {
           return 1;
         }
-        if (param1 == fma.field_f) {
+        if (param1 == ArchiveManager.field_f) {
           return 4;
         }
         if (vs.field_T == param1) {

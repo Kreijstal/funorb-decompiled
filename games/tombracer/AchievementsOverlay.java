@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dl extends me {
+final class AchievementsOverlay extends MatchOverlay {
     static String field_p;
     private dea field_n;
     static jea field_t;
@@ -122,7 +122,7 @@ final class dl extends me {
         }
     }
 
-    dl(MatchScreen param0, ms param1) {
+    AchievementsOverlay(MatchScreen param0, ms param1) {
         super(param0);
         this.field_n = new dea();
         this.field_l = 20;
@@ -148,14 +148,14 @@ final class dl extends me {
         field_o = null;
         field_p = null;
         if (param0 != 96) {
-          dl.releaseStatics((byte) -110);
+          AchievementsOverlay.releaseStatics((byte) -110);
           field_m = null;
           return;
         }
         field_m = null;
     }
 
-    final void b(int param0) {
+    final void finish(int param0) {
         if (param0 != -10968) {
           return;
         }
@@ -166,7 +166,7 @@ final class dl extends me {
         if (this.field_v) {
           this.field_u = this.field_u - 32;
           if (this.field_u < -gg.field_f.c()) {
-            super.b(-10968);
+            super.finish(-10968);
             this.field_n.a((byte) -113, true, false);
             if (null != this.field_q) {
               this.field_q.b(-7109);
@@ -178,7 +178,7 @@ final class dl extends me {
               PlayerModel.field_b != 1) {
               return;
             }
-            this.b(-10968);
+            this.finish(-10968);
             this.field_i.a(true, 25, 4);
             return;
           }
@@ -195,24 +195,24 @@ final class dl extends me {
               PlayerModel.field_b != 1) {
               return;
             }
-            this.b(-10968);
+            this.finish(-10968);
             this.field_i.a(true, 25, 4);
             return;
           }
           this.field_q = (ms) null;
         }
         if (this.field_i.g(0, 4)) {
-          this.b(-10968);
+          this.finish(-10968);
           this.field_i.a(true, 25, 4);
         } else {
           if (PlayerModel.field_b == 1) {
-            this.b(-10968);
+            this.finish(-10968);
             this.field_i.a(true, 25, 4);
           }
         }
     }
 
-    final static String a(PacketBuffer param0, int param1, int param2) {
+    final static String readHuffmanString(PacketBuffer param0, int param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -233,7 +233,7 @@ final class dl extends me {
             }
             var4 = new byte[var3_int];
             param0.position = param0.position + nma.field_m.a(param0.position, (byte) 121, var3_int, param0.payload, 0, var4);
-            var5 = MaskBlendOperator.a(var4, 0, var3_int, 255);
+            var5 = MaskBlendOperator.decodeCp1252(var4, 0, var3_int, 255);
             if (param2 < -18) {
               stackIn_7_0 = var5;
               return stackIn_7_0;

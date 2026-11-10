@@ -897,7 +897,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
             this.getSimulation(-1).reportPenalty(this, param0, 1, param2);
             this.room.collisionGrid.remove((Collidable) (this), (byte) 107);
             if (4 == param0) {
-              var4 = this.room.j((byte) 52);
+              var4 = this.room.getScene((byte) 52);
               if (null != var4 &&
                 this.animator != null) {
                 var4.a(7, this.animator, (byte) -33);
@@ -3445,7 +3445,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         }
     }
 
-    final int m(byte param0) {
+    final int getVelocityX(byte param0) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;

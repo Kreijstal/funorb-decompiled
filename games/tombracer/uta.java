@@ -81,7 +81,7 @@ abstract class uta implements ShellListener {
           var6 = var5;
           for (var7 = 0; var7 < var6.length; var7++) {
             var8 = var6[var7];
-            if (var4_int <= this.field_m.b(var8)) {
+            if (var4_int <= this.field_m.stringWidth(var8)) {
               var9 = this.a(var4_int, true, var8);
               var10 = (gka) (var9.first(param0 ^ -24277));
               while (var10 != null) {
@@ -131,7 +131,7 @@ abstract class uta implements ShellListener {
           var4 = new IntrusiveDeque();
           scanLoop1: while (param2 != null) {
             boolean decompiledFrameRemainder0 = true;
-            var5 = this.field_m.b(param2);
+            var5 = this.field_m.stringWidth(param2);
             var6 = param2;
             if (var5 > param0) {
               var7 = -1 + param2.length();
@@ -153,7 +153,7 @@ abstract class uta implements ShellListener {
                 var4.addLast((byte) -128, new gka(var9));
                 continue scanLoop1;
               }
-              var5 = this.field_m.b(param2);
+              var5 = this.field_m.stringWidth(param2);
               var7Lifetime1 = param2.length() - 1;
               while (var5 > param0) {
                 incrementValue$1 = var7Lifetime1;
@@ -326,7 +326,7 @@ abstract class uta implements ShellListener {
           }
           var4.field_H = this.field_m;
           var4.field_ib = param2;
-          var4.a(this.field_m.b(var4.field_r), this.field_k, -23776, 0, 5);
+          var4.a(this.field_m.stringWidth(var4.field_r), this.field_k, -23776, 0, 5);
           stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -476,7 +476,7 @@ abstract class uta implements ShellListener {
           if (null != this.field_b) {
             var3 = 0;
             for (var4 = 0; var4 < this.field_b.length; var4++) {
-              var5 = this.field_m.b(this.field_b[var4]);
+              var5 = this.field_m.stringWidth(this.field_b[var4]);
               if (var3 < var5) {
                 var3 = var5;
               }

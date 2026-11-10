@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fma {
-    private qqa field_b;
+final class ArchiveManager {
+    private NetworkArchiveRequest field_b;
     private java.math.BigInteger field_a;
     static String field_d;
     private java.math.BigInteger field_e;
@@ -18,7 +18,7 @@ final class fma {
         field_d = null;
     }
 
-    final boolean a(boolean param0) {
+    final boolean loadMasterIndex(boolean param0) {
         int var3;
         byte[] var4;
         byte[] var5;
@@ -58,7 +58,7 @@ final class fma {
         if (this.field_b.field_m) {
           return false;
         }
-        var10 = new PacketBuffer(this.field_b.b((byte) -126));
+        var10 = new PacketBuffer(this.field_b.getBytes((byte) -126));
         if (!param0) {
           var10.position = 5;
           var3 = var10.readUnsignedByte(255);
@@ -172,7 +172,7 @@ final class fma {
               return stackIn_10_0;
             }
             if (param4 <= 42) {
-              fma.releaseStatics((byte) -48);
+              ArchiveManager.releaseStatics((byte) -48);
             }
             this.field_g.position = param1 * 72 + 6;
             var6_int = this.field_g.readInt(121);
@@ -205,7 +205,7 @@ final class fma {
         }
     }
 
-    final void a(int param0) {
+    final void processSources(int param0) {
         int var2;
         int var3;
         int var4;
@@ -234,11 +234,11 @@ final class fma {
         return;
     }
 
-    fma(ArchiveNetworkClient param0, DiskCacheWorker param1) {
+    ArchiveManager(ArchiveNetworkClient param0, DiskCacheWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    private fma(ArchiveNetworkClient param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private ArchiveManager(ArchiveNetworkClient param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

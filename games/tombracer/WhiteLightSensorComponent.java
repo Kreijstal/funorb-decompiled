@@ -41,7 +41,7 @@ final class WhiteLightSensorComponent extends SwitchComponent {
           if (param1 != 70) {
             field_J = (String) null;
           }
-          stackIn_3_0 = Trap.a(57, 10, true, param0);
+          stackIn_3_0 = Trap.parseInt(57, 10, true, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

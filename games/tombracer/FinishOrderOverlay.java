@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gi extends me {
-    gi(MatchScreen param0) {
+final class FinishOrderOverlay extends MatchOverlay {
+    FinishOrderOverlay(MatchScreen param0) {
         super(param0);
     }
 
@@ -48,7 +48,7 @@ final class gi extends me {
         var9 = var3;
         var10 = 40 + var9;
         qa.a(var8, 300, (byte) 65, -150 + var2, aq.field_a, var9 - 16);
-        oka.a(PowerUpItemBehaviour.field_v.toUpperCase(), 16777215, qf.field_j, -1, 4 + var9, var2, 0);
+        MembersUpsellMenu.a(PowerUpItemBehaviour.field_v.toUpperCase(), 16777215, qf.field_j, -1, 4 + var9, var2, 0);
         for (var11 = 0; this.field_g.field_c.field_e.length > var11; var11++) {
           var12 = this.field_g.field_c.field_e[var11];
           if (var12 != -1) {
@@ -58,14 +58,14 @@ final class gi extends me {
               var13 = var6;
             }
             if (this.field_g.simulations[var12].b(0)) {
-              oka.a((dta.field_b[var11] + "  " + this.field_i.a(var12, false) + "  " + dea.a(this.field_g.simulations[var12].tick, (byte) -8)).toUpperCase(), var13, qf.field_j, -1, var7 * var11 + var10, var2, 0);
+              MembersUpsellMenu.a((dta.field_b[var11] + "  " + this.field_i.getPlayerName(var12, false) + "  " + dea.a(this.field_g.simulations[var12].tick, (byte) -8)).toUpperCase(), var13, qf.field_j, -1, var7 * var11 + var10, var2, 0);
             } else {
               if (!this.field_g.simulations[var12].e(-31170) &&
                 this.field_i.matchState.e(2) < 0) {
-                oka.a((dta.field_b[var11] + "  ...").toUpperCase(), 16777215, qf.field_j, -1, var11 * var7 + var10, var2, 0);
+                MembersUpsellMenu.a((dta.field_b[var11] + "  ...").toUpperCase(), 16777215, qf.field_j, -1, var11 * var7 + var10, var2, 0);
                 return;
               }
-              oka.a((re.field_b + "  " + this.field_i.a(var12, false)).toUpperCase(), var13, qf.field_j, -1, var10 + var11 * var7, var2, 0);
+              MembersUpsellMenu.a((re.field_b + "  " + this.field_i.getPlayerName(var12, false)).toUpperCase(), var13, qf.field_j, -1, var10 + var11 * var7, var2, 0);
             }
           }
         }

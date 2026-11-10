@@ -352,7 +352,7 @@ final class CrusherBehaviour extends Behaviour {
           if (param3 <= 20) {
             field_r = (String) null;
           }
-          stackIn_6_0 = S2CPlayerSyncPacket.a(0);
+          stackIn_6_0 = S2CPlayerSyncPacket.createDecodedIndexedSprites(0);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -246,7 +246,7 @@ final class CommonChooseReward implements dv {
           if (param1) {
             this.a(99, -112);
           }
-          this.finished = CircleMovementLocomotor.a(5907, param0);
+          this.finished = CircleMovementLocomotor.readBitFlag(5907, param0);
           this.takenCount = param0.readBits((byte) 44, 2);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "cfa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

@@ -133,11 +133,11 @@ abstract class PathMoverComponent extends PrefabComponent {
     }
 
     final static String r(byte param0) {
-        if (fna.field_k == null) {
+        if (MenuEntry.field_k == null) {
           return "";
         }
         int var1 = 69 / ((param0 - 0) / 33);
-        return fna.field_k;
+        return MenuEntry.field_k;
     }
 
     void encode(boolean param0, BitPacketBuffer param1) {

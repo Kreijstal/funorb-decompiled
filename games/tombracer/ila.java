@@ -229,7 +229,7 @@ final class ila {
                 km.field_p = ContextMenu.field_yb;
               } else {
                 km.field_p = bi.field_a;
-                oka.field_z = var6_int;
+                MembersUpsellMenu.field_z = var6_int;
                 uca.field_d = -1;
               }
               WeaveOperator.field_q.position = 0;
@@ -246,7 +246,7 @@ final class ila {
               ama.a(1, param2 - 51)) {
               var6_intLifetime1 = WeaveOperator.field_q.readUnsignedByte(param2 + 205);
               WeaveOperator.field_q.position = 0;
-              oka.field_z = var6_intLifetime1;
+              MembersUpsellMenu.field_z = var6_intLifetime1;
               NodeHashTable.field_d = null;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
@@ -302,8 +302,8 @@ final class ila {
                   np.field_J[var8] = WeaveOperator.field_q.readByte((byte) 103);
                 }
               }
-              fna.field_k = WeaveOperator.field_q.readString((byte) -76);
-              var11 = (CharSequence) ((Object) fna.field_k);
+              MenuEntry.field_k = WeaveOperator.field_q.readString((byte) -76);
+              var11 = (CharSequence) ((Object) MenuEntry.field_k);
               tia.field_b = jd.normalizeDisplayName(1, var11);
               lsa.field_a = WeaveOperator.field_q.readUnsignedByte(255);
               km.field_p = uga.field_n;
@@ -342,24 +342,24 @@ final class ila {
                 AllPlatformsMazeComponent.field_K[var8Lifetime1] = AllPlatformsMazeComponent.field_K[var8Lifetime1] + 50;
               }
               WeaveOperator.field_q.initializeCipher(param2 ^ -26235, AllPlatformsMazeComponent.field_K);
-              stackIn_81_0 = oka.field_z;
+              stackIn_81_0 = MembersUpsellMenu.field_z;
               return stackIn_81_0;
             }
             if (bi.field_a == km.field_p &&
               cla.g(0)) {
               dea.a(60);
-              if (oka.field_z == 7 &&
+              if (MembersUpsellMenu.field_z == 7 &&
                 !PushableBlockMazeComponent.field_L) {
                 PushableBlockMazeComponent.field_L = true;
                 stackIn_88_0 = -1;
                 return stackIn_88_0;
               }
-              if (7 == oka.field_z) {
-                oka.field_z = 3;
+              if (7 == MembersUpsellMenu.field_z) {
+                MembersUpsellMenu.field_z = 3;
               }
               io.field_b = WeaveOperator.field_q.readString((byte) -76);
               PushableBlockMazeComponent.field_L = false;
-              stackIn_93_0 = oka.field_z;
+              stackIn_93_0 = MembersUpsellMenu.field_z;
               return stackIn_93_0;
             }
             if (null == OpenGlTransform3D.field_e) {
@@ -480,14 +480,14 @@ final class ila {
           dga.field_a = var8.readString((byte) -76);
         }
         if (!param1) {
-          ConveyorBehaviour.field_p = dl.a(var8, 80, -117);
+          ConveyorBehaviour.field_p = AchievementsOverlay.readHuffmanString(var8, 80, -117);
           MatchPhase.field_e = null;
         } else {
           var5 = var8.readUnsignedShort(121);
           try {
             var9 = qu.field_a.a(false, var5);
             ConveyorBehaviour.field_p = var9.getPreview((byte) -5);
-            if (!TextureSampleOperator.field_q.equals(fna.field_k)) {
+            if (!TextureSampleOperator.field_q.equals(MenuEntry.field_k)) {
               stackIn_21_0 = var9.field_m;
             } else {
               stackIn_21_0 = null;

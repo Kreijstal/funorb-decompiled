@@ -73,7 +73,7 @@ final class av {
           du.field_d = param6;
           wg.field_l = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
           Projectile.field_k = new DiskCacheWorker(param1);
-          IntrusiveDequeCursor.field_a = new fma(wg.field_l, Projectile.field_k);
+          IntrusiveDequeCursor.field_a = new ArchiveManager(wg.field_l, Projectile.field_k);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "av.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

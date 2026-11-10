@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fna {
+final class MenuEntry {
     static qua[] field_j;
     static int field_h;
     dea field_c;
@@ -227,7 +227,7 @@ final class fna {
                   var12.a(var10, var11, var13, var14, 2, 1610612736, 1);
                 }
               }
-              oka.a(this.field_e, var5, var6, -1, 5 + var9, this.field_b, var15);
+              MembersUpsellMenu.a(this.field_e, var5, var6, -1, 5 + var9, this.field_b, var15);
               if (var24 == 0) {
                 return;
               }
@@ -236,7 +236,7 @@ final class fna {
             var19 = 120;
             if (39 == this.field_g) {
               WidgetStyleLayer.field_k[4].a(-89 + this.field_b, -16 + (-(var19 >> 1) + var9), var18, var19, 0, -4144960, 1);
-              oka.a(bc.field_a, var5, var6, -1, var9 + (-(var19 >> 1) + 25), -94 + (var18 >> 1) + this.field_b, var15);
+              MembersUpsellMenu.a(bc.field_a, var5, var6, -1, var9 + (-(var19 >> 1) + 25), -94 + (var18 >> 1) + this.field_b, var15);
             }
             var26 = tga.field_a;
             var21_int = this.field_b - 8;
@@ -257,7 +257,7 @@ final class fna {
             if (TrapSpawner.b(30000) == var27) {
               var15 = 2236962;
               var5 = 10827264;
-              oka.a("X", var5, var6, -1, -8 + (var9 - 1), this.field_b, var15);
+              MembersUpsellMenu.a("X", var5, var6, -1, -8 + (var9 - 1), this.field_b, var15);
             }
             var21 = this.field_e;
             if (!WheeledMountComponent.a(dna.A(param2 + 124), true, var27)) {
@@ -265,7 +265,7 @@ final class fna {
               var21 = "<str=010101>" + this.field_e + "</str>";
               var15 = -1;
             }
-            oka.a(var21, var5, var6, -1, 10 + var9, this.field_b, var15);
+            MembersUpsellMenu.a(var21, var5, var6, -1, 10 + var9, this.field_b, var15);
             if (var24 == 0) {
               return;
             }
@@ -274,7 +274,7 @@ final class fna {
           var19Lifetime2 = 120;
           if (this.field_g == 36) {
             WidgetStyleLayer.field_k[5].a(-63 + this.field_b, var9 - (var19Lifetime2 >> 1) - 16, var18Lifetime2, var19Lifetime2, 0, -4144960, 1);
-            oka.a(dna.field_I, var5, var6, -1, 25 + (-(var19Lifetime2 >> 1) + var9), -65 + (this.field_b + (var18Lifetime2 >> 1)), var15);
+            MembersUpsellMenu.a(dna.field_I, var5, var6, -1, 25 + (-(var19Lifetime2 >> 1) + var9), -65 + (this.field_b + (var18Lifetime2 >> 1)), var15);
           }
           var29 = tga.field_a;
           var21_intLifetime1 = this.field_b - 8;
@@ -298,7 +298,7 @@ final class fna {
           if (var20_ref_kea == var21_ref) {
             var15 = 2236962;
             var5 = 10827264;
-            oka.a("X", var5, var6, param2 - 2, -8 + var9 - 1, this.field_b, var15);
+            MembersUpsellMenu.a("X", var5, var6, param2 - 2, -8 + var9 - 1, this.field_b, var15);
           }
           var22 = this.field_e;
           if (!WheeledMountComponent.a(var20_ref_kea, true, TrapSpawner.b(30000))) {
@@ -306,7 +306,7 @@ final class fna {
             var5 = 2431750;
             var22 = "<str=010101>" + this.field_e + "</str>";
           }
-          oka.a(var22, var5, var6, -1, var9 + 10, this.field_b, var15);
+          MembersUpsellMenu.a(var22, var5, var6, -1, var9 + 10, this.field_b, var15);
           if (var24 == 0) {
             return;
           }
@@ -316,7 +316,7 @@ final class fna {
         if (this.field_g == 5) {
           WidgetStyleLayer.field_k[5].a(this.field_b + (-(var18Lifetime1 >> 1) + 10), var9 - (var19Lifetime1 >> 1) + 13, var18Lifetime1, var19Lifetime1, 0, -4144960, 1);
         }
-        oka.a(this.field_e, var5, var6, param2 - 2, var9, -64 + this.field_b, var15);
+        MembersUpsellMenu.a(this.field_e, var5, var6, param2 - 2, var9, -64 + this.field_b, var15);
         if (this.field_g != 5) {
           stackIn_78_0 = jg.a((byte) -103);
         } else {
@@ -367,7 +367,7 @@ final class fna {
     final void a(boolean param0) {
         if (param0) {
           String var3 = (String) null;
-          fna.a(86, (String) null);
+          MenuEntry.a(86, (String) null);
         }
         this.field_c.d(31990);
     }
@@ -422,7 +422,7 @@ final class fna {
 
     final static void a(int param0, int param1, boolean param2, boolean param3, boolean param4, int param5, int param6, int param7, boolean param8, int param9, int param10, boolean param11, int param12, int param13) {
         ArchiveNetworkClient.field_b = null;
-        se.d((byte) 118);
+        RemovedFromGameMenu.d((byte) 118);
         if (param5 == -22919) {
           param3 = ProgressBarWidget.a(param12, param3, (byte) 107, param0, param9, param10, param7);
           CrossedSineBandsOperator.a(param13, param4, param5 + 27015, param8, param1, param3, param12, param6, param2, param11);
@@ -450,7 +450,7 @@ final class fna {
           var5 = var10.a();
           var6 = var10.c();
           if (param0 != -30323) {
-            fna.a(39, 63, false, true, true, 14, -127, -48, false, 75, -103, false, -22, 2);
+            MenuEntry.a(39, 63, false, true, true, 14, -127, -48, false, 75, -103, false, -22, 2);
           }
           var7 = param1 + var5 / 2 - this.field_b;
           var8 = param2 - (this.field_i - var6 / 2);
@@ -473,12 +473,12 @@ final class fna {
           return MessageDialog.field_X;
         }
         if (param0 != -28425) {
-          fna.a(-43, -1, false, true, false, -66, -12, 75, false, -21, 73, false, -95, 84);
+          MenuEntry.a(-43, -1, false, true, false, -66, -12, 75, false, -21, 73, false, -95, 84);
         }
         return this.field_l ? em.field_h[this.field_f] : WidgetStyleLayer.field_k[this.field_f];
     }
 
-    fna(int param0, String param1, int param2, boolean param3) {
+    MenuEntry(int param0, String param1, int param2, boolean param3) {
         this.field_c = new dea();
         try {
           this.field_g = param0;

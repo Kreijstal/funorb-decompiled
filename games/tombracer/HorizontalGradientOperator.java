@@ -4,7 +4,7 @@
 final class HorizontalGradientOperator extends TextureOperator {
     static boolean field_m;
 
-    final static String a(int param0, CharSequence[] param1, int param2, int param3) {
+    final static String joinRange(int param0, CharSequence[] param1, int param2, int param3) {
         int var6_int = 0;
         int var7 = 0;
         StringBuilder discarded$0 = null;

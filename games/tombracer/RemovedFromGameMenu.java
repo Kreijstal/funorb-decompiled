@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class se extends wv {
+final class RemovedFromGameMenu extends MenuScreen {
     static int[] field_s;
     static String field_r;
     static String field_q;
@@ -33,7 +33,7 @@ final class se extends wv {
         }
         Room.field_j.a(0, 0);
         gg.field_f.a((aaa.a(false) - gg.field_f.d()) / 2, (SwitchLinkList.b(0) - gg.field_f.b()) / 2);
-        oka.a(so.field_L.toUpperCase(), 2431750, SingleChildWidget.field_v, -1, 60 + (SwitchLinkList.b(param0 + 28) - gg.field_f.b()) / 2, aaa.a(false) / 2, -1);
+        MembersUpsellMenu.a(so.field_L.toUpperCase(), 2431750, SingleChildWidget.field_v, -1, 60 + (SwitchLinkList.b(param0 + 28) - gg.field_f.b()) / 2, aaa.a(false) / 2, -1);
         SocketConnector.a(OpenGlBuffer.field_i, 1, kn.field_p, 2431750, 20, 200, 1, -100 + SwitchLinkList.b(param0 + 28) / 2, aaa.a(false) / 2 - 150, -1, (byte) 60, 300);
         super.a(param0, param1);
     }
@@ -47,21 +47,21 @@ final class se extends wv {
 
     final int a(int param0, byte param1) {
         if (param1 == -48) {
-          return this.a((byte) 117, param0) + this.field_m[param0].e(-163);
+          return this.a((byte) 117, param0) + this.items[param0].e(-163);
         }
         field_q = (String) null;
-        return this.a((byte) 117, param0) + this.field_m[param0].e(-163);
+        return this.a((byte) 117, param0) + this.items[param0].e(-163);
     }
 
     final int a(byte param0, int param1) {
         if (param0 > 111) {
-          return aaa.a(false) - this.field_m[param1].e(-163) >> 1;
+          return aaa.a(false) - this.items[param1].e(-163) >> 1;
         }
         field_r = (String) null;
-        return aaa.a(false) - this.field_m[param1].e(-163) >> 1;
+        return aaa.a(false) - this.items[param1].e(-163) >> 1;
     }
 
-    se(int param0, int param1, int param2, int param3, int param4, int[] param5) {
+    RemovedFromGameMenu(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, param1, param2, param3, param4, param5);
     }
 

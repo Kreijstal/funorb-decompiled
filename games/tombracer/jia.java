@@ -40,7 +40,7 @@ final class jia implements ms {
           this.field_b.field_b) {
           SingleChildWidget.field_v.a((aa) null, this.a(false), 0, 0, param0, -1, (int[]) null, 1, -16711423, gka.field_f, (byte) 93, this.a(false), 0, (ToolkitSprite[]) null, param2, 1);
         } else {
-          SingleChildWidget.field_v.a((aa) null, this.a(false), 0, 0, param0, 553648127, (int[]) null, 1, -2147417855, qqa.field_p, (byte) -38, this.a(false), 0, (ToolkitSprite[]) null, param2, 1);
+          SingleChildWidget.field_v.a((aa) null, this.a(false), 0, 0, param0, 553648127, (int[]) null, 1, -2147417855, NetworkArchiveRequest.field_p, (byte) -38, this.a(false), 0, (ToolkitSprite[]) null, param2, 1);
         }
         if (param1 != 20726) {
           this.field_c = (waa[]) null;

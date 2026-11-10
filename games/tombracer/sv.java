@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sv extends wv {
+final class sv extends MenuScreen {
     static String field_q;
     private dea field_r;
 
@@ -56,19 +56,19 @@ final class sv extends wv {
         }
         if (param0 < 111) {
           this.g(19, -86);
-          if (param1 == -1 + this.field_m.length) {
-            return aaa.a(false) - this.field_m[param1].e(-163);
+          if (param1 == -1 + this.items.length) {
+            return aaa.a(false) - this.items[param1].e(-163);
           }
           if (param1 < 3) {
-            return 30 + (20 + aaa.a(false) / 2) - this.field_m[param1].e(-163);
+            return 30 + (20 + aaa.a(false) / 2) - this.items[param1].e(-163);
           }
           return aaa.a(false) / 2 + 30;
         }
-        if (param1 == -1 + this.field_m.length) {
-          return aaa.a(false) - this.field_m[param1].e(-163);
+        if (param1 == -1 + this.items.length) {
+          return aaa.a(false) - this.items[param1].e(-163);
         }
         if (param1 < 3) {
-          return 30 + (20 + aaa.a(false) / 2) - this.field_m[param1].e(-163);
+          return 30 + (20 + aaa.a(false) / 2) - this.items[param1].e(-163);
         }
         return aaa.a(false) / 2 + 30;
     }
@@ -80,7 +80,7 @@ final class sv extends wv {
 
     final void a(byte param0, boolean param1) {
         super.a(param0, param1);
-        int var3 = this.field_m[1].field_i - 70 + this.field_r.e(47) - 150;
+        int var3 = this.items[1].field_i - 70 + this.field_r.e(47) - 150;
         WhiteLightShooterComponent.field_K.a((aaa.a(false) >> 1) - (WhiteLightShooterComponent.field_K.a() >> 1), var3);
     }
 
@@ -93,10 +93,10 @@ final class sv extends wv {
 
     final int a(int param0, byte param1) {
         if (param1 == -48) {
-          return this.a((byte) 116, param0) + this.field_m[param0].e(-163);
+          return this.a((byte) 116, param0) + this.items[param0].e(-163);
         }
         this.g(-74, 3);
-        return this.a((byte) 116, param0) + this.field_m[param0].e(-163);
+        return this.a((byte) 116, param0) + this.items[param0].e(-163);
     }
 
     final void a(boolean param0, boolean param1, int param2) {
@@ -121,23 +121,23 @@ final class sv extends wv {
         int var3Lifetime2;
         if (param0 == 0) {
           var3 = 60;
-          param0 = -1 + this.field_m.length;
-          return -var3 + this.field_n - (-(param0 * this.field_i) + this.field_m[param0].d(11919));
+          param0 = -1 + this.items.length;
+          return -var3 + this.field_n - (-(param0 * this.field_i) + this.items[param0].d(11919));
         }
-        if (param0 == this.field_m.length - 1) {
+        if (param0 == this.items.length - 1) {
           var3Lifetime1 = 60;
-          param0 = -1 + this.field_m.length;
-          return -var3Lifetime1 + this.field_n - (-(param0 * this.field_i) + this.field_m[param0].d(11919));
+          param0 = -1 + this.items.length;
+          return -var3Lifetime1 + this.field_n - (-(param0 * this.field_i) + this.items[param0].d(11919));
         }
         if (3 > param0) {
           var3Lifetime2 = 20;
-          return var3Lifetime2 + (this.field_n + (param0 - 1) * this.field_m[param0].d(11919) - this.field_m[0].d(11919));
+          return var3Lifetime2 + (this.field_n + (param0 - 1) * this.items[param0].d(11919) - this.items[0].d(11919));
         }
         if (param1 == 30) {
-          return this.field_n + ((param0 - 3) * this.field_i - this.field_m[param0].d(11919));
+          return this.field_n + ((param0 - 3) * this.field_i - this.items[param0].d(11919));
         }
         field_q = (String) null;
-        return this.field_n + ((param0 - 3) * this.field_i - this.field_m[param0].d(11919));
+        return this.field_n + ((param0 - 3) * this.field_i - this.items[param0].d(11919));
     }
 
     final static AntialiasedBitmapFont a(ResourceArchive param0, int param1, ResourceArchive param2, int param3, int param4) {

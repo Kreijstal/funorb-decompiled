@@ -4,7 +4,7 @@
 final class hqa extends TextFieldValidator {
     static ura field_j;
 
-    final it a(byte param0, String param1) {
+    final it validateText(byte param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -17,9 +17,9 @@ final class hqa extends TextFieldValidator {
         try {
           if (param0 != 14) {
             var4 = (String) null;
-            this.a((byte) 77, (String) null);
+            this.validateText((byte) 77, (String) null);
           }
-          stackIn_5_0 = (fna.a(param0 ^ -118, param1) != null) ? 0 : 1;
+          stackIn_5_0 = (MenuEntry.a(param0 ^ -118, param1) != null) ? 0 : 1;
           var3_int = stackIn_5_0;
           if (var3_int != 0) {
             return uh.field_k;
@@ -40,7 +40,7 @@ final class hqa extends TextFieldValidator {
         }
     }
 
-    final String a(int param0, String param1) {
+    final String validationMessageForText(int param0, String param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         String stackIn_7_0 = null;
@@ -49,7 +49,7 @@ final class hqa extends TextFieldValidator {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a((byte) 14, param1) == fp.field_c) {
+          if (this.validateText((byte) 14, param1) == fp.field_c) {
             stackIn_3_0 = pla.field_b;
             return stackIn_3_0;
           }

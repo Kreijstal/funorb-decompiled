@@ -82,7 +82,7 @@ final class kaa implements isa {
           if (!param0.hasKeyboardFocus((byte) -34)) {
             return;
           }
-          var7 = this.field_c.b(param0.field_o);
+          var7 = this.field_c.stringWidth(param0.field_o);
           var8 = this.field_c.field_k + this.field_c.field_w;
           var9 = param1 + param0.field_i;
           var10 = param3 + param0.field_n;

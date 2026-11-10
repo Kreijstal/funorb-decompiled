@@ -102,7 +102,7 @@ final class fk {
               }
               var4 = var4 + ((vf.field_d << 1) + (aqa.field_a + FurnitureModel.field_n));
             } else {
-              var4 = var4 + uda.field_x;
+              var4 = var4 + CharacterSelectPhase.field_x;
             }
             var3_int++;
           }

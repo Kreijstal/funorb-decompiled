@@ -177,7 +177,7 @@ final class us {
         this.field_d = true;
     }
 
-    final static byte[] a(CharSequence param0, boolean param1) {
+    final static byte[] encodeCp1252(CharSequence param0, boolean param1) {
         int var4 = 0;
         byte[] stackIn_3_0 = null;
         byte[] stackIn_70_0 = null;
@@ -332,7 +332,7 @@ final class us {
         if (CoinItemComponent.field_G == null) {
           CoinItemComponent.field_G = new SecondaryNodeHashTable(64);
         }
-        wv.field_l = param2.field_J;
+        MenuScreen.field_l = param2.field_J;
         if (param0 != -8250) {
           return;
         }

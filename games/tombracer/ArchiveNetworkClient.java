@@ -20,7 +20,7 @@ abstract class ArchiveNetworkClient {
     volatile int field_n;
     volatile int field_a;
     byte field_d;
-    qqa field_g;
+    NetworkArchiveRequest field_g;
 
     public static void releaseStatics(byte param0) {
         if (param0 != 0) {
@@ -63,7 +63,7 @@ abstract class ArchiveNetworkClient {
           }
           var5 = (ik) (Player.field_I.first(param1 ^ 91));
           while (var5 != null) {
-            fna.a(param0, -23814, var5);
+            MenuEntry.a(param0, -23814, var5);
             var5 = (ik) (Player.field_I.next(121));
           }
           return;
@@ -217,12 +217,12 @@ abstract class ArchiveNetworkClient {
         return this.field_c.size((byte) -77) + this.field_k.size((byte) -43);
     }
 
-    final qqa a(int param0, boolean param1, int param2, int param3, byte param4) {
+    final NetworkArchiveRequest a(int param0, boolean param1, int param2, int param3, byte param4) {
         long var6 = ((long)param2 << 32) + (long)param0;
-        qqa var8 = new qqa();
+        NetworkArchiveRequest var8 = new NetworkArchiveRequest();
         var8.secondaryKey = var6;
         if (param3 != -21) {
-          return (qqa) null;
+          return (NetworkArchiveRequest) null;
         }
         var8.field_l = param1 ? true : false;
         var8.field_q = param4;

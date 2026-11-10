@@ -105,7 +105,7 @@ final class ProgressBarWidget extends UiWidget {
           this.field_y = 10;
         }
         this.field_A = this.a((byte) 78);
-        this.field_z = this.field_A.d();
+        this.field_z = this.field_A.createMirroredCopy();
         this.field_E = new Sprite(this.field_p >> 1, this.field_p);
     }
 

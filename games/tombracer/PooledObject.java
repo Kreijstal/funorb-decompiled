@@ -44,7 +44,7 @@ abstract class PooledObject extends IntrusiveNode implements Renderable {
           var5 = 0;
           var6 = 100 / ((16 - param2) / 40);
           while (var4_int > var5) {
-            param1[var5] = CircleMovementLocomotor.a(5907, param3);
+            param1[var5] = CircleMovementLocomotor.readBitFlag(5907, param3);
             var5++;
           }
           stackIn_12_0 = (boolean[]) (param1);

@@ -31,12 +31,12 @@ final class vk implements os {
         try {
           var1_int = 0;
           var2 = 0;
-          while (NanoTickClock.a(true)) {
+          while (NanoTickClock.pollKeyEvent(true)) {
             FacePointLocomotor.field_r.c(102);
             if (FacePointLocomotor.field_r.a(false)) {
               var1_int = 1;
             }
-            if (fna.field_h != 13) {
+            if (MenuEntry.field_h != 13) {
               continue;
             }
             var2 = 1;

@@ -30,7 +30,7 @@ final class ir {
         return (33 & param0) != 0 ? true : false;
     }
 
-    final static byte[] a(Object param0, int param1, boolean param2) {
+    final static byte[] unwrapByteStorage(Object param0, int param1, boolean param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         qu var4 = null;

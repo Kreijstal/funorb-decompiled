@@ -203,7 +203,7 @@ final class OpenGlFramebuffer implements Framebuffer {
         this.field_a = this.e(param0 ^ param0);
     }
 
-    public final void a(int param0) {
+    public final void unbindFramebuffer(int param0) {
         if (param0 == 4245) {
           jaggl.OpenGL.glBindFramebufferEXT(36009, 0);
           this.field_d = this.field_d & -3;

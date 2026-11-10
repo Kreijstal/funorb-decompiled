@@ -113,7 +113,7 @@ final class qp extends we {
 
     final int a(byte param0, int param1) {
         if (param0 > 111) {
-          return -80 + (aaa.a(false) >> 1) - ((this.field_m[0].e(-163) >> 1) * this.field_m.length - param1 * this.field_m[0].e(-163));
+          return -80 + (aaa.a(false) >> 1) - ((this.items[0].e(-163) >> 1) * this.items.length - param1 * this.items[0].e(-163));
         }
         return 100;
     }
@@ -129,7 +129,7 @@ final class qp extends we {
         if (param1 != -48) {
           return 88;
         }
-        return this.a((byte) 116, param0) + this.field_m[param0].e(-163);
+        return this.a((byte) 116, param0) + this.items[param0].e(-163);
     }
 
     qp(int param0, int param1, int param2, int param3, int param4, int[] param5) {
@@ -215,7 +215,7 @@ final class qp extends we {
         }
         if (var8 == 0) {
           var7 = 1;
-          this.a(-1, (byte) 127, var6.field_f, var6.field_g, var9 + 20, var6.field_j, var6.field_l, -5818367, fna.field_k);
+          this.a(-1, (byte) 127, var6.field_f, var6.field_g, var9 + 20, var6.field_j, var6.field_l, -5818367, MenuEntry.field_k);
         }
         return var7 != 0;
     }
@@ -254,7 +254,7 @@ final class qp extends we {
         if (0 == var6) {
           var7 = PlayerSimulation.field_n;
           if (var7 != null) {
-            oka.a(var7.toUpperCase(), 65793, eda.field_f, -1, param1 + 240, aaa.a(false) >> 1, -1);
+            MembersUpsellMenu.a(var7.toUpperCase(), 65793, eda.field_f, -1, param1 + 240, aaa.a(false) >> 1, -1);
             return;
           }
           discarded$3 = this.a((byte) 106, this.field_x, param1);
@@ -262,7 +262,7 @@ final class qp extends we {
         }
         if (var6 != 1) {
           if (var5 != null) {
-            oka.a(((String) (var5)).toUpperCase(), 65793, eda.field_f, -1, param1 + 240, aaa.a(false) >> 1, -1);
+            MembersUpsellMenu.a(((String) (var5)).toUpperCase(), 65793, eda.field_f, -1, param1 + 240, aaa.a(false) >> 1, -1);
             return;
           }
           discarded$5 = this.a((byte) 106, this.field_x, param1);
@@ -270,7 +270,7 @@ final class qp extends we {
         }
         var8 = FacePlayerMountComponent.field_H;
         if (var8 != null) {
-          oka.a(var8.toUpperCase(), 65793, eda.field_f, -1, param1 + 240, aaa.a(false) >> 1, -1);
+          MembersUpsellMenu.a(var8.toUpperCase(), 65793, eda.field_f, -1, param1 + 240, aaa.a(false) >> 1, -1);
           return;
         }
         discarded$4 = this.a((byte) 106, this.field_x, param1);

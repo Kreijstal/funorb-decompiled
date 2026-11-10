@@ -158,7 +158,7 @@ final class bh extends ela {
               stackIn_12_1 = null;
               stackIn_12_2 = null;
               stackIn_12_3 = 0L;
-              if (!rca.field_p) {
+              if (!UnlockOverlay.field_p) {
                 stackIn_13_1 = null;
                 stackIn_13_2 = null;
                 stackIn_13_4 = lta.field_a;
@@ -204,7 +204,7 @@ final class bh extends ela {
               stackIn_31_1 = null;
               stackIn_31_2 = null;
               stackIn_31_3 = 0L;
-              if (!rca.field_p) {
+              if (!UnlockOverlay.field_p) {
                 stackIn_32_1 = null;
                 stackIn_32_2 = null;
                 stackIn_32_4 = iea.field_g;
@@ -352,7 +352,7 @@ final class bh extends ela {
               if (var12.field_Yb) {
                 var12.field_Hb.field_z = 2;
                 var12.field_wb.field_r = "/" + var12.field_Jb;
-                var33_int = (348 - var12.field_wb.field_H.b("/")) / 2;
+                var33_int = (348 - var12.field_wb.field_H.stringWidth("/")) / 2;
                 var12.field_Hb.a(var33_int - 150, di.field_a, -23776, var31, 150);
                 var12.field_wb.a(-var33_int + 198, di.field_a, -23776, var31, var33_int);
               } else {
@@ -361,7 +361,7 @@ final class bh extends ela {
               }
               var12.field_Lb.field_r = Integer.toString(var12.field_Wb);
               var12.field_Lb.a(48, di.field_a, param1 ^ -23776, var31, 200);
-              stackIn_71_0 = (rca.field_p) ? 250 : 200;
+              stackIn_71_0 = (UnlockOverlay.field_p) ? 250 : 200;
               var33_intLifetime1 = stackIn_71_0;
               var12.field_Eb.a(-2 + (-var33_intLifetime1 + 365), di.field_a, -23776, var31, var33_intLifetime1);
               var34_int = pda.field_c;

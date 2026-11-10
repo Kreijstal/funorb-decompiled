@@ -416,7 +416,7 @@ final class gja extends ka {
             var13 = var13 + var15_int;
             var14_int++;
           } while (var63 == 0);
-          var14_ref = qqa.a(var8, param1, this.field_I, (byte) -6);
+          var14_ref = NetworkArchiveRequest.a(var8, param1, this.field_I, (byte) -6);
           var15 = new gta[param1.field_o];
           var16 = 0;
           scanLoop1: while (true) {
@@ -1275,7 +1275,7 @@ final class gja extends ka {
               var2.endBitAccess((byte) 98);
               break;
             }
-            cq.field_b[var4] = ScrollControlWidget.a(var2, true);
+            cq.field_b[var4] = ScrollControlWidget.decodeMesh(var2, true);
             var4++;
           } while (var7 == 0);
           var4 = param1;
@@ -1818,7 +1818,7 @@ final class gja extends ka {
                 var6 = -1;
               }
               this.field_S.a((byte) -80, var2_int != 0, true, var6);
-              this.field_S.a(this.field_g.field_c, -19394, this.field_j[var3], var4 * 3, fma.field_f, this.field_R[var3], var5 - var4);
+              this.field_S.a(this.field_g.field_c, -19394, this.field_j[var3], var4 * 3, ArchiveManager.field_f, this.field_R[var3], var5 - var4);
               var3++;
             }
           }

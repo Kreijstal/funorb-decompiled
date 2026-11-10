@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rd extends wv {
+final class MultiplayerLoginMenu extends MenuScreen {
     private dea field_q;
     static ur field_r;
 
@@ -19,10 +19,10 @@ final class rd extends wv {
 
     final int a(int param0, byte param1) {
         if (param1 == -48) {
-          return this.a((byte) 122, param0) + this.field_m[param0].e(-163);
+          return this.a((byte) 122, param0) + this.items[param0].e(-163);
         }
         field_r = (ur) null;
-        return this.a((byte) 122, param0) + this.field_m[param0].e(-163);
+        return this.a((byte) 122, param0) + this.items[param0].e(-163);
     }
 
     final int g(int param0, int param1) {
@@ -59,10 +59,10 @@ final class rd extends wv {
 
     final int a(byte param0, int param1) {
         if (param0 >= 111) {
-          return aaa.a(false) / 2 + (-(this.field_m.length * this.field_m[param1].e(-163) / 2) + param1 * this.field_m[param1].e(-163));
+          return aaa.a(false) / 2 + (-(this.items.length * this.items[param1].e(-163) / 2) + param1 * this.items[param1].e(-163));
         }
         this.field_q = (dea) null;
-        return aaa.a(false) / 2 + (-(this.field_m.length * this.field_m[param1].e(-163) / 2) + param1 * this.field_m[param1].e(-163));
+        return aaa.a(false) / 2 + (-(this.items.length * this.items[param1].e(-163) / 2) + param1 * this.items[param1].e(-163));
     }
 
     private final void h(int param0, int param1) {
@@ -77,7 +77,7 @@ final class rd extends wv {
           var3 = 500;
           var4 = aaa.a(false) / 2 - var3 / 2;
           var5 = param0 + 100;
-          oka.a(ClampOperator.field_o.toUpperCase(), 2497287, SingleChildWidget.field_v, -1, -30 + gg.field_f.c() / 2 + var5, aaa.a(false) / 2, -1);
+          MembersUpsellMenu.a(ClampOperator.field_o.toUpperCase(), 2497287, SingleChildWidget.field_v, -1, -30 + gg.field_f.c() / 2 + var5, aaa.a(false) / 2, -1);
           var6 = kn.field_p;
           var7 = kv.field_a.field_h + (kv.field_a.field_g + 4);
           var8 = 3 * var7;
@@ -87,7 +87,7 @@ final class rd extends wv {
         }
     }
 
-    rd(int param0, int param1, int param2, int param3, int param4, int[] param5) {
+    MultiplayerLoginMenu(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_q = new dea();
         try {

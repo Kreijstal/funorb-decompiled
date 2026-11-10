@@ -66,21 +66,21 @@ abstract class paa extends WidgetContainer implements mk {
         var3 = TombRacer.field_G ? 1 : 0;
         try {
           if (0 == param1) {
-            fna.field_j[0] = qua.a(TextLayout.field_a, "", "TR_theme");
+            MenuEntry.field_j[0] = qua.a(TextLayout.field_a, "", "TR_theme");
           }
           if (1 == param1) {
-            fna.field_j[1] = qua.a(TextLayout.field_a, "", "TR_temple_music");
+            MenuEntry.field_j[1] = qua.a(TextLayout.field_a, "", "TR_temple_music");
           }
           if (param1 == 2) {
-            fna.field_j[2] = qua.a(TextLayout.field_a, "", "TR_win_jingle_long");
+            MenuEntry.field_j[2] = qua.a(TextLayout.field_a, "", "TR_win_jingle_long");
           }
           if (param0) {
             return;
           }
           if (3 == param1) {
-            fna.field_j[3] = qua.a(TextLayout.field_a, "", "TR_lose_jingle_long");
+            MenuEntry.field_j[3] = qua.a(TextLayout.field_a, "", "TR_lose_jingle_long");
           }
-          while (!RewardChoicePhase.field_n.field_y.a(176400, fna.field_j[param1], ua.field_a, ns.field_j, 0)) {
+          while (!RewardChoicePhase.field_n.field_y.a(176400, MenuEntry.field_j[param1], ua.field_a, ns.field_j, 0)) {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -109,10 +109,10 @@ final class ck {
           SocketArchiveNetworkClient.field_w[1] = cha.field_b;
           RasterShape.field_e = new jea(0L, (jea) null);
           uh.field_h = new jea(0L, ooa.field_f, ija.field_i);
-          vw.field_b = new jea(0L, SecondaryNodeDeque.field_b, dl.field_m);
+          vw.field_b = new jea(0L, SecondaryNodeDeque.field_b, AchievementsOverlay.field_m);
           bsa.field_j = new iv(0L, new jea(0L, (jea) null), rfa.field_C, DateFieldsWidget.field_F);
           RasterShape.field_e.b(-126, uh.field_h);
-          if (rca.field_p) {
+          if (UnlockOverlay.field_p) {
             RasterShape.field_e.b(param11 - 25575, vw.field_b);
           }
           RasterShape.field_e.b(-127, bsa.field_j);
@@ -123,7 +123,7 @@ final class ck {
           PerlinNoise2D.field_t = new jea(0L, Corpse.field_i);
           PerlinNoise2D.field_t.field_z = 1;
           ImageProducerRasterBuffer.field_j = new jea(0L, ssa.field_g, S2CActionPacket.field_g.toUpperCase());
-          ap.field_a = new jea(0L, uda.field_s, tha.field_B.toUpperCase());
+          ap.field_a = new jea(0L, CharacterSelectPhase.field_s, tha.field_B.toUpperCase());
           db.field_s = new jea(0L, CommonChooseReward.field_c);
           gta.field_b = new jea(0L, ooa.field_f, SnakePitModel.field_m);
           RandomBrickOperator.field_r = new jea(0L, cs.field_a, TestModel.field_r);
@@ -133,12 +133,12 @@ final class ck {
           cq.field_e = new jea(0L, SecondaryNodeDeque.field_b, PathMoverComponent.field_G);
           nsa.field_i = new iv(0L, new jea(0L, (jea) null), rfa.field_C, DateFieldsWidget.field_F);
           uq.field_c = new jea(0L, hg.field_g, iw.field_b.toUpperCase());
-          uq.field_c.field_X = rca.field_p;
+          uq.field_c.field_X = UnlockOverlay.field_p;
           stackIn_8_0 = null;
           stackIn_8_1 = null;
           stackIn_8_2 = 0L;
           stackIn_8_3 = hg.field_g;
-          if (rca.field_p) {
+          if (UnlockOverlay.field_p) {
             stackIn_9_0 = null;
             stackIn_9_1 = null;
             stackIn_9_4 = SwitchState.field_h;
@@ -154,13 +154,13 @@ final class ck {
           db.field_s.b(-124, gta.field_b);
           db.field_s.b(-126, RandomBrickOperator.field_r);
           db.field_s.b(-127, RotateLocomotor.field_o);
-          if (rca.field_p) {
+          if (UnlockOverlay.field_p) {
             db.field_s.b(-128, MidiPcmStream.field_K);
           }
           db.field_s.b(-123, MirrorComponent.field_I);
           db.field_s.b(-128, cq.field_e);
           db.field_s.b(-122, nsa.field_i);
-          if (rca.field_p) {
+          if (UnlockOverlay.field_p) {
             OpenGlToolkit.field_fd.b(-124, uq.field_c);
           }
           OpenGlToolkit.field_fd.b(-124, pq.field_c);
@@ -180,16 +180,16 @@ final class ck {
           cea.field_a = new jea(0L, Corpse.field_i);
           cea.field_a.field_z = 1;
           uaa.field_b = new jea(0L, ooa.field_f, ija.field_i);
-          RopeBridgeComponent.field_F = new jea(0L, SecondaryNodeDeque.field_b, dl.field_m);
+          RopeBridgeComponent.field_F = new jea(0L, SecondaryNodeDeque.field_b, AchievementsOverlay.field_m);
           tn.field_n = new iv(0L, new jea(0L, (jea) null), rfa.field_C, DateFieldsWidget.field_F);
           lk.field_l.b(param11 ^ -25371, cea.field_a);
           lk.field_l.b(-124, uaa.field_b);
-          if (rca.field_p) {
+          if (UnlockOverlay.field_p) {
             lk.field_l.b(-122, RopeBridgeComponent.field_F);
           }
           lk.field_l.b(-124, tn.field_n);
           bc.field_b = new jea(0L, ssa.field_g, OpenGlSprite.field_k.toUpperCase());
-          StatusEffect.field_g = new jea(0L, uda.field_s);
+          StatusEffect.field_g = new jea(0L, CharacterSelectPhase.field_s);
           C2SSubmitSettingsPacket.field_g = new jea(0L, CommonChooseReward.field_c);
           qna.field_b = new jea(0L, KeyLockBehaviour.field_r, DoorwayComponent.field_G.toUpperCase());
           SimpleConditionBehaviour.field_p = new jea[param0 + 4];
@@ -316,12 +316,12 @@ final class ck {
             }
             pk.field_z = new jea(0L, hg.field_g);
             hw.field_a = new jea(0L, hg.field_g);
-            dl.field_t = new jea(0L, tka.field_q);
-            dl.field_t.applyStyle(false, Corpse.field_i);
-            dl.field_t.field_bb = 1;
+            AchievementsOverlay.field_t = new jea(0L, tka.field_q);
+            AchievementsOverlay.field_t.applyStyle(false, Corpse.field_i);
+            AchievementsOverlay.field_t.field_bb = 1;
             break;
           }
-          stackIn_98_0Lifetime1 = dl.field_t;
+          stackIn_98_0Lifetime1 = AchievementsOverlay.field_t;
           var17 = stackIn_98_0Lifetime1;
           ((jea) (var17)).field_z = 1;
           dka.field_b = new jea(0L, (jea) null);
@@ -351,7 +351,7 @@ final class ck {
           }
           dka.field_b.b(-128, pk.field_z);
           dka.field_b.b(-125, hw.field_a);
-          dka.field_b.b(-123, dl.field_t);
+          dka.field_b.b(-123, AchievementsOverlay.field_t);
           S2CEventPacket.field_e = new jea(0L, OpenGlTransform3D.field_f, eu.field_b.toUpperCase());
           Trap.field_q = new jea(0L, dp.field_i, ej.field_b.toUpperCase());
           return;
@@ -529,7 +529,7 @@ final class ck {
                         if (param2.field_K > 0 &&
                           null != param2.field_q) {
                           dupTemp$0 = param2.field_q[var8];
-                          ow.field_q[dupTemp$0] = ow.field_q[dupTemp$0] + 1;
+                          DrawOfferMenu.field_q[dupTemp$0] = DrawOfferMenu.field_q[dupTemp$0] + 1;
                         }
                         pq.field_f = pq.field_f + 1;
                         break;
@@ -550,9 +550,9 @@ final class ck {
             null != param2.field_q) {
             var8Lifetime1 = 0;
             var9Lifetime1 = 0;
-            while (!(var9Lifetime1 >= ow.field_q.length)) {
-              var10Lifetime1 = ow.field_q[var9Lifetime1];
-              ow.field_q[var9Lifetime1] = var8Lifetime1;
+            while (!(var9Lifetime1 >= DrawOfferMenu.field_q.length)) {
+              var10Lifetime1 = DrawOfferMenu.field_q[var9Lifetime1];
+              DrawOfferMenu.field_q[var9Lifetime1] = var8Lifetime1;
               var8Lifetime1 = var8Lifetime1 + var10Lifetime1;
               var9Lifetime1++;
               if (var19 != 0) {

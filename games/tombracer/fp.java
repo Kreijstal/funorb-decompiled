@@ -68,7 +68,7 @@ final class fp {
         param1++;
         var16_ref.a(incrementValue$1, (byte) 47, param0);
         dna.field_F = SpriteData.loadSprite(param2, "", "bg_slab");
-        bp.field_p = SpriteData.loadSheet(param2, "", "inset_frame");
+        RoundWinnerPhase.field_p = SpriteData.loadSheet(param2, "", "inset_frame");
         tba.field_f = SpriteData.loadSheet(param2, "", "keys");
         SpriteState.field_l = new int[tba.field_f.length];
         for (var5_int = 0; SpriteState.field_l.length > var5_int; var5_int++) {
@@ -207,7 +207,7 @@ final class fp {
           var16_ref.a(incrementValue$8, (byte) 47, param0);
           MaskBlendOperator.a(PitComponent.field_G, "basic", "orbcoin", -121);
           MatchState.field_p = MaskBlendOperator.a(param2, "", "lobby_game_logo", -119);
-          bp.field_m = BoulderComponent.a(param2, "", 5, "lobby_icons");
+          RoundWinnerPhase.field_m = BoulderComponent.a(param2, "", 5, "lobby_icons");
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fp.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

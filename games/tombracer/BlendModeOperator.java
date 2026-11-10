@@ -574,16 +574,16 @@ final class BlendModeOperator extends TextureOperator {
         }
     }
 
-    final static br d(byte param0) {
+    final static QuickChatCategory d(byte param0) {
         int var1_int = 0;
-        br var2 = null;
+        QuickChatCategory var2 = null;
         int var3 = 0;
-        br stackIn_5_0 = null;
+        QuickChatCategory stackIn_5_0 = null;
         Throwable decompiledCaughtException = null;
         IllegalArgumentException var1 = null;
         var3 = TombRacer.field_G ? 1 : 0;
         if (param0 != 86) {
-          return (br) null;
+          return (QuickChatCategory) null;
         }
         try {
           var1_int = 0;

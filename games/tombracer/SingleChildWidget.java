@@ -226,8 +226,8 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           var11 = var10;
           var10.field_bb = 1;
           var11.field_z = 1;
-          uda.field_s = new jea(0L, var8);
-          uda.field_s.field_w = rfa.a(BoulderComponent.a(param4, "lobby", 5, "heading"), 126);
+          CharacterSelectPhase.field_s = new jea(0L, var8);
+          CharacterSelectPhase.field_s.field_w = rfa.a(BoulderComponent.a(param4, "lobby", 5, "heading"), 126);
           joa.field_d = new jea(0L, (jea) null);
           joa.field_d.field_w = tba.a(-74, false, 120, 8421504, 4210752, false);
           NodeHashTable.field_g = new jea(0L, (jea) null);
@@ -415,7 +415,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {
+    final boolean handleMouseWheel(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -426,7 +426,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           if (param6 != -1) {
             this.getHoverText((byte) -80);
           }
-          stackIn_7_0 = (null != this.child) && (this.child.hasKeyboardFocus((byte) -34)) && (this.child.a(param0, param1, param2, param3, param4, param5, -1));
+          stackIn_7_0 = (null != this.child) && (this.child.hasKeyboardFocus((byte) -34)) && (this.child.handleMouseWheel(param0, param1, param2, param3, param4, param5, -1));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -696,7 +696,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           super.updatePointerState(param0, param1 + 0, param2, param3);
           if (param1 != 2097152) {
             var6 = (UiWidget) null;
-            this.a(55, -69, -121, 107, (UiWidget) null, -94, -43);
+            this.handleMouseWheel(55, -69, -121, 107, (UiWidget) null, -94, -43);
           }
           if (this.child != null) {
             this.child.updatePointerState(this.field_i + param0, 2097152, param2, this.field_n + param3);

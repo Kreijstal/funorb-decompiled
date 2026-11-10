@@ -49,7 +49,7 @@ final class gha implements pp {
                 decompiledFrameCompleted0 = false;
                 break;
               }
-              if (!CircleMovementLocomotor.a(5907, param5)) {
+              if (!CircleMovementLocomotor.readBitFlag(5907, param5)) {
                 param0[var7] = null;
               } else {
                 if (param0[var7] == null) {

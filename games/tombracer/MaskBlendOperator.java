@@ -171,7 +171,7 @@ final class MaskBlendOperator extends TextureOperator {
         ArrowShooterComponent.createFonts(tga.field_a, -90);
     }
 
-    final static String a(byte[] param0, int param1, int param2, int param3) {
+    final static String decodeCp1252(byte[] param0, int param1, int param2, int param3) {
         int var6 = 0;
         int incrementValue$1 = 0;
         char[] var4 = null;
@@ -192,7 +192,7 @@ final class MaskBlendOperator extends TextureOperator {
         try {
           if (param3 != 255) {
             var10 = (byte[]) null;
-            MaskBlendOperator.a((byte[]) null, -10, 68, 102);
+            MaskBlendOperator.decodeCp1252((byte[]) null, -10, 68, 102);
           }
           var12 = new char[param2];
           var11 = var12;

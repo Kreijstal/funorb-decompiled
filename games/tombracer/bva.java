@@ -24,21 +24,21 @@ final class bva {
           bva.releaseStatics((byte) 0);
           var1 = System.currentTimeMillis();
           if (var1 < dca.field_o) {
-            br.field_p = br.field_p + (-var1 + dca.field_o);
+            QuickChatCategory.field_p = QuickChatCategory.field_p + (-var1 + dca.field_o);
             dca.field_o = var1;
-            return var1 + br.field_p;
+            return var1 + QuickChatCategory.field_p;
           }
           dca.field_o = var1;
-          return var1 + br.field_p;
+          return var1 + QuickChatCategory.field_p;
         }
         var1Lifetime1 = System.currentTimeMillis();
         if (var1Lifetime1 >= dca.field_o) {
           dca.field_o = var1Lifetime1;
-          return var1Lifetime1 + br.field_p;
+          return var1Lifetime1 + QuickChatCategory.field_p;
         }
-        br.field_p = br.field_p + (-var1Lifetime1 + dca.field_o);
+        QuickChatCategory.field_p = QuickChatCategory.field_p + (-var1Lifetime1 + dca.field_o);
         dca.field_o = var1Lifetime1;
-        return var1Lifetime1 + br.field_p;
+        return var1Lifetime1 + QuickChatCategory.field_p;
     }
 
     static {

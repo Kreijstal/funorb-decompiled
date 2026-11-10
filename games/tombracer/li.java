@@ -11,7 +11,7 @@ final class li {
         if (null == SecondaryNodeDequeIterator.field_a) {
           return;
         }
-        if (fna.field_j == null) {
+        if (MenuEntry.field_j == null) {
           return;
         }
         aoa.a(77, 1);

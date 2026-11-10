@@ -7,7 +7,7 @@ final class foa implements GamePacket {
     static boolean field_b;
 
     final void a(MatchScreen param0, int param1, MatchProtocol param2) {
-        if (!param0.f(0)) {
+        if (!param0.isInPlayPhase(0)) {
           return;
         }
         try {

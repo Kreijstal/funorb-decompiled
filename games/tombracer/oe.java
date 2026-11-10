@@ -15,7 +15,7 @@ final class oe extends TextFieldValidator {
         }
     }
 
-    final String a(int param0, String param1) {
+    final String validationMessageForText(int param0, String param1) {
         nua var3 = null;
         RuntimeException var3_ref = null;
         String stackIn_7_0 = null;
@@ -70,7 +70,7 @@ final class oe extends TextFieldValidator {
         field_j = null;
     }
 
-    final it a(byte param0, String param1) {
+    final it validateText(byte param0, String param1) {
         nua var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -91,7 +91,7 @@ final class oe extends TextFieldValidator {
           }
           if (param0 != 14) {
             var4 = (String) null;
-            this.a(63, (String) null);
+            this.validationMessageForText(63, (String) null);
           }
           if (!param1.equals(this.field_k.field_o)) {
             stackIn_11_0 = fp.field_c;

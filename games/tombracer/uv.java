@@ -326,7 +326,7 @@ final class uv extends oga {
           }
           var4_int = param1.b(param2, -7768);
           var5 = param1.a(true, param0, var4_int);
-          stackIn_4_0 = DamageableBehaviour.a(false, var5, param1, var4_int);
+          stackIn_4_0 = DamageableBehaviour.loadIndexedSprite(false, var5, param1, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -15,7 +15,7 @@ final class jn extends we {
         if (param1 != 1) {
           this.b(true, true, 29);
         }
-        return this.field_m[param0].e(param1 ^ -164);
+        return this.items[param0].e(param1 ^ -164);
     }
 
     public static void releaseStatics(int param0) {
@@ -40,14 +40,14 @@ final class jn extends we {
         if (param2 < 0) {
           return;
         }
-        if (this.field_m.length <= param2) {
+        if (this.items.length <= param2) {
           return;
         }
         if (!this.b(param2, -30487)) {
           return;
         }
         super.b(param0, param1, param2);
-        var4 = this.field_m[param2].field_g;
+        var4 = this.items[param2].field_g;
         var5 = var4;
         if (var5 != 10) {
           if (11 == var5 &&
@@ -157,7 +157,7 @@ final class jn extends we {
             var7 = var7 + (10 + 15 * var11Lifetime2Lifetime1);
           }
         }
-        se.f((byte) -6);
+        RemovedFromGameMenu.f((byte) -6);
         if (param2 >= -9) {
           return;
         }
@@ -188,7 +188,7 @@ final class jn extends we {
         if (param1 != 30) {
           field_r = (String) null;
         }
-        return this.field_n - this.field_m[param0].d(11919) / 2;
+        return this.field_n - this.items[param0].d(11919) / 2;
     }
 
     private final void a(int param0, boolean param1) {
@@ -199,10 +199,10 @@ final class jn extends we {
         td.field_r = td.field_r - 1;
         if (!param1 &&
           td.field_r == 0) {
-          var3 = fna.field_h;
-          fna.field_h = 97;
+          var3 = MenuEntry.field_h;
+          MenuEntry.field_h = 97;
           this.field_k.a(1, 63);
-          fna.field_h = var3;
+          MenuEntry.field_h = var3;
         }
     }
 
@@ -272,10 +272,10 @@ final class jn extends we {
         }
         if (!param1 &&
           10 == td.field_r) {
-          var3 = fna.field_h;
-          fna.field_h = 96;
+          var3 = MenuEntry.field_h;
+          MenuEntry.field_h = 96;
           this.field_k.a(1, 95);
-          fna.field_h = var3;
+          MenuEntry.field_h = var3;
         }
     }
 

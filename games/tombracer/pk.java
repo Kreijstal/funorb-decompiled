@@ -89,7 +89,7 @@ final class pk extends we {
         if (param0 < 111) {
           return 78;
         }
-        return 335 + (-(80 * this.field_m.length) + param1 * 160);
+        return 335 + (-(80 * this.items.length) + param1 * 160);
     }
 
     final int g(int param0, int param1) {
@@ -190,7 +190,7 @@ final class pk extends we {
         if (var9 == 0 &&
           this.field_u == var7.field_f) {
           var8 = 1;
-          this.a(var10 + 20, -1, var7.field_o[0], -5818367, -91, fna.field_k);
+          this.a(var10 + 20, -1, var7.field_o[0], -5818367, -91, MenuEntry.field_k);
         }
         if (param1 >= -85) {
           stackIn_29_0 = (String) null;
@@ -243,7 +243,7 @@ final class pk extends we {
           }
         }
         if (var5Lifetime1 != null) {
-          oka.a(((String) (var5Lifetime1)).toUpperCase(), 65793, eda.field_f, -1, 240 + param1, aaa.a(false) / 2, -1);
+          MembersUpsellMenu.a(((String) (var5Lifetime1)).toUpperCase(), 65793, eda.field_f, -1, 240 + param1, aaa.a(false) / 2, -1);
         } else {
           discarded$0 = this.a(this.field_x, (byte) -91, 50 + param1);
         }
@@ -255,7 +255,7 @@ final class pk extends we {
         if (param1 != -48) {
           field_C = -47;
         }
-        return param0 * 160 + 465 - 80 * this.field_m.length;
+        return param0 * 160 + 465 - 80 * this.items.length;
     }
 
     final boolean a(int param0, int param1) {

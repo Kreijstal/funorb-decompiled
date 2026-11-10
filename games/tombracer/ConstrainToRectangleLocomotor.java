@@ -187,8 +187,8 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
             }
           }
           SpriteTileOperator.field_t = BlendModeOperator.d(param1, 121);
-          if (SpriteTileOperator.field_t instanceof wv) {
-            ((wv) (SpriteTileOperator.field_t)).a(0, 0, param0);
+          if (SpriteTileOperator.field_t instanceof MenuScreen) {
+            ((MenuScreen) (SpriteTileOperator.field_t)).a(0, 0, param0);
           }
           SpriteTileOperator.field_t.a((byte) 114);
           if (mpa.field_X) {
@@ -222,9 +222,9 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
             ub.b(0);
             era.field_c = false;
           }
-          if (SpriteTileOperator.field_t instanceof wv &&
-            wm.field_a instanceof wv &&
-            ((wv) (wm.field_a)).a(true, (wv) (SpriteTileOperator.field_t))) {
+          if (SpriteTileOperator.field_t instanceof MenuScreen &&
+            wm.field_a instanceof MenuScreen &&
+            ((MenuScreen) (wm.field_a)).a(true, (MenuScreen) (SpriteTileOperator.field_t))) {
             SpriteTileOperator.field_t.field_d = wm.field_a.field_c;
           }
           var3_int = 69 % ((40 - param2) / 38);
@@ -284,7 +284,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
           iga.field_m = new int[fa.field_b];
           mq.field_b = new int[fa.field_b];
           pb.field_l = new byte[fa.field_b][];
-          qqa.field_n = new boolean[fa.field_b];
+          NetworkArchiveRequest.field_n = new boolean[fa.field_b];
           var17.position = -7 + param1.length - fa.field_b * 8;
           ika.field_a = var17.readUnsignedShort(126);
           OpenGlRenderbuffer.field_s = var17.readUnsignedShort(param0 ^ 126);
@@ -365,7 +365,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
                 }
               }
             }
-            qqa.field_n[var4Lifetime5] = var10 != 0;
+            NetworkArchiveRequest.field_n[var4Lifetime5] = var10 != 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

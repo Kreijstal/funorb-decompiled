@@ -211,7 +211,7 @@ final class Bzip2Decompressor {
         return (byte)Bzip2Decompressor.readBits(8, param0);
     }
 
-    final static int a(byte[] param0, int param1, byte[] param2, int param3, int param4) {
+    final static int decompress(byte[] param0, int param1, byte[] param2, int param3, int param4) {
         int stackIn_2_0 = 0;
         Throwable decompiledCaughtException = null;
         Object var5 = null;
@@ -226,7 +226,7 @@ final class Bzip2Decompressor {
           field_a.field_n = 0;
           field_a.field_c = 0;
           field_a.field_D = 0;
-          Bzip2Decompressor.e(field_a);
+          Bzip2Decompressor.decodeBlocks(field_a);
           param1 = param1 - field_a.field_d;
           field_a.field_v = null;
           field_a.field_l = null;
@@ -235,7 +235,7 @@ final class Bzip2Decompressor {
         return stackIn_2_0;
     }
 
-    private final static void e(nna param0) {
+    private final static void decodeBlocks(nna param0) {
         int dupTemp$1 = 0;
         int dupTemp$0 = 0;
         int var1;
