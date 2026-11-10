@@ -32,8 +32,8 @@ final class vk implements os {
           var1_int = 0;
           var2 = 0;
           while (es.a(true)) {
-            sa.field_r.c(102);
-            if (sa.field_r.a(false)) {
+            FacePointLocomotor.field_r.c(102);
+            if (FacePointLocomotor.field_r.a(false)) {
               var1_int = 1;
             }
             if (fna.field_h != 13) {
@@ -45,14 +45,14 @@ final class vk implements os {
             stackIn_10_0 = 95;
             return stackIn_10_0;
           }
-          sa.field_r.a(wg.a(1541709953, jm.field_m, lba.field_p), 73, wg.a(1541709953, jba.field_j, sta.field_B));
-          if (sa.field_r.a(false)) {
+          FacePointLocomotor.field_r.a(wg.a(1541709953, jm.field_m, lba.field_p), 73, wg.a(1541709953, jba.field_j, sta.field_B));
+          if (FacePointLocomotor.field_r.a(false)) {
             var1_int = 1;
           }
           var3 = 0;
           if (var1_int != 0 &&
-            sa.field_r.field_h >= 0) {
-            var3 = hb.field_w[sa.field_r.field_h];
+            FacePointLocomotor.field_r.field_h >= 0) {
+            var3 = hb.field_w[FacePointLocomotor.field_r.field_h];
             if (var3 == 2) {
               AppletGameShell.n(-18);
             } else if (var3 == 5) {
@@ -66,7 +66,7 @@ final class vk implements os {
           }
           if (var3 == 0 &&
             2 == mq.field_a) {
-            var4 = bva.b((byte) -107) - ln.field_H;
+            var4 = bva.b((byte) -107) - PlatformComponent.field_H;
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (var6 <= 0) {
               var3 = 2;

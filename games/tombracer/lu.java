@@ -17,12 +17,12 @@ abstract class lu {
     final static void a(int param0, double param1, int param2, int param3, double param4) {
         int var8;
         var8 = TombRacer.field_G ? 1 : 0;
-        if (~ga.field_H != param2) {
+        if (~WallCrusherComponent.field_H != param2) {
           if (param3 == 0) {
             vn.field_a = null;
-            ga.field_H = param3;
+            WallCrusherComponent.field_H = param3;
             al.field_h = param1;
-            if (oh.field_o == 0 &&
+            if (TextSpewerBehaviour.field_o == 0 &&
               0 < param0) {
               jla.field_z = new IntrusiveDeque();
             } else {
@@ -31,9 +31,9 @@ abstract class lu {
               }
             }
           } else {
-            ga.field_H = param3;
+            WallCrusherComponent.field_H = param3;
             al.field_h = param1;
-            if (oh.field_o != 0) {
+            if (TextSpewerBehaviour.field_o != 0) {
               if (param0 == 0) {
                 jla.field_z = null;
               }
@@ -50,9 +50,9 @@ abstract class lu {
         } else {
           if (param3 > 0) {
             vn.field_a = new IntrusiveDeque();
-            ga.field_H = param3;
+            WallCrusherComponent.field_H = param3;
             al.field_h = param1;
-            if (oh.field_o == 0 &&
+            if (TextSpewerBehaviour.field_o == 0 &&
               0 < param0) {
               jla.field_z = new IntrusiveDeque();
             } else {
@@ -64,9 +64,9 @@ abstract class lu {
             if (param3 == 0) {
               vn.field_a = null;
             }
-            ga.field_H = param3;
+            WallCrusherComponent.field_H = param3;
             al.field_h = param1;
-            if (oh.field_o != 0) {
+            if (TextSpewerBehaviour.field_o != 0) {
               if (param0 == 0) {
                 jla.field_z = null;
               }
@@ -81,8 +81,8 @@ abstract class lu {
             }
           }
         }
-        sua.field_J = param4;
-        oh.field_o = param0;
+        RotaterMountComponent.field_J = param4;
+        TextSpewerBehaviour.field_o = param0;
     }
 
     abstract void a(PacketBuffer param0, boolean param1);

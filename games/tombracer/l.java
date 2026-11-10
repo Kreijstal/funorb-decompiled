@@ -358,45 +358,45 @@ class l extends cg {
           var5Lifetime1Lifetime3 = 127 & param0 >> 8;
           var6Lifetime1Lifetime2 = (param0 & 8338047) >> 16;
           if (var5Lifetime1Lifetime3 == 0) {
-            this.field_l[var4Lifetime1Lifetime3] = sea.c(this.field_l[var4Lifetime1Lifetime3], -2080769) + (var6Lifetime1Lifetime2 << 14);
+            this.field_l[var4Lifetime1Lifetime3] = SnakePitBehaviour.c(this.field_l[var4Lifetime1Lifetime3], -2080769) + (var6Lifetime1Lifetime2 << 14);
           }
           if (var5Lifetime1Lifetime3 == 32) {
-            this.field_l[var4Lifetime1Lifetime3] = sea.c(-16257, this.field_l[var4Lifetime1Lifetime3]) + (var6Lifetime1Lifetime2 << 7);
+            this.field_l[var4Lifetime1Lifetime3] = SnakePitBehaviour.c(-16257, this.field_l[var4Lifetime1Lifetime3]) + (var6Lifetime1Lifetime2 << 7);
           }
           if (var5Lifetime1Lifetime3 == 1) {
-            this.field_m[var4Lifetime1Lifetime3] = sea.c(this.field_m[var4Lifetime1Lifetime3], -16257) + (var6Lifetime1Lifetime2 << 7);
+            this.field_m[var4Lifetime1Lifetime3] = SnakePitBehaviour.c(this.field_m[var4Lifetime1Lifetime3], -16257) + (var6Lifetime1Lifetime2 << 7);
           }
           if (var5Lifetime1Lifetime3 == 33) {
-            this.field_m[var4Lifetime1Lifetime3] = sea.c(this.field_m[var4Lifetime1Lifetime3], -128) + var6Lifetime1Lifetime2;
+            this.field_m[var4Lifetime1Lifetime3] = SnakePitBehaviour.c(this.field_m[var4Lifetime1Lifetime3], -128) + var6Lifetime1Lifetime2;
           }
           if (5 == var5Lifetime1Lifetime3) {
-            this.field_z[var4Lifetime1Lifetime3] = sea.c(-16257, this.field_z[var4Lifetime1Lifetime3]) + (var6Lifetime1Lifetime2 << 7);
+            this.field_z[var4Lifetime1Lifetime3] = SnakePitBehaviour.c(-16257, this.field_z[var4Lifetime1Lifetime3]) + (var6Lifetime1Lifetime2 << 7);
           }
           if (var5Lifetime1Lifetime3 == 37) {
-            this.field_z[var4Lifetime1Lifetime3] = sea.c(-128, this.field_z[var4Lifetime1Lifetime3]) + var6Lifetime1Lifetime2;
+            this.field_z[var4Lifetime1Lifetime3] = SnakePitBehaviour.c(-128, this.field_z[var4Lifetime1Lifetime3]) + var6Lifetime1Lifetime2;
           }
           if (var5Lifetime1Lifetime3 == 7) {
-            this.field_L[var4Lifetime1Lifetime3] = sea.c(-16257, this.field_L[var4Lifetime1Lifetime3]) + (var6Lifetime1Lifetime2 << 7);
+            this.field_L[var4Lifetime1Lifetime3] = SnakePitBehaviour.c(-16257, this.field_L[var4Lifetime1Lifetime3]) + (var6Lifetime1Lifetime2 << 7);
           }
           if (var5Lifetime1Lifetime3 == 39) {
-            this.field_L[var4Lifetime1Lifetime3] = var6Lifetime1Lifetime2 + sea.c(this.field_L[var4Lifetime1Lifetime3], -128);
+            this.field_L[var4Lifetime1Lifetime3] = var6Lifetime1Lifetime2 + SnakePitBehaviour.c(this.field_L[var4Lifetime1Lifetime3], -128);
           }
           if (10 == var5Lifetime1Lifetime3) {
-            this.field_A[var4Lifetime1Lifetime3] = (var6Lifetime1Lifetime2 << 7) + sea.c(-16257, this.field_A[var4Lifetime1Lifetime3]);
+            this.field_A[var4Lifetime1Lifetime3] = (var6Lifetime1Lifetime2 << 7) + SnakePitBehaviour.c(-16257, this.field_A[var4Lifetime1Lifetime3]);
           }
           if (var5Lifetime1Lifetime3 == 42) {
-            this.field_A[var4Lifetime1Lifetime3] = var6Lifetime1Lifetime2 + sea.c(-128, this.field_A[var4Lifetime1Lifetime3]);
+            this.field_A[var4Lifetime1Lifetime3] = var6Lifetime1Lifetime2 + SnakePitBehaviour.c(-128, this.field_A[var4Lifetime1Lifetime3]);
           }
           if (var5Lifetime1Lifetime3 == 11) {
-            this.field_y[var4Lifetime1Lifetime3] = sea.c(this.field_y[var4Lifetime1Lifetime3], -16257) + (var6Lifetime1Lifetime2 << 7);
+            this.field_y[var4Lifetime1Lifetime3] = SnakePitBehaviour.c(this.field_y[var4Lifetime1Lifetime3], -16257) + (var6Lifetime1Lifetime2 << 7);
           }
           if (var5Lifetime1Lifetime3 == 43) {
-            this.field_y[var4Lifetime1Lifetime3] = var6Lifetime1Lifetime2 + sea.c(-128, this.field_y[var4Lifetime1Lifetime3]);
+            this.field_y[var4Lifetime1Lifetime3] = var6Lifetime1Lifetime2 + SnakePitBehaviour.c(-128, this.field_y[var4Lifetime1Lifetime3]);
           }
           switch (var5Lifetime1Lifetime3) {
             case 64:
               if (var6Lifetime1Lifetime2 < 64) {
-                this.field_M[var4Lifetime1Lifetime3] = sea.c(this.field_M[var4Lifetime1Lifetime3], -2);
+                this.field_M[var4Lifetime1Lifetime3] = SnakePitBehaviour.c(this.field_M[var4Lifetime1Lifetime3], -2);
                 if (var8 != 0) {
                   this.field_M[var4Lifetime1Lifetime3] = fh.a(this.field_M[var4Lifetime1Lifetime3], 1);
                 }
@@ -407,7 +407,7 @@ class l extends cg {
             case 65:
               if (var6Lifetime1Lifetime2 < 64) {
                 this.d(-108, var4Lifetime1Lifetime3);
-                this.field_M[var4Lifetime1Lifetime3] = sea.c(this.field_M[var4Lifetime1Lifetime3], -3);
+                this.field_M[var4Lifetime1Lifetime3] = SnakePitBehaviour.c(this.field_M[var4Lifetime1Lifetime3], -3);
                 if (var8 != 0) {
                   this.field_M[var4Lifetime1Lifetime3] = fh.a(this.field_M[var4Lifetime1Lifetime3], 2);
                 }
@@ -416,16 +416,16 @@ class l extends cg {
               }
               break;
             case 99:
-              this.field_J[var4Lifetime1Lifetime3] = sea.c(127, this.field_J[var4Lifetime1Lifetime3]) + (var6Lifetime1Lifetime2 << 7);
+              this.field_J[var4Lifetime1Lifetime3] = SnakePitBehaviour.c(127, this.field_J[var4Lifetime1Lifetime3]) + (var6Lifetime1Lifetime2 << 7);
               break;
             case 98:
-              this.field_J[var4Lifetime1Lifetime3] = var6Lifetime1Lifetime2 + sea.c(this.field_J[var4Lifetime1Lifetime3], 16256);
+              this.field_J[var4Lifetime1Lifetime3] = var6Lifetime1Lifetime2 + SnakePitBehaviour.c(this.field_J[var4Lifetime1Lifetime3], 16256);
               break;
             case 101:
-              this.field_J[var4Lifetime1Lifetime3] = (var6Lifetime1Lifetime2 << 7) + sea.c(this.field_J[var4Lifetime1Lifetime3], 127) + 16384;
+              this.field_J[var4Lifetime1Lifetime3] = (var6Lifetime1Lifetime2 << 7) + SnakePitBehaviour.c(this.field_J[var4Lifetime1Lifetime3], 127) + 16384;
               break;
             case 100:
-              this.field_J[var4Lifetime1Lifetime3] = 16384 + (sea.c(this.field_J[var4Lifetime1Lifetime3], 16256) + var6Lifetime1Lifetime2);
+              this.field_J[var4Lifetime1Lifetime3] = 16384 + (SnakePitBehaviour.c(this.field_J[var4Lifetime1Lifetime3], 16256) + var6Lifetime1Lifetime2);
               break;
             case 120:
               this.b(true, var4Lifetime1Lifetime3);
@@ -439,25 +439,25 @@ class l extends cg {
             case 6:
               var7 = this.field_J[var4Lifetime1Lifetime3];
               if (var7 == 16384) {
-                this.field_F[var4Lifetime1Lifetime3] = (var6Lifetime1Lifetime2 << 7) + sea.c(this.field_F[var4Lifetime1Lifetime3], -16257);
+                this.field_F[var4Lifetime1Lifetime3] = (var6Lifetime1Lifetime2 << 7) + SnakePitBehaviour.c(this.field_F[var4Lifetime1Lifetime3], -16257);
               }
               break;
             case 38:
               var7Lifetime1 = this.field_J[var4Lifetime1Lifetime3];
               if (16384 == var7Lifetime1) {
-                this.field_F[var4Lifetime1Lifetime3] = sea.c(this.field_F[var4Lifetime1Lifetime3], -128) + var6Lifetime1Lifetime2;
+                this.field_F[var4Lifetime1Lifetime3] = SnakePitBehaviour.c(this.field_F[var4Lifetime1Lifetime3], -128) + var6Lifetime1Lifetime2;
               }
               break;
             case 16:
-              this.field_q[var4Lifetime1Lifetime3] = (var6Lifetime1Lifetime2 << 7) + sea.c(-16257, this.field_q[var4Lifetime1Lifetime3]);
+              this.field_q[var4Lifetime1Lifetime3] = (var6Lifetime1Lifetime2 << 7) + SnakePitBehaviour.c(-16257, this.field_q[var4Lifetime1Lifetime3]);
               break;
             case 48:
-              this.field_q[var4Lifetime1Lifetime3] = var6Lifetime1Lifetime2 + sea.c(this.field_q[var4Lifetime1Lifetime3], -128);
+              this.field_q[var4Lifetime1Lifetime3] = var6Lifetime1Lifetime2 + SnakePitBehaviour.c(this.field_q[var4Lifetime1Lifetime3], -128);
               break;
             case 81:
               if (var6Lifetime1Lifetime2 < 64) {
                 this.e(28583, var4Lifetime1Lifetime3);
-                this.field_M[var4Lifetime1Lifetime3] = sea.c(this.field_M[var4Lifetime1Lifetime3], -5);
+                this.field_M[var4Lifetime1Lifetime3] = SnakePitBehaviour.c(this.field_M[var4Lifetime1Lifetime3], -5);
                 if (var8 != 0) {
                   this.field_M[var4Lifetime1Lifetime3] = fh.a(this.field_M[var4Lifetime1Lifetime3], 4);
                 }
@@ -630,7 +630,7 @@ class l extends cg {
           var3++;
         } while (var4 == 0);
         while (var3 < 16) {
-          this.field_l[var3] = sea.c(this.field_O[var3], -128);
+          this.field_l[var3] = SnakePitBehaviour.c(this.field_O[var3], -128);
           var3++;
           if (var4 == 0) {
             continue;
@@ -1124,7 +1124,7 @@ class l extends cg {
               if (var11 == 0) {
                 boolean decompiledFrameRemainder0 = true;
                 if (var10 == null) {
-                  var10 = rb.a(param2, var9, 15);
+                  var10 = SimpleConditionBehaviour.a(param2, var9, 15);
                   if (var10 == null) {
                     var6_int = 0;
                     decompiledFrameRemainder0 = false;
@@ -1363,7 +1363,7 @@ class l extends cg {
           this.field_u = (int[]) null;
         }
         this.field_O[param0] = param2;
-        this.field_l[param0] = sea.c(-128, param2);
+        this.field_l[param0] = SnakePitBehaviour.c(-128, param2);
         this.a(param0, true, param2);
     }
 

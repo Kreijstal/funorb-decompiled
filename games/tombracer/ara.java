@@ -59,7 +59,7 @@ final class ara extends jea {
             return;
           }
           if (var6_int == 0) {
-            uea.a(param3, param1, param4, param2, false);
+            BrazierComponent.a(param3, param1, param4, param2, false);
             return;
           }
           if (var6_int < 0) {

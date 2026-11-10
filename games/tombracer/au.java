@@ -27,19 +27,19 @@ final class au extends aa {
             ub.field_c = nn.field_c;
           } else {
             if (ub.field_c == nn.field_c) {
-              fieldTemp$6 = lpa.field_o;
-              lpa.field_o = lpa.field_o - 1;
+              fieldTemp$6 = PlatformBehaviour.field_o;
+              PlatformBehaviour.field_o = PlatformBehaviour.field_o - 1;
               if (fieldTemp$6 <= 0) {
                 ub.field_c = ub.field_h;
               }
             }
           }
         } else {
-          fieldTemp$7 = lpa.field_o;
-          lpa.field_o = lpa.field_o + 1;
+          fieldTemp$7 = PlatformBehaviour.field_o;
+          PlatformBehaviour.field_o = PlatformBehaviour.field_o + 1;
           if (fieldTemp$7 >= 16) {
             if (!dd.field_a) {
-              tta.e(true);
+              KeyItemComponent.e(true);
             } else {
               pg.b(param0);
             }
@@ -73,7 +73,7 @@ final class au extends aa {
           var14 = vc.field_q;
           var2 = var14.h(param0 + 252);
           if (var2 == 0) {
-            var11 = fqa.e(true);
+            var11 = SwitchComponent.e(true);
             var3 = var11;
             var10 = var11;
             var4 = var10;
@@ -82,7 +82,7 @@ final class au extends aa {
             for (var7 = 0; var7 < var6; var7++) {
               var10[var7] = ((PacketBuffer) ((Object) var5)).e(99);
             }
-            var12 = (bna) (tca.field_N.f(-80));
+            var12 = (bna) (MovingWallComponent.field_N.f(-80));
             if (var12 == null) {
               dea.a(60);
               return;
@@ -103,12 +103,12 @@ final class au extends aa {
                 ssa.a("A1: " + kk.a(32), (byte) 116, (Throwable) null);
                 dea.a(param0 ^ 63);
               } else {
-                var15 = (bna) (tca.field_N.f(-80));
+                var15 = (bna) (MovingWallComponent.field_N.f(-80));
                 if (var15 == null) {
                   dea.a(60);
                   return;
                 }
-                var15.field_f = fqa.e(true);
+                var15.field_f = SwitchComponent.e(true);
                 var15.field_g = true;
                 var15.unlink(42);
               }

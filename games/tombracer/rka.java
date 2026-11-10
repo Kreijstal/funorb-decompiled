@@ -13,7 +13,7 @@ abstract class rka {
 
     final static void a(String param0, boolean param1) {
         try {
-          wta.a(param0, (byte) -55);
+          TrackingCrusherComponent.a(param0, (byte) -55);
           vn.a(100, gja.field_bb, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "rka.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

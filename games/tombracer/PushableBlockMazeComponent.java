@@ -1,0 +1,139 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class PushableBlockMazeComponent extends MazeComponent {
+    static String field_K;
+    static boolean field_L;
+
+    final void a(boolean param0, BitPacketBuffer param1) {
+        try {
+          if (param0) {
+            field_K = (String) null;
+          }
+          super.a(param0, param1);
+        } catch (RuntimeException runtimeException) {
+          throw tba.a((Throwable) ((Object) runtimeException), "uc.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    PushableBlockMazeComponent(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
+        super(param0, param1, param2, param3);
+    }
+
+    final boolean D(int param0) {
+        if (param0 != 0) {
+          BitPacketBuffer var3 = (BitPacketBuffer) null;
+          this.a(false, (BitPacketBuffer) null);
+          return true;
+        }
+        return true;
+    }
+
+    final Trap a(Room param0, boolean param1, boolean param2) {
+        RuntimeException var4 = null;
+        Trap stackIn_3_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (!param1) {
+            return null;
+          }
+          stackIn_3_0 = (Trap) null;
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_7_0 = var4;
+          stackIn_7_1 = new StringBuilder().append("uc.VB(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+        }
+    }
+
+    final Trap a(int param0, boolean param1, Room param2) {
+        RuntimeException var4 = null;
+        SimpleBlockBehaviour var5 = null;
+        DamageableBehaviour var6 = null;
+        kpa var7 = null;
+        mfa var8 = null;
+        boa var9 = null;
+        Trap var10 = null;
+        Trap stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var10 = new Trap(param2, param1);
+          var10.b((byte) -11, 2097152, 2097152);
+          var10.a((byte) -3, 4);
+          var10.h(3, 0);
+          var10.e(true, param0 + 116);
+          var10.g(124, 1);
+          var10.b((byte) 17, false);
+          var10.b(false, 11468);
+          var10.a(1, (byte) -12, true);
+          var5 = new SimpleBlockBehaviour(param2, param1);
+          var10.a((byte) 83, (Behaviour) (var5));
+          var10.d(25, -1);
+          var6 = new DamageableBehaviour(param2, param1);
+          var6.b((byte) 0, true);
+          var6.b(1, 50, param0 - 5);
+          var7 = var6.j((byte) -112);
+          var7.a(false, 67);
+          var7.a(0, -17075, true);
+          var10.a((byte) 83, (Behaviour) (var6));
+          if (param0 != 5) {
+            field_L = true;
+          }
+          var8 = rm.field_a;
+          var9 = (boa) (var8.a(7, 75));
+          var9.b(124, 0);
+          var10.a((gr) null, (byte) 124, var9);
+          stackIn_3_0 = var10;
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_6_0 = var4;
+          stackIn_6_1 = new StringBuilder().append("uc.SB(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+        }
+    }
+
+    final boolean C(int param0) {
+        if (param0 != 1) {
+          PushableBlockMazeComponent.E(94);
+          return true;
+        }
+        return true;
+    }
+
+    PushableBlockMazeComponent(Room param0, int param1) {
+        super(param0, param1);
+    }
+
+    public static void E(int param0) {
+        if (param0 != 7) {
+          PushableBlockMazeComponent.E(126);
+          field_K = null;
+          return;
+        }
+        field_K = null;
+    }
+
+    static {
+        field_K = "Hold to grab and drag objects. Press to drop a carried object.";
+    }
+}

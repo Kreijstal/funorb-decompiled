@@ -91,7 +91,7 @@ abstract class eha {
     }
 
     final static void a(byte param0) {
-        rfa.field_B = bha.field_B + " <b>" + vc.field_s + "</b> " + cq.field_c + " <b>" + mha.field_F + "</b> " + kka.field_p + "<br>" + "<br>" + wg.field_k;
+        rfa.field_B = FleeLocomotor.field_B + " <b>" + vc.field_s + "</b> " + cq.field_c + " <b>" + mha.field_F + "</b> " + kka.field_p + "<br>" + "<br>" + wg.field_k;
         if (param0 != -27) {
           pc var2 = (pc) null;
           eha.a(-114, -20, 86, 69, (pc) null, -36, 11);

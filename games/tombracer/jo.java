@@ -212,34 +212,34 @@ final class jo extends rva implements tsa {
           }
           ni.field_c = false;
           if (!fua.field_g) {
-            if (ok.field_s) {
-              var5 = rsa.field_z;
+            if (PowerDownItemBehaviour.field_s) {
+              var5 = ConstrainToLatticeLocomotor.field_z;
             } else {
-              var5 = wn.field_n;
+              var5 = SimpleActionBehaviour.field_n;
             }
           } else {
             var5 = kia.field_a;
           }
           var7 = (String) null;
           dqa.a(var5, 0, (String) null, sva.field_d, 127);
-          pq.field_g.field_N = sva.field_d - (sva.field_d >> 1 & 8355711) + ((bn.field_t.field_N & 16711422) >> 1);
-          pq.field_g.field_ab = (8355711 & bn.field_t.field_ab >> 1) + (-((sva.field_d & 16711423) >> 1) + sva.field_d);
-          pq.field_g.field_gb = ((16711423 & bn.field_t.field_gb) >> 1) + (sva.field_d - (sva.field_d >> 1 & 8355711));
+          pq.field_g.field_N = sva.field_d - (sva.field_d >> 1 & 8355711) + ((VortexBehaviour.field_t.field_N & 16711422) >> 1);
+          pq.field_g.field_ab = (8355711 & VortexBehaviour.field_t.field_ab >> 1) + (-((sva.field_d & 16711423) >> 1) + sva.field_d);
+          pq.field_g.field_gb = ((16711423 & VortexBehaviour.field_t.field_gb) >> 1) + (sva.field_d - (sva.field_d >> 1 & 8355711));
           rma.field_b = mka.field_b;
           oea.field_i = pq.field_g;
-          wi.field_s = new jea((long)param1, param4);
+          SimpleMoveLocomotor.field_s = new jea((long)param1, param4);
           lra.field_e = new jea(0L, param0);
           Projectile.field_r = new jea(0L, (jea) null);
           dh.field_e = new jea(0L, param3);
           pq.field_g = new jea(0L, param2);
-          pq.field_g.field_H = lpa.field_s;
+          pq.field_g.field_H = PlatformBehaviour.field_s;
           dh.field_e.b(-123, pq.field_g);
           mka.field_b = new jea(0L, rma.field_b);
           dh.field_e.b(-128, mka.field_b);
-          lra.field_d = new jea(0L, bn.field_t, fw.field_a);
-          qpa.field_b = new jea(0L, bn.field_t);
-          wi.field_s.b(param1 ^ -122, lra.field_e);
-          wi.field_s.b(-123, Projectile.field_r);
+          lra.field_d = new jea(0L, VortexBehaviour.field_t, fw.field_a);
+          qpa.field_b = new jea(0L, VortexBehaviour.field_t);
+          SimpleMoveLocomotor.field_s.b(param1 ^ -122, lra.field_e);
+          SimpleMoveLocomotor.field_s.b(-123, Projectile.field_r);
           Projectile.field_r.b(-123, dh.field_e);
           Projectile.field_r.b(-126, lra.field_d);
           Projectile.field_r.b(-125, qpa.field_b);
@@ -618,10 +618,10 @@ final class jo extends rva implements tsa {
     }
 
     final static void a(boolean param0, boolean param1) {
-        if (wqa.r((byte) -98)) {
+        if (GasTrapComponent.r((byte) -98)) {
           param1 = false;
         }
-        sa.a(param1, (byte) 88);
+        FacePointLocomotor.a(param1, (byte) 88);
         dla.b(23713);
         if (!param0) {
           jo.g((byte) 92);
@@ -715,8 +715,8 @@ final class jo extends rva implements tsa {
           if (!param1) {
             field_E = (String) null;
           }
-          var3 = uha.a(5907, param0) ? 1 : 0;
-          var4 = uha.a(5907, param0) ? 1 : 0;
+          var3 = CircleMovementLocomotor.a(5907, param0) ? 1 : 0;
+          var4 = CircleMovementLocomotor.a(5907, param0) ? 1 : 0;
           var5 = new an();
           var5.field_I = (short)param0.b((byte) 44, 16);
           var5.field_l = me.a((byte) 76, 16, param0, var5.field_l);
@@ -743,10 +743,10 @@ final class jo extends rva implements tsa {
             var5.field_N = me.a((byte) 101, 16, param0, var5.field_N);
             var5.field_D = me.a((byte) 100, 16, param0, var5.field_D);
           }
-          if (uha.a(5907, param0)) {
+          if (CircleMovementLocomotor.a(5907, param0)) {
             var5.field_M = me.a((byte) 74, 16, param0, var5.field_M);
           }
-          if (uha.a(5907, param0)) {
+          if (CircleMovementLocomotor.a(5907, param0)) {
             var5.field_q = goa.a(16, -4854, param0, var5.field_q);
             var6 = 0;
             for (var7 = 0; var7 < var5.field_q.length; var7++) {

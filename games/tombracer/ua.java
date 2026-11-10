@@ -139,7 +139,7 @@ final class ua implements bo {
             return stackIn_13_0;
           }
           if (param0 == 4) {
-            stackIn_17_0 = gl.$cfr$intArgs$a$53ce4ab4c593(117, rh.field_o, new String[]{param1});
+            stackIn_17_0 = gl.$cfr$intArgs$a$53ce4ab4c593(117, TouchSwitchBehaviour.field_o, new String[]{param1});
             return stackIn_17_0;
           }
           if (5 == param0) {
@@ -151,7 +151,7 @@ final class ua implements bo {
             return stackIn_24_0;
           }
           if (param0 == 7) {
-            stackIn_27_0 = gl.$cfr$intArgs$a$53ce4ab4c593(110, wha.field_H, new String[]{param1});
+            stackIn_27_0 = gl.$cfr$intArgs$a$53ce4ab4c593(110, TrackMountComponent.field_H, new String[]{param1});
             return stackIn_27_0;
           }
           if (8 == param0) {
@@ -201,10 +201,10 @@ final class ua implements bo {
           if (param1 != 2) {
             return;
           }
-          var2 = tca.field_N.f(-80);
+          var2 = MovingWallComponent.field_N.f(-80);
           while (var2 != null) {
-            rh.b(param0, param1 ^ -117);
-            var2 = tca.field_N.e(param1 + 105);
+            TouchSwitchBehaviour.b(param0, param1 ^ -117);
+            var2 = MovingWallComponent.field_N.e(param1 + 105);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

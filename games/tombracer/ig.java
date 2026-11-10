@@ -21,7 +21,7 @@ final class ig {
             asa.field_j.d(8);
             asa.field_j = null;
           }
-          jb.field_K = null;
+          WhiteLightSensorComponent.field_K = null;
           if (null != qha.field_g) {
             qha.field_g.d(8);
             qha.field_g = null;

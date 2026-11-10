@@ -187,7 +187,7 @@ final class qp extends we {
             0 != var12.length()) {
             var13 = 0;
             if (var8 == 0 &&
-              ue.a(var12, 0)) {
+              MiscItemBehaviour.a(var12, 0)) {
               var8 = 1;
               var13 = 1;
             }
@@ -245,8 +245,8 @@ final class qp extends we {
         var4 = 120 + param1;
         eda.field_f.a(-1, -1, es.field_h[0], -14671840, var4, hl.field_a);
         eda.field_f.a(var4, false, pta.field_g.toUpperCase(), es.field_h[1], -14671840, -1);
-        eda.field_f.a(var4, false, nj.field_o.toUpperCase(), es.field_h[2], -14671840, -1);
-        eda.field_f.a(var4, false, rb.field_q.toUpperCase(), es.field_h[3], -14671840, -1);
+        eda.field_f.a(var4, false, ControllerLocomotor.field_o.toUpperCase(), es.field_h[2], -14671840, -1);
+        eda.field_f.a(var4, false, SimpleConditionBehaviour.field_q.toUpperCase(), es.field_h[3], -14671840, -1);
         eda.field_f.a(var4, false, ufa.field_u.toUpperCase(), es.field_h[4], -14671840, -1);
         eda.field_f.a(var4, false, ida.field_a.toUpperCase(), es.field_h[5], -14671840, -1);
         var5 = null;
@@ -268,7 +268,7 @@ final class qp extends we {
           discarded$5 = this.a((byte) 106, this.field_x, param1);
           return;
         }
-        var8 = kt.field_H;
+        var8 = FacePlayerMountComponent.field_H;
         if (var8 != null) {
           oka.a(var8.toUpperCase(), 65793, eda.field_f, -1, param1 + 240, aaa.a(false) >> 1, -1);
           return;
@@ -303,7 +303,7 @@ final class qp extends we {
           }
           var9 = sb.field_a;
           if (var9 == null) {
-            sb.field_a = pt.a(22578, 7, 10, 0);
+            sb.field_a = FacePlayerLocomotor.a(22578, 7, 10, 0);
             this.field_w = 0;
           } else {
             if (!var9.field_i) {
@@ -332,7 +332,7 @@ final class qp extends we {
         var8 = sb.field_a;
         var7 = var8;
         if (var8 == null) {
-          sb.field_a = pt.a(22578, 7, 10, 0);
+          sb.field_a = FacePlayerLocomotor.a(22578, 7, 10, 0);
           this.field_w = 0;
         } else {
           if (!var8.field_i) {

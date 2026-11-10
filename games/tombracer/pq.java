@@ -102,7 +102,7 @@ final class pq implements os {
 
     static {
         field_f = 0;
-        field_e = fqa.e(true);
+        field_e = SwitchComponent.e(true);
         field_d = "Solicitation";
     }
 }

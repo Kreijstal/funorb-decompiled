@@ -14,7 +14,7 @@ final class poa extends hga {
     }
 
     poa(int param0) {
-        this(mj.field_J, param0);
+        this(KeySwitchComponent.field_J, param0);
     }
 
     final String d(int param0, ae param1) {

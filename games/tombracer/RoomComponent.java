@@ -433,11 +433,11 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, fo, gma, 
           this.field_u = param3;
           if (param3 == null) {
             if (param0.field_E > 20) {
-              this.field_j = 1048576 * bla.a(true, 8, param2.b((byte) 44, 8));
-              this.field_p = 1048576 * bla.a(true, 8, param2.b((byte) 44, 8));
+              this.field_j = 1048576 * CoinItemComponent.a(true, 8, param2.b((byte) 44, 8));
+              this.field_p = 1048576 * CoinItemComponent.a(true, 8, param2.b((byte) 44, 8));
             } else {
-              this.field_j = bla.a(true, 12, param2.b((byte) 44, 12)) << 16;
-              this.field_p = bla.a(true, 12, param2.b((byte) 44, 12)) << 16;
+              this.field_j = CoinItemComponent.a(true, 12, param2.b((byte) 44, 12)) << 16;
+              this.field_p = CoinItemComponent.a(true, 12, param2.b((byte) 44, 12)) << 16;
             }
           }
           if (this.v(555277520)) {
@@ -462,7 +462,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, fo, gma, 
           this.field_v = stackIn_20_1;
           for (var5_int = 0; this.field_t.length > var5_int; var5_int++) {
             if (1 == param2.b((byte) 44, 1)) {
-              var6 = vha.field_c.a(param2, param0, (byte) -7, this);
+              var6 = vha.field_c.readComponent(param2, param0, (byte) -7, this);
               var6.a(1434528720, this.field_t[var5_int].c((byte) 126).field_d << 16, this.field_t[var5_int].c((byte) 111).field_f << 16);
               this.field_t[var5_int].a(var6, 126);
             }
@@ -827,7 +827,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, fo, gma, 
             var4 = this.field_t[var3_int].a(86);
             if (var4 != null) {
               param1.a((byte) -42, 1, 1);
-              vha.field_c.a(var4, -16097, param1);
+              vha.field_c.writeComponent(var4, -16097, param1);
             } else {
               param1.a((byte) -127, 0, 1);
             }

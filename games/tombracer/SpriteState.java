@@ -21,7 +21,7 @@ abstract class SpriteState extends DualLinkNode {
 
     final static void a(int param0) {
         rm.field_a = (mfa) ((Object) new wu());
-        vha.field_c = (pma) ((Object) new rn());
+        vha.field_c = (RoomComponentCodec) ((Object) new RoomComponentFactory());
         if (param0 == -18035) {
           dea.field_a = (mb) ((Object) new gva());
           return;

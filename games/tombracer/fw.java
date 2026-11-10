@@ -5,7 +5,7 @@ final class fw {
     static String field_a;
 
     final static lp a(int param0, boolean param1) {
-        lp var2 = (lp) (wha.field_J.a((byte) 61, (long)param0));
+        lp var2 = (lp) (TrackMountComponent.field_J.a((byte) 61, (long)param0));
         if (var2 != null) {
           return var2;
         }
@@ -14,7 +14,7 @@ final class fw {
         if (var3 != null) {
           var2.a(-1, param0, new PacketBuffer(var3));
         }
-        wha.field_J.a(29166, var2, (long)param0);
+        TrackMountComponent.field_J.a(29166, var2, (long)param0);
         return var2;
     }
 

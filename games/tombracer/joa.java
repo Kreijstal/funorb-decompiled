@@ -129,7 +129,7 @@ final class joa {
           int stackIn_10_0 = 0;
           Throwable decompiledCaughtException = null;
           if (Room.field_R == null) {
-            Room.field_R = kqa.field_a.a(-24818, rsa.field_x, nn.field_b);
+            Room.field_R = kqa.field_a.a(-24818, ConstrainToLatticeLocomotor.field_x, nn.field_b);
           }
           var2 = -67 % ((param1 - 67) / 35);
           if (0 == Room.field_R.field_b) {
@@ -137,7 +137,7 @@ final class joa {
           }
           dupTemp$1 = bva.b((byte) -107);
           mha.field_D = dupTemp$1;
-          ue.field_s = dupTemp$1;
+          MiscItemBehaviour.field_s = dupTemp$1;
           if (Room.field_R.field_b != 1) {
             km.field_p = af.field_g;
           } else {
@@ -145,7 +145,7 @@ final class joa {
               oba.field_e = new BufferedSocket((java.net.Socket) (Room.field_R.field_f), kqa.field_a);
               ql.field_k.position = 0;
               var4 = vc.field_q;
-              km.field_p = sua.field_G;
+              km.field_p = RotaterMountComponent.field_G;
               var4.position = 0;
               stackIn_10_0 = (!param0) ? -1 : -2;
               vua.field_B = stackIn_10_0;

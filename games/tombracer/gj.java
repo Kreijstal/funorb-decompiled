@@ -50,7 +50,7 @@ final class gj {
           is.field_yb.field_z = 1;
           qh.field_F = new jea(0L, ooa.field_f, ija.field_i);
           mda.field_v = new jea(0L, SecondaryNodeDeque.field_b, ap.field_c);
-          ita.field_c = new jea(0L, dja.field_p);
+          ita.field_c = new jea(0L, PressureSwitchBehaviour.field_p);
           dqa.field_e.b(-122, is.field_yb);
           dqa.field_e.b(-126, qh.field_F);
           if (!param1) {
@@ -173,7 +173,7 @@ final class gj {
         field_n = new gj(4, 2, una.field_h);
         field_k = new gj(5, 3, una.field_h);
         field_j = new gj(6, 4, una.field_h);
-        field_f = bia.a((byte) 93, 16);
+        field_f = CauldronComponent.a((byte) 93, 16);
         field_o = new nt();
         field_d = new Hashtable();
         field_a = "ESC - cancel private message";

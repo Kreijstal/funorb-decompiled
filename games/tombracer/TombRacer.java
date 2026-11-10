@@ -20,13 +20,13 @@ public final class TombRacer extends rfa implements ls {
             return true;
           }
           if (param2 == 2) {
-            stackIn_7_0 = !(jc.field_M);
-            jc.field_M = stackIn_7_0;
+            stackIn_7_0 = !(SimpleHoverMountComponent.field_M);
+            SimpleHoverMountComponent.field_M = stackIn_7_0;
             return true;
           }
           if (param2 == 3) {
-            stackIn_12_0 = !(rsa.field_s);
-            rsa.field_s = stackIn_12_0;
+            stackIn_12_0 = !(ConstrainToLatticeLocomotor.field_s);
+            ConstrainToLatticeLocomotor.field_s = stackIn_12_0;
             return true;
           }
           if (param2 == 27) {
@@ -154,7 +154,7 @@ public final class TombRacer extends rfa implements ls {
             if (iqa.field_c.e(-8832)) {
               bea.a();
               stackIn_33_0 = ((this.field_E & 8) == 0);
-              wma.a(stackIn_33_0, 0);
+              SpawnerBehaviour.a(stackIn_33_0, 0);
               bi.a(tga.field_a, param2 ^ 17);
             }
           }
@@ -175,7 +175,7 @@ public final class TombRacer extends rfa implements ls {
             var5_ref_ssa = uja.a((byte) 65, tga.field_a);
             var5_ref_ssa.a(aaa.a(false) + mp.a((byte) -112) >> 1, koa.b(0) - qra.a(96) >> 1, (byte) -12, koa.b(0) + qra.a(96) >> 1, aaa.a(false) - mp.a((byte) -125) >> 1);
             if (dq.field_f == null) {
-              stackIn_47_0 = bn.field_n;
+              stackIn_47_0 = VortexBehaviour.field_n;
             } else {
               stackIn_47_0 = true;
             }
@@ -189,8 +189,8 @@ public final class TombRacer extends rfa implements ls {
             } else {
               tga.field_a.c(-1073741824, 0, aaa.a(false), 0, -22971, koa.b(0));
               var5 = f.a(false);
-              var6 = gw.A(-1);
-              var7 = m.A(param2 - 7128);
+              var6 = PlantComponent.A(-1);
+              var7 = PillarComponent.A(param2 - 7128);
               var8 = rs.a((byte) 124);
               var9 = uja.a((byte) 65, tga.field_a);
               var9.a(var5 + var7, var6, (byte) -12, var6 + var8, var5);
@@ -359,7 +359,7 @@ public final class TombRacer extends rfa implements ls {
         ck.a(false);
         wu.a((byte) 91);
         gva.a(param0 ^ -14342);
-        rn.a((byte) -114);
+        RoomComponentFactory.a((byte) -114);
         PlayerSimulation.n(param0 ^ param0);
         dva.a((byte) 53);
         aq.b(-116);
@@ -516,7 +516,7 @@ public final class TombRacer extends rfa implements ls {
         es.c(param0 + 3571);
         st.c(param0 + 3668);
         ada.c(param0 ^ 3628);
-        ue.r(param0 ^ -3666);
+        MiscItemBehaviour.r(param0 ^ -3666);
         cba.a((byte) 109);
         on.d(32);
         wf.a(2907);
@@ -547,8 +547,8 @@ public final class TombRacer extends rfa implements ls {
         ppa.a(-1551894744);
         sga.c((byte) -117);
         js.b((byte) -50);
-        qi.f(true);
-        uc.E(7);
+        AllPlatformsMazeComponent.f(true);
+        PushableBlockMazeComponent.E(7);
         jl.a(param0 ^ -1088533378);
         lk.a(false);
         mba.d(-1);
@@ -566,10 +566,10 @@ public final class TombRacer extends rfa implements ls {
         ir.a((byte) 104);
         gpa.a(false);
         nf.a(param0 - 22136);
-        pd.l(59);
+        ItemBehaviour.l(59);
         pka.a(-1);
-        ana.d(true);
-        th.g((byte) 91);
+        DarknessBehaviour.d(true);
+        WindZoneBehaviour.g((byte) 91);
         mka.a((byte) -111);
         tg.a((byte) 23);
         tn.a((byte) 94);
@@ -580,89 +580,89 @@ public final class TombRacer extends rfa implements ls {
         jaa.a(true);
         lfa.i(5353);
         boa.a(false);
-        ska.c(884207088);
+        WeaponShooterBehaviour.c(884207088);
         fu.n((byte) -51);
-        fra.b(-27203);
-        ro.f(-107);
+        ConstantEffectBehaviour.b(-27203);
+        PathMoveLocomotor.f(-107);
         cv.n((byte) 100);
         kva.i(param0 ^ 3665);
-        rea.b(12134);
+        CrusherBehaviour.b(12134);
         kga.n((byte) 9);
-        rl.d(true);
+        PowerUpItemBehaviour.d(true);
         oo.j(-115);
-        sea.b(param0 ^ -25894);
+        SnakePitBehaviour.b(param0 ^ -25894);
         aia.i(-87);
         ki.a(false);
         lma.n((byte) -123);
         cda.n((byte) 112);
         ce.l(30389);
-        lpa.b(1);
-        im.j((byte) 124);
+        PlatformBehaviour.b(1);
+        PortalBehaviour.j((byte) 124);
         aka.o((byte) 120);
         vsa.q((byte) -125);
         pqa.n((byte) -126);
         ao.i(param0 + 3543);
-        eq.b(15602);
-        rh.l(15);
-        dja.l(1);
-        wh.l(-127);
+        SimpleBlockBehaviour.b(15602);
+        TouchSwitchBehaviour.l(15);
+        PressureSwitchBehaviour.l(1);
+        TripBeamBehaviour.l(-127);
         nk.b(20);
         rq.a();
-        si.B(118);
+        BlockComponent.B(118);
         kna.y(0);
-        cu.c(-1);
+        DamageableBehaviour.c(-1);
         kpa.a(70);
-        oma.r((byte) 112);
-        fqa.A(1);
+        PitComponent.r((byte) 112);
+        SwitchComponent.A(1);
         jma.e(71);
         f.c(24641);
-        vka.e(false);
-        uk.s((byte) 120);
-        ra.B(-12);
+        PortalComponent.e(false);
+        MovingSawComponent.s((byte) 120);
+        PathMoverComponent.B(-12);
         gea.b(param0 + 3666);
-        wqa.e(true);
-        tl.l(16711422);
+        GasTrapComponent.e(true);
+        TimeSwitchBehaviour.l(16711422);
         mg.e(9980);
-        bla.e(true);
-        lea.r((byte) -72);
-        aja.A(32076);
-        gd.e(true);
-        bg.e((byte) 67);
-        pt.e(param0 + 3666);
+        CoinItemComponent.e(true);
+        ItemComponent.r((byte) -72);
+        CoinBagItemComponent.A(32076);
+        IdolItemComponent.e(true);
+        ApproachPlayerLocomotor.e((byte) 67);
+        FacePlayerLocomotor.e(param0 + 3666);
         dna.r((byte) 102);
-        tca.D(15);
-        ln.B(15);
-        ps.s((byte) 44);
-        aw.A(4);
-        mc.g((byte) -105);
-        mh.A(-121);
-        mj.s((byte) -12);
-        sm.l(11162931);
-        er.s((byte) 25);
-        bia.C(param0 + 4197970);
-        eia.l(param0 ^ -3655);
-        wpa.D(-129);
-        ge.r((byte) 119);
-        jh.D(param0 ^ 3597);
-        ipa.D(4);
-        sua.B(105);
-        spa.d(true);
-        ona.A(7);
-        kt.A(-121);
-        wha.r((byte) 79);
-        hia.e(param0 + 3680);
-        md.A(123);
-        wta.r((byte) 15);
-        wfa.r((byte) -123);
-        lda.r((byte) -90);
-        df.s((byte) -18);
-        hn.e(false);
-        tp.t((byte) 75);
-        jb.s((byte) -66);
-        nja.f(false);
-        uka.t((byte) 79);
-        ga.A(4096);
-        wi.e((byte) -92);
+        MovingWallComponent.D(15);
+        PlatformComponent.B(15);
+        MovingPlatformComponent.s((byte) 44);
+        MirrorComponent.A(4);
+        MirrorBehaviour.g((byte) -105);
+        DoorwayComponent.A(-121);
+        KeySwitchComponent.s((byte) -12);
+        KeyLockBehaviour.l(11162931);
+        TripBeamComponent.s((byte) 25);
+        CauldronComponent.C(param0 + 4197970);
+        EffectSwitchBehaviour.l(param0 ^ -3655);
+        ArrowShooterComponent.D(-129);
+        ShooterComponent.r((byte) 119);
+        FlameShooterComponent.D(param0 ^ 3597);
+        WheeledMountComponent.D(4);
+        RotaterMountComponent.B(105);
+        RotateLocomotor.d(true);
+        SweeperMountComponent.A(7);
+        FacePlayerMountComponent.A(-121);
+        TrackMountComponent.r((byte) 79);
+        TrackPlayerLocomotor.e(param0 + 3680);
+        PushableMountComponent.A(123);
+        TrackingCrusherComponent.r((byte) 15);
+        StaticCrusherComponent.r((byte) -123);
+        RopeBridgeComponent.r((byte) -90);
+        RevolverItemComponent.s((byte) -18);
+        MazeComponent.e(false);
+        WhiteLightShooterComponent.t((byte) 75);
+        WhiteLightSensorComponent.s((byte) -66);
+        InvisibleTouchSwitchComponent.f(false);
+        BoulderComponent.t((byte) 79);
+        WallCrusherComponent.A(4096);
+        SimpleMoveLocomotor.e((byte) -92);
         ava.a(-1);
         rga.a((byte) 99);
         pea.a((byte) -100);
@@ -743,34 +743,34 @@ public final class TombRacer extends rfa implements ls {
         dta.a(0);
         hva.a();
         cs.a(3840);
-        hi.c(6);
-        rb.g((byte) -119);
+        ConveyorBehaviour.c(6);
+        SimpleConditionBehaviour.g((byte) -119);
         hj.a(false);
-        sg.b(-2);
+        SafeZoneBehaviour.b(-2);
         av.b(false);
-        wn.b(123);
-        wma.b(125);
-        bn.d(false);
+        SimpleActionBehaviour.b(123);
+        SpawnerBehaviour.b(125);
+        VortexBehaviour.d(false);
         koa.a(-108);
         mma.a(-1901);
-        ula.g((byte) 42);
-        nj.e((byte) -99);
-        bha.e(param0 + 12227);
-        ws.e(1);
-        uqa.j((byte) -94);
-        osa.e(91);
-        uha.e(115);
-        sa.e(-73);
-        ira.j((byte) 91);
-        rsa.j((byte) 124);
-        oqa.g(11683);
-        lo.e(1);
+        FuseBehaviour.g((byte) 42);
+        ControllerLocomotor.e((byte) -99);
+        FleeLocomotor.e(param0 + 12227);
+        MirrorMoverLocomotor.e(1);
+        ConstrainToCircleLocomotor.j((byte) -94);
+        ConstraintLocomotor.e(91);
+        CircleMovementLocomotor.e(115);
+        FacePointLocomotor.e(-73);
+        ConstrainToRectangleLocomotor.j((byte) 91);
+        ConstrainToLatticeLocomotor.j((byte) 124);
+        ConstrainToFacingArcLocomotor.g(11683);
+        TeleportLocomotor.e(1);
         nta.a(-25821);
         of.b(param0 ^ -3599);
-        fva.a(115);
-        jra.a(19290);
-        rja.a(-21755);
-        tna.a(true);
+        RecursiveBacktrackerMazeGenerator.a(115);
+        StripedMazeGenerator.a(19290);
+        PrimMazeGenerator.a(-21755);
+        DivisionMazeGenerator.a(true);
         coa.c(16711680);
         gia.c(-26382);
         tga.a(61);
@@ -869,7 +869,7 @@ public final class TombRacer extends rfa implements ls {
         dqa.a((byte) 11);
         SecondaryNodeDequeIterator.a((byte) -92);
         pda.a((byte) -114);
-        vja.a(30000);
+        TrapSpawner.a(30000);
         eta.a(29574);
         wka.c(-31068);
         ooa.d(119);
@@ -1016,7 +1016,7 @@ public final class TombRacer extends rfa implements ls {
         if (param0 != 84) {
           this.field_E = -98;
         }
-        stackIn_8_0 = (vd.field_n) || (rpa.field_d) || (vda.field_q);
+        stackIn_8_0 = (RandomMazeBehaviour.field_n) || (rpa.field_d) || (vda.field_q);
         return stackIn_8_0;
     }
 
@@ -1036,7 +1036,7 @@ public final class TombRacer extends rfa implements ls {
           if (jm.field_n == -2) {
             uv.d(30785);
           } else {
-            ira.a(false, jm.field_n, (byte) -46);
+            ConstrainToRectangleLocomotor.a(false, jm.field_n, (byte) -46);
           }
           jm.field_n = 2147483647;
         }
@@ -1094,12 +1094,12 @@ public final class TombRacer extends rfa implements ls {
           stackIn_27_0 = (null == this.field_D);
           param1 = stackIn_27_0;
         }
-        if (!vd.field_n ||
+        if (!RandomMazeBehaviour.field_n ||
           SecondaryNodeDequeIterator.field_a == hb.field_t) {
           rp.a(8824);
         }
         this.field_H.b((byte) -66);
-        ipa.s((byte) 49);
+        WheeledMountComponent.s((byte) 49);
     }
 
     final void h(int param0) {
@@ -1207,33 +1207,33 @@ public final class TombRacer extends rfa implements ls {
           }
           if (param0 == 9) {
             rpa.field_d = false;
-            ira.a(false, 1, (byte) -77);
+            ConstrainToRectangleLocomotor.a(false, 1, (byte) -77);
             vj.a(param1.e((byte) -76), -79);
             return true;
           }
           if (param0 == 14) {
-            uha.a(mh.r((byte) 107), lla.a(false, 4), (byte) -51, vo.e(35040), lla.a(false, 2000), ws.field_o.length, jf.field_t, 1024, oh.b(19845), 150);
-            us.a(-8250, mo.b(-80), fa.b((byte) 123));
-            vd.field_n = true;
+            CircleMovementLocomotor.a(DoorwayComponent.r((byte) 107), lla.a(false, 4), (byte) -51, vo.e(35040), lla.a(false, 2000), MirrorMoverLocomotor.field_o.length, jf.field_t, 1024, TextSpewerBehaviour.b(19845), 150);
+            us.a(-8250, PitBehaviour.b(-80), fa.b((byte) 123));
+            RandomMazeBehaviour.field_n = true;
             rpa.field_d = false;
-            ira.a(false, -2, (byte) 90);
+            ConstrainToRectangleLocomotor.a(false, -2, (byte) 90);
             return true;
           }
           if (15 == param0) {
-            if (vd.field_n) {
+            if (RandomMazeBehaviour.field_n) {
               cv.o((byte) -108);
               ik.a(5);
               era.field_c = true;
-              vd.field_n = false;
+              RandomMazeBehaviour.field_n = false;
               iqa.field_c.c(88);
-              ira.a(false, 0, (byte) 111);
+              ConstrainToRectangleLocomotor.a(false, 0, (byte) 111);
             }
             rpa.field_d = false;
             vda.field_q = false;
             return true;
           }
           if (10 == param0 &&
-            vd.field_n) {
+            RandomMazeBehaviour.field_n) {
             qt.a(-64);
             return true;
           }
@@ -1245,7 +1245,7 @@ public final class TombRacer extends rfa implements ls {
                 return true;
               }
               var20 = var19.field_g;
-              var21 = im.a(var19.field_d, var19.field_f, 100, SecondaryNodeDequeIterator.field_a.a(false, var20), var20);
+              var21 = PortalBehaviour.a(var19.field_d, var19.field_f, 100, SecondaryNodeDequeIterator.field_a.a(false, var20), var20);
               iqa.field_c.a(0, var21);
             }
             return true;
@@ -1259,7 +1259,7 @@ public final class TombRacer extends rfa implements ls {
             if (SecondaryNodeDequeIterator.field_a != null &&
               !var22.field_m) {
               var23 = var22.field_g;
-              var24 = im.a(var22.field_d, var22.field_f, -87, SecondaryNodeDequeIterator.field_a.a(false, var23), var23);
+              var24 = PortalBehaviour.a(var22.field_d, var22.field_f, -87, SecondaryNodeDequeIterator.field_a.a(false, var23), var23);
               iqa.field_c.a(0, var24);
             }
             return true;
@@ -1276,7 +1276,7 @@ public final class TombRacer extends rfa implements ls {
             if (param0 == 66) {
               if (SecondaryNodeDequeIterator.field_a != null) {
                 SecondaryNodeDequeIterator.field_a.b(false, true, 0);
-                ira.a(false, -2, (byte) -33);
+                ConstrainToRectangleLocomotor.a(false, -2, (byte) -33);
                 iqa.field_c.d(96);
               }
               vda.field_q = false;
@@ -1329,7 +1329,7 @@ public final class TombRacer extends rfa implements ls {
               stackIn_116_0 = this.a(param1, param0, (byte) 111);
               return stackIn_116_0;
             }
-            var33 = fqa.e(true);
+            var33 = SwitchComponent.e(true);
             var29 = var33;
             var4 = var29;
             var17 = var4;
@@ -1341,7 +1341,7 @@ public final class TombRacer extends rfa implements ls {
             }
             var38 = sb.a(0, var33);
             this.field_H.a((byte) 6, var38);
-            var18 = rb.field_o;
+            var18 = SimpleConditionBehaviour.field_o;
             var39 = var4;
             for (var8Lifetime2 = 0; var8Lifetime2 < 8; var8Lifetime2++) {
               var18[var8Lifetime2] = fh.a(var18[var8Lifetime2], var39[var8Lifetime2]);
@@ -1365,11 +1365,11 @@ public final class TombRacer extends rfa implements ls {
           var25 = var32;
           var12 = var25;
           for (var13 = 0; var11.length > var13; var13++) {
-            var12[var13] = uha.a(5907, param1);
+            var12[var13] = CircleMovementLocomotor.a(5907, param1);
             var14 = pa.b((byte) 121);
             var11[var13] = new BitSet(var14);
             for (var15 = 0; var14 > var15; var15++) {
-              if (uha.a(5907, param1)) {
+              if (CircleMovementLocomotor.a(5907, param1)) {
                 var11[var13].set(var15);
               }
               var11[var13].get(var15);
@@ -1381,7 +1381,7 @@ public final class TombRacer extends rfa implements ls {
           SecondaryNodeDequeIterator.field_a.a(120, param1);
           SecondaryNodeDequeIterator.field_a.j((byte) -121);
           iqa.field_c.a(-68);
-          ira.a(false, -1, (byte) 83);
+          ConstrainToRectangleLocomotor.a(false, -1, (byte) 83);
           vda.field_q = false;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1481,7 +1481,7 @@ public final class TombRacer extends rfa implements ls {
               if (var6 != var7 &&
                 1 == var6) {
                 var8 = SecondaryNodeDequeIterator.field_a.field_k.c(var5, 0);
-                var9 = im.a(1, gl.$cfr$intArgs$a$53ce4ab4c593(107, ad.field_h, new String[]{var8}), 111, var5, var8);
+                var9 = PortalBehaviour.a(1, gl.$cfr$intArgs$a$53ce4ab4c593(107, ad.field_h, new String[]{var8}), 111, var5, var8);
                 iqa.field_c.a(0, var9);
               }
             }
@@ -1532,24 +1532,24 @@ public final class TombRacer extends rfa implements ls {
         }
         ki.b(false, 3);
         ua.b(4, 2);
-        gw.b(-104, 6);
+        PlantComponent.b(-104, 6);
         mda.b(7, (byte) -120);
         if (param0 != 1) {
-          if (vd.field_n) {
+          if (RandomMazeBehaviour.field_n) {
             era.field_c = true;
             if (null != SecondaryNodeDequeIterator.field_a &&
               !SecondaryNodeDequeIterator.field_a.d((byte) 79)) {
               vj.a(ph.field_k, -114);
               SecondaryNodeDequeIterator.field_a = null;
-              ira.a(false, 1, (byte) 122);
+              ConstrainToRectangleLocomotor.a(false, 1, (byte) 122);
             } else {
               wm.field_a = null;
               SecondaryNodeDequeIterator.field_a = null;
               fp.a(-82);
-              ira.a(false, 0, (byte) 124);
+              ConstrainToRectangleLocomotor.a(false, 0, (byte) 124);
             }
             ((wv) (hb.field_t)).a(0, 0, false);
-            vd.field_n = false;
+            RandomMazeBehaviour.field_n = false;
             iqa.field_c.c(-89);
           }
           vda.field_q = false;
@@ -1565,7 +1565,7 @@ public final class TombRacer extends rfa implements ls {
           rqa var3 = (rqa) null;
           this.a(false, (rqa) null, (byte) 51);
         }
-        ih.D(17229);
+        LaserShooterComponent.D(17229);
         cna.field_a = false;
         if (oq.a((byte) 124).a(~param0)) {
           return;

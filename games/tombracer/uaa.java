@@ -35,7 +35,7 @@ final class uaa {
             if (param1.field_d == 4) {
               var2_intLifetime1 = bma.field_t[param1.field_d];
             } else {
-              if (~param1.field_i != ~rb.field_r) {
+              if (~param1.field_i != ~SimpleConditionBehaviour.field_r) {
                 var2_intLifetime1 = bma.field_t[param1.field_d];
               } else {
                 var2_intLifetime1 = pm.field_a[param1.field_d];

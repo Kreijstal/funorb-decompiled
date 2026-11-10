@@ -288,7 +288,7 @@ final class voa extends ci {
                     var12++;
                   }
                   if (var21 != null &&
-                    ue.a(var21, 0)) {
+                    MiscItemBehaviour.a(var21, 0)) {
                     var8[1][var13] = fna.field_k;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
@@ -372,12 +372,12 @@ final class voa extends ci {
           BufferedSocket.field_g != bea.field_a) && (bea.field_a == gn.field_C.field_e &&
           gn.field_C.field_f == bea.field_g)) {
           if (null != uu.field_a) {
-            hn.c(false, 2);
+            MazeComponent.c(false, 2);
           } else {
             if (null == ifa.field_n) {
               re.a(-29040);
             } else {
-              hn.c(true, 2);
+              MazeComponent.c(true, 2);
             }
           }
         }
@@ -388,7 +388,7 @@ final class voa extends ci {
         }
         di.a((byte) -98, param1);
         if (mla.field_a > 0) {
-          jc.a(param5, true, param1, param6);
+          SimpleHoverMountComponent.a(param5, true, param1, param6);
         }
         dl.field_t.field_x = tka.field_q.field_x;
         dl.field_t.field_z = 1;
@@ -396,7 +396,7 @@ final class voa extends ci {
           vu.a((byte) 1, param5, param1, param6);
         }
         if (0 < fp.field_e) {
-          aja.a(param1, -1, param6, param8, param5);
+          CoinBagItemComponent.a(param1, -1, param6, param8, param5);
         }
         if (tla.field_e &&
           uu.field_a.field_Mb >= uu.field_a.field_Jb) {

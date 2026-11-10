@@ -27,11 +27,11 @@ final class re {
         db.field_s.a(OpenGlToolkit.field_fd.field_G, OpenGlToolkit.field_fd.field_t - 40 - 2 - 30, param0 + 5264, 30, 0);
         gta.field_b.a(68, 30, -23776, 5, 5);
         iia.field_r.a(78, 30, -23776, 5, 75);
-        spa.field_o.a(48, 30, -23776, 5, 155);
+        RotateLocomotor.field_o.a(48, 30, -23776, 5, 155);
         if (param0 == -29040) {
           l.field_K.a(48, 30, -23776, 5, 205);
           var2 = rca.field_p ? 250 : 200;
-          aw.field_I.a(-var2 + 363, 30, -23776, 5, 5 + var2);
+          MirrorComponent.field_I.a(-var2 + 363, 30, -23776, 5, 5 + var2);
           cq.field_e.a(-365 + (-5 + (OpenGlToolkit.field_fd.field_G - 5)), 30, -23776, 5, 370);
           nsa.field_i.a(-5 + (db.field_s.field_G - 5), 2, (byte) 127, 5, io.field_a, -42 + db.field_s.field_t, 37);
           var3 = (2 + OpenGlToolkit.field_fd.field_G) / 2;

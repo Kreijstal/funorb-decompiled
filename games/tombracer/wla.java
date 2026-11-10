@@ -163,7 +163,7 @@ final class wla extends jea {
             this.field_xb.field_ib = 16764006;
             this.field_wb.b(-125, this.field_xb);
             this.field_xb.field_sb = "|";
-            if (!(rja.field_e < 5) ||
+            if (!(PrimMazeGenerator.field_e < 5) ||
               !(ld.field_e < 2)) {
               regionExit1: {
                 stackIn_7_0 = this;
@@ -171,7 +171,7 @@ final class wla extends jea {
                 stackIn_7_2 = null;
                 stackIn_7_3 = 0L;
                 stackIn_7_4 = (ta) (param9);
-                if (rja.field_e < 7) {
+                if (PrimMazeGenerator.field_e < 7) {
                   stackIn_7_0Lifetime1 = this;
                   stackIn_7_1Lifetime1 = null;
                   stackIn_7_2Lifetime1 = null;
@@ -199,8 +199,8 @@ final class wla extends jea {
             this.field_wb.b(-122, var28[1]);
             var28[2] = new jea(0L, (jea) null);
             this.field_wb.b(-127, var28[2]);
-            this.field_yb = new jea[rh.field_n];
-            for (var16 = 0; rh.field_n > var16; var16++) {
+            this.field_yb = new jea[TouchSwitchBehaviour.field_n];
+            for (var16 = 0; TouchSwitchBehaviour.field_n > var16; var16++) {
               if (null != aca.field_h[var16]) {
                 this.field_yb[var16] = new jea(0L, param10, aca.field_h[var16]);
                 this.field_yb[var16].field_z = 0;
@@ -223,11 +223,11 @@ final class wla extends jea {
             if (var16Lifetime2 < var17Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
-            var17Lifetime3 = param6.field_H.b(lo.field_o);
+            var17Lifetime3 = param6.field_H.b(TeleportLocomotor.field_o);
             if (var17Lifetime3 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime3;
             }
-            for (var17Lifetime4 = 0; var17Lifetime4 < rh.field_n; var17Lifetime4++) {
+            for (var17Lifetime4 = 0; var17Lifetime4 < TouchSwitchBehaviour.field_n; var17Lifetime4++) {
               if (this.field_yb[var17Lifetime4] != null) {
                 var18 = this.field_yb[var17Lifetime4].b((byte) 69);
                 if (var18 > var16Lifetime2) {
@@ -262,7 +262,7 @@ final class wla extends jea {
               var17Lifetime5 = var18Lifetime4;
             }
             var18Lifetime5 = 0;
-            var18Lifetime5 = this.a(param6, lo.field_o, var16Lifetime2, var18Lifetime5, 8421504, var28[2]);
+            var18Lifetime5 = this.a(param6, TeleportLocomotor.field_o, var16Lifetime2, var18Lifetime5, 8421504, var28[2]);
             var18Lifetime5 = this.a(var18Lifetime5, 13, var28[2], var16Lifetime2, this.field_yb[13]);
             var18Lifetime5 = this.a(var18Lifetime5, 13, var28[2], var16Lifetime2, this.field_yb[21]);
             var18Lifetime5 = this.a(var18Lifetime5, 13, var28[2], var16Lifetime2, this.field_yb[11]);
@@ -307,7 +307,7 @@ final class wla extends jea {
             this.a(var23, var24, -23776, var26, var25);
             return;
           }
-          this.field_Bb = new jea(0L, param8, rh.field_r);
+          this.field_Bb = new jea(0L, param8, TouchSwitchBehaviour.field_r);
           this.field_Bb.field_z = 1;
           this.field_Bb.field_ib = 11184810;
           this.field_wb.b(-126, this.field_Bb);
@@ -464,7 +464,7 @@ final class wla extends jea {
             stackIn_7_1 = !(this.field_Ab.field_cb);
             stackIn_6_0.field_cb = stackIn_7_1;
           }
-          for (var3 = 0; var3 < rh.field_n; var3++) {
+          for (var3 = 0; var3 < TouchSwitchBehaviour.field_n; var3++) {
             if (null != this.field_yb[var3]) {
               stackIn_15_0 = this.field_yb[var3];
               stackIn_16_1 = !(this.field_vb.length() <= 0);

@@ -89,7 +89,7 @@ final class je extends haa {
         byte[] var2 = ck.field_c[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var4_int < var1; var4_int++) {
-          var3[var4_int] = mga.field_g[sea.c(255, (int) var2[var4_int])];
+          var3[var4_int] = mga.field_g[SnakePitBehaviour.c(255, (int) var2[var4_int])];
         }
         if (param0 != 69) {
           return (Sprite) null;

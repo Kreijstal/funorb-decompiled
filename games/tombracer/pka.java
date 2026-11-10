@@ -30,7 +30,7 @@ final class pka {
           if (fja.h(89)) {
             if (una.a((byte) -87)) {
               if (sr.a(125)) {
-                var2 = (-1 + lpa.field_o << 8) / 16;
+                var2 = (-1 + PlatformBehaviour.field_o << 8) / 16;
                 if (0 < var2) {
                   var1 = 1;
                   bea.c(0, 0, bea.field_g, bea.field_a, 0, var2);
@@ -39,11 +39,11 @@ final class pka {
               }
               return var1 != 0;
             }
-            bqa.a(dq.field_f == null ? bn.field_n : true, 113);
+            bqa.a(dq.field_f == null ? VortexBehaviour.field_n : true, 113);
             var1 = 1;
           }
           if (sr.a(125)) {
-            var2Lifetime4 = (-1 + lpa.field_o << 8) / 16;
+            var2Lifetime4 = (-1 + PlatformBehaviour.field_o << 8) / 16;
             if (0 < var2Lifetime4) {
               var1 = 1;
               bea.c(0, 0, bea.field_g, bea.field_a, 0, var2Lifetime4);
@@ -59,20 +59,20 @@ final class pka {
                 if (!sr.a(125)) {
                   return var1 != 0;
                 }
-                var2Lifetime1 = (-1 + lpa.field_o << 8) / 16;
+                var2Lifetime1 = (-1 + PlatformBehaviour.field_o << 8) / 16;
                 if (0 < var2Lifetime1) {
                   var1 = 1;
                   bea.c(0, 0, bea.field_g, bea.field_a, 0, var2Lifetime1);
                 }
                 return var1 != 0;
               }
-              bqa.a(dq.field_f == null ? bn.field_n : true, 113);
+              bqa.a(dq.field_f == null ? VortexBehaviour.field_n : true, 113);
               var1 = 1;
             }
             if (!sr.a(125)) {
               return var1 != 0;
             }
-            var2Lifetime1 = (-1 + lpa.field_o << 8) / 16;
+            var2Lifetime1 = (-1 + PlatformBehaviour.field_o << 8) / 16;
             if (0 < var2Lifetime1) {
               var1 = 1;
               bea.c(0, 0, bea.field_g, bea.field_a, 0, var2Lifetime1);
@@ -87,20 +87,20 @@ final class pka {
               if (!sr.a(125)) {
                 return var1 != 0;
               }
-              var2Lifetime1Lifetime1 = (-1 + lpa.field_o << 8) / 16;
+              var2Lifetime1Lifetime1 = (-1 + PlatformBehaviour.field_o << 8) / 16;
               if (0 < var2Lifetime1Lifetime1) {
                 var1 = 1;
                 bea.c(0, 0, bea.field_g, bea.field_a, 0, var2Lifetime1Lifetime1);
               }
               return var1 != 0;
             }
-            bqa.a(dq.field_f == null ? bn.field_n : true, 113);
+            bqa.a(dq.field_f == null ? VortexBehaviour.field_n : true, 113);
             var1 = 1;
           }
           if (!sr.a(125)) {
             return var1 != 0;
           }
-          var2Lifetime1Lifetime2 = (-1 + lpa.field_o << 8) / 16;
+          var2Lifetime1Lifetime2 = (-1 + PlatformBehaviour.field_o << 8) / 16;
           if (0 < var2Lifetime1Lifetime2) {
             var1 = 1;
             bea.c(0, 0, bea.field_g, bea.field_a, 0, var2Lifetime1Lifetime2);
@@ -114,20 +114,20 @@ final class pka {
             if (!sr.a(125)) {
               return var1 != 0;
             }
-            var2Lifetime2 = (-1 + lpa.field_o << 8) / 16;
+            var2Lifetime2 = (-1 + PlatformBehaviour.field_o << 8) / 16;
             if (0 < var2Lifetime2) {
               var1 = 1;
               bea.c(0, 0, bea.field_g, bea.field_a, 0, var2Lifetime2);
             }
             return var1 != 0;
           }
-          bqa.a(dq.field_f == null ? bn.field_n : true, 113);
+          bqa.a(dq.field_f == null ? VortexBehaviour.field_n : true, 113);
           var1 = 1;
         }
         if (!sr.a(125)) {
           return var1 != 0;
         }
-        var2Lifetime3 = (-1 + lpa.field_o << 8) / 16;
+        var2Lifetime3 = (-1 + PlatformBehaviour.field_o << 8) / 16;
         if (0 < var2Lifetime3) {
           var1 = 1;
           bea.c(0, 0, bea.field_g, bea.field_a, 0, var2Lifetime3);

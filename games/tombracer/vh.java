@@ -57,7 +57,7 @@ final class vh {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_j[var3Lifetime1] = oo.a(this.field_j[var3Lifetime1], vka.field_I[var4][sea.c(255, (int)(this.field_i[sea.c(-var4 + var3Lifetime1, 7)] >>> var5))]);
+              this.field_j[var3Lifetime1] = oo.a(this.field_j[var3Lifetime1], PortalComponent.field_I[var4][SnakePitBehaviour.c(255, (int)(this.field_i[SnakePitBehaviour.c(-var4 + var3Lifetime1, 7)] >>> var5))]);
               var5 -= 8;
               var4++;
             }
@@ -65,14 +65,14 @@ final class vh {
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.field_i[var3Lifetime1Lifetime1] = this.field_j[var3Lifetime1Lifetime1];
           }
-          this.field_i[0] = oo.a(this.field_i[0], vka.field_H[var2Lifetime2]);
+          this.field_i[0] = oo.a(this.field_i[0], PortalComponent.field_H[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; 8 > var3Lifetime1Lifetime2; var3Lifetime1Lifetime2++) {
             this.field_j[var3Lifetime1Lifetime2] = this.field_i[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (8 > var7) {
-              this.field_j[var3Lifetime1Lifetime2] = oo.a(this.field_j[var3Lifetime1Lifetime2], vka.field_I[var7][sea.c(255, (int)(this.field_f[sea.c(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1))]);
+              this.field_j[var3Lifetime1Lifetime2] = oo.a(this.field_j[var3Lifetime1Lifetime2], PortalComponent.field_I[var7][SnakePitBehaviour.c(255, (int)(this.field_f[SnakePitBehaviour.c(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1))]);
               var7++;
               var5Lifetime1 -= 8;
             }
@@ -133,7 +133,7 @@ final class vh {
                 this.field_k = 0;
                 this.field_a = 0;
               }
-              this.field_e[this.field_k] = (byte)sea.c(255, var8 << 8 - var7);
+              this.field_e[this.field_k] = (byte)SnakePitBehaviour.c(255, var8 << 8 - var7);
               var5_int++;
               this.field_a = this.field_a + var7;
               param1 = param1 - 8L;
@@ -158,7 +158,7 @@ final class vh {
               this.field_a = 0;
               this.field_k = 0;
             }
-            this.field_e[this.field_k] = (byte)sea.c(255, var8Lifetime1 << 8 - var7);
+            this.field_e[this.field_k] = (byte)SnakePitBehaviour.c(255, var8Lifetime1 << 8 - var7);
             this.field_a = this.field_a + (int)param1;
           } else {
             this.field_a = (int)((long)this.field_a + param1);
@@ -231,16 +231,16 @@ final class vh {
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               dga.a(var14, 0);
               if (var6_intLifetime1 != 0) {
-                qt.a(kc.field_b, vd.field_p, ir.field_a, var6_intLifetime1, tna.field_f, (byte) -90);
+                qt.a(kc.field_b, RandomMazeBehaviour.field_p, ir.field_a, var6_intLifetime1, DivisionMazeGenerator.field_f, (byte) -90);
               } else {
                 var3.field_g = ir.field_a;
                 var3.field_f = kc.field_b;
-                var3.field_l = tna.field_f;
-                var3.field_j = vd.field_p;
-                qt.a(kc.field_b, vd.field_p, ir.field_a, var6_intLifetime1, tna.field_f, (byte) -97);
+                var3.field_l = DivisionMazeGenerator.field_f;
+                var3.field_j = RandomMazeBehaviour.field_p;
+                qt.a(kc.field_b, RandomMazeBehaviour.field_p, ir.field_a, var6_intLifetime1, DivisionMazeGenerator.field_f, (byte) -97);
               }
             }
-            ri.a(var5, (byte) 29);
+            SweepRotateLocomotor.a(var5, (byte) 29);
             dupTemp$0 = new String[2][var5];
             var3.field_h = dupTemp$0;
             var6 = dupTemp$0;
@@ -254,11 +254,11 @@ final class vh {
               var11 = boa.field_n[var9];
               var6[0][var10] = bra.field_M[var11];
               var7[0][4 * var10] = jk.field_h[var11];
-              var7[0][1 + 4 * var10] = cu.field_o[var11];
+              var7[0][1 + 4 * var10] = DamageableBehaviour.field_o[var11];
               var7[0][2 + 4 * var10] = bq.field_h[var11];
-              var7[0][var10 * 4 + 3] = im.field_o[var11];
-              if (ue.a(bra.field_M[var11], 0) &&
-                im.field_o[var11] + cu.field_o[var11] + bq.field_h[var11] == 0) {
+              var7[0][var10 * 4 + 3] = PortalBehaviour.field_o[var11];
+              if (MiscItemBehaviour.a(bra.field_M[var11], 0) &&
+                PortalBehaviour.field_o[var11] + DamageableBehaviour.field_o[var11] + bq.field_h[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -272,11 +272,11 @@ final class vh {
               var11Lifetime1 = boa.field_n[var5 + var9Lifetime1];
               var6[1][var13] = bra.field_M[var11Lifetime1];
               var7[1][4 * var13] = jk.field_h[var11Lifetime1];
-              var7[1][1 + var13 * 4] = cu.field_o[var11Lifetime1];
+              var7[1][1 + var13 * 4] = DamageableBehaviour.field_o[var11Lifetime1];
               var7[1][4 * var13 + 2] = bq.field_h[var11Lifetime1];
-              var7[1][3 + 4 * var13] = im.field_o[var11Lifetime1];
-              if (ue.a(bra.field_M[var11Lifetime1], param0 + 44) &&
-                0 == im.field_o[var11Lifetime1] + (bq.field_h[var11Lifetime1] + cu.field_o[var11Lifetime1])) {
+              var7[1][3 + 4 * var13] = PortalBehaviour.field_o[var11Lifetime1];
+              if (MiscItemBehaviour.a(bra.field_M[var11Lifetime1], param0 + 44) &&
+                0 == PortalBehaviour.field_o[var11Lifetime1] + (bq.field_h[var11Lifetime1] + DamageableBehaviour.field_o[var11Lifetime1])) {
                 var6[1][var13] = null;
                 var13--;
               }
@@ -335,7 +335,7 @@ final class vh {
         int var8 = 0;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
-          this.field_e[this.field_k] = (byte)fh.a((int) this.field_e[this.field_k], 128 >>> sea.c(this.field_a, 7));
+          this.field_e[this.field_k] = (byte)fh.a((int) this.field_e[this.field_k], 128 >>> SnakePitBehaviour.c(this.field_a, 7));
           this.field_k = this.field_k + 1;
           if (this.field_k > param1) {
             while (this.field_k < 64) {

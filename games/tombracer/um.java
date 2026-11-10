@@ -23,7 +23,7 @@ class um extends DualLinkNode {
           var5 = qia.b(param2, 100, param4, param0);
           var6 = hda.a(param1, 1303, var5);
           var7 = new vb(var5, var6);
-          tna.field_e.b((byte) -57, var7);
+          DivisionMazeGenerator.field_e.b((byte) -57, var7);
           kva.field_n.a(var6);
           stackIn_3_0 = var7;
           return stackIn_3_0;

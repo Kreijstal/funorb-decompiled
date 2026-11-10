@@ -52,7 +52,7 @@ final class kga extends dg {
     final void a(gma param0, int param1, gr param2) {
         int var5 = 0;
         int var6 = 0;
-        ue var7 = null;
+        MiscItemBehaviour var7 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -63,22 +63,22 @@ final class kga extends dg {
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           super.a(param0, param1, param2);
-          if (!(param2 instanceof ue)) {
-            if (param2 instanceof rl) {
+          if (!(param2 instanceof MiscItemBehaviour)) {
+            if (param2 instanceof PowerUpItemBehaviour) {
               this.field_t = 5;
               return;
             }
-            if (param2 instanceof ok) {
+            if (param2 instanceof PowerDownItemBehaviour) {
               this.field_t = 5;
               return;
             }
-            if (!(param2 instanceof ef)) {
+            if (!(param2 instanceof WeaponItemBehaviour)) {
               return;
             }
             this.field_t = 4;
             return;
           }
-          var7 = (ue) (param2);
+          var7 = (MiscItemBehaviour) (param2);
           var5 = var7.j((byte) -77);
           if (var5 == 0) {
             this.field_t = 3;
@@ -136,8 +136,8 @@ final class kga extends dg {
           if (null == this.field_h) {
             return;
           }
-          if (this.field_k instanceof pd) {
-            stackIn_9_0 = (((pd) (this.field_k)).c(-72)) ? 1 : 0;
+          if (this.field_k instanceof ItemBehaviour) {
+            stackIn_9_0 = (((ItemBehaviour) (this.field_k)).c(-72)) ? 1 : 0;
           } else {
             stackIn_9_0 = 0;
           }
@@ -146,7 +146,7 @@ final class kga extends dg {
           var8 = this.field_t;
           if (var8 == 0) {
             if (var6_int == 0) {
-              stackIn_21_0 = rl.field_t[0];
+              stackIn_21_0 = PowerUpItemBehaviour.field_t[0];
             } else {
               stackIn_21_0 = this.field_s.b((byte) 74);
             }
@@ -159,21 +159,21 @@ final class kga extends dg {
             if (var8 != 1) {
               if (var8 != 2) {
                 if (3 == var8) {
-                  var7 = rl.field_t[4];
+                  var7 = PowerUpItemBehaviour.field_t[4];
                 } else {
                   if (var8 == 4) {
-                    var7 = rl.field_t[5];
+                    var7 = PowerUpItemBehaviour.field_t[5];
                   } else {
                     if (var8 == 5) {
-                      var7 = rl.field_t[7];
+                      var7 = PowerUpItemBehaviour.field_t[7];
                     }
                   }
                 }
               } else {
-                var7 = rl.field_t[2];
+                var7 = PowerUpItemBehaviour.field_t[2];
               }
             } else {
-              var7 = rl.field_t[1];
+              var7 = PowerUpItemBehaviour.field_t[1];
             }
           }
           var8Lifetime1 = 73 / ((-38 - param4) / 47);

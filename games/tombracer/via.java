@@ -100,7 +100,7 @@ final class via extends java.awt.Canvas implements java.awt.event.FocusListener 
         gda var11 = null;
         try {
           if (param0 == null) {
-            param0 = qi.field_O;
+            param0 = AllPlatformsMazeComponent.field_O;
           }
           if (param0 == null) {
             return;

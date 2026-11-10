@@ -285,7 +285,7 @@ final class MatchState implements dv {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          this.field_h = uha.a(5907, param0);
+          this.field_h = CircleMovementLocomotor.a(5907, param0);
           this.field_z = uma.a(32, param0, -26803);
           this.field_A = param0.b((byte) 44, 32);
           this.field_C = param0.b((byte) 44, 32);
@@ -295,8 +295,8 @@ final class MatchState implements dv {
           this.field_o = uma.a(32, param0, -26803);
           this.field_q = c.a(8, this.field_q, (byte) 93, param0);
           this.field_P = param0.b((byte) 44, 32);
-          this.field_s = uha.a(5907, param0);
-          if (!uha.a(5907, param0)) {
+          this.field_s = CircleMovementLocomotor.a(5907, param0);
+          if (!CircleMovementLocomotor.a(5907, param0)) {
             this.field_i = null;
           } else {
             if (null == this.field_i) {

@@ -31,7 +31,7 @@ final class oe extends kca {
             if (var3 != null) {
               if (var3.b(-4666) == uh.field_k &&
                 !param1.equals(this.field_k.field_o)) {
-                stackIn_7_0 = bha.field_q;
+                stackIn_7_0 = FleeLocomotor.field_q;
                 return stackIn_7_0;
               }
               stackIn_9_0 = var3.a(103);
@@ -44,7 +44,7 @@ final class oe extends kca {
           if (param1.equals(this.field_k.field_o)) {
             return null;
           }
-          stackIn_15_0 = bha.field_q;
+          stackIn_15_0 = FleeLocomotor.field_q;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

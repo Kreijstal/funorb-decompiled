@@ -14,7 +14,7 @@ final class kra {
         if (param0) {
           return;
         }
-        era.field_d = new ara(lma.field_r, oba.field_f, cga.field_g, kua.field_i, kt.field_F, dja.field_p);
+        era.field_d = new ara(lma.field_r, oba.field_f, cga.field_g, kua.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p);
     }
 
     public static void a(int param0) {

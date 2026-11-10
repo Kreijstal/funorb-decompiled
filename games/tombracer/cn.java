@@ -409,7 +409,7 @@ final class cn {
             var10 = ir.a(this.field_a[param0], 13588, false);
           }
           try {
-            var37 = sua.a(var10, -101);
+            var37 = RotaterMountComponent.a(var10, -101);
             var28 = var37;
             var24 = var28;
             var44 = var24;

@@ -328,7 +328,7 @@ abstract class eo extends GraphicsToolkit {
         if (param1 != 1) {
           if (param1 != 0) {
             if (param1 == 2) {
-              this.a(ln.field_F, (byte) -110, r.field_m);
+              this.a(PlatformComponent.field_F, (byte) -110, r.field_m);
             } else {
               if (param1 != 3) {
                 if (param1 == 4) {
@@ -342,7 +342,7 @@ abstract class eo extends GraphicsToolkit {
             this.a(iw.field_c, (byte) -110, iw.field_c);
           }
         } else {
-          this.a(ln.field_F, (byte) -110, ln.field_F);
+          this.a(PlatformComponent.field_F, (byte) -110, PlatformComponent.field_F);
         }
     }
 
@@ -2602,7 +2602,7 @@ abstract class eo extends GraphicsToolkit {
                 for (var8 = 0; param0.field_i > var8; var8++) {
                   incrementValue$2 = var6;
                   var6++;
-                  var4[incrementValue$2] = fh.a(param0.field_h[var5] << 24, param0.field_g[sea.c((int) param0.field_f[var5], 255)]);
+                  var4[incrementValue$2] = fh.a(param0.field_h[var5] << 24, param0.field_g[SnakePitBehaviour.c((int) param0.field_f[var5], 255)]);
                   var5++;
                 }
               }

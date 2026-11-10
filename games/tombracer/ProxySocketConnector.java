@@ -47,7 +47,7 @@ final class ProxySocketConnector extends SocketConnector {
             return stackIn_11_0;
           }
           if (param2 == 8) {
-            stackIn_14_0 = ipa.field_N;
+            stackIn_14_0 = WheeledMountComponent.field_N;
             return stackIn_14_0;
           }
           if (param2 == 9) {
@@ -91,7 +91,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
         if (kra.field_a != var1) {
           if (var1 != paa.field_z) {
-            if (nj.field_t == var1) {
+            if (ControllerLocomotor.field_t == var1) {
               baa.field_d.a(0, new ei[]{(ei) ((Object) vea.field_c)});
             } else {
               if (vea.field_c == var1) {
@@ -107,7 +107,7 @@ final class ProxySocketConnector extends SocketConnector {
               }
             }
           } else {
-            baa.field_d.a(0, new ei[]{(ei) ((Object) nj.field_t)});
+            baa.field_d.a(0, new ei[]{(ei) ((Object) ControllerLocomotor.field_t)});
           }
         } else {
           baa.field_d.a(0, new ei[]{(ei) ((Object) paa.field_z)});
@@ -434,7 +434,7 @@ final class ProxySocketConnector extends SocketConnector {
           param2 = param2 - param9;
           param6 = param6 - param7;
           param3 = param3 - param9;
-          var10 = -14 + Math.max(Math.max(vd.b(1, param6), vd.b(1, param0)), vd.b(1, param5));
+          var10 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(1, param6), RandomMazeBehaviour.b(1, param0)), RandomMazeBehaviour.b(1, param5));
           if (0 < var10) {
             param5 = param5 >> var10;
             param0 = param0 >> var10;
@@ -443,7 +443,7 @@ final class ProxySocketConnector extends SocketConnector {
           if (param4 >= -63) {
             field_e = (jpa[]) null;
           }
-          var10Lifetime1 = Math.max(Math.max(vd.b(1, param3), vd.b(1, param1)), vd.b(1, param2)) - 14;
+          var10Lifetime1 = Math.max(Math.max(RandomMazeBehaviour.b(1, param3), RandomMazeBehaviour.b(1, param1)), RandomMazeBehaviour.b(1, param2)) - 14;
           if (var10Lifetime1 > 0) {
             param1 = param1 >> var10Lifetime1;
             param3 = param3 >> var10Lifetime1;

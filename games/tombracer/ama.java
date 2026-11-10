@@ -158,7 +158,7 @@ final class ama extends lba {
               var2_int = -vc.field_q.position + param0;
             }
             oba.field_e.a(param1 + 1, vc.field_q.position, vc.field_q.payload, var2_int);
-            ue.field_s = bva.b((byte) -107);
+            MiscItemBehaviour.field_s = bva.b((byte) -107);
             vc.field_q.position = vc.field_q.position + var2_int;
             if (param0 > vc.field_q.position) {
               return false;

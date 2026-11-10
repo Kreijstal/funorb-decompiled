@@ -159,8 +159,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (param0 != 270) {
             return;
           }
-          var4 = eia.field_r[sla.field_d];
-          eia.field_r[sla.field_d] = var2_long;
+          var4 = EffectSwitchBehaviour.field_r[sla.field_d];
+          EffectSwitchBehaviour.field_r[sla.field_d] = var2_long;
           if (var4 != 0L &&
             var2_long > var4) {
             var6_int = (int)(-var4 + var2_long);
@@ -217,7 +217,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           }
           var6 = this;
           synchronized (var6) {
-            bn.field_n = oea.field_k;
+            VortexBehaviour.field_n = oea.field_k;
           }
           this.a(true);
           return;
@@ -240,7 +240,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (this == kua.field_j &&
             !tla.field_b) {
             boa.field_t = bva.b((byte) -107);
-            vja.a(0, 5000L);
+            TrapSpawner.a(0, 5000L);
             nea.field_c = null;
             this.a((byte) 109, false);
             return;
@@ -316,7 +316,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (null == var4) {
             return false;
           }
-          ira.a(0, var4);
+          ConstrainToRectangleLocomotor.a(0, var4);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -468,7 +468,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
                       if (sqa.a((CharSequence) ((Object) var4), -3) &&
-                        !(jb.a((CharSequence) ((Object) var4), (byte) 70) >= 10)) {
+                        !(WhiteLightSensorComponent.a((CharSequence) ((Object) var4), (byte) 70) >= 10)) {
                         this.a(-6738, "wrongjava");
                         decompiledFrameRemainder3 = (var5 != 0);
                       }
@@ -744,8 +744,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           try {
             try {
               if (kua.field_j != null) {
-                lpa.field_v = lpa.field_v + 1;
-                if (lpa.field_v < 3) {
+                PlatformBehaviour.field_v = PlatformBehaviour.field_v + 1;
+                if (PlatformBehaviour.field_v < 3) {
                   this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
                   return;
                 }
@@ -758,7 +758,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               vu.field_f = 0;
               mma.field_a = param2;
               rv.field_a = param2;
-              sua.field_L = param4;
+              RotaterMountComponent.field_L = param4;
               lp.field_g = 0;
               if (param0) {
                 this.paint((java.awt.Graphics) null);
@@ -770,7 +770,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               var8 = dsa.field_c.a((Runnable) (this), 425, 1);
               while (true) {
                 if (var8.field_b == 0) {
-                  vja.a(0, 10L);
+                  TrapSpawner.a(0, 10L);
                   if (var9 == 0) {
                     continue;
                   }
@@ -883,7 +883,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           nma.field_l.addFocusListener((java.awt.event.FocusListener) (this));
           nma.field_l.requestFocus();
           oea.field_k = true;
-          bn.field_n = true;
+          VortexBehaviour.field_n = true;
           bsa.field_k = true;
           wla.field_Cb = false;
           lt.field_b = bva.b((byte) -107);

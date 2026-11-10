@@ -38,7 +38,7 @@ public final class Direct3DToolkit extends eo {
     final void a(dn param0, byte param1) {
         int var3;
         var3 = 0;
-        if (gd.field_H == param0) {
+        if (IdolItemComponent.field_H == param0) {
           var3 = 65536;
         } else {
           if (lsa.field_c == param0) {
@@ -70,7 +70,7 @@ public final class Direct3DToolkit extends eo {
         if (param1 == di.field_d) {
           return 3;
         }
-        if (param1 == nj.field_r) {
+        if (param1 == ControllerLocomotor.field_r) {
           return 1;
         }
         if (param1 == fma.field_f) {
@@ -255,7 +255,7 @@ public final class Direct3DToolkit extends eo {
     }
 
     private final static int a(ica param0, int param1) {
-        if (ln.field_F == param0) {
+        if (PlatformComponent.field_F == param0) {
           return 2;
         }
         if (iw.field_c == param0) {
@@ -497,7 +497,7 @@ public final class Direct3DToolkit extends eo {
           this.field_jd.SetSamplerState(var2, 5, 2);
           this.field_jd.SetSamplerState(var2, 1, 1);
           this.field_jd.SetSamplerState(var2, 2, 1);
-          this.field_Rc[var2] = aw.field_G;
+          this.field_Rc[var2] = MirrorComponent.field_G;
           var3 = this.field_bd;
           var4 = var2;
           this.field_Uc[var2] = true;
@@ -610,10 +610,10 @@ public final class Direct3DToolkit extends eo {
     }
 
     private final static int a(boolean param0, hs param1) {
-        if (param1 == aw.field_G) {
+        if (param1 == MirrorComponent.field_G) {
           return 2;
         }
-        if (param1 == ue.field_v) {
+        if (param1 == MiscItemBehaviour.field_v) {
           return 1;
         }
         if (!param0) {

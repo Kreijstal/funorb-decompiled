@@ -132,7 +132,7 @@ final class eoa {
         var2 = this.field_e.length;
         System.arraycopy(this.field_e, 0, field_j, 0, var2);
         var3 = field_d[this.field_i - 1];
-        var4 = bia.a((byte) 93, var3 - 1);
+        var4 = CauldronComponent.a((byte) 93, var3 - 1);
         field_c[0] = fg.a(var4);
         field_c[1] = fg.a(var4);
         var5 = 2;

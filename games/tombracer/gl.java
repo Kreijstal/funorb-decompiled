@@ -56,7 +56,7 @@ final class gl extends qe {
                 continue;
               }
               var5++;
-              var8 = jb.a((CharSequence) ((Object) var7_ref_String), (byte) 70);
+              var8 = WhiteLightSensorComponent.a((CharSequence) ((Object) var7_ref_String), (byte) 70);
               var4 = var4 + (param2[var8].length() + (-var5 + var6_int));
               continue;
             }
@@ -93,7 +93,7 @@ final class gl extends qe {
               continue;
             }
             var5Lifetime1++;
-            var10 = jb.a((CharSequence) ((Object) var9), (byte) 70);
+            var10 = WhiteLightSensorComponent.a((CharSequence) ((Object) var9), (byte) 70);
             discarded$0 = var6.append(param1.substring(var7, var8Lifetime1));
             discarded$1 = var6.append(param2[var10]);
             var7 = var5Lifetime1;
@@ -309,7 +309,7 @@ final class gl extends qe {
                 continue;
               }
               var5++;
-              var8 = jb.a((CharSequence) ((Object) var7_ref_String), (byte) 70);
+              var8 = WhiteLightSensorComponent.a((CharSequence) ((Object) var7_ref_String), (byte) 70);
               var4 = var4 + (param2[var8].length() + (-var5 + var6_int));
               continue;
             }
@@ -346,7 +346,7 @@ final class gl extends qe {
               continue;
             }
             var5Lifetime1++;
-            var10 = jb.a((CharSequence) ((Object) var9), (byte) 70);
+            var10 = WhiteLightSensorComponent.a((CharSequence) ((Object) var9), (byte) 70);
             discarded$0 = var6.append(param1.substring(var7, var8Lifetime1));
             discarded$1 = var6.append(param2[var10]);
             var7 = var5Lifetime1;

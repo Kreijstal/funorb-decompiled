@@ -32,7 +32,7 @@ final class sb {
         RuntimeException var2_ref = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
-          var7 = new int[pd.a(param1, 2048)];
+          var7 = new int[ItemBehaviour.a(param1, 2048)];
           var2 = var7;
           var3 = 0;
           for (var4 = param0; param1.length > var4; var4++) {
@@ -67,9 +67,9 @@ final class sb {
           bja.field_a = param4;
           qoa.field_b = param1;
           ua.field_a = param2;
-          nj.field_v = param3;
-          ns.field_j = new nda(qoa.field_b, nj.field_v);
-          bia.field_J = new u[237];
+          ControllerLocomotor.field_v = param3;
+          ns.field_j = new nda(qoa.field_b, ControllerLocomotor.field_v);
+          CauldronComponent.field_J = new u[237];
           int var5_int = -51 % ((param0 - 32) / 59);
           fna.field_j = new qua[4];
         } catch (RuntimeException runtimeException) {

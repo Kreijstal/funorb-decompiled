@@ -56,12 +56,12 @@ abstract class mna {
               var11 = moa.a(var15, 94);
               var12 = var11 + il.c(var15.field_f);
               var13 = uaa.a((byte) -116, var15);
-              var15.field_l = new jea(0L, bn.field_t, var12);
+              var15.field_l = new jea(0L, VortexBehaviour.field_t, var12);
               var6 = var6 + param2;
-              var15.field_l.field_ab = ((bn.field_t.field_ab & 16711422) >> 1) + var13 - (8355711 & var13 >> 1);
-              var15.field_l.field_H = lpa.field_s;
+              var15.field_l.field_ab = ((VortexBehaviour.field_t.field_ab & 16711422) >> 1) + var13 - (8355711 & var13 >> 1);
+              var15.field_l.field_H = PlatformBehaviour.field_s;
               var15.field_l.field_ib = var13;
-              var15.field_l.field_N = -(var13 >> 1 & 8355711) + var13 + ((16711422 & bn.field_t.field_N) >> 1);
+              var15.field_l.field_N = -(var13 >> 1 & 8355711) + var13 + ((16711422 & VortexBehaviour.field_t.field_N) >> 1);
               var5++;
             }
           }
@@ -93,7 +93,7 @@ abstract class mna {
         }
         ne.field_d.field_tb.field_O = var7Lifetime1 - ne.field_d.field_tb.field_t;
         if (ni.field_c &&
-          null != wi.field_s) {
+          null != SimpleMoveLocomotor.field_s) {
           voa.field_v = true;
         }
         var9 = -ne.field_d.field_tb.field_O - (ne.field_d.field_tb.field_t - ne.field_d.field_vb.field_t);

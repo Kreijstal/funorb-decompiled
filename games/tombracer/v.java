@@ -563,16 +563,16 @@ final class v {
     }
 
     final static vb a(int param0, byte param1, int param2, int param3, int param4, int param5) {
-        if (null == bia.field_J) {
+        if (null == CauldronComponent.field_J) {
           return null;
         }
         if (param1 > -24) {
           field_g = (String[]) null;
         }
-        u var6 = bia.field_J[param3];
+        u var6 = CauldronComponent.field_J[param3];
         if (var6 == null) {
           fea.a(false, param3);
-          var6 = bia.field_J[param3];
+          var6 = CauldronComponent.field_J[param3];
         }
         if (param4 > 0) {
           return um.a(param2, param4, var6, -6455, param5);

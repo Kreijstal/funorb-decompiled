@@ -87,16 +87,16 @@ final class vb extends IntrusiveNode {
                     if (0 == var18) {
                       if (var17 >= 0 &&
                         var17 < uoa.field_e) {
-                        tl.a(var16Lifetime2 + var17, var18, param2, 1535993377, param8);
+                        TimeSwitchBehaviour.a(var16Lifetime2 + var17, var18, param2, 1535993377, param8);
                       }
                     } else {
                       if (uoa.field_e <= var17 + var18) {
                         var18 = -var17 + (uoa.field_e - 1);
                       }
                       if (var17 >= 0) {
-                        tl.a(var16Lifetime2 + var17, var18, param2, 1535993377, param8);
+                        TimeSwitchBehaviour.a(var16Lifetime2 + var17, var18, param2, 1535993377, param8);
                       } else {
-                        tl.a(var16Lifetime2, var18 + var17, param2, 1535993377, param8);
+                        TimeSwitchBehaviour.a(var16Lifetime2, var18 + var17, param2, 1535993377, param8);
                       }
                     }
                   }
@@ -165,16 +165,16 @@ final class vb extends IntrusiveNode {
                 if (var17Lifetime1 == 0) {
                   if (var16Lifetime1 >= 0 &&
                     var16Lifetime1 < uoa.field_e) {
-                    tl.a(var15Lifetime1 + var16Lifetime1, var17Lifetime1, param2, 1535993377, param8);
+                    TimeSwitchBehaviour.a(var15Lifetime1 + var16Lifetime1, var17Lifetime1, param2, 1535993377, param8);
                   }
                 } else {
                   if (uoa.field_e <= var16Lifetime1 + var17Lifetime1) {
                     var17Lifetime1 = -1 + (-var16Lifetime1 + uoa.field_e);
                   }
                   if (var16Lifetime1 < 0) {
-                    tl.a(var15Lifetime1, var17Lifetime1 + var16Lifetime1, param2, 1535993377, param8);
+                    TimeSwitchBehaviour.a(var15Lifetime1, var17Lifetime1 + var16Lifetime1, param2, 1535993377, param8);
                   } else {
-                    tl.a(var15Lifetime1 + var16Lifetime1, var17Lifetime1, param2, 1535993377, param8);
+                    TimeSwitchBehaviour.a(var15Lifetime1 + var16Lifetime1, var17Lifetime1, param2, 1535993377, param8);
                   }
                 }
               }

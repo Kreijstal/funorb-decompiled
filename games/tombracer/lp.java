@@ -83,7 +83,7 @@ final class lp {
                 var2.b((byte) -107, new mi(qba.field_c, var3.field_b - 1));
                 continue;
               }
-              var2.b((byte) -75, ska.a(param0 - 93, var3));
+              var2.b((byte) -75, WeaponShooterBehaviour.a(param0 - 93, var3));
               continue;
             }
             var2.b((byte) -81, hb.a(var3, false));

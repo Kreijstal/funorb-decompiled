@@ -1,0 +1,208 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class MirrorComponent extends kna {
+    static jpa field_F;
+    static jea field_I;
+    static int[] field_H;
+    static hs field_G;
+
+    final static boolean c(int param0, int param1, int param2) {
+        if (param0 != -17275) {
+          field_F = (jpa) null;
+        }
+        return (55 & param2) != 0 ? true : false;
+    }
+
+    final boolean v(int param0) {
+        if (param0 != 555277520) {
+          return false;
+        }
+        return false;
+    }
+
+    final boolean s(int param0) {
+        if (param0 != -15254) {
+          field_H = (int[]) null;
+          return false;
+        }
+        return false;
+    }
+
+    final void q(byte param0) {
+        super.q(param0);
+        this.b(param0 ^ -66, 2097152, 2097152);
+    }
+
+    final static boolean d(int param0, int param1, int param2) {
+        if (param0 != -26571) {
+          field_G = (hs) null;
+        }
+        return (384 & param1) != 0 ? true : false;
+    }
+
+    public static void A(int param0) {
+        field_H = null;
+        field_F = null;
+        if (param0 != 4) {
+          field_F = (jpa) null;
+        }
+        field_G = null;
+        field_I = null;
+    }
+
+    final boolean z(int param0) {
+        if (param0 != 0) {
+          PacketBuffer var3 = (PacketBuffer) null;
+          MirrorComponent.a((PacketBuffer) null, -27);
+          return false;
+        }
+        return false;
+    }
+
+    final int t(int param0) {
+        if (param0 != 8) {
+          field_H = (int[]) null;
+        }
+        return 7;
+    }
+
+    MirrorComponent(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
+        super(param0, param1, param2, param3);
+    }
+
+    final static ci a(PacketBuffer param0, int param1) {
+        int var5 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        ci var3 = null;
+        int var4 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        ci stackIn_5_0 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        var7 = TombRacer.field_G ? 1 : 0;
+        try {
+          param0.h(255);
+          var2_int = param0.h(param1 + 255);
+          var3 = gu.a((byte) -62, var2_int);
+          var3.field_f = param0.h(param1 + 255);
+          var4 = param0.h(param1 ^ 255);
+          for (var5 = param1; var5 < var4; var5++) {
+            var6 = param0.h(param1 + 255);
+            var3.a((byte) 107, param0, var6);
+          }
+          var3.b((byte) 116);
+          stackIn_5_0 = var3;
+          return stackIn_5_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_8_0 = var2;
+          stackIn_8_1 = new StringBuilder().append("aw.TB(");
+          if (param0 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
+          }
+          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    MirrorComponent(Room param0, int param1) {
+        super(param0, param1);
+    }
+
+    final void a(boolean param0, BitPacketBuffer param1) {
+        try {
+          super.a(param0, param1);
+        } catch (RuntimeException runtimeException) {
+          throw tba.a((Throwable) ((Object) runtimeException), "aw.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final boolean n(byte param0) {
+        if (param0 != -122) {
+          return true;
+        }
+        return true;
+    }
+
+    final Trap a(boolean param0, int param1, Room param2) {
+        Trap var4 = null;
+        RuntimeException var4_ref = null;
+        SimpleBlockBehaviour var5 = null;
+        Trap var6 = null;
+        MirrorBehaviour var7 = null;
+        mfa var8 = null;
+        int var10 = 0;
+        Trap var11 = null;
+        nq var12 = null;
+        nq var13 = null;
+        boa var14 = null;
+        Trap stackIn_8_0 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        var10 = TombRacer.field_G ? 1 : 0;
+        try {
+          var11 = new Trap(param2, param0);
+          var4 = var11;
+          var11.b((byte) -11, this.field_k, this.field_l);
+          var11.a((byte) -3, 4);
+          var11.h(param1, param1 - 3);
+          if (this.field_m != 19) {
+            var11.e(false, 120);
+          } else {
+            var11.e(true, 117);
+          }
+          var11.g(104, 1);
+          var11.b((byte) 17, false);
+          var11.a(1, (byte) -12, true);
+          var5 = new SimpleBlockBehaviour(param2, param0);
+          var5.a(-28592, true);
+          var11.a((byte) 83, (Behaviour) (var5));
+          var6 = new Trap(param2, param0);
+          var6.b((byte) -11, this.field_k, this.field_l);
+          var6.a((byte) -3, 0);
+          var7 = new MirrorBehaviour(param2, param0);
+          var6.a((byte) 83, (Behaviour) (var7));
+          var11.a(-98, var6);
+          var8 = rm.field_a;
+          if (this.field_m != 19) {
+            var13 = (nq) (var8.a(16, param1 ^ 105));
+            var13.b(8022, 4);
+            var11.a((gr) null, (byte) 124, var13);
+          } else {
+            var12 = (nq) (var8.a(16, 127));
+            var12.b(param1 + 8019, 1);
+            var11.a((gr) null, (byte) 124, var12);
+          }
+          var14 = (boa) (var8.a(7, 125));
+          var14.b(param1 + 116, 9);
+          var11.a(var7, (byte) 124, var14);
+          stackIn_8_0 = var11;
+          return stackIn_8_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4_ref = decompiledCaughtException;
+          stackIn_11_0 = var4_ref;
+          stackIn_11_1 = new StringBuilder().append("aw.AC(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
+          }
+          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+        }
+    }
+
+    static {
+        field_H = new int[]{0};
+        field_G = new hs();
+    }
+}

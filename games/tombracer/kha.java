@@ -100,7 +100,7 @@ final class kha {
           }
           var11 = param0.a(param4, param1, param2, (byte) 66, param5);
           while (var11.field_b == 0) {
-            vja.a(0, 10L);
+            TrapSpawner.a(0, 10L);
           }
           var7 = (java.awt.Frame) (var11.field_f);
           if (var7 == null) {

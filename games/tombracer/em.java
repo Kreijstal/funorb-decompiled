@@ -169,21 +169,21 @@ final class em extends vw {
         if (null != this.field_e &&
           param1) {
           this.field_c.e(1, false);
-          this.field_c.a(gd.field_H, (byte) 0);
+          this.field_c.a(IdolItemComponent.field_H, (byte) 0);
           var4 = this.field_c.C(0);
           var4.b(-94, 1024);
           this.field_c.a(cva.field_b, false);
           if (!this.field_d) {
-            this.field_c.a(iw.field_c, (byte) -110, ln.field_F);
+            this.field_c.a(iw.field_c, (byte) -110, PlatformComponent.field_F);
             this.field_c.a(lja.field_j, 0, -34);
             this.field_c.e(2, false);
-            this.field_c.a(ln.field_F, (byte) -110, jv.field_m);
+            this.field_c.a(PlatformComponent.field_F, (byte) -110, jv.field_m);
             this.field_c.a(lja.field_j, 0, -47);
             this.field_c.a(lja.field_j, 1, -6219, true, false);
             this.field_c.a(0, false, tla.field_c);
             this.field_c.a(true, this.field_c.field_Jb);
           } else {
-            this.field_c.a(ln.field_F, (byte) -110, jv.field_m);
+            this.field_c.a(PlatformComponent.field_F, (byte) -110, jv.field_m);
             this.field_c.a(ej.field_c, 0, -6219, true, false);
             this.field_c.a(0, false, tla.field_c);
           }
@@ -198,7 +198,7 @@ final class em extends vw {
         if (param1 != 5744) {
           return;
         }
-        this.field_c.a(ln.field_F, (byte) -110, iw.field_c);
+        this.field_c.a(PlatformComponent.field_F, (byte) -110, iw.field_c);
     }
 
     final boolean c(int param0) {

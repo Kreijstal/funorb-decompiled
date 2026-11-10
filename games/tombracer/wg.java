@@ -115,12 +115,12 @@ final class wg extends tu {
           var3_int = 0;
           var4 = jua.field_d;
           while (mba.field_g.length > var3_int) {
-            var5 = bla.field_H[var3_int];
+            var5 = CoinItemComponent.field_H[var3_int];
             if (var5 >= 0) {
-              var6 = ro.$cfr$intArgs$a$590e95718a07(-116, mba.field_g[var3_int], true);
+              var6 = PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(-116, mba.field_g[var3_int], true);
               var4 = var4 + mha.field_C;
               var7 = -(var6 >> 1) + ega.field_c;
-              if (rea.a(param2, var6 + (nja.field_L << 1), -nja.field_L + var7, param1, (pqa.field_p << 1) + nt.field_d, false, var4)) {
+              if (CrusherBehaviour.a(param2, var6 + (InvisibleTouchSwitchComponent.field_L << 1), -InvisibleTouchSwitchComponent.field_L + var7, param1, (pqa.field_p << 1) + nt.field_d, false, var4)) {
                 stackIn_9_0 = var5;
                 return stackIn_9_0;
               }

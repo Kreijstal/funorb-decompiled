@@ -190,9 +190,9 @@ class lba extends fi {
           if (param3 != 53) {
             field_p = -69;
           }
-          if (0 != sua.field_K.field_y &&
+          if (0 != RotaterMountComponent.field_K.field_y &&
             !fua.field_g) {
-            if (!ok.field_s) {
+            if (!PowerDownItemBehaviour.field_s) {
               ni.field_c = true;
             } else {
               ola.e((byte) 112);
@@ -202,7 +202,7 @@ class lba extends fi {
             return;
           }
           av.a(param4, 20, param7, -5327, param6, param5, param2, param2, param1);
-          wi.field_s.c(-73, param0);
+          SimpleMoveLocomotor.field_s.c(-73, param0);
           if (!param0) {
             return;
           }
@@ -245,10 +245,10 @@ class lba extends fi {
         int var3_int = 0;
         int var4 = 0;
         MazeGenerator stackIn_3_0 = null;
-        fva stackIn_12_0 = null;
-        jra stackIn_14_0 = null;
-        rja stackIn_16_0 = null;
-        tna stackIn_18_0 = null;
+        RecursiveBacktrackerMazeGenerator stackIn_12_0 = null;
+        StripedMazeGenerator stackIn_14_0 = null;
+        PrimMazeGenerator stackIn_16_0 = null;
+        DivisionMazeGenerator stackIn_18_0 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -262,21 +262,21 @@ class lba extends fi {
           }
           var3_int = param2;
           if (var3_int == 0) {
-            stackIn_12_0 = new fva(param1);
+            stackIn_12_0 = new RecursiveBacktrackerMazeGenerator(param1);
             return (MazeGenerator) ((Object) stackIn_12_0);
           }
           if (var3_int == 1) {
-            stackIn_14_0 = new jra(param1);
+            stackIn_14_0 = new StripedMazeGenerator(param1);
             return (MazeGenerator) ((Object) stackIn_14_0);
           }
           if (2 == var3_int) {
-            stackIn_16_0 = new rja(param1);
+            stackIn_16_0 = new PrimMazeGenerator(param1);
             return (MazeGenerator) ((Object) stackIn_16_0);
           }
           if (var3_int != 3) {
             throw new IllegalStateException("Unrecognised maze gen type: " + param2);
           }
-          stackIn_18_0 = new tna(param1);
+          stackIn_18_0 = new DivisionMazeGenerator(param1);
           return (MazeGenerator) ((Object) stackIn_18_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

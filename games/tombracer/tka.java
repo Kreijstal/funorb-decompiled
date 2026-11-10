@@ -9,7 +9,7 @@ final class tka extends vpa {
 
     tka(hja[] param0) {
         try {
-          this.field_e = mj.field_J;
+          this.field_e = KeySwitchComponent.field_J;
           this.field_o = param0;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "tka.<init>(" + (param0 != null ? "{...}" : "null") + ')');

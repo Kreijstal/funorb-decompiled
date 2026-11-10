@@ -171,7 +171,7 @@ final class bh extends ela {
               var12.b(-125, var12.field_Eb);
               var12.field_Ub = new jea[fk.field_b];
               var12.field_xb = new jea(0L, (jea) null);
-              if ((1 << rl.field_w & var14) != 0) {
+              if ((1 << PowerUpItemBehaviour.field_w & var14) != 0) {
                 var12.field_Eb.b(-128, var12.field_xb);
               }
               var12.field_vb = new jea(0L, (jea) null);
@@ -179,7 +179,7 @@ final class bh extends ela {
                 var12.field_Eb.b(-124, var12.field_vb);
               }
               var12.field_Zb = new jea(0L, (jea) null);
-              if ((var14 & 1 << wta.field_F) != 0) {
+              if ((var14 & 1 << TrackingCrusherComponent.field_F) != 0) {
                 var12.field_Eb.b(param1 - 123, var12.field_Zb);
               }
               var12.field_fc = new jea(0L, (jea) null);
@@ -218,9 +218,9 @@ final class bh extends ela {
               var12.field_ub.field_z = 2;
               var12.field_Qb = new jea(0L, lta.field_a);
               var12.b(param1 ^ -122, var12.field_Qb);
-              var12.field_hc = new jea(0L, dja.field_p);
+              var12.field_hc = new jea(0L, PressureSwitchBehaviour.field_p);
               var12.b(-125, var12.field_hc);
-              var12.field_dc = new jea(0L, dja.field_p);
+              var12.field_dc = new jea(0L, PressureSwitchBehaviour.field_p);
               var12.b(-122, var12.field_dc);
               var12.field_Rb = new jea(0L, kua.field_i);
               var12.b(param1 ^ -127, var12.field_Rb);
@@ -365,7 +365,7 @@ final class bh extends ela {
               var33_intLifetime1 = stackIn_71_0;
               var12.field_Eb.a(-2 + (-var33_intLifetime1 + 365), di.field_a, -23776, var31, var33_intLifetime1);
               var34_int = pda.field_c;
-              if (0 != (var14Lifetime1 & 1 << rl.field_w)) {
+              if (0 != (var14Lifetime1 & 1 << PowerUpItemBehaviour.field_w)) {
                 var50_ref = w.field_f[var12.field_cc];
                 var12.field_xb.field_R = var50_ref;
                 var12.field_xb.a(var50_ref.field_n, var12.field_Eb.field_t, -23776, 0, var34_int);
@@ -378,7 +378,7 @@ final class bh extends ela {
                   stackIn_80_0 = 1;
                 }
                 var36 = stackIn_80_0;
-                stackIn_82_0 = nja.field_K;
+                stackIn_82_0 = InvisibleTouchSwitchComponent.field_K;
                 if (var36 != 0) {
                   stackIn_83_1 = 1;
                 } else {
@@ -389,7 +389,7 @@ final class bh extends ela {
                 var12.field_vb.a(var51_ref.field_n, var12.field_Eb.field_t, -23776, 0, var34_int);
                 var34_int = var34_int + (var51_ref.field_n + pda.field_c);
               }
-              if ((1 << wta.field_F & var14Lifetime1) != 0) {
+              if ((1 << TrackingCrusherComponent.field_F & var14Lifetime1) != 0) {
                 var52_ref = pca.field_k[-1 + var12.field_yb];
                 var12.field_Zb.field_R = var52_ref;
                 var12.field_Zb.a(var52_ref.field_n, var12.field_Eb.field_t, -23776, 0, var34_int);
@@ -469,7 +469,7 @@ final class bh extends ela {
                 var31 = var31 + di.field_a;
               }
               if (var12.field_Sb) {
-                var12.field_dc.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(121, ona.field_I, new String[]{var32});
+                var12.field_dc.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(121, SweeperMountComponent.field_I, new String[]{var32});
                 var12.field_dc.a(-(mna.field_d * 2) + var12.field_G, di.field_a, -23776, var31, mna.field_d);
                 var31 = var31 + di.field_a;
               }
@@ -539,7 +539,7 @@ final class bh extends ela {
               if (2 != var12.field_yb) {
                 stackIn_165_0 = ega.field_d;
               } else {
-                stackIn_165_0 = bha.field_y;
+                stackIn_165_0 = FleeLocomotor.field_y;
               }
               qda.field_b = stackIn_165_0;
             }

@@ -82,7 +82,7 @@ final class cla extends DualLinkNode {
     }
 
     final static void f(int param0) {
-        er.b(1, param0);
+        TripBeamComponent.b(1, param0);
         bea.a();
         fp.a(122);
         if (!(ld.field_e < 2)) {

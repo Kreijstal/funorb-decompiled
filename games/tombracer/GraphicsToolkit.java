@@ -100,7 +100,7 @@ abstract class GraphicsToolkit {
             return stackIn_2_0;
           }
           if (param3 == 2) {
-            stackIn_6_0 = pw.a(param1, param6, param4, (byte) -62, param0);
+            stackIn_6_0 = PressureSwitchComponent.a(param1, param6, param4, (byte) -62, param0);
             return stackIn_6_0;
           }
           if (param3 == 1) {

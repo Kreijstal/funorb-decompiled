@@ -26,7 +26,7 @@ final class hp {
           field_a = (int[][]) null;
         }
         if (param3 == null) {
-          param3 = qi.field_O;
+          param3 = AllPlatformsMazeComponent.field_O;
         }
         if (param3 == null) {
           return;

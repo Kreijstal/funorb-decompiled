@@ -354,7 +354,7 @@ class AudioOutput {
           if (var1 != 0) {
             field_p.field_a = true;
             while (field_p.field_b) {
-              vja.a(0, 50L);
+              TrapSpawner.a(0, 50L);
             }
             field_p = null;
           }

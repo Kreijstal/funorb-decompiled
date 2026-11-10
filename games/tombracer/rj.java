@@ -208,7 +208,7 @@ class rj extends ae {
           var11 = vc.field_q;
           var2 = var11.h(255);
           if (var2 == 0) {
-            var10 = (mm) (wma.field_n.f(-80));
+            var10 = (mm) (SpawnerBehaviour.field_n.f(-80));
             if (var10 == null) {
               dea.a(60);
               return;

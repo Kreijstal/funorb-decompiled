@@ -17,7 +17,7 @@ final class fpa {
             field_c = false;
           }
           qma.a((java.awt.Component) ((Object) param0), -71);
-          ri.a((java.awt.Component) ((Object) param0), true);
+          SweepRotateLocomotor.a((java.awt.Component) ((Object) param0), true);
           if (tja.field_q == null) {
             return;
           }

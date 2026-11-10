@@ -91,21 +91,21 @@ final class ufa {
             return;
           }
           param0.h((byte) -11);
-          this.field_l = uha.a(5907, param0);
+          this.field_l = CircleMovementLocomotor.a(5907, param0);
           var4 = param0.b((byte) 44, 8);
           for (var5 = 0; var4 > var5; var5++) {
-            if (uha.a(5907, param0)) {
+            if (CircleMovementLocomotor.a(5907, param0)) {
               this.field_o.set(var5);
             }
           }
           var6 = -25 % ((69 - param1) / 53);
           for (var5Lifetime1 = 0; var5Lifetime1 < 13; var5Lifetime1++) {
-            if (uha.a(5907, param0)) {
+            if (CircleMovementLocomotor.a(5907, param0)) {
               this.field_s.set(var5Lifetime1);
             }
           }
           for (var5Lifetime2 = 0; var5Lifetime2 < 9; var5Lifetime2++) {
-            if (uha.a(5907, param0)) {
+            if (CircleMovementLocomotor.a(5907, param0)) {
               this.field_m.set(var5Lifetime2);
             }
           }
@@ -176,17 +176,17 @@ final class ufa {
         try {
           param1.i(16, 0);
           param1.i(8);
-          wfa.a(this.field_l, 126, param1);
+          StaticCrusherComponent.a(this.field_l, 126, param1);
           var3_int = -1 + this.field_o.size();
           param1.a((byte) -4, var3_int, 8);
           for (var4 = 0; var4 < var3_int; var4++) {
-            wfa.a(this.field_o.get(var4), -52, param1);
+            StaticCrusherComponent.a(this.field_o.get(var4), -52, param1);
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < 13; var4Lifetime1++) {
-            wfa.a(this.field_s.get(var4Lifetime1), param0 + 2016803960, param1);
+            StaticCrusherComponent.a(this.field_s.get(var4Lifetime1), param0 + 2016803960, param1);
           }
           for (var4Lifetime2 = 0; var4Lifetime2 < 9; var4Lifetime2++) {
-            wfa.a(this.field_m.get(var4Lifetime2), param0 ^ -2016803978, param1);
+            StaticCrusherComponent.a(this.field_m.get(var4Lifetime2), param0 ^ -2016803978, param1);
           }
           if (param0 != -2016804080) {
             field_e = (int[]) null;
@@ -251,31 +251,31 @@ final class ufa {
         field_u = "Won";
         field_p = new int[256];
         for (var0 = 0; 256 > var0; var0++) {
-          field_p[var0] = fh.a(var0 >> 3, fh.a(var0 << 16, sea.c(1342178300, var0) << 6));
+          field_p[var0] = fh.a(var0 >> 3, fh.a(var0 << 16, SnakePitBehaviour.c(1342178300, var0) << 6));
         }
         field_b = new int[256];
         for (var0Lifetime1 = 0; var0Lifetime1 < 256; var0Lifetime1++) {
-          field_b[var0Lifetime1] = fh.a(fh.a(sea.c(65308, var0Lifetime1 << 6), sea.c(var0Lifetime1, 762841080) << 13), var0Lifetime1);
+          field_b[var0Lifetime1] = fh.a(fh.a(SnakePitBehaviour.c(65308, var0Lifetime1 << 6), SnakePitBehaviour.c(var0Lifetime1, 762841080) << 13), var0Lifetime1);
         }
         field_j = new int[256];
         for (var0Lifetime2 = 0; var0Lifetime2 < 256; var0Lifetime2++) {
-          field_j[var0Lifetime2] = fh.a(fh.a(sea.c(65306, var0Lifetime2 << 7), sea.c(-861666308, var0Lifetime2) << 14), var0Lifetime2);
+          field_j[var0Lifetime2] = fh.a(fh.a(SnakePitBehaviour.c(65306, var0Lifetime2 << 7), SnakePitBehaviour.c(-861666308, var0Lifetime2) << 14), var0Lifetime2);
         }
         field_f = new int[256];
         for (var0Lifetime3 = 0; var0Lifetime3 < 256; var0Lifetime3++) {
-          field_f[var0Lifetime3] = fh.a(var0Lifetime3 >> 5, fh.a(var0Lifetime3 << 16, sea.c(-1207958532, var0Lifetime3) << 6));
+          field_f[var0Lifetime3] = fh.a(var0Lifetime3 >> 5, fh.a(var0Lifetime3 << 16, SnakePitBehaviour.c(-1207958532, var0Lifetime3) << 6));
         }
         field_d = new int[256];
         for (var0Lifetime4 = 0; 256 > var0Lifetime4; var0Lifetime4++) {
-          field_d[var0Lifetime4] = fh.a(var0Lifetime4, fh.a(var0Lifetime4 << 16, sea.c(var0Lifetime4, 1795162367) << 8));
+          field_d[var0Lifetime4] = fh.a(var0Lifetime4, fh.a(var0Lifetime4 << 16, SnakePitBehaviour.c(var0Lifetime4, 1795162367) << 8));
         }
         field_e = new int[8];
         for (var0Lifetime5 = 0; var0Lifetime5 < 8; var0Lifetime5++) {
-          field_e[var0Lifetime5] = fh.a(var0Lifetime5, fh.a(var0Lifetime5 << 21, sea.c(var0Lifetime5, -480247777) << 11));
+          field_e[var0Lifetime5] = fh.a(var0Lifetime5, fh.a(var0Lifetime5 << 21, SnakePitBehaviour.c(var0Lifetime5, -480247777) << 11));
         }
         field_t = new int[8];
         for (var0Lifetime6 = 0; 8 > var0Lifetime6; var0Lifetime6++) {
-          field_t[var0Lifetime6] = fh.a(var0Lifetime6, fh.a(var0Lifetime6 << 16, sea.c(-127926241, var0Lifetime6) << 11));
+          field_t[var0Lifetime6] = fh.a(var0Lifetime6, fh.a(var0Lifetime6 << 16, SnakePitBehaviour.c(-127926241, var0Lifetime6) << 11));
         }
         field_q = new String[]{"Move back to the previous menu level.", "Return to the top level of the menu.", "Auto-respond to the last thing in your chat window.", "Open the Quick Chat menu.", "Repeat the last thing you said.", "Close the Quick Chat menu."};
         field_c = -1;

@@ -246,7 +246,7 @@ final class cfa implements dv {
           if (param1) {
             this.a(99, -112);
           }
-          this.field_e = uha.a(5907, param0);
+          this.field_e = CircleMovementLocomotor.a(5907, param0);
           this.field_f = param0.b((byte) 44, 2);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "cfa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

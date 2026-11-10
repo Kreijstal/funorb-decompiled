@@ -345,12 +345,12 @@ final class mda extends c implements fo, ffa, gma {
           return apa.field_c.a((byte) -121, fna.field_h, kda.field_td);
         }
         if (vo.field_b) {
-          return mj.c(param1 + 2097196, param0, param3);
+          return KeySwitchComponent.c(param1 + 2097196, param0, param3);
         }
         if (dfa.a(param0, false, param3)) {
           return true;
         }
-        if (ok.field_s) {
+        if (PowerDownItemBehaviour.field_s) {
           return false;
         }
         if (param1 == -44) {

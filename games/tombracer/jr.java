@@ -87,12 +87,12 @@ final class jr implements isa {
         mi.field_f = -1;
         if (param0 <= -91) {
           vf.field_f = -1;
-          hn.field_F = null;
+          MazeComponent.field_F = null;
           return;
         }
         jr.b((byte) 79);
         vf.field_f = -1;
-        hn.field_F = null;
+        MazeComponent.field_F = null;
     }
 
     jr(il param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {

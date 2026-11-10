@@ -19,7 +19,7 @@ final class sl extends vw {
     }
 
     final void a(boolean param0, int param1) {
-        this.field_c.a(ln.field_F, (byte) -110, iw.field_c);
+        this.field_c.a(PlatformComponent.field_F, (byte) -110, iw.field_c);
         if (param1 != 5744) {
           field_g = (String) null;
         }
@@ -77,7 +77,7 @@ final class sl extends vw {
         this.field_c.a(true, var3);
         this.field_c.a(gq.field_u, (byte) 0);
         this.field_c.e(1, false);
-        this.field_c.a(ln.field_F, (byte) -110, r.field_m);
+        this.field_c.a(PlatformComponent.field_F, (byte) -110, r.field_m);
         this.field_c.a(lja.field_j, 2, -6219, true, false);
         this.field_c.a(0, false, tla.field_c);
         asa var4_ref_asa = this.field_c.C(0);

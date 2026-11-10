@@ -6,7 +6,7 @@ class hga extends vpa {
     private static String[] field_o;
 
     hga(int param0) {
-        this(mj.field_J, param0);
+        this(KeySwitchComponent.field_J, param0);
     }
 
     public final void a(ae param0, int param1, int param2, int param3, boolean param4) {

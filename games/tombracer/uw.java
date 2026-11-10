@@ -216,7 +216,7 @@ final class uw {
           var3Lifetime1 = vs.field_P[9] >> 8;
           var4 = vs.field_P[10] >> 8;
           var5Lifetime1 = vs.field_P[11] >> 8;
-          var6Lifetime1 = tl.field_r << 4;
+          var6Lifetime1 = TimeSwitchBehaviour.field_r << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = cr.a(true, var6Lifetime1) >> 8;
           var9Lifetime1 = pla.b(119, var6Lifetime1) >> 8;

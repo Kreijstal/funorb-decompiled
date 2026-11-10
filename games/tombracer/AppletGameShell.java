@@ -10,7 +10,7 @@ abstract class AppletGameShell extends GameApplet {
     String field_x;
     private int field_z;
     private int field_t;
-    private static String[] field_r;
+    private static String[] mazeGeneratorTypeNames;
     private int field_u;
     private int field_p;
     private int field_v;
@@ -36,7 +36,7 @@ abstract class AppletGameShell extends GameApplet {
             qda.a(5, -21);
           }
           if (hd.field_a[5]) {
-            gw.b(param0 ^ -109, 6);
+            PlantComponent.b(param0 ^ -109, 6);
           }
           if (hd.field_a[6]) {
             mda.b(7, (byte) -105);
@@ -65,14 +65,14 @@ abstract class AppletGameShell extends GameApplet {
         }
         byte[] var5 = new byte[var4];
         vc.field_q.a(0, param0 - 103, var5, var4);
-        eq.a(param0 ^ -16, di.a(param0 + 82), jaa.a((byte) 64, var5), var3 != 0);
+        SimpleBlockBehaviour.a(param0 ^ -16, di.a(param0 + 82), jaa.a((byte) 64, var5), var3 != 0);
     }
 
     final static boolean q(int param0) {
         if (param0 != -1) {
           AppletGameShell.q(12);
         }
-        return !ok.field_s ? true : false;
+        return !PowerDownItemBehaviour.field_s ? true : false;
     }
 
     final void p(int param0) {
@@ -96,16 +96,16 @@ abstract class AppletGameShell extends GameApplet {
           int var5Lifetime2;
           int var5Lifetime3;
           var9 = TombRacer.field_G ? 1 : 0;
-          var4 = si.a(bg.field_t, pg.field_y, 103, param2);
+          var4 = BlockComponent.a(ApproachPlayerLocomotor.field_t, pg.field_y, 103, param2);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5 = cha.a(pla.a(-1), sua.A(49), 2);
+            var5 = cha.a(pla.a(-1), RotaterMountComponent.A(49), 2);
             if (-1 != var5) {
-              ifa.a(dja.field_s, var5, io.field_b, (byte) 100);
+              ifa.a(PressureSwitchBehaviour.field_s, var5, io.field_b, (byte) 100);
               io.field_b = null;
-              dja.field_s = null;
+              PressureSwitchBehaviour.field_s = null;
             }
             var12 = nw.e((byte) 78);
             if (var12 != null) {
@@ -115,8 +115,8 @@ abstract class AppletGameShell extends GameApplet {
           if (var4 == 2) {
             var5Lifetime1 = pe.a(vk.b(69), toa.a(false), hha.a(false), this.field_u, cs.a((byte) 105), cja.a(0), (byte) 53);
             if (var5Lifetime1 != -1) {
-              ura.a(var5Lifetime1, dja.field_s, (byte) -103, io.field_b);
-              dja.field_s = null;
+              ura.a(var5Lifetime1, PressureSwitchBehaviour.field_s, (byte) -103, io.field_b);
+              PressureSwitchBehaviour.field_s = null;
               io.field_b = null;
             }
           }
@@ -124,10 +124,10 @@ abstract class AppletGameShell extends GameApplet {
             if (-1 != Trap.field_m &&
               Trap.field_m != 0) {
               Trap.field_m = -1;
-              vja.b(true);
+              TrapSpawner.b(true);
             }
             if (param1) {
-              wta.field_G = false;
+              TrackingCrusherComponent.field_G = false;
             } else {
               var5Lifetime2 = ila.a(this.field_q, cja.a(0), 50, this.field_u, cs.a((byte) 81), false);
               if (var5Lifetime2 != -1) {
@@ -175,15 +175,15 @@ abstract class AppletGameShell extends GameApplet {
           }
           var5Lifetime3 = 70 / ((param0 + 35) / 35);
           if (var4 == 12) {
-            jc.a(mn.g(-128), di.a(28), (byte) -74);
+            SimpleHoverMountComponent.a(mn.g(-128), di.a(28), (byte) -74);
           }
           if (13 == var4) {
             try {
-              if (ana.field_o == null) {
-                ana.field_o = new caa(dsa.field_c, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+              if (DarknessBehaviour.field_o == null) {
+                DarknessBehaviour.field_o = new caa(dsa.field_c, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
-              if (ana.field_o.a(false)) {
-                var7 = ana.field_o.b((byte) -123);
+              if (DarknessBehaviour.field_o.a(false)) {
+                var7 = DarknessBehaviour.field_o.b((byte) -123);
                 if (var7 != null) {
                   var8 = nia.a(var7.payload, 0, var7.position, 255);
                   NodeHashTableIterator.a(var8, -1);
@@ -191,7 +191,7 @@ abstract class AppletGameShell extends GameApplet {
                   var10 = (String) null;
                   NodeHashTableIterator.a((String) null, -1);
                 }
-                ana.field_o = null;
+                DarknessBehaviour.field_o = null;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -199,7 +199,7 @@ abstract class AppletGameShell extends GameApplet {
               ssa.a("S1", (byte) 121, (Throwable) ((Object) var6));
               var11 = (String) null;
               NodeHashTableIterator.a((String) null, -1);
-              ana.field_o = null;
+              DarknessBehaviour.field_o = null;
             }
           }
           if (var4 == 15) {
@@ -266,7 +266,7 @@ abstract class AppletGameShell extends GameApplet {
                             if (var2 != 11 &&
                               var2 != 12) {
                               if (var2 == 13) {
-                                ri.e(14180);
+                                SweepRotateLocomotor.e(14180);
                                 return;
                               }
                               if (var2 == 17) {
@@ -313,7 +313,7 @@ abstract class AppletGameShell extends GameApplet {
         if (!uma.b(-1)) {
           return -1;
         }
-        if (wta.field_G) {
+        if (TrackingCrusherComponent.field_G) {
           return -1;
         }
         int var2 = ila.a(this.field_q, cja.a(0), 50, this.field_u, cs.a((byte) -118), true);
@@ -335,7 +335,7 @@ abstract class AppletGameShell extends GameApplet {
             }
             dw.b(param0);
             epa.a(var2, (byte) -84, io.field_b);
-            wta.field_G = true;
+            TrackingCrusherComponent.field_G = true;
             oga.field_f = bva.b((byte) -107) + 15000L;
             return var2;
           }
@@ -374,9 +374,9 @@ abstract class AppletGameShell extends GameApplet {
     }
 
     public static void l(int param0) {
-        field_r = null;
+        mazeGeneratorTypeNames = null;
         if (param0 != -1) {
-          field_r = (String[]) null;
+          mazeGeneratorTypeNames = (String[]) null;
         }
     }
 
@@ -413,10 +413,10 @@ abstract class AppletGameShell extends GameApplet {
         var10.pack();
         var10.dispose();
         this.setBackground(java.awt.Color.black);
-        bg.field_t = this.field_z;
-        pt.b(bg.field_t, (byte) 65);
-        IsaacCipher.a(this.field_s, this.field_v, dsa.field_c, this.field_p, this.field_x, this.field_t, 5000, param4, -1367135824, param7, this.field_A, bg.field_t, param5, this.field_w);
-        av.a(bg.field_t, dsa.field_c, 103, this.field_x, this.field_v, param5, this.field_p, this.field_s, this.field_t);
+        ApproachPlayerLocomotor.field_t = this.field_z;
+        FacePlayerLocomotor.b(ApproachPlayerLocomotor.field_t, (byte) 65);
+        IsaacCipher.a(this.field_s, this.field_v, dsa.field_c, this.field_p, this.field_x, this.field_t, 5000, param4, -1367135824, param7, this.field_A, ApproachPlayerLocomotor.field_t, param5, this.field_w);
+        av.a(ApproachPlayerLocomotor.field_t, dsa.field_c, 103, this.field_x, this.field_v, param5, this.field_p, this.field_s, this.field_t);
         wka.b(520);
         tja.field_q = dka.a((byte) -86);
         fpa.a(nma.field_l, (byte) 75);
@@ -426,7 +426,7 @@ abstract class AppletGameShell extends GameApplet {
         fq.field_g = param1;
         fm.field_j = param0;
         this.i(16);
-        ws.f(29320);
+        MirrorMoverLocomotor.f(29320);
     }
 
     final void g(byte param0) {
@@ -529,7 +529,7 @@ abstract class AppletGameShell extends GameApplet {
           if (cga.field_f < 10) {
           } else {
             if (!qk.i(250)) {
-              pw.C(-5);
+              PressureSwitchComponent.C(-5);
             } else {
               if (0 == gda.field_c) {
                 discarded$3 = this.a((byte) -111, false, false);
@@ -563,7 +563,7 @@ abstract class AppletGameShell extends GameApplet {
           wba.field_o.a(false);
         }
         at.j(3321);
-        uka.s((byte) -44);
+        BoulderComponent.s((byte) -44);
         if (!wna.c(-112) &&
           gda.field_c != 11) {
           sw.h(100);
@@ -579,9 +579,9 @@ abstract class AppletGameShell extends GameApplet {
             this.field_y = false;
             dea.a(60);
             dw.b((byte) -84);
-            epa.a(2, (byte) -84, th.field_n);
+            epa.a(2, (byte) -84, WindZoneBehaviour.field_n);
             bk.c(9033);
-            wta.field_G = true;
+            TrackingCrusherComponent.field_G = true;
             oga.field_f = 15000L + bva.b((byte) -107);
           }
         }
@@ -589,7 +589,7 @@ abstract class AppletGameShell extends GameApplet {
           0 == Trap.field_m) {
           stackIn_26_0 = (Trap.field_m != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_26_0;
-          Trap.field_m = si.A(61);
+          Trap.field_m = BlockComponent.A(61);
           if (var3Lifetime1 != 0 &&
             Trap.field_m == 0 &&
             gda.field_c == 11 &&
@@ -628,7 +628,7 @@ abstract class AppletGameShell extends GameApplet {
                 if (Trap.field_m != 4) {
                   if (Trap.field_m != 2) {
                     if (Trap.field_m != 5) {
-                      epa.a(256, (byte) -84, wqa.field_H);
+                      epa.a(256, (byte) -84, GasTrapComponent.field_H);
                     } else {
                       epa.a(5, (byte) -84, wq.field_a);
                     }
@@ -641,7 +641,7 @@ abstract class AppletGameShell extends GameApplet {
               } else {
                 epa.a(256, (byte) -84, oe.field_l);
               }
-              wta.field_G = true;
+              TrackingCrusherComponent.field_G = true;
             }
           }
         }
@@ -649,11 +649,11 @@ abstract class AppletGameShell extends GameApplet {
           Trap.field_m != 0 ||
           uma.b(-1)) &&
           oga.field_f <= bva.b((byte) -107)) {
-          wta.field_G = false;
+          TrackingCrusherComponent.field_G = false;
           if (-1 != Trap.field_m &&
             Trap.field_m != 0) {
             Trap.field_m = -1;
-            vja.b(true);
+            TrapSpawner.b(true);
           }
         }
         if (Trap.field_m == 0 &&
@@ -661,34 +661,34 @@ abstract class AppletGameShell extends GameApplet {
           rca.field_l = false;
         }
         if (cga.field_f == 0 &&
-          ula.k((byte) -117)) {
+          FuseBehaviour.k((byte) -117)) {
           cga.field_f = 1;
         }
         if (cga.field_f == 1) {
-          if (0 != bg.field_t) {
-            nja.field_J = dd.a(nga.field_p, 1);
+          if (0 != ApproachPlayerLocomotor.field_t) {
+            InvisibleTouchSwitchComponent.field_J = dd.a(nga.field_p, 1);
           }
-          tk.field_b = sa.a(true, fq.field_g, false, 1, (byte) -95);
-          hm.field_n = sa.a(true, bi.field_c, false, 1, (byte) -109);
-          vc.field_p = sa.a(true, fm.field_j, false, 1, (byte) -79);
+          tk.field_b = FacePointLocomotor.a(true, fq.field_g, false, 1, (byte) -95);
+          hm.field_n = FacePointLocomotor.a(true, bi.field_c, false, 1, (byte) -109);
+          vc.field_p = FacePointLocomotor.a(true, fm.field_j, false, 1, (byte) -79);
           cga.field_f = 2;
-          oma.field_G = tk.field_b;
+          PitComponent.field_G = tk.field_b;
           ota.field_b = hm.field_n;
         }
         if (cga.field_f == 2) {
-          if (null != nja.field_J &&
-            nja.field_J.b(-79)) {
-            if (nja.field_J.a("", 108)) {
-              if (nja.field_J.c("", -127)) {
-                TextResourceLoader.loadStrings((byte) -45, nja.field_J);
-                nja.field_J = null;
+          if (null != InvisibleTouchSwitchComponent.field_J &&
+            InvisibleTouchSwitchComponent.field_J.b(-79)) {
+            if (InvisibleTouchSwitchComponent.field_J.a("", 108)) {
+              if (InvisibleTouchSwitchComponent.field_J.c("", -127)) {
+                TextResourceLoader.loadStrings((byte) -45, InvisibleTouchSwitchComponent.field_J);
+                InvisibleTouchSwitchComponent.field_J = null;
                 ea.a(-33);
               }
             } else {
-              nja.field_J = null;
+              InvisibleTouchSwitchComponent.field_J = null;
             }
           }
-          if (null == nja.field_J) {
+          if (null == InvisibleTouchSwitchComponent.field_J) {
             cga.field_f = 3;
           }
         }
@@ -722,26 +722,26 @@ abstract class AppletGameShell extends GameApplet {
           cga.field_f = 10;
         }
         if (10 == cga.field_f) {
-          if (bg.field_t != 0) {
-            oqa.field_v = dd.a(tj.field_c, 1);
+          if (ApproachPlayerLocomotor.field_t != 0) {
+            ConstrainToFacingArcLocomotor.field_v = dd.a(tj.field_c, 1);
           }
           cga.field_f = 11;
         }
         boolean decompiledFrameRemainder0 = true;
         var3Lifetime2 = 69 % ((param0 + 63) / 62);
         if (cga.field_f == 11) {
-          if (oqa.field_v != null && (!oqa.field_v.b(-100) ||
-            !oqa.field_v.a(0))) {
-            ima.a(0.0f, vca.a(voa.field_s, hra.field_c, oqa.field_v, (byte) 92), -80);
+          if (ConstrainToFacingArcLocomotor.field_v != null && (!ConstrainToFacingArcLocomotor.field_v.b(-100) ||
+            !ConstrainToFacingArcLocomotor.field_v.a(0))) {
+            ima.a(0.0f, vca.a(voa.field_s, hra.field_c, ConstrainToFacingArcLocomotor.field_v, (byte) 92), -80);
             decompiledFrameRemainder0 = false;
           }
           else {
-            lpa.field_w = true;
+            PlatformBehaviour.field_w = true;
             cga.field_f = 12;
           }
         }
         if (12 == cga.field_f &&
-          !lpa.field_w) {
+          !PlatformBehaviour.field_w) {
           cga.field_f = 13;
         }
         if (cga.field_f == 13) {
@@ -790,10 +790,10 @@ abstract class AppletGameShell extends GameApplet {
     }
 
     static {
-        field_r = new String[4];
-        field_r[2] = "Prim's Algorithm";
-        field_r[0] = "Recursive Backtracker";
-        field_r[1] = "Striped";
-        field_r[3] = "Division";
+        mazeGeneratorTypeNames = new String[4];
+        mazeGeneratorTypeNames[2] = "Prim's Algorithm";
+        mazeGeneratorTypeNames[0] = "Recursive Backtracker";
+        mazeGeneratorTypeNames[1] = "Striped";
+        mazeGeneratorTypeNames[3] = "Division";
     }
 }

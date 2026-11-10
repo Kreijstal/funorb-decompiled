@@ -49,13 +49,13 @@ final class pk extends we {
             -(this.field_t[var5_int] >> 1) + this.field_B[var5_int] <= sta.field_B &&
             (this.field_t[var5_int] >> 1) + this.field_B[var5_int] >= sta.field_B &&
             1 == hf.field_b) {
-            pt.field_p = null;
+            FacePlayerLocomotor.field_p = null;
             this.field_u = var5_int;
           }
         }
-        var5 = pt.field_p;
+        var5 = FacePlayerLocomotor.field_p;
         if (var5 == null) {
-          pt.field_p = uta.a(3, this.field_u, 0, 10, 1);
+          FacePlayerLocomotor.field_p = uta.a(3, this.field_u, 0, 10, 1);
           this.field_E = 0;
         } else {
           if (!var5.field_h) {
@@ -112,7 +112,7 @@ final class pk extends we {
           if (param1 == -1) {
             var8 = "";
           }
-          var10 = f.a(2843, true, bg.field_t, (long)param2, 0);
+          var10 = f.a(2843, true, ApproachPlayerLocomotor.field_t, (long)param2, 0);
           var11.a(-1, -1, ab.field_t[0], param3 | -16777216, param0, var8);
           var11.a(param0, false, param5, ab.field_t[1], param3 | -16777216, -1);
           var12.a(12199, param0, var10, -1, param3 | -16777216, ab.field_t[2]);
@@ -165,7 +165,7 @@ final class pk extends we {
             if (var9 == 0 &&
               var25[var11] == var7.field_h &&
               var7.field_o[0] == var14 &&
-              ue.a(var13, 0)) {
+              MiscItemBehaviour.a(var13, 0)) {
               var9 = 1;
               var15 = 1;
             }
@@ -235,7 +235,7 @@ final class pk extends we {
           var5Lifetime1 = PlayerSimulation.field_n;
         } else {
           if (var6Lifetime1 == 1) {
-            var5Lifetime1 = kt.field_H;
+            var5Lifetime1 = FacePlayerMountComponent.field_H;
           } else {
             if (3 == var6Lifetime1) {
               var5Lifetime1 = nm.field_j;

@@ -48,7 +48,7 @@ final class so extends tra implements mk {
         vb var1Lifetime1;
         var2 = TombRacer.field_G ? 1 : 0;
         try {
-          ipa.field_P.c();
+          WheeledMountComponent.field_P.c();
           if (param0 != -16310) {
             so.n(117);
           }
@@ -56,12 +56,12 @@ final class so extends tra implements mk {
           bga.field_b = bga.field_b - 1;
           if (0 == bga.field_b) {
             bga.field_b = 200;
-            var1 = (vb) (tna.field_e.f(-80));
+            var1 = (vb) (DivisionMazeGenerator.field_e.f(-80));
             while (var1 != null) {
               if (!var1.field_h.isLinked((byte) -101)) {
                 var1.unlink(21);
               }
-              var1 = (vb) (tna.field_e.e(110));
+              var1 = (vb) (DivisionMazeGenerator.field_e.e(110));
             }
             if (db.field_f != null) {
               var1Lifetime1 = (vb) (db.field_f.f(param0 ^ 16378));

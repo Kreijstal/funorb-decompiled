@@ -46,7 +46,7 @@ final class qha extends ou {
         if (param0 == 58) {
           for (var8 = 0; this.field_a > var8; var8++) {
             if (var7 == 0) {
-              var9 = hn.b(param0 - 58, var6).field_f;
+              var9 = MazeComponent.b(param0 - 58, var6).field_f;
             } else {
               var10 = ak.a(var5, (byte) 127);
               var14 = ta.d(var10, false);
@@ -72,7 +72,7 @@ final class qha extends ou {
         field_f = -112;
         for (var8Lifetime1 = 0; this.field_a > var8Lifetime1; var8Lifetime1++) {
           if (var7 == 0) {
-            var9Lifetime1 = hn.b(param0 - 58, var6).field_f;
+            var9Lifetime1 = MazeComponent.b(param0 - 58, var6).field_f;
           } else {
             var10Lifetime1 = ak.a(var5, (byte) 127);
             var13 = ta.d(var10Lifetime1, false);
@@ -97,7 +97,7 @@ final class qha extends ou {
     }
 
     final static void a(int param0, boolean param1) {
-        if (wqa.r((byte) -73)) {
+        if (GasTrapComponent.r((byte) -73)) {
           param1 = false;
         }
         upa.a(param1, param0);

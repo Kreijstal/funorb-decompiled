@@ -34,7 +34,7 @@ final class sv extends wv {
         while (0L != param1) {
           var7 = param1;
           param1 = param1 / 37L;
-          var9 = fra.field_n[(int)(-(37L * param1) + var7)];
+          var9 = ConstantEffectBehaviour.field_n[(int)(-(37L * param1) + var7)];
           if (95 == var9) {
             var10 = var6.length() - 1;
             var9 = 160;
@@ -81,7 +81,7 @@ final class sv extends wv {
     final void a(byte param0, boolean param1) {
         super.a(param0, param1);
         int var3 = this.field_m[1].field_i - 70 + this.field_r.e(47) - 150;
-        tp.field_K.a((aaa.a(false) >> 1) - (tp.field_K.a() >> 1), var3);
+        WhiteLightShooterComponent.field_K.a((aaa.a(false) >> 1) - (WhiteLightShooterComponent.field_K.a() >> 1), var3);
     }
 
     public static void d(int param0) {

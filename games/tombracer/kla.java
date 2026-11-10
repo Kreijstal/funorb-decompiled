@@ -23,7 +23,7 @@ final class kla {
           }
           for (var3_int = 0; 50 > var3_int; var3_int++) {
             if (param0.field_r.peekEvent() != null) {
-              vja.a(0, 1L);
+              TrapSpawner.a(0, 1L);
               continue;
             }
             break;

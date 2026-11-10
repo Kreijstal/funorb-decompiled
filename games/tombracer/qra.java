@@ -146,7 +146,7 @@ abstract class qra {
           }
           stackIn_27_0 = false;
           stackIn_28_1 = (!this.field_h.field_D) ? 9 : 7;
-          ira.a(stackIn_27_0, stackIn_28_1, (byte) 97);
+          ConstrainToRectangleLocomotor.a(stackIn_27_0, stackIn_28_1, (byte) 97);
           return;
         }
         if (this.field_k.field_b + 80 <= jba.field_j) {
@@ -184,7 +184,7 @@ abstract class qra {
           }
           stackIn_58_0 = false;
           stackIn_59_1 = (!this.field_h.field_D) ? 9 : 7;
-          ira.a(stackIn_58_0, stackIn_59_1, (byte) 97);
+          ConstrainToRectangleLocomotor.a(stackIn_58_0, stackIn_59_1, (byte) 97);
           return;
         }
         if (-25 + this.field_k.field_i <= sta.field_B) {
@@ -226,7 +226,7 @@ abstract class qra {
         }
         stackIn_92_0 = false;
         stackIn_93_1 = (!this.field_h.field_D) ? 9 : 7;
-        ira.a(stackIn_92_0, stackIn_93_1, (byte) 97);
+        ConstrainToRectangleLocomotor.a(stackIn_92_0, stackIn_93_1, (byte) 97);
         return;
     }
 

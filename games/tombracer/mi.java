@@ -35,7 +35,7 @@ final class mi extends IntrusiveNode {
           var1_int = aqa.field_d - wt.field_a;
           wt.field_a = -(var1_int >> 1) + gda.field_a;
           aqa.field_d = wt.field_a + var1_int;
-          wp.field_b = -(aa.field_c >> 1) + qi.field_N;
+          wp.field_b = -(aa.field_c >> 1) + AllPlatformsMazeComponent.field_N;
           var2 = wp.field_b;
           if (param0 <= 79) {
             return;
@@ -48,7 +48,7 @@ final class mi extends IntrusiveNode {
               if (lp.field_h.field_h == var4) {
                 var5 = fv.field_a;
               } else {
-                var5 = sua.field_I;
+                var5 = RotaterMountComponent.field_I;
               }
             }
             var6 = cna.field_b[var3];
@@ -92,7 +92,7 @@ final class mi extends IntrusiveNode {
         if (this.field_p == dc.field_o) {
           return "Number{" + this.field_m + "}";
         }
-        if (dja.field_r == this.field_p) {
+        if (PressureSwitchBehaviour.field_r == this.field_p) {
           return "Boolean{" + this.field_m + "}";
         }
         if (nl.field_d == this.field_p) {
@@ -200,7 +200,7 @@ final class mi extends IntrusiveNode {
               stackIn_20_0 = new bfa(Double.valueOf(this.field_m).doubleValue());
               return stackIn_20_0;
             }
-            if (dja.field_r == this.field_p) {
+            if (PressureSwitchBehaviour.field_r == this.field_p) {
               stackIn_26_0 = new bfa(this.field_m.equals("true"));
               return stackIn_26_0;
             }

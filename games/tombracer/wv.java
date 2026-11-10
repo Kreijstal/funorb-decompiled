@@ -106,17 +106,17 @@ abstract class wv extends dfa {
                 var6 = 1;
               }
               if (this.field_k.f(75) &&
-                tk.a(-22636) < uha.e((byte) 71)) {
+                tk.a(-22636) < CircleMovementLocomotor.e((byte) 71)) {
                 var6 = 1;
-                qfa.a(uha.e((byte) 126), 20815);
+                qfa.a(CircleMovementLocomotor.e((byte) 126), 20815);
               }
               if (this.field_k.a((byte) -128)) {
                 var8 = -24 + (aaa.a(false) >> 1);
                 var9 = -var8 + jba.field_j;
                 var10 = var9 << 1;
                 if (var10 > 0) {
-                  if (!(uha.e((byte) 68) > var10)) {
-                    var10 = uha.e((byte) 61);
+                  if (!(CircleMovementLocomotor.e((byte) 68) > var10)) {
+                    var10 = CircleMovementLocomotor.e((byte) 61);
                     if (var11 != 0) {
                       var10 = 0;
                     }
@@ -134,7 +134,7 @@ abstract class wv extends dfa {
                 to.b(11);
               }
               if (this.field_k.e(94) &&
-                tk.a(-22636) < uha.e((byte) 87)) {
+                tk.a(-22636) < CircleMovementLocomotor.e((byte) 87)) {
                 var6 = 1;
                 EventFactory.a((byte) -117);
               }
@@ -150,7 +150,7 @@ abstract class wv extends dfa {
                 return;
               }
             }
-            var7 = uha.e((byte) 124);
+            var7 = CircleMovementLocomotor.e((byte) 124);
             if (this.field_k.a(0)) {
               mqa.a(0, (byte) -118);
             }
@@ -445,7 +445,7 @@ abstract class wv extends dfa {
           if (var7 != 22 ||
             var8 != 0) {
             if (var7 == 1) {
-              ira.a(param1, 9, (byte) -16);
+              ConstrainToRectangleLocomotor.a(param1, 9, (byte) -16);
               return true;
             }
             if (2 == var7 &&
@@ -457,19 +457,19 @@ abstract class wv extends dfa {
               if (!vpa.a(27)) {
                 uv.d(30785);
               } else {
-                ira.a(param1, 11, (byte) 106);
+                ConstrainToRectangleLocomotor.a(param1, 11, (byte) 106);
                 jm.field_n = -2;
               }
               return true;
             }
             if (var7 == 12) {
               if (this.field_c != 7) {
-                ira.a(param1, 4, (byte) -11);
+                ConstrainToRectangleLocomotor.a(param1, 4, (byte) -11);
                 if (var8 != 0) {
-                  ira.a(param1, 12, (byte) -113);
+                  ConstrainToRectangleLocomotor.a(param1, 12, (byte) -113);
                 }
               } else {
-                ira.a(param1, 12, (byte) -113);
+                ConstrainToRectangleLocomotor.a(param1, 12, (byte) -113);
               }
               return true;
             }
@@ -480,7 +480,7 @@ abstract class wv extends dfa {
                 SecondaryNodeDequeIterator.field_a.field_D &&
                 !SecondaryNodeDequeIterator.field_a.d((byte) 90)) {
                 ql.field_k.k(65, -2988);
-                ira.a(param1, -1, (byte) 105);
+                ConstrainToRectangleLocomotor.a(param1, -1, (byte) 105);
                 return true;
               }
               return true;
@@ -494,25 +494,25 @@ abstract class wv extends dfa {
             }
             if (13 == var7 &&
               var8 == 0) {
-              ira.a(param1, 5, (byte) -112);
+              ConstrainToRectangleLocomotor.a(param1, 5, (byte) -112);
               return true;
             }
             if (14 == var7) {
-              ira.a(param1, 6, (byte) 82);
+              ConstrainToRectangleLocomotor.a(param1, 6, (byte) 82);
               return true;
             }
             if (var7 == 0 &&
               var8 == 0) {
-              ira.a(param1, 0, (byte) -17);
+              ConstrainToRectangleLocomotor.a(param1, 0, (byte) -17);
               return true;
             }
             if (var7 == 4 &&
               var8 == 0) {
-              ira.a(param1, 2, (byte) 85);
+              ConstrainToRectangleLocomotor.a(param1, 2, (byte) 85);
               return true;
             }
             if (var7 == 8) {
-              ira.a(param1, 3, (byte) -101);
+              ConstrainToRectangleLocomotor.a(param1, 3, (byte) -101);
               return true;
             }
             if (var7 != 5 &&
@@ -544,17 +544,17 @@ abstract class wv extends dfa {
                 return true;
               }
               if (var7 == 15) {
-                ira.a(param1, -1, (byte) 107);
+                ConstrainToRectangleLocomotor.a(param1, -1, (byte) 107);
                 return true;
               }
               if (17 == var7 &&
                 var8 == 0) {
-                ira.a(param1, 7, (byte) -101);
+                ConstrainToRectangleLocomotor.a(param1, 7, (byte) -101);
                 return true;
               }
               if (18 == var7 &&
                 var8 == 0) {
-                ira.a(param1, 8, (byte) -109);
+                ConstrainToRectangleLocomotor.a(param1, 8, (byte) -109);
                 return true;
               }
               if (var7 == 23 &&
@@ -607,7 +607,7 @@ abstract class wv extends dfa {
               if (var7 == 32 &&
                 var8 == 0) {
                 mpa.field_X = true;
-                ira.a(param1, 0, (byte) -107);
+                ConstrainToRectangleLocomotor.a(param1, 0, (byte) -107);
                 return true;
               }
               if (var7 == 36) {
@@ -624,7 +624,7 @@ abstract class wv extends dfa {
               }
               if (var7 == 39 &&
                 var8 == 0) {
-                ksa.a(true, ska.field_r);
+                ksa.a(true, WeaponShooterBehaviour.field_r);
                 return true;
               }
               if (var7 == 40) {
@@ -632,14 +632,14 @@ abstract class wv extends dfa {
                 return true;
               }
               if (var7 == 29) {
-                stackIn_312_0 = !(jc.field_M);
-                jc.field_M = stackIn_312_0;
+                stackIn_312_0 = !(SimpleHoverMountComponent.field_M);
+                SimpleHoverMountComponent.field_M = stackIn_312_0;
                 return true;
               }
               if (30 == var7 &&
                 var8 == 0) {
-                stackIn_318_0 = !(rsa.field_s);
-                rsa.field_s = stackIn_318_0;
+                stackIn_318_0 = !(ConstrainToLatticeLocomotor.field_s);
+                ConstrainToLatticeLocomotor.field_s = stackIn_318_0;
                 return true;
               }
               if (var7 == 31) {
@@ -744,7 +744,7 @@ abstract class wv extends dfa {
               return;
             }
           }
-          pt.field_p = null;
+          FacePlayerLocomotor.field_p = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -807,7 +807,7 @@ abstract class wv extends dfa {
           }
           if (rda.d(20125) &&
             39 == param0) {
-            bla.a(cq.field_d, (byte) -128);
+            CoinItemComponent.a(cq.field_d, (byte) -128);
           }
           this.b(false, false, this.field_k.field_h);
           return true;
@@ -845,20 +845,20 @@ abstract class wv extends dfa {
                 if (!ara.field_wb) {
                   stackIn_17_1 = Behaviour.field_h.toLowerCase();
                 } else {
-                  stackIn_17_1 = ra.field_H.toLowerCase();
+                  stackIn_17_1 = PathMoverComponent.field_H.toLowerCase();
                 }
                 var3 = ((StringBuilder) (Object) stackIn_16_0).append(stackIn_17_1).toString();
                 if (var4 != 0) {
                   stackIn_23_0 = new StringBuilder().append(var3).append(" ");
-                  if (rsa.field_s) {
-                    stackIn_24_1 = ra.field_H.toLowerCase();
+                  if (ConstrainToLatticeLocomotor.field_s) {
+                    stackIn_24_1 = PathMoverComponent.field_H.toLowerCase();
                   } else {
                     stackIn_24_1 = Behaviour.field_h.toLowerCase();
                   }
                   var3 = ((StringBuilder) (Object) stackIn_23_0).append(stackIn_24_1).toString();
                   stackIn_30_0 = new StringBuilder().append(var3).append(" ");
-                  if (jc.field_M) {
-                    stackIn_31_1 = ra.field_H.toLowerCase();
+                  if (SimpleHoverMountComponent.field_M) {
+                    stackIn_31_1 = PathMoverComponent.field_H.toLowerCase();
                   } else {
                     stackIn_31_1 = Behaviour.field_h.toLowerCase();
                   }
@@ -867,16 +867,16 @@ abstract class wv extends dfa {
               }
             } else {
               stackIn_23_0 = new StringBuilder().append(var3).append(" ");
-              if (rsa.field_s) {
-                stackIn_24_1 = ra.field_H.toLowerCase();
+              if (ConstrainToLatticeLocomotor.field_s) {
+                stackIn_24_1 = PathMoverComponent.field_H.toLowerCase();
               } else {
                 stackIn_24_1 = Behaviour.field_h.toLowerCase();
               }
               var3 = ((StringBuilder) (Object) stackIn_23_0).append(stackIn_24_1).toString();
               if (var4 != 0) {
                 stackIn_30_0 = new StringBuilder().append(var3).append(" ");
-                if (jc.field_M) {
-                  stackIn_31_1 = ra.field_H.toLowerCase();
+                if (SimpleHoverMountComponent.field_M) {
+                  stackIn_31_1 = PathMoverComponent.field_H.toLowerCase();
                 } else {
                   stackIn_31_1 = Behaviour.field_h.toLowerCase();
                 }
@@ -885,8 +885,8 @@ abstract class wv extends dfa {
             }
           } else {
             stackIn_30_0 = new StringBuilder().append(var3).append(" ");
-            if (jc.field_M) {
-              stackIn_31_1 = ra.field_H.toLowerCase();
+            if (SimpleHoverMountComponent.field_M) {
+              stackIn_31_1 = PathMoverComponent.field_H.toLowerCase();
             } else {
               stackIn_31_1 = Behaviour.field_h.toLowerCase();
             }
@@ -1159,14 +1159,14 @@ abstract class wv extends dfa {
               (var6 == null)) {
               break scanLoop1;
             }
-            oh.a((byte) -91, new fna[]{this.field_m[((int[]) (var6))[0]], this.field_m[((int[]) (var6))[1]], this.field_m[((int[]) (var6))[2]]});
+            TextSpewerBehaviour.a((byte) -91, new fna[]{this.field_m[((int[]) (var6))[0]], this.field_m[((int[]) (var6))[1]], this.field_m[((int[]) (var6))[2]]});
             break;
           }
           if (var8 != null) {
-            oh.a((byte) -91, new fna[]{this.field_m[((int[]) (var8))[0]], this.field_m[((int[]) (var8))[1]]});
+            TextSpewerBehaviour.a((byte) -91, new fna[]{this.field_m[((int[]) (var8))[0]], this.field_m[((int[]) (var8))[1]]});
           }
           if (null != var4) {
-            oh.a((byte) -91, new fna[]{this.field_m[((int[]) (var4))[0]], this.field_m[((int[]) (var4))[1]]});
+            TextSpewerBehaviour.a((byte) -91, new fna[]{this.field_m[((int[]) (var4))[0]], this.field_m[((int[]) (var4))[1]]});
           }
           this.field_k = new ko(this.field_m.length);
           return;

@@ -21,7 +21,7 @@ class or extends fi {
     void a(int param0, boolean param1, byte param2) {
         int fieldTemp$0 = this.field_k;
         this.field_k = this.field_k + 1;
-        this.field_l[fieldTemp$0] = (byte)(127 + sea.c(127, param2 >> 1));
+        this.field_l[fieldTemp$0] = (byte)(127 + SnakePitBehaviour.c(127, param2 >> 1));
         if (param1) {
           field_m = (String[]) null;
         }
@@ -62,7 +62,7 @@ class or extends fi {
     final static void d(int param0) {
         int var1 = qd.a((byte) 82);
         int var2 = mg.a(-62);
-        qqa.field_t.a((byte) 57, var1 + (ro.field_p << 1), -lsa.field_b + jua.field_d, am.field_o - ro.field_p, (lsa.field_b << 1) + var2);
+        qqa.field_t.a((byte) 57, var1 + (PathMoveLocomotor.field_p << 1), -lsa.field_b + jua.field_d, am.field_o - PathMoveLocomotor.field_p, (lsa.field_b << 1) + var2);
         if (param0 == -1226152383) {
           fp.a((byte) -83);
           return;

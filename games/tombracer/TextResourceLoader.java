@@ -30,7 +30,7 @@ final class TextResourceLoader extends eta {
                 this.var3 = 0;
             }
             void runChunk0() throws java.lang.RuntimeException {
-                df.field_H = param1;
+                RevolverItemComponent.field_H = param1;
                 var2 = dn.a((byte) 120, "loginm3");
                 if (var2 != null) {
                   hb.field_u = jaa.a((byte) 126, var2);
@@ -45,7 +45,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 107, "idlemessage20min");
                 if (var2 != null) {
-                  th.field_n = jaa.a((byte) 28, var2);
+                  WindZoneBehaviour.field_n = jaa.a((byte) 28, var2);
                 }
                 var2 = dn.a((byte) -98, "error_js5crc");
                 if (var2 != null) {
@@ -61,7 +61,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -66, "error_js5connect");
                 if (var2 != null) {
-                  wqa.field_H = jaa.a((byte) 97, var2);
+                  GasTrapComponent.field_H = jaa.a((byte) 97, var2);
                 }
                 var2 = dn.a((byte) 119, "login_gameupdated");
                 if (var2 != null) {
@@ -137,7 +137,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 104, "mu_chat_tips");
                 if (null != var2) {
-                  ipa.field_O = jaa.a((byte) 49, var2);
+                  WheeledMountComponent.field_O = jaa.a((byte) 49, var2);
                 }
                 var2 = dn.a((byte) -120, "mu_chat_game");
                 if (var2 != null) {
@@ -161,7 +161,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -17, "mu_x_left_lobby");
                 if (null != var2) {
-                  rh.field_o = jaa.a((byte) 123, var2);
+                  TouchSwitchBehaviour.field_o = jaa.a((byte) 123, var2);
                 }
                 var2 = dn.a((byte) 105, "mu_x_lost_con");
                 if (var2 != null) {
@@ -173,7 +173,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 110, "mu_x_cannot_join_inprogress");
                 if (null != var2) {
-                  wha.field_H = jaa.a((byte) 28, var2);
+                  TrackMountComponent.field_H = jaa.a((byte) 28, var2);
                 }
                 var2 = dn.a((byte) -82, "mu_x_declined_invite");
                 if (null != var2) {
@@ -205,7 +205,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 127, "mu_you_declined_invite");
                 if (null != var2) {
-                  ipa.field_N = jaa.a((byte) 56, var2);
+                  WheeledMountComponent.field_N = jaa.a((byte) 56, var2);
                 }
                 var2 = dn.a((byte) -19, "mu_invite_withdrawn");
                 if (var2 != null) {
@@ -277,7 +277,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -100, "mu_gamelist_elapsed_time");
                 if (null != var2) {
-                  ra.field_G = jaa.a((byte) 110, var2);
+                  PathMoverComponent.field_G = jaa.a((byte) 110, var2);
                 }
                 var2 = dn.a((byte) 110, "mu_play_rated");
                 if (var2 != null) {
@@ -289,7 +289,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 111, "mu_options");
                 if (null != var2) {
-                  mh.field_G = jaa.a((byte) 102, var2);
+                  DoorwayComponent.field_G = jaa.a((byte) 102, var2);
                 }
                 var2 = dn.a((byte) 115, "mu_options_whocanjoin");
                 if (var2 != null) {
@@ -389,7 +389,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -16, "mu_gameopt_reject_x_from_game");
                 if (null != var2) {
-                  aja.field_G = jaa.a((byte) 106, var2);
+                  CoinBagItemComponent.field_G = jaa.a((byte) 106, var2);
                 }
                 var2 = dn.a((byte) -86, "mu_gameopt_invite_x_to_game");
                 if (var2 != null) {
@@ -449,7 +449,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -38, "mu_chat_pm_friends");
                 if (null != var2) {
-                  oqa.field_t = jaa.a((byte) 92, var2);
+                  ConstrainToFacingArcLocomotor.field_t = jaa.a((byte) 92, var2);
                 }
                 var2 = dn.a((byte) 119, "mu_chat_invisible_and_silent_mode");
                 if (var2 != null) {
@@ -557,7 +557,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -120, "quickchat_game");
                 if (var2 != null) {
-                  sg.field_s = jaa.a((byte) 42, var2);
+                  SafeZoneBehaviour.field_s = jaa.a((byte) 42, var2);
                 }
                 var2 = dn.a((byte) -58, "kick");
                 if (null != var2) {
@@ -617,7 +617,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -10, "asking_to_join_xs_game");
                 if (null != var2) {
-                  ona.field_I = jaa.a((byte) 80, var2);
+                  SweeperMountComponent.field_I = jaa.a((byte) 80, var2);
                 }
                 var2 = dn.a((byte) 110, "who_can_join");
                 if (var2 != null) {
@@ -637,7 +637,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -65, "you_can_spectate");
                 if (null != var2) {
-                  bha.field_y = jaa.a((byte) 125, var2);
+                  FleeLocomotor.field_y = jaa.a((byte) 125, var2);
                 }
                 var2 = dn.a((byte) 109, "you_can_not_spectate");
                 if (null != var2) {
@@ -653,11 +653,11 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 105, "show_players_in_xs_game");
                 if (var2 != null) {
-                  gd.field_J = jaa.a((byte) 105, var2);
+                  IdolItemComponent.field_J = jaa.a((byte) 105, var2);
                 }
                 var2 = dn.a((byte) -20, "connecting_to_friend_server_twoline");
                 if (var2 != null) {
-                  tna.field_b = jaa.a((byte) 105, var2);
+                  DivisionMazeGenerator.field_b = jaa.a((byte) 105, var2);
                 }
                 var2 = dn.a((byte) -12, "loading");
                 if (null != var2) {
@@ -665,7 +665,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -43, "offline");
                 if (var2 != null) {
-                  gd.field_K = jaa.a((byte) 107, var2);
+                  IdolItemComponent.field_K = jaa.a((byte) 107, var2);
                 }
                 var2 = dn.a((byte) -11, "multiconst_invite_only");
                 if (var2 != null) {
@@ -693,15 +693,15 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -59, "reportabuse");
                 if (var2 != null) {
-                  ge.field_G = jaa.a((byte) 41, var2);
+                  ShooterComponent.field_G = jaa.a((byte) 41, var2);
                 }
                 var2 = dn.a((byte) 125, "presstabtochat");
                 if (var2 != null) {
-                  wn.field_n = jaa.a((byte) 68, var2);
+                  SimpleActionBehaviour.field_n = jaa.a((byte) 68, var2);
                 }
                 var2 = dn.a((byte) -21, "pressf10toquickchat");
                 if (var2 != null) {
-                  rsa.field_z = jaa.a((byte) 31, var2);
+                  ConstrainToLatticeLocomotor.field_z = jaa.a((byte) 31, var2);
                 }
                 var2 = dn.a((byte) 125, "dob_chatdisabled");
                 if (null != var2) {
@@ -729,7 +729,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -18, "privatequickchat_to_x");
                 if (null != var2) {
-                  wha.field_G = jaa.a((byte) 59, var2);
+                  TrackMountComponent.field_G = jaa.a((byte) 59, var2);
                 }
                 var2 = dn.a((byte) 122, "privatechat_blankarea_explanation");
                 if (var2 != null) {
@@ -785,7 +785,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 127, "gameopt_unratedonly");
                 if (var2 != null) {
-                  tp.field_L = jaa.a((byte) 90, var2);
+                  WhiteLightShooterComponent.field_L = jaa.a((byte) 90, var2);
                 }
                 var2 = dn.a((byte) 122, "gameopt_notunlocked");
                 if (null != var2) {
@@ -833,7 +833,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 124, "gameopt_playerhasntunlocked");
                 if (var2 != null) {
-                  wha.field_I = jaa.a((byte) 29, var2);
+                  TrackMountComponent.field_I = jaa.a((byte) 29, var2);
                 }
                 var2 = dn.a((byte) -102, "gameopt_youhaventunlocked");
                 if (var2 != null) {
@@ -841,7 +841,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 114, "gameopt_trychanging1");
                 if (var2 != null) {
-                  gd.field_I = jaa.a((byte) 107, var2);
+                  IdolItemComponent.field_I = jaa.a((byte) 107, var2);
                 }
                 var2 = dn.a((byte) -98, "gameopt_trychanging2");
                 if (var2 != null) {
@@ -849,7 +849,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 107, "gameopt_needchanging1");
                 if (null != var2) {
-                  jh.field_K = jaa.a((byte) 115, var2);
+                  FlameShooterComponent.field_K = jaa.a((byte) 115, var2);
                 }
             }
             void runChunk1() throws java.lang.RuntimeException {
@@ -871,11 +871,11 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 118, "gameopt_unselectedoptions");
                 if (null != var2) {
-                  wqa.field_J = jaa.a((byte) 109, var2);
+                  GasTrapComponent.field_J = jaa.a((byte) 109, var2);
                 }
                 var2 = dn.a((byte) -39, "gameopt_pleaseselectoption1");
                 if (null != var2) {
-                  aja.field_I = jaa.a((byte) 124, var2);
+                  CoinBagItemComponent.field_I = jaa.a((byte) 124, var2);
                 }
                 var2 = dn.a((byte) 108, "gameopt_pleaseselectoption2");
                 if (null != var2) {
@@ -899,7 +899,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -47, "gameopt_pleasetrychanging");
                 if (null != var2) {
-                  jb.field_J = jaa.a((byte) 49, var2);
+                  WhiteLightSensorComponent.field_J = jaa.a((byte) 49, var2);
                 }
                 var2 = dn.a((byte) -47, "ra_title");
                 if (var2 != null) {
@@ -919,7 +919,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -109, "ra_intro_no_name");
                 if (var2 != null) {
-                  rh.field_r = jaa.a((byte) 65, var2);
+                  TouchSwitchBehaviour.field_r = jaa.a((byte) 65, var2);
                 }
                 var2 = dn.a((byte) -33, "ra_explanation");
                 if (null != var2) {
@@ -979,7 +979,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -63, "rule_pillar_2");
                 if (null != var2) {
-                  lo.field_o = jaa.a((byte) 36, var2);
+                  TeleportLocomotor.field_o = jaa.a((byte) 36, var2);
                 }
                 var2 = dn.a((byte) 106, "rule_2_0");
                 if (var2 != null) {
@@ -1019,7 +1019,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 115, "pleasetryagain");
                 if (var2 != null) {
-                  mj.field_K = jaa.a((byte) 85, var2);
+                  KeySwitchComponent.field_K = jaa.a((byte) 85, var2);
                 }
                 var2 = dn.a((byte) 120, "pleasereenterpass");
                 if (null != var2) {
@@ -1027,7 +1027,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 126, "playfreeversion");
                 if (null != var2) {
-                  bg.field_p = jaa.a((byte) 123, var2);
+                  ApproachPlayerLocomotor.field_p = jaa.a((byte) 123, var2);
                 }
                 var2 = dn.a((byte) -100, "reloadgame");
                 if (var2 != null) {
@@ -1035,7 +1035,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -115, "toserverlist");
                 if (null != var2) {
-                  tca.field_M = jaa.a((byte) 124, var2);
+                  MovingWallComponent.field_M = jaa.a((byte) 124, var2);
                 }
                 var2 = dn.a((byte) -70, "tocustomersupport");
                 if (null != var2) {
@@ -1103,7 +1103,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -42, "connectionlost_reconnecting");
                 if (null != var2) {
-                  mj.field_M = jaa.a((byte) 113, var2);
+                  KeySwitchComponent.field_M = jaa.a((byte) 113, var2);
                 }
                 var2 = dn.a((byte) -116, "connectionlost_withreason");
                 if (var2 != null) {
@@ -1123,7 +1123,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 104, "back");
                 if (var2 != null) {
-                  sm.field_o = jaa.a((byte) 69, var2);
+                  KeyLockBehaviour.field_o = jaa.a((byte) 69, var2);
                 }
                 var2 = dn.a((byte) -96, "exitfullscreenmode");
                 if (var2 != null) {
@@ -1131,7 +1131,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 125, "quittowebsite");
                 if (null != var2) {
-                  nj.field_q = jaa.a((byte) 69, var2);
+                  ControllerLocomotor.field_q = jaa.a((byte) 69, var2);
                 }
                 var2 = dn.a((byte) -104, "connectionrestored");
                 if (null != var2) {
@@ -1391,7 +1391,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -126, "create_displayname");
                 if (var2 != null) {
-                  rea.field_r = jaa.a((byte) 83, var2);
+                  CrusherBehaviour.field_r = jaa.a((byte) 83, var2);
                 }
                 var2 = dn.a((byte) -74, "create_password");
                 if (null != var2) {
@@ -1455,11 +1455,11 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -111, "create_agreeterms");
                 if (var2 != null) {
-                  uqa.field_y = jaa.a((byte) 87, var2);
+                  ConstrainToCircleLocomotor.field_y = jaa.a((byte) 87, var2);
                 }
                 var2 = dn.a((byte) 127, "create_u13terms");
                 if (null != var2) {
-                  sg.field_q = jaa.a((byte) 44, var2);
+                  SafeZoneBehaviour.field_q = jaa.a((byte) 44, var2);
                 }
                 var2 = dn.a((byte) -70, "login_username_email");
                 if (null != var2) {
@@ -1527,7 +1527,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 122, "create_password_confirm_tooltip");
                 if (null != var2) {
-                  df.field_G = jaa.a((byte) 84, var2);
+                  RevolverItemComponent.field_G = jaa.a((byte) 84, var2);
                 }
                 var2 = dn.a((byte) -88, "create_email_tooltip");
                 if (var2 != null) {
@@ -1583,7 +1583,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 126, "create_alert_namechars");
                 if (null != var2) {
-                  jra.field_b = jaa.a((byte) 46, var2);
+                  StripedMazeGenerator.field_b = jaa.a((byte) 46, var2);
                 }
                 var2 = dn.a((byte) -124, "create_alert_nameleadingspace");
                 if (var2 != null) {
@@ -1643,7 +1643,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -113, "create_alert_mismatch");
                 if (var2 != null) {
-                  bha.field_q = jaa.a((byte) 107, var2);
+                  FleeLocomotor.field_q = jaa.a((byte) 107, var2);
                 }
                 var2 = dn.a((byte) -36, "create_passwordvalid");
                 if (var2 != null) {
@@ -1671,7 +1671,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -127, "unable_to_add_ignore");
                 if (var2 != null) {
-                  eia.field_o = jaa.a((byte) 84, var2);
+                  EffectSwitchBehaviour.field_o = jaa.a((byte) 84, var2);
                 }
                 var2 = dn.a((byte) -14, "unable_to_delete_friend");
                 if (var2 != null) {
@@ -1703,7 +1703,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -125, "ignorenotfound");
                 if (null != var2) {
-                  uqa.field_A = jaa.a((byte) 30, var2);
+                  ConstrainToCircleLocomotor.field_A = jaa.a((byte) 30, var2);
                 }
             }
             void runChunk2() throws java.lang.RuntimeException {
@@ -1713,7 +1713,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -18, "removefriendfirst");
                 if (null != var2) {
-                  bha.field_o = jaa.a((byte) 43, var2);
+                  FleeLocomotor.field_o = jaa.a((byte) 43, var2);
                 }
                 var2 = dn.a((byte) -119, "enterfriend_add");
                 if (var2 != null) {
@@ -1721,7 +1721,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -60, "enterfriend_del");
                 if (var2 != null) {
-                  ro.field_q = jaa.a((byte) 33, var2);
+                  PathMoveLocomotor.field_q = jaa.a((byte) 33, var2);
                 }
                 var2 = dn.a((byte) 123, "enterignore_add");
                 if (var2 != null) {
@@ -1805,7 +1805,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 116, "loading_fonts");
                 if (null != var2) {
-                  vja.field_b = jaa.a((byte) 83, var2);
+                  TrapSpawner.field_b = jaa.a((byte) 83, var2);
                 }
                 var2 = dn.a((byte) 111, "loading_soundeffects");
                 if (null != var2) {
@@ -1825,7 +1825,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 126, "loading_extradata");
                 if (null != var2) {
-                  th.field_u = jaa.a((byte) 98, var2);
+                  WindZoneBehaviour.field_u = jaa.a((byte) 98, var2);
                 }
                 var2 = dn.a((byte) 104, "loading_languages");
                 if (null != var2) {
@@ -1889,7 +1889,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -66, "music_colon");
                 if (null != var2) {
-                  cu.field_x = jaa.a((byte) 51, var2);
+                  DamageableBehaviour.field_x = jaa.a((byte) 51, var2);
                 }
                 var2 = dn.a((byte) 111, "fullscreen");
                 if (var2 != null) {
@@ -1925,7 +1925,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -35, "quit");
                 if (var2 != null) {
-                  bn.field_u = jaa.a((byte) 83, var2);
+                  VortexBehaviour.field_u = jaa.a((byte) 83, var2);
                 }
                 var2 = dn.a((byte) -25, "login_createaccount");
                 if (var2 != null) {
@@ -2025,7 +2025,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -31, "off");
                 if (var2 != null) {
-                  ra.field_H = jaa.a((byte) 50, var2);
+                  PathMoverComponent.field_H = jaa.a((byte) 50, var2);
                 }
                 var2 = dn.a((byte) -36, "previous");
                 if (var2 != null) {
@@ -2065,7 +2065,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -121, "offerdraw");
                 if (null != var2) {
-                  lda.field_I = jaa.a((byte) 92, var2);
+                  RopeBridgeComponent.field_I = jaa.a((byte) 92, var2);
                 }
                 var2 = dn.a((byte) -95, "canceldraw");
                 if (var2 != null) {
@@ -2341,7 +2341,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -18, "mp_cancelrematch");
                 if (var2 != null) {
-                  df.field_I = jaa.a((byte) 120, var2);
+                  RevolverItemComponent.field_I = jaa.a((byte) 120, var2);
                 }
                 var2 = dn.a((byte) 117, "mp_cancelrematch_unrated");
                 if (null != var2) {
@@ -2513,7 +2513,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -112, "keychar_the_character_under_questionmark");
                 if (var2 != null) {
-                  tqa.field_o = wpa.a((byte) 11, var2[0]);
+                  tqa.field_o = ArrowShooterComponent.a((byte) 11, var2[0]);
                 }
                 var2 = dn.a((byte) -95, "rating_noratings");
                 if (var2 != null) {
@@ -2521,11 +2521,11 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 125, "rating_rating");
                 if (null != var2) {
-                  nj.field_o = jaa.a((byte) 76, var2);
+                  ControllerLocomotor.field_o = jaa.a((byte) 76, var2);
                 }
                 var2 = dn.a((byte) -118, "rating_played");
                 if (var2 != null) {
-                  rb.field_q = jaa.a((byte) 86, var2);
+                  SimpleConditionBehaviour.field_q = jaa.a((byte) 86, var2);
                 }
                 var2 = dn.a((byte) 125, "rating_won");
                 if (null != var2) {
@@ -2639,7 +2639,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -74, "fs_accept_beforeaccept");
                 if (null != var2) {
-                  bha.field_B = jaa.a((byte) 110, var2);
+                  FleeLocomotor.field_B = jaa.a((byte) 110, var2);
                 }
                 var2 = dn.a((byte) -47, "fs_button_accept");
                 if (null != var2) {
@@ -2679,7 +2679,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -53, "fs_unavailable");
                 if (null != var2) {
-                  gd.field_G = jaa.a((byte) 127, var2);
+                  IdolItemComponent.field_G = jaa.a((byte) 127, var2);
                 }
                 var2 = dn.a((byte) 108, "fs_unavailable_try_signed_applet");
                 if (var2 != null) {
@@ -2695,7 +2695,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 107, "fs_timeout");
                 if (null != var2) {
-                  th.field_s = jaa.a((byte) 31, var2);
+                  WindZoneBehaviour.field_s = jaa.a((byte) 31, var2);
                 }
                 var2 = dn.a((byte) 117, "fs_button_tryagain");
                 if (null != var2) {
@@ -2815,7 +2815,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -40, "serviceunavailable");
                 if (null != var2) {
-                  kt.field_H = jaa.a((byte) 63, var2);
+                  FacePlayerMountComponent.field_H = jaa.a((byte) 63, var2);
                 }
                 var2 = dn.a((byte) 105, "createtouse");
                 if (null != var2) {
@@ -2839,31 +2839,31 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 124, "mustlogin2,1");
                 if (null != var2) {
-                  mj.field_L[1] = jaa.a((byte) 81, var2);
+                  KeySwitchComponent.field_L[1] = jaa.a((byte) 81, var2);
                 }
                 var2 = dn.a((byte) -14, "mustlogin2,2");
                 if (null != var2) {
-                  mj.field_L[2] = jaa.a((byte) 83, var2);
+                  KeySwitchComponent.field_L[2] = jaa.a((byte) 83, var2);
                 }
                 var2 = dn.a((byte) 106, "mustlogin2,3");
                 if (var2 != null) {
-                  mj.field_L[3] = jaa.a((byte) 34, var2);
+                  KeySwitchComponent.field_L[3] = jaa.a((byte) 34, var2);
                 }
                 var2 = dn.a((byte) 123, "mustlogin2,4");
                 if (var2 != null) {
-                  mj.field_L[4] = jaa.a((byte) 120, var2);
+                  KeySwitchComponent.field_L[4] = jaa.a((byte) 120, var2);
                 }
                 var2 = dn.a((byte) -100, "mustlogin2,5");
                 if (null != var2) {
-                  mj.field_L[5] = jaa.a((byte) 93, var2);
+                  KeySwitchComponent.field_L[5] = jaa.a((byte) 93, var2);
                 }
                 var2 = dn.a((byte) 117, "mustlogin2,6");
                 if (null != var2) {
-                  mj.field_L[6] = jaa.a((byte) 125, var2);
+                  KeySwitchComponent.field_L[6] = jaa.a((byte) 125, var2);
                 }
                 var2 = dn.a((byte) -63, "mustlogin2,7");
                 if (null != var2) {
-                  mj.field_L[7] = jaa.a((byte) 127, var2);
+                  KeySwitchComponent.field_L[7] = jaa.a((byte) 127, var2);
                 }
                 var2 = dn.a((byte) -9, "mustlogin3,1");
                 if (var2 != null) {
@@ -3013,7 +3013,7 @@ final class TextResourceLoader extends eta {
                 if (var2 != null) {
                   jaa.a((byte) 64, var2);
                 }
-                df.field_H = null;
+                RevolverItemComponent.field_H = null;
             }
             void run() {
                 var3 = TombRacer.field_G ? 1 : 0;

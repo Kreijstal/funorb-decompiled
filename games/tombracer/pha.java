@@ -119,7 +119,7 @@ final class pha extends jea {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        vja stackIn_5_0 = null;
+        TrapSpawner stackIn_5_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -135,7 +135,7 @@ final class pha extends jea {
           if (var4 != 0) {
             throw new IllegalStateException("Unrecognised spawner type: " + var3_int);
           }
-          stackIn_5_0 = new vja(param1, param0);
+          stackIn_5_0 = new TrapSpawner(param1, param0);
           return (Spawner) ((Object) stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

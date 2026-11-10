@@ -38,7 +38,7 @@ class of {
           return null;
         }
         if (fr.field_c < bda.field_m + gaa.field_p) {
-          return hn.field_F;
+          return MazeComponent.field_F;
         }
         if (param0 != 1) {
           of.a(97);

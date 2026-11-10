@@ -40,7 +40,7 @@ final class br extends DualLinkNode {
                 stackIn_8_0 = this.field_k;
                 stackIn_8_1 = var5;
                 if (var6 != 0) {
-                  stackIn_9_2 = wpa.a((byte) 11, (byte) var6);
+                  stackIn_9_2 = ArrowShooterComponent.a((byte) 11, (byte) var6);
                 } else {
                   stackIn_9_2 = 0;
                 }
@@ -59,7 +59,7 @@ final class br extends DualLinkNode {
                   if (var6 == 0) {
                     stackIn_18_2 = (char)0;
                   } else {
-                    stackIn_18_2 = wpa.a((byte) 11, (byte) var6);
+                    stackIn_18_2 = ArrowShooterComponent.a((byte) 11, (byte) var6);
                   }
                   stackIn_17_0[stackIn_17_1] = stackIn_18_2;
                 }

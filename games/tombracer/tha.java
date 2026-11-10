@@ -12,7 +12,7 @@ final class tha extends b implements tsa {
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = this.field_i + param0;
         int var6 = param1 + this.field_n;
-        mj.field_J.a(bb.field_q, var5 + 20, 20 + var6, -40 + this.field_m, -50 + this.field_p, 16777215, -1, 1, param2, mj.field_J.field_w);
+        KeySwitchComponent.field_J.a(bb.field_q, var5 + 20, 20 + var6, -40 + this.field_m, -50 + this.field_p, 16777215, -1, 1, param2, KeySwitchComponent.field_J.field_w);
         super.a(param0, param1, 0, param3);
     }
 

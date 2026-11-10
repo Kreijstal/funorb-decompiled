@@ -139,7 +139,7 @@ final class st extends cha implements java.awt.image.ImageProducer, java.awt.ima
               var14.field_f.a((byte) -65, 16, var15);
             } else {
               var12 = hka.field_b;
-              var13 = gl.$cfr$intArgs$a$53ce4ab4c593(125, gd.field_J, new String[]{param3});
+              var13 = gl.$cfr$intArgs$a$53ce4ab4c593(125, IdolItemComponent.field_J, new String[]{param3});
               var12.field_f.a((byte) -90, 15, var13);
             }
           }

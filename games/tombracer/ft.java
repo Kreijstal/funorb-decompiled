@@ -154,7 +154,7 @@ final class ft {
                 }
                 if (param6) {
                   bma.field_p[var23Lifetime2] = var27Lifetime1 >> SecondaryNodeDeque.field_a;
-                  ipa.field_M[var23Lifetime2] = var28Lifetime1 >> SecondaryNodeDeque.field_a;
+                  WheeledMountComponent.field_M[var23Lifetime2] = var28Lifetime1 >> SecondaryNodeDeque.field_a;
                   iia.field_v[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
@@ -181,14 +181,14 @@ final class ft {
                   var24Lifetime1 = param0.field_x[var23Lifetime2];
                   var25Lifetime1 = param0.field_G[var23Lifetime2];
                   var26Lifetime1 = param0.field_J[var23Lifetime2];
-                  fva.field_c[var23Lifetime2] = var9 + (var25Lifetime1 * var15 + var24Lifetime1 * var12 + var18 * var26Lifetime1 >> 16);
+                  RecursiveBacktrackerMazeGenerator.field_c[var23Lifetime2] = var9 + (var25Lifetime1 * var15 + var24Lifetime1 * var12 + var18 * var26Lifetime1 >> 16);
                   SecondaryNodeDeque.field_f[var23Lifetime2] = (var25Lifetime1 * var16 + var13 * var24Lifetime1 + var26Lifetime1 * var19 >> 16) + var10;
                   gv.field_q[var23Lifetime2] = var11 + (var26Lifetime1 * var20 + (var25Lifetime1 * var17 + var14 * var24Lifetime1) >> 16);
                   var24Lifetime1 = param0.field_E[var23Lifetime2];
                   var25Lifetime1 = param0.field_v[var23Lifetime2];
                   var26Lifetime1 = param0.field_L[var23Lifetime2];
                   nc.field_b[var23Lifetime2] = var9 + (var26Lifetime1 * var18 + (var15 * var25Lifetime1 + var24Lifetime1 * var12) >> 16);
-                  eq.field_p[var23Lifetime2] = var10 + (var25Lifetime1 * var16 + (var13 * var24Lifetime1 + var19 * var26Lifetime1) >> 16);
+                  SimpleBlockBehaviour.field_p[var23Lifetime2] = var10 + (var25Lifetime1 * var16 + (var13 * var24Lifetime1 + var19 * var26Lifetime1) >> 16);
                   bw.field_b[var23Lifetime2] = var11 + (var25Lifetime1 * var17 + var14 * var24Lifetime1 + var26Lifetime1 * var20 >> 16);
                   var23Lifetime2++;
                   if (var30 != 0) {

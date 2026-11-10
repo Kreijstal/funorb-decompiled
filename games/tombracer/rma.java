@@ -6,7 +6,7 @@ final class rma {
     static String field_a;
 
     final static void a(boolean param0, String param1, String param2, byte param3) {
-        rsa.field_u = param2;
+        ConstrainToLatticeLocomotor.field_u = param2;
         if (param3 < 66) {
           return;
         }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oo extends dg {
-    private sea field_p;
+    private SnakePitBehaviour field_p;
     private int field_q;
     private int field_o;
     private bt[] field_s;
@@ -381,8 +381,8 @@ final class oo extends dg {
           if (param1 != -104) {
             oo.a(-101, -90, 0, -88);
           }
-          sua.field_K.a(2 + (485 + param2 + param3), param5, param1 - 23672, var7 - param5, 5);
-          pq.field_g.a(-param2 + sua.field_K.field_G - mka.field_b.field_G, param5, -23776, 0, param2);
+          RotaterMountComponent.field_K.a(2 + (485 + param2 + param3), param5, param1 - 23672, var7 - param5, 5);
+          pq.field_g.a(-param2 + RotaterMountComponent.field_K.field_G - mka.field_b.field_G, param5, -23776, 0, param2);
           var7 = var7 - (2 + param5);
           mka.field_b.a(mka.field_b.field_G, param5, -23776, 0, param2 + pq.field_g.field_G);
           ne.field_d.a(param3 + (2 + param2) + 485, 2, (byte) 127, 5, param3, -5 + var7, 5);
@@ -509,19 +509,19 @@ final class oo extends dg {
           if (var3_int != 0) {
             if (1 == var3_int) {
               if (param1.field_c >= 50) {
-                return df.field_J[43];
+                return RevolverItemComponent.field_J[43];
               }
-              stackIn_13_0 = df.field_J[42];
+              stackIn_13_0 = RevolverItemComponent.field_J[42];
               return stackIn_13_0;
             }
             if (var3_int == 2) {
-              return df.field_J[44];
+              return RevolverItemComponent.field_J[44];
             }
           }
           if (param1.field_c >= 50) {
-            return df.field_J[41];
+            return RevolverItemComponent.field_J[41];
           }
-          stackIn_9_0 = df.field_J[40];
+          stackIn_9_0 = RevolverItemComponent.field_J[40];
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -558,8 +558,8 @@ final class oo extends dg {
     final void a(gr param0, gma param1, byte param2) {
         try {
           super.a(param0, param1, param2);
-          if (param0 instanceof sea) {
-            this.field_p = (sea) (param0);
+          if (param0 instanceof SnakePitBehaviour) {
+            this.field_p = (SnakePitBehaviour) (param0);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "oo.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

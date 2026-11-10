@@ -48,23 +48,23 @@ final class ki extends dg {
     }
 
     final static Locomotor readLocomotor(BitPacketBuffer param0, byte param1, Room param2, boolean param3) {
-        wi stackIn_26_0 = null;
-        bg stackIn_28_0 = null;
-        nj stackIn_30_0 = null;
-        bha stackIn_32_0 = null;
-        ws stackIn_34_0 = null;
-        ro stackIn_36_0 = null;
-        spa stackIn_38_0 = null;
-        pt stackIn_40_0 = null;
-        uqa stackIn_42_0 = null;
-        uha stackIn_44_0 = null;
-        sa stackIn_46_0 = null;
-        ira stackIn_48_0 = null;
-        rsa stackIn_50_0 = null;
-        oqa stackIn_52_0 = null;
-        hia stackIn_54_0 = null;
-        lo stackIn_56_0 = null;
-        ri stackIn_58_0 = null;
+        SimpleMoveLocomotor stackIn_26_0 = null;
+        ApproachPlayerLocomotor stackIn_28_0 = null;
+        ControllerLocomotor stackIn_30_0 = null;
+        FleeLocomotor stackIn_32_0 = null;
+        MirrorMoverLocomotor stackIn_34_0 = null;
+        PathMoveLocomotor stackIn_36_0 = null;
+        RotateLocomotor stackIn_38_0 = null;
+        FacePlayerLocomotor stackIn_40_0 = null;
+        ConstrainToCircleLocomotor stackIn_42_0 = null;
+        CircleMovementLocomotor stackIn_44_0 = null;
+        FacePointLocomotor stackIn_46_0 = null;
+        ConstrainToRectangleLocomotor stackIn_48_0 = null;
+        ConstrainToLatticeLocomotor stackIn_50_0 = null;
+        ConstrainToFacingArcLocomotor stackIn_52_0 = null;
+        TrackPlayerLocomotor stackIn_54_0 = null;
+        TeleportLocomotor stackIn_56_0 = null;
+        SweepRotateLocomotor stackIn_58_0 = null;
         RuntimeException stackIn_62_0 = null;
         StringBuilder stackIn_62_1 = null;
         String stackIn_63_2 = null;
@@ -86,73 +86,73 @@ final class ki extends dg {
           var5 = 37 / ((-67 - param1) / 45);
           var6 = var4_int;
           if (var6 == 0) {
-            stackIn_26_0 = new wi(param2, param0, param3);
+            stackIn_26_0 = new SimpleMoveLocomotor(param2, param0, param3);
             return (Locomotor) ((Object) stackIn_26_0);
           }
           if (var6 == 1) {
-            stackIn_28_0 = new bg(param2, param0, param3);
+            stackIn_28_0 = new ApproachPlayerLocomotor(param2, param0, param3);
             return (Locomotor) ((Object) stackIn_28_0);
           }
           if (var6 == 2) {
-            stackIn_30_0 = new nj(param2, param0, param3);
+            stackIn_30_0 = new ControllerLocomotor(param2, param0, param3);
             return (Locomotor) ((Object) stackIn_30_0);
           }
           if (3 == var6) {
-            stackIn_32_0 = new bha(param2, param0, param3);
+            stackIn_32_0 = new FleeLocomotor(param2, param0, param3);
             return (Locomotor) ((Object) stackIn_32_0);
           }
           if (4 == var6) {
-            stackIn_34_0 = new ws(param2, param0, param3);
+            stackIn_34_0 = new MirrorMoverLocomotor(param2, param0, param3);
             return (Locomotor) ((Object) stackIn_34_0);
           }
           if (5 == var6) {
-            stackIn_36_0 = new ro(param2, param0, param3);
+            stackIn_36_0 = new PathMoveLocomotor(param2, param0, param3);
             return (Locomotor) ((Object) stackIn_36_0);
           }
           if (var6 == 6) {
-            stackIn_38_0 = new spa(param2, param0, param3);
+            stackIn_38_0 = new RotateLocomotor(param2, param0, param3);
             return (Locomotor) ((Object) stackIn_38_0);
           }
           if (var6 == 7) {
-            stackIn_40_0 = new pt(param2, param0, param3);
+            stackIn_40_0 = new FacePlayerLocomotor(param2, param0, param3);
             return (Locomotor) ((Object) stackIn_40_0);
           }
           if (var6 == 8) {
-            stackIn_42_0 = new uqa(param2, param0, param3);
+            stackIn_42_0 = new ConstrainToCircleLocomotor(param2, param0, param3);
             return (Locomotor) ((Object) stackIn_42_0);
           }
           if (var6 == 9) {
-            stackIn_44_0 = new uha(param2, param0, param3);
+            stackIn_44_0 = new CircleMovementLocomotor(param2, param0, param3);
             return (Locomotor) ((Object) stackIn_44_0);
           }
           if (10 == var6) {
-            stackIn_46_0 = new sa(param2, param0, param3);
+            stackIn_46_0 = new FacePointLocomotor(param2, param0, param3);
             return (Locomotor) ((Object) stackIn_46_0);
           }
           if (11 == var6) {
-            stackIn_48_0 = new ira(param2, param0, param3);
+            stackIn_48_0 = new ConstrainToRectangleLocomotor(param2, param0, param3);
             return (Locomotor) ((Object) stackIn_48_0);
           }
           if (var6 == 12) {
-            stackIn_50_0 = new rsa(param2, param0, param3);
+            stackIn_50_0 = new ConstrainToLatticeLocomotor(param2, param0, param3);
             return (Locomotor) ((Object) stackIn_50_0);
           }
           if (var6 == 13) {
-            stackIn_52_0 = new oqa(param2, param0, param3);
+            stackIn_52_0 = new ConstrainToFacingArcLocomotor(param2, param0, param3);
             return (Locomotor) ((Object) stackIn_52_0);
           }
           if (var6 == 14) {
-            stackIn_54_0 = new hia(param2, param0, param3);
+            stackIn_54_0 = new TrackPlayerLocomotor(param2, param0, param3);
             return (Locomotor) ((Object) stackIn_54_0);
           }
           if (15 == var6) {
-            stackIn_56_0 = new lo(param2, param0, param3);
+            stackIn_56_0 = new TeleportLocomotor(param2, param0, param3);
             return (Locomotor) ((Object) stackIn_56_0);
           }
           if (var6 != 16) {
             throw new IllegalStateException("Unrecognised locomotor type: " + var4_int);
           }
-          stackIn_58_0 = new ri(param2, param0, param3);
+          stackIn_58_0 = new SweepRotateLocomotor(param2, param0, param3);
           return (Locomotor) ((Object) stackIn_58_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -112,8 +112,8 @@ final class on {
             on.a((java.awt.Canvas) null, (d) null, 122, (byte) 69);
           }
           for (var4 = 0; var4 < param0.length(); var4++) {
-            if (!fqa.a(false, param0.charAt(var4))) {
-              stackIn_12_0 = jra.field_b;
+            if (!SwitchComponent.a(false, param0.charAt(var4))) {
+              stackIn_12_0 = StripedMazeGenerator.field_b;
               return stackIn_12_0;
             }
           }

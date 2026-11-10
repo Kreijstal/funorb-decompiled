@@ -263,7 +263,7 @@ final class lja {
             this.field_f = (ola) null;
           }
           if (this.field_i != null) {
-            if (rb.field_r == this.field_g &&
+            if (SimpleConditionBehaviour.field_r == this.field_g &&
               param1 != 2) {
               return;
             }
@@ -288,7 +288,7 @@ final class lja {
             if (var5 != null) {
               if (!ab.a(this.field_i, (byte) -50) &&
                 !fua.field_g) {
-                if (!ok.field_s) {
+                if (!PowerDownItemBehaviour.field_s) {
                   this.field_f.a((byte) -77, 8, gl.$cfr$intArgs$a$53ce4ab4c593(114, fj.field_b, new String[]{var7}));
                 }
                 this.field_f.a((byte) -118, 18, gl.$cfr$intArgs$a$53ce4ab4c593(108, ob.field_f, new String[]{var7}));
@@ -381,7 +381,7 @@ final class lja {
           if (this.field_i == null) {
             return;
           }
-          if (this.field_g != rb.field_r &&
+          if (this.field_g != SimpleConditionBehaviour.field_r &&
             null != uu.field_a) {
             if (!mka.b(8192)) {
               return;
@@ -409,7 +409,7 @@ final class lja {
                 if (param1 &&
                   var14.field_Fb) {
                   this.field_f.a((byte) -123, 0, gl.$cfr$intArgs$a$53ce4ab4c593(127, sb.field_c, new String[]{var5}));
-                  this.field_f.a((byte) -98, 1, gl.$cfr$intArgs$a$53ce4ab4c593(116, aja.field_G, new String[]{var5}));
+                  this.field_f.a((byte) -98, 1, gl.$cfr$intArgs$a$53ce4ab4c593(116, CoinBagItemComponent.field_G, new String[]{var5}));
                   return;
                 }
                 this.field_f.a((byte) -112, 0, gl.$cfr$intArgs$a$53ce4ab4c593(98, uh.field_i, new String[]{var5}));
@@ -422,7 +422,7 @@ final class lja {
         if (this.field_i == null) {
           return;
         }
-        if (this.field_g == rb.field_r) {
+        if (this.field_g == SimpleConditionBehaviour.field_r) {
           return;
         }
         if (null == uu.field_a) {
@@ -454,7 +454,7 @@ final class lja {
           if (param1 &&
             var13.field_Fb) {
             this.field_f.a((byte) -123, 0, gl.$cfr$intArgs$a$53ce4ab4c593(127, sb.field_c, new String[]{var5}));
-            this.field_f.a((byte) -98, 1, gl.$cfr$intArgs$a$53ce4ab4c593(116, aja.field_G, new String[]{var5}));
+            this.field_f.a((byte) -98, 1, gl.$cfr$intArgs$a$53ce4ab4c593(116, CoinBagItemComponent.field_G, new String[]{var5}));
             return;
           }
           this.field_f.a((byte) -112, 0, gl.$cfr$intArgs$a$53ce4ab4c593(98, uh.field_i, new String[]{var5}));
@@ -466,7 +466,7 @@ final class lja {
     final void c(int param0) {
         String var4 = null;
         if (this.field_i != null &&
-          this.field_g != rb.field_r) {
+          this.field_g != SimpleConditionBehaviour.field_r) {
           var4 = this.b(-13);
           String var2 = var4;
           this.field_f.a((byte) -81, 17, gl.$cfr$intArgs$a$53ce4ab4c593(122, vj.field_c, new String[]{var4}));
@@ -484,19 +484,19 @@ final class lja {
           if (param1 != 17) {
             return false;
           }
-          fj.field_c = new wla(this.field_h.field_q, this.field_h.field_A, this.field_h.field_G, this.field_h.field_t, param0, lma.field_r, oba.field_f, cga.field_g, kua.field_i, kt.field_F, dja.field_p, this.field_i, this.field_g);
+          fj.field_c = new wla(this.field_h.field_q, this.field_h.field_A, this.field_h.field_G, this.field_h.field_t, param0, lma.field_r, oba.field_f, cga.field_g, kua.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p, this.field_i, this.field_g);
           return true;
         }
         if (param1 != 17) {
           return false;
         }
-        fj.field_c = new wla(this.field_h.field_q, this.field_h.field_A, this.field_h.field_G, this.field_h.field_t, param0, lma.field_r, oba.field_f, cga.field_g, kua.field_i, kt.field_F, dja.field_p, this.field_i, this.field_g);
+        fj.field_c = new wla(this.field_h.field_q, this.field_h.field_A, this.field_h.field_G, this.field_h.field_t, param0, lma.field_r, oba.field_f, cga.field_g, kua.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p, this.field_i, this.field_g);
         return true;
     }
 
     lja(jea param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
-          this.field_f = new ola(eq.field_n);
+          this.field_f = new ola(SimpleBlockBehaviour.field_n);
           this.field_i = param2;
           this.field_h = param0;
           this.field_b = param5;

@@ -260,9 +260,9 @@ final class kda extends eo {
         }
         jaggl.OpenGL.glFogf(2915, this.field_B);
         jaggl.OpenGL.glFogf(2916, this.field_Hc);
-        dia.field_r[2] = (float)sea.c(this.field_g, 255) / 255.0f;
-        dia.field_r[param0] = (float)sea.c(65280, this.field_g) / 65280.0f;
-        dia.field_r[0] = (float)sea.c(16711680, this.field_g) / 16711680.0f;
+        dia.field_r[2] = (float)SnakePitBehaviour.c(this.field_g, 255) / 255.0f;
+        dia.field_r[param0] = (float)SnakePitBehaviour.c(65280, this.field_g) / 65280.0f;
+        dia.field_r[0] = (float)SnakePitBehaviour.c(16711680, this.field_g) / 16711680.0f;
         jaggl.OpenGL.glFogfv(2918, dia.field_r, 0);
     }
 
@@ -360,9 +360,9 @@ final class kda extends eo {
           dia.field_r[3] = 1.0f;
           jaggl.OpenGL.glLightfv(var5, 4611, dia.field_r, 0);
           dia.field_r[3] = 1.0f;
-          dia.field_r[1] = var6 * (float)sea.c(255, var4 >> 8);
-          dia.field_r[2] = var6 * (float)sea.c(var4, 255);
-          dia.field_r[0] = (float)sea.c(255, var4 >> 16) * var6;
+          dia.field_r[1] = var6 * (float)SnakePitBehaviour.c(255, var4 >> 8);
+          dia.field_r[2] = var6 * (float)SnakePitBehaviour.c(var4, 255);
+          dia.field_r[0] = (float)SnakePitBehaviour.c(255, var4 >> 16) * var6;
           jaggl.OpenGL.glLightfv(var5, 4609, dia.field_r, 0);
           jaggl.OpenGL.glLightf(var5, 4617, 1.0f / (float)(var3.a((byte) -23) * var3.a((byte) -84)));
           jaggl.OpenGL.glEnable(var5);
@@ -971,9 +971,9 @@ final class kda extends eo {
           this.b(20, (byte) 35);
         }
         dia.field_r[3] = (float)(this.field_bc >>> 24) / 255.0f;
-        dia.field_r[2] = (float)sea.c(this.field_bc, 255) / 255.0f;
-        dia.field_r[1] = (float)sea.c(65280, this.field_bc) / 65280.0f;
-        dia.field_r[0] = (float)sea.c(16711680, this.field_bc) / 16711680.0f;
+        dia.field_r[2] = (float)SnakePitBehaviour.c(this.field_bc, 255) / 255.0f;
+        dia.field_r[1] = (float)SnakePitBehaviour.c(65280, this.field_bc) / 65280.0f;
+        dia.field_r[0] = (float)SnakePitBehaviour.c(16711680, this.field_bc) / 16711680.0f;
         jaggl.OpenGL.glTexEnvfv(8960, 8705, dia.field_r, 0);
     }
 
@@ -1493,8 +1493,8 @@ final class kda extends eo {
                 throw new RuntimeException("");
               }
               try {
-                var10_int = jb.a((CharSequence) ((Object) var9[0]), (byte) 70);
-                var11_int = jb.a((CharSequence) ((Object) var9[1]), (byte) 70);
+                var10_int = WhiteLightSensorComponent.a((CharSequence) ((Object) var9[0]), (byte) 70);
+                var11_int = WhiteLightSensorComponent.a((CharSequence) ((Object) var9[1]), (byte) 70);
                 this.field_md = var10_int * 10 + var11_int;
               } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -1564,7 +1564,7 @@ final class kda extends eo {
                           var32 = (CharSequence) ((Object) var16.substring(0, 4));
                           if (sqa.a(var32, -3)) {
                             var33 = (CharSequence) ((Object) var16.substring(0, 4));
-                            var11_int = jb.a(var33, (byte) 70);
+                            var11_int = WhiteLightSensorComponent.a(var33, (byte) 70);
                             decompiledRegionSelector0 = 1;
                             decompiledFrameRemainder0 = false;
                           }

@@ -36,7 +36,7 @@ final class nla {
         if (param0 != 2749) {
           return -58;
         }
-        var10 = 30 - vd.b(1, var9);
+        var10 = 30 - RandomMazeBehaviour.b(1, var9);
         if (var10 >= param5) {
           var11 = (var9 << param5) / var8;
         } else {

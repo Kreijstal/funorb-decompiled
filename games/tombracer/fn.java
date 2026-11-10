@@ -107,11 +107,11 @@ final class fn extends vw {
 
     final void a(boolean param0, int param1) {
         if (param1 == 5744) {
-          this.field_c.a(ln.field_F, (byte) -110, iw.field_c);
+          this.field_c.a(PlatformComponent.field_F, (byte) -110, iw.field_c);
           return;
         }
         this.field_e = 1.964166283607483f;
-        this.field_c.a(ln.field_F, (byte) -110, iw.field_c);
+        this.field_c.a(PlatformComponent.field_F, (byte) -110, iw.field_c);
     }
 
     final void a(int param0, iva param1, int param2) {
@@ -134,7 +134,7 @@ final class fn extends vw {
 
     final void a(int param0, boolean param1) {
         this.field_c.e(1, false);
-        this.field_c.a(ln.field_F, (byte) -110, jv.field_m);
+        this.field_c.a(PlatformComponent.field_F, (byte) -110, jv.field_m);
         this.field_c.a(ej.field_c, 0, -6219, true, false);
         this.field_c.a(0, false, lja.field_j);
         this.field_c.a(0, (byte) 77);

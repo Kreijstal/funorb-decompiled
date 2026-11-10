@@ -94,7 +94,7 @@ final class qk extends rt {
         int var1 = 119 % ((63 - param0) / 41);
         if (joa.field_c == null) {
           joa.field_c = new kn();
-          joa.field_c.a(mj.field_J, true);
+          joa.field_c.a(KeySwitchComponent.field_J, true);
           joa.field_c.field_b = 4;
           joa.field_c.field_o = 14;
           joa.field_c.field_c = 2763306;
@@ -111,7 +111,7 @@ final class qk extends rt {
         if (param0 != 250) {
           return true;
         }
-        return tl.field_r > 250 ? true : false;
+        return TimeSwitchBehaviour.field_r > 250 ? true : false;
     }
 
     static {

@@ -38,8 +38,8 @@ abstract class GameFont {
           param1 = 0;
         }
         moa.field_b = -1;
-        tta.field_G = param1;
-        wqa.field_G = param1;
+        KeyItemComponent.field_G = param1;
+        GasTrapComponent.field_G = param1;
     }
 
     final static void a(boolean param0) {
@@ -97,22 +97,22 @@ abstract class GameFont {
                             if (!param0.equalsIgnoreCase("shad=-1")) {
                               if (param0.startsWith("shad=")) {
                                 var8 = (CharSequence) ((Object) param0.substring(5));
-                                wqa.field_G = v.field_k & -16777216 | eba.a(var8, -52, 16);
+                                GasTrapComponent.field_G = v.field_k & -16777216 | eba.a(var8, -52, 16);
                               } else {
                                 if (param0.equals("shad")) {
-                                  wqa.field_G = -16777216 & v.field_k;
+                                  GasTrapComponent.field_G = -16777216 & v.field_k;
                                 } else {
                                   if (!param0.equals("/shad")) {
                                     if (param0.equals("br")) {
-                                      this.a(lra.field_g, tta.field_G, 122);
+                                      this.a(lra.field_g, KeyItemComponent.field_G, 122);
                                     }
                                   } else {
-                                    wqa.field_G = tta.field_G;
+                                    GasTrapComponent.field_G = KeyItemComponent.field_G;
                                   }
                                 }
                               }
                             } else {
-                              wqa.field_G = 0;
+                              GasTrapComponent.field_G = 0;
                             }
                           } else {
                             moa.field_b = -1;
@@ -188,7 +188,7 @@ abstract class GameFont {
           } else {
             var18 = new int[]{param11};
           }
-          var19 = this.field_a.a(param2, -127, ska.field_q, param7, (int[]) (var18));
+          var19 = this.field_a.a(param2, -127, WeaponShooterBehaviour.field_q, param7, (int[]) (var18));
           if (param14 == -1) {
             param14 = param9 / param13;
             if (0 >= param14) {
@@ -197,7 +197,7 @@ abstract class GameFont {
           }
           if (param14 > 0 &&
             var19 >= param14) {
-            ska.field_q[-1 + param14] = this.field_a.a(false, param7, ska.field_q[-1 + param14], param11);
+            WeaponShooterBehaviour.field_q[-1 + param14] = this.field_a.a(false, param7, WeaponShooterBehaviour.field_q[-1 + param14], param11);
             var19 = param14;
           }
           if (3 == param6 &&
@@ -225,19 +225,19 @@ abstract class GameFont {
           }
           for (var22Lifetime1 = 0; var22Lifetime1 < var19; var22Lifetime1++) {
             if (param4 == 0) {
-              this.a(false, param1, param5, param0, param3, param7, ska.field_q[var22Lifetime1], param8, var20);
+              this.a(false, param1, param5, param0, param3, param7, WeaponShooterBehaviour.field_q[var22Lifetime1], param8, var20);
             } else {
               if (param4 == 1) {
-                this.a(false, (param11 - this.field_a.a(ska.field_q[var22Lifetime1], (byte) -101)) / 2 + param1, param5, param0, param3, param7, ska.field_q[var22Lifetime1], param8, var20);
+                this.a(false, (param11 - this.field_a.a(WeaponShooterBehaviour.field_q[var22Lifetime1], (byte) -101)) / 2 + param1, param5, param0, param3, param7, WeaponShooterBehaviour.field_q[var22Lifetime1], param8, var20);
               } else {
                 if (param4 == 2) {
-                  this.a(false, -this.field_a.a(ska.field_q[var22Lifetime1], (byte) -116) + (param11 + param1), param5, param0, param3, param7, ska.field_q[var22Lifetime1], param8, var20);
+                  this.a(false, -this.field_a.a(WeaponShooterBehaviour.field_q[var22Lifetime1], (byte) -116) + (param11 + param1), param5, param0, param3, param7, WeaponShooterBehaviour.field_q[var22Lifetime1], param8, var20);
                 } else {
                   if (var19 - 1 == var22Lifetime1) {
-                    this.a(false, param1, param5, param0, param3, param7, ska.field_q[var22Lifetime1], param8, var20);
+                    this.a(false, param1, param5, param0, param3, param7, WeaponShooterBehaviour.field_q[var22Lifetime1], param8, var20);
                   } else {
-                    this.a(true, param11, ska.field_q[var22Lifetime1]);
-                    this.a(false, param1, param5, param0, param3, param7, ska.field_q[var22Lifetime1], param8, var20);
+                    this.a(true, param11, WeaponShooterBehaviour.field_q[var22Lifetime1]);
+                    this.a(false, param1, param5, param0, param3, param7, WeaponShooterBehaviour.field_q[var22Lifetime1], param8, var20);
                     OpenGlToolkit.field_ab = 0;
                   }
                 }
@@ -394,7 +394,7 @@ abstract class GameFont {
                                 } else {
                                   try {
                                     var21 = (CharSequence) ((Object) var15_ref_String.substring(4));
-                                    var16_int = jb.a(var21, (byte) 70);
+                                    var16_int = WhiteLightSensorComponent.a(var21, (byte) 70);
                                     var17 = param5[var16_int];
                                     if (param3 == null) {
                                       stackIn_29_0 = var17.b();
@@ -450,13 +450,13 @@ abstract class GameFont {
                   }
                 } else {
                   if (param2 == null) {
-                    if ((wqa.field_G & -16777216) != 0) {
-                      this.fa((char) var14, param1 + 1, 1 + param8, wqa.field_G, true);
+                    if ((GasTrapComponent.field_G & -16777216) != 0) {
+                      this.fa((char) var14, param1 + 1, 1 + param8, GasTrapComponent.field_G, true);
                     }
                     this.fa((char) var14, param1, param8, v.field_k, false);
                   } else {
-                    if ((-16777216 & wqa.field_G) != 0) {
-                      this.a((char) var14, param1 + 1, 1 + param8, wqa.field_G, true, param2, param7, param4);
+                    if ((-16777216 & GasTrapComponent.field_G) != 0) {
+                      this.a((char) var14, param1 + 1, 1 + param8, GasTrapComponent.field_G, true, param2, param7, param4);
                     }
                     this.a((char) var14, param1, param8, v.field_k, false, param2, param7, param4);
                   }

@@ -477,7 +477,7 @@ class lga extends rj {
           if (!rla.field_D.field_g) {
             return false;
           }
-          var13 = rb.field_o;
+          var13 = SimpleConditionBehaviour.field_o;
           var11 = var13;
           var6 = var11;
           var1 = var6;
@@ -493,7 +493,7 @@ class lga extends rj {
           var10 = 0;
           var3Lifetime1 = var10;
           while (8 > var10) {
-            var8[var10] = sea.c(var14[var10], ~var18[var10]);
+            var8[var10] = SnakePitBehaviour.c(var14[var10], ~var18[var10]);
             var10++;
           }
           rla.field_D = null;

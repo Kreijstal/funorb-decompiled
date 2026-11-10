@@ -531,7 +531,7 @@ final class eka extends ci {
           return (dfa) ((Object) SecondaryNodeDequeIterator.field_a);
         }
         if (var2 == -2) {
-          return (dfa) ((Object) oqa.field_s);
+          return (dfa) ((Object) ConstrainToFacingArcLocomotor.field_s);
         }
         return (dfa) ((Object) nl.a(param0, (byte) 50));
     }

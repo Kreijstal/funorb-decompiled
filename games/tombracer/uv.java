@@ -170,7 +170,7 @@ final class uv extends oga {
           jaggl.OpenGL.glUseProgramObjectARB(var7);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var7, "sceneTex"), 0);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var7, "bloomTex"), 1);
-          jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var7, "params"), vba.field_v, fra.field_p, 0.0f);
+          jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var7, "params"), vba.field_v, ConstantEffectBehaviour.field_p, 0.0f);
           this.field_g.e(1, true);
           this.field_g.a(true, this.field_x);
           this.field_g.e(0, true);
@@ -326,7 +326,7 @@ final class uv extends oga {
           }
           var4_int = param1.b(param2, -7768);
           var5 = param1.a(true, param0, var4_int);
-          stackIn_4_0 = cu.a(false, var5, param1, var4_int);
+          stackIn_4_0 = DamageableBehaviour.a(false, var5, param1, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

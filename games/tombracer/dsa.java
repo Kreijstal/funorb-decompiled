@@ -5,7 +5,7 @@ final class dsa {
     static String field_d;
     static int field_b;
     static PlatformTaskDispatcher field_c;
-    static String[] field_a;
+    static String[] componentTypeNames;
 
     final static vb a(int param0) {
         int var1 = uca.field_c.a(6, 0);
@@ -19,7 +19,7 @@ final class dsa {
     public static void a(byte param0) {
         int var1 = 40 / ((-56 - param0) / 38);
         field_c = null;
-        field_a = null;
+        componentTypeNames = null;
         field_d = null;
     }
 

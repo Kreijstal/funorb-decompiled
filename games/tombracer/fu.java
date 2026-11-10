@@ -73,10 +73,10 @@ final class fu extends dg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_u == 0) {
-            via.a(df.field_J[17], this.field_m, this.field_q, param3 + 1572864, param2, param1, 111, 0);
+            via.a(RevolverItemComponent.field_J[17], this.field_m, this.field_q, param3 + 1572864, param2, param1, 111, 0);
           } else {
             if (this.field_u == 1) {
-              gqa.a(this.field_m, -83584144, param1, param2, df.field_J[76], param3);
+              gqa.a(this.field_m, -83584144, param1, param2, RevolverItemComponent.field_J[76], param3);
             }
           }
           var6_int = 67 % ((param4 + 38) / 47);
@@ -295,8 +295,8 @@ final class fu extends dg {
             var7_int = 0;
             var8 = (Behaviour) (var12.a(true));
             while (var8 != null) {
-              if (var8 instanceof fra &&
-                ((fra) (var8)).field_o > 0) {
+              if (var8 instanceof ConstantEffectBehaviour &&
+                ((ConstantEffectBehaviour) (var8)).field_o > 0) {
                 var7_int = 1;
               }
               var8 = (Behaviour) (var12.a(-1));
@@ -316,10 +316,10 @@ final class fu extends dg {
             var14 = new uja(var13);
             var7 = (Locomotor) (var14.a(true));
             while (var7 != null) {
-              if (var7 instanceof ro &&
-                ((ro) (var7)).d(false) != this.field_s) {
+              if (var7 instanceof PathMoveLocomotor &&
+                ((PathMoveLocomotor) (var7)).d(false) != this.field_s) {
                 var10_ref.a(new fm(3, this.b((byte) 68), this.c((byte) 124), this.e((byte) -111)), -58);
-                this.field_s = ((ro) (var7)).d(false);
+                this.field_s = ((PathMoveLocomotor) (var7)).d(false);
               }
               var7 = (Locomotor) (var14.a(param0 + 0));
             }

@@ -8,7 +8,7 @@ abstract class ip {
     final int a(byte param0, long param1) {
         long var4 = this.a((byte) 47);
         if (var4 > 0L) {
-          vja.a(0, var4);
+          TrapSpawner.a(0, var4);
           if (param0 > 3) {
             return this.a(param1, 0);
           }

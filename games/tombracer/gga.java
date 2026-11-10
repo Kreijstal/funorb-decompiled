@@ -70,7 +70,7 @@ final class gga extends ofa implements tsa {
         int var6Lifetime1;
         int var7Lifetime1;
         var8 = TombRacer.field_G ? 1 : 0;
-        if (tl.field_r < 0) {
+        if (TimeSwitchBehaviour.field_r < 0) {
           return;
         }
         var3 = -135 + param0;
@@ -79,11 +79,11 @@ final class gga extends ofa implements tsa {
           gga.f(45);
         }
         var5 = 256;
-        if (tl.field_r < 75) {
-          var5 = (tl.field_r << 8) / 75;
+        if (TimeSwitchBehaviour.field_r < 75) {
+          var5 = (TimeSwitchBehaviour.field_r << 8) / 75;
         }
-        if (tl.field_r > 200) {
-          var5 = (250 - tl.field_r << 8) / 50;
+        if (TimeSwitchBehaviour.field_r > 200) {
+          var5 = (250 - TimeSwitchBehaviour.field_r << 8) / 50;
         }
         nm.a(vha.field_a, (byte) 108);
         uoa.b();
@@ -93,12 +93,12 @@ final class gga extends ofa implements tsa {
           bea.c(0, 0, bea.field_g, bea.field_a, 0, 256 - var5);
         }
         pfa.a(1);
-        if (tl.field_r >= 150) {
+        if (TimeSwitchBehaviour.field_r >= 150) {
           bra.field_O.c(var3 + 15, var4 + 10, var5);
         } else {
           vha.field_a.c(var3, var4);
         }
-        var6 = -125 + tl.field_r;
+        var6 = -125 + TimeSwitchBehaviour.field_r;
         if (var6 > 0 &&
           50 > var6) {
           if (var6 < 20) {
@@ -113,7 +113,7 @@ final class gga extends ofa implements tsa {
             }
           }
         }
-        var6Lifetime1 = -140 + tl.field_r;
+        var6Lifetime1 = -140 + TimeSwitchBehaviour.field_r;
         if (0 < var6Lifetime1) {
           var7Lifetime1 = 256;
           if (var6Lifetime1 < 20) {
@@ -175,7 +175,7 @@ final class gga extends ofa implements tsa {
               }
             } else {
               if (param1 == uq.field_b) {
-                var3 = th.field_s;
+                var3 = WindZoneBehaviour.field_s;
                 this.field_p = this.field_p + 30;
               }
             }

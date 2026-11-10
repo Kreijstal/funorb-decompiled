@@ -57,7 +57,7 @@ abstract class kma implements nua {
         if (var4 != -2) {
           if (var4 != -1) {
             var5 = fj.field_c.c(false) ? 1 : 0;
-            ok.a(var4, param2, (byte) 87, var5 != 0, fj.field_c.field_Db, fj.field_c.f(80));
+            PowerDownItemBehaviour.a(var4, param2, (byte) 87, var5 != 0, fj.field_c.field_Db, fj.field_c.f(80));
           }
           fj.field_c = null;
           wp.a(-1);

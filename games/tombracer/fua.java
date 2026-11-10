@@ -4,7 +4,7 @@
 final class fua implements isa {
     static ph field_b;
     static int[] field_h;
-    private static String[] field_c;
+    private static String[] behaviourTypeNames;
     static String field_e;
     static af field_a;
     private rla field_d;
@@ -25,14 +25,14 @@ final class fua implements isa {
           field_b = null;
           field_h = null;
           field_e = null;
-          field_c = null;
+          behaviourTypeNames = null;
           return;
         }
         field_h = (int[]) null;
         field_b = null;
         field_h = null;
         field_e = null;
-        field_c = null;
+        behaviourTypeNames = null;
     }
 
     public final void a(ae param0, int param1, int param2, int param3, boolean param4) {
@@ -92,40 +92,40 @@ final class fua implements isa {
     }
 
     static {
-        field_c = new String[33];
-        field_c[27] = "Vortex";
-        field_c[11] = "Random Maze";
-        field_c[2] = "Crusher";
-        field_c[7] = "Item: Power-up";
-        field_c[17] = "Pressure Switch";
-        field_c[13] = "On Simple Condition";
-        field_c[16] = "Spawner";
-        field_c[5] = "Item: Weapon";
-        field_c[30] = "Trip Beam";
-        field_c[19] = "Touch Switch";
-        field_c[15] = "Snake Pit";
-        field_c[9] = "Platform";
-        field_c[6] = "Item: Power-down";
-        field_c[23] = "Text Spewer";
-        field_c[26] = "Wind Zone";
-        field_c[14] = "Simple Action";
-        field_c[31] = "Fuse";
-        field_c[24] = "Damageable";
-        field_c[28] = "Portal";
-        field_c[0] = "Constant Effect";
-        field_c[8] = "Pit";
-        field_c[29] = "Mirror";
-        field_c[22] = "Player Sensor";
-        field_c[10] = "Safe Zone";
-        field_c[18] = "Effect Switch";
-        field_c[21] = "Time Switch";
-        field_c[20] = "Weapon Shooter";
-        field_c[3] = "Darkness";
-        field_c[32] = "Key Lock";
-        field_c[1] = "Conveyor";
-        field_c[25] = "Item: Misc";
-        field_c[12] = "Simple Block";
-        field_c[4] = "Beam Shooter";
+        behaviourTypeNames = new String[33];
+        behaviourTypeNames[27] = "Vortex";
+        behaviourTypeNames[11] = "Random Maze";
+        behaviourTypeNames[2] = "Crusher";
+        behaviourTypeNames[7] = "Item: Power-up";
+        behaviourTypeNames[17] = "Pressure Switch";
+        behaviourTypeNames[13] = "On Simple Condition";
+        behaviourTypeNames[16] = "Spawner";
+        behaviourTypeNames[5] = "Item: Weapon";
+        behaviourTypeNames[30] = "Trip Beam";
+        behaviourTypeNames[19] = "Touch Switch";
+        behaviourTypeNames[15] = "Snake Pit";
+        behaviourTypeNames[9] = "Platform";
+        behaviourTypeNames[6] = "Item: Power-down";
+        behaviourTypeNames[23] = "Text Spewer";
+        behaviourTypeNames[26] = "Wind Zone";
+        behaviourTypeNames[14] = "Simple Action";
+        behaviourTypeNames[31] = "Fuse";
+        behaviourTypeNames[24] = "Damageable";
+        behaviourTypeNames[28] = "Portal";
+        behaviourTypeNames[0] = "Constant Effect";
+        behaviourTypeNames[8] = "Pit";
+        behaviourTypeNames[29] = "Mirror";
+        behaviourTypeNames[22] = "Player Sensor";
+        behaviourTypeNames[10] = "Safe Zone";
+        behaviourTypeNames[18] = "Effect Switch";
+        behaviourTypeNames[21] = "Time Switch";
+        behaviourTypeNames[20] = "Weapon Shooter";
+        behaviourTypeNames[3] = "Darkness";
+        behaviourTypeNames[32] = "Key Lock";
+        behaviourTypeNames[1] = "Conveyor";
+        behaviourTypeNames[25] = "Item: Misc";
+        behaviourTypeNames[12] = "Simple Block";
+        behaviourTypeNames[4] = "Beam Shooter";
         field_e = "Connection restored.";
         field_g = true;
     }

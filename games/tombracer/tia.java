@@ -48,17 +48,17 @@ final class tia {
             return 0;
           }
           if (param0 < 0) {
-            return -ska.a(-50, -param0, param1);
+            return -WeaponShooterBehaviour.a(-50, -param0, param1);
           }
-          return ska.a(123, param0, param1);
+          return WeaponShooterBehaviour.a(123, param0, param1);
         }
         if (param0 == 0) {
           return 4096;
         }
         if (param0 >= 0) {
-          return -ska.a(-29, param0, -param1) + 4096;
+          return -WeaponShooterBehaviour.a(-29, param0, -param1) + 4096;
         }
-        return ska.a(120, -param0, -param1) - 4096;
+        return WeaponShooterBehaviour.a(120, -param0, -param1) - 4096;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {

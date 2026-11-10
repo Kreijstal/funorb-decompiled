@@ -20,7 +20,7 @@ abstract class ld extends ota {
           }
           if (param1 != null &&
             param1.length() >= ik.field_f) {
-            if (param1.length() > im.field_n) {
+            if (param1.length() > PortalBehaviour.field_n) {
               return true;
             }
             return false;

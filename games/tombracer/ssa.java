@@ -39,7 +39,7 @@ final class ssa {
             }
             var3 = "";
             if (param2 != null) {
-              var3 = qi.a(107, param2);
+              var3 = AllPlatformsMazeComponent.a(107, param2);
             }
             if (param0 != null) {
               if (param2 != null) {
@@ -59,7 +59,7 @@ final class ssa {
             stackIn_16_1 = null;
             stackIn_16_2 = null;
             stackIn_16_3 = dfa.field_e.getCodeBase();
-            stackIn_16_4 = new StringBuilder().append("clienterror.ws?c=").append(sua.field_L).append("&u=");
+            stackIn_16_4 = new StringBuilder().append("clienterror.ws?c=").append(RotaterMountComponent.field_L).append("&u=");
             if (toa.field_f != null) {
               stackIn_17_1 = null;
               stackIn_17_2 = null;
@@ -71,7 +71,7 @@ final class ssa {
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_16_0).a(new java.net.URL(stackIn_16_3, ((StringBuilder) (Object) stackIn_16_4).append(stackIn_17_5).append("&v1=").append(PlatformTaskDispatcher.field_e).append("&v2=").append(PlatformTaskDispatcher.field_v).append("&e=").append(var10).toString()), 122);
             while (var4.field_b == 0) {
-              vja.a(0, 1L);
+              TrapSpawner.a(0, 1L);
             }
             if (1 == var4.field_b) {
               var5 = (DataInputStream) (var4.field_f);
@@ -184,7 +184,7 @@ final class ssa {
           if (2 < var7) {
             throw ssa.<RuntimeException>$cfr$sneakyThrow(new Exception("Local: header error: version=" + var7));
           }
-          var28 = fqa.e(true);
+          var28 = SwitchComponent.e(true);
           var25 = var28;
           var8 = var25;
           var31 = var8;
@@ -226,9 +226,9 @@ final class ssa {
               var15 = 0;
               while (true) {
                 var16 = param0.h(255);
-                var13[var14] = var13[var14] + (sea.c(var16, 127) << var15);
+                var13[var14] = var13[var14] + (SnakePitBehaviour.c(var16, 127) << var15);
                 if (var15 >= 26) {
-                  var13[var14 + 1] = var13[var14 + 1] + (sea.c(127, var16) >> -var15 + 32);
+                  var13[var14 + 1] = var13[var14 + 1] + (SnakePitBehaviour.c(127, var16) >> -var15 + 32);
                 }
                 if (var16 < 128) {
                   var11++;

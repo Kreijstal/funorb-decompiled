@@ -59,12 +59,12 @@ final class wd implements dv {
         String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
-        ska var6 = null;
+        WeaponShooterBehaviour var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
-        eq var8 = null;
-        bg var9 = null;
-        ue var10 = null;
+        SimpleBlockBehaviour var8 = null;
+        ApproachPlayerLocomotor var9 = null;
+        MiscItemBehaviour var10 = null;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
           param4.d((byte) -87, param5);
@@ -74,7 +74,7 @@ final class wd implements dv {
               if (var6_int == 2) {
                 param4.a((byte) -3, 10);
                 param4.h(3, 0);
-                param4.a((byte) 83, (Behaviour) (new eq(param3, param5)));
+                param4.a((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param3, param5)));
                 param4.e(true, 117);
                 param4.g(119, 1);
                 param4.a(1, (byte) -12, true);
@@ -84,11 +84,11 @@ final class wd implements dv {
                 if (var6_int == 3) {
                   param4.a((byte) -3, 20);
                   param4.h(3, 0);
-                  var8 = new eq(param3, param5);
+                  var8 = new SimpleBlockBehaviour(param3, param5);
                   param4.a(3, (byte) -12, true);
                   var8.b((byte) -107, true);
                   param4.a((byte) 83, (Behaviour) (var8));
-                  param4.a(new wi(param3, 131072, 0, 0, param5), 0);
+                  param4.a(new SimpleMoveLocomotor(param3, 131072, 0, 0, param5), 0);
                   param4.b((byte) 17, false);
                   param4.b(false, 11468);
                 } else {
@@ -96,21 +96,21 @@ final class wd implements dv {
                     if (var6_int == 5) {
                       param4.a((byte) -3, 10);
                       param4.h(3, 0);
-                      param4.a((byte) 83, (Behaviour) (new eq(param3, param5)));
-                      param4.a((byte) 83, (Behaviour) (new ov(param3, param5)));
-                      param4.a(new pt(param3, param5), 0);
+                      param4.a((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param3, param5)));
+                      param4.a((byte) 83, (Behaviour) (new BeamShooterBehaviour(param3, param5)));
+                      param4.a(new FacePlayerLocomotor(param3, param5), 0);
                     } else {
                       if (var6_int == 6) {
                         param4.a((byte) -3, 20);
                         param4.h(3, 0);
-                        param4.a((byte) 83, (Behaviour) (new rea(param3, param5)));
-                        var9 = new bg(param3, param5);
+                        param4.a((byte) 83, (Behaviour) (new CrusherBehaviour(param3, param5)));
+                        var9 = new ApproachPlayerLocomotor(param3, param5);
                         param4.a(var9, 0);
                         var9.c(124, 0);
                       } else {
                         if (var6_int == 7) {
                           param4.a((byte) -3, 2);
-                          var10 = new ue(param3, param5);
+                          var10 = new MiscItemBehaviour(param3, param5);
                           var10.a(0, false);
                           param4.a((byte) 83, (Behaviour) (var10));
                           param4.b(false, 11468);
@@ -121,22 +121,22 @@ final class wd implements dv {
                   } else {
                     param4.a((byte) -3, 10);
                     param4.h(3, 0);
-                    param4.a((byte) 83, (Behaviour) (new eq(param3, param5)));
-                    var6 = new ska(param3, param5);
+                    param4.a((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param3, param5)));
+                    var6 = new WeaponShooterBehaviour(param3, param5);
                     var6.a(ci.a(2, -1), (byte) 100);
                     param4.a((byte) 83, (Behaviour) (var6));
-                    param4.a(new spa(param3, param5), 0);
+                    param4.a(new RotateLocomotor(param3, param5), 0);
                   }
                 }
               }
             } else {
               param4.a((byte) -3, 10);
               param4.h(3, 0);
-              param4.a((byte) 83, (Behaviour) (new eq(param3, param5)));
+              param4.a((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param3, param5)));
               param4.b((byte) 17, true);
             }
           } else {
-            param4.a((byte) 83, (Behaviour) (new mo(param3, param5)));
+            param4.a((byte) 83, (Behaviour) (new PitBehaviour(param3, param5)));
           }
           if (param0 > -85) {
             field_c = (jpa) null;
@@ -260,7 +260,7 @@ final class wd implements dv {
                 var20 = var20 + ((16764137 & var19) >> 16);
                 incrementValue$9 = var15;
                 var15++;
-                var13[incrementValue$9] = fh.a(sea.c(1020, var22) >> 2, fh.a(fh.a(sea.c(var23 << 22, -16777216), sea.c(1020, var20) << 14), sea.c(var21 << 6, 65280)));
+                var13[incrementValue$9] = fh.a(SnakePitBehaviour.c(1020, var22) >> 2, fh.a(fh.a(SnakePitBehaviour.c(var23 << 22, -16777216), SnakePitBehaviour.c(1020, var20) << 14), SnakePitBehaviour.c(var21 << 6, 65280)));
               }
               var25 = var25 + param6;
               var24 = var24 + param6;

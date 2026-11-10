@@ -90,15 +90,15 @@ final class ava {
           var6 = 0;
           var7 = 0;
           var8 = 0;
-          if (uu.field_a != null && (rl.field_u != null ||
+          if (uu.field_a != null && (PowerUpItemBehaviour.field_u != null ||
             hp.field_a != null ||
             nra.field_g != null ||
             lga.field_z != null)) {
             for (var9 = 0; fk.field_b > var9; var9++) {
               var10_int = 255 & uu.field_a.field_ac[var9];
-              if (rl.field_u != null &&
-                null != rl.field_u[var9] &&
-                rl.field_u[var9][var10_int]) {
+              if (PowerUpItemBehaviour.field_u != null &&
+                null != PowerUpItemBehaviour.field_u[var9] &&
+                PowerUpItemBehaviour.field_u[var9][var10_int]) {
                 var5_int = 1;
               }
               if (null != hp.field_a &&
@@ -247,7 +247,7 @@ final class ava {
               var25_int = 0;
               if (null != uu.field_a &&
                 mka.b(8192) &&
-                var12.field_yb != rb.field_r) {
+                var12.field_yb != SimpleConditionBehaviour.field_r) {
                 if (var12.field_Kb.field_r != null) {
                   var26 = var12.field_Kb.b((byte) 69) + mna.field_d * 2;
                   var12.field_Kb.a(var26, di.field_a, -23776, var19, var25_int);
@@ -321,7 +321,7 @@ final class ava {
             if (var12.field_pb &&
               !var12.f(162)) {
               var24Lifetime2 = null;
-              if (rb.field_r == var12.field_yb) {
+              if (SimpleConditionBehaviour.field_r == var12.field_yb) {
                 if (var5_int != 0 &&
                   !var12.field_tb) {
                   var24Lifetime2 = rk.field_F;
@@ -363,7 +363,7 @@ final class ava {
                     if (var12.field_Jb >= var6) {
                       if ((var8 & ~var12.field_Eb) != 0) {
                         var25_int = b.a(~var12.field_Eb & var8, (byte) -125);
-                        var24Lifetime2 = gl.$cfr$intArgs$a$53ce4ab4c593(86, wha.field_I, new String[]{var20});
+                        var24Lifetime2 = gl.$cfr$intArgs$a$53ce4ab4c593(86, TrackMountComponent.field_I, new String[]{var20});
                         if (var25_int > 0 &&
                           null != BitPacketBuffer.field_l &&
                           var25_int <= BitPacketBuffer.field_l.length &&
@@ -395,9 +395,9 @@ final class ava {
                 for (var27_int = 0; var27_int < fk.field_b; var27_int++) {
                   var28 = 255 & uu.field_a.field_ac[var27_int];
                   var29 = 0;
-                  if (null != rl.field_u &&
-                    null != rl.field_u[var27_int] &&
-                    rl.field_u[var27_int][var28] &&
+                  if (null != PowerUpItemBehaviour.field_u &&
+                    null != PowerUpItemBehaviour.field_u[var27_int] &&
+                    PowerUpItemBehaviour.field_u[var27_int][var28] &&
                     !var12.field_tb) {
                     var29 = 1;
                   }
@@ -448,7 +448,7 @@ final class ava {
                 if (tn.field_n == param0 &&
                   mka.b(param4 ^ 8194)) {
                   if (var26Lifetime1 == 0) {
-                    var24Lifetime2 = var34 + "<br>" + gl.$cfr$intArgs$a$53ce4ab4c593(114, gd.field_I, new String[]{(String) (var25)});
+                    var24Lifetime2 = var34 + "<br>" + gl.$cfr$intArgs$a$53ce4ab4c593(114, IdolItemComponent.field_I, new String[]{(String) (var25)});
                   } else {
                     var24Lifetime2 = var34 + "<br>" + qda.field_l + (String) (var25);
                   }
@@ -456,7 +456,7 @@ final class ava {
                   if (var26Lifetime1 != 0) {
                     var24Lifetime2 = var34 + "<br>" + baa.field_f + (String) (var25);
                   } else {
-                    var24Lifetime2 = var34 + "<br>" + gl.$cfr$intArgs$a$53ce4ab4c593(125, jh.field_K, new String[]{(String) (var25)});
+                    var24Lifetime2 = var34 + "<br>" + gl.$cfr$intArgs$a$53ce4ab4c593(125, FlameShooterComponent.field_K, new String[]{(String) (var25)});
                   }
                 }
                 if (tn.field_n == param0 &&

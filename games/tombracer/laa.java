@@ -32,7 +32,7 @@ final class laa extends b implements tsa {
             for (var4_int = 0; var4_int < var3_int; var4_int++) {
               this.field_A[var4_int] = wt.a(kha.b(param0, 17404), (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
             }
-            var4 = new kaa(mj.field_J, 0, 1);
+            var4 = new kaa(KeySwitchComponent.field_J, 0, 1);
             this.field_z = new rj[1 + var3_int];
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_z[var5] = new rj(this.field_A[var5], (qc) (this));
@@ -104,7 +104,7 @@ final class laa extends b implements tsa {
         if (param3 != 0) {
           return;
         }
-        il var5 = mj.field_J;
+        il var5 = KeySwitchComponent.field_J;
         if (null != this.field_A) {
           var5.a(ch.field_e, param0 + this.field_i, param1 + this.field_n, this.field_m, 20, 16777215, -1, 0, 0, var5.field_k + var5.field_w);
         }

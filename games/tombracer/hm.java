@@ -128,14 +128,14 @@ final class hm extends tfa implements gf {
         nm.field_l = null;
         Projectile.field_n = null;
         int var1 = 60 / ((-20 - param0) / 45);
-        mc.field_r = null;
+        MirrorBehaviour.field_r = null;
         cb.field_i = null;
         dp.field_d = null;
         tv.field_wb = null;
         sta.field_y = null;
         bm.field_f = null;
         IntrusiveDeque.field_c = null;
-        wh.field_y = null;
+        TripBeamBehaviour.field_y = null;
         Room.field_j = null;
         lm.field_m = null;
         po.field_l = null;
@@ -156,12 +156,12 @@ final class hm extends tfa implements gf {
         fa.field_a = null;
         ufa.field_r = null;
         lva.field_m = null;
-        tp.field_K = null;
+        WhiteLightShooterComponent.field_K = null;
         aq.field_a = null;
         je.field_E = null;
         haa.field_z = null;
         eca.field_c = null;
-        fra.field_q = null;
+        ConstantEffectBehaviour.field_q = null;
         lh.field_b = null;
         kq.field_a = null;
         eu.field_a = null;
@@ -385,13 +385,13 @@ final class hm extends tfa implements gf {
               param0 = param0 - param9;
               param4 = param4 - param9;
               param7 = param7 - param9;
-              var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+              var10 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(1, param8), RandomMazeBehaviour.b(param1 + 16, param6)), RandomMazeBehaviour.b(1, param3));
               if (0 < var10) {
                 param8 = param8 >> var10;
                 param6 = param6 >> var10;
                 param3 = param3 >> var10;
               }
-              var10Lifetime15 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+              var10Lifetime15 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(param1 ^ -16, param7), RandomMazeBehaviour.b(1, param0)), RandomMazeBehaviour.b(1, param4));
               if (var10Lifetime15 > 0) {
                 param7 = param7 >> var10Lifetime15;
                 param0 = param0 >> var10Lifetime15;
@@ -428,13 +428,13 @@ final class hm extends tfa implements gf {
               param0 = param0 - param9;
               param4 = param4 - param9;
               param7 = param7 - param9;
-              var10Lifetime6 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+              var10Lifetime6 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(1, param8), RandomMazeBehaviour.b(param1 + 16, param6)), RandomMazeBehaviour.b(1, param3));
               if (0 < var10Lifetime6) {
                 param8 = param8 >> var10Lifetime6;
                 param6 = param6 >> var10Lifetime6;
                 param3 = param3 >> var10Lifetime6;
               }
-              var10Lifetime6Lifetime1 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+              var10Lifetime6Lifetime1 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(param1 ^ -16, param7), RandomMazeBehaviour.b(1, param0)), RandomMazeBehaviour.b(1, param4));
               if (var10Lifetime6Lifetime1 > 0) {
                 param7 = param7 >> var10Lifetime6Lifetime1;
                 param0 = param0 >> var10Lifetime6Lifetime1;
@@ -471,13 +471,13 @@ final class hm extends tfa implements gf {
               param0 = param0 - param9;
               param4 = param4 - param9;
               param7 = param7 - param9;
-              var10Lifetime7 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+              var10Lifetime7 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(1, param8), RandomMazeBehaviour.b(param1 + 16, param6)), RandomMazeBehaviour.b(1, param3));
               if (0 < var10Lifetime7) {
                 param8 = param8 >> var10Lifetime7;
                 param6 = param6 >> var10Lifetime7;
                 param3 = param3 >> var10Lifetime7;
               }
-              var10Lifetime7Lifetime1 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+              var10Lifetime7Lifetime1 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(param1 ^ -16, param7), RandomMazeBehaviour.b(1, param0)), RandomMazeBehaviour.b(1, param4));
               if (var10Lifetime7Lifetime1 > 0) {
                 param7 = param7 >> var10Lifetime7Lifetime1;
                 param0 = param0 >> var10Lifetime7Lifetime1;
@@ -514,13 +514,13 @@ final class hm extends tfa implements gf {
               param0 = param0 - param9;
               param4 = param4 - param9;
               param7 = param7 - param9;
-              var10Lifetime8 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+              var10Lifetime8 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(1, param8), RandomMazeBehaviour.b(param1 + 16, param6)), RandomMazeBehaviour.b(1, param3));
               if (0 < var10Lifetime8) {
                 param8 = param8 >> var10Lifetime8;
                 param6 = param6 >> var10Lifetime8;
                 param3 = param3 >> var10Lifetime8;
               }
-              var10Lifetime8Lifetime1 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+              var10Lifetime8Lifetime1 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(param1 ^ -16, param7), RandomMazeBehaviour.b(1, param0)), RandomMazeBehaviour.b(1, param4));
               if (var10Lifetime8Lifetime1 > 0) {
                 param7 = param7 >> var10Lifetime8Lifetime1;
                 param0 = param0 >> var10Lifetime8Lifetime1;
@@ -557,13 +557,13 @@ final class hm extends tfa implements gf {
               param0 = param0 - param9;
               param4 = param4 - param9;
               param7 = param7 - param9;
-              var10Lifetime9 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+              var10Lifetime9 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(1, param8), RandomMazeBehaviour.b(param1 + 16, param6)), RandomMazeBehaviour.b(1, param3));
               if (0 < var10Lifetime9) {
                 param8 = param8 >> var10Lifetime9;
                 param6 = param6 >> var10Lifetime9;
                 param3 = param3 >> var10Lifetime9;
               }
-              var10Lifetime9Lifetime1 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+              var10Lifetime9Lifetime1 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(param1 ^ -16, param7), RandomMazeBehaviour.b(1, param0)), RandomMazeBehaviour.b(1, param4));
               if (var10Lifetime9Lifetime1 > 0) {
                 param7 = param7 >> var10Lifetime9Lifetime1;
                 param0 = param0 >> var10Lifetime9Lifetime1;
@@ -600,13 +600,13 @@ final class hm extends tfa implements gf {
               param0 = param0 - param9;
               param4 = param4 - param9;
               param7 = param7 - param9;
-              var10Lifetime10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+              var10Lifetime10 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(1, param8), RandomMazeBehaviour.b(param1 + 16, param6)), RandomMazeBehaviour.b(1, param3));
               if (0 < var10Lifetime10) {
                 param8 = param8 >> var10Lifetime10;
                 param6 = param6 >> var10Lifetime10;
                 param3 = param3 >> var10Lifetime10;
               }
-              var10Lifetime10Lifetime1 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+              var10Lifetime10Lifetime1 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(param1 ^ -16, param7), RandomMazeBehaviour.b(1, param0)), RandomMazeBehaviour.b(1, param4));
               if (var10Lifetime10Lifetime1 > 0) {
                 param7 = param7 >> var10Lifetime10Lifetime1;
                 param0 = param0 >> var10Lifetime10Lifetime1;
@@ -643,13 +643,13 @@ final class hm extends tfa implements gf {
               param0 = param0 - param9;
               param4 = param4 - param9;
               param7 = param7 - param9;
-              var10Lifetime11 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+              var10Lifetime11 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(1, param8), RandomMazeBehaviour.b(param1 + 16, param6)), RandomMazeBehaviour.b(1, param3));
               if (0 < var10Lifetime11) {
                 param8 = param8 >> var10Lifetime11;
                 param6 = param6 >> var10Lifetime11;
                 param3 = param3 >> var10Lifetime11;
               }
-              var10Lifetime11Lifetime1 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+              var10Lifetime11Lifetime1 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(param1 ^ -16, param7), RandomMazeBehaviour.b(1, param0)), RandomMazeBehaviour.b(1, param4));
               if (var10Lifetime11Lifetime1 > 0) {
                 param7 = param7 >> var10Lifetime11Lifetime1;
                 param0 = param0 >> var10Lifetime11Lifetime1;
@@ -688,13 +688,13 @@ final class hm extends tfa implements gf {
             param0 = param0 - param9;
             param4 = param4 - param9;
             param7 = param7 - param9;
-            var10Lifetime12 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+            var10Lifetime12 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(1, param8), RandomMazeBehaviour.b(param1 + 16, param6)), RandomMazeBehaviour.b(1, param3));
             if (0 < var10Lifetime12) {
               param8 = param8 >> var10Lifetime12;
               param6 = param6 >> var10Lifetime12;
               param3 = param3 >> var10Lifetime12;
             }
-            var10Lifetime13 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+            var10Lifetime13 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(param1 ^ -16, param7), RandomMazeBehaviour.b(1, param0)), RandomMazeBehaviour.b(1, param4));
             if (var10Lifetime13 > 0) {
               param7 = param7 >> var10Lifetime13;
               param0 = param0 >> var10Lifetime13;
@@ -741,13 +741,13 @@ final class hm extends tfa implements gf {
               param0 = param0 - param9;
               param4 = param4 - param9;
               param7 = param7 - param9;
-              var10Lifetime1 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+              var10Lifetime1 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(1, param8), RandomMazeBehaviour.b(param1 + 16, param6)), RandomMazeBehaviour.b(1, param3));
               if (0 < var10Lifetime1) {
                 param8 = param8 >> var10Lifetime1;
                 param6 = param6 >> var10Lifetime1;
                 param3 = param3 >> var10Lifetime1;
               }
-              var10Lifetime1Lifetime10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+              var10Lifetime1Lifetime10 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(param1 ^ -16, param7), RandomMazeBehaviour.b(1, param0)), RandomMazeBehaviour.b(1, param4));
               if (var10Lifetime1Lifetime10 > 0) {
                 param7 = param7 >> var10Lifetime1Lifetime10;
                 param0 = param0 >> var10Lifetime1Lifetime10;
@@ -784,13 +784,13 @@ final class hm extends tfa implements gf {
               param0 = param0 - param9;
               param4 = param4 - param9;
               param7 = param7 - param9;
-              var10Lifetime1Lifetime1 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+              var10Lifetime1Lifetime1 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(1, param8), RandomMazeBehaviour.b(param1 + 16, param6)), RandomMazeBehaviour.b(1, param3));
               if (0 < var10Lifetime1Lifetime1) {
                 param8 = param8 >> var10Lifetime1Lifetime1;
                 param6 = param6 >> var10Lifetime1Lifetime1;
                 param3 = param3 >> var10Lifetime1Lifetime1;
               }
-              var10Lifetime1Lifetime1Lifetime1 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+              var10Lifetime1Lifetime1Lifetime1 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(param1 ^ -16, param7), RandomMazeBehaviour.b(1, param0)), RandomMazeBehaviour.b(1, param4));
               if (var10Lifetime1Lifetime1Lifetime1 > 0) {
                 param7 = param7 >> var10Lifetime1Lifetime1Lifetime1;
                 param0 = param0 >> var10Lifetime1Lifetime1Lifetime1;
@@ -827,13 +827,13 @@ final class hm extends tfa implements gf {
               param0 = param0 - param9;
               param4 = param4 - param9;
               param7 = param7 - param9;
-              var10Lifetime1Lifetime2 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+              var10Lifetime1Lifetime2 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(1, param8), RandomMazeBehaviour.b(param1 + 16, param6)), RandomMazeBehaviour.b(1, param3));
               if (0 < var10Lifetime1Lifetime2) {
                 param8 = param8 >> var10Lifetime1Lifetime2;
                 param6 = param6 >> var10Lifetime1Lifetime2;
                 param3 = param3 >> var10Lifetime1Lifetime2;
               }
-              var10Lifetime1Lifetime2Lifetime1 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+              var10Lifetime1Lifetime2Lifetime1 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(param1 ^ -16, param7), RandomMazeBehaviour.b(1, param0)), RandomMazeBehaviour.b(1, param4));
               if (var10Lifetime1Lifetime2Lifetime1 > 0) {
                 param7 = param7 >> var10Lifetime1Lifetime2Lifetime1;
                 param0 = param0 >> var10Lifetime1Lifetime2Lifetime1;
@@ -870,13 +870,13 @@ final class hm extends tfa implements gf {
               param0 = param0 - param9;
               param4 = param4 - param9;
               param7 = param7 - param9;
-              var10Lifetime1Lifetime3 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+              var10Lifetime1Lifetime3 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(1, param8), RandomMazeBehaviour.b(param1 + 16, param6)), RandomMazeBehaviour.b(1, param3));
               if (0 < var10Lifetime1Lifetime3) {
                 param8 = param8 >> var10Lifetime1Lifetime3;
                 param6 = param6 >> var10Lifetime1Lifetime3;
                 param3 = param3 >> var10Lifetime1Lifetime3;
               }
-              var10Lifetime1Lifetime3Lifetime1 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+              var10Lifetime1Lifetime3Lifetime1 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(param1 ^ -16, param7), RandomMazeBehaviour.b(1, param0)), RandomMazeBehaviour.b(1, param4));
               if (var10Lifetime1Lifetime3Lifetime1 > 0) {
                 param7 = param7 >> var10Lifetime1Lifetime3Lifetime1;
                 param0 = param0 >> var10Lifetime1Lifetime3Lifetime1;
@@ -913,13 +913,13 @@ final class hm extends tfa implements gf {
               param0 = param0 - param9;
               param4 = param4 - param9;
               param7 = param7 - param9;
-              var10Lifetime1Lifetime4 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+              var10Lifetime1Lifetime4 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(1, param8), RandomMazeBehaviour.b(param1 + 16, param6)), RandomMazeBehaviour.b(1, param3));
               if (0 < var10Lifetime1Lifetime4) {
                 param8 = param8 >> var10Lifetime1Lifetime4;
                 param6 = param6 >> var10Lifetime1Lifetime4;
                 param3 = param3 >> var10Lifetime1Lifetime4;
               }
-              var10Lifetime1Lifetime4Lifetime1 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+              var10Lifetime1Lifetime4Lifetime1 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(param1 ^ -16, param7), RandomMazeBehaviour.b(1, param0)), RandomMazeBehaviour.b(1, param4));
               if (var10Lifetime1Lifetime4Lifetime1 > 0) {
                 param7 = param7 >> var10Lifetime1Lifetime4Lifetime1;
                 param0 = param0 >> var10Lifetime1Lifetime4Lifetime1;
@@ -956,13 +956,13 @@ final class hm extends tfa implements gf {
               param0 = param0 - param9;
               param4 = param4 - param9;
               param7 = param7 - param9;
-              var10Lifetime1Lifetime5 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+              var10Lifetime1Lifetime5 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(1, param8), RandomMazeBehaviour.b(param1 + 16, param6)), RandomMazeBehaviour.b(1, param3));
               if (0 < var10Lifetime1Lifetime5) {
                 param8 = param8 >> var10Lifetime1Lifetime5;
                 param6 = param6 >> var10Lifetime1Lifetime5;
                 param3 = param3 >> var10Lifetime1Lifetime5;
               }
-              var10Lifetime1Lifetime5Lifetime1 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+              var10Lifetime1Lifetime5Lifetime1 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(param1 ^ -16, param7), RandomMazeBehaviour.b(1, param0)), RandomMazeBehaviour.b(1, param4));
               if (var10Lifetime1Lifetime5Lifetime1 > 0) {
                 param7 = param7 >> var10Lifetime1Lifetime5Lifetime1;
                 param0 = param0 >> var10Lifetime1Lifetime5Lifetime1;
@@ -999,13 +999,13 @@ final class hm extends tfa implements gf {
               param0 = param0 - param9;
               param4 = param4 - param9;
               param7 = param7 - param9;
-              var10Lifetime1Lifetime6 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+              var10Lifetime1Lifetime6 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(1, param8), RandomMazeBehaviour.b(param1 + 16, param6)), RandomMazeBehaviour.b(1, param3));
               if (0 < var10Lifetime1Lifetime6) {
                 param8 = param8 >> var10Lifetime1Lifetime6;
                 param6 = param6 >> var10Lifetime1Lifetime6;
                 param3 = param3 >> var10Lifetime1Lifetime6;
               }
-              var10Lifetime1Lifetime6Lifetime1 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+              var10Lifetime1Lifetime6Lifetime1 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(param1 ^ -16, param7), RandomMazeBehaviour.b(1, param0)), RandomMazeBehaviour.b(1, param4));
               if (var10Lifetime1Lifetime6Lifetime1 > 0) {
                 param7 = param7 >> var10Lifetime1Lifetime6Lifetime1;
                 param0 = param0 >> var10Lifetime1Lifetime6Lifetime1;
@@ -1044,13 +1044,13 @@ final class hm extends tfa implements gf {
             param0 = param0 - param9;
             param4 = param4 - param9;
             param7 = param7 - param9;
-            var10Lifetime1Lifetime7 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+            var10Lifetime1Lifetime7 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(1, param8), RandomMazeBehaviour.b(param1 + 16, param6)), RandomMazeBehaviour.b(1, param3));
             if (0 < var10Lifetime1Lifetime7) {
               param8 = param8 >> var10Lifetime1Lifetime7;
               param6 = param6 >> var10Lifetime1Lifetime7;
               param3 = param3 >> var10Lifetime1Lifetime7;
             }
-            var10Lifetime1Lifetime8 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+            var10Lifetime1Lifetime8 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(param1 ^ -16, param7), RandomMazeBehaviour.b(1, param0)), RandomMazeBehaviour.b(1, param4));
             if (var10Lifetime1Lifetime8 > 0) {
               param7 = param7 >> var10Lifetime1Lifetime8;
               param0 = param0 >> var10Lifetime1Lifetime8;
@@ -1114,13 +1114,13 @@ final class hm extends tfa implements gf {
               param0 = param0 - param9;
               param4 = param4 - param9;
               param7 = param7 - param9;
-              var10Lifetime2 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+              var10Lifetime2 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(1, param8), RandomMazeBehaviour.b(param1 + 16, param6)), RandomMazeBehaviour.b(1, param3));
               if (0 < var10Lifetime2) {
                 param8 = param8 >> var10Lifetime2;
                 param6 = param6 >> var10Lifetime2;
                 param3 = param3 >> var10Lifetime2;
               }
-              var10Lifetime2Lifetime1 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+              var10Lifetime2Lifetime1 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(param1 ^ -16, param7), RandomMazeBehaviour.b(1, param0)), RandomMazeBehaviour.b(1, param4));
               if (var10Lifetime2Lifetime1 > 0) {
                 param7 = param7 >> var10Lifetime2Lifetime1;
                 param0 = param0 >> var10Lifetime2Lifetime1;
@@ -1176,13 +1176,13 @@ final class hm extends tfa implements gf {
         param0 = param0 - param9;
         param4 = param4 - param9;
         param7 = param7 - param9;
-        var10Lifetime3 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+        var10Lifetime3 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(1, param8), RandomMazeBehaviour.b(param1 + 16, param6)), RandomMazeBehaviour.b(1, param3));
         if (0 < var10Lifetime3) {
           param8 = param8 >> var10Lifetime3;
           param6 = param6 >> var10Lifetime3;
           param3 = param3 >> var10Lifetime3;
         }
-        var10Lifetime4 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+        var10Lifetime4 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(param1 ^ -16, param7), RandomMazeBehaviour.b(1, param0)), RandomMazeBehaviour.b(1, param4));
         if (var10Lifetime4 > 0) {
           param7 = param7 >> var10Lifetime4;
           param0 = param0 >> var10Lifetime4;

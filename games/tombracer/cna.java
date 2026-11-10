@@ -9,8 +9,8 @@ final class cna {
 
     final static bna a(int param0, int param1) {
         bna var2 = new bna();
-        tca.field_N.b((byte) -109, var2);
-        rh.b(param0, param1 - 228);
+        MovingWallComponent.field_N.b((byte) -109, var2);
+        TouchSwitchBehaviour.b(param0, param1 - 228);
         if (param1 == 128) {
           return var2;
         }

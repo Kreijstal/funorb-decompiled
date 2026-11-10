@@ -199,14 +199,14 @@ final class oka extends wv {
             var8 = qu.field_c;
           } else {
             if (!vpa.a(109)) {
-              var8 = tna.field_d;
+              var8 = DivisionMazeGenerator.field_d;
             } else {
               var8 = tc.field_f;
             }
           }
           SocketConnector.a(var8, 1, kn.field_p, 16777215, 16, var5Lifetime1, 1, var7Lifetime1 - (var5Lifetime1 >> 1), 10 + (var6 - (var4Lifetime2 >> 1)), -1, (byte) 60, -20 + var4Lifetime2);
         }
-        if (eq.c(0)) {
+        if (SimpleBlockBehaviour.c(0)) {
           oka.a("Unlock: Key 2-9", 16777215, kn.field_p, -1, this.field_r + koa.b(param0 + 28) - 100, -100 + aaa.a(false), -1);
           oka.a("Play All: Insert", 16777215, kn.field_p, -1, -80 + (this.field_r + koa.b(0)), aaa.a(false) - 100, -1);
         }
@@ -427,7 +427,7 @@ final class oka extends wv {
         int var6;
         var6 = TombRacer.field_G ? 1 : 0;
         var2 = 0;
-        var3 = tl.field_r;
+        var3 = TimeSwitchBehaviour.field_r;
         if (5 <= var3) {
           if (var3 < 105) {
             var2 = (-40960 + var3 * 16384) / 220;

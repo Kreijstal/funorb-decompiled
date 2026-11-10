@@ -97,22 +97,22 @@ final class vu extends vw {
             var7 = (dka.field_b.field_G + 2) / 2;
             dl.field_t.a(-2 + var7, 40, -23776, -40 + dka.field_b.field_t, 0);
             hw.field_a.a(dka.field_b.field_G - var7, 40, param0 - 23777, -40 + dka.field_b.field_t, var7);
-            if (sg.field_u.length == 1 &&
-              sg.field_u[0] == 2) {
+            if (SafeZoneBehaviour.field_u.length == 1 &&
+              SafeZoneBehaviour.field_u[0] == 2) {
               var8 = 0;
             } else {
               var8 = 0;
               var9_int = 0;
               var10 = 0;
               while (true) {
-                if (var10 < sg.field_u.length) {
+                if (var10 < SafeZoneBehaviour.field_u.length) {
                   stackIn_10_0 = ((vk.field_b[var10 / 8] & 1 << (7 & var10)) == 0) ? 0 : 1;
                   var11_int = stackIn_10_0;
                   if (var11_int != 0) {
                     var9_int++;
                   }
                   if (var11_int != 0 &&
-                    sg.field_u[var10] != 2) {
+                    SafeZoneBehaviour.field_u[var10] != 2) {
                     var8 = 1;
                   } else {
                     var10++;
@@ -145,9 +145,9 @@ final class vu extends vw {
               stackIn_37_0.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(stackIn_37_1, stackIn_38_2, new String[]{hw.field_a.field_r});
               dl.field_t.field_r = vf.field_h;
               bc.field_b.field_X = true;
-              rh.field_s = true;
+              TouchSwitchBehaviour.field_s = true;
               if (null != ce.field_A) {
-                rh.field_s = false;
+                TouchSwitchBehaviour.field_s = false;
                 if (null == tba.field_m) {
                   tba.field_m = new byte[fk.field_b];
                   sda.field_f = new boolean[fk.field_b];
@@ -162,10 +162,10 @@ final class vu extends vw {
                 cja.a(param0 + 108, fk.field_b, ifa.field_n, 0, -1, -1, -1, true);
                 if (!(ld.field_e < 2) &&
                   oj.field_tb[12]) {
-                  rh.field_s = true;
+                  TouchSwitchBehaviour.field_s = true;
                 }
               }
-              if (!rh.field_s) {
+              if (!TouchSwitchBehaviour.field_s) {
                 hw.field_a.field_X = false;
                 if (hw.field_a.field_pb) {
                   var9 = null;
@@ -188,7 +188,7 @@ final class vu extends vw {
                       }
                     }
                   }
-                  qda.field_b = "<col=A00000>" + cra.field_a + "<br>" + jb.field_J + (String) (var9);
+                  qda.field_b = "<col=A00000>" + cra.field_a + "<br>" + WhiteLightSensorComponent.field_J + (String) (var9);
                 }
               }
             } else {
@@ -241,7 +241,7 @@ final class vu extends vw {
             }
             if (hw.field_a.field_y != 0) {
               if (qa.field_o) {
-                pd.a((byte) 34, param3);
+                ItemBehaviour.a((byte) 34, param3);
               } else {
                 jq.a(param3, (byte) -128);
               }

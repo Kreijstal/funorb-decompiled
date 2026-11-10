@@ -275,7 +275,7 @@ final class ss implements Runnable {
         try {
           var2 = param0.a((Runnable) (this), 425, 5);
           while (var2.field_b == 0) {
-            vja.a(0, 10L);
+            TrapSpawner.a(0, 10L);
           }
           if (var2.field_b == 2) {
             throw new RuntimeException();

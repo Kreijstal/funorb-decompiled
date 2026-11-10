@@ -58,7 +58,7 @@ final class cja {
                   decompiledFrameCompleted2 = false;
                   break;
                 }
-                rh.field_s = true;
+                TouchSwitchBehaviour.field_s = true;
                 decompiledFrameCompleted1 = false;
                 break;
               }
@@ -89,7 +89,7 @@ final class cja {
                 var13_intLifetime1 = var19[var12];
                 var14 = var10_ref_int__[var12 + 1];
                 if (var13_intLifetime1 == -1) {
-                  if (sg.field_u[param6] != var14) {
+                  if (SafeZoneBehaviour.field_u[param6] != var14) {
                     break scanLoop1;
                   }
                 } else {
@@ -128,7 +128,7 @@ final class cja {
             var9 = 1;
             if (param7) {
               if (param5 == -1) {
-                for (var10 = 0; sg.field_u.length > var10; var10++) {
+                for (var10 = 0; SafeZoneBehaviour.field_u.length > var10; var10++) {
                   if ((vk.field_b[var10 / 8] & 1 << (7 & var10)) != 0) {
                     var9 = 0;
                     decompiledFrameCompleted0 = false;
@@ -155,7 +155,7 @@ final class cja {
               if (param5 != -1) {
                 stackIn_52_0 = var18.length - 1;
               } else {
-                stackIn_52_0 = sg.field_u.length;
+                stackIn_52_0 = SafeZoneBehaviour.field_u.length;
               }
               if (stackIn_52_0 <= var11) {
                 if (var10Lifetime1 != 0) {
@@ -168,7 +168,7 @@ final class cja {
                     param6 = var11;
                   }
                   cja.a(24, param1, param2, param3, param4, param5 + 1, param6, param7);
-                  if (rh.field_s) {
+                  if (TouchSwitchBehaviour.field_s) {
                     return;
                   }
                 }
@@ -180,7 +180,7 @@ final class cja {
                 tba.field_m[param5] = (byte)var11;
               }
               if (-1 == param5 &&
-                1 == sg.field_u.length) {
+                1 == SafeZoneBehaviour.field_u.length) {
                 var12 = 1;
               } else {
                 var13 = var8[var11 + 1];
@@ -197,7 +197,7 @@ final class cja {
                   var12 = stackIn_76_0;
                 } else {
                   if (-1 == param5) {
-                    stackIn_67_0 = (sg.field_u[var11] != uu.field_a.field_Jb) ? 0 : 1;
+                    stackIn_67_0 = (SafeZoneBehaviour.field_u[var11] != uu.field_a.field_Jb) ? 0 : 1;
                   } else {
                     stackIn_67_0 = (var11 != (255 & uu.field_a.field_ac[param5])) ? 0 : 1;
                   }
@@ -208,7 +208,7 @@ final class cja {
                 cja.a(127, param1, param2, param3, param4, 1 + param5, param6, param7);
                 var10Lifetime1 = 1;
               }
-              if (rh.field_s) {
+              if (TouchSwitchBehaviour.field_s) {
                 return;
               }
               var11++;
@@ -234,9 +234,9 @@ final class cja {
           cja.a(117);
         }
         if (gsa.field_y == kl.field_a) {
-          return osa.field_p;
+          return ConstraintLocomotor.field_p;
         }
-        return rsa.field_u;
+        return ConstrainToLatticeLocomotor.field_u;
     }
 
     final void a(byte param0, int[] param1) {

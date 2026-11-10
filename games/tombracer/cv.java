@@ -769,14 +769,14 @@ final class cv extends dg {
           }
           var10 = 0;
           var11 = null;
-          stackIn_14_0 = df.field_J;
+          stackIn_14_0 = RevolverItemComponent.field_J;
           if (var9 != 0) {
             stackIn_15_1 = 100;
           } else {
             stackIn_15_1 = 67;
           }
           var12 = stackIn_14_0[stackIn_15_1];
-          stackIn_17_0 = df.field_J;
+          stackIn_17_0 = RevolverItemComponent.field_J;
           if (var9 != 0) {
             stackIn_18_1 = 99;
           } else {
@@ -785,14 +785,14 @@ final class cv extends dg {
           var13 = stackIn_17_0[stackIn_18_1];
           if (var7 == 0) {
             if (var8 != 0) {
-              stackIn_30_0 = df.field_J;
+              stackIn_30_0 = RevolverItemComponent.field_J;
               if (var9 != 0) {
                 stackIn_31_1 = 102;
               } else {
                 stackIn_31_1 = 95;
               }
               var12 = stackIn_30_0[stackIn_31_1];
-              stackIn_33_0 = df.field_J;
+              stackIn_33_0 = RevolverItemComponent.field_J;
               if (var9 == 0) {
                 stackIn_34_1 = 94;
               } else {
@@ -800,14 +800,14 @@ final class cv extends dg {
               }
               var13 = stackIn_33_0[stackIn_34_1];
             } else {
-              stackIn_23_0 = df.field_J;
+              stackIn_23_0 = RevolverItemComponent.field_J;
               if (var9 != 0) {
                 stackIn_24_1 = 103;
               } else {
                 stackIn_24_1 = 68;
               }
               var13 = stackIn_23_0[stackIn_24_1];
-              stackIn_26_0 = df.field_J;
+              stackIn_26_0 = RevolverItemComponent.field_J;
               if (var9 != 0) {
                 stackIn_27_1 = 104;
               } else {
@@ -820,7 +820,7 @@ final class cv extends dg {
           if (var14 == 0) {
             if (var7 == 0) {
               if (var8 == 0) {
-                stackIn_58_0 = df.field_J;
+                stackIn_58_0 = RevolverItemComponent.field_J;
                 if (var9 == 0) {
                   stackIn_59_1 = 21;
                 } else {
@@ -828,7 +828,7 @@ final class cv extends dg {
                 }
                 var11 = stackIn_58_0[stackIn_59_1];
               } else {
-                stackIn_54_0 = df.field_J;
+                stackIn_54_0 = RevolverItemComponent.field_J;
                 if (var9 == 0) {
                   stackIn_55_1 = 93;
                 } else {
@@ -837,7 +837,7 @@ final class cv extends dg {
                 var11 = stackIn_54_0[stackIn_55_1];
               }
             } else {
-              stackIn_49_0 = df.field_J;
+              stackIn_49_0 = RevolverItemComponent.field_J;
               if (var9 != 0) {
                 stackIn_50_1 = 98;
               } else {
@@ -850,7 +850,7 @@ final class cv extends dg {
               if (var14 != 1) {
                 if (var14 != 3) {
                   if (4 == var14) {
-                    jc.a(2097152, 0, (byte) 88, param2, this.field_h.c(-20), 1024, param3, var13, 0, var12, param1);
+                    SimpleHoverMountComponent.a(2097152, 0, (byte) 88, param2, this.field_h.c(-20), 1024, param3, var13, 0, var12, param1);
                     return;
                   }
                   if (var14 == 5) {
@@ -858,7 +858,7 @@ final class cv extends dg {
                     return;
                   }
                 } else {
-                  var11 = df.field_J[9];
+                  var11 = RevolverItemComponent.field_J[9];
                   var10 = -2048;
                   if (var7 != 0) {
                     var11 = this.field_s.b((byte) 74);
@@ -867,16 +867,16 @@ final class cv extends dg {
                 }
               } else {
                 if (var7 != 0) {
-                  stackIn_77_0 = df.field_J[25];
+                  stackIn_77_0 = RevolverItemComponent.field_J[25];
                 } else {
-                  stackIn_77_0 = df.field_J[24];
+                  stackIn_77_0 = RevolverItemComponent.field_J[24];
                 }
                 var11 = stackIn_77_0;
               }
             } else {
               if (var7 == 0) {
                 if (var8 != 0) {
-                  stackIn_72_0 = df.field_J;
+                  stackIn_72_0 = RevolverItemComponent.field_J;
                   if (var9 != 0) {
                     stackIn_73_1 = 107;
                   } else {
@@ -884,7 +884,7 @@ final class cv extends dg {
                   }
                   var11 = stackIn_72_0[stackIn_73_1];
                 } else {
-                  stackIn_68_0 = df.field_J;
+                  stackIn_68_0 = RevolverItemComponent.field_J;
                   if (var9 != 0) {
                     stackIn_69_1 = 106;
                   } else {
@@ -893,7 +893,7 @@ final class cv extends dg {
                   var11 = stackIn_68_0[stackIn_69_1];
                 }
               } else {
-                stackIn_63_0 = df.field_J;
+                stackIn_63_0 = RevolverItemComponent.field_J;
                 if (var9 != 0) {
                   stackIn_64_1 = 108;
                 } else {

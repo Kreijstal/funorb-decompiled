@@ -40,7 +40,7 @@ final class sw extends jea {
           }
           if (this.field_ub != this.field_wb.length()) {
             var4 = this.field_wb.toString().substring(this.field_ub, this.field_wb.length());
-            ana.a(this.field_ub, ' ', -11, this.field_wb);
+            DarknessBehaviour.a(this.field_ub, ' ', -11, this.field_wb);
             discarded$0 = this.field_wb.append(param0);
             discarded$1 = this.field_wb.append(var4);
           } else {
@@ -258,7 +258,7 @@ final class sw extends jea {
             this.field_Ab = var2_int;
             this.field_ub = var2_int;
             var4 = this.field_wb.toString().substring(var3, this.field_wb.length());
-            ana.a(var2_int, ' ', -11, this.field_wb);
+            DarknessBehaviour.a(var2_int, ' ', -11, this.field_wb);
             discarded$0 = this.field_wb.append(var4);
             this.field_Cb.field_r = this.field_wb.toString();
           }
@@ -275,7 +275,7 @@ final class sw extends jea {
           return;
         }
         try {
-          ana.a(0, ' ', -11, this.field_wb);
+          DarknessBehaviour.a(0, ' ', -11, this.field_wb);
           this.field_Ab = 0;
           this.field_ub = 0;
           this.field_Cb.field_r = this.field_wb.toString();
@@ -298,7 +298,7 @@ final class sw extends jea {
             }
             return;
           }
-          wu.field_a.a(sc.field_k, true, oqa.field_w, param0 ^ -11);
+          wu.field_a.a(sc.field_k, true, ConstrainToFacingArcLocomotor.field_w, param0 ^ -11);
           wu.field_a.g((byte) -128);
           while (es.a(true)) {
             wu.field_a.a((byte) -53, fna.field_h, kda.field_td);
@@ -629,7 +629,7 @@ final class sw extends jea {
                   discarded$0 = this.field_wb.append(param2);
                 } else {
                   var5 = this.field_wb.toString().substring(this.field_ub, this.field_wb.length());
-                  ana.a(this.field_ub, ' ', -11, this.field_wb);
+                  DarknessBehaviour.a(this.field_ub, ' ', -11, this.field_wb);
                   discarded$1 = this.field_wb.append(param2);
                   discarded$2 = this.field_wb.append(var5);
                 }
@@ -804,15 +804,15 @@ final class sw extends jea {
           ta.field_ub = null;
           gca.field_g = null;
           mma.field_b = null;
-          rl.field_t = null;
-          df.field_J = null;
+          PowerUpItemBehaviour.field_t = null;
+          RevolverItemComponent.field_J = null;
           ola.field_Ib = null;
           koa.field_b = null;
           int var1_int = -56 % ((6 - param0) / 33);
-          mh.field_F = null;
+          DoorwayComponent.field_F = null;
           GameApplet.field_j = null;
           jma.field_a = null;
-          qi.field_O = null;
+          AllPlatformsMazeComponent.field_O = null;
           System.gc();
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sw.SA(" + param0 + ')');

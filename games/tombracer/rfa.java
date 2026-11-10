@@ -14,7 +14,7 @@ abstract class rfa extends AppletGameShell implements sia {
         int var4 = TombRacer.field_G ? 1 : 0;
         java.awt.Canvas var2 = kw.b((byte) -97);
         if (wna.c(-127)) {
-          fh.a(vka.A(90), var2, param0 ^ 0);
+          fh.a(PortalComponent.A(90), var2, param0 ^ 0);
           return;
         }
         if (!lla.field_b) {
@@ -23,7 +23,7 @@ abstract class rfa extends AppletGameShell implements sia {
         }
         if (!av.field_e &&
           !vpa.a(109)) {
-          ima.a(100.0f, th.field_u, -75);
+          ima.a(100.0f, WindZoneBehaviour.field_u, -75);
           dba.a(var2, (byte) 111);
           return;
         }
@@ -271,14 +271,14 @@ abstract class rfa extends AppletGameShell implements sia {
         if (dq.field_f != null &&
           dq.field_f.field_b) {
           og.b(0);
-          vd.b(1);
+          RandomMazeBehaviour.b(1);
         }
         stackIn_5_1 = -127;
         stackIn_6_2 = (dq.field_f != null);
         this.c((byte) stackIn_5_1, stackIn_6_2);
-        if (lpa.field_w) {
+        if (PlatformBehaviour.field_w) {
           dma.field_l.a((byte) -38);
-          lpa.field_w = false;
+          PlatformBehaviour.field_w = false;
         }
         if (wna.c(-128)) {
           this.r(114);
@@ -299,7 +299,7 @@ abstract class rfa extends AppletGameShell implements sia {
               if (dma.field_l.a(-127)) {
                 av.field_e = true;
                 this.v(24230);
-                ln.A(116);
+                PlatformComponent.A(116);
               }
             } else {
               this.b(true);
@@ -310,7 +310,7 @@ abstract class rfa extends AppletGameShell implements sia {
         }
         if (!vpa.a(66)) {
           while (true) {
-            var5 = (cga) (sua.field_H.c(119));
+            var5 = (cga) (RotaterMountComponent.field_H.c(119));
             if (var5 == null) {
               break;
             }

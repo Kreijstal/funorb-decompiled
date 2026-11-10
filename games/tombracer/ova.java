@@ -26,7 +26,7 @@ final class ova extends me {
         if (param0 < -13) {
           var3 = 160;
           SecondaryNodeDequeIterator.a(192, 160, 3145728, 240, (byte) 22, var3, 200);
-          tp.a(200, (byte) -85, var3, 5242880, 2, 160, 240);
+          WhiteLightShooterComponent.a(200, (byte) -85, var3, 5242880, 2, 160, 240);
           oka.a("Room Completed", var2, eda.field_f, -1, var3 + 40, 320, 0);
           var4 = 240;
           var5 = this.field_g.simulations[0].rooms[0];
@@ -85,18 +85,18 @@ final class ova extends me {
         int var6 = 0;
         String var7 = null;
         try {
-          qi.field_K[0] = lpa.field_p.nextInt();
-          qi.field_K[1] = lpa.field_p.nextInt();
+          AllPlatformsMazeComponent.field_K[0] = PlatformBehaviour.field_p.nextInt();
+          AllPlatformsMazeComponent.field_K[1] = PlatformBehaviour.field_p.nextInt();
           jg.field_a.position = 0;
-          qi.field_K[3] = (int)ra.field_L;
-          qi.field_K[2] = (int)(ra.field_L >> 32);
-          jg.field_a.a(qi.field_K[0], (byte) 80);
-          jg.field_a.a(qi.field_K[1], (byte) 124);
-          jg.field_a.a(qi.field_K[2], (byte) -28);
+          AllPlatformsMazeComponent.field_K[3] = (int)PathMoverComponent.field_L;
+          AllPlatformsMazeComponent.field_K[2] = (int)(PathMoverComponent.field_L >> 32);
+          jg.field_a.a(AllPlatformsMazeComponent.field_K[0], (byte) 80);
+          jg.field_a.a(AllPlatformsMazeComponent.field_K[1], (byte) 124);
+          jg.field_a.a(AllPlatformsMazeComponent.field_K[2], (byte) -28);
           if (param0 < 19) {
             return;
           }
-          jg.field_a.a(qi.field_K[3], (byte) 104);
+          jg.field_a.a(AllPlatformsMazeComponent.field_K[3], (byte) 104);
           ni.a(jg.field_a, (byte) 77);
           jg.field_a.f(-1477662136, param2);
           param3.a(jg.field_a, false);

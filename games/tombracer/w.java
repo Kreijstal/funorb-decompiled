@@ -81,7 +81,7 @@ final class w extends sqa {
                 var4 != 0) &&
                 (!qqa.a(param0, mga.field_j, var5, true) ||
                 var4 != 0)) {
-                if (uqa.field_w != var5) {
+                if (ConstrainToCircleLocomotor.field_w != var5) {
                   discarded$2 = var8.append((char)var5);
                   continue;
                 }
@@ -93,7 +93,7 @@ final class w extends sqa {
                   var6 = param0.c((byte) 52);
                   if (!qqa.a(param0, mga.field_j, var6, true) &&
                     dia.field_q != var6) {
-                    if (uqa.field_w == var6) {
+                    if (ConstrainToCircleLocomotor.field_w == var6) {
                       discarded$0 = var8.append((char)var6);
                     } else {
                       param0.position = param0.position - 1;

@@ -378,7 +378,7 @@ final class km extends DualLinkNode {
           this.field_l = new ci[var2_int];
           var12 = new int[var2_int][];
           for (var6 = 0; var6 < var2_int; var6++) {
-            var13 = aw.a(param0, 0);
+            var13 = MirrorComponent.a(param0, 0);
             var14 = var13;
             if (var14.a(125) >= 0) {
               var3++;

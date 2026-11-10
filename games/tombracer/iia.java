@@ -118,9 +118,9 @@ final class iia extends ci {
                 var19 = -var17 + param0 - 1;
                 if (var14 <= var19) {
                   for (var20 = 0; var13 > var20; var20++) {
-                    dupTemp$0 = sea.c(una.field_b, -var20 + param4 + param1 - 1);
+                    dupTemp$0 = SnakePitBehaviour.c(una.field_b, -var20 + param4 + param1 - 1);
                     var18[dupTemp$0] = var8_int * var20 / var13;
-                    var18[sea.c(una.field_b, param1 + var20)] = var8_int * var20 / var13;
+                    var18[SnakePitBehaviour.c(una.field_b, param1 + var20)] = var8_int * var20 / var13;
                   }
                   if (var16 + var15 <= ns.field_g) {
                     lua.a(var18, var15, var16, var8_int);
@@ -136,17 +136,17 @@ final class iia extends ci {
                   if (this.field_t == 0) {
                     for (var21 = 0; var21 < var13; var21++) {
                       var22 = var21 * var8_int / var13;
-                      dupTemp$1 = sea.c(una.field_b, -1 + param4 + param1 - var21);
+                      dupTemp$1 = SnakePitBehaviour.c(una.field_b, -1 + param4 + param1 - var21);
                       var18[dupTemp$1] = var20 * var22 >> 12;
-                      var18[sea.c(var21 + param1, una.field_b)] = var20 * var22 >> 12;
+                      var18[SnakePitBehaviour.c(var21 + param1, una.field_b)] = var20 * var22 >> 12;
                     }
                   } else {
                     for (var21 = 0; var13 > var21; var21++) {
                       var22 = var8_int * var21 / var13;
                       stackIn_52_0 = var18;
-                      stackIn_52_1 = sea.c(param1 + var21, una.field_b);
+                      stackIn_52_1 = SnakePitBehaviour.c(param1 + var21, una.field_b);
                       stackIn_52_2 = var18;
-                      stackIn_52_3 = sea.c(-1 - var21 + param1 + param4, una.field_b);
+                      stackIn_52_3 = SnakePitBehaviour.c(-1 - var21 + param1 + param4, una.field_b);
                       if (var22 < var20) {
                         stackIn_53_4 = var22;
                       } else {
@@ -169,17 +169,17 @@ final class iia extends ci {
                 if (this.field_t == 0) {
                   for (var20 = 0; var13 > var20; var20++) {
                     var21 = var8_int * var20 / var13;
-                    dupTemp$2 = sea.c(-var20 + (param4 + (param1 - 1)), una.field_b);
+                    dupTemp$2 = SnakePitBehaviour.c(-var20 + (param4 + (param1 - 1)), una.field_b);
                     var18[dupTemp$2] = var21 * var19 >> 12;
-                    var18[sea.c(var20 + param1, una.field_b)] = var21 * var19 >> 12;
+                    var18[SnakePitBehaviour.c(var20 + param1, una.field_b)] = var21 * var19 >> 12;
                   }
                 } else {
                   for (var20 = 0; var20 < var13; var20++) {
                     var21 = var8_int * var20 / var13;
                     stackIn_41_0 = var18;
-                    stackIn_41_1 = sea.c(var20 + param1, una.field_b);
+                    stackIn_41_1 = SnakePitBehaviour.c(var20 + param1, una.field_b);
                     stackIn_41_2 = var18;
-                    stackIn_41_3 = sea.c(-var20 + (param1 + param4 - 1), una.field_b);
+                    stackIn_41_3 = SnakePitBehaviour.c(-var20 + (param1 + param4 - 1), una.field_b);
                     if (var21 < var19) {
                       stackIn_42_4 = var21;
                     } else {

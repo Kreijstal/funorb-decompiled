@@ -112,7 +112,7 @@ final class nw extends ci {
             var28.field_f.a(var29Lifetime2, 11, var30, param0);
             var31 = hka.field_b;
             var32 = vda.field_m[1];
-            var33 = oqa.field_t;
+            var33 = ConstrainToFacingArcLocomotor.field_t;
             var31.field_f.a(var32, 12, var33, false);
             var34 = hka.field_b;
             var35 = vda.field_m[2];

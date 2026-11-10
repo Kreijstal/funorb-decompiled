@@ -119,7 +119,7 @@ final class kaa implements isa {
     public kaa() {
         this.field_b = 1;
         this.field_a = 1;
-        this.field_c = mj.field_J;
+        this.field_c = KeySwitchComponent.field_J;
     }
 
     kaa(il param0, int param1, int param2) {

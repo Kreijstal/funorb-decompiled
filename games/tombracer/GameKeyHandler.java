@@ -39,8 +39,8 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
     final static void a(byte param0) {
         int var1 = 0;
         int var1Lifetime1;
-        if (ipa.field_P != null) {
-          ipa.field_P.a();
+        if (WheeledMountComponent.field_P != null) {
+          WheeledMountComponent.field_P.a();
           var1 = 1 % ((-17 - param0) / 60);
           if (null != gg.field_b) {
             gg.field_b.a();
@@ -94,7 +94,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             var3 = rca.field_n + 1 & 127;
             if (var3 != vha.field_b) {
               dl.field_o[rca.field_n] = var2_int;
-              uk.field_O[rca.field_n] = (char)0;
+              MovingSawComponent.field_O[rca.field_n] = (char)0;
               rca.field_n = var3;
             }
           }
@@ -208,7 +208,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               var3 = 1 + rca.field_n & 127;
               if (vha.field_b != var3) {
                 dl.field_o[rca.field_n] = -1;
-                uk.field_O[rca.field_n] = (char)var2_int;
+                MovingSawComponent.field_O[rca.field_n] = (char)var2_int;
                 rca.field_n = var3;
               }
             }

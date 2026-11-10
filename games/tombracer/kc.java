@@ -78,7 +78,7 @@ final class kc {
           }
           var7 = uh.a(param3, 115);
           if (var7 == null) {
-            stackIn_12_0 = gl.$cfr$intArgs$a$53ce4ab4c593(119, uqa.field_A, new String[]{param3});
+            stackIn_12_0 = gl.$cfr$intArgs$a$53ce4ab4c593(119, ConstrainToCircleLocomotor.field_A, new String[]{param3});
             return stackIn_12_0;
           }
           var7.unlink(105);

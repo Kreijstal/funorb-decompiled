@@ -31,7 +31,7 @@ final class wp {
         RuntimeException var2_ref = null;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          if (hia.field_s == null) {
+          if (TrackPlayerLocomotor.field_s == null) {
             return null;
           }
           if (param1 == null) {
@@ -50,7 +50,7 @@ final class wp {
             stackIn_13_0 = (mu) null;
             return stackIn_13_0;
           }
-          var3 = (mu) (hia.field_s.a(-128, (long)var2.hashCode()));
+          var3 = (mu) (TrackPlayerLocomotor.field_s.a(-128, (long)var2.hashCode()));
           while (true) {
             if (var3 == null) {
               return null;
@@ -58,7 +58,7 @@ final class wp {
             var7 = (CharSequence) ((Object) var3.field_tb);
             var4 = jd.a(1, var7);
             if (!var4.equals(var2)) {
-              var3 = (mu) (hia.field_s.b((byte) 47));
+              var3 = (mu) (TrackPlayerLocomotor.field_s.b((byte) 47));
               continue;
             }
             break;

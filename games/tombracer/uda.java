@@ -308,7 +308,7 @@ final class uda extends qra {
           boolean decompiledFrameRemainder0 = true;
           if (!di.field_g[param0] && (!di.field_f[param0] &&
             wla.field_ub <= 0 ||
-            !mq.field_e.b((byte) 4, param0)) && !eq.c(0)) {
+            !mq.field_e.b((byte) 4, param0)) && !SimpleBlockBehaviour.c(0)) {
             stackIn_16_0 = false;
             decompiledFrameRemainder0 = false;
           }

@@ -128,7 +128,7 @@ final class rk extends ae {
     }
 
     final static boolean a(int param0, boolean param1, byte param2, int param3, int param4, int param5, int param6) {
-        if (wqa.r((byte) -118)) {
+        if (GasTrapComponent.r((byte) -118)) {
           iqa.a(-109, param3, param5, param1);
           if (hka.field_b != null &&
             hka.field_b.a(param1, param6, param0, param2 ^ -107, param3)) {

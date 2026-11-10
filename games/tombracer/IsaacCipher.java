@@ -85,10 +85,10 @@ final class IsaacCipher {
             }
           }
           this.field_f = this.field_f + this.field_e[128 + var2 & 255];
-          dupTemp$1 = this.field_a + (this.field_f + this.field_e[sea.c(255, var3 >> 2)]);
+          dupTemp$1 = this.field_a + (this.field_f + this.field_e[SnakePitBehaviour.c(255, var3 >> 2)]);
           var4 = dupTemp$1;
           this.field_e[var2] = dupTemp$1;
-          dupTemp$2 = this.field_e[sea.c(var4, 261352) >> 8 >> 2] + var3;
+          dupTemp$2 = this.field_e[SnakePitBehaviour.c(var4, 261352) >> 8 >> 2] + var3;
           this.field_a = dupTemp$2;
           this.field_g[var2] = dupTemp$2;
         }
@@ -275,7 +275,7 @@ final class IsaacCipher {
             vh.field_g = param12;
             ClientException.field_c = param1;
             kqa.field_a = param2;
-            rsa.field_x = param4;
+            ConstrainToLatticeLocomotor.field_x = param4;
             if (param8 != -1367135824) {
               return;
             }

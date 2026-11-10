@@ -100,10 +100,10 @@ final class jsa extends qr {
 
     final static Sprite[] b(int param0, int param1, int param2, int param3, int param4) {
         if (param1 == 2) {
-          return hi.a(param0, 1, param3, 1, param4, 1, 3, true, param2);
+          return ConveyorBehaviour.a(param0, 1, param3, 1, param4, 1, 3, true, param2);
         }
         field_z = (String) null;
-        return hi.a(param0, 1, param3, 1, param4, 1, 3, true, param2);
+        return ConveyorBehaviour.a(param0, 1, param3, 1, param4, 1, 3, true, param2);
     }
 
     final static void a(boolean param0, int param1) {

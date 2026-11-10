@@ -3,7 +3,7 @@
  */
 final class vha {
     static int field_b;
-    static pma field_c;
+    static RoomComponentCodec field_c;
     static Sprite field_a;
 
     final static void a(int param0, byte param1, boolean param2, int param3) {

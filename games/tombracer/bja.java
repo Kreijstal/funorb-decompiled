@@ -25,7 +25,7 @@ abstract class bja {
         SecondaryNodeDequeIterator.field_a.h((byte) -52);
         int var7 = -125 / ((param1 - 57) / 38);
         iqa.field_c.g(0);
-        ira.a(false, -1, (byte) 92);
+        ConstrainToRectangleLocomotor.a(false, -1, (byte) 92);
     }
 
     public static void c(int param0) {

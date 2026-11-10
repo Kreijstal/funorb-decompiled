@@ -26,7 +26,7 @@ final class gqa {
           if (this.field_n > 0) {
             return 2;
           }
-          if (~this.field_i == ~rb.field_r) {
+          if (~this.field_i == ~SimpleConditionBehaviour.field_r) {
             return 1;
           }
           if (ae.field_g == 2 &&
@@ -38,7 +38,7 @@ final class gqa {
           }
           return 11;
         }
-        if (~this.field_i == ~rb.field_r) {
+        if (~this.field_i == ~SimpleConditionBehaviour.field_r) {
           return 1;
         }
         if (ae.field_g == 2 &&
@@ -105,7 +105,7 @@ final class gqa {
         this.field_d = gja.field_x;
         this.field_m = sb.field_b;
         this.field_o = ega.field_b;
-        this.field_f = hi.field_p;
+        this.field_f = ConveyorBehaviour.field_p;
         this.field_g = esa.field_c;
         this.field_c = gb.field_a;
         this.field_n = jda.field_m;

@@ -28,9 +28,9 @@ final class sra implements eb {
     private cn field_r;
 
     public final void a(byte param0) {
-        if (null != oqa.field_v) {
-          pfa.a(oqa.field_v, param0 + 157);
-          oqa.field_v = null;
+        if (null != ConstrainToFacingArcLocomotor.field_v) {
+          pfa.a(ConstrainToFacingArcLocomotor.field_v, param0 + 157);
+          ConstrainToFacingArcLocomotor.field_v = null;
           ea.a(-33);
         }
         this.field_h = dd.a(16, param0 ^ -37);
@@ -52,7 +52,7 @@ final class sra implements eb {
           return;
         }
         this.field_e = dd.a(kn.field_j.field_c, param0 ^ -37);
-        cn var6 = oma.field_G;
+        cn var6 = PitComponent.field_G;
         cn var7 = var6;
         cn var3 = ota.field_b;
         ina dupTemp$0 = new ina(55);
@@ -157,7 +157,7 @@ final class sra implements eb {
           fp.a(uba.field_g[1], 40, this.field_h, (byte) 17);
           bja.a((byte) -105, this.field_p, 50, uba.field_g[2]);
           this.field_p = null;
-          mj.a((byte) -86, uba.field_g[3], this.field_q, this.field_h, 60);
+          KeySwitchComponent.a((byte) -86, uba.field_g[3], this.field_q, this.field_h, 60);
           this.a(65, (byte) 47, uba.field_g[4]);
           dqa.a(this.field_r, this.field_m, (byte) 55, this.field_h);
           this.a(70, (byte) 47, uba.field_g[5]);
@@ -203,10 +203,10 @@ final class sra implements eb {
         }
         if (baa.field_d == null) {
           this.a(95, (byte) 47, uba.field_g[9]);
-          bha.e((byte) -33);
+          FleeLocomotor.e((byte) -33);
           baa.field_d = new di(qra.field_l, rc.field_a);
         }
-        ih.D(17229);
+        LaserShooterComponent.D(17229);
         if (null == baa.field_d.field_i) {
           return;
         }
@@ -313,7 +313,7 @@ final class sra implements eb {
 
     public final boolean b(int param0) {
         rg.e(-2339);
-        ln.A(67);
+        PlatformComponent.A(67);
         if (!this.field_c) {
           this.c(124);
           return false;
@@ -335,7 +335,7 @@ final class sra implements eb {
     }
 
     public final void b(byte param0) {
-        bla.a(cq.field_d, (byte) 52);
+        CoinItemComponent.a(cq.field_d, (byte) 52);
         hd.a(50, param0 ^ -78);
         wm.field_a = null;
         hb.field_t = (dfa) ((Object) nl.a(0, (byte) 50));
@@ -374,7 +374,7 @@ final class sra implements eb {
         }
         if (!dna.field_G) {
           dea.field_c = false;
-          op.a(this.field_s, 10, ws.field_o, fr.field_b, oma.field_G, MouseWheelInput.field_a, 4, var2, true, 2, via.field_c, ota.field_b, jf.field_t, mga.field_f, var2);
+          op.a(this.field_s, 10, MirrorMoverLocomotor.field_o, fr.field_b, PitComponent.field_G, MouseWheelInput.field_a, 4, var2, true, 2, via.field_c, ota.field_b, jf.field_t, mga.field_f, var2);
           cq.field_d = qw.field_f;
           tda.a(200, (byte) -71);
           fta.field_b = MatchState.field_p;

@@ -95,7 +95,7 @@ final class ab extends qra {
             }
           }
           this.h(0);
-          er.b(1, 0);
+          TripBeamComponent.b(1, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -304,7 +304,7 @@ final class ab extends qra {
             var4 = this.field_o.a(-108, param2);
             this.field_o.a(param2, (byte) 119);
             this.h(0);
-            var5 = ab.a(-58, gl.$cfr$intArgs$a$53ce4ab4c593(125, fva.field_b, new String[]{this.field_c.e(param0, 23807), sla.field_b[var4]}));
+            var5 = ab.a(-58, gl.$cfr$intArgs$a$53ce4ab4c593(125, RecursiveBacktrackerMazeGenerator.field_b, new String[]{this.field_c.e(param0, 23807), sla.field_b[var4]}));
             iqa.field_c.a(0, var5);
           }
         }

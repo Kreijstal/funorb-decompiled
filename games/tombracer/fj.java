@@ -172,7 +172,7 @@ final class fj {
           var30 = 0;
           var19.a(var22, -var24, -var23, -var25, -var30, 0);
           tga.field_a.a(var19);
-          ps.field_N = param3;
+          MovingPlatformComponent.field_N = param3;
           uw.field_e = param1;
           iga.field_o.a(param2, param3, (byte) -12, param4, param1);
           var10.c(false);
@@ -240,7 +240,7 @@ final class fj {
           var4 = ck.field_c[var2];
           var5 = new int[var3];
           for (var6 = 0; var6 < var3; var6++) {
-            var5[var6] = mga.field_g[sea.c(255, (int) var4[var6])];
+            var5[var6] = mga.field_g[SnakePitBehaviour.c(255, (int) var4[var6])];
           }
           var1[var2] = new Sprite(ika.field_a, kba.field_s, ak.field_p[var2], pg.field_C[var2], mq.field_b[var2], iga.field_m[var2], var5);
         }

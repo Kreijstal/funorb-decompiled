@@ -31,7 +31,7 @@ final class am extends dg {
           if (this.field_m != 1) {
             return;
           }
-          var10 = wma.a(49, 12166, 1);
+          var10 = SpawnerBehaviour.a(49, 12166, 1);
           var8Lifetime1 = dfa.a(4096 - this.field_h.g(-25787) >> 2, 2048, 86);
           gqa.a(var8Lifetime1, -83584144, param1, param2, var10, param3);
           return;

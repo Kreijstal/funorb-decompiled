@@ -104,7 +104,7 @@ final class npa {
         while (!this.field_b.field_d) {
           var6 = this.field_b.b((byte) 75);
           var7 = this.field_b.b(2);
-          var8 = (q) (this.field_h.a((byte) -119, (long)ira.a(var6, var7, (byte) 36)));
+          var8 = (q) (this.field_h.a((byte) -119, (long)ConstrainToRectangleLocomotor.a(var6, var7, (byte) 36)));
           while (var8 != null) {
             if (var8.a(var6, var7, true)) {
               var9 = 1;
@@ -166,7 +166,7 @@ final class npa {
         this.field_d = 0;
         for (var10 = var6; var8 >= var10; var10++) {
           for (var11 = var7; var11 <= var9; var11++) {
-            var12 = (q) (this.field_h.a((byte) -80, (long)ira.a(var10, var11, (byte) -124)));
+            var12 = (q) (this.field_h.a((byte) -80, (long)ConstrainToRectangleLocomotor.a(var10, var11, (byte) -124)));
             while (var12 != null) {
               if (var12.a(var10, var11, true)) {
                 var13 = 1;

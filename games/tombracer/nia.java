@@ -168,7 +168,7 @@ final class nia extends ci {
         rka.a(false);
         ina.a(tga.field_a, 0);
         ob.a(tga.field_a, 17186);
-        wpa.a(tga.field_a, -90);
+        ArrowShooterComponent.a(tga.field_a, -90);
     }
 
     final static String a(byte[] param0, int param1, int param2, int param3) {

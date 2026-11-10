@@ -139,7 +139,7 @@ final class qga extends ci {
             var13 = param1;
             var14 = param0;
             var15 = 8355711 & var18[var11] >> 1;
-            var10[var11] = (sea.c(33478545, var14) >> 17) + (sea.c(var13, 33423539) >> 9) - (-(sea.c(33423360, var12) >> 1) - var15);
+            var10[var11] = (SnakePitBehaviour.c(33478545, var14) >> 17) + (SnakePitBehaviour.c(var13, 33423539) >> 9) - (-(SnakePitBehaviour.c(33423360, var12) >> 1) - var15);
             param4++;
             param0 = param0 + param9;
             param8 = param8 + param3;

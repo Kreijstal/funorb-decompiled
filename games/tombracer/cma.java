@@ -11,7 +11,7 @@ final class cma extends ci {
 
     final static su[] c(int param0) {
         int var1 = 23 % ((-4 - param0) / 36);
-        return new su[]{uk.field_M, ula.field_v, RoomComponent.field_y, ll.field_d, sga.field_n, bi.field_d, dp.field_g, wc.field_e, IntrusiveDeque.field_a, wsa.field_v, al.field_f, kea.field_c, lfa.field_o, oc.field_H};
+        return new su[]{MovingSawComponent.field_M, FuseBehaviour.field_v, RoomComponent.field_y, ll.field_d, sga.field_n, bi.field_d, dp.field_g, wc.field_e, IntrusiveDeque.field_a, wsa.field_v, al.field_f, kea.field_c, lfa.field_o, oc.field_H};
     }
 
     public cma() {
@@ -58,9 +58,9 @@ final class cma extends ci {
           }
           if (4 == var5) {
             var4_int = param1.a(-32768);
-            this.field_o[2] = sea.c(var4_int, 255) >> 12;
-            this.field_o[0] = sea.c(267386880, var4_int << 4);
-            this.field_o[1] = sea.c(4080, var4_int >> 4);
+            this.field_o[2] = SnakePitBehaviour.c(var4_int, 255) >> 12;
+            this.field_o[0] = SnakePitBehaviour.c(267386880, var4_int << 4);
+            this.field_o[1] = SnakePitBehaviour.c(4080, var4_int >> 4);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

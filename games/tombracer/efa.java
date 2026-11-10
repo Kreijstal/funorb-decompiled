@@ -108,7 +108,7 @@ final class efa extends b implements mia, tsa {
     public efa() {
         super(0, 0, 496, 0, (isa) null);
         this.field_z = new so("", (qc) null, 12);
-        vpa var1 = new vpa(eka.field_o, 0, 0, 0, 0, 16777215, -1, 3, 0, mj.field_J.field_w, -1, 2147483647, true);
+        vpa var1 = new vpa(eka.field_o, 0, 0, 0, 0, 16777215, -1, 3, 0, KeySwitchComponent.field_J.field_w, -1, 2147483647, true);
         ae var2 = new ae(cj.field_e, var1, (qc) null);
         this.field_A = new rj(nf.field_j, (qc) null);
         this.field_B = new rj(mq.field_d, (qc) null);
@@ -124,7 +124,7 @@ final class efa extends b implements mia, tsa {
         var2.a((byte) -31, 270, 50, 20, var3);
         this.a(var2, -1);
         var3 += 50;
-        var3 = var3 + (5 + this.a(var3, rea.field_r, za.field_f, this.field_z, -2239, 170));
+        var3 = var3 + (5 + this.a(var3, CrusherBehaviour.field_r, za.field_f, this.field_z, -2239, 170));
         this.field_A.a((byte) -31, var5, 40, -var5 + 496 >> 1, var3);
         this.field_B.a((byte) -31, 60, 40, var4 + 3, var3 + 15);
         this.field_B.field_h = (qc) (this);
@@ -264,7 +264,7 @@ final class efa extends b implements mia, tsa {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new jsa(20, param0, 120 + param2, 25, param1, false, 120, param6, mj.field_J, 16777215, param3);
+          var10 = new jsa(20, param0, 120 + param2, 25, param1, false, 120, param6, KeySwitchComponent.field_J, 16777215, param3);
           this.a(var10, -1);
           var9 = new sd(((mk) ((Object) param1)).a((byte) 124), param4, 126, param0 + var10.field_p, param2 + 25, param5);
           var9.field_h = (qc) (this);

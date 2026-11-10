@@ -25,19 +25,19 @@ final class eda {
         kia var2Lifetime5;
         if (param0 == 0) {
           var3 = baa.field_e;
-          var2 = ska.field_r;
+          var2 = WeaponShooterBehaviour.field_r;
           BitPacketBuffer.a(param1, var2, var3);
           return;
         }
         if (param0 == 1) {
           var3Lifetime1 = tia.field_d;
-          var2Lifetime1 = ska.field_r;
+          var2Lifetime1 = WeaponShooterBehaviour.field_r;
           BitPacketBuffer.a(param1, var2Lifetime1, var3Lifetime1);
           return;
         }
         if (param0 == 4) {
           var3Lifetime2 = kva.field_s;
-          var2Lifetime2 = ska.field_r;
+          var2Lifetime2 = WeaponShooterBehaviour.field_r;
           BitPacketBuffer.a(param1, var2Lifetime2, var3Lifetime2);
           return;
         }

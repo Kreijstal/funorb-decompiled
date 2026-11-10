@@ -169,11 +169,11 @@ final class iea {
 
     final static void a(boolean param0, cn param1, int param2, cn param3) {
         try {
-          mp.a(joa.field_d, tka.field_q, param0, una.field_j, fe.field_F, kua.field_i, 0, dja.field_p, jq.field_o, ji.field_g, dn.field_a, kw.field_e);
-          vda.field_m = uka.a(param1, "lobby", 5, "chatfilter");
-          jra.field_c[0] = SecondaryNodeDequeIterator.field_b;
-          jra.field_c[param2] = hm.field_m;
-          jra.field_c[1] = nga.field_o;
+          mp.a(joa.field_d, tka.field_q, param0, una.field_j, fe.field_F, kua.field_i, 0, PressureSwitchBehaviour.field_p, jq.field_o, ji.field_g, dn.field_a, kw.field_e);
+          vda.field_m = BoulderComponent.a(param1, "lobby", 5, "chatfilter");
+          StripedMazeGenerator.field_c[0] = SecondaryNodeDequeIterator.field_b;
+          StripedMazeGenerator.field_c[param2] = hm.field_m;
+          StripedMazeGenerator.field_c[1] = nga.field_o;
           gea.a(0, param3, qw.field_f);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "iea.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

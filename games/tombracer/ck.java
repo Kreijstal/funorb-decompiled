@@ -85,22 +85,22 @@ final class ck {
         int var18Lifetime2;
         var21 = TombRacer.field_G ? 1 : 0;
         try {
-          mh.field_L = param7;
+          DoorwayComponent.field_L = param7;
           eda.field_e = param9;
           pda.field_d = param3;
           oo.field_n = param12;
           aca.field_i = param6;
-          ws.field_r = param2;
+          MirrorMoverLocomotor.field_r = param2;
           kma.field_e = param4;
           no.field_o = param8;
           eca.field_b = param1;
           efa.field_w = param13;
-          sg.field_u = param14;
+          SafeZoneBehaviour.field_u = param14;
           rda.field_m = param5;
-          w.field_f = uka.a(param10, "lobby", 5, "gameprivacy");
-          wt.field_c = uka.a(param10, "lobby", 5, "ratedgame");
-          nja.field_K = uka.a(param10, "lobby", 5, "opentome");
-          pca.field_k = uka.a(param10, "lobby", 5, "allowspectators");
+          w.field_f = BoulderComponent.a(param10, "lobby", 5, "gameprivacy");
+          wt.field_c = BoulderComponent.a(param10, "lobby", 5, "ratedgame");
+          InvisibleTouchSwitchComponent.field_K = BoulderComponent.a(param10, "lobby", 5, "opentome");
+          pca.field_k = BoulderComponent.a(param10, "lobby", 5, "allowspectators");
           gv.field_w = new String[5];
           gv.field_w[0] = kda.field_cd;
           gv.field_w[2] = un.field_q;
@@ -127,10 +127,10 @@ final class ck {
           db.field_s = new jea(0L, cfa.field_c);
           gta.field_b = new jea(0L, ooa.field_f, oo.field_m);
           iia.field_r = new jea(0L, cs.field_a, ria.field_r);
-          spa.field_o = new jea(0L, cs.field_a, du.field_a);
+          RotateLocomotor.field_o = new jea(0L, cs.field_a, du.field_a);
           l.field_K = new jea(0L, cs.field_a, qo.field_i);
-          aw.field_I = new jea(0L, cs.field_a, MatchState.field_N);
-          cq.field_e = new jea(0L, SecondaryNodeDeque.field_b, ra.field_G);
+          MirrorComponent.field_I = new jea(0L, cs.field_a, MatchState.field_N);
+          cq.field_e = new jea(0L, SecondaryNodeDeque.field_b, PathMoverComponent.field_G);
           nsa.field_i = new iv(0L, new jea(0L, (jea) null), rfa.field_C, fe.field_F);
           uq.field_c = new jea(0L, hg.field_g, iw.field_b.toUpperCase());
           uq.field_c.field_X = rca.field_p;
@@ -153,11 +153,11 @@ final class ck {
           OpenGlToolkit.field_fd.b(param11 ^ -25371, db.field_s);
           db.field_s.b(-124, gta.field_b);
           db.field_s.b(-126, iia.field_r);
-          db.field_s.b(-127, spa.field_o);
+          db.field_s.b(-127, RotateLocomotor.field_o);
           if (rca.field_p) {
             db.field_s.b(-128, l.field_K);
           }
-          db.field_s.b(-123, aw.field_I);
+          db.field_s.b(-123, MirrorComponent.field_I);
           db.field_s.b(-128, cq.field_e);
           db.field_s.b(-122, nsa.field_i);
           if (rca.field_p) {
@@ -180,63 +180,63 @@ final class ck {
           cea.field_a = new jea(0L, kua.field_i);
           cea.field_a.field_z = 1;
           uaa.field_b = new jea(0L, ooa.field_f, ija.field_i);
-          lda.field_F = new jea(0L, SecondaryNodeDeque.field_b, dl.field_m);
+          RopeBridgeComponent.field_F = new jea(0L, SecondaryNodeDeque.field_b, dl.field_m);
           tn.field_n = new iv(0L, new jea(0L, (jea) null), rfa.field_C, fe.field_F);
           lk.field_l.b(param11 ^ -25371, cea.field_a);
           lk.field_l.b(-124, uaa.field_b);
           if (rca.field_p) {
-            lk.field_l.b(-122, lda.field_F);
+            lk.field_l.b(-122, RopeBridgeComponent.field_F);
           }
           lk.field_l.b(-124, tn.field_n);
           bc.field_b = new jea(0L, ssa.field_g, jja.field_k.toUpperCase());
           wf.field_g = new jea(0L, uda.field_s);
           dba.field_g = new jea(0L, cfa.field_c);
-          qna.field_b = new jea(0L, sm.field_r, mh.field_G.toUpperCase());
-          rb.field_p = new jea[param0 + 4];
+          qna.field_b = new jea(0L, KeyLockBehaviour.field_r, DoorwayComponent.field_G.toUpperCase());
+          SimpleConditionBehaviour.field_p = new jea[param0 + 4];
           bf.field_b = new tv[4 + param0][];
-          rb.field_p[0] = new jea(0L, una.field_j, fj.field_a);
+          SimpleConditionBehaviour.field_p[0] = new jea(0L, una.field_j, fj.field_a);
           bf.field_b[0] = new tv[6];
           var17_int = 0;
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var17_int < 5) {
-              bf.field_b[0][1 + var17_int] = new tv(0L, qja.field_j, (jea) null, dja.field_p, w.field_f[var17_int], gv.field_w[var17_int]);
+              bf.field_b[0][1 + var17_int] = new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, w.field_f[var17_int], gv.field_w[var17_int]);
               var17_int++;
               if (var21 == 0) {
                 continue;
               }
             } else {
-              decompiledFrameRemainder0 = !(2 > sg.field_u.length);
+              decompiledFrameRemainder0 = !(2 > SafeZoneBehaviour.field_u.length);
               if (decompiledFrameRemainder0) {
-                rb.field_p[1] = new jea(0L, una.field_j, mi.field_j);
-                array$0 = new tv[1 + sg.field_u.length];
+                SimpleConditionBehaviour.field_p[1] = new jea(0L, una.field_j, mi.field_j);
+                array$0 = new tv[1 + SafeZoneBehaviour.field_u.length];
                 bf.field_b[1] = array$0;
-                bf.field_b[1][0] = new tv(0L, qja.field_j, (jea) null, dja.field_p, (Sprite) null, aa.field_b);
+                bf.field_b[1][0] = new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b);
               }
             }
             if (decompiledFrameRemainder0) {
               var17_int = 0;
-              while (!(var17_int >= sg.field_u.length)) {
-                bf.field_b[1][1 + var17_int] = new tv(0L, qja.field_j, (jea) null, dja.field_p, (Sprite) null, Integer.toString(sg.field_u[var17_int]));
+              while (!(var17_int >= SafeZoneBehaviour.field_u.length)) {
+                bf.field_b[1][1 + var17_int] = new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, (Sprite) null, Integer.toString(SafeZoneBehaviour.field_u[var17_int]));
                 var17_int++;
                 if (var21 != 0) {
                   break scanLoop1;
                 }
               }
             }
-            rb.field_p[2] = new jea(0L, una.field_j, nb.field_a);
-            bf.field_b[2] = new tv[]{new tv(0L, qja.field_j, (jea) null, dja.field_p, (Sprite) null, aa.field_b), new tv(0L, qja.field_j, (jea) null, dja.field_p, pca.field_k[0], ifa.field_s), new tv(0L, qja.field_j, (jea) null, dja.field_p, pca.field_k[1], rpa.field_g)};
+            SimpleConditionBehaviour.field_p[2] = new jea(0L, una.field_j, nb.field_a);
+            bf.field_b[2] = new tv[]{new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b), new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, pca.field_k[0], ifa.field_s), new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, pca.field_k[1], rpa.field_g)};
             break;
           }
           boolean decompiledFrameCompleted0 = true;
-          if (ws.field_r > 1) {
-            rb.field_p[3] = new jea(0L, una.field_j, k.field_z);
-            array$1 = new tv[1 + ws.field_r];
+          if (MirrorMoverLocomotor.field_r > 1) {
+            SimpleConditionBehaviour.field_p[3] = new jea(0L, una.field_j, k.field_z);
+            array$1 = new tv[1 + MirrorMoverLocomotor.field_r];
             bf.field_b[3] = array$1;
-            bf.field_b[3][0] = new tv(0L, qja.field_j, (jea) null, dja.field_p, (Sprite) null, aa.field_b);
+            bf.field_b[3][0] = new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b);
             var17_int = 0;
-            while (!(ws.field_r <= var17_int)) {
-              bf.field_b[3][1 + var17_int] = new tv(0L, qja.field_j, (jea) null, dja.field_p, (Sprite) null, rda.field_m[var17_int]);
+            while (!(MirrorMoverLocomotor.field_r <= var17_int)) {
+              bf.field_b[3][1 + var17_int] = new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, (Sprite) null, rda.field_m[var17_int]);
               var17_int++;
               if (var21 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -249,10 +249,10 @@ final class ck {
           }
           scanLoop2: while (true) {
             if (var17_int < param0) {
-              rb.field_p[var17_int + 4] = new jea(0L, una.field_j, kma.field_e[var17_int]);
-              array$2 = new tv[1 + sea.c((int) oo.field_n[var17_int], 255)];
+              SimpleConditionBehaviour.field_p[var17_int + 4] = new jea(0L, una.field_j, kma.field_e[var17_int]);
+              array$2 = new tv[1 + SnakePitBehaviour.c((int) oo.field_n[var17_int], 255)];
               bf.field_b[4 + var17_int] = array$2;
-              bf.field_b[var17_int + 4][0] = new tv(0L, qja.field_j, (jea) null, dja.field_p, (Sprite) null, aa.field_b);
+              bf.field_b[var17_int + 4][0] = new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b);
               stackIn_71_0 = 0;
               if (var21 == 0) {
                 var18 = stackIn_71_0;
@@ -278,7 +278,7 @@ final class ck {
                     stackIn_68_0 = null;
                   }
                   var20 = stackIn_68_0;
-                  bf.field_b[var17_int + 4][var18 + 1] = new tv(0L, qja.field_j, (jea) null, dja.field_p, var19_ref_iu, var20);
+                  bf.field_b[var17_int + 4][var18 + 1] = new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, var19_ref_iu, var20);
                   var18++;
                 }
                 var17_int++;
@@ -296,8 +296,8 @@ final class ck {
                 break scanLoop2;
               }
               stackIn_78_0Lifetime1 = null;
-              if (stackIn_78_0Lifetime1 != rb.field_p[var17_int]) {
-                rb.field_p[var17_int].field_P = 11;
+              if (stackIn_78_0Lifetime1 != SimpleConditionBehaviour.field_p[var17_int]) {
+                SimpleConditionBehaviour.field_p[var17_int].field_P = 11;
               }
               if (null != bf.field_b[var17_int]) {
                 var18Lifetime2 = 0;
@@ -334,11 +334,11 @@ final class ck {
               return;
             }
             if ((var18Lifetime1 != 1 ||
-              !(sg.field_u.length < 2) ||
+              !(SafeZoneBehaviour.field_u.length < 2) ||
               var21 != 0) && (var18Lifetime1 != 3 ||
-              !(ws.field_r <= 1) ||
+              !(MirrorMoverLocomotor.field_r <= 1) ||
               var21 != 0)) {
-              dba.field_g.b(-123, rb.field_p[var18Lifetime1]);
+              dba.field_g.b(-123, SimpleConditionBehaviour.field_p[var18Lifetime1]);
               var19 = 0;
               while (!(var19 >= bf.field_b[var18Lifetime1].length)) {
                 if (null != bf.field_b[var18Lifetime1][var19]) {
@@ -466,7 +466,7 @@ final class ck {
         int var13Lifetime1;
         var19 = TombRacer.field_G ? 1 : 0;
         try {
-          var5_int = bia.a((byte) 93, 3 * (param4 - param0));
+          var5_int = CauldronComponent.a((byte) 93, 3 * (param4 - param0));
           var6 = 3 * param0;
           var7 = -10 + var5_int;
           td.b((byte) -62);

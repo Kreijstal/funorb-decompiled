@@ -4,10 +4,10 @@
 final class ce extends dg {
     static String field_w;
     private int field_s;
-    private lpa field_m;
+    private PlatformBehaviour field_m;
     private int field_q;
     private boolean field_p;
-    private static String[] field_n;
+    private static String[] locomotorTypeNames;
     private int field_x;
     private fla field_t;
     static boolean field_B;
@@ -105,8 +105,8 @@ final class ce extends dg {
         RuntimeException decompiledCaughtException = null;
         try {
           super.a(param0, param1, param2);
-          if (this.field_k instanceof lpa) {
-            this.field_m = (lpa) (this.field_k);
+          if (this.field_k instanceof PlatformBehaviour) {
+            this.field_m = (PlatformBehaviour) (this.field_k);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -144,7 +144,7 @@ final class ce extends dg {
         RuntimeException var4 = null;
         try {
           super.a(param0, param1, param2);
-          if (param2 instanceof im) {
+          if (param2 instanceof PortalBehaviour) {
             this.field_q = 1;
           }
           if (param0.b(true)) {
@@ -177,9 +177,9 @@ final class ce extends dg {
     public static void l(int param0) {
         try {
           field_w = null;
-          field_n = null;
+          locomotorTypeNames = null;
           if (param0 != 30389) {
-            field_n = (String[]) null;
+            locomotorTypeNames = (String[]) null;
           }
           field_A = (int[][]) null;
         } catch (RuntimeException runtimeException) {
@@ -477,18 +477,18 @@ final class ce extends dg {
             var17 = 0;
             var18_ref = (Locomotor) (var16.a(true));
             while (var18_ref != null) {
-              if (var18_ref instanceof ro) {
-                if (((ro) (var18_ref)).d(false) != this.field_y) {
+              if (var18_ref instanceof PathMoveLocomotor) {
+                if (((PathMoveLocomotor) (var18_ref)).d(false) != this.field_y) {
                   var4_ref.a(new fm(20, this.b((byte) 39), this.c((byte) 109), this.e((byte) -116)), -58);
-                  this.field_y = ((ro) (var18_ref)).d(false);
+                  this.field_y = ((PathMoveLocomotor) (var18_ref)).d(false);
                 }
                 if (var18_ref.a(-58) &&
                   this.field_y == 0) {
-                  if (((ro) (var18_ref)).e(69) == 4096 &&
+                  if (((PathMoveLocomotor) (var18_ref)).e(69) == 4096 &&
                     this.field_v == null) {
                     this.field_v = var4_ref.a(new fm(21, this.b((byte) 114), this.c((byte) 94), this.e((byte) -124)), -58);
                   } else {
-                    if (((ro) (var18_ref)).e(114) == 327680 &&
+                    if (((PathMoveLocomotor) (var18_ref)).e(114) == 327680 &&
                       null == this.field_v) {
                       this.field_v = var4_ref.a(new fm(22, this.b((byte) -86), this.c((byte) 101), this.e((byte) -113)), -58);
                     }
@@ -974,24 +974,24 @@ final class ce extends dg {
     }
 
     static {
-        field_n = new String[17];
-        field_n[5] = "Path Move";
-        field_n[7] = "Face Player";
-        field_n[9] = "Circle Movement";
-        field_n[15] = "Teleport";
-        field_n[2] = "Locomotor Controller";
-        field_n[16] = "Sweep Rotate";
-        field_n[4] = "Mirror Mover";
-        field_n[10] = "Face Point";
-        field_n[1] = "Approach Player";
-        field_n[13] = "Constrain To Facing Arc";
-        field_n[6] = "Rotate";
-        field_n[0] = "Simple Move";
-        field_n[8] = "Constrain To Circle";
-        field_n[12] = "Constrain To Lattice";
-        field_n[14] = "Track Player";
-        field_n[3] = "Flee";
-        field_n[11] = "Constrain To Rectangle";
+        locomotorTypeNames = new String[17];
+        locomotorTypeNames[5] = "Path Move";
+        locomotorTypeNames[7] = "Face Player";
+        locomotorTypeNames[9] = "Circle Movement";
+        locomotorTypeNames[15] = "Teleport";
+        locomotorTypeNames[2] = "Locomotor Controller";
+        locomotorTypeNames[16] = "Sweep Rotate";
+        locomotorTypeNames[4] = "Mirror Mover";
+        locomotorTypeNames[10] = "Face Point";
+        locomotorTypeNames[1] = "Approach Player";
+        locomotorTypeNames[13] = "Constrain To Facing Arc";
+        locomotorTypeNames[6] = "Rotate";
+        locomotorTypeNames[0] = "Simple Move";
+        locomotorTypeNames[8] = "Constrain To Circle";
+        locomotorTypeNames[12] = "Constrain To Lattice";
+        locomotorTypeNames[14] = "Track Player";
+        locomotorTypeNames[3] = "Flee";
+        locomotorTypeNames[11] = "Constrain To Rectangle";
         field_B = true;
         field_w = "<%0> is already on your friend list.";
     }

@@ -26,13 +26,13 @@ final class kb extends IntrusiveNode {
           return dia.a(param2, param0, param1, (byte) 124);
         }
         if (var5 == 1) {
-          return df.field_J[param0];
+          return RevolverItemComponent.field_J[param0];
         }
         if (var5 == 2) {
           return ta.field_ub[param0];
         }
         if (var5 == 3) {
-          return rl.field_t[param0];
+          return PowerUpItemBehaviour.field_t[param0];
         }
         if (var5 == 4) {
           return GameApplet.field_j[param0];
@@ -41,7 +41,7 @@ final class kb extends IntrusiveNode {
           return gca.field_g[param0];
         }
         if (var5 == 6) {
-          return mh.field_F[param0];
+          return DoorwayComponent.field_F[param0];
         }
         if (var5 == 7) {
           return koa.field_b[param0];
@@ -85,8 +85,8 @@ final class kb extends IntrusiveNode {
           this.field_k = param4;
           this.field_i = param2;
           this.field_g = param3;
-          fieldTemp$0 = uk.field_N;
-          uk.field_N = uk.field_N + 1;
+          fieldTemp$0 = MovingSawComponent.field_N;
+          MovingSawComponent.field_N = MovingSawComponent.field_N + 1;
           this.field_l = 65535 & fieldTemp$0;
           this.field_o = param6;
           this.field_f = param0;

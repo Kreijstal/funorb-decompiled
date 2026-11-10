@@ -9,9 +9,9 @@ final class fta {
     final static int c(int param0) {
         if (param0 > -86) {
           fta.c(114);
-          return ov.field_p;
+          return BeamShooterBehaviour.field_p;
         }
-        return ov.field_p;
+        return BeamShooterBehaviour.field_p;
     }
 
     final static String a(String param0, String param1, int param2, String param3) {

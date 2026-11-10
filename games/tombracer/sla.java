@@ -40,11 +40,11 @@ final class sla {
           lra.field_e = null;
           if (param0 != 29585) {
             sla.b(-98);
-            wi.field_s = null;
+            SimpleMoveLocomotor.field_s = null;
             ni.field_c = true;
             return;
           }
-          wi.field_s = null;
+          SimpleMoveLocomotor.field_s = null;
           ni.field_c = true;
           return;
         }
@@ -52,12 +52,12 @@ final class sla {
         dh.field_e = null;
         lra.field_e = null;
         if (param0 == 29585) {
-          wi.field_s = null;
+          SimpleMoveLocomotor.field_s = null;
           ni.field_c = true;
           return;
         }
         sla.b(-98);
-        wi.field_s = null;
+        SimpleMoveLocomotor.field_s = null;
         ni.field_c = true;
     }
 

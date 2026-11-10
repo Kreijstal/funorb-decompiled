@@ -296,7 +296,7 @@ abstract class tfa implements iva {
 
     private final void d(byte param0) {
         this.field_j.a(true, (iva) (this));
-        if (this.field_g != aw.field_G) {
+        if (this.field_g != MirrorComponent.field_G) {
           jaggl.OpenGL.glTexParameteri(this.field_i, 10241, !this.field_b ? 9728 : 9984);
           jaggl.OpenGL.glTexParameteri(this.field_i, 10240, 9728);
         } else {
@@ -497,7 +497,7 @@ abstract class tfa implements iva {
                 var19 = var19 + ((var17 & 65316) >> 8);
                 incrementValue$4 = var13;
                 var13++;
-                var11[incrementValue$4] = fh.a(sea.c(255, var20 >> 2), fh.a(fh.a(sea.c(var18, 1020) << 14, sea.c(1020, var21) << 22), sea.c(var19 << 6, 65280)));
+                var11[incrementValue$4] = fh.a(SnakePitBehaviour.c(255, var20 >> 2), fh.a(fh.a(SnakePitBehaviour.c(var18, 1020) << 14, SnakePitBehaviour.c(1020, var21) << 22), SnakePitBehaviour.c(var19 << 6, 65280)));
               }
               var23 = var23 + param4;
               var22 = var22 + param4;
@@ -541,7 +541,7 @@ abstract class tfa implements iva {
     }
 
     tfa(kda param0, int param1, ft param2, una param3, int param4, boolean param5) {
-        this.field_g = aw.field_G;
+        this.field_g = MirrorComponent.field_G;
         try {
           this.field_a = param3;
           this.field_j = param0;

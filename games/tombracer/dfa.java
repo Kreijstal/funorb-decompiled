@@ -15,7 +15,7 @@ abstract class dfa {
         String var4Lifetime2;
         String var4Lifetime3;
         if (fna.field_h == 9) {
-          if (!sqa.a(uba.field_f, 110, fp.field_d, tba.field_g, bla.field_I)) {
+          if (!sqa.a(uba.field_f, 110, fp.field_d, tba.field_g, CoinItemComponent.field_I)) {
             if (fna.field_h == 10) {
               if (var3 != 0) {
                 return false;
@@ -85,7 +85,7 @@ abstract class dfa {
             var3 != 0) {
             return false;
           }
-          return eca.a((byte) -121, uba.field_f, bla.field_I, fp.field_d, tba.field_g);
+          return eca.a((byte) -121, uba.field_f, CoinItemComponent.field_I, fp.field_d, tba.field_g);
         }
         if (fna.field_h == 10) {
           if (var3 != 0) {

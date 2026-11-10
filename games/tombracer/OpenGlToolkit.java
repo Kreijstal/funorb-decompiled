@@ -810,9 +810,9 @@ final class OpenGlToolkit extends GraphicsToolkit {
     }
 
     final void h(int param0, int param1) {
-        gp.field_d[0] = (float)sea.c(param1, 16711680) / 16711680.0f;
-        gp.field_d[1] = (float)sea.c(65280, param1) / 65280.0f;
-        gp.field_d[2] = (float)sea.c(255, param1) / 255.0f;
+        gp.field_d[0] = (float)SnakePitBehaviour.c(param1, 16711680) / 16711680.0f;
+        gp.field_d[1] = (float)SnakePitBehaviour.c(65280, param1) / 65280.0f;
+        gp.field_d[2] = (float)SnakePitBehaviour.c(255, param1) / 255.0f;
         gp.field_d[3] = (float)(param1 >>> 24) / 255.0f;
         if (param0 != 1104971864) {
           return;
@@ -1844,7 +1844,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
                         var22 = (CharSequence) ((Object) var10.substring(0, 4));
                         if (sqa.a(var22, -3)) {
                           var23 = (CharSequence) ((Object) var10.substring(0, 4));
-                          var5_int = jb.a(var23, (byte) 70);
+                          var5_int = WhiteLightSensorComponent.a(var23, (byte) 70);
                           decompiledRegionSelector0 = 1;
                           decompiledFrameRemainder0 = false;
                         }
@@ -2081,9 +2081,9 @@ final class OpenGlToolkit extends GraphicsToolkit {
           jaggl.OpenGL.glLightfv(var4, 4611, vh.field_h, 0);
           var5 = var3.c(param0 ^ 123);
           var6 = var3.b(0) / 255.0f;
-          vh.field_h[1] = (float)(sea.c(65532, var5) >> 8) * var6;
-          vh.field_h[0] = var6 * (float)sea.c(var5 >> 16, 255);
-          vh.field_h[2] = (float)sea.c(255, var5) * var6;
+          vh.field_h[1] = (float)(SnakePitBehaviour.c(65532, var5) >> 8) * var6;
+          vh.field_h[0] = var6 * (float)SnakePitBehaviour.c(var5 >> 16, 255);
+          vh.field_h[2] = (float)SnakePitBehaviour.c(255, var5) * var6;
           jaggl.OpenGL.glLightfv(var4, 4609, vh.field_h, 0);
           jaggl.OpenGL.glLightf(var4, 4617, 1.0f / (float)(var3.a((byte) -126) * var3.a((byte) -126)));
           jaggl.OpenGL.glEnable(var4);
@@ -2202,8 +2202,8 @@ final class OpenGlToolkit extends GraphicsToolkit {
           var2 = var2 | 4;
         } else {
           try {
-            var5_int = jb.a((CharSequence) ((Object) var4[0]), (byte) 70);
-            var6 = jb.a((CharSequence) ((Object) var4[1]), (byte) 70);
+            var5_int = WhiteLightSensorComponent.a((CharSequence) ((Object) var4[0]), (byte) 70);
+            var6 = WhiteLightSensorComponent.a((CharSequence) ((Object) var4[1]), (byte) 70);
             this.field_fb = var6 + 10 * var5_int;
           } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -2615,7 +2615,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
 
     final void a(float param0, float param1, float param2) {
         ql.field_l = param0;
-        fra.field_p = param1;
+        ConstantEffectBehaviour.field_p = param1;
         vba.field_v = param2;
     }
 
@@ -2632,7 +2632,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           if (5 < incrementValue$0) {
             throw new RuntimeException("");
           }
-          vja.a(0, 1000L);
+          TrapSpawner.a(0, 1000L);
         }
     }
 
@@ -2914,9 +2914,9 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
         jaggl.OpenGL.glFogf(2915, this.field_Uc);
         jaggl.OpenGL.glFogf(param0, this.field_xb);
-        gp.field_d[0] = (float)sea.c(this.field_gc, 16711680) / 16711680.0f;
-        gp.field_d[1] = (float)sea.c(65280, this.field_gc) / 65280.0f;
-        gp.field_d[2] = (float)sea.c(255, this.field_gc) / 255.0f;
+        gp.field_d[0] = (float)SnakePitBehaviour.c(this.field_gc, 16711680) / 16711680.0f;
+        gp.field_d[1] = (float)SnakePitBehaviour.c(65280, this.field_gc) / 65280.0f;
+        gp.field_d[2] = (float)SnakePitBehaviour.c(255, this.field_gc) / 255.0f;
         jaggl.OpenGL.glFogfv(2918, gp.field_d, 0);
     }
 
@@ -3324,7 +3324,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
               for (var7 = 0; param0.field_i > var7; var7++) {
                 incrementValue$0 = var5;
                 var5++;
-                var3[incrementValue$0] = fh.a(param0.field_h[var4] << 24, param0.field_g[sea.c((int) param0.field_f[var4], 255)]);
+                var3[incrementValue$0] = fh.a(param0.field_h[var4] << 24, param0.field_g[SnakePitBehaviour.c((int) param0.field_f[var4], 255)]);
                 var4++;
               }
             }

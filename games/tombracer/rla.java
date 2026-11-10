@@ -42,7 +42,7 @@ final class rla extends b implements tsa {
           hc.field_h >= param4) {
           param1 = rp.a(ss.field_c, -16226, pka.field_b, param1);
           param0 = rp.a(ss.field_c, param2 ^ 16224, pka.field_b, param0);
-          uea.a(param0, param3, param4, param1, false);
+          BrazierComponent.a(param0, param3, param4, param1, false);
         }
         if (param2 != -2) {
           rla.a(-75, 34, (byte) 59, 71, -47);
@@ -51,7 +51,7 @@ final class rla extends b implements tsa {
 
     rla(Object[] param0, int param1, int param2) {
         super(0, 0, 0, 0, (isa) null);
-        this.field_H = mj.field_J;
+        this.field_H = KeySwitchComponent.field_J;
         this.field_w = "";
         try {
           this.field_z = new je(this, this.field_H, param0, param1);

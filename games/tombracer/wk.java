@@ -61,7 +61,7 @@ final class wk extends IntrusiveNode {
           }
           mf.a(85);
           ica.a(16777215);
-          tl.field_r = 0 - gpa.field_b;
+          TimeSwitchBehaviour.field_r = 0 - gpa.field_b;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

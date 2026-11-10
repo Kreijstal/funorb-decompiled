@@ -46,7 +46,7 @@ abstract class ob extends IntrusiveNode {
         int var11 = TombRacer.field_G ? 1 : 0;
         int var2_intLifetime1;
         int var2_intLifetime2;
-        tp.field_K = su.a(rva.field_v, param0, (byte) 127);
+        WhiteLightShooterComponent.field_K = su.a(rva.field_v, param0, (byte) 127);
         Room.field_p = new nh[6][];
         if (param1 != 17186) {
           return;
@@ -76,7 +76,7 @@ abstract class ob extends IntrusiveNode {
           ega.field_e = su.a(nm.field_i, param0, (byte) 126);
           tv.field_wb = su.a(lt.field_a, param0, (byte) 127);
           sta.field_y = ak.a(param0, ina.field_c, -104);
-          kq.field_a = su.a(bha.field_C, param0, (byte) 127);
+          kq.field_a = su.a(FleeLocomotor.field_C, param0, (byte) 127);
           id.field_h = ak.a(param0, tba.field_f, -70);
           lva.field_m = ak.a(param0, ng.field_f, -77);
           su.a(ds.field_g, param0, (byte) 126);
@@ -85,13 +85,13 @@ abstract class ob extends IntrusiveNode {
           rm.field_c = su.a(gv.field_s, param0, (byte) 126);
           uda.field_r = su.a(aa.field_a, param0, (byte) 125);
           je.field_E = su.a(pha.field_Bb, param0, (byte) -119);
-          eu.field_a = su.a(ira.field_t, param0, (byte) -5);
+          eu.field_a = su.a(ConstrainToRectangleLocomotor.field_t, param0, (byte) -5);
           pq.field_a = su.a(qh.field_q, param0, (byte) 28);
-          uta.field_d = su.a(tl.field_n, param0, (byte) 127);
-          cb.field_i = ak.a(param0, ga.field_F, -67);
+          uta.field_d = su.a(TimeSwitchBehaviour.field_n, param0, (byte) 127);
+          cb.field_i = ak.a(param0, WallCrusherComponent.field_F, -67);
           qf.field_k = new nh[cb.field_i.length];
           for (var2_intLifetime2 = 0; cb.field_i.length > var2_intLifetime2; var2_intLifetime2++) {
-            var13 = ga.field_F[var2_intLifetime2].e();
+            var13 = WallCrusherComponent.field_F[var2_intLifetime2].e();
             var12 = var13;
             var3 = var12;
             for (var4 = 0; var13.length > var4; var4++) {
@@ -111,24 +111,24 @@ abstract class ob extends IntrusiveNode {
           uua.field_a = su.a(qk.field_u, param0, (byte) 125);
           su.a(mp.field_d, param0, (byte) 126);
           su.a(baa.field_g, param0, (byte) -43);
-          fra.field_q = su.a(op.field_O, param0, (byte) 126);
+          ConstantEffectBehaviour.field_q = su.a(op.field_O, param0, (byte) 126);
           ij.field_X = su.a(ifa.field_q, param0, (byte) 125);
           su.a(field_n, param0, (byte) 125);
           gg.field_f = su.a(vua.field_y, param0, (byte) 127);
           eca.field_c = ak.a(param0, up.field_e, -64);
           nm.field_l = su.a(ena.field_l, param0, (byte) 127);
-          su.a(aw.field_F, param0, (byte) -2);
+          su.a(MirrorComponent.field_F, param0, (byte) -2);
           gca.field_a = su.a(rp.field_f, param0, (byte) 126);
           ng.field_b = ak.a(param0, qka.field_o, param1 - 17309);
           IntrusiveDeque.field_c = su.a(ko.field_j, param0, (byte) -95);
           tka.field_p = su.a(ht.field_Db, param0, (byte) 27);
           Projectile.field_n = su.a(oea.field_j, param0, (byte) -37);
-          wh.field_y = su.a(cn.field_h, param0, (byte) 127);
+          TripBeamBehaviour.field_y = su.a(cn.field_h, param0, (byte) 127);
           haa.field_z = su.a(re.field_a, param0, (byte) 126);
           aq.field_a = ak.a(param0, mna.field_c, -55);
-          mc.field_r = su.a(fm.field_h, param0, (byte) 127);
-          dp.field_d = ri.a(param0, (byte) -105, haa.field_A.field_f);
-          Room.field_j = ri.a(param0, (byte) -104, du.field_c.field_f);
+          MirrorBehaviour.field_r = su.a(fm.field_h, param0, (byte) 127);
+          dp.field_d = SweepRotateLocomotor.a(param0, (byte) -105, haa.field_A.field_f);
+          Room.field_j = SweepRotateLocomotor.a(param0, (byte) -104, du.field_c.field_f);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ob.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

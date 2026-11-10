@@ -169,10 +169,10 @@ final class IntrusiveDeque {
             if (ae.field_g != 1) {
               dn.field_b.field_vb.field_vb.field_r = nl.field_c;
               if (var19 != 0) {
-                dn.field_b.field_vb.field_vb.field_r = tna.field_b;
+                dn.field_b.field_vb.field_vb.field_r = DivisionMazeGenerator.field_b;
               }
             } else {
-              dn.field_b.field_vb.field_vb.field_r = tna.field_b;
+              dn.field_b.field_vb.field_vb.field_r = DivisionMazeGenerator.field_b;
             }
             vsa.a(-106, dn.field_b.field_tb);
             decompiledFrameRemainder1 = (var19 != 0);
@@ -245,7 +245,7 @@ final class IntrusiveDeque {
                   var7.field_xb.a(var14, di.field_a, -23776, var9, var13);
                   stackIn_50_0 = var7.field_Ab;
                   if (var7.field_Cb == null) {
-                    stackIn_51_1 = gd.field_K;
+                    stackIn_51_1 = IdolItemComponent.field_K;
                   } else {
                     stackIn_51_1 = var7.field_Cb;
                   }
@@ -269,7 +269,7 @@ final class IntrusiveDeque {
                       if (var7.field_Cb != null &&
                         !ab.a(hka.field_b.field_i, (byte) -13) &&
                         !fua.field_g) {
-                        if (!ok.field_s) {
+                        if (!PowerDownItemBehaviour.field_s) {
                           var17 = hka.field_b;
                           var18 = gl.$cfr$intArgs$a$53ce4ab4c593(114, fj.field_b, new String[]{var16});
                           var17.field_f.a((byte) -79, 8, var18);
@@ -301,7 +301,7 @@ final class IntrusiveDeque {
               if (0 == dn.field_b.field_wb.field_y) {
                 break;
               }
-              bl.field_a = new is(dn.field_b.field_wb.field_q, dn.field_b.field_wb.field_A, dn.field_b.field_wb.field_G, dn.field_b.field_wb.field_t, ro.field_q, lw.field_a, kua.field_i, kua.field_i);
+              bl.field_a = new is(dn.field_b.field_wb.field_q, dn.field_b.field_wb.field_A, dn.field_b.field_wb.field_G, dn.field_b.field_wb.field_t, PathMoveLocomotor.field_q, lw.field_a, kua.field_i, kua.field_i);
               cn.field_k = 1;
               break;
             }

@@ -326,11 +326,11 @@ final class us {
         if (null == param2.field_J) {
           param2.field_J = new IntrusiveDeque();
         }
-        if (hia.field_s == null) {
-          hia.field_s = new af(64);
+        if (TrackPlayerLocomotor.field_s == null) {
+          TrackPlayerLocomotor.field_s = new af(64);
         }
-        if (bla.field_G == null) {
-          bla.field_G = new af(64);
+        if (CoinItemComponent.field_G == null) {
+          CoinItemComponent.field_G = new af(64);
         }
         wv.field_l = param2.field_J;
         if (param0 != -8250) {

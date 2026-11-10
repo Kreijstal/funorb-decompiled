@@ -383,7 +383,7 @@ final class pfa {
                 }
                 var2 = mt.a("instructions_title", (byte) 112);
                 if (var2 != null) {
-                  sea.field_q = jaa.a((byte) 46, var2);
+                  SnakePitBehaviour.field_q = jaa.a((byte) 46, var2);
                 }
                 var2 = mt.a("highscores_title", (byte) 114);
                 if (null != var2) {
@@ -499,11 +499,11 @@ final class pfa {
                 }
                 var2 = mt.a("oneplayer_puzzle", (byte) 114);
                 if (null != var2) {
-                  ula.field_t = jaa.a((byte) 121, var2);
+                  FuseBehaviour.field_t = jaa.a((byte) 121, var2);
                 }
                 var2 = mt.a("startroom_colon", (byte) 109);
                 if (var2 != null) {
-                  rja.field_b = jaa.a((byte) 122, var2);
+                  PrimMazeGenerator.field_b = jaa.a((byte) 122, var2);
                 }
                 var2 = mt.a("difficulty_colon", (byte) 114);
                 if (null != var2) {
@@ -511,7 +511,7 @@ final class pfa {
                 }
                 var2 = mt.a("bloom", (byte) 110);
                 if (var2 != null) {
-                  ona.field_F = jaa.a((byte) 51, var2);
+                  SweeperMountComponent.field_F = jaa.a((byte) 51, var2);
                 }
                 var2 = mt.a("textures", (byte) 123);
                 if (var2 != null) {
@@ -571,7 +571,7 @@ final class pfa {
                 }
                 var2 = mt.a("tutorial_snakes", (byte) 113);
                 if (var2 != null) {
-                  wqa.field_F = jaa.a((byte) 62, var2);
+                  GasTrapComponent.field_F = jaa.a((byte) 62, var2);
                 }
                 var2 = mt.a("tutorial_gun", (byte) 117);
                 if (var2 != null) {
@@ -675,7 +675,7 @@ final class pfa {
                 }
                 var2 = mt.a("instructionTextMobileMirrors", (byte) 119);
                 if (var2 != null) {
-                  wfa.field_G = jaa.a((byte) 28, var2);
+                  StaticCrusherComponent.field_G = jaa.a((byte) 28, var2);
                 }
                 var2 = mt.a("instructionTitlePrecariousPlatforms", (byte) 127);
                 if (null != var2) {
@@ -691,7 +691,7 @@ final class pfa {
                 }
                 var2 = mt.a("instructionTextCrumblyBlocks", (byte) 108);
                 if (null != var2) {
-                  hn.field_G = jaa.a((byte) 78, var2);
+                  MazeComponent.field_G = jaa.a((byte) 78, var2);
                 }
                 var2 = mt.a("instructionTitleCauldronsOfGreenSoup", (byte) 115);
                 if (var2 != null) {
@@ -711,7 +711,7 @@ final class pfa {
                 }
                 var2 = mt.a("instructionTitleLocksAndKeys", (byte) 101);
                 if (null != var2) {
-                  uqa.field_v = jaa.a((byte) 83, var2);
+                  ConstrainToCircleLocomotor.field_v = jaa.a((byte) 83, var2);
                 }
                 var2 = mt.a("instructionTextLocksAndKeys", (byte) 120);
                 if (var2 != null) {
@@ -719,7 +719,7 @@ final class pfa {
                 }
                 var2 = mt.a("instructionTitlePortals", (byte) 125);
                 if (var2 != null) {
-                  rl.field_s = jaa.a((byte) 36, var2);
+                  PowerUpItemBehaviour.field_s = jaa.a((byte) 36, var2);
                 }
                 var2 = mt.a("instructionTextPortals", (byte) 107);
                 if (var2 != null) {
@@ -727,7 +727,7 @@ final class pfa {
                 }
                 var2 = mt.a("instructionTitleLasers", (byte) 121);
                 if (var2 != null) {
-                  rh.field_q = jaa.a((byte) 90, var2);
+                  TouchSwitchBehaviour.field_q = jaa.a((byte) 90, var2);
                 }
                 var2 = mt.a("instructionTextLasers", (byte) 122);
                 if (var2 != null) {
@@ -735,7 +735,7 @@ final class pfa {
                 }
                 var2 = mt.a("instructionTitleMovingPlatforms", (byte) 106);
                 if (var2 != null) {
-                  lda.field_G = jaa.a((byte) 114, var2);
+                  RopeBridgeComponent.field_G = jaa.a((byte) 114, var2);
                 }
                 var2 = mt.a("instructionTextMovingPlatforms", (byte) 102);
                 if (var2 != null) {
@@ -743,7 +743,7 @@ final class pfa {
                 }
                 var2 = mt.a("instructionTitlePressurePads", (byte) 101);
                 if (var2 != null) {
-                  uqa.field_t = jaa.a((byte) 84, var2);
+                  ConstrainToCircleLocomotor.field_t = jaa.a((byte) 84, var2);
                 }
                 var2 = mt.a("instructionTextPressurePads", (byte) 113);
                 if (null != var2) {
@@ -799,7 +799,7 @@ final class pfa {
                 }
                 var2 = mt.a("instructionTitleMoveableBlocks", (byte) 127);
                 if (null != var2) {
-                  er.field_J = jaa.a((byte) 42, var2);
+                  TripBeamComponent.field_J = jaa.a((byte) 42, var2);
                 }
                 var2 = mt.a("instructionTextMoveableBlocks", (byte) 123);
                 if (var2 != null) {
@@ -807,7 +807,7 @@ final class pfa {
                 }
                 var2 = mt.a("instructionTitlePistols", (byte) 104);
                 if (var2 != null) {
-                  bn.field_o = jaa.a((byte) 98, var2);
+                  VortexBehaviour.field_o = jaa.a((byte) 98, var2);
                 }
                 var2 = mt.a("instructionTextPistols", (byte) 119);
                 if (var2 != null) {
@@ -841,7 +841,7 @@ final class pfa {
                 }
                 var2 = mt.a("instructionsPage1Text4", (byte) 126);
                 if (var2 != null) {
-                  uc.field_K = jaa.a((byte) 97, var2);
+                  PushableBlockMazeComponent.field_K = jaa.a((byte) 97, var2);
                 }
                 var2 = mt.a("instructionsPage1Text5", (byte) 123);
                 if (null != var2) {
@@ -1081,7 +1081,7 @@ final class pfa {
                 }
                 var2 = mt.a("item_bags", (byte) 121);
                 if (var2 != null) {
-                  uha.field_s = jaa.a((byte) 49, var2);
+                  CircleMovementLocomotor.field_s = jaa.a((byte) 49, var2);
                 }
                 var2 = mt.a("item_idols", (byte) 100);
                 if (var2 != null) {
@@ -1109,7 +1109,7 @@ final class pfa {
                 }
                 var2 = mt.a("weapon_flamershort", (byte) 101);
                 if (var2 != null) {
-                  wta.field_H = jaa.a((byte) 61, var2);
+                  TrackingCrusherComponent.field_H = jaa.a((byte) 61, var2);
                 }
                 var2 = mt.a("weapon_flamerblue", (byte) 113);
                 if (var2 != null) {
@@ -1173,7 +1173,7 @@ final class pfa {
                 }
                 var2 = mt.a("won_x_rounds", (byte) 112);
                 if (var2 != null) {
-                  ga.field_K = jaa.a((byte) 119, var2);
+                  WallCrusherComponent.field_K = jaa.a((byte) 119, var2);
                 }
                 var2 = mt.a("offering_rematch", (byte) 105);
                 if (null != var2) {
@@ -1217,11 +1217,11 @@ final class pfa {
                 }
                 var2 = mt.a("failed", (byte) 108);
                 if (var2 != null) {
-                  wpa.field_K = jaa.a((byte) 43, var2);
+                  ArrowShooterComponent.field_K = jaa.a((byte) 43, var2);
                 }
                 var2 = mt.a("out_of_time", (byte) 112);
                 if (null != var2) {
-                  sg.field_n = jaa.a((byte) 117, var2);
+                  SafeZoneBehaviour.field_n = jaa.a((byte) 117, var2);
                 }
                 var2 = mt.a("finish_time_colon", (byte) 104);
                 if (var2 != null) {
@@ -1245,7 +1245,7 @@ final class pfa {
                 }
                 var2 = mt.a("msg_chosen_reward", (byte) 112);
                 if (null != var2) {
-                  fva.field_b = jaa.a((byte) 109, var2);
+                  RecursiveBacktrackerMazeGenerator.field_b = jaa.a((byte) 109, var2);
                 }
                 var2 = mt.a("msg_didnt_choose_reward", (byte) 125);
                 if (var2 != null) {
@@ -1297,7 +1297,7 @@ final class pfa {
                 }
                 var2 = mt.a("finish_order", (byte) 112);
                 if (null != var2) {
-                  rl.field_v = jaa.a((byte) 78, var2);
+                  PowerUpItemBehaviour.field_v = jaa.a((byte) 78, var2);
                 }
                 var2 = mt.a("spectator", (byte) 124);
                 if (null != var2) {
@@ -1309,7 +1309,7 @@ final class pfa {
                 }
                 var2 = mt.a("round", (byte) 125);
                 if (var2 != null) {
-                  uqa.field_z = jaa.a((byte) 57, var2);
+                  ConstrainToCircleLocomotor.field_z = jaa.a((byte) 57, var2);
                 }
                 var2 = mt.a("get_ready", (byte) 104);
                 if (var2 != null) {
@@ -1317,7 +1317,7 @@ final class pfa {
                 }
                 var2 = mt.a("gogogo", (byte) 106);
                 if (var2 != null) {
-                  jh.field_J = jaa.a((byte) 73, var2);
+                  FlameShooterComponent.field_J = jaa.a((byte) 73, var2);
                 }
                 var2 = mt.a("waiting_for_sync", (byte) 104);
                 if (var2 != null) {
@@ -1329,7 +1329,7 @@ final class pfa {
                 }
                 var2 = mt.a("treasure_total", (byte) 126);
                 if (null != var2) {
-                  rja.field_c = jaa.a((byte) 42, var2);
+                  PrimMazeGenerator.field_c = jaa.a((byte) 42, var2);
                 }
                 var2 = mt.a("points", (byte) 123);
                 if (null != var2) {
@@ -1345,7 +1345,7 @@ final class pfa {
                 }
                 var2 = mt.a("room_complete_points_with_bonus", (byte) 121);
                 if (null != var2) {
-                  wpa.field_J = jaa.a((byte) 72, var2);
+                  ArrowShooterComponent.field_J = jaa.a((byte) 72, var2);
                 }
                 var2 = mt.a("penalty_death", (byte) 125);
                 if (null != var2) {
@@ -1369,7 +1369,7 @@ final class pfa {
                 }
                 var2 = mt.a("reward_coin15", (byte) 120);
                 if (var2 != null) {
-                  sea.field_p = jaa.a((byte) 92, var2);
+                  SnakePitBehaviour.field_p = jaa.a((byte) 92, var2);
                 }
                 var2 = mt.a("reward_coin10", (byte) 115);
                 if (var2 != null) {
@@ -1393,7 +1393,7 @@ final class pfa {
                 }
                 var2 = mt.a("reward_idolx2", (byte) 105);
                 if (null != var2) {
-                  bha.field_x = jaa.a((byte) 46, var2);
+                  FleeLocomotor.field_x = jaa.a((byte) 46, var2);
                 }
                 var2 = mt.a("reward_none", (byte) 127);
                 if (null != var2) {
@@ -1453,7 +1453,7 @@ final class pfa {
                 }
                 var2 = mt.a("name_hans", (byte) 126);
                 if (var2 != null) {
-                  pt.field_q = jaa.a((byte) 31, var2);
+                  FacePlayerLocomotor.field_q = jaa.a((byte) 31, var2);
                 }
                 var2 = mt.a("name_henryj", (byte) 124);
                 if (null != var2) {
@@ -1493,39 +1493,39 @@ final class pfa {
                 }
                 var2 = mt.a("death_reset,0", (byte) 100);
                 if (var2 != null) {
-                  si.field_F[0] = jaa.a((byte) 127, var2);
+                  BlockComponent.field_F[0] = jaa.a((byte) 127, var2);
                 }
                 var2 = mt.a("death_reset,1", (byte) 102);
                 if (null != var2) {
-                  si.field_F[1] = jaa.a((byte) 61, var2);
+                  BlockComponent.field_F[1] = jaa.a((byte) 61, var2);
                 }
                 var2 = mt.a("death_reset,2", (byte) 108);
                 if (null != var2) {
-                  si.field_F[2] = jaa.a((byte) 89, var2);
+                  BlockComponent.field_F[2] = jaa.a((byte) 89, var2);
                 }
                 var2 = mt.a("death_reset,3", (byte) 107);
                 if (var2 != null) {
-                  si.field_F[3] = jaa.a((byte) 37, var2);
+                  BlockComponent.field_F[3] = jaa.a((byte) 37, var2);
                 }
                 var2 = mt.a("death_reset,4", (byte) 120);
                 if (var2 != null) {
-                  si.field_F[4] = jaa.a((byte) 79, var2);
+                  BlockComponent.field_F[4] = jaa.a((byte) 79, var2);
                 }
                 var2 = mt.a("death_reset,5", (byte) 105);
                 if (var2 != null) {
-                  si.field_F[5] = jaa.a((byte) 108, var2);
+                  BlockComponent.field_F[5] = jaa.a((byte) 108, var2);
                 }
                 var2 = mt.a("death_reset,6", (byte) 110);
                 if (null != var2) {
-                  si.field_F[6] = jaa.a((byte) 90, var2);
+                  BlockComponent.field_F[6] = jaa.a((byte) 90, var2);
                 }
                 var2 = mt.a("death_reset,7", (byte) 121);
                 if (var2 != null) {
-                  si.field_F[7] = jaa.a((byte) 25, var2);
+                  BlockComponent.field_F[7] = jaa.a((byte) 25, var2);
                 }
                 var2 = mt.a("death_reset,8", (byte) 123);
                 if (var2 != null) {
-                  si.field_F[8] = jaa.a((byte) 88, var2);
+                  BlockComponent.field_F[8] = jaa.a((byte) 88, var2);
                 }
                 var2 = mt.a("death_squishedhorizontal,0", (byte) 107);
                 if (null != var2) {
@@ -1771,59 +1771,59 @@ final class pfa {
                 }
                 var2 = mt.a("death_flame,0", (byte) 112);
                 if (var2 != null) {
-                  fqa.field_F[0] = jaa.a((byte) 55, var2);
+                  SwitchComponent.field_F[0] = jaa.a((byte) 55, var2);
                 }
                 var2 = mt.a("death_flame,1", (byte) 105);
                 if (var2 != null) {
-                  fqa.field_F[1] = jaa.a((byte) 105, var2);
+                  SwitchComponent.field_F[1] = jaa.a((byte) 105, var2);
                 }
                 var2 = mt.a("death_flame,2", (byte) 111);
                 if (null != var2) {
-                  fqa.field_F[2] = jaa.a((byte) 121, var2);
+                  SwitchComponent.field_F[2] = jaa.a((byte) 121, var2);
                 }
                 var2 = mt.a("death_flame,3", (byte) 100);
                 if (null != var2) {
-                  fqa.field_F[3] = jaa.a((byte) 103, var2);
+                  SwitchComponent.field_F[3] = jaa.a((byte) 103, var2);
                 }
                 var2 = mt.a("death_flame,4", (byte) 101);
                 if (null != var2) {
-                  fqa.field_F[4] = jaa.a((byte) 78, var2);
+                  SwitchComponent.field_F[4] = jaa.a((byte) 78, var2);
                 }
                 var2 = mt.a("death_flame,5", (byte) 117);
                 if (null != var2) {
-                  fqa.field_F[5] = jaa.a((byte) 115, var2);
+                  SwitchComponent.field_F[5] = jaa.a((byte) 115, var2);
                 }
                 var2 = mt.a("death_flame,6", (byte) 118);
                 if (var2 != null) {
-                  fqa.field_F[6] = jaa.a((byte) 32, var2);
+                  SwitchComponent.field_F[6] = jaa.a((byte) 32, var2);
                 }
                 var2 = mt.a("death_flame,7", (byte) 119);
                 if (var2 != null) {
-                  fqa.field_F[7] = jaa.a((byte) 107, var2);
+                  SwitchComponent.field_F[7] = jaa.a((byte) 107, var2);
                 }
                 var2 = mt.a("death_flame,8", (byte) 124);
                 if (var2 != null) {
-                  fqa.field_F[8] = jaa.a((byte) 77, var2);
+                  SwitchComponent.field_F[8] = jaa.a((byte) 77, var2);
                 }
                 var2 = mt.a("death_flame,9", (byte) 109);
                 if (null != var2) {
-                  fqa.field_F[9] = jaa.a((byte) 72, var2);
+                  SwitchComponent.field_F[9] = jaa.a((byte) 72, var2);
                 }
                 var2 = mt.a("death_flame,10", (byte) 125);
                 if (var2 != null) {
-                  fqa.field_F[10] = jaa.a((byte) 40, var2);
+                  SwitchComponent.field_F[10] = jaa.a((byte) 40, var2);
                 }
                 var2 = mt.a("death_flame,11", (byte) 118);
                 if (var2 != null) {
-                  fqa.field_F[11] = jaa.a((byte) 93, var2);
+                  SwitchComponent.field_F[11] = jaa.a((byte) 93, var2);
                 }
                 var2 = mt.a("death_flame,12", (byte) 123);
                 if (null != var2) {
-                  fqa.field_F[12] = jaa.a((byte) 110, var2);
+                  SwitchComponent.field_F[12] = jaa.a((byte) 110, var2);
                 }
                 var2 = mt.a("death_flame,13", (byte) 105);
                 if (null != var2) {
-                  fqa.field_F[13] = jaa.a((byte) 50, var2);
+                  SwitchComponent.field_F[13] = jaa.a((byte) 50, var2);
                 }
                 var2 = mt.a("death_laser,0", (byte) 117);
                 if (var2 != null) {
@@ -2051,7 +2051,7 @@ final class pfa {
                 }
                 var2 = mt.a("enter_tomb", (byte) 108);
                 if (null != var2) {
-                  ue.field_t = jaa.a((byte) 91, var2);
+                  MiscItemBehaviour.field_t = jaa.a((byte) 91, var2);
                 }
                 var2 = mt.a("bonus", (byte) 102);
                 if (var2 != null) {
@@ -2071,7 +2071,7 @@ final class pfa {
                 }
                 var2 = mt.a("bronze_medal", (byte) 118);
                 if (var2 != null) {
-                  ps.field_P = jaa.a((byte) 109, var2);
+                  MovingPlatformComponent.field_P = jaa.a((byte) 109, var2);
                 }
                 var2 = mt.a("previous_member", (byte) 102);
                 if (null != var2) {
@@ -2079,7 +2079,7 @@ final class pfa {
                 }
                 var2 = mt.a("freecontent_compelted", (byte) 125);
                 if (null != var2) {
-                  tna.field_d = jaa.a((byte) 119, var2);
+                  DivisionMazeGenerator.field_d = jaa.a((byte) 119, var2);
                 }
                 var2 = mt.a("justplay", (byte) 109);
                 if (null != var2) {
@@ -2115,7 +2115,7 @@ final class pfa {
                 }
                 var2 = mt.a("spectator_controls", (byte) 111);
                 if (var2 != null) {
-                  tp.field_J = jaa.a((byte) 71, var2);
+                  WhiteLightShooterComponent.field_J = jaa.a((byte) 71, var2);
                 }
                 var2 = mt.a("game_end_iminent", (byte) 121);
                 if (var2 != null) {
@@ -2123,7 +2123,7 @@ final class pfa {
                 }
                 var2 = mt.a("phaseEnd_mybest", (byte) 104);
                 if (null != var2) {
-                  lea.field_F = jaa.a((byte) 43, var2);
+                  ItemComponent.field_F = jaa.a((byte) 43, var2);
                 }
                 var2 = mt.a("phaseEnd_friendsbest", (byte) 116);
                 if (null != var2) {

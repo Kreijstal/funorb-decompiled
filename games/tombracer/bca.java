@@ -38,7 +38,7 @@ final class bca {
     }
 
     final static void b(byte param0) {
-        rn.field_b = 0;
+        RoomComponentFactory.field_b = 0;
         if (param0 != 55) {
           field_d = (nh) null;
         }

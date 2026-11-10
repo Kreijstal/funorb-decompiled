@@ -15,12 +15,12 @@ final class apa {
 
     final void a(byte param0, int param1, int param2, int param3, int param4) {
         if (param0 == 57) {
-          rsa.a(param4, this.field_d, param2, -119, param1, param3);
+          ConstrainToLatticeLocomotor.a(param4, this.field_d, param2, -119, param1, param3);
           return;
         }
         String var7 = (String) null;
         apa.$cfr$intArgs$a$62abead39cee(-51, true, (String) null);
-        rsa.a(param4, this.field_d, param2, -119, param1, param3);
+        ConstrainToLatticeLocomotor.a(param4, this.field_d, param2, -119, param1, param3);
     }
 
     private apa() throws Throwable {

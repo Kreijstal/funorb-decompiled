@@ -56,7 +56,7 @@ final class jd extends tfa implements lv {
           var5 = new StringBuilder(var4);
           for (var6 = var2_int; var3 > var6; var6++) {
             var7 = param1.charAt(var6);
-            if (ov.a(param0 + 16, (char) var7)) {
+            if (BeamShooterBehaviour.a(param0 + 16, (char) var7)) {
               var8 = cp.a((byte) 0, (char) var7);
               if (0 != var8) {
                 discarded$0 = var5.append((char) var8);

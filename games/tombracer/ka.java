@@ -491,8 +491,8 @@ abstract class ka {
         if (ci.field_l != null) {
           ci.field_l.i((byte) -7);
         }
-        md.field_F = new efa();
-        um.field_l.a(100, md.field_F);
+        PushableMountComponent.field_F = new efa();
+        um.field_l.a(100, PushableMountComponent.field_F);
     }
 
     abstract void a(int param0, int[] param1, int param2, int param3, int param4, int param5, boolean param6);

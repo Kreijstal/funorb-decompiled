@@ -132,25 +132,25 @@ final class fp {
         param1++;
         var16_ref.a(incrementValue$3, (byte) 47, param0);
         ng.field_f = jpa.b(param2, "", "achievements");
-        ds.field_g = jpa.a(oma.field_G, "basic", "unachieved");
+        ds.field_g = jpa.a(PitComponent.field_G, "basic", "unachieved");
         aa.field_a = jpa.a(param2, "", "map_routedot");
         pha.field_Bb = jpa.a(param2, "", "map_coin_gold");
-        ira.field_t = jpa.a(param2, "", "map_coin_silver");
+        ConstrainToRectangleLocomotor.field_t = jpa.a(param2, "", "map_coin_silver");
         qh.field_q = jpa.a(param2, "", "map_coin_bronze");
-        tl.field_n = jpa.a(param2, "", "map_locationdot");
+        TimeSwitchBehaviour.field_n = jpa.a(param2, "", "map_locationdot");
         int incrementValue$4 = param1;
         param1++;
         var16_ref.a(incrementValue$4, (byte) 47, param0);
-        ga.field_F = new jpa[9];
-        ga.field_F[0] = jpa.a(param2, "", "map_set1");
-        ga.field_F[1] = jpa.a(param2, "", "map_set2a");
-        ga.field_F[2] = jpa.a(param2, "", "map_set2b");
-        ga.field_F[3] = jpa.a(param2, "", "map_set3a");
-        ga.field_F[4] = jpa.a(param2, "", "map_set3b");
-        ga.field_F[5] = jpa.a(param2, "", "map_set3c");
-        ga.field_F[6] = jpa.a(param2, "", "map_set4a");
-        ga.field_F[7] = jpa.a(param2, "", "map_set4b");
-        ga.field_F[8] = jpa.a(param2, "", "map_set5");
+        WallCrusherComponent.field_F = new jpa[9];
+        WallCrusherComponent.field_F[0] = jpa.a(param2, "", "map_set1");
+        WallCrusherComponent.field_F[1] = jpa.a(param2, "", "map_set2a");
+        WallCrusherComponent.field_F[2] = jpa.a(param2, "", "map_set2b");
+        WallCrusherComponent.field_F[3] = jpa.a(param2, "", "map_set3a");
+        WallCrusherComponent.field_F[4] = jpa.a(param2, "", "map_set3b");
+        WallCrusherComponent.field_F[5] = jpa.a(param2, "", "map_set3c");
+        WallCrusherComponent.field_F[6] = jpa.a(param2, "", "map_set4a");
+        WallCrusherComponent.field_F[7] = jpa.a(param2, "", "map_set4b");
+        WallCrusherComponent.field_F[8] = jpa.a(param2, "", "map_set5");
         int incrementValue$5 = param1;
         param1++;
         var16_ref.a(incrementValue$5, (byte) 47, param0);
@@ -168,7 +168,7 @@ final class fp {
         up.field_e[1] = jpa.a(param2, "", "reward_moneybag");
         up.field_e[2] = jpa.a(param2, "", "reward_idol");
         ena.field_l = jpa.a(param2, "", "endround_flag");
-        aw.field_F = jpa.a(param2, "", "endround_divider_line");
+        MirrorComponent.field_F = jpa.a(param2, "", "endround_divider_line");
         rp.field_f = jpa.a(param2, "", "endround_smoke_trail");
         qka.field_o = jpa.b(param2, "", "endround_stage_lines");
         ko.field_j = jpa.a(param2, "", "podium");
@@ -181,7 +181,7 @@ final class fp {
         re.field_a = jpa.a(param2, "", "button_sound");
         ina.field_c = jpa.b(param2, "", "multipliers");
         lt.field_a = jpa.a(param2, "", "room_total");
-        bha.field_C = jpa.a(param2, "", "tombname_frame");
+        FleeLocomotor.field_C = jpa.a(param2, "", "tombname_frame");
         mna.field_c = jpa.b(param2, "", "blackframe");
         fm.field_h = jpa.a(param2, "", "sandblock");
         TextResourceLoader.field_b = jpa.a(param2, "", "medal_gold");
@@ -205,9 +205,9 @@ final class fp {
           incrementValue$8 = param1;
           param1++;
           var16_ref.a(incrementValue$8, (byte) 47, param0);
-          nia.a(oma.field_G, "basic", "orbcoin", -121);
+          nia.a(PitComponent.field_G, "basic", "orbcoin", -121);
           MatchState.field_p = nia.a(param2, "", "lobby_game_logo", -119);
-          bp.field_m = uka.a(param2, "", 5, "lobby_icons");
+          bp.field_m = BoulderComponent.a(param2, "", 5, "lobby_icons");
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fp.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -245,16 +245,16 @@ final class fp {
           }
           var2 = 0;
           if (mq.field_a == 2) {
-            var3_long = bva.b((byte) -107) - ln.field_H;
+            var3_long = bva.b((byte) -107) - PlatformComponent.field_H;
             var2 = (int)((10999L - var3_long) / 1000L);
             if (var2 < 0) {
               var2 = 0;
             }
           }
           for (var3 = 0; mba.field_g.length > var3; var3++) {
-            var4 = bla.field_H[var3];
+            var4 = CoinItemComponent.field_H[var3];
             if (var4 >= 0) {
-              if (sa.field_r.field_h == var4) {
+              if (FacePointLocomotor.field_r.field_h == var4) {
                 var5 = ct.field_a;
               } else {
                 var5 = qv.field_m;
@@ -302,10 +302,10 @@ final class fp {
             stackIn_39_0 = -116;
             stackIn_39_1 = var6;
             stackIn_40_2 = !(var4 < 0);
-            var7Lifetime1 = ro.$cfr$intArgs$a$590e95718a07(stackIn_39_0, stackIn_39_1, stackIn_40_2);
+            var7Lifetime1 = PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(stackIn_39_0, stackIn_39_1, stackIn_40_2);
             var8Lifetime1 = ega.field_c - (var7Lifetime1 >> 1);
             if (0 <= var4) {
-              if (var4 == sa.field_r.field_h) {
+              if (var4 == FacePointLocomotor.field_r.field_h) {
                 stackIn_45_0 = mpa.field_V;
               } else {
                 stackIn_45_0 = jaa.field_b;
@@ -313,7 +313,7 @@ final class fp {
               var9 = stackIn_45_0;
               var1_int = var1_int + mha.field_C;
               if (var9 != null) {
-                var9.a((byte) 57, var7Lifetime1 + (nja.field_L << 1), var1_int, -nja.field_L + var8Lifetime1, nt.field_d + (pqa.field_p << 1));
+                var9.a((byte) 57, var7Lifetime1 + (InvisibleTouchSwitchComponent.field_L << 1), var1_int, -InvisibleTouchSwitchComponent.field_L + var8Lifetime1, nt.field_d + (pqa.field_p << 1));
               }
               var1_int = var1_int + pqa.field_p;
             }

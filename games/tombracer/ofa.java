@@ -140,7 +140,7 @@ abstract class ofa extends gn {
         if (param1 != -67) {
           return;
         }
-        bg.field_s.b(-90 + param2 + this.field_m, 10 + param0);
+        ApproachPlayerLocomotor.field_s.b(-90 + param2 + this.field_m, 10 + param0);
         ag.a(35 + param0, uca.field_f, -59, param2 + 5, -10 + this.field_m);
         ag.a(param0 + (this.field_p - 22), fua.field_f, param1 - 29, param2, this.field_m);
         var6Lifetime2 = 127;

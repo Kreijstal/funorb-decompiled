@@ -113,7 +113,7 @@ final class in {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 480) {
-            stackIn_4_0 = qi.a(30054, param0, qt.class);
+            stackIn_4_0 = AllPlatformsMazeComponent.a(30054, param0, qt.class);
             return stackIn_4_0;
           }
           return false;

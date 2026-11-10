@@ -136,7 +136,7 @@ final class ts {
         int var4 = this.field_c.s(param1 ^ -107) >> 16;
         this.field_f = new Trap[1];
         this.field_f[0] = new Trap(this.field_c, var3 / 2, var4 / 2, var3 + 32, var4 + 32, 0, true);
-        ana var5 = new ana(this.field_c, true);
+        DarknessBehaviour var5 = new DarknessBehaviour(this.field_c, true);
         if (param1 != 25) {
           this.c(false);
         }
@@ -177,7 +177,7 @@ final class ts {
         int var11;
         int var12;
         int var13;
-        th var14;
+        WindZoneBehaviour var14;
         int var15;
         int var11Lifetime1;
         int var12Lifetime1;
@@ -296,7 +296,7 @@ final class ts {
             var12Lifetime1 = var11Lifetime1 * 32 + var7;
           }
           this.field_e[var11Lifetime1] = new Trap(this.field_c, var12Lifetime1, var13Lifetime1, var9, var10, 0, true);
-          var14 = new th(this.field_c, true);
+          var14 = new WindZoneBehaviour(this.field_c, true);
           var14.b(param2 ^ 5, param3);
           var14.a(param0, param1, 19072);
           this.field_e[var11Lifetime1].a((byte) 83, (Behaviour) (var14));
@@ -361,7 +361,7 @@ final class ts {
         var3 = this.field_c.m((byte) -86);
         var4 = this.field_c.s(125);
         this.field_d = new Trap[param1];
-        var5 = vha.field_c.a(this.field_c, (byte) 118);
+        var5 = vha.field_c.createSkeletonComponent(this.field_c, (byte) 118);
         var6 = var5.c(-41);
         var7 = var5.a((byte) 55);
         var8 = 0;

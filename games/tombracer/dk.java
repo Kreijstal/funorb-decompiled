@@ -241,7 +241,7 @@ final class dk {
             stackIn_8_0 = 9216;
             return stackIn_8_0;
           }
-          if (param0 == gd.field_H) {
+          if (param0 == IdolItemComponent.field_H) {
             stackIn_3_0 = 34065;
             return stackIn_3_0;
           }

@@ -76,7 +76,7 @@ final class epa extends wv {
                 param2 = gl.$cfr$intArgs$a$53ce4ab4c593(94, nka.field_a, new String[]{param2});
               }
               if (bga.field_d) {
-                param2 = mj.field_K;
+                param2 = KeySwitchComponent.field_K;
               }
               ci.field_l.a(param0, (byte) 94, param2);
             }

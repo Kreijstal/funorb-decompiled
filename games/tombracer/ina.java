@@ -21,54 +21,54 @@ final class ina {
         try {
           jma.field_a = tc.a(dd.field_b, -8829, param0);
           ola.field_Ib = tc.a(hl.field_c, -8829, param0);
-          mma.field_b = tc.a(mh.field_K, -8829, param0);
-          df.field_J = tc.a(ea.field_l, param1 - 8829, param0);
+          mma.field_b = tc.a(DoorwayComponent.field_K, -8829, param0);
+          RevolverItemComponent.field_J = tc.a(ea.field_l, param1 - 8829, param0);
           ta.field_ub = tc.a(vk.field_e, -8829, param0);
-          rl.field_t = tc.a(dq.field_h, -8829, param0);
+          PowerUpItemBehaviour.field_t = tc.a(dq.field_h, -8829, param0);
           GameApplet.field_j = tc.a(gta.field_f, param1 ^ -8829, param0);
           gca.field_g = tc.a(cba.field_b, param1 ^ -8829, param0);
-          mh.field_F = tc.a(an.field_g, -8829, param0);
-          koa.field_b = tc.a(nj.field_p, -8829, param0);
-          dupTemp$0 = df.field_J[9].a((byte) 0, 654255, false);
-          df.field_J[9] = dupTemp$0;
+          DoorwayComponent.field_F = tc.a(an.field_g, -8829, param0);
+          koa.field_b = tc.a(ControllerLocomotor.field_p, -8829, param0);
+          dupTemp$0 = RevolverItemComponent.field_J[9].a((byte) 0, 654255, false);
+          RevolverItemComponent.field_J[9] = dupTemp$0;
           dupTemp$0.O(224, 224, 224);
-          dupTemp$1 = df.field_J[10].a((byte) 0, 654255, false);
-          df.field_J[10] = dupTemp$1;
+          dupTemp$1 = RevolverItemComponent.field_J[10].a((byte) 0, 654255, false);
+          RevolverItemComponent.field_J[10] = dupTemp$1;
           dupTemp$1.O(224, 224, 224);
           if (param1 != 0) {
             CharSequence var3 = (CharSequence) null;
             ina.a((byte) -94, (CharSequence) null);
           }
-          dupTemp$2 = df.field_J[77].a((byte) 0, 654255, false);
-          df.field_J[77] = dupTemp$2;
+          dupTemp$2 = RevolverItemComponent.field_J[77].a((byte) 0, 654255, false);
+          RevolverItemComponent.field_J[77] = dupTemp$2;
           dupTemp$2.O(256, 256, 256);
-          dupTemp$3 = df.field_J[78].a((byte) 0, 654255, false);
-          df.field_J[78] = dupTemp$3;
+          dupTemp$3 = RevolverItemComponent.field_J[78].a((byte) 0, 654255, false);
+          RevolverItemComponent.field_J[78] = dupTemp$3;
           dupTemp$3.O(256, 256, 256);
-          dupTemp$4 = df.field_J[79].a((byte) 0, 654255, false);
-          df.field_J[79] = dupTemp$4;
+          dupTemp$4 = RevolverItemComponent.field_J[79].a((byte) 0, 654255, false);
+          RevolverItemComponent.field_J[79] = dupTemp$4;
           dupTemp$4.O(256, 256, 256);
-          if (!ve.field_F) {
+          if (!TorchComponent.field_F) {
             ta.field_ub[20].O(128, 128, 64);
             ta.field_ub[21].O(128, 128, 64);
             ta.field_ub[23].O(128, 128, 64);
             ta.field_ub[24].O(128, 128, 64);
-            df.field_J[4].O(96, 96, 96);
-            df.field_J[70].O(96, 96, 96);
-            df.field_J[5].O(96, 96, 96);
-            df.field_J[17].H(0, 64, 0);
-            df.field_J[17].O(256, 256, 256);
-            df.field_J[24].O(256, 256, 256);
-            df.field_J[25].O(256, 256, 256);
-            rl.field_t[0].O(256, 256, 256);
-            rl.field_t[1].O(192, 192, 192);
-            rl.field_t[6].O(384, 384, 384);
+            RevolverItemComponent.field_J[4].O(96, 96, 96);
+            RevolverItemComponent.field_J[70].O(96, 96, 96);
+            RevolverItemComponent.field_J[5].O(96, 96, 96);
+            RevolverItemComponent.field_J[17].H(0, 64, 0);
+            RevolverItemComponent.field_J[17].O(256, 256, 256);
+            RevolverItemComponent.field_J[24].O(256, 256, 256);
+            RevolverItemComponent.field_J[25].O(256, 256, 256);
+            PowerUpItemBehaviour.field_t[0].O(256, 256, 256);
+            PowerUpItemBehaviour.field_t[1].O(192, 192, 192);
+            PowerUpItemBehaviour.field_t[6].O(384, 384, 384);
             GameApplet.field_j[1].O(512, 512, 512);
             GameApplet.field_j[0].O(512, 512, 512);
-            df.field_J[27].O(192, 156, 192);
-            df.field_J[76].O(256, 256, 256);
-            df.field_J[62].O(96, 96, 96);
-            df.field_J[63].O(96, 96, 96);
+            RevolverItemComponent.field_J[27].O(192, 156, 192);
+            RevolverItemComponent.field_J[76].O(256, 256, 256);
+            RevolverItemComponent.field_J[62].O(96, 96, 96);
+            RevolverItemComponent.field_J[63].O(96, 96, 96);
             koa.field_b[1].H(0, 64, 0);
             koa.field_b[1].O(192, 192, 192);
             koa.field_b[1].FA(4096);
@@ -80,9 +80,9 @@ final class ina {
             koa.field_b[12].O(256, 256, 256);
             koa.field_b[13].O(256, 256, 256);
             koa.field_b[8].O(256, 256, 256);
-            ve.field_F = true;
+            TorchComponent.field_F = true;
           }
-          qi.field_O = df.field_J[4];
+          AllPlatformsMazeComponent.field_O = RevolverItemComponent.field_J[4];
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ina.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

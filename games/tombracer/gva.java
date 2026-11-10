@@ -69,7 +69,7 @@ final class gva implements mb {
             return;
           }
           var8 = var8 + uw.field_e;
-          var9 = var9 + ps.field_N;
+          var9 = var9 + MovingPlatformComponent.field_N;
           var11 = (ag) (param0);
           var12 = var11.a(-862393232);
           var13 = (float)param2.e(0) / (float)param2.b(true);
@@ -106,7 +106,7 @@ final class gva implements mb {
               var29 != 0))) {
               if (var26 == 7 &&
                 var29 == 0) {
-                var25_ref_ka = wma.a(4, 12166, 7);
+                var25_ref_ka = SpawnerBehaviour.a(4, 12166, 7);
                 gqa.a(dfa.a(-(param2.f((byte) -127) >> 2), 2048, -81), -83584144, var6, var5, var25_ref_ka, -393216 + var7);
                 break regionExit1;
               } else if (var26 != 14 ||
@@ -159,7 +159,7 @@ final class gva implements mb {
               var26Lifetime2 = param2.e(0) * 255 / param2.b(true);
               stackIn_85_0 = (ova.c(param1 ^ -25)) ? 15 : 14;
               var27 = stackIn_85_0;
-              var28 = wma.a(var27, param1 ^ -12189, 7).a((byte) 1, 526343, true);
+              var28 = SpawnerBehaviour.a(var27, param1 ^ -12189, 7).a((byte) 1, 526343, true);
               var28.O(var26Lifetime2 >> 2, 128, var26Lifetime2 >> 2);
               var28.a(-1, 10, 30, var26Lifetime2);
               gqa.a(dfa.a(-(param2.f((byte) -127) >> 2), 2048, 119), -83584144, var6, var5, var28, (883 * var6 + var5 * 233 & 255) + var7);
@@ -232,7 +232,7 @@ final class gva implements mb {
                 break regionExit1;
               }
             }
-            var26_ref_ka = wma.a(3, 12166, 7);
+            var26_ref_ka = SpawnerBehaviour.a(3, 12166, 7);
             gqa.a(dfa.a(-(param2.f((byte) -127) >> 2), 2048, 92), param1 ^ 83584149, var6, var5, var26_ref_ka, -393216 + var7);
           }
           if (var23 == null) {
@@ -345,7 +345,7 @@ final class gva implements mb {
             return;
           }
           var8 = var8 + uw.field_e;
-          var9 = var9 + ps.field_N;
+          var9 = var9 + MovingPlatformComponent.field_N;
           var14 = param2.l(5);
           switch ((var15 == 0
             || var14 == 0
@@ -360,7 +360,7 @@ final class gva implements mb {
                 var12.field_f) {
                 var11 = 15;
               }
-              var13 = wma.a(var11, 12166, 7).a((byte) 1, 526343, true);
+              var13 = SpawnerBehaviour.a(var11, 12166, 7).a((byte) 1, 526343, true);
               var13.O(var10 << 2, 512, var10 << 2);
               stackIn_36_0 = (Projectile) (param2);
               stackIn_37_1 = !(param1);
@@ -369,14 +369,14 @@ final class gva implements mb {
                 return;
               }
             case 2:
-              gqa.a(param2.f(true), -83584144, var6, var5, wma.a(0, 12166, 7), var7);
+              gqa.a(param2.f(true), -83584144, var6, var5, SpawnerBehaviour.a(0, 12166, 7), var7);
               if (var15 == 0) {
                 return;
               }
             case 0:
               stackIn_46_0 = (Projectile) (param2);
               stackIn_47_1 = !(param1);
-              gqa.a(dfa.a(-(((Projectile) (Object) stackIn_46_0).f(stackIn_47_1) >> 2), 2048, -96), -83584144, var6, var5, wma.a(1, 12166, 7), var7);
+              gqa.a(dfa.a(-(((Projectile) (Object) stackIn_46_0).f(stackIn_47_1) >> 2), 2048, -96), -83584144, var6, var5, SpawnerBehaviour.a(1, 12166, 7), var7);
               if (var15 == 0) {
                 return;
               }
@@ -384,7 +384,7 @@ final class gva implements mb {
             default:
               break;
           }
-          gqa.a(dfa.a(-(param2.f(true) >> 2), 2048, 107), -83584144, var6, var5, wma.a(2, 12166, 7), var7);
+          gqa.a(dfa.a(-(param2.f(true) >> 2), 2048, 107), -83584144, var6, var5, SpawnerBehaviour.a(2, 12166, 7), var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

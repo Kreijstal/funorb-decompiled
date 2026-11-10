@@ -351,7 +351,7 @@ final class mba extends uq {
           if (var1 == null) {
             return false;
           }
-          if (jc.field_M) {
+          if (SimpleHoverMountComponent.field_M) {
             return false;
           }
           if (var1.field_k) {
@@ -363,7 +363,7 @@ final class mba extends uq {
         if (var1Lifetime1 == null) {
           return false;
         }
-        if (jc.field_M) {
+        if (SimpleHoverMountComponent.field_M) {
           return false;
         }
         if (var1Lifetime1.field_k) {

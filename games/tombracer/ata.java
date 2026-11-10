@@ -24,7 +24,7 @@ final class ata extends rra {
         }
         int var6 = param1 * this.field_h >> 12;
         int var7 = this.field_g * param1 >> 12;
-        lo.a(var5, this.field_d, var7, var4, var6, param2, this.field_b);
+        TeleportLocomotor.a(var5, this.field_d, var7, var4, var6, param2, this.field_b);
     }
 
     ata(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -59,7 +59,7 @@ final class ata extends rra {
         }
         int var6 = this.field_h * param2 >> 12;
         int var7 = this.field_g * param2 >> 12;
-        tl.a((byte) -71, var4, var6, var5, var7, this.field_d, this.field_c, this.field_b);
+        TimeSwitchBehaviour.a((byte) -71, var4, var6, var5, var7, this.field_d, this.field_c, this.field_b);
     }
 
     static {

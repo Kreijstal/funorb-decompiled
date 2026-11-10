@@ -31,7 +31,7 @@ final class ow extends wv {
             this.a(22174, ma.field_f);
           } else {
             if (!SecondaryNodeDequeIterator.field_a.d((byte) 68)) {
-              this.a(22174, hi.field_q);
+              this.a(22174, ConveyorBehaviour.field_q);
             } else {
               this.a(22174, IterableNodeHashTable.field_f);
             }
@@ -103,8 +103,8 @@ final class ow extends wv {
           if (on.field_b != null) {
             on.field_b.field_y.a(13597, param1);
           }
-          if (md.field_F != null) {
-            md.field_F.field_x.a(13597, param1);
+          if (PushableMountComponent.field_F != null) {
+            PushableMountComponent.field_F.field_x.a(13597, param1);
           }
           int var2_int = -77 % ((-37 - param0) / 57);
         } catch (RuntimeException runtimeException) {
@@ -118,7 +118,7 @@ final class ow extends wv {
     }
 
     final void c(int param0) {
-        ira.a(false, -1, (byte) -125);
+        ConstrainToRectangleLocomotor.a(false, -1, (byte) -125);
         if (param0 != -6) {
           this.c(49);
         }
@@ -140,7 +140,7 @@ final class ow extends wv {
     final void a(byte param0, boolean param1) {
         super.a(param0, param1);
         int var3 = this.field_m[1].field_i - 70 + this.field_r.e(93) - 150;
-        tp.field_K.a((aaa.a(false) >> 1) - (tp.field_K.a() >> 1), var3);
+        WhiteLightShooterComponent.field_K.a((aaa.a(false) >> 1) - (WhiteLightShooterComponent.field_K.a() >> 1), var3);
     }
 
     final static jea a(int param0, int param1, int param2, int param3, il param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, byte param12) {
@@ -206,7 +206,7 @@ final class ow extends wv {
           return;
         }
         if (var4 == 0) {
-          this.field_m[1].field_e = lda.field_I.toUpperCase();
+          this.field_m[1].field_e = RopeBridgeComponent.field_I.toUpperCase();
           return;
         }
         this.field_m[1].field_e = jf.field_s.toUpperCase();

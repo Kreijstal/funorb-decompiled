@@ -57,12 +57,12 @@ final class nna {
             stackIn_2_0 = pk.field_v;
             return stackIn_2_0;
           }
-          if (ue.a(param1, 0)) {
+          if (MiscItemBehaviour.a(param1, 0)) {
             stackIn_6_0 = iia.field_q;
             return stackIn_6_0;
           }
           if (~ae.field_g != param0) {
-            stackIn_9_0 = eia.field_o;
+            stackIn_9_0 = EffectSwitchBehaviour.field_o;
             return stackIn_9_0;
           }
           if (MouseWheelInput.a(2180, param1)) {
@@ -74,7 +74,7 @@ final class nna {
             return stackIn_17_0;
           }
           if (dda.a(false, param1)) {
-            stackIn_20_0 = gl.$cfr$intArgs$a$53ce4ab4c593(94, bha.field_o, new String[]{param1});
+            stackIn_20_0 = gl.$cfr$intArgs$a$53ce4ab4c593(94, FleeLocomotor.field_o, new String[]{param1});
             return stackIn_20_0;
           }
           var5 = ql.field_k;

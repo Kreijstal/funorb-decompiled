@@ -250,17 +250,17 @@ final class fna {
             if (this.field_g != 39) {
               stackIn_51_0 = vk.field_d;
             } else {
-              stackIn_51_0 = ska.field_r;
+              stackIn_51_0 = WeaponShooterBehaviour.field_r;
             }
             var27 = stackIn_51_0;
             var20_ref_kia = var27;
-            if (vja.b(30000) == var27) {
+            if (TrapSpawner.b(30000) == var27) {
               var15 = 2236962;
               var5 = 10827264;
               oka.a("X", var5, var6, -1, -8 + (var9 - 1), this.field_b, var15);
             }
             var21 = this.field_e;
-            if (!ipa.a(dna.A(param2 + 124), true, var27)) {
+            if (!WheeledMountComponent.a(dna.A(param2 + 124), true, var27)) {
               var5 = 2431750;
               var21 = "<str=010101>" + this.field_e + "</str>";
               var15 = -1;
@@ -301,7 +301,7 @@ final class fna {
             oka.a("X", var5, var6, param2 - 2, -8 + var9 - 1, this.field_b, var15);
           }
           var22 = this.field_e;
-          if (!ipa.a(var20_ref_kea, true, vja.b(30000))) {
+          if (!WheeledMountComponent.a(var20_ref_kea, true, TrapSpawner.b(30000))) {
             var15 = -1;
             var5 = 2431750;
             var22 = "<str=010101>" + this.field_e + "</str>";
@@ -342,7 +342,7 @@ final class fna {
         if (this.field_g != 6) {
           stackIn_89_0 = haa.field_z;
         } else {
-          stackIn_89_0 = wh.field_y;
+          stackIn_89_0 = TripBeamBehaviour.field_y;
         }
         var30 = stackIn_89_0;
         var21_ref2 = var30;
@@ -399,7 +399,7 @@ final class fna {
             var6 = 77 % ((param0 + 25) / 63);
             var5 = bd.a(-1, var3);
             if (var5 == null) {
-              return wn.a(76, var4);
+              return SimpleActionBehaviour.a(76, var4);
             }
             stackIn_12_0 = var5;
             return stackIn_12_0;
@@ -426,8 +426,8 @@ final class fna {
         if (param5 == -22919) {
           param3 = rk.a(param12, param3, (byte) 107, param0, param9, param10, param7);
           voa.a(param13, param4, param5 + 27015, param8, param1, param3, param12, param6, param2, param11);
-          uka.b(param13, -125, param11);
-          pw.a(param3, (byte) -112, param7, param13);
+          BoulderComponent.b(param13, -125, param11);
+          PressureSwitchComponent.a(param3, (byte) -112, param7, param13);
           return;
         }
     }
@@ -467,7 +467,7 @@ final class fna {
 
     private final nh b(int param0) {
         if (this.field_g == 1) {
-          return fra.field_q;
+          return ConstantEffectBehaviour.field_q;
         }
         if (this.field_g == 3) {
           return ij.field_X;

@@ -1367,9 +1367,9 @@ final class np extends ka {
             return;
           }
           nw.field_u = var5.field_g * var6.field_h + (var5.field_i * var6.field_k + var6.field_r * var5.field_r);
-          ef.field_s = var5.field_p + (var6.field_o * var5.field_g + (var6.field_p * var5.field_r + var5.field_i * var6.field_m));
-          var15 = ef.field_s + nw.field_u * (float)this.field_eb;
-          var16 = (float)this.field_v * nw.field_u + ef.field_s;
+          WeaponItemBehaviour.field_s = var5.field_p + (var6.field_o * var5.field_g + (var6.field_p * var5.field_r + var5.field_i * var6.field_m));
+          var15 = WeaponItemBehaviour.field_s + nw.field_u * (float)this.field_eb;
+          var16 = (float)this.field_v * nw.field_u + WeaponItemBehaviour.field_s;
           if (var15 > var16) {
             var18 = (float)this.field_R.field_kb * (var15 + (float)this.field_M);
             var17 = (float)this.field_R.field_kb * (var16 - (float)this.field_M);
@@ -1391,7 +1391,7 @@ final class np extends ka {
             roa.field_u = var6.field_l * var5.field_j + var5.field_h * var6.field_i + var6.field_j * var5.field_q;
             mu.field_ub = var6.field_q * var5.field_s + (var5.field_l * var6.field_s + var5.field_k * var6.field_g);
             bva.field_c = var6.field_q * var5.field_g + (var6.field_g * var5.field_r + var6.field_s * var5.field_i);
-            qi.field_L = var6.field_i * var5.field_r + var5.field_i * var6.field_l + var5.field_g * var6.field_j;
+            AllPlatformsMazeComponent.field_L = var6.field_i * var5.field_r + var5.field_i * var6.field_l + var5.field_g * var6.field_j;
             kka.field_q = var5.field_h * var6.field_g + var6.field_s * var5.field_j + var6.field_q * var5.field_q;
           }
           if (null != param1) {
@@ -2375,7 +2375,7 @@ final class np extends ka {
                 var7 = 0.3333333134651184f * (float)(this.field_K[var4.field_b] + this.field_K[var4.field_k] + this.field_K[var4.field_m]);
                 var8 = (float)(this.field_A[var4.field_k] + this.field_A[var4.field_m] + this.field_A[var4.field_b]) * 0.3333333134651184f;
                 var9 = aka.field_B + (var8 * mu.field_ub + (eqa.field_a * var7 + var6 * is.field_Ab));
-                var10 = ef.field_s + (var6 * qi.field_L + nw.field_u * var7 + bva.field_c * var8);
+                var10 = WeaponItemBehaviour.field_s + (var6 * AllPlatformsMazeComponent.field_L + nw.field_u * var7 + bva.field_c * var8);
                 var11 = bja.field_b + (kka.field_q * var8 + (var7 * it.field_a + var6 * roa.field_u));
                 var12 = (float)(1.0 / Math.sqrt((double)(var11 * var11 + (var10 * var10 + var9 * var9)))) * (float)var4.field_j;
                 var2.a(var5.field_g, var12 * var11 + -var11, var9 + (float)var5.field_h - var9 * var12, var4.field_e * var5.field_f >> 7, (byte) -60, var4.field_i * var5.field_b >> 7, var12 * var10 + (-var10 + (float)var5.field_a));
@@ -2485,9 +2485,9 @@ final class np extends ka {
             return;
           }
           nw.field_u = var4.field_r * var5.field_r + var4.field_i * var5.field_k + var5.field_h * var4.field_g;
-          ef.field_s = var5.field_o * var4.field_g + (var5.field_m * var4.field_i + var5.field_p * var4.field_r) + var4.field_p;
-          var14 = ef.field_s + (float)this.field_eb * nw.field_u;
-          var15 = ef.field_s + nw.field_u * (float)this.field_v;
+          WeaponItemBehaviour.field_s = var5.field_o * var4.field_g + (var5.field_m * var4.field_i + var5.field_p * var4.field_r) + var4.field_p;
+          var14 = WeaponItemBehaviour.field_s + (float)this.field_eb * nw.field_u;
+          var15 = WeaponItemBehaviour.field_s + nw.field_u * (float)this.field_v;
           if (var15 < var14) {
             var17 = (float)this.field_R.field_kb * (var14 + (float)this.field_M);
             var16 = (float)this.field_R.field_kb * (var15 - (float)this.field_M);
@@ -2509,7 +2509,7 @@ final class np extends ka {
             roa.field_u = var4.field_q * var5.field_j + (var5.field_l * var4.field_j + var5.field_i * var4.field_h);
             kka.field_q = var4.field_q * var5.field_q + (var5.field_g * var4.field_h + var4.field_j * var5.field_s);
             mu.field_ub = var4.field_s * var5.field_q + (var4.field_l * var5.field_s + var5.field_g * var4.field_k);
-            qi.field_L = var5.field_j * var4.field_g + (var5.field_i * var4.field_r + var4.field_i * var5.field_l);
+            AllPlatformsMazeComponent.field_L = var5.field_j * var4.field_g + (var5.field_i * var4.field_r + var4.field_i * var5.field_l);
             bva.field_c = var5.field_s * var4.field_i + var4.field_r * var5.field_g + var5.field_q * var4.field_g;
           }
           if (param1 != null) {
@@ -4024,7 +4024,7 @@ final class np extends ka {
           if (null == this.field_D &&
             this.field_t == null &&
             this.field_r == null &&
-            !aw.c(-17275, this.field_u, this.field_bb)) {
+            !MirrorComponent.c(-17275, this.field_u, this.field_bb)) {
             var2_int = 0;
             var3 = 0;
             if (null != this.field_P &&
@@ -4044,7 +4044,7 @@ final class np extends ka {
             }
             var4 = 0;
             if (null != this.field_K &&
-              !pt.a(-61, this.field_bb, this.field_u)) {
+              !FacePlayerLocomotor.a(-61, this.field_bb, this.field_u)) {
               if (null != this.field_g &&
                 null == this.field_g.field_d) {
                 this.field_gb = true;
@@ -4062,7 +4062,7 @@ final class np extends ka {
               }
             }
             if (this.field_A != null &&
-              !jc.c(this.field_u, -23717, this.field_bb)) {
+              !SimpleHoverMountComponent.c(this.field_u, -23717, this.field_bb)) {
               if (this.field_g == null ||
                 null != this.field_g.field_d) {
                 if (!this.field_l) {
@@ -4136,7 +4136,7 @@ final class np extends ka {
           }
           var2_intLifetime1 = -95 % ((param0 + 49) / 55);
           if (null != this.field_X &&
-            !sm.a(2, this.field_bb, this.field_u)) {
+            !KeyLockBehaviour.a(2, this.field_bb, this.field_u)) {
             if (null == this.field_kb ||
               null != this.field_kb.field_d) {
               this.field_X = null;
@@ -4201,7 +4201,7 @@ final class np extends ka {
             }
           }
           if (this.field_j != null &&
-            !aw.d(-26571, this.field_bb, this.field_u)) {
+            !MirrorComponent.d(-26571, this.field_bb, this.field_u)) {
             this.field_j = (int[][]) null;
             this.field_fb = null;
           }
@@ -5061,9 +5061,9 @@ final class np extends ka {
                 this.field_E = rna.a(this.field_E, true, this.field_L);
                 this.field_Y = rna.a(this.field_Y, true, this.field_L);
                 this.field_cb = rna.a(this.field_cb, true, this.field_L);
-                this.field_O = pt.a(this.field_O, this.field_L, 4096);
-                this.field_n = lpa.a(this.field_L, 50, this.field_n);
-                this.field_y = lpa.a(this.field_L, 50, this.field_y);
+                this.field_O = FacePlayerLocomotor.a(this.field_O, this.field_L, 4096);
+                this.field_n = PlatformBehaviour.a(this.field_L, 50, this.field_n);
+                this.field_y = PlatformBehaviour.a(this.field_L, 50, this.field_y);
                 if (null != param1.field_l &&
                   kda.b(param2, 104, this.field_u)) {
                   this.field_d = param1.a(false, (byte) 64);
@@ -5081,7 +5081,7 @@ final class np extends ka {
               stackIn_356_1 = param2;
               break;
             }
-            if (aw.d(stackIn_356_0, stackIn_356_1, this.field_u)) {
+            if (MirrorComponent.d(stackIn_356_0, stackIn_356_1, this.field_u)) {
               var18 = 0;
               var19 = new int[256];
               var20 = 0;

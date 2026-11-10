@@ -67,12 +67,12 @@ final class k extends qr {
             tba.field_g = param1.field_j;
             fp.field_d = param1.field_h;
             uba.field_f = param1.field_d;
-            bla.field_I = param1.field_i;
+            CoinItemComponent.field_I = param1.field_i;
           }
           if (param0 < 103) {
             return;
           }
-          tna.a(16599, param1);
+          DivisionMazeGenerator.a(16599, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

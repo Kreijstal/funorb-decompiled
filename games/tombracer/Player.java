@@ -1224,7 +1224,7 @@ final class Player implements fo, gma, ffa, jfa, t {
         RuntimeException decompiledCaughtException = null;
         Trap var2 = null;
         RuntimeException var2_ref = null;
-        ue var3 = null;
+        MiscItemBehaviour var3 = null;
         int var4 = 0;
         int var5 = 0;
         var5 = TombRacer.field_G ? 1 : 0;
@@ -1242,7 +1242,7 @@ final class Player implements fo, gma, ffa, jfa, t {
           var2.b((byte) 17, false);
           var2.a((byte) -3, this.field_f);
           var2.a(92, true);
-          var3 = new ue(this.field_J, true);
+          var3 = new MiscItemBehaviour(this.field_J, true);
           var4 = this.field_a;
           if (0 == var4 &&
             var5 == 0) {
@@ -2546,7 +2546,7 @@ final class Player implements fo, gma, ffa, jfa, t {
           if (this.field_i == null) {
             return;
           }
-          var2_int = im.a(this.field_K, this.field_b, param0 - 1);
+          var2_int = PortalBehaviour.a(this.field_K, this.field_b, param0 - 1);
           this.field_l = this.field_i.a(var2_int, 1572864, (gma) (this), this.x, this.y, this.f((byte) 80), this.velocityX, this.velocityY, this.field_G / param0, false);
           if (!this.field_l) {
             return;
@@ -3253,7 +3253,7 @@ final class Player implements fo, gma, ffa, jfa, t {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -25787) {
-            stackIn_4_0 = im.a(this.field_K, this.field_b, 1);
+            stackIn_4_0 = PortalBehaviour.a(this.field_K, this.field_b, 1);
             return stackIn_4_0;
           }
           stackIn_2_0 = 58;
@@ -3481,7 +3481,7 @@ final class Player implements fo, gma, ffa, jfa, t {
         }
     }
 
-    final boolean a(ue param0, byte param1) {
+    final boolean a(MiscItemBehaviour param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_17_0 = null;

@@ -61,7 +61,7 @@ final class wea implements dv {
           if (param0 != 1024) {
             field_a = 4;
           }
-          stackIn_3_0 = tp.a(this.field_e[param1], this.field_b[param1], param3, param2, (byte) -125);
+          stackIn_3_0 = WhiteLightShooterComponent.a(this.field_e[param1], this.field_b[param1], param3, param2, (byte) -125);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

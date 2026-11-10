@@ -8,10 +8,10 @@ final class uu implements bo {
 
     final static boolean a(boolean param0, int param1, int param2) {
         if (param0) {
-          return (ir.a(param1, param2, (byte) -80) | cga.a(param1, -54, param2) | er.c(param1, param2, 52)) & ss.a((byte) 61, param2, param1);
+          return (ir.a(param1, param2, (byte) -80) | cga.a(param1, -54, param2) | TripBeamComponent.c(param1, param2, 52)) & ss.a((byte) 61, param2, param1);
         }
         field_c = 33;
-        return (ir.a(param1, param2, (byte) -80) | cga.a(param1, -54, param2) | er.c(param1, param2, 52)) & ss.a((byte) 61, param2, param1);
+        return (ir.a(param1, param2, (byte) -80) | cga.a(param1, -54, param2) | TripBeamComponent.c(param1, param2, 52)) & ss.a((byte) 61, param2, param1);
     }
 
     final static void a(int param0, byte param1, byte[] param2, java.math.BigInteger param3, PacketBuffer param4, java.math.BigInteger param5, int param6) {

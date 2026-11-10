@@ -262,7 +262,7 @@ final class fs extends ci {
             if (var2_int >= param1.length()) {
               return true;
             }
-            if (ov.a(16, param1.charAt(var2_int))) {
+            if (BeamShooterBehaviour.a(16, param1.charAt(var2_int))) {
               var2_int++;
               continue;
             }

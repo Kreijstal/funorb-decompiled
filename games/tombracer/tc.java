@@ -80,7 +80,7 @@ class tc extends lu {
 
     final static void a(boolean param0, int param1) {
         if (null != qda.field_b) {
-          hia.a(-107, qda.field_b);
+          TrackPlayerLocomotor.a(-107, qda.field_b);
         }
         if (hka.field_b != null) {
           hka.field_b.a(true, param0);
@@ -99,7 +99,7 @@ class tc extends lu {
         if (param1 != -2886) {
           return;
         }
-        rl.r(-93);
+        PowerUpItemBehaviour.r(-93);
     }
 
     tc(long param0, String param1) {

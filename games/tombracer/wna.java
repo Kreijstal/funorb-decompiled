@@ -435,9 +435,9 @@ final class wna extends ci {
               var4 = 256;
             }
             var4 = this.field_m[var4];
-            var6[var9] = sea.c(var4, 16711680) >> 12;
-            var7[var9] = sea.c(var4 >> 4, 4080);
-            var8[var9] = sea.c(var4, 255) << 4;
+            var6[var9] = SnakePitBehaviour.c(var4, 16711680) >> 12;
+            var7[var9] = SnakePitBehaviour.c(var4 >> 4, 4080);
+            var8[var9] = SnakePitBehaviour.c(var4, 255) << 4;
           }
           return var11;
         }
@@ -458,9 +458,9 @@ final class wna extends ci {
             var4Lifetime1 = 256;
           }
           var4Lifetime1 = this.field_m[var4Lifetime1];
-          var6Lifetime1[var9Lifetime1] = sea.c(var4Lifetime1, 16711680) >> 12;
-          var7Lifetime1[var9Lifetime1] = sea.c(var4Lifetime1 >> 4, 4080);
-          var8Lifetime1[var9Lifetime1] = sea.c(var4Lifetime1, 255) << 4;
+          var6Lifetime1[var9Lifetime1] = SnakePitBehaviour.c(var4Lifetime1, 16711680) >> 12;
+          var7Lifetime1[var9Lifetime1] = SnakePitBehaviour.c(var4Lifetime1 >> 4, 4080);
+          var8Lifetime1[var9Lifetime1] = SnakePitBehaviour.c(var4Lifetime1, 255) << 4;
         }
         return var11;
     }

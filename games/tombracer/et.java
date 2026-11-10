@@ -55,7 +55,7 @@ final class et extends cg {
         jf.field_r = param0 ? true : false;
         gj.field_r = true;
         ej.field_a.e(true);
-        vn.a(86, mj.field_M, false);
+        vn.a(86, KeySwitchComponent.field_M, false);
     }
 
     final static void a(byte param0, String param1, java.awt.Color param2, int param3, boolean param4) {

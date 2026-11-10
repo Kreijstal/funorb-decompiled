@@ -38,7 +38,7 @@ final class hpa extends aa {
             !nga.c(param0 + 2) &&
             null == uu.field_a &&
             null == ifa.field_n) {
-            if (!ok.field_s) {
+            if (!PowerDownItemBehaviour.field_s) {
               var5 = hka.field_b;
               var6 = cga.field_i;
               var5.field_f.a((byte) -80, 14, var6);
@@ -51,13 +51,13 @@ final class hpa extends aa {
             !nga.c(0) &&
             uu.field_a != null &&
             param1.field_e == uu.field_a.f(0)) {
-            if (!ok.field_s) {
+            if (!PowerDownItemBehaviour.field_s) {
               var9 = hka.field_b;
               var10 = lw.field_i;
               var9.field_f.a((byte) -84, 14, var10);
             }
             var11 = hka.field_b;
-            var12 = sg.field_s;
+            var12 = SafeZoneBehaviour.field_s;
             var11.field_f.a((byte) -93, 20, var12);
           }
           hka.field_b.a((byte) -19);

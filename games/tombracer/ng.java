@@ -105,7 +105,7 @@ final class ng {
         RuntimeException var6_ref = null;
         int var7 = 0;
         try {
-          rsa.a(param4.field_p, this.field_i, param3 + param4.field_n, -118, param4.field_m, param1 + param4.field_i);
+          ConstrainToLatticeLocomotor.a(param4.field_p, this.field_i, param3 + param4.field_n, -118, param4.field_m, param1 + param4.field_i);
           if (null != this.field_c) {
             var6_int = param1 + (param4.field_i + this.field_d);
             if (param2.field_l == 1) {

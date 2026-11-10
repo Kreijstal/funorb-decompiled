@@ -256,7 +256,7 @@ abstract class qda {
           }
           for (var2_int = 0; param1.length() > var2_int; var2_int++) {
             var3 = param1.charAt(var2_int);
-            if (!dja.a((byte) -20, (char) var3) &&
+            if (!PressureSwitchBehaviour.a((byte) -20, (char) var3) &&
               !dp.a(param0 + 190, (char) var3)) {
               return true;
             }

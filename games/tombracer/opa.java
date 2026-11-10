@@ -586,7 +586,7 @@ final class opa extends qra {
         mi[] var11 = null;
         var10 = TombRacer.field_G ? 1 : 0;
         try {
-          var11 = ih.a((byte) 126, param0);
+          var11 = LaserShooterComponent.a((byte) 126, param0);
           var2 = var11;
           var3 = new StringBuilder();
           var4 = -99 % ((param1 - 5) / 54);
@@ -608,7 +608,7 @@ final class opa extends qra {
               } else {
                 if (var6.field_p != tr.field_f) {
                   if (dc.field_o != var6.field_p) {
-                    if (var6.field_p != dja.field_r) {
+                    if (var6.field_p != PressureSwitchBehaviour.field_r) {
                       discarded$2 = var3.append(var9);
                     } else {
                       discarded$3 = var3.append("<col=33ffaa>").append(var9).append("</col>");
@@ -686,7 +686,7 @@ final class opa extends qra {
           for (var5_int = 0; var4_int > var5_int; var5_int++) {
             this.field_r[var5_int] = new gsa(this.field_c.players[var5_int], param2[var5_int]);
           }
-          er.b(1, 0);
+          TripBeamComponent.b(1, 0);
           this.field_s = false;
           mr.field_w = new w();
           var5 = 0.0;
@@ -752,7 +752,7 @@ final class opa extends qra {
           } else {
             efa.field_y = var17Lifetime2;
             var17Lifetime2 = var4_int * 50 + (var17Lifetime2 + 50);
-            ona.field_H = var17Lifetime2;
+            SweeperMountComponent.field_H = var17Lifetime2;
             var17Lifetime2 += 100;
             var17Lifetime2 += 50;
           }
@@ -776,7 +776,7 @@ final class opa extends qra {
           if (this.field_p &&
             this.field_m &&
             this.field_o) {
-            ona.field_H = var17Lifetime2;
+            SweeperMountComponent.field_H = var17Lifetime2;
             var17Lifetime2 += 100;
             var18 = var15 / 100.0;
             this.field_r[this.field_c.e(2)].field_i = var18;

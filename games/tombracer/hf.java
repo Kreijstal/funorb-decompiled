@@ -21,7 +21,7 @@ final class hf implements ac, gs {
 
     public final void a(int param0, byte param1, int param2, int param3, int param4) {
         int var6 = -66 / ((-33 - param1) / 61);
-        gqa.a(0, -83584144, param3, param4, rl.field_t[6], param2);
+        gqa.a(0, -83584144, param3, param4, PowerUpItemBehaviour.field_t[6], param2);
     }
 
     private final boolean b(int param0) {
@@ -187,7 +187,7 @@ final class hf implements ac, gs {
           return;
         }
         var8 = param3;
-        var9 = wma.a(this.field_i + 10, 12166, 7);
+        var9 = SpawnerBehaviour.a(this.field_i + 10, 12166, 7);
         gqa.a(var5, -83584144, var8, var7, var9, 131072 + param2);
         if (0 != var6) {
           var10 = this.field_p.E(-25763);
@@ -221,16 +221,16 @@ final class hf implements ac, gs {
               var14 = null;
               if (var16 != 0) {
                 var14 = null;
-                var14 = qi.field_O;
+                var14 = AllPlatformsMazeComponent.field_O;
               }
             } else {
               var14 = null;
               if (var16 != 0) {
-                var14 = qi.field_O;
+                var14 = AllPlatformsMazeComponent.field_O;
               }
             }
           } else {
-            var14 = qi.field_O;
+            var14 = AllPlatformsMazeComponent.field_O;
           }
           if (var14 != null) {
             gqa.a(this.field_h, -83584144, param3, param1, (ka) (var14), param2 + 3670016);

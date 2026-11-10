@@ -38,10 +38,10 @@ final class vf {
           while (true) {
             var3 = param1.a(param2, 18885);
             while (0 == var3.field_b) {
-              vja.a(0, 10L);
+              TrapSpawner.a(0, 10L);
             }
             if (1 != var3.field_b) {
-              vja.a(0, 100L);
+              TrapSpawner.a(0, 100L);
               continue;
             }
             break;

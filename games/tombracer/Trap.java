@@ -952,8 +952,8 @@ final class Trap extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn,
           if (param1 != null) {
             this.field_cb = false;
           }
-          this.field_Z = bla.a(true, 12, param2.b((byte) 44, 12)) << 16;
-          this.field_mb = bla.a(true, 12, param2.b((byte) 44, 12)) << 16;
+          this.field_Z = CoinItemComponent.a(true, 12, param2.b((byte) 44, 12)) << 16;
+          this.field_mb = CoinItemComponent.a(true, 12, param2.b((byte) 44, 12)) << 16;
           this.field_t = param2.b((byte) 44, 10) << 16;
           this.field_gb = param2.b((byte) 44, 10) << 16;
           stackIn_6_1 = (param2.b((byte) 44, 1) == 1);
@@ -3177,11 +3177,11 @@ final class Trap extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn,
         this.field_z = -1;
         this.field_db = 32;
         try {
-          this.field_ab = rn.field_b;
+          this.field_ab = RoomComponentFactory.field_b;
           this.field_gb = param4 << 16;
           this.field_jb = param6 ? true : false;
           this.field_D = true;
-          rn.field_b = rn.field_b + 1;
+          RoomComponentFactory.field_b = RoomComponentFactory.field_b + 1;
           this.field_y = param0;
           this.field_mb = param2 << 16;
           this.field_F = param5;

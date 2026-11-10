@@ -189,7 +189,7 @@ final class ca extends GameFont {
           }
           this.field_e = true;
         }
-        this.field_f.a(7672, ue.field_v);
+        this.field_f.a(7672, MiscItemBehaviour.field_v);
         this.field_d = param0.c(6, false);
         this.field_d.a(20480, 20, true);
         var7 = 0;
@@ -277,9 +277,9 @@ final class ca extends GameFont {
         this.field_g.a(true, this.field_f);
         if (!this.field_e &&
           !param4) {
-          this.field_g.a(ln.field_F, (byte) -110, ln.field_F);
+          this.field_g.a(PlatformComponent.field_F, (byte) -110, PlatformComponent.field_F);
         } else {
-          this.field_g.a(iw.field_c, (byte) -110, ln.field_F);
+          this.field_g.a(iw.field_c, (byte) -110, PlatformComponent.field_F);
           this.field_g.a(pea.field_c, 0, -121);
           this.field_g.g(3625, param3);
         }

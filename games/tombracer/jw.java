@@ -54,7 +54,7 @@ final class jw extends b implements cd, tsa {
           this.field_C = (tra) ((Object) new so("", (qc) (this), 20));
           if (this.field_x) {
             this.field_B = new rj(nga.field_q, (qc) null);
-            this.field_y = new rj(nj.field_q, (qc) null);
+            this.field_y = new rj(ControllerLocomotor.field_q, (qc) null);
             this.field_A.field_y = false;
           } else {
             this.field_B = new rj(goa.field_c, (qc) null);
@@ -63,7 +63,7 @@ final class jw extends b implements cd, tsa {
             if (!this.field_w) {
               stackIn_18_1 = null;
               stackIn_18_2 = null;
-              stackIn_18_3 = sm.field_o;
+              stackIn_18_3 = KeyLockBehaviour.field_o;
             } else {
               stackIn_18_1 = null;
               stackIn_18_2 = null;
@@ -99,7 +99,7 @@ final class jw extends b implements cd, tsa {
             this.field_y.field_q = koa.field_c;
           }
           this.field_n = 15;
-          var7 = mj.field_J;
+          var7 = KeySwitchComponent.field_J;
           if (null != this.field_F) {
             this.field_n = this.field_n + (var7.a(this.field_F, this.field_m - 40, var7.field_w) + 5);
           }
@@ -312,7 +312,7 @@ final class jw extends b implements cd, tsa {
 
     final void a(int param0, int param1, int param2, int param3) {
         if (null != this.field_F) {
-          mj.field_J.a(this.field_F, param0 + (this.field_i + 20), param1 + this.field_n + 15, this.field_m - 40, this.field_p, 16777215, -1, 1, 0, mj.field_J.field_w);
+          KeySwitchComponent.field_J.a(this.field_F, param0 + (this.field_i + 20), param1 + this.field_n + 15, this.field_m - 40, this.field_p, 16777215, -1, 1, 0, KeySwitchComponent.field_J.field_w);
         }
         if (this.field_E != null) {
           bea.c(param0 + 10, param1 + 134, this.field_m - 20, 4210752);

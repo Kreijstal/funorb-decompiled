@@ -93,8 +93,8 @@ abstract class hl implements mta {
           this.d(14);
         }
         if (this.field_h.field_fd) {
-          jaggl.OpenGL.glGenBuffersARB(1, uqa.field_x, 0);
-          this.field_f = uqa.field_x[0];
+          jaggl.OpenGL.glGenBuffersARB(1, ConstrainToCircleLocomotor.field_x, 0);
+          this.field_f = ConstrainToCircleLocomotor.field_x[0];
           jaggl.OpenGL.glBindBufferARB(this.field_k, this.field_f);
         } else {
           this.field_f = 0;

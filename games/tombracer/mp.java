@@ -83,7 +83,7 @@ final class mp {
           if (param0 != 2) {
             return;
           }
-          var2 = (vb) (tna.field_e.f(param0 ^ -78));
+          var2 = (vb) (DivisionMazeGenerator.field_e.f(param0 ^ -78));
           while (null != var2) {
             stackIn_23_0 = var2.field_h.isLinked((byte) 122);
             if (var3 != 0) {
@@ -103,7 +103,7 @@ final class mp {
               var3 != 0) {
               var2.field_f.e(var2.field_g * ot.field_v + 128 >> 8);
             }
-            var2 = (vb) (tna.field_e.e(112));
+            var2 = (vb) (DivisionMazeGenerator.field_e.e(112));
             if (var3 == 0) {
               continue;
             }
@@ -187,12 +187,12 @@ final class mp {
         try {
           pm.field_a[3] = 16736511;
           pm.field_a[2] = 9474303;
-          lpa.field_s = param11;
+          PlatformBehaviour.field_s = param11;
           pm.field_a[4] = 16711935;
           kq.field_c = param2;
           pm.field_a[0] = 16764000;
           pm.field_a[1] = 6356832;
-          bn.field_t = param7;
+          VortexBehaviour.field_t = param7;
           bma.field_t[3] = 16736511;
           bma.field_t[2] = 16736352;
           sva.field_d = 8421504;
@@ -216,15 +216,15 @@ final class mp {
           var17.field_J = new IntrusiveDeque();
           ne.field_d = new iv(0L, var17, param3, param4);
           v.field_i.b(-126, ne.field_d);
-          sua.field_K = new jea(0L, param1);
-          v.field_i.b(-124, sua.field_K);
+          RotaterMountComponent.field_K = new jea(0L, param1);
+          v.field_i.b(-124, RotaterMountComponent.field_K);
           pq.field_g = new jea(0L, param5);
-          pq.field_g.field_H = lpa.field_s;
-          sua.field_K.b(param6 - 124, pq.field_g);
-          sua.field_K.a(param6 ^ -10966);
+          pq.field_g.field_H = PlatformBehaviour.field_s;
+          RotaterMountComponent.field_K.b(param6 - 124, pq.field_g);
+          RotaterMountComponent.field_K.a(param6 ^ -10966);
           mka.field_b = new jea(0L, (jea) null);
           mka.field_b.field_w = var16;
-          sua.field_K.b(-125, mka.field_b);
+          RotaterMountComponent.field_K.b(-125, mka.field_b);
           bt.field_c = new jea[5];
           kva.field_p = new jea[5];
           oka.field_y = new jea[5];
@@ -255,10 +255,10 @@ final class mp {
               }
               if (decompiledFrameRemainder0) {
                 wba.field_p[var18] = new jea(0L, param10);
-                bt.field_c[var18] = new jea(0L, bn.field_t, var19);
+                bt.field_c[var18] = new jea(0L, VortexBehaviour.field_t, var19);
                 oka.field_y[var18] = new jea(0L, (jea) null);
                 oka.field_y[var18].field_bb = 1;
-                kva.field_p[var18] = new jea(0L, bn.field_t);
+                kva.field_p[var18] = new jea(0L, VortexBehaviour.field_t);
                 kva.field_p[var18].field_bb = 1;
                 wba.field_p[var18].b(-122, bt.field_c[var18]);
                 wba.field_p[var18].b(param6 - 125, oka.field_y[var18]);
@@ -274,7 +274,7 @@ final class mp {
           }
           if (decompiledNaturalLoopExit0) {
             ara.field_ub = new jea(0L, param8);
-            ara.field_ub.field_r = ge.field_G;
+            ara.field_ub.field_r = ShooterComponent.field_G;
             era.field_e.b(-128, ara.field_ub);
             stackIn_31_0 = o.e(540800) ? 1 : 0;
           }

@@ -19,7 +19,7 @@ final class rf {
         if (param0 != -121) {
           return 20L;
         }
-        return -ue.field_s + bva.b((byte) -107);
+        return -MiscItemBehaviour.field_s + bva.b((byte) -107);
     }
 
     final static String a(boolean param0, String param1, int param2) {
@@ -50,7 +50,7 @@ final class rf {
             stackIn_7_0 = db.field_j;
             return stackIn_7_0;
           }
-          if (ue.a(param1, 0)) {
+          if (MiscItemBehaviour.a(param1, 0)) {
             stackIn_10_0 = iia.field_q;
             return stackIn_10_0;
           }

@@ -62,7 +62,7 @@ final class doa {
 
     doa() {
         qf discarded$0 = new qf(786336);
-        bia.a((byte) 93, 1600);
+        CauldronComponent.a((byte) 93, 1600);
     }
 
     final void a(int param0, OpenGlToolkit param1) {

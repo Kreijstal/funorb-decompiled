@@ -22,7 +22,7 @@ final class cua {
         if (rda.field_o == param0) {
           return;
         }
-        ht var6 = (ht) (jb.field_K.a(-115, (long)rda.field_o));
+        ht var6 = (ht) (WhiteLightSensorComponent.field_K.a(-115, (long)rda.field_o));
         ht var7 = var6;
         rda.field_o = param0;
         if (var7 != null) {
@@ -65,7 +65,7 @@ final class cua {
           if (var2 == null) {
             asa.field_j.b((byte) -59, param0);
           } else {
-            ln.a(var2, param0, (byte) -120);
+            PlatformComponent.a(var2, param0, (byte) -120);
           }
           var3 = 27 % ((-29 - param1) / 55);
           return;

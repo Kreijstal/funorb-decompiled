@@ -9,7 +9,7 @@ final class vsa extends dg {
     private int field_s;
     private int field_n;
     private int field_t;
-    private lpa field_o;
+    private PlatformBehaviour field_o;
 
     final int k(byte param0) {
         if (param0 != -99) {
@@ -178,8 +178,8 @@ final class vsa extends dg {
         RuntimeException var4 = null;
         try {
           super.a(param0, param1, param2);
-          if (param0 instanceof lpa) {
-            this.field_o = (lpa) (param0);
+          if (param0 instanceof PlatformBehaviour) {
+            this.field_o = (PlatformBehaviour) (param0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -616,11 +616,11 @@ final class vsa extends dg {
           if (param0 < 107) {
             return;
           }
-          if (oh.field_o != 0) {
+          if (TextSpewerBehaviour.field_o != 0) {
             var2_long = bva.b((byte) -107);
-            var4 = oh.field_o;
-            if (0.0 != sua.field_J) {
-              var4 = (int)((double)var4 + lpa.field_p.nextGaussian() * sua.field_J);
+            var4 = TextSpewerBehaviour.field_o;
+            if (0.0 != RotaterMountComponent.field_J) {
+              var4 = (int)((double)var4 + PlatformBehaviour.field_p.nextGaussian() * RotaterMountComponent.field_J);
               if (0 > var4) {
                 var4 = 0;
               }

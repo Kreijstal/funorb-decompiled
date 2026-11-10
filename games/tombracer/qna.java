@@ -65,10 +65,10 @@ final class qna {
           if (mq.field_a == 0) {
             var3_int = ama.a(bfa.field_c, jba.field_l, rg.field_z, 1, lra.field_c);
             var4 = 3 + var3_int;
-            bla.field_H = new int[var4];
+            CoinItemComponent.field_H = new int[var4];
             mba.field_g = new String[var4];
             for (var5 = 0; var5 < var4; var5++) {
-              bla.field_H[var5] = -1;
+              CoinItemComponent.field_H[var5] = -1;
             }
             hb.field_w = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
@@ -76,18 +76,18 @@ final class qna {
             }
             mba.field_g[-3 + var4] = "";
             mba.field_g[-2 + var4] = ae.field_k;
-            bla.field_H[-2 + var4] = 0;
+            CoinItemComponent.field_H[-2 + var4] = 0;
             hb.field_w[0] = 4;
             mba.field_g[var4 - 1] = BitPacketBuffer.field_j;
-            bla.field_H[-1 + var4] = 1;
+            CoinItemComponent.field_H[-1 + var4] = 1;
             hb.field_w[1] = 5;
           } else if (mq.field_a == 1) {
             var3_int = ama.a(bfa.field_c, jba.field_l, rg.field_z, 1, lra.field_c);
             var4 = var3_int + 2;
-            bla.field_H = new int[var4];
+            CoinItemComponent.field_H = new int[var4];
             mba.field_g = new String[var4];
             for (var5 = 0; var4 > var5; var5++) {
-              bla.field_H[var5] = -1;
+              CoinItemComponent.field_H[var5] = -1;
             }
             hb.field_w = new int[1];
             for (var5 = 0; var3_int > var5; var5++) {
@@ -95,20 +95,20 @@ final class qna {
             }
             mba.field_g[var4 - 2] = "";
             mba.field_g[-1 + var4] = BitPacketBuffer.field_j;
-            bla.field_H[-1 + var4] = 0;
+            CoinItemComponent.field_H[-1 + var4] = 0;
             hb.field_w[0] = 5;
           } else if (mq.field_a != 2) {
             if (mq.field_a == 3) {
               if (dsa.field_c.field_c) {
-                var3_int = ama.a(bfa.field_c, gd.field_G, rg.field_z, 1, lra.field_c);
+                var3_int = ama.a(bfa.field_c, IdolItemComponent.field_G, rg.field_z, 1, lra.field_c);
               } else {
                 var3_int = ama.a(bfa.field_c, jma.field_o, rg.field_z, 1, lra.field_c);
               }
               var4 = 2 + var3_int;
-              bla.field_H = new int[var4];
+              CoinItemComponent.field_H = new int[var4];
               mba.field_g = new String[var4];
               for (var5 = 0; var4 > var5; var5++) {
-                bla.field_H[var5] = -1;
+                CoinItemComponent.field_H[var5] = -1;
               }
               hb.field_w = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
@@ -116,15 +116,15 @@ final class qna {
               }
               mba.field_g[var4 - 2] = "";
               mba.field_g[var4 - 1] = BitPacketBuffer.field_j;
-              bla.field_H[-1 + var4] = 0;
+              CoinItemComponent.field_H[-1 + var4] = 0;
               hb.field_w[0] = 5;
             } else if (4 == mq.field_a) {
               var3_int = ama.a(bfa.field_c, vca.field_b, rg.field_z, 1, lra.field_c);
               var4 = var3_int + 2;
               mba.field_g = new String[var4];
-              bla.field_H = new int[var4];
+              CoinItemComponent.field_H = new int[var4];
               for (var5 = 0; var5 < var4; var5++) {
-                bla.field_H[var5] = -1;
+                CoinItemComponent.field_H[var5] = -1;
               }
               hb.field_w = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
@@ -132,18 +132,18 @@ final class qna {
               }
               mba.field_g[-2 + var4] = "";
               mba.field_g[-1 + var4] = BitPacketBuffer.field_j;
-              bla.field_H[-1 + var4] = 0;
+              CoinItemComponent.field_H[-1 + var4] = 0;
               hb.field_w[0] = 5;
             } else {
               if (mq.field_a != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = ama.a(bfa.field_c, th.field_s, rg.field_z, 1, lra.field_c);
+              var3_int = ama.a(bfa.field_c, WindZoneBehaviour.field_s, rg.field_z, 1, lra.field_c);
               var4 = var3_int + 3;
-              bla.field_H = new int[var4];
+              CoinItemComponent.field_H = new int[var4];
               mba.field_g = new String[var4];
               for (var5 = 0; var4 > var5; var5++) {
-                bla.field_H[var5] = -1;
+                CoinItemComponent.field_H[var5] = -1;
               }
               hb.field_w = new int[2];
               for (var5 = 0; var3_int > var5; var5++) {
@@ -151,10 +151,10 @@ final class qna {
               }
               mba.field_g[var4 - 3] = "";
               mba.field_g[-2 + var4] = sqa.field_a;
-              bla.field_H[var4 - 2] = 0;
+              CoinItemComponent.field_H[var4 - 2] = 0;
               hb.field_w[0] = 3;
               mba.field_g[var4 - 1] = BitPacketBuffer.field_j;
-              bla.field_H[var4 - 1] = 1;
+              CoinItemComponent.field_H[var4 - 1] = 1;
               hb.field_w[1] = 5;
             }
           } else {
@@ -203,18 +203,18 @@ final class qna {
             }
             var6 = stackIn_61_0;
             var7 = 7 + var5 + var6;
-            bla.field_H = new int[var7];
+            CoinItemComponent.field_H = new int[var7];
             mba.field_g = new String[var7];
             for (var8 = 0; var7 > var8; var8++) {
-              bla.field_H[var8] = -1;
+              CoinItemComponent.field_H[var8] = -1;
             }
-            bla.field_H[1] = 0;
+            CoinItemComponent.field_H[1] = 0;
             mba.field_g[1] = vc.field_s;
-            mba.field_g[0] = bha.field_B;
+            mba.field_g[0] = FleeLocomotor.field_B;
             hb.field_w = new int[2];
             mba.field_g[3] = mha.field_F;
             mba.field_g[4] = kka.field_p;
-            bla.field_H[3] = 1;
+            CoinItemComponent.field_H[3] = 1;
             hb.field_w[1] = 2;
             mba.field_g[5] = "";
             mba.field_g[2] = cq.field_c;
@@ -230,7 +230,7 @@ final class qna {
               stackIn_68_0[stackIn_68_1] = stackIn_69_2;
             }
             mba.field_g[6 + var5] = null;
-            bla.field_H[6 + var5] = -2;
+            CoinItemComponent.field_H[6 + var5] = -2;
             for (var8Lifetime3 = 0; var8Lifetime3 < var6; var8Lifetime3++) {
               stackIn_74_0 = mba.field_g;
               stackIn_74_1 = var8Lifetime3 + 7 + var5;
@@ -241,15 +241,15 @@ final class qna {
               }
               stackIn_74_0[stackIn_74_1] = stackIn_75_2;
             }
-            ln.field_H = bva.b((byte) -107);
+            PlatformComponent.field_H = bva.b((byte) -107);
           }
-          sa.field_r.field_i = hb.field_w.length;
+          FacePointLocomotor.field_r.field_i = hb.field_w.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < mba.field_g.length; var4Lifetime1++) {
             stackIn_88_0 = -116;
             stackIn_88_1 = mba.field_g[var4Lifetime1];
-            stackIn_89_2 = !(bla.field_H[var4Lifetime1] < 0);
-            var5Lifetime1 = ro.$cfr$intArgs$a$590e95718a07(stackIn_88_0, stackIn_88_1, stackIn_89_2);
+            stackIn_89_2 = !(CoinItemComponent.field_H[var4Lifetime1] < 0);
+            var5Lifetime1 = PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(stackIn_88_0, stackIn_88_1, stackIn_89_2);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -259,7 +259,7 @@ final class qna {
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var10.length > var5Lifetime2; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];
-              var7Lifetime1 = ro.$cfr$intArgs$a$590e95718a07(-116, var11, false);
+              var7Lifetime1 = PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(-116, var11, false);
               if (var3_intLifetime1 < var7Lifetime1) {
                 var3_intLifetime1 = var7Lifetime1;
               }
@@ -267,52 +267,52 @@ final class qna {
             var4_ref_String__Lifetime1 = wr.field_o;
             for (var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 < var4_ref_String__Lifetime1.length; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
-              var7Lifetime1Lifetime1 = ro.$cfr$intArgs$a$590e95718a07(-116, var12, false);
+              var7Lifetime1Lifetime1 = PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(-116, var12, false);
               if (var7Lifetime1Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1Lifetime1;
               }
             }
           }
-          hg.field_f = sa.field_r.field_i * (mha.field_C + pqa.field_p << 1);
+          hg.field_f = FacePointLocomotor.field_r.field_i * (mha.field_C + pqa.field_p << 1);
           am.field_o = ega.field_c - (var3_intLifetime1 >> 1);
           tia.field_a = var3_intLifetime1 + (ega.field_c - (var3_intLifetime1 >> 1));
           for (var4Lifetime2 = 0; var4Lifetime2 < mba.field_g.length; var4Lifetime2++) {
             stackIn_110_0 = hg.field_f;
-            if (bla.field_H[var4Lifetime2] >= 0) {
+            if (CoinItemComponent.field_H[var4Lifetime2] >= 0) {
               stackIn_111_1 = nt.field_d;
             } else {
               stackIn_111_1 = f.field_b;
             }
             hg.field_f = stackIn_110_0 + stackIn_111_1;
           }
-          jua.field_d = -(hg.field_f >> 1) + gd.field_L;
-          er.field_K = new int[mba.field_g.length][];
+          jua.field_d = -(hg.field_f >> 1) + IdolItemComponent.field_L;
+          TripBeamComponent.field_K = new int[mba.field_g.length][];
           var4Lifetime3 = 0;
           if (param0 != 1) {
             qna.a(-17, true, 122);
           }
           var5Lifetime3 = jua.field_d;
           while (var4Lifetime3 < mba.field_g.length) {
-            var6Lifetime1 = bla.field_H[var4Lifetime3];
+            var6Lifetime1 = CoinItemComponent.field_H[var4Lifetime3];
             if (0 <= var6Lifetime1) {
-              var7Lifetime2 = ro.$cfr$intArgs$a$590e95718a07(-116, mba.field_g[var4Lifetime3], true);
+              var7Lifetime2 = PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(-116, mba.field_g[var4Lifetime3], true);
               var5Lifetime3 = var5Lifetime3 + mha.field_C;
               var8Lifetime1 = ega.field_c - (var7Lifetime2 >> 1);
-              er.field_K[var4Lifetime3] = new int[4];
-              er.field_K[var4Lifetime3][0] = -nja.field_L + var8Lifetime1;
-              er.field_K[var4Lifetime3][1] = var5Lifetime3;
-              er.field_K[var4Lifetime3][2] = (nja.field_L << 1) + var7Lifetime2;
+              TripBeamComponent.field_K[var4Lifetime3] = new int[4];
+              TripBeamComponent.field_K[var4Lifetime3][0] = -InvisibleTouchSwitchComponent.field_L + var8Lifetime1;
+              TripBeamComponent.field_K[var4Lifetime3][1] = var5Lifetime3;
+              TripBeamComponent.field_K[var4Lifetime3][2] = (InvisibleTouchSwitchComponent.field_L << 1) + var7Lifetime2;
               var5Lifetime3 = var5Lifetime3 + (nt.field_d + ((pqa.field_p << 1) + mha.field_C));
-              er.field_K[var4Lifetime3][3] = nt.field_d + (pqa.field_p << 1);
+              TripBeamComponent.field_K[var4Lifetime3][3] = nt.field_d + (pqa.field_p << 1);
             } else {
               var5Lifetime3 = var5Lifetime3 + f.field_b;
             }
             var4Lifetime3++;
           }
           if (2 == mq.field_a) {
-            sa.field_r.a(param1, 29954, -1, -1);
+            FacePointLocomotor.field_r.a(param1, 29954, -1, -1);
           } else {
-            sa.field_r.a(param1, param0 + 29953, 0, wg.a(1541709953, jba.field_j, sta.field_B));
+            FacePointLocomotor.field_r.a(param1, param0 + 29953, 0, wg.a(1541709953, jba.field_j, sta.field_B));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -36,10 +36,10 @@ final class ema implements isa {
             if (bea.field_h <= var9 &&
               bea.field_k > var9) {
               if (var7Lifetime1 > bea.field_b) {
-                bea.field_l[var9 * bea.field_g - (-var7Lifetime1 + 1)] = sea.c(16711422, bea.field_l[var7Lifetime1 + (bea.field_g * var9 - 1)]) >> 1;
+                bea.field_l[var9 * bea.field_g - (-var7Lifetime1 + 1)] = SnakePitBehaviour.c(16711422, bea.field_l[var7Lifetime1 + (bea.field_g * var9 - 1)]) >> 1;
               }
               if (var7Lifetime1 + var8Lifetime1 < bea.field_d) {
-                bea.field_l[var7Lifetime1 + var9 * bea.field_g + var8Lifetime1] = sea.c(8355711, bea.field_l[var8Lifetime1 + bea.field_g * var9 + var7Lifetime1] >> 1);
+                bea.field_l[var7Lifetime1 + var9 * bea.field_g + var8Lifetime1] = SnakePitBehaviour.c(8355711, bea.field_l[var8Lifetime1 + bea.field_g * var9 + var7Lifetime1] >> 1);
               }
             }
             bea.c(var7Lifetime1, var9, var8Lifetime1, 0);

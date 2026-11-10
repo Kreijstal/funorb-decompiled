@@ -85,11 +85,11 @@ final class ui {
           incrementValue$11 = param2;
           param2++;
           var19_ref.a(incrementValue$11, (byte) 47, param1);
-          mh.field_K = new oc[13];
+          DoorwayComponent.field_K = new oc[13];
           for (var13_intLifetime2 = 0; var13_intLifetime2 < 13; var13_intLifetime2++) {
             var22 = gn.field_w[var13_intLifetime2];
             var15 = gha.a("", "characters/models/deaths/body_parts/" + var22 + "_beheaded", -113, param0);
-            mh.field_K[var13_intLifetime2] = new oc(new oc[]{var15, var5}, 2);
+            DoorwayComponent.field_K[var13_intLifetime2] = new oc(new oc[]{var15, var5}, 2);
           }
           incrementValue$12 = param2;
           param2++;
@@ -300,24 +300,24 @@ final class ui {
           an.field_g[2] = new oc(new oc[]{var15}, 1);
           an.field_g[3] = new oc(new oc[]{var16}, 1);
           an.field_g[4] = gha.a("", "monsters/snakes/snake_kingsnake", 33, param0);
-          nj.field_p = new oc[17];
-          nj.field_p[0] = gha.a("", "effects/projectile_blade", 116, param0);
-          nj.field_p[1] = gha.a("", "effects/projectile_bullet", -122, param0);
-          nj.field_p[2] = gha.a("", "effects/projectile_dart", -113, param0);
-          nj.field_p[14] = gha.a("", "effects/billboard_fire", 92, param0);
-          nj.field_p[15] = gha.a("", "effects/flamethrower/flamethrower_particle", 92, param0);
-          nj.field_p[16] = gha.a("", "effects/flamethrower/flamethrower_particle_java", -127, param0);
-          nj.field_p[3] = gha.a("", "effects/particle_laser_red", -115, param0);
-          nj.field_p[4] = gha.a("", "effects/particle_laser_white", -124, param0);
-          nj.field_p[5] = gha.a("", "effects/particle_rock1", 49, param0);
-          nj.field_p[6] = gha.a("", "effects/particle_rock2", -116, param0);
-          nj.field_p[7] = gha.a("", "effects/particle_rock3", -118, param0);
-          nj.field_p[8] = gha.a("", "effects/bubbles/models/cauldron_bubbles", 65, param0);
-          nj.field_p[9] = gha.a("", "effects/bubbles/models/lava_bubbles", 53, param0);
-          nj.field_p[10] = gha.a("", "objects/youarehere/youarehere_green", -110, param0);
-          nj.field_p[11] = gha.a("", "objects/youarehere/youarehere_blue", -119, param0);
-          nj.field_p[12] = gha.a("", "objects/youarehere/youarehere_red", 110, param0);
-          nj.field_p[13] = gha.a("", "objects/youarehere/youarehere_yellow", 91, param0);
+          ControllerLocomotor.field_p = new oc[17];
+          ControllerLocomotor.field_p[0] = gha.a("", "effects/projectile_blade", 116, param0);
+          ControllerLocomotor.field_p[1] = gha.a("", "effects/projectile_bullet", -122, param0);
+          ControllerLocomotor.field_p[2] = gha.a("", "effects/projectile_dart", -113, param0);
+          ControllerLocomotor.field_p[14] = gha.a("", "effects/billboard_fire", 92, param0);
+          ControllerLocomotor.field_p[15] = gha.a("", "effects/flamethrower/flamethrower_particle", 92, param0);
+          ControllerLocomotor.field_p[16] = gha.a("", "effects/flamethrower/flamethrower_particle_java", -127, param0);
+          ControllerLocomotor.field_p[3] = gha.a("", "effects/particle_laser_red", -115, param0);
+          ControllerLocomotor.field_p[4] = gha.a("", "effects/particle_laser_white", -124, param0);
+          ControllerLocomotor.field_p[5] = gha.a("", "effects/particle_rock1", 49, param0);
+          ControllerLocomotor.field_p[6] = gha.a("", "effects/particle_rock2", -116, param0);
+          ControllerLocomotor.field_p[7] = gha.a("", "effects/particle_rock3", -118, param0);
+          ControllerLocomotor.field_p[8] = gha.a("", "effects/bubbles/models/cauldron_bubbles", 65, param0);
+          ControllerLocomotor.field_p[9] = gha.a("", "effects/bubbles/models/lava_bubbles", 53, param0);
+          ControllerLocomotor.field_p[10] = gha.a("", "objects/youarehere/youarehere_green", -110, param0);
+          ControllerLocomotor.field_p[11] = gha.a("", "objects/youarehere/youarehere_blue", -119, param0);
+          ControllerLocomotor.field_p[12] = gha.a("", "objects/youarehere/youarehere_red", 110, param0);
+          ControllerLocomotor.field_p[13] = gha.a("", "objects/youarehere/youarehere_yellow", 91, param0);
           tba.field_l = gha.a("", "test/javatextures", -117, param0);
           if (param3 > -48) {
             ui.a(57);

@@ -63,8 +63,8 @@ final class kv {
         if (param2 == 95) {
           jg.field_a.position = 0;
           jg.field_a.i(12, 0);
-          jg.field_a.a(lpa.field_p.nextInt(), (byte) -108);
-          jg.field_a.a(lpa.field_p.nextInt(), (byte) 111);
+          jg.field_a.a(PlatformBehaviour.field_p.nextInt(), (byte) -108);
+          jg.field_a.a(PlatformBehaviour.field_p.nextInt(), (byte) 111);
           jg.field_a.i(param1, 0);
           jg.field_a.i(param0, 0);
           jg.field_a.f(-1477662136, param3);

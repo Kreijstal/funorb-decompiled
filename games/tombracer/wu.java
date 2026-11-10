@@ -389,30 +389,30 @@ final class wu implements mfa {
           var4_int = 0;
           if (!(param1 instanceof db)) {
             if (param1 instanceof Trap) {
-              if (param0 instanceof sea) {
+              if (param0 instanceof SnakePitBehaviour) {
                 var4_int = 13;
               } else {
-                if (param0 instanceof mo) {
+                if (param0 instanceof PitBehaviour) {
                   var4_int = 10;
                 } else {
-                  if (param0 instanceof rea) {
+                  if (param0 instanceof CrusherBehaviour) {
                     var4_int = 11;
                   } else {
-                    if (!(param0 instanceof pd)) {
+                    if (!(param0 instanceof ItemBehaviour)) {
                       if (!(param0 instanceof mra)) {
-                        if (param0 instanceof eq &&
+                        if (param0 instanceof SimpleBlockBehaviour &&
                           ((Trap) (param1)).d(true)) {
                           var4_int = 16;
                         } else {
-                          if (!(param0 instanceof rh) &&
-                            !(param0 instanceof dja)) {
+                          if (!(param0 instanceof TouchSwitchBehaviour) &&
+                            !(param0 instanceof PressureSwitchBehaviour)) {
                             if (param0 instanceof ut &&
-                              !(param0 instanceof kj) &&
-                              !(param0 instanceof wh)) {
+                              !(param0 instanceof PlayerSensorBehaviour) &&
+                              !(param0 instanceof TripBeamBehaviour)) {
                               var4_int = 3;
                             } else {
-                              if (!(param0 instanceof lpa) &&
-                                !(param0 instanceof im)) {
+                              if (!(param0 instanceof PlatformBehaviour) &&
+                                !(param0 instanceof PortalBehaviour)) {
                                 var4_int = 0;
                               } else {
                                 var4_int = 17;

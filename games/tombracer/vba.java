@@ -79,7 +79,7 @@ final class vba extends we {
     }
 
     private final nh h(int param0, int param1) {
-        if ((!eq.c(param1) ||
+        if ((!SimpleBlockBehaviour.c(param1) ||
           !oj.field_tb[82]) &&
           !this.a(false, param0)) {
           return lva.field_m[42 + this.field_w[param0]];
@@ -184,7 +184,7 @@ final class vba extends we {
           GameFont var4 = (GameFont) null;
           discarded$0 = this.a((String) null, (qla) null, -5, -61, -30, (GameFont) null, 39, -50, -125);
         }
-        return vaa.a(rb.field_o, param1, -101);
+        return vaa.a(SimpleConditionBehaviour.field_o, param1, -101);
     }
 
     final static pha a(byte param0, long param1) {

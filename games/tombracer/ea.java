@@ -18,7 +18,7 @@ final class ea extends IntrusiveNode implements bo {
         try {
           cq.field_a.a(108);
           for (var1_int = 0; var1_int < 32; var1_int++) {
-            eia.field_r[var1_int] = 0L;
+            EffectSwitchBehaviour.field_r[var1_int] = 0L;
           }
           if (param0 != -33) {
             OpenGlToolkit var3 = (OpenGlToolkit) null;

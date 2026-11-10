@@ -1097,7 +1097,7 @@ final class Room implements ew, fo, noa {
         if (this.field_E >= 11) {
           var6Lifetime1 = var3.b((byte) 44, 8);
           for (var7 = 0; var6Lifetime1 > var7; var7++) {
-            var8 = vha.field_c.a(var3, 55, this);
+            var8 = vha.field_c.readComponent(var3, 55, this);
             if (var8 != null) {
               this.a(var8, 33554432);
             }
@@ -1735,7 +1735,7 @@ final class Room implements ew, fo, noa {
           param0.a((byte) 120, this.field_z.a((byte) -16), 8);
           var7 = (RoomComponent) (this.field_z.f(-80));
           while (var7 != null) {
-            vha.field_c.a(var7, -16097, param0);
+            vha.field_c.writeComponent(var7, -16097, param0);
             var7 = (RoomComponent) (this.field_z.e(107));
           }
           param0.a((byte) 102, this.field_A, 2);

@@ -26,14 +26,14 @@ final class nt {
               var6 = new ppa(255, wka.field_c, new ph(oi.field_a.field_q, 12000, 0), 2097152);
             }
             if (wka.field_c != null) {
-              if (tna.field_c == null) {
-                tna.field_c = new ph[oi.field_a.field_h.length];
+              if (DivisionMazeGenerator.field_c == null) {
+                DivisionMazeGenerator.field_c = new ph[oi.field_a.field_h.length];
               }
-              if (null == tna.field_c[param0]) {
-                tna.field_c[param0] = new ph(oi.field_a.field_h[param0], 12000, 0);
+              if (null == DivisionMazeGenerator.field_c[param0]) {
+                DivisionMazeGenerator.field_c[param0] = new ph(oi.field_a.field_h[param0], 12000, 0);
                 oi.field_a.field_h[param0] = null;
               }
-              var7 = new ppa(param0, wka.field_c, tna.field_c[param0], 2097152);
+              var7 = new ppa(param0, wka.field_c, DivisionMazeGenerator.field_c[param0], 2097152);
             }
             if (param2 != 5200) {
               var9 = (java.applet.Applet) null;

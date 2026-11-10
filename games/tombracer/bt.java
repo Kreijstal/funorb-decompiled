@@ -32,7 +32,7 @@ final class bt implements fo {
         ka var5 = null;
         try {
           var3_int = this.field_e.d(2);
-          var4 = dfa.a(-(im.a(ne.field_f[var3_int][1], ne.field_f[var3_int][0], 1) >> 2) + 512, 2048, 73);
+          var4 = dfa.a(-(PortalBehaviour.a(ne.field_f[var3_int][1], ne.field_f[var3_int][0], 1) >> 2) + 512, 2048, 73);
           if (param0 < 103) {
             bt.a((byte) 44, -55, -63, 37);
           }

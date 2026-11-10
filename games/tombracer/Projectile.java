@@ -257,7 +257,7 @@ final class Projectile extends c implements fo, ffa, t {
                   return;
                 }
                 if (this.field_t.field_j == 3) {
-                  this.field_z.a(-40, this.y, th.field_o, 2 * this.field_o, 2 * this.field_o, this.x);
+                  this.field_z.a(-40, this.y, WindZoneBehaviour.field_o, 2 * this.field_o, 2 * this.field_o, this.x);
                 }
                 var6Lifetime2 = this.field_z.a(this, -16164, this.field_t);
                 if (var6Lifetime2 <= 0) {
@@ -281,7 +281,7 @@ final class Projectile extends c implements fo, ffa, t {
                   return;
                 }
                 if (this.field_t.field_j == 3) {
-                  this.field_z.a(-40, this.y, th.field_o, 2 * this.field_o, 2 * this.field_o, this.x);
+                  this.field_z.a(-40, this.y, WindZoneBehaviour.field_o, 2 * this.field_o, 2 * this.field_o, this.x);
                 }
                 var6Lifetime2 = this.field_z.a(this, -16164, this.field_t);
                 if (var6Lifetime2 <= 0) {
@@ -300,7 +300,7 @@ final class Projectile extends c implements fo, ffa, t {
                 return;
               }
               if (this.field_t.field_j == 3) {
-                this.field_z.a(-40, this.y, th.field_o, 2 * this.field_o, 2 * this.field_o, this.x);
+                this.field_z.a(-40, this.y, WindZoneBehaviour.field_o, 2 * this.field_o, 2 * this.field_o, this.x);
               }
               var6Lifetime2 = this.field_z.a(this, -16164, this.field_t);
               if (var6Lifetime2 <= 0) {
@@ -324,7 +324,7 @@ final class Projectile extends c implements fo, ffa, t {
                 return;
               }
               if (this.field_t.field_j == 3) {
-                this.field_z.a(-40, this.y, th.field_o, 2 * this.field_o, 2 * this.field_o, this.x);
+                this.field_z.a(-40, this.y, WindZoneBehaviour.field_o, 2 * this.field_o, 2 * this.field_o, this.x);
               }
               var6Lifetime2 = this.field_z.a(this, -16164, this.field_t);
               if (var6Lifetime2 <= 0) {
@@ -351,7 +351,7 @@ final class Projectile extends c implements fo, ffa, t {
           return;
         }
         if (this.field_t.field_j == 3) {
-          this.field_z.a(-40, this.y, th.field_o, 2 * this.field_o, 2 * this.field_o, this.x);
+          this.field_z.a(-40, this.y, WindZoneBehaviour.field_o, 2 * this.field_o, 2 * this.field_o, this.x);
         }
         var6Lifetime1 = this.field_z.a(this, -16164, this.field_t);
         if (var6Lifetime1 <= 0) {
@@ -577,7 +577,7 @@ final class Projectile extends c implements fo, ffa, t {
               if (param1 ||
                 this.field_t.field_j != 0) {
                 if (this.field_t.field_j == 3) {
-                  this.field_z.a(param3 - 31, this.y, th.field_o, 2 * this.field_o, this.field_o * 2, this.x);
+                  this.field_z.a(param3 - 31, this.y, WindZoneBehaviour.field_o, 2 * this.field_o, this.field_o * 2, this.x);
                 }
                 var7 = this.field_z.a(this, -16164, this.field_t);
                 if (var7 > 0) {
@@ -608,7 +608,7 @@ final class Projectile extends c implements fo, ffa, t {
             return;
           }
           if (this.field_t.field_j == 3) {
-            this.field_z.a(param3 - 31, this.y, th.field_o, 2 * this.field_o, this.field_o * 2, this.x);
+            this.field_z.a(param3 - 31, this.y, WindZoneBehaviour.field_o, 2 * this.field_o, this.field_o * 2, this.x);
           }
           var7 = this.field_z.a(this, -16164, this.field_t);
           if (var7 <= 0) {
@@ -639,7 +639,7 @@ final class Projectile extends c implements fo, ffa, t {
               var6 = 0;
               if (param1) {
                 if (this.field_t.field_j == 3) {
-                  this.field_z.a(param3 - 31, this.y, th.field_o, 2 * this.field_o, this.field_o * 2, this.x);
+                  this.field_z.a(param3 - 31, this.y, WindZoneBehaviour.field_o, 2 * this.field_o, this.field_o * 2, this.x);
                 }
                 var7 = this.field_z.a(this, -16164, this.field_t);
                 if (var7 > 0) {
@@ -655,7 +655,7 @@ final class Projectile extends c implements fo, ffa, t {
               }
               if (this.field_t.field_j != 0) {
                 if (this.field_t.field_j == 3) {
-                  this.field_z.a(param3 - 31, this.y, th.field_o, 2 * this.field_o, this.field_o * 2, this.x);
+                  this.field_z.a(param3 - 31, this.y, WindZoneBehaviour.field_o, 2 * this.field_o, this.field_o * 2, this.x);
                 }
                 var7 = this.field_z.a(this, -16164, this.field_t);
                 if (var7 > 0) {
@@ -678,7 +678,7 @@ final class Projectile extends c implements fo, ffa, t {
           var6 = 0;
           if (param1) {
             if (this.field_t.field_j == 3) {
-              this.field_z.a(param3 - 31, this.y, th.field_o, 2 * this.field_o, this.field_o * 2, this.x);
+              this.field_z.a(param3 - 31, this.y, WindZoneBehaviour.field_o, 2 * this.field_o, this.field_o * 2, this.x);
             }
             var7 = this.field_z.a(this, -16164, this.field_t);
             if (var7 > 0) {
@@ -688,7 +688,7 @@ final class Projectile extends c implements fo, ffa, t {
           } else {
             if (this.field_t.field_j != 0) {
               if (this.field_t.field_j == 3) {
-                this.field_z.a(param3 - 31, this.y, th.field_o, 2 * this.field_o, this.field_o * 2, this.x);
+                this.field_z.a(param3 - 31, this.y, WindZoneBehaviour.field_o, 2 * this.field_o, this.field_o * 2, this.x);
               }
               var7 = this.field_z.a(this, -16164, this.field_t);
               if (var7 > 0) {

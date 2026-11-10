@@ -83,7 +83,7 @@ final class bd extends IntrusiveNode {
               }
             }
             if (decompiledFrameRemainder0) {
-              if (tl.field_p.indexOf(var5Lifetime1) == -1) {
+              if (TimeSwitchBehaviour.field_p.indexOf(var5Lifetime1) == -1) {
                 stackIn_42_0 = fb.field_c;
                 return stackIn_42_0;
               }

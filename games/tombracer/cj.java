@@ -40,7 +40,7 @@ final class cj implements isa {
             field_e = (String) null;
           }
           var2_long = bva.b((byte) -107);
-          if (ga.field_H != 0 &&
+          if (WallCrusherComponent.field_H != 0 &&
             GameKeyHandler.field_b < 0) {
             var4_ref_rha = (rha) (vn.field_a.f(-80));
             if (var4_ref_rha != null &&
@@ -71,7 +71,7 @@ final class cj implements isa {
             if (!cla.g(param1 + 0)) {
               return false;
             }
-            if (0 == ga.field_H) {
+            if (0 == WallCrusherComponent.field_H) {
               vua.field_B = hla.field_xb;
               hla.field_xb = ufa.field_c;
               ufa.field_c = oka.field_z;
@@ -79,9 +79,9 @@ final class cj implements isa {
               GameKeyHandler.field_b = -1;
               return true;
             }
-            var4 = ga.field_H;
+            var4 = WallCrusherComponent.field_H;
             if (0.0 != al.field_h) {
-              var4 = (int)((double)var4 + lpa.field_p.nextGaussian() * al.field_h);
+              var4 = (int)((double)var4 + PlatformBehaviour.field_p.nextGaussian() * al.field_h);
               if (var4 < 0) {
                 var4 = 0;
               }

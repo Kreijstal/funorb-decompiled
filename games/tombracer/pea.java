@@ -43,7 +43,7 @@ final class pea {
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = new vb(param0, param0);
-          tna.field_e.b((byte) -68, var2);
+          DivisionMazeGenerator.field_e.b((byte) -68, var2);
           if (param1 != 1) {
             pea.a((byte) -106);
           }

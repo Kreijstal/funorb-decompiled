@@ -340,7 +340,7 @@ class tu extends eha {
           if (this.field_f.j(-1878) &&
             !this.field_f.d(-127)) {
             if (0 != var7) {
-              var9_ref_jha = ab.a(-89, gl.$cfr$intArgs$a$53ce4ab4c593(112, wpa.field_J, new String[]{String.valueOf(var6), String.valueOf(var7)}));
+              var9_ref_jha = ab.a(-89, gl.$cfr$intArgs$a$53ce4ab4c593(112, ArrowShooterComponent.field_J, new String[]{String.valueOf(var6), String.valueOf(var7)}));
             } else {
               var9_ref_jha = ab.a(-66, gl.$cfr$intArgs$a$53ce4ab4c593(92, gla.field_q, new String[]{String.valueOf(var6)}));
             }

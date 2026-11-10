@@ -212,18 +212,18 @@ final class qh extends dfa implements rqa {
             if (this.field_k.field_K != 3 && (ip.field_b ||
               uma.field_c ||
               pna.field_p)) {
-              ira.a(param0, 10, (byte) 106);
+              ConstrainToRectangleLocomotor.a(param0, 10, (byte) 106);
               decompiledFrameRemainder0 = false;
             }
             else {
-              ira.a(param0, 9, (byte) 91);
+              ConstrainToRectangleLocomotor.a(param0, 9, (byte) 91);
             }
           } else {
             if (this.field_k.field_K == 3) {
-              ira.a(param0, 0, (byte) 82);
+              ConstrainToRectangleLocomotor.a(param0, 0, (byte) 82);
             } else {
               this.o(-18570);
-              ira.a(param0, 9, (byte) -62);
+              ConstrainToRectangleLocomotor.a(param0, 9, (byte) -62);
             }
           }
         }
@@ -269,7 +269,7 @@ final class qh extends dfa implements rqa {
         var4 = var9;
         if (param0 &&
           param1 &&
-          !iqa.field_c.e(-8832) && (ov.b(-67, -1) ||
+          !iqa.field_c.e(-8832) && (BeamShooterBehaviour.b(-67, -1) ||
           this.c(false))) {
           this.field_v[0][0] = var9[kda.field_hd];
           this.field_v[0][1] = var9[mf.field_a];
@@ -1267,7 +1267,7 @@ final class qh extends dfa implements rqa {
           !this.c(false) && (this.d((byte) 81) ||
           null != this.field_l &&
           this.field_l.e(param2 ^ -9201))) {
-          ira.a(false, 7, (byte) -92);
+          ConstrainToRectangleLocomotor.a(false, 7, (byte) -92);
           return true;
         }
         if (param2 != 1) {

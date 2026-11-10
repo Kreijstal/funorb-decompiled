@@ -48,7 +48,7 @@ final class gi extends me {
         var9 = var3;
         var10 = 40 + var9;
         qa.a(var8, 300, (byte) 65, -150 + var2, aq.field_a, var9 - 16);
-        oka.a(rl.field_v.toUpperCase(), 16777215, qf.field_j, -1, 4 + var9, var2, 0);
+        oka.a(PowerUpItemBehaviour.field_v.toUpperCase(), 16777215, qf.field_j, -1, 4 + var9, var2, 0);
         for (var11 = 0; this.field_g.field_c.field_e.length > var11; var11++) {
           var12 = this.field_g.field_c.field_e[var11];
           if (var12 != -1) {

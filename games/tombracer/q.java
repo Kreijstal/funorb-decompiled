@@ -22,7 +22,7 @@ final class q extends ql {
     }
 
     public final int hashCode() {
-        return ira.a(this.field_q, this.field_p, (byte) -93);
+        return ConstrainToRectangleLocomotor.a(this.field_q, this.field_p, (byte) -93);
     }
 
     final ffa a(byte param0) {

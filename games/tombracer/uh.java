@@ -86,7 +86,7 @@ final class uh extends IntrusiveNode {
         RuntimeException var2_ref = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
-          if (bla.field_G == null) {
+          if (CoinItemComponent.field_G == null) {
             return null;
           }
           var7 = (CharSequence) ((Object) param0);
@@ -94,7 +94,7 @@ final class uh extends IntrusiveNode {
           if (var2 == null) {
             var2 = param0;
           }
-          var3 = (mu) (bla.field_G.a(-114, (long)var2.hashCode()));
+          var3 = (mu) (CoinItemComponent.field_G.a(-114, (long)var2.hashCode()));
           var4 = -95 / ((param1 + 46) / 54);
           while (var3 != null) {
             var8 = (CharSequence) ((Object) var3.field_tb);
@@ -106,7 +106,7 @@ final class uh extends IntrusiveNode {
               stackIn_14_0 = var3;
               return stackIn_14_0;
             }
-            var3 = (mu) (bla.field_G.b((byte) 99));
+            var3 = (mu) (CoinItemComponent.field_G.b((byte) 99));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -145,7 +145,7 @@ final class uh extends IntrusiveNode {
         }
         if (param0 != -7) {
           uh.a((byte) -8);
-          if (rsa.field_s) {
+          if (ConstrainToLatticeLocomotor.field_s) {
             return false;
           }
           if (var1.field_i) {
@@ -153,7 +153,7 @@ final class uh extends IntrusiveNode {
           }
           return false;
         }
-        if (rsa.field_s) {
+        if (ConstrainToLatticeLocomotor.field_s) {
           return false;
         }
         if (var1.field_i) {

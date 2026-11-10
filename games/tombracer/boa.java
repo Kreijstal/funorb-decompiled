@@ -222,8 +222,8 @@ final class boa extends dg {
           var7_int = 0;
           var8_ref_nv = (Behaviour) (var13.a(true));
           while (var8_ref_nv != null) {
-            if (var8_ref_nv instanceof ska) {
-              var7_int = var7_int != 0 | ((ska) (var8_ref_nv)).g((byte) -68) ? 1 : 0;
+            if (var8_ref_nv instanceof WeaponShooterBehaviour) {
+              var7_int = var7_int != 0 | ((WeaponShooterBehaviour) (var8_ref_nv)).g((byte) -68) ? 1 : 0;
             }
             var8_ref_nv = (Behaviour) (var13.a(-1));
           }
@@ -250,10 +250,10 @@ final class boa extends dg {
           var15 = new uja(var14);
           var7 = (Behaviour) (var15.a(true));
           while (var7 != null) {
-            if (var7 instanceof ov) {
-              if (((ov) (var7)).b(-98)) {
+            if (var7 instanceof BeamShooterBehaviour) {
+              if (((BeamShooterBehaviour) (var7)).b(-98)) {
                 var8 = 1;
-                var9 = ((ov) (var7)).c(param0 ^ -105);
+                var9 = ((BeamShooterBehaviour) (var7)).c(param0 ^ -105);
                 while (var9.field_h != null) {
                   if (4 > var8) {
                     var9 = var9.field_h;
@@ -294,11 +294,11 @@ final class boa extends dg {
           var17 = new uja(var16);
           var7 = (Behaviour) (var17.a(true));
           while (var7 != null) {
-            if (!(var7 instanceof ov)) {
+            if (!(var7 instanceof BeamShooterBehaviour)) {
               var7 = (Behaviour) (var17.a(-1));
               continue;
             }
-            if (!((ov) (var7)).b(-19)) {
+            if (!((BeamShooterBehaviour) (var7)).b(-19)) {
               if (this.field_u == null) {
                 var7 = (Behaviour) (var17.a(-1));
                 continue;
@@ -309,7 +309,7 @@ final class boa extends dg {
               continue;
             }
             var8Lifetime1 = 1;
-            var9Lifetime1 = ((ov) (var7)).c(param0 ^ -110);
+            var9Lifetime1 = ((BeamShooterBehaviour) (var7)).c(param0 ^ -110);
             while (var9Lifetime1.field_h != null) {
               if (var8Lifetime1 < 4) {
                 var9Lifetime1 = var9Lifetime1.field_h;
@@ -398,28 +398,28 @@ final class boa extends dg {
           var8 = null;
           var9 = this.field_v;
           if (var9 == 0) {
-            var8 = df.field_J[4];
+            var8 = RevolverItemComponent.field_J[4];
           } else {
             if (1 == var9) {
-              var8 = df.field_J[5];
+              var8 = RevolverItemComponent.field_J[5];
             } else {
               if (var9 == 2) {
-                var8 = df.field_J[7];
+                var8 = RevolverItemComponent.field_J[7];
               } else {
                 if (var9 == 3) {
-                  var8 = df.field_J[9];
+                  var8 = RevolverItemComponent.field_J[9];
                   var7 = 4096;
                 } else {
                   if (var9 == 4) {
-                    var8 = df.field_J[8];
+                    var8 = RevolverItemComponent.field_J[8];
                   } else {
                     if (var9 != 5) {
                       if (var9 == 8) {
-                        var8 = df.field_J[6];
+                        var8 = RevolverItemComponent.field_J[6];
                       } else {
                         if (9 == var9) {
                           var7 = 2048;
-                          var8 = df.field_J[27];
+                          var8 = RevolverItemComponent.field_J[27];
                         } else {
                           if (var9 != 10) {
                             if (var9 != 12) {
@@ -427,26 +427,26 @@ final class boa extends dg {
                                 if (var9 != 13) {
                                   if (var9 != 14) {
                                     if (var9 == 15) {
-                                      var8 = df.field_J[15];
+                                      var8 = RevolverItemComponent.field_J[15];
                                     } else {
                                       if (16 == var9) {
-                                        var8 = df.field_J[16];
+                                        var8 = RevolverItemComponent.field_J[16];
                                       }
                                     }
                                   } else {
-                                    var8 = df.field_J[14];
+                                    var8 = RevolverItemComponent.field_J[14];
                                   }
                                 } else {
-                                  var8 = df.field_J[13];
+                                  var8 = RevolverItemComponent.field_J[13];
                                 }
                               } else {
-                                var8 = df.field_J[11];
+                                var8 = RevolverItemComponent.field_J[11];
                               }
                             } else {
-                              var8 = df.field_J[12];
+                              var8 = RevolverItemComponent.field_J[12];
                             }
                           } else {
-                            var8 = df.field_J[70];
+                            var8 = RevolverItemComponent.field_J[70];
                           }
                         }
                       }
@@ -456,7 +456,7 @@ final class boa extends dg {
                         var9 = 77;
                       }
                       var9 = (this.field_g < 66) ? 78 : 79;
-                      var8 = df.field_J[var9];
+                      var8 = RevolverItemComponent.field_J[var9];
                     }
                   }
                 }

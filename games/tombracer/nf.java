@@ -330,18 +330,18 @@ final class nf {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         if (-param0 + param3 < pka.field_b) {
-          ov.a(param4, param0, param1, false, param2, param5, param3);
+          BeamShooterBehaviour.a(param4, param0, param1, false, param2, param5, param3);
         } else {
           if (ss.field_c < param0 + param3) {
-            ov.a(param4, param0, param1, false, param2, param5, param3);
+            BeamShooterBehaviour.a(param4, param0, param1, false, param2, param5, param3);
           } else {
             if (gca.field_d > -param0 + param1) {
-              ov.a(param4, param0, param1, false, param2, param5, param3);
+              BeamShooterBehaviour.a(param4, param0, param1, false, param2, param5, param3);
             } else {
               if (param1 + param0 <= hc.field_h) {
                 vsa.a(param1, param0, 0, param5, param2, param4, param3);
               } else {
-                ov.a(param4, param0, param1, false, param2, param5, param3);
+                BeamShooterBehaviour.a(param4, param0, param1, false, param2, param5, param3);
               }
             }
           }

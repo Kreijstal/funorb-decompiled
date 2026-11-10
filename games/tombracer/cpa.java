@@ -126,18 +126,18 @@ final class cpa extends qe {
           var4_long = jaggl.OpenGL.glCreateShaderObjectARB(param2);
           jaggl.OpenGL.glShaderSourceARB(var4_long, param3);
           jaggl.OpenGL.glCompileShaderARB(var4_long);
-          jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35713, oma.field_I, 0);
-          if (oma.field_I[0] == 0) {
-            if (oma.field_I[0] == 0) {
+          jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35713, PitComponent.field_I, 0);
+          if (PitComponent.field_I[0] == 0) {
+            if (PitComponent.field_I[0] == 0) {
               System.out.println("Shader compile failed:");
             }
-            jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35716, oma.field_I, 1);
-            if (oma.field_I[1] > 1) {
-              var11 = new byte[oma.field_I[1]];
-              jaggl.OpenGL.glGetInfoLogARB(var4_long, oma.field_I[1], oma.field_I, 0, var11, 0);
+            jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35716, PitComponent.field_I, 1);
+            if (PitComponent.field_I[1] > 1) {
+              var11 = new byte[PitComponent.field_I[1]];
+              jaggl.OpenGL.glGetInfoLogARB(var4_long, PitComponent.field_I[1], PitComponent.field_I, 0, var11, 0);
               System.out.println(new String(var11));
             }
-            if (oma.field_I[0] == 0) {
+            if (PitComponent.field_I[0] == 0) {
               jaggl.OpenGL.glDeleteObjectARB(var4_long);
               stackIn_10_0 = null;
               return (fca) (stackIn_10_0);

@@ -13,7 +13,7 @@ final class qt {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, byte param5) {
-        pd.field_p[ola.field_Eb] = param3;
+        ItemBehaviour.field_p[ola.field_Eb] = param3;
         boa.field_n[ola.field_Eb] = ola.field_Eb;
         jk.field_h[ola.field_Eb] = param4;
         if (ap.field_d < param4) {
@@ -22,9 +22,9 @@ final class qt {
         if (!(ota.field_c <= param4)) {
           kc.field_a = param4;
         }
-        cu.field_o[ola.field_Eb] = param0;
+        DamageableBehaviour.field_o[ola.field_Eb] = param0;
         bq.field_h[ola.field_Eb] = param1;
-        im.field_o[ola.field_Eb] = param2;
+        PortalBehaviour.field_o[ola.field_Eb] = param2;
         int var6 = param2 + (param1 + param0);
         int var7 = var6 == 0 ? 0 : 1000 * param0 / var6;
         ic.field_c[ola.field_Eb] = var7;
@@ -177,10 +177,10 @@ final class qt {
             }
             if (var2 == 8) {
               var3 = ((PacketBuffer) ((Object) var1)).d(125);
-              var4 = (ht) (jb.field_K.a(-126, (long)var3));
+              var4 = (ht) (WhiteLightSensorComponent.field_K.a(-126, (long)var3));
               if (var4 == null) {
                 var4 = new ht(fk.field_b);
-                jb.field_K.a(-1, var4, (long)var3);
+                WhiteLightSensorComponent.field_K.a(-1, var4, (long)var3);
               }
               ed.a(32, var4, true, var1);
               cua.a(var4, (byte) 80);
@@ -189,7 +189,7 @@ final class qt {
             if (var2 == 9) {
               var3Lifetime4 = ((PacketBuffer) ((Object) var1)).d(121);
               var4_int = ((PacketBuffer) ((Object) var1)).h(255);
-              var33 = (ht) (jb.field_K.a(-107, (long)var3Lifetime4));
+              var33 = (ht) (WhiteLightSensorComponent.field_K.a(-107, (long)var3Lifetime4));
               if (var33 != null) {
                 if (0 != var4_int) {
                   var33.field_zb = qsa.field_a;
@@ -215,7 +215,7 @@ final class qt {
               if (13 == var2) {
                 var3Lifetime5 = ((PacketBuffer) ((Object) var1)).d(127);
                 var4_intLifetime1 = ((PacketBuffer) ((Object) var1)).h(255);
-                var17_ref = (ht) (jb.field_K.a(-112, (long)var3Lifetime5));
+                var17_ref = (ht) (WhiteLightSensorComponent.field_K.a(-112, (long)var3Lifetime5));
                 if (var17_ref != null) {
                   var14 = var17_ref;
                   var6 = var14;
@@ -287,11 +287,11 @@ final class qt {
                   }
                   if (var2 == 22) {
                     ProxySocketConnector.field_f = ((PacketBuffer) ((Object) var1)).d(123);
-                    bha.field_z = ((PacketBuffer) ((Object) var1)).b((byte) 114);
+                    FleeLocomotor.field_z = ((PacketBuffer) ((Object) var1)).b((byte) 114);
                     return;
                   }
                   if (var2 == 23) {
-                    rb.field_r = ((PacketBuffer) ((Object) var1)).b(290646880);
+                    SimpleConditionBehaviour.field_r = ((PacketBuffer) ((Object) var1)).b(290646880);
                     return;
                   }
                   ssa.a("L1: " + kk.a(32), (byte) 118, (Throwable) null);
@@ -336,7 +336,7 @@ final class qt {
               return;
             }
             var3Lifetime6 = ((PacketBuffer) ((Object) var1)).d(123);
-            var19_ref = (ht) (jb.field_K.a(-111, (long)var3Lifetime6));
+            var19_ref = (ht) (WhiteLightSensorComponent.field_K.a(-111, (long)var3Lifetime6));
             var25 = var19_ref;
             if (var25 == null) {
               return;
@@ -397,7 +397,7 @@ final class qt {
           for (var3Lifetime2 = 0; vk.field_b.length > var3Lifetime2; var3Lifetime2++) {
             vk.field_b[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).c((byte) 48);
           }
-          aja.field_H = ((PacketBuffer) ((Object) var1)).h(255);
+          CoinBagItemComponent.field_H = ((PacketBuffer) ((Object) var1)).h(255);
           mua.field_b = ((PacketBuffer) ((Object) var1)).h(255);
           for (var3Lifetime3 = 0; var3Lifetime3 < tqa.field_e.length; var3Lifetime3++) {
             tqa.field_e[var3Lifetime3] = ((PacketBuffer) ((Object) var1)).c((byte) 108);
@@ -440,7 +440,7 @@ final class qt {
           ub.field_i = param0;
           al.field_j = param6;
           wua.field_n = param2;
-          osa.field_p = param4;
+          ConstraintLocomotor.field_p = param4;
           ki.field_n = null;
           faa.field_g = param3;
           return true;

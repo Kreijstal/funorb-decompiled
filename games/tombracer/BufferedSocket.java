@@ -324,7 +324,7 @@ final class BufferedSocket implements Runnable {
           }
           if (this.field_j != null) {
             while (this.field_j.field_b == 0) {
-              vja.a(0, 1L);
+              TrapSpawner.a(0, 1L);
             }
             if (1 == this.field_j.field_b) {
               try {

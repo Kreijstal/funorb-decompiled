@@ -266,7 +266,7 @@ final class oj extends jea {
             stackIn_2_0 = 109;
             return stackIn_2_0;
           }
-          if (ln.field_F == param1) {
+          if (PlatformComponent.field_F == param1) {
             stackIn_5_0 = 7681;
             return stackIn_5_0;
           }

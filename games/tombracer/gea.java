@@ -53,7 +53,7 @@ final class gea {
         int[] var16 = null;
         var9 = TombRacer.field_G ? 1 : 0;
         try {
-          var3_int = bg.field_t;
+          var3_int = ApproachPlayerLocomotor.field_t;
           rua.field_gb = new jea(0L, (jea) null);
           if (param1 == null) {
             var10 = (Throwable) null;
@@ -73,7 +73,7 @@ final class gea {
           vp.a(-1, var4);
           var12 = (il) null;
           oka.field_w = ow.a(1127256, 1513239, 1513239, 0, (il) null, 2245737, 4020342, 65793, 65793, 5138823, 8947848, 65793, (byte) -78);
-          uka.field_M = ow.a(0, 0, 0, 16764006, param2, 0, param0, 0, 0, 0, 0, 0, (byte) -81);
+          BoulderComponent.field_M = ow.a(0, 0, 0, 16764006, param2, 0, param0, 0, 0, 0, 0, 0, (byte) -81);
           tg.field_c = ow.a(0, 0, 0, 16777215, param2, 0, 0, 0, 0, 0, 0, 0, (byte) -123);
           var5 = bea.field_g;
           var6 = bea.field_a;
@@ -84,7 +84,7 @@ final class gea {
             bea.f(var8, var8 + 1, -(var8 << 1) + 14, 16777215);
           }
           bea.a(var16, var5, var6);
-          cia.field_g = qla.a(true, uka.field_M, oka.field_w, var4, tg.field_c);
+          cia.field_g = qla.a(true, BoulderComponent.field_M, oka.field_w, var4, tg.field_c);
           rua.field_gb.field_J = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -147,8 +147,8 @@ final class gea {
           var3_int = param1.b((byte) 44, 4);
           this.field_b = new int[var3_int][2];
           for (var4 = 0; var3_int > var4; var4++) {
-            this.field_b[var4][0] = bla.a(true, 12, param1.b((byte) 44, 12)) << 16;
-            this.field_b[var4][1] = bla.a(true, 12, param1.b((byte) 44, 12)) << 16;
+            this.field_b[var4][0] = CoinItemComponent.a(true, 12, param1.b((byte) 44, 12)) << 16;
+            this.field_b[var4][1] = CoinItemComponent.a(true, 12, param1.b((byte) 44, 12)) << 16;
           }
           if (11 <= param0) {
             this.field_a = param1.b((byte) 44, 1) == 1 ? true : false;

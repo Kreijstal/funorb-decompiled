@@ -46,7 +46,7 @@ final class is extends jea {
               this.field_vb.length() > 0) {
               discarded$3 = this.field_vb.append((char) var2);
             }
-            if (dja.a((byte) -17, (char) var2)) {
+            if (PressureSwitchBehaviour.a((byte) -17, (char) var2)) {
               discarded$4 = this.field_vb.append((char) var2);
               if (fna.field_h == 84) {
                 if (this.field_vb.length() <= 0) {
@@ -101,7 +101,7 @@ final class is extends jea {
           return true;
         }
         if (0 < this.field_vb.length()) {
-          ana.a(-1 + this.field_vb.length(), ' ', -11, this.field_vb);
+          DarknessBehaviour.a(-1 + this.field_vb.length(), ' ', -11, this.field_vb);
         }
         if (this.field_vb.length() >= 12) {
           if (fna.field_h == 84) {
@@ -128,7 +128,7 @@ final class is extends jea {
           this.field_vb.length() > 0) {
           discarded$0 = this.field_vb.append((char) var2Lifetime1);
         }
-        if (dja.a((byte) -17, (char) var2Lifetime1)) {
+        if (PressureSwitchBehaviour.a((byte) -17, (char) var2Lifetime1)) {
           discarded$1 = this.field_vb.append((char) var2Lifetime1);
           if (fna.field_h == 84) {
             if (this.field_vb.length() <= 0) {
@@ -227,9 +227,9 @@ final class is extends jea {
           }
           if (fna.field_h == 85 &&
             this.field_vb.length() > 0) {
-            ana.a(-1 + this.field_vb.length(), ' ', -11, this.field_vb);
+            DarknessBehaviour.a(-1 + this.field_vb.length(), ' ', -11, this.field_vb);
           }
-          if (ih.a((CharSequence) ((Object) this.field_vb), true, kda.field_td)) {
+          if (LaserShooterComponent.a((CharSequence) ((Object) this.field_vb), true, kda.field_td)) {
             discarded$0 = this.field_vb.append(kda.field_td);
           } else {
             if (this.field_vb.length() == 0 &&

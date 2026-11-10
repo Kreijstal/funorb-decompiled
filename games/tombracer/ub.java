@@ -48,15 +48,15 @@ final class ub {
           tba.field_k = param0;
           fla.field_f.d(8);
           wv.field_l.d(8);
-          var1 = hia.field_s.b(16);
+          var1 = TrackPlayerLocomotor.field_s.b(16);
           while (var1 != null) {
             var1.unlinkSecondary(-7975);
-            var1 = hia.field_s.a((byte) -112);
+            var1 = TrackPlayerLocomotor.field_s.a((byte) -112);
           }
-          var1Lifetime1 = bla.field_G.b(param0 - 120);
+          var1Lifetime1 = CoinItemComponent.field_G.b(param0 - 120);
           while (var1Lifetime1 != null) {
             var1Lifetime1.unlinkSecondary(-7975);
-            var1Lifetime1 = bla.field_G.a((byte) -112);
+            var1Lifetime1 = CoinItemComponent.field_G.a((byte) -112);
           }
           ae.field_g = 0;
         } catch (RuntimeException runtimeException) {

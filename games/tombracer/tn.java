@@ -110,8 +110,8 @@ final class tn extends IntrusiveNode {
         if (cga.field_f < 2) {
           return ub.field_b;
         }
-        if (nja.field_J != null) {
-          if (!nja.field_J.b(-60)) {
+        if (InvisibleTouchSwitchComponent.field_J != null) {
+          if (!InvisibleTouchSwitchComponent.field_J.b(-60)) {
             return hra.field_c;
           }
           return voa.field_s;
@@ -126,13 +126,13 @@ final class tn extends IntrusiveNode {
           return MouseInputHandler.field_a;
         }
         if (!hm.field_n.c("commonui", -128)) {
-          return vja.field_b + " - " + hm.field_n.a("commonui", true) + "%";
+          return TrapSpawner.field_b + " - " + hm.field_n.a("commonui", true) + "%";
         }
         if (!vc.field_p.b(param0 + 10827)) {
           return wt.field_b;
         }
         if (!vc.field_p.a(0)) {
-          return th.field_u + " - " + vc.field_p.a(true) + "%";
+          return WindZoneBehaviour.field_u + " - " + vc.field_p.a(true) + "%";
         }
         return PlayerSimulation.field_n;
     }
@@ -398,7 +398,7 @@ final class tn extends IntrusiveNode {
               }
               var22 = var38.b((byte) -123);
             }
-            this.field_g[var23] = (short)(this.field_g[var23] + (sea.c(-1 + var22, 2) << 14));
+            this.field_g[var23] = (short)(this.field_g[var23] + (SnakePitBehaviour.c(-1 + var22, 2) << 14));
             var20Lifetime2--;
             this.field_k[var23] = var22;
           }

@@ -65,7 +65,7 @@ final class fa {
           }
           if (null == var2 &&
             !voa.field_v &&
-            wi.field_s == null) {
+            SimpleMoveLocomotor.field_s == null) {
             var2 = rt.field_p;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -81,9 +81,9 @@ final class fa {
             var6 = bta.field_q;
             var7 = 0;
             if (var6 == 2) {
-              var4 = gl.$cfr$intArgs$a$53ce4ab4c593(88, wha.field_G, new String[]{wp.field_a});
+              var4 = gl.$cfr$intArgs$a$53ce4ab4c593(88, TrackMountComponent.field_G, new String[]{wp.field_a});
               var8 = gl.$cfr$intArgs$a$53ce4ab4c593(111, li.field_a, new String[]{var3});
-              var7 = mka.field_b.field_G + (pq.field_g.field_G - 485) + lpa.field_s.b(var8) - lpa.field_s.b(var4);
+              var7 = mka.field_b.field_G + (pq.field_g.field_G - 485) + PlatformBehaviour.field_s.b(var8) - PlatformBehaviour.field_s.b(var4);
               if (0 > var7) {
                 var7 = 0;
               }
@@ -108,7 +108,7 @@ final class fa {
                   var6 = 1;
                 }
               }
-              if (rn.a(27)) {
+              if (RoomComponentFactory.a(27)) {
                 stackIn_67_0 = ": ";
               } else {
                 stackIn_67_0 = "<img=3>: ";
@@ -116,7 +116,7 @@ final class fa {
               var8Lifetime1 = stackIn_67_0;
               var4 = var4 + var3 + var8Lifetime1;
               if (!fua.field_g) {
-                if (ok.field_s) {
+                if (PowerDownItemBehaviour.field_s) {
                   var5 = "";
                   var4 = "<col=999999>" + var4 + lva.field_o + "</col>";
                   if (var10 != 0) {
@@ -128,8 +128,8 @@ final class fa {
                 var5 = "";
                 var4 = "<col=999999>" + var4 + kia.field_a + "</col>";
               }
-              var9 = lpa.field_s.b(var4);
-              if (!rn.a(27)) {
+              var9 = PlatformBehaviour.field_s.b(var4);
+              if (!RoomComponentFactory.a(27)) {
                 if (pq.field_g.field_o &&
                   var9 > jba.field_j - pq.field_g.field_q) {
                   if (fua.field_g) {

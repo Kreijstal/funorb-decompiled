@@ -26,7 +26,7 @@ final class dra {
             field_b = (String[]) null;
           }
           var1 = ql.field_k;
-          while (sea.l(10371)) {
+          while (SnakePitBehaviour.l(10371)) {
             var1.k(8, -2988);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;

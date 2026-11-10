@@ -134,7 +134,7 @@ final class sma {
               stackIn_41_0 = -1;
               return stackIn_41_0;
             }
-            mj.a(param0, var11, 1);
+            KeySwitchComponent.a(param0, var11, 1);
             stackIn_43_0 = 100;
             return stackIn_43_0;
           }

@@ -304,7 +304,7 @@ class jea extends um {
     }
 
     final void c(int param0, boolean param1) {
-        ula.field_w = !param1 ? true : false;
+        FuseBehaviour.field_w = !param1 ? true : false;
         int var3 = -103 / ((-16 - param0) / 34);
         ow.field_s = !param1 ? true : false;
         this.a(-1, true, bea.field_a, bea.field_g, 0, 0);
@@ -432,7 +432,7 @@ class jea extends um {
           }
           this.field_y = 0;
         }
-        stackIn_31_1 = (!ula.field_w) && (jba.field_j >= bea.field_b) && (jba.field_j < bea.field_d) && (sta.field_B >= bea.field_h) && (bea.field_k > sta.field_B);
+        stackIn_31_1 = (!FuseBehaviour.field_w) && (jba.field_j >= bea.field_b) && (jba.field_j < bea.field_d) && (sta.field_B >= bea.field_h) && (bea.field_k > sta.field_B);
         this.field_pb = stackIn_31_1;
         if (ksa.field_p == 0) {
           this.field_E = 0;
@@ -447,7 +447,7 @@ class jea extends um {
           }
         }
         if (this.field_pb) {
-          ula.field_w = true;
+          FuseBehaviour.field_w = true;
         }
         if (var12 != 0) {
           ow.field_s = true;
@@ -603,9 +603,9 @@ class jea extends um {
         var21 = var19 + this.field_S;
         var22 = var20 + this.field_V;
         if (this.field_eb) {
-          rsa.a(param2, var16, param8, -117, param10, param7);
+          ConstrainToLatticeLocomotor.a(param2, var16, param8, -117, param10, param7);
         } else {
-          rsa.a(this.field_t, var16, this.field_A, param1 ^ -120, this.field_G, this.field_q);
+          ConstrainToLatticeLocomotor.a(this.field_t, var16, this.field_A, param1 ^ -120, this.field_G, this.field_q);
         }
         if (var17 != null) {
           var23_int = this.field_q + var21;

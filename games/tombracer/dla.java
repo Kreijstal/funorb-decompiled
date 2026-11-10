@@ -65,7 +65,7 @@ final class dla {
         int var13Lifetime1Lifetime1;
         var16 = TombRacer.field_G ? 1 : 0;
         try {
-          var17 = new PacketBuffer(sua.a(param1, -106));
+          var17 = new PacketBuffer(RotaterMountComponent.a(param1, -106));
           if (param0 != -23918) {
             return;
           }
@@ -242,7 +242,7 @@ final class dla {
         if (cga.field_f < 2) {
           return 0;
         }
-        if (bg.field_t == 0) {
+        if (ApproachPlayerLocomotor.field_t == 0) {
           if (!tk.field_b.b(-100)) {
             return 20;
           }
@@ -262,14 +262,14 @@ final class dla {
             return 80;
           }
         } else {
-          if (nja.field_J != null) {
-            if (!nja.field_J.b(-37)) {
+          if (InvisibleTouchSwitchComponent.field_J != null) {
+            if (!InvisibleTouchSwitchComponent.field_J.b(-37)) {
               return 14;
             }
-            if (!nja.field_J.a("", 127)) {
+            if (!InvisibleTouchSwitchComponent.field_J.a("", 127)) {
               return 29;
             }
-            if (!nja.field_J.c("", -127)) {
+            if (!InvisibleTouchSwitchComponent.field_J.c("", -127)) {
               return 29;
             }
           }

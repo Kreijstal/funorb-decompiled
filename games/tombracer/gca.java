@@ -61,7 +61,7 @@ final class gca {
     }
 
     final static void a(int param0, int param1, int param2) {
-        eq.field_r = param1;
+        SimpleBlockBehaviour.field_r = param1;
         tqa.field_g = param2;
         if (param0 != 2533) {
           field_i = (String[]) null;

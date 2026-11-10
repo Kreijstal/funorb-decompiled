@@ -15,16 +15,16 @@ final class dha {
           if (era.field_d == null) {
             if (!ni.field_c) {
               if (vo.field_b) {
-                return mj.c(2097152, param0, param3);
+                return KeySwitchComponent.c(2097152, param0, param3);
               }
               if (fna.field_h == 9) {
-                return mj.c(2097152, param0, param3);
+                return KeySwitchComponent.c(2097152, param0, param3);
               }
               if (fna.field_h == 10) {
-                return mj.c(2097152, param0, param3);
+                return KeySwitchComponent.c(2097152, param0, param3);
               }
               if (fna.field_h == 11) {
-                return mj.c(2097152, param0, param3);
+                return KeySwitchComponent.c(2097152, param0, param3);
               }
               if (fna.field_h != 80) {
                 return false;
@@ -47,16 +47,16 @@ final class dha {
             }
             if (!ni.field_c) {
               if (vo.field_b) {
-                return mj.c(2097152, param0, param3);
+                return KeySwitchComponent.c(2097152, param0, param3);
               }
               if (fna.field_h == 9) {
-                return mj.c(2097152, param0, param3);
+                return KeySwitchComponent.c(2097152, param0, param3);
               }
               if (fna.field_h == 10) {
-                return mj.c(2097152, param0, param3);
+                return KeySwitchComponent.c(2097152, param0, param3);
               }
               if (fna.field_h == 11) {
-                return mj.c(2097152, param0, param3);
+                return KeySwitchComponent.c(2097152, param0, param3);
               }
               if (fna.field_h != 80) {
                 return false;
@@ -82,16 +82,16 @@ final class dha {
             }
             if (!ni.field_c) {
               if (vo.field_b) {
-                return mj.c(2097152, param0, param3);
+                return KeySwitchComponent.c(2097152, param0, param3);
               }
               if (fna.field_h == 9) {
-                return mj.c(2097152, param0, param3);
+                return KeySwitchComponent.c(2097152, param0, param3);
               }
               if (fna.field_h == 10) {
-                return mj.c(2097152, param0, param3);
+                return KeySwitchComponent.c(2097152, param0, param3);
               }
               if (fna.field_h == 11) {
-                return mj.c(2097152, param0, param3);
+                return KeySwitchComponent.c(2097152, param0, param3);
               }
               if (fna.field_h != 80) {
                 return false;
@@ -110,16 +110,16 @@ final class dha {
           } else {
             if (!ni.field_c) {
               if (vo.field_b) {
-                return mj.c(2097152, param0, param3);
+                return KeySwitchComponent.c(2097152, param0, param3);
               }
               if (fna.field_h == 9) {
-                return mj.c(2097152, param0, param3);
+                return KeySwitchComponent.c(2097152, param0, param3);
               }
               if (fna.field_h == 10) {
-                return mj.c(2097152, param0, param3);
+                return KeySwitchComponent.c(2097152, param0, param3);
               }
               if (fna.field_h == 11) {
-                return mj.c(2097152, param0, param3);
+                return KeySwitchComponent.c(2097152, param0, param3);
               }
               if (fna.field_h != 80) {
                 return false;

@@ -209,7 +209,7 @@ final class ila {
               stackIn_7_0 = -82;
               return stackIn_7_0;
             }
-            if (sua.field_G == km.field_p) {
+            if (RotaterMountComponent.field_G == km.field_p) {
               if (!param5) {
                 fd.field_d = via.a(param1, 64, false, param4);
               } else {
@@ -236,7 +236,7 @@ final class ila {
             }
             if (ola.field_yb == km.field_p &&
               ama.a(8, -1)) {
-              ra.field_L = vc.field_q.b(290646880);
+              PathMoverComponent.field_L = vc.field_q.b(290646880);
               vc.field_q.position = 0;
               ova.a((byte) 121, param5, param3, fd.field_d, param0);
               km.field_p = ria.field_o;
@@ -257,7 +257,7 @@ final class ila {
                 }
                 else {
                   dea.a(60);
-                  uc.field_L = false;
+                  PushableBlockMazeComponent.field_L = false;
                   stackIn_31_0 = var6_intLifetime1;
                   return stackIn_31_0;
                 }
@@ -272,7 +272,7 @@ final class ila {
               tr.field_g = vc.field_q.b(param2 + 290646830);
               gj.field_q = param1;
               ld.field_e = vc.field_q.h(param2 ^ 205);
-              rja.field_e = vc.field_q.h(255);
+              PrimMazeGenerator.field_e = vc.field_q.h(255);
               wla.field_ub = vc.field_q.d(124);
               var6 = vc.field_q.c(param2 - 28740);
               var7 = vc.field_q.h(255);
@@ -283,11 +283,11 @@ final class ila {
                 stackIn_43_0 = (0 != (var7 & 4));
                 ai.field_a = stackIn_43_0;
                 stackIn_46_0 = ((2 & var7) != 0);
-                ok.field_s = stackIn_46_0;
+                PowerDownItemBehaviour.field_s = stackIn_46_0;
                 stackIn_49_0 = ((8 & var7) != 0);
                 fua.field_g = stackIn_49_0;
                 if (fua.field_g) {
-                  ok.field_s = true;
+                  PowerDownItemBehaviour.field_s = true;
                 }
               }
               stackIn_54_0 = (0 != (var7 & 16));
@@ -314,7 +314,7 @@ final class ila {
                   ub.field_d.a(di.a(109), 5);
                 }
               }
-              uc.field_L = false;
+              PushableBlockMazeComponent.field_L = false;
               if (var6 != null) {
                 mp.a(var6, di.a(41), -21407);
               }
@@ -337,11 +337,11 @@ final class ila {
               if (0 < wla.field_ub) {
                 ft.field_a = true;
               }
-              ql.field_k.a(-26185, qi.field_K);
+              ql.field_k.a(-26185, AllPlatformsMazeComponent.field_K);
               for (var8Lifetime1 = 0; 4 > var8Lifetime1; var8Lifetime1++) {
-                qi.field_K[var8Lifetime1] = qi.field_K[var8Lifetime1] + 50;
+                AllPlatformsMazeComponent.field_K[var8Lifetime1] = AllPlatformsMazeComponent.field_K[var8Lifetime1] + 50;
               }
-              vc.field_q.a(param2 ^ -26235, qi.field_K);
+              vc.field_q.a(param2 ^ -26235, AllPlatformsMazeComponent.field_K);
               stackIn_81_0 = oka.field_z;
               return stackIn_81_0;
             }
@@ -349,8 +349,8 @@ final class ila {
               cla.g(0)) {
               dea.a(60);
               if (oka.field_z == 7 &&
-                !uc.field_L) {
-                uc.field_L = true;
+                !PushableBlockMazeComponent.field_L) {
+                PushableBlockMazeComponent.field_L = true;
                 stackIn_88_0 = -1;
                 return stackIn_88_0;
               }
@@ -358,25 +358,25 @@ final class ila {
                 oka.field_z = 3;
               }
               io.field_b = vc.field_q.e((byte) -76);
-              uc.field_L = false;
+              PushableBlockMazeComponent.field_L = false;
               stackIn_93_0 = oka.field_z;
               return stackIn_93_0;
             }
             if (null == oba.field_e) {
-              if (uc.field_L) {
+              if (PushableBlockMazeComponent.field_L) {
                 if (rf.b((byte) -121) > 30000L) {
                   io.field_b = hb.field_u;
                 } else {
                   io.field_b = sq.field_x;
                 }
-                uc.field_L = false;
+                PushableBlockMazeComponent.field_L = false;
                 stackIn_102_0 = 3;
                 return stackIn_102_0;
               }
               var6_intLifetime2 = nn.field_b;
               nn.field_b = uq.field_a;
               uq.field_a = var6_intLifetime2;
-              uc.field_L = true;
+              PushableBlockMazeComponent.field_L = true;
             }
             stackIn_104_0 = -1;
             return stackIn_104_0;
@@ -480,13 +480,13 @@ final class ila {
           dga.field_a = var8.e((byte) -76);
         }
         if (!param1) {
-          hi.field_p = dl.a(var8, 80, -117);
+          ConveyorBehaviour.field_p = dl.a(var8, 80, -117);
           qra.field_e = null;
         } else {
           var5 = var8.d(121);
           try {
             var9 = qu.field_a.a(false, var5);
-            hi.field_p = var9.b((byte) -5);
+            ConveyorBehaviour.field_p = var9.b((byte) -5);
             if (!gia.field_q.equals(fna.field_k)) {
               stackIn_21_0 = var9.field_m;
             } else {
@@ -497,7 +497,7 @@ final class ila {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
             ssa.a("CC1", (byte) 115, (Throwable) ((Object) var6));
-            hi.field_p = null;
+            ConveyorBehaviour.field_p = null;
             qra.field_e = null;
           }
         }

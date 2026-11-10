@@ -154,11 +154,11 @@ final class rda extends ci {
               } catch (IOException iOException) {
               }
             }
-            if (null != tna.field_c) {
-              for (var1_int = 0; var1_int < tna.field_c.length; var1_int++) {
-                if (tna.field_c[var1_int] != null) {
+            if (null != DivisionMazeGenerator.field_c) {
+              for (var1_int = 0; var1_int < DivisionMazeGenerator.field_c.length; var1_int++) {
+                if (DivisionMazeGenerator.field_c[var1_int] != null) {
                   try {
-                    tna.field_c[var1_int].b((byte) -37);
+                    DivisionMazeGenerator.field_c[var1_int].b((byte) -37);
                   } catch (IOException var2_ref) {
                   }
                 }
@@ -226,9 +226,9 @@ final class rda extends ci {
             var13 = var31[2];
             for (var14 = 0; ns.field_g > var14; var14++) {
               var15 = var32[var14];
-              var13[var14] = sea.c(255, var15) << 4;
-              var12[var14] = sea.c(65280, var15) >> 4;
-              var11[var14] = sea.c(var15, 16711680) >> 12;
+              var13[var14] = SnakePitBehaviour.c(255, var15) << 4;
+              var12[var14] = SnakePitBehaviour.c(65280, var15) >> 4;
+              var11[var14] = SnakePitBehaviour.c(var15, 16711680) >> 12;
             }
           }
         }

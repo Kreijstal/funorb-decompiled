@@ -213,7 +213,7 @@ final class cm implements bo {
               }
             }
           }
-          if (sg.field_u.length >= 2) {
+          if (SafeZoneBehaviour.field_u.length >= 2) {
             if (param3) {
               stackIn_42_0 = (kca.field_g != -1) ? 1 : 0;
             } else {
@@ -228,7 +228,7 @@ final class cm implements bo {
               vk.field_b[var7 / 8] = (byte)fh.a((int) vk.field_b[var7 / 8], 1 << var7 % 8);
             }
             stackIn_50_0 = (!param3) ? 0 : -1;
-            for (var7 = stackIn_50_0; sg.field_u.length > var7; var7++) {
+            for (var7 = stackIn_50_0; SafeZoneBehaviour.field_u.length > var7; var7++) {
               if (var6Lifetime1 != 0) {
                 stackIn_58_0 = (var7 != kca.field_g) ? 1 : 0;
               } else {
@@ -238,7 +238,7 @@ final class cm implements bo {
               if (var4_int != 0 &&
                 0 != bf.field_b[1][1 + var7].field_y) {
                 if (!param3) {
-                  var9 = sg.field_u[var7];
+                  var9 = SafeZoneBehaviour.field_u[var7];
                   if (param1.field_Jb != var9) {
                     var5 = 1;
                     param1.field_Jb = var9;
@@ -250,7 +250,7 @@ final class cm implements bo {
                         vk.field_b[var9] = (byte) 0;
                       }
                     } else {
-                      vk.field_b[var7 / 8] = (byte)kha.b((int) vk.field_b[var7 / 8], 1 << sea.c(var7, 7));
+                      vk.field_b[var7 / 8] = (byte)kha.b((int) vk.field_b[var7 / 8], 1 << SnakePitBehaviour.c(var7, 7));
                     }
                   }
                 }
@@ -258,7 +258,7 @@ final class cm implements bo {
               if (param3) {
                 if (var7 == -1) {
                   bf.field_b[1][var7 + 1].field_cb = true;
-                  for (var9 = 0; var9 < sg.field_u.length; var9++) {
+                  for (var9 = 0; var9 < SafeZoneBehaviour.field_u.length; var9++) {
                     dupTemp$0 = bf.field_b[1][1 + var7];
                     stackIn_81_0 = dupTemp$0;
                     stackIn_81_1 = dupTemp$0.field_cb;
@@ -274,7 +274,7 @@ final class cm implements bo {
                   stackIn_84_0.field_cb = stackIn_87_1;
                 }
               } else {
-                var9 = sg.field_u[var7];
+                var9 = SafeZoneBehaviour.field_u[var7];
                 stackIn_74_0 = bf.field_b[1][var7 + 1];
                 stackIn_75_1 = (param1.field_Jb == var9);
                 stackIn_74_0.field_cb = stackIn_75_1;
@@ -322,19 +322,19 @@ final class cm implements bo {
             }
           }
           if (param3 &&
-            ws.field_r > 1) {
-            for (var6Lifetime3 = 0; var6Lifetime3 < 1 + ws.field_r; var6Lifetime3++) {
+            MirrorMoverLocomotor.field_r > 1) {
+            for (var6Lifetime3 = 0; var6Lifetime3 < 1 + MirrorMoverLocomotor.field_r; var6Lifetime3++) {
               var29 = bf.field_b[3][var6Lifetime3];
               if (var4_int != 0 &&
                 var29.field_y != 0) {
-                aja.field_H = var6Lifetime3;
+                CoinBagItemComponent.field_H = var6Lifetime3;
               }
               if (var29.field_pb &&
                 var6Lifetime3 > 0) {
-                if (null == mh.field_L) {
+                if (null == DoorwayComponent.field_L) {
                   stackIn_139_0 = null;
                 } else {
-                  stackIn_139_0 = mh.field_L[-1 + var6Lifetime3];
+                  stackIn_139_0 = DoorwayComponent.field_L[-1 + var6Lifetime3];
                 }
                 var8 = stackIn_139_0;
                 if (var8 != null) {
@@ -345,7 +345,7 @@ final class cm implements bo {
               stackIn_144_1 = (var4_int != 0);
               stackIn_143_0.field_X = stackIn_144_1;
               stackIn_146_0 = var29;
-              stackIn_147_1 = (aja.field_H == var6Lifetime3);
+              stackIn_147_1 = (CoinBagItemComponent.field_H == var6Lifetime3);
               stackIn_146_0.field_cb = stackIn_147_1;
             }
           }
@@ -372,10 +372,10 @@ final class cm implements bo {
                   var15 = b.a(~mi.field_g & lga.field_z[var7][var9], (byte) -115);
                   var14 = 1;
                 }
-                if (rl.field_u != null &&
-                  rl.field_u[var7] != null &&
+                if (PowerUpItemBehaviour.field_u != null &&
+                  PowerUpItemBehaviour.field_u[var7] != null &&
                   wla.field_ub <= 0 &&
-                  rl.field_u[var7][var9]) {
+                  PowerUpItemBehaviour.field_u[var7][var9]) {
                   var10 = 1;
                 }
                 if (null != hp.field_a &&
@@ -400,7 +400,7 @@ final class cm implements bo {
                     var10 = 1;
                   }
                   if (var16Lifetime2 > 0 &&
-                    bha.field_z < var16Lifetime2) {
+                    FleeLocomotor.field_z < var16Lifetime2) {
                     var11 = 1;
                   }
                 }
@@ -427,7 +427,7 @@ final class cm implements bo {
                 var12 = 0;
                 var10 = 0;
               }
-              rh.field_s = true;
+              TouchSwitchBehaviour.field_s = true;
               if (var10 == 0 &&
                 var11 == 0 &&
                 var12 == 0 &&
@@ -450,16 +450,16 @@ final class cm implements bo {
                   tba.field_m = new byte[fk.field_b];
                   sda.field_f = new boolean[fk.field_b];
                 }
-                rh.field_s = false;
+                TouchSwitchBehaviour.field_s = false;
                 for (var17_int = 0; var17_int < var7; var17_int++) {
                   sda.field_f[var17_int] = false;
                 }
                 cja.a(125, var7, param1, 0, var9, -1, -1, param3);
                 if (ld.field_e >= 2 &&
                   oj.field_tb[12]) {
-                  rh.field_s = true;
+                  TouchSwitchBehaviour.field_s = true;
                 }
-                if (!rh.field_s) {
+                if (!TouchSwitchBehaviour.field_s) {
                   var16Lifetime1 = 1;
                 }
               }
@@ -475,16 +475,16 @@ final class cm implements bo {
                 } else {
                   if (var9 == -1) {
                     for (var18 = var6Lifetime4; var18 < -1 + var6Lifetime4 + var30.length; var18++) {
-                      tqa.field_e[var18 / 8] = (byte)sea.c((int) tqa.field_e[var18 / 8], ~(1 << sea.c(var18, 7)));
+                      tqa.field_e[var18 / 8] = (byte)SnakePitBehaviour.c((int) tqa.field_e[var18 / 8], ~(1 << SnakePitBehaviour.c(var18, 7)));
                     }
                   } else {
-                    tqa.field_e[(var6Lifetime4 + var9) / 8] = (byte)kha.b((int) tqa.field_e[(var6Lifetime4 + var9) / 8], 1 << sea.c(7, var9 + var6Lifetime4));
+                    tqa.field_e[(var6Lifetime4 + var9) / 8] = (byte)kha.b((int) tqa.field_e[(var6Lifetime4 + var9) / 8], 1 << SnakePitBehaviour.c(7, var9 + var6Lifetime4));
                   }
                 }
               }
               if (param3 &&
                 var16Lifetime1 != 0) {
-                tqa.field_e[(var9 + var6Lifetime4) / 8] = (byte)sea.c((int) tqa.field_e[(var9 + var6Lifetime4) / 8], ~(1 << sea.c(7, var6Lifetime4 + var9)));
+                tqa.field_e[(var9 + var6Lifetime4) / 8] = (byte)SnakePitBehaviour.c((int) tqa.field_e[(var9 + var6Lifetime4) / 8], ~(1 << SnakePitBehaviour.c(7, var6Lifetime4 + var9)));
               }
               if (var9 >= 0 &&
                 var17.field_pb) {
@@ -513,7 +513,7 @@ final class cm implements bo {
                 }
                 var21 = null;
                 if (var13 != 0) {
-                  var21 = tp.field_L;
+                  var21 = WhiteLightShooterComponent.field_L;
                   var22 = var21;
                   var25 = var22;
                   var22 = var25;
@@ -529,7 +529,7 @@ final class cm implements bo {
                     var21 = ai.field_b;
                   } else {
                     if (var11 != 0) {
-                      var22_int = nra.field_g[var7][var9] - bha.field_z;
+                      var22_int = nra.field_g[var7][var9] - FleeLocomotor.field_z;
                       if (var22_int == 1) {
                         var21 = rm.field_b;
                       } else {
@@ -567,7 +567,7 @@ final class cm implements bo {
                   }
                 }
                 if (var4_int != 0 &&
-                  !rh.field_s) {
+                  !TouchSwitchBehaviour.field_s) {
                   var22 = null;
                   var23 = 0;
                   if (mm.field_g) {
@@ -615,7 +615,7 @@ final class cm implements bo {
               }
               if (!param3) {
                 stackIn_331_0 = var17;
-                stackIn_332_1 = (rh.field_s) && ((byte)var9 == param1.field_ac[var7]);
+                stackIn_332_1 = (TouchSwitchBehaviour.field_s) && ((byte)var9 == param1.field_ac[var7]);
                 stackIn_331_0.field_cb = stackIn_332_1;
               } else {
                 if (var9 == -1) {

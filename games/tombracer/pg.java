@@ -119,9 +119,9 @@ final class pg extends b implements tma, tsa {
           this.field_w = param0;
           this.field_B = new rj(aua.field_d, (qc) null);
           this.field_B.field_r = (isa) ((Object) new td());
-          var7 = gl.$cfr$intArgs$a$53ce4ab4c593(108, sg.field_q, new String[]{this.c(-58), this.d(-35)});
+          var7 = gl.$cfr$intArgs$a$53ce4ab4c593(108, SafeZoneBehaviour.field_q, new String[]{this.c(-58), this.d(-35)});
           var3 = 20;
-          var4 = new vpa(mj.field_J, 0, 0, 0, 0, 16777215, -1, 3, 0, mj.field_J.field_w, -1, 2147483647, true);
+          var4 = new vpa(KeySwitchComponent.field_J, 0, 0, 0, 0, 16777215, -1, 3, 0, KeySwitchComponent.field_J.field_w, -1, 2147483647, true);
           this.field_z = new lga(var7, var4);
           this.field_z.field_q = "";
           this.field_z.a(sw.field_Fb, 0, 0);

@@ -251,7 +251,7 @@ class rt extends kl {
           boolean decompiledSharedTail0 = (!(param5) ||
             this.field_e == 34037);
           if (!decompiledSharedTail0) {
-            gw.a(param7, 92, param1, param2, param6, param3, param4);
+            PlantComponent.a(param7, 92, param1, param2, param6, param3, param4);
             this.a(true, 4);
             decompiledSharedTail0 = (TombRacer.field_G);
           }

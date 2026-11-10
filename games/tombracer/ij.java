@@ -23,7 +23,7 @@ class ij extends lc implements tsa {
             this.field_cb = (rk) null;
           }
           if (!this.field_Y) {
-            jc.a("tochangedisplayname.ws", di.a(72), (byte) -68);
+            SimpleHoverMountComponent.a("tochangedisplayname.ws", di.a(72), (byte) -68);
             return;
           }
           jsa.a(false, 3);
@@ -175,7 +175,7 @@ class ij extends lc implements tsa {
           var4 = var7;
           if (param0 == 5) {
             var7.a(sba.field_n, 11, 61);
-            var7.a(nj.field_q, 17, 36);
+            var7.a(ControllerLocomotor.field_q, 17, 36);
           } else {
             if (param0 == 256) {
               var7.a(nga.field_q, (byte) -102, (qc) (this));
@@ -184,13 +184,13 @@ class ij extends lc implements tsa {
               if (this.field_V) {
                 stackIn_14_1 = nga.field_q;
               } else {
-                stackIn_14_1 = sm.field_o;
+                stackIn_14_1 = KeyLockBehaviour.field_o;
               }
               ((sr) (Object) stackIn_13_0).a(stackIn_14_1, -1, 78);
             }
           }
           if (3 == param0) {
-            var7.a(tca.field_M, 7, 28);
+            var7.a(MovingWallComponent.field_M, 7, 28);
           } else {
             if (param0 != 4) {
               if (param0 != 6) {
@@ -203,7 +203,7 @@ class ij extends lc implements tsa {
                 var7.a(vf.field_a, 9, -65);
               }
             } else {
-              var7.a(bg.field_p, 8, -83);
+              var7.a(ApproachPlayerLocomotor.field_p, 8, -83);
             }
           }
           this.a(95, var7);

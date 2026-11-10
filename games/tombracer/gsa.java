@@ -40,7 +40,7 @@ final class gsa {
         var9 = TombRacer.field_G ? 1 : 0;
         var4 = -1;
         if (efa.field_y <= param1 &&
-          param1 < ona.field_H) {
+          param1 < SweeperMountComponent.field_H) {
           if (!this.field_k &&
             param1 >= efa.field_y + 50 * param2) {
             if (this.field_v > 0) {
@@ -137,8 +137,8 @@ final class gsa {
           }
         }
         this.field_q = 73.0;
-        if (param1 >= ona.field_H) {
-          var7 = (double)(param1 - ona.field_H);
+        if (param1 >= SweeperMountComponent.field_H) {
+          var7 = (double)(param1 - SweeperMountComponent.field_H);
           if (var7 > 100.0) {
             var7 = 100.0;
           }

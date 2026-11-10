@@ -40,7 +40,7 @@ final class eqa implements os {
         var11 = TombRacer.field_G ? 1 : 0;
         var3 = param1 ? 1 : 0;
         if (!voa.field_v &&
-          wi.field_s == null) {
+          SimpleMoveLocomotor.field_s == null) {
           var3 = 0;
         }
         if (bta.field_q == 0 &&
@@ -93,7 +93,7 @@ final class eqa implements os {
           if (vc.field_n.length() <= 0) {
             return true;
           }
-          ana.a(-1 + vc.field_n.length(), ' ', -11, vc.field_n);
+          DarknessBehaviour.a(-1 + vc.field_n.length(), ' ', -11, vc.field_n);
           return true;
         }
         var4 = kda.field_td;
@@ -121,21 +121,21 @@ final class eqa implements os {
                     tla.field_f != null) {
                     var63 = "[" + tla.field_f + "] ";
                     var65 = var63 + var64 + ": ";
-                    var5Lifetime1 = var5Lifetime1 - lpa.field_s.b(var65);
-                    if (var5Lifetime1 >= lpa.field_s.b(vc.field_n.toString())) {
+                    var5Lifetime1 = var5Lifetime1 - PlatformBehaviour.field_s.b(var65);
+                    if (var5Lifetime1 >= PlatformBehaviour.field_s.b(vc.field_n.toString())) {
                       return true;
                     }
-                    ana.a(vc.field_n.length() - 1, ' ', -11, vc.field_n);
+                    DarknessBehaviour.a(vc.field_n.length() - 1, ' ', -11, vc.field_n);
                     return true;
                   }
                   var7 = "[" + gl.$cfr$intArgs$a$53ce4ab4c593(94, jea.field_nb, new String[]{uu.field_a.field_tb}) + "] ";
                 }
                 var66 = var7 + var64 + ": ";
-                var5Lifetime1 = var5Lifetime1 - lpa.field_s.b(var66);
-                if (var5Lifetime1 >= lpa.field_s.b(vc.field_n.toString())) {
+                var5Lifetime1 = var5Lifetime1 - PlatformBehaviour.field_s.b(var66);
+                if (var5Lifetime1 >= PlatformBehaviour.field_s.b(vc.field_n.toString())) {
                   return true;
                 }
-                ana.a(vc.field_n.length() - 1, ' ', -11, vc.field_n);
+                DarknessBehaviour.a(vc.field_n.length() - 1, ' ', -11, vc.field_n);
                 return true;
               }
               var7 = "[" + cla.field_o + "] ";
@@ -145,34 +145,34 @@ final class eqa implements os {
                 tla.field_f != null) {
                 var67 = "[" + tla.field_f + "] ";
                 var68 = var67 + var64 + ": ";
-                var5Lifetime1 = var5Lifetime1 - lpa.field_s.b(var68);
-                if (var5Lifetime1 >= lpa.field_s.b(vc.field_n.toString())) {
+                var5Lifetime1 = var5Lifetime1 - PlatformBehaviour.field_s.b(var68);
+                if (var5Lifetime1 >= PlatformBehaviour.field_s.b(vc.field_n.toString())) {
                   return true;
                 }
-                ana.a(vc.field_n.length() - 1, ' ', -11, vc.field_n);
+                DarknessBehaviour.a(vc.field_n.length() - 1, ' ', -11, vc.field_n);
                 return true;
               }
               var7 = "[" + gl.$cfr$intArgs$a$53ce4ab4c593(94, jea.field_nb, new String[]{uu.field_a.field_tb}) + "] ";
             }
           }
           var69 = var7 + var64 + ": ";
-          var5Lifetime1 = var5Lifetime1 - lpa.field_s.b(var69);
+          var5Lifetime1 = var5Lifetime1 - PlatformBehaviour.field_s.b(var69);
         } else {
           var73 = (CharSequence) ((Object) wp.field_a);
-          var61 = gl.$cfr$intArgs$a$53ce4ab4c593(115, wha.field_G, new String[]{wt.a(30433, var73)});
+          var61 = gl.$cfr$intArgs$a$53ce4ab4c593(115, TrackMountComponent.field_G, new String[]{wt.a(30433, var73)});
           var62 = gl.$cfr$intArgs$a$53ce4ab4c593(102, li.field_a, new String[]{var16});
-          var9 = lpa.field_s.b(var61);
-          var10 = lpa.field_s.b(var62);
+          var9 = PlatformBehaviour.field_s.b(var61);
+          var10 = PlatformBehaviour.field_s.b(var62);
           if (var9 > var10) {
             var5Lifetime1 = var5Lifetime1 - var9;
           } else {
             var5Lifetime1 = var5Lifetime1 - var10;
           }
         }
-        if (var5Lifetime1 >= lpa.field_s.b(vc.field_n.toString())) {
+        if (var5Lifetime1 >= PlatformBehaviour.field_s.b(vc.field_n.toString())) {
           return true;
         }
-        ana.a(vc.field_n.length() - 1, ' ', -11, vc.field_n);
+        DarknessBehaviour.a(vc.field_n.length() - 1, ' ', -11, vc.field_n);
         return true;
     }
 

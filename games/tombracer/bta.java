@@ -34,7 +34,7 @@ final class bta extends vw {
         this.field_k = param1 ? true : false;
         this.field_c.e(1, false);
         this.field_c.a(true, this.field_p);
-        this.field_c.a(ln.field_F, (byte) -110, r.field_m);
+        this.field_c.a(PlatformComponent.field_F, (byte) -110, r.field_m);
         this.field_c.a(pea.field_c, 0, -30);
         this.field_c.a(ej.field_c, 2, -6219, true, false);
         this.field_c.a(0, false, lja.field_j);

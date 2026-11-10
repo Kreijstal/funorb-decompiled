@@ -85,7 +85,7 @@ final class ala extends dfa {
               stackIn_5_0 = true;
               stackIn_5_1 = 14;
               stackIn_5_2 = pg.field_y;
-              stackIn_5_3 = ga.r((byte) -88);
+              stackIn_5_3 = WallCrusherComponent.r((byte) -88);
               stackIn_5_4 = 13;
               stackIn_5_5 = 61;
               stackIn_6_6 = (50 >= ada.b(false)) ? false : true;
@@ -97,7 +97,7 @@ final class ala extends dfa {
               stackIn_20_0 = true;
               stackIn_20_1 = 14;
               stackIn_20_2 = pg.field_y;
-              stackIn_20_3 = ga.r((byte) -88);
+              stackIn_20_3 = WallCrusherComponent.r((byte) -88);
               stackIn_20_4 = 13;
               stackIn_20_5 = 61;
               stackIn_21_6 = (50 >= ada.b(false)) ? false : true;
@@ -112,7 +112,7 @@ final class ala extends dfa {
                 stackIn_70_0 = true;
                 stackIn_70_1 = 14;
                 stackIn_70_2 = pg.field_y;
-                stackIn_70_3 = ga.r((byte) -88);
+                stackIn_70_3 = WallCrusherComponent.r((byte) -88);
                 stackIn_70_4 = 13;
                 stackIn_70_5 = 61;
                 stackIn_71_6 = (50 >= ada.b(false)) ? false : true;
@@ -124,7 +124,7 @@ final class ala extends dfa {
                 stackIn_85_0 = true;
                 stackIn_85_1 = 14;
                 stackIn_85_2 = pg.field_y;
-                stackIn_85_3 = ga.r((byte) -88);
+                stackIn_85_3 = WallCrusherComponent.r((byte) -88);
                 stackIn_85_4 = 13;
                 stackIn_85_5 = 61;
                 stackIn_86_6 = (50 >= ada.b(false)) ? false : true;
@@ -151,7 +151,7 @@ final class ala extends dfa {
               stackIn_38_0 = true;
               stackIn_38_1 = 14;
               stackIn_38_2 = pg.field_y;
-              stackIn_38_3 = ga.r((byte) -88);
+              stackIn_38_3 = WallCrusherComponent.r((byte) -88);
               stackIn_38_4 = 13;
               stackIn_38_5 = 61;
               stackIn_39_6 = (50 >= ada.b(false)) ? false : true;
@@ -163,7 +163,7 @@ final class ala extends dfa {
               stackIn_53_0 = true;
               stackIn_53_1 = 14;
               stackIn_53_2 = pg.field_y;
-              stackIn_53_3 = ga.r((byte) -88);
+              stackIn_53_3 = WallCrusherComponent.r((byte) -88);
               stackIn_53_4 = 13;
               stackIn_53_5 = 61;
               stackIn_54_6 = (50 >= ada.b(false)) ? false : true;
@@ -275,7 +275,7 @@ final class ala extends dfa {
 
     final static void a(byte param0, String param1, boolean param2, float param3) {
         if (null == ena.field_p) {
-          ena.field_p = new vs(ej.field_a, sea.field_o);
+          ena.field_p = new vs(ej.field_a, SnakePitBehaviour.field_o);
           ej.field_a.c(ena.field_p, 89);
         }
         ena.field_p.a(param3, param1, param2, (byte) 110);
@@ -294,7 +294,7 @@ final class ala extends dfa {
         if (param2 != 1) {
           return true;
         }
-        return dja.a(15, 12, (byte) -106, 13);
+        return PressureSwitchBehaviour.a(15, 12, (byte) -106, 13);
     }
 
     final void a(byte param0, boolean param1) {

@@ -174,7 +174,7 @@ final class fja extends qra {
             var5_intLifetime1 = var5_intLifetime1 + (var7_intLifetime1 + 16);
             var7_intLifetime1Lifetime2 = 32;
             qa.a(var7_intLifetime1Lifetime2, var6Lifetime1, (byte) 80, var4_intLifetime1, aq.field_a, var5_intLifetime1);
-            kn.field_p.a((aa) null, var6Lifetime1, 40, 0, var5_intLifetime1 + 2, fm.a(false, 0), SpriteState.field_l, 1, fm.a(false, 11903361), tp.field_J, (byte) 116, var7_intLifetime1Lifetime2, 0, id.field_h, var4_intLifetime1, 1);
+            kn.field_p.a((aa) null, var6Lifetime1, 40, 0, var5_intLifetime1 + 2, fm.a(false, 0), SpriteState.field_l, 1, fm.a(false, 11903361), WhiteLightShooterComponent.field_J, (byte) 116, var7_intLifetime1Lifetime2, 0, id.field_h, var4_intLifetime1, 1);
           }
           if (!param1) {
             return;
@@ -184,7 +184,7 @@ final class fja extends qra {
           }
           if (this.field_q > 0) {
             if (50 >= this.field_q) {
-              var4 = jh.field_J;
+              var4 = FlameShooterComponent.field_J;
             } else {
               var4 = MouseInputHandler.field_b.toUpperCase();
             }
@@ -196,7 +196,7 @@ final class fja extends qra {
               if (0 != this.field_c.field_K) {
                 oka.a(var4, 16777215, eda.field_f, -1, var7_intLifetime1Lifetime1, var6Lifetime1Lifetime1, 0);
               } else {
-                oka.a(uqa.field_z + " " + (1 + this.field_c.field_A), 16777215, eda.field_f, -1, 225, var6Lifetime1Lifetime1, 0);
+                oka.a(ConstrainToCircleLocomotor.field_z + " " + (1 + this.field_c.field_A), 16777215, eda.field_f, -1, 225, var6Lifetime1Lifetime1, 0);
                 oka.a(var4, 16777215, eda.field_f, -1, 255, var6Lifetime1Lifetime1, 0);
               }
             } else {
@@ -507,7 +507,7 @@ final class fja extends qra {
             stackIn_8_0 = -1;
             return stackIn_8_0;
           }
-          if (km.field_p == sua.field_G) {
+          if (km.field_p == RotaterMountComponent.field_G) {
             ql.field_k.position = 0;
             kia.field_b = null;
             if (param1 != null) {
@@ -516,8 +516,8 @@ final class fja extends qra {
               if (param2) {
                 var9 = var9 | 1;
               }
-              jg.field_a.a(lpa.field_p.nextInt(), (byte) 91);
-              jg.field_a.a(lpa.field_p.nextInt(), (byte) 92);
+              jg.field_a.a(PlatformBehaviour.field_p.nextInt(), (byte) 91);
+              jg.field_a.a(PlatformBehaviour.field_p.nextInt(), (byte) 92);
               jg.field_a.a(var14, (byte) 0);
               jg.field_a.a(var8, (byte) 0);
               var15 = (CharSequence) ((Object) param1);
@@ -537,8 +537,8 @@ final class fja extends qra {
               ql.field_k.b(ql.field_k.position - var10, (byte) -35);
             } else {
               jg.field_a.position = 0;
-              jg.field_a.a(lpa.field_p.nextInt(), (byte) -106);
-              jg.field_a.a(lpa.field_p.nextInt(), (byte) 92);
+              jg.field_a.a(PlatformBehaviour.field_p.nextInt(), (byte) -106);
+              jg.field_a.a(PlatformBehaviour.field_p.nextInt(), (byte) 92);
               stackIn_14_0 = jg.field_a;
               if (!param4.a((byte) 29)) {
                 stackIn_15_1 = "";
@@ -569,18 +569,18 @@ final class fja extends qra {
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               km.field_p = ne.field_c;
-              dja.field_s = new String[-100 + var9Lifetime1];
+              PressureSwitchBehaviour.field_s = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
                 pu.a(di.a(21), 255);
                 io.field_b = qda.field_f;
                 dea.a(60);
-                uc.field_L = false;
+                PushableBlockMazeComponent.field_L = false;
                 stackIn_33_0 = var9Lifetime1;
                 return stackIn_33_0;
               }
               if (99 == var9Lifetime1) {
-                ama.a(bha.f(1), -1);
+                ama.a(FleeLocomotor.f(1), -1);
                 kia.field_b = new Boolean(di.a(vc.field_q, (byte) 107));
                 vc.field_q.position = 0;
               } else {
@@ -596,12 +596,12 @@ final class fja extends qra {
               var10Lifetime1 = vc.field_q.d(124);
               vc.field_q.position = 0;
               if (ama.a(var10Lifetime1, -1)) {
-                var11 = dja.field_s.length;
+                var11 = PressureSwitchBehaviour.field_s.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  dja.field_s[var12] = vc.field_q.f(121);
+                  PressureSwitchBehaviour.field_s[var12] = vc.field_q.f(121);
                 }
                 dea.a(60);
-                uc.field_L = false;
+                PushableBlockMazeComponent.field_L = false;
                 stackIn_46_0 = var11 + 100;
                 return stackIn_46_0;
               }
@@ -618,25 +618,25 @@ final class fja extends qra {
               io.field_b = vc.field_q.e((byte) -76);
             }
             dea.a(60);
-            uc.field_L = false;
+            PushableBlockMazeComponent.field_L = false;
             stackIn_57_0 = oka.field_z;
             return stackIn_57_0;
           }
           if (null == oba.field_e) {
-            if (uc.field_L) {
+            if (PushableBlockMazeComponent.field_L) {
               if (rf.b((byte) -121) > 30000L) {
                 io.field_b = hb.field_u;
               } else {
                 io.field_b = sq.field_x;
               }
-              uc.field_L = false;
+              PushableBlockMazeComponent.field_L = false;
               stackIn_65_0 = 249;
               return stackIn_65_0;
             }
             var9Lifetime3 = nn.field_b;
             nn.field_b = uq.field_a;
             uq.field_a = var9Lifetime3;
-            uc.field_L = true;
+            PushableBlockMazeComponent.field_L = true;
           }
           stackIn_68_0 = -1;
           return stackIn_68_0;
@@ -731,7 +731,7 @@ final class fja extends qra {
             if (this.field_h.field_D) {
               this.field_h.a(new dua(this.field_h), 680);
             }
-            er.b(1, 1);
+            TripBeamComponent.b(1, 1);
           }
           this.field_h.field_r = -1;
           this.b((byte) 122);

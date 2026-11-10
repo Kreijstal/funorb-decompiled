@@ -396,7 +396,7 @@ final class gja extends ka {
             this.field_jb = new short[this.field_I];
           }
           this.field_gb = new short[this.field_I];
-          tl.field_q = new long[var12];
+          TimeSwitchBehaviour.field_q = new long[var12];
           this.field_T = (short)param3;
           this.field_t = new float[var12];
           this.field_P = new short[this.field_I];
@@ -609,15 +609,15 @@ final class gja extends ka {
                         default:
                           break;
                         case 3:
-                          ifa.a(param1.field_p[var32_int], param1.field_b[var32_int], var36, var37_int, rn.field_a, var40, var39, var35, var38, (byte) -44, param1.field_I[var32_int]);
-                          var23 = rn.field_a[1];
-                          var22_float = rn.field_a[0];
-                          ifa.a(param1.field_p[var33_int], param1.field_b[var33_int], var36, var37_int, rn.field_a, var40, var39, var35, var38, (byte) -44, param1.field_I[var33_int]);
-                          var24 = rn.field_a[0];
-                          var25 = rn.field_a[1];
-                          ifa.a(param1.field_p[var34], param1.field_b[var34], var36, var37_int, rn.field_a, var40, var39, var35, var38, (byte) -44, param1.field_I[var34]);
-                          var27 = rn.field_a[1];
-                          var26 = rn.field_a[0];
+                          ifa.a(param1.field_p[var32_int], param1.field_b[var32_int], var36, var37_int, RoomComponentFactory.field_a, var40, var39, var35, var38, (byte) -44, param1.field_I[var32_int]);
+                          var23 = RoomComponentFactory.field_a[1];
+                          var22_float = RoomComponentFactory.field_a[0];
+                          ifa.a(param1.field_p[var33_int], param1.field_b[var33_int], var36, var37_int, RoomComponentFactory.field_a, var40, var39, var35, var38, (byte) -44, param1.field_I[var33_int]);
+                          var24 = RoomComponentFactory.field_a[0];
+                          var25 = RoomComponentFactory.field_a[1];
+                          ifa.a(param1.field_p[var34], param1.field_b[var34], var36, var37_int, RoomComponentFactory.field_a, var40, var39, var35, var38, (byte) -44, param1.field_I[var34]);
+                          var27 = RoomComponentFactory.field_a[1];
+                          var26 = RoomComponentFactory.field_a[0];
                           if ((1 & var39) == 0) {
                             if (!(0.5f < var26 - var22_float)) {
                               if (0.5f < -var26 + var22_float) {
@@ -679,27 +679,27 @@ final class gja extends ka {
                           var56 = (var38[4] * (float)var50 + var38[3] * (float)var49 + (float)var51 * var38[5]) / var53;
                           var57 = ((float)var51 * var38[8] + (var38[6] * (float)var49 + var38[7] * (float)var50)) / var54;
                           var30 = mr.a(var57, var56, false, var55);
-                          as.a(var36, rn.field_a, param1.field_I[var32_int], var35, var42, var37_int, var41, param1.field_b[var32_int], var30, param1.field_p[var32_int], -102, var40, var39, var38);
-                          var22_float = rn.field_a[0];
-                          var23 = rn.field_a[1];
-                          as.a(var36, rn.field_a, param1.field_I[var33_int], var35, var42, var37_int, var41, param1.field_b[var33_int], var30, param1.field_p[var33_int], 32, var40, var39, var38);
-                          var25 = rn.field_a[1];
-                          var24 = rn.field_a[0];
-                          as.a(var36, rn.field_a, param1.field_I[var34], var35, var42, var37_int, var41, param1.field_b[var34], var30, param1.field_p[var34], 79, var40, var39, var38);
-                          var26 = rn.field_a[0];
-                          var27 = rn.field_a[1];
+                          as.a(var36, RoomComponentFactory.field_a, param1.field_I[var32_int], var35, var42, var37_int, var41, param1.field_b[var32_int], var30, param1.field_p[var32_int], -102, var40, var39, var38);
+                          var22_float = RoomComponentFactory.field_a[0];
+                          var23 = RoomComponentFactory.field_a[1];
+                          as.a(var36, RoomComponentFactory.field_a, param1.field_I[var33_int], var35, var42, var37_int, var41, param1.field_b[var33_int], var30, param1.field_p[var33_int], 32, var40, var39, var38);
+                          var25 = RoomComponentFactory.field_a[1];
+                          var24 = RoomComponentFactory.field_a[0];
+                          as.a(var36, RoomComponentFactory.field_a, param1.field_I[var34], var35, var42, var37_int, var41, param1.field_b[var34], var30, param1.field_p[var34], 79, var40, var39, var38);
+                          var26 = RoomComponentFactory.field_a[0];
+                          var27 = RoomComponentFactory.field_a[1];
                           break;
                         case 1:
                           var41 = (float)param1.field_x[var19] / 1024.0f;
-                          MazeGenerator.a(var39, rn.field_a, var41, param1.field_p[var32_int], param1.field_I[var32_int], -126, var38, var40, var36, var37_int, param1.field_b[var32_int], var35);
-                          var22_float = rn.field_a[0];
-                          var23 = rn.field_a[1];
-                          MazeGenerator.a(var39, rn.field_a, var41, param1.field_p[var33_int], param1.field_I[var33_int], 72, var38, var40, var36, var37_int, param1.field_b[var33_int], var35);
-                          var24 = rn.field_a[0];
-                          var25 = rn.field_a[1];
-                          MazeGenerator.a(var39, rn.field_a, var41, param1.field_p[var34], param1.field_I[var34], -108, var38, var40, var36, var37_int, param1.field_b[var34], var35);
-                          var27 = rn.field_a[1];
-                          var26 = rn.field_a[0];
+                          MazeGenerator.a(var39, RoomComponentFactory.field_a, var41, param1.field_p[var32_int], param1.field_I[var32_int], -126, var38, var40, var36, var37_int, param1.field_b[var32_int], var35);
+                          var22_float = RoomComponentFactory.field_a[0];
+                          var23 = RoomComponentFactory.field_a[1];
+                          MazeGenerator.a(var39, RoomComponentFactory.field_a, var41, param1.field_p[var33_int], param1.field_I[var33_int], 72, var38, var40, var36, var37_int, param1.field_b[var33_int], var35);
+                          var24 = RoomComponentFactory.field_a[0];
+                          var25 = RoomComponentFactory.field_a[1];
+                          MazeGenerator.a(var39, RoomComponentFactory.field_a, var41, param1.field_p[var34], param1.field_I[var34], -108, var38, var40, var36, var37_int, param1.field_b[var34], var35);
+                          var27 = RoomComponentFactory.field_a[1];
+                          var26 = RoomComponentFactory.field_a[0];
                           var42 = var41 / 2.0f;
                           if ((1 & var39) == 0) {
                             if (!(-var22_float + var24 > var42)) {
@@ -855,7 +855,7 @@ final class gja extends ka {
                 var16++;
                 this.field_U[var16] = this.field_v;
               }
-              tl.field_q = null;
+              TimeSwitchBehaviour.field_q = null;
               this.field_kb = op.a(this.field_kb, 119, this.field_fb);
               this.field_G = op.a(this.field_G, 112, this.field_fb);
               this.field_lb = op.a(this.field_lb, 114, this.field_fb);
@@ -1266,7 +1266,7 @@ final class gja extends ka {
           var2 = new BitPacketBuffer(param0.a("logo.fo3d", (byte) 126, ""));
           var3 = var2.h(255);
           var2.h((byte) 119);
-          ej.field_d = uea.a(var2, (byte) 8);
+          ej.field_d = BrazierComponent.a(var2, (byte) 8);
           tfa.field_e = new int[var3][];
           cq.field_b = new an[var3];
           var4 = 0;
@@ -1420,7 +1420,7 @@ final class gja extends ka {
                 stackIn_2_0 = (byte[]) null;
                 return stackIn_2_0;
               }
-              nj.a(var3, 107, param0, param1);
+              ControllerLocomotor.a(var3, 107, param0, param1);
               stackIn_4_0 = var3;
               return stackIn_4_0;
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -1547,7 +1547,7 @@ final class gja extends ka {
             var3 = 0;
             var4 = 0;
             if (null != this.field_Z &&
-              !tp.a(this.field_h, (byte) 3, this.field_Y)) {
+              !WhiteLightShooterComponent.a(this.field_h, (byte) 3, this.field_Y)) {
               if (null == this.field_ib ||
                 this.field_ib.b(16440)) {
                 var2_int = 1;
@@ -1577,7 +1577,7 @@ final class gja extends ka {
               }
             }
             if (this.field_l != null &&
-              !cu.a(-79, this.field_Y, this.field_h)) {
+              !DamageableBehaviour.a(-79, this.field_Y, this.field_h)) {
               if (null != this.field_ib &&
                 !this.field_ib.b(16440)) {
                 this.field_N = true;
@@ -1634,7 +1634,7 @@ final class gja extends ka {
             }
           }
           if (null != this.field_P &&
-            !th.b(this.field_Y, 8, this.field_h)) {
+            !WindZoneBehaviour.b(this.field_Y, 8, this.field_h)) {
             if (this.field_E != null &&
               !this.field_E.b(16440)) {
               this.field_N = true;
@@ -1658,7 +1658,7 @@ final class gja extends ka {
             }
           }
           if (null != this.field_eb &&
-            !ov.a((byte) -96, this.field_Y, this.field_h)) {
+            !BeamShooterBehaviour.a((byte) -96, this.field_Y, this.field_h)) {
             if (this.field_d != null &&
               !this.field_d.b(16440)) {
               this.field_N = true;
@@ -2339,7 +2339,7 @@ final class gja extends ka {
           param0.field_v = this.field_v;
           var7_int = ir.a(param4, this.field_h, (byte) -100) ? 1 : 0;
           var8 = cga.a(param4, -62, this.field_h) ? 1 : 0;
-          var9 = er.c(param4, this.field_h, 52) ? 1 : 0;
+          var9 = TripBeamComponent.c(param4, this.field_h, 52) ? 1 : 0;
           var10 = var8 | var7_int | var9;
           if (var10 == 0) {
             param0.field_Z = this.field_Z;
@@ -2674,7 +2674,7 @@ final class gja extends ka {
             param0.field_O.field_b = true;
           }
           boolean decompiledFrameCompleted4 = true;
-          if (uk.a(this.field_h, (byte) -47, param4)) {
+          if (MovingSawComponent.a(this.field_h, (byte) -47, param4)) {
             if (param2.field_eb == null ||
               !(this.field_I <= param2.field_eb.length)) {
               var11Lifetime3 = this.field_fb;
@@ -4573,7 +4573,7 @@ final class gja extends ka {
               if (stackIn_22_0 == var17) {
                 var15 = var16;
               } else {
-                if (~param6 == ~tl.field_q[var16]) {
+                if (~param6 == ~TimeSwitchBehaviour.field_q[var16]) {
                   stackIn_19_0 = (short)(var17 - 1);
                   return stackIn_19_0;
                 }
@@ -4582,7 +4582,7 @@ final class gja extends ka {
               }
             }
             this.field_db[var15] = (short)(this.field_fb + 1);
-            tl.field_q[var15] = param6;
+            TimeSwitchBehaviour.field_q[var15] = param6;
             this.field_G[this.field_fb] = (short)param1;
             this.field_kb[this.field_fb] = (short)param3;
             this.field_lb[this.field_fb] = (short)param7;

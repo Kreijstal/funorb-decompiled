@@ -9,20 +9,20 @@ final class dga {
         kc.field_b = param0.d(123) << 5;
         int var2_int = param0.h(255);
         kc.field_b = kc.field_b + (var2_int >> 3);
-        vd.field_p = var2_int << 18 & 1835008;
-        vd.field_p = vd.field_p + (param0.d(125) << 2);
+        RandomMazeBehaviour.field_p = var2_int << 18 & 1835008;
+        RandomMazeBehaviour.field_p = RandomMazeBehaviour.field_p + (param0.d(125) << 2);
         if (param1 != 0) {
           return;
         }
         try {
           var2_int = param0.h(param1 + 255);
-          vd.field_p = vd.field_p + (var2_int >> 6);
+          RandomMazeBehaviour.field_p = RandomMazeBehaviour.field_p + (var2_int >> 6);
           ir.field_a = (var2_int & 63) << 15;
           ir.field_a = ir.field_a + (param0.h(255) << 7);
           var2_int = param0.h(255);
           ir.field_a = ir.field_a + (var2_int >> 1);
-          tna.field_f = (1 & var2_int) << 16;
-          tna.field_f = tna.field_f + param0.d(127);
+          DivisionMazeGenerator.field_f = (1 & var2_int) << 16;
+          DivisionMazeGenerator.field_f = DivisionMazeGenerator.field_f + param0.d(127);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "dga.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

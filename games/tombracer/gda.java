@@ -60,7 +60,7 @@ abstract class gda {
               var14 = param0.a(var7.field_g, (byte) 127, var7.field_b);
               var7.field_c = new BitPacketBuffer(var14);
               var7.field_c.h((byte) -38);
-              var7.field_e = m.a(-1, var7.field_c);
+              var7.field_e = PillarComponent.a(-1, var7.field_c);
               var7.field_c.i((byte) 98);
             }
             lva.a(var4.field_c, 0, -1 + var4.field_c.length, -1);

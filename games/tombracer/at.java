@@ -244,7 +244,7 @@ final class at extends ofa implements tsa {
             var7.field_p = 80;
             var7.field_n = 163;
             var7.field_i = 0;
-            var7.field_r = (isa) ((Object) new vpa(mj.field_J, 20, 20, 0, 10, 16777215, -1, 0, 0, 16, 0, 0, true));
+            var7.field_r = (isa) ((Object) new vpa(KeySwitchComponent.field_J, 20, 20, 0, 10, 16777215, -1, 0, 0, 16, 0, 0, true));
             this.a(var7, -1);
           }
           this.field_O = false;

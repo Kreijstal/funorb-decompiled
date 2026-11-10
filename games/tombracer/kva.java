@@ -81,33 +81,33 @@ final class kva extends dg {
             var3_int = param1.field_j;
             if (0 != var3_int) {
               if (var3_int == 1) {
-                stackIn_25_0 = df.field_J[91];
+                stackIn_25_0 = RevolverItemComponent.field_J[91];
                 return stackIn_25_0;
               }
               if (var3_int == 2) {
-                stackIn_27_0 = df.field_J[92];
+                stackIn_27_0 = RevolverItemComponent.field_J[92];
                 return stackIn_27_0;
               }
               if (var3_int == 3) {
                 return null;
               }
             }
-            stackIn_23_0 = df.field_J[90];
+            stackIn_23_0 = RevolverItemComponent.field_J[90];
             return stackIn_23_0;
           }
           var3_intLifetime1 = param1.field_j;
           if (var3_intLifetime1 != 0) {
             if (var3_intLifetime1 == 1) {
-              return df.field_J[72];
+              return RevolverItemComponent.field_J[72];
             }
             if (var3_intLifetime1 == 2) {
-              return df.field_J[73];
+              return RevolverItemComponent.field_J[73];
             }
             if (var3_intLifetime1 == 3) {
               return null;
             }
           }
-          stackIn_15_0 = df.field_J[71];
+          stackIn_15_0 = RevolverItemComponent.field_J[71];
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -152,11 +152,11 @@ final class kva extends dg {
           var3_int = param0.field_j;
           if (var3_int != 0) {
             if (1 == var3_int) {
-              stackIn_40_0 = df.field_J[29];
+              stackIn_40_0 = RevolverItemComponent.field_J[29];
               return stackIn_40_0;
             }
             if (var3_int == 2) {
-              stackIn_42_0 = df.field_J[30];
+              stackIn_42_0 = RevolverItemComponent.field_J[30];
               return stackIn_42_0;
             }
             if (var3_int == 3) {
@@ -165,45 +165,45 @@ final class kva extends dg {
           }
           if (param0.field_g) {
             if (param0.field_d >= 50) {
-              stackIn_12_0 = df.field_J[114];
+              stackIn_12_0 = RevolverItemComponent.field_J[114];
               return stackIn_12_0;
             }
-            stackIn_10_0 = df.field_J[113];
+            stackIn_10_0 = RevolverItemComponent.field_J[113];
             return stackIn_10_0;
           }
           if (param0.field_d < 11) {
-            stackIn_15_0 = df.field_J[31];
+            stackIn_15_0 = RevolverItemComponent.field_J[31];
             return stackIn_15_0;
           }
           if (param0.field_d < 22) {
-            stackIn_18_0 = df.field_J[32];
+            stackIn_18_0 = RevolverItemComponent.field_J[32];
             return stackIn_18_0;
           }
           if (33 > param0.field_d) {
-            stackIn_21_0 = df.field_J[33];
+            stackIn_21_0 = RevolverItemComponent.field_J[33];
             return stackIn_21_0;
           }
           if (param0.field_d < 44) {
-            stackIn_24_0 = df.field_J[34];
+            stackIn_24_0 = RevolverItemComponent.field_J[34];
             return stackIn_24_0;
           }
           if (55 > param0.field_d) {
-            stackIn_27_0 = df.field_J[35];
+            stackIn_27_0 = RevolverItemComponent.field_J[35];
             return stackIn_27_0;
           }
           if (param0.field_d < 66) {
-            stackIn_30_0 = df.field_J[36];
+            stackIn_30_0 = RevolverItemComponent.field_J[36];
             return stackIn_30_0;
           }
           if (param0.field_d < 77) {
-            stackIn_33_0 = df.field_J[37];
+            stackIn_33_0 = RevolverItemComponent.field_J[37];
             return stackIn_33_0;
           }
           if (param0.field_d >= 88) {
-            stackIn_38_0 = df.field_J[39];
+            stackIn_38_0 = RevolverItemComponent.field_J[39];
             return stackIn_38_0;
           }
-          stackIn_36_0 = df.field_J[38];
+          stackIn_36_0 = RevolverItemComponent.field_J[38];
           return stackIn_36_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -663,7 +663,7 @@ final class kva extends dg {
           var4 = param1.b((byte) 111) / 2097152 % 3;
           var5 = param1.c((byte) 102) / 2097152 % 3;
           var6 = 3 * var5 + (80 + var4);
-          stackIn_6_0 = df.field_J[var6];
+          stackIn_6_0 = RevolverItemComponent.field_J[var6];
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -124,7 +124,7 @@ final class ed {
           if (var4.field_p != ma.field_e &&
             nl.field_d != var4.field_p &&
             dc.field_o != var4.field_p &&
-            var4.field_p != dja.field_r) {
+            var4.field_p != PressureSwitchBehaviour.field_r) {
             if (param1 != -31733) {
               field_a = -1.1603987584850415;
             }

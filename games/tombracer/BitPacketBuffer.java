@@ -289,7 +289,7 @@ final class BitPacketBuffer extends PacketBuffer {
           }
           qla.field_f = param2;
           Room.field_k = param1;
-          if (ska.field_r == Room.field_k) {
+          if (WeaponShooterBehaviour.field_r == Room.field_k) {
             if (qla.field_f == baa.field_e) {
               baa.field_d.a(0, new ei[]{(ei) ((Object) kra.field_a)});
             } else {
@@ -311,7 +311,7 @@ final class BitPacketBuffer extends PacketBuffer {
                 }
               }
             } else {
-              baa.field_d.a(0, new ei[]{(ei) ((Object) nj.field_t)});
+              baa.field_d.a(0, new ei[]{(ei) ((Object) ControllerLocomotor.field_t)});
             }
           }
           if (null != mq.field_e) {

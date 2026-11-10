@@ -211,7 +211,7 @@ final class dta {
                 }
                 tga.field_a.la();
                 tga.field_a.KA(param1 - (30 - var24), var31, -20 + param1 + var24, var30);
-                mc.field_r.a(var24 + (-30 + param1), var31);
+                MirrorBehaviour.field_r.a(var24 + (-30 + param1), var31);
                 tga.field_a.la();
                 po.field_l.a(-1 + param1 - po.field_l.a() + var24, -po.field_l.c() + var18Lifetime2);
               }
@@ -296,10 +296,10 @@ final class dta {
                     var37 = 0;
                     var38_ref_nv = (Behaviour) (var35[var36_int].field_u.f(-80));
                     while (var38_ref_nv != null) {
-                      if (var38_ref_nv instanceof sea) {
+                      if (var38_ref_nv instanceof SnakePitBehaviour) {
                         var30Lifetime3 = 1;
                       } else {
-                        if (!(var38_ref_nv instanceof eq)) {
+                        if (!(var38_ref_nv instanceof SimpleBlockBehaviour)) {
                           var38_ref_nv = (Behaviour) (var35[var36_int].field_u.e(121));
                           continue;
                         }

@@ -202,7 +202,7 @@ abstract class cda extends dg {
     }
 
     final static void a(int param0, boolean param1) {
-        ira.a(param1, hb.field_t.field_d, (byte) -100);
+        ConstrainToRectangleLocomotor.a(param1, hb.field_t.field_d, (byte) -100);
         if (param0 != 0) {
           cda.a(50, false);
         }

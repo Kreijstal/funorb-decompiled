@@ -102,7 +102,7 @@ final class esa {
           var4_int = param0.b((byte) 44, 8);
           this.field_d = new BitSet(var4_int);
           for (var5 = 0; var5 < var4_int; var5++) {
-            if (uha.a(param2 ^ 5940, param0)) {
+            if (CircleMovementLocomotor.a(param2 ^ 5940, param0)) {
               this.field_d.set(var5);
             }
           }

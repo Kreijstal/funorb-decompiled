@@ -7,7 +7,7 @@ final class dc extends dg {
     private int field_t;
     static int field_o;
     private boolean field_p;
-    private rea field_v;
+    private CrusherBehaviour field_v;
     private int field_n;
     private int field_q;
     private boolean field_u;
@@ -50,21 +50,21 @@ final class dc extends dg {
     }
 
     final static void a(int param0, int param1, byte param2) {
-        if (null == pd.field_p ||
-          !(param0 <= pd.field_p.length)) {
-          pd.field_p = new int[param0 * 2];
+        if (null == ItemBehaviour.field_p ||
+          !(param0 <= ItemBehaviour.field_p.length)) {
+          ItemBehaviour.field_p = new int[param0 * 2];
         }
         if (null == jk.field_h ||
           !(param0 <= jk.field_h.length)) {
           jk.field_h = new int[param0 * 2];
         }
-        if (cu.field_o == null) {
-          cu.field_o = new int[param0 * 2];
+        if (DamageableBehaviour.field_o == null) {
+          DamageableBehaviour.field_o = new int[param0 * 2];
           if (null == bq.field_h) {
             bq.field_h = new int[param0 * 2];
-            if (im.field_o == null ||
-              !(param0 <= im.field_o.length)) {
-              im.field_o = new int[param0 * 2];
+            if (PortalBehaviour.field_o == null ||
+              !(param0 <= PortalBehaviour.field_o.length)) {
+              PortalBehaviour.field_o = new int[param0 * 2];
             }
             if (ic.field_c == null ||
               !(param0 <= ic.field_c.length)) {
@@ -81,9 +81,9 @@ final class dc extends dg {
           } else {
             if (bq.field_h.length < param0) {
               bq.field_h = new int[param0 * 2];
-              if (im.field_o == null ||
-                !(param0 <= im.field_o.length)) {
-                im.field_o = new int[param0 * 2];
+              if (PortalBehaviour.field_o == null ||
+                !(param0 <= PortalBehaviour.field_o.length)) {
+                PortalBehaviour.field_o = new int[param0 * 2];
               }
               if (ic.field_c == null ||
                 !(param0 <= ic.field_c.length)) {
@@ -98,8 +98,8 @@ final class dc extends dg {
                 gja.field_B = new boolean[2 * param0];
               }
             } else {
-              if (im.field_o == null) {
-                im.field_o = new int[param0 * 2];
+              if (PortalBehaviour.field_o == null) {
+                PortalBehaviour.field_o = new int[param0 * 2];
                 if (ic.field_c == null ||
                   !(param0 <= ic.field_c.length)) {
                   ic.field_c = new int[param0 * 2];
@@ -113,8 +113,8 @@ final class dc extends dg {
                   gja.field_B = new boolean[2 * param0];
                 }
               } else {
-                if (param0 > im.field_o.length) {
-                  im.field_o = new int[param0 * 2];
+                if (param0 > PortalBehaviour.field_o.length) {
+                  PortalBehaviour.field_o = new int[param0 * 2];
                   if (ic.field_c == null ||
                     !(param0 <= ic.field_c.length)) {
                     ic.field_c = new int[param0 * 2];
@@ -148,12 +148,12 @@ final class dc extends dg {
             }
           }
         } else {
-          if (cu.field_o.length >= param0) {
+          if (DamageableBehaviour.field_o.length >= param0) {
             if (null == bq.field_h) {
               bq.field_h = new int[param0 * 2];
-              if (im.field_o == null ||
-                !(param0 <= im.field_o.length)) {
-                im.field_o = new int[param0 * 2];
+              if (PortalBehaviour.field_o == null ||
+                !(param0 <= PortalBehaviour.field_o.length)) {
+                PortalBehaviour.field_o = new int[param0 * 2];
               }
               if (ic.field_c == null ||
                 !(param0 <= ic.field_c.length)) {
@@ -170,9 +170,9 @@ final class dc extends dg {
             } else {
               if (bq.field_h.length < param0) {
                 bq.field_h = new int[param0 * 2];
-                if (im.field_o == null ||
-                  !(param0 <= im.field_o.length)) {
-                  im.field_o = new int[param0 * 2];
+                if (PortalBehaviour.field_o == null ||
+                  !(param0 <= PortalBehaviour.field_o.length)) {
+                  PortalBehaviour.field_o = new int[param0 * 2];
                 }
                 if (ic.field_c == null ||
                   !(param0 <= ic.field_c.length)) {
@@ -187,8 +187,8 @@ final class dc extends dg {
                   gja.field_B = new boolean[2 * param0];
                 }
               } else {
-                if (im.field_o == null) {
-                  im.field_o = new int[param0 * 2];
+                if (PortalBehaviour.field_o == null) {
+                  PortalBehaviour.field_o = new int[param0 * 2];
                   if (ic.field_c == null ||
                     !(param0 <= ic.field_c.length)) {
                     ic.field_c = new int[param0 * 2];
@@ -202,8 +202,8 @@ final class dc extends dg {
                     gja.field_B = new boolean[2 * param0];
                   }
                 } else {
-                  if (param0 > im.field_o.length) {
-                    im.field_o = new int[param0 * 2];
+                  if (param0 > PortalBehaviour.field_o.length) {
+                    PortalBehaviour.field_o = new int[param0 * 2];
                     if (ic.field_c == null ||
                       !(param0 <= ic.field_c.length)) {
                       ic.field_c = new int[param0 * 2];
@@ -237,12 +237,12 @@ final class dc extends dg {
               }
             }
           } else {
-            cu.field_o = new int[param0 * 2];
+            DamageableBehaviour.field_o = new int[param0 * 2];
             if (null == bq.field_h) {
               bq.field_h = new int[param0 * 2];
-              if (im.field_o == null ||
-                !(param0 <= im.field_o.length)) {
-                im.field_o = new int[param0 * 2];
+              if (PortalBehaviour.field_o == null ||
+                !(param0 <= PortalBehaviour.field_o.length)) {
+                PortalBehaviour.field_o = new int[param0 * 2];
               }
               if (ic.field_c == null ||
                 !(param0 <= ic.field_c.length)) {
@@ -262,9 +262,9 @@ final class dc extends dg {
             } else {
               if (bq.field_h.length < param0) {
                 bq.field_h = new int[param0 * 2];
-                if (im.field_o == null ||
-                  !(param0 <= im.field_o.length)) {
-                  im.field_o = new int[param0 * 2];
+                if (PortalBehaviour.field_o == null ||
+                  !(param0 <= PortalBehaviour.field_o.length)) {
+                  PortalBehaviour.field_o = new int[param0 * 2];
                 }
                 if (ic.field_c == null ||
                   !(param0 <= ic.field_c.length)) {
@@ -279,8 +279,8 @@ final class dc extends dg {
                   gja.field_B = new boolean[2 * param0];
                 }
               } else {
-                if (im.field_o == null) {
-                  im.field_o = new int[param0 * 2];
+                if (PortalBehaviour.field_o == null) {
+                  PortalBehaviour.field_o = new int[param0 * 2];
                   if (ic.field_c == null ||
                     !(param0 <= ic.field_c.length)) {
                     ic.field_c = new int[param0 * 2];
@@ -290,7 +290,7 @@ final class dc extends dg {
                     boa.field_n = new int[2 * (param1 + param0)];
                   }
                 } else {
-                  if (param0 <= im.field_o.length) {
+                  if (param0 <= PortalBehaviour.field_o.length) {
                     if (ic.field_c == null ||
                       !(param0 <= ic.field_c.length)) {
                       ic.field_c = new int[param0 * 2];
@@ -300,7 +300,7 @@ final class dc extends dg {
                       boa.field_n = new int[2 * (param1 + param0)];
                     }
                   } else {
-                    im.field_o = new int[param0 * 2];
+                    PortalBehaviour.field_o = new int[param0 * 2];
                     if (ic.field_c == null ||
                       !(param0 <= ic.field_c.length)) {
                       ic.field_c = new int[param0 * 2];
@@ -730,9 +730,9 @@ final class dc extends dg {
           var11 = this.field_q;
           if (var11 != 0 &&
             var11 == 1) {
-            var9 = df.field_J[74];
+            var9 = RevolverItemComponent.field_J[74];
           } else {
-            var9 = df.field_J[74];
+            var9 = RevolverItemComponent.field_J[74];
           }
           gqa.a(var8, -83584144, var7, var6_int, var9, param3);
           return;
@@ -760,8 +760,8 @@ final class dc extends dg {
         RuntimeException var4 = null;
         try {
           super.a(param0, param1, param2);
-          if (param0 instanceof rea) {
-            this.field_v = (rea) (param0);
+          if (param0 instanceof CrusherBehaviour) {
+            this.field_v = (CrusherBehaviour) (param0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

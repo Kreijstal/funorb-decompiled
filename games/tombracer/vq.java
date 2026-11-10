@@ -15,7 +15,7 @@ final class vq {
 
     private final static int a(int param0, int param1) {
         int var2 = 0;
-        for (var2 = (int)Math.pow((double)param0, 1.0 / (double)param1) + 1; ri.a(var2, 0, param1) > param0; var2--) {
+        for (var2 = (int)Math.pow((double)param0, 1.0 / (double)param1) + 1; SweepRotateLocomotor.a(var2, 0, param1) > param0; var2--) {
         }
         return var2;
     }
@@ -163,7 +163,7 @@ final class vq {
           var2 = 0;
           var3_int = fg.a(5) + 1;
           while (var2 < this.field_e) {
-            var4_int = fg.a(bia.a((byte) 93, this.field_e - var2));
+            var4_int = fg.a(CauldronComponent.a((byte) 93, this.field_e - var2));
             for (var5 = 0; var5 < var4_int; var5++) {
               incrementValue$0 = var2;
               var2++;

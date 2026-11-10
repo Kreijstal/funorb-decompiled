@@ -313,7 +313,7 @@ final class qla {
                                   if ((decompiledFrameRemainder0) &&
                                     (decompiledFrameRemainder0 = (param1 != null))) {
                                     try {
-                                      var11_int = jb.a((CharSequence) ((Object) var10.substring(4)), (byte) 70);
+                                      var11_int = WhiteLightSensorComponent.a((CharSequence) ((Object) var10.substring(4)), (byte) 70);
                                       var6 = var6 + param1[var11_int].d();
                                       var5 = -1;
                                       decompiledRegionSelector0 = 0;
@@ -523,7 +523,7 @@ final class qla {
                                           break regionExit2;
                                         }
                                         try {
-                                          var20_int = jb.a((CharSequence) ((Object) var19.substring(4)), (byte) 70);
+                                          var20_int = WhiteLightSensorComponent.a((CharSequence) ((Object) var19.substring(4)), (byte) 70);
                                           var17 = var17 + param3[var20_int].d();
                                           var12 = -1;
                                           decompiledRegionSelector0 = 0;
@@ -810,7 +810,7 @@ final class qla {
                                   if ((decompiledFrameRemainder0) &&
                                     (decompiledFrameRemainder0 = (null != param1))) {
                                     try {
-                                      var13_int = jb.a((CharSequence) ((Object) var12_ref_String.substring(4)), (byte) 70);
+                                      var13_int = WhiteLightSensorComponent.a((CharSequence) ((Object) var12_ref_String.substring(4)), (byte) 70);
                                       var6 = -1;
                                       var7 = var7 + param1[var13_int].d();
                                       if (param3 < var7) {

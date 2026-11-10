@@ -57,7 +57,7 @@ final class wt {
           var1 = 44 % ((param0 + 68) / 49);
           return;
         }
-        ena.field_p = new vs(ej.field_a, sea.field_o);
+        ena.field_p = new vs(ej.field_a, SnakePitBehaviour.field_o);
         ej.field_a.c(ena.field_p, 87);
         var1Lifetime1 = 44 % ((param0 + 68) / 49);
     }

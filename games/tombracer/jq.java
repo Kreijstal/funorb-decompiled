@@ -32,7 +32,7 @@ final class jq extends ob {
         var2.i(2, 0);
         var2.a(0, vk.field_b, vk.field_b.length, 71);
         int var4 = -104 % ((param1 - 22) / 36);
-        var2.i(aja.field_H, 0);
+        var2.i(CoinBagItemComponent.field_H, 0);
         var2.i(mua.field_b, 0);
         var2.a(0, tqa.field_e, tqa.field_e.length, 119);
         var2.d(var2.position - var3, (byte) -102);

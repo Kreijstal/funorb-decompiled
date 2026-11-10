@@ -45,9 +45,9 @@ final class gh extends nh {
         if (!this.field_a &&
           !this.field_h &&
           (1 & param9) != 0) {
-          stackIn_5_2 = aw.field_G;
+          stackIn_5_2 = MirrorComponent.field_G;
         } else {
-          stackIn_5_2 = ue.field_v;
+          stackIn_5_2 = MiscItemBehaviour.field_v;
         }
         ((gf) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_5_2);
         this.field_c.k((byte) 121);
@@ -99,7 +99,7 @@ final class gh extends nh {
         asa var7 = this.field_c.C(0);
         param1 = param1 + this.field_j;
         param0 = param0 + this.field_g;
-        this.field_d.a(7672, ue.field_v);
+        this.field_d.a(7672, MiscItemBehaviour.field_v);
         this.field_c.k((byte) 105);
         this.field_c.a(true, this.field_d);
         this.field_c.c(param4, 1);
@@ -137,7 +137,7 @@ final class gh extends nh {
           f.field_e = new BitSet(var2_int);
           param0.h((byte) -89);
           for (var3 = 0; var3 < var2_int; var3++) {
-            if (uha.a(5907, param0)) {
+            if (CircleMovementLocomotor.a(5907, param0)) {
               f.field_e.set(var3);
             }
           }
@@ -202,9 +202,9 @@ final class gh extends nh {
         if (!this.field_a &&
           !this.field_h &&
           (param7 & 1) != 0) {
-          stackIn_6_2 = aw.field_G;
+          stackIn_6_2 = MirrorComponent.field_G;
         } else {
-          stackIn_6_2 = ue.field_v;
+          stackIn_6_2 = MiscItemBehaviour.field_v;
         }
         ((gf) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_6_2);
         this.field_c.k((byte) 118);

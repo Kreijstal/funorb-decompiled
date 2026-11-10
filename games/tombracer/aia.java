@@ -121,7 +121,7 @@ final class aia extends IntrusiveNode {
               if (this.field_p != 0 &&
                 lw.a(this.field_p, (byte) -95) == lw.a(this.field_m - this.field_r, (byte) -93)) {
                 this.field_p = -this.field_p;
-                this.field_f = ona.b(0, this.field_f);
+                this.field_f = SweeperMountComponent.b(0, this.field_f);
               }
             }
             if (0 != this.field_s &&
@@ -261,7 +261,7 @@ final class aia extends IntrusiveNode {
             var8 = this.field_r + param2;
             var9 = -var7Lifetime1 + param4.d(3);
             var10 = -var8 + param4.e(9648);
-            this.field_f = uqa.a(var9, var10, -111);
+            this.field_f = ConstrainToCircleLocomotor.a(var9, var10, -111);
             this.field_l = true;
           }
           if (param0 <= 98) {
@@ -284,13 +284,13 @@ final class aia extends IntrusiveNode {
 
     final static int e(int param0) {
         if (null == baa.field_d.field_i) {
-          BitPacketBuffer.a(true, ska.field_r, kva.field_s);
+          BitPacketBuffer.a(true, WeaponShooterBehaviour.field_r, kva.field_s);
           return 4;
         }
         if (kra.field_a == baa.field_d.field_i.field_b) {
           return 0;
         }
-        if (nj.field_t == baa.field_d.field_i.field_b) {
+        if (ControllerLocomotor.field_t == baa.field_d.field_i.field_b) {
           return 2;
         }
         if (baa.field_d.field_i.field_b == paa.field_z) {

@@ -350,7 +350,7 @@ final class ica {
           nm.a(var1, (byte) 112);
           uoa.b();
           bea.a();
-          tl.field_r = 0;
+          TimeSwitchBehaviour.field_r = 0;
           uw.a(false);
           var2 = var1.a();
           if (param0 != 16777215) {

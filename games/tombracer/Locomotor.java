@@ -112,9 +112,9 @@ abstract class Locomotor extends IntrusiveNode implements lj, noa, gr {
     final int b(int param0, int param1) {
         if (param0 != 0) {
           this.field_k = false;
-          return wma.a((byte) 8, 4, param1);
+          return SpawnerBehaviour.a((byte) 8, 4, param1);
         }
-        return wma.a((byte) 8, 4, param1);
+        return SpawnerBehaviour.a((byte) 8, 4, param1);
     }
 
     final int d(byte param0) {

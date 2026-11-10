@@ -115,23 +115,23 @@ final class nq extends cda {
           var7 = dfa.a(4096 - this.field_h.g(-25787) >> 2, 2048, 91);
           var8 = this.field_w;
           if (var8 == 0) {
-            var6 = df.field_J[0];
+            var6 = RevolverItemComponent.field_J[0];
           } else {
             if (var8 != 1) {
               if (var8 != 4) {
                 if (var8 == 2) {
-                  var6 = df.field_J[2];
+                  var6 = RevolverItemComponent.field_J[2];
                 } else {
                   if (var8 == 3) {
                     param3 = param3 + 2097152;
-                    var6 = df.field_J[3];
+                    var6 = RevolverItemComponent.field_J[3];
                   }
                 }
               } else {
-                var6 = df.field_J[109];
+                var6 = RevolverItemComponent.field_J[109];
               }
             } else {
-              var6 = df.field_J[1];
+              var6 = RevolverItemComponent.field_J[1];
             }
           }
           var8Lifetime1 = 6 / ((param4 + 38) / 47);

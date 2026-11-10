@@ -100,7 +100,7 @@ final class ak extends ela {
         var2 = TombRacer.field_G ? 1 : 0;
         nfa.field_p = false;
         if (param0 == 0) {
-          sea.field_o = null;
+          SnakePitBehaviour.field_o = null;
           if (jf.field_r) {
             ci.field_l.f(true);
             return;
@@ -108,29 +108,29 @@ final class ak extends ela {
           var1 = lsa.field_a;
           if (0 < var1) {
             if (var1 != 1) {
-              sea.field_o = gl.$cfr$intArgs$a$53ce4ab4c593(100, nw.field_s, new String[]{Integer.toString(var1)});
+              SnakePitBehaviour.field_o = gl.$cfr$intArgs$a$53ce4ab4c593(100, nw.field_s, new String[]{Integer.toString(var1)});
             } else {
-              sea.field_o = aga.field_a;
+              SnakePitBehaviour.field_o = aga.field_a;
             }
-            sea.field_o = uj.a((byte) 121, new CharSequence[]{(CharSequence) ((Object) sea.field_o), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) rpa.field_j)});
+            SnakePitBehaviour.field_o = uj.a((byte) 121, new CharSequence[]{(CharSequence) ((Object) SnakePitBehaviour.field_o), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) rpa.field_j)});
           }
           ci.field_l.i((byte) 101);
           wt.a((byte) -117);
           return;
         }
         field_o = (Object) null;
-        sea.field_o = null;
+        SnakePitBehaviour.field_o = null;
         if (jf.field_r) {
           ci.field_l.f(true);
         } else {
           var1 = lsa.field_a;
           if (0 < var1) {
             if (var1 != 1) {
-              sea.field_o = gl.$cfr$intArgs$a$53ce4ab4c593(100, nw.field_s, new String[]{Integer.toString(var1)});
+              SnakePitBehaviour.field_o = gl.$cfr$intArgs$a$53ce4ab4c593(100, nw.field_s, new String[]{Integer.toString(var1)});
             } else {
-              sea.field_o = aga.field_a;
+              SnakePitBehaviour.field_o = aga.field_a;
             }
-            sea.field_o = uj.a((byte) 121, new CharSequence[]{(CharSequence) ((Object) sea.field_o), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) rpa.field_j)});
+            SnakePitBehaviour.field_o = uj.a((byte) 121, new CharSequence[]{(CharSequence) ((Object) SnakePitBehaviour.field_o), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) rpa.field_j)});
           }
           ci.field_l.i((byte) 101);
           wt.a((byte) -117);

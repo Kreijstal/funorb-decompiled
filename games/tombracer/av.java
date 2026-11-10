@@ -54,7 +54,7 @@ final class av {
           Projectile.field_r.a(var9_int, var12, -23776, param1, 0);
           Projectile.field_r.field_w = Player.c(Projectile.field_r.field_t, 2105376, 3, 11579568, -112, 8421504);
           var12 = var12 + param1;
-          wi.field_s.a(var9_int, var12, -23776, -(var12 / 2) + param0, -(var9_int / 2) + param8);
+          SimpleMoveLocomotor.field_s.a(var9_int, var12, -23776, -(var12 / 2) + param0, -(var9_int / 2) + param8);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "av.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
@@ -272,7 +272,7 @@ final class av {
         if (param1 != 0) {
           av.a(96, 11);
         }
-        return null != jb.field_K ? (ht) (jb.field_K.a(-122, (long)param0)) : null;
+        return null != WhiteLightSensorComponent.field_K ? (ht) (WhiteLightSensorComponent.field_K.a(-122, (long)param0)) : null;
     }
 
     private final boolean b(int param0, int param1, int param2) {

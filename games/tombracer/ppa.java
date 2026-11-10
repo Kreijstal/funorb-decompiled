@@ -97,10 +97,10 @@ final class ppa {
                 return (byte[]) (stackIn_3_0);
               }
               this.field_b.a((byte) 20, (long)(6 * param0));
-              this.field_b.a(wfa.field_F, 6, 0, (byte) -64);
+              this.field_b.a(StaticCrusherComponent.field_F, 6, 0, (byte) -64);
               var6 = -2 / ((param1 + 40) / 57);
-              var4_int = (255 & wfa.field_F[2]) + (((255 & wfa.field_F[1]) << 8) + (wfa.field_F[0] << 16 & 16711680));
-              var5 = (16711680 & wfa.field_F[3] << 16) - (-((wfa.field_F[4] & 255) << 8) - (wfa.field_F[5] & 255));
+              var4_int = (255 & StaticCrusherComponent.field_F[2]) + (((255 & StaticCrusherComponent.field_F[1]) << 8) + (StaticCrusherComponent.field_F[0] << 16 & 16711680));
+              var5 = (16711680 & StaticCrusherComponent.field_F[3] << 16) - (-((StaticCrusherComponent.field_F[4] & 255) << 8) - (StaticCrusherComponent.field_F[5] & 255));
               if (var4_int < 0) {
                 return null;
               }
@@ -129,21 +129,21 @@ final class ppa {
                   if (510 < var10) {
                     var10 = 510;
                   }
-                  this.field_c.a(wfa.field_F, var10 + var15, 0, (byte) -28);
-                  var12 = (255 & wfa.field_F[5]) + (wfa.field_F[4] << 8 & 65280);
-                  var13 = ((255 & wfa.field_F[6]) << 16) + ((65280 & wfa.field_F[7] << 8) + (wfa.field_F[8] & 255));
-                  var11 = (16711680 & wfa.field_F[1] << 16) + (-16777216 & wfa.field_F[0] << 24) - (-(wfa.field_F[2] << 8 & 65280) - (255 & wfa.field_F[3]));
-                  var14 = wfa.field_F[9] & 255;
+                  this.field_c.a(StaticCrusherComponent.field_F, var10 + var15, 0, (byte) -28);
+                  var12 = (255 & StaticCrusherComponent.field_F[5]) + (StaticCrusherComponent.field_F[4] << 8 & 65280);
+                  var13 = ((255 & StaticCrusherComponent.field_F[6]) << 16) + ((65280 & StaticCrusherComponent.field_F[7] << 8) + (StaticCrusherComponent.field_F[8] & 255));
+                  var11 = (16711680 & StaticCrusherComponent.field_F[1] << 16) + (-16777216 & StaticCrusherComponent.field_F[0] << 24) - (-(StaticCrusherComponent.field_F[2] << 8 & 65280) - (255 & StaticCrusherComponent.field_F[3]));
+                  var14 = StaticCrusherComponent.field_F[9] & 255;
                 } else {
                   if (var10 > 512) {
                     var10 = 512;
                   }
                   var15 = 8;
-                  this.field_c.a(wfa.field_F, var15 + var10, 0, (byte) -30);
-                  var12 = ((wfa.field_F[2] & 255) << 8) + (wfa.field_F[3] & 255);
-                  var14 = 255 & wfa.field_F[7];
-                  var13 = (255 & wfa.field_F[6]) + ((255 & wfa.field_F[4]) << 16) + (65280 & wfa.field_F[5] << 8);
-                  var11 = (255 & wfa.field_F[1]) + ((wfa.field_F[0] & 255) << 8);
+                  this.field_c.a(StaticCrusherComponent.field_F, var15 + var10, 0, (byte) -30);
+                  var12 = ((StaticCrusherComponent.field_F[2] & 255) << 8) + (StaticCrusherComponent.field_F[3] & 255);
+                  var14 = 255 & StaticCrusherComponent.field_F[7];
+                  var13 = (255 & StaticCrusherComponent.field_F[6]) + ((255 & StaticCrusherComponent.field_F[4]) << 16) + (65280 & StaticCrusherComponent.field_F[5] << 8);
+                  var11 = (255 & StaticCrusherComponent.field_F[1]) + ((StaticCrusherComponent.field_F[0] & 255) << 8);
                 }
                 if (param0 != var11) {
                   return null;
@@ -168,7 +168,7 @@ final class ppa {
                 for (var17 = var15; var16 > var17; var17++) {
                   incrementValue$2 = var8;
                   var8++;
-                  var7[incrementValue$2] = wfa.field_F[var17];
+                  var7[incrementValue$2] = StaticCrusherComponent.field_F[var17];
                 }
               }
               stackIn_49_0 = var7;
@@ -217,8 +217,8 @@ final class ppa {
                     return false;
                   }
                   this.field_b.a((byte) -124, (long)(6 * param4));
-                  this.field_b.a(wfa.field_F, 6, 0, (byte) -34);
-                  var7_int = (wfa.field_F[3] << 16 & 16711680) + ((255 & wfa.field_F[4]) << 8) + (255 & wfa.field_F[5]);
+                  this.field_b.a(StaticCrusherComponent.field_F, 6, 0, (byte) -34);
+                  var7_int = (StaticCrusherComponent.field_F[3] << 16 & 16711680) + ((255 & StaticCrusherComponent.field_F[4]) << 8) + (255 & StaticCrusherComponent.field_F[5]);
                   if (var7_int <= 0 ||
                     !((long)var7_int <= this.field_c.b(true) / 520L)) {
                     return false;
@@ -229,14 +229,14 @@ final class ppa {
                     var7_int = 1;
                   }
                 }
-                wfa.field_F[5] = (byte)var7_int;
-                wfa.field_F[1] = (byte)(param1 >> 8);
-                wfa.field_F[0] = (byte)(param1 >> 16);
-                wfa.field_F[2] = (byte)param1;
-                wfa.field_F[3] = (byte)(var7_int >> 16);
-                wfa.field_F[4] = (byte)(var7_int >> 8);
+                StaticCrusherComponent.field_F[5] = (byte)var7_int;
+                StaticCrusherComponent.field_F[1] = (byte)(param1 >> 8);
+                StaticCrusherComponent.field_F[0] = (byte)(param1 >> 16);
+                StaticCrusherComponent.field_F[2] = (byte)param1;
+                StaticCrusherComponent.field_F[3] = (byte)(var7_int >> 16);
+                StaticCrusherComponent.field_F[4] = (byte)(var7_int >> 8);
                 this.field_b.a((byte) -118, (long)(param4 * 6));
-                this.field_b.a(wfa.field_F, 0, (byte) -17, 6);
+                this.field_b.a(StaticCrusherComponent.field_F, 0, (byte) -17, 6);
                 if (!param3) {
                   this.a(58, 109);
                 }
@@ -250,7 +250,7 @@ final class ppa {
                       this.field_c.a((byte) 91, (long)(var7_int * 520));
                       if (param4 <= 65535) {
                         try {
-                          this.field_c.a(wfa.field_F, 8, 0, (byte) -115);
+                          this.field_c.a(StaticCrusherComponent.field_F, 8, 0, (byte) -115);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -260,13 +260,13 @@ final class ppa {
                         if (decompiledRegionSelector0 != 0) {
                           break scanLoop1;
                         }
-                        var12 = (255 & wfa.field_F[3]) + ((255 & wfa.field_F[2]) << 8);
-                        var11 = (65280 & wfa.field_F[0] << 8) + (wfa.field_F[1] & 255);
-                        var10 = (255 & wfa.field_F[6]) + (wfa.field_F[4] << 16 & 16711680) + (wfa.field_F[5] << 8 & 65280);
-                        var13 = wfa.field_F[7] & 255;
+                        var12 = (255 & StaticCrusherComponent.field_F[3]) + ((255 & StaticCrusherComponent.field_F[2]) << 8);
+                        var11 = (65280 & StaticCrusherComponent.field_F[0] << 8) + (StaticCrusherComponent.field_F[1] & 255);
+                        var10 = (255 & StaticCrusherComponent.field_F[6]) + (StaticCrusherComponent.field_F[4] << 16 & 16711680) + (StaticCrusherComponent.field_F[5] << 8 & 65280);
+                        var13 = StaticCrusherComponent.field_F[7] & 255;
                       } else {
                         try {
-                          this.field_c.a(wfa.field_F, 10, 0, (byte) -33);
+                          this.field_c.a(StaticCrusherComponent.field_F, 10, 0, (byte) -33);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -276,10 +276,10 @@ final class ppa {
                         if (decompiledRegionSelector1 != 0) {
                           break scanLoop1;
                         }
-                        var12 = ((255 & wfa.field_F[4]) << 8) + (255 & wfa.field_F[5]);
-                        var11 = (wfa.field_F[0] << 24 & -16777216) + ((255 & wfa.field_F[1]) << 16) - (-((255 & wfa.field_F[2]) << 8) - (255 & wfa.field_F[3]));
-                        var13 = 255 & wfa.field_F[9];
-                        var10 = (255 & wfa.field_F[8]) + (((255 & wfa.field_F[7]) << 8) + ((255 & wfa.field_F[6]) << 16));
+                        var12 = ((255 & StaticCrusherComponent.field_F[4]) << 8) + (255 & StaticCrusherComponent.field_F[5]);
+                        var11 = (StaticCrusherComponent.field_F[0] << 24 & -16777216) + ((255 & StaticCrusherComponent.field_F[1]) << 16) - (-((255 & StaticCrusherComponent.field_F[2]) << 8) - (255 & StaticCrusherComponent.field_F[3]));
+                        var13 = 255 & StaticCrusherComponent.field_F[9];
+                        var10 = (255 & StaticCrusherComponent.field_F[8]) + (((255 & StaticCrusherComponent.field_F[7]) << 8) + ((255 & StaticCrusherComponent.field_F[6]) << 16));
                       }
                       if ((var11 == param4 &&
                         var9 == var12 &&
@@ -306,18 +306,18 @@ final class ppa {
                       var10 = 0;
                     }
                     if (param4 > 65535) {
-                      wfa.field_F[7] = (byte)(var10 >> 8);
-                      wfa.field_F[5] = (byte)var9;
-                      wfa.field_F[1] = (byte)(param4 >> 16);
-                      wfa.field_F[3] = (byte)param4;
-                      wfa.field_F[0] = (byte)(param4 >> 24);
-                      wfa.field_F[6] = (byte)(var10 >> 16);
-                      wfa.field_F[4] = (byte)(var9 >> 8);
-                      wfa.field_F[9] = (byte)this.field_d;
-                      wfa.field_F[8] = (byte)var10;
-                      wfa.field_F[2] = (byte)(param4 >> 8);
+                      StaticCrusherComponent.field_F[7] = (byte)(var10 >> 8);
+                      StaticCrusherComponent.field_F[5] = (byte)var9;
+                      StaticCrusherComponent.field_F[1] = (byte)(param4 >> 16);
+                      StaticCrusherComponent.field_F[3] = (byte)param4;
+                      StaticCrusherComponent.field_F[0] = (byte)(param4 >> 24);
+                      StaticCrusherComponent.field_F[6] = (byte)(var10 >> 16);
+                      StaticCrusherComponent.field_F[4] = (byte)(var9 >> 8);
+                      StaticCrusherComponent.field_F[9] = (byte)this.field_d;
+                      StaticCrusherComponent.field_F[8] = (byte)var10;
+                      StaticCrusherComponent.field_F[2] = (byte)(param4 >> 8);
                       this.field_c.a((byte) 36, (long)(520 * var7_int));
-                      this.field_c.a(wfa.field_F, 0, (byte) -17, 10);
+                      this.field_c.a(StaticCrusherComponent.field_F, 0, (byte) -17, 10);
                       var11 = param1 - var8;
                       if (var11 > 510) {
                         var11 = 510;
@@ -325,16 +325,16 @@ final class ppa {
                       this.field_c.a(param2, var8, (byte) -17, var11);
                       var8 = var8 + var11;
                     } else {
-                      wfa.field_F[4] = (byte)(var10 >> 16);
-                      wfa.field_F[2] = (byte)(var9 >> 8);
-                      wfa.field_F[6] = (byte)var10;
-                      wfa.field_F[3] = (byte)var9;
-                      wfa.field_F[0] = (byte)(param4 >> 8);
-                      wfa.field_F[5] = (byte)(var10 >> 8);
-                      wfa.field_F[1] = (byte)param4;
-                      wfa.field_F[7] = (byte)this.field_d;
+                      StaticCrusherComponent.field_F[4] = (byte)(var10 >> 16);
+                      StaticCrusherComponent.field_F[2] = (byte)(var9 >> 8);
+                      StaticCrusherComponent.field_F[6] = (byte)var10;
+                      StaticCrusherComponent.field_F[3] = (byte)var9;
+                      StaticCrusherComponent.field_F[0] = (byte)(param4 >> 8);
+                      StaticCrusherComponent.field_F[5] = (byte)(var10 >> 8);
+                      StaticCrusherComponent.field_F[1] = (byte)param4;
+                      StaticCrusherComponent.field_F[7] = (byte)this.field_d;
                       this.field_c.a((byte) -109, (long)(var7_int * 520));
-                      this.field_c.a(wfa.field_F, 0, (byte) -17, 8);
+                      this.field_c.a(StaticCrusherComponent.field_F, 0, (byte) -17, 8);
                       var11 = param1 - var8;
                       if (var11 > 512) {
                         var11 = 512;

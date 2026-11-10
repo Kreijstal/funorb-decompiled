@@ -51,7 +51,7 @@ final class sna {
             if (!this.field_i) {
               if (var8.E((byte) 3) == 1) {
                 this.field_i = true;
-                this.a(wqa.field_F, new jia(), 25, param0 - 10059);
+                this.a(GasTrapComponent.field_F, new jia(), 25, param0 - 10059);
               }
               if (!this.field_m &&
                 3 == var8.E((byte) 3)) {

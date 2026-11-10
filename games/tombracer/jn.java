@@ -90,7 +90,7 @@ final class jn extends we {
         int var11Lifetime2;
         int var11Lifetime2Lifetime1;
         var15 = TombRacer.field_G ? 1 : 0;
-        SocketConnector.a(sea.field_q.toUpperCase(), 1, qr.field_v, 2497287, -1, 160, 1, param1 - 20, 0, -1, (byte) 60, 320);
+        SocketConnector.a(SnakePitBehaviour.field_q.toUpperCase(), 1, qr.field_v, 2497287, -1, 160, 1, param1 - 20, 0, -1, (byte) 60, 320);
         ua.a(4, qr.field_v, rka.a(td.field_r, true), 600, -1, param1 + 72, 11288327);
         var16 = IntrusiveDeque.field_d[td.field_r];
         var4 = var16;
@@ -132,23 +132,23 @@ final class jn extends we {
                   var12 = 20;
                   var13 = var11Lifetime2;
                   var14 = 4;
-                  hp.a(var13, 512 + no.field_r[td.field_r][var8], no.field_s[td.field_r][var8], wma.a(var14, 12166, 1), -1918106173, var7 + no.field_k[td.field_r][var8] + var12, -50 + var9);
+                  hp.a(var13, 512 + no.field_r[td.field_r][var8], no.field_s[td.field_r][var8], SpawnerBehaviour.a(var14, 12166, 1), -1918106173, var7 + no.field_k[td.field_r][var8] + var12, -50 + var9);
                 }
               } else {
                 var12 = -4;
                 var13 = var11Lifetime2;
                 stackIn_27_0 = (no.field_p[td.field_r][var8] == 1) ? 1 : 109;
                 var14 = stackIn_27_0;
-                hp.a(var13, no.field_r[td.field_r][var8], no.field_s[td.field_r][var8], wma.a(var14, 12166, 1), -1918106173, var12 + (no.field_k[td.field_r][var8] + var7), -50 + var9);
+                hp.a(var13, no.field_r[td.field_r][var8], no.field_s[td.field_r][var8], SpawnerBehaviour.a(var14, 12166, 1), -1918106173, var12 + (no.field_k[td.field_r][var8] + var7), -50 + var9);
               }
               if (no.field_p[td.field_r][var8] == 2) {
-                hp.a(var11Lifetime2, 1024, no.field_s[td.field_r][var8], wma.a(31, 12166, 1), -1918106173, var7 + no.field_k[td.field_r][var8] - 16, var9 - 50);
-                hp.a(var11Lifetime2, 1024, no.field_s[td.field_r][var8], wma.a(29, 12166, 1), -1918106173, -16 + var7 + no.field_k[td.field_r][var8], var9 - 65);
-                hp.a(var11Lifetime2, 0, no.field_s[td.field_r][var8], wma.a(29, 12166, 1), -1918106173, var7 + (no.field_k[td.field_r][var8] + 16), var9 - 34);
-                hp.a(var11Lifetime2, 512, no.field_s[td.field_r][var8], wma.a(29, 12166, 1), -1918106173, var7 + no.field_k[td.field_r][var8] + 16, -65 + var9);
-                hp.a(var11Lifetime2, 1536, no.field_s[td.field_r][var8], wma.a(29, 12166, 1), -1918106173, var7 + no.field_k[td.field_r][var8] - 16, -34 + var9);
+                hp.a(var11Lifetime2, 1024, no.field_s[td.field_r][var8], SpawnerBehaviour.a(31, 12166, 1), -1918106173, var7 + no.field_k[td.field_r][var8] - 16, var9 - 50);
+                hp.a(var11Lifetime2, 1024, no.field_s[td.field_r][var8], SpawnerBehaviour.a(29, 12166, 1), -1918106173, -16 + var7 + no.field_k[td.field_r][var8], var9 - 65);
+                hp.a(var11Lifetime2, 0, no.field_s[td.field_r][var8], SpawnerBehaviour.a(29, 12166, 1), -1918106173, var7 + (no.field_k[td.field_r][var8] + 16), var9 - 34);
+                hp.a(var11Lifetime2, 512, no.field_s[td.field_r][var8], SpawnerBehaviour.a(29, 12166, 1), -1918106173, var7 + no.field_k[td.field_r][var8] + 16, -65 + var9);
+                hp.a(var11Lifetime2, 1536, no.field_s[td.field_r][var8], SpawnerBehaviour.a(29, 12166, 1), -1918106173, var7 + no.field_k[td.field_r][var8] - 16, -34 + var9);
               }
-              hp.a(var11Lifetime2, no.field_r[td.field_r][var8], no.field_s[td.field_r][var8], wma.a(no.field_u[td.field_r][var8], 12166, no.field_m[td.field_r][var8]), -1918106173, var7 + no.field_k[td.field_r][var8], -50 + var9);
+              hp.a(var11Lifetime2, no.field_r[td.field_r][var8], no.field_s[td.field_r][var8], SpawnerBehaviour.a(no.field_u[td.field_r][var8], 12166, no.field_m[td.field_r][var8]), -1918106173, var7 + no.field_k[td.field_r][var8], -50 + var9);
             }
             var11Lifetime2Lifetime1 = kn.field_p.a((aa) null, var10, 15, 0, var7, fm.a(false, -1), SpriteState.field_l, 0, fm.a(false, 65793), var5[var8], (byte) 99, 640, 0, id.field_h, var9, 0);
             if (td.field_r > 0) {
