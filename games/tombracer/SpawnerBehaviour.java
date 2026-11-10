@@ -16,8 +16,8 @@ final class SpawnerBehaviour extends Behaviour {
         return kb.a(param0, false, false, 2, param2);
     }
 
-    final void g(int param0) {
-        super.g(param0);
+    final void resolveSwitchLinks(int param0) {
+        super.resolveSwitchLinks(param0);
         if (this.field_q != null) {
           this.field_q.a((byte) 82);
         }
@@ -79,7 +79,7 @@ final class SpawnerBehaviour extends Behaviour {
         }
     }
 
-    final boolean p(byte param0) {
+    final boolean freezesInTimeStop(byte param0) {
         if (param0 != 120) {
           this.field_q = (Spawner) null;
           return true;

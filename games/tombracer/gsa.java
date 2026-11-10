@@ -205,13 +205,13 @@ final class gsa {
           this.field_v = this.field_p * gp.field_i[0];
           var3_int = param0.getChosenReward(-96);
           if (var3_int != -1) {
-            if (bta.field_n[var3_int] == 0) {
+            if (OpenGlUnderwaterEffect.field_n[var3_int] == 0) {
               this.field_u = this.field_u + param0.j(false);
             }
-            if (1 == bta.field_n[var3_int]) {
+            if (1 == OpenGlUnderwaterEffect.field_n[var3_int]) {
               this.field_z = this.field_z + param0.j(false);
             }
-            if (2 == bta.field_n[var3_int]) {
+            if (2 == OpenGlUnderwaterEffect.field_n[var3_int]) {
               this.field_f = this.field_f + param0.j(false);
             }
           }

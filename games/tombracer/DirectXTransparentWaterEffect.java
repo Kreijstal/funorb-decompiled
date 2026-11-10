@@ -1,28 +1,28 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class usa extends vw {
+final class DirectXTransparentWaterEffect extends ShaderEffect {
     private jagdx.IDirect3DVertexShader field_f;
     private static float[] field_d;
     private hk field_g;
     private Direct3DToolkit field_e;
 
-    final void a(int param0) {
+    final void disable(int param0) {
         this.field_e.a((jagdx.IDirect3DVertexShader) null, -1);
-        this.field_c.a(ej.field_c, 0, -54);
-        this.field_c.a(tla.field_c, 1, -56);
-        this.field_c.a(pea.field_c, 2, -116);
+        this.owner.a(ej.field_c, 0, -54);
+        this.owner.a(tla.field_c, 1, -56);
+        this.owner.a(pea.field_c, 2, -116);
         if (param0 <= -4) {
-          this.field_c.a((byte) 51, true);
+          this.owner.a((byte) 51, true);
           return;
         }
     }
 
-    final boolean c(int param0) {
+    final boolean isSupported(int param0) {
         if (param0 == 1185) {
           return this.field_f != null ? true : false;
         }
-        this.a((byte) -57, 54, -28);
+        this.setParameters((byte) -57, 54, -28);
         return this.field_f != null ? true : false;
     }
 
@@ -38,14 +38,14 @@ final class usa extends vw {
           return;
         }
         GpuTexture var4 = (GpuTexture) null;
-        this.a(-5, (GpuTexture) null, 86);
+        this.bindTexture(-5, (GpuTexture) null, 86);
     }
 
     final void b(int param0) {
         jagdx.IDirect3DDevice var2 = null;
         if (null != this.field_f) {
           var2 = this.field_e.field_jd;
-          var2.setVertexShaderConstantF(4, this.field_c.writeTransposedProjection(field_d, false));
+          var2.setVertexShaderConstantF(4, this.owner.writeTransposedProjection(field_d, false));
         }
         if (param0 >= 64) {
           return;
@@ -58,7 +58,7 @@ final class usa extends vw {
         AffineTransform3D var3 = null;
         if (null != this.field_f) {
           var2 = this.field_e.field_jd;
-          var3 = this.field_c.textureTransform((byte) 113);
+          var3 = this.owner.textureTransform((byte) 113);
           var3.a(field_d, -101);
           field_d[3] = field_d[3] * 0.25f;
           field_d[6] = field_d[6] * 0.25f;
@@ -73,10 +73,10 @@ final class usa extends vw {
         if (param0) {
           return;
         }
-        this.a((byte) 6, -79, -56);
+        this.setParameters((byte) 6, -79, -56);
     }
 
-    final void a(int param0, GpuTexture param1, int param2) {
+    final void bindTexture(int param0, GpuTexture param1, int param2) {
         if (param2 != 24595) {
           field_d = (float[]) null;
         }
@@ -96,7 +96,7 @@ final class usa extends vw {
         this.b(true);
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void setParameters(byte param0, int param1, int param2) {
         jagdx.IDirect3DDevice var7 = null;
         float var5_float = 0.0f;
         int var5 = 0;
@@ -105,12 +105,12 @@ final class usa extends vw {
         if (param0 == 55) {
           var7 = this.field_e.field_jd;
           if (this.field_g.field_g) {
-            var5_float = (float)(this.field_c.field_Dc % 4000) / 4000.0f;
-            this.field_c.bindTexture(true, this.field_g.field_c);
+            var5_float = (float)(this.owner.field_Dc % 4000) / 4000.0f;
+            this.owner.bindTexture(true, this.field_g.field_c);
             var7.setVertexShaderConstantF(11, var5_float, 0.0f, 0.0f, 0.0f);
           } else {
-            var5 = 16 * (this.field_c.field_Dc % 4000) / 4000;
-            this.field_c.bindTexture(true, this.field_g.field_d[var5]);
+            var5 = 16 * (this.owner.field_Dc % 4000) / 4000;
+            this.owner.bindTexture(true, this.field_g.field_d[var5]);
             var7.setVertexShaderConstantF(11, 0.0f, 0.0f, 0.0f, 0.0f);
           }
           return;
@@ -118,21 +118,21 @@ final class usa extends vw {
         field_d = (float[]) null;
         jagdx.IDirect3DDevice var6 = this.field_e.field_jd;
         if (this.field_g.field_g) {
-          var5_floatLifetime1 = (float)(this.field_c.field_Dc % 4000) / 4000.0f;
-          this.field_c.bindTexture(true, this.field_g.field_c);
+          var5_floatLifetime1 = (float)(this.owner.field_Dc % 4000) / 4000.0f;
+          this.owner.bindTexture(true, this.field_g.field_c);
           var6.setVertexShaderConstantF(11, var5_floatLifetime1, 0.0f, 0.0f, 0.0f);
         } else {
-          var5Lifetime1 = 16 * (this.field_c.field_Dc % 4000) / 4000;
-          this.field_c.bindTexture(true, this.field_g.field_d[var5Lifetime1]);
+          var5Lifetime1 = 16 * (this.owner.field_Dc % 4000) / 4000;
+          this.owner.bindTexture(true, this.field_g.field_d[var5Lifetime1]);
           var6.setVertexShaderConstantF(11, 0.0f, 0.0f, 0.0f, 0.0f);
         }
     }
 
-    final void a(boolean param0, int param1) {
-        this.field_c.setTextureCombineOperations(NormalMapOperator.field_m, (byte) -110, r.field_m);
+    final void refreshState(boolean param0, int param1) {
+        this.owner.setTextureCombineOperations(NormalMapOperator.field_m, (byte) -110, r.field_m);
         if (param1 != 5744) {
           GpuTexture var4 = (GpuTexture) null;
-          this.a(-56, (GpuTexture) null, 109);
+          this.bindTexture(-56, (GpuTexture) null, 109);
         }
     }
 
@@ -149,15 +149,15 @@ final class usa extends vw {
           if (this.field_f == null) {
           } else {
             var7 = this.field_e.field_jd;
-            if (0 >= this.field_c.field_J) {
+            if (0 >= this.owner.field_J) {
               var7.setVertexShaderConstantF(10, 0.0f, 0.0f, 0.0f, 0.0f);
             } else {
-              var3 = this.field_c.field_Hc;
-              var4 = this.field_c.field_B;
+              var3 = this.owner.field_Hc;
+              var4 = this.owner.field_B;
               var5 = -512.0f + var4;
               var7.setVertexShaderConstantF(10, var5, 1.0f / (-var5 + var4), var4, 1.0f / (var3 - var4));
             }
-            this.field_c.g(3625, this.field_c.field_g);
+            this.owner.g(3625, this.owner.field_g);
           }
           return;
         }
@@ -165,19 +165,19 @@ final class usa extends vw {
         if (this.field_f == null) {
         } else {
           var6 = this.field_e.field_jd;
-          if (0 >= this.field_c.field_J) {
+          if (0 >= this.owner.field_J) {
             var6.setVertexShaderConstantF(10, 0.0f, 0.0f, 0.0f, 0.0f);
           } else {
-            var3Lifetime1 = this.field_c.field_Hc;
-            var4Lifetime1 = this.field_c.field_B;
+            var3Lifetime1 = this.owner.field_Hc;
+            var4Lifetime1 = this.owner.field_B;
             var5Lifetime1 = -512.0f + var4Lifetime1;
             var6.setVertexShaderConstantF(10, var5Lifetime1, 1.0f / (-var5Lifetime1 + var4Lifetime1), var4Lifetime1, 1.0f / (var3Lifetime1 - var4Lifetime1));
           }
-          this.field_c.g(3625, this.field_c.field_g);
+          this.owner.g(3625, this.owner.field_g);
         }
     }
 
-    usa(Direct3DToolkit param0, ResourceArchive param1, hk param2) {
+    DirectXTransparentWaterEffect(Direct3DToolkit param0, ResourceArchive param1, hk param2) {
         super(param0);
         this.field_g = param2;
         this.field_e = param0;
@@ -190,11 +190,11 @@ final class usa extends vw {
         }
     }
 
-    final void a(int param0, boolean param1) {
-        this.field_c.a(ej.field_c, 0, -100);
-        this.field_c.a(pea.field_c, 1, -21);
-        this.field_c.a(tla.field_c, 2, -6219, false, true);
-        this.field_c.a((byte) 77, false);
+    final void enable(int param0, boolean param1) {
+        this.owner.a(ej.field_c, 0, -100);
+        this.owner.a(pea.field_c, 1, -21);
+        this.owner.a(tla.field_c, 2, -6219, false, true);
+        this.owner.a((byte) 77, false);
         this.field_e.a(this.field_f, -1);
         this.b((byte) 107);
         this.c(true);

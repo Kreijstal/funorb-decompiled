@@ -150,7 +150,7 @@ final class VortexBehaviour extends Behaviour {
         }
     }
 
-    final boolean p(byte param0) {
+    final boolean freezesInTimeStop(byte param0) {
         if (param0 != 120) {
           return true;
         }

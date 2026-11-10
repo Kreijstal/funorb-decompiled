@@ -158,7 +158,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
         return this.field_u;
     }
 
-    final boolean p(byte param0) {
+    final boolean freezesInTimeStop(byte param0) {
         if (param0 != 120) {
           this.field_s = true;
           return true;

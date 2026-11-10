@@ -6,7 +6,7 @@ final class SwitchLinkList {
     static String field_d;
     private int field_e;
     private Switchable[] targets;
-    private dha[] field_a;
+    private dha[] pendingTargetIds;
     static String field_c;
 
     final static int b(int param0) {
@@ -55,7 +55,7 @@ final class SwitchLinkList {
         }
     }
 
-    final void a(int param0, Switchable[] param1) {
+    final void setTargets(int param0, Switchable[] param1) {
         try {
           if (param0 != 9) {
             this.targets = (Switchable[]) null;
@@ -82,14 +82,14 @@ final class SwitchLinkList {
             }
           }
           if (param0 != 30489) {
-            this.field_a = (dha[]) null;
+            this.pendingTargetIds = (dha[]) null;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "koa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(SwitchableScope param0, int param1) {
+    final void resolveTargets(SwitchableScope param0, int param1) {
         int var3_int = 0;
         dha var4 = null;
         int var5 = 0;
@@ -100,15 +100,15 @@ final class SwitchLinkList {
         RuntimeException var3 = null;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          if (this.field_a == null) {
+          if (this.pendingTargetIds == null) {
             return;
           }
-          this.targets = new Switchable[this.field_a.length];
-          for (var3_int = 0; this.field_a.length > var3_int; var3_int++) {
-            var4 = this.field_a[var3_int];
+          this.targets = new Switchable[this.pendingTargetIds.length];
+          for (var3_int = 0; this.pendingTargetIds.length > var3_int; var3_int++) {
+            var4 = this.pendingTargetIds[var3_int];
             this.targets[var3_int] = param0.findSwitchable(28672, var4.field_a, var4.field_b);
           }
-          this.field_a = null;
+          this.pendingTargetIds = null;
           if (param1 != 8) {
             field_b = (ka[]) null;
             this.a((byte) -12);
@@ -161,12 +161,12 @@ final class SwitchLinkList {
           this.field_e = param0;
           var5_int = param3.readBits((byte) 44, RandomBrickOperator.d(param0, 22972));
           this.targets = new Switchable[var5_int];
-          this.field_a = new dha[var5_int];
+          this.pendingTargetIds = new dha[var5_int];
           for (var6 = 0; var6 < var5_int; var6++) {
             if (param2 <= 9) {
-              this.field_a[var6] = new dha(false, param3.readBits((byte) 44, 8));
+              this.pendingTargetIds[var6] = new dha(false, param3.readBits((byte) 44, 8));
             } else {
-              stackIn_6_0 = this.field_a;
+              stackIn_6_0 = this.pendingTargetIds;
               stackIn_6_1 = var6;
               stackIn_6_2 = null;
               stackIn_6_3 = null;

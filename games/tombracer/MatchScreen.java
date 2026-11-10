@@ -28,7 +28,7 @@ final class MatchScreen extends GameScreen implements rqa {
     private long field_m;
     private int field_j;
     private int field_E;
-    private boolean field_w;
+    private boolean pausedByOverlay;
     private boolean field_p;
     w[] field_g;
 
@@ -85,7 +85,7 @@ final class MatchScreen extends GameScreen implements rqa {
         try {
           kqa.b(18916);
           if (param0 != 6) {
-            this.a(false, true, 46);
+            this.update(false, true, 46);
           }
           this.phase = param1;
         } catch (RuntimeException runtimeException) {
@@ -100,7 +100,7 @@ final class MatchScreen extends GameScreen implements rqa {
         return this.viewedPlayerIndex;
     }
 
-    final void a(boolean param0, boolean param1, int param2) {
+    final void update(boolean param0, boolean param1, int param2) {
         int var4;
         int var5;
         MatchOverlay var6;
@@ -128,15 +128,15 @@ final class MatchScreen extends GameScreen implements rqa {
           return;
         }
         if (this.phase != null) {
-          this.phase.a(80, param1);
+          this.phase.update(80, param1);
         }
-        this.field_w = false;
+        this.pausedByOverlay = false;
         var6 = (MatchOverlay) (this.overlays.first(-80));
         while (var6 != null) {
-          var6.a((byte) -120);
+          var6.update((byte) -120);
           if (!var6.isFinished((byte) -121)) {
-            if (var6.a(true)) {
-              this.field_w = true;
+            if (var6.pausesGame(true)) {
+              this.pausedByOverlay = true;
             }
           } else {
             this.removeOverlay(-19805, var6);
@@ -262,7 +262,7 @@ final class MatchScreen extends GameScreen implements rqa {
         int var6Lifetime1;
         var8 = TombRacer.field_G ? 1 : 0;
         if (param2) {
-          this.a((byte) 23, true);
+          this.draw((byte) 23, true);
         }
         boolean decompiledFrameRemainder0 = true;
         var9 = VerticalScrollbar.field_tb;
@@ -336,7 +336,7 @@ final class MatchScreen extends GameScreen implements rqa {
         this.field_t = false;
         this.roundDeadlineTick = -1;
         this.field_p = false;
-        this.field_w = false;
+        this.pausedByOverlay = false;
         try {
           if (param9 >= 0 && (!mca.a((byte) 6, param9) ||
             !BrickOperator.d(-74, param9))) {
@@ -459,7 +459,7 @@ final class MatchScreen extends GameScreen implements rqa {
     final void k(byte param0) {
         Player var2 = this.matchState.players[0];
         if (param0 != -25) {
-          this.field_w = true;
+          this.pausedByOverlay = true;
         }
         var2.b(true, true);
         this.j((byte) -99);
@@ -477,7 +477,7 @@ final class MatchScreen extends GameScreen implements rqa {
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           if (param0 < 91) {
-            this.field_w = false;
+            this.pausedByOverlay = false;
           }
           for (var3_int = 0; this.field_B.length > var3_int; var3_int++) {
             this.field_B[var3_int] = param1.readUnsignedShort(124);
@@ -528,7 +528,7 @@ final class MatchScreen extends GameScreen implements rqa {
 
     final boolean g(int param0, int param1) {
         if (param0 != 0) {
-          this.field_w = true;
+          this.pausedByOverlay = true;
         }
         return this.field_y[param1] == 1 ? true : false;
     }
@@ -708,11 +708,11 @@ final class MatchScreen extends GameScreen implements rqa {
         return this.matchState.field_y[param0].b(param1 ^ 68);
     }
 
-    final boolean e(int param0) {
+    final boolean isPausedByOverlay(int param0) {
         if (param0 < 109) {
           this.field_j = -75;
         }
-        return this.field_w;
+        return this.pausedByOverlay;
     }
 
     final void cycleViewedPlayer(int param0, int param1) {
@@ -875,12 +875,12 @@ final class MatchScreen extends GameScreen implements rqa {
         }
     }
 
-    public final void a(byte param0, boolean param1) {
+    public final void draw(byte param0, boolean param1) {
         boolean discarded$0 = false;
         MatchOverlay var5 = null;
         int var4 = TombRacer.field_G ? 1 : 0;
         if (null != this.phase) {
-          this.phase.b(param0 ^ 97, param1);
+          this.phase.draw(param0 ^ 97, param1);
         }
         if (!this.f((byte) 33)) {
           if (this.field_A) {
@@ -891,7 +891,7 @@ final class MatchScreen extends GameScreen implements rqa {
           }
           var5 = (MatchOverlay) (this.overlays.first(param0 ^ 84));
           while (var5 != null) {
-            var5.b((byte) -66);
+            var5.draw((byte) -66);
             var5 = (MatchOverlay) (this.overlays.next(123));
           }
           return;
@@ -900,7 +900,7 @@ final class MatchScreen extends GameScreen implements rqa {
 
     final boolean isInPlayPhase(int param0) {
         if (param0 != 0) {
-          this.a(-75, 'n', 84);
+          this.handleKey(-75, 'n', 84);
         }
         return this.phase instanceof PlayPhase;
     }
@@ -1198,7 +1198,7 @@ final class MatchScreen extends GameScreen implements rqa {
         }
     }
 
-    final boolean a(int param0, char param1, int param2) {
+    final boolean handleKey(int param0, char param1, int param2) {
         boolean stackIn_34_1 = false;
         int var4;
         int var5;
@@ -1255,7 +1255,7 @@ final class MatchScreen extends GameScreen implements rqa {
           }
         }
         if (this.phase != null &&
-          this.phase.a(param1, 25, param0)) {
+          this.phase.handleKey(param1, 25, param0)) {
           return true;
         }
         if (RasterizerOperator.d(20125) &&
@@ -1266,7 +1266,7 @@ final class MatchScreen extends GameScreen implements rqa {
         if (param0 == 13 &&
           !this.c(false) && (this.d((byte) 81) ||
           null != this.phase &&
-          this.phase.e(param2 ^ -9201))) {
+          this.phase.allowsChat(param2 ^ -9201))) {
           ConstrainToRectangleLocomotor.a(false, 7, (byte) -92);
           return true;
         }
@@ -1277,7 +1277,7 @@ final class MatchScreen extends GameScreen implements rqa {
         if (var7 == null) {
           return true;
         }
-        if (!var7.a(param0, param1, (byte) -116)) {
+        if (!var7.handleKey(param0, param1, (byte) -116)) {
         }
         return true;
     }
@@ -1325,7 +1325,7 @@ final class MatchScreen extends GameScreen implements rqa {
         }
     }
 
-    final void h(int param0) {
+    final void tickMatch(int param0) {
         int var2;
         kq var3;
         int var4;
@@ -1591,7 +1591,7 @@ final class MatchScreen extends GameScreen implements rqa {
 
     final boolean d(byte param0) {
         if (param0 < 60) {
-          this.field_w = false;
+          this.pausedByOverlay = false;
         }
         return this.localPlayerIndex == -2 ? true : false;
     }

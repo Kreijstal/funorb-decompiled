@@ -88,7 +88,7 @@ final class ContextMenu extends jea {
     }
 
     final static void e(byte param0) {
-        bta.field_q = 0;
+        OpenGlUnderwaterEffect.field_q = 0;
         bb.a(-21844);
         if (param0 <= 95) {
           field_Eb = -113;

@@ -44,7 +44,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     private ld field_eb;
     private boolean field_V;
     int field_Sb;
-    private vw field_pb;
+    private ShaderEffect field_pb;
     private float field_lc;
     private float[] field_Eb;
     SceneLight[] field_ib;
@@ -121,7 +121,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     int field_h;
     private float field_Pb;
     private kp field_Ec;
-    private vw[] field_sb;
+    private ShaderEffect[] field_sb;
     gja field_W;
     private AffineTransform3D field_Ab;
     gja field_n;
@@ -762,25 +762,25 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
         if (this.field_qb == param0) {
           if (this.field_qb != 0) {
-            this.field_sb[this.field_qb & 2147483647].a(param3, param5 ^ -5737);
+            this.field_sb[this.field_qb & 2147483647].refreshState(param3, param5 ^ -5737);
             if (this.field_Lc != param1 ||
               this.field_Rb != param2) {
-              this.field_sb[this.field_qb & 2147483647].a((byte) 55, param1, param2);
+              this.field_sb[this.field_qb & 2147483647].setParameters((byte) 55, param1, param2);
               this.field_Rb = param2;
               this.field_Lc = param1;
             }
           }
         } else {
           if (0 != this.field_qb) {
-            this.field_sb[this.field_qb & 2147483647].a(-79);
+            this.field_sb[this.field_qb & 2147483647].disable(-79);
           }
           if (param0 == 0) {
             this.field_pb = null;
           } else {
             this.field_pb = this.field_sb[2147483647 & param0];
-            this.field_pb.a(-112, param3);
-            this.field_pb.a(param3, 5744);
-            this.field_pb.a((byte) 55, param1, param2);
+            this.field_pb.enable(-112, param3);
+            this.field_pb.refreshState(param3, 5744);
+            this.field_pb.setParameters((byte) 55, param1, param2);
           }
           this.field_qb = param0;
           this.field_Rb = param2;
@@ -790,12 +790,12 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     final AffineTransform3D y(byte param0) {
         if (param0 != -77) {
-          this.field_pb = (vw) null;
+          this.field_pb = (ShaderEffect) null;
         }
         return this.field_q;
     }
 
-    vw createShaderEffect(int param0, int param1) {
+    ShaderEffect createShaderEffect(int param0, int param1) {
         int var3;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
@@ -804,18 +804,18 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
         var3 = param0;
         if (6 == var3) {
-          return (vw) ((Object) new vta(this));
+          return (ShaderEffect) ((Object) new HardwareUnlitEffect(this));
         }
         if (var3 == 1) {
-          return (vw) ((Object) new em(this));
+          return (ShaderEffect) ((Object) new HardwareSpecularEffect(this));
         }
         if (var3 == 2) {
-          return (vw) ((Object) new fn(this, this.field_Mb));
+          return (ShaderEffect) ((Object) new HardwareAnimatedWaterEffect(this, this.field_Mb));
         }
         if (var3 != 7) {
-          return (vw) ((Object) new vu(this));
+          return (ShaderEffect) ((Object) new FallbackShaderEffect(this));
         }
-        return (vw) ((Object) new sl(this));
+        return (ShaderEffect) ((Object) new HardwareReflectionEffect(this));
     }
 
     final void setLights(int param0, SceneLight[] param1) {
@@ -1234,7 +1234,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
             this.bindTexture(true, (GpuTexture) (var5));
             this.a((byte) -37, var6);
           } else {
-            this.field_pb.a(var6, (GpuTexture) (var5), 24595);
+            this.field_pb.bindTexture(var6, (GpuTexture) (var5), 24595);
           }
           this.field_Jc = param3;
           this.field_V = this.field_L;
@@ -1629,7 +1629,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           iw var3 = (iw) null;
           this.a(-55, (iw) null, 17, -88);
         }
-        return this.field_sb[3].c(1185);
+        return this.field_sb[3].isSupported(1185);
     }
 
     void resetDriverState(int param0) {
@@ -1799,16 +1799,16 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.field_sb[3] = this.createShaderEffect(3, 66);
         this.field_sb[8] = this.createShaderEffect(8, 100);
         this.field_sb[9] = this.createShaderEffect(9, 76);
-        if (!this.field_sb[2].c(1185)) {
+        if (!this.field_sb[2].isSupported(1185)) {
           this.field_sb[2] = this.createShaderEffect(0, 105);
         }
-        if (!this.field_sb[4].c(1185)) {
+        if (!this.field_sb[4].isSupported(1185)) {
           this.field_sb[4] = this.field_sb[2];
         }
-        if (!this.field_sb[8].c(1185)) {
+        if (!this.field_sb[8].isSupported(1185)) {
           this.field_sb[8] = this.field_sb[4];
         }
-        if (!this.field_sb[9].c(1185)) {
+        if (!this.field_sb[9].isSupported(1185)) {
           this.field_sb[9] = this.field_sb[8];
         }
         this.resetDriverState(-29040);
@@ -2000,7 +2000,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.field_zb = false;
         this.field_Cb = 3584.0f;
         this.field_A = 0;
-        this.field_sb = new vw[10];
+        this.field_sb = new ShaderEffect[10];
         this.field_Ic = 512;
         this.field_Pb = 1.0f;
         this.field_l = false;

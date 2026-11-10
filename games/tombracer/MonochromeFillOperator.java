@@ -67,7 +67,7 @@ final class MonochromeFillOperator extends TextureOperator {
         if (!ni.field_c) {
           return false;
         }
-        if (bta.field_q != param0) {
+        if (OpenGlUnderwaterEffect.field_q != param0) {
           return false;
         }
         return true;

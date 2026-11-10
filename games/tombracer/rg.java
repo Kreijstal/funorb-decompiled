@@ -88,7 +88,7 @@ final class rg extends SingleChildWidget {
         bq.field_k = new String[13];
         wg.field_j[2] = BevelOperator.field_o;
         bq.field_k[5] = gqa.field_a;
-        bq.field_k[2] = sl.field_d;
+        bq.field_k[2] = HardwareReflectionEffect.field_d;
         bq.field_k[7] = TrackingCrusherComponent.field_H;
         bq.field_k[12] = fp.field_b;
         bq.field_k[0] = DraggableWidget.field_B;

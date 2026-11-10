@@ -333,13 +333,13 @@ final class SnakePitModel extends TrapModel {
         }
     }
 
-    final void h(int param0) {
+    final void mirror(int param0) {
         int var2 = 0;
         int var3 = 0;
         lca var4 = null;
         int var5 = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
-        super.h(106);
+        super.mirror(106);
         if (this.field_r == null) {
           return;
         }

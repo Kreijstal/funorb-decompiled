@@ -73,7 +73,7 @@ final class ConsoleToken extends IntrusiveNode {
               kl.field_b.c(var6, var8, sb.field_d + var2, var5, -1);
               var2 = var2 + CharacterSelectPhase.field_x;
             } else {
-              bta.field_d.c(var6, var8, var2 + vo.field_f, var5, -1);
+              OpenGlUnderwaterEffect.field_d.c(var6, var8, var2 + vo.field_f, var5, -1);
               var2 = var2 + (aqa.field_a + RenderLayer.field_d + FurnitureModel.field_n);
             }
           }

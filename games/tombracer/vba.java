@@ -25,14 +25,14 @@ final class vba extends we {
         }
     }
 
-    final int a(int param0, byte param1) {
+    final int getItemRight(int param0, byte param1) {
         if (param1 != -48) {
           return 48;
         }
-        return this.a((byte) 126, param0) + this.items[param0].e(param1 ^ 141);
+        return this.getItemX((byte) 126, param0) + this.items[param0].e(param1 ^ 141);
     }
 
-    final void a(boolean param0, boolean param1, int param2) {
+    final void update(boolean param0, boolean param1, int param2) {
         int dupTemp$2 = 0;
         int dupTemp$0 = 0;
         int dupTemp$1 = 0;
@@ -40,7 +40,7 @@ final class vba extends we {
         int var5;
         int var4Lifetime1;
         var5 = TombRacer.field_G ? 1 : 0;
-        super.a(param0, param1, param2);
+        super.update(param0, param1, param2);
         for (var4 = 0; 42 > var4; var4++) {
           dupTemp$2 = this.field_r[var4] - 1;
           this.field_r[var4] = dupTemp$2;
@@ -201,7 +201,7 @@ final class vba extends we {
         return lk.field_h[param0];
     }
 
-    final int a(byte param0, int param1) {
+    final int getItemX(byte param0, int param1) {
         if (param0 <= 111) {
           return 68;
         }
@@ -262,7 +262,7 @@ final class vba extends we {
         return;
     }
 
-    final int g(int param0, int param1) {
+    final int getItemY(int param0, int param1) {
         if (param1 != 30) {
           this.field_r = (int[]) null;
         }

@@ -475,7 +475,7 @@ final class MenuEntry {
         if (param0 != -28425) {
           MenuEntry.a(-43, -1, false, true, false, -66, -12, 75, false, -21, 73, false, -95, 84);
         }
-        return this.field_l ? em.field_h[this.field_f] : WidgetStyleLayer.field_k[this.field_f];
+        return this.field_l ? HardwareSpecularEffect.field_h[this.field_f] : WidgetStyleLayer.field_k[this.field_f];
     }
 
     MenuEntry(int param0, String param1, int param2, boolean param3) {

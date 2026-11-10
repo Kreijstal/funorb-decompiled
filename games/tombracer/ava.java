@@ -236,7 +236,7 @@ final class ava {
                     var12.field_Kb.field_r = r.field_l;
                     var12.field_Cb.field_r = sv.field_q;
                   } else {
-                    var12.field_Kb.field_r = vu.field_e;
+                    var12.field_Kb.field_r = FallbackShaderEffect.field_e;
                   }
                 }
               } else {
@@ -314,7 +314,7 @@ final class ava {
                 if (0 == var12.field_Cb.field_y) {
                   rc.a(PasswordValidator.field_m, RidgedNoise3D.field_p, var12, (byte) -93, 0, 0, param0);
                 } else {
-                  fn.a(param1, var12.field_yb, -118);
+                  HardwareAnimatedWaterEffect.a(param1, var12.field_yb, -118);
                 }
               }
             }

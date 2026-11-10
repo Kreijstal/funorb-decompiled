@@ -7,7 +7,7 @@ final class RoundWinnerPhase extends MatchPhase {
     static Sprite[] field_m;
     static SpriteData[] field_p;
 
-    final boolean e(int param0) {
+    final boolean allowsChat(int param0) {
         if (param0 != -9202) {
           this.field_n = 85;
           return false;
@@ -15,7 +15,7 @@ final class RoundWinnerPhase extends MatchPhase {
         return false;
     }
 
-    final void b(int param0, boolean param1) {
+    final void draw(int param0, boolean param1) {
         int var9 = 0;
         int var3;
         int var4;
@@ -105,17 +105,17 @@ final class RoundWinnerPhase extends MatchPhase {
         }
     }
 
-    final boolean a(char param0, int param1, int param2) {
+    final boolean handleKey(char param0, int param1, int param2) {
         if (param1 != 25) {
-          this.a(68, false);
+          this.update(68, false);
         }
         return false;
     }
 
-    final void a(int param0, boolean param1) {
+    final void update(int param0, boolean param1) {
         int var3 = 0;
         if (param0 != 80) {
-          this.a('￦', 110, -67);
+          this.handleKey('￦', 110, -67);
         }
         if (0 >= this.field_n) {
         } else {

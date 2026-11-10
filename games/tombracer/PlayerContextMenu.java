@@ -176,7 +176,7 @@ final class PlayerContextMenu {
           RewardChoiceSlot.a((byte) -38, param2, this.field_g);
         } else {
           if (param1 == 1) {
-            fn.a(param2, this.field_g, -120);
+            HardwareAnimatedWaterEffect.a(param2, this.field_g, -120);
           } else {
             if (param1 == 2) {
               q.a((byte) -123, param2, this.field_k);
@@ -302,7 +302,7 @@ final class PlayerContextMenu {
             if (var6 == 0) {
               return;
             }
-            this.field_f.addItem((byte) -87, 7, gl.$cfr$intArgs$a$53ce4ab4c593(120, vta.field_f, new String[]{var7}));
+            this.field_f.addItem((byte) -87, 7, gl.$cfr$intArgs$a$53ce4ab4c593(120, HardwareUnlitEffect.field_f, new String[]{var7}));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

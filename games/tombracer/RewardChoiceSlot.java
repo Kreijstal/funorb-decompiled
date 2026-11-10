@@ -36,12 +36,12 @@ final class RewardChoiceSlot {
         ToolkitSprite[] var8 = ArchiveSource.field_a;
         TextInputWidget.a(1, var8, (byte) -51, var4_int, var3_ref_ha, var6, param0, var7, var5, 0);
         if (var2 != -1) {
-          var3 = bta.field_n[var2];
+          var3 = OpenGlUnderwaterEffect.field_n[var2];
           var4 = eca.field_c[var3];
           var4.a((this.field_j >> 1) + this.field_g - (var4.a() >> 1), (this.field_i >> 1) + (this.field_c - (var4.c() >> 1)));
         }
         if (0 <= var2) {
-          GridWidgetContainer.field_y[bta.field_f[var2]].a(-20 + (this.field_g + (this.field_j >> 1)), (this.field_i >> 1) + this.field_c - 10);
+          GridWidgetContainer.field_y[OpenGlUnderwaterEffect.field_f[var2]].a(-20 + (this.field_g + (this.field_j >> 1)), (this.field_i >> 1) + this.field_c - 10);
           return;
         }
     }

@@ -40,7 +40,7 @@ final class apa {
             field_b = (String) null;
           }
           if (param1) {
-            stackIn_6_0 = bta.field_d.stringWidth(param2);
+            stackIn_6_0 = OpenGlUnderwaterEffect.field_d.stringWidth(param2);
             return stackIn_6_0;
           }
           stackIn_4_0 = kl.field_b.stringWidth(param2);
@@ -77,7 +77,7 @@ final class apa {
             field_b = (String) null;
           }
           if (param1) {
-            stackIn_6_0 = bta.field_d.stringWidth(param2);
+            stackIn_6_0 = OpenGlUnderwaterEffect.field_d.stringWidth(param2);
             return stackIn_6_0;
           }
           stackIn_4_0 = kl.field_b.stringWidth(param2);

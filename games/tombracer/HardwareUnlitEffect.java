@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vta extends vw {
+final class HardwareUnlitEffect extends ShaderEffect {
     static float field_e;
     static String field_f;
     static int[] field_d;
 
-    final void a(boolean param0, int param1) {
+    final void refreshState(boolean param0, int param1) {
         if (param1 != 5744) {
           field_f = (String) null;
         }
     }
 
-    vta(HardwareGraphicsToolkit param0) {
+    HardwareUnlitEffect(HardwareGraphicsToolkit param0) {
         super(param0);
     }
 
@@ -24,12 +24,12 @@ final class vta extends vw {
         }
     }
 
-    final void a(int param0, boolean param1) {
-        this.field_c.setLightingSuppressed(true, (byte) 100);
+    final void enable(int param0, boolean param1) {
+        this.owner.setLightingSuppressed(true, (byte) 100);
         int var3 = 121 / ((param0 - 41) / 62);
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void setParameters(byte param0, int param1, int param2) {
         if (param0 != 55) {
           field_d = (int[]) null;
         }
@@ -38,7 +38,7 @@ final class vta extends vw {
     final static boolean a(int param0, int param1, int param2) {
         boolean stackIn_6_0 = false;
         if (param2 != 2048) {
-          vta.c((byte) -99);
+          HardwareUnlitEffect.c((byte) -99);
         }
         stackIn_6_0 = ((param1 & 2048) != 0) && ((param0 & 55) != 0);
         return stackIn_6_0;
@@ -59,7 +59,7 @@ final class vta extends vw {
         try {
           var2_int = param0.length();
           if (param1 != -12754) {
-            vta.releaseStatics(-51);
+            HardwareUnlitEffect.releaseStatics(-51);
           }
           var3 = 0;
           for (var4 = 0; var4 < var2_int; var4++) {
@@ -81,30 +81,30 @@ final class vta extends vw {
         }
     }
 
-    final void a(int param0, GpuTexture param1, int param2) {
+    final void bindTexture(int param0, GpuTexture param1, int param2) {
         try {
-          this.field_c.bindTexture(true, param1);
-          this.field_c.a((byte) -35, param0);
+          this.owner.bindTexture(true, param1);
+          this.owner.a((byte) -35, param0);
           if (param2 != 24595) {
             CharSequence var5 = (CharSequence) null;
-            vta.a((CharSequence) null, -89);
+            HardwareUnlitEffect.a((CharSequence) null, -89);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vta.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final void a(int param0) {
+    final void disable(int param0) {
         if (param0 >= -4) {
           field_e = -1.3910614252090454f;
         }
-        this.field_c.setLightingSuppressed(false, (byte) 72);
+        this.owner.setLightingSuppressed(false, (byte) 72);
     }
 
-    final boolean c(int param0) {
+    final boolean isSupported(int param0) {
         if (param0 != 1185) {
           CharSequence var3 = (CharSequence) null;
-          vta.a((CharSequence) null, -5);
+          HardwareUnlitEffect.a((CharSequence) null, -5);
           return true;
         }
         return true;

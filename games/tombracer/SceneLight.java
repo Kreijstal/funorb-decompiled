@@ -56,11 +56,11 @@ abstract class SceneLight extends IntrusiveNode {
             Room.field_p[var2_int] = LoadLevelCommand.a(param0, eta.field_a[var2_int], -82);
           }
           WidgetStyleLayer.field_k = new ToolkitSprite[6];
-          em.field_h = new ToolkitSprite[6];
+          HardwareSpecularEffect.field_h = new ToolkitSprite[6];
           for (var2_intLifetime1 = 0; var2_intLifetime1 < 6; var2_intLifetime1++) {
             WidgetStyleLayer.field_k[var2_intLifetime1] = su.createToolkitSprite(ColourFillOperator.field_p[var2_intLifetime1], param0, (byte) -68);
             ColourFillOperator.field_p[var2_intLifetime1].b();
-            em.field_h[var2_intLifetime1] = su.createToolkitSprite(ColourFillOperator.field_p[var2_intLifetime1], param0, (byte) 125);
+            HardwareSpecularEffect.field_h[var2_intLifetime1] = su.createToolkitSprite(ColourFillOperator.field_p[var2_intLifetime1], param0, (byte) 125);
             ColourFillOperator.field_p[var2_intLifetime1].b();
           }
           ik.field_h = su.createToolkitSprite(dna.field_F, param0, (byte) 127);
@@ -127,7 +127,7 @@ abstract class SceneLight extends IntrusiveNode {
           haa.field_z = su.createToolkitSprite(re.field_a, param0, (byte) 126);
           aq.field_a = LoadLevelCommand.a(param0, mna.field_c, -55);
           MirrorBehaviour.field_r = su.createToolkitSprite(fm.field_h, param0, (byte) 127);
-          dp.field_d = SweepRotateLocomotor.a(param0, (byte) -105, haa.field_A.field_f);
+          OpenGlEnvironmentWaterEffect.field_d = SweepRotateLocomotor.a(param0, (byte) -105, haa.field_A.field_f);
           Room.field_j = SweepRotateLocomotor.a(param0, (byte) -104, du.field_c.field_f);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ob.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

@@ -17,7 +17,7 @@ final class RandomMazeBehaviour extends Behaviour {
     private MazeGrid field_z;
     private int field_w;
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, Collidable param6) {
+    final boolean blocksOverlap(int param0, int param1, int param2, int param3, int param4, int param5, Collidable param6) {
         int var14 = 0;
         int var15 = 0;
         RuntimeException stackIn_33_0 = null;
@@ -237,7 +237,7 @@ final class RandomMazeBehaviour extends Behaviour {
           var8 = param0.field_a - this.field_w - var4;
           if (param1 != -1) {
             var18 = (BeamSegment) null;
-            this.a(10, -109, (BeamSegment) null, 116);
+            this.interceptsBeam(10, -109, (BeamSegment) null, 116);
           }
           var9 = new nf();
           var9.a(var6, var7, this.field_z.height, this.field_t, var5, 0, this.field_z.width, var8);
@@ -470,7 +470,7 @@ final class RandomMazeBehaviour extends Behaviour {
         }
     }
 
-    final boolean a(int param0, int param1, BeamSegment param2, int param3) {
+    final boolean interceptsBeam(int param0, int param1, BeamSegment param2, int param3) {
         int stackIn_14_0 = 0;
         int stackIn_20_0 = 0;
         int stackIn_29_0 = 0;
@@ -517,7 +517,7 @@ final class RandomMazeBehaviour extends Behaviour {
           }
           if (param1 != 1) {
             var11 = (Collidable) null;
-            this.a(-49, 56, -14, 110, -69, 19, (Collidable) null);
+            this.blocksOverlap(-49, 56, -14, 110, -69, 19, (Collidable) null);
           }
           if (this.a(param2, param1 ^ -2)) {
             stackIn_29_0 = 1;
@@ -659,12 +659,12 @@ final class RandomMazeBehaviour extends Behaviour {
     final void a(boolean param0, int param1) {
         this.field_s = param1;
         if (param0) {
-          this.n((byte) 51);
+          this.onTrapLoaded((byte) 51);
         }
     }
 
-    final void h(int param0) {
-        super.h(param0);
+    final void mirror(int param0) {
+        super.mirror(param0);
     }
 
     final void encode(boolean param0, BitPacketBuffer param1) {
@@ -743,8 +743,8 @@ final class RandomMazeBehaviour extends Behaviour {
         return param0;
     }
 
-    final void n(byte param0) {
-        super.n((byte) 105);
+    final void onTrapLoaded(byte param0) {
+        super.onTrapLoaded((byte) 105);
         this.c(127);
         if (param0 <= 68) {
           this.field_r = (Trap) null;

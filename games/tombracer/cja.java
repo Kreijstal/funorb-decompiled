@@ -13,7 +13,7 @@ final class cja {
         if (var2 == null) {
           return;
         }
-        var2.b((byte) -38);
+        var2.draw((byte) -38);
     }
 
     final static void a(int param0, int param1, ht param2, int param3, int param4, int param5, int param6, boolean param7) {
@@ -292,7 +292,7 @@ final class cja {
         if (var3 == null) {
           return;
         }
-        var3.a((byte) -109);
+        var3.update((byte) -109);
     }
 
     cja() {

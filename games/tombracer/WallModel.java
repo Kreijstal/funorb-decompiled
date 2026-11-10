@@ -329,14 +329,14 @@ final class WallModel extends TrapModel {
         }
     }
 
-    final void h(int param0) {
+    final void mirror(int param0) {
         int var2 = 0;
         int var3 = 0;
         WallTile var4;
         int var5;
         int var6;
         var6 = TombRacer.field_G ? 1 : 0;
-        super.h(109);
+        super.mirror(109);
         if (this.tiles == null) {
           return;
         }

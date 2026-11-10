@@ -245,7 +245,7 @@ final class CollisionGrid {
                   var9 = (q) (this.field_e.nextWithSameKey((byte) 35));
                 }
                 if (decompiledFrameCompleted0) {
-                  var10 = vw.a(var7, param0, var8, true);
+                  var10 = ShaderEffect.a(var7, param0, var8, true);
                   this.field_e.put(param1 ^ -7074, var10, (long)param0.getCollisionId(true));
                   this.field_h.put((long)var10.hashCode(), 115, var10);
                 }

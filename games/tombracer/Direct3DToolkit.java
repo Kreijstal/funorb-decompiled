@@ -530,20 +530,20 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         return (GpuTexture2D) ((Object) new pia(this, param3, param5, param2, param0, param1, param4));
     }
 
-    final vw createShaderEffect(int param0, int param1) {
+    final ShaderEffect createShaderEffect(int param0, int param1) {
         int var3;
         if (param1 <= 37) {
-          return (vw) null;
+          return (ShaderEffect) null;
         }
         var3 = param0;
         if (var3 == 3) {
-          return (vw) ((Object) new cqa(this, this.field_I));
+          return (ShaderEffect) ((Object) new DirectXUnderwaterEffect(this, this.field_I));
         }
         if (4 == var3) {
-          return (vw) ((Object) new usa(this, this.field_I, this.field_Mb));
+          return (ShaderEffect) ((Object) new DirectXTransparentWaterEffect(this, this.field_I, this.field_Mb));
         }
         if (var3 == 8) {
-          return (vw) ((Object) new oja(this, this.field_I, this.field_Mb));
+          return (ShaderEffect) ((Object) new DirectXEnvironmentWaterEffect(this, this.field_I, this.field_Mb));
         }
         return super.createShaderEffect(param0, 106);
     }

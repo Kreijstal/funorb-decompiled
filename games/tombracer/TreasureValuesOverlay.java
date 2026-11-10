@@ -8,7 +8,7 @@ final class TreasureValuesOverlay extends MatchOverlay {
     static String field_k;
     private int field_n;
 
-    final void b(byte param0) {
+    final void draw(byte param0) {
         int var9 = 0;
         int var2;
         int var3;
@@ -213,18 +213,18 @@ final class TreasureValuesOverlay extends MatchOverlay {
         this.field_n = 300;
     }
 
-    final void a(byte param0) {
+    final void update(byte param0) {
         if (param0 > -107) {
-          this.a((byte) -84);
+          this.update((byte) -84);
         }
     }
 
-    final boolean a(int param0, char param1, byte param2) {
+    final boolean handleKey(int param0, char param1, byte param2) {
         int var4 = -43 % ((29 - param2) / 57);
         return false;
     }
 
-    final boolean a(boolean param0) {
+    final boolean pausesGame(boolean param0) {
         if (!param0) {
           return true;
         }

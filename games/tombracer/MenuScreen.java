@@ -3,18 +3,18 @@
  */
 abstract class MenuScreen extends GameScreen {
     static int field_j;
-    int field_i;
+    int itemSpacing;
     int field_p;
-    int field_g;
+    int itemX;
     MenuEntry[] items;
-    int field_n;
+    int firstItemY;
     ko field_k;
-    int field_f;
+    int itemRight;
     static IntrusiveDeque field_l;
     static String field_h;
     boolean field_o;
 
-    void a(byte param0, boolean param1) {
+    void draw(byte param0, boolean param1) {
         int discarded$1 = 0;
         RuntimeException runtimeException = null;
         int var3_int = 0;
@@ -228,13 +228,13 @@ abstract class MenuScreen extends GameScreen {
         RuntimeException decompiledCaughtException = null;
         this.field_o = true;
         try {
-          this.field_g = param1;
-          this.field_i = param4;
-          this.field_f = param2;
+          this.itemX = param1;
+          this.itemSpacing = param4;
+          this.itemRight = param2;
           if (null == param5) {
             param5 = new int[]{};
           }
-          this.field_n = param3;
+          this.firstItemY = param3;
           this.setItems(22174, param5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -251,7 +251,7 @@ abstract class MenuScreen extends GameScreen {
         }
     }
 
-    int a(byte param0, int param1) {
+    int getItemX(byte param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -259,7 +259,7 @@ abstract class MenuScreen extends GameScreen {
           if (param0 < 111) {
             this.b(61);
           }
-          stackIn_4_0 = this.field_g;
+          stackIn_4_0 = this.itemX;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -268,7 +268,7 @@ abstract class MenuScreen extends GameScreen {
         }
     }
 
-    void a(boolean param0, boolean param1, int param2) {
+    void update(boolean param0, boolean param1, int param2) {
         MenuEntry stackIn_11_0 = null;
         boolean stackIn_11_1 = false;
         boolean stackIn_12_2 = false;
@@ -339,7 +339,7 @@ abstract class MenuScreen extends GameScreen {
         }
     }
 
-    int a(int param0, byte param1) {
+    int getItemRight(int param0, byte param1) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -347,7 +347,7 @@ abstract class MenuScreen extends GameScreen {
           if (param1 != -48) {
             this.items = (MenuEntry[]) null;
           }
-          stackIn_4_0 = this.field_f;
+          stackIn_4_0 = this.itemRight;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -361,7 +361,7 @@ abstract class MenuScreen extends GameScreen {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 31923) {
-            this.g(-42, 120);
+            this.getItemY(-42, 120);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -403,7 +403,7 @@ abstract class MenuScreen extends GameScreen {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            this.field_i = 44;
+            this.itemSpacing = 44;
           }
           stackIn_7_0 = !(this.field_p >= param1.field_p);
           return stackIn_7_0;
@@ -756,7 +756,7 @@ abstract class MenuScreen extends GameScreen {
     void a(byte param0) {
         try {
           if (param0 <= 78) {
-            this.field_n = 36;
+            this.firstItemY = 36;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wv.B(" + param0 + ')');
@@ -780,7 +780,7 @@ abstract class MenuScreen extends GameScreen {
         }
     }
 
-    boolean a(int param0, char param1, int param2) {
+    boolean handleKey(int param0, char param1, int param2) {
         RuntimeException var4 = null;
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -803,7 +803,7 @@ abstract class MenuScreen extends GameScreen {
             this.c(-6);
           }
           if (param2 != 1) {
-            this.field_n = 76;
+            this.firstItemY = 76;
           }
           if (RasterizerOperator.d(20125) &&
             39 == param0) {
@@ -965,15 +965,15 @@ abstract class MenuScreen extends GameScreen {
         }
     }
 
-    int g(int param0, int param1) {
+    int getItemY(int param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 30) {
-            this.field_g = -17;
+            this.itemX = -17;
           }
-          stackIn_4_0 = this.field_n + this.field_i * param0 - this.e(param0, 126);
+          stackIn_4_0 = this.firstItemY + this.itemSpacing * param0 - this.e(param0, 126);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1089,13 +1089,13 @@ abstract class MenuScreen extends GameScreen {
             boolean decompiledFrameRemainder0 = true;
             if (param1.length > var9) {
               this.items[var9] = new MenuEntry(param1[var9], this.b(param1[var9], (byte) 125), this.f(0, param1[var9]), this.d(-72, param1[var9]));
-              this.items[var9].field_b = this.a((byte) 119, var9) + this.a(var9, (byte) -48) >> 1;
+              this.items[var9].field_b = this.getItemX((byte) 119, var9) + this.getItemRight(var9, (byte) -48) >> 1;
               this.items[var9].c(1701110401);
               stackIn_43_0 = -38;
               stackIn_43_1 = ~param1[var9];
               if (var10 != 0) {
                 if (stackIn_43_0 < stackIn_43_1) {
-                  this.items[var9].field_i = this.g(var9, param0 ^ 22144);
+                  this.items[var9].field_i = this.getItemY(var9, param0 ^ 22144);
                   var9++;
                   decompiledFrameRemainder1 = false;
                 }
@@ -1146,7 +1146,7 @@ abstract class MenuScreen extends GameScreen {
                 if (stackIn_43_0Lifetime1 >= stackIn_43_1Lifetime1) {
                   break;
                 }
-                this.items[var9].field_i = this.g(var9, param0 ^ 22144);
+                this.items[var9].field_i = this.getItemY(var9, param0 ^ 22144);
                 var9++;
                 if (var10 != 0) {
                   decompiledFrameCompleted0 = false;

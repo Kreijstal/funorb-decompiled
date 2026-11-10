@@ -43,17 +43,17 @@ final class eqa implements os {
           SimpleMoveLocomotor.field_s == null) {
           var3 = 0;
         }
-        if (bta.field_q == 0 &&
+        if (OpenGlUnderwaterEffect.field_q == 0 &&
           WaveformOperator.field_n != null) {
           var3 = 0;
         }
-        if (bta.field_q == 2 &&
+        if (OpenGlUnderwaterEffect.field_q == 2 &&
           !DisplaySettingsDialog.f(24316)) {
           var3 = 0;
         }
         if (MenuEntry.field_h == 84) {
           if (var3 == 0) {
-            if (bta.field_q == 0) {
+            if (OpenGlUnderwaterEffect.field_q == 0) {
               return true;
             }
             PlayerProfile.a(true);
@@ -74,7 +74,7 @@ final class eqa implements os {
             PlayerProfile.a(true);
             return true;
           }
-          var5 = bta.field_q;
+          var5 = OpenGlUnderwaterEffect.field_q;
           if (var5 == 0 &&
             null != C2SChooseRewardPacket.field_a) {
             var5 = 1;
@@ -82,7 +82,7 @@ final class eqa implements os {
           if (Transform3D.a(var5, -20011) == 2) {
             MazeGenerator.a(var5, param2, (byte) 108, 1);
           }
-          ResultsPhase.a(bta.field_q, var4_ref_String, param0, 32371, wp.field_a, -1);
+          ResultsPhase.a(OpenGlUnderwaterEffect.field_q, var4_ref_String, param0, 32371, wp.field_a, -1);
           PlayerProfile.a(true);
           return true;
         }
@@ -111,9 +111,9 @@ final class eqa implements os {
         var60 = MenuEntry.field_k;
         var16 = ima.a(var60, (byte) 8);
         var64 = var16;
-        if (bta.field_q != 2) {
+        if (OpenGlUnderwaterEffect.field_q != 2) {
           var7 = "";
-          if (0 == bta.field_q) {
+          if (0 == OpenGlUnderwaterEffect.field_q) {
             if (null == C2SChooseRewardPacket.field_a) {
               if (!kq.field_c) {
                 if (C2SChooseRewardPacket.field_a != null) {

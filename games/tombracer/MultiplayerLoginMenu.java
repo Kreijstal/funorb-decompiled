@@ -12,25 +12,25 @@ final class MultiplayerLoginMenu extends MenuScreen {
         field_r = null;
     }
 
-    final void a(boolean param0, boolean param1, int param2) {
-        super.a(param0, param1, param2);
+    final void update(boolean param0, boolean param1, int param2) {
+        super.update(param0, param1, param2);
         this.field_q.a((byte) -120, param0, !param1 ? true : false);
     }
 
-    final int a(int param0, byte param1) {
+    final int getItemRight(int param0, byte param1) {
         if (param1 == -48) {
-          return this.a((byte) 122, param0) + this.items[param0].e(-163);
+          return this.getItemX((byte) 122, param0) + this.items[param0].e(-163);
         }
         field_r = (ur) null;
-        return this.a((byte) 122, param0) + this.items[param0].e(-163);
+        return this.getItemX((byte) 122, param0) + this.items[param0].e(-163);
     }
 
-    final int g(int param0, int param1) {
+    final int getItemY(int param0, int param1) {
         if (param1 != 30) {
-          this.a(false, false, 33);
-          return this.field_n;
+          this.update(false, false, 33);
+          return this.firstItemY;
         }
-        return this.field_n;
+        return this.firstItemY;
     }
 
     final static boolean b(boolean param0) {
@@ -50,14 +50,14 @@ final class MultiplayerLoginMenu extends MenuScreen {
         return true;
     }
 
-    final void a(byte param0, boolean param1) {
+    final void draw(byte param0, boolean param1) {
         int var3 = this.field_q.e(param0 + 111);
         gg.field_f.a(aaa.a(false) - gg.field_f.a() >> 1, var3 + gg.field_f.c() / 2);
         this.h(var3, 3);
-        super.a(param0, param1);
+        super.draw(param0, param1);
     }
 
-    final int a(byte param0, int param1) {
+    final int getItemX(byte param0, int param1) {
         if (param0 >= 111) {
           return aaa.a(false) / 2 + (-(this.items.length * this.items[param1].e(-163) / 2) + param1 * this.items[param1].e(-163));
         }

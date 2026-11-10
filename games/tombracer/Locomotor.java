@@ -125,7 +125,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
         return this.trap.getInitialLocalX(80);
     }
 
-    void c(byte param0) {
+    void mirror(byte param0) {
         if (param0 > -116) {
           this.enabled = false;
         }

@@ -10,14 +10,14 @@ final class UnlockOverlay extends MatchOverlay {
     private boolean field_j;
     static boolean field_l;
 
-    final boolean a(boolean param0) {
+    final boolean pausesGame(boolean param0) {
         if (!param0) {
           return false;
         }
         return true;
     }
 
-    final boolean a(int param0, char param1, byte param2) {
+    final boolean handleKey(int param0, char param1, byte param2) {
         int var4 = -94 % ((29 - param2) / 57);
         if (param0 == 83) {
           this.field_j = true;
@@ -48,15 +48,15 @@ final class UnlockOverlay extends MatchOverlay {
 
     final boolean d(byte param0) {
         if (param0 != -75) {
-          this.a(false);
+          this.pausesGame(false);
           return this.field_j;
         }
         return this.field_j;
     }
 
-    final void a(byte param0) {
+    final void update(byte param0) {
         if (param0 > -107) {
-          this.b((byte) 103);
+          this.draw((byte) 103);
         }
         if (!this.field_k) {
           MatchProtocol.a(100, (byte) -76, 128, 222, 0, 96);
@@ -85,7 +85,7 @@ final class UnlockOverlay extends MatchOverlay {
         }
     }
 
-    final void b(byte param0) {
+    final void draw(byte param0) {
         String var6 = null;
         String var7 = null;
         String var8 = null;

@@ -1,54 +1,54 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class em extends vw {
+final class HardwareSpecularEffect extends ShaderEffect {
     static ToolkitSprite[] field_h;
     private boolean field_g;
     private na[] field_e;
     static String field_f;
     private boolean field_d;
 
-    final void a(int param0) {
+    final void disable(int param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
         if (!this.field_g) {
-          this.field_c.a(0, false, ej.field_c);
+          this.owner.a(0, false, ej.field_c);
         } else {
-          this.field_c.e(1, false);
-          this.field_c.bindTexture(true, (GpuTexture) null);
-          this.field_c.applyTexCoordGeneration(ItemModel.field_o, (byte) 0);
-          this.field_c.p((byte) 127);
+          this.owner.e(1, false);
+          this.owner.bindTexture(true, (GpuTexture) null);
+          this.owner.applyTexCoordGeneration(ItemModel.field_o, (byte) 0);
+          this.owner.p((byte) 127);
           if (!this.field_d) {
-            this.field_c.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
-            this.field_c.a(ej.field_c, 0, -90);
-            this.field_c.e(2, false);
-            this.field_c.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
-            this.field_c.a(ej.field_c, 0, -108);
-            this.field_c.a(PlayerContextMenu.field_j, 1, -15);
-            this.field_c.a(0, false, ej.field_c);
-            this.field_c.bindTexture(true, (GpuTexture) null);
+            this.owner.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
+            this.owner.a(ej.field_c, 0, -90);
+            this.owner.e(2, false);
+            this.owner.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
+            this.owner.a(ej.field_c, 0, -108);
+            this.owner.a(PlayerContextMenu.field_j, 1, -15);
+            this.owner.a(0, false, ej.field_c);
+            this.owner.bindTexture(true, (GpuTexture) null);
           } else {
-            this.field_c.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
-            this.field_c.a(ej.field_c, 0, -94);
-            this.field_c.a(0, false, ej.field_c);
+            this.owner.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
+            this.owner.a(ej.field_c, 0, -94);
+            this.owner.a(0, false, ej.field_c);
           }
-          this.field_c.e(0, false);
+          this.owner.e(0, false);
           this.field_g = false;
         }
-        this.field_c.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
+        this.owner.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
         if (param0 > -4) {
-          this.a((byte) 55, -114, 112);
+          this.setParameters((byte) 55, -114, 112);
         }
     }
 
     public static void releaseStatics(int param0) {
         if (param0 != 0) {
-          em.releaseStatics(-65);
+          HardwareSpecularEffect.releaseStatics(-65);
         }
         field_h = null;
         field_f = null;
     }
 
-    em(HardwareGraphicsToolkit param0) {
+    HardwareSpecularEffect(HardwareGraphicsToolkit param0) {
         super(param0);
         int var14 = 0;
         int var15 = 0;
@@ -129,9 +129,9 @@ final class em extends vw {
               }
             }
             this.field_e = new na[3];
-            this.field_e[0] = this.field_c.a((byte) 37, var27, false, 64);
-            this.field_e[1] = this.field_c.a((byte) 112, var28, false, 64);
-            this.field_e[2] = this.field_c.a((byte) 64, var29, false, 64);
+            this.field_e[0] = this.owner.a((byte) 37, var27, false, 64);
+            this.field_e[1] = this.owner.a((byte) 112, var28, false, 64);
+            this.field_e[2] = this.owner.a((byte) 64, var29, false, 64);
             return;
           }
           return;
@@ -149,18 +149,18 @@ final class em extends vw {
         }
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void setParameters(byte param0, int param1, int param2) {
         if (this.field_g) {
-          this.field_c.e(1, false);
-          this.field_c.bindTexture(true, this.field_e[-1 + param1]);
-          this.field_c.e(0, false);
+          this.owner.e(1, false);
+          this.owner.bindTexture(true, this.field_e[-1 + param1]);
+          this.owner.e(0, false);
         }
         if (param0 != 55) {
-          this.a(-91);
+          this.disable(-91);
         }
     }
 
-    final void a(int param0, boolean param1) {
+    final void enable(int param0, boolean param1) {
         int var3;
         AffineTransform3D var4;
         int var5;
@@ -168,40 +168,40 @@ final class em extends vw {
         var3 = -121 / ((param0 - 41) / 62);
         if (null != this.field_e &&
           param1) {
-          this.field_c.e(1, false);
-          this.field_c.applyTexCoordGeneration(IdolItemComponent.field_H, (byte) 0);
-          var4 = this.field_c.C(0);
+          this.owner.e(1, false);
+          this.owner.applyTexCoordGeneration(IdolItemComponent.field_H, (byte) 0);
+          var4 = this.owner.C(0);
           var4.b(-94, 1024);
-          this.field_c.a(cva.field_b, false);
+          this.owner.a(cva.field_b, false);
           if (!this.field_d) {
-            this.field_c.setTextureCombineOperations(iw.field_c, (byte) -110, PlatformComponent.field_F);
-            this.field_c.a(PlayerContextMenu.field_j, 0, -34);
-            this.field_c.e(2, false);
-            this.field_c.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, NormalMapOperator.field_m);
-            this.field_c.a(PlayerContextMenu.field_j, 0, -47);
-            this.field_c.a(PlayerContextMenu.field_j, 1, -6219, true, false);
-            this.field_c.a(0, false, tla.field_c);
-            this.field_c.bindTexture(true, this.field_c.field_Jb);
+            this.owner.setTextureCombineOperations(iw.field_c, (byte) -110, PlatformComponent.field_F);
+            this.owner.a(PlayerContextMenu.field_j, 0, -34);
+            this.owner.e(2, false);
+            this.owner.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, NormalMapOperator.field_m);
+            this.owner.a(PlayerContextMenu.field_j, 0, -47);
+            this.owner.a(PlayerContextMenu.field_j, 1, -6219, true, false);
+            this.owner.a(0, false, tla.field_c);
+            this.owner.bindTexture(true, this.owner.field_Jb);
           } else {
-            this.field_c.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, NormalMapOperator.field_m);
-            this.field_c.a(ej.field_c, 0, -6219, true, false);
-            this.field_c.a(0, false, tla.field_c);
+            this.owner.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, NormalMapOperator.field_m);
+            this.owner.a(ej.field_c, 0, -6219, true, false);
+            this.owner.a(0, false, tla.field_c);
           }
-          this.field_c.e(0, false);
+          this.owner.e(0, false);
           this.field_g = true;
         } else {
-          this.field_c.a(0, false, tla.field_c);
+          this.owner.a(0, false, tla.field_c);
         }
     }
 
-    final void a(boolean param0, int param1) {
+    final void refreshState(boolean param0, int param1) {
         if (param1 != 5744) {
           return;
         }
-        this.field_c.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, iw.field_c);
+        this.owner.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, iw.field_c);
     }
 
-    final boolean c(int param0) {
+    final boolean isSupported(int param0) {
         if (param0 != 1185) {
           this.field_e = (na[]) null;
           return true;
@@ -209,13 +209,13 @@ final class em extends vw {
         return true;
     }
 
-    final void a(int param0, GpuTexture param1, int param2) {
-        this.field_c.bindTexture(true, param1);
+    final void bindTexture(int param0, GpuTexture param1, int param2) {
+        this.owner.bindTexture(true, param1);
         if (param2 != 24595) {
           return;
         }
         try {
-          this.field_c.a((byte) 108, param0);
+          this.owner.a((byte) 108, param0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "em.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

@@ -393,7 +393,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
         MessageOverlay.field_t.field_x = tka.field_q.field_x;
         MessageOverlay.field_t.field_z = 1;
         if (0 < GameKeyHandler.field_a) {
-          vu.a((byte) 1, param5, param1, param6);
+          FallbackShaderEffect.a((byte) 1, param5, param1, param6);
         }
         if (0 < fp.field_e) {
           CoinBagItemComponent.a(param1, -1, param6, param8, param5);

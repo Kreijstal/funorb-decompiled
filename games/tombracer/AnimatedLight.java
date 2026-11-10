@@ -198,7 +198,7 @@ final class AnimatedLight {
         if (param0 != -1025) {
           field_a = (String) null;
         }
-        return new nl[]{vw.field_a, ObjectList.field_d, CollisionGrid.field_f};
+        return new nl[]{ShaderEffect.field_a, ObjectList.field_d, CollisionGrid.field_f};
     }
 
     final static g a(boolean param0, int param1) {

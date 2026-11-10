@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bta extends vw {
+final class OpenGlUnderwaterEffect extends ShaderEffect {
     private GpuTexture2D field_p;
     private mf field_r;
     private mf field_o;
@@ -18,28 +18,28 @@ final class bta extends vw {
     private mf field_e;
     private mf field_l;
 
-    final void a(byte param0, int param1, int param2) {
+    final void setParameters(byte param0, int param1, int param2) {
         if (param0 != 55) {
-          this.a(-124, false);
+          this.enable(-124, false);
         }
     }
 
-    final void a(boolean param0, int param1) {
+    final void refreshState(boolean param0, int param1) {
         if (param1 != 5744) {
           field_i = (java.awt.Color) null;
         }
     }
 
-    final void a(int param0, boolean param1) {
+    final void enable(int param0, boolean param1) {
         this.field_k = param1 ? true : false;
-        this.field_c.e(1, false);
-        this.field_c.bindTexture(true, this.field_p);
-        this.field_c.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, r.field_m);
-        this.field_c.a(pea.field_c, 0, -30);
-        this.field_c.a(ej.field_c, 2, -6219, true, false);
-        this.field_c.a(0, false, PlayerContextMenu.field_j);
+        this.owner.e(1, false);
+        this.owner.bindTexture(true, this.field_p);
+        this.owner.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, r.field_m);
+        this.owner.a(pea.field_c, 0, -30);
+        this.owner.a(ej.field_c, 2, -6219, true, false);
+        this.owner.a(0, false, PlayerContextMenu.field_j);
         int var3 = -29 % ((param0 - 41) / 62);
-        this.field_c.e(0, false);
+        this.owner.e(0, false);
         this.d(-124);
     }
 
@@ -58,7 +58,7 @@ final class bta extends vw {
         field_d = null;
     }
 
-    bta(HardwareOpenGlToolkit param0, ResourceArchive param1) {
+    OpenGlUnderwaterEffect(HardwareOpenGlToolkit param0, ResourceArchive param1) {
         super(param0);
         int stackIn_6_0 = 0;
         int stackIn_9_1 = 0;
@@ -108,7 +108,7 @@ final class bta extends vw {
             this.field_m = false;
             return;
           }
-          this.field_p = this.field_c.a(true, 1, false, 2, new int[]{0, -1});
+          this.field_p = this.owner.a(true, 1, false, 2, new int[]{0, -1});
           this.field_p.a((byte) -77, false, false);
           this.field_m = true;
           return;
@@ -143,42 +143,42 @@ final class bta extends vw {
         float var5Lifetime1;
         if (param0) {
           if (this.field_g) {
-            var2 = this.field_c.XA();
-            var3 = this.field_c.i();
+            var2 = this.owner.XA();
+            var3 = this.owner.i();
             var4 = (float)var2 - (float)(var2 - var3) * 0.125f;
             var5 = (float)var2 - (float)(-var3 + var2) * 0.25f;
-            jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5, var4, 1.0f / (float)this.field_c.g(false), (float)this.field_c.A(-2903) / 255.0f);
-            this.field_c.e(1, false);
-            this.field_c.g(3625, this.field_c.t(65280));
-            this.field_c.e(0, false);
+            jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5, var4, 1.0f / (float)this.owner.g(false), (float)this.owner.A(-2903) / 255.0f);
+            this.owner.e(1, false);
+            this.owner.g(3625, this.owner.t(65280));
+            this.owner.e(0, false);
           }
           return;
         }
         this.a(false);
         if (this.field_g) {
-          var2Lifetime1 = this.field_c.XA();
-          var3Lifetime1 = this.field_c.i();
+          var2Lifetime1 = this.owner.XA();
+          var3Lifetime1 = this.owner.i();
           var4Lifetime1 = (float)var2Lifetime1 - (float)(var2Lifetime1 - var3Lifetime1) * 0.125f;
           var5Lifetime1 = (float)var2Lifetime1 - (float)(-var3Lifetime1 + var2Lifetime1) * 0.25f;
-          jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5Lifetime1, var4Lifetime1, 1.0f / (float)this.field_c.g(false), (float)this.field_c.A(-2903) / 255.0f);
-          this.field_c.e(1, false);
-          this.field_c.g(3625, this.field_c.t(65280));
-          this.field_c.e(0, false);
+          jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5Lifetime1, var4Lifetime1, 1.0f / (float)this.owner.g(false), (float)this.owner.A(-2903) / 255.0f);
+          this.owner.e(1, false);
+          this.owner.g(3625, this.owner.t(65280));
+          this.owner.e(0, false);
         }
     }
 
-    final void a(int param0) {
-        this.field_c.e(1, false);
+    final void disable(int param0) {
+        this.owner.e(1, false);
         if (param0 < -4) {
-          this.field_c.bindTexture(true, (GpuTexture) null);
-          this.field_c.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
-          this.field_c.a(ej.field_c, 0, -49);
-          this.field_c.a(pea.field_c, 2, -53);
-          this.field_c.a(0, false, ej.field_c);
-          this.field_c.e(0, false);
+          this.owner.bindTexture(true, (GpuTexture) null);
+          this.owner.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
+          this.owner.a(ej.field_c, 0, -49);
+          this.owner.a(pea.field_c, 2, -53);
+          this.owner.a(0, false, ej.field_c);
+          this.owner.e(0, false);
           if (this.field_j) {
-            this.field_c.a(ej.field_c, 0, -107);
-            this.field_c.a(0, false, ej.field_c);
+            this.owner.a(ej.field_c, 0, -107);
+            this.owner.a(0, false, ej.field_c);
             this.field_j = false;
           }
           if (this.field_g) {
@@ -189,16 +189,16 @@ final class bta extends vw {
           }
           return;
         }
-        this.a(73);
-        this.field_c.bindTexture(true, (GpuTexture) null);
-        this.field_c.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
-        this.field_c.a(ej.field_c, 0, -49);
-        this.field_c.a(pea.field_c, 2, -53);
-        this.field_c.a(0, false, ej.field_c);
-        this.field_c.e(0, false);
+        this.disable(73);
+        this.owner.bindTexture(true, (GpuTexture) null);
+        this.owner.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
+        this.owner.a(ej.field_c, 0, -49);
+        this.owner.a(pea.field_c, 2, -53);
+        this.owner.a(0, false, ej.field_c);
+        this.owner.e(0, false);
         if (this.field_j) {
-          this.field_c.a(ej.field_c, 0, -107);
-          this.field_c.a(0, false, ej.field_c);
+          this.owner.a(ej.field_c, 0, -107);
+          this.owner.a(0, false, ej.field_c);
           this.field_j = false;
         }
         if (this.field_g) {
@@ -209,7 +209,7 @@ final class bta extends vw {
         }
     }
 
-    final void a(int param0, GpuTexture param1, int param2) {
+    final void bindTexture(int param0, GpuTexture param1, int param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -221,18 +221,18 @@ final class bta extends vw {
           }
           if (param1 != null) {
             if (this.field_j) {
-              this.field_c.a(ej.field_c, 0, param2 ^ -24583);
-              this.field_c.a(0, false, ej.field_c);
+              this.owner.a(ej.field_c, 0, param2 ^ -24583);
+              this.owner.a(0, false, ej.field_c);
               this.field_j = false;
             }
-            this.field_c.bindTexture(true, param1);
-            this.field_c.a((byte) 114, param0);
+            this.owner.bindTexture(true, param1);
+            this.owner.a((byte) 114, param0);
           } else {
             if (!this.field_j) {
-              this.field_c.bindTexture(true, this.field_c.field_Jb);
-              this.field_c.a((byte) 120, 1);
-              this.field_c.a(PlayerContextMenu.field_j, 0, -21);
-              this.field_c.a(0, false, PlayerContextMenu.field_j);
+              this.owner.bindTexture(true, this.owner.field_Jb);
+              this.owner.a((byte) 120, 1);
+              this.owner.a(PlayerContextMenu.field_j, 0, -21);
+              this.owner.a(0, false, PlayerContextMenu.field_j);
               this.field_j = true;
               return;
             }
@@ -252,7 +252,7 @@ final class bta extends vw {
         }
     }
 
-    final boolean c(int param0) {
+    final boolean isSupported(int param0) {
         if (param0 != 1185) {
           this.field_p = (GpuTexture2D) null;
           return this.field_m;
@@ -267,8 +267,8 @@ final class bta extends vw {
         int stackIn_8_1 = 0;
         int var2;
         AffineTransform3D var3;
-        var2 = this.field_c.d(false);
-        var3 = this.field_c.E(43);
+        var2 = this.owner.d(false);
+        var3 = this.owner.E(43);
         if (this.field_k) {
           stackIn_7_0 = 34336;
           if (var2 == 2147483647) {

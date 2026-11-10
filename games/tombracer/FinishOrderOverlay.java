@@ -6,21 +6,21 @@ final class FinishOrderOverlay extends MatchOverlay {
         super(param0);
     }
 
-    final void a(byte param0) {
+    final void update(byte param0) {
         if (param0 >= -107) {
           return;
         }
     }
 
-    final boolean a(boolean param0) {
+    final boolean pausesGame(boolean param0) {
         if (!param0) {
-          this.a(true);
+          this.pausesGame(true);
           return false;
         }
         return false;
     }
 
-    final void b(byte param0) {
+    final void draw(byte param0) {
         int var11 = 0;
         int var2;
         int var3;
@@ -71,7 +71,7 @@ final class FinishOrderOverlay extends MatchOverlay {
         }
     }
 
-    final boolean a(int param0, char param1, byte param2) {
+    final boolean handleKey(int param0, char param1, byte param2) {
         int var4 = 42 / ((param2 - 29) / 57);
         return false;
     }

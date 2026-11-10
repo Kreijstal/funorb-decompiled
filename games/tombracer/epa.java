@@ -30,21 +30,21 @@ final class epa extends MenuScreen {
         field_r = null;
     }
 
-    final int g(int param0, int param1) {
+    final int getItemY(int param0, int param1) {
         if (param0 < 3) {
-          return -cq.field_d.field_w + this.field_n;
+          return -cq.field_d.field_w + this.firstItemY;
         }
         if (param1 != 30) {
           field_r = (int[]) null;
           if (param0 < 5) {
-            return this.field_n + this.e(0, 125) - cq.field_d.field_w;
+            return this.firstItemY + this.e(0, 125) - cq.field_d.field_w;
           }
-          return (param0 > 4 ? 30 : -1 + this.items.length == param0 ? 60 : 30) - cq.field_d.field_w + (this.field_n + (-2 + param0) * this.field_i);
+          return (param0 > 4 ? 30 : -1 + this.items.length == param0 ? 60 : 30) - cq.field_d.field_w + (this.firstItemY + (-2 + param0) * this.itemSpacing);
         }
         if (param0 < 5) {
-          return this.field_n + this.e(0, 125) - cq.field_d.field_w;
+          return this.firstItemY + this.e(0, 125) - cq.field_d.field_w;
         }
-        return (param0 > 4 ? 30 : -1 + this.items.length == param0 ? 60 : 30) - cq.field_d.field_w + (this.field_n + (-2 + param0) * this.field_i);
+        return (param0 > 4 ? 30 : -1 + this.items.length == param0 ? 60 : 30) - cq.field_d.field_w + (this.firstItemY + (-2 + param0) * this.itemSpacing);
     }
 
     final static void a(int param0, byte param1, String param2) {
@@ -103,60 +103,60 @@ final class epa extends MenuScreen {
         return PitModel.field_n;
     }
 
-    final int a(int param0, byte param1) {
+    final int getItemRight(int param0, byte param1) {
         if (param1 != -48) {
           field_r = (int[]) null;
         }
         if (param0 == 0) {
-          return -110 + this.field_f;
+          return -110 + this.itemRight;
         }
         if (param0 == 1) {
-          return this.field_f - 25;
+          return this.itemRight - 25;
         }
         if (2 == param0) {
-          return this.field_f + 60;
+          return this.itemRight + 60;
         }
         if (3 == param0) {
-          return -80 + this.field_f;
+          return -80 + this.itemRight;
         }
         if (4 == param0) {
-          return this.field_f + 30;
+          return this.itemRight + 30;
         }
         if (param0 == 6) {
-          return this.field_f - 10;
+          return this.itemRight - 10;
         }
         if (7 == param0) {
-          return this.field_f - 10;
+          return this.itemRight - 10;
         }
-        return this.field_f;
+        return this.itemRight;
     }
 
-    final int a(byte param0, int param1) {
+    final int getItemX(byte param0, int param1) {
         if (param1 == 0) {
-          return this.field_g - 80;
+          return this.itemX - 80;
         }
         if (param1 == 1) {
-          return 5 + this.field_g;
+          return 5 + this.itemX;
         }
         if (param0 < 111) {
           return -91;
         }
         if (param1 == 2) {
-          return 90 + this.field_g;
+          return 90 + this.itemX;
         }
         if (param1 == 3) {
-          return -50 + this.field_g;
+          return -50 + this.itemX;
         }
         if (4 == param1) {
-          return this.field_g + 60;
+          return this.itemX + 60;
         }
         if (param1 == 6) {
-          return this.field_g - 10;
+          return this.itemX - 10;
         }
         if (param1 != 7) {
-          return this.field_g;
+          return this.itemX;
         }
-        return this.field_g - 10;
+        return this.itemX - 10;
     }
 
     static {

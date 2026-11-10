@@ -32,7 +32,7 @@ final class ala extends GameScreen {
         field_f = null;
     }
 
-    final void a(boolean param0, boolean param1, int param2) {
+    final void update(boolean param0, boolean param1, int param2) {
         boolean stackIn_5_0;
         int stackIn_5_1;
         int stackIn_5_2;
@@ -290,14 +290,14 @@ final class ala extends GameScreen {
         }
     }
 
-    final boolean a(int param0, char param1, int param2) {
+    final boolean handleKey(int param0, char param1, int param2) {
         if (param2 != 1) {
           return true;
         }
         return PressureSwitchBehaviour.a(15, 12, (byte) -106, 13);
     }
 
-    final void a(byte param0, boolean param1) {
+    final void draw(byte param0, boolean param1) {
         this.a(true, 68);
         fca.a(SingleChildWidget.a(0), 7);
         if (param0 != -28) {

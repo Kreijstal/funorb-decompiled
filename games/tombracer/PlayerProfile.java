@@ -31,7 +31,7 @@ final class PlayerProfile {
           PlayerProfile.releaseStatics(-1);
         }
         WeaveOperator.field_n.setLength(0);
-        bta.field_q = 0;
+        OpenGlUnderwaterEffect.field_q = 0;
     }
 
     public final String toString() {

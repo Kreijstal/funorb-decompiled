@@ -209,9 +209,9 @@ abstract class GameScreen {
 
     abstract boolean b(int param0);
 
-    abstract void a(byte param0, boolean param1);
+    abstract void draw(byte param0, boolean param1);
 
-    abstract void a(boolean param0, boolean param1, int param2);
+    abstract void update(boolean param0, boolean param1, int param2);
 
     public static void releaseStatics(byte param0) {
         field_b = null;
@@ -298,7 +298,7 @@ abstract class GameScreen {
         }
     }
 
-    abstract boolean a(int param0, char param1, int param2);
+    abstract boolean handleKey(int param0, char param1, int param2);
 
     abstract void a(byte param0);
 

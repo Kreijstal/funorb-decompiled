@@ -65,7 +65,7 @@ final class is extends jea {
               field_Ab = -0.0745474174618721f;
               return true;
             }
-            if (dp.a(125, (char) var2)) {
+            if (OpenGlEnvironmentWaterEffect.a(125, (char) var2)) {
               discarded$5 = this.field_vb.append((char) var2);
               if (MenuEntry.field_h == 84) {
                 if (this.field_vb.length() <= 0) {
@@ -147,7 +147,7 @@ final class is extends jea {
           field_Ab = -0.0745474174618721f;
           return true;
         }
-        if (!dp.a(125, (char) var2Lifetime1)) {
+        if (!OpenGlEnvironmentWaterEffect.a(125, (char) var2Lifetime1)) {
           if (MenuEntry.field_h == 84) {
             if (this.field_vb.length() <= 0) {
               this.field_ub = 1;

@@ -1,34 +1,34 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vu extends vw {
+final class FallbackShaderEffect extends ShaderEffect {
     static String field_e;
     static int field_f;
     static String field_d;
 
-    vu(HardwareGraphicsToolkit param0) {
+    FallbackShaderEffect(HardwareGraphicsToolkit param0) {
         super(param0);
     }
 
-    final void a(int param0, GpuTexture param1, int param2) {
+    final void bindTexture(int param0, GpuTexture param1, int param2) {
         try {
-          this.field_c.bindTexture(true, param1);
+          this.owner.bindTexture(true, param1);
           if (param2 != 24595) {
             field_e = (String) null;
           }
-          this.field_c.a((byte) -108, param0);
+          this.owner.a((byte) -108, param0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vu.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final void a(boolean param0, int param1) {
+    final void refreshState(boolean param0, int param1) {
         if (param1 != 5744) {
-          this.a((byte) 31, 78, -5);
+          this.setParameters((byte) 31, 78, -5);
         }
     }
 
-    final boolean c(int param0) {
+    final boolean isSupported(int param0) {
         if (param0 != 1185) {
           field_d = (String) null;
           return false;
@@ -233,7 +233,7 @@ final class vu extends vw {
           ((jea) (Object) stackIn_77_0).c(stackIn_77_1, stackIn_78_2);
           rm.field_e.field_a.e((byte) -99);
           if (param0 != 1) {
-            vu.releaseStatics(-121);
+            FallbackShaderEffect.releaseStatics(-121);
           }
           if (null != WaveformOperator.field_n) {
             if (bc.field_b.field_y != 0) {
@@ -256,19 +256,19 @@ final class vu extends vw {
         }
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void setParameters(byte param0, int param1, int param2) {
         if (param0 != 55) {
           field_e = (String) null;
         }
     }
 
-    final void a(int param0) {
+    final void disable(int param0) {
         if (param0 > -4) {
           field_f = 59;
         }
     }
 
-    final void a(int param0, boolean param1) {
+    final void enable(int param0, boolean param1) {
         int var3 = -103 % ((param0 - 41) / 62);
     }
 

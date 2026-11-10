@@ -40,12 +40,12 @@ final class ResourceArchive {
           }
           param2 = param2.toLowerCase();
           var6 = (CharSequence) ((Object) param0);
-          var4_int = this.field_i.field_b.a(vta.a(var6, -12754), 1);
+          var4_int = this.field_i.field_b.a(HardwareUnlitEffect.a(var6, -12754), 1);
           if (!this.isGroupValid(-1, var4_int)) {
             return false;
           }
           var7 = (CharSequence) ((Object) param2);
-          var5 = this.field_i.field_e[var4_int].a(vta.a(var7, -12754), 1);
+          var5 = this.field_i.field_e[var4_int].a(HardwareUnlitEffect.a(var7, -12754), 1);
           stackIn_10_0 = this.a(var4_int, (byte) -126, var5);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -138,7 +138,7 @@ final class ResourceArchive {
             this.a((String) null, true);
           }
           var5 = (CharSequence) ((Object) param0);
-          var3_int = this.field_i.field_b.a(vta.a(var5, -12754), 1);
+          var3_int = this.field_i.field_b.a(HardwareUnlitEffect.a(var5, -12754), 1);
           if (var3_int >= 0) {
             return true;
           }
@@ -227,7 +227,7 @@ final class ResourceArchive {
           }
           param1 = param1.toLowerCase();
           var5 = (CharSequence) ((Object) param1);
-          var4_int = this.field_i.field_e[param2].a(vta.a(var5, -12754), 1);
+          var4_int = this.field_i.field_e[param2].a(HardwareUnlitEffect.a(var5, -12754), 1);
           if (this.a(param2, var4_int, (byte) -75)) {
             stackIn_9_0 = var4_int;
             return stackIn_9_0;
@@ -615,12 +615,12 @@ final class ResourceArchive {
           param0 = param0.toLowerCase();
           param1 = param1.toLowerCase();
           var6 = (CharSequence) ((Object) param0);
-          var4_int = this.field_i.field_b.a(vta.a(var6, -12754), 1);
+          var4_int = this.field_i.field_b.a(HardwareUnlitEffect.a(var6, -12754), 1);
           if (var4_int < param2) {
             return false;
           }
           var7 = (CharSequence) ((Object) param1);
-          var5 = this.field_i.field_e[var4_int].a(vta.a(var7, -12754), 1);
+          var5 = this.field_i.field_e[var4_int].a(HardwareUnlitEffect.a(var7, -12754), 1);
           if (0 <= var5) {
             return true;
           }
@@ -691,7 +691,7 @@ final class ResourceArchive {
             return stackIn_5_0;
           }
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_i.field_b.a(vta.a(var4, -12754), param1 ^ -7767);
+          var3_int = this.field_i.field_b.a(HardwareUnlitEffect.a(var4, -12754), param1 ^ -7767);
           if (this.isGroupValid(param1 ^ 7767, var3_int)) {
             return var3_int;
           }
@@ -729,7 +729,7 @@ final class ResourceArchive {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_i.field_b.a(vta.a(var4, -12754), 1);
+          var3_int = this.field_i.field_b.a(HardwareUnlitEffect.a(var4, -12754), 1);
           stackIn_8_0 = this.ensureGroupLoaded(var3_int, -2);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -768,7 +768,7 @@ final class ResourceArchive {
           param0 = param0.toLowerCase();
           param2 = param2.toLowerCase();
           var6 = (CharSequence) ((Object) param0);
-          var4_int = this.field_i.field_b.a(vta.a(var6, -12754), 1);
+          var4_int = this.field_i.field_b.a(HardwareUnlitEffect.a(var6, -12754), 1);
           if (!this.isGroupValid(-1, var4_int)) {
             return null;
           }
@@ -776,7 +776,7 @@ final class ResourceArchive {
             this.a(((int[]) (this.field_a[12]))[21]);
           }
           var7 = (CharSequence) ((Object) param2);
-          var5 = this.field_i.field_e[var4_int].a(vta.a(var7, -12754), 1);
+          var5 = this.field_i.field_e[var4_int].a(HardwareUnlitEffect.a(var7, -12754), 1);
           stackIn_9_0 = this.a(false, var4_int, var5);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -914,7 +914,7 @@ final class ResourceArchive {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_i.field_b.a(vta.a(var4, -12754), 1);
+          var3_int = this.field_i.field_b.a(HardwareUnlitEffect.a(var4, -12754), 1);
           stackIn_6_0 = this.getGroupProgress(var3_int, (byte) 119);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -4,18 +4,18 @@
 final class dua extends MatchOverlay {
     static String field_j;
 
-    final boolean a(int param0, char param1, byte param2) {
+    final boolean handleKey(int param0, char param1, byte param2) {
         int var4 = 66 / ((29 - param2) / 57);
         return false;
     }
 
-    final void a(byte param0) {
+    final void update(byte param0) {
         if (param0 > -107) {
-          this.a(false);
+          this.pausesGame(false);
         }
     }
 
-    final boolean a(boolean param0) {
+    final boolean pausesGame(boolean param0) {
         if (!param0) {
           field_j = (String) null;
           return false;
@@ -27,7 +27,7 @@ final class dua extends MatchOverlay {
         super(param0);
     }
 
-    final void b(byte param0) {
+    final void draw(byte param0) {
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_49_0 = 0;

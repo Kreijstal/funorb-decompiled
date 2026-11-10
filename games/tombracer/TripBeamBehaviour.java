@@ -28,8 +28,8 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
         return 30;
     }
 
-    final void n(byte param0) {
-        super.n((byte) 75);
+    final void onTrapLoaded(byte param0) {
+        super.onTrapLoaded((byte) 75);
         if (param0 <= 68) {
           this.field_n = 46;
           this.q((byte) 92);
@@ -48,8 +48,8 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
         this.field_z = new Effect(this.getRoot(6), 4, 128);
     }
 
-    final void g(int param0) {
-        super.g(param0 + 0);
+    final void resolveSwitchLinks(int param0) {
+        super.resolveSwitchLinks(param0 + 0);
         if (param0 == -2) {
           this.field_C.a((byte) 48, this.getScope((byte) 111));
           return;
@@ -429,7 +429,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
         }
     }
 
-    final boolean p(byte param0) {
+    final boolean freezesInTimeStop(byte param0) {
         int discarded$0 = 0;
         if (param0 != 120) {
           BeamSegment var3 = (BeamSegment) null;

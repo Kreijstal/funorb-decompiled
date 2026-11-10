@@ -182,8 +182,8 @@ final class KeyLockBehaviour extends Behaviour implements SwitchSource {
         }
     }
 
-    final void g(int param0) {
-        super.g(param0);
+    final void resolveSwitchLinks(int param0) {
+        super.resolveSwitchLinks(param0);
         this.field_q.a((byte) 48, this.getScope((byte) 109));
     }
 

@@ -40,7 +40,7 @@ final class gl extends qe {
             var6_int = param1.indexOf("<%", var5);
             if (var6_int >= 0) {
               for (var5 = var6_int + 2; var3_int > var5; var5++) {
-                if (dp.a(123, param1.charAt(var5))) {
+                if (OpenGlEnvironmentWaterEffect.a(123, param1.charAt(var5))) {
                   continue;
                 }
                 break;
@@ -77,7 +77,7 @@ final class gl extends qe {
               return stackIn_30_0;
             }
             for (var5Lifetime1 = 2 + var8Lifetime1; var5Lifetime1 < var3_int; var5Lifetime1++) {
-              if (dp.a(113, param1.charAt(var5Lifetime1))) {
+              if (OpenGlEnvironmentWaterEffect.a(113, param1.charAt(var5Lifetime1))) {
                 continue;
               }
               break;
@@ -293,7 +293,7 @@ final class gl extends qe {
             var6_int = param1.indexOf("<%", var5);
             if (var6_int >= 0) {
               for (var5 = var6_int + 2; var3_int > var5; var5++) {
-                if (dp.a(123, param1.charAt(var5))) {
+                if (OpenGlEnvironmentWaterEffect.a(123, param1.charAt(var5))) {
                   continue;
                 }
                 break;
@@ -330,7 +330,7 @@ final class gl extends qe {
               return stackIn_30_0;
             }
             for (var5Lifetime1 = 2 + var8Lifetime1; var5Lifetime1 < var3_int; var5Lifetime1++) {
-              if (dp.a(113, param1.charAt(var5Lifetime1))) {
+              if (OpenGlEnvironmentWaterEffect.a(113, param1.charAt(var5Lifetime1))) {
                 continue;
               }
               break;

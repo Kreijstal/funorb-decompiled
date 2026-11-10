@@ -13,7 +13,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
     void a(WorldBody param0, int param1, TrapPart param2) {
         try {
           if (param1 != -2159) {
-            this.h(80);
+            this.mirror(80);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "dg.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -684,7 +684,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
         }
     }
 
-    void h(int param0) {
+    void mirror(int param0) {
         if (param0 < 0) {
           this.elevationOffset = 78;
         }

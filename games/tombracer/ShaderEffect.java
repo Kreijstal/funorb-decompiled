@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class vw {
+abstract class ShaderEffect {
     static nl field_a;
     static jea field_b;
-    HardwareGraphicsToolkit field_c;
+    HardwareGraphicsToolkit owner;
 
-    abstract void a(int param0, boolean param1);
+    abstract void enable(int param0, boolean param1);
 
     void c(boolean param0) {
         if (!param0) {
@@ -14,16 +14,16 @@ abstract class vw {
         }
     }
 
-    abstract void a(int param0);
+    abstract void disable(int param0);
 
-    abstract void a(int param0, GpuTexture param1, int param2);
+    abstract void bindTexture(int param0, GpuTexture param1, int param2);
 
     public static void a(byte param0) {
         field_b = null;
         field_a = null;
         if (param0 != 101) {
           Collidable var2 = (Collidable) null;
-          vw.a(-92, (Collidable) null, -43, true);
+          ShaderEffect.a(-92, (Collidable) null, -43, true);
         }
     }
 
@@ -77,21 +77,21 @@ abstract class vw {
 
     void b(int param0) {
         if (param0 <= 64) {
-          this.a((byte) 45, -125, -56);
+          this.setParameters((byte) 45, -125, -56);
         }
     }
 
-    vw(HardwareGraphicsToolkit param0) {
+    ShaderEffect(HardwareGraphicsToolkit param0) {
         try {
-          this.field_c = param0;
+          this.owner = param0;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vw.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    abstract void a(boolean param0, int param1);
+    abstract void refreshState(boolean param0, int param1);
 
-    abstract void a(byte param0, int param1, int param2);
+    abstract void setParameters(byte param0, int param1, int param2);
 
     void b(boolean param0) {
         if (!param0) {
@@ -99,7 +99,7 @@ abstract class vw {
         }
     }
 
-    abstract boolean c(int param0);
+    abstract boolean isSupported(int param0);
 
     static {
         field_a = new nl("email");

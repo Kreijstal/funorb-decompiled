@@ -18,7 +18,7 @@ final class ConveyorBehaviour extends Behaviour {
         CollisionGrid var8;
         var7 = TombRacer.field_G ? 1 : 0;
         if (param0 != 5418) {
-          this.p((byte) 4);
+          this.freezesInTimeStop((byte) 4);
         }
         this.b(0);
         var8 = this.getRoom(true).collisionGrid;
@@ -129,11 +129,11 @@ final class ConveyorBehaviour extends Behaviour {
         return var10;
     }
 
-    final void h(int param0) {
+    final void mirror(int param0) {
         if (param0 != 28701) {
           return;
         }
-        super.h(param0 + 0);
+        super.mirror(param0 + 0);
         this.field_s = -this.field_s;
     }
 
@@ -147,7 +147,7 @@ final class ConveyorBehaviour extends Behaviour {
         }
     }
 
-    final boolean p(byte param0) {
+    final boolean freezesInTimeStop(byte param0) {
         if (param0 != 120) {
           BitPacketBuffer var3 = (BitPacketBuffer) null;
           this.encode(false, (BitPacketBuffer) null);

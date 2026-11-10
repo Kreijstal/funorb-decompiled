@@ -220,7 +220,7 @@ final class CrusherBehaviour extends Behaviour {
         }
     }
 
-    final boolean p(byte param0) {
+    final boolean freezesInTimeStop(byte param0) {
         if (param0 != 120) {
           return true;
         }
@@ -432,7 +432,7 @@ final class CrusherBehaviour extends Behaviour {
         return stackIn_18_0;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, Collidable param6) {
+    final boolean blocksOverlap(int param0, int param1, int param2, int param3, int param4, int param5, Collidable param6) {
         RuntimeException var8 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -473,7 +473,7 @@ final class CrusherBehaviour extends Behaviour {
         this.crushedTicks = param0;
     }
 
-    final boolean a(int param0, int param1, BeamSegment param2, int param3) {
+    final boolean interceptsBeam(int param0, int param1, BeamSegment param2, int param3) {
         RuntimeException var5 = null;
         BeamSegment var6 = null;
         RuntimeException stackIn_10_0 = null;
@@ -486,7 +486,7 @@ final class CrusherBehaviour extends Behaviour {
           }
           if (param1 != 1) {
             var6 = (BeamSegment) null;
-            this.a(-121, -9, (BeamSegment) null, -81);
+            this.interceptsBeam(-121, -9, (BeamSegment) null, -81);
           }
           param2.a(param3, (byte) 47);
           return true;

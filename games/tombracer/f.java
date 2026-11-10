@@ -397,7 +397,7 @@ final class f {
           ItemModel.field_n.a(true);
         }
         int var1 = -18 % ((-10 - param0) / 43);
-        if (bta.field_q != 0) {
+        if (OpenGlUnderwaterEffect.field_q != 0) {
           PlayerProfile.a(true);
         }
         MenuScreen.field_j = 0;

@@ -8,7 +8,7 @@ final class PlayPhase extends MatchPhase {
     private int field_q;
     private boolean field_m;
 
-    final void a(int param0, boolean param1) {
+    final void update(int param0, boolean param1) {
         int var3;
         int var4;
         int var5;
@@ -27,11 +27,11 @@ final class PlayPhase extends MatchPhase {
           this.field_q = this.field_q - 1;
         }
         if (!this.screen.field_D &&
-          this.screen.e(118)) {
+          this.screen.isPausedByOverlay(118)) {
           return;
         }
         if (this.matchState.getRoundWinner(2) == -1) {
-          this.screen.h(110);
+          this.screen.tickMatch(110);
         }
         for (var4 = 0; this.viewports.length > var4; var4++) {
           if (!this.viewports[var4].c(1727002282) &&
@@ -71,7 +71,7 @@ final class PlayPhase extends MatchPhase {
         }
     }
 
-    final void b(int param0, boolean param1) {
+    final void draw(int param0, boolean param1) {
         int var3;
         int var4_int;
         String var4;
@@ -274,7 +274,7 @@ final class PlayPhase extends MatchPhase {
         }
     }
 
-    final boolean a(char param0, int param1, int param2) {
+    final boolean handleKey(char param0, int param1, int param2) {
         boolean stackIn_14_0 = false;
         boolean stackIn_23_1 = false;
         MessageOverlay var5;
@@ -350,11 +350,11 @@ final class PlayPhase extends MatchPhase {
     private final void f(int param0) {
         this.field_o = false;
         if (param0 != 16) {
-          this.a('ﾝ', -29, -124);
+          this.handleKey('ﾝ', -29, -124);
         }
     }
 
-    final boolean e(int param0) {
+    final boolean allowsChat(int param0) {
         if (param0 != -9202) {
           return true;
         }
@@ -373,7 +373,7 @@ final class PlayPhase extends MatchPhase {
         if (this.matchState.playersRemaining <= 1) {
           this.viewports[var2].a(0, mf.field_d, -20186);
         } else {
-          this.viewports[var2].a(0, dp.field_j, -20186);
+          this.viewports[var2].a(0, OpenGlEnvironmentWaterEffect.field_j, -20186);
         }
         if (param0 < 52) {
           this.field_p = false;

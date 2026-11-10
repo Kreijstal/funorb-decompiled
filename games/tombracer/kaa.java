@@ -36,7 +36,7 @@ final class kaa implements isa {
     }
 
     final static void a(byte param0) {
-        bta.field_q = 0;
+        OpenGlUnderwaterEffect.field_q = 0;
         ni.field_c = true;
         if (param0 <= 31) {
           byte[] var2 = (byte[]) null;

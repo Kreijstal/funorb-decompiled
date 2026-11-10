@@ -455,7 +455,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         try {
           this.field_n = param1;
           if (param0 < 81) {
-            this.p((byte) -109);
+            this.freezesInTimeStop((byte) -109);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ov.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -474,7 +474,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         }
     }
 
-    final boolean p(byte param0) {
+    final boolean freezesInTimeStop(byte param0) {
         if (param0 != 120) {
           Trap var3 = (Trap) null;
           this.attachToTrap(true, (Trap) null);

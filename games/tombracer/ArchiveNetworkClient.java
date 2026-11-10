@@ -257,7 +257,7 @@ abstract class ArchiveNetworkClient {
           for (var2_int = 0; param1.length() > var2_int; var2_int++) {
             var3 = param1.charAt(var2_int);
             if (!PressureSwitchBehaviour.a((byte) -20, (char) var3) &&
-              !dp.a(param0 + 190, (char) var3)) {
+              !OpenGlEnvironmentWaterEffect.a(param0 + 190, (char) var3)) {
               return true;
             }
           }

@@ -44,7 +44,7 @@ abstract class GameFont {
 
     final static void a(boolean param0) {
         LightSource.field_h.a(RasterShape.field_e.field_G - (!UnlockOverlay.field_p ? 0 : 40 + (2 + io.field_a + 2)), 18, -23776, 0, 0);
-        vw.field_b.a(io.field_a + 42, 18, -23776, 0, -2 + (RasterShape.field_e.field_G - (io.field_a + 40)));
+        ShaderEffect.field_b.a(io.field_a + 42, 18, -23776, 0, -2 + (RasterShape.field_e.field_G - (io.field_a + 40)));
         bsa.field_j.a(RasterShape.field_e.field_G, 2, (byte) 127, 0, io.field_a, -20 + RasterShape.field_e.field_t, 20);
         if (param0) {
           GameFont.a(false);

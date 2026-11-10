@@ -109,14 +109,14 @@ final class StandingsPhase extends MatchPhase {
         }
     }
 
-    final boolean e(int param0) {
+    final boolean allowsChat(int param0) {
         if (param0 != -9202) {
           return false;
         }
         return false;
     }
 
-    final boolean a(char param0, int param1, int param2) {
+    final boolean handleKey(char param0, int param1, int param2) {
         if (param2 == 13) {
           this.a(127, 0);
         } else {
@@ -134,7 +134,7 @@ final class StandingsPhase extends MatchPhase {
         return true;
     }
 
-    final void b(int param0, boolean param1) {
+    final void draw(int param0, boolean param1) {
         int var19 = 0;
         int stackIn_4_0 = 0;
         MenuEntry stackIn_62_0;
@@ -321,7 +321,7 @@ final class StandingsPhase extends MatchPhase {
           return;
         }
         if (param0 <= 114) {
-          this.b(-124, false);
+          this.draw(-124, false);
         }
         if (param1 == 0) {
           this.screen.b(false, true, 0);
@@ -337,7 +337,7 @@ final class StandingsPhase extends MatchPhase {
         }
     }
 
-    final void a(int param0, boolean param1) {
+    final void update(int param0, boolean param1) {
         PlayerModel stackIn_5_0 = null;
         int stackIn_5_1 = 0;
         int stackIn_6_2 = 0;
@@ -370,7 +370,7 @@ final class StandingsPhase extends MatchPhase {
         this.field_n = -1;
         this.field_q = true;
         if (param0 != 80) {
-          this.b(12, true);
+          this.draw(12, true);
         }
         for (var3Lifetime1 = 0; this.field_p.length > var3Lifetime1; var3Lifetime1++) {
           if (param1) {
@@ -414,7 +414,7 @@ final class StandingsPhase extends MatchPhase {
               this.field_p[1].field_e = HardwareRidgedWaterNoise.field_t.toUpperCase();
             } else {
               if (this.screen.matchState.haveAllOthersResigned(this.screen.localPlayerIndex, true)) {
-                this.field_p[1].field_e = sl.field_g.toUpperCase();
+                this.field_p[1].field_e = HardwareReflectionEffect.field_g.toUpperCase();
               } else {
                 this.field_p[1].field_e = PrefabComponent.field_E.toUpperCase();
               }

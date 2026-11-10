@@ -52,11 +52,11 @@ final class WindZoneBehaviour extends Behaviour {
         return param0;
     }
 
-    final void h(int param0) {
+    final void mirror(int param0) {
         int var2;
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
-        super.h(param0);
+        super.mirror(param0);
         var2 = this.field_q;
         if (var2 != 3) {
           if (var2 == 1) {
@@ -258,7 +258,7 @@ final class WindZoneBehaviour extends Behaviour {
         this.field_v = new BeamSegment();
     }
 
-    final boolean p(byte param0) {
+    final boolean freezesInTimeStop(byte param0) {
         if (param0 != 120) {
           this.field_q = 53;
           return true;

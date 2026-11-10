@@ -391,14 +391,14 @@ final class PathMoveLocomotor extends Locomotor {
         }
     }
 
-    final void c(byte param0) {
+    final void mirror(byte param0) {
         if (param0 <= -116) {
-          super.c((byte) -119);
+          super.mirror((byte) -119);
           this.field_t.a(true);
           return;
         }
         this.field_w = -124;
-        super.c((byte) -119);
+        super.mirror((byte) -119);
         this.field_t.a(true);
     }
 

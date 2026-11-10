@@ -33,7 +33,7 @@ final class CharacterSelectPhase extends MatchPhase {
         return false;
     }
 
-    final boolean a(char param0, int param1, int param2) {
+    final boolean handleKey(char param0, int param1, int param2) {
         boolean discarded$1 = false;
         if (0 != this.field_p &&
           this.i(param1 ^ -26)) {
@@ -50,7 +50,7 @@ final class CharacterSelectPhase extends MatchPhase {
         return false;
     }
 
-    final void b(int param0, boolean param1) {
+    final void draw(int param0, boolean param1) {
         int stackIn_3_0 = 0;
         int stackIn_12_0 = 0;
         int var3;
@@ -84,7 +84,7 @@ final class CharacterSelectPhase extends MatchPhase {
           var6_ref_ad = (ad) (this.field_n.next(119));
         }
         if (param0 >= -50) {
-          this.a(33, true);
+          this.update(33, true);
         }
         ura.a(-10985);
         var6 = this.field_t.length;
@@ -105,7 +105,7 @@ final class CharacterSelectPhase extends MatchPhase {
         this.d(-27142);
     }
 
-    final void a(int param0, boolean param1) {
+    final void update(int param0, boolean param1) {
         int var3 = 0;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
@@ -140,7 +140,7 @@ final class CharacterSelectPhase extends MatchPhase {
           this.field_u = 100;
         }
         if (param0 != 80) {
-          this.a('H', -116, 32);
+          this.handleKey('H', -116, 32);
         }
         this.field_p = this.field_p + 1;
     }
@@ -320,7 +320,7 @@ final class CharacterSelectPhase extends MatchPhase {
         return di.field_g[param0];
     }
 
-    final boolean e(int param0) {
+    final boolean allowsChat(int param0) {
         if (param0 != -9202) {
           return false;
         }

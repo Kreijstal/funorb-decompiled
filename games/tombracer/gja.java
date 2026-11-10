@@ -1167,10 +1167,10 @@ final class gja extends ka {
           if ((float)this.field_S.field_D >= var10) {
             return;
           }
-          vta.field_e = var6.field_q * var5.field_l + var6.field_l * var5.field_g + var6.field_o * var5.field_f;
+          HardwareUnlitEffect.field_e = var6.field_q * var5.field_l + var6.field_l * var5.field_g + var6.field_o * var5.field_f;
           fba.field_a = var5.field_e + (var6.field_i * var5.field_f + (var6.field_n * var5.field_l + var5.field_g * var6.field_e));
-          var11 = fba.field_a + vta.field_e * (float)this.field_o;
-          var12 = (float)this.field_n * vta.field_e + fba.field_a;
+          var11 = fba.field_a + HardwareUnlitEffect.field_e * (float)this.field_o;
+          var12 = (float)this.field_n * HardwareUnlitEffect.field_e + fba.field_a;
           if (!(var11 > var12)) {
             var14 = (var12 + (float)this.field_H) * (float)this.field_S.field_Ic;
             var13 = (var11 - (float)this.field_H) * (float)this.field_S.field_Ic;
@@ -2157,7 +2157,7 @@ final class gja extends ka {
                   var7 = 0.3333333134651184f * (float)(this.field_Z[var5.field_i] + (this.field_Z[var5.field_c] + this.field_Z[var5.field_k]));
                   var8 = 0.3333333134651184f * (float)(this.field_r[var5.field_k] + (this.field_r[var5.field_i] + this.field_r[var5.field_c]));
                   var9 = (float)(this.field_l[var5.field_k] + this.field_l[var5.field_c] + this.field_l[var5.field_i]) * 0.3333333134651184f;
-                  var10 = var9 * wka.field_b + (vta.field_e * var8 + baa.field_c * var7) + fba.field_a;
+                  var10 = var9 * wka.field_b + (HardwareUnlitEffect.field_e * var8 + baa.field_c * var7) + fba.field_a;
                   var11 = var9 * ct.field_b + (kb.field_p * var8 + var7 * vs.field_O) + MatchScoringObserver.field_g;
                   var12 = gj.field_h + (var9 * hs.field_c + (var7 * pl.field_a + MatchPhase.field_d * var8));
                   var13 = (float)(1.0 / Math.sqrt((double)(var12 * var12 + (var11 * var11 + var10 * var10)))) * (float)var5.field_b;
@@ -2649,7 +2649,7 @@ final class gja extends ka {
             param0.field_lb = this.field_lb;
           }
           if (!OpenGlTransform3D.c(param4, this.field_h, -19531)) {
-            if (vta.a(this.field_h, param4, 2048)) {
+            if (HardwareUnlitEffect.a(this.field_h, param4, 2048)) {
               param0.field_O = this.field_O;
               if (var13 != 0) {
                 param0.field_O = null;
@@ -4755,9 +4755,9 @@ final class gja extends ka {
             return;
           }
           fba.field_a = var5.field_n * var4.field_l + var4.field_g * var5.field_e + var5.field_i * var4.field_f + var4.field_e;
-          vta.field_e = var4.field_f * var5.field_o + (var5.field_l * var4.field_g + var4.field_l * var5.field_q);
-          var10 = (float)this.field_o * vta.field_e + fba.field_a;
-          var11 = (float)this.field_n * vta.field_e + fba.field_a;
+          HardwareUnlitEffect.field_e = var4.field_f * var5.field_o + (var5.field_l * var4.field_g + var4.field_l * var5.field_q);
+          var10 = (float)this.field_o * HardwareUnlitEffect.field_e + fba.field_a;
+          var11 = (float)this.field_n * HardwareUnlitEffect.field_e + fba.field_a;
           if (var11 < var10) {
             var13 = (var10 + (float)this.field_H) * (float)this.field_S.field_Ic;
             var12 = (float)this.field_S.field_Ic * ((float)(-this.field_H) + var11);
@@ -4886,7 +4886,7 @@ final class gja extends ka {
             this.field_E = new hg(no.a(this.field_h, this.field_Y, 36864));
           }
           if (param3 ||
-            vta.a(this.field_h, this.field_Y, 2048)) {
+            HardwareUnlitEffect.a(this.field_h, this.field_Y, 2048)) {
             this.field_O = new hg(OpenGlTransform3D.c(this.field_Y, this.field_h, -19531));
           }
           if (!param3 &&

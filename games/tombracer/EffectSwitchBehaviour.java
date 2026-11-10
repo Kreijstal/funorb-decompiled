@@ -62,8 +62,8 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
         this.field_w = param2;
     }
 
-    final void g(int param0) {
-        super.g(param0 ^ 0);
+    final void resolveSwitchLinks(int param0) {
+        super.resolveSwitchLinks(param0 ^ 0);
         this.field_q.a((byte) 48, this.getScope((byte) 110));
         if (param0 != -2) {
           BitPacketBuffer var3 = (BitPacketBuffer) null;
@@ -175,7 +175,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
         }
     }
 
-    final int a(int param0, int param1, Effect param2, int param3, byte param4, int param5) {
+    final int onAreaEffect(int param0, int param1, Effect param2, int param3, byte param4, int param5) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
@@ -201,7 +201,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
         }
     }
 
-    final int a(int param0, Projectile param1, Effect param2) {
+    final int onProjectileEffect(int param0, Projectile param1, Effect param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -291,7 +291,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
     public final int getLevel(byte param0) {
         if (param0 != -108) {
           Effect var3 = (Effect) null;
-          this.a(-122, (Projectile) null, (Effect) null);
+          this.onProjectileEffect(-122, (Projectile) null, (Effect) null);
         }
         return this.field_s;
     }
@@ -394,7 +394,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
         }
     }
 
-    final int a(int param0, Effect param1, BeamSegment param2) {
+    final int onBeamEffect(int param0, Effect param1, BeamSegment param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;

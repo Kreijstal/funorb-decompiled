@@ -109,11 +109,11 @@ final class ck {
           SocketArchiveNetworkClient.field_w[1] = RasterBuffer.field_b;
           RasterShape.field_e = new jea(0L, (jea) null);
           LightSource.field_h = new jea(0L, ooa.field_f, ija.field_i);
-          vw.field_b = new jea(0L, SecondaryNodeDeque.field_b, MessageOverlay.field_m);
+          ShaderEffect.field_b = new jea(0L, SecondaryNodeDeque.field_b, MessageOverlay.field_m);
           bsa.field_j = new ScrollPane(0L, new jea(0L, (jea) null), rfa.field_C, DateFieldsWidget.field_F);
           RasterShape.field_e.b(-126, LightSource.field_h);
           if (UnlockOverlay.field_p) {
-            RasterShape.field_e.b(param11 - 25575, vw.field_b);
+            RasterShape.field_e.b(param11 - 25575, ShaderEffect.field_b);
           }
           RasterShape.field_e.b(-127, bsa.field_j);
           bsa.field_j.field_vb.applyStyle(false, Corpse.field_i);
@@ -167,7 +167,7 @@ final class ck {
           rv.field_c = new jea(0L, Corpse.field_i);
           rv.field_c.field_bb = 0;
           rv.field_c.field_z = 1;
-          BrickOperator.field_v = new jea(0L, dp.field_i, nf.field_j.toUpperCase());
+          BrickOperator.field_v = new jea(0L, OpenGlEnvironmentWaterEffect.field_i, nf.field_j.toUpperCase());
           wo.field_k = new jea(0L, WallModel.field_r);
           wo.field_k.b(param11 - 25572, rv.field_c);
           wo.field_k.b(-122, BrickOperator.field_v);
@@ -353,7 +353,7 @@ final class ck {
           dka.field_b.b(-125, hw.field_a);
           dka.field_b.b(-123, MessageOverlay.field_t);
           S2CEventPacket.field_e = new jea(0L, OpenGlTransform3D.field_f, eu.field_b.toUpperCase());
-          Trap.field_q = new jea(0L, dp.field_i, ej.field_b.toUpperCase());
+          Trap.field_q = new jea(0L, OpenGlEnvironmentWaterEffect.field_i, ej.field_b.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

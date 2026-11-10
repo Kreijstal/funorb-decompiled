@@ -197,7 +197,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         this.field_E.field_r = (isa) ((Object) dupTemp$1);
         String var2 = gl.$cfr$intArgs$a$53ce4ab4c593(90, ConstrainToCircleLocomotor.field_y, new String[]{this.linkStylePrefix(170), this.e(127)});
         int var3 = 20;
-        var3 = var3 + this.addLabeledField(this.field_z, var3, 170, (byte) 74, em.field_f);
+        var3 = var3 + this.addLabeledField(this.field_z, var3, 170, (byte) 74, HardwareSpecularEffect.field_f);
         var3 = var3 + (this.a(var3, 77, this.field_J, 170, 20, "", ct.field_d) + 5);
         var3 = var3 + this.addLabeledField(this.field_E, var3, 170, (byte) 59, rta.field_j);
         var3 = var3 + (this.a(gea.field_c, GameKeyHandler.field_d, this.field_C, -3, 170, var3) + 5);

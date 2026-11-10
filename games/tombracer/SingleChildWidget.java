@@ -306,7 +306,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           hg.field_g.field_fb = 1;
           hg.field_g.field_ob = 1;
           hg.field_g.field_z = 1;
-          dp.field_i = new jea(0L, hg.field_g);
+          OpenGlEnvironmentWaterEffect.field_i = new jea(0L, hg.field_g);
           jk.field_g = new jea(0L, PressureSwitchBehaviour.field_p);
           jk.field_g.field_W = 1;
           jk.field_g.field_v = 1;
@@ -325,9 +325,9 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           jk.field_g.field_n = dupTemp$0;
           jk.field_g.field_db = dupTemp$0;
           jk.field_g.field_M = rfa.a(BoulderComponent.a(param4, "lobby", 5, "smallbutton_disabled"), 127);
-          dp.field_i.field_w = rfa.a(BoulderComponent.a(param4, "lobby", 5, "mediumbutton"), 125);
-          dp.field_i.field_C = rfa.a(BoulderComponent.a(param4, "lobby", 5, "mediumbutton_mouseover"), 115);
-          dp.field_i.field_db = rfa.a(BoulderComponent.a(param4, "lobby", 5, "mediumbutton_mouseheld"), 114);
+          OpenGlEnvironmentWaterEffect.field_i.field_w = rfa.a(BoulderComponent.a(param4, "lobby", 5, "mediumbutton"), 125);
+          OpenGlEnvironmentWaterEffect.field_i.field_C = rfa.a(BoulderComponent.a(param4, "lobby", 5, "mediumbutton_mouseover"), 115);
+          OpenGlEnvironmentWaterEffect.field_i.field_db = rfa.a(BoulderComponent.a(param4, "lobby", 5, "mediumbutton_mouseheld"), 114);
           hg.field_g.field_w = rfa.a(BoulderComponent.a(param4, "lobby", 5, "bigbutton"), 127);
           hg.field_g.field_C = rfa.a(BoulderComponent.a(param4, "lobby", 5, "bigbutton_mouseover"), 118);
           hg.field_g.field_db = rfa.a(BoulderComponent.a(param4, "lobby", 5, "bigbutton_mouseheld"), 122);

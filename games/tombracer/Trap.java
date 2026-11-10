@@ -576,7 +576,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
             if (!var12.a((byte) 87)) {
               if (var12.isEnabled(-116)) {
                 if (param1) {
-                  if (!var12.p((byte) 120)) {
+                  if (!var12.freezesInTimeStop((byte) 120)) {
                     var12.tick(5418);
                   }
                 } else {
@@ -1075,18 +1075,18 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         this.pushable = param0 ? true : false;
     }
 
-    final void h(boolean param0) {
+    final void resolveSwitchLinks(boolean param0) {
         int var4 = TombRacer.field_G ? 1 : 0;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.behaviours);
         Behaviour var5 = (Behaviour) (var2.first(true));
         while (var5 != null) {
-          var5.g(-2);
+          var5.resolveSwitchLinks(-2);
           var5 = (Behaviour) (var2.next(-1));
         }
         var2 = new IntrusiveDequeCursor(this.children);
         Trap var6 = (Trap) (var2.first(param0));
         while (var6 != null) {
-          var6.h(true);
+          var6.resolveSwitchLinks(true);
           var6 = (Trap) (var2.next(-1));
         }
     }
@@ -1730,7 +1730,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           var6 = new IntrusiveDequeCursor(this.behaviours);
           var7 = (Behaviour) (var6.first(true));
           while (var7 != null) {
-            var5 = var5 + var7.a(25940, param1, param0);
+            var5 = var5 + var7.onProjectileEffect(25940, param1, param0);
             var7 = (Behaviour) (var6.next(-1));
           }
           stackIn_19_0 = var5;
@@ -1803,7 +1803,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           var8 = new IntrusiveDequeCursor(this.behaviours);
           var9 = (Behaviour) (var8.first(true));
           while (var9 != null) {
-            var7_int = var7_int + var9.a(param5, param1, param0, param2, (byte) 8, param4);
+            var7_int = var7_int + var9.onAreaEffect(param5, param1, param0, param2, (byte) 8, param4);
             var9 = (Behaviour) (var8.next(-1));
           }
           stackIn_17_0 = var7_int;
@@ -1881,7 +1881,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         }
     }
 
-    final void u(int param0) {
+    final void initializeAfterLoad(int param0) {
         Trap var2;
         TrapModel var2_ref;
         int var3;
@@ -1910,7 +1910,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         var5 = (Behaviour) (this.behaviours.first(-80));
         while (var5 != null) {
           var5.attachToTrap(true, this);
-          var5.n((byte) 86);
+          var5.onTrapLoaded((byte) 86);
           var5 = (Behaviour) (this.behaviours.next(122));
         }
         var2_ref = (TrapModel) (this.models.first(-80));
@@ -1925,7 +1925,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         var6 = (Trap) (this.children.first(-80));
         while (var6 != null) {
           var6.parent = this;
-          var6.u(param0 + 0);
+          var6.initializeAfterLoad(param0 + 0);
           var6 = (Trap) (this.children.next(126));
         }
     }
@@ -2203,7 +2203,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
             if (var11 == null) {
               return false;
             }
-            if (!var11.a(param0, param3, 1, param6, param4, param7, param5)) {
+            if (!var11.blocksOverlap(param0, param3, 1, param6, param4, param7, param5)) {
               var11 = (Behaviour) (this.behaviours.next(126));
               continue;
             }
@@ -2346,7 +2346,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           var5 = new Trap(param1, var4, param2);
           var4.endBitAccess((byte) 98);
           var5.a(true, param2, (ui) null, new ui());
-          var5.h(true);
+          var5.resolveSwitchLinks(true);
           stackIn_4_0 = var5;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2395,7 +2395,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         int var2 = 66 % ((param0 - 60) / 58);
     }
 
-    final void a(Room param0, boolean param1) {
+    final void mirror(Room param0, boolean param1) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -2431,22 +2431,22 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           param0.collisionGrid.insert((Collidable) (this), 7073);
           var5 = (Locomotor) (this.locomotors.first(-80));
           while (var5 != null) {
-            var5.c((byte) -122);
+            var5.mirror((byte) -122);
             var5 = (Locomotor) (this.locomotors.next(114));
           }
           var6 = (Behaviour) (this.behaviours.first(-80));
           while (var6 != null) {
-            var6.h(28701);
+            var6.mirror(28701);
             var6 = (Behaviour) (this.behaviours.next(116));
           }
           var7 = (TrapModel) (this.models.first(-80));
           while (var7 != null) {
-            var7.h(65);
+            var7.mirror(65);
             var7 = (TrapModel) (this.models.next(110));
           }
           var8 = (Trap) (this.children.first(-80));
           while (var8 != null) {
-            var8.a(param0, false);
+            var8.mirror(param0, false);
             var8 = (Trap) (this.children.next(121));
           }
           return;
@@ -2481,7 +2481,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           var4.F(127);
           var4 = (Trap) (this.children.next(108));
         }
-        this.u(0);
+        this.initializeAfterLoad(0);
         this.savePreviousPosition((byte) 116);
         if (param0 < 96) {
           this.setLocalY(-88, 5);
@@ -2621,7 +2621,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           this.children.addLast((byte) -111, param1);
           param1.field_cb = false;
           param1.parent = this;
-          param1.u(0);
+          param1.initializeAfterLoad(0);
           if (param0 >= -29) {
             this.setIndependent((byte) 16, false);
           }
@@ -2757,7 +2757,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           var6 = new IntrusiveDequeCursor(this.behaviours);
           var7 = (Behaviour) (var6.first(true));
           while (var7 != null) {
-            var5 = var5 + var7.a(-119, param0, param2);
+            var5 = var5 + var7.onBeamEffect(-119, param0, param2);
             var7 = (Behaviour) (var6.next(-1));
           }
           stackIn_17_0 = var5;
@@ -3106,7 +3106,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           var7 = 0;
           var8 = (Behaviour) (this.behaviours.first(-80));
           while (var8 != null) {
-            if (var8.a(param2, 1, param3, var6)) {
+            if (var8.interceptsBeam(param2, 1, param3, var6)) {
               var7 = 1;
             }
             var8 = (Behaviour) (this.behaviours.next(param0 ^ -114));

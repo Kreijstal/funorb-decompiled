@@ -20,11 +20,11 @@ final class MirrorBehaviour extends Behaviour {
         return 29;
     }
 
-    final void n(byte param0) {
+    final void onTrapLoaded(byte param0) {
         if (param0 <= 68) {
           return;
         }
-        super.n((byte) 102);
+        super.onTrapLoaded((byte) 102);
         this.b(1659280738);
         this.j((byte) 1);
     }
@@ -33,7 +33,7 @@ final class MirrorBehaviour extends Behaviour {
         int var2 = this.trap.getFacingAngle(-25787);
         if (param0 != 1659280738) {
           BeamSegment var3 = (BeamSegment) null;
-          this.a(65, 57, (BeamSegment) null, 85);
+          this.interceptsBeam(65, 57, (BeamSegment) null, 85);
           var2 = GameScreen.positiveModulo(2048 + var2, 8192, -34);
           if (var2 != this.field_v) {
             this.field_t = MouseInputHandler.sin2048((byte) 99, var2 >> 2);
@@ -107,7 +107,7 @@ final class MirrorBehaviour extends Behaviour {
         this.field_u = new BeamSegment();
     }
 
-    final boolean a(int param0, int param1, BeamSegment param2, int param3) {
+    final boolean interceptsBeam(int param0, int param1, BeamSegment param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -150,7 +150,7 @@ final class MirrorBehaviour extends Behaviour {
         int var1 = -15 / ((-36 - param0) / 62);
     }
 
-    final int a(int param0, Effect param1, BeamSegment param2) {
+    final int onBeamEffect(int param0, Effect param1, BeamSegment param2) {
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;

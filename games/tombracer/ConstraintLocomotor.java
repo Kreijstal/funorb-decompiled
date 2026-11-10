@@ -15,8 +15,8 @@ abstract class ConstraintLocomotor extends Locomotor {
         return this.a(false) + this.field_q;
     }
 
-    final void c(byte param0) {
-        super.c((byte) -121);
+    final void mirror(byte param0) {
+        super.mirror((byte) -121);
         if (param0 < -116) {
           this.field_o = -this.field_o;
           return;

@@ -50,12 +50,12 @@ final class sv extends MenuScreen {
         return var6.toString();
     }
 
-    final int a(byte param0, int param1) {
+    final int getItemX(byte param0, int param1) {
         if (0 == param1) {
           return 0;
         }
         if (param0 < 111) {
-          this.g(19, -86);
+          this.getItemY(19, -86);
           if (param1 == -1 + this.items.length) {
             return aaa.a(false) - this.items[param1].e(-163);
           }
@@ -78,8 +78,8 @@ final class sv extends MenuScreen {
         this.field_r.c(param0 ^ -87);
     }
 
-    final void a(byte param0, boolean param1) {
-        super.a(param0, param1);
+    final void draw(byte param0, boolean param1) {
+        super.draw(param0, param1);
         int var3 = this.items[1].field_i - 70 + this.field_r.e(47) - 150;
         WhiteLightShooterComponent.field_K.a((aaa.a(false) >> 1) - (WhiteLightShooterComponent.field_K.a() >> 1), var3);
     }
@@ -91,53 +91,53 @@ final class sv extends MenuScreen {
         }
     }
 
-    final int a(int param0, byte param1) {
+    final int getItemRight(int param0, byte param1) {
         if (param1 == -48) {
-          return this.a((byte) 116, param0) + this.items[param0].e(-163);
+          return this.getItemX((byte) 116, param0) + this.items[param0].e(-163);
         }
-        this.g(-74, 3);
-        return this.a((byte) 116, param0) + this.items[param0].e(-163);
+        this.getItemY(-74, 3);
+        return this.getItemX((byte) 116, param0) + this.items[param0].e(-163);
     }
 
-    final void a(boolean param0, boolean param1, int param2) {
-        super.a(param0, param1, param2);
+    final void update(boolean param0, boolean param1, int param2) {
+        super.update(param0, param1, param2);
         this.field_r.a((byte) -111, param0, !param1 ? true : false);
     }
 
-    final boolean a(int param0, char param1, int param2) {
+    final boolean handleKey(int param0, char param1, int param2) {
         if (param0 == 13) {
           return true;
         }
         if (param2 == 1) {
-          return super.a(param0, param1, 1);
+          return super.handleKey(param0, param1, 1);
         }
         this.field_r = (dea) null;
-        return super.a(param0, param1, 1);
+        return super.handleKey(param0, param1, 1);
     }
 
-    final int g(int param0, int param1) {
+    final int getItemY(int param0, int param1) {
         int var3 = 0;
         int var3Lifetime1;
         int var3Lifetime2;
         if (param0 == 0) {
           var3 = 60;
           param0 = -1 + this.items.length;
-          return -var3 + this.field_n - (-(param0 * this.field_i) + this.items[param0].d(11919));
+          return -var3 + this.firstItemY - (-(param0 * this.itemSpacing) + this.items[param0].d(11919));
         }
         if (param0 == this.items.length - 1) {
           var3Lifetime1 = 60;
           param0 = -1 + this.items.length;
-          return -var3Lifetime1 + this.field_n - (-(param0 * this.field_i) + this.items[param0].d(11919));
+          return -var3Lifetime1 + this.firstItemY - (-(param0 * this.itemSpacing) + this.items[param0].d(11919));
         }
         if (3 > param0) {
           var3Lifetime2 = 20;
-          return var3Lifetime2 + (this.field_n + (param0 - 1) * this.items[param0].d(11919) - this.items[0].d(11919));
+          return var3Lifetime2 + (this.firstItemY + (param0 - 1) * this.items[param0].d(11919) - this.items[0].d(11919));
         }
         if (param1 == 30) {
-          return this.field_n + ((param0 - 3) * this.field_i - this.items[param0].d(11919));
+          return this.firstItemY + ((param0 - 3) * this.itemSpacing - this.items[param0].d(11919));
         }
         field_q = (String) null;
-        return this.field_n + ((param0 - 3) * this.field_i - this.items[param0].d(11919));
+        return this.firstItemY + ((param0 - 3) * this.itemSpacing - this.items[param0].d(11919));
     }
 
     final static AntialiasedBitmapFont a(ResourceArchive param0, int param1, ResourceArchive param2, int param3, int param4) {

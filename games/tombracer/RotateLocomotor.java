@@ -78,8 +78,8 @@ final class RotateLocomotor extends Locomotor {
         field_o = null;
     }
 
-    final void c(byte param0) {
-        super.c((byte) -125);
+    final void mirror(byte param0) {
+        super.mirror((byte) -125);
         if (param0 >= -116) {
           return;
         }

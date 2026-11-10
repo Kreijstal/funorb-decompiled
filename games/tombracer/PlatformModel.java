@@ -553,7 +553,7 @@ final class PlatformModel extends TrapModel {
         }
     }
 
-    final void h(int param0) {
+    final void mirror(int param0) {
         int var2_int = 0;
         int var3 = 0;
         int var6 = 0;
@@ -563,7 +563,7 @@ final class PlatformModel extends TrapModel {
         int var5 = 0;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
-          super.h(119);
+          super.mirror(119);
           if (this.field_r == null) {
             return;
           }

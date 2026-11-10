@@ -9,7 +9,7 @@ final class TrapSpawner extends Spawner {
         if (param0 < 67) {
           return;
         }
-        this.template.h(true);
+        this.template.resolveSwitchLinks(true);
     }
 
     final static void sleepMillis(int param0, long param1) {

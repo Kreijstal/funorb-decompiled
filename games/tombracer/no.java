@@ -20,7 +20,7 @@ final class no extends MatchOverlay {
         return String.valueOf(param1);
     }
 
-    final void a(byte param0) {
+    final void update(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
@@ -159,14 +159,14 @@ final class no extends MatchOverlay {
         }
     }
 
-    final boolean a(boolean param0) {
+    final boolean pausesGame(boolean param0) {
         if (!param0) {
           return true;
         }
         return false;
     }
 
-    final void b(byte param0) {
+    final void draw(byte param0) {
         String var18 = null;
         int var9 = 0;
         int var10 = 0;
@@ -240,7 +240,7 @@ final class no extends MatchOverlay {
         CharSequence var5 = null;
         try {
           wp.field_a = param0;
-          bta.field_q = 2;
+          OpenGlUnderwaterEffect.field_q = 2;
           var5 = (CharSequence) ((Object) param0);
           mn.field_n = jd.normalizeDisplayName(1, var5);
           ica.field_b = param1;
@@ -279,7 +279,7 @@ final class no extends MatchOverlay {
         }
     }
 
-    final boolean a(int param0, char param1, byte param2) {
+    final boolean handleKey(int param0, char param1, byte param2) {
         int var4 = 107 % ((param2 - 29) / 57);
         return false;
     }

@@ -7,7 +7,7 @@ final class SnakePitBehaviour extends Behaviour {
     private PitSnake[] snakes;
     static String field_p;
 
-    final int a(int param0, Effect param1, BeamSegment param2) {
+    final int onBeamEffect(int param0, Effect param1, BeamSegment param2) {
         int var10 = 0;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -72,7 +72,7 @@ final class SnakePitBehaviour extends Behaviour {
         }
     }
 
-    final int a(int param0, Projectile param1, Effect param2) {
+    final int onProjectileEffect(int param0, Projectile param1, Effect param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
@@ -89,7 +89,7 @@ final class SnakePitBehaviour extends Behaviour {
             return stackIn_2_0;
           }
           var4_int = param1.i(-1);
-          stackIn_4_0 = this.a(var4_int, var4_int, param2, param1.getX(param0 ^ 25943), (byte) 125, param1.getY(param0 ^ 16612));
+          stackIn_4_0 = this.onAreaEffect(var4_int, var4_int, param2, param1.getX(param0 ^ 25943), (byte) 125, param1.getY(param0 ^ 16612));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -142,11 +142,11 @@ final class SnakePitBehaviour extends Behaviour {
         return param0;
     }
 
-    final void h(int param0) {
+    final void mirror(int param0) {
         int var3 = 0;
         PitSnake var4 = null;
         int var5 = TombRacer.field_G ? 1 : 0;
-        super.h(param0);
+        super.mirror(param0);
         PitSnake[] var6 = this.snakes;
         PitSnake[] var2 = var6;
         for (var3 = 0; var6.length > var3; var3++) {
@@ -263,12 +263,12 @@ final class SnakePitBehaviour extends Behaviour {
     final int getSnakeCount(int param0) {
         if (param0 != 3) {
           Effect var3 = (Effect) null;
-          this.a(-115, (Projectile) null, (Effect) null);
+          this.onProjectileEffect(-115, (Projectile) null, (Effect) null);
         }
         return this.snakes.length;
     }
 
-    final int a(int param0, int param1, Effect param2, int param3, byte param4, int param5) {
+    final int onAreaEffect(int param0, int param1, Effect param2, int param3, byte param4, int param5) {
         int var9 = 0;
         int var7_int = 0;
         RuntimeException var7 = null;
@@ -412,7 +412,7 @@ final class SnakePitBehaviour extends Behaviour {
         }
     }
 
-    final boolean p(byte param0) {
+    final boolean freezesInTimeStop(byte param0) {
         if (param0 != 120) {
           this.getTypeId(false);
           return true;

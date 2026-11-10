@@ -341,7 +341,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 112, "rm_x_from_ignore");
                 if (var2 != null) {
-                  vta.field_f = jaa.decodeText((byte) 125, var2);
+                  HardwareUnlitEffect.field_f = jaa.decodeText((byte) 125, var2);
                 }
                 var2 = dn.a((byte) 119, "send_pm_to_x");
                 if (null != var2) {
@@ -581,7 +581,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -15, "invite");
                 if (var2 != null) {
-                  vu.field_e = jaa.decodeText((byte) 43, var2);
+                  FallbackShaderEffect.field_e = jaa.decodeText((byte) 43, var2);
                 }
                 var2 = dn.a((byte) 112, "status_concluded");
                 if (var2 != null) {
@@ -1403,7 +1403,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 105, "create_email");
                 if (var2 != null) {
-                  em.field_f = jaa.decodeText((byte) 86, var2);
+                  HardwareSpecularEffect.field_f = jaa.decodeText((byte) 86, var2);
                 }
                 var2 = dn.a((byte) -77, "create_email_confirm");
                 if (var2 != null) {
@@ -2349,7 +2349,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 111, "mp_rematchnewgame");
                 if (null != var2) {
-                  sl.field_g = jaa.decodeText((byte) 117, var2);
+                  HardwareReflectionEffect.field_g = jaa.decodeText((byte) 117, var2);
                 }
                 var2 = dn.a((byte) -12, "mp_rematchnewgame_unrated");
                 if (null != var2) {
@@ -2899,31 +2899,31 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 122, "mustlogin4,1");
                 if (null != var2) {
-                  sl.field_h[1] = jaa.decodeText((byte) 66, var2);
+                  HardwareReflectionEffect.field_h[1] = jaa.decodeText((byte) 66, var2);
                 }
                 var2 = dn.a((byte) 123, "mustlogin4,2");
                 if (var2 != null) {
-                  sl.field_h[2] = jaa.decodeText((byte) 112, var2);
+                  HardwareReflectionEffect.field_h[2] = jaa.decodeText((byte) 112, var2);
                 }
                 var2 = dn.a((byte) 105, "mustlogin4,3");
                 if (null != var2) {
-                  sl.field_h[3] = jaa.decodeText((byte) 79, var2);
+                  HardwareReflectionEffect.field_h[3] = jaa.decodeText((byte) 79, var2);
                 }
                 var2 = dn.a((byte) 113, "mustlogin4,4");
                 if (var2 != null) {
-                  sl.field_h[4] = jaa.decodeText((byte) 48, var2);
+                  HardwareReflectionEffect.field_h[4] = jaa.decodeText((byte) 48, var2);
                 }
                 var2 = dn.a((byte) 126, "mustlogin4,5");
                 if (null != var2) {
-                  sl.field_h[5] = jaa.decodeText((byte) 105, var2);
+                  HardwareReflectionEffect.field_h[5] = jaa.decodeText((byte) 105, var2);
                 }
                 var2 = dn.a((byte) 123, "mustlogin4,6");
                 if (null != var2) {
-                  sl.field_h[6] = jaa.decodeText((byte) 116, var2);
+                  HardwareReflectionEffect.field_h[6] = jaa.decodeText((byte) 116, var2);
                 }
                 var2 = dn.a((byte) 114, "mustlogin4,7");
                 if (var2 != null) {
-                  sl.field_h[7] = jaa.decodeText((byte) 28, var2);
+                  HardwareReflectionEffect.field_h[7] = jaa.decodeText((byte) 28, var2);
                 }
                 var2 = dn.a((byte) 126, "mustlogin_notloggedin");
                 if (null != var2) {

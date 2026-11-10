@@ -202,7 +202,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
           param1.collisionGrid.insert((Collidable) (this), 7073);
           var5 = (TrapModel) (this.field_k.first(-80));
           while (var5 != null) {
-            var5.h(61);
+            var5.mirror(61);
             var5 = (TrapModel) (this.field_k.next(108));
           }
           return;

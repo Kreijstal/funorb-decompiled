@@ -105,7 +105,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           }
           var8 = PooledObject.field_h;
           var9 = cc.a((byte) 122, di.a(28));
-          if (vw.field_a != var9) {
+          if (ShaderEffect.field_a != var9) {
             if (var9 == ObjectList.field_d) {
               var8 = SectorCacheStore.field_a;
             }

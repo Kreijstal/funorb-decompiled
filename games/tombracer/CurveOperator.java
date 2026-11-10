@@ -37,7 +37,7 @@ final class CurveOperator extends TextureOperator {
         try {
           wp.field_a = param2;
           int var4_int = 93 / ((param0 + 33) / 53);
-          bta.field_q = 2;
+          OpenGlUnderwaterEffect.field_q = 2;
           var5 = (CharSequence) ((Object) param2);
           mn.field_n = jd.normalizeDisplayName(1, var5);
           ica.field_b = param1;

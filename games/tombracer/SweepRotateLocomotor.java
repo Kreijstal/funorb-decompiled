@@ -422,9 +422,9 @@ final class SweepRotateLocomotor extends Locomotor {
         }
     }
 
-    final void c(byte param0) {
+    final void mirror(byte param0) {
         try {
-          super.c((byte) -121);
+          super.mirror((byte) -121);
           this.field_r = -this.field_r;
           this.field_o = -this.field_o;
           if (param0 >= -116) {

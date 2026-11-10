@@ -23,13 +23,13 @@ final class TestModel extends TrapModel {
         }
     }
 
-    final void h(int param0) {
+    final void mirror(int param0) {
         if (param0 < 0) {
           this.field_q = 122;
-          super.h(89);
+          super.mirror(89);
           return;
         }
-        super.h(89);
+        super.mirror(89);
     }
 
     TestModel(int param0, Room param1, BitPacketBuffer param2) {

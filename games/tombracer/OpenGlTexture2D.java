@@ -130,7 +130,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
         int var1 = 60 / ((-20 - param0) / 45);
         MirrorBehaviour.field_r = null;
         OpenGlFramebuffer.field_i = null;
-        dp.field_d = null;
+        OpenGlEnvironmentWaterEffect.field_d = null;
         tv.field_wb = null;
         GridWidgetContainer.field_y = null;
         bm.field_f = null;
@@ -144,7 +144,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
         bd.field_i = null;
         ConsoleWindow.field_d = null;
         WidgetStyleLayer.field_b = null;
-        em.field_h = null;
+        HardwareSpecularEffect.field_h = null;
         qf.field_k = null;
         Room.field_p = (ToolkitSprite[][]) null;
         dn.field_d = null;

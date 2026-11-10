@@ -91,11 +91,11 @@ final class CircleMovementLocomotor extends Locomotor {
         }
     }
 
-    final void c(byte param0) {
+    final void mirror(byte param0) {
         if (param0 > -116) {
           this.field_t = false;
         }
-        super.c((byte) -120);
+        super.mirror((byte) -120);
         this.field_q = -this.field_q;
         this.field_r = -this.field_r;
     }

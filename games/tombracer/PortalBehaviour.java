@@ -121,16 +121,16 @@ final class PortalBehaviour extends Behaviour {
         }
     }
 
-    final void g(int param0) {
+    final void resolveSwitchLinks(int param0) {
         if (param0 == -2) {
-          super.g(param0 ^ 0);
-          this.field_p.a(this.getScope((byte) 112), 8);
+          super.resolveSwitchLinks(param0 ^ 0);
+          this.field_p.resolveTargets(this.getScope((byte) 112), 8);
           return;
         }
         BitPacketBuffer var3 = (BitPacketBuffer) null;
         this.encode(false, (BitPacketBuffer) null);
-        super.g(param0 ^ 0);
-        this.field_p.a(this.getScope((byte) 112), 8);
+        super.resolveSwitchLinks(param0 ^ 0);
+        this.field_p.resolveTargets(this.getScope((byte) 112), 8);
     }
 
     final void attachToTrap(boolean param0, Trap param1) {

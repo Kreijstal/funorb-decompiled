@@ -159,7 +159,7 @@ final class PlayerViewport {
             this.a(0, 0, 8, aaa.a(false), SwitchLinkList.b(0));
             return;
           }
-          if (param1 == dp.field_j) {
+          if (param1 == OpenGlEnvironmentWaterEffect.field_j) {
             this.a(0, 0, param2 + 20194, var4_int, SwitchLinkList.b(param2 ^ -20186));
             return;
           }

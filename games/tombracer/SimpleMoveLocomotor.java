@@ -383,8 +383,8 @@ final class SimpleMoveLocomotor extends Locomotor {
         }
     }
 
-    final void c(byte param0) {
-        super.c((byte) -119);
+    final void mirror(byte param0) {
+        super.mirror((byte) -119);
         if (param0 <= -116) {
           this.field_p = GameScreen.positiveModulo(-this.field_p, 8192, 118);
           return;

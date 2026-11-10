@@ -4,8 +4,8 @@
 abstract class we extends MenuScreen {
     dea field_q;
 
-    void a(boolean param0, boolean param1, int param2) {
-        super.a(param0, param1, param2);
+    void update(boolean param0, boolean param1, int param2) {
+        super.update(param0, param1, param2);
         this.field_q.a((byte) -125, param0, !param1 ? true : false);
     }
 
@@ -16,11 +16,11 @@ abstract class we extends MenuScreen {
         return (param0 & 2048) != 0 ? true : false;
     }
 
-    final void a(byte param0, boolean param1) {
+    final void draw(byte param0, boolean param1) {
         int var3 = this.field_q.e(-82);
         ik.field_h.a(0, var3);
         this.a(param1, var3, (byte) -104);
-        super.a(param0, param1);
+        super.draw(param0, param1);
     }
 
     final void a(int param0, int param1, boolean param2) {

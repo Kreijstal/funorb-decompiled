@@ -14,7 +14,7 @@ final class MembersUpsellMenu extends MenuScreen {
     static jea[] field_y;
     static String[] field_A;
 
-    final void a(boolean param0, boolean param1, int param2) {
+    final void update(boolean param0, boolean param1, int param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int var5 = 0;
@@ -26,7 +26,7 @@ final class MembersUpsellMenu extends MenuScreen {
         int var8;
         int var9;
         var9 = TombRacer.field_G ? 1 : 0;
-        super.a(param0, param1, param2 ^ 0);
+        super.update(param0, param1, param2 ^ 0);
         if (param0) {
           stackIn_6_0 = (!this.d((byte) -124)) ? 1 : 0;
         } else {
@@ -107,7 +107,7 @@ final class MembersUpsellMenu extends MenuScreen {
         }
     }
 
-    final int a(byte param0, int param1) {
+    final int getItemX(byte param0, int param1) {
         if (param1 == 0) {
           return 10;
         }
@@ -121,7 +121,7 @@ final class MembersUpsellMenu extends MenuScreen {
         return aaa.a(false) - this.items[param1].e(-163) - 10;
     }
 
-    final void a(byte param0, boolean param1) {
+    final void draw(byte param0, boolean param1) {
         int var3;
         int var4;
         int var5;
@@ -136,12 +136,12 @@ final class MembersUpsellMenu extends MenuScreen {
         int var5Lifetime1;
         int var7Lifetime1;
         var9 = TombRacer.field_G ? 1 : 0;
-        super.a(param0, param1);
+        super.draw(param0, param1);
         if (SpriteTileOperator.field_t == SecondaryNodeDequeIterator.field_a) {
           return;
         }
         ik.field_h.a(this.field_t, this.field_r);
-        dp.field_d.a(this.field_t, this.field_r);
+        OpenGlEnvironmentWaterEffect.field_d.a(this.field_t, this.field_r);
         var10 = (cc) (this.field_q.first(-80));
         while (var10 != null) {
           var10.a(99, this.field_t, this.field_r);
@@ -247,11 +247,11 @@ final class MembersUpsellMenu extends MenuScreen {
     private final void b(boolean param0) {
         TextLayout.a(this.field_v, (byte) -102, 1);
         if (param0) {
-          this.a(-11, '￘', 77);
+          this.handleKey(-11, '￘', 77);
         }
     }
 
-    final int g(int param0, int param1) {
+    final int getItemY(int param0, int param1) {
         if (param1 != 30) {
           this.field_s = 3;
         }
@@ -276,11 +276,11 @@ final class MembersUpsellMenu extends MenuScreen {
         }
     }
 
-    final int a(int param0, byte param1) {
+    final int getItemRight(int param0, byte param1) {
         if (param1 != -48) {
-          this.a((byte) 114, true);
+          this.draw((byte) 114, true);
         }
-        return this.a((byte) 112, param0) + this.items[param0].e(-163);
+        return this.getItemX((byte) 112, param0) + this.items[param0].e(-163);
     }
 
     private final void f(int param0) {
@@ -308,7 +308,7 @@ final class MembersUpsellMenu extends MenuScreen {
         field_A = null;
     }
 
-    final boolean a(int param0, char param1, int param2) {
+    final boolean handleKey(int param0, char param1, int param2) {
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_20_0 = 0;

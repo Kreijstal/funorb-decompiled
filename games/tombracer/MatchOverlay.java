@@ -7,11 +7,11 @@ abstract class MatchOverlay extends IntrusiveNode {
     static String field_f;
     MatchState field_g;
 
-    abstract boolean a(int param0, char param1, byte param2);
+    abstract boolean handleKey(int param0, char param1, byte param2);
 
-    abstract void a(byte param0);
+    abstract void update(byte param0);
 
-    abstract boolean a(boolean param0);
+    abstract boolean pausesGame(boolean param0);
 
     final boolean isFinished(byte param0) {
         if (param0 > -109) {
@@ -34,7 +34,7 @@ abstract class MatchOverlay extends IntrusiveNode {
         this.finished = true;
     }
 
-    abstract void b(byte param0);
+    abstract void draw(byte param0);
 
     MatchOverlay(MatchScreen param0) {
         try {

@@ -23,7 +23,7 @@ final class RewardChoicePhase extends MatchPhase {
         field_n = null;
     }
 
-    final boolean a(char param0, int param1, int param2) {
+    final boolean handleKey(char param0, int param1, int param2) {
         if (param1 != 25) {
           return false;
         }
@@ -117,7 +117,7 @@ final class RewardChoicePhase extends MatchPhase {
         }
     }
 
-    final void b(int param0, boolean param1) {
+    final void draw(int param0, boolean param1) {
         int var11_int = 0;
         int var3;
         int var4;
@@ -182,7 +182,7 @@ final class RewardChoicePhase extends MatchPhase {
         var17 = 0;
         var8Lifetime1 = var17;
         if (param0 > -50) {
-          this.b(-64, false);
+          this.draw(-64, false);
         }
         while (this.matchState.players.length > var17) {
           var9Lifetime1 = -(this.matchState.players.length * var5Lifetime1 / 2) + var6 + var5Lifetime1 * var17;
@@ -234,7 +234,7 @@ final class RewardChoicePhase extends MatchPhase {
           if (!ni.field_c) {
             return false;
           }
-          if (bta.field_q == 2 &&
+          if (OpenGlUnderwaterEffect.field_q == 2 &&
             null != mn.field_n) {
             var3 = (CharSequence) ((Object) param0);
             if (mn.field_n.equals(jd.normalizeDisplayName(1, var3))) {
@@ -284,7 +284,7 @@ final class RewardChoicePhase extends MatchPhase {
         return false;
     }
 
-    final boolean e(int param0) {
+    final boolean allowsChat(int param0) {
         if (param0 != -9202) {
           return true;
         }
@@ -366,7 +366,7 @@ final class RewardChoicePhase extends MatchPhase {
         }
     }
 
-    final void a(int param0, boolean param1) {
+    final void update(int param0, boolean param1) {
         if (this.field_r > 0) {
           this.field_r = this.field_r - 1;
           return;
@@ -377,7 +377,7 @@ final class RewardChoicePhase extends MatchPhase {
           this.g(param0 - 80);
         }
         if (param0 != 80) {
-          this.e(-116);
+          this.allowsChat(-116);
         }
         if (this.field_o.isFinished(param0 ^ -28956)) {
           this.field_r = 100;

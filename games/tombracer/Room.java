@@ -386,7 +386,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         this.tileGrid.f((byte) 64);
         Trap var6 = (Trap) (this.traps.first(param0 - 87));
         while (var6 != null) {
-          var6.a(this, false);
+          var6.mirror(this, false);
           var6 = (Trap) (this.traps.next(115));
         }
         Obstacle var7 = (Obstacle) (this.obstacles.first(-80));
@@ -1125,8 +1125,8 @@ final class Room implements SwitchableScope, Renderable, noa {
         this.m(param0 ^ 1);
         var10 = (Trap) (this.traps.first(-80));
         while (var10 != null) {
-          var10.h(true);
-          var10.u(0);
+          var10.resolveSwitchLinks(true);
+          var10.initializeAfterLoad(0);
           var10 = (Trap) (this.traps.next(115));
         }
         var11 = (RoomComponent) (this.components.first(-80));

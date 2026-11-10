@@ -115,7 +115,7 @@ final class GasTrapComponent extends PrefabComponent {
           var7.addBehaviour((byte) 83, (Behaviour) (var10));
           var7.toggle(-45);
           param2.addTrap(var7, (byte) 32);
-          var6.getSwitchState((byte) -115).getLinks(1).a(9, new Switchable[]{(Switchable) ((Object) var7)});
+          var6.getSwitchState((byte) -115).getLinks(1).setTargets(9, new Switchable[]{(Switchable) ((Object) var7)});
           var11 = rm.field_a;
           var12 = (GasVentModel) (var11.createModel(20, 83));
           var13.a(var6, (byte) 124, var12);

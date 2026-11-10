@@ -192,14 +192,14 @@ final class TeleportLocomotor extends Locomotor {
         }
     }
 
-    final void c(byte param0) {
+    final void mirror(byte param0) {
         if (param0 < -116) {
-          super.c((byte) -118);
+          super.mirror((byte) -118);
           this.field_q.a(true);
           return;
         }
         this.field_s = (mg) null;
-        super.c((byte) -118);
+        super.mirror((byte) -118);
         this.field_q.a(true);
     }
 

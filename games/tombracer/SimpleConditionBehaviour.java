@@ -102,7 +102,7 @@ final class SimpleConditionBehaviour extends Behaviour {
           if (param0 == 79) {
             return;
           }
-          this.g(91);
+          this.resolveSwitchLinks(91);
           return;
         }
         if (var3 == 1) {
@@ -110,7 +110,7 @@ final class SimpleConditionBehaviour extends Behaviour {
           if (param0 == 79) {
             return;
           }
-          this.g(91);
+          this.resolveSwitchLinks(91);
           return;
         }
         if (var3 != 2) {
@@ -120,7 +120,7 @@ final class SimpleConditionBehaviour extends Behaviour {
           if (param0 == 79) {
             return;
           }
-          this.g(91);
+          this.resolveSwitchLinks(91);
           return;
         }
         var2 = this.getRoom(true).a(this.trap.getY(9648), this.trap.getWidth(-96), param0 ^ 79, 2, this.trap.getHeight((byte) 55), this.trap.getX(param0 - 76), this.getRoot(6));
@@ -129,7 +129,7 @@ final class SimpleConditionBehaviour extends Behaviour {
         if (param0 == 79) {
           return;
         }
-        this.g(91);
+        this.resolveSwitchLinks(91);
         return;
     }
 
@@ -151,8 +151,8 @@ final class SimpleConditionBehaviour extends Behaviour {
         return param0;
     }
 
-    final void g(int param0) {
-        super.g(param0);
+    final void resolveSwitchLinks(int param0) {
+        super.resolveSwitchLinks(param0);
         this.field_n.a((byte) 48, this.getScope((byte) 116));
     }
 

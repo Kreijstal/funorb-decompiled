@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pja extends vw {
+final class OpenGlTransparentWaterEffect extends ShaderEffect {
     private hk field_f;
     private HardwareOpenGlToolkit field_e;
     private mf field_d;
 
-    final void a(int param0, boolean param1) {
+    final void enable(int param0, boolean param1) {
         int var3 = 127 / ((param0 - 41) / 62);
         jaggl.OpenGL.glBindProgramARB(34336, this.field_d.field_b);
         jaggl.OpenGL.glEnable(34336);
-        this.field_c.a(PlayerContextMenu.field_j, 0, -37);
+        this.owner.a(PlayerContextMenu.field_j, 0, -37);
     }
 
-    final void a(int param0, GpuTexture param1, int param2) {
+    final void bindTexture(int param0, GpuTexture param1, int param2) {
         try {
           if (param2 != 24595) {
             this.field_d = (mf) null;
@@ -23,7 +23,7 @@ final class pja extends vw {
         }
     }
 
-    final boolean c(int param0) {
+    final boolean isSupported(int param0) {
         if (param0 == 1185) {
           return null != this.field_d ? true : false;
         }
@@ -31,15 +31,15 @@ final class pja extends vw {
         return null != this.field_d ? true : false;
     }
 
-    final void a(boolean param0, int param1) {
-        this.field_c.setTextureCombineOperations(NormalMapOperator.field_m, (byte) -110, PlatformComponent.field_F);
+    final void refreshState(boolean param0, int param1) {
+        this.owner.setTextureCombineOperations(NormalMapOperator.field_m, (byte) -110, PlatformComponent.field_F);
         if (param1 != 5744) {
-          this.a(false, 34);
+          this.refreshState(false, 34);
         }
     }
 
-    final void a(int param0) {
-        this.field_c.a(ej.field_c, 0, -123);
+    final void disable(int param0) {
+        this.owner.a(ej.field_c, 0, -123);
         jaggl.OpenGL.glBindProgramARB(34336, 0);
         jaggl.OpenGL.glDisable(34820);
         if (param0 <= -4) {
@@ -50,25 +50,25 @@ final class pja extends vw {
         jaggl.OpenGL.glDisable(34336);
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void setParameters(byte param0, int param1, int param2) {
         int var4 = 0;
         float var4_float = 0.0f;
         if (this.field_f.field_g) {
-          var4_float = (float)(this.field_c.field_Dc % 4000) / 4000.0f;
-          this.field_c.bindTexture(true, this.field_f.field_c);
+          var4_float = (float)(this.owner.field_Dc % 4000) / 4000.0f;
+          this.owner.bindTexture(true, this.field_f.field_c);
           jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var4_float, 0.0f, 0.0f, 1.0f);
         } else {
-          var4 = 16 * (this.field_c.field_Dc % 4000) / 4000;
-          this.field_c.bindTexture(true, this.field_f.field_d[var4]);
+          var4 = 16 * (this.owner.field_Dc % 4000) / 4000;
+          this.owner.bindTexture(true, this.field_f.field_d[var4]);
           jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, 0.0f, 0.0f, 0.0f, 1.0f);
         }
         if (param0 == 55) {
           return;
         }
-        this.a(11, true);
+        this.enable(11, true);
     }
 
-    pja(HardwareOpenGlToolkit param0, ResourceArchive param1, hk param2) {
+    OpenGlTransparentWaterEffect(HardwareOpenGlToolkit param0, ResourceArchive param1, hk param2) {
         super(param0);
         RuntimeException var4 = null;
         RuntimeException stackIn_9_0 = null;

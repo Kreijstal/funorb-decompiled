@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oja extends vw {
+final class DirectXEnvironmentWaterEffect extends ShaderEffect {
     private hk field_f;
     private jagdx.IDirect3DPixelShader field_g;
     private static float[] field_h;
@@ -18,26 +18,26 @@ final class oja extends vw {
           if (!this.field_j) {
           } else {
             var2 = this.field_i.field_jd;
-            if (0 < this.field_c.field_J) {
-              var3 = this.field_c.field_Hc;
-              var4 = this.field_c.field_B;
+            if (0 < this.owner.field_J) {
+              var3 = this.owner.field_Hc;
+              var4 = this.owner.field_B;
               var2.setVertexShaderConstantF(16, var3, 1.0f / (var3 - var4), 0.0f, 0.0f);
             } else {
               var2.setVertexShaderConstantF(16, 0.0f, 0.0f, 0.0f, 0.0f);
             }
-            var2.setPixelShaderConstantF(0, (float)(this.field_c.field_g >> 16 & 255) / 255.0f, (float)(this.field_c.field_g >> 8 & 255) / 255.0f, (float)(255 & this.field_c.field_g) / 255.0f, 0.0f);
+            var2.setPixelShaderConstantF(0, (float)(this.owner.field_g >> 16 & 255) / 255.0f, (float)(this.owner.field_g >> 8 & 255) / 255.0f, (float)(255 & this.owner.field_g) / 255.0f, 0.0f);
           }
           return;
         }
     }
 
-    final void a(int param0, GpuTexture param1, int param2) {
+    final void bindTexture(int param0, GpuTexture param1, int param2) {
         if (param2 != 24595) {
           this.field_e = (jagdx.IDirect3DVertexShader) null;
         }
     }
 
-    oja(Direct3DToolkit param0, ResourceArchive param1, hk param2) {
+    DirectXEnvironmentWaterEffect(Direct3DToolkit param0, ResourceArchive param1, hk param2) {
         super(param0);
         boolean stackIn_9_1 = false;
         this.field_f = param2;
@@ -48,13 +48,13 @@ final class oja extends vw {
           this.field_g = null;
           return;
         }
-        if (!this.field_c.field_Ob) {
+        if (!this.owner.field_Ob) {
           this.field_e = null;
           this.field_d = false;
           this.field_g = null;
           return;
         }
-        if (!this.field_c.field_x) {
+        if (!this.owner.field_x) {
           this.field_e = null;
           this.field_d = false;
           this.field_g = null;
@@ -72,14 +72,14 @@ final class oja extends vw {
         this.field_d = stackIn_9_1;
     }
 
-    final void a(int param0) {
+    final void disable(int param0) {
         if (this.field_j) {
           this.field_i.a((jagdx.IDirect3DVertexShader) null, -1);
           this.field_i.a(-92, (jagdx.IDirect3DPixelShader) null);
-          this.field_c.e(1, false);
-          this.field_c.bindTexture(true, (GpuTexture) null);
-          this.field_c.e(0, false);
-          this.field_c.bindTexture(true, (GpuTexture) null);
+          this.owner.e(1, false);
+          this.owner.bindTexture(true, (GpuTexture) null);
+          this.owner.e(0, false);
+          this.owner.bindTexture(true, (GpuTexture) null);
           this.field_j = false;
           if (param0 >= -4) {
             this.field_j = false;
@@ -93,16 +93,16 @@ final class oja extends vw {
         this.field_j = false;
     }
 
-    final void a(boolean param0, int param1) {
+    final void refreshState(boolean param0, int param1) {
         if (param1 != 5744) {
           this.b(-28);
         }
     }
 
-    final void a(int param0, boolean param1) {
+    final void enable(int param0, boolean param1) {
         jagdx.IDirect3DDevice var5 = null;
         int var4 = 11 % ((param0 - 41) / 62);
-        na var3 = this.field_c.n(33);
+        na var3 = this.owner.n(33);
         if (!this.field_d) {
           return;
         }
@@ -110,23 +110,23 @@ final class oja extends vw {
           var5 = this.field_i.field_jd;
           this.field_i.a(this.field_e, -1);
           this.field_i.a(-108, this.field_g);
-          this.field_c.e(1, false);
-          this.field_c.bindTexture(true, var3);
-          this.field_c.e(0, false);
-          this.field_c.bindTexture(true, this.field_f.field_f);
+          this.owner.e(1, false);
+          this.owner.bindTexture(true, var3);
+          this.owner.e(0, false);
+          this.owner.bindTexture(true, this.field_f.field_f);
           this.field_j = true;
           this.b(true);
           this.c(true);
           this.b(118);
           this.a(true);
-          var5.setPixelShaderConstantF(1, -this.field_c.field_Gb[0], -this.field_c.field_Gb[1], -this.field_c.field_Gb[2], 0.0f);
-          var5.setPixelShaderConstantF(2, this.field_c.field_sc, this.field_c.field_yb, this.field_c.field_Kb, 1.0f);
-          var5.setPixelShaderConstantF(3, 96.0f + 928.0f * Math.abs(this.field_c.field_Gb[1]), 0.0f, 0.0f, 0.0f);
+          var5.setPixelShaderConstantF(1, -this.owner.field_Gb[0], -this.owner.field_Gb[1], -this.owner.field_Gb[2], 0.0f);
+          var5.setPixelShaderConstantF(2, this.owner.field_sc, this.owner.field_yb, this.owner.field_Kb, 1.0f);
+          var5.setPixelShaderConstantF(3, 96.0f + 928.0f * Math.abs(this.owner.field_Gb[1]), 0.0f, 0.0f, 0.0f);
           return;
         }
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void setParameters(byte param0, int param1, int param2) {
         jagdx.IDirect3DDevice var4 = null;
         int var5 = 0;
         float var6 = 0.0f;
@@ -137,7 +137,7 @@ final class oja extends vw {
           var5 = 1 << (3 & param1);
           var6 = (float)(1 << (7 & param1 >> 3)) / 32.0f;
           var7 = param2 & 65535;
-          var4.setVertexShaderConstantF(14, (float)(var5 * this.field_c.field_Dc % 40000) / 40000.0f, 0.0f, 0.0f, 0.0f);
+          var4.setVertexShaderConstantF(14, (float)(var5 * this.owner.field_Dc % 40000) / 40000.0f, 0.0f, 0.0f, 0.0f);
           var8 = (float)((param2 & 227931) >> 16) / 8.0f;
           var4.setVertexShaderConstantF(15, var6, 0.0f, 0.0f, 0.0f);
           var4.setPixelShaderConstantF(4, (float)var7, 0.0f, 0.0f, 0.0f);
@@ -154,13 +154,13 @@ final class oja extends vw {
         if (param0 > 64) {
           if (this.field_j) {
             var2 = this.field_i.field_jd;
-            var2.setVertexShaderConstantF(8, this.field_c.writeTransposedProjection(field_h, false));
+            var2.setVertexShaderConstantF(8, this.owner.writeTransposedProjection(field_h, false));
           }
           return;
         }
     }
 
-    final boolean c(int param0) {
+    final boolean isSupported(int param0) {
         if (param0 != 1185) {
           this.b(-122);
           return this.field_d;
@@ -203,13 +203,13 @@ final class oja extends vw {
         AffineTransform3D var3 = null;
         if (this.field_j) {
           var2 = this.field_i.field_jd;
-          var3 = this.field_c.textureTransform((byte) 112);
+          var3 = this.owner.textureTransform((byte) 112);
           var2.SetVertexShaderConstantF(12, var3.a(field_h, -96), 2);
         }
         if (param0) {
           return;
         }
-        this.a(false, -10);
+        this.refreshState(false, -10);
     }
 
     static {

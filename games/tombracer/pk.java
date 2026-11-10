@@ -20,7 +20,7 @@ final class pk extends we {
 
     final String b(int param0, byte param1) {
         if (param1 < 111) {
-          this.a(false, true, 79);
+          this.update(false, true, 79);
         }
         if (param0 == 0) {
           return fga.field_a;
@@ -28,13 +28,13 @@ final class pk extends we {
         return super.b(param0, (byte) 113);
     }
 
-    final void a(boolean param0, boolean param1, int param2) {
+    final void update(boolean param0, boolean param1, int param2) {
         int var5_int = 0;
         int var4;
         bb var5;
         int var6;
         var6 = TombRacer.field_G ? 1 : 0;
-        super.a(param0, param1, param2);
+        super.update(param0, param1, param2);
         if (!param0) {
           return;
         }
@@ -85,16 +85,16 @@ final class pk extends we {
         this.field_x = param1;
     }
 
-    final int a(byte param0, int param1) {
+    final int getItemX(byte param0, int param1) {
         if (param0 < 111) {
           return 78;
         }
         return 335 + (-(80 * this.items.length) + param1 * 160);
     }
 
-    final int g(int param0, int param1) {
+    final int getItemY(int param0, int param1) {
         if (param1 != 30) {
-          this.g(-68, -86);
+          this.getItemY(-68, -86);
         }
         return SwitchLinkList.b(0) - 30;
     }
@@ -251,7 +251,7 @@ final class pk extends we {
         return;
     }
 
-    final int a(int param0, byte param1) {
+    final int getItemRight(int param0, byte param1) {
         if (param1 != -48) {
           field_C = -47;
         }

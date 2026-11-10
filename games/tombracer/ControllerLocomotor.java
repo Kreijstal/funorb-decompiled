@@ -110,11 +110,11 @@ final class ControllerLocomotor extends Locomotor {
         field_t = null;
     }
 
-    final void c(byte param0) {
+    final void mirror(byte param0) {
         int var3 = 0;
         Locomotor var4 = null;
         int var5 = TombRacer.field_G ? 1 : 0;
-        super.c((byte) -121);
+        super.mirror((byte) -121);
         if (param0 >= -116) {
           field_r = (iw) null;
         }
@@ -122,7 +122,7 @@ final class ControllerLocomotor extends Locomotor {
         Locomotor[] var2 = var6;
         for (var3 = 0; var6.length > var3; var3++) {
           var4 = var6[var3];
-          var4.c((byte) -124);
+          var4.mirror((byte) -124);
         }
     }
 

@@ -216,7 +216,7 @@ final class QuickChatMenu extends jea {
           } else {
             if (this.field_ub[param2] != -1) {
               var5 = this.field_ub[param2] | 32768;
-              var6 = bta.field_q;
+              var6 = OpenGlUnderwaterEffect.field_q;
               if (var6 == 0 &&
                 C2SChooseRewardPacket.field_a != null) {
                 var6 = 1;
@@ -225,8 +225,8 @@ final class QuickChatMenu extends jea {
                 MazeGenerator.a(var6, param0, (byte) 108, 1);
               }
               var8 = (String) null;
-              ResultsPhase.a(bta.field_q, (String) null, param1, 32371, wp.field_a, var5);
-              oi.a(ica.field_b, var5, 4, wp.field_a, bta.field_q);
+              ResultsPhase.a(OpenGlUnderwaterEffect.field_q, (String) null, param1, 32371, wp.field_a, var5);
+              oi.a(ica.field_b, var5, 4, wp.field_a, OpenGlUnderwaterEffect.field_q);
               f.b(param3 - 48);
               jq.c((byte) -25);
             } else {

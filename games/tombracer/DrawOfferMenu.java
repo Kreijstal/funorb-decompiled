@@ -39,8 +39,8 @@ final class DrawOfferMenu extends MenuScreen {
         }
     }
 
-    final int a(byte param0, int param1) {
-        int var3 = super.a((byte) 112, param1);
+    final int getItemX(byte param0, int param1) {
+        int var3 = super.getItemX((byte) 112, param1);
         if (param0 < 111) {
           return 125;
         }
@@ -55,7 +55,7 @@ final class DrawOfferMenu extends MenuScreen {
         return var3;
     }
 
-    final int g(int param0, int param1) {
+    final int getItemY(int param0, int param1) {
         int var4 = 0;
         int var3;
         int var6;
@@ -64,7 +64,7 @@ final class DrawOfferMenu extends MenuScreen {
         int stackIn_14_1 = 0;
         int var5;
         var6 = TombRacer.field_G ? 1 : 0;
-        var3 = this.field_n;
+        var3 = this.firstItemY;
         if (param1 != 30) {
           return -25;
         }
@@ -79,7 +79,7 @@ final class DrawOfferMenu extends MenuScreen {
           if (var5 != 0) {
             stackIn_14_1 = this.items[var4].d(11919) / 2;
           } else {
-            stackIn_14_1 = this.field_i;
+            stackIn_14_1 = this.itemSpacing;
           }
           var3 = stackIn_13_0 + stackIn_14_1;
           if (this.items[var4].field_g == 5) {
@@ -124,8 +124,8 @@ final class DrawOfferMenu extends MenuScreen {
         }
     }
 
-    final int a(int param0, byte param1) {
-        int var3 = super.a(param0, param1);
+    final int getItemRight(int param0, byte param1) {
+        int var3 = super.getItemRight(param0, param1);
         if (5 == this.items[param0].field_g) {
           var3 -= 10;
           return var3;
@@ -137,8 +137,8 @@ final class DrawOfferMenu extends MenuScreen {
         return var3;
     }
 
-    final void a(byte param0, boolean param1) {
-        super.a(param0, param1);
+    final void draw(byte param0, boolean param1) {
+        super.draw(param0, param1);
         int var3 = this.items[1].field_i - 70 + this.field_r.e(93) - 150;
         WhiteLightShooterComponent.field_K.a((aaa.a(false) >> 1) - (WhiteLightShooterComponent.field_K.a() >> 1), var3);
     }
@@ -184,9 +184,9 @@ final class DrawOfferMenu extends MenuScreen {
         field_q = null;
     }
 
-    final void a(boolean param0, boolean param1, int param2) {
+    final void update(boolean param0, boolean param1, int param2) {
         int var5 = TombRacer.field_G ? 1 : 0;
-        super.a(param0, param1, param2);
+        super.update(param0, param1, param2);
         this.field_r.a((byte) -120, param0, !param1 ? true : false);
         if (SecondaryNodeDequeIterator.field_a == null) {
           return;

@@ -28,9 +28,9 @@ abstract class MatchPhase {
         field_g = null;
     }
 
-    abstract void a(int param0, boolean param1);
+    abstract void update(int param0, boolean param1);
 
-    abstract boolean e(int param0);
+    abstract boolean allowsChat(int param0);
 
     final static void a(Room param0, int param1, MatchState param2) {
         if (param1 != 100) {
@@ -51,9 +51,9 @@ abstract class MatchPhase {
         }
     }
 
-    abstract void b(int param0, boolean param1);
+    abstract void draw(int param0, boolean param1);
 
-    abstract boolean a(char param0, int param1, int param2);
+    abstract boolean handleKey(char param0, int param1, int param2);
 
     final static int a(int param0) {
         if (param0 != 96) {

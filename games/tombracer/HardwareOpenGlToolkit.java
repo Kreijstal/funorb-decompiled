@@ -1382,7 +1382,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final vw createShaderEffect(int param0, int param1) {
+    final ShaderEffect createShaderEffect(int param0, int param1) {
         int var3;
         int var4;
         dn var5;
@@ -1393,15 +1393,15 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
         var3 = param0;
         if (var3 == 3) {
-          return (vw) ((Object) new bta(this, this.field_I));
+          return (ShaderEffect) ((Object) new OpenGlUnderwaterEffect(this, this.field_I));
         }
         if (var3 == 4) {
-          return (vw) ((Object) new pja(this, this.field_I, this.field_Mb));
+          return (ShaderEffect) ((Object) new OpenGlTransparentWaterEffect(this, this.field_I, this.field_Mb));
         }
         if (var3 != 8) {
           return super.createShaderEffect(param0, 115);
         }
-        return (vw) ((Object) new dp(this, this.field_I, this.field_Mb));
+        return (ShaderEffect) ((Object) new OpenGlEnvironmentWaterEffect(this, this.field_I, this.field_Mb));
     }
 
     final void w(byte param0) {

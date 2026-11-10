@@ -26,7 +26,7 @@ final class eca {
             param1 = 0;
           }
           wp.field_a = param4;
-          bta.field_q = param1;
+          OpenGlUnderwaterEffect.field_q = param1;
           var8 = (CharSequence) ((Object) param4);
           mn.field_n = jd.normalizeDisplayName(1, var8);
           ica.field_b = param2;

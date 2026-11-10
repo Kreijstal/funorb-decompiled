@@ -23,7 +23,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
         return io.centredBoxesOverlap(var2Lifetime1.getWidth(-47), this.trap.getY(9648), (byte) -57, var2Lifetime1.getHeight((byte) 55), this.trap.getX(3), var2Lifetime1.getY(9648), this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -8057), var2Lifetime1.getX(3));
     }
 
-    int a(int param0, Projectile param1, Effect param2) {
+    int onProjectileEffect(int param0, Projectile param1, Effect param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -68,7 +68,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
         return this.field_l;
     }
 
-    boolean a(int param0, int param1, int param2, int param3, int param4, int param5, Collidable param6) {
+    boolean blocksOverlap(int param0, int param1, int param2, int param3, int param4, int param5, Collidable param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -144,7 +144,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
         return this.trap.getPlayer(param0 ^ -108);
     }
 
-    int a(int param0, Effect param1, BeamSegment param2) {
+    int onBeamEffect(int param0, Effect param1, BeamSegment param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -254,7 +254,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
         return 0;
     }
 
-    boolean a(int param0, int param1, BeamSegment param2, int param3) {
+    boolean interceptsBeam(int param0, int param1, BeamSegment param2, int param3) {
         RuntimeException var5 = null;
         Trap var6 = null;
         RuntimeException stackIn_6_0 = null;
@@ -281,13 +281,13 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
         }
     }
 
-    void g(int param0) {
+    void resolveSwitchLinks(int param0) {
         if (param0 != -2) {
           this.hashState(-30, -37);
         }
     }
 
-    int a(int param0, int param1, Effect param2, int param3, byte param4, int param5) {
+    int onAreaEffect(int param0, int param1, Effect param2, int param3, byte param4, int param5) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
@@ -322,7 +322,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
 
     public final boolean a(byte param0) {
         if (param0 != 87) {
-          this.p((byte) -104);
+          this.freezesInTimeStop((byte) -104);
           if (null != this.trap) {
             return this.stopped ? true : false;
           }
@@ -346,7 +346,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
 
     public final int getRenderY(byte param0) {
         if (param0 < 91) {
-          this.n((byte) 65);
+          this.onTrapLoaded((byte) 65);
           return this.trap.getY(9648);
         }
         return this.trap.getY(9648);
@@ -362,7 +362,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
         }
     }
 
-    void h(int param0) {
+    void mirror(int param0) {
         if (param0 != 28701) {
           this.isEnabled(46);
         }
@@ -371,7 +371,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
     void b(int param0, iq param1) {
         try {
           if (param0 < 112) {
-            this.n((byte) -120);
+            this.onTrapLoaded((byte) -120);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "nv.NB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -407,11 +407,11 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
     public final void updateAnimation(int param0) {
         if (param0 != -4366) {
           Effect var3 = (Effect) null;
-          this.a(18, -54, (Effect) null, 115, (byte) 119, -22);
+          this.onAreaEffect(18, -54, (Effect) null, 115, (byte) 119, -22);
         }
     }
 
-    boolean p(byte param0) {
+    boolean freezesInTimeStop(byte param0) {
         if (param0 != 120) {
           WorldBody var3 = (WorldBody) null;
           this.a((Collidable) null, (byte) -1, (WorldBody) null, 16);
@@ -454,7 +454,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
         }
     }
 
-    void n(byte param0) {
+    void onTrapLoaded(byte param0) {
         if (param0 < 68) {
           this.enabled = true;
         }

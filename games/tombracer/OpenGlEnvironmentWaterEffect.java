@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dp extends vw {
+final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
     private boolean field_e;
     private hk field_f;
     private qca field_k;
@@ -11,7 +11,7 @@ final class dp extends vw {
     static jea field_i;
     static su field_g;
 
-    dp(HardwareOpenGlToolkit param0, ResourceArchive param1, hk param2) {
+    OpenGlEnvironmentWaterEffect(HardwareOpenGlToolkit param0, ResourceArchive param1, hk param2) {
         super(param0);
         pr var4 = null;
         RuntimeException var4_ref = null;
@@ -73,7 +73,7 @@ final class dp extends vw {
         }
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void setParameters(byte param0, int param1, int param2) {
         int var4 = 0;
         float var5 = 0.0f;
         int var6 = 0;
@@ -85,7 +85,7 @@ final class dp extends vw {
           var6 = 65535 & param2;
           var7 = (float)(3 & param2 >> 16) / 8.0f;
           var8 = this.field_k.field_b;
-          jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "time"), (float)(this.field_c.field_Dc * var4 % 40000) / 40000.0f);
+          jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "time"), (float)(this.owner.field_Dc * var4 % 40000) / 40000.0f);
           jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "scale"), var5);
           jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "breakWaterDepth"), (float)var6);
           jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "breakWaterOffset"), var7);
@@ -93,27 +93,27 @@ final class dp extends vw {
         if (param0 == 55) {
           return;
         }
-        this.a(5);
+        this.disable(5);
     }
 
-    final void a(int param0) {
+    final void disable(int param0) {
         if (param0 < -4) {
           if (this.field_h) {
-            this.field_c.e(1, false);
-            this.field_c.bindTexture(true, (GpuTexture) null);
-            this.field_c.e(0, false);
-            this.field_c.bindTexture(true, (GpuTexture) null);
+            this.owner.e(1, false);
+            this.owner.bindTexture(true, (GpuTexture) null);
+            this.owner.e(0, false);
+            this.owner.bindTexture(true, (GpuTexture) null);
             jaggl.OpenGL.glUseProgramObjectARB(0L);
             this.field_h = false;
           }
           return;
         }
-        this.c(6);
+        this.isSupported(6);
         if (this.field_h) {
-          this.field_c.e(1, false);
-          this.field_c.bindTexture(true, (GpuTexture) null);
-          this.field_c.e(0, false);
-          this.field_c.bindTexture(true, (GpuTexture) null);
+          this.owner.e(1, false);
+          this.owner.bindTexture(true, (GpuTexture) null);
+          this.owner.e(0, false);
+          this.owner.bindTexture(true, (GpuTexture) null);
           jaggl.OpenGL.glUseProgramObjectARB(0L);
           this.field_h = false;
         }
@@ -132,35 +132,35 @@ final class dp extends vw {
         field_d = null;
     }
 
-    final boolean c(int param0) {
+    final boolean isSupported(int param0) {
         if (param0 != 1185) {
           return true;
         }
         return this.field_e;
     }
 
-    final void a(int param0, boolean param1) {
+    final void enable(int param0, boolean param1) {
         long var5 = 0L;
         int var4 = -72 % ((41 - param0) / 62);
-        na var3 = this.field_c.n(11);
+        na var3 = this.owner.n(11);
         if (this.field_e &&
           var3 != null) {
-          this.field_c.e(1, false);
-          this.field_c.bindTexture(true, var3);
-          this.field_c.e(0, false);
-          this.field_c.bindTexture(true, this.field_f.field_f);
+          this.owner.e(1, false);
+          this.owner.bindTexture(true, var3);
+          this.owner.e(0, false);
+          this.owner.bindTexture(true, this.field_f.field_f);
           var5 = this.field_k.field_b;
           jaggl.OpenGL.glUseProgramObjectARB(var5);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var5, "normalSampler"), 0);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var5, "envMapSampler"), 1);
-          jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var5, "sunDir"), -this.field_c.field_Gb[0], -this.field_c.field_Gb[1], -this.field_c.field_Gb[2]);
-          jaggl.OpenGL.glUniform4fARB(jaggl.OpenGL.glGetUniformLocationARB(var5, "sunColour"), this.field_c.field_sc, this.field_c.field_yb, this.field_c.field_Kb, 1.0f);
-          jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var5, "sunExponent"), Math.abs(this.field_c.field_Gb[1]) * 928.0f + 96.0f);
+          jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var5, "sunDir"), -this.owner.field_Gb[0], -this.owner.field_Gb[1], -this.owner.field_Gb[2]);
+          jaggl.OpenGL.glUniform4fARB(jaggl.OpenGL.glGetUniformLocationARB(var5, "sunColour"), this.owner.field_sc, this.owner.field_yb, this.owner.field_Kb, 1.0f);
+          jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var5, "sunExponent"), Math.abs(this.owner.field_Gb[1]) * 928.0f + 96.0f);
           this.field_h = true;
         }
     }
 
-    final void a(int param0, GpuTexture param1, int param2) {
+    final void bindTexture(int param0, GpuTexture param1, int param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -168,13 +168,13 @@ final class dp extends vw {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 24595) {
-            dp.a(93, '￹');
+            OpenGlEnvironmentWaterEffect.a(93, '￹');
           }
           if (this.field_h) {
             return;
           }
-          this.field_c.bindTexture(true, param1);
-          this.field_c.a((byte) 10, param0);
+          this.owner.bindTexture(true, param1);
+          this.owner.a((byte) 10, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -190,7 +190,7 @@ final class dp extends vw {
         }
     }
 
-    final void a(boolean param0, int param1) {
+    final void refreshState(boolean param0, int param1) {
         if (param1 != 5744) {
           field_g = (su) null;
         }
@@ -198,7 +198,7 @@ final class dp extends vw {
 
     final static boolean a(int param0, char param1) {
         if (param0 < 111) {
-          dp.a(-40, '￫');
+          OpenGlEnvironmentWaterEffect.a(-40, '￫');
           if (param1 < 48) {
             return false;
           }

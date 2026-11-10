@@ -358,8 +358,8 @@ final class BlockModel extends TrapModel {
         }
     }
 
-    final void h(int param0) {
-        super.h(106);
+    final void mirror(int param0) {
+        super.mirror(106);
         if (param0 <= 0) {
           field_n = (int[]) null;
         }

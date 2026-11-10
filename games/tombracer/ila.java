@@ -308,7 +308,7 @@ final class ila {
               lsa.field_a = WeaveOperator.field_q.readUnsignedByte(255);
               ProceduralTexture.field_p = uga.field_n;
               if (fd.field_d.a((byte) 113) == BlockModel.field_s) {
-                vw.field_a.a(di.a(120), param2 ^ 55);
+                ShaderEffect.field_a.a(di.a(120), param2 ^ 55);
               } else {
                 if (fd.field_d.a((byte) 113) == ViewportManager.field_f) {
                   ObjectList.field_d.a(di.a(109), 5);

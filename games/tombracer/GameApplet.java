@@ -177,12 +177,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             boolean decompiledSharedTail0 = (null != DropdownList.field_x &&
               null == nb.field_d);
             if (!decompiledSharedTail0) {
-              nma.field_l.setLocation(lp.field_g, vu.field_f);
+              nma.field_l.setLocation(lp.field_g, FallbackShaderEffect.field_f);
               decompiledSharedTail0 = (TombRacer.field_G);
             }
             if (decompiledSharedTail0) {
               var6 = DropdownList.field_x.getInsets();
-              nma.field_l.setLocation(lp.field_g + var6.left, var6.top + vu.field_f);
+              nma.field_l.setLocation(lp.field_g + var6.left, var6.top + FallbackShaderEffect.field_f);
             }
           }
           this.draw(0);
@@ -454,7 +454,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     (var2.startsWith("1.6.0_"))) {
                     var3 = 6;
                     while (var2.length() > var3) {
-                      stackIn_66_0 = dp.a(120, var2.charAt(var3));
+                      stackIn_66_0 = OpenGlEnvironmentWaterEffect.a(120, var2.charAt(var3));
                       if (var5 != 0) {
                         decompiledFrameCompleted0 = false;
                         break;
@@ -755,7 +755,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               Corpse.field_j = this;
               qf.field_i = param1;
               eca.field_a = param1;
-              vu.field_f = 0;
+              FallbackShaderEffect.field_f = 0;
               mma.field_a = param2;
               rv.field_a = param2;
               RotaterMountComponent.field_L = param4;
@@ -873,12 +873,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           }
           boolean decompiledSharedTail0 = (DropdownList.field_x == var2);
           if (!decompiledSharedTail0) {
-            nma.field_l.setLocation(lp.field_g, vu.field_f);
+            nma.field_l.setLocation(lp.field_g, FallbackShaderEffect.field_f);
             decompiledSharedTail0 = (var4 != 0);
           }
           if (decompiledSharedTail0) {
             var3 = DropdownList.field_x.getInsets();
-            nma.field_l.setLocation(var3.left + lp.field_g, var3.top + vu.field_f);
+            nma.field_l.setLocation(var3.left + lp.field_g, var3.top + FallbackShaderEffect.field_f);
           }
           nma.field_l.addFocusListener((java.awt.event.FocusListener) (this));
           nma.field_l.requestFocus();

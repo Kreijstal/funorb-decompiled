@@ -439,7 +439,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("gameWinner", (byte) 123);
                 if (var2 != null) {
-                  vu.field_d = jaa.decodeText((byte) 41, var2);
+                  FallbackShaderEffect.field_d = jaa.decodeText((byte) 41, var2);
                 }
                 var2 = mt.readTextEntry("roundWinner_draw", (byte) 113);
                 if (var2 != null) {
@@ -1105,7 +1105,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("weapon_flamer", (byte) 119);
                 if (var2 != null) {
-                  sl.field_d = jaa.decodeText((byte) 103, var2);
+                  HardwareReflectionEffect.field_d = jaa.decodeText((byte) 103, var2);
                 }
                 var2 = mt.readTextEntry("weapon_flamershort", (byte) 101);
                 if (var2 != null) {

@@ -68,8 +68,8 @@ final class TouchSwitchBehaviour extends Behaviour implements SwitchSource {
         var2Lifetime1.writeByte(2, 0);
     }
 
-    final void g(int param0) {
-        super.g(param0);
+    final void resolveSwitchLinks(int param0) {
+        super.resolveSwitchLinks(param0);
         this.field_p.a((byte) 48, this.getScope((byte) 106));
     }
 

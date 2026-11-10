@@ -33,7 +33,7 @@ final class OpenGlFramebuffer implements Framebuffer {
             this.field_g = param1.field_o;
             this.field_c = param1.field_l;
           }
-          param1.attachToFramebuffer(this.field_a, param2, 0, vta.field_d[param3]);
+          param1.attachToFramebuffer(this.field_a, param2, 0, HardwareUnlitEffect.field_d[param3]);
           this.field_h[param3] = (FramebufferAttachment) ((Object) param1);
           this.field_e = this.field_e | var5_int;
           return;
@@ -91,7 +91,7 @@ final class OpenGlFramebuffer implements Framebuffer {
         if (param0 == this.field_a) {
           throw new RuntimeException();
         }
-        jaggl.OpenGL.glReadBuffer(vta.field_d[param1]);
+        jaggl.OpenGL.glReadBuffer(HardwareUnlitEffect.field_d[param1]);
     }
 
     public final void unbindReadFramebuffer(byte param0) {
@@ -137,7 +137,7 @@ final class OpenGlFramebuffer implements Framebuffer {
             this.field_c = param1.field_n;
             this.field_g = param1.field_l;
           }
-          param1.attachFramebuffer(vta.field_d[param0], this.field_a, -23992);
+          param1.attachFramebuffer(HardwareUnlitEffect.field_d[param0], this.field_a, -23992);
           if (!param2) {
             this.a(-122, 86);
           }
@@ -175,13 +175,13 @@ final class OpenGlFramebuffer implements Framebuffer {
           if (this.field_a == -1) {
             throw new RuntimeException();
           }
-          jaggl.OpenGL.glDrawBuffer(vta.field_d[param0]);
+          jaggl.OpenGL.glDrawBuffer(HardwareUnlitEffect.field_d[param0]);
           return;
         }
         if (this.field_a == -1) {
           throw new RuntimeException();
         }
-        jaggl.OpenGL.glDrawBuffer(vta.field_d[param0]);
+        jaggl.OpenGL.glDrawBuffer(HardwareUnlitEffect.field_d[param0]);
     }
 
     private final int e(int param0) {

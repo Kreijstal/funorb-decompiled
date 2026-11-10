@@ -41,7 +41,7 @@ final class FloatingMessage extends IntrusiveNode {
         int var3 = -52 % ((param0 + 59) / 45);
         int var2 = 255 - (this.field_o * 255 >> 16);
         SecondaryNodeDequeIterator.a(var2 / 2, this.field_k, 1, this.field_g, (byte) 99, this.field_s, this.field_t);
-        int var4 = fn.field_f[this.field_r];
+        int var4 = HardwareAnimatedWaterEffect.field_f[this.field_r];
         dh.a(kn.field_p, var2, 0, 16, 4 + this.field_t, this.field_k - 8, var4, this.field_s + 4, 1, 29870, 1, -8 + this.field_g, this.field_q);
     }
 

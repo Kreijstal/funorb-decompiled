@@ -13,12 +13,12 @@ final class RoomCompletedScreen extends MatchOverlay {
         field_j = null;
     }
 
-    final boolean a(int param0, char param1, byte param2) {
+    final boolean handleKey(int param0, char param1, byte param2) {
         int var4 = 25 / ((29 - param2) / 57);
         return false;
     }
 
-    final void b(byte param0) {
+    final void draw(byte param0) {
         int var3 = 0;
         int var4 = 0;
         Room var5 = null;
@@ -46,7 +46,7 @@ final class RoomCompletedScreen extends MatchOverlay {
         return MidiVoiceMixer.min(param1, param0, -81) - RandomBrickOperator.max(param3, param4, 2);
     }
 
-    final void a(byte param0) {
+    final void update(byte param0) {
         if (param0 > -107) {
           lu var3 = (lu) null;
           RoomCompletedScreen.a((byte) 21, true, 36, (lu) null, true);
@@ -57,7 +57,7 @@ final class RoomCompletedScreen extends MatchOverlay {
         super(param0);
     }
 
-    final boolean a(boolean param0) {
+    final boolean pausesGame(boolean param0) {
         if (!param0) {
           return true;
         }

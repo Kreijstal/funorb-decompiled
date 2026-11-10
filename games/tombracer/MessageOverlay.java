@@ -16,7 +16,7 @@ final class MessageOverlay extends MatchOverlay {
     static int[] field_o;
     private int field_s;
 
-    final void b(byte param0) {
+    final void draw(byte param0) {
         int var2 = this.field_n.e(-115);
         ToolkitSprite var3 = gg.field_f;
         int var4 = var3.d();
@@ -135,7 +135,7 @@ final class MessageOverlay extends MatchOverlay {
         }
     }
 
-    final boolean a(int param0, char param1, byte param2) {
+    final boolean handleKey(int param0, char param1, byte param2) {
         if (null != this.field_q) {
           return this.field_q.a(-18602, param0, param1);
         }
@@ -162,7 +162,7 @@ final class MessageOverlay extends MatchOverlay {
         this.field_v = true;
     }
 
-    final void a(byte param0) {
+    final void update(byte param0) {
         if (this.field_v) {
           this.field_u = this.field_u - 32;
           if (this.field_u < -gg.field_f.c()) {
@@ -260,7 +260,7 @@ final class MessageOverlay extends MatchOverlay {
         }
     }
 
-    final boolean a(boolean param0) {
+    final boolean pausesGame(boolean param0) {
         if (!param0) {
           field_o = (int[]) null;
           return true;

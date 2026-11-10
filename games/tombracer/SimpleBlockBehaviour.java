@@ -74,7 +74,7 @@ final class SimpleBlockBehaviour extends Behaviour {
         this.field_o = param0 ? true : false;
         if (param1 >= -23) {
           BeamSegment var4 = (BeamSegment) null;
-          this.a(33, -58, (BeamSegment) null, 39);
+          this.interceptsBeam(33, -58, (BeamSegment) null, 39);
         }
     }
 
@@ -126,7 +126,7 @@ final class SimpleBlockBehaviour extends Behaviour {
         return param0;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, Collidable param6) {
+    final boolean blocksOverlap(int param0, int param1, int param2, int param3, int param4, int param5, Collidable param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -196,7 +196,7 @@ final class SimpleBlockBehaviour extends Behaviour {
         return 12;
     }
 
-    final boolean a(int param0, int param1, BeamSegment param2, int param3) {
+    final boolean interceptsBeam(int param0, int param1, BeamSegment param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -243,7 +243,7 @@ final class SimpleBlockBehaviour extends Behaviour {
           if (!this.field_u) {
             if (param0 != 5418) {
               var3 = (Collidable) null;
-              this.a(-117, 44, 70, 106, 36, -110, (Collidable) null);
+              this.blocksOverlap(-117, 44, 70, 106, 36, -110, (Collidable) null);
               return;
             }
             return;
@@ -253,7 +253,7 @@ final class SimpleBlockBehaviour extends Behaviour {
               return;
             }
             var3Lifetime3 = (Collidable) null;
-            this.a(-117, 44, 70, 106, 36, -110, (Collidable) null);
+            this.blocksOverlap(-117, 44, 70, 106, 36, -110, (Collidable) null);
             return;
           }
           this.getRoom(true).r(-36);
@@ -261,7 +261,7 @@ final class SimpleBlockBehaviour extends Behaviour {
             return;
           }
           var3Lifetime4 = (Collidable) null;
-          this.a(-117, 44, 70, 106, 36, -110, (Collidable) null);
+          this.blocksOverlap(-117, 44, 70, 106, 36, -110, (Collidable) null);
           return;
         }
         if (this.isTouchingPlayer(8031)) {
@@ -270,14 +270,14 @@ final class SimpleBlockBehaviour extends Behaviour {
             return;
           }
           var3Lifetime1 = (Collidable) null;
-          this.a(-117, 44, 70, 106, 36, -110, (Collidable) null);
+          this.blocksOverlap(-117, 44, 70, 106, 36, -110, (Collidable) null);
           return;
         }
         if (param0 == 5418) {
           return;
         }
         var3Lifetime2 = (Collidable) null;
-        this.a(-117, 44, 70, 106, 36, -110, (Collidable) null);
+        this.blocksOverlap(-117, 44, 70, 106, 36, -110, (Collidable) null);
     }
 
     final void encode(boolean param0, BitPacketBuffer param1) {
@@ -296,7 +296,7 @@ final class SimpleBlockBehaviour extends Behaviour {
         this.field_s = param0;
         if (param1 != -22) {
           Collidable var4 = (Collidable) null;
-          this.a(-37, 114, -50, -103, 24, 15, (Collidable) null);
+          this.blocksOverlap(-37, 114, -50, -103, 24, 15, (Collidable) null);
         }
     }
 

@@ -527,7 +527,7 @@ final class PitModel extends TrapModel {
         }
     }
 
-    final void h(int param0) {
+    final void mirror(int param0) {
         int var2 = 0;
         int var3 = 0;
         dpa var4 = null;
@@ -536,7 +536,7 @@ final class PitModel extends TrapModel {
         if (param0 < 0) {
           this.field_o = 122;
         }
-        super.h(70);
+        super.mirror(70);
         if (null == this.field_m) {
           return;
         }

@@ -38,7 +38,7 @@ final class DarknessBehaviour extends Behaviour {
         return param0;
     }
 
-    final int a(int param0, Projectile param1, Effect param2) {
+    final int onProjectileEffect(int param0, Projectile param1, Effect param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
@@ -53,7 +53,7 @@ final class DarknessBehaviour extends Behaviour {
             this.field_q = 56;
           }
           var4_int = param1.i(-1);
-          stackIn_3_0 = this.a(var4_int, var4_int, param2, param1.getX(3), (byte) -36, param1.getY(9648));
+          stackIn_3_0 = this.onAreaEffect(var4_int, var4_int, param2, param1.getX(3), (byte) -36, param1.getY(9648));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -251,7 +251,7 @@ final class DarknessBehaviour extends Behaviour {
         }
     }
 
-    final int a(int param0, int param1, Effect param2, int param3, byte param4, int param5) {
+    final int onAreaEffect(int param0, int param1, Effect param2, int param3, byte param4, int param5) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
@@ -324,7 +324,7 @@ final class DarknessBehaviour extends Behaviour {
         }
     }
 
-    final int a(int param0, Effect param1, BeamSegment param2) {
+    final int onBeamEffect(int param0, Effect param1, BeamSegment param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -343,7 +343,7 @@ final class DarknessBehaviour extends Behaviour {
         try {
           if (param0 > -85) {
             var10 = (BeamSegment) null;
-            this.a(26, (Effect) null, (BeamSegment) null);
+            this.onBeamEffect(26, (Effect) null, (BeamSegment) null);
           }
           var4_int = param2.field_d - this.trap.getX(3) + this.trap.getWidth(-67) / 2;
           var5 = param2.field_e - (this.trap.getX(3) - this.trap.getWidth(-63) / 2);
@@ -353,9 +353,9 @@ final class DarknessBehaviour extends Behaviour {
           if (var8 >= 10) {
             var8 = 9;
           }
-          var9 = var8 * sl.field_e.length / 10;
+          var9 = var8 * HardwareReflectionEffect.field_e.length / 10;
           nm.a(this.field_r, (byte) 110);
-          iha.drawGlowingLine(var4_int / 8 >> 16, var6 / 8 >> 16, var5 / 8 >> 16, var7 / 8 >> 16, 2, var9, sl.field_e);
+          iha.drawGlowingLine(var4_int / 8 >> 16, var6 / 8 >> 16, var5 / 8 >> 16, var7 / 8 >> 16, 2, var9, HardwareReflectionEffect.field_e);
           pfa.a(1);
           stackIn_6_0 = 0;
           return stackIn_6_0;

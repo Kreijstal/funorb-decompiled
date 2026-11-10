@@ -246,13 +246,13 @@ final class BridgeModel extends TrapModel {
         super(param0, param1, param2);
     }
 
-    final void h(int param0) {
+    final void mirror(int param0) {
         int var2 = 0;
         int var3 = 0;
         faa var4 = null;
         int var5 = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
-        super.h(19);
+        super.mirror(19);
         if (this.field_q == null) {
           return;
         }

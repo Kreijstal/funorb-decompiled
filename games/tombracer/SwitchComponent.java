@@ -32,7 +32,7 @@ abstract class SwitchComponent extends PrefabComponent {
     final void x(int param0) {
         super.x(param0);
         if (null != this.field_H) {
-          this.field_H.getLinks(1).a(9, this.field_G.a((byte) -103));
+          this.field_H.getLinks(1).setTargets(9, this.field_G.a((byte) -103));
           return;
         }
     }

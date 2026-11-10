@@ -162,8 +162,8 @@ final class PlayerSensorBehaviour extends Behaviour implements SwitchSource {
         }
     }
 
-    final void g(int param0) {
-        super.g(param0);
+    final void resolveSwitchLinks(int param0) {
+        super.resolveSwitchLinks(param0);
         this.field_n.a((byte) 48, this.getScope((byte) 127));
     }
 

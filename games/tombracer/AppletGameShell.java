@@ -274,7 +274,7 @@ abstract class AppletGameShell extends GameApplet {
                                 return;
                               }
                               if (var2 == 18) {
-                                vta.c((byte) 101);
+                                HardwareUnlitEffect.c((byte) 101);
                                 return;
                               }
                               ssa.a("MGS1: " + kk.a(32), (byte) 123, (Throwable) null);

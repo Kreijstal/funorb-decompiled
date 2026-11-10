@@ -25,11 +25,11 @@ final class jn extends we {
         field_r = null;
     }
 
-    final int a(int param0, byte param1) {
+    final int getItemRight(int param0, byte param1) {
         if (param1 != -48) {
           this.a(-68, false);
         }
-        return this.a((byte) 112, param0) + this.h(param0, 1);
+        return this.getItemX((byte) 112, param0) + this.h(param0, 1);
     }
 
     final void b(boolean param0, boolean param1, int param2) {
@@ -184,11 +184,11 @@ final class jn extends we {
         }
     }
 
-    final int g(int param0, int param1) {
+    final int getItemY(int param0, int param1) {
         if (param1 != 30) {
           field_r = (String) null;
         }
-        return this.field_n - this.items[param0].d(11919) / 2;
+        return this.firstItemY - this.items[param0].d(11919) / 2;
     }
 
     private final void a(int param0, boolean param1) {
@@ -206,7 +206,7 @@ final class jn extends we {
         }
     }
 
-    final boolean a(int param0, char param1, int param2) {
+    final boolean handleKey(int param0, char param1, int param2) {
         int var4;
         int var5;
         int var6;
@@ -245,11 +245,11 @@ final class jn extends we {
         if (param2 == 1) {
           return true;
         }
-        this.a(116, '￟', -90);
+        this.handleKey(116, '￟', -90);
         return true;
     }
 
-    final int a(byte param0, int param1) {
+    final int getItemX(byte param0, int param1) {
         int discarded$0 = 0;
         int var3 = this.h(param1, 1);
         if (param0 <= 111) {

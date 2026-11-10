@@ -15,7 +15,7 @@ final class qp extends we {
         return (param0 & 16) != 0 ? true : false;
     }
 
-    final int g(int param0, int param1) {
+    final int getItemY(int param0, int param1) {
         if (param1 != 30) {
           field_v = (String) null;
           return SwitchLinkList.b(0) - 30;
@@ -111,7 +111,7 @@ final class qp extends we {
         return (65408 & param0) + param1;
     }
 
-    final int a(byte param0, int param1) {
+    final int getItemX(byte param0, int param1) {
         if (param0 > 111) {
           return -80 + (aaa.a(false) >> 1) - ((this.items[0].e(-163) >> 1) * this.items.length - param1 * this.items[0].e(-163));
         }
@@ -121,15 +121,15 @@ final class qp extends we {
     final void h(int param0, int param1) {
         this.field_x = param1;
         if (param0 != 18608) {
-          this.g(-85, -41);
+          this.getItemY(-85, -41);
         }
     }
 
-    final int a(int param0, byte param1) {
+    final int getItemRight(int param0, byte param1) {
         if (param1 != -48) {
           return 88;
         }
-        return this.a((byte) 116, param0) + this.items[param0].e(-163);
+        return this.getItemX((byte) 116, param0) + this.items[param0].e(-163);
     }
 
     qp(int param0, int param1, int param2, int param3, int param4, int[] param5) {
@@ -279,20 +279,20 @@ final class qp extends we {
 
     final boolean c(int param0, int param1) {
         if (param1 != 0) {
-          this.a(-73, (byte) -31);
+          this.getItemRight(-73, (byte) -31);
           return super.c(param0, 0);
         }
         return super.c(param0, 0);
     }
 
-    final void a(boolean param0, boolean param1, int param2) {
+    final void update(boolean param0, boolean param1, int param2) {
         int var5;
         String var6;
         upa var7;
         upa var8;
         upa var9;
         var5 = TombRacer.field_G ? 1 : 0;
-        super.a(param0, param1, param2 + 0);
+        super.update(param0, param1, param2 + 0);
         if (param2 == 15283) {
           if (!param0) {
             return;

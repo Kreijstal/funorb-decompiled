@@ -27,7 +27,7 @@ final class RemovedFromGameMenu extends MenuScreen {
         field_q = (String) null;
     }
 
-    final void a(byte param0, boolean param1) {
+    final void draw(byte param0, boolean param1) {
         if (!param1) {
           return;
         }
@@ -35,7 +35,7 @@ final class RemovedFromGameMenu extends MenuScreen {
         gg.field_f.a((aaa.a(false) - gg.field_f.d()) / 2, (SwitchLinkList.b(0) - gg.field_f.b()) / 2);
         MembersUpsellMenu.a(ValidatedTextInputWidget.field_L.toUpperCase(), 2431750, SingleChildWidget.field_v, -1, 60 + (SwitchLinkList.b(param0 + 28) - gg.field_f.b()) / 2, aaa.a(false) / 2, -1);
         SocketConnector.a(OpenGlBuffer.field_i, 1, kn.field_p, 2431750, 20, 200, 1, -100 + SwitchLinkList.b(param0 + 28) / 2, aaa.a(false) / 2 - 150, -1, (byte) 60, 300);
-        super.a(param0, param1);
+        super.draw(param0, param1);
     }
 
     public static void releaseStatics(byte param0) {
@@ -45,15 +45,15 @@ final class RemovedFromGameMenu extends MenuScreen {
         field_r = null;
     }
 
-    final int a(int param0, byte param1) {
+    final int getItemRight(int param0, byte param1) {
         if (param1 == -48) {
-          return this.a((byte) 117, param0) + this.items[param0].e(-163);
+          return this.getItemX((byte) 117, param0) + this.items[param0].e(-163);
         }
         field_q = (String) null;
-        return this.a((byte) 117, param0) + this.items[param0].e(-163);
+        return this.getItemX((byte) 117, param0) + this.items[param0].e(-163);
     }
 
-    final int a(byte param0, int param1) {
+    final int getItemX(byte param0, int param1) {
         if (param0 > 111) {
           return aaa.a(false) - this.items[param1].e(-163) >> 1;
         }

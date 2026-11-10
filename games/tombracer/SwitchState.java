@@ -153,7 +153,7 @@ final class SwitchState implements noa {
           if (param0 != 48) {
             field_j = (ResourceArchive) null;
           }
-          this.field_d.a(param1, 8);
+          this.field_d.resolveTargets(param1, 8);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "jma.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -429,7 +429,7 @@ final class SwitchState implements noa {
         this.field_m = true;
         try {
           this.field_d = new SwitchLinkList(param0, 0);
-          this.field_d.a(9, param1);
+          this.field_d.setTargets(9, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "jma.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

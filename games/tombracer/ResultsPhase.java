@@ -36,7 +36,7 @@ final class ResultsPhase extends MatchPhase {
         }
     }
 
-    final boolean a(char param0, int param1, int param2) {
+    final boolean handleKey(char param0, int param1, int param2) {
         if (param1 != 25) {
           this.field_m = false;
           return false;
@@ -126,7 +126,7 @@ final class ResultsPhase extends MatchPhase {
         }
     }
 
-    final boolean e(int param0) {
+    final boolean allowsChat(int param0) {
         if (param0 != -9202) {
           this.field_m = true;
           return true;
@@ -134,7 +134,7 @@ final class ResultsPhase extends MatchPhase {
         return true;
     }
 
-    final void b(int param0, boolean param1) {
+    final void draw(int param0, boolean param1) {
         int stackIn_12_0 = 0;
         int stackIn_12_1 = 0;
         int stackIn_13_2 = 0;
@@ -330,25 +330,25 @@ final class ResultsPhase extends MatchPhase {
           var21_int = this.matchState.players[var8Lifetime2].getChosenReward(-104);
           var22 = 0;
           if (var21_int >= 0 &&
-            2 == bta.field_n[var21_int] &&
+            2 == OpenGlUnderwaterEffect.field_n[var21_int] &&
             var14_ref_gsa.field_o) {
             var22 = 1;
           }
           if (0 <= var21_int &&
-            bta.field_n[var21_int] == 1 &&
+            OpenGlUnderwaterEffect.field_n[var21_int] == 1 &&
             var14_ref_gsa.field_h) {
             var22 = 1;
           }
           if (var21_int >= 0 &&
-            0 == bta.field_n[var21_int] &&
+            0 == OpenGlUnderwaterEffect.field_n[var21_int] &&
             var14_ref_gsa.field_b) {
             var22 = 1;
           }
           if (var21_int >= 0 &&
             var22 != 0) {
             var23 = 43 + var9Lifetime1;
-            if (bta.field_n[var21_int] != 2) {
-              if (bta.field_n[var21_int] != 1) {
+            if (OpenGlUnderwaterEffect.field_n[var21_int] != 2) {
+              if (OpenGlUnderwaterEffect.field_n[var21_int] != 1) {
                 stackIn_52_0 = var13 - 10;
               } else {
                 stackIn_52_0 = -6 + var12;
@@ -357,7 +357,7 @@ final class ResultsPhase extends MatchPhase {
               stackIn_52_0 = -4 + var11;
             }
             var24 = stackIn_52_0;
-            var31 = GridWidgetContainer.field_y[bta.field_f[var21_int]];
+            var31 = GridWidgetContainer.field_y[OpenGlUnderwaterEffect.field_f[var21_int]];
             var25 = var31;
             var25.a(var23, var24, var31.a() >> 1, var31.c() >> 1);
           }
@@ -386,7 +386,7 @@ final class ResultsPhase extends MatchPhase {
           if (-100 + fd.field_e <= var7Lifetime2 &&
             var8Lifetime3 == this.matchState.getRoundWinner(2)) {
             if (this.matchState.roundsToWin == this.matchState.roundWins[var8Lifetime3]) {
-              MembersUpsellMenu.a(vu.field_d.toUpperCase(), 2431750, SingleChildWidget.field_v, -1, var9Lifetime2 - 22, (var3 + 50 >> 1) + 20, -1);
+              MembersUpsellMenu.a(FallbackShaderEffect.field_d.toUpperCase(), 2431750, SingleChildWidget.field_v, -1, var9Lifetime2 - 22, (var3 + 50 >> 1) + 20, -1);
             } else {
               MembersUpsellMenu.a(RasterBuffer.field_h.toUpperCase(), 2431750, SingleChildWidget.field_v, -1, var9Lifetime2 - 22, (var3 + 50 >> 1) + 20, -1);
             }
@@ -450,7 +450,7 @@ final class ResultsPhase extends MatchPhase {
             if (var15Lifetime1 != 0) {
               var19Lifetime1 = 25 + wb.field_a.a("x" + var39, (byte) 31) + var17Lifetime1;
               var20 = -11 + var18;
-              var41 = GridWidgetContainer.field_y[bta.field_f[var14]];
+              var41 = GridWidgetContainer.field_y[OpenGlUnderwaterEffect.field_f[var14]];
               var21 = var41;
               var21.a(var19Lifetime1, var20, var41.a() >> 1, var41.c() >> 1);
             }
@@ -501,7 +501,7 @@ final class ResultsPhase extends MatchPhase {
             if (var15Lifetime1 != 0) {
               var19Lifetime1 = var17Lifetime1 + (wb.field_a.a("x" + var36, (byte) -122) + 25);
               var20 = var18 - 11;
-              var38 = GridWidgetContainer.field_y[bta.field_f[var14]];
+              var38 = GridWidgetContainer.field_y[OpenGlUnderwaterEffect.field_f[var14]];
               var21 = var38;
               var21.a(var19Lifetime1, var20, var38.a() >> 1, var38.c() >> 1);
             }
@@ -549,7 +549,7 @@ final class ResultsPhase extends MatchPhase {
               if (var15Lifetime1 != 0) {
                 var19Lifetime1 = var17Lifetime1 + wb.field_a.a("x" + var33, (byte) 36) + 25;
                 var20 = -11 + var18;
-                var35 = GridWidgetContainer.field_y[bta.field_f[var14]];
+                var35 = GridWidgetContainer.field_y[OpenGlUnderwaterEffect.field_f[var14]];
                 var21 = var35;
                 var21.a(var19Lifetime1, var20, var35.a() >> 1, var35.c() >> 1);
               }
@@ -810,7 +810,7 @@ final class ResultsPhase extends MatchPhase {
         }
     }
 
-    final void a(int param0, boolean param1) {
+    final void update(int param0, boolean param1) {
         int var4 = 0;
         w stackIn_21_0 = null;
         int stackIn_21_1 = 0;
@@ -820,7 +820,7 @@ final class ResultsPhase extends MatchPhase {
         int var3Lifetime1;
         var5 = TombRacer.field_G ? 1 : 0;
         if (param0 != 80) {
-          this.b(76, true);
+          this.draw(76, true);
         }
         for (var3 = 0; var3 < this.matchState.players.length; var3++) {
           if (!this.field_q) {

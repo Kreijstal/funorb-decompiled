@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cqa extends vw {
+final class DirectXUnderwaterEffect extends ShaderEffect {
     private jagdx.IDirect3DVertexShader field_l;
     private jagdx.IDirect3DVertexShader field_o;
     private boolean field_n;
@@ -15,7 +15,7 @@ final class cqa extends vw {
     private static float[] field_f;
     private boolean field_d;
 
-    final void a(byte param0, int param1, int param2) {
+    final void setParameters(byte param0, int param1, int param2) {
         if (param0 != 55) {
           this.field_g = (GpuTexture2D) null;
         }
@@ -26,15 +26,15 @@ final class cqa extends vw {
         jagdx.IDirect3DDevice var3 = null;
         if (this.field_j != null &&
           this.field_d) {
-          var4 = this.field_c.c(true);
+          var4 = this.owner.c(true);
           AffineTransform3D var2 = var4;
           var3 = this.field_i.field_jd;
-          var3.setVertexShaderConstantF(13, this.field_c.field_sc * this.field_c.field_fc, this.field_c.field_fc * this.field_c.field_yb, this.field_c.field_fc * this.field_c.field_Kb, 1.0f);
-          var3.setVertexShaderConstantF(14, this.field_c.field_sc * this.field_c.field_j, this.field_c.field_yb * this.field_c.field_j, this.field_c.field_j * this.field_c.field_Kb, 1.0f);
-          var3.setVertexShaderConstantF(16, this.field_c.field_pc * this.field_c.field_sc, this.field_c.field_pc * this.field_c.field_yb, this.field_c.field_pc * this.field_c.field_Kb, 1.0f);
-          var4.a(field_h, this.field_c.field_Gb[1], (byte) 76, this.field_c.field_Gb[2], this.field_c.field_Gb[0]);
+          var3.setVertexShaderConstantF(13, this.owner.field_sc * this.owner.field_fc, this.owner.field_fc * this.owner.field_yb, this.owner.field_fc * this.owner.field_Kb, 1.0f);
+          var3.setVertexShaderConstantF(14, this.owner.field_sc * this.owner.field_j, this.owner.field_yb * this.owner.field_j, this.owner.field_j * this.owner.field_Kb, 1.0f);
+          var3.setVertexShaderConstantF(16, this.owner.field_pc * this.owner.field_sc, this.owner.field_pc * this.owner.field_yb, this.owner.field_pc * this.owner.field_Kb, 1.0f);
+          var4.a(field_h, this.owner.field_Gb[1], (byte) 76, this.owner.field_Gb[2], this.owner.field_Gb[0]);
           var3.SetVertexShaderConstantF(15, field_h, 1);
-          var4.a(field_h, this.field_c.field_M[1], (byte) 52, this.field_c.field_M[2], this.field_c.field_M[0]);
+          var4.a(field_h, this.owner.field_M[1], (byte) 52, this.owner.field_M[2], this.owner.field_M[0]);
           var3.SetVertexShaderConstantF(17, field_h, 1);
         }
         if (param0 == 1) {
@@ -43,48 +43,48 @@ final class cqa extends vw {
         this.field_g = (GpuTexture2D) null;
     }
 
-    final void a(int param0, boolean param1) {
+    final void enable(int param0, boolean param1) {
         this.field_d = param1 ? true : false;
-        this.field_c.e(1, false);
+        this.owner.e(1, false);
         int var3 = 101 / ((param0 - 41) / 62);
-        this.field_c.bindTexture(true, this.field_g);
-        this.field_c.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, r.field_m);
-        this.field_c.a(pea.field_c, 0, -55);
-        this.field_c.a(ej.field_c, 2, -6219, true, false);
-        this.field_c.a(0, false, PlayerContextMenu.field_j);
-        this.field_c.e(0, false);
+        this.owner.bindTexture(true, this.field_g);
+        this.owner.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, r.field_m);
+        this.owner.a(pea.field_c, 0, -55);
+        this.owner.a(ej.field_c, 2, -6219, true, false);
+        this.owner.a(0, false, PlayerContextMenu.field_j);
+        this.owner.e(0, false);
         this.d(122);
     }
 
-    final void a(boolean param0, int param1) {
+    final void refreshState(boolean param0, int param1) {
         if (param1 != 5744) {
-          this.c(32);
+          this.isSupported(32);
         }
     }
 
-    final void a(int param0, GpuTexture param1, int param2) {
+    final void bindTexture(int param0, GpuTexture param1, int param2) {
         if (param1 != null) {
           if (this.field_e) {
-            this.field_c.a(ej.field_c, 0, -90);
-            this.field_c.a(0, false, ej.field_c);
+            this.owner.a(ej.field_c, 0, -90);
+            this.owner.a(0, false, ej.field_c);
             this.field_e = false;
           }
-          this.field_c.bindTexture(true, param1);
-          this.field_c.a((byte) -124, param0);
+          this.owner.bindTexture(true, param1);
+          this.owner.a((byte) -124, param0);
           if (param2 != 24595) {
-            this.a(true, -82);
+            this.refreshState(true, -82);
             return;
           }
           return;
         }
         if (!this.field_e) {
-          this.field_c.bindTexture(true, this.field_c.field_Jb);
-          this.field_c.a((byte) -85, 1);
-          this.field_c.a(PlayerContextMenu.field_j, 0, -82);
-          this.field_c.a(0, false, PlayerContextMenu.field_j);
+          this.owner.bindTexture(true, this.owner.field_Jb);
+          this.owner.a((byte) -85, 1);
+          this.owner.a(PlayerContextMenu.field_j, 0, -82);
+          this.owner.a(0, false, PlayerContextMenu.field_j);
           this.field_e = true;
           if (param2 != 24595) {
-            this.a(true, -82);
+            this.refreshState(true, -82);
             return;
           }
           return;
@@ -92,7 +92,7 @@ final class cqa extends vw {
         if (param2 == 24595) {
           return;
         }
-        this.a(true, -82);
+        this.refreshState(true, -82);
     }
 
     final void c(boolean param0) {
@@ -103,15 +103,15 @@ final class cqa extends vw {
         if (param0) {
           if (this.field_j != null) {
             var2 = this.field_i.field_jd;
-            var3 = this.field_c.textureTransform((byte) 116);
+            var3 = this.owner.textureTransform((byte) 116);
             var2.SetVertexShaderConstantF(8, var3.a(field_f, -118), 2);
           }
           return;
         }
-        this.a(-44);
+        this.disable(-44);
         if (this.field_j != null) {
           var2Lifetime1 = this.field_i.field_jd;
-          var3Lifetime1 = this.field_c.textureTransform((byte) 116);
+          var3Lifetime1 = this.owner.textureTransform((byte) 116);
           var2Lifetime1.SetVertexShaderConstantF(8, var3Lifetime1.a(field_f, -118), 2);
         }
     }
@@ -120,15 +120,15 @@ final class cqa extends vw {
         jagdx.IDirect3DDevice var2 = null;
         if (this.field_j != null) {
           var2 = this.field_i.field_jd;
-          var2.setVertexShaderConstantF(4, this.field_c.writeTransposedProjection(field_f, false));
+          var2.setVertexShaderConstantF(4, this.owner.writeTransposedProjection(field_f, false));
         }
         if (param0 >= 64) {
           return;
         }
-        this.a(true, -11);
+        this.refreshState(true, -11);
     }
 
-    cqa(Direct3DToolkit param0, ResourceArchive param1) {
+    DirectXUnderwaterEffect(Direct3DToolkit param0, ResourceArchive param1) {
         super(param0);
         int stackIn_6_0 = 0;
         int stackIn_9_1 = 0;
@@ -153,7 +153,7 @@ final class cqa extends vw {
           if ((stackIn_14_0 & stackIn_15_1) == 0) {
             this.field_n = false;
           } else {
-            this.field_g = this.field_c.a(true, 1, false, 2, new int[]{0, -1});
+            this.field_g = this.owner.a(true, 1, false, 2, new int[]{0, -1});
             this.field_g.a((byte) -128, false, false);
             this.field_n = true;
           }
@@ -162,17 +162,17 @@ final class cqa extends vw {
         this.field_n = false;
     }
 
-    final void a(int param0) {
-        this.field_c.e(1, false);
-        this.field_c.bindTexture(true, (GpuTexture) null);
-        this.field_c.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
-        this.field_c.a(ej.field_c, 0, -58);
-        this.field_c.a(pea.field_c, 2, -122);
-        this.field_c.a(0, false, ej.field_c);
-        this.field_c.e(0, false);
+    final void disable(int param0) {
+        this.owner.e(1, false);
+        this.owner.bindTexture(true, (GpuTexture) null);
+        this.owner.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
+        this.owner.a(ej.field_c, 0, -58);
+        this.owner.a(pea.field_c, 2, -122);
+        this.owner.a(0, false, ej.field_c);
+        this.owner.e(0, false);
         if (this.field_e) {
-          this.field_c.a(ej.field_c, 0, -48);
-          this.field_c.a(0, false, ej.field_c);
+          this.owner.a(ej.field_c, 0, -48);
+          this.owner.a(0, false, ej.field_c);
           this.field_e = false;
         }
         if (param0 < -4) {
@@ -203,7 +203,7 @@ final class cqa extends vw {
         this.b(116);
     }
 
-    final boolean c(int param0) {
+    final boolean isSupported(int param0) {
         if (param0 != 1185) {
           return true;
         }
@@ -217,17 +217,17 @@ final class cqa extends vw {
         float var5 = 0.0f;
         float var6 = 0.0f;
         if (!param0) {
-          this.a(-94);
+          this.disable(-94);
         }
         if (null != this.field_j) {
           var2 = this.field_i.field_jd;
-          var3 = this.field_c.XA();
-          var4 = this.field_c.i();
+          var3 = this.owner.XA();
+          var4 = this.owner.i();
           var5 = -((float)(-var4 + var3) * 0.125f) + (float)var3;
           var6 = -((float)(-var4 + var3) * 0.25f) + (float)var3;
           var2.setVertexShaderConstantF(10, var6, 1.0f / (-var6 + var5), var5, 1.0f / ((float)var3 - var5));
-          var2.setVertexShaderConstantF(11, 1.0f / (float)this.field_c.g(false), (float)this.field_c.A(-2903) / 255.0f, this.field_c.field_Hc, 1.0f / (-this.field_c.field_B + this.field_c.field_Hc));
-          this.field_c.g(3625, this.field_c.t(65280));
+          var2.setVertexShaderConstantF(11, 1.0f / (float)this.owner.g(false), (float)this.owner.A(-2903) / 255.0f, this.owner.field_Hc, 1.0f / (-this.owner.field_B + this.owner.field_Hc));
+          this.owner.g(3625, this.owner.t(65280));
         }
     }
 
@@ -242,8 +242,8 @@ final class cqa extends vw {
         if (param0 < 83) {
           this.b(false);
           var6 = this.field_i.field_jd;
-          var4 = this.field_c.d(false);
-          var5 = this.field_c.E(8);
+          var4 = this.owner.d(false);
+          var5 = this.owner.E(8);
           if (!this.field_d) {
             var2 = var4 != 2147483647 ? this.field_l : this.field_m;
           } else {
@@ -267,8 +267,8 @@ final class cqa extends vw {
           return;
         }
         jagdx.IDirect3DDevice var7 = this.field_i.field_jd;
-        var4Lifetime1 = this.field_c.d(false);
-        var5Lifetime1 = this.field_c.E(8);
+        var4Lifetime1 = this.owner.d(false);
+        var5Lifetime1 = this.owner.E(8);
         if (!this.field_d) {
           var2Lifetime1 = var4Lifetime1 != 2147483647 ? this.field_l : this.field_m;
         } else {

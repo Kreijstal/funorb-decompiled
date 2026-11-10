@@ -36,13 +36,13 @@ final class DoorwayModel extends TrapModel {
         return -1;
     }
 
-    final void h(int param0) {
+    final void mirror(int param0) {
         int var2;
         int var3;
         BitPacketBuffer var4;
         BitPacketBuffer var4Lifetime1;
         var3 = TombRacer.field_G ? 1 : 0;
-        super.h(78);
+        super.mirror(78);
         var2 = this.field_q;
         if (var2 == 0) {
           this.field_q = 1;
@@ -199,7 +199,7 @@ final class DoorwayModel extends TrapModel {
             var5 = 1;
           }
         } else {
-          this.h(95);
+          this.mirror(95);
           if (this.field_q == 2) {
             return;
           }
