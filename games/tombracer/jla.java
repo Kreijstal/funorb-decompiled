@@ -14,7 +14,7 @@ final class jla extends FocusableWidget {
         }
     }
 
-    private jla(String param0, isa param1, WidgetListener param2) {
+    private jla(String param0, WidgetPainter param1, WidgetListener param2) {
         super(param0, param1, param2);
         try {
           this.field_r = afa.field_c.field_d;

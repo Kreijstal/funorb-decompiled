@@ -3,15 +3,15 @@
  */
 import java.util.*;
 
-final class f {
+final class ComponentTargetList {
     static int[] field_c;
     static BitSet field_e;
     static int field_b;
-    private cva[] field_d;
-    private RoomComponent[] field_f;
-    private int field_a;
+    private cva[] pendingTargetIds;
+    private RoomComponent[] targets;
+    private int maxTargets;
 
-    final void a(RoomComponent param0, boolean param1) {
+    final void resolveTargets(RoomComponent param0, boolean param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         cva var4 = null;
@@ -22,23 +22,23 @@ final class f {
         RuntimeException decompiledCaughtException = null;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          if (null == this.field_d) {
+          if (null == this.pendingTargetIds) {
             return;
           }
-          this.field_f = new RoomComponent[this.field_d.length];
+          this.targets = new RoomComponent[this.pendingTargetIds.length];
           if (param1) {
             return;
           }
           var3_int = 0;
-          while (var3_int < this.field_d.length) {
-            var4 = this.field_d[var3_int];
-            this.field_f[var3_int] = param0.a(var4.field_d, var4.field_a, 20);
+          while (var3_int < this.pendingTargetIds.length) {
+            var4 = this.pendingTargetIds[var3_int];
+            this.targets[var3_int] = param0.a(var4.field_d, var4.field_a, 20);
             var3_int++;
             if (var5 != 0) {
               return;
             }
           }
-          this.field_d = null;
+          this.pendingTargetIds = null;
           this.a(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -65,13 +65,13 @@ final class f {
         var5 = TombRacer.field_G ? 1 : 0;
         var2 = 0;
         var3_int = param0;
-        while (this.field_f.length > var3_int) {
-          if (null == this.field_f[var3_int]) {
-            this.field_f[var3_int] = null;
+        while (this.targets.length > var3_int) {
+          if (null == this.targets[var3_int]) {
+            this.targets[var3_int] = null;
             var2++;
           } else {
-            if (!this.field_f[var3_int].k((byte) -115)) {
-              this.field_f[var3_int] = null;
+            if (!this.targets[var3_int].k((byte) -115)) {
+              this.targets[var3_int] = null;
               var2++;
             }
           }
@@ -81,13 +81,13 @@ final class f {
           }
           break;
         }
-        var3 = new RoomComponent[-var2 + this.field_f.length];
+        var3 = new RoomComponent[-var2 + this.targets.length];
         var2Lifetime1 = 0;
         var4 = 0;
-        while (this.field_f.length > var4) {
+        while (this.targets.length > var4) {
           if (var5 == 0) {
-            if (this.field_f[var4] != null) {
-              var3[var2Lifetime1] = this.field_f[var4];
+            if (this.targets[var4] != null) {
+              var3[var2Lifetime1] = this.targets[var4];
               var2Lifetime1++;
             }
             var4++;
@@ -95,11 +95,11 @@ final class f {
           }
           break;
         }
-        this.field_f = var3;
+        this.targets = var3;
         return;
     }
 
-    final Switchable[] a(byte param0) {
+    final Switchable[] getSwitchables(byte param0) {
         RoomComponent[] stackIn_6_0 = null;
         Object stackIn_11_0 = null;
         RoomComponent[] stackIn_22_0 = null;
@@ -121,15 +121,15 @@ final class f {
         var7 = TombRacer.field_G ? 1 : 0;
         var2 = 0;
         var3_int = 0;
-        while (this.field_f.length > var3_int) {
-          var4_ref_csa = this.field_f[var3_int];
+        while (this.targets.length > var3_int) {
+          var4_ref_csa = this.targets[var3_int];
           if (var7 != 0) {
             var3 = new Switchable[var2];
             var2 = 0;
             var4 = 0;
             while (true) {
-              if (this.field_f.length > var4) {
-                stackOut_5_0 = this.field_f;
+              if (this.targets.length > var4) {
+                stackOut_5_0 = this.targets;
                 stackIn_11_0 = stackOut_5_0;
                 stackIn_6_0 = stackOut_5_0;
               } else {
@@ -158,11 +158,11 @@ final class f {
         var2Lifetime1 = 0;
         var4Lifetime1 = 0;
         while (true) {
-          if (this.field_f.length <= var4Lifetime1) {
+          if (this.targets.length <= var4Lifetime1) {
             stackIn_27_0 = var3Lifetime1;
             break;
           }
-          stackOut_21_0 = this.field_f;
+          stackOut_21_0 = this.targets;
           stackIn_27_0 = stackOut_21_0;
           stackIn_22_0 = stackOut_21_0;
           if (var7 == 0) {
@@ -259,7 +259,7 @@ final class f {
             }
             return var9.reverse().toString();
           }
-          f.a(true);
+          ComponentTargetList.a(true);
           var10 = 0;
           scanLoop2: while (true) {
             var11 = (int)param3;
@@ -319,7 +319,7 @@ final class f {
               }
               return var9.reverse().toString();
             }
-            f.a(true);
+            ComponentTargetList.a(true);
             var10 = 0;
             scanLoop4: while (true) {
               var11 = (int)param3;
@@ -371,7 +371,7 @@ final class f {
             return var9.reverse().toString();
           }
         }
-        f.a(true);
+        ComponentTargetList.a(true);
         var10 = 0;
         while (true) {
           var11 = (int)param3;
@@ -515,7 +515,7 @@ final class f {
               }
               stackIn_26_0Lifetime1 = param0;
               if (stackIn_26_0Lifetime1 != 58) {
-                f.b((byte) 1);
+                ComponentTargetList.b((byte) 1);
               }
               return;
             }
@@ -538,7 +538,7 @@ final class f {
 
     final static int a(boolean param0) {
         if (param0) {
-          f.b((byte) -68);
+          ComponentTargetList.b((byte) -68);
           if (!lca.a(param0)) {
             return -1;
           }
@@ -556,12 +556,12 @@ final class f {
         return -1;
     }
 
-    f(int param0, int param1) {
-        this.field_a = param0;
-        this.field_f = new RoomComponent[]{};
+    ComponentTargetList(int param0, int param1) {
+        this.maxTargets = param0;
+        this.targets = new RoomComponent[]{};
     }
 
-    f(int param0, int param1, int param2, BitPacketBuffer param3) {
+    ComponentTargetList(int param0, int param1, int param2, BitPacketBuffer param3) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         int var6 = 0;
@@ -579,16 +579,16 @@ final class f {
         RuntimeException decompiledCaughtException = null;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          this.field_a = param0;
+          this.maxTargets = param0;
           var5_int = param3.readBits((byte) 44, RandomBrickOperator.d(param0, 22972));
-          this.field_f = new RoomComponent[var5_int];
-          this.field_d = new cva[var5_int];
+          this.targets = new RoomComponent[var5_int];
+          this.pendingTargetIds = new cva[var5_int];
           var6 = 0;
           while (var6 < var5_int) {
             if (var7 != 0) {
               return;
             }
-            stackIn_7_0 = this.field_d;
+            stackIn_7_0 = this.pendingTargetIds;
             stackIn_7_1 = var6;
             stackIn_7_2 = null;
             stackIn_7_3 = null;
@@ -619,7 +619,7 @@ final class f {
         }
     }
 
-    final void a(BitPacketBuffer param0, int param1, RoomComponent param2) {
+    final void encode(BitPacketBuffer param0, int param1, RoomComponent param2) {
         RuntimeException runtimeException = null;
         int var4_int = 0;
         int var5 = 0;
@@ -635,18 +635,18 @@ final class f {
             field_c = (int[]) null;
           }
           this.a(0);
-          param0.writeBits((byte) 44, this.field_f.length, RandomBrickOperator.d(this.field_a, 22972));
+          param0.writeBits((byte) 44, this.targets.length, RandomBrickOperator.d(this.maxTargets, 22972));
           var4_int = 0;
-          while (this.field_f.length > var4_int) {
+          while (this.targets.length > var4_int) {
             if (var5 != 0) {
               return;
             }
-            if (param2 != this.field_f[var4_int].getRoot((byte) -48)) {
+            if (param2 != this.targets[var4_int].getRoot((byte) -48)) {
               param0.writeBits((byte) 73, 0, 1);
-              param0.writeBits((byte) 111, this.field_f[var4_int].getGlobalId(31974).getId((byte) 62), 8);
+              param0.writeBits((byte) 111, this.targets[var4_int].getGlobalId(31974).getId((byte) 62), 8);
             } else {
               param0.writeBits((byte) -127, 1, 1);
-              param0.writeBits((byte) -126, this.field_f[var4_int].getLocalId((byte) 84).getId((byte) 115), 8);
+              param0.writeBits((byte) -126, this.targets[var4_int].getLocalId((byte) 84).getId((byte) 115), 8);
             }
             var4_int++;
           }

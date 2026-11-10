@@ -17,7 +17,7 @@ final class qt {
         BlockModel.field_n[ContextMenu.field_Eb] = ContextMenu.field_Eb;
         jk.field_h[ContextMenu.field_Eb] = param4;
         if (C2SChooseCharacterPacket.field_d < param4) {
-          ma.field_g = param4;
+          LegacyOpenGlReflectionEffect.field_g = param4;
         }
         if (!(ota.field_c <= param4)) {
           kc.field_a = param4;
@@ -29,8 +29,8 @@ final class qt {
         int var7 = var6 == 0 ? 0 : 1000 * param0 / var6;
         ic.field_c[ContextMenu.field_Eb] = var7;
         ContextMenu.field_Eb = ContextMenu.field_Eb + 1;
-        if (ma.field_g < var7) {
-          ma.field_g = var7;
+        if (LegacyOpenGlReflectionEffect.field_g < var7) {
+          LegacyOpenGlReflectionEffect.field_g = var7;
         }
         if (var7 < kc.field_a) {
           kc.field_a = var7;
@@ -424,7 +424,7 @@ final class qt {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (fta.field_c != kl.field_a) {
+          if (fta.field_c != LegacyOpenGlTexture.field_a) {
             return false;
           }
           if (!param1) {
@@ -436,7 +436,7 @@ final class qt {
             var8.h(param1);
             return true;
           }
-          kl.field_a = gsa.field_y;
+          LegacyOpenGlTexture.field_a = gsa.field_y;
           ObjectList.field_i = param0;
           al.field_j = param6;
           QuickChatPhraseDefinition.field_n = param2;

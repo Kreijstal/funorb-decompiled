@@ -56,7 +56,7 @@ final class rf {
           }
           stackIn_14_0 = !param0;
           if (QueuedPlayerEvent.a(stackIn_14_0, param1)) {
-            stackIn_17_0 = gl.$cfr$intArgs$a$53ce4ab4c593(119, PlatformModel.field_w, new String[]{param1});
+            stackIn_17_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(119, PlatformModel.field_w, new String[]{param1});
             return stackIn_17_0;
           }
           if (ii.field_a >= 100 &&
@@ -69,7 +69,7 @@ final class rf {
             return stackIn_24_0;
           }
           if (MouseWheelInput.a(2180, param1)) {
-            stackIn_28_0 = gl.$cfr$intArgs$a$53ce4ab4c593(119, S2CCharacterChoicePacket.field_c, new String[]{param1});
+            stackIn_28_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(119, S2CCharacterChoicePacket.field_c, new String[]{param1});
             return stackIn_28_0;
           }
           var5 = ql.field_k;

@@ -12,7 +12,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
     final void draw(int param0) {
         int var3 = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
-        java.awt.Canvas var2 = kw.b((byte) -97);
+        java.awt.Canvas var2 = LegacyOpenGlRidgedWaterEffect.b((byte) -97);
         if (ColourGradientOperator.c(-127)) {
           WallTile.a(PortalComponent.A(90), var2, param0 ^ 0);
           return;

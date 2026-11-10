@@ -227,11 +227,11 @@ final class QuickChatMenu extends jea {
               var8 = (String) null;
               ResultsPhase.a(OpenGlUnderwaterEffect.field_q, (String) null, param1, 32371, wp.field_a, var5);
               oi.a(ica.field_b, var5, 4, wp.field_a, OpenGlUnderwaterEffect.field_q);
-              f.b(param3 - 48);
+              ComponentTargetList.b(param3 - 48);
               jq.c((byte) -25);
             } else {
               kra.a(false);
-              f.b(param3 + 7);
+              ComponentTargetList.b(param3 + 7);
             }
           }
         } else {
@@ -261,7 +261,7 @@ final class QuickChatMenu extends jea {
         if (null == this.field_Eb &&
           this == ItemModel.field_n &&
           var4 != 0) {
-          f.b(param1 ^ 48);
+          ComponentTargetList.b(param1 ^ 48);
           return true;
         }
         var5 = HardwareOpenGlToolkit.field_td;

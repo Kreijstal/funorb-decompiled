@@ -83,17 +83,17 @@ final class RandomBrickOperator extends TextureOperator {
           if (param3 > -30) {
             this.field_y = -123;
           }
-          if (ns.textureWidth <= param1) {
-            param1 = param1 - ns.textureWidth;
+          if (LegacyOpenGlTurbulentTextureEffect.textureWidth <= param1) {
+            param1 = param1 - LegacyOpenGlTurbulentTextureEffect.textureWidth;
           }
           if (0 >= var10) {
-            if (ns.textureWidth >= param1 + param4) {
+            if (LegacyOpenGlTurbulentTextureEffect.textureWidth >= param1 + param4) {
               for (var11 = 0; var11 < param0; var11++) {
                 ArrayUtils.fill(param2[param5 + var11], param1, param4, var8_int);
               }
               return;
             }
-            var11Lifetime2 = -param1 + ns.textureWidth;
+            var11Lifetime2 = -param1 + LegacyOpenGlTurbulentTextureEffect.textureWidth;
             for (var12 = 0; param0 > var12; var12++) {
               var13_ref_int__ = param2[var12 + param5];
               ArrayUtils.fill(var13_ref_int__, param1, var11Lifetime2, var8_int);
@@ -122,10 +122,10 @@ final class RandomBrickOperator extends TextureOperator {
                     var18[dupTemp$0] = var8_int * var20 / var13;
                     var18[SnakePitBehaviour.bitwiseAnd(una.textureWidthMask, param1 + var20)] = var8_int * var20 / var13;
                   }
-                  if (var16 + var15 <= ns.textureWidth) {
+                  if (var16 + var15 <= LegacyOpenGlTurbulentTextureEffect.textureWidth) {
                     ArrayUtils.fill(var18, var15, var16, var8_int);
                   } else {
-                    var20 = ns.textureWidth - var15;
+                    var20 = LegacyOpenGlTurbulentTextureEffect.textureWidth - var15;
                     ArrayUtils.fill(var18, var15, var20, var8_int);
                     ArrayUtils.fill(var18, 0, -var20 + var16, var8_int);
                   }
@@ -156,8 +156,8 @@ final class RandomBrickOperator extends TextureOperator {
                       stackIn_52_0[stackIn_52_1] = stackIn_53_4;
                     }
                   }
-                  if (var16 + var15 > ns.textureWidth) {
-                    var21 = -var15 + ns.textureWidth;
+                  if (var16 + var15 > LegacyOpenGlTurbulentTextureEffect.textureWidth) {
+                    var21 = -var15 + LegacyOpenGlTurbulentTextureEffect.textureWidth;
                     ArrayUtils.fill(var18, var15, var21, var20);
                     ArrayUtils.fill(var18, 0, -var21 + var16, var20);
                   } else {
@@ -189,10 +189,10 @@ final class RandomBrickOperator extends TextureOperator {
                     stackIn_41_0[stackIn_41_1] = stackIn_42_4;
                   }
                 }
-                if (ns.textureWidth >= var15 + var16) {
+                if (LegacyOpenGlTurbulentTextureEffect.textureWidth >= var15 + var16) {
                   ArrayUtils.fill(var18, var15, var16, var19);
                 } else {
-                  var20 = -var15 + ns.textureWidth;
+                  var20 = -var15 + LegacyOpenGlTurbulentTextureEffect.textureWidth;
                   ArrayUtils.fill(var18, var15, var20, var19);
                   ArrayUtils.fill(var18, 0, var16 - var20, var19);
                 }
@@ -411,15 +411,15 @@ final class RandomBrickOperator extends TextureOperator {
           var11 = 1;
           var12 = 0;
           var13 = 0;
-          var14 = this.field_p * ns.textureWidth >> 12;
-          var15 = ns.textureWidth * this.field_s >> 12;
+          var14 = this.field_p * LegacyOpenGlTurbulentTextureEffect.textureWidth >> 12;
+          var15 = LegacyOpenGlTurbulentTextureEffect.textureWidth * this.field_s >> 12;
           var16 = ArchiveNetworkClient.textureHeight * this.field_y >> 12;
           var17 = this.field_w * ArchiveNetworkClient.textureHeight >> 12;
           if (var17 <= 1) {
             return var46[param1];
           }
-          this.field_o = ns.textureWidth / 8 * this.field_n >> 12;
-          var18 = ns.textureWidth / var14 + 1;
+          this.field_o = LegacyOpenGlTurbulentTextureEffect.textureWidth / 8 * this.field_n >> 12;
+          var18 = LegacyOpenGlTurbulentTextureEffect.textureWidth / var14 + 1;
           var19 = new int[var18][3];
           var47 = new int[var18][3];
           var20 = var47;
@@ -428,9 +428,9 @@ final class RandomBrickOperator extends TextureOperator {
             var23 = var14 + BufferedSocket.a(-var14 + var15, var21, 126);
             var24 = var16 + BufferedSocket.a(-var16 + var17, var21, 96);
             var25 = var8 + var23;
-            if (ns.textureWidth < var25) {
-              var25 = ns.textureWidth;
-              var23 = ns.textureWidth - var8;
+            if (LegacyOpenGlTurbulentTextureEffect.textureWidth < var25) {
+              var25 = LegacyOpenGlTurbulentTextureEffect.textureWidth;
+              var23 = LegacyOpenGlTurbulentTextureEffect.textureWidth - var8;
             }
             regionExit1: {
               if (var11 == 0) {
@@ -439,10 +439,10 @@ final class RandomBrickOperator extends TextureOperator {
                 var28 = 0;
                 var29_int = var5 + var25;
                 if (0 > var29_int) {
-                  var29_int = var29_int + ns.textureWidth;
+                  var29_int = var29_int + LegacyOpenGlTurbulentTextureEffect.textureWidth;
                 }
-                if (ns.textureWidth < var29_int) {
-                  var29_int = var29_int - ns.textureWidth;
+                if (LegacyOpenGlTurbulentTextureEffect.textureWidth < var29_int) {
+                  var29_int = var29_int - LegacyOpenGlTurbulentTextureEffect.textureWidth;
                 }
                 while (true) {
                   var52 = var47[var26_int];
@@ -452,10 +452,10 @@ final class RandomBrickOperator extends TextureOperator {
                     if (var9 != var26_int) {
                       var30 = var5 + var8;
                       if (var30 < 0) {
-                        var30 = var30 + ns.textureWidth;
+                        var30 = var30 + LegacyOpenGlTurbulentTextureEffect.textureWidth;
                       }
-                      if (ns.textureWidth < var30) {
-                        var30 = var30 - ns.textureWidth;
+                      if (LegacyOpenGlTurbulentTextureEffect.textureWidth < var30) {
+                        var30 = var30 - LegacyOpenGlTurbulentTextureEffect.textureWidth;
                       }
                       for (var31 = 1; var31 <= var28; var31++) {
                         var41 = var20[(var9 + var31) % var12];
@@ -473,7 +473,7 @@ final class RandomBrickOperator extends TextureOperator {
                               var35 = Math.min(var29_int, var37);
                             } else {
                               var34 = Math.max(var30, var36);
-                              var35 = ns.textureWidth;
+                              var35 = LegacyOpenGlTurbulentTextureEffect.textureWidth;
                             }
                           } else {
                             var34 = Math.max(var30, var36);
@@ -503,7 +503,7 @@ final class RandomBrickOperator extends TextureOperator {
             } else {
               var10 = 0;
             }
-            if (ns.textureWidth != var25) {
+            if (LegacyOpenGlTurbulentTextureEffect.textureWidth != var25) {
               incrementValue$0 = var13;
               var13++;
               var45 = var19[incrementValue$0];
@@ -533,15 +533,15 @@ final class RandomBrickOperator extends TextureOperator {
             var12 = var13;
             var7 = var6;
             var13 = 0;
-            var6 = BufferedSocket.a(ns.textureWidth, var21, 71);
+            var6 = BufferedSocket.a(LegacyOpenGlTurbulentTextureEffect.textureWidth, var21, 71);
             var5 = var6 - var7;
             var8 = 0;
             var28Lifetime1 = var5;
             if (var28Lifetime1 < 0) {
-              var28Lifetime1 = var28Lifetime1 + ns.textureWidth;
+              var28Lifetime1 = var28Lifetime1 + LegacyOpenGlTurbulentTextureEffect.textureWidth;
             }
-            if (ns.textureWidth < var28Lifetime1) {
-              var28Lifetime1 = var28Lifetime1 - ns.textureWidth;
+            if (LegacyOpenGlTurbulentTextureEffect.textureWidth < var28Lifetime1) {
+              var28Lifetime1 = var28Lifetime1 - LegacyOpenGlTurbulentTextureEffect.textureWidth;
             }
             var9 = 0;
             var11 = 0;

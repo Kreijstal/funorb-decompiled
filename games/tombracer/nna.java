@@ -66,7 +66,7 @@ final class nna {
             return stackIn_9_0;
           }
           if (MouseWheelInput.a(2180, param1)) {
-            stackIn_13_0 = gl.$cfr$intArgs$a$53ce4ab4c593(125, bva.field_a, new String[]{param1});
+            stackIn_13_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(125, bva.field_a, new String[]{param1});
             return stackIn_13_0;
           }
           if (100 <= tba.field_k) {
@@ -74,7 +74,7 @@ final class nna {
             return stackIn_17_0;
           }
           if (QueuedPlayerEvent.a(false, param1)) {
-            stackIn_20_0 = gl.$cfr$intArgs$a$53ce4ab4c593(94, FleeLocomotor.field_o, new String[]{param1});
+            stackIn_20_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(94, FleeLocomotor.field_o, new String[]{param1});
             return stackIn_20_0;
           }
           var5 = ql.field_k;

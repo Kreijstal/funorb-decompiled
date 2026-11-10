@@ -80,7 +80,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
           if (3 == param1) {
             MenuEntry.field_j[3] = MusicTrack.load(TextLayout.field_a, "", "TR_lose_jingle_long");
           }
-          while (!RewardChoicePhase.field_n.field_y.a(176400, MenuEntry.field_j[param1], S2CNextRoundPacket.field_a, ns.field_j, 0)) {
+          while (!RewardChoicePhase.field_n.field_y.a(176400, MenuEntry.field_j[param1], S2CNextRoundPacket.field_a, LegacyOpenGlTurbulentTextureEffect.field_j, 0)) {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -101,7 +101,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
         return it.a(255, 141 + uca.cosmeticRandom.nextBounded(2, param0 ^ 141));
     }
 
-    DateInputWidget(int param0, int param1, int param2, int param3, isa param4) {
+    DateInputWidget(int param0, int param1, int param2, int param3, WidgetPainter param4) {
         super(param0, param1, param2, param3, param4);
     }
 

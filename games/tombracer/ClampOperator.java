@@ -134,7 +134,7 @@ final class ClampOperator extends TextureOperator {
           var32 = var26[2];
           var24 = var32;
           var10 = var24;
-          for (var11 = 0; var11 < ns.textureWidth; var11++) {
+          for (var11 = 0; var11 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var11++) {
             var12 = var38[var11];
             var13 = var39[var11];
             var14 = var40[var11];
@@ -183,7 +183,7 @@ final class ClampOperator extends TextureOperator {
         }
         if (this.monochromeCache.rowMissed) {
           var4 = this.getInputMonochromeRow(0, -101, param1);
-          for (var5 = 0; var5 < ns.textureWidth; var5++) {
+          for (var5 = 0; var5 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var5++) {
             var6 = var4[var5];
             if (this.field_n <= var6) {
               if (var6 <= this.field_m) {

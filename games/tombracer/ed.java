@@ -121,7 +121,7 @@ final class ed {
         ConsoleToken var6 = null;
         try {
           var4 = param0.c((byte) -127);
-          if (var4.kind != ma.field_e &&
+          if (var4.kind != LegacyOpenGlReflectionEffect.field_e &&
             nl.field_d != var4.kind &&
             CrusherModel.field_o != var4.kind &&
             var4.kind != PressureSwitchBehaviour.field_r) {

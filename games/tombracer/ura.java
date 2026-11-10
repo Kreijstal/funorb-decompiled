@@ -18,7 +18,7 @@ final class ura {
         RuntimeException var4 = null;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          kl.field_a = mua.field_a;
+          LegacyOpenGlTexture.field_a = mua.field_a;
           if (param0 == 255) {
             stackIn_10_0 = -108;
             stackIn_11_1 = !(QuickChatPhraseDefinition.field_n >= 13);
@@ -126,7 +126,7 @@ final class ura {
         tga.field_a.L(var8, var9, 0);
         tga.field_a.f(-16384, 16384);
         Transform3D var10 = tga.field_a.b();
-        var10.a();
+        var10.setIdentity();
         tga.field_a.a(var10);
         if (param0 == -10985) {
           return;

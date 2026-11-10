@@ -27,7 +27,7 @@ abstract class GameScreen {
               if (MenuEntry.field_h != 11) {
                 return false;
               }
-              if (!ns.field_f) {
+              if (!LegacyOpenGlTurbulentTextureEffect.field_f) {
                 return false;
               }
               if (VerticalGradientOperator.field_n != 2) {
@@ -64,7 +64,7 @@ abstract class GameScreen {
             if (MenuEntry.field_h != 11) {
               return false;
             }
-            if (ns.field_f) {
+            if (LegacyOpenGlTurbulentTextureEffect.field_f) {
               if (VerticalGradientOperator.field_n == 2 &&
                 !ota.isPlayerReachable(apa.field_a, (byte) 13, cr.field_b)) {
                 return false;
@@ -97,7 +97,7 @@ abstract class GameScreen {
         if (param1) {
           field_e = (java.applet.Applet) null;
           if (MenuEntry.field_h == 11) {
-            if (!ns.field_f) {
+            if (!LegacyOpenGlTurbulentTextureEffect.field_f) {
               return false;
             }
             if (VerticalGradientOperator.field_n == 2 &&
@@ -117,7 +117,7 @@ abstract class GameScreen {
           return false;
         }
         if (MenuEntry.field_h == 11) {
-          if (!ns.field_f) {
+          if (!LegacyOpenGlTurbulentTextureEffect.field_f) {
             return false;
           }
           if (VerticalGradientOperator.field_n == 2 &&

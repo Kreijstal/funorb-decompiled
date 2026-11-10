@@ -138,7 +138,7 @@ final class BlendModeOperator extends TextureOperator {
             var55Lifetime1 = var51[1];
             var56Lifetime1 = var51[2];
             var57Lifetime1 = var50[2];
-            for (var21 = 0; ns.textureWidth > var21; var21++) {
+            for (var21 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var21; var21++) {
               var12Lifetime1[var21] = var52Lifetime1[var21] + var53Lifetime1[var21];
               var13Lifetime1[var21] = var54Lifetime1[var21] + var55Lifetime1[var21];
               var14Lifetime1[var21] = var56Lifetime1[var21] + var57Lifetime1[var21];
@@ -154,7 +154,7 @@ final class BlendModeOperator extends TextureOperator {
               var55Lifetime1 = var51[1];
               var56Lifetime1 = var51[2];
               var57Lifetime1 = var50[2];
-              for (var21 = 0; ns.textureWidth > var21; var21++) {
+              for (var21 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var21; var21++) {
                 var12Lifetime1[var21] = var52Lifetime1[var21] - var53Lifetime1[var21];
                 var13Lifetime1[var21] = var54Lifetime1[var21] - var55Lifetime1[var21];
                 var14Lifetime1[var21] = var57Lifetime1[var21] - var56Lifetime1[var21];
@@ -170,7 +170,7 @@ final class BlendModeOperator extends TextureOperator {
                 var55Lifetime1 = var51[1];
                 var56Lifetime1 = var51[2];
                 var57Lifetime1 = var50[2];
-                for (var21 = 0; var21 < ns.textureWidth; var21++) {
+                for (var21 = 0; var21 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var21++) {
                   var12Lifetime1[var21] = var53Lifetime1[var21] * var52Lifetime1[var21] >> 12;
                   var13Lifetime1[var21] = var54Lifetime1[var21] * var55Lifetime1[var21] >> 12;
                   var14Lifetime1[var21] = var56Lifetime1[var21] * var57Lifetime1[var21] >> 12;
@@ -186,7 +186,7 @@ final class BlendModeOperator extends TextureOperator {
                   var55Lifetime1 = var51[1];
                   var56Lifetime1 = var51[2];
                   var57Lifetime1 = var50[2];
-                  for (var21 = 0; var21 < ns.textureWidth; var21++) {
+                  for (var21 = 0; var21 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var21++) {
                     var8 = var55Lifetime1[var21];
                     var7 = var53Lifetime1[var21];
                     var9 = var56Lifetime1[var21];
@@ -226,7 +226,7 @@ final class BlendModeOperator extends TextureOperator {
                     var55Lifetime1 = var51[1];
                     var56Lifetime1 = var51[2];
                     var57Lifetime1 = var50[2];
-                    for (var21 = 0; var21 < ns.textureWidth; var21++) {
+                    for (var21 = 0; var21 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var21++) {
                       var12Lifetime1[var21] = 4096 - ((-var53Lifetime1[var21] + 4096) * (-var52Lifetime1[var21] + 4096) >> 12);
                       var13Lifetime1[var21] = -((4096 - var55Lifetime1[var21]) * (4096 - var54Lifetime1[var21]) >> 12) + 4096;
                       var14Lifetime1[var21] = 4096 - ((4096 - var56Lifetime1[var21]) * (-var57Lifetime1[var21] + 4096) >> 12);
@@ -242,7 +242,7 @@ final class BlendModeOperator extends TextureOperator {
                       var55Lifetime1 = var51[1];
                       var56Lifetime1 = var51[2];
                       var57Lifetime1 = var50[2];
-                      for (var21 = 0; ns.textureWidth > var21; var21++) {
+                      for (var21 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var21; var21++) {
                         var7 = var53Lifetime1[var21];
                         var8 = var55Lifetime1[var21];
                         var9 = var56Lifetime1[var21];
@@ -282,7 +282,7 @@ final class BlendModeOperator extends TextureOperator {
                         var55Lifetime1 = var51[1];
                         var56Lifetime1 = var51[2];
                         var57Lifetime1 = var50[2];
-                        for (var21 = 0; var21 < ns.textureWidth; var21++) {
+                        for (var21 = 0; var21 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var21++) {
                           var5 = var54Lifetime1[var21];
                           var6 = var57Lifetime1[var21];
                           var4 = var52Lifetime1[var21];
@@ -322,7 +322,7 @@ final class BlendModeOperator extends TextureOperator {
                           var55Lifetime1 = var51[1];
                           var56Lifetime1 = var51[2];
                           var57Lifetime1 = var50[2];
-                          for (var21 = 0; var21 < ns.textureWidth; var21++) {
+                          for (var21 = 0; var21 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var21++) {
                             var4 = var52Lifetime1[var21];
                             var6 = var57Lifetime1[var21];
                             var5 = var54Lifetime1[var21];
@@ -362,7 +362,7 @@ final class BlendModeOperator extends TextureOperator {
                             var55Lifetime1 = var51[1];
                             var56Lifetime1 = var51[2];
                             var57Lifetime1 = var50[2];
-                            for (var21 = 0; ns.textureWidth > var21; var21++) {
+                            for (var21 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var21; var21++) {
                               var8 = var55Lifetime1[var21];
                               var4 = var52Lifetime1[var21];
                               var9 = var56Lifetime1[var21];
@@ -405,7 +405,7 @@ final class BlendModeOperator extends TextureOperator {
                               var55Lifetime1 = var51[1];
                               var56Lifetime1 = var51[2];
                               var57Lifetime1 = var50[2];
-                              for (var21 = 0; ns.textureWidth > var21; var21++) {
+                              for (var21 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var21; var21++) {
                                 var4 = var52Lifetime1[var21];
                                 var7 = var53Lifetime1[var21];
                                 var8 = var55Lifetime1[var21];
@@ -448,7 +448,7 @@ final class BlendModeOperator extends TextureOperator {
                                 var55Lifetime1 = var51[1];
                                 var56Lifetime1 = var51[2];
                                 var57Lifetime1 = var50[2];
-                                for (var21 = 0; ns.textureWidth > var21; var21++) {
+                                for (var21 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var21; var21++) {
                                   var8 = var55Lifetime1[var21];
                                   var5 = var54Lifetime1[var21];
                                   var4 = var52Lifetime1[var21];
@@ -491,7 +491,7 @@ final class BlendModeOperator extends TextureOperator {
                                   var55Lifetime1 = var51[1];
                                   var56Lifetime1 = var51[2];
                                   var57Lifetime1 = var50[2];
-                                  for (var21 = 0; ns.textureWidth > var21; var21++) {
+                                  for (var21 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var21; var21++) {
                                     var8 = var55Lifetime1[var21];
                                     var9 = var56Lifetime1[var21];
                                     var5 = var54Lifetime1[var21];
@@ -648,23 +648,23 @@ final class BlendModeOperator extends TextureOperator {
           var17 = this.getInputMonochromeRow(1, -116, param1);
           var8 = this.blendMode;
           if (var8 == 1) {
-            for (var8 = 0; ns.textureWidth > var8; var8++) {
+            for (var8 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var8; var8++) {
               var3[var8] = var17[var8] + var18[var8];
             }
           } else {
             if (var8 == 2) {
               var10Lifetime1 = var3;
-              for (var8 = 0; ns.textureWidth > var8; var8++) {
+              for (var8 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var8; var8++) {
                 var10Lifetime1[var8] = -var17[var8] + var18[var8];
               }
             } else {
               if (var8 == 3) {
-                for (var8 = 0; var8 < ns.textureWidth; var8++) {
+                for (var8 = 0; var8 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var8++) {
                   var3[var8] = var17[var8] * var18[var8] >> 12;
                 }
               } else {
                 if (var8 == 4) {
-                  for (var8 = 0; var8 < ns.textureWidth; var8++) {
+                  for (var8 = 0; var8 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var8++) {
                     var5 = var17[var8];
                     stackIn_34_0 = var3;
                     stackIn_34_1 = var8;
@@ -677,12 +677,12 @@ final class BlendModeOperator extends TextureOperator {
                   }
                 } else {
                   if (5 == var8) {
-                    for (var8 = 0; ns.textureWidth > var8; var8++) {
+                    for (var8 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var8; var8++) {
                       var3[var8] = -((4096 - var17[var8]) * (4096 - var18[var8]) >> 12) + 4096;
                     }
                   } else {
                     if (var8 == 6) {
-                      for (var8 = 0; ns.textureWidth > var8; var8++) {
+                      for (var8 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var8; var8++) {
                         var5 = var17[var8];
                         stackIn_43_0 = var3;
                         stackIn_43_1 = var8;
@@ -695,7 +695,7 @@ final class BlendModeOperator extends TextureOperator {
                       }
                     } else {
                       if (7 == var8) {
-                        for (var8 = 0; var8 < ns.textureWidth; var8++) {
+                        for (var8 = 0; var8 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var8++) {
                           var4 = var18[var8];
                           stackIn_49_0 = var3;
                           stackIn_49_1 = var8;
@@ -708,7 +708,7 @@ final class BlendModeOperator extends TextureOperator {
                         }
                       } else {
                         if (8 == var8) {
-                          for (var8 = 0; var8 < ns.textureWidth; var8++) {
+                          for (var8 = 0; var8 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var8++) {
                             var4 = var18[var8];
                             stackIn_55_0 = var3;
                             stackIn_55_1 = var8;
@@ -721,7 +721,7 @@ final class BlendModeOperator extends TextureOperator {
                           }
                         } else {
                           if (9 == var8) {
-                            for (var8 = 0; ns.textureWidth > var8; var8++) {
+                            for (var8 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var8; var8++) {
                               var4 = var18[var8];
                               var5 = var17[var8];
                               stackIn_61_0 = var3;
@@ -735,7 +735,7 @@ final class BlendModeOperator extends TextureOperator {
                             }
                           } else {
                             if (var8 == 10) {
-                              for (var8 = 0; var8 < ns.textureWidth; var8++) {
+                              for (var8 = 0; var8 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var8++) {
                                 var5 = var17[var8];
                                 var4 = var18[var8];
                                 stackIn_67_0 = var3;
@@ -749,7 +749,7 @@ final class BlendModeOperator extends TextureOperator {
                               }
                             } else {
                               if (var8 == 11) {
-                                for (var8 = 0; var8 < ns.textureWidth; var8++) {
+                                for (var8 = 0; var8 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var8++) {
                                   var5 = var17[var8];
                                   var4 = var18[var8];
                                   stackIn_73_0 = var3;
@@ -763,7 +763,7 @@ final class BlendModeOperator extends TextureOperator {
                                 }
                               } else {
                                 if (var8 == 12) {
-                                  for (var8 = 0; var8 < ns.textureWidth; var8++) {
+                                  for (var8 = 0; var8 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var8++) {
                                     var4 = var18[var8];
                                     var5 = var17[var8];
                                     var3[var8] = -(var5 * var4 >> 11) + (var5 + var4);

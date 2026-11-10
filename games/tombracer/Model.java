@@ -19,7 +19,7 @@ final class Model extends ka {
     private int[] field_E;
     private rga[] field_kb;
     private hna[] field_e;
-    private pna field_B;
+    private SoftwareTransform3D field_B;
     private boolean field_ab;
     private ava[] field_i;
     private short field_Bb;
@@ -2976,7 +2976,7 @@ final class Model extends ka {
           int stackIn_160_1 = 0;
           boolean stackIn_164_2 = false;
           Throwable decompiledCaughtException = null;
-          pna var5 = null;
+          SoftwareTransform3D var5 = null;
           int var6 = 0;
           float var7 = 0.0f;
           float var8 = 0.0f;
@@ -3045,7 +3045,7 @@ final class Model extends ka {
           if (this.field_Z < 1) {
             return;
           }
-          this.field_B = (pna) (param0);
+          this.field_B = (SoftwareTransform3D) (param0);
           var5 = this.field_d.field_A;
           if (!this.field_r) {
             this.calculateBounds();
@@ -4227,13 +4227,13 @@ final class Model extends ka {
                     var47 = ((float)var40 * var76[3] + (float)var41 * var76[4] + (float)var42 * var76[5]) / var44;
                     var48 = ((float)var40 * var76[6] + (float)var41 * var76[7] + (float)var42 * var76[8]) / var45;
                     var21Lifetime1 = AccountRegistrationPanel.a(var48, var47, false, var46);
-                    as.a(var27, var75, this.field_rb[var23], var26, var33, var28, var32, this.field_xb[var23], var21Lifetime1, this.field_T[var23], -94, var31, var30, var76);
+                    LegacyOpenGlShoreWaveWaterEffect.a(var27, var75, this.field_rb[var23], var26, var33, var28, var32, this.field_xb[var23], var21Lifetime1, this.field_T[var23], -94, var31, var30, var76);
                     var19[0] = var75[0];
                     var20[0] = var75[1];
-                    as.a(var27, var75, this.field_rb[var24], var26, var33, var28, var32, this.field_xb[var24], var21Lifetime1, this.field_T[var24], -125, var31, var30, var76);
+                    LegacyOpenGlShoreWaveWaterEffect.a(var27, var75, this.field_rb[var24], var26, var33, var28, var32, this.field_xb[var24], var21Lifetime1, this.field_T[var24], -125, var31, var30, var76);
                     var19[1] = var75[0];
                     var20[1] = var75[1];
-                    as.a(var27, var75, this.field_rb[var25], var26, var33, var28, var32, this.field_xb[var25], var21Lifetime1, this.field_T[var25], 73, var31, var30, var76);
+                    LegacyOpenGlShoreWaveWaterEffect.a(var27, var75, this.field_rb[var25], var26, var33, var28, var32, this.field_xb[var25], var21Lifetime1, this.field_T[var25], 73, var31, var30, var76);
                     var19[2] = var75[0];
                     var20[2] = var75[1];
                   }

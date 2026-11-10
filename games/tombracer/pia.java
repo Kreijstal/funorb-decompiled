@@ -96,8 +96,8 @@ final class pia extends nqa implements GpuTexture2D {
         return this.field_h;
     }
 
-    public final void a(int param0, hs param1) {
-        super.a(param0, param1);
+    public final void setFilter(int param0, TextureFilter param1) {
+        super.setFilter(param0, param1);
     }
 
     pia(Direct3DToolkit param0, ft param1, una param2, int param3, int param4) {

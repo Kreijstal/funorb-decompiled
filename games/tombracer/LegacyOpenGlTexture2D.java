@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class rt extends kl {
+class LegacyOpenGlTexture2D extends LegacyOpenGlTexture {
     int field_o;
     static String field_n;
     private int field_q;
@@ -10,11 +10,11 @@ class rt extends kl {
     private int field_m;
 
     final void attachToFramebuffer(int param0, int param1, int param2, int param3) {
-        jaggl.OpenGL.glFramebufferTexture2DEXT(param0, param3, this.field_e, this.field_i, param1);
+        jaggl.OpenGL.glFramebufferTexture2DEXT(param0, param3, this.target, this.textureId, param1);
         this.field_q = param3;
         this.field_m = param0;
         if (param2 != 0) {
-          this.a(true, true, 64);
+          this.setWrap(true, true, 64);
         }
     }
 
@@ -22,7 +22,7 @@ class rt extends kl {
         try {
           if (!param0) {
             String var4 = (String) null;
-            rt.a(true, (String) null, (String) null);
+            LegacyOpenGlTexture2D.a(true, (String) null, (String) null);
           }
           rma.a(false, param1, param2, (byte) 100);
         } catch (RuntimeException runtimeException) {
@@ -30,14 +30,14 @@ class rt extends kl {
         }
     }
 
-    public final void a(int param0) {
-        jaggl.OpenGL.glFramebufferTexture2DEXT(this.field_m, this.field_q, this.field_e, 0, 0);
+    public final void detachFramebuffer(int param0) {
+        jaggl.OpenGL.glFramebufferTexture2DEXT(this.field_m, this.field_q, this.target, 0, 0);
         this.field_q = -1;
         this.field_m = -1;
         int var2 = -46 % ((param0 - 14) / 56);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, byte[] param5, int param6, int param7, int param8, boolean param9) {
+    final void uploadBytes(int param0, int param1, int param2, int param3, int param4, byte[] param5, int param6, int param7, int param8, boolean param9) {
         int stackIn_17_0 = 0;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -85,14 +85,14 @@ class rt extends kl {
             }
           }
           if (decompiledFrameCompleted0) {
-            this.field_h.a(true, (kl) (this));
+            this.toolkit.a(true, (LegacyOpenGlTexture) (this));
             jaggl.OpenGL.glPixelStorei(3317, 1);
             stackIn_17_0 = ~param7;
           }
           if (stackIn_17_0 != ~param0) {
             jaggl.OpenGL.glPixelStorei(3314, param0);
           }
-          jaggl.OpenGL.glTexSubImage2Dub(this.field_e, 0, param4, param3, param7, param2, param8, 5121, param5, param1);
+          jaggl.OpenGL.glTexSubImage2Dub(this.target, 0, param4, param3, param7, param2, param8, 5121, param5, param1);
           if (param6 != -24575) {
             return;
           }
@@ -126,18 +126,18 @@ class rt extends kl {
         field_p = null;
     }
 
-    final void a(boolean param0, boolean param1, int param2) {
-        if (param2 == ~this.field_e) {
-          this.field_h.a(true, (kl) (this));
-          jaggl.OpenGL.glTexParameteri(this.field_e, 10242, param1 ? 10497 : 33071);
-          jaggl.OpenGL.glTexParameteri(this.field_e, 10243, param0 ? 10497 : 33071);
+    final void setWrap(boolean param0, boolean param1, int param2) {
+        if (param2 == ~this.target) {
+          this.toolkit.a(true, (LegacyOpenGlTexture) (this));
+          jaggl.OpenGL.glTexParameteri(this.target, 10242, param1 ? 10497 : 33071);
+          jaggl.OpenGL.glTexParameteri(this.target, 10243, param0 ? 10497 : 33071);
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
-        int var8 = this.field_h.field_I - param5 - param6;
-        this.field_h.a(true, (kl) (this));
-        jaggl.OpenGL.glCopyTexSubImage2D(this.field_e, 0, param3, this.field_o - param2 - param6, param0, var8, param1, param6);
+    final void copyFromFramebuffer(int param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
+        int var8 = this.toolkit.field_I - param5 - param6;
+        this.toolkit.a(true, (LegacyOpenGlTexture) (this));
+        jaggl.OpenGL.glCopyTexSubImage2D(this.target, 0, param3, this.field_o - param2 - param6, param0, var8, param1, param6);
         jaggl.OpenGL.glFlush();
         if (param4 < -62) {
           return;
@@ -145,7 +145,7 @@ class rt extends kl {
         this.field_l = -71;
     }
 
-    rt(OpenGlToolkit param0, int param1, int param2, int param3, int param4, boolean param5, int[] param6, int param7, int param8, boolean param9) {
+    LegacyOpenGlTexture2D(OpenGlToolkit param0, int param1, int param2, int param3, int param4, boolean param5, int[] param6, int param7, int param8, boolean param9) {
         super(param0, param1, param2, param4 * param3, param5);
         int stackIn_13_0 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -193,25 +193,25 @@ class rt extends kl {
             }
           }
           if (decompiledFrameCompleted0) {
-            this.field_h.a(true, (kl) (this));
+            this.toolkit.a(true, (LegacyOpenGlTexture) (this));
             stackIn_13_0 = -34038;
           }
-          boolean decompiledSharedTail0 = (stackIn_13_0 == ~this.field_e ||
+          boolean decompiledSharedTail0 = (stackIn_13_0 == ~this.target ||
             !(param5) ||
             param7 != 0 ||
             0 != param8);
           if (!decompiledSharedTail0) {
-            wd.a(this.field_e, 32993, this.field_c, 81, param6, this.field_h.field_P, this.field_l, this.field_o);
-            this.a(true, 4);
+            wd.a(this.target, 32993, this.internalFormat, 81, param6, this.toolkit.field_P, this.field_l, this.field_o);
+            this.noteMipmaps(true, 4);
             decompiledSharedTail0 = (var16 != 0);
           }
           if (decompiledSharedTail0) {
             jaggl.OpenGL.glPixelStorei(3314, param7);
-            jaggl.OpenGL.glTexImage2Di(this.field_e, 0, this.field_c, this.field_l, this.field_o, 0, 32993, this.field_h.field_P, param6, param8 * 4);
+            jaggl.OpenGL.glTexImage2Di(this.target, 0, this.internalFormat, this.field_l, this.field_o, 0, 32993, this.toolkit.field_P, param6, param8 * 4);
             jaggl.OpenGL.glPixelStorei(3314, 0);
-            this.a(false, 4);
+            this.noteMipmaps(false, 4);
           }
-          this.b(true, 3);
+          this.setLinearFiltering(true, 3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -233,7 +233,7 @@ class rt extends kl {
         }
     }
 
-    rt(OpenGlToolkit param0, int param1, int param2, int param3, int param4, boolean param5, float[] param6, int param7) {
+    LegacyOpenGlTexture2D(OpenGlToolkit param0, int param1, int param2, int param3, int param4, boolean param5, float[] param6, int param7) {
         super(param0, param1, param2, param3 * param4, param5);
         RuntimeException runtimeException = null;
         RuntimeException stackIn_9_0 = null;
@@ -247,19 +247,19 @@ class rt extends kl {
         try {
           this.field_l = param3;
           this.field_o = param4;
-          this.field_h.a(true, (kl) (this));
+          this.toolkit.a(true, (LegacyOpenGlTexture) (this));
           boolean decompiledSharedTail0 = (!(param5) ||
-            this.field_e == 34037);
+            this.target == 34037);
           if (!decompiledSharedTail0) {
             PlantComponent.a(param7, 92, param1, param2, param6, param3, param4);
-            this.a(true, 4);
+            this.noteMipmaps(true, 4);
             decompiledSharedTail0 = (TombRacer.field_G);
           }
           if (decompiledSharedTail0) {
-            jaggl.OpenGL.glTexImage2Df(this.field_e, 0, this.field_c, this.field_l, this.field_o, 0, param7, 5126, param6, 0);
-            this.a(false, 4);
+            jaggl.OpenGL.glTexImage2Df(this.target, 0, this.internalFormat, this.field_l, this.field_o, 0, param7, 5126, param6, 0);
+            this.noteMipmaps(false, 4);
           }
-          this.b(true, 3);
+          this.setLinearFiltering(true, 3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -281,7 +281,7 @@ class rt extends kl {
         }
     }
 
-    rt(OpenGlToolkit param0, int param1, int param2, int param3, int param4, boolean param5, byte[] param6, int param7, boolean param8) {
+    LegacyOpenGlTexture2D(OpenGlToolkit param0, int param1, int param2, int param3, int param4, boolean param5, byte[] param6, int param7, boolean param8) {
         super(param0, param1, param2, param4 * param3, param5);
         int stackIn_13_0 = 0;
         RuntimeException stackIn_21_0 = null;
@@ -329,23 +329,23 @@ class rt extends kl {
             }
           }
           if (decompiledFrameCompleted0) {
-            this.field_h.a(true, (kl) (this));
+            this.toolkit.a(true, (LegacyOpenGlTexture) (this));
             jaggl.OpenGL.glPixelStorei(3317, 1);
             stackIn_13_0 = param5 ? 1 : 0;
           }
           boolean decompiledSharedTail0 = (stackIn_13_0 != 0 &&
-            this.field_e != 34037);
+            this.target != 34037);
           if (!decompiledSharedTail0) {
-            jaggl.OpenGL.glTexImage2Dub(this.field_e, 0, this.field_c, this.field_l, this.field_o, 0, param7, 5121, param6, 0);
-            this.a(false, 4);
+            jaggl.OpenGL.glTexImage2Dub(this.target, 0, this.internalFormat, this.field_l, this.field_o, 0, param7, 5121, param6, 0);
+            this.noteMipmaps(false, 4);
             decompiledSharedTail0 = (var15 != 0);
           }
           if (decompiledSharedTail0) {
             RoomEffectTraps.a((byte) 53, param6, param1, param3, param4, param7, param2);
-            this.a(true, 4);
+            this.noteMipmaps(true, 4);
           }
           jaggl.OpenGL.glPixelStorei(3317, 4);
-          this.b(true, 3);
+          this.setLinearFiltering(true, 3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -367,22 +367,22 @@ class rt extends kl {
         }
     }
 
-    rt(OpenGlToolkit param0, int param1, int param2, int param3, int param4) {
+    LegacyOpenGlTexture2D(OpenGlToolkit param0, int param1, int param2, int param3, int param4) {
         super(param0, param1, param2, param3 * param4, false);
         this.field_q = -1;
         this.field_m = -1;
         try {
           this.field_o = param4;
           this.field_l = param3;
-          this.field_h.a(true, (kl) (this));
-          jaggl.OpenGL.glTexImage2Dub(this.field_e, 0, this.field_c, param3, param4, 0, sja.b(this.field_c, 20934), 5121, (byte[]) null, 0);
-          this.b(true, 3);
+          this.toolkit.a(true, (LegacyOpenGlTexture) (this));
+          jaggl.OpenGL.glTexImage2Dub(this.target, 0, this.internalFormat, param3, param4, 0, sja.b(this.internalFormat, 20934), 5121, (byte[]) null, 0);
+          this.setLinearFiltering(true, 3);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "rt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int[] param5, byte param6, boolean param7, int param8) {
+    final void uploadInts(int param0, int param1, int param2, int param3, int param4, int[] param5, byte param6, boolean param7, int param8) {
         int stackIn_17_0 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -430,11 +430,11 @@ class rt extends kl {
             stackIn_17_0 = -72 / ((-66 - param6) / 44);
           }
           var10_int = stackIn_17_0;
-          this.field_h.a(true, (kl) (this));
+          this.toolkit.a(true, (LegacyOpenGlTexture) (this));
           if (param3 != param1) {
             jaggl.OpenGL.glPixelStorei(3314, param1);
           }
-          jaggl.OpenGL.glTexSubImage2Di(this.field_e, 0, param4, -param2 + (-param8 + this.field_o), param3, param2, 32993, this.field_h.field_P, param5, param0);
+          jaggl.OpenGL.glTexSubImage2Di(this.target, 0, param4, -param2 + (-param8 + this.field_o), param3, param2, 32993, this.toolkit.field_P, param5, param0);
           if (param3 == param1) {
             return;
           }

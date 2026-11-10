@@ -40,7 +40,7 @@ final class a implements e {
     private final native void E(long param0, boolean param1);
 
     final void a(ka param0, Transform3D param1, int[] param2, int param3, int param4) {
-        this.f(this.field_nativeid, ((i) (param0)).field_nativeid, ((ja) (param1)).field_nativeid, param2, param3, param4);
+        this.f(this.field_nativeid, ((i) (param0)).field_nativeid, ((NativeTransform3D) (param1)).field_nativeid, param2, param3, param4);
     }
 
     private final native void UA(long param0, long param1, long param2, int[] param3, int param4);
@@ -171,7 +171,7 @@ final class a implements e {
     private final native void f(long param0, long param1, long param2, int[] param3, int param4, int param5);
 
     final void a(ka param0, Transform3D param1, int[] param2, int param3) {
-        this.UA(this.field_nativeid, ((i) (param0)).field_nativeid, ((ja) (param1)).field_nativeid, param2, param3);
+        this.UA(this.field_nativeid, ((i) (param0)).field_nativeid, ((NativeTransform3D) (param1)).field_nativeid, param2, param3);
     }
 
     private final native void HA(long param0, GraphicsToolkit param1, int param2, int param3);

@@ -28,7 +28,7 @@ final class DrawOfferMenu extends MenuScreen {
           }
         } else {
           if (!SecondaryNodeDequeIterator.field_a.field_D) {
-            this.setItems(22174, ma.field_f);
+            this.setItems(22174, LegacyOpenGlReflectionEffect.field_f);
           } else {
             if (!SecondaryNodeDequeIterator.field_a.d((byte) 68)) {
               this.setItems(22174, ConveyorBehaviour.field_q);

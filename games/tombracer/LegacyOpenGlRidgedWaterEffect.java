@@ -1,75 +1,75 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kw extends qe {
+final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
     private tla field_g;
     static BinaryBitmapFont field_e;
-    private uga field_d;
+    private LegacyOpenGlTexture1D field_d;
     private aaa field_c;
     private static String[] field_f;
 
-    final void a(int param0, int param1, int param2) {
+    final void setParameters(int param0, int param1, int param2) {
         int var5 = TombRacer.field_G ? 1 : 0;
         if ((param0 & 1) != 1) {
           if (this.field_c.field_g) {
-            this.field_a.a(true, this.field_c.field_h);
+            this.toolkit.a(true, this.field_c.field_h);
             hba.field_a[3] = 0.0f;
             hba.field_a[2] = 0.0f;
             hba.field_a[0] = 0.0f;
             hba.field_a[1] = 0.0f;
             jaggl.OpenGL.glTexGenfv(8194, 9473, hba.field_a, 0);
             if (param2 <= 117) {
-              this.b(-10);
+              this.isSupported(-10);
               return;
             }
             return;
           }
-          this.field_a.a(true, this.field_c.field_f[0]);
+          this.toolkit.a(true, this.field_c.field_f[0]);
           if (param2 <= 117) {
-            this.b(-10);
+            this.isSupported(-10);
             return;
           }
           return;
         }
         if (this.field_c.field_g) {
-          this.field_a.a(true, this.field_c.field_h);
+          this.toolkit.a(true, this.field_c.field_h);
           hba.field_a[1] = 0.0f;
           hba.field_a[0] = 0.0f;
           hba.field_a[2] = 0.0f;
-          hba.field_a[3] = (float)(this.field_a.field_Oc % 4000) / 4000.0f;
+          hba.field_a[3] = (float)(this.toolkit.field_Oc % 4000) / 4000.0f;
           jaggl.OpenGL.glTexGenfv(8194, 9473, hba.field_a, 0);
           if (param2 > 117) {
             return;
           }
-          this.b(-10);
+          this.isSupported(-10);
           return;
         }
-        int var4 = this.field_a.field_Oc % 4000 * 16 / 4000;
-        this.field_a.a(true, this.field_c.field_f[var4]);
+        int var4 = this.toolkit.field_Oc % 4000 * 16 / 4000;
+        this.toolkit.a(true, this.field_c.field_f[var4]);
         if (param2 > 117) {
           return;
         }
-        this.b(-10);
+        this.isSupported(-10);
     }
 
     final static java.awt.Canvas b(byte param0) {
         if (param0 == -97) {
           return null != dq.field_f ? (java.awt.Canvas) ((Object) dq.field_f) : nma.field_l;
         }
-        kw.a(76, true, 70);
+        LegacyOpenGlRidgedWaterEffect.a(76, true, 70);
         return null != dq.field_f ? (java.awt.Canvas) ((Object) dq.field_f) : nma.field_l;
     }
 
     private final void a(byte param0) {
-        kl var3 = null;
-        this.field_g = new tla(this.field_a, 2);
+        LegacyOpenGlTexture var3 = null;
+        this.field_g = new tla(this.toolkit, 2);
         this.field_g.a((byte) 6, 0);
-        this.field_a.e(1, true);
-        this.field_a.setTextureCombineOperations(7681, 8960, 260);
-        this.field_a.setTextureCombineOperands(0, 0, 34168, 768);
+        this.toolkit.e(1, true);
+        this.toolkit.setTextureCombineOperations(7681, 8960, 260);
+        this.toolkit.setTextureCombineOperands(0, 0, 34168, 768);
         jaggl.OpenGL.glTexGeni(8192, 9472, 9216);
         jaggl.OpenGL.glEnable(3168);
-        this.field_a.e(0, true);
+        this.toolkit.e(0, true);
         jaggl.OpenGL.glTexEnvf(8960, 34163, 2.0f);
         if (this.field_c.field_g) {
           jaggl.OpenGL.glTexGeni(8194, 9472, 9217);
@@ -80,19 +80,19 @@ final class kw extends qe {
         }
         this.field_g.b((byte) -119);
         this.field_g.a((byte) 6, 1);
-        this.field_a.e(1, true);
-        this.field_a.setTextureCombineOperations(8448, 8960, 8448);
-        this.field_a.setTextureCombineOperands(0, 0, 5890, 768);
+        this.toolkit.e(1, true);
+        this.toolkit.setTextureCombineOperations(8448, 8960, 8448);
+        this.toolkit.setTextureCombineOperands(0, 0, 5890, 768);
         jaggl.OpenGL.glDisable(3168);
-        this.field_a.e(0, true);
+        this.toolkit.e(0, true);
         jaggl.OpenGL.glTexEnvf(8960, 34163, 1.0f);
         if (this.field_c.field_g) {
           jaggl.OpenGL.glDisable(3170);
           jaggl.OpenGL.glDisable(3171);
         }
         if (param0 > -47) {
-          var3 = (kl) null;
-          this.a(73, 20, (kl) null);
+          var3 = (LegacyOpenGlTexture) null;
+          this.bindTexture(73, 20, (LegacyOpenGlTexture) null);
         } else {
           this.field_g.b((byte) 89);
           return;
@@ -100,12 +100,12 @@ final class kw extends qe {
         this.field_g.b((byte) 89);
     }
 
-    kw(OpenGlToolkit param0, aaa param1) {
+    LegacyOpenGlRidgedWaterEffect(OpenGlToolkit param0, aaa param1) {
         super(param0);
         try {
           this.field_c = param1;
           this.a((byte) -122);
-          this.field_d = new uga(this.field_a, 6406, 2, new byte[]{(byte) 0, (byte)-1}, 6406);
+          this.field_d = new LegacyOpenGlTexture1D(this.toolkit, 6406, 2, new byte[]{(byte) 0, (byte)-1}, 6406);
           this.field_d.a(76, false);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "kw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -123,41 +123,41 @@ final class kw extends qe {
         }
     }
 
-    final boolean b(int param0) {
+    final boolean isSupported(int param0) {
         if (param0 != -11921) {
-          this.field_d = (uga) null;
+          this.field_d = (LegacyOpenGlTexture1D) null;
           return true;
         }
         return true;
     }
 
-    final void a(int param0, int param1, kl param2) {
+    final void bindTexture(int param0, int param1, LegacyOpenGlTexture param2) {
         try {
           if (param1 != 32221) {
-            this.a(false);
+            this.disable(false);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "kw.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(boolean param0, int param1) {
+    final void enable(boolean param0, int param1) {
         float var4 = 0.0f;
         int var3 = -115 % ((56 - param1) / 48);
-        if (this.field_a.field_Kb > 0) {
-          var4 = -0.5f / (float)this.field_a.field_Kb;
-          this.field_a.e(1, true);
+        if (this.toolkit.field_Kb > 0) {
+          var4 = -0.5f / (float)this.toolkit.field_Kb;
+          this.toolkit.e(1, true);
           hba.field_a[2] = var4;
           hba.field_a[0] = 0.0f;
-          hba.field_a[3] = 0.25f + var4 * this.field_a.field_Uc;
+          hba.field_a[3] = 0.25f + var4 * this.toolkit.field_Uc;
           hba.field_a[1] = 0.0f;
           jaggl.OpenGL.glPushMatrix();
           jaggl.OpenGL.glLoadIdentity();
           jaggl.OpenGL.glTexGenfv(8192, 9474, hba.field_a, 0);
           jaggl.OpenGL.glPopMatrix();
-          this.field_a.a((float)this.field_a.field_Kb, true, 0.5f);
-          this.field_a.a(true, this.field_d);
-          this.field_a.e(0, true);
+          this.toolkit.a((float)this.toolkit.field_Kb, true, 0.5f);
+          this.toolkit.a(true, this.field_d);
+          this.toolkit.e(0, true);
         }
         this.field_g.a(4864, '\0');
         jaggl.OpenGL.glMatrixMode(5890);
@@ -192,28 +192,28 @@ final class kw extends qe {
         int var1 = -81 % ((param0 - 49) / 51);
     }
 
-    final void a(boolean param0) {
+    final void disable(boolean param0) {
         this.field_g.a(4864, '\001');
-        if (!(this.field_a.field_Kb <= 0)) {
-          this.field_a.e(1, true);
-          this.field_a.a(true, (kl) null);
-          this.field_a.a(0.0f, true, 1.0f);
-          this.field_a.e(0, true);
+        if (!(this.toolkit.field_Kb <= 0)) {
+          this.toolkit.e(1, true);
+          this.toolkit.a(true, (LegacyOpenGlTexture) null);
+          this.toolkit.a(0.0f, true, 1.0f);
+          this.toolkit.e(0, true);
         }
-        this.field_a.setTextureCombineOperations(8448, 8960, 8448);
+        this.toolkit.setTextureCombineOperations(8448, 8960, 8448);
         jaggl.OpenGL.glMatrixMode(5890);
         jaggl.OpenGL.glPopMatrix();
         jaggl.OpenGL.glMatrixMode(5888);
         if (!param0) {
           return;
         }
-        this.b(true, 64);
+        this.refreshState(true, 64);
     }
 
-    final void b(boolean param0, int param1) {
-        this.field_a.setTextureCombineOperations(260, 8960, 8448);
+    final void refreshState(boolean param0, int param1) {
+        this.toolkit.setTextureCombineOperations(260, 8960, 8448);
         if (param1 < 77) {
-          kw.a(34, false, -44);
+          LegacyOpenGlRidgedWaterEffect.a(34, false, -44);
         }
     }
 

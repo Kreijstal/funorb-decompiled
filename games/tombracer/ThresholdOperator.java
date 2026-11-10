@@ -31,7 +31,7 @@ final class ThresholdOperator extends TextureOperator {
         var3 = var8;
         if (this.monochromeCache.rowMissed) {
           var4 = this.getInputMonochromeRow(0, -125, param1);
-          for (var5 = 0; var5 < ns.textureWidth; var5++) {
+          for (var5 = 0; var5 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var5++) {
             var6 = var4[var5];
             stackIn_8_0 = var8;
             stackIn_8_1 = var5;

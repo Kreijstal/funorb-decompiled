@@ -10,7 +10,7 @@ abstract class r extends DualLinkNode {
         if (param0 != 0) {
           field_l = (String) null;
           if (param1) {
-            kw.a(11, false, 0);
+            LegacyOpenGlRidgedWaterEffect.a(11, false, 0);
             return;
           }
           if (C2SChooseRewardPacket.field_a != null) {
@@ -20,7 +20,7 @@ abstract class r extends DualLinkNode {
           return;
         }
         if (param1) {
-          kw.a(11, false, 0);
+          LegacyOpenGlRidgedWaterEffect.a(11, false, 0);
           return;
         }
         if (C2SChooseRewardPacket.field_a != null) {

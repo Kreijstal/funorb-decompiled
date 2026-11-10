@@ -815,7 +815,7 @@ final class ScrollContainer extends ArrayWidgetGroup {
         }
     }
 
-    ScrollContainer(int param0, int param1, int param2, int param3, isa param4, UiWidget param5, isa param6) {
+    ScrollContainer(int param0, int param1, int param2, int param3, WidgetPainter param4, UiWidget param5, WidgetPainter param6) {
         super(param0, param1, param2, param3, param4);
         vua dupTemp$0 = null;
         try {

@@ -208,10 +208,10 @@ final class MatchScreen extends GameScreen implements rqa {
             GameClock.field_b = qca.a((byte) 13, pq.field_e);
             stackIn_8_0 = !(this.n((byte) 19) <= 0);
             uma.field_c = stackIn_8_0;
-            pna.field_p = stackIn_8_0;
+            SoftwareTransform3D.field_p = stackIn_8_0;
             if (this.matchState.field_K != 3 && (GameClock.field_b ||
               uma.field_c ||
-              pna.field_p)) {
+              SoftwareTransform3D.field_p)) {
               ConstrainToRectangleLocomotor.a(param0, 10, (byte) 106);
               decompiledFrameRemainder0 = false;
             }
@@ -461,7 +461,7 @@ final class MatchScreen extends GameScreen implements rqa {
         if (param0 != -25) {
           this.pausedByOverlay = true;
         }
-        var2.b(true, true);
+        var2.setInvulnerable(true, true);
         this.j((byte) -99);
         this.startRound(param0 ^ 102);
     }
@@ -643,7 +643,7 @@ final class MatchScreen extends GameScreen implements rqa {
           if (!this.matchState.hasLeft(param1 ^ -28, var3) &&
             (1 << var3 & param0) > 0) {
             this.matchState.markLeft((byte) -95, var3);
-            var4 = BannerCommand.a(gl.$cfr$intArgs$a$53ce4ab4c593(87, RemovedFromGameMenu.field_r, new String[]{this.getPlayerName(var3, false)}), (byte) -72);
+            var4 = BannerCommand.a(LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(87, RemovedFromGameMenu.field_r, new String[]{this.getPlayerName(var3, false)}), (byte) -72);
             iqa.field_c.a(param1 + 23, var4);
           }
         }
@@ -768,7 +768,7 @@ final class MatchScreen extends GameScreen implements rqa {
           if (!this.matchState.hasResigned((byte) -93, var3) &&
             (param1 & 1 << var3) > 0) {
             this.matchState.markResigned(param0 ^ 4, var3);
-            var4 = BannerCommand.a(gl.$cfr$intArgs$a$53ce4ab4c593(84, lu.field_c, new String[]{this.getPlayerName(var3, false)}), (byte) -124);
+            var4 = BannerCommand.a(LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(84, lu.field_c, new String[]{this.getPlayerName(var3, false)}), (byte) -124);
             iqa.field_c.a(0, var4);
           }
           var3++;
@@ -1075,12 +1075,12 @@ final class MatchScreen extends GameScreen implements rqa {
           this.isInPlayPhase(63);
         }
         if (this.matchState.hasFinishedCourse((byte) 90, param1)) {
-          var3 = RewardChoicePhase.a(-41, gl.$cfr$intArgs$a$53ce4ab4c593(124, ara.field_yb, new String[]{this.getColouredPlayerName(param1, 9)}) + ": " + dea.a(this.matchState.getSimulationTick((byte) 115, param1), (byte) -8));
+          var3 = RewardChoicePhase.a(-41, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(124, ara.field_yb, new String[]{this.getColouredPlayerName(param1, 9)}) + ": " + dea.a(this.matchState.getSimulationTick((byte) 115, param1), (byte) -8));
         } else {
           if (this.matchState.hasTimedOut((byte) -66, param1)) {
-            var3 = RewardChoicePhase.a(-79, gl.$cfr$intArgs$a$53ce4ab4c593(107, hu.field_a, new String[]{this.getColouredPlayerName(param1, 9)}) + ": " + dea.a(this.matchState.getSimulationTick((byte) 115, param1), (byte) -8));
+            var3 = RewardChoicePhase.a(-79, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(107, hu.field_a, new String[]{this.getColouredPlayerName(param1, 9)}) + ": " + dea.a(this.matchState.getSimulationTick((byte) 115, param1), (byte) -8));
           } else {
-            var3 = RewardChoicePhase.a(-108, gl.$cfr$intArgs$a$53ce4ab4c593(99, DisplaySettingsDialog.field_Q, new String[]{this.getColouredPlayerName(param1, 9)}));
+            var3 = RewardChoicePhase.a(-108, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(99, DisplaySettingsDialog.field_Q, new String[]{this.getColouredPlayerName(param1, 9)}));
           }
         }
         iqa.field_c.a(0, var3);
@@ -1309,7 +1309,7 @@ final class MatchScreen extends GameScreen implements rqa {
           dupTemp$1 = "<col=" + PasswordValidator.field_k[var5] + ">" + var6 + "</col>";
           var9 = dupTemp$1;
           var6Lifetime1 = dupTemp$1;
-          stackIn_3_0 = gl.$cfr$intArgs$a$53ce4ab4c593(84, var9, new String[]{var7});
+          stackIn_3_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(84, var9, new String[]{var7});
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

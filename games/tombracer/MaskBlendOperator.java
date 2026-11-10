@@ -18,7 +18,7 @@ final class MaskBlendOperator extends TextureOperator {
           var21 = this.getInputMonochromeRow(0, -39, param1);
           var20 = this.getInputMonochromeRow(1, -74, param1);
           var19 = this.getInputMonochromeRow(2, -7, param1);
-          for (var7 = 0; ns.textureWidth > var7; var7++) {
+          for (var7 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var7; var7++) {
             var8 = var19[var7];
             if (var8 == 4096) {
               var3[var7] = var21[var7];
@@ -80,7 +80,7 @@ final class MaskBlendOperator extends TextureOperator {
           var56 = var51[0];
           var57 = var51[1];
           var58 = var51[2];
-          for (var16 = 0; var16 < ns.textureWidth; var16++) {
+          for (var16 = 0; var16 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var16++) {
             var17 = var52[var16];
             if (4096 != var17) {
               var56Lifetime1 = var51[0];

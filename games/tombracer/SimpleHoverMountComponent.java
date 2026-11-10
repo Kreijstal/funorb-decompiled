@@ -46,7 +46,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
           stackIn_68_2 = (param0) && (!param2) && (uv.field_o);
           ((jea) (Object) stackIn_67_0).c(stackIn_67_1, stackIn_68_2);
         } else {
-          PerlinNoise2D.field_t.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(89, tla.field_d, new String[]{Integer.toString(ProxySocketConnector.field_f)});
+          PerlinNoise2D.field_t.field_r = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(89, tla.field_d, new String[]{Integer.toString(ProxySocketConnector.field_f)});
           stackIn_7_0 = nra.field_a;
           stackIn_7_1 = 65;
           stackIn_8_2 = (param0) && (!param2) && (!uv.field_o) && (null == C2SChooseRewardPacket.field_a) && (WaveformOperator.field_n == null);

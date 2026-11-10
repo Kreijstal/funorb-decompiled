@@ -156,14 +156,14 @@ final class RewardChoicePhase extends MatchPhase {
           var9 = (SwitchLinkList.b(0) >> 1) - (gg.field_f.c() >> 1);
           gg.field_f.a(var8, var9);
           if (var3 == 0) {
-            SocketConnector.a(gl.$cfr$intArgs$a$53ce4ab4c593(83, cba.field_c, new String[]{this.screen.getColouredPlayerName(var4, 9)}).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, 32 + var9, var8, 1, (byte) 60, gg.field_f.a());
+            SocketConnector.a(LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(83, cba.field_c, new String[]{this.screen.getColouredPlayerName(var4, 9)}).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, 32 + var9, var8, 1, (byte) 60, gg.field_f.a());
           } else {
             SocketConnector.a(us.field_c.toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, var9 + 32, var8, 1, (byte) 60, gg.field_f.a());
             var10 = (-this.field_o.getCurrentPlayerTicks(-1) + 750) / 50 + 1;
             if (var10 < 0) {
               var10 = 0;
             }
-            SocketConnector.a(gl.$cfr$intArgs$a$53ce4ab4c593(108, tla.field_h, new String[]{Integer.toString(var10)}).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, var9 + 200, var8, 1, (byte) 60, gg.field_f.a());
+            SocketConnector.a(LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(108, tla.field_h, new String[]{Integer.toString(var10)}).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, var9 + 200, var8, 1, (byte) 60, gg.field_f.a());
           }
           for (var10 = 0; this.field_q > var10; var10++) {
             for (var11_int = 0; var11_int < this.field_s; var11_int++) {
@@ -297,14 +297,14 @@ final class RewardChoicePhase extends MatchPhase {
         FloatingMessage var6 = null;
         if (this.field_o.getCurrentPlayerId(-1) == param0) {
           if (param2 == -1) {
-            var6 = RewardChoicePhase.a(-9, gl.$cfr$intArgs$a$53ce4ab4c593(86, OpenGlTransform3D.field_n, new String[]{this.matchState.getColouredPlayerName(param0, 23807)}));
+            var6 = RewardChoicePhase.a(-9, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(86, OpenGlTransform3D.field_n, new String[]{this.matchState.getColouredPlayerName(param0, 23807)}));
             iqa.field_c.a(0, var6);
             this.field_o.a(param2, (byte) 112);
           } else {
             var4 = this.field_o.a(-108, param2);
             this.field_o.a(param2, (byte) 119);
             this.h(0);
-            var5 = RewardChoicePhase.a(-58, gl.$cfr$intArgs$a$53ce4ab4c593(125, RecursiveBacktrackerMazeGenerator.field_b, new String[]{this.matchState.getColouredPlayerName(param0, 23807), sla.field_b[var4]}));
+            var5 = RewardChoicePhase.a(-58, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(125, RecursiveBacktrackerMazeGenerator.field_b, new String[]{this.matchState.getColouredPlayerName(param0, 23807), sla.field_b[var4]}));
             iqa.field_c.a(0, var5);
           }
         }

@@ -159,7 +159,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
     }
 
     public AccountRegistrationPanel() {
-        super(0, 0, 496, 0, (isa) null);
+        super(0, 0, 496, 0, (WidgetPainter) null);
         this.field_G = new ValidatedTextInputWidget("", (WidgetListener) null, 12);
         this.field_z = new ValidatedTextInputWidget("", (WidgetListener) null, 100);
         this.field_J = new ValidatedTextInputWidget("", (WidgetListener) null, 100);
@@ -184,18 +184,18 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         this.field_C.a(-13861, new MatchingTextValidator(this.field_C, this.field_E));
         this.field_I.a(-13861, new AgeValidator(this.field_I));
         this.field_F.field_y = false;
-        this.field_F.field_r = (isa) ((Object) new td());
-        this.field_B.field_r = (isa) ((Object) new kaa());
-        this.field_G.field_r = (isa) ((Object) new hga(10000536));
+        this.field_F.field_r = (WidgetPainter) ((Object) new td());
+        this.field_B.field_r = (WidgetPainter) ((Object) new kaa());
+        this.field_G.field_r = (WidgetPainter) ((Object) new hga(10000536));
         hga dupTemp$0 = new hga(10000536);
-        this.field_J.field_r = (isa) ((Object) dupTemp$0);
-        this.field_z.field_r = (isa) ((Object) dupTemp$0);
-        this.field_I.field_r = (isa) ((Object) new hga(10000536));
-        this.field_D.field_r = (isa) ((Object) new ee());
+        this.field_J.field_r = (WidgetPainter) ((Object) dupTemp$0);
+        this.field_z.field_r = (WidgetPainter) ((Object) dupTemp$0);
+        this.field_I.field_r = (WidgetPainter) ((Object) new hga(10000536));
+        this.field_D.field_r = (WidgetPainter) ((Object) new ee());
         poa dupTemp$1 = new poa(10000536);
-        this.field_C.field_r = (isa) ((Object) dupTemp$1);
-        this.field_E.field_r = (isa) ((Object) dupTemp$1);
-        String var2 = gl.$cfr$intArgs$a$53ce4ab4c593(90, ConstrainToCircleLocomotor.field_y, new String[]{this.linkStylePrefix(170), this.e(127)});
+        this.field_C.field_r = (WidgetPainter) ((Object) dupTemp$1);
+        this.field_E.field_r = (WidgetPainter) ((Object) dupTemp$1);
+        String var2 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(90, ConstrainToCircleLocomotor.field_y, new String[]{this.linkStylePrefix(170), this.e(127)});
         int var3 = 20;
         var3 = var3 + this.addLabeledField(this.field_z, var3, 170, (byte) 74, HardwareSpecularEffect.field_f);
         var3 = var3 + (this.a(var3, 77, this.field_J, 170, 20, "", ct.field_d) + 5);

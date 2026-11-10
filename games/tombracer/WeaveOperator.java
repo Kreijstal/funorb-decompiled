@@ -91,7 +91,7 @@ final class WeaveOperator extends TextureOperator {
           if (!this.monochromeCache.rowMissed) {
             return var3;
           }
-          for (var4 = 0; ns.textureWidth > var4; var4++) {
+          for (var4 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var4; var4++) {
             regionExit1: {
               regionExit2: {
                 var5 = ht.textureColumnCoords[var4];
@@ -136,7 +136,7 @@ final class WeaveOperator extends TextureOperator {
         if (!this.monochromeCache.rowMissed) {
           return var3;
         }
-        for (var4Lifetime1 = 0; ns.textureWidth > var4Lifetime1; var4Lifetime1++) {
+        for (var4Lifetime1 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var4Lifetime1; var4Lifetime1++) {
           regionExit3: {
             regionExit4: {
               var5Lifetime1 = ht.textureColumnCoords[var4Lifetime1];

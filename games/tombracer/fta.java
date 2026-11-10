@@ -121,7 +121,7 @@ final class fta {
             return true;
           }
           if (HardwareGraphicsToolkit.field_w != this) {
-            return this == uga.field_n ? true : false;
+            return this == LegacyOpenGlTexture1D.field_n ? true : false;
           }
           return true;
         }
@@ -131,7 +131,7 @@ final class fta {
         if (HardwareGraphicsToolkit.field_w == this) {
           return true;
         }
-        if (this != uga.field_n) {
+        if (this != LegacyOpenGlTexture1D.field_n) {
           return false;
         }
         return true;

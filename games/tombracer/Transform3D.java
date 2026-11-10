@@ -7,7 +7,7 @@ abstract class Transform3D {
     static int field_c;
     static SpriteData[] field_d;
 
-    abstract void b(int param0);
+    abstract void rotateZ(int param0);
 
     public static void releaseStatics(int param0) {
         field_d = null;
@@ -16,7 +16,7 @@ abstract class Transform3D {
         }
     }
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5);
+    abstract void setCamera(int param0, int param1, int param2, int param3, int param4, int param5);
 
     final static int a(int param0, int param1) {
         int var2 = 0;
@@ -35,9 +35,9 @@ abstract class Transform3D {
         return var2;
     }
 
-    abstract void d(int param0);
+    abstract void rotateY(int param0);
 
-    abstract void a(int param0, int param1, int param2);
+    abstract void translate(int param0, int param1, int param2);
 
     final static void a(ResourceArchive param0, int param1) {
         qg[] var10 = null;
@@ -86,9 +86,9 @@ abstract class Transform3D {
         return stackIn_8_0;
     }
 
-    abstract void a();
+    abstract void setIdentity();
 
-    abstract void c(int param0);
+    abstract void rotateX(int param0);
 
     final static Weapon a(boolean param0) {
         Weapon var1 = new Weapon();

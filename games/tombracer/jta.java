@@ -134,7 +134,7 @@ final class jta extends SingleChildWidget {
     final void renderLayer(int param0, int param1, int param2, int param3) {
         int var7 = TombRacer.field_G ? 1 : 0;
         if (this.field_r != null) {
-          this.field_r.a((UiWidget) (this), param0, 16777215, param1, true);
+          this.field_r.paintWidget((UiWidget) (this), param0, 16777215, param1, true);
         }
         IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_y);
         UiWidget var6 = (UiWidget) (var5.last((byte) 71));
@@ -320,7 +320,7 @@ final class jta extends SingleChildWidget {
     }
 
     public jta() {
-        super(0, 0, bb.field_m, qba.field_a, (isa) null, (WidgetListener) null);
+        super(0, 0, bb.field_m, qba.field_a, (WidgetPainter) null, (WidgetListener) null);
         this.field_y = new IntrusiveDeque();
     }
 

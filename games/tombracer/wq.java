@@ -74,10 +74,10 @@ final class wq implements ms {
     }
 
     public final void a(int param0, int param1, int param2) {
-        qk.a(1073807617, tga.field_a, param0, 55, 40, 40, 4, param2 + this.a(false) / 2 - 20);
-        qk.a(1073807617, tga.field_a, -40 + (param0 + this.a(-8660)), 101, 40, 40, 4, this.a(false) / 2 + (param2 - 20));
-        qk.a(1073807617, tga.field_a, param0 - (-(this.a(-8660) / 2) + 20), 127, 40, 40, 4, param2);
-        qk.a(1073807617, tga.field_a, param0 + this.a(-8660) / 2 - 20, 97, 40, 40, 4, -40 + (param2 + this.a(false)));
+        LegacyOpenGlSpriteTexture.a(1073807617, tga.field_a, param0, 55, 40, 40, 4, param2 + this.a(false) / 2 - 20);
+        LegacyOpenGlSpriteTexture.a(1073807617, tga.field_a, -40 + (param0 + this.a(-8660)), 101, 40, 40, 4, this.a(false) / 2 + (param2 - 20));
+        LegacyOpenGlSpriteTexture.a(1073807617, tga.field_a, param0 - (-(this.a(-8660) / 2) + 20), 127, 40, 40, 4, param2);
+        LegacyOpenGlSpriteTexture.a(1073807617, tga.field_a, param0 + this.a(-8660) / 2 - 20, 97, 40, 40, 4, -40 + (param2 + this.a(false)));
         if (param1 != 20726) {
           return;
         }

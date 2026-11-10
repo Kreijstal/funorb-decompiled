@@ -25,7 +25,7 @@ abstract class PcmStream extends IntrusiveNode {
         }
     }
 
-    abstract int a();
+    abstract int activity();
 
     abstract void skip(int param0);
 

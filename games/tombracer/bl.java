@@ -80,7 +80,7 @@ final class bl {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
           if (OpenGlTransform3D.field_e != null && (param0 < 0 ||
-            uga.field_n == ProceduralTexture.field_p)) {
+            LegacyOpenGlTexture1D.field_n == ProceduralTexture.field_p)) {
             if (param1 == ~ql.field_k.position &&
               mha.field_D + 10000L < bva.currentTimeMillis((byte) -107)) {
               ql.field_k.writeCipheredOpcode(param0, -2988);

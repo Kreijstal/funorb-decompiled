@@ -47,8 +47,8 @@ abstract class ConsoleMethod extends DualLinkNode {
                 this.field_n[var4_int] != Character.TYPE) {
                 return false;
               }
-              if (hs.a((byte) -88, var5) &&
-                !hs.a((byte) -70, this.field_n[var4_int])) {
+              if (TextureFilter.a((byte) -88, var5) &&
+                !TextureFilter.a((byte) -70, this.field_n[var4_int])) {
                 return false;
               }
             } else {

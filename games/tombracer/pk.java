@@ -112,7 +112,7 @@ final class pk extends we {
           if (param1 == -1) {
             var8 = "";
           }
-          var10 = f.a(2843, true, ApproachPlayerLocomotor.field_t, (long)param2, 0);
+          var10 = ComponentTargetList.a(2843, true, ApproachPlayerLocomotor.field_t, (long)param2, 0);
           var11.a(-1, -1, RewardChoicePhase.field_t[0], param3 | -16777216, param0, var8);
           var11.a(param0, false, param5, RewardChoicePhase.field_t[1], param3 | -16777216, -1);
           var12.a(12199, param0, var10, -1, param3 | -16777216, RewardChoicePhase.field_t[2]);
@@ -247,7 +247,7 @@ final class pk extends we {
         } else {
           discarded$0 = this.a(this.field_x, (byte) -91, 50 + param1);
         }
-        kn.field_p.a(-1, -1, aaa.a(false) / 2, -14345466, param1 + 405, rpa.field_f);
+        kn.field_p.a(-1, -1, aaa.a(false) / 2, -14345466, param1 + 405, LegacyOpenGlEnvironmentWaterEffect.field_f);
         return;
     }
 

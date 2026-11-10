@@ -9,7 +9,7 @@ class hga extends TextWidgetPainter {
         this(KeySwitchComponent.field_J, param0);
     }
 
-    public final void a(UiWidget param0, int param1, int param2, int param3, boolean param4) {
+    public final void paintWidget(UiWidget param0, int param1, int param2, int param3, boolean param4) {
         if (param2 != 16777215) {
           return;
         }
@@ -17,7 +17,7 @@ class hga extends TextWidgetPainter {
           if (param4) {
             bl.a(param0.field_m, param3 + param0.field_n, param0.field_p, param1 + param0.field_i, 1);
           }
-          super.a(param0, param1, param2 + 0, param3, param4);
+          super.paintWidget(param0, param1, param2 + 0, param3, param4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hga.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

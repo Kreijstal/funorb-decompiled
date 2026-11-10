@@ -110,16 +110,16 @@ final class TextureSampleOperator extends TextureOperator {
           var5 = var14[0];
           var6 = var14[1];
           var7 = var14[2];
-          if (this.field_r != ns.textureWidth) {
-            for (var8 = 0; ns.textureWidth > var8; var8++) {
-              var9 = var8 * this.field_r / ns.textureWidth;
+          if (this.field_r != LegacyOpenGlTurbulentTextureEffect.textureWidth) {
+            for (var8 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var8; var8++) {
+              var9 = var8 * this.field_r / LegacyOpenGlTurbulentTextureEffect.textureWidth;
               var10 = this.field_m[var4 + var9];
               var7[var8] = SnakePitBehaviour.bitwiseAnd(var10, 255) << 4;
               var6[var8] = SnakePitBehaviour.bitwiseAnd(var10, 65280) >> 4;
               var5[var8] = SnakePitBehaviour.bitwiseAnd(16711680, var10) >> 12;
             }
           } else {
-            for (var8 = 0; var8 < ns.textureWidth; var8++) {
+            for (var8 = 0; var8 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var8++) {
               incrementValue$0 = var4;
               var4++;
               var9 = this.field_m[incrementValue$0];

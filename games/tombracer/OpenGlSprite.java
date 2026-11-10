@@ -3,13 +3,13 @@
  */
 final class OpenGlSprite extends ToolkitSprite {
     private int field_i;
-    qk field_a;
+    LegacyOpenGlSpriteTexture field_a;
     static ura field_d;
     private int field_h;
     private int field_e;
     private boolean field_b;
     private int field_g;
-    private qk field_f;
+    private LegacyOpenGlSpriteTexture field_f;
     private OpenGlToolkit field_c;
     private int field_m;
     static String field_k;
@@ -28,7 +28,7 @@ final class OpenGlSprite extends ToolkitSprite {
 
     private final void a(int param0) {
         this.field_c.e(1, true);
-        this.field_c.a(true, (kl) null);
+        this.field_c.a(true, (LegacyOpenGlTexture) null);
         this.field_c.setTextureCombineOperations(8448, 8960, 8448);
         this.field_c.setTextureCombineOperands(1, param0, 34168, 768);
         this.field_c.b(5890, 3, 0, 770);
@@ -41,7 +41,7 @@ final class OpenGlSprite extends ToolkitSprite {
           if (param2 != 0) {
             this.b(-64, -35);
           }
-          this.field_a.a(param3, param5, param7, param0, param6, param4, (byte) -111, true, param1);
+          this.field_a.uploadInts(param3, param5, param7, param0, param6, param4, (byte) -111, true, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "jja.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
@@ -58,7 +58,7 @@ final class OpenGlSprite extends ToolkitSprite {
           this.draw(93, -73, -91, -117, 84);
         }
         if (!this.field_c.field_Eb) {
-          this.field_a.a(param2, param4, param1, param3, (byte) -84, param6, param0);
+          this.field_a.copyFromFramebuffer(param2, param4, param1, param3, (byte) -84, param6, param0);
         } else {
           var14 = this.field_c.a(param4, param0, (byte) -81, param6, param2);
           var12 = var14;
@@ -83,7 +83,7 @@ final class OpenGlSprite extends ToolkitSprite {
 
     final void drawScaled(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var15;
-        qk stackIn_2_0 = null;
+        LegacyOpenGlSpriteTexture stackIn_2_0 = null;
         boolean stackIn_3_1 = false;
         float var9;
         float var10;
@@ -94,7 +94,7 @@ final class OpenGlSprite extends ToolkitSprite {
         var15 = TombRacer.field_G ? 1 : 0;
         stackIn_2_0 = this.field_a;
         stackIn_3_1 = ((param7 & 1) == 0) ? false : true;
-        ((qk) (Object) stackIn_2_0).b(stackIn_3_1, 3);
+        ((LegacyOpenGlSpriteTexture) (Object) stackIn_2_0).setLinearFiltering(stackIn_3_1, 3);
         this.field_c.q(2);
         this.field_c.a((byte) 25, param6);
         jaggl.OpenGL.glColor4ub((byte)(param5 >> 16), (byte)(param5 >> 8), (byte)param5, (byte)(param5 >> 24));
@@ -107,7 +107,7 @@ final class OpenGlSprite extends ToolkitSprite {
           var14 = (float)this.field_a.field_s * var10 + var12;
           if (this.field_f != null) {
             this.b(param4, 117);
-            this.field_f.b(true, 3);
+            this.field_f.setLinearFiltering(true, 3);
             jaggl.OpenGL.glBegin(7);
             jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.field_a.field_v);
             jaggl.OpenGL.glTexCoord2f(0.0f, this.field_a.field_v);
@@ -153,7 +153,7 @@ final class OpenGlSprite extends ToolkitSprite {
             jaggl.OpenGL.glEnd();
           } else {
             this.b(param4, -48);
-            this.field_f.b(true, 3);
+            this.field_f.setLinearFiltering(true, 3);
             jaggl.OpenGL.glBegin(7);
             jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.field_a.field_v);
             jaggl.OpenGL.glTexCoord2f(0.0f, this.field_a.field_v);
@@ -214,7 +214,7 @@ final class OpenGlSprite extends ToolkitSprite {
         }
         var11Lifetime1 = param2 - param0 + param4;
         var12Lifetime1 = param5 - param1 + param3;
-        this.field_a.b((1 & param9) != 0 ? true : false, 3);
+        this.field_a.setLinearFiltering((1 & param9) != 0 ? true : false, 3);
         this.field_c.q(2);
         this.field_c.a(true, this.field_a);
         this.field_c.a((byte) 96, param8);
@@ -243,7 +243,7 @@ final class OpenGlSprite extends ToolkitSprite {
     }
 
     final void draw(int param0, int param1, int param2, int param3, int param4) {
-        this.field_a.b(false, 3);
+        this.field_a.setLinearFiltering(false, 3);
         this.field_c.q(2);
         this.field_c.a((byte) 46, param4);
         jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));
@@ -264,7 +264,7 @@ final class OpenGlSprite extends ToolkitSprite {
           jaggl.OpenGL.glEnd();
         } else {
           this.b(param2, -66);
-          this.field_f.b(false, 3);
+          this.field_f.setLinearFiltering(false, 3);
           jaggl.OpenGL.glBegin(7);
           jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.field_a.field_v);
           jaggl.OpenGL.glTexCoord2f(0.0f, this.field_a.field_v);

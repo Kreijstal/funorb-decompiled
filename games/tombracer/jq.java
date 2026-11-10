@@ -38,12 +38,12 @@ final class jq extends SceneLight {
         var2.backpatchByteLength(var2.position - var3, (byte) -102);
     }
 
-    final static qk a(byte[] param0, int param1, byte param2, int param3, OpenGlToolkit param4, int param5, boolean param6, int param7) {
+    final static LegacyOpenGlSpriteTexture a(byte[] param0, int param1, byte param2, int param3, OpenGlToolkit param4, int param5, boolean param6, int param7) {
         RuntimeException var8 = null;
         OpenGlToolkit var9 = null;
-        qk stackIn_8_0 = null;
-        qk stackIn_10_0 = null;
-        qk stackIn_12_0 = null;
+        LegacyOpenGlSpriteTexture stackIn_8_0 = null;
+        LegacyOpenGlSpriteTexture stackIn_10_0 = null;
+        LegacyOpenGlSpriteTexture stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -58,13 +58,13 @@ final class jq extends SceneLight {
           if (!param4.field_Gb && (!cla.isPowerOfTwoOrZero(9181, param5) ||
             !cla.isPowerOfTwoOrZero(9181, param7))) {
             if (param4.field_Cc) {
-              stackIn_10_0 = new qk(param4, 34037, param3, param5, param7, param6, param0, param1);
+              stackIn_10_0 = new LegacyOpenGlSpriteTexture(param4, 34037, param3, param5, param7, param6, param0, param1);
               return stackIn_10_0;
             }
-            stackIn_8_0 = new qk(param4, param3, param5, param7, lla.a(false, param5), lla.a(false, param7), param0, param1);
+            stackIn_8_0 = new LegacyOpenGlSpriteTexture(param4, param3, param5, param7, lla.a(false, param5), lla.a(false, param7), param0, param1);
             return stackIn_8_0;
           }
-          stackIn_12_0 = new qk(param4, 3553, param3, param5, param7, param6, param0, param1);
+          stackIn_12_0 = new LegacyOpenGlSpriteTexture(param4, 3553, param3, param5, param7, param6, param0, param1);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

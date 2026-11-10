@@ -161,12 +161,12 @@ final class jd extends OpenGlTexture implements lv {
         }
     }
 
-    public final void a(int param0, hs param1) {
+    public final void setFilter(int param0, TextureFilter param1) {
         try {
           if (param0 != 7672) {
             this.field_k = 12;
           }
-          super.a(param0 + 0, param1);
+          super.setFilter(param0 + 0, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "jd.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -43,7 +43,7 @@ final class apa {
             stackIn_6_0 = OpenGlUnderwaterEffect.field_d.stringWidth(param2);
             return stackIn_6_0;
           }
-          stackIn_4_0 = kl.field_b.stringWidth(param2);
+          stackIn_4_0 = LegacyOpenGlTexture.field_b.stringWidth(param2);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -80,7 +80,7 @@ final class apa {
             stackIn_6_0 = OpenGlUnderwaterEffect.field_d.stringWidth(param2);
             return stackIn_6_0;
           }
-          stackIn_4_0 = kl.field_b.stringWidth(param2);
+          stackIn_4_0 = LegacyOpenGlTexture.field_b.stringWidth(param2);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

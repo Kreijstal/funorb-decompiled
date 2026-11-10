@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class TextWidgetPainter implements isa, oaa {
+class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
     int field_l;
     private int field_m;
     int field_f;
@@ -46,7 +46,7 @@ class TextWidgetPainter implements isa, oaa {
         }
     }
 
-    public final int a(UiWidget param0, byte param1, int param2, int param3, int param4, int param5) {
+    public final int hitTestCaretIndex(UiWidget param0, byte param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -58,7 +58,7 @@ class TextWidgetPainter implements isa, oaa {
             this.field_a = -123;
           }
           this.ensureTextLayout(param0, 14157);
-          stackIn_3_0 = param0.field_l.a(-1, -this.a(param0, param3, (byte) 119) + param5, -this.textTop(param4, param0, (byte) -48) + param2);
+          stackIn_3_0 = param0.field_l.a(-1, -this.getTextOriginX(param0, param3, (byte) 119) + param5, -this.textTop(param4, param0, (byte) -48) + param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -167,7 +167,7 @@ class TextWidgetPainter implements isa, oaa {
             return;
           }
           boolean decompiledFrameRemainder0 = true;
-          var9_int = this.a((byte) 116, param2);
+          var9_int = this.getAvailableTextWidth((byte) 116, param2);
           var10 = this.b(param5 ^ 2147471058, param2);
           if (!this.field_b) {
             var12 = this.field_a;
@@ -217,7 +217,7 @@ class TextWidgetPainter implements isa, oaa {
         }
     }
 
-    public final int a(byte param0) {
+    public final int getLineInkHeight(byte param0) {
         if (param0 != -90) {
           UiWidget var3 = (UiWidget) null;
           this.getPreferredWidth(-102, (UiWidget) null);
@@ -250,7 +250,7 @@ class TextWidgetPainter implements isa, oaa {
         }
     }
 
-    public final void a(int param0, UiWidget param1, int param2, int param3, int param4, int param5) {
+    public final void drawSelection(int param0, UiWidget param1, int param2, int param3, int param4, int param5) {
         int var12 = 0;
         int stackIn_16_0 = 0;
         int stackIn_21_0 = 0;
@@ -374,7 +374,7 @@ class TextWidgetPainter implements isa, oaa {
           if (param1.field_l == null) {
             param1.field_l = (TextLayout) ((Object) new CachedTextLayout());
           }
-          var3_int = this.a((byte) -83, param1);
+          var3_int = this.getAvailableTextWidth((byte) -83, param1);
           if (param0 <= 65) {
             this.field_f = 87;
           }
@@ -459,7 +459,7 @@ class TextWidgetPainter implements isa, oaa {
         }
     }
 
-    public void a(UiWidget param0, int param1, int param2, int param3, boolean param4) {
+    public void paintWidget(UiWidget param0, int param1, int param2, int param3, boolean param4) {
         if (null == this.field_e) {
           return;
         }
@@ -474,7 +474,7 @@ class TextWidgetPainter implements isa, oaa {
         }
     }
 
-    public final int a(UiWidget param0, int param1, byte param2) {
+    public final int getTextOriginX(UiWidget param0, int param1, byte param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -501,7 +501,7 @@ class TextWidgetPainter implements isa, oaa {
         }
     }
 
-    public final int a(byte param0, UiWidget param1) {
+    public final int getAvailableTextWidth(byte param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -573,7 +573,7 @@ class TextWidgetPainter implements isa, oaa {
           if (!this.field_b) {
             this.c(param1 ^ 14131, param0);
           } else {
-            ((CachedTextLayout) (param0.field_l)).a(this.field_e, (byte) -49, this.getDisplayText(param1 ^ -14159, param0), this.a((byte) 91, param0), this.field_a, this.b(param1 ^ 2147469490, param0), this.field_l, this.field_f);
+            ((CachedTextLayout) (param0.field_l)).a(this.field_e, (byte) -49, this.getDisplayText(param1 ^ -14159, param0), this.getAvailableTextWidth((byte) 91, param0), this.field_a, this.b(param1 ^ 2147469490, param0), this.field_l, this.field_f);
           }
           stackIn_9_0 = param0.field_l;
           return stackIn_9_0;
@@ -591,7 +591,7 @@ class TextWidgetPainter implements isa, oaa {
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, UiWidget param4) {
+    public final void drawCaret(int param0, int param1, int param2, int param3, UiWidget param4) {
         TextLayout var13 = null;
         TextLayout var14 = null;
         int var7 = 0;

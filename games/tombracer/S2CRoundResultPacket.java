@@ -144,8 +144,8 @@ final class S2CRoundResultPacket implements GamePacket {
         if (null != fq.field_e) {
           fq.field_e.a(param0, -83);
         }
-        if (null != tva.field_d) {
-          tva.field_d.a((byte) 91, param0);
+        if (null != LegacyOpenGlUnlitEffect.field_d) {
+          LegacyOpenGlUnlitEffect.field_d.a((byte) 91, param0);
         }
     }
 

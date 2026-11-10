@@ -56,9 +56,9 @@ final class nba {
           PitModel.field_n = new PcmStreamMixer();
           BeamShooterBehaviour.field_p = param2;
           gg.field_b.b(PitModel.field_n);
-          tva.field_d = param1;
-          tva.field_d.a((byte) 100, MatchState.field_w);
-          WheeledMountComponent.field_P.b(tva.field_d);
+          LegacyOpenGlUnlitEffect.field_d = param1;
+          LegacyOpenGlUnlitEffect.field_d.a((byte) 100, MatchState.field_w);
+          WheeledMountComponent.field_P.b(LegacyOpenGlUnlitEffect.field_d);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "nba.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
         }

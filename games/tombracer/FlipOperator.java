@@ -85,11 +85,11 @@ final class FlipOperator extends TextureOperator {
           }
           var4 = this.getInputMonochromeRow(stackIn_5_1, stackIn_5_2, stackIn_6_3);
           if (this.field_o) {
-            for (var5 = 0; var5 < ns.textureWidth; var5++) {
+            for (var5 = 0; var5 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var5++) {
               var7[var5] = var4[-var5 + una.textureWidthMask];
             }
           } else {
-            ArrayUtils.copy(var4, 0, var7, 0, ns.textureWidth);
+            ArrayUtils.copy(var4, 0, var7, 0, LegacyOpenGlTurbulentTextureEffect.textureWidth);
           }
         }
         return var3;
@@ -145,7 +145,7 @@ final class FlipOperator extends TextureOperator {
           var9 = var21[1];
           var10 = var21[2];
           if (this.field_o) {
-            for (var11 = 0; var11 < ns.textureWidth; var11++) {
+            for (var11 = 0; var11 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var11++) {
               var8[var11] = var5[una.textureWidthMask - var11];
               var9[var11] = var6[una.textureWidthMask - var11];
               var10[var11] = var7[una.textureWidthMask - var11];
@@ -153,7 +153,7 @@ final class FlipOperator extends TextureOperator {
           } else {
             var14 = 0;
             var11 = var14;
-            while (ns.textureWidth > var14) {
+            while (LegacyOpenGlTurbulentTextureEffect.textureWidth > var14) {
               var8[var14] = var22[var14];
               var9[var14] = var23[var14];
               var10[var14] = var24[var14];

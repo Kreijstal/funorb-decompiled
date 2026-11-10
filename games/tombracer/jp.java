@@ -26,7 +26,7 @@ abstract class jp extends ota {
         }
     }
 
-    abstract hoa b(int param0);
+    abstract LegacyOpenGlCubeTexture b(int param0);
 
     final static void a(boolean param0) {
         if (param0) {

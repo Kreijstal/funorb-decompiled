@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class as extends qe {
+final class LegacyOpenGlShoreWaveWaterEffect extends LegacyOpenGlEffect {
     private boolean field_c;
     private cua field_d;
     private aaa field_f;
@@ -33,12 +33,12 @@ final class as extends qe {
         }
     }
 
-    final void a(boolean param0) {
+    final void disable(boolean param0) {
         if (this.field_e) {
-          this.field_a.e(1, true);
-          this.field_a.a(true, (kl) null);
-          this.field_a.e(0, true);
-          this.field_a.a(!param0 ? true : false, (kl) null);
+          this.toolkit.e(1, true);
+          this.toolkit.a(true, (LegacyOpenGlTexture) null);
+          this.toolkit.e(0, true);
+          this.toolkit.a(!param0 ? true : false, (LegacyOpenGlTexture) null);
           jaggl.OpenGL.glUseProgramObjectARB(0L);
           this.field_e = false;
         }
@@ -47,15 +47,15 @@ final class as extends qe {
         }
     }
 
-    final boolean b(int param0) {
+    final boolean isSupported(int param0) {
         if (param0 != -11921) {
-          kl var3 = (kl) null;
-          this.a(1, 32, (kl) null);
+          LegacyOpenGlTexture var3 = (LegacyOpenGlTexture) null;
+          this.bindTexture(1, 32, (LegacyOpenGlTexture) null);
         }
         return this.field_c;
     }
 
-    final void a(int param0, int param1, kl param2) {
+    final void bindTexture(int param0, int param1, LegacyOpenGlTexture param2) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -63,11 +63,11 @@ final class as extends qe {
         RuntimeException var4 = null;
         try {
           if (!this.field_e) {
-            this.field_a.a(true, param2);
-            this.field_a.d(param1 - 32220, param0);
+            this.toolkit.a(true, param2);
+            this.toolkit.d(param1 - 32220, param0);
           }
           if (param1 != 32221) {
-            this.a(-9, -76, 44);
+            this.setParameters(-9, -76, 44);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -175,7 +175,7 @@ final class as extends qe {
         }
     }
 
-    as(OpenGlToolkit param0, aaa param1) {
+    LegacyOpenGlShoreWaveWaterEffect(OpenGlToolkit param0, aaa param1) {
         super(param0);
         fca var5 = null;
         fca var4 = null;
@@ -184,12 +184,12 @@ final class as extends qe {
         try {
           this.field_f = param1;
           if (this.field_f.field_c != null &&
-            this.field_a.field_wb &&
-            this.field_a.field_Vc) {
-            var5 = cpa.compileShader(64, this.field_a, 35633, "uniform float time;\nuniform float scale;\nvarying vec3 wvVertex;\nvarying float waterDepth;\nvoid main() {\nwaterDepth = gl_MultiTexCoord0.z;\nvec4 ecVertex = gl_ModelViewMatrix*gl_Vertex;\nwvVertex.x = dot(gl_NormalMatrix[0], ecVertex.xyz);\nwvVertex.y = dot(gl_NormalMatrix[1], ecVertex.xyz);\nwvVertex.z = dot(gl_NormalMatrix[2], ecVertex.xyz);\ngl_TexCoord[0].x = dot(gl_TextureMatrix[0][0], gl_MultiTexCoord0)*scale;\ngl_TexCoord[0].y = dot(gl_TextureMatrix[0][1], gl_MultiTexCoord0)*scale;\ngl_TexCoord[0].z = time;\ngl_TexCoord[0].w = 1.0;\ngl_FogFragCoord = 1.0-clamp((gl_Fog.end+ecVertex.z)*gl_Fog.scale, 0.0, 1.0);\ngl_Position = ftransform();\n}\n");
+            this.toolkit.field_wb &&
+            this.toolkit.field_Vc) {
+            var5 = LegacyOpenGlSpecularEffect.compileShader(64, this.toolkit, 35633, "uniform float time;\nuniform float scale;\nvarying vec3 wvVertex;\nvarying float waterDepth;\nvoid main() {\nwaterDepth = gl_MultiTexCoord0.z;\nvec4 ecVertex = gl_ModelViewMatrix*gl_Vertex;\nwvVertex.x = dot(gl_NormalMatrix[0], ecVertex.xyz);\nwvVertex.y = dot(gl_NormalMatrix[1], ecVertex.xyz);\nwvVertex.z = dot(gl_NormalMatrix[2], ecVertex.xyz);\ngl_TexCoord[0].x = dot(gl_TextureMatrix[0][0], gl_MultiTexCoord0)*scale;\ngl_TexCoord[0].y = dot(gl_TextureMatrix[0][1], gl_MultiTexCoord0)*scale;\ngl_TexCoord[0].z = time;\ngl_TexCoord[0].w = 1.0;\ngl_FogFragCoord = 1.0-clamp((gl_Fog.end+ecVertex.z)*gl_Fog.scale, 0.0, 1.0);\ngl_Position = ftransform();\n}\n");
             fca var3 = var5;
-            var4 = cpa.compileShader(64, this.field_a, 35632, "varying vec3 wvVertex;\nvarying float waterDepth;\nuniform vec3 sunDir;\nuniform vec4 sunColour;\nuniform float sunExponent;\nuniform vec2 waveIntensity;\nuniform float waveExponent;\nuniform float breakWaterDepth;\nuniform float breakWaterOffset;\nuniform sampler3D normalSampler;\nuniform samplerCube envMapSampler;\nvoid main() {\nvec4 wnNormal = texture3D(normalSampler, gl_TexCoord[0].xyz).rbga;\nwnNormal.xyz = 2.0*wnNormal.xyz-1.0;\nvec3 wnVector = normalize(wvVertex);\nvec3 wnReflection = reflect(wnVector, wnNormal.xyz);\nvec3 envColour = textureCube(envMapSampler, wnReflection).rgb;\nvec4 specularColour = sunColour*pow(clamp(-dot(sunDir, wnReflection), 0.0, 1.0), sunExponent);\nfloat shoreFactor = clamp(waterDepth/breakWaterDepth-breakWaterOffset*wnNormal.w, 0.0, 1.0);\nfloat waveFactor = pow(1.0-shoreFactor, waveExponent)-0.5;\nwaveFactor = -4.0*waveFactor*waveFactor+1.0;\nfloat ndote = dot(wnVector, wnNormal.xyz);\nfloat fresnel = pow(1.0-abs(ndote), 1.0);\nvec4 surfaceColour = mix(vec4(envColour, fresnel*shoreFactor), (waveIntensity.x*wnNormal.wwww)+waveIntensity.y, waveFactor)+specularColour*shoreFactor;\ngl_FragColor = vec4(mix(surfaceColour.rgb, gl_Fog.color.rgb, gl_FogFragCoord), surfaceColour.a);\n}\n");
-            this.field_d = dga.linkShaderProgram(21885, this.field_a, new fca[]{var5, var4});
+            var4 = LegacyOpenGlSpecularEffect.compileShader(64, this.toolkit, 35632, "varying vec3 wvVertex;\nvarying float waterDepth;\nuniform vec3 sunDir;\nuniform vec4 sunColour;\nuniform float sunExponent;\nuniform vec2 waveIntensity;\nuniform float waveExponent;\nuniform float breakWaterDepth;\nuniform float breakWaterOffset;\nuniform sampler3D normalSampler;\nuniform samplerCube envMapSampler;\nvoid main() {\nvec4 wnNormal = texture3D(normalSampler, gl_TexCoord[0].xyz).rbga;\nwnNormal.xyz = 2.0*wnNormal.xyz-1.0;\nvec3 wnVector = normalize(wvVertex);\nvec3 wnReflection = reflect(wnVector, wnNormal.xyz);\nvec3 envColour = textureCube(envMapSampler, wnReflection).rgb;\nvec4 specularColour = sunColour*pow(clamp(-dot(sunDir, wnReflection), 0.0, 1.0), sunExponent);\nfloat shoreFactor = clamp(waterDepth/breakWaterDepth-breakWaterOffset*wnNormal.w, 0.0, 1.0);\nfloat waveFactor = pow(1.0-shoreFactor, waveExponent)-0.5;\nwaveFactor = -4.0*waveFactor*waveFactor+1.0;\nfloat ndote = dot(wnVector, wnNormal.xyz);\nfloat fresnel = pow(1.0-abs(ndote), 1.0);\nvec4 surfaceColour = mix(vec4(envColour, fresnel*shoreFactor), (waveIntensity.x*wnNormal.wwww)+waveIntensity.y, waveFactor)+specularColour*shoreFactor;\ngl_FragColor = vec4(mix(surfaceColour.rgb, gl_Fog.color.rgb, gl_FogFragCoord), surfaceColour.a);\n}\n");
+            this.field_d = dga.linkShaderProgram(21885, this.toolkit, new fca[]{var5, var4});
             this.field_c = null != this.field_d ? true : false;
           }
         } catch (RuntimeException runtimeException) {
@@ -197,13 +197,13 @@ final class as extends qe {
         }
     }
 
-    final void b(boolean param0, int param1) {
+    final void refreshState(boolean param0, int param1) {
         if (param1 < 77) {
           this.field_e = true;
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void setParameters(int param0, int param1, int param2) {
         int var4 = 0;
         float var5 = 0.0f;
         int var6 = 0;
@@ -224,7 +224,7 @@ final class as extends qe {
           var9 = (float)(param1 >> 23 & 15) / 16.0f;
           var10 = (param1 & 2114051285) >> 27;
           var11 = this.field_d.field_c;
-          jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var11, "time"), (float)(var4 * this.field_a.field_Oc % 40000) / 40000.0f);
+          jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var11, "time"), (float)(var4 * this.toolkit.field_Oc % 40000) / 40000.0f);
           jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var11, "scale"), var5);
           jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var11, "breakWaterDepth"), (float)var6);
           jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var11, "breakWaterOffset"), var7);
@@ -233,25 +233,25 @@ final class as extends qe {
         }
     }
 
-    final void a(boolean param0, int param1) {
+    final void enable(boolean param0, int param1) {
         float var5 = 0.0f;
         long var6 = 0L;
-        hoa var3 = this.field_a.n(16664);
+        LegacyOpenGlCubeTexture var3 = this.toolkit.n(16664);
         int var4 = -104 / ((56 - param1) / 48);
         if (this.field_c &&
           var3 != null) {
-          var5 = (-Math.abs(this.field_a.field_Wb[1]) + 1.0f) * 2.0f + 1.0f;
-          this.field_a.e(1, true);
-          this.field_a.a(true, var3);
-          this.field_a.e(0, true);
-          this.field_a.a(true, this.field_f.field_c);
+          var5 = (-Math.abs(this.toolkit.field_Wb[1]) + 1.0f) * 2.0f + 1.0f;
+          this.toolkit.e(1, true);
+          this.toolkit.a(true, var3);
+          this.toolkit.e(0, true);
+          this.toolkit.a(true, this.field_f.field_c);
           var6 = this.field_d.field_c;
           jaggl.OpenGL.glUseProgramObjectARB(var6);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var6, "normalSampler"), 0);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var6, "envMapSampler"), 1);
-          jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var6, "sunDir"), -this.field_a.field_Wb[0], -this.field_a.field_Wb[1], -this.field_a.field_Wb[2]);
-          jaggl.OpenGL.glUniform4fARB(jaggl.OpenGL.glGetUniformLocationARB(var6, "sunColour"), var5 * this.field_a.field_wc, this.field_a.field_Fb * var5, this.field_a.field_bc * var5, 1.0f);
-          jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var6, "sunExponent"), 64.0f + Math.abs(this.field_a.field_Wb[1]) * 928.0f);
+          jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var6, "sunDir"), -this.toolkit.field_Wb[0], -this.toolkit.field_Wb[1], -this.toolkit.field_Wb[2]);
+          jaggl.OpenGL.glUniform4fARB(jaggl.OpenGL.glGetUniformLocationARB(var6, "sunColour"), var5 * this.toolkit.field_wc, this.toolkit.field_Fb * var5, this.toolkit.field_bc * var5, 1.0f);
+          jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var6, "sunExponent"), 64.0f + Math.abs(this.toolkit.field_Wb[1]) * 928.0f);
           this.field_e = true;
         }
     }

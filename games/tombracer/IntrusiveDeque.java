@@ -179,7 +179,7 @@ final class IntrusiveDeque {
           }
           if (decompiledFrameRemainder1) {
             dqa.field_e.field_X = true;
-            is.field_yb.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(99, uba.field_h, new String[]{ol.field_b});
+            is.field_yb.field_r = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(99, uba.field_h, new String[]{ol.field_b});
             dn.field_b.field_vb.field_vb.field_r = null;
             var6 = null;
             var7 = (mu) (var4.first(-80));
@@ -271,11 +271,11 @@ final class IntrusiveDeque {
                         !fua.field_g) {
                         if (!PowerDownItemBehaviour.field_s) {
                           var17 = hka.field_b;
-                          var18 = gl.$cfr$intArgs$a$53ce4ab4c593(114, RoomViewRenderer.field_b, new String[]{var16});
+                          var18 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(114, RoomViewRenderer.field_b, new String[]{var16});
                           var17.field_f.addItem((byte) -79, 8, var18);
                         }
                         var17Lifetime1 = hka.field_b;
-                        var18Lifetime1 = gl.$cfr$intArgs$a$53ce4ab4c593(86, SceneLight.field_f, new String[]{var16});
+                        var18Lifetime1 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(86, SceneLight.field_f, new String[]{var16});
                         var17Lifetime1.field_f.addItem((byte) -97, 18, var18Lifetime1);
                       }
                       var5 = var7;

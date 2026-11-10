@@ -36,13 +36,13 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonLi
             this.field_z = new FocusableWidget[1 + var3_int];
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_z[var5] = new FocusableWidget(this.field_A[var5], (WidgetListener) (this));
-              this.field_z[var5].field_r = (isa) ((Object) var4);
+              this.field_z[var5].field_r = (WidgetPainter) ((Object) var4);
               this.field_z[var5].field_q = FontMetrics.field_i;
               this.field_z[var5].setBounds((byte) -31, 80, 15, 0, 20 + 16 * var5);
               this.addChild(this.field_z[var5], param0 ^ -13598);
             }
             this.field_z[var3_int] = new FocusableWidget(ll.field_h, (WidgetListener) (this));
-            this.field_z[var3_int].field_r = (isa) ((Object) var4);
+            this.field_z[var3_int].field_r = (WidgetPainter) ((Object) var4);
             this.field_z[var3_int].setBounds((byte) -31, 100, 15, 0, 20 + var3_int * 16 + 16);
             this.addChild(this.field_z[var3_int], -1);
             return;
@@ -259,7 +259,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonLi
     }
 
     UsernameSuggestionsPanel(mia param0) {
-        super(0, 0, 0, 0, (isa) null);
+        super(0, 0, 0, 0, (WidgetPainter) null);
         try {
           this.field_w = param0;
         } catch (RuntimeException runtimeException) {

@@ -18,7 +18,7 @@ class UiWidget extends IntrusiveNode {
     int field_i;
     int field_j;
     WidgetListener field_h;
-    isa field_r;
+    WidgetPainter field_r;
 
     final void appendDiagnosticProperties(int param0, StringBuilder param1, Hashtable param2, int param3) {
         StringBuilder discarded$0 = null;
@@ -323,7 +323,7 @@ class UiWidget extends IntrusiveNode {
           if (this.field_r == null) {
             return;
           }
-          this.field_r.a(this, param0, 16777215, param1, true);
+          this.field_r.paintWidget(this, param0, 16777215, param1, true);
         }
     }
 
@@ -701,9 +701,9 @@ class UiWidget extends IntrusiveNode {
         this.field_j = 0;
     }
 
-    UiWidget(String param0, isa param1, WidgetListener param2) {
+    UiWidget(String param0, WidgetPainter param1, WidgetListener param2) {
         RuntimeException runtimeException = null;
-        oaa var4 = null;
+        WidgetTextLayout var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -718,8 +718,8 @@ class UiWidget extends IntrusiveNode {
           this.field_r = param1;
           this.field_o = param0;
           this.field_h = param2;
-          if (this.field_r instanceof oaa) {
-            var4 = (oaa) ((Object) this.field_r);
+          if (this.field_r instanceof WidgetTextLayout) {
+            var4 = (WidgetTextLayout) ((Object) this.field_r);
             this.field_m = var4.getPreferredWidth(3459, this);
             this.field_p = var4.getTextWidth((byte) -79, this);
           }
@@ -750,7 +750,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    UiWidget(int param0, int param1, int param2, int param3, isa param4, WidgetListener param5) {
+    UiWidget(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetListener param5) {
         this.field_t = 0;
         this.field_j = 0;
         try {

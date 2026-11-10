@@ -20,7 +20,7 @@ final class PortalBehaviour extends Behaviour {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_2_0 = tva.field_d;
+          stackIn_2_0 = LegacyOpenGlUnlitEffect.field_d;
           stackIn_2_1 = 256;
           stackIn_2_2 = param3;
           stackIn_2_3 = -44;

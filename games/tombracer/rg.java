@@ -8,7 +8,7 @@ final class rg extends SingleChildWidget {
     static int field_B;
 
     rg(UiWidget param0) {
-        super(param0.field_i, param0.field_n, param0.field_m, param0.field_p, (isa) null, (WidgetListener) null);
+        super(param0.field_i, param0.field_n, param0.field_m, param0.field_p, (WidgetPainter) null, (WidgetListener) null);
         try {
           param0.setBounds((byte) -31, this.field_m, this.field_p, 0, 0);
           this.child = param0;
@@ -26,7 +26,7 @@ final class rg extends SingleChildWidget {
     }
 
     final static void a(byte param0) {
-        int var1 = pna.field_q * pna.field_q;
+        int var1 = SoftwareTransform3D.field_q * SoftwareTransform3D.field_q;
         int var2 = var1 - pk.field_r * pk.field_r;
         int var4 = -80 % ((param0 + 19) / 32);
         int var3 = var2 * (mha.field_E - tj.field_b) / var1 + tj.field_b;
@@ -174,9 +174,9 @@ final class rg extends SingleChildWidget {
           IntrusiveDeque.field_d[5] = new String[]{TripBeamComponent.field_J, td.field_u, PitModel.field_r};
           Effect.field_h[5] = new String[]{TreasureValuesOverlay.field_k, MazeComponent.field_G, du.field_b};
           IntrusiveDeque.field_d[6] = new String[]{ConstrainToCircleLocomotor.field_v, VortexBehaviour.field_o, PowerUpItemBehaviour.field_s};
-          Effect.field_h[6] = new String[]{apa.field_b, pna.field_k, bq.field_e};
+          Effect.field_h[6] = new String[]{apa.field_b, SoftwareTransform3D.field_k, bq.field_e};
           IntrusiveDeque.field_d[7] = new String[]{TouchSwitchBehaviour.field_q, MatchScoringObserver.field_d};
-          IntrusiveDeque.field_d[8] = new String[]{uv.field_u, jd.field_m, hoa.field_n};
+          IntrusiveDeque.field_d[8] = new String[]{uv.field_u, jd.field_m, LegacyOpenGlCubeTexture.field_n};
           Effect.field_h[7] = new String[]{ProceduralTexture.field_n, ld.field_d};
           IntrusiveDeque.field_d[9] = new String[]{td.field_n, nea.field_b, gga.field_L};
           Effect.field_h[8] = new String[]{ThresholdOperator.field_o, StaticCrusherComponent.field_G, ClientException.field_e};
@@ -226,9 +226,9 @@ final class rg extends SingleChildWidget {
         IntrusiveDeque.field_d[5] = new String[]{TripBeamComponent.field_J, td.field_u, PitModel.field_r};
         Effect.field_h[5] = new String[]{TreasureValuesOverlay.field_k, MazeComponent.field_G, du.field_b};
         IntrusiveDeque.field_d[6] = new String[]{ConstrainToCircleLocomotor.field_v, VortexBehaviour.field_o, PowerUpItemBehaviour.field_s};
-        Effect.field_h[6] = new String[]{apa.field_b, pna.field_k, bq.field_e};
+        Effect.field_h[6] = new String[]{apa.field_b, SoftwareTransform3D.field_k, bq.field_e};
         IntrusiveDeque.field_d[7] = new String[]{TouchSwitchBehaviour.field_q, MatchScoringObserver.field_d};
-        IntrusiveDeque.field_d[8] = new String[]{uv.field_u, jd.field_m, hoa.field_n};
+        IntrusiveDeque.field_d[8] = new String[]{uv.field_u, jd.field_m, LegacyOpenGlCubeTexture.field_n};
         Effect.field_h[7] = new String[]{ProceduralTexture.field_n, ld.field_d};
         IntrusiveDeque.field_d[9] = new String[]{td.field_n, nea.field_b, gga.field_L};
         Effect.field_h[8] = new String[]{ThresholdOperator.field_o, StaticCrusherComponent.field_G, ClientException.field_e};
@@ -238,7 +238,7 @@ final class rg extends SingleChildWidget {
     }
 
     public rg() {
-        super(0, 0, 0, 0, (isa) null, (WidgetListener) null);
+        super(0, 0, 0, 0, (WidgetPainter) null, (WidgetListener) null);
         this.field_y = 256;
     }
 

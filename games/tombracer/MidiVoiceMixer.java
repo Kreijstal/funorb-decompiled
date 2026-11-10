@@ -354,7 +354,7 @@ final class MidiVoiceMixer extends PcmStream {
         }
     }
 
-    final int a() {
+    final int activity() {
         return 0;
     }
 

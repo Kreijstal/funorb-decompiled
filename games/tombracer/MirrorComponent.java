@@ -5,7 +5,7 @@ final class MirrorComponent extends PrefabComponent {
     static SpriteData field_F;
     static jea field_I;
     static int[] field_H;
-    static hs field_G;
+    static TextureFilter field_G;
 
     final static boolean c(int param0, int param1, int param2) {
         if (param0 != -17275) {
@@ -36,7 +36,7 @@ final class MirrorComponent extends PrefabComponent {
 
     final static boolean d(int param0, int param1, int param2) {
         if (param0 != -26571) {
-          field_G = (hs) null;
+          field_G = (TextureFilter) null;
         }
         return (384 & param1) != 0 ? true : false;
     }
@@ -203,6 +203,6 @@ final class MirrorComponent extends PrefabComponent {
 
     static {
         field_H = new int[]{0};
-        field_G = new hs();
+        field_G = new TextureFilter();
     }
 }

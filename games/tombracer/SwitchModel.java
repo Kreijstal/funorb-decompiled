@@ -701,7 +701,7 @@ final class SwitchModel extends TrapModel {
         RasterizerOperator.d((byte) -128);
         RoomViewRenderer.field_c = null;
         int var1 = 43 / ((param0 + 55) / 48);
-        f.b(-68);
+        ComponentTargetList.b(-68);
     }
 
     final void a(iq param0, int param1, int param2, int param3, byte param4) {

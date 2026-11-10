@@ -28,7 +28,7 @@ final class uba extends kma implements TextInputListener, eaa {
               return (String) (stackIn_7_0);
             }
           } else {
-            stackIn_4_0 = gl.$cfr$intArgs$a$53ce4ab4c593(91, era.field_b, new String[]{"1890", Integer.toString(var5 - 3)});
+            stackIn_4_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(91, era.field_b, new String[]{"1890", Integer.toString(var5 - 3)});
             return stackIn_4_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {

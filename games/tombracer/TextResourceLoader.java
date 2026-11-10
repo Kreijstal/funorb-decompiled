@@ -105,7 +105,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -30, "ticketing_gotowebsite");
                 if (var2 != null) {
-                  rpa.field_j = jaa.decodeText((byte) 71, var2);
+                  LegacyOpenGlEnvironmentWaterEffect.field_j = jaa.decodeText((byte) 71, var2);
                 }
                 var2 = dn.a((byte) -96, "ticketing_waitingformessages");
                 if (var2 != null) {
@@ -313,7 +313,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -106, "yes");
                 if (var2 != null) {
-                  rpa.field_g = jaa.decodeText((byte) 55, var2);
+                  LegacyOpenGlEnvironmentWaterEffect.field_g = jaa.decodeText((byte) 55, var2);
                 }
                 var2 = dn.a((byte) -13, "no");
                 if (var2 != null) {
@@ -413,7 +413,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 107, "mu_chat_lobby_friends_only");
                 if (var2 != null) {
-                  qe.field_b = jaa.decodeText((byte) 42, var2);
+                  LegacyOpenGlEffect.field_b = jaa.decodeText((byte) 42, var2);
                 }
                 var2 = dn.a((byte) -35, "mu_chat_lobby_friends");
                 if (var2 != null) {
@@ -453,7 +453,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 119, "mu_chat_invisible_and_silent_mode");
                 if (var2 != null) {
-                  tva.field_c = jaa.decodeText((byte) 103, var2);
+                  LegacyOpenGlUnlitEffect.field_c = jaa.decodeText((byte) 103, var2);
                 }
                 var2 = dn.a((byte) -97, "you_have_been_removed_from_xs_game");
                 if (var2 != null) {
@@ -545,7 +545,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -106, "quickchat_lobby");
                 if (var2 != null) {
-                  hs.field_d = jaa.decodeText((byte) 39, var2);
+                  TextureFilter.field_d = jaa.decodeText((byte) 39, var2);
                 }
                 var2 = dn.a((byte) 127, "message_game");
                 if (var2 != null) {
@@ -565,7 +565,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -101, "inviting_x");
                 if (var2 != null) {
-                  hs.field_b = jaa.decodeText((byte) 60, var2);
+                  TextureFilter.field_b = jaa.decodeText((byte) 60, var2);
                 }
                 var2 = dn.a((byte) 121, "x_wants_to_join");
                 if (var2 != null) {
@@ -689,7 +689,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -34, "no_options_available");
                 if (null != var2) {
-                  ns.field_c = jaa.decodeText((byte) 94, var2);
+                  LegacyOpenGlTurbulentTextureEffect.field_c = jaa.decodeText((byte) 94, var2);
                 }
                 var2 = dn.a((byte) -59, "reportabuse");
                 if (var2 != null) {
@@ -749,7 +749,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -121, "chatviewscrolledup");
                 if (null != var2) {
-                  rt.field_p = jaa.decodeText((byte) 43, var2);
+                  LegacyOpenGlTexture2D.field_p = jaa.decodeText((byte) 43, var2);
                 }
                 var2 = dn.a((byte) 125, "thisisrunescapeclan");
                 if (var2 != null) {
@@ -829,7 +829,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 104, "gameopt_youneed1ratedgame");
                 if (null != var2) {
-                  rpa.field_c = jaa.decodeText((byte) 74, var2);
+                  LegacyOpenGlEnvironmentWaterEffect.field_c = jaa.decodeText((byte) 74, var2);
                 }
                 var2 = dn.a((byte) 124, "gameopt_playerhasntunlocked");
                 if (var2 != null) {
@@ -883,7 +883,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -28, "gameopt_badnumplayers");
                 if (var2 != null) {
-                  lha.field_m = jaa.decodeText((byte) 87, var2);
+                  LegacyOpenGlTexture3D.field_m = jaa.decodeText((byte) 87, var2);
                 }
                 var2 = dn.a((byte) -28, "gameopt_inviteplayers_or_trychanging1");
                 if (var2 != null) {
@@ -1607,7 +1607,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 111, "create_alert_passcontainsname");
                 if (var2 != null) {
-                  kl.field_j = jaa.decodeText((byte) 91, var2);
+                  LegacyOpenGlTexture.field_j = jaa.decodeText((byte) 91, var2);
                 }
                 var2 = dn.a((byte) 107, "create_alert_passcontainsemail");
                 if (null != var2) {
@@ -1679,7 +1679,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -11, "unable_to_delete_ignore");
                 if (var2 != null) {
-                  rt.field_n = jaa.decodeText((byte) 99, var2);
+                  LegacyOpenGlTexture2D.field_n = jaa.decodeText((byte) 99, var2);
                 }
                 var2 = dn.a((byte) 109, "friendlistfull");
                 if (null != var2) {
@@ -1691,7 +1691,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 113, "friendnotfound");
                 if (var2 != null) {
-                  hoa.field_m = jaa.decodeText((byte) 76, var2);
+                  LegacyOpenGlCubeTexture.field_m = jaa.decodeText((byte) 76, var2);
                 }
                 var2 = dn.a((byte) -112, "ignorelistfull");
                 if (null != var2) {
@@ -2747,7 +2747,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 107, "hs_friend_tip_multi");
                 if (null != var2) {
-                  rpa.field_f = jaa.decodeText((byte) 53, var2);
+                  LegacyOpenGlEnvironmentWaterEffect.field_f = jaa.decodeText((byte) 53, var2);
                 }
                 var2 = dn.a((byte) -54, "hs_mode_name,0");
                 if (var2 != null) {

@@ -102,7 +102,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         Object var40;
         Object var44;
         Object var50;
-        oaa var54;
+        WidgetTextLayout var54;
         String var5;
         int var11;
         int var12;
@@ -131,13 +131,13 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         Sprite var51;
         Sprite var52;
         Sprite var53;
-        oaa var55;
-        oaa var56;
-        oaa var57;
-        oaa var58;
-        oaa var59;
-        oaa var60;
-        oaa var61;
+        WidgetTextLayout var55;
+        WidgetTextLayout var56;
+        WidgetTextLayout var57;
+        WidgetTextLayout var58;
+        WidgetTextLayout var59;
+        WidgetTextLayout var60;
+        WidgetTextLayout var61;
         int var9Lifetime1;
         int var9Lifetime2;
         int var9Lifetime3;
@@ -188,7 +188,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             this.b(18758);
             super.renderLayer(param0, param1, param2, param3);
             var6 = this.field_I.b(-4666);
-            var54 = (oaa) ((Object) this.field_r);
+            var54 = (WidgetTextLayout) ((Object) this.field_r);
             var9 = this.field_i + param0;
             var10 = var54.textTop(param1, (UiWidget) (this), (byte) -89) + (var54.ensureTextLayout((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
             if (BevelOperator.field_p != var6 &&
@@ -224,7 +224,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           }
           super.renderLayer(param0, param1, param2, param3);
           var6 = this.field_I.b(-4666);
-          var55 = (oaa) ((Object) this.field_r);
+          var55 = (WidgetTextLayout) ((Object) this.field_r);
           var9Lifetime5 = this.field_i + param0;
           var10Lifetime5 = var55.textTop(param1, (UiWidget) (this), (byte) -89) + (var55.ensureTextLayout((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
           if (BevelOperator.field_p != var6 &&
@@ -273,7 +273,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             this.b(18758);
             super.renderLayer(param0, param1, param2, param3);
             var6 = this.field_I.b(-4666);
-            var56 = (oaa) ((Object) this.field_r);
+            var56 = (WidgetTextLayout) ((Object) this.field_r);
             var9Lifetime1 = this.field_i + param0;
             var10Lifetime1 = var56.textTop(param1, (UiWidget) (this), (byte) -89) + (var56.ensureTextLayout((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
             if (BevelOperator.field_p != var6 &&
@@ -309,7 +309,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           }
           super.renderLayer(param0, param1, param2, param3);
           var6 = this.field_I.b(-4666);
-          var57 = (oaa) ((Object) this.field_r);
+          var57 = (WidgetTextLayout) ((Object) this.field_r);
           var9Lifetime1Lifetime1 = this.field_i + param0;
           var10Lifetime1Lifetime1 = var57.textTop(param1, (UiWidget) (this), (byte) -89) + (var57.ensureTextLayout((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
           if (BevelOperator.field_p != var6 &&
@@ -356,7 +356,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           if (var5.equals(this.field_o)) {
             super.renderLayer(param0, param1, param2, param3);
             var6Lifetime1 = this.field_I.b(-4666);
-            var61 = (oaa) ((Object) this.field_r);
+            var61 = (WidgetTextLayout) ((Object) this.field_r);
             var9Lifetime2 = this.field_i + param0;
             var10Lifetime2 = var61.textTop(param1, (UiWidget) (this), (byte) -89) + (var61.ensureTextLayout((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
             if (BevelOperator.field_p != var6Lifetime1 &&
@@ -394,7 +394,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           this.b(18758);
           super.renderLayer(param0, param1, param2, param3);
           var6Lifetime1Lifetime1 = this.field_I.b(-4666);
-          var60 = (oaa) ((Object) this.field_r);
+          var60 = (WidgetTextLayout) ((Object) this.field_r);
           var9Lifetime2Lifetime1 = this.field_i + param0;
           var10Lifetime2Lifetime1 = var60.textTop(param1, (UiWidget) (this), (byte) -89) + (var60.ensureTextLayout((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
           if (BevelOperator.field_p != var6Lifetime1Lifetime1 &&
@@ -444,7 +444,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           this.b(18758);
           super.renderLayer(param0, param1, param2, param3);
           var6Lifetime2 = this.field_I.b(-4666);
-          var58 = (oaa) ((Object) this.field_r);
+          var58 = (WidgetTextLayout) ((Object) this.field_r);
           var9Lifetime3 = this.field_i + param0;
           var10Lifetime3 = var58.textTop(param1, (UiWidget) (this), (byte) -89) + (var58.ensureTextLayout((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
           if (BevelOperator.field_p != var6Lifetime2 &&
@@ -480,7 +480,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         }
         super.renderLayer(param0, param1, param2, param3);
         var6Lifetime3 = this.field_I.b(-4666);
-        var59 = (oaa) ((Object) this.field_r);
+        var59 = (WidgetTextLayout) ((Object) this.field_r);
         var9Lifetime4 = this.field_i + param0;
         var10Lifetime4 = var59.textTop(param1, (UiWidget) (this), (byte) -89) + (var59.ensureTextLayout((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
         if (BevelOperator.field_p != var6Lifetime3 &&

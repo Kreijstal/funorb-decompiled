@@ -324,7 +324,7 @@ final class ko {
     }
 
     final static void c(byte param0) {
-        afa.field_c = qk.h(122);
+        afa.field_c = LegacyOpenGlSpriteTexture.h(122);
         ModelFactory.field_a = new jta();
         if (param0 < 10) {
           ko.c((byte) -39);

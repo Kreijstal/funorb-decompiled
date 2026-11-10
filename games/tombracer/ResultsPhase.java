@@ -600,7 +600,7 @@ final class ResultsPhase extends MatchPhase {
             }
             var8 = stackIn_6_0;
             var9 = param0.substring(var7, var8);
-            if (var6.kind == ma.field_e) {
+            if (var6.kind == LegacyOpenGlReflectionEffect.field_e) {
               discarded$0 = var3.append("<col=66ffff>").append(var9).append("</col>");
             } else {
               if (nl.field_d == var6.kind) {

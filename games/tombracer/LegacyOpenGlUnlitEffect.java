@@ -1,28 +1,28 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tva extends qe {
+final class LegacyOpenGlUnlitEffect extends LegacyOpenGlEffect {
     static String field_c;
     static sq field_d;
 
-    tva(OpenGlToolkit param0) {
+    LegacyOpenGlUnlitEffect(OpenGlToolkit param0) {
         super(param0);
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void setParameters(int param0, int param1, int param2) {
         if (param2 < 117) {
           field_c = (String) null;
         }
     }
 
-    final void a(boolean param0) {
-        this.field_a.setLightingSuppressed(-109, param0);
+    final void disable(boolean param0) {
+        this.toolkit.setLightingSuppressed(-109, param0);
     }
 
     public static void c(int param0) {
         field_c = null;
         if (param0 > -103) {
-          tva.a(114, -12, 14, -11);
+          LegacyOpenGlUnlitEffect.a(114, -12, 14, -11);
           field_d = null;
           return;
         }
@@ -49,36 +49,36 @@ final class tva extends qe {
         return LoadProfileCommand.field_p[param1];
     }
 
-    final void b(boolean param0, int param1) {
+    final void refreshState(boolean param0, int param1) {
         if (param1 <= 77) {
-          kl var4 = (kl) null;
-          this.a(-105, 43, (kl) null);
+          LegacyOpenGlTexture var4 = (LegacyOpenGlTexture) null;
+          this.bindTexture(-105, 43, (LegacyOpenGlTexture) null);
         }
     }
 
-    final boolean b(int param0) {
+    final boolean isSupported(int param0) {
         if (param0 != -11921) {
-          this.b(false, 31);
+          this.refreshState(false, 31);
           return true;
         }
         return true;
     }
 
-    final void a(int param0, int param1, kl param2) {
+    final void bindTexture(int param0, int param1, LegacyOpenGlTexture param2) {
         try {
           if (param1 != 32221) {
-            tva.c(66);
+            LegacyOpenGlUnlitEffect.c(66);
           }
-          this.field_a.a(true, param2);
-          this.field_a.d(1, param0);
+          this.toolkit.a(true, param2);
+          this.toolkit.d(1, param0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "tva.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(boolean param0, int param1) {
+    final void enable(boolean param0, int param1) {
         int var3 = 73 / ((param1 - 56) / 48);
-        this.field_a.setLightingSuppressed(-55, true);
+        this.toolkit.setLightingSuppressed(-55, true);
     }
 
     static {

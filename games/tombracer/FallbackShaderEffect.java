@@ -142,7 +142,7 @@ final class FallbackShaderEffect extends ShaderEffect {
               } else {
                 stackIn_38_2 = TombRacer.field_F;
               }
-              stackIn_37_0.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(stackIn_37_1, stackIn_38_2, new String[]{hw.field_a.field_r});
+              stackIn_37_0.field_r = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(stackIn_37_1, stackIn_38_2, new String[]{hw.field_a.field_r});
               MessageOverlay.field_t.field_r = RenderLayer.field_h;
               bc.field_b.field_X = true;
               TouchSwitchBehaviour.field_s = true;

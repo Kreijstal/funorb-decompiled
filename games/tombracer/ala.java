@@ -131,9 +131,9 @@ final class ala extends GameScreen {
                 vha.a(stackIn_85_0, stackIn_85_1, stackIn_85_2, stackIn_85_3, stackIn_85_4, stackIn_85_5, stackIn_86_6, -1, 15, var4 != 0, 11, param1);
               }
             }
-            if (hoa.field_p) {
+            if (LegacyOpenGlCubeTexture.field_p) {
               ql.field_k.writeCipheredOpcode(64, -2988);
-              hoa.field_p = false;
+              LegacyOpenGlCubeTexture.field_p = false;
             }
             if (du.field_g) {
               ql.field_k.writeCipheredOpcode(10, param2 ^ -12313);
@@ -171,9 +171,9 @@ final class ala extends GameScreen {
             }
           }
         }
-        if (hoa.field_p) {
+        if (LegacyOpenGlCubeTexture.field_p) {
           ql.field_k.writeCipheredOpcode(64, -2988);
-          hoa.field_p = false;
+          LegacyOpenGlCubeTexture.field_p = false;
         }
         if (du.field_g) {
           ql.field_k.writeCipheredOpcode(10, param2 ^ -12313);

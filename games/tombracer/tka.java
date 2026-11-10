@@ -57,7 +57,7 @@ final class tka extends TextWidgetPainter {
         }
     }
 
-    public final void a(UiWidget param0, int param1, int param2, int param3, boolean param4) {
+    public final void paintWidget(UiWidget param0, int param1, int param2, int param3, boolean param4) {
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_15_0 = 0;

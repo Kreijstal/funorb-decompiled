@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cj implements isa {
+final class cj implements WidgetPainter {
     private int field_a;
     private int field_d;
     static String field_e;
@@ -33,7 +33,7 @@ final class cj implements isa {
         int var7 = 0;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          if (uga.field_n != ProceduralTexture.field_p) {
+          if (LegacyOpenGlTexture1D.field_n != ProceduralTexture.field_p) {
             return false;
           }
           if (param1 != 0) {
@@ -107,7 +107,7 @@ final class cj implements isa {
         }
     }
 
-    public final void a(UiWidget param0, int param1, int param2, int param3, boolean param4) {
+    public final void paintWidget(UiWidget param0, int param1, int param2, int param3, boolean param4) {
         int var10 = 0;
         UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_15_0 = null;

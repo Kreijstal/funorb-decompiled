@@ -4,7 +4,7 @@
 abstract class OpenGlTexture implements GpuTexture {
     una field_a;
     static int[][] field_e;
-    private hs field_g;
+    private TextureFilter filter;
     private boolean field_b;
     HardwareOpenGlToolkit field_j;
     private int field_h;
@@ -122,7 +122,7 @@ abstract class OpenGlTexture implements GpuTexture {
         int var2 = -75 % ((16 - param0) / 61);
     }
 
-    public void a(int param0, hs param1) {
+    public void setFilter(int param0, TextureFilter param1) {
         float[] var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -130,9 +130,9 @@ abstract class OpenGlTexture implements GpuTexture {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (param1 != this.field_g) {
-            this.field_g = param1;
-            this.d((byte) -114);
+          if (param1 != this.filter) {
+            this.filter = param1;
+            this.applyFilter((byte) -114);
           }
           if (param0 != 7672) {
             var4 = (float[]) null;
@@ -294,9 +294,9 @@ abstract class OpenGlTexture implements GpuTexture {
         }
     }
 
-    private final void d(byte param0) {
+    private final void applyFilter(byte param0) {
         this.field_j.bindTexture(true, (GpuTexture) (this));
-        if (this.field_g != MirrorComponent.field_G) {
+        if (this.filter != MirrorComponent.field_G) {
           jaggl.OpenGL.glTexParameteri(this.field_i, 10241, !this.field_b ? 9728 : 9984);
           jaggl.OpenGL.glTexParameteri(this.field_i, 10240, 9728);
         } else {
@@ -541,7 +541,7 @@ abstract class OpenGlTexture implements GpuTexture {
     }
 
     OpenGlTexture(HardwareOpenGlToolkit param0, int param1, ft param2, una param3, int param4, boolean param5) {
-        this.field_g = MirrorComponent.field_G;
+        this.filter = MirrorComponent.field_G;
         try {
           this.field_a = param3;
           this.field_j = param0;
@@ -551,7 +551,7 @@ abstract class OpenGlTexture implements GpuTexture {
           this.field_f = param2;
           jaggl.OpenGL.glGenTextures(1, pra.field_a, 0);
           this.field_c = pra.field_a[0];
-          this.d((byte) -97);
+          this.applyFilter((byte) -97);
           this.a((byte) -128, 0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "tfa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');

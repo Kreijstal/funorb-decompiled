@@ -571,7 +571,7 @@ final class MatchState implements dv {
         int var2Lifetime2;
         var4 = TombRacer.field_G ? 1 : 0;
         for (var2 = 0; var2 < this.simulations.length; var2++) {
-          this.players[var2].t((byte) 126);
+          this.players[var2].resetMatchProgress((byte) 126);
           this.createSimulation((byte) -36, var2);
         }
         for (var2Lifetime1 = 0; var2Lifetime1 < this.simulations.length; var2Lifetime1++) {

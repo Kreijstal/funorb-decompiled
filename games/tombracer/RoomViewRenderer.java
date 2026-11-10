@@ -170,7 +170,7 @@ final class RoomViewRenderer {
           }
           var16_ref.a(false, var24 >> 2, var23 >> 2, var22 >> 2);
           var30 = 0;
-          var19.a(var22, -var24, -var23, -var25, -var30, 0);
+          var19.setCamera(var22, -var24, -var23, -var25, -var30, 0);
           tga.field_a.a(var19);
           MovingPlatformComponent.field_N = param3;
           RenderScene.field_e = param1;

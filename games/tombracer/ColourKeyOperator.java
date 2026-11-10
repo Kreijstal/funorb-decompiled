@@ -128,7 +128,7 @@ final class ColourKeyOperator extends TextureOperator {
         var33 = var27[2];
         var25 = var33;
         var10 = var25;
-        for (var11 = 0; ns.textureWidth > var11; var11++) {
+        for (var11 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var11; var11++) {
           var13 = var39[var11];
           var12 = var13 - this.field_o[0];
           if (0 > var12) {

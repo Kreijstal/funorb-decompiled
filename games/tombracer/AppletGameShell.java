@@ -528,7 +528,7 @@ abstract class AppletGameShell extends GameApplet {
         } else {
           if (cga.field_f < 10) {
           } else {
-            if (!qk.i(250)) {
+            if (!LegacyOpenGlSpriteTexture.i(250)) {
               PressureSwitchComponent.C(-5);
             } else {
               if (0 == Transform3D.field_c) {

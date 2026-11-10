@@ -68,7 +68,7 @@ final class sb {
           qoa.field_b = param1;
           S2CNextRoundPacket.field_a = param2;
           ControllerLocomotor.field_v = param3;
-          ns.field_j = new SoundCache(qoa.field_b, ControllerLocomotor.field_v);
+          LegacyOpenGlTurbulentTextureEffect.field_j = new SoundCache(qoa.field_b, ControllerLocomotor.field_v);
           CauldronComponent.field_J = new u[237];
           int var5_int = -51 % ((param0 - 32) / 59);
           MenuEntry.field_j = new MusicTrack[4];

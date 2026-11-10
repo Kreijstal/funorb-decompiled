@@ -225,7 +225,7 @@ final class ck {
               }
             }
             SimpleConditionBehaviour.field_p[2] = new jea(0L, una.field_j, nb.field_a);
-            bf.field_b[2] = new tv[]{new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b), new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, TileGridCell.field_k[0], WaveformOperator.field_s), new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, TileGridCell.field_k[1], rpa.field_g)};
+            bf.field_b[2] = new tv[]{new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b), new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, TileGridCell.field_k[0], WaveformOperator.field_s), new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, TileGridCell.field_k[1], LegacyOpenGlEnvironmentWaterEffect.field_g)};
             break;
           }
           boolean decompiledFrameCompleted0 = true;

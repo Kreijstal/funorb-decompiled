@@ -257,7 +257,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_18_0;
           }
           if (ne.containsTextOrReverse(true, var5, var6)) {
-            stackIn_21_0 = kl.field_j;
+            stackIn_21_0 = LegacyOpenGlTexture.field_j;
             return stackIn_21_0;
           }
           if (kv.a((byte) 55, var5, var6)) {
@@ -267,7 +267,7 @@ final class PasswordValidator extends TextFieldValidator {
           if (!jea.containsForwardOrReversed(true, var5, var6)) {
             return dva.field_a;
           }
-          stackIn_29_0 = kl.field_j;
+          stackIn_29_0 = LegacyOpenGlTexture.field_j;
           return stackIn_29_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

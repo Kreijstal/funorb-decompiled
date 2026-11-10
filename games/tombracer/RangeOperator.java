@@ -41,7 +41,7 @@ final class RangeOperator extends TextureOperator {
         int[] var3 = var7;
         if (this.monochromeCache.rowMissed) {
           var4 = this.getInputMonochromeRow(0, -10, param1);
-          for (var5 = 0; var5 < ns.textureWidth; var5++) {
+          for (var5 = 0; var5 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var5++) {
             var7[var5] = (this.field_q * var4[var5] >> 12) + this.field_m;
           }
         }
@@ -119,7 +119,7 @@ final class RangeOperator extends TextureOperator {
           var8 = var21[0];
           var9 = var21[1];
           var10 = var21[2];
-          for (var11 = 0; ns.textureWidth > var11; var11++) {
+          for (var11 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var11; var11++) {
             var8[var11] = this.field_m + (var30[var11] * this.field_q >> 12);
             var9[var11] = (this.field_q * var31[var11] >> 12) + this.field_m;
             var10[var11] = (this.field_q * var32[var11] >> 12) + this.field_m;

@@ -146,7 +146,7 @@ final class CauldronComponent extends SwitchComponent {
         }
     }
 
-    final boolean r(byte param0) {
+    final boolean hasInitialState(byte param0) {
         if (param0 != 93) {
           field_J = (u[]) null;
           return true;
@@ -163,7 +163,7 @@ final class CauldronComponent extends SwitchComponent {
         super(param0, param1);
     }
 
-    final int B(int param0) {
+    final int getMaxTargets(int param0) {
         if (param0 != 31609) {
           return -38;
         }

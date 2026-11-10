@@ -27,7 +27,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     private SoftReferenceCache field_F;
     int field_u;
     private int field_y;
-    pna field_A;
+    SoftwareTransform3D field_A;
     int field_Q;
     int field_o;
     int field_I;
@@ -350,7 +350,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     }
 
     final void a(Transform3D param0) {
-        this.field_A = (pna) (param0);
+        this.field_A = (SoftwareTransform3D) (param0);
     }
 
     final void v(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
@@ -539,7 +539,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
 
     final void k() {
         if (this.field_E) {
-          rpa.a(false, true, true);
+          LegacyOpenGlEnvironmentWaterEffect.a(false, true, true);
           this.field_E = false;
         }
         this.field_T = null;
@@ -1166,7 +1166,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     }
 
     final Transform3D b() {
-        return (Transform3D) ((Object) new pna());
+        return (Transform3D) ((Object) new SoftwareTransform3D());
     }
 
     final void xa(float param0) {
@@ -1391,7 +1391,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         this.field_v = -1;
         try {
           this.field_F = new SoftReferenceCache(256);
-          this.field_A = new pna();
+          this.field_A = new SoftwareTransform3D();
           this.createContexts(1);
           this.g(0);
           ija.a(true, (byte) 100, true);

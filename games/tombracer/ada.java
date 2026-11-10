@@ -39,12 +39,12 @@ final class ada extends ArrayWidgetGroup implements ButtonListener {
     }
 
     ada(int param0, int param1, int param2, int param3) {
-        super(param0, param1, param2, param3, (isa) null);
+        super(param0, param1, param2, param3, (WidgetPainter) null);
         this.field_x = new DateFieldsWidget(new hga(10000536), GraphicsToolkit.field_b, 0, 0, 140, 25);
         this.field_x.setValidator((byte) 111, new uba());
         this.field_B = new FocusableWidget(aua.field_d, (WidgetListener) (this));
         this.children = new UiWidget[]{(UiWidget) ((Object) this.field_x), (UiWidget) ((Object) this.field_B)};
-        this.field_B.field_r = (isa) ((Object) new td());
+        this.field_B.field_r = (WidgetPainter) ((Object) new td());
         this.refreshLayout((byte) 127);
     }
 

@@ -201,7 +201,7 @@ final class DraggableWidget extends SingleChildWidget {
         }
     }
 
-    DraggableWidget(int param0, int param1, int param2, int param3, isa param4, WidgetListener param5, UiWidget param6, boolean param7, boolean param8) {
+    DraggableWidget(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetListener param5, UiWidget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_y = 2147483647;
         this.field_E = 2147483647;

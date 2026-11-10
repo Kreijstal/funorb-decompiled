@@ -5,7 +5,7 @@ final class MiscItemBehaviour extends ItemBehaviour {
     static long field_s;
     private int itemType;
     static String field_t;
-    static hs field_v;
+    static TextureFilter field_v;
 
     final void g(byte param0) {
         if (param0 != 3) {
@@ -158,7 +158,7 @@ final class MiscItemBehaviour extends ItemBehaviour {
 
     final int getTypeId(boolean param0) {
         if (param0) {
-          field_v = (hs) null;
+          field_v = (TextureFilter) null;
           return 25;
         }
         return 25;
@@ -186,6 +186,6 @@ final class MiscItemBehaviour extends ItemBehaviour {
 
     static {
         field_t = "Enter Tomb";
-        field_v = new hs();
+        field_v = new TextureFilter();
     }
 }

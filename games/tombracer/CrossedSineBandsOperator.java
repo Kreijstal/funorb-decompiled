@@ -51,7 +51,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
         }
         if (this.monochromeCache.rowMissed) {
           var4 = sj.textureRowCoords[param1] - 2048;
-          for (var5 = 0; var5 < ns.textureWidth; var5++) {
+          for (var5 = 0; var5 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var5++) {
             var6 = -2048 + ht.textureColumnCoords[var5];
             var7 = this.field_p + var6;
             if (var7 < -2048) {

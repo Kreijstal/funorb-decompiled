@@ -15,7 +15,7 @@ final class rua extends MessageDialog implements ButtonListener {
           this.a(-122, true, (jua) null);
         }
         if (this.field_ib) {
-          gl.a(true, false, (byte) 101);
+          LegacyOpenGlFlowingWaterEffect.a(true, false, (byte) 101);
           return;
         }
         try {

@@ -695,7 +695,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("instructionTitleCauldronsOfGreenSoup", (byte) 115);
                 if (var2 != null) {
-                  hoa.field_n = jaa.decodeText((byte) 25, var2);
+                  LegacyOpenGlCubeTexture.field_n = jaa.decodeText((byte) 25, var2);
                 }
                 var2 = mt.readTextEntry("instructionTextCauldronsOfGreenSoup", (byte) 112);
                 if (var2 != null) {
@@ -811,7 +811,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("instructionTextPistols", (byte) 119);
                 if (var2 != null) {
-                  pna.field_k = jaa.decodeText((byte) 104, var2);
+                  SoftwareTransform3D.field_k = jaa.decodeText((byte) 104, var2);
                 }
                 var2 = mt.readTextEntry("instructionsPage1Title1", (byte) 117);
                 if (var2 != null) {

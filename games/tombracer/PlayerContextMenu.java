@@ -85,25 +85,25 @@ final class PlayerContextMenu {
         }
         var3 = var5.field_tb;
         if (var5.field_gc) {
-          this.field_f.addItem((byte) -102, 2, gl.$cfr$intArgs$a$53ce4ab4c593(114, pba.field_d, new String[]{var3}));
-          this.field_f.addItem((byte) -104, 3, gl.$cfr$intArgs$a$53ce4ab4c593(123, cp.field_i, new String[]{var3}));
+          this.field_f.addItem((byte) -102, 2, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(114, pba.field_d, new String[]{var3}));
+          this.field_f.addItem((byte) -104, 3, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(123, cp.field_i, new String[]{var3}));
         } else {
           if (var5.field_Bb) {
-            this.field_f.addItem((byte) -76, 2, gl.$cfr$intArgs$a$53ce4ab4c593(106, mna.field_b, new String[]{var3}));
+            this.field_f.addItem((byte) -76, 2, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(106, mna.field_b, new String[]{var3}));
           } else {
             if (!var5.field_Sb &&
               var5.field_Yb) {
               if (!var5.field_ec) {
-                this.field_f.addItem((byte) -125, 2, gl.$cfr$intArgs$a$53ce4ab4c593(91, di.field_h, new String[]{var3}));
+                this.field_f.addItem((byte) -125, 2, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(91, di.field_h, new String[]{var3}));
               } else {
                 if (var5.field_Bb) {
-                  this.field_f.addItem((byte) -125, 2, gl.$cfr$intArgs$a$53ce4ab4c593(91, di.field_h, new String[]{var3}));
+                  this.field_f.addItem((byte) -125, 2, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(91, di.field_h, new String[]{var3}));
                 }
               }
             }
           }
           if (var5.field_Sb) {
-            this.field_f.addItem((byte) -102, 3, gl.$cfr$intArgs$a$53ce4ab4c593(86, PrefabComponent.field_B, new String[]{var3}));
+            this.field_f.addItem((byte) -102, 3, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(86, PrefabComponent.field_B, new String[]{var3}));
           }
         }
         if (param0 <= -10) {
@@ -185,7 +185,7 @@ final class PlayerContextMenu {
                 MidiVoiceMixer.a(param2, 30, this.field_k);
               } else {
                 if (param1 == 10) {
-                  kw.a(param2, false, this.field_k);
+                  LegacyOpenGlRidgedWaterEffect.a(param2, false, this.field_k);
                 } else {
                   if (param1 == 15) {
                     cua.a(this.field_k, param0 + 21, param2);
@@ -276,33 +276,33 @@ final class PlayerContextMenu {
             var6 = MouseWheelInput.a(2180, this.field_i) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
-              this.field_f.addItem((byte) -64, 4, gl.$cfr$intArgs$a$53ce4ab4c593(92, DirectRenderModel.field_m, new String[]{var7}));
-              this.field_f.addItem((byte) -70, 6, gl.$cfr$intArgs$a$53ce4ab4c593(127, mp.field_b, new String[]{var7}));
+              this.field_f.addItem((byte) -64, 4, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(92, DirectRenderModel.field_m, new String[]{var7}));
+              this.field_f.addItem((byte) -70, 6, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(127, mp.field_b, new String[]{var7}));
               if (param0 != null &&
                 2 != param1 &&
                 !fua.field_g) {
                 this.field_e = param0;
-                this.field_f.addItem((byte) -90, 19, gl.$cfr$intArgs$a$53ce4ab4c593(119, gja.field_k, new String[]{var7}));
+                this.field_f.addItem((byte) -90, 19, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(119, gja.field_k, new String[]{var7}));
               }
             }
             if (var5 != null) {
               if (!RewardChoicePhase.isPrivateChatTarget(this.field_i, (byte) -50) &&
                 !fua.field_g) {
                 if (!PowerDownItemBehaviour.field_s) {
-                  this.field_f.addItem((byte) -77, 8, gl.$cfr$intArgs$a$53ce4ab4c593(114, RoomViewRenderer.field_b, new String[]{var7}));
+                  this.field_f.addItem((byte) -77, 8, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(114, RoomViewRenderer.field_b, new String[]{var7}));
                 }
-                this.field_f.addItem((byte) -118, 18, gl.$cfr$intArgs$a$53ce4ab4c593(108, SceneLight.field_f, new String[]{var7}));
+                this.field_f.addItem((byte) -118, 18, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(108, SceneLight.field_f, new String[]{var7}));
                 if (param0 != null) {
                   this.field_e = param0;
-                  this.field_f.addItem((byte) -71, 19, gl.$cfr$intArgs$a$53ce4ab4c593(96, gja.field_k, new String[]{var7}));
+                  this.field_f.addItem((byte) -71, 19, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(96, gja.field_k, new String[]{var7}));
                 }
               }
-              this.field_f.addItem((byte) -104, 5, gl.$cfr$intArgs$a$53ce4ab4c593(90, LegacyTurbulentWaterNoise.field_q, new String[]{var7}));
+              this.field_f.addItem((byte) -104, 5, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(90, LegacyTurbulentWaterNoise.field_q, new String[]{var7}));
             }
             if (var6 == 0) {
               return;
             }
-            this.field_f.addItem((byte) -87, 7, gl.$cfr$intArgs$a$53ce4ab4c593(120, HardwareUnlitEffect.field_f, new String[]{var7}));
+            this.field_f.addItem((byte) -87, 7, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(120, HardwareUnlitEffect.field_f, new String[]{var7}));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -333,7 +333,7 @@ final class PlayerContextMenu {
           this.field_b = param0.field_d;
           if (param0.field_d == 0) {
             if (k.field_A == 0) {
-              this.field_f.addItem((byte) -66, 12, qe.field_b);
+              this.field_f.addItem((byte) -66, 12, LegacyOpenGlEffect.field_b);
             }
             this.field_f.addItem((byte) -86, 13, pea.field_f);
           }
@@ -347,7 +347,7 @@ final class PlayerContextMenu {
             if (UrlDownloadRequest.field_i == 0) {
               this.field_f.addItem((byte) -93, 12, cva.field_e);
             }
-            this.field_f.addItem((byte) -85, 13, tva.field_c);
+            this.field_f.addItem((byte) -85, 13, LegacyOpenGlUnlitEffect.field_c);
           }
           if (param1 == 13) {
             return;
@@ -391,11 +391,11 @@ final class PlayerContextMenu {
             var5 = this.getDisplayName(-13);
             if (var4 != null) {
               if (!C2SChooseRewardPacket.field_a.field_ec) {
-                this.field_f.addItem((byte) -74, 1, gl.$cfr$intArgs$a$53ce4ab4c593(108, S2CMatchResultPacket.field_a, new String[]{var5}));
+                this.field_f.addItem((byte) -74, 1, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(108, S2CMatchResultPacket.field_a, new String[]{var5}));
                 return;
               }
               if (C2SChooseRewardPacket.field_a.field_Kb >= 0) {
-                this.field_f.addItem((byte) -74, 1, gl.$cfr$intArgs$a$53ce4ab4c593(108, S2CMatchResultPacket.field_a, new String[]{var5}));
+                this.field_f.addItem((byte) -74, 1, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(108, S2CMatchResultPacket.field_a, new String[]{var5}));
                 return;
               }
             } else {
@@ -403,16 +403,16 @@ final class PlayerContextMenu {
                 C2SChooseRewardPacket.field_a.field_Yb &&
                 C2SChooseRewardPacket.field_a.field_Jb > C2SChooseRewardPacket.field_a.field_Mb) {
                 if (var14.field_Hb) {
-                  this.field_f.addItem((byte) -79, 1, gl.$cfr$intArgs$a$53ce4ab4c593(126, RenderableNode.field_g, new String[]{var5}));
+                  this.field_f.addItem((byte) -79, 1, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(126, RenderableNode.field_g, new String[]{var5}));
                   return;
                 }
                 if (param1 &&
                   var14.field_Fb) {
-                  this.field_f.addItem((byte) -123, 0, gl.$cfr$intArgs$a$53ce4ab4c593(127, sb.field_c, new String[]{var5}));
-                  this.field_f.addItem((byte) -98, 1, gl.$cfr$intArgs$a$53ce4ab4c593(116, CoinBagItemComponent.field_G, new String[]{var5}));
+                  this.field_f.addItem((byte) -123, 0, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(127, sb.field_c, new String[]{var5}));
+                  this.field_f.addItem((byte) -98, 1, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(116, CoinBagItemComponent.field_G, new String[]{var5}));
                   return;
                 }
-                this.field_f.addItem((byte) -112, 0, gl.$cfr$intArgs$a$53ce4ab4c593(98, LightSource.field_i, new String[]{var5}));
+                this.field_f.addItem((byte) -112, 0, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(98, LightSource.field_i, new String[]{var5}));
                 return;
               }
             }
@@ -439,7 +439,7 @@ final class PlayerContextMenu {
             C2SChooseRewardPacket.field_a.field_Kb < 0) {
             return;
           }
-          this.field_f.addItem((byte) -74, 1, gl.$cfr$intArgs$a$53ce4ab4c593(108, S2CMatchResultPacket.field_a, new String[]{var5}));
+          this.field_f.addItem((byte) -74, 1, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(108, S2CMatchResultPacket.field_a, new String[]{var5}));
           return;
         }
         if (var13 == null) {
@@ -448,16 +448,16 @@ final class PlayerContextMenu {
         if (C2SChooseRewardPacket.field_a.field_Yb &&
           C2SChooseRewardPacket.field_a.field_Jb > C2SChooseRewardPacket.field_a.field_Mb) {
           if (var13.field_Hb) {
-            this.field_f.addItem((byte) -79, 1, gl.$cfr$intArgs$a$53ce4ab4c593(126, RenderableNode.field_g, new String[]{var5}));
+            this.field_f.addItem((byte) -79, 1, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(126, RenderableNode.field_g, new String[]{var5}));
             return;
           }
           if (param1 &&
             var13.field_Fb) {
-            this.field_f.addItem((byte) -123, 0, gl.$cfr$intArgs$a$53ce4ab4c593(127, sb.field_c, new String[]{var5}));
-            this.field_f.addItem((byte) -98, 1, gl.$cfr$intArgs$a$53ce4ab4c593(116, CoinBagItemComponent.field_G, new String[]{var5}));
+            this.field_f.addItem((byte) -123, 0, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(127, sb.field_c, new String[]{var5}));
+            this.field_f.addItem((byte) -98, 1, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(116, CoinBagItemComponent.field_G, new String[]{var5}));
             return;
           }
-          this.field_f.addItem((byte) -112, 0, gl.$cfr$intArgs$a$53ce4ab4c593(98, LightSource.field_i, new String[]{var5}));
+          this.field_f.addItem((byte) -112, 0, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(98, LightSource.field_i, new String[]{var5}));
           return;
         }
         return;
@@ -469,7 +469,7 @@ final class PlayerContextMenu {
           this.field_g != SimpleConditionBehaviour.field_r) {
           var4 = this.getDisplayName(-13);
           String var2 = var4;
-          this.field_f.addItem((byte) -81, 17, gl.$cfr$intArgs$a$53ce4ab4c593(122, vj.field_c, new String[]{var4}));
+          this.field_f.addItem((byte) -81, 17, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(122, vj.field_c, new String[]{var4}));
         }
         if (param0 == 0) {
           return;

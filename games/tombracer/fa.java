@@ -51,12 +51,12 @@ final class fa {
           if (OpenGlUnderwaterEffect.field_q == 2 &&
             !DisplaySettingsDialog.f(24316)) {
             if (QueuedPlayerEvent.a(false, mn.field_n)) {
-              var2 = gl.$cfr$intArgs$a$53ce4ab4c593(87, ConsoleToken.field_n, new String[]{wp.field_a});
+              var2 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(87, ConsoleToken.field_n, new String[]{wp.field_a});
               if (var10 != 0) {
-                var2 = gl.$cfr$intArgs$a$53ce4ab4c593(83, pba.field_a, new String[]{wp.field_a});
+                var2 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(83, pba.field_a, new String[]{wp.field_a});
               }
             } else {
-              var2 = gl.$cfr$intArgs$a$53ce4ab4c593(83, pba.field_a, new String[]{wp.field_a});
+              var2 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(83, pba.field_a, new String[]{wp.field_a});
             }
             if (vo.field_b) {
               TreasureValuesOverlay.a(0, true, (String) null, (String) (var2), (String) null, 2);
@@ -66,7 +66,7 @@ final class fa {
           if (null == var2 &&
             !CrossedSineBandsOperator.field_v &&
             SimpleMoveLocomotor.field_s == null) {
-            var2 = rt.field_p;
+            var2 = LegacyOpenGlTexture2D.field_p;
           }
           boolean decompiledFrameRemainder0 = true;
           if (null != var2) {
@@ -81,8 +81,8 @@ final class fa {
             var6 = OpenGlUnderwaterEffect.field_q;
             var7 = 0;
             if (var6 == 2) {
-              var4 = gl.$cfr$intArgs$a$53ce4ab4c593(88, TrackMountComponent.field_G, new String[]{wp.field_a});
-              var8 = gl.$cfr$intArgs$a$53ce4ab4c593(111, li.field_a, new String[]{var3});
+              var4 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(88, TrackMountComponent.field_G, new String[]{wp.field_a});
+              var8 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(111, li.field_a, new String[]{var3});
               var7 = ComponentMount.field_b.field_G + (pq.field_g.field_G - 485) + PlatformBehaviour.field_s.stringWidth(var8) - PlatformBehaviour.field_s.stringWidth(var4);
               if (0 > var7) {
                 var7 = 0;
@@ -98,7 +98,7 @@ final class fa {
                 if (null != C2SChooseRewardPacket.field_a) {
                   if (!kp.field_c ||
                     tla.field_f == null) {
-                    var4 = "[" + gl.$cfr$intArgs$a$53ce4ab4c593(110, jea.field_nb, new String[]{C2SChooseRewardPacket.field_a.field_tb}) + "] ";
+                    var4 = "[" + LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(110, jea.field_nb, new String[]{C2SChooseRewardPacket.field_a.field_tb}) + "] ";
                     if (var10 != 0) {
                       var4 = "[" + tla.field_f + "] ";
                     }
@@ -150,7 +150,7 @@ final class fa {
               ComponentMount.field_b.field_o = false;
             }
             if (ComponentMount.field_b.field_o) {
-              var1 = gl.$cfr$intArgs$a$53ce4ab4c593(126, RenderLayer.field_c, new String[]{var3, wp.field_a});
+              var1 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(126, RenderLayer.field_c, new String[]{var3, wp.field_a});
             }
           }
           stackIn_102_0 = var1;

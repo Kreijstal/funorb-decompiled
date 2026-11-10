@@ -15,7 +15,7 @@ class TextInputWidget extends FocusableWidget {
 
     final void renderLayer(int param0, int param1, int param2, int param3) {
         RuntimeException decompiledCaughtException = null;
-        oaa var5 = null;
+        WidgetTextLayout var5 = null;
         RuntimeException var5_ref = null;
         long var6 = 0L;
         try {
@@ -24,15 +24,15 @@ class TextInputWidget extends FocusableWidget {
           }
           if (this.field_r != null &&
             param3 == 0) {
-            this.field_r.a((UiWidget) (this), param0, param2 ^ 16777215, param1, this.field_y);
-            if (this.field_r instanceof oaa) {
-              var5 = (oaa) ((Object) this.field_r);
+            this.field_r.paintWidget((UiWidget) (this), param0, param2 ^ 16777215, param1, this.field_y);
+            if (this.field_r instanceof WidgetTextLayout) {
+              var5 = (WidgetTextLayout) ((Object) this.field_r);
               if (this.field_B != this.field_I) {
-                var5.a(-1, (UiWidget) (this), param1, param0, this.field_B, this.field_I);
+                var5.drawSelection(-1, (UiWidget) (this), param1, param0, this.field_B, this.field_I);
               }
               var6 = bva.currentTimeMillis((byte) -107);
               if ((-this.field_H + var6) % 1000L < 500L) {
-                var5.a(this.field_I, param1, param2 - 22502, param0, (UiWidget) (this));
+                var5.drawCaret(this.field_I, param1, param2 - 22502, param0, (UiWidget) (this));
               }
             }
           }
@@ -466,7 +466,7 @@ class TextInputWidget extends FocusableWidget {
 
     private final void h(byte param0) {
         RuntimeException decompiledCaughtException = null;
-        oaa var2 = null;
+        WidgetTextLayout var2 = null;
         RuntimeException var2_ref = null;
         TextLayout var3 = null;
         int var4 = 0;
@@ -482,14 +482,14 @@ class TextInputWidget extends FocusableWidget {
             this.field_j = 0;
             return;
           }
-          if (!(this.field_r instanceof oaa)) {
+          if (!(this.field_r instanceof WidgetTextLayout)) {
             return;
           }
-          var2 = (oaa) ((Object) this.field_r);
+          var2 = (WidgetTextLayout) ((Object) this.field_r);
           var3 = var2.ensureTextLayout((UiWidget) (this), 14157);
           var4 = var3.a(0);
-          var5 = var2.a((byte) 117, (UiWidget) (this));
-          var6 = var2.a((byte) -90) >> 1;
+          var5 = var2.getAvailableTextWidth((byte) 117, (UiWidget) (this));
+          var6 = var2.getLineInkHeight((byte) -90) >> 1;
           var7 = 28 / ((param0 - 47) / 36);
           if (var4 < -var6 + var5) {
             this.field_j = 0;
@@ -585,16 +585,16 @@ class TextInputWidget extends FocusableWidget {
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
-        oaa var5 = null;
+        WidgetTextLayout var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
         try {
           super.updatePointerState(param0, param1, param2, param3);
           this.h((byte) -105);
           if (this.field_s == 1) {
-            if (this.field_r instanceof oaa) {
-              var5 = (oaa) ((Object) this.field_r);
-              var6 = var5.a((UiWidget) (this), (byte) 4, GridWidgetContainer.field_B, param0, param3, AgeValidator.field_j);
+            if (this.field_r instanceof WidgetTextLayout) {
+              var5 = (WidgetTextLayout) ((Object) this.field_r);
+              var6 = var5.hitTestCaretIndex((UiWidget) (this), (byte) 4, GridWidgetContainer.field_B, param0, param3, AgeValidator.field_j);
               if (var6 != -1) {
                 if (this.field_E &&
                   var6 < this.field_F &&
@@ -637,8 +637,8 @@ class TextInputWidget extends FocusableWidget {
             this.clearText(18);
           }
           if (super.handlePointerPress(92, param1, param2, param3, param4, param5, param6) &&
-            this.field_r instanceof oaa) {
-            var8_int = ((oaa) ((Object) this.field_r)).a((UiWidget) (this), (byte) 4, GridWidgetContainer.field_B, param1, param2, AgeValidator.field_j);
+            this.field_r instanceof WidgetTextLayout) {
+            var8_int = ((WidgetTextLayout) ((Object) this.field_r)).hitTestCaretIndex((UiWidget) (this), (byte) 4, GridWidgetContainer.field_B, param1, param2, AgeValidator.field_j);
             stackIn_10_1 = 60;
             if (-1 == var8_int) {
               stackIn_11_2 = 0;

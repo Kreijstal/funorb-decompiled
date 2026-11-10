@@ -584,7 +584,7 @@ final class WallTile implements Renderable {
             }
             MidiVoiceMixer.a((byte) 108, tn.a(-10918), OpenGlUnderwaterEffect.field_i, dla.a(7), var3_int != 0);
           } else {
-            if (!qk.i(250)) {
+            if (!LegacyOpenGlSpriteTexture.i(250)) {
               SoftwareRasterizer.clear();
               gga.b(320, 240, (byte) 113);
               fga.a(0, false, 0, param1);

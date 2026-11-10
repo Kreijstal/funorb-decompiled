@@ -6,13 +6,13 @@ abstract class nqa {
     Direct3DToolkit field_d;
     una field_b;
     boolean field_c;
-    hs field_a;
+    TextureFilter field_a;
 
-    void a(int param0, hs param1) {
+    void setFilter(int param0, TextureFilter param1) {
         this.field_a = param1;
         if (param0 != 7672) {
-          hs var4 = (hs) null;
-          this.a(26, (hs) null);
+          TextureFilter var4 = (TextureFilter) null;
+          this.setFilter(26, (TextureFilter) null);
         }
     }
 

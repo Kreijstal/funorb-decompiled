@@ -6,13 +6,13 @@ abstract class oga extends IntrusiveNode {
     OpenGlToolkit field_g;
     static long field_f;
 
-    abstract void a(rt param0, int param1, byte param2, rt param3);
+    abstract void a(LegacyOpenGlTexture2D param0, int param1, byte param2, LegacyOpenGlTexture2D param3);
 
     final static void a(boolean param0) {
         TileOperator.field_p = param0 ? true : false;
         LoadProfileCommand.field_r = false;
         jsa.a(false, -1);
-        kl.field_a = fta.field_c;
+        LegacyOpenGlTexture.field_a = fta.field_c;
         wt.field_d = fta.field_c;
     }
 

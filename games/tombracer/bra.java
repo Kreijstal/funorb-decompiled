@@ -112,7 +112,7 @@ final class bra extends ofa implements ButtonListener {
           var2.field_i = 0;
           var2.field_p = 80;
           var2.field_n = 50;
-          var2.field_r = (isa) ((Object) new TextWidgetPainter(BlendModeOperator.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var2.field_r = (WidgetPainter) ((Object) new TextWidgetPainter(BlendModeOperator.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(var2, -1);
           if (TextWidgetPainter.a(94)) {
             this.field_L = this.a(UiWidget.field_k, (byte) 91, (WidgetListener) (this));
@@ -137,7 +137,7 @@ final class bra extends ofa implements ButtonListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new FocusableWidget(param0, param2);
-          var4.field_r = (isa) ((Object) new td());
+          var4.field_r = (WidgetPainter) ((Object) new td());
           var5 = this.field_p - 6;
           this.field_p = this.field_p + 38;
           var4.setBounds((byte) -31, -30 + this.field_m, 30, 15, var5);

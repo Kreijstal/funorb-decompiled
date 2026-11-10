@@ -14,7 +14,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
     private TextInputWidget field_C;
 
     LoginForm(String param0, String param1, boolean param2, boolean param3, boolean param4) {
-        super(0, 0, 310, 190, (isa) null);
+        super(0, 0, 310, 190, (WidgetPainter) null);
         jsa dupTemp$0 = null;
         jsa dupTemp$1 = null;
         boolean stackIn_4_1 = false;
@@ -74,26 +74,26 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
               this.field_E = new FocusableWidget(S2CRoundDeadlinePacket.field_a, (WidgetListener) (this));
             }
           }
-          this.field_A.field_r = (isa) ((Object) new hga(10000536));
-          this.field_C.field_r = (isa) ((Object) new poa(10000536));
+          this.field_A.field_r = (WidgetPainter) ((Object) new hga(10000536));
+          this.field_C.field_r = (WidgetPainter) ((Object) new poa(10000536));
           var6 = new td();
-          this.field_B.field_r = (isa) ((Object) var6);
+          this.field_B.field_r = (WidgetPainter) ((Object) var6);
           if (this.field_y != null) {
-            this.field_y.field_r = (isa) ((Object) var6);
+            this.field_y.field_r = (WidgetPainter) ((Object) var6);
           }
           this.field_A.field_q = kma.field_a;
           if (this.field_E != null) {
-            this.field_E.field_r = (isa) ((Object) var6);
+            this.field_E.field_r = (WidgetPainter) ((Object) var6);
           }
           if (null != this.field_E) {
             this.field_E.field_q = hga.field_n;
           }
           if (!this.field_x) {
             if (!this.field_w) {
-              this.field_y.field_r = (isa) ((Object) new kaa());
+              this.field_y.field_r = (WidgetPainter) ((Object) new kaa());
             } else {
               this.field_y.field_q = tg.field_a;
-              this.field_y.field_r = (isa) ((Object) new kaa());
+              this.field_y.field_r = (WidgetPainter) ((Object) new kaa());
             }
           } else {
             this.field_y.field_q = SwitchLinkList.field_c;
@@ -263,7 +263,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         if (S2CRoundDeadlinePacket.a((byte) 91) ||
           !(this.field_A.field_o.length() <= 0) &&
           !(this.field_C.field_o.length() <= 0)) {
-          rt.a(true, this.field_A.field_o, this.field_C.field_o);
+          LegacyOpenGlTexture2D.a(true, this.field_A.field_o, this.field_C.field_o);
         }
     }
 

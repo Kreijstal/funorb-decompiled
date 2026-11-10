@@ -526,7 +526,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 wk.refreshReportedHeapLimit((byte) -84);
                 this.recreateCanvas((byte) 68);
-                gn.field_C = ns.a(117, mma.field_a, (java.awt.Component) ((Object) nma.field_l), qf.field_i);
+                gn.field_C = LegacyOpenGlTurbulentTextureEffect.a(117, mma.field_a, (java.awt.Component) ((Object) nma.field_l), qf.field_i);
                 this.initializeGame(-71);
                 cq.field_a = bca.a(0);
                 do {

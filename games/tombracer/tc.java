@@ -92,7 +92,7 @@ class tc extends lu {
         if (null != RoomViewRenderer.field_c) {
           RoomViewRenderer.field_c.b(param1 + 74, param0);
         }
-        hs.a(param0, (byte) -91);
+        TextureFilter.a(param0, (byte) -91);
     }
 
     final static void a(int param0, int param1) {

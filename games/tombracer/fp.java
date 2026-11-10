@@ -119,7 +119,7 @@ final class fp {
         ara.field_vb = SpriteData.loadSprite(param2, "", "hud_score");
         tla.field_g = SpriteData.loadSprite(param2, "", "hud_room");
         wd.field_c = SpriteData.loadSprite(param2, "", "hud_timer");
-        lha.field_l = SpriteData.loadSprite(param2, "", "hud_timer_head");
+        LegacyOpenGlTexture3D.field_l = SpriteData.loadSprite(param2, "", "hud_timer_head");
         wj.field_a = SpriteData.loadSprite(param2, "", "hud_timer_jaw");
         ProxySocketConnector.field_e = SpriteData.loadSheet(param2, "", "hud_sand");
         via.field_a = new SpriteData[3];
@@ -154,7 +154,7 @@ final class fp {
         int incrementValue$5 = param1;
         param1++;
         var16_ref.a(incrementValue$5, (byte) 47, param0);
-        hoa.field_l = SpriteData.loadSprite(param2, "", "silhoutte");
+        LegacyOpenGlCubeTexture.field_l = SpriteData.loadSprite(param2, "", "silhoutte");
         baa.field_g = SpriteData.loadSprite(param2, "", "slab_small1");
         FullscreenConfirmationDialog.field_O = SpriteData.loadSprite(param2, "", "slab_small2");
         WaveformOperator.field_q = SpriteData.loadSprite(param2, "", "slab_small3");
@@ -193,7 +193,7 @@ final class fp {
           SocketArchiveNetworkClient.field_s = SpriteData.loadSprite(param2, "", "medal_bronze");
           var11 = SpriteData.loadSheet(param2, "", "mugshots");
           var12 = SpriteData.loadSheet(param2, "", "hud_icons");
-          qk.field_u = var12[1];
+          LegacyOpenGlSpriteTexture.field_u = var12[1];
           mp.field_d = var12[1];
           nk.field_k = new SpriteData[13];
           var13 = 0;
@@ -322,7 +322,7 @@ final class fp {
               var1_int = var1_int + (nt.field_d + GasVentModel.field_p + mha.field_C);
             } else {
               ConsoleValue.field_c.c(var6, var8Lifetime1, var1_int + vi.field_a, var5, -1);
-              var1_int = var1_int + f.field_b;
+              var1_int = var1_int + ComponentTargetList.field_b;
             }
           }
           return;

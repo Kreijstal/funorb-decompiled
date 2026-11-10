@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ee implements isa {
+final class ee implements WidgetPainter {
     static volatile int field_a;
 
-    public final void a(UiWidget param0, int param1, int param2, int param3, boolean param4) {
+    public final void paintWidget(UiWidget param0, int param1, int param2, int param3, boolean param4) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;

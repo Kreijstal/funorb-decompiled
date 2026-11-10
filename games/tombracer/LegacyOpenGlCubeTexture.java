@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hoa extends kl {
+final class LegacyOpenGlCubeTexture extends LegacyOpenGlTexture {
     static String field_n;
     private int field_q;
     static boolean field_p;
@@ -9,24 +9,24 @@ final class hoa extends kl {
     static SpriteData field_l;
     private int field_o;
 
-    public final void a(int param0) {
+    public final void detachFramebuffer(int param0) {
         jaggl.OpenGL.glFramebufferTexture2DEXT(this.field_o, this.field_q, 3553, 0, 0);
         this.field_q = -1;
         int var2 = 81 % ((14 - param0) / 56);
         this.field_o = -1;
     }
 
-    hoa(OpenGlToolkit param0, int param1, int param2, boolean param3, byte[][] param4, int param5) {
+    LegacyOpenGlCubeTexture(OpenGlToolkit param0, int param1, int param2, boolean param3, byte[][] param4, int param5) {
         super(param0, 34067, param1, 6 * param2 * param2, param3);
         int var7_int = 0;
         this.field_q = -1;
         this.field_o = -1;
         try {
-          this.field_h.a(true, (kl) (this));
+          this.toolkit.a(true, (LegacyOpenGlTexture) (this));
           for (var7_int = 0; var7_int < 6; var7_int++) {
-            jaggl.OpenGL.glTexImage2Dub(var7_int + 34069, 0, this.field_c, param2, param2, 0, param5, 5121, param4[var7_int], 0);
+            jaggl.OpenGL.glTexImage2Dub(var7_int + 34069, 0, this.internalFormat, param2, param2, 0, param5, 5121, param4[var7_int], 0);
           }
-          this.b(true, 3);
+          this.setLinearFiltering(true, 3);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hoa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }

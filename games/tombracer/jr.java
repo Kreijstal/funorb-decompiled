@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jr implements isa {
+final class jr implements WidgetPainter {
     private BitmapFont field_k;
     static String[] gunshotDeathMessages;
     private int field_d;
@@ -16,7 +16,7 @@ final class jr implements isa {
     private int field_b;
     private int field_m;
 
-    public final void a(UiWidget param0, int param1, int param2, int param3, boolean param4) {
+    public final void paintWidget(UiWidget param0, int param1, int param2, int param3, boolean param4) {
         UiWidget stackIn_5_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;

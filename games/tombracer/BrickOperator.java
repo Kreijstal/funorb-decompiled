@@ -288,7 +288,7 @@ final class BrickOperator extends TextureOperator {
           var16 = this.field_u[-1 + var7];
           if (var16 + this.field_m < var9 &&
             var15 - this.field_m > var9) {
-            for (var4 = 0; var4 < ns.textureWidth; var4++) {
+            for (var4 = 0; var4 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var4++) {
               if (var12 != 0) {
                 stackIn_23_0 = this.field_z;
               } else {
@@ -319,7 +319,7 @@ final class BrickOperator extends TextureOperator {
               }
             }
           } else {
-            ArrayUtils.fill(var19, 0, ns.textureWidth, 0);
+            ArrayUtils.fill(var19, 0, LegacyOpenGlTurbulentTextureEffect.textureWidth, 0);
           }
         }
         return var3;

@@ -3,7 +3,7 @@
  */
 final class OpenGlFont extends GameFont {
     private boolean field_g;
-    private qk field_d;
+    private LegacyOpenGlSpriteTexture field_d;
     private OpenGlToolkit field_e;
     private tla field_f;
 
@@ -29,7 +29,7 @@ final class OpenGlFont extends GameFont {
 
     final void drawMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7) {
         au var9;
-        qk var10;
+        LegacyOpenGlSpriteTexture var10;
         float var11;
         float var12;
         var9 = (au) (param5);
@@ -63,7 +63,7 @@ final class OpenGlFont extends GameFont {
         jaggl.OpenGL.glDisable(3169);
         this.field_e.setTextureCombineOperands(0, 0, 5890, 768);
         this.field_e.setTextureCombineOperations(8448, 8960, 8448);
-        this.field_e.a(true, (kl) null);
+        this.field_e.a(true, (LegacyOpenGlTexture) null);
         this.field_e.e(0, true);
         if (this.field_g ||
           param4) {
@@ -235,7 +235,7 @@ final class OpenGlFont extends GameFont {
           this.field_d = jq.a(var30, 6406, (byte) 67, 6406, param0, var6Lifetime1, false, var6Lifetime1);
           this.field_g = true;
         }
-        this.field_d.b(false, 3);
+        this.field_d.setLinearFiltering(false, 3);
         this.field_f = new tla(param0, 256);
         var7 = this.field_d.field_r / (float)this.field_d.field_t;
         var8 = this.field_d.field_v / (float)this.field_d.field_s;

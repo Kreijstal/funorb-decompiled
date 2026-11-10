@@ -91,7 +91,7 @@ final class KeySwitchComponent extends SwitchComponent {
         }
     }
 
-    final int B(int param0) {
+    final int getMaxTargets(int param0) {
         if (param0 != 31609) {
           return 57;
         }
@@ -109,7 +109,7 @@ final class KeySwitchComponent extends SwitchComponent {
         }
     }
 
-    final boolean r(byte param0) {
+    final boolean hasInitialState(byte param0) {
         if (param0 != 93) {
           field_M = (String) null;
           return false;

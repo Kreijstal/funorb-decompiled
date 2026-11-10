@@ -6,7 +6,7 @@ final class tw {
     int field_M;
     private SoftwareGraphicsToolkit field_z;
     static String field_g;
-    pna field_u;
+    SoftwareTransform3D field_u;
     boolean field_h;
     static byte[][] field_f;
     int field_L;
@@ -127,7 +127,7 @@ final class tw {
         this.field_L = 0;
         this.field_h = false;
         this.field_n = true;
-        this.field_u = new pna();
+        this.field_u = new SoftwareTransform3D();
         this.field_p = new int[Model.field_q];
         this.field_d = new float[2];
         this.field_G = new int[Model.field_q];

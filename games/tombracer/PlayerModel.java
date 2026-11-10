@@ -42,12 +42,12 @@ final class PlayerModel implements PlayerAnimator, gs {
         if (param1 <= 119) {
           PlayerModel.isNameSeparator(2, 'ﾇ');
         }
-        rpa.a(3, true, param2, 192, wga.field_a[this.field_i], param0);
+        LegacyOpenGlEnvironmentWaterEffect.a(3, true, param2, 192, wga.field_a[this.field_i], param0);
         pa.a(3, param0, wga.field_a[this.field_i], param2, false);
     }
 
     public final void updateAnimation(int param0) {
-        if (this.field_p.l(false)) {
+        if (this.field_p.isInvulnerable(false)) {
           return;
         }
         if (null == this.field_c) {
@@ -155,7 +155,7 @@ final class PlayerModel implements PlayerAnimator, gs {
                     break regionExit1;
                   }
                 }
-                var7 = this.field_p.H(0);
+                var7 = this.field_p.getFacingOctant(0);
                 if (var7 == 6) {
                   var6 = 1835008;
                   if (var16 == 0) {
@@ -512,7 +512,7 @@ final class PlayerModel implements PlayerAnimator, gs {
             if (this.field_f != 0 &&
               this.field_f != 5 &&
               23 != this.field_f) {
-              var10 = this.field_p.H(0);
+              var10 = this.field_p.getFacingOctant(0);
               var4 = 3;
               if (6 == var10) {
                 var4 = 32;
@@ -532,7 +532,7 @@ final class PlayerModel implements PlayerAnimator, gs {
             {
               var4 = 3;
               var10 = 26;
-              var11 = this.field_p.H(0);
+              var11 = this.field_p.getFacingOctant(0);
               var6 = this.field_c.a(this.field_j, (byte) 66, 0, var10);
               if (var11 == 6) {
                 var4 = 32;
@@ -808,7 +808,7 @@ final class PlayerModel implements PlayerAnimator, gs {
     }
 
     public final void render(int param0, iq param1) {
-        if (this.field_p.l(false)) {
+        if (this.field_p.isInvulnerable(false)) {
           return;
         }
         if (param0 <= 103) {

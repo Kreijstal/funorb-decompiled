@@ -6,11 +6,11 @@ final class dqa extends mna {
     static jea field_e;
 
     final static jua takeRegistrationResponse(int param0) {
-        if (kl.field_a == fta.field_c) {
+        if (LegacyOpenGlTexture.field_a == fta.field_c) {
           throw new IllegalStateException();
         }
-        if (mua.field_a == kl.field_a) {
-          kl.field_a = fta.field_c;
+        if (mua.field_a == LegacyOpenGlTexture.field_a) {
+          LegacyOpenGlTexture.field_a = fta.field_c;
           return PlantModel.field_n;
         }
         if (param0 != 3239) {

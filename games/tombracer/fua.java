@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fua implements isa {
+final class fua implements WidgetPainter {
     static BufferedCacheFile field_b;
     static int[] field_h;
     private static String[] behaviourTypeNames;
@@ -35,7 +35,7 @@ final class fua implements isa {
         behaviourTypeNames = null;
     }
 
-    public final void a(UiWidget param0, int param1, int param2, int param3, boolean param4) {
+    public final void paintWidget(UiWidget param0, int param1, int param2, int param3, boolean param4) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;

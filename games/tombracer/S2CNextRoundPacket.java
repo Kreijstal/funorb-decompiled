@@ -127,49 +127,49 @@ final class S2CNextRoundPacket implements GamePacket {
             field_a = (ResourceArchive) null;
           }
           if (param0 == 1) {
-            stackIn_5_0 = gl.$cfr$intArgs$a$53ce4ab4c593(103, MatchScoringObserver.field_e, new String[]{param1});
+            stackIn_5_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(103, MatchScoringObserver.field_e, new String[]{param1});
             return stackIn_5_0;
           }
           if (param0 == 2) {
-            stackIn_9_0 = gl.$cfr$intArgs$a$53ce4ab4c593(96, S2CRoundResultPacket.field_f, new String[]{param1});
+            stackIn_9_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(96, S2CRoundResultPacket.field_f, new String[]{param1});
             return stackIn_9_0;
           }
           if (param0 == 3) {
-            stackIn_13_0 = gl.$cfr$intArgs$a$53ce4ab4c593(102, np.field_V, new String[]{param1});
+            stackIn_13_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(102, np.field_V, new String[]{param1});
             return stackIn_13_0;
           }
           if (param0 == 4) {
-            stackIn_17_0 = gl.$cfr$intArgs$a$53ce4ab4c593(117, TouchSwitchBehaviour.field_o, new String[]{param1});
+            stackIn_17_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(117, TouchSwitchBehaviour.field_o, new String[]{param1});
             return stackIn_17_0;
           }
           if (5 == param0) {
-            stackIn_21_0 = gl.$cfr$intArgs$a$53ce4ab4c593(85, TextureSampleOperator.field_o, new String[]{param1});
+            stackIn_21_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(85, TextureSampleOperator.field_o, new String[]{param1});
             return stackIn_21_0;
           }
           if (param0 == 6) {
-            stackIn_24_0 = gl.$cfr$intArgs$a$53ce4ab4c593(93, PrefabComponent.field_C, new String[]{param1});
+            stackIn_24_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(93, PrefabComponent.field_C, new String[]{param1});
             return stackIn_24_0;
           }
           if (param0 == 7) {
-            stackIn_27_0 = gl.$cfr$intArgs$a$53ce4ab4c593(110, TrackMountComponent.field_H, new String[]{param1});
+            stackIn_27_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(110, TrackMountComponent.field_H, new String[]{param1});
             return stackIn_27_0;
           }
           if (8 == param0) {
-            stackIn_30_0 = gl.$cfr$intArgs$a$53ce4ab4c593(125, Locomotor.field_m, new String[]{param1});
+            stackIn_30_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(125, Locomotor.field_m, new String[]{param1});
             return stackIn_30_0;
           }
           if (11 == param0) {
-            stackIn_33_0 = gl.$cfr$intArgs$a$53ce4ab4c593(112, LegacySwitchModel.field_m, new String[]{param1});
+            stackIn_33_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(112, LegacySwitchModel.field_m, new String[]{param1});
             return stackIn_33_0;
           }
           if (12 == param0) {
-            stackIn_37_0 = gl.$cfr$intArgs$a$53ce4ab4c593(82, TestModel.field_p, new String[]{param1});
+            stackIn_37_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(82, TestModel.field_p, new String[]{param1});
             return stackIn_37_0;
           }
           if (param0 != 13) {
             return null;
           }
-          stackIn_41_0 = gl.$cfr$intArgs$a$53ce4ab4c593(96, DoorwayModel.field_n, new String[]{param1});
+          stackIn_41_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(96, DoorwayModel.field_n, new String[]{param1});
           return stackIn_41_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

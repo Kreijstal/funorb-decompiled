@@ -23,7 +23,7 @@ final class S2CPlayerProfilePacket implements GamePacket {
         if (null == MenuEntry.field_j) {
           return;
         }
-        int var2 = (int)(qk.field_w[param1] * 20000.0);
+        int var2 = (int)(LegacyOpenGlSpriteTexture.field_w[param1] * 20000.0);
         if (var2 == 0) {
           var2 = 1;
         }

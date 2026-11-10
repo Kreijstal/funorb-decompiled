@@ -158,7 +158,7 @@ final class qna {
               SpriteTileOperator.field_w[1] = 5;
             }
           } else {
-            var3_int = LegacyRidgedWaterNoise.a(ConsoleValue.field_c, gl.$cfr$intArgs$a$53ce4ab4c593(96, rr.field_G, new String[]{"<br><%0><br>"}), rg.field_z, 1, lra.field_c);
+            var3_int = LegacyRidgedWaterNoise.a(ConsoleValue.field_c, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(96, rr.field_G, new String[]{"<br><%0><br>"}), rg.field_z, 1, lra.field_c);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(lra.field_c[var5])) {
@@ -175,7 +175,7 @@ final class qna {
             ToggleMusicChannelCommand.field_o = new String[-var4 + var3_int - 1];
             ArrayUtils.copy(lra.field_c, var4 + 1, ToggleMusicChannelCommand.field_o, 0, -1 + (-var4 + var3_int));
             var4 = -1;
-            var3_int = LegacyRidgedWaterNoise.a(ConsoleValue.field_c, gl.$cfr$intArgs$a$53ce4ab4c593(89, lqa.field_g, new String[]{"<br><%0><br>"}), rg.field_z, 1, lra.field_c);
+            var3_int = LegacyRidgedWaterNoise.a(ConsoleValue.field_c, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(89, lqa.field_g, new String[]{"<br><%0><br>"}), rg.field_z, 1, lra.field_c);
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(lra.field_c[var5])) {
                 continue;
@@ -281,7 +281,7 @@ final class qna {
             if (CoinItemComponent.field_H[var4Lifetime2] >= 0) {
               stackIn_111_1 = nt.field_d;
             } else {
-              stackIn_111_1 = f.field_b;
+              stackIn_111_1 = ComponentTargetList.field_b;
             }
             hg.field_f = stackIn_110_0 + stackIn_111_1;
           }
@@ -305,7 +305,7 @@ final class qna {
               var5Lifetime3 = var5Lifetime3 + (nt.field_d + ((GasVentModel.field_p << 1) + mha.field_C));
               TripBeamComponent.field_K[var4Lifetime3][3] = nt.field_d + (GasVentModel.field_p << 1);
             } else {
-              var5Lifetime3 = var5Lifetime3 + f.field_b;
+              var5Lifetime3 = var5Lifetime3 + ComponentTargetList.field_b;
             }
             var4Lifetime3++;
           }

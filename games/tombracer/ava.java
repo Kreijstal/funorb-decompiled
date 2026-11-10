@@ -228,11 +228,11 @@ final class ava {
               var12.field_Kb.field_ab = var24_int;
               if (param0 != tn.field_n) {
                 if (var12.field_Hb) {
-                  var12.field_Nb.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(90, hs.field_b, new String[]{var20});
+                  var12.field_Nb.field_r = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(90, TextureFilter.field_b, new String[]{var20});
                   var12.field_Cb.field_r = mq.field_d;
                 } else {
                   if (var12.field_Fb) {
-                    var12.field_Nb.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(105, uaa.field_c, new String[]{var20});
+                    var12.field_Nb.field_r = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(105, uaa.field_c, new String[]{var20});
                     var12.field_Kb.field_r = r.field_l;
                     var12.field_Cb.field_r = sv.field_q;
                   } else {
@@ -329,9 +329,9 @@ final class ava {
                   if (var7 > var12.field_zb) {
                     var25_int = var7 - var12.field_zb;
                     if (var25_int == 1) {
-                      var24Lifetime2 = rpa.field_c;
+                      var24Lifetime2 = LegacyOpenGlEnvironmentWaterEffect.field_c;
                     }
-                    var24Lifetime2 = gl.$cfr$intArgs$a$53ce4ab4c593(92, WaveformOperator.field_r, new String[]{null, Integer.toString(var25_int)});
+                    var24Lifetime2 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(92, WaveformOperator.field_r, new String[]{null, Integer.toString(var25_int)});
                     var30Lifetime1 = var24Lifetime2;
                     var25 = var30Lifetime1;
                     var24Lifetime2 = var25;
@@ -350,36 +350,36 @@ final class ava {
                         }
                       }
                     } else {
-                      var24Lifetime2 = gl.$cfr$intArgs$a$53ce4ab4c593(95, TileGrid.field_k, new String[]{null, Integer.toString(var6)});
+                      var24Lifetime2 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(95, TileGrid.field_k, new String[]{null, Integer.toString(var6)});
                     }
                   }
                 }
               } else {
                 if (var5_int != 0 &&
                   !var12.field_tb) {
-                  var24Lifetime2 = gl.$cfr$intArgs$a$53ce4ab4c593(96, MatchPhase.field_g, new String[]{var20});
+                  var24Lifetime2 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(96, MatchPhase.field_g, new String[]{var20});
                 } else {
                   if (var7 <= var12.field_zb) {
                     if (var12.field_Jb >= var6) {
                       if ((var8 & ~var12.field_Eb) != 0) {
                         var25_int = WidgetContainer.highestOneBit(~var12.field_Eb & var8, (byte) -125);
-                        var24Lifetime2 = gl.$cfr$intArgs$a$53ce4ab4c593(86, TrackMountComponent.field_I, new String[]{var20});
+                        var24Lifetime2 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(86, TrackMountComponent.field_I, new String[]{var20});
                         if (var25_int > 0 &&
                           null != BitPacketBuffer.field_l &&
                           var25_int <= BitPacketBuffer.field_l.length &&
                           null != BitPacketBuffer.field_l[-1 + var25_int]) {
-                          var24Lifetime2 = gl.$cfr$intArgs$a$53ce4ab4c593(121, BitPacketBuffer.field_l[var25_int - 1][2], new String[]{var20});
+                          var24Lifetime2 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(121, BitPacketBuffer.field_l[var25_int - 1][2], new String[]{var20});
                         }
                       }
                     } else {
-                      var24Lifetime2 = gl.$cfr$intArgs$a$53ce4ab4c593(118, SocketArchiveNetworkClient.field_r, new String[]{var20, Integer.toString(var6)});
+                      var24Lifetime2 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(118, SocketArchiveNetworkClient.field_r, new String[]{var20, Integer.toString(var6)});
                     }
                   } else {
                     var25_int = -var12.field_zb + var7;
                     if (1 == var25_int) {
-                      var24Lifetime2 = gl.$cfr$intArgs$a$53ce4ab4c593(115, FlagSet.field_d, new String[]{var20});
+                      var24Lifetime2 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(115, FlagSet.field_d, new String[]{var20});
                     }
-                    var24Lifetime2 = gl.$cfr$intArgs$a$53ce4ab4c593(97, td.field_q, new String[]{var20, Integer.toString(var25_int)});
+                    var24Lifetime2 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(97, td.field_q, new String[]{var20, Integer.toString(var25_int)});
                   }
                 }
               }
@@ -448,7 +448,7 @@ final class ava {
                 if (tn.field_n == param0 &&
                   ComponentMount.b(param4 ^ 8194)) {
                   if (var26Lifetime1 == 0) {
-                    var24Lifetime2 = var34 + "<br>" + gl.$cfr$intArgs$a$53ce4ab4c593(114, IdolItemComponent.field_I, new String[]{(String) (var25)});
+                    var24Lifetime2 = var34 + "<br>" + LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(114, IdolItemComponent.field_I, new String[]{(String) (var25)});
                   } else {
                     var24Lifetime2 = var34 + "<br>" + ArchiveNetworkClient.field_l + (String) (var25);
                   }
@@ -456,13 +456,13 @@ final class ava {
                   if (var26Lifetime1 != 0) {
                     var24Lifetime2 = var34 + "<br>" + baa.field_f + (String) (var25);
                   } else {
-                    var24Lifetime2 = var34 + "<br>" + gl.$cfr$intArgs$a$53ce4ab4c593(125, FlameShooterComponent.field_K, new String[]{(String) (var25)});
+                    var24Lifetime2 = var34 + "<br>" + LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(125, FlameShooterComponent.field_K, new String[]{(String) (var25)});
                   }
                 }
                 if (tn.field_n == param0 &&
                   !ComponentMount.b(8192)) {
                   var27 = C2SChooseRewardPacket.field_a.field_tb;
-                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + gl.$cfr$intArgs$a$53ce4ab4c593(102, C2SSubmitSettingsPacket.field_c, new String[]{var27});
+                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(102, C2SSubmitSettingsPacket.field_c, new String[]{var27});
                 }
                 ArchiveNetworkClient.field_b = (String) (var24Lifetime2);
               }

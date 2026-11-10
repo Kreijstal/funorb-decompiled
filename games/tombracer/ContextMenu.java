@@ -30,7 +30,7 @@ final class ContextMenu extends jea {
         int var8Lifetime1;
         var11 = TombRacer.field_G ? 1 : 0;
         if (this.field_zb == 0) {
-          this.field_Db[this.field_zb] = new tv(0L, (jea) null, (jea) null, this.field_ub, (Sprite) null, ns.field_c);
+          this.field_Db[this.field_zb] = new tv(0L, (jea) null, (jea) null, this.field_ub, (Sprite) null, LegacyOpenGlTurbulentTextureEffect.field_c);
           this.field_Db[this.field_zb].field_bb = 1;
           this.b(-128, this.field_Db[this.field_zb]);
           this.field_Fb[this.field_zb] = -1;

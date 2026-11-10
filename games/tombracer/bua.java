@@ -32,16 +32,16 @@ final class bua {
           this.field_e = param4;
           if (null != this.field_k) {
             this.field_k.a((byte) -105);
-            this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
+            this.field_k.a(LegacyOpenGlUnlitEffect.a(param1 ^ -2, param0, param2, param4), -30988);
             return;
           }
           if (this.field_l <= 0) {
             this.field_k = new cra();
-            this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
+            this.field_k.a(LegacyOpenGlUnlitEffect.a(param1 ^ -2, param0, param2, param4), -30988);
             return;
           }
           this.field_k = new cra(this.field_l);
-          this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
+          this.field_k.a(LegacyOpenGlUnlitEffect.a(param1 ^ -2, param0, param2, param4), -30988);
           return;
         }
         if (param4 != this.field_e) {
@@ -50,16 +50,16 @@ final class bua {
           this.field_e = param4;
           if (null != this.field_k) {
             this.field_k.a((byte) -105);
-            this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
+            this.field_k.a(LegacyOpenGlUnlitEffect.a(param1 ^ -2, param0, param2, param4), -30988);
             return;
           }
           if (this.field_l <= 0) {
             this.field_k = new cra();
-            this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
+            this.field_k.a(LegacyOpenGlUnlitEffect.a(param1 ^ -2, param0, param2, param4), -30988);
             return;
           }
           this.field_k = new cra(this.field_l);
-          this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
+          this.field_k.a(LegacyOpenGlUnlitEffect.a(param1 ^ -2, param0, param2, param4), -30988);
           return;
         }
         if (param2 != this.field_a) {
@@ -68,16 +68,16 @@ final class bua {
           this.field_e = param4;
           if (null != this.field_k) {
             this.field_k.a((byte) -105);
-            this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
+            this.field_k.a(LegacyOpenGlUnlitEffect.a(param1 ^ -2, param0, param2, param4), -30988);
             return;
           }
           if (this.field_l <= 0) {
             this.field_k = new cra();
-            this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
+            this.field_k.a(LegacyOpenGlUnlitEffect.a(param1 ^ -2, param0, param2, param4), -30988);
             return;
           }
           this.field_k = new cra(this.field_l);
-          this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
+          this.field_k.a(LegacyOpenGlUnlitEffect.a(param1 ^ -2, param0, param2, param4), -30988);
           return;
         }
         if (param0 == this.field_j) {
@@ -88,16 +88,16 @@ final class bua {
         this.field_e = param4;
         if (null != this.field_k) {
           this.field_k.a((byte) -105);
-          this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
+          this.field_k.a(LegacyOpenGlUnlitEffect.a(param1 ^ -2, param0, param2, param4), -30988);
           return;
         }
         if (this.field_l > 0) {
           this.field_k = new cra(this.field_l);
-          this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
+          this.field_k.a(LegacyOpenGlUnlitEffect.a(param1 ^ -2, param0, param2, param4), -30988);
           return;
         }
         this.field_k = new cra();
-        this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
+        this.field_k.a(LegacyOpenGlUnlitEffect.a(param1 ^ -2, param0, param2, param4), -30988);
     }
 
     final void a(int param0) {
@@ -126,11 +126,11 @@ final class bua {
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         if (param0 >= 41) {
-          this.field_k.a(tva.a(-2, param3, param2, param4), param1, 8198);
+          this.field_k.a(LegacyOpenGlUnlitEffect.a(-2, param3, param2, param4), param1, 8198);
           return;
         }
         this.a(57, -19, 81, -80, -19);
-        this.field_k.a(tva.a(-2, param3, param2, param4), param1, 8198);
+        this.field_k.a(LegacyOpenGlUnlitEffect.a(-2, param3, param2, param4), param1, 8198);
     }
 
     final boolean e(int param0) {
@@ -257,13 +257,13 @@ final class bua {
         dk var5Lifetime1;
         if (param1 != 66) {
           field_g = (jea) null;
-          var5 = tva.a(-2, param3, param0, param2);
+          var5 = LegacyOpenGlUnlitEffect.a(-2, param3, param0, param2);
           if (var5 == null) {
             return 0;
           }
           return var5.a((byte) 117, true);
         }
-        var5Lifetime1 = tva.a(-2, param3, param0, param2);
+        var5Lifetime1 = LegacyOpenGlUnlitEffect.a(-2, param3, param0, param2);
         if (var5Lifetime1 == null) {
           return 0;
         }

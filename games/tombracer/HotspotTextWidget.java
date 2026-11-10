@@ -47,7 +47,7 @@ class HotspotTextWidget extends FocusableWidget {
         return null;
     }
 
-    HotspotTextWidget(String param0, isa param1) {
+    HotspotTextWidget(String param0, WidgetPainter param1) {
         super(param0, (WidgetListener) null);
         this.field_A = null;
         try {
@@ -137,7 +137,7 @@ class HotspotTextWidget extends FocusableWidget {
 
     final void b(int param0) {
         int var2;
-        oaa var3;
+        WidgetTextLayout var3;
         TextLayout var4;
         int var5;
         int var7;
@@ -149,7 +149,7 @@ class HotspotTextWidget extends FocusableWidget {
         int var14;
         int var16;
         Object var17;
-        oaa var17_ref;
+        WidgetTextLayout var17_ref;
         String var21;
         TextLayout var22;
         kha var23;
@@ -163,7 +163,7 @@ class HotspotTextWidget extends FocusableWidget {
         TextLayout var27;
         kha var28;
         bm var29;
-        oaa var30;
+        WidgetTextLayout var30;
         int var2Lifetime1;
         int var5Lifetime1;
         int var7Lifetime1;
@@ -181,7 +181,7 @@ class HotspotTextWidget extends FocusableWidget {
         if (param0 == 18758) {
           this.field_D = new IntrusiveDeque();
           var2 = 0;
-          var30 = (oaa) ((Object) this.field_r);
+          var30 = (WidgetTextLayout) ((Object) this.field_r);
           var27 = var30.ensureTextLayout((UiWidget) (this), 14157);
           while (true) {
             var5 = this.field_o.indexOf("<hotspot=", var2);
@@ -213,7 +213,7 @@ class HotspotTextWidget extends FocusableWidget {
                 stackIn_32_0 = var27.a((byte) -59, var2);
               }
               var14 = stackIn_32_0;
-              var29 = new bm(var7Lifetime2, var13, var28.field_d, var14 - var13, Math.max(var30.a((byte) -90), var28.field_b - var28.field_d));
+              var29 = new bm(var7Lifetime2, var13, var28.field_d, var14 - var13, Math.max(var30.getLineInkHeight((byte) -90), var28.field_b - var28.field_d));
               if (var10 != null) {
                 ((bm) (var10)).field_k = var29;
               }
@@ -225,7 +225,7 @@ class HotspotTextWidget extends FocusableWidget {
         this.setBounds((byte) -56, -23, 29, 43, 2);
         this.field_D = new IntrusiveDeque();
         var2Lifetime1 = 0;
-        var17_ref = (oaa) ((Object) this.field_r);
+        var17_ref = (WidgetTextLayout) ((Object) this.field_r);
         var3 = var17_ref;
         var22 = var17_ref.ensureTextLayout((UiWidget) (this), 14157);
         var4 = var22;
@@ -259,7 +259,7 @@ class HotspotTextWidget extends FocusableWidget {
               stackIn_15_0 = var22.a((byte) -59, var2Lifetime1);
             }
             var14Lifetime1 = stackIn_15_0;
-            var24 = new bm(var7Lifetime1Lifetime1, var13Lifetime1, var23.field_d, var14Lifetime1 - var13Lifetime1, Math.max(var17_ref.a((byte) -90), var23.field_b - var23.field_d));
+            var24 = new bm(var7Lifetime1Lifetime1, var13Lifetime1, var23.field_d, var14Lifetime1 - var13Lifetime1, Math.max(var17_ref.getLineInkHeight((byte) -90), var23.field_b - var23.field_d));
             if (var10Lifetime1 != null) {
               ((bm) (var10Lifetime1)).field_k = var24;
             }
@@ -305,10 +305,10 @@ class HotspotTextWidget extends FocusableWidget {
         if (param3 != 0) {
           return;
         }
-        oaa var5 = (oaa) ((Object) this.field_r);
+        WidgetTextLayout var5 = (WidgetTextLayout) ((Object) this.field_r);
         bm var6 = this.field_A;
         if (var6 != null) {
-          var7 = var5.a((UiWidget) (this), param0, (byte) 119);
+          var7 = var5.getTextOriginX((UiWidget) (this), param0, (byte) 119);
           var8 = var5.textTop(param1, (UiWidget) (this), (byte) -49);
           do {
             nn.a(-2 + (var7 + var6.field_g), -2 + (var8 + var6.field_l), var6.field_i + 2, 2 + var6.field_j, false);
@@ -432,7 +432,7 @@ class HotspotTextWidget extends FocusableWidget {
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
-        this.setBounds((byte) -31, param2, ((oaa) ((Object) this.field_r)).getTextWidth((byte) 105, (UiWidget) (this)), param3, param0);
+        this.setBounds((byte) -31, param2, ((WidgetTextLayout) ((Object) this.field_r)).getTextWidth((byte) 105, (UiWidget) (this)), param3, param0);
         if (param1 != -120) {
           field_B = (ResourceArchive) null;
           return;

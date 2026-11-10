@@ -32,7 +32,7 @@ final class jia implements ms {
         } else {
           stackIn_8_0 = (!VerticalScrollbar.field_tb[hra.field_b]) ? 1627324416 : 805371648;
         }
-        qk.a(stackIn_8_0, tga.field_a, param0, param1 ^ 20688, this.a(-8660), 20 + this.a(false), 16, -10 + param2);
+        LegacyOpenGlSpriteTexture.a(stackIn_8_0, tga.field_a, param0, param1 ^ 20688, this.a(-8660), 20 + this.a(false), 16, -10 + param2);
         if (!VerticalScrollbar.field_tb[hra.field_b] &&
           this.field_b.field_b) {
           SingleChildWidget.field_v.a((aa) null, this.a(false), 0, 0, param0, -1, (int[]) null, 1, -16711423, pg.field_A, (byte) -122, this.a(false), 0, (ToolkitSprite[]) null, param2, 1);

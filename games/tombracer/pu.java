@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pu implements isa {
+final class pu implements WidgetPainter {
     static int[] field_a;
     static int field_b;
 
@@ -17,7 +17,7 @@ final class pu implements isa {
           var2 = "tuhstatbut";
           var3 = "rvnadlm";
           var4 = -1L;
-          lha.a(var3, var2, (byte) 117, var4, param0);
+          LegacyOpenGlTexture3D.a(var3, var2, (byte) 117, var4, param0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pu.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -129,7 +129,7 @@ final class pu implements isa {
         }
     }
 
-    public final void a(UiWidget param0, int param1, int param2, int param3, boolean param4) {
+    public final void paintWidget(UiWidget param0, int param1, int param2, int param3, boolean param4) {
         try {
           if (param2 != 16777215) {
             field_a = (int[]) null;

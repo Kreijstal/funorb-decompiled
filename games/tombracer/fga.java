@@ -77,7 +77,7 @@ final class fga implements ShellListener {
                     !VerticalScrollbar.field_tb[82]) {
                     var4 = LoadLevelCommand.a(var3_int, (byte) 56);
                     stackIn_32_1 = 74;
-                    stackIn_33_2 = !(f.field_e.get(var4));
+                    stackIn_33_2 = !(ComponentTargetList.field_e.get(var4));
                     this.a((byte) stackIn_32_1, stackIn_33_2, var4);
                   }
                   var3_int++;
@@ -207,7 +207,7 @@ final class fga implements ShellListener {
             if (!this.field_c) {
               return;
             }
-            if (f.field_e == null) {
+            if (ComponentTargetList.field_e == null) {
               return;
             }
             var2_int = aq.a(-5640);
@@ -237,7 +237,7 @@ final class fga implements ShellListener {
             var3 = tga.field_a;
             var3.clear(0);
             stackIn_18_0 = 22;
-            stackIn_18_1 = f.field_e;
+            stackIn_18_1 = ComponentTargetList.field_e;
             stackIn_19_2 = !(MultiplayerLoginMenu.b(false));
             var4Lifetime1 = jk.$cfr$intArgs$a$922851b022bc(stackIn_18_0, stackIn_18_1, stackIn_19_2);
             if (param0 != 1) {
@@ -246,12 +246,12 @@ final class fga implements ShellListener {
             var5Lifetime1 = 0;
             while (true) {
               if (var5Lifetime1 >= var2_int) {
-                var5Lifetime1 = una.a(f.field_e, 20297);
+                var5Lifetime1 = una.a(ComponentTargetList.field_e, 20297);
                 stackIn_61_0 = 0;
                 break;
               }
               var6_intLifetime1 = LoadLevelCommand.a(var5Lifetime1, (byte) 95);
-              var7 = f.field_e.get(var6_intLifetime1) ? 1 : 0;
+              var7 = ComponentTargetList.field_e.get(var6_intLifetime1) ? 1 : 0;
               var8 = -10079437;
               stackIn_61_0 = var7;
               if (var10 == 0) {
@@ -316,7 +316,7 @@ final class fga implements ShellListener {
             return;
           }
           if (!toa.field_j) {
-            f.field_e = null;
+            ComponentTargetList.field_e = null;
           }
           this.field_c = true;
           this.field_d = null;

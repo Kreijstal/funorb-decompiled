@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qk extends rt {
+final class LegacyOpenGlSpriteTexture extends LegacyOpenGlTexture2D {
     static SpriteData field_u;
     static double[] field_w;
     float field_v;
@@ -9,10 +9,10 @@ final class qk extends rt {
     int field_s;
     float field_r;
 
-    qk(OpenGlToolkit param0, int param1, int param2, int param3, boolean param4, int[] param5, int param6, int param7) {
+    LegacyOpenGlSpriteTexture(OpenGlToolkit param0, int param1, int param2, int param3, boolean param4, int[] param5, int param6, int param7) {
         super(param0, param1, 6408, param2, param3, param4, param5, param6, param7, true);
         try {
-          if (this.field_e != 34037) {
+          if (this.target != 34037) {
             this.field_v = 1.0f;
             this.field_r = 1.0f;
           } else {
@@ -26,11 +26,11 @@ final class qk extends rt {
         }
     }
 
-    qk(OpenGlToolkit param0, int param1, int param2, int param3, int param4, boolean param5, byte[] param6, int param7) {
+    LegacyOpenGlSpriteTexture(OpenGlToolkit param0, int param1, int param2, int param3, int param4, boolean param5, byte[] param6, int param7) {
         super(param0, param1, param2, param3, param4, param5, param6, param7, true);
         try {
           this.field_s = param4;
-          if (this.field_e != 34037) {
+          if (this.target != 34037) {
             this.field_r = 1.0f;
             this.field_v = 1.0f;
           } else {
@@ -43,15 +43,15 @@ final class qk extends rt {
         }
     }
 
-    qk(OpenGlToolkit param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int param7) {
+    LegacyOpenGlSpriteTexture(OpenGlToolkit param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int param7) {
         super(param0, 3553, param1, param4, param5);
         try {
           this.field_t = param2;
           this.field_s = param3;
-          this.a(0, 0, param3, 0, 0, param6, -24575, param2, param7, true);
+          this.uploadBytes(0, 0, param3, 0, 0, param6, -24575, param2, param7, true);
           this.field_r = (float)param2 / (float)param4;
           this.field_v = (float)param3 / (float)param5;
-          this.a(false, false, -3554);
+          this.setWrap(false, false, -3554);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "qk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
@@ -61,19 +61,19 @@ final class qk extends rt {
         field_u = null;
         field_w = null;
         if (param0 < 80) {
-          qk.h(-13);
+          LegacyOpenGlSpriteTexture.h(-13);
         }
     }
 
-    qk(OpenGlToolkit param0, int param1, int param2, int param3, int param4, int[] param5) {
+    LegacyOpenGlSpriteTexture(OpenGlToolkit param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, 3553, 6408, param3, param4);
         try {
           this.field_s = param2;
           this.field_t = param1;
-          this.a(0, 0, param2, param1, 0, param5, (byte) 68, true, 0);
+          this.uploadInts(0, 0, param2, param1, 0, param5, (byte) 68, true, 0);
           this.field_r = (float)param1 / (float)param3;
           this.field_v = (float)param2 / (float)param4;
-          this.a(false, false, -3554);
+          this.setWrap(false, false, -3554);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "qk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
@@ -82,7 +82,7 @@ final class qk extends rt {
     final static void a(int param0, GraphicsToolkit param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           if (param3 < 34) {
-            qk.h(-73);
+            LegacyOpenGlSpriteTexture.h(-73);
           }
           RasterBuffer.a(param7, 2, param1, param6, param2, param5, param0, 1, param4);
         } catch (RuntimeException runtimeException) {

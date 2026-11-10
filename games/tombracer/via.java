@@ -106,17 +106,17 @@ final class via extends java.awt.Canvas implements java.awt.event.FocusListener 
             return;
           }
           var11 = tga.field_a.e();
-          var11.a();
+          var11.setIdentity();
           if (param2 != 0) {
-            var11.c(param2 << 3);
+            var11.rotateX(param2 << 3);
           }
           if (0 != param1) {
-            var11.d(param1 << 3);
+            var11.rotateY(param1 << 3);
           }
           if (param7 != 0) {
-            var11.b(param7 << 3);
+            var11.rotateZ(param7 << 3);
           }
-          var11.a(param4 >> 14, -param3 >> 14, -param5 >> 14);
+          var11.translate(param4 >> 14, -param3 >> 14, -param5 >> 14);
           try {
             if (ica.field_a) {
               param0.a(var11, (el) null, 0);

@@ -49,7 +49,7 @@ final class BoxBlurOperator extends TextureOperator {
           var8 = var17;
           for (var9 = param1 - this.field_m; var9 <= this.field_m + param1; var9++) {
             var10_ref_int__ = this.getInputMonochromeRow(0, -98, hba.textureHeightMask & var9);
-            var18 = new int[ns.textureWidth];
+            var18 = new int[LegacyOpenGlTurbulentTextureEffect.textureWidth];
             var16 = var18;
             var11_ref_int__ = var16;
             var12 = 0;
@@ -58,7 +58,7 @@ final class BoxBlurOperator extends TextureOperator {
             }
             var15 = 0;
             var13Lifetime1 = var15;
-            while (var15 < ns.textureWidth) {
+            while (var15 < LegacyOpenGlTurbulentTextureEffect.textureWidth) {
               var11_ref_int__[var15] = var7 * var12 >> 16;
               var12 = var12 - var10_ref_int__[una.textureWidthMask & -this.field_n + var15];
               var15++;
@@ -66,7 +66,7 @@ final class BoxBlurOperator extends TextureOperator {
             }
             var8[-param1 + (var9 + this.field_m)] = var18;
           }
-          for (var9Lifetime1 = 0; ns.textureWidth > var9Lifetime1; var9Lifetime1++) {
+          for (var9Lifetime1 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var9Lifetime1; var9Lifetime1++) {
             var10 = 0;
             for (var11 = 0; var4 > var11; var11++) {
               var10 = var10 + var19[var11][var9Lifetime1];
@@ -128,7 +128,7 @@ final class BoxBlurOperator extends TextureOperator {
           var8 = var30;
           for (var9_int = param0 - this.field_m; this.field_m + param0 >= var9_int; var9_int++) {
             var46 = this.getInputColourRow(hba.textureHeightMask & var9_int, 0, -1);
-            var50 = new int[3][ns.textureWidth];
+            var50 = new int[3][LegacyOpenGlTurbulentTextureEffect.textureWidth];
             var12 = 0;
             var13 = 0;
             var14 = 0;
@@ -145,7 +145,7 @@ final class BoxBlurOperator extends TextureOperator {
             var19 = var50[1];
             var20 = var50[2];
             var21 = 0;
-            while (ns.textureWidth > var21) {
+            while (LegacyOpenGlTurbulentTextureEffect.textureWidth > var21) {
               var18[var21] = var12 * var7 >> 16;
               var19[var21] = var13 * var7 >> 16;
               var20[var21] = var7 * var14 >> 16;
@@ -164,7 +164,7 @@ final class BoxBlurOperator extends TextureOperator {
           var9 = var37[0];
           var10 = var37[1];
           var11 = var37[2];
-          for (var12Lifetime1 = 0; ns.textureWidth > var12Lifetime1; var12Lifetime1++) {
+          for (var12Lifetime1 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var12Lifetime1; var12Lifetime1++) {
             var13Lifetime1 = 0;
             var14Lifetime1 = 0;
             var15 = 0;

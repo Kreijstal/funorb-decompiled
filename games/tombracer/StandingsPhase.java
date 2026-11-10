@@ -200,7 +200,7 @@ final class StandingsPhase extends MatchPhase {
             if (!this.matchState.hasResigned((byte) -102, var22)) {
               var13 = 7829367;
               if (-2 != this.matchState.declaredWinner) {
-                SocketConnector.a(gl.$cfr$intArgs$a$53ce4ab4c593(93, WallCrusherComponent.field_K.toUpperCase(), new String[]{Integer.toString(this.matchState.roundWins[var22])}).toUpperCase(), 1, kn.field_p, var13, 16, 60, 1, var10 - 243, -50 + var11, 0, (byte) 60, 100);
+                SocketConnector.a(LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(93, WallCrusherComponent.field_K.toUpperCase(), new String[]{Integer.toString(this.matchState.roundWins[var22])}).toUpperCase(), 1, kn.field_p, var13, 16, 60, 1, var10 - 243, -50 + var11, 0, (byte) 60, 100);
               } else {
                 SocketConnector.a(DateInputWidget.field_y.toUpperCase(), 1, kn.field_p, var13, 16, 70, 1, var10 - 243, -50 + var11, 0, (byte) 60, 100);
               }
@@ -267,7 +267,7 @@ final class StandingsPhase extends MatchPhase {
             var23 = dea.a(this.matchState.getSimulationTick((byte) 115, this.screen.localPlayerIndex), (byte) -8);
             MembersUpsellMenu.a(cc.field_l.toUpperCase() + " " + var23.toUpperCase(), 2431750, kn.field_p, -1, 48 + var4, var3 - 120, -1);
             za.field_g.a(-200 + var3, var4 + 60);
-            var13 = as.a(var9, 0);
+            var13 = LegacyOpenGlShoreWaveWaterEffect.a(var9, 0);
             RoomEffectTraps.a(-1, -36, var4 + 79, dea.a(var13, (byte) -8), -200 + (var3 + za.field_g.d()) + 5, kn.field_p, 2431750);
             bca.field_d.a(var3 - 110, 60 + var4);
             RoomEffectTraps.a(-1, -92, 79 + var4, dea.a(var13 + var13 / 2, (byte) -8), bca.field_d.d() + (var3 - 110) + 5, kn.field_p, 2431750);
@@ -280,7 +280,7 @@ final class StandingsPhase extends MatchPhase {
               var15 = FacePlayerLocomotor.field_p.field_p[1][0];
               var16 = -var15 + var14;
               if (var15 != 0) {
-                MembersUpsellMenu.a(gl.$cfr$intArgs$a$53ce4ab4c593(103, ItemComponent.field_F, new String[]{Integer.toString(var15).toUpperCase() + " " + ByteStorage.a(var16, -1)}), 2431750, kn.field_p, -1, 50 + var4, 120 + var3, -1);
+                MembersUpsellMenu.a(LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(103, ItemComponent.field_F, new String[]{Integer.toString(var15).toUpperCase() + " " + ByteStorage.a(var16, -1)}), 2431750, kn.field_p, -1, 50 + var4, 120 + var3, -1);
               }
               var17 = 0;
               var18 = null;
@@ -295,7 +295,7 @@ final class StandingsPhase extends MatchPhase {
               }
               if (var18 != null) {
                 var16 = var14 - var17;
-                SocketConnector.a(gl.$cfr$intArgs$a$53ce4ab4c593(121, PenaltyNotice.field_g, new String[]{Integer.toString(var17).toUpperCase() + " " + ByteStorage.a(var16, -1), (String) (var18)}), 0, kn.field_p, 2431750, 13, 50, 1, var4 + 60, var3, -1, (byte) 60, 240);
+                SocketConnector.a(LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(121, PenaltyNotice.field_g, new String[]{Integer.toString(var17).toUpperCase() + " " + ByteStorage.a(var16, -1), (String) (var18)}), 0, kn.field_p, 2431750, 13, 50, 1, var4 + 60, var3, -1, (byte) 60, 240);
               }
             }
           }

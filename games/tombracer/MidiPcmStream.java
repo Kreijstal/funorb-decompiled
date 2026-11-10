@@ -892,7 +892,7 @@ class MidiPcmStream extends PcmStream {
         int var5 = -31 % ((-47 - param1) / 56);
     }
 
-    final synchronized int a() {
+    final synchronized int activity() {
         return 0;
     }
 

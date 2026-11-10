@@ -73,7 +73,7 @@ final class epa extends MenuScreen {
             }
             if (var3_int != 0) {
               if (gj.field_r) {
-                param2 = gl.$cfr$intArgs$a$53ce4ab4c593(94, nka.field_a, new String[]{param2});
+                param2 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(94, nka.field_a, new String[]{param2});
               }
               if (S2CProfileUpdatePacket.field_d) {
                 param2 = KeySwitchComponent.field_K;

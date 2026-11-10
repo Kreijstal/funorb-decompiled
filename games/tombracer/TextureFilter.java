@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hs {
+final class TextureFilter {
     private static int[] field_a;
     static String field_b;
     static float field_c;
@@ -47,7 +47,7 @@ final class hs {
 
     public static void a(int param0) {
         if (param0 != 32768) {
-          hs.a(false, (byte) -65);
+          TextureFilter.a(false, (byte) -65);
         }
         field_b = null;
         field_d = null;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bsa implements isa {
+final class bsa implements WidgetPainter {
     private int field_e;
     private int field_b;
     private int field_g;
@@ -22,7 +22,7 @@ final class bsa implements isa {
         }
     }
 
-    public final void a(UiWidget param0, int param1, int param2, int param3, boolean param4) {
+    public final void paintWidget(UiWidget param0, int param1, int param2, int param3, boolean param4) {
         rr var14 = null;
         int var7 = 0;
         int var8 = 0;

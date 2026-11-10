@@ -42,8 +42,8 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
           this.MA(this.field_c, 0, 0);
           ija.a(true, (byte) 98, false);
           this.field_h = true;
-          this.field_i = (Transform3D) ((Object) new ja());
-          this.a(new ja());
+          this.field_i = (Transform3D) ((Object) new NativeTransform3D());
+          this.a(new NativeTransform3D());
           this.createRenderContexts(1);
           this.g(0);
           if (param0 != null) {
@@ -65,7 +65,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
 
     final void a(Transform3D param0) {
         this.field_j = param0;
-        this.ma(((ja) (param0)).field_nativeid);
+        this.ma(((NativeTransform3D) (param0)).field_nativeid);
     }
 
     final RenderBuffer b(int param0, int param1) {
@@ -237,7 +237,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
     final native void setClip(int param0, int param1, int param2, int param3);
 
     final Transform3D b() {
-        return (Transform3D) ((Object) new ja());
+        return (Transform3D) ((Object) new NativeTransform3D());
     }
 
     private final boolean uploadTextureMetadata(short param0) {
@@ -405,7 +405,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
         this.field_o.clear(8);
         this.FA();
         if (this.field_h) {
-          rpa.a(true, false, true);
+          LegacyOpenGlEnvironmentWaterEffect.a(true, false, true);
           this.field_h = false;
         }
         this.g();

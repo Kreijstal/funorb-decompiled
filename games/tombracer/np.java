@@ -4855,13 +4855,13 @@ final class np extends ka {
                             var56 = (var38_ref_float__[4] * (float)var50_int + (float)var49_int * var38_ref_float__[3] + var38_ref_float__[5] * (float)var51_int) / var53;
                             var57 = (var38_ref_float__[8] * (float)var51_int + ((float)var50_int * var38_ref_float__[7] + var38_ref_float__[6] * (float)var49_int)) / var54;
                             var30 = AccountRegistrationPanel.a(var57, var56, false, var55);
-                            as.a(var36, HelloCommand.field_p, param1.field_I[var32_int], var35, var42, var37_int, var41, param1.field_b[var32_int], var30, param1.field_p[var32_int], -101, var40, var39_int, var38_ref_float__);
+                            LegacyOpenGlShoreWaveWaterEffect.a(var36, HelloCommand.field_p, param1.field_I[var32_int], var35, var42, var37_int, var41, param1.field_b[var32_int], var30, param1.field_p[var32_int], -101, var40, var39_int, var38_ref_float__);
                             var22 = HelloCommand.field_p[0];
                             var23 = HelloCommand.field_p[1];
-                            as.a(var36, HelloCommand.field_p, param1.field_I[var33_int], var35, var42, var37_int, var41, param1.field_b[var33_int], var30, param1.field_p[var33_int], -95, var40, var39_int, var38_ref_float__);
+                            LegacyOpenGlShoreWaveWaterEffect.a(var36, HelloCommand.field_p, param1.field_I[var33_int], var35, var42, var37_int, var41, param1.field_b[var33_int], var30, param1.field_p[var33_int], -95, var40, var39_int, var38_ref_float__);
                             var25 = HelloCommand.field_p[1];
                             var24 = HelloCommand.field_p[0];
-                            as.a(var36, HelloCommand.field_p, param1.field_I[var34], var35, var42, var37_int, var41, param1.field_b[var34], var30, param1.field_p[var34], -99, var40, var39_int, var38_ref_float__);
+                            LegacyOpenGlShoreWaveWaterEffect.a(var36, HelloCommand.field_p, param1.field_I[var34], var35, var42, var37_int, var41, param1.field_b[var34], var30, param1.field_p[var34], -99, var40, var39_int, var38_ref_float__);
                             var26 = HelloCommand.field_p[0];
                             var27 = HelloCommand.field_p[1];
                             break;

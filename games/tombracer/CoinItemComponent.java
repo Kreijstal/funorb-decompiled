@@ -24,7 +24,7 @@ final class CoinItemComponent extends ItemComponent {
           qpa.a(185, ll.field_g, 4, 40, 440, 126, 200);
           qpa.a(185, hh.field_c, 12, 40, 440, 124, 200);
           int var3 = -120 % ((param1 + 61) / 53);
-          qpa.a(205, ma.field_f, 7, 35, 440, 125, 200);
+          qpa.a(205, LegacyOpenGlReflectionEffect.field_f, 7, 35, 440, 125, 200);
           qpa.a(480, DateInputWidget.field_x, 8, 40, 440, 126, 200);
           qpa.a(335, mna.field_a, 9, 40, 440, 126, 200);
           qpa.a(400, gca.field_f, 10, 40, 440, 124, 200);

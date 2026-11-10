@@ -20,7 +20,7 @@ final class VerticalGradientOperator extends TextureOperator {
           var4 = this.monochromeCache.getRow((byte) -108, param1);
           var3 = var4;
           if (this.monochromeCache.rowMissed) {
-            ArrayUtils.fill(var4, 0, ns.textureWidth, sj.textureRowCoords[param1]);
+            ArrayUtils.fill(var4, 0, LegacyOpenGlTurbulentTextureEffect.textureWidth, sj.textureRowCoords[param1]);
             return var4;
           }
           return var4;
@@ -30,7 +30,7 @@ final class VerticalGradientOperator extends TextureOperator {
         if (!this.monochromeCache.rowMissed) {
           return var4Lifetime1;
         }
-        ArrayUtils.fill(var4Lifetime1, 0, ns.textureWidth, sj.textureRowCoords[param1]);
+        ArrayUtils.fill(var4Lifetime1, 0, LegacyOpenGlTurbulentTextureEffect.textureWidth, sj.textureRowCoords[param1]);
         return var4Lifetime1;
     }
 

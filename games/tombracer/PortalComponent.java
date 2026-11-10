@@ -3,7 +3,7 @@
  */
 final class PortalComponent extends PrefabComponent {
     static long[][] field_I;
-    private f field_G;
+    private ComponentTargetList field_G;
     static long[] field_H;
     private PortalBehaviour field_F;
 
@@ -65,7 +65,7 @@ final class PortalComponent extends PrefabComponent {
           return;
         }
         try {
-          this.field_G.a(param1, 120, this.getRoot((byte) -123));
+          this.field_G.encode(param1, 120, this.getRoot((byte) -123));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vka.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -73,7 +73,7 @@ final class PortalComponent extends PrefabComponent {
 
     final void w(int param0) {
         super.w(-124);
-        this.field_G.a(this.getRoot((byte) -20), false);
+        this.field_G.resolveTargets(this.getRoot((byte) -20), false);
         if (param0 >= -122) {
           this.applyDefaults((byte) -60);
         }
@@ -92,7 +92,7 @@ final class PortalComponent extends PrefabComponent {
         if (this.field_F == null) {
           return;
         }
-        Switchable[] var4 = this.field_G.a((byte) -103);
+        Switchable[] var4 = this.field_G.getSwitchables((byte) -103);
         Switchable[] var2 = var4;
         if (var4.length >= 1) {
           var3 = var4[0];
@@ -104,7 +104,7 @@ final class PortalComponent extends PrefabComponent {
 
     PortalComponent(Room param0, int param1) {
         super(param0, param1);
-        this.field_G = new f(1, 1);
+        this.field_G = new ComponentTargetList(1, 1);
     }
 
     final static boolean A(int param0) {
@@ -131,9 +131,9 @@ final class PortalComponent extends PrefabComponent {
 
     PortalComponent(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
-        this.field_G = new f(1, 1);
+        this.field_G = new ComponentTargetList(1, 1);
         try {
-          this.field_G = new f(1, 1, param0.formatVersion, param2);
+          this.field_G = new ComponentTargetList(1, 1, param0.formatVersion, param2);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

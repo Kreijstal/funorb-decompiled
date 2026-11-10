@@ -208,10 +208,10 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           mna.field_d = 4;
           var7 = jta.a((byte) 123, "largefont", param4, "lobby", param3);
           PenaltyNotice.field_f = jta.a((byte) 118, "generalfont", param4, "lobby", param3);
-          kw.field_e = jta.a((byte) 127, "chatfont", param4, "lobby", param3);
+          LegacyOpenGlRidgedWaterEffect.field_e = jta.a((byte) 127, "chatfont", param4, "lobby", param3);
           var7.a(var5, var24);
           PenaltyNotice.field_f.a(var5, var24);
-          kw.field_e.a(var5, var24);
+          LegacyOpenGlRidgedWaterEffect.field_e.a(var5, var24);
           var8 = new jea(0L, (jea) null);
           var8.field_P = di.field_a;
           var8.field_ib = 16777215;
@@ -728,7 +728,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
     void renderLayer(int param0, int param1, int param2, int param3) {
         if (param3 == 0 &&
           null != this.field_r) {
-          this.field_r.a((UiWidget) (this), param0, 16777215, param1, true);
+          this.field_r.paintWidget((UiWidget) (this), param0, 16777215, param1, true);
         }
         if (null != this.child) {
           this.child.renderLayer(this.field_i + param0, param1 + this.field_n, 0, param3);
@@ -739,7 +739,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
         }
     }
 
-    SingleChildWidget(int param0, int param1, int param2, int param3, isa param4, WidgetListener param5) {
+    SingleChildWidget(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetListener param5) {
         super(param0, param1, param2, param3, param4, param5);
     }
 

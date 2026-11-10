@@ -17,7 +17,7 @@ final class PressureSwitchComponent extends SwitchComponent {
         gqa var9 = null;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          if (pk.field_r < pna.field_q) {
+          if (pk.field_r < SoftwareTransform3D.field_q) {
             pk.field_r = pk.field_r + 1;
           }
           if (mha.field_E != gn.field_C.field_e) {
@@ -69,7 +69,7 @@ final class PressureSwitchComponent extends SwitchComponent {
         }
     }
 
-    final int B(int param0) {
+    final int getMaxTargets(int param0) {
         if (param0 != 31609) {
           return -28;
         }
@@ -284,7 +284,7 @@ final class PressureSwitchComponent extends SwitchComponent {
         }
     }
 
-    final boolean r(byte param0) {
+    final boolean hasInitialState(byte param0) {
         if (param0 != 93) {
           this.field_K = -50;
           return true;

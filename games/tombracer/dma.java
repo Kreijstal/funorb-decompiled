@@ -12,9 +12,9 @@ final class dma extends OpenGlTexture implements na {
         super.bind((byte) 121);
     }
 
-    public final void a(int param0, hs param1) {
+    public final void setFilter(int param0, TextureFilter param1) {
         try {
-          super.a(param0, param1);
+          super.setFilter(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "dma.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

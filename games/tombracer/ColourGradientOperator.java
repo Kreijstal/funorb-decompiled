@@ -426,7 +426,7 @@ final class ColourGradientOperator extends TextureOperator {
           var6 = var14[0];
           var7 = var14[1];
           var8 = var14[2];
-          for (var9 = 0; ns.textureWidth > var9; var9++) {
+          for (var9 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var9; var9++) {
             var4 = var17[var9] >> 4;
             if (var4 < 0) {
               var4 = 0;
@@ -449,7 +449,7 @@ final class ColourGradientOperator extends TextureOperator {
         var6Lifetime1 = var14[0];
         var7Lifetime1 = var14[1];
         var8Lifetime1 = var14[2];
-        for (var9Lifetime1 = 0; ns.textureWidth > var9Lifetime1; var9Lifetime1++) {
+        for (var9Lifetime1 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var9Lifetime1; var9Lifetime1++) {
           var4Lifetime1 = var17Lifetime1[var9Lifetime1] >> 4;
           if (var4Lifetime1 < 0) {
             var4Lifetime1 = 0;

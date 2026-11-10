@@ -18,7 +18,7 @@ final class SweepRotateLocomotor extends Locomotor {
           var2_int = 0;
           do {
             if (!(ContextMenu.field_Eb > var2_int)) {
-              ResultsPhase.a(ma.field_g, param0, ContextMenu.field_Eb + param0, param0 + param0, (byte) -100, kc.field_a, false);
+              ResultsPhase.a(LegacyOpenGlReflectionEffect.field_g, param0, ContextMenu.field_Eb + param0, param0 + param0, (byte) -100, kc.field_a, false);
               break;
             }
             BlockModel.field_n[var2_int + param0] = var2_int;

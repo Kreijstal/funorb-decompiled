@@ -22,7 +22,7 @@ final class sr extends WidgetContainer implements ButtonListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new FocusableWidget(param0, param2);
-          var4.field_r = (isa) ((Object) new td());
+          var4.field_r = (WidgetPainter) ((Object) new td());
           var5 = this.field_p - 2;
           if (param1 != -102) {
             this.field_B = (BitmapFont) null;
@@ -77,7 +77,7 @@ final class sr extends WidgetContainer implements ButtonListener {
     }
 
     sr(MessageDialog param0, BitmapFont param1, String param2) {
-        super(0, 0, 288, 0, (isa) null);
+        super(0, 0, 288, 0, (WidgetPainter) null);
         int var4_int = 0;
         this.field_z = 0;
         try {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class au extends aa {
-    qk field_d;
+    LegacyOpenGlSpriteTexture field_d;
 
     final static void b(boolean param0) {
         int fieldTemp$6 = 0;

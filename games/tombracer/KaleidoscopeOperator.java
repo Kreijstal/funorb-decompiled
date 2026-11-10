@@ -15,7 +15,7 @@ final class KaleidoscopeOperator extends TextureOperator {
         int[] var8 = this.monochromeCache.getRow((byte) -111, param1);
         int[] var3 = var8;
         if (this.monochromeCache.rowMissed) {
-          for (var4 = 0; ns.textureWidth > var4; var4++) {
+          for (var4 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var4; var4++) {
             this.d(var4, param1, -5455);
             var5 = this.getInputMonochromeRow(0, -70, RewardChoiceSlot.field_e);
             var8[var4] = var5[BlockModel.field_o];
@@ -102,7 +102,7 @@ final class KaleidoscopeOperator extends TextureOperator {
         } else if (-0.7853981633974483 >= (double)var6 &&
           -1.5707963267948966 <= (double)var6) {
           RewardChoiceSlot.field_e = param0;
-          BlockModel.field_o = -param1 + ns.textureWidth;
+          BlockModel.field_o = -param1 + LegacyOpenGlTurbulentTextureEffect.textureWidth;
         } else if (var6 <= 0.0f &&
           (double)var6 >= -0.7853981633974483) {
           BlockModel.field_o = param0;
@@ -110,10 +110,10 @@ final class KaleidoscopeOperator extends TextureOperator {
         } else if (0.0f <= var6 &&
           (double)var6 <= 0.7853981633974483) {
           RewardChoiceSlot.field_e = ArchiveNetworkClient.textureHeight - param1;
-          BlockModel.field_o = ns.textureWidth - param0;
+          BlockModel.field_o = LegacyOpenGlTurbulentTextureEffect.textureWidth - param0;
         } else if ((double)var6 >= 0.7853981633974483 &&
           (double)var6 <= 1.5707963267948966) {
-          BlockModel.field_o = ns.textureWidth - param1;
+          BlockModel.field_o = LegacyOpenGlTurbulentTextureEffect.textureWidth - param1;
           RewardChoiceSlot.field_e = ArchiveNetworkClient.textureHeight - param0;
         } else if ((double)var6 >= 1.5707963267948966 &&
           2.356194490192345 >= (double)var6) {
@@ -123,7 +123,7 @@ final class KaleidoscopeOperator extends TextureOperator {
           if (2.356194490192345 <= (double)var6 &&
             (double)var6 <= 3.141592653589793) {
             RewardChoiceSlot.field_e = param1;
-            BlockModel.field_o = -param0 + ns.textureWidth;
+            BlockModel.field_o = -param0 + LegacyOpenGlTurbulentTextureEffect.textureWidth;
           }
         }
         RewardChoiceSlot.field_e = RewardChoiceSlot.field_e & hba.textureHeightMask;
@@ -175,7 +175,7 @@ final class KaleidoscopeOperator extends TextureOperator {
           var4 = var13[0];
           var5 = var13[1];
           var6 = var13[2];
-          for (var7 = 0; var7 < ns.textureWidth; var7++) {
+          for (var7 = 0; var7 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var7++) {
             this.d(var7, param0, -5455);
             var14 = this.getInputColourRow(RewardChoiceSlot.field_e, 0, -1);
             var4[var7] = var14[0][BlockModel.field_o];

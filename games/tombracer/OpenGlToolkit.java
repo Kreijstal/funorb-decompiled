@@ -22,7 +22,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     private doa field_Ec;
     int field_gb;
     private hsa field_hd;
-    private uua field_Hb;
+    private LegacyOpenGlEffectManager field_Hb;
     private uv field_T;
     int field_dc;
     private cw field_L;
@@ -120,7 +120,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     private float field_xb;
     private int field_fb;
     float field_nd;
-    rt field_lc;
+    LegacyOpenGlTexture2D field_lc;
     np field_Nb;
     float field_m;
     int field_Kb;
@@ -133,7 +133,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     int field_xc;
     private String field_h;
     private float field_Cb;
-    private kl[] field_vc;
+    private LegacyOpenGlTexture[] field_vc;
     boolean field_Vc;
     boolean field_G;
     float[] field_Wb;
@@ -420,8 +420,8 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void a(boolean param0, kl param1) {
-        kl var3 = null;
+    final void a(boolean param0, LegacyOpenGlTexture param1) {
+        LegacyOpenGlTexture var3 = null;
         int var4 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -433,17 +433,17 @@ final class OpenGlToolkit extends GraphicsToolkit {
           var3 = this.field_vc[this.field_r];
           if (var3 != param1) {
             if (param1 == null) {
-              jaggl.OpenGL.glDisable(var3.field_e);
+              jaggl.OpenGL.glDisable(var3.target);
             } else {
               if (var3 != null) {
-                if (param1.field_e != var3.field_e) {
-                  jaggl.OpenGL.glDisable(var3.field_e);
-                  jaggl.OpenGL.glEnable(param1.field_e);
+                if (param1.target != var3.target) {
+                  jaggl.OpenGL.glDisable(var3.target);
+                  jaggl.OpenGL.glEnable(param1.target);
                 }
               } else {
-                jaggl.OpenGL.glEnable(param1.field_e);
+                jaggl.OpenGL.glEnable(param1.target);
               }
-              jaggl.OpenGL.glBindTexture(param1.field_e, param1.f(0));
+              jaggl.OpenGL.glBindTexture(param1.target, param1.getTextureId(0));
             }
             this.field_vc[this.field_r] = param1;
           }
@@ -502,7 +502,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           this.setLightingEnabled(81, false);
           this.setDepthTestEnabled(3742, false);
           this.setDepthWriteEnabled(false, 0);
-          this.a(true, (kl) null);
+          this.a(true, (LegacyOpenGlTexture) null);
           this.c(-2, 32677);
           this.d(1, 1);
           this.a((byte) 57, 0);
@@ -1481,7 +1481,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.c(-2, 32677);
         for (var2 = -1 + this.field_Ic; 0 <= var2; var2--) {
           this.e(var2, true);
-          this.a(true, (kl) null);
+          this.a(true, (LegacyOpenGlTexture) null);
           jaggl.OpenGL.glTexEnvi(8960, 8704, 34160);
         }
         this.setTextureCombineOperations(8448, 8960, 8448);
@@ -1910,7 +1910,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
                 this.field_T = null;
               }
             }
-            this.field_Hb = new uua(this);
+            this.field_Hb = new LegacyOpenGlEffectManager(this);
             this.v(-3159);
             this.exitFullscreen((byte) -99);
             this.a();
@@ -2042,7 +2042,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         if (param0 != 7085) {
           return true;
         }
-        return this.field_Hb.a(2147483647, 3);
+        return this.field_Hb.isSupported(2147483647, 3);
     }
 
     private final void r(int param0) {
@@ -2158,9 +2158,9 @@ final class OpenGlToolkit extends GraphicsToolkit {
           } else {
             this.e((byte) 112);
           }
-          this.field_Hb.a(param3 ^ -71, var8, param1, param2, var7, var9);
-          if (!this.field_Hb.a(var6, 9, (kl) (var5))) {
-            this.a(true, (kl) (var5));
+          this.field_Hb.selectEffect(param3 ^ -71, var8, param1, param2, var7, var9);
+          if (!this.field_Hb.bindTexture(var6, 9, (LegacyOpenGlTexture) (var5))) {
+            this.a(true, (LegacyOpenGlTexture) (var5));
             this.d(param3 ^ -2, var6);
           }
           this.field_hb = this.field_pb;
@@ -2432,7 +2432,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           this.field_l = null;
         }
         if (this.field_Ob) {
-          rpa.a(true, false, true);
+          LegacyOpenGlEnvironmentWaterEffect.a(true, false, true);
           this.field_Ob = false;
         }
     }
@@ -2722,7 +2722,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.setLightingEnabled(116, false);
         this.setDepthTestEnabled(3742, false);
         this.setDepthWriteEnabled(false, 0);
-        this.a(true, (kl) null);
+        this.a(true, (LegacyOpenGlTexture) null);
         this.c(-2, 32677);
         this.d(1, 1);
         this.a((byte) 91, param8);
@@ -3074,7 +3074,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.setLightingEnabled(52, false);
         this.setDepthTestEnabled(3742, false);
         this.setDepthWriteEnabled(false, 0);
-        this.a(true, (kl) null);
+        this.a(true, (LegacyOpenGlTexture) null);
         this.c(-2, 32677);
         this.d(1, 1);
         this.a((byte) 44, param7);
@@ -3088,7 +3088,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     final void u(int param0) {
         jaggl.OpenGL.glPushMatrix();
         if (param0 != 28630) {
-          this.field_lc = (rt) null;
+          this.field_lc = (LegacyOpenGlTexture2D) null;
         }
     }
 
@@ -3213,7 +3213,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.la();
     }
 
-    final hoa n(int param0) {
+    final LegacyOpenGlCubeTexture n(int param0) {
         if (param0 != 16664) {
           this.field_Zb = -2.1042897701263428f;
         }
@@ -3255,7 +3255,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           this.setLightingEnabled(36, false);
           this.setDepthTestEnabled(3742, false);
           this.setDepthWriteEnabled(false, 0);
-          this.a(true, (kl) null);
+          this.a(true, (LegacyOpenGlTexture) null);
           this.c(-2, 32677);
           this.d(1, 1);
           this.field_y = 1;
@@ -3265,7 +3265,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     final void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
         try {
           this.r(0);
-          this.a(true, (kl) null);
+          this.a(true, (LegacyOpenGlTexture) null);
           this.a((byte) 44, 0);
           jaggl.OpenGL.glPixelZoom(1.0f, -1.0f);
           jaggl.OpenGL.glRasterPos2i(param0, param1);
@@ -3367,10 +3367,10 @@ final class OpenGlToolkit extends GraphicsToolkit {
 
     private final void initializeDeviceResources(byte param0) {
         OpenGlFramebuffer discarded$2 = null;
-        this.field_vc = new kl[this.field_Ic];
-        this.field_lc = new rt(this, 3553, 6408, 1, 1);
-        rt discarded$0 = new rt(this, 3553, 6408, 1, 1);
-        rt discarded$1 = new rt(this, 3553, 6408, 1, 1);
+        this.field_vc = new LegacyOpenGlTexture[this.field_Ic];
+        this.field_lc = new LegacyOpenGlTexture2D(this, 3553, 6408, 1, 1);
+        LegacyOpenGlTexture2D discarded$0 = new LegacyOpenGlTexture2D(this, 3553, 6408, 1, 1);
+        LegacyOpenGlTexture2D discarded$1 = new LegacyOpenGlTexture2D(this, 3553, 6408, 1, 1);
         this.field_w = new np(this);
         this.field_Nb = new np(this);
         this.field_Ub = new np(this);

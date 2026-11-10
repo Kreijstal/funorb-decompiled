@@ -67,7 +67,7 @@ final class vua extends SingleChildWidget {
           afa.field_c.a((byte) 38);
           return;
         }
-        this.field_r.a((UiWidget) (this), param0, 16777215, param1, true);
+        this.field_r.paintWidget((UiWidget) (this), param0, 16777215, param1, true);
         if (param2 != 0) {
           return;
         }
@@ -131,7 +131,7 @@ final class vua extends SingleChildWidget {
         return stackIn_10_0 & (cra.a(param1, param2 ^ -13642, param0) | wq.b(param1, param0, 8000));
     }
 
-    vua(int param0, int param1, int param2, int param3, isa param4, UiWidget param5) {
+    vua(int param0, int param1, int param2, int param3, WidgetPainter param4, UiWidget param5) {
         super(param0, param1, param2, param3, param4, (WidgetListener) null);
         try {
           this.child = param5;

@@ -17,8 +17,8 @@ final class ul extends nqa implements na {
         return (jagdx.IDirect3DBaseTexture) ((Object) this.field_g);
     }
 
-    public final void a(int param0, hs param1) {
-        super.a(param0, param1);
+    public final void setFilter(int param0, TextureFilter param1) {
+        super.setFilter(param0, param1);
     }
 
     ul(Direct3DToolkit param0, int param1, boolean param2, int[][] param3) {

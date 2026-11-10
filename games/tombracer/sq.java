@@ -333,7 +333,7 @@ final class sq extends PcmStream {
         }
     }
 
-    final synchronized int a() {
+    final synchronized int activity() {
         return 2;
     }
 

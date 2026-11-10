@@ -1712,7 +1712,7 @@ final class PcmSampleStream extends PcmStream {
         return param1 < 0 ? param0 : (int)((double)param0 * Math.sqrt((double)(16384 - param1) * 0.0001220703125) + 0.5);
     }
 
-    final int a() {
+    final int activity() {
         if (this.field_q == 0 &&
           this.field_x == 0) {
           return 0;

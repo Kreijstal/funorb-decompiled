@@ -56,7 +56,7 @@ final class SpriteTileOperator extends SpriteSampleOperator {
           if (34 != var4) {
             stackIn_13_0 = nl.field_d;
           } else {
-            stackIn_13_0 = ma.field_e;
+            stackIn_13_0 = LegacyOpenGlReflectionEffect.field_e;
           }
           var6Lifetime1 = stackIn_13_0;
           stackIn_14_0 = new ConsoleToken(var6Lifetime1, var2_int, var3.toString());
@@ -118,7 +118,7 @@ final class SpriteTileOperator extends SpriteSampleOperator {
         int[] var5 = var13[1];
         int[] var6 = var13[2];
         int var7 = this.field_r * (param0 % this.field_r);
-        for (var8 = 0; ns.textureWidth > var8; var8++) {
+        for (var8 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var8; var8++) {
           var9 = this.field_p[var8 % this.field_m + var7];
           var6[var8] = SnakePitBehaviour.bitwiseAnd(4080, var9 << 4);
           var5[var8] = SnakePitBehaviour.bitwiseAnd(var9, 65280) >> 4;

@@ -319,11 +319,11 @@ final class ItemModel extends TrapModel {
             ItemModel.releaseStatics((byte) 16);
           }
           if (var11.a((byte) 89)) {
-            if (uga.field_m != null) {
+            if (LegacyOpenGlTexture1D.field_m != null) {
               return;
             }
             var21 = LightSourceModel.a(4.0f, 16.0f, 128, new tda(419684), 8, 128, 0.5f, 16, 4, 4.0f, 0.6000000238418579f);
-            uga.field_m = bw.wrapByteStorage(270, var21, false);
+            LegacyOpenGlTexture1D.field_m = bw.wrapByteStorage(270, var21, false);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "kga.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

@@ -108,11 +108,11 @@ final class LoadLevelCommand extends ConsoleMethod {
           var1 = lsa.field_a;
           if (0 < var1) {
             if (var1 != 1) {
-              SnakePitBehaviour.field_o = gl.$cfr$intArgs$a$53ce4ab4c593(100, VoronoiNoiseOperator.field_s, new String[]{Integer.toString(var1)});
+              SnakePitBehaviour.field_o = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(100, VoronoiNoiseOperator.field_s, new String[]{Integer.toString(var1)});
             } else {
               SnakePitBehaviour.field_o = AnimatedLight.field_a;
             }
-            SnakePitBehaviour.field_o = S2CPlayerSyncPacket.a((byte) 121, new CharSequence[]{(CharSequence) ((Object) SnakePitBehaviour.field_o), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) rpa.field_j)});
+            SnakePitBehaviour.field_o = S2CPlayerSyncPacket.a((byte) 121, new CharSequence[]{(CharSequence) ((Object) SnakePitBehaviour.field_o), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) LegacyOpenGlEnvironmentWaterEffect.field_j)});
           }
           TextureOperator.field_l.i((byte) 101);
           wt.a((byte) -117);
@@ -126,11 +126,11 @@ final class LoadLevelCommand extends ConsoleMethod {
           var1 = lsa.field_a;
           if (0 < var1) {
             if (var1 != 1) {
-              SnakePitBehaviour.field_o = gl.$cfr$intArgs$a$53ce4ab4c593(100, VoronoiNoiseOperator.field_s, new String[]{Integer.toString(var1)});
+              SnakePitBehaviour.field_o = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(100, VoronoiNoiseOperator.field_s, new String[]{Integer.toString(var1)});
             } else {
               SnakePitBehaviour.field_o = AnimatedLight.field_a;
             }
-            SnakePitBehaviour.field_o = S2CPlayerSyncPacket.a((byte) 121, new CharSequence[]{(CharSequence) ((Object) SnakePitBehaviour.field_o), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) rpa.field_j)});
+            SnakePitBehaviour.field_o = S2CPlayerSyncPacket.a((byte) 121, new CharSequence[]{(CharSequence) ((Object) SnakePitBehaviour.field_o), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) LegacyOpenGlEnvironmentWaterEffect.field_j)});
           }
           TextureOperator.field_l.i((byte) 101);
           wt.a((byte) -117);

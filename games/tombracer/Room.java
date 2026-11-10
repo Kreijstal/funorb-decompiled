@@ -406,7 +406,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         this.entranceX = this.mirrorX(this.entranceX, (byte) 71);
         if (param1) {
           if (this.simulation.getCurrentRoom((byte) -3) == this) {
-            this.getPlayer(-9).q((byte) -57);
+            this.getPlayer(-9).mirror((byte) -57);
           }
           this.corpses.mirrorInRoom(this, -110);
           this.projectilePool.a(121);
@@ -1640,7 +1640,7 @@ final class Room implements SwitchableScope, Renderable, noa {
 
     final static void l(int param0) {
         if (vo.field_b) {
-          f.b(120);
+          ComponentTargetList.b(120);
         }
         if (param0 != 2097152) {
           Room.l(104);

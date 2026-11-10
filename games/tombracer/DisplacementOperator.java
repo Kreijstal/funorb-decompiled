@@ -40,7 +40,7 @@ final class DisplacementOperator extends TextureOperator {
           var6 = var23[0];
           var7 = var23[1];
           var8 = var23[2];
-          for (var9 = 0; var9 < ns.textureWidth; var9++) {
+          for (var9 = 0; var9 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var9++) {
             var10 = 255 & 255 * var30[var9] >> 12;
             var11 = this.field_n * var31[var9] >> 12;
             var12 = ColourFillOperator.field_r[var10] * var11 >> 12;
@@ -82,7 +82,7 @@ final class DisplacementOperator extends TextureOperator {
         if (this.monochromeCache.rowMissed) {
           var26 = this.getInputMonochromeRow(1, param0 - 85, param1);
           var27 = this.getInputMonochromeRow(2, -119, param1);
-          for (var6 = 0; var6 < ns.textureWidth; var6++) {
+          for (var6 = 0; var6 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var6++) {
             var7 = (4094 & var26[var6]) >> 4;
             var8 = this.field_n * var27[var6] >> 12;
             var9 = ColourFillOperator.field_r[var7] * var8 >> 12;

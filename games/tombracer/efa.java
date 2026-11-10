@@ -106,7 +106,7 @@ final class efa extends WidgetContainer implements mia, ButtonListener {
     }
 
     public efa() {
-        super(0, 0, 496, 0, (isa) null);
+        super(0, 0, 496, 0, (WidgetPainter) null);
         this.field_z = new ValidatedTextInputWidget("", (WidgetListener) null, 12);
         TextWidgetPainter var1 = new TextWidgetPainter(BlendModeOperator.field_o, 0, 0, 0, 0, 16777215, -1, 3, 0, KeySwitchComponent.field_J.field_w, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(cj.field_e, var1, (WidgetListener) null);
@@ -115,9 +115,9 @@ final class efa extends WidgetContainer implements mia, ButtonListener {
         this.field_z.field_q = rma.field_a;
         this.field_z.a(-13861, new tf(this.field_z));
         this.field_A.field_y = false;
-        this.field_A.field_r = (isa) ((Object) new td());
-        this.field_B.field_r = (isa) ((Object) new kaa());
-        this.field_z.field_r = (isa) ((Object) new hga(10000536));
+        this.field_A.field_r = (WidgetPainter) ((Object) new td());
+        this.field_B.field_r = (WidgetPainter) ((Object) new kaa());
+        this.field_z.field_r = (WidgetPainter) ((Object) new hga(10000536));
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;

@@ -9,7 +9,7 @@ abstract class ArchiveRequest extends DualLinkNode {
     final static String a(boolean param0) {
         if (param0) {
           ArchiveRequest.a(-49, 62, -28);
-          if (kl.field_a == gsa.field_y) {
+          if (LegacyOpenGlTexture.field_a == gsa.field_y) {
             return faa.field_g;
           }
           if (!gva.field_b.b(88)) {
@@ -20,7 +20,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           }
           return gva.field_b.a((byte) 100);
         }
-        if (kl.field_a == gsa.field_y) {
+        if (LegacyOpenGlTexture.field_a == gsa.field_y) {
           return faa.field_g;
         }
         if (!gva.field_b.b(88)) {

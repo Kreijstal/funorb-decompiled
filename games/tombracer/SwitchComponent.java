@@ -2,27 +2,27 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class SwitchComponent extends PrefabComponent {
-    private f field_G;
-    private SwitchState field_H;
-    private boolean field_I;
+    private ComponentTargetList targets;
+    private SwitchState switchState;
+    private boolean initiallyOn;
     static String[] fireDeathMessages;
 
     final void w(int param0) {
         super.w(-126);
-        this.field_G.a(this.getRoot((byte) -57), false);
+        this.targets.resolveTargets(this.getRoot((byte) -57), false);
         if (param0 >= -122) {
-          this.field_G = (f) null;
+          this.targets = (ComponentTargetList) null;
         }
     }
 
-    abstract boolean r(byte param0);
+    abstract boolean hasInitialState(byte param0);
 
     void encode(boolean param0, BitPacketBuffer param1) {
         try {
           super.encode(param0, param1);
-          this.field_G.a(param1, 115, this.getRoot((byte) -39));
-          if (this.r((byte) 93)) {
-            param1.writeBits((byte) -19, !this.field_I ? 0 : 1, 1);
+          this.targets.encode(param1, 115, this.getRoot((byte) -39));
+          if (this.hasInitialState((byte) 93)) {
+            param1.writeBits((byte) -19, !this.initiallyOn ? 0 : 1, 1);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fqa.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -31,8 +31,8 @@ abstract class SwitchComponent extends PrefabComponent {
 
     final void x(int param0) {
         super.x(param0);
-        if (null != this.field_H) {
-          this.field_H.getLinks(1).setTargets(9, this.field_G.a((byte) -103));
+        if (null != this.switchState) {
+          this.switchState.getLinks(1).setTargets(9, this.targets.getSwitchables((byte) -103));
           return;
         }
     }
@@ -44,7 +44,7 @@ abstract class SwitchComponent extends PrefabComponent {
         }
     }
 
-    abstract int B(int param0);
+    abstract int getMaxTargets(int param0);
 
     final static int[] e(boolean param0) {
         if (!param0) {
@@ -81,7 +81,7 @@ abstract class SwitchComponent extends PrefabComponent {
     SwitchComponent(Room param0, int param1) {
         super(param0, param1);
         try {
-          this.field_G = new f(this.B(31609), 0);
+          this.targets = new ComponentTargetList(this.getMaxTargets(31609), 0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fqa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -90,9 +90,9 @@ abstract class SwitchComponent extends PrefabComponent {
     SwitchComponent(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
         try {
-          this.field_G = new f(this.B(31609), 0, param0.formatVersion, param2);
-          if (this.r((byte) 93)) {
-            this.field_I = param2.readBits((byte) 44, 1) == 1 ? true : false;
+          this.targets = new ComponentTargetList(this.getMaxTargets(31609), 0, param0.formatVersion, param2);
+          if (this.hasInitialState((byte) 93)) {
+            this.initiallyOn = param2.readBits((byte) 44, 1) == 1 ? true : false;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fqa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -106,18 +106,18 @@ abstract class SwitchComponent extends PrefabComponent {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_H = param0.getSwitchState((byte) -77);
+          this.switchState = param0.getSwitchState((byte) -77);
           if (param1 >= -51) {
             return;
           }
-          if (!this.r((byte) 93)) {
+          if (!this.hasInitialState((byte) 93)) {
             return;
           }
-          if (this.field_I) {
-            this.field_H.b(1, 52);
+          if (this.initiallyOn) {
+            this.switchState.b(1, 52);
             return;
           }
-          this.field_H.a(-2, true);
+          this.switchState.a(-2, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

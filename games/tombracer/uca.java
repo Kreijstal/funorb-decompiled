@@ -38,7 +38,7 @@ final class uca {
           }
           var8 = wp.a(94, param0);
           if (var8 == null) {
-            stackIn_10_0 = gl.$cfr$intArgs$a$53ce4ab4c593(88, hoa.field_m, new String[]{param0});
+            stackIn_10_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(88, LegacyOpenGlCubeTexture.field_m, new String[]{param0});
             return stackIn_10_0;
           }
           if (param1 != 102) {

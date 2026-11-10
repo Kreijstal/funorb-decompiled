@@ -78,7 +78,7 @@ abstract class ItemBehaviour extends Behaviour {
             }
             var4 = this.getPlayer((byte) 19);
             if (!this.field_n) {
-              if (var4.q(81)) {
+              if (var4.isDying(81)) {
                 return;
               }
               if (!this.trap.intersectsRect((byte) 110, var4.getY(9648), var4.getX(3), var4.getHeight((byte) 55), var4.getWidth(-125))) {
@@ -92,7 +92,7 @@ abstract class ItemBehaviour extends Behaviour {
                 return;
               }
             } else {
-              if (var4.q(102)) {
+              if (var4.isDying(102)) {
                 return;
               }
               if (this.trap.intersectsRect((byte) 110, var4.getY(9648), var4.getX(3), var4.getHeight((byte) 55), var4.getWidth(-63))) {
@@ -110,7 +110,7 @@ abstract class ItemBehaviour extends Behaviour {
               }
               var5 = this.getPlayer((byte) 19);
               if (!this.field_n) {
-                if (var5.q(81)) {
+                if (var5.isDying(81)) {
                   return;
                 }
                 if (!this.trap.intersectsRect((byte) 110, var5.getY(9648), var5.getX(3), var5.getHeight((byte) 55), var5.getWidth(-125))) {
@@ -124,7 +124,7 @@ abstract class ItemBehaviour extends Behaviour {
                   return;
                 }
               } else {
-                if (var5.q(102)) {
+                if (var5.isDying(102)) {
                   return;
                 }
                 if (this.trap.intersectsRect((byte) 110, var5.getY(9648), var5.getX(3), var5.getHeight((byte) 55), var5.getWidth(-63))) {
@@ -143,7 +143,7 @@ abstract class ItemBehaviour extends Behaviour {
           var6 = this.getPlayer((byte) 19);
           var3 = var6;
           if (this.field_n) {
-            if (var6.q(102)) {
+            if (var6.isDying(102)) {
               return;
             }
             if (this.trap.intersectsRect((byte) 110, var6.getY(9648), var6.getX(3), var6.getHeight((byte) 55), var6.getWidth(-63))) {
@@ -152,7 +152,7 @@ abstract class ItemBehaviour extends Behaviour {
             this.field_n = false;
             return;
           }
-          if (var6.q(81)) {
+          if (var6.isDying(81)) {
             return;
           }
           if (!this.trap.intersectsRect((byte) 110, var6.getY(9648), var6.getX(3), var6.getHeight((byte) 55), var6.getWidth(-125))) {
@@ -173,7 +173,7 @@ abstract class ItemBehaviour extends Behaviour {
           }
           var7 = this.getPlayer((byte) 19);
           if (this.field_n) {
-            if (var7.q(102)) {
+            if (var7.isDying(102)) {
               return;
             }
             if (this.trap.intersectsRect((byte) 110, var7.getY(9648), var7.getX(3), var7.getHeight((byte) 55), var7.getWidth(-63))) {
@@ -182,7 +182,7 @@ abstract class ItemBehaviour extends Behaviour {
             this.field_n = false;
             return;
           }
-          if (var7.q(81)) {
+          if (var7.isDying(81)) {
             return;
           }
           if (!this.trap.intersectsRect((byte) 110, var7.getY(9648), var7.getX(3), var7.getHeight((byte) 55), var7.getWidth(-125))) {
@@ -204,7 +204,7 @@ abstract class ItemBehaviour extends Behaviour {
           var8 = this.getPlayer((byte) 19);
           var3Lifetime1 = var8;
           if (this.field_n) {
-            if (var8.q(102)) {
+            if (var8.isDying(102)) {
               return;
             }
             if (this.trap.intersectsRect((byte) 110, var8.getY(9648), var8.getX(3), var8.getHeight((byte) 55), var8.getWidth(-63))) {
@@ -213,7 +213,7 @@ abstract class ItemBehaviour extends Behaviour {
             this.field_n = false;
             return;
           }
-          if (var8.q(81)) {
+          if (var8.isDying(81)) {
             return;
           }
           if (!this.trap.intersectsRect((byte) 110, var8.getY(9648), var8.getX(3), var8.getHeight((byte) 55), var8.getWidth(-125))) {
@@ -233,7 +233,7 @@ abstract class ItemBehaviour extends Behaviour {
           if (!this.field_o) {
             var10 = this.getPlayer((byte) 19);
             if (!this.field_n) {
-              if (!var10.q(81) &&
+              if (!var10.isDying(81) &&
                 this.trap.intersectsRect((byte) 110, var10.getY(9648), var10.getX(3), var10.getHeight((byte) 55), var10.getWidth(-125))) {
                 if (!this.tryCollect(param0 - 5533, var10)) {
                   return;
@@ -245,7 +245,7 @@ abstract class ItemBehaviour extends Behaviour {
                 return;
               }
             } else {
-              if (!var10.q(102) &&
+              if (!var10.isDying(102) &&
                 !this.trap.intersectsRect((byte) 110, var10.getY(9648), var10.getX(3), var10.getHeight((byte) 55), var10.getWidth(-63))) {
                 this.field_n = false;
                 return;
@@ -259,7 +259,7 @@ abstract class ItemBehaviour extends Behaviour {
         if (!this.field_o) {
           var9 = this.getPlayer((byte) 19);
           if (!this.field_n) {
-            if (!var9.q(81) &&
+            if (!var9.isDying(81) &&
               this.trap.intersectsRect((byte) 110, var9.getY(9648), var9.getX(3), var9.getHeight((byte) 55), var9.getWidth(-125))) {
               if (!this.tryCollect(param0 - 5533, var9)) {
                 return;
@@ -271,7 +271,7 @@ abstract class ItemBehaviour extends Behaviour {
               return;
             }
           } else {
-            if (!var9.q(102) &&
+            if (!var9.isDying(102) &&
               !this.trap.intersectsRect((byte) 110, var9.getY(9648), var9.getX(3), var9.getHeight((byte) 55), var9.getWidth(-63))) {
               this.field_n = false;
               return;

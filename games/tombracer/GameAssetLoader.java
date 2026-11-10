@@ -288,7 +288,7 @@ final class GameAssetLoader implements LoadingStage {
             dga.a(var11, 0);
             var12.a(var11, var6, (byte) 39);
             mq.field_e = var12.a(79);
-            f.field_e = var12.b((byte) -78);
+            ComponentTargetList.field_e = var12.b((byte) -78);
             toa.field_j = true;
             stackIn_18_0 = "profile loaded";
             return stackIn_18_0;

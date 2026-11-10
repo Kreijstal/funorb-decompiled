@@ -281,7 +281,7 @@ final class PlayerSimulation {
         if (param0 == -1) {
           var2.dispose(58);
           var3 = this.getNextRoom((byte) 104, var2);
-          if (this.player.l(false) &&
+          if (this.player.isInvulnerable(false) &&
             var3 == null) {
             var3 = this.getFirstRoom(param0 - 114);
           }
@@ -300,7 +300,7 @@ final class PlayerSimulation {
         this.onRoomReset((Room) null, -52);
         var2.dispose(58);
         var3Lifetime1 = this.getNextRoom((byte) 104, var2);
-        if (this.player.l(false) &&
+        if (this.player.isInvulnerable(false) &&
           var3Lifetime1 == null) {
           var3Lifetime1 = this.getFirstRoom(param0 - 114);
         }

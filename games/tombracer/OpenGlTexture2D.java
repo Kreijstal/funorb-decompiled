@@ -124,7 +124,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
     final static void h(byte param0) {
         gg.field_f = null;
         CharacterSelectPhase.field_r = null;
-        uua.field_a = null;
+        LegacyOpenGlEffectManager.field_a = null;
         nm.field_l = null;
         Projectile.field_n = null;
         int var1 = 60 / ((-20 - param0) / 45);
@@ -1249,9 +1249,9 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
         }
     }
 
-    public final void a(int param0, hs param1) {
+    public final void setFilter(int param0, TextureFilter param1) {
         try {
-          super.a(param0, param1);
+          super.setFilter(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hm.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -139,14 +139,14 @@ final class tha extends WidgetContainer implements ButtonListener {
     }
 
     public tha() {
-        super(0, 0, 476, 225, (isa) null);
+        super(0, 0, 476, 225, (WidgetPainter) null);
         this.field_z = new FocusableWidget(S2CRoundDeadlinePacket.field_a, (WidgetListener) null);
         this.field_w = new FocusableWidget(HardwareOpenGlToolkit.field_gd, (WidgetListener) null);
         this.field_x = new FocusableWidget(fca.field_d, (WidgetListener) null);
         td var1 = new td();
-        this.field_z.field_r = (isa) ((Object) var1);
-        this.field_w.field_r = (isa) ((Object) var1);
-        this.field_x.field_r = (isa) ((Object) var1);
+        this.field_z.field_r = (WidgetPainter) ((Object) var1);
+        this.field_w.field_r = (WidgetPainter) ((Object) var1);
+        this.field_x.field_r = (WidgetPainter) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = var3 - var2 >> 1;

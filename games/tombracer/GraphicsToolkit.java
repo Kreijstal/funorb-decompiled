@@ -12,7 +12,7 @@ abstract class GraphicsToolkit {
         if (!param0) {
           this.finalize();
         }
-        ns.field_d[this.field_a] = false;
+        LegacyOpenGlTurbulentTextureEffect.field_d[this.field_a] = false;
         this.k();
     }
 
@@ -206,9 +206,9 @@ abstract class GraphicsToolkit {
           this.field_c = param0;
           var2_int = -1;
           for (var3 = 0; var3 < 8; var3++) {
-            if (!ns.field_d[var3]) {
+            if (!LegacyOpenGlTurbulentTextureEffect.field_d[var3]) {
               var2_int = var3;
-              ns.field_d[var3] = true;
+              LegacyOpenGlTurbulentTextureEffect.field_d[var3] = true;
               break;
             }
           }

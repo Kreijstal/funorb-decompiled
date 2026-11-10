@@ -62,7 +62,7 @@ final class di {
         if (param0 != 100663296) {
           return false;
         }
-        return this.a(-101, kw.b((byte) -97));
+        return this.a(-101, LegacyOpenGlRidgedWaterEffect.b((byte) -97));
     }
 
     final static void a(byte param0, boolean param1) {
@@ -94,7 +94,7 @@ final class di {
                 if (0 < fp.field_e) {
                   fp.field_e = fp.field_e - 1;
                 } else {
-                  if (mla.field_a < pna.field_q) {
+                  if (mla.field_a < SoftwareTransform3D.field_q) {
                     if (mla.field_a == 0) {
                       RoomComponent.a(false);
                     }
@@ -107,7 +107,7 @@ final class di {
                 mla.field_a = mla.field_a - 1;
               } else {
                 if (fp.field_e <= 0) {
-                  if (pna.field_q > GameKeyHandler.field_a) {
+                  if (SoftwareTransform3D.field_q > GameKeyHandler.field_a) {
                     if (GameKeyHandler.field_a == 0) {
                       iw.a((byte) -64, true);
                     }
@@ -125,7 +125,7 @@ final class di {
               if (GameKeyHandler.field_a > 0) {
                 GameKeyHandler.field_a = GameKeyHandler.field_a - 1;
               } else {
-                if (fp.field_e < pna.field_q) {
+                if (fp.field_e < SoftwareTransform3D.field_q) {
                   if (0 == fp.field_e) {
                     iw.a((byte) -64, false);
                   }

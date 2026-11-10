@@ -12,7 +12,7 @@ final class OpenGlFramebuffer implements Framebuffer {
     private int field_d;
     private FramebufferAttachment[] field_h;
 
-    private final void a(int param0, rt param1, int param2, int param3) {
+    private final void a(int param0, LegacyOpenGlTexture2D param1, int param2, int param3) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         RuntimeException stackIn_12_0 = null;
@@ -110,7 +110,7 @@ final class OpenGlFramebuffer implements Framebuffer {
     final void a(int param0, int param1) {
         int var3 = -110 % ((-35 - param0) / 34);
         if (null != this.field_h[param1]) {
-          this.field_h[param1].a(109);
+          this.field_h[param1].detachFramebuffer(109);
         }
         this.field_e = this.field_e & ~(1 << param1);
         this.field_h[param1] = null;
@@ -158,7 +158,7 @@ final class OpenGlFramebuffer implements Framebuffer {
         }
     }
 
-    final void a(boolean param0, rt param1, int param2) {
+    final void a(boolean param0, LegacyOpenGlTexture2D param1, int param2) {
         try {
           this.a(1, param1, 0, param2);
           if (!param0) {

@@ -37,7 +37,7 @@ final class gh extends ToolkitSprite {
         AffineTransform3D var27;
         GpuTexture2D stackIn_4_0 = null;
         int stackIn_4_1 = 0;
-        hs stackIn_5_2 = null;
+        TextureFilter stackIn_5_2 = null;
         var27 = this.field_c.y((byte) -77);
         var12 = this.field_c.C(0);
         stackIn_4_0 = this.field_d;
@@ -49,7 +49,7 @@ final class gh extends ToolkitSprite {
         } else {
           stackIn_5_2 = MiscItemBehaviour.field_v;
         }
-        ((GpuTexture2D) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_5_2);
+        ((GpuTexture2D) (Object) stackIn_4_0).setFilter(stackIn_4_1, stackIn_5_2);
         this.field_c.k((byte) 121);
         this.field_c.bindTexture(true, this.field_d);
         this.field_c.setBlendMode(param8, 1);
@@ -99,7 +99,7 @@ final class gh extends ToolkitSprite {
         AffineTransform3D var7 = this.field_c.C(0);
         param1 = param1 + this.field_j;
         param0 = param0 + this.field_g;
-        this.field_d.a(7672, MiscItemBehaviour.field_v);
+        this.field_d.setFilter(7672, MiscItemBehaviour.field_v);
         this.field_c.k((byte) 105);
         this.field_c.bindTexture(true, this.field_d);
         this.field_c.setBlendMode(param4, 1);
@@ -108,7 +108,7 @@ final class gh extends ToolkitSprite {
         this.field_c.a(1, false, pea.field_c);
         this.field_c.g(3625, param3);
         var8.a(0.0f, (float)this.field_l, false, (float)this.field_k);
-        var8.a(param0, param1, 0);
+        var8.translate(param0, param1, 0);
         var7.a(1.0f, this.field_d.textureV((float)this.field_l, (byte) -33), false, this.field_d.textureU(93, (float)this.field_k));
         this.field_c.a(pfa.field_i, false);
         this.field_c.F(-1662);
@@ -134,11 +134,11 @@ final class gh extends ToolkitSprite {
             return;
           }
           var2_int = param0.readUnsignedByte(255);
-          f.field_e = new BitSet(var2_int);
+          ComponentTargetList.field_e = new BitSet(var2_int);
           param0.beginBitAccess((byte) -89);
           for (var3 = 0; var3 < var2_int; var3++) {
             if (CircleMovementLocomotor.readBitFlag(5907, param0)) {
-              f.field_e.set(var3);
+              ComponentTargetList.field_e.set(var3);
             }
           }
           param0.endBitAccess((byte) 98);
@@ -194,7 +194,7 @@ final class gh extends ToolkitSprite {
         AffineTransform3D var11;
         GpuTexture2D stackIn_4_0 = null;
         int stackIn_4_1 = 0;
-        hs stackIn_6_2 = null;
+        TextureFilter stackIn_6_2 = null;
         var11 = this.field_c.y((byte) -77);
         var10 = this.field_c.C(0);
         stackIn_4_0 = this.field_d;
@@ -206,7 +206,7 @@ final class gh extends ToolkitSprite {
         } else {
           stackIn_6_2 = MiscItemBehaviour.field_v;
         }
-        ((GpuTexture2D) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_6_2);
+        ((GpuTexture2D) (Object) stackIn_4_0).setFilter(stackIn_4_1, stackIn_6_2);
         this.field_c.k((byte) 118);
         this.field_c.bindTexture(true, this.field_d);
         this.field_c.setBlendMode(param6, 1);
@@ -222,7 +222,7 @@ final class gh extends ToolkitSprite {
           param1 = param1 + param3 * this.field_j / this.field_k;
         }
         var11.a(0.0f, (float)param2, false, (float)param3);
-        var11.a(param0, param1, 0);
+        var11.translate(param0, param1, 0);
         this.field_c.a(pfa.field_i, false);
         this.field_c.F(-1662);
         this.field_c.y(2);

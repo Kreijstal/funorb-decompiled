@@ -161,7 +161,7 @@ final class StatefulWidgetPainter extends TextWidgetPainter {
         return dupTemp$0;
     }
 
-    public final void a(UiWidget param0, int param1, int param2, int param3, boolean param4) {
+    public final void paintWidget(UiWidget param0, int param1, int param2, int param3, boolean param4) {
         UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_36_0 = null;
         StringBuilder stackIn_36_1 = null;

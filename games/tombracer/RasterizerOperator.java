@@ -82,7 +82,7 @@ final class RasterizerOperator extends TextureOperator {
         RuntimeException var3 = null;
         var9 = TombRacer.field_G ? 1 : 0;
         try {
-          var3_int = ns.textureWidth;
+          var3_int = LegacyOpenGlTurbulentTextureEffect.textureWidth;
           if (param0 != -8883) {
             RasterizerOperator.d(56);
           }
@@ -213,7 +213,7 @@ final class RasterizerOperator extends TextureOperator {
           field_m = (String[]) null;
         }
         if (this.colourCache.field_f) {
-          var4 = ns.textureWidth;
+          var4 = LegacyOpenGlTurbulentTextureEffect.textureWidth;
           var5 = ArchiveNetworkClient.textureHeight;
           var29 = new int[var5][var4];
           var30 = this.colourCache.getAllRows((byte) -98);
@@ -224,7 +224,7 @@ final class RasterizerOperator extends TextureOperator {
             var11 = var31[0];
             var12 = var31[1];
             var13 = var31[2];
-            for (var14 = 0; ns.textureWidth > var14; var14++) {
+            for (var14 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var14; var14++) {
               var15 = var32[var14];
               var13[var14] = SnakePitBehaviour.bitwiseAnd(255, var15) << 4;
               var12[var14] = SnakePitBehaviour.bitwiseAnd(65280, var15) >> 4;

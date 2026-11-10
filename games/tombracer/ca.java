@@ -189,7 +189,7 @@ final class ca extends GameFont {
           }
           this.field_e = true;
         }
-        this.field_f.a(7672, MiscItemBehaviour.field_v);
+        this.field_f.setFilter(7672, MiscItemBehaviour.field_v);
         this.field_d = param0.c(6, false);
         this.field_d.a(20480, 20, true);
         var7 = 0;

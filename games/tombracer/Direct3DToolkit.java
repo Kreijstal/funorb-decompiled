@@ -18,7 +18,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
     boolean field_Tc;
     private boolean[] field_Qc;
     jaclib.peer.sha field_Mc;
-    private hs[] field_Rc;
+    private TextureFilter[] field_Rc;
     private boolean[] field_Uc;
     private int[] field_gd;
     boolean field_Sc;
@@ -133,7 +133,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
           if (0 >= this.field_Gc) {
             this.field_dd.CheckDeviceMultiSampleType(this.field_Xc, this.field_id, this.field_ad.BackBufferFormat, true, 2);
           }
-          this.field_Rc = new hs[this.field_Vb];
+          this.field_Rc = new TextureFilter[this.field_Vb];
           this.field_bd = new boolean[this.field_Vb];
           this.field_Yc = new boolean[this.field_Vb];
           this.field_gd = new int[this.field_Vb];
@@ -609,7 +609,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         this.field_Pc = false;
     }
 
-    private final static int a(boolean param0, hs param1) {
+    private final static int a(boolean param0, TextureFilter param1) {
         if (param1 == MirrorComponent.field_G) {
           return 2;
         }
@@ -871,7 +871,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
           this.field_Uc[this.field_Cc] = param0.field_j;
         }
         if (!param1) {
-          this.field_Rc = (hs[]) null;
+          this.field_Rc = (TextureFilter[]) null;
         }
     }
 
@@ -905,7 +905,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         stackIn_5_2 = (this.field_U) && (this.field_Bb) && (this.field_J >= 0);
         ((jagdx.IDirect3DDevice) (Object) stackIn_4_0).setRenderStateBoolean(stackIn_4_1, stackIn_5_2);
         if (param0 != 2) {
-          this.field_Rc = (hs[]) null;
+          this.field_Rc = (TextureFilter[]) null;
         }
     }
 

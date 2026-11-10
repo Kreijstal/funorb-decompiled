@@ -73,12 +73,12 @@ final class kc {
             return stackIn_6_0;
           }
           if (UiWidget.field_g != 2) {
-            stackIn_9_0 = rt.field_n;
+            stackIn_9_0 = LegacyOpenGlTexture2D.field_n;
             return stackIn_9_0;
           }
           var7 = LightSource.a(param3, 115);
           if (var7 == null) {
-            stackIn_12_0 = gl.$cfr$intArgs$a$53ce4ab4c593(119, ConstrainToCircleLocomotor.field_A, new String[]{param3});
+            stackIn_12_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(119, ConstrainToCircleLocomotor.field_A, new String[]{param3});
             return stackIn_12_0;
           }
           var7.unlink(105);

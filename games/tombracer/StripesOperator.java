@@ -56,7 +56,7 @@ final class StripesOperator extends TextureOperator {
                     var5 = 4096;
                     break scanLoop1;
                   }
-                  ArrayUtils.fill(var13Lifetime1, 0, ns.textureWidth, var5);
+                  ArrayUtils.fill(var13Lifetime1, 0, LegacyOpenGlTurbulentTextureEffect.textureWidth, var5);
                   return var3;
                 }
                 var6++;
@@ -64,12 +64,12 @@ final class StripesOperator extends TextureOperator {
               }
               break;
             }
-            ArrayUtils.fill(var13Lifetime1, 0, ns.textureWidth, var5);
+            ArrayUtils.fill(var13Lifetime1, 0, LegacyOpenGlTurbulentTextureEffect.textureWidth, var5);
             decompiledFrameRemainder0 = false;
           }
           else {
             var5Lifetime1 = 0;
-            while (!(ns.textureWidth <= var5Lifetime1)) {
+            while (!(LegacyOpenGlTurbulentTextureEffect.textureWidth <= var5Lifetime1)) {
               var6Lifetime1 = 0;
               var7 = 0;
               var8 = ht.textureColumnCoords[var5Lifetime1];

@@ -93,7 +93,7 @@ abstract class gn extends WidgetContainer {
     }
 
     gn(jta param0, int param1, int param2) {
-        super(bb.field_m - param1 >> 1, -param2 + qba.field_a >> 1, param1, param2, (isa) null);
+        super(bb.field_m - param1 >> 1, -param2 + qba.field_a >> 1, param1, param2, (WidgetPainter) null);
         try {
           this.field_x = 0;
           this.field_z = param0;

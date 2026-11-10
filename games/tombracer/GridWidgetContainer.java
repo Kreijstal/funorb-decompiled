@@ -351,7 +351,7 @@ final class GridWidgetContainer extends ArrayWidgetGroup {
         this.children = var5;
     }
 
-    GridWidgetContainer(int param0, int param1, int param2, int param3, isa param4, int param5, int param6) {
+    GridWidgetContainer(int param0, int param1, int param2, int param3, WidgetPainter param4, int param5, int param6) {
         super(param0, param1, param2, param3, param4);
         int[] var10 = null;
         int[] var9 = null;

@@ -12,7 +12,7 @@ final class WhiteNoiseOperator extends TextureOperator {
         int[] var3 = var8;
         if (this.monochromeCache.rowMissed) {
           var4 = sj.textureRowCoords[param1];
-          for (var5 = 0; var5 < ns.textureWidth; var5++) {
+          for (var5 = 0; var5 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var5++) {
             var8[var5] = this.d(param0 + 1876, ht.textureColumnCoords[var5], var4) % 4096;
           }
         }

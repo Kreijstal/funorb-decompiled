@@ -55,12 +55,12 @@ final class ek extends nqa implements lv {
     public final void bind(byte param0) {
         this.field_d.bindTexture3D((byte) -125, this);
         if (param0 < 32) {
-          hs var3 = (hs) null;
-          this.a(88, (hs) null);
+          TextureFilter var3 = (TextureFilter) null;
+          this.setFilter(88, (TextureFilter) null);
         }
     }
 
-    public final void a(int param0, hs param1) {
-        super.a(param0, param1);
+    public final void setFilter(int param0, TextureFilter param1) {
+        super.setFilter(param0, param1);
     }
 }

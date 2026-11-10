@@ -45,7 +45,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
     private int heldItemKind;
     private TeleportState field_jb;
     private int field_kb;
-    private boolean field_o;
+    private boolean mirrored;
     private boolean field_V;
     private WorldBody carried;
     private int field_T;
@@ -60,11 +60,11 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
     private int respawnY;
     private boolean collectedTreasure;
     private int field_cb;
-    private boolean field_db;
+    private boolean invulnerable;
     private int animationStateTicks;
     private int elevation;
     private int animationStateTimer;
-    private int field_O;
+    private int elevationVelocity;
     private int animationState;
     private int total;
 
@@ -208,7 +208,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         int var4 = 0;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          if (this.field_db) {
+          if (this.invulnerable) {
             this.y = this.y - 262144;
             if (3 == this.lifeState) {
               this.lifeStateTimer = this.lifeStateTimer - 1;
@@ -302,8 +302,8 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
                 this.velocityX = 0;
               } else {
                 if (this.elevation > -17825792) {
-                  this.elevation = this.elevation + this.field_O;
-                  this.field_O = this.field_O - 16384;
+                  this.elevation = this.elevation + this.elevationVelocity;
+                  this.elevationVelocity = this.elevationVelocity - 16384;
                   if (this.elevation <= -17825792) {
                     if (this.field_T == 6) {
                       var3_ref = this.room.spawnParticle(this.x, this.y, (byte) 100, -17825792);
@@ -480,7 +480,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         int var8 = 0;
         int var9 = 0;
         try {
-          if (this.field_db) {
+          if (this.invulnerable) {
             return false;
           }
           if (param4 == 0 &&
@@ -553,13 +553,13 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_db) {
+          if (this.invulnerable) {
             return false;
           }
           if (this == param0) {
             return false;
           }
-          if (this.q(param2 ^ 111)) {
+          if (this.isDying(param2 ^ 111)) {
             return false;
           }
           if (param2 < param1) {
@@ -878,10 +878,10 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         int var5 = 0;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          if (this.field_db) {
+          if (this.invulnerable) {
             return;
           }
-          if (this.q(97)) {
+          if (this.isDying(97)) {
             return;
           }
           if (this.lifeState != 2 &&
@@ -1013,7 +1013,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
           this.facingX = 0;
           this.field_l = false;
           this.facingY = -1;
-          this.field_O = 0;
+          this.elevationVelocity = 0;
           this.field_Z = false;
           this.field_L = false;
           this.field_Y = 0;
@@ -1029,7 +1029,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
             this.statusEffects.clear(8);
             this.clearWeapon((byte) 89, 10);
             this.m(15876);
-            this.field_o = false;
+            this.mirrored = false;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1072,7 +1072,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         }
     }
 
-    final void t(byte param0) {
+    final void resetMatchProgress(byte param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         int var3 = 0;
@@ -1354,7 +1354,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         }
     }
 
-    final void q(byte param0) {
+    final void mirror(byte param0) {
         boolean stackIn_7_1 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -1365,8 +1365,8 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
             this.addStatusEffect((StatusEffect) null, (byte) -39);
           }
           this.velocityX = -this.velocityX;
-          stackIn_7_1 = !(this.field_o);
-          this.field_o = stackIn_7_1;
+          stackIn_7_1 = !(this.mirrored);
+          this.mirrored = stackIn_7_1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1411,7 +1411,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         }
     }
 
-    final int H(int param0) {
+    final int getFacingOctant(int param0) {
         RuntimeException var2 = null;
         int stackIn_7_0 = 0;
         int stackIn_13_0 = 0;
@@ -1748,7 +1748,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
             }
           }
           if (param1 > -26) {
-            this.t((byte) -73);
+            this.resetMatchProgress((byte) -73);
           }
           if (this.facingX == var4_int &&
             ~this.facingY == ~var5) {
@@ -1893,7 +1893,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 90) {
-            this.q(127);
+            this.isDying(127);
           }
           stackIn_4_0 = this.previousX;
           return stackIn_4_0;
@@ -2391,7 +2391,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
             this.setAnimationState(-5636, var26Lifetime1, var27 != 0);
           }
           if (var8 != 0 &&
-            !this.q(72)) {
+            !this.isDying(72)) {
             this.kill(2, (byte) -126, 1);
           }
           if (this.statusFlags[0]) {
@@ -2445,7 +2445,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         }
     }
 
-    final int F(int param0) {
+    final int getRoomTreasureScore(int param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
@@ -2627,7 +2627,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
           this.respawnX = param1;
           this.respawnY = param2;
           this.room = param0;
-          if (this.field_db) {
+          if (this.invulnerable) {
             this.respawnY = this.respawnY + 157286400;
           }
           this.v((byte) 74);
@@ -2654,7 +2654,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         RuntimeException var2 = null;
         try {
           if (param0 != 28) {
-            this.field_o = true;
+            this.mirrored = true;
           }
           this.field_q = true;
           return;
@@ -2671,7 +2671,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -36) {
-            this.q(-3);
+            this.isDying(-3);
           }
           stackIn_4_0 = this.animator;
           return stackIn_4_0;
@@ -2798,7 +2798,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -77) {
-            this.q((byte) -68);
+            this.mirror((byte) -68);
           }
           this.kill(3, (byte) 25, 3);
           return true;
@@ -2956,13 +2956,13 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         }
     }
 
-    final boolean l(boolean param0) {
+    final boolean isInvulnerable(boolean param0) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            stackIn_4_0 = this.field_db;
+            stackIn_4_0 = this.invulnerable;
             return stackIn_4_0;
           }
           return true;
@@ -2994,7 +2994,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            this.field_O = 60;
+            this.elevationVelocity = 60;
           }
           stackIn_4_0 = 0;
           return stackIn_4_0;
@@ -3018,7 +3018,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         int var5 = 0;
         int var3_intLifetime1;
         try {
-          if (this.q(87)) {
+          if (this.isDying(87)) {
             stackIn_2_0 = 0;
             return stackIn_2_0;
           }
@@ -3027,7 +3027,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
             this.field_A = 25;
           }
           if (param1 != -1) {
-            this.q((byte) 16);
+            this.mirror((byte) 16);
           }
           var3_int = 0;
           if (param0.size >= 3) {
@@ -3169,7 +3169,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = this.x;
-          if (this.field_o) {
+          if (this.mirrored) {
             var2_int = this.room.mirrorX(var2_int, (byte) 71);
           }
           if (param0 > -76) {
@@ -3218,9 +3218,9 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         }
     }
 
-    final void b(boolean param0, boolean param1) {
+    final void setInvulnerable(boolean param0, boolean param1) {
         try {
-          this.field_db = param1;
+          this.invulnerable = param1;
           if (!param0) {
             this.G(118);
           }
@@ -3428,7 +3428,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         }
     }
 
-    final boolean q(int param0) {
+    final boolean isDying(int param0) {
         RuntimeException var2 = null;
         boolean stackIn_7_0 = false;
         RuntimeException decompiledCaughtException = null;

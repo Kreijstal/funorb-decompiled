@@ -50,7 +50,7 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
     }
 
     DropdownList(Object[] param0, int param1, int param2) {
-        super(0, 0, 0, 0, (isa) null);
+        super(0, 0, 0, 0, (WidgetPainter) null);
         this.field_H = KeySwitchComponent.field_J;
         this.field_w = "";
         try {
@@ -60,7 +60,7 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
           this.field_A = param2;
           this.field_I = new FocusableWidget("", new fua(this), (WidgetListener) (this));
           this.field_E = new FocusableWidget();
-          this.field_E.field_r = (isa) ((Object) new ema());
+          this.field_E.field_r = (WidgetPainter) ((Object) new ema());
           this.field_E.field_h = (WidgetListener) (this);
           this.addChild(this.field_I, -1);
           this.addChild(this.field_E, -1);
@@ -218,7 +218,7 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
         }
         this.a(this.field_C + var3, this.field_n, this.field_i, false, this.field_m);
         this.field_z.setBounds((byte) -31, this.field_m, var2, 0, 0);
-        this.field_F = new ScrollContainer(0, 0, 0, 0, new pu(), this.field_z, (isa) null);
+        this.field_F = new ScrollContainer(0, 0, 0, 0, new pu(), this.field_z, (WidgetPainter) null);
         if (var4 != 0) {
           this.field_F.setVerticalScrollControl(1, ImageProducerRasterBuffer.createVerticalScrollControl(-5412), true);
         }

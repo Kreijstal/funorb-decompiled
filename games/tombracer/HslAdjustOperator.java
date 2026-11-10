@@ -43,7 +43,7 @@ final class HslAdjustOperator extends TextureOperator {
           var8 = var20[0];
           var9 = var20[1];
           var10 = var20[2];
-          for (var11 = 0; var11 < ns.textureWidth; var11++) {
+          for (var11 = 0; var11 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var11++) {
             this.b(2, var29[var11], var30[var11], var31[var11]);
             this.field_m = this.field_m + this.field_o;
             this.field_n = this.field_n + this.field_s;

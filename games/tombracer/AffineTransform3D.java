@@ -55,13 +55,13 @@ final class AffineTransform3D extends Transform3D {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void translate(int param0, int param1, int param2) {
         this.field_n = this.field_n + (float)param1;
         this.field_e = this.field_e + (float)param0;
         this.field_i = this.field_i + (float)param2;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void setCamera(int param0, int param1, int param2, int param3, int param4, int param5) {
         float var7 = BufferedCacheFile.field_c[16383 & param3];
         float var8 = BufferedCacheFile.field_n[param3 & 16383];
         float var9 = BufferedCacheFile.field_c[param4 & 16383];
@@ -278,7 +278,7 @@ final class AffineTransform3D extends Transform3D {
         }
     }
 
-    final void d(int param0) {
+    final void rotateY(int param0) {
         float var2 = BufferedCacheFile.field_c[16383 & param0];
         float var3 = BufferedCacheFile.field_n[16383 & param0];
         float var4 = this.field_g;
@@ -331,7 +331,7 @@ final class AffineTransform3D extends Transform3D {
         this.field_f = this.field_f * param3;
     }
 
-    final void c(int param0) {
+    final void rotateX(int param0) {
         float var2 = BufferedCacheFile.field_c[16383 & param0];
         float var3 = BufferedCacheFile.field_n[16383 & param0];
         float var4 = this.field_k;
@@ -348,7 +348,7 @@ final class AffineTransform3D extends Transform3D {
         this.field_i = this.field_i * var2 + var3 * var7;
     }
 
-    final void a() {
+    final void setIdentity() {
         this.field_h = 1.0f;
         this.field_l = 0.0f;
         this.field_k = 0.0f;
@@ -408,7 +408,7 @@ final class AffineTransform3D extends Transform3D {
         }
     }
 
-    final void b(int param0) {
+    final void rotateZ(int param0) {
         float var2 = BufferedCacheFile.field_c[16383 & param0];
         float var3 = BufferedCacheFile.field_n[16383 & param0];
         float var4 = this.field_g;
@@ -803,7 +803,7 @@ final class AffineTransform3D extends Transform3D {
     }
 
     AffineTransform3D() {
-        this.a();
+        this.setIdentity();
     }
 
     static {

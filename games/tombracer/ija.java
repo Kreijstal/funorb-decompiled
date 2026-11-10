@@ -13,7 +13,7 @@ abstract class ija extends IntrusiveNode {
         if (param1 > 79) {
           if (param2) {
             wk.field_m = wk.field_m + 1;
-            f.b((byte) 58);
+            ComponentTargetList.b((byte) 58);
           }
           if (param0) {
             KaleidoscopeOperator.field_m = KaleidoscopeOperator.field_m + 1;
@@ -24,7 +24,7 @@ abstract class ija extends IntrusiveNode {
         ija.a(false, (byte) 60, false);
         if (param2) {
           wk.field_m = wk.field_m + 1;
-          f.b((byte) 58);
+          ComponentTargetList.b((byte) 58);
         }
         if (param0) {
           KaleidoscopeOperator.field_m = KaleidoscopeOperator.field_m + 1;

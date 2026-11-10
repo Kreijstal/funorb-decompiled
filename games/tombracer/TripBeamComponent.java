@@ -117,7 +117,7 @@ final class TripBeamComponent extends SwitchComponent {
         }
     }
 
-    final boolean r(byte param0) {
+    final boolean hasInitialState(byte param0) {
         if (param0 != 93) {
           return true;
         }
@@ -176,7 +176,7 @@ final class TripBeamComponent extends SwitchComponent {
         return true;
     }
 
-    final int B(int param0) {
+    final int getMaxTargets(int param0) {
         if (param0 != 31609) {
           return 59;
         }
@@ -185,7 +185,7 @@ final class TripBeamComponent extends SwitchComponent {
 
     final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
-          this.B(-5);
+          this.getMaxTargets(-5);
           return false;
         }
         return false;

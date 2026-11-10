@@ -109,7 +109,7 @@ final class pg extends WidgetContainer implements HotspotListener, ButtonListene
     }
 
     pg(rua param0) {
-        super(0, 0, 288, 0, (isa) null);
+        super(0, 0, 288, 0, (WidgetPainter) null);
         String var7 = null;
         int var3 = 0;
         TextWidgetPainter var4 = null;
@@ -118,8 +118,8 @@ final class pg extends WidgetContainer implements HotspotListener, ButtonListene
         try {
           this.field_w = param0;
           this.field_B = new FocusableWidget(aua.field_d, (WidgetListener) null);
-          this.field_B.field_r = (isa) ((Object) new td());
-          var7 = gl.$cfr$intArgs$a$53ce4ab4c593(108, SafeZoneBehaviour.field_q, new String[]{this.c(-58), this.d(-35)});
+          this.field_B.field_r = (WidgetPainter) ((Object) new td());
+          var7 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(108, SafeZoneBehaviour.field_q, new String[]{this.c(-58), this.d(-35)});
           var3 = 20;
           var4 = new TextWidgetPainter(KeySwitchComponent.field_J, 0, 0, 0, 0, 16777215, -1, 3, 0, KeySwitchComponent.field_J.field_w, -1, 2147483647, true);
           this.field_z = new HotspotTextWidget(var7, var4);

@@ -41,7 +41,7 @@ final class ConsoleToken extends IntrusiveNode {
             return;
           }
           for (var3 = 0; cna.field_b.length > var3; var3++) {
-            var4 = f.field_c[var3];
+            var4 = ComponentTargetList.field_c[var3];
             if (var4 < 0) {
               var5 = OpenGlToolkit.field_H;
             } else {
@@ -70,7 +70,7 @@ final class ConsoleToken extends IntrusiveNode {
               var2 = var2 + RenderLayer.field_d;
             }
             if (0 > var4) {
-              kl.field_b.c(var6, var8, sb.field_d + var2, var5, -1);
+              LegacyOpenGlTexture.field_b.c(var6, var8, sb.field_d + var2, var5, -1);
               var2 = var2 + CharacterSelectPhase.field_x;
             } else {
               OpenGlUnderwaterEffect.field_d.c(var6, var8, var2 + vo.field_f, var5, -1);
@@ -98,7 +98,7 @@ final class ConsoleToken extends IntrusiveNode {
         if (nl.field_d == this.kind) {
           return "Char{" + this.text + "}";
         }
-        if (ma.field_e == this.kind) {
+        if (LegacyOpenGlReflectionEffect.field_e == this.kind) {
           return "String{" + this.text + "}";
         }
         if (lna.field_a == this.kind) {
@@ -212,7 +212,7 @@ final class ConsoleToken extends IntrusiveNode {
               stackIn_33_0 = new ConsoleValue(var9.charAt(0));
               return stackIn_33_0;
             }
-            if (ma.field_e == this.kind) {
+            if (LegacyOpenGlReflectionEffect.field_e == this.kind) {
               stackIn_37_0 = new ConsoleValue(this.text.substring(1, -1 + this.text.length()));
               return stackIn_37_0;
             }

@@ -87,7 +87,7 @@ class AudioOutput {
                       continue;
                     }
                     var11.active = true;
-                    var13 = var11.a();
+                    var13 = var11.activity();
                     var4 = var4 + var13;
                     if (var12 != null) {
                       var12.field_f = var12.field_f + var13;

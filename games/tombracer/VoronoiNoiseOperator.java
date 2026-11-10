@@ -116,7 +116,7 @@ final class VoronoiNoiseOperator extends TextureOperator {
             var31.field_f.addIconItem(var32, 12, var33, false);
             var34 = hka.field_b;
             var35 = ColouriseOperator.field_m[2];
-            var36 = tva.field_c;
+            var36 = LegacyOpenGlUnlitEffect.field_c;
             var34.field_f.addIconItem(var35, 13, var36, false);
           }
           var37 = hka.field_b;
@@ -204,7 +204,7 @@ final class VoronoiNoiseOperator extends TextureOperator {
           var4 = sj.textureRowCoords[param1] * this.field_m + 2048;
           var5 = var4 >> 12;
           var6 = var5 + 1;
-          for (var14 = 0; var14 < ns.textureWidth; var14++) {
+          for (var14 = 0; var14 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var14++) {
             CachedArchiveSource.field_l = 2147483647;
             rp.field_h = 2147483647;
             CorpseList.field_b = 2147483647;

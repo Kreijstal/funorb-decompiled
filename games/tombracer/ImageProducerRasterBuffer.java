@@ -40,10 +40,10 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
 
     final static ScrollControlWidget createVerticalScrollControl(int param0) {
         if (param0 == -5412) {
-          return new ScrollControlWidget(0, 0, afa.field_c.field_m, 0, (isa) null, afa.field_c.field_r, afa.field_c.field_h, afa.field_c.field_m, afa.field_c.field_m, afa.field_c.field_g, afa.field_c.field_l, false, true, 32768, 0);
+          return new ScrollControlWidget(0, 0, afa.field_c.field_m, 0, (WidgetPainter) null, afa.field_c.field_r, afa.field_c.field_h, afa.field_c.field_m, afa.field_c.field_m, afa.field_c.field_g, afa.field_c.field_l, false, true, 32768, 0);
         }
         ImageProducerRasterBuffer.releaseStatics(-97);
-        return new ScrollControlWidget(0, 0, afa.field_c.field_m, 0, (isa) null, afa.field_c.field_r, afa.field_c.field_h, afa.field_c.field_m, afa.field_c.field_m, afa.field_c.field_g, afa.field_c.field_l, false, true, 32768, 0);
+        return new ScrollControlWidget(0, 0, afa.field_c.field_m, 0, (WidgetPainter) null, afa.field_c.field_r, afa.field_c.field_h, afa.field_c.field_m, afa.field_c.field_m, afa.field_c.field_g, afa.field_c.field_l, false, true, 32768, 0);
     }
 
     public static void releaseStatics(int param0) {
@@ -128,18 +128,18 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           if (param1.field_ec && (param1.field_yb == 2 ||
             !(ld.field_e < 2))) {
             var10 = hka.field_b;
-            var11 = gl.$cfr$intArgs$a$53ce4ab4c593(109, ColourFillOperator.field_o, new String[]{param3});
+            var11 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(109, ColourFillOperator.field_o, new String[]{param3});
             var10.field_f.addItem((byte) -125, 10, var11);
           }
           hka.field_b.a((byte) -84);
           if (param2) {
             if (hka.field_b.field_k == RasterizerOperator.field_o) {
               var14 = hka.field_b;
-              var15 = gl.$cfr$intArgs$a$53ce4ab4c593(103, dka.field_d, new String[]{param3});
+              var15 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(103, dka.field_d, new String[]{param3});
               var14.field_f.addItem((byte) -65, 16, var15);
             } else {
               var12 = hka.field_b;
-              var13 = gl.$cfr$intArgs$a$53ce4ab4c593(125, IdolItemComponent.field_J, new String[]{param3});
+              var13 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(125, IdolItemComponent.field_J, new String[]{param3});
               var12.field_f.addItem((byte) -90, 15, var13);
             }
           }

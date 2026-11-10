@@ -126,7 +126,7 @@ final class wg extends MatchScoringObserver {
               }
               var4 = var4 + ((GasVentModel.field_p << 1) + mha.field_C + nt.field_d);
             } else {
-              var4 = var4 + f.field_b;
+              var4 = var4 + ComponentTargetList.field_b;
             }
             var3_int++;
           }

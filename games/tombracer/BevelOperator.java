@@ -57,7 +57,7 @@ final class BevelOperator extends TextureOperator {
             return var9;
           }
           var4 = sj.textureRowCoords[param1];
-          for (var5 = 0; ns.textureWidth > var5; var5++) {
+          for (var5 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var5; var5++) {
             var6 = ht.textureColumnCoords[var5];
             if (var6 > this.field_n &&
               var6 < -this.field_n + 4096 &&
@@ -128,7 +128,7 @@ final class BevelOperator extends TextureOperator {
         var9Lifetime2 = var3Lifetime1;
         var11Lifetime2 = var10Lifetime1;
         var4Lifetime1 = sj.textureRowCoords[param1];
-        for (var5Lifetime1 = 0; ns.textureWidth > var5Lifetime1; var5Lifetime1++) {
+        for (var5Lifetime1 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var5Lifetime1; var5Lifetime1++) {
           var6Lifetime1 = ht.textureColumnCoords[var5Lifetime1];
           if (var6Lifetime1 > this.field_n &&
             var6Lifetime1 < -this.field_n + 4096 &&

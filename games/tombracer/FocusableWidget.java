@@ -40,7 +40,7 @@ class FocusableWidget extends UiWidget {
         }
     }
 
-    FocusableWidget(String param0, isa param1, WidgetListener param2) {
+    FocusableWidget(String param0, WidgetPainter param1, WidgetListener param2) {
         super(param0, param1, param2);
         this.field_u = false;
         this.field_x = 0;
@@ -178,7 +178,7 @@ class FocusableWidget extends UiWidget {
         var2Lifetime3 = 101 / ((param0 + 38) / 60);
     }
 
-    FocusableWidget(int param0, int param1, int param2, int param3, isa param4, WidgetListener param5) {
+    FocusableWidget(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetListener param5) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_u = false;
         this.field_x = 0;

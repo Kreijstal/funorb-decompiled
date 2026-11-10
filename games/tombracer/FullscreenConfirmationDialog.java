@@ -128,14 +128,14 @@ final class FullscreenConfirmationDialog extends ofa implements ButtonListener {
           var3.field_p = 100;
           var3.field_n = 50;
           var3.field_i = 0;
-          var3.field_r = (isa) ((Object) new TextWidgetPainter(BlendModeOperator.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var3.field_r = (WidgetPainter) ((Object) new TextWidgetPainter(BlendModeOperator.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(var3, -1);
           this.field_L = new UiWidget(rfa.field_B, (WidgetListener) null);
           this.field_L.field_i = 0;
           this.field_L.field_n = 20 + var3.field_n + var3.field_p;
           this.field_L.field_m = this.field_m;
           this.field_L.field_p = 80;
-          this.field_L.field_r = (isa) ((Object) new TextWidgetPainter(ft.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.field_L.field_r = (WidgetPainter) ((Object) new TextWidgetPainter(ft.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(this.field_L, -1);
           this.field_N = this.addButton((WidgetListener) (this), 77, WeaveOperator.field_s);
           this.field_M = this.addButton((WidgetListener) (this), 71, mha.field_F);
@@ -239,7 +239,7 @@ final class FullscreenConfirmationDialog extends ofa implements ButtonListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new FocusableWidget(param2, param0);
-          var4.field_r = (isa) ((Object) new td());
+          var4.field_r = (WidgetPainter) ((Object) new td());
           var5 = -6 + this.field_p;
           this.field_p = this.field_p + 38;
           if (param1 <= 34) {

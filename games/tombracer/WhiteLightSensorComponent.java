@@ -5,14 +5,14 @@ final class WhiteLightSensorComponent extends SwitchComponent {
     static SecondaryNodeHashTable field_K;
     static String field_J;
 
-    final int B(int param0) {
+    final int getMaxTargets(int param0) {
         if (param0 != 31609) {
           return 93;
         }
         return 3;
     }
 
-    final boolean r(byte param0) {
+    final boolean hasInitialState(byte param0) {
         if (param0 != 93) {
           return false;
         }

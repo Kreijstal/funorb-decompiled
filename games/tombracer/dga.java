@@ -112,7 +112,7 @@ final class dga {
 
     final static void a(int param0, int param1) {
         int var2 = (SceneLight.field_i - 640) / 2;
-        int var3 = pna.field_q * pna.field_q;
+        int var3 = SoftwareTransform3D.field_q * SoftwareTransform3D.field_q;
         int var4 = var3 - param0 * param0;
         nra.field_c.a(param1, -124 + SoftwareRasterizer.field_a - 90, -23776, 90, -(var4 * 199 / var3) + var2);
         dka.field_b.a(438, -124 + SoftwareRasterizer.field_a, param1 - 23975, 0, var2 + 202 + var4 * 438 / var3);

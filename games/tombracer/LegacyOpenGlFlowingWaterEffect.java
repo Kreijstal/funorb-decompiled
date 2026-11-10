@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gl extends qe {
+final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
     private aaa field_c;
     private tla field_d;
 
@@ -118,7 +118,7 @@ final class gl extends qe {
         }
     }
 
-    final boolean b(int param0) {
+    final boolean isSupported(int param0) {
         if (param0 != -11921) {
           this.field_d = (tla) null;
           return true;
@@ -126,10 +126,10 @@ final class gl extends qe {
         return true;
     }
 
-    final void a(int param0, int param1, kl param2) {
+    final void bindTexture(int param0, int param1, LegacyOpenGlTexture param2) {
         try {
-          this.field_a.a(true, param2);
-          this.field_a.d(1, param0);
+          this.toolkit.a(true, param2);
+          this.toolkit.d(1, param0);
           if (param1 != 32221) {
             this.field_c = (aaa) null;
           }
@@ -143,17 +143,17 @@ final class gl extends qe {
         ag.a(param0, param1, false, (String) null);
         if (param2 < 87) {
           String[] var4 = (String[]) null;
-          gl.$cfr$intArgs$a$53ce4ab4c593(-98, (String) null, (String[]) null);
+          LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(-98, (String) null, (String[]) null);
         }
     }
 
-    final void b(boolean param0, int param1) {
+    final void refreshState(boolean param0, int param1) {
         if (param1 <= 77) {
           this.field_c = (aaa) null;
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void setParameters(int param0, int param1, int param2) {
         float stackIn_5_0 = 0.0f;
         int stackIn_8_0 = 0;
         float var4;
@@ -164,7 +164,7 @@ final class gl extends qe {
         int var9;
         var9 = TombRacer.field_G ? 1 : 0;
         if (param2 <= 117) {
-          this.a(true);
+          this.disable(true);
         }
         var4 = -0.0005000000237487257f * (float)((param0 & 3) + 1);
         var5 = 0.0005000000237487257f * (float)((3 & param0 >> 3) + 1);
@@ -172,7 +172,7 @@ final class gl extends qe {
         var6 = stackIn_5_0;
         stackIn_8_0 = ((param0 & 128) == 0) ? 0 : 1;
         var7 = stackIn_8_0;
-        this.field_a.e(1, true);
+        this.toolkit.e(1, true);
         if (var7 == 0) {
           ka.field_b[2] = var6;
           ka.field_b[0] = 0.0f;
@@ -188,38 +188,38 @@ final class gl extends qe {
         ka.field_b[2] = 0.0f;
         ka.field_b[1] = var6;
         ka.field_b[0] = 0.0f;
-        ka.field_b[3] = var4 * (float)this.field_a.field_Oc % 1.0f;
+        ka.field_b[3] = var4 * (float)this.toolkit.field_Oc % 1.0f;
         jaggl.OpenGL.glTexGenfv(8193, 9474, ka.field_b, 0);
         if (!this.field_c.field_g) {
-          var8 = (int)(16.0f * (var5 * (float)this.field_a.field_Oc));
-          this.field_a.a(true, this.field_c.field_i[var8 % 16]);
+          var8 = (int)(16.0f * (var5 * (float)this.toolkit.field_Oc));
+          this.toolkit.a(true, this.field_c.field_i[var8 % 16]);
         } else {
-          ka.field_b[3] = var5 * (float)this.field_a.field_Oc % 1.0f;
+          ka.field_b[3] = var5 * (float)this.toolkit.field_Oc % 1.0f;
           ka.field_b[1] = 0.0f;
           ka.field_b[2] = 0.0f;
           ka.field_b[0] = 0.0f;
           jaggl.OpenGL.glTexGenfv(8194, 9473, ka.field_b, 0);
         }
-        this.field_a.e(0, true);
+        this.toolkit.e(0, true);
     }
 
-    final void a(boolean param0) {
+    final void disable(boolean param0) {
         this.field_d.a(4864, '\001');
         if (param0) {
           return;
         }
-        this.field_a.e(1, true);
-        this.field_a.a(true, (kl) null);
-        this.field_a.e(0, !param0 ? true : false);
+        this.toolkit.e(1, true);
+        this.toolkit.a(true, (LegacyOpenGlTexture) null);
+        this.toolkit.e(0, !param0 ? true : false);
     }
 
-    gl(OpenGlToolkit param0, aaa param1) {
+    LegacyOpenGlFlowingWaterEffect(OpenGlToolkit param0, aaa param1) {
         super(param0);
         try {
           this.field_c = param1;
           this.field_d = new tla(param0, 2);
           this.field_d.a((byte) 6, 0);
-          this.field_a.e(1, true);
+          this.toolkit.e(1, true);
           if (this.field_c.field_g) {
             jaggl.OpenGL.glTexGeni(8194, 9472, 9217);
             jaggl.OpenGL.glEnable(3170);
@@ -228,29 +228,29 @@ final class gl extends qe {
           jaggl.OpenGL.glTexGeni(8193, 9472, 9216);
           jaggl.OpenGL.glEnable(3168);
           jaggl.OpenGL.glEnable(3169);
-          this.field_a.e(0, true);
+          this.toolkit.e(0, true);
           this.field_d.b((byte) 77);
           this.field_d.a((byte) 6, 1);
-          this.field_a.e(1, true);
+          this.toolkit.e(1, true);
           if (this.field_c.field_g) {
             jaggl.OpenGL.glDisable(3170);
           }
           jaggl.OpenGL.glDisable(3168);
           jaggl.OpenGL.glDisable(3169);
-          this.field_a.e(0, true);
+          this.toolkit.e(0, true);
           this.field_d.b((byte) 10);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "gl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(boolean param0, int param1) {
+    final void enable(boolean param0, int param1) {
         this.field_d.a(4864, '\0');
         int var3 = -99 / ((56 - param1) / 48);
         if (this.field_c.field_g) {
-          this.field_a.e(1, true);
-          this.field_a.a(true, this.field_c.field_a);
-          this.field_a.e(0, true);
+          this.toolkit.e(1, true);
+          this.toolkit.a(true, this.field_c.field_a);
+          this.toolkit.e(0, true);
         }
     }
 

@@ -42,7 +42,7 @@ final class OpenGlTransform3D extends Transform3D {
         return false;
     }
 
-    final void c(int param0) {
+    final void rotateX(int param0) {
         float var2 = hu.field_c[param0 & 16383];
         float var3 = hu.field_b[param0 & 16383];
         float var4 = this.field_i;
@@ -150,7 +150,7 @@ final class OpenGlTransform3D extends Transform3D {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void translate(int param0, int param1, int param2) {
         this.field_p = this.field_p + (float)param1;
         this.field_m = this.field_m + (float)param0;
         this.field_o = this.field_o + (float)param2;
@@ -198,7 +198,7 @@ final class OpenGlTransform3D extends Transform3D {
         }
     }
 
-    final void d(int param0) {
+    final void rotateY(int param0) {
         float var2 = hu.field_c[param0 & 16383];
         float var3 = hu.field_b[param0 & 16383];
         float var4 = this.field_l;
@@ -228,7 +228,7 @@ final class OpenGlTransform3D extends Transform3D {
         field_e = null;
     }
 
-    final void a() {
+    final void setIdentity() {
         this.field_s = 0.0f;
         this.field_k = 0.0f;
         this.field_o = 0.0f;
@@ -291,7 +291,7 @@ final class OpenGlTransform3D extends Transform3D {
         }
     }
 
-    final void b(int param0) {
+    final void rotateZ(int param0) {
         float var2 = hu.field_c[16383 & param0];
         float var3 = hu.field_b[param0 & 16383];
         float var4 = this.field_l;
@@ -308,7 +308,7 @@ final class OpenGlTransform3D extends Transform3D {
         this.field_p = var3 * var7 + this.field_p * var2;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void setCamera(int param0, int param1, int param2, int param3, int param4, int param5) {
         float var7 = hu.field_c[16383 & param3];
         float var8 = hu.field_b[param3 & 16383];
         float var9 = hu.field_c[16383 & param4];
@@ -332,7 +332,7 @@ final class OpenGlTransform3D extends Transform3D {
     }
 
     OpenGlTransform3D() {
-        this.a();
+        this.setIdentity();
     }
 
     static {

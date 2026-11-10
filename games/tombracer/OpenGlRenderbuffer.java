@@ -70,7 +70,7 @@ final class OpenGlRenderbuffer extends DualLinkNode implements FramebufferAttach
         this.field_r = param0;
     }
 
-    public final void a(int param0) {
+    public final void detachFramebuffer(int param0) {
         int var2 = -73 % ((14 - param0) / 56);
         jaggl.OpenGL.glFramebufferRenderbufferEXT(this.field_q, this.field_r, 36161, 0);
         this.field_q = -1;

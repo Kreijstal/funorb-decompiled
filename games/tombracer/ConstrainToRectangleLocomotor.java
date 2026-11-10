@@ -213,7 +213,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
             }
             uma.field_c = false;
             mpa.field_X = false;
-            pna.field_p = false;
+            SoftwareTransform3D.field_p = false;
             GameClock.field_b = false;
           }
           if (era.field_c) {

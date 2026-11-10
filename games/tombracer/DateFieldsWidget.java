@@ -23,7 +23,7 @@ final class DateFieldsWidget extends DateInputWidget {
         field_F = null;
     }
 
-    DateFieldsWidget(isa param0, boolean param1, int param2, int param3, int param4, int param5) {
+    DateFieldsWidget(WidgetPainter param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
         try {
           this.setBounds((byte) -31, param4, param5, param2, param3);
@@ -46,8 +46,8 @@ final class DateFieldsWidget extends DateInputWidget {
         this.field_D.setBounds(param0, 40, param2, 90 + var6, 0);
     }
 
-    private DateFieldsWidget(isa param0, boolean param1) {
-        super(0, 0, 0, 0, (isa) null);
+    private DateFieldsWidget(WidgetPainter param0, boolean param1) {
+        super(0, 0, 0, 0, (WidgetPainter) null);
         try {
           this.field_B = (TextInputWidget) ((Object) new ValidatedTextInputWidget("", (WidgetListener) null, 2));
           this.field_E = (TextInputWidget) ((Object) new ValidatedTextInputWidget("", (WidgetListener) null, 2));

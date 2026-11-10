@@ -209,7 +209,7 @@ final class cm implements GamePacket {
               if (ComponentMount.b(8192)) {
                 ArchiveNetworkClient.field_b = jsa.field_y;
               } else {
-                ArchiveNetworkClient.field_b = gl.$cfr$intArgs$a$53ce4ab4c593(101, EffectEvent.field_i, new String[]{C2SChooseRewardPacket.field_a.field_tb});
+                ArchiveNetworkClient.field_b = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(101, EffectEvent.field_i, new String[]{C2SChooseRewardPacket.field_a.field_tb});
               }
             }
           }
@@ -533,11 +533,11 @@ final class cm implements GamePacket {
                       if (var22_int == 1) {
                         var21 = rm.field_b;
                       } else {
-                        var21 = gl.$cfr$intArgs$a$53ce4ab4c593(112, vn.field_c, new String[]{Integer.toString(var22_int)});
+                        var21 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(112, vn.field_c, new String[]{Integer.toString(var22_int)});
                       }
                     }
                     if (var12 != 0) {
-                      var31 = gl.$cfr$intArgs$a$53ce4ab4c593(106, kp.field_f, new String[]{Integer.toString(ProxySocketConnector.field_f), Integer.toString(hp.field_a[var7][var9])});
+                      var31 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(106, kp.field_f, new String[]{Integer.toString(ProxySocketConnector.field_f), Integer.toString(hp.field_a[var7][var9])});
                       var22 = var31;
                       var25 = var22;
                       var22 = var25;
@@ -597,7 +597,7 @@ final class cm implements GamePacket {
                   if (var23 != 0) {
                     var21 = GridWidgetContainer.field_G + (String) (var22);
                   } else {
-                    var21 = gl.$cfr$intArgs$a$53ce4ab4c593(106, cna.field_d, new String[]{(String) (var22)});
+                    var21 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(106, cna.field_d, new String[]{(String) (var22)});
                   }
                 }
                 if (var21 != null) {

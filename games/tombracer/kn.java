@@ -4,25 +4,25 @@
 final class kn {
     BitmapFont field_q;
     int field_m;
-    isa field_u;
+    WidgetPainter field_u;
     int field_b;
     static GameFont field_p;
     static ur field_j;
     int field_a;
     int field_l;
-    isa field_k;
+    WidgetPainter field_k;
     private boolean field_n;
-    isa field_d;
-    isa field_h;
+    WidgetPainter field_d;
+    WidgetPainter field_h;
     private int field_s;
     int field_o;
-    isa field_v;
-    isa field_e;
+    WidgetPainter field_v;
+    WidgetPainter field_e;
     int field_i;
     int field_g;
     int field_c;
     int field_f;
-    isa field_r;
+    WidgetPainter field_r;
     int field_t;
 
     final void a(byte param0) {
@@ -241,7 +241,7 @@ final class kn {
         try {
           var17 = new TextWidgetPainter(param0, 2, 2, 2236962, 1, 1, 1, 2 + (param0.field_w + param0.field_k));
           var17.field_j = 16777215;
-          this.field_k = (isa) ((Object) var17);
+          this.field_k = (WidgetPainter) ((Object) var17);
           var4 = new StatefulWidgetPainter();
           var17.a(var4, -49);
           this.field_t = 3;
@@ -267,21 +267,21 @@ final class kn {
           var5[4] = (Sprite) ((Object) var18);
           var4.createStateLayer(4, (byte) 127).a(-2, true).setSprites(2, var5);
           var4.createStateLayer(5, (byte) 107).setSprites(2, jsa.b(65793, 2, 0, 0, 0)).a(-2, true).b(-1, -2147483648);
-          this.field_u = (isa) ((Object) var4);
+          this.field_u = (WidgetPainter) ((Object) var4);
           var6 = new StatefulWidgetPainter(var4, true);
           var6.field_l = 0;
           var7 = new StatefulWidgetPainter(var4, true);
           var7.field_l = 0;
           var7.a(-18379, eca.a(4, 8947848));
           var7.createStateLayer(1, (byte) 85).setSprites(2, eca.a(4, 11184810)).b(2236962, -2147483648);
-          this.field_d = (isa) ((Object) new jr(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.field_d = (WidgetPainter) ((Object) new jr(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new bsa(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new cj(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new StatefulWidgetPainter();
           var17.a(var8, -107);
           var8.createStateLayer(0, (byte) 65).setSprites(2, gn.b(15658734, 1, 7829367, 10066329)).b(1118481, -2147483648).a((byte) 7, -1);
           var8.createStateLayer(4, (byte) 87).a(-2, true).setSprites(2, var5);
-          this.field_e = (isa) ((Object) var8);
+          this.field_e = (WidgetPainter) ((Object) var8);
           var9 = new Sprite[9];
           var10 = new Sprite[9];
           var9[4] = new Sprite(2, 1);
@@ -293,8 +293,8 @@ final class kn {
           var12 = new StatefulWidgetPainter();
           var11.setStateFrameSprites(0, 0, var9);
           var12.setStateFrameSprites(0, 0, var10);
-          this.field_r = (isa) ((Object) var12);
-          this.field_h = (isa) ((Object) var4);
+          this.field_r = (WidgetPainter) ((Object) var12);
+          this.field_h = (WidgetPainter) ((Object) var4);
           var13 = new Sprite(7, 4);
           this.field_m = 10;
           var13.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};

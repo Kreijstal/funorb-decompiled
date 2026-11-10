@@ -40,7 +40,7 @@ final class InvertOperator extends TextureOperator {
           var8 = var20[0];
           var9 = var20[1];
           var10 = var20[2];
-          for (var11 = 0; var11 < ns.textureWidth; var11++) {
+          for (var11 = 0; var11 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var11++) {
             var8[var11] = -var21[var11] + 4096;
             var9[var11] = -var22[var11] + 4096;
             var10[var11] = 4096 - var23[var11];
@@ -103,7 +103,7 @@ final class InvertOperator extends TextureOperator {
         int[] var3 = var7;
         if (this.monochromeCache.rowMissed) {
           var4 = this.getInputMonochromeRow(0, -106, param1);
-          for (var5 = 0; ns.textureWidth > var5; var5++) {
+          for (var5 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var5; var5++) {
             var7[var5] = 4096 - var4[var5];
           }
         }

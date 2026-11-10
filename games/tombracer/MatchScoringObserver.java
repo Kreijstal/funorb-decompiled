@@ -61,10 +61,10 @@ class MatchScoringObserver extends SimulationObserver {
           var9 = null;
           if (1 != param5) {
             var8 = -10;
-            var9_ref = gl.$cfr$intArgs$a$53ce4ab4c593(104, ConsoleWindow.field_n, new String[]{String.valueOf(var8)});
+            var9_ref = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(104, ConsoleWindow.field_n, new String[]{String.valueOf(var8)});
           } else {
             var8 = -5;
-            var9_ref = gl.$cfr$intArgs$a$53ce4ab4c593(107, rf.field_a, new String[]{String.valueOf(var8)});
+            var9_ref = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(107, rf.field_a, new String[]{String.valueOf(var8)});
           }
           param1.addScore(param0 - 15, var8);
           this.field_f.field_D.a(param5, param1.getPlayerIndex(0), param0 - 19);
@@ -324,7 +324,7 @@ class MatchScoringObserver extends SimulationObserver {
           if (var4_int > var5) {
             var7 = (-var5 + var4_int) * 5 / 50;
           }
-          param0.addScore(0, param0.F(-7991) + (var7 + var6));
+          param0.addScore(0, param0.getRoomTreasureScore(-7991) + (var7 + var6));
           var8 = param0.getPlayerIndex(0);
           this.field_f.field_F[var8] = (long)var5;
           this.field_f.field_g[var8] = param1.getId((byte) -82);
@@ -340,14 +340,14 @@ class MatchScoringObserver extends SimulationObserver {
           if (this.field_f.j(-1878) &&
             !this.field_f.d(-127)) {
             if (0 != var7) {
-              var9_ref_jha = RewardChoicePhase.a(-89, gl.$cfr$intArgs$a$53ce4ab4c593(112, ArrowShooterComponent.field_J, new String[]{String.valueOf(var6), String.valueOf(var7)}));
+              var9_ref_jha = RewardChoicePhase.a(-89, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(112, ArrowShooterComponent.field_J, new String[]{String.valueOf(var6), String.valueOf(var7)}));
             } else {
-              var9_ref_jha = RewardChoicePhase.a(-66, gl.$cfr$intArgs$a$53ce4ab4c593(92, BevelOperator.field_q, new String[]{String.valueOf(var6)}));
+              var9_ref_jha = RewardChoicePhase.a(-66, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(92, BevelOperator.field_q, new String[]{String.valueOf(var6)}));
             }
             iqa.field_c.a(0, var9_ref_jha);
-            var10 = param0.F(-7991);
+            var10 = param0.getRoomTreasureScore(-7991);
             if (var10 > 0) {
-              dupTemp$0 = RewardChoicePhase.a(-96, gl.$cfr$intArgs$a$53ce4ab4c593(82, bca.field_c, new String[]{String.valueOf(var10)}));
+              dupTemp$0 = RewardChoicePhase.a(-96, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(82, bca.field_c, new String[]{String.valueOf(var10)}));
               var12 = dupTemp$0;
               var9_ref_jhaLifetime1 = dupTemp$0;
               iqa.field_c.a(3, 0, var12);

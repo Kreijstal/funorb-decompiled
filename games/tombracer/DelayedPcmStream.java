@@ -72,7 +72,7 @@ final class DelayedPcmStream extends PcmStream {
         return this.field_j.getLevel();
     }
 
-    final int a() {
+    final int activity() {
         return 0;
     }
 

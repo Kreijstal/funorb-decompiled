@@ -308,7 +308,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
             var2 = (java.awt.Canvas) (var1_ref.nextElement());
             this.a(this.field_oc.get(var2), false, var2);
           }
-          rpa.a(true, false, true);
+          LegacyOpenGlEnvironmentWaterEffect.a(true, false, true);
           this.field_P.release();
           this.field_Fc = true;
         }
@@ -987,7 +987,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     abstract void applyAlphaCombineOperation(byte param0);
 
     final void i(byte param0) {
-        this.field_q.a();
+        this.field_q.setIdentity();
         this.field_gb = true;
         this.o(16);
         if (param0 < 97) {
@@ -1066,7 +1066,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.a(0, false, pea.field_c);
         this.setBlendMode(param5, 1);
         this.field_q.a(1.0f, (float)param2, false, (float)param3);
-        this.field_q.a(param0, param1, 0);
+        this.field_q.translate(param0, param1, 0);
         this.F(-1662);
         this.b(1, false);
         this.y(2);
@@ -1162,7 +1162,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.a(0, false, pea.field_c);
         this.setBlendMode(param4, 1);
         this.field_q.a(1.0f, (float)param2, false, (float)param2);
-        this.field_q.a(param0, param1, 0);
+        this.field_q.translate(param0, param1, 0);
         this.F(-1662);
         this.b(1, false);
         this.a(-125, 0, this.field_hb);
@@ -1480,7 +1480,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     final void p(byte param0) {
         if (DualLinkNode.field_h != this.field_v[this.field_Cc]) {
           this.field_v[this.field_Cc] = DualLinkNode.field_h;
-          this.field_hc[this.field_Cc].a();
+          this.field_hc[this.field_Cc].setIdentity();
           this.u(0);
         }
         int var2 = -62 % ((param0 - 28) / 46);
@@ -1708,7 +1708,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.a(0, false, pea.field_c);
         this.setBlendMode(param4, 1);
         this.field_q.a(1.0f, (float)param2, false, (float)param2);
-        this.field_q.a(param0, param1, 0);
+        this.field_q.translate(param0, param1, 0);
         this.F(-1662);
         this.b(1, false);
         this.a(-125, 0, this.field_hb);

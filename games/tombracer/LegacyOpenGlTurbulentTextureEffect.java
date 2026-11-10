@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ns extends qe {
+final class LegacyOpenGlTurbulentTextureEffect extends LegacyOpenGlEffect {
     private float field_l;
     static String field_c;
     private tla field_i;
@@ -23,7 +23,7 @@ final class ns extends qe {
         field_c = null;
     }
 
-    final void a(boolean param0, int param1) {
+    final void enable(boolean param0, int param1) {
         int var4 = 0;
         int var5 = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
@@ -31,15 +31,15 @@ final class ns extends qe {
           return;
         }
         this.field_i.a(4864, '\0');
-        this.field_a.e(1, true);
+        this.toolkit.e(1, true);
         jaggl.OpenGL.glMatrixMode(5890);
-        jaggl.OpenGL.glLoadMatrixf(this.field_a.field_Tc.affineMatrix(-103), 0);
+        jaggl.OpenGL.glLoadMatrixf(this.toolkit.field_Tc.affineMatrix(-103), 0);
         int var3 = 5 / ((56 - param1) / 48);
         jaggl.OpenGL.glMatrixMode(5888);
-        this.field_a.e(0, true);
-        if (this.field_h == this.field_a.field_Oc) {
+        this.toolkit.e(0, true);
+        if (this.field_h == this.toolkit.field_Oc) {
         } else {
-          var4 = this.field_a.field_Oc % 5000 * 128 / 5000;
+          var4 = this.toolkit.field_Oc % 5000 * 128 / 5000;
           for (var5 = 0; 64 > var5; var5++) {
             jaggl.OpenGL.glProgramLocalParameter4fvARB(34336, var5, this.field_e, var4);
             var4 += 2;
@@ -47,13 +47,13 @@ final class ns extends qe {
           if (!this.field_m.field_g) {
             jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 65, 0.0f, 0.0f, 0.0f, 1.0f);
           } else {
-            this.field_l = (float)(this.field_a.field_Oc % 4000) / 4000.0f;
+            this.field_l = (float)(this.toolkit.field_Oc % 4000) / 4000.0f;
           }
-          this.field_h = this.field_a.field_Oc;
+          this.field_h = this.toolkit.field_Oc;
         }
     }
 
-    ns(OpenGlToolkit param0, aaa param1) {
+    LegacyOpenGlTurbulentTextureEffect(OpenGlToolkit param0, aaa param1) {
         super(param0);
         int var6 = 0;
         int var9 = 0;
@@ -76,9 +76,9 @@ final class ns extends qe {
         int[] var25 = null;
         try {
           this.field_m = param1;
-          if (this.field_a.field_G &&
-            this.field_a.field_Ic >= 2) {
-            this.field_k = C2SActionPacket.a(17, 34336, "!!ARBvp1.0\nOPTION  ARB_position_invariant;\nATTRIB  iPos         = vertex.position;\nATTRIB  iColour      = vertex.color;\nATTRIB  iTexCoord    = vertex.texcoord[0];\nOUTPUT  oColour      = result.color;\nOUTPUT  oTexCoord0   = result.texcoord[0];\nOUTPUT  oTexCoord1   = result.texcoord[1];\nOUTPUT  oFogCoord    = result.fogcoord;\nPARAM   time         = program.local[65];\nPARAM   turbulence   = program.local[64];\nPARAM   lightAmbient = program.local[66]; \nPARAM   pMatrix[4]   = { state.matrix.projection };\nPARAM   mvMatrix[4]  = { state.matrix.modelview };\nPARAM   ivMatrix[4]  = { state.matrix.texture[1] };\nPARAM   texMatrix[4]  = { state.matrix.texture[0] };\nPARAM   fNoise[64]   = { program.local[0..63] };\nTEMP    noise, viewPos, worldPos, texCoord;\nADDRESS noiseAddr;\nDP4   viewPos.x, mvMatrix[0], iPos;\nDP4   viewPos.y, mvMatrix[1], iPos;\nDP4   viewPos.z, mvMatrix[2], iPos;\nDP4   viewPos.w, mvMatrix[3], iPos;\nMOV   oFogCoord.x, -viewPos.z;\nDP4   worldPos.x, ivMatrix[0], viewPos;\nDP4   worldPos.y, ivMatrix[1], viewPos;\nDP4   worldPos.z, ivMatrix[2], viewPos;\nDP4   worldPos.w, ivMatrix[3], viewPos;\nADD   noise.x, worldPos.x, worldPos.z;SUB   noise.y, worldPos.z, worldPos.x;MUL   noise, noise, 0.0001220703125;\nFRC   noise, noise;\nMUL   noise, noise, 64;\nARL   noiseAddr.x, noise.x;\nMOV   noise.x, fNoise[noiseAddr.x].x;\nARL   noiseAddr.x, noise.y;\nMOV   noise.y, fNoise[noiseAddr.x].y;\nMUL   noise, noise, turbulence.x;\nDP4   texCoord.x, texMatrix[0], iTexCoord;\nDP4   texCoord.y, texMatrix[1], iTexCoord;\nADD   oTexCoord0.xy, texCoord, noise;\nMOV   oTexCoord0.z, 0;\nMOV   oTexCoord0.w, 1;\nMUL   oTexCoord1.xy, texCoord, 0.125;\nMOV   oTexCoord1.zw, time.xxxw;\nMUL   oColour.xyz, iColour, lightAmbient;\nMOV   oColour.w, iColour.w;\nEND", this.field_a);
+          if (this.toolkit.field_G &&
+            this.toolkit.field_Ic >= 2) {
+            this.field_k = C2SActionPacket.a(17, 34336, "!!ARBvp1.0\nOPTION  ARB_position_invariant;\nATTRIB  iPos         = vertex.position;\nATTRIB  iColour      = vertex.color;\nATTRIB  iTexCoord    = vertex.texcoord[0];\nOUTPUT  oColour      = result.color;\nOUTPUT  oTexCoord0   = result.texcoord[0];\nOUTPUT  oTexCoord1   = result.texcoord[1];\nOUTPUT  oFogCoord    = result.fogcoord;\nPARAM   time         = program.local[65];\nPARAM   turbulence   = program.local[64];\nPARAM   lightAmbient = program.local[66]; \nPARAM   pMatrix[4]   = { state.matrix.projection };\nPARAM   mvMatrix[4]  = { state.matrix.modelview };\nPARAM   ivMatrix[4]  = { state.matrix.texture[1] };\nPARAM   texMatrix[4]  = { state.matrix.texture[0] };\nPARAM   fNoise[64]   = { program.local[0..63] };\nTEMP    noise, viewPos, worldPos, texCoord;\nADDRESS noiseAddr;\nDP4   viewPos.x, mvMatrix[0], iPos;\nDP4   viewPos.y, mvMatrix[1], iPos;\nDP4   viewPos.z, mvMatrix[2], iPos;\nDP4   viewPos.w, mvMatrix[3], iPos;\nMOV   oFogCoord.x, -viewPos.z;\nDP4   worldPos.x, ivMatrix[0], viewPos;\nDP4   worldPos.y, ivMatrix[1], viewPos;\nDP4   worldPos.z, ivMatrix[2], viewPos;\nDP4   worldPos.w, ivMatrix[3], viewPos;\nADD   noise.x, worldPos.x, worldPos.z;SUB   noise.y, worldPos.z, worldPos.x;MUL   noise, noise, 0.0001220703125;\nFRC   noise, noise;\nMUL   noise, noise, 64;\nARL   noiseAddr.x, noise.x;\nMOV   noise.x, fNoise[noiseAddr.x].x;\nARL   noiseAddr.x, noise.y;\nMOV   noise.y, fNoise[noiseAddr.x].y;\nMUL   noise, noise, turbulence.x;\nDP4   texCoord.x, texMatrix[0], iTexCoord;\nDP4   texCoord.y, texMatrix[1], iTexCoord;\nADD   oTexCoord0.xy, texCoord, noise;\nMOV   oTexCoord0.z, 0;\nMOV   oTexCoord0.w, 1;\nMUL   oTexCoord1.xy, texCoord, 0.125;\nMOV   oTexCoord1.zw, time.xxxw;\nMUL   oColour.xyz, iColour, lightAmbient;\nMOV   oColour.w, iColour.w;\nEND", this.toolkit);
             if (null == this.field_k) {
               return;
             }
@@ -125,9 +125,9 @@ final class ns extends qe {
         }
     }
 
-    final void b(boolean param0, int param1) {
+    final void refreshState(boolean param0, int param1) {
         if (param1 <= 77) {
-          this.a(true, -89);
+          this.enable(true, -89);
         }
     }
 
@@ -181,10 +181,10 @@ final class ns extends qe {
         }
     }
 
-    final void a(int param0, int param1, kl param2) {
+    final void bindTexture(int param0, int param1, LegacyOpenGlTexture param2) {
         try {
-          this.field_a.a(true, param2);
-          this.field_a.d(1, param0);
+          this.toolkit.a(true, param2);
+          this.toolkit.d(1, param0);
           if (param1 != 32221) {
             field_j = (SoundCache) null;
           }
@@ -194,32 +194,32 @@ final class ns extends qe {
     }
 
     private final void a(byte param0) {
-        this.field_i = new tla(this.field_a, 2);
+        this.field_i = new tla(this.toolkit, 2);
         this.field_i.a((byte) 6, 0);
-        this.field_a.e(1, true);
-        this.field_a.setTextureConstantArgb(1104971864, -16777216);
-        this.field_a.setTextureCombineOperations(260, 8960, 7681);
-        this.field_a.b(34166, 3, 0, 770);
-        this.field_a.e(0, true);
+        this.toolkit.e(1, true);
+        this.toolkit.setTextureConstantArgb(1104971864, -16777216);
+        this.toolkit.setTextureCombineOperations(260, 8960, 7681);
+        this.toolkit.b(34166, 3, 0, 770);
+        this.toolkit.e(0, true);
         int var2 = 67 / ((param0 + 62) / 58);
         jaggl.OpenGL.glBindProgramARB(34336, this.field_k.field_a);
         jaggl.OpenGL.glEnable(34336);
         this.field_i.b((byte) -94);
         this.field_i.a((byte) 6, 1);
-        this.field_a.e(1, true);
+        this.toolkit.e(1, true);
         jaggl.OpenGL.glMatrixMode(5890);
         jaggl.OpenGL.glLoadIdentity();
         jaggl.OpenGL.glMatrixMode(5888);
-        this.field_a.d(1, 0);
-        this.field_a.b(5890, 3, 0, 770);
-        this.field_a.e(0, true);
+        this.toolkit.d(1, 0);
+        this.toolkit.b(5890, 3, 0, 770);
+        this.toolkit.e(0, true);
         jaggl.OpenGL.glBindProgramARB(34336, 0);
         jaggl.OpenGL.glDisable(34336);
         jaggl.OpenGL.glDisable(34820);
         this.field_i.b((byte) 74);
     }
 
-    final boolean b(int param0) {
+    final boolean isSupported(int param0) {
         if (param0 != -11921) {
           this.field_k = (pva) null;
           return true;
@@ -227,7 +227,7 @@ final class ns extends qe {
         return true;
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void setParameters(int param0, int param1, int param2) {
         int var4;
         int var5;
         int var4Lifetime1;
@@ -235,38 +235,38 @@ final class ns extends qe {
         if (this.field_i == null) {
           return;
         }
-        this.field_a.e(1, true);
+        this.toolkit.e(1, true);
         if ((128 & param0) == 0) {
           if (1 != (param1 & 1)) {
             if (!this.field_m.field_g) {
-              this.field_a.a(true, this.field_m.field_f[0]);
+              this.toolkit.a(true, this.field_m.field_f[0]);
             } else {
-              this.field_a.a(true, this.field_m.field_h);
+              this.toolkit.a(true, this.field_m.field_h);
             }
             jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 65, 0.0f, 0.0f, 0.0f, 1.0f);
           } else {
             if (!this.field_m.field_g) {
-              var4 = 16 * (this.field_a.field_Oc % 4000) / 4000;
-              this.field_a.a(true, this.field_m.field_f[var4]);
+              var4 = 16 * (this.toolkit.field_Oc % 4000) / 4000;
+              this.toolkit.a(true, this.field_m.field_f[var4]);
               jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 65, 0.0f, 0.0f, 0.0f, 1.0f);
             } else {
-              this.field_a.a(true, this.field_m.field_h);
+              this.toolkit.a(true, this.field_m.field_h);
               jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 65, this.field_l, 0.0f, 0.0f, 1.0f);
             }
           }
         } else {
-          this.field_a.a(true, (kl) null);
+          this.toolkit.a(true, (LegacyOpenGlTexture) null);
         }
         if (param2 <= 117) {
           this.field_e = (float[]) null;
         }
-        this.field_a.e(0, true);
+        this.toolkit.e(0, true);
         if ((64 & param0) != 0) {
           jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 66, 1.0f, 1.0f, 1.0f, 1.0f);
         } else {
-          BlockModel.field_y[2] = this.field_a.field_bc * this.field_a.field_tc;
-          BlockModel.field_y[1] = this.field_a.field_tc * this.field_a.field_Fb;
-          BlockModel.field_y[0] = this.field_a.field_wc * this.field_a.field_tc;
+          BlockModel.field_y[2] = this.toolkit.field_bc * this.toolkit.field_tc;
+          BlockModel.field_y[1] = this.toolkit.field_tc * this.toolkit.field_Fb;
+          BlockModel.field_y[0] = this.toolkit.field_wc * this.toolkit.field_tc;
           jaggl.OpenGL.glProgramLocalParameter4fvARB(34336, 66, BlockModel.field_y, 0);
         }
         var4Lifetime1 = param0 & 3;
@@ -281,14 +281,14 @@ final class ns extends qe {
         }
     }
 
-    final void a(boolean param0) {
+    final void disable(boolean param0) {
         if (null == this.field_i) {
           return;
         }
         this.field_i.a(4864, '\001');
-        this.field_a.e(1, !param0 ? true : false);
-        this.field_a.a(true, (kl) null);
-        this.field_a.e(0, !param0 ? true : false);
+        this.toolkit.e(1, !param0 ? true : false);
+        this.toolkit.a(true, (LegacyOpenGlTexture) null);
+        this.toolkit.e(0, !param0 ? true : false);
         if (param0) {
           this.field_e = (float[]) null;
         }

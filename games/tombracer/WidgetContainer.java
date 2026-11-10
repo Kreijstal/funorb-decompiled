@@ -200,7 +200,7 @@ class WidgetContainer extends UiWidget implements WidgetParent {
         int var7 = TombRacer.field_G ? 1 : 0;
         if (param3 == 0 &&
           null != this.field_r) {
-          this.field_r.a((UiWidget) (this), param0, param2 + 16777215, param1, true);
+          this.field_r.paintWidget((UiWidget) (this), param0, param2 + 16777215, param1, true);
         }
         IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.children);
         if (param2 != 0) {
@@ -450,7 +450,7 @@ class WidgetContainer extends UiWidget implements WidgetParent {
         return ~var2 & param0;
     }
 
-    WidgetContainer(int param0, int param1, int param2, int param3, isa param4) {
+    WidgetContainer(int param0, int param1, int param2, int param3, WidgetPainter param4) {
         super(param0, param1, param2, param3, param4, (WidgetListener) null);
         this.children = new IntrusiveDeque();
     }

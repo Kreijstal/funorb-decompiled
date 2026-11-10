@@ -170,7 +170,7 @@ final class CurveOperator extends TextureOperator {
         int[] var3 = var8;
         if (this.monochromeCache.rowMissed) {
           var5 = this.getInputMonochromeRow(0, param0 ^ -33, param1);
-          for (var6 = 0; var6 < ns.textureWidth; var6++) {
+          for (var6 = 0; var6 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var6++) {
             var4 = var5[var6] >> 4;
             if (0 > var4) {
               var4 = 0;

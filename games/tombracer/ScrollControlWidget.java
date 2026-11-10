@@ -367,7 +367,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
         }
     }
 
-    ScrollControlWidget(int param0, int param1, int param2, int param3, isa param4, isa param5, isa param6, int param7, int param8, int param9, int param10, boolean param11, boolean param12, int param13, int param14) {
+    ScrollControlWidget(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetPainter param5, WidgetPainter param6, int param7, int param8, int param9, int param10, boolean param11, boolean param12, int param13, int param14) {
         super(param0, param1, param2, param3, param4);
         DraggableWidget dupTemp$0 = null;
         FocusableWidget dupTemp$1 = null;
@@ -393,7 +393,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
         this.field_A = 1024;
         try {
           this.children = new UiWidget[6];
-          dupTemp$0 = new DraggableWidget(param0, param1, param7, param8, (isa) null, (WidgetListener) null, new FocusableWidget(0, 0, param7, param8, param6, (WidgetListener) null), false, false);
+          dupTemp$0 = new DraggableWidget(param0, param1, param7, param8, (WidgetPainter) null, (WidgetListener) null, new FocusableWidget(0, 0, param7, param8, param6, (WidgetListener) null), false, false);
           this.field_N = dupTemp$0;
           this.children[0] = (UiWidget) ((Object) dupTemp$0);
           dupTemp$1 = new FocusableWidget(param0, param1, param7, param8, param5, (WidgetListener) null);

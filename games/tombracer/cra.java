@@ -95,7 +95,7 @@ final class cra {
           gva.field_b.a(-71, false);
           fha.a(true, param1, param0, param4);
           pq.b(117);
-          kl.field_a = fta.field_c;
+          LegacyOpenGlTexture.field_a = fta.field_c;
           wt.field_d = fta.field_c;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "cra.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');

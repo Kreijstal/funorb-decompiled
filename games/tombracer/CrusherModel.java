@@ -326,7 +326,7 @@ final class CrusherModel extends TrapModel {
         if (param2 != 47) {
           field_o = -102;
         }
-        ma.field_g = -2147483648;
+        LegacyOpenGlReflectionEffect.field_g = -2147483648;
         kc.field_a = 2147483647;
         C2SChooseCharacterPacket.field_d = -2147483648;
         ContextMenu.field_Eb = 0;

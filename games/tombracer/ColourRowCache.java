@@ -91,7 +91,7 @@ final class ColourRowCache {
           }
           var4 = wp.field_b;
           while (cna.field_b.length > var3_int) {
-            var5 = f.field_c[var3_int];
+            var5 = ComponentTargetList.field_c[var3_int];
             if (var5 >= 0) {
               var6 = apa.$cfr$intArgs$a$62abead39cee(-50, true, cna.field_b[var3_int]);
               var7 = Transform3D.field_a - (var6 >> 1);

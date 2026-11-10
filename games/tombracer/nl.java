@@ -145,7 +145,7 @@ final class nl {
 
     final void a(java.applet.Applet param0, int param1) {
         try {
-          lha.a(this.field_a, "jagex-last-login-method", (byte) 121, 31536000L, param0);
+          LegacyOpenGlTexture3D.a(this.field_a, "jagex-last-login-method", (byte) 121, 31536000L, param0);
           if (param1 != 5) {
             String var4 = (String) null;
             this.a((String) null, -66);

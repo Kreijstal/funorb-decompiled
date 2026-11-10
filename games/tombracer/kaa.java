@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kaa implements isa {
+final class kaa implements WidgetPainter {
     private BitmapFont field_c;
     private int field_a;
     private int field_b;
@@ -51,7 +51,7 @@ final class kaa implements isa {
         return false;
     }
 
-    public final void a(UiWidget param0, int param1, int param2, int param3, boolean param4) {
+    public final void paintWidget(UiWidget param0, int param1, int param2, int param3, boolean param4) {
         int stackIn_6_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;

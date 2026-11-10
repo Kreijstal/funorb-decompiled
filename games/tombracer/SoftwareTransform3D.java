@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pna extends Transform3D {
+final class SoftwareTransform3D extends Transform3D {
     float field_f;
     float field_e;
     float field_r;
@@ -18,7 +18,7 @@ final class pna extends Transform3D {
     float field_m;
     static int field_q;
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void setCamera(int param0, int param1, int param2, int param3, int param4, int param5) {
         float var7 = BufferedCacheFile.field_c[16383 & param3];
         float var8 = BufferedCacheFile.field_n[param3 & 16383];
         float var9 = BufferedCacheFile.field_c[param4 & 16383];
@@ -41,7 +41,7 @@ final class pna extends Transform3D {
         this.field_m = -(this.field_o * (float)param1) + (float)(-param0) * this.field_r - this.field_f * (float)param2;
     }
 
-    final void a() {
+    final void setIdentity() {
         this.field_l = 0.0f;
         this.field_n = 0.0f;
         this.field_o = 0.0f;
@@ -56,7 +56,7 @@ final class pna extends Transform3D {
         this.field_h = 0.0f;
     }
 
-    final void d(int param0) {
+    final void rotateY(int param0) {
         float var2 = BufferedCacheFile.field_c[16383 & param0];
         float var3 = BufferedCacheFile.field_n[param0 & 16383];
         float var4 = this.field_g;
@@ -78,7 +78,7 @@ final class pna extends Transform3D {
         field_k = null;
     }
 
-    final void c(int param0) {
+    final void rotateX(int param0) {
         float var2 = BufferedCacheFile.field_c[param0 & 16383];
         float var3 = BufferedCacheFile.field_n[16383 & param0];
         float var4 = this.field_h;
@@ -95,17 +95,17 @@ final class pna extends Transform3D {
         this.field_m = var2 * this.field_m + var7 * var3;
     }
 
-    pna() {
-        this.a();
+    SoftwareTransform3D() {
+        this.setIdentity();
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void translate(int param0, int param1, int param2) {
         this.field_l = this.field_l + (float)param0;
         this.field_m = this.field_m + (float)param2;
         this.field_e = this.field_e + (float)param1;
     }
 
-    final void b(int param0) {
+    final void rotateZ(int param0) {
         float var2 = BufferedCacheFile.field_c[16383 & param0];
         float var3 = BufferedCacheFile.field_n[param0 & 16383];
         float var4 = this.field_g;

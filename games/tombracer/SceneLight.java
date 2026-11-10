@@ -68,7 +68,7 @@ abstract class SceneLight extends IntrusiveNode {
           bd.field_i = su.createToolkitSprite(ara.field_vb, param0, (byte) -20);
           ColourFillOperator.field_m = su.createToolkitSprite(tla.field_g, param0, (byte) -99);
           CachedTextLayout.field_l = su.createToolkitSprite(wd.field_c, param0, (byte) 25);
-          lh.field_b = su.createToolkitSprite(lha.field_l, param0, (byte) 127);
+          lh.field_b = su.createToolkitSprite(LegacyOpenGlTexture3D.field_l, param0, (byte) 127);
           vua.field_A = su.createToolkitSprite(wj.field_a, param0, (byte) 126);
           dn.field_d = LoadLevelCommand.a(param0, ProxySocketConnector.field_e, -100);
           PlayerProfile.field_r = LoadLevelCommand.a(param0, via.field_a, param1 ^ -17261);
@@ -105,10 +105,10 @@ abstract class SceneLight extends IntrusiveNode {
             }
             qf.field_k[var2_intLifetime2] = param0.createSpriteCopy(var3, OpenGlFramebuffer.field_i[var2_intLifetime2].c(), 89, OpenGlFramebuffer.field_i[var2_intLifetime2].a(), OpenGlFramebuffer.field_i[var2_intLifetime2].a(), 0);
           }
-          bsa.field_i = su.createToolkitSprite(hoa.field_l, param0, (byte) -107);
+          bsa.field_i = su.createToolkitSprite(LegacyOpenGlCubeTexture.field_l, param0, (byte) -107);
           fa.field_a = LoadLevelCommand.a(param0, nk.field_k, -99);
           nc.field_e = su.createToolkitSprite(hka.field_c, param0, (byte) -15);
-          uua.field_a = su.createToolkitSprite(qk.field_u, param0, (byte) 125);
+          LegacyOpenGlEffectManager.field_a = su.createToolkitSprite(LegacyOpenGlSpriteTexture.field_u, param0, (byte) 125);
           su.createToolkitSprite(mp.field_d, param0, (byte) 126);
           su.createToolkitSprite(baa.field_g, param0, (byte) -43);
           ConstantEffectBehaviour.field_q = su.createToolkitSprite(FullscreenConfirmationDialog.field_O, param0, (byte) 126);

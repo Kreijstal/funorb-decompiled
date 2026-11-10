@@ -228,7 +228,7 @@ final class PitSnake extends IntrusiveNode {
         int var10 = 0;
         int var7Lifetime1;
         try {
-          if (param4.q(122)) {
+          if (param4.isDying(122)) {
             return;
           }
           if (param4.k((byte) -127) <= 0) {

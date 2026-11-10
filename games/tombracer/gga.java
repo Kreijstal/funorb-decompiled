@@ -29,7 +29,7 @@ final class gga extends ofa implements ButtonListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new FocusableWidget(param0, param1);
-          var4.field_r = (isa) ((Object) new td());
+          var4.field_r = (WidgetPainter) ((Object) new td());
           var5 = this.field_p - 6;
           this.field_p = this.field_p + 38;
           if (param2 >= -82) {
@@ -185,7 +185,7 @@ final class gga extends ofa implements ButtonListener {
           var4.field_m = this.field_m;
           var4.field_n = 50;
           var4.field_i = 0;
-          var4.field_r = (isa) ((Object) new TextWidgetPainter(BlendModeOperator.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_r = (WidgetPainter) ((Object) new TextWidgetPainter(BlendModeOperator.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(var4, -1);
           this.field_N = this.a(BitPacketBuffer.field_j, (WidgetListener) (this), -93);
           return;

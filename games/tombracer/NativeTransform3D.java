@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ja extends Transform3D implements e {
+final class NativeTransform3D extends Transform3D implements e {
     long field_nativeid;
 
     private final native void P(long param0, int param1, int param2, int param3, int param4, int param5, int param6);
 
-    final void c(int param0) {
+    final void rotateX(int param0) {
         this.J(this.field_nativeid, param0);
     }
 
@@ -20,7 +20,7 @@ final class ja extends Transform3D implements e {
 
     private final native void za(long param0, int param1);
 
-    final void a() {
+    final void setIdentity() {
         this.u(this.field_nativeid);
     }
 
@@ -32,7 +32,7 @@ final class ja extends Transform3D implements e {
 
     private final native void AA(long param0, boolean param1);
 
-    final void b(int param0) {
+    final void rotateZ(int param0) {
         this.za(this.field_nativeid, param0);
     }
 
@@ -42,19 +42,19 @@ final class ja extends Transform3D implements e {
 
     private final native void u(long param0);
 
-    final void d(int param0) {
+    final void rotateY(int param0) {
         this.m(this.field_nativeid, param0);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void setCamera(int param0, int param1, int param2, int param3, int param4, int param5) {
         this.P(this.field_nativeid, param0, param1, param2, param3, param4, param5);
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void translate(int param0, int param1, int param2) {
         this.a(this.field_nativeid, param0, param1, param2);
     }
 
-    ja() {
+    NativeTransform3D() {
         this.la();
     }
 }

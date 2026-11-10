@@ -368,7 +368,7 @@ final class TileOperator extends TextureOperator {
         var17 = var18;
         var3 = var17;
         if (this.colourCache.field_f) {
-          var5 = ns.textureWidth / this.field_m;
+          var5 = LegacyOpenGlTurbulentTextureEffect.textureWidth / this.field_m;
           var6 = ArchiveNetworkClient.textureHeight / this.field_o;
           if (var6 <= 0) {
             var4 = this.getInputColourRow(0, 0, -1);
@@ -382,12 +382,12 @@ final class TileOperator extends TextureOperator {
           var10 = var19[0];
           var11 = var19[1];
           var12 = var19[2];
-          for (var13 = 0; ns.textureWidth > var13; var13++) {
+          for (var13 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var13; var13++) {
             if (var5 <= 0) {
               var14 = 0;
             } else {
               var15 = var13 % var5;
-              var14 = var15 * ns.textureWidth / var5;
+              var14 = var15 * LegacyOpenGlTurbulentTextureEffect.textureWidth / var5;
             }
             var10[var13] = var7[var14];
             var11[var13] = var8[var14];
@@ -416,7 +416,7 @@ final class TileOperator extends TextureOperator {
         }
         var3 = this.monochromeCache.getRow((byte) 78, param1);
         if (this.monochromeCache.rowMissed) {
-          var5 = ns.textureWidth / this.field_m;
+          var5 = LegacyOpenGlTurbulentTextureEffect.textureWidth / this.field_m;
           var6 = ArchiveNetworkClient.textureHeight / this.field_o;
           if (var6 <= 0) {
             var4 = this.getInputMonochromeRow(0, -84, 0);
@@ -426,10 +426,10 @@ final class TileOperator extends TextureOperator {
           }
           var10 = 0;
           var7Lifetime1 = var10;
-          while (var10 < ns.textureWidth) {
+          while (var10 < LegacyOpenGlTurbulentTextureEffect.textureWidth) {
             if (var5 > 0) {
               var8 = var10 % var5;
-              var3[var10] = var4[var8 * ns.textureWidth / var5];
+              var3[var10] = var4[var8 * LegacyOpenGlTurbulentTextureEffect.textureWidth / var5];
             } else {
               var3[var10] = var4[0];
             }

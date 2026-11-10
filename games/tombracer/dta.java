@@ -154,13 +154,13 @@ final class dta {
                 var21 = (var21 >> 1) + 1;
                 var20 = 1 + (var20 >> 1);
               }
-              MembersUpsellMenu.a(gl.$cfr$intArgs$a$53ce4ab4c593(102, mg.field_k, new String[]{Integer.toString(var20), Integer.toString(var21)}).toUpperCase(), 11903361, eda.field_f, -1, param5 + var18 + 58, var17 + (param0 + 64), 0);
+              MembersUpsellMenu.a(LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(102, mg.field_k, new String[]{Integer.toString(var20), Integer.toString(var21)}).toUpperCase(), 11903361, eda.field_f, -1, param5 + var18 + 58, var17 + (param0 + 64), 0);
               var18Lifetime1 = -75 + param6 - var8_int;
               var17Lifetime1 = -10;
               var22 = var12.getWeapon(-163585215);
               var23 = var12.s(0) ? 1 : 0;
               if (var22 != null) {
-                uua.field_a.a(var17Lifetime1 + 20, var18Lifetime1 + 5);
+                LegacyOpenGlEffectManager.field_a.a(var17Lifetime1 + 20, var18Lifetime1 + 5);
               } else {
                 if (var23 != 0) {
                   ura.a(-10985);
@@ -233,7 +233,7 @@ final class dta {
               }
               var27 = "";
               var28 = eda.field_f;
-              var41 = Integer.toString(var12.F(-7991));
+              var41 = Integer.toString(var12.getRoomTreasureScore(-7991));
               var27Lifetime1 = var41;
               var27Lifetime2 = var41;
               S2CNextRoundPacket.a(4, var28, var41.toUpperCase(), 34 + (var17Lifetime3 + (10 - var24)), 0, -16 + param6, 11903361);
@@ -282,7 +282,7 @@ final class dta {
                 var31Lifetime1 += 23;
                 var29Lifetime2 += 24;
               }
-              if (!var12.q(119) &&
+              if (!var12.isDying(119) &&
                 null != var12.getRoom((byte) 94).collisionGrid) {
                 var30Lifetime3 = 0;
                 var31Lifetime2 = 0;

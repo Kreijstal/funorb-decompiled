@@ -44,7 +44,7 @@ final class hpa extends aa {
               var5.field_f.addItem((byte) -80, 14, var6);
             }
             var7 = hka.field_b;
-            var8 = hs.field_d;
+            var8 = TextureFilter.field_d;
             var7.field_f.addItem((byte) -117, 20, var8);
           }
           if (param1.field_d == 1 &&

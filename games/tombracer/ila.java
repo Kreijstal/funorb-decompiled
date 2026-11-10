@@ -296,9 +296,9 @@ final class ila {
                 WeaveOperator.field_q.readUnsignedByte(255);
                 WeaveOperator.field_q.readUnsignedByte(255);
                 WeaveOperator.field_q.readInt(-104);
-                kl.field_k = WeaveOperator.field_q.readUnsignedShort(121);
-                np.field_J = new byte[kl.field_k];
-                for (var8 = 0; var8 < kl.field_k; var8++) {
+                LegacyOpenGlTexture.field_k = WeaveOperator.field_q.readUnsignedShort(121);
+                np.field_J = new byte[LegacyOpenGlTexture.field_k];
+                for (var8 = 0; var8 < LegacyOpenGlTexture.field_k; var8++) {
                   np.field_J[var8] = WeaveOperator.field_q.readByte((byte) 103);
                 }
               }
@@ -306,7 +306,7 @@ final class ila {
               var11 = (CharSequence) ((Object) MenuEntry.field_k);
               tia.field_b = jd.normalizeDisplayName(1, var11);
               lsa.field_a = WeaveOperator.field_q.readUnsignedByte(255);
-              ProceduralTexture.field_p = uga.field_n;
+              ProceduralTexture.field_p = LegacyOpenGlTexture1D.field_n;
               if (fd.field_d.a((byte) 113) == BlockModel.field_s) {
                 ShaderEffect.field_a.a(di.a(120), param2 ^ 55);
               } else {

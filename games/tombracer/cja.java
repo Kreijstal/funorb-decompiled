@@ -233,7 +233,7 @@ final class cja {
         if (param0 != 0) {
           cja.a(117);
         }
-        if (gsa.field_y == kl.field_a) {
+        if (gsa.field_y == LegacyOpenGlTexture.field_a) {
           return ConstraintLocomotor.field_p;
         }
         return ConstrainToLatticeLocomotor.field_u;

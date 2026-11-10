@@ -250,7 +250,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements WidgetParent {
         var7 = TombRacer.field_G ? 1 : 0;
         if (param2 == param3 &&
           this.field_r != null) {
-          this.field_r.a((UiWidget) (this), param0, 16777215, param1, true);
+          this.field_r.paintWidget((UiWidget) (this), param0, 16777215, param1, true);
         }
         if (null != this.children) {
           for (var5 = this.children.length - 1; 0 <= var5; var5--) {
@@ -369,7 +369,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements WidgetParent {
         }
     }
 
-    ArrayWidgetGroup(int param0, int param1, int param2, int param3, isa param4) {
+    ArrayWidgetGroup(int param0, int param1, int param2, int param3, WidgetPainter param4) {
         super(param0, param1, param2, param3, param4, (WidgetListener) null);
     }
 

@@ -303,7 +303,7 @@ abstract class MenuScreen extends GameScreen {
               if (!param1) {
                 break scanLoop1;
               }
-              if (rpa.field_d) {
+              if (LegacyOpenGlEnvironmentWaterEffect.field_d) {
                 break scanLoop1;
               }
               if (ColouriseOperator.field_q) {

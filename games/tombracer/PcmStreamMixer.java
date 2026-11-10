@@ -88,7 +88,7 @@ final class PcmStreamMixer extends PcmStream {
         return;
     }
 
-    final int a() {
+    final int activity() {
         return 0;
     }
 

@@ -96,7 +96,7 @@ final class PowerUpItemBehaviour extends ItemBehaviour {
           if (param0 > -87) {
             field_u = (boolean[][]) null;
           }
-          if (gsa.field_y != kl.field_a) {
+          if (gsa.field_y != LegacyOpenGlTexture.field_a) {
             stackIn_25_0 = -1;
             return stackIn_25_0;
           }

@@ -82,7 +82,7 @@ final class MatchProtocol {
         if (null == MenuEntry.field_j) {
           return;
         }
-        int var2 = (int)(1000.0 * qk.field_w[param0]);
+        int var2 = (int)(1000.0 * LegacyOpenGlSpriteTexture.field_w[param0]);
         if (param1 == var2) {
           var2 = 1;
         }

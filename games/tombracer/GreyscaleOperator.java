@@ -5,7 +5,7 @@ final class GreyscaleOperator extends TextureOperator {
     static int field_m;
 
     final static void a(boolean param0, int param1) {
-        gl.a(false, param0, (byte) 116);
+        LegacyOpenGlFlowingWaterEffect.a(false, param0, (byte) 116);
         if (param1 != 262144) {
           field_m = -89;
         }
@@ -45,7 +45,7 @@ final class GreyscaleOperator extends TextureOperator {
           var5 = var4[0];
           var6 = var4[1];
           var7 = var4[2];
-          for (var8 = 0; ns.textureWidth > var8; var8++) {
+          for (var8 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var8; var8++) {
             var10[var8] = (var7[var8] + (var6[var8] + var5[var8])) / 3;
           }
           return var3;

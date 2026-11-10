@@ -173,7 +173,7 @@ final class NodeHashTable {
 
     final static void a(int param0) {
         int var1 = (-640 + SceneLight.field_i) / 2;
-        int var2 = pna.field_q * pna.field_q;
+        int var2 = SoftwareTransform3D.field_q * SoftwareTransform3D.field_q;
         int var3 = -(mla.field_a * mla.field_a) + var2;
         nra.field_a.a(199, -214 + SoftwareRasterizer.field_a, -23776, 90, -(199 * var3 / var2) + var1);
         if (param0 != 16) {

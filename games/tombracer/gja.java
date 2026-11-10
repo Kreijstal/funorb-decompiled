@@ -679,13 +679,13 @@ final class gja extends ka {
                           var56 = (var38[4] * (float)var50 + var38[3] * (float)var49 + (float)var51 * var38[5]) / var53;
                           var57 = ((float)var51 * var38[8] + (var38[6] * (float)var49 + var38[7] * (float)var50)) / var54;
                           var30 = AccountRegistrationPanel.a(var57, var56, false, var55);
-                          as.a(var36, RoomComponentFactory.field_a, param1.field_I[var32_int], var35, var42, var37_int, var41, param1.field_b[var32_int], var30, param1.field_p[var32_int], -102, var40, var39, var38);
+                          LegacyOpenGlShoreWaveWaterEffect.a(var36, RoomComponentFactory.field_a, param1.field_I[var32_int], var35, var42, var37_int, var41, param1.field_b[var32_int], var30, param1.field_p[var32_int], -102, var40, var39, var38);
                           var22_float = RoomComponentFactory.field_a[0];
                           var23 = RoomComponentFactory.field_a[1];
-                          as.a(var36, RoomComponentFactory.field_a, param1.field_I[var33_int], var35, var42, var37_int, var41, param1.field_b[var33_int], var30, param1.field_p[var33_int], 32, var40, var39, var38);
+                          LegacyOpenGlShoreWaveWaterEffect.a(var36, RoomComponentFactory.field_a, param1.field_I[var33_int], var35, var42, var37_int, var41, param1.field_b[var33_int], var30, param1.field_p[var33_int], 32, var40, var39, var38);
                           var25 = RoomComponentFactory.field_a[1];
                           var24 = RoomComponentFactory.field_a[0];
-                          as.a(var36, RoomComponentFactory.field_a, param1.field_I[var34], var35, var42, var37_int, var41, param1.field_b[var34], var30, param1.field_p[var34], 79, var40, var39, var38);
+                          LegacyOpenGlShoreWaveWaterEffect.a(var36, RoomComponentFactory.field_a, param1.field_I[var34], var35, var42, var37_int, var41, param1.field_b[var34], var30, param1.field_p[var34], 79, var40, var39, var38);
                           var26 = RoomComponentFactory.field_a[0];
                           var27 = RoomComponentFactory.field_a[1];
                           break;
@@ -1212,13 +1212,13 @@ final class gja extends ka {
             pl.field_a = var6.field_g * var5.field_p + var5.field_o * var6.field_k + var6.field_p * var5.field_h;
             baa.field_c = var5.field_f * var6.field_p + (var6.field_k * var5.field_l + var5.field_g * var6.field_g);
             ct.field_b = var6.field_h * var5.field_m + (var5.field_q * var6.field_m + var6.field_f * var5.field_k);
-            hs.field_c = var6.field_h * var5.field_h + (var6.field_m * var5.field_o + var5.field_p * var6.field_f);
+            TextureFilter.field_c = var6.field_h * var5.field_h + (var6.field_m * var5.field_o + var5.field_p * var6.field_f);
           }
           if (param1 != null) {
             var19 = this.field_K + this.field_i >> 1;
             var20 = this.field_Q + this.field_cb >> 1;
-            var21 = (int)(hs.field_c * (float)var20 + (gj.field_h + pl.field_a * (float)var19 + MatchPhase.field_d * (float)this.field_o));
-            var22 = (int)((float)this.field_n * MatchPhase.field_d + (gj.field_h + (float)var19 * pl.field_a) + hs.field_c * (float)var20);
+            var21 = (int)(TextureFilter.field_c * (float)var20 + (gj.field_h + pl.field_a * (float)var19 + MatchPhase.field_d * (float)this.field_o));
+            var22 = (int)((float)this.field_n * MatchPhase.field_d + (gj.field_h + (float)var19 * pl.field_a) + TextureFilter.field_c * (float)var20);
             if (var21 < this.field_S.field_D &&
               var22 < this.field_S.field_D) {
             }
@@ -2159,7 +2159,7 @@ final class gja extends ka {
                   var9 = (float)(this.field_l[var5.field_k] + this.field_l[var5.field_c] + this.field_l[var5.field_i]) * 0.3333333134651184f;
                   var10 = var9 * wka.field_b + (HardwareUnlitEffect.field_e * var8 + baa.field_c * var7) + fba.field_a;
                   var11 = var9 * ct.field_b + (kb.field_p * var8 + var7 * vs.field_O) + MatchScoringObserver.field_g;
-                  var12 = gj.field_h + (var9 * hs.field_c + (var7 * pl.field_a + MatchPhase.field_d * var8));
+                  var12 = gj.field_h + (var9 * TextureFilter.field_c + (var7 * pl.field_a + MatchPhase.field_d * var8));
                   var13 = (float)(1.0 / Math.sqrt((double)(var12 * var12 + (var11 * var11 + var10 * var10)))) * (float)var5.field_b;
                   var3 = this.field_S.y((byte) -77);
                   var3.a(var10 + (float)var6.field_e - var10 * var13, var6.field_m * var5.field_j >> 7, var5.field_a * var6.field_k >> 7, var6.field_c, 2, var12 - var12 * var13, var11 + (float)var6.field_b - var13 * var11);
@@ -4797,7 +4797,7 @@ final class gja extends ka {
             vs.field_O = var4.field_m * var5.field_p + (var5.field_k * var4.field_q + var5.field_g * var4.field_k);
             wka.field_b = var4.field_f * var5.field_h + (var5.field_f * var4.field_g + var5.field_m * var4.field_l);
             ct.field_b = var5.field_m * var4.field_q + var5.field_f * var4.field_k + var5.field_h * var4.field_m;
-            hs.field_c = var4.field_o * var5.field_m + var4.field_p * var5.field_f + var4.field_h * var5.field_h;
+            TextureFilter.field_c = var4.field_o * var5.field_m + var4.field_p * var5.field_f + var4.field_h * var5.field_h;
             pl.field_a = var4.field_o * var5.field_k + var5.field_g * var4.field_p + var4.field_h * var5.field_p;
             baa.field_c = var4.field_g * var5.field_g + var4.field_l * var5.field_k + var5.field_p * var4.field_f;
           }
@@ -4806,11 +4806,11 @@ final class gja extends ka {
             var19 = 1;
             var20 = this.field_K + this.field_i >> 1;
             var21 = this.field_cb + this.field_Q >> 1;
-            var22 = (int)(hs.field_c * (float)var21 + ((float)this.field_o * MatchPhase.field_d + (gj.field_h + (float)var20 * pl.field_a)));
+            var22 = (int)(TextureFilter.field_c * (float)var21 + ((float)this.field_o * MatchPhase.field_d + (gj.field_h + (float)var20 * pl.field_a)));
             if (var22 < this.field_S.field_D) {
               var18 = 1;
             }
-            var23 = (int)(gj.field_h + pl.field_a * (float)var20 + MatchPhase.field_d * (float)this.field_n + hs.field_c * (float)var21);
+            var23 = (int)(gj.field_h + pl.field_a * (float)var20 + MatchPhase.field_d * (float)this.field_n + TextureFilter.field_c * (float)var21);
             if (this.field_S.field_D > var23) {
               var18 = 1;
             }

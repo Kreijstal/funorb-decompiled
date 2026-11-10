@@ -185,7 +185,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
             stackIn_52_2Lifetime1 = null;
             stackIn_52_4 = 58;
           }
-          this.field_T = new GridWidgetContainer(stackIn_51_3, stackIn_52_4, 410, 105, (isa) null, var3Lifetime1, 1);
+          this.field_T = new GridWidgetContainer(stackIn_51_3, stackIn_52_4, 410, 105, (WidgetPainter) null, var3Lifetime1, 1);
           this.field_T.field_E = 83;
           this.field_T.a(5, 5, (byte) 97);
           this.addChild(this.field_T, -1);
@@ -244,7 +244,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
             var7.field_p = 80;
             var7.field_n = 163;
             var7.field_i = 0;
-            var7.field_r = (isa) ((Object) new TextWidgetPainter(KeySwitchComponent.field_J, 20, 20, 0, 10, 16777215, -1, 0, 0, 16, 0, 0, true));
+            var7.field_r = (WidgetPainter) ((Object) new TextWidgetPainter(KeySwitchComponent.field_J, 20, 20, 0, 10, 16777215, -1, 0, 0, 16, 0, 0, true));
             this.addChild(var7, -1);
           }
           this.field_O = false;
@@ -576,7 +576,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new FocusableWidget(param1, param0);
-          var4.field_r = (isa) ((Object) new td());
+          var4.field_r = (WidgetPainter) ((Object) new td());
           var5 = -46 + this.field_p;
           if (param2 != 30815) {
             stackIn_2_0 = (FocusableWidget) null;
@@ -760,7 +760,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = new FocusableWidget(param2, param3);
-          var5.field_r = (isa) ((Object) new tka(param1));
+          var5.field_r = (WidgetPainter) ((Object) new tka(param1));
           if (param0 >= -81) {
             this.field_L = (FocusableWidget) null;
           }

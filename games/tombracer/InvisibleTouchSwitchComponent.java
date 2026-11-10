@@ -50,7 +50,7 @@ final class InvisibleTouchSwitchComponent extends SwitchComponent {
         }
     }
 
-    final int B(int param0) {
+    final int getMaxTargets(int param0) {
         if (param0 != 31609) {
           this.hasAngle((byte) 84);
           return 3;
@@ -114,7 +114,7 @@ final class InvisibleTouchSwitchComponent extends SwitchComponent {
         super(param0, param1, param2, param3);
     }
 
-    final boolean r(byte param0) {
+    final boolean hasInitialState(byte param0) {
         if (param0 != 93) {
           return false;
         }

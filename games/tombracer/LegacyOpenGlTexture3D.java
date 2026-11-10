@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lha extends kl {
+final class LegacyOpenGlTexture3D extends LegacyOpenGlTexture {
     int field_r;
     int field_q;
     private int field_n;
@@ -10,14 +10,14 @@ final class lha extends kl {
     static String field_m;
     private int field_p;
 
-    public final void a(int param0) {
-        jaggl.OpenGL.glFramebufferTexture3DEXT(this.field_n, this.field_p, this.field_e, 0, 0, 0);
+    public final void detachFramebuffer(int param0) {
+        jaggl.OpenGL.glFramebufferTexture3DEXT(this.field_n, this.field_p, this.target, 0, 0, 0);
         int var2 = -20 % ((14 - param0) / 56);
         this.field_n = -1;
         this.field_p = -1;
     }
 
-    lha(OpenGlToolkit param0, int param1, int param2, int param3, int param4) {
+    LegacyOpenGlTexture3D(OpenGlToolkit param0, int param1, int param2, int param3, int param4) {
         super(param0, 32879, param1, param3 * param2 * param4, false);
         this.field_n = -1;
         this.field_p = -1;
@@ -25,21 +25,21 @@ final class lha extends kl {
           this.field_o = param4;
           this.field_r = param2;
           this.field_q = param3;
-          this.field_h.a(true, (kl) (this));
-          jaggl.OpenGL.glTexImage3Dub(this.field_e, 0, this.field_c, this.field_r, this.field_q, this.field_o, 0, sja.b(this.field_c, 20934), 5121, (byte[]) null, 0);
-          this.b(true, 3);
+          this.toolkit.a(true, (LegacyOpenGlTexture) (this));
+          jaggl.OpenGL.glTexImage3Dub(this.target, 0, this.internalFormat, this.field_r, this.field_q, this.field_o, 0, sja.b(this.internalFormat, 20934), 5121, (byte[]) null, 0);
+          this.setLinearFiltering(true, 3);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "lha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        this.field_h.a(true, (kl) (this));
-        jaggl.OpenGL.glCopyTexSubImage3D(this.field_e, param6, param3, param0, param2, param1, param4, param5, param7);
+        this.toolkit.a(true, (LegacyOpenGlTexture) (this));
+        jaggl.OpenGL.glCopyTexSubImage3D(this.target, param6, param3, param0, param2, param1, param4, param5, param7);
         jaggl.OpenGL.glFlush();
     }
 
-    lha(OpenGlToolkit param0, int param1, int param2, int param3, int param4, byte[] param5, int param6) {
+    LegacyOpenGlTexture3D(OpenGlToolkit param0, int param1, int param2, int param3, int param4, byte[] param5, int param6) {
         super(param0, 32879, param1, param4 * (param2 * param3), false);
         this.field_n = -1;
         this.field_p = -1;
@@ -47,11 +47,11 @@ final class lha extends kl {
           this.field_o = param4;
           this.field_r = param2;
           this.field_q = param3;
-          this.field_h.a(true, (kl) (this));
+          this.toolkit.a(true, (LegacyOpenGlTexture) (this));
           jaggl.OpenGL.glPixelStorei(3317, 1);
-          jaggl.OpenGL.glTexImage3Dub(this.field_e, 0, this.field_c, this.field_r, this.field_q, this.field_o, 0, param6, 5121, param5, 0);
+          jaggl.OpenGL.glTexImage3Dub(this.target, 0, this.internalFormat, this.field_r, this.field_q, this.field_o, 0, param6, 5121, param5, 0);
           jaggl.OpenGL.glPixelStorei(3317, 4);
-          this.b(true, 3);
+          this.setLinearFiltering(true, 3);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "lha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }
@@ -61,7 +61,7 @@ final class lha extends kl {
         field_l = null;
         field_m = null;
         if (param0 < 5) {
-          lha.releaseStatics((byte) 104);
+          LegacyOpenGlTexture3D.releaseStatics((byte) 104);
         }
     }
 
@@ -93,7 +93,7 @@ final class lha extends kl {
               var7Lifetime2 = var9;
               var7Lifetime3 = var9;
               if (param2 < 109) {
-                lha.releaseStatics((byte) -114);
+                LegacyOpenGlTexture3D.releaseStatics((byte) -114);
               }
               if (0L <= param3) {
                 var7Lifetime4 = var9 + "; Expires=" + ida.formatCookieDate(param3 * 1000L + bva.currentTimeMillis((byte) -107), -1) + "; Max-Age=" + param3;

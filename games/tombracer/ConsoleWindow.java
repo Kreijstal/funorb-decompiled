@@ -269,21 +269,21 @@ abstract class ConsoleWindow implements ShellListener {
     final static void a(int param0, int param1, int param2) {
         int var3_int = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
-        if (param2 != ns.textureWidth) {
+        if (param2 != LegacyOpenGlTurbulentTextureEffect.textureWidth) {
           ht.textureColumnCoords = new int[param2];
           for (var3_int = 0; var3_int < param2; var3_int++) {
             ht.textureColumnCoords[var3_int] = (var3_int << 12) / param2;
           }
           ooa.field_g = 32 * param2;
           una.textureWidthMask = -1 + param2;
-          ns.textureWidth = param2;
+          LegacyOpenGlTurbulentTextureEffect.textureWidth = param2;
         }
         if (param0 != 0) {
           return;
         }
         try {
           if (param1 != ArchiveNetworkClient.textureHeight) {
-            if (param1 == ns.textureWidth) {
+            if (param1 == LegacyOpenGlTurbulentTextureEffect.textureWidth) {
               sj.textureRowCoords = ht.textureColumnCoords;
             } else {
               sj.textureRowCoords = new int[param1];

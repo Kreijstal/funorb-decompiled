@@ -18,7 +18,7 @@ final class RemovedFromGameMenu extends MenuScreen {
         if (null != wra.field_b) {
           var2 = wra.field_b;
           String var1 = var2;
-          ClampOperator.a(gl.$cfr$intArgs$a$53ce4ab4c593(86, mu.field_Bb, new String[]{var2}), param0 + 15047);
+          ClampOperator.a(LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(86, mu.field_Bb, new String[]{var2}), param0 + 15047);
           wra.field_b = null;
         }
         if (param0 == 118) {

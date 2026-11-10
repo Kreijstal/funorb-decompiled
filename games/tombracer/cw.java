@@ -17,17 +17,17 @@ final class cw {
     private boolean field_h;
     private OpenGlRenderbuffer field_b;
     private boolean field_n;
-    private rt[] field_r;
-    private rt field_m;
+    private LegacyOpenGlTexture2D[] field_r;
+    private LegacyOpenGlTexture2D field_m;
     private boolean field_u;
     private int field_s;
     private int field_p;
     private boolean field_f;
 
     private final boolean c(int param0) {
-        rt[] stackIn_31_0 = null;
+        LegacyOpenGlTexture2D[] stackIn_31_0 = null;
         int stackIn_31_1 = 0;
-        rt stackIn_32_2 = null;
+        LegacyOpenGlTexture2D stackIn_32_2 = null;
         boolean stackIn_55_1 = false;
         boolean stackIn_59_0 = false;
         int var3;
@@ -43,14 +43,14 @@ final class cw {
             this.field_b = null;
           }
           if (null != this.field_m) {
-            this.field_m.b(0);
+            this.field_m.close(0);
             this.field_m = null;
           }
           if (this.field_e != null) {
             this.field_b = new OpenGlRenderbuffer(this.field_t, 6402, this.field_k, this.field_g, this.field_t.field_gb);
           }
           if (this.field_u) {
-            this.field_m = new rt(this.field_t, 34037, 6402, this.field_k, this.field_g);
+            this.field_m = new LegacyOpenGlTexture2D(this.field_t, 34037, 6402, this.field_k, this.field_g);
           } else {
             if (null == this.field_b) {
               this.field_b = new OpenGlRenderbuffer(this.field_t, 6402, this.field_k, this.field_g);
@@ -66,23 +66,23 @@ final class cw {
             this.field_l = null;
           }
           if (null != this.field_r[0]) {
-            this.field_r[0].b(0);
+            this.field_r[0].close(0);
             this.field_r[0] = null;
           }
           if (null != this.field_r[1]) {
-            this.field_r[1].b(0);
+            this.field_r[1].close(0);
             this.field_r[1] = null;
           }
           if (this.field_e != null) {
             this.field_l = new OpenGlRenderbuffer(this.field_t, this.field_s, this.field_k, this.field_g, this.field_t.field_gb);
           }
-          this.field_r[0] = new rt(this.field_t, 34037, this.field_s, this.field_k, this.field_g);
+          this.field_r[0] = new LegacyOpenGlTexture2D(this.field_t, 34037, this.field_s, this.field_k, this.field_g);
           stackIn_31_0 = this.field_r;
           stackIn_31_1 = 1;
           if (this.field_p <= 1) {
             stackIn_32_2 = null;
           } else {
-            stackIn_32_2 = new rt(this.field_t, 34037, this.field_s, this.field_k, this.field_g);
+            stackIn_32_2 = new LegacyOpenGlTexture2D(this.field_t, 34037, this.field_s, this.field_k, this.field_g);
           }
           stackIn_31_0[stackIn_31_1] = stackIn_32_2;
           this.field_f = false;
@@ -429,7 +429,7 @@ final class cw {
         this.field_h = true;
         this.field_u = false;
         this.field_n = true;
-        this.field_r = new rt[2];
+        this.field_r = new LegacyOpenGlTexture2D[2];
         this.field_s = -1;
         this.field_p = 0;
         this.field_f = true;
