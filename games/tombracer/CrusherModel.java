@@ -328,7 +328,7 @@ final class CrusherModel extends TrapModel {
         }
         ma.field_g = -2147483648;
         kc.field_a = 2147483647;
-        ap.field_d = -2147483648;
+        C2SChooseCharacterPacket.field_d = -2147483648;
         ContextMenu.field_Eb = 0;
     }
 

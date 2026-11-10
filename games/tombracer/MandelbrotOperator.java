@@ -84,7 +84,7 @@ final class MandelbrotOperator extends TextureOperator {
         var10.field_w = param7;
         var10.field_u = param6;
         var10.b((byte) 116);
-        uta.a(0, param8, param4);
+        ConsoleWindow.a(0, param8, param4);
         for (var11 = 0; var11 < param8; var11++) {
           var10.fillRow(var15[var11], -1, var11);
         }

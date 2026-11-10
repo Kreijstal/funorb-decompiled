@@ -33,10 +33,10 @@ final class hpa extends aa {
           } else {
             stackIn_3_1 = param1.field_e;
           }
-          paa.a((iv) (stackIn_2_0), stackIn_3_1, param1.field_j, param1.field_i, -11635, (int[]) null, param1.field_l, param1.field_d, param1.field_g);
+          paa.a((ScrollPane) (stackIn_2_0), stackIn_3_1, param1.field_j, param1.field_i, -11635, (int[]) null, param1.field_l, param1.field_d, param1.field_g);
           if (0 == param1.field_d &&
             !MonochromeFillOperator.c(param0 + 2) &&
-            null == uu.field_a &&
+            null == C2SChooseRewardPacket.field_a &&
             null == WaveformOperator.field_n) {
             if (!PowerDownItemBehaviour.field_s) {
               var5 = hka.field_b;
@@ -49,8 +49,8 @@ final class hpa extends aa {
           }
           if (param1.field_d == 1 &&
             !MonochromeFillOperator.c(0) &&
-            uu.field_a != null &&
-            param1.field_e == uu.field_a.f(0)) {
+            C2SChooseRewardPacket.field_a != null &&
+            param1.field_e == C2SChooseRewardPacket.field_a.f(0)) {
             if (!PowerDownItemBehaviour.field_s) {
               var9 = hka.field_b;
               var10 = lw.field_i;

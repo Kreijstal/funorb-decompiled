@@ -1028,7 +1028,7 @@ final class MatchScreen extends GameScreen implements rqa {
         return this.field_t;
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void onRewardChoice(byte param0, int param1, int param2) {
         if (this.phase instanceof RewardChoicePhase) {
           ((RewardChoicePhase) (this.phase)).a(param1, true, param2);
         }
@@ -1432,7 +1432,7 @@ final class MatchScreen extends GameScreen implements rqa {
         }
     }
 
-    final void c(int param0, int param1, int param2) {
+    final void onCharacterChoice(int param0, int param1, int param2) {
         if (this.phase instanceof CharacterSelectPhase) {
           ((CharacterSelectPhase) (this.phase)).a(param2, 0, param0);
         }

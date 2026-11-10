@@ -111,7 +111,7 @@ final class CoinBagItemComponent extends ItemComponent {
         var19 = TombRacer.field_G ? 1 : 0;
         try {
           dga.a(fp.field_e, 199);
-          if (null != uu.field_a) {
+          if (null != C2SChooseRewardPacket.field_a) {
             bc.field_b.field_X = true;
             var22 = pk.field_z;
             var26 = var22;
@@ -127,7 +127,7 @@ final class CoinBagItemComponent extends ItemComponent {
               StatusEffect.field_g.field_r = una.field_d.toUpperCase();
               var9 = (2 + dka.field_b.field_G) / 2;
               pk.field_z.a(-2 + var9, 40, -23776, -40 + dka.field_b.field_t, 0);
-              if (uu.field_a.field_Mb >= uu.field_a.field_Jb) {
+              if (C2SChooseRewardPacket.field_a.field_Mb >= C2SChooseRewardPacket.field_a.field_Jb) {
                 pk.field_z.field_r = RandomAccessFileHandle.field_c.toUpperCase();
                 pk.field_z.field_X = false;
                 if (var19 != 0) {
@@ -201,9 +201,9 @@ final class CoinBagItemComponent extends ItemComponent {
                             stackIn_54_1 = ~var15;
                             if (stackIn_54_0 == stackIn_54_1) {
                               if (var10 != 0) {
-                                stackIn_47_0 = uu.field_a.field_Mb;
+                                stackIn_47_0 = C2SChooseRewardPacket.field_a.field_Mb;
                               } else {
-                                stackIn_47_0 = uu.field_a.field_Jb;
+                                stackIn_47_0 = C2SChooseRewardPacket.field_a.field_Jb;
                               }
                               var17_int = stackIn_47_0;
                               if (~var17_int != ~var16 &&
@@ -211,7 +211,7 @@ final class CoinBagItemComponent extends ItemComponent {
                                 break scanLoop2;
                               }
                             } else {
-                              if (~var16 != ~(255 & uu.field_a.field_ac[var15])) {
+                              if (~var16 != ~(255 & C2SChooseRewardPacket.field_a.field_ac[var15])) {
                                 break scanLoop2;
                               }
                             }
@@ -324,7 +324,7 @@ final class CoinBagItemComponent extends ItemComponent {
                 var16 = 0;
                 boolean decompiledNaturalLoopExit0 = false;
                 while (!(decompiledNaturalLoopExit0 = (!(var16 < fk.field_b)))) {
-                  var17_int = uu.field_a.field_ac[var16] & 255;
+                  var17_int = C2SChooseRewardPacket.field_a.field_ac[var16] & 255;
                   if (var19 == 0) {
                     if (PowerUpItemBehaviour.field_u != null &&
                       null != PowerUpItemBehaviour.field_u[var16] &&
@@ -435,14 +435,14 @@ final class CoinBagItemComponent extends ItemComponent {
                 }
               }
               if (var19 != 0) {
-                var9_ref_String = uu.field_a.field_tb;
+                var9_ref_String = C2SChooseRewardPacket.field_a.field_tb;
                 StatusEffect.field_g.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(113, jea.field_nb, new String[]{var9_ref_String}).toUpperCase();
                 AchievementsOverlay.field_t.a(dka.field_b.field_G, 40, -23776, dka.field_b.field_t - 40, 0);
                 AchievementsOverlay.field_t.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(107, TextLayout.field_d, new String[]{var9_ref_String});
                 var8 = AchievementsOverlay.field_t;
               }
             } else {
-              var9_ref_String = uu.field_a.field_tb;
+              var9_ref_String = C2SChooseRewardPacket.field_a.field_tb;
               StatusEffect.field_g.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(113, jea.field_nb, new String[]{var9_ref_String}).toUpperCase();
               AchievementsOverlay.field_t.a(dka.field_b.field_G, 40, -23776, dka.field_b.field_t - 40, 0);
               AchievementsOverlay.field_t.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(107, TextLayout.field_d, new String[]{var9_ref_String});
@@ -456,7 +456,7 @@ final class CoinBagItemComponent extends ItemComponent {
               }
               var8.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(97, DelegatingCanvas.field_b, new String[]{Integer.toString(var9)});
             }
-            cea.field_a.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(106, TextInputWidget.field_A, new String[]{Integer.toString(uu.field_a.field_Mb), Integer.toString(uu.field_a.field_Jb)});
+            cea.field_a.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(106, TextInputWidget.field_A, new String[]{Integer.toString(C2SChooseRewardPacket.field_a.field_Mb), Integer.toString(C2SChooseRewardPacket.field_a.field_Jb)});
           }
           stackIn_168_0 = nra.field_c;
           stackIn_168_1 = -98;
@@ -474,9 +474,9 @@ final class CoinBagItemComponent extends ItemComponent {
           if (param1 != -1) {
             return;
           }
-          if (null != uu.field_a) {
+          if (null != C2SChooseRewardPacket.field_a) {
             if (0 != bc.field_b.field_y) {
-              MidiVoiceMixer.a(param2, 30, uu.field_a.f(0));
+              MidiVoiceMixer.a(param2, 30, C2SChooseRewardPacket.field_a.f(0));
             }
             if (hw.field_a.field_y != 0) {
               hoa.field_p = true;
@@ -487,7 +487,7 @@ final class CoinBagItemComponent extends ItemComponent {
             if (Trap.field_q.field_y != 0) {
               tla.field_e = false;
             }
-            cm.a(param2, uu.field_a, param1 ^ 21289, false);
+            cm.a(param2, C2SChooseRewardPacket.field_a, param1 ^ 21289, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

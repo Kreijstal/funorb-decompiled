@@ -76,7 +76,7 @@ final class eqa implements os {
           }
           var5 = bta.field_q;
           if (var5 == 0 &&
-            null != uu.field_a) {
+            null != C2SChooseRewardPacket.field_a) {
             var5 = 1;
           }
           if (Transform3D.a(var5, -20011) == 2) {
@@ -114,9 +114,9 @@ final class eqa implements os {
         if (bta.field_q != 2) {
           var7 = "";
           if (0 == bta.field_q) {
-            if (null == uu.field_a) {
+            if (null == C2SChooseRewardPacket.field_a) {
               if (!kq.field_c) {
-                if (uu.field_a != null) {
+                if (C2SChooseRewardPacket.field_a != null) {
                   if (kp.field_c &&
                     tla.field_f != null) {
                     var63 = "[" + tla.field_f + "] ";
@@ -128,7 +128,7 @@ final class eqa implements os {
                     DarknessBehaviour.a(WeaveOperator.field_n.length() - 1, ' ', -11, WeaveOperator.field_n);
                     return true;
                   }
-                  var7 = "[" + gl.$cfr$intArgs$a$53ce4ab4c593(94, jea.field_nb, new String[]{uu.field_a.field_tb}) + "] ";
+                  var7 = "[" + gl.$cfr$intArgs$a$53ce4ab4c593(94, jea.field_nb, new String[]{C2SChooseRewardPacket.field_a.field_tb}) + "] ";
                 }
                 var66 = var7 + var64 + ": ";
                 var5Lifetime1 = var5Lifetime1 - PlatformBehaviour.field_s.stringWidth(var66);
@@ -140,7 +140,7 @@ final class eqa implements os {
               }
               var7 = "[" + cla.field_o + "] ";
             }
-            if (uu.field_a != null) {
+            if (C2SChooseRewardPacket.field_a != null) {
               if (kp.field_c &&
                 tla.field_f != null) {
                 var67 = "[" + tla.field_f + "] ";
@@ -152,7 +152,7 @@ final class eqa implements os {
                 DarknessBehaviour.a(WeaveOperator.field_n.length() - 1, ' ', -11, WeaveOperator.field_n);
                 return true;
               }
-              var7 = "[" + gl.$cfr$intArgs$a$53ce4ab4c593(94, jea.field_nb, new String[]{uu.field_a.field_tb}) + "] ";
+              var7 = "[" + gl.$cfr$intArgs$a$53ce4ab4c593(94, jea.field_nb, new String[]{C2SChooseRewardPacket.field_a.field_tb}) + "] ";
             }
           }
           var69 = var7 + var64 + ": ";

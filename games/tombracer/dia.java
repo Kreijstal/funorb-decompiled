@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dia extends ela {
-    static gq field_o;
+final class dia extends ConsoleMethod {
+    static FunOrbConsole field_o;
     static float[] field_p;
     static char field_q;
     static float[] field_r;

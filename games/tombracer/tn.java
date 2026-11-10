@@ -7,7 +7,7 @@ final class tn extends IntrusiveNode {
     int field_i;
     short[] field_g;
     bq[] field_m;
-    static iv field_n;
+    static ScrollPane field_n;
     u[] field_h;
     private int[] field_k;
     byte[] field_f;
@@ -99,7 +99,7 @@ final class tn extends IntrusiveNode {
     public static void releaseStatics(byte param0) {
         field_n = null;
         if (param0 != 94) {
-          field_n = (iv) null;
+          field_n = (ScrollPane) null;
         }
     }
 

@@ -29,9 +29,9 @@ final class cqa extends vw {
           var4 = this.field_c.c(true);
           AffineTransform3D var2 = var4;
           var3 = this.field_i.field_jd;
-          var3.a(13, this.field_c.field_sc * this.field_c.field_fc, this.field_c.field_fc * this.field_c.field_yb, this.field_c.field_fc * this.field_c.field_Kb, 1.0f);
-          var3.a(14, this.field_c.field_sc * this.field_c.field_j, this.field_c.field_yb * this.field_c.field_j, this.field_c.field_j * this.field_c.field_Kb, 1.0f);
-          var3.a(16, this.field_c.field_pc * this.field_c.field_sc, this.field_c.field_pc * this.field_c.field_yb, this.field_c.field_pc * this.field_c.field_Kb, 1.0f);
+          var3.setVertexShaderConstantF(13, this.field_c.field_sc * this.field_c.field_fc, this.field_c.field_fc * this.field_c.field_yb, this.field_c.field_fc * this.field_c.field_Kb, 1.0f);
+          var3.setVertexShaderConstantF(14, this.field_c.field_sc * this.field_c.field_j, this.field_c.field_yb * this.field_c.field_j, this.field_c.field_j * this.field_c.field_Kb, 1.0f);
+          var3.setVertexShaderConstantF(16, this.field_c.field_pc * this.field_c.field_sc, this.field_c.field_pc * this.field_c.field_yb, this.field_c.field_pc * this.field_c.field_Kb, 1.0f);
           var4.a(field_h, this.field_c.field_Gb[1], (byte) 76, this.field_c.field_Gb[2], this.field_c.field_Gb[0]);
           var3.SetVertexShaderConstantF(15, field_h, 1);
           var4.a(field_h, this.field_c.field_M[1], (byte) 52, this.field_c.field_M[2], this.field_c.field_M[0]);
@@ -120,7 +120,7 @@ final class cqa extends vw {
         jagdx.IDirect3DDevice var2 = null;
         if (this.field_j != null) {
           var2 = this.field_i.field_jd;
-          var2.a(4, this.field_c.writeTransposedProjection(field_f, false));
+          var2.setVertexShaderConstantF(4, this.field_c.writeTransposedProjection(field_f, false));
         }
         if (param0 >= 64) {
           return;
@@ -195,7 +195,7 @@ final class cqa extends vw {
         if (this.field_j != null) {
           var2 = this.field_i.field_jd;
           var3 = this.field_i.n((byte) -101);
-          var2.a(0, var3.a(false, field_f));
+          var2.setVertexShaderConstantF(0, var3.a(false, field_f));
         }
         if (param0 == 107) {
           return;
@@ -225,8 +225,8 @@ final class cqa extends vw {
           var4 = this.field_c.i();
           var5 = -((float)(-var4 + var3) * 0.125f) + (float)var3;
           var6 = -((float)(-var4 + var3) * 0.25f) + (float)var3;
-          var2.a(10, var6, 1.0f / (-var6 + var5), var5, 1.0f / ((float)var3 - var5));
-          var2.a(11, 1.0f / (float)this.field_c.g(false), (float)this.field_c.A(-2903) / 255.0f, this.field_c.field_Hc, 1.0f / (-this.field_c.field_B + this.field_c.field_Hc));
+          var2.setVertexShaderConstantF(10, var6, 1.0f / (-var6 + var5), var5, 1.0f / ((float)var3 - var5));
+          var2.setVertexShaderConstantF(11, 1.0f / (float)this.field_c.g(false), (float)this.field_c.A(-2903) / 255.0f, this.field_c.field_Hc, 1.0f / (-this.field_c.field_B + this.field_c.field_Hc));
           this.field_c.g(3625, this.field_c.t(65280));
         }
     }
@@ -251,7 +251,7 @@ final class cqa extends vw {
           }
           if (var2 == this.field_j) {
             var5.a(32560, 0.0f, 0.0f, field_h, (float)var4, -1.0f);
-            var6.a(12, field_h);
+            var6.setVertexShaderConstantF(12, field_h);
             return;
           }
           this.field_j = var2;
@@ -263,7 +263,7 @@ final class cqa extends vw {
           this.b(true);
           this.a(true);
           var5.a(32560, 0.0f, 0.0f, field_h, (float)var4, -1.0f);
-          var6.a(12, field_h);
+          var6.setVertexShaderConstantF(12, field_h);
           return;
         }
         jagdx.IDirect3DDevice var7 = this.field_i.field_jd;
@@ -276,7 +276,7 @@ final class cqa extends vw {
         }
         if (var2Lifetime1 == this.field_j) {
           var5Lifetime1.a(32560, 0.0f, 0.0f, field_h, (float)var4Lifetime1, -1.0f);
-          var7.a(12, field_h);
+          var7.setVertexShaderConstantF(12, field_h);
           return;
         }
         this.field_j = var2Lifetime1;
@@ -288,7 +288,7 @@ final class cqa extends vw {
         this.b(true);
         this.a(true);
         var5Lifetime1.a(32560, 0.0f, 0.0f, field_h, (float)var4Lifetime1, -1.0f);
-        var7.a(12, field_h);
+        var7.setVertexShaderConstantF(12, field_h);
     }
 
     final void b(boolean param0) {
@@ -310,7 +310,7 @@ final class cqa extends vw {
             stackIn_5_1 = 0;
             stackIn_5_2 = var3;
             stackIn_6_3 = (param0) ? false : true;
-            ((jagdx.IDirect3DDevice) (Object) stackIn_5_0).a(stackIn_5_1, ((AffineTransform3D) (Object) stackIn_5_2).a(stackIn_6_3, field_f));
+            ((jagdx.IDirect3DDevice) (Object) stackIn_5_0).setVertexShaderConstantF(stackIn_5_1, ((AffineTransform3D) (Object) stackIn_5_2).a(stackIn_6_3, field_f));
           }
         } else {
           this.c(false);
@@ -321,7 +321,7 @@ final class cqa extends vw {
             stackIn_12_1 = 0;
             stackIn_12_2 = var3;
             stackIn_13_3 = (param0) ? false : true;
-            ((jagdx.IDirect3DDevice) (Object) stackIn_12_0).a(stackIn_12_1, ((AffineTransform3D) (Object) stackIn_12_2).a(stackIn_13_3, field_f));
+            ((jagdx.IDirect3DDevice) (Object) stackIn_12_0).setVertexShaderConstantF(stackIn_12_1, ((AffineTransform3D) (Object) stackIn_12_2).a(stackIn_13_3, field_f));
           }
         }
     }

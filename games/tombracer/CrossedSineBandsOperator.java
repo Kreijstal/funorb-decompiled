@@ -371,7 +371,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
         if (!param1 && (SoftwareRasterizer.field_g != ob.field_i ||
           BufferedSocket.field_g != SoftwareRasterizer.field_a) && (SoftwareRasterizer.field_a == gn.field_C.field_e &&
           gn.field_C.field_f == SoftwareRasterizer.field_g)) {
-          if (null != uu.field_a) {
+          if (null != C2SChooseRewardPacket.field_a) {
             MazeComponent.c(false, 2);
           } else {
             if (null == WaveformOperator.field_n) {
@@ -399,7 +399,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
           CoinBagItemComponent.a(param1, -1, param6, param8, param5);
         }
         if (tla.field_e &&
-          uu.field_a.field_Mb >= uu.field_a.field_Jb) {
+          C2SChooseRewardPacket.field_a.field_Mb >= C2SChooseRewardPacket.field_a.field_Jb) {
           RasterShape.field_e.field_X = false;
           bsa.field_j.field_vb.field_r = RandomAccessFileHandle.field_c;
           BridgeModel.a(-116, bsa.field_j.field_tb);

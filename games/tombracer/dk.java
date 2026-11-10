@@ -245,7 +245,7 @@ final class dk {
             stackIn_3_0 = 34065;
             return stackIn_3_0;
           }
-          if (gq.field_u == param0) {
+          if (FunOrbConsole.field_u == param0) {
             stackIn_6_0 = 34066;
             return stackIn_6_0;
           }

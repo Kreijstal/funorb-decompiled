@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tb extends ela {
+final class tb extends ConsoleMethod {
     static mla field_p;
     static int field_o;
 

@@ -92,7 +92,7 @@ final class mp {
                   var2.field_f.e(var2.field_g * ot.field_v + 128 >> 8);
                 }
                 var2.unlink(param0 + 2);
-                var2 = (vb) (db.field_f.next(113));
+                var2 = (vb) (Obstacle.field_f.next(113));
                 return;
               }
             }
@@ -109,8 +109,8 @@ final class mp {
             }
             break;
           }
-          if (null != db.field_f) {
-            var2Lifetime1 = (vb) (db.field_f.first(param0 ^ -78));
+          if (null != Obstacle.field_f) {
+            var2Lifetime1 = (vb) (Obstacle.field_f.first(param0 ^ -78));
             while (null != var2Lifetime1) {
               if (var3 != 0) {
                 return;
@@ -121,7 +121,7 @@ final class mp {
               } else {
                 var2Lifetime1.unlink(param0 + 2);
               }
-              var2Lifetime1 = (vb) (db.field_f.next(113));
+              var2Lifetime1 = (vb) (Obstacle.field_f.next(113));
             }
           }
           return;
@@ -214,7 +214,7 @@ final class mp {
           era.field_e.b(-128, MatchProtocol.field_i);
           var17 = new jea(0L, (jea) null);
           var17.field_J = new IntrusiveDeque();
-          ne.field_d = new iv(0L, var17, param3, param4);
+          ne.field_d = new ScrollPane(0L, var17, param3, param4);
           MatchProtocol.field_i.b(-126, ne.field_d);
           RotaterMountComponent.field_K = new jea(0L, param1);
           MatchProtocol.field_i.b(-124, RotaterMountComponent.field_K);

@@ -8,7 +8,7 @@ final class SpriteTileOperator extends SpriteSampleOperator {
     static String field_u;
     static String field_v;
 
-    final static ConsoleToken readQuotedToken(in param0, boolean param1) {
+    final static ConsoleToken readQuotedToken(StringCursor param0, boolean param1) {
         int fieldTemp$5 = 0;
         StringBuilder discarded$6 = null;
         StringBuilder discarded$7 = null;
@@ -29,15 +29,15 @@ final class SpriteTileOperator extends SpriteSampleOperator {
         int var6Lifetime1;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          fieldTemp$5 = param0.field_b - 1;
-          param0.field_b = param0.field_b - 1;
+          fieldTemp$5 = param0.position - 1;
+          param0.position = param0.position - 1;
           var2_int = fieldTemp$5;
           var3 = new StringBuilder();
-          var4 = param0.b(21098);
+          var4 = param0.nextChar(21098);
           discarded$6 = var3.append((char) var4);
           var5 = param1 ? 1 : 0;
-          while (!param0.a(0)) {
-            var6 = param0.b(21098);
+          while (!param0.isAtEnd(0)) {
+            var6 = param0.nextChar(21098);
             if (var5 != 0) {
               discarded$7 = var3.append((char) var6);
               var5 = 0;

@@ -12,7 +12,7 @@ final class cva {
         if (wba.field_o != null) {
           wba.field_o.field_h = true;
           int var1 = 105 % ((param0 + 32) / 62);
-          uu.b(12475, 1);
+          C2SChooseRewardPacket.b(12475, 1);
           return;
         }
         throw new IllegalStateException("NGR");

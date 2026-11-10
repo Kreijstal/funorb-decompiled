@@ -78,7 +78,7 @@ final class ala extends GameScreen {
         int var4;
         pk.field_C = pk.field_C + 1;
         bna.a((byte) 10);
-        if (null == uu.field_a) {
+        if (null == C2SChooseRewardPacket.field_a) {
           var4 = 0;
           if (param2 == 15283) {
             if (param1) {
@@ -105,7 +105,7 @@ final class ala extends GameScreen {
             }
           }
         } else {
-          if (HardwareGraphicsToolkit.d(73, uu.field_a.field_Mb)) {
+          if (HardwareGraphicsToolkit.d(73, C2SChooseRewardPacket.field_a.field_Mb)) {
             var4 = 1;
             if (param2 == 15283) {
               if (param1) {

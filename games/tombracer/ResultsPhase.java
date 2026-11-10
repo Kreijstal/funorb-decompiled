@@ -507,9 +507,9 @@ final class ResultsPhase extends MatchPhase {
             }
           } else {
             if (!this.field_o &&
-              var7Lifetime2 >= var8Lifetime3 * 50 + iv.field_ub &&
-              var7Lifetime2 < this.matchState.field_k * 50 + iv.field_ub + 50) {
-              stackIn_101_0 = (50 * var8Lifetime3 + iv.field_ub + 25 > var7Lifetime2) ? 0 : 1;
+              var7Lifetime2 >= var8Lifetime3 * 50 + ScrollPane.field_ub &&
+              var7Lifetime2 < this.matchState.field_k * 50 + ScrollPane.field_ub + 50) {
+              stackIn_101_0 = (50 * var8Lifetime3 + ScrollPane.field_ub + 25 > var7Lifetime2) ? 0 : 1;
               var11Lifetime1Lifetime1 = stackIn_101_0;
               var33 = Integer.toString(this.field_r[var8Lifetime3].field_c);
               stackIn_103_0 = new StringBuilder().append("$");
@@ -766,7 +766,7 @@ final class ResultsPhase extends MatchPhase {
             this.field_m = true;
           }
           if (0.0 < var11) {
-            iv.field_ub = var17Lifetime2;
+            ScrollPane.field_ub = var17Lifetime2;
             var17Lifetime2 = var17Lifetime2 + var4_int * 50 + 50;
             ema.field_b = var17Lifetime2;
             var17Lifetime2 += 100;

@@ -72,7 +72,7 @@ final class dh {
           if (null != var44.field_q &&
             var44.field_K > 1) {
             var60 = var44.field_q;
-            uu.scatterFacesByPriority(0, 2507, var60, 0, DrawOfferMenu.field_q);
+            C2SChooseRewardPacket.scatterFacesByPriority(0, 2507, var60, 0, DrawOfferMenu.field_q);
           } else {
             ne.a((byte) -124);
           }

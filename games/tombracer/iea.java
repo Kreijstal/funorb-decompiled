@@ -34,7 +34,7 @@ final class iea {
     }
 
     final static void a(boolean param0, byte param1, int param2) {
-        iv stackIn_3_0;
+        ScrollPane stackIn_3_0;
         int stackIn_3_1;
         boolean stackIn_3_2;
         int stackIn_3_3;
@@ -70,7 +70,7 @@ final class iea {
           stackIn_3_4 = param2 * 3 * (2 + di.field_a);
           stackIn_3_5 = 2 + di.field_a;
           stackIn_4_6 = (OpenGlSprite.field_j.field_vb == lu.field_b);
-          var3_int = ((iv) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_3_5, stackIn_4_6) ? 1 : 0;
+          var3_int = ((ScrollPane) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_3_5, stackIn_4_6) ? 1 : 0;
           var4 = OpenGlSprite.field_j.field_tb.field_J;
           if (param1 != -56) {
             return;
@@ -89,9 +89,9 @@ final class iea {
           while (var6 != null) {
             var7 = 0;
             if (var6.field_J == null) {
-              var6.field_xb = new jea(0L, lta.field_a);
+              var6.field_xb = new jea(0L, S2CStartRoundPacket.field_a);
               var6.b(-127, var6.field_xb);
-              var6.field_zb = new jea(0L, lta.field_a);
+              var6.field_zb = new jea(0L, S2CStartRoundPacket.field_a);
               var6.b(param1 ^ 74, var6.field_zb);
               var7 = 1;
               var6.a(-10966);

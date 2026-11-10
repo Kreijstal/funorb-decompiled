@@ -75,7 +75,7 @@ final class sl extends vw {
         }
         this.field_c.e(1, false);
         this.field_c.bindTexture(true, var3);
-        this.field_c.applyTexCoordGeneration(gq.field_u, (byte) 0);
+        this.field_c.applyTexCoordGeneration(FunOrbConsole.field_u, (byte) 0);
         this.field_c.e(1, false);
         this.field_c.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, r.field_m);
         this.field_c.a(PlayerContextMenu.field_j, 2, -6219, true, false);

@@ -116,7 +116,7 @@ final class km extends DualLinkNode {
           for (var7_int = 0; this.field_l.length > var7_int; var7_int++) {
             this.field_l[var7_int].b(param3, param2, -256);
           }
-          uta.a(0, param2, param3);
+          ConsoleWindow.a(0, param2, param3);
           var20 = new float[4 * param2 * param3];
           var7 = var20;
           var8 = 0;
@@ -250,7 +250,7 @@ final class km extends DualLinkNode {
             return stackIn_6_0;
           }
           CachedArchiveSource.a(param3, -256);
-          uta.a(0, param0, param6);
+          ConsoleWindow.a(0, param0, param6);
           var26 = new int[param6 * param0];
           var10 = var26;
           if (param2) {
@@ -477,7 +477,7 @@ final class km extends DualLinkNode {
             this.field_l[var9_int].b(param0, param2, -256);
           }
           CachedArchiveSource.a(param3, -256);
-          uta.a(0, param2, param0);
+          ConsoleWindow.a(0, param2, param0);
           if (param6) {
             this.field_m = (TextureOperator) null;
           }

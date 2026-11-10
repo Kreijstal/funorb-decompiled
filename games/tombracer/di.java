@@ -69,7 +69,7 @@ final class di {
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
         if (param1 ||
-          uu.field_a == null) {
+          C2SChooseRewardPacket.field_a == null) {
           tla.field_e = false;
         }
         if (param1) {
@@ -85,7 +85,7 @@ final class di {
             }
           }
         } else {
-          if (null == uu.field_a) {
+          if (null == C2SChooseRewardPacket.field_a) {
             if (WaveformOperator.field_n == null) {
               tla.field_e = false;
               if (0 < GameKeyHandler.field_a) {

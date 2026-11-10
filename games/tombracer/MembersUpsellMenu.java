@@ -88,8 +88,8 @@ final class MembersUpsellMenu extends MenuScreen {
           for (var5 = 0; LoginForm.field_z.length > var5; var5++) {
             if (mca.a((byte) 6, var5) &&
               BrickOperator.d(100, var5)) {
-              var6 = LoginForm.field_z[var5] + (this.field_t + (uta.field_d.a() >> 1));
-              var7 = this.field_r - (-hq.field_b[var5] - (uta.field_d.c() >> 1));
+              var6 = LoginForm.field_z[var5] + (this.field_t + (ConsoleWindow.field_d.a() >> 1));
+              var7 = this.field_r - (-hq.field_b[var5] - (ConsoleWindow.field_d.c() >> 1));
               var8 = 20;
               if (jba.field_j > var6 - var8 &&
                 var8 + var6 > jba.field_j &&
@@ -160,7 +160,7 @@ final class MembersUpsellMenu extends MenuScreen {
               qf.field_k[var4].draw(pha.field_ub[var4] + this.field_t, C2SSubmitSettingsPacket.field_b[var4] + this.field_r, 0, -1426063361, 1);
             } else {
               OpenGlFramebuffer.field_i[var4].a(pha.field_ub[var4] + this.field_t, this.field_r + C2SSubmitSettingsPacket.field_b[var4]);
-              var5_ref_nh = uta.field_d;
+              var5_ref_nh = ConsoleWindow.field_d;
               if (null != mq.field_e) {
                 if (mq.field_e.worldMedals[var4] == 3) {
                   var5_ref_nh = je.field_E;

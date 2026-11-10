@@ -209,7 +209,7 @@ final class cm implements GamePacket {
               if (mka.b(8192)) {
                 ArchiveNetworkClient.field_b = jsa.field_y;
               } else {
-                ArchiveNetworkClient.field_b = gl.$cfr$intArgs$a$53ce4ab4c593(101, EffectEvent.field_i, new String[]{uu.field_a.field_tb});
+                ArchiveNetworkClient.field_b = gl.$cfr$intArgs$a$53ce4ab4c593(101, EffectEvent.field_i, new String[]{C2SChooseRewardPacket.field_a.field_tb});
               }
             }
           }

@@ -21,7 +21,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           SingleChildWidget.a(95);
         }
         stackIn_5_0 = ((458752 & param2) != 0);
-        stackIn_10_0 = !(!stackIn_5_0 | cga.a(param2, -83, param1)) || (uu.a(true, param2, param1));
+        stackIn_10_0 = !(!stackIn_5_0 | cga.a(param2, -83, param1)) || (C2SChooseRewardPacket.a(true, param2, param1));
         return stackIn_10_0;
     }
 
@@ -276,8 +276,8 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           una.field_j.field_x = 2;
           iea.field_g = new jea(0L, tka.field_q);
           iea.field_g.applyStyle(false, PressureSwitchBehaviour.field_p);
-          lta.field_a = new jea(0L, una.field_j);
-          lta.field_a.applyStyle(param0, PressureSwitchBehaviour.field_p);
+          S2CStartRoundPacket.field_a = new jea(0L, una.field_j);
+          S2CStartRoundPacket.field_a.applyStyle(param0, PressureSwitchBehaviour.field_p);
           var16 = BoulderComponent.a(param4, "lobby", 5, "button_mouseover");
           SimpleBlockBehaviour.field_n = new ContextMenu(lw.field_a, var12, Corpse.field_i, PressureSwitchBehaviour.field_p, 3, 2, pda.field_c, 3, di.field_a);
           AllPlatformsMazeComponent.field_M = new jea(0L, PressureSwitchBehaviour.field_p);

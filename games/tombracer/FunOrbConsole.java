@@ -3,8 +3,8 @@
  */
 import java.util.*;
 
-final class gq extends uta {
-    private ela[] field_v;
+final class FunOrbConsole extends ConsoleWindow {
+    private ConsoleMethod[] methods;
     static ica field_w;
     static dn field_u;
 
@@ -31,9 +31,9 @@ final class gq extends uta {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        ela var12_ref_ela = null;
+        ConsoleMethod var12_ref_ela = null;
         int var12 = 0;
-        ela var13 = null;
+        ConsoleMethod var13 = null;
         int var14 = 0;
         int stackIn_47_0Lifetime1;
         int stackIn_47_1Lifetime1;
@@ -63,7 +63,7 @@ final class gq extends uta {
           var9 = var6.length();
           var10 = 1;
           var11 = 2147483647;
-          var12_ref_ela = (ela) (var7_ref.b((byte) 38));
+          var12_ref_ela = (ConsoleMethod) (var7_ref.b((byte) 38));
           while (true) {
             if (var12_ref_ela != null) {
               stackIn_43_0 = var11;
@@ -72,7 +72,7 @@ final class gq extends uta {
                 if (stackIn_43_0 > stackIn_43_1) {
                   var11 = var12_ref_ela.field_l.length();
                 }
-                var12_ref_ela = (ela) (var7_ref.c(param0 - 21275));
+                var12_ref_ela = (ConsoleMethod) (var7_ref.c(param0 - 21275));
                 continue;
               }
             } else {
@@ -84,8 +84,8 @@ final class gq extends uta {
                     break;
                   }
                   if (stackIn_43_0 > stackIn_43_1) {
-                    var12 = ((ela) (var7_ref.b((byte) 38))).field_l.charAt(var9);
-                    var13 = (ela) (var7_ref.c(param0 ^ 21291));
+                    var12 = ((ConsoleMethod) (var7_ref.b((byte) 38))).field_l.charAt(var9);
+                    var13 = (ConsoleMethod) (var7_ref.c(param0 ^ 21291));
                     while (var13 != null) {
                       stackIn_47_0 = var10;
                       stackIn_47_1 = ~var12;
@@ -96,7 +96,7 @@ final class gq extends uta {
                         stackIn_36_1 = 1;
                       }
                       var10 = stackIn_47_0 & stackIn_36_1;
-                      var13 = (ela) (var7_ref.c(28));
+                      var13 = (ConsoleMethod) (var7_ref.c(28));
                     }
                     if (var10 != 0) {
                       discarded$0 = var8.append((char) var12);
@@ -123,7 +123,7 @@ final class gq extends uta {
             discarded$1 = var8.append("()");
             var12Lifetime1++;
             if (1 == var7_ref.size((byte) -34) &&
-              ((ela) (var7_ref.b((byte) 38))).field_n.length == 0) {
+              ((ConsoleMethod) (var7_ref.b((byte) 38))).field_n.length == 0) {
               var12Lifetime1++;
             }
           }
@@ -154,10 +154,10 @@ final class gq extends uta {
           if (param0) {
             field_u = (dn) null;
           }
-          while (var4 < this.field_v.length) {
-            if (this.field_v[var4].field_l.startsWith(param1)) {
-              this.field_v[var4].unlinkSecondary(-7975);
-              var3.a(this.field_v[var4], (byte) -78);
+          while (var4 < this.methods.length) {
+            if (this.methods[var4].field_l.startsWith(param1)) {
+              this.methods[var4].unlinkSecondary(-7975);
+              var3.a(this.methods[var4], (byte) -78);
             }
             var4++;
             if (var5 == 0) {
@@ -205,7 +205,7 @@ final class gq extends uta {
               if (!var4.a((byte) 85)) {
                 throw new jj(var4.c((byte) -127).field_h);
               }
-              this.a((byte) -80, var6.a(-1, this.field_v));
+              this.a((byte) -80, var6.a(-1, this.methods));
               return true;
             } catch (jj decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -216,7 +216,7 @@ final class gq extends uta {
             } catch (rv decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3_ref3 = (rv) (Object) decompiledCaughtException;
-              this.a(123, var3_ref3.field_b);
+              this.printLine(123, var3_ref3.field_b);
             }
             return false;
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
@@ -244,7 +244,7 @@ final class gq extends uta {
         try {
           field_u = null;
           if (param0 != 39) {
-            gq.f(51);
+            FunOrbConsole.f(51);
           }
           field_w = null;
           return;
@@ -255,12 +255,12 @@ final class gq extends uta {
         }
     }
 
-    gq(IntrusiveDeque param0, BitmapFont param1, PlatformTaskDispatcher param2) {
+    FunOrbConsole(IntrusiveDeque param0, BitmapFont param1, PlatformTaskDispatcher param2) {
         super(param1, param2);
         int incrementValue$1 = 0;
         RuntimeException runtimeException = null;
         int var4_int = 0;
-        ela var5 = null;
+        ConsoleMethod var5 = null;
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -272,19 +272,19 @@ final class gq extends uta {
         RuntimeException decompiledCaughtException = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
-          this.field_v = new ela[param0.size((byte) -16)];
+          this.methods = new ConsoleMethod[param0.size((byte) -16)];
           var4_int = 0;
-          var5 = (ela) (param0.first(-80));
+          var5 = (ConsoleMethod) (param0.first(-80));
           while (var5 != null) {
             incrementValue$1 = var4_int;
             var4_int++;
-            this.field_v[incrementValue$1] = var5;
-            var5 = (ela) (param0.next(125));
+            this.methods[incrementValue$1] = var5;
+            var5 = (ConsoleMethod) (param0.next(125));
             if (var6 != 0) {
               return;
             }
           }
-          this.a(-124, "# <col=ffaaff>FunOrbConsole (loaded " + this.field_v.length + " methods at " + new Date() + ")</col>");
+          this.printLine(-124, "# <col=ffaaff>FunOrbConsole (loaded " + this.methods.length + " methods at " + new Date() + ")</col>");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -330,7 +330,7 @@ final class gq extends uta {
         String[] var8 = null;
         int var9 = 0;
         int var10_int = 0;
-        ela var10 = null;
+        ConsoleMethod var10 = null;
         int var11 = 0;
         int var9Lifetime1;
         var11 = TombRacer.field_G ? 1 : 0;
@@ -396,7 +396,7 @@ final class gq extends uta {
           var7_ref = this.b(param0, var6);
           var8 = new String[var7_ref.size((byte) -99)];
           var9Lifetime1 = 0;
-          var10 = (ela) (var7_ref.b((byte) 38));
+          var10 = (ConsoleMethod) (var7_ref.b((byte) 38));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var10))) {
             stackIn_43_0 = var8;
@@ -404,7 +404,7 @@ final class gq extends uta {
               incrementValue$0 = var9Lifetime1;
               var9Lifetime1++;
               stackIn_43_0[incrementValue$0] = var10.field_k;
-              var10 = (ela) (var7_ref.c(28));
+              var10 = (ConsoleMethod) (var7_ref.c(28));
               continue;
             }
             break;
@@ -572,7 +572,7 @@ final class gq extends uta {
           }
           gsa.field_w = ResultsPhase.highlightConsoleSyntax(this.field_o.e((byte) -112), (byte) -110);
           if (param0 != -72) {
-            this.field_v = (ela[]) null;
+            this.methods = (ConsoleMethod[]) null;
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

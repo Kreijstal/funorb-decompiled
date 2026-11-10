@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class db extends IntrusiveNode implements Renderable, Collidable, WorldBody, noa, qn {
+final class Obstacle extends IntrusiveNode implements Renderable, Collidable, WorldBody, noa, qn {
     private int field_n;
     private Room field_m;
     private int field_p;
@@ -705,7 +705,7 @@ final class db extends IntrusiveNode implements Renderable, Collidable, WorldBod
         return this.field_p;
     }
 
-    db(Room param0, BitPacketBuffer param1) {
+    Obstacle(Room param0, BitPacketBuffer param1) {
         int var4 = 0;
         int fieldTemp$0 = 0;
         RuntimeException stackIn_13_0 = null;

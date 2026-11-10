@@ -21,7 +21,7 @@ final class au extends aa {
               qfa.a(-116);
               if (FlagSet.field_c) {
                 FlagSet.field_c = false;
-                in.a(-30600, false);
+                StringCursor.a(-30600, false);
               }
             }
             ub.field_c = nn.field_c;

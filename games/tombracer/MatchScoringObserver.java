@@ -61,7 +61,7 @@ class MatchScoringObserver extends SimulationObserver {
           var9 = null;
           if (1 != param5) {
             var8 = -10;
-            var9_ref = gl.$cfr$intArgs$a$53ce4ab4c593(104, uta.field_n, new String[]{String.valueOf(var8)});
+            var9_ref = gl.$cfr$intArgs$a$53ce4ab4c593(104, ConsoleWindow.field_n, new String[]{String.valueOf(var8)});
           } else {
             var8 = -5;
             var9_ref = gl.$cfr$intArgs$a$53ce4ab4c593(107, rf.field_a, new String[]{String.valueOf(var8)});

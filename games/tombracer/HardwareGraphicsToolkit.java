@@ -208,9 +208,9 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     final void usePixelProjection(int param0) {
         mla var2 = null;
-        if (this.field_r != nr.field_d) {
+        if (this.field_r != S2CRewardChoicePacket.field_d) {
           var2 = this.field_r;
-          this.field_r = nr.field_d;
+          this.field_r = S2CRewardChoicePacket.field_d;
           if (var2.a(-101)) {
             this.v((byte) 94);
           }
@@ -332,7 +332,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
             } else {
               if (param1 != 3) {
                 if (param1 == 4) {
-                  this.setTextureCombineOperations(gq.field_w, (byte) -110, gq.field_w);
+                  this.setTextureCombineOperations(FunOrbConsole.field_w, (byte) -110, FunOrbConsole.field_w);
                 }
               } else {
                 this.setTextureCombineOperations(iw.field_c, (byte) -110, NormalMapOperator.field_m);
@@ -504,7 +504,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         if (param0 != 16) {
           this.b(107);
         }
-        if (nr.field_d == this.field_r) {
+        if (S2CRewardChoicePacket.field_d == this.field_r) {
           var2 = this.c((byte) -61);
           this.field_q.a(var2, param0 ^ -128, var2, 0.0f);
         }

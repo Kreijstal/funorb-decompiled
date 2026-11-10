@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class iv extends jea {
+final class ScrollPane extends jea {
     static int field_ub;
     jea field_tb;
     jea field_vb;
@@ -83,7 +83,7 @@ final class iv extends jea {
         this.field_wb.a(this.field_tb.field_t, -this.field_tb.field_T, param0, false, this.field_G - param0, this.field_t, this.field_vb.field_t, 0);
     }
 
-    iv(long param0, jea param1, jea param2, VerticalScrollbar param3) {
+    ScrollPane(long param0, jea param1, jea param2, VerticalScrollbar param3) {
         super(param0, (jea) null);
         try {
           this.field_vb = new jea(0L, param2);

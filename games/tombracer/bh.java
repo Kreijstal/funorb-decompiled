@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bh extends ela {
+final class bh extends ConsoleMethod {
     static int field_o;
     static boolean field_p;
 
@@ -17,7 +17,7 @@ final class bh extends ela {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         StringBuilder discarded$4 = null;
-        iv stackIn_5_0;
+        ScrollPane stackIn_5_0;
         int stackIn_5_1;
         boolean stackIn_5_2;
         int stackIn_5_3;
@@ -129,7 +129,7 @@ final class bh extends ela {
           stackIn_5_4 = param3 * (2 + di.field_a) * 4;
           stackIn_5_5 = 2 * (2 + di.field_a);
           stackIn_6_6 = (nsa.field_i == lu.field_b);
-          var7_int = ((iv) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_5_4, stackIn_5_5, stackIn_6_6) ? 1 : 0;
+          var7_int = ((ScrollPane) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_5_4, stackIn_5_5, stackIn_6_6) ? 1 : 0;
           var8 = nsa.field_i.field_tb.field_J;
           var9 = bva.currentTimeMillis((byte) -107);
           var11 = null;
@@ -143,7 +143,7 @@ final class bh extends ela {
               var14 = stackIn_10_0 | stackIn_10_1;
               var12.b(-122, var12.field_Vb);
               var12.field_Vb.field_z = 1;
-              var12.field_bc = new jea(0L, lta.field_a);
+              var12.field_bc = new jea(0L, S2CStartRoundPacket.field_a);
               var12.b(-124, var12.field_bc);
               var12.field_Hb = new jea(0L, iea.field_g);
               var12.b(-124, var12.field_Hb);
@@ -151,7 +151,7 @@ final class bh extends ela {
               var12.field_wb = new jea(0L, iea.field_g);
               var12.b(-124, var12.field_wb);
               var12.field_wb.field_x = 0;
-              var12.field_Lb = new jea(0L, lta.field_a);
+              var12.field_Lb = new jea(0L, S2CStartRoundPacket.field_a);
               var12.b(-125, var12.field_Lb);
               var12.field_Lb.field_z = 2;
               stackIn_12_0 = var12;
@@ -161,7 +161,7 @@ final class bh extends ela {
               if (!UnlockOverlay.field_p) {
                 stackIn_13_1 = null;
                 stackIn_13_2 = null;
-                stackIn_13_4 = lta.field_a;
+                stackIn_13_4 = S2CStartRoundPacket.field_a;
               } else {
                 stackIn_13_1 = null;
                 stackIn_13_2 = null;
@@ -211,12 +211,12 @@ final class bh extends ela {
               } else {
                 stackIn_32_1 = null;
                 stackIn_32_2 = null;
-                stackIn_32_4 = lta.field_a;
+                stackIn_32_4 = S2CStartRoundPacket.field_a;
               }
               stackIn_31_0.field_ub = new jea(stackIn_31_3, stackIn_32_4);
               var12.b(-127, var12.field_ub);
               var12.field_ub.field_z = 2;
-              var12.field_Qb = new jea(0L, lta.field_a);
+              var12.field_Qb = new jea(0L, S2CStartRoundPacket.field_a);
               var12.b(param1 ^ -122, var12.field_Qb);
               var12.field_hc = new jea(0L, PressureSwitchBehaviour.field_p);
               var12.b(-125, var12.field_hc);

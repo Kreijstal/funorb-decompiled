@@ -64,7 +64,7 @@ final class VoronoiNoiseOperator extends TextureOperator {
           return;
         }
         try {
-          paa.a((iv) null, -1, (String) null, 0L, -11635, (int[]) null, param2, param1, (String) null);
+          paa.a((ScrollPane) null, -1, (String) null, 0L, -11635, (int[]) null, param2, param1, (String) null);
           if (param1 == 0) {
             var10 = hka.field_b;
             var11 = ColouriseOperator.field_m[0];

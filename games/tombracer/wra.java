@@ -21,8 +21,8 @@ final class wra extends IOException {
           if (param0 != 0) {
             field_b = (String) null;
           }
-          for (var1_int = 0; db.field_h.field_c.length > var1_int; var1_int++) {
-            db.field_h.field_c[var1_int] = vba.field_x[var1_int];
+          for (var1_int = 0; Obstacle.field_h.field_c.length > var1_int; var1_int++) {
+            Obstacle.field_h.field_c[var1_int] = vba.field_x[var1_int];
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

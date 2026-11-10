@@ -27,10 +27,10 @@ final class mla {
           var6.position = var6.position + 1;
           var3 = var6.position;
           var6.writeByte(5, 0);
-          var6.writeByte(uu.field_a.field_Jb, 0);
-          var4 = (uu.field_a.field_yb << 6) + uu.field_a.field_cc;
+          var6.writeByte(C2SChooseRewardPacket.field_a.field_Jb, 0);
+          var4 = (C2SChooseRewardPacket.field_a.field_yb << 6) + C2SChooseRewardPacket.field_a.field_cc;
           var6.writeByte(var4, 0);
-          var6.writeBytes(0, uu.field_a.field_ac, uu.field_a.field_ac.length, 121);
+          var6.writeBytes(0, C2SChooseRewardPacket.field_a.field_ac, C2SChooseRewardPacket.field_a.field_ac.length, 121);
           var6.backpatchByteLength(var6.position - var3, (byte) -97);
           return;
         }
@@ -40,10 +40,10 @@ final class mla {
         var5.position = var5.position + 1;
         var3Lifetime1 = var5.position;
         var5.writeByte(5, 0);
-        var5.writeByte(uu.field_a.field_Jb, 0);
-        var4Lifetime1 = (uu.field_a.field_yb << 6) + uu.field_a.field_cc;
+        var5.writeByte(C2SChooseRewardPacket.field_a.field_Jb, 0);
+        var4Lifetime1 = (C2SChooseRewardPacket.field_a.field_yb << 6) + C2SChooseRewardPacket.field_a.field_cc;
         var5.writeByte(var4Lifetime1, 0);
-        var5.writeBytes(0, uu.field_a.field_ac, uu.field_a.field_ac.length, 121);
+        var5.writeBytes(0, C2SChooseRewardPacket.field_a.field_ac, C2SChooseRewardPacket.field_a.field_ac.length, 121);
         var5.backpatchByteLength(var5.position - var3Lifetime1, (byte) -97);
     }
 

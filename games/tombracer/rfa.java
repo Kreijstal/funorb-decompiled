@@ -175,7 +175,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
               var3 = vk.c(107);
               if (var3 != 2) {
                 if (var3 == 3) {
-                  in.a(-30600, true);
+                  StringCursor.a(-30600, true);
                   this.updateScreen(true, false);
                 } else {
                   if (var3 == 4) {

@@ -14,7 +14,7 @@ final class SweepRotateLocomotor extends Locomotor {
         RuntimeException decompiledCaughtException = null;
         var3 = TombRacer.field_G ? 1 : 0;
         try {
-          ResultsPhase.a(ap.field_d, 0, ContextMenu.field_Eb, param0, (byte) -100, ota.field_c, true);
+          ResultsPhase.a(C2SChooseCharacterPacket.field_d, 0, ContextMenu.field_Eb, param0, (byte) -100, ota.field_c, true);
           var2_int = 0;
           do {
             if (!(ContextMenu.field_Eb > var2_int)) {

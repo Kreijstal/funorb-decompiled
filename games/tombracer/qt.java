@@ -16,7 +16,7 @@ final class qt {
         ItemBehaviour.field_p[ContextMenu.field_Eb] = param3;
         BlockModel.field_n[ContextMenu.field_Eb] = ContextMenu.field_Eb;
         jk.field_h[ContextMenu.field_Eb] = param4;
-        if (ap.field_d < param4) {
+        if (C2SChooseCharacterPacket.field_d < param4) {
           ma.field_g = param4;
         }
         if (!(ota.field_c <= param4)) {
@@ -241,7 +241,7 @@ final class qt {
                     if (var7 == null) {
                       var7 = new pha(var26, var27, var3_longLifetime2);
                       tc.field_d.put(-1, var7, var3_longLifetime2);
-                      uu.field_a.field_Mb = uu.field_a.field_Mb + 1;
+                      C2SChooseRewardPacket.field_a.field_Mb = C2SChooseRewardPacket.field_a.field_Mb + 1;
                     }
                     var7.field_Jb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(122);
                     var8 = ((PacketBuffer) ((Object) var1)).readVarInt((byte) -123);
@@ -269,11 +269,11 @@ final class qt {
                       var15.field_Lb = var5Lifetime1;
                     }
                     var28.unlinkSecondary(-7975);
-                    uu.field_a.field_Mb = uu.field_a.field_Mb - 1;
+                    C2SChooseRewardPacket.field_a.field_Mb = C2SChooseRewardPacket.field_a.field_Mb - 1;
                     return;
                   }
                   if (var2 == 20) {
-                    ed.a(32, uu.field_a, false, var1);
+                    ed.a(32, C2SChooseRewardPacket.field_a, false, var1);
                     return;
                   }
                   if (21 == var2) {
@@ -369,16 +369,16 @@ final class qt {
             var3_ref_phaLifetime1 = (pha) (fua.field_a.a((byte) -112));
           }
           if (var2 == 1 &&
-            uu.field_a != null) {
-            wra.field_b = uu.field_a.field_tb;
+            C2SChooseRewardPacket.field_a != null) {
+            wra.field_b = C2SChooseRewardPacket.field_a.field_tb;
           }
           if (var2 != 4) {
-            uu.field_a = null;
+            C2SChooseRewardPacket.field_a = null;
           } else {
             var3Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(125);
-            uu.field_a = new ht(fk.field_b);
-            uu.field_a.setSecondaryKey(false, (long)var3Lifetime1);
-            ed.a(32, uu.field_a, false, var1);
+            C2SChooseRewardPacket.field_a = new ht(fk.field_b);
+            C2SChooseRewardPacket.field_a.setSecondaryKey(false, (long)var3Lifetime1);
+            ed.a(32, C2SChooseRewardPacket.field_a, false, var1);
             uq.field_d = 0L;
           }
           if (var2 != 2 &&

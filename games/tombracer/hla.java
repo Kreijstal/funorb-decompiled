@@ -5,7 +5,7 @@ final class hla extends jea {
     jea field_yb;
     jea field_tb;
     jea field_wb;
-    iv field_vb;
+    ScrollPane field_vb;
     static int field_xb;
     static NodeHashTable field_ub;
 
@@ -52,7 +52,7 @@ final class hla extends jea {
         super(param0, param1);
         try {
           this.field_tb = new jea(0L, (jea) null);
-          this.field_vb = new iv(0L, this.field_tb, param2, param3);
+          this.field_vb = new ScrollPane(0L, this.field_tb, param2, param3);
           this.field_yb = new jea(0L, param4);
           this.field_wb = new jea(0L, param4);
           this.field_yb.field_r = param5;

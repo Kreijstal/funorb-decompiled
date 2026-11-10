@@ -49,7 +49,7 @@ final class gj {
           is.field_yb = new jea(0L, Corpse.field_i);
           is.field_yb.field_z = 1;
           MatchScreen.field_F = new jea(0L, ooa.field_f, ija.field_i);
-          Puddle.field_v = new jea(0L, SecondaryNodeDeque.field_b, ap.field_c);
+          Puddle.field_v = new jea(0L, SecondaryNodeDeque.field_b, C2SChooseCharacterPacket.field_c);
           ita.field_c = new jea(0L, PressureSwitchBehaviour.field_p);
           dqa.field_e.b(-122, is.field_yb);
           dqa.field_e.b(-126, MatchScreen.field_F);

@@ -20,7 +20,7 @@ final class gua {
           return;
         }
         this.field_b = param1;
-        this.field_c = this.field_b.a(0, 0);
+        this.field_c = this.field_b.getBackBuffer(0, 0);
     }
 
     final void a(boolean param0) {

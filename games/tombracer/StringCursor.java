@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class in {
-    private int field_d;
-    int field_b;
+final class StringCursor {
+    private int length;
+    int position;
     private static String[] field_a;
-    private String field_c;
+    private String text;
 
     final static void a(int param0, boolean param1) {
         int var2;
@@ -34,7 +34,7 @@ final class in {
               return;
             }
             dq.field_f = wba.field_o.b(27013);
-            uu.b(param0 ^ -18237, 2);
+            C2SChooseRewardPacket.b(param0 ^ -18237, 2);
             if (dq.field_f == null) {
               var2 = 3;
             } else {
@@ -43,7 +43,7 @@ final class in {
             }
           }
         } else {
-          in.a(118, false);
+          StringCursor.a(118, false);
           if (ReportAbuseDialog.field_ub <= 0) {
             if (TextWidgetPainter.a(9)) {
               var2 = 0;
@@ -77,7 +77,7 @@ final class in {
             var2 = 2;
           } else {
             dq.field_f = wba.field_o.b(27013);
-            uu.b(param0 ^ -18237, 2);
+            C2SChooseRewardPacket.b(param0 ^ -18237, 2);
             if (dq.field_f == null) {
               var2 = 3;
             } else {
@@ -97,7 +97,7 @@ final class in {
 
     public static void releaseStatics(boolean param0) {
         if (!param0) {
-          in.releaseStatics(true);
+          StringCursor.releaseStatics(true);
           field_a = null;
           return;
         }
@@ -131,29 +131,29 @@ final class in {
         }
     }
 
-    final char b(int param0) {
+    final char nextChar(int param0) {
         int fieldTemp$0 = 0;
         if (param0 == 21098) {
-          fieldTemp$0 = this.field_b;
-          this.field_b = this.field_b + 1;
-          return this.field_c.charAt(fieldTemp$0);
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          return this.text.charAt(fieldTemp$0);
         }
         this.toString();
-        int fieldTemp$1 = this.field_b;
-        this.field_b = this.field_b + 1;
-        return this.field_c.charAt(fieldTemp$1);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        return this.text.charAt(fieldTemp$1);
     }
 
-    final boolean a(int param0) {
+    final boolean isAtEnd(int param0) {
         if (param0 == 0) {
-          return this.field_d <= this.field_b ? true : false;
+          return this.length <= this.position ? true : false;
         }
-        in.a(126, -107, (byte) 95);
-        return this.field_d <= this.field_b ? true : false;
+        StringCursor.a(126, -107, (byte) 95);
+        return this.length <= this.position ? true : false;
     }
 
     public final String toString() {
-        return this.field_c.substring(0, this.field_b) + "|" + this.field_c.substring(this.field_b);
+        return this.text.substring(0, this.position) + "|" + this.text.substring(this.position);
     }
 
     final static boolean a(int param0, int param1, byte param2) {
@@ -173,11 +173,11 @@ final class in {
         return true;
     }
 
-    in(String param0) {
-        this.field_b = 0;
+    StringCursor(String param0) {
+        this.position = 0;
         try {
-          this.field_c = param0;
-          this.field_d = this.field_c.length();
+          this.text = param0;
+          this.length = this.text.length();
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "in.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

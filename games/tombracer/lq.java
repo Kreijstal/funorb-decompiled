@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lq extends ela {
+final class lq extends ConsoleMethod {
     static String[] achievementNames;
     static int[] field_o;
 

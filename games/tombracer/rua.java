@@ -186,7 +186,7 @@ final class rua extends MessageDialog implements ButtonListener {
           if (!mja.a((byte) -50)) {
             throw new RuntimeException("");
           }
-          if (!in.a("jaggl", 480)) {
+          if (!StringCursor.a("jaggl", 480)) {
             throw new RuntimeException("");
           }
           var9 = new jaggl.OpenGL();

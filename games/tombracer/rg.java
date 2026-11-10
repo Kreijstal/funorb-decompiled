@@ -161,7 +161,7 @@ final class rg extends SingleChildWidget {
           tk.field_a[15] = SingleChildWidget.sawDeathMessages;
           tk.field_a[7] = fpa.snakeDeathMessages;
           tk.field_a[4] = or.fallingObjectDeathMessages;
-          IntrusiveDeque.field_d[0] = new String[]{ela.field_m, fr.field_a, null, null, null, null, qfa.field_a};
+          IntrusiveDeque.field_d[0] = new String[]{ConsoleMethod.field_m, fr.field_a, null, null, null, null, qfa.field_a};
           Effect.field_h[0] = new String[]{daa.field_f, LegacySwitchModel.field_o, AccountRegistrationPanel.field_H, PushableBlockMazeComponent.field_K, pba.field_c, hsa.field_c};
           IntrusiveDeque.field_d[1] = new String[]{ct.field_c, pn.field_o, dka.field_c};
           Effect.field_h[1] = new String[]{dk.field_k, BitPacketBuffer.field_m, ne.field_e};
@@ -213,7 +213,7 @@ final class rg extends SingleChildWidget {
         tk.field_a[15] = SingleChildWidget.sawDeathMessages;
         tk.field_a[7] = fpa.snakeDeathMessages;
         tk.field_a[4] = or.fallingObjectDeathMessages;
-        IntrusiveDeque.field_d[0] = new String[]{ela.field_m, fr.field_a, null, null, null, null, qfa.field_a};
+        IntrusiveDeque.field_d[0] = new String[]{ConsoleMethod.field_m, fr.field_a, null, null, null, null, qfa.field_a};
         Effect.field_h[0] = new String[]{daa.field_f, LegacySwitchModel.field_o, AccountRegistrationPanel.field_H, PushableBlockMazeComponent.field_K, pba.field_c, hsa.field_c};
         IntrusiveDeque.field_d[1] = new String[]{ct.field_c, pn.field_o, dka.field_c};
         Effect.field_h[1] = new String[]{dk.field_k, BitPacketBuffer.field_m, ne.field_e};

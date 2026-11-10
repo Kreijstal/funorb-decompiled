@@ -4,7 +4,7 @@
 abstract class lu {
     static int field_a;
     static String field_c;
-    static iv field_b;
+    static ScrollPane field_b;
 
     abstract pl a(byte param0);
 

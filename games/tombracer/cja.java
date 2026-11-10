@@ -197,9 +197,9 @@ final class cja {
                   var12 = stackIn_76_0;
                 } else {
                   if (-1 == param5) {
-                    stackIn_67_0 = (SafeZoneBehaviour.field_u[var11] != uu.field_a.field_Jb) ? 0 : 1;
+                    stackIn_67_0 = (SafeZoneBehaviour.field_u[var11] != C2SChooseRewardPacket.field_a.field_Jb) ? 0 : 1;
                   } else {
-                    stackIn_67_0 = (var11 != (255 & uu.field_a.field_ac[param5])) ? 0 : 1;
+                    stackIn_67_0 = (var11 != (255 & C2SChooseRewardPacket.field_a.field_ac[param5])) ? 0 : 1;
                   }
                   var12 = stackIn_67_0;
                 }

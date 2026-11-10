@@ -110,7 +110,7 @@ final class ck {
           RasterShape.field_e = new jea(0L, (jea) null);
           uh.field_h = new jea(0L, ooa.field_f, ija.field_i);
           vw.field_b = new jea(0L, SecondaryNodeDeque.field_b, AchievementsOverlay.field_m);
-          bsa.field_j = new iv(0L, new jea(0L, (jea) null), rfa.field_C, DateFieldsWidget.field_F);
+          bsa.field_j = new ScrollPane(0L, new jea(0L, (jea) null), rfa.field_C, DateFieldsWidget.field_F);
           RasterShape.field_e.b(-126, uh.field_h);
           if (UnlockOverlay.field_p) {
             RasterShape.field_e.b(param11 - 25575, vw.field_b);
@@ -123,15 +123,15 @@ final class ck {
           PerlinNoise2D.field_t = new jea(0L, Corpse.field_i);
           PerlinNoise2D.field_t.field_z = 1;
           ImageProducerRasterBuffer.field_j = new jea(0L, ssa.field_g, S2CActionPacket.field_g.toUpperCase());
-          ap.field_a = new jea(0L, CharacterSelectPhase.field_s, tha.field_B.toUpperCase());
-          db.field_s = new jea(0L, CommonChooseReward.field_c);
+          C2SChooseCharacterPacket.field_a = new jea(0L, CharacterSelectPhase.field_s, tha.field_B.toUpperCase());
+          Obstacle.field_s = new jea(0L, CommonChooseReward.field_c);
           gta.field_b = new jea(0L, ooa.field_f, SnakePitModel.field_m);
           RandomBrickOperator.field_r = new jea(0L, cs.field_a, TestModel.field_r);
           RotateLocomotor.field_o = new jea(0L, cs.field_a, du.field_a);
           MidiPcmStream.field_K = new jea(0L, cs.field_a, qo.field_i);
           MirrorComponent.field_I = new jea(0L, cs.field_a, MatchState.field_N);
           cq.field_e = new jea(0L, SecondaryNodeDeque.field_b, PathMoverComponent.field_G);
-          nsa.field_i = new iv(0L, new jea(0L, (jea) null), rfa.field_C, DateFieldsWidget.field_F);
+          nsa.field_i = new ScrollPane(0L, new jea(0L, (jea) null), rfa.field_C, DateFieldsWidget.field_F);
           uq.field_c = new jea(0L, hg.field_g, iw.field_b.toUpperCase());
           uq.field_c.field_X = UnlockOverlay.field_p;
           stackIn_8_0 = null;
@@ -149,17 +149,17 @@ final class ck {
           }
           pq.field_c = new jea(stackIn_8_2, stackIn_8_3, ((String) (Object) stackIn_9_4).toUpperCase());
           OpenGlToolkit.field_fd = new jea(0L, (jea) null);
-          OpenGlToolkit.field_fd.b(-126, ap.field_a);
-          OpenGlToolkit.field_fd.b(param11 ^ -25371, db.field_s);
-          db.field_s.b(-124, gta.field_b);
-          db.field_s.b(-126, RandomBrickOperator.field_r);
-          db.field_s.b(-127, RotateLocomotor.field_o);
+          OpenGlToolkit.field_fd.b(-126, C2SChooseCharacterPacket.field_a);
+          OpenGlToolkit.field_fd.b(param11 ^ -25371, Obstacle.field_s);
+          Obstacle.field_s.b(-124, gta.field_b);
+          Obstacle.field_s.b(-126, RandomBrickOperator.field_r);
+          Obstacle.field_s.b(-127, RotateLocomotor.field_o);
           if (UnlockOverlay.field_p) {
-            db.field_s.b(-128, MidiPcmStream.field_K);
+            Obstacle.field_s.b(-128, MidiPcmStream.field_K);
           }
-          db.field_s.b(-123, MirrorComponent.field_I);
-          db.field_s.b(-128, cq.field_e);
-          db.field_s.b(-122, nsa.field_i);
+          Obstacle.field_s.b(-123, MirrorComponent.field_I);
+          Obstacle.field_s.b(-128, cq.field_e);
+          Obstacle.field_s.b(-122, nsa.field_i);
           if (UnlockOverlay.field_p) {
             OpenGlToolkit.field_fd.b(-124, uq.field_c);
           }
@@ -181,7 +181,7 @@ final class ck {
           cea.field_a.field_z = 1;
           uaa.field_b = new jea(0L, ooa.field_f, ija.field_i);
           RopeBridgeComponent.field_F = new jea(0L, SecondaryNodeDeque.field_b, AchievementsOverlay.field_m);
-          tn.field_n = new iv(0L, new jea(0L, (jea) null), rfa.field_C, DateFieldsWidget.field_F);
+          tn.field_n = new ScrollPane(0L, new jea(0L, (jea) null), rfa.field_C, DateFieldsWidget.field_F);
           lk.field_l.b(param11 ^ -25371, cea.field_a);
           lk.field_l.b(-124, uaa.field_b);
           if (UnlockOverlay.field_p) {

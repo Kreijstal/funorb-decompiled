@@ -54,7 +54,7 @@ final class lp {
         RuntimeException decompiledCaughtException = null;
         IntrusiveDeque var2 = null;
         RuntimeException var2_ref = null;
-        in var3 = null;
+        StringCursor var3 = null;
         int var4 = 0;
         int var5 = 0;
         var5 = TombRacer.field_G ? 1 : 0;
@@ -63,24 +63,24 @@ final class lp {
             field_h = (ko) null;
           }
           var2 = new IntrusiveDeque();
-          var3 = new in(param1);
-          while (!var3.a(0)) {
-            var4 = var3.b(21098);
+          var3 = new StringCursor(param1);
+          while (!var3.isAtEnd(0)) {
+            var4 = var3.nextChar(21098);
             if (Character.isWhitespace((char) var4)) {
               continue;
             }
             if (var4 != 34 &&
               var4 != 39) {
               if (var4 == 40) {
-                var2.addLast((byte) -90, new ConsoleToken(lna.field_a, -1 + var3.field_b));
+                var2.addLast((byte) -90, new ConsoleToken(lna.field_a, -1 + var3.position));
                 continue;
               }
               if (var4 == 41) {
-                var2.addLast((byte) -112, new ConsoleToken(rs.field_a, var3.field_b - 1));
+                var2.addLast((byte) -112, new ConsoleToken(rs.field_a, var3.position - 1));
                 continue;
               }
               if (44 == var4) {
-                var2.addLast((byte) -107, new ConsoleToken(qba.field_c, var3.field_b - 1));
+                var2.addLast((byte) -107, new ConsoleToken(qba.field_c, var3.position - 1));
                 continue;
               }
               var2.addLast((byte) -75, WeaponShooterBehaviour.a(param0 - 93, var3));

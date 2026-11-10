@@ -4,7 +4,7 @@
 final class ne {
     private int field_b;
     static int[][] field_f;
-    static iv field_d;
+    static ScrollPane field_d;
     private long field_a;
     static fta field_c;
     static String field_e;
@@ -86,7 +86,7 @@ final class ne {
         field_d = null;
         field_c = null;
         if (param0 != 15) {
-          field_d = (iv) null;
+          field_d = (ScrollPane) null;
           field_f = (int[][]) null;
           return;
         }

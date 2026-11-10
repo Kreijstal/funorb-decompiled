@@ -87,7 +87,7 @@ abstract class ob extends IntrusiveNode {
           je.field_E = su.createToolkitSprite(pha.field_Bb, param0, (byte) -119);
           eu.field_a = su.createToolkitSprite(ConstrainToRectangleLocomotor.field_t, param0, (byte) -5);
           pq.field_a = su.createToolkitSprite(MatchScreen.field_q, param0, (byte) 28);
-          uta.field_d = su.createToolkitSprite(TimeSwitchBehaviour.field_n, param0, (byte) 127);
+          ConsoleWindow.field_d = su.createToolkitSprite(TimeSwitchBehaviour.field_n, param0, (byte) 127);
           OpenGlFramebuffer.field_i = ak.a(param0, WallCrusherComponent.field_F, -67);
           qf.field_k = new ToolkitSprite[OpenGlFramebuffer.field_i.length];
           for (var2_intLifetime2 = 0; OpenGlFramebuffer.field_i.length > var2_intLifetime2; var2_intLifetime2++) {

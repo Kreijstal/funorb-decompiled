@@ -1787,10 +1787,10 @@ final class OpenGlToolkit extends GraphicsToolkit {
         try {
           this.field_gb = param2;
           this.field_ad = param0;
-          if (!in.a("jaclib", 480)) {
+          if (!StringCursor.a("jaclib", 480)) {
             throw new RuntimeException("");
           }
-          if (!in.a("jaggl", 480)) {
+          if (!StringCursor.a("jaggl", 480)) {
             throw new RuntimeException("");
           }
           try {

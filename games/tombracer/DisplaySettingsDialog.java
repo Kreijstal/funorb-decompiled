@@ -647,15 +647,15 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
               if (null != this.field_ab) {
                 var2 = this.field_ab.i((byte) 123);
                 if (var2 < 0) {
-                  in.a(-30600, true);
+                  StringCursor.a(-30600, true);
                   this.field_z.c(new FullscreenConfirmationDialog(this.field_z), 89);
                 } else {
                   wba.field_o.a(this.field_P[var2].field_a, this.field_P[var2].field_c, -1);
-                  in.a(-30600, true);
+                  StringCursor.a(-30600, true);
                   this.field_z.c(new FullscreenConfirmationDialog(this.field_z), 89);
                 }
               } else {
-                in.a(-30600, true);
+                StringCursor.a(-30600, true);
                 this.field_z.c(new FullscreenConfirmationDialog(this.field_z), 89);
               }
             }

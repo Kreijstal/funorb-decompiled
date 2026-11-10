@@ -142,7 +142,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
         pq.field_a = null;
         ik.field_h = null;
         bd.field_i = null;
-        uta.field_d = null;
+        ConsoleWindow.field_d = null;
         WidgetStyleLayer.field_b = null;
         em.field_h = null;
         qf.field_k = null;

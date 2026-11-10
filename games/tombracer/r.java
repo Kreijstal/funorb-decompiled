@@ -13,8 +13,8 @@ abstract class r extends DualLinkNode {
             kw.a(11, false, 0);
             return;
           }
-          if (uu.field_a != null) {
-            MidiVoiceMixer.a(11, 30, uu.field_a.f(param0 ^ 0));
+          if (C2SChooseRewardPacket.field_a != null) {
+            MidiVoiceMixer.a(11, 30, C2SChooseRewardPacket.field_a.f(param0 ^ 0));
           }
           ColouriseOperator.field_q = true;
           return;
@@ -23,8 +23,8 @@ abstract class r extends DualLinkNode {
           kw.a(11, false, 0);
           return;
         }
-        if (uu.field_a != null) {
-          MidiVoiceMixer.a(11, 30, uu.field_a.f(param0 ^ 0));
+        if (C2SChooseRewardPacket.field_a != null) {
+          MidiVoiceMixer.a(11, 30, C2SChooseRewardPacket.field_a.f(param0 ^ 0));
         }
         ColouriseOperator.field_q = true;
     }

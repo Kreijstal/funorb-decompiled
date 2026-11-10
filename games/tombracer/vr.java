@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vr extends ela {
+final class vr extends ConsoleMethod {
     static boolean field_o;
 
     final ConsoleValue a(ConsoleValue[] param0, int param1) {

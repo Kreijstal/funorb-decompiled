@@ -95,10 +95,10 @@ final class kla {
     final static void b(int param0) {
         if (wba.field_o != null) {
           wba.field_o.field_h = false;
-          uu.b(12475, param0);
+          C2SChooseRewardPacket.b(12475, param0);
           return;
         }
-        uu.b(12475, param0);
+        C2SChooseRewardPacket.b(12475, param0);
     }
 
     public static void releaseStatics(int param0) {

@@ -21,11 +21,11 @@ final class oja extends vw {
             if (0 < this.field_c.field_J) {
               var3 = this.field_c.field_Hc;
               var4 = this.field_c.field_B;
-              var2.a(16, var3, 1.0f / (var3 - var4), 0.0f, 0.0f);
+              var2.setVertexShaderConstantF(16, var3, 1.0f / (var3 - var4), 0.0f, 0.0f);
             } else {
-              var2.a(16, 0.0f, 0.0f, 0.0f, 0.0f);
+              var2.setVertexShaderConstantF(16, 0.0f, 0.0f, 0.0f, 0.0f);
             }
-            var2.b(0, (float)(this.field_c.field_g >> 16 & 255) / 255.0f, (float)(this.field_c.field_g >> 8 & 255) / 255.0f, (float)(255 & this.field_c.field_g) / 255.0f, 0.0f);
+            var2.setPixelShaderConstantF(0, (float)(this.field_c.field_g >> 16 & 255) / 255.0f, (float)(this.field_c.field_g >> 8 & 255) / 255.0f, (float)(255 & this.field_c.field_g) / 255.0f, 0.0f);
           }
           return;
         }
@@ -119,9 +119,9 @@ final class oja extends vw {
           this.c(true);
           this.b(118);
           this.a(true);
-          var5.b(1, -this.field_c.field_Gb[0], -this.field_c.field_Gb[1], -this.field_c.field_Gb[2], 0.0f);
-          var5.b(2, this.field_c.field_sc, this.field_c.field_yb, this.field_c.field_Kb, 1.0f);
-          var5.b(3, 96.0f + 928.0f * Math.abs(this.field_c.field_Gb[1]), 0.0f, 0.0f, 0.0f);
+          var5.setPixelShaderConstantF(1, -this.field_c.field_Gb[0], -this.field_c.field_Gb[1], -this.field_c.field_Gb[2], 0.0f);
+          var5.setPixelShaderConstantF(2, this.field_c.field_sc, this.field_c.field_yb, this.field_c.field_Kb, 1.0f);
+          var5.setPixelShaderConstantF(3, 96.0f + 928.0f * Math.abs(this.field_c.field_Gb[1]), 0.0f, 0.0f, 0.0f);
           return;
         }
     }
@@ -137,11 +137,11 @@ final class oja extends vw {
           var5 = 1 << (3 & param1);
           var6 = (float)(1 << (7 & param1 >> 3)) / 32.0f;
           var7 = param2 & 65535;
-          var4.a(14, (float)(var5 * this.field_c.field_Dc % 40000) / 40000.0f, 0.0f, 0.0f, 0.0f);
+          var4.setVertexShaderConstantF(14, (float)(var5 * this.field_c.field_Dc % 40000) / 40000.0f, 0.0f, 0.0f, 0.0f);
           var8 = (float)((param2 & 227931) >> 16) / 8.0f;
-          var4.a(15, var6, 0.0f, 0.0f, 0.0f);
-          var4.b(4, (float)var7, 0.0f, 0.0f, 0.0f);
-          var4.b(5, var8, 0.0f, 0.0f, 0.0f);
+          var4.setVertexShaderConstantF(15, var6, 0.0f, 0.0f, 0.0f);
+          var4.setPixelShaderConstantF(4, (float)var7, 0.0f, 0.0f, 0.0f);
+          var4.setPixelShaderConstantF(5, var8, 0.0f, 0.0f, 0.0f);
         }
         if (param0 == 55) {
           return;
@@ -154,7 +154,7 @@ final class oja extends vw {
         if (param0 > 64) {
           if (this.field_j) {
             var2 = this.field_i.field_jd;
-            var2.a(8, this.field_c.writeTransposedProjection(field_h, false));
+            var2.setVertexShaderConstantF(8, this.field_c.writeTransposedProjection(field_h, false));
           }
           return;
         }
@@ -177,8 +177,8 @@ final class oja extends vw {
             var2 = this.field_i.field_jd;
             var3 = this.field_i.E(14);
             var4 = this.field_i.n((byte) 4);
-            var2.a(0, var4.a(false, field_h));
-            var2.a(4, var3.b(field_h, 74));
+            var2.setVertexShaderConstantF(0, var4.a(false, field_h));
+            var2.setVertexShaderConstantF(4, var3.b(field_h, 74));
           }
           return;
         }
@@ -190,7 +190,7 @@ final class oja extends vw {
         if (this.field_j) {
           var2 = this.field_i.field_jd;
           var3 = this.field_i.n((byte) -124);
-          var2.a(0, var3.a(false, field_h));
+          var2.setVertexShaderConstantF(0, var3.a(false, field_h));
         }
         if (param0 == 107) {
           return;

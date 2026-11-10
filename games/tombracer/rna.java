@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rna extends ela {
+final class rna extends ConsoleMethod {
     final static short[] a(short[] param0, boolean param1, int param2) {
         short[] var3 = null;
         RuntimeException var3_ref = null;

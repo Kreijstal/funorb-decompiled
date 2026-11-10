@@ -985,7 +985,7 @@ final class gja extends ka {
           do {
             if (var1_int >= this.field_y) {
               pb.field_k = 0;
-              uu.field_c = 0;
+              C2SChooseRewardPacket.field_c = 0;
               ina.field_a = 0;
               break;
             }
@@ -2443,7 +2443,7 @@ final class gja extends ka {
             }
           }
           if (decompiledFrameCompleted9) {
-            stackIn_75_0 = uu.a(true, param4, this.field_h) ? 1 : 0;
+            stackIn_75_0 = C2SChooseRewardPacket.a(true, param4, this.field_h) ? 1 : 0;
           }
           if (stackIn_75_0 == 0) {
             if (!DiskCacheWorker.a((byte) 114, this.field_h, param4)) {
@@ -2779,7 +2779,7 @@ final class gja extends ka {
             param0.field_V = this.field_V;
             param0.field_M = this.field_M;
           }
-          if (!uu.a(param4, this.field_h, (byte) -116)) {
+          if (!C2SChooseRewardPacket.a(param4, this.field_h, (byte) -116)) {
             if (!ag.b(-1, param4, this.field_h)) {
               param0.field_g = null;
               if (var13 != 0) {
@@ -3011,7 +3011,7 @@ final class gja extends ka {
             param4 = param4 << 4;
             ina.field_a = 0;
             pb.field_k = 0;
-            uu.field_c = 0;
+            C2SChooseRewardPacket.field_c = 0;
             var9 = 0;
             var10 = 0;
             boolean decompiledNaturalLoopExit0 = false;
@@ -3028,7 +3028,7 @@ final class gja extends ka {
                     ina.field_a = ina.field_a + this.field_Z[var14];
                     pb.field_k = pb.field_k + this.field_r[var14];
                     var9++;
-                    uu.field_c = uu.field_c + this.field_l[var14];
+                    C2SChooseRewardPacket.field_c = C2SChooseRewardPacket.field_c + this.field_l[var14];
                     var13_int++;
                   }
                 }
@@ -3044,12 +3044,12 @@ final class gja extends ka {
             if (stackIn_17_0 >= stackIn_17_1) {
               ina.field_a = param2;
               pb.field_k = param3;
-              uu.field_c = param4;
+              C2SChooseRewardPacket.field_c = param4;
               if (var21 == 0) {
                 return;
               }
             }
-            uu.field_c = uu.field_c / var9 + param4;
+            C2SChooseRewardPacket.field_c = C2SChooseRewardPacket.field_c / var9 + param4;
             ina.field_a = ina.field_a / var9 + param2;
             pb.field_k = param3 + pb.field_k / var9;
             return;
@@ -3100,13 +3100,13 @@ final class gja extends ka {
                     var13_int = var11[var12];
                     this.field_Z[var13_int] = this.field_Z[var13_int] - ina.field_a;
                     this.field_r[var13_int] = this.field_r[var13_int] - pb.field_k;
-                    this.field_l[var13_int] = this.field_l[var13_int] - uu.field_c;
+                    this.field_l[var13_int] = this.field_l[var13_int] - C2SChooseRewardPacket.field_c;
                     this.field_Z[var13_int] = param2 * this.field_Z[var13_int] >> 7;
                     this.field_r[var13_int] = param3 * this.field_r[var13_int] >> 7;
                     this.field_l[var13_int] = this.field_l[var13_int] * param4 >> 7;
                     this.field_Z[var13_int] = this.field_Z[var13_int] + ina.field_a;
                     this.field_r[var13_int] = this.field_r[var13_int] + pb.field_k;
-                    this.field_l[var13_int] = this.field_l[var13_int] + uu.field_c;
+                    this.field_l[var13_int] = this.field_l[var13_int] + C2SChooseRewardPacket.field_c;
                     var12++;
                     if (var21 != 0) {
                       decompiledFrameCompleted3 = false;
@@ -3419,7 +3419,7 @@ final class gja extends ka {
                           var13_int = var11[var12];
                           this.field_Z[var13_int] = this.field_Z[var13_int] - ina.field_a;
                           this.field_r[var13_int] = this.field_r[var13_int] - pb.field_k;
-                          this.field_l[var13_int] = this.field_l[var13_int] - uu.field_c;
+                          this.field_l[var13_int] = this.field_l[var13_int] - C2SChooseRewardPacket.field_c;
                           stackIn_44_0 = param2;
                           if (stackIn_44_0 != 0) {
                             var14 = qu.field_b[param2];
@@ -3444,7 +3444,7 @@ final class gja extends ka {
                           }
                           this.field_Z[var13_int] = this.field_Z[var13_int] + ina.field_a;
                           this.field_r[var13_int] = this.field_r[var13_int] + pb.field_k;
-                          this.field_l[var13_int] = this.field_l[var13_int] + uu.field_c;
+                          this.field_l[var13_int] = this.field_l[var13_int] + C2SChooseRewardPacket.field_c;
                           var12++;
                         }
                       } else {
@@ -3453,7 +3453,7 @@ final class gja extends ka {
                           var13_int = var11[var12];
                           this.field_Z[var13_int] = this.field_Z[var13_int] - ina.field_a;
                           this.field_r[var13_int] = this.field_r[var13_int] - pb.field_k;
-                          this.field_l[var13_int] = this.field_l[var13_int] - uu.field_c;
+                          this.field_l[var13_int] = this.field_l[var13_int] - C2SChooseRewardPacket.field_c;
                           stackIn_45_0 = -1;
                           stackIn_45_1 = ~param4;
                           if (stackIn_45_0 != stackIn_45_1) {
@@ -3479,7 +3479,7 @@ final class gja extends ka {
                           }
                           this.field_Z[var13_int] = this.field_Z[var13_int] + ina.field_a;
                           this.field_r[var13_int] = this.field_r[var13_int] + pb.field_k;
-                          this.field_l[var13_int] = this.field_l[var13_int] + uu.field_c;
+                          this.field_l[var13_int] = this.field_l[var13_int] + C2SChooseRewardPacket.field_c;
                           var12++;
                         }
                       }
@@ -3730,7 +3730,7 @@ final class gja extends ka {
             var10 = 0;
             pb.field_k = 0;
             ina.field_a = 0;
-            uu.field_c = 0;
+            C2SChooseRewardPacket.field_c = 0;
             var11 = 0;
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (var11 >= var9_int))) {
@@ -3747,7 +3747,7 @@ final class gja extends ka {
                       (param6 & this.field_hb[var15]) != 0) {
                       ina.field_a = ina.field_a + this.field_Z[var15];
                       pb.field_k = pb.field_k + this.field_r[var15];
-                      uu.field_c = uu.field_c + this.field_l[var15];
+                      C2SChooseRewardPacket.field_c = C2SChooseRewardPacket.field_c + this.field_l[var15];
                       var10++;
                     }
                     var14_int++;
@@ -3760,7 +3760,7 @@ final class gja extends ka {
             }
             if (decompiledNaturalLoopExit0) {
               if (var10 <= 0) {
-                uu.field_c = param4;
+                C2SChooseRewardPacket.field_c = param4;
                 pb.field_k = param3;
                 ina.field_a = param2;
                 if (var47 == 0) {
@@ -3768,7 +3768,7 @@ final class gja extends ka {
                 }
               }
               vr.field_o = true;
-              uu.field_c = param4 + uu.field_c / var10;
+              C2SChooseRewardPacket.field_c = param4 + C2SChooseRewardPacket.field_c / var10;
               ina.field_a = ina.field_a / var10 + param2;
               stackIn_32_0 = param3;
               stackIn_32_1 = pb.field_k / var10;
@@ -3847,7 +3847,7 @@ final class gja extends ka {
                           (this.field_hb[var14_int] & param6) != 0) {
                           this.field_Z[var14_int] = this.field_Z[var14_int] - ina.field_a;
                           this.field_r[var14_int] = this.field_r[var14_int] - pb.field_k;
-                          this.field_l[var14_int] = this.field_l[var14_int] - uu.field_c;
+                          this.field_l[var14_int] = this.field_l[var14_int] - C2SChooseRewardPacket.field_c;
                           if (0 != param4) {
                             var15 = qu.field_b[param4];
                             var16 = qu.field_d[param4];
@@ -3871,7 +3871,7 @@ final class gja extends ka {
                           }
                           this.field_Z[var14_int] = this.field_Z[var14_int] + ina.field_a;
                           this.field_r[var14_int] = this.field_r[var14_int] + pb.field_k;
-                          this.field_l[var14_int] = this.field_l[var14_int] + uu.field_c;
+                          this.field_l[var14_int] = this.field_l[var14_int] + C2SChooseRewardPacket.field_c;
                         }
                         var13++;
                       }
@@ -3962,16 +3962,16 @@ final class gja extends ka {
             var14_int = param7[13] << 4;
             var15 = param7[14] << 4;
             if (vr.field_o) {
-              var16 = 8192 + ina.field_a * param7[0] + (param7[3] * pb.field_k + param7[6] * uu.field_c) >> 14;
-              var17 = 8192 + ina.field_a * param7[1] + param7[4] * pb.field_k + uu.field_c * param7[7] >> 14;
-              var18 = param7[8] * uu.field_c + param7[5] * pb.field_k + param7[2] * ina.field_a + 8192 >> 14;
+              var16 = 8192 + ina.field_a * param7[0] + (param7[3] * pb.field_k + param7[6] * C2SChooseRewardPacket.field_c) >> 14;
+              var17 = 8192 + ina.field_a * param7[1] + param7[4] * pb.field_k + C2SChooseRewardPacket.field_c * param7[7] >> 14;
+              var18 = param7[8] * C2SChooseRewardPacket.field_c + param7[5] * pb.field_k + param7[2] * ina.field_a + 8192 >> 14;
               var16 = var16 + var13;
               var17 = var17 + var14_int;
               ina.field_a = var16;
               pb.field_k = var17;
               var18 = var18 + var15;
               vr.field_o = false;
-              uu.field_c = var18;
+              C2SChooseRewardPacket.field_c = var18;
             }
             var16_ref_int__ = new int[9];
             var17 = qu.field_d[param2];
@@ -3991,12 +3991,12 @@ final class gja extends ka {
             var16_ref_int__[2] = var17 * var20 + 8192 >> 14;
             var16_ref_int__[4] = var17 * var21 + 8192 >> 14;
             var16_ref_int__[0] = 8192 + (var21 * var19 + var20 * var24) >> 14;
-            var25_int = 8192 + (var16_ref_int__[2] * -uu.field_c + -ina.field_a * var16_ref_int__[0]) + var16_ref_int__[1] * -pb.field_k >> 14;
-            var26 = 8192 + (var16_ref_int__[3] * -ina.field_a - (-(var16_ref_int__[4] * -pb.field_k) - -uu.field_c * var16_ref_int__[5])) >> 14;
-            var27 = 8192 + var16_ref_int__[8] * -uu.field_c + (-pb.field_k * var16_ref_int__[7] + var16_ref_int__[6] * -ina.field_a) >> 14;
+            var25_int = 8192 + (var16_ref_int__[2] * -C2SChooseRewardPacket.field_c + -ina.field_a * var16_ref_int__[0]) + var16_ref_int__[1] * -pb.field_k >> 14;
+            var26 = 8192 + (var16_ref_int__[3] * -ina.field_a - (-(var16_ref_int__[4] * -pb.field_k) - -C2SChooseRewardPacket.field_c * var16_ref_int__[5])) >> 14;
+            var27 = 8192 + var16_ref_int__[8] * -C2SChooseRewardPacket.field_c + (-pb.field_k * var16_ref_int__[7] + var16_ref_int__[6] * -ina.field_a) >> 14;
             var28 = var25_int + ina.field_a;
             var29_int = pb.field_k + var26;
-            var30 = var27 + uu.field_c;
+            var30 = var27 + C2SChooseRewardPacket.field_c;
             var31_ref_int__ = new int[9];
             var32 = 0;
             while (true) {
@@ -4121,13 +4121,13 @@ final class gja extends ka {
                         (param6 & this.field_hb[var14_int]) != 0) {
                         this.field_Z[var14_int] = this.field_Z[var14_int] - ina.field_a;
                         this.field_r[var14_int] = this.field_r[var14_int] - pb.field_k;
-                        this.field_l[var14_int] = this.field_l[var14_int] - uu.field_c;
+                        this.field_l[var14_int] = this.field_l[var14_int] - C2SChooseRewardPacket.field_c;
                         this.field_Z[var14_int] = param2 * this.field_Z[var14_int] >> 7;
                         this.field_r[var14_int] = this.field_r[var14_int] * param3 >> 7;
                         this.field_l[var14_int] = this.field_l[var14_int] * param4 >> 7;
                         this.field_Z[var14_int] = this.field_Z[var14_int] + ina.field_a;
                         this.field_r[var14_int] = this.field_r[var14_int] + pb.field_k;
-                        this.field_l[var14_int] = this.field_l[var14_int] + uu.field_c;
+                        this.field_l[var14_int] = this.field_l[var14_int] + C2SChooseRewardPacket.field_c;
                       }
                       var13++;
                     }
@@ -4147,26 +4147,26 @@ final class gja extends ka {
             var14_int = param7[13] << 4;
             var15 = param7[14] << 4;
             if (vr.field_o) {
-              var16 = 8192 + ina.field_a * param7[0] + (pb.field_k * param7[3] + param7[6] * uu.field_c) >> 14;
-              var17 = 8192 + (param7[1] * ina.field_a - (-(pb.field_k * param7[4]) - uu.field_c * param7[7])) >> 14;
-              var18 = uu.field_c * param7[8] + (param7[2] * ina.field_a + param7[5] * pb.field_k + 8192) >> 14;
+              var16 = 8192 + ina.field_a * param7[0] + (pb.field_k * param7[3] + param7[6] * C2SChooseRewardPacket.field_c) >> 14;
+              var17 = 8192 + (param7[1] * ina.field_a - (-(pb.field_k * param7[4]) - C2SChooseRewardPacket.field_c * param7[7])) >> 14;
+              var18 = C2SChooseRewardPacket.field_c * param7[8] + (param7[2] * ina.field_a + param7[5] * pb.field_k + 8192) >> 14;
               var16 = var16 + var13;
               var17 = var17 + var14_int;
               var18 = var18 + var15;
               ina.field_a = var16;
               pb.field_k = var17;
               vr.field_o = false;
-              uu.field_c = var18;
+              C2SChooseRewardPacket.field_c = var18;
             }
             var16 = param2 << 15 >> 7;
             var17 = param3 << 15 >> 7;
             var18 = param4 << 15 >> 7;
             var19 = 8192 + var16 * -ina.field_a >> 14;
             var20 = 8192 + -pb.field_k * var17 >> 14;
-            var21 = 8192 + var18 * -uu.field_c >> 14;
+            var21 = 8192 + var18 * -C2SChooseRewardPacket.field_c >> 14;
             var22 = ina.field_a + var19;
             var23 = pb.field_k + var20;
-            var24 = uu.field_c + var21;
+            var24 = C2SChooseRewardPacket.field_c + var21;
             var25 = new int[9];
             var25[2] = var16 * param7[6] + 8192 >> 14;
             var25[0] = var16 * param7[0] + 8192 >> 14;
@@ -4875,7 +4875,7 @@ final class gja extends ka {
           this.field_Y = param1;
           if (param3 ||
             DiskCacheWorker.a((byte) 112, this.field_h, this.field_Y)) {
-            this.field_ib = new hg(uu.a(true, this.field_Y, this.field_h));
+            this.field_ib = new hg(C2SChooseRewardPacket.a(true, this.field_Y, this.field_h));
           }
           if (param3 ||
             foa.a(this.field_Y, this.field_h, 0)) {
@@ -4893,7 +4893,7 @@ final class gja extends ka {
             !ag.b(-1, this.field_Y, this.field_h)) {
             return;
           }
-          this.field_g = new gg(uu.a(this.field_Y, this.field_h, (byte) -111));
+          this.field_g = new gg(C2SChooseRewardPacket.a(this.field_Y, this.field_h, (byte) -111));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

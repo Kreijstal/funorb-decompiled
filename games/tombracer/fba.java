@@ -15,7 +15,7 @@ final class fba {
         var9.field_s = param3 ? true : false;
         var9.field_x = (int)(4096.0f * param1);
         var9.b((byte) 116);
-        uta.a(0, param5, param6);
+        ConsoleWindow.a(0, param5, param6);
         var9.fillRow(var10, -1, 0);
         return var10;
     }

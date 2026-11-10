@@ -12,7 +12,7 @@ final class Room implements SwitchableScope, Renderable, noa {
     static kia field_k;
     private int field_C;
     private int courseIndex;
-    private IntrusiveDeque field_d;
+    private IntrusiveDeque obstacles;
     private int height;
     static ToolkitSprite field_j;
     static ToolkitSprite[][] field_p;
@@ -312,13 +312,13 @@ final class Room implements SwitchableScope, Renderable, noa {
           }
           var3 = (Trap) (this.traps.next(115));
         }
-        db var5 = (db) (this.field_d.first(-80));
+        Obstacle var5 = (Obstacle) (this.obstacles.first(-80));
         while (var5 != null) {
           if (!var5.b(param1, 1569)) {
-            this.a(var5, -26755);
+            this.removeObstacle(var5, -26755);
             var5.m(0);
           }
-          var5 = (db) (this.field_d.next(108));
+          var5 = (Obstacle) (this.obstacles.next(108));
         }
         if (null != this.tileGrid) {
           this.tileGrid.a(param1, (byte) -33);
@@ -331,10 +331,10 @@ final class Room implements SwitchableScope, Renderable, noa {
           var6.A(23645);
           var6 = (Trap) (this.traps.next(125));
         }
-        db var7 = (db) (this.field_d.first(-80));
+        Obstacle var7 = (Obstacle) (this.obstacles.first(-80));
         while (var7 != null) {
           var7.c(true);
-          var7 = (db) (this.field_d.next(114));
+          var7 = (Obstacle) (this.obstacles.next(114));
         }
     }
 
@@ -389,10 +389,10 @@ final class Room implements SwitchableScope, Renderable, noa {
           var6.a(this, false);
           var6 = (Trap) (this.traps.next(115));
         }
-        db var7 = (db) (this.field_d.first(-80));
+        Obstacle var7 = (Obstacle) (this.obstacles.first(-80));
         while (var7 != null) {
           var7.a(-76, this);
-          var7 = (db) (this.field_d.next(122));
+          var7 = (Obstacle) (this.obstacles.next(122));
         }
         RoomComponent var8 = (RoomComponent) (this.components.first(-80));
         while (var8 != null) {
@@ -465,7 +465,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         PlayerSimulation var4;
         this.field_H = null;
         this.random = null;
-        this.field_d.clear(8);
+        this.obstacles.clear(8);
         if (param1 <= 95) {
           Room.l(-107);
         }
@@ -748,7 +748,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         int var3;
         int var4;
         Trap var5;
-        db var6;
+        Obstacle var6;
         RoomComponent var7;
         var4 = TombRacer.field_G ? 1 : 0;
         if (this.scene == null) {
@@ -775,10 +775,10 @@ final class Room implements SwitchableScope, Renderable, noa {
           var5.a(122, this.scene);
           var5 = (Trap) (this.traps.next(107));
         }
-        var6 = (db) (this.field_d.first(-80));
+        var6 = (Obstacle) (this.obstacles.first(-80));
         while (var6 != null) {
           var6.a((byte) 48, this.scene);
-          var6 = (db) (this.field_d.next(108));
+          var6 = (Obstacle) (this.obstacles.next(108));
         }
         var7 = (RoomComponent) (this.components.first(-80));
         while (var7 != null) {
@@ -850,7 +850,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         return this.field_r;
     }
 
-    private final void a(db param0, int param1) {
+    private final void removeObstacle(Obstacle param0, int param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -1044,7 +1044,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         int var9;
         Trap var10;
         RoomComponent var11;
-        db var12;
+        Obstacle var12;
         BitPacketBuffer var13;
         int var5Lifetime1;
         int var6Lifetime1;
@@ -1084,8 +1084,8 @@ final class Room implements SwitchableScope, Renderable, noa {
         }
         var4 = var3.readBits((byte) 44, param0);
         for (var5 = 0; var4 > var5; var5++) {
-          var12 = new db(this, var3);
-          this.a(var12, true);
+          var12 = new Obstacle(this, var3);
+          this.addObstacle(var12, true);
         }
         var5Lifetime1 = var3.readBits((byte) 44, 8);
         for (var6 = 0; var6 < var5Lifetime1; var6++) {
@@ -1272,14 +1272,14 @@ final class Room implements SwitchableScope, Renderable, noa {
         }
     }
 
-    private final void a(db param0, boolean param1) {
+    private final void addObstacle(Obstacle param0, boolean param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          this.field_d.addLast((byte) -74, param0);
+          this.obstacles.addLast((byte) -74, param0);
           this.collisionGrid.insert(param0, 7073);
           if (null != this.scene) {
             param0.a((byte) 85, this.scene);
@@ -1494,7 +1494,7 @@ final class Room implements SwitchableScope, Renderable, noa {
     }
 
     final void d(int param0, int param1) {
-        db var4;
+        Obstacle var4;
         Trap var5_ref_fsa;
         int var5;
         int var6;
@@ -1515,10 +1515,10 @@ final class Room implements SwitchableScope, Renderable, noa {
         }
         this.field_a = 6029;
         this.field_a = var8.hashState(this.field_a, -40);
-        var4 = (db) (this.field_d.first(param1 - 80));
+        var4 = (Obstacle) (this.obstacles.first(param1 - 80));
         while (var4 != null) {
           var4.s(param1 ^ 0);
-          var4 = (db) (this.field_d.next(120));
+          var4 = (Obstacle) (this.obstacles.next(120));
         }
         var9 = new IntrusiveDequeCursor(this.traps);
         var5_ref_fsa = (Trap) (var9.first(true));
@@ -1610,10 +1610,10 @@ final class Room implements SwitchableScope, Renderable, noa {
           var7.a(var3, true);
           var7 = (RoomComponent) (this.components.next(param1 ^ -104));
         }
-        db var8 = (db) (this.field_d.first(-80));
+        Obstacle var8 = (Obstacle) (this.obstacles.first(-80));
         while (var8 != null) {
           var8.a(param1 - 105, var3);
-          var8 = (db) (this.field_d.next(108));
+          var8 = (Obstacle) (this.obstacles.next(108));
         }
     }
 
@@ -1701,7 +1701,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
-        db var5 = null;
+        Obstacle var5 = null;
         Trap var6 = null;
         RoomComponent var7 = null;
         var4 = TombRacer.field_G ? 1 : 0;
@@ -1717,11 +1717,11 @@ final class Room implements SwitchableScope, Renderable, noa {
           param0.writeBits((byte) -125, this.height / 2097152, 6);
           param0.writeBits((byte) -126, this.entranceX >> 16, 12);
           param0.writeBits((byte) -128, this.entranceY >> 16, 12);
-          param0.writeBits((byte) -125, this.field_d.size((byte) -16), 8);
-          var5 = (db) (this.field_d.first(-80));
+          param0.writeBits((byte) -125, this.obstacles.size((byte) -16), 8);
+          var5 = (Obstacle) (this.obstacles.first(-80));
           while (var5 != null) {
             var5.a(true, param0);
-            var5 = (db) (this.field_d.next(113));
+            var5 = (Obstacle) (this.obstacles.next(113));
           }
           param0.writeBits((byte) 119, this.traps.size((byte) -16), 8);
           var6 = (Trap) (this.traps.first(-80));
@@ -2027,7 +2027,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         this.formatVersion = 26;
-        this.field_d = new IntrusiveDeque();
+        this.obstacles = new IntrusiveDeque();
         this.traps = new IntrusiveDeque();
         this.components = new IntrusiveDeque();
         this.recentDeaths = new IntrusiveDeque();

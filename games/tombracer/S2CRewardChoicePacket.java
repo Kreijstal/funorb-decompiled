@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nr implements GamePacket {
+final class S2CRewardChoicePacket implements GamePacket {
     private int field_b;
     static mla field_d;
     private int field_c;
@@ -46,7 +46,7 @@ final class nr implements GamePacket {
     public static void releaseStatics(boolean param0) {
         field_d = null;
         if (param0) {
-          nr.releaseStatics(true);
+          S2CRewardChoicePacket.releaseStatics(true);
           field_a = null;
           return;
         }
@@ -58,7 +58,7 @@ final class nr implements GamePacket {
           param1.beginBitWrite(8);
           param1.writeBits((byte) 89, this.field_b, 3);
           if (param0 != 200) {
-            nr.releaseStatics(false);
+            S2CRewardChoicePacket.releaseStatics(false);
           }
           if (this.field_c == -1) {
             param1.writeBits((byte) -127, 1, 1);
@@ -74,9 +74,9 @@ final class nr implements GamePacket {
 
     final void apply(byte param0, MatchScreen param1, MatchProtocol param2) {
         try {
-          param1.a((byte) 113, this.field_b, this.field_c);
+          param1.onRewardChoice((byte) 113, this.field_b, this.field_c);
           if (param0 != -78) {
-            nr.releaseStatics(false);
+            S2CRewardChoicePacket.releaseStatics(false);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "nr.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

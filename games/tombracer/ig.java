@@ -6,7 +6,7 @@ final class ig {
         pha var3 = null;
         int var2 = TombRacer.field_G ? 1 : 0;
         qa.field_o = false;
-        uu.field_a = null;
+        C2SChooseRewardPacket.field_a = null;
         WaveformOperator.field_n = null;
         if (param0 > -94) {
           return;

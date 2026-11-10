@@ -68,7 +68,7 @@ final class PlayerContextMenu {
         int var4;
         ht var5;
         var4 = TombRacer.field_G ? 1 : 0;
-        if (null != uu.field_a) {
+        if (null != C2SChooseRewardPacket.field_a) {
           if (param0 <= -10) {
             return;
           }
@@ -382,7 +382,7 @@ final class PlayerContextMenu {
             return;
           }
           if (this.field_g != SimpleConditionBehaviour.field_r &&
-            null != uu.field_a) {
+            null != C2SChooseRewardPacket.field_a) {
             if (!mka.b(8192)) {
               return;
             }
@@ -390,18 +390,18 @@ final class PlayerContextMenu {
             var4 = vba.a((byte) -40, this.field_g);
             var5 = this.getDisplayName(-13);
             if (var4 != null) {
-              if (!uu.field_a.field_ec) {
+              if (!C2SChooseRewardPacket.field_a.field_ec) {
                 this.field_f.addItem((byte) -74, 1, gl.$cfr$intArgs$a$53ce4ab4c593(108, lf.field_a, new String[]{var5}));
                 return;
               }
-              if (uu.field_a.field_Kb >= 0) {
+              if (C2SChooseRewardPacket.field_a.field_Kb >= 0) {
                 this.field_f.addItem((byte) -74, 1, gl.$cfr$intArgs$a$53ce4ab4c593(108, lf.field_a, new String[]{var5}));
                 return;
               }
             } else {
               if (var14 != null &&
-                uu.field_a.field_Yb &&
-                uu.field_a.field_Jb > uu.field_a.field_Mb) {
+                C2SChooseRewardPacket.field_a.field_Yb &&
+                C2SChooseRewardPacket.field_a.field_Jb > C2SChooseRewardPacket.field_a.field_Mb) {
                 if (var14.field_Hb) {
                   this.field_f.addItem((byte) -79, 1, gl.$cfr$intArgs$a$53ce4ab4c593(126, oea.field_g, new String[]{var5}));
                   return;
@@ -425,7 +425,7 @@ final class PlayerContextMenu {
         if (this.field_g == SimpleConditionBehaviour.field_r) {
           return;
         }
-        if (null == uu.field_a) {
+        if (null == C2SChooseRewardPacket.field_a) {
           return;
         }
         if (!mka.b(8192)) {
@@ -435,8 +435,8 @@ final class PlayerContextMenu {
         var4Lifetime1 = vba.a((byte) -40, this.field_g);
         var5 = this.getDisplayName(-13);
         if (var4Lifetime1 != null) {
-          if (uu.field_a.field_ec &&
-            uu.field_a.field_Kb < 0) {
+          if (C2SChooseRewardPacket.field_a.field_ec &&
+            C2SChooseRewardPacket.field_a.field_Kb < 0) {
             return;
           }
           this.field_f.addItem((byte) -74, 1, gl.$cfr$intArgs$a$53ce4ab4c593(108, lf.field_a, new String[]{var5}));
@@ -445,8 +445,8 @@ final class PlayerContextMenu {
         if (var13 == null) {
           return;
         }
-        if (uu.field_a.field_Yb &&
-          uu.field_a.field_Jb > uu.field_a.field_Mb) {
+        if (C2SChooseRewardPacket.field_a.field_Yb &&
+          C2SChooseRewardPacket.field_a.field_Jb > C2SChooseRewardPacket.field_a.field_Mb) {
           if (var13.field_Hb) {
             this.field_f.addItem((byte) -79, 1, gl.$cfr$intArgs$a$53ce4ab4c593(126, oea.field_g, new String[]{var5}));
             return;

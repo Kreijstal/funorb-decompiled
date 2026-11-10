@@ -86,7 +86,7 @@ final class cla extends DualLinkNode {
         SoftwareRasterizer.clear();
         fp.a(122);
         if (!(ld.field_e < 2)) {
-          dia.field_o = new gq(jk.a((byte) 122), o.field_d, dsa.field_c);
+          dia.field_o = new FunOrbConsole(jk.a((byte) 122), o.field_d, dsa.field_c);
           aca.a(dia.field_o, 19711);
           aca.a(oq.a((byte) 124), 19711);
         }

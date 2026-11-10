@@ -65,7 +65,7 @@ final class ConsoleToken extends IntrusiveNode {
               var9 = stackIn_17_0;
               var2 = var2 + aqa.field_a;
               if (var9 != null) {
-                var9.a((byte) 57, (vra.field_a << 1) + var7, var2, var8 - vra.field_a, FurnitureModel.field_n + (vf.field_d << 1));
+                var9.a((byte) 57, (S2CCharacterChoicePacket.field_a << 1) + var7, var2, var8 - S2CCharacterChoicePacket.field_a, FurnitureModel.field_n + (vf.field_d << 1));
               }
               var2 = var2 + vf.field_d;
             }
@@ -140,7 +140,7 @@ final class ConsoleToken extends IntrusiveNode {
         }
     }
 
-    final ConsoleValue a(int param0, ela[] param1) throws rv, jj {
+    final ConsoleValue a(int param0, ConsoleMethod[] param1) throws rv, jj {
         int incrementValue$0 = 0;
         ConsoleValue stackIn_9_0 = null;
         ConsoleValue stackIn_13_0 = null;

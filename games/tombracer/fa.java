@@ -91,14 +91,14 @@ final class fa {
             if (var6 != 2 ||
               var10 != 0) {
               if (var6 == 0) {
-                if (uu.field_a == null &&
+                if (C2SChooseRewardPacket.field_a == null &&
                   kq.field_c) {
                   var4 = "[" + cla.field_o + "] ";
                 }
-                if (null != uu.field_a) {
+                if (null != C2SChooseRewardPacket.field_a) {
                   if (!kp.field_c ||
                     tla.field_f == null) {
-                    var4 = "[" + gl.$cfr$intArgs$a$53ce4ab4c593(110, jea.field_nb, new String[]{uu.field_a.field_tb}) + "] ";
+                    var4 = "[" + gl.$cfr$intArgs$a$53ce4ab4c593(110, jea.field_nb, new String[]{C2SChooseRewardPacket.field_a.field_tb}) + "] ";
                     if (var10 != 0) {
                       var4 = "[" + tla.field_f + "] ";
                     }

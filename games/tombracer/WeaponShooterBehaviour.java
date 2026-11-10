@@ -22,7 +22,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
         }
     }
 
-    final static ConsoleToken a(int param0, in param1) {
+    final static ConsoleToken a(int param0, StringCursor param1) {
         int fieldTemp$2 = 0;
         StringBuilder discarded$3 = null;
         int var2_int = 0;
@@ -42,12 +42,12 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
           if (param0 != -45) {
             field_r = (kia) null;
           }
-          fieldTemp$2 = param1.field_b - 1;
-          param1.field_b = param1.field_b - 1;
+          fieldTemp$2 = param1.position - 1;
+          param1.position = param1.position - 1;
           var2_int = fieldTemp$2;
           var3 = new StringBuilder();
-          while (!param1.a(0)) {
-            var4 = param1.b(param0 + 21143);
+          while (!param1.isAtEnd(0)) {
+            var4 = param1.nextChar(param0 + 21143);
             if (!Character.isWhitespace((char) var4) &&
               var4 != 44 &&
               var4 != 40 &&
@@ -55,7 +55,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
               discarded$3 = var3.append((char) var4);
               continue;
             }
-            param1.field_b = param1.field_b - 1;
+            param1.position = param1.position - 1;
             break;
           }
           var5 = var3.toString();
@@ -318,8 +318,8 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
           param0 = CurveOperator.mixHash((byte) 89, param0, this.field_u.getCooldown(524288));
           return param0;
         }
-        in var4 = (in) null;
-        WeaponShooterBehaviour.a(-27, (in) null);
+        StringCursor var4 = (StringCursor) null;
+        WeaponShooterBehaviour.a(-27, (StringCursor) null);
         param0 = upa.a(this.field_t, param0, (byte) -119);
         param0 = CurveOperator.mixHash((byte) 89, param0, this.field_u.getCooldown(524288));
         return param0;

@@ -113,7 +113,7 @@ final class IntrusiveDeque {
     }
 
     final static mu a(boolean param0, int param1, int param2) {
-        iv stackIn_7_0;
+        ScrollPane stackIn_7_0;
         int stackIn_7_1;
         boolean stackIn_7_2;
         int stackIn_7_3;
@@ -160,7 +160,7 @@ final class IntrusiveDeque {
           stackIn_7_5 = di.field_a + 2;
           stackIn_8_6 = (dn.field_b.field_vb == lu.field_b);
           boolean decompiledFrameRemainder1 = true;
-          var3_int = ((iv) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_7_4, stackIn_7_5, stackIn_8_6) ? 1 : 0;
+          var3_int = ((ScrollPane) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_7_4, stackIn_7_5, stackIn_8_6) ? 1 : 0;
           var4 = dn.field_b.field_tb.field_J;
           var5 = null;
           if (UiWidget.field_g != 2) {
@@ -189,11 +189,11 @@ final class IntrusiveDeque {
                 var8 = 0;
                 if (var19 == 0) {
                   if (null == var7.field_J) {
-                    var7.field_xb = new jea(0L, lta.field_a);
+                    var7.field_xb = new jea(0L, S2CStartRoundPacket.field_a);
                     var7.b(-128, var7.field_xb);
                     var7.field_Ab = new jea(0L, iea.field_g);
                     var7.b(-123, var7.field_Ab);
-                    var7.field_zb = new jea(0L, lta.field_a);
+                    var7.field_zb = new jea(0L, S2CStartRoundPacket.field_a);
                     var7.b(-128, var7.field_zb);
                     var7.field_Ab.field_z = 2;
                     var8 = 1;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jf extends ela {
+final class jf extends ConsoleMethod {
     static String field_o;
     static dk[] field_p;
     static String field_s;

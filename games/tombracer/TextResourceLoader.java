@@ -53,7 +53,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 116, "error_js5io");
                 if (var2 != null) {
-                  uta.field_e = jaa.decodeText((byte) 115, var2);
+                  ConsoleWindow.field_e = jaa.decodeText((byte) 115, var2);
                 }
                 var2 = dn.a((byte) 108, "error_js5connect_full");
                 if (var2 != null) {
@@ -249,7 +249,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 124, "mu_lobby_location");
                 if (null != var2) {
-                  ap.field_c = jaa.decodeText((byte) 108, var2);
+                  C2SChooseCharacterPacket.field_c = jaa.decodeText((byte) 108, var2);
                 }
                 var2 = dn.a((byte) -74, "mu_gamelist_all_games");
                 if (var2 != null) {
@@ -1667,7 +1667,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -35, "unable_to_add_friend");
                 if (null != var2) {
-                  db.field_j = jaa.decodeText((byte) 54, var2);
+                  Obstacle.field_j = jaa.decodeText((byte) 54, var2);
                 }
                 var2 = dn.a((byte) -127, "unable_to_add_ignore");
                 if (var2 != null) {
@@ -1709,7 +1709,7 @@ final class TextResourceLoader extends eta {
             void runChunk2() throws java.lang.RuntimeException {
                 var2 = dn.a((byte) -11, "removeignorefirst");
                 if (var2 != null) {
-                  vra.field_c = jaa.decodeText((byte) 86, var2);
+                  S2CCharacterChoicePacket.field_c = jaa.decodeText((byte) 86, var2);
                 }
                 var2 = dn.a((byte) -18, "removefriendfirst");
                 if (null != var2) {

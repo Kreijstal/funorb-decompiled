@@ -112,7 +112,7 @@ final class kd extends FocusableWidget {
           return true;
         }
         stackIn_5_0 = ((param1 & 393216) != 0);
-        stackIn_10_0 = !(!stackIn_5_0 | TileGridCell.b(param2, 94, param1)) || (uu.a(param1, param2, (byte) -96));
+        stackIn_10_0 = !(!stackIn_5_0 | TileGridCell.b(param2, 94, param1)) || (C2SChooseRewardPacket.a(param1, param2, (byte) -96));
         return stackIn_10_0;
     }
 

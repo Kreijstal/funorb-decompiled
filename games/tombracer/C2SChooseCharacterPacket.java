@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ap implements GamePacket {
+final class C2SChooseCharacterPacket implements GamePacket {
     static String field_c;
     private int field_b;
     static int field_d;
     static jea field_a;
 
-    final void a(int param0, byte param1) {
+    final void setCharacter(int param0, byte param1) {
         this.field_b = param0;
         if (param1 != -119) {
-          this.a(-18, (byte) -105);
+          this.setCharacter(-18, (byte) -105);
         }
     }
 

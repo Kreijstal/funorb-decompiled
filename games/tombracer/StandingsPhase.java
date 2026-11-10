@@ -86,7 +86,7 @@ final class StandingsPhase extends MatchPhase {
           if (!this.screen.field_D &&
             !TextWidgetPainter.a(43)) {
             this.field_p[0].field_e = aua.field_d.toUpperCase();
-            FacePlayerLocomotor.field_p = uta.a(3, this.screen.m(-1), 0, 10, 1);
+            FacePlayerLocomotor.field_p = ConsoleWindow.a(3, this.screen.m(-1), 0, 10, 1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

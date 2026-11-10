@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ela extends DualLinkNode {
+abstract class ConsoleMethod extends DualLinkNode {
     String field_l;
     String field_k;
     Class[] field_n;
@@ -85,7 +85,7 @@ abstract class ela extends DualLinkNode {
 
     abstract ConsoleValue a(ConsoleValue[] param0, int param1);
 
-    ela(String param0, Class[] param1, String param2) {
+    ConsoleMethod(String param0, Class[] param1, String param2) {
         StringBuilder var7 = null;
         StringBuilder var8 = null;
         int var5 = 0;

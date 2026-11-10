@@ -282,7 +282,7 @@ final class VerticalScrollbar extends jea {
             stackIn_18_0 = 260;
             return stackIn_18_0;
           }
-          if (param1 != gq.field_w) {
+          if (param1 != FunOrbConsole.field_w) {
             throw new IllegalArgumentException();
           }
           stackIn_16_0 = 34023;

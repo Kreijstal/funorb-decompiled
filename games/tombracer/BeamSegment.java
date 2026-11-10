@@ -77,7 +77,7 @@ final class BeamSegment {
         }
     }
 
-    final static ConsoleValue a(ela[] param0, int param1, String param2, ConsoleValue[] param3) throws rv {
+    final static ConsoleValue a(ConsoleMethod[] param0, int param1, String param2, ConsoleValue[] param3) throws rv {
         int var6 = 0;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;

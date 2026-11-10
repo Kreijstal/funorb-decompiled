@@ -47,7 +47,7 @@ final class rf {
             return stackIn_3_0;
           }
           if (UiWidget.field_g != 2) {
-            stackIn_7_0 = db.field_j;
+            stackIn_7_0 = Obstacle.field_j;
             return stackIn_7_0;
           }
           if (MiscItemBehaviour.a(param1, 0)) {
@@ -69,7 +69,7 @@ final class rf {
             return stackIn_24_0;
           }
           if (MouseWheelInput.a(2180, param1)) {
-            stackIn_28_0 = gl.$cfr$intArgs$a$53ce4ab4c593(119, vra.field_c, new String[]{param1});
+            stackIn_28_0 = gl.$cfr$intArgs$a$53ce4ab4c593(119, S2CCharacterChoicePacket.field_c, new String[]{param1});
             return stackIn_28_0;
           }
           var5 = ql.field_k;

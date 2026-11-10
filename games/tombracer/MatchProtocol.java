@@ -14,15 +14,15 @@ final class MatchProtocol {
     private int[] field_b;
     private vi field_c;
 
-    private final void a(byte param0, BitPacketBuffer param1, MatchScreen param2) {
-        lta var4 = null;
+    private final void handleStartRoundPacket(byte param0, BitPacketBuffer param1, MatchScreen param2) {
+        S2CStartRoundPacket var4 = null;
         try {
           if (param0 != -73) {
-            this.d(28, -128);
+            this.sendCharacterChoice(28, -128);
           }
-          var4 = new lta();
+          var4 = new S2CStartRoundPacket();
           this.decodePacket(var4, 112, param1);
-          var4.a(param2, true, this);
+          var4.apply(param2, true, this);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "v.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -43,9 +43,9 @@ final class MatchProtocol {
         }
     }
 
-    final void d(int param0, int param1) {
-        ap var3 = new ap();
-        var3.a(param0, (byte) -119);
+    final void sendCharacterChoice(int param0, int param1) {
+        C2SChooseCharacterPacket var3 = new C2SChooseCharacterPacket();
+        var3.setCharacter(param0, (byte) -119);
         hw.a((byte) -111, 1, param1, var3);
     }
 
@@ -158,9 +158,9 @@ final class MatchProtocol {
         }
     }
 
-    final void c(int param0, int param1) {
-        uu var3 = new uu();
-        var3.a(param1 + 44, param0);
+    final void sendRewardChoice(int param0, int param1) {
+        C2SChooseRewardPacket var3 = new C2SChooseRewardPacket();
+        var3.setChoice(param1 + 44, param0);
         hw.a((byte) -111, param1, 72, var3);
     }
 
@@ -258,10 +258,10 @@ final class MatchProtocol {
         }
     }
 
-    private final void a(int param0, MatchScreen param1, BitPacketBuffer param2) {
-        nr var4 = null;
+    private final void handleRewardChoicePacket(int param0, MatchScreen param1, BitPacketBuffer param2) {
+        S2CRewardChoicePacket var4 = null;
         try {
-          var4 = new nr();
+          var4 = new S2CRewardChoicePacket();
           if (param0 != 16) {
             this.a(24, 78, 58, -102, 85);
           }
@@ -372,11 +372,11 @@ final class MatchProtocol {
             return true;
           }
           if (82 == param3) {
-            this.a(16, param1, param2);
+            this.handleRewardChoicePacket(16, param1, param2);
             return true;
           }
           if (83 == param3) {
-            this.a(param1, param2, -1);
+            this.handleCharacterChoicePacket(param1, param2, -1);
             return true;
           }
           if (90 == param3) {
@@ -384,7 +384,7 @@ final class MatchProtocol {
             return true;
           }
           if (param3 == 92) {
-            this.a((byte) -73, param2, param1);
+            this.handleStartRoundPacket((byte) -73, param2, param1);
             return true;
           }
           if (param3 == 91) {
@@ -590,8 +590,8 @@ final class MatchProtocol {
         ql.field_k.writeCipheredOpcode(81, -2988);
     }
 
-    private final void a(MatchScreen param0, BitPacketBuffer param1, int param2) {
-        vra var4 = null;
+    private final void handleCharacterChoicePacket(MatchScreen param0, BitPacketBuffer param1, int param2) {
+        S2CCharacterChoicePacket var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -600,7 +600,7 @@ final class MatchProtocol {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
         try {
-          var4 = new vra();
+          var4 = new S2CCharacterChoicePacket();
           this.decodePacket(var4, param2 ^ -115, param1);
           var4.apply(param0, (byte) -123, this);
           if (param2 != -1) {

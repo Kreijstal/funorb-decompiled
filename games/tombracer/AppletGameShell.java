@@ -252,7 +252,7 @@ abstract class AppletGameShell extends GameApplet {
                 au.a(3);
               } else {
                 if (var2 == 4) {
-                  iv.f(0);
+                  ScrollPane.f(0);
                 } else {
                   if (var2 != 5) {
                     if (var2 == 6) {
@@ -636,7 +636,7 @@ abstract class AppletGameShell extends GameApplet {
                     epa.a(256, (byte) -84, kka.field_r);
                   }
                 } else {
-                  epa.a(256, (byte) -84, uta.field_e);
+                  epa.a(256, (byte) -84, ConsoleWindow.field_e);
                 }
               } else {
                 epa.a(256, (byte) -84, oe.field_l);

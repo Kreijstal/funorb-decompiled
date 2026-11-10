@@ -387,7 +387,7 @@ final class ModelFactory implements ModelCodec {
         try {
           boolean decompiledFrameRemainder0 = true;
           var4_int = 0;
-          if (!(param1 instanceof db)) {
+          if (!(param1 instanceof Obstacle)) {
             if (param1 instanceof Trap) {
               if (param0 instanceof SnakePitBehaviour) {
                 var4_int = 13;

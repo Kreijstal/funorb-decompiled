@@ -815,7 +815,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("instructionsPage1Title1", (byte) 117);
                 if (var2 != null) {
-                  ela.field_m = jaa.decodeText((byte) 39, var2);
+                  ConsoleMethod.field_m = jaa.decodeText((byte) 39, var2);
                 }
                 var2 = mt.readTextEntry("instructionsPage1Title2", (byte) 116);
                 if (var2 != null) {
@@ -1349,7 +1349,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("penalty_death", (byte) 125);
                 if (null != var2) {
-                  uta.field_n = jaa.decodeText((byte) 59, var2);
+                  ConsoleWindow.field_n = jaa.decodeText((byte) 59, var2);
                 }
                 var2 = mt.readTextEntry("penalty_reset", (byte) 117);
                 if (null != var2) {

@@ -153,7 +153,7 @@ final class CharacterSelectPhase extends MatchPhase {
           return;
         }
         if (null != this.protocol) {
-          this.protocol.d(param1, 73);
+          this.protocol.sendCharacterChoice(param1, 73);
         } else {
           this.a(this.screen.field_x, 0, param1);
         }

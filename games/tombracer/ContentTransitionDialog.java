@@ -57,7 +57,7 @@ abstract class ContentTransitionDialog extends ofa {
           super.c(param0);
           return;
         }
-        if (this.field_M != nr.field_a) {
+        if (this.field_M != S2CRewardChoicePacket.field_a) {
           this.c(-11560, this.field_T.field_p + (this.field_S + 12), 12 + this.field_T.field_m);
           this.a(false, this.field_T);
         } else {
@@ -133,7 +133,7 @@ abstract class ContentTransitionDialog extends ofa {
             }
             return super.a(127);
           }
-          if (nr.field_a != this.field_M) {
+          if (S2CRewardChoicePacket.field_a != this.field_M) {
             if (param0 > 126) {
               return super.a(127);
             }
@@ -179,7 +179,7 @@ abstract class ContentTransitionDialog extends ofa {
         if (this.field_M == StripesOperator.field_p) {
           return;
         }
-        this.field_M = nr.field_a;
+        this.field_M = S2CRewardChoicePacket.field_a;
         if (param0 <= -20) {
           this.field_R = 0;
           this.a(false, this.field_T);

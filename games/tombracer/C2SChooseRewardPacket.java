@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uu implements GamePacket {
+final class C2SChooseRewardPacket implements GamePacket {
     static ht field_a;
     static int field_c;
     private int field_b;
@@ -44,7 +44,7 @@ final class uu implements GamePacket {
           var12 = var13;
           var8 = var12;
           if (param1 != -81) {
-            uu.releaseStatics(25);
+            C2SChooseRewardPacket.releaseStatics(25);
           }
           for (var9 = 0; var9 < 4; var9++) {
             var8[var9] = pb.field_n.nextInt();
@@ -119,7 +119,7 @@ final class uu implements GamePacket {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void setChoice(int param0, int param1) {
         if (param0 <= 2) {
           return;
         }

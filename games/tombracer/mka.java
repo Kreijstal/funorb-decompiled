@@ -64,10 +64,10 @@ final class mka {
 
     final static boolean b(int param0) {
         if (param0 == 8192) {
-          return uu.field_a.field_Ab == SimpleConditionBehaviour.field_r ? true : false;
+          return C2SChooseRewardPacket.field_a.field_Ab == SimpleConditionBehaviour.field_r ? true : false;
         }
         mka.releaseStatics((byte) -112);
-        return uu.field_a.field_Ab == SimpleConditionBehaviour.field_r ? true : false;
+        return C2SChooseRewardPacket.field_a.field_Ab == SimpleConditionBehaviour.field_r ? true : false;
     }
 
     final static void a(int param0, int param1) {

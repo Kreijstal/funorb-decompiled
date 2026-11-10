@@ -279,7 +279,7 @@ public final class TombRacer extends rfa implements ls {
         GameScreen.releaseStatics((byte) -104);
         ala.releaseStatics(0);
         MatchScreen.b(false);
-        gq.f(39);
+        FunOrbConsole.f(39);
         ej.a(-1);
         uaa.releaseStatics(5193);
         iaa.releaseStatics(-124);
@@ -377,7 +377,7 @@ public final class TombRacer extends rfa implements ls {
         ka.a(-11);
         ob.releaseStatics(false);
         vj.a(param0 + 3556);
-        uta.releaseStatics(0);
+        ConsoleWindow.releaseStatics(0);
         gka.releaseStatics((byte) -124);
         lh.a((byte) 117);
         sw.i(-53);
@@ -453,7 +453,7 @@ public final class TombRacer extends rfa implements ls {
         fq.releaseStatics(0);
         ParticleEffects.releaseStatics(-1);
         Trap.K(8424);
-        db.releaseStatics((byte) -117);
+        Obstacle.releaseStatics((byte) -117);
         Corpse.releaseStatics((byte) -113);
         BeamSegment.releaseStatics(true);
         Effect.releaseStatics((byte) 2);
@@ -469,14 +469,14 @@ public final class TombRacer extends rfa implements ls {
         S2CNewRoomPacket.releaseStatics((byte) -116);
         S2CPlayerSyncPacket.releaseStatics((byte) 48);
         S2CRoundResultPacket.releaseStatics(10);
-        nr.releaseStatics(false);
-        vra.releaseStatics(param0 ^ -3670);
+        S2CRewardChoicePacket.releaseStatics(false);
+        S2CCharacterChoicePacket.releaseStatics(param0 ^ -3670);
         ua.releaseStatics(-105);
-        lta.releaseStatics(-87);
+        S2CStartRoundPacket.releaseStatics(-87);
         lf.releaseStatics((byte) 117);
         wga.releaseStatics(true);
-        uu.releaseStatics(0);
-        ap.releaseStatics((byte) 40);
+        C2SChooseRewardPacket.releaseStatics(0);
+        C2SChooseCharacterPacket.releaseStatics((byte) 40);
         nra.releaseStatics((byte) 95);
         cm.releaseStatics(true);
         qpa.releaseStatics(false);
@@ -900,9 +900,9 @@ public final class TombRacer extends rfa implements ls {
         cga.a(true);
         ConsoleToken.releaseStatics((byte) 101);
         ConsoleValue.releaseStatics(17049);
-        ela.releaseStatics(126);
+        ConsoleMethod.releaseStatics(126);
         rv.releaseStatics(-31950);
-        in.releaseStatics(true);
+        StringCursor.releaseStatics(true);
         cr.releaseStatics((byte) -128);
         us.releaseStatics(-1);
         fta.releaseStatics(0);

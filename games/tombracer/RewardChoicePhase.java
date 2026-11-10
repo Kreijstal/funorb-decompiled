@@ -360,7 +360,7 @@ final class RewardChoicePhase extends MatchPhase {
           return;
         }
         if (null != this.protocol) {
-          this.protocol.c(var2, 1);
+          this.protocol.sendRewardChoice(var2, 1);
         } else {
           this.field_o.a(var2, (byte) 102);
         }

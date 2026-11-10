@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class uta implements ShellListener {
+abstract class ConsoleWindow implements ShellListener {
     private static String[] field_l;
     private static String[] field_f;
     BitmapFont field_m;
     static String field_n;
     String field_t;
     private int field_k;
-    iv field_a;
+    ScrollPane field_a;
     jea field_p;
     sw field_o;
     static ToolkitSprite field_d;
@@ -57,7 +57,7 @@ abstract class uta implements ShellListener {
         }
     }
 
-    private final void a(int param0, String param1, int param2) {
+    private final void printColouredText(int param0, String param1, int param2) {
         int var7 = 0;
         int var4_int = 0;
         String[] var5 = null;
@@ -231,7 +231,7 @@ abstract class uta implements ShellListener {
         int var2Lifetime1;
         int var3Lifetime1;
         if (param0 != 1) {
-          uta.releaseStatics(24);
+          ConsoleWindow.releaseStatics(24);
         }
         if (!(this.field_i.field_t + this.field_i.field_T <= 0)) {
           SoftwareRasterizer.fillRectangleAlpha(this.field_i.field_q, this.field_i.field_A, this.field_a.field_qb, this.field_i.field_t, 5592405, 230);
@@ -393,7 +393,7 @@ abstract class uta implements ShellListener {
           if (var7.length() <= 0) {
             return true;
           }
-          this.a(24219, this.field_t + var7, 5635925);
+          this.printColouredText(24219, this.field_t + var7, 5635925);
           var5 = (jea) (this.field_a.field_tb.field_J.last(3));
           if (!this.a(var7, (byte) -112)) {
             var5.field_ib = 16733525;
@@ -405,9 +405,9 @@ abstract class uta implements ShellListener {
         return true;
     }
 
-    final void a(int param0, String param1) {
+    final void printLine(int param0, String param1) {
         try {
-          this.a(24219, param1, 13421772);
+          this.printColouredText(24219, param1, 13421772);
           int var3_int = 22 / ((param0 - 82) / 40);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "uta.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -419,7 +419,7 @@ abstract class uta implements ShellListener {
           if (param0 > -15) {
             field_f = (String[]) null;
           }
-          this.a(126, param1 != null ? param1.toString() : "null");
+          this.printLine(126, param1 != null ? param1.toString() : "null");
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "uta.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -538,7 +538,7 @@ abstract class uta implements ShellListener {
         }
     }
 
-    uta(BitmapFont param0, PlatformTaskDispatcher param1) {
+    ConsoleWindow(BitmapFont param0, PlatformTaskDispatcher param1) {
         int var3_int = 0;
         jea var4 = null;
         jea var5 = null;
@@ -576,7 +576,7 @@ abstract class uta implements ShellListener {
           var13 = new VerticalScrollbar(0L, var8, var8, var9, var10);
           var14 = new jea();
           var14.field_J = new IntrusiveDeque();
-          this.field_a = new iv(0L, var14, var6, var13);
+          this.field_a = new ScrollPane(0L, var14, var6, var13);
           this.field_a.field_tb.field_J = new IntrusiveDeque();
           this.field_a.a(this.field_i.field_G - 10, 0, (byte) 127, 5, 15, -var3_int + 185, 5);
           this.field_i.b(-128, this.field_a);

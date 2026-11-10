@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eea extends ela {
+final class eea extends ConsoleMethod {
     final static jha a(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;

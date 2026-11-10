@@ -63,13 +63,13 @@ final class so extends TextInputWidget implements mk {
               }
               var1 = (vb) (DivisionMazeGenerator.field_e.next(110));
             }
-            if (db.field_f != null) {
-              var1Lifetime1 = (vb) (db.field_f.first(param0 ^ 16378));
+            if (Obstacle.field_f != null) {
+              var1Lifetime1 = (vb) (Obstacle.field_f.first(param0 ^ 16378));
               while (var1Lifetime1 != null) {
                 if (!var1Lifetime1.field_h.isLinked((byte) -91)) {
                   var1Lifetime1.unlink(param0 + 16389);
                 }
-                var1Lifetime1 = (vb) (db.field_f.next(118));
+                var1Lifetime1 = (vb) (Obstacle.field_f.next(118));
               }
             }
           }

@@ -53,9 +53,9 @@ final class ul extends nqa implements na {
         }
         this.field_f = param1;
         if (this.field_c) {
-          this.field_g = this.field_d.field_jd.a(this.field_f, 0, 1024, 21, 1);
+          this.field_g = this.field_d.field_jd.createCubeTexture(this.field_f, 0, 1024, 21, 1);
         } else {
-          this.field_g = this.field_d.field_jd.a(this.field_f, 1, 0, 21, 1);
+          this.field_g = this.field_d.field_jd.createCubeTexture(this.field_f, 1, 0, 21, 1);
         }
         var10 = this.field_d.field_Nc;
         var11 = var10;

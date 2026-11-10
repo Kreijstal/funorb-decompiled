@@ -62,6 +62,6 @@ public class dxVertexLayout extends mna {
           }
         }
         var10.finish();
-        this.field_e = param0.field_jd.a(var10, (jagdx.IDirect3DVertexDeclaration) null);
+        this.field_e = param0.field_jd.createVertexDeclaration(var10, (jagdx.IDirect3DVertexDeclaration) null);
     }
 }

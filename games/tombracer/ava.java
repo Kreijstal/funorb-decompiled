@@ -17,9 +17,9 @@ final class ava {
         return new ava(this.field_g, param3, param1, param2, this.field_e);
     }
 
-    final static void a(iv param0, int param1, int param2, boolean param3, int param4) {
+    final static void a(ScrollPane param0, int param1, int param2, boolean param3, int param4) {
         int var27_int = 0;
-        iv stackIn_43_0;
+        ScrollPane stackIn_43_0;
         int stackIn_43_1;
         boolean stackIn_43_2;
         int stackIn_43_3;
@@ -90,12 +90,12 @@ final class ava {
           var6 = 0;
           var7 = 0;
           var8 = 0;
-          if (uu.field_a != null && (PowerUpItemBehaviour.field_u != null ||
+          if (C2SChooseRewardPacket.field_a != null && (PowerUpItemBehaviour.field_u != null ||
             hp.field_a != null ||
             nra.field_g != null ||
             HotspotTextWidget.field_z != null)) {
             for (var9 = 0; fk.field_b > var9; var9++) {
-              var10_int = 255 & uu.field_a.field_ac[var9];
+              var10_int = 255 & C2SChooseRewardPacket.field_a.field_ac[var9];
               if (PowerUpItemBehaviour.field_u != null &&
                 null != PowerUpItemBehaviour.field_u[var9] &&
                 PowerUpItemBehaviour.field_u[var9][var10_int]) {
@@ -129,14 +129,14 @@ final class ava {
               }
             }
           }
-          stackIn_43_0 = (iv) (param0);
+          stackIn_43_0 = (ScrollPane) (param0);
           stackIn_43_1 = 2;
           stackIn_43_2 = param3;
           stackIn_43_3 = 92;
           stackIn_43_4 = param2 * (8 + di.field_a * 4);
           stackIn_43_5 = 2 * (di.field_a + param4);
           stackIn_44_6 = (lu.field_b == param0);
-          stackIn_47_0 = (!((iv) (Object) stackIn_43_0).a(stackIn_43_1, stackIn_43_2, stackIn_43_3, stackIn_43_4, stackIn_43_5, stackIn_44_6)) ? 0 : 1;
+          stackIn_47_0 = (!((ScrollPane) (Object) stackIn_43_0).a(stackIn_43_1, stackIn_43_2, stackIn_43_3, stackIn_43_4, stackIn_43_5, stackIn_44_6)) ? 0 : 1;
           var9Lifetime1 = stackIn_47_0;
           var10 = param0.field_tb.field_J;
           var11 = null;
@@ -144,7 +144,7 @@ final class ava {
           while (var12 != null) {
             var13 = 0;
             if (var12.field_J == null) {
-              var12.field_Nb = new jea(0L, lta.field_a);
+              var12.field_Nb = new jea(0L, S2CStartRoundPacket.field_a);
               var12.b(-128, var12.field_Nb);
               var12.field_Db = new jea(0L, iea.field_g);
               if (UnlockOverlay.field_p) {
@@ -240,12 +240,12 @@ final class ava {
                   }
                 }
               } else {
-                if (!uu.field_a.field_ec) {
+                if (!C2SChooseRewardPacket.field_a.field_ec) {
                   var12.field_Cb.field_r = WeaveOperator.field_o;
                 }
               }
               var25_int = 0;
-              if (null != uu.field_a &&
+              if (null != C2SChooseRewardPacket.field_a &&
                 mka.b(8192) &&
                 var12.field_yb != SimpleConditionBehaviour.field_r) {
                 if (var12.field_Kb.field_r != null) {
@@ -393,7 +393,7 @@ final class ava {
                 var25 = null;
                 var26Lifetime1 = 0;
                 for (var27_int = 0; var27_int < fk.field_b; var27_int++) {
-                  var28 = 255 & uu.field_a.field_ac[var27_int];
+                  var28 = 255 & C2SChooseRewardPacket.field_a.field_ac[var27_int];
                   var29 = 0;
                   if (null != PowerUpItemBehaviour.field_u &&
                     null != PowerUpItemBehaviour.field_u[var27_int] &&
@@ -461,7 +461,7 @@ final class ava {
                 }
                 if (tn.field_n == param0 &&
                   !mka.b(8192)) {
-                  var27 = uu.field_a.field_tb;
+                  var27 = C2SChooseRewardPacket.field_a.field_tb;
                   var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + gl.$cfr$intArgs$a$53ce4ab4c593(102, C2SSubmitSettingsPacket.field_c, new String[]{var27});
                 }
                 ArchiveNetworkClient.field_b = (String) (var24Lifetime2);

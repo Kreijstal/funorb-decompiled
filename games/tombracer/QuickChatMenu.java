@@ -218,7 +218,7 @@ final class QuickChatMenu extends jea {
               var5 = this.field_ub[param2] | 32768;
               var6 = bta.field_q;
               if (var6 == 0 &&
-                uu.field_a != null) {
+                C2SChooseRewardPacket.field_a != null) {
                 var6 = 1;
               }
               if (Transform3D.a(var6, -20011) == 2) {

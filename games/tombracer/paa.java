@@ -9,7 +9,7 @@ abstract class paa extends WidgetContainer implements mk {
 
     abstract boolean i(byte param0);
 
-    final static void a(iv param0, int param1, String param2, long param3, int param4, int[] param5, jea param6, int param7, String param8) {
+    final static void a(ScrollPane param0, int param1, String param2, long param3, int param4, int[] param5, jea param6, int param7, String param8) {
         if (param4 != -11635) {
           return;
         }

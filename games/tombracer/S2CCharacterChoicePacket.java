@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vra implements GamePacket {
+final class S2CCharacterChoicePacket implements GamePacket {
     private int field_b;
     static int field_a;
     static String field_c;
@@ -10,7 +10,7 @@ final class vra implements GamePacket {
     public static void releaseStatics(int param0) {
         field_c = null;
         if (param0 != 4) {
-          vra.releaseStatics(22);
+          S2CCharacterChoicePacket.releaseStatics(22);
         }
     }
 
@@ -21,7 +21,7 @@ final class vra implements GamePacket {
           param1.writeBits((byte) -126, this.field_d, 4);
           param1.endBitWrite(param0 ^ -1826190742);
           if (param0 != 200) {
-            vra.releaseStatics(79);
+            S2CCharacterChoicePacket.releaseStatics(79);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vra.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -31,9 +31,9 @@ final class vra implements GamePacket {
     final void apply(MatchScreen param0, byte param1, MatchProtocol param2) {
         try {
           if (param1 >= -81) {
-            vra.releaseStatics(-117);
+            S2CCharacterChoicePacket.releaseStatics(-117);
           }
-          param0.c(this.field_d, 112, this.field_b);
+          param0.onCharacterChoice(this.field_d, 112, this.field_b);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vra.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

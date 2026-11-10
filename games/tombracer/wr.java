@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wr extends ela {
+final class wr extends ConsoleMethod {
     static String[] field_o;
 
     final ConsoleValue a(ConsoleValue[] param0, int param1) {

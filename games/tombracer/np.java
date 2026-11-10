@@ -4173,7 +4173,7 @@ final class np extends ka {
             }
           }
           if (null != this.field_I &&
-            !in.a(this.field_bb, this.field_u, (byte) -115)) {
+            !StringCursor.a(this.field_bb, this.field_u, (byte) -115)) {
             if (null != this.field_kb &&
               this.field_kb.field_d == null) {
               this.field_gb = true;

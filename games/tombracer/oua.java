@@ -14,7 +14,7 @@ final class oua {
             if (!mja.a(param2)) {
               throw new RuntimeException("");
             }
-            if (!in.a("jagdx", 480)) {
+            if (!StringCursor.a("jagdx", 480)) {
               throw new RuntimeException("");
             }
             var5 = Class.forName("Direct3DToolkit");

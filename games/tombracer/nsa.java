@@ -14,7 +14,7 @@ final class nsa {
     int field_g;
     int field_k;
     static String field_f;
-    static iv field_i;
+    static ScrollPane field_i;
     int field_n;
 
     public static void releaseStatics(boolean param0) {

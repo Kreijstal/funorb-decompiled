@@ -71,7 +71,7 @@ final class WhiteLightShooterComponent extends ShooterComponent {
           return true;
         }
         stackIn_5_0 = ((458752 & param2) != 0);
-        stackIn_10_0 = !(!stackIn_5_0 | ir.a(param2, param0, (byte) -94)) || (uu.a(true, param2, param0));
+        stackIn_10_0 = !(!stackIn_5_0 | ir.a(param2, param0, (byte) -94)) || (C2SChooseRewardPacket.a(true, param2, param0));
         return stackIn_10_0;
     }
 
