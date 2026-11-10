@@ -3,7 +3,7 @@
  */
 final class PlayerSimulation {
     private boolean field_h;
-    private int[] field_j;
+    private int[] effectSlots;
     private int field_e;
     Player player;
     SimulationObserver observer;
@@ -51,12 +51,12 @@ final class PlayerSimulation {
         }
     }
 
-    private final boolean c(int param0, int param1) {
+    private final boolean hasOwnEffect(int param0, int param1) {
         if (param1 != -1) {
           this.rooms = (Room[]) null;
-          return -1 != this.field_j[param0] ? true : false;
+          return -1 != this.effectSlots[param0] ? true : false;
         }
-        return -1 != this.field_j[param0] ? true : false;
+        return -1 != this.effectSlots[param0] ? true : false;
     }
 
     final void d(int param0, int param1) {
@@ -100,16 +100,16 @@ final class PlayerSimulation {
         boolean stackIn_12_0 = false;
         if (param1 != 10915) {
           this.b(false);
-          if (this.c(param0, -1)) {
+          if (this.hasOwnEffect(param0, -1)) {
             return true;
           }
-          stackIn_6_0 = !(!this.rooms[this.player.getCourseIndex(param1 ^ -10957)].b(param0, (byte) -44));
+          stackIn_6_0 = !(!this.rooms[this.player.getCourseIndex(param1 ^ -10957)].hasEffect(param0, (byte) -44));
           return stackIn_6_0;
         }
-        if (this.c(param0, -1)) {
+        if (this.hasOwnEffect(param0, -1)) {
           stackIn_12_0 = true;
         } else {
-          if (this.rooms[this.player.getCourseIndex(param1 ^ -10957)].b(param0, (byte) -44)) {
+          if (this.rooms[this.player.getCourseIndex(param1 ^ -10957)].hasEffect(param0, (byte) -44)) {
             return true;
           }
           stackIn_12_0 = false;
@@ -264,7 +264,7 @@ final class PlayerSimulation {
     }
 
     final void a(int param0, int param1, int param2) {
-        this.field_j[param0] = param1;
+        this.effectSlots[param0] = param1;
         if (param2 >= -28) {
           this.player = (Player) null;
         }
@@ -413,9 +413,9 @@ final class PlayerSimulation {
     private final int e(int param0, int param1) {
         if (param1 != 0) {
           this.b(-8);
-          return this.field_j[param0];
+          return this.effectSlots[param0];
         }
-        return this.field_j[param0];
+        return this.effectSlots[param0];
     }
 
     final Room getFirstRoom(int param0) {
@@ -430,27 +430,27 @@ final class PlayerSimulation {
         if (param2 >= -86) {
           iq var6 = (iq) null;
           this.a((iq) null, 103);
-          this.rooms[param3].b(false, param1, param0);
+          this.rooms[param3].setEffectSlot(false, param1, param0);
           return;
         }
-        this.rooms[param3].b(false, param1, param0);
+        this.rooms[param3].setEffectSlot(false, param1, param0);
     }
 
     final void a(byte param0, int param1, int param2) {
         if (param0 > -11) {
           this.a(96, 125);
-          this.rooms[param2].c(-22490, param1);
+          this.rooms[param2].clearEffectSlot(-22490, param1);
           return;
         }
-        this.rooms[param2].c(-22490, param1);
+        this.rooms[param2].clearEffectSlot(-22490, param1);
     }
 
     final int b(boolean param0, int param1) {
         if (param0) {
           this.a((byte) 29, -34, 71);
-          return iia.d(this.e(param1, 0), this.rooms[this.player.getCourseIndex(-101)].a(-121, param1), 2);
+          return iia.d(this.e(param1, 0), this.rooms[this.player.getCourseIndex(-101)].getEffectSlot(-121, param1), 2);
         }
-        return iia.d(this.e(param1, 0), this.rooms[this.player.getCourseIndex(-101)].a(-121, param1), 2);
+        return iia.d(this.e(param1, 0), this.rooms[this.player.getCourseIndex(-101)].getEffectSlot(-121, param1), 2);
     }
 
     final boolean h(int param0) {
@@ -491,8 +491,8 @@ final class PlayerSimulation {
         return this.observer;
     }
 
-    final void b(int param0, int param1) {
-        this.field_j[param0] = param1;
+    final void setEffectSlot(int param0, int param1) {
+        this.effectSlots[param0] = param1;
     }
 
     final Room a(boolean param0, int param1) {
@@ -511,7 +511,7 @@ final class PlayerSimulation {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        this.field_j = new int[9];
+        this.effectSlots = new int[9];
         try {
           this.field_e = param2;
           this.player = param1;
@@ -519,8 +519,8 @@ final class PlayerSimulation {
           this.observer = param0;
           this.roomCount = this.field_d + this.field_e;
           this.rooms = new Room[this.roomCount];
-          for (var5_int = 0; var5_int < this.field_j.length; var5_int++) {
-            this.field_j[var5_int] = -1;
+          for (var5_int = 0; var5_int < this.effectSlots.length; var5_int++) {
+            this.effectSlots[var5_int] = -1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

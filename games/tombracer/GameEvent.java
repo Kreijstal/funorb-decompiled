@@ -23,7 +23,7 @@ abstract class GameEvent extends IntrusiveNode {
 
     abstract int getTypeId(byte param0);
 
-    abstract boolean a(boolean param0);
+    abstract boolean isRoomScoped(boolean param0);
 
     final static int a(int param0, int param1, int param2) {
         long var3 = 0L;

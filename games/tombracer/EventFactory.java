@@ -7,7 +7,7 @@ final class EventFactory {
         RuntimeException var3 = null;
         int var4 = 0;
         GameEvent stackIn_2_0 = null;
-        gfa stackIn_5_0 = null;
+        EffectEvent stackIn_5_0 = null;
         Object stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -21,7 +21,7 @@ final class EventFactory {
           var3_int = param1.readBits((byte) 44, 4);
           var4 = var3_int;
           if (var4 == 0) {
-            stackIn_5_0 = new gfa(param2, param1);
+            stackIn_5_0 = new EffectEvent(param2, param1);
             return (GameEvent) ((Object) stackIn_5_0);
           }
           System.out.println("Event type unrecognised: " + var3_int);

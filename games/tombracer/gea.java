@@ -78,8 +78,8 @@ final class gea {
           var5 = SoftwareRasterizer.field_g;
           var6 = SoftwareRasterizer.field_a;
           var16 = SoftwareRasterizer.field_l;
-          gfa.field_j = new Sprite(10, 14);
-          gfa.field_j.c();
+          EffectEvent.field_j = new Sprite(10, 14);
+          EffectEvent.field_j.c();
           for (var8 = 2; var8 < 7; var8++) {
             SoftwareRasterizer.drawVerticalLine(var8, var8 + 1, -(var8 << 1) + 14, 16777215);
           }

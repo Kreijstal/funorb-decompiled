@@ -134,7 +134,7 @@ final class eua extends jea {
             var14 = null;
             if (null != this.field_zb[var13] ||
               -1 == this.field_ub[var13]) {
-              var14 = gfa.field_j;
+              var14 = EffectEvent.field_j;
             }
             this.field_Gb[var13] = new tv(0L, param2, (jea) null, param3, (Sprite) (var14), param6[var13]);
             this.b(-123, this.field_Gb[var13]);
@@ -143,7 +143,7 @@ final class eua extends jea {
               this.field_vb = var15;
             }
           }
-          this.field_vb = this.field_vb + (10 + gfa.field_j.field_n);
+          this.field_vb = this.field_vb + (10 + EffectEvent.field_j.field_n);
           this.a(12, 93);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

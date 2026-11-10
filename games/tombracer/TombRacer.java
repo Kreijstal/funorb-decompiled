@@ -440,7 +440,7 @@ public final class TombRacer extends rfa implements ls {
         rd.releaseStatics(-128);
         ct.releaseStatics((byte) -121);
         RoomComponent.j((byte) -107);
-        gfa.releaseStatics(104);
+        EffectEvent.releaseStatics(104);
         fm.d(-124);
         sqa.releaseStatics((byte) -128);
         uw.releaseStatics(param0 + 3666);

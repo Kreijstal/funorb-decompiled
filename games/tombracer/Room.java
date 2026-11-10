@@ -40,7 +40,7 @@ final class Room implements ew, Renderable, noa {
     private Collidable field_o;
     private int entranceX;
     private fq field_P;
-    private int[] field_b;
+    private int[] effectSlots;
     private int entranceY;
     private ts field_g;
     private int deathCount;
@@ -649,7 +649,7 @@ final class Room implements ew, Renderable, noa {
 
     final int a(boolean param0) {
         if (param0) {
-          this.field_b = (int[]) null;
+          this.effectSlots = (int[]) null;
         }
         return this.field_A;
     }
@@ -675,11 +675,11 @@ final class Room implements ew, Renderable, noa {
         return null;
     }
 
-    final int a(int param0, int param1) {
+    final int getEffectSlot(int param0, int param1) {
         if (param0 > -95) {
           this.b(10, -88, -18, 76, -15);
         }
-        return this.field_b[param1];
+        return this.effectSlots[param1];
     }
 
     final void a(iq param0, int param1) {
@@ -888,8 +888,8 @@ final class Room implements ew, Renderable, noa {
         }
     }
 
-    final void c(int param0, int param1) {
-        this.field_b[param1] = -1;
+    final void clearEffectSlot(int param0, int param1) {
+        this.effectSlots[param1] = -1;
         if (param0 != -22490) {
           this.restart((byte) -124);
         }
@@ -985,7 +985,7 @@ final class Room implements ew, Renderable, noa {
 
     final boolean h(byte param0) {
         if (param0 != -77) {
-          this.c(-56, 76);
+          this.clearEffectSlot(-56, 76);
         }
         return this.field_T;
     }
@@ -1427,12 +1427,12 @@ final class Room implements ew, Renderable, noa {
         this.field_S.e(30057);
     }
 
-    final boolean b(int param0, byte param1) {
+    final boolean hasEffect(int param0, byte param1) {
         if (param1 != -44) {
           Trap var4 = (Trap) null;
           this.removeTrap((Trap) null, 48);
         }
-        return this.field_b[param0] != -1 ? true : false;
+        return this.effectSlots[param0] != -1 ? true : false;
     }
 
     final boolean g(byte param0) {
@@ -1579,8 +1579,8 @@ final class Room implements ew, Renderable, noa {
         return this.width;
     }
 
-    final void b(boolean param0, int param1, int param2) {
-        this.field_b[param2] = param1;
+    final void setEffectSlot(boolean param0, int param1, int param2) {
+        this.effectSlots[param2] = param1;
         if (param0) {
           this.field_g = (ts) null;
         }
@@ -1598,7 +1598,7 @@ final class Room implements ew, Renderable, noa {
         this.entranceY = this.entranceY + var3;
         this.field_B.b(2097152, 2, var3);
         if (param1 != -20) {
-          this.field_b = (int[]) null;
+          this.effectSlots = (int[]) null;
         }
         Trap var6 = (Trap) (this.traps.first(-80));
         while (var6 != null) {
@@ -1779,7 +1779,7 @@ final class Room implements ew, Renderable, noa {
 
     final ui d(int param0) {
         if (param0 != -31957) {
-          this.b(true, -14, -108);
+          this.setEffectSlot(true, -14, -108);
         }
         return this.field_q;
     }
@@ -1977,7 +1977,7 @@ final class Room implements ew, Renderable, noa {
             this.recentDeaths.removeFirst(-99);
           }
           if (param0 != 8) {
-            this.field_b = (int[]) null;
+            this.effectSlots = (int[]) null;
           }
           this.deathCount = this.deathCount + 1;
         } catch (RuntimeException runtimeException) {
@@ -2034,13 +2034,13 @@ final class Room implements ew, Renderable, noa {
         this.field_D = new te();
         this.field_y = new ui();
         this.field_q = new ui();
-        this.field_b = new int[9];
+        this.effectSlots = new int[9];
         this.field_P = new fq();
         this.field_A = 0;
         this.field_J = 0;
         try {
-          for (var6_int = 0; this.field_b.length > var6_int; var6_int++) {
-            this.field_b[var6_int] = -1;
+          for (var6_int = 0; this.effectSlots.length > var6_int; var6_int++) {
+            this.effectSlots[var6_int] = -1;
           }
           this.simulation = param0;
           this.width = 33554432;

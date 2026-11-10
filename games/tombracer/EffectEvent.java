@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gfa extends GameEvent {
+final class EffectEvent extends GameEvent {
     static ur field_l;
-    private int field_n;
-    private int field_k;
+    private int effectSlot;
+    private int value;
     static Sprite field_j;
     static String field_i;
     static String field_m;
@@ -12,8 +12,8 @@ final class gfa extends GameEvent {
     final void encode(BitPacketBuffer param0, int param1) {
         try {
           super.encode(param0, param1);
-          param0.writeBits((byte) -128, this.field_n, 4);
-          param0.writeBits((byte) -125, this.field_k, 6);
+          param0.writeBits((byte) -128, this.effectSlot, 4);
+          param0.writeBits((byte) -125, this.value, 6);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "gfa.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -24,18 +24,18 @@ final class gfa extends GameEvent {
         field_m = null;
         field_l = null;
         if (param0 <= 33) {
-          gfa.releaseStatics(-87);
+          EffectEvent.releaseStatics(-87);
           field_j = null;
           return;
         }
         field_j = null;
     }
 
-    final boolean a(boolean param0) {
+    final boolean isRoomScoped(boolean param0) {
         if (param0) {
           return false;
         }
-        int var2 = this.field_n;
+        int var2 = this.effectSlot;
         if (var2 == 4) {
           return true;
         }
@@ -47,17 +47,17 @@ final class gfa extends GameEvent {
 
     final int getTypeId(byte param0) {
         if (param0 != 121) {
-          this.field_k = -8;
+          this.value = -8;
           return 0;
         }
         return 0;
     }
 
-    gfa(int param0, BitPacketBuffer param1) {
+    EffectEvent(int param0, BitPacketBuffer param1) {
         super(param0, param1);
         try {
-          this.field_n = param1.readBits((byte) 44, 4);
-          this.field_k = param1.readBits((byte) 44, 6);
+          this.effectSlot = param1.readBits((byte) 44, 4);
+          this.value = param1.readBits((byte) 44, 6);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "gfa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -66,9 +66,9 @@ final class gfa extends GameEvent {
     final int a(byte param0) {
         if (param0 != -28) {
           field_j = (Sprite) null;
-          return this.field_k;
+          return this.value;
         }
-        return this.field_k;
+        return this.value;
     }
 
     final boolean a(boolean param0, GameEvent param1) {
@@ -82,10 +82,10 @@ final class gfa extends GameEvent {
           if (param0) {
             field_j = (Sprite) null;
           }
-          if (!(param1 instanceof gfa)) {
+          if (!(param1 instanceof EffectEvent)) {
             return false;
           }
-          stackIn_9_0 = (((gfa) (param1)).field_n == this.field_n);
+          stackIn_9_0 = (((EffectEvent) (param1)).effectSlot == this.effectSlot);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -111,11 +111,11 @@ final class gfa extends GameEvent {
           if (param1 <= 110) {
             field_j = (Sprite) null;
           }
-          if (this.a(false)) {
-            param0.a(this.field_n, param3, -121, param2);
+          if (this.isRoomScoped(false)) {
+            param0.a(this.effectSlot, param3, -121, param2);
             return;
           }
-          param0.a(this.field_n, param3, -85);
+          param0.a(this.effectSlot, param3, -85);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -133,10 +133,10 @@ final class gfa extends GameEvent {
 
     final void a(int param0, byte param1, PlayerSimulation param2) {
         try {
-          if (this.a(false)) {
-            param2.a((byte) -97, this.field_n, param0);
+          if (this.isRoomScoped(false)) {
+            param2.a((byte) -97, this.effectSlot, param0);
           } else {
-            param2.b(this.field_n, -1);
+            param2.setEffectSlot(this.effectSlot, -1);
           }
           int var4_int = 30 % ((param1 - 46) / 46);
         } catch (RuntimeException runtimeException) {

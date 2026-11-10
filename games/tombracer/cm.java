@@ -209,7 +209,7 @@ final class cm implements GamePacket {
               if (mka.b(8192)) {
                 qda.field_b = jsa.field_y;
               } else {
-                qda.field_b = gl.$cfr$intArgs$a$53ce4ab4c593(101, gfa.field_i, new String[]{uu.field_a.field_tb});
+                qda.field_b = gl.$cfr$intArgs$a$53ce4ab4c593(101, EffectEvent.field_i, new String[]{uu.field_a.field_tb});
               }
             }
           }

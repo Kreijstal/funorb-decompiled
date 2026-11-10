@@ -220,7 +220,7 @@ abstract class AppletGameShell extends GameApplet {
     }
 
     private final void a(byte param0, int param1, boolean param2) {
-        this.a(rd.field_r.field_c, wla.field_Eb.field_c, gfa.field_l.field_c, C2SSubmitSettingsPacket.field_d.field_c, 5000, param1, rm.field_d.field_c, param2);
+        this.a(rd.field_r.field_c, wla.field_Eb.field_c, EffectEvent.field_l.field_c, C2SSubmitSettingsPacket.field_d.field_c, 5000, param1, rm.field_d.field_c, param2);
         if (param0 >= -25) {
           this.field_w = 116L;
         }

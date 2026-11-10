@@ -1300,6 +1300,14 @@
       "renamedSymbol": "C:ShooterComponent"
     },
     {
+      "symbol": "C:gfa",
+      "originalName": "gfa",
+      "to": "EffectEvent",
+      "evidence": "The only GameEvent type (id 0): carries a 4-bit effect slot and a 6-bit value and applies them to a PlayerSimulation's or Room's 9 effect slots.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:EffectEvent"
+    },
+    {
       "symbol": "C:gma",
       "originalName": "gma",
       "to": "WorldBody",
@@ -2972,6 +2980,14 @@
       "renamedSymbol": "F:PlayerSimulation.observer:LSimulationObserver;"
     },
     {
+      "symbol": "F:dt.field_j:[I",
+      "originalName": "field_j",
+      "to": "effectSlots",
+      "evidence": "Nine slots initialised to -1; EffectEvent writes player-scoped slots here.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlayerSimulation.effectSlots:[I"
+    },
+    {
       "symbol": "F:dt.field_m:I",
       "originalName": "field_m",
       "to": "roomCount",
@@ -3242,6 +3258,22 @@
       "evidence": "Static initialiser fills it with \"<%0>\" message variants starting \"<%0> communed with the dead\".",
       "confidence": "reviewed",
       "renamedSymbol": "F:gca.skeletonDeathMessages:[Ljava/lang/String;"
+    },
+    {
+      "symbol": "F:gfa.field_k:I",
+      "originalName": "field_k",
+      "to": "value",
+      "evidence": "EffectEvent encodes it as 6 bits after the slot.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:EffectEvent.value:I"
+    },
+    {
+      "symbol": "F:gfa.field_n:I",
+      "originalName": "field_n",
+      "to": "effectSlot",
+      "evidence": "EffectEvent encodes it as 4 bits and indexes the simulation or room effect slots with it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:EffectEvent.effectSlot:I"
     },
     {
       "symbol": "F:gpa.field_c:Z",
@@ -3548,6 +3580,14 @@
       "renamedSymbol": "F:Room.entranceX:I"
     },
     {
+      "symbol": "F:la.field_b:[I",
+      "originalName": "field_b",
+      "to": "effectSlots",
+      "evidence": "Nine slots initialised to -1; EffectEvent writes room-scoped slots here.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:Room.effectSlots:[I"
+    },
+    {
       "symbol": "F:la.field_c:Lpta;",
       "originalName": "field_c",
       "to": "particlePool",
@@ -3756,6 +3796,14 @@
       "renamedSymbol": "F:PendingEvent.instigator:I"
     },
     {
+      "symbol": "F:pi.field_g:Lbs;",
+      "originalName": "field_g",
+      "to": "event",
+      "evidence": "PendingEvent.decode reads it with EventFactory.readEvent and encode writes it first.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PendingEvent.event:LGameEvent;"
+    },
+    {
       "symbol": "F:pi.field_h:I",
       "originalName": "field_h",
       "to": "room",
@@ -3786,6 +3834,14 @@
       "evidence": "PendingEvent.toString prints instigator, course, room, start and duration.",
       "confidence": "reviewed",
       "renamedSymbol": "F:PendingEvent.duration:I"
+    },
+    {
+      "symbol": "F:pi.field_l:I",
+      "originalName": "field_l",
+      "to": "end",
+      "evidence": "PendingEvent.decode sets it to start + 50 * duration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PendingEvent.end:I"
     },
     {
       "symbol": "F:pta.field_b:Lvna;",
@@ -5052,6 +5108,14 @@
       "renamedSymbol": "M:GameEvent.encode(LBitPacketBuffer;I)V"
     },
     {
+      "symbol": "M:bs.a(Z)Z",
+      "originalName": "a",
+      "to": "isRoomScoped",
+      "evidence": "True for slots 4 and 5, which EffectEvent applies to the Room instead of the PlayerSimulation. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameEvent.isRoomScoped(Z)Z"
+    },
+    {
       "symbol": "M:bs.b(B)I",
       "originalName": "b",
       "to": "getTypeId",
@@ -6258,6 +6322,22 @@
       "evidence": "Prints \"DUMPING STATE on tick\" and the Player.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PlayerSimulation.dumpState(B)V"
+    },
+    {
+      "symbol": "M:dt.b(II)V",
+      "originalName": "b",
+      "to": "setEffectSlot",
+      "evidence": "Stores a value in one of the nine player effect slots.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlayerSimulation.setEffectSlot(II)V"
+    },
+    {
+      "symbol": "M:dt.c(II)Z",
+      "originalName": "c",
+      "to": "hasOwnEffect",
+      "evidence": "Returns whether a player effect slot is not -1.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlayerSimulation.hasOwnEffect(II)Z"
     },
     {
       "symbol": "M:dt.l(I)I",
@@ -7729,7 +7809,15 @@
       "to": "encode",
       "evidence": "Writes getTypeId as 4 bits, the width EventFactory.readEvent reads; gfa appends two fields. Resolved override family.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:gfa.encode(LBitPacketBuffer;I)V"
+      "renamedSymbol": "M:EffectEvent.encode(LBitPacketBuffer;I)V"
+    },
+    {
+      "symbol": "M:gfa.a(Z)Z",
+      "originalName": "a",
+      "to": "isRoomScoped",
+      "evidence": "True for slots 4 and 5, which EffectEvent applies to the Room instead of the PlayerSimulation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:EffectEvent.isRoomScoped(Z)Z"
     },
     {
       "symbol": "M:gfa.b(B)I",
@@ -7737,7 +7825,7 @@
       "to": "getTypeId",
       "evidence": "GameEvent.encode writes it as 4 bits; gfa returns 0, the only id readEvent accepts. Resolved override family.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:gfa.getTypeId(B)I"
+      "renamedSymbol": "M:EffectEvent.getTypeId(B)I"
     },
     {
       "symbol": "M:gfa.b(I)V",
@@ -7745,7 +7833,7 @@
       "to": "releaseStatics",
       "evidence": "TombRacer.clearAllStatics calls it; its body only sets static fields of this class to null.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:gfa.releaseStatics(I)V"
+      "renamedSymbol": "M:EffectEvent.releaseStatics(I)V"
     },
     {
       "symbol": "M:gg.a(B)V",
@@ -10076,6 +10164,14 @@
       "renamedSymbol": "M:Room.getSimulation(I)LPlayerSimulation;"
     },
     {
+      "symbol": "M:la.a(II)I",
+      "originalName": "a",
+      "to": "getEffectSlot",
+      "evidence": "Returns one room effect slot.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Room.getEffectSlot(II)I"
+    },
+    {
       "symbol": "M:la.a(IIBI)Lhr;",
       "originalName": "a",
       "to": "spawnParticle",
@@ -10156,6 +10252,22 @@
       "renamedSymbol": "M:Room.getRenderX(B)I"
     },
     {
+      "symbol": "M:la.b(IB)Z",
+      "originalName": "b",
+      "to": "hasEffect",
+      "evidence": "Returns whether a room effect slot is not -1.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Room.hasEffect(IB)Z"
+    },
+    {
+      "symbol": "M:la.b(ZII)V",
+      "originalName": "b",
+      "to": "setEffectSlot",
+      "evidence": "Stores a value in one of the nine room effect slots.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Room.setEffectSlot(ZII)V"
+    },
+    {
       "symbol": "M:la.c(B)I",
       "originalName": "c",
       "to": "getRenderY",
@@ -10170,6 +10282,14 @@
       "evidence": "Returns the course index printed by Room.toString.",
       "confidence": "reviewed",
       "renamedSymbol": "M:Room.getCourseIndex(I)I"
+    },
+    {
+      "symbol": "M:la.c(II)V",
+      "originalName": "c",
+      "to": "clearEffectSlot",
+      "evidence": "Resets one room effect slot to -1.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Room.clearEffectSlot(II)V"
     },
     {
       "symbol": "M:la.d(Z)V",
@@ -12492,12 +12612,36 @@
       "renamedSymbol": "M:PendingEvent.getCourse(I)I"
     },
     {
+      "symbol": "M:pi.a(Lkh;I)V",
+      "originalName": "a",
+      "to": "decode",
+      "evidence": "Reads the GameEvent, instigator (3 bits), course (3), start (32) and duration (8), plus the room when applicable.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PendingEvent.decode(LBitPacketBuffer;I)V"
+    },
+    {
       "symbol": "M:pi.a(Z)I",
       "originalName": "a",
       "to": "getStart",
       "evidence": "Returns start.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PendingEvent.getStart(Z)I"
+    },
+    {
+      "symbol": "M:pi.b(Lkh;I)V",
+      "originalName": "b",
+      "to": "encode",
+      "evidence": "Writes the GameEvent and the fields decode reads, in the same order and widths.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PendingEvent.encode(LBitPacketBuffer;I)V"
+    },
+    {
+      "symbol": "M:pi.c(I)I",
+      "originalName": "c",
+      "to": "getEnd",
+      "evidence": "Returns end (start + 50 * duration).",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PendingEvent.getEnd(I)I"
     },
     {
       "symbol": "M:pk.b(Z)V",
@@ -21233,9 +21377,9 @@
     },
     {
       "symbol": "C:gfa",
-      "renamedSymbol": "C:gfa",
+      "renamedSymbol": "C:EffectEvent",
       "originalName": "gfa",
-      "renamedName": "gfa",
+      "renamedName": "EffectEvent",
       "declaration": {
         "file": "gfa.java",
         "start": 50,
@@ -44696,9 +44840,9 @@
     },
     {
       "symbol": "F:dt.field_j:[I",
-      "renamedSymbol": "F:PlayerSimulation.field_j:[I",
+      "renamedSymbol": "F:PlayerSimulation.effectSlots:[I",
       "originalName": "field_j",
-      "renamedName": "field_j",
+      "renamedName": "effectSlots",
       "declaration": {
         "file": "dt.java",
         "start": 102,
@@ -53815,7 +53959,7 @@
     },
     {
       "symbol": "F:gfa.field_i:Ljava/lang/String;",
-      "renamedSymbol": "F:gfa.field_i:Ljava/lang/String;",
+      "renamedSymbol": "F:EffectEvent.field_i:Ljava/lang/String;",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -53826,7 +53970,7 @@
     },
     {
       "symbol": "F:gfa.field_j:Liu;",
-      "renamedSymbol": "F:gfa.field_j:LSprite;",
+      "renamedSymbol": "F:EffectEvent.field_j:LSprite;",
       "originalName": "field_j",
       "renamedName": "field_j",
       "declaration": {
@@ -53837,9 +53981,9 @@
     },
     {
       "symbol": "F:gfa.field_k:I",
-      "renamedSymbol": "F:gfa.field_k:I",
+      "renamedSymbol": "F:EffectEvent.value:I",
       "originalName": "field_k",
-      "renamedName": "field_k",
+      "renamedName": "value",
       "declaration": {
         "file": "gfa.java",
         "start": 131,
@@ -53848,7 +53992,7 @@
     },
     {
       "symbol": "F:gfa.field_l:Lur;",
-      "renamedSymbol": "F:gfa.field_l:Lur;",
+      "renamedSymbol": "F:EffectEvent.field_l:Lur;",
       "originalName": "field_l",
       "renamedName": "field_l",
       "declaration": {
@@ -53859,7 +54003,7 @@
     },
     {
       "symbol": "F:gfa.field_m:Ljava/lang/String;",
-      "renamedSymbol": "F:gfa.field_m:Ljava/lang/String;",
+      "renamedSymbol": "F:EffectEvent.field_m:Ljava/lang/String;",
       "originalName": "field_m",
       "renamedName": "field_m",
       "declaration": {
@@ -53870,9 +54014,9 @@
     },
     {
       "symbol": "F:gfa.field_n:I",
-      "renamedSymbol": "F:gfa.field_n:I",
+      "renamedSymbol": "F:EffectEvent.effectSlot:I",
       "originalName": "field_n",
-      "renamedName": "field_n",
+      "renamedName": "effectSlot",
       "declaration": {
         "file": "gfa.java",
         "start": 106,
@@ -70887,9 +71031,9 @@
     },
     {
       "symbol": "F:la.field_b:[I",
-      "renamedSymbol": "F:Room.field_b:[I",
+      "renamedSymbol": "F:Room.effectSlots:[I",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "effectSlots",
       "declaration": {
         "file": "la.java",
         "start": 1021,
@@ -81216,7 +81360,7 @@
     },
     {
       "symbol": "F:ok.field_t:Lgfa;",
-      "renamedSymbol": "F:PowerDownItemBehaviour.field_t:Lgfa;",
+      "renamedSymbol": "F:PowerDownItemBehaviour.field_t:LEffectEvent;",
       "originalName": "field_t",
       "renamedName": "field_t",
       "declaration": {
@@ -84186,9 +84330,9 @@
     },
     {
       "symbol": "F:pi.field_g:Lbs;",
-      "renamedSymbol": "F:PendingEvent.field_g:LGameEvent;",
+      "renamedSymbol": "F:PendingEvent.event:LGameEvent;",
       "originalName": "field_g",
-      "renamedName": "field_g",
+      "renamedName": "event",
       "declaration": {
         "file": "pi.java",
         "start": 181,
@@ -84241,9 +84385,9 @@
     },
     {
       "symbol": "F:pi.field_l:I",
-      "renamedSymbol": "F:PendingEvent.field_l:I",
+      "renamedSymbol": "F:PendingEvent.end:I",
       "originalName": "field_l",
-      "renamedName": "field_l",
+      "renamedName": "end",
       "declaration": {
         "file": "pi.java",
         "start": 132,
@@ -217066,7 +217210,7 @@
     },
     {
       "symbol": "L:gfa.<init>(ILkh;)V#0",
-      "renamedSymbol": "L:gfa.<init>(ILBitPacketBuffer;)V#0",
+      "renamedSymbol": "L:EffectEvent.<init>(ILBitPacketBuffer;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -217077,7 +217221,7 @@
     },
     {
       "symbol": "L:gfa.a(IBLdt;)V#0",
-      "renamedSymbol": "L:gfa.a(IBLPlayerSimulation;)V#0",
+      "renamedSymbol": "L:EffectEvent.a(IBLPlayerSimulation;)V#0",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -217088,7 +217232,7 @@
     },
     {
       "symbol": "L:gfa.a(IBLdt;)V#1",
-      "renamedSymbol": "L:gfa.a(IBLPlayerSimulation;)V#1",
+      "renamedSymbol": "L:EffectEvent.a(IBLPlayerSimulation;)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -217099,7 +217243,7 @@
     },
     {
       "symbol": "L:gfa.a(Ldt;III)V#0",
-      "renamedSymbol": "L:gfa.a(LPlayerSimulation;III)V#0",
+      "renamedSymbol": "L:EffectEvent.a(LPlayerSimulation;III)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -217110,7 +217254,7 @@
     },
     {
       "symbol": "L:gfa.a(Ldt;III)V#1",
-      "renamedSymbol": "L:gfa.a(LPlayerSimulation;III)V#1",
+      "renamedSymbol": "L:EffectEvent.a(LPlayerSimulation;III)V#1",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -217121,7 +217265,7 @@
     },
     {
       "symbol": "L:gfa.a(Ldt;III)V#2",
-      "renamedSymbol": "L:gfa.a(LPlayerSimulation;III)V#2",
+      "renamedSymbol": "L:EffectEvent.a(LPlayerSimulation;III)V#2",
       "originalName": "stackIn_8_1",
       "renamedName": "stackIn_8_1",
       "declaration": {
@@ -217132,7 +217276,7 @@
     },
     {
       "symbol": "L:gfa.a(Ldt;III)V#3",
-      "renamedSymbol": "L:gfa.a(LPlayerSimulation;III)V#3",
+      "renamedSymbol": "L:EffectEvent.a(LPlayerSimulation;III)V#3",
       "originalName": "stackIn_9_2",
       "renamedName": "stackIn_9_2",
       "declaration": {
@@ -217143,7 +217287,7 @@
     },
     {
       "symbol": "L:gfa.a(Ldt;III)V#4",
-      "renamedSymbol": "L:gfa.a(LPlayerSimulation;III)V#4",
+      "renamedSymbol": "L:EffectEvent.a(LPlayerSimulation;III)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -217154,7 +217298,7 @@
     },
     {
       "symbol": "L:gfa.a(Ldt;III)V#5",
-      "renamedSymbol": "L:gfa.a(LPlayerSimulation;III)V#5",
+      "renamedSymbol": "L:EffectEvent.a(LPlayerSimulation;III)V#5",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -217165,7 +217309,7 @@
     },
     {
       "symbol": "L:gfa.a(Lkh;I)V#0",
-      "renamedSymbol": "L:gfa.encode(LBitPacketBuffer;I)V#0",
+      "renamedSymbol": "L:EffectEvent.encode(LBitPacketBuffer;I)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -217176,7 +217320,7 @@
     },
     {
       "symbol": "L:gfa.a(Z)Z#0",
-      "renamedSymbol": "L:gfa.a(Z)Z#0",
+      "renamedSymbol": "L:EffectEvent.isRoomScoped(Z)Z#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -217187,7 +217331,7 @@
     },
     {
       "symbol": "L:gfa.a(ZLbs;)Z#0",
-      "renamedSymbol": "L:gfa.a(ZLGameEvent;)Z#0",
+      "renamedSymbol": "L:EffectEvent.a(ZLGameEvent;)Z#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -217198,7 +217342,7 @@
     },
     {
       "symbol": "L:gfa.a(ZLbs;)Z#1",
-      "renamedSymbol": "L:gfa.a(ZLGameEvent;)Z#1",
+      "renamedSymbol": "L:EffectEvent.a(ZLGameEvent;)Z#1",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -217209,7 +217353,7 @@
     },
     {
       "symbol": "L:gfa.a(ZLbs;)Z#2",
-      "renamedSymbol": "L:gfa.a(ZLGameEvent;)Z#2",
+      "renamedSymbol": "L:EffectEvent.a(ZLGameEvent;)Z#2",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -217220,7 +217364,7 @@
     },
     {
       "symbol": "L:gfa.a(ZLbs;)Z#3",
-      "renamedSymbol": "L:gfa.a(ZLGameEvent;)Z#3",
+      "renamedSymbol": "L:EffectEvent.a(ZLGameEvent;)Z#3",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -217231,7 +217375,7 @@
     },
     {
       "symbol": "L:gfa.a(ZLbs;)Z#4",
-      "renamedSymbol": "L:gfa.a(ZLGameEvent;)Z#4",
+      "renamedSymbol": "L:EffectEvent.a(ZLGameEvent;)Z#4",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -217242,7 +217386,7 @@
     },
     {
       "symbol": "L:gfa.a(ZLbs;)Z#5",
-      "renamedSymbol": "L:gfa.a(ZLGameEvent;)Z#5",
+      "renamedSymbol": "L:EffectEvent.a(ZLGameEvent;)Z#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -217253,7 +217397,7 @@
     },
     {
       "symbol": "L:gfa.a(ZLbs;)Z#6",
-      "renamedSymbol": "L:gfa.a(ZLGameEvent;)Z#6",
+      "renamedSymbol": "L:EffectEvent.a(ZLGameEvent;)Z#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -319641,7 +319785,7 @@
     },
     {
       "symbol": "L:la.b(IB)Z#0",
-      "renamedSymbol": "L:Room.b(IB)Z#0",
+      "renamedSymbol": "L:Room.hasEffect(IB)Z#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -380438,7 +380582,7 @@
     },
     {
       "symbol": "L:pi.a(Lkh;I)V#0",
-      "renamedSymbol": "L:PendingEvent.a(LBitPacketBuffer;I)V#0",
+      "renamedSymbol": "L:PendingEvent.decode(LBitPacketBuffer;I)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -380603,7 +380747,7 @@
     },
     {
       "symbol": "L:pi.b(Lkh;I)V#0",
-      "renamedSymbol": "L:PendingEvent.b(LBitPacketBuffer;I)V#0",
+      "renamedSymbol": "L:PendingEvent.encode(LBitPacketBuffer;I)V#0",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -380614,7 +380758,7 @@
     },
     {
       "symbol": "L:pi.b(Lkh;I)V#1",
-      "renamedSymbol": "L:PendingEvent.b(LBitPacketBuffer;I)V#1",
+      "renamedSymbol": "L:PendingEvent.encode(LBitPacketBuffer;I)V#1",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -380625,7 +380769,7 @@
     },
     {
       "symbol": "L:pi.b(Lkh;I)V#2",
-      "renamedSymbol": "L:PendingEvent.b(LBitPacketBuffer;I)V#2",
+      "renamedSymbol": "L:PendingEvent.encode(LBitPacketBuffer;I)V#2",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -380636,7 +380780,7 @@
     },
     {
       "symbol": "L:pi.b(Lkh;I)V#3",
-      "renamedSymbol": "L:PendingEvent.b(LBitPacketBuffer;I)V#3",
+      "renamedSymbol": "L:PendingEvent.encode(LBitPacketBuffer;I)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -380647,7 +380791,7 @@
     },
     {
       "symbol": "L:pi.b(Lkh;I)V#4",
-      "renamedSymbol": "L:PendingEvent.b(LBitPacketBuffer;I)V#4",
+      "renamedSymbol": "L:PendingEvent.encode(LBitPacketBuffer;I)V#4",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -380658,7 +380802,7 @@
     },
     {
       "symbol": "L:pi.b(Lkh;I)V#5",
-      "renamedSymbol": "L:PendingEvent.b(LBitPacketBuffer;I)V#5",
+      "renamedSymbol": "L:PendingEvent.encode(LBitPacketBuffer;I)V#5",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -532590,9 +532734,9 @@
     },
     {
       "symbol": "M:bs.a(Z)Z",
-      "renamedSymbol": "M:GameEvent.a(Z)Z",
+      "renamedSymbol": "M:GameEvent.isRoomScoped(Z)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "isRoomScoped",
       "declaration": {
         "file": "bs.java",
         "start": 691,
@@ -544206,9 +544350,9 @@
     },
     {
       "symbol": "M:dt.b(II)V",
-      "renamedSymbol": "M:PlayerSimulation.b(II)V",
+      "renamedSymbol": "M:PlayerSimulation.setEffectSlot(II)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "setEffectSlot",
       "declaration": {
         "file": "dt.java",
         "start": 14551,
@@ -544250,9 +544394,9 @@
     },
     {
       "symbol": "M:dt.c(II)Z",
-      "renamedSymbol": "M:PlayerSimulation.c(II)Z",
+      "renamedSymbol": "M:PlayerSimulation.hasOwnEffect(II)Z",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "hasOwnEffect",
       "declaration": {
         "file": "dt.java",
         "start": 1714,
@@ -556933,9 +557077,9 @@
     },
     {
       "symbol": "M:gfa.<init>(ILkh;)V",
-      "renamedSymbol": "M:gfa.<init>(ILBitPacketBuffer;)V",
+      "renamedSymbol": "M:EffectEvent.<init>(ILBitPacketBuffer;)V",
       "originalName": "gfa",
-      "renamedName": "gfa",
+      "renamedName": "EffectEvent",
       "declaration": {
         "file": "gfa.java",
         "start": 1279,
@@ -556944,7 +557088,7 @@
     },
     {
       "symbol": "M:gfa.a(B)I",
-      "renamedSymbol": "M:gfa.a(B)I",
+      "renamedSymbol": "M:EffectEvent.a(B)I",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -556955,7 +557099,7 @@
     },
     {
       "symbol": "M:gfa.a(IBLdt;)V",
-      "renamedSymbol": "M:gfa.a(IBLPlayerSimulation;)V",
+      "renamedSymbol": "M:EffectEvent.a(IBLPlayerSimulation;)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -556966,7 +557110,7 @@
     },
     {
       "symbol": "M:gfa.a(Ldt;III)V",
-      "renamedSymbol": "M:gfa.a(LPlayerSimulation;III)V",
+      "renamedSymbol": "M:EffectEvent.a(LPlayerSimulation;III)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -556977,7 +557121,7 @@
     },
     {
       "symbol": "M:gfa.a(Lkh;I)V",
-      "renamedSymbol": "M:gfa.encode(LBitPacketBuffer;I)V",
+      "renamedSymbol": "M:EffectEvent.encode(LBitPacketBuffer;I)V",
       "originalName": "a",
       "renamedName": "encode",
       "declaration": {
@@ -556988,9 +557132,9 @@
     },
     {
       "symbol": "M:gfa.a(Z)Z",
-      "renamedSymbol": "M:gfa.a(Z)Z",
+      "renamedSymbol": "M:EffectEvent.isRoomScoped(Z)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "isRoomScoped",
       "declaration": {
         "file": "gfa.java",
         "start": 877,
@@ -556999,7 +557143,7 @@
     },
     {
       "symbol": "M:gfa.a(ZLbs;)Z",
-      "renamedSymbol": "M:gfa.a(ZLGameEvent;)Z",
+      "renamedSymbol": "M:EffectEvent.a(ZLGameEvent;)Z",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -557010,7 +557154,7 @@
     },
     {
       "symbol": "M:gfa.b(B)I",
-      "renamedSymbol": "M:gfa.getTypeId(B)I",
+      "renamedSymbol": "M:EffectEvent.getTypeId(B)I",
       "originalName": "b",
       "renamedName": "getTypeId",
       "declaration": {
@@ -557021,7 +557165,7 @@
     },
     {
       "symbol": "M:gfa.b(I)V",
-      "renamedSymbol": "M:gfa.releaseStatics(I)V",
+      "renamedSymbol": "M:EffectEvent.releaseStatics(I)V",
       "originalName": "b",
       "renamedName": "releaseStatics",
       "declaration": {
@@ -582992,9 +583136,9 @@
     },
     {
       "symbol": "M:la.a(II)I",
-      "renamedSymbol": "M:Room.a(II)I",
+      "renamedSymbol": "M:Room.getEffectSlot(II)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getEffectSlot",
       "declaration": {
         "file": "la.java",
         "start": 22329,
@@ -583443,9 +583587,9 @@
     },
     {
       "symbol": "M:la.b(IB)Z",
-      "renamedSymbol": "M:Room.b(IB)Z",
+      "renamedSymbol": "M:Room.hasEffect(IB)Z",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "hasEffect",
       "declaration": {
         "file": "la.java",
         "start": 47105,
@@ -583520,9 +583664,9 @@
     },
     {
       "symbol": "M:la.b(ZII)V",
-      "renamedSymbol": "M:Room.b(ZII)V",
+      "renamedSymbol": "M:Room.setEffectSlot(ZII)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "setEffectSlot",
       "declaration": {
         "file": "la.java",
         "start": 51997,
@@ -583553,9 +583697,9 @@
     },
     {
       "symbol": "M:la.c(II)V",
-      "renamedSymbol": "M:Room.c(II)V",
+      "renamedSymbol": "M:Room.clearEffectSlot(II)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "clearEffectSlot",
       "declaration": {
         "file": "la.java",
         "start": 29336,
@@ -601274,9 +601418,9 @@
     },
     {
       "symbol": "M:pi.a(Lkh;I)V",
-      "renamedSymbol": "M:PendingEvent.a(LBitPacketBuffer;I)V",
+      "renamedSymbol": "M:PendingEvent.decode(LBitPacketBuffer;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "decode",
       "declaration": {
         "file": "pi.java",
         "start": 5471,
@@ -601329,9 +601473,9 @@
     },
     {
       "symbol": "M:pi.b(Lkh;I)V",
-      "renamedSymbol": "M:PendingEvent.b(LBitPacketBuffer;I)V",
+      "renamedSymbol": "M:PendingEvent.encode(LBitPacketBuffer;I)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "encode",
       "declaration": {
         "file": "pi.java",
         "start": 7952,
@@ -601340,9 +601484,9 @@
     },
     {
       "symbol": "M:pi.c(I)I",
-      "renamedSymbol": "M:PendingEvent.c(I)I",
+      "renamedSymbol": "M:PendingEvent.getEnd(I)I",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "getEnd",
       "declaration": {
         "file": "pi.java",
         "start": 6648,
@@ -650180,7 +650324,7 @@
     },
     {
       "symbol": "P:bs.a(Z)Z#0",
-      "renamedSymbol": "P:GameEvent.a(Z)Z#0",
+      "renamedSymbol": "P:GameEvent.isRoomScoped(Z)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -674809,7 +674953,7 @@
     },
     {
       "symbol": "P:dt.b(II)V#0",
-      "renamedSymbol": "P:PlayerSimulation.b(II)V#0",
+      "renamedSymbol": "P:PlayerSimulation.setEffectSlot(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -674820,7 +674964,7 @@
     },
     {
       "symbol": "P:dt.b(II)V#1",
-      "renamedSymbol": "P:PlayerSimulation.b(II)V#1",
+      "renamedSymbol": "P:PlayerSimulation.setEffectSlot(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -674875,7 +675019,7 @@
     },
     {
       "symbol": "P:dt.c(II)Z#0",
-      "renamedSymbol": "P:PlayerSimulation.c(II)Z#0",
+      "renamedSymbol": "P:PlayerSimulation.hasOwnEffect(II)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -674886,7 +675030,7 @@
     },
     {
       "symbol": "P:dt.c(II)Z#1",
-      "renamedSymbol": "P:PlayerSimulation.c(II)Z#1",
+      "renamedSymbol": "P:PlayerSimulation.hasOwnEffect(II)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -701033,7 +701177,7 @@
     },
     {
       "symbol": "P:gfa.<init>(ILkh;)V#0",
-      "renamedSymbol": "P:gfa.<init>(ILBitPacketBuffer;)V#0",
+      "renamedSymbol": "P:EffectEvent.<init>(ILBitPacketBuffer;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -701044,7 +701188,7 @@
     },
     {
       "symbol": "P:gfa.<init>(ILkh;)V#1",
-      "renamedSymbol": "P:gfa.<init>(ILBitPacketBuffer;)V#1",
+      "renamedSymbol": "P:EffectEvent.<init>(ILBitPacketBuffer;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -701055,7 +701199,7 @@
     },
     {
       "symbol": "P:gfa.a(B)I#0",
-      "renamedSymbol": "P:gfa.a(B)I#0",
+      "renamedSymbol": "P:EffectEvent.a(B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -701066,7 +701210,7 @@
     },
     {
       "symbol": "P:gfa.a(IBLdt;)V#0",
-      "renamedSymbol": "P:gfa.a(IBLPlayerSimulation;)V#0",
+      "renamedSymbol": "P:EffectEvent.a(IBLPlayerSimulation;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -701077,7 +701221,7 @@
     },
     {
       "symbol": "P:gfa.a(IBLdt;)V#1",
-      "renamedSymbol": "P:gfa.a(IBLPlayerSimulation;)V#1",
+      "renamedSymbol": "P:EffectEvent.a(IBLPlayerSimulation;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -701088,7 +701232,7 @@
     },
     {
       "symbol": "P:gfa.a(IBLdt;)V#2",
-      "renamedSymbol": "P:gfa.a(IBLPlayerSimulation;)V#2",
+      "renamedSymbol": "P:EffectEvent.a(IBLPlayerSimulation;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -701099,7 +701243,7 @@
     },
     {
       "symbol": "P:gfa.a(Ldt;III)V#0",
-      "renamedSymbol": "P:gfa.a(LPlayerSimulation;III)V#0",
+      "renamedSymbol": "P:EffectEvent.a(LPlayerSimulation;III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -701110,7 +701254,7 @@
     },
     {
       "symbol": "P:gfa.a(Ldt;III)V#1",
-      "renamedSymbol": "P:gfa.a(LPlayerSimulation;III)V#1",
+      "renamedSymbol": "P:EffectEvent.a(LPlayerSimulation;III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -701121,7 +701265,7 @@
     },
     {
       "symbol": "P:gfa.a(Ldt;III)V#2",
-      "renamedSymbol": "P:gfa.a(LPlayerSimulation;III)V#2",
+      "renamedSymbol": "P:EffectEvent.a(LPlayerSimulation;III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -701132,7 +701276,7 @@
     },
     {
       "symbol": "P:gfa.a(Ldt;III)V#3",
-      "renamedSymbol": "P:gfa.a(LPlayerSimulation;III)V#3",
+      "renamedSymbol": "P:EffectEvent.a(LPlayerSimulation;III)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -701143,7 +701287,7 @@
     },
     {
       "symbol": "P:gfa.a(Lkh;I)V#0",
-      "renamedSymbol": "P:gfa.encode(LBitPacketBuffer;I)V#0",
+      "renamedSymbol": "P:EffectEvent.encode(LBitPacketBuffer;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -701154,7 +701298,7 @@
     },
     {
       "symbol": "P:gfa.a(Lkh;I)V#1",
-      "renamedSymbol": "P:gfa.encode(LBitPacketBuffer;I)V#1",
+      "renamedSymbol": "P:EffectEvent.encode(LBitPacketBuffer;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -701165,7 +701309,7 @@
     },
     {
       "symbol": "P:gfa.a(Z)Z#0",
-      "renamedSymbol": "P:gfa.a(Z)Z#0",
+      "renamedSymbol": "P:EffectEvent.isRoomScoped(Z)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -701176,7 +701320,7 @@
     },
     {
       "symbol": "P:gfa.a(ZLbs;)Z#0",
-      "renamedSymbol": "P:gfa.a(ZLGameEvent;)Z#0",
+      "renamedSymbol": "P:EffectEvent.a(ZLGameEvent;)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -701187,7 +701331,7 @@
     },
     {
       "symbol": "P:gfa.a(ZLbs;)Z#1",
-      "renamedSymbol": "P:gfa.a(ZLGameEvent;)Z#1",
+      "renamedSymbol": "P:EffectEvent.a(ZLGameEvent;)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -701198,7 +701342,7 @@
     },
     {
       "symbol": "P:gfa.b(B)I#0",
-      "renamedSymbol": "P:gfa.getTypeId(B)I#0",
+      "renamedSymbol": "P:EffectEvent.getTypeId(B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -701209,7 +701353,7 @@
     },
     {
       "symbol": "P:gfa.b(I)V#0",
-      "renamedSymbol": "P:gfa.releaseStatics(I)V#0",
+      "renamedSymbol": "P:EffectEvent.releaseStatics(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -765174,7 +765318,7 @@
     },
     {
       "symbol": "P:la.a(II)I#0",
-      "renamedSymbol": "P:Room.a(II)I#0",
+      "renamedSymbol": "P:Room.getEffectSlot(II)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -765185,7 +765329,7 @@
     },
     {
       "symbol": "P:la.a(II)I#1",
-      "renamedSymbol": "P:Room.a(II)I#1",
+      "renamedSymbol": "P:Room.getEffectSlot(II)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -766923,7 +767067,7 @@
     },
     {
       "symbol": "P:la.b(IB)Z#0",
-      "renamedSymbol": "P:Room.b(IB)Z#0",
+      "renamedSymbol": "P:Room.hasEffect(IB)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -766934,7 +767078,7 @@
     },
     {
       "symbol": "P:la.b(IB)Z#1",
-      "renamedSymbol": "P:Room.b(IB)Z#1",
+      "renamedSymbol": "P:Room.hasEffect(IB)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -767176,7 +767320,7 @@
     },
     {
       "symbol": "P:la.b(ZII)V#0",
-      "renamedSymbol": "P:Room.b(ZII)V#0",
+      "renamedSymbol": "P:Room.setEffectSlot(ZII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -767187,7 +767331,7 @@
     },
     {
       "symbol": "P:la.b(ZII)V#1",
-      "renamedSymbol": "P:Room.b(ZII)V#1",
+      "renamedSymbol": "P:Room.setEffectSlot(ZII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -767198,7 +767342,7 @@
     },
     {
       "symbol": "P:la.b(ZII)V#2",
-      "renamedSymbol": "P:Room.b(ZII)V#2",
+      "renamedSymbol": "P:Room.setEffectSlot(ZII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -767231,7 +767375,7 @@
     },
     {
       "symbol": "P:la.c(II)V#0",
-      "renamedSymbol": "P:Room.c(II)V#0",
+      "renamedSymbol": "P:Room.clearEffectSlot(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -767242,7 +767386,7 @@
     },
     {
       "symbol": "P:la.c(II)V#1",
-      "renamedSymbol": "P:Room.c(II)V#1",
+      "renamedSymbol": "P:Room.clearEffectSlot(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -807491,7 +807635,7 @@
     },
     {
       "symbol": "P:pi.a(Lkh;I)V#0",
-      "renamedSymbol": "P:PendingEvent.a(LBitPacketBuffer;I)V#0",
+      "renamedSymbol": "P:PendingEvent.decode(LBitPacketBuffer;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -807502,7 +807646,7 @@
     },
     {
       "symbol": "P:pi.a(Lkh;I)V#1",
-      "renamedSymbol": "P:PendingEvent.a(LBitPacketBuffer;I)V#1",
+      "renamedSymbol": "P:PendingEvent.decode(LBitPacketBuffer;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -807579,7 +807723,7 @@
     },
     {
       "symbol": "P:pi.b(Lkh;I)V#0",
-      "renamedSymbol": "P:PendingEvent.b(LBitPacketBuffer;I)V#0",
+      "renamedSymbol": "P:PendingEvent.encode(LBitPacketBuffer;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -807590,7 +807734,7 @@
     },
     {
       "symbol": "P:pi.b(Lkh;I)V#1",
-      "renamedSymbol": "P:PendingEvent.b(LBitPacketBuffer;I)V#1",
+      "renamedSymbol": "P:PendingEvent.encode(LBitPacketBuffer;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -807601,7 +807745,7 @@
     },
     {
       "symbol": "P:pi.c(I)I#0",
-      "renamedSymbol": "P:PendingEvent.c(I)I#0",
+      "renamedSymbol": "P:PendingEvent.getEnd(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -878643,7 +878787,7 @@
       "original": "TombRacer.java",
       "renamed": "TombRacer.java",
       "inputSha256": "7ea25c7c242b079dab92fb5f98648396480d7fc930afc21a031708b6cdb3361f",
-      "outputSha256": "d4416b53619fc7db3f438cdb74af0d38535cefe059e5d010126749c32e373c2f",
+      "outputSha256": "bfe887045f47be124c35c72b81c66ad4977b31f1eea5c2e2c75e2ade93fd1647",
       "edits": [
         {
           "start": 279,
@@ -880254,6 +880398,13 @@
           "symbol": "C:csa",
           "original": "csa",
           "renamed": "RoomComponent"
+        },
+        {
+          "start": 12407,
+          "end": 12410,
+          "symbol": "C:gfa",
+          "original": "gfa",
+          "renamed": "EffectEvent"
         },
         {
           "start": 12411,
@@ -897795,7 +897946,7 @@
       "original": "bs.java",
       "renamed": "GameEvent.java",
       "inputSha256": "b964c43afb5ef116baa0a34a9a7d1df5b39b821d13f10fffaf54c27f0d221f52",
-      "outputSha256": "10e5b3554f7d7d94ff45c5d56b533bb411c8838558cb9e14902bf01ba57c8d9d",
+      "outputSha256": "55b04643b449faf5e35bedf1a49cb40b4bcc3cc76b8cea3283c96f60d0a49c12",
       "edits": [
         {
           "start": 53,
@@ -897852,6 +898003,13 @@
           "symbol": "M:bs.b(B)I",
           "original": "b",
           "renamed": "getTypeId"
+        },
+        {
+          "start": 691,
+          "end": 692,
+          "symbol": "M:bs.a(Z)Z",
+          "original": "a",
+          "renamed": "isRoomScoped"
         },
         {
           "start": 956,
@@ -903763,7 +903921,7 @@
       "original": "cm.java",
       "renamed": "cm.java",
       "inputSha256": "d5612b385f76a29639a022f24130241c8fba948495a68272467ae689b1a8f263",
-      "outputSha256": "4c413ff2ece99a2c11b6cc64929f1168377022c77b159e3d962ce2f0b23339e4",
+      "outputSha256": "ad4722508759681d44d0f932c7ae17f4e1fcd37b7a1f9d9bd0ba61130150d2fc",
       "edits": [
         {
           "start": 64,
@@ -903862,6 +904020,13 @@
           "symbol": "M:cm.a(Z)V",
           "original": "a",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 7435,
+          "end": 7438,
+          "symbol": "C:gfa",
+          "original": "gfa",
+          "renamed": "EffectEvent"
         },
         {
           "start": 7540,
@@ -916388,7 +916553,7 @@
       "original": "dt.java",
       "renamed": "PlayerSimulation.java",
       "inputSha256": "f7a719decc9f30c3175be67a2cd8bdff15a4f9e12b03b98ee29e0f5856dbe596",
-      "outputSha256": "09cb5f5f36fad25faf59f06f937f97ef41668d670e22b54115fdbe0b3feb0927",
+      "outputSha256": "e96cde2ead77def5d9b18d4a64ef1804d2eff51d18f8cfd5229bd7ae2566ca01",
       "edits": [
         {
           "start": 50,
@@ -916396,6 +916561,13 @@
           "symbol": "C:dt",
           "original": "dt",
           "renamed": "PlayerSimulation"
+        },
+        {
+          "start": 102,
+          "end": 109,
+          "symbol": "F:dt.field_j:[I",
+          "original": "field_j",
+          "renamed": "effectSlots"
         },
         {
           "start": 140,
@@ -916517,6 +916689,13 @@
           "renamed": "rooms"
         },
         {
+          "start": 1714,
+          "end": 1715,
+          "symbol": "M:dt.c(II)Z",
+          "original": "c",
+          "renamed": "hasOwnEffect"
+        },
+        {
           "start": 1785,
           "end": 1792,
           "symbol": "F:dt.field_b:[Lla;",
@@ -916529,6 +916708,20 @@
           "symbol": "C:la",
           "original": "la",
           "renamed": "Room"
+        },
+        {
+          "start": 1836,
+          "end": 1843,
+          "symbol": "F:dt.field_j:[I",
+          "original": "field_j",
+          "renamed": "effectSlots"
+        },
+        {
+          "start": 1904,
+          "end": 1911,
+          "symbol": "F:dt.field_j:[I",
+          "original": "field_j",
+          "renamed": "effectSlots"
         },
         {
           "start": 2058,
@@ -916552,6 +916745,13 @@
           "renamed": "getObserver"
         },
         {
+          "start": 3400,
+          "end": 3401,
+          "symbol": "M:dt.c(II)Z",
+          "original": "c",
+          "renamed": "hasOwnEffect"
+        },
+        {
           "start": 3486,
           "end": 3493,
           "symbol": "F:dt.field_b:[Lla;",
@@ -916573,6 +916773,20 @@
           "renamed": "getCourseIndex"
         },
         {
+          "start": 3527,
+          "end": 3528,
+          "symbol": "M:la.b(IB)Z",
+          "original": "b",
+          "renamed": "hasEffect"
+        },
+        {
+          "start": 3608,
+          "end": 3609,
+          "symbol": "M:dt.c(II)Z",
+          "original": "c",
+          "renamed": "hasOwnEffect"
+        },
+        {
           "start": 3692,
           "end": 3699,
           "symbol": "F:dt.field_b:[Lla;",
@@ -916592,6 +916806,13 @@
           "symbol": "M:hca.r(I)I",
           "original": "r",
           "renamed": "getCourseIndex"
+        },
+        {
+          "start": 3733,
+          "end": 3734,
+          "symbol": "M:la.b(IB)Z",
+          "original": "b",
+          "renamed": "hasEffect"
         },
         {
           "start": 4041,
@@ -916788,6 +917009,13 @@
           "symbol": "F:dt.field_c:I",
           "original": "field_c",
           "renamed": "tick"
+        },
+        {
+          "start": 7786,
+          "end": 7793,
+          "symbol": "F:dt.field_j:[I",
+          "original": "field_j",
+          "renamed": "effectSlots"
         },
         {
           "start": 7856,
@@ -917077,6 +917305,20 @@
           "renamed": "dumpDebug"
         },
         {
+          "start": 12383,
+          "end": 12390,
+          "symbol": "F:dt.field_j:[I",
+          "original": "field_j",
+          "renamed": "effectSlots"
+        },
+        {
+          "start": 12430,
+          "end": 12437,
+          "symbol": "F:dt.field_j:[I",
+          "original": "field_j",
+          "renamed": "effectSlots"
+        },
+        {
           "start": 12464,
           "end": 12466,
           "symbol": "C:la",
@@ -917112,11 +917354,25 @@
           "renamed": "rooms"
         },
         {
+          "start": 12810,
+          "end": 12811,
+          "symbol": "M:la.b(ZII)V",
+          "original": "b",
+          "renamed": "setEffectSlot"
+        },
+        {
           "start": 12877,
           "end": 12884,
           "symbol": "F:dt.field_b:[Lla;",
           "original": "field_b",
           "renamed": "rooms"
+        },
+        {
+          "start": 12893,
+          "end": 12894,
+          "symbol": "M:la.b(ZII)V",
+          "original": "b",
+          "renamed": "setEffectSlot"
         },
         {
           "start": 13052,
@@ -917126,11 +917382,25 @@
           "renamed": "rooms"
         },
         {
+          "start": 13068,
+          "end": 13069,
+          "symbol": "M:la.c(II)V",
+          "original": "c",
+          "renamed": "clearEffectSlot"
+        },
+        {
           "start": 13128,
           "end": 13135,
           "symbol": "F:dt.field_b:[Lla;",
           "original": "field_b",
           "renamed": "rooms"
+        },
+        {
+          "start": 13144,
+          "end": 13145,
+          "symbol": "M:la.c(II)V",
+          "original": "c",
+          "renamed": "clearEffectSlot"
         },
         {
           "start": 13323,
@@ -917154,6 +917424,13 @@
           "renamed": "getCourseIndex"
         },
         {
+          "start": 13353,
+          "end": 13354,
+          "symbol": "M:la.a(II)I",
+          "original": "a",
+          "renamed": "getEffectSlot"
+        },
+        {
           "start": 13429,
           "end": 13436,
           "symbol": "F:dt.field_b:[Lla;",
@@ -917173,6 +917450,13 @@
           "symbol": "M:hca.r(I)I",
           "original": "r",
           "renamed": "getCourseIndex"
+        },
+        {
+          "start": 13459,
+          "end": 13460,
+          "symbol": "M:la.a(II)I",
+          "original": "a",
+          "renamed": "getEffectSlot"
         },
         {
           "start": 13699,
@@ -917266,6 +917550,20 @@
           "renamed": "observer"
         },
         {
+          "start": 14551,
+          "end": 14552,
+          "symbol": "M:dt.b(II)V",
+          "original": "b",
+          "renamed": "setEffectSlot"
+        },
+        {
+          "start": 14592,
+          "end": 14599,
+          "symbol": "F:dt.field_j:[I",
+          "original": "field_j",
+          "renamed": "effectSlots"
+        },
+        {
           "start": 14635,
           "end": 14637,
           "symbol": "C:la",
@@ -917308,6 +917606,13 @@
           "renamed": "Player"
         },
         {
+          "start": 15169,
+          "end": 15176,
+          "symbol": "F:dt.field_j:[I",
+          "original": "field_j",
+          "renamed": "effectSlots"
+        },
+        {
           "start": 15253,
           "end": 15260,
           "symbol": "F:dt.field_g:Lhca;",
@@ -917348,6 +917653,20 @@
           "symbol": "F:dt.field_m:I",
           "original": "field_m",
           "renamed": "roomCount"
+        },
+        {
+          "start": 15483,
+          "end": 15490,
+          "symbol": "F:dt.field_j:[I",
+          "original": "field_j",
+          "renamed": "effectSlots"
+        },
+        {
+          "start": 15530,
+          "end": 15537,
+          "symbol": "F:dt.field_j:[I",
+          "original": "field_j",
+          "renamed": "effectSlots"
         }
       ]
     },
@@ -926232,7 +926551,7 @@
       "original": "eua.java",
       "renamed": "eua.java",
       "inputSha256": "13fe2ce113d9cf1ac4d7a6f04bb338dd40660af64492816788d7d8dbfeef45a3",
-      "outputSha256": "fc4800919f0902770e6021383cd38988fc8dbfe010719682cac50008695868e0",
+      "outputSha256": "e55db781f342b3b5c77644d3451d330b63c56d292012eb65bf66bcd0568738ae",
       "edits": [
         {
           "start": 1144,
@@ -926263,11 +926582,25 @@
           "renamed": "BitmapFont"
         },
         {
+          "start": 4377,
+          "end": 4380,
+          "symbol": "C:gfa",
+          "original": "gfa",
+          "renamed": "EffectEvent"
+        },
+        {
           "start": 4479,
           "end": 4481,
           "symbol": "C:iu",
           "original": "iu",
           "renamed": "Sprite"
+        },
+        {
+          "start": 4752,
+          "end": 4755,
+          "symbol": "C:gfa",
+          "original": "gfa",
+          "renamed": "EffectEvent"
         },
         {
           "start": 7330,
@@ -944593,7 +944926,7 @@
       "original": "gea.java",
       "renamed": "gea.java",
       "inputSha256": "77cfd1282fea871a0bdce1db7154ba2a9453bc4ff2521b5d9e3288aa6cca7d99",
-      "outputSha256": "bb8dfea5364962a9a0e81a64343b90638c1d99795b778332b956c9d91d7cf949",
+      "outputSha256": "943c375f8b95ca8285f02f4e15cd238b7b60302fb4dec3054d860afd52d3894d",
       "edits": [
         {
           "start": 412,
@@ -944666,11 +944999,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 2596,
+          "end": 2599,
+          "symbol": "C:gfa",
+          "original": "gfa",
+          "renamed": "EffectEvent"
+        },
+        {
           "start": 2614,
           "end": 2616,
           "symbol": "C:iu",
           "original": "iu",
           "renamed": "Sprite"
+        },
+        {
+          "start": 2636,
+          "end": 2639,
+          "symbol": "C:gfa",
+          "original": "gfa",
+          "renamed": "EffectEvent"
         },
         {
           "start": 2710,
@@ -944802,16 +945149,37 @@
     },
     {
       "original": "gfa.java",
-      "renamed": "gfa.java",
+      "renamed": "EffectEvent.java",
       "inputSha256": "de260a73b377fee3a0e7c6062785e777d96ce2afe07656a8667d00be243f6c40",
-      "outputSha256": "3b528458331a3d33680f6317f93e9974888d2d68190dfb98757e6b5cd4c6d468",
+      "outputSha256": "96b02422fa9904f9af8cc5f14fc610daf3669cfac22fd64ab1a88c654cd4ef88",
       "edits": [
+        {
+          "start": 50,
+          "end": 53,
+          "symbol": "C:gfa",
+          "original": "gfa",
+          "renamed": "EffectEvent"
+        },
         {
           "start": 62,
           "end": 64,
           "symbol": "C:bs",
           "original": "bs",
           "renamed": "GameEvent"
+        },
+        {
+          "start": 106,
+          "end": 113,
+          "symbol": "F:gfa.field_n:I",
+          "original": "field_n",
+          "renamed": "effectSlot"
+        },
+        {
+          "start": 131,
+          "end": 138,
+          "symbol": "F:gfa.field_k:I",
+          "original": "field_k",
+          "renamed": "value"
         },
         {
           "start": 151,
@@ -944849,11 +945217,25 @@
           "renamed": "writeBits"
         },
         {
+          "start": 346,
+          "end": 353,
+          "symbol": "F:gfa.field_n:I",
+          "original": "field_n",
+          "renamed": "effectSlot"
+        },
+        {
           "start": 376,
           "end": 377,
           "symbol": "M:kh.a(BII)V",
           "original": "a",
           "renamed": "writeBits"
+        },
+        {
+          "start": 396,
+          "end": 403,
+          "symbol": "F:gfa.field_k:I",
+          "original": "field_k",
+          "renamed": "value"
         },
         {
           "start": 636,
@@ -944863,11 +945245,32 @@
           "renamed": "releaseStatics"
         },
         {
+          "start": 762,
+          "end": 765,
+          "symbol": "C:gfa",
+          "original": "gfa",
+          "renamed": "EffectEvent"
+        },
+        {
           "start": 766,
           "end": 767,
           "symbol": "M:gfa.b(I)V",
           "original": "b",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 877,
+          "end": 878,
+          "symbol": "M:gfa.a(Z)Z",
+          "original": "a",
+          "renamed": "isRoomScoped"
+        },
+        {
+          "start": 977,
+          "end": 984,
+          "symbol": "F:gfa.field_n:I",
+          "original": "field_n",
+          "renamed": "effectSlot"
         },
         {
           "start": 1145,
@@ -944877,6 +945280,20 @@
           "renamed": "getTypeId"
         },
         {
+          "start": 1206,
+          "end": 1213,
+          "symbol": "F:gfa.field_k:I",
+          "original": "field_k",
+          "renamed": "value"
+        },
+        {
+          "start": 1279,
+          "end": 1282,
+          "symbol": "M:gfa.<init>(ILkh;)V",
+          "original": "gfa",
+          "renamed": "EffectEvent"
+        },
+        {
           "start": 1295,
           "end": 1297,
           "symbol": "C:kh",
@@ -944884,11 +945301,25 @@
           "renamed": "BitPacketBuffer"
         },
         {
+          "start": 1368,
+          "end": 1375,
+          "symbol": "F:gfa.field_n:I",
+          "original": "field_n",
+          "renamed": "effectSlot"
+        },
+        {
           "start": 1385,
           "end": 1386,
           "symbol": "M:kh.b(BI)I",
           "original": "b",
           "renamed": "readBits"
+        },
+        {
+          "start": 1417,
+          "end": 1424,
+          "symbol": "F:gfa.field_k:I",
+          "original": "field_k",
+          "renamed": "value"
         },
         {
           "start": 1434,
@@ -944905,6 +945336,20 @@
           "renamed": "Sprite"
         },
         {
+          "start": 1773,
+          "end": 1780,
+          "symbol": "F:gfa.field_k:I",
+          "original": "field_k",
+          "renamed": "value"
+        },
+        {
+          "start": 1812,
+          "end": 1819,
+          "symbol": "F:gfa.field_k:I",
+          "original": "field_k",
+          "renamed": "value"
+        },
+        {
           "start": 1864,
           "end": 1866,
           "symbol": "C:bs",
@@ -944917,6 +945362,34 @@
           "symbol": "C:iu",
           "original": "iu",
           "renamed": "Sprite"
+        },
+        {
+          "start": 2253,
+          "end": 2256,
+          "symbol": "C:gfa",
+          "original": "gfa",
+          "renamed": "EffectEvent"
+        },
+        {
+          "start": 2326,
+          "end": 2329,
+          "symbol": "C:gfa",
+          "original": "gfa",
+          "renamed": "EffectEvent"
+        },
+        {
+          "start": 2341,
+          "end": 2348,
+          "symbol": "F:gfa.field_n:I",
+          "original": "field_n",
+          "renamed": "effectSlot"
+        },
+        {
+          "start": 2357,
+          "end": 2364,
+          "symbol": "F:gfa.field_n:I",
+          "original": "field_n",
+          "renamed": "effectSlot"
         },
         {
           "start": 3015,
@@ -944933,11 +945406,60 @@
           "renamed": "Sprite"
         },
         {
+          "start": 3392,
+          "end": 3393,
+          "symbol": "M:gfa.a(Z)Z",
+          "original": "a",
+          "renamed": "isRoomScoped"
+        },
+        {
+          "start": 3430,
+          "end": 3437,
+          "symbol": "F:gfa.field_n:I",
+          "original": "field_n",
+          "renamed": "effectSlot"
+        },
+        {
+          "start": 3518,
+          "end": 3525,
+          "symbol": "F:gfa.field_n:I",
+          "original": "field_n",
+          "renamed": "effectSlot"
+        },
+        {
           "start": 4249,
           "end": 4251,
           "symbol": "C:dt",
           "original": "dt",
           "renamed": "PlayerSimulation"
+        },
+        {
+          "start": 4295,
+          "end": 4296,
+          "symbol": "M:gfa.a(Z)Z",
+          "original": "a",
+          "renamed": "isRoomScoped"
+        },
+        {
+          "start": 4345,
+          "end": 4352,
+          "symbol": "F:gfa.field_n:I",
+          "original": "field_n",
+          "renamed": "effectSlot"
+        },
+        {
+          "start": 4401,
+          "end": 4402,
+          "symbol": "M:dt.b(II)V",
+          "original": "b",
+          "renamed": "setEffectSlot"
+        },
+        {
+          "start": 4408,
+          "end": 4415,
+          "symbol": "F:gfa.field_n:I",
+          "original": "field_n",
+          "renamed": "effectSlot"
         }
       ]
     },
@@ -966721,7 +967243,7 @@
       "original": "jga.java",
       "renamed": "TextResourceLoader.java",
       "inputSha256": "ce96100e7ded5b81eca667e60a02c9db5c0a851ec0a17603c4ae1230a2556185",
-      "outputSha256": "40b3a6a13ebb6bd1ecbcb7c7416184c4398b9eb8ef8197cbb0d47803e523b3c7",
+      "outputSha256": "2af4d623239380e002740136198ba8a3ed243dfb3f5ed9b3084fc854a7cb3bd7",
       "edits": [
         {
           "start": 50,
@@ -967053,6 +967575,13 @@
           "renamed": "ConsoleToken"
         },
         {
+          "start": 32477,
+          "end": 32480,
+          "symbol": "C:gfa",
+          "original": "gfa",
+          "renamed": "EffectEvent"
+        },
+        {
           "start": 33688,
           "end": 33690,
           "symbol": "C:tp",
@@ -967121,6 +967650,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "WhiteLightSensorComponent"
+        },
+        {
+          "start": 38971,
+          "end": 38974,
+          "symbol": "C:gfa",
+          "original": "gfa",
+          "renamed": "EffectEvent"
         },
         {
           "start": 39646,
@@ -980065,7 +980601,7 @@
       "original": "la.java",
       "renamed": "Room.java",
       "inputSha256": "8faa19b96925d404db650c9bd9afd4c1c3c9c8fd6d073e07c5e5d38b07c89e15",
-      "outputSha256": "8355f7b83900ff9fb0a0c40d74b6b3c9ef212784c6f24b99bc7d61729e888983",
+      "outputSha256": "cdd4ac8eff3de8ecbeca995ad799cfbd30546ea90252ae54a8698d7890fd6509",
       "edits": [
         {
           "start": 50,
@@ -980297,6 +980833,13 @@
           "symbol": "F:la.field_Q:I",
           "original": "field_Q",
           "renamed": "entranceX"
+        },
+        {
+          "start": 1021,
+          "end": 1028,
+          "symbol": "F:la.field_b:[I",
+          "original": "field_b",
+          "renamed": "effectSlots"
         },
         {
           "start": 1046,
@@ -981475,6 +982018,13 @@
           "renamed": "collisionGrid"
         },
         {
+          "start": 21700,
+          "end": 21707,
+          "symbol": "F:la.field_b:[I",
+          "original": "field_b",
+          "renamed": "effectSlots"
+        },
+        {
           "start": 21860,
           "end": 21863,
           "symbol": "C:fsa",
@@ -981501,6 +982051,20 @@
           "symbol": "C:fsa",
           "original": "fsa",
           "renamed": "Trap"
+        },
+        {
+          "start": 22329,
+          "end": 22330,
+          "symbol": "M:la.a(II)I",
+          "original": "a",
+          "renamed": "getEffectSlot"
+        },
+        {
+          "start": 22456,
+          "end": 22463,
+          "symbol": "F:la.field_b:[I",
+          "original": "field_b",
+          "renamed": "effectSlots"
         },
         {
           "start": 22667,
@@ -982084,6 +982648,20 @@
           "renamed": "Trap"
         },
         {
+          "start": 29336,
+          "end": 29337,
+          "symbol": "M:la.c(II)V",
+          "original": "c",
+          "renamed": "clearEffectSlot"
+        },
+        {
+          "start": 29377,
+          "end": 29384,
+          "symbol": "F:la.field_b:[I",
+          "original": "field_b",
+          "renamed": "effectSlots"
+        },
+        {
           "start": 29446,
           "end": 29447,
           "symbol": "M:la.i(B)V",
@@ -982250,6 +982828,13 @@
           "symbol": "F:la.field_N:I",
           "original": "field_N",
           "renamed": "courseIndex"
+        },
+        {
+          "start": 31964,
+          "end": 31965,
+          "symbol": "M:la.c(II)V",
+          "original": "c",
+          "renamed": "clearEffectSlot"
         },
         {
           "start": 32066,
@@ -983113,6 +983698,13 @@
           "renamed": "entranceX"
         },
         {
+          "start": 47105,
+          "end": 47106,
+          "symbol": "M:la.b(IB)Z",
+          "original": "b",
+          "renamed": "hasEffect"
+        },
+        {
           "start": 47173,
           "end": 47176,
           "symbol": "C:fsa",
@@ -983139,6 +983731,13 @@
           "symbol": "C:fsa",
           "original": "fsa",
           "renamed": "Trap"
+        },
+        {
+          "start": 47260,
+          "end": 47267,
+          "symbol": "F:la.field_b:[I",
+          "original": "field_b",
+          "renamed": "effectSlots"
         },
         {
           "start": 47348,
@@ -983463,6 +984062,20 @@
           "renamed": "width"
         },
         {
+          "start": 51997,
+          "end": 51998,
+          "symbol": "M:la.b(ZII)V",
+          "original": "b",
+          "renamed": "setEffectSlot"
+        },
+        {
+          "start": 52054,
+          "end": 52061,
+          "symbol": "F:la.field_b:[I",
+          "original": "field_b",
+          "renamed": "effectSlots"
+        },
+        {
           "start": 52355,
           "end": 52362,
           "symbol": "F:la.field_Q:I",
@@ -983517,6 +984130,13 @@
           "symbol": "F:la.field_L:I",
           "original": "field_L",
           "renamed": "entranceY"
+        },
+        {
+          "start": 52612,
+          "end": 52619,
+          "symbol": "F:la.field_b:[I",
+          "original": "field_b",
+          "renamed": "effectSlots"
         },
         {
           "start": 52654,
@@ -984002,6 +984622,13 @@
           "renamed": "spawnParticle"
         },
         {
+          "start": 58858,
+          "end": 58859,
+          "symbol": "M:la.b(ZII)V",
+          "original": "b",
+          "renamed": "setEffectSlot"
+        },
+        {
           "start": 59051,
           "end": 59053,
           "symbol": "C:ep",
@@ -984172,6 +984799,13 @@
           "renamed": "removeFirst"
         },
         {
+          "start": 66232,
+          "end": 66239,
+          "symbol": "F:la.field_b:[I",
+          "original": "field_b",
+          "renamed": "effectSlots"
+        },
+        {
           "start": 66283,
           "end": 66290,
           "symbol": "F:la.field_M:I",
@@ -984338,6 +984972,27 @@
           "symbol": "C:vna",
           "original": "vna",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 68002,
+          "end": 68009,
+          "symbol": "F:la.field_b:[I",
+          "original": "field_b",
+          "renamed": "effectSlots"
+        },
+        {
+          "start": 68157,
+          "end": 68164,
+          "symbol": "F:la.field_b:[I",
+          "original": "field_b",
+          "renamed": "effectSlots"
+        },
+        {
+          "start": 68215,
+          "end": 68222,
+          "symbol": "F:la.field_b:[I",
+          "original": "field_b",
+          "renamed": "effectSlots"
         },
         {
           "start": 68266,
@@ -986905,7 +987560,7 @@
       "original": "lka.java",
       "renamed": "EventFactory.java",
       "inputSha256": "c9aeadf27f192646d4ceb26fc6b78d8394eae03665c350ee407f519750610363",
-      "outputSha256": "94e58bc49fa21c73fc2b1e6287f07eca055f019a40592af6b1e39efb3bfff56f",
+      "outputSha256": "c8052a073f1016ae674e17a025a383402d6cd8e377dea3d0779f5a892102ab35",
       "edits": [
         {
           "start": 50,
@@ -986943,6 +987598,13 @@
           "renamed": "GameEvent"
         },
         {
+          "start": 240,
+          "end": 243,
+          "symbol": "C:gfa",
+          "original": "gfa",
+          "renamed": "EffectEvent"
+        },
+        {
           "start": 554,
           "end": 556,
           "symbol": "C:bs",
@@ -986955,6 +987617,13 @@
           "symbol": "M:kh.b(BI)I",
           "original": "b",
           "renamed": "readBits"
+        },
+        {
+          "start": 737,
+          "end": 740,
+          "symbol": "C:gfa",
+          "original": "gfa",
+          "renamed": "EffectEvent"
         },
         {
           "start": 778,
@@ -1007938,7 +1008607,7 @@
       "original": "ok.java",
       "renamed": "PowerDownItemBehaviour.java",
       "inputSha256": "e802c2c2cff6e391585122a46fc223a2833586187174e44054183beccda11acf",
-      "outputSha256": "9fe94f8d72e51aa1591a496f8ba86f527e7b7f1759b0d770ee1945994f700f78",
+      "outputSha256": "5d99d1df27db35c0b15b2d0ed470ca347c12f1bf31d94911d8bc64c28b47e811",
       "edits": [
         {
           "start": 50,
@@ -1007953,6 +1008622,13 @@
           "symbol": "C:pd",
           "original": "pd",
           "renamed": "ItemBehaviour"
+        },
+        {
+          "start": 106,
+          "end": 109,
+          "symbol": "C:gfa",
+          "original": "gfa",
+          "renamed": "EffectEvent"
         },
         {
           "start": 246,
@@ -1008051,6 +1008727,13 @@
           "symbol": "C:kh",
           "original": "kh",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 1155,
+          "end": 1158,
+          "symbol": "C:gfa",
+          "original": "gfa",
+          "renamed": "EffectEvent"
         },
         {
           "start": 1161,
@@ -1015948,7 +1016631,7 @@
       "original": "pi.java",
       "renamed": "PendingEvent.java",
       "inputSha256": "c493e6b48218757440022059df1e191e3cdc55e755e7ca94627b8b48acf9bd54",
-      "outputSha256": "f6974fd52ce5724146c93d6a9bd5cf65b87b80d3946c28ff2eba1d8d54756d50",
+      "outputSha256": "15165d4c8b25f5eb739d8facd689735727c3af9c36a3a4ffd4fd09c056b59011",
       "edits": [
         {
           "start": 50,
@@ -1015979,6 +1016662,13 @@
           "renamed": "duration"
         },
         {
+          "start": 132,
+          "end": 139,
+          "symbol": "F:pi.field_l:I",
+          "original": "field_l",
+          "renamed": "end"
+        },
+        {
           "start": 157,
           "end": 164,
           "symbol": "F:pi.field_f:I",
@@ -1015991,6 +1016681,13 @@
           "symbol": "C:bs",
           "original": "bs",
           "renamed": "GameEvent"
+        },
+        {
+          "start": 181,
+          "end": 188,
+          "symbol": "F:pi.field_g:Lbs;",
+          "original": "field_g",
+          "renamed": "event"
         },
         {
           "start": 206,
@@ -1016021,11 +1016718,25 @@
           "renamed": "duration"
         },
         {
+          "start": 922,
+          "end": 929,
+          "symbol": "F:pi.field_l:I",
+          "original": "field_l",
+          "renamed": "end"
+        },
+        {
           "start": 1021,
           "end": 1028,
           "symbol": "F:pi.field_k:I",
           "original": "field_k",
           "renamed": "duration"
+        },
+        {
+          "start": 1098,
+          "end": 1105,
+          "symbol": "F:pi.field_l:I",
+          "original": "field_l",
+          "renamed": "end"
         },
         {
           "start": 1193,
@@ -1016075,6 +1016786,20 @@
           "symbol": "C:pi",
           "original": "pi",
           "renamed": "PendingEvent"
+        },
+        {
+          "start": 2224,
+          "end": 2231,
+          "symbol": "F:pi.field_g:Lbs;",
+          "original": "field_g",
+          "renamed": "event"
+        },
+        {
+          "start": 2248,
+          "end": 2255,
+          "symbol": "F:pi.field_g:Lbs;",
+          "original": "field_g",
+          "renamed": "event"
         },
         {
           "start": 2317,
@@ -1016131,6 +1016856,20 @@
           "symbol": "M:pi.a(Z)I",
           "original": "a",
           "renamed": "getStart"
+        },
+        {
+          "start": 2722,
+          "end": 2723,
+          "symbol": "M:pi.c(I)I",
+          "original": "c",
+          "renamed": "getEnd"
+        },
+        {
+          "start": 2759,
+          "end": 2760,
+          "symbol": "M:pi.c(I)I",
+          "original": "c",
+          "renamed": "getEnd"
         },
         {
           "start": 2969,
@@ -1016224,11 +1016963,32 @@
           "renamed": "duration"
         },
         {
+          "start": 4405,
+          "end": 4412,
+          "symbol": "F:pi.field_l:I",
+          "original": "field_l",
+          "renamed": "end"
+        },
+        {
           "start": 4495,
           "end": 4497,
           "symbol": "C:dt",
           "original": "dt",
           "renamed": "PlayerSimulation"
+        },
+        {
+          "start": 4624,
+          "end": 4625,
+          "symbol": "M:pi.c(I)I",
+          "original": "c",
+          "renamed": "getEnd"
+        },
+        {
+          "start": 4658,
+          "end": 4665,
+          "symbol": "F:pi.field_g:Lbs;",
+          "original": "field_g",
+          "renamed": "event"
         },
         {
           "start": 4673,
@@ -1016243,6 +1017003,13 @@
           "symbol": "C:dt",
           "original": "dt",
           "renamed": "PlayerSimulation"
+        },
+        {
+          "start": 5059,
+          "end": 5066,
+          "symbol": "F:pi.field_g:Lbs;",
+          "original": "field_g",
+          "renamed": "event"
         },
         {
           "start": 5087,
@@ -1016266,6 +1017033,13 @@
           "renamed": "course"
         },
         {
+          "start": 5471,
+          "end": 5472,
+          "symbol": "M:pi.a(Lkh;I)V",
+          "original": "a",
+          "renamed": "decode"
+        },
+        {
           "start": 5473,
           "end": 5475,
           "symbol": "C:kh",
@@ -1016278,6 +1017052,13 @@
           "symbol": "M:kh.h(B)V",
           "original": "h",
           "renamed": "beginBitAccess"
+        },
+        {
+          "start": 5634,
+          "end": 5641,
+          "symbol": "F:pi.field_g:Lbs;",
+          "original": "field_g",
+          "renamed": "event"
         },
         {
           "start": 5644,
@@ -1016350,6 +1017131,13 @@
           "renamed": "readBits"
         },
         {
+          "start": 5880,
+          "end": 5887,
+          "symbol": "F:pi.field_l:I",
+          "original": "field_l",
+          "renamed": "end"
+        },
+        {
           "start": 5895,
           "end": 5902,
           "symbol": "F:pi.field_j:I",
@@ -1016385,6 +1017173,20 @@
           "renamed": "endBitAccess"
         },
         {
+          "start": 6374,
+          "end": 6381,
+          "symbol": "F:pi.field_g:Lbs;",
+          "original": "field_g",
+          "renamed": "event"
+        },
+        {
+          "start": 6382,
+          "end": 6383,
+          "symbol": "M:bs.a(Z)Z",
+          "original": "a",
+          "renamed": "isRoomScoped"
+        },
+        {
           "start": 6501,
           "end": 6508,
           "symbol": "F:pi.field_j:I",
@@ -1016418,6 +1017220,20 @@
           "symbol": "F:pi.field_j:I",
           "original": "field_j",
           "renamed": "start"
+        },
+        {
+          "start": 6648,
+          "end": 6649,
+          "symbol": "M:pi.c(I)I",
+          "original": "c",
+          "renamed": "getEnd"
+        },
+        {
+          "start": 6748,
+          "end": 6755,
+          "symbol": "F:pi.field_l:I",
+          "original": "field_l",
+          "renamed": "end"
         },
         {
           "start": 6884,
@@ -1016469,6 +1017285,20 @@
           "renamed": "GameEvent"
         },
         {
+          "start": 7228,
+          "end": 7235,
+          "symbol": "F:pi.field_l:I",
+          "original": "field_l",
+          "renamed": "end"
+        },
+        {
+          "start": 7275,
+          "end": 7282,
+          "symbol": "F:pi.field_g:Lbs;",
+          "original": "field_g",
+          "renamed": "event"
+        },
+        {
           "start": 7308,
           "end": 7315,
           "symbol": "F:pi.field_j:I",
@@ -1016511,6 +1017341,20 @@
           "renamed": "BitPacketBuffer"
         },
         {
+          "start": 7727,
+          "end": 7728,
+          "symbol": "M:pi.a(Lkh;I)V",
+          "original": "a",
+          "renamed": "decode"
+        },
+        {
+          "start": 7952,
+          "end": 7953,
+          "symbol": "M:pi.b(Lkh;I)V",
+          "original": "b",
+          "renamed": "encode"
+        },
+        {
           "start": 7954,
           "end": 7956,
           "symbol": "C:kh",
@@ -1016523,6 +1017367,13 @@
           "symbol": "M:kh.i(I)V",
           "original": "i",
           "renamed": "beginBitWrite"
+        },
+        {
+          "start": 8328,
+          "end": 8335,
+          "symbol": "F:pi.field_g:Lbs;",
+          "original": "field_g",
+          "renamed": "event"
         },
         {
           "start": 8336,
@@ -1054649,7 +1055500,7 @@
       "original": "ug.java",
       "renamed": "AppletGameShell.java",
       "inputSha256": "c14868855cae32c8f46fafb70374535ea02ec8d48aa9e32135cff24c4f135673",
-      "outputSha256": "937dfbc2e04be56d27c44227e0c6493fe7f8da4e9f7ae71bdc3879351f9d4de8",
+      "outputSha256": "2e501da123fa89281794a2299d448b45c013609ab0a02228f0f093895b1a8e85",
       "edits": [
         {
           "start": 53,
@@ -1054909,6 +1055760,13 @@
           "symbol": "C:ana",
           "original": "ana",
           "renamed": "DarknessBehaviour"
+        },
+        {
+          "start": 6720,
+          "end": 6723,
+          "symbol": "C:gfa",
+          "original": "gfa",
+          "renamed": "EffectEvent"
         },
         {
           "start": 6741,
@@ -1064274,7 +1065132,7 @@
       "original": "vca.java",
       "renamed": "S2CEventPacket.java",
       "inputSha256": "e277ef8a98f7d6b92bd149af44fd2d9b295d3ef39e80df529d712260b85900a3",
-      "outputSha256": "7e3f0cade6f002b8da224884f0fa73c76c46770ee4818ba6f3f88bb6f10db912",
+      "outputSha256": "eab1b0b843d383907ae533ce85cd444871aa5dffb66b8167981456727a599799",
       "edits": [
         {
           "start": 50,
@@ -1064380,6 +1065238,13 @@
           "symbol": "F:vca.field_a:Lpi;",
           "original": "field_a",
           "renamed": "event"
+        },
+        {
+          "start": 967,
+          "end": 968,
+          "symbol": "M:pi.b(Lkh;I)V",
+          "original": "b",
+          "renamed": "encode"
         },
         {
           "start": 1213,
@@ -1075355,8 +1076220,15 @@
       "original": "wla.java",
       "renamed": "wla.java",
       "inputSha256": "c750bb1282b13d760775e034f1b7b094e03dc9040a8c0d085e2b45f2322a5eb7",
-      "outputSha256": "4e0dc1f8265cab3fa09a9faffac5e3074b49f6d54d679e9512d328f2676e0310",
+      "outputSha256": "83125f0476bda024aa68a6fd1c45d841815311ba62ef81ec8f8c790bad75dc85",
       "edits": [
+        {
+          "start": 4886,
+          "end": 4889,
+          "symbol": "C:gfa",
+          "original": "gfa",
+          "renamed": "EffectEvent"
+        },
         {
           "start": 5810,
           "end": 5813,
@@ -1079782,10 +1080654,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/tombracer"
     },
-    "rulesSha256": "c0b8f7dad22284d040e8f5b6123a9bc677b28f9c7b1089ee14daa7050351777c",
+    "rulesSha256": "c36ee03469364ab9d2dc9cd16d90035d5763b4c1d6d5764814969a418f5f9cb9",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "145b13bc847895948659831ff292c85bf8487ab5cdb2b9615b317b54baf77e7d",
-    "outputTreeSha256": "3c5223a0725d0226bfb5064cede0c02170bbb4c5043642e90c28fe51cc2ff627",
+    "outputTreeSha256": "650c1c1af24346fbb55399ae6847cf46e12602ebacb528291df874964baa5c66",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

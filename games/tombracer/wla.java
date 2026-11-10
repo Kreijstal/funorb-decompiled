@@ -143,7 +143,7 @@ final class wla extends jea {
         this.field_Gb = -2;
         try {
           this.field_Db = param12;
-          this.field_zb = new jea(0L, param6, gfa.field_m.toUpperCase());
+          this.field_zb = new jea(0L, param6, EffectEvent.field_m.toUpperCase());
           this.field_zb.field_z = 1;
           this.b(-126, this.field_zb);
           this.field_Fb = new jea(0L, param7);

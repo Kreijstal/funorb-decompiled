@@ -3,7 +3,7 @@
  */
 final class PowerDownItemBehaviour extends ItemBehaviour {
     static boolean field_s;
-    private gfa field_t;
+    private EffectEvent field_t;
 
     final static void a(int param0, int param1, byte param2, boolean param3, long param4, String param5) {
         ql.field_k.writeCipheredOpcode(param1, -2988);
@@ -33,7 +33,7 @@ final class PowerDownItemBehaviour extends ItemBehaviour {
     PowerDownItemBehaviour(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
-          this.field_t = (gfa) (EventFactory.readEvent(-25, param1, param0.formatVersion));
+          this.field_t = (EffectEvent) (EventFactory.readEvent(-25, param1, param0.formatVersion));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ok.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

@@ -36,7 +36,7 @@ final class S2CEventPacket implements GamePacket {
           return;
         }
         try {
-          this.event.b(param1, -19733);
+          this.event.encode(param1, -19733);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vca.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

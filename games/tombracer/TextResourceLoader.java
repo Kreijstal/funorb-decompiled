@@ -757,7 +757,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -126, "thisisrunescapeclan_notowner");
                 if (null != var2) {
-                  gfa.field_i = jaa.a((byte) 125, var2);
+                  EffectEvent.field_i = jaa.a((byte) 125, var2);
                 }
                 var2 = dn.a((byte) 126, "runescapeclan");
                 if (var2 != null) {
@@ -903,7 +903,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -47, "ra_title");
                 if (var2 != null) {
-                  gfa.field_m = jaa.a((byte) 29, var2);
+                  EffectEvent.field_m = jaa.a((byte) 29, var2);
                 }
                 var2 = dn.a((byte) -22, "ra_mutethisplayer");
                 if (null != var2) {
