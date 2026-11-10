@@ -81,7 +81,7 @@ final class RoundWinnerPhase extends MatchPhase {
           if (this.matchState.field_K == 1) {
             this.screen.addOverlay(new FinishOrderOverlay(this.screen), 680);
           } else {
-            this.matchState.field_e.a(false);
+            this.matchState.scoreStandings.update(false);
             this.screen.addOverlay(new TreasureValuesOverlay(this.screen), 680);
           }
           return;

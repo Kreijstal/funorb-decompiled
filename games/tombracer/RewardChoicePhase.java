@@ -9,7 +9,7 @@ final class RewardChoicePhase extends MatchPhase {
     private int field_m;
     static String field_w;
     static int[] field_t;
-    private CommonChooseReward field_o;
+    private CommonChooseReward rewardChoice;
     private int field_u;
     static sq field_n;
     private RewardChoiceSlot[][] field_p;
@@ -28,7 +28,7 @@ final class RewardChoicePhase extends MatchPhase {
           return false;
         }
         if (this.field_v != 0 &&
-          !this.a(true)) {
+          !this.isLocalPlayersTurn(true)) {
           if (param2 != 84 &&
             83 != param2) {
             return false;
@@ -61,9 +61,9 @@ final class RewardChoicePhase extends MatchPhase {
         this.field_r = -1;
         this.field_v = 0;
         try {
-          this.field_o = this.matchState.field_i;
-          this.field_o.field_g = new w();
-          var3_int = this.field_o.a(-28958);
+          this.rewardChoice = this.matchState.rewardChoice;
+          this.rewardChoice.field_g = new w();
+          var3_int = this.rewardChoice.getRewardCount(-28958);
           this.field_q = 3;
           this.field_s = 1;
           this.field_p = new RewardChoiceSlot[this.field_q][this.field_s];
@@ -141,8 +141,8 @@ final class RewardChoicePhase extends MatchPhase {
         var16 = TombRacer.field_G ? 1 : 0;
         Room.field_j.a(0, 0);
         var3 = 0;
-        var4 = this.field_o.getCurrentPlayerId(-1);
-        if (!this.screen.d((byte) 63) &&
+        var4 = this.rewardChoice.getCurrentPlayerId(-1);
+        if (!this.screen.isSpectating((byte) 63) &&
           this.screen.localPlayerIndex == var4) {
           var3 = 1;
         }
@@ -159,7 +159,7 @@ final class RewardChoicePhase extends MatchPhase {
             SocketConnector.a(LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(83, cba.field_c, new String[]{this.screen.getColouredPlayerName(var4, 9)}).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, 32 + var9, var8, 1, (byte) 60, gg.field_f.width());
           } else {
             SocketConnector.a(us.field_c.toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, var9 + 32, var8, 1, (byte) 60, gg.field_f.width());
-            var10 = (-this.field_o.getCurrentPlayerTicks(-1) + 750) / 50 + 1;
+            var10 = (-this.rewardChoice.getCurrentPlayerTicks(-1) + 750) / 50 + 1;
             if (var10 < 0) {
               var10 = 0;
             }
@@ -169,7 +169,7 @@ final class RewardChoicePhase extends MatchPhase {
             for (var11_int = 0; var11_int < this.field_s; var11_int++) {
               var12_ref_fv = this.field_p[var10][var11_int];
               if (var12_ref_fv != null) {
-                if (this.a(true) &&
+                if (this.isLocalPlayersTurn(true) &&
                   var10 == this.field_u &&
                   var11_int == this.field_m) {
                   tga.field_a.c(fm.a(false, wga.field_a[this.screen.localPlayerIndex]), var12_ref_fv.field_g, var12_ref_fv.field_j, var12_ref_fv.field_c, -22971, var12_ref_fv.field_i);
@@ -194,8 +194,8 @@ final class RewardChoicePhase extends MatchPhase {
           } else {
             var13 = this.matchState.players[var17].getChosenReward(115);
             if (var13 == -1) {
-              var14 = this.matchState.field_c.field_b[var17];
-              var15 = this.field_o.getCurrentPos((byte) 50);
+              var14 = this.matchState.standings.positions[var17];
+              var15 = this.rewardChoice.getCurrentPos((byte) 50);
               if (var14 >= var15) {
                 if (var14 != var15) {
                   var12 = 12303291;
@@ -258,7 +258,7 @@ final class RewardChoicePhase extends MatchPhase {
 
     private final boolean b(int param0, int param1, byte param2) {
         RewardChoiceSlot var4;
-        if (!this.a(true)) {
+        if (!this.isLocalPlayersTurn(true)) {
           return false;
         }
         if (param1 >= 0 &&
@@ -274,7 +274,7 @@ final class RewardChoicePhase extends MatchPhase {
           if (var4 == null) {
             return false;
           }
-          if (!this.field_o.a((byte) 119, var4.field_f)) {
+          if (!this.rewardChoice.isRewardAvailable((byte) 119, var4.field_f)) {
             return false;
           }
           this.field_m = param0;
@@ -295,16 +295,16 @@ final class RewardChoicePhase extends MatchPhase {
         int var4 = 0;
         FloatingMessage var5 = null;
         FloatingMessage var6 = null;
-        if (this.field_o.getCurrentPlayerId(-1) == param0) {
+        if (this.rewardChoice.getCurrentPlayerId(-1) == param0) {
           if (param2 == -1) {
-            var6 = RewardChoicePhase.a(-9, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(86, OpenGlTransform3D.field_n, new String[]{this.matchState.getColouredPlayerName(param0, 23807)}));
+            var6 = RewardChoicePhase.createTextMessage(-9, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(86, OpenGlTransform3D.field_n, new String[]{this.matchState.getColouredPlayerName(param0, 23807)}));
             iqa.field_c.a(0, var6);
-            this.field_o.a(param2, (byte) 112);
+            this.rewardChoice.a(param2, (byte) 112);
           } else {
-            var4 = this.field_o.a(-108, param2);
-            this.field_o.a(param2, (byte) 119);
+            var4 = this.rewardChoice.getReward(-108, param2);
+            this.rewardChoice.a(param2, (byte) 119);
             this.h(0);
-            var5 = RewardChoicePhase.a(-58, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(125, RecursiveBacktrackerMazeGenerator.field_b, new String[]{this.matchState.getColouredPlayerName(param0, 23807), sla.field_b[var4]}));
+            var5 = RewardChoicePhase.createTextMessage(-58, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(125, RecursiveBacktrackerMazeGenerator.field_b, new String[]{this.matchState.getColouredPlayerName(param0, 23807), sla.field_b[var4]}));
             iqa.field_c.a(0, var5);
           }
         }
@@ -317,7 +317,7 @@ final class RewardChoicePhase extends MatchPhase {
         if (this.field_v == 0) {
           return;
         }
-        if (qma.field_c &&
+        if (ProceduralTextureProvider.field_c &&
           this.a(GridWidgetContainer.field_B, 25006, AgeValidator.field_j) &&
           PlayerModel.field_b == 1) {
           this.i(12721);
@@ -339,21 +339,21 @@ final class RewardChoicePhase extends MatchPhase {
         }
     }
 
-    private final boolean a(boolean param0) {
+    private final boolean isLocalPlayersTurn(boolean param0) {
         boolean stackIn_6_0 = false;
         if (!param0) {
           field_n = (sq) null;
         }
-        stackIn_6_0 = (!this.screen.d((byte) 98)) && (this.screen.localPlayerIndex == this.field_o.getCurrentPlayerId(-1));
+        stackIn_6_0 = (!this.screen.isSpectating((byte) 98)) && (this.screen.localPlayerIndex == this.rewardChoice.getCurrentPlayerId(-1));
         return stackIn_6_0;
     }
 
     private final void i(int param0) {
-        if (!this.a(true)) {
+        if (!this.isLocalPlayersTurn(true)) {
           return;
         }
         int var2 = this.field_p[this.field_u][this.field_m].field_f;
-        if (!this.field_o.a((byte) 127, var2)) {
+        if (!this.rewardChoice.isRewardAvailable((byte) 127, var2)) {
           return;
         }
         if (param0 != 12721) {
@@ -362,7 +362,7 @@ final class RewardChoicePhase extends MatchPhase {
         if (null != this.protocol) {
           this.protocol.sendRewardChoice(var2, 1);
         } else {
-          this.field_o.a(var2, (byte) 102);
+          this.rewardChoice.a(var2, (byte) 102);
         }
     }
 
@@ -371,25 +371,25 @@ final class RewardChoicePhase extends MatchPhase {
           this.field_r = this.field_r - 1;
           return;
         }
-        this.field_o.d((byte) -124);
+        this.rewardChoice.d((byte) -124);
         if (param1 &&
-          this.a(true)) {
+          this.isLocalPlayersTurn(true)) {
           this.g(param0 - 80);
         }
         if (param0 != 80) {
           this.allowsChat(-116);
         }
-        if (this.field_o.isFinished(param0 ^ -28956)) {
+        if (this.rewardChoice.isFinished(param0 ^ -28956)) {
           this.field_r = 100;
         }
         if (param1) {
           this.c(7);
         }
         this.field_v = this.field_v + 1;
-        if (this.field_o.getCurrentPlayerId(-1) == this.screen.localPlayerIndex &&
-          !(this.field_o.getCurrentPlayerTicks(-1) <= 500) &&
-          (750 - this.field_o.getCurrentPlayerTicks(-1)) % 50 == 0) {
-          this.field_o.a((byte) -124);
+        if (this.rewardChoice.getCurrentPlayerId(-1) == this.screen.localPlayerIndex &&
+          !(this.rewardChoice.getCurrentPlayerTicks(-1) <= 500) &&
+          (750 - this.rewardChoice.getCurrentPlayerTicks(-1)) % 50 == 0) {
+          this.rewardChoice.clearRewards((byte) -124);
         }
     }
 
@@ -398,9 +398,9 @@ final class RewardChoicePhase extends MatchPhase {
         this.field_u = 0;
     }
 
-    final CommonChooseReward b(byte param0) {
+    final CommonChooseReward getRewardChoice(byte param0) {
         int var2 = -72 / ((35 - param0) / 62);
-        return this.field_o;
+        return this.rewardChoice;
     }
 
     private final boolean a(int param0, int param1, int param2) {
@@ -433,7 +433,7 @@ final class RewardChoicePhase extends MatchPhase {
         return stackIn_8_0;
     }
 
-    final static FloatingMessage a(int param0, String param1) {
+    final static FloatingMessage createTextMessage(int param0, String param1) {
         RuntimeException var2 = null;
         FloatingMessage stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -465,7 +465,7 @@ final class RewardChoicePhase extends MatchPhase {
         RewardChoiceSlot var5;
         int var6;
         var6 = TombRacer.field_G ? 1 : 0;
-        if (!this.a(true)) {
+        if (!this.isLocalPlayersTurn(true)) {
           return;
         }
         var4 = 0;
@@ -494,7 +494,7 @@ final class RewardChoicePhase extends MatchPhase {
             var4 = 0;
             continue;
           }
-          if (this.field_o.a((byte) -64, var5.field_f)) {
+          if (this.rewardChoice.isRewardAvailable((byte) -64, var5.field_f)) {
             var4 = 1;
             continue;
           }

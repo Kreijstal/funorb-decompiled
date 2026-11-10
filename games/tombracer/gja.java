@@ -104,12 +104,12 @@ final class gja extends ka {
         StringBuilder stackIn_396_1 = null;
         String stackIn_397_2 = null;
         RuntimeException decompiledCaughtException = null;
-        d var7 = null;
+        TextureProvider var7 = null;
         RuntimeException var7_ref = null;
         int[] var8 = null;
         int var9_int = 0;
         long[] var9 = null;
-        dw var10_ref_dw = null;
+        TextureMetadata var10_ref_dw = null;
         int var10 = 0;
         int var11_int = 0;
         eda[] var11 = null;
@@ -130,7 +130,7 @@ final class gja extends ka {
         int var20 = 0;
         lp var21_ref_lp = null;
         int var21 = 0;
-        dw var22_ref_dw = null;
+        TextureMetadata var22_ref_dw = null;
         int var22 = 0;
         float var22_float = 0.0f;
         int var23_int = 0;
@@ -210,7 +210,7 @@ final class gja extends ka {
                 2 != param1.field_G[var9_int]) {
                 if (param1.field_r != null &&
                   param1.field_r[var9_int] != -1) {
-                  var10_ref_dw = var7.a((byte) -71, param1.field_r[var9_int] & 65535);
+                  var10_ref_dw = var7.metadata((byte) -71, param1.field_r[var9_int] & 65535);
                   decompiledFrameRemainder0 = (((64 & this.field_h) != 0 &&
                     var10_ref_dw.field_p) || !(var10_ref_dw.field_f));
                 }
@@ -261,7 +261,7 @@ final class gja extends ka {
                       var18 = 1;
                     }
                     if (-1 != var21_ref_lp.field_f) {
-                      var22_ref_dw = var7.a((byte) 103, var21_ref_lp.field_f);
+                      var22_ref_dw = var7.metadata((byte) 103, var21_ref_lp.field_f);
                       if (2 == var22_ref_dw.field_d) {
                         this.field_f = true;
                       }
@@ -282,11 +282,11 @@ final class gja extends ka {
                   stackIn_65_0 = -1;
                   stackIn_65_1 = var18;
                   if (stackIn_65_0 != stackIn_65_1) {
-                    var13_ref = var7.a((byte) -27, var18 & 65535);
+                    var13_ref = var7.metadata((byte) -27, var18 & 65535);
                     if (0 == (this.field_h & 64) ||
-                      !((dw) (var13_ref)).field_p) {
-                      var17_int = ((dw) (var13_ref)).field_a;
-                      var16 = ((dw) (var13_ref)).field_h;
+                      !((TextureMetadata) (var13_ref)).field_p) {
+                      var17_int = ((TextureMetadata) (var13_ref)).field_a;
+                      var16 = ((TextureMetadata) (var13_ref)).field_h;
                     } else {
                       var18 = -1;
                       var13_ref = null;
@@ -296,7 +296,7 @@ final class gja extends ka {
                 if ((null == param1.field_n ||
                   0 == param1.field_n[var12]) &&
                   (var13_ref == null ||
-                  ((dw) (var13_ref)).field_d == 0)) {
+                  ((TextureMetadata) (var13_ref)).field_d == 0)) {
                   stackIn_86_0 = 0;
                 } else {
                   stackIn_86_0 = 1;
@@ -526,7 +526,7 @@ final class gja extends ka {
                 var21 = stackIn_190_0;
                 if (var21 != -1 &&
                   0 != (this.field_h & 64)) {
-                  var22_ref_dw = var7.a((byte) 2, 65535 & var21);
+                  var22_ref_dw = var7.metadata((byte) 2, 65535 & var21);
                   if (var22_ref_dw.field_p) {
                     var21 = -1;
                   }

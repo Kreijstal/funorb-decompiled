@@ -752,7 +752,7 @@ final class Model extends ka {
 
     private final int a(int param0, short param1, int param2) {
         int var4;
-        dw var5;
+        TextureMetadata var5;
         int var6;
         int var7;
         int var8;
@@ -762,7 +762,7 @@ final class Model extends ka {
         int var8Lifetime1;
         int var9Lifetime1;
         var4 = cla.field_m[this.scaleHslLightness(param0, param2)];
-        var5 = this.field_d.field_c.a((byte) -52, param1 & 65535);
+        var5 = this.field_d.field_c.metadata((byte) -52, param1 & 65535);
         var6 = var5.field_c & 255;
         if (var6 != 0) {
           var7 = 131586 * param2;
@@ -3888,7 +3888,7 @@ final class Model extends ka {
         int stackIn_57_1 = 0;
         int stackIn_58_2 = 0;
         int stackIn_67_0 = 0;
-        d var7;
+        TextureProvider var7;
         long[] var9;
         int var10;
         int var11_int;
@@ -3899,7 +3899,7 @@ final class Model extends ka {
         int var15;
         int var16;
         int var17;
-        dw var18;
+        TextureMetadata var18;
         int var18_int;
         float[] var19;
         int var19_int;
@@ -3907,7 +3907,7 @@ final class Model extends ka {
         int var21;
         lp var21_ref_lp;
         int var22;
-        dw var22_ref_dw;
+        TextureMetadata var22_ref_dw;
         int var23;
         int var24;
         int var25;
@@ -3951,12 +3951,12 @@ final class Model extends ka {
         float var53;
         int var54;
         jt var56;
-        dw var57;
+        TextureMetadata var57;
         long[] var58;
         jt var59;
         lp var60;
         tw var61;
-        dw var62;
+        TextureMetadata var62;
         float[] var65;
         float[] var66;
         long[] var68;
@@ -4039,7 +4039,7 @@ final class Model extends ka {
                   var18_int = 1;
                 }
                 if (var21_ref_lp.field_f != -1) {
-                  var22_ref_dw = var7.a((byte) -71, var21_ref_lp.field_f);
+                  var22_ref_dw = var7.metadata((byte) -71, var21_ref_lp.field_f);
                   if (var22_ref_dw.field_d == 2) {
                     this.field_ab = true;
                   }
@@ -4054,7 +4054,7 @@ final class Model extends ka {
           if (param1.field_r != null) {
             var18_intLifetime2 = param1.field_r[var12];
             if (var18_intLifetime2 != -1) {
-              var57 = var7.a((byte) -126, var18_intLifetime2 & 65535);
+              var57 = var7.metadata((byte) -126, var18_intLifetime2 & 65535);
               var13 = var57;
               if ((param5 & 64) != 0 &&
                 var57.field_p) {
@@ -4070,7 +4070,7 @@ final class Model extends ka {
             stackIn_41_0 = 1;
           } else {
             if (var13 != null) {
-              stackIn_41_0 = (((dw) (var13)).field_d == 2) ? 1 : 0;
+              stackIn_41_0 = (((TextureMetadata) (var13)).field_d == 2) ? 1 : 0;
             } else {
               stackIn_41_0 = 0;
             }
@@ -4137,7 +4137,7 @@ final class Model extends ka {
           var18_intLifetime1 = stackIn_67_0;
           if (var18_intLifetime1 != -1 &&
             (param5 & 64) != 0) {
-            var62 = var7.a((byte) 110, var18_intLifetime1 & 65535);
+            var62 = var7.metadata((byte) 110, var18_intLifetime1 & 65535);
             if (var62.field_p) {
               var18_intLifetime1 = -1;
             }
@@ -4358,7 +4358,7 @@ final class Model extends ka {
             if (var17Lifetime2 == -1) {
               this.field_X[var16Lifetime2] = (short)-1;
             } else {
-              var18 = this.field_d.field_c.a((byte) -2, var17Lifetime2);
+              var18 = this.field_d.field_c.metadata((byte) -2, var17Lifetime2);
               if ((param5 & 64) != 0 &&
                 var18.field_p) {
                 this.field_X[var16Lifetime2] = (short)-1;

@@ -274,16 +274,16 @@ final class IsaacCipher {
             du.field_h = param13;
             WhirlpoolDigest.field_g = param12;
             ClientException.field_c = param1;
-            kqa.field_a = param2;
+            RaceStandings.field_a = param2;
             ConstrainToLatticeLocomotor.field_x = param4;
             if (param8 != -1367135824) {
               return;
             }
             uq.field_a = param5;
             ft.field_a = param10;
-            if (kqa.field_a.field_x != null) {
+            if (RaceStandings.field_a.field_x != null) {
               try {
-                fua.field_b = new BufferedCacheFile(kqa.field_a.field_x, 64, 0);
+                fua.field_b = new BufferedCacheFile(RaceStandings.field_a.field_x, 64, 0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var15 = (IOException) (Object) decompiledCaughtException;

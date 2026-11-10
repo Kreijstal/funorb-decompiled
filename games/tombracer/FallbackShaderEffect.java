@@ -106,7 +106,7 @@ final class FallbackShaderEffect extends ShaderEffect {
               var10 = 0;
               while (true) {
                 if (var10 < SafeZoneBehaviour.field_u.length) {
-                  stackIn_10_0 = ((vk.field_b[var10 / 8] & 1 << (7 & var10)) == 0) ? 0 : 1;
+                  stackIn_10_0 = ((CourseLayoutFactory.field_b[var10 / 8] & 1 << (7 & var10)) == 0) ? 0 : 1;
                   var11_int = stackIn_10_0;
                   if (var11_int != 0) {
                     var9_int++;

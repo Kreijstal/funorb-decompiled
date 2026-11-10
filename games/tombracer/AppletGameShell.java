@@ -113,7 +113,7 @@ abstract class AppletGameShell extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5Lifetime1 = pe.a(vk.b(69), toa.a(false), ArchiveRequest.a(false), this.field_u, cs.a((byte) 105), cja.a(0), (byte) 53);
+            var5Lifetime1 = pe.a(CourseLayoutFactory.b(69), toa.a(false), ArchiveRequest.a(false), this.field_u, cs.a((byte) 105), cja.a(0), (byte) 53);
             if (var5Lifetime1 != -1) {
               ura.a(var5Lifetime1, PressureSwitchBehaviour.field_s, (byte) -103, io.field_b);
               PressureSwitchBehaviour.field_s = null;
@@ -333,7 +333,7 @@ abstract class AppletGameShell extends GameApplet {
             if (!fpa.field_c) {
               this.reportError(-6738, "reconnect");
             }
-            dw.b(param0);
+            TextureMetadata.b(param0);
             epa.a(var2, (byte) -84, io.field_b);
             TrackingCrusherComponent.field_G = true;
             oga.field_f = bva.currentTimeMillis((byte) -107) + 15000L;
@@ -578,7 +578,7 @@ abstract class AppletGameShell extends GameApplet {
             !(var3 >= ada.b(false))) {
             this.field_y = false;
             dea.a(60);
-            dw.b((byte) -84);
+            TextureMetadata.b((byte) -84);
             epa.a(2, (byte) -84, WindZoneBehaviour.field_n);
             LineNoiseOperator.c(9033);
             TrackingCrusherComponent.field_G = true;
@@ -623,7 +623,7 @@ abstract class AppletGameShell extends GameApplet {
             }
           } else {
             if (Transform3D.field_c >= 10) {
-              dw.b((byte) -123);
+              TextureMetadata.b((byte) -123);
               if (Trap.field_m != 3) {
                 if (Trap.field_m != 4) {
                   if (Trap.field_m != 2) {
@@ -709,11 +709,11 @@ abstract class AppletGameShell extends GameApplet {
           if (NotLoggedInMenu.field_r) {
             S2CPlayerProfilePacket.b(true);
           }
-          if (null == sma.field_c) {
-            sma.field_c = epa.d((byte) -91);
+          if (null == ScoreStandings.field_c) {
+            ScoreStandings.field_c = epa.d((byte) -91);
             TextureOperator.field_k = fta.c(-93);
           }
-          wk.a(sma.field_c, TextureOperator.field_k, 11861, WeaveOperator.field_p);
+          wk.a(ScoreStandings.field_c, TextureOperator.field_k, 11861, WeaveOperator.field_p);
           OpenGlTexture2D.field_n = null;
           tk.field_b = null;
           WeaveOperator.field_p = null;
@@ -757,7 +757,7 @@ abstract class AppletGameShell extends GameApplet {
         }
         if (!param1 &&
           ReportAbuseDialog.field_Cb) {
-          pq.a(nma.field_l, false);
+          CharacterChoiceFactory.a(nma.field_l, false);
           this.recreateCanvas((byte) 14);
           fpa.a(nma.field_l, (byte) 75);
         }

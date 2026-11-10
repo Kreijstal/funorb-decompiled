@@ -68,7 +68,7 @@ final class CommonChooseReward implements dv {
         field_c = null;
     }
 
-    final int a(int param0, int param1) {
+    final int getReward(int param0, int param1) {
         int var3 = 112 % ((-11 - param0) / 36);
         if (param1 == -1) {
           return -1;
@@ -87,7 +87,7 @@ final class CommonChooseReward implements dv {
             if (this.field_j.playersRemaining <= this.currentPos) {
               this.currentPlayerId = -1;
             } else {
-              this.currentPlayerId = this.field_j.field_c.field_e[this.currentPos];
+              this.currentPlayerId = this.field_j.standings.order[this.currentPos];
               if (this.currentPlayerId == -1) {
                 this.currentPlayerId = -1;
               } else {
@@ -119,7 +119,7 @@ final class CommonChooseReward implements dv {
           this.finished = true;
           return;
         }
-        this.currentPlayerId = this.field_j.field_c.field_e[this.currentPos];
+        this.currentPlayerId = this.field_j.standings.order[this.currentPos];
         if (this.currentPlayerId == -1) {
           this.currentPlayerId = -1;
           if (this.currentPlayerId != -1) {
@@ -149,7 +149,7 @@ final class CommonChooseReward implements dv {
         return this.currentPos;
     }
 
-    final int a(int param0) {
+    final int getRewardCount(int param0) {
         if (param0 != -28958) {
           return 27;
         }
@@ -231,7 +231,7 @@ final class CommonChooseReward implements dv {
 
     final int getCurrentPlayerId(int param0) {
         if (param0 != -1) {
-          this.a(-107, 98);
+          this.getReward(-107, 98);
           return this.currentPlayerId;
         }
         return this.currentPlayerId;
@@ -244,7 +244,7 @@ final class CommonChooseReward implements dv {
           this.currentPlayerId = uma.readSignedBits(4, param0, -26803);
           this.currentPlayerTicks = param0.readBits((byte) 44, 16);
           if (param1) {
-            this.a(99, -112);
+            this.getReward(99, -112);
           }
           this.finished = CircleMovementLocomotor.readBitFlag(5907, param0);
           this.takenCount = param0.readBits((byte) 44, 2);
@@ -253,7 +253,7 @@ final class CommonChooseReward implements dv {
         }
     }
 
-    final boolean a(byte param0, int param1) {
+    final boolean isRewardAvailable(byte param0, int param1) {
         int var3 = -121 % ((48 - param0) / 59);
         return this.reward[param1] != -1 ? true : false;
     }
@@ -273,7 +273,7 @@ final class CommonChooseReward implements dv {
         }
     }
 
-    final void b(int param0) {
+    final void rollRewards(int param0) {
         int var4 = 0;
         IsaacCipher var2;
         boolean[] var3;
@@ -303,7 +303,7 @@ final class CommonChooseReward implements dv {
         this.decode((BitPacketBuffer) null, false);
     }
 
-    final void a(byte param0) {
+    final void clearRewards(byte param0) {
         if (null != this.field_g) {
           this.field_g.a(new fm(61, 0, 0, 0), -58);
           if (param0 >= -44) {

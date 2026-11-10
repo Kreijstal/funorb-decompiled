@@ -12,24 +12,24 @@ abstract class ArchiveRequest extends DualLinkNode {
           if (LegacyOpenGlTexture.field_a == gsa.field_y) {
             return faa.field_g;
           }
-          if (!gva.field_b.b(88)) {
-            return gva.field_b.a((byte) 119);
+          if (!DefaultRoomObjectRenderer.field_b.b(88)) {
+            return DefaultRoomObjectRenderer.field_b.a((byte) 119);
           }
           if (gsa.field_y != wt.field_d) {
             return ScrollControlWidget.field_E;
           }
-          return gva.field_b.a((byte) 100);
+          return DefaultRoomObjectRenderer.field_b.a((byte) 100);
         }
         if (LegacyOpenGlTexture.field_a == gsa.field_y) {
           return faa.field_g;
         }
-        if (!gva.field_b.b(88)) {
-          return gva.field_b.a((byte) 119);
+        if (!DefaultRoomObjectRenderer.field_b.b(88)) {
+          return DefaultRoomObjectRenderer.field_b.a((byte) 119);
         }
         if (gsa.field_y != wt.field_d) {
           return ScrollControlWidget.field_E;
         }
-        return gva.field_b.a((byte) 100);
+        return DefaultRoomObjectRenderer.field_b.a((byte) 100);
     }
 
     final static void openQuitPage(java.applet.Applet param0, byte param1) {

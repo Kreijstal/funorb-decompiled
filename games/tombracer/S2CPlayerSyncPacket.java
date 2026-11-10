@@ -52,13 +52,13 @@ final class S2CPlayerSyncPacket implements GamePacket {
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           for (var4_int = 0; this.field_c > var4_int; var4_int++) {
-            param0.matchState.field_c.field_b[var4_int] = -1;
-            param0.matchState.field_c.field_e[var4_int] = -1;
+            param0.matchState.standings.positions[var4_int] = -1;
+            param0.matchState.standings.order[var4_int] = -1;
           }
           for (var4_intLifetime1 = 0; var4_intLifetime1 < this.field_c; var4_intLifetime1++) {
             if (!this.field_g[var4_intLifetime1]) {
-              param0.matchState.field_c.field_b[var4_intLifetime1] = this.field_b[var4_intLifetime1];
-              param0.matchState.field_c.field_e[this.field_b[var4_intLifetime1]] = var4_intLifetime1;
+              param0.matchState.standings.positions[var4_intLifetime1] = this.field_b[var4_intLifetime1];
+              param0.matchState.standings.order[this.field_b[var4_intLifetime1]] = var4_intLifetime1;
               if (this.field_a[var4_intLifetime1] == 0) {
                 param0.matchState.simulations[var4_intLifetime1].setFinished(94, false);
               } else {

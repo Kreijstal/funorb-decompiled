@@ -71,7 +71,7 @@ class MatchScoringObserver extends SimulationObserver {
           if (this.field_f.j(-1878) &&
             !this.field_f.d(-67) &&
             var9_ref != null) {
-            var10 = RewardChoicePhase.a(-48, var9_ref);
+            var10 = RewardChoicePhase.createTextMessage(-48, var9_ref);
             iqa.field_c.a(3, param0 - 15, var10);
           }
           if (param0 != 15) {
@@ -340,14 +340,14 @@ class MatchScoringObserver extends SimulationObserver {
           if (this.field_f.j(-1878) &&
             !this.field_f.d(-127)) {
             if (0 != var7) {
-              var9_ref_jha = RewardChoicePhase.a(-89, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(112, ArrowShooterComponent.field_J, new String[]{String.valueOf(var6), String.valueOf(var7)}));
+              var9_ref_jha = RewardChoicePhase.createTextMessage(-89, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(112, ArrowShooterComponent.field_J, new String[]{String.valueOf(var6), String.valueOf(var7)}));
             } else {
-              var9_ref_jha = RewardChoicePhase.a(-66, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(92, BevelOperator.field_q, new String[]{String.valueOf(var6)}));
+              var9_ref_jha = RewardChoicePhase.createTextMessage(-66, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(92, BevelOperator.field_q, new String[]{String.valueOf(var6)}));
             }
             iqa.field_c.a(0, var9_ref_jha);
             var10 = param0.getRoomTreasureScore(-7991);
             if (var10 > 0) {
-              dupTemp$0 = RewardChoicePhase.a(-96, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(82, bca.field_c, new String[]{String.valueOf(var10)}));
+              dupTemp$0 = RewardChoicePhase.createTextMessage(-96, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(82, bca.field_c, new String[]{String.valueOf(var10)}));
               var12 = dupTemp$0;
               var9_ref_jhaLifetime1 = dupTemp$0;
               iqa.field_c.a(3, 0, var12);

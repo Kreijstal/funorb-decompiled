@@ -40,7 +40,7 @@ final class PlayPhase extends MatchPhase {
             this.viewports[var4].a(0, (byte) 108, 2 * aaa.a(false));
           }
         }
-        if (this.screen.d((byte) 95)) {
+        if (this.screen.isSpectating((byte) 95)) {
           if (!this.screen.g(0, 0)) {
             if (this.screen.g(param0 - 80, 1)) {
               this.screen.cycleViewedPlayer(1, 17219);
@@ -116,8 +116,8 @@ final class PlayPhase extends MatchPhase {
         this.viewports[var3].b(23479);
         if (!this.screen.f((byte) 33)) {
           var4_int = 0;
-          for (var5_int = 0; this.matchState.field_c.field_e.length > var5_int; var5_int++) {
-            if (this.matchState.field_c.field_e[var5_int] == var3) {
+          for (var5_int = 0; this.matchState.standings.order.length > var5_int; var5_int++) {
+            if (this.matchState.standings.order[var5_int] == var3) {
               var4_int = var5_int;
             }
           }
@@ -151,7 +151,7 @@ final class PlayPhase extends MatchPhase {
               }
               var6_ref_int____[0] = new int[]{1, 2};
               for (var7_int = 0; var19[var4_int].length > var7_int; var7_int++) {
-                var8 = this.matchState.field_c.field_e[var19[var4_int][var7_int]];
+                var8 = this.matchState.standings.order[var19[var4_int][var7_int]];
                 if (var8 != -1 &&
                   var3 != var8) {
                   this.viewports[var8].a(var7_int, mma.field_c, -20186);
@@ -163,7 +163,7 @@ final class PlayPhase extends MatchPhase {
         }
         if (!this.screen.f((byte) 33) &&
           !this.screen.field_A) {
-          if (this.screen.d((byte) 78)) {
+          if (this.screen.isSpectating((byte) 78)) {
             var4_intLifetime1 = 16;
             var5_intLifetime1 = 16;
             var6Lifetime1 = 256;
@@ -426,7 +426,7 @@ final class PlayPhase extends MatchPhase {
         }
         for (var3 = 0; var3 < this.viewports.length; var3++) {
           if (~this.screen.getViewedPlayerIndex(112) == ~var3 ||
-            this.screen.d((byte) 102)) {
+            this.screen.isSpectating((byte) 102)) {
             this.viewports[var3].a((byte) -115, param0);
           }
         }

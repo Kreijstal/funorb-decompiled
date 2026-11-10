@@ -485,7 +485,7 @@ class HotspotTextWidget extends FocusableWidget {
           for (var3 = 0; var3 < 8; var3++) {
             var6[var3] = WallTile.bitwiseOr(var13[var3], var17[var3]);
           }
-          var14 = pq.field_e;
+          var14 = CharacterChoiceFactory.field_e;
           var12 = var14;
           var8 = var12;
           var1Lifetime1 = var8;

@@ -11,7 +11,7 @@ final class cba {
         if (param0 != -123) {
           return -102;
         }
-        return qma.a((byte) 123, (double)param2 * param1 / 360.0);
+        return ProceduralTextureProvider.a((byte) 123, (double)param2 * param1 / 360.0);
     }
 
     public static void releaseStatics(byte param0) {

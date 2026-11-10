@@ -82,25 +82,25 @@ final class PitBehaviour extends Behaviour {
             var6 = param2.getY(9648);
             var7_ref_la = this.getRoom(true);
             var8_ref_tqa = var7_ref_la.getTileGrid((byte) 93);
-            var9 = var8_ref_tqa.a(var5_int, false);
-            var10 = var8_ref_tqa.a(var6, false);
+            var9 = var8_ref_tqa.toCellCoordinate(var5_int, false);
+            var10 = var8_ref_tqa.toCellCoordinate(var6, false);
             var11 = var6 % this.field_u;
             var12 = var5_int % this.field_u;
             var13 = this.field_u / 2;
             if (var11 > var13 &&
-              !var8_ref_tqa.a(79, var9, 1 + var10).a(-111, new int[]{1, 0})) {
+              !var8_ref_tqa.getCell(79, var9, 1 + var10).a(-111, new int[]{1, 0})) {
               return;
             }
             if (var11 < var13 &&
-              !var8_ref_tqa.a(74, var9, var10 - 1).a(-126, new int[]{1, 0})) {
+              !var8_ref_tqa.getCell(74, var9, var10 - 1).a(-126, new int[]{1, 0})) {
               return;
             }
             if (var12 < var13 &&
-              !var8_ref_tqa.a(-108, var9 - 1, var10).a(-117, new int[]{1, 0})) {
+              !var8_ref_tqa.getCell(-108, var9 - 1, var10).a(-117, new int[]{1, 0})) {
               return;
             }
             if (var12 > var13 &&
-              !var8_ref_tqa.a(-112, var9 + 1, var10).a(-111, new int[]{1, 0})) {
+              !var8_ref_tqa.getCell(-112, var9 + 1, var10).a(-111, new int[]{1, 0})) {
               return;
             }
             var19 = (Player) (param2);

@@ -90,7 +90,7 @@ final class MovingPlatformComponent extends PathMoverComponent {
           var4.setSize((byte) -11, this.height, this.width);
           var5 = new PlatformBehaviour(param2, false);
           var5.b(-5, this.field_M);
-          var5.a((byte) -24, true);
+          var5.setLocked((byte) -24, true);
           if (param1 != 3) {
             stackIn_2_0 = (Trap) null;
             return stackIn_2_0;

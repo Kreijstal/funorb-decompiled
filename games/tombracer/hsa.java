@@ -3,7 +3,7 @@
  */
 final class hsa {
     private SoftReferenceCache field_d;
-    private d field_b;
+    private TextureProvider field_b;
     static int field_a;
     private OpenGlToolkit field_e;
     static String field_c;
@@ -19,11 +19,11 @@ final class hsa {
 
     final LegacyOpenGlTexture2D a(int param0, int param1) {
         Object var3;
-        dw var5;
+        TextureMetadata var5;
         int var6;
         int[] var7;
         int var8;
-        dw var12;
+        TextureMetadata var12;
         int stackIn_9_0 = 0;
         LegacyOpenGlTexture2D stackIn_17_0;
         LegacyOpenGlTexture2D stackIn_17_1;
@@ -116,7 +116,7 @@ final class hsa {
         LegacyOpenGlTexture2D var28;
         LegacyOpenGlTexture2D var35;
         LegacyOpenGlTexture2D var38;
-        dw var39;
+        TextureMetadata var39;
         LegacyOpenGlTexture2D var40;
         LegacyOpenGlTexture2D var41;
         int[] var43;
@@ -135,10 +135,10 @@ final class hsa {
           if (var3 != null) {
             return (LegacyOpenGlTexture2D) (var3);
           }
-          if (!this.field_b.a(param0, (byte) 34)) {
+          if (!this.field_b.isTextureReady(param0, (byte) 34)) {
             return null;
           }
-          var39 = this.field_b.a((byte) 96, param0);
+          var39 = this.field_b.metadata((byte) 96, param0);
           if (var39.field_g) {
             stackIn_49_0 = 64;
           } else {
@@ -148,9 +148,9 @@ final class hsa {
           if (!var39.field_l) {
             if (2 != var39.field_d &&
               PlayTrackCommand.a((int) var39.field_h, false)) {
-              var7 = this.field_b.a(14907, param0, true, var6, 0.699999988079071f, var6);
+              var7 = this.field_b.loadPixels(14907, param0, true, var6, 0.699999988079071f, var6);
             } else {
-              var7 = this.field_b.a((byte) 40, var6, 0.699999988079071f, param0, false, var6);
+              var7 = this.field_b.loadPixels((byte) 40, var6, 0.699999988079071f, param0, false, var6);
             }
             stackIn_56_0 = null;
             stackIn_56_1 = null;
@@ -174,7 +174,7 @@ final class hsa {
             return var40;
           }
           if (this.field_e.f()) {
-            var11 = this.field_b.a(param1 ^ 122, var6, var6, param0, 0.699999988079071f, false);
+            var11 = this.field_b.loadFloatPixels(param1 ^ 122, var6, var6, param0, 0.699999988079071f, false);
             var10 = var11;
             var9 = var10;
             var7_array = var9;
@@ -201,9 +201,9 @@ final class hsa {
           }
           if (2 != var39.field_d &&
             PlayTrackCommand.a((int) var39.field_h, false)) {
-            var7Lifetime2 = this.field_b.a(14907, param0, true, var6, 0.699999988079071f, var6);
+            var7Lifetime2 = this.field_b.loadPixels(14907, param0, true, var6, 0.699999988079071f, var6);
           } else {
-            var7Lifetime2 = this.field_b.a((byte) 40, var6, 0.699999988079071f, param0, false, var6);
+            var7Lifetime2 = this.field_b.loadPixels((byte) 40, var6, 0.699999988079071f, param0, false, var6);
           }
           stackIn_71_0 = null;
           stackIn_71_1 = null;
@@ -230,10 +230,10 @@ final class hsa {
         if (var3 != null) {
           return (LegacyOpenGlTexture2D) (var3);
         }
-        if (!this.field_b.a(param0, (byte) 34)) {
+        if (!this.field_b.isTextureReady(param0, (byte) 34)) {
           return null;
         }
-        var12 = this.field_b.a((byte) 96, param0);
+        var12 = this.field_b.metadata((byte) 96, param0);
         var5 = var12;
         if (var12.field_g) {
           stackIn_9_0 = 64;
@@ -243,12 +243,12 @@ final class hsa {
         var6Lifetime1 = stackIn_9_0;
         if (!var12.field_l) {
           if (2 == var12.field_d) {
-            var7Lifetime1 = this.field_b.a((byte) 40, var6Lifetime1, 0.699999988079071f, param0, false, var6Lifetime1);
+            var7Lifetime1 = this.field_b.loadPixels((byte) 40, var6Lifetime1, 0.699999988079071f, param0, false, var6Lifetime1);
           } else {
             if (!PlayTrackCommand.a((int) var12.field_h, false)) {
-              var7Lifetime1 = this.field_b.a((byte) 40, var6Lifetime1, 0.699999988079071f, param0, false, var6Lifetime1);
+              var7Lifetime1 = this.field_b.loadPixels((byte) 40, var6Lifetime1, 0.699999988079071f, param0, false, var6Lifetime1);
             } else {
-              var7Lifetime1 = this.field_b.a(14907, param0, true, var6Lifetime1, 0.699999988079071f, var6Lifetime1);
+              var7Lifetime1 = this.field_b.loadPixels(14907, param0, true, var6Lifetime1, 0.699999988079071f, var6Lifetime1);
             }
           }
           stackIn_17_0 = null;
@@ -273,7 +273,7 @@ final class hsa {
           return var13;
         }
         if (this.field_e.f()) {
-          var11Lifetime1 = this.field_b.a(param1 ^ 122, var6Lifetime1, var6Lifetime1, param0, 0.699999988079071f, false);
+          var11Lifetime1 = this.field_b.loadFloatPixels(param1 ^ 122, var6Lifetime1, var6Lifetime1, param0, 0.699999988079071f, false);
           var10Lifetime1 = var11Lifetime1;
           var9Lifetime1 = var10Lifetime1;
           var7_arrayLifetime1 = var9Lifetime1;
@@ -299,7 +299,7 @@ final class hsa {
           return var38;
         }
         if (2 == var12.field_d) {
-          var43 = this.field_b.a((byte) 40, var6Lifetime1, 0.699999988079071f, param0, false, var6Lifetime1);
+          var43 = this.field_b.loadPixels((byte) 40, var6Lifetime1, 0.699999988079071f, param0, false, var6Lifetime1);
           stackIn_28_0 = null;
           stackIn_28_1 = null;
           stackIn_28_2 = this.field_e;
@@ -322,7 +322,7 @@ final class hsa {
           return var21;
         }
         if (!PlayTrackCommand.a((int) var12.field_h, false)) {
-          var45 = this.field_b.a((byte) 40, var6Lifetime1, 0.699999988079071f, param0, false, var6Lifetime1);
+          var45 = this.field_b.loadPixels((byte) 40, var6Lifetime1, 0.699999988079071f, param0, false, var6Lifetime1);
           stackIn_38_0 = null;
           stackIn_38_1 = null;
           stackIn_38_2 = this.field_e;
@@ -344,7 +344,7 @@ final class hsa {
           this.field_d.put(param1 + 29166, var28, (long)param0);
           return var28;
         }
-        var47 = this.field_b.a(14907, param0, true, var6Lifetime1, 0.699999988079071f, var6Lifetime1);
+        var47 = this.field_b.loadPixels(14907, param0, true, var6Lifetime1, 0.699999988079071f, var6Lifetime1);
         stackIn_34_0 = null;
         stackIn_34_1 = null;
         stackIn_34_2 = this.field_e;
@@ -390,7 +390,7 @@ final class hsa {
         field_c = null;
     }
 
-    hsa(OpenGlToolkit param0, d param1) {
+    hsa(OpenGlToolkit param0, TextureProvider param1) {
         this.field_d = new SoftReferenceCache(256);
         try {
           this.field_b = param1;

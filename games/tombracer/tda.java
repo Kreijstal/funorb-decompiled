@@ -155,7 +155,7 @@ final class tda extends jg {
           return;
         }
         ValidationMessageWidget.field_K = param0;
-        wea.field_d = new gqa[param0 * 15];
+        CourseLayout.field_d = new gqa[param0 * 15];
         baa.field_b = new int[3];
     }
 

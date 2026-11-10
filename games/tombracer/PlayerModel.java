@@ -339,7 +339,7 @@ final class PlayerModel implements PlayerAnimator, gs {
           this.field_k = 0;
           if (this.field_p.getRoom((byte) 109) != null &&
             this.field_p.getRoom((byte) -123).getTileGrid((byte) 93) != null) {
-            var3 = this.field_p.getRoom((byte) -88).getTileGrid((byte) 93).a(this.getRenderY((byte) 106), this.getRenderX((byte) 102), (byte) 119);
+            var3 = this.field_p.getRoom((byte) -88).getTileGrid((byte) 93).getCellAt(this.getRenderY((byte) 106), this.getRenderX((byte) 102), (byte) 119);
             if (var3 != null &&
               var3.b(param0 ^ 21463)) {
               this.field_k = 1;

@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kqa {
-    private int[] field_c;
-    int[] field_b;
+final class RaceStandings {
+    private int[] sortKeys;
+    int[] positions;
     static PlatformTaskDispatcher field_a;
-    int[] field_e;
-    private MatchState field_d;
+    int[] order;
+    private MatchState matchState;
 
-    final void a(int param0) {
+    final void update(int param0) {
         int var5 = 0;
         int[] stackIn_4_0 = null;
         int stackIn_4_1 = 0;
@@ -25,45 +25,45 @@ final class kqa {
         int var4Lifetime1;
         var9 = TombRacer.field_G ? 1 : 0;
         var2 = -103 % ((-35 - param0) / 39);
-        for (var3 = 0; var3 < this.field_d.players.length; var3++) {
-          stackIn_4_0 = this.field_c;
+        for (var3 = 0; var3 < this.matchState.players.length; var3++) {
+          stackIn_4_0 = this.sortKeys;
           stackIn_4_1 = var3;
-          if (this.field_d.simulations[var3].isFinished(0)) {
+          if (this.matchState.simulations[var3].isFinished(0)) {
             stackIn_5_2 = -999;
           } else {
-            stackIn_5_2 = this.field_d.simulations[var3].b(false) + this.field_d.players[var3].i((byte) -72);
+            stackIn_5_2 = this.matchState.simulations[var3].b(false) + this.matchState.players[var3].i((byte) -72);
           }
           stackIn_4_0[stackIn_4_1] = stackIn_5_2;
-          if (this.field_d.hasResigned((byte) -99, var3)) {
-            this.field_c[var3] = 2147483647;
+          if (this.matchState.hasResigned((byte) -99, var3)) {
+            this.sortKeys[var3] = 2147483647;
           }
         }
         var3Lifetime1 = 0;
-        for (var4 = 0; var4 < this.field_e.length; var4++) {
-          for (var5 = var4; var5 < this.field_e.length; var5++) {
-            var6 = this.field_e[var4];
-            var7 = this.field_e[var5];
+        for (var4 = 0; var4 < this.order.length; var4++) {
+          for (var5 = var4; var5 < this.order.length; var5++) {
+            var6 = this.order[var4];
+            var7 = this.order[var5];
             var8 = 0;
-            if (this.field_c[var7] < this.field_c[var6]) {
+            if (this.sortKeys[var7] < this.sortKeys[var6]) {
               var8 = 1;
             } else {
-              if (this.field_c[var6] == this.field_c[var7] &&
-                this.field_d.simulations[var7].tick < this.field_d.simulations[var6].tick) {
+              if (this.sortKeys[var6] == this.sortKeys[var7] &&
+                this.matchState.simulations[var7].tick < this.matchState.simulations[var6].tick) {
                 var8 = 1;
               }
             }
             if (var8 != 0) {
-              this.field_e[var4] = var7;
+              this.order[var4] = var7;
               var3Lifetime1 = 1;
-              this.field_e[var5] = var6;
+              this.order[var5] = var6;
             }
           }
         }
         if (var3Lifetime1 != 0) {
           var10 = 0;
           var4Lifetime1 = var10;
-          while (var10 < this.field_e.length) {
-            this.field_b[this.field_e[var10]] = var10;
+          while (var10 < this.order.length) {
+            this.positions[this.order[var10]] = var10;
             var10++;
           }
         }
@@ -72,7 +72,7 @@ final class kqa {
     public static void a(byte param0) {
         field_a = null;
         if (param0 >= -119) {
-          kqa.b(-126);
+          RaceStandings.b(-126);
         }
     }
 
@@ -101,28 +101,28 @@ final class kqa {
         }
     }
 
-    kqa(MatchState param0) {
+    RaceStandings(MatchState param0) {
         try {
-          this.field_d = param0;
-          this.a(false);
+          this.matchState = param0;
+          this.reset(false);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "kqa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(boolean param0) {
+    final void reset(boolean param0) {
         int var3 = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
-        int var2 = this.field_d.players.length;
+        int var2 = this.matchState.players.length;
         if (param0) {
-          kqa.b(110);
+          RaceStandings.b(110);
         }
-        this.field_c = new int[var2];
-        this.field_e = new int[var2];
-        this.field_b = new int[var2];
+        this.sortKeys = new int[var2];
+        this.order = new int[var2];
+        this.positions = new int[var2];
         for (var3 = 0; var3 < var2; var3++) {
-          this.field_e[var3] = var3;
-          this.field_b[var3] = var3;
+          this.order[var3] = var3;
+          this.positions[var3] = var3;
         }
     }
 

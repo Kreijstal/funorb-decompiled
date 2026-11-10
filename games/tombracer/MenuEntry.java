@@ -248,7 +248,7 @@ final class MenuEntry {
               var5 = 10309393;
             }
             if (this.field_g != 39) {
-              stackIn_51_0 = vk.field_d;
+              stackIn_51_0 = CourseLayoutFactory.field_d;
             } else {
               stackIn_51_0 = WeaponShooterBehaviour.field_r;
             }

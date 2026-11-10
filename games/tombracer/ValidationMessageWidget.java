@@ -194,18 +194,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             if (BevelOperator.field_p != var6 &&
               var6 != tea.field_b) {
               if (fp.field_c == var6) {
-                var19 = pq.field_b[2];
+                var19 = CharacterChoiceFactory.field_b[2];
                 var19.drawAdditive(var9, -(var19.field_q >> 1) + var10, 256);
                 return;
               }
               if (var6 != LightSource.field_k) {
                 return;
               }
-              var20 = pq.field_b[1];
+              var20 = CharacterChoiceFactory.field_b[1];
               var20.drawAdditive(var9, -(var20.field_q >> 1) + var10, 256);
               return;
             }
-            var21 = pq.field_b[0];
+            var21 = CharacterChoiceFactory.field_b[0];
             var11 = var21.field_n << 1;
             var12 = var21.field_k << 1;
             if (this.field_H != null &&
@@ -230,18 +230,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           if (BevelOperator.field_p != var6 &&
             var6 != tea.field_b) {
             if (fp.field_c == var6) {
-              var23 = pq.field_b[2];
+              var23 = CharacterChoiceFactory.field_b[2];
               var23.drawAdditive(var9Lifetime5, -(var23.field_q >> 1) + var10Lifetime5, 256);
               return;
             }
             if (var6 != LightSource.field_k) {
               return;
             }
-            var24 = pq.field_b[1];
+            var24 = CharacterChoiceFactory.field_b[1];
             var24.drawAdditive(var9Lifetime5, -(var24.field_q >> 1) + var10Lifetime5, 256);
             return;
           }
-          var25 = pq.field_b[0];
+          var25 = CharacterChoiceFactory.field_b[0];
           var11Lifetime5 = var25.field_n << 1;
           var12Lifetime5 = var25.field_k << 1;
           if (this.field_H == null) {
@@ -279,18 +279,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             if (BevelOperator.field_p != var6 &&
               var6 != tea.field_b) {
               if (fp.field_c == var6) {
-                var28 = pq.field_b[2];
+                var28 = CharacterChoiceFactory.field_b[2];
                 var28.drawAdditive(var9Lifetime1, -(var28.field_q >> 1) + var10Lifetime1, 256);
                 return;
               }
               if (var6 != LightSource.field_k) {
                 return;
               }
-              var29 = pq.field_b[1];
+              var29 = CharacterChoiceFactory.field_b[1];
               var29.drawAdditive(var9Lifetime1, -(var29.field_q >> 1) + var10Lifetime1, 256);
               return;
             }
-            var30 = pq.field_b[0];
+            var30 = CharacterChoiceFactory.field_b[0];
             var11Lifetime1 = var30.field_n << 1;
             var12Lifetime1 = var30.field_k << 1;
             if (this.field_H != null &&
@@ -315,18 +315,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           if (BevelOperator.field_p != var6 &&
             var6 != tea.field_b) {
             if (fp.field_c == var6) {
-              var32 = pq.field_b[2];
+              var32 = CharacterChoiceFactory.field_b[2];
               var32.drawAdditive(var9Lifetime1Lifetime1, -(var32.field_q >> 1) + var10Lifetime1Lifetime1, 256);
               return;
             }
             if (var6 != LightSource.field_k) {
               return;
             }
-            var33 = pq.field_b[1];
+            var33 = CharacterChoiceFactory.field_b[1];
             var33.drawAdditive(var9Lifetime1Lifetime1, -(var33.field_q >> 1) + var10Lifetime1Lifetime1, 256);
             return;
           }
-          var34 = pq.field_b[0];
+          var34 = CharacterChoiceFactory.field_b[0];
           var11Lifetime1Lifetime1 = var34.field_n << 1;
           var12Lifetime1Lifetime1 = var34.field_k << 1;
           if (this.field_H == null) {
@@ -362,18 +362,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             if (BevelOperator.field_p != var6Lifetime1 &&
               var6Lifetime1 != tea.field_b) {
               if (fp.field_c == var6Lifetime1) {
-                var51 = pq.field_b[2];
+                var51 = CharacterChoiceFactory.field_b[2];
                 var51.drawAdditive(var9Lifetime2, -(var51.field_q >> 1) + var10Lifetime2, 256);
                 return;
               }
               if (var6Lifetime1 != LightSource.field_k) {
                 return;
               }
-              var52 = pq.field_b[1];
+              var52 = CharacterChoiceFactory.field_b[1];
               var52.drawAdditive(var9Lifetime2, -(var52.field_q >> 1) + var10Lifetime2, 256);
               return;
             }
-            var53 = pq.field_b[0];
+            var53 = CharacterChoiceFactory.field_b[0];
             var11Lifetime2 = var53.field_n << 1;
             var12Lifetime2 = var53.field_k << 1;
             if (this.field_H != null &&
@@ -400,18 +400,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           if (BevelOperator.field_p != var6Lifetime1Lifetime1 &&
             var6Lifetime1Lifetime1 != tea.field_b) {
             if (fp.field_c == var6Lifetime1Lifetime1) {
-              var45 = pq.field_b[2];
+              var45 = CharacterChoiceFactory.field_b[2];
               var45.drawAdditive(var9Lifetime2Lifetime1, -(var45.field_q >> 1) + var10Lifetime2Lifetime1, 256);
               return;
             }
             if (var6Lifetime1Lifetime1 != LightSource.field_k) {
               return;
             }
-            var46 = pq.field_b[1];
+            var46 = CharacterChoiceFactory.field_b[1];
             var46.drawAdditive(var9Lifetime2Lifetime1, -(var46.field_q >> 1) + var10Lifetime2Lifetime1, 256);
             return;
           }
-          var47 = pq.field_b[0];
+          var47 = CharacterChoiceFactory.field_b[0];
           var16 = var47;
           var11Lifetime2Lifetime1 = var47.field_n << 1;
           var12Lifetime2Lifetime1 = var47.field_k << 1;
@@ -450,18 +450,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           if (BevelOperator.field_p != var6Lifetime2 &&
             var6Lifetime2 != tea.field_b) {
             if (fp.field_c == var6Lifetime2) {
-              var37 = pq.field_b[2];
+              var37 = CharacterChoiceFactory.field_b[2];
               var37.drawAdditive(var9Lifetime3, -(var37.field_q >> 1) + var10Lifetime3, 256);
               return;
             }
             if (var6Lifetime2 != LightSource.field_k) {
               return;
             }
-            var38 = pq.field_b[1];
+            var38 = CharacterChoiceFactory.field_b[1];
             var38.drawAdditive(var9Lifetime3, -(var38.field_q >> 1) + var10Lifetime3, 256);
             return;
           }
-          var39 = pq.field_b[0];
+          var39 = CharacterChoiceFactory.field_b[0];
           var11Lifetime3 = var39.field_n << 1;
           var12Lifetime3 = var39.field_k << 1;
           if (this.field_H != null &&
@@ -486,18 +486,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         if (BevelOperator.field_p != var6Lifetime3 &&
           var6Lifetime3 != tea.field_b) {
           if (fp.field_c == var6Lifetime3) {
-            var41 = pq.field_b[2];
+            var41 = CharacterChoiceFactory.field_b[2];
             var41.drawAdditive(var9Lifetime4, -(var41.field_q >> 1) + var10Lifetime4, 256);
             return;
           }
           if (var6Lifetime3 != LightSource.field_k) {
             return;
           }
-          var42 = pq.field_b[1];
+          var42 = CharacterChoiceFactory.field_b[1];
           var42.drawAdditive(var9Lifetime4, -(var42.field_q >> 1) + var10Lifetime4, 256);
           return;
         }
-        var43 = pq.field_b[0];
+        var43 = CharacterChoiceFactory.field_b[0];
         var11Lifetime4 = var43.field_n << 1;
         var12Lifetime4 = var43.field_k << 1;
         if (this.field_H == null) {

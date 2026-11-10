@@ -27,7 +27,7 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
             bv.field_xb[var1_intLifetime1] = 0L;
           }
-          mt.field_a = 0;
+          ScoringObserverFactory.field_a = 0;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ea.C(" + param0 + ')');
         }

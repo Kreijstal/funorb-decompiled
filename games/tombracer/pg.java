@@ -41,17 +41,17 @@ final class pg extends WidgetContainer implements HotspotListener, ButtonListene
             field_y = -37;
           }
           if (0 == param1) {
-            gva.a("terms.ws", (byte) -88);
+            DefaultRoomObjectRenderer.a("terms.ws", (byte) -88);
             return;
           }
           if (1 == param1) {
-            gva.a("privacy.ws", (byte) -50);
+            DefaultRoomObjectRenderer.a("privacy.ws", (byte) -50);
             return;
           }
           if (param1 != 2) {
             return;
           }
-          gva.a("conduct.ws", (byte) -118);
+          DefaultRoomObjectRenderer.a("conduct.ws", (byte) -118);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

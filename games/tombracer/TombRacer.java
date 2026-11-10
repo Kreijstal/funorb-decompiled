@@ -343,7 +343,7 @@ public final class TombRacer extends rfa implements ls {
         NodeHashTable.f(124);
         rf.releaseStatics((byte) -19);
         g.releaseStatics(false);
-        wea.releaseStatics(8);
+        CourseLayout.releaseStatics(8);
         ObjectList.releaseStatics(true);
         pra.a(param0 + 3548);
         tea.releaseStatics((byte) -124);
@@ -358,14 +358,14 @@ public final class TombRacer extends rfa implements ls {
         fga.a((byte) -29);
         ck.a(false);
         ModelFactory.a((byte) 91);
-        gva.a(param0 ^ -14342);
+        DefaultRoomObjectRenderer.a(param0 ^ -14342);
         RoomComponentFactory.a((byte) -114);
         PlayerSimulation.releaseStatics(param0 ^ param0);
         dva.releaseStatics((byte) 53);
         aq.releaseStatics(-116);
-        wd.a(3);
-        kqa.a((byte) -120);
-        sma.releaseStatics(-98);
+        CharacterChoice.a(3);
+        RaceStandings.a((byte) -120);
+        ScoreStandings.releaseStatics(-98);
         CommonChooseReward.releaseStatics((byte) 103);
         MatchStatistics.releaseStatics(false);
         bua.a((byte) 97);
@@ -398,7 +398,7 @@ public final class TombRacer extends rfa implements ls {
         efa.releaseStatics(true);
         hd.releaseStatics(param0 + 32687);
         lsa.a((byte) 101);
-        qma.a((byte) 25);
+        ProceduralTextureProvider.a((byte) 25);
         hh.a(false);
         fha.releaseStatics((byte) 3);
         hba.releaseStatics(1);
@@ -574,7 +574,7 @@ public final class TombRacer extends rfa implements ls {
         tg.releaseStatics((byte) 23);
         tn.releaseStatics((byte) 94);
         bq.releaseStatics((byte) 25);
-        dw.releaseStatics((byte) 101);
+        TextureMetadata.releaseStatics((byte) 101);
         TestModel.releaseStatics(-30362);
         LegacySwitchModel.releaseStatics(-99);
         jaa.releaseStatics(true);
@@ -917,11 +917,11 @@ public final class TombRacer extends rfa implements ls {
         hda.releaseStatics((byte) -128);
         wc.releaseStatics((byte) -78);
         gba.releaseStatics(true);
-        vk.releaseStatics(param0 ^ -3666);
+        CourseLayoutFactory.releaseStatics(param0 ^ -3666);
         mm.a((byte) -44);
         sda.releaseStatics(-1);
         bd.releaseStatics(119);
-        pq.releaseStatics(0);
+        CharacterChoiceFactory.releaseStatics(0);
         sja.releaseStatics((byte) -126);
         nt.a(true);
         fpa.releaseStatics(1451);
@@ -1538,7 +1538,7 @@ public final class TombRacer extends rfa implements ls {
           if (RandomMazeBehaviour.field_n) {
             era.field_c = true;
             if (null != SecondaryNodeDequeIterator.field_a &&
-              !SecondaryNodeDequeIterator.field_a.d((byte) 79)) {
+              !SecondaryNodeDequeIterator.field_a.isSpectating((byte) 79)) {
               vj.a(BufferedCacheFile.field_k, -114);
               SecondaryNodeDequeIterator.field_a = null;
               ConstrainToRectangleLocomotor.a(false, 1, (byte) 122);

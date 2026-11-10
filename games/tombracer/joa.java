@@ -129,7 +129,7 @@ final class joa {
           int stackIn_10_0 = 0;
           Throwable decompiledCaughtException = null;
           if (Room.field_R == null) {
-            Room.field_R = kqa.field_a.a(-24818, ConstrainToLatticeLocomotor.field_x, nn.field_b);
+            Room.field_R = RaceStandings.field_a.a(-24818, ConstrainToLatticeLocomotor.field_x, nn.field_b);
           }
           var2 = -67 % ((param1 - 67) / 35);
           if (0 == Room.field_R.field_b) {
@@ -142,7 +142,7 @@ final class joa {
             ProceduralTexture.field_p = SecondaryNodeHashTable.field_g;
           } else {
             try {
-              OpenGlTransform3D.field_e = new BufferedSocket((java.net.Socket) (Room.field_R.field_f), kqa.field_a);
+              OpenGlTransform3D.field_e = new BufferedSocket((java.net.Socket) (Room.field_R.field_f), RaceStandings.field_a);
               ql.field_k.position = 0;
               var4 = WeaveOperator.field_q;
               ProceduralTexture.field_p = RotaterMountComponent.field_G;

@@ -83,10 +83,10 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
             this.field_m = false;
             return;
           }
-          this.field_e = wd.a((byte) -70, param0, param1.a("gl", (byte) 122, "uw_ground_unlit"), 34336);
-          this.field_l = wd.a((byte) -70, param0, param1.a("gl", (byte) 126, "uw_ground_lit"), 34336);
-          this.field_r = wd.a((byte) -70, param0, param1.a("gl", (byte) 121, "uw_model_unlit"), 34336);
-          this.field_o = wd.a((byte) -70, param0, param1.a("gl", (byte) 115, "uw_model_lit"), 34336);
+          this.field_e = CharacterChoice.a((byte) -70, param0, param1.a("gl", (byte) 122, "uw_ground_unlit"), 34336);
+          this.field_l = CharacterChoice.a((byte) -70, param0, param1.a("gl", (byte) 126, "uw_ground_lit"), 34336);
+          this.field_r = CharacterChoice.a((byte) -70, param0, param1.a("gl", (byte) 121, "uw_model_unlit"), 34336);
+          this.field_o = CharacterChoice.a((byte) -70, param0, param1.a("gl", (byte) 115, "uw_model_lit"), 34336);
           stackIn_6_0 = (this.field_r == null) ? 0 : 1;
           if (this.field_e == null) {
             stackIn_9_1 = 0;

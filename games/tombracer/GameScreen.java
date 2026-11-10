@@ -185,7 +185,7 @@ abstract class GameScreen {
     final static void c(byte param0) {
         og.b(0);
         if (null != nma.field_l) {
-          pq.a(nma.field_l, false);
+          CharacterChoiceFactory.a(nma.field_l, false);
         }
         ContextMenu.f((byte) 101);
         BeamSegment.a(5);

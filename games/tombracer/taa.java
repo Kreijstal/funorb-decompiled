@@ -103,6 +103,6 @@ final class taa extends IntrusiveNode {
     }
 
     static {
-        eqa discarded$0 = new eqa();
+        ChooseRewardFactory discarded$0 = new ChooseRewardFactory();
     }
 }

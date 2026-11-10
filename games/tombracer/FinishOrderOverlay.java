@@ -49,8 +49,8 @@ final class FinishOrderOverlay extends MatchOverlay {
         var10 = 40 + var9;
         PlayerViewport.a(var8, 300, (byte) 65, -150 + var2, aq.field_a, var9 - 16);
         MembersUpsellMenu.a(PowerUpItemBehaviour.field_v.toUpperCase(), 16777215, qf.field_j, -1, 4 + var9, var2, 0);
-        for (var11 = 0; this.field_g.field_c.field_e.length > var11; var11++) {
-          var12 = this.field_g.field_c.field_e[var11];
+        for (var11 = 0; this.field_g.standings.order.length > var11; var11++) {
+          var12 = this.field_g.standings.order[var11];
           if (var12 != -1) {
             if (var12 == var4) {
               var13 = var5;

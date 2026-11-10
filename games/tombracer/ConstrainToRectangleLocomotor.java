@@ -155,7 +155,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
               param1 != 8 &&
               param1 != 12) {
               TripBeamComponent.b(1, 0);
-              kqa.b(18916);
+              RaceStandings.b(18916);
               if ((!(wka.field_d) ||
                 cs.field_c == null)) {
                 fp.a(48);
@@ -165,7 +165,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
             else {
               if (-2 == param1) {
                 TripBeamComponent.b(1, 0);
-                kqa.b(18916);
+                RaceStandings.b(18916);
                 wka.field_d = false;
                 cs.field_c = null;
               }
@@ -201,7 +201,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
             for (var4 = 0; var4 < 8; var4++) {
               var11[var4] = 0;
             }
-            var12 = pq.field_e;
+            var12 = CharacterChoiceFactory.field_e;
             var10 = var12;
             var7 = var10;
             var3Lifetime1 = var7;

@@ -166,7 +166,7 @@ final class Particle extends PooledObject implements Renderable {
 
     public final void render(int param0, iq param1) {
         try {
-          dea.field_a.a(param1, (byte) -27, this);
+          dea.roomObjectRenderer.drawParticle(param1, (byte) -27, this);
           if (param0 < 103) {
             this.field_o = -7;
           }

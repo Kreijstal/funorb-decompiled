@@ -23,7 +23,7 @@ final class ina {
           ContextMenu.field_Ib = tc.a(OpenGlBuffer.field_c, -8829, param0);
           mma.field_b = tc.a(DoorwayComponent.field_K, -8829, param0);
           RevolverItemComponent.field_J = tc.a(C2SActionPacket.field_l, param1 - 8829, param0);
-          ta.field_ub = tc.a(vk.field_e, -8829, param0);
+          ta.field_ub = tc.a(CourseLayoutFactory.field_e, -8829, param0);
           PowerUpItemBehaviour.field_t = tc.a(dq.field_h, -8829, param0);
           GameApplet.field_j = tc.a(gta.field_f, param1 ^ -8829, param0);
           gca.field_g = tc.a(cba.field_b, param1 ^ -8829, param0);

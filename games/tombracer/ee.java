@@ -17,7 +17,7 @@ final class ee implements WidgetPainter {
           var6_int = param0.field_i + param1;
           var7 = param3 + param0.field_n;
           bl.a(param0.field_m, var7, param0.field_p, var6_int, 1);
-          var8 = pq.field_b[1];
+          var8 = CharacterChoiceFactory.field_b[1];
           if (param0 instanceof FocusableWidget &&
             ((FocusableWidget) (param0)).field_w) {
             var8.drawAdditive(1 + var6_int + (-var8.field_n + param0.field_m >> 1), var7 + 1 + (-var8.field_k + param0.field_p >> 1), 256);

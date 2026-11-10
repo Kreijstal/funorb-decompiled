@@ -4,7 +4,7 @@
 interface TrapPart {
     public abstract Trap getTrap(byte param0);
 
-    public abstract boolean a(byte param0);
+    public abstract boolean isStopped(byte param0);
 
     public abstract boolean isEnabled(int param0);
 }

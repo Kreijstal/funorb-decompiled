@@ -313,7 +313,7 @@ final class FullscreenConfirmationDialog extends ofa implements ButtonListener {
         int var7 = 0;
         try {
           super.updatePointerState(param0, param1, param2, param3);
-          if (qma.field_c) {
+          if (ProceduralTextureProvider.field_c) {
             param2.clearKeyboardFocus((byte) 64);
           }
           var5_long = -this.field_P + bva.currentTimeMillis((byte) -107);

@@ -394,8 +394,8 @@ final class qt {
             return;
           }
           PlayerViewport.field_o = true;
-          for (var3Lifetime2 = 0; vk.field_b.length > var3Lifetime2; var3Lifetime2++) {
-            vk.field_b[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).readByte((byte) 48);
+          for (var3Lifetime2 = 0; CourseLayoutFactory.field_b.length > var3Lifetime2; var3Lifetime2++) {
+            CourseLayoutFactory.field_b[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).readByte((byte) 48);
           }
           CoinBagItemComponent.field_H = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
           mua.field_b = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);

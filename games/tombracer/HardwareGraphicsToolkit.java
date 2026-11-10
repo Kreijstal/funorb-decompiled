@@ -1183,7 +1183,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         int var7;
         int var8;
         int var9;
-        dw var10;
+        TextureMetadata var10;
         int var11;
         int var12;
         AffineTransform3D var13;
@@ -1208,7 +1208,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           var9 = stackIn_8_0;
           if (param3 >= 0) {
             var5 = this.field_Ec.a(param3, 111);
-            var10 = this.field_c.a((byte) -47, param3);
+            var10 = this.field_c.metadata((byte) -47, param3);
             if (0 == var10.field_s &&
               var10.field_o == 0) {
               this.p((byte) -80);
@@ -1920,10 +1920,10 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         return -2 + this.field_e;
     }
 
-    HardwareGraphicsToolkit(java.awt.Canvas param0, Object param1, d param2, ResourceArchive param3, int param4, int param5) {
+    HardwareGraphicsToolkit(java.awt.Canvas param0, Object param1, TextureProvider param2, ResourceArchive param3, int param4, int param5) {
         super(param2);
         int var8 = 0;
-        dw var9 = null;
+        TextureMetadata var9 = null;
         java.awt.Dimension var11 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -2021,9 +2021,9 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
             ija.a(true, (byte) 107, false);
             if (this.field_c != null) {
               this.field_Ec = new kp(this, this.field_c);
-              this.field_P = new jagex3.graphics2.hw.NativeInterface(this.field_c.a(-15061), this.field_F);
-              for (var8 = 0; var8 < this.field_c.a(-15061); var8++) {
-                var9 = this.field_c.a((byte) -79, var8);
+              this.field_P = new jagex3.graphics2.hw.NativeInterface(this.field_c.textureCount(-15061), this.field_F);
+              for (var8 = 0; var8 < this.field_c.textureCount(-15061); var8++) {
+                var9 = this.field_c.metadata((byte) -79, var8);
                 if (var9 != null) {
                   this.field_P.initTextureMetrics(var8, var9.field_c, var9.field_i);
                 }

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ic extends mt {
+final class ic extends ScoringObserverFactory {
     static int[] field_d;
     static long field_b;
     static int[] field_c;
 
-    final MatchScoringObserver a(MatchState param0, int param1) {
+    final MatchScoringObserver createScoringObserver(MatchState param0, int param1) {
         RuntimeException var3 = null;
         MatchScoringObserver stackIn_2_0 = null;
         wg stackIn_4_0 = null;

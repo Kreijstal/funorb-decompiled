@@ -118,7 +118,7 @@ final class ik extends IntrusiveNode {
         var2 = TombRacer.field_G ? 1 : 0;
         try {
           for (var1_int = 0; var1_int < ara.field_xb; var1_int++) {
-            wea.field_d[var1_int] = null;
+            CourseLayout.field_d[var1_int] = null;
           }
           ara.field_xb = 0;
           if (param0 != 5) {

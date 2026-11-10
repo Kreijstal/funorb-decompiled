@@ -23,7 +23,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
 
     final native void za(int param0, int param1, int param2, int param3, int param4);
 
-    public NativeSoftwareGraphicsToolkit(java.awt.Canvas param0, d param1, int param2, int param3) {
+    public NativeSoftwareGraphicsToolkit(java.awt.Canvas param0, TextureProvider param1, int param2, int param3) {
         super(param1);
         Throwable decompiledCaughtException = null;
         Throwable var5 = null;
@@ -170,23 +170,23 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
     private final boolean WA(short param0) {
         Object var2 = null;
         Object var2_ref = null;
-        dw var3 = null;
+        TextureMetadata var3 = null;
         int[] var4 = null;
         Throwable var5 = null;
         Throwable decompiledCaughtException = null;
         var2_ref = this.field_c;
         synchronized (var2_ref) {
-          if (!this.field_c.a((int) param0, (byte) 120)) {
+          if (!this.field_c.isTextureReady((int) param0, (byte) 120)) {
             return false;
           }
-          var3 = this.field_c.a((byte) -109, (int) param0);
+          var3 = this.field_c.metadata((byte) -109, (int) param0);
           if (var3 == null) {
             return false;
           }
           if (var3.field_d == 2) {
-            var4 = this.field_c.a((byte) 40, 128, 0.699999988079071f, (int) param0, true, 128);
+            var4 = this.field_c.loadPixels((byte) 40, 128, 0.699999988079071f, (int) param0, true, 128);
           } else {
-            var4 = this.field_c.a(14907, (int) param0, true, 128, 0.699999988079071f, 128);
+            var4 = this.field_c.loadPixels(14907, (int) param0, true, 128, 0.699999988079071f, 128);
           }
           this.CA(param0, var4, var3.field_m, var3.field_d, var3.field_h, var3.field_a, var3.field_t, var3.field_g, var3.field_c, var3.field_i, var3.field_s, var3.field_o, var3.field_p, var3.field_f, var3.field_k, var3.field_b, var3.field_n, var3.field_r, var3.field_l, var3.field_e, var3.field_q);
         }
@@ -243,12 +243,12 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
     private final boolean uploadTextureMetadata(short param0) {
         Object var2 = null;
         Object var2_ref = null;
-        dw var3 = null;
+        TextureMetadata var3 = null;
         Throwable var4 = null;
         Throwable decompiledCaughtException = null;
         var2_ref = this;
         synchronized (var2_ref) {
-          var3 = this.field_c.a((byte) 9, (int) param0);
+          var3 = this.field_c.metadata((byte) 9, (int) param0);
           if (var3 == null) {
             return false;
           }
@@ -434,7 +434,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
         ho.a(true);
     }
 
-    private final native void MA(d param0, int param1, int param2);
+    private final native void MA(TextureProvider param0, int param1, int param2);
 
     final native void clear(int param0);
 

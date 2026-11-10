@@ -146,7 +146,7 @@ final class rg extends SingleChildWidget {
           gn.field_w[5] = "bruce";
           tk.field_a[16] = DateFieldsWidget.gasDeathMessages;
           tk.field_a[8] = gca.skeletonDeathMessages;
-          tk.field_a[14] = vk.boulderDeathMessages;
+          tk.field_a[14] = CourseLayoutFactory.boulderDeathMessages;
           tk.field_a[10] = hg.bladeDeathMessages;
           tk.field_a[3] = nta.crushDeathMessages;
           tk.field_a[11] = jr.gunshotDeathMessages;
@@ -169,7 +169,7 @@ final class rg extends SingleChildWidget {
           Effect.field_h[2] = new String[]{bpa.field_a, du.field_f, vua.field_C};
           IntrusiveDeque.field_d[3] = new String[]{QuickChatMenu.field_Ab, rua.field_hb, Player.field_s};
           IntrusiveDeque.field_d[4] = new String[]{ConstrainToCircleLocomotor.field_t, RewardChoiceSlot.field_b, RopeBridgeComponent.field_G};
-          Effect.field_h[3] = new String[]{InvertOperator.field_o, vk.field_a, SwitchLinkList.field_d};
+          Effect.field_h[3] = new String[]{InvertOperator.field_o, CourseLayoutFactory.field_a, SwitchLinkList.field_d};
           Effect.field_h[4] = new String[]{DisplaySettingsDialog.field_R, gn.field_y, tr.field_d};
           IntrusiveDeque.field_d[5] = new String[]{TripBeamComponent.field_J, td.field_u, PitModel.field_r};
           Effect.field_h[5] = new String[]{TreasureValuesOverlay.field_k, MazeComponent.field_G, du.field_b};
@@ -198,7 +198,7 @@ final class rg extends SingleChildWidget {
         gn.field_w[5] = "bruce";
         tk.field_a[16] = DateFieldsWidget.gasDeathMessages;
         tk.field_a[8] = gca.skeletonDeathMessages;
-        tk.field_a[14] = vk.boulderDeathMessages;
+        tk.field_a[14] = CourseLayoutFactory.boulderDeathMessages;
         tk.field_a[10] = hg.bladeDeathMessages;
         tk.field_a[3] = nta.crushDeathMessages;
         tk.field_a[11] = jr.gunshotDeathMessages;
@@ -221,7 +221,7 @@ final class rg extends SingleChildWidget {
         Effect.field_h[2] = new String[]{bpa.field_a, du.field_f, vua.field_C};
         IntrusiveDeque.field_d[3] = new String[]{QuickChatMenu.field_Ab, rua.field_hb, Player.field_s};
         IntrusiveDeque.field_d[4] = new String[]{ConstrainToCircleLocomotor.field_t, RewardChoiceSlot.field_b, RopeBridgeComponent.field_G};
-        Effect.field_h[3] = new String[]{InvertOperator.field_o, vk.field_a, SwitchLinkList.field_d};
+        Effect.field_h[3] = new String[]{InvertOperator.field_o, CourseLayoutFactory.field_a, SwitchLinkList.field_d};
         Effect.field_h[4] = new String[]{DisplaySettingsDialog.field_R, gn.field_y, tr.field_d};
         IntrusiveDeque.field_d[5] = new String[]{TripBeamComponent.field_J, td.field_u, PitModel.field_r};
         Effect.field_h[5] = new String[]{TreasureValuesOverlay.field_k, MazeComponent.field_G, du.field_b};

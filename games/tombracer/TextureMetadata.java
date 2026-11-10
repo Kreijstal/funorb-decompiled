@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dw {
+final class TextureMetadata {
     boolean field_k;
     byte field_s;
     boolean field_b;
@@ -43,7 +43,7 @@ final class dw {
           }
         }
         if (param0 > -5) {
-          dw.releaseStatics((byte) -100);
+          TextureMetadata.releaseStatics((byte) -100);
         }
         UnlockOverlay.field_l = true;
     }

@@ -67,7 +67,7 @@ abstract class SceneLight extends IntrusiveNode {
           ArchiveSource.field_a = LoadLevelCommand.a(param0, RoundWinnerPhase.field_p, -79);
           bd.field_i = su.createToolkitSprite(ara.field_vb, param0, (byte) -20);
           ColourFillOperator.field_m = su.createToolkitSprite(tla.field_g, param0, (byte) -99);
-          CachedTextLayout.field_l = su.createToolkitSprite(wd.field_c, param0, (byte) 25);
+          CachedTextLayout.field_l = su.createToolkitSprite(CharacterChoice.field_c, param0, (byte) 25);
           lh.field_b = su.createToolkitSprite(LegacyOpenGlTexture3D.field_l, param0, (byte) 127);
           vua.field_A = su.createToolkitSprite(wj.field_a, param0, (byte) 126);
           dn.field_d = LoadLevelCommand.a(param0, ProxySocketConnector.field_e, -100);
@@ -86,7 +86,7 @@ abstract class SceneLight extends IntrusiveNode {
           CharacterSelectPhase.field_r = su.createToolkitSprite(aa.field_a, param0, (byte) 125);
           je.field_E = su.createToolkitSprite(pha.field_Bb, param0, (byte) -119);
           eu.field_a = su.createToolkitSprite(ConstrainToRectangleLocomotor.field_t, param0, (byte) -5);
-          pq.field_a = su.createToolkitSprite(MatchScreen.field_q, param0, (byte) 28);
+          CharacterChoiceFactory.field_a = su.createToolkitSprite(MatchScreen.field_q, param0, (byte) 28);
           ConsoleWindow.field_d = su.createToolkitSprite(TimeSwitchBehaviour.field_n, param0, (byte) 127);
           OpenGlFramebuffer.field_i = LoadLevelCommand.a(param0, WallCrusherComponent.field_F, -67);
           qf.field_k = new ToolkitSprite[OpenGlFramebuffer.field_i.length];

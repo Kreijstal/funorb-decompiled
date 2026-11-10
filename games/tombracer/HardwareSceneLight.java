@@ -30,7 +30,7 @@ final class HardwareSceneLight extends SceneLight {
         var2.position = var2.position + 1;
         int var3 = var2.position;
         var2.writeByte(2, 0);
-        var2.writeBytes(0, vk.field_b, vk.field_b.length, 71);
+        var2.writeBytes(0, CourseLayoutFactory.field_b, CourseLayoutFactory.field_b.length, 71);
         int var4 = -104 % ((param1 - 22) / 36);
         var2.writeByte(CoinBagItemComponent.field_H, 0);
         var2.writeByte(mua.field_b, 0);

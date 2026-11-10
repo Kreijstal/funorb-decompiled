@@ -6,7 +6,7 @@ final class WhiteLightShooterComponent extends ShooterComponent {
     static String field_J;
     static ToolkitSprite field_K;
 
-    final static Room a(int param0, boolean param1, PlayerSimulation param2, int param3, byte param4) {
+    final static Room createCourseRoom(int param0, boolean param1, PlayerSimulation param2, int param3, byte param4) {
         Object var5 = null;
         g var5_ref = null;
         RuntimeException var5_ref2 = null;

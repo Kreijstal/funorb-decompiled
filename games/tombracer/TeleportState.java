@@ -33,7 +33,7 @@ final class TeleportState {
         this.field_c = true;
     }
 
-    final static GraphicsToolkit a(java.awt.Canvas param0, d param1, int param2, byte param3) {
+    final static GraphicsToolkit a(java.awt.Canvas param0, TextureProvider param1, int param2, byte param3) {
         RuntimeException var4 = null;
         GraphicsToolkit stackIn_2_0 = null;
         OpenGlToolkit stackIn_4_0 = null;
@@ -92,7 +92,7 @@ final class TeleportState {
         int var4 = 0;
         String var3 = null;
         int var5 = 0;
-        d var6 = null;
+        TextureProvider var6 = null;
         String stackIn_3_0 = null;
         String stackIn_12_0 = null;
         RuntimeException stackIn_17_0 = null;
@@ -108,8 +108,8 @@ final class TeleportState {
             return stackIn_3_0;
           }
           if (param1 > -37) {
-            var6 = (d) null;
-            TeleportState.a((java.awt.Canvas) null, (d) null, 122, (byte) 69);
+            var6 = (TextureProvider) null;
+            TeleportState.a((java.awt.Canvas) null, (TextureProvider) null, 122, (byte) 69);
           }
           for (var4 = 0; var4 < param0.length(); var4++) {
             if (!SwitchComponent.a(false, param0.charAt(var4))) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pq implements os {
+final class CharacterChoiceFactory implements BitDecodableFactory {
     static int field_f;
     static int[] field_e;
     static jea field_g;
@@ -10,18 +10,18 @@ final class pq implements os {
     static String field_d;
     static jea field_c;
 
-    public final mva[] a(int param0, int param1) {
+    public final BitDecodable[] createArray(int param0, int param1) {
         if (param1 != -26955) {
-          return (mva[]) null;
+          return (BitDecodable[]) null;
         }
-        return (mva[]) ((Object) new wd[param0]);
+        return (BitDecodable[]) ((Object) new CharacterChoice[param0]);
     }
 
-    public final mva a(byte param0) {
+    public final BitDecodable create(byte param0) {
         if (param0 > -17) {
-          return (mva) null;
+          return (BitDecodable) null;
         }
-        return (mva) ((Object) new wd());
+        return (BitDecodable) ((Object) new CharacterChoice());
     }
 
     final static void a(byte[] param0, boolean param1, int param2, int param3, int param4, int param5) {
@@ -56,7 +56,7 @@ final class pq implements os {
         field_g = null;
         field_c = null;
         if (param0 != 0) {
-          pq.releaseStatics(-39);
+          CharacterChoiceFactory.releaseStatics(-39);
         }
     }
 

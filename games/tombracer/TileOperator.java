@@ -4,7 +4,7 @@
 final class TileOperator extends TextureOperator {
     private int field_o;
     private int field_m;
-    static os field_q;
+    static BitDecodableFactory field_q;
     static GameKeyHandler field_n;
     static boolean field_p;
 
@@ -497,7 +497,7 @@ final class TileOperator extends TextureOperator {
     }
 
     static {
-        field_q = (os) ((Object) new pq());
+        field_q = (BitDecodableFactory) ((Object) new CharacterChoiceFactory());
         field_n = new GameKeyHandler();
         field_p = false;
     }

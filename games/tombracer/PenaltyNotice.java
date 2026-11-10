@@ -4,7 +4,7 @@
 final class PenaltyNotice extends IntrusiveNode {
     static BinaryBitmapFont field_f;
     static String field_g;
-    static d field_j;
+    static TextureProvider field_j;
     private Player player;
     private int kind;
 

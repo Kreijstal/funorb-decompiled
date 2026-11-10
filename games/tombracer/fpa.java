@@ -16,7 +16,7 @@ final class fpa {
           if (param1 != 75) {
             field_c = false;
           }
-          qma.a((java.awt.Component) ((Object) param0), -71);
+          ProceduralTextureProvider.a((java.awt.Component) ((Object) param0), -71);
           SweepRotateLocomotor.a((java.awt.Component) ((Object) param0), true);
           if (tja.field_q == null) {
             return;

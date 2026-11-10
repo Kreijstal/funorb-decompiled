@@ -167,9 +167,9 @@ final class FacePointLocomotor extends Locomotor {
         int var8;
         int var9;
         var9 = TombRacer.field_G ? 1 : 0;
-        var2 = this.trap.getLocalX(25745) - this.d((byte) -57);
+        var2 = this.trap.getLocalX(25745) - this.getTrapInitialLocalX((byte) -57);
         var5 = -32 / ((-69 - param0) / 42);
-        var3 = this.trap.getLocalY(false) - this.a(false);
+        var3 = this.trap.getLocalY(false) - this.getTrapInitialLocalY(false);
         if (this.field_o) {
           var6 = -this.field_q + var3 >> 10;
           var4 = -this.field_p + var2 >> 10;

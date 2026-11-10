@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class mt {
+abstract class ScoringObserverFactory {
     static int field_a;
 
     final static int alignTo8(int param0, int param1) {
@@ -42,7 +42,7 @@ abstract class mt {
         }
     }
 
-    abstract MatchScoringObserver a(MatchState param0, int param1);
+    abstract MatchScoringObserver createScoringObserver(MatchState param0, int param1);
 
     static {
     }

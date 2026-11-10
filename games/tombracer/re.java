@@ -39,7 +39,7 @@ final class re {
           if (!UnlockOverlay.field_p) {
             var3 = 0;
           }
-          pq.field_c.a(OpenGlToolkit.field_fd.field_G - var3, 40, param0 + 5264, OpenGlToolkit.field_fd.field_t - 40, var3);
+          CharacterChoiceFactory.field_c.a(OpenGlToolkit.field_fd.field_G - var3, 40, param0 + 5264, OpenGlToolkit.field_fd.field_t - 40, var3);
           return;
         }
     }

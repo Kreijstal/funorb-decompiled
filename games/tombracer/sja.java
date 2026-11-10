@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sja extends qma {
+final class sja extends ProceduralTextureProvider {
     static int[] field_h;
     static g[] field_i;
 
@@ -95,22 +95,22 @@ final class sja extends qma {
         super(param0, param1, param2);
     }
 
-    public final boolean a(int param0, byte param1) {
+    public final boolean isTextureReady(int param0, byte param1) {
         if (param1 < 10) {
           field_i = (g[]) null;
           if (((lqa) (baa.field_d.field_i.field_b)).field_j) {
-            return super.a(param0, (byte) 79);
+            return super.isTextureReady(param0, (byte) 79);
           }
           if (ad.a(-13545, param0)) {
-            return super.a(param0, (byte) 79);
+            return super.isTextureReady(param0, (byte) 79);
           }
           return false;
         }
         if (((lqa) (baa.field_d.field_i.field_b)).field_j) {
-          return super.a(param0, (byte) 79);
+          return super.isTextureReady(param0, (byte) 79);
         }
         if (ad.a(-13545, param0)) {
-          return super.a(param0, (byte) 79);
+          return super.isTextureReady(param0, (byte) 79);
         }
         return false;
     }

@@ -172,7 +172,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
             if (sr.a(126)) {
               au.b(false);
             } else {
-              var3 = vk.c(107);
+              var3 = CourseLayoutFactory.c(107);
               if (var3 != 2) {
                 if (var3 == 3) {
                   StringCursor.a(-30600, true);
@@ -336,7 +336,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
             var3 = 0;
           }
           if (var3 != 0) {
-            dw.b((byte) -16);
+            TextureMetadata.b((byte) -16);
           }
         }
     }

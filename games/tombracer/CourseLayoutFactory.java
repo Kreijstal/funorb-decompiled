@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vk implements os {
+final class CourseLayoutFactory implements BitDecodableFactory {
     static kia field_d;
     static oc[] field_e;
     static String field_a;
@@ -93,20 +93,20 @@ final class vk implements os {
         }
     }
 
-    public final mva[] a(int param0, int param1) {
+    public final BitDecodable[] createArray(int param0, int param1) {
         if (param1 != -26955) {
           field_a = (String) null;
-          return (mva[]) ((Object) new wea[param0]);
+          return (BitDecodable[]) ((Object) new CourseLayout[param0]);
         }
-        return (mva[]) ((Object) new wea[param0]);
+        return (BitDecodable[]) ((Object) new CourseLayout[param0]);
     }
 
-    public final mva a(byte param0) {
+    public final BitDecodable create(byte param0) {
         if (param0 > -17) {
-          this.a((byte) 88);
-          return (mva) ((Object) new wea());
+          this.create((byte) 88);
+          return (BitDecodable) ((Object) new CourseLayout());
         }
-        return (mva) ((Object) new wea());
+        return (BitDecodable) ((Object) new CourseLayout());
     }
 
     static {

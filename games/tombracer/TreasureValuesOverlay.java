@@ -38,7 +38,7 @@ final class TreasureValuesOverlay extends MatchOverlay {
         WhiteLightShooterComponent.a(-(this.field_n / 2) + this.field_m, (byte) -85, var7 - 16, 5242880, 2, var6, this.field_n);
         MembersUpsellMenu.a(wj.field_b, 16777215, kn.field_p, -1, var7 + 4, this.field_m, 0);
         for (var9 = 0; var9 < this.field_g.players.length; var9++) {
-          var10 = this.field_g.field_e.field_b[var9];
+          var10 = this.field_g.scoreStandings.order[var9];
           if (var10 != -1) {
             if (var10 == var2) {
               var11 = var3;

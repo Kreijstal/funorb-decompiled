@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kp {
-    private d field_e;
+    private TextureProvider field_e;
     static String field_d;
     private HardwareGraphicsToolkit field_a;
     static boolean field_c;
@@ -46,14 +46,14 @@ final class kp {
         if (param1 < 91) {
           return (GpuTexture2D) null;
         }
-        if (!this.field_e.a(param0, (byte) 57)) {
+        if (!this.field_e.isTextureReady(param0, (byte) 57)) {
           return null;
         }
-        dw var5 = this.field_e.a((byte) -119, param0);
+        TextureMetadata var5 = this.field_e.metadata((byte) -119, param0);
         int var6 = !var5.field_g ? this.field_a.field_Sb : 64;
         if (!var5.field_l) {
           if (var5.field_d == 2) {
-            var13 = this.field_e.a((byte) 40, var6, 0.699999988079071f, param0, false, var6);
+            var13 = this.field_e.loadPixels((byte) 40, var6, 0.699999988079071f, param0, false, var6);
             var7 = var13;
             var14 = this.field_a.a(true, var6, var5.field_r != 0 ? true : false, var6, var13);
             var14.setWrap((byte) -105, var5.field_b, var5.field_n);
@@ -61,13 +61,13 @@ final class kp {
             return var14;
           }
           if (PlayTrackCommand.a((int) var5.field_h, false)) {
-            var22 = this.field_e.a(14907, param0, true, var6, 0.699999988079071f, var6);
+            var22 = this.field_e.loadPixels(14907, param0, true, var6, 0.699999988079071f, var6);
             var20 = this.field_a.a(true, var6, var5.field_r != 0 ? true : false, var6, var22);
             var20.setWrap((byte) -105, var5.field_b, var5.field_n);
             this.field_b.put(29166, var20, (long)param0);
             return var20;
           }
-          var16 = this.field_e.a((byte) 40, var6, 0.699999988079071f, param0, false, var6);
+          var16 = this.field_e.loadPixels((byte) 40, var6, 0.699999988079071f, param0, false, var6);
           var7Lifetime4 = var16;
           var17 = this.field_a.a(true, var6, var5.field_r != 0 ? true : false, var6, var16);
           var17.setWrap((byte) -105, var5.field_b, var5.field_n);
@@ -75,7 +75,7 @@ final class kp {
           return var17;
         }
         if (this.field_a.f()) {
-          var9 = this.field_e.a(124, var6, var6, param0, 0.699999988079071f, false);
+          var9 = this.field_e.loadFloatPixels(124, var6, var6, param0, 0.699999988079071f, false);
           float[] var7_array = var9;
           var4 = this.field_a.a(var9, SwitchableId.field_a, true, 0 != var5.field_r ? true : false, var6, var6);
           var4.setWrap((byte) -105, var5.field_b, var5.field_n);
@@ -83,27 +83,27 @@ final class kp {
           return var4;
         }
         if (var5.field_d == 2) {
-          var7Lifetime1 = this.field_e.a((byte) 40, var6, 0.699999988079071f, param0, false, var6);
+          var7Lifetime1 = this.field_e.loadPixels((byte) 40, var6, 0.699999988079071f, param0, false, var6);
           var21 = this.field_a.a(true, var6, var5.field_r != 0 ? true : false, var6, var7Lifetime1);
           var21.setWrap((byte) -105, var5.field_b, var5.field_n);
           this.field_b.put(29166, var21, (long)param0);
           return var21;
         }
         if (PlayTrackCommand.a((int) var5.field_h, false)) {
-          var7Lifetime2 = this.field_e.a(14907, param0, true, var6, 0.699999988079071f, var6);
+          var7Lifetime2 = this.field_e.loadPixels(14907, param0, true, var6, 0.699999988079071f, var6);
           var21Lifetime1 = this.field_a.a(true, var6, var5.field_r != 0 ? true : false, var6, var7Lifetime2);
           var21Lifetime1.setWrap((byte) -105, var5.field_b, var5.field_n);
           this.field_b.put(29166, var21Lifetime1, (long)param0);
           return var21Lifetime1;
         }
-        var7Lifetime3 = this.field_e.a((byte) 40, var6, 0.699999988079071f, param0, false, var6);
+        var7Lifetime3 = this.field_e.loadPixels((byte) 40, var6, 0.699999988079071f, param0, false, var6);
         var21Lifetime2 = this.field_a.a(true, var6, var5.field_r != 0 ? true : false, var6, var7Lifetime3);
         var21Lifetime2.setWrap((byte) -105, var5.field_b, var5.field_n);
         this.field_b.put(29166, var21Lifetime2, (long)param0);
         return var21Lifetime2;
     }
 
-    kp(HardwareGraphicsToolkit param0, d param1) {
+    kp(HardwareGraphicsToolkit param0, TextureProvider param1) {
         this.field_b = new SoftReferenceCache(256);
         try {
           this.field_e = param1;

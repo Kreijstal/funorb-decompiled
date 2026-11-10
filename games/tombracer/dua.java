@@ -130,7 +130,7 @@ final class dua extends MatchOverlay {
           var19 = 0;
           var12Lifetime3 = var19;
           while (this.field_g.playersRemaining > var19) {
-            var13Lifetime3 = this.field_g.field_c.field_e[var19];
+            var13Lifetime3 = this.field_g.standings.order[var19];
             var25 = this.field_g.players[var13Lifetime3].getRoom((byte) 113);
             if (var25.getCourseIndex(72) >= var6 &&
               var25.getCourseIndex(-87) < var7) {
@@ -195,7 +195,7 @@ final class dua extends MatchOverlay {
         var19Lifetime1 = 0;
         var12Lifetime2 = var19Lifetime1;
         while (this.field_g.playersRemaining > var19Lifetime1) {
-          var13Lifetime2 = this.field_g.field_c.field_e[var19Lifetime1];
+          var13Lifetime2 = this.field_g.standings.order[var19Lifetime1];
           var22 = this.field_g.players[var13Lifetime2].getRoom((byte) 113);
           if (var22.getCourseIndex(72) >= var6Lifetime1 &&
             var22.getCourseIndex(-87) < var7Lifetime1) {

@@ -131,7 +131,7 @@ final class BoulderComponent extends PathMoverComponent {
           RangeOperator.field_p = tka.field_n;
           AgeValidator.field_j = ena.field_n;
           GridWidgetContainer.field_B = ee.field_a;
-          qma.field_c = PlayerContextMenu.field_c;
+          ProceduralTextureProvider.field_c = PlayerContextMenu.field_c;
           PlayerContextMenu.field_c = false;
           PlayerModel.field_b = DisplaySettingsDialog.field_X;
           PasswordValidator.field_m = cr.field_d;

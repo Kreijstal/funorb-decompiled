@@ -37,7 +37,7 @@ abstract class uq implements Renderable {
         if (param0 != 10685) {
           return (Room) null;
         }
-        return this.field_e.d(0);
+        return this.field_e.getRoom(0);
     }
 
     abstract void a(boolean param0);

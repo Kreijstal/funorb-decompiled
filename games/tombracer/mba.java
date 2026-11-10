@@ -85,7 +85,7 @@ final class mba extends uq {
         }
         var2Lifetime1 = this.field_e.c((byte) 106) / 2 * 2;
         var3 = this.field_e.f(116) / 2 * 2;
-        var4 = this.field_e.getGrid(18641).a(25, var2Lifetime1, var3).b((byte) -95);
+        var4 = this.field_e.getGrid(18641).getCell(25, var2Lifetime1, var3).getRenderable((byte) -95);
         if (var4 instanceof mba) {
           this.field_k = ((mba) (var4)).field_k;
         }
@@ -123,7 +123,7 @@ final class mba extends uq {
         int var2Lifetime1;
         if (param0 != -84) {
           this.field_h = 93;
-          var2 = this.field_e.field_h;
+          var2 = this.field_e.tileType;
           if (0 == var2) {
             this.h((byte) 127);
             return;
@@ -134,7 +134,7 @@ final class mba extends uq {
           }
           return;
         }
-        var2Lifetime1 = this.field_e.field_h;
+        var2Lifetime1 = this.field_e.tileType;
         if (0 == var2Lifetime1) {
           this.h((byte) 127);
           return;
@@ -180,7 +180,7 @@ final class mba extends uq {
         try {
           var3_int = this.field_e.c((byte) 83);
           var4 = this.field_e.f(111);
-          var5 = this.field_e.getGrid(18641).c(31);
+          var5 = this.field_e.getGrid(18641).getRowCount(31);
           if (param0 < 103) {
             this.getRenderY((byte) 39);
           }
@@ -209,23 +209,23 @@ final class mba extends uq {
           if (var4 == var6 + 1 &&
             0 < var3_int &&
             var3_int % 2 == 1) {
-            var12 = this.field_e.getGrid(18641).a(-104, var3_int - 1, var4);
+            var12 = this.field_e.getGrid(18641).getCell(-104, var3_int - 1, var4);
             if (var12 != null && (!this.field_e.b(false) ||
               !var12.b(false))) {
-              var11 = this.field_e.getGrid(18641).d(-30551) / 2;
+              var11 = this.field_e.getGrid(18641).getTileSize(-30551) / 2;
               gqa.a(1024, -83584144, -var11 + var9, var8 - var11, gca.field_g[25], 65536);
             }
           }
           if (-1 + var7 == var4 &&
             var3_int > 0 &&
             1 == var3_int % 2) {
-            var13 = this.field_e.getGrid(18641).a(-100, var3_int - 1, var4);
+            var13 = this.field_e.getGrid(18641).getCell(-100, var3_int - 1, var4);
             if (var13 != null) {
               if (this.field_e.b(false) &&
                 var13.b(false)) {
                 return;
               }
-              var11Lifetime1 = this.field_e.getGrid(18641).d(-30551) / 2;
+              var11Lifetime1 = this.field_e.getGrid(18641).getTileSize(-30551) / 2;
               gqa.a(0, -83584144, var9 - var11Lifetime1, -var11Lifetime1 + var8, gca.field_g[25], 65536);
             }
           }
@@ -410,10 +410,10 @@ final class mba extends uq {
 
     final boolean c(int param0) {
         if (param0 == -2) {
-          return this.field_e.field_h == 1 ? true : false;
+          return this.field_e.tileType == 1 ? true : false;
         }
         this.a((byte) -97);
-        return this.field_e.field_h == 1 ? true : false;
+        return this.field_e.tileType == 1 ? true : false;
     }
 
     mba() {

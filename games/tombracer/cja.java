@@ -129,7 +129,7 @@ final class cja {
             if (param7) {
               if (param5 == -1) {
                 for (var10 = 0; SafeZoneBehaviour.field_u.length > var10; var10++) {
-                  if ((vk.field_b[var10 / 8] & 1 << (7 & var10)) != 0) {
+                  if ((CourseLayoutFactory.field_b[var10 / 8] & 1 << (7 & var10)) != 0) {
                     var9 = 0;
                     decompiledFrameCompleted0 = false;
                     break;

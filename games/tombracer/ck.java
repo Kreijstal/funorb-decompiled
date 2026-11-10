@@ -147,7 +147,7 @@ final class ck {
             stackIn_9_1 = null;
             stackIn_9_4 = bua.field_c;
           }
-          pq.field_c = new jea(stackIn_8_2, stackIn_8_3, ((String) (Object) stackIn_9_4).toUpperCase());
+          CharacterChoiceFactory.field_c = new jea(stackIn_8_2, stackIn_8_3, ((String) (Object) stackIn_9_4).toUpperCase());
           OpenGlToolkit.field_fd = new jea(0L, (jea) null);
           OpenGlToolkit.field_fd.b(-126, C2SChooseCharacterPacket.field_a);
           OpenGlToolkit.field_fd.b(param11 ^ -25371, Obstacle.field_s);
@@ -163,7 +163,7 @@ final class ck {
           if (UnlockOverlay.field_p) {
             OpenGlToolkit.field_fd.b(-124, uq.field_c);
           }
-          OpenGlToolkit.field_fd.b(-124, pq.field_c);
+          OpenGlToolkit.field_fd.b(-124, CharacterChoiceFactory.field_c);
           rv.field_c = new jea(0L, Corpse.field_i);
           rv.field_c.field_bb = 0;
           rv.field_c.field_z = 1;
@@ -474,7 +474,7 @@ final class ck {
             param2.field_q != null) {
             ssa.b(0);
           }
-          pq.field_f = 0;
+          CharacterChoiceFactory.field_f = 0;
           var8 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(var8 < param2.field_u)))) {
@@ -531,7 +531,7 @@ final class ck {
                           dupTemp$0 = param2.field_q[var8];
                           DrawOfferMenu.field_q[dupTemp$0] = DrawOfferMenu.field_q[dupTemp$0] + 1;
                         }
-                        pq.field_f = pq.field_f + 1;
+                        CharacterChoiceFactory.field_f = CharacterChoiceFactory.field_f + 1;
                         break;
                       }
                     }

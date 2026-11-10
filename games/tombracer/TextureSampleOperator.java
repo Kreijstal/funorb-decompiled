@@ -14,8 +14,8 @@ final class TextureSampleOperator extends TextureOperator {
         super.createRowCache(param0, param1, param2);
         if (this.field_n >= 0 &&
           null != PenaltyNotice.field_j) {
-          var4 = !PenaltyNotice.field_j.a((byte) -122, this.field_n).field_g ? 128 : 64;
-          this.field_m = PenaltyNotice.field_j.a(14907, this.field_n, false, var4, 1.0f, var4);
+          var4 = !PenaltyNotice.field_j.metadata((byte) -122, this.field_n).field_g ? 128 : 64;
+          this.field_m = PenaltyNotice.field_j.loadPixels(14907, this.field_n, false, var4, 1.0f, var4);
           this.field_p = var4;
           this.field_r = var4;
         }

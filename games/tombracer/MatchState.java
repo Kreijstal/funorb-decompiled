@@ -8,15 +8,15 @@ final class MatchState implements dv {
     PlayerSimulation[] simulations;
     int field_E;
     Player[] players;
-    wd[] field_y;
+    CharacterChoice[] characterChoices;
     private int field_r;
-    private mt field_d;
+    private ScoringObserverFactory scoringFactory;
     static String field_N;
     int roundsToWin;
     int field_K;
     private int field_O;
     int roundIndex;
-    sma field_e;
+    ScoreStandings scoreStandings;
     String[] playerNames;
     int roundSeed;
     BitSet[] field_x;
@@ -24,7 +24,7 @@ final class MatchState implements dv {
     int field_b;
     boolean[] field_I;
     int[] roundWins;
-    kqa field_c;
+    RaceStandings standings;
     boolean matchOver;
     MatchStatistics statistics;
     private String[] colouredPlayerNames;
@@ -34,13 +34,13 @@ final class MatchState implements dv {
     int playersRemaining;
     long[] field_F;
     private int matchSeed;
-    CommonChooseReward field_i;
+    CommonChooseReward rewardChoice;
     private boolean[] field_n;
     private boolean[] finishedRound;
     static int field_w;
     private int resignedMask;
     int declaredWinner;
-    private wea[] field_u;
+    private CourseLayout[] courseLayouts;
     private boolean field_M;
     private int leftMask;
     private int field_a;
@@ -289,20 +289,20 @@ final class MatchState implements dv {
           this.declaredWinner = uma.readSignedBits(32, param0, -26803);
           this.roundIndex = param0.readBits((byte) 44, 32);
           this.roundSeed = param0.readBits((byte) 44, 32);
-          this.field_y = (wd[]) (gha.a(this.field_y, 1, 8, -16499, TileOperator.field_q, param0));
-          this.field_u = (wea[]) (gha.a(this.field_u, 1, 8, -16499, OpenGlRenderbuffer.field_u, param0));
+          this.characterChoices = (CharacterChoice[]) (gha.readDecodableArray(this.characterChoices, 1, 8, -16499, TileOperator.field_q, param0));
+          this.courseLayouts = (CourseLayout[]) (gha.readDecodableArray(this.courseLayouts, 1, 8, -16499, OpenGlRenderbuffer.field_u, param0));
           this.roundWins = fa.a(0, param0, 8, this.roundWins);
           this.roundWinner = uma.readSignedBits(32, param0, -26803);
           this.finishedRound = PooledObject.a(8, this.finishedRound, (byte) 93, param0);
           this.playersRemaining = param0.readBits((byte) 44, 32);
           this.field_s = CircleMovementLocomotor.readBitFlag(5907, param0);
           if (!CircleMovementLocomotor.readBitFlag(5907, param0)) {
-            this.field_i = null;
+            this.rewardChoice = null;
           } else {
-            if (null == this.field_i) {
-              this.field_i = new CommonChooseReward();
+            if (null == this.rewardChoice) {
+              this.rewardChoice = new CommonChooseReward();
             }
-            this.field_i.decode(param0, false);
+            this.rewardChoice.decode(param0, false);
           }
           this.field_E = uma.readSignedBits(32, param0, -26803);
           this.field_I = PooledObject.a(8, this.field_I, (byte) -41, param0);
@@ -431,16 +431,16 @@ final class MatchState implements dv {
         }
     }
 
-    final boolean a(int param0) {
+    final boolean allCharactersChosen(int param0) {
         int var3 = 0;
-        wd var5 = null;
+        CharacterChoice var5 = null;
         int var6 = TombRacer.field_G ? 1 : 0;
-        wd[] var7 = this.field_y;
-        wd[] var2 = var7;
+        CharacterChoice[] var7 = this.characterChoices;
+        CharacterChoice[] var2 = var7;
         int var4 = -71 % ((param0 + 68) / 44);
         for (var3 = 0; var3 < var7.length; var3++) {
           var5 = var7[var3];
-          if (var5.b(56) == -1) {
+          if (var5.getCharacter(56) == -1) {
             return false;
           }
         }
@@ -473,11 +473,11 @@ final class MatchState implements dv {
         int var5 = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
         int var4 = 16 % ((54 - param0) / 35);
-        MatchScoringObserver var7 = this.field_d.a(this, -25077);
+        MatchScoringObserver var7 = this.scoringFactory.createScoringObserver(this, -25077);
         MatchScoringObserver var3 = var7;
         this.simulations[param1] = new PlayerSimulation(var7, this.players[param1], this.field_O, this.field_a);
         for (var5 = 0; this.simulations[param1].getRoomCount(-106) > var5; var5++) {
-          this.simulations[param1].setRoom(-28088, var5, this.field_u[this.roundIndex].a(1024, var5, this.roundSeed, this.simulations[param1]));
+          this.simulations[param1].setRoom(-28088, var5, this.courseLayouts[this.roundIndex].createRoom(1024, var5, this.roundSeed, this.simulations[param1]));
         }
     }
 
@@ -580,7 +580,7 @@ final class MatchState implements dv {
             var3.restart((byte) -89);
           }
         }
-        this.field_c.a(false);
+        this.standings.reset(false);
         var2Lifetime2 = 0;
         if (param0 != -89) {
           return;
@@ -590,8 +590,8 @@ final class MatchState implements dv {
           var2Lifetime2++;
         }
         if (0 == this.field_K) {
-          this.field_i = new CommonChooseReward(this);
-          this.field_i.b(param0 + 28713);
+          this.rewardChoice = new CommonChooseReward(this);
+          this.rewardChoice.rollRewards(param0 + 28713);
           this.field_E = 0;
         }
     }
@@ -612,7 +612,7 @@ final class MatchState implements dv {
         return stackIn_7_0;
     }
 
-    MatchState(String[] param0, int param1, int param2, int param3, int param4, int param5, int param6, BitSet[] param7, boolean[] param8, mt param9, ou param10) {
+    MatchState(String[] param0, int param1, int param2, int param3, int param4, int param5, int param6, BitSet[] param7, boolean[] param8, ScoringObserverFactory param9, ou param10) {
         int var13 = 0;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
@@ -636,7 +636,7 @@ final class MatchState implements dv {
         this.field_E = -1;
         try {
           this.roundsToWin = param4;
-          this.field_d = param9;
+          this.scoringFactory = param9;
           this.playerNames = param0;
           this.field_K = param5;
           if (param10 != null) {
@@ -645,9 +645,9 @@ final class MatchState implements dv {
             } else {
               var12_int = this.playerNames.length * (-1 + param4) + 1;
             }
-            this.field_u = new wea[var12_int];
+            this.courseLayouts = new CourseLayout[var12_int];
             for (var13 = 0; var13 < var12_int; var13++) {
-              this.field_u[var13] = param10.a((byte) 58);
+              this.courseLayouts[var13] = param10.a((byte) 58);
             }
           }
           this.colouredPlayerNames = new String[this.playerNames.length];
@@ -664,10 +664,10 @@ final class MatchState implements dv {
           this.playersRemaining = this.playerCount;
           this.roundWins = new int[this.playersRemaining];
           this.players = new Player[this.playersRemaining];
-          this.field_y = new wd[this.playersRemaining];
+          this.characterChoices = new CharacterChoice[this.playersRemaining];
           for (var12_intLifetime2 = 0; this.players.length > var12_intLifetime2; var12_intLifetime2++) {
             this.players[var12_intLifetime2] = new Player(var12_intLifetime2);
-            this.field_y[var12_intLifetime2] = new wd(this.players[var12_intLifetime2]);
+            this.characterChoices[var12_intLifetime2] = new CharacterChoice(this.players[var12_intLifetime2]);
           }
           var12_intLifetime3 = this.field_K;
           if (var12_intLifetime3 == 0) {
@@ -688,11 +688,11 @@ final class MatchState implements dv {
           this.simulations = new PlayerSimulation[this.playerCount];
           this.finishedRound = new boolean[this.players.length];
           this.roundWinner = -1;
-          this.field_c = new kqa(this);
-          this.field_e = new sma(this);
+          this.standings = new RaceStandings(this);
+          this.scoreStandings = new ScoreStandings(this);
           if (this.field_K == 0) {
-            this.field_i = new CommonChooseReward(this);
-            this.field_i.b(28624);
+            this.rewardChoice = new CommonChooseReward(this);
+            this.rewardChoice.rollRewards(28624);
             this.field_E = 0;
           }
           this.statistics = new MatchStatistics(this.playerCount);

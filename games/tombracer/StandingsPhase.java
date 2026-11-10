@@ -53,7 +53,7 @@ final class StandingsPhase extends MatchPhase {
             }
             this.field_r[var3_int] = var4;
           }
-          if (this.screen.d((byte) 116)) {
+          if (this.screen.isSpectating((byte) 116)) {
             TripBeamComponent.b(1, 0);
           } else {
             if (0 == this.field_r[this.screen.localPlayerIndex] &&
@@ -64,7 +64,7 @@ final class StandingsPhase extends MatchPhase {
             }
           }
           if (this.screen.field_D &&
-            !this.screen.d((byte) 82)) {
+            !this.screen.isSpectating((byte) 82)) {
             this.field_p = new MenuEntry[2];
             this.field_p[0] = new MenuEntry(33, OpenGlSceneLight.field_q[33], 1, false);
             this.field_p[0].field_b = aaa.a(false) - 110;
@@ -326,7 +326,7 @@ final class StandingsPhase extends MatchPhase {
         if (param1 == 0) {
           this.screen.b(false, true, 0);
           if (this.screen.field_D) {
-            r.a(0, this.screen.d((byte) 120));
+            r.a(0, this.screen.isSpectating((byte) 120));
           } else {
             C2SActionPacket.field_j = -1;
           }
@@ -405,7 +405,7 @@ final class StandingsPhase extends MatchPhase {
           }
         }
         if (this.screen.field_D &&
-          !this.screen.d((byte) 69)) {
+          !this.screen.isSpectating((byte) 69)) {
           var3Lifetime2 = this.screen.matchState.field_t;
           if ((var3Lifetime2 >> this.screen.localPlayerIndex & 1) == 1) {
             this.field_p[1].field_e = RevolverItemComponent.field_I.toUpperCase();

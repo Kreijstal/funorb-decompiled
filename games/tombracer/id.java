@@ -15,18 +15,18 @@ final class id extends ou {
         this.field_j = this.field_f == pl.a((byte) 64) ? true : false;
     }
 
-    final wea a(byte param0) {
+    final CourseLayout a(byte param0) {
         int var4 = 0;
-        wea var2;
+        CourseLayout var2;
         int[] var3;
         int var5;
-        wea var6;
-        wea stackIn_7_0 = null;
+        CourseLayout var6;
+        CourseLayout stackIn_7_0 = null;
         int stackIn_7_1 = 0;
         int stackIn_7_2 = 0;
         boolean stackIn_8_3;
         var5 = TombRacer.field_G ? 1 : 0;
-        var6 = new wea(this.field_a);
+        var6 = new CourseLayout(this.field_a);
         var2 = var6;
         var3 = ht.d(this.field_f, true);
         if (param0 != 58) {
@@ -37,7 +37,7 @@ final class id extends ou {
           stackIn_7_1 = var4;
           stackIn_7_2 = var3[var4];
           stackIn_8_3 = (!this.field_j) && (this.b((byte) -67));
-          ((wea) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_7_2, stackIn_8_3, (byte) -36);
+          ((CourseLayout) (Object) stackIn_7_0).setRoom(stackIn_7_1, stackIn_7_2, stackIn_8_3, (byte) -36);
         }
         return var2;
     }

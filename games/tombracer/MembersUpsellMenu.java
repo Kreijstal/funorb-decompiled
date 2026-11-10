@@ -169,7 +169,7 @@ final class MembersUpsellMenu extends MenuScreen {
                   var5_ref_nh = eu.field_a;
                 }
                 if (mq.field_e.worldMedals[var4] == 1) {
-                  var5_ref_nh = pq.field_a;
+                  var5_ref_nh = CharacterChoiceFactory.field_a;
                 }
               }
               var5_ref_nh.a(LoginForm.field_z[var4] + this.field_t, this.field_r + hq.field_b[var4]);

@@ -16,7 +16,7 @@ final class ControllerLocomotor extends Locomotor {
     final void tick(byte param0) {
         if (this.field_u.length == 0 ||
           null == this.field_u) {
-          this.field_j = true;
+          this.stopped = true;
           return;
         }
         if (this.field_s < 0) {

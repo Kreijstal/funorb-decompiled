@@ -127,7 +127,7 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
         return this.field_n;
     }
 
-    final void a(int param0, boolean param1) {
+    final void setRequiredWeight(int param0, boolean param1) {
         this.requiredWeight = param0;
         if (!param1) {
           PressureSwitchBehaviour.l(56);

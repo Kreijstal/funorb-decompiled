@@ -40,28 +40,28 @@ final class TrackingCrusherComponent extends PrefabComponent {
 
     final static void A(int param0) {
         aca.field_h = new String[TouchSwitchBehaviour.field_n];
-        aca.field_h[17] = pq.field_d;
+        aca.field_h[17] = CharacterChoiceFactory.field_d;
         aca.field_h[20] = afa.field_b;
         aca.field_h[11] = aqa.field_b;
         aca.field_h[9] = MotionTrackingModel.field_u;
         aca.field_h[21] = rua.field_jb;
         aca.field_h[19] = GrowableIntList.field_b;
         aca.field_h[5] = tw.field_g;
-        aca.field_h[4] = sma.field_d;
+        aca.field_h[4] = ScoreStandings.field_d;
         aca.field_h[6] = nt.field_c;
         aca.field_h[7] = gn.field_A;
         if (param0 == 12) {
           aca.field_h[15] = oda.field_h;
           aca.field_h[16] = BlendModeOperator.field_n;
           aca.field_h[18] = RemovedFromGameMenu.field_q;
-          aca.field_h[13] = wea.field_c;
+          aca.field_h[13] = CourseLayout.field_c;
           return;
         }
         field_G = true;
         aca.field_h[15] = oda.field_h;
         aca.field_h[16] = BlendModeOperator.field_n;
         aca.field_h[18] = RemovedFromGameMenu.field_q;
-        aca.field_h[13] = wea.field_c;
+        aca.field_h[13] = CourseLayout.field_c;
     }
 
     final boolean isSwitchable(int param0) {

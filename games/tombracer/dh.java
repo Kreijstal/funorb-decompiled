@@ -114,7 +114,7 @@ final class dh {
             var54[var13] = var14Lifetime2;
             var64[var13] = var15Lifetime2;
           }
-          for (var13Lifetime1 = 0; var13Lifetime1 < pq.field_f; var13Lifetime1++) {
+          for (var13Lifetime1 = 0; var13Lifetime1 < CharacterChoiceFactory.field_f; var13Lifetime1++) {
             var14Lifetime1 = PitSnake.field_t[var13Lifetime1];
             var15Lifetime1 = param3.field_B[var14Lifetime1];
             var16 = param3.field_w[var14Lifetime1];

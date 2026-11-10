@@ -428,7 +428,7 @@ final class VoronoiNoiseOperator extends TextureOperator {
         this.c(-94);
     }
 
-    final static GraphicsToolkit a(int param0, int param1, d param2, int param3, ResourceArchive param4, java.awt.Canvas param5) {
+    final static GraphicsToolkit a(int param0, int param1, TextureProvider param2, int param3, ResourceArchive param4, java.awt.Canvas param5) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;

@@ -94,7 +94,7 @@ final class tf extends TextFieldValidator {
             this.field_k = var4.field_e;
           }
           if (!this.field_k) {
-            stackIn_13_0 = qma.field_f;
+            stackIn_13_0 = ProceduralTextureProvider.field_f;
             return stackIn_13_0;
           }
           if (param0 != -1) {

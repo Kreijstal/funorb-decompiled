@@ -27,8 +27,8 @@ final class CircleMovementLocomotor extends Locomotor {
         int var6;
         int var7;
         int var8;
-        var2 = this.d((byte) -112);
-        var3 = this.a(false);
+        var2 = this.getTrapInitialLocalX((byte) -112);
+        var3 = this.getTrapInitialLocalY(false);
         if (!this.field_p &&
           !this.field_t) {
           var4 = (cr.a(true, this.field_q >> 2) >> 8) * (this.field_o >> 8) + var2;
@@ -217,7 +217,7 @@ final class CircleMovementLocomotor extends Locomotor {
           C2SChooseRewardPacket.field_a = null;
           WaveformOperator.field_n = null;
           PlayerViewport.field_o = false;
-          vk.field_b = new byte[(7 + hpa.field_g) / 8];
+          CourseLayoutFactory.field_b = new byte[(7 + hpa.field_g) / 8];
           if (param2 != -51) {
             return;
           }

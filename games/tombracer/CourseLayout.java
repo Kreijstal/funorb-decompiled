@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wea implements dv {
+final class CourseLayout implements dv {
     static int field_a;
-    private int[] field_e;
+    private int[] roomIds;
     static String field_c;
     static gqa[] field_d;
-    private boolean[] field_b;
+    private boolean[] roomFlags;
 
     public final void decode(BitPacketBuffer param0, boolean param1) {
-        this.field_b = PooledObject.a(8, this.field_b, (byte) -84, param0);
+        this.roomFlags = PooledObject.a(8, this.roomFlags, (byte) -84, param0);
         if (param1) {
           return;
         }
         try {
-          this.field_e = fa.a(0, param0, 8, this.field_e);
+          this.roomIds = fa.a(0, param0, 8, this.roomIds);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wea.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -22,7 +22,7 @@ final class wea implements dv {
 
     public static void releaseStatics(int param0) {
         if (param0 != 8) {
-          wea.releaseStatics(105);
+          CourseLayout.releaseStatics(105);
           field_c = null;
           field_d = null;
           return;
@@ -31,15 +31,15 @@ final class wea implements dv {
         field_d = null;
     }
 
-    final void a(int param0, int param1, boolean param2, byte param3) {
+    final void setRoom(int param0, int param1, boolean param2, byte param3) {
         if (param3 <= -35) {
-          this.field_b[param0] = param2;
-          this.field_e[param0] = param1;
+          this.roomFlags[param0] = param2;
+          this.roomIds[param0] = param1;
           return;
         }
-        this.a(-48, 98, false, (byte) -57);
-        this.field_b[param0] = param2;
-        this.field_e[param0] = param1;
+        this.setRoom(-48, 98, false, (byte) -57);
+        this.roomFlags[param0] = param2;
+        this.roomIds[param0] = param1;
     }
 
     final static void a(int param0, int param1, sq param2, boolean param3, java.awt.Component param4, PlatformTaskDispatcher param5) {
@@ -50,7 +50,7 @@ final class wea implements dv {
         }
     }
 
-    final Room a(int param0, int param1, int param2, PlayerSimulation param3) {
+    final Room createRoom(int param0, int param1, int param2, PlayerSimulation param3) {
         RuntimeException var5 = null;
         Room stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -61,7 +61,7 @@ final class wea implements dv {
           if (param0 != 1024) {
             field_a = 4;
           }
-          stackIn_3_0 = WhiteLightShooterComponent.a(this.field_e[param1], this.field_b[param1], param3, param2, (byte) -125);
+          stackIn_3_0 = WhiteLightShooterComponent.createCourseRoom(this.roomIds[param1], this.roomFlags[param1], param3, param2, (byte) -125);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -77,12 +77,12 @@ final class wea implements dv {
         }
     }
 
-    wea() {
+    CourseLayout() {
     }
 
-    wea(int param0) {
-        this.field_b = new boolean[param0];
-        this.field_e = new int[param0];
+    CourseLayout(int param0) {
+        this.roomFlags = new boolean[param0];
+        this.roomIds = new int[param0];
     }
 
     static {

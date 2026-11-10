@@ -12,9 +12,9 @@ final class gha implements pp {
         return (52 & param1) != 0 ? true : false;
     }
 
-    final static mva[] a(mva[] param0, int param1, int param2, int param3, os param4, BitPacketBuffer param5) {
-        mva[] stackIn_3_0 = null;
-        mva[] stackIn_29_0 = null;
+    final static BitDecodable[] readDecodableArray(BitDecodable[] param0, int param1, int param2, int param3, BitDecodableFactory param4, BitPacketBuffer param5) {
+        BitDecodable[] stackIn_3_0 = null;
+        BitDecodable[] stackIn_29_0 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
@@ -27,13 +27,13 @@ final class gha implements pp {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
-        mva var9 = null;
+        BitDecodable var9 = null;
         BitPacketBuffer var10 = null;
         int var11 = 0;
         var11 = TombRacer.field_G ? 1 : 0;
         try {
           if (param3 != -16499) {
-            stackIn_3_0 = (mva[]) null;
+            stackIn_3_0 = (BitDecodable[]) null;
             return stackIn_3_0;
           }
           boolean decompiledFrameCompleted0 = true;
@@ -41,7 +41,7 @@ final class gha implements pp {
           if (var6_int != 0) {
             if (param0 == null ||
               param0.length != var6_int) {
-              param0 = param4.a(var6_int, -26955);
+              param0 = param4.createArray(var6_int, -26955);
             }
             var7 = 0;
             while (var7 < var6_int) {
@@ -53,7 +53,7 @@ final class gha implements pp {
                 param0[var7] = null;
               } else {
                 if (param0[var7] == null) {
-                  param0[var7] = param4.a((byte) -124);
+                  param0[var7] = param4.create((byte) -124);
                 }
                 var8 = param1;
                 var9 = param0[var7];
@@ -81,7 +81,7 @@ final class gha implements pp {
           } else {
             param0 = null;
           }
-          stackIn_29_0 = (mva[]) (param0);
+          stackIn_29_0 = (BitDecodable[]) (param0);
           return stackIn_29_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

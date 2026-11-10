@@ -951,7 +951,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 110, "rule_0_5");
                 if (var2 != null) {
-                  sma.field_d = jaa.decodeText((byte) 91, var2);
+                  ScoreStandings.field_d = jaa.decodeText((byte) 91, var2);
                 }
                 var2 = dn.a((byte) 124, "rule_pillar_1");
                 if (null != var2) {
@@ -963,7 +963,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 114, "rule_1_1");
                 if (null != var2) {
-                  pq.field_d = jaa.decodeText((byte) 99, var2);
+                  CharacterChoiceFactory.field_d = jaa.decodeText((byte) 99, var2);
                 }
                 var2 = dn.a((byte) 127, "rule_1_2");
                 if (var2 != null) {
@@ -983,7 +983,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 106, "rule_2_0");
                 if (var2 != null) {
-                  wea.field_c = jaa.decodeText((byte) 26, var2);
+                  CourseLayout.field_c = jaa.decodeText((byte) 26, var2);
                 }
                 var2 = dn.a((byte) 105, "rule_2_1");
                 if (var2 != null) {
@@ -1571,7 +1571,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -66, "create_username_unavailable");
                 if (var2 != null) {
-                  qma.field_f = jaa.decodeText((byte) 49, var2);
+                  ProceduralTextureProvider.field_f = jaa.decodeText((byte) 49, var2);
                 }
                 var2 = dn.a((byte) 111, "create_username_available");
                 if (null != var2) {

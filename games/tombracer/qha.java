@@ -18,10 +18,10 @@ final class qha extends ou {
         field_g = null;
     }
 
-    final wea a(byte param0) {
+    final CourseLayout a(byte param0) {
         int stackIn_15_0 = 0;
         int stackIn_31_0 = 0;
-        wea var2;
+        CourseLayout var2;
         int var3;
         int var4;
         int var5;
@@ -37,7 +37,7 @@ final class qha extends ou {
         int var9Lifetime1;
         int var10Lifetime1;
         var12 = TombRacer.field_G ? 1 : 0;
-        var2 = new wea(this.field_a);
+        var2 = new CourseLayout(this.field_a);
         var3 = aq.a(-5640);
         var4 = RandomAccessFileHandle.a(57);
         var5 = 0;
@@ -52,7 +52,7 @@ final class qha extends ou {
               var14 = ta.d(var10, false);
               var9 = var14.field_f;
             }
-            var2.a(var8, var9, this.b((byte) -56), (byte) -63);
+            var2.setRoom(var8, var9, this.b((byte) -56), (byte) -63);
             if (var7 != 0) {
               var5++;
               if (var5 >= var3) {
@@ -78,7 +78,7 @@ final class qha extends ou {
             var13 = ta.d(var10Lifetime1, false);
             var9Lifetime1 = var13.field_f;
           }
-          var2.a(var8Lifetime1, var9Lifetime1, this.b((byte) -56), (byte) -63);
+          var2.setRoom(var8Lifetime1, var9Lifetime1, this.b((byte) -56), (byte) -63);
           if (var7 != 0) {
             var5++;
             if (var5 >= var3) {

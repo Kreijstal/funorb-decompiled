@@ -60,7 +60,7 @@ final class mha extends FocusableWidget {
         int var6 = (this.field_p >> 1) + param1 + this.field_n;
         it var8 = this.field_z.b(-4666);
         if (BevelOperator.field_p == var8) {
-          var15 = pq.field_b[0];
+          var15 = CharacterChoiceFactory.field_b[0];
           var9 = var15.field_n << 1;
           var10 = var15.field_k << 1;
           if (null == aj.field_l) {
@@ -95,7 +95,7 @@ final class mha extends FocusableWidget {
           return;
         }
         if (tea.field_b == var8) {
-          var16 = pq.field_b[0];
+          var16 = CharacterChoiceFactory.field_b[0];
           var9Lifetime1 = var16.field_n << 1;
           var10Lifetime1 = var16.field_k << 1;
           if (null == aj.field_l) {
@@ -130,14 +130,14 @@ final class mha extends FocusableWidget {
           return;
         }
         if (fp.field_c == var8) {
-          var13 = pq.field_b[2];
+          var13 = CharacterChoiceFactory.field_b[2];
           var13.drawAdditive(var5 - (var13.field_m >> 1), var6 - (var13.field_q >> 1), 256);
           return;
         }
         if (LightSource.field_k != var8) {
           return;
         }
-        Sprite var12 = pq.field_b[1];
+        Sprite var12 = CharacterChoiceFactory.field_b[1];
         var12.drawAdditive(var5 - (var12.field_m >> 1), -(var12.field_q >> 1) + var6, 256);
     }
 

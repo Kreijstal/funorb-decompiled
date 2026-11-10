@@ -201,7 +201,7 @@ class LegacyOpenGlTexture2D extends LegacyOpenGlTexture {
             param7 != 0 ||
             0 != param8);
           if (!decompiledSharedTail0) {
-            wd.a(this.target, 32993, this.internalFormat, 81, param6, this.toolkit.field_P, this.field_l, this.field_o);
+            CharacterChoice.a(this.target, 32993, this.internalFormat, 81, param6, this.toolkit.field_P, this.field_l, this.field_o);
             this.noteMipmaps(true, 4);
             decompiledSharedTail0 = (var16 != 0);
           }

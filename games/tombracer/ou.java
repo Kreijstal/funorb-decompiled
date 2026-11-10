@@ -34,7 +34,7 @@ abstract class ou {
         var2Lifetime1 = -123 % ((-62 - param0) / 49);
     }
 
-    abstract wea a(byte param0);
+    abstract CourseLayout a(byte param0);
 
     ou(int param0, int param1) {
         this.field_a = param0;

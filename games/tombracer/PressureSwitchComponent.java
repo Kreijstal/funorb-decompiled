@@ -180,7 +180,7 @@ final class PressureSwitchComponent extends SwitchComponent {
           }
           var10.setSize((byte) -11, this.height, this.width);
           var5 = new PressureSwitchBehaviour(param2, param0);
-          var5.a(this.field_L, true);
+          var5.setRequiredWeight(this.field_L, true);
           this.a(var5, (byte) -94);
           var10.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
@@ -223,7 +223,7 @@ final class PressureSwitchComponent extends SwitchComponent {
         }
     }
 
-    final static GraphicsToolkit a(int param0, java.awt.Canvas param1, int param2, byte param3, d param4) {
+    final static GraphicsToolkit a(int param0, java.awt.Canvas param1, int param2, byte param3, TextureProvider param4) {
         RuntimeException var5 = null;
         GraphicsToolkit stackIn_2_0 = null;
         NativeSoftwareGraphicsToolkit stackIn_4_0 = null;

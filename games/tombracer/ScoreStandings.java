@@ -3,25 +3,25 @@
  */
 import java.io.*;
 
-final class sma {
+final class ScoreStandings {
     static String field_d;
     static joa field_e;
-    int[] field_b;
+    int[] order;
     static PcmStreamMixer field_c;
-    private int[] field_f;
-    private MatchState field_a;
+    private int[] positions;
+    private MatchState matchState;
 
-    private final void a(byte param0) {
+    private final void resetForRemainingPlayers(byte param0) {
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
-        this.field_f = new int[this.field_a.playersRemaining];
-        this.field_b = new int[this.field_a.playersRemaining];
+        this.positions = new int[this.matchState.playersRemaining];
+        this.order = new int[this.matchState.playersRemaining];
         if (param0 >= -43) {
           return;
         }
-        for (var2 = 0; var2 < this.field_b.length; var2++) {
-          this.field_b[var2] = var2;
-          this.field_f[var2] = var2;
+        for (var2 = 0; var2 < this.order.length; var2++) {
+          this.order[var2] = var2;
+          this.positions[var2] = var2;
         }
     }
 
@@ -65,7 +65,7 @@ final class sma {
         var9 = TombRacer.field_G ? 1 : 0;
         try {
           if (param1 != 28893) {
-            sma.releaseStatics(47);
+            ScoreStandings.releaseStatics(47);
           }
           if (!hna.field_a.field_c) {
             stackIn_6_0 = -1;
@@ -154,7 +154,7 @@ final class sma {
         }
     }
 
-    final void a(boolean param0) {
+    final void update(boolean param0) {
         int var6 = 0;
         int var2;
         int var3;
@@ -165,44 +165,44 @@ final class sma {
         int var9;
         int var2Lifetime1;
         var9 = TombRacer.field_G ? 1 : 0;
-        this.field_b = new int[this.field_a.players.length];
-        this.field_f = new int[this.field_a.players.length];
-        for (var2 = 0; this.field_a.players.length > var2; var2++) {
-          this.field_b[var2] = -1;
-          this.field_f[var2] = -1;
+        this.order = new int[this.matchState.players.length];
+        this.positions = new int[this.matchState.players.length];
+        for (var2 = 0; this.matchState.players.length > var2; var2++) {
+          this.order[var2] = -1;
+          this.positions[var2] = -1;
         }
         if (param0) {
           return;
         }
-        for (var2Lifetime1 = 0; this.field_f.length > var2Lifetime1; var2Lifetime1++) {
+        for (var2Lifetime1 = 0; this.positions.length > var2Lifetime1; var2Lifetime1++) {
           var3 = -1;
           var4 = 0;
-          var5 = this.field_a.players;
+          var5 = this.matchState.players;
           for (var6 = 0; var5.length > var6; var6++) {
             var7 = var5[var6];
-            if (!this.field_a.hasResigned((byte) -83, var7.getPlayerIndex(0)) &&
-              -1 == this.field_f[var7.getPlayerIndex(0)]) {
+            if (!this.matchState.hasResigned((byte) -83, var7.getPlayerIndex(0)) &&
+              -1 == this.positions[var7.getPlayerIndex(0)]) {
               var8 = var7.getTotal(false) + var7.j(false);
               if (var3 == -1 ||
                 var4 < var8 ||
                 var4 == var8 &&
-                !(this.field_a.field_c.field_b[var7.getPlayerIndex(0)] >= this.field_a.field_c.field_b[var3])) {
+                !(this.matchState.standings.positions[var7.getPlayerIndex(0)] >= this.matchState.standings.positions[var3])) {
                 var4 = var8;
                 var3 = var7.getPlayerIndex(0);
               }
             }
           }
           if (-1 != var3) {
-            this.field_b[var2Lifetime1] = var3;
-            this.field_f[var3] = var2Lifetime1;
+            this.order[var2Lifetime1] = var3;
+            this.positions[var3] = var2Lifetime1;
           }
         }
     }
 
-    sma(MatchState param0) {
+    ScoreStandings(MatchState param0) {
         try {
-          this.field_a = param0;
-          this.a((byte) -54);
+          this.matchState = param0;
+          this.resetForRemainingPlayers((byte) -54);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sma.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

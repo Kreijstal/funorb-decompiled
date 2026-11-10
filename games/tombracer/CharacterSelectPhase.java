@@ -235,7 +235,7 @@ final class CharacterSelectPhase extends MatchPhase {
         var4.a(param2, false, param1, 5, true);
         int var5 = var4.c((byte) 114);
         var4.a(param1 + 107, var5, param2, 0, 0);
-        FloatingMessage var6 = RewardChoicePhase.a(param1 ^ -41, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(82, SpriteSampleOperator.field_n, new String[]{this.matchState.getColouredPlayerName(param0, 23807), Room.field_m[param2]}));
+        FloatingMessage var6 = RewardChoicePhase.createTextMessage(param1 ^ -41, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(82, SpriteSampleOperator.field_n, new String[]{this.matchState.getColouredPlayerName(param0, 23807), Room.field_m[param2]}));
         iqa.field_c.a(0, var6);
     }
 
@@ -244,7 +244,7 @@ final class CharacterSelectPhase extends MatchPhase {
         if (param0 != -1) {
           this.field_p = -18;
         }
-        stackIn_6_0 = (!this.screen.d((byte) 111)) && (this.field_m.a(0, this.screen.localPlayerIndex) == -1);
+        stackIn_6_0 = (!this.screen.isSpectating((byte) 111)) && (this.field_m.a(0, this.screen.localPlayerIndex) == -1);
         return stackIn_6_0;
     }
 
@@ -256,7 +256,7 @@ final class CharacterSelectPhase extends MatchPhase {
         if (this.field_p == 0) {
           return;
         }
-        if (qma.field_c &&
+        if (ProceduralTextureProvider.field_c &&
           this.f(0) &&
           PlayerModel.field_b == 1) {
           this.a(true, this.field_v);

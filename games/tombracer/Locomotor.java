@@ -10,7 +10,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
     private SwitchableId field_h;
     static String field_m;
     static String field_l;
-    boolean field_j;
+    boolean stopped;
 
     final Room getRoom(boolean param0) {
         if (!param0) {
@@ -44,18 +44,18 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
         }
     }
 
-    public final boolean a(byte param0) {
+    public final boolean isStopped(byte param0) {
         if (param0 != 87) {
           field_m = (String) null;
           if (null != this.trap) {
-            return this.field_j ? true : false;
+            return this.stopped ? true : false;
           }
           return true;
         }
         if (null == this.trap) {
           return true;
         }
-        if (!this.field_j) {
+        if (!this.stopped) {
           return false;
         }
         return true;
@@ -117,7 +117,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
         return SpawnerBehaviour.a((byte) 8, 4, param1);
     }
 
-    final int d(byte param0) {
+    final int getTrapInitialLocalX(byte param0) {
         if (param0 >= -43) {
           this.a(-18, true);
           return this.trap.getInitialLocalX(80);
@@ -197,7 +197,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
 
     final Switchable a(boolean param0, int param1, int param2) {
         if (param1 != 1) {
-          this.field_j = false;
+          this.stopped = false;
           if (WhirlpoolDigest.matchesSwitchableId(param2, param0, -27201, (Switchable) (this))) {
             return (Switchable) (this);
           }
@@ -215,7 +215,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
         }
         this.enabled = param1 ? true : false;
         if (!param0) {
-          this.field_j = false;
+          this.stopped = false;
         }
     }
 
@@ -234,7 +234,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
         return this.field_h;
     }
 
-    final int a(boolean param0) {
+    final int getTrapInitialLocalY(boolean param0) {
         if (param0) {
           field_m = (String) null;
           return this.trap.getInitialLocalY((byte) -124);
@@ -260,7 +260,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
         return (SwitchableScope) ((Object) this.trap.getRoot(0));
     }
 
-    final int b(boolean param0) {
+    final int getTrapInitialAngle(boolean param0) {
         if (!param0) {
           this.locked = true;
           return this.trap.getInitialAngle(0);
@@ -271,7 +271,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
     Locomotor(Room param0, boolean param1) {
         this.enabled = true;
         this.locked = false;
-        this.field_j = false;
+        this.stopped = false;
         IntPoint discarded$0 = new IntPoint();
         try {
           this.room = param0;

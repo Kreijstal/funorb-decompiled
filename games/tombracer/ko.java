@@ -79,7 +79,7 @@ final class ko {
             return;
           }
           if (!this.field_e &&
-            !qma.field_c) {
+            !ProceduralTextureProvider.field_c) {
             return;
           }
           if (param2 < 0) {
@@ -105,7 +105,7 @@ final class ko {
             return;
           }
           if (!this.field_e &&
-            !qma.field_c) {
+            !ProceduralTextureProvider.field_c) {
             return;
           }
           if (param2 < 0) {
@@ -129,7 +129,7 @@ final class ko {
                 return;
               }
               if (!this.field_e &&
-                !qma.field_c) {
+                !ProceduralTextureProvider.field_c) {
                 return;
               }
               if (param2 < 0) {
@@ -164,7 +164,7 @@ final class ko {
               return;
             }
           } else {
-            if (qma.field_c) {
+            if (ProceduralTextureProvider.field_c) {
               if (param2 < 0) {
                 if (!this.field_e) {
                   return;
@@ -190,7 +190,7 @@ final class ko {
           var4Lifetime3 = -69 % ((-29 - param1) / 63);
           if (0 == this.field_f) {
             if (!this.field_e &&
-              !qma.field_c) {
+              !ProceduralTextureProvider.field_c) {
               return;
             }
             if (param2 >= 0) {
@@ -216,7 +216,7 @@ final class ko {
             var4Lifetime4 = -69 % ((-29 - param1) / 63);
             if (0 == this.field_f) {
               if (!this.field_e &&
-                !qma.field_c) {
+                !ProceduralTextureProvider.field_c) {
                 return;
               }
               if (param2 >= 0) {
@@ -252,7 +252,7 @@ final class ko {
               return;
             }
           } else {
-            if (qma.field_c) {
+            if (ProceduralTextureProvider.field_c) {
               if (param2 < 0) {
                 if (this.field_e) {
                   this.field_h = -1;

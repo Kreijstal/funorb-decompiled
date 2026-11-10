@@ -11,7 +11,7 @@ final class ProceduralTexture extends DualLinkNode {
     private int[] textureIds;
     private int[] spriteIds;
 
-    final boolean a(ResourceArchive param0, d param1, int param2) {
+    final boolean isReady(ResourceArchive param0, TextureProvider param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_26_0 = null;
@@ -41,7 +41,7 @@ final class ProceduralTexture extends DualLinkNode {
             }
           }
           for (var4_intLifetime1 = 0; var4_intLifetime1 < this.textureIds.length; var4_intLifetime1++) {
-            if (!param1.a(this.textureIds[var4_intLifetime1], (byte) 105)) {
+            if (!param1.isTextureReady(this.textureIds[var4_intLifetime1], (byte) 105)) {
               return false;
             }
           }
@@ -74,7 +74,7 @@ final class ProceduralTexture extends DualLinkNode {
         }
     }
 
-    final float[] a(d param0, byte param1, int param2, int param3, boolean param4, ResourceArchive param5) {
+    final float[] a(TextureProvider param0, byte param1, int param2, int param3, boolean param4, ResourceArchive param5) {
         int var7_int = 0;
         int var15 = 0;
         int incrementValue$0 = 0;
@@ -204,7 +204,7 @@ final class ProceduralTexture extends DualLinkNode {
         }
     }
 
-    final int[] a(int param0, ResourceArchive param1, boolean param2, double param3, d param4, byte param5, int param6, boolean param7) {
+    final int[] a(int param0, ResourceArchive param1, boolean param2, double param3, TextureProvider param4, byte param5, int param6, boolean param7) {
         int var10_int = 0;
         int var19 = 0;
         int[] stackIn_6_0 = null;
@@ -437,7 +437,7 @@ final class ProceduralTexture extends DualLinkNode {
         }
     }
 
-    final int[] a(int param0, boolean param1, int param2, double param3, ResourceArchive param4, d param5, boolean param6) {
+    final int[] a(int param0, boolean param1, int param2, double param3, ResourceArchive param4, TextureProvider param5, boolean param6) {
         int var9_int = 0;
         int var16 = 0;
         int incrementValue$0 = 0;

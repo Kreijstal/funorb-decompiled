@@ -86,12 +86,12 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
             }
           }
         }
-        if (pq.field_c.field_y != 0) {
+        if (CharacterChoiceFactory.field_c.field_y != 0) {
           if (1 == SafeZoneBehaviour.field_u.length &&
             SafeZoneBehaviour.field_u[0] != eda.field_e) {
             eda.field_e = SafeZoneBehaviour.field_u[0];
           }
-          pq.a(aca.field_i, true, 0, 17, eda.field_e, param3);
+          CharacterChoiceFactory.a(aca.field_i, true, 0, 17, eda.field_e, param3);
         }
         if (0 != BrickOperator.field_v.field_y) {
           uv.field_o = false;

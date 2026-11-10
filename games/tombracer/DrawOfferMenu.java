@@ -20,7 +20,7 @@ final class DrawOfferMenu extends MenuScreen {
           if (!SecondaryNodeDequeIterator.field_a.field_D) {
             this.setItems(22174, IntrusiveDequeCursor.field_e);
           } else {
-            if (!SecondaryNodeDequeIterator.field_a.d((byte) 100)) {
+            if (!SecondaryNodeDequeIterator.field_a.isSpectating((byte) 100)) {
               this.setItems(22174, ConsoleToken.field_l);
             } else {
               this.setItems(22174, sja.field_h);
@@ -30,7 +30,7 @@ final class DrawOfferMenu extends MenuScreen {
           if (!SecondaryNodeDequeIterator.field_a.field_D) {
             this.setItems(22174, LegacyOpenGlReflectionEffect.field_f);
           } else {
-            if (!SecondaryNodeDequeIterator.field_a.d((byte) 68)) {
+            if (!SecondaryNodeDequeIterator.field_a.isSpectating((byte) 68)) {
               this.setItems(22174, ConveyorBehaviour.field_q);
             } else {
               this.setItems(22174, IterableNodeHashTable.field_f);
@@ -197,7 +197,7 @@ final class DrawOfferMenu extends MenuScreen {
         if (!SecondaryNodeDequeIterator.field_a.field_D) {
           return;
         }
-        if (SecondaryNodeDequeIterator.field_a.d((byte) 92)) {
+        if (SecondaryNodeDequeIterator.field_a.isSpectating((byte) 92)) {
           return;
         }
         int var4 = SecondaryNodeDequeIterator.field_a.matchState.field_b;

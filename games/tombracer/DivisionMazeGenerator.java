@@ -40,8 +40,8 @@ final class DivisionMazeGenerator extends MazeGenerator {
             baa.field_b[var2_int] = 0;
           }
           for (var2_intLifetime1 = 0; var2_intLifetime1 < ara.field_xb; var2_intLifetime1++) {
-            if (wea.field_d[var2_intLifetime1].field_d == param1.field_d) {
-              dupTemp$3 = wea.field_d[var2_intLifetime1].a(false);
+            if (CourseLayout.field_d[var2_intLifetime1].field_d == param1.field_d) {
+              dupTemp$3 = CourseLayout.field_d[var2_intLifetime1].a(false);
               baa.field_b[dupTemp$3] = baa.field_b[dupTemp$3] + 1;
             }
           }
@@ -53,8 +53,8 @@ final class DivisionMazeGenerator extends MazeGenerator {
           var2_intLifetime2 = 0;
           for (var3 = 0; var3 < ara.field_xb; var3++) {
             boolean decompiledFrameRemainder0 = true;
-            if (param1.field_d == wea.field_d[var3].field_d) {
-              var4 = wea.field_d[var3].a(false);
+            if (param1.field_d == CourseLayout.field_d[var3].field_d) {
+              var4 = CourseLayout.field_d[var3].a(false);
               if (ValidationMessageWidget.field_K < baa.field_b[var4]) {
                 baa.field_b[var4] = baa.field_b[var4] - 1;
                 decompiledFrameRemainder0 = false;
@@ -63,13 +63,13 @@ final class DivisionMazeGenerator extends MazeGenerator {
             if (decompiledFrameRemainder0) {
               incrementValue$2 = var2_intLifetime2;
               var2_intLifetime2++;
-              wea.field_d[incrementValue$2] = wea.field_d[var3];
+              CourseLayout.field_d[incrementValue$2] = CourseLayout.field_d[var3];
             }
           }
           ara.field_xb = var2_intLifetime2;
           fieldTemp$1 = ara.field_xb;
           ara.field_xb = ara.field_xb + 1;
-          wea.field_d[fieldTemp$1] = param1;
+          CourseLayout.field_d[fieldTemp$1] = param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

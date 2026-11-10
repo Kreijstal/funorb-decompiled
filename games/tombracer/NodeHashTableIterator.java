@@ -13,7 +13,7 @@ final class NodeHashTableIterator implements Iterator {
         if (param0 > -88) {
           return true;
         }
-        return !gva.field_b.b(52) ? true : false;
+        return !DefaultRoomObjectRenderer.field_b.b(52) ? true : false;
     }
 
     public final boolean hasNext() {

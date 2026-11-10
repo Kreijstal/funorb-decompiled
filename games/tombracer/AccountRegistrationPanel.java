@@ -32,17 +32,17 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
             this.onHotspotAction((HotspotTextWidget) null, -41, 57, 20);
           }
           if (param1 == 0) {
-            gva.a("terms.ws", (byte) -25);
+            DefaultRoomObjectRenderer.a("terms.ws", (byte) -25);
             return;
           }
           if (param1 == 1) {
-            gva.a("privacy.ws", (byte) -109);
+            DefaultRoomObjectRenderer.a("privacy.ws", (byte) -109);
             return;
           }
           if (param1 != 2) {
             return;
           }
-          gva.a("conduct.ws", (byte) -43);
+          DefaultRoomObjectRenderer.a("conduct.ws", (byte) -43);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

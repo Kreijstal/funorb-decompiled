@@ -79,7 +79,7 @@ final class MovingSawComponent extends PathMoverComponent {
           var7 = new Effect(0, 10);
           var7.b(1, 15);
           var6.a(true, var7);
-          var6.a((byte) -24, true);
+          var6.setLocked((byte) -24, true);
           var12.addBehaviour((byte) 83, (Behaviour) (var6));
           var8 = new Trap(param2, param0);
           var8.setSize((byte) -11, 1048576, 1048576);

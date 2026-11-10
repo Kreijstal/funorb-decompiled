@@ -114,7 +114,7 @@ final class rua extends MessageDialog implements ButtonListener {
                 var4 = qp.field_v;
               }
             } else {
-              var4 = qma.field_f;
+              var4 = ProceduralTextureProvider.field_f;
               if (this.field_fb != null) {
                 this.field_fb.onMoreSuggestionsRequested(10000536);
               }
@@ -167,7 +167,7 @@ final class rua extends MessageDialog implements ButtonListener {
         }
     }
 
-    final static GraphicsToolkit a(boolean param0, d param1, ResourceArchive param2, java.awt.Canvas param3, int param4) {
+    final static GraphicsToolkit a(boolean param0, TextureProvider param1, ResourceArchive param2, java.awt.Canvas param3, int param4) {
         RuntimeException var5 = null;
         long var6 = 0L;
         HardwareOpenGlToolkit var8 = null;

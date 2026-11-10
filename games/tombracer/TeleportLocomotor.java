@@ -39,8 +39,8 @@ final class TeleportLocomotor extends Locomotor {
           if (!this.field_s.c(0)) {
             return;
           }
-          var3 = var7[this.field_r][0] + this.d((byte) -115);
-          var4 = var7[this.field_r][1] + this.a(false);
+          var3 = var7[this.field_r][0] + this.getTrapInitialLocalX((byte) -115);
+          var4 = var7[this.field_r][1] + this.getTrapInitialLocalY(false);
           this.field_t.x = var3;
           this.field_t.y = var4;
           if (!this.field_p) {
@@ -60,7 +60,7 @@ final class TeleportLocomotor extends Locomotor {
           this.getRoom(true).collisionGrid.insert(this.trap, 7073);
           var6 = 98 / ((-69 - param0) / 42);
           if (this.field_u > 0) {
-            this.trap.n(this.field_u, -112);
+            this.trap.setFreezeTicks(this.field_u, -112);
             return;
           }
           return;
@@ -71,8 +71,8 @@ final class TeleportLocomotor extends Locomotor {
           if (!this.field_s.c(0)) {
             return;
           }
-          var3Lifetime1 = var7[this.field_r][0] + this.d((byte) -115);
-          var4Lifetime1 = var7[this.field_r][1] + this.a(false);
+          var3Lifetime1 = var7[this.field_r][0] + this.getTrapInitialLocalX((byte) -115);
+          var4Lifetime1 = var7[this.field_r][1] + this.getTrapInitialLocalY(false);
           this.field_t.x = var3Lifetime1;
           this.field_t.y = var4Lifetime1;
           if (!this.field_p) {
@@ -92,18 +92,18 @@ final class TeleportLocomotor extends Locomotor {
           this.getRoom(true).collisionGrid.insert(this.trap, 7073);
           var6Lifetime1 = 98 / ((-69 - param0) / 42);
           if (this.field_u > 0) {
-            this.trap.n(this.field_u, -112);
+            this.trap.setFreezeTicks(this.field_u, -112);
             return;
           }
           return;
         }
-        this.field_j = true;
+        this.stopped = true;
         this.field_s.d(0);
         if (!this.field_s.c(0)) {
           return;
         }
-        var3Lifetime2 = var7[this.field_r][0] + this.d((byte) -115);
-        var4Lifetime2 = var7[this.field_r][1] + this.a(false);
+        var3Lifetime2 = var7[this.field_r][0] + this.getTrapInitialLocalX((byte) -115);
+        var4Lifetime2 = var7[this.field_r][1] + this.getTrapInitialLocalY(false);
         this.field_t.x = var3Lifetime2;
         this.field_t.y = var4Lifetime2;
         if (!this.field_p) {
@@ -120,7 +120,7 @@ final class TeleportLocomotor extends Locomotor {
           if (this.field_u <= 0) {
             return;
           }
-          this.trap.n(this.field_u, -112);
+          this.trap.setFreezeTicks(this.field_u, -112);
           return;
         }
         if (var13.length <= 0) {
@@ -136,7 +136,7 @@ final class TeleportLocomotor extends Locomotor {
           if (this.field_u <= 0) {
             return;
           }
-          this.trap.n(this.field_u, -112);
+          this.trap.setFreezeTicks(this.field_u, -112);
           return;
         }
         this.field_r = this.getRoom(true).getRandom(73).nextBounded(var13.length, 0);
@@ -152,7 +152,7 @@ final class TeleportLocomotor extends Locomotor {
         if (this.field_u <= 0) {
           return;
         }
-        this.trap.n(this.field_u, -112);
+        this.trap.setFreezeTicks(this.field_u, -112);
     }
 
     TeleportLocomotor(Room param0, BitPacketBuffer param1, boolean param2) {
@@ -241,7 +241,7 @@ final class TeleportLocomotor extends Locomotor {
               if (1 == param1) {
                 tia.a(param2, param4, param0, param6, param3, false);
               } else {
-                wd.a(param1, param0, param6, param4, param3, (byte) 27, param2);
+                CharacterChoice.a(param1, param0, param6, param4, param3, (byte) 27, param2);
               }
             }
           }

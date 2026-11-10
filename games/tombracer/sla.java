@@ -30,11 +30,11 @@ final class sla {
         qpa.field_b = null;
         if (RenderableNode.field_i != null) {
           ComponentMount.field_b = rma.field_b;
-          pq.field_g = RenderableNode.field_i;
+          CharacterChoiceFactory.field_g = RenderableNode.field_i;
           rma.field_b = null;
-          pq.field_g.field_N = -1;
+          CharacterChoiceFactory.field_g.field_N = -1;
           RenderableNode.field_i = null;
-          pq.field_g.field_ab = -1;
+          CharacterChoiceFactory.field_g.field_ab = -1;
           lra.field_d = null;
           dh.field_e = null;
           lra.field_e = null;

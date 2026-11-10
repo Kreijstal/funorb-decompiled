@@ -354,10 +354,10 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
           return false;
         }
         if (param1 == -44) {
-          return eqa.a(param2, true, param0);
+          return ChooseRewardFactory.a(param2, true, param0);
         }
         Puddle.j((byte) -121);
-        return eqa.a(param2, true, param0);
+        return ChooseRewardFactory.a(param2, true, param0);
     }
 
     public final int getY(int param0) {
@@ -545,7 +545,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
           if (param0 <= 103) {
             this.getWeight(-91);
           }
-          dea.field_a.a(this, 95, param1);
+          dea.roomObjectRenderer.drawPuddle(this, 95, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "mda.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -42,18 +42,18 @@ final class eda {
           return;
         }
         if (2 == param0) {
-          var2Lifetime3 = vk.field_d;
+          var2Lifetime3 = CourseLayoutFactory.field_d;
           var3Lifetime3 = baa.field_e;
           BitPacketBuffer.a(param1, var2Lifetime3, var3Lifetime3);
           return;
         }
         if (param0 != 3) {
           var3Lifetime4 = PitModel.field_s;
-          var2Lifetime4 = vk.field_d;
+          var2Lifetime4 = CourseLayoutFactory.field_d;
           BitPacketBuffer.a(param1, var2Lifetime4, var3Lifetime4);
           return;
         }
-        var2Lifetime5 = vk.field_d;
+        var2Lifetime5 = CourseLayoutFactory.field_d;
         var3Lifetime5 = tia.field_d;
         BitPacketBuffer.a(param1, var2Lifetime5, var3Lifetime5);
     }

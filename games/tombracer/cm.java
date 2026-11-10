@@ -222,10 +222,10 @@ final class cm implements GamePacket {
             var6Lifetime1 = stackIn_42_0;
             if (var6Lifetime1 != 0) {
               var7 = TextFieldValidator.field_g;
-              for (var8_int = 0; vk.field_b.length > var8_int; var8_int++) {
-                vk.field_b[var8_int] = (byte) 0;
+              for (var8_int = 0; CourseLayoutFactory.field_b.length > var8_int; var8_int++) {
+                CourseLayoutFactory.field_b[var8_int] = (byte) 0;
               }
-              vk.field_b[var7 / 8] = (byte)WallTile.bitwiseOr((int) vk.field_b[var7 / 8], 1 << var7 % 8);
+              CourseLayoutFactory.field_b[var7 / 8] = (byte)WallTile.bitwiseOr((int) CourseLayoutFactory.field_b[var7 / 8], 1 << var7 % 8);
             }
             stackIn_50_0 = (!param3) ? 0 : -1;
             for (var7 = stackIn_50_0; SafeZoneBehaviour.field_u.length > var7; var7++) {
@@ -246,11 +246,11 @@ final class cm implements GamePacket {
                 } else {
                   if (var6Lifetime1 == 0) {
                     if (var7 == -1) {
-                      for (var9 = 0; var9 < vk.field_b.length; var9++) {
-                        vk.field_b[var9] = (byte) 0;
+                      for (var9 = 0; var9 < CourseLayoutFactory.field_b.length; var9++) {
+                        CourseLayoutFactory.field_b[var9] = (byte) 0;
                       }
                     } else {
-                      vk.field_b[var7 / 8] = (byte)kha.bitwiseXor((int) vk.field_b[var7 / 8], 1 << SnakePitBehaviour.bitwiseAnd(var7, 7));
+                      CourseLayoutFactory.field_b[var7 / 8] = (byte)kha.bitwiseXor((int) CourseLayoutFactory.field_b[var7 / 8], 1 << SnakePitBehaviour.bitwiseAnd(var7, 7));
                     }
                   }
                 }
@@ -262,13 +262,13 @@ final class cm implements GamePacket {
                     dupTemp$0 = bf.field_b[1][1 + var7];
                     stackIn_81_0 = dupTemp$0;
                     stackIn_81_1 = dupTemp$0.field_cb;
-                    stackIn_82_2 = (0 == (vk.field_b[var9 / 8] & 1 << (7 & var9)));
+                    stackIn_82_2 = (0 == (CourseLayoutFactory.field_b[var9 / 8] & 1 << (7 & var9)));
                     stackIn_81_0.field_cb = stackIn_81_1 & stackIn_82_2;
                   }
                 } else {
                   stackIn_84_0 = bf.field_b[1][1 + var7];
                   stackIn_84_1 = 0;
-                  stackIn_84_2 = vk.field_b[var7 / 8];
+                  stackIn_84_2 = CourseLayoutFactory.field_b[var7 / 8];
                   stackIn_84_3 = 1 << (var7 & 7);
                   stackIn_87_1 = (stackIn_84_1 != (stackIn_84_2 & stackIn_84_3));
                   stackIn_84_0.field_cb = stackIn_87_1;

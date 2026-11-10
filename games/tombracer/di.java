@@ -4,7 +4,7 @@
 final class di {
     private boolean field_e;
     private ei[] field_b;
-    private d field_c;
+    private TextureProvider field_c;
     static boolean[] field_f;
     iqa field_i;
     static int field_a;
@@ -54,7 +54,7 @@ final class di {
         field_d = null;
     }
 
-    di(d param0, ei[] param1) {
+    di(TextureProvider param0, ei[] param1) {
         this(tba.a((byte) 98), CommonChooseReward.e(-1), param0, dsa.field_c, param1);
     }
 
@@ -172,7 +172,7 @@ final class di {
                   if (!HotspotTextWidget.field_B.b(-35)) {
                     return;
                   }
-                  var8_int = sma.a("hw3d", 28893);
+                  var8_int = ScoreStandings.a("hw3d", 28893);
                   if (var8_int == -1) {
                     var7.field_c = false;
                     decompiledFrameRemainder0 = false;
@@ -181,7 +181,7 @@ final class di {
                     if (var8_int < 100) {
                       return;
                     }
-                    var9_int = sma.a("jaclib", 28893);
+                    var9_int = ScoreStandings.a("jaclib", 28893);
                     if (var9_int == -1) {
                       var7.field_c = false;
                       decompiledFrameRemainder0 = false;
@@ -190,7 +190,7 @@ final class di {
                       if (var9_int < 100) {
                         return;
                       }
-                      var10 = sma.a("jaggl", 28893);
+                      var10 = ScoreStandings.a("jaggl", 28893);
                       if (var10 == -1) {
                         var7.field_c = false;
                         decompiledFrameRemainder0 = false;
@@ -211,7 +211,7 @@ final class di {
                       if (!HotspotTextWidget.field_B.b(-63)) {
                         return;
                       }
-                      var8_int = sma.a("jaclib", 28893);
+                      var8_int = ScoreStandings.a("jaclib", 28893);
                       if (-1 == var8_int) {
                         var7.field_c = false;
                         decompiledFrameRemainder0 = false;
@@ -220,7 +220,7 @@ final class di {
                         if (100 > var8_int) {
                           return;
                         }
-                        var9_int = sma.a("sw3d", 28893);
+                        var9_int = ScoreStandings.a("sw3d", 28893);
                         if (var9_int == -1) {
                           var7.field_c = false;
                           decompiledFrameRemainder0 = false;
@@ -235,7 +235,7 @@ final class di {
                       if (!HotspotTextWidget.field_B.b(-63)) {
                         return;
                       }
-                      var8_int = sma.a("jaclib", 28893);
+                      var8_int = ScoreStandings.a("jaclib", 28893);
                       if (var8_int == -1) {
                         var7.field_c = false;
                         decompiledFrameRemainder0 = false;
@@ -244,7 +244,7 @@ final class di {
                         if (var8_int < 100) {
                           return;
                         }
-                        var9_int = sma.a("jagdx", 28893);
+                        var9_int = ScoreStandings.a("jagdx", 28893);
                         if (var9_int == -1) {
                           var7.field_c = false;
                           decompiledFrameRemainder0 = false;
@@ -253,7 +253,7 @@ final class di {
                           if (100 > var9_int) {
                             return;
                           }
-                          var10 = sma.a("hw3d", 28893);
+                          var10 = ScoreStandings.a("hw3d", 28893);
                           if (-1 == var10) {
                             var7.field_c = false;
                             decompiledFrameRemainder0 = false;
@@ -270,7 +270,7 @@ final class di {
                     if (!HotspotTextWidget.field_B.b(-53)) {
                       return;
                     }
-                    var8_int = sma.a("jaclib", 28893);
+                    var8_int = ScoreStandings.a("jaclib", 28893);
                     if (var8_int == -1) {
                       var7.field_c = false;
                       decompiledFrameRemainder0 = false;
@@ -279,7 +279,7 @@ final class di {
                       if (100 > var8_int) {
                         return;
                       }
-                      var9_int = sma.a("jaggl", 28893);
+                      var9_int = ScoreStandings.a("jaggl", 28893);
                       if (-1 == var9_int) {
                         var7.field_c = false;
                         decompiledFrameRemainder0 = false;
@@ -406,7 +406,7 @@ final class di {
         }
     }
 
-    private di(ResourceArchive param0, ResourceArchive param1, d param2, PlatformTaskDispatcher param3, ei[] param4) {
+    private di(ResourceArchive param0, ResourceArchive param1, TextureProvider param2, PlatformTaskDispatcher param3, ei[] param4) {
         this.field_e = false;
         try {
           this.field_c = param2;

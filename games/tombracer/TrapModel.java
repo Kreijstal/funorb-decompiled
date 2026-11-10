@@ -164,7 +164,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
           if (this.part != null) {
             if (var5 == 0) {
               if (this.part.isEnabled(param0 ^ 12575)) {
-                stackIn_26_0 = (this.part.a((byte) 87)) ? 1 : 0;
+                stackIn_26_0 = (this.part.isStopped((byte) 87)) ? 1 : 0;
               } else {
                 stackIn_26_0 = 1;
               }
@@ -210,7 +210,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
           if (this.part != null) {
             if (var5Lifetime1 == 0) {
               if (this.part.isEnabled(param0 ^ 12575)) {
-                stackIn_78_0 = (this.part.a((byte) 87)) ? 1 : 0;
+                stackIn_78_0 = (this.part.isStopped((byte) 87)) ? 1 : 0;
                 var5Lifetime1 = stackIn_78_0;
               } else {
                 stackIn_73_0 = 1;
@@ -308,7 +308,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
                   }
                   return;
                 }
-                stackIn_185_0 = (!this.part.a((byte) 87)) ? 0 : 1;
+                stackIn_185_0 = (!this.part.isStopped((byte) 87)) ? 0 : 1;
                 var5Lifetime2 = stackIn_185_0;
               }
               if (var5Lifetime2 != 0) {
@@ -438,7 +438,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
             }
             return;
           }
-          if (this.part.a((byte) 87)) {
+          if (this.part.isStopped((byte) 87)) {
             var5Lifetime3 = 1;
             if (var5Lifetime3 != 0) {
               stackIn_322_0 = (var4Lifetime2 != 0) ? 1 : 0;
@@ -598,7 +598,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
         var2 = -58 % ((-38 - param0) / 60);
         if (this.a((byte) 74)) {
           if (null != this.part &&
-            this.part.a((byte) 87)) {
+            this.part.isStopped((byte) 87)) {
             return true;
           }
           if (null != this.body &&
@@ -610,7 +610,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
         if (this.part == null) {
           return true;
         }
-        if (this.part.a((byte) 87)) {
+        if (this.part.isStopped((byte) 87)) {
           return true;
         }
         if (null == this.body) {

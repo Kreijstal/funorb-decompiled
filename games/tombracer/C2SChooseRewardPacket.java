@@ -36,7 +36,7 @@ final class C2SChooseRewardPacket implements GamePacket {
         int var9Lifetime1;
         var10 = TombRacer.field_G ? 1 : 0;
         try {
-          var7_int = mt.alignTo8(param0, 0);
+          var7_int = ScoringObserverFactory.alignTo8(param0, 0);
           if (pb.field_n == null) {
             pb.field_n = new java.security.SecureRandom();
           }

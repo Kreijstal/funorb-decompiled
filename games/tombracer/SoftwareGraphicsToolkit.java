@@ -61,7 +61,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     }
 
     final boolean d(int param0) {
-        return this.field_c.a((byte) -56, param0).field_b || this.field_c.a((byte) 125, param0).field_n;
+        return this.field_c.metadata((byte) -56, param0).field_b || this.field_c.metadata((byte) 125, param0).field_n;
     }
 
     final void ya() {
@@ -219,7 +219,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     final void updateTime(int param0) {
         ScrollingTexturePixels var4 = null;
         int var5 = 0;
-        dw var6 = null;
+        TextureMetadata var6 = null;
         int var2 = param0 - this.field_j;
         Object var3 = this.field_F.b((byte) 85);
         while (var3 != null) {
@@ -228,7 +228,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
             var4.field_j = var4.field_j + var2;
             var5 = var4.field_j / 20;
             if (var5 > 0) {
-              var6 = this.field_c.a((byte) -53, var4.field_f);
+              var6 = this.field_c.metadata((byte) -53, var4.field_f);
               var4.scroll(var6.field_s * var2 * 50 / 1000, var6.field_o * var2 * 50 / 1000);
               var4.field_j = var4.field_j - var5 * 20;
             }
@@ -388,7 +388,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         if (this.field_e) {
           return true;
         }
-        if (!this.field_c.a((byte) -17, param0).field_g) {
+        if (!this.field_c.metadata((byte) -17, param0).field_g) {
           return false;
         }
         return true;
@@ -429,7 +429,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     final int[] h(int param0) {
         ScrollingTexturePixels var2 = null;
         Object var3 = null;
-        dw var4 = null;
+        TextureMetadata var4 = null;
         Object stackIn_4_0 = null;
         int stackIn_10_0 = 0;
         ScrollingTexturePixels stackIn_12_0;
@@ -446,11 +446,11 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         synchronized (var3) {
           var2 = (ScrollingTexturePixels) (this.field_F.a((byte) 92, (long)param0 | -9223372036854775808L));
           if (var2 == null) {
-            if (!this.field_c.a(param0, (byte) 41)) {
+            if (!this.field_c.isTextureReady(param0, (byte) 41)) {
               stackIn_4_0 = null;
               return (int[]) (stackIn_4_0);
             }
-            var4 = this.field_c.a((byte) -124, param0);
+            var4 = this.field_c.metadata((byte) -124, param0);
             if (!var4.field_g &&
               !this.field_e) {
               stackIn_10_0 = this.field_I;
@@ -462,7 +462,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
             stackIn_12_1 = null;
             stackIn_12_2 = param0;
             stackIn_12_3 = var5;
-            stackIn_12_4 = this.field_c.a((byte) 40, var5, 0.699999988079071f, param0, true, var5);
+            stackIn_12_4 = this.field_c.loadPixels((byte) 40, var5, 0.699999988079071f, param0, true, var5);
             if (var4.field_d == 1) {
               stackIn_13_0 = null;
               stackIn_13_1 = null;
@@ -1080,7 +1080,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
           return;
         }
         if (param6 != 65535 &&
-          !this.field_c.a((byte) -7, param6).field_p) {
+          !this.field_c.metadata((byte) -7, param6).field_p) {
           if (this.field_v != param6) {
             var11 = (ToolkitSprite) (this.field_X.a((byte) 75, (long)param6));
             if (var11 == null) {
@@ -1124,7 +1124,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
           return;
         }
         if (param6 != 65535 &&
-          !this.field_c.a((byte) 5, param6).field_p) {
+          !this.field_c.metadata((byte) 5, param6).field_p) {
           if (this.field_v != param6) {
             var11 = (ToolkitSprite) (this.field_X.a((byte) 55, (long)param6));
             if (var11 == null) {
@@ -1251,7 +1251,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         this.g();
     }
 
-    SoftwareGraphicsToolkit(java.awt.Canvas param0, d param1, int param2, int param3) {
+    SoftwareGraphicsToolkit(java.awt.Canvas param0, TextureProvider param1, int param2, int param3) {
         this(param1);
         try {
           this.a(param0, param2, param3);
@@ -1369,7 +1369,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         return (ToolkitSprite) (var7);
     }
 
-    private SoftwareGraphicsToolkit(d param0) {
+    private SoftwareGraphicsToolkit(TextureProvider param0) {
         super(param0);
         this.field_E = false;
         this.field_z = false;
@@ -3066,7 +3066,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     }
 
     final int f(int param0) {
-        return this.field_c.a((byte) -5, param0).field_d;
+        return this.field_c.metadata((byte) -5, param0).field_d;
     }
 
     final boolean h() {

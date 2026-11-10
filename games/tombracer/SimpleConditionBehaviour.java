@@ -98,7 +98,7 @@ final class SimpleConditionBehaviour extends Behaviour {
         var4 = TombRacer.field_G ? 1 : 0;
         var3 = this.field_t;
         if (var3 == 0) {
-          this.field_s = this.a((byte) 87);
+          this.field_s = this.isStopped((byte) 87);
           if (param0 == 79) {
             return;
           }

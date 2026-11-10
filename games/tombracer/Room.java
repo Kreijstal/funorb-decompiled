@@ -785,7 +785,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           var7.a(-1704, this.scene);
           var7 = (RoomComponent) (this.components.next(116));
         }
-        dea.field_a.a(121, this);
+        dea.roomObjectRenderer.prepareRoom(121, this);
         this.tileGrid.a(this.scene, 0);
         if (null != this.field_G) {
           this.field_G.c((byte) 119);
@@ -1075,7 +1075,7 @@ final class Room implements SwitchableScope, Renderable, noa {
             this.height = var3.readBits((byte) 44, 8) * 2097152;
           }
         }
-        this.tileGrid.a(2097152, this, 4);
+        this.tileGrid.resizeToRoom(2097152, this, 4);
         if (11 > this.formatVersion) {
           this.resetEntrance(109);
         } else {
@@ -1618,7 +1618,7 @@ final class Room implements SwitchableScope, Renderable, noa {
     }
 
     final void a(int param0, int param1, byte param2, int param3, int param4, int param5) {
-        TileGridCell var7 = this.tileGrid.a(param0, param3, (byte) 119);
+        TileGridCell var7 = this.tileGrid.getCellAt(param0, param3, (byte) 119);
         if (var7 == null) {
           return;
         }
@@ -1764,7 +1764,7 @@ final class Room implements SwitchableScope, Renderable, noa {
     }
 
     final void a(boolean param0, int param1, int param2, int param3, int param4, int param5) {
-        TileGridCell var7 = this.tileGrid.a(param4, param1, (byte) 119);
+        TileGridCell var7 = this.tileGrid.getCellAt(param4, param1, (byte) 119);
         if (var7 == null) {
           return;
         }

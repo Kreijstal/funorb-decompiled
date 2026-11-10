@@ -5,7 +5,7 @@ final class OpenGlRenderbuffer extends DualLinkNode implements FramebufferAttach
     int field_o;
     private int field_q;
     private int field_m;
-    static os field_u;
+    static BitDecodableFactory field_u;
     static int field_s;
     private OpenGlToolkit field_p;
     static String field_k;
@@ -122,6 +122,6 @@ final class OpenGlRenderbuffer extends DualLinkNode implements FramebufferAttach
 
     static {
         field_k = "You can join this game";
-        field_u = (os) ((Object) new vk());
+        field_u = (BitDecodableFactory) ((Object) new CourseLayoutFactory());
     }
 }

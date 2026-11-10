@@ -1428,7 +1428,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    HardwareOpenGlToolkit(jaggl.OpenGL param0, java.awt.Canvas param1, long param2, d param3, ResourceArchive param4, int param5) {
+    HardwareOpenGlToolkit(jaggl.OpenGL param0, java.awt.Canvas param1, long param2, TextureProvider param3, ResourceArchive param4, int param5) {
         super(param1, new Long(param2), param3, param4, param5, 1);
         int var15 = 0;
         int stackIn_21_1 = 0;

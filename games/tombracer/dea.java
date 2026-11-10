@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dea {
-    static mb field_a;
+    static RoomObjectRenderer roomObjectRenderer;
     private float field_d;
     static boolean field_c;
     private float field_b;
@@ -144,7 +144,7 @@ final class dea {
           }
           return;
         }
-        field_a = (mb) null;
+        roomObjectRenderer = (RoomObjectRenderer) null;
         if (OpenGlTransform3D.field_e != null) {
           OpenGlTransform3D.field_e.a((byte) 105);
           OpenGlTransform3D.field_e = null;
@@ -162,11 +162,11 @@ final class dea {
 
     public static void releaseStatics(boolean param0) {
         if (!param0) {
-          field_a = (mb) null;
-          field_a = null;
+          roomObjectRenderer = (RoomObjectRenderer) null;
+          roomObjectRenderer = null;
           return;
         }
-        field_a = null;
+        roomObjectRenderer = null;
     }
 
     dea(int param0) {

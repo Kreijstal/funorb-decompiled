@@ -73,7 +73,7 @@ final class SimpleMoveLocomotor extends Locomotor {
                 }
                 if (this.field_r > 0 &&
                   this.field_o >= this.field_r) {
-                  this.field_j = true;
+                  this.stopped = true;
                 }
                 return;
               }
@@ -84,7 +84,7 @@ final class SimpleMoveLocomotor extends Locomotor {
               this.field_o = this.field_o + this.field_t;
               if (this.field_r > 0 &&
                 this.field_o >= this.field_r) {
-                this.field_j = true;
+                this.stopped = true;
               }
               return;
             }
@@ -92,7 +92,7 @@ final class SimpleMoveLocomotor extends Locomotor {
               this.field_o = this.field_o + this.field_t;
               if (this.field_r > 0 &&
                 this.field_o >= this.field_r) {
-                this.field_j = true;
+                this.stopped = true;
               }
               return;
             }
@@ -102,7 +102,7 @@ final class SimpleMoveLocomotor extends Locomotor {
             if (this.field_o < this.field_r) {
               return;
             }
-            this.field_j = true;
+            this.stopped = true;
             return;
           }
           if (var5 != 0) {
@@ -145,7 +145,7 @@ final class SimpleMoveLocomotor extends Locomotor {
           }
           if (this.field_r > 0 &&
             this.field_o >= this.field_r) {
-            this.field_j = true;
+            this.stopped = true;
           }
           return;
         }
@@ -172,7 +172,7 @@ final class SimpleMoveLocomotor extends Locomotor {
                 }
                 if (this.field_r > 0 &&
                   this.field_o >= this.field_r) {
-                  this.field_j = true;
+                  this.stopped = true;
                 }
                 return;
               }
@@ -183,7 +183,7 @@ final class SimpleMoveLocomotor extends Locomotor {
               this.field_o = this.field_o + this.field_t;
               if (this.field_r > 0 &&
                 this.field_o >= this.field_r) {
-                this.field_j = true;
+                this.stopped = true;
               }
               return;
             }
@@ -191,7 +191,7 @@ final class SimpleMoveLocomotor extends Locomotor {
               this.field_o = this.field_o + this.field_t;
               if (this.field_r > 0 &&
                 this.field_o >= this.field_r) {
-                this.field_j = true;
+                this.stopped = true;
               }
               return;
             }
@@ -201,7 +201,7 @@ final class SimpleMoveLocomotor extends Locomotor {
             if (this.field_o < this.field_r) {
               return;
             }
-            this.field_j = true;
+            this.stopped = true;
             return;
           }
           if (var5Lifetime1 != 0) {
@@ -244,7 +244,7 @@ final class SimpleMoveLocomotor extends Locomotor {
           }
           if (this.field_r > 0 &&
             this.field_o >= this.field_r) {
-            this.field_j = true;
+            this.stopped = true;
           }
           return;
         }
@@ -275,7 +275,7 @@ final class SimpleMoveLocomotor extends Locomotor {
             }
             if (this.field_r > 0 &&
               this.field_o >= this.field_r) {
-              this.field_j = true;
+              this.stopped = true;
             }
             return;
           }
@@ -303,7 +303,7 @@ final class SimpleMoveLocomotor extends Locomotor {
           if (this.field_o < this.field_r) {
             return;
           }
-          this.field_j = true;
+          this.stopped = true;
           return;
         }
         var5Lifetime2 = lw.signum(var5Lifetime2, (byte) -52) * this.field_t;
@@ -324,7 +324,7 @@ final class SimpleMoveLocomotor extends Locomotor {
               if (this.field_o < this.field_r) {
                 return;
               }
-              this.field_j = true;
+              this.stopped = true;
               return;
             }
             if (this.trap.getLocalY(false) == var9Lifetime3) {
@@ -334,7 +334,7 @@ final class SimpleMoveLocomotor extends Locomotor {
               if (this.field_o < this.field_r) {
                 return;
               }
-              this.field_j = true;
+              this.stopped = true;
               return;
             }
             this.field_o = this.field_o + this.field_t;
@@ -342,7 +342,7 @@ final class SimpleMoveLocomotor extends Locomotor {
               return;
             }
             if (this.field_o >= this.field_r) {
-              this.field_j = true;
+              this.stopped = true;
             }
             return;
           }
@@ -360,7 +360,7 @@ final class SimpleMoveLocomotor extends Locomotor {
           if (this.field_o < this.field_r) {
             return;
           }
-          this.field_j = true;
+          this.stopped = true;
         }
         return;
     }

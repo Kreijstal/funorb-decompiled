@@ -554,7 +554,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
             !param1) {
             var11 = (Locomotor) (var8.first(true));
             while (var11 != null) {
-              if (var11.a((byte) 87)) {
+              if (var11.isStopped((byte) 87)) {
                 var11.unlink(126);
                 var11 = (Locomotor) (var8.next(-1));
                 continue;
@@ -573,7 +573,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           var9 = new IntrusiveDequeCursor(this.behaviours);
           var12 = (Behaviour) (var9.first(true));
           while (var12 != null) {
-            if (!var12.a((byte) 87)) {
+            if (!var12.isStopped((byte) 87)) {
               if (var12.isEnabled(-116)) {
                 if (param1) {
                   if (!var12.freezesInTimeStop((byte) 120)) {
@@ -1575,7 +1575,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
             var3 = param0.getPart(-100);
             if ((var3 != null &&
               this == var3.getTrap((byte) 74)) &&
-              (decompiledFrameRemainder0 = !(!var3.a((byte) 87)))) {
+              (decompiledFrameRemainder0 = !(!var3.isStopped((byte) 87)))) {
               return false;
             }
             if (decompiledFrameRemainder0) {
@@ -1845,7 +1845,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         return this.localX;
     }
 
-    final void n(int param0, int param1) {
+    final void setFreezeTicks(int param0, int param1) {
         if (this.freezeTicks <= param0) {
           this.freezeTicks = param0;
           if (param1 >= -103) {

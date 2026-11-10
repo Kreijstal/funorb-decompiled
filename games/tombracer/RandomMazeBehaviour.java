@@ -460,7 +460,7 @@ final class RandomMazeBehaviour extends Behaviour {
         this.field_t = 2097152;
         try {
           this.field_r = new Trap(param0, false);
-          wd.a((byte) -98, 1, true, param0, this.field_r, false);
+          CharacterChoice.a((byte) -98, 1, true, param0, this.field_r, false);
           this.field_r.setAttachedToParent(false, 11468);
           this.field_A = new Trap(param0, false);
           this.field_o = new Trap(param0, false);
@@ -594,7 +594,7 @@ final class RandomMazeBehaviour extends Behaviour {
           this.field_o = null;
           if (this.field_u) {
             this.field_r = new Trap(param0, false);
-            wd.a((byte) -120, 1, true, param0, this.field_r, false);
+            CharacterChoice.a((byte) -120, 1, true, param0, this.field_r, false);
             this.field_A = new Trap(param0, false);
           } else {
             this.field_r = new Trap(param0, param1, false);
@@ -606,7 +606,7 @@ final class RandomMazeBehaviour extends Behaviour {
           }
           if (this.field_o == null) {
             this.field_o = new Trap(param0, false);
-            wd.a((byte) -93, 7, true, param0, this.field_o, false);
+            CharacterChoice.a((byte) -93, 7, true, param0, this.field_o, false);
             this.d(true);
           } else {
             this.d(true);

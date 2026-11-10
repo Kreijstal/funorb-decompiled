@@ -118,7 +118,7 @@ final class fp {
         var16_ref.a(incrementValue$2, (byte) 47, param0);
         ara.field_vb = SpriteData.loadSprite(param2, "", "hud_score");
         tla.field_g = SpriteData.loadSprite(param2, "", "hud_room");
-        wd.field_c = SpriteData.loadSprite(param2, "", "hud_timer");
+        CharacterChoice.field_c = SpriteData.loadSprite(param2, "", "hud_timer");
         LegacyOpenGlTexture3D.field_l = SpriteData.loadSprite(param2, "", "hud_timer_head");
         wj.field_a = SpriteData.loadSprite(param2, "", "hud_timer_jaw");
         ProxySocketConnector.field_e = SpriteData.loadSheet(param2, "", "hud_sand");

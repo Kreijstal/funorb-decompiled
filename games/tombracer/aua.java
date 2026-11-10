@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aua extends mt {
+final class aua extends ScoringObserverFactory {
     static String field_d;
     static String field_c;
     static int field_b;
 
-    final MatchScoringObserver a(MatchState param0, int param1) {
+    final MatchScoringObserver createScoringObserver(MatchState param0, int param1) {
         RuntimeException var3 = null;
         MatchState var4 = null;
         MatchScoringObserver stackIn_3_0 = null;
@@ -17,7 +17,7 @@ final class aua extends mt {
         try {
           if (param1 != -25077) {
             var4 = (MatchState) null;
-            this.a((MatchState) null, 53);
+            this.createScoringObserver((MatchState) null, 53);
           }
           stackIn_3_0 = new MatchScoringObserver(param0);
           return stackIn_3_0;

@@ -1310,7 +1310,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
 
     public final void render(int param0, iq param1) {
         try {
-          dea.field_a.a(param1, false, this);
+          dea.roomObjectRenderer.drawProjectile(param1, false, this);
           if (param0 < 103) {
             Collidable var4 = (Collidable) null;
             this.overlapsBox(40, (WorldBody) null, -76, 70, -19, (Collidable) null, -19, 65);

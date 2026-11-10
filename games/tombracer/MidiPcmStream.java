@@ -202,7 +202,7 @@ class MidiPcmStream extends PcmStream {
 
     public static void c(int param0) {
         if (param0 != 0) {
-          MidiPcmStream.a(8, -95, (java.awt.Canvas) null, (d) null, -74);
+          MidiPcmStream.a(8, -95, (java.awt.Canvas) null, (TextureProvider) null, -74);
         }
         field_K = null;
     }
@@ -240,7 +240,7 @@ class MidiPcmStream extends PcmStream {
         }
     }
 
-    final static GraphicsToolkit a(int param0, int param1, java.awt.Canvas param2, d param3, int param4) {
+    final static GraphicsToolkit a(int param0, int param1, java.awt.Canvas param2, TextureProvider param3, int param4) {
         RuntimeException var5 = null;
         SoftwareGraphicsToolkit stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

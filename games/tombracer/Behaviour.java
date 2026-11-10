@@ -320,7 +320,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
         return this.trap.getRandom(1751085328);
     }
 
-    public final boolean a(byte param0) {
+    public final boolean isStopped(byte param0) {
         if (param0 != 87) {
           this.freezesInTimeStop((byte) -104);
           if (null != this.trap) {
@@ -396,7 +396,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
 
     public final int getRenderZ(byte param0) {
         if (param0 > -86) {
-          this.a((byte) -24, false);
+          this.setLocked((byte) -24, false);
           return this.trap.getElevation((byte) 115);
         }
         return this.trap.getElevation((byte) 115);
@@ -447,7 +447,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
         }
     }
 
-    final void a(byte param0, boolean param1) {
+    final void setLocked(byte param0, boolean param1) {
         this.locked = param1 ? true : false;
         if (param0 != -24) {
           this.room = (Room) null;

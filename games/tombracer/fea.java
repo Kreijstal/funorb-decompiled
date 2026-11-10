@@ -774,7 +774,7 @@ final class fea {
           }
           if (!HardwareOpenGlToolkit.field_pd &&
             WhiteNoiseOperator.field_m > fr.field_c &&
-            qma.field_c) {
+            ProceduralTextureProvider.field_c) {
             RenderLayer.field_f = SimpleBlockBehaviour.field_r;
             ConsoleToken.field_f = TileGrid.field_g;
             fr.field_c = 0;

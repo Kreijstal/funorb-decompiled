@@ -705,7 +705,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
         var8 = TombRacer.field_G ? 1 : 0;
         try {
           super.updatePointerState(param0, param1, param2, param3);
-          if (qma.field_c) {
+          if (ProceduralTextureProvider.field_c) {
             param2.clearKeyboardFocus((byte) -103);
             var9 = this.field_U;
             var5 = var9;

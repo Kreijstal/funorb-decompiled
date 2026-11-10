@@ -63,7 +63,7 @@ final class mn extends TextFieldValidator {
             return stackIn_3_0;
           }
           if (!param1.equals(this.field_m)) {
-            var3 = wd.a((byte) -115, param1);
+            var3 = CharacterChoice.a((byte) -115, param1);
             if (!var3.b(47)) {
               stackIn_8_0 = tea.field_b;
               return stackIn_8_0;

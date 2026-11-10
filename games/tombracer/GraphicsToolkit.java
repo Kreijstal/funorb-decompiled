@@ -3,7 +3,7 @@
  */
 abstract class GraphicsToolkit {
     static boolean field_b;
-    d field_c;
+    TextureProvider field_c;
     int field_a;
 
     abstract boolean f();
@@ -47,7 +47,7 @@ abstract class GraphicsToolkit {
     final void a(int param0, int param1, int param2, int param3, int param4, byte param5) {
         this.d(param1, param0, param3, param2, param4, 1);
         if (param5 > -57) {
-          this.field_c = (d) null;
+          this.field_c = (TextureProvider) null;
         }
     }
 
@@ -78,7 +78,7 @@ abstract class GraphicsToolkit {
 
     abstract void HA(int param0, int param1, int param2, int param3, int[] param4);
 
-    final synchronized static GraphicsToolkit a(d param0, int param1, ResourceArchive param2, int param3, int param4, int param5, java.awt.Canvas param6, int param7) {
+    final synchronized static GraphicsToolkit a(TextureProvider param0, int param1, ResourceArchive param2, int param3, int param4, int param5, java.awt.Canvas param6, int param7) {
         RuntimeException var8 = null;
         GraphicsToolkit stackIn_2_0 = null;
         GraphicsToolkit stackIn_6_0 = null;
@@ -199,7 +199,7 @@ abstract class GraphicsToolkit {
         this.za(param4, param0, param2, param3, 1);
     }
 
-    GraphicsToolkit(d param0) {
+    GraphicsToolkit(TextureProvider param0) {
         int var2_int = 0;
         int var3 = 0;
         try {

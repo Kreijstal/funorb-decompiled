@@ -179,9 +179,9 @@ final class RotaterMountComponent extends PrefabComponent {
               if (var3 == 1) {
                 Bzip2Decompressor.decompress(var12, var5_int, param0, var4, 9);
               } else {
-                var7 = sma.field_e;
+                var7 = ScoreStandings.field_e;
                 synchronized (var7) {
-                  sma.field_e.inflateInto((byte) -34, var12, var9);
+                  ScoreStandings.field_e.inflateInto((byte) -34, var12, var9);
                 }
               }
               stackIn_21_0 = var6;

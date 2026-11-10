@@ -478,7 +478,7 @@ abstract class MenuScreen extends GameScreen {
               if (SecondaryNodeDequeIterator.field_a != null &&
                 null != SecondaryNodeDequeIterator.field_a.matchState &&
                 SecondaryNodeDequeIterator.field_a.field_D &&
-                !SecondaryNodeDequeIterator.field_a.d((byte) 90)) {
+                !SecondaryNodeDequeIterator.field_a.isSpectating((byte) 90)) {
                 ql.field_k.writeCipheredOpcode(65, -2988);
                 ConstrainToRectangleLocomotor.a(param1, -1, (byte) 105);
                 return true;
@@ -488,7 +488,7 @@ abstract class MenuScreen extends GameScreen {
             if (var7 == 33) {
               if (null != SecondaryNodeDequeIterator.field_a) {
                 SecondaryNodeDequeIterator.field_a.b(param1, true, 0);
-                r.a(0, SecondaryNodeDequeIterator.field_a.d((byte) 86));
+                r.a(0, SecondaryNodeDequeIterator.field_a.isSpectating((byte) 86));
               }
               return true;
             }
@@ -532,10 +532,10 @@ abstract class MenuScreen extends GameScreen {
               if (41 == var7 &&
                 var8 == 0) {
                 var4_int = SecondaryNodeDequeIterator.field_a.m(-1);
-                var5 = SecondaryNodeDequeIterator.field_a.h(0, 9);
+                var5 = SecondaryNodeDequeIterator.field_a.getCharacterChoice(0, 9);
                 var6 = SecondaryNodeDequeIterator.field_a.matchState.field_K;
                 TextLayout.a(var4_int, (byte) 101, var6);
-                SecondaryNodeDequeIterator.field_a.b(var5, 50, 0);
+                SecondaryNodeDequeIterator.field_a.setCharacterChoice(var5, 50, 0);
                 SecondaryNodeDequeIterator.field_a.j((byte) -49);
                 SecondaryNodeDequeIterator.field_a.startRound(125);
                 if (3 == var6) {
@@ -628,7 +628,7 @@ abstract class MenuScreen extends GameScreen {
                 return true;
               }
               if (var7 == 40) {
-                RangeOperator.a(true, vk.field_d);
+                RangeOperator.a(true, CourseLayoutFactory.field_d);
                 return true;
               }
               if (var7 == 29) {

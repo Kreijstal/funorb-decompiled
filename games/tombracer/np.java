@@ -202,7 +202,7 @@ final class np extends ka {
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
-        dw var7 = null;
+        TextureMetadata var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -216,7 +216,7 @@ final class np extends ka {
         try {
           var6_int = cla.field_m[qp.c(param1, param4, 117)];
           if (param3 != -1) {
-            var7 = this.field_R.field_c.a((byte) -79, 65535 & param3);
+            var7 = this.field_R.field_c.metadata((byte) -79, 65535 & param3);
             var8 = 255 & var7.field_c;
             if (var8 != 0) {
               if (param4 < 0) {
@@ -1347,10 +1347,10 @@ final class np extends ka {
           if (var10 <= (float)this.field_R.field_Gc) {
             return;
           }
-          eqa.field_a = var5.field_k * var6.field_r + var6.field_k * var5.field_l + var6.field_h * var5.field_s;
+          ChooseRewardFactory.field_a = var5.field_k * var6.field_r + var6.field_k * var5.field_l + var6.field_h * var5.field_s;
           MonsterModel.field_B = var5.field_s * var6.field_o + (var6.field_p * var5.field_k + var5.field_l * var6.field_m) + var5.field_m;
-          var11 = MonsterModel.field_B + eqa.field_a * (float)this.field_eb;
-          var12 = (float)this.field_v * eqa.field_a + MonsterModel.field_B;
+          var11 = MonsterModel.field_B + ChooseRewardFactory.field_a * (float)this.field_eb;
+          var12 = (float)this.field_v * ChooseRewardFactory.field_a + MonsterModel.field_B;
           if (!(var11 > var12)) {
             var14 = (var12 + (float)this.field_M) * (float)this.field_R.field_W;
             var13 = (float)this.field_R.field_W * (var11 - (float)this.field_M);
@@ -2374,7 +2374,7 @@ final class np extends ka {
                 var6 = (float)(this.field_P[var4.field_b] + this.field_P[var4.field_k] + this.field_P[var4.field_m]) * 0.3333333134651184f;
                 var7 = 0.3333333134651184f * (float)(this.field_K[var4.field_b] + this.field_K[var4.field_k] + this.field_K[var4.field_m]);
                 var8 = (float)(this.field_A[var4.field_k] + this.field_A[var4.field_m] + this.field_A[var4.field_b]) * 0.3333333134651184f;
-                var9 = MonsterModel.field_B + (var8 * mu.field_ub + (eqa.field_a * var7 + var6 * is.field_Ab));
+                var9 = MonsterModel.field_B + (var8 * mu.field_ub + (ChooseRewardFactory.field_a * var7 + var6 * is.field_Ab));
                 var10 = WeaponItemBehaviour.field_s + (var6 * AllPlatformsMazeComponent.field_L + VoronoiNoiseOperator.field_u * var7 + bva.field_c * var8);
                 var11 = TextLayout.field_b + (NativeSceneLight.field_q * var8 + (var7 * it.field_a + var6 * Weapon.field_u));
                 var12 = (float)(1.0 / Math.sqrt((double)(var11 * var11 + (var10 * var10 + var9 * var9)))) * (float)var4.field_j;
@@ -2465,10 +2465,10 @@ final class np extends ka {
           if ((float)this.field_R.field_Gc >= var9) {
             return;
           }
-          eqa.field_a = var5.field_h * var4.field_s + (var5.field_r * var4.field_k + var5.field_k * var4.field_l);
+          ChooseRewardFactory.field_a = var5.field_h * var4.field_s + (var5.field_r * var4.field_k + var5.field_k * var4.field_l);
           MonsterModel.field_B = var5.field_m * var4.field_l + var5.field_p * var4.field_k + var4.field_s * var5.field_o + var4.field_m;
-          var10 = MonsterModel.field_B + (float)this.field_eb * eqa.field_a;
-          var11 = eqa.field_a * (float)this.field_v + MonsterModel.field_B;
+          var10 = MonsterModel.field_B + (float)this.field_eb * ChooseRewardFactory.field_a;
+          var11 = ChooseRewardFactory.field_a * (float)this.field_v + MonsterModel.field_B;
           if (!(var10 > var11)) {
             var13 = (float)this.field_R.field_W * (var11 + (float)this.field_M);
             var12 = (var10 - (float)this.field_M) * (float)this.field_R.field_W;
@@ -4302,12 +4302,12 @@ final class np extends ka {
         StringBuilder stackIn_395_1 = null;
         String stackIn_396_2 = null;
         RuntimeException decompiledCaughtException = null;
-        d var7 = null;
+        TextureProvider var7 = null;
         RuntimeException var7_ref = null;
         int[] var8 = null;
         int var9_int = 0;
         long[] var9 = null;
-        dw var10_ref_dw = null;
+        TextureMetadata var10_ref_dw = null;
         int var10 = 0;
         int var11_int = 0;
         pa[] var11 = null;
@@ -4328,7 +4328,7 @@ final class np extends ka {
         int var20 = 0;
         lp var21_ref_lp = null;
         int var21 = 0;
-        dw var22_ref_dw = null;
+        TextureMetadata var22_ref_dw = null;
         int var22_int = 0;
         float var22 = 0.0f;
         int var23_int = 0;
@@ -4434,7 +4434,7 @@ final class np extends ka {
                 2 != param1.field_G[var9_int]) {
                 if (param1.field_r != null &&
                   param1.field_r[var9_int] != -1) {
-                  var10_ref_dw = var7.a((byte) 111, param1.field_r[var9_int] & 65535);
+                  var10_ref_dw = var7.metadata((byte) 111, param1.field_r[var9_int] & 65535);
                   decompiledFrameRemainder0 = (((64 & this.field_u) != 0 &&
                     var10_ref_dw.field_p) || !(var10_ref_dw.field_f));
                 }
@@ -4487,7 +4487,7 @@ final class np extends ka {
                         var18 = 1;
                       }
                       if (var21_ref_lp.field_f != -1) {
-                        var22_ref_dw = var7.a((byte) -92, var21_ref_lp.field_f);
+                        var22_ref_dw = var7.metadata((byte) -92, var21_ref_lp.field_f);
                         if (var22_ref_dw.field_d == 2) {
                           this.field_s = true;
                         }
@@ -4506,14 +4506,14 @@ final class np extends ka {
                   if (param1.field_r != null) {
                     var18 = param1.field_r[var12];
                     if (var18 != -1) {
-                      var13_ref = var7.a((byte) 118, 65535 & var18);
+                      var13_ref = var7.metadata((byte) 118, 65535 & var18);
                       if ((64 & this.field_u) == 0 ||
-                        !((dw) (var13_ref)).field_p) {
-                        var16 = ((dw) (var13_ref)).field_h;
-                        if (0 == ((dw) (var13_ref)).field_s &&
-                          0 != ((dw) (var13_ref)).field_o) {
+                        !((TextureMetadata) (var13_ref)).field_p) {
+                        var16 = ((TextureMetadata) (var13_ref)).field_h;
+                        if (0 == ((TextureMetadata) (var13_ref)).field_s &&
+                          0 != ((TextureMetadata) (var13_ref)).field_o) {
                         }
-                        var17 = ((dw) (var13_ref)).field_a;
+                        var17 = ((TextureMetadata) (var13_ref)).field_a;
                       } else {
                         var18 = -1;
                         var13_ref = null;
@@ -4523,7 +4523,7 @@ final class np extends ka {
                   if ((param1.field_n == null ||
                     param1.field_n[var12] == 0) &&
                     (var13_ref == null ||
-                    ((dw) (var13_ref)).field_d == 0)) {
+                    ((TextureMetadata) (var13_ref)).field_d == 0)) {
                     stackIn_107_0 = 0;
                   } else {
                     stackIn_107_0 = 1;
@@ -4750,7 +4750,7 @@ final class np extends ka {
                   var21 = stackIn_211_0;
                   if (-1 != var21 &&
                     (64 & this.field_u) != 0) {
-                    var22_ref_dw = var7.a((byte) -92, 65535 & var21);
+                    var22_ref_dw = var7.metadata((byte) -92, 65535 & var21);
                     if (var22_ref_dw.field_p) {
                       var21 = -1;
                     }

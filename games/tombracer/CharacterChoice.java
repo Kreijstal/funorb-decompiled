@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wd implements dv {
-    private Player field_d;
+final class CharacterChoice implements dv {
+    private Player player;
     static SpriteData field_c;
     static String field_a;
-    private int field_b;
+    private int characterId;
 
     public static void a(int param0) {
         field_a = null;
         if (param0 != 3) {
           String var2 = (String) null;
-          wd.a((byte) -5, (String) null);
+          CharacterChoice.a((byte) -5, (String) null);
           field_c = null;
           return;
         }
@@ -31,11 +31,11 @@ final class wd implements dv {
             stackIn_2_0 = (us) null;
             return stackIn_2_0;
           }
-          if (gva.field_b.b(127) &&
-            !param1.equals(gva.field_b.a((byte) 106))) {
-            gva.field_b = ai.a((byte) 120, param1);
+          if (DefaultRoomObjectRenderer.field_b.b(127) &&
+            !param1.equals(DefaultRoomObjectRenderer.field_b.a((byte) 106))) {
+            DefaultRoomObjectRenderer.field_b = ai.a((byte) 120, param1);
           }
-          stackIn_7_0 = gva.field_b;
+          stackIn_7_0 = DefaultRoomObjectRenderer.field_b;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -166,12 +166,12 @@ final class wd implements dv {
         }
     }
 
-    final int b(int param0) {
+    final int getCharacter(int param0) {
         if (param0 <= 52) {
-          wd.a(72);
-          return this.field_b;
+          CharacterChoice.a(72);
+          return this.characterId;
         }
-        return this.field_b;
+        return this.characterId;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7) {
@@ -212,7 +212,7 @@ final class wd implements dv {
           }
           if (param3 <= 49) {
             var29 = (int[]) null;
-            wd.a(127, 113, -99, -33, (int[]) null, 112, 62, 15);
+            CharacterChoice.a(127, 113, -99, -33, (int[]) null, 112, 62, 15);
           }
           if (param7 > 0 &&
             !cla.isPowerOfTwoOrZero(9181, param7)) {
@@ -291,9 +291,9 @@ final class wd implements dv {
 
     public final void decode(BitPacketBuffer param0, boolean param1) {
         try {
-          this.field_b = uma.readSignedBits(5, param0, -26803);
+          this.characterId = uma.readSignedBits(5, param0, -26803);
           if (param1) {
-            this.field_d = (Player) null;
+            this.player = (Player) null;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wd.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -340,49 +340,49 @@ final class wd implements dv {
         }
     }
 
-    final void a(int param0, Player param1) {
+    final void setPlayer(int param0, Player param1) {
         if (param0 != 11008) {
           return;
         }
         try {
-          this.field_d = param1;
-          this.a(this.field_b, (byte) 37);
+          this.player = param1;
+          this.setCharacter(this.characterId, (byte) 37);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wd.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    wd() {
+    CharacterChoice() {
     }
 
-    final void a(int param0, byte param1) {
-        this.field_b = param0;
+    final void setCharacter(int param0, byte param1) {
+        this.characterId = param0;
         if (param1 != 37) {
-          wd.a(-67, 85, 11, -69, 5, (byte) -38, -52);
-          if (null == this.field_d) {
+          CharacterChoice.a(-67, 85, 11, -69, 5, (byte) -38, -52);
+          if (null == this.player) {
             return;
           }
-          if (this.field_d.getAnimator((byte) -84) != null) {
-            this.field_d.getAnimator((byte) -115).a(param0, 1);
-            this.field_d.getAnimator((byte) -82).a(26, 0, true);
+          if (this.player.getAnimator((byte) -84) != null) {
+            this.player.getAnimator((byte) -115).a(param0, 1);
+            this.player.getAnimator((byte) -82).a(26, 0, true);
             return;
           }
           return;
         }
-        if (null == this.field_d) {
+        if (null == this.player) {
           return;
         }
-        if (this.field_d.getAnimator((byte) -84) == null) {
+        if (this.player.getAnimator((byte) -84) == null) {
           return;
         }
-        this.field_d.getAnimator((byte) -115).a(param0, 1);
-        this.field_d.getAnimator((byte) -82).a(26, 0, true);
+        this.player.getAnimator((byte) -115).a(param0, 1);
+        this.player.getAnimator((byte) -82).a(26, 0, true);
     }
 
-    wd(Player param0) {
+    CharacterChoice(Player param0) {
         try {
-          this.field_d = param0;
-          this.field_b = -1;
+          this.player = param0;
+          this.characterId = -1;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

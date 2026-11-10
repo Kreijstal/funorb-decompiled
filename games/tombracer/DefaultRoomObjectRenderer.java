@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gva implements mb {
+final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
     private int[] field_a;
     static us field_b;
 
-    public final void a(iq param0, byte param1, Particle param2) {
+    public final void drawParticle(iq param0, byte param1, Particle param2) {
         int stackIn_85_0 = 0;
         RuntimeException stackIn_136_0 = null;
         StringBuilder stackIn_136_1 = null;
@@ -304,7 +304,7 @@ final class gva implements mb {
         }
     }
 
-    public final void a(iq param0, boolean param1, Projectile param2) {
+    public final void drawProjectile(iq param0, boolean param1, Projectile param2) {
         Projectile stackIn_36_0 = null;
         boolean stackIn_37_1 = false;
         Projectile stackIn_46_0 = null;
@@ -449,7 +449,7 @@ final class gva implements mb {
         int var14Lifetime2;
         var19 = TombRacer.field_G ? 1 : 0;
         try {
-          var7_int = param1.field_h;
+          var7_int = param1.tileType;
           if (var7_int != 0) {
             var8 = 1;
             var9 = this.a(param5, var7_int, param4, -1 + param3, 109) ? 1 : 0;
@@ -614,7 +614,7 @@ final class gva implements mb {
         }
     }
 
-    public final void a(int param0, Room param1) {
+    public final void prepareRoom(int param0, Room param1) {
         RuntimeException runtimeException = null;
         TileGrid var3 = null;
         int var4 = 0;
@@ -632,21 +632,21 @@ final class gva implements mb {
             return;
           }
           var4 = 0;
-          while (var4 < var3.a(-119)) {
+          while (var4 < var3.getColumnCount(-119)) {
             if (var7 != 0) {
               return;
             }
             var5 = 0;
-            while (var3.c(40) > var5) {
-              var6 = var3.a(110, var4, var5);
-              if (null == var6.b((byte) -100)) {
-                var6.a(3, new mba());
+            while (var3.getRowCount(40) > var5) {
+              var6 = var3.getCell(110, var4, var5);
+              if (null == var6.getRenderable((byte) -100)) {
+                var6.setRenderable(3, new mba());
               }
               var5++;
             }
             var4++;
           }
-          this.a(param1, var3.a(109) - 1, 0, 2048, 0, var3.c(77) - 1);
+          this.a(param1, var3.getColumnCount(109) - 1, 0, 2048, 0, var3.getRowCount(77) - 1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -672,7 +672,7 @@ final class gva implements mb {
           ofa.field_D = param0;
           jsa.a(false, 12);
           if (param1 >= -24) {
-            gva.a(-102);
+            DefaultRoomObjectRenderer.a(-102);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -702,7 +702,7 @@ final class gva implements mb {
             return true;
           }
           var6_int = 55 / ((35 - param4) / 37);
-          stackIn_9_0 = (~param2.a(55, param0, param3).field_h == ~param1);
+          stackIn_9_0 = (~param2.getCell(55, param0, param3).tileType == ~param1);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -776,11 +776,11 @@ final class gva implements mb {
         }
     }
 
-    public gva() {
+    public DefaultRoomObjectRenderer() {
         this.field_a = new int[3];
     }
 
-    public final void a(Puddle param0, int param1, iq param2) {
+    public final void drawPuddle(Puddle param0, int param1, iq param2) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -794,7 +794,7 @@ final class gva implements mb {
         int var7 = 0;
         try {
           if (param1 != 95) {
-            gva.a(-15);
+            DefaultRoomObjectRenderer.a(-15);
           }
           var4_int = param0.getSize(1);
           var5 = param0.getKind(-77);
@@ -859,12 +859,12 @@ final class gva implements mb {
               }
               var9 = param2;
               while (param5 >= var9) {
-                var10 = var7.a(104, var8, var9);
-                stackOut_9_0 = var10.b((byte) -100) instanceof mba;
+                var10 = var7.getCell(104, var8, var9);
+                stackOut_9_0 = var10.getRenderable((byte) -100) instanceof mba;
                 stackIn_5_0 = stackOut_9_0 ? 1 : 0;
                 stackIn_10_0 = stackOut_9_0;
                 if (stackIn_10_0) {
-                  this.a(17767, var10, (mba) (var10.b((byte) -128)), var9, var7, var8);
+                  this.a(17767, var10, (mba) (var10.getRenderable((byte) -128)), var9, var7, var8);
                 }
                 var9++;
               }

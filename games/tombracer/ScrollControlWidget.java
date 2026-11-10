@@ -222,18 +222,18 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
           }
           var7 = (String) null;
           dqa.a(var5, 0, (String) null, RoomLighting.field_d, 127);
-          pq.field_g.field_N = RoomLighting.field_d - (RoomLighting.field_d >> 1 & 8355711) + ((VortexBehaviour.field_t.field_N & 16711422) >> 1);
-          pq.field_g.field_ab = (8355711 & VortexBehaviour.field_t.field_ab >> 1) + (-((RoomLighting.field_d & 16711423) >> 1) + RoomLighting.field_d);
-          pq.field_g.field_gb = ((16711423 & VortexBehaviour.field_t.field_gb) >> 1) + (RoomLighting.field_d - (RoomLighting.field_d >> 1 & 8355711));
+          CharacterChoiceFactory.field_g.field_N = RoomLighting.field_d - (RoomLighting.field_d >> 1 & 8355711) + ((VortexBehaviour.field_t.field_N & 16711422) >> 1);
+          CharacterChoiceFactory.field_g.field_ab = (8355711 & VortexBehaviour.field_t.field_ab >> 1) + (-((RoomLighting.field_d & 16711423) >> 1) + RoomLighting.field_d);
+          CharacterChoiceFactory.field_g.field_gb = ((16711423 & VortexBehaviour.field_t.field_gb) >> 1) + (RoomLighting.field_d - (RoomLighting.field_d >> 1 & 8355711));
           rma.field_b = ComponentMount.field_b;
-          RenderableNode.field_i = pq.field_g;
+          RenderableNode.field_i = CharacterChoiceFactory.field_g;
           SimpleMoveLocomotor.field_s = new jea((long)param1, param4);
           lra.field_e = new jea(0L, param0);
           Projectile.field_r = new jea(0L, (jea) null);
           dh.field_e = new jea(0L, param3);
-          pq.field_g = new jea(0L, param2);
-          pq.field_g.field_H = PlatformBehaviour.field_s;
-          dh.field_e.b(-123, pq.field_g);
+          CharacterChoiceFactory.field_g = new jea(0L, param2);
+          CharacterChoiceFactory.field_g.field_H = PlatformBehaviour.field_s;
+          dh.field_e.b(-123, CharacterChoiceFactory.field_g);
           ComponentMount.field_b = new jea(0L, rma.field_b);
           dh.field_e.b(-128, ComponentMount.field_b);
           lra.field_d = new jea(0L, VortexBehaviour.field_t, fw.field_a);

@@ -83,7 +83,7 @@ final class lk extends IntrusiveNode implements qn, Renderable, noa {
         RuntimeException var3 = null;
         try {
           if (!this.f((byte) -1)) {
-            dea.field_a.a(param1, 15, this);
+            dea.roomObjectRenderer.a(param1, 15, this);
           }
           if (param0 <= 103) {
             this.field_g = false;

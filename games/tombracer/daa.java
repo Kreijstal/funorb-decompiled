@@ -22,18 +22,18 @@ final class daa {
         if (var4 != -1) {
           return;
         }
-        this.field_a.field_y[param2].a(param1, (byte) 37);
+        this.field_a.characterChoices[param2].setCharacter(param1, (byte) 37);
         if (null != this.field_b) {
           this.field_b.a(new fm(64, 0, 0, 0), -58);
         }
-        if (this.field_a.a(-112)) {
+        if (this.field_a.allCharactersChosen(-112)) {
           this.field_e = true;
           for (var5 = 0; var5 < this.field_a.players.length; var5++) {
             for (var6 = 0; var6 < this.field_a.players.length; var6++) {
               if (~var5 == ~var6) {
-                this.field_a.statistics.a(var5, (byte) -52, this.field_a.field_y[var5].b(80));
+                this.field_a.statistics.a(var5, (byte) -52, this.field_a.characterChoices[var5].getCharacter(80));
               } else {
-                this.field_a.statistics.a(var5, this.field_a.field_y[var6].b(71), true);
+                this.field_a.statistics.a(var5, this.field_a.characterChoices[var6].getCharacter(71), true);
               }
             }
           }
@@ -44,7 +44,7 @@ final class daa {
         if (param0 != 0) {
           field_f = (String) null;
         }
-        return this.field_a.field_y[param1].b(100);
+        return this.field_a.characterChoices[param1].getCharacter(100);
     }
 
     final void a(int param0) {

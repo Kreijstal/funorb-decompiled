@@ -104,7 +104,7 @@ final class TutorialHints {
             else {
               if (500 < this.field_a) {
                 this.field_j = true;
-                this.queueHint(wd.field_a, (ms) null, 25, param0 ^ -9867);
+                this.queueHint(CharacterChoice.field_a, (ms) null, 25, param0 ^ -9867);
               }
             }
           }

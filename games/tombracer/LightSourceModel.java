@@ -31,7 +31,7 @@ final class LightSourceModel extends TrapModel {
         if (this.part == null) {
           return;
         }
-        if (this.part.a((byte) 87)) {
+        if (this.part.isStopped((byte) 87)) {
           this.k(24642);
           return;
         }

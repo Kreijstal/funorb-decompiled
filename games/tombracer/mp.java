@@ -218,9 +218,9 @@ final class mp {
           MatchProtocol.field_i.b(-126, ne.field_d);
           RotaterMountComponent.field_K = new jea(0L, param1);
           MatchProtocol.field_i.b(-124, RotaterMountComponent.field_K);
-          pq.field_g = new jea(0L, param5);
-          pq.field_g.field_H = PlatformBehaviour.field_s;
-          RotaterMountComponent.field_K.b(param6 - 124, pq.field_g);
+          CharacterChoiceFactory.field_g = new jea(0L, param5);
+          CharacterChoiceFactory.field_g.field_H = PlatformBehaviour.field_s;
+          RotaterMountComponent.field_K.b(param6 - 124, CharacterChoiceFactory.field_g);
           RotaterMountComponent.field_K.a(param6 ^ -10966);
           ComponentMount.field_b = new jea(0L, (jea) null);
           ComponentMount.field_b.field_w = var16;

@@ -119,7 +119,7 @@ final class dta {
             var12 = var9.players[param2];
             var13 = var9.simulations[param2];
             var14 = var13.tick;
-            var15 = var9.field_c.field_b[param2];
+            var15 = var9.standings.positions[param2];
             stackIn_12_0 = (var11 != param2) ? 0 : 1;
             var16 = stackIn_12_0;
             if (var9.playersRemaining > 1) {
@@ -138,7 +138,7 @@ final class dta {
                 RoomEffectTraps.a(0, -70, param6 - 12, param4.getPlayerName(param2, false).toUpperCase(), 25 + (param0 + var8_int), eda.field_f, wga.field_a[param2]);
               }
             }
-            if (param4.d((byte) 118)) {
+            if (param4.isSpectating((byte) 118)) {
               return;
             }
             if (var16 != 0) {
@@ -355,7 +355,7 @@ final class dta {
               if (0 >= param4.roundDeadlineTick) {
                 return;
               }
-              var42 = dw.field_j;
+              var42 = TextureMetadata.field_j;
               var31Lifetime3 = (int)(128.0 - Math.sin((double)bva.currentTimeMillis((byte) -107) / 512.0) * 128.0);
               NotLoggedInMenu.a(var31Lifetime3, (byte) -73, var31Lifetime3, 1, SingleChildWidget.field_v, var42.toUpperCase(), 40 + (SwitchLinkList.b(0) >> 1) + (SwitchLinkList.b(0) >> 2), 11903361, param1 + param0 >> 1);
               var32Lifetime2 = param4.roundDeadlineTick - param4.matchState.getSimulationTick((byte) 115, param2);

@@ -91,10 +91,10 @@ final class cra {
             ResourceArchive var6 = (ResourceArchive) null;
             cra.a((ResourceArchive) null, (ResourceArchive) null, -57, true, (ResourceArchive) null);
           }
-          gva.field_b = ai.a((byte) 121, "");
-          gva.field_b.a(-71, false);
+          DefaultRoomObjectRenderer.field_b = ai.a((byte) 121, "");
+          DefaultRoomObjectRenderer.field_b.a(-71, false);
           fha.a(true, param1, param0, param4);
-          pq.b(117);
+          CharacterChoiceFactory.b(117);
           LegacyOpenGlTexture.field_a = fta.field_c;
           wt.field_d = fta.field_c;
         } catch (RuntimeException runtimeException) {

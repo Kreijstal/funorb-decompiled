@@ -9,7 +9,7 @@ abstract class MatchPhase {
     MatchState matchState;
     private boolean field_i;
     MatchScreen screen;
-    static d field_l;
+    static TextureProvider field_l;
     static int field_j;
     private MenuEntry field_k;
     MatchProtocol protocol;

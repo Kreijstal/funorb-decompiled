@@ -37,7 +37,7 @@ final class ila {
         if (ara.field_xb == 0) {
           return null;
         }
-        return wea.field_d[-1 + ara.field_xb];
+        return CourseLayout.field_d[-1 + ara.field_xb];
     }
 
     final void a(byte param0, boolean param1, boolean param2) {
@@ -78,7 +78,7 @@ final class ila {
           var7 = var10;
           while (var6 < 10) {
             if (0 <= -var6 + (ara.field_xb - 1)) {
-              var8_ref_gqa = wea.field_d[-1 + ara.field_xb - var6];
+              var8_ref_gqa = CourseLayout.field_d[-1 + ara.field_xb - var6];
               if (var8_ref_gqa != this.field_a) {
                 if (var8_ref_gqa.field_f != null &&
                   var8_ref_gqa.field_m) {

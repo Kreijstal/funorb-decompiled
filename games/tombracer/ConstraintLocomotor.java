@@ -9,10 +9,10 @@ abstract class ConstraintLocomotor extends Locomotor {
 
     final int g(byte param0) {
         if (param0 == 30) {
-          return this.a(false) + this.field_q;
+          return this.getTrapInitialLocalY(false) + this.field_q;
         }
         this.field_q = -20;
-        return this.a(false) + this.field_q;
+        return this.getTrapInitialLocalY(false) + this.field_q;
     }
 
     final void mirror(byte param0) {
@@ -81,10 +81,10 @@ abstract class ConstraintLocomotor extends Locomotor {
 
     final int f(int param0) {
         if (param0 == 10) {
-          return this.d((byte) -52) + this.field_o;
+          return this.getTrapInitialLocalX((byte) -52) + this.field_o;
         }
         this.f(-109);
-        return this.d((byte) -52) + this.field_o;
+        return this.getTrapInitialLocalX((byte) -52) + this.field_o;
     }
 
     public static void releaseStatics(int param0) {
@@ -96,9 +96,9 @@ abstract class ConstraintLocomotor extends Locomotor {
     final int e(byte param0) {
         if (param0 != -43) {
           this.field_o = 9;
-          return this.b(true);
+          return this.getTrapInitialAngle(true);
         }
-        return this.b(true);
+        return this.getTrapInitialAngle(true);
     }
 
     static {

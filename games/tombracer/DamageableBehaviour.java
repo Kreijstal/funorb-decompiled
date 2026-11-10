@@ -151,7 +151,7 @@ final class DamageableBehaviour extends Behaviour {
           return;
         }
         this.field_v = this.field_r;
-        this.getTargetTrap(110).n(this.field_t, -127);
+        this.getTargetTrap(110).setFreezeTicks(this.field_t, -127);
     }
 
     final int onAreaEffect(int param0, int param1, Effect param2, int param3, byte param4, int param5) {

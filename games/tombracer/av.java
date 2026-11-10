@@ -39,13 +39,13 @@ final class av {
         int var9_int = 495;
         int var10 = 5;
         dh.field_e.a(var9_int - 10, param7, -23776, var10, 5);
-        pq.field_g.a(dh.field_e.field_G - ComponentMount.field_b.field_G, param7, -23776, 0, 0);
+        CharacterChoiceFactory.field_g.a(dh.field_e.field_G - ComponentMount.field_b.field_G, param7, -23776, 0, 0);
         if (param3 != -5327) {
           return;
         }
         try {
           var10 = var10 + (param7 + param5);
-          ComponentMount.field_b.a(ComponentMount.field_b.field_G, param7, -23776, 0, pq.field_g.field_G);
+          ComponentMount.field_b.a(ComponentMount.field_b.field_G, param7, -23776, 0, CharacterChoiceFactory.field_g.field_G);
           lra.field_d.a(lra.field_d.b((byte) 69), param6, param3 - 18449, var10, 5);
           var11 = qpa.field_b.b((byte) 69);
           qpa.field_b.a(var11, param6, -23776, var10, var9_int - 5 - var11);
@@ -62,7 +62,7 @@ final class av {
 
     final static void a(int param0, PlatformTaskDispatcher param1, int param2, String param3, int param4, int param5, int param6, int param7, int param8) {
         try {
-          wea.field_a = param4;
+          CourseLayout.field_a = param4;
           int var9_int = -25 / ((44 - param2) / 33);
           pu.field_b = param0;
           wk.field_n = param5;

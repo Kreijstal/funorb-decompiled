@@ -83,7 +83,7 @@ final class fa {
             if (var6 == 2) {
               var4 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(88, TrackMountComponent.field_G, new String[]{wp.field_a});
               var8 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(111, li.field_a, new String[]{var3});
-              var7 = ComponentMount.field_b.field_G + (pq.field_g.field_G - 485) + PlatformBehaviour.field_s.stringWidth(var8) - PlatformBehaviour.field_s.stringWidth(var4);
+              var7 = ComponentMount.field_b.field_G + (CharacterChoiceFactory.field_g.field_G - 485) + PlatformBehaviour.field_s.stringWidth(var8) - PlatformBehaviour.field_s.stringWidth(var4);
               if (0 > var7) {
                 var7 = 0;
               }
@@ -130,16 +130,16 @@ final class fa {
               }
               var9 = PlatformBehaviour.field_s.stringWidth(var4);
               if (!RoomComponentFactory.a(27)) {
-                if (pq.field_g.field_o &&
-                  var9 > AgeValidator.field_j - pq.field_g.field_q) {
+                if (CharacterChoiceFactory.field_g.field_o &&
+                  var9 > AgeValidator.field_j - CharacterChoiceFactory.field_g.field_q) {
                   if (fua.field_g) {
                     var1 = "Broken!";
                   } else {
                     var1 = PerlinNoise2D.field_o;
                   }
                 }
-                if (pq.field_g.field_y != 0 &&
-                  pq.field_g.field_p < var9 &&
+                if (CharacterChoiceFactory.field_g.field_y != 0 &&
+                  CharacterChoiceFactory.field_g.field_p < var9 &&
                   !fua.field_g) {
                   ContextMenu.e((byte) 117);
                 }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eqa implements os {
+final class ChooseRewardFactory implements BitDecodableFactory {
     static float field_a;
 
     final static boolean a(int param0, boolean param1, int param2) {
@@ -176,19 +176,19 @@ final class eqa implements os {
         return true;
     }
 
-    public final mva[] a(int param0, int param1) {
+    public final BitDecodable[] createArray(int param0, int param1) {
         if (param1 != -26955) {
-          this.a((byte) -119);
-          return (mva[]) ((Object) new CommonChooseReward[param0]);
+          this.create((byte) -119);
+          return (BitDecodable[]) ((Object) new CommonChooseReward[param0]);
         }
-        return (mva[]) ((Object) new CommonChooseReward[param0]);
+        return (BitDecodable[]) ((Object) new CommonChooseReward[param0]);
     }
 
-    public final mva a(byte param0) {
+    public final BitDecodable create(byte param0) {
         if (param0 > -17) {
-          return (mva) null;
+          return (BitDecodable) null;
         }
-        return (mva) ((Object) new CommonChooseReward());
+        return (BitDecodable) ((Object) new CommonChooseReward());
     }
 
     static {

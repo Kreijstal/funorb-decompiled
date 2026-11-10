@@ -190,7 +190,7 @@ final class MatchProtocol {
           if (param1 != 1) {
             return;
           }
-          if (!param0.d((byte) 94)) {
+          if (!param0.isSpectating((byte) 94)) {
             var4_int = this.field_h.size((byte) -16);
             stackIn_7_1 = !(var4_int < 15);
             this.field_f = stackIn_7_1;
@@ -233,7 +233,7 @@ final class MatchProtocol {
             }
             var4 = this.d(param1 - 17);
           }
-          if (!param0.d((byte) 106)) {
+          if (!param0.isSpectating((byte) 106)) {
             if (var8.simulations[this.field_d].isFinished(param1 - 1)) {
               this.a(var8, (byte) -73);
               return;
