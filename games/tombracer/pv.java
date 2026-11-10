@@ -26,16 +26,16 @@ final class pv extends ci {
           }
           var4_int = param2;
           if (var4_int == 0) {
-            stackIn_11_1 = (param1.h(param0 ^ 148) == 1);
+            stackIn_11_1 = (param1.readUnsignedByte(param0 ^ 148) == 1);
             this.field_o = stackIn_11_1;
           } else {
             if (1 != var4_int) {
               if (var4_int == 2) {
-                stackIn_19_1 = (param1.h(255) == 1);
+                stackIn_19_1 = (param1.readUnsignedByte(255) == 1);
                 this.field_g = stackIn_19_1;
               }
             } else {
-              stackIn_15_1 = (1 == param1.h(255));
+              stackIn_15_1 = (1 == param1.readUnsignedByte(255));
               this.field_n = stackIn_15_1;
             }
           }

@@ -362,30 +362,30 @@ final class nw extends ci {
           }
           var4_int = param2;
           if (0 == var4_int) {
-            dupTemp$0 = param1.h(param0 ^ 148);
+            dupTemp$0 = param1.readUnsignedByte(param0 ^ 148);
             this.field_m = dupTemp$0;
             this.field_t = dupTemp$0;
           } else {
             if (var4_int == 1) {
-              this.field_n = param1.h(param0 + 148);
+              this.field_n = param1.readUnsignedByte(param0 + 148);
             } else {
               if (var4_int == 2) {
-                this.field_r = param1.d(122);
+                this.field_r = param1.readUnsignedShort(122);
               } else {
                 if (var4_int != 3) {
                   if (var4_int != 4) {
                     if (5 != var4_int) {
                       if (var4_int == 6) {
-                        this.field_m = param1.h(255);
+                        this.field_m = param1.readUnsignedByte(255);
                       }
                     } else {
-                      this.field_t = param1.h(255);
+                      this.field_t = param1.readUnsignedByte(255);
                     }
                   } else {
-                    this.field_p = param1.h(255);
+                    this.field_p = param1.readUnsignedByte(255);
                   }
                 } else {
-                  this.field_o = param1.h(255);
+                  this.field_o = param1.readUnsignedByte(255);
                 }
               }
             }

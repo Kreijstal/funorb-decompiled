@@ -31,7 +31,7 @@ final class koa {
         }
         for (var3_int = 0; this.field_f.length > var3_int; var3_int++) {
           if (null != this.field_f[var3_int]) {
-            if (this.field_f[var3_int].n(param0 + 31986).b(59)) {
+            if (this.field_f[var3_int].n(param0 + 31986).isDud(59)) {
               var2++;
             }
           } else {
@@ -44,7 +44,7 @@ final class koa {
             var4 = 0;
             for (var5 = 0; var5 < this.field_f.length; var5++) {
               if (null != this.field_f[var5] &&
-                !this.field_f[var5].n(31974).b(59)) {
+                !this.field_f[var5].n(31974).isDud(59)) {
                 incrementValue$0 = var4;
                 var4++;
                 var3[incrementValue$0] = this.field_f[var5];

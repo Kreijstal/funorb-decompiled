@@ -193,7 +193,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 112, "mu_entered_other_game");
                 if (null != var2) {
-                  hj.field_e = jaa.a((byte) 126, var2);
+                  MazeGrid.field_e = jaa.a((byte) 126, var2);
                 }
                 var2 = dn.a((byte) 119, "mu_game_is_full");
                 if (var2 != null) {
@@ -597,7 +597,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 108, "status_join");
                 if (var2 != null) {
-                  hj.field_b = jaa.a((byte) 57, var2);
+                  MazeGrid.field_b = jaa.a((byte) 57, var2);
                 }
                 var2 = dn.a((byte) -11, "status_private");
                 if (null != var2) {

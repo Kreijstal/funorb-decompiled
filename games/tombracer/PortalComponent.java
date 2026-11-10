@@ -59,8 +59,8 @@ final class PortalComponent extends kna {
         }
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
-        super.a(param0, param1);
+    final void encode(boolean param0, BitPacketBuffer param1) {
+        super.encode(param0, param1);
         if (param0) {
           return;
         }

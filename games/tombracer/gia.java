@@ -60,7 +60,7 @@ final class gia extends ci {
             return;
           }
           if (0 == param2) {
-            this.field_n = param1.d(122);
+            this.field_n = param1.readUnsignedShort(122);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

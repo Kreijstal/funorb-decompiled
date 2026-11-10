@@ -112,7 +112,7 @@ final class FacePointLocomotor extends Locomotor {
         }
     }
 
-    final int c(int param0) {
+    final int getTypeId(int param0) {
         if (param0 != 1) {
           return 68;
         }
@@ -136,8 +136,8 @@ final class FacePointLocomotor extends Locomotor {
         }
     }
 
-    final void a(BitPacketBuffer param0, byte param1) {
-        super.a(param0, (byte) -85);
+    final void encode(BitPacketBuffer param0, byte param1) {
+        super.encode(param0, (byte) -85);
         param0.writeBits((byte) 2, dqa.a(true, this.field_p >> 16, 12), 12);
         param0.writeBits((byte) -126, dqa.a(true, this.field_q >> 16, 12), 12);
         if (param1 > -78) {
@@ -169,7 +169,7 @@ final class FacePointLocomotor extends Locomotor {
         var9 = TombRacer.field_G ? 1 : 0;
         var2 = this.trap.s(25745) - this.d((byte) -57);
         var5 = -32 / ((-69 - param0) / 42);
-        var3 = this.trap.e(false) - this.a(false);
+        var3 = this.trap.getLocalY(false) - this.a(false);
         if (this.field_o) {
           var6 = -this.field_q + var3 >> 10;
           var4 = -this.field_p + var2 >> 10;

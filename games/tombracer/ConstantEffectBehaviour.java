@@ -61,9 +61,9 @@ final class ConstantEffectBehaviour extends Behaviour {
         }
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           this.field_r.a(param1, (byte) 125);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fra.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -80,9 +80,9 @@ final class ConstantEffectBehaviour extends Behaviour {
         }
     }
 
-    final int a(boolean param0) {
+    final int getTypeId(boolean param0) {
         if (param0) {
-          this.a(false);
+          this.getTypeId(false);
           return 0;
         }
         return 0;

@@ -133,7 +133,7 @@ final class gh extends ToolkitSprite {
           if (toa.field_j) {
             return;
           }
-          var2_int = param0.h(255);
+          var2_int = param0.readUnsignedByte(255);
           f.field_e = new BitSet(var2_int);
           param0.beginBitAccess((byte) -89);
           for (var3 = 0; var3 < var2_int; var3++) {

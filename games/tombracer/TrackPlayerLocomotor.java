@@ -29,7 +29,7 @@ final class TrackPlayerLocomotor extends Locomotor {
         var4 = 78 % ((-69 - param0) / 42);
         this.trap.a(this.field_o, 59);
         var3 = this.field_o.field_f - this.trap.s(25745);
-        var5 = this.field_o.field_d - this.trap.e(false);
+        var5 = this.field_o.field_d - this.trap.getLocalY(false);
         var6 = 0;
         var7 = 0;
         var8 = ua.a(var3, -120);
@@ -118,8 +118,8 @@ final class TrackPlayerLocomotor extends Locomotor {
         try {
           var2_int = jba.field_j;
           var3 = sta.field_B;
-          var4 = kua.field_i.field_H.a(param1, 500);
-          var5 = 6 + kua.field_i.field_H.c(param1, 500);
+          var4 = Corpse.field_i.field_H.a(param1, 500);
+          var5 = 6 + Corpse.field_i.field_H.c(param1, 500);
           var6 = di.field_a * var4 + 2;
           var7 = bt.a((byte) -8, var5, 12, var2_int);
           var8 = hsa.a(20, var6, var3, (byte) -107);
@@ -128,7 +128,7 @@ final class TrackPlayerLocomotor extends Locomotor {
           if (param0 > -63) {
             field_s = (af) null;
           }
-          kua.field_i.field_H.a(param1, var7 + 3, -kua.field_i.field_H.field_w + (hsa.field_a + 1) + var8, 500, 1000, 0, -1, 0, 0, di.field_a);
+          Corpse.field_i.field_H.a(param1, var7 + 3, -Corpse.field_i.field_H.field_w + (hsa.field_a + 1) + var8, 500, 1000, 0, -1, 0, 0, di.field_a);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hia.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -146,7 +146,7 @@ final class TrackPlayerLocomotor extends Locomotor {
     final void a(boolean param0, int param1) {
         if (param0) {
           BitPacketBuffer var4 = (BitPacketBuffer) null;
-          this.a((BitPacketBuffer) null, (byte) -118);
+          this.encode((BitPacketBuffer) null, (byte) -118);
           this.field_q = param1;
           return;
         }
@@ -166,9 +166,9 @@ final class TrackPlayerLocomotor extends Locomotor {
         }
     }
 
-    final void a(BitPacketBuffer param0, byte param1) {
+    final void encode(BitPacketBuffer param0, byte param1) {
         try {
-          super.a(param0, (byte) -108);
+          super.encode(param0, (byte) -108);
           param0.writeBits((byte) -127, !this.field_t ? 0 : 1, 1);
           param0.writeBits((byte) -126, !this.field_r ? 0 : 1, 1);
           if (param1 > -78) {
@@ -181,7 +181,7 @@ final class TrackPlayerLocomotor extends Locomotor {
         }
     }
 
-    final int c(int param0) {
+    final int getTypeId(int param0) {
         if (param0 != 1) {
           return -110;
         }

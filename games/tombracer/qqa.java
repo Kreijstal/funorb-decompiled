@@ -60,7 +60,7 @@ final class qqa extends hha {
                 break scanLoop1;
               }
               if (stackIn_16_0 != param0.position &&
-                param0.c((byte) 106) == param1[var5]) {
+                param0.readByte((byte) 106) == param1[var5]) {
                 var5++;
                 continue;
               } else {

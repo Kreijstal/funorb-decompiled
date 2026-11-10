@@ -57,7 +57,7 @@ final class ena extends DualLinkNode {
           var29 = this.field_m[var3];
           var15 = new PacketBuffer(var29);
           var15.position = 1;
-          var6 = var15.d(124);
+          var6 = var15.readUnsignedShort(124);
           var7 = jma.field_j;
           synchronized (var7) {
             var2 = var2 != 0 & jma.field_j.a(param0 ^ -15228, var6) ? 1 : 0;
@@ -79,7 +79,7 @@ final class ena extends DualLinkNode {
           var31 = this.field_m[var5];
           var18 = new PacketBuffer(var31);
           var18.position = 1;
-          var8 = var18.d(param0 + 18);
+          var8 = var18.readUnsignedShort(param0 + 18);
           var9 = null;
           var10 = (nk) (var19.first(-80));
           while (var10 != null) {

@@ -67,11 +67,11 @@ final class pc {
             field_g = (String) null;
           }
           var3.writeCipheredOpcode(param1, -2988);
-          var3.i(5, 0);
-          var3.i(0, 0);
-          var3.f(-1477662136, param2.field_n);
-          var3.i(param2.field_j, 0);
-          var3.i(param2.field_i, 0);
+          var3.writeByte(5, 0);
+          var3.writeByte(0, 0);
+          var3.writeShort(-1477662136, param2.field_n);
+          var3.writeByte(param2.field_j, 0);
+          var3.writeByte(param2.field_i, 0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pc.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

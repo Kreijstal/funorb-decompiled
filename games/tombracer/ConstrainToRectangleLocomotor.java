@@ -6,7 +6,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
     private int field_s;
     static jpa field_t;
 
-    final int c(int param0) {
+    final int getTypeId(int param0) {
         if (param0 != 1) {
           this.b(31);
         }
@@ -277,7 +277,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
           var16 = new PacketBuffer(param1);
           var17 = var16;
           var17.position = -2 + param1.length;
-          fa.field_b = var17.d(123);
+          fa.field_b = var17.readUnsignedShort(123);
           pg.field_C = new int[fa.field_b];
           ck.field_c = new byte[fa.field_b][];
           ak.field_p = new int[fa.field_b];
@@ -286,25 +286,25 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
           pb.field_l = new byte[fa.field_b][];
           qqa.field_n = new boolean[fa.field_b];
           var17.position = -7 + param1.length - fa.field_b * 8;
-          ika.field_a = var17.d(126);
-          kba.field_s = var17.d(param0 ^ 126);
-          var3 = 1 + (var17.h(255) & 255);
+          ika.field_a = var17.readUnsignedShort(126);
+          kba.field_s = var17.readUnsignedShort(param0 ^ 126);
+          var3 = 1 + (var17.readUnsignedByte(255) & 255);
           for (var4 = 0; fa.field_b > var4; var4++) {
-            ak.field_p[var4] = var16.d(121);
+            ak.field_p[var4] = var16.readUnsignedShort(121);
           }
           for (var4Lifetime1 = param0; var4Lifetime1 < fa.field_b; var4Lifetime1++) {
-            pg.field_C[var4Lifetime1] = var17.d(127);
+            pg.field_C[var4Lifetime1] = var17.readUnsignedShort(127);
           }
           for (var4Lifetime2 = 0; fa.field_b > var4Lifetime2; var4Lifetime2++) {
-            mq.field_b[var4Lifetime2] = var17.d(kha.b(param0, 122));
+            mq.field_b[var4Lifetime2] = var17.readUnsignedShort(kha.b(param0, 122));
           }
           for (var4Lifetime3 = 0; fa.field_b > var4Lifetime3; var4Lifetime3++) {
-            iga.field_m[var4Lifetime3] = var17.d(122);
+            iga.field_m[var4Lifetime3] = var17.readUnsignedShort(122);
           }
           var17.position = -(var3 * 3) + 3 + (-(8 * fa.field_b) + (-7 + param1.length));
           mga.field_g = new int[var3];
           for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
-            mga.field_g[var4Lifetime4] = var17.a(-32768);
+            mga.field_g[var4Lifetime4] = var17.readUnsignedMedium(-32768);
             if (mga.field_g[var4Lifetime4] == 0) {
               mga.field_g[var4Lifetime4] = 1;
             }
@@ -323,14 +323,14 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
             var9 = var19;
             pb.field_l[var4Lifetime5] = var21;
             var10 = 0;
-            var11 = var17.h(param0 + 255);
+            var11 = var17.readUnsignedByte(param0 + 255);
             if ((var11 & 1) == 0) {
               for (var12 = 0; var12 < var7; var12++) {
-                var8[var12] = var17.c((byte) 119);
+                var8[var12] = var17.readByte((byte) 119);
               }
               if ((var11 & 2) != 0) {
                 for (var12 = 0; var7 > var12; var12++) {
-                  dupTemp$1 = var17.c((byte) 87);
+                  dupTemp$1 = var17.readByte((byte) 87);
                   var9[var12] = dupTemp$1;
                   var13 = dupTemp$1;
                   stackIn_31_0 = var10;
@@ -345,13 +345,13 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
             } else {
               for (var12 = 0; var12 < var5; var12++) {
                 for (var13 = 0; var6 > var13; var13++) {
-                  var8[var12 + var13 * var5] = var17.c((byte) 103);
+                  var8[var12 + var13 * var5] = var17.readByte((byte) 103);
                 }
               }
               if ((2 & var11) != 0) {
                 for (var12 = 0; var5 > var12; var12++) {
                   for (var13 = 0; var13 < var6; var13++) {
-                    dupTemp$0 = var17.c((byte) 47);
+                    dupTemp$0 = var17.readByte((byte) 47);
                     var9[var12 + var5 * var13] = dupTemp$0;
                     var14 = dupTemp$0;
                     stackIn_46_0 = var10;
@@ -384,7 +384,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
 
     final void b(int param0) {
         int var2 = this.trap.s(25745) - this.f(10);
-        int var3 = this.trap.e(false) - this.g((byte) 30);
+        int var3 = this.trap.getLocalY(false) - this.g((byte) 30);
         int var4 = 0;
         if (var2 > this.field_u) {
           var4 = -(var2 - this.field_u);
@@ -435,9 +435,9 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
         return param1;
     }
 
-    final void a(BitPacketBuffer param0, byte param1) {
+    final void encode(BitPacketBuffer param0, byte param1) {
         try {
-          super.a(param0, (byte) -106);
+          super.encode(param0, (byte) -106);
           param0.writeBits((byte) -126, this.field_u >> 16, 10);
           if (param1 >= -78) {
             ConstrainToRectangleLocomotor.a(true, -95, (byte) -90);

@@ -54,7 +54,7 @@ final class MatchState implements dv {
         }
         this.simulations[param1].tick = param3;
         var6.a((byte) 88, param4);
-        var6.i((byte) -65);
+        var6.restart((byte) -65);
         if (param2 != 1) {
           this.field_k = 37;
         }
@@ -476,7 +476,7 @@ final class MatchState implements dv {
         tu var7 = this.field_d.a(this, -25077);
         tu var3 = var7;
         this.simulations[param1] = new PlayerSimulation(var7, this.players[param1], this.field_O, this.field_a);
-        for (var5 = 0; this.simulations[param1].l(-106) > var5; var5++) {
+        for (var5 = 0; this.simulations[param1].getRoomCount(-106) > var5; var5++) {
           this.simulations[param1].a(-28088, var5, this.field_u[this.field_A].a(1024, var5, this.field_C, this.simulations[param1]));
         }
     }
@@ -542,7 +542,7 @@ final class MatchState implements dv {
           if (param0 <= 14) {
             this.b((byte) -115);
           }
-          var3 = this.simulations[param1.a(3)];
+          var3 = this.simulations[param1.getCourse(3)];
           var3.getObserver(9262).a(var3, param1, false);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ff.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -577,7 +577,7 @@ final class MatchState implements dv {
         for (var2Lifetime1 = 0; var2Lifetime1 < this.simulations.length; var2Lifetime1++) {
           var3 = this.simulations[var2Lifetime1].getFirstRoom(-88);
           if (var3 != null) {
-            var3.i((byte) -89);
+            var3.restart((byte) -89);
           }
         }
         this.field_c.a(false);

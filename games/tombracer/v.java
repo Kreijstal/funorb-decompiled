@@ -205,7 +205,7 @@ final class v {
               stackIn_12_3 = var8.c((byte) 115, this.field_d);
               if (var5_ref_la != null) {
                 stackIn_13_0 = this;
-                stackIn_13_4 = var5_ref_la.q((byte) -82) + 1;
+                stackIn_13_4 = var5_ref_la.getId((byte) -82) + 1;
               } else {
                 stackIn_13_0 = this;
                 stackIn_13_4 = 0;
@@ -429,7 +429,7 @@ final class v {
         try {
           while (!this.field_a.b((byte) -26)) {
             var3 = param0.getPlayerRoom(0, this.field_d);
-            this.a(-92, param0.field_A, 0, var3 == null ? 0 : var3.q((byte) -82) + 1, 0);
+            this.a(-92, param0.field_A, 0, var3 == null ? 0 : var3.getId((byte) -82) + 1, 0);
           }
           int var3_int = 110 % ((param1 - 27) / 62);
         } catch (RuntimeException runtimeException) {

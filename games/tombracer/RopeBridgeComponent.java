@@ -50,9 +50,9 @@ final class RopeBridgeComponent extends kna {
         return false;
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           param1.writeBits((byte) -125, this.field_H, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "lda.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -80,7 +80,7 @@ final class RopeBridgeComponent extends kna {
         try {
           var13 = new Trap(param2, param0);
           var4 = var13;
-          if (this.field_m != 46) {
+          if (this.typeId != 46) {
             var13.b((byte) -11, this.field_k, 4194304);
           } else {
             var13.b((byte) -11, 4194304, this.field_l);
@@ -90,7 +90,7 @@ final class RopeBridgeComponent extends kna {
           var13.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = new Trap(param2, param0);
           var7 = new Trap(param2, param0);
-          if (this.field_m == 46) {
+          if (this.typeId == 46) {
             var6.b((byte) -11, 524288, this.field_l);
             var6.b(437453352, -1835008, 0);
             var7.b((byte) -11, 524288, this.field_l);

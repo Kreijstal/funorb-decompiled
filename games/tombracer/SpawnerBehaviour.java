@@ -39,11 +39,11 @@ final class SpawnerBehaviour extends Behaviour {
         field_n = (IntrusiveDeque) null;
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           this.field_o.a(15637, param1);
-          this.field_q.a(param1, (byte) 52);
+          this.field_q.encode(param1, (byte) 52);
           param1.writeBits((byte) 121, this.field_p, 12);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wma.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -185,7 +185,7 @@ final class SpawnerBehaviour extends Behaviour {
         }
     }
 
-    final int a(boolean param0) {
+    final int getTypeId(boolean param0) {
         if (param0) {
           return 118;
         }

@@ -75,7 +75,7 @@ final class FuseBehaviour extends Behaviour {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 25940) {
-            this.a(false);
+            this.getTypeId(false);
           }
           stackIn_3_0 = this.a(param2, (byte) -115);
           return stackIn_3_0;
@@ -107,7 +107,7 @@ final class FuseBehaviour extends Behaviour {
         return param0;
     }
 
-    final int a(boolean param0) {
+    final int getTypeId(boolean param0) {
         if (param0) {
           pc var3 = (pc) null;
           this.a(-90, (Effect) null, (pc) null);
@@ -183,9 +183,9 @@ final class FuseBehaviour extends Behaviour {
         this.c(false);
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           this.field_x.a(param1, (byte) -118);
           this.field_q.a(param1, (byte) -117);
           param1.writeBits((byte) -11, this.field_u, 8);

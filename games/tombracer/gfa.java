@@ -9,9 +9,9 @@ final class gfa extends GameEvent {
     static String field_i;
     static String field_m;
 
-    final void a(BitPacketBuffer param0, int param1) {
+    final void encode(BitPacketBuffer param0, int param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           param0.writeBits((byte) -128, this.field_n, 4);
           param0.writeBits((byte) -125, this.field_k, 6);
         } catch (RuntimeException runtimeException) {
@@ -45,7 +45,7 @@ final class gfa extends GameEvent {
         return false;
     }
 
-    final int b(byte param0) {
+    final int getTypeId(byte param0) {
         if (param0 != 121) {
           this.field_k = -8;
           return 0;

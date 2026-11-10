@@ -62,10 +62,10 @@ final class hv extends ci {
           }
           var4_int = param2;
           if (var4_int == 0) {
-            this.field_p = param1.d(125);
+            this.field_p = param1.readUnsignedShort(125);
           } else {
             if (var4_int == 1) {
-              this.field_m = param1.d(124);
+              this.field_m = param1.readUnsignedShort(124);
             }
           }
           return;

@@ -157,13 +157,13 @@ final class TripBeamComponent extends SwitchComponent {
         return (param0 & 52) != 0 ? true : false;
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
           if (param0) {
             BitPacketBuffer var4 = (BitPacketBuffer) null;
-            this.a(false, (BitPacketBuffer) null);
+            this.encode(false, (BitPacketBuffer) null);
           }
-          super.a(param0, param1);
+          super.encode(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "er.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -13,9 +13,9 @@ final class PlatformComponent extends kna {
         }
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           param1.writeBits((byte) -128, this.field_G, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ln.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -136,7 +136,7 @@ final class PlatformComponent extends kna {
           if (param1 != 3) {
             this.t(49);
           }
-          if (60 != this.field_m) {
+          if (60 != this.typeId) {
             var7 = (ce) (var6.a(17, param1 ^ 93));
             var7.b(2, (byte) 23);
             var4.a(var5, (byte) 124, var7);

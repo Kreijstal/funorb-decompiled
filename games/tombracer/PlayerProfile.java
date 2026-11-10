@@ -86,7 +86,7 @@ final class PlayerProfile {
         int var5Lifetime3;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          var3_int = param0.h(255);
+          var3_int = param0.readUnsignedByte(255);
           if (var3_int < 16) {
             return;
           }
@@ -174,7 +174,7 @@ final class PlayerProfile {
         int var4Lifetime3;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          param1.i(16, 0);
+          param1.writeByte(16, 0);
           param1.beginBitWrite(8);
           StaticCrusherComponent.a(this.field_l, 126, param1);
           var3_int = -1 + this.roomsComplete.size();

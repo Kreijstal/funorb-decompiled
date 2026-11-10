@@ -269,7 +269,7 @@ final class sra implements eb {
               return stackIn_11_0;
             }
             var9.endBitWrite(-1826190686);
-            var9.b(-var3 + var9.position, (byte) 109);
+            var9.backpatchShortLength(-var3 + var9.position, (byte) 109);
             var9.position = 0;
             var4_ref = null;
             try {
@@ -284,7 +284,7 @@ final class sra implements eb {
             var11 = new BitPacketBuffer(var15);
             var12 = new esa();
             var7 = -101 % ((-14 - param1) / 49);
-            var6 = var11.h(255);
+            var6 = var11.readUnsignedByte(255);
             dga.a(var11, 0);
             var12.a(var11, var6, (byte) 39);
             mq.field_e = var12.a(79);

@@ -13,9 +13,9 @@ final class RotateLocomotor extends Locomotor {
         return param1;
     }
 
-    final void a(BitPacketBuffer param0, byte param1) {
+    final void encode(BitPacketBuffer param0, byte param1) {
         try {
-          super.a(param0, (byte) -109);
+          super.encode(param0, (byte) -109);
           if (param1 >= -78) {
             this.b(-41);
           }
@@ -63,7 +63,7 @@ final class RotateLocomotor extends Locomotor {
         }
     }
 
-    final int c(int param0) {
+    final int getTypeId(int param0) {
         if (param0 != 1) {
           this.a(40, 31);
           return 6;

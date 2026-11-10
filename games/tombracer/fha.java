@@ -61,7 +61,7 @@ final class fha {
             var14 = var6[var9];
             hja[] var10 = var14;
             for (var11_int = 0; var11_int < var14.length; var11_int++) {
-              var14[var11_int] = kua.a(21938, var19[var11_int], var5[var9]);
+              var14[var11_int] = Corpse.a(21938, var19[var11_int], var5[var9]);
             }
           }
           var9Lifetime1 = var17.field_q;

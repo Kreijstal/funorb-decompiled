@@ -16,15 +16,15 @@ final class wj {
           var5.writeCipheredOpcode(param1, -2988);
           var5.position = var5.position + 1;
           var4 = var5.position;
-          var5.i(1, 0);
-          var5.i(param0.field_j, 0);
-          var5.i(param0.field_o, 0);
-          var5.a(param0.field_k, (byte) -42);
-          var5.a(param0.field_h, (byte) -20);
-          var5.a(param0.field_m, (byte) -123);
-          var5.a(param0.field_n, (byte) 92);
-          var5.g(var4, 64);
-          var5.d(var5.position - var4, (byte) 16);
+          var5.writeByte(1, 0);
+          var5.writeByte(param0.field_j, 0);
+          var5.writeByte(param0.field_o, 0);
+          var5.writeInt(param0.field_k, (byte) -42);
+          var5.writeInt(param0.field_h, (byte) -20);
+          var5.writeInt(param0.field_m, (byte) -123);
+          var5.writeInt(param0.field_n, (byte) 92);
+          var5.appendCrc32(var4, 64);
+          var5.backpatchByteLength(var5.position - var4, (byte) 16);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

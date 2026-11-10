@@ -43,13 +43,13 @@ final class hw {
             return;
           }
           if (var7 == 1) {
-            var9.d(var6, (byte) -111);
+            var9.backpatchByteLength(var6, (byte) -111);
             return;
           }
           if (var7 != 2) {
             return;
           }
-          var9.b(var6, (byte) -105);
+          var9.backpatchShortLength(var6, (byte) -105);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -34,10 +34,10 @@ final class bma extends ci {
         if (param0 < 23) {
           field_t = (int[]) null;
         }
-        var2.e(-16);
-        var2.e(-118);
-        var2.e(112);
-        var2.e(-29);
+        var2.readInt(-16);
+        var2.readInt(-118);
+        var2.readInt(112);
+        var2.readInt(-29);
         var1.unlink(71);
     }
 
@@ -54,34 +54,34 @@ final class bma extends ci {
           var4_int = param2;
           if (0 != var4_int) {
             if (var4_int == 1) {
-              this.field_n = param1.h(255);
+              this.field_n = param1.readUnsignedByte(255);
             } else {
               if (2 != var4_int) {
                 if (var4_int == 3) {
-                  this.field_C = param1.d(123);
+                  this.field_C = param1.readUnsignedShort(123);
                 } else {
                   if (var4_int == 4) {
-                    this.field_z = param1.d(param0 + 18);
+                    this.field_z = param1.readUnsignedShort(param0 + 18);
                   } else {
                     if (5 == var4_int) {
-                      this.field_A = param1.d(param0 + 17);
+                      this.field_A = param1.readUnsignedShort(param0 + 17);
                     } else {
                       if (var4_int == 6) {
-                        this.field_q = param1.d(121);
+                        this.field_q = param1.readUnsignedShort(121);
                       } else {
                         if (var4_int == 7) {
-                          this.field_x = param1.d(param0 ^ 23);
+                          this.field_x = param1.readUnsignedShort(param0 ^ 23);
                         }
                       }
                     }
                   }
                 }
               } else {
-                this.field_D = param1.d(param0 + 17);
+                this.field_D = param1.readUnsignedShort(param0 + 17);
               }
             }
           } else {
-            this.field_o = param1.h(255);
+            this.field_o = param1.readUnsignedByte(255);
           }
           if (param0 != 107) {
             bma.d((byte) -52);

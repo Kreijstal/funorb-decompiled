@@ -148,7 +148,7 @@ final class DarknessBehaviour extends Behaviour {
         return var7;
     }
 
-    final int a(boolean param0) {
+    final int getTypeId(boolean param0) {
         if (param0) {
           this.k(2);
         }
@@ -238,13 +238,13 @@ final class DarknessBehaviour extends Behaviour {
         }
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           param1.writeBits((byte) 59, this.field_n >> 16, 10);
           if (param0) {
             BitPacketBuffer var4 = (BitPacketBuffer) null;
-            this.a(true, (BitPacketBuffer) null);
+            this.encode(true, (BitPacketBuffer) null);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ana.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -306,7 +306,7 @@ final class DarknessBehaviour extends Behaviour {
         var2 = var6;
         if (param0 != 5418) {
           var5 = (BitPacketBuffer) null;
-          this.a(true, (BitPacketBuffer) null);
+          this.encode(true, (BitPacketBuffer) null);
         }
         for (var3_int = -1 + var8.length; var3_int >= 0; var3_int--) {
           if (var8[var3_int] < this.field_p) {

@@ -77,12 +77,12 @@ final class SimpleConditionBehaviour extends Behaviour {
         field_p = null;
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         if (param0) {
           return;
         }
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           param1.writeBits((byte) -127, this.field_t, 4);
           this.field_n.a(this.h((byte) 119), (byte) 88, param1);
         } catch (RuntimeException runtimeException) {
@@ -146,7 +146,7 @@ final class SimpleConditionBehaviour extends Behaviour {
           return param0;
         }
         BitPacketBuffer var4 = (BitPacketBuffer) null;
-        this.a(false, (BitPacketBuffer) null);
+        this.encode(false, (BitPacketBuffer) null);
         param0 = upa.a(this.field_s, param0, (byte) -53);
         return param0;
     }
@@ -156,7 +156,7 @@ final class SimpleConditionBehaviour extends Behaviour {
         this.field_n.a((byte) 48, this.h((byte) 116));
     }
 
-    final int a(boolean param0) {
+    final int getTypeId(boolean param0) {
         if (param0) {
           this.field_n = (jma) null;
           return 13;

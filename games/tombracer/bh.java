@@ -222,7 +222,7 @@ final class bh extends ela {
               var12.b(-125, var12.field_hc);
               var12.field_dc = new jea(0L, PressureSwitchBehaviour.field_p);
               var12.b(-122, var12.field_dc);
-              var12.field_Rb = new jea(0L, kua.field_i);
+              var12.field_Rb = new jea(0L, Corpse.field_i);
               var12.b(param1 ^ -127, var12.field_Rb);
               var12.a(-10966);
               var12.field_Nb = new jea(0L, bua.field_g);
@@ -312,7 +312,7 @@ final class bh extends ela {
                 } else {
                   if (var12.field_Yb && (var12.field_Bb ||
                     var12.field_gc)) {
-                    var12.field_Nb.field_r = hj.field_b;
+                    var12.field_Nb.field_r = MazeGrid.field_b;
                     decompiledFrameRemainder1 = false;
                   }
                   else {
@@ -334,7 +334,7 @@ final class bh extends ela {
                   decompiledFrameRemainder1 = false;
                 }
                 else {
-                  var12.field_Nb.field_r = hj.field_b;
+                  var12.field_Nb.field_r = MazeGrid.field_b;
                 }
               }
               if (null == var12.field_Nb.field_r) {

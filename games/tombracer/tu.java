@@ -22,7 +22,7 @@ class tu extends SimulationObserver {
           if (param1 <= 47) {
             this.field_c = (IntrusiveDeque) null;
           }
-          stackIn_6_0 = (!this.field_f.b(param2, 0)) && (kq.a(-44, param0.q((byte) -82)).field_d);
+          stackIn_6_0 = (!this.field_f.b(param2, 0)) && (kq.a(-44, param0.getId((byte) -82)).field_d);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -313,7 +313,7 @@ class tu extends SimulationObserver {
         int var9Lifetime1;
         var11 = TombRacer.field_G ? 1 : 0;
         try {
-          var4_int = kq.a(105, param1.q((byte) -82)).field_h;
+          var4_int = kq.a(105, param1.getId((byte) -82)).field_h;
           var4_int = var4_int * 2;
           var5 = param1.p((byte) 83);
           if (param2) {
@@ -327,12 +327,12 @@ class tu extends SimulationObserver {
           param0.h(0, param0.F(-7991) + (var7 + var6));
           var8 = param0.A(0);
           this.field_f.field_F[var8] = (long)var5;
-          this.field_f.field_g[var8] = param1.q((byte) -82);
+          this.field_f.field_g[var8] = param1.getId((byte) -82);
           if (!this.field_f.k(-25319) &&
             !this.field_f.j(-1878) &&
             this.field_f.field_x != null &&
             !this.a(param1, (byte) 74, var8)) {
-            var9 = ll.a(param1.q((byte) -82), 0);
+            var9 = ll.a(param1.getId((byte) -82), 0);
             if (var9 >= 0) {
               this.field_f.field_x[var8].set(var9);
             }

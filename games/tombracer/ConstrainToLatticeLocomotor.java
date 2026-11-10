@@ -46,16 +46,16 @@ final class ConstrainToLatticeLocomotor extends ConstraintLocomotor {
         }
     }
 
-    final void a(BitPacketBuffer param0, byte param1) {
+    final void encode(BitPacketBuffer param0, byte param1) {
         try {
-          super.a(param0, (byte) -123);
+          super.encode(param0, (byte) -123);
           param0.writeBits((byte) -128, this.field_t >> 16, 10);
           param0.writeBits((byte) -128, this.field_y >> 16, 10);
           param0.writeBits((byte) -127, this.field_v, 7);
           param0.writeBits((byte) -127, this.field_w, 7);
           if (param1 >= -78) {
             BitPacketBuffer var4 = (BitPacketBuffer) null;
-            this.a((BitPacketBuffer) null, (byte) -48);
+            this.encode((BitPacketBuffer) null, (byte) -48);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "rsa.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -90,7 +90,7 @@ final class ConstrainToLatticeLocomotor extends ConstraintLocomotor {
         int var13;
         var13 = TombRacer.field_G ? 1 : 0;
         var2 = this.trap.s(25745) - this.f(10);
-        var3 = this.trap.e(false) - this.g((byte) 30);
+        var3 = this.trap.getLocalY(false) - this.g((byte) 30);
         if (var2 == 0 &&
           0 == var3) {
           return;
@@ -327,10 +327,10 @@ final class ConstrainToLatticeLocomotor extends ConstraintLocomotor {
         field_u = null;
     }
 
-    final int c(int param0) {
+    final int getTypeId(int param0) {
         if (param0 != 1) {
           BitPacketBuffer var3 = (BitPacketBuffer) null;
-          this.a((BitPacketBuffer) null, (byte) 14);
+          this.encode((BitPacketBuffer) null, (byte) 14);
         }
         return 12;
     }

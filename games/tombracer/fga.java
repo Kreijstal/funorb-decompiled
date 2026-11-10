@@ -124,14 +124,14 @@ final class fga implements sia {
         RuntimeException var4 = null;
         try {
           ql.field_k.writeCipheredOpcode(77, -2988);
-          ql.field_k.i(param2, 0);
+          ql.field_k.writeByte(param2, 0);
           stackIn_3_0 = ql.field_k;
           if (!param1) {
             stackIn_4_1 = 0;
           } else {
             stackIn_4_1 = 1;
           }
-          ((BitPacketBuffer) (Object) stackIn_3_0).i(stackIn_4_1, 0);
+          ((BitPacketBuffer) (Object) stackIn_3_0).writeByte(stackIn_4_1, 0);
           var4_int = -5 % ((param0 + 45) / 58);
           this.d(32415);
           return;

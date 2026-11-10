@@ -643,10 +643,10 @@ final class f {
             }
             if (param2 != this.field_f[var4_int].o((byte) -48)) {
               param0.writeBits((byte) 73, 0, 1);
-              param0.writeBits((byte) 111, this.field_f[var4_int].n(31974).a((byte) 62), 8);
+              param0.writeBits((byte) 111, this.field_f[var4_int].n(31974).getId((byte) 62), 8);
             } else {
               param0.writeBits((byte) -127, 1, 1);
-              param0.writeBits((byte) -126, this.field_f[var4_int].i((byte) 84).a((byte) 115), 8);
+              param0.writeBits((byte) -126, this.field_f[var4_int].i((byte) 84).getId((byte) 115), 8);
             }
             var4_int++;
           }

@@ -140,7 +140,7 @@ final class SimpleBlockBehaviour extends Behaviour {
           if (param2 == 1) {
             return true;
           }
-          this.a(true);
+          this.getTypeId(true);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -187,7 +187,7 @@ final class SimpleBlockBehaviour extends Behaviour {
         }
     }
 
-    final int a(boolean param0) {
+    final int getTypeId(boolean param0) {
         if (param0) {
           Trap var3 = (Trap) null;
           this.attachToTrap(true, (Trap) null);
@@ -280,9 +280,9 @@ final class SimpleBlockBehaviour extends Behaviour {
         this.a(-117, 44, 70, 106, 36, -110, (ffa) null);
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           param1.writeBits((byte) 56, this.field_q ? 1 : 0, 1);
           param1.writeBits((byte) -125, this.field_u ? 1 : 0, 1);
           param1.writeBits((byte) 69, this.field_t ? 1 : 0, 1);

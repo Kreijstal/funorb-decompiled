@@ -259,14 +259,14 @@ final class wsa extends ci {
           }
           var4_int = param2;
           if (var4_int == 0) {
-            this.field_o = param1.b(false);
+            this.field_o = param1.readShort(false);
           } else {
             if (var4_int != 1) {
               if (var4_int == 2) {
-                this.field_u = (param1.c((byte) 44) << 12) / 100;
+                this.field_u = (param1.readByte((byte) 44) << 12) / 100;
               }
             } else {
-              this.field_s = (param1.c((byte) 36) << 12) / 100;
+              this.field_s = (param1.readByte((byte) 36) << 12) / 100;
             }
           }
           return;

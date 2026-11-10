@@ -213,7 +213,7 @@ final class fja extends qra {
               this.field_h.f(-12963, var3)) {
               var16 = this.field_h.field_k.players[var3];
               var5 = var16.getRoom((byte) 87);
-              var6Lifetime1Lifetime2 = var5.q((byte) -82);
+              var6Lifetime1Lifetime2 = var5.getId((byte) -82);
               if (this.field_c.field_K != 3) {
                 if (this.field_c.i(0) != -1) {
                   var7 = doa.b(var6Lifetime1Lifetime2, 0, this.field_c.i(0));
@@ -246,7 +246,7 @@ final class fja extends qra {
                 }
               }
               ts.a(0, -73, var9, var12Lifetime2, var8Lifetime1, kn.field_p, var11);
-              var12Lifetime3 = "Member Only: " + kq.a(-112, var5.q((byte) -82)).field_d;
+              var12Lifetime3 = "Member Only: " + kq.a(-112, var5.getId((byte) -82)).field_d;
               ts.a(0, -80, 16 + var9, var12Lifetime3, var8Lifetime1, kn.field_p, 16777215);
               var13 = var16.L(2158);
               if (var13 > 0) {
@@ -516,55 +516,55 @@ final class fja extends qra {
               if (param2) {
                 var9 = var9 | 1;
               }
-              jg.field_a.a(PlatformBehaviour.field_p.nextInt(), (byte) 91);
-              jg.field_a.a(PlatformBehaviour.field_p.nextInt(), (byte) 92);
-              jg.field_a.a(var14, (byte) 0);
-              jg.field_a.a(var8, (byte) 0);
+              jg.field_a.writeInt(PlatformBehaviour.field_p.nextInt(), (byte) 91);
+              jg.field_a.writeInt(PlatformBehaviour.field_p.nextInt(), (byte) 92);
+              jg.field_a.writeVersionedString(var14, (byte) 0);
+              jg.field_a.writeVersionedString(var8, (byte) 0);
               var15 = (CharSequence) ((Object) param1);
-              jg.field_a.a(fl.a((byte) 126, var15), (byte) 0);
-              jg.field_a.f(-1477662136, param6);
-              jg.field_a.i(param3, 0);
-              jg.field_a.i(var9, 0);
-              ql.field_k.i(18, 0);
+              jg.field_a.writeVersionedString(fl.a((byte) 126, var15), (byte) 0);
+              jg.field_a.writeShort(-1477662136, param6);
+              jg.field_a.writeByte(param3, 0);
+              jg.field_a.writeByte(var9, 0);
+              ql.field_k.writeByte(18, 0);
               ql.field_k.position = ql.field_k.position + 2;
               var10 = ql.field_k.position;
               var11_ref_StringLifetime4 = qla.a(0, di.a(62));
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
-              ql.field_k.a(var11_ref_StringLifetime4, false);
+              ql.field_k.writeString(var11_ref_StringLifetime4, false);
               bna.a(oca.field_a, false, PooledObject.field_f, ql.field_k, jg.field_a);
-              ql.field_k.b(ql.field_k.position - var10, (byte) -35);
+              ql.field_k.backpatchShortLength(ql.field_k.position - var10, (byte) -35);
             } else {
               jg.field_a.position = 0;
-              jg.field_a.a(PlatformBehaviour.field_p.nextInt(), (byte) -106);
-              jg.field_a.a(PlatformBehaviour.field_p.nextInt(), (byte) 92);
+              jg.field_a.writeInt(PlatformBehaviour.field_p.nextInt(), (byte) -106);
+              jg.field_a.writeInt(PlatformBehaviour.field_p.nextInt(), (byte) 92);
               stackIn_14_0 = jg.field_a;
               if (!param4.a((byte) 29)) {
                 stackIn_15_1 = "";
               } else {
                 stackIn_15_1 = var14;
               }
-              ((PacketBuffer) (Object) stackIn_14_0).a(stackIn_15_1, (byte) 0);
+              ((PacketBuffer) (Object) stackIn_14_0).writeVersionedString(stackIn_15_1, (byte) 0);
               stackIn_17_0 = jg.field_a;
               if (param0.a((byte) 29)) {
                 stackIn_18_1 = var8;
               } else {
                 stackIn_18_1 = "";
               }
-              ((PacketBuffer) (Object) stackIn_17_0).a(stackIn_18_1, (byte) 0);
-              ql.field_k.i(16, 0);
+              ((PacketBuffer) (Object) stackIn_17_0).writeVersionedString(stackIn_18_1, (byte) 0);
+              ql.field_k.writeByte(16, 0);
               ql.field_k.position = ql.field_k.position + 1;
               var9 = ql.field_k.position;
               bna.a(oca.field_a, false, PooledObject.field_f, ql.field_k, jg.field_a);
-              ql.field_k.d(ql.field_k.position - var9, (byte) -115);
+              ql.field_k.backpatchByteLength(ql.field_k.position - var9, (byte) -115);
             }
             bl.a(-1, -1);
             km.field_p = Player.field_p;
           }
           if (Player.field_p == km.field_p &&
             ama.a(1, -1)) {
-            var9Lifetime1 = vc.field_q.h(255);
+            var9Lifetime1 = vc.field_q.readUnsignedByte(255);
             vc.field_q.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
@@ -593,12 +593,12 @@ final class fja extends qra {
           if (km.field_p == ne.field_c) {
             var9Lifetime2 = 2;
             if (ama.a(var9Lifetime2, -1)) {
-              var10Lifetime1 = vc.field_q.d(124);
+              var10Lifetime1 = vc.field_q.readUnsignedShort(124);
               vc.field_q.position = 0;
               if (ama.a(var10Lifetime1, -1)) {
                 var11 = PressureSwitchBehaviour.field_s.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  PressureSwitchBehaviour.field_s[var12] = vc.field_q.f(121);
+                  PressureSwitchBehaviour.field_s[var12] = vc.field_q.readVersionedString(121);
                 }
                 dea.a(60);
                 PushableBlockMazeComponent.field_L = false;
@@ -610,12 +610,12 @@ final class fja extends qra {
           if (pe.field_m == km.field_p &&
             cla.g(0)) {
             if (oka.field_z == 255) {
-              var9_ref_String = vc.field_q.c(-28690);
+              var9_ref_String = vc.field_q.readNullableString(-28690);
               if (var9_ref_String != null) {
                 mp.a(var9_ref_String, di.a(82), -21407);
               }
             } else {
-              io.field_b = vc.field_q.e((byte) -76);
+              io.field_b = vc.field_q.readString((byte) -76);
             }
             dea.a(60);
             PushableBlockMazeComponent.field_L = false;

@@ -204,7 +204,7 @@ final class vh {
         var12 = TombRacer.field_G ? 1 : 0;
         try {
           var14 = vc.field_q;
-          var2 = var14.h(255);
+          var2 = var14.readUnsignedByte(255);
           var3 = (upa) (ina.field_d.first(param0 ^ 100));
           while (var3 != null) {
             if (var3.field_n != var2) {
@@ -217,7 +217,7 @@ final class vh {
             dea.a(60);
             return;
           }
-          var4 = var14.h(255);
+          var4 = var14.readUnsignedByte(255);
           if (param0 != -44) {
             vh.a((byte) 81);
           }
@@ -225,7 +225,7 @@ final class vh {
             bra.field_M[0] = fna.field_k;
             var5 = var3.field_k;
             for (var6_int = 1; var6_int < var4; var6_int++) {
-              bra.field_M[var6_int] = var14.e((byte) -76);
+              bra.field_M[var6_int] = var14.readString((byte) -76);
             }
             dc.a(var4, var5, (byte) 47);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {

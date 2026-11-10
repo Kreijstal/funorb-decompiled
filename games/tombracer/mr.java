@@ -486,8 +486,8 @@ final class mr extends b implements tma, tsa, mia {
         }
     }
 
-    final static roa a(byte param0) {
-        roa var1 = new roa();
+    final static Weapon a(byte param0) {
+        Weapon var1 = new Weapon();
         if (param0 > 123) {
           var1.field_f = new Effect(1, 3);
           var1.field_f.b(1, 12);

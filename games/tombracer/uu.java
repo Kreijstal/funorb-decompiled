@@ -54,25 +54,25 @@ final class uu implements GamePacket {
             hf.field_d = new PacketBuffer(var7_int);
           }
           hf.field_d.position = 0;
-          hf.field_d.a(param6, param2, param0, 61);
-          hf.field_d.b(716148936, var7_int);
-          hf.field_d.a((byte) -48, var13);
+          hf.field_d.writeBytes(param6, param2, param0, 61);
+          hf.field_d.padZerosTo(716148936, var7_int);
+          hf.field_d.encryptXtea((byte) -48, var13);
           if (ola.field_Bb == null ||
             !(100 <= ola.field_Bb.payload.length)) {
             ola.field_Bb = new PacketBuffer(100);
           }
           ola.field_Bb.position = 0;
-          ola.field_Bb.i(10, param1 + 81);
+          ola.field_Bb.writeByte(10, param1 + 81);
           var11 = 0;
           var9Lifetime1 = var11;
           while (var11 < 4) {
-            ola.field_Bb.a(var13[var11], (byte) 78);
+            ola.field_Bb.writeInt(var13[var11], (byte) 78);
             var11++;
           }
-          ola.field_Bb.f(-1477662136, param0);
-          ola.field_Bb.a(102, param3, param5);
-          param4.a(0, ola.field_Bb.payload, ola.field_Bb.position, 96);
-          param4.a(0, hf.field_d.payload, hf.field_d.position, param1 ^ -43);
+          ola.field_Bb.writeShort(-1477662136, param0);
+          ola.field_Bb.rsaEncryptContents(102, param3, param5);
+          param4.writeBytes(0, ola.field_Bb.payload, ola.field_Bb.position, 96);
+          param4.writeBytes(0, hf.field_d.payload, hf.field_d.position, param1 ^ -43);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

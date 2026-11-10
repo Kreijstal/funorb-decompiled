@@ -100,18 +100,18 @@ final class oia implements gs {
           var6.writeCipheredOpcode(param0, -2988);
           var6.position = var6.position + 1;
           var4 = var6.position;
-          var6.i(1, 0);
+          var6.writeByte(1, 0);
           if (null != param1.field_j) {
-            var6.i(param1.field_j.length, 0);
-            var6.a(0, param1.field_j, param1.field_j.length, 105);
+            var6.writeByte(param1.field_j.length, 0);
+            var6.writeBytes(0, param1.field_j, param1.field_j.length, 105);
           } else {
-            var6.i(0, 0);
+            var6.writeByte(0, 0);
           }
           int var5 = 72 / ((30 - param2) / 34);
-          var6.g(var4, 64);
+          var6.appendCrc32(var4, 64);
           var6.position = var6.position - 4;
-          param1.field_l = var6.e(115);
-          var6.d(-var4 + var6.position, (byte) -110);
+          param1.field_l = var6.readInt(115);
+          var6.backpatchByteLength(-var4 + var6.position, (byte) -110);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "oia.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

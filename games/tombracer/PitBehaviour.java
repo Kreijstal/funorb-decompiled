@@ -6,7 +6,7 @@ final class PitBehaviour extends Behaviour {
     private int field_q;
     private boolean field_s;
     private int field_u;
-    private hj field_t;
+    private MazeGrid field_t;
     private int field_o;
     private boolean field_r;
     private boolean field_p;
@@ -34,7 +34,7 @@ final class PitBehaviour extends Behaviour {
 
     final void k(int param0) {
         if (param0 != 5418) {
-          this.a(true);
+          this.getTypeId(true);
         }
     }
 
@@ -136,19 +136,19 @@ final class PitBehaviour extends Behaviour {
           var13Lifetime1 = param2.b(-124);
           for (var15 = var9Lifetime1; var11Lifetime1 >= var15; var15++) {
             for (var16 = var10Lifetime1; var16 <= var12Lifetime1; var16++) {
-              if (this.field_t.a(var15, var16, (byte) -128)) {
-                var14 = this.field_t.b((byte) -5, var16, var15);
+              if (this.field_t.isInBounds(var15, var16, (byte) -128)) {
+                var14 = this.field_t.getCell((byte) -5, var16, var15);
                 if (-1 != var14) {
                   if (this.field_r) {
                     var14 = var14 + var13Lifetime1;
                     if (var14 >= this.field_n) {
                       var14 = -1;
                     }
-                    this.field_t.a(var16, var14, 0, var15);
+                    this.field_t.setCell(var16, var14, 0, var15);
                   } else {
                     if (this.field_n <= var13Lifetime1 &&
                       this.field_n >= 0) {
-                      this.field_t.a(var16, -1, 0, var15);
+                      this.field_t.setCell(var16, -1, 0, var15);
                     }
                   }
                 }
@@ -202,9 +202,9 @@ final class PitBehaviour extends Behaviour {
           this.trap.b((byte) 17, param0);
           var3_int = this.trap.getWidth(-56) / this.field_u;
           var4 = this.trap.getHeight((byte) 55) / this.field_u;
-          this.field_t = new hj(var3_int, var4, 0);
-          this.field_o = (this.trap.getWidth(-92) - this.field_t.field_f * this.field_u) / 2;
-          this.field_q = (this.trap.getHeight((byte) 55) - this.field_t.field_a * this.field_u) / 2;
+          this.field_t = new MazeGrid(var3_int, var4, 0);
+          this.field_o = (this.trap.getWidth(-92) - this.field_t.width * this.field_u) / 2;
+          this.field_q = (this.trap.getHeight((byte) 55) - this.field_t.height * this.field_u) / 2;
           this.trap.getRoom((byte) -93).a(1, -1, this.trap.getX(3), this.trap.getY(9648), this.trap.getWidth(-27), this.trap.getHeight((byte) 55), 123);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "mo.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -226,13 +226,13 @@ final class PitBehaviour extends Behaviour {
         if (0 != param3) {
           return 0;
         }
-        if (!io.a(this.field_u * this.field_t.field_f, param2, (byte) -115, this.field_u * this.field_t.field_a, param5, this.trap.getY(9648), param1, param0, this.trap.getX(3))) {
+        if (!io.a(this.field_u * this.field_t.width, param2, (byte) -115, this.field_u * this.field_t.height, param5, this.trap.getY(9648), param1, param0, this.trap.getX(3))) {
           return 0;
         }
         var7 = 0;
         var8 = this.trap.r((byte) -95) + this.field_o;
         if (param4 < 79) {
-          this.a(false);
+          this.getTypeId(false);
         }
         var9 = this.trap.Q(2) + this.field_q;
         var10 = -(param0 / 2) - (var8 - param5);
@@ -245,8 +245,8 @@ final class PitBehaviour extends Behaviour {
         var12 = var12 / this.field_u;
         for (var14 = var10; var12 >= var14; var14++) {
           for (var15 = var11; var15 <= var13; var15++) {
-            if (this.field_t.a(var14, var15, (byte) -128) &&
-              this.field_t.b((byte) -5, var15, var14) != -1) {
+            if (this.field_t.isInBounds(var14, var15, (byte) -128) &&
+              this.field_t.getCell((byte) -5, var15, var14) != -1) {
               var7 = var7 + foa.a(param1, param5, var15 * this.field_u + (this.field_u / 2 + var9), param2, this.field_u, (byte) 75, param0, this.field_u, 16, var8 - (-(this.field_u / 2) - this.field_u * var14));
             }
           }
@@ -307,16 +307,16 @@ final class PitBehaviour extends Behaviour {
         }
     }
 
-    final int a(boolean param0) {
+    final int getTypeId(boolean param0) {
         if (param0) {
-          this.field_t = (hj) null;
+          this.field_t = (MazeGrid) null;
         }
         return 8;
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           param1.writeBits((byte) 71, this.field_n, 8);
           param1.writeBits((byte) 34, this.field_r ? 1 : 0, 1);
           param1.writeBits((byte) 69, this.field_u >> 16, 10);
@@ -328,7 +328,7 @@ final class PitBehaviour extends Behaviour {
 
     private final void c(int param0) {
         if (param0 != 0) {
-          this.field_t = (hj) null;
+          this.field_t = (MazeGrid) null;
         }
         if (this.field_s) {
           this.field_n = 0;

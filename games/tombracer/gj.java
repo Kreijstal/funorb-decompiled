@@ -46,7 +46,7 @@ final class gj {
           dn.field_b = new hla(0L, aaa.field_d, kea.field_a, ai.field_d);
           jja.field_j = new hla(0L, aaa.field_d, dj.field_a, uma.field_a);
           dqa.field_e = new jea(0L, (jea) null);
-          is.field_yb = new jea(0L, kua.field_i);
+          is.field_yb = new jea(0L, Corpse.field_i);
           is.field_yb.field_z = 1;
           qh.field_F = new jea(0L, ooa.field_f, ija.field_i);
           mda.field_v = new jea(0L, SecondaryNodeDeque.field_b, ap.field_c);
@@ -62,14 +62,14 @@ final class gj {
           dqa.field_e.b(-125, ita.field_c);
           stackIn_4_0 = dn.field_b.field_vb.field_vb;
           stackIn_5_1 = !(param1);
-          ((jea) (Object) stackIn_4_0).a(stackIn_5_1, kua.field_i);
+          ((jea) (Object) stackIn_4_0).a(stackIn_5_1, Corpse.field_i);
           dn.field_b.field_vb.field_vb.field_bb = 1;
           var6 = dn.field_b.field_vb.field_vb;
           var7 = var6;
           var7.field_z = 1;
           stackIn_7_0 = jja.field_j.field_vb.field_vb;
           stackIn_8_1 = !(param1);
-          ((jea) (Object) stackIn_7_0).a(stackIn_8_1, kua.field_i);
+          ((jea) (Object) stackIn_7_0).a(stackIn_8_1, Corpse.field_i);
           jja.field_j.field_vb.field_vb.field_bb = 1;
           var3 = jja.field_j.field_vb.field_vb;
           var3.field_z = 1;

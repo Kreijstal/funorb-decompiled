@@ -42,15 +42,15 @@ final class wja extends ci {
           var4_int = param2;
           if (var4_int != 0) {
             if (1 == var4_int) {
-              this.field_m = param1.d(param0 + 16);
+              this.field_m = param1.readUnsignedShort(param0 + 16);
             } else {
               if (2 == var4_int) {
-                stackIn_11_1 = (param1.h(255) == 1);
+                stackIn_11_1 = (param1.readUnsignedByte(255) == 1);
                 this.field_g = stackIn_11_1;
               }
             }
           } else {
-            this.field_n = param1.d(127);
+            this.field_n = param1.readUnsignedShort(127);
           }
           if (param0 != 107) {
             this.field_n = 41;

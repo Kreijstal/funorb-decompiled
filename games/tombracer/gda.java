@@ -90,11 +90,11 @@ abstract class gda {
 
     abstract void c(int param0);
 
-    final static roa a(boolean param0) {
-        roa var1 = new roa();
+    final static Weapon a(boolean param0) {
+        Weapon var1 = new Weapon();
         var1.field_f = new Effect(0, 5);
         if (!param0) {
-          return (roa) null;
+          return (Weapon) null;
         }
         var1.field_f.b(1, 9);
         var1.field_d = 0;

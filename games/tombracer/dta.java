@@ -45,7 +45,7 @@ final class dta {
         String var19 = null;
         int var20 = 0;
         int var21 = 0;
-        roa var22 = null;
+        Weapon var22 = null;
         int var23 = 0;
         int var24 = 0;
         int var25 = 0;
@@ -174,7 +174,7 @@ final class dta {
               var25 = 16;
               if (!param4.field_D &&
                 !param4.c(false)) {
-                var26 = doa.b(var12.getRoom((byte) 125).q((byte) -82), 0, param4.m(-1)).field_h;
+                var26 = doa.b(var12.getRoom((byte) 125).getId((byte) -82), 0, param4.m(-1)).field_h;
                 if (0 == var26) {
                   var26 = 750;
                 }

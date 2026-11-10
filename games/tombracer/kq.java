@@ -78,8 +78,8 @@ final class kq {
           var14 = TombRacer.field_G ? 1 : 0;
           try {
             var18 = new aj();
-            var18.field_f = param3.h(255);
-            var18.field_n = param3.e(-12);
+            var18.field_f = param3.readUnsignedByte(255);
+            var18.field_n = param3.readInt(-12);
             var18.field_i = new int[var18.field_f];
             var18.field_k = new AsyncRequest[var18.field_f];
             var18.field_g = new byte[var18.field_f][][];
@@ -92,28 +92,28 @@ final class kq {
             }
             while (var5 < var18.field_f) {
               try {
-                var6_int = param3.h(255);
+                var6_int = param3.readUnsignedByte(255);
                 if (0 != var6_int &&
                   var6_int != 1 &&
                   var6_int != 2) {
                   if (var6_int == 3 ||
                     var6_int == 4) {
-                    var20 = param3.e((byte) -76);
-                    var8 = param3.e((byte) -76);
-                    var9 = param3.h(param2 + 183);
+                    var20 = param3.readString((byte) -76);
+                    var8 = param3.readString((byte) -76);
+                    var9 = param3.readUnsignedByte(param2 + 183);
                     var10 = new String[var9];
                     for (var11_int = 0; var9 > var11_int; var11_int++) {
-                      var10[var11_int] = param3.e((byte) -76);
+                      var10[var11_int] = param3.readString((byte) -76);
                     }
                     var21 = new byte[var9][];
                     var19 = var21;
                     var11 = var19;
                     if (3 == var6_int) {
                       for (var12_int = 0; var12_int < var9; var12_int++) {
-                        var13 = param3.e(param2 ^ -87);
+                        var13 = param3.readInt(param2 ^ -87);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param3.a(var21[var12_int], 0, -116, var13);
+                        param3.readBytes(var21[var12_int], 0, -116, var13);
                       }
                     }
                     var18.field_i[var5] = var6_int;
@@ -128,13 +128,13 @@ final class kq {
                     var18.field_g[var5] = var21;
                   }
                 } else {
-                  var16 = param3.e((byte) -76);
-                  dupTemp$1 = param3.e((byte) -76);
+                  var16 = param3.readString((byte) -76);
+                  dupTemp$1 = param3.readString((byte) -76);
                   var15 = dupTemp$1;
                   var8 = dupTemp$1;
                   var9 = 0;
                   if (1 == var6_int) {
-                    var9 = param3.e(param2 + 25);
+                    var9 = param3.readInt(param2 + 25);
                   }
                   var18.field_i[var5] = var6_int;
                   var18.field_h[var5] = var9;

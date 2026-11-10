@@ -15,7 +15,7 @@ final class SwitchableId {
         }
     }
 
-    final boolean b(int param0) {
+    final boolean isDud(int param0) {
         if (param0 != 59) {
           field_b = 33;
         }
@@ -48,7 +48,7 @@ final class SwitchableId {
           if (param0 != 4) {
             SwitchableId.releaseStatics(true);
           }
-          stackIn_3_0 = new ata(param1.b(false), param1.b(false), param1.b(false), param1.b(false), param1.a(param0 - 32772), param1.a(-32768), param1.h(255));
+          stackIn_3_0 = new ata(param1.readShort(false), param1.readShort(false), param1.readShort(false), param1.readShort(false), param1.readUnsignedMedium(param0 - 32772), param1.readUnsignedMedium(-32768), param1.readUnsignedByte(255));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -64,7 +64,7 @@ final class SwitchableId {
         }
     }
 
-    final int a(byte param0) {
+    final int getId(byte param0) {
         if (param0 < 13) {
           return 49;
         }

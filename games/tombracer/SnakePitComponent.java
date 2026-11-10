@@ -14,7 +14,7 @@ final class SnakePitComponent extends kna {
         try {
           if (param1 != 3) {
             var5 = (BitPacketBuffer) null;
-            this.a(true, (BitPacketBuffer) null);
+            this.encode(true, (BitPacketBuffer) null);
           }
           var4 = new Trap(param2, param0);
           var4.b((byte) -11, this.field_k, this.field_l);
@@ -44,9 +44,9 @@ final class SnakePitComponent extends kna {
         return false;
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "saa.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

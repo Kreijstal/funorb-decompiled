@@ -104,7 +104,7 @@ final class PortalBehaviour extends Behaviour {
         }
     }
 
-    final int a(boolean param0) {
+    final int getTypeId(boolean param0) {
         if (param0) {
           field_o = (int[]) null;
           return 28;
@@ -128,7 +128,7 @@ final class PortalBehaviour extends Behaviour {
           return;
         }
         BitPacketBuffer var3 = (BitPacketBuffer) null;
-        this.a(false, (BitPacketBuffer) null);
+        this.encode(false, (BitPacketBuffer) null);
         super.g(param0 ^ 0);
         this.field_p.a(this.h((byte) 112), 8);
     }
@@ -169,9 +169,9 @@ final class PortalBehaviour extends Behaviour {
         return this.field_p;
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           this.field_p.a(30489, this.h((byte) 122), param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "im.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

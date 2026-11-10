@@ -66,9 +66,9 @@ abstract class ConstraintLocomotor extends Locomotor {
         }
     }
 
-    void a(BitPacketBuffer param0, byte param1) {
+    void encode(BitPacketBuffer param0, byte param1) {
         try {
-          super.a(param0, (byte) -120);
+          super.encode(param0, (byte) -120);
           if (param1 >= -78) {
             ConstraintLocomotor.releaseStatics(2);
           }

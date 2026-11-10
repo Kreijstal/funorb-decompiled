@@ -128,26 +128,26 @@ final class jpa {
         int var8Lifetime2;
         var1 = new PacketBuffer(param0);
         var1.position = param0.length - 2;
-        var2 = var1.d(127);
+        var2 = var1.readUnsignedShort(127);
         var3 = new jpa[var2];
         for (var4 = 0; var4 < var2; var4++) {
           var3[var4] = new jpa();
         }
         var1.position = param0.length - 7 - var2 * 8;
-        var4Lifetime1 = var1.d(125);
-        var5 = var1.d(125);
-        var6 = (var1.h(255) & 255) + 1;
+        var4Lifetime1 = var1.readUnsignedShort(125);
+        var5 = var1.readUnsignedShort(125);
+        var6 = (var1.readUnsignedByte(255) & 255) + 1;
         for (var7_int = 0; var7_int < var2; var7_int++) {
-          var3[var7_int].field_d = var1.d(122);
+          var3[var7_int].field_d = var1.readUnsignedShort(122);
         }
         for (var7_intLifetime1 = 0; var7_intLifetime1 < var2; var7_intLifetime1++) {
-          var3[var7_intLifetime1].field_c = var1.d(123);
+          var3[var7_intLifetime1].field_c = var1.readUnsignedShort(123);
         }
         for (var7_intLifetime2 = 0; var7_intLifetime2 < var2; var7_intLifetime2++) {
-          var3[var7_intLifetime2].field_i = var1.d(126);
+          var3[var7_intLifetime2].field_i = var1.readUnsignedShort(126);
         }
         for (var7_intLifetime3 = 0; var7_intLifetime3 < var2; var7_intLifetime3++) {
-          var3[var7_intLifetime3].field_a = var1.d(126);
+          var3[var7_intLifetime3].field_a = var1.readUnsignedShort(126);
         }
         for (var7_intLifetime4 = 0; var7_intLifetime4 < var2; var7_intLifetime4++) {
           var8_ref_jpa = var3[var7_intLifetime4];
@@ -159,7 +159,7 @@ final class jpa {
         var16 = var17;
         var7 = var16;
         for (var8 = 1; var8 < var6; var8++) {
-          var7[var8] = var1.a(-32768);
+          var7[var8] = var1.readUnsignedMedium(-32768);
           if (var17[var8] == 0) {
             var17[var8] = 1;
           }
@@ -172,16 +172,16 @@ final class jpa {
           var9 = var3[var8Lifetime2];
           var10 = var9.field_i * var9.field_a;
           var9.field_f = new byte[var10];
-          var11 = var1.h(255);
+          var11 = var1.readUnsignedByte(255);
           if ((var11 & 2) == 0) {
             if ((var11 & 1) == 0) {
               for (var12 = 0; var12 < var10; var12++) {
-                var9.field_f[var12] = var1.c((byte) 81);
+                var9.field_f[var12] = var1.readByte((byte) 81);
               }
             } else {
               for (var12 = 0; var12 < var9.field_i; var12++) {
                 for (var13 = 0; var13 < var9.field_a; var13++) {
-                  var9.field_f[var12 + var13 * var9.field_i] = var1.c((byte) 62);
+                  var9.field_f[var12 + var13 * var9.field_i] = var1.readByte((byte) 62);
                 }
               }
             }
@@ -190,10 +190,10 @@ final class jpa {
             var9.field_h = new byte[var10];
             if ((var11 & 1) == 0) {
               for (var13 = 0; var13 < var10; var13++) {
-                var9.field_f[var13] = var1.c((byte) 62);
+                var9.field_f[var13] = var1.readByte((byte) 62);
               }
               for (var13 = 0; var13 < var10; var13++) {
-                dupTemp$1 = var1.c((byte) 46);
+                dupTemp$1 = var1.readByte((byte) 46);
                 var9.field_h[var13] = dupTemp$1;
                 var14 = dupTemp$1;
                 stackIn_53_0 = var12;
@@ -207,12 +207,12 @@ final class jpa {
             } else {
               for (var13 = 0; var13 < var9.field_i; var13++) {
                 for (var14 = 0; var14 < var9.field_a; var14++) {
-                  var9.field_f[var13 + var14 * var9.field_i] = var1.c((byte) 110);
+                  var9.field_f[var13 + var14 * var9.field_i] = var1.readByte((byte) 110);
                 }
               }
               for (var13 = 0; var13 < var9.field_i; var13++) {
                 for (var14 = 0; var14 < var9.field_a; var14++) {
-                  dupTemp$0 = var1.c((byte) 106);
+                  dupTemp$0 = var1.readByte((byte) 106);
                   var9.field_h[var13 + var14 * var9.field_i] = dupTemp$0;
                   var15 = dupTemp$0;
                   stackIn_67_0 = var12;

@@ -35,7 +35,7 @@ final class dk {
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           while (true) {
-            var3_int = param1.h(255);
+            var3_int = param1.readUnsignedByte(255);
             if (var3_int != 0) {
               this.a(var3_int, param1, 16588);
               continue;
@@ -119,79 +119,79 @@ final class dk {
             return;
           }
           if (param0 == 1) {
-            var4_int = param1.d(127);
+            var4_int = param1.readUnsignedShort(127);
             this.field_e = new int[var4_int];
             for (var5 = 0; var5 < var4_int; var5++) {
-              this.field_e[var5] = param1.d(121);
+              this.field_e[var5] = param1.readUnsignedShort(121);
             }
             this.field_l = new int[var4_int];
             for (var5 = 0; var4_int > var5; var5++) {
-              this.field_l[var5] = param1.d(124);
+              this.field_l[var5] = param1.readUnsignedShort(124);
             }
             for (var5 = 0; var4_int > var5; var5++) {
-              this.field_l[var5] = (param1.d(123) << 16) + this.field_l[var5];
+              this.field_l[var5] = (param1.readUnsignedShort(123) << 16) + this.field_l[var5];
             }
           } else {
             if (2 == param0) {
-              this.field_b = param1.d(122);
+              this.field_b = param1.readUnsignedShort(122);
               return;
             }
             if (param0 == 3) {
-              var4_int = param1.h(param2 ^ 16435);
+              var4_int = param1.readUnsignedByte(param2 ^ 16435);
               this.field_d = new int[var4_int + 1];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_d[var5] = param1.h(255);
+                this.field_d[var5] = param1.readUnsignedByte(255);
               }
               this.field_d[var4_int] = 9999999;
             } else {
               if (5 == param0) {
-                param1.h(255);
+                param1.readUnsignedByte(255);
                 return;
               }
               if (6 == param0) {
-                param1.d(param2 ^ 16563);
+                param1.readUnsignedShort(param2 ^ 16563);
                 return;
               }
               if (param0 == 7) {
-                param1.d(126);
+                param1.readUnsignedShort(126);
                 return;
               }
               if (param0 == 8) {
-                this.field_j = param1.h(255);
+                this.field_j = param1.readUnsignedByte(255);
                 this.field_f = false;
                 return;
               }
               if (9 == param0) {
-                param1.h(255);
+                param1.readUnsignedByte(255);
                 return;
               }
               if (param0 == 10) {
-                param1.h(255);
+                param1.readUnsignedByte(255);
                 return;
               }
               if (param0 == 11) {
-                param1.h(255);
+                param1.readUnsignedByte(255);
                 return;
               }
               if (12 == param0) {
-                var4_int = param1.h(255);
+                var4_int = param1.readUnsignedByte(255);
                 for (var5 = 0; var5 < var4_int; var5++) {
-                  param1.d(125);
+                  param1.readUnsignedShort(125);
                 }
                 for (var5 = 0; var4_int > var5; var5++) {
-                  param1.d(121);
+                  param1.readUnsignedShort(121);
                 }
               } else if (param0 == 13) {
-                var4_int = param1.d(121);
+                var4_int = param1.readUnsignedShort(121);
                 this.field_g = new int[var4_int][];
                 for (var5 = 0; var4_int > var5; var5++) {
-                  var6 = param1.h(255);
+                  var6 = param1.readUnsignedByte(255);
                   if (var6 > 0) {
                     array$0 = new int[var6];
                     this.field_g[var5] = array$0;
-                    this.field_g[var5][0] = param1.a(-32768);
+                    this.field_g[var5][0] = param1.readUnsignedMedium(-32768);
                     for (var7 = 1; var7 < var6; var7++) {
-                      this.field_g[var5][var7] = param1.d(123);
+                      this.field_g[var5][var7] = param1.readUnsignedShort(123);
                     }
                   }
                 }

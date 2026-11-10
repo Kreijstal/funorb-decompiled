@@ -34,7 +34,7 @@ final class FacePlayerLocomotor extends Locomotor {
         FacePlayerLocomotor.a(-81, 90, 108, 113);
     }
 
-    final int c(int param0) {
+    final int getTypeId(int param0) {
         if (param0 != 1) {
           return -52;
         }
@@ -171,9 +171,9 @@ final class FacePlayerLocomotor extends Locomotor {
         }
     }
 
-    final void a(BitPacketBuffer param0, byte param1) {
+    final void encode(BitPacketBuffer param0, byte param1) {
         try {
-          super.a(param0, (byte) -124);
+          super.encode(param0, (byte) -124);
           param0.writeBits((byte) 37, dqa.a(true, this.field_o, 12), 12);
           if (param1 > -78) {
             FacePlayerLocomotor.a(-12, 90, -68, 66);

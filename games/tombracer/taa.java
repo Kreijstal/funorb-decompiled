@@ -11,8 +11,8 @@ final class taa extends IntrusiveNode {
           if (param1 != 32654) {
             taa.releaseStatics((byte) -36);
           }
-          param0.i(this.field_h, 0);
-          param0.i(this.field_f, 0);
+          param0.writeByte(this.field_h, 0);
+          param0.writeByte(this.field_f, 0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "taa.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

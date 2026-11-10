@@ -56,36 +56,36 @@ final class lva extends ci {
             if (1 != var4_int) {
               if (var4_int != 2) {
                 if (var4_int == 3) {
-                  dupTemp$0 = param1.h(255);
+                  dupTemp$0 = param1.readUnsignedByte(255);
                   this.field_w = dupTemp$0;
                   this.field_u = dupTemp$0;
                 } else {
                   if (var4_int != 4) {
                     if (5 == var4_int) {
-                      this.field_u = param1.h(255);
+                      this.field_u = param1.readUnsignedByte(255);
                     } else {
                       if (var4_int == 6) {
-                        this.field_w = param1.h(255);
+                        this.field_w = param1.readUnsignedByte(255);
                       }
                     }
                   } else {
-                    this.field_z = param1.h(255);
+                    this.field_z = param1.readUnsignedByte(255);
                   }
                 }
               } else {
-                this.field_x = param1.b(false);
+                this.field_x = param1.readShort(false);
                 if (this.field_x < 0) {
                   this.field_q = new short[this.field_n];
                   for (var4_int = 0; var4_int < this.field_n; var4_int++) {
-                    this.field_q[var4_int] = (short)param1.b(false);
+                    this.field_q[var4_int] = (short)param1.readShort(false);
                   }
                 }
               }
             } else {
-              this.field_n = param1.h(255);
+              this.field_n = param1.readUnsignedByte(255);
             }
           } else {
-            stackIn_16_1 = (param1.h(255) == 1);
+            stackIn_16_1 = (param1.readUnsignedByte(255) == 1);
             this.field_s = stackIn_16_1;
           }
           if (param0 != 107) {

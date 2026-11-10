@@ -48,7 +48,7 @@ final class PressureSwitchComponent extends SwitchComponent {
             }
           }
           if (0 != ara.field_ub.field_y) {
-            fj.field_c = new wla(ara.field_ub.field_q, ara.field_ub.field_A, ara.field_ub.field_G, ara.field_ub.field_t, param2, lma.field_r, oba.field_f, cga.field_g, kua.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p, (String) null, 0L);
+            fj.field_c = new wla(ara.field_ub.field_q, ara.field_ub.field_A, ara.field_ub.field_G, ara.field_ub.field_t, param2, lma.field_r, oba.field_f, cga.field_g, Corpse.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p, (String) null, 0L);
           }
           var9 = mna.a((byte) 73, param3, di.field_a, mna.field_d);
           if (var9 != null) {
@@ -117,7 +117,7 @@ final class PressureSwitchComponent extends SwitchComponent {
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
         super.q(param0);
-        var2 = this.field_m;
+        var2 = this.typeId;
         if (3 != var2) {
           if (var2 != 4) {
             this.field_J = -1;
@@ -170,7 +170,7 @@ final class PressureSwitchComponent extends SwitchComponent {
         var9 = TombRacer.field_G ? 1 : 0;
         try {
           var10 = new Trap(param2, param0);
-          var5_int = this.field_m;
+          var5_int = this.typeId;
           if (var5_int == 54) {
             this.field_k = 2097152;
           } else {
@@ -188,7 +188,7 @@ final class PressureSwitchComponent extends SwitchComponent {
           if (param1 != 3) {
             this.field_K = 33;
           }
-          var8 = this.field_m;
+          var8 = this.typeId;
           if (var8 != 3) {
             if (var8 != 4) {
               if (54 == var8) {
@@ -265,7 +265,7 @@ final class PressureSwitchComponent extends SwitchComponent {
         if (param0 != 555277520) {
           this.field_K = -36;
         }
-        var2 = this.field_m;
+        var2 = this.typeId;
         if (var2 == 54) {
           return true;
         }
@@ -275,9 +275,9 @@ final class PressureSwitchComponent extends SwitchComponent {
         return true;
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           param1.writeBits((byte) -125, this.field_L, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pw.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

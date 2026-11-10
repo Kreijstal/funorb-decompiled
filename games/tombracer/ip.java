@@ -27,11 +27,11 @@ abstract class ip {
         try {
           var3 = ql.field_k;
           var3.writeCipheredOpcode(param1, -2988);
-          var3.i(param0.field_n, 0);
+          var3.writeByte(param0.field_n, 0);
           if (param2 != 2147) {
             field_a = (String[]) null;
           }
-          var3.i(param0.field_k, param2 - 2147);
+          var3.writeByte(param0.field_k, param2 - 2147);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ip.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

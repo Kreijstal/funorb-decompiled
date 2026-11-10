@@ -64,9 +64,9 @@ final class RotaterMountComponent extends kna {
         return true;
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           param1.writeBits((byte) -38, dqa.a(!param0 ? true : false, this.field_F, 5), 5);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sua.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -155,8 +155,8 @@ final class RotaterMountComponent extends kna {
         byte[] var13 = null;
         try {
           var9 = new PacketBuffer(param0);
-          var3 = var9.h(255);
-          var4 = var9.e(124);
+          var3 = var9.readUnsignedByte(255);
+          var4 = var9.readInt(124);
           if (param1 > -99) {
             RotaterMountComponent.A(-108);
           }
@@ -166,11 +166,11 @@ final class RotaterMountComponent extends kna {
               var13 = new byte[var4];
               var11 = var13;
               var5 = var11;
-              var9.a(var13, 0, -86, var4);
+              var9.readBytes(var13, 0, -86, var4);
               stackIn_23_0 = var5;
               return stackIn_23_0;
             }
-            var5_int = var9.e(-127);
+            var5_int = var9.readInt(-127);
             if (var5_int >= 0 && (PitComponent.field_H == 0 ||
               !(var5_int > PitComponent.field_H))) {
               var12 = new byte[var5_int];

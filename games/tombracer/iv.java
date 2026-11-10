@@ -25,8 +25,8 @@ final class iv extends jea {
         var8 = TombRacer.field_G ? 1 : 0;
         try {
           var10 = vc.field_q;
-          var2 = var10.h(255);
-          var3 = var10.h(param0 + 255);
+          var2 = var10.readUnsignedByte(255);
+          var3 = var10.readUnsignedByte(param0 + 255);
           if (var2 == param0) {
             var4 = (ik) (Player.field_I.first(param0 ^ -80));
             if (var4 == null) {
@@ -41,13 +41,13 @@ final class iv extends jea {
               var5 = var12.length << 2;
             }
             for (var7 = 0; var5 > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var10.h(255) << SnakePitBehaviour.c(768, var7 << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(255) << SnakePitBehaviour.c(768, var7 << 8));
             }
             var4.unlink(param0 + 79);
             return;
           }
           if (var2 == 1) {
-            var4_int = var10.f((byte) -128);
+            var4_int = var10.readSignedSmart((byte) -128);
             var5_ref_toa = (toa) (vsa.field_m.first(-80));
             while (var5_ref_toa != null) {
               if (var5_ref_toa.field_i != var3 ||

@@ -45,7 +45,7 @@ final class wua extends DualLinkNode {
         try {
           var3_int = -85 % ((param1 - 27) / 57);
           while (true) {
-            var4 = param0.h(255);
+            var4 = param0.readUnsignedByte(255);
             if (var4 == 0) {
               return;
             }
@@ -85,24 +85,24 @@ final class wua extends DualLinkNode {
           }
           if (param1 != 1) {
             if (param1 == 2) {
-              var4_int = param0.h(255);
+              var4_int = param0.readUnsignedByte(255);
               this.field_m = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_m[var5] = param0.d(123);
+                this.field_m[var5] = param0.readUnsignedShort(123);
               }
             } else if (param1 == 3) {
-              var4_int = param0.h(255);
+              var4_int = param0.readUnsignedByte(255);
               this.field_q = new int[var4_int][];
               this.field_k = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
-                var6 = param0.d(122);
+                var6 = param0.readUnsignedShort(122);
                 var7 = li.a(var6, (byte) 126);
                 if (var7 != null) {
                   this.field_k[var5] = var6;
                   array$0 = new int[var7.field_b];
                   this.field_q[var5] = array$0;
                   for (var8 = 0; var8 < var7.field_b; var8++) {
-                    this.field_q[var5][var8] = param0.d(124);
+                    this.field_q[var5][var8] = param0.readUnsignedShort(124);
                   }
                 }
               }
@@ -112,7 +112,7 @@ final class wua extends DualLinkNode {
               }
             }
           } else {
-            this.field_l = rga.a(32287, param0.e((byte) -76), '<');
+            this.field_l = rga.a(32287, param0.readString((byte) -76), '<');
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

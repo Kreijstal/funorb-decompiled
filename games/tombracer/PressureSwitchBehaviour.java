@@ -64,9 +64,9 @@ final class PressureSwitchBehaviour extends Behaviour implements ut {
         return 3364198;
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           param1.writeBits((byte) -127, this.field_o, 8);
           param1.writeBits((byte) -128, !this.field_q ? 0 : 1, 1);
           this.field_n.a(this.h((byte) 117), (byte) 117, param1);
@@ -106,7 +106,7 @@ final class PressureSwitchBehaviour extends Behaviour implements ut {
         }
     }
 
-    final int a(boolean param0) {
+    final int getTypeId(boolean param0) {
         if (param0) {
           field_s = (String[]) null;
         }

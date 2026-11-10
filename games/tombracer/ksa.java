@@ -61,15 +61,15 @@ final class ksa extends ci {
         try {
           var4_int = param2;
           if (0 == var4_int) {
-            this.field_m = param1.d(param0 ^ 18);
+            this.field_m = param1.readUnsignedShort(param0 ^ 18);
           } else {
             if (var4_int != 1) {
               if (var4_int == 2) {
-                stackIn_11_1 = (param1.h(255) == 1);
+                stackIn_11_1 = (param1.readUnsignedByte(255) == 1);
                 this.field_g = stackIn_11_1;
               }
             } else {
-              this.field_o = param1.d(param0 ^ 20);
+              this.field_o = param1.readUnsignedShort(param0 ^ 20);
             }
           }
           if (param0 != 107) {

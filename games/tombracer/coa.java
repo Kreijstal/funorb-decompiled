@@ -21,7 +21,7 @@ class coa extends ci {
             this.field_r = -60;
           }
           if (0 == param2) {
-            this.field_o = param1.d(122);
+            this.field_o = param1.readUnsignedShort(122);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

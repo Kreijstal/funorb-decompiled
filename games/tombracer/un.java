@@ -86,13 +86,13 @@ final class un extends ci {
           if (var4_int != 0) {
             if (var4_int != 1) {
               if (2 == var4_int) {
-                this.field_m = param1.d(param0 + 20);
+                this.field_m = param1.readUnsignedShort(param0 + 20);
               }
             } else {
-              this.field_p = param1.d(123);
+              this.field_p = param1.readUnsignedShort(123);
             }
           } else {
-            this.field_o = param1.d(param0 + 14);
+            this.field_o = param1.readUnsignedShort(param0 + 14);
           }
           if (param0 != 107) {
             this.c(24, 112);

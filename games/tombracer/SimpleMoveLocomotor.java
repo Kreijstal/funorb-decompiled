@@ -59,7 +59,7 @@ final class SimpleMoveLocomotor extends Locomotor {
           if (var7 == 0) {
             var5 = lw.a(var5, (byte) -52) * this.field_t;
             var8 = this.trap.s(25745);
-            var9 = this.trap.e(false);
+            var9 = this.trap.getLocalY(false);
             this.trap.a((byte) -17, var5, var7);
             if (this.field_q) {
               if (this.trap.p((byte) -103)) {
@@ -68,7 +68,7 @@ final class SimpleMoveLocomotor extends Locomotor {
               }
               if (!this.trap.C((byte) -43)) {
                 if (this.trap.s(25745) != var8 ||
-                  this.trap.e(false) != var9) {
+                  this.trap.getLocalY(false) != var9) {
                   this.field_o = this.field_o + this.field_t;
                 }
                 if (this.field_r > 0 &&
@@ -88,7 +88,7 @@ final class SimpleMoveLocomotor extends Locomotor {
               }
               return;
             }
-            if (this.trap.e(false) != var9) {
+            if (this.trap.getLocalY(false) != var9) {
               this.field_o = this.field_o + this.field_t;
               if (this.field_r > 0 &&
                 this.field_o >= this.field_r) {
@@ -107,7 +107,7 @@ final class SimpleMoveLocomotor extends Locomotor {
           }
           if (var5 != 0) {
             var8Lifetime4 = this.trap.s(25745);
-            var9Lifetime4 = this.trap.e(false);
+            var9Lifetime4 = this.trap.getLocalY(false);
             this.trap.a((byte) -17, var5, var7);
             if (this.field_q) {
               if (this.trap.p((byte) -103)) {
@@ -120,13 +120,13 @@ final class SimpleMoveLocomotor extends Locomotor {
               }
             }
             if (this.trap.s(25745) != var8Lifetime4 ||
-              this.trap.e(false) != var9Lifetime4) {
+              this.trap.getLocalY(false) != var9Lifetime4) {
               this.field_o = this.field_o + this.field_t;
             }
           } else {
             var7 = lw.a(var7, (byte) -71) * this.field_t;
             var8Lifetime4 = this.trap.s(25745);
-            var9Lifetime4 = this.trap.e(false);
+            var9Lifetime4 = this.trap.getLocalY(false);
             this.trap.a((byte) -17, var5, var7);
             if (this.field_q) {
               if (this.trap.p((byte) -103)) {
@@ -139,7 +139,7 @@ final class SimpleMoveLocomotor extends Locomotor {
               }
             }
             if (this.trap.s(25745) != var8Lifetime4 ||
-              this.trap.e(false) != var9Lifetime4) {
+              this.trap.getLocalY(false) != var9Lifetime4) {
               this.field_o = this.field_o + this.field_t;
             }
           }
@@ -158,7 +158,7 @@ final class SimpleMoveLocomotor extends Locomotor {
           if (var7Lifetime1 == 0) {
             var5Lifetime1 = lw.a(var5Lifetime1, (byte) -52) * this.field_t;
             var8Lifetime1 = this.trap.s(25745);
-            var9Lifetime1 = this.trap.e(false);
+            var9Lifetime1 = this.trap.getLocalY(false);
             this.trap.a((byte) -17, var5Lifetime1, var7Lifetime1);
             if (this.field_q) {
               if (this.trap.p((byte) -103)) {
@@ -167,7 +167,7 @@ final class SimpleMoveLocomotor extends Locomotor {
               }
               if (!this.trap.C((byte) -43)) {
                 if (this.trap.s(25745) != var8Lifetime1 ||
-                  this.trap.e(false) != var9Lifetime1) {
+                  this.trap.getLocalY(false) != var9Lifetime1) {
                   this.field_o = this.field_o + this.field_t;
                 }
                 if (this.field_r > 0 &&
@@ -187,7 +187,7 @@ final class SimpleMoveLocomotor extends Locomotor {
               }
               return;
             }
-            if (this.trap.e(false) != var9Lifetime1) {
+            if (this.trap.getLocalY(false) != var9Lifetime1) {
               this.field_o = this.field_o + this.field_t;
               if (this.field_r > 0 &&
                 this.field_o >= this.field_r) {
@@ -206,7 +206,7 @@ final class SimpleMoveLocomotor extends Locomotor {
           }
           if (var5Lifetime1 != 0) {
             var8Lifetime1Lifetime1 = this.trap.s(25745);
-            var9Lifetime1Lifetime1 = this.trap.e(false);
+            var9Lifetime1Lifetime1 = this.trap.getLocalY(false);
             this.trap.a((byte) -17, var5Lifetime1, var7Lifetime1);
             if (this.field_q) {
               if (this.trap.p((byte) -103)) {
@@ -219,13 +219,13 @@ final class SimpleMoveLocomotor extends Locomotor {
               }
             }
             if (this.trap.s(25745) != var8Lifetime1Lifetime1 ||
-              this.trap.e(false) != var9Lifetime1Lifetime1) {
+              this.trap.getLocalY(false) != var9Lifetime1Lifetime1) {
               this.field_o = this.field_o + this.field_t;
             }
           } else {
             var7Lifetime1 = lw.a(var7Lifetime1, (byte) -71) * this.field_t;
             var8Lifetime1Lifetime1 = this.trap.s(25745);
-            var9Lifetime1Lifetime1 = this.trap.e(false);
+            var9Lifetime1Lifetime1 = this.trap.getLocalY(false);
             this.trap.a((byte) -17, var5Lifetime1, var7Lifetime1);
             if (this.field_q) {
               if (this.trap.p((byte) -103)) {
@@ -238,7 +238,7 @@ final class SimpleMoveLocomotor extends Locomotor {
               }
             }
             if (this.trap.s(25745) != var8Lifetime1Lifetime1 ||
-              this.trap.e(false) != var9Lifetime1Lifetime1) {
+              this.trap.getLocalY(false) != var9Lifetime1Lifetime1) {
               this.field_o = this.field_o + this.field_t;
             }
           }
@@ -257,7 +257,7 @@ final class SimpleMoveLocomotor extends Locomotor {
         if (var7Lifetime2 != 0) {
           if (var5Lifetime2 != 0) {
             var8Lifetime2 = this.trap.s(25745);
-            var9Lifetime2 = this.trap.e(false);
+            var9Lifetime2 = this.trap.getLocalY(false);
             this.trap.a((byte) -17, var5Lifetime2, var7Lifetime2);
             if (this.field_q) {
               if (this.trap.p((byte) -103)) {
@@ -270,7 +270,7 @@ final class SimpleMoveLocomotor extends Locomotor {
               }
             }
             if (this.trap.s(25745) != var8Lifetime2 ||
-              this.trap.e(false) != var9Lifetime2) {
+              this.trap.getLocalY(false) != var9Lifetime2) {
               this.field_o = this.field_o + this.field_t;
             }
             if (this.field_r > 0 &&
@@ -281,7 +281,7 @@ final class SimpleMoveLocomotor extends Locomotor {
           }
           var7Lifetime2 = lw.a(var7Lifetime2, (byte) -71) * this.field_t;
           var8Lifetime2Lifetime1 = this.trap.s(25745);
-          var9Lifetime2Lifetime1 = this.trap.e(false);
+          var9Lifetime2Lifetime1 = this.trap.getLocalY(false);
           this.trap.a((byte) -17, var5Lifetime2, var7Lifetime2);
           if (this.field_q) {
             if (this.trap.p((byte) -103)) {
@@ -294,7 +294,7 @@ final class SimpleMoveLocomotor extends Locomotor {
             }
           }
           if (this.trap.s(25745) != var8Lifetime2Lifetime1 ||
-            this.trap.e(false) != var9Lifetime2Lifetime1) {
+            this.trap.getLocalY(false) != var9Lifetime2Lifetime1) {
             this.field_o = this.field_o + this.field_t;
           }
           if (this.field_r <= 0) {
@@ -308,7 +308,7 @@ final class SimpleMoveLocomotor extends Locomotor {
         }
         var5Lifetime2 = lw.a(var5Lifetime2, (byte) -52) * this.field_t;
         var8Lifetime3 = this.trap.s(25745);
-        var9Lifetime3 = this.trap.e(false);
+        var9Lifetime3 = this.trap.getLocalY(false);
         this.trap.a((byte) -17, var5Lifetime2, var7Lifetime2);
         if (this.field_q) {
           if (this.trap.p((byte) -103)) {
@@ -327,7 +327,7 @@ final class SimpleMoveLocomotor extends Locomotor {
               this.field_j = true;
               return;
             }
-            if (this.trap.e(false) == var9Lifetime3) {
+            if (this.trap.getLocalY(false) == var9Lifetime3) {
               if (this.field_r <= 0) {
                 return;
               }
@@ -352,7 +352,7 @@ final class SimpleMoveLocomotor extends Locomotor {
         if (this.trap.s(25745) != var8Lifetime3) {
           this.field_o = this.field_o + this.field_t;
         } else {
-          if (this.trap.e(false) != var9Lifetime3) {
+          if (this.trap.getLocalY(false) != var9Lifetime3) {
             this.field_o = this.field_o + this.field_t;
           }
         }
@@ -389,7 +389,7 @@ final class SimpleMoveLocomotor extends Locomotor {
           this.field_p = dfa.a(-this.field_p, 8192, 118);
           return;
         }
-        this.c(33);
+        this.getTypeId(33);
         this.field_p = dfa.a(-this.field_p, 8192, 118);
     }
 
@@ -406,7 +406,7 @@ final class SimpleMoveLocomotor extends Locomotor {
         }
     }
 
-    final int c(int param0) {
+    final int getTypeId(int param0) {
         if (param0 != 1) {
           return 18;
         }
@@ -422,9 +422,9 @@ final class SimpleMoveLocomotor extends Locomotor {
         this.field_t = param0;
     }
 
-    final void a(BitPacketBuffer param0, byte param1) {
+    final void encode(BitPacketBuffer param0, byte param1) {
         try {
-          super.a(param0, (byte) -117);
+          super.encode(param0, (byte) -117);
           param0.writeBits((byte) 75, this.b(0, this.field_t), 8);
           param0.writeBits((byte) -127, this.field_r >> 16, 10);
           if (param1 > -78) {

@@ -31,8 +31,8 @@ abstract class Locomotor extends IntrusiveNode implements lj, noa, TrapPart {
         return this.trap;
     }
 
-    void a(BitPacketBuffer param0, byte param1) {
-        param0.writeBits((byte) 61, this.c(1), 6);
+    void encode(BitPacketBuffer param0, byte param1) {
+        param0.writeBits((byte) 61, this.getTypeId(1), 6);
         if (param1 > -78) {
           return;
         }
@@ -133,7 +133,7 @@ abstract class Locomotor extends IntrusiveNode implements lj, noa, TrapPart {
 
     abstract void b(int param0);
 
-    abstract int c(int param0);
+    abstract int getTypeId(int param0);
 
     abstract void b(byte param0);
 

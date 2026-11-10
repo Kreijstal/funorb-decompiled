@@ -480,7 +480,7 @@ final class qh extends dfa implements rqa {
             this.field_w = false;
           }
           for (var3_int = 0; this.field_B.length > var3_int; var3_int++) {
-            this.field_B[var3_int] = param1.d(124);
+            this.field_B[var3_int] = param1.readUnsignedShort(124);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -545,7 +545,7 @@ final class qh extends dfa implements rqa {
           this.field_u[var2] = false;
           var3 = this.field_k.players[var2].getRoom((byte) -73);
           if (var3 != null) {
-            var3.i((byte) -75);
+            var3.restart((byte) -75);
           }
         }
         if (this.field_n != null) {

@@ -133,7 +133,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (kua.field_j == this &&
+          if (Corpse.field_j == this &&
             !tla.field_b) {
             boa.field_t = bva.b((byte) -107) + 4000L;
             return;
@@ -237,7 +237,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this == kua.field_j &&
+          if (this == Corpse.field_j &&
             !tla.field_b) {
             boa.field_t = bva.b((byte) -107);
             TrapSpawner.a(0, 5000L);
@@ -396,7 +396,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (kua.field_j == this &&
+          if (Corpse.field_j == this &&
             !tla.field_b) {
             boa.field_t = 0L;
             return;
@@ -511,7 +511,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
               }
               if (decompiledFrameRemainder3) {
-                var1 = kua.field_j;
+                var1 = Corpse.field_j;
                 if (null != cba.field_a) {
                   var1 = cba.field_a;
                 }
@@ -583,7 +583,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.awt.Rectangle var2 = null;
         RuntimeException var2_ref = null;
         try {
-          if (kua.field_j == this &&
+          if (Corpse.field_j == this &&
             !tla.field_b) {
             bsa.field_k = true;
             if (GameFont.field_c &&
@@ -743,7 +743,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           var9 = TombRacer.field_G ? 1 : 0;
           try {
             try {
-              if (kua.field_j != null) {
+              if (Corpse.field_j != null) {
                 PlatformBehaviour.field_v = PlatformBehaviour.field_v + 1;
                 if (PlatformBehaviour.field_v < 3) {
                   this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
@@ -752,7 +752,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 this.reportError(-6738, "alreadyloaded");
                 return;
               }
-              kua.field_j = this;
+              Corpse.field_j = this;
               qf.field_i = param1;
               eca.field_a = param1;
               vu.field_f = 0;
@@ -843,12 +843,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               if (null != cba.field_a) {
                 var2 = cba.field_a;
                 if (var4 != 0) {
-                  var2 = kua.field_j;
+                  var2 = Corpse.field_j;
                   var2 = rla.field_x;
                   var2 = nb.field_d;
                 }
               } else {
-                var2 = kua.field_j;
+                var2 = Corpse.field_j;
                 if (var4 != 0) {
                   var2 = rla.field_x;
                   var2 = nb.field_d;

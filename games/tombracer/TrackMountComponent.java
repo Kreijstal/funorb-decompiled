@@ -43,7 +43,7 @@ final class TrackMountComponent extends kna {
           var9.g(119, 2);
           var9.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new TrackPlayerLocomotor(param2, param0);
-          stackIn_3_0 = (34 != this.r(12)) ? 0 : 1;
+          stackIn_3_0 = (34 != this.getTypeId(12)) ? 0 : 1;
           var6 = stackIn_3_0;
           var5.b(11050, var6 != 0);
           stackIn_5_0 = var5;
@@ -72,9 +72,9 @@ final class TrackMountComponent extends kna {
         }
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           param1.writeBits((byte) 28, SpawnerBehaviour.a((byte) 8, 4, this.field_F), 8);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wha.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

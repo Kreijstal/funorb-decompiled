@@ -49,21 +49,21 @@ final class bk extends ci {
           if (var4_int != 0) {
             if (var4_int != 1) {
               if (2 == var4_int) {
-                this.field_o = param1.h(255);
+                this.field_o = param1.readUnsignedByte(255);
               } else {
                 if (3 == var4_int) {
-                  this.field_r = param1.d(param0 + 17);
+                  this.field_r = param1.readUnsignedShort(param0 + 17);
                 } else {
                   if (4 == var4_int) {
-                    this.field_q = param1.d(121);
+                    this.field_q = param1.readUnsignedShort(121);
                   }
                 }
               }
             } else {
-              this.field_p = param1.d(param0 ^ 21);
+              this.field_p = param1.readUnsignedShort(param0 ^ 21);
             }
           } else {
-            this.field_n = param1.h(param0 ^ 148);
+            this.field_n = param1.readUnsignedByte(param0 ^ 148);
           }
           if (param0 != 107) {
             this.field_o = -113;

@@ -366,11 +366,11 @@ final class Room implements ew, Renderable, noa {
         return ck.a(param0, param3, this.width / 2, this.width, this.height, param4, (byte) 125, this.height / 2, param2);
     }
 
-    final void i(byte param0) {
+    final void restart(byte param0) {
         if (param0 >= -24) {
           this.a(true, 90, -98, 23, -45, -48);
         }
-        this.a((byte) -108, true);
+        this.enterAtEntrance((byte) -108, true);
     }
 
     final SimulationObserver b(int param0) {
@@ -694,7 +694,7 @@ final class Room implements ew, Renderable, noa {
         }
     }
 
-    private final void a(byte param0, boolean param1) {
+    private final void enterAtEntrance(byte param0, boolean param1) {
         uw var3;
         SimulationObserver var3_ref;
         RoomComponent var4;
@@ -731,7 +731,7 @@ final class Room implements ew, Renderable, noa {
           }
         }
         var7 = this.getPlayer(-22);
-        var7.a(this, this.entranceX, this.entranceY, true);
+        var7.placeInRoom(this, this.entranceX, this.entranceY, true);
         var7.a(-127, param1);
         if (param0 >= -80) {
           var6 = (WorldBody) null;
@@ -891,7 +891,7 @@ final class Room implements ew, Renderable, noa {
     final void c(int param0, int param1) {
         this.field_b[param1] = -1;
         if (param0 != -22490) {
-          this.i((byte) -124);
+          this.restart((byte) -124);
         }
     }
 
@@ -1026,8 +1026,8 @@ final class Room implements ew, Renderable, noa {
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         if (param6 < 118) {
-          kua var9 = (kua) null;
-          this.recordDeath(-24, (kua) null);
+          Corpse var9 = (Corpse) null;
+          this.recordDeath(-24, (Corpse) null);
         }
         this.field_B.a(param1, param5, param4, param2, param0, param3, true);
     }
@@ -1348,7 +1348,7 @@ final class Room implements ew, Renderable, noa {
         }
     }
 
-    final int q(byte param0) {
+    final int getId(byte param0) {
         if (param0 != -82) {
           return -41;
         }
@@ -1357,7 +1357,7 @@ final class Room implements ew, Renderable, noa {
 
     final void r(int param0) {
         int var2 = 112 / ((93 - param0) / 32);
-        this.a((byte) -125, false);
+        this.enterAtEntrance((byte) -125, false);
     }
 
     final int a(int param0, WorldBody param1) {
@@ -1506,7 +1506,7 @@ final class Room implements ew, Renderable, noa {
         if (var8 == null) {
           return;
         }
-        var8.d(5, param0);
+        var8.tick(5, param0);
         if (this != var8.getRoom((byte) -83)) {
           return;
         }
@@ -1969,7 +1969,7 @@ final class Room implements ew, Renderable, noa {
         }
     }
 
-    final void recordDeath(int param0, kua param1) {
+    final void recordDeath(int param0, Corpse param1) {
         int var4 = TombRacer.field_G ? 1 : 0;
         try {
           this.recentDeaths.addLast((byte) -54, param1);

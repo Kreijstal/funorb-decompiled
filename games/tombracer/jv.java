@@ -102,13 +102,13 @@ final class jv extends ci {
           }
           var4_int = param2;
           if (0 == var4_int) {
-            this.field_o = param1.d(param0 ^ 18);
+            this.field_o = param1.readUnsignedShort(param0 ^ 18);
             return;
           }
           if (var4_int != 1) {
             return;
           }
-          stackIn_11_1 = (param1.h(255) == 1);
+          stackIn_11_1 = (param1.readUnsignedByte(255) == 1);
           this.field_n = stackIn_11_1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

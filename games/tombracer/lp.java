@@ -26,7 +26,7 @@ final class lp {
             return;
           }
           while (true) {
-            var4_int = param2.h(255);
+            var4_int = param2.readUnsignedByte(255);
             if (var4_int == 0) {
               return;
             }
@@ -115,12 +115,12 @@ final class lp {
         try {
           if (1 != param3) {
             if (param3 == 2) {
-              this.field_d = 1 + param0.d(123);
-              this.field_b = 1 + param0.d(122);
+              this.field_d = 1 + param0.readUnsignedShort(123);
+              this.field_b = 1 + param0.readUnsignedShort(122);
             } else {
               if (param3 != 3) {
                 if (param3 == 4) {
-                  this.field_e = param0.h(255);
+                  this.field_e = param0.readUnsignedByte(255);
                 } else {
                   if (param3 != 5) {
                     if (param3 == 6) {
@@ -131,15 +131,15 @@ final class lp {
                       }
                     }
                   } else {
-                    this.field_c = param0.h(255);
+                    this.field_c = param0.readUnsignedByte(255);
                   }
                 }
               } else {
-                param0.c((byte) 64);
+                param0.readByte((byte) 64);
               }
             }
           } else {
-            this.field_f = param0.d(126);
+            this.field_f = param0.readUnsignedShort(126);
             if (this.field_f == 65535) {
               this.field_f = -1;
             }

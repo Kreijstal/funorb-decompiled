@@ -86,9 +86,9 @@ final class gv extends qda {
             if (this.field_d != 0) {
               try {
                 this.field_o.position = 0;
-                this.field_o.i(4, param1 - 54);
-                this.field_o.i((int) this.field_d, param1 ^ 54);
-                this.field_o.a(0, (byte) -17);
+                this.field_o.writeByte(4, param1 - 54);
+                this.field_o.writeByte((int) this.field_d, param1 ^ 54);
+                this.field_o.writeInt(0, (byte) -17);
                 this.field_t.a(this.field_o.payload, 0, this.field_o.payload.length, 124);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
@@ -144,8 +144,8 @@ final class gv extends qda {
             } else {
               stackIn_5_1 = 2;
             }
-            ((PacketBuffer) (Object) stackIn_4_0).i(stackIn_5_1, 0);
-            this.field_o.a(true, 0L);
+            ((PacketBuffer) (Object) stackIn_4_0).writeByte(stackIn_5_1, 0);
+            this.field_o.writeLong40(true, 0L);
             this.field_t.a(this.field_o.payload, 0, this.field_o.payload.length, 124);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -262,8 +262,8 @@ final class gv extends qda {
             var2 = (qqa) (this.field_e.b((byte) 38));
             while (var2 != null) {
               this.field_o.position = 0;
-              this.field_o.i(1, 0);
-              this.field_o.a(true, var2.secondaryKey);
+              this.field_o.writeByte(1, 0);
+              this.field_o.writeLong40(true, var2.secondaryKey);
               this.field_t.a(this.field_o.payload, 0, this.field_o.payload.length, 119);
               this.field_m.a(var2, (byte) -100);
               var2 = (qqa) (this.field_e.c(28));
@@ -271,8 +271,8 @@ final class gv extends qda {
             var2Lifetime1 = (qqa) (this.field_c.b((byte) 38));
             while (var2Lifetime1 != null) {
               this.field_o.position = 0;
-              this.field_o.i(0, 0);
-              this.field_o.a(true, var2Lifetime1.secondaryKey);
+              this.field_o.writeByte(0, 0);
+              this.field_o.writeLong40(true, var2Lifetime1.secondaryKey);
               this.field_t.a(this.field_o.payload, 0, this.field_o.payload.length, 101);
               this.field_k.a(var2Lifetime1, (byte) -99);
               var2Lifetime1 = (qqa) (this.field_c.c(28));
@@ -317,10 +317,10 @@ final class gv extends qda {
                       }
                     } else {
                       this.field_h.position = 0;
-                      var6 = this.field_h.h(255);
-                      var7 = this.field_h.e(105);
-                      var8 = this.field_h.h(255);
-                      var9 = this.field_h.e(-60);
+                      var6 = this.field_h.readUnsignedByte(255);
+                      var7 = this.field_h.readInt(105);
+                      var8 = this.field_h.readUnsignedByte(255);
+                      var9 = this.field_h.readInt(-60);
                       var10 = 127 & var8;
                       stackIn_59_0 = ((128 & var8) == 0) ? 0 : 1;
                       boolean decompiledFrameRemainder0 = true;
@@ -356,8 +356,8 @@ final class gv extends qda {
                       var15 = stackIn_75_0;
                       this.field_g = var14_ref;
                       this.field_g.field_r = new PacketBuffer(var9 + var15 + this.field_g.field_q);
-                      this.field_g.field_r.i(var10, 0);
-                      this.field_g.field_r.a(var9, (byte) 119);
+                      this.field_g.field_r.writeByte(var10, 0);
+                      this.field_g.field_r.writeInt(var9, (byte) 119);
                       this.field_h.position = 0;
                       this.field_g.field_s = 10;
                     }
@@ -446,9 +446,9 @@ final class gv extends qda {
               this.c(21);
             }
             this.field_o.position = 0;
-            this.field_o.i(6, 0);
-            this.field_o.h(-86, 3);
-            this.field_o.f(-1477662136, 0);
+            this.field_o.writeByte(6, 0);
+            this.field_o.writeMedium(-86, 3);
+            this.field_o.writeShort(-1477662136, 0);
             this.field_t.a(this.field_o.payload, 0, this.field_o.payload.length, 118);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

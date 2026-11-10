@@ -16,19 +16,19 @@ final class co {
 
     final void a(PacketBuffer param0) {
         int var2 = 0;
-        this.field_f = param0.h(255);
+        this.field_f = param0.readUnsignedByte(255);
         this.field_d = new int[this.field_f];
         this.field_g = new int[this.field_f];
         for (var2 = 0; var2 < this.field_f; var2++) {
-          this.field_d[var2] = param0.d(122);
-          this.field_g[var2] = param0.d(124);
+          this.field_d[var2] = param0.readUnsignedShort(122);
+          this.field_g[var2] = param0.readUnsignedShort(124);
         }
     }
 
     final void b(PacketBuffer param0) {
-        this.field_a = param0.h(255);
-        this.field_e = param0.e(119);
-        this.field_i = param0.e(110);
+        this.field_a = param0.readUnsignedByte(255);
+        this.field_e = param0.readInt(119);
+        this.field_i = param0.readInt(110);
         this.a(param0);
     }
 

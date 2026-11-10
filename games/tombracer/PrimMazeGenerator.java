@@ -7,7 +7,7 @@ final class PrimMazeGenerator extends MazeGenerator {
     static int field_e;
     private IntrusiveDeque field_d;
 
-    private final void a(hj param0, int param1, int param2, int param3) {
+    private final void a(MazeGrid param0, int param1, int param2, int param3) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -52,8 +52,8 @@ final class PrimMazeGenerator extends MazeGenerator {
               }
               var13 = 2 * dma.field_k[var19[var12]][0] + var9;
               var14 = var10 + dma.field_k[var19[var12]][1] * 2;
-              if (param0.a(var13, var14, (byte) -128) &&
-                0 == param0.b((byte) -5, var14, var13)) {
+              if (param0.isInBounds(var13, var14, (byte) -128) &&
+                0 == param0.getCell((byte) -5, var14, var13)) {
                 this.a(var10, (byte) -42, param0, var9, var14, var13);
                 this.a(param3 + 0, param0, var9, var10);
                 var5.unlink(param3 ^ 30);
@@ -76,16 +76,16 @@ final class PrimMazeGenerator extends MazeGenerator {
         }
     }
 
-    private final void a(int param0, int param1, hj param2, byte param3) {
+    private final void a(int param0, int param1, MazeGrid param2, byte param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2.a(param0, param1, (byte) -128) &&
-            0 < param2.b((byte) -5, param1, param0)) {
-            param2.a(param1, -1, 0, param0);
+          if (param2.isInBounds(param0, param1, (byte) -128) &&
+            0 < param2.getCell((byte) -5, param1, param0)) {
+            param2.setCell(param1, -1, 0, param0);
             this.field_d.addLast((byte) -76, new oda(param0, param1));
           }
           if (param3 >= 93) {
@@ -122,9 +122,9 @@ final class PrimMazeGenerator extends MazeGenerator {
         field_b = null;
     }
 
-    private final void a(int param0, hj param1, int param2, int param3) {
+    private final void a(int param0, MazeGrid param1, int param2, int param3) {
         try {
-          param1.a(param3, 0, 0, param2);
+          param1.setCell(param3, 0, 0, param2);
           this.a(param2, param3 - 2, param1, (byte) 119);
           this.a(param2, param3 + 2, param1, (byte) 126);
           this.a(param2 - 2, param3, param1, (byte) 109);
@@ -134,7 +134,7 @@ final class PrimMazeGenerator extends MazeGenerator {
         }
     }
 
-    final void a(int param0, int param1, hj param2, int param3) {
+    final void generate(int param0, int param1, MazeGrid param2, int param3) {
         this.field_d = new IntrusiveDeque();
         if (param1 < 73) {
           return;

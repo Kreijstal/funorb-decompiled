@@ -204,7 +204,7 @@ final class gla extends ci {
         try {
           var4_int = param2;
           if (var4_int == 0) {
-            this.field_n = param1.d(124);
+            this.field_n = param1.readUnsignedShort(124);
           }
           if (param0 != 107) {
             gla.releaseStatics((byte) 92);

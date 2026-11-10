@@ -15,13 +15,13 @@ abstract class ShooterComponent extends kna {
         return true;
     }
 
-    void a(boolean param0, BitPacketBuffer param1) {
+    void encode(boolean param0, BitPacketBuffer param1) {
         try {
           if (param0) {
             Room var4 = (Room) null;
             this.a((byte) -1, (mra) null, (Room) null);
           }
-          super.a(param0, param1);
+          super.encode(param0, param1);
           if (this.A(-1)) {
             param1.writeBits((byte) 124, this.field_F, 4);
             if (!this.B(-23309)) {
@@ -95,7 +95,7 @@ abstract class ShooterComponent extends kna {
     final void a(byte param0, mra param1, Room param2) {
         RuntimeException var4 = null;
         IsaacCipher var5 = null;
-        roa var6 = null;
+        Weapon var6 = null;
         int var7 = 0;
         mg var8 = null;
         RuntimeException stackIn_17_0 = null;
@@ -156,7 +156,7 @@ abstract class ShooterComponent extends kna {
     final boolean s(byte param0) {
         if (param0 < 64) {
           BitPacketBuffer var3 = (BitPacketBuffer) null;
-          this.a(true, (BitPacketBuffer) null);
+          this.encode(true, (BitPacketBuffer) null);
           return this.field_I;
         }
         return this.field_I;

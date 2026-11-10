@@ -1141,7 +1141,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
 
     final int E(byte param0) {
         if (param0 != 3) {
-          this.e(false);
+          this.getLocalY(false);
         }
         return this.field_H;
     }
@@ -1313,13 +1313,13 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           param0.writeBits((byte) -125, this.locomotors.size((byte) -16), 3);
           var6 = (Locomotor) (this.locomotors.first(-80));
           while (var6 != null) {
-            var6.a(param0, (byte) -100);
+            var6.encode(param0, (byte) -100);
             var6 = (Locomotor) (this.locomotors.next(118));
           }
           param0.writeBits((byte) -127, this.behaviours.size((byte) -16), 3);
           var7 = (Behaviour) (this.behaviours.first(-80));
           while (var7 != null) {
-            var7.a(false, param0);
+            var7.encode(false, param0);
             var7 = (Behaviour) (this.behaviours.next(111));
           }
           param0.writeBits((byte) -126, this.t((byte) 112), 3);
@@ -2151,7 +2151,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
     private final void N(int param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
         this.field_J = this.s(25745);
-        this.field_j = this.e(false);
+        this.field_j = this.getLocalY(false);
         if (param0 != 0) {
           return;
         }
@@ -2646,7 +2646,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         }
     }
 
-    final int e(boolean param0) {
+    final int getLocalY(boolean param0) {
         if (param0) {
           return 31;
         }

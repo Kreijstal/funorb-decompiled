@@ -41,23 +41,23 @@ final class cma extends ci {
           }
           var5 = param2;
           if (var5 == 0) {
-            this.field_n = param1.d(param0 ^ 17);
+            this.field_n = param1.readUnsignedShort(param0 ^ 17);
             return;
           }
           if (var5 == 1) {
-            this.field_p = param1.d(124);
+            this.field_p = param1.readUnsignedShort(124);
             return;
           }
           if (2 == var5) {
-            this.field_r = param1.d(param0 + 20);
+            this.field_r = param1.readUnsignedShort(param0 + 20);
             return;
           }
           if (var5 == 3) {
-            this.field_q = param1.d(123);
+            this.field_q = param1.readUnsignedShort(123);
             return;
           }
           if (4 == var5) {
-            var4_int = param1.a(-32768);
+            var4_int = param1.readUnsignedMedium(-32768);
             this.field_o[2] = SnakePitBehaviour.c(var4_int, 255) >> 12;
             this.field_o[0] = SnakePitBehaviour.c(267386880, var4_int << 4);
             this.field_o[1] = SnakePitBehaviour.c(4080, var4_int >> 4);

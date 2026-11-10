@@ -78,13 +78,13 @@ final class vda extends ci {
           if (var4_int != 0) {
             if (var4_int != 1) {
               if (2 == var4_int) {
-                this.field_o = param1.d(127);
+                this.field_o = param1.readUnsignedShort(127);
               }
             } else {
-              this.field_p = param1.d(123);
+              this.field_p = param1.readUnsignedShort(123);
             }
           } else {
-            this.field_r = param1.d(125);
+            this.field_r = param1.readUnsignedShort(125);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -30,16 +30,16 @@ final class cua {
         } else {
           var4 = ql.field_k;
           var4.writeCipheredOpcode(param2, param1 ^ -2985);
-          var4.i(3, param1 - 3);
-          var4.i(11, 0);
-          var4.f(-1477662136, param0);
+          var4.writeByte(3, param1 - 3);
+          var4.writeByte(11, 0);
+          var4.writeShort(-1477662136, param0);
           return;
         }
         var4Lifetime1 = ql.field_k;
         var4Lifetime1.writeCipheredOpcode(param2, param1 ^ -2985);
-        var4Lifetime1.i(3, param1 - 3);
-        var4Lifetime1.i(11, 0);
-        var4Lifetime1.f(-1477662136, param0);
+        var4Lifetime1.writeByte(3, param1 - 3);
+        var4Lifetime1.writeByte(11, 0);
+        var4Lifetime1.writeShort(-1477662136, param0);
     }
 
     final static void a(ht param0, byte param1) {

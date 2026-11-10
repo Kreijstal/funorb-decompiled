@@ -57,7 +57,7 @@ final class Effect implements noa {
         return this.field_k;
     }
 
-    final int b(int param0) {
+    final int getPreset(int param0) {
         if (param0 != -344) {
           this.a(9);
           return this.preset;

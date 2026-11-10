@@ -7,7 +7,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
     private boolean field_o;
     static kia field_r;
     private boolean field_p;
-    private roa field_u;
+    private Weapon field_u;
     private boolean field_s;
     static String[] field_q;
 
@@ -86,10 +86,10 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
         }
     }
 
-    final void a(roa param0, byte param1) {
+    final void a(Weapon param0, byte param1) {
         try {
           if (param1 < 40) {
-            this.a(true);
+            this.getTypeId(true);
           }
           this.field_u = param0;
         } catch (RuntimeException runtimeException) {
@@ -119,9 +119,9 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
         }
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           this.field_n.a(15637, param1);
           this.field_u.a(param1, (byte) 84);
           param1.writeBits((byte) -128, this.field_o ? 1 : 0, 1);
@@ -150,7 +150,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
         return false;
     }
 
-    final roa l(int param0) {
+    final Weapon l(int param0) {
         if (param0 != -2) {
           WeaponShooterBehaviour.releaseStatics(-6);
           return this.field_u;
@@ -206,10 +206,10 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
         this.field_t = false;
     }
 
-    final int a(boolean param0) {
+    final int getTypeId(boolean param0) {
         if (param0) {
           BitPacketBuffer var3 = (BitPacketBuffer) null;
-          this.a(true, (BitPacketBuffer) null);
+          this.encode(true, (BitPacketBuffer) null);
           return 20;
         }
         return 20;

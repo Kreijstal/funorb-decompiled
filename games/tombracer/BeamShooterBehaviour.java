@@ -174,9 +174,9 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         }
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           if (param0) {
             this.field_u = -117;
           }
@@ -190,7 +190,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         }
     }
 
-    final int a(boolean param0) {
+    final int getTypeId(boolean param0) {
         if (param0) {
           this.field_q = false;
         }
@@ -501,7 +501,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         try {
           super.b(117, param1);
           if (param0 < 112) {
-            this.a(true);
+            this.getTypeId(true);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ov.NB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

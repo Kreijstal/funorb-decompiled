@@ -292,7 +292,7 @@ final class IntrusiveDeque {
               } else {
                 decompiledFrameRemainder0 = (dn.field_b.field_yb.field_y != 0);
                 if (decompiledFrameRemainder0) {
-                  bl.field_a = new is(dn.field_b.field_yb.field_q, dn.field_b.field_yb.field_A, dn.field_b.field_yb.field_G, dn.field_b.field_yb.field_t, tr.field_c, lw.field_a, kua.field_i, kua.field_i);
+                  bl.field_a = new is(dn.field_b.field_yb.field_q, dn.field_b.field_yb.field_A, dn.field_b.field_yb.field_G, dn.field_b.field_yb.field_t, tr.field_c, lw.field_a, Corpse.field_i, Corpse.field_i);
                 }
               }
               if (decompiledFrameRemainder0) {
@@ -301,7 +301,7 @@ final class IntrusiveDeque {
               if (0 == dn.field_b.field_wb.field_y) {
                 break;
               }
-              bl.field_a = new is(dn.field_b.field_wb.field_q, dn.field_b.field_wb.field_A, dn.field_b.field_wb.field_G, dn.field_b.field_wb.field_t, PathMoveLocomotor.field_q, lw.field_a, kua.field_i, kua.field_i);
+              bl.field_a = new is(dn.field_b.field_wb.field_q, dn.field_b.field_wb.field_A, dn.field_b.field_wb.field_G, dn.field_b.field_wb.field_t, PathMoveLocomotor.field_q, lw.field_a, Corpse.field_i, Corpse.field_i);
               cn.field_k = 1;
               break;
             }

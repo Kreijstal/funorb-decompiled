@@ -17,13 +17,13 @@ final class nba {
         try {
           if (!vpa.a(76) &&
             !param0.k(-25319)) {
-            if (param1.q((byte) -82) < 0) {
+            if (param1.getId((byte) -82) < 0) {
               return;
             }
             ql.field_k.writeCipheredOpcode(98, -2988);
-            ql.field_k.f(-1477662136, param1.q((byte) -82));
+            ql.field_k.writeShort(-1477662136, param1.getId((byte) -82));
             var3_int = 8 % ((param2 - 51) / 36);
-            ql.field_k.f(-1477662136, param1.a((byte) 107));
+            ql.field_k.writeShort(-1477662136, param1.a((byte) 107));
             return;
           }
           return;

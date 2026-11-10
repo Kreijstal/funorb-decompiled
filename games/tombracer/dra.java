@@ -32,7 +32,7 @@ final class dra {
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             hk.a(true, var1);
-            ql.field_k.d(var1.position - var2, (byte) -17);
+            ql.field_k.backpatchByteLength(var1.position - var2, (byte) -17);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

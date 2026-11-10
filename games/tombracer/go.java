@@ -87,7 +87,7 @@ final class go extends ci {
         }
         try {
           if (param2 == 0) {
-            this.field_n = param1.d(124);
+            this.field_n = param1.readUnsignedShort(124);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "go.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

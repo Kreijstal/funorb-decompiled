@@ -115,7 +115,7 @@ final class vta extends vw {
         if (param0 < 52) {
           field_f = (String) null;
         }
-        PowerDownItemBehaviour.field_s = vc.field_q.h(255) == 0 ? true : false;
+        PowerDownItemBehaviour.field_s = vc.field_q.readUnsignedByte(255) == 0 ? true : false;
     }
 
     static {

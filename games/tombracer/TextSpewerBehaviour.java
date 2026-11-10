@@ -11,9 +11,9 @@ final class TextSpewerBehaviour extends Behaviour {
     private int field_u;
     private int field_t;
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           param1.writeBits((byte) -128, this.field_t >> 16, 10);
           param1.writeBits((byte) -126, this.field_p / 50, 6);
           param1.writeBits((byte) 1, this.field_s / 50, 6);
@@ -47,7 +47,7 @@ final class TextSpewerBehaviour extends Behaviour {
         }
     }
 
-    final int a(boolean param0) {
+    final int getTypeId(boolean param0) {
         if (param0) {
           return -29;
         }

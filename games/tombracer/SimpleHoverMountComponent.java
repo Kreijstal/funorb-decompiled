@@ -321,9 +321,9 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
         return stackIn_18_0;
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "jc.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

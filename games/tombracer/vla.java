@@ -107,10 +107,10 @@ final class vla extends ci {
         try {
           var4_int = param2;
           if (var4_int == 0) {
-            this.field_n = param1.d(122) << 4;
+            this.field_n = param1.readUnsignedShort(122) << 4;
           } else {
             if (1 == var4_int) {
-              stackIn_7_1 = (param1.h(255) == 1);
+              stackIn_7_1 = (param1.readUnsignedByte(255) == 1);
               this.field_g = stackIn_7_1;
             }
           }

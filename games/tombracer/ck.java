@@ -116,11 +116,11 @@ final class ck {
             rra.field_e.b(param11 - 25575, vw.field_b);
           }
           rra.field_e.b(-127, bsa.field_j);
-          bsa.field_j.field_vb.a(false, kua.field_i);
+          bsa.field_j.field_vb.a(false, Corpse.field_i);
           var15 = bsa.field_j.field_vb;
           bsa.field_j.field_vb.field_bb = 1;
           var15.field_z = 1;
-          lva.field_t = new jea(0L, kua.field_i);
+          lva.field_t = new jea(0L, Corpse.field_i);
           lva.field_t.field_z = 1;
           st.field_j = new jea(0L, ssa.field_g, S2CActionPacket.field_g.toUpperCase());
           ap.field_a = new jea(0L, uda.field_s, tha.field_B.toUpperCase());
@@ -164,7 +164,7 @@ final class ck {
             OpenGlToolkit.field_fd.b(-124, uq.field_c);
           }
           OpenGlToolkit.field_fd.b(-124, pq.field_c);
-          rv.field_c = new jea(0L, kua.field_i);
+          rv.field_c = new jea(0L, Corpse.field_i);
           rv.field_c.field_bb = 0;
           rv.field_c.field_z = 1;
           bma.field_v = new jea(0L, dp.field_i, nf.field_j.toUpperCase());
@@ -172,12 +172,12 @@ final class ck {
           wo.field_k.b(param11 - 25572, rv.field_c);
           wo.field_k.b(-122, bma.field_v);
           fu.field_t = new jea(0L, rfa.field_C);
-          fu.field_t.a(false, kua.field_i);
+          fu.field_t.a(false, Corpse.field_i);
           fu.field_t.field_bb = 1;
           var16 = fu.field_t;
           var16.field_z = 1;
           lk.field_l = new jea(0L, (jea) null);
-          cea.field_a = new jea(0L, kua.field_i);
+          cea.field_a = new jea(0L, Corpse.field_i);
           cea.field_a.field_z = 1;
           uaa.field_b = new jea(0L, ooa.field_f, ija.field_i);
           RopeBridgeComponent.field_F = new jea(0L, SecondaryNodeDeque.field_b, dl.field_m);
@@ -317,7 +317,7 @@ final class ck {
             pk.field_z = new jea(0L, hg.field_g);
             hw.field_a = new jea(0L, hg.field_g);
             dl.field_t = new jea(0L, tka.field_q);
-            dl.field_t.a(false, kua.field_i);
+            dl.field_t.a(false, Corpse.field_i);
             dl.field_t.field_bb = 1;
             break;
           }

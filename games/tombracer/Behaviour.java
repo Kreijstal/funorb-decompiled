@@ -59,7 +59,7 @@ abstract class Behaviour extends IntrusiveNode implements lj, Renderable, noa, T
         }
     }
 
-    abstract int a(boolean param0);
+    abstract int getTypeId(boolean param0);
 
     public final SwitchableId i(byte param0) {
         if (param0 != 84) {
@@ -352,9 +352,9 @@ abstract class Behaviour extends IntrusiveNode implements lj, Renderable, noa, T
         return this.trap.getY(9648);
     }
 
-    void a(boolean param0, BitPacketBuffer param1) {
+    void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          param1.writeBits((byte) -127, this.a(param0), 6);
+          param1.writeBits((byte) -127, this.getTypeId(param0), 6);
           param1.writeBits((byte) -126, !this.field_f ? 0 : 1, 1);
           param1.writeBits((byte) 112, !this.field_k ? 0 : 1, 1);
         } catch (RuntimeException runtimeException) {

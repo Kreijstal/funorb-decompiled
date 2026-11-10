@@ -549,10 +549,10 @@ final class eka extends ci {
         try {
           var4_int = param2;
           if (0 == var4_int) {
-            this.field_m = param1.h(param0 + 148);
+            this.field_m = param1.readUnsignedByte(param0 + 148);
           } else {
             if (1 == var4_int) {
-              stackIn_8_1 = (param1.h(255) == 1);
+              stackIn_8_1 = (param1.readUnsignedByte(255) == 1);
               this.field_g = stackIn_8_1;
             }
           }

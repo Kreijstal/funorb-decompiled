@@ -1,27 +1,27 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hj {
-    private int[] field_c;
-    int field_f;
+final class MazeGrid {
+    private int[] cells;
+    int width;
     static String field_b;
     static String field_e;
-    int field_a;
+    int height;
     private static String[] field_d;
 
-    final boolean a(int param0, int param1, byte param2) {
+    final boolean isInBounds(int param0, int param1, byte param2) {
         if (param2 != -128) {
-          this.a(52, -84, (byte) -119);
+          this.isInBounds(52, -84, (byte) -119);
           if (0 > param0) {
             return false;
           }
           if (0 > param1) {
             return false;
           }
-          if (this.field_f <= param0) {
+          if (this.width <= param0) {
             return false;
           }
-          if (this.field_a > param1) {
+          if (this.height > param1) {
             return true;
           }
           return false;
@@ -32,10 +32,10 @@ final class hj {
         if (0 > param1) {
           return false;
         }
-        if (this.field_f <= param0) {
+        if (this.width <= param0) {
           return false;
         }
-        if (this.field_a > param1) {
+        if (this.height > param1) {
           return true;
         }
         return false;
@@ -45,43 +45,43 @@ final class hj {
         field_e = null;
         field_d = null;
         if (param0) {
-          hj.releaseStatics(false);
+          MazeGrid.releaseStatics(false);
           field_b = null;
           return;
         }
         field_b = null;
     }
 
-    private final int a(byte param0, int param1, int param2) {
+    private final int cellIndex(byte param0, int param1, int param2) {
         if (param0 == -37) {
-          return param2 + this.field_f * param1;
+          return param2 + this.width * param1;
         }
         field_d = (String[]) null;
-        return param2 + this.field_f * param1;
+        return param2 + this.width * param1;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        this.field_c[this.a((byte) -37, param0, param3)] = param1;
+    final void setCell(int param0, int param1, int param2, int param3) {
+        this.cells[this.cellIndex((byte) -37, param0, param3)] = param1;
         if (param2 != 0) {
           field_d = (String[]) null;
         }
     }
 
-    final int b(byte param0, int param1, int param2) {
+    final int getCell(byte param0, int param1, int param2) {
         if (param0 == -5) {
-          return this.field_c[this.a((byte) -37, param1, param2)];
+          return this.cells[this.cellIndex((byte) -37, param1, param2)];
         }
         field_d = (String[]) null;
-        return this.field_c[this.a((byte) -37, param1, param2)];
+        return this.cells[this.cellIndex((byte) -37, param1, param2)];
     }
 
-    hj(int param0, int param1, int param2) {
+    MazeGrid(int param0, int param1, int param2) {
         int var4 = 0;
-        this.field_c = new int[param1 * param0];
-        this.field_a = param1;
-        this.field_f = param0;
-        for (var4 = 0; this.field_c.length > var4; var4++) {
-          this.field_c[var4] = param2;
+        this.cells = new int[param1 * param0];
+        this.height = param1;
+        this.width = param0;
+        for (var4 = 0; this.cells.length > var4; var4++) {
+          this.cells[var4] = param2;
         }
     }
 

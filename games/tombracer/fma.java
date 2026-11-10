@@ -61,12 +61,12 @@ final class fma {
         var10 = new PacketBuffer(this.field_b.b((byte) -126));
         if (!param0) {
           var10.position = 5;
-          var3 = var10.h(255);
+          var3 = var10.readUnsignedByte(255);
           var10.position = var10.position + 72 * var3;
           var13 = new byte[-var10.position + var10.payload.length];
           var11 = var13;
           var4 = var11;
-          var10.a(var4, 0, -116, var13.length);
+          var10.readBytes(var4, 0, -116, var13.length);
           if (null == this.field_e) {
             var5 = var4;
           } else {
@@ -104,12 +104,12 @@ final class fma {
         }
         this.field_g = (PacketBuffer) null;
         var10.position = 5;
-        var3Lifetime1 = var10.h(255);
+        var3Lifetime1 = var10.readUnsignedByte(255);
         var10.position = var10.position + 72 * var3Lifetime1;
         var13Lifetime1 = new byte[-var10.position + var10.payload.length];
         var11Lifetime1 = var13Lifetime1;
         var4Lifetime1 = var11Lifetime1;
-        var10.a(var4Lifetime1, 0, -116, var13Lifetime1.length);
+        var10.readBytes(var4Lifetime1, 0, -116, var13Lifetime1.length);
         if (null == this.field_e) {
           var5Lifetime1 = var4Lifetime1;
           if (var5Lifetime1.length != 65) {
@@ -175,10 +175,10 @@ final class fma {
               fma.releaseStatics((byte) -48);
             }
             this.field_g.position = param1 * 72 + 6;
-            var6_int = this.field_g.e(121);
-            var7 = this.field_g.e(-88);
+            var6_int = this.field_g.readInt(121);
+            var7 = this.field_g.readInt(-88);
             var13 = new byte[64];
-            this.field_g.a(var13, 0, -107, 64);
+            this.field_g.readBytes(var13, 0, -107, 64);
             var9 = new js(param1, param0, param2, this.field_h, this.field_c, var6_int, var13, var7, param3);
             this.field_i[param1] = var9;
             stackIn_14_0 = var9;

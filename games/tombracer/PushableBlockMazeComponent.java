@@ -5,12 +5,12 @@ final class PushableBlockMazeComponent extends MazeComponent {
     static String field_K;
     static boolean field_L;
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
           if (param0) {
             field_K = (String) null;
           }
-          super.a(param0, param1);
+          super.encode(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "uc.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -23,7 +23,7 @@ final class PushableBlockMazeComponent extends MazeComponent {
     final boolean D(int param0) {
         if (param0 != 0) {
           BitPacketBuffer var3 = (BitPacketBuffer) null;
-          this.a(false, (BitPacketBuffer) null);
+          this.encode(false, (BitPacketBuffer) null);
           return true;
         }
         return true;

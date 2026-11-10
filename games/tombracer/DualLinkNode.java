@@ -68,7 +68,7 @@ class DualLinkNode extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 0) {
-            stackIn_4_0 = new hc(param1.b(false), param1.b(false), param1.b(false), param1.b(false), param1.a(-32768), param1.h(255));
+            stackIn_4_0 = new hc(param1.readShort(false), param1.readShort(false), param1.readShort(false), param1.readShort(false), param1.readUnsignedMedium(-32768), param1.readUnsignedByte(255));
             return stackIn_4_0;
           }
           stackIn_2_0 = (hc) null;

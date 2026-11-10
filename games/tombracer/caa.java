@@ -22,13 +22,13 @@ final class caa implements Runnable {
           param0.k(-25319)) {
           return;
         }
-        if (!(0 <= param1.q((byte) -82))) {
+        if (!(0 <= param1.getId((byte) -82))) {
           return;
         }
         try {
           ql.field_k.writeCipheredOpcode(97, -2988);
-          ql.field_k.f(-1477662136, param1.q((byte) -82));
-          ql.field_k.f(-1477662136, param1.a((byte) 107));
+          ql.field_k.writeShort(-1477662136, param1.getId((byte) -82));
+          ql.field_k.writeShort(-1477662136, param1.a((byte) 107));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "caa.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

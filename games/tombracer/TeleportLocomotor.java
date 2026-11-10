@@ -176,13 +176,13 @@ final class TeleportLocomotor extends Locomotor {
         }
     }
 
-    final void a(BitPacketBuffer param0, byte param1) {
+    final void encode(BitPacketBuffer param0, byte param1) {
         try {
           if (param1 > -78) {
             BitPacketBuffer var4 = (BitPacketBuffer) null;
-            this.a((BitPacketBuffer) null, (byte) 17);
+            this.encode((BitPacketBuffer) null, (byte) 17);
           }
-          super.a(param0, (byte) -110);
+          super.encode(param0, (byte) -110);
           this.field_q.a(param0, 0);
           this.field_s.a(15637, param0);
           param0.writeBits((byte) -126, this.field_p ? 1 : 0, 1);
@@ -252,7 +252,7 @@ final class TeleportLocomotor extends Locomotor {
         TeleportLocomotor.a(69, -19, 4, 24, 126, false, -104);
     }
 
-    final int c(int param0) {
+    final int getTypeId(int param0) {
         if (param0 != 1) {
           return -102;
         }
@@ -269,7 +269,7 @@ final class TeleportLocomotor extends Locomotor {
     final void b(int param0) {
         if (param0 != 1) {
           BitPacketBuffer var3 = (BitPacketBuffer) null;
-          this.a((BitPacketBuffer) null, (byte) 116);
+          this.encode((BitPacketBuffer) null, (byte) 116);
         }
     }
 

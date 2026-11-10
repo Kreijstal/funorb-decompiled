@@ -1070,9 +1070,9 @@ final class np extends ka {
           if (!this.field_R.field_O) {
             var4 = 0;
             while (this.field_ib > var4) {
-              var3.d((int) this.field_H[var4], -87);
-              var3.d((int) this.field_z[var4], 124);
-              var3.d((int) this.field_hb[var4], 120);
+              var3.writeShortLE((int) this.field_H[var4], -87);
+              var3.writeShortLE((int) this.field_z[var4], 124);
+              var3.writeShortLE((int) this.field_hb[var4], 120);
               var4++;
               if (var5 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -1087,9 +1087,9 @@ final class np extends ka {
             (decompiledFrameCompleted0)) {
             var4Lifetime1 = 0;
             while (this.field_ib > var4Lifetime1) {
-              var3.f(-1477662136, (int) this.field_H[var4Lifetime1]);
-              var3.f(-1477662136, (int) this.field_z[var4Lifetime1]);
-              var3.f(-1477662136, (int) this.field_hb[var4Lifetime1]);
+              var3.writeShort(-1477662136, (int) this.field_H[var4Lifetime1]);
+              var3.writeShort(-1477662136, (int) this.field_z[var4Lifetime1]);
+              var3.writeShort(-1477662136, (int) this.field_hb[var4Lifetime1]);
               var4Lifetime1++;
               if (var5 != 0) {
                 return;
@@ -1388,7 +1388,7 @@ final class np extends ka {
           if (null != param1 ||
             null != this.field_r) {
             is.field_Ab = var5.field_l * var6.field_l + var5.field_k * var6.field_i + var6.field_j * var5.field_s;
-            roa.field_u = var6.field_l * var5.field_j + var5.field_h * var6.field_i + var6.field_j * var5.field_q;
+            Weapon.field_u = var6.field_l * var5.field_j + var5.field_h * var6.field_i + var6.field_j * var5.field_q;
             mu.field_ub = var6.field_q * var5.field_s + (var5.field_l * var6.field_s + var5.field_k * var6.field_g);
             bva.field_c = var6.field_q * var5.field_g + (var6.field_g * var5.field_r + var6.field_s * var5.field_i);
             AllPlatformsMazeComponent.field_L = var6.field_i * var5.field_r + var5.field_i * var6.field_l + var5.field_g * var6.field_j;
@@ -1397,8 +1397,8 @@ final class np extends ka {
           if (null != param1) {
             var19 = this.field_U + this.field_T >> 1;
             var20 = this.field_k + this.field_S >> 1;
-            var21 = (int)(it.field_a * (float)this.field_eb + (roa.field_u * (float)var19 + bja.field_b) + kka.field_q * (float)var20);
-            var22 = (int)((float)var20 * kka.field_q + (it.field_a * (float)this.field_v + (roa.field_u * (float)var19 + bja.field_b)));
+            var21 = (int)(it.field_a * (float)this.field_eb + (Weapon.field_u * (float)var19 + bja.field_b) + kka.field_q * (float)var20);
+            var22 = (int)((float)var20 * kka.field_q + (it.field_a * (float)this.field_v + (Weapon.field_u * (float)var19 + bja.field_b)));
             if (var21 < this.field_R.field_Gc &&
               this.field_R.field_Gc <= var22) {
             }
@@ -2376,7 +2376,7 @@ final class np extends ka {
                 var8 = (float)(this.field_A[var4.field_k] + this.field_A[var4.field_m] + this.field_A[var4.field_b]) * 0.3333333134651184f;
                 var9 = aka.field_B + (var8 * mu.field_ub + (eqa.field_a * var7 + var6 * is.field_Ab));
                 var10 = WeaponItemBehaviour.field_s + (var6 * AllPlatformsMazeComponent.field_L + nw.field_u * var7 + bva.field_c * var8);
-                var11 = bja.field_b + (kka.field_q * var8 + (var7 * it.field_a + var6 * roa.field_u));
+                var11 = bja.field_b + (kka.field_q * var8 + (var7 * it.field_a + var6 * Weapon.field_u));
                 var12 = (float)(1.0 / Math.sqrt((double)(var11 * var11 + (var10 * var10 + var9 * var9)))) * (float)var4.field_j;
                 var2.a(var5.field_g, var12 * var11 + -var11, var9 + (float)var5.field_h - var9 * var12, var4.field_e * var5.field_f >> 7, (byte) -60, var4.field_i * var5.field_b >> 7, var12 * var10 + (-var10 + (float)var5.field_a));
                 this.field_R.a(var2, 0);
@@ -2506,7 +2506,7 @@ final class np extends ka {
           if (param1 != null ||
             this.field_r != null) {
             is.field_Ab = var5.field_i * var4.field_k + var5.field_l * var4.field_l + var4.field_s * var5.field_j;
-            roa.field_u = var4.field_q * var5.field_j + (var5.field_l * var4.field_j + var5.field_i * var4.field_h);
+            Weapon.field_u = var4.field_q * var5.field_j + (var5.field_l * var4.field_j + var5.field_i * var4.field_h);
             kka.field_q = var4.field_q * var5.field_q + (var5.field_g * var4.field_h + var4.field_j * var5.field_s);
             mu.field_ub = var4.field_s * var5.field_q + (var4.field_l * var5.field_s + var5.field_g * var4.field_k);
             AllPlatformsMazeComponent.field_L = var5.field_j * var4.field_g + (var5.field_i * var4.field_r + var4.field_i * var5.field_l);
@@ -2517,11 +2517,11 @@ final class np extends ka {
             var19 = 1;
             var20 = this.field_U + this.field_T >> 1;
             var21 = this.field_k + this.field_S >> 1;
-            var22 = (int)((float)var21 * kka.field_q + (it.field_a * (float)this.field_eb + ((float)var20 * roa.field_u + bja.field_b)));
+            var22 = (int)((float)var21 * kka.field_q + (it.field_a * (float)this.field_eb + ((float)var20 * Weapon.field_u + bja.field_b)));
             if (this.field_R.field_Gc > var22) {
               var18 = 1;
             }
-            var23 = (int)(bja.field_b + roa.field_u * (float)var20 + it.field_a * (float)this.field_v + (float)var21 * kka.field_q);
+            var23 = (int)(bja.field_b + Weapon.field_u * (float)var20 + it.field_a * (float)this.field_v + (float)var21 * kka.field_q);
             if (var23 < this.field_R.field_Gc) {
               var18 = 1;
             }
@@ -2833,9 +2833,9 @@ final class np extends ka {
                     if (stackIn_79_0 != stackIn_79_1 ||
                       var35 != 0) {
                       var12.position = var7 * var20;
-                      var12.a((byte) -35, var14_int);
-                      var12.a((byte) -35, var15_int);
-                      var12.a((byte) -35, var16_int);
+                      var12.writeIntLE((byte) -35, var14_int);
+                      var12.writeIntLE((byte) -35, var15_int);
+                      var12.writeIntLE((byte) -35, var16_int);
                       var19++;
                       continue;
                     }
@@ -2877,9 +2877,9 @@ final class np extends ka {
                   if (stackIn_95_0Lifetime1 != stackIn_95_1Lifetime1 ||
                     var35 != 0) {
                     var12.position = var20Lifetime2 * var7;
-                    var12.a(var14_intLifetime2, (byte) -72);
-                    var12.a(var15_intLifetime1, (byte) -13);
-                    var12.a(var16_intLifetime1, (byte) 81);
+                    var12.writeInt(var14_intLifetime2, (byte) -72);
+                    var12.writeInt(var15_intLifetime1, (byte) -13);
+                    var12.writeInt(var16_intLifetime1, (byte) 81);
                     var19Lifetime2++;
                     continue;
                   }
@@ -2902,11 +2902,11 @@ final class np extends ka {
               while (this.field_W > var13_intLifetime1) {
                 var14_intLifetime1 = this.a(-2117016184, (int) this.field_X[var13_intLifetime1], this.field_o[var13_intLifetime1], this.field_I[var13_intLifetime1], (int) this.field_B);
                 var12.position = var9 + var7 * this.field_H[var13_intLifetime1];
-                var12.a(var14_intLifetime1, (byte) 92);
+                var12.writeInt(var14_intLifetime1, (byte) 92);
                 var12.position = var7 * this.field_z[var13_intLifetime1] + var9;
-                var12.a(var14_intLifetime1, (byte) 91);
+                var12.writeInt(var14_intLifetime1, (byte) 91);
                 var12.position = var9 + this.field_hb[var13_intLifetime1] * var7;
-                var12.a(var14_intLifetime1, (byte) 113);
+                var12.writeInt(var14_intLifetime1, (byte) 113);
                 var13_intLifetime1++;
                 if (var35 != 0) {
                   decompiledFrameCompleted5 = false;
@@ -2984,10 +2984,10 @@ final class np extends ka {
                     var27 = 255;
                   }
                 }
-                var12.i(var25, param0 + 0);
-                var12.i(var26, 0);
-                var12.i(var27, 0);
-                var12.i(255 - (this.field_o[var34] & 255), 0);
+                var12.writeByte(var25, param0 + 0);
+                var12.writeByte(var26, 0);
+                var12.writeByte(var27, 0);
+                var12.writeByte(255 - (this.field_o[var34] & 255), 0);
                 var23Lifetime1 = this.field_z[var34];
                 var17_intLifetime1Lifetime1 = (short)var16[var23Lifetime1];
                 if (var17_intLifetime1Lifetime1 != 0) {
@@ -3028,10 +3028,10 @@ final class np extends ka {
                   var27Lifetime1 = 0;
                 }
                 var12.position = var23Lifetime1 * var7 + var9;
-                var12.i(var25Lifetime1, param0 + 0);
-                var12.i(var26Lifetime1, param0 ^ 0);
-                var12.i(var27Lifetime1, 0);
-                var12.i(255 - (255 & this.field_o[var34]), param0 + 0);
+                var12.writeByte(var25Lifetime1, param0 + 0);
+                var12.writeByte(var26Lifetime1, param0 ^ 0);
+                var12.writeByte(var27Lifetime1, 0);
+                var12.writeByte(255 - (255 & this.field_o[var34]), param0 + 0);
                 var23Lifetime2 = this.field_hb[var34];
                 var17_intLifetime1Lifetime2 = (short)var16[var23Lifetime2];
                 if (var17_intLifetime1Lifetime2 != 0) {
@@ -3066,10 +3066,10 @@ final class np extends ka {
                   }
                 }
                 var12.position = var9 + var7 * var23Lifetime2;
-                var12.i(var25Lifetime2, 0);
-                var12.i(var26Lifetime2, 0);
-                var12.i(var27Lifetime2, 0);
-                var12.i(-(this.field_o[var34] & 255) + 255, 0);
+                var12.writeByte(var25Lifetime2, 0);
+                var12.writeByte(var26Lifetime2, 0);
+                var12.writeByte(var27Lifetime2, 0);
+                var12.writeByte(-(this.field_o[var34] & 255) + 255, 0);
                 var34++;
               }
             }

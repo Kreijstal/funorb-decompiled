@@ -18,10 +18,10 @@ final class fv {
         var4.writeCipheredOpcode(param1, -2988);
         var4.position = var4.position + 1;
         int var5 = var4.position;
-        var4.i(6, 0);
-        var4.a(1736565456, param2);
+        var4.writeByte(6, 0);
+        var4.writeLong(1736565456, param2);
         int var6 = -3 % ((param0 - 18) / 52);
-        var4.d(-var5 + var4.position, (byte) -111);
+        var4.backpatchByteLength(-var5 + var4.position, (byte) -111);
     }
 
     final void a(int param0) {

@@ -37,7 +37,7 @@ final class fka {
         this.field_g.b(param0);
         this.field_y = new co();
         this.field_y.b(param0);
-        int var2 = param0.h(255);
+        int var2 = param0.readUnsignedByte(255);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_c = new co();
@@ -45,7 +45,7 @@ final class fka {
           this.field_l = new co();
           this.field_l.b(param0);
         }
-        var2 = param0.h(255);
+        var2 = param0.readUnsignedByte(255);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_e = new co();
@@ -53,7 +53,7 @@ final class fka {
           this.field_p = new co();
           this.field_p.b(param0);
         }
-        var2 = param0.h(255);
+        var2 = param0.readUnsignedByte(255);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_k = new co();
@@ -62,18 +62,18 @@ final class fka {
           this.field_h.b(param0);
         }
         for (var3 = 0; var3 < 10; var3++) {
-          var4 = param0.d((byte) -46);
+          var4 = param0.readUnsignedSmart((byte) -46);
           if (var4 == 0) {
             break;
           }
           this.field_a[var3] = var4;
-          this.field_u[var3] = param0.f((byte) -128);
-          this.field_t[var3] = param0.d((byte) -46);
+          this.field_u[var3] = param0.readSignedSmart((byte) -128);
+          this.field_t[var3] = param0.readUnsignedSmart((byte) -46);
         }
-        this.field_f = param0.d((byte) -46);
-        this.field_m = param0.d((byte) -46);
-        this.field_v = param0.d(123);
-        this.field_i = param0.d(126);
+        this.field_f = param0.readUnsignedSmart((byte) -46);
+        this.field_m = param0.readUnsignedSmart((byte) -46);
+        this.field_v = param0.readUnsignedShort(123);
+        this.field_i = param0.readUnsignedShort(126);
         this.field_n = new AudioFilter();
         this.field_d = new co();
         this.field_n.a(param0, this.field_d);

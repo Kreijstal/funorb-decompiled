@@ -372,7 +372,7 @@ final class km extends DualLinkNode {
         int var8Lifetime1;
         int var9Lifetime1Lifetime1;
         try {
-          var2_int = param0.h(255);
+          var2_int = param0.readUnsignedByte(255);
           var3 = 0;
           var4 = 0;
           this.field_l = new ci[var2_int];
@@ -390,7 +390,7 @@ final class km extends DualLinkNode {
             array$2 = new int[var8];
             var12[var6] = array$2;
             for (var9 = 0; var8 > var9; var9++) {
-              var12[var6][var9] = param0.h(255);
+              var12[var6][var9] = param0.readUnsignedByte(255);
             }
             this.field_l[var6] = var13;
           }
@@ -418,10 +418,10 @@ final class km extends DualLinkNode {
             }
             var12[var6Lifetime1] = null;
           }
-          this.field_k = this.field_l[param0.h(255)];
-          this.field_r = this.field_l[param0.h(255)];
+          this.field_k = this.field_l[param0.readUnsignedByte(255)];
+          this.field_r = this.field_l[param0.readUnsignedByte(255)];
           var5 = (int[][]) null;
-          this.field_m = this.field_l[param0.h(255)];
+          this.field_m = this.field_l[param0.readUnsignedByte(255)];
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

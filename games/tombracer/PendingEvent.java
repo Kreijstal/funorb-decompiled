@@ -51,7 +51,7 @@ final class PendingEvent extends IntrusiveNode {
         return false;
     }
 
-    private final int a(boolean param0) {
+    private final int getStart(boolean param0) {
         if (param0) {
           this.c(40, 38);
           return this.start;
@@ -94,8 +94,8 @@ final class PendingEvent extends IntrusiveNode {
           boolean decompiledFrameRemainder0 = true;
           if (this.duration != param1 &&
             param0.duration != 0) {
-            var3_int = this.a(false);
-            var4 = param0.a(false);
+            var3_int = this.getStart(false);
+            var4 = param0.getStart(false);
             var5 = this.c(-30481);
             var6 = param0.c(param1 ^ -30481);
             if (var4 <= var5 &&
@@ -175,7 +175,7 @@ final class PendingEvent extends IntrusiveNode {
         }
     }
 
-    final int a(int param0) {
+    final int getCourse(int param0) {
         if (param0 != 3) {
           return -84;
         }
@@ -268,7 +268,7 @@ final class PendingEvent extends IntrusiveNode {
           if (param1 != -19733) {
             this.c(123, -124);
           }
-          this.field_g.a(param0, -5);
+          this.field_g.encode(param0, -5);
           param0.writeBits((byte) -32, this.instigator, 3);
           param0.writeBits((byte) -2, this.course, 3);
           param0.writeBits((byte) -128, this.start, 32);

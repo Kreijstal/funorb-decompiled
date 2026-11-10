@@ -24,7 +24,7 @@ final class nga extends ci {
         try {
           var4_int = param2;
           if (0 == var4_int) {
-            this.field_m = (param1.h(255) << 12) / 255;
+            this.field_m = (param1.readUnsignedByte(255) << 12) / 255;
           }
           if (param0 == 107) {
             return;

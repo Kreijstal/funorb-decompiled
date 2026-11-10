@@ -71,7 +71,7 @@ final class sba extends ci {
         RuntimeException var4 = null;
         try {
           if (param2 == 0) {
-            stackIn_4_1 = (param1.h(255) == 1);
+            stackIn_4_1 = (param1.readUnsignedByte(255) == 1);
             this.field_g = stackIn_4_1;
           }
           if (param0 != 107) {

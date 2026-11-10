@@ -86,13 +86,13 @@ final class MirrorComponent extends kna {
         RuntimeException decompiledCaughtException = null;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          param0.h(255);
-          var2_int = param0.h(param1 + 255);
+          param0.readUnsignedByte(255);
+          var2_int = param0.readUnsignedByte(param1 + 255);
           var3 = gu.a((byte) -62, var2_int);
-          var3.field_f = param0.h(param1 + 255);
-          var4 = param0.h(param1 ^ 255);
+          var3.field_f = param0.readUnsignedByte(param1 + 255);
+          var4 = param0.readUnsignedByte(param1 ^ 255);
           for (var5 = param1; var5 < var4; var5++) {
-            var6 = param0.h(param1 + 255);
+            var6 = param0.readUnsignedByte(param1 + 255);
             var3.a((byte) 107, param0, var6);
           }
           var3.b((byte) 116);
@@ -116,9 +116,9 @@ final class MirrorComponent extends kna {
         super(param0, param1);
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "aw.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -155,7 +155,7 @@ final class MirrorComponent extends kna {
           var11.b((byte) -11, this.field_k, this.field_l);
           var11.a((byte) -3, 4);
           var11.h(param1, param1 - 3);
-          if (this.field_m != 19) {
+          if (this.typeId != 19) {
             var11.e(false, 120);
           } else {
             var11.e(true, 117);
@@ -173,7 +173,7 @@ final class MirrorComponent extends kna {
           var6.addBehaviour((byte) 83, (Behaviour) (var7));
           var11.addChild(-98, var6);
           var8 = rm.field_a;
-          if (this.field_m != 19) {
+          if (this.typeId != 19) {
             var13 = (nq) (var8.a(16, param1 ^ 105));
             var13.b(8022, 4);
             var11.a((TrapPart) null, (byte) 124, var13);

@@ -115,10 +115,10 @@ final class kw extends qe {
     final static void a(int param0, boolean param1, int param2) {
         BitPacketBuffer var3 = ql.field_k;
         var3.writeCipheredOpcode(param0, -2988);
-        var3.i(3, 0);
-        var3.i(10, 0);
+        var3.writeByte(3, 0);
+        var3.writeByte(10, 0);
         if (!param1) {
-          var3.f(-1477662136, param2);
+          var3.writeShort(-1477662136, param2);
           return;
         }
     }

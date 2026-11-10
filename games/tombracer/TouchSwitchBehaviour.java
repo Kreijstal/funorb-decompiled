@@ -18,9 +18,9 @@ final class TouchSwitchBehaviour extends Behaviour implements ut {
         }
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           this.field_p.a(this.h((byte) 113), (byte) 82, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "rh.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -43,7 +43,7 @@ final class TouchSwitchBehaviour extends Behaviour implements ut {
         return 16776960;
     }
 
-    final int a(boolean param0) {
+    final int getTypeId(boolean param0) {
         if (param0) {
           field_o = (String) null;
           return 19;
@@ -57,15 +57,15 @@ final class TouchSwitchBehaviour extends Behaviour implements ut {
         if (param1 <= -98) {
           var2 = ql.field_k;
           var2.writeCipheredOpcode(param0, -2988);
-          var2.i(1, 0);
-          var2.i(2, 0);
+          var2.writeByte(1, 0);
+          var2.writeByte(2, 0);
           return;
         }
         field_r = (String) null;
         var2Lifetime1 = ql.field_k;
         var2Lifetime1.writeCipheredOpcode(param0, -2988);
-        var2Lifetime1.i(1, 0);
-        var2Lifetime1.i(2, 0);
+        var2Lifetime1.writeByte(1, 0);
+        var2Lifetime1.writeByte(2, 0);
     }
 
     final void g(int param0) {

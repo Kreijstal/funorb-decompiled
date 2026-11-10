@@ -169,7 +169,7 @@ final class ssa {
         var17 = TombRacer.field_G ? 1 : 0;
         try {
           var4 = -82 % ((41 - param1) / 37);
-          var3_int = param0.d(121);
+          var3_int = param0.readUnsignedShort(121);
           if (var3_int == 0) {
             if (!param2) {
               return null;
@@ -180,7 +180,7 @@ final class ssa {
           }
           var5 = param0.position;
           var6 = var5 + var3_int;
-          var7 = param0.d(126);
+          var7 = param0.readUnsignedShort(126);
           if (2 < var7) {
             throw ssa.<RuntimeException>$cfr$sneakyThrow(new Exception("Local: header error: version=" + var7));
           }
@@ -196,27 +196,27 @@ final class ssa {
               var19 = var8;
               var21 = param0;
               for (var11 = 0; var11 < 8; var11++) {
-                var19[var11] = var21.e(100);
+                var19[var11] = var21.readInt(100);
               }
             } else {
               var20 = var8;
               var22 = param0;
-              var11 = var22.h(255);
+              var11 = var22.readUnsignedByte(255);
               for (var12 = 0; var11 > var12; var12++) {
-                var20[var12] = var22.e(-35);
+                var20[var12] = var22.readInt(-35);
               }
             }
           } else {
-            var8[0] = param0.e(105);
+            var8[0] = param0.readInt(105);
           }
-          var9 = param0.h(255);
+          var9 = param0.readUnsignedByte(255);
           if (var9 > 0) {
             var10 = new int[var9][];
             var11 = 0;
             while (var11 < var9) {
               var12 = param0.position;
               do {
-                var13_int = param0.h(255);
+                var13_int = param0.readUnsignedByte(255);
               } while (var13_int >= 128);
               array$0 = new int[31 + (-var12 + param0.position) * 7 >> 5];
               ((Object[]) (var10))[var11] = array$0;
@@ -225,7 +225,7 @@ final class ssa {
               var14 = 0;
               var15 = 0;
               while (true) {
-                var16 = param0.h(255);
+                var16 = param0.readUnsignedByte(255);
                 var13[var14] = var13[var14] + (SnakePitBehaviour.c(var16, 127) << var15);
                 if (var15 >= 26) {
                   var13[var14 + 1] = var13[var14 + 1] + (SnakePitBehaviour.c(127, var16) >> -var15 + 32);
@@ -242,17 +242,17 @@ final class ssa {
           }
           var10 = null;
           if (param0.position < var6) {
-            var11 = param0.h(255);
+            var11 = param0.readUnsignedByte(255);
             if (var11 > 0) {
               var32 = new byte[var11];
-              param0.a(var32, 0, -101, var11);
+              param0.readBytes(var32, 0, -101, var11);
             }
             var12 = var6 - param0.position;
             if (0 < var12) {
               var27 = new byte[var12];
               var24 = var27;
               var10 = var24;
-              param0.a(var27, 0, -93, var12);
+              param0.readBytes(var27, 0, -93, var12);
             }
           }
           if (param0.position > var6) {

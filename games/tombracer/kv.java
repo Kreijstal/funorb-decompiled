@@ -62,19 +62,19 @@ final class kv {
         int var4 = 0;
         if (param2 == 95) {
           jg.field_a.position = 0;
-          jg.field_a.i(12, 0);
-          jg.field_a.a(PlatformBehaviour.field_p.nextInt(), (byte) -108);
-          jg.field_a.a(PlatformBehaviour.field_p.nextInt(), (byte) 111);
-          jg.field_a.i(param1, 0);
-          jg.field_a.i(param0, 0);
-          jg.field_a.f(-1477662136, param3);
-          jg.field_a.a(126, PooledObject.field_f, oca.field_a);
+          jg.field_a.writeByte(12, 0);
+          jg.field_a.writeInt(PlatformBehaviour.field_p.nextInt(), (byte) -108);
+          jg.field_a.writeInt(PlatformBehaviour.field_p.nextInt(), (byte) 111);
+          jg.field_a.writeByte(param1, 0);
+          jg.field_a.writeByte(param0, 0);
+          jg.field_a.writeShort(-1477662136, param3);
+          jg.field_a.rsaEncryptContents(126, PooledObject.field_f, oca.field_a);
           ql.field_k.writeCipheredOpcode(18, param2 - 3083);
           fieldTemp$0 = ql.field_k.position + 1;
           ql.field_k.position = ql.field_k.position + 1;
           var4 = fieldTemp$0;
-          ql.field_k.a(0, jg.field_a.payload, jg.field_a.position, param2 - 42);
-          ql.field_k.d(ql.field_k.position - var4, (byte) -19);
+          ql.field_k.writeBytes(0, jg.field_a.payload, jg.field_a.position, param2 - 42);
+          ql.field_k.backpatchByteLength(ql.field_k.position - var4, (byte) -19);
           return;
         }
     }

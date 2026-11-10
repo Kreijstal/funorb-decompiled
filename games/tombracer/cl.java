@@ -200,14 +200,14 @@ final class cl extends ci {
           if (var4_int != 0) {
             if (1 != var4_int) {
               if (var4_int == 2) {
-                stackIn_14_1 = (1 == param1.h(255));
+                stackIn_14_1 = (1 == param1.readUnsignedByte(255));
                 this.field_g = stackIn_14_1;
               }
             } else {
-              this.field_m = param1.h(255);
+              this.field_m = param1.readUnsignedByte(255);
             }
           } else {
-            this.field_n = param1.h(255);
+            this.field_n = param1.readUnsignedByte(255);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

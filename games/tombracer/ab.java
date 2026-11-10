@@ -141,7 +141,7 @@ final class ab extends qra {
         var16 = TombRacer.field_G ? 1 : 0;
         Room.field_j.a(0, 0);
         var3 = 0;
-        var4 = this.field_o.g(-1);
+        var4 = this.field_o.getCurrentPlayerId(-1);
         if (!this.field_h.d((byte) 63) &&
           this.field_h.field_x == var4) {
           var3 = 1;
@@ -159,7 +159,7 @@ final class ab extends qra {
             SocketConnector.a(gl.$cfr$intArgs$a$53ce4ab4c593(83, cba.field_c, new String[]{this.field_h.j(var4, 9)}).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, 32 + var9, var8, 1, (byte) 60, gg.field_f.a());
           } else {
             SocketConnector.a(us.field_c.toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, var9 + 32, var8, 1, (byte) 60, gg.field_f.a());
-            var10 = (-this.field_o.c(-1) + 750) / 50 + 1;
+            var10 = (-this.field_o.getCurrentPlayerTicks(-1) + 750) / 50 + 1;
             if (var10 < 0) {
               var10 = 0;
             }
@@ -295,7 +295,7 @@ final class ab extends qra {
         int var4 = 0;
         jha var5 = null;
         jha var6 = null;
-        if (this.field_o.g(-1) == param0) {
+        if (this.field_o.getCurrentPlayerId(-1) == param0) {
           if (param2 == -1) {
             var6 = ab.a(-9, gl.$cfr$intArgs$a$53ce4ab4c593(86, oba.field_n, new String[]{this.field_c.e(param0, 23807)}));
             iqa.field_c.a(0, var6);
@@ -344,7 +344,7 @@ final class ab extends qra {
         if (!param0) {
           field_n = (sq) null;
         }
-        stackIn_6_0 = (!this.field_h.d((byte) 98)) && (this.field_h.field_x == this.field_o.g(-1));
+        stackIn_6_0 = (!this.field_h.d((byte) 98)) && (this.field_h.field_x == this.field_o.getCurrentPlayerId(-1));
         return stackIn_6_0;
     }
 
@@ -379,16 +379,16 @@ final class ab extends qra {
         if (param0 != 80) {
           this.e(-116);
         }
-        if (this.field_o.f(param0 ^ -28956)) {
+        if (this.field_o.isFinished(param0 ^ -28956)) {
           this.field_r = 100;
         }
         if (param1) {
           this.c(7);
         }
         this.field_v = this.field_v + 1;
-        if (this.field_o.g(-1) == this.field_h.field_x &&
-          !(this.field_o.c(-1) <= 500) &&
-          (750 - this.field_o.c(-1)) % 50 == 0) {
+        if (this.field_o.getCurrentPlayerId(-1) == this.field_h.field_x &&
+          !(this.field_o.getCurrentPlayerTicks(-1) <= 500) &&
+          (750 - this.field_o.getCurrentPlayerTicks(-1)) % 50 == 0) {
           this.field_o.a((byte) -124);
         }
     }

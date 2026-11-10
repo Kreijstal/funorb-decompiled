@@ -41,20 +41,20 @@ final class mca {
           var8.writeCipheredOpcode(param2, -2988);
           var8.position = var8.position + 1;
           var4 = var8.position;
-          var8.i(1, 0);
-          var8.f(-1477662136, param0.field_l);
-          var8.f(-1477662136, param0.field_f);
-          var8.f(param1 ^ -1477662136, param0.field_n);
-          var8.a(param0.field_i, (byte) -36);
-          var8.a(param0.field_g, (byte) -75);
-          var8.a(param0.field_k, (byte) -63);
-          var8.a(param0.field_j, (byte) 124);
-          var8.i(param0.field_o.length, 0);
+          var8.writeByte(1, 0);
+          var8.writeShort(-1477662136, param0.field_l);
+          var8.writeShort(-1477662136, param0.field_f);
+          var8.writeShort(param1 ^ -1477662136, param0.field_n);
+          var8.writeInt(param0.field_i, (byte) -36);
+          var8.writeInt(param0.field_g, (byte) -75);
+          var8.writeInt(param0.field_k, (byte) -63);
+          var8.writeInt(param0.field_j, (byte) 124);
+          var8.writeByte(param0.field_o.length, 0);
           for (var5 = param1; var5 < param0.field_o.length; var5++) {
-            var7.a(param0.field_o[var5], (byte) 96);
+            var7.writeInt(param0.field_o[var5], (byte) 96);
           }
-          var8.g(var4, 64);
-          var8.d(-var4 + var8.position, (byte) 72);
+          var8.appendCrc32(var4, 64);
+          var8.backpatchByteLength(-var4 + var8.position, (byte) 72);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "mca.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

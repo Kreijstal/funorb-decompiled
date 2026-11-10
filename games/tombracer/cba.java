@@ -34,7 +34,7 @@ final class cba {
           if (param0 != 64) {
             field_a = (java.applet.Applet) null;
           }
-          stackIn_3_0 = new qo(param1.b(false), param1.b(false), param1.b(false), param1.b(false), param1.a(param0 - 32832), param1.a(-32768), param1.h(param0 ^ 191));
+          stackIn_3_0 = new qo(param1.readShort(false), param1.readShort(false), param1.readShort(false), param1.readShort(false), param1.readUnsignedMedium(param0 - 32832), param1.readUnsignedMedium(-32768), param1.readUnsignedByte(param0 ^ 191));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

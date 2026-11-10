@@ -156,7 +156,7 @@ final class MiscItemBehaviour extends ItemBehaviour {
         this.field_u = param0;
     }
 
-    final int a(boolean param0) {
+    final int getTypeId(boolean param0) {
         if (param0) {
           field_v = (hs) null;
           return 25;
@@ -164,9 +164,9 @@ final class MiscItemBehaviour extends ItemBehaviour {
         return 25;
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           param1.writeBits((byte) -128, this.field_u, 6);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ue.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

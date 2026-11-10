@@ -155,13 +155,13 @@ final class bj extends ci {
         try {
           var4_int = param2;
           if (var4_int == 0) {
-            this.field_n = param1.h(255);
+            this.field_n = param1.readUnsignedByte(255);
           } else {
             if (var4_int == 1) {
-              this.field_r = param1.d(121);
+              this.field_r = param1.readUnsignedShort(121);
             } else {
               if (2 == var4_int) {
-                this.field_q = param1.h(255);
+                this.field_q = param1.readUnsignedByte(255);
               }
             }
           }

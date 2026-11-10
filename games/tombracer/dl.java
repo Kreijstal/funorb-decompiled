@@ -227,7 +227,7 @@ final class dl extends me {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var3_int = param0.d((byte) -46);
+            var3_int = param0.readUnsignedSmart((byte) -46);
             if (var3_int > param1) {
               var3_int = param1;
             }

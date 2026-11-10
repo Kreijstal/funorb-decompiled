@@ -65,7 +65,7 @@ final class DoorwayComponent extends kna {
         try {
           var20 = new Trap(param2, param0);
           var20.b((byte) -11, this.field_k, this.field_l);
-          var6_int = this.field_m;
+          var6_int = this.typeId;
           if (var6_int != 44 &&
             var6_int != 45) {
             if (var6_int != 20 &&
@@ -159,7 +159,7 @@ final class DoorwayComponent extends kna {
 
     final void q(byte param0) {
         super.q(param0);
-        int var2 = this.field_m;
+        int var2 = this.typeId;
         if (20 == var2) {
           this.field_J = 1;
           this.field_H = 3;
@@ -208,9 +208,9 @@ final class DoorwayComponent extends kna {
         return 7;
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "mh.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

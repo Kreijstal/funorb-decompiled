@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class WeaponItemBehaviour extends ItemBehaviour {
-    private roa field_t;
+    private Weapon field_t;
     static float field_s;
 
     final void g(byte param0) {
         this.field_t = this.field_t.e(-1);
         if (param0 != 3) {
-          roa var3 = (roa) null;
-          this.a((roa) null, 81);
+          Weapon var3 = (Weapon) null;
+          this.a((Weapon) null, 81);
         }
     }
 
@@ -52,19 +52,19 @@ final class WeaponItemBehaviour extends ItemBehaviour {
         }
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
           if (param0) {
             field_s = 2.416393518447876f;
           }
-          super.a(param0, param1);
+          super.encode(param0, param1);
           this.field_t.a(param1, (byte) 7);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ef.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final int a(boolean param0) {
+    final int getTypeId(boolean param0) {
         if (param0) {
           field_s = 0.07193703204393387f;
           return 5;
@@ -72,7 +72,7 @@ final class WeaponItemBehaviour extends ItemBehaviour {
         return 5;
     }
 
-    final void a(roa param0, int param1) {
+    final void a(Weapon param0, int param1) {
         if (param1 != 5) {
           return;
         }

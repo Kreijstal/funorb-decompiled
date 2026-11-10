@@ -88,9 +88,9 @@ final class kc {
           var5.writeCipheredOpcode(param1, -2988);
           var5.position = var5.position + 1;
           var6 = var5.position;
-          var5.i(3, 0);
-          var5.a(param0, param2);
-          var5.d(-var6 + var5.position, (byte) 117);
+          var5.writeByte(3, 0);
+          var5.writeString(param0, param2);
+          var5.backpatchByteLength(-var6 + var5.position, (byte) 117);
           stackIn_14_0 = null;
           return (String) (stackIn_14_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

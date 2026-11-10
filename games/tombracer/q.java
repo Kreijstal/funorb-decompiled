@@ -11,14 +11,14 @@ final class q extends ql {
     final static void a(byte param0, int param1, int param2) {
         BitPacketBuffer var3 = ql.field_k;
         var3.writeCipheredOpcode(param1, -2988);
-        var3.i(3, 0);
-        var3.i(8, 0);
+        var3.writeByte(3, 0);
+        var3.writeByte(8, 0);
         if (param0 < -100) {
-          var3.f(-1477662136, param2);
+          var3.writeShort(-1477662136, param2);
           return;
         }
         field_r = true;
-        var3.f(-1477662136, param2);
+        var3.writeShort(-1477662136, param2);
     }
 
     public final int hashCode() {

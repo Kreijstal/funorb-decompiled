@@ -90,26 +90,26 @@ final class RoomCompletedScreen extends me {
           jg.field_a.position = 0;
           AllPlatformsMazeComponent.field_K[3] = (int)PathMoverComponent.field_L;
           AllPlatformsMazeComponent.field_K[2] = (int)(PathMoverComponent.field_L >> 32);
-          jg.field_a.a(AllPlatformsMazeComponent.field_K[0], (byte) 80);
-          jg.field_a.a(AllPlatformsMazeComponent.field_K[1], (byte) 124);
-          jg.field_a.a(AllPlatformsMazeComponent.field_K[2], (byte) -28);
+          jg.field_a.writeInt(AllPlatformsMazeComponent.field_K[0], (byte) 80);
+          jg.field_a.writeInt(AllPlatformsMazeComponent.field_K[1], (byte) 124);
+          jg.field_a.writeInt(AllPlatformsMazeComponent.field_K[2], (byte) -28);
           if (param0 < 19) {
             return;
           }
-          jg.field_a.a(AllPlatformsMazeComponent.field_K[3], (byte) 104);
+          jg.field_a.writeInt(AllPlatformsMazeComponent.field_K[3], (byte) 104);
           ni.a(jg.field_a, (byte) 77);
-          jg.field_a.f(-1477662136, param2);
+          jg.field_a.writeShort(-1477662136, param2);
           param3.a(jg.field_a, false);
           ql.field_k.position = 0;
           if (!param1) {
-            ql.field_k.i(16, 0);
+            ql.field_k.writeByte(16, 0);
           } else {
-            ql.field_k.i(18, 0);
+            ql.field_k.writeByte(18, 0);
           }
           ql.field_k.position = ql.field_k.position + 2;
           var5_int = ql.field_k.position;
-          ql.field_k.a(ClientException.field_c, (byte) 125);
-          ql.field_k.a(1736565456, du.field_h);
+          ql.field_k.writeInt(ClientException.field_c, (byte) 125);
+          ql.field_k.writeLong(1736565456, du.field_h);
           var6 = 0;
           if (ft.field_a) {
             var6 = var6 | 1;
@@ -123,17 +123,17 @@ final class RoomCompletedScreen extends me {
           if (ji.field_d != null) {
             var6 = var6 | 16;
           }
-          ql.field_k.i(var6, 0);
+          ql.field_k.writeByte(var6, 0);
           var7 = qla.a(0, di.a(46));
           if (var7 == null) {
             var7 = "";
           }
-          ql.field_k.a(var7, false);
+          ql.field_k.writeString(var7, false);
           if (null != ji.field_d) {
-            ql.field_k.a(ji.field_d, (byte) 0);
+            ql.field_k.writeVersionedString(ji.field_d, (byte) 0);
           }
           bna.a(oca.field_a, false, PooledObject.field_f, ql.field_k, jg.field_a);
-          ql.field_k.b(ql.field_k.position - var5_int, (byte) 114);
+          ql.field_k.backpatchShortLength(ql.field_k.position - var5_int, (byte) 114);
           bl.a(-1, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

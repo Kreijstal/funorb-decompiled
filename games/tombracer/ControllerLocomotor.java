@@ -126,17 +126,17 @@ final class ControllerLocomotor extends Locomotor {
         }
     }
 
-    final void a(BitPacketBuffer param0, byte param1) {
+    final void encode(BitPacketBuffer param0, byte param1) {
         int var3_int = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
         try {
-          super.a(param0, (byte) -128);
+          super.encode(param0, (byte) -128);
           param0.writeBits((byte) 7, this.field_u.length, 2);
           if (param1 > -78) {
             this.b(-101);
           }
           for (var3_int = 0; var3_int < this.field_u.length; var3_int++) {
-            this.field_u[var3_int].a(param0, (byte) -117);
+            this.field_u[var3_int].encode(param0, (byte) -117);
           }
           param0.writeBits((byte) -128, this.field_s, 2);
         } catch (RuntimeException runtimeException) {
@@ -144,7 +144,7 @@ final class ControllerLocomotor extends Locomotor {
         }
     }
 
-    final int c(int param0) {
+    final int getTypeId(int param0) {
         if (param0 != 1) {
           field_q = (String) null;
         }

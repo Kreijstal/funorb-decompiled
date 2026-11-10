@@ -48,7 +48,7 @@ final class BladeShooterComponent extends ShooterComponent {
     final Trap a(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         WeaponShooterBehaviour var5 = null;
-        roa var6 = null;
+        Weapon var6 = null;
         mfa var7 = null;
         boa var8 = null;
         Trap var9 = null;
@@ -105,9 +105,9 @@ final class BladeShooterComponent extends ShooterComponent {
         return false;
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "qta.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -116,7 +116,7 @@ final class BladeShooterComponent extends ShooterComponent {
     final int t(int param0) {
         if (param0 != 8) {
           BitPacketBuffer var3 = (BitPacketBuffer) null;
-          this.a(false, (BitPacketBuffer) null);
+          this.encode(false, (BitPacketBuffer) null);
           return 7;
         }
         return 7;

@@ -9,7 +9,7 @@ final class StripedMazeGenerator extends MazeGenerator {
         super(param0);
     }
 
-    final void a(int param0, int param1, hj param2, int param3) {
+    final void generate(int param0, int param1, MazeGrid param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -22,18 +22,18 @@ final class StripedMazeGenerator extends MazeGenerator {
         int var6Lifetime1;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          for (var5_int = 1; -1 + param2.field_f > var5_int; var5_int++) {
-            for (var6 = 1; -1 + param2.field_a > var6; var6 += 2) {
-              param2.a(var6, 0, 0, var5_int);
+          for (var5_int = 1; -1 + param2.width > var5_int; var5_int++) {
+            for (var6 = 1; -1 + param2.height > var6; var6 += 2) {
+              param2.setCell(var6, 0, 0, var5_int);
             }
           }
           var5_intLifetime1 = 2;
           if (param1 < 73) {
             StripedMazeGenerator.releaseStatics(78);
           }
-          while (var5_intLifetime1 < -2 + param2.field_a) {
-            var6Lifetime1 = 1 + this.random.a(param2.field_f - 2, 0);
-            param2.a(var5_intLifetime1, 0, 0, var6Lifetime1);
+          while (var5_intLifetime1 < -2 + param2.height) {
+            var6Lifetime1 = 1 + this.random.a(param2.width - 2, 0);
+            param2.setCell(var5_intLifetime1, 0, 0, var6Lifetime1);
             var5_intLifetime1 += 2;
           }
           return;

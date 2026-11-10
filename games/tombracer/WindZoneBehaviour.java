@@ -218,7 +218,7 @@ final class WindZoneBehaviour extends Behaviour {
         }
     }
 
-    final int a(boolean param0) {
+    final int getTypeId(boolean param0) {
         if (param0) {
           return -114;
         }
@@ -234,9 +234,9 @@ final class WindZoneBehaviour extends Behaviour {
         return stackIn_7_0;
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           param1.writeBits((byte) -128, this.field_q, 2);
           param1.writeBits((byte) 44, this.field_r, 4);
           param1.writeBits((byte) -128, this.field_p, 4);

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class av {
-    private hj field_f;
+    private MazeGrid field_f;
     static String field_b;
     private int[][] field_a;
     private int field_c;
@@ -15,10 +15,10 @@ final class av {
         int discarded$0 = 0;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
-        for (var2 = 0; var2 < this.field_f.field_f; var2++) {
-          for (var3 = 0; var3 < this.field_f.field_a; var3++) {
-            if (this.c(-124, this.field_f.b((byte) -5, var3, var2))) {
-              this.field_f.a(var3, 0, 0, var2);
+        for (var2 = 0; var2 < this.field_f.width; var2++) {
+          for (var3 = 0; var3 < this.field_f.height; var3++) {
+            if (this.c(-124, this.field_f.getCell((byte) -5, var3, var2))) {
+              this.field_f.setCell(var3, 0, 0, var2);
             }
           }
         }
@@ -81,10 +81,10 @@ final class av {
 
     private final void a(boolean param0, int param1, int param2, int param3) {
         int var7 = 0;
-        if (!this.field_f.a(param1, param2, (byte) -128)) {
+        if (!this.field_f.isInBounds(param1, param2, (byte) -128)) {
           return;
         }
-        int var5 = this.field_f.b((byte) -5, param2, param1);
+        int var5 = this.field_f.getCell((byte) -5, param2, param1);
         int var6 = 0;
         if (var5 == 0) {
           var6 = 1;
@@ -99,7 +99,7 @@ final class av {
         if (var6 == 0) {
           return;
         }
-        this.field_f.a(param2, this.b(param3, 8421504), 0, param1);
+        this.field_f.setCell(param2, this.b(param3, 8421504), 0, param1);
         param3++;
         this.a(param0, -1 + param1, param2, param3);
         this.a(true, 1 + param1, param2, param3);
@@ -116,10 +116,10 @@ final class av {
         int var7;
         int var8;
         var8 = TombRacer.field_G ? 1 : 0;
-        if (this.field_f.b((byte) -5, this.field_c, this.field_d) > -100) {
+        if (this.field_f.getCell((byte) -5, this.field_c, this.field_d) > -100) {
           return;
         }
-        var2 = this.a((byte) -111, this.field_f.b((byte) -5, this.field_c, this.field_d));
+        var2 = this.a((byte) -111, this.field_f.getCell((byte) -5, this.field_c, this.field_d));
         var3 = var2;
         this.field_a = new int[var2][2];
         if (param0 <= 57) {
@@ -164,7 +164,7 @@ final class av {
 
     private final int b(int param0, int param1) {
         if (param1 != 8421504) {
-          this.field_f = (hj) null;
+          this.field_f = (MazeGrid) null;
         }
         return -param0 - 100;
     }
@@ -190,8 +190,8 @@ final class av {
         int var4Lifetime1;
         var6 = TombRacer.field_G ? 1 : 0;
         var8 = new IntrusiveDeque();
-        for (var3_int = 0; this.field_f.field_f > var3_int; var3_int++) {
-          for (var4 = 0; this.field_f.field_a > var4; var4++) {
+        for (var3_int = 0; this.field_f.width > var3_int; var3_int++) {
+          for (var4 = 0; this.field_f.height > var4; var4++) {
             var5_int = 0;
             if (this.b(var4, var3_int, -51)) {
               if (this.b(var4, -1 + var3_int, 67)) {
@@ -246,10 +246,10 @@ final class av {
 
     private final int a(int param0, int param1, int param2) {
         int var4 = 52 % ((26 - param0) / 61);
-        if (!this.field_f.a(param2, param1, (byte) -128)) {
+        if (!this.field_f.isInBounds(param2, param1, (byte) -128)) {
           return 0;
         }
-        int var5 = this.field_f.b((byte) -5, param1, param2);
+        int var5 = this.field_f.getCell((byte) -5, param1, param2);
         if (!this.c(-118, var5)) {
           return 0;
         }
@@ -276,14 +276,14 @@ final class av {
     }
 
     private final boolean b(int param0, int param1, int param2) {
-        if (!this.field_f.a(param1, param0, (byte) -128)) {
+        if (!this.field_f.isInBounds(param1, param0, (byte) -128)) {
           return true;
         }
         int var4 = 6 / ((5 - param2) / 55);
-        return this.field_f.b((byte) -5, param0, param1) == 0 ? true : false;
+        return this.field_f.getCell((byte) -5, param0, param1) == 0 ? true : false;
     }
 
-    av(hj param0) {
+    av(MazeGrid param0) {
         try {
           this.field_f = param0;
         } catch (RuntimeException runtimeException) {

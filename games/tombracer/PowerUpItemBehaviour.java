@@ -18,10 +18,10 @@ final class PowerUpItemBehaviour extends ItemBehaviour {
         }
     }
 
-    final int a(boolean param0) {
+    final int getTypeId(boolean param0) {
         if (param0) {
           BitPacketBuffer var3 = (BitPacketBuffer) null;
-          this.a(false, (BitPacketBuffer) null);
+          this.encode(false, (BitPacketBuffer) null);
           return 7;
         }
         return 7;
@@ -34,9 +34,9 @@ final class PowerUpItemBehaviour extends ItemBehaviour {
         this.field_x = this.field_x.e(-1);
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           this.field_x.a(-29928, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "rl.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

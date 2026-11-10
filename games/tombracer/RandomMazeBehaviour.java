@@ -14,7 +14,7 @@ final class RandomMazeBehaviour extends Behaviour {
     private int field_x;
     static boolean field_n;
     private int field_t;
-    private hj field_z;
+    private MazeGrid field_z;
     private int field_w;
 
     final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, ffa param6) {
@@ -64,12 +64,12 @@ final class RandomMazeBehaviour extends Behaviour {
           }
           var11 = var11 / this.field_t;
           var13 = var13 / this.field_t;
-          var10 = za.$cfr$intArgs$a$c604db63f465(0, 113, this.field_z.field_f - param2, var10);
-          var11 = za.$cfr$intArgs$a$c604db63f465(0, 99, this.field_z.field_f - 1, var11);
+          var10 = za.$cfr$intArgs$a$c604db63f465(0, 113, this.field_z.width - param2, var10);
+          var11 = za.$cfr$intArgs$a$c604db63f465(0, 99, this.field_z.width - 1, var11);
           for (var14 = var10; var11 >= var14; var14++) {
             for (var15 = var12; var13 >= var15; var15++) {
-              if (this.field_z.a(var14, var15, (byte) -128) &&
-                this.field_z.b((byte) -5, var15, var14) > 0) {
+              if (this.field_z.isInBounds(var14, var15, (byte) -128) &&
+                this.field_z.getCell((byte) -5, var15, var14) > 0) {
                 return true;
               }
             }
@@ -163,7 +163,7 @@ final class RandomMazeBehaviour extends Behaviour {
         }
     }
 
-    final int a(boolean param0) {
+    final int getTypeId(boolean param0) {
         if (param0) {
           this.field_t = 114;
         }
@@ -240,11 +240,11 @@ final class RandomMazeBehaviour extends Behaviour {
             this.a(10, -109, (pc) null, 116);
           }
           var9 = new nf();
-          var9.a(var6, var7, this.field_z.field_a, this.field_t, var5, 0, this.field_z.field_f, var8);
+          var9.a(var6, var7, this.field_z.height, this.field_t, var5, 0, this.field_z.width, var8);
           while (!var9.field_d) {
             var10 = var9.b((byte) 75);
             var11 = var9.b(2);
-            if (this.field_z.b((byte) -5, var11, var10) > 0) {
+            if (this.field_z.getCell((byte) -5, var11, var10) > 0) {
               var12 = 16;
               var13 = this.field_t * var10;
               var14 = this.field_t * var11;
@@ -355,8 +355,8 @@ final class RandomMazeBehaviour extends Behaviour {
         while (var9 == 0) {
           var12_ref_loa = lba.createMazeGenerator((byte) 27, var3, this.field_s);
           this.field_z = var12_ref_loa.a(var5, var6, var4, -122, var8);
-          this.field_z.a(1 + var7, 0, 0, var6);
-          this.field_z.a(0, 0, 0, var6);
+          this.field_z.setCell(1 + var7, 0, 0, var6);
+          this.field_z.setCell(0, 0, 0, var6);
           var23 = new av(this.field_z);
           var11 = var23;
           var23.a(var7 + 1, 0, var6, 124, var6);
@@ -378,8 +378,8 @@ final class RandomMazeBehaviour extends Behaviour {
           }
           break;
         }
-        this.field_y = (this.trap.getWidth(-30) - this.field_t * this.field_z.field_f) / 2;
-        this.field_w = (this.trap.getHeight((byte) 55) - this.field_z.field_a * this.field_t) / 2;
+        this.field_y = (this.trap.getWidth(-30) - this.field_t * this.field_z.width) / 2;
+        this.field_w = (this.trap.getHeight((byte) 55) - this.field_z.height * this.field_t) / 2;
         var12 = this.field_y - this.trap.getWidth(-12) / 2 + this.field_t / 2;
         var13 = this.field_w - this.trap.getHeight((byte) 55) / 2 + this.field_t / 2;
         if (this.field_u) {
@@ -414,9 +414,9 @@ final class RandomMazeBehaviour extends Behaviour {
           this.field_o.encode(var28, -112);
           var28.endBitWrite(-1826190686);
         }
-        for (var18 = 0; this.field_z.field_f > var18; var18++) {
-          for (var19 = 0; this.field_z.field_a > var19; var19++) {
-            if (this.field_z.b((byte) -5, var19, var18) > 0) {
+        for (var18 = 0; this.field_z.width > var18; var18++) {
+          for (var19 = 0; this.field_z.height > var19; var19++) {
+            if (this.field_z.getCell((byte) -5, var19, var18) > 0) {
               this.a(var18, var13, var19, -58, (BitPacketBuffer) (var15), var12);
             } else {
               this.a(var18, var13, var19, -44, (BitPacketBuffer) (var16), var12);
@@ -428,9 +428,9 @@ final class RandomMazeBehaviour extends Behaviour {
           var37 = new int[this.field_v][2];
           for (var20 = 0; var20 < this.field_v; var20++) {
             if (var36.length <= var20) {
-              while (0 != this.field_z.b((byte) -5, var37[var20][1], var37[var20][0])) {
-                var37[var20][0] = 1 + var3.a(-2 + this.field_z.field_f, 0);
-                var37[var20][1] = 1 + var3.a(-2 + this.field_z.field_a, 0);
+              while (0 != this.field_z.getCell((byte) -5, var37[var20][1], var37[var20][0])) {
+                var37[var20][0] = 1 + var3.a(-2 + this.field_z.width, 0);
+                var37[var20][1] = 1 + var3.a(-2 + this.field_z.height, 0);
               }
             } else {
               var21 = var3.a(var36.length, 0);
@@ -499,8 +499,8 @@ final class RandomMazeBehaviour extends Behaviour {
           if (0 < this.field_y) {
             var6 = this.trap.getX(3) - this.trap.getWidth(-49) / 2;
             var7 = this.trap.getY(9648) - (this.trap.getHeight((byte) 55) / 2 - this.field_w);
-            var8 = this.field_t * this.field_z.field_f;
-            var9 = this.field_z.field_a * this.field_t;
+            var8 = this.field_t * this.field_z.width;
+            var9 = this.field_z.height * this.field_t;
             var10 = this.field_y + var8;
             if (!this.a(false, var9, var6, var7, param2, this.field_y)) {
               stackIn_14_0 = (var5_int != 0) ? 1 : 0;
@@ -667,7 +667,7 @@ final class RandomMazeBehaviour extends Behaviour {
         super.h(param0);
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         BitPacketBuffer stackIn_2_0 = null;
         int stackIn_2_1 = 0;
         int stackIn_3_2 = 0;
@@ -677,7 +677,7 @@ final class RandomMazeBehaviour extends Behaviour {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           param1.writeBits((byte) -41, this.field_s, 2);
           param1.writeBits((byte) 42, this.field_t >> 16, 10);
           stackIn_2_0 = (BitPacketBuffer) (param1);

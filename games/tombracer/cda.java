@@ -87,7 +87,7 @@ abstract class cda extends dg {
         } else {
           var7 = (Trap) (this.field_h);
           var4Lifetime1 = var7.s(25745);
-          var5Lifetime1 = var7.e(false);
+          var5Lifetime1 = var7.getLocalY(false);
           var6Lifetime1 = var7.q((byte) -80);
         }
         if (this.field_r) {

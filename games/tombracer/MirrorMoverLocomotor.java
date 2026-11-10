@@ -43,12 +43,12 @@ final class MirrorMoverLocomotor extends Locomotor {
         }
     }
 
-    final void a(BitPacketBuffer param0, byte param1) {
+    final void encode(BitPacketBuffer param0, byte param1) {
         try {
           if (param1 >= -78) {
             this.b((byte) 11);
           }
-          super.a(param0, (byte) -116);
+          super.encode(param0, (byte) -116);
           param0.writeBits((byte) -128, !this.field_p ? 0 : 1, 1);
           param0.writeBits((byte) -125, this.field_q ? 1 : 0, 1);
         } catch (RuntimeException runtimeException) {
@@ -72,7 +72,7 @@ final class MirrorMoverLocomotor extends Locomotor {
         }
     }
 
-    final int c(int param0) {
+    final int getTypeId(int param0) {
         if (param0 != 1) {
           field_o = (int[]) null;
           return 4;

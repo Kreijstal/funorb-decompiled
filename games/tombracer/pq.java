@@ -33,16 +33,16 @@ final class pq implements os {
           var10.writeCipheredOpcode(param5, -2988);
           var10.position = var10.position + 1;
           var7 = var10.position;
-          var10.i(4, 0);
-          var10.i(param4, 0);
+          var10.writeByte(4, 0);
+          var10.writeByte(param4, 0);
           var8 = param2;
           if (param1) {
             var8 += 128;
           }
           int var9 = -69 / ((-65 - param3) / 34);
-          var10.i(var8, 0);
-          var10.a(0, param0, param0.length, 91);
-          var10.d(-var7 + var10.position, (byte) -1);
+          var10.writeByte(var8, 0);
+          var10.writeBytes(0, param0, param0.length, 91);
+          var10.backpatchByteLength(-var7 + var10.position, (byte) -1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pq.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

@@ -903,8 +903,8 @@ abstract class eo extends GraphicsToolkit {
         }
     }
 
-    final static roa D(byte param0) {
-        roa var1 = new roa();
+    final static Weapon D(byte param0) {
+        Weapon var1 = new Weapon();
         var1.field_f = new Effect(0, 5);
         var1.field_f.b(1, 11);
         var1.field_c = true;
@@ -916,7 +916,7 @@ abstract class eo extends GraphicsToolkit {
         var1.field_o = 26;
         var1.field_t = 27;
         if (param0 >= -14) {
-          return (roa) null;
+          return (Weapon) null;
         }
         var1.field_b = 0;
         return var1;

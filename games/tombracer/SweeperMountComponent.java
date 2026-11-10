@@ -42,7 +42,7 @@ final class SweeperMountComponent extends kna {
           var5 = new SweepRotateLocomotor(param2, param0);
           var5.a((byte) -35, 8 * this.field_G);
           var6 = 2048;
-          var7_int = this.r(12);
+          var7_int = this.getTypeId(12);
           if (var7_int == 31) {
             var5.a(true, var6);
           } else {
@@ -74,7 +74,7 @@ final class SweeperMountComponent extends kna {
     final boolean s(int param0) {
         if (param0 != -15254) {
           BitPacketBuffer var3 = (BitPacketBuffer) null;
-          this.a(true, (BitPacketBuffer) null);
+          this.encode(true, (BitPacketBuffer) null);
           return true;
         }
         return true;
@@ -118,9 +118,9 @@ final class SweeperMountComponent extends kna {
         }
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           param1.writeBits((byte) -126, dqa.a(true, this.field_G, 5), 5);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ona.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -147,7 +147,7 @@ final class SweeperMountComponent extends kna {
     final boolean n(byte param0) {
         if (param0 != -122) {
           BitPacketBuffer var3 = (BitPacketBuffer) null;
-          this.a(false, (BitPacketBuffer) null);
+          this.encode(false, (BitPacketBuffer) null);
           return true;
         }
         return true;

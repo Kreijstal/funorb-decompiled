@@ -47,12 +47,12 @@ final class StaticCrusherComponent extends kna {
         return false;
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           if (param0) {
             BitPacketBuffer var4 = (BitPacketBuffer) null;
-            this.a(true, (BitPacketBuffer) null);
+            this.encode(true, (BitPacketBuffer) null);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wfa.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

@@ -121,14 +121,14 @@ final class ifa extends ci {
           }
           var4_int = param2;
           if (var4_int == 0) {
-            this.field_o = param1.h(255);
+            this.field_o = param1.readUnsignedByte(255);
           } else {
             if (var4_int != 1) {
               if (3 == var4_int) {
-                this.field_t = param1.h(255);
+                this.field_t = param1.readUnsignedByte(255);
               }
             } else {
-              this.field_m = param1.h(255);
+              this.field_m = param1.readUnsignedByte(255);
             }
           }
           return;

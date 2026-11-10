@@ -430,7 +430,7 @@ final class di {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param0.h(255);
+          var2_int = param0.readUnsignedByte(255);
           if (param1 != 107) {
             field_g = (boolean[]) null;
           }
@@ -459,7 +459,7 @@ final class di {
         if (cba.field_a != null) {
           return cba.field_a;
         }
-        return (java.applet.Applet) ((Object) kua.field_j);
+        return (java.applet.Applet) ((Object) Corpse.field_j);
     }
 
     static {

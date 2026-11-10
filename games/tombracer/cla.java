@@ -64,7 +64,7 @@ final class cla extends DualLinkNode {
           if (!ama.a(1, -1)) {
             return false;
           }
-          uca.field_d = vc.field_q.h(255);
+          uca.field_d = vc.field_q.readUnsignedByte(255);
           vc.field_q.position = 0;
         }
         if (param0 != 0) {
@@ -76,7 +76,7 @@ final class cla extends DualLinkNode {
         if (!ama.a(2, -1)) {
           return false;
         }
-        uca.field_d = vc.field_q.d(125);
+        uca.field_d = vc.field_q.readUnsignedShort(125);
         vc.field_q.position = 0;
         return ama.a(uca.field_d, -1);
     }

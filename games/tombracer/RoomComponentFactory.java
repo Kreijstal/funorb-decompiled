@@ -860,8 +860,8 @@ final class RoomComponentFactory implements RoomComponentCodec {
 
     public final void writeComponent(RoomComponent param0, int param1, BitPacketBuffer param2) {
         try {
-          param2.writeBits((byte) -127, param0.r(12), 10);
-          param0.a(false, param2);
+          param2.writeBits((byte) -127, param0.getTypeId(12), 10);
+          param0.encode(false, param2);
           if (param1 != -16097) {
             field_a = (float[]) null;
           }

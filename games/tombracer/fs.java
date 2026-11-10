@@ -219,11 +219,11 @@ final class fs extends ci {
         var5 = TombRacer.field_G ? 1 : 0;
         try {
           if (param2 == 0) {
-            this.field_r = param1.h(255);
-            this.field_n = new int[param1.h(255)][2];
+            this.field_r = param1.readUnsignedByte(255);
+            this.field_n = new int[param1.readUnsignedByte(255)][2];
             for (var4_int = 0; this.field_n.length > var4_int; var4_int++) {
-              this.field_n[var4_int][0] = param1.d(126);
-              this.field_n[var4_int][1] = param1.d(126);
+              this.field_n[var4_int][0] = param1.readUnsignedShort(126);
+              this.field_n[var4_int][1] = param1.readUnsignedShort(126);
             }
           }
           if (param0 != 107) {

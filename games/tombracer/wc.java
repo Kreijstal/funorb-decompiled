@@ -30,8 +30,8 @@ final class wc extends lu {
           if (param1) {
             this.field_f = (String) null;
           }
-          param0.a(this.field_g, (byte) 0);
-          param0.a(this.field_f, -127);
+          param0.writeVersionedString(this.field_g, (byte) 0);
+          param0.writeBase38Name(this.field_f, -127);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

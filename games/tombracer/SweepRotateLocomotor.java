@@ -64,24 +64,24 @@ final class SweepRotateLocomotor extends Locomotor {
         var9 = TombRacer.field_G ? 1 : 0;
         try {
           var1 = vc.field_q;
-          var2 = var1.h(255);
+          var2 = var1.readUnsignedByte(255);
           if (var2 == 0) {
             if (null == CoinItemComponent.field_G) {
               CoinItemComponent.field_G = new af(128);
               tba.field_k = 0;
             }
-            stackIn_11_0 = (var1.h(255) != 1) ? 0 : 1;
+            stackIn_11_0 = (var1.readUnsignedByte(255) != 1) ? 0 : 1;
             var3_int = stackIn_11_0;
-            var4_ref_String = var1.e((byte) -76);
+            var4_ref_String = var1.readString((byte) -76);
             if (var3_int == 0) {
               var5 = var4_ref_String;
             }
             if (var3_int != 0 ||
               var9 != 0) {
-              var5 = var1.e((byte) -76);
+              var5 = var1.readString((byte) -76);
             }
             var6 = uh.a(var4_ref_String, param0 ^ -14105);
-            var7_ref = var1.e((byte) -76);
+            var7_ref = var1.readString((byte) -76);
             var8 = jd.a(1, (CharSequence) ((Object) var4_ref_String));
             if (null == var8) {
               var8 = var4_ref_String;
@@ -127,9 +127,9 @@ final class SweepRotateLocomotor extends Locomotor {
               return;
             }
             ae.field_g = 1;
-            var3 = var1.e((byte) -76);
+            var3 = var1.readString((byte) -76);
             ol.field_b = ((String) (var3)).intern();
-            var4 = var1.h(255);
+            var4 = var1.readUnsignedByte(255);
             ifa.d(var4, 3);
             return;
           }
@@ -137,12 +137,12 @@ final class SweepRotateLocomotor extends Locomotor {
             TrackPlayerLocomotor.field_s = new af(128);
             ii.field_a = 0;
           }
-          var3Lifetime1 = var1.e((byte) -76);
+          var3Lifetime1 = var1.readString((byte) -76);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.e((byte) -76);
-          var5Lifetime1 = var1.e((byte) -76);
+          var4_ref_StringLifetime1 = var1.readString((byte) -76);
+          var5Lifetime1 = var1.readString((byte) -76);
           var6Lifetime1 = wp.a(121, var4_ref_StringLifetime1);
           if (null == var6Lifetime1) {
             var6Lifetime1 = wp.a(param0 ^ 14095, var5Lifetime1);
@@ -338,7 +338,7 @@ final class SweepRotateLocomotor extends Locomotor {
         }
     }
 
-    final int c(int param0) {
+    final int getTypeId(int param0) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -366,7 +366,7 @@ final class SweepRotateLocomotor extends Locomotor {
         }
     }
 
-    final void a(BitPacketBuffer param0, byte param1) {
+    final void encode(BitPacketBuffer param0, byte param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -376,7 +376,7 @@ final class SweepRotateLocomotor extends Locomotor {
           if (param1 > -78) {
             return;
           }
-          super.a(param0, (byte) -101);
+          super.encode(param0, (byte) -101);
           param0.writeBits((byte) -125, dqa.a(true, this.field_r, 12), 12);
           param0.writeBits((byte) 108, cn.a((byte) -127, this.field_p, 8192, 8), 8);
           return;
@@ -428,7 +428,7 @@ final class SweepRotateLocomotor extends Locomotor {
           this.field_r = -this.field_r;
           this.field_o = -this.field_o;
           if (param0 >= -116) {
-            this.a((BitPacketBuffer) null, (byte) -85);
+            this.encode((BitPacketBuffer) null, (byte) -85);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ri.L(" + param0 + ')');

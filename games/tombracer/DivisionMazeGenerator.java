@@ -89,27 +89,27 @@ final class DivisionMazeGenerator extends MazeGenerator {
         super(param0);
     }
 
-    final void a(int param0, int param1, hj param2, int param3) {
+    final void generate(int param0, int param1, MazeGrid param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = TombRacer.field_G ? 1 : 0;
         try {
           if (param1 < 73) {
-            hj var8 = (hj) null;
-            this.a(-107, 127, (hj) null, -114);
+            MazeGrid var8 = (MazeGrid) null;
+            this.generate(-107, 127, (MazeGrid) null, -114);
           }
-          for (var5_int = 1; param2.field_f - 1 > var5_int; var5_int++) {
-            for (var6 = 1; var6 < param2.field_a - 1; var6++) {
-              param2.a(var6, 0, 0, var5_int);
+          for (var5_int = 1; param2.width - 1 > var5_int; var5_int++) {
+            for (var6 = 1; var6 < param2.height - 1; var6++) {
+              param2.setCell(var6, 0, 0, var5_int);
             }
           }
-          this.a(0, param2.field_f, 0, param2, param2.field_a, 1);
+          this.a(0, param2.width, 0, param2, param2.height, 1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "tna.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    private final void a(int param0, int param1, int param2, hj param3, int param4, int param5) {
+    private final void a(int param0, int param1, int param2, MazeGrid param3, int param4, int param5) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -128,23 +128,23 @@ final class DivisionMazeGenerator extends MazeGenerator {
             var7_int = (this.random.a(param1 / 2 - 1, 0) + param5) * 2 + param2;
             var8 = param0 - (-(2 * this.random.a(-1 + param4 / 2, 0)) - 2);
             for (var9 = param2 + 1; var9 < param1 + param2 - 1; var9++) {
-              param3.a(var8, 1, param5 ^ 1, var9);
+              param3.setCell(var8, 1, param5 ^ 1, var9);
             }
             for (var9Lifetime1 = param0 + 1; -1 + param4 + param0 > var9Lifetime1; var9Lifetime1++) {
-              param3.a(var9Lifetime1, 1, param5 ^ 1, var7_int);
+              param3.setCell(var9Lifetime1, 1, param5 ^ 1, var7_int);
             }
             var9Lifetime2 = this.random.a(4, param5 ^ 1);
             if (var9Lifetime2 != 0) {
-              param3.a(param0 + 2 * (this.random.a(var8 - param0, 0) / 2) + 1, 0, 0, var7_int);
+              param3.setCell(param0 + 2 * (this.random.a(var8 - param0, 0) / 2) + 1, 0, 0, var7_int);
             }
             if (1 != var9Lifetime2) {
-              param3.a(var8, 0, 0, param2 + (this.random.a(-param2 + var7_int, param5 ^ 1) / 2 * 2 + 1));
+              param3.setCell(var8, 0, 0, param2 + (this.random.a(-param2 + var7_int, param5 ^ 1) / 2 * 2 + 1));
             }
             if (2 != var9Lifetime2) {
-              param3.a(2 * (this.random.a(-1 + (param0 + param4 - var8), 0) / 2) + var8 + 1, 0, 0, var7_int);
+              param3.setCell(2 * (this.random.a(-1 + (param0 + param4 - var8), 0) / 2) + var8 + 1, 0, 0, var7_int);
             }
             if (var9Lifetime2 != 3) {
-              param3.a(var8, 0, 0, 1 + this.random.a(-1 + param2 + (param1 - var7_int), 0) / 2 * 2 + var7_int);
+              param3.setCell(var8, 0, 0, 1 + this.random.a(-1 + param2 + (param1 - var7_int), 0) / 2 * 2 + var7_int);
             }
             this.a(param0, -param2 + (var7_int + 1), param2, param3, var8 + 1 - param0, 1);
             this.a(param0, param2 + param1 - var7_int, var7_int, param3, var8 + (1 - param0), 1);

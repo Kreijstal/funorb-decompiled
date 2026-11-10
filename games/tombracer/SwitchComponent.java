@@ -17,9 +17,9 @@ abstract class SwitchComponent extends kna {
 
     abstract boolean r(byte param0);
 
-    void a(boolean param0, BitPacketBuffer param1) {
+    void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           this.field_G.a(param1, 115, this.o((byte) -39));
           if (this.r((byte) 93)) {
             param1.writeBits((byte) -19, !this.field_I ? 0 : 1, 1);

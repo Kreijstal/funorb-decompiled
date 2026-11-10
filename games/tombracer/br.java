@@ -31,12 +31,12 @@ final class br extends DualLinkNode {
         try {
           if (1 != param0) {
             if (param0 == 2) {
-              var4_int = param2.h(255);
+              var4_int = param2.readUnsignedByte(255);
               this.field_q = new int[var4_int];
               this.field_k = new char[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_q[var5] = param2.d(126);
-                var6 = param2.c((byte) 99);
+                this.field_q[var5] = param2.readUnsignedShort(126);
+                var6 = param2.readByte((byte) 99);
                 stackIn_8_0 = this.field_k;
                 stackIn_8_1 = var5;
                 if (var6 != 0) {
@@ -48,12 +48,12 @@ final class br extends DualLinkNode {
               }
             } else {
               if (param0 == 3) {
-                var4_int = param2.h(255);
+                var4_int = param2.readUnsignedByte(255);
                 this.field_o = new char[var4_int];
                 this.field_l = new int[var4_int];
                 for (var5 = 0; var5 < var4_int; var5++) {
-                  this.field_l[var5] = param2.d(126);
-                  var6 = param2.c((byte) 71);
+                  this.field_l[var5] = param2.readUnsignedShort(126);
+                  var6 = param2.readByte((byte) 71);
                   stackIn_17_0 = this.field_o;
                   stackIn_17_1 = var5;
                   if (var6 == 0) {
@@ -70,7 +70,7 @@ final class br extends DualLinkNode {
               }
             }
           } else {
-            this.field_n = param2.e((byte) -76);
+            this.field_n = param2.readString((byte) -76);
           }
           if (param1 > -67) {
             var8 = (PacketBuffer) null;
@@ -130,7 +130,7 @@ final class br extends DualLinkNode {
             this.a((PacketBuffer) null, -59);
           }
           while (true) {
-            var3_int = param0.h(255);
+            var3_int = param0.readUnsignedByte(255);
             if (var3_int == 0) {
               return;
             }

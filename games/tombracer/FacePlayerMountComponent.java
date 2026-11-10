@@ -21,12 +21,12 @@ final class FacePlayerMountComponent extends kna {
         return false;
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
           if (param0) {
             field_F = (ta) null;
           }
-          super.a(param0, param1);
+          super.encode(param0, param1);
           param1.writeBits((byte) 72, this.field_G, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "kt.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -90,7 +90,7 @@ final class FacePlayerMountComponent extends kna {
     final int t(int param0) {
         if (param0 != 8) {
           BitPacketBuffer var3 = (BitPacketBuffer) null;
-          this.a(true, (BitPacketBuffer) null);
+          this.encode(true, (BitPacketBuffer) null);
           return 7;
         }
         return 7;
@@ -124,7 +124,7 @@ final class FacePlayerMountComponent extends kna {
     final boolean n(byte param0) {
         if (param0 != -122) {
           BitPacketBuffer var3 = (BitPacketBuffer) null;
-          this.a(true, (BitPacketBuffer) null);
+          this.encode(true, (BitPacketBuffer) null);
           return true;
         }
         return true;

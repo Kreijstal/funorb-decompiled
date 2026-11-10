@@ -139,7 +139,7 @@ final class fl extends ci {
         RuntimeException var4 = null;
         try {
           if (0 == param2) {
-            stackIn_5_1 = (param1.h(param0 + 148) == 1);
+            stackIn_5_1 = (param1.readUnsignedByte(param0 + 148) == 1);
             this.field_g = stackIn_5_1;
           }
           if (param0 != 107) {

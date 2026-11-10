@@ -71,8 +71,8 @@ class tc extends lu {
           return;
         }
         try {
-          param0.a(1736565456, this.field_g);
-          param0.a(this.field_e, -124);
+          param0.writeLong(1736565456, this.field_g);
+          param0.writeBase38Name(this.field_e, -124);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "tc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

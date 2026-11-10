@@ -5,7 +5,7 @@ final class RecursiveBacktrackerMazeGenerator extends MazeGenerator {
     static int[] field_c;
     static String field_b;
 
-    final void a(int param0, int param1, hj param2, int param3) {
+    final void generate(int param0, int param1, MazeGrid param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = TombRacer.field_G ? 1 : 0;
@@ -13,9 +13,9 @@ final class RecursiveBacktrackerMazeGenerator extends MazeGenerator {
           return;
         }
         try {
-          for (var5_int = 1; -1 + param2.field_f > var5_int; var5_int += 2) {
-            for (var6 = 1; param2.field_a - 1 > var6; var6 += 2) {
-              param2.a(var6, -1, 0, var5_int);
+          for (var5_int = 1; -1 + param2.width > var5_int; var5_int += 2) {
+            for (var6 = 1; param2.height - 1 > var6; var6 += 2) {
+              param2.setCell(var6, -1, 0, var5_int);
             }
           }
           this.a(param2, param3, param0, 21619);
@@ -24,7 +24,7 @@ final class RecursiveBacktrackerMazeGenerator extends MazeGenerator {
         }
     }
 
-    private final boolean a(int param0, hj param1, int param2, int param3) {
+    private final boolean a(int param0, MazeGrid param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_16_0 = null;
@@ -34,12 +34,12 @@ final class RecursiveBacktrackerMazeGenerator extends MazeGenerator {
         try {
           if (0 < param2 &&
             0 < param0 &&
-            -1 + param1.field_f > param2 &&
-            -1 + param1.field_a > param0) {
+            -1 + param1.width > param2 &&
+            -1 + param1.height > param0) {
             if (param3 > -53) {
               return false;
             }
-            var5_int = param1.b((byte) -5, param0, param2);
+            var5_int = param1.getCell((byte) -5, param0, param2);
             if (var5_int == -1) {
               return true;
             }
@@ -66,14 +66,14 @@ final class RecursiveBacktrackerMazeGenerator extends MazeGenerator {
         field_b = null;
     }
 
-    private final void a(hj param0, int param1, int param2, int param3) {
+    private final void a(MazeGrid param0, int param1, int param2, int param3) {
         int var6 = 0;
         int[] var5 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        hj var11 = null;
+        MazeGrid var11 = null;
         int[] var12 = null;
         int[] var13 = null;
         int[] var14 = null;
@@ -85,8 +85,8 @@ final class RecursiveBacktrackerMazeGenerator extends MazeGenerator {
         var10 = TombRacer.field_G ? 1 : 0;
         try {
           if (param3 != 21619) {
-            var11 = (hj) null;
-            this.a((hj) null, -65, 4, -46);
+            var11 = (MazeGrid) null;
+            this.a((MazeGrid) null, -65, 4, -46);
           }
           var14 = this.a(4, param3 - 23971);
           var13 = var14;

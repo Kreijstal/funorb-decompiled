@@ -147,9 +147,9 @@ final class TrackingCrusherComponent extends kna {
         super(param0, param1, param2, param3);
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           if (param0) {
             field_F = 80;
           }

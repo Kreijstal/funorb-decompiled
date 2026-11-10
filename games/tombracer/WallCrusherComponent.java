@@ -168,7 +168,7 @@ final class WallCrusherComponent extends kna {
         return hb.field_t instanceof qh;
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         RuntimeException var3 = null;
         BitPacketBuffer stackIn_2_0 = null;
         int stackIn_2_1 = 0;
@@ -178,7 +178,7 @@ final class WallCrusherComponent extends kna {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           param1.writeBits((byte) -128, SpawnerBehaviour.a((byte) 8, 2, this.field_O), 4);
           param1.writeBits((byte) -127, SpawnerBehaviour.a((byte) 8, 4, this.field_J), 8);
           param1.writeBits((byte) -4, SpawnerBehaviour.a((byte) 8, 2, this.field_M), 4);

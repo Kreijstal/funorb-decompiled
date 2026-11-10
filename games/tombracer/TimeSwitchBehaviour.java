@@ -52,9 +52,9 @@ final class TimeSwitchBehaviour extends Behaviour implements ut {
         }
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           this.field_s.a(this.h((byte) 123), (byte) 76, param1);
           this.field_o.a(15637, param1);
         } catch (RuntimeException runtimeException) {
@@ -157,7 +157,7 @@ final class TimeSwitchBehaviour extends Behaviour implements ut {
         return this.field_s;
     }
 
-    final int a(boolean param0) {
+    final int getTypeId(boolean param0) {
         if (param0) {
           this.field_s = (jma) null;
           return 21;

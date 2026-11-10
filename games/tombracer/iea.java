@@ -151,13 +151,13 @@ final class iea {
             var6 = (mu) (var4.next(126));
           }
           if (jja.field_j.field_yb.field_y != 0) {
-            bl.field_a = new is(jja.field_j.field_yb.field_q, jja.field_j.field_yb.field_A, jja.field_j.field_yb.field_G, jja.field_j.field_yb.field_t, pe.field_k, lw.field_a, kua.field_i, kua.field_i);
+            bl.field_a = new is(jja.field_j.field_yb.field_q, jja.field_j.field_yb.field_A, jja.field_j.field_yb.field_G, jja.field_j.field_yb.field_t, pe.field_k, lw.field_a, Corpse.field_i, Corpse.field_i);
             cn.field_k = 2;
           }
           if (0 == jja.field_j.field_wb.field_y) {
             return;
           }
-          bl.field_a = new is(jja.field_j.field_wb.field_q, jja.field_j.field_wb.field_A, jja.field_j.field_wb.field_G, jja.field_j.field_wb.field_t, av.field_b, lw.field_a, kua.field_i, kua.field_i);
+          bl.field_a = new is(jja.field_j.field_wb.field_q, jja.field_j.field_wb.field_A, jja.field_j.field_wb.field_G, jja.field_j.field_wb.field_t, av.field_b, lw.field_a, Corpse.field_i, Corpse.field_i);
           cn.field_k = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -169,7 +169,7 @@ final class iea {
 
     final static void a(boolean param0, cn param1, int param2, cn param3) {
         try {
-          mp.a(joa.field_d, tka.field_q, param0, una.field_j, fe.field_F, kua.field_i, 0, PressureSwitchBehaviour.field_p, jq.field_o, ji.field_g, dn.field_a, kw.field_e);
+          mp.a(joa.field_d, tka.field_q, param0, una.field_j, fe.field_F, Corpse.field_i, 0, PressureSwitchBehaviour.field_p, jq.field_o, ji.field_g, dn.field_a, kw.field_e);
           vda.field_m = BoulderComponent.a(param1, "lobby", 5, "chatfilter");
           StripedMazeGenerator.field_c[0] = SecondaryNodeDequeIterator.field_b;
           StripedMazeGenerator.field_c[param2] = hm.field_m;

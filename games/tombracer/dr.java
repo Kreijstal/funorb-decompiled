@@ -7,8 +7,8 @@ abstract class dr {
     final static void a(int param0, int param1) {
         BitPacketBuffer var2 = ql.field_k;
         var2.writeCipheredOpcode(param0, -2988);
-        var2.i(1, 0);
-        var2.i(0, 0);
+        var2.writeByte(1, 0);
+        var2.writeByte(0, 0);
         if (param1 < -51) {
           return;
         }

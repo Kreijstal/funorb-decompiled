@@ -402,7 +402,7 @@ final class cn {
             var26 = var36;
             var10 = var26;
             var27 = new PacketBuffer(var36);
-            var27.a(var27.payload.length, -84984444, param1, 5);
+            var27.decryptXteaRange(var27.payload.length, -84984444, param1, 5);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -437,7 +437,7 @@ final class cn {
               for (var17 = 0; var17 < var13; var17++) {
                 var18 = 0;
                 for (var19 = 0; var5_int > var19; var19++) {
-                  var18 = var18 + var33.e(118);
+                  var18 = var18 + var33.readInt(118);
                   if (var6 == null) {
                     var20 = var19;
                   } else {
@@ -459,7 +459,7 @@ final class cn {
               for (var19Lifetime3 = 0; var13 > var19Lifetime3; var19Lifetime3++) {
                 var20Lifetime2 = 0;
                 for (var21 = 0; var5_int > var21; var21++) {
-                  var20Lifetime2 = var20Lifetime2 + var33.e(-14);
+                  var20Lifetime2 = var20Lifetime2 + var33.readInt(-14);
                   if (var6 != null) {
                     var22 = var35[var21];
                   } else {
@@ -487,7 +487,7 @@ final class cn {
             for (var16Lifetime1 = 0; var16Lifetime1 < var13Lifetime1; var16Lifetime1++) {
               var17Lifetime1 = 0;
               for (var18Lifetime1 = 0; var18Lifetime1 < var5_int; var18Lifetime1++) {
-                var17Lifetime1 = var17Lifetime1 + var30.e(101);
+                var17Lifetime1 = var17Lifetime1 + var30.readInt(101);
                 var15_ref_int__[var18Lifetime1] = var15_ref_int__[var18Lifetime1] + var17Lifetime1;
               }
             }
@@ -504,7 +504,7 @@ final class cn {
             for (var18Lifetime2 = 0; var13Lifetime1 > var18Lifetime2; var18Lifetime2++) {
               var19Lifetime1 = 0;
               for (var20Lifetime1 = 0; var20Lifetime1 < var5_int; var20Lifetime1++) {
-                var19Lifetime1 = var19Lifetime1 + var30.e(-98);
+                var19Lifetime1 = var19Lifetime1 + var30.readInt(-98);
                 lua.a(var44, var17Lifetime3, var40[var20Lifetime1], var39[var20Lifetime1], var19Lifetime1);
                 var17Lifetime3 = var17Lifetime3 + var19Lifetime1;
                 var15_ref_int__[var20Lifetime1] = var15_ref_int__[var20Lifetime1] + var19Lifetime1;

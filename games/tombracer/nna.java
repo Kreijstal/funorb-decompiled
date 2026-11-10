@@ -81,9 +81,9 @@ final class nna {
           var5.writeCipheredOpcode(param2, -2988);
           var5.position = var5.position + 1;
           var4 = var5.position;
-          var5.i(2, 0);
-          var5.a(param1, false);
-          var5.d(-var4 + var5.position, (byte) -104);
+          var5.writeByte(2, 0);
+          var5.writeString(param1, false);
+          var5.backpatchByteLength(-var4 + var5.position, (byte) -104);
           stackIn_22_0 = null;
           return (String) (stackIn_22_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

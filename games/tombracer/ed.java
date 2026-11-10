@@ -35,11 +35,11 @@ final class ed {
         var9 = TombRacer.field_G ? 1 : 0;
         try {
           if (param2) {
-            param1.field_Mb = param3.h(255);
+            param1.field_Mb = param3.readUnsignedByte(255);
           }
-          param1.field_Jb = param3.h(255);
-          param1.field_cc = param3.h(255);
-          var4_int = param3.h(255);
+          param1.field_Jb = param3.readUnsignedByte(255);
+          param1.field_cc = param3.readUnsignedByte(255);
+          var4_int = param3.readUnsignedByte(255);
           stackIn_6_0 = (ht) (param1);
           stackIn_7_1 = ((128 & var4_int) != 0);
           stackIn_6_0.field_Tb = stackIn_7_1;
@@ -64,24 +64,24 @@ final class ed {
           stackIn_22_0.field_Yb = stackIn_23_1;
           stackIn_26_0 = ((4 & var4_int) == 0) ? 0 : 1;
           var5 = stackIn_26_0;
-          param3.a(param1.field_ac, 0, -104, param1.field_ac.length);
+          param3.readBytes(param1.field_ac, 0, -104, param1.field_ac.length);
           stackIn_29_0 = ((2 & var4_int) == 0) ? 0 : 1;
           var6 = stackIn_29_0;
-          param1.field_Wb = param3.d(param0 + 93);
-          param1.field_Gb = bva.b((byte) -107) - (long)param3.e(-105);
+          param1.field_Wb = param3.readUnsignedShort(param0 + 93);
+          param1.field_Gb = bva.b((byte) -107) - (long)param3.readInt(-105);
           if (var5 != 0) {
-            param1.field_Kb = param3.e(param0 ^ 64);
+            param1.field_Kb = param3.readInt(param0 ^ 64);
           } else {
             param1.field_Kb = -1;
           }
-          param1.field_Ab = param3.b(290646880);
+          param1.field_Ab = param3.readLong(290646880);
           var7 = param3.position;
-          param1.field_tb = param3.e((byte) -76);
+          param1.field_tb = param3.readString((byte) -76);
           if (var6 != 0) {
             param3.position = var7;
             param1.field_Cb = new String[param1.field_Mb];
             for (var8 = 0; var8 < param1.field_Mb; var8++) {
-              param1.field_Cb[var8] = param3.e((byte) -76);
+              param1.field_Cb[var8] = param3.readString((byte) -76);
             }
             return;
           }

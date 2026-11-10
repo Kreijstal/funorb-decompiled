@@ -140,7 +140,7 @@ abstract class PathMoverComponent extends kna {
         return fna.field_k;
     }
 
-    void a(boolean param0, BitPacketBuffer param1) {
+    void encode(boolean param0, BitPacketBuffer param1) {
         RuntimeException var3 = null;
         BitPacketBuffer stackIn_3_0 = null;
         int stackIn_3_1 = 0;
@@ -150,7 +150,7 @@ abstract class PathMoverComponent extends kna {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           this.field_K.a(param1, 0);
           if (this.A(64)) {
             stackIn_3_0 = (BitPacketBuffer) (param1);

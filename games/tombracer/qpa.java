@@ -15,11 +15,11 @@ final class qpa implements GamePacket {
 
     public final void encode(int param0, BitPacketBuffer param1) {
         try {
-          param1.i(this.field_a, param0 - 200);
+          param1.writeByte(this.field_a, param0 - 200);
           if (param0 != 200) {
             this.field_a = -84;
           }
-          param1.i(this.field_c, 0);
+          param1.writeByte(this.field_c, 0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "qpa.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -32,11 +32,11 @@ final class qpa implements GamePacket {
 
     public final void decode(BitPacketBuffer param0, byte param1) {
         try {
-          this.field_a = param0.h(255);
+          this.field_a = param0.readUnsignedByte(255);
           if (param1 != -19) {
             qpa.releaseStatics(false);
           }
-          this.field_c = param0.h(255);
+          this.field_c = param0.readUnsignedByte(255);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "qpa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

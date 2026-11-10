@@ -337,8 +337,8 @@ class jea extends um {
         try {
           var3 = ql.field_k;
           var3.writeCipheredOpcode(param0, param1 ^ -3719);
-          var3.i(param2.field_f, 0);
-          var3.f(param1 ^ -1477660827, param2.field_j);
+          var3.writeByte(param2.field_f, 0);
+          var3.writeShort(param1 ^ -1477660827, param2.field_j);
           if (param1 != 1325) {
             var4 = (aca) null;
             jea.a(-121, 50, (aca) null);

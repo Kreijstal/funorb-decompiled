@@ -107,18 +107,18 @@ final class qv extends ci {
           var4_int = param2;
           if (var4_int != 0) {
             if (1 == var4_int) {
-              this.field_r = param1.d(121);
+              this.field_r = param1.readUnsignedShort(121);
             } else {
               if (var4_int == 2) {
-                this.field_n = param1.d(124);
+                this.field_n = param1.readUnsignedShort(124);
               } else {
                 if (3 == var4_int) {
-                  this.field_p = param1.d(121);
+                  this.field_p = param1.readUnsignedShort(121);
                 }
               }
             }
           } else {
-            this.field_q = param1.d(param0 + 16);
+            this.field_q = param1.readUnsignedShort(param0 + 16);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

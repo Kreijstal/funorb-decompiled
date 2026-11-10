@@ -134,29 +134,29 @@ final class voa extends ci {
           if (var4_int != 0) {
             if (1 != var4_int) {
               if (var4_int == 2) {
-                this.field_o = param1.d(122);
+                this.field_o = param1.readUnsignedShort(122);
               } else {
                 if (var4_int != 3) {
                   if (var4_int == 4) {
-                    this.field_t = param1.d(127);
+                    this.field_t = param1.readUnsignedShort(127);
                   } else {
                     if (var4_int != 5) {
                       if (var4_int == 6) {
-                        this.field_r = param1.d(122);
+                        this.field_r = param1.readUnsignedShort(122);
                       }
                     } else {
-                      this.field_m = param1.d(125);
+                      this.field_m = param1.readUnsignedShort(125);
                     }
                   }
                 } else {
-                  this.field_n = param1.d(param0 + 17);
+                  this.field_n = param1.readUnsignedShort(param0 + 17);
                 }
               }
             } else {
-              this.field_u = param1.d(122);
+              this.field_u = param1.readUnsignedShort(122);
             }
           } else {
-            this.field_p = param1.d(param0 ^ 23);
+            this.field_p = param1.readUnsignedShort(param0 ^ 23);
           }
           if (param0 != 107) {
             discarded$0 = this.a(3, 43, (byte) 18);
@@ -222,9 +222,9 @@ final class voa extends ci {
           if (param0 > -48) {
             return;
           }
-          var2 = var28.h(255);
+          var2 = var28.readUnsignedByte(255);
           if (var2 == 0) {
-            var3 = var28.d(122);
+            var3 = var28.readUnsignedShort(122);
             var4 = (bb) (mg.field_b.first(-80));
             while (var4 != null) {
               if (var4.field_n != var3) {
@@ -237,7 +237,7 @@ final class voa extends ci {
               dea.a(60);
               return;
             }
-            var5 = var28.h(255);
+            var5 = var28.readUnsignedByte(255);
             if (var5 != 0) {
               var6 = var4.field_j;
               bj.field_s[0].field_a = fna.field_k;
@@ -245,10 +245,10 @@ final class voa extends ci {
               bj.field_s[0].field_d = false;
               var7 = var4.field_i;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
-                bj.field_s[var8_int].field_a = var28.e((byte) -76);
+                bj.field_s[var8_int].field_a = var28.readString((byte) -76);
                 bj.field_s[var8_int].field_d = false;
-                if (var28.h(255) == 1) {
-                  bj.field_s[var8_int].field_c = var28.e((byte) -76);
+                if (var28.readUnsignedByte(255) == 1) {
+                  bj.field_s[var8_int].field_c = var28.readString((byte) -76);
                 } else {
                   bj.field_s[var8_int].field_c = null;
                 }
@@ -269,12 +269,12 @@ final class voa extends ci {
               var15 = 0;
               var16 = 0;
               var17 = 0;
-              var18 = var28.h(255);
+              var18 = var28.readUnsignedByte(255);
               if (var18 > 0) {
                 for (var19 = 0; var18 > var19; var19++) {
-                  var20 = var28.h(255);
+                  var20 = var28.readUnsignedByte(255);
                   var21 = bj.field_s[var20].field_a;
-                  var22 = var28.b(290646880);
+                  var22 = var28.readLong(290646880);
                   var24 = var28.position;
                   if (var19 < var6) {
                     var8[0][var12] = var21;
@@ -283,7 +283,7 @@ final class voa extends ci {
                     for (var25 = 0; var25 < var7; var25++) {
                       incrementValue$3 = var15;
                       var15++;
-                      var11[0][incrementValue$3] = var28.e(-41);
+                      var11[0][incrementValue$3] = var28.readInt(-41);
                     }
                     var12++;
                   }
@@ -297,7 +297,7 @@ final class voa extends ci {
                     for (var25Lifetime1 = 0; var7 > var25Lifetime1; var25Lifetime1++) {
                       incrementValue$4 = var16;
                       var16++;
-                      var11[1][incrementValue$4] = var28.e(121);
+                      var11[1][incrementValue$4] = var28.readInt(121);
                     }
                   }
                   if (var14 < var6 &&
@@ -311,7 +311,7 @@ final class voa extends ci {
                     for (var25Lifetime2 = 0; var25Lifetime2 < var7; var25Lifetime2++) {
                       incrementValue$5 = var17;
                       var17++;
-                      var11[2][incrementValue$5] = var28.e(-105);
+                      var11[2][incrementValue$5] = var28.readInt(-105);
                     }
                   }
                 }
@@ -322,8 +322,8 @@ final class voa extends ci {
             return;
           }
           if (var2 == 1) {
-            var3Lifetime1 = var28.d(125);
-            var4_long = var28.b(290646880);
+            var3Lifetime1 = var28.readUnsignedShort(125);
+            var4_long = var28.readLong(290646880);
             var6_ref_kb = (kb) (nn.field_a.first(-80));
             while (var6_ref_kb != null) {
               if (var6_ref_kb.field_l != var3Lifetime1) {

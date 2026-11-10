@@ -53,7 +53,7 @@ final class CommonChooseReward implements dv {
         this.d(-14447);
     }
 
-    final int c(int param0) {
+    final int getCurrentPlayerTicks(int param0) {
         if (param0 != -1) {
           this.toString();
           return this.currentPlayerTicks;
@@ -156,7 +156,7 @@ final class CommonChooseReward implements dv {
         return this.reward.length;
     }
 
-    final boolean f(int param0) {
+    final boolean isFinished(int param0) {
         if (param0 != -29004) {
           return true;
         }
@@ -229,7 +229,7 @@ final class CommonChooseReward implements dv {
         this.currentPlayerTicks = this.currentPlayerTicks + 1;
     }
 
-    final int g(int param0) {
+    final int getCurrentPlayerId(int param0) {
         if (param0 != -1) {
           this.a(-107, 98);
           return this.currentPlayerId;

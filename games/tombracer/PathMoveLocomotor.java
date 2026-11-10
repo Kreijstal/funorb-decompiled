@@ -12,7 +12,7 @@ final class PathMoveLocomotor extends Locomotor {
     private int field_r;
     static int field_p;
 
-    final int c(int param0) {
+    final int getTypeId(int param0) {
         if (param0 != 1) {
           return 10;
         }
@@ -152,7 +152,7 @@ final class PathMoveLocomotor extends Locomotor {
           var4 = var15[this.field_w][0] + this.d((byte) -70);
           var5 = var15[this.field_w][1] + this.a(false);
           var6 = -this.trap.s(25745) + var4;
-          var7 = var5 - this.trap.e(false);
+          var7 = var5 - this.trap.getLocalY(false);
           var8 = this.field_r >> 16;
           var8 = var8 * var8;
           var9 = (var6 >> 16) * (var6 >> 16) + (var7 >> 16) * (var7 >> 16);
@@ -220,7 +220,7 @@ final class PathMoveLocomotor extends Locomotor {
         var4Lifetime1 = var15[this.field_w][0] + this.d((byte) -70);
         var5Lifetime1 = var15[this.field_w][1] + this.a(false);
         var6Lifetime1 = -this.trap.s(25745) + var4Lifetime1;
-        var7Lifetime1 = var5Lifetime1 - this.trap.e(false);
+        var7Lifetime1 = var5Lifetime1 - this.trap.getLocalY(false);
         var8Lifetime1 = this.field_r >> 16;
         var8Lifetime1 = var8Lifetime1 * var8Lifetime1;
         var9Lifetime1 = (var6Lifetime1 >> 16) * (var6Lifetime1 >> 16) + (var7Lifetime1 >> 16) * (var7Lifetime1 >> 16);
@@ -301,9 +301,9 @@ final class PathMoveLocomotor extends Locomotor {
         return param1;
     }
 
-    final void a(BitPacketBuffer param0, byte param1) {
+    final void encode(BitPacketBuffer param0, byte param1) {
         try {
-          super.a(param0, (byte) -91);
+          super.encode(param0, (byte) -91);
           if (param1 >= -78) {
             this.field_o = true;
           }

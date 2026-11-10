@@ -56,7 +56,7 @@ final class ConveyorBehaviour extends Behaviour {
         field_p = null;
     }
 
-    final int a(boolean param0) {
+    final int getTypeId(boolean param0) {
         if (param0) {
           return -20;
         }
@@ -150,7 +150,7 @@ final class ConveyorBehaviour extends Behaviour {
     final boolean p(byte param0) {
         if (param0 != 120) {
           BitPacketBuffer var3 = (BitPacketBuffer) null;
-          this.a(false, (BitPacketBuffer) null);
+          this.encode(false, (BitPacketBuffer) null);
         }
         return true;
     }
@@ -165,9 +165,9 @@ final class ConveyorBehaviour extends Behaviour {
         }
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           param1.writeBits((byte) -125, dqa.a(true, this.field_s >> 16, 4), 4);
           param1.writeBits((byte) -127, dqa.a(true, this.field_r >> 16, 4), 4);
         } catch (RuntimeException runtimeException) {

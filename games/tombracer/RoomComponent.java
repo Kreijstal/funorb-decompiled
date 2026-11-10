@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderable, WorldBody, lj, ew {
-    int field_m;
+    int typeId;
     private int field_q;
     int field_k;
     int field_j;
@@ -105,7 +105,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
 
     public final ew h(byte param0) {
         if (param0 < 105) {
-          this.r(70);
+          this.getTypeId(70);
         }
         return (ew) ((Object) this.o((byte) -34));
     }
@@ -373,11 +373,11 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         RoomComponent var6;
         var7 = TombRacer.field_G ? 1 : 0;
         if (param1 &&
-          param0 == this.field_s.a((byte) 111)) {
+          param0 == this.field_s.getId((byte) 111)) {
           return this;
         }
         if (!param1 &&
-          param0 == this.field_w.a((byte) 88)) {
+          param0 == this.field_w.getId((byte) 88)) {
           return this;
         }
         if (param2) {
@@ -638,11 +638,11 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         return this.field_w;
     }
 
-    final int r(int param0) {
+    final int getTypeId(int param0) {
         if (param0 != 12) {
           return 114;
         }
-        return this.field_m;
+        return this.typeId;
     }
 
     public final SwitchableId i(byte param0) {
@@ -772,7 +772,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         return 0;
     }
 
-    void a(boolean param0, BitPacketBuffer param1) {
+    void encode(boolean param0, BitPacketBuffer param1) {
         BitPacketBuffer stackIn_12_0 = null;
         int stackIn_12_1 = 0;
         int stackIn_13_2 = 0;
@@ -864,7 +864,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         this.field_x = true;
         try {
           this.room = param0;
-          this.field_m = param1;
+          this.typeId = param1;
           this.field_w = param0.d(-31957).a(-54, false);
           this.q((byte) -128);
           this.d(true);

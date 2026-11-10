@@ -26,13 +26,13 @@ final class BlockComponent extends kna {
         try {
           var15 = new Trap(param2, param0);
           var15.b((byte) -11, this.field_k, this.field_l);
-          if (this.field_m == 49) {
+          if (this.typeId == 49) {
             var7 = 10;
             var5 = 8;
             var8 = 50;
             var6 = 50;
           } else {
-            if (this.field_m == 0) {
+            if (this.typeId == 0) {
               var6 = 25;
               var7 = 0;
               var8 = 50;
@@ -103,9 +103,9 @@ final class BlockComponent extends kna {
         return false;
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "si.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -170,7 +170,7 @@ final class BlockComponent extends kna {
 
     final void q(byte param0) {
         super.q(param0);
-        if (this.field_m != 49) {
+        if (this.typeId != 49) {
           this.b(-78, 2097152, 2097152);
           return;
         }

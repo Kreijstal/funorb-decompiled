@@ -127,7 +127,7 @@ final class PlayerSimulation {
         return this.player.getRoom((byte) -88).field_a;
     }
 
-    final int l(int param0) {
+    final int getRoomCount(int param0) {
         if (param0 > -2) {
           return 8;
         }
@@ -292,7 +292,7 @@ final class PlayerSimulation {
           if (var3 == null) {
             this.a(89, true);
           } else {
-            var3.i((byte) -98);
+            var3.restart((byte) -98);
           }
           return;
         }
@@ -311,7 +311,7 @@ final class PlayerSimulation {
         if (var3Lifetime1 == null) {
           this.a(89, true);
         } else {
-          var3Lifetime1.i((byte) -98);
+          var3Lifetime1.restart((byte) -98);
         }
         return;
     }

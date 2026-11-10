@@ -35,7 +35,7 @@ final class CircleMovementLocomotor extends Locomotor {
           var5 = var3 + (pla.b(35, this.field_q >> 2) >> 8) * (this.field_o >> 8);
         } else {
           var4 = this.trap.s(25745);
-          var5 = this.trap.e(false);
+          var5 = this.trap.getLocalY(false);
           this.field_p = false;
         }
         this.field_q = this.field_q - this.field_r;
@@ -107,7 +107,7 @@ final class CircleMovementLocomotor extends Locomotor {
         return 256;
     }
 
-    final void a(BitPacketBuffer param0, byte param1) {
+    final void encode(BitPacketBuffer param0, byte param1) {
         jea var4 = null;
         BitPacketBuffer stackIn_2_0 = null;
         int stackIn_2_1 = 0;
@@ -118,7 +118,7 @@ final class CircleMovementLocomotor extends Locomotor {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          super.a(param0, (byte) -122);
+          super.encode(param0, (byte) -122);
           param0.writeBits((byte) -44, this.field_o >> 16, 10);
           param0.writeBits((byte) 90, dqa.a(true, this.field_r, 12), 12);
           param0.writeBits((byte) -126, cn.a((byte) 74, this.field_q, 32768, 4), 4);
@@ -289,7 +289,7 @@ final class CircleMovementLocomotor extends Locomotor {
         field_s = null;
     }
 
-    final int c(int param0) {
+    final int getTypeId(int param0) {
         if (param0 != 1) {
           this.field_r = 5;
         }

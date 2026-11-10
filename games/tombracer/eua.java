@@ -211,7 +211,7 @@ final class eua extends jea {
             this.a(0, 60);
             this.field_tb = param2;
             this.field_Eb = this.field_zb[this.field_tb];
-            hj.a(this.field_Eb, (byte) 122);
+            MazeGrid.a(this.field_Eb, (byte) 122);
             this.field_Eb.a(12, 116);
           } else {
             if (this.field_ub[param2] != -1) {

@@ -151,7 +151,7 @@ final class ava {
                 var12.b(-123, var12.field_Db);
               }
               var12.field_Db.field_z = 2;
-              var12.field_Gb = new jea(0L, kua.field_i);
+              var12.field_Gb = new jea(0L, Corpse.field_i);
               var12.b(-126, var12.field_Gb);
               var12.a(-10966);
               var12.field_Kb = new jea(0L, bua.field_g);

@@ -40,7 +40,7 @@ final class lm extends ci {
         try {
           var4_int = param2;
           if (var4_int == 0) {
-            this.a(param1.a(param0 ^ -32661), (byte) -55);
+            this.a(param1.readUnsignedMedium(param0 ^ -32661), (byte) -55);
           }
           if (param0 != 107) {
             var5 = (PacketBuffer) null;

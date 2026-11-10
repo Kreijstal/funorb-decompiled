@@ -206,22 +206,22 @@ class rj extends ae {
             rj.a((cn) null, 5, -25, (byte) 14);
           }
           var11 = vc.field_q;
-          var2 = var11.h(255);
+          var2 = var11.readUnsignedByte(255);
           if (var2 == 0) {
             var10 = (mm) (SpawnerBehaviour.field_n.first(-80));
             if (var10 == null) {
               dea.a(60);
               return;
             }
-            var4 = var11.h(param0 ^ 251);
+            var4 = var11.readUnsignedByte(param0 ^ 251);
             if (var4 == 0) {
               var5 = null;
             } else {
               var15 = new byte[var4];
-              var11.a(var15, 0, -115, var4);
+              var11.readBytes(var15, 0, -115, var4);
             }
             var11.position = var11.position + 4;
-            if (var11.a((byte) 114)) {
+            if (var11.verifyCrc32((byte) 114)) {
               var10.unlink(95);
               return;
             }
@@ -233,7 +233,7 @@ class rj extends ae {
             dea.a(60);
             return;
           }
-          var3 = var11.e(-34);
+          var3 = var11.readInt(-34);
           var4_ref_sda = (sda) (qd.field_a.first(param0 - 84));
           while (var4_ref_sda != null) {
             if (var4_ref_sda.field_l != var3) {

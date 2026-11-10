@@ -13,7 +13,7 @@ final class te {
     }
 
     final void a(uw param0, int param1) {
-        kua var3 = null;
+        Corpse var3 = null;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -25,10 +25,10 @@ final class te {
           if (param1 != -28255) {
             field_b = 19;
           }
-          var3 = (kua) (this.field_a.first(-80));
+          var3 = (Corpse) (this.field_a.first(-80));
           while (var3 != null) {
             param0.a((byte) 25, var3.f((byte) 103), var3);
-            var3 = (kua) (this.field_a.next(111));
+            var3 = (Corpse) (this.field_a.next(111));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -48,7 +48,7 @@ final class te {
     final void a(int param0, IntrusiveDeque param1) {
         int var4 = 0;
         IntrusiveDeque var5 = null;
-        kua var6 = null;
+        Corpse var6 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -60,10 +60,10 @@ final class te {
             var5 = (IntrusiveDeque) null;
             this.a(71, (IntrusiveDeque) null);
           }
-          var6 = (kua) (param1.first(-80));
+          var6 = (Corpse) (param1.first(-80));
           while (var6 != null) {
-            this.field_a.addLast((byte) -97, new kua(var6));
-            var6 = (kua) (param1.next(121));
+            this.field_a.addLast((byte) -97, new Corpse(var6));
+            var6 = (Corpse) (param1.next(121));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -82,7 +82,7 @@ final class te {
 
     final void a(Room param0, int param1) {
         int var4 = 0;
-        kua var5 = null;
+        Corpse var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -93,10 +93,10 @@ final class te {
           if (param1 > -59) {
             this.a(-81);
           }
-          var5 = (kua) (this.field_a.first(-80));
+          var5 = (Corpse) (this.field_a.first(-80));
           while (var5 != null) {
             var5.a(param0, (byte) -72);
-            var5 = (kua) (this.field_a.next(107));
+            var5 = (Corpse) (this.field_a.next(107));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

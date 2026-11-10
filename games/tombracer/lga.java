@@ -328,7 +328,7 @@ class lga extends rj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= -86) {
-            stackIn_4_0 = new nma(param0.b(false), param0.b(false), param0.b(false), param0.b(false), param0.b(false), param0.b(false), param0.b(false), param0.b(false), param0.a(-32768), param0.h(255));
+            stackIn_4_0 = new nma(param0.readShort(false), param0.readShort(false), param0.readShort(false), param0.readShort(false), param0.readShort(false), param0.readShort(false), param0.readShort(false), param0.readShort(false), param0.readUnsignedMedium(-32768), param0.readUnsignedByte(255));
             return stackIn_4_0;
           }
           stackIn_2_0 = (nma) null;

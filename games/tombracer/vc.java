@@ -35,14 +35,14 @@ final class vc extends ci {
         try {
           var4_int = param2;
           if (var4_int == 0) {
-            this.field_r = param1.h(255);
+            this.field_r = param1.readUnsignedByte(255);
           } else {
             if (var4_int != 1) {
               if (2 == var4_int) {
-                this.field_m = param1.d(124);
+                this.field_m = param1.readUnsignedShort(124);
               }
             } else {
-              this.field_t = param1.h(255);
+              this.field_t = param1.readUnsignedByte(255);
             }
           }
           if (param0 != 107) {

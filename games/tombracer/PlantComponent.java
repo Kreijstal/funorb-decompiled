@@ -9,14 +9,14 @@ final class PlantComponent extends kna {
         return false;
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -53,7 +53,7 @@ final class PlantComponent extends kna {
           var9.a((byte) -3, 0);
           var9.b((byte) 17, true);
           var5 = rm.field_a;
-          var7_int = this.r(12);
+          var7_int = this.getTypeId(12);
           switch (var7_int) {
             case 39:
               var6 = 0;
@@ -203,7 +203,7 @@ final class PlantComponent extends kna {
         int var5;
         var5 = TombRacer.field_G ? 1 : 0;
         super.q(param0);
-        var4 = this.r(12);
+        var4 = this.getTypeId(12);
         if (38 != var4 &&
           var4 != 39) {
           if (40 != var4 &&

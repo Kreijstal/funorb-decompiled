@@ -456,7 +456,7 @@ final class Projectile extends PooledObject implements Renderable, ffa, t {
             if (!this.effect.d(6734)) {
               this.field_i = 4;
             }
-            this.effect.a(29525, param1.b(-344));
+            this.effect.a(29525, param1.getPreset(-344));
             stackIn_26_0 = 0;
             return stackIn_26_0;
           }

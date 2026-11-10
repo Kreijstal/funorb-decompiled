@@ -26,9 +26,9 @@ final class rda extends ci {
             this.a(80, (int[][]) null);
           }
           if (param2 == 0) {
-            this.field_p = new rra[param1.h(255)];
+            this.field_p = new rra[param1.readUnsignedByte(255)];
             for (var4_int = 0; this.field_p.length > var4_int; var4_int++) {
-              var5 = param1.h(255);
+              var5 = param1.readUnsignedByte(255);
               var6 = var5;
               if (0 == var6) {
                 this.field_p[var4_int] = (rra) ((Object) DualLinkNode.a(0, param1));
@@ -49,7 +49,7 @@ final class rda extends ci {
             return;
           }
           if (param2 == 1) {
-            stackIn_20_1 = (param1.h(255) == 1);
+            stackIn_20_1 = (param1.readUnsignedByte(255) == 1);
             this.field_g = stackIn_20_1;
           }
           return;

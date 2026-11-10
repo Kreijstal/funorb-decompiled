@@ -269,38 +269,38 @@ final class iia extends ci {
           var4_int = param2;
           if (var4_int != 0) {
             if (1 == var4_int) {
-              this.field_p = param1.d(param0 ^ 21);
+              this.field_p = param1.readUnsignedShort(param0 ^ 21);
             } else {
               if (2 != var4_int) {
                 if (var4_int != 3) {
                   if (4 == var4_int) {
-                    this.field_w = param1.d(126);
+                    this.field_w = param1.readUnsignedShort(126);
                   } else {
                     if (5 == var4_int) {
-                      this.field_n = param1.d(122);
+                      this.field_n = param1.readUnsignedShort(122);
                     } else {
                       if (var4_int == 6) {
-                        this.field_t = param1.h(255);
+                        this.field_t = param1.readUnsignedByte(255);
                       } else {
                         if (var4_int == 7) {
-                          this.field_u = param1.d(125);
+                          this.field_u = param1.readUnsignedShort(125);
                         } else {
                           if (8 == var4_int) {
-                            this.field_m = param1.d(126);
+                            this.field_m = param1.readUnsignedShort(126);
                           }
                         }
                       }
                     }
                   }
                 } else {
-                  this.field_y = param1.d(param0 ^ 22);
+                  this.field_y = param1.readUnsignedShort(param0 ^ 22);
                 }
               } else {
-                this.field_s = param1.d(124);
+                this.field_s = param1.readUnsignedShort(124);
               }
             }
           } else {
-            this.field_x = param1.h(255);
+            this.field_x = param1.readUnsignedByte(255);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

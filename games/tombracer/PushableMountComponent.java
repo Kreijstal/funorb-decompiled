@@ -4,12 +4,12 @@
 final class PushableMountComponent extends kna {
     static efa field_F;
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         if (param0) {
           return;
         }
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "md.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

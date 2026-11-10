@@ -76,7 +76,7 @@ final class w extends sqa {
           var5 = -1;
           while (true) {
             if (param0.position < param0.payload.length) {
-              var5 = param0.h(255);
+              var5 = param0.readUnsignedByte(255);
               if ((~var5 != ~dia.field_q ||
                 var4 != 0) &&
                 (!qqa.a(param0, mga.field_j, var5, true) ||
@@ -90,7 +90,7 @@ final class w extends sqa {
                   if (param0.payload.length == param0.position + 1) {
                     throw new RuntimeException("Unterminated quote!");
                   }
-                  var6 = param0.c((byte) 52);
+                  var6 = param0.readByte((byte) 52);
                   if (!qqa.a(param0, mga.field_j, var6, true) &&
                     dia.field_q != var6) {
                     if (ConstrainToCircleLocomotor.field_w == var6) {

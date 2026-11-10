@@ -18,42 +18,42 @@ final class nra implements GamePacket {
     private long field_j;
 
     public final void encode(int param0, BitPacketBuffer param1) {
-        param1.a(1736565456, this.field_j);
-        param1.f(param0 ^ -1477662080, this.field_m);
-        param1.i(this.field_f, 0);
-        param1.a(this.field_h, (byte) -84);
-        param1.a(this.field_d, (byte) -117);
-        param1.a(this.field_i, (byte) -109);
-        param1.a(this.field_k, (byte) 4);
-        param1.a(1736565456, this.field_e);
-        param1.a(1736565456, this.field_n);
-        param1.a(param0 ^ 1736565272, this.field_b);
+        param1.writeLong(1736565456, this.field_j);
+        param1.writeShort(param0 ^ -1477662080, this.field_m);
+        param1.writeByte(this.field_f, 0);
+        param1.writeInt(this.field_h, (byte) -84);
+        param1.writeInt(this.field_d, (byte) -117);
+        param1.writeInt(this.field_i, (byte) -109);
+        param1.writeInt(this.field_k, (byte) 4);
+        param1.writeLong(1736565456, this.field_e);
+        param1.writeLong(1736565456, this.field_n);
+        param1.writeLong(param0 ^ 1736565272, this.field_b);
         if (param0 != 200) {
           return;
         }
         try {
-          param1.a(param0 ^ 1736565272, this.field_l);
+          param1.writeLong(param0 ^ 1736565272, this.field_l);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "nra.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void decode(BitPacketBuffer param0, byte param1) {
-        this.field_j = param0.b(290646880);
-        this.field_m = param0.d(122);
-        this.field_f = param0.h(param1 + 274);
+        this.field_j = param0.readLong(290646880);
+        this.field_m = param0.readUnsignedShort(122);
+        this.field_f = param0.readUnsignedByte(param1 + 274);
         if (param1 != -19) {
           return;
         }
         try {
-          this.field_h = param0.e(-126);
-          this.field_d = param0.e(-51);
-          this.field_i = param0.e(-25);
-          this.field_k = param0.e(100);
-          this.field_e = param0.b(290646880);
-          this.field_n = param0.b(param1 + 290646899);
-          this.field_b = param0.b(param1 ^ -290646899);
-          this.field_l = param0.b(290646880);
+          this.field_h = param0.readInt(-126);
+          this.field_d = param0.readInt(-51);
+          this.field_i = param0.readInt(-25);
+          this.field_k = param0.readInt(100);
+          this.field_e = param0.readLong(290646880);
+          this.field_n = param0.readLong(param1 + 290646899);
+          this.field_b = param0.readLong(param1 ^ -290646899);
+          this.field_l = param0.readLong(290646880);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "nra.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

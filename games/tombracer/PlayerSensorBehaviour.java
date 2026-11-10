@@ -63,7 +63,7 @@ final class PlayerSensorBehaviour extends Behaviour implements ut {
         return 7798954;
     }
 
-    final int a(boolean param0) {
+    final int getTypeId(boolean param0) {
         if (param0) {
           this.a(-15, 107);
           return 22;
@@ -453,9 +453,9 @@ final class PlayerSensorBehaviour extends Behaviour implements ut {
         return 0;
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           param1.writeBits((byte) -126, this.field_s ? 1 : 0, 1);
           if (this.field_s) {
             param1.writeBits((byte) -126, cn.a((byte) -120, this.field_u, 8192, 8), 8);

@@ -13,8 +13,8 @@ final class EffectSwitchBehaviour extends Behaviour implements ut {
     static String field_o;
     private int field_p;
 
-    final void a(boolean param0, BitPacketBuffer param1) {
-        super.a(param0, param1);
+    final void encode(boolean param0, BitPacketBuffer param1) {
+        super.encode(param0, param1);
         this.field_q.a(this.h((byte) 116), (byte) 111, param1);
         param1.writeBits((byte) 42, this.field_w, 8);
         param1.writeBits((byte) -128, this.field_v, 8);
@@ -67,7 +67,7 @@ final class EffectSwitchBehaviour extends Behaviour implements ut {
         this.field_q.a((byte) 48, this.h((byte) 110));
         if (param0 != -2) {
           BitPacketBuffer var3 = (BitPacketBuffer) null;
-          this.a(false, (BitPacketBuffer) null);
+          this.encode(false, (BitPacketBuffer) null);
         }
     }
 
@@ -89,7 +89,7 @@ final class EffectSwitchBehaviour extends Behaviour implements ut {
         return true;
     }
 
-    final int a(boolean param0) {
+    final int getTypeId(boolean param0) {
         if (param0) {
           return -122;
         }

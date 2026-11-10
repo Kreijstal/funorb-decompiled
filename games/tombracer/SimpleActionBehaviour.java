@@ -44,16 +44,16 @@ final class SimpleActionBehaviour extends Behaviour {
         }
     }
 
-    final int a(boolean param0) {
+    final int getTypeId(boolean param0) {
         if (param0) {
           return -85;
         }
         return 14;
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           param1.writeBits((byte) -125, this.field_o, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wn.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -124,7 +124,7 @@ final class SimpleActionBehaviour extends Behaviour {
               return stackIn_20_0;
             }
             var6_ref_String = var4[var5];
-            var7 = kua.a(var6_ref_String, -6962);
+            var7 = Corpse.a(var6_ref_String, -6962);
             if (var7 == null) {
               var5++;
               continue;

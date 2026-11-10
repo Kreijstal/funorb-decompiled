@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kua extends IntrusiveNode implements Renderable {
+final class Corpse extends IntrusiveNode implements Renderable {
     private Player field_h;
     private int field_g;
     private int field_l;
@@ -79,7 +79,7 @@ final class kua extends IntrusiveNode implements Renderable {
         }
     }
 
-    kua(kua param0) {
+    Corpse(Corpse param0) {
         this(param0.field_h, param0.field_l, param0.field_g, param0.field_f, param0.field_k);
     }
 
@@ -122,7 +122,7 @@ final class kua extends IntrusiveNode implements Renderable {
         return this.field_g;
     }
 
-    kua(Player param0, int param1, int param2, int param3, int param4) {
+    Corpse(Player param0, int param1, int param2, int param3, int param4) {
         try {
           this.field_l = param1;
           this.field_f = param3;
@@ -151,7 +151,7 @@ final class kua extends IntrusiveNode implements Renderable {
         var5 = TombRacer.field_G ? 1 : 0;
         try {
           if (param1 != -6962) {
-            kua.releaseStatics((byte) 94);
+            Corpse.releaseStatics((byte) 94);
           }
           var2_int = param0.length();
           if (var2_int == 0) {

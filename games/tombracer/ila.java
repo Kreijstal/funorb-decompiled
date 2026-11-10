@@ -217,14 +217,14 @@ final class ila {
                 fd.field_d = b.a(param1, 0, (String) null, false, tr.field_g);
               }
               ql.field_k.position = 0;
-              ql.field_k.i(14, 0);
-              ql.field_k.i(fd.field_d.a((byte) 113).field_d, 0);
+              ql.field_k.writeByte(14, 0);
+              ql.field_k.writeByte(fd.field_d.a((byte) 113).field_d, 0);
               bl.a(-1, -1);
               km.field_p = bva.field_b;
             }
             if (km.field_p == bva.field_b &&
               ama.a(1, -1)) {
-              var6_int = vc.field_q.h(255);
+              var6_int = vc.field_q.readUnsignedByte(255);
               if (var6_int == 0) {
                 km.field_p = ola.field_yb;
               } else {
@@ -236,7 +236,7 @@ final class ila {
             }
             if (ola.field_yb == km.field_p &&
               ama.a(8, -1)) {
-              PathMoverComponent.field_L = vc.field_q.b(290646880);
+              PathMoverComponent.field_L = vc.field_q.readLong(290646880);
               vc.field_q.position = 0;
               RoomCompletedScreen.a((byte) 121, param5, param3, fd.field_d, param0);
               km.field_p = ria.field_o;
@@ -244,7 +244,7 @@ final class ila {
             boolean decompiledFrameRemainder0 = true;
             if (km.field_p == ria.field_o &&
               ama.a(1, param2 - 51)) {
-              var6_intLifetime1 = vc.field_q.h(param2 + 205);
+              var6_intLifetime1 = vc.field_q.readUnsignedByte(param2 + 205);
               vc.field_q.position = 0;
               oka.field_z = var6_intLifetime1;
               ji.field_d = null;
@@ -269,13 +269,13 @@ final class ila {
             }
             if (eo.field_w == km.field_p &&
               cla.g(0)) {
-              tr.field_g = vc.field_q.b(param2 + 290646830);
+              tr.field_g = vc.field_q.readLong(param2 + 290646830);
               gj.field_q = param1;
-              ld.field_e = vc.field_q.h(param2 ^ 205);
-              PrimMazeGenerator.field_e = vc.field_q.h(255);
-              wla.field_ub = vc.field_q.d(124);
-              var6 = vc.field_q.c(param2 - 28740);
-              var7 = vc.field_q.h(255);
+              ld.field_e = vc.field_q.readUnsignedByte(param2 ^ 205);
+              PrimMazeGenerator.field_e = vc.field_q.readUnsignedByte(255);
+              wla.field_ub = vc.field_q.readUnsignedShort(124);
+              var6 = vc.field_q.readNullableString(param2 - 28740);
+              var7 = vc.field_q.readUnsignedByte(255);
               if ((var7 & 1) != 0) {
                 rra.a(84);
               }
@@ -293,19 +293,19 @@ final class ila {
               stackIn_54_0 = (0 != (var7 & 16));
               GraphicsToolkit.field_b = stackIn_54_0;
               if (q.field_r) {
-                vc.field_q.h(255);
-                vc.field_q.h(255);
-                vc.field_q.e(-104);
-                kl.field_k = vc.field_q.d(121);
+                vc.field_q.readUnsignedByte(255);
+                vc.field_q.readUnsignedByte(255);
+                vc.field_q.readInt(-104);
+                kl.field_k = vc.field_q.readUnsignedShort(121);
                 np.field_J = new byte[kl.field_k];
                 for (var8 = 0; var8 < kl.field_k; var8++) {
-                  np.field_J[var8] = vc.field_q.c((byte) 103);
+                  np.field_J[var8] = vc.field_q.readByte((byte) 103);
                 }
               }
-              fna.field_k = vc.field_q.e((byte) -76);
+              fna.field_k = vc.field_q.readString((byte) -76);
               var11 = (CharSequence) ((Object) fna.field_k);
               tia.field_b = jd.a(1, var11);
-              lsa.field_a = vc.field_q.h(255);
+              lsa.field_a = vc.field_q.readUnsignedByte(255);
               km.field_p = uga.field_n;
               if (fd.field_d.a((byte) 113) == boa.field_s) {
                 vw.field_a.a(di.a(120), param2 ^ 55);
@@ -357,7 +357,7 @@ final class ila {
               if (7 == oka.field_z) {
                 oka.field_z = 3;
               }
-              io.field_b = vc.field_q.e((byte) -76);
+              io.field_b = vc.field_q.readString((byte) -76);
               PushableBlockMazeComponent.field_L = false;
               stackIn_93_0 = oka.field_z;
               return stackIn_93_0;
@@ -450,24 +450,24 @@ final class ila {
         wua var9 = null;
         var7 = TombRacer.field_G ? 1 : 0;
         var8 = vc.field_q;
-        var3 = var8.h(param0 + 19042);
+        var3 = var8.readUnsignedByte(param0 + 19042);
         gja.field_x = 127 & var3;
         stackIn_3_0 = ((128 & var3) != 0);
         sb.field_b = stackIn_3_0;
-        jda.field_m = var8.h(255);
-        cca.field_z = var8.b(param0 ^ -290628099);
+        jda.field_m = var8.readUnsignedByte(255);
+        cca.field_z = var8.readLong(param0 ^ -290628099);
         if (gja.field_x == 2) {
-          gb.field_a = var8.d(127);
-          ega.field_b = var8.a(-32768);
+          gb.field_a = var8.readUnsignedShort(127);
+          ega.field_b = var8.readUnsignedMedium(-32768);
         } else {
           gb.field_a = 0;
           ega.field_b = 0;
         }
-        stackIn_9_0 = (var8.h(param0 + 19042) != 1) ? 0 : 1;
+        stackIn_9_0 = (var8.readUnsignedByte(param0 + 19042) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
-        esa.field_c = var8.e((byte) -76);
+        esa.field_c = var8.readString((byte) -76);
         if (var4 != 0) {
-          gia.field_q = var8.e((byte) -76);
+          gia.field_q = var8.readString((byte) -76);
         } else {
           gia.field_q = esa.field_c;
         }
@@ -476,14 +476,14 @@ final class ila {
           era.field_a = 0;
           dga.field_a = null;
         } else {
-          era.field_a = var8.d(122);
-          dga.field_a = var8.e((byte) -76);
+          era.field_a = var8.readUnsignedShort(122);
+          dga.field_a = var8.readString((byte) -76);
         }
         if (!param1) {
           ConveyorBehaviour.field_p = dl.a(var8, 80, -117);
           qra.field_e = null;
         } else {
-          var5 = var8.d(121);
+          var5 = var8.readUnsignedShort(121);
           try {
             var9 = qu.field_a.a(false, var5);
             ConveyorBehaviour.field_p = var9.b((byte) -5);

@@ -87,8 +87,8 @@ final class ik extends IntrusiveNode {
         field_h = null;
     }
 
-    final static roa b(int param0) {
-        roa var1 = new roa();
+    final static Weapon b(int param0) {
+        Weapon var1 = new Weapon();
         var1.field_f = new Effect(0, 5);
         var1.field_f.b(param0 ^ -17697, 10);
         var1.field_t = 14;

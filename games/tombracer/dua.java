@@ -91,7 +91,7 @@ final class dua extends me {
           }
           var23 = this.field_g.getSimulation(0, 0);
           var6 = 0;
-          var7 = var23.l(-7);
+          var7 = var23.getRoomCount(-7);
           var8 = koa.b(0) >> 1;
           if (var7 % 2 == 0) {
             stackIn_49_0 = var4;
@@ -156,7 +156,7 @@ final class dua extends me {
         }
         var20 = this.field_g.getSimulation(0, 0);
         var6Lifetime1 = 0;
-        var7Lifetime1 = var20.l(-7);
+        var7Lifetime1 = var20.getRoomCount(-7);
         var8Lifetime1 = koa.b(0) >> 1;
         if (var7Lifetime1 % 2 == 0) {
           stackIn_9_0 = var4Lifetime1;

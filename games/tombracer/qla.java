@@ -1070,24 +1070,24 @@ final class qla {
         var12 = TombRacer.field_G ? 1 : 0;
         try {
           var2 = new PacketBuffer(param0);
-          var3 = var2.h(255);
+          var3 = var2.readUnsignedByte(255);
           if (var3 != 0) {
             throw new RuntimeException("");
           }
-          stackIn_8_0 = (1 != var2.h(255)) ? 0 : 1;
+          stackIn_8_0 = (1 != var2.readUnsignedByte(255)) ? 0 : 1;
           boolean decompiledFrameCompleted0 = true;
           var4 = stackIn_8_0;
           this.field_e = new byte[256];
-          var2.a(this.field_e, 0, -81, 256);
+          var2.readBytes(this.field_e, 0, -81, 256);
           if (var4 == 0) {
-            this.field_a = var2.h(255);
+            this.field_a = var2.readUnsignedByte(255);
           }
           if (var4 != 0 ||
             var12 != 0) {
             var5 = new int[256];
             var7_int = 0;
             while (var7_int < 256) {
-              var5[var7_int] = var2.h(255);
+              var5[var7_int] = var2.readUnsignedByte(255);
               var7_int++;
               if (var12 != 0) {
                 return;
@@ -1096,7 +1096,7 @@ final class qla {
             var6 = new int[256];
             var7_intLifetime1 = 0;
             while (var7_intLifetime1 < 256) {
-              var6[var7_intLifetime1] = var2.h(255);
+              var6[var7_intLifetime1] = var2.readUnsignedByte(255);
               var7_intLifetime1++;
               if (var12 != 0) {
                 return;
@@ -1115,7 +1115,7 @@ final class qla {
                 }
                 var10 = stackIn_36_0;
                 while (var7[var8_int].length > var10) {
-                  var9 = (byte)(var9 + var2.c((byte) 79));
+                  var9 = (byte)(var9 + var2.readByte((byte) 79));
                   var7[var8_int][var10] = (byte) var9;
                   var10++;
                 }
@@ -1138,7 +1138,7 @@ final class qla {
                 }
                 var11 = stackIn_48_0;
                 while (var8[var9Lifetime1].length > var11) {
-                  var10Lifetime1 = (byte)(var10Lifetime1 + var2.c((byte) 93));
+                  var10Lifetime1 = (byte)(var10Lifetime1 + var2.readByte((byte) 93));
                   var8[var9Lifetime1][var11] = (byte) var10Lifetime1;
                   var11++;
                 }
@@ -1182,11 +1182,11 @@ final class qla {
             }
           }
           if (decompiledFrameCompleted0) {
-            this.field_d = var2.h(255);
-            stackIn_74_0Lifetime1 = var2.h(255);
+            this.field_d = var2.readUnsignedByte(255);
+            stackIn_74_0Lifetime1 = var2.readUnsignedByte(255);
           }
-          this.field_h = var2.h(255);
-          this.field_g = var2.h(255);
+          this.field_h = var2.readUnsignedByte(255);
+          this.field_g = var2.readUnsignedByte(255);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -6,9 +6,9 @@ abstract class GameEvent extends IntrusiveNode {
     static float[][] field_f;
     static String field_h;
 
-    void a(BitPacketBuffer param0, int param1) {
+    void encode(BitPacketBuffer param0, int param1) {
         try {
-          param0.writeBits((byte) -3, this.b((byte) 121), 4);
+          param0.writeBits((byte) -3, this.getTypeId((byte) 121), 4);
           if (param1 != -5) {
             field_f = (float[][]) null;
           }
@@ -21,7 +21,7 @@ abstract class GameEvent extends IntrusiveNode {
 
     abstract void a(int param0, byte param1, PlayerSimulation param2);
 
-    abstract int b(byte param0);
+    abstract int getTypeId(byte param0);
 
     abstract boolean a(boolean param0);
 

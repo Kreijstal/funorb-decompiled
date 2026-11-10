@@ -4,11 +4,11 @@
 abstract class MazeGenerator {
     IsaacCipher random;
 
-    final void a(int param0, byte param1, hj param2, int param3, int param4, int param5) {
+    final void a(int param0, byte param1, MazeGrid param2, int param3, int param4, int param5) {
         try {
-          param2.a((param4 + param0) / 2, 0, 0, (param5 + param3) / 2);
-          param2.a(param0, 0, 0, param3);
-          param2.a(param4, 0, param1 + 42, param5);
+          param2.setCell((param4 + param0) / 2, 0, 0, (param5 + param3) / 2);
+          param2.setCell(param0, 0, 0, param3);
+          param2.setCell(param4, 0, param1 + 42, param5);
           if (param1 != -42) {
             this.random = (IsaacCipher) null;
           }
@@ -174,7 +174,7 @@ abstract class MazeGenerator {
         return var3;
     }
 
-    abstract void a(int param0, int param1, hj param2, int param3);
+    abstract void generate(int param0, int param1, MazeGrid param2, int param3);
 
     final static void a(byte param0) {
         mga.field_g = null;
@@ -204,14 +204,14 @@ abstract class MazeGenerator {
         }
     }
 
-    final hj a(int param0, int param1, int param2, int param3, int param4) {
+    final MazeGrid a(int param0, int param1, int param2, int param3, int param4) {
         param0 = -1 + 2 * ((param0 + 1) / 2);
         param2 = (param2 + 1) / 2 * 2 - 1;
-        hj var6 = new hj(param2, param0, 1);
+        MazeGrid var6 = new MazeGrid(param2, param0, 1);
         int var7 = 108 % ((-62 - param3) / 34);
         param4 = -1 + (1 + param4) / 2 * 2;
         param1 = -1 + (1 + param1) / 2 * 2;
-        this.a(param4, 86, var6, param1);
+        this.generate(param4, 86, var6, param1);
         return var6;
     }
 

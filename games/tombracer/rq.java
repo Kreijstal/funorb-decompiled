@@ -47,9 +47,9 @@ final class rq {
         try {
           var14 = new PacketBuffer(param0);
           var4 = new PacketBuffer(param0);
-          var14.h(255);
+          var14.readUnsignedByte(255);
           var14.position = var14.position + 2;
-          var5 = var14.h(255);
+          var5 = var14.readUnsignedByte(255);
           var6 = 0;
           var7 = -1;
           var8 = -1;
@@ -59,7 +59,7 @@ final class rq {
             if (var10 == 0) {
               var7 = var9;
             }
-            var11 = var14.h(255);
+            var11 = var14.readUnsignedByte(255);
             if (var11 > 0) {
               if (var10 == 0) {
                 var8 = var9;
@@ -73,17 +73,17 @@ final class rq {
               if ((var11 & 1) == 0) {
                 field_h[var6] = (short)var12;
               } else {
-                field_h[var6] = (short)var4.f((byte) -128);
+                field_h[var6] = (short)var4.readSignedSmart((byte) -128);
               }
               if ((var11 & 2) == 0) {
                 field_n[var6] = (short)var12;
               } else {
-                field_n[var6] = (short)var4.f((byte) -128);
+                field_n[var6] = (short)var4.readSignedSmart((byte) -128);
               }
               if ((var11 & 4) == 0) {
                 field_b[var6] = (short)var12;
               } else {
-                field_b[var6] = (short)var4.f((byte) -128);
+                field_b[var6] = (short)var4.readSignedSmart((byte) -128);
               }
               field_e[var6] = (byte)(var11 >>> 3 & 3);
               if (var10 == 2 ||

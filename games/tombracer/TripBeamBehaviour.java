@@ -20,7 +20,7 @@ final class TripBeamBehaviour extends Behaviour implements ut {
     private int field_o;
     private boolean field_r;
 
-    final int a(boolean param0) {
+    final int getTypeId(boolean param0) {
         if (param0) {
           this.field_v = false;
           return 30;
@@ -186,7 +186,7 @@ final class TripBeamBehaviour extends Behaviour implements ut {
           var5 = this.a(this.field_u, (byte) 57);
         }
         if (param0 != 5418) {
-          this.a(false);
+          this.getTypeId(false);
         }
         stackIn_38_1 = (var5 != var4);
         this.field_r = stackIn_38_1;
@@ -407,7 +407,7 @@ final class TripBeamBehaviour extends Behaviour implements ut {
     final void a(byte param0, mg param1) {
         try {
           if (param0 != -8) {
-            this.a(true);
+            this.getTypeId(true);
           }
           this.field_t = param1;
         } catch (RuntimeException runtimeException) {
@@ -415,9 +415,9 @@ final class TripBeamBehaviour extends Behaviour implements ut {
         }
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           this.field_C.a(this.h((byte) 118), (byte) 113, param1);
           this.field_t.a(15637, param1);
           param1.writeBits((byte) -125, this.field_q >> 16, 10);

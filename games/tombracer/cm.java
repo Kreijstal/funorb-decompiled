@@ -7,7 +7,7 @@ final class cm implements GamePacket {
 
     public final void decode(BitPacketBuffer param0, byte param1) {
         try {
-          this.field_b = param0.h(255);
+          this.field_b = param0.readUnsignedByte(255);
           if (param1 != -19) {
             this.field_b = -24;
           }
@@ -28,7 +28,7 @@ final class cm implements GamePacket {
           return;
         }
         try {
-          param1.i(this.field_b, 0);
+          param1.writeByte(this.field_b, 0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "cm.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

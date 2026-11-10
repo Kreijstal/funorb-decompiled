@@ -21,16 +21,16 @@ final class opa extends qra {
             field_n = (ConsoleToken[]) null;
           }
           var7 = var8.position;
-          var8.i(param0, 0);
+          var8.writeByte(param0, 0);
           if (param0 == 2) {
-            var8.a(param4, false);
+            var8.writeString(param4, false);
           }
           if (param1 != null) {
             wq.a(param1, var8, 0);
           } else {
-            var8.f(-1477662136, param5);
+            var8.writeShort(-1477662136, param5);
           }
-          var8.d(-var7 + var8.position, (byte) 10);
+          var8.backpatchByteLength(-var7 + var8.position, (byte) 10);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "opa.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }

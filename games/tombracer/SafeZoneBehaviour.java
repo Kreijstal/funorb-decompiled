@@ -142,7 +142,7 @@ final class SafeZoneBehaviour extends Behaviour {
         }
     }
 
-    final int a(boolean param0) {
+    final int getTypeId(boolean param0) {
         if (param0) {
           this.field_v = true;
           return 10;
@@ -150,9 +150,9 @@ final class SafeZoneBehaviour extends Behaviour {
         return 10;
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           param1.writeBits((byte) -125, this.field_p ? 1 : 0, 1);
           param1.writeBits((byte) -25, !this.field_t ? 0 : 1, 1);
           param1.writeBits((byte) 12, !this.field_v ? 0 : 1, 1);

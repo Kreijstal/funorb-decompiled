@@ -77,7 +77,7 @@ final class PlatformBehaviour extends Behaviour {
         }
     }
 
-    final int a(boolean param0) {
+    final int getTypeId(boolean param0) {
         if (param0) {
           this.a(-87, -106);
           return 9;
@@ -85,9 +85,9 @@ final class PlatformBehaviour extends Behaviour {
         return 9;
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           param1.writeBits((byte) 36, this.field_n, 8);
           param1.writeBits((byte) 87, this.field_q, 8);
         } catch (RuntimeException runtimeException) {

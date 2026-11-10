@@ -48,11 +48,11 @@ final class jl {
         bl.field_a.b(40, param1);
     }
 
-    final static roa a(Room param0, boolean param1, BitPacketBuffer param2) {
+    final static Weapon a(Room param0, boolean param1, BitPacketBuffer param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         BitPacketBuffer var4 = null;
-        roa stackIn_3_0 = null;
+        Weapon stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

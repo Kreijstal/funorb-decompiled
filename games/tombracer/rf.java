@@ -76,9 +76,9 @@ final class rf {
           var5.writeCipheredOpcode(param2, -2988);
           var5.position = var5.position + 1;
           var4 = var5.position;
-          var5.i(0, 0);
-          var5.a(param1, false);
-          var5.d(var5.position - var4, (byte) 40);
+          var5.writeByte(0, 0);
+          var5.writeString(param1, false);
+          var5.backpatchByteLength(var5.position - var4, (byte) 40);
           stackIn_30_0 = null;
           return (String) (stackIn_30_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

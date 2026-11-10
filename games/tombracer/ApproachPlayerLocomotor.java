@@ -45,7 +45,7 @@ final class ApproachPlayerLocomotor extends Locomotor {
         this.field_o.field_d = var14.getY(9648);
         this.trap.a(this.field_o, 30);
         var4 = this.field_o.field_f - this.trap.s(25745);
-        var5 = this.field_o.field_d - this.trap.e(false);
+        var5 = this.field_o.field_d - this.trap.getLocalY(false);
         var6 = this.field_q >> 16;
         var6 = var6 * var6;
         var7 = (var4 >> 16) * (var4 >> 16) + (var5 >> 16) * (var5 >> 16);
@@ -188,12 +188,12 @@ final class ApproachPlayerLocomotor extends Locomotor {
         int var3 = 108 / ((param0 + 57) / 33);
     }
 
-    final void a(BitPacketBuffer param0, byte param1) {
+    final void encode(BitPacketBuffer param0, byte param1) {
         if (param1 >= -78) {
           return;
         }
         try {
-          super.a(param0, (byte) -83);
+          super.encode(param0, (byte) -83);
           param0.writeBits((byte) -128, this.field_q >> 16, 10);
           param0.writeBits((byte) -25, this.b(0, this.field_v), 8);
           param0.writeBits((byte) -128, this.field_u ? 1 : 0, 1);
@@ -301,7 +301,7 @@ final class ApproachPlayerLocomotor extends Locomotor {
         }
     }
 
-    final int c(int param0) {
+    final int getTypeId(int param0) {
         if (param0 != 1) {
           this.b((byte) -128);
           return 1;

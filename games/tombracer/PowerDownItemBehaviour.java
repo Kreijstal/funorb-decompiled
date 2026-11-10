@@ -9,21 +9,21 @@ final class PowerDownItemBehaviour extends ItemBehaviour {
         ql.field_k.writeCipheredOpcode(param1, -2988);
         ql.field_k.position = ql.field_k.position + 1;
         int var7_int = ql.field_k.position;
-        ql.field_k.a(1736565456, param4);
-        ql.field_k.a(param5, false);
+        ql.field_k.writeLong(1736565456, param4);
+        ql.field_k.writeString(param5, false);
         if (param2 <= 70) {
           return;
         }
         try {
-          ql.field_k.i(param0, 0);
-          ql.field_k.i(param3 ? 1 : 0, 0);
-          ql.field_k.d(-var7_int + ql.field_k.position, (byte) 35);
+          ql.field_k.writeByte(param0, 0);
+          ql.field_k.writeByte(param3 ? 1 : 0, 0);
+          ql.field_k.backpatchByteLength(-var7_int + ql.field_k.position, (byte) 35);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ok.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final int a(boolean param0) {
+    final int getTypeId(boolean param0) {
         if (param0) {
           return 89;
         }
@@ -39,10 +39,10 @@ final class PowerDownItemBehaviour extends ItemBehaviour {
         }
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
-          this.field_t.a(param1, -5);
+          super.encode(param0, param1);
+          this.field_t.encode(param1, -5);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ok.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -51,7 +51,7 @@ final class PowerDownItemBehaviour extends ItemBehaviour {
     final void g(byte param0) {
         if (param0 != 3) {
           BitPacketBuffer var3 = (BitPacketBuffer) null;
-          this.a(true, (BitPacketBuffer) null);
+          this.encode(true, (BitPacketBuffer) null);
         }
     }
 
@@ -65,7 +65,7 @@ final class PowerDownItemBehaviour extends ItemBehaviour {
         try {
           if (param0 > -114) {
             var4 = (BitPacketBuffer) null;
-            this.a(true, (BitPacketBuffer) null);
+            this.encode(true, (BitPacketBuffer) null);
           }
           this.b(true).b(-1).a(this.field_t, param1, true);
           return true;

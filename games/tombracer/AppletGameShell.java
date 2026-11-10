@@ -57,7 +57,7 @@ abstract class AppletGameShell extends GameApplet {
     }
 
     private final void f(byte param0) {
-        int var2 = vc.field_q.h(255);
+        int var2 = vc.field_q.readUnsignedByte(255);
         int var3 = (var2 & 1) != 0 ? 1 : 0;
         int var4 = uca.field_d - 1;
         if (param0 != -15) {

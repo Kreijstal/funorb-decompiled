@@ -103,12 +103,12 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
 
     final static void a(byte param0, int param1, PacketBuffer param2, int param3, int param4) {
         try {
-          param2.i(12, 0);
-          param2.f(-1477662136, 17);
-          param2.f(-1477662136, param3);
-          param2.f(-1477662136, param4);
+          param2.writeByte(12, 0);
+          param2.writeShort(-1477662136, 17);
+          param2.writeShort(-1477662136, param3);
+          param2.writeShort(-1477662136, param4);
           int var5_int = 33 % ((-57 - param0) / 48);
-          param2.i(param1, 0);
+          param2.writeByte(param1, 0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ea.J(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

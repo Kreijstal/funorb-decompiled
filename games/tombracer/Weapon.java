@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class roa {
+final class Weapon {
     int field_l;
     private int field_i;
     int field_t;
@@ -119,9 +119,9 @@ final class roa {
         return true;
     }
 
-    final roa e(int param0) {
+    final Weapon e(int param0) {
         if (param0 != -1) {
-          return (roa) null;
+          return (Weapon) null;
         }
         return ci.a(this.field_r, -1);
     }
@@ -251,7 +251,7 @@ final class roa {
         return this.field_q == -1 ? true : false;
     }
 
-    roa() {
+    Weapon() {
         this.field_i = -1;
         this.field_o = -1;
         this.field_g = 1;

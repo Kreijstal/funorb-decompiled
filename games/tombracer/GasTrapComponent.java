@@ -63,9 +63,9 @@ final class GasTrapComponent extends kna {
         return false;
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           param1.writeBits((byte) 15, SpawnerBehaviour.a((byte) 8, 2, this.field_I), 6);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wqa.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

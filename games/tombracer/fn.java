@@ -12,9 +12,9 @@ final class fn extends vw {
         var4.position = var4.position + 1;
         int var6 = -78 % ((-78 - param2) / 40);
         int var5 = var4.position;
-        var4.i(7, 0);
-        var4.a(1736565456, param1);
-        var4.d(var4.position - var5, (byte) 11);
+        var4.writeByte(7, 0);
+        var4.writeLong(1736565456, param1);
+        var4.backpatchByteLength(var4.position - var5, (byte) 11);
     }
 
     fn(eo param0, hk param1) {

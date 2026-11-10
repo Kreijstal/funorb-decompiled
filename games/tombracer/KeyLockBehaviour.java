@@ -204,7 +204,7 @@ final class KeyLockBehaviour extends Behaviour implements ut {
         }
     }
 
-    final int a(boolean param0) {
+    final int getTypeId(boolean param0) {
         if (param0) {
           this.b(82);
           return 32;
@@ -212,9 +212,9 @@ final class KeyLockBehaviour extends Behaviour implements ut {
         return 32;
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           this.field_q.a(this.h((byte) 111), (byte) 108, param1);
           param1.writeBits((byte) -127, this.field_s ? 1 : 0, 1);
         } catch (RuntimeException runtimeException) {

@@ -472,10 +472,10 @@ final class nfa extends ci {
         try {
           var4_int = param2;
           if (0 == var4_int) {
-            this.field_m = param1.h(param0 + 148);
+            this.field_m = param1.readUnsignedByte(param0 + 148);
           } else {
             if (var4_int == 1) {
-              this.field_o = param1.h(255);
+              this.field_o = param1.readUnsignedByte(255);
             }
           }
           if (param0 != 107) {

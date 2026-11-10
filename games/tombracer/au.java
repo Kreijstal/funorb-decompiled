@@ -71,16 +71,16 @@ final class au extends aa {
         var8 = TombRacer.field_G ? 1 : 0;
         try {
           var14 = vc.field_q;
-          var2 = var14.h(param0 + 252);
+          var2 = var14.readUnsignedByte(param0 + 252);
           if (var2 == 0) {
             var11 = SwitchComponent.e(true);
             var3 = var11;
             var10 = var11;
             var4 = var10;
             var5 = var14;
-            var6 = ((PacketBuffer) ((Object) var5)).h(255);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(255);
             for (var7 = 0; var7 < var6; var7++) {
-              var10[var7] = ((PacketBuffer) ((Object) var5)).e(99);
+              var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(99);
             }
             var12 = (bna) (MovingWallComponent.field_N.first(-80));
             if (var12 == null) {

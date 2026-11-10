@@ -30,9 +30,9 @@ final class fna {
           }
           var3 = ql.field_k;
           var3.writeCipheredOpcode(param0, -2988);
-          var3.i(2, 0);
-          var3.i(0, 0);
-          var3.i(param2.field_g, 0);
+          var3.writeByte(2, 0);
+          var3.writeByte(0, 0);
+          var3.writeByte(param2.field_g, 0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fna.K(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

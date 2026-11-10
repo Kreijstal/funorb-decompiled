@@ -134,122 +134,122 @@ class qma implements d {
           this.field_d = param2;
           this.field_g = param1;
           var7 = new PacketBuffer(param0.a(false, 0, 0));
-          this.field_a = var7.d(123);
+          this.field_a = var7.readUnsignedShort(123);
           this.field_b = new dw[this.field_a];
           for (var5 = 0; var5 < this.field_a; var5++) {
-            if (var7.h(255) == 1) {
+            if (var7.readUnsignedByte(255) == 1) {
               this.field_b[var5] = new dw();
             }
           }
           for (var5Lifetime1 = 0; var5Lifetime1 < this.field_a; var5Lifetime1++) {
             if (null != this.field_b[var5Lifetime1]) {
               stackIn_11_0 = this.field_b[var5Lifetime1];
-              stackIn_12_1 = (var7.h(255) == 0);
+              stackIn_12_1 = (var7.readUnsignedByte(255) == 0);
               stackIn_11_0.field_p = stackIn_12_1;
             }
           }
           for (var5Lifetime2 = 0; var5Lifetime2 < this.field_a; var5Lifetime2++) {
             if (null != this.field_b[var5Lifetime2]) {
               stackIn_19_0 = this.field_b[var5Lifetime2];
-              stackIn_20_1 = (var7.h(255) == 1);
+              stackIn_20_1 = (var7.readUnsignedByte(255) == 1);
               stackIn_19_0.field_g = stackIn_20_1;
             }
           }
           for (var5Lifetime3 = 0; var5Lifetime3 < this.field_a; var5Lifetime3++) {
             if (null != this.field_b[var5Lifetime3]) {
               stackIn_27_0 = this.field_b[var5Lifetime3];
-              stackIn_28_1 = (var7.h(255) == 1);
+              stackIn_28_1 = (var7.readUnsignedByte(255) == 1);
               stackIn_27_0.field_f = stackIn_28_1;
             }
           }
           for (var5Lifetime4 = 0; var5Lifetime4 < this.field_a; var5Lifetime4++) {
             if (this.field_b[var5Lifetime4] != null) {
-              this.field_b[var5Lifetime4].field_i = var7.c((byte) 90);
+              this.field_b[var5Lifetime4].field_i = var7.readByte((byte) 90);
             }
           }
           for (var5Lifetime5 = 0; var5Lifetime5 < this.field_a; var5Lifetime5++) {
             if (null != this.field_b[var5Lifetime5]) {
-              this.field_b[var5Lifetime5].field_c = var7.c((byte) 91);
+              this.field_b[var5Lifetime5].field_c = var7.readByte((byte) 91);
             }
           }
           for (var5Lifetime6 = 0; var5Lifetime6 < this.field_a; var5Lifetime6++) {
             if (this.field_b[var5Lifetime6] != null) {
-              this.field_b[var5Lifetime6].field_h = var7.c((byte) 85);
+              this.field_b[var5Lifetime6].field_h = var7.readByte((byte) 85);
             }
           }
           for (var5Lifetime7 = 0; var5Lifetime7 < this.field_a; var5Lifetime7++) {
             if (null != this.field_b[var5Lifetime7]) {
-              this.field_b[var5Lifetime7].field_a = var7.c((byte) 126);
+              this.field_b[var5Lifetime7].field_a = var7.readByte((byte) 126);
             }
           }
           for (var5Lifetime8 = 0; var5Lifetime8 < this.field_a; var5Lifetime8++) {
             if (null != this.field_b[var5Lifetime8]) {
-              this.field_b[var5Lifetime8].field_m = (short)var7.d(124);
+              this.field_b[var5Lifetime8].field_m = (short)var7.readUnsignedShort(124);
             }
           }
           for (var5Lifetime9 = 0; var5Lifetime9 < this.field_a; var5Lifetime9++) {
             if (null != this.field_b[var5Lifetime9]) {
-              this.field_b[var5Lifetime9].field_s = var7.c((byte) 45);
+              this.field_b[var5Lifetime9].field_s = var7.readByte((byte) 45);
             }
           }
           for (var5Lifetime10 = 0; var5Lifetime10 < this.field_a; var5Lifetime10++) {
             if (null != this.field_b[var5Lifetime10]) {
-              this.field_b[var5Lifetime10].field_o = var7.c((byte) 70);
+              this.field_b[var5Lifetime10].field_o = var7.readByte((byte) 70);
             }
           }
           for (var5Lifetime11 = 0; this.field_a > var5Lifetime11; var5Lifetime11++) {
             if (this.field_b[var5Lifetime11] != null) {
               stackIn_70_0 = this.field_b[var5Lifetime11];
-              stackIn_71_1 = (var7.h(255) == 1);
+              stackIn_71_1 = (var7.readUnsignedByte(255) == 1);
               stackIn_70_0.field_k = stackIn_71_1;
             }
           }
           for (var5Lifetime12 = 0; var5Lifetime12 < this.field_a; var5Lifetime12++) {
             if (this.field_b[var5Lifetime12] != null) {
               stackIn_78_0 = this.field_b[var5Lifetime12];
-              stackIn_79_1 = (var7.h(255) == 1);
+              stackIn_79_1 = (var7.readUnsignedByte(255) == 1);
               stackIn_78_0.field_e = stackIn_79_1;
             }
           }
           for (var5Lifetime13 = 0; this.field_a > var5Lifetime13; var5Lifetime13++) {
             if (null != this.field_b[var5Lifetime13]) {
-              this.field_b[var5Lifetime13].field_r = var7.c((byte) 39);
+              this.field_b[var5Lifetime13].field_r = var7.readByte((byte) 39);
             }
           }
           for (var5Lifetime14 = 0; var5Lifetime14 < this.field_a; var5Lifetime14++) {
             if (this.field_b[var5Lifetime14] != null) {
               stackIn_91_0 = this.field_b[var5Lifetime14];
-              stackIn_92_1 = (var7.h(255) == 1);
+              stackIn_92_1 = (var7.readUnsignedByte(255) == 1);
               stackIn_91_0.field_b = stackIn_92_1;
             }
           }
           for (var5Lifetime15 = 0; var5Lifetime15 < this.field_a; var5Lifetime15++) {
             if (this.field_b[var5Lifetime15] != null) {
               stackIn_99_0 = this.field_b[var5Lifetime15];
-              stackIn_100_1 = (var7.h(255) == 1);
+              stackIn_100_1 = (var7.readUnsignedByte(255) == 1);
               stackIn_99_0.field_n = stackIn_100_1;
             }
           }
           for (var5Lifetime16 = 0; this.field_a > var5Lifetime16; var5Lifetime16++) {
             if (this.field_b[var5Lifetime16] != null) {
               stackIn_107_0 = this.field_b[var5Lifetime16];
-              stackIn_108_1 = (1 == var7.h(255));
+              stackIn_108_1 = (1 == var7.readUnsignedByte(255));
               stackIn_107_0.field_l = stackIn_108_1;
             }
           }
           for (var5Lifetime17 = 0; var5Lifetime17 < this.field_a; var5Lifetime17++) {
             if (this.field_b[var5Lifetime17] != null) {
-              this.field_b[var5Lifetime17].field_q = var7.h(255);
+              this.field_b[var5Lifetime17].field_q = var7.readUnsignedByte(255);
             }
           }
           for (var5Lifetime18 = 0; var5Lifetime18 < this.field_a; var5Lifetime18++) {
             if (this.field_b[var5Lifetime18] != null) {
-              this.field_b[var5Lifetime18].field_t = var7.e(-106);
+              this.field_b[var5Lifetime18].field_t = var7.readInt(-106);
             }
           }
           for (var5Lifetime19 = 0; this.field_a > var5Lifetime19; var5Lifetime19++) {
             if (this.field_b[var5Lifetime19] != null) {
-              this.field_b[var5Lifetime19].field_d = var7.h(255);
+              this.field_b[var5Lifetime19].field_d = var7.readUnsignedByte(255);
             }
           }
           return;

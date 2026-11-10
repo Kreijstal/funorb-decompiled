@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class TrapSpawner extends Spawner {
-    private Trap field_c;
+    private Trap template;
     static String field_b;
 
     final void a(byte param0) {
         if (param0 < 67) {
           return;
         }
-        this.field_c.h(true);
+        this.template.h(true);
     }
 
     final static void a(int param0, long param1) {
@@ -35,8 +35,8 @@ final class TrapSpawner extends Spawner {
     TrapSpawner(Room param0, BitPacketBuffer param1) {
         super(param0, param1);
         try {
-          this.field_c = new Trap(this.field_a, param1, false);
-          this.field_c.c((byte) 50, false);
+          this.template = new Trap(this.field_a, param1, false);
+          this.template.c((byte) 50, false);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -52,7 +52,7 @@ final class TrapSpawner extends Spawner {
     final void a(byte param0, ui param1, boolean param2, ui param3) {
         try {
           int var5_int = -11 % ((param0 - 31) / 61);
-          this.field_c.a(true, param2, param3, param1);
+          this.template.a(true, param2, param3, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vja.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -65,9 +65,9 @@ final class TrapSpawner extends Spawner {
         return Room.field_k;
     }
 
-    final int a(boolean param0) {
+    final int getTypeId(boolean param0) {
         if (!param0) {
-          this.field_c = (Trap) null;
+          this.template = (Trap) null;
           return 0;
         }
         return 0;
@@ -77,13 +77,13 @@ final class TrapSpawner extends Spawner {
         if (param1 > -3) {
           return (lj) null;
         }
-        return this.field_c.a(param0, param2, (byte) -26);
+        return this.template.a(param0, param2, (byte) -26);
     }
 
-    final void a(BitPacketBuffer param0, byte param1) {
+    final void encode(BitPacketBuffer param0, byte param1) {
         try {
-          super.a(param0, param1);
-          this.field_c.encode(param0, 8);
+          super.encode(param0, param1);
+          this.template.encode(param0, 8);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vja.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -92,27 +92,27 @@ final class TrapSpawner extends Spawner {
     final void a(int param0, int param1, int param2, int param3) {
         Trap var6 = null;
         Trap var6Lifetime1;
-        if (this.field_c.J(96)) {
+        if (this.template.J(96)) {
           return;
         }
-        if (this.field_c.isExpired(18407)) {
+        if (this.template.isExpired(18407)) {
           return;
         }
         BitPacketBuffer var5 = new BitPacketBuffer(30000);
         var5.beginBitWrite(8);
-        this.field_c.encode(var5, 97);
+        this.template.encode(var5, 97);
         if (param3 == 4) {
           var5.endBitWrite(-1826190686);
-          var6 = this.field_c.cloneInto(param3 - 14406, this.field_a, true);
+          var6 = this.template.cloneInto(param3 - 14406, this.field_a, true);
           var6.m(1, param1);
           var6.c(param2, -19879);
           var6.c(false, param0);
           this.field_a.a(var6, (byte) 32);
           return;
         }
-        this.a(false);
+        this.getTypeId(false);
         var5.endBitWrite(-1826190686);
-        var6Lifetime1 = this.field_c.cloneInto(param3 - 14406, this.field_a, true);
+        var6Lifetime1 = this.template.cloneInto(param3 - 14406, this.field_a, true);
         var6Lifetime1.m(1, param1);
         var6Lifetime1.c(param2, -19879);
         var6Lifetime1.c(false, param0);

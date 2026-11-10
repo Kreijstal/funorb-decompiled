@@ -38,14 +38,14 @@ final class MidiFileReader {
         int var3Lifetime1;
         this.field_d.payload = param0;
         this.field_d.position = 10;
-        int var2 = this.field_d.d(126);
-        this.field_e = this.field_d.d(124);
+        int var2 = this.field_d.readUnsignedShort(126);
+        this.field_e = this.field_d.readUnsignedShort(124);
         this.field_g = 500000;
         this.field_h = new int[var2];
         int var3 = 0;
         while (var3 < var2) {
-          var4 = this.field_d.e(-67);
-          var5 = this.field_d.e(109);
+          var4 = this.field_d.readInt(-67);
+          var5 = this.field_d.readInt(109);
           if (var4 == 1297379947) {
             this.field_h[var3] = this.field_d.position;
             var3++;
@@ -69,7 +69,7 @@ final class MidiFileReader {
     }
 
     final void c(int param0) {
-        int var2 = this.field_d.b((byte) 13);
+        int var2 = this.field_d.readVarInt((byte) 13);
         this.field_a[param0] = this.field_a[param0] + var2;
     }
 
@@ -89,7 +89,7 @@ final class MidiFileReader {
           var2 != 247) {
           return this.a(param0, var2);
         }
-        var3 = this.field_d.b((byte) -125);
+        var3 = this.field_d.readVarInt((byte) -125);
         if (var2 == 247 &&
           var3 > 0) {
           var4 = this.field_d.payload[this.field_d.position] & 255;
@@ -114,14 +114,14 @@ final class MidiFileReader {
         int var3Lifetime1;
         int var4Lifetime1;
         if (param1 == 255) {
-          var3 = this.field_d.h(255);
-          var4 = this.field_d.b((byte) -127);
+          var3 = this.field_d.readUnsignedByte(255);
+          var4 = this.field_d.readVarInt((byte) -127);
           if (var3 == 47) {
             this.field_d.position = this.field_d.position + var4;
             return 1;
           }
           if (var3 == 81) {
-            var5 = this.field_d.a(-32768);
+            var5 = this.field_d.readUnsignedMedium(-32768);
             var4 -= 3;
             var6 = this.field_a[param0];
             this.field_i = this.field_i + (long)var6 * (long)(this.field_g - var5);
@@ -135,10 +135,10 @@ final class MidiFileReader {
         var3Lifetime1 = field_b[param1 - 128];
         var4Lifetime1 = param1;
         if (var3Lifetime1 >= 1) {
-          var4Lifetime1 = var4Lifetime1 | this.field_d.h(255) << 8;
+          var4Lifetime1 = var4Lifetime1 | this.field_d.readUnsignedByte(255) << 8;
         }
         if (var3Lifetime1 >= 2) {
-          var4Lifetime1 = var4Lifetime1 | this.field_d.h(255) << 16;
+          var4Lifetime1 = var4Lifetime1 | this.field_d.readUnsignedByte(255) << 16;
         }
         return var4Lifetime1;
     }

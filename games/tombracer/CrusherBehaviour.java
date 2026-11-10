@@ -67,9 +67,9 @@ final class CrusherBehaviour extends Behaviour {
         }
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           param1.writeBits((byte) 116, this.field_v, 8);
           param1.writeBits((byte) -128, this.field_o, 8);
           param1.writeBits((byte) 107, this.field_s, 8);
@@ -147,7 +147,7 @@ final class CrusherBehaviour extends Behaviour {
         }
     }
 
-    final int a(boolean param0) {
+    final int getTypeId(boolean param0) {
         if (param0) {
           this.a(109, 0, 65, 72, 73);
           return 2;

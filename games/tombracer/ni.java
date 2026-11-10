@@ -54,7 +54,7 @@ final class ni {
                 }
               }
             }
-            param0.a(0, var2, 24, 68);
+            param0.writeBytes(0, var2, 24, 68);
             if (param1 <= 61) {
               field_c = true;
             }

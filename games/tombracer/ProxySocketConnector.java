@@ -32,7 +32,7 @@ final class ProxySocketConnector extends SocketConnector {
         RuntimeException decompiledCaughtException = null;
         try {
           if (3 == param2) {
-            stackIn_2_0 = hj.field_e;
+            stackIn_2_0 = MazeGrid.field_e;
             return stackIn_2_0;
           }
           if (param1 != 8793) {

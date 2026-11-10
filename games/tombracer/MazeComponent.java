@@ -38,14 +38,14 @@ abstract class MazeComponent extends kna {
         return false;
     }
 
-    void a(boolean param0, BitPacketBuffer param1) {
+    void encode(boolean param0, BitPacketBuffer param1) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           if (param0) {
             MazeComponent.b(88, -88);
           }

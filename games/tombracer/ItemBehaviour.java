@@ -8,9 +8,9 @@ abstract class ItemBehaviour extends Behaviour {
     private int field_r;
     static int[] field_p;
 
-    void a(boolean param0, BitPacketBuffer param1) {
+    void encode(boolean param0, BitPacketBuffer param1) {
         try {
-          super.a(param0, param1);
+          super.encode(param0, param1);
           param1.writeBits((byte) -128, this.field_q / 50, 8);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pd.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -316,15 +316,15 @@ abstract class ItemBehaviour extends Behaviour {
         if (param0 == 34) {
           var2 = ql.field_k;
           var2.writeCipheredOpcode(param1, param0 - 3022);
-          var2.i(1, 0);
-          var2.i(3, 0);
+          var2.writeByte(1, 0);
+          var2.writeByte(3, 0);
           return;
         }
         field_p = (int[]) null;
         var2Lifetime1 = ql.field_k;
         var2Lifetime1.writeCipheredOpcode(param1, param0 - 3022);
-        var2Lifetime1.i(1, 0);
-        var2Lifetime1.i(3, 0);
+        var2Lifetime1.writeByte(1, 0);
+        var2Lifetime1.writeByte(3, 0);
     }
 
     final static int a(int[] param0, int param1) {

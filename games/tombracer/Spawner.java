@@ -6,11 +6,11 @@ abstract class Spawner implements noa {
 
     abstract void a(byte param0, ui param1, boolean param2, ui param3);
 
-    void a(BitPacketBuffer param0, byte param1) {
+    void encode(BitPacketBuffer param0, byte param1) {
         try {
-          param0.writeBits((byte) -126, this.a(true), 4);
+          param0.writeBits((byte) -126, this.getTypeId(true), 4);
           if (param1 != 52) {
-            this.a(true);
+            this.getTypeId(true);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ib.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -19,7 +19,7 @@ abstract class Spawner implements noa {
 
     abstract void a(byte param0);
 
-    abstract int a(boolean param0);
+    abstract int getTypeId(boolean param0);
 
     Spawner(Room param0, BitPacketBuffer param1) {
         this(param0);

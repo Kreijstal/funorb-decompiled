@@ -63,7 +63,7 @@ final class S2CActionPacket extends IntrusiveNode implements GamePacket {
         return var1;
     }
 
-    final static roa a(int param0, int param1) {
+    final static Weapon createWeaponPreset(int param0, int param1) {
         int var2;
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;

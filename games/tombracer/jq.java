@@ -29,13 +29,13 @@ final class jq extends ob {
         var2.writeCipheredOpcode(param0, -2988);
         var2.position = var2.position + 1;
         int var3 = var2.position;
-        var2.i(2, 0);
-        var2.a(0, vk.field_b, vk.field_b.length, 71);
+        var2.writeByte(2, 0);
+        var2.writeBytes(0, vk.field_b, vk.field_b.length, 71);
         int var4 = -104 % ((param1 - 22) / 36);
-        var2.i(CoinBagItemComponent.field_H, 0);
-        var2.i(mua.field_b, 0);
-        var2.a(0, tqa.field_e, tqa.field_e.length, 119);
-        var2.d(var2.position - var3, (byte) -102);
+        var2.writeByte(CoinBagItemComponent.field_H, 0);
+        var2.writeByte(mua.field_b, 0);
+        var2.writeBytes(0, tqa.field_e, tqa.field_e.length, 119);
+        var2.backpatchByteLength(var2.position - var3, (byte) -102);
     }
 
     final static qk a(byte[] param0, int param1, byte param2, int param3, OpenGlToolkit param4, int param5, boolean param6, int param7) {

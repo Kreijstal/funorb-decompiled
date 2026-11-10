@@ -21,8 +21,8 @@ final class hka {
             var4 = (PacketBuffer) null;
             hka.a(62, (PacketBuffer) null);
           }
-          var2_int = param1.h(255);
-          var3 = param1.h(255);
+          var2_int = param1.readUnsignedByte(255);
+          var3 = param1.readUnsignedByte(255);
           stackIn_3_0 = new taa(var2_int, var3);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

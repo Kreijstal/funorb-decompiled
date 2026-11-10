@@ -110,17 +110,17 @@ final class qt {
             return;
           }
           var1 = vc.field_q;
-          var2 = ((PacketBuffer) ((Object) var1)).h(255);
+          var2 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
           if (var2 != 0 &&
             var2 != 1 &&
             2 != var2 &&
             3 != var2 &&
             var2 != 4) {
             if (5 == var2) {
-              var3_long = ((PacketBuffer) ((Object) var1)).b(290646880);
-              var23 = ((PacketBuffer) ((Object) var1)).e((byte) -76);
-              var20 = ((PacketBuffer) ((Object) var1)).e((byte) -76);
-              var22 = ((PacketBuffer) ((Object) var1)).e((byte) -76);
+              var3_long = ((PacketBuffer) ((Object) var1)).readLong(290646880);
+              var23 = ((PacketBuffer) ((Object) var1)).readString((byte) -76);
+              var20 = ((PacketBuffer) ((Object) var1)).readString((byte) -76);
+              var22 = ((PacketBuffer) ((Object) var1)).readString((byte) -76);
               var21 = nl.a(true, var3_long);
               var8_ref_pha = var21;
               stackIn_12_0 = (var20.equals("")) ? 0 : 1;
@@ -133,21 +133,21 @@ final class qt {
                   var21.a(var22, 75, var23);
                 }
               }
-              var8_ref_pha.field_Mb = bva.b((byte) -107) - (long)((PacketBuffer) ((Object) var1)).e(-87);
-              var8_ref_pha.field_Jb = ((PacketBuffer) ((Object) var1)).d(121);
-              var10 = ((PacketBuffer) ((Object) var1)).b((byte) 100);
+              var8_ref_pha.field_Mb = bva.b((byte) -107) - (long)((PacketBuffer) ((Object) var1)).readInt(-87);
+              var8_ref_pha.field_Jb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(121);
+              var10 = ((PacketBuffer) ((Object) var1)).readVarInt((byte) 100);
               stackIn_19_0 = var8_ref_pha;
               stackIn_20_1 = ((1 & var10) != 0);
               stackIn_19_0.field_tb = stackIn_20_1;
               var8_ref_pha.field_zb = var10 >> 1;
-              var8_ref_pha.field_Ab = ((PacketBuffer) ((Object) var1)).h(255);
-              var8_ref_pha.field_Eb = ((PacketBuffer) ((Object) var1)).h(255);
+              var8_ref_pha.field_Ab = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
+              var8_ref_pha.field_Eb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
               ql.a(110, var8_ref_pha);
               return;
             }
             if (var2 == 6) {
-              var3_longLifetime1 = ((PacketBuffer) ((Object) var1)).b(290646880);
-              var5 = ((PacketBuffer) ((Object) var1)).h(255);
+              var3_longLifetime1 = ((PacketBuffer) ((Object) var1)).readLong(290646880);
+              var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
               var31 = nl.a(true, var3_longLifetime1);
               if (var31 == null) {
                 return;
@@ -176,7 +176,7 @@ final class qt {
               return;
             }
             if (var2 == 8) {
-              var3 = ((PacketBuffer) ((Object) var1)).d(125);
+              var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(125);
               var4 = (ht) (WhiteLightSensorComponent.field_K.a(-126, (long)var3));
               if (var4 == null) {
                 var4 = new ht(fk.field_b);
@@ -187,8 +187,8 @@ final class qt {
               return;
             }
             if (var2 == 9) {
-              var3Lifetime4 = ((PacketBuffer) ((Object) var1)).d(121);
-              var4_int = ((PacketBuffer) ((Object) var1)).h(255);
+              var3Lifetime4 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(121);
+              var4_int = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
               var33 = (ht) (WhiteLightSensorComponent.field_K.a(-107, (long)var3Lifetime4));
               if (var33 != null) {
                 if (0 != var4_int) {
@@ -213,8 +213,8 @@ final class qt {
             if (var2 != 11 &&
               var2 != 12) {
               if (13 == var2) {
-                var3Lifetime5 = ((PacketBuffer) ((Object) var1)).d(127);
-                var4_intLifetime1 = ((PacketBuffer) ((Object) var1)).h(255);
+                var3Lifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(127);
+                var4_intLifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
                 var17_ref = (ht) (WhiteLightSensorComponent.field_K.a(-112, (long)var3Lifetime5));
                 if (var17_ref != null) {
                   var14 = var17_ref;
@@ -234,29 +234,29 @@ final class qt {
                 if (var2 != 15 &&
                   var2 != 17) {
                   if (var2 == 18) {
-                    var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).b(290646880);
-                    var26 = ((PacketBuffer) ((Object) var1)).e((byte) -76);
-                    var27 = ((PacketBuffer) ((Object) var1)).e((byte) -76);
+                    var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(290646880);
+                    var26 = ((PacketBuffer) ((Object) var1)).readString((byte) -76);
+                    var27 = ((PacketBuffer) ((Object) var1)).readString((byte) -76);
                     var7 = vba.a((byte) -40, var3_longLifetime2);
                     if (var7 == null) {
                       var7 = new pha(var26, var27, var3_longLifetime2);
                       tc.field_d.a(-1, var7, var3_longLifetime2);
                       uu.field_a.field_Mb = uu.field_a.field_Mb + 1;
                     }
-                    var7.field_Jb = ((PacketBuffer) ((Object) var1)).d(122);
-                    var8 = ((PacketBuffer) ((Object) var1)).b((byte) -123);
+                    var7.field_Jb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(122);
+                    var8 = ((PacketBuffer) ((Object) var1)).readVarInt((byte) -123);
                     stackIn_61_0 = var7;
                     stackIn_62_1 = ((1 & var8) != 0);
                     stackIn_61_0.field_tb = stackIn_62_1;
                     var7.field_zb = var8 >> 1;
-                    var7.field_Ab = ((PacketBuffer) ((Object) var1)).h(255);
-                    var7.field_Eb = ((PacketBuffer) ((Object) var1)).h(255);
+                    var7.field_Ab = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
+                    var7.field_Eb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
                     qha.field_g.addLast((byte) -54, var7);
                     return;
                   }
                   if (var2 == 19) {
-                    var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).b(290646880);
-                    var5Lifetime1 = ((PacketBuffer) ((Object) var1)).h(255);
+                    var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(290646880);
+                    var5Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
                     var15 = vba.a((byte) -40, var3_longLifetime2);
                     var28 = var15;
                     if (var15 == null) {
@@ -277,7 +277,7 @@ final class qt {
                     return;
                   }
                   if (21 == var2) {
-                    var3Lifetime5 = ((PacketBuffer) ((Object) var1)).d(124);
+                    var3Lifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(124);
                     if (var3Lifetime5 == 0) {
                       uq.field_d = 0L;
                       return;
@@ -286,20 +286,20 @@ final class qt {
                     return;
                   }
                   if (var2 == 22) {
-                    ProxySocketConnector.field_f = ((PacketBuffer) ((Object) var1)).d(123);
-                    FleeLocomotor.field_z = ((PacketBuffer) ((Object) var1)).b((byte) 114);
+                    ProxySocketConnector.field_f = ((PacketBuffer) ((Object) var1)).readUnsignedShort(123);
+                    FleeLocomotor.field_z = ((PacketBuffer) ((Object) var1)).readVarInt((byte) 114);
                     return;
                   }
                   if (var2 == 23) {
-                    SimpleConditionBehaviour.field_r = ((PacketBuffer) ((Object) var1)).b(290646880);
+                    SimpleConditionBehaviour.field_r = ((PacketBuffer) ((Object) var1)).readLong(290646880);
                     return;
                   }
                   ssa.a("L1: " + kk.a(32), (byte) 118, (Throwable) null);
                   dea.a(60);
                   return;
                 }
-                var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).b(290646880);
-                var5Lifetime1Lifetime1 = ((PacketBuffer) ((Object) var1)).h(255);
+                var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(290646880);
+                var5Lifetime1Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
                 var29 = nl.a(true, var3_longLifetime2);
                 if (var29 == null) {
                   return;
@@ -319,7 +319,7 @@ final class qt {
                 ql.a(-42, var29);
                 return;
               }
-              var3_longLifetime2Lifetime1 = ((PacketBuffer) ((Object) var1)).b(290646880);
+              var3_longLifetime2Lifetime1 = ((PacketBuffer) ((Object) var1)).readLong(290646880);
               var30 = nl.a(true, var3_longLifetime2Lifetime1);
               if (var30 == null) {
                 return;
@@ -335,7 +335,7 @@ final class qt {
               ql.a(112, var30);
               return;
             }
-            var3Lifetime6 = ((PacketBuffer) ((Object) var1)).d(123);
+            var3Lifetime6 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(123);
             var19_ref = (ht) (WhiteLightSensorComponent.field_K.a(-111, (long)var3Lifetime6));
             var25 = var19_ref;
             if (var25 == null) {
@@ -375,7 +375,7 @@ final class qt {
           if (var2 != 4) {
             uu.field_a = null;
           } else {
-            var3Lifetime1 = ((PacketBuffer) ((Object) var1)).d(125);
+            var3Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(125);
             uu.field_a = new ht(fk.field_b);
             uu.field_a.setSecondaryKey(false, (long)var3Lifetime1);
             ed.a(32, uu.field_a, false, var1);
@@ -395,12 +395,12 @@ final class qt {
           }
           qa.field_o = true;
           for (var3Lifetime2 = 0; vk.field_b.length > var3Lifetime2; var3Lifetime2++) {
-            vk.field_b[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).c((byte) 48);
+            vk.field_b[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).readByte((byte) 48);
           }
-          CoinBagItemComponent.field_H = ((PacketBuffer) ((Object) var1)).h(255);
-          mua.field_b = ((PacketBuffer) ((Object) var1)).h(255);
+          CoinBagItemComponent.field_H = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
+          mua.field_b = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
           for (var3Lifetime3 = 0; var3Lifetime3 < tqa.field_e.length; var3Lifetime3++) {
-            tqa.field_e[var3Lifetime3] = ((PacketBuffer) ((Object) var1)).c((byte) 108);
+            tqa.field_e[var3Lifetime3] = ((PacketBuffer) ((Object) var1)).readByte((byte) 108);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -10,13 +10,13 @@ final class ConstrainToFacingArcLocomotor extends ConstraintLocomotor {
 
     final int a(int param0, int param1) {
         if (param0 != 0) {
-          this.c(-68);
+          this.getTypeId(-68);
           return param1;
         }
         return param1;
     }
 
-    final int c(int param0) {
+    final int getTypeId(int param0) {
         if (param0 != 1) {
           return -63;
         }
@@ -69,9 +69,9 @@ final class ConstrainToFacingArcLocomotor extends ConstraintLocomotor {
         return;
     }
 
-    final void a(BitPacketBuffer param0, byte param1) {
+    final void encode(BitPacketBuffer param0, byte param1) {
         try {
-          super.a(param0, (byte) -125);
+          super.encode(param0, (byte) -125);
           if (param1 > -78) {
             this.field_u = -70;
           }

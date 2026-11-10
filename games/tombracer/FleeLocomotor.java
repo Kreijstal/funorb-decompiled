@@ -65,7 +65,7 @@ final class FleeLocomotor extends Locomotor {
         this.field_s.field_d = var14.getY(9648);
         this.trap.a(this.field_s, 117);
         var4 = this.field_s.field_f - this.trap.s(25745);
-        var5 = this.field_s.field_d - this.trap.e(false);
+        var5 = this.field_s.field_d - this.trap.getLocalY(false);
         var6 = (var5 >> 16) * (var5 >> 16) + (var4 >> 16) * (var4 >> 16);
         if (this.field_D &&
           !this.field_r) {
@@ -301,14 +301,14 @@ final class FleeLocomotor extends Locomotor {
         return 1;
     }
 
-    final int c(int param0) {
+    final int getTypeId(int param0) {
         if (param0 != 1) {
           return 58;
         }
         return 3;
     }
 
-    final void a(BitPacketBuffer param0, byte param1) {
+    final void encode(BitPacketBuffer param0, byte param1) {
         BitPacketBuffer stackIn_2_0 = null;
         int stackIn_2_1 = 0;
         int stackIn_3_2 = 0;
@@ -321,7 +321,7 @@ final class FleeLocomotor extends Locomotor {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          super.a(param0, (byte) -108);
+          super.encode(param0, (byte) -108);
           param0.writeBits((byte) -34, this.field_t >> 16, 10);
           param0.writeBits((byte) -128, this.field_v >> 16, 10);
           param0.writeBits((byte) -128, this.b(0, this.field_A), 8);

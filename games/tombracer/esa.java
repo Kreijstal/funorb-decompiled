@@ -84,17 +84,17 @@ final class esa {
           if (param1 < 15) {
             return;
           }
-          param0.e(98);
-          param0.e(-67);
-          param0.d(127);
-          param0.d(121);
-          param0.d(126);
-          param0.d(121);
-          param0.d(123);
-          param0.d(126);
-          param0.d(124);
-          param0.d(123);
-          param0.h(param2 + 216);
+          param0.readInt(98);
+          param0.readInt(-67);
+          param0.readUnsignedShort(127);
+          param0.readUnsignedShort(121);
+          param0.readUnsignedShort(126);
+          param0.readUnsignedShort(121);
+          param0.readUnsignedShort(123);
+          param0.readUnsignedShort(126);
+          param0.readUnsignedShort(124);
+          param0.readUnsignedShort(123);
+          param0.readUnsignedByte(param2 + 216);
           if (param2 != 39) {
             return;
           }
