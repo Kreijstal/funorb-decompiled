@@ -285,7 +285,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 118, "mu_create_unrated");
                 if (null != var2) {
-                  jma.field_h = jaa.a((byte) 60, var2);
+                  SwitchState.field_h = jaa.a((byte) 60, var2);
                 }
                 var2 = dn.a((byte) 111, "mu_options");
                 if (null != var2) {
@@ -529,7 +529,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -98, "waiting_for_x_to_start_game");
                 if (var2 != null) {
-                  bja.field_d = jaa.a((byte) 61, var2);
+                  TextLayout.field_d = jaa.a((byte) 61, var2);
                 }
                 var2 = dn.a((byte) 112, "game_options_changed");
                 if (var2 != null) {
@@ -797,7 +797,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 123, "gameopt_cannotbecombined2");
                 if (null != var2) {
-                  sta.field_G = jaa.a((byte) 66, var2);
+                  GridWidgetContainer.field_G = jaa.a((byte) 66, var2);
                 }
                 var2 = dn.a((byte) 126, "gameopt_playernotmember");
                 if (var2 != null) {
@@ -805,7 +805,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -15, "gameopt_younotmember");
                 if (null != var2) {
-                  rk.field_F = jaa.a((byte) 98, var2);
+                  ProgressBarWidget.field_F = jaa.a((byte) 98, var2);
                 }
                 var2 = dn.a((byte) 112, "gameopt_playerneedsrating");
                 if (null != var2) {
@@ -867,7 +867,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 127, "gameopt_playersdontqualify_selectgametab");
                 if (var2 != null) {
-                  sta.field_A = jaa.a((byte) 63, var2);
+                  GridWidgetContainer.field_A = jaa.a((byte) 63, var2);
                 }
                 var2 = dn.a((byte) 118, "gameopt_unselectedoptions");
                 if (null != var2) {
@@ -1139,7 +1139,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -60, "warning_ifyouquit");
                 if (var2 != null) {
-                  koa.field_c = jaa.a((byte) 108, var2);
+                  SwitchLinkList.field_c = jaa.a((byte) 108, var2);
                 }
                 var2 = dn.a((byte) -116, "warning_ifyouquitorleavepage");
                 if (var2 != null) {
@@ -1447,7 +1447,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -114, "create_select_alternative");
                 if (var2 != null) {
-                  qla.field_i = jaa.a((byte) 126, var2);
+                  FontMetrics.field_i = jaa.a((byte) 126, var2);
                 }
                 var2 = dn.a((byte) -54, "create_optin_news");
                 if (var2 != null) {
@@ -1733,7 +1733,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -30, "text_removed_from_game");
                 if (var2 != null) {
-                  ph.field_k = jaa.a((byte) 77, var2);
+                  BufferedCacheFile.field_k = jaa.a((byte) 77, var2);
                 }
                 var2 = dn.a((byte) 115, "text_lobby_pleaselogin_free");
                 if (var2 != null) {
@@ -2683,7 +2683,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 108, "fs_unavailable_try_signed_applet");
                 if (var2 != null) {
-                  jma.field_o = jaa.a((byte) 113, var2);
+                  SwitchState.field_o = jaa.a((byte) 113, var2);
                 }
                 var2 = dn.a((byte) 110, "fs_focus");
                 if (null != var2) {

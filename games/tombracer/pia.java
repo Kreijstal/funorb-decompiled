@@ -196,7 +196,7 @@ final class pia extends nqa implements gf {
         this.field_g = param1 ? true : false;
     }
 
-    public final void b(byte param0) {
+    public final void bind(byte param0) {
         this.field_d.a(this, true);
         if (param0 <= 32) {
           this.a((byte) 121, true, false);

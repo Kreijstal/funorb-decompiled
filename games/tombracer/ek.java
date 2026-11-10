@@ -52,7 +52,7 @@ final class ek extends nqa implements lv {
         }
     }
 
-    public final void b(byte param0) {
+    public final void bind(byte param0) {
         this.field_d.a((byte) -125, this);
         if (param0 < 32) {
           hs var3 = (hs) null;

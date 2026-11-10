@@ -652,7 +652,7 @@ final class MatchState implements dv {
           }
           this.field_J = new String[this.field_l.length];
           for (var12_intLifetime1 = 0; var12_intLifetime1 < this.field_l.length; var12_intLifetime1++) {
-            this.field_J[var12_intLifetime1] = "<col=" + jm.field_k[var12_intLifetime1] + ">" + this.field_l[var12_intLifetime1] + "</col>";
+            this.field_J[var12_intLifetime1] = "<col=" + PasswordValidator.field_k[var12_intLifetime1] + ">" + this.field_l[var12_intLifetime1] + "</col>";
           }
           this.field_k = param0.length;
           this.field_a = param3;

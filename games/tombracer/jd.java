@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jd extends tfa implements lv {
+final class jd extends OpenGlTexture implements lv {
     private int field_k;
     private int field_l;
     static String field_m;
@@ -200,12 +200,12 @@ final class jd extends tfa implements lv {
         return var1;
     }
 
-    public final void b(byte param0) {
+    public final void bind(byte param0) {
         if (param0 < 32) {
           CharSequence var3 = (CharSequence) null;
           jd.a(-106, (CharSequence) null);
         }
-        super.b((byte) 56);
+        super.bind((byte) 56);
     }
 
     static {

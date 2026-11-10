@@ -24,7 +24,7 @@ final class ksa extends ci {
 
     final static void a(boolean param0, kia param1) {
         try {
-          BitPacketBuffer.a(param0, param1, qla.field_f);
+          BitPacketBuffer.a(param0, param1, FontMetrics.field_f);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ksa.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

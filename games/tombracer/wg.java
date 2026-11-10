@@ -89,7 +89,7 @@ final class wg extends tu {
             Room var5 = (Room) null;
             this.a((Player) null, (Room) null, false);
           }
-          caa.a(this.field_f, param1, 108);
+          UrlDownloadRequest.a(this.field_f, param1, 108);
           super.a(param0, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wg.H(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

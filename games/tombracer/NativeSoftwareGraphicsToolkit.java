@@ -116,7 +116,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
 
     final native void intersectClip(int param0, int param1, int param2, int param3);
 
-    final GameFont createFont(qla param0, SpriteData[] param1, boolean param2) {
+    final GameFont createFont(FontMetrics param0, SpriteData[] param1, boolean param2) {
         int var7 = 0;
         int[] var4;
         int[] var5;

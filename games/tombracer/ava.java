@@ -312,7 +312,7 @@ final class ava {
                 fv.a((byte) 92, param1, var12.field_yb);
               } else {
                 if (0 == var12.field_Cb.field_y) {
-                  rc.a(jm.field_m, lba.field_p, var12, (byte) -93, 0, 0, param0);
+                  rc.a(PasswordValidator.field_m, lba.field_p, var12, (byte) -93, 0, 0, param0);
                 } else {
                   fn.a(param1, var12.field_yb, -118);
                 }
@@ -324,7 +324,7 @@ final class ava {
               if (SimpleConditionBehaviour.field_r == var12.field_yb) {
                 if (var5_int != 0 &&
                   !var12.field_tb) {
-                  var24Lifetime2 = rk.field_F;
+                  var24Lifetime2 = ProgressBarWidget.field_F;
                 } else {
                   if (var7 > var12.field_zb) {
                     var25_int = var7 - var12.field_zb;

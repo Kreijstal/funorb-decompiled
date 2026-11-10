@@ -128,7 +128,7 @@ final class dl extends me {
         this.field_l = 20;
         try {
           this.field_s = aaa.a(false) / 2;
-          this.field_u = koa.b(0) / 2;
+          this.field_u = SwitchLinkList.b(0) / 2;
           this.field_q = param1;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "dl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');

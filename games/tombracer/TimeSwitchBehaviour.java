@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class TimeSwitchBehaviour extends Behaviour implements ut {
+final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
     static String field_p;
-    private jma field_s;
+    private SwitchState field_s;
     static int field_r;
     private mg field_o;
     static long[] field_q;
@@ -55,16 +55,16 @@ final class TimeSwitchBehaviour extends Behaviour implements ut {
     final void encode(boolean param0, BitPacketBuffer param1) {
         try {
           super.encode(param0, param1);
-          this.field_s.a(this.h((byte) 123), (byte) 76, param1);
+          this.field_s.a(this.getScope((byte) 123), (byte) 76, param1);
           this.field_o.a(15637, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "tl.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final int c(int param0) {
+    public final int getDimColour(int param0) {
         if (param0 != 17832) {
-          this.k((byte) 44);
+          this.getSwitchState((byte) 44);
           return 5570594;
         }
         return 5570594;
@@ -72,15 +72,15 @@ final class TimeSwitchBehaviour extends Behaviour implements ut {
 
     final int hashState(int param0, int param1) {
         if (param1 < -48) {
-          return this.field_s.a(86, param0);
+          return this.field_s.hashState(86, param0);
         }
         this.field_o = (mg) null;
-        return this.field_s.a(86, param0);
+        return this.field_s.hashState(86, param0);
     }
 
     final void g(int param0) {
         super.g(param0);
-        this.field_s.a((byte) 48, this.h((byte) 119));
+        this.field_s.a((byte) 48, this.getScope((byte) 119));
     }
 
     final void a(mg param0, byte param1) {
@@ -101,7 +101,7 @@ final class TimeSwitchBehaviour extends Behaviour implements ut {
             pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
             return;
           }
-          if (ss.field_c < param3) {
+          if (DiskCacheWorker.field_c < param3) {
             pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
             return;
           }
@@ -120,7 +120,7 @@ final class TimeSwitchBehaviour extends Behaviour implements ut {
           pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
           return;
         }
-        if (ss.field_c < param3) {
+        if (DiskCacheWorker.field_c < param3) {
           pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
           return;
         }
@@ -135,7 +135,7 @@ final class TimeSwitchBehaviour extends Behaviour implements ut {
         pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
     }
 
-    public final int b(int param0) {
+    public final int getMaxLevel(int param0) {
         int var2 = -99 % ((-46 - param0) / 45);
         return this.field_o.a(false);
     }
@@ -143,23 +143,23 @@ final class TimeSwitchBehaviour extends Behaviour implements ut {
     TimeSwitchBehaviour(Room param0, boolean param1) {
         super(param0, param1);
         try {
-          this.field_s = new jma(15);
+          this.field_s = new SwitchState(15);
           this.field_o = new mg();
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "tl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final jma k(byte param0) {
+    public final SwitchState getSwitchState(byte param0) {
         if (param0 >= -67) {
-          return (jma) null;
+          return (SwitchState) null;
         }
         return this.field_s;
     }
 
     final int getTypeId(boolean param0) {
         if (param0) {
-          this.field_s = (jma) null;
+          this.field_s = (SwitchState) null;
           return 21;
         }
         return 21;
@@ -174,7 +174,7 @@ final class TimeSwitchBehaviour extends Behaviour implements ut {
         }
     }
 
-    public final int j(byte param0) {
+    public final int getLevel(byte param0) {
         if (param0 == -108) {
           return this.field_o.a(false) - this.field_o.b(12);
         }
@@ -182,7 +182,7 @@ final class TimeSwitchBehaviour extends Behaviour implements ut {
         return this.field_o.a(false) - this.field_o.b(12);
     }
 
-    public final int g(byte param0) {
+    public final int getLitColour(byte param0) {
         if (param0 != -108) {
           return 116;
         }
@@ -192,7 +192,7 @@ final class TimeSwitchBehaviour extends Behaviour implements ut {
     TimeSwitchBehaviour(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
-          this.field_s = new jma(15, param0, param1);
+          this.field_s = new SwitchState(15, param0, param1);
           this.field_o = new mg(param0.formatVersion, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "tl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -201,7 +201,7 @@ final class TimeSwitchBehaviour extends Behaviour implements ut {
 
     final void tick(int param0) {
         if (param0 != 5418) {
-          this.b(27);
+          this.getMaxLevel(27);
           if (this.field_s.f((byte) -56)) {
             this.c(false);
             this.field_o.d(0);

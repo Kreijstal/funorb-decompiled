@@ -31,9 +31,9 @@ final class BoulderComponent extends PathMoverComponent {
             hka.field_b.a((byte) -22, false);
             var4 = hka.field_b;
             var5_ref_String = ai.field_d;
-            var4.field_f.a((byte) -101, 5, var5_ref_String);
+            var4.field_f.addItem((byte) -101, 5, var5_ref_String);
             var4Lifetime2 = hka.field_b;
-            var5 = jm.field_m;
+            var5 = PasswordValidator.field_m;
             var6 = lba.field_p;
             var4Lifetime2.field_f.b(var6, 0, -100, 0, var5);
           }
@@ -47,9 +47,9 @@ final class BoulderComponent extends PathMoverComponent {
           hka.field_b.a((byte) -22, false);
           var4Lifetime1 = hka.field_b;
           var5_ref_StringLifetime1 = ai.field_d;
-          var4Lifetime1.field_f.a((byte) -101, 5, var5_ref_StringLifetime1);
+          var4Lifetime1.field_f.addItem((byte) -101, 5, var5_ref_StringLifetime1);
           var4Lifetime1Lifetime1 = hka.field_b;
-          var5Lifetime1 = jm.field_m;
+          var5Lifetime1 = PasswordValidator.field_m;
           var6Lifetime1 = lba.field_p;
           var4Lifetime1Lifetime1.field_f.b(var6Lifetime1, 0, -100, 0, var5Lifetime1);
         }
@@ -83,7 +83,7 @@ final class BoulderComponent extends PathMoverComponent {
             field_M = (jea) null;
           }
           var5 = param0.a(true, param3, var4_int);
-          stackIn_3_0 = rj.a(param0, var5, var4_int, (byte) -82);
+          stackIn_3_0 = FocusableWidget.a(param0, var5, var4_int, (byte) -82);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -130,11 +130,11 @@ final class BoulderComponent extends PathMoverComponent {
           tu.field_h = tu.field_h + 1;
           ksa.field_p = tka.field_n;
           jba.field_j = ena.field_n;
-          sta.field_B = ee.field_a;
+          GridWidgetContainer.field_B = ee.field_a;
           qma.field_c = lja.field_c;
           lja.field_c = false;
           hf.field_b = at.field_X;
-          jm.field_m = cr.field_d;
+          PasswordValidator.field_m = cr.field_d;
           lba.field_p = TestModel.field_m;
           at.field_X = 0;
         }

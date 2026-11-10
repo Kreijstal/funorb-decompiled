@@ -3,9 +3,9 @@
  */
 final class ada extends ArrayWidgetGroup implements tsa {
     static ura field_z;
-    private fe field_x;
+    private DateFieldsWidget field_x;
     static int[] field_y;
-    private rj field_B;
+    private FocusableWidget field_B;
 
     public static void releaseStatics(int param0) {
         if (param0 >= -122) {
@@ -18,7 +18,7 @@ final class ada extends ArrayWidgetGroup implements tsa {
         field_z = null;
     }
 
-    public final void a(int param0, int param1, rj param2, int param3, byte param4) {
+    public final void a(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
         if (param4 < 44) {
           UiWidget var7 = (UiWidget) null;
           this.updatePointerState(-16, -96, (UiWidget) null, 107);
@@ -27,7 +27,7 @@ final class ada extends ArrayWidgetGroup implements tsa {
           return;
         }
         try {
-          kv.a(this.field_x.d(22829), this.field_x.a(109), 95, this.field_x.j((byte) 110));
+          kv.a(this.field_x.getYear(22829), this.field_x.a(109), 95, this.field_x.getDay((byte) 110));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ada.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -40,9 +40,9 @@ final class ada extends ArrayWidgetGroup implements tsa {
 
     ada(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3, (isa) null);
-        this.field_x = new fe(new hga(10000536), GraphicsToolkit.field_b, 0, 0, 140, 25);
+        this.field_x = new DateFieldsWidget(new hga(10000536), GraphicsToolkit.field_b, 0, 0, 140, 25);
         this.field_x.a((byte) 111, new uba());
-        this.field_B = new rj(aua.field_d, (qc) (this));
+        this.field_B = new FocusableWidget(aua.field_d, (qc) (this));
         this.children = new UiWidget[]{(UiWidget) ((Object) this.field_x), (UiWidget) ((Object) this.field_B)};
         this.field_B.field_r = (isa) ((Object) new td());
         this.refreshLayout((byte) 127);
@@ -65,7 +65,7 @@ final class ada extends ArrayWidgetGroup implements tsa {
         return tu.field_h;
     }
 
-    final void a(byte param0) {
+    final void layoutChildren(byte param0) {
         int var2 = 250;
         if (param0 == 88) {
           this.field_x.setBounds((byte) -31, 140, 25, this.field_m - var2 >> 1, this.field_p + 20 - 25 >> 1);

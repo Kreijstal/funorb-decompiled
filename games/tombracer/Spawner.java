@@ -25,7 +25,7 @@ abstract class Spawner implements noa {
         this(param0);
     }
 
-    abstract lj a(boolean param0, int param1, int param2);
+    abstract Switchable a(boolean param0, int param1, int param2);
 
     abstract void spawn(int param0, int param1, int param2, int param3);
 

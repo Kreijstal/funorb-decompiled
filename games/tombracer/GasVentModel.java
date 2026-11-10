@@ -4,7 +4,7 @@
 final class GasVentModel extends TrapModel {
     private int field_q;
     static String field_r;
-    private ut field_n;
+    private SwitchSource field_n;
     static int[] field_m;
     static int field_p;
     private int field_o;
@@ -124,9 +124,9 @@ final class GasVentModel extends TrapModel {
           this.field_q = 0;
           return;
         }
-        int var2 = this.field_n.b(-113);
-        int var3 = this.field_n.j((byte) -108);
-        if (this.field_n.k((byte) -74).b((byte) 120)) {
+        int var2 = this.field_n.getMaxLevel(-113);
+        int var3 = this.field_n.getLevel((byte) -108);
+        if (this.field_n.getSwitchState((byte) -74).b((byte) 120)) {
           this.field_q = var2;
           var11 = this.a(param0 + 44);
           Room var4 = var11;
@@ -222,10 +222,10 @@ final class GasVentModel extends TrapModel {
         RuntimeException decompiledCaughtException = null;
         try {
           super.attach(param0, param1, param2);
-          if (!(param0 instanceof ut)) {
+          if (!(param0 instanceof SwitchSource)) {
             return;
           }
-          this.field_n = (ut) ((Object) param0);
+          this.field_n = (SwitchSource) ((Object) param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

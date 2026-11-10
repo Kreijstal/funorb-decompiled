@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sf extends hl implements eja {
+final class sf extends OpenGlBuffer implements eja {
     private una field_l;
 
     public final void a(int param0, int param1) {
@@ -15,7 +15,7 @@ final class sf extends hl implements eja {
 
     public final boolean a(byte param0) {
         int var2 = -26 % ((54 - param0) / 41);
-        return super.a(this.field_h.field_Qc, 99);
+        return super.unmap(this.field_h.field_Qc, 99);
     }
 
     public final una b(int param0) {

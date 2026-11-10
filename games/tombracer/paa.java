@@ -21,7 +21,7 @@ abstract class paa extends WidgetContainer implements mk {
         }
     }
 
-    abstract int j(byte param0);
+    abstract int getDay(byte param0);
 
     final static g c(int param0, int param1, int param2) {
         qg var5 = cm.field_a[param0];
@@ -66,19 +66,19 @@ abstract class paa extends WidgetContainer implements mk {
         var3 = TombRacer.field_G ? 1 : 0;
         try {
           if (0 == param1) {
-            fna.field_j[0] = qua.a(bja.field_a, "", "TR_theme");
+            fna.field_j[0] = qua.a(TextLayout.field_a, "", "TR_theme");
           }
           if (1 == param1) {
-            fna.field_j[1] = qua.a(bja.field_a, "", "TR_temple_music");
+            fna.field_j[1] = qua.a(TextLayout.field_a, "", "TR_temple_music");
           }
           if (param1 == 2) {
-            fna.field_j[2] = qua.a(bja.field_a, "", "TR_win_jingle_long");
+            fna.field_j[2] = qua.a(TextLayout.field_a, "", "TR_win_jingle_long");
           }
           if (param0) {
             return;
           }
           if (3 == param1) {
-            fna.field_j[3] = qua.a(bja.field_a, "", "TR_lose_jingle_long");
+            fna.field_j[3] = qua.a(TextLayout.field_a, "", "TR_lose_jingle_long");
           }
           while (!ab.field_n.field_y.a(176400, fna.field_j[param1], ua.field_a, ns.field_j, 0)) {
           }
@@ -90,7 +90,7 @@ abstract class paa extends WidgetContainer implements mk {
         }
     }
 
-    abstract int d(int param0);
+    abstract int getYear(int param0);
 
     abstract int a(int param0);
 

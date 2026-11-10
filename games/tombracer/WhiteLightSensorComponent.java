@@ -60,7 +60,7 @@ final class WhiteLightSensorComponent extends SwitchComponent {
     final Trap createTrap(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         EffectSwitchBehaviour var5 = null;
-        jma var6 = null;
+        SwitchState var6 = null;
         int var7 = 0;
         ModelCodec var8 = null;
         SwitchModel var9 = null;
@@ -83,7 +83,7 @@ final class WhiteLightSensorComponent extends SwitchComponent {
           var5.a(true, 2, (byte) -122);
           var5.a(10, 1, 5, -2029);
           this.a(var5, (byte) -61);
-          var6 = var5.k((byte) -69);
+          var6 = var5.getSwitchState((byte) -69);
           var7 = 25;
           var6.a(var7, 0, 0, 0, param1 ^ 6, 0);
           var10.addBehaviour((byte) 83, (Behaviour) (var5));

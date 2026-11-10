@@ -28,25 +28,25 @@ final class fm extends IntrusiveNode {
         if (param2 < pka.field_b) {
           PlatformMazeComponent.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
         } else {
-          if (ss.field_c < param2) {
+          if (DiskCacheWorker.field_c < param2) {
             PlatformMazeComponent.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
           } else {
             if (param1 < pka.field_b) {
               PlatformMazeComponent.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
             } else {
-              if (ss.field_c < param1) {
+              if (DiskCacheWorker.field_c < param1) {
                 PlatformMazeComponent.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
               } else {
                 if (pka.field_b > param7) {
                   PlatformMazeComponent.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                 } else {
-                  if (param7 > ss.field_c) {
+                  if (param7 > DiskCacheWorker.field_c) {
                     PlatformMazeComponent.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                   } else {
                     if (pka.field_b > param0) {
                       PlatformMazeComponent.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                     } else {
-                      if (ss.field_c < param0) {
+                      if (DiskCacheWorker.field_c < param0) {
                         PlatformMazeComponent.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                       } else {
                         if (gca.field_d > param5) {

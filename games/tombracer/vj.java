@@ -137,7 +137,7 @@ final class vj {
           if (param1 >= -69) {
             vj.a(10);
           }
-          hl.field_i = param0;
+          OpenGlBuffer.field_i = param0;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vj.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -1267,7 +1267,7 @@ final class gja extends ka {
           var3 = var2.readUnsignedByte(255);
           var2.beginBitAccess((byte) 119);
           ej.field_d = BrazierComponent.a(var2, (byte) 8);
-          tfa.field_e = new int[var3][];
+          OpenGlTexture.field_e = new int[var3][];
           cq.field_b = new an[var3];
           var4 = 0;
           do {
@@ -1284,7 +1284,7 @@ final class gja extends ka {
             var5.a(6, 6, 6, true, 1);
             var5.a((byte) -120);
             var6 = new int[]{var5.field_i + var5.field_z >> 1, var5.field_b + var5.field_m >> 1, var5.field_a + var5.field_p >> 1};
-            tfa.field_e[var4] = var6;
+            OpenGlTexture.field_e[var4] = var6;
             var5.a(-var6[2], -var6[0], (byte) -86, -var6[1]);
             var4++;
             if (var7 != 0) {
@@ -2446,7 +2446,7 @@ final class gja extends ka {
             stackIn_75_0 = uu.a(true, param4, this.field_h) ? 1 : 0;
           }
           if (stackIn_75_0 == 0) {
-            if (!ss.a((byte) 114, this.field_h, param4)) {
+            if (!DiskCacheWorker.a((byte) 114, this.field_h, param4)) {
               param0.field_ib = null;
               if (var13 != 0) {
                 param0.field_ib = this.field_ib;
@@ -4874,7 +4874,7 @@ final class gja extends ka {
           this.field_h = param2;
           this.field_Y = param1;
           if (param3 ||
-            ss.a((byte) 112, this.field_h, this.field_Y)) {
+            DiskCacheWorker.a((byte) 112, this.field_h, this.field_Y)) {
             this.field_ib = new hg(uu.a(true, this.field_Y, this.field_h));
           }
           if (param3 ||

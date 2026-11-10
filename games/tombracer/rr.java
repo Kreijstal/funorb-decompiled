@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rr extends rj {
+final class rr extends FocusableWidget {
     int field_E;
     int field_z;
     int field_C;

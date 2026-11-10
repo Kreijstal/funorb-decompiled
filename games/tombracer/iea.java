@@ -141,9 +141,9 @@ final class iea {
               paa.a(jja.field_j.field_vb, -1, var6.field_yb, 0L, param1 - 11579, (int[]) null, var6, -1, var6.field_tb);
               var16 = hka.field_b;
               var13_ref_String = uma.field_a;
-              var16.field_f.a((byte) -100, 7, var13_ref_String);
+              var16.field_f.addItem((byte) -100, 7, var13_ref_String);
               var17 = hka.field_b;
-              var13 = jm.field_m;
+              var13 = PasswordValidator.field_m;
               var14 = lba.field_p;
               var17.field_f.b(var14, 0, -69, 0, var13);
             }
@@ -169,7 +169,7 @@ final class iea {
 
     final static void a(boolean param0, ResourceArchive param1, int param2, ResourceArchive param3) {
         try {
-          mp.a(joa.field_d, tka.field_q, param0, una.field_j, fe.field_F, Corpse.field_i, 0, PressureSwitchBehaviour.field_p, jq.field_o, NodeHashTable.field_g, dn.field_a, kw.field_e);
+          mp.a(joa.field_d, tka.field_q, param0, una.field_j, DateFieldsWidget.field_F, Corpse.field_i, 0, PressureSwitchBehaviour.field_p, jq.field_o, NodeHashTable.field_g, dn.field_a, kw.field_e);
           vda.field_m = BoulderComponent.a(param1, "lobby", 5, "chatfilter");
           StripedMazeGenerator.field_c[0] = SecondaryNodeDequeIterator.field_b;
           StripedMazeGenerator.field_c[param2] = hm.field_m;

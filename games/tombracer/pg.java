@@ -6,7 +6,7 @@ final class pg extends WidgetContainer implements tma, tsa {
     static String field_A;
     static int field_y;
     static String field_x;
-    private rj field_B;
+    private FocusableWidget field_B;
     private rua field_w;
     static int[] field_C;
 
@@ -78,7 +78,7 @@ final class pg extends WidgetContainer implements tma, tsa {
         field_x = null;
     }
 
-    public final void a(int param0, int param1, rj param2, int param3, byte param4) {
+    public final void a(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -117,7 +117,7 @@ final class pg extends WidgetContainer implements tma, tsa {
         int var6 = 0;
         try {
           this.field_w = param0;
-          this.field_B = new rj(aua.field_d, (qc) null);
+          this.field_B = new FocusableWidget(aua.field_d, (qc) null);
           this.field_B.field_r = (isa) ((Object) new td());
           var7 = gl.$cfr$intArgs$a$53ce4ab4c593(108, SafeZoneBehaviour.field_q, new String[]{this.c(-58), this.d(-35)});
           var3 = 20;

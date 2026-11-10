@@ -5,10 +5,10 @@ final class ul extends nqa implements na {
     private int field_f;
     private jagdx.IDirect3DCubeTexture field_g;
 
-    public final void b(byte param0) {
+    public final void bind(byte param0) {
         this.field_d.a((byte) 77, (nqa) (this));
         if (param0 <= 32) {
-          this.b((byte) -63);
+          this.bind((byte) -63);
         }
     }
 

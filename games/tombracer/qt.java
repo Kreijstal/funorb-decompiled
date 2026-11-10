@@ -13,22 +13,22 @@ final class qt {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, byte param5) {
-        ItemBehaviour.field_p[ola.field_Eb] = param3;
-        BlockModel.field_n[ola.field_Eb] = ola.field_Eb;
-        jk.field_h[ola.field_Eb] = param4;
+        ItemBehaviour.field_p[ContextMenu.field_Eb] = param3;
+        BlockModel.field_n[ContextMenu.field_Eb] = ContextMenu.field_Eb;
+        jk.field_h[ContextMenu.field_Eb] = param4;
         if (ap.field_d < param4) {
           ma.field_g = param4;
         }
         if (!(ota.field_c <= param4)) {
           kc.field_a = param4;
         }
-        DamageableBehaviour.field_o[ola.field_Eb] = param0;
-        bq.field_h[ola.field_Eb] = param1;
-        PortalBehaviour.field_o[ola.field_Eb] = param2;
+        DamageableBehaviour.field_o[ContextMenu.field_Eb] = param0;
+        bq.field_h[ContextMenu.field_Eb] = param1;
+        PortalBehaviour.field_o[ContextMenu.field_Eb] = param2;
         int var6 = param2 + (param1 + param0);
         int var7 = var6 == 0 ? 0 : 1000 * param0 / var6;
-        ic.field_c[ola.field_Eb] = var7;
-        ola.field_Eb = ola.field_Eb + 1;
+        ic.field_c[ContextMenu.field_Eb] = var7;
+        ContextMenu.field_Eb = ContextMenu.field_Eb + 1;
         if (ma.field_g < var7) {
           ma.field_g = var7;
         }

@@ -6,7 +6,7 @@ final class SimpleConditionBehaviour extends Behaviour {
     static String field_q;
     static int[] field_o;
     private int field_t;
-    private jma field_n;
+    private SwitchState field_n;
     static jea[] field_p;
     static long field_r;
 
@@ -58,7 +58,7 @@ final class SimpleConditionBehaviour extends Behaviour {
         super(param0, param1, param2);
         try {
           this.field_t = param1.readBits((byte) 44, 4);
-          this.field_n = new jma(15, param0, param1);
+          this.field_n = new SwitchState(15, param0, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "rb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -84,7 +84,7 @@ final class SimpleConditionBehaviour extends Behaviour {
         try {
           super.encode(param0, param1);
           param1.writeBits((byte) -127, this.field_t, 4);
-          this.field_n.a(this.h((byte) 119), (byte) 88, param1);
+          this.field_n.a(this.getScope((byte) 119), (byte) 88, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "rb.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -153,12 +153,12 @@ final class SimpleConditionBehaviour extends Behaviour {
 
     final void g(int param0) {
         super.g(param0);
-        this.field_n.a((byte) 48, this.h((byte) 116));
+        this.field_n.a((byte) 48, this.getScope((byte) 116));
     }
 
     final int getTypeId(boolean param0) {
         if (param0) {
-          this.field_n = (jma) null;
+          this.field_n = (SwitchState) null;
           return 13;
         }
         return 13;

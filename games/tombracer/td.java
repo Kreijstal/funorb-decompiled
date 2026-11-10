@@ -65,8 +65,8 @@ final class td extends vpa {
             stackIn_6_0 = 1;
           }
           var6_int = stackIn_6_0;
-          if (param0 instanceof rj) {
-            param4 = param4 & ((rj) (param0)).field_y;
+          if (param0 instanceof FocusableWidget) {
+            param4 = param4 & ((FocusableWidget) (param0)).field_y;
           }
           if (param4) {
             if (var6_int != 0) {

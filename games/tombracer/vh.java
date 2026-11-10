@@ -247,7 +247,7 @@ final class vh {
             dupTemp$1 = new int[2][4 * var5];
             var3.field_m = dupTemp$1;
             var7 = dupTemp$1;
-            var8 = ola.field_Eb;
+            var8 = ContextMenu.field_Eb;
             var9 = 0;
             var10 = 0;
             while (var8 > var9) {
@@ -383,7 +383,7 @@ final class vh {
         }
     }
 
-    final static boolean a(int param0, boolean param1, int param2, lj param3) {
+    final static boolean matchesSwitchableId(int param0, boolean param1, int param2, Switchable param3) {
         RuntimeException var4 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
@@ -396,10 +396,10 @@ final class vh {
             field_b = (String) null;
           }
           if (!param1) {
-            stackIn_10_0 = (param0 == param3.n(31974).id);
+            stackIn_10_0 = (param0 == param3.getGlobalId(31974).id);
             return stackIn_10_0;
           }
-          stackIn_6_0 = (param3.i((byte) 84).id == param0);
+          stackIn_6_0 = (param3.getLocalId((byte) 84).id == param0);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -51,7 +51,7 @@ final class KeySwitchComponent extends SwitchComponent {
     final Trap createTrap(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         KeyLockBehaviour var5 = null;
-        jma var6 = null;
+        SwitchState var6 = null;
         ModelCodec var7 = null;
         SwitchModel var8 = null;
         Trap var9 = null;
@@ -68,7 +68,7 @@ final class KeySwitchComponent extends SwitchComponent {
           var5 = new KeyLockBehaviour(param2, param0);
           var5.b(0, 1);
           this.a(var5, (byte) -101);
-          var6 = var5.k((byte) -98);
+          var6 = var5.getSwitchState((byte) -98);
           var6.b(1, 106);
           var9.addBehaviour((byte) 83, (Behaviour) (var5));
           var7 = rm.field_a;

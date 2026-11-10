@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kv {
-    static qla field_a;
+    static FontMetrics field_a;
     static jea field_b;
     static String[] achievementDescriptions;
 
@@ -51,7 +51,7 @@ final class kv {
           field_b = null;
           return;
         }
-        field_a = (qla) null;
+        field_a = (FontMetrics) null;
         achievementDescriptions = null;
         field_a = null;
         field_b = null;

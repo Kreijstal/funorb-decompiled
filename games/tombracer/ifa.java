@@ -269,9 +269,9 @@ final class ifa extends ci {
         if (2 < nba.field_b) {
           nba.field_b = 2;
         }
-        caa.field_i = 3 & param0;
-        if (caa.field_i > 2) {
-          caa.field_i = 2;
+        UrlDownloadRequest.field_i = 3 & param0;
+        if (UrlDownloadRequest.field_i > 2) {
+          UrlDownloadRequest.field_i = 2;
         }
     }
 

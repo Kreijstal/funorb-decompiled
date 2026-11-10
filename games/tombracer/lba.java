@@ -195,7 +195,7 @@ class lba extends fi {
             if (!PowerDownItemBehaviour.field_s) {
               ni.field_c = true;
             } else {
-              ola.e((byte) 112);
+              ContextMenu.e((byte) 112);
             }
           }
           if (!ni.field_c) {

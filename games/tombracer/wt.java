@@ -25,7 +25,7 @@ final class wt {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = sv.a((byte) -38, jm.a(param1, -127));
+          var2 = sv.a((byte) -38, PasswordValidator.encodeBase37(param1, -127));
           if (param0 != 30433) {
             field_a = -2;
           }

@@ -7,7 +7,7 @@ final class fma {
     static String field_d;
     private java.math.BigInteger field_e;
     static iw field_f;
-    private ss field_c;
+    private DiskCacheWorker field_c;
     private ArchiveNetworkClient field_h;
     private PacketBuffer field_g;
     private CachedArchiveSource[] field_i;
@@ -234,11 +234,11 @@ final class fma {
         return;
     }
 
-    fma(ArchiveNetworkClient param0, ss param1) {
+    fma(ArchiveNetworkClient param0, DiskCacheWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    private fma(ArchiveNetworkClient param0, ss param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private fma(ArchiveNetworkClient param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

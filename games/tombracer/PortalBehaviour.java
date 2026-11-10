@@ -4,7 +4,7 @@
 final class PortalBehaviour extends Behaviour {
     static int field_n;
     static int[] field_o;
-    private koa field_p;
+    private SwitchLinkList field_p;
 
     final static void a(int param0, boolean param1, qua param2, int param3) {
         RuntimeException var4 = null;
@@ -50,7 +50,7 @@ final class PortalBehaviour extends Behaviour {
     PortalBehaviour(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
-          this.field_p = new koa(1, 1, param0.formatVersion, param1);
+          this.field_p = new SwitchLinkList(1, 1, param0.formatVersion, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "im.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -78,7 +78,7 @@ final class PortalBehaviour extends Behaviour {
               param4 = "[" + dna.field_H.toUpperCase() + "] " + param4;
             } else {
               if (param3 >= 0) {
-                param4 = "<col=" + jm.field_k[param3] + ">" + param4 + "</col>";
+                param4 = "<col=" + PasswordValidator.field_k[param3] + ">" + param4 + "</col>";
               }
             }
           }
@@ -115,7 +115,7 @@ final class PortalBehaviour extends Behaviour {
     PortalBehaviour(Room param0, boolean param1) {
         super(param0, param1);
         try {
-          this.field_p = new koa(1, 1);
+          this.field_p = new SwitchLinkList(1, 1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "im.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -124,13 +124,13 @@ final class PortalBehaviour extends Behaviour {
     final void g(int param0) {
         if (param0 == -2) {
           super.g(param0 ^ 0);
-          this.field_p.a(this.h((byte) 112), 8);
+          this.field_p.a(this.getScope((byte) 112), 8);
           return;
         }
         BitPacketBuffer var3 = (BitPacketBuffer) null;
         this.encode(false, (BitPacketBuffer) null);
         super.g(param0 ^ 0);
-        this.field_p.a(this.h((byte) 112), 8);
+        this.field_p.a(this.getScope((byte) 112), 8);
     }
 
     final void attachToTrap(boolean param0, Trap param1) {
@@ -161,7 +161,7 @@ final class PortalBehaviour extends Behaviour {
         field_o = null;
     }
 
-    final koa g(byte param0) {
+    final SwitchLinkList g(byte param0) {
         if (param0 != 99) {
           field_o = (int[]) null;
           return this.field_p;
@@ -172,7 +172,7 @@ final class PortalBehaviour extends Behaviour {
     final void encode(boolean param0, BitPacketBuffer param1) {
         try {
           super.encode(param0, param1);
-          this.field_p.a(30489, this.h((byte) 122), param1);
+          this.field_p.encode(30489, this.getScope((byte) 122), param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "im.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -234,7 +234,7 @@ final class PortalBehaviour extends Behaviour {
 
     final void tick(int param0) {
         int var15 = 0;
-        lj[] var2;
+        Switchable[] var2;
         Object var3;
         int var4;
         int var5;
@@ -258,7 +258,7 @@ final class PortalBehaviour extends Behaviour {
         int var24;
         Object var25;
         int var26;
-        lj[] var27;
+        Switchable[] var27;
         t var28;
         WorldBody var29;
         var17 = null;

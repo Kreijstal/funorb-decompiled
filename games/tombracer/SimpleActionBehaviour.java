@@ -21,7 +21,7 @@ final class SimpleActionBehaviour extends Behaviour {
         return param0;
     }
 
-    public final void m(int param0) {
+    public final void toggle(int param0) {
         int var2;
         int var3;
         int var4;
@@ -29,7 +29,7 @@ final class SimpleActionBehaviour extends Behaviour {
         int stackIn_6_1 = 0;
         boolean stackIn_7_2 = false;
         var4 = TombRacer.field_G ? 1 : 0;
-        super.m(115);
+        super.toggle(115);
         var2 = 81 % ((28 - param0) / 49);
         var3 = this.field_o;
         if (var3 == 0) {

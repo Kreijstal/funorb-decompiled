@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eua extends jea {
-    private eua field_Eb;
+final class QuickChatMenu extends jea {
+    private QuickChatMenu field_Eb;
     private int field_vb;
     private int field_Fb;
     private char[] field_xb;
     private tv[] field_Gb;
     private int field_Db;
-    private eua[] field_zb;
+    private QuickChatMenu[] field_zb;
     private int field_Bb;
     private int field_wb;
     private int field_Cb;
@@ -17,11 +17,11 @@ final class eua extends jea {
     private int field_tb;
     private int[] field_ub;
 
-    final int g(int param0) {
+    final int getOpenChainWidth(int param0) {
         if (param0 != 22514) {
           this.field_Cb = -14;
         }
-        return this.field_Fb + (null != this.field_Eb ? this.field_Eb.g(22514) : 0);
+        return this.field_Fb + (null != this.field_Eb ? this.field_Eb.getOpenChainWidth(22514) : 0);
     }
 
     final void a(boolean param0) {
@@ -87,7 +87,7 @@ final class eua extends jea {
         }
     }
 
-    eua(long param0, jea param1, jea param2, jea param3, eua[] param4, int[] param5, String[] param6, char[] param7) {
+    QuickChatMenu(long param0, jea param1, jea param2, jea param3, QuickChatMenu[] param4, int[] param5, String[] param6, char[] param7) {
         super(param0, param1);
         int var13 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -283,14 +283,14 @@ final class eua extends jea {
         return false;
     }
 
-    final void a(int param0, int param1, byte param2) {
+    final void processPressedItems(int param0, int param1, byte param2) {
         int var4_int = 0;
         tv var5;
         int var6;
         tv stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
-        eua var4;
-        eua var7;
+        QuickChatMenu var4;
+        QuickChatMenu var7;
         var6 = TombRacer.field_G ? 1 : 0;
         for (var4_int = 0; var4_int < this.field_Gb.length; var4_int++) {
           var5 = this.field_Gb[var4_int];
@@ -302,13 +302,13 @@ final class eua extends jea {
           }
         }
         if (param2 > -52) {
-          eua.releaseStatics(-120);
+          QuickChatMenu.releaseStatics(-120);
         }
         if (this.field_tb != -1) {
           var7 = this.field_zb[this.field_tb];
           var4 = var7;
           if (var4 != null) {
-            var7.a(param0, param1, (byte) -79);
+            var7.processPressedItems(param0, param1, (byte) -79);
           }
         }
         if (this.field_Cb > 0) {

@@ -18,8 +18,8 @@ final class uba extends kma implements cd, eaa {
         Throwable decompiledCaughtException = null;
         try {
           var2_int = this.field_i.a(param0 - 1780);
-          var3 = this.field_i.d(param0 + 20939);
-          var4 = this.field_i.j((byte) 110);
+          var3 = this.field_i.getYear(param0 + 20939);
+          var4 = this.field_i.getDay((byte) 110);
           var5 = ResourceArchive.a((byte) 60);
           if (var4 >= param0 &&
             -3 + var5 >= var4) {
@@ -78,8 +78,8 @@ final class uba extends kma implements cd, eaa {
         Throwable decompiledCaughtException = null;
         try {
           var2_int = this.field_i.a(111);
-          var3 = this.field_i.d(22829);
-          var4 = this.field_i.j((byte) 110);
+          var3 = this.field_i.getYear(22829);
+          var4 = this.field_i.getDay((byte) 110);
           var5 = ResourceArchive.a((byte) 125);
           if (~var4 > param0) {
             stackIn_3_0 = fp.field_c;

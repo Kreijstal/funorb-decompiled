@@ -162,7 +162,7 @@ final class aia extends IntrusiveNode {
           }
           if (param6.a((Collidable) null, this.field_q, 2, 1, param3 + this.field_r, param0 + this.field_n, false, param5, this.field_q)) {
             this.field_o = this.field_o + 2;
-            this.field_o = et.b(75, this.field_o, 125);
+            this.field_o = MidiVoiceMixer.b(75, this.field_o, 125);
             if (this.h(21302)) {
               this.field_n = (this.field_n - var12Lifetime2) / 4 + var12Lifetime2;
               this.field_r = var13Lifetime1 + (-var13Lifetime1 + this.field_r) / 4;
@@ -299,7 +299,7 @@ final class aia extends IntrusiveNode {
         if (baa.field_d.field_i.field_b == vea.field_c) {
           return 3;
         }
-        if (baa.field_d.field_i.field_b == laa.field_x) {
+        if (baa.field_d.field_i.field_b == UsernameSuggestionsPanel.field_x) {
           return 4;
         }
         if (param0 != 5) {

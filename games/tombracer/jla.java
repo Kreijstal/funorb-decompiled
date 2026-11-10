@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jla extends rj {
+final class jla extends FocusableWidget {
     static IntrusiveDeque field_z;
     static String field_B;
 

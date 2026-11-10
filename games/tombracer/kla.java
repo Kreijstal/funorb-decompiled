@@ -74,7 +74,7 @@ final class kla {
             ci.field_l.i((byte) -108);
           }
           var1 = ooa.a((byte) -107);
-          vn.field_b = new jw(var1, (String) null, true, false, false);
+          vn.field_b = new LoginForm(var1, (String) null, true, false, false);
           ej.field_a.c(um.field_l, 84);
           um.field_l.a(68, vn.field_b);
           um.field_l.c(true);
@@ -86,7 +86,7 @@ final class kla {
           ci.field_l.i((byte) -108);
         }
         var1Lifetime1 = ooa.a((byte) -107);
-        vn.field_b = new jw(var1Lifetime1, (String) null, true, false, false);
+        vn.field_b = new LoginForm(var1Lifetime1, (String) null, true, false, false);
         ej.field_a.c(um.field_l, 84);
         um.field_l.a(68, vn.field_b);
         um.field_l.c(true);

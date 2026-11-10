@@ -180,10 +180,10 @@ abstract class AppletGameShell extends GameApplet {
           if (13 == var4) {
             try {
               if (DarknessBehaviour.field_o == null) {
-                DarknessBehaviour.field_o = new caa(dsa.field_c, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+                DarknessBehaviour.field_o = new UrlDownloadRequest(dsa.field_c, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
-              if (DarknessBehaviour.field_o.a(false)) {
-                var7 = DarknessBehaviour.field_o.b((byte) -123);
+              if (DarknessBehaviour.field_o.poll(false)) {
+                var7 = DarknessBehaviour.field_o.getResult((byte) -123);
                 if (var7 != null) {
                   var8 = nia.a(var7.payload, 0, var7.position, 255);
                   NodeHashTableIterator.a(var8, -1);
@@ -294,7 +294,7 @@ abstract class AppletGameShell extends GameApplet {
                       }
                     }
                   } else {
-                    rj.a(param0 + 9);
+                    FocusableWidget.a(param0 + 9);
                   }
                 }
               }

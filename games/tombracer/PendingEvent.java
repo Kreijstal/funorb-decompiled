@@ -101,7 +101,7 @@ final class PendingEvent extends IntrusiveNode {
             if (var4 <= var5 &&
               var6 >= var3_int) {
               var7 = iia.d(var5, var6, 2);
-              var8 = et.b(var4, var3_int, param1 ^ -120);
+              var8 = MidiVoiceMixer.b(var4, var3_int, param1 ^ -120);
               if (this.duration < param0.duration) {
                 this.instigator = param0.instigator;
               }

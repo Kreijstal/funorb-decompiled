@@ -65,21 +65,21 @@ final class nl {
               param1 = pka.field_b;
               var6_int = 0;
             } else {
-              if (param1 <= ss.field_c) {
+              if (param1 <= DiskCacheWorker.field_c) {
                 var6_int = 1;
               } else {
                 var6_int = 0;
-                param1 = ss.field_c;
+                param1 = DiskCacheWorker.field_c;
               }
             }
             if (pka.field_b > param4) {
               param4 = pka.field_b;
               var7 = 0;
             } else {
-              if (ss.field_c >= param4) {
+              if (DiskCacheWorker.field_c >= param4) {
                 var7 = 1;
               } else {
-                param4 = ss.field_c;
+                param4 = DiskCacheWorker.field_c;
                 var7 = 0;
               }
             }

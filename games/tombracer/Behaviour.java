@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class Behaviour extends IntrusiveNode implements lj, Renderable, noa, TrapPart {
+abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable, noa, TrapPart {
     boolean field_f;
     static String field_h;
     Trap trap;
@@ -61,7 +61,7 @@ abstract class Behaviour extends IntrusiveNode implements lj, Renderable, noa, T
 
     abstract int getTypeId(boolean param0);
 
-    public final SwitchableId i(byte param0) {
+    public final SwitchableId getLocalId(byte param0) {
         if (param0 != 84) {
           return (SwitchableId) null;
         }
@@ -93,7 +93,7 @@ abstract class Behaviour extends IntrusiveNode implements lj, Renderable, noa, T
         }
     }
 
-    public final SwitchableId n(int param0) {
+    public final SwitchableId getGlobalId(int param0) {
         if (param0 != 31974) {
           return (SwitchableId) null;
         }
@@ -180,7 +180,7 @@ abstract class Behaviour extends IntrusiveNode implements lj, Renderable, noa, T
         }
     }
 
-    public void m(int param0) {
+    public void toggle(int param0) {
         int var2 = 98 % ((28 - param0) / 49);
         if (this.field_k) {
           return;
@@ -195,12 +195,12 @@ abstract class Behaviour extends IntrusiveNode implements lj, Renderable, noa, T
         return this.field_f;
     }
 
-    public final ew h(byte param0) {
+    public final SwitchableScope getScope(byte param0) {
         if (param0 <= 105) {
           this.c(false);
-          return (ew) ((Object) this.trap.getRoot(0));
+          return (SwitchableScope) ((Object) this.trap.getRoot(0));
         }
-        return (ew) ((Object) this.trap.getRoot(0));
+        return (SwitchableScope) ((Object) this.trap.getRoot(0));
     }
 
     Behaviour(Room param0, BitPacketBuffer param1, boolean param2) {
@@ -238,7 +238,7 @@ abstract class Behaviour extends IntrusiveNode implements lj, Renderable, noa, T
     void attachToTrap(boolean param0, Trap param1) {
         try {
           if (!param0) {
-            this.m(23);
+            this.toggle(23);
           }
           this.trap = param1;
         } catch (RuntimeException runtimeException) {
@@ -422,17 +422,17 @@ abstract class Behaviour extends IntrusiveNode implements lj, Renderable, noa, T
 
     abstract void tick(int param0);
 
-    lj a(int param0, int param1, boolean param2) {
+    Switchable a(int param0, int param1, boolean param2) {
         if (param0 != 0) {
           ui var5 = (ui) null;
           this.a(-91, (ui) null, true, (ui) null);
-          if (vh.a(param1, param2, -27201, (lj) (this))) {
-            return (lj) (this);
+          if (vh.matchesSwitchableId(param1, param2, -27201, (Switchable) (this))) {
+            return (Switchable) (this);
           }
           return null;
         }
-        if (vh.a(param1, param2, -27201, (lj) (this))) {
-          return (lj) (this);
+        if (vh.matchesSwitchableId(param1, param2, -27201, (Switchable) (this))) {
+          return (Switchable) (this);
         }
         return null;
     }

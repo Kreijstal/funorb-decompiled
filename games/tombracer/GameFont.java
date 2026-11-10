@@ -3,7 +3,7 @@
  */
 abstract class GameFont {
     static boolean field_c;
-    private qla field_a;
+    private FontMetrics field_a;
     private GraphicsToolkit field_b;
 
     abstract void fa(char param0, int param1, int param2, int param3, boolean param4);
@@ -28,7 +28,7 @@ abstract class GameFont {
     private final void a(int param0, int param1, int param2) {
         nt.field_b = -1;
         if (param2 < 106) {
-          this.field_a = (qla) null;
+          this.field_a = (FontMetrics) null;
         }
         OpenGlToolkit.field_ab = 0;
         lra.field_g = param0;
@@ -135,7 +135,7 @@ abstract class GameFont {
             var3 = (Exception) (Object) decompiledCaughtException;
           }
           if (param1 <= 108) {
-            this.field_a = (qla) null;
+            this.field_a = (FontMetrics) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -313,7 +313,7 @@ abstract class GameFont {
             OpenGlToolkit.field_ab = (param1 - this.field_a.a(param2, (byte) -121) << 8) / var4_int;
           }
           if (!param0) {
-            this.field_a = (qla) null;
+            this.field_a = (FontMetrics) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -440,7 +440,7 @@ abstract class GameFont {
               if ((decompiledFrameRemainder0) &&
                 (var10_int == -1)) {
                 if (-1 != var11) {
-                  param1 = param1 + this.field_a.a(var11, -6773, (char) var14);
+                  param1 = param1 + this.field_a.kerning(var11, -6773, (char) var14);
                 }
                 if (32 == var14) {
                   if (OpenGlToolkit.field_ab > 0) {
@@ -461,7 +461,7 @@ abstract class GameFont {
                     this.a((char) var14, param1, param8, v.field_k, false, param2, param7, param4);
                   }
                 }
-                var15 = this.field_a.a(255, var14);
+                var15 = this.field_a.characterWidth(255, var14);
                 if (nt.field_b != -1) {
                   this.field_b.a(1, var15, (int)((double)this.field_a.field_a * 0.7) + param8, param1, nt.field_b);
                 }
@@ -574,7 +574,7 @@ abstract class GameFont {
         }
         try {
           if (param0 != 12199) {
-            this.field_a = (qla) null;
+            this.field_a = (FontMetrics) null;
           }
           this.a(param4, param3, 118);
           this.a(false, -this.field_a.a(param2, (byte) -102) + param5, (aa) null, (int[]) null, 0, (ToolkitSprite[]) null, param2, 0, param1);
@@ -583,7 +583,7 @@ abstract class GameFont {
         }
     }
 
-    GameFont(GraphicsToolkit param0, qla param1) {
+    GameFont(GraphicsToolkit param0, FontMetrics param1) {
         try {
           this.field_a = param1;
           this.field_b = param0;

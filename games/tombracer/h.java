@@ -14,7 +14,7 @@ final class h extends GameFont implements e {
         this.NA(param0, param1, param2, param3, param4, param5, param6, param7);
     }
 
-    h(NativeSoftwareGraphicsToolkit param0, ya param1, qla param2, SpriteData[] param3, ToolkitSprite[] param4) {
+    h(NativeSoftwareGraphicsToolkit param0, ya param1, FontMetrics param2, SpriteData[] param3, ToolkitSprite[] param4) {
         super(param0, param2);
         int var11 = 0;
         byte[][] var6 = new byte[param3.length][];

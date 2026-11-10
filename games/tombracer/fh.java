@@ -582,7 +582,7 @@ final class fh implements Renderable {
               bsa.field_k = false;
               var3_int = 1;
             }
-            et.a((byte) 108, tn.a(-10918), bta.field_i, dla.a(7), var3_int != 0);
+            MidiVoiceMixer.a((byte) 108, tn.a(-10918), bta.field_i, dla.a(7), var3_int != 0);
           } else {
             if (!qk.i(250)) {
               SoftwareRasterizer.clear();

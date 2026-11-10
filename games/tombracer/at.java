@@ -3,21 +3,21 @@
  */
 final class at extends ofa implements tsa {
     static volatile int field_X;
-    private sta field_T;
-    private rj field_Z;
-    private rj[] field_U;
-    private rj field_N;
+    private GridWidgetContainer field_T;
+    private FocusableWidget field_Z;
+    private FocusableWidget[] field_U;
+    private FocusableWidget field_N;
     private dh[] field_P;
-    private rj field_W;
+    private FocusableWidget field_W;
     static String field_Q;
     static String field_R;
     private rla field_ab;
     private boolean field_O;
-    private rj field_L;
-    private rj field_V;
+    private FocusableWidget field_L;
+    private FocusableWidget field_V;
     private boolean field_M;
     private boolean field_Y;
-    private rj field_S;
+    private FocusableWidget field_S;
 
     final static void j(int param0) {
         int var2 = 0;
@@ -74,11 +74,11 @@ final class at extends ofa implements tsa {
         int stackIn_40_0 = 0;
         int stackIn_48_0 = 0;
         Object stackIn_51_0;
-        sta stackIn_51_1;
-        sta stackIn_51_2;
+        GridWidgetContainer stackIn_51_1;
+        GridWidgetContainer stackIn_51_2;
         int stackIn_51_3;
-        sta stackIn_52_1 = null;
-        sta stackIn_52_2 = null;
+        GridWidgetContainer stackIn_52_1 = null;
+        GridWidgetContainer stackIn_52_2 = null;
         int stackIn_52_4 = 0;
         int stackIn_57_1 = 0;
         String stackIn_74_0 = null;
@@ -95,15 +95,15 @@ final class at extends ofa implements tsa {
         String[] var5_ref_String__ = null;
         int var6_int = 0;
         String var6 = null;
-        rj var6_ref = null;
+        FocusableWidget var6_ref = null;
         UiWidget var7 = null;
         dh var8 = null;
         String var10 = null;
         Object stackIn_51_0Lifetime1;
-        sta stackIn_51_1Lifetime1;
-        sta stackIn_51_2Lifetime1;
-        sta stackIn_52_1Lifetime1;
-        sta stackIn_52_2Lifetime1;
+        GridWidgetContainer stackIn_51_1Lifetime1;
+        GridWidgetContainer stackIn_51_2Lifetime1;
+        GridWidgetContainer stackIn_52_1Lifetime1;
+        GridWidgetContainer stackIn_52_2Lifetime1;
         int var3Lifetime1;
         int var4Lifetime1;
         int var5Lifetime1;
@@ -148,7 +148,7 @@ final class at extends ofa implements tsa {
           }
           stackIn_31_1 = !(this.field_P.length <= 0);
           this.field_M = stackIn_31_1;
-          stackIn_34_0 = (!sta.g((byte) 97)) ? 0 : 1;
+          stackIn_34_0 = (!GridWidgetContainer.g((byte) 97)) ? 0 : 1;
           var2_intLifetime1 = stackIn_34_0;
           stackIn_37_1 = !(vpa.a(56));
           this.field_Y = stackIn_37_1;
@@ -185,7 +185,7 @@ final class at extends ofa implements tsa {
             stackIn_52_2Lifetime1 = null;
             stackIn_52_4 = 58;
           }
-          this.field_T = new sta(stackIn_51_3, stackIn_52_4, 410, 105, (isa) null, var3Lifetime1, 1);
+          this.field_T = new GridWidgetContainer(stackIn_51_3, stackIn_52_4, 410, 105, (isa) null, var3Lifetime1, 1);
           this.field_T.field_E = 83;
           this.field_T.a(5, 5, (byte) 97);
           this.addChild(this.field_T, -1);
@@ -199,7 +199,7 @@ final class at extends ofa implements tsa {
           } else {
             stackIn_57_1 = 2;
           }
-          this.field_U = new rj[stackIn_57_1];
+          this.field_U = new FocusableWidget[stackIn_57_1];
           this.field_U[1] = this.field_V;
           if (var2_intLifetime1 != 0) {
             this.field_U[2] = this.field_N;
@@ -268,17 +268,17 @@ final class at extends ofa implements tsa {
     }
 
     final boolean handleKeyInput(char param0, UiWidget param1, int param2, boolean param3) {
-        rj stackIn_36_0 = null;
+        FocusableWidget stackIn_36_0 = null;
         boolean stackIn_37_2 = false;
-        rj stackIn_42_0 = null;
+        FocusableWidget stackIn_42_0 = null;
         boolean stackIn_43_2 = false;
-        rj stackIn_51_0 = null;
+        FocusableWidget stackIn_51_0 = null;
         boolean stackIn_52_2 = false;
-        rj stackIn_62_0 = null;
+        FocusableWidget stackIn_62_0 = null;
         boolean stackIn_63_2 = false;
-        rj stackIn_77_0 = null;
+        FocusableWidget stackIn_77_0 = null;
         boolean stackIn_78_2 = false;
-        rj stackIn_86_0 = null;
+        FocusableWidget stackIn_86_0 = null;
         boolean stackIn_87_2 = false;
         boolean stackIn_93_0 = false;
         Object stackIn_96_0 = null;
@@ -345,7 +345,7 @@ final class at extends ofa implements tsa {
                 if (!this.field_L.field_y) {
                   stackIn_86_0 = this.field_Z;
                   stackIn_87_2 = !(param3);
-                  ((rj) (Object) stackIn_86_0).requestKeyboardFocus((UiWidget) (this), stackIn_87_2);
+                  ((FocusableWidget) (Object) stackIn_86_0).requestKeyboardFocus((UiWidget) (this), stackIn_87_2);
                 } else {
                   this.field_L.requestKeyboardFocus((UiWidget) (this), false);
                 }
@@ -353,14 +353,14 @@ final class at extends ofa implements tsa {
               }
               stackIn_77_0 = this.field_Z;
               stackIn_78_2 = !(param3);
-              ((rj) (Object) stackIn_77_0).requestKeyboardFocus((UiWidget) (this), stackIn_78_2);
+              ((FocusableWidget) (Object) stackIn_77_0).requestKeyboardFocus((UiWidget) (this), stackIn_78_2);
               return true;
             case 97:
               if (var5 == this.field_W) {
                 if (null == this.field_N) {
                   stackIn_51_0 = this.field_V;
                   stackIn_52_2 = !(param3);
-                  ((rj) (Object) stackIn_51_0).requestKeyboardFocus((UiWidget) (this), stackIn_52_2);
+                  ((FocusableWidget) (Object) stackIn_51_0).requestKeyboardFocus((UiWidget) (this), stackIn_52_2);
                 } else {
                   this.field_N.requestKeyboardFocus((UiWidget) (this), false);
                 }
@@ -374,7 +374,7 @@ final class at extends ofa implements tsa {
                 this.field_L.field_y) {
                 stackIn_62_0 = this.field_L;
                 stackIn_63_2 = !(param3);
-                ((rj) (Object) stackIn_62_0).requestKeyboardFocus((UiWidget) (this), stackIn_63_2);
+                ((FocusableWidget) (Object) stackIn_62_0).requestKeyboardFocus((UiWidget) (this), stackIn_63_2);
                 return true;
               }
               break;
@@ -390,13 +390,13 @@ final class at extends ofa implements tsa {
               if (this.field_N == var5) {
                 stackIn_36_0 = this.field_W;
                 stackIn_37_2 = !(param3);
-                ((rj) (Object) stackIn_36_0).requestKeyboardFocus((UiWidget) (this), stackIn_37_2);
+                ((FocusableWidget) (Object) stackIn_36_0).requestKeyboardFocus((UiWidget) (this), stackIn_37_2);
                 return true;
               }
               if (this.field_L == var5) {
                 stackIn_42_0 = this.field_Z;
                 stackIn_43_2 = !(param3);
-                ((rj) (Object) stackIn_42_0).requestKeyboardFocus((UiWidget) (this), stackIn_43_2);
+                ((FocusableWidget) (Object) stackIn_42_0).requestKeyboardFocus((UiWidget) (this), stackIn_43_2);
                 return true;
               }
               break;
@@ -422,7 +422,7 @@ final class at extends ofa implements tsa {
         }
     }
 
-    public final void a(int param0, int param1, rj param2, int param3, byte param4) {
+    public final void a(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
         int stackIn_13_0 = 0;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
@@ -468,7 +468,7 @@ final class at extends ofa implements tsa {
             }
           }
           if (param4 < 44) {
-            this.field_S = (rj) null;
+            this.field_S = (FocusableWidget) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -486,7 +486,7 @@ final class at extends ofa implements tsa {
     }
 
     private final void h(int param0) {
-        rj discarded$0 = null;
+        FocusableWidget discarded$0 = null;
         if (!this.field_B) {
           return;
         }
@@ -497,13 +497,13 @@ final class at extends ofa implements tsa {
         }
     }
 
-    private final void a(int param0, rj param1) {
-        rj discarded$1 = null;
-        rj var3 = null;
+    private final void a(int param0, FocusableWidget param1) {
+        FocusableWidget discarded$1 = null;
+        FocusableWidget var3 = null;
         int var4 = 0;
         dh var5 = null;
         qc var6 = null;
-        rj stackIn_2_0 = null;
+        FocusableWidget stackIn_2_0 = null;
         boolean stackIn_3_1 = false;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -562,12 +562,12 @@ final class at extends ofa implements tsa {
         return ota.a(ica.field_b, (byte) 13, mn.field_n);
     }
 
-    private final rj a(qc param0, String param1, int param2) {
-        rj var4 = null;
+    private final FocusableWidget a(qc param0, String param1, int param2) {
+        FocusableWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        rj stackIn_2_0 = null;
-        rj stackIn_4_0 = null;
+        FocusableWidget stackIn_2_0 = null;
+        FocusableWidget stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -575,11 +575,11 @@ final class at extends ofa implements tsa {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new rj(param1, param0);
+          var4 = new FocusableWidget(param1, param0);
           var4.field_r = (isa) ((Object) new td());
           var5 = -46 + this.field_p;
           if (param2 != 30815) {
-            stackIn_2_0 = (rj) null;
+            stackIn_2_0 = (FocusableWidget) null;
             return stackIn_2_0;
           }
           var4.setBounds((byte) -31, this.field_m - 30, 30, 15, var5);
@@ -606,12 +606,12 @@ final class at extends ofa implements tsa {
         }
     }
 
-    private final rj g(int param0) {
+    private final FocusableWidget g(int param0) {
         if (dq.field_f != null) {
           return this.field_V;
         }
         if (param0 != -46) {
-          return (rj) null;
+          return (FocusableWidget) null;
         }
         if (null != wba.field_o && wba.field_o.field_h &&
           this.field_N != null) {
@@ -621,7 +621,7 @@ final class at extends ofa implements tsa {
     }
 
     private final void i(int param0) {
-        rj discarded$1 = null;
+        FocusableWidget discarded$1 = null;
         int var3;
         String var4;
         int var2;
@@ -669,11 +669,11 @@ final class at extends ofa implements tsa {
 
     private final void j(byte param0) {
         int var3 = 0;
-        rj var4 = null;
-        rj discarded$0 = null;
+        FocusableWidget var4 = null;
+        FocusableWidget discarded$0 = null;
         int var5 = TombRacer.field_G ? 1 : 0;
-        rj[] var7 = this.field_U;
-        rj[] var2 = var7;
+        FocusableWidget[] var7 = this.field_U;
+        FocusableWidget[] var2 = var7;
         for (var3 = 0; var3 < var7.length; var3++) {
           var4 = var7[var3];
           var4.field_w = this.field_S == var4 ? true : false;
@@ -692,10 +692,10 @@ final class at extends ofa implements tsa {
 
     final void updatePointerState(int param0, int param1, UiWidget param2, int param3) {
         int var6 = 0;
-        rj[] var5 = null;
-        rj var7 = null;
+        FocusableWidget[] var5 = null;
+        FocusableWidget var7 = null;
         int var8 = 0;
-        rj[] var9 = null;
+        FocusableWidget[] var9 = null;
         int stackIn_14_0 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -744,12 +744,12 @@ final class at extends ofa implements tsa {
         }
     }
 
-    private final rj a(int param0, IndexedSprite[] param1, String param2, qc param3) {
-        rj var5 = null;
+    private final FocusableWidget a(int param0, IndexedSprite[] param1, String param2, qc param3) {
+        FocusableWidget var5 = null;
         RuntimeException var5_ref = null;
-        sta var6 = null;
-        rj var7 = null;
-        rj stackIn_3_0 = null;
+        GridWidgetContainer var6 = null;
+        FocusableWidget var7 = null;
+        FocusableWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -759,14 +759,14 @@ final class at extends ofa implements tsa {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = new rj(param2, param3);
+          var5 = new FocusableWidget(param2, param3);
           var5.field_r = (isa) ((Object) new tka(param1));
           if (param0 >= -81) {
-            this.field_L = (rj) null;
+            this.field_L = (FocusableWidget) null;
           }
           var6 = this.field_T;
           var7 = var5;
-          var6.b(0, var7, var6.field_E);
+          var6.appendCell(0, var7, var6.field_E);
           this.field_T.refreshLayout((byte) 124);
           stackIn_3_0 = var5;
           return stackIn_3_0;

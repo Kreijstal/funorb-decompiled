@@ -42,7 +42,7 @@ abstract class dna extends PrefabComponent {
 
     final static kea A(int param0) {
         int var1 = -98 % ((81 - param0) / 34);
-        return qla.field_f;
+        return FontMetrics.field_f;
     }
 
     dna(Room param0, int param1) {

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class KeyLockBehaviour extends Behaviour implements ut {
+final class KeyLockBehaviour extends Behaviour implements SwitchSource {
     private int field_p;
     private int field_n;
     private boolean field_s;
-    private jma field_q;
+    private SwitchState field_q;
     private boolean field_t;
     static jea field_r;
     static String field_o;
@@ -104,7 +104,7 @@ final class KeyLockBehaviour extends Behaviour implements ut {
         }
     }
 
-    public final int j(byte param0) {
+    public final int getLevel(byte param0) {
         if (param0 != -108) {
           this.field_p = 106;
           return this.field_n;
@@ -120,7 +120,7 @@ final class KeyLockBehaviour extends Behaviour implements ut {
         }
     }
 
-    public final int c(int param0) {
+    public final int getDimColour(int param0) {
         if (param0 != 17832) {
           this.hashState(97, 98);
           return 7820595;
@@ -128,9 +128,9 @@ final class KeyLockBehaviour extends Behaviour implements ut {
         return 7820595;
     }
 
-    public final jma k(byte param0) {
+    public final SwitchState getSwitchState(byte param0) {
         if (param0 > -67) {
-          return (jma) null;
+          return (SwitchState) null;
         }
         return this.field_q;
     }
@@ -157,13 +157,13 @@ final class KeyLockBehaviour extends Behaviour implements ut {
         this.field_s = true;
         this.field_p = 1;
         try {
-          this.field_q = new jma(15);
+          this.field_q = new SwitchState(15);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final int b(int param0) {
+    public final int getMaxLevel(int param0) {
         int var2 = 44 / ((-46 - param0) / 45);
         return this.field_p;
     }
@@ -172,7 +172,7 @@ final class KeyLockBehaviour extends Behaviour implements ut {
         if (param1 >= -48) {
           return -8;
         }
-        return this.field_q.a(77, param0);
+        return this.field_q.hashState(77, param0);
     }
 
     final void b(int param0, int param1) {
@@ -184,7 +184,7 @@ final class KeyLockBehaviour extends Behaviour implements ut {
 
     final void g(int param0) {
         super.g(param0);
-        this.field_q.a((byte) 48, this.h((byte) 109));
+        this.field_q.a((byte) 48, this.getScope((byte) 109));
     }
 
     KeyLockBehaviour(Room param0, BitPacketBuffer param1, boolean param2) {
@@ -197,7 +197,7 @@ final class KeyLockBehaviour extends Behaviour implements ut {
           } else {
             this.field_p = param1.readBits((byte) 44, 3);
           }
-          this.field_q = new jma(15, param0, param1);
+          this.field_q = new SwitchState(15, param0, param1);
           this.field_s = 1 == param1.readBits((byte) 44, 1) ? true : false;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -206,7 +206,7 @@ final class KeyLockBehaviour extends Behaviour implements ut {
 
     final int getTypeId(boolean param0) {
         if (param0) {
-          this.b(82);
+          this.getMaxLevel(82);
           return 32;
         }
         return 32;
@@ -215,14 +215,14 @@ final class KeyLockBehaviour extends Behaviour implements ut {
     final void encode(boolean param0, BitPacketBuffer param1) {
         try {
           super.encode(param0, param1);
-          this.field_q.a(this.h((byte) 111), (byte) 108, param1);
+          this.field_q.a(this.getScope((byte) 111), (byte) 108, param1);
           param1.writeBits((byte) -127, this.field_s ? 1 : 0, 1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sm.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final int g(byte param0) {
+    public final int getLitColour(byte param0) {
         if (param0 != -108) {
           this.field_p = -8;
           return 11162931;

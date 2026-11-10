@@ -1329,9 +1329,9 @@ final class np extends ka {
           }
           var6 = (oba) (param0);
           it.field_a = var6.field_h * var5.field_q + (var5.field_j * var6.field_k + var5.field_h * var6.field_r);
-          bja.field_b = var5.field_o + (var6.field_o * var5.field_q + (var6.field_p * var5.field_h + var5.field_j * var6.field_m));
-          var7 = bja.field_b + it.field_a * (float)this.field_eb;
-          var8 = bja.field_b + it.field_a * (float)this.field_v;
+          TextLayout.field_b = var5.field_o + (var6.field_o * var5.field_q + (var6.field_p * var5.field_h + var5.field_j * var6.field_m));
+          var7 = TextLayout.field_b + it.field_a * (float)this.field_eb;
+          var8 = TextLayout.field_b + it.field_a * (float)this.field_v;
           if (!(var7 > var8)) {
             var10 = var8 + (float)this.field_M;
             var9 = (float)(-this.field_M) + var7;
@@ -1397,8 +1397,8 @@ final class np extends ka {
           if (null != param1) {
             var19 = this.field_U + this.field_T >> 1;
             var20 = this.field_k + this.field_S >> 1;
-            var21 = (int)(it.field_a * (float)this.field_eb + (Weapon.field_u * (float)var19 + bja.field_b) + kka.field_q * (float)var20);
-            var22 = (int)((float)var20 * kka.field_q + (it.field_a * (float)this.field_v + (Weapon.field_u * (float)var19 + bja.field_b)));
+            var21 = (int)(it.field_a * (float)this.field_eb + (Weapon.field_u * (float)var19 + TextLayout.field_b) + kka.field_q * (float)var20);
+            var22 = (int)((float)var20 * kka.field_q + (it.field_a * (float)this.field_v + (Weapon.field_u * (float)var19 + TextLayout.field_b)));
             if (var21 < this.field_R.field_Gc &&
               this.field_R.field_Gc <= var22) {
             }
@@ -2376,7 +2376,7 @@ final class np extends ka {
                 var8 = (float)(this.field_A[var4.field_k] + this.field_A[var4.field_m] + this.field_A[var4.field_b]) * 0.3333333134651184f;
                 var9 = MonsterModel.field_B + (var8 * mu.field_ub + (eqa.field_a * var7 + var6 * is.field_Ab));
                 var10 = WeaponItemBehaviour.field_s + (var6 * AllPlatformsMazeComponent.field_L + nw.field_u * var7 + bva.field_c * var8);
-                var11 = bja.field_b + (kka.field_q * var8 + (var7 * it.field_a + var6 * Weapon.field_u));
+                var11 = TextLayout.field_b + (kka.field_q * var8 + (var7 * it.field_a + var6 * Weapon.field_u));
                 var12 = (float)(1.0 / Math.sqrt((double)(var11 * var11 + (var10 * var10 + var9 * var9)))) * (float)var4.field_j;
                 var2.a(var5.field_g, var12 * var11 + -var11, var9 + (float)var5.field_h - var9 * var12, var4.field_e * var5.field_f >> 7, (byte) -60, var4.field_i * var5.field_b >> 7, var12 * var10 + (-var10 + (float)var5.field_a));
                 this.field_R.a(var2, 0);
@@ -2446,10 +2446,10 @@ final class np extends ka {
           if (!this.field_l) {
             this.c(2709);
           }
-          bja.field_b = var4.field_o + (var4.field_j * var5.field_m + var4.field_h * var5.field_p + var4.field_q * var5.field_o);
+          TextLayout.field_b = var4.field_o + (var4.field_j * var5.field_m + var4.field_h * var5.field_p + var4.field_q * var5.field_o);
           it.field_a = var5.field_k * var4.field_j + var4.field_h * var5.field_r + var4.field_q * var5.field_h;
-          var6 = bja.field_b + (float)this.field_eb * it.field_a;
-          var7 = bja.field_b + it.field_a * (float)this.field_v;
+          var6 = TextLayout.field_b + (float)this.field_eb * it.field_a;
+          var7 = TextLayout.field_b + it.field_a * (float)this.field_v;
           if (var7 < var6) {
             var8 = var7 - (float)this.field_M;
             var9 = (float)this.field_M + var6;
@@ -2517,11 +2517,11 @@ final class np extends ka {
             var19 = 1;
             var20 = this.field_U + this.field_T >> 1;
             var21 = this.field_k + this.field_S >> 1;
-            var22 = (int)((float)var21 * kka.field_q + (it.field_a * (float)this.field_eb + ((float)var20 * Weapon.field_u + bja.field_b)));
+            var22 = (int)((float)var21 * kka.field_q + (it.field_a * (float)this.field_eb + ((float)var20 * Weapon.field_u + TextLayout.field_b)));
             if (this.field_R.field_Gc > var22) {
               var18 = 1;
             }
-            var23 = (int)(bja.field_b + Weapon.field_u * (float)var20 + it.field_a * (float)this.field_v + (float)var21 * kka.field_q);
+            var23 = (int)(TextLayout.field_b + Weapon.field_u * (float)var20 + it.field_a * (float)this.field_v + (float)var21 * kka.field_q);
             if (var23 < this.field_R.field_Gc) {
               var18 = 1;
             }

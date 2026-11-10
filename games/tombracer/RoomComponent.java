@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderable, WorldBody, lj, ew {
+abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderable, WorldBody, Switchable, SwitchableScope {
     int typeId;
     private int field_q;
     int field_k;
@@ -97,17 +97,17 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
 
     public final boolean tryPush(int param0, boolean param1, int param2, int param3, int param4, int param5) {
         if (param0 < 68) {
-          this.i((byte) -75);
+          this.getLocalId((byte) -75);
           return false;
         }
         return false;
     }
 
-    public final ew h(byte param0) {
+    public final SwitchableScope getScope(byte param0) {
         if (param0 < 105) {
           this.getTypeId(70);
         }
-        return (ew) ((Object) this.o((byte) -34));
+        return (SwitchableScope) ((Object) this.o((byte) -34));
     }
 
     public final boolean isExpired(int param0) {
@@ -332,7 +332,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         return this.field_j;
     }
 
-    abstract lj u(int param0);
+    abstract Switchable u(int param0);
 
     final void a(byte param0, mka[] param1) {
         int var3_int = 0;
@@ -346,7 +346,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         try {
           this.field_t = param1;
           if (param0 <= 64) {
-            this.m(-58);
+            this.toggle(-58);
           }
           for (var3_int = 0; param1.length > var3_int; var3_int++) {
             this.field_t[var3_int].a(-34, var3_int, this);
@@ -583,7 +583,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
 
     abstract boolean s(int param0);
 
-    public final void m(int param0) {
+    public final void toggle(int param0) {
         int var2 = -58 % ((param0 - 28) / 49);
         if (!this.s(-15254)) {
           return;
@@ -631,7 +631,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         return false;
     }
 
-    public final SwitchableId n(int param0) {
+    public final SwitchableId getGlobalId(int param0) {
         if (param0 != 31974) {
           this.room = (Room) null;
         }
@@ -645,7 +645,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         return this.typeId;
     }
 
-    public final SwitchableId i(byte param0) {
+    public final SwitchableId getLocalId(byte param0) {
         if (param0 != 84) {
           return (SwitchableId) null;
         }
@@ -654,11 +654,11 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
 
     abstract boolean n(byte param0);
 
-    public final lj a(int param0, int param1, boolean param2) {
+    public final Switchable findSwitchable(int param0, int param1, boolean param2) {
         if (param0 != 28672) {
           this.c(false);
         }
-        return (lj) ((Object) this.a(param1, param2, 20));
+        return (Switchable) ((Object) this.a(param1, param2, 20));
     }
 
     boolean a(int param0) {
@@ -700,7 +700,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
 
     private final boolean b(boolean param0, int param1) {
         if (!param0) {
-          this.m(-109);
+          this.toggle(-109);
         }
         return this.field_z.a(param1, 14530);
     }
@@ -733,7 +733,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         int var3 = 0;
         int var4 = 0;
         if (param0 != 3) {
-          this.n(107);
+          this.getGlobalId(107);
         }
         int var2 = this.field_j;
         if (null != this.field_u) {

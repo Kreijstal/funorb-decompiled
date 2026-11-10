@@ -74,7 +74,7 @@ abstract class GraphicsToolkit {
         this.fillRectangle(param1, param3, param2, param5, param0, 1);
     }
 
-    abstract GameFont createFont(qla param0, SpriteData[] param1, boolean param2);
+    abstract GameFont createFont(FontMetrics param0, SpriteData[] param1, boolean param2);
 
     abstract void HA(int param0, int param1, int param2, int param3, int[] param4);
 

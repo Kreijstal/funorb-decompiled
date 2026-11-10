@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mha extends rj {
+final class mha extends FocusableWidget {
     static long field_D;
     private nua field_z;
     private int field_A;

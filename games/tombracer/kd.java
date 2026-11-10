@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kd extends rj {
+final class kd extends FocusableWidget {
     private int field_A;
     int field_E;
     int field_C;

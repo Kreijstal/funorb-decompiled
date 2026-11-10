@@ -10,12 +10,12 @@ final class joa {
     static jea field_d;
     private java.util.zip.Inflater field_b;
 
-    final static qla a(String param0, ResourceArchive param1, String param2, byte param3) {
+    final static FontMetrics a(String param0, ResourceArchive param1, String param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         byte[] var5 = null;
         Object stackIn_2_0 = null;
-        qla stackIn_4_0 = null;
+        FontMetrics stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -28,11 +28,11 @@ final class joa {
           var4_int = 52 % ((param3 - 12) / 56);
           var5 = param1.a(param2, (byte) 126, param0);
           if (var5 != null) {
-            stackIn_4_0 = new qla(var5);
+            stackIn_4_0 = new FontMetrics(var5);
             return stackIn_4_0;
           }
           stackIn_2_0 = null;
-          return (qla) (stackIn_2_0);
+          return (FontMetrics) (stackIn_2_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

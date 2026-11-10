@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class caa implements Runnable {
+final class UrlDownloadRequest implements Runnable {
     private AsyncRequest field_d;
     private AsyncRequest field_c;
     private DataInputStream field_a;
@@ -16,7 +16,7 @@ final class caa implements Runnable {
 
     final static void a(MatchState param0, Room param1, int param2) {
         if (param2 <= 90) {
-          caa.a(-49, -51, -30, 34, 111, -46);
+          UrlDownloadRequest.a(-49, -51, -30, 34, 111, -46);
         }
         if (vpa.a(54) ||
           param0.k(-25319)) {
@@ -34,7 +34,7 @@ final class caa implements Runnable {
         }
     }
 
-    final synchronized boolean a(boolean param0) {
+    final synchronized boolean poll(boolean param0) {
         Throwable decompiledCaughtException = null;
         IOException var2 = null;
         OutputStream var3 = null;
@@ -146,7 +146,7 @@ final class caa implements Runnable {
 
     final static void a(byte param0) {
         bh.field_p = true;
-        bja.a(pl.a((byte) 64), (byte) 126, 3);
+        TextLayout.a(pl.a((byte) 64), (byte) 126, 3);
         int var1 = 72 / ((param0 - 55) / 46);
         SecondaryNodeDequeIterator.field_a.e((byte) 106);
     }
@@ -220,7 +220,7 @@ final class caa implements Runnable {
               break;
             }
             if (this.field_h.payload.length == this.field_h.position) {
-              throw caa.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_h.payload.length + " " + this.field_b));
+              throw UrlDownloadRequest.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_h.payload.length + " " + this.field_b));
             }
             var1 = this;
             synchronized (var1) {
@@ -245,9 +245,9 @@ final class caa implements Runnable {
         }
     }
 
-    final PacketBuffer b(byte param0) {
+    final PacketBuffer getResult(byte param0) {
         if (param0 >= -115) {
-          this.b((byte) 71);
+          this.getResult((byte) 71);
           if (this.field_f == 3) {
             return this.field_h;
           }
@@ -259,7 +259,7 @@ final class caa implements Runnable {
         return null;
     }
 
-    caa(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
+    UrlDownloadRequest(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_b = param1;
           this.field_g = param0;

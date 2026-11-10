@@ -50,8 +50,8 @@ final class SpawnerBehaviour extends Behaviour {
         }
     }
 
-    final lj a(int param0, int param1, boolean param2) {
-        lj var4 = super.a(param0, param1, param2);
+    final Switchable a(int param0, int param1, boolean param2) {
+        Switchable var4 = super.a(param0, param1, param2);
         if (var4 != null) {
           return var4;
         }

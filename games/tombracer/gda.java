@@ -30,7 +30,7 @@ abstract class gda {
           var2 = nba.field_b;
         }
         if (param0 == 2) {
-          var2 = caa.field_i;
+          var2 = UrlDownloadRequest.field_i;
         }
         return var2;
     }

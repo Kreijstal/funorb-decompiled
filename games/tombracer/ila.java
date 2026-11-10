@@ -125,7 +125,7 @@ final class ila {
         if (this.field_c) {
           stackIn_52_0 = 108;
           stackIn_52_1 = param1;
-          rk.b(stackIn_52_0, stackIn_52_1, aaa.a(false) >> 1, koa.b(0) >> 1);
+          ProgressBarWidget.b(stackIn_52_0, stackIn_52_1, aaa.a(false) >> 1, SwitchLinkList.b(0) >> 1);
           fa.a((byte) -127);
         }
     }
@@ -162,7 +162,7 @@ final class ila {
         MonsterModel.j(28191);
         int var2 = 4;
         int var3 = 16;
-        av.a(koa.b(0) >> 1, 20, var2, -5327, "", var2, var3, var3, aaa.a(param0) >> 1);
+        av.a(SwitchLinkList.b(0) >> 1, 20, var2, -5327, "", var2, var3, var3, aaa.a(param0) >> 1);
         this.field_c = true;
     }
 
@@ -226,7 +226,7 @@ final class ila {
               ama.a(1, -1)) {
               var6_int = vc.field_q.readUnsignedByte(255);
               if (var6_int == 0) {
-                km.field_p = ola.field_yb;
+                km.field_p = ContextMenu.field_yb;
               } else {
                 km.field_p = bi.field_a;
                 oka.field_z = var6_int;
@@ -234,7 +234,7 @@ final class ila {
               }
               vc.field_q.position = 0;
             }
-            if (ola.field_yb == km.field_p &&
+            if (ContextMenu.field_yb == km.field_p &&
               ama.a(8, -1)) {
               PathMoverComponent.field_L = vc.field_q.readLong(290646880);
               vc.field_q.position = 0;

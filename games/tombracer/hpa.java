@@ -41,11 +41,11 @@ final class hpa extends aa {
             if (!PowerDownItemBehaviour.field_s) {
               var5 = hka.field_b;
               var6 = cga.field_i;
-              var5.field_f.a((byte) -80, 14, var6);
+              var5.field_f.addItem((byte) -80, 14, var6);
             }
             var7 = hka.field_b;
             var8 = hs.field_d;
-            var7.field_f.a((byte) -117, 20, var8);
+            var7.field_f.addItem((byte) -117, 20, var8);
           }
           if (param1.field_d == 1 &&
             !nga.c(0) &&
@@ -54,11 +54,11 @@ final class hpa extends aa {
             if (!PowerDownItemBehaviour.field_s) {
               var9 = hka.field_b;
               var10 = lw.field_i;
-              var9.field_f.a((byte) -84, 14, var10);
+              var9.field_f.addItem((byte) -84, 14, var10);
             }
             var11 = hka.field_b;
             var12 = SafeZoneBehaviour.field_s;
-            var11.field_f.a((byte) -93, 20, var12);
+            var11.field_f.addItem((byte) -93, 20, var12);
           }
           hka.field_b.a((byte) -19);
           hka.field_b.a((byte) -22, false);
@@ -66,7 +66,7 @@ final class hpa extends aa {
           hka.field_b.c(0);
           hka.field_b.a(param1, 13);
           var13 = hka.field_b;
-          var3 = jm.field_m;
+          var3 = PasswordValidator.field_m;
           if (param0 != -2) {
             return;
           }

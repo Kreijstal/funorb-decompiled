@@ -25,20 +25,20 @@ final class FacePointLocomotor extends Locomotor {
         return nt.a(param1, param3, 5200, param2, false, param0);
     }
 
-    final static eua a(jea param0, jea param1, jea param2, int[] param3, boolean param4) {
+    final static QuickChatMenu a(jea param0, jea param1, jea param2, int[] param3, boolean param4) {
         int var10_int = 0;
         int var5_int = 0;
         String[] var6 = null;
         char[] var7 = null;
-        eua[] var8 = null;
+        QuickChatMenu[] var8 = null;
         int var9 = 0;
         wua var11 = null;
         int var12 = 0;
         char[] var13 = null;
         char[] var14 = null;
-        eua stackIn_3_0 = null;
+        QuickChatMenu stackIn_3_0 = null;
         Object stackIn_10_0 = null;
-        eua stackIn_12_0 = null;
+        QuickChatMenu stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -59,10 +59,10 @@ final class FacePointLocomotor extends Locomotor {
           var13 = var14;
           var7 = var13;
           if (param4) {
-            stackIn_3_0 = (eua) null;
+            stackIn_3_0 = (QuickChatMenu) null;
             return stackIn_3_0;
           }
-          var8 = new eua[var5_int];
+          var8 = new QuickChatMenu[var5_int];
           var9 = 49;
           try {
             for (var10_int = 0; var10_int < var5_int; var10_int++) {
@@ -76,9 +76,9 @@ final class FacePointLocomotor extends Locomotor {
             decompiledCaughtException = decompiledCaughtParameter0;
             var10 = (Exception) (Object) decompiledCaughtException;
             stackIn_10_0 = null;
-            return (eua) (stackIn_10_0);
+            return (QuickChatMenu) (stackIn_10_0);
           }
-          stackIn_12_0 = new eua(0L, param2, param0, param1, var8, param3, var6, var14);
+          stackIn_12_0 = new QuickChatMenu(0L, param2, param0, param1, var8, param3, var6, var14);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;

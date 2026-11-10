@@ -6,7 +6,7 @@ final class lja {
     private int field_b;
     private long field_g;
     private int[] field_e;
-    ola field_f;
+    ContextMenu field_f;
     jea field_h;
     int field_k;
     static fp field_j;
@@ -85,25 +85,25 @@ final class lja {
         }
         var3 = var5.field_tb;
         if (var5.field_gc) {
-          this.field_f.a((byte) -102, 2, gl.$cfr$intArgs$a$53ce4ab4c593(114, pba.field_d, new String[]{var3}));
-          this.field_f.a((byte) -104, 3, gl.$cfr$intArgs$a$53ce4ab4c593(123, cp.field_i, new String[]{var3}));
+          this.field_f.addItem((byte) -102, 2, gl.$cfr$intArgs$a$53ce4ab4c593(114, pba.field_d, new String[]{var3}));
+          this.field_f.addItem((byte) -104, 3, gl.$cfr$intArgs$a$53ce4ab4c593(123, cp.field_i, new String[]{var3}));
         } else {
           if (var5.field_Bb) {
-            this.field_f.a((byte) -76, 2, gl.$cfr$intArgs$a$53ce4ab4c593(106, mna.field_b, new String[]{var3}));
+            this.field_f.addItem((byte) -76, 2, gl.$cfr$intArgs$a$53ce4ab4c593(106, mna.field_b, new String[]{var3}));
           } else {
             if (!var5.field_Sb &&
               var5.field_Yb) {
               if (!var5.field_ec) {
-                this.field_f.a((byte) -125, 2, gl.$cfr$intArgs$a$53ce4ab4c593(91, di.field_h, new String[]{var3}));
+                this.field_f.addItem((byte) -125, 2, gl.$cfr$intArgs$a$53ce4ab4c593(91, di.field_h, new String[]{var3}));
               } else {
                 if (var5.field_Bb) {
-                  this.field_f.a((byte) -125, 2, gl.$cfr$intArgs$a$53ce4ab4c593(91, di.field_h, new String[]{var3}));
+                  this.field_f.addItem((byte) -125, 2, gl.$cfr$intArgs$a$53ce4ab4c593(91, di.field_h, new String[]{var3}));
                 }
               }
             }
           }
           if (var5.field_Sb) {
-            this.field_f.a((byte) -102, 3, gl.$cfr$intArgs$a$53ce4ab4c593(86, PrefabComponent.field_B, new String[]{var3}));
+            this.field_f.addItem((byte) -102, 3, gl.$cfr$intArgs$a$53ce4ab4c593(86, PrefabComponent.field_B, new String[]{var3}));
           }
         }
         if (param0 <= -10) {
@@ -182,7 +182,7 @@ final class lja {
               q.a((byte) -123, param2, this.field_k);
             } else {
               if (param1 == 3) {
-                et.a(param2, 30, this.field_k);
+                MidiVoiceMixer.a(param2, 30, this.field_k);
               } else {
                 if (param1 == 10) {
                   kw.a(param2, false, this.field_k);
@@ -238,7 +238,7 @@ final class lja {
           return true;
         }
         if (param0 == 20) {
-          ola.e((byte) 123);
+          ContextMenu.e((byte) 123);
           return true;
         }
         if (19 != param0) {
@@ -260,7 +260,7 @@ final class lja {
         String var7 = null;
         try {
           if (param2 != 19) {
-            this.field_f = (ola) null;
+            this.field_f = (ContextMenu) null;
           }
           if (this.field_i != null) {
             if (SimpleConditionBehaviour.field_r == this.field_g &&
@@ -276,33 +276,33 @@ final class lja {
             var6 = MouseWheelInput.a(2180, this.field_i) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
-              this.field_f.a((byte) -64, 4, gl.$cfr$intArgs$a$53ce4ab4c593(92, DirectRenderModel.field_m, new String[]{var7}));
-              this.field_f.a((byte) -70, 6, gl.$cfr$intArgs$a$53ce4ab4c593(127, mp.field_b, new String[]{var7}));
+              this.field_f.addItem((byte) -64, 4, gl.$cfr$intArgs$a$53ce4ab4c593(92, DirectRenderModel.field_m, new String[]{var7}));
+              this.field_f.addItem((byte) -70, 6, gl.$cfr$intArgs$a$53ce4ab4c593(127, mp.field_b, new String[]{var7}));
               if (param0 != null &&
                 2 != param1 &&
                 !fua.field_g) {
                 this.field_e = param0;
-                this.field_f.a((byte) -90, 19, gl.$cfr$intArgs$a$53ce4ab4c593(119, gja.field_k, new String[]{var7}));
+                this.field_f.addItem((byte) -90, 19, gl.$cfr$intArgs$a$53ce4ab4c593(119, gja.field_k, new String[]{var7}));
               }
             }
             if (var5 != null) {
               if (!ab.a(this.field_i, (byte) -50) &&
                 !fua.field_g) {
                 if (!PowerDownItemBehaviour.field_s) {
-                  this.field_f.a((byte) -77, 8, gl.$cfr$intArgs$a$53ce4ab4c593(114, fj.field_b, new String[]{var7}));
+                  this.field_f.addItem((byte) -77, 8, gl.$cfr$intArgs$a$53ce4ab4c593(114, fj.field_b, new String[]{var7}));
                 }
-                this.field_f.a((byte) -118, 18, gl.$cfr$intArgs$a$53ce4ab4c593(108, ob.field_f, new String[]{var7}));
+                this.field_f.addItem((byte) -118, 18, gl.$cfr$intArgs$a$53ce4ab4c593(108, ob.field_f, new String[]{var7}));
                 if (param0 != null) {
                   this.field_e = param0;
-                  this.field_f.a((byte) -71, 19, gl.$cfr$intArgs$a$53ce4ab4c593(96, gja.field_k, new String[]{var7}));
+                  this.field_f.addItem((byte) -71, 19, gl.$cfr$intArgs$a$53ce4ab4c593(96, gja.field_k, new String[]{var7}));
                 }
               }
-              this.field_f.a((byte) -104, 5, gl.$cfr$intArgs$a$53ce4ab4c593(90, dca.field_q, new String[]{var7}));
+              this.field_f.addItem((byte) -104, 5, gl.$cfr$intArgs$a$53ce4ab4c593(90, dca.field_q, new String[]{var7}));
             }
             if (var6 == 0) {
               return;
             }
-            this.field_f.a((byte) -87, 7, gl.$cfr$intArgs$a$53ce4ab4c593(120, vta.field_f, new String[]{var7}));
+            this.field_f.addItem((byte) -87, 7, gl.$cfr$intArgs$a$53ce4ab4c593(120, vta.field_f, new String[]{var7}));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -333,21 +333,21 @@ final class lja {
           this.field_b = param0.field_d;
           if (param0.field_d == 0) {
             if (k.field_A == 0) {
-              this.field_f.a((byte) -66, 12, qe.field_b);
+              this.field_f.addItem((byte) -66, 12, qe.field_b);
             }
-            this.field_f.a((byte) -86, 13, pea.field_f);
+            this.field_f.addItem((byte) -86, 13, pea.field_f);
           }
           if (1 == param0.field_d) {
             if (0 == nba.field_b) {
-              this.field_f.a((byte) -77, 12, jl.field_a);
+              this.field_f.addItem((byte) -77, 12, jl.field_a);
             }
-            this.field_f.a((byte) -82, 13, ot.field_w);
+            this.field_f.addItem((byte) -82, 13, ot.field_w);
           }
           if (param0.field_d == 2) {
-            if (caa.field_i == 0) {
-              this.field_f.a((byte) -93, 12, cva.field_e);
+            if (UrlDownloadRequest.field_i == 0) {
+              this.field_f.addItem((byte) -93, 12, cva.field_e);
             }
-            this.field_f.a((byte) -85, 13, tva.field_c);
+            this.field_f.addItem((byte) -85, 13, tva.field_c);
           }
           if (param1 == 13) {
             return;
@@ -391,11 +391,11 @@ final class lja {
             var5 = this.b(-13);
             if (var4 != null) {
               if (!uu.field_a.field_ec) {
-                this.field_f.a((byte) -74, 1, gl.$cfr$intArgs$a$53ce4ab4c593(108, lf.field_a, new String[]{var5}));
+                this.field_f.addItem((byte) -74, 1, gl.$cfr$intArgs$a$53ce4ab4c593(108, lf.field_a, new String[]{var5}));
                 return;
               }
               if (uu.field_a.field_Kb >= 0) {
-                this.field_f.a((byte) -74, 1, gl.$cfr$intArgs$a$53ce4ab4c593(108, lf.field_a, new String[]{var5}));
+                this.field_f.addItem((byte) -74, 1, gl.$cfr$intArgs$a$53ce4ab4c593(108, lf.field_a, new String[]{var5}));
                 return;
               }
             } else {
@@ -403,16 +403,16 @@ final class lja {
                 uu.field_a.field_Yb &&
                 uu.field_a.field_Jb > uu.field_a.field_Mb) {
                 if (var14.field_Hb) {
-                  this.field_f.a((byte) -79, 1, gl.$cfr$intArgs$a$53ce4ab4c593(126, oea.field_g, new String[]{var5}));
+                  this.field_f.addItem((byte) -79, 1, gl.$cfr$intArgs$a$53ce4ab4c593(126, oea.field_g, new String[]{var5}));
                   return;
                 }
                 if (param1 &&
                   var14.field_Fb) {
-                  this.field_f.a((byte) -123, 0, gl.$cfr$intArgs$a$53ce4ab4c593(127, sb.field_c, new String[]{var5}));
-                  this.field_f.a((byte) -98, 1, gl.$cfr$intArgs$a$53ce4ab4c593(116, CoinBagItemComponent.field_G, new String[]{var5}));
+                  this.field_f.addItem((byte) -123, 0, gl.$cfr$intArgs$a$53ce4ab4c593(127, sb.field_c, new String[]{var5}));
+                  this.field_f.addItem((byte) -98, 1, gl.$cfr$intArgs$a$53ce4ab4c593(116, CoinBagItemComponent.field_G, new String[]{var5}));
                   return;
                 }
-                this.field_f.a((byte) -112, 0, gl.$cfr$intArgs$a$53ce4ab4c593(98, uh.field_i, new String[]{var5}));
+                this.field_f.addItem((byte) -112, 0, gl.$cfr$intArgs$a$53ce4ab4c593(98, uh.field_i, new String[]{var5}));
                 return;
               }
             }
@@ -439,7 +439,7 @@ final class lja {
             uu.field_a.field_Kb < 0) {
             return;
           }
-          this.field_f.a((byte) -74, 1, gl.$cfr$intArgs$a$53ce4ab4c593(108, lf.field_a, new String[]{var5}));
+          this.field_f.addItem((byte) -74, 1, gl.$cfr$intArgs$a$53ce4ab4c593(108, lf.field_a, new String[]{var5}));
           return;
         }
         if (var13 == null) {
@@ -448,16 +448,16 @@ final class lja {
         if (uu.field_a.field_Yb &&
           uu.field_a.field_Jb > uu.field_a.field_Mb) {
           if (var13.field_Hb) {
-            this.field_f.a((byte) -79, 1, gl.$cfr$intArgs$a$53ce4ab4c593(126, oea.field_g, new String[]{var5}));
+            this.field_f.addItem((byte) -79, 1, gl.$cfr$intArgs$a$53ce4ab4c593(126, oea.field_g, new String[]{var5}));
             return;
           }
           if (param1 &&
             var13.field_Fb) {
-            this.field_f.a((byte) -123, 0, gl.$cfr$intArgs$a$53ce4ab4c593(127, sb.field_c, new String[]{var5}));
-            this.field_f.a((byte) -98, 1, gl.$cfr$intArgs$a$53ce4ab4c593(116, CoinBagItemComponent.field_G, new String[]{var5}));
+            this.field_f.addItem((byte) -123, 0, gl.$cfr$intArgs$a$53ce4ab4c593(127, sb.field_c, new String[]{var5}));
+            this.field_f.addItem((byte) -98, 1, gl.$cfr$intArgs$a$53ce4ab4c593(116, CoinBagItemComponent.field_G, new String[]{var5}));
             return;
           }
-          this.field_f.a((byte) -112, 0, gl.$cfr$intArgs$a$53ce4ab4c593(98, uh.field_i, new String[]{var5}));
+          this.field_f.addItem((byte) -112, 0, gl.$cfr$intArgs$a$53ce4ab4c593(98, uh.field_i, new String[]{var5}));
           return;
         }
         return;
@@ -469,7 +469,7 @@ final class lja {
           this.field_g != SimpleConditionBehaviour.field_r) {
           var4 = this.b(-13);
           String var2 = var4;
-          this.field_f.a((byte) -81, 17, gl.$cfr$intArgs$a$53ce4ab4c593(122, vj.field_c, new String[]{var4}));
+          this.field_f.addItem((byte) -81, 17, gl.$cfr$intArgs$a$53ce4ab4c593(122, vj.field_c, new String[]{var4}));
         }
         if (param0 == 0) {
           return;
@@ -496,7 +496,7 @@ final class lja {
 
     lja(jea param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
-          this.field_f = new ola(SimpleBlockBehaviour.field_n);
+          this.field_f = new ContextMenu(SimpleBlockBehaviour.field_n);
           this.field_i = param2;
           this.field_h = param0;
           this.field_b = param5;

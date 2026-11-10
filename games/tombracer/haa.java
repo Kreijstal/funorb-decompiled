@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class haa extends rj {
+class haa extends FocusableWidget {
     static ToolkitSprite field_z;
     static SpriteData field_A;
     private UiWidget field_B;

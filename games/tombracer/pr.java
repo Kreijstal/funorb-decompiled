@@ -27,7 +27,7 @@ final class pr {
           if (param0 != 0) {
             field_b = (String[]) null;
           }
-          vn.field_b = new jw(param1, param2, false, true, true);
+          vn.field_b = new LoginForm(param1, param2, false, true, true);
           um.field_l.a(101, vn.field_b);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pr.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

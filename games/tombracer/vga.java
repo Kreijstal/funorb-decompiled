@@ -31,7 +31,7 @@ final class vga extends vpa {
           var2 = param0.getParameter("username");
           if (var2 != null) {
             var3 = (CharSequence) ((Object) var2);
-            if (jm.a(var3, 19) != 0L) {
+            if (PasswordValidator.encodeBase37(var3, 19) != 0L) {
               return;
             }
           }
@@ -170,18 +170,18 @@ final class vga extends vpa {
         RuntimeException var6 = null;
         ng var7 = null;
         ng var9 = null;
-        rj var10 = null;
+        FocusableWidget var10 = null;
         ng var11 = null;
         ng var12 = null;
         ng var13 = null;
         ng var14 = null;
         try {
-          if (!(param0 instanceof rj)) {
+          if (!(param0 instanceof FocusableWidget)) {
             stackIn_3_0 = null;
           } else {
             stackIn_3_0 = (UiWidget) (param0);
           }
-          var10 = (rj) (stackIn_3_0);
+          var10 = (FocusableWidget) (stackIn_3_0);
           tga.a(param2 - 16799168, param0.field_i + param1, param1 + param0.field_i + param0.field_m, param0.field_n + param3, param0.field_n + param3 + param0.field_p);
           if (var10 != null) {
             param4 = param4 & var10.field_y;

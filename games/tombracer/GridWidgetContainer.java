@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sta extends ArrayWidgetGroup {
+final class GridWidgetContainer extends ArrayWidgetGroup {
     private int[] field_F;
     private int field_x;
     int field_E;
@@ -15,7 +15,7 @@ final class sta extends ArrayWidgetGroup {
     static int field_B;
     private int field_z;
 
-    final void a(byte param0) {
+    final void layoutChildren(byte param0) {
         int incrementValue$0 = 0;
         int var2;
         int var3;
@@ -101,7 +101,7 @@ final class sta extends ArrayWidgetGroup {
           var13 = 192 & this.field_I[var11];
           if (param3 != 85) {
             var21 = (int[]) null;
-            this.a((int[]) null, -46);
+            this.setColumnWeights((int[]) null, -46);
           }
           var14 = param1.field_i;
           var15 = param1.field_n;
@@ -204,7 +204,7 @@ final class sta extends ArrayWidgetGroup {
         int var4 = this.field_C != null ? this.field_C.length : 0;
         if (param0 != 28705) {
           UiWidget var6 = (UiWidget) null;
-          this.b(9, (UiWidget) null, 31);
+          this.appendCell(9, (UiWidget) null, 31);
         }
         int[] var5 = new int[var4 * param2];
         if (this.field_I != null &&
@@ -278,7 +278,7 @@ final class sta extends ArrayWidgetGroup {
         }
     }
 
-    final void b(int param0, UiWidget param1, int param2) {
+    final void appendCell(int param0, UiWidget param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         try {
@@ -334,7 +334,7 @@ final class sta extends ArrayWidgetGroup {
         return stackIn_6_0;
     }
 
-    private final void e(int param0, int param1, int param2) {
+    private final void resizeChildColumns(int param0, int param1, int param2) {
         int var6 = 0;
         int var7 = TombRacer.field_G ? 1 : 0;
         int var4 = this.field_F != null ? this.field_F.length : 0;
@@ -351,7 +351,7 @@ final class sta extends ArrayWidgetGroup {
         this.children = var5;
     }
 
-    sta(int param0, int param1, int param2, int param3, isa param4, int param5, int param6) {
+    GridWidgetContainer(int param0, int param1, int param2, int param3, isa param4, int param5, int param6) {
         super(param0, param1, param2, param3, param4);
         int[] var10 = null;
         int[] var9 = null;
@@ -364,7 +364,7 @@ final class sta extends ArrayWidgetGroup {
           var9 = new int[param6];
           ArrayUtils.fill(var9, 0, param6, 1);
           this.a(var10, (byte) -97);
-          this.a(var9, 48);
+          this.setColumnWeights(var9, 48);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sta.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
@@ -393,14 +393,14 @@ final class sta extends ArrayWidgetGroup {
             var6++;
           }
           var6Lifetime1 = -21 / ((-43 - param1) / 50);
-          this.e(var4, var3_int, 192);
+          this.resizeChildColumns(var4, var3_int, 192);
           this.d(var3_int, -110, var4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sta.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    private final void a(int[] param0, int param1) {
+    private final void setColumnWeights(int[] param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         int[] var5 = null;

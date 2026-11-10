@@ -70,7 +70,7 @@ final class ab extends qra {
           var4 = 0;
           var5 = aaa.a(false) - this.field_q * 100 + (100 - (this.field_q - 1) * 20);
           var5 = var5 / 2 + 0;
-          var6 = -50 + (koa.b(0) + 100) + (-(this.field_s * 100) - 16 * (this.field_s - 1));
+          var6 = -50 + (SwitchLinkList.b(0) + 100) + (-(this.field_s * 100) - 16 * (this.field_s - 1));
           var6 = var6 / 2 + 16;
           for (var7 = 0; var7 < this.field_q; var7++) {
             for (var8 = 0; var8 < this.field_s; var8++) {
@@ -148,12 +148,12 @@ final class ab extends qra {
         }
         var5 = 160;
         var6 = aaa.a(false) / 2;
-        var7 = koa.b(0) / 2;
+        var7 = SwitchLinkList.b(0) / 2;
         ura.a(-10985);
         var5Lifetime1 = 128;
         if (var4 >= 0) {
           var8 = (aaa.a(false) >> 1) - (gg.field_f.a() >> 1);
-          var9 = (koa.b(0) >> 1) - (gg.field_f.c() >> 1);
+          var9 = (SwitchLinkList.b(0) >> 1) - (gg.field_f.c() >> 1);
           gg.field_f.a(var8, var9);
           if (var3 == 0) {
             SocketConnector.a(gl.$cfr$intArgs$a$53ce4ab4c593(83, cba.field_c, new String[]{this.field_h.j(var4, 9)}).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, 32 + var9, var8, 1, (byte) 60, gg.field_f.a());
@@ -318,7 +318,7 @@ final class ab extends qra {
           return;
         }
         if (qma.field_c &&
-          this.a(sta.field_B, 25006, jba.field_j) &&
+          this.a(GridWidgetContainer.field_B, 25006, jba.field_j) &&
           hf.field_b == 1) {
           this.i(12721);
         }

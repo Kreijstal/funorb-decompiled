@@ -806,12 +806,12 @@ final class sw extends jea {
           mma.field_b = null;
           PowerUpItemBehaviour.field_t = null;
           RevolverItemComponent.field_J = null;
-          ola.field_Ib = null;
-          koa.field_b = null;
+          ContextMenu.field_Ib = null;
+          SwitchLinkList.field_b = null;
           int var1_int = -56 % ((6 - param0) / 33);
           DoorwayComponent.field_F = null;
           GameApplet.field_j = null;
-          jma.field_a = null;
+          SwitchState.field_a = null;
           AllPlatformsMazeComponent.field_O = null;
           System.gc();
         } catch (RuntimeException runtimeException) {

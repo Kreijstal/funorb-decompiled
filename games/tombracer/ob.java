@@ -75,7 +75,7 @@ abstract class ob extends IntrusiveNode {
           bm.field_f = ak.a(param0, gda.field_d, -112);
           ega.field_e = su.a(nm.field_i, param0, (byte) 126);
           tv.field_wb = su.a(lt.field_a, param0, (byte) 127);
-          sta.field_y = ak.a(param0, ina.field_c, -104);
+          GridWidgetContainer.field_y = ak.a(param0, ina.field_c, -104);
           kq.field_a = su.a(FleeLocomotor.field_C, param0, (byte) 127);
           id.field_h = ak.a(param0, tba.field_f, -70);
           lva.field_m = ak.a(param0, ng.field_f, -77);

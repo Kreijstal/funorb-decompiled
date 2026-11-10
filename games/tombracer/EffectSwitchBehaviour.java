@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class EffectSwitchBehaviour extends Behaviour implements ut {
+final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
     private int field_v;
     private int field_n;
     private int field_w;
     static long[] field_r;
     private int field_s;
     private kpa field_u;
-    private jma field_q;
+    private SwitchState field_q;
     private kpa field_t;
     static String field_o;
     private int field_p;
 
     final void encode(boolean param0, BitPacketBuffer param1) {
         super.encode(param0, param1);
-        this.field_q.a(this.h((byte) 116), (byte) 111, param1);
+        this.field_q.a(this.getScope((byte) 116), (byte) 111, param1);
         param1.writeBits((byte) 42, this.field_w, 8);
         param1.writeBits((byte) -128, this.field_v, 8);
         param1.writeBits((byte) 70, this.field_n, 4);
@@ -30,7 +30,7 @@ final class EffectSwitchBehaviour extends Behaviour implements ut {
         }
     }
 
-    public final int b(int param0) {
+    public final int getMaxLevel(int param0) {
         int var2 = -12 % ((param0 + 46) / 45);
         return this.field_w;
     }
@@ -50,7 +50,7 @@ final class EffectSwitchBehaviour extends Behaviour implements ut {
         }
         param0 = fs.mixHash((byte) 87, param0, this.field_s);
         param0 = fs.mixHash((byte) 82, param0, this.field_p);
-        return this.field_q.a(89, param0);
+        return this.field_q.hashState(89, param0);
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -64,7 +64,7 @@ final class EffectSwitchBehaviour extends Behaviour implements ut {
 
     final void g(int param0) {
         super.g(param0 ^ 0);
-        this.field_q.a((byte) 48, this.h((byte) 110));
+        this.field_q.a((byte) 48, this.getScope((byte) 110));
         if (param0 != -2) {
           BitPacketBuffer var3 = (BitPacketBuffer) null;
           this.encode(false, (BitPacketBuffer) null);
@@ -98,7 +98,7 @@ final class EffectSwitchBehaviour extends Behaviour implements ut {
 
     private final boolean a(byte param0, int param1) {
         if (param0 >= -109) {
-          this.field_q = (jma) null;
+          this.field_q = (SwitchState) null;
         }
         if (!this.field_t.a(0, param1)) {
           return false;
@@ -127,7 +127,7 @@ final class EffectSwitchBehaviour extends Behaviour implements ut {
         int var6Lifetime1;
         this.field_s = 0;
         try {
-          this.field_q = new jma(15, param0, param1);
+          this.field_q = new SwitchState(15, param0, param1);
           this.field_w = param1.readBits((byte) 44, 8);
           this.field_v = param1.readBits((byte) 44, 8);
           this.field_n = param1.readBits((byte) 44, 4);
@@ -281,14 +281,14 @@ final class EffectSwitchBehaviour extends Behaviour implements ut {
         }
     }
 
-    public final int c(int param0) {
+    public final int getDimColour(int param0) {
         if (param0 != 17832) {
           this.field_u = (kpa) null;
         }
         return 1131537;
     }
 
-    public final int j(byte param0) {
+    public final int getLevel(byte param0) {
         if (param0 != -108) {
           Effect var3 = (Effect) null;
           this.a(-122, (Projectile) null, (Effect) null);
@@ -296,14 +296,14 @@ final class EffectSwitchBehaviour extends Behaviour implements ut {
         return this.field_s;
     }
 
-    public final jma k(byte param0) {
+    public final SwitchState getSwitchState(byte param0) {
         if (param0 >= -67) {
-          return (jma) null;
+          return (SwitchState) null;
         }
         return this.field_q;
     }
 
-    public final int g(byte param0) {
+    public final int getLitColour(byte param0) {
         if (param0 != -108) {
           return -2;
         }
@@ -383,7 +383,7 @@ final class EffectSwitchBehaviour extends Behaviour implements ut {
         super(param0, param1);
         this.field_s = 0;
         try {
-          this.field_q = new jma(15);
+          this.field_q = new SwitchState(15);
           this.field_v = 100;
           this.field_w = 50;
           this.field_u = new kpa(6);

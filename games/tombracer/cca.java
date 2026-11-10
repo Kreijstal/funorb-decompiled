@@ -62,7 +62,7 @@ final class cca extends ArrayWidgetGroup {
         }
     }
 
-    final void a(byte param0) {
+    final void layoutChildren(byte param0) {
         boolean discarded$2 = false;
         boolean discarded$1 = false;
         boolean discarded$0 = false;
@@ -767,7 +767,7 @@ final class cca extends ArrayWidgetGroup {
         if (param5 < pka.field_b) {
           GameKeyHandler.a(param1, param5, param3, param2, 10, param0);
         } else {
-          if (ss.field_c < param1) {
+          if (DiskCacheWorker.field_c < param1) {
             GameKeyHandler.a(param1, param5, param3, param2, 10, param0);
           } else {
             if (param3 < gca.field_d) {
@@ -776,7 +776,7 @@ final class cca extends ArrayWidgetGroup {
               if (hc.field_h < param0) {
                 GameKeyHandler.a(param1, param5, param3, param2, 10, param0);
               } else {
-                caa.a(param2, param1, param5, param3, param0, param4 ^ 936441872);
+                UrlDownloadRequest.a(param2, param1, param5, param3, param0, param4 ^ 936441872);
               }
             }
           }
@@ -823,7 +823,7 @@ final class cca extends ArrayWidgetGroup {
           dupTemp$0 = new vua(param0, param1, param2, param3, param6, param5);
           this.field_A = dupTemp$0;
           this.children[2] = (UiWidget) ((Object) dupTemp$0);
-          this.a((byte) 88);
+          this.layoutChildren((byte) 88);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "cca.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }

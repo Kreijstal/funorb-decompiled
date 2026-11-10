@@ -3,9 +3,9 @@
  */
 final class op extends ofa implements tsa {
     private UiWidget field_L;
-    private rj field_N;
+    private FocusableWidget field_N;
     static SpriteData field_O;
-    private rj field_M;
+    private FocusableWidget field_M;
     private long field_P;
 
     final static void a(ResourceArchive param0, int param1, int[] param2, byte[] param3, ResourceArchive param4, String[][] param5, int param6, Sprite[][] param7, boolean param8, int param9, String[][] param10, ResourceArchive param11, byte[] param12, String[] param13, Sprite[][] param14) {
@@ -154,7 +154,7 @@ final class op extends ofa implements tsa {
         }
     }
 
-    public final void a(int param0, int param1, rj param2, int param3, byte param4) {
+    public final void a(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -225,12 +225,12 @@ final class op extends ofa implements tsa {
         }
     }
 
-    private final rj a(qc param0, int param1, String param2) {
-        rj var4 = null;
+    private final FocusableWidget a(qc param0, int param1, String param2) {
+        FocusableWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        rj stackIn_2_0 = null;
-        rj stackIn_4_0 = null;
+        FocusableWidget stackIn_2_0 = null;
+        FocusableWidget stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -238,12 +238,12 @@ final class op extends ofa implements tsa {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new rj(param2, param0);
+          var4 = new FocusableWidget(param2, param0);
           var4.field_r = (isa) ((Object) new td());
           var5 = -6 + this.field_p;
           this.field_p = this.field_p + 38;
           if (param1 <= 34) {
-            stackIn_2_0 = (rj) null;
+            stackIn_2_0 = (FocusableWidget) null;
             return stackIn_2_0;
           }
           var4.setBounds((byte) -31, -30 + this.field_m, 30, 15, var5);

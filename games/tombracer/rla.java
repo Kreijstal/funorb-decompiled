@@ -3,9 +3,9 @@
  */
 final class rla extends WidgetContainer implements tsa {
     cca field_F;
-    private rj field_I;
+    private FocusableWidget field_I;
     private boolean field_B;
-    private rj field_E;
+    private FocusableWidget field_E;
     static bna field_D;
     boolean field_G;
     String field_w;
@@ -40,8 +40,8 @@ final class rla extends WidgetContainer implements tsa {
     final static void a(int param0, int param1, byte param2, int param3, int param4) {
         if (param4 >= gca.field_d &&
           hc.field_h >= param4) {
-          param1 = rp.a(ss.field_c, -16226, pka.field_b, param1);
-          param0 = rp.a(ss.field_c, param2 ^ 16224, pka.field_b, param0);
+          param1 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, param1);
+          param0 = rp.a(DiskCacheWorker.field_c, param2 ^ 16224, pka.field_b, param0);
           BrazierComponent.a(param0, param3, param4, param1, false);
         }
         if (param2 != -2) {
@@ -58,8 +58,8 @@ final class rla extends WidgetContainer implements tsa {
           this.field_z.field_h = (qc) (this);
           this.field_G = false;
           this.field_A = param2;
-          this.field_I = new rj("", new fua(this), (qc) (this));
-          this.field_E = new rj();
+          this.field_I = new FocusableWidget("", new fua(this), (qc) (this));
+          this.field_E = new FocusableWidget();
           this.field_E.field_r = (isa) ((Object) new ema());
           this.field_E.field_h = (qc) (this);
           this.addChild(this.field_I, -1);
@@ -137,7 +137,7 @@ final class rla extends WidgetContainer implements tsa {
         }
     }
 
-    public final void a(int param0, int param1, rj param2, int param3, byte param4) {
+    public final void a(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;

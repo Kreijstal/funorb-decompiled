@@ -221,9 +221,9 @@ final class uw {
           var8Lifetime1 = cr.a(true, var6Lifetime1) >> 8;
           var9Lifetime1 = pla.b(119, var6Lifetime1) >> 8;
           if (jba.field_j != -1 &&
-            sta.field_B != -1) {
+            GridWidgetContainer.field_B != -1) {
             var7Lifetime1 = -320 + jba.field_j;
-            var8Lifetime1 = 240 - sta.field_B;
+            var8Lifetime1 = 240 - GridWidgetContainer.field_B;
             var9Lifetime1 = -128;
           }
           if (param0) {
@@ -251,7 +251,7 @@ final class uw {
             var17 = cq.field_b[var16];
             oka.b((byte) 86, var16);
             for (var18 = 0; var18 < 3; var18++) {
-              nba.field_a[var18] = nba.field_a[var18] + tfa.field_e[var15][var18];
+              nba.field_a[var18] = nba.field_a[var18] + OpenGlTexture.field_e[var15][var18];
             }
             ft.a(var17, 1251086882, nba.field_a, vs.field_P, true, false, false);
             dh.a(var9Lifetime1, var8Lifetime1, var13Lifetime1, var17, var7Lifetime1, var14, var12Lifetime1, (byte) -23);

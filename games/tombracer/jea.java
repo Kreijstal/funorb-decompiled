@@ -417,14 +417,14 @@ class jea extends um {
         if (!ow.field_s &&
           param1 &&
           0 != hf.field_b &&
-          jm.field_m >= SoftwareRasterizer.field_b &&
-          jm.field_m < SoftwareRasterizer.field_d &&
+          PasswordValidator.field_m >= SoftwareRasterizer.field_b &&
+          PasswordValidator.field_m < SoftwareRasterizer.field_d &&
           SoftwareRasterizer.field_h <= lba.field_p &&
           SoftwareRasterizer.field_k > lba.field_p) {
           this.field_E = hf.field_b;
           this.field_kb = -this.field_A + lba.field_p;
           var12 = 1;
-          this.field_p = jm.field_m - this.field_q;
+          this.field_p = PasswordValidator.field_m - this.field_q;
           this.field_y = hf.field_b;
         } else {
           if (0 != hf.field_b) {
@@ -432,7 +432,7 @@ class jea extends um {
           }
           this.field_y = 0;
         }
-        stackIn_31_1 = (!FuseBehaviour.field_w) && (jba.field_j >= SoftwareRasterizer.field_b) && (jba.field_j < SoftwareRasterizer.field_d) && (sta.field_B >= SoftwareRasterizer.field_h) && (SoftwareRasterizer.field_k > sta.field_B);
+        stackIn_31_1 = (!FuseBehaviour.field_w) && (jba.field_j >= SoftwareRasterizer.field_b) && (jba.field_j < SoftwareRasterizer.field_d) && (GridWidgetContainer.field_B >= SoftwareRasterizer.field_h) && (SoftwareRasterizer.field_k > GridWidgetContainer.field_B);
         this.field_pb = stackIn_31_1;
         if (ksa.field_p == 0) {
           this.field_E = 0;
@@ -456,7 +456,7 @@ class jea extends um {
         if (0 != this.field_E &&
           this.field_F) {
           this.field_qb = -param4 + jba.field_j - this.field_p;
-          this.field_T = -param5 - this.field_kb + sta.field_B;
+          this.field_T = -param5 - this.field_kb + GridWidgetContainer.field_B;
           if (this.field_qb < 0) {
             this.field_qb = 0;
           }

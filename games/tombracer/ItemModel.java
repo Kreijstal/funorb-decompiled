@@ -9,7 +9,7 @@ final class ItemModel extends TrapModel {
     private int field_m;
     static String field_q;
     static dn field_o;
-    static eua field_n;
+    static QuickChatMenu field_n;
 
     final void attach(TrapPart param0, WorldBody param1, byte param2) {
         RuntimeException var4 = null;

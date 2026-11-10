@@ -64,7 +64,7 @@ final class sb {
 
     final static void a(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3, ResourceArchive param4) {
         try {
-          bja.field_a = param4;
+          TextLayout.field_a = param4;
           qoa.field_b = param1;
           ua.field_a = param2;
           ControllerLocomotor.field_v = param3;

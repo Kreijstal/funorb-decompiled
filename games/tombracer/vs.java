@@ -7,7 +7,7 @@ final class vs extends ofa {
     private boolean field_N;
     static iw field_T;
     private String field_M;
-    private rk field_L;
+    private ProgressBarWidget field_L;
     static jea field_R;
     private String field_S;
     static int[] field_P;
@@ -39,10 +39,10 @@ final class vs extends ofa {
           } else {
             this.field_N = param2 ? true : false;
             if (this.field_N) {
-              this.field_L.a(true, 4210752, 8405024);
+              this.field_L.setColors(true, 4210752, 8405024);
               this.field_L.field_D = true;
             } else {
-              this.field_L.a(true, 4210752, 2113632);
+              this.field_L.setColors(true, 4210752, 2113632);
               if (this.field_Q) {
                 this.field_L.field_D = false;
               }
@@ -76,7 +76,7 @@ final class vs extends ofa {
             var3_int = ft.field_c.a(this.field_M, 260, ft.field_c.field_w);
             this.c(-11560, var3_int + 150, 300);
           }
-          this.field_L = new rk(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.field_L = new ProgressBarWidget(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_Q = false;
           this.field_N = false;
           this.field_L.field_D = true;

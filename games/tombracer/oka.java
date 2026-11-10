@@ -85,16 +85,16 @@ final class oka extends wv {
         this.field_r = this.e(-18796);
         this.field_x.a(true);
         if (hf.field_b == 1) {
-          for (var5 = 0; jw.field_z.length > var5; var5++) {
+          for (var5 = 0; LoginForm.field_z.length > var5; var5++) {
             if (mca.a((byte) 6, var5) &&
               bma.d(100, var5)) {
-              var6 = jw.field_z[var5] + (this.field_t + (uta.field_d.a() >> 1));
+              var6 = LoginForm.field_z[var5] + (this.field_t + (uta.field_d.a() >> 1));
               var7 = this.field_r - (-hq.field_b[var5] - (uta.field_d.c() >> 1));
               var8 = 20;
               if (jba.field_j > var6 - var8 &&
                 var8 + var6 > jba.field_j &&
-                sta.field_B > -var8 + var7 &&
-                var8 + var7 > sta.field_B) {
+                GridWidgetContainer.field_B > -var8 + var7 &&
+                var8 + var7 > GridWidgetContainer.field_B) {
                 this.field_v = var5;
                 if (this.field_x.a((byte) 79, var5)) {
                   this.b(false);
@@ -172,7 +172,7 @@ final class oka extends wv {
                   var5_ref_nh = pq.field_a;
                 }
               }
-              var5_ref_nh.a(jw.field_z[var4] + this.field_t, this.field_r + hq.field_b[var4]);
+              var5_ref_nh.a(LoginForm.field_z[var4] + this.field_t, this.field_r + hq.field_b[var4]);
             }
           }
         }
@@ -182,13 +182,13 @@ final class oka extends wv {
         var6 = aaa.a(false) >> 1;
         var5 = 40;
         var4Lifetime1 = 260;
-        var7 = this.field_r - (100 - koa.b(param0 + 28));
+        var7 = this.field_r - (100 - SwitchLinkList.b(param0 + 28));
         kq.field_a.a(var6 - (kq.field_a.a() >> 1), -(kq.field_a.c() >> 1) + var7);
         SocketConnector.a(vj.worldNames[this.field_v].toUpperCase(), 1, eda.field_f, 2431750, 8 + o.field_d.field_m, var5, 1, var7 - (var5 >> 1), var6 - (var4Lifetime1 >> 1), -1, (byte) 60, var4Lifetime1);
         if (rd.b(false) && (vpa.a(62) ||
           mq.field_e.field_a ||
           var3 != 0)) {
-          var7Lifetime1 = koa.b(0) / 2 + this.field_r;
+          var7Lifetime1 = SwitchLinkList.b(0) / 2 + this.field_r;
           var4Lifetime2 = 350;
           var5Lifetime1 = 100;
           tga.field_a.c(-1442774783, var6 - (var4Lifetime2 >> 1), var4Lifetime2, -(var5Lifetime1 >> 1) + var7Lifetime1, -22971, var5Lifetime1);
@@ -207,8 +207,8 @@ final class oka extends wv {
           SocketConnector.a(var8, 1, kn.field_p, 16777215, 16, var5Lifetime1, 1, var7Lifetime1 - (var5Lifetime1 >> 1), 10 + (var6 - (var4Lifetime2 >> 1)), -1, (byte) 60, -20 + var4Lifetime2);
         }
         if (SimpleBlockBehaviour.c(0)) {
-          oka.a("Unlock: Key 2-9", 16777215, kn.field_p, -1, this.field_r + koa.b(param0 + 28) - 100, -100 + aaa.a(false), -1);
-          oka.a("Play All: Insert", 16777215, kn.field_p, -1, -80 + (this.field_r + koa.b(0)), aaa.a(false) - 100, -1);
+          oka.a("Unlock: Key 2-9", 16777215, kn.field_p, -1, this.field_r + SwitchLinkList.b(param0 + 28) - 100, -100 + aaa.a(false), -1);
+          oka.a("Play All: Insert", 16777215, kn.field_p, -1, -80 + (this.field_r + SwitchLinkList.b(0)), aaa.a(false) - 100, -1);
         }
         return;
     }
@@ -245,7 +245,7 @@ final class oka extends wv {
     }
 
     private final void b(boolean param0) {
-        bja.a(this.field_v, (byte) -102, 1);
+        TextLayout.a(this.field_v, (byte) -102, 1);
         if (param0) {
           this.a(-11, '￘', 77);
         }
@@ -255,7 +255,7 @@ final class oka extends wv {
         if (param1 != 30) {
           this.field_s = 3;
         }
-        return koa.b(0) - 25;
+        return SwitchLinkList.b(0) - 25;
     }
 
     final static void a(String param0, int param1, GameFont param2, int param3, int param4, int param5, int param6) {
@@ -403,7 +403,7 @@ final class oka extends wv {
 
     private final int e(int param0) {
         int var3 = 0;
-        int var2 = koa.b(0);
+        int var2 = SwitchLinkList.b(0);
         int var3Lifetime1;
         if (param0 != -18796) {
           this.field_r = -91;

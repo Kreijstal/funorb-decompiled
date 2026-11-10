@@ -102,7 +102,7 @@ final class qna {
               if (dsa.field_c.field_c) {
                 var3_int = ama.a(bfa.field_c, IdolItemComponent.field_G, rg.field_z, 1, lra.field_c);
               } else {
-                var3_int = ama.a(bfa.field_c, jma.field_o, rg.field_z, 1, lra.field_c);
+                var3_int = ama.a(bfa.field_c, SwitchState.field_o, rg.field_z, 1, lra.field_c);
               }
               var4 = 2 + var3_int;
               CoinItemComponent.field_H = new int[var4];
@@ -312,7 +312,7 @@ final class qna {
           if (2 == mq.field_a) {
             FacePointLocomotor.field_r.a(param1, 29954, -1, -1);
           } else {
-            FacePointLocomotor.field_r.a(param1, param0 + 29953, 0, wg.a(1541709953, jba.field_j, sta.field_B));
+            FacePointLocomotor.field_r.a(param1, param0 + 29953, 0, wg.a(1541709953, jba.field_j, GridWidgetContainer.field_B));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

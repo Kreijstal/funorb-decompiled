@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fe extends paa {
+final class DateFieldsWidget extends paa {
     static String[] gasDeathMessages;
     private TextInputWidget field_E;
     static int[] field_C;
@@ -17,13 +17,13 @@ final class fe extends paa {
           field_F = null;
           return;
         }
-        fe.releaseStatics(83);
+        DateFieldsWidget.releaseStatics(83);
         field_C = null;
         gasDeathMessages = null;
         field_F = null;
     }
 
-    fe(isa param0, boolean param1, int param2, int param3, int param4, int param5) {
+    DateFieldsWidget(isa param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
         try {
           this.setBounds((byte) -31, param4, param5, param2, param3);
@@ -46,7 +46,7 @@ final class fe extends paa {
         this.field_D.setBounds(param0, 40, param2, 90 + var6, 0);
     }
 
-    private fe(isa param0, boolean param1) {
+    private DateFieldsWidget(isa param0, boolean param1) {
         super(0, 0, 0, 0, (isa) null);
         try {
           this.field_B = (TextInputWidget) ((Object) new so("", (qc) null, 2));
@@ -81,7 +81,7 @@ final class fe extends paa {
         }
     }
 
-    final int j(byte param0) {
+    final int getDay(byte param0) {
         NumberFormatException var2 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
@@ -175,7 +175,7 @@ final class fe extends paa {
         }
     }
 
-    final int d(int param0) {
+    final int getYear(int param0) {
         NumberFormatException var2 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;

@@ -153,14 +153,14 @@ final class qa {
           if (param2 != -20186) {
             return;
           }
-          var4_int = aaa.a(false) - koa.b(0) / 2;
-          var5 = koa.b(0) / 2;
+          var4_int = aaa.a(false) - SwitchLinkList.b(0) / 2;
+          var5 = SwitchLinkList.b(0) / 2;
           if (mf.field_d == param1) {
-            this.a(0, 0, 8, aaa.a(false), koa.b(0));
+            this.a(0, 0, 8, aaa.a(false), SwitchLinkList.b(0));
             return;
           }
           if (param1 == dp.field_j) {
-            this.a(0, 0, param2 + 20194, var4_int, koa.b(param2 ^ -20186));
+            this.a(0, 0, param2 + 20194, var4_int, SwitchLinkList.b(param2 ^ -20186));
             return;
           }
           if (qu.field_e == param1) {
@@ -248,10 +248,10 @@ final class qa {
 
     private final boolean a(int param0) {
         if (param0 == 0) {
-          return this.a(aaa.a(false), (byte) 59, koa.b(param0 ^ 0), 0, 0);
+          return this.a(aaa.a(false), (byte) 59, SwitchLinkList.b(param0 ^ 0), 0, 0);
         }
         this.field_f = 126;
-        return this.a(aaa.a(false), (byte) 59, koa.b(param0 ^ 0), 0, 0);
+        return this.a(aaa.a(false), (byte) 59, SwitchLinkList.b(param0 ^ 0), 0, 0);
     }
 
     private final void a(int param0, int param1, int param2, int param3, int param4) {

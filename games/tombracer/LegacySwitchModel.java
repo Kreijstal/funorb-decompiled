@@ -4,7 +4,7 @@
 final class LegacySwitchModel extends TrapModel {
     static dq field_n;
     static String field_m;
-    private ut field_p;
+    private SwitchSource field_p;
     static String field_o;
 
     final void attach(TrapPart param0, WorldBody param1, byte param2) {
@@ -17,10 +17,10 @@ final class LegacySwitchModel extends TrapModel {
         RuntimeException decompiledCaughtException = null;
         try {
           super.attach(param0, param1, param2);
-          if (!(param0 instanceof ut)) {
+          if (!(param0 instanceof SwitchSource)) {
             return;
           }
-          this.field_p = (ut) ((Object) param0);
+          this.field_p = (SwitchSource) ((Object) param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -66,10 +66,10 @@ final class LegacySwitchModel extends TrapModel {
           if (null == this.field_p) {
             var6_int = 6684672;
           } else {
-            if (!this.field_p.k((byte) -120).b(4)) {
-              var6_int = this.field_p.c(17832);
+            if (!this.field_p.getSwitchState((byte) -120).b(4)) {
+              var6_int = this.field_p.getDimColour(17832);
             } else {
-              var6_int = this.field_p.g((byte) -108);
+              var6_int = this.field_p.getLitColour((byte) -108);
             }
           }
           var8 = this.body.getWidth(-29) / 2;

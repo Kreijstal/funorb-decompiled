@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rk extends UiWidget {
+final class ProgressBarWidget extends UiWidget {
     private int field_u;
     private int field_C;
     boolean field_D;
@@ -16,7 +16,7 @@ final class rk extends UiWidget {
     private Sprite[] field_w;
     private int field_v;
 
-    final void a(boolean param0, int param1, int param2) {
+    final void setColors(boolean param0, int param1, int param2) {
         this.field_G = 8355711 & param1 >> 1;
         this.field_v = (param2 & 16711422) >> 1;
         this.field_C = param2;
@@ -29,7 +29,7 @@ final class rk extends UiWidget {
 
     public static void releaseStatics(int param0) {
         if (param0 != 30548) {
-          rk.releaseStatics(-86);
+          ProgressBarWidget.releaseStatics(-86);
         }
         field_F = null;
     }
@@ -123,7 +123,7 @@ final class rk extends UiWidget {
         }
     }
 
-    rk(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    ProgressBarWidget(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         this(param0, param1, param2, param3, param4, param5, param6, param5 >> 1 & 8355711, param6 >> 1 & 8355711);
     }
 
@@ -140,7 +140,7 @@ final class rk extends UiWidget {
           param1 = false;
         }
         if (param2 != 107) {
-          rk.a(-24, false, (byte) 37, -109, 107, 111, -35);
+          ProgressBarWidget.a(-24, false, (byte) 37, -109, 107, 111, -35);
         }
         return param1;
     }
@@ -195,7 +195,7 @@ final class rk extends UiWidget {
           var5_int = param2 + this.field_m;
           tga.a(-21953, this.field_A.field_m + param2, var5_int - this.field_A.field_m, param0, this.field_p + param0);
           if (param3 <= 86) {
-            this.a(true, -45, -128);
+            this.setColors(true, -45, -128);
           }
           for (var6 = param2 - this.field_y; var5_int > var6; var6 = var6 + param1.field_m) {
             param1.b(var6, param0);
@@ -242,7 +242,7 @@ final class rk extends UiWidget {
         wj.a(param3, di.field_a, wg.field_i, 2, mna.field_d, param2, param1);
     }
 
-    private rk(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private ProgressBarWidget(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         this.field_x = param6;
         this.field_u = param4;
         this.field_v = param7;

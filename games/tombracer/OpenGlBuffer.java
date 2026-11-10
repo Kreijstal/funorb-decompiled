@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class hl implements mta {
+abstract class OpenGlBuffer implements mta {
     private jaclib.memory.heap.NativeHeapBuffer field_b;
     private int field_f;
     static String field_i;
@@ -33,7 +33,7 @@ abstract class hl implements mta {
         try {
           if (param2 != 1) {
             var5 = (jaggl.MapBuffer) null;
-            this.a((jaggl.MapBuffer) null, -94);
+            this.unmap((jaggl.MapBuffer) null, -94);
           }
           if (this.field_e == 0) {
             this.d(1);
@@ -178,7 +178,7 @@ abstract class hl implements mta {
           var16 = var12 * var12;
           var17 = var14 << 1;
           if (!param4) {
-            hl.a(-80, 16, -30, 69, false, -29, -88, -33);
+            OpenGlBuffer.a(-80, 16, -30, 69, false, -29, -88, -33);
           }
           var18 = var13 << 1;
           var19 = var16 << 1;
@@ -204,10 +204,10 @@ abstract class hl implements mta {
           if (gca.field_d <= param2 &&
             hc.field_h >= param2) {
             var57 = vaa.field_a[param2];
-            var40 = rp.a(ss.field_c, -16226, pka.field_b, -param5 + param3);
-            var41 = rp.a(ss.field_c, -16226, pka.field_b, param5 + param3);
-            var42 = rp.a(ss.field_c, -16226, pka.field_b, param3 - var11);
-            var43 = rp.a(ss.field_c, -16226, pka.field_b, param3 + var11);
+            var40 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, -param5 + param3);
+            var41 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, param5 + param3);
+            var42 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, param3 - var11);
+            var43 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, param3 + var11);
             nra.a((byte) -55, param0, var42, var57, var40);
             nra.a((byte) -55, param1, var43, var57, var42);
             nra.a((byte) -55, param0, var41, var57, var43);
@@ -269,8 +269,8 @@ abstract class hl implements mta {
             if (hc.field_h < var40Lifetime1) {
               continue;
             }
-            var42Lifetime1 = rp.a(ss.field_c, -16226, pka.field_b, var8_int + param3);
-            var43Lifetime1 = rp.a(ss.field_c, -16226, pka.field_b, param3 - var8_int);
+            var42Lifetime1 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, var8_int + param3);
+            var43Lifetime1 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, param3 - var8_int);
             if (var39 == 0) {
               if (var40Lifetime1 >= gca.field_d) {
                 nra.a((byte) -55, param0, var42Lifetime1, vaa.field_a[var40Lifetime1], var43Lifetime1);
@@ -281,8 +281,8 @@ abstract class hl implements mta {
               nra.a((byte) -55, param0, var42Lifetime1, vaa.field_a[var41Lifetime1], var43Lifetime1);
               continue;
             }
-            var44 = rp.a(ss.field_c, -16226, pka.field_b, param3 + var10);
-            var45 = rp.a(ss.field_c, -16226, pka.field_b, param3 - var10);
+            var44 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, param3 + var10);
+            var45 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, param3 - var10);
             if (var40Lifetime1 >= gca.field_d) {
               var58 = vaa.field_a[var40Lifetime1];
               nra.a((byte) -55, param0, var45, var58, var43Lifetime1);
@@ -337,7 +337,7 @@ abstract class hl implements mta {
         int var3 = -18 % ((param0 + 30) / 36);
     }
 
-    final boolean a(jaggl.MapBuffer param0, int param1) {
+    final boolean unmap(jaggl.MapBuffer param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_10_0 = 0;
@@ -386,7 +386,7 @@ abstract class hl implements mta {
         return this.field_f != 0 ? 0L : this.field_b.getAddress();
     }
 
-    hl(kda param0, int param1, boolean param2) {
+    OpenGlBuffer(kda param0, int param1, boolean param2) {
         this.field_f = -1;
         this.field_e = 0;
         try {

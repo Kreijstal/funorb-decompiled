@@ -24,7 +24,7 @@ final class hba {
           var5.a(param3, -71);
           var5.b(40, param0);
           var5.a(qa.field_b, bh.field_o, nta.field_h, OpenGlToolkit.field_Z, -113);
-          var5.a(et.field_j, nb.field_c, false, lra.field_f, CommonChooseReward.field_b);
+          var5.a(MidiVoiceMixer.field_j, nb.field_c, false, lra.field_f, CommonChooseReward.field_b);
           hw.a((byte) -111, 1, 74, var5);
           return;
         }
@@ -33,7 +33,7 @@ final class hba {
         var5.a(param3, -71);
         var5.b(40, param0);
         var5.a(qa.field_b, bh.field_o, nta.field_h, OpenGlToolkit.field_Z, -113);
-        var5.a(et.field_j, nb.field_c, false, lra.field_f, CommonChooseReward.field_b);
+        var5.a(MidiVoiceMixer.field_j, nb.field_c, false, lra.field_f, CommonChooseReward.field_b);
         hw.a((byte) -111, 1, 74, var5);
     }
 

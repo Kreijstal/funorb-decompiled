@@ -279,7 +279,7 @@ abstract class SingleChildWidget extends UiWidget implements tpa {
           lta.field_a = new jea(0L, una.field_j);
           lta.field_a.a(param0, PressureSwitchBehaviour.field_p);
           var16 = BoulderComponent.a(param4, "lobby", 5, "button_mouseover");
-          SimpleBlockBehaviour.field_n = new ola(lw.field_a, var12, Corpse.field_i, PressureSwitchBehaviour.field_p, 3, 2, pda.field_c, 3, di.field_a);
+          SimpleBlockBehaviour.field_n = new ContextMenu(lw.field_a, var12, Corpse.field_i, PressureSwitchBehaviour.field_p, 3, 2, pda.field_c, 3, di.field_a);
           AllPlatformsMazeComponent.field_M = new jea(0L, PressureSwitchBehaviour.field_p);
           AllPlatformsMazeComponent.field_M.field_fb = 1;
           AllPlatformsMazeComponent.field_M.field_ob = 1;
@@ -380,8 +380,8 @@ abstract class SingleChildWidget extends UiWidget implements tpa {
           BufferedSocket.field_b.field_rb = nia.a(param4, "lobby", "downbutton_mouseover", -73);
           BufferedSocket.field_b.field_U = nia.a(param4, "lobby", "downbutton_mouseheld", 56);
           BufferedSocket.field_b.field_B = nia.a(param4, "lobby", "downbutton_disabled", 113);
-          fe.field_F = new oj(0L, pk.field_s, BufferedSocket.field_b, ClientException.field_b, ie.field_h);
-          aaa.field_d = new hla(0L, (jea) null, rfa.field_C, fe.field_F, jk.field_g, (String) null, (String) null);
+          DateFieldsWidget.field_F = new oj(0L, pk.field_s, BufferedSocket.field_b, ClientException.field_b, ie.field_h);
+          aaa.field_d = new hla(0L, (jea) null, rfa.field_C, DateFieldsWidget.field_F, jk.field_g, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

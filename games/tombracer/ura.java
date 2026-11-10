@@ -102,7 +102,7 @@ final class ura {
         int var6 = 0;
         float var2 = 0.0f;
         float var3 = 0.0f;
-        if (!ss.a(126)) {
+        if (!DiskCacheWorker.a(126)) {
           var1 = 0.10000000149011612f;
           var7 = -24;
           var5 = 0;

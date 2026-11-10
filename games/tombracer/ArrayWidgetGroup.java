@@ -214,7 +214,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements tpa {
         }
     }
 
-    abstract void a(byte param0);
+    abstract void layoutChildren(byte param0);
 
     final String getHoverText(byte param0) {
         UiWidget[] var2;
@@ -400,7 +400,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements tpa {
 
     final boolean hasKeyboardFocus(byte param0) {
         if (param0 != -34) {
-          this.a((byte) 29);
+          this.layoutChildren((byte) 29);
         }
         return this.getFocusedChild(-49) != null ? true : false;
     }
@@ -614,7 +614,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements tpa {
 
     void setBounds(byte param0, int param1, int param2, int param3, int param4) {
         super.setBounds(param0, param1, param2, param3, param4);
-        this.a((byte) 88);
+        this.layoutChildren((byte) 88);
     }
 
     boolean a(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {

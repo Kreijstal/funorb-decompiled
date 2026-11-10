@@ -41,7 +41,7 @@ final class fv {
           var4.a((this.field_j >> 1) + this.field_g - (var4.a() >> 1), (this.field_i >> 1) + (this.field_c - (var4.c() >> 1)));
         }
         if (0 <= var2) {
-          sta.field_y[bta.field_f[var2]].a(-20 + (this.field_g + (this.field_j >> 1)), (this.field_i >> 1) + this.field_c - 10);
+          GridWidgetContainer.field_y[bta.field_f[var2]].a(-20 + (this.field_g + (this.field_j >> 1)), (this.field_i >> 1) + this.field_c - 10);
           return;
         }
     }

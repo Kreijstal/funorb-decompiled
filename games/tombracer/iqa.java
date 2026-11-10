@@ -37,7 +37,7 @@ final class iqa {
         if (pka.field_b > -param4 + param3) {
           nfa.a(0, param4, param2, param3, param1);
         } else {
-          if (param3 + param4 > ss.field_c) {
+          if (param3 + param4 > DiskCacheWorker.field_c) {
             nfa.a(0, param4, param2, param3, param1);
           } else {
             if (gca.field_d > param1 - param4) {

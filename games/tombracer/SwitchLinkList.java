@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class koa {
+final class SwitchLinkList {
     static ka[] field_b;
     static String field_d;
     private int field_e;
-    private lj[] field_f;
+    private Switchable[] targets;
     private dha[] field_a;
     static String field_c;
 
@@ -22,16 +22,16 @@ final class koa {
         int incrementValue$0 = 0;
         int var2;
         int var6;
-        lj[] var3;
+        Switchable[] var3;
         int var4;
         var6 = TombRacer.field_G ? 1 : 0;
         var2 = 0;
         if (param0 != -12) {
           return;
         }
-        for (var3_int = 0; this.field_f.length > var3_int; var3_int++) {
-          if (null != this.field_f[var3_int]) {
-            if (this.field_f[var3_int].n(param0 + 31986).isDud(59)) {
+        for (var3_int = 0; this.targets.length > var3_int; var3_int++) {
+          if (null != this.targets[var3_int]) {
+            if (this.targets[var3_int].getGlobalId(param0 + 31986).isDud(59)) {
               var2++;
             }
           } else {
@@ -39,46 +39,46 @@ final class koa {
           }
         }
         if (var2 > 0) {
-          var3 = new lj[this.field_f.length - var2];
+          var3 = new Switchable[this.targets.length - var2];
           if (var3.length > 0) {
             var4 = 0;
-            for (var5 = 0; var5 < this.field_f.length; var5++) {
-              if (null != this.field_f[var5] &&
-                !this.field_f[var5].n(31974).isDud(59)) {
+            for (var5 = 0; var5 < this.targets.length; var5++) {
+              if (null != this.targets[var5] &&
+                !this.targets[var5].getGlobalId(31974).isDud(59)) {
                 incrementValue$0 = var4;
                 var4++;
-                var3[incrementValue$0] = this.field_f[var5];
+                var3[incrementValue$0] = this.targets[var5];
               }
             }
           }
-          this.field_f = var3;
+          this.targets = var3;
         }
     }
 
-    final void a(int param0, lj[] param1) {
+    final void a(int param0, Switchable[] param1) {
         try {
           if (param0 != 9) {
-            this.field_f = (lj[]) null;
+            this.targets = (Switchable[]) null;
           }
-          this.field_f = param1;
+          this.targets = param1;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "koa.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, ew param1, BitPacketBuffer param2) {
+    final void encode(int param0, SwitchableScope param1, BitPacketBuffer param2) {
         int var4_int = 0;
         int var5 = TombRacer.field_G ? 1 : 0;
         try {
           this.a((byte) -12);
-          param2.writeBits((byte) 43, this.field_f.length, iia.d(this.field_e, 22972));
-          for (var4_int = 0; this.field_f.length > var4_int; var4_int++) {
-            if (this.field_f[var4_int].h((byte) 114) != param1) {
+          param2.writeBits((byte) 43, this.targets.length, iia.d(this.field_e, 22972));
+          for (var4_int = 0; this.targets.length > var4_int; var4_int++) {
+            if (this.targets[var4_int].getScope((byte) 114) != param1) {
               param2.writeBits((byte) -126, 0, 1);
-              param2.writeBits((byte) -127, this.field_f[var4_int].n(31974).id, 8);
+              param2.writeBits((byte) -127, this.targets[var4_int].getGlobalId(31974).id, 8);
             } else {
               param2.writeBits((byte) 70, 1, 1);
-              param2.writeBits((byte) 61, this.field_f[var4_int].i((byte) 84).id, 8);
+              param2.writeBits((byte) 61, this.targets[var4_int].getLocalId((byte) 84).id, 8);
             }
           }
           if (param0 != 30489) {
@@ -89,7 +89,7 @@ final class koa {
         }
     }
 
-    final void a(ew param0, int param1) {
+    final void a(SwitchableScope param0, int param1) {
         int var3_int = 0;
         dha var4 = null;
         int var5 = 0;
@@ -103,10 +103,10 @@ final class koa {
           if (this.field_a == null) {
             return;
           }
-          this.field_f = new lj[this.field_a.length];
+          this.targets = new Switchable[this.field_a.length];
           for (var3_int = 0; this.field_a.length > var3_int; var3_int++) {
             var4 = this.field_a[var3_int];
-            this.field_f[var3_int] = param0.a(28672, var4.field_a, var4.field_b);
+            this.targets[var3_int] = param0.findSwitchable(28672, var4.field_a, var4.field_b);
           }
           this.field_a = null;
           if (param1 != 8) {
@@ -130,19 +130,19 @@ final class koa {
         }
     }
 
-    final lj[] c(int param0) {
+    final Switchable[] c(int param0) {
         if (param0 != 1) {
           field_c = (String) null;
         }
-        return this.field_f;
+        return this.targets;
     }
 
-    koa(int param0, int param1) {
+    SwitchLinkList(int param0, int param1) {
         this.field_e = param0;
-        this.field_f = new lj[]{};
+        this.targets = new Switchable[]{};
     }
 
-    koa(int param0, int param1, int param2, BitPacketBuffer param3) {
+    SwitchLinkList(int param0, int param1, int param2, BitPacketBuffer param3) {
         int var6 = 0;
         int var5_int = 0;
         dha[] stackIn_6_0;
@@ -160,7 +160,7 @@ final class koa {
         try {
           this.field_e = param0;
           var5_int = param3.readBits((byte) 44, iia.d(param0, 22972));
-          this.field_f = new lj[var5_int];
+          this.targets = new Switchable[var5_int];
           this.field_a = new dha[var5_int];
           for (var6 = 0; var6 < var5_int; var6++) {
             if (param2 <= 9) {
@@ -202,7 +202,7 @@ final class koa {
         field_d = null;
         field_c = null;
         if (param0 > -71) {
-          koa.b(50);
+          SwitchLinkList.b(50);
         }
     }
 

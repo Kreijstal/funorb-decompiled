@@ -1255,7 +1255,7 @@ abstract class eo extends GraphicsToolkit {
           if (this.field_N[this.field_Cc] != param1) {
             this.field_N[this.field_Cc] = param1;
             if (param1 != null) {
-              param1.b((byte) 89);
+              param1.bind((byte) 89);
             } else {
               this.d(1);
             }
@@ -2264,7 +2264,7 @@ abstract class eo extends GraphicsToolkit {
         return this.field_ac;
     }
 
-    final GameFont createFont(qla param0, SpriteData[] param1, boolean param2) {
+    final GameFont createFont(FontMetrics param0, SpriteData[] param1, boolean param2) {
         RuntimeException var4 = null;
         ca stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;

@@ -14,18 +14,18 @@ final class SweepRotateLocomotor extends Locomotor {
         RuntimeException decompiledCaughtException = null;
         var3 = TombRacer.field_G ? 1 : 0;
         try {
-          opa.a(ap.field_d, 0, ola.field_Eb, param0, (byte) -100, ota.field_c, true);
+          opa.a(ap.field_d, 0, ContextMenu.field_Eb, param0, (byte) -100, ota.field_c, true);
           var2_int = 0;
           do {
-            if (!(ola.field_Eb > var2_int)) {
-              opa.a(ma.field_g, param0, ola.field_Eb + param0, param0 + param0, (byte) -100, kc.field_a, false);
+            if (!(ContextMenu.field_Eb > var2_int)) {
+              opa.a(ma.field_g, param0, ContextMenu.field_Eb + param0, param0 + param0, (byte) -100, kc.field_a, false);
               break;
             }
             BlockModel.field_n[var2_int + param0] = var2_int;
             var2_int++;
           } while (var3 == 0);
-          if (param0 < ola.field_Eb) {
-            ola.field_Eb = param0;
+          if (param0 < ContextMenu.field_Eb) {
+            ContextMenu.field_Eb = param0;
           }
           if (param1 != 29) {
             SweepRotateLocomotor.a(10, -96, -65);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class tfa implements iva {
+abstract class OpenGlTexture implements iva {
     una field_a;
     static int[][] field_e;
     private hs field_g;
@@ -158,7 +158,7 @@ abstract class tfa implements iva {
         super.finalize();
     }
 
-    public void b(byte param0) {
+    public void bind(byte param0) {
         int var2 = this.field_j.o((byte) 106);
         if (param0 < 32) {
           return;
@@ -536,11 +536,11 @@ abstract class tfa implements iva {
         this.field_j.field_Xb = this.field_j.field_Xb - param1;
         this.field_j.field_Xb = this.field_j.field_Xb + this.c((byte) -120);
         if (param0 > -88) {
-          this.b((byte) 93);
+          this.bind((byte) 93);
         }
     }
 
-    tfa(kda param0, int param1, ft param2, una param3, int param4, boolean param5) {
+    OpenGlTexture(kda param0, int param1, ft param2, una param3, int param4, boolean param5) {
         this.field_g = MirrorComponent.field_G;
         try {
           this.field_a = param3;

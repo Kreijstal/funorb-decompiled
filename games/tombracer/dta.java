@@ -169,7 +169,7 @@ final class dta {
                 }
               }
               var17Lifetime2 = param1 - bd.field_i.a();
-              var18Lifetime2 = -20 + koa.b(0);
+              var18Lifetime2 = -20 + SwitchLinkList.b(0);
               var24 = 0;
               var25 = 16;
               if (!param4.field_D &&
@@ -357,14 +357,14 @@ final class dta {
               }
               var42 = dw.field_j;
               var31Lifetime3 = (int)(128.0 - Math.sin((double)bva.b((byte) -107) / 512.0) * 128.0);
-              vv.a(var31Lifetime3, (byte) -73, var31Lifetime3, 1, SingleChildWidget.field_v, var42.toUpperCase(), 40 + (koa.b(0) >> 1) + (koa.b(0) >> 2), 11903361, param1 + param0 >> 1);
+              vv.a(var31Lifetime3, (byte) -73, var31Lifetime3, 1, SingleChildWidget.field_v, var42.toUpperCase(), 40 + (SwitchLinkList.b(0) >> 1) + (SwitchLinkList.b(0) >> 2), 11903361, param1 + param0 >> 1);
               var32Lifetime2 = param4.field_r - param4.field_k.c((byte) 115, param2);
               if (var32Lifetime2 >= 250) {
                 return;
               }
               var43 = Integer.toString(var32Lifetime2 / 50 + 1);
               var31Lifetime4 = 255 - (var32Lifetime2 % 50 << 2) % 255;
-              vv.a(var31Lifetime4, (byte) -80, var31Lifetime4, 1, SingleChildWidget.field_v, var43.toUpperCase(), koa.b(0) >> 1, 11903361, param1 + param0 >> 1);
+              vv.a(var31Lifetime4, (byte) -80, var31Lifetime4, 1, SingleChildWidget.field_v, var43.toUpperCase(), SwitchLinkList.b(0) >> 1, 11903361, param1 + param0 >> 1);
               return;
             }
             return;

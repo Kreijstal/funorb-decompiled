@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class qla {
+final class FontMetrics {
     int field_h;
     int field_a;
     private byte[] field_e;
@@ -14,11 +14,11 @@ final class qla {
     static kea field_f;
     static String field_i;
 
-    final static eua a(boolean param0, jea param1, jea param2, br param3, jea param4) {
+    final static QuickChatMenu a(boolean param0, jea param1, jea param2, br param3, jea param4) {
         Object stackIn_5_0 = null;
         int stackIn_10_0 = 0;
         int stackIn_14_0 = 0;
-        eua stackIn_40_0 = null;
+        QuickChatMenu stackIn_40_0 = null;
         RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;
         String stackIn_45_2 = null;
@@ -36,7 +36,7 @@ final class qla {
         String[] var8 = null;
         char[] var9 = null;
         int[] var10 = null;
-        eua[] var11 = null;
+        QuickChatMenu[] var11 = null;
         int var12 = 0;
         br var13_ref_br = null;
         int var13 = 0;
@@ -49,7 +49,7 @@ final class qla {
         try {
           if (null == param3) {
             stackIn_5_0 = null;
-            return (eua) (stackIn_5_0);
+            return (QuickChatMenu) (stackIn_5_0);
           }
           if (param3.field_q == null) {
             stackIn_10_0 = 0;
@@ -71,14 +71,14 @@ final class qla {
             field_b = (Calendar) null;
           }
           boolean decompiledFrameCompleted0 = true;
-          var11 = new eua[var7];
+          var11 = new QuickChatMenu[var7];
           if (null != param3.field_q) {
             var12 = 0;
             while (!(param3.field_q.length <= var12)) {
               var13_ref_br = taa.field_g.a((byte) 98, param3.field_q[var12]);
               var8[var12] = var13_ref_br.field_n;
               var9[var12] = param3.field_k[var12];
-              var11[var12] = qla.a(param0, param1, param2, var13_ref_br, param4);
+              var11[var12] = FontMetrics.a(param0, param1, param2, var13_ref_br, param4);
               var12++;
               if (var17 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -116,7 +116,7 @@ final class qla {
               break;
             }
           }
-          stackIn_40_0 = new eua(0L, param4, param2, param1, var11, var10, var8, var9);
+          stackIn_40_0 = new QuickChatMenu(0L, param4, param2, param1, var11, var10, var8, var9);
           return stackIn_40_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -214,7 +214,7 @@ final class qla {
         }
     }
 
-    final int a(int param0, int param1, char param2) {
+    final int kerning(int param0, int param1, char param2) {
         RuntimeException var4 = null;
         int stackIn_5_0 = 0;
         byte stackIn_7_0 = 0;
@@ -391,13 +391,13 @@ final class qla {
         }
     }
 
-    final int a(int param0, int param1) {
+    final int characterWidth(int param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 255) {
-            this.a(82, -75);
+            this.characterWidth(82, -75);
           }
           stackIn_4_0 = this.field_e[param1] & 255;
           return stackIn_4_0;
@@ -490,7 +490,7 @@ final class qla {
                         if (!var19.equals("lt")) {
                           if (!var19.equals("gt")) {
                             if (var19.equals("nbsp")) {
-                              var17 = var17 + this.a(255, 160);
+                              var17 = var17 + this.characterWidth(255, 160);
                               if (null != this.field_c &&
                                 -1 != var12) {
                                 var17 = var17 + this.field_c[var12][160];
@@ -499,7 +499,7 @@ final class qla {
                             } else {
                               if (!var19.equals("shy")) {
                                 if (var19.equals("times")) {
-                                  var17 = var17 + this.a(255, 215);
+                                  var17 = var17 + this.characterWidth(255, 215);
                                   if (null != this.field_c &&
                                     var12 != -1) {
                                     var17 = var17 + this.field_c[var12][215];
@@ -508,7 +508,7 @@ final class qla {
                                 } else {
                                   if (!var19.equals("euro")) {
                                     if (var19.equals("copy")) {
-                                      var17 = var17 + this.a(255, 169);
+                                      var17 = var17 + this.characterWidth(255, 169);
                                       if (this.field_c != null &&
                                         var12 != -1) {
                                         var17 = var17 + this.field_c[var12][169];
@@ -536,7 +536,7 @@ final class qla {
                                           break regionExit2;
                                         }
                                       }
-                                      var17 = var17 + this.a(255, 174);
+                                      var17 = var17 + this.characterWidth(255, 174);
                                       if (this.field_c != null &&
                                         var12 != -1) {
                                         var17 = var17 + this.field_c[var12][174];
@@ -544,7 +544,7 @@ final class qla {
                                       var12 = 174;
                                     }
                                   } else {
-                                    var17 = var17 + this.a(255, 8364);
+                                    var17 = var17 + this.characterWidth(255, 8364);
                                     if (null != this.field_c &&
                                       -1 != var12) {
                                       var17 = var17 + this.field_c[var12][8364];
@@ -553,7 +553,7 @@ final class qla {
                                   }
                                 }
                               } else {
-                                var17 = var17 + this.a(255, 173);
+                                var17 = var17 + this.characterWidth(255, 173);
                                 if (this.field_c != null &&
                                   var12 != -1) {
                                   var17 = var17 + this.field_c[var12][173];
@@ -562,7 +562,7 @@ final class qla {
                               }
                             }
                           } else {
-                            var17 = var17 + this.a(255, 62);
+                            var17 = var17 + this.characterWidth(255, 62);
                             if (this.field_c != null &&
                               -1 != var12) {
                               var17 = var17 + this.field_c[var12][62];
@@ -570,7 +570,7 @@ final class qla {
                             var12 = 62;
                           }
                         } else {
-                          var17 = var17 + this.a(255, 60);
+                          var17 = var17 + this.characterWidth(255, 60);
                           if (null != this.field_c &&
                             var12 != -1) {
                             var17 = var17 + this.field_c[var12][60];
@@ -593,7 +593,7 @@ final class qla {
                     }
                     var16 = -1;
                   } else {
-                    var17 = var17 + this.a(255, var16);
+                    var17 = var17 + this.characterWidth(255, var16);
                     var18 = var15;
                     if (this.field_c != null &&
                       var12 != -1) {
@@ -1034,7 +1034,7 @@ final class qla {
         }
     }
 
-    qla(byte[] param0) {
+    FontMetrics(byte[] param0) {
         byte[] array$0 = null;
         byte[] array$1 = null;
         int stackIn_8_0 = 0;
@@ -1208,7 +1208,7 @@ final class qla {
           field_b = null;
           field_i = null;
           if (param0 != -63) {
-            qla.a(true, (String) null);
+            FontMetrics.a(true, (String) null);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "qla.F(" + param0 + ')');

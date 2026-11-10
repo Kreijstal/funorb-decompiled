@@ -424,7 +424,7 @@ final class CoinBagItemComponent extends ItemComponent {
                   hw.field_a.field_X = false;
                   if (hw.field_a.field_pb) {
                     if (rm.field_e.field_a.field_wb != 0) {
-                      ArchiveNetworkClient.field_b = gl.$cfr$intArgs$a$53ce4ab4c593(126, sta.field_A, new String[]{BitPacketBuffer.field_p});
+                      ArchiveNetworkClient.field_b = gl.$cfr$intArgs$a$53ce4ab4c593(126, GridWidgetContainer.field_A, new String[]{BitPacketBuffer.field_p});
                       if (var19 != 0) {
                         ArchiveNetworkClient.field_b = BitPacketBuffer.field_o;
                       }
@@ -438,14 +438,14 @@ final class CoinBagItemComponent extends ItemComponent {
                 var9_ref_String = uu.field_a.field_tb;
                 wf.field_g.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(113, jea.field_nb, new String[]{var9_ref_String}).toUpperCase();
                 dl.field_t.a(dka.field_b.field_G, 40, -23776, dka.field_b.field_t - 40, 0);
-                dl.field_t.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(107, bja.field_d, new String[]{var9_ref_String});
+                dl.field_t.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(107, TextLayout.field_d, new String[]{var9_ref_String});
                 var8 = dl.field_t;
               }
             } else {
               var9_ref_String = uu.field_a.field_tb;
               wf.field_g.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(113, jea.field_nb, new String[]{var9_ref_String}).toUpperCase();
               dl.field_t.a(dka.field_b.field_G, 40, -23776, dka.field_b.field_t - 40, 0);
-              dl.field_t.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(107, bja.field_d, new String[]{var9_ref_String});
+              dl.field_t.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(107, TextLayout.field_d, new String[]{var9_ref_String});
               var8 = dl.field_t;
             }
             if (uq.field_d != 0L) {
@@ -476,7 +476,7 @@ final class CoinBagItemComponent extends ItemComponent {
           }
           if (null != uu.field_a) {
             if (0 != bc.field_b.field_y) {
-              et.a(param2, 30, uu.field_a.f(0));
+              MidiVoiceMixer.a(param2, 30, uu.field_a.f(0));
             }
             if (hw.field_a.field_y != 0) {
               hoa.field_p = true;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gga extends ofa implements tsa {
-    private rj field_N;
+    private FocusableWidget field_N;
     static SpriteData[] field_O;
     static ur field_M;
     static String field_L;
@@ -16,11 +16,11 @@ final class gga extends ofa implements tsa {
         }
     }
 
-    private final rj a(String param0, qc param1, int param2) {
-        rj var4 = null;
+    private final FocusableWidget a(String param0, qc param1, int param2) {
+        FocusableWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        rj stackIn_3_0 = null;
+        FocusableWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -28,7 +28,7 @@ final class gga extends ofa implements tsa {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new rj(param0, param1);
+          var4 = new FocusableWidget(param0, param1);
           var4.field_r = (isa) ((Object) new td());
           var5 = this.field_p - 6;
           this.field_p = this.field_p + 38;
@@ -123,7 +123,7 @@ final class gga extends ofa implements tsa {
         }
     }
 
-    public final void a(int param0, int param1, rj param2, int param3, byte param4) {
+    public final void a(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -164,12 +164,12 @@ final class gga extends ofa implements tsa {
         try {
           var3 = null;
           if (gj.field_o == param1) {
-            var3 = jma.field_o;
+            var3 = SwitchState.field_o;
           } else {
             if (or.field_j == param1) {
               this.field_p = this.field_p + 10;
               var3 = S2CEventPacket.field_b;
-              if (sta.g((byte) 97)) {
+              if (GridWidgetContainer.g((byte) 97)) {
                 var3 = tj.field_h;
                 this.field_p = this.field_p + 20;
               }
@@ -217,8 +217,8 @@ final class gga extends ofa implements tsa {
           this.field_B = false;
           return;
         }
-        rj var3 = (rj) null;
-        this.a(14, -50, (rj) null, -113, (byte) -27);
+        FocusableWidget var3 = (FocusableWidget) null;
+        this.a(14, -50, (FocusableWidget) null, -113, (byte) -27);
         this.field_B = false;
     }
 

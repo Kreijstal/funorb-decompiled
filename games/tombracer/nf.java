@@ -332,7 +332,7 @@ final class nf {
         if (-param0 + param3 < pka.field_b) {
           BeamShooterBehaviour.a(param4, param0, param1, false, param2, param5, param3);
         } else {
-          if (ss.field_c < param0 + param3) {
+          if (DiskCacheWorker.field_c < param0 + param3) {
             BeamShooterBehaviour.a(param4, param0, param1, false, param2, param5, param3);
           } else {
             if (gca.field_d > -param0 + param1) {

@@ -46,8 +46,8 @@ final class pk extends we {
         for (var5_int = 0; var5_int < var4; var5_int++) {
           if (jba.field_j >= -(this.field_D[var5_int] >> 1) + this.field_A[var5_int] &&
             jba.field_j <= this.field_A[var5_int] + (this.field_D[var5_int] >> 1) &&
-            -(this.field_t[var5_int] >> 1) + this.field_B[var5_int] <= sta.field_B &&
-            (this.field_t[var5_int] >> 1) + this.field_B[var5_int] >= sta.field_B &&
+            -(this.field_t[var5_int] >> 1) + this.field_B[var5_int] <= GridWidgetContainer.field_B &&
+            (this.field_t[var5_int] >> 1) + this.field_B[var5_int] >= GridWidgetContainer.field_B &&
             1 == hf.field_b) {
             FacePlayerLocomotor.field_p = null;
             this.field_u = var5_int;
@@ -96,7 +96,7 @@ final class pk extends we {
         if (param1 != 30) {
           this.g(-68, -86);
         }
-        return koa.b(0) - 30;
+        return SwitchLinkList.b(0) - 30;
     }
 
     private final void a(int param0, int param1, int param2, int param3, int param4, String param5) {
@@ -226,7 +226,7 @@ final class pk extends we {
           ((ToolkitSprite) (var5Lifetime2)).a(this.field_A[var4] - (this.field_D[var4] >> 1), -(this.field_t[var4] >> 1) + (this.field_B[var4] + param1), this.field_D[var4], this.field_t[var4], 0, 16777215 | var6 << 24, 1);
         }
         var4Lifetime1 = 120 + param1 + 50;
-        eda.field_f.a(-1, -1, ab.field_t[0], -14671840, var4Lifetime1, hl.field_a);
+        eda.field_f.a(-1, -1, ab.field_t[0], -14671840, var4Lifetime1, OpenGlBuffer.field_a);
         eda.field_f.a(var4Lifetime1, false, ObjectPool.field_g.toUpperCase(), ab.field_t[1], -14671840, -1);
         eda.field_f.a(12199, var4Lifetime1, lc.field_L.toUpperCase(), -1, -14671840, ab.field_t[2]);
         var5Lifetime1 = null;

@@ -100,7 +100,7 @@ final class GasTrapComponent extends PrefabComponent {
           var13.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = new TimeSwitchBehaviour(param2, param0);
           var6.a(new mg(50 * this.field_I >> 16), (byte) -105);
-          var6.k((byte) -91).b(1, 97);
+          var6.getSwitchState((byte) -91).b(1, 97);
           var13.addBehaviour((byte) 83, (Behaviour) (var6));
           var7 = new Trap(param2, true);
           var8 = param2.getWidth((byte) -86);
@@ -113,9 +113,9 @@ final class GasTrapComponent extends PrefabComponent {
           var10.b((byte) -106, true);
           var10.a(16, (byte) -22);
           var7.addBehaviour((byte) 83, (Behaviour) (var10));
-          var7.m(-45);
+          var7.toggle(-45);
           param2.addTrap(var7, (byte) 32);
-          var6.k((byte) -115).h(1).a(9, new lj[]{(lj) ((Object) var7)});
+          var6.getSwitchState((byte) -115).getLinks(1).a(9, new Switchable[]{(Switchable) ((Object) var7)});
           var11 = rm.field_a;
           var12 = (GasVentModel) (var11.createModel(20, 83));
           var13.a(var6, (byte) 124, var12);

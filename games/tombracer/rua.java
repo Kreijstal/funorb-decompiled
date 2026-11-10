@@ -9,7 +9,7 @@ final class rua extends ij implements tsa {
     private boolean field_eb;
     private boolean field_ib;
 
-    public final void a(int param0, int param1, rj param2, int param3, byte param4) {
+    public final void a(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
         if (param4 < 44) {
           jua var7 = (jua) null;
           this.a(-122, true, (jua) null);

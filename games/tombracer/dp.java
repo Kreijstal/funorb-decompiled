@@ -43,7 +43,7 @@ final class dp extends vw {
           var6 = ka.a((byte) -95, param1.a("gl", (byte) 122, "environment_mapped_water_v"), 35633, param0);
           var4 = var6;
           var5 = ka.a((byte) 123, param1.a("gl", (byte) 127, "environment_mapped_water_f"), 35632, param0);
-          this.field_k = jm.a(new pr[]{var6, var5}, param0, 1);
+          this.field_k = PasswordValidator.a(new pr[]{var6, var5}, param0, 1);
           stackIn_12_1 = (this.field_k != null) && (this.field_f.b(-37));
           this.field_e = stackIn_12_1;
           return;

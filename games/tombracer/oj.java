@@ -190,7 +190,7 @@ final class oj extends jea {
             this.field_yb = this.field_yb - 1;
           }
           if (this.field_yb == 0 &&
-            sta.field_B < this.field_wb.field_K + this.field_wb.field_A) {
+            GridWidgetContainer.field_B < this.field_wb.field_K + this.field_wb.field_A) {
             this.field_yb = 3;
             return true;
           }
@@ -312,7 +312,7 @@ final class oj extends jea {
             this.field_yb = this.field_yb - 1;
           }
           if (this.field_yb == 0) {
-            if (sta.field_B < this.field_wb.field_A + this.field_wb.field_K - (-this.field_wb.field_t - this.field_wb.field_O)) {
+            if (GridWidgetContainer.field_B < this.field_wb.field_A + this.field_wb.field_K - (-this.field_wb.field_t - this.field_wb.field_O)) {
               return false;
             }
             this.field_yb = 3;

@@ -280,33 +280,33 @@ final class BitPacketBuffer extends PacketBuffer {
         int var4 = 0;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          if (param2 == qla.field_f &&
+          if (param2 == FontMetrics.field_f &&
             Room.field_k == param1) {
             return;
           }
           if (!param0) {
             return;
           }
-          qla.field_f = param2;
+          FontMetrics.field_f = param2;
           Room.field_k = param1;
           if (WeaponShooterBehaviour.field_r == Room.field_k) {
-            if (qla.field_f == baa.field_e) {
+            if (FontMetrics.field_f == baa.field_e) {
               baa.field_d.a(0, new ei[]{(ei) ((Object) kra.field_a)});
             } else {
-              if (tia.field_d == qla.field_f) {
+              if (tia.field_d == FontMetrics.field_f) {
                 baa.field_d.a(0, new ei[]{(ei) ((Object) paa.field_z)});
               } else {
-                if (qla.field_f == PitModel.field_s) {
-                  baa.field_d.a(0, new ei[]{(ei) ((Object) laa.field_x)});
+                if (FontMetrics.field_f == PitModel.field_s) {
+                  baa.field_d.a(0, new ei[]{(ei) ((Object) UsernameSuggestionsPanel.field_x)});
                 }
               }
             }
           } else {
-            if (qla.field_f != baa.field_e) {
-              if (qla.field_f == tia.field_d) {
+            if (FontMetrics.field_f != baa.field_e) {
+              if (FontMetrics.field_f == tia.field_d) {
                 baa.field_d.a(0, new ei[]{(ei) ((Object) vea.field_c)});
               } else {
-                if (qla.field_f == PitModel.field_s) {
+                if (FontMetrics.field_f == PitModel.field_s) {
                   baa.field_d.a(0, new ei[]{(ei) ((Object) daa.field_d)});
                 }
               }

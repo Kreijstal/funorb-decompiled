@@ -16,7 +16,7 @@ final class ak extends ela {
           if (param1 != 0) {
             field_o = (Object) null;
           }
-          stackIn_3_0 = new bfa(qla.a(true, (String) (param0[0].field_d)));
+          stackIn_3_0 = new bfa(FontMetrics.a(true, (String) (param0[0].field_d)));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

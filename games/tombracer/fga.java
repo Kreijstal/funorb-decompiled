@@ -70,8 +70,8 @@ final class fga implements ShellListener {
               var3_int = 0;
               while (this.field_d.length > var3_int) {
                 if (var5 == 0) {
-                  if (this.field_d[var3_int] < jm.field_m &&
-                    jm.field_m < (40 + this.field_d[var3_int]) &&
+                  if (this.field_d[var3_int] < PasswordValidator.field_m &&
+                    PasswordValidator.field_m < (40 + this.field_d[var3_int]) &&
                     lba.field_p > this.field_b[var3_int] &&
                     (this.field_b[var3_int] + 30) > lba.field_p &&
                     !oj.field_tb[82]) {

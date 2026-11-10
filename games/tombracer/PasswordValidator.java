@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jm extends kca {
+final class PasswordValidator extends kca {
     static int field_m;
     static int field_n;
     private TextInputWidget field_j;
@@ -100,7 +100,7 @@ final class jm extends kca {
         }
     }
 
-    final static long a(CharSequence param0, int param1) {
+    final static long encodeBase37(CharSequence param0, int param1) {
         int var6 = 0;
         long var2_long = 0L;
         int var4 = 0;
@@ -283,7 +283,7 @@ final class jm extends kca {
         }
     }
 
-    jm(TextInputWidget param0, TextInputWidget param1, TextInputWidget param2) {
+    PasswordValidator(TextInputWidget param0, TextInputWidget param1, TextInputWidget param2) {
         super(param0);
         try {
           this.field_o = param1;
@@ -296,7 +296,7 @@ final class jm extends kca {
     public static void releaseStatics(boolean param0) {
         field_k = null;
         if (param0) {
-          jm.releaseStatics(false);
+          PasswordValidator.releaseStatics(false);
         }
     }
 

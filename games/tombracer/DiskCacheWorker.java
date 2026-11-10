@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ss implements Runnable {
+final class DiskCacheWorker implements Runnable {
     private vj field_d;
     static int field_c;
     int field_b;
@@ -77,7 +77,7 @@ final class ss implements Runnable {
         }
     }
 
-    final void a(byte param0) {
+    final void shutdown(byte param0) {
         try {
           this.field_e = true;
           synchronized (this.field_d) {
@@ -103,7 +103,7 @@ final class ss implements Runnable {
         if (param0 > 4) {
           return (param2 & 2048) != 0 ? true : false;
         }
-        ss.a((byte) -46, 11, 42);
+        DiskCacheWorker.a((byte) -46, 11, 42);
         return (param2 & 2048) != 0 ? true : false;
     }
 
@@ -178,7 +178,7 @@ final class ss implements Runnable {
           this.a(-42, var4);
           if (param0 >= -42) {
             var5 = (byte[]) null;
-            this.a(true, 61, (ppa) null, (byte[]) null);
+            this.writeAsync(true, 61, (ppa) null, (byte[]) null);
           }
           stackIn_3_0 = var4;
           return stackIn_3_0;
@@ -199,7 +199,7 @@ final class ss implements Runnable {
     final static boolean a(int param0) {
         lqa var1 = uv.b(false);
         if (param0 < 122) {
-          ss.a((byte) -30, -8, 82);
+          DiskCacheWorker.a((byte) -30, -8, 82);
           if (var1 == null) {
             return false;
           }
@@ -223,7 +223,7 @@ final class ss implements Runnable {
         }
     }
 
-    final sga a(boolean param0, int param1, ppa param2, byte[] param3) {
+    final sga writeAsync(boolean param0, int param1, ppa param2, byte[] param3) {
         sga var5 = null;
         RuntimeException var5_ref = null;
         sga stackIn_2_0 = null;
@@ -267,7 +267,7 @@ final class ss implements Runnable {
         }
     }
 
-    ss(PlatformTaskDispatcher param0) {
+    DiskCacheWorker(PlatformTaskDispatcher param0) {
         AsyncRequest var2 = null;
         this.field_d = new vj();
         this.field_b = 0;

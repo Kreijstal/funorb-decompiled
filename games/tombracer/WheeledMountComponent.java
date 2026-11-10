@@ -95,7 +95,7 @@ final class WheeledMountComponent extends PathMoverComponent {
               return stackIn_6_0;
             }
             if (tia.field_d != param0) {
-              stackIn_11_0 = laa.field_x.field_c;
+              stackIn_11_0 = UsernameSuggestionsPanel.field_x.field_c;
               return stackIn_11_0;
             }
             stackIn_9_0 = paa.field_z.field_c;

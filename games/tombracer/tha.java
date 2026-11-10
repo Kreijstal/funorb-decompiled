@@ -4,9 +4,9 @@
 final class tha extends WidgetContainer implements tsa {
     static String field_A;
     static String field_B;
-    private rj field_x;
-    private rj field_z;
-    private rj field_w;
+    private FocusableWidget field_x;
+    private FocusableWidget field_z;
+    private FocusableWidget field_w;
     static String field_y;
 
     final void renderLayer(int param0, int param1, int param2, int param3) {
@@ -140,9 +140,9 @@ final class tha extends WidgetContainer implements tsa {
 
     public tha() {
         super(0, 0, 476, 225, (isa) null);
-        this.field_z = new rj(foa.field_a, (qc) null);
-        this.field_w = new rj(kda.field_gd, (qc) null);
-        this.field_x = new rj(fca.field_d, (qc) null);
+        this.field_z = new FocusableWidget(foa.field_a, (qc) null);
+        this.field_w = new FocusableWidget(kda.field_gd, (qc) null);
+        this.field_x = new FocusableWidget(fca.field_d, (qc) null);
         td var1 = new td();
         this.field_z.field_r = (isa) ((Object) var1);
         this.field_w.field_r = (isa) ((Object) var1);
@@ -170,7 +170,7 @@ final class tha extends WidgetContainer implements tsa {
         field_A = null;
     }
 
-    public final void a(int param0, int param1, rj param2, int param3, byte param4) {
+    public final void a(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         RuntimeException stackIn_12_0 = null;

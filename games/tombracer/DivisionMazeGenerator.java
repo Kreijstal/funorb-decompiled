@@ -3,7 +3,7 @@
  */
 final class DivisionMazeGenerator extends MazeGenerator {
     static String field_d;
-    static ph[] field_c;
+    static BufferedCacheFile[] field_c;
     static IntrusiveDeque field_e;
     static String field_b;
     static int field_f;

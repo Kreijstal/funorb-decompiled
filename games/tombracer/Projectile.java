@@ -15,7 +15,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, t
     private int velocityY;
     private int field_E;
     private int field_i;
-    static ss field_k;
+    static DiskCacheWorker field_k;
     private Room field_z;
     private int angle;
     private int y;

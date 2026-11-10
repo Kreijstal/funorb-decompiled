@@ -82,7 +82,7 @@ final class ControllerLocomotor extends Locomotor {
         }
     }
 
-    public final void m(int param0) {
+    public final void toggle(int param0) {
         if (this.field_i) {
           return;
         }

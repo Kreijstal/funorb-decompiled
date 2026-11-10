@@ -68,11 +68,11 @@ final class qka extends qra {
             this.field_p = new fna[2];
             this.field_p[0] = new fna(33, wba.field_q[33], 1, false);
             this.field_p[0].field_b = aaa.a(false) - 110;
-            this.field_p[0].field_i = koa.b(0) - 25;
+            this.field_p[0].field_i = SwitchLinkList.b(0) - 25;
             this.field_p[0].a(false);
             this.field_p[1] = new fna(34, wba.field_q[34], 1, false);
             this.field_p[1].field_b = 100;
-            this.field_p[1].field_i = koa.b(0) - 25;
+            this.field_p[1].field_i = SwitchLinkList.b(0) - 25;
             this.field_p[1].a(false);
             return;
           }
@@ -81,7 +81,7 @@ final class qka extends qra {
           var3_intLifetime1 = stackIn_26_0;
           this.field_p[0] = new fna(var3_intLifetime1, wba.field_q[var3_intLifetime1], 0, false);
           this.field_p[0].field_b = -100 + aaa.a(false);
-          this.field_p[0].field_i = koa.b(0) - 25;
+          this.field_p[0].field_i = SwitchLinkList.b(0) - 25;
           this.field_p[0].a(false);
           if (!this.field_h.field_D &&
             !vpa.a(43)) {
@@ -181,12 +181,12 @@ final class qka extends qra {
           while (var22 < var6) {
             var8 = this.field_r[var22];
             var9 = -var8 + var6;
-            var10 = -(var5 * var9) + koa.b(0);
+            var10 = -(var5 * var9) + SwitchLinkList.b(0);
             var11 = var4 * var22 + (var3 - (var4 >> 1) * (-1 + var6));
             this.field_c.players[var22].n((byte) -120).a(-1, var11, 800, 0, var10);
             IntrusiveDeque.field_c.a(var11 - (IntrusiveDeque.field_c.a() >> 1) + 1, var10 - 8);
             if (var8 == 0) {
-              sta.field_y[-1 + sta.field_y.length].a(-(sta.field_y[sta.field_y.length - 1].a() >> 1) + var11 - 1, var10 - 12);
+              GridWidgetContainer.field_y[-1 + GridWidgetContainer.field_y.length].a(-(GridWidgetContainer.field_y[GridWidgetContainer.field_y.length - 1].a() >> 1) + var11 - 1, var10 - 12);
             }
             var12 = 150;
             cha.a(-60 + var11, 2, tga.field_a, 4, var10 - 250, 120, 65793 | var12 << 24, 1, 100);
@@ -214,7 +214,7 @@ final class qka extends qra {
           }
         } else {
           var3 = aaa.a(false) >> 1;
-          var4 = koa.b(0) >> 1;
+          var4 = SwitchLinkList.b(0) >> 1;
           gg.field_f.a(-(gg.field_f.a() >> 1) + var3, -(gg.field_f.c() >> 1) + var4);
           var5 = 260;
           var6 = 40;
@@ -376,8 +376,8 @@ final class qka extends qra {
           if (param1) {
             if (this.field_p[var3Lifetime1].field_b - 80 <= jba.field_j) {
               if (jba.field_j < 80 + this.field_p[var3Lifetime1].field_b) {
-                if (-25 + this.field_p[var3Lifetime1].field_i <= sta.field_B) {
-                  stackIn_24_0 = (this.field_p[var3Lifetime1].field_i + 25 > sta.field_B) ? 1 : 0;
+                if (-25 + this.field_p[var3Lifetime1].field_i <= GridWidgetContainer.field_B) {
+                  stackIn_24_0 = (this.field_p[var3Lifetime1].field_i + 25 > GridWidgetContainer.field_B) ? 1 : 0;
                 } else {
                   stackIn_24_0 = 0;
                 }

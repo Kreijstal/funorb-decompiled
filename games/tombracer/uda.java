@@ -67,14 +67,14 @@ final class uda extends qra {
         var10 = TombRacer.field_G ? 1 : 0;
         Room.field_j.a(0, 0);
         var3 = aaa.a(false) / 2;
-        var4 = koa.b(0) / 2;
+        var4 = SwitchLinkList.b(0) / 2;
         stackIn_3_0 = (this.i(-1)) ? 0 : 1;
         var5 = stackIn_3_0;
         ik.field_h.a(0, 0);
         SocketConnector.a(gta.field_a.toUpperCase(), 1, SingleChildWidget.field_v, 2431750, 0, 48, 1, -222 + var4, var3 - 360, -1, (byte) 60, 512);
         if (-1 == this.field_u &&
           var5 != 0) {
-          SocketConnector.a(jsa.field_F, 1, eda.field_f, 2431750, 0, 48, 1, koa.b(0) - 48, var3 - 256, -1, (byte) 60, 512);
+          SocketConnector.a(jsa.field_F, 1, eda.field_f, 2431750, 0, 48, 1, SwitchLinkList.b(0) - 48, var3 - 256, -1, (byte) 60, 512);
         }
         var6_ref_ad = (ad) (this.field_n.first(-80));
         while (var6_ref_ad != null) {
@@ -186,7 +186,7 @@ final class uda extends qra {
           this.field_n = new IntrusiveDeque();
           for (var3_int = 0; var3_int < 13; var3_int++) {
             var4 = aaa.a(false);
-            var5 = koa.b(0);
+            var5 = SwitchLinkList.b(0);
             var6 = var3_int % 7 * (0 + (-90 + var4) / 7) + 45;
             stackIn_5_0 = -90;
             if (var3_int >= 7) {

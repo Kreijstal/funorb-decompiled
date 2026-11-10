@@ -39,21 +39,21 @@ final class ik extends IntrusiveNode {
           var11 = var14 + (var13 * pka.field_b >> 12);
           var9 = pka.field_b;
         } else {
-          if (param1 <= ss.field_c) {
+          if (param1 <= DiskCacheWorker.field_c) {
             var9 = param1;
             var11 = param5;
           } else {
-            var11 = (var13 * ss.field_c >> 12) + var14;
-            var9 = ss.field_c;
+            var11 = (var13 * DiskCacheWorker.field_c >> 12) + var14;
+            var9 = DiskCacheWorker.field_c;
           }
         }
         if (param0 < pka.field_b) {
           var12 = var14 + (var13 * pka.field_b >> 12);
           var10 = pka.field_b;
         } else {
-          if (ss.field_c < param0) {
-            var12 = (ss.field_c * var13 >> 12) + var14;
-            var10 = ss.field_c;
+          if (DiskCacheWorker.field_c < param0) {
+            var12 = (DiskCacheWorker.field_c * var13 >> 12) + var14;
+            var10 = DiskCacheWorker.field_c;
           } else {
             var10 = param0;
             var12 = param4;

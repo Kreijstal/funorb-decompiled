@@ -35,11 +35,11 @@ final class gi extends me {
         int var14;
         int var13;
         var14 = TombRacer.field_G ? 1 : 0;
-        var2 = (aaa.a(false) - koa.b(0) / 2) / 2;
+        var2 = (aaa.a(false) - SwitchLinkList.b(0) / 2) / 2;
         if (param0 >= -13) {
           return;
         }
-        var3 = (koa.b(0) + 130) / 2;
+        var3 = (SwitchLinkList.b(0) + 130) / 2;
         var4 = this.field_i.l(93);
         var5 = 10309393;
         var6 = 11184810;

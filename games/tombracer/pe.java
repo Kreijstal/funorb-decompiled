@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pe extends tfa implements gf {
+final class pe extends OpenGlTexture implements gf {
     static fta field_m;
     static String field_k;
     private int field_l;
@@ -177,13 +177,13 @@ final class pe extends tfa implements gf {
         return this.field_n;
     }
 
-    public final void b(byte param0) {
+    public final void bind(byte param0) {
         if (param0 <= 32) {
           field_k = (String) null;
-          super.b((byte) 72);
+          super.bind((byte) 72);
           return;
         }
-        super.b((byte) 72);
+        super.bind((byte) 72);
     }
 
     public final void a(byte param0, boolean param1, boolean param2) {

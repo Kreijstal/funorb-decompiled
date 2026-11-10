@@ -82,7 +82,7 @@ final class dea {
         float var4;
         float var4Lifetime1;
         if (param0 <= -109) {
-          var4 = (float)koa.b(0) / 500.0f;
+          var4 = (float)SwitchLinkList.b(0) / 500.0f;
           this.field_d = this.field_d + var4 * var4;
           this.field_b = this.field_b + this.field_d;
           if (param1 &&
@@ -105,7 +105,7 @@ final class dea {
           return;
         }
         this.c(-29);
-        var4Lifetime1 = (float)koa.b(0) / 500.0f;
+        var4Lifetime1 = (float)SwitchLinkList.b(0) / 500.0f;
         this.field_d = this.field_d + var4Lifetime1 * var4Lifetime1;
         this.field_b = this.field_b + this.field_d;
         if (param1 &&
@@ -131,7 +131,7 @@ final class dea {
         this.field_f = false;
         this.field_d = 0.0f;
         if (param0 <= -47) {
-          this.field_b = this.field_e - (float)koa.b(0) - (float)Math.abs((int)(Math.random() * (double)koa.b(0)));
+          this.field_b = this.field_e - (float)SwitchLinkList.b(0) - (float)Math.abs((int)(Math.random() * (double)SwitchLinkList.b(0)));
           return;
         }
     }

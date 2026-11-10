@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class laa extends WidgetContainer implements tsa {
+final class UsernameSuggestionsPanel extends WidgetContainer implements tsa {
     private String[] field_A;
     static lqa field_x;
     private mia field_w;
     static java.awt.Font field_y;
-    private rj[] field_z;
+    private FocusableWidget[] field_z;
 
     final void a(int param0, String[] param1) {
         int var4_int = 0;
@@ -33,15 +33,15 @@ final class laa extends WidgetContainer implements tsa {
               this.field_A[var4_int] = wt.a(kha.b(param0, 17404), (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
             }
             var4 = new kaa(KeySwitchComponent.field_J, 0, 1);
-            this.field_z = new rj[1 + var3_int];
+            this.field_z = new FocusableWidget[1 + var3_int];
             for (var5 = 0; var5 < var3_int; var5++) {
-              this.field_z[var5] = new rj(this.field_A[var5], (qc) (this));
+              this.field_z[var5] = new FocusableWidget(this.field_A[var5], (qc) (this));
               this.field_z[var5].field_r = (isa) ((Object) var4);
-              this.field_z[var5].field_q = qla.field_i;
+              this.field_z[var5].field_q = FontMetrics.field_i;
               this.field_z[var5].setBounds((byte) -31, 80, 15, 0, 20 + 16 * var5);
               this.addChild(this.field_z[var5], param0 ^ -13598);
             }
-            this.field_z[var3_int] = new rj(ll.field_h, (qc) (this));
+            this.field_z[var3_int] = new FocusableWidget(ll.field_h, (qc) (this));
             this.field_z[var3_int].field_r = (isa) ((Object) var4);
             this.field_z[var3_int].setBounds((byte) -31, 100, 15, 0, 20 + var3_int * 16 + 16);
             this.addChild(this.field_z[var3_int], -1);
@@ -63,7 +63,7 @@ final class laa extends WidgetContainer implements tsa {
         }
     }
 
-    public final void a(int param0, int param1, rj param2, int param3, byte param4) {
+    public final void a(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
         int var6_int = 0;
         int var7 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -114,11 +114,11 @@ final class laa extends WidgetContainer implements tsa {
         field_y = null;
         field_x = null;
         if (param0 != 16964) {
-          laa.releaseStatics(-107);
+          UsernameSuggestionsPanel.releaseStatics(-107);
         }
     }
 
-    final static int a(int param0, int param1, byte[] param2, int param3, CharSequence param4, byte param5) {
+    final static int encodeCp1252(int param0, int param1, byte[] param2, int param3, CharSequence param4, byte param5) {
         int var7 = 0;
         int stackIn_3_0 = 0;
         int stackIn_70_0 = 0;
@@ -258,7 +258,7 @@ final class laa extends WidgetContainer implements tsa {
         }
     }
 
-    laa(mia param0) {
+    UsernameSuggestionsPanel(mia param0) {
         super(0, 0, 0, 0, (isa) null);
         try {
           this.field_w = param0;

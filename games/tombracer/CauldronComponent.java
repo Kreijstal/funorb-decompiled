@@ -7,7 +7,7 @@ final class CauldronComponent extends SwitchComponent {
     final Trap createTrap(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         EffectSwitchBehaviour var5 = null;
-        jma var6 = null;
+        SwitchState var6 = null;
         int var7 = 0;
         ModelCodec var8 = null;
         SwitchModel var9 = null;
@@ -31,7 +31,7 @@ final class CauldronComponent extends SwitchComponent {
           var5.a(true, 4, -81);
           var5.a(10, 1, 5, param1 - 2032);
           this.a(var5, (byte) -118);
-          var6 = var5.k((byte) -101);
+          var6 = var5.getSwitchState((byte) -101);
           var7 = 25;
           var6.a(var7, 0, 0, 0, 5, 0);
           var10.addBehaviour((byte) 83, (Behaviour) (var5));

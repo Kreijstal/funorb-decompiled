@@ -639,7 +639,7 @@ final class pfa {
                 }
                 var2 = mt.a("instructionTitleLindemannTotems", (byte) 117);
                 if (null != var2) {
-                  eua.field_Ab = jaa.a((byte) 25, var2);
+                  QuickChatMenu.field_Ab = jaa.a((byte) 25, var2);
                 }
                 var2 = mt.a("instructionTextLindemannTotems", (byte) 123);
                 if (var2 != null) {
@@ -659,7 +659,7 @@ final class pfa {
                 }
                 var2 = mt.a("instructionTextBobbyGeorgeTotems", (byte) 103);
                 if (null != var2) {
-                  koa.field_d = jaa.a((byte) 102, var2);
+                  SwitchLinkList.field_d = jaa.a((byte) 102, var2);
                 }
                 var2 = mt.a("instructionTitleMirrors", (byte) 116);
                 if (null != var2) {
@@ -791,7 +791,7 @@ final class pfa {
                 }
                 var2 = mt.a("instructionTitleMazes", (byte) 118);
                 if (null != var2) {
-                  sta.field_H = jaa.a((byte) 66, var2);
+                  GridWidgetContainer.field_H = jaa.a((byte) 66, var2);
                 }
                 var2 = mt.a("instructionTextMazes", (byte) 105);
                 if (var2 != null) {
@@ -1181,7 +1181,7 @@ final class pfa {
                 }
                 var2 = mt.a("rank", (byte) 122);
                 if (var2 != null) {
-                  hl.field_a = jaa.a((byte) 65, var2);
+                  OpenGlBuffer.field_a = jaa.a((byte) 65, var2);
                 }
                 var2 = mt.a("fivehunderedplus", (byte) 118);
                 if (null != var2) {
@@ -1931,19 +1931,19 @@ final class pfa {
                 }
                 var2 = mt.a("death_gas,0", (byte) 115);
                 if (var2 != null) {
-                  fe.gasDeathMessages[0] = jaa.a((byte) 85, var2);
+                  DateFieldsWidget.gasDeathMessages[0] = jaa.a((byte) 85, var2);
                 }
                 var2 = mt.a("death_gas,1", (byte) 107);
                 if (var2 != null) {
-                  fe.gasDeathMessages[1] = jaa.a((byte) 91, var2);
+                  DateFieldsWidget.gasDeathMessages[1] = jaa.a((byte) 91, var2);
                 }
                 var2 = mt.a("death_gas,2", (byte) 115);
                 if (null != var2) {
-                  fe.gasDeathMessages[2] = jaa.a((byte) 40, var2);
+                  DateFieldsWidget.gasDeathMessages[2] = jaa.a((byte) 40, var2);
                 }
                 var2 = mt.a("death_gas,3", (byte) 119);
                 if (var2 != null) {
-                  fe.gasDeathMessages[3] = jaa.a((byte) 48, var2);
+                  DateFieldsWidget.gasDeathMessages[3] = jaa.a((byte) 48, var2);
                 }
                 var2 = mt.a("next_round", (byte) 127);
                 if (null != var2) {
@@ -2166,7 +2166,7 @@ final class pfa {
           return;
         }
         try {
-          this.a(-28562, hq.field_b[param1] << 16, jw.field_z[param1] << 16);
+          this.a(-28562, hq.field_b[param1] << 16, LoginForm.field_z[param1] << 16);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pfa.F(" + param0 + ',' + param1 + ')');
         }
@@ -2268,7 +2268,7 @@ final class pfa {
           if (param0 != 79) {
             this.field_c = (bua) null;
           }
-          stackIn_10_0 = (~(jw.field_z[param1] << 16) == ~this.field_j) && (this.field_e == hq.field_b[param1] << 16);
+          stackIn_10_0 = (~(LoginForm.field_z[param1] << 16) == ~this.field_j) && (this.field_e == hq.field_b[param1] << 16);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2295,7 +2295,7 @@ final class pfa {
           if (param1 > -98) {
             this.a((byte) -74, -14);
           }
-          this.field_j = jw.field_z[param0] << 16;
+          this.field_j = LoginForm.field_z[param0] << 16;
           this.field_e = hq.field_b[param0] << 16;
           this.field_f.clear(8);
           return;
@@ -2335,7 +2335,7 @@ final class pfa {
           this.field_d = param0;
           this.field_c = new bua(0, this.field_d, 1);
           this.field_c.a(this.field_d, false, 0, 0, true);
-          this.field_j = jw.field_z[param1] << 16;
+          this.field_j = LoginForm.field_z[param1] << 16;
           this.field_e = hq.field_b[param1] << 16;
           this.field_g = false;
           this.field_f = new IntrusiveDeque();

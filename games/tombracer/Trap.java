@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody, Collidable, noa, qn, t {
+final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, Renderable, WorldBody, Collidable, noa, qn, t {
     private IntrusiveDeque children;
     static jea field_q;
     static int field_m;
@@ -340,7 +340,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         return this.field_U;
     }
 
-    final int i(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         int var4 = TombRacer.field_G ? 1 : 0;
         param0 = fs.mixHash((byte) 79, param0, this.localX);
         if (param1 >= -100) {
@@ -794,19 +794,19 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         return this.field_n;
     }
 
-    final lj a(boolean param0, int param1, byte param2) {
-        lj var4;
+    final Switchable a(boolean param0, int param1, byte param2) {
+        Switchable var4;
         int var7;
         Behaviour var8;
         Locomotor var9;
         Trap var10;
         IntrusiveDequeCursor var11;
         IntrusiveDequeCursor var12;
-        lj var4Lifetime1;
-        lj var4Lifetime2;
+        Switchable var4Lifetime1;
+        Switchable var4Lifetime2;
         var7 = TombRacer.field_G ? 1 : 0;
-        if (vh.a(param1, param0, -27201, (lj) (this))) {
-          return (lj) (this);
+        if (vh.matchesSwitchableId(param1, param0, -27201, (Switchable) (this))) {
+          return (Switchable) (this);
         }
         var9 = (Locomotor) (this.locomotors.first(-80));
         while (var9 != null) {
@@ -1499,11 +1499,11 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         this.N(0);
     }
 
-    public final ew h(byte param0) {
+    public final SwitchableScope getScope(byte param0) {
         if (param0 < 105) {
           this.field_j = 102;
         }
-        return (ew) ((Object) this.getRoot(0));
+        return (SwitchableScope) ((Object) this.getRoot(0));
     }
 
     final int O(int param0) {
@@ -1636,7 +1636,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         }
     }
 
-    public final SwitchableId n(int param0) {
+    public final SwitchableId getGlobalId(int param0) {
         if (param0 != 31974) {
           this.a(-74, (byte) 85);
         }
@@ -2112,21 +2112,21 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         this.localX = param2;
     }
 
-    public final void m(int param0) {
+    public final void toggle(int param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
         Trap var4 = (Trap) (this.children.first(-80));
         while (var4 != null) {
-          var4.m(-93);
+          var4.toggle(-93);
           var4 = (Trap) (this.children.next(123));
         }
         Locomotor var5 = (Locomotor) (this.locomotors.first(-80));
         while (var5 != null) {
-          var5.m(127);
+          var5.toggle(127);
           var5 = (Locomotor) (this.locomotors.next(109));
         }
         Behaviour var6 = (Behaviour) (this.behaviours.first(-80));
         while (var6 != null) {
-          var6.m(-109);
+          var6.toggle(-109);
           var6 = (Behaviour) (this.behaviours.next(112));
         }
         int var2 = 14 / ((28 - param0) / 49);
@@ -2275,7 +2275,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         }
     }
 
-    public final SwitchableId i(byte param0) {
+    public final SwitchableId getLocalId(byte param0) {
         if (param0 != 84) {
           return (SwitchableId) null;
         }
@@ -2312,14 +2312,14 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         field_q = null;
     }
 
-    public final lj a(int param0, int param1, boolean param2) {
+    public final Switchable findSwitchable(int param0, int param1, boolean param2) {
         if (param0 != 28672) {
-          return (lj) null;
+          return (Switchable) null;
         }
         if (param2) {
           return this.a(param2, param1, (byte) -26);
         }
-        return this.room.a(param0 + 0, param1, param2);
+        return this.room.findSwitchable(param0 + 0, param1, param2);
     }
 
     final Trap cloneInto(int param0, Room param1, boolean param2) {
@@ -2662,7 +2662,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
 
     final PlayerSimulation getSimulation(int param0) {
         if (param0 != 15470) {
-          this.i((byte) -88);
+          this.getLocalId((byte) -88);
         }
         return this.room.getSimulation(param0 ^ -1553485410);
     }
@@ -2676,7 +2676,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
 
     private final boolean f(boolean param0) {
         if (param0) {
-          this.m(-111);
+          this.toggle(-111);
         }
         return this.field_v;
     }

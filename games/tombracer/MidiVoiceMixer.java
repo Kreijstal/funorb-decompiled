@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class et extends PcmStream {
+final class MidiVoiceMixer extends PcmStream {
     IntrusiveDeque field_l;
     private MidiPcmStream field_k;
     PcmStreamMixer field_m;
@@ -75,8 +75,8 @@ final class et extends PcmStream {
         try {
           try {
             var9 = nma.field_l.getGraphics();
-            if (laa.field_y == null) {
-              laa.field_y = new java.awt.Font("Helvetica", 1, 13);
+            if (UsernameSuggestionsPanel.field_y == null) {
+              UsernameSuggestionsPanel.field_y = new java.awt.Font("Helvetica", 1, 13);
             }
             if (param4) {
               var9.setColor(java.awt.Color.black);
@@ -96,7 +96,7 @@ final class et extends PcmStream {
               var10.setColor(java.awt.Color.black);
               var10.drawRect(1, 1, 301, 31);
               var10.fillRect(param3 * 3 + 2, 2, -(param3 * 3) + 300, 30);
-              var10.setFont(laa.field_y);
+              var10.setFont(UsernameSuggestionsPanel.field_y);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param1, (-(6 * param1.length()) + 304) / 2, 22);
               var9.drawImage(np.field_x, -152 + mma.field_a / 2, qf.field_i / 2 - 18, (java.awt.image.ImageObserver) null);
@@ -111,12 +111,12 @@ final class et extends PcmStream {
               var9.setColor(java.awt.Color.black);
               var9.drawRect(var7 + 1, 1 + var8, 301, 31);
               var9.fillRect(var7 + (2 + param3 * 3), var8 + 2, 300 - 3 * param3, 30);
-              var9.setFont(laa.field_y);
+              var9.setFont(UsernameSuggestionsPanel.field_y);
               var9.setColor(java.awt.Color.white);
               var9.drawString(param1, (304 - param1.length() * 6) / 2 + var7, var8 + 22);
             }
             if (SecondaryNodeDeque.field_e != null) {
-              var9.setFont(laa.field_y);
+              var9.setFont(UsernameSuggestionsPanel.field_y);
               var9.setColor(java.awt.Color.white);
               var9.drawString(SecondaryNodeDeque.field_e, mma.field_a / 2 - 6 * SecondaryNodeDeque.field_e.length() / 2, qf.field_i / 2 - 26);
             }
@@ -128,7 +128,7 @@ final class et extends PcmStream {
           if (param0 >= 0) {
             return;
           }
-          et.b(-92, 42, -49);
+          MidiVoiceMixer.b(-92, 42, -49);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
           decompiledCaughtException = decompiledCaughtParameter2;
@@ -204,7 +204,7 @@ final class et extends PcmStream {
         }
     }
 
-    private final void a(int param0, int param1, int[] param2, rta param3, int param4, boolean param5) {
+    private final void mixVoice(int param0, int param1, int[] param2, rta param3, int param4, boolean param5) {
         MidiPcmStream stackIn_12_0 = null;
         int stackIn_12_1 = 0;
         rta stackIn_12_2 = null;
@@ -310,11 +310,11 @@ final class et extends PcmStream {
               var5 = param2;
               do {
                 if (var5 <= var6.field_B) {
-                  this.a(var4_int + var5, var4_int, param0, var6, var5, false);
+                  this.mixVoice(var4_int + var5, var4_int, param0, var6, var5, false);
                   var6.field_B = var6.field_B - var5;
                   break;
                 }
-                this.a(var4_int + var5, var4_int, param0, var6, var6.field_B, false);
+                this.mixVoice(var4_int + var5, var4_int, param0, var6, var6.field_B, false);
                 var4_int = var4_int + var6.field_B;
                 var5 = var5 - var6.field_B;
               } while (!this.field_k.a(var6, param0, var4_int, (byte) 6, var5));
@@ -344,7 +344,7 @@ final class et extends PcmStream {
         var3.writeShort(param1 ^ -1477662122, param2);
     }
 
-    et(MidiPcmStream param0) {
+    MidiVoiceMixer(MidiPcmStream param0) {
         this.field_l = new IntrusiveDeque();
         this.field_m = new PcmStreamMixer();
         try {

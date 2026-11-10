@@ -33,8 +33,8 @@ final class pua extends hq {
         try {
           var11 = rp.a(hc.field_h, -16226, gca.field_d, param2);
           var12 = rp.a(hc.field_h, -16226, gca.field_d, param3);
-          var13 = rp.a(ss.field_c, -16226, pka.field_b, param1);
-          var14 = rp.a(ss.field_c, -16226, pka.field_b, param6);
+          var13 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, param1);
+          var14 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, param6);
           var7_int = rp.a(hc.field_h, -16226, gca.field_d, param4 + param2);
           var8 = rp.a(hc.field_h, -16226, gca.field_d, param3 - param4);
           for (var15 = var11; var7_int > var15; var15++) {
@@ -43,8 +43,8 @@ final class pua extends hq {
           for (var15Lifetime1 = var12; var8 < var15Lifetime1; var15Lifetime1--) {
             nra.a((byte) -55, param5, var14, vaa.field_a[var15Lifetime1], var13);
           }
-          var9 = rp.a(ss.field_c, -16226, pka.field_b, param4 + param1);
-          var10 = rp.a(ss.field_c, -16226, pka.field_b, -param4 + param6);
+          var9 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, param4 + param1);
+          var10 = rp.a(DiskCacheWorker.field_c, -16226, pka.field_b, -param4 + param6);
           if (param0 >= -11) {
             pua.releaseStatics((byte) -34);
           }

@@ -3,7 +3,7 @@
  */
 class wka extends eta {
     static float field_b;
-    static ph field_c;
+    static BufferedCacheFile field_c;
     static boolean field_d;
 
     wka() {

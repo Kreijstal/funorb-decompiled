@@ -14,14 +14,14 @@ final class cc extends IntrusiveNode {
         if (!this.a(false)) {
           return;
         }
-        int var4 = param1 + (this.b(true) ? this.field_j : jw.field_z[this.field_g]);
+        int var4 = param1 + (this.b(true) ? this.field_j : LoginForm.field_z[this.field_g]);
         int var5 = (!this.b(true) ? hq.field_b[this.field_g] : this.field_k) + param2;
-        this.a(this.field_h, param2 + hq.field_b[this.field_i], var4, var5, jw.field_z[this.field_i] + param1, (byte) 35);
+        this.a(this.field_h, param2 + hq.field_b[this.field_i], var4, var5, LoginForm.field_z[this.field_i] + param1, (byte) 35);
         if (param0 != 99) {
           field_l = (String) null;
         }
         if (this.b(true)) {
-          this.a(this.field_f, var5, param1 + jw.field_z[this.field_g], hq.field_b[this.field_g] + param2, var4, (byte) 35);
+          this.a(this.field_f, var5, param1 + LoginForm.field_z[this.field_g], hq.field_b[this.field_g] + param2, var4, (byte) 35);
           uda.field_r.a(this.field_j + param1 + uda.field_r.a(), param2 + (this.field_k + uda.field_r.c()));
         }
     }
@@ -83,13 +83,13 @@ final class cc extends IntrusiveNode {
             var7 = this.field_k;
             var6 = this.field_j;
           } else {
-            if (var4_int == jw.field_z[this.field_i]) {
+            if (var4_int == LoginForm.field_z[this.field_i]) {
               stackIn_11_0 = (hq.field_b[this.field_i] == var5) ? 1 : 0;
             } else {
               stackIn_11_0 = 0;
             }
             var8 = stackIn_11_0;
-            stackIn_13_0 = jw.field_z;
+            stackIn_13_0 = LoginForm.field_z;
             if (var8 == 0) {
               stackIn_14_1 = this.field_i;
             } else {
@@ -211,8 +211,8 @@ final class cc extends IntrusiveNode {
           boolean decompiledFrameRemainder0 = true;
           var3_int = param1.field_j >> 16;
           var4 = param1.field_e >> 16;
-          if ((var3_int != jw.field_z[this.field_i] ||
-            hq.field_b[this.field_i] != var4) && (jw.field_z[this.field_g] != var3_int ||
+          if ((var3_int != LoginForm.field_z[this.field_i] ||
+            hq.field_b[this.field_i] != var4) && (LoginForm.field_z[this.field_g] != var3_int ||
             var4 != hq.field_b[this.field_g])) {
             stackIn_11_0 = false;
             decompiledFrameRemainder0 = false;

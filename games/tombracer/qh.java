@@ -394,7 +394,7 @@ final class qh extends dfa implements rqa {
           ti.field_b = 8768;
           lu.field_a = 5180;
           CommonChooseReward.field_b = 1180282300L;
-          et.field_j = 17219L;
+          MidiVoiceMixer.field_j = 17219L;
           qa.field_b = 1727002282;
           nta.field_h = -2073743619;
           bh.field_o = 17825;
@@ -799,7 +799,7 @@ final class qh extends dfa implements rqa {
         OpenGlToolkit.field_Z = OpenGlToolkit.field_Z + var9;
         var8 = var6;
         var10_int = uca.field_c.nextBounded(5, 0);
-        et.field_j = et.field_j + var8 * (long)var10_int;
+        MidiVoiceMixer.field_j = MidiVoiceMixer.field_j + var8 * (long)var10_int;
         nb.field_c = nb.field_c + (long)var10_int;
         if (param0 == var5) {
           return;
@@ -1306,7 +1306,7 @@ final class qh extends dfa implements rqa {
           var5 = param0.A(0);
           var6 = var4[uca.field_c.nextBounded(var8.length, param1 + 9)];
           var7 = this.a(var5, false);
-          dupTemp$1 = "<col=" + jm.field_k[var5] + ">" + var6 + "</col>";
+          dupTemp$1 = "<col=" + PasswordValidator.field_k[var5] + ">" + var6 + "</col>";
           var9 = dupTemp$1;
           var6Lifetime1 = dupTemp$1;
           stackIn_3_0 = gl.$cfr$intArgs$a$53ce4ab4c593(84, var9, new String[]{var7});

@@ -3,13 +3,13 @@
  */
 final class bra extends ofa implements tsa {
     static String[] field_M;
-    private rj field_N;
-    private rj field_L;
+    private FocusableWidget field_N;
+    private FocusableWidget field_L;
     static Sprite field_O;
 
     private final void f(int param0) {
         if (param0 != -25050) {
-          this.field_N = (rj) null;
+          this.field_N = (FocusableWidget) null;
           if (!this.field_B) {
             return;
           }
@@ -69,7 +69,7 @@ final class bra extends ofa implements tsa {
         }
     }
 
-    public final void a(int param0, int param1, rj param2, int param3, byte param4) {
+    public final void a(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -123,12 +123,12 @@ final class bra extends ofa implements tsa {
         }
     }
 
-    private final rj a(String param0, byte param1, qc param2) {
-        rj var4 = null;
+    private final FocusableWidget a(String param0, byte param1, qc param2) {
+        FocusableWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        rj stackIn_2_0 = null;
-        rj stackIn_4_0 = null;
+        FocusableWidget stackIn_2_0 = null;
+        FocusableWidget stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -136,7 +136,7 @@ final class bra extends ofa implements tsa {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new rj(param0, param2);
+          var4 = new FocusableWidget(param0, param2);
           var4.field_r = (isa) ((Object) new td());
           var5 = this.field_p - 6;
           this.field_p = this.field_p + 38;
@@ -147,7 +147,7 @@ final class bra extends ofa implements tsa {
             stackIn_4_0 = var4;
             return stackIn_4_0;
           }
-          stackIn_2_0 = (rj) null;
+          stackIn_2_0 = (FocusableWidget) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

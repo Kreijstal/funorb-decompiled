@@ -73,9 +73,9 @@ final class TrapSpawner extends Spawner {
         return 0;
     }
 
-    final lj a(boolean param0, int param1, int param2) {
+    final Switchable a(boolean param0, int param1, int param2) {
         if (param1 > -3) {
-          return (lj) null;
+          return (Switchable) null;
         }
         return this.template.a(param0, param2, (byte) -26);
     }

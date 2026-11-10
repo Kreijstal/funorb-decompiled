@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class TripBeamBehaviour extends Behaviour implements ut {
+final class TripBeamBehaviour extends Behaviour implements SwitchSource {
     static ToolkitSprite field_y;
     private int field_n;
     private boolean field_D;
     private mg field_t;
     private int field_q;
-    private jma field_C;
+    private SwitchState field_C;
     private boolean field_v;
     private BeamSegment field_u;
     private int field_x;
@@ -51,22 +51,22 @@ final class TripBeamBehaviour extends Behaviour implements ut {
     final void g(int param0) {
         super.g(param0 + 0);
         if (param0 == -2) {
-          this.field_C.a((byte) 48, this.h((byte) 111));
+          this.field_C.a((byte) 48, this.getScope((byte) 111));
           return;
         }
-        this.field_C = (jma) null;
-        this.field_C.a((byte) 48, this.h((byte) 111));
+        this.field_C = (SwitchState) null;
+        this.field_C.a((byte) 48, this.getScope((byte) 111));
     }
 
-    public final jma k(byte param0) {
+    public final SwitchState getSwitchState(byte param0) {
         if (param0 >= -67) {
-          this.j((byte) 54);
+          this.getLevel((byte) 54);
           return this.field_C;
         }
         return this.field_C;
     }
 
-    public final int j(byte param0) {
+    public final int getLevel(byte param0) {
         if (param0 == -108) {
           return !this.field_C.b((byte) 88) ? 0 : 1;
         }
@@ -332,12 +332,12 @@ final class TripBeamBehaviour extends Behaviour implements ut {
           param0 = fs.mixHash((byte) 61, param0, this.field_s);
           return param0;
         }
-        this.c(-120);
+        this.getDimColour(-120);
         param0 = fs.mixHash((byte) 61, param0, this.field_s);
         return param0;
     }
 
-    public final int g(byte param0) {
+    public final int getLitColour(byte param0) {
         if (param0 != -108) {
           return 56;
         }
@@ -385,7 +385,7 @@ final class TripBeamBehaviour extends Behaviour implements ut {
         this.field_u = new BeamSegment();
         this.field_s = 0;
         try {
-          this.field_C = new jma(15);
+          this.field_C = new SwitchState(15);
           this.field_t = new mg();
           this.field_n = 0;
           this.field_q = 16777216;
@@ -418,7 +418,7 @@ final class TripBeamBehaviour extends Behaviour implements ut {
     final void encode(boolean param0, BitPacketBuffer param1) {
         try {
           super.encode(param0, param1);
-          this.field_C.a(this.h((byte) 118), (byte) 113, param1);
+          this.field_C.a(this.getScope((byte) 118), (byte) 113, param1);
           this.field_t.a(15637, param1);
           param1.writeBits((byte) -125, this.field_q >> 16, 10);
           param1.writeBits((byte) -127, !this.field_v ? 0 : 1, 1);
@@ -451,12 +451,12 @@ final class TripBeamBehaviour extends Behaviour implements ut {
         }
     }
 
-    public final int b(int param0) {
+    public final int getMaxLevel(int param0) {
         int var2 = -89 % ((param0 + 46) / 45);
         return 1;
     }
 
-    public final int c(int param0) {
+    public final int getDimColour(int param0) {
         if (param0 != 17832) {
           this.field_D = true;
           return 5570594;
@@ -489,7 +489,7 @@ final class TripBeamBehaviour extends Behaviour implements ut {
         this.field_u = new BeamSegment();
         this.field_s = 0;
         try {
-          this.field_C = new jma(15, param0, param1);
+          this.field_C = new SwitchState(15, param0, param1);
           this.field_t = new mg(param0.formatVersion, param1);
           this.field_q = param1.readBits((byte) 44, 10) << 16;
           this.field_v = param1.readBits((byte) 44, 1) == 1 ? true : false;

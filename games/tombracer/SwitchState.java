@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jma implements noa {
+final class SwitchState implements noa {
     private int field_l;
     private int field_i;
     static ka[] field_a;
@@ -14,20 +14,20 @@ final class jma implements noa {
     private int field_f;
     private int field_n;
     private boolean field_g;
-    private koa field_d;
+    private SwitchLinkList field_d;
     private int field_k;
     static String field_h;
     private int field_b;
 
-    final void a(ew param0, byte param1, BitPacketBuffer param2) {
+    final void a(SwitchableScope param0, byte param1, BitPacketBuffer param2) {
         try {
-          this.field_d.a(30489, param0, param2);
+          this.field_d.encode(30489, param0, param2);
           param2.writeBits((byte) -127, this.field_e, 8);
           param2.writeBits((byte) -45, this.field_k, 8);
           param2.writeBits((byte) -125, this.field_i, 8);
           if (param1 <= 65) {
             BitPacketBuffer var5 = (BitPacketBuffer) null;
-            this.a((ew) null, (byte) 97, (BitPacketBuffer) null);
+            this.a((SwitchableScope) null, (byte) 97, (BitPacketBuffer) null);
           }
           param2.writeBits((byte) -126, this.field_l, 8);
           param2.writeBits((byte) -45, this.field_f, 8);
@@ -105,8 +105,8 @@ final class jma implements noa {
         return true;
     }
 
-    jma(int param0) {
-        this(param0, new lj[]{});
+    SwitchState(int param0) {
+        this(param0, new Switchable[]{});
     }
 
     private final void a(int param0) {
@@ -148,7 +148,7 @@ final class jma implements noa {
         }
     }
 
-    final void a(byte param0, ew param1) {
+    final void a(byte param0, SwitchableScope param1) {
         try {
           if (param0 != 48) {
             field_j = (ResourceArchive) null;
@@ -159,7 +159,7 @@ final class jma implements noa {
         }
     }
 
-    final koa h(int param0) {
+    final SwitchLinkList getLinks(int param0) {
         if (param0 != 1) {
           this.e((byte) -23);
           return this.field_d;
@@ -298,25 +298,25 @@ final class jma implements noa {
     }
 
     private final void d(byte param0) {
-        lj[] var3;
+        Switchable[] var3;
         int var4;
         int var6;
-        lj[] var7;
-        lj[] var10;
-        lj var11;
-        lj[] var12;
-        lj var13;
-        lj[] var14;
-        lj var15;
-        lj[] var16;
-        lj var17;
+        Switchable[] var7;
+        Switchable[] var10;
+        Switchable var11;
+        Switchable[] var12;
+        Switchable var13;
+        Switchable[] var14;
+        Switchable var15;
+        Switchable[] var16;
+        Switchable var17;
         int var4Lifetime1;
         int var4Lifetime2;
         int var4Lifetime3;
-        lj[] var3Lifetime1;
-        lj[] var7Lifetime1;
-        lj[] var7Lifetime2;
-        lj[] var7Lifetime3;
+        Switchable[] var3Lifetime1;
+        Switchable[] var7Lifetime1;
+        Switchable[] var7Lifetime2;
+        Switchable[] var7Lifetime3;
         var6 = TombRacer.field_G ? 1 : 0;
         if (this.field_c > 0) {
           this.field_c = this.field_c - 1;
@@ -331,7 +331,7 @@ final class jma implements noa {
               for (var4 = 0; var10.length > var4; var4++) {
                 var11 = var10[var4];
                 if (var11 != null) {
-                  var11.m(119);
+                  var11.toggle(119);
                 }
               }
               return;
@@ -346,7 +346,7 @@ final class jma implements noa {
             for (var4Lifetime3 = 0; var12.length > var4Lifetime3; var4Lifetime3++) {
               var13 = var12[var4Lifetime3];
               if (var13 != null) {
-                var13.m(119);
+                var13.toggle(119);
               }
             }
             return;
@@ -362,7 +362,7 @@ final class jma implements noa {
           for (var4Lifetime1 = 0; var16.length > var4Lifetime1; var4Lifetime1++) {
             var17 = var16[var4Lifetime1];
             if (var17 != null) {
-              var17.m(119);
+              var17.toggle(119);
             }
           }
           return;
@@ -376,7 +376,7 @@ final class jma implements noa {
         for (var4Lifetime2 = 0; var14.length > var4Lifetime2; var4Lifetime2++) {
           var15 = var14[var4Lifetime2];
           if (var15 != null) {
-            var15.m(119);
+            var15.toggle(119);
           }
         }
         return;
@@ -424,18 +424,18 @@ final class jma implements noa {
         this.field_e = param5;
     }
 
-    private jma(int param0, lj[] param1) {
+    private SwitchState(int param0, Switchable[] param1) {
         this.field_p = false;
         this.field_m = true;
         try {
-          this.field_d = new koa(param0, 0);
+          this.field_d = new SwitchLinkList(param0, 0);
           this.field_d.a(9, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "jma.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final int a(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         param1 = fs.mixHash((byte) 85, param1, this.field_n);
         if (param0 > 59) {
           param1 = fs.mixHash((byte) 93, param1, this.field_b);
@@ -446,7 +446,7 @@ final class jma implements noa {
         return param1;
     }
 
-    jma(int param0, Room param1, BitPacketBuffer param2) {
+    SwitchState(int param0, Room param1, BitPacketBuffer param2) {
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
         RuntimeException stackIn_14_0 = null;
@@ -459,7 +459,7 @@ final class jma implements noa {
         this.field_p = false;
         this.field_m = true;
         try {
-          this.field_d = new koa(param0, 0, param1.formatVersion, param2);
+          this.field_d = new SwitchLinkList(param0, 0, param1.formatVersion, param2);
           if (param1.formatVersion > 9) {
             this.field_e = param2.readBits((byte) 44, 8);
             this.field_k = param2.readBits((byte) 44, 8);

@@ -406,7 +406,7 @@ final class ModelFactory implements ModelCodec {
                         } else {
                           if (!(param0 instanceof TouchSwitchBehaviour) &&
                             !(param0 instanceof PressureSwitchBehaviour)) {
-                            if (param0 instanceof ut &&
+                            if (param0 instanceof SwitchSource &&
                               !(param0 instanceof PlayerSensorBehaviour) &&
                               !(param0 instanceof TripBeamBehaviour)) {
                               var4_int = 3;

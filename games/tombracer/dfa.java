@@ -20,7 +20,7 @@ abstract class dfa {
               if (var3 != 0) {
                 return false;
               }
-              ola.e((byte) 113);
+              ContextMenu.e((byte) 113);
               return true;
             }
             if (!param1) {
@@ -91,7 +91,7 @@ abstract class dfa {
           if (var3 != 0) {
             return false;
           }
-          ola.e((byte) 113);
+          ContextMenu.e((byte) 113);
           return true;
         }
         if (param1) {
@@ -187,7 +187,7 @@ abstract class dfa {
         if (null != nma.field_l) {
           pq.a(nma.field_l, false);
         }
-        ola.f((byte) 101);
+        ContextMenu.f((byte) 101);
         BeamSegment.a(5);
         if (param0 == 62) {
           rda.e(0);

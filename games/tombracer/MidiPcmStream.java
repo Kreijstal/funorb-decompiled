@@ -29,7 +29,7 @@ class MidiPcmStream extends PcmStream {
     private int field_p;
     private long field_E;
     private long field_B;
-    private et field_v;
+    private MidiVoiceMixer field_v;
     private boolean field_t;
     private int field_C;
     private boolean field_s;
@@ -1530,7 +1530,7 @@ class MidiPcmStream extends PcmStream {
         this.field_H = 1000000;
         this.field_L = new int[16];
         this.field_w = new MidiFileReader();
-        this.field_v = new et(this);
+        this.field_v = new MidiVoiceMixer(this);
         this.field_r = new NodeHashTable(128);
         this.a((byte) -105, 256, -1);
         this.resetSynthesizer(true, -116);
@@ -1558,7 +1558,7 @@ class MidiPcmStream extends PcmStream {
         this.field_H = 1000000;
         this.field_L = new int[16];
         this.field_w = new MidiFileReader();
-        this.field_v = new et(this);
+        this.field_v = new MidiVoiceMixer(this);
         try {
           this.field_r = param0.field_r;
           this.a((byte) -105, 256, -1);

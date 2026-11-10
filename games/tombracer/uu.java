@@ -8,10 +8,10 @@ final class uu implements GamePacket {
 
     final static boolean a(boolean param0, int param1, int param2) {
         if (param0) {
-          return (ir.a(param1, param2, (byte) -80) | cga.a(param1, -54, param2) | TripBeamComponent.c(param1, param2, 52)) & ss.a((byte) 61, param2, param1);
+          return (ir.a(param1, param2, (byte) -80) | cga.a(param1, -54, param2) | TripBeamComponent.c(param1, param2, 52)) & DiskCacheWorker.a((byte) 61, param2, param1);
         }
         field_c = 33;
-        return (ir.a(param1, param2, (byte) -80) | cga.a(param1, -54, param2) | TripBeamComponent.c(param1, param2, 52)) & ss.a((byte) 61, param2, param1);
+        return (ir.a(param1, param2, (byte) -80) | cga.a(param1, -54, param2) | TripBeamComponent.c(param1, param2, 52)) & DiskCacheWorker.a((byte) 61, param2, param1);
     }
 
     final static void a(int param0, byte param1, byte[] param2, java.math.BigInteger param3, PacketBuffer param4, java.math.BigInteger param5, int param6) {
@@ -57,21 +57,21 @@ final class uu implements GamePacket {
           hf.field_d.writeBytes(param6, param2, param0, 61);
           hf.field_d.padZerosTo(716148936, var7_int);
           hf.field_d.encryptXtea((byte) -48, var13);
-          if (ola.field_Bb == null ||
-            !(100 <= ola.field_Bb.payload.length)) {
-            ola.field_Bb = new PacketBuffer(100);
+          if (ContextMenu.field_Bb == null ||
+            !(100 <= ContextMenu.field_Bb.payload.length)) {
+            ContextMenu.field_Bb = new PacketBuffer(100);
           }
-          ola.field_Bb.position = 0;
-          ola.field_Bb.writeByte(10, param1 + 81);
+          ContextMenu.field_Bb.position = 0;
+          ContextMenu.field_Bb.writeByte(10, param1 + 81);
           var11 = 0;
           var9Lifetime1 = var11;
           while (var11 < 4) {
-            ola.field_Bb.writeInt(var13[var11], (byte) 78);
+            ContextMenu.field_Bb.writeInt(var13[var11], (byte) 78);
             var11++;
           }
-          ola.field_Bb.writeShort(-1477662136, param0);
-          ola.field_Bb.rsaEncryptContents(102, param3, param5);
-          param4.writeBytes(0, ola.field_Bb.payload, ola.field_Bb.position, 96);
+          ContextMenu.field_Bb.writeShort(-1477662136, param0);
+          ContextMenu.field_Bb.rsaEncryptContents(102, param3, param5);
+          param4.writeBytes(0, ContextMenu.field_Bb.payload, ContextMenu.field_Bb.position, 96);
           param4.writeBytes(0, hf.field_d.payload, hf.field_d.position, param1 ^ -43);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

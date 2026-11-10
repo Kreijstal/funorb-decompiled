@@ -71,7 +71,7 @@ final class OpenGlFont extends GameFont {
         }
     }
 
-    OpenGlFont(OpenGlToolkit param0, qla param1, SpriteData[] param2, boolean param3) {
+    OpenGlFont(OpenGlToolkit param0, FontMetrics param1, SpriteData[] param2, boolean param3) {
         super(param0, param1);
         int incrementValue$3 = 0;
         int incrementValue$0 = 0;

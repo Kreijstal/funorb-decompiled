@@ -27,7 +27,7 @@ final class via extends java.awt.Canvas implements java.awt.event.FocusListener 
             var6 = param3;
           } else {
             var7 = (CharSequence) ((Object) param3);
-            var4_long = jm.a(var7, 117);
+            var4_long = PasswordValidator.encodeBase37(var7, 117);
           }
           stackIn_4_0 = WidgetContainer.a(param0, 0, (String) (var6), param2, var4_long);
           return stackIn_4_0;

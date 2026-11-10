@@ -1410,7 +1410,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final GameFont createFont(qla param0, SpriteData[] param1, boolean param2) {
+    final GameFont createFont(FontMetrics param0, SpriteData[] param1, boolean param2) {
         RuntimeException var4 = null;
         OpenGlFont stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;

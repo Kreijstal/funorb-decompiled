@@ -71,7 +71,7 @@ final class sna {
         if (this.field_e != var5) {
           this.field_a = 0;
           this.field_e = var5;
-          var6 = fe.field_C[4] - 10;
+          var6 = DateFieldsWidget.field_C[4] - 10;
           if (1 == this.field_e) {
             this.a(tha.field_A, (ms) null, var6, param0 ^ -9888);
           }

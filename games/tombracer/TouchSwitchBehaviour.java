@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class TouchSwitchBehaviour extends Behaviour implements ut {
+final class TouchSwitchBehaviour extends Behaviour implements SwitchSource {
     static String field_o;
     static String field_q;
     static boolean field_s;
     static int field_n;
     static String field_r;
-    private jma field_p;
+    private SwitchState field_p;
 
     public static void l(int param0) {
         field_o = null;
@@ -21,7 +21,7 @@ final class TouchSwitchBehaviour extends Behaviour implements ut {
     final void encode(boolean param0, BitPacketBuffer param1) {
         try {
           super.encode(param0, param1);
-          this.field_p.a(this.h((byte) 113), (byte) 82, param1);
+          this.field_p.a(this.getScope((byte) 113), (byte) 82, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "rh.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -30,13 +30,13 @@ final class TouchSwitchBehaviour extends Behaviour implements ut {
     TouchSwitchBehaviour(Room param0, boolean param1) {
         super(param0, param1);
         try {
-          this.field_p = new jma(15);
+          this.field_p = new SwitchState(15);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "rh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final int g(byte param0) {
+    public final int getLitColour(byte param0) {
         if (param0 != -108) {
           return 85;
         }
@@ -70,10 +70,10 @@ final class TouchSwitchBehaviour extends Behaviour implements ut {
 
     final void g(int param0) {
         super.g(param0);
-        this.field_p.a((byte) 48, this.h((byte) 106));
+        this.field_p.a((byte) 48, this.getScope((byte) 106));
     }
 
-    public final int b(int param0) {
+    public final int getMaxLevel(int param0) {
         int var2 = 33 / ((-46 - param0) / 45);
         return 0;
     }
@@ -81,15 +81,15 @@ final class TouchSwitchBehaviour extends Behaviour implements ut {
     final int hashState(int param0, int param1) {
         if (param1 >= -48) {
           field_s = true;
-          return this.field_p.a(122, param0);
+          return this.field_p.hashState(122, param0);
         }
-        return this.field_p.a(122, param0);
+        return this.field_p.hashState(122, param0);
     }
 
     TouchSwitchBehaviour(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
-          this.field_p = new jma(15, param0, param1);
+          this.field_p = new SwitchState(15, param0, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "rh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -100,7 +100,7 @@ final class TouchSwitchBehaviour extends Behaviour implements ut {
           this.c(false);
           this.field_p.a((byte) -14, this.d(8031));
           if (param0 != 5418) {
-            this.k((byte) 120);
+            this.getSwitchState((byte) 120);
             return;
           }
           return;
@@ -109,10 +109,10 @@ final class TouchSwitchBehaviour extends Behaviour implements ut {
         if (param0 == 5418) {
           return;
         }
-        this.k((byte) 120);
+        this.getSwitchState((byte) 120);
     }
 
-    public final int c(int param0) {
+    public final int getDimColour(int param0) {
         if (param0 != 17832) {
           field_s = true;
           return 5592320;
@@ -120,16 +120,16 @@ final class TouchSwitchBehaviour extends Behaviour implements ut {
         return 5592320;
     }
 
-    public final int j(byte param0) {
+    public final int getLevel(byte param0) {
         if (param0 != -108) {
           return -60;
         }
         return 0;
     }
 
-    public final jma k(byte param0) {
+    public final SwitchState getSwitchState(byte param0) {
         if (param0 >= -67) {
-          return (jma) null;
+          return (SwitchState) null;
         }
         return this.field_p;
     }

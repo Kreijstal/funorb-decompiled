@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wb {
-    static qla field_a;
+    static FontMetrics field_a;
     private static String field_z;
 
     public static void releaseStatics(byte param0) {

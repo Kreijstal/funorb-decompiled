@@ -5,7 +5,7 @@ final class cia {
     private int field_b;
     static String[] field_a;
     private boolean field_d;
-    static eua field_g;
+    static QuickChatMenu field_g;
     private int field_e;
     private int field_f;
     private bua field_c;

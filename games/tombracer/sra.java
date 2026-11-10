@@ -155,7 +155,7 @@ final class sra implements eb {
         if (this.field_h != null &&
           null != this.field_p) {
           fp.a(uba.loadingQuipsShort[1], 40, this.field_h, (byte) 17);
-          bja.a((byte) -105, this.field_p, 50, uba.loadingQuipsShort[2]);
+          TextLayout.a((byte) -105, this.field_p, 50, uba.loadingQuipsShort[2]);
           this.field_p = null;
           KeySwitchComponent.a((byte) -86, uba.loadingQuipsShort[3], this.field_q, this.field_h, 60);
           this.a(65, (byte) 47, uba.loadingQuipsShort[4]);

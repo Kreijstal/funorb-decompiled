@@ -144,7 +144,7 @@ final class rg extends SingleChildWidget {
           gn.field_w[12] = "wilbur";
           gn.field_w[2] = "angelio";
           gn.field_w[5] = "bruce";
-          tk.field_a[16] = fe.gasDeathMessages;
+          tk.field_a[16] = DateFieldsWidget.gasDeathMessages;
           tk.field_a[8] = gca.skeletonDeathMessages;
           tk.field_a[14] = vk.boulderDeathMessages;
           tk.field_a[10] = hg.bladeDeathMessages;
@@ -167,9 +167,9 @@ final class rg extends SingleChildWidget {
           Effect.field_h[1] = new String[]{dk.field_k, BitPacketBuffer.field_m, ne.field_e};
           IntrusiveDeque.field_d[2] = new String[]{kea.field_b, baa.field_a, dk.field_a};
           Effect.field_h[2] = new String[]{bpa.field_a, du.field_f, vua.field_C};
-          IntrusiveDeque.field_d[3] = new String[]{eua.field_Ab, rua.field_hb, Player.field_s};
+          IntrusiveDeque.field_d[3] = new String[]{QuickChatMenu.field_Ab, rua.field_hb, Player.field_s};
           IntrusiveDeque.field_d[4] = new String[]{ConstrainToCircleLocomotor.field_t, fv.field_b, RopeBridgeComponent.field_G};
-          Effect.field_h[3] = new String[]{sba.field_o, vk.field_a, koa.field_d};
+          Effect.field_h[3] = new String[]{sba.field_o, vk.field_a, SwitchLinkList.field_d};
           Effect.field_h[4] = new String[]{at.field_R, gn.field_y, tr.field_d};
           IntrusiveDeque.field_d[5] = new String[]{TripBeamComponent.field_J, td.field_u, PitModel.field_r};
           Effect.field_h[5] = new String[]{gu.field_k, MazeComponent.field_G, du.field_b};
@@ -181,7 +181,7 @@ final class rg extends SingleChildWidget {
           IntrusiveDeque.field_d[9] = new String[]{td.field_n, nea.field_b, gga.field_L};
           Effect.field_h[8] = new String[]{hv.field_o, StaticCrusherComponent.field_G, ClientException.field_e};
           Effect.field_h[9] = new String[]{qna.field_a, wv.field_h, PrefabComponent.field_D};
-          IntrusiveDeque.field_d[10] = new String[]{kd.field_z, qba.field_d, sta.field_H};
+          IntrusiveDeque.field_d[10] = new String[]{kd.field_z, qba.field_d, GridWidgetContainer.field_H};
           Effect.field_h[10] = new String[]{vm.field_a, ir.field_c, fb.field_b};
           return;
         }
@@ -196,7 +196,7 @@ final class rg extends SingleChildWidget {
         gn.field_w[12] = "wilbur";
         gn.field_w[2] = "angelio";
         gn.field_w[5] = "bruce";
-        tk.field_a[16] = fe.gasDeathMessages;
+        tk.field_a[16] = DateFieldsWidget.gasDeathMessages;
         tk.field_a[8] = gca.skeletonDeathMessages;
         tk.field_a[14] = vk.boulderDeathMessages;
         tk.field_a[10] = hg.bladeDeathMessages;
@@ -219,9 +219,9 @@ final class rg extends SingleChildWidget {
         Effect.field_h[1] = new String[]{dk.field_k, BitPacketBuffer.field_m, ne.field_e};
         IntrusiveDeque.field_d[2] = new String[]{kea.field_b, baa.field_a, dk.field_a};
         Effect.field_h[2] = new String[]{bpa.field_a, du.field_f, vua.field_C};
-        IntrusiveDeque.field_d[3] = new String[]{eua.field_Ab, rua.field_hb, Player.field_s};
+        IntrusiveDeque.field_d[3] = new String[]{QuickChatMenu.field_Ab, rua.field_hb, Player.field_s};
         IntrusiveDeque.field_d[4] = new String[]{ConstrainToCircleLocomotor.field_t, fv.field_b, RopeBridgeComponent.field_G};
-        Effect.field_h[3] = new String[]{sba.field_o, vk.field_a, koa.field_d};
+        Effect.field_h[3] = new String[]{sba.field_o, vk.field_a, SwitchLinkList.field_d};
         Effect.field_h[4] = new String[]{at.field_R, gn.field_y, tr.field_d};
         IntrusiveDeque.field_d[5] = new String[]{TripBeamComponent.field_J, td.field_u, PitModel.field_r};
         Effect.field_h[5] = new String[]{gu.field_k, MazeComponent.field_G, du.field_b};
@@ -233,7 +233,7 @@ final class rg extends SingleChildWidget {
         IntrusiveDeque.field_d[9] = new String[]{td.field_n, nea.field_b, gga.field_L};
         Effect.field_h[8] = new String[]{hv.field_o, StaticCrusherComponent.field_G, ClientException.field_e};
         Effect.field_h[9] = new String[]{qna.field_a, wv.field_h, PrefabComponent.field_D};
-        IntrusiveDeque.field_d[10] = new String[]{kd.field_z, qba.field_d, sta.field_H};
+        IntrusiveDeque.field_d[10] = new String[]{kd.field_z, qba.field_d, GridWidgetContainer.field_H};
         Effect.field_h[10] = new String[]{vm.field_a, ir.field_c, fb.field_b};
     }
 

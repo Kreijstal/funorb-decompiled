@@ -960,7 +960,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
             this.p(30358);
             this.field_r = param0;
             this.lifeState = 1;
-            this.lifeStateTimer = fe.field_C[param0];
+            this.lifeStateTimer = DateFieldsWidget.field_C[param0];
             this.k(false);
             this.field_D[param0] = this.field_D[param0] + 1;
             var4_int = -81 % ((param1 + 64) / 41);
@@ -2567,7 +2567,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    final int e(int param0, int param1) {
+    final int hashState(int param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;

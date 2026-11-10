@@ -59,7 +59,7 @@ final class VortexBehaviour extends Behaviour {
         var8 = this.field_r << 16;
         var9 = var4 >> 17;
         var10 = var5 >> 17;
-        var11 = et.b(var10, var9, -1);
+        var11 = MidiVoiceMixer.b(var10, var9, -1);
         var12 = this.o((byte) 46).nextBounded(8192, 0);
         var13 = MouseInputHandler.a((byte) 98, var12 >> 2);
         var14 = bua.a(0, var12 >> 2);

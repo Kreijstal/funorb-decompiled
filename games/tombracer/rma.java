@@ -20,7 +20,7 @@ final class rma {
 
     final static String a(int param0) {
         int var1 = 9 / ((param0 - 74) / 41);
-        return qla.a(true, "\\\\contentfs\\mgcontent_v4\\WIP\\tombracer\\src\\freelevels\\banner.trlev");
+        return FontMetrics.a(true, "\\\\contentfs\\mgcontent_v4\\WIP\\tombracer\\src\\freelevels\\banner.trlev");
     }
 
     public static void releaseStatics(int param0) {

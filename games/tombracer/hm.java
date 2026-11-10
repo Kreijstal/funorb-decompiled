@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hm extends tfa implements gf {
+final class hm extends OpenGlTexture implements gf {
     static String field_m;
     private int field_l;
     static ResourceArchive field_n;
@@ -45,8 +45,8 @@ final class hm extends tfa implements gf {
         field_m = null;
     }
 
-    public final void b(byte param0) {
-        super.b((byte) 66);
+    public final void bind(byte param0) {
+        super.bind((byte) 66);
         if (param0 < 32) {
           field_m = (String) null;
         }
@@ -132,7 +132,7 @@ final class hm extends tfa implements gf {
         OpenGlFramebuffer.field_i = null;
         dp.field_d = null;
         tv.field_wb = null;
-        sta.field_y = null;
+        GridWidgetContainer.field_y = null;
         bm.field_f = null;
         IntrusiveDeque.field_c = null;
         TripBeamBehaviour.field_y = null;

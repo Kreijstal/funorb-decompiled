@@ -595,7 +595,7 @@ final class cm implements GamePacket {
                     }
                   }
                   if (var23 != 0) {
-                    var21 = sta.field_G + (String) (var22);
+                    var21 = GridWidgetContainer.field_G + (String) (var22);
                   } else {
                     var21 = gl.$cfr$intArgs$a$53ce4ab4c593(106, cna.field_d, new String[]{(String) (var22)});
                   }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ola extends jea {
+final class ContextMenu extends jea {
     static int field_Eb;
     private int field_tb;
     private tv[] field_Db;
@@ -68,7 +68,7 @@ final class ola extends jea {
         return true;
     }
 
-    ola(jea param0, Sprite[] param1, jea param2, jea param3, int param4, int param5, int param6, int param7, int param8) {
+    ContextMenu(jea param0, Sprite[] param1, jea param2, jea param3, int param4, int param5, int param6, int param7, int param8) {
         super(0L, param0);
         this.field_Db = new tv[256];
         this.field_Fb = new int[256];
@@ -95,7 +95,7 @@ final class ola extends jea {
         }
     }
 
-    ola(ola param0) {
+    ContextMenu(ContextMenu param0) {
         this(param0, param0.field_Cb, param0.field_ub, param0.field_Ab, param0.field_Hb, param0.field_wb, param0.field_vb, param0.field_tb, param0.field_Gb);
     }
 
@@ -132,14 +132,14 @@ final class ola extends jea {
 
     public static void d(byte param0) {
         if (param0 != -39) {
-          ola.f((byte) -65);
+          ContextMenu.f((byte) -65);
         }
         field_yb = null;
         field_Ib = null;
         field_Bb = null;
     }
 
-    final void a(byte param0, int param1, String param2) {
+    final void addItem(byte param0, int param1, String param2) {
         this.field_Db[this.field_zb] = new tv(0L, (jea) null, (jea) null, this.field_Ab, (Sprite) null, param2);
         this.field_Db[this.field_zb].field_C = this.field_Cb;
         if (param0 > -63) {
@@ -156,7 +156,7 @@ final class ola extends jea {
         }
     }
 
-    final void a(Sprite param0, int param1, String param2, boolean param3) {
+    final void addIconItem(Sprite param0, int param1, String param2, boolean param3) {
         try {
           this.field_Db[this.field_zb] = new tv(0L, (jea) null, (jea) null, this.field_Ab, param0, param2);
           this.field_Db[this.field_zb].field_C = this.field_Cb;

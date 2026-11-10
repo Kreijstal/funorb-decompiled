@@ -10,7 +10,7 @@ final class ds {
     private boolean[] field_i;
     static int[] field_f;
     private int[] field_p;
-    static qla field_n;
+    static FontMetrics field_n;
     private int[] field_a;
     private int[] field_c;
     private int[] field_m;
@@ -157,7 +157,7 @@ final class ds {
     final static int c(int param0, int param1, int param2) {
         param2 = (127 & param1) * param2 >> 7;
         if (param0 != -127) {
-          field_n = (qla) null;
+          field_n = (FontMetrics) null;
           if (2 > param2) {
             param2 = 2;
             return (param1 & 65408) + param2;

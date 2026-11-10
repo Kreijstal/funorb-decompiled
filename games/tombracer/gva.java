@@ -140,12 +140,12 @@ final class gva implements mb {
               var24Lifetime1 = null;
               if (var22 >= 33) {
                 if (var22 < 66) {
-                  var24_ref = koa.field_b[6];
+                  var24_ref = SwitchLinkList.field_b[6];
                 } else {
-                  var24_ref = koa.field_b[7];
+                  var24_ref = SwitchLinkList.field_b[7];
                 }
               } else {
-                var24_ref = koa.field_b[5];
+                var24_ref = SwitchLinkList.field_b[5];
               }
               gqa.a(dfa.a(-(param2.f((byte) -127) >> 2), 2048, 69), -83584144, var6, var5, var24_ref, var7);
               break regionExit1;

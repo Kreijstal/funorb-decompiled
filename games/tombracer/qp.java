@@ -8,7 +8,7 @@ final class qp extends we {
     private String[][] field_t;
     private int field_x;
     private int field_w;
-    static qla field_r;
+    static FontMetrics field_r;
 
     final static boolean a(int param0, byte param1, int param2) {
         int var3 = -13 / ((24 - param1) / 57);
@@ -18,9 +18,9 @@ final class qp extends we {
     final int g(int param0, int param1) {
         if (param1 != 30) {
           field_v = (String) null;
-          return koa.b(0) - 30;
+          return SwitchLinkList.b(0) - 30;
         }
-        return koa.b(0) - 30;
+        return SwitchLinkList.b(0) - 30;
     }
 
     final String b(int param0, byte param1) {
@@ -243,7 +243,7 @@ final class qp extends we {
         }
         SingleChildWidget.field_v.a(param1 + 63, false, WidgetContainer.field_v.toUpperCase() + " - " + wg.field_m[this.field_x].toUpperCase(), 65, -14279929, -1);
         var4 = 120 + param1;
-        eda.field_f.a(-1, -1, NanoTickClock.field_h[0], -14671840, var4, hl.field_a);
+        eda.field_f.a(-1, -1, NanoTickClock.field_h[0], -14671840, var4, OpenGlBuffer.field_a);
         eda.field_f.a(var4, false, ObjectPool.field_g.toUpperCase(), NanoTickClock.field_h[1], -14671840, -1);
         eda.field_f.a(var4, false, ControllerLocomotor.field_o.toUpperCase(), NanoTickClock.field_h[2], -14671840, -1);
         eda.field_f.a(var4, false, SimpleConditionBehaviour.field_q.toUpperCase(), NanoTickClock.field_h[3], -14671840, -1);

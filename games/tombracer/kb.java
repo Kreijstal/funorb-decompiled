@@ -44,7 +44,7 @@ final class kb extends IntrusiveNode {
           return DoorwayComponent.field_F[param0];
         }
         if (var5 == 7) {
-          return koa.field_b[param0];
+          return SwitchLinkList.field_b[param0];
         }
         if (var5 == 8) {
           return hh.field_b[param0];

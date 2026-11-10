@@ -259,7 +259,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         ija var6 = (ija) (this.field_G.a((byte) -112, (long)param0.hashCode()));
         if (var6 != null) {
           var6.unlink(30);
-          var7 = tfa.a(param2, param1, param0, 0);
+          var7 = OpenGlTexture.a(param2, param1, param0, 0);
           this.field_G.put((long)param0.hashCode(), 116, var7);
           if (this.field_t == param0 &&
             this.field_D == null) {
@@ -1276,7 +1276,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
           }
           this.b(param0, param1, param2);
         } else {
-          var4 = tfa.a(param2, param1, param0, 0);
+          var4 = OpenGlTexture.a(param2, param1, param0, 0);
           this.field_G.put((long)param0.hashCode(), 125, var4);
         }
     }
@@ -1537,7 +1537,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final GameFont createFont(qla param0, SpriteData[] param1, boolean param2) {
+    final GameFont createFont(FontMetrics param0, SpriteData[] param1, boolean param2) {
         int var7 = 0;
         int[] var4;
         int[] var5;

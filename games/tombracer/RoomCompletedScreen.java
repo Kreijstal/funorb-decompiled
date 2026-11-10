@@ -40,10 +40,10 @@ final class RoomCompletedScreen extends me {
 
     final static int a(int param0, int param1, boolean param2, int param3, int param4) {
         if (param2) {
-          return et.b(param1, param0, -81) - iia.d(param3, param4, 2);
+          return MidiVoiceMixer.b(param1, param0, -81) - iia.d(param3, param4, 2);
         }
         field_j = (String) null;
-        return et.b(param1, param0, -81) - iia.d(param3, param4, 2);
+        return MidiVoiceMixer.b(param1, param0, -81) - iia.d(param3, param4, 2);
     }
 
     final void a(byte param0) {
@@ -124,7 +124,7 @@ final class RoomCompletedScreen extends me {
             var6 = var6 | 16;
           }
           ql.field_k.writeByte(var6, 0);
-          var7 = qla.a(0, di.a(46));
+          var7 = FontMetrics.a(0, di.a(46));
           if (var7 == null) {
             var7 = "";
           }

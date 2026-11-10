@@ -178,13 +178,13 @@ final class PitBehaviour extends Behaviour {
 
     PitBehaviour(Room param0, boolean param1) {
         super(param0, param1);
-        this.field_u = jm.field_l;
+        this.field_u = PasswordValidator.field_l;
         this.field_n = 0;
         this.field_p = false;
         this.field_s = false;
         this.field_r = false;
         try {
-          this.field_u = jm.field_l;
+          this.field_u = PasswordValidator.field_l;
           this.c(0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "mo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -265,7 +265,7 @@ final class PitBehaviour extends Behaviour {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        this.field_u = jm.field_l;
+        this.field_u = PasswordValidator.field_l;
         this.field_n = 0;
         this.field_p = false;
         this.field_s = false;
@@ -275,7 +275,7 @@ final class PitBehaviour extends Behaviour {
           stackIn_4_1 = (1 == param1.readBits((byte) 44, 1));
           this.field_r = stackIn_4_1;
           if (param0.formatVersion < 4) {
-            this.field_u = jm.field_l;
+            this.field_u = PasswordValidator.field_l;
           } else {
             this.field_u = param1.readBits((byte) 44, 10) << 16;
           }

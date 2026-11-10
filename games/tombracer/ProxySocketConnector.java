@@ -95,9 +95,9 @@ final class ProxySocketConnector extends SocketConnector {
               baa.field_d.a(0, new ei[]{(ei) ((Object) vea.field_c)});
             } else {
               if (vea.field_c == var1) {
-                baa.field_d.a(0, new ei[]{(ei) ((Object) laa.field_x)});
+                baa.field_d.a(0, new ei[]{(ei) ((Object) UsernameSuggestionsPanel.field_x)});
               } else {
-                if (laa.field_x != var1) {
+                if (UsernameSuggestionsPanel.field_x != var1) {
                   if (var1 == daa.field_d) {
                     baa.field_d.a(0, new ei[]{(ei) ((Object) kra.field_a)});
                   }

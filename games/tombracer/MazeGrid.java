@@ -85,7 +85,7 @@ final class MazeGrid {
         }
     }
 
-    final static void a(eua param0, byte param1) {
+    final static void a(QuickChatMenu param0, byte param1) {
         try {
           if (param1 < 120) {
             field_d = (String[]) null;

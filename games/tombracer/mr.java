@@ -5,11 +5,11 @@ final class mr extends WidgetContainer implements tma, tsa, mia {
     private so field_E;
     private jla field_D;
     private so field_I;
-    private rj field_B;
-    private rj field_F;
+    private FocusableWidget field_B;
+    private FocusableWidget field_F;
     private lga field_A;
     private so field_z;
-    laa field_y;
+    UsernameSuggestionsPanel field_y;
     private so field_G;
     static w field_w;
     private so field_J;
@@ -168,8 +168,8 @@ final class mr extends WidgetContainer implements tma, tsa, mia {
         this.field_I = new so("", (qc) null, 3);
         int var1 = 1;
         this.field_D = new jla("", (qc) null, var1 != 0);
-        this.field_F = new rj(sla.field_c, (qc) null);
-        this.field_B = new rj(kda.field_gd, (qc) null);
+        this.field_F = new FocusableWidget(sla.field_c, (qc) null);
+        this.field_B = new FocusableWidget(kda.field_gd, (qc) null);
         this.field_G.field_q = rma.field_a;
         this.field_z.field_q = ema.field_a;
         this.field_J.field_q = ju.field_a;
@@ -180,7 +180,7 @@ final class mr extends WidgetContainer implements tma, tsa, mia {
         this.field_G.a(-13861, new tf(this.field_G));
         this.field_z.a(-13861, new hqa(this.field_z));
         this.field_J.a(-13861, new mn(this.field_J, this.field_z));
-        this.field_E.a(-13861, new jm(this.field_E, this.field_G, this.field_z));
+        this.field_E.a(-13861, new PasswordValidator(this.field_E, this.field_G, this.field_z));
         this.field_C.a(-13861, new oe(this.field_C, this.field_E));
         this.field_I.a(-13861, new jba(this.field_I));
         this.field_F.field_y = false;
@@ -223,7 +223,7 @@ final class mr extends WidgetContainer implements tma, tsa, mia {
         this.field_F.field_h = (qc) (this);
         this.addChild(this.field_F, -1);
         this.addChild(this.field_B, -1);
-        this.field_y = new laa((mia) (this));
+        this.field_y = new UsernameSuggestionsPanel((mia) (this));
         this.field_y.setBounds((byte) -31, -60 - this.field_G.field_m - this.field_G.field_i + this.field_m, 150, 60 + (this.field_G.field_m + this.field_G.field_i), this.field_G.field_n + 20);
         this.addChild(this.field_y, -1);
         this.setBounds((byte) -31, 496, var6 + 55 + var3, 0, 0);
@@ -519,7 +519,7 @@ final class mr extends WidgetContainer implements tma, tsa, mia {
         return var1;
     }
 
-    public final void a(int param0, int param1, rj param2, int param3, byte param4) {
+    public final void a(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
         boolean discarded$1 = false;
         RuntimeException var6 = null;
         RuntimeException stackIn_9_0 = null;

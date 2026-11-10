@@ -14,7 +14,7 @@ abstract class r extends DualLinkNode {
             return;
           }
           if (uu.field_a != null) {
-            et.a(11, 30, uu.field_a.f(param0 ^ 0));
+            MidiVoiceMixer.a(11, 30, uu.field_a.f(param0 ^ 0));
           }
           vda.field_q = true;
           return;
@@ -24,7 +24,7 @@ abstract class r extends DualLinkNode {
           return;
         }
         if (uu.field_a != null) {
-          et.a(11, 30, uu.field_a.f(param0 ^ 0));
+          MidiVoiceMixer.a(11, 30, uu.field_a.f(param0 ^ 0));
         }
         vda.field_q = true;
     }
@@ -86,10 +86,10 @@ abstract class r extends DualLinkNode {
 
     final static int f(int param0) {
         if (param0 == 11) {
-          return caa.field_i + (k.field_A << 4) + (nba.field_b << 2);
+          return UrlDownloadRequest.field_i + (k.field_A << 4) + (nba.field_b << 2);
         }
         r.a(87, false);
-        return caa.field_i + (k.field_A << 4) + (nba.field_b << 2);
+        return UrlDownloadRequest.field_i + (k.field_A << 4) + (nba.field_b << 2);
     }
 
     protected r() {

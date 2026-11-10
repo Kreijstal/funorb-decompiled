@@ -427,8 +427,8 @@ final class tqa implements Renderable {
         }
         var12 = iia.d(this.field_c, this.a(-var10 + param0 + var9, false), 2);
         var13 = iia.d(this.field_l, this.a(var9 - var11 + param3, false), 2);
-        var14 = et.b(this.a(-var9 + var10 + param0, false), -1 + this.field_d, 124);
-        var15 = et.b(this.a(var11 + (param3 - var9), false), this.field_n - 1, 101);
+        var14 = MidiVoiceMixer.b(this.a(-var9 + var10 + param0, false), -1 + this.field_d, 124);
+        var15 = MidiVoiceMixer.b(this.a(var11 + (param3 - var9), false), this.field_n - 1, 101);
         if (param2 > -104) {
           var20 = (Room) null;
           this.a((byte) -39, (BitPacketBuffer) null, (Room) null);

@@ -10,19 +10,19 @@ final class jo extends ArrayWidgetGroup implements tsa {
     private int field_B;
     private int field_I;
     static String field_E;
-    private rj field_D;
-    private rj field_F;
+    private FocusableWidget field_D;
+    private FocusableWidget field_F;
     private vp field_N;
-    private rj field_z;
+    private FocusableWidget field_z;
     private boolean field_P;
     private boolean field_x;
-    private rj field_H;
+    private FocusableWidget field_H;
     private int field_G;
-    private rj field_L;
+    private FocusableWidget field_L;
     int field_M;
     private int field_A;
 
-    public final void a(int param0, int param1, rj param2, int param3, byte param4) {
+    public final void a(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
         int var7 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -74,7 +74,7 @@ final class jo extends ArrayWidgetGroup implements tsa {
         }
     }
 
-    final void a(byte param0) {
+    final void layoutChildren(byte param0) {
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
         if (this.field_L == null) {
@@ -122,13 +122,13 @@ final class jo extends ArrayWidgetGroup implements tsa {
     }
 
     private final void b(int param0, boolean param1) {
-        rj stackIn_3_0 = null;
+        FocusableWidget stackIn_3_0 = null;
         boolean stackIn_5_1 = false;
-        rj stackIn_11_0 = null;
+        FocusableWidget stackIn_11_0 = null;
         boolean stackIn_13_1 = false;
-        rj stackIn_17_0 = null;
+        FocusableWidget stackIn_17_0 = null;
         boolean stackIn_18_1 = false;
-        rj stackIn_23_0 = null;
+        FocusableWidget stackIn_23_0 = null;
         boolean stackIn_24_1 = false;
         stackIn_3_0 = this.field_D;
         stackIn_5_1 = (param1) || (this.field_P);
@@ -136,8 +136,8 @@ final class jo extends ArrayWidgetGroup implements tsa {
         if (param0 >= -80) {
           return;
         }
-        if (this.field_N.child instanceof rj) {
-          stackIn_11_0 = (rj) (this.field_N.child);
+        if (this.field_N.child instanceof FocusableWidget) {
+          stackIn_11_0 = (FocusableWidget) (this.field_N.child);
           stackIn_13_1 = (param1) || (this.field_P);
           stackIn_11_0.field_y = stackIn_13_1;
         }
@@ -290,8 +290,8 @@ final class jo extends ArrayWidgetGroup implements tsa {
         var7 = TombRacer.field_G ? 1 : 0;
         try {
           super.updatePointerState(param0, param1 ^ 0, param2, param3);
-          if ((!(this.field_N.child instanceof rj) ||
-            ((rj) (this.field_N.child)).field_y) && this.field_N.field_s == 1) {
+          if ((!(this.field_N.child instanceof FocusableWidget) ||
+            ((FocusableWidget) (this.field_N.child)).field_y) && this.field_N.field_s == 1) {
             if (!this.field_J) {
               this.h((byte) -101);
             } else {
@@ -317,14 +317,14 @@ final class jo extends ArrayWidgetGroup implements tsa {
             this.field_D.field_x == 1) {
             if (this.field_P) {
               if (!this.field_J) {
-                if (sta.field_B <= (this.field_N.field_p >> 1) + (this.field_N.field_n + param3)) {
+                if (GridWidgetContainer.field_B <= (this.field_N.field_p >> 1) + (this.field_N.field_n + param3)) {
                   this.a(this.field_O - this.field_B, (byte) -91);
                 } else {
                   this.a(this.field_O + this.field_B, (byte) -109);
                 }
               } else {
                 var5_intLifetime1 = -(this.field_N.field_m >> 1) - (this.field_N.field_i + this.field_i - jba.field_j + param0);
-                var6 = sta.field_B - param3 - this.field_n - ((this.field_N.field_p >> 1) + this.field_N.field_n);
+                var6 = GridWidgetContainer.field_B - param3 - this.field_n - ((this.field_N.field_p >> 1) + this.field_N.field_n);
                 if (Math.abs(var6) <= Math.abs(var5_intLifetime1)) {
                   if (var5_intLifetime1 <= 0) {
                     this.b(13328, this.field_C - this.field_y);
@@ -350,7 +350,7 @@ final class jo extends ArrayWidgetGroup implements tsa {
             }
           }
           if (param1 != 2097152) {
-            this.field_L = (rj) null;
+            this.field_L = (FocusableWidget) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -370,7 +370,7 @@ final class jo extends ArrayWidgetGroup implements tsa {
     jo(int param0, int param1, int param2, int param3, isa param4, isa param5, isa param6, int param7, int param8, int param9, int param10, boolean param11, boolean param12, int param13, int param14) {
         super(param0, param1, param2, param3, param4);
         vp dupTemp$0 = null;
-        rj dupTemp$1 = null;
+        FocusableWidget dupTemp$1 = null;
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_11_0 = null;
@@ -393,10 +393,10 @@ final class jo extends ArrayWidgetGroup implements tsa {
         this.field_A = 1024;
         try {
           this.children = new UiWidget[6];
-          dupTemp$0 = new vp(param0, param1, param7, param8, (isa) null, (qc) null, new rj(0, 0, param7, param8, param6, (qc) null), false, false);
+          dupTemp$0 = new vp(param0, param1, param7, param8, (isa) null, (qc) null, new FocusableWidget(0, 0, param7, param8, param6, (qc) null), false, false);
           this.field_N = dupTemp$0;
           this.children[0] = (UiWidget) ((Object) dupTemp$0);
-          dupTemp$1 = new rj(param0, param1, param7, param8, param5, (qc) null);
+          dupTemp$1 = new FocusableWidget(param0, param1, param7, param8, param5, (qc) null);
           this.field_D = dupTemp$1;
           this.children[1] = (UiWidget) ((Object) dupTemp$1);
           this.field_G = param10;
@@ -457,7 +457,7 @@ final class jo extends ArrayWidgetGroup implements tsa {
         }
         this.h((byte) -110);
         if (param0 != 27980) {
-          this.field_D = (rj) null;
+          this.field_D = (FocusableWidget) null;
         }
     }
 
@@ -552,7 +552,7 @@ final class jo extends ArrayWidgetGroup implements tsa {
           this.b(-82, false);
         }
         if (param0 >= -81) {
-          this.field_z = (rj) null;
+          this.field_z = (FocusableWidget) null;
         }
         this.h((byte) -110);
     }
@@ -577,13 +577,13 @@ final class jo extends ArrayWidgetGroup implements tsa {
     }
 
     private final void a(int param0, boolean param1) {
-        rj stackIn_5_0 = null;
+        FocusableWidget stackIn_5_0 = null;
         boolean stackIn_7_1 = false;
-        rj stackIn_12_0 = null;
+        FocusableWidget stackIn_12_0 = null;
         boolean stackIn_14_1 = false;
-        rj stackIn_19_0 = null;
+        FocusableWidget stackIn_19_0 = null;
         boolean stackIn_20_1 = false;
-        rj stackIn_24_0 = null;
+        FocusableWidget stackIn_24_0 = null;
         boolean stackIn_25_1 = false;
         if (param0 != 1) {
           this.d(64);
@@ -591,8 +591,8 @@ final class jo extends ArrayWidgetGroup implements tsa {
         stackIn_5_0 = this.field_D;
         stackIn_7_1 = (param1) || (this.field_J);
         stackIn_5_0.field_y = stackIn_7_1;
-        if (this.field_N.child instanceof rj) {
-          stackIn_12_0 = (rj) (this.field_N.child);
+        if (this.field_N.child instanceof FocusableWidget) {
+          stackIn_12_0 = (FocusableWidget) (this.field_N.child);
           stackIn_14_1 = (param1) || (this.field_J);
           stackIn_12_0.field_y = stackIn_14_1;
         }

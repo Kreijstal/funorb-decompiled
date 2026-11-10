@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class TextInputWidget extends rj {
+class TextInputWidget extends FocusableWidget {
     private long field_H;
     static String field_A;
     private int field_I;
@@ -468,7 +468,7 @@ class TextInputWidget extends rj {
         RuntimeException decompiledCaughtException = null;
         oaa var2 = null;
         RuntimeException var2_ref = null;
-        bja var3 = null;
+        TextLayout var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -594,7 +594,7 @@ class TextInputWidget extends rj {
           if (this.field_s == 1) {
             if (this.field_r instanceof oaa) {
               var5 = (oaa) ((Object) this.field_r);
-              var6 = var5.a((UiWidget) (this), (byte) 4, sta.field_B, param0, param3, jba.field_j);
+              var6 = var5.a((UiWidget) (this), (byte) 4, GridWidgetContainer.field_B, param0, param3, jba.field_j);
               if (var6 != -1) {
                 if (this.field_E &&
                   var6 < this.field_F &&
@@ -638,7 +638,7 @@ class TextInputWidget extends rj {
           }
           if (super.handlePointerPress(92, param1, param2, param3, param4, param5, param6) &&
             this.field_r instanceof oaa) {
-            var8_int = ((oaa) ((Object) this.field_r)).a((UiWidget) (this), (byte) 4, sta.field_B, param1, param2, jba.field_j);
+            var8_int = ((oaa) ((Object) this.field_r)).a((UiWidget) (this), (byte) 4, GridWidgetContainer.field_B, param1, param2, jba.field_j);
             stackIn_10_1 = 60;
             if (-1 == var8_int) {
               stackIn_11_2 = 0;

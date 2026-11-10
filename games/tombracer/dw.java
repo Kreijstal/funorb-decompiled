@@ -34,11 +34,11 @@ final class dw {
 
     final static void b(byte param0) {
         if (gda.field_c == 10) {
-          et.a(true);
+          MidiVoiceMixer.a(true);
           gda.field_c = 11;
         } else {
           if (!TrapModel.b(-1)) {
-            et.a(true);
+            MidiVoiceMixer.a(true);
             gda.field_c = 11;
           }
         }

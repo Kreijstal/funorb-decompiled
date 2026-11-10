@@ -66,14 +66,14 @@ abstract class qra {
         this.field_k = new fna(0, wba.field_q[0], 0, false);
         if (param0 == -78) {
           this.field_k.field_b = this.field_k.e(-163) / 2 + 10;
-          this.field_k.field_i = -25 + koa.b(0);
+          this.field_k.field_i = -25 + SwitchLinkList.b(0);
           this.field_k.a(false);
           this.field_a = new ko(1);
           return;
         }
         this.a((byte) 97);
         this.field_k.field_b = this.field_k.e(-163) / 2 + 10;
-        this.field_k.field_i = -25 + koa.b(0);
+        this.field_k.field_i = -25 + SwitchLinkList.b(0);
         this.field_k.a(false);
         this.field_a = new ko(1);
     }
@@ -115,8 +115,8 @@ abstract class qra {
           var2 = 0;
           stackIn_4_1 = (var2 != 0);
           this.field_b = stackIn_4_1;
-          if (this.field_k.field_b <= jm.field_m) {
-            if (jm.field_m < 100 + this.field_k.field_b) {
+          if (this.field_k.field_b <= PasswordValidator.field_m) {
+            if (PasswordValidator.field_m < 100 + this.field_k.field_b) {
               if (lba.field_p >= this.field_k.field_i) {
                 stackIn_14_0 = (20 + this.field_k.field_i > lba.field_p) ? 1 : 0;
               } else {
@@ -153,8 +153,8 @@ abstract class qra {
           var2Lifetime1 = 0;
           stackIn_35_1 = (var2Lifetime1 != 0);
           this.field_b = stackIn_35_1;
-          if (this.field_k.field_b <= jm.field_m) {
-            if (jm.field_m < 100 + this.field_k.field_b) {
+          if (this.field_k.field_b <= PasswordValidator.field_m) {
+            if (PasswordValidator.field_m < 100 + this.field_k.field_b) {
               if (lba.field_p >= this.field_k.field_i) {
                 stackIn_45_0 = (20 + this.field_k.field_i > lba.field_p) ? 1 : 0;
               } else {
@@ -187,16 +187,16 @@ abstract class qra {
           ConstrainToRectangleLocomotor.a(stackIn_58_0, stackIn_59_1, (byte) 97);
           return;
         }
-        if (-25 + this.field_k.field_i <= sta.field_B) {
-          stackIn_67_0 = (this.field_k.field_i + 25 <= sta.field_B) ? 0 : 1;
+        if (-25 + this.field_k.field_i <= GridWidgetContainer.field_B) {
+          stackIn_67_0 = (this.field_k.field_i + 25 <= GridWidgetContainer.field_B) ? 0 : 1;
         } else {
           stackIn_67_0 = 0;
         }
         var2Lifetime2 = stackIn_67_0;
         stackIn_70_1 = (var2Lifetime2 != 0);
         this.field_b = stackIn_70_1;
-        if (this.field_k.field_b <= jm.field_m) {
-          if (jm.field_m < 100 + this.field_k.field_b) {
+        if (this.field_k.field_b <= PasswordValidator.field_m) {
+          if (PasswordValidator.field_m < 100 + this.field_k.field_b) {
             if (lba.field_p >= this.field_k.field_i) {
               stackIn_79_0 = (20 + this.field_k.field_i <= lba.field_p) ? 0 : 1;
             } else {

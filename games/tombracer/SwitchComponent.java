@@ -3,7 +3,7 @@
  */
 abstract class SwitchComponent extends PrefabComponent {
     private f field_G;
-    private jma field_H;
+    private SwitchState field_H;
     private boolean field_I;
     static String[] fireDeathMessages;
 
@@ -32,7 +32,7 @@ abstract class SwitchComponent extends PrefabComponent {
     final void x(int param0) {
         super.x(param0);
         if (null != this.field_H) {
-          this.field_H.h(1).a(9, this.field_G.a((byte) -103));
+          this.field_H.getLinks(1).a(9, this.field_G.a((byte) -103));
           return;
         }
     }
@@ -99,14 +99,14 @@ abstract class SwitchComponent extends PrefabComponent {
         }
     }
 
-    final void a(ut param0, byte param1) {
+    final void a(SwitchSource param0, byte param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_H = param0.k((byte) -77);
+          this.field_H = param0.getSwitchState((byte) -77);
           if (param1 >= -51) {
             return;
           }

@@ -267,8 +267,8 @@ class vpa implements isa, oaa {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        bja var17 = null;
-        bja var18 = null;
+        TextLayout var17 = null;
+        TextLayout var18 = null;
         var16 = TombRacer.field_G ? 1 : 0;
         try {
           if (param4 == param5) {
@@ -287,8 +287,8 @@ class vpa implements isa, oaa {
               var9 = param4;
               var8 = param5;
             }
-            var10 = var18.a(var8, 0);
-            var11 = var18.a(var9, 0);
+            var10 = var18.findLineIndex(var8, 0);
+            var11 = var18.findLineIndex(var9, 0);
             tga.a(-21953, param3 + param1.field_i, param3 - (-param1.field_i - param1.field_m), param2 + param1.field_n, param1.field_p + (param2 + param1.field_n));
             for (var12 = var10; var12 <= var11; var12++) {
               var13 = var17.field_c[var12];
@@ -372,7 +372,7 @@ class vpa implements isa, oaa {
         var7 = TombRacer.field_G ? 1 : 0;
         try {
           if (param1.field_l == null) {
-            param1.field_l = (bja) ((Object) new po());
+            param1.field_l = (TextLayout) ((Object) new po());
           }
           var3_int = this.a((byte) -83, param1);
           if (param0 <= 65) {
@@ -556,16 +556,16 @@ class vpa implements isa, oaa {
         }
     }
 
-    public final bja a(UiWidget param0, int param1) {
+    public final TextLayout a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
-        bja stackIn_9_0 = null;
+        TextLayout stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0.field_l == null) {
-            param0.field_l = (bja) ((Object) new po());
+            param0.field_l = (TextLayout) ((Object) new po());
           }
           if (param1 != 14157) {
             this.field_e = (BitmapFont) null;
@@ -592,8 +592,8 @@ class vpa implements isa, oaa {
     }
 
     public final void a(int param0, int param1, int param2, int param3, UiWidget param4) {
-        bja var13 = null;
-        bja var14 = null;
+        TextLayout var13 = null;
+        TextLayout var14 = null;
         int var7 = 0;
         kha var8 = null;
         int var9 = 0;
@@ -607,7 +607,7 @@ class vpa implements isa, oaa {
           if (param4.hasKeyboardFocus((byte) -34)) {
             var13 = this.a(param4, 14157);
             var14 = var13;
-            var7 = var14.a(param0, 0);
+            var7 = var14.findLineIndex(param0, 0);
             var8 = var13.field_c[var7];
             var9 = var14.a((byte) -59, param0);
             var10 = this.a(param4, var9, param3, param2 ^ 22503);
@@ -633,7 +633,7 @@ class vpa implements isa, oaa {
         try {
           this.a(param1, 14157);
           var3_int = -28 % ((param0 - 47) / 52);
-          stackIn_1_0 = param1.field_l.b(127) + (this.field_g + this.field_i);
+          stackIn_1_0 = param1.field_l.getLayoutHeight(127) + (this.field_g + this.field_i);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

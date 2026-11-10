@@ -283,7 +283,7 @@ final class IsaacCipher {
             ft.field_a = param10;
             if (kqa.field_a.field_x != null) {
               try {
-                fua.field_b = new ph(kqa.field_a.field_x, 64, 0);
+                fua.field_b = new BufferedCacheFile(kqa.field_a.field_x, 64, 0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var15 = (IOException) (Object) decompiledCaughtException;

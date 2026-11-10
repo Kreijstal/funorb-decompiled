@@ -733,7 +733,7 @@ final class fea {
           if (SimpleBlockBehaviour.field_r == -1 &&
             tqa.field_g == -1) {
             SimpleBlockBehaviour.field_r = jba.field_j;
-            tqa.field_g = sta.field_B;
+            tqa.field_g = GridWidgetContainer.field_B;
           }
           boolean decompiledFrameRemainder0 = true;
           fr.field_c = fr.field_c + 1;

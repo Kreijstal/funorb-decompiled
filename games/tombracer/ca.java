@@ -7,7 +7,7 @@ final class ca extends GameFont {
     private qm field_d;
     private boolean field_e;
 
-    ca(eo param0, qla param1, SpriteData[] param2, boolean param3) {
+    ca(eo param0, FontMetrics param1, SpriteData[] param2, boolean param3) {
         super(param0, param1);
         int incrementValue$3 = 0;
         int incrementValue$0 = 0;

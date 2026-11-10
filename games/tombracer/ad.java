@@ -18,10 +18,10 @@ final class ad extends IntrusiveNode {
           if (this.field_k + 64 < jba.field_j) {
             return false;
           }
-          if (sta.field_B < this.field_g) {
+          if (GridWidgetContainer.field_B < this.field_g) {
             return false;
           }
-          if (sta.field_B <= 64 + this.field_g) {
+          if (GridWidgetContainer.field_B <= 64 + this.field_g) {
             return true;
           }
           return false;
@@ -32,10 +32,10 @@ final class ad extends IntrusiveNode {
         if (this.field_k + 64 < jba.field_j) {
           return false;
         }
-        if (sta.field_B < this.field_g) {
+        if (GridWidgetContainer.field_B < this.field_g) {
           return false;
         }
-        if (sta.field_B <= 64 + this.field_g) {
+        if (GridWidgetContainer.field_B <= 64 + this.field_g) {
           return true;
         }
         return false;

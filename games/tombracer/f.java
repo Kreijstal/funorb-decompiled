@@ -99,7 +99,7 @@ final class f {
         return;
     }
 
-    final lj[] a(byte param0) {
+    final Switchable[] a(byte param0) {
         RoomComponent[] stackIn_6_0 = null;
         Object stackIn_11_0 = null;
         RoomComponent[] stackIn_22_0 = null;
@@ -108,14 +108,14 @@ final class f {
         RoomComponent[] stackOut_21_0;
         int var2 = 0;
         int var3_int = 0;
-        lj[] var3 = null;
+        Switchable[] var3 = null;
         RoomComponent var4_ref_csa = null;
         int var4 = 0;
-        lj var5 = null;
+        Switchable var5 = null;
         RoomComponent var5_ref = null;
-        lj var6 = null;
+        Switchable var6 = null;
         int var7 = 0;
-        lj[] var3Lifetime1;
+        Switchable[] var3Lifetime1;
         int var4Lifetime1;
         int var2Lifetime1;
         var7 = TombRacer.field_G ? 1 : 0;
@@ -124,7 +124,7 @@ final class f {
         while (this.field_f.length > var3_int) {
           var4_ref_csa = this.field_f[var3_int];
           if (var7 != 0) {
-            var3 = new lj[var2];
+            var3 = new Switchable[var2];
             var2 = 0;
             var4 = 0;
             while (true) {
@@ -135,7 +135,7 @@ final class f {
               } else {
                 stackIn_11_0 = var3;
               }
-              return (lj[]) (stackIn_11_0);
+              return (Switchable[]) (stackIn_11_0);
             }
           }
           if (var4_ref_csa != null) {
@@ -152,9 +152,9 @@ final class f {
           break;
         }
         if (param0 != -103) {
-          return (lj[]) null;
+          return (Switchable[]) null;
         }
-        var3Lifetime1 = new lj[var2];
+        var3Lifetime1 = new Switchable[var2];
         var2Lifetime1 = 0;
         var4Lifetime1 = 0;
         while (true) {
@@ -179,7 +179,7 @@ final class f {
           }
           break;
         }
-        return (lj[]) (stackIn_27_0);
+        return (Switchable[]) (stackIn_27_0);
     }
 
     final static String a(int param0, boolean param1, int param2, long param3, int param4) {
@@ -643,10 +643,10 @@ final class f {
             }
             if (param2 != this.field_f[var4_int].o((byte) -48)) {
               param0.writeBits((byte) 73, 0, 1);
-              param0.writeBits((byte) 111, this.field_f[var4_int].n(31974).getId((byte) 62), 8);
+              param0.writeBits((byte) 111, this.field_f[var4_int].getGlobalId(31974).getId((byte) 62), 8);
             } else {
               param0.writeBits((byte) -127, 1, 1);
-              param0.writeBits((byte) -126, this.field_f[var4_int].i((byte) 84).getId((byte) 115), 8);
+              param0.writeBits((byte) -126, this.field_f[var4_int].getLocalId((byte) 84).getId((byte) 115), 8);
             }
             var4_int++;
           }

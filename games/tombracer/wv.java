@@ -309,7 +309,7 @@ abstract class wv extends dfa {
               if (vda.field_q) {
                 break scanLoop1;
               }
-              this.field_k.a(this.b(lba.field_p, true, jm.field_m), 71, this.b(sta.field_B, true, jba.field_j));
+              this.field_k.a(this.b(lba.field_p, true, PasswordValidator.field_m), 71, this.b(GridWidgetContainer.field_B, true, jba.field_j));
             }
             if (this.field_k.field_h != -1) {
               this.b(false, true, this.field_k.field_h);
@@ -458,7 +458,7 @@ abstract class wv extends dfa {
                 uv.d(30785);
               } else {
                 ConstrainToRectangleLocomotor.a(param1, 11, (byte) 106);
-                jm.field_n = -2;
+                PasswordValidator.field_n = -2;
               }
               return true;
             }
@@ -518,7 +518,7 @@ abstract class wv extends dfa {
             if (var7 != 5 &&
               var7 != 6) {
               if (var7 == 7) {
-                tfa.e((byte) -122);
+                OpenGlTexture.e((byte) -122);
                 return true;
               }
               if (var7 == 9) {
@@ -534,7 +534,7 @@ abstract class wv extends dfa {
                 var4_int = SecondaryNodeDequeIterator.field_a.m(-1);
                 var5 = SecondaryNodeDequeIterator.field_a.h(0, 9);
                 var6 = SecondaryNodeDequeIterator.field_a.field_k.field_K;
-                bja.a(var4_int, (byte) 101, var6);
+                TextLayout.a(var4_int, (byte) 101, var6);
                 SecondaryNodeDequeIterator.field_a.b(var5, 50, 0);
                 SecondaryNodeDequeIterator.field_a.j((byte) -49);
                 SecondaryNodeDequeIterator.field_a.c(125);
@@ -584,20 +584,20 @@ abstract class wv extends dfa {
               if (var7 == 28 &&
                 var8 == 0) {
                 boolean decompiledFrameRemainder1 = true;
-                if (2147483647 == jm.field_n) {
+                if (2147483647 == PasswordValidator.field_n) {
                   if (this.field_c != 10) {
-                    jm.field_n = this.field_c;
+                    PasswordValidator.field_n = this.field_c;
                   } else {
                     if (!GameClock.field_b) {
                       if (uma.field_c) {
-                        jm.field_n = 3;
+                        PasswordValidator.field_n = 3;
                       } else {
-                        jm.field_n = 9;
+                        PasswordValidator.field_n = 9;
                       }
                       decompiledFrameRemainder1 = false;
                     }
                     else {
-                      jm.field_n = 6;
+                      PasswordValidator.field_n = 6;
                     }
                   }
                 }
@@ -666,7 +666,7 @@ abstract class wv extends dfa {
               return true;
             }
           }
-          caa.a((byte) 105);
+          UrlDownloadRequest.a((byte) 105);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -735,7 +735,7 @@ abstract class wv extends dfa {
         RuntimeException decompiledCaughtException = null;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          this.field_k.a(param2, param0 + 29954, param1, this.b(sta.field_B, true, jba.field_j));
+          this.field_k.a(param2, param0 + 29954, param1, this.b(GridWidgetContainer.field_B, true, jba.field_j));
           var4_int = param0;
           while (var4_int < this.field_m.length) {
             this.field_m[var4_int].c(1701110401);

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SimpleBlockBehaviour extends Behaviour {
-    static ola field_n;
+    static ContextMenu field_n;
     static int field_r;
     private boolean field_u;
     static int[] field_p;
@@ -30,12 +30,12 @@ final class SimpleBlockBehaviour extends Behaviour {
           Throwable decompiledCaughtException = null;
           try {
             if (PlatformTaskDispatcher.field_j.startsWith("win") &&
-              qla.a(param2, -127)) {
+              FontMetrics.a(param2, -127)) {
               return;
             }
             try {
               if (param0 != 1) {
-                field_n = (ola) null;
+                field_n = (ContextMenu) null;
               }
               param1.getAppletContext().showDocument(new java.net.URL(param2), "_blank");
               return;
@@ -163,7 +163,7 @@ final class SimpleBlockBehaviour extends Behaviour {
         if (param0 == 0) {
           return ld.field_e >= 2 ? true : false;
         }
-        field_n = (ola) null;
+        field_n = (ContextMenu) null;
         return ld.field_e >= 2 ? true : false;
     }
 

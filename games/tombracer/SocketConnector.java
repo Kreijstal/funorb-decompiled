@@ -58,7 +58,7 @@ abstract class SocketConnector {
         if (-param4 + param0 < pka.field_b) {
           za.a(param0, param3, param4, param1, (byte) 115, param5);
         } else {
-          if (param0 + param4 > ss.field_c) {
+          if (param0 + param4 > DiskCacheWorker.field_c) {
             za.a(param0, param3, param4, param1, (byte) 115, param5);
           } else {
             if (param5 - param3 < gca.field_d) {

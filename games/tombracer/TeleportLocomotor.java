@@ -217,7 +217,7 @@ final class TeleportLocomotor extends Locomotor {
           }
           return;
         }
-        if (ss.field_c < param0) {
+        if (DiskCacheWorker.field_c < param0) {
           if (1 != param1) {
             pua.a(-78, param3, param4, param2, param1, param6, param0);
           } else {

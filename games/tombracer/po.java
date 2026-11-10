@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class po extends bja {
+final class po extends TextLayout {
     static String field_i;
     private int field_f;
     private boolean field_h;
@@ -167,7 +167,7 @@ final class po extends bja {
               if (param6 != 3) {
                 stackIn_40_4 = 0;
               } else {
-                stackIn_40_4 = this.a(0, var13, param3, param0.b(var13));
+                stackIn_40_4 = this.computeJustifySpacing(0, var13, param3, param0.b(var13));
               }
               FlameShooterComponent.a(stackIn_39_0, stackIn_39_1, stackIn_39_2, stackIn_39_3, stackIn_40_4);
             }

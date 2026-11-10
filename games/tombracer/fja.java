@@ -190,7 +190,7 @@ final class fja extends qra {
             }
             var5_intLifetime1Lifetime1 = 40 + ds.field_n.a(var4, (byte) 41);
             var6Lifetime1Lifetime1 = aaa.a(false) / 2;
-            var7_intLifetime1Lifetime1 = koa.b(0) / 2;
+            var7_intLifetime1Lifetime1 = SwitchLinkList.b(0) / 2;
             qa.a(64, var5_intLifetime1Lifetime1, (byte) 74, -(var5_intLifetime1Lifetime1 / 2) + var6Lifetime1Lifetime1, aq.field_a, -ds.field_n.field_d + (var7_intLifetime1Lifetime1 - 32));
             if (this.field_q > 50) {
               if (0 != this.field_c.field_K) {
@@ -228,7 +228,7 @@ final class fja extends qra {
                 var7 = doa.b(var6Lifetime1Lifetime2, 0, pl.a((byte) 64));
               }
               var8Lifetime1 = 64;
-              var9 = -64 + koa.b(0);
+              var9 = -64 + SwitchLinkList.b(0);
               var10 = var5.p((byte) 69);
               var11 = 16777215;
               ts.a(0, -34, -16 + var9, "Par Time: " + dea.a(var7.field_h, (byte) -8), var8Lifetime1, kn.field_p, 16777215);
@@ -528,7 +528,7 @@ final class fja extends qra {
               ql.field_k.writeByte(18, 0);
               ql.field_k.position = ql.field_k.position + 2;
               var10 = ql.field_k.position;
-              var11_ref_StringLifetime4 = qla.a(0, di.a(62));
+              var11_ref_StringLifetime4 = FontMetrics.a(0, di.a(62));
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }

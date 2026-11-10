@@ -1,29 +1,29 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jw extends WidgetContainer implements cd, tsa {
-    private rj field_y;
+final class LoginForm extends WidgetContainer implements cd, tsa {
+    private FocusableWidget field_y;
     private TextInputWidget field_A;
     private boolean field_w;
     private String field_F;
-    private rj field_E;
-    private rj field_B;
+    private FocusableWidget field_E;
+    private FocusableWidget field_B;
     static int[] field_z;
     private boolean field_x;
     private boolean field_D;
     private TextInputWidget field_C;
 
-    jw(String param0, String param1, boolean param2, boolean param3, boolean param4) {
+    LoginForm(String param0, String param1, boolean param2, boolean param3, boolean param4) {
         super(0, 0, 310, 190, (isa) null);
         jsa dupTemp$0 = null;
         jsa dupTemp$1 = null;
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
-        rj stackIn_17_1 = null;
-        rj stackIn_17_2 = null;
-        rj stackIn_18_1 = null;
-        rj stackIn_18_2 = null;
+        FocusableWidget stackIn_17_1 = null;
+        FocusableWidget stackIn_17_2 = null;
+        FocusableWidget stackIn_18_1 = null;
+        FocusableWidget stackIn_18_2 = null;
         String stackIn_18_3 = null;
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
@@ -53,11 +53,11 @@ final class jw extends WidgetContainer implements cd, tsa {
           this.field_A = (TextInputWidget) ((Object) new so(param0, (qc) (this), 100));
           this.field_C = (TextInputWidget) ((Object) new so("", (qc) (this), 20));
           if (this.field_x) {
-            this.field_B = new rj(nga.field_q, (qc) null);
-            this.field_y = new rj(ControllerLocomotor.field_q, (qc) null);
+            this.field_B = new FocusableWidget(nga.field_q, (qc) null);
+            this.field_y = new FocusableWidget(ControllerLocomotor.field_q, (qc) null);
             this.field_A.field_y = false;
           } else {
-            this.field_B = new rj(goa.field_c, (qc) null);
+            this.field_B = new FocusableWidget(goa.field_c, (qc) null);
             stackIn_17_1 = null;
             stackIn_17_2 = null;
             if (!this.field_w) {
@@ -69,9 +69,9 @@ final class jw extends WidgetContainer implements cd, tsa {
               stackIn_18_2 = null;
               stackIn_18_3 = fca.field_d;
             }
-            this.field_y = new rj(stackIn_18_3, (qc) null);
+            this.field_y = new FocusableWidget(stackIn_18_3, (qc) null);
             if (this.field_D) {
-              this.field_E = new rj(foa.field_a, (qc) (this));
+              this.field_E = new FocusableWidget(foa.field_a, (qc) (this));
             }
           }
           this.field_A.field_r = (isa) ((Object) new hga(10000536));
@@ -96,7 +96,7 @@ final class jw extends WidgetContainer implements cd, tsa {
               this.field_y.field_r = (isa) ((Object) new kaa());
             }
           } else {
-            this.field_y.field_q = koa.field_c;
+            this.field_y.field_q = SwitchLinkList.field_c;
           }
           this.field_n = 15;
           var7 = KeySwitchComponent.field_J;
@@ -182,7 +182,7 @@ final class jw extends WidgetContainer implements cd, tsa {
         int var1 = -9 % ((34 - param0) / 46);
     }
 
-    public final void a(int param0, int param1, rj param2, int param3, byte param4) {
+    public final void a(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
         int var7 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -209,7 +209,7 @@ final class jw extends WidgetContainer implements cd, tsa {
               qfa.a((byte) 6);
             }
           } else {
-            this.i((byte) 85);
+            this.submitLogin((byte) 85);
           }
           if (param4 <= 44) {
             var8 = (String) null;
@@ -248,7 +248,7 @@ final class jw extends WidgetContainer implements cd, tsa {
           var4 = param0;
           var3.a(false, -16719, var4);
           if (param1 < 121) {
-            jw.releaseStatics(-98);
+            LoginForm.releaseStatics(-98);
           }
           this.field_C.clearText(-10);
         } catch (RuntimeException runtimeException) {
@@ -256,7 +256,7 @@ final class jw extends WidgetContainer implements cd, tsa {
         }
     }
 
-    private final void i(byte param0) {
+    private final void submitLogin(byte param0) {
         if (param0 < 27) {
           return;
         }
@@ -334,7 +334,7 @@ final class jw extends WidgetContainer implements cd, tsa {
             this.field_C.requestKeyboardFocus((UiWidget) (this), false);
           }
           if (param1 == this.field_C) {
-            this.i((byte) 60);
+            this.submitLogin((byte) 60);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

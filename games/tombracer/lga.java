@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class lga extends rj {
+class lga extends FocusableWidget {
     private IntrusiveDeque field_D;
     static int[][] field_z;
     static ResourceArchive field_B;
@@ -114,7 +114,7 @@ class lga extends rj {
           this.field_A = null;
           if (this.field_f) {
             var5_int = -param0 + (jba.field_j - this.field_i);
-            var6 = sta.field_B - param3 - this.field_n;
+            var6 = GridWidgetContainer.field_B - param3 - this.field_n;
             this.field_A = this.a(var6, var5_int, (byte) -20);
           }
           if (param1 != 2097152) {
@@ -138,7 +138,7 @@ class lga extends rj {
     final void b(int param0) {
         int var2;
         oaa var3;
-        bja var4;
+        TextLayout var4;
         int var5;
         int var7;
         int var8;
@@ -151,7 +151,7 @@ class lga extends rj {
         Object var17;
         oaa var17_ref;
         String var21;
-        bja var22;
+        TextLayout var22;
         kha var23;
         bm var24;
         Object var25;
@@ -160,7 +160,7 @@ class lga extends rj {
         int stackIn_27_0 = 0;
         int stackIn_32_0 = 0;
         String var26;
-        bja var27;
+        TextLayout var27;
         kha var28;
         bm var29;
         oaa var30;
@@ -192,8 +192,8 @@ class lga extends rj {
             var26 = this.field_o.substring(9 + var5, var7);
             var7Lifetime2 = Integer.parseInt(var26);
             var2 = this.field_o.indexOf("</hotspot>", var5);
-            var8 = var27.a(var5, 0);
-            var9 = var27.a(var2, 0);
+            var8 = var27.findLineIndex(var5, 0);
+            var9 = var27.findLineIndex(var2, 0);
             var10 = null;
             for (var11 = var8; var9 >= var11; var11++) {
               var28 = var27.field_c[var11];
@@ -238,8 +238,8 @@ class lga extends rj {
           var21 = this.field_o.substring(9 + var5Lifetime1, var7Lifetime1);
           var7Lifetime1Lifetime1 = Integer.parseInt(var21);
           var2Lifetime1 = this.field_o.indexOf("</hotspot>", var5Lifetime1);
-          var8Lifetime1 = var22.a(var5Lifetime1, 0);
-          var9Lifetime1 = var22.a(var2Lifetime1, 0);
+          var8Lifetime1 = var22.findLineIndex(var5Lifetime1, 0);
+          var9Lifetime1 = var22.findLineIndex(var2Lifetime1, 0);
           var10Lifetime1 = null;
           for (var11Lifetime1 = var8Lifetime1; var9Lifetime1 >= var11Lifetime1; var11Lifetime1++) {
             var23 = var22.field_c[var11Lifetime1];

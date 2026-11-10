@@ -76,11 +76,11 @@ final class ui {
           incrementValue$10 = param2;
           param2++;
           var19_ref.a(incrementValue$10, (byte) 47, param1);
-          hl.field_c = new oc[13];
+          OpenGlBuffer.field_c = new oc[13];
           for (var13_intLifetime1 = 0; 13 > var13_intLifetime1; var13_intLifetime1++) {
             var21 = gn.field_w[var13_intLifetime1];
             var15 = gha.a("", "characters/models/deaths/body_parts/" + var21 + "_inhalf", -123, param0);
-            hl.field_c[var13_intLifetime1] = new oc(new oc[]{var15, var5}, 2);
+            OpenGlBuffer.field_c[var13_intLifetime1] = new oc(new oc[]{var15, var5}, 2);
           }
           incrementValue$11 = param2;
           param2++;
@@ -350,7 +350,7 @@ final class ui {
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         int var5 = -116 / ((param1 + 4) / 43);
         if (pka.field_b <= param3 &&
-          !(param3 > ss.field_c)) {
+          !(param3 > DiskCacheWorker.field_c)) {
           param0 = rp.a(hc.field_h, -16226, gca.field_d, param0);
           param4 = rp.a(hc.field_h, -16226, gca.field_d, param4);
           dfa.a(param3, param4, param0, param2, 0);

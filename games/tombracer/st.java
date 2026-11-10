@@ -129,22 +129,22 @@ final class st extends cha implements java.awt.image.ImageProducer, java.awt.ima
             !(ld.field_e < 2))) {
             var10 = hka.field_b;
             var11 = gl.$cfr$intArgs$a$53ce4ab4c593(109, lm.field_o, new String[]{param3});
-            var10.field_f.a((byte) -125, 10, var11);
+            var10.field_f.addItem((byte) -125, 10, var11);
           }
           hka.field_b.a((byte) -84);
           if (param2) {
             if (hka.field_b.field_k == rda.field_o) {
               var14 = hka.field_b;
               var15 = gl.$cfr$intArgs$a$53ce4ab4c593(103, dka.field_d, new String[]{param3});
-              var14.field_f.a((byte) -65, 16, var15);
+              var14.field_f.addItem((byte) -65, 16, var15);
             } else {
               var12 = hka.field_b;
               var13 = gl.$cfr$intArgs$a$53ce4ab4c593(125, IdolItemComponent.field_J, new String[]{param3});
-              var12.field_f.a((byte) -90, 15, var13);
+              var12.field_f.addItem((byte) -90, 15, var13);
             }
           }
           var16 = hka.field_b;
-          var5 = jm.field_m;
+          var5 = PasswordValidator.field_m;
           var6 = lba.field_p;
           if (param0 >= -45) {
             var7 = (String) null;

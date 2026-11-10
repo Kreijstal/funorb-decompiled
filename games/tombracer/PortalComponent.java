@@ -87,17 +87,17 @@ final class PortalComponent extends PrefabComponent {
     }
 
     final void x(int param0) {
-        lj var3 = null;
+        Switchable var3 = null;
         super.x(param0);
         if (this.field_F == null) {
           return;
         }
-        lj[] var4 = this.field_G.a((byte) -103);
-        lj[] var2 = var4;
+        Switchable[] var4 = this.field_G.a((byte) -103);
+        Switchable[] var2 = var4;
         if (var4.length >= 1) {
           var3 = var4[0];
           if (var3 instanceof Trap) {
-            this.field_F.g((byte) 99).a(9, new lj[]{var3});
+            this.field_F.g((byte) 99).a(9, new Switchable[]{var3});
           }
         }
     }

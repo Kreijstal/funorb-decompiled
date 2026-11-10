@@ -18,8 +18,8 @@ final class ee implements isa {
           var7 = param3 + param0.field_n;
           bl.a(param0.field_m, var7, param0.field_p, var6_int, 1);
           var8 = pq.field_b[1];
-          if (param0 instanceof rj &&
-            ((rj) (param0)).field_w) {
+          if (param0 instanceof FocusableWidget &&
+            ((FocusableWidget) (param0)).field_w) {
             var8.a(1 + var6_int + (-var8.field_n + param0.field_m >> 1), var7 + 1 + (-var8.field_k + param0.field_p >> 1), 256);
           }
           if (param2 != 16777215) {
@@ -48,7 +48,7 @@ final class ee implements isa {
         if (param0 != -1) {
           return;
         }
-        laa.field_y = null;
+        UsernameSuggestionsPanel.field_y = null;
         np.field_x = null;
     }
 

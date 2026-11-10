@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-abstract class bja {
+abstract class TextLayout {
     static String field_d;
     static ResourceArchive field_a;
     kha[] field_c;
@@ -36,7 +36,7 @@ abstract class bja {
         field_a = null;
     }
 
-    final int a(int param0, int param1) {
+    final int findLineIndex(int param0, int param1) {
         int var3 = 0;
         kha var4 = null;
         int var5 = TombRacer.field_G ? 1 : 0;
@@ -50,7 +50,7 @@ abstract class bja {
         return this.field_c.length;
     }
 
-    final int a(int param0, String param1, int param2, int param3) {
+    final int computeJustifySpacing(int param0, String param1, int param2, int param3) {
         int var8 = 0;
         int var5_int = 0;
         int var6 = 0;
@@ -151,7 +151,7 @@ abstract class bja {
           du.field_c.field_f = param1.a("", (byte) 117, "wall_bg.jpg");
           if (param0 > -100) {
             var5 = (String) null;
-            bja.a((byte) -1, (ResourceArchive) null, 32, (String) null);
+            TextLayout.a((byte) -1, (ResourceArchive) null, 32, (String) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -206,7 +206,7 @@ abstract class bja {
         return -1;
     }
 
-    final int b(int param0) {
+    final int getLayoutHeight(int param0) {
         int var2;
         int stackIn_5_0 = 0;
         var2 = -43 / ((79 - param0) / 44);

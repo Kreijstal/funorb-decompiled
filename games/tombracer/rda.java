@@ -146,7 +146,7 @@ final class rda extends ci {
           }
           try {
             if (null != Projectile.field_k) {
-              Projectile.field_k.a((byte) 118);
+              Projectile.field_k.shutdown((byte) 118);
             }
             if (null != wka.field_c) {
               try {

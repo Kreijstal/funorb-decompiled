@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class og extends hl implements qm {
+final class og extends OpenGlBuffer implements qm {
     static int field_m;
     private byte field_l;
 
@@ -125,7 +125,7 @@ final class og extends hl implements qm {
         if (!param0) {
           field_m = 54;
         }
-        return super.a(this.field_h.field_Tc, 108);
+        return super.unmap(this.field_h.field_Tc, 108);
     }
 
     static {

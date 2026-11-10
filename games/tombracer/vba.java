@@ -65,9 +65,9 @@ final class vba extends we {
         if (!this.field_q.b(20)) {
           return;
         }
-        this.field_s = this.b(sta.field_B, jba.field_j, true);
+        this.field_s = this.b(GridWidgetContainer.field_B, jba.field_j, true);
         if (hf.field_b == 1) {
-          var4Lifetime1 = this.b(lba.field_p, jm.field_m, true);
+          var4Lifetime1 = this.b(lba.field_p, PasswordValidator.field_m, true);
           if (var4Lifetime1 != this.field_t) {
             if (var4Lifetime1 != -1) {
               this.field_t = var4Lifetime1;
@@ -182,7 +182,7 @@ final class vba extends we {
         int discarded$0 = 0;
         if (param0) {
           GameFont var4 = (GameFont) null;
-          discarded$0 = this.a((String) null, (qla) null, -5, -61, -30, (GameFont) null, 39, -50, -125);
+          discarded$0 = this.a((String) null, (FontMetrics) null, -5, -61, -30, (GameFont) null, 39, -50, -125);
         }
         return vaa.a(SimpleConditionBehaviour.field_o, param1, -101);
     }
@@ -266,10 +266,10 @@ final class vba extends we {
         if (param1 != 30) {
           this.field_r = (int[]) null;
         }
-        return -30 + koa.b(param1 ^ 30);
+        return -30 + SwitchLinkList.b(param1 ^ 30);
     }
 
-    private final int a(String param0, qla param1, int param2, int param3, int param4, GameFont param5, int param6, int param7, int param8) {
+    private final int a(String param0, FontMetrics param1, int param2, int param3, int param4, GameFont param5, int param6, int param7, int param8) {
         int var12 = 0;
         String[] var10 = null;
         RuntimeException var10_ref = null;

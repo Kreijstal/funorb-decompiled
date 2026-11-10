@@ -35,7 +35,7 @@ final class sva implements ev {
         int var10Lifetime1;
         var13 = TombRacer.field_G ? 1 : 0;
         try {
-          if (ss.a(param1 ^ -15574)) {
+          if (DiskCacheWorker.a(param1 ^ -15574)) {
             var9 = 0;
             var7 = 0;
             var6 = 16777215;
@@ -195,7 +195,7 @@ final class sva implements ev {
           if (uh.a((byte) -7)) {
             var4_int = param1 instanceof Particle ? 1 : 0;
             var5 = 0;
-            var6 = et.b(this.field_a.length, tga.field_a.l(), -97);
+            var6 = MidiVoiceMixer.b(this.field_a.length, tga.field_a.l(), -97);
             var7 = null;
             if (param1 instanceof gs) {
               var7 = (gs) (param1);

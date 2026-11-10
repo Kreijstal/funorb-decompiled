@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class Room implements ew, Renderable, noa {
+final class Room implements SwitchableScope, Renderable, noa {
     int formatVersion;
     static AsyncRequest field_R;
     private int id;
@@ -654,10 +654,10 @@ final class Room implements ew, Renderable, noa {
         return this.field_A;
     }
 
-    public final lj a(int param0, int param1, boolean param2) {
+    public final Switchable findSwitchable(int param0, int param1, boolean param2) {
         IntrusiveDequeCursor var4;
         Trap var5;
-        lj var6;
+        Switchable var6;
         int var7;
         var7 = TombRacer.field_G ? 1 : 0;
         if (param0 != 28672) {
@@ -1514,7 +1514,7 @@ final class Room implements ew, Renderable, noa {
           return;
         }
         this.field_a = 6029;
-        this.field_a = var8.e(this.field_a, -40);
+        this.field_a = var8.hashState(this.field_a, -40);
         var4 = (db) (this.field_d.first(param1 - 80));
         while (var4 != null) {
           var4.s(param1 ^ 0);
@@ -1524,7 +1524,7 @@ final class Room implements ew, Renderable, noa {
         var5_ref_fsa = (Trap) (var9.first(true));
         while (var5_ref_fsa != null) {
           var5_ref_fsa.b(param1 + 106, false);
-          this.field_a = var5_ref_fsa.i(this.field_a, -109);
+          this.field_a = var5_ref_fsa.hashState(this.field_a, -109);
           if (var5_ref_fsa.isExpired(param1 + 18407)) {
             var5_ref_fsa.unlink(param1 ^ 79);
           }

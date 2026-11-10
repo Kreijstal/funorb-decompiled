@@ -22,12 +22,12 @@ abstract class PrefabComponent extends RoomComponent {
         super(param0, param1, param2, param3);
     }
 
-    lj u(int param0) {
+    Switchable u(int param0) {
         if (param0 >= -60) {
           this.z(-82);
-          return (lj) ((Object) this.field_A);
+          return (Switchable) ((Object) this.field_A);
         }
-        return (lj) ((Object) this.field_A);
+        return (Switchable) ((Object) this.field_A);
     }
 
     final void instantiate(boolean param0, boolean param1, Room param2, int param3, int param4, int param5, Trap param6) {
@@ -94,7 +94,7 @@ abstract class PrefabComponent extends RoomComponent {
           }
           if (this.a(6) &&
             !this.field_x) {
-            var13.m(-82);
+            var13.toggle(-82);
           }
           this.field_A = var13;
           return;

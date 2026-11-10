@@ -20,5 +20,5 @@ interface oaa {
 
     public abstract void a(int param0, UiWidget param1, int param2, int param3, int param4, int param5);
 
-    public abstract bja a(UiWidget param0, int param1);
+    public abstract TextLayout a(UiWidget param0, int param1);
 }

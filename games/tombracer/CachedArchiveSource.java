@@ -13,7 +13,7 @@ final class CachedArchiveSource extends ArchiveSource {
     private byte[] field_o;
     static int field_l;
     static ft field_g;
-    private ss field_i;
+    private DiskCacheWorker field_i;
     static jea field_d;
     private ppa field_s;
     private dla field_k;
@@ -314,7 +314,7 @@ final class CachedArchiveSource extends ArchiveSource {
             return null;
           }
           if (this.field_s != null) {
-            this.field_i.a(false, this.field_j, this.field_s, var7);
+            this.field_i.writeAsync(false, this.field_j, this.field_s, var7);
           }
         } else {
           try {
@@ -512,7 +512,7 @@ final class CachedArchiveSource extends ArchiveSource {
         var5[-2 + var19.length] = (byte)(this.field_k.field_f[param2] >>> 8);
         var5[-1 + var19.length] = (byte)this.field_k.field_f[param2];
         if (null != this.field_h) {
-          this.field_i.a(false, param2, this.field_h, var19);
+          this.field_i.writeAsync(false, param2, this.field_h, var19);
           if (this.field_n[param2] != 1) {
             this.field_n[param2] = (byte) 1;
           }
@@ -523,7 +523,7 @@ final class CachedArchiveSource extends ArchiveSource {
         return (hha) (var4);
     }
 
-    CachedArchiveSource(int param0, ppa param1, ppa param2, ArchiveNetworkClient param3, ss param4, int param5, byte[] param6, int param7, boolean param8) {
+    CachedArchiveSource(int param0, ppa param1, ppa param2, ArchiveNetworkClient param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;

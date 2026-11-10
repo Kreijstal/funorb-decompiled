@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class rj extends UiWidget {
+class FocusableWidget extends UiWidget {
     int field_x;
     private boolean field_u;
     private boolean field_v;
@@ -40,7 +40,7 @@ class rj extends UiWidget {
         }
     }
 
-    rj(String param0, isa param1, qc param2) {
+    FocusableWidget(String param0, isa param1, qc param2) {
         super(param0, param1, param2);
         this.field_u = false;
         this.field_x = 0;
@@ -96,7 +96,7 @@ class rj extends UiWidget {
         }
     }
 
-    rj(String param0, qc param1) {
+    FocusableWidget(String param0, qc param1) {
         this(param0, afa.field_c.field_u, param1);
     }
 
@@ -108,11 +108,11 @@ class rj extends UiWidget {
             if (this.field_s == ksa.field_p) {
               return;
             }
-            if (this.containsPointer(jba.field_j, param0, param1 ^ -2097252, sta.field_B, param3) &&
+            if (this.containsPointer(jba.field_j, param0, param1 ^ -2097252, GridWidgetContainer.field_B, param3) &&
               ksa.field_p == 0) {
-              this.b(sta.field_B - param3, this.field_s, -param0 + jba.field_j, -86);
+              this.b(GridWidgetContainer.field_B - param3, this.field_s, -param0 + jba.field_j, -86);
             }
-            this.handlePointerRelease((byte) 59, param2, sta.field_B, param0, param3, jba.field_j);
+            this.handlePointerRelease((byte) 59, param2, GridWidgetContainer.field_B, param0, param3, jba.field_j);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "rj.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -178,7 +178,7 @@ class rj extends UiWidget {
         var2Lifetime3 = 101 / ((param0 + 38) / 60);
     }
 
-    rj(int param0, int param1, int param2, int param3, isa param4, qc param5) {
+    FocusableWidget(int param0, int param1, int param2, int param3, isa param4, qc param5) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_u = false;
         this.field_x = 0;
@@ -203,7 +203,7 @@ class rj extends UiWidget {
         try {
           if (param0 != 4) {
             var7 = (ResourceArchive) null;
-            rj.a((ResourceArchive) null, 5, -25, (byte) 14);
+            FocusableWidget.a((ResourceArchive) null, 5, -25, (byte) 14);
           }
           var11 = vc.field_q;
           var2 = var11.readUnsignedByte(255);
@@ -255,7 +255,7 @@ class rj extends UiWidget {
         }
     }
 
-    public rj() {
+    public FocusableWidget() {
         this.field_u = false;
         this.field_x = 0;
         this.field_v = true;
@@ -275,7 +275,7 @@ class rj extends UiWidget {
             return null;
           }
           if (param3 != -82) {
-            rj.a(23);
+            FocusableWidget.a(23);
           }
           stackIn_6_0 = fj.c(1500);
           return stackIn_6_0;
@@ -359,21 +359,21 @@ class rj extends UiWidget {
           if (param3 <= -40) {
             return;
           }
-          rj.a(14);
+          FocusableWidget.a(14);
           return;
         }
         if (!(this.field_h instanceof tsa)) {
           if (param3 <= -40) {
             return;
           }
-          rj.a(14);
+          FocusableWidget.a(14);
           return;
         }
         ((tsa) (this.field_h)).a(param0, param2, this, param1, (byte) 115);
         if (param3 <= -40) {
           return;
         }
-        rj.a(14);
+        FocusableWidget.a(14);
     }
 
     static {

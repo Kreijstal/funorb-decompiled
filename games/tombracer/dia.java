@@ -21,19 +21,19 @@ final class dia extends ela {
 
     final static ka a(boolean param0, int param1, boolean param2, byte param3) {
         if (param0) {
-          return ola.field_Ib[param1];
+          return ContextMenu.field_Ib[param1];
         }
         if (param3 < 119) {
           field_q = 'ﾶ';
           if (param2) {
             return mma.field_b[param1];
           }
-          return jma.field_a[param1];
+          return SwitchState.field_a[param1];
         }
         if (param2) {
           return mma.field_b[param1];
         }
-        return jma.field_a[param1];
+        return SwitchState.field_a[param1];
     }
 
     final bfa a(bfa[] param0, int param1) {

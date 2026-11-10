@@ -13,12 +13,12 @@ final class WallCrusherComponent extends PrefabComponent {
     private int field_M;
     private boolean field_N;
 
-    final lj u(int param0) {
+    final Switchable u(int param0) {
         if (param0 > -60) {
           this.field_M = -115;
-          return (lj) ((Object) this.field_G);
+          return (Switchable) ((Object) this.field_G);
         }
-        return (lj) ((Object) this.field_G);
+        return (Switchable) ((Object) this.field_G);
     }
 
     final void q(byte param0) {
@@ -41,7 +41,7 @@ final class WallCrusherComponent extends PrefabComponent {
         int[] var8 = null;
         mg var9 = null;
         int var10 = 0;
-        jma var11 = null;
+        SwitchState var11 = null;
         ModelCodec var12 = null;
         WallModel var13 = null;
         Trap var14 = null;
@@ -66,7 +66,7 @@ final class WallCrusherComponent extends PrefabComponent {
           var7 = new SimpleMoveLocomotor(param2, param0);
           var7.c(this.field_I, 26621);
           var7.d(4, 4096);
-          var7.m(112);
+          var7.toggle(112);
           var14.addLocomotor(var7, param1 ^ param1);
           this.field_G = new TimeSwitchBehaviour(param2, param0);
           var8 = new int[]{this.field_O * 50 >> 16, this.field_M * 50 >> 16};
@@ -79,13 +79,13 @@ final class WallCrusherComponent extends PrefabComponent {
           var10 = var10 * var9.a((byte) -94) / 16;
           var9.a(false, var10);
           if (var10 > 50 * this.field_O) {
-            var6.m(-24);
-            var7.m(-70);
+            var6.toggle(-24);
+            var7.toggle(-70);
           }
           this.field_G.a(var9, (byte) -120);
-          var11 = this.field_G.k((byte) -91);
+          var11 = this.field_G.getSwitchState((byte) -91);
           var11.b(0, 55);
-          var11.h(param1 - 2).a(9, new lj[]{(lj) ((Object) var6), (lj) ((Object) var7)});
+          var11.getLinks(param1 - 2).a(9, new Switchable[]{(Switchable) ((Object) var6), (Switchable) ((Object) var7)});
           var14.addBehaviour((byte) 83, (Behaviour) (this.field_G));
           var12 = rm.field_a;
           var13 = (WallModel) (var12.createModel(15, 93));

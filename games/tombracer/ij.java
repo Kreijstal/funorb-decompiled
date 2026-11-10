@@ -8,11 +8,11 @@ class ij extends lc implements tsa {
     private BitmapFont field_ab;
     private boolean field_V;
     private boolean field_Y;
-    private rk field_cb;
+    private ProgressBarWidget field_cb;
     private static String[] field_db;
     static ToolkitSprite field_X;
 
-    public void a(int param0, int param1, rj param2, int param3, byte param4) {
+    public void a(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -20,7 +20,7 @@ class ij extends lc implements tsa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 <= 44) {
-            this.field_cb = (rk) null;
+            this.field_cb = (ProgressBarWidget) null;
           }
           if (!this.field_Y) {
             SimpleHoverMountComponent.a("tochangedisplayname.ws", di.a(72), (byte) -68);
@@ -77,7 +77,7 @@ class ij extends lc implements tsa {
     final void f(boolean param0) {
         sr var2 = null;
         sr var2Lifetime1;
-        this.field_cb.a(param0, 4210752, 2121792);
+        this.field_cb.setColors(param0, 4210752, 2121792);
         if (param0) {
           var2 = new sr(this, this.field_ab, fua.field_e);
           var2.a(sra.field_i, 15, -127);
@@ -137,7 +137,7 @@ class ij extends lc implements tsa {
           this.field_W = false;
           this.field_Y = false;
           this.field_V = param3 ? true : false;
-          this.field_cb = new rk(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.field_cb = new ProgressBarWidget(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_cb.field_D = true;
           this.addChild(this.field_cb, -1);
         } catch (RuntimeException runtimeException) {
@@ -170,7 +170,7 @@ class ij extends lc implements tsa {
           this.field_W = true;
           stackIn_9_1 = (param0 == 256);
           this.field_Y = stackIn_9_1;
-          this.field_cb.a(true, 4210752, 8405024);
+          this.field_cb.setColors(true, 4210752, 8405024);
           var7 = new sr(this, this.field_ab, param2);
           var4 = var7;
           if (param0 == 5) {

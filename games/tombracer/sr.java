@@ -5,15 +5,15 @@ final class sr extends WidgetContainer implements tsa {
     private ij field_y;
     private int field_z;
     private String field_C;
-    private rj[] field_x;
+    private FocusableWidget[] field_x;
     private BitmapFont field_B;
     private int[] field_w;
 
-    final rj a(String param0, byte param1, qc param2) {
-        rj var4 = null;
+    final FocusableWidget a(String param0, byte param1, qc param2) {
+        FocusableWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        rj stackIn_3_0 = null;
+        FocusableWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -21,7 +21,7 @@ final class sr extends WidgetContainer implements tsa {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new rj(param0, param2);
+          var4 = new FocusableWidget(param0, param2);
           var4.field_r = (isa) ((Object) new td());
           var5 = this.field_p - 2;
           if (param1 != -102) {
@@ -52,7 +52,7 @@ final class sr extends WidgetContainer implements tsa {
         }
     }
 
-    public final void a(int param0, int param1, rj param2, int param3, byte param4) {
+    public final void a(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = TombRacer.field_G ? 1 : 0;
@@ -110,8 +110,8 @@ final class sr extends WidgetContainer implements tsa {
         if (this.field_z >= param0) {
           return;
         }
-        rj[] var7 = new rj[param0];
-        rj[] var3 = var7;
+        FocusableWidget[] var7 = new FocusableWidget[param0];
+        FocusableWidget[] var3 = var7;
         int[] var4 = new int[param0];
         for (var5 = 0; this.field_z > var5; var5++) {
           var7[var5] = this.field_x[var5];

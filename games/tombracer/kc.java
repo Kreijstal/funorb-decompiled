@@ -27,7 +27,7 @@ final class kc {
             stackIn_8_0 = -17;
             return stackIn_8_0;
           }
-          lp.field_h.a(fk.a(jm.field_m, (byte) -113, lba.field_p), 35, fk.a(jba.field_j, (byte) -113, sta.field_B));
+          lp.field_h.a(fk.a(PasswordValidator.field_m, (byte) -113, lba.field_p), 35, fk.a(jba.field_j, (byte) -113, GridWidgetContainer.field_B));
           if (lp.field_h.a(false)) {
             var1_int = 1;
           }

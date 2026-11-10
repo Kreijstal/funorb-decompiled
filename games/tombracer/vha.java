@@ -23,7 +23,7 @@ final class vha {
           if (var4 != 0) {
             if (!param2) {
               rua.field_gb.c(30, param2);
-              var5 = ItemModel.field_n.g(param1 + 22419) + ItemModel.field_n.field_q;
+              var5 = ItemModel.field_n.getOpenChainWidth(param1 + 22419) + ItemModel.field_n.field_q;
               if (640 < var5) {
                 wv.field_j = wv.field_j + 5;
               } else {
@@ -34,7 +34,7 @@ final class vha {
               }
               return;
             }
-            ItemModel.field_n.a(param0, param3, (byte) -115);
+            ItemModel.field_n.processPressedItems(param0, param3, (byte) -115);
             rua.field_gb.c(30, param2);
             decompiledFrameRemainder0 = false;
           }
@@ -45,13 +45,13 @@ final class vha {
         }
         if (decompiledFrameRemainder0) {
           if (param2) {
-            ItemModel.field_n.a(param0, param3, (byte) -115);
+            ItemModel.field_n.processPressedItems(param0, param3, (byte) -115);
           }
           if (var4 != 0) {
             rua.field_gb.c(30, param2);
           }
         }
-        var5Lifetime1 = ItemModel.field_n.g(param1 + 22419) + ItemModel.field_n.field_q;
+        var5Lifetime1 = ItemModel.field_n.getOpenChainWidth(param1 + 22419) + ItemModel.field_n.field_q;
         if (640 < var5Lifetime1) {
           wv.field_j = wv.field_j + 5;
           return;

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ph {
+final class BufferedCacheFile {
     private long field_d;
     private int field_a;
     private RandomAccessFileHandle field_b;
@@ -72,7 +72,7 @@ final class ph {
         this.a((byte) -16);
         this.field_b.b((byte) -127);
         if (param0 >= -14) {
-          ph.releaseStatics(false);
+          BufferedCacheFile.releaseStatics(false);
         }
     }
 
@@ -101,7 +101,7 @@ final class ph {
           break;
         }
         if (param0 != -1) {
-          ph.releaseStatics(false);
+          BufferedCacheFile.releaseStatics(false);
         }
     }
 
@@ -125,7 +125,7 @@ final class ph {
         field_k = null;
         field_c = null;
         if (!param0) {
-          ph.releaseStatics(false);
+          BufferedCacheFile.releaseStatics(false);
         }
     }
 
@@ -388,7 +388,7 @@ final class ph {
         }
     }
 
-    ph(RandomAccessFileHandle param0, int param1, int param2) throws IOException {
+    BufferedCacheFile(RandomAccessFileHandle param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_m = -1L;
         this.field_l = -1L;

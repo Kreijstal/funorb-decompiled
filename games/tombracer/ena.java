@@ -58,9 +58,9 @@ final class ena extends DualLinkNode {
           var15 = new PacketBuffer(var29);
           var15.position = 1;
           var6 = var15.readUnsignedShort(124);
-          var7 = jma.field_j;
+          var7 = SwitchState.field_j;
           synchronized (var7) {
-            var2 = var2 != 0 & jma.field_j.a(param0 ^ -15228, var6) ? 1 : 0;
+            var2 = var2 != 0 & SwitchState.field_j.a(param0 ^ -15228, var6) ? 1 : 0;
             var3++;
           }
         }
@@ -91,9 +91,9 @@ final class ena extends DualLinkNode {
             break;
           }
           if (var9 == null) {
-            var10_ref = jma.field_j;
+            var10_ref = SwitchState.field_j;
             synchronized (var10_ref) {
-              var9 = new nk(var8, jma.field_j.f(var8, -93));
+              var9 = new nk(var8, SwitchState.field_j.f(var8, -93));
             }
             var19.addLast((byte) -124, (IntrusiveNode) (var9));
           }

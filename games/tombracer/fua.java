@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fua implements isa {
-    static ph field_b;
+    static BufferedCacheFile field_b;
     static int[] field_h;
     private static String[] behaviourTypeNames;
     static String field_e;

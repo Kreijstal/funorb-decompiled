@@ -9,7 +9,7 @@ final class eca {
     final static boolean a(byte param0, int param1, long param2, int[] param3, String param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
-        eua var7 = null;
+        QuickChatMenu var7 = null;
         CharSequence var8 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;

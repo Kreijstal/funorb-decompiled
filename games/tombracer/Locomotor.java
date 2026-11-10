@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class Locomotor extends IntrusiveNode implements lj, noa, TrapPart {
+abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapPart {
     private Room field_f;
     boolean field_k;
     private SwitchableId field_g;
@@ -101,7 +101,7 @@ abstract class Locomotor extends IntrusiveNode implements lj, noa, TrapPart {
         }
     }
 
-    public void m(int param0) {
+    public void toggle(int param0) {
         if (!this.field_i) {
           this.field_k = !this.field_k ? true : false;
           int var2 = -124 / ((param0 - 28) / 49);
@@ -195,16 +195,16 @@ abstract class Locomotor extends IntrusiveNode implements lj, noa, TrapPart {
 
     abstract int hashState(int param0, int param1);
 
-    final lj a(boolean param0, int param1, int param2) {
+    final Switchable a(boolean param0, int param1, int param2) {
         if (param1 != 1) {
           this.field_j = false;
-          if (vh.a(param2, param0, -27201, (lj) (this))) {
-            return (lj) (this);
+          if (vh.matchesSwitchableId(param2, param0, -27201, (Switchable) (this))) {
+            return (Switchable) (this);
           }
           return null;
         }
-        if (vh.a(param2, param0, -27201, (lj) (this))) {
-          return (lj) (this);
+        if (vh.matchesSwitchableId(param2, param0, -27201, (Switchable) (this))) {
+          return (Switchable) (this);
         }
         return null;
     }
@@ -219,14 +219,14 @@ abstract class Locomotor extends IntrusiveNode implements lj, noa, TrapPart {
         }
     }
 
-    public final SwitchableId i(byte param0) {
+    public final SwitchableId getLocalId(byte param0) {
         if (param0 != 84) {
           return (SwitchableId) null;
         }
         return this.field_g;
     }
 
-    public final SwitchableId n(int param0) {
+    public final SwitchableId getGlobalId(int param0) {
         if (param0 != 31974) {
           Locomotor.releaseStatics(-9);
           return this.field_h;
@@ -246,18 +246,18 @@ abstract class Locomotor extends IntrusiveNode implements lj, noa, TrapPart {
         try {
           this.trap = param1;
           if (param0 < 35) {
-            this.i((byte) 25);
+            this.getLocalId((byte) 25);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wda.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final ew h(byte param0) {
+    public final SwitchableScope getScope(byte param0) {
         if (param0 < 105) {
-          return (ew) null;
+          return (SwitchableScope) null;
         }
-        return (ew) ((Object) this.trap.getRoot(0));
+        return (SwitchableScope) ((Object) this.trap.getRoot(0));
     }
 
     final int b(boolean param0) {

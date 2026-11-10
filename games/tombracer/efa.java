@@ -5,9 +5,9 @@ final class efa extends WidgetContainer implements mia, tsa {
     private so field_z;
     static Sprite[][] field_w;
     static int field_y;
-    laa field_x;
-    private rj field_B;
-    private rj field_A;
+    UsernameSuggestionsPanel field_x;
+    private FocusableWidget field_B;
+    private FocusableWidget field_A;
 
     private final boolean a(int param0, mk param1) {
         nua var3 = null;
@@ -54,7 +54,7 @@ final class efa extends WidgetContainer implements mia, tsa {
         try {
           super.updatePointerState(param0, param1 + 0, param2, param3);
           if (param1 != 2097152) {
-            this.field_x = (laa) null;
+            this.field_x = (UsernameSuggestionsPanel) null;
           }
           this.field_A.field_y = this.b(false);
         } catch (RuntimeException runtimeException) {
@@ -62,7 +62,7 @@ final class efa extends WidgetContainer implements mia, tsa {
         }
     }
 
-    public final void a(int param0, int param1, rj param2, int param3, byte param4) {
+    public final void a(int param0, int param1, FocusableWidget param2, int param3, byte param4) {
         boolean discarded$0 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -110,8 +110,8 @@ final class efa extends WidgetContainer implements mia, tsa {
         this.field_z = new so("", (qc) null, 12);
         vpa var1 = new vpa(eka.field_o, 0, 0, 0, 0, 16777215, -1, 3, 0, KeySwitchComponent.field_J.field_w, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(cj.field_e, var1, (qc) null);
-        this.field_A = new rj(nf.field_j, (qc) null);
-        this.field_B = new rj(mq.field_d, (qc) null);
+        this.field_A = new FocusableWidget(nf.field_j, (qc) null);
+        this.field_B = new FocusableWidget(mq.field_d, (qc) null);
         this.field_z.field_q = rma.field_a;
         this.field_z.a(-13861, new tf(this.field_z));
         this.field_A.field_y = false;
@@ -131,7 +131,7 @@ final class efa extends WidgetContainer implements mia, tsa {
         this.field_A.field_h = (qc) (this);
         this.addChild(this.field_A, -1);
         this.addChild(this.field_B, -1);
-        this.field_x = new laa((mia) (this));
+        this.field_x = new UsernameSuggestionsPanel((mia) (this));
         this.field_x.setBounds((byte) -31, this.field_m - this.field_z.field_i - (this.field_z.field_m + 60), 150, this.field_z.field_i - (-this.field_z.field_m - 60), 20);
         this.addChild(this.field_x, -1);
         this.setBounds((byte) -31, 496, var4 + 55 + var3, 0, 0);

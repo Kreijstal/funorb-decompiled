@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dma extends tfa implements na {
+final class dma extends OpenGlTexture implements na {
     static int[][] field_k;
     static eb field_l;
 
-    public final void b(byte param0) {
+    public final void bind(byte param0) {
         if (param0 <= 32) {
           return;
         }
-        super.b((byte) 121);
+        super.bind((byte) 121);
     }
 
     public final void a(int param0, hs param1) {

@@ -236,7 +236,7 @@ final class MirrorBehaviour extends Behaviour {
         try {
           super.attachToTrap(true, param1);
           param1.a(param0, 120);
-          this.field_n = et.b(param1.getHeight((byte) 55), param1.getWidth(-23), -23);
+          this.field_n = MidiVoiceMixer.b(param1.getHeight((byte) 55), param1.getWidth(-23), -23);
           this.b(1659280738);
           this.j((byte) 1);
         } catch (RuntimeException runtimeException) {

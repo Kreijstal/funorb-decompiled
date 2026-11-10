@@ -357,7 +357,7 @@ final class opa extends qra {
               stackIn_52_0 = -4 + var11;
             }
             var24 = stackIn_52_0;
-            var31 = sta.field_y[bta.field_f[var21_int]];
+            var31 = GridWidgetContainer.field_y[bta.field_f[var21_int]];
             var25 = var31;
             var25.a(var23, var24, var31.a() >> 1, var31.c() >> 1);
           }
@@ -450,7 +450,7 @@ final class opa extends qra {
             if (var15Lifetime1 != 0) {
               var19Lifetime1 = 25 + wb.field_a.a("x" + var39, (byte) 31) + var17Lifetime1;
               var20 = -11 + var18;
-              var41 = sta.field_y[bta.field_f[var14]];
+              var41 = GridWidgetContainer.field_y[bta.field_f[var14]];
               var21 = var41;
               var21.a(var19Lifetime1, var20, var41.a() >> 1, var41.c() >> 1);
             }
@@ -501,7 +501,7 @@ final class opa extends qra {
             if (var15Lifetime1 != 0) {
               var19Lifetime1 = var17Lifetime1 + (wb.field_a.a("x" + var36, (byte) -122) + 25);
               var20 = var18 - 11;
-              var38 = sta.field_y[bta.field_f[var14]];
+              var38 = GridWidgetContainer.field_y[bta.field_f[var14]];
               var21 = var38;
               var21.a(var19Lifetime1, var20, var38.a() >> 1, var38.c() >> 1);
             }
@@ -549,7 +549,7 @@ final class opa extends qra {
               if (var15Lifetime1 != 0) {
                 var19Lifetime1 = var17Lifetime1 + wb.field_a.a("x" + var33, (byte) 36) + 25;
                 var20 = -11 + var18;
-                var35 = sta.field_y[bta.field_f[var14]];
+                var35 = GridWidgetContainer.field_y[bta.field_f[var14]];
                 var21 = var35;
                 var21.a(var19Lifetime1, var20, var35.a() >> 1, var35.c() >> 1);
               }

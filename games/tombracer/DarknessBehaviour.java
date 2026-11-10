@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DarknessBehaviour extends Behaviour {
-    static caa field_o;
+    static UrlDownloadRequest field_o;
     private int field_n;
     private Sprite field_r;
     private int field_q;
@@ -15,12 +15,12 @@ final class DarknessBehaviour extends Behaviour {
         return param1 / 8 >> 16;
     }
 
-    public final void m(int param0) {
+    public final void toggle(int param0) {
         int var2;
         if (this.field_k) {
           return;
         }
-        super.m(82);
+        super.toggle(82);
         var2 = -79 % ((28 - param0) / 49);
         if (!this.field_f) {
           this.e(false);
@@ -262,7 +262,7 @@ final class DarknessBehaviour extends Behaviour {
         int var7_intLifetime1;
         try {
           if (param2.field_j == 1) {
-            var7_int = et.b(param0, param1, -48) / 2;
+            var7_int = MidiVoiceMixer.b(param0, param1, -48) / 2;
             this.a(param3, (byte) 90, param2.size, var7_int, param5);
           }
           var7_intLifetime1 = -5 / ((param4 - 62) / 52);
@@ -435,7 +435,7 @@ final class DarknessBehaviour extends Behaviour {
         int[] var3 = var6;
         int var4 = -1 + var6.length;
         if (param0 >= -93) {
-          field_o = (caa) null;
+          field_o = (UrlDownloadRequest) null;
         }
         while (var4 >= 0) {
           var3[var4] = param1;

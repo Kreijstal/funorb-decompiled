@@ -424,7 +424,7 @@ final class fna {
         ArchiveNetworkClient.field_b = null;
         se.d((byte) 118);
         if (param5 == -22919) {
-          param3 = rk.a(param12, param3, (byte) 107, param0, param9, param10, param7);
+          param3 = ProgressBarWidget.a(param12, param3, (byte) 107, param0, param9, param10, param7);
           voa.a(param13, param4, param5 + 27015, param8, param1, param3, param12, param6, param2, param11);
           BoulderComponent.b(param13, -125, param11);
           PressureSwitchComponent.a(param3, (byte) -112, param7, param13);

@@ -124,11 +124,11 @@ final class vp extends SingleChildWidget {
         RuntimeException var5 = null;
         int var6 = 0;
         try {
-          if ((!(this.child instanceof rj) ||
-            ((rj) (this.child)).field_y) &&
+          if ((!(this.child instanceof FocusableWidget) ||
+            ((FocusableWidget) (this.child)).field_y) &&
             this.field_s == 1) {
             var5_int = -param0 + jba.field_j - this.field_A;
-            var6 = -this.field_D + (sta.field_B - param3);
+            var6 = -this.field_D + (GridWidgetContainer.field_B - param3);
             if (this.field_i != var5_int ||
               var6 != this.field_n) {
               this.field_i = var5_int;

@@ -186,22 +186,22 @@ abstract class rra {
           return;
         }
         if (pka.field_b > param0 - param5) {
-          hl.a(param6, param1, param2, param0, true, param5, param7, param3);
+          OpenGlBuffer.a(param6, param1, param2, param0, true, param5, param7, param3);
           return;
         }
-        if (param0 + param5 > ss.field_c) {
-          hl.a(param6, param1, param2, param0, true, param5, param7, param3);
+        if (param0 + param5 > DiskCacheWorker.field_c) {
+          OpenGlBuffer.a(param6, param1, param2, param0, true, param5, param7, param3);
           return;
         }
         if (-param3 + param2 < gca.field_d) {
-          hl.a(param6, param1, param2, param0, true, param5, param7, param3);
+          OpenGlBuffer.a(param6, param1, param2, param0, true, param5, param7, param3);
           return;
         }
         if (hc.field_h >= param3 + param2) {
           ota.a(param7, param3, param5, param6, param0, -1923382751, param1, param2);
           return;
         }
-        hl.a(param6, param1, param2, param0, true, param5, param7, param3);
+        OpenGlBuffer.a(param6, param1, param2, param0, true, param5, param7, param3);
     }
 
     static {

@@ -19,12 +19,12 @@ final class pna extends gda {
     static int field_q;
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        float var7 = ph.field_c[16383 & param3];
-        float var8 = ph.field_n[param3 & 16383];
-        float var9 = ph.field_c[param4 & 16383];
-        float var10 = ph.field_n[param4 & 16383];
-        float var11 = ph.field_c[16383 & param5];
-        float var12 = ph.field_n[param5 & 16383];
+        float var7 = BufferedCacheFile.field_c[16383 & param3];
+        float var8 = BufferedCacheFile.field_n[param3 & 16383];
+        float var9 = BufferedCacheFile.field_c[param4 & 16383];
+        float var10 = BufferedCacheFile.field_n[param4 & 16383];
+        float var11 = BufferedCacheFile.field_c[16383 & param5];
+        float var12 = BufferedCacheFile.field_n[param5 & 16383];
         float var13 = var8 * var11;
         float var14 = var8 * var12;
         this.field_j = var10 * var12 + var13 * var9;
@@ -57,8 +57,8 @@ final class pna extends gda {
     }
 
     final void d(int param0) {
-        float var2 = ph.field_c[16383 & param0];
-        float var3 = ph.field_n[param0 & 16383];
+        float var2 = BufferedCacheFile.field_c[16383 & param0];
+        float var3 = BufferedCacheFile.field_n[param0 & 16383];
         float var4 = this.field_g;
         float var5 = this.field_i;
         float var6 = this.field_n;
@@ -79,8 +79,8 @@ final class pna extends gda {
     }
 
     final void c(int param0) {
-        float var2 = ph.field_c[param0 & 16383];
-        float var3 = ph.field_n[16383 & param0];
+        float var2 = BufferedCacheFile.field_c[param0 & 16383];
+        float var3 = BufferedCacheFile.field_n[16383 & param0];
         float var4 = this.field_h;
         float var5 = this.field_s;
         float var6 = this.field_j;
@@ -106,8 +106,8 @@ final class pna extends gda {
     }
 
     final void b(int param0) {
-        float var2 = ph.field_c[16383 & param0];
-        float var3 = ph.field_n[param0 & 16383];
+        float var2 = BufferedCacheFile.field_c[16383 & param0];
+        float var3 = BufferedCacheFile.field_n[param0 & 16383];
         float var4 = this.field_g;
         float var5 = this.field_i;
         float var6 = this.field_n;

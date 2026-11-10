@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class PlayerSensorBehaviour extends Behaviour implements ut {
+final class PlayerSensorBehaviour extends Behaviour implements SwitchSource {
     private boolean field_s;
     private boolean field_r;
     private int field_u;
@@ -10,9 +10,9 @@ final class PlayerSensorBehaviour extends Behaviour implements ut {
     private int field_o;
     private boolean field_t;
     private boolean field_q;
-    private jma field_n;
+    private SwitchState field_n;
 
-    public final int j(byte param0) {
+    public final int getLevel(byte param0) {
         if (param0 != -108) {
           return 74;
         }
@@ -20,7 +20,7 @@ final class PlayerSensorBehaviour extends Behaviour implements ut {
     }
 
     final int hashState(int param0, int param1) {
-        param0 = this.field_n.a(121, param0);
+        param0 = this.field_n.hashState(121, param0);
         if (param1 > -48) {
           return 47;
         }
@@ -55,9 +55,9 @@ final class PlayerSensorBehaviour extends Behaviour implements ut {
         return this.field_o / 2 >= var3 ? true : false;
     }
 
-    public final int g(byte param0) {
+    public final int getLitColour(byte param0) {
         if (param0 != -108) {
-          this.g((byte) -25);
+          this.getLitColour((byte) -25);
           return 7798954;
         }
         return 7798954;
@@ -71,14 +71,14 @@ final class PlayerSensorBehaviour extends Behaviour implements ut {
         return 22;
     }
 
-    public final int c(int param0) {
+    public final int getDimColour(int param0) {
         if (param0 != 17832) {
           return 6;
         }
         return 4456550;
     }
 
-    public final jma k(byte param0) {
+    public final SwitchState getSwitchState(byte param0) {
         if (param0 >= -67) {
           this.field_v = 68;
           return this.field_n;
@@ -140,7 +140,7 @@ final class PlayerSensorBehaviour extends Behaviour implements ut {
           }
           stackIn_19_1 = (param1.readBits((byte) 44, 1) == 1);
           this.field_t = stackIn_19_1;
-          this.field_n = new jma(15, param0, param1);
+          this.field_n = new SwitchState(15, param0, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -164,7 +164,7 @@ final class PlayerSensorBehaviour extends Behaviour implements ut {
 
     final void g(int param0) {
         super.g(param0);
-        this.field_n.a((byte) 48, this.h((byte) 127));
+        this.field_n.a((byte) 48, this.getScope((byte) 127));
     }
 
     final void tick(int param0) {
@@ -448,7 +448,7 @@ final class PlayerSensorBehaviour extends Behaviour implements ut {
         this.field_n.a((byte) -14, var2 != 0);
     }
 
-    public final int b(int param0) {
+    public final int getMaxLevel(int param0) {
         int var2 = -67 / ((-46 - param0) / 45);
         return 0;
     }
@@ -469,7 +469,7 @@ final class PlayerSensorBehaviour extends Behaviour implements ut {
             param1.writeBits((byte) -125, this.field_p >> 16, 10);
           }
           param1.writeBits((byte) -127, this.field_t ? 1 : 0, 1);
-          this.field_n.a(this.h((byte) 111), (byte) 85, param1);
+          this.field_n.a(this.getScope((byte) 111), (byte) 85, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "kj.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

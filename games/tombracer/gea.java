@@ -84,7 +84,7 @@ final class gea {
             SoftwareRasterizer.drawVerticalLine(var8, var8 + 1, -(var8 << 1) + 14, 16777215);
           }
           SoftwareRasterizer.a(var16, var5, var6);
-          cia.field_g = qla.a(true, BoulderComponent.field_M, oka.field_w, var4, tg.field_c);
+          cia.field_g = FontMetrics.a(true, BoulderComponent.field_M, oka.field_w, var4, tg.field_c);
           rua.field_gb.field_J = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

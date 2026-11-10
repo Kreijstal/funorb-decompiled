@@ -155,12 +155,12 @@ final class PlatformBehaviour extends Behaviour {
         this.field_q = param0;
     }
 
-    public final void m(int param0) {
+    public final void toggle(int param0) {
         int var2 = -46 % ((28 - param0) / 49);
         if (this.field_k) {
           return;
         }
-        super.m(117);
+        super.toggle(117);
     }
 
     final void tick(int param0) {

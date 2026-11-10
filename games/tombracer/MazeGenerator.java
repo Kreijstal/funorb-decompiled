@@ -27,9 +27,9 @@ abstract class MazeGenerator {
               wga.a(true, param1);
             }
             if (param0 == 2 &&
-              caa.field_i != param3) {
+              UrlDownloadRequest.field_i != param3) {
               PlatformModel.field_B = true;
-              caa.field_i = param3;
+              UrlDownloadRequest.field_i = param3;
               wga.a(true, param1);
             }
             if (param2 != 108) {
@@ -46,12 +46,12 @@ abstract class MazeGenerator {
               if (param2 != 108) {
               }
             } else {
-              if (caa.field_i == param3) {
+              if (UrlDownloadRequest.field_i == param3) {
                 if (param2 != 108) {
                 }
               } else {
                 PlatformModel.field_B = true;
-                caa.field_i = param3;
+                UrlDownloadRequest.field_i = param3;
                 wga.a(true, param1);
                 if (param2 == 108) {
                 }
@@ -64,9 +64,9 @@ abstract class MazeGenerator {
           wga.a(true, param1);
         }
         if (param0 == 2 &&
-          caa.field_i != param3) {
+          UrlDownloadRequest.field_i != param3) {
           PlatformModel.field_B = true;
-          caa.field_i = param3;
+          UrlDownloadRequest.field_i = param3;
           wga.a(true, param1);
         }
         if (param2 == 108) {
@@ -187,7 +187,7 @@ abstract class MazeGenerator {
     }
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4) {
-        ss.field_c = param0;
+        DiskCacheWorker.field_c = param0;
         hc.field_h = param4;
         if (param1) {
           return;

@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class PressureSwitchBehaviour extends Behaviour implements ut {
+final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
     static jea field_p;
-    private jma field_n;
+    private SwitchState field_n;
     static int field_r;
     private boolean field_q;
     private int field_o;
@@ -20,10 +20,10 @@ final class PressureSwitchBehaviour extends Behaviour implements ut {
 
     final int hashState(int param0, int param1) {
         if (param1 >= -48) {
-          this.c(56);
+          this.getDimColour(56);
         }
         param0 = fs.mixHash((byte) 122, param0, this.field_t);
-        return this.field_n.a(105, param0);
+        return this.field_n.hashState(105, param0);
     }
 
     final void tick(int param0) {
@@ -57,7 +57,7 @@ final class PressureSwitchBehaviour extends Behaviour implements ut {
         this.field_n.a((byte) -14, var5Lifetime1 != 0);
     }
 
-    public final int c(int param0) {
+    public final int getDimColour(int param0) {
         if (param0 != 17832) {
           this.tick(121);
         }
@@ -69,7 +69,7 @@ final class PressureSwitchBehaviour extends Behaviour implements ut {
           super.encode(param0, param1);
           param1.writeBits((byte) -127, this.field_o, 8);
           param1.writeBits((byte) -128, !this.field_q ? 0 : 1, 1);
-          this.field_n.a(this.h((byte) 117), (byte) 117, param1);
+          this.field_n.a(this.getScope((byte) 117), (byte) 117, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "dja.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -85,13 +85,13 @@ final class PressureSwitchBehaviour extends Behaviour implements ut {
           if (9 <= param0.formatVersion) {
             this.field_q = 1 != param1.readBits((byte) 44, 1) ? false : true;
           }
-          this.field_n = new jma(15, param0, param1);
+          this.field_n = new SwitchState(15, param0, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "dja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    public final int b(int param0) {
+    public final int getMaxLevel(int param0) {
         int var2 = 33 % ((param0 + 46) / 45);
         return this.field_o;
     }
@@ -100,7 +100,7 @@ final class PressureSwitchBehaviour extends Behaviour implements ut {
         super(param0, param1);
         try {
           this.field_o = 50;
-          this.field_n = new jma(15);
+          this.field_n = new SwitchState(15);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "dja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -113,14 +113,14 @@ final class PressureSwitchBehaviour extends Behaviour implements ut {
         return 17;
     }
 
-    public final int g(byte param0) {
+    public final int getLitColour(byte param0) {
         if (param0 != -108) {
           return -69;
         }
         return 8969727;
     }
 
-    public final jma k(byte param0) {
+    public final SwitchState getSwitchState(byte param0) {
         if (param0 >= -67) {
           this.field_q = true;
         }
@@ -176,10 +176,10 @@ final class PressureSwitchBehaviour extends Behaviour implements ut {
 
     final void g(int param0) {
         super.g(param0);
-        this.field_n.a((byte) 48, this.h((byte) 125));
+        this.field_n.a((byte) 48, this.getScope((byte) 125));
     }
 
-    public final int j(byte param0) {
+    public final int getLevel(byte param0) {
         if (param0 != -108) {
           this.field_q = true;
         }

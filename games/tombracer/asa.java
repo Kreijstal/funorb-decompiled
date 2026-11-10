@@ -18,10 +18,10 @@ final class asa extends gda {
 
     final void b(int param0, int param1) {
         this.field_g = 1.0f;
-        float dupTemp$0 = ph.field_c[16383 & param1];
+        float dupTemp$0 = BufferedCacheFile.field_c[16383 & param1];
         this.field_h = dupTemp$0;
         this.field_q = dupTemp$0;
-        this.field_o = ph.field_n[16383 & param1];
+        this.field_o = BufferedCacheFile.field_n[16383 & param1];
         this.field_m = -this.field_o;
         this.field_k = 0.0f;
         this.field_i = 0.0f;
@@ -62,12 +62,12 @@ final class asa extends gda {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        float var7 = ph.field_c[16383 & param3];
-        float var8 = ph.field_n[param3 & 16383];
-        float var9 = ph.field_c[param4 & 16383];
-        float var10 = ph.field_n[16383 & param4];
-        float var11 = ph.field_c[16383 & param5];
-        float var12 = ph.field_n[param5 & 16383];
+        float var7 = BufferedCacheFile.field_c[16383 & param3];
+        float var8 = BufferedCacheFile.field_n[param3 & 16383];
+        float var9 = BufferedCacheFile.field_c[param4 & 16383];
+        float var10 = BufferedCacheFile.field_n[16383 & param4];
+        float var11 = BufferedCacheFile.field_c[16383 & param5];
+        float var12 = BufferedCacheFile.field_n[param5 & 16383];
         float var13 = var8 * var11;
         float var14 = var12 * var8;
         this.field_p = var7 * var10;
@@ -279,8 +279,8 @@ final class asa extends gda {
     }
 
     final void d(int param0) {
-        float var2 = ph.field_c[16383 & param0];
-        float var3 = ph.field_n[16383 & param0];
+        float var2 = BufferedCacheFile.field_c[16383 & param0];
+        float var3 = BufferedCacheFile.field_n[16383 & param0];
         float var4 = this.field_g;
         float var5 = this.field_l;
         float var6 = this.field_f;
@@ -332,8 +332,8 @@ final class asa extends gda {
     }
 
     final void c(int param0) {
-        float var2 = ph.field_c[16383 & param0];
-        float var3 = ph.field_n[16383 & param0];
+        float var2 = BufferedCacheFile.field_c[16383 & param0];
+        float var3 = BufferedCacheFile.field_n[16383 & param0];
         float var4 = this.field_k;
         float var5 = this.field_q;
         float var6 = this.field_m;
@@ -409,8 +409,8 @@ final class asa extends gda {
     }
 
     final void b(int param0) {
-        float var2 = ph.field_c[16383 & param0];
-        float var3 = ph.field_n[16383 & param0];
+        float var2 = BufferedCacheFile.field_c[16383 & param0];
+        float var3 = BufferedCacheFile.field_n[16383 & param0];
         float var4 = this.field_g;
         float var5 = this.field_l;
         float var6 = this.field_f;
@@ -613,8 +613,8 @@ final class asa extends gda {
           this.field_q = (float)(param2 * 2);
           this.field_k = 0.0f;
         } else {
-          var8 = ph.field_c[16383 & param3];
-          var9 = ph.field_n[16383 & param3];
+          var8 = BufferedCacheFile.field_c[16383 & param3];
+          var9 = BufferedCacheFile.field_n[16383 & param3];
           this.field_e = (-(0.5f * var8) + 0.5f * var9) * (float)(2 * param1) + param0;
           this.field_f = 0.0f;
           this.field_l = (float)param2 * (var9 * -2.0f);
@@ -644,7 +644,7 @@ final class asa extends gda {
         field_j = null;
     }
 
-    final static void a(int param0, eua param1) {
+    final static void a(int param0, QuickChatMenu param1) {
         if (param1 == null) {
           return;
         }

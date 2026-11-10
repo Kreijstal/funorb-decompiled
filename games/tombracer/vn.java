@@ -4,7 +4,7 @@
 final class vn {
     static IntrusiveDeque field_a;
     static String field_c;
-    static jw field_b;
+    static LoginForm field_b;
 
     final static void a(int param0, String param1, boolean param2) {
         try {

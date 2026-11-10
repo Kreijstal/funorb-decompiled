@@ -19,8 +19,8 @@ final class ina {
         ka dupTemp$3 = null;
         ka dupTemp$4 = null;
         try {
-          jma.field_a = tc.a(dd.field_b, -8829, param0);
-          ola.field_Ib = tc.a(hl.field_c, -8829, param0);
+          SwitchState.field_a = tc.a(dd.field_b, -8829, param0);
+          ContextMenu.field_Ib = tc.a(OpenGlBuffer.field_c, -8829, param0);
           mma.field_b = tc.a(DoorwayComponent.field_K, -8829, param0);
           RevolverItemComponent.field_J = tc.a(C2SActionPacket.field_l, param1 - 8829, param0);
           ta.field_ub = tc.a(vk.field_e, -8829, param0);
@@ -28,7 +28,7 @@ final class ina {
           GameApplet.field_j = tc.a(gta.field_f, param1 ^ -8829, param0);
           gca.field_g = tc.a(cba.field_b, param1 ^ -8829, param0);
           DoorwayComponent.field_F = tc.a(an.field_g, -8829, param0);
-          koa.field_b = tc.a(ControllerLocomotor.field_p, -8829, param0);
+          SwitchLinkList.field_b = tc.a(ControllerLocomotor.field_p, -8829, param0);
           dupTemp$0 = RevolverItemComponent.field_J[9].a((byte) 0, 654255, false);
           RevolverItemComponent.field_J[9] = dupTemp$0;
           dupTemp$0.O(224, 224, 224);
@@ -69,17 +69,17 @@ final class ina {
             RevolverItemComponent.field_J[76].O(256, 256, 256);
             RevolverItemComponent.field_J[62].O(96, 96, 96);
             RevolverItemComponent.field_J[63].O(96, 96, 96);
-            koa.field_b[1].H(0, 64, 0);
-            koa.field_b[1].O(192, 192, 192);
-            koa.field_b[1].FA(4096);
-            koa.field_b[2].H(0, 64, 0);
-            koa.field_b[2].O(192, 192, 192);
-            koa.field_b[2].FA(4096);
-            koa.field_b[10].O(256, 256, 256);
-            koa.field_b[11].O(256, 256, 256);
-            koa.field_b[12].O(256, 256, 256);
-            koa.field_b[13].O(256, 256, 256);
-            koa.field_b[8].O(256, 256, 256);
+            SwitchLinkList.field_b[1].H(0, 64, 0);
+            SwitchLinkList.field_b[1].O(192, 192, 192);
+            SwitchLinkList.field_b[1].FA(4096);
+            SwitchLinkList.field_b[2].H(0, 64, 0);
+            SwitchLinkList.field_b[2].O(192, 192, 192);
+            SwitchLinkList.field_b[2].FA(4096);
+            SwitchLinkList.field_b[10].O(256, 256, 256);
+            SwitchLinkList.field_b[11].O(256, 256, 256);
+            SwitchLinkList.field_b[12].O(256, 256, 256);
+            SwitchLinkList.field_b[13].O(256, 256, 256);
+            SwitchLinkList.field_b[8].O(256, 256, 256);
             TorchComponent.field_F = true;
           }
           AllPlatformsMazeComponent.field_O = RevolverItemComponent.field_J[4];

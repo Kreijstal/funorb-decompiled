@@ -5,9 +5,9 @@ import java.io.*;
 
 final class ppa {
     private int field_d;
-    private ph field_c;
+    private BufferedCacheFile field_c;
     private int field_e;
-    private ph field_b;
+    private BufferedCacheFile field_b;
     static String field_a;
 
     final boolean a(int param0, byte[] param1, int param2, byte param3) {
@@ -396,7 +396,7 @@ final class ppa {
         return "" + this.field_d;
     }
 
-    ppa(int param0, ph param1, ph param2, int param3) {
+    ppa(int param0, BufferedCacheFile param1, BufferedCacheFile param2, int param3) {
         this.field_c = null;
         this.field_b = null;
         this.field_e = 65000;
