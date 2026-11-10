@@ -31,7 +31,7 @@ final class TranslatedUiText {
     }
 
     final static void loadTranslatedStrings(boolean param0, ResourceArchive param1) {
-        class $CfrPartitionedBody {
+        class TranslatedTextLoader {
             RuntimeException stackIn_2608_0;
             StringBuilder stackIn_2608_1;
             String stackIn_2609_2;
@@ -41,7 +41,7 @@ final class TranslatedUiText {
             boolean param0;
             ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(boolean initialParam0, ResourceArchive initialParam1) {
+            TranslatedTextLoader(boolean initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2608_0 = null;
@@ -51,7 +51,7 @@ final class TranslatedUiText {
                 this.var2 = null;
                 this.var2_ref = null;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLobbyChatAndGameOptionText() throws java.lang.RuntimeException {
                 WidgetStyleLayer.field_b = param1;
                 var2 = ChaseEvent.readTextResourceBytes("loginm3", (byte) 83);
                 if (null != var2) {
@@ -922,7 +922,7 @@ final class TranslatedUiText {
                 }
                 var2 = ChaseEvent.readTextResourceBytes("gameopt_pleasetrychanging", (byte) 83);
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadReportAbuseAndAccountCreationText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   ClientException.field_g = GameHud.decodeText(-2739, var2);
                 }
@@ -1839,7 +1839,7 @@ final class TranslatedUiText {
                   SharedTransportGlobals.field_d = GameHud.decodeText(-2739, var2);
                 }
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadLoadingRatingsAndReconnectText() throws java.lang.RuntimeException {
                 var2 = ChaseEvent.readTextResourceBytes("loading_instruments", (byte) 83);
                 if (var2 != null) {
                   GameHud.decodeText(-2739, var2);
@@ -2790,7 +2790,7 @@ final class TranslatedUiText {
                 }
                 var2 = ChaseEvent.readTextResourceBytes("rating_mode_name,1", (byte) 83);
             }
-            void runChunk3() throws java.lang.RuntimeException {
+            void loadGraphicsLoginPromptAndSubscriptionText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   QueuedListRequest.field_j[1] = GameHud.decodeText(-2739, var2);
                 }
@@ -3043,13 +3043,13 @@ final class TranslatedUiText {
             }
             void run() {
                 try {
-                  runChunk0();
+                  loadLobbyChatAndGameOptionText();
                   if (finished) return;
-                  runChunk1();
+                  loadReportAbuseAndAccountCreationText();
                   if (finished) return;
-                  runChunk2();
+                  loadLoadingRatingsAndReconnectText();
                   if (finished) return;
-                  runChunk3();
+                  loadGraphicsLoginPromptAndSubscriptionText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3065,7 +3065,7 @@ final class TranslatedUiText {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        TranslatedTextLoader decompiledBody = new TranslatedTextLoader(param0, param1);
         decompiledBody.run();
     }
 

@@ -1019,7 +1019,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
         RuntimeException var2 = null;
         try {
           if (ArchiveRequest.field_s != null) {
-            PortalView.loadGraphics(ArchiveRequest.field_s, -65);
+            PortalView.loadGameText(ArchiveRequest.field_s, -65);
             UnitStateEvent.initializeUiStringTables(-6445);
             ArchiveRequest.field_s = null;
             IsaacRandom.resetFrameTimingHistory(26673);

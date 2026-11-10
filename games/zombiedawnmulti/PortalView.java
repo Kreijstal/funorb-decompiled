@@ -76,7 +76,7 @@ final class PortalView extends SceneObject {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 19313) {
-            PortalView.loadGraphics((ResourceArchive) null, 102);
+            PortalView.loadGameText((ResourceArchive) null, 102);
           }
           if (2 <= param0) {
             stackIn_5_0 = 2;
@@ -201,8 +201,8 @@ final class PortalView extends SceneObject {
         }
     }
 
-    final static void loadGraphics(ResourceArchive param0, int param1) {
-        class $CfrPartitionedBody {
+    final static void loadGameText(ResourceArchive param0, int param1) {
+        class GameTextLoader {
             RuntimeException stackIn_1861_0;
             StringBuilder stackIn_1861_1;
             String stackIn_1862_2;
@@ -214,7 +214,7 @@ final class PortalView extends SceneObject {
             ResourceArchive param0;
             int param1;
             boolean finished;
-            $CfrPartitionedBody(ResourceArchive initialParam0, int initialParam1) {
+            GameTextLoader(ResourceArchive initialParam0, int initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_1861_0 = null;
@@ -226,7 +226,7 @@ final class PortalView extends SceneObject {
                 this.var2_ref = null;
                 this.var3 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadMenuAchievementSpeechAndInstructionText() throws java.lang.RuntimeException {
                 LoginMethod.field_b = param0;
                 var2 = GameHud.readRootTextFile(-128, "text_game_name");
                 if (null != var2) {
@@ -1125,7 +1125,7 @@ final class PortalView extends SceneObject {
                   CookieHelpers.field_a = GameHud.decodeText(-2739, var2);
                 }
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadPowerupTraitAndLevelText() throws java.lang.RuntimeException {
                 var2 = GameHud.readRootTextFile(-122, "backtolab");
                 if (null != var2) {
                   WidgetContainer.field_D = GameHud.decodeText(-2739, var2);
@@ -2050,7 +2050,7 @@ final class PortalView extends SceneObject {
                   HumanView.field_pb[23] = GameHud.decodeText(-2739, var2);
                 }
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadTutorialAndBonusLevelText() throws java.lang.RuntimeException {
                 var2 = GameHud.readRootTextFile(-125, "getready,24");
                 if (null != var2) {
                   HumanView.field_pb[24] = GameHud.decodeText(-2739, var2);
@@ -2360,11 +2360,11 @@ final class PortalView extends SceneObject {
             void run() {
                 var3 = ZombieDawnMulti.field_E ? 1 : 0;
                 try {
-                  runChunk0();
+                  loadMenuAchievementSpeechAndInstructionText();
                   if (finished) return;
-                  runChunk1();
+                  loadPowerupTraitAndLevelText();
                   if (finished) return;
-                  runChunk2();
+                  loadTutorialAndBonusLevelText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -2384,7 +2384,7 @@ final class PortalView extends SceneObject {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        GameTextLoader decompiledBody = new GameTextLoader(param0, param1);
         decompiledBody.run();
     }
 
