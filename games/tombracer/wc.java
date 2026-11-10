@@ -22,7 +22,7 @@ final class wc extends lu {
         if (param0 != 113) {
           return (pl) null;
         }
-        return boa.field_s;
+        return BlockModel.field_s;
     }
 
     final void a(PacketBuffer param0, boolean param1) {

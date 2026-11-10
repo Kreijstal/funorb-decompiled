@@ -276,7 +276,7 @@ final class lja {
             var6 = MouseWheelInput.a(2180, this.field_i) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
-              this.field_f.a((byte) -64, 4, gl.$cfr$intArgs$a$53ce4ab4c593(92, ao.field_m, new String[]{var7}));
+              this.field_f.a((byte) -64, 4, gl.$cfr$intArgs$a$53ce4ab4c593(92, DirectRenderModel.field_m, new String[]{var7}));
               this.field_f.a((byte) -70, 6, gl.$cfr$intArgs$a$53ce4ab4c593(127, mp.field_b, new String[]{var7}));
               if (param0 != null &&
                 2 != param1 &&
@@ -484,13 +484,13 @@ final class lja {
           if (param1 != 17) {
             return false;
           }
-          fj.field_c = new wla(this.field_h.field_q, this.field_h.field_A, this.field_h.field_G, this.field_h.field_t, param0, lma.field_r, oba.field_f, cga.field_g, Corpse.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p, this.field_i, this.field_g);
+          fj.field_c = new wla(this.field_h.field_q, this.field_h.field_A, this.field_h.field_G, this.field_h.field_t, param0, WallModel.field_r, oba.field_f, cga.field_g, Corpse.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p, this.field_i, this.field_g);
           return true;
         }
         if (param1 != 17) {
           return false;
         }
-        fj.field_c = new wla(this.field_h.field_q, this.field_h.field_A, this.field_h.field_G, this.field_h.field_t, param0, lma.field_r, oba.field_f, cga.field_g, Corpse.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p, this.field_i, this.field_g);
+        fj.field_c = new wla(this.field_h.field_q, this.field_h.field_A, this.field_h.field_G, this.field_h.field_t, param0, WallModel.field_r, oba.field_f, cga.field_g, Corpse.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p, this.field_i, this.field_g);
         return true;
     }
 

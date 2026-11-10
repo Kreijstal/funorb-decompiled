@@ -264,10 +264,10 @@ final class ns extends qe {
         if ((64 & param0) != 0) {
           jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 66, 1.0f, 1.0f, 1.0f, 1.0f);
         } else {
-          boa.field_y[2] = this.field_a.field_bc * this.field_a.field_tc;
-          boa.field_y[1] = this.field_a.field_tc * this.field_a.field_Fb;
-          boa.field_y[0] = this.field_a.field_wc * this.field_a.field_tc;
-          jaggl.OpenGL.glProgramLocalParameter4fvARB(34336, 66, boa.field_y, 0);
+          BlockModel.field_y[2] = this.field_a.field_bc * this.field_a.field_tc;
+          BlockModel.field_y[1] = this.field_a.field_tc * this.field_a.field_Fb;
+          BlockModel.field_y[0] = this.field_a.field_wc * this.field_a.field_tc;
+          jaggl.OpenGL.glProgramLocalParameter4fvARB(34336, 66, BlockModel.field_y, 0);
         }
         var4Lifetime1 = param0 & 3;
         if (var4Lifetime1 == 2) {

@@ -68,8 +68,8 @@ final class StaticCrusherComponent extends PrefabComponent {
         Trap var4 = null;
         RuntimeException var4_ref = null;
         CrusherBehaviour var5 = null;
-        mfa var6 = null;
-        dc var7 = null;
+        ModelCodec var6 = null;
+        CrusherModel var7 = null;
         Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -87,7 +87,7 @@ final class StaticCrusherComponent extends PrefabComponent {
           var5.b((byte) 72, true);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
-          var7 = (dc) (var6.a(11, 114));
+          var7 = (CrusherModel) (var6.createModel(11, 114));
           var4.a(var5, (byte) 124, var7);
           stackIn_1_0 = var4;
           return stackIn_1_0;

@@ -151,9 +151,9 @@ final class PlayerProfile {
     }
 
     final static void a(int param0, int param1) {
-        if (null == pqa.field_m ||
-          param1 > pqa.field_m.length) {
-          pqa.field_m = new int[param1];
+        if (null == GasVentModel.field_m ||
+          param1 > GasVentModel.field_m.length) {
+          GasVentModel.field_m = new int[param1];
         }
         if (param0 >= -29) {
           field_b = (int[]) null;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gaa extends dg {
+final class LightSourceModel extends TrapModel {
     private int field_q;
     static int field_p;
     private jaa field_n;
@@ -373,7 +373,7 @@ final class gaa extends dg {
         }
     }
 
-    gaa(int param0, Room param1, BitPacketBuffer param2) {
+    LightSourceModel(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
     }
 
@@ -455,7 +455,7 @@ final class gaa extends dg {
         }
     }
 
-    gaa(int param0) {
+    LightSourceModel(int param0) {
         super(param0);
         this.field_n = new jaa(false, db.field_l);
         this.field_r = true;

@@ -318,7 +318,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
           }
         }
         dra.a(param0);
-        vsa.c((byte) 120, 0);
+        BridgeModel.c((byte) 120, 0);
         if (uma.b(-1)) {
           var2 = this.t(8);
           if (0 == var2 ||

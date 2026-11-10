@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aka extends cda {
+final class MonsterModel extends cda {
     static String field_A;
     private int field_z;
     private bua field_C;
@@ -135,7 +135,7 @@ final class aka extends cda {
         if (param0 != 28191) {
           return;
         }
-        jo.a(oba.field_f, 0, Corpse.field_i, rfa.field_C, lma.field_r);
+        jo.a(oba.field_f, 0, Corpse.field_i, rfa.field_C, WallModel.field_r);
     }
 
     final void a(TrapPart param0, WorldBody param1, byte param2) {
@@ -146,7 +146,7 @@ final class aka extends cda {
         }
     }
 
-    aka(int param0, Room param1, BitPacketBuffer param2) {
+    MonsterModel(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
         this.field_w = false;
         this.field_z = 0;
@@ -331,7 +331,7 @@ final class aka extends cda {
         }
     }
 
-    aka(int param0) {
+    MonsterModel(int param0) {
         super(param0);
         this.field_w = false;
         this.field_z = 0;

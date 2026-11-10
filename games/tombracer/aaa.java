@@ -48,7 +48,7 @@ final class aaa {
         this.field_a = null;
         try {
           this.field_g = param0.field_V;
-          kga.a(param0, 121);
+          ItemModel.a(param0, 121);
           if (!this.field_g) {
             this.field_f = new rt[16];
             for (var2_int = 0; 16 > var2_int; var2_int++) {

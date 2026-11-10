@@ -21,8 +21,8 @@ final class TrackMountComponent extends PrefabComponent {
         RuntimeException var4 = null;
         TrackPlayerLocomotor var5 = null;
         int var6 = 0;
-        mfa var7 = null;
-        nq var8 = null;
+        ModelCodec var7 = null;
+        TrapBaseModel var8 = null;
         Trap var9 = null;
         int stackIn_3_0 = 0;
         TrackPlayerLocomotor stackIn_5_0 = null;
@@ -53,7 +53,7 @@ final class TrackMountComponent extends PrefabComponent {
           var5.a(false, this.field_F);
           var9.addLocomotor(var5, param1 ^ param1);
           var7 = rm.field_a;
-          var8 = (nq) (var7.a(16, param1 + 119));
+          var8 = (TrapBaseModel) (var7.createModel(16, param1 + 119));
           var8.b(param1 ^ 8021, 0);
           var9.a(var5, (byte) 124, var8);
           stackIn_7_0 = var9;

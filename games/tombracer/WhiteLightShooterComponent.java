@@ -149,8 +149,8 @@ final class WhiteLightShooterComponent extends ShooterComponent {
         Trap var4 = null;
         RuntimeException var4_ref = null;
         BeamShooterBehaviour var5 = null;
-        mfa var6 = null;
-        boa var7 = null;
+        ModelCodec var6 = null;
+        BlockModel var7 = null;
         Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -166,7 +166,7 @@ final class WhiteLightShooterComponent extends ShooterComponent {
           this.a((byte) 43, var5, param2);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
-          var7 = (boa) (var6.a(7, param1 ^ 77));
+          var7 = (BlockModel) (var6.createModel(7, param1 ^ 77));
           var7.b(113, 15);
           var4.a(var5, (byte) 124, var7);
           stackIn_1_0 = var4;

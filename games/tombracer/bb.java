@@ -8,7 +8,7 @@ final class bb extends IntrusiveNode {
     long[][] field_o;
     static int field_m;
     static String field_q;
-    static String[] field_g;
+    static String[] modelCategoryNames;
     int field_j;
     String[][] field_k;
     int field_i;
@@ -18,14 +18,14 @@ final class bb extends IntrusiveNode {
     public static void releaseStatics(boolean param0) {
         if (!param0) {
           field_l = null;
-          field_g = null;
+          modelCategoryNames = null;
           field_q = null;
           field_f = null;
           return;
         }
         field_f = (ena) null;
         field_l = null;
-        field_g = null;
+        modelCategoryNames = null;
         field_q = null;
         field_f = null;
     }

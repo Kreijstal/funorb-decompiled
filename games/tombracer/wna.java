@@ -375,7 +375,7 @@ final class wna extends ci {
           if (lsa.field_a <= 0) {
             return false;
           }
-          if (!dg.b(-1)) {
+          if (!TrapModel.b(-1)) {
             return true;
           }
           return false;
@@ -389,7 +389,7 @@ final class wna extends ci {
         if (lsa.field_a <= 0) {
           return false;
         }
-        if (!dg.b(-1)) {
+        if (!TrapModel.b(-1)) {
           return true;
         }
         return false;

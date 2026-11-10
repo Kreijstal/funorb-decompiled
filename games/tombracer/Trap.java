@@ -39,7 +39,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
     private boolean field_cb;
     private boolean field_C;
     private boolean[] field_W;
-    private IntrusiveDeque field_O;
+    private IntrusiveDeque models;
     private int width;
     private int field_N;
     private boolean field_r;
@@ -245,7 +245,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         }
     }
 
-    final void a(TrapPart param0, byte param1, dg param2) {
+    final void a(TrapPart param0, byte param1, TrapModel param2) {
         if (param2 == null) {
           return;
         }
@@ -253,7 +253,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           return;
         }
         try {
-          this.field_O.addLast((byte) -74, param2);
+          this.models.addLast((byte) -74, param2);
           param2.a(param0, (WorldBody) (this), (byte) 36);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fsa.OE(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -311,15 +311,15 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
 
     private final void v(int param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
-        dg var4 = (dg) (this.field_O.first(-80));
+        TrapModel var4 = (TrapModel) (this.models.first(-80));
         while (var4 != null) {
           var4.i((byte) -30);
-          var4 = (dg) (this.field_O.next(126));
+          var4 = (TrapModel) (this.models.next(126));
         }
         if (param0 != -1332) {
           this.y(5);
         }
-        this.field_O.clear(8);
+        this.models.clear(8);
     }
 
     final static void a(int param0, kea param1) {
@@ -412,7 +412,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
     }
 
     final void i(boolean param0) {
-        dg var3 = null;
+        TrapModel var3 = null;
         int var4 = TombRacer.field_G ? 1 : 0;
         if (this.j(-1)) {
           return;
@@ -433,10 +433,10 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         this.field_r = param0 ? true : false;
         uw var5 = this.room.j((byte) 104);
         if (var5 != null) {
-          var3 = (dg) (this.field_O.first(-80));
+          var3 = (TrapModel) (this.models.first(-80));
           while (var3 != null) {
             var3.a(-65, var5);
-            var3 = (dg) (this.field_O.next(123));
+            var3 = (TrapModel) (this.models.next(123));
           }
         }
     }
@@ -500,7 +500,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         Trap var4;
         int var5;
         Locomotor var6;
-        dg var7;
+        TrapModel var7;
         uja var8;
         uja var9;
         uja var10;
@@ -599,10 +599,10 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
             var4 = (Trap) (var10.a(-1));
           }
         }
-        var7 = (dg) (this.field_O.first(-80));
+        var7 = (TrapModel) (this.models.first(-80));
         while (var7 != null) {
           var7.d(-1);
-          var7 = (dg) (this.field_O.next(126));
+          var7 = (TrapModel) (this.models.next(126));
         }
         if (this.field_eb &&
           this.locomotors.isEmpty((byte) 14)) {
@@ -943,7 +943,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         Behaviour var8_ref_nv = null;
         Trap var9_ref_fsa = null;
         int var10 = 0;
-        dg var11 = null;
+        TrapModel var11 = null;
         int var6Lifetime1;
         int var7Lifetime1;
         int var8Lifetime1;
@@ -962,9 +962,9 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           this.field_p = stackIn_9_1;
           this.field_N = param2.readBits((byte) 44, 6) * 50;
           if (param0.formatVersion >= 10) {
-            this.field_F = oo.a(4, 8192, 0, param2.readBits((byte) 44, 4));
+            this.field_F = SnakePitModel.a(4, 8192, 0, param2.readBits((byte) 44, 4));
           } else {
-            this.field_F = oo.a(3, 8192, 0, param2.readBits((byte) 44, 3));
+            this.field_F = SnakePitModel.a(3, 8192, 0, param2.readBits((byte) 44, 3));
           }
           if (10 >= param0.formatVersion) {
             this.field_S = param2.readBits((byte) 44, 8) / 5;
@@ -992,7 +992,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           }
           var5_int = param2.readBits((byte) 44, 3);
           for (var6 = 0; var5_int > var6; var6++) {
-            var7_ref_wda = ki.readLocomotor(param2, (byte) 95, param0, param3);
+            var7_ref_wda = PlantModel.readLocomotor(param2, (byte) 95, param0, param3);
             this.locomotors.addLast((byte) -49, var7_ref_wda);
             var7_ref_wda.attachToTrap(64, this);
           }
@@ -1015,7 +1015,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
             var8Lifetime1 = param2.readBits((byte) 44, 3);
             for (var9 = 0; var9 < var8Lifetime1; var9++) {
               var10 = param2.readBits((byte) 44, 5) - 1;
-              var11 = rm.field_a.a(param0, param2, false);
+              var11 = rm.field_a.readModel(param0, param2, false);
               this.a(this.b(3, var10), (byte) 124, var11);
             }
           } else {
@@ -1263,7 +1263,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         int var5 = 0;
         Locomotor var6 = null;
         Behaviour var7 = null;
-        dg var8 = null;
+        TrapModel var8 = null;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
           param0.writeBits((byte) 0, dqa.a(true, this.localX >> 16, 12), 12);
@@ -1334,12 +1334,12 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
             var4 = (Trap) (this.children.next(124));
           }
           if (this.room.formatVersion >= 9) {
-            param0.writeBits((byte) 88, this.field_O.size((byte) -16), 3);
-            var8 = (dg) (this.field_O.first(-80));
+            param0.writeBits((byte) 88, this.models.size((byte) -16), 3);
+            var8 = (TrapModel) (this.models.first(-80));
             while (var8 != null) {
               param0.writeBits((byte) -127, 1 + this.a(13464, var8.c(-93)), 5);
               rm.field_a.a(15682, param0, var8);
-              var8 = (dg) (this.field_O.next(109));
+              var8 = (TrapModel) (this.models.next(109));
             }
           }
           this.field_o.a((byte) -125, param0);
@@ -1374,10 +1374,10 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
 
     final void A(int param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
-        dg var2 = (dg) (this.field_O.first(-80));
+        TrapModel var2 = (TrapModel) (this.models.first(-80));
         while (var2 != null) {
           var2.e(param0 ^ -23607);
-          var2 = (dg) (this.field_O.next(param0 ^ 23599));
+          var2 = (TrapModel) (this.models.next(param0 ^ 23599));
         }
         Trap var4 = (Trap) (this.children.first(-80));
         while (var4 != null) {
@@ -1407,7 +1407,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
 
     private final void a(uw param0, int param1) {
         int var4 = 0;
-        dg var5 = null;
+        TrapModel var5 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -1422,10 +1422,10 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           if (param1 != 9411) {
             this.field_cb = true;
           }
-          var5 = (dg) (this.field_O.first(-80));
+          var5 = (TrapModel) (this.models.first(-80));
           while (var5 != null) {
             var5.a(param0, 120);
-            var5 = (dg) (this.field_O.next(125));
+            var5 = (TrapModel) (this.models.next(125));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1561,7 +1561,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         }
     }
 
-    private final boolean a(dg param0, int param1) {
+    private final boolean a(TrapModel param0, int param1) {
         TrapPart var3 = null;
         int var3_int = 0;
         RuntimeException var3_ref = null;
@@ -1883,7 +1883,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
 
     final void u(int param0) {
         Trap var2;
-        dg var2_ref;
+        TrapModel var2_ref;
         int var3;
         Locomotor var4;
         Behaviour var5;
@@ -1913,14 +1913,14 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           var5.n((byte) 86);
           var5 = (Behaviour) (this.behaviours.next(122));
         }
-        var2_ref = (dg) (this.field_O.first(-80));
+        var2_ref = (TrapModel) (this.models.first(-80));
         while (var2_ref != null) {
           if (this.a(var2_ref, param0 ^ -113)) {
             var2_ref.a(var2_ref.c(-118), (WorldBody) (this), (byte) 36);
           } else {
             var2_ref.unlink(91);
           }
-          var2_ref = (dg) (this.field_O.next(124));
+          var2_ref = (TrapModel) (this.models.next(124));
         }
         var6 = (Trap) (this.children.first(-80));
         while (var6 != null) {
@@ -2055,7 +2055,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
 
     private final void a(uw param0, boolean param1) {
         int var4 = 0;
-        dg var5 = null;
+        TrapModel var5 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -2070,10 +2070,10 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           if (!param1) {
             return;
           }
-          var5 = (dg) (this.field_O.first(-80));
+          var5 = (TrapModel) (this.models.first(-80));
           while (var5 != null) {
             var5.b(0, param0);
-            var5 = (dg) (this.field_O.next(111));
+            var5 = (TrapModel) (this.models.next(111));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2259,10 +2259,10 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
           this.field_D = true;
         }
         this.t(param1 ^ 2097161);
-        dg var5 = (dg) (this.field_O.first(param1 - 89));
+        TrapModel var5 = (TrapModel) (this.models.first(param1 - 89));
         while (var5 != null) {
           var5.a((byte) -91, param0);
-          var5 = (dg) (this.field_O.next(118));
+          var5 = (TrapModel) (this.models.next(118));
         }
         this.v((byte) 109);
     }
@@ -2294,10 +2294,10 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
 
     final void f(int param0, int param1) {
         int var4 = TombRacer.field_G ? 1 : 0;
-        dg var5 = (dg) (this.field_O.first(-80));
+        TrapModel var5 = (TrapModel) (this.models.first(-80));
         while (var5 != null) {
           var5.a(param1, (byte) 122);
-          var5 = (dg) (this.field_O.next(param0 ^ 102));
+          var5 = (TrapModel) (this.models.next(param0 ^ 102));
         }
         if (param0 != 10) {
           this.switchableId = (SwitchableId) null;
@@ -2404,7 +2404,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         int var4 = 0;
         Locomotor var5 = null;
         Behaviour var6 = null;
-        dg var7 = null;
+        TrapModel var7 = null;
         Trap var8 = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
@@ -2439,10 +2439,10 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
             var6.h(28701);
             var6 = (Behaviour) (this.behaviours.next(116));
           }
-          var7 = (dg) (this.field_O.first(-80));
+          var7 = (TrapModel) (this.models.first(-80));
           while (var7 != null) {
             var7.h(65);
-            var7 = (dg) (this.field_O.next(110));
+            var7 = (TrapModel) (this.models.next(110));
           }
           var8 = (Trap) (this.children.first(-80));
           while (var8 != null) {
@@ -3171,7 +3171,7 @@ final class Trap extends IntrusiveNode implements lj, ew, Renderable, WorldBody,
         this.field_L = 0;
         this.field_V = 0;
         this.field_k = new boolean[3];
-        this.field_O = new IntrusiveDeque();
+        this.models = new IntrusiveDeque();
         this.field_o = new bca();
         this.field_fb = new on();
         this.field_z = -1;

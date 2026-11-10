@@ -339,7 +339,7 @@ final class nf {
               BeamShooterBehaviour.a(param4, param0, param1, false, param2, param5, param3);
             } else {
               if (param1 + param0 <= hc.field_h) {
-                vsa.a(param1, param0, 0, param5, param2, param4, param3);
+                BridgeModel.a(param1, param0, 0, param5, param2, param4, param3);
               } else {
                 BeamShooterBehaviour.a(param4, param0, param1, false, param2, param5, param3);
               }

@@ -126,12 +126,12 @@ final class PlayerSensorBehaviour extends Behaviour implements ut {
           stackIn_4_1 = (param1.readBits((byte) 44, 1) == 1);
           this.field_s = stackIn_4_1;
           if (this.field_s) {
-            this.field_u = oo.a(8, 8192, 0, param1.readBits((byte) 44, 8));
+            this.field_u = SnakePitModel.a(8, 8192, 0, param1.readBits((byte) 44, 8));
           }
           stackIn_9_1 = (param1.readBits((byte) 44, 1) == 1);
           this.field_r = stackIn_9_1;
           if (this.field_r) {
-            this.field_o = oo.a(8, 8192, 0, param1.readBits((byte) 44, 8));
+            this.field_o = SnakePitModel.a(8, 8192, 0, param1.readBits((byte) 44, 8));
           }
           stackIn_14_1 = (1 == param1.readBits((byte) 44, 1));
           this.field_q = stackIn_14_1;

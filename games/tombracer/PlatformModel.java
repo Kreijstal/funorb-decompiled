@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ce extends dg {
+final class PlatformModel extends TrapModel {
     static String field_w;
     private int field_s;
     private PlatformBehaviour field_m;
@@ -25,7 +25,7 @@ final class ce extends dg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -13019) {
-            ce.l(-70);
+            PlatformModel.l(-70);
           }
           stackIn_3_0 = this.field_u;
           return stackIn_3_0;
@@ -187,7 +187,7 @@ final class ce extends dg {
         }
     }
 
-    ce(int param0) {
+    PlatformModel(int param0) {
         super(param0);
         this.field_p = false;
         this.field_t = null;
@@ -720,7 +720,7 @@ final class ce extends dg {
         }
     }
 
-    ce(int param0, Room param1, BitPacketBuffer param2) {
+    PlatformModel(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
         this.field_p = false;
         this.field_t = null;
@@ -814,7 +814,7 @@ final class ce extends dg {
           var1.d(128, 9, param0 + 6);
           var2.d(128, 9, 32460);
           if (param0 != 32454) {
-            ce.l(-98);
+            PlatformModel.l(-98);
           }
           ab.field_n = new sq(var1, var2);
           wea.a(22050, 1024, ab.field_n, true, (java.awt.Component) ((Object) nma.field_l), dsa.field_c);

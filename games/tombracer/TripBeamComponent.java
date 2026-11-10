@@ -80,8 +80,8 @@ final class TripBeamComponent extends SwitchComponent {
         Trap var4 = null;
         RuntimeException var4_ref = null;
         TripBeamBehaviour var5 = null;
-        mfa var6 = null;
-        boa var7 = null;
+        ModelCodec var6 = null;
+        BlockModel var7 = null;
         Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -98,7 +98,7 @@ final class TripBeamComponent extends SwitchComponent {
           this.a(var5, (byte) -107);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
-          var7 = (boa) (var6.a(7, 82));
+          var7 = (BlockModel) (var6.createModel(7, 82));
           var7.b(119, 16);
           var4.a(var5, (byte) 124, var7);
           stackIn_1_0 = var4;

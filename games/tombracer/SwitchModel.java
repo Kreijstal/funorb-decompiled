@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class cv extends dg {
+final class SwitchModel extends TrapModel {
     private fla field_p;
     private bua field_s;
     private boolean field_n;
@@ -74,7 +74,7 @@ final class cv extends dg {
         }
     }
 
-    cv(int param0) {
+    SwitchModel(int param0) {
         super(param0);
         this.field_n = false;
     }
@@ -672,7 +672,7 @@ final class cv extends dg {
         return;
     }
 
-    cv(int param0, Room param1, BitPacketBuffer param2) {
+    SwitchModel(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
         this.field_n = false;
     }

@@ -5,7 +5,7 @@ final class faa implements Renderable {
     static String field_g;
     int field_e;
     int field_b;
-    vsa field_c;
+    BridgeModel field_c;
     int field_d;
     bua field_f;
     int field_a;

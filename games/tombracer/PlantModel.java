@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ki extends dg {
+final class PlantModel extends TrapModel {
     static jua field_n;
     static int field_o;
     static String field_p;
@@ -29,7 +29,7 @@ final class ki extends dg {
         }
     }
 
-    ki(int param0) {
+    PlantModel(int param0) {
         super(param0);
     }
 
@@ -38,7 +38,7 @@ final class ki extends dg {
           param1.removeKeyListener(nfa.field_n);
           if (param0 != -18520) {
             java.awt.Component var3 = (java.awt.Component) null;
-            ki.a(-126, (java.awt.Component) null);
+            PlantModel.a(-126, (java.awt.Component) null);
           }
           param1.removeFocusListener(nfa.field_n);
           ita.field_f = -1;
@@ -182,7 +182,7 @@ final class ki extends dg {
         }
     }
 
-    ki(int param0, Room param1, BitPacketBuffer param2) {
+    PlantModel(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
     }
 
@@ -217,7 +217,7 @@ final class ki extends dg {
             var4 = (kb) (nn.field_a.next(111));
           }
           if (param0) {
-            ki.b(true, -117);
+            PlantModel.b(true, -117);
           }
           var5 = (bb) (mg.field_b.first(-80));
           while (var5 != null) {

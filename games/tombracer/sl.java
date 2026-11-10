@@ -41,7 +41,7 @@ final class sl extends vw {
           this.field_c.a(0, false, ej.field_c);
         } else {
           this.field_c.e(1, false);
-          this.field_c.a(kga.field_o, (byte) 0);
+          this.field_c.a(ItemModel.field_o, (byte) 0);
           this.field_c.a(iw.field_c, (byte) -110, iw.field_c);
           this.field_c.a(pea.field_c, 2, -21);
           this.field_c.a(0, false, ej.field_c);

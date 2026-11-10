@@ -36,9 +36,9 @@ final class fha {
           ApproachPlayerLocomotor.field_s = nia.a(param2, "commonui", "jagex_logo_grey", -101);
           nga.field_n = BoulderComponent.a(param2, "commonui", 5, "button");
           pq.field_b = Particle.a("validation", param2, "commonui", -57);
-          eka.field_o = (BitmapFont) ((Object) oo.a(param2, param1, false, "commonui", "arezzo12"));
-          KeySwitchComponent.field_J = (BitmapFont) ((Object) oo.a(param2, param1, false, "commonui", "arezzo14"));
-          ft.field_c = (BitmapFont) ((Object) oo.a(param2, param1, false, "commonui", "arezzo14bold"));
+          eka.field_o = (BitmapFont) ((Object) SnakePitModel.a(param2, param1, false, "commonui", "arezzo12"));
+          KeySwitchComponent.field_J = (BitmapFont) ((Object) SnakePitModel.a(param2, param1, false, "commonui", "arezzo14"));
+          ft.field_c = (BitmapFont) ((Object) SnakePitModel.a(param2, param1, false, "commonui", "arezzo14bold"));
           var17 = new Sprite(param3.a("button.gif", (byte) 118, ""), (java.awt.Component) ((Object) nma.field_l));
           uv.a("dropdown", param2, "commonui", 8864);
           var5 = tw.a((byte) 127, "screen_options", "commonui", param2);

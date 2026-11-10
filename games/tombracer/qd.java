@@ -8,7 +8,7 @@ final class qd {
         if (param0 < 9) {
           return 95;
         }
-        return -am.field_o + tia.field_a;
+        return -FurnitureModel.field_o + tia.field_a;
     }
 
     public static void releaseStatics(int param0) {

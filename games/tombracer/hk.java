@@ -46,7 +46,7 @@ final class hk {
         int var16 = TombRacer.field_G ? 1 : 0;
         if (null == this.field_f) {
           if (null == ui.field_c) {
-            var25 = gaa.a(4.0f, 16.0f, 128, new tda(419684), 8, 128, 0.5f, 16, 4, 4.0f, 0.6000000238418579f);
+            var25 = LightSourceModel.a(4.0f, 16.0f, 128, new tda(419684), 8, 128, 0.5f, 16, 4, 4.0f, 0.6000000238418579f);
             ui.field_c = bw.a(270, var25, false);
           }
           var22 = ir.a(ui.field_c, 13588, false);

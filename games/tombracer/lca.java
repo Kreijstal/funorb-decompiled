@@ -5,7 +5,7 @@ final class lca implements Renderable {
     private static String[] field_g;
     int field_b;
     int field_c;
-    oo field_a;
+    SnakePitModel field_a;
     int field_f;
     int field_e;
     int field_d;
@@ -20,7 +20,7 @@ final class lca implements Renderable {
 
     public final void f(int param0) {
         if (param0 != -4366) {
-          this.field_a = (oo) null;
+          this.field_a = (SnakePitModel) null;
         }
     }
 
@@ -47,18 +47,18 @@ final class lca implements Renderable {
     final static boolean a(boolean param0) {
         if (param0) {
           lca.releaseStatics(-63);
-          if (null == wu.field_a) {
+          if (null == ModelFactory.field_a) {
             return false;
           }
-          if (wu.field_a.a((byte) 119) != null) {
+          if (ModelFactory.field_a.a((byte) 119) != null) {
             return true;
           }
           return false;
         }
-        if (null == wu.field_a) {
+        if (null == ModelFactory.field_a) {
           return false;
         }
-        if (wu.field_a.a((byte) 119) != null) {
+        if (ModelFactory.field_a.a((byte) 119) != null) {
           return true;
         }
         return false;

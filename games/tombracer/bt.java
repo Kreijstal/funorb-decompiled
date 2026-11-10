@@ -4,7 +4,7 @@
 final class bt implements Renderable {
     private boolean field_g;
     static int field_b;
-    oo field_a;
+    SnakePitModel field_a;
     private boolean field_f;
     private bua field_d;
     aia field_e;

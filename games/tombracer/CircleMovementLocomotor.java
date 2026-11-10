@@ -165,10 +165,10 @@ final class CircleMovementLocomotor extends Locomotor {
           this.field_o = param1.readBits((byte) 44, 10) << 16;
           this.field_r = CoinItemComponent.a(true, 12, param1.readBits((byte) 44, 12));
           if (param0.formatVersion < 10) {
-            this.field_q = oo.a(3, 32768, 0, param1.readBits((byte) 44, 3));
+            this.field_q = SnakePitModel.a(3, 32768, 0, param1.readBits((byte) 44, 3));
             this.field_t = true;
           } else {
-            this.field_q = oo.a(4, 32768, 0, param1.readBits((byte) 44, 4));
+            this.field_q = SnakePitModel.a(4, 32768, 0, param1.readBits((byte) 44, 4));
             stackIn_5_1 = (1 == param1.readBits((byte) 44, 1));
             this.field_t = stackIn_5_1;
           }

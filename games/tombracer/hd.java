@@ -31,10 +31,10 @@ final class hd {
           if (mua.field_a == wt.field_d &&
             param1.equals(uaa.field_a)) {
             wt.field_d = fta.field_c;
-            stackIn_11_0 = oo.field_t;
+            stackIn_11_0 = SnakePitModel.field_t;
             return stackIn_11_0;
           }
-          oo.field_t = null;
+          SnakePitModel.field_t = null;
           wt.field_d = gsa.field_y;
           uaa.field_a = param1;
           stackIn_9_0 = null;

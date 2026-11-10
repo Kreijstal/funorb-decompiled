@@ -296,7 +296,7 @@ final class BitPacketBuffer extends PacketBuffer {
               if (tia.field_d == qla.field_f) {
                 baa.field_d.a(0, new ei[]{(ei) ((Object) paa.field_z)});
               } else {
-                if (qla.field_f == kva.field_s) {
+                if (qla.field_f == PitModel.field_s) {
                   baa.field_d.a(0, new ei[]{(ei) ((Object) laa.field_x)});
                 }
               }
@@ -306,7 +306,7 @@ final class BitPacketBuffer extends PacketBuffer {
               if (qla.field_f == tia.field_d) {
                 baa.field_d.a(0, new ei[]{(ei) ((Object) vea.field_c)});
               } else {
-                if (qla.field_f == kva.field_s) {
+                if (qla.field_f == PitModel.field_s) {
                   baa.field_d.a(0, new ei[]{(ei) ((Object) daa.field_d)});
                 }
               }

@@ -77,11 +77,11 @@ abstract class ShooterComponent extends PrefabComponent {
     }
 
     final void a(Trap param0, int param1, Behaviour param2, int param3) {
-        mfa var5 = null;
-        gaa var6 = null;
+        ModelCodec var5 = null;
+        LightSourceModel var6 = null;
         try {
           var5 = rm.field_a;
-          var6 = (gaa) (var5.a(5, 87));
+          var6 = (LightSourceModel) (var5.createModel(5, 87));
           var6.a(true, param3);
           var6.b(1, 96);
           var6.a(16, 120);

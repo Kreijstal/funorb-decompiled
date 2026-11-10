@@ -4,7 +4,7 @@
 final class dpa implements Renderable {
     int field_i;
     boolean field_g;
-    kva field_e;
+    PitModel field_e;
     dpa field_b;
     int field_j;
     int field_a;

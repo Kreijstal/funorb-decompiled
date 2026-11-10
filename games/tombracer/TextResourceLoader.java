@@ -181,15 +181,15 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -17, "mu_x_withdrew_request");
                 if (var2 != null) {
-                  ioa.field_m = jaa.a((byte) 101, var2);
+                  LegacySwitchModel.field_m = jaa.a((byte) 101, var2);
                 }
                 var2 = dn.a((byte) 111, "mu_x_removed");
                 if (null != var2) {
-                  ria.field_p = jaa.a((byte) 125, var2);
+                  TestModel.field_p = jaa.a((byte) 125, var2);
                 }
                 var2 = dn.a((byte) -114, "mu_x_dropped_out");
                 if (var2 != null) {
-                  lfa.field_n = jaa.a((byte) 113, var2);
+                  DoorwayModel.field_n = jaa.a((byte) 113, var2);
                 }
                 var2 = dn.a((byte) 112, "mu_entered_other_game");
                 if (null != var2) {
@@ -257,11 +257,11 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 107, "mu_gamelist_status");
                 if (null != var2) {
-                  oo.field_m = jaa.a((byte) 123, var2);
+                  SnakePitModel.field_m = jaa.a((byte) 123, var2);
                 }
                 var2 = dn.a((byte) -10, "mu_gamelist_owner");
                 if (var2 != null) {
-                  ria.field_r = jaa.a((byte) 25, var2);
+                  TestModel.field_r = jaa.a((byte) 25, var2);
                 }
                 var2 = dn.a((byte) 110, "mu_gamelist_players");
                 if (var2 != null) {
@@ -329,7 +329,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 114, "add_x_to_friends");
                 if (null != var2) {
-                  ao.field_m = jaa.a((byte) 36, var2);
+                  DirectRenderModel.field_m = jaa.a((byte) 36, var2);
                 }
                 var2 = dn.a((byte) 124, "add_x_to_ignore");
                 if (null != var2) {
@@ -1015,7 +1015,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -53, "invaliduserorpass");
                 if (var2 != null) {
-                  ria.field_n = jaa.a((byte) 43, var2);
+                  TestModel.field_n = jaa.a((byte) 43, var2);
                 }
                 var2 = dn.a((byte) 115, "pleasetryagain");
                 if (var2 != null) {
@@ -1591,7 +1591,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -21, "create_alert_doublespace");
                 if (null != var2) {
-                  pqa.field_r = jaa.a((byte) 59, var2);
+                  GasVentModel.field_r = jaa.a((byte) 59, var2);
                 }
                 var2 = dn.a((byte) 119, "create_alert_passchars");
                 if (null != var2) {
@@ -1687,7 +1687,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 106, "friendlistdupe");
                 if (var2 != null) {
-                  ce.field_w = jaa.a((byte) 107, var2);
+                  PlatformModel.field_w = jaa.a((byte) 107, var2);
                 }
                 var2 = dn.a((byte) 113, "friendnotfound");
                 if (var2 != null) {
@@ -1753,7 +1753,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -124, "waitingfor_graphics");
                 if (null != var2) {
-                  cv.field_r = jaa.a((byte) 118, var2);
+                  SwitchModel.field_r = jaa.a((byte) 118, var2);
                 }
                 var2 = dn.a((byte) 112, "waitingfor_models");
                 if (var2 != null) {
@@ -1973,7 +1973,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 124, "startgame");
                 if (null != var2) {
-                  ki.field_p = jaa.a((byte) 122, var2);
+                  PlantModel.field_p = jaa.a((byte) 122, var2);
                 }
                 var2 = dn.a((byte) -111, "newgame");
                 if (var2 != null) {

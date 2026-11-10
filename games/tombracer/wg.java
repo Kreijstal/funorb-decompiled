@@ -120,11 +120,11 @@ final class wg extends tu {
               var6 = PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(-116, mba.field_g[var3_int], true);
               var4 = var4 + mha.field_C;
               var7 = -(var6 >> 1) + ega.field_c;
-              if (CrusherBehaviour.a(param2, var6 + (InvisibleTouchSwitchComponent.field_L << 1), -InvisibleTouchSwitchComponent.field_L + var7, param1, (pqa.field_p << 1) + nt.field_d, false, var4)) {
+              if (CrusherBehaviour.a(param2, var6 + (InvisibleTouchSwitchComponent.field_L << 1), -InvisibleTouchSwitchComponent.field_L + var7, param1, (GasVentModel.field_p << 1) + nt.field_d, false, var4)) {
                 stackIn_9_0 = var5;
                 return stackIn_9_0;
               }
-              var4 = var4 + ((pqa.field_p << 1) + mha.field_C + nt.field_d);
+              var4 = var4 + ((GasVentModel.field_p << 1) + mha.field_C + nt.field_d);
             } else {
               var4 = var4 + f.field_b;
             }

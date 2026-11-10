@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kga extends dg {
+final class ItemModel extends TrapModel {
     private bua field_s;
     private int field_p;
     private int field_r;
@@ -257,11 +257,11 @@ final class kga extends dg {
         qpa.a(335, jta.field_z, 9, 40, 440, 125, 200);
         if (param0 < 97) {
           OpenGlToolkit var2 = (OpenGlToolkit) null;
-          kga.a((OpenGlToolkit) null, -2);
+          ItemModel.a((OpenGlToolkit) null, -2);
         }
     }
 
-    kga(int param0, Room param1, BitPacketBuffer param2) {
+    ItemModel(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
         this.field_m = 0;
         this.field_p = 0;
@@ -316,13 +316,13 @@ final class kga extends dg {
           }
           var11 = param0.field_zc;
           if (param1 < 116) {
-            kga.releaseStatics((byte) 16);
+            ItemModel.releaseStatics((byte) 16);
           }
           if (var11.a((byte) 89)) {
             if (uga.field_m != null) {
               return;
             }
-            var21 = gaa.a(4.0f, 16.0f, 128, new tda(419684), 8, 128, 0.5f, 16, 4, 4.0f, 0.6000000238418579f);
+            var21 = LightSourceModel.a(4.0f, 16.0f, 128, new tda(419684), 8, 128, 0.5f, 16, 4, 4.0f, 0.6000000238418579f);
             uga.field_m = bw.a(270, var21, false);
           }
         } catch (RuntimeException runtimeException) {
@@ -334,11 +334,11 @@ final class kga extends dg {
         this.field_t = param1;
         if (param0 <= 73) {
           OpenGlToolkit var4 = (OpenGlToolkit) null;
-          kga.a((OpenGlToolkit) null, 79);
+          ItemModel.a((OpenGlToolkit) null, 79);
         }
     }
 
-    kga(int param0) {
+    ItemModel(int param0) {
         super(param0);
         this.field_m = 0;
         this.field_p = 0;

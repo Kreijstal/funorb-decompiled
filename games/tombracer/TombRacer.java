@@ -357,7 +357,7 @@ public final class TombRacer extends rfa implements ls {
         iqa.releaseStatics(126);
         fga.a((byte) -29);
         ck.a(false);
-        wu.a((byte) 91);
+        ModelFactory.a((byte) 91);
         gva.a(param0 ^ -14342);
         RoomComponentFactory.a((byte) -114);
         PlayerSimulation.releaseStatics(param0 ^ param0);
@@ -575,33 +575,33 @@ public final class TombRacer extends rfa implements ls {
         tn.releaseStatics((byte) 94);
         bq.releaseStatics((byte) 25);
         dw.releaseStatics((byte) 101);
-        ria.releaseStatics(-30362);
-        ioa.releaseStatics(-99);
+        TestModel.releaseStatics(-30362);
+        LegacySwitchModel.releaseStatics(-99);
         jaa.releaseStatics(true);
-        lfa.releaseStatics(5353);
-        boa.releaseStatics(false);
+        DoorwayModel.releaseStatics(5353);
+        BlockModel.releaseStatics(false);
         WeaponShooterBehaviour.releaseStatics(884207088);
-        fu.n((byte) -51);
+        HazardModel.n((byte) -51);
         ConstantEffectBehaviour.releaseStatics(-27203);
         PathMoveLocomotor.f(-107);
-        cv.releaseStatics((byte) 100);
-        kva.releaseStatics(param0 ^ 3665);
+        SwitchModel.releaseStatics((byte) 100);
+        PitModel.releaseStatics(param0 ^ 3665);
         CrusherBehaviour.b(12134);
-        kga.releaseStatics((byte) 9);
+        ItemModel.releaseStatics((byte) 9);
         PowerUpItemBehaviour.releaseStatics(true);
-        oo.releaseStatics(-115);
+        SnakePitModel.releaseStatics(-115);
         SnakePitBehaviour.releaseStatics(param0 ^ -25894);
         aia.releaseStatics(-87);
-        ki.releaseStatics(false);
-        lma.releaseStatics((byte) -123);
+        PlantModel.releaseStatics(false);
+        WallModel.releaseStatics((byte) -123);
         cda.n((byte) 112);
-        ce.l(30389);
+        PlatformModel.l(30389);
         PlatformBehaviour.releaseStatics(1);
         PortalBehaviour.j((byte) 124);
-        aka.releaseStatics((byte) 120);
-        vsa.releaseStatics((byte) -125);
-        pqa.n((byte) -126);
-        ao.releaseStatics(param0 + 3543);
+        MonsterModel.releaseStatics((byte) 120);
+        BridgeModel.releaseStatics((byte) -125);
+        GasVentModel.n((byte) -126);
+        DirectRenderModel.releaseStatics(param0 + 3543);
         SimpleBlockBehaviour.releaseStatics(15602);
         TouchSwitchBehaviour.l(15);
         PressureSwitchBehaviour.l(1);
@@ -1027,7 +1027,7 @@ public final class TombRacer extends rfa implements ls {
     }
 
     final void onLoadingComplete(int param0) {
-        kga.i(98);
+        ItemModel.i(98);
         if (param0 != 24230) {
           this.initializeGame(-10);
         }
@@ -1109,7 +1109,7 @@ public final class TombRacer extends rfa implements ls {
           this.z(125);
         }
         foa.field_b = false;
-        ce.j(32454);
+        PlatformModel.j(32454);
         S2CEventPacket.field_c[81] = -1;
         S2CEventPacket.field_c[75] = -1;
         S2CEventPacket.field_c[74] = -2;
@@ -1221,7 +1221,7 @@ public final class TombRacer extends rfa implements ls {
           }
           if (15 == param0) {
             if (RandomMazeBehaviour.field_n) {
-              cv.o((byte) -108);
+              SwitchModel.o((byte) -108);
               ik.a(5);
               era.field_c = true;
               RandomMazeBehaviour.field_n = false;
@@ -1530,7 +1530,7 @@ public final class TombRacer extends rfa implements ls {
         if (param1 < 107) {
           this.field_D = (rca) null;
         }
-        ki.b(false, 3);
+        PlantModel.b(false, 3);
         ua.b(4, 2);
         PlantComponent.b(-104, 6);
         mda.b(7, (byte) -120);

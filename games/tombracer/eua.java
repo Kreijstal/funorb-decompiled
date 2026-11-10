@@ -259,7 +259,7 @@ final class eua extends jea {
           return this.field_Eb.a(param0, (byte) -105, param2);
         }
         if (null == this.field_Eb &&
-          this == kga.field_n &&
+          this == ItemModel.field_n &&
           var4 != 0) {
           f.b(param1 ^ 48);
           return true;

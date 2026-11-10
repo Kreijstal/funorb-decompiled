@@ -273,8 +273,8 @@ final class qna {
               }
             }
           }
-          hg.field_f = FacePointLocomotor.field_r.field_i * (mha.field_C + pqa.field_p << 1);
-          am.field_o = ega.field_c - (var3_intLifetime1 >> 1);
+          hg.field_f = FacePointLocomotor.field_r.field_i * (mha.field_C + GasVentModel.field_p << 1);
+          FurnitureModel.field_o = ega.field_c - (var3_intLifetime1 >> 1);
           tia.field_a = var3_intLifetime1 + (ega.field_c - (var3_intLifetime1 >> 1));
           for (var4Lifetime2 = 0; var4Lifetime2 < mba.field_g.length; var4Lifetime2++) {
             stackIn_110_0 = hg.field_f;
@@ -302,8 +302,8 @@ final class qna {
               TripBeamComponent.field_K[var4Lifetime3][0] = -InvisibleTouchSwitchComponent.field_L + var8Lifetime1;
               TripBeamComponent.field_K[var4Lifetime3][1] = var5Lifetime3;
               TripBeamComponent.field_K[var4Lifetime3][2] = (InvisibleTouchSwitchComponent.field_L << 1) + var7Lifetime2;
-              var5Lifetime3 = var5Lifetime3 + (nt.field_d + ((pqa.field_p << 1) + mha.field_C));
-              TripBeamComponent.field_K[var4Lifetime3][3] = nt.field_d + (pqa.field_p << 1);
+              var5Lifetime3 = var5Lifetime3 + (nt.field_d + ((GasVentModel.field_p << 1) + mha.field_C));
+              TripBeamComponent.field_K[var4Lifetime3][3] = nt.field_d + (GasVentModel.field_p << 1);
             } else {
               var5Lifetime3 = var5Lifetime3 + f.field_b;
             }

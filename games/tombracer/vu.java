@@ -135,7 +135,7 @@ final class vu extends vw {
                 stackIn_35_1 = rf.field_b;
               }
               stackIn_34_0.field_r = ((String) (Object) stackIn_35_1).toUpperCase();
-              stackIn_37_0 = fu.field_t;
+              stackIn_37_0 = HazardModel.field_t;
               stackIn_37_1 = 114;
               if (var8 != 0) {
                 stackIn_38_2 = cn.field_c;
@@ -146,7 +146,7 @@ final class vu extends vw {
               dl.field_t.field_r = vf.field_h;
               bc.field_b.field_X = true;
               TouchSwitchBehaviour.field_s = true;
-              if (null != ce.field_A) {
+              if (null != PlatformModel.field_A) {
                 TouchSwitchBehaviour.field_s = false;
                 if (null == tba.field_m) {
                   tba.field_m = new byte[fk.field_b];
@@ -193,7 +193,7 @@ final class vu extends vw {
               }
             } else {
               bc.field_b.field_X = false;
-              fu.field_t.field_r = hv.field_n;
+              HazardModel.field_t.field_r = hv.field_n;
               if (var8 != 0) {
                 stackIn_23_0 = to.field_l;
               } else {

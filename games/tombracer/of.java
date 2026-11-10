@@ -37,7 +37,7 @@ class of {
           }
           return null;
         }
-        if (fr.field_c < bda.field_m + gaa.field_p) {
+        if (fr.field_c < bda.field_m + LightSourceModel.field_p) {
           return MazeComponent.field_F;
         }
         if (param0 != 1) {

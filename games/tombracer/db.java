@@ -27,10 +27,10 @@ final class db extends IntrusiveNode implements Renderable, ffa, WorldBody, noa,
 
     private final void t(int param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
-        dg var4 = (dg) (this.field_k.first(-80));
+        TrapModel var4 = (TrapModel) (this.field_k.first(-80));
         while (var4 != null) {
           var4.i((byte) -30);
-          var4 = (dg) (this.field_k.next(param0 ^ 112));
+          var4 = (TrapModel) (this.field_k.next(param0 ^ 112));
         }
         if (param0 != 0) {
           this.field_o = (bca) null;
@@ -72,7 +72,7 @@ final class db extends IntrusiveNode implements Renderable, ffa, WorldBody, noa,
 
     final void a(uw param0, byte param1) {
         int var3_int = 0;
-        dg var4 = null;
+        TrapModel var4 = null;
         int var5 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -85,10 +85,10 @@ final class db extends IntrusiveNode implements Renderable, ffa, WorldBody, noa,
           if (this.r(24269)) {
             param0.a(9, (Renderable) (this), (byte) -33);
           }
-          var4 = (dg) (this.field_k.first(-80));
+          var4 = (TrapModel) (this.field_k.first(-80));
           while (var4 != null) {
             var4.a(param0, 111);
-            var4 = (dg) (this.field_k.next(124));
+            var4 = (TrapModel) (this.field_k.next(124));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -174,11 +174,11 @@ final class db extends IntrusiveNode implements Renderable, ffa, WorldBody, noa,
     }
 
     public final boolean l(int param0) {
-        dg var3;
+        TrapModel var3;
         boolean stackIn_6_0 = false;
         if (param0 != 0) {
-          var3 = (dg) null;
-          this.a((dg) null, false);
+          var3 = (TrapModel) null;
+          this.a((TrapModel) null, false);
         }
         stackIn_6_0 = (this.field_m.o((byte) -82)) && (!this.b(this.field_m.i(param0 ^ 6029), 1569));
         return stackIn_6_0;
@@ -186,7 +186,7 @@ final class db extends IntrusiveNode implements Renderable, ffa, WorldBody, noa,
 
     final void a(int param0, Room param1) {
         int var4 = 0;
-        dg var5 = null;
+        TrapModel var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -200,10 +200,10 @@ final class db extends IntrusiveNode implements Renderable, ffa, WorldBody, noa,
           }
           this.field_p = param1.getWidth((byte) -86) / 2 - (this.field_p - param1.getWidth((byte) -86) / 2);
           param1.field_u.b((ffa) (this), 7073);
-          var5 = (dg) (this.field_k.first(-80));
+          var5 = (TrapModel) (this.field_k.first(-80));
           while (var5 != null) {
             var5.h(61);
-            var5 = (dg) (this.field_k.next(108));
+            var5 = (TrapModel) (this.field_k.next(108));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -375,10 +375,10 @@ final class db extends IntrusiveNode implements Renderable, ffa, WorldBody, noa,
 
     final void c(boolean param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
-        dg var4 = (dg) (this.field_k.first(-80));
+        TrapModel var4 = (TrapModel) (this.field_k.first(-80));
         while (var4 != null) {
           var4.e(-41);
-          var4 = (dg) (this.field_k.next(118));
+          var4 = (TrapModel) (this.field_k.next(118));
         }
         if (!param0) {
           this.field_i = false;
@@ -386,7 +386,7 @@ final class db extends IntrusiveNode implements Renderable, ffa, WorldBody, noa,
     }
 
     final void a(boolean param0, BitPacketBuffer param1) {
-        dg var5 = null;
+        TrapModel var5 = null;
         int var4 = TombRacer.field_G ? 1 : 0;
         try {
           param1.writeBits((byte) -1, this.field_p / 1048576, 7);
@@ -398,10 +398,10 @@ final class db extends IntrusiveNode implements Renderable, ffa, WorldBody, noa,
           }
           if (this.field_m.formatVersion >= 9) {
             param1.writeBits((byte) -36, this.field_k.size((byte) -16), 2);
-            var5 = (dg) (this.field_k.first(-80));
+            var5 = (TrapModel) (this.field_k.first(-80));
             while (var5 != null) {
               rm.field_a.a(15682, param1, var5);
-              var5 = (dg) (this.field_k.next(127));
+              var5 = (TrapModel) (this.field_k.next(127));
             }
           }
           this.field_o.a((byte) -79, param1);
@@ -563,13 +563,13 @@ final class db extends IntrusiveNode implements Renderable, ffa, WorldBody, noa,
 
     final void s(int param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
-        dg var2 = (dg) (this.field_k.first(-80));
+        TrapModel var2 = (TrapModel) (this.field_k.first(-80));
         if (param0 != 0) {
           this.field_p = 88;
         }
         while (var2 != null) {
           var2.d(-1);
-          var2 = (dg) (this.field_k.next(124));
+          var2 = (TrapModel) (this.field_k.next(124));
         }
     }
 
@@ -583,7 +583,7 @@ final class db extends IntrusiveNode implements Renderable, ffa, WorldBody, noa,
 
     final void a(byte param0, uw param1) {
         int var4 = 0;
-        dg var5 = null;
+        TrapModel var5 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -597,10 +597,10 @@ final class db extends IntrusiveNode implements Renderable, ffa, WorldBody, noa,
           if (param0 <= 6) {
             return;
           }
-          var5 = (dg) (this.field_k.first(-80));
+          var5 = (TrapModel) (this.field_k.first(-80));
           while (var5 != null) {
             var5.b(0, param1);
-            var5 = (dg) (this.field_k.next(112));
+            var5 = (TrapModel) (this.field_k.next(112));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -619,8 +619,8 @@ final class db extends IntrusiveNode implements Renderable, ffa, WorldBody, noa,
 
     public final boolean a(byte param0, boolean param1) {
         if (param0 != -55) {
-          dg var4 = (dg) null;
-          this.a((dg) null, true);
+          TrapModel var4 = (TrapModel) null;
+          this.a((TrapModel) null, true);
         }
         return false;
     }
@@ -669,7 +669,7 @@ final class db extends IntrusiveNode implements Renderable, ffa, WorldBody, noa,
         this.t(param0);
     }
 
-    private final void a(dg param0, boolean param1) {
+    private final void a(TrapModel param0, boolean param1) {
         if (param0 == null) {
           return;
         }
@@ -716,7 +716,7 @@ final class db extends IntrusiveNode implements Renderable, ffa, WorldBody, noa,
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        dg var5 = null;
+        TrapModel var5 = null;
         this.field_k = new IntrusiveDeque();
         this.field_o = new bca();
         this.field_i = false;
@@ -736,7 +736,7 @@ final class db extends IntrusiveNode implements Renderable, ffa, WorldBody, noa,
           if (8 < param0.formatVersion) {
             var3_int = param1.readBits((byte) 44, 2);
             for (var4 = 0; var4 < var3_int; var4++) {
-              var5 = rm.field_a.a(param0, param1, false);
+              var5 = rm.field_a.readModel(param0, param1, false);
               this.a(var5, true);
             }
           } else {

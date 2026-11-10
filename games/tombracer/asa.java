@@ -649,9 +649,9 @@ final class asa extends gda {
           return;
         }
         try {
-          kga.field_n = param1;
+          ItemModel.field_n = param1;
           rua.field_gb.field_J.clear(8);
-          rua.field_gb.b(-125, kga.field_n);
+          rua.field_gb.b(-125, ItemModel.field_n);
           if (param0 >= -20) {
             field_j = (IntrusiveDeque) null;
           }

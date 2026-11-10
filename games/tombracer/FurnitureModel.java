@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class am extends dg {
+final class FurnitureModel extends TrapModel {
     private int field_m;
     private bua field_p;
     static int field_n;
@@ -159,11 +159,11 @@ final class am extends dg {
         }
     }
 
-    am(int param0, Room param1, BitPacketBuffer param2) {
+    FurnitureModel(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
     }
 
-    am(int param0) {
+    FurnitureModel(int param0) {
         super(param0);
     }
 

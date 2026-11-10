@@ -135,7 +135,7 @@ final class rk extends ae {
             wp.a(-1);
             param1 = false;
           }
-          fu.a(-83, param3, param1);
+          HazardModel.a(-83, param3, param1);
           kma.a(param1, 104, param4);
           param1 = false;
         }

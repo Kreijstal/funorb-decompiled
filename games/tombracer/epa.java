@@ -60,7 +60,7 @@ final class epa extends wv {
             var3_int = 1;
             if (param0 == 8) {
               if (!jf.field_r) {
-                param2 = ria.field_n;
+                param2 = TestModel.field_n;
               } else {
                 param2 = nda.field_d;
               }
@@ -98,9 +98,9 @@ final class epa extends wv {
     final static en d(byte param0) {
         if (param0 != -91) {
           epa.releaseStatics(15);
-          return kva.field_n;
+          return PitModel.field_n;
         }
-        return kva.field_n;
+        return PitModel.field_n;
     }
 
     final int a(int param0, byte param1) {

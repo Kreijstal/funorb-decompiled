@@ -79,7 +79,7 @@ final class iea {
             ae.field_g != 1) {
             jja.field_j.field_X = false;
             jja.field_j.field_vb.field_vb.field_r = nl.field_c;
-            vsa.a(-93, jja.field_j.field_tb);
+            BridgeModel.a(-93, jja.field_j.field_tb);
             return;
           }
           jja.field_j.field_X = true;

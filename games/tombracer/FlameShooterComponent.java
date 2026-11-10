@@ -130,8 +130,8 @@ final class FlameShooterComponent extends ShooterComponent {
         RuntimeException var4 = null;
         WeaponShooterBehaviour var5 = null;
         Weapon var6 = null;
-        mfa var7 = null;
-        boa var8 = null;
+        ModelCodec var7 = null;
+        BlockModel var8 = null;
         Trap var9 = null;
         Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -150,7 +150,7 @@ final class FlameShooterComponent extends ShooterComponent {
           this.a((byte) 43, var5, param2);
           var9.addBehaviour((byte) 83, (Behaviour) (var5));
           var7 = rm.field_a;
-          var8 = (boa) (var7.a(7, 100));
+          var8 = (BlockModel) (var7.createModel(7, 100));
           var8.b(param1 + 111, 11);
           var9.a(var5, (byte) 124, var8);
           this.a(var9, 0, var5, 16777130);

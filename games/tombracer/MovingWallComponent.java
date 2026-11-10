@@ -9,8 +9,8 @@ final class MovingWallComponent extends PathMoverComponent {
         RuntimeException var4 = null;
         SimpleBlockBehaviour var5 = null;
         PathMoveLocomotor var6 = null;
-        mfa var7 = null;
-        lma var8 = null;
+        ModelCodec var7 = null;
+        WallModel var8 = null;
         Trap var9 = null;
         Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -30,7 +30,7 @@ final class MovingWallComponent extends PathMoverComponent {
           var6 = this.createPathMove((byte) 124, param2, param0);
           var9.addLocomotor(var6, param1 ^ 3);
           var7 = rm.field_a;
-          var8 = (lma) (var7.a(15, 111));
+          var8 = (WallModel) (var7.createModel(15, 111));
           var9.a((TrapPart) null, (byte) 124, var8);
           stackIn_1_0 = var9;
           return stackIn_1_0;

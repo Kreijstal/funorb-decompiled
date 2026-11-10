@@ -37,7 +37,7 @@ final class dw {
           et.a(true);
           gda.field_c = 11;
         } else {
-          if (!dg.b(-1)) {
+          if (!TrapModel.b(-1)) {
             et.a(true);
             gda.field_c = 11;
           }

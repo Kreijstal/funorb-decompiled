@@ -313,13 +313,13 @@ final class fp {
               var9 = stackIn_45_0;
               var1_int = var1_int + mha.field_C;
               if (var9 != null) {
-                var9.a((byte) 57, var7Lifetime1 + (InvisibleTouchSwitchComponent.field_L << 1), var1_int, -InvisibleTouchSwitchComponent.field_L + var8Lifetime1, nt.field_d + (pqa.field_p << 1));
+                var9.a((byte) 57, var7Lifetime1 + (InvisibleTouchSwitchComponent.field_L << 1), var1_int, -InvisibleTouchSwitchComponent.field_L + var8Lifetime1, nt.field_d + (GasVentModel.field_p << 1));
               }
-              var1_int = var1_int + pqa.field_p;
+              var1_int = var1_int + GasVentModel.field_p;
             }
             if (var4 >= 0) {
               qt.field_a.c(var6, var8Lifetime1, qra.field_j + var1_int, var5, -1);
-              var1_int = var1_int + (nt.field_d + pqa.field_p + mha.field_C);
+              var1_int = var1_int + (nt.field_d + GasVentModel.field_p + mha.field_C);
             } else {
               bfa.field_c.c(var6, var8Lifetime1, var1_int + vi.field_a, var5, -1);
               var1_int = var1_int + f.field_b;

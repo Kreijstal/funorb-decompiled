@@ -483,7 +483,7 @@ final class pfa {
                 }
                 var2 = mt.a("keycode_player1pull", (byte) 122);
                 if (var2 != null) {
-                  ki.field_o = var2[0] & 255;
+                  PlantModel.field_o = var2[0] & 255;
                 }
                 var2 = mt.a("keycode_player1skiproom", (byte) 114);
                 if (null != var2) {
@@ -783,7 +783,7 @@ final class pfa {
                 }
                 var2 = mt.a("instructionTitleWanderingWalls", (byte) 103);
                 if (var2 != null) {
-                  kva.field_r = jaa.a((byte) 106, var2);
+                  PitModel.field_r = jaa.a((byte) 106, var2);
                 }
                 var2 = mt.a("instructionTextWanderingWalls", (byte) 117);
                 if (var2 != null) {
@@ -831,7 +831,7 @@ final class pfa {
                 }
                 var2 = mt.a("instructionsPage1Text2", (byte) 125);
                 if (var2 != null) {
-                  ioa.field_o = jaa.a((byte) 93, var2);
+                  LegacySwitchModel.field_o = jaa.a((byte) 93, var2);
                 }
             }
             void runChunk1() throws java.lang.RuntimeException {
@@ -1077,7 +1077,7 @@ final class pfa {
                 }
                 var2 = mt.a("item_coins", (byte) 107);
                 if (null != var2) {
-                  lfa.field_m = jaa.a((byte) 91, var2);
+                  DoorwayModel.field_m = jaa.a((byte) 91, var2);
                 }
                 var2 = mt.a("item_bags", (byte) 121);
                 if (var2 != null) {
@@ -1121,7 +1121,7 @@ final class pfa {
                 }
                 var2 = mt.a("weapon_bladelauncher", (byte) 116);
                 if (null != var2) {
-                  aka.field_A = jaa.a((byte) 47, var2);
+                  MonsterModel.field_A = jaa.a((byte) 47, var2);
                 }
                 var2 = mt.a("weapon_fireball", (byte) 112);
                 if (var2 != null) {
@@ -1129,7 +1129,7 @@ final class pfa {
                 }
                 var2 = mt.a("weapon_bouncingfireball", (byte) 124);
                 if (var2 != null) {
-                  kga.field_q = jaa.a((byte) 106, var2);
+                  ItemModel.field_q = jaa.a((byte) 106, var2);
                 }
                 var2 = mt.a("weapon_freezer", (byte) 114);
                 if (null != var2) {

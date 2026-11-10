@@ -10,8 +10,8 @@ final class CoinBagItemComponent extends ItemComponent {
         Trap var4 = null;
         RuntimeException var4_ref = null;
         MiscItemBehaviour var5 = null;
-        mfa var6 = null;
-        kga var7 = null;
+        ModelCodec var6 = null;
+        ItemModel var7 = null;
         Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -23,7 +23,7 @@ final class CoinBagItemComponent extends ItemComponent {
           var5.setItemType(2, false);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
-          var7 = (kga) (var6.a(12, 125));
+          var7 = (ItemModel) (var6.createModel(12, 125));
           var7.b((byte) 123, 1);
           var4.a(var5, (byte) 124, var7);
           stackIn_1_0 = var4;
@@ -155,13 +155,13 @@ final class CoinBagItemComponent extends ItemComponent {
                 pk.field_z.field_r = pk.field_z.field_r + "<br>" + var10_ref_String;
               }
               hw.field_a.a(dka.field_b.field_G - var9, 40, -23776, dka.field_b.field_t - 40, var9);
-              hw.field_a.field_r = ki.field_p.toUpperCase();
+              hw.field_a.field_r = PlantModel.field_p.toUpperCase();
               var8 = hw.field_a;
               stackIn_20_0 = hw.field_a;
               stackIn_21_1 = (param3) && (uq.field_d == 0L);
               stackIn_20_0.field_X = stackIn_21_1;
               var10 = 2;
-              if (null != ce.field_A) {
+              if (null != PlatformModel.field_A) {
                 if (tba.field_m == null) {
                   tba.field_m = new byte[fk.field_b];
                   sda.field_f = new boolean[fk.field_b];
@@ -184,10 +184,10 @@ final class CoinBagItemComponent extends ItemComponent {
                     }
                     var12 = stackIn_66_0;
                     while (true) {
-                      stackIn_36_0 = ce.field_A.length;
+                      stackIn_36_0 = PlatformModel.field_A.length;
                       stackIn_36_1 = var12;
                       if (stackIn_36_0 > stackIn_36_1) {
-                        var25 = ce.field_A[var12];
+                        var25 = PlatformModel.field_A[var12];
                         var23 = var25;
                         var20 = var23;
                         var13_ref_int__ = var20;

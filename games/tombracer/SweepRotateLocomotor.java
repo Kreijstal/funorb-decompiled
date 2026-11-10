@@ -21,7 +21,7 @@ final class SweepRotateLocomotor extends Locomotor {
               opa.a(ma.field_g, param0, ola.field_Eb + param0, param0 + param0, (byte) -100, kc.field_a, false);
               break;
             }
-            boa.field_n[var2_int + param0] = var2_int;
+            BlockModel.field_n[var2_int + param0] = var2_int;
             var2_int++;
           } while (var3 == 0);
           if (param0 < ola.field_Eb) {
@@ -268,7 +268,7 @@ final class SweepRotateLocomotor extends Locomotor {
         RuntimeException decompiledCaughtException = null;
         try {
           this.field_r = CoinItemComponent.a(true, 12, param1.readBits((byte) 44, 12));
-          this.field_p = oo.a(8, 8192, 0, param1.readBits((byte) 44, 8));
+          this.field_p = SnakePitModel.a(8, 8192, 0, param1.readBits((byte) 44, 8));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

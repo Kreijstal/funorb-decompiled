@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oo extends dg {
+final class SnakePitModel extends TrapModel {
     private SnakePitBehaviour field_p;
     private int field_q;
     private int field_o;
@@ -245,7 +245,7 @@ final class oo extends dg {
         return param1 / (1 << param0) * param3;
     }
 
-    oo(int param0) {
+    SnakePitModel(int param0) {
         super(param0);
         this.field_u = 20;
     }
@@ -379,7 +379,7 @@ final class oo extends dg {
           v.field_i.a(var6_int - 6, -6 + era.field_e.field_t, -23776, 3, 3);
           var7 = -5 + v.field_i.field_t;
           if (param1 != -104) {
-            oo.a(-101, -90, 0, -88);
+            SnakePitModel.a(-101, -90, 0, -88);
           }
           RotaterMountComponent.field_K.a(2 + (485 + param2 + param3), param5, param1 - 23672, var7 - param5, 5);
           pq.field_g.a(-param2 + RotaterMountComponent.field_K.field_G - mka.field_b.field_G, param5, -23776, 0, param2);
@@ -405,7 +405,7 @@ final class oo extends dg {
                 wba.field_p[var12].a(var8, var7Lifetime1, -23776, var13, var6_int);
                 bt.field_c[var12].a(var9 - param2, var7Lifetime1, -23776, 0, param2);
                 oka.field_y[var12].a(param0, -param4 + (var7Lifetime1 - param4), -23776, param4, var9);
-                kva.field_p[var12].a(-var10 + (var8 - param2), -param4 + (var7Lifetime1 - param4), -23776, param4, var10);
+                PitModel.field_p[var12].a(-var10 + (var8 - param2), -param4 + (var7Lifetime1 - param4), -23776, param4, var10);
               }
             }
           }
@@ -417,7 +417,7 @@ final class oo extends dg {
         }
     }
 
-    oo(int param0, Room param1, BitPacketBuffer param2) {
+    SnakePitModel(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
         this.field_u = 20;
     }

@@ -135,7 +135,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (Corpse.field_j == this &&
             !tla.field_b) {
-            boa.field_t = bva.b((byte) -107) + 4000L;
+            BlockModel.field_t = bva.b((byte) -107) + 4000L;
             return;
           }
           return;
@@ -239,7 +239,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (this == Corpse.field_j &&
             !tla.field_b) {
-            boa.field_t = bva.b((byte) -107);
+            BlockModel.field_t = bva.b((byte) -107);
             TrapSpawner.a(0, 5000L);
             nea.field_c = null;
             this.shutdown((byte) 109, false);
@@ -398,7 +398,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (Corpse.field_j == this &&
             !tla.field_b) {
-            boa.field_t = 0L;
+            BlockModel.field_t = 0L;
             return;
           }
           return;
@@ -531,8 +531,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 cq.field_a = bca.a(0);
                 do {
                   boolean decompiledFrameRemainder0 = true;
-                  if (boa.field_t != 0L) {
-                    stackIn_99_0 = $cfr$lcmp(~boa.field_t, ~bva.b((byte) -107));
+                  if (BlockModel.field_t != 0L) {
+                    stackIn_99_0 = $cfr$lcmp(~BlockModel.field_t, ~bva.b((byte) -107));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_99_0 >= 0)) {

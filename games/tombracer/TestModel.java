@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ria extends dg {
+final class TestModel extends TrapModel {
     static fta field_o;
     static volatile int field_m;
     static String field_r;
@@ -32,7 +32,7 @@ final class ria extends dg {
         super.h(89);
     }
 
-    ria(int param0, Room param1, BitPacketBuffer param2) {
+    TestModel(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
     }
 
@@ -67,7 +67,7 @@ final class ria extends dg {
         }
     }
 
-    ria(int param0) {
+    TestModel(int param0) {
         super(param0);
     }
 
@@ -76,7 +76,7 @@ final class ria extends dg {
         field_n = null;
         field_p = null;
         if (param0 != -30362) {
-          ria.releaseStatics(28);
+          TestModel.releaseStatics(28);
           field_r = null;
           return;
         }

@@ -117,7 +117,7 @@ final class fta {
         if (param0 != 0) {
           String var3 = (String) null;
           fta.a((String) null, (String) null, -76, (String) null);
-          if (ria.field_o == this) {
+          if (TestModel.field_o == this) {
             return true;
           }
           if (eo.field_w != this) {
@@ -125,7 +125,7 @@ final class fta {
           }
           return true;
         }
-        if (ria.field_o == this) {
+        if (TestModel.field_o == this) {
           return true;
         }
         if (eo.field_w == this) {

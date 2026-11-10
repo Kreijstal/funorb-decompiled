@@ -124,8 +124,8 @@ final class PlatformMazeComponent extends MazeComponent {
         Trap var4 = null;
         RuntimeException var4_ref = null;
         PlatformBehaviour var5 = null;
-        mfa var6 = null;
-        ce var7 = null;
+        ModelCodec var6 = null;
+        PlatformModel var7 = null;
         Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -138,7 +138,7 @@ final class PlatformMazeComponent extends MazeComponent {
           var5.b(-5, this.field_K);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
-          var7 = (ce) (var6.a(17, 102));
+          var7 = (PlatformModel) (var6.createModel(17, 102));
           var7.b(0, (byte) 23);
           var4.a(var5, (byte) 124, var7);
           stackIn_1_0 = var4;

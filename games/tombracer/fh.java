@@ -17,7 +17,7 @@ final class fh implements Renderable {
     int field_l;
     private boolean field_k;
     int field_o;
-    lma field_g;
+    WallModel field_g;
     private boolean field_q;
 
     final static void b(int param0, int param1) {

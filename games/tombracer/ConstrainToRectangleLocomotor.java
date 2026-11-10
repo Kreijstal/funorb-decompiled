@@ -217,7 +217,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
             ip.field_b = false;
           }
           if (era.field_c) {
-            cv.o((byte) -119);
+            SwitchModel.o((byte) -119);
             ig.a(-125);
             ub.b(0);
             era.field_c = false;

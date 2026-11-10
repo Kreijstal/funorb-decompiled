@@ -285,7 +285,7 @@ final class fna {
             var20_ref_kea = baa.field_e;
           } else {
             if (37 != this.field_g) {
-              var20_ref_kea = kva.field_s;
+              var20_ref_kea = PitModel.field_s;
             } else {
               var20_ref_kea = tia.field_d;
             }

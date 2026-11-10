@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fu extends dg {
+final class HazardModel extends TrapModel {
     private fla field_r;
     private fla field_v;
     private int field_s;
@@ -24,7 +24,7 @@ final class fu extends dg {
         }
     }
 
-    fu(int param0, Room param1, BitPacketBuffer param2) {
+    HazardModel(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
         this.field_v = null;
         this.field_n = true;
@@ -57,7 +57,7 @@ final class fu extends dg {
         }
     }
 
-    fu(int param0) {
+    HazardModel(int param0) {
         super(param0);
         this.field_v = null;
         this.field_n = true;
@@ -139,7 +139,7 @@ final class fu extends dg {
             }
           }
           if (param0 > -37) {
-            fu.n((byte) 14);
+            HazardModel.n((byte) 14);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

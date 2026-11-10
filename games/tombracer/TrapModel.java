@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class dg extends IntrusiveNode implements Renderable, noa {
+abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
     private int field_l;
     TrapPart field_k;
     private int field_i;
@@ -675,7 +675,7 @@ abstract class dg extends IntrusiveNode implements Renderable, noa {
         int var3 = -51 % ((param0 - 7) / 36);
     }
 
-    dg(int param0, Room param1, BitPacketBuffer param2) {
+    TrapModel(int param0, Room param1, BitPacketBuffer param2) {
         this(param0);
         try {
           this.a(125, param1, param2);
@@ -856,7 +856,7 @@ abstract class dg extends IntrusiveNode implements Renderable, noa {
         }
     }
 
-    dg(int param0) {
+    TrapModel(int param0) {
         this.field_j = false;
         this.field_i = -1;
         this.field_l = param0;

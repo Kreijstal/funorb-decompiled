@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ioa extends dg {
+final class LegacySwitchModel extends TrapModel {
     static dq field_n;
     static String field_m;
     private ut field_p;
@@ -81,11 +81,11 @@ final class ioa extends dg {
         }
     }
 
-    ioa(int param0, Room param1, BitPacketBuffer param2) {
+    LegacySwitchModel(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
     }
 
-    ioa(int param0) {
+    LegacySwitchModel(int param0) {
         super(param0);
     }
 

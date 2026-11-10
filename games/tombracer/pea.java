@@ -47,7 +47,7 @@ final class pea {
           if (param1 != 1) {
             pea.a((byte) -106);
           }
-          kva.field_n.a(param0);
+          PitModel.field_n.a(param0);
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

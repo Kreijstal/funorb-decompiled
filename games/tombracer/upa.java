@@ -127,7 +127,7 @@ final class upa extends IntrusiveNode {
         if (param1 != 0) {
           return false;
         }
-        return hh.a(param2, (byte) 5, param0) & wu.a(-17, param0, param2);
+        return hh.a(param2, (byte) 5, param0) & ModelFactory.a(-17, param0, param2);
     }
 
     final static int a(boolean param0, int param1, byte param2) {

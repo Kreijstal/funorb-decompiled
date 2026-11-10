@@ -18,12 +18,12 @@ final class rs {
           fla var2 = (fla) null;
           rs.a((fla) null, -74);
           if (lca.a(false)) {
-            return wu.field_a.d(true);
+            return ModelFactory.field_a.d(true);
           }
           return -1;
         }
         if (lca.a(false)) {
-          return wu.field_a.d(true);
+          return ModelFactory.field_a.d(true);
         }
         return -1;
     }

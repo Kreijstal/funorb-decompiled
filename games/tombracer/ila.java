@@ -159,7 +159,7 @@ final class ila {
         if (this.field_c) {
           return;
         }
-        aka.j(28191);
+        MonsterModel.j(28191);
         int var2 = 4;
         int var3 = 16;
         av.a(koa.b(0) >> 1, 20, var2, -5327, "", var2, var3, var3, aaa.a(param0) >> 1);
@@ -239,10 +239,10 @@ final class ila {
               PathMoverComponent.field_L = vc.field_q.readLong(290646880);
               vc.field_q.position = 0;
               RoomCompletedScreen.a((byte) 121, param5, param3, fd.field_d, param0);
-              km.field_p = ria.field_o;
+              km.field_p = TestModel.field_o;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (km.field_p == ria.field_o &&
+            if (km.field_p == TestModel.field_o &&
               ama.a(1, param2 - 51)) {
               var6_intLifetime1 = vc.field_q.readUnsignedByte(param2 + 205);
               vc.field_q.position = 0;
@@ -307,7 +307,7 @@ final class ila {
               tia.field_b = jd.a(1, var11);
               lsa.field_a = vc.field_q.readUnsignedByte(255);
               km.field_p = uga.field_n;
-              if (fd.field_d.a((byte) 113) == boa.field_s) {
+              if (fd.field_d.a((byte) 113) == BlockModel.field_s) {
                 vw.field_a.a(di.a(120), param2 ^ 55);
               } else {
                 if (fd.field_d.a((byte) 113) == vm.field_f) {

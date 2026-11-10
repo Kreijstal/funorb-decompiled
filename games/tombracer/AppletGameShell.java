@@ -27,7 +27,7 @@ abstract class AppletGameShell extends GameApplet {
             ql.a(2, -28521);
           }
           if (hd.field_a[2]) {
-            ki.b(false, 3);
+            PlantModel.b(false, 3);
           }
           if (hd.field_a[3]) {
             ua.b(4, 2);

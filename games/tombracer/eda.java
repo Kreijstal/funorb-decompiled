@@ -36,7 +36,7 @@ final class eda {
           return;
         }
         if (param0 == 4) {
-          var3Lifetime2 = kva.field_s;
+          var3Lifetime2 = PitModel.field_s;
           var2Lifetime2 = WeaponShooterBehaviour.field_r;
           BitPacketBuffer.a(param1, var2Lifetime2, var3Lifetime2);
           return;
@@ -48,7 +48,7 @@ final class eda {
           return;
         }
         if (param0 != 3) {
-          var3Lifetime4 = kva.field_s;
+          var3Lifetime4 = PitModel.field_s;
           var2Lifetime4 = vk.field_d;
           BitPacketBuffer.a(param1, var2Lifetime4, var3Lifetime4);
           return;

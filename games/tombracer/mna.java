@@ -48,7 +48,7 @@ abstract class mna {
             var15.field_l = null;
           } else {
             if (var15.field_l != null &&
-              !ce.field_B) {
+              !PlatformModel.field_B) {
               var5++;
             } else {
               if (var15.field_l == null) {
@@ -82,14 +82,14 @@ abstract class mna {
         var8Lifetime2 = ne.field_d.field_tb.field_t + (ne.field_d.field_tb.field_O + (-var7Lifetime1 + var6));
         ne.field_d.field_tb.field_t = ne.field_d.field_tb.field_t - var8Lifetime2;
         ne.field_d.field_tb.field_T = ne.field_d.field_tb.field_T + var8Lifetime2;
-        if (ce.field_B) {
+        if (PlatformModel.field_B) {
           ne.field_d.field_tb.field_t = var7Lifetime1;
         }
-        if (ce.field_B) {
+        if (PlatformModel.field_B) {
           voa.field_v = true;
           ne.field_d.field_tb.field_T = -ne.field_d.field_tb.field_t + ne.field_d.field_vb.field_t;
           ne.field_d.field_tb.field_K = 0;
-          ce.field_B = false;
+          PlatformModel.field_B = false;
         }
         ne.field_d.field_tb.field_O = var7Lifetime1 - ne.field_d.field_tb.field_t;
         if (ni.field_c &&

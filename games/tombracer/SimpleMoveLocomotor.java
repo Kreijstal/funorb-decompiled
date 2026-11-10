@@ -455,11 +455,11 @@ final class SimpleMoveLocomotor extends Locomotor {
           }
           this.field_r = param1.readBits((byte) 44, 10) << 16;
           if (param0.formatVersion >= 10) {
-            this.field_p = oo.a(4, 8192, 0, param1.readBits((byte) 44, 4));
+            this.field_p = SnakePitModel.a(4, 8192, 0, param1.readBits((byte) 44, 4));
             stackIn_9_1 = (1 == param1.readBits((byte) 44, 1));
             this.field_q = stackIn_9_1;
           } else {
-            this.field_p = oo.a(3, 8192, 0, param1.readBits((byte) 44, 3));
+            this.field_p = SnakePitModel.a(3, 8192, 0, param1.readBits((byte) 44, 3));
             this.field_q = false;
           }
           return;

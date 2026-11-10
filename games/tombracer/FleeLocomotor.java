@@ -219,7 +219,7 @@ final class FleeLocomotor extends Locomotor {
             this.field_A = this.a(param1.readBits((byte) 44, 8), false);
             stackIn_6_1 = (param1.readBits((byte) 44, 1) == 1);
             this.field_r = stackIn_6_1;
-            this.field_u = oo.a(8, 8192, 0, param1.readBits((byte) 44, 8));
+            this.field_u = SnakePitModel.a(8, 8192, 0, param1.readBits((byte) 44, 8));
             stackIn_9_1 = (param1.readBits((byte) 44, 1) == 1);
             this.field_w = stackIn_9_1;
           } else {

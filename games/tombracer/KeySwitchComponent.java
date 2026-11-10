@@ -52,8 +52,8 @@ final class KeySwitchComponent extends SwitchComponent {
         RuntimeException var4 = null;
         KeyLockBehaviour var5 = null;
         jma var6 = null;
-        mfa var7 = null;
-        cv var8 = null;
+        ModelCodec var7 = null;
+        SwitchModel var8 = null;
         Trap var9 = null;
         Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -72,7 +72,7 @@ final class KeySwitchComponent extends SwitchComponent {
           var6.b(1, 106);
           var9.addBehaviour((byte) 83, (Behaviour) (var5));
           var7 = rm.field_a;
-          var8 = (cv) (var7.a(9, param1 + 103));
+          var8 = (SwitchModel) (var7.createModel(9, param1 + 103));
           var8.b(3, (byte) -112);
           var9.a(var5, (byte) 124, var8);
           stackIn_1_0 = var9;
@@ -206,13 +206,13 @@ final class KeySwitchComponent extends SwitchComponent {
             return true;
           }
           if (fna.field_h == 102) {
-            kga.field_n.a(true);
+            ItemModel.field_n.a(true);
             return true;
           }
-          if (null == kga.field_n) {
+          if (null == ItemModel.field_n) {
             return false;
           }
-          if (kga.field_n.a(param2, (byte) -105, param1)) {
+          if (ItemModel.field_n.a(param2, (byte) -105, param1)) {
             return true;
           }
           return false;
@@ -222,13 +222,13 @@ final class KeySwitchComponent extends SwitchComponent {
           return true;
         }
         if (fna.field_h == 102) {
-          kga.field_n.a(true);
+          ItemModel.field_n.a(true);
           return true;
         }
-        if (null == kga.field_n) {
+        if (null == ItemModel.field_n) {
           return false;
         }
-        if (kga.field_n.a(param2, (byte) -105, param1)) {
+        if (ItemModel.field_n.a(param2, (byte) -105, param1)) {
           return true;
         }
         return false;

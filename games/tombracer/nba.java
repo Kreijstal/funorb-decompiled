@@ -53,9 +53,9 @@ final class nba {
           WheeledMountComponent.field_P = AudioOutput.a(param0, param5, 0, param4);
           int var8_int = 22 % ((50 - param6) / 54);
           gg.field_b = AudioOutput.a(param0, param5, 1, param2);
-          kva.field_n = new en();
+          PitModel.field_n = new en();
           BeamShooterBehaviour.field_p = param2;
-          gg.field_b.b(kva.field_n);
+          gg.field_b.b(PitModel.field_n);
           tva.field_d = param1;
           tva.field_d.a((byte) 100, MatchState.field_w);
           WheeledMountComponent.field_P.b(tva.field_d);

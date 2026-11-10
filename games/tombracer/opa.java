@@ -83,7 +83,7 @@ final class opa extends qra {
             var9 = param0;
             var10 = param5;
             for (var11 = param1; param2 > var11; var11++) {
-              var12 = boa.field_n[var11];
+              var12 = BlockModel.field_n[var11];
               if (!param6) {
                 stackIn_22_0 = ic.field_c[var12];
               } else {
@@ -91,10 +91,10 @@ final class opa extends qra {
               }
               var13 = stackIn_22_0;
               if (var7_int < var13) {
-                boa.field_n[var11] = boa.field_n[var8];
+                BlockModel.field_n[var11] = BlockModel.field_n[var8];
                 incrementValue$0 = var8;
                 var8++;
-                boa.field_n[incrementValue$0] = var12;
+                BlockModel.field_n[incrementValue$0] = var12;
                 if (var13 < var9) {
                   var9 = var13;
                 }
@@ -110,11 +110,11 @@ final class opa extends qra {
           }
           for (var7_intLifetime1 = param2 - 1; var7_intLifetime1 > param1; var7_intLifetime1--) {
             for (var8Lifetime1 = param1; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
-              var9Lifetime1 = boa.field_n[var8Lifetime1];
-              var10Lifetime1 = boa.field_n[var8Lifetime1 + 1];
+              var9Lifetime1 = BlockModel.field_n[var8Lifetime1];
+              var10Lifetime1 = BlockModel.field_n[var8Lifetime1 + 1];
               if (cl.a(param6, (byte) 119, var10Lifetime1, var9Lifetime1)) {
-                boa.field_n[var8Lifetime1] = var10Lifetime1;
-                boa.field_n[var8Lifetime1 + 1] = var9Lifetime1;
+                BlockModel.field_n[var8Lifetime1] = var10Lifetime1;
+                BlockModel.field_n[var8Lifetime1 + 1] = var9Lifetime1;
               }
             }
           }
@@ -607,7 +607,7 @@ final class opa extends qra {
                 discarded$1 = var3.append("<col=33bbff>").append(var9).append("</col>");
               } else {
                 if (var6.kind != tr.field_f) {
-                  if (dc.field_o != var6.kind) {
+                  if (CrusherModel.field_o != var6.kind) {
                     if (var6.kind != PressureSwitchBehaviour.field_r) {
                       discarded$2 = var3.append(var9);
                     } else {

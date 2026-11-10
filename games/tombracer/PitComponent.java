@@ -149,8 +149,8 @@ final class PitComponent extends PrefabComponent {
 
     final Trap createTrap(boolean param0, int param1, Room param2) {
         PitBehaviour var5 = null;
-        mfa var6 = null;
-        kva var7 = null;
+        ModelCodec var6 = null;
+        PitModel var7 = null;
         int var8 = 0;
         Trap var9 = null;
         Trap stackIn_9_0 = null;
@@ -168,7 +168,7 @@ final class PitComponent extends PrefabComponent {
           }
           var9.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
-          var7 = (kva) (var6.a(10, 111));
+          var7 = (PitModel) (var6.createModel(10, 111));
           var8 = this.field_F;
           if (0 == var8) {
             var7.b(2097152, 0);

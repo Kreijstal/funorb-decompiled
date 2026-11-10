@@ -227,14 +227,14 @@ final class ifa extends ci {
               param1 <= 105) {
               var4 = args;
               ow.a((byte) -109, var4);
-              oo.field_t = pla.a(90, args);
+              SnakePitModel.field_t = pla.a(90, args);
             } else {
-              oo.field_t = doa.a(param2, param1, (byte) 114);
+              SnakePitModel.field_t = doa.a(param2, param1, (byte) 114);
             }
           } else {
             stackIn_4_0 = 97;
             stackIn_5_1 = !(wua.field_n >= 13);
-            oo.field_t = es.$cfr$intArgs$a$78544449ccb1(stackIn_4_0, stackIn_5_1);
+            SnakePitModel.field_t = es.$cfr$intArgs$a$78544449ccb1(stackIn_4_0, stackIn_5_1);
             var6 = (String[]) null;
             ow.a((byte) -101, (String[]) null);
           }

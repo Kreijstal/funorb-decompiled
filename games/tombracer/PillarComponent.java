@@ -6,8 +6,8 @@ final class PillarComponent extends PrefabComponent {
         Trap var4 = null;
         RuntimeException var4_ref = null;
         SimpleBlockBehaviour var5 = null;
-        mfa var6 = null;
-        am var7 = null;
+        ModelCodec var6 = null;
+        FurnitureModel var7 = null;
         Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -23,7 +23,7 @@ final class PillarComponent extends PrefabComponent {
           var4.a(1, (byte) -12, false);
           var4.h(3, param1 - 3);
           var6 = rm.field_a;
-          var7 = (am) (var6.a(4, 108));
+          var7 = (FurnitureModel) (var6.createModel(4, 108));
           var7.b(param1, (byte) 77);
           var4.a((TrapPart) null, (byte) 124, var7);
           stackIn_1_0 = var4;
@@ -74,11 +74,11 @@ final class PillarComponent extends PrefabComponent {
           return -1;
         }
         if (param0 == -7111) {
-          return wu.field_a.e(param0 ^ 7110);
+          return ModelFactory.field_a.e(param0 ^ 7110);
         }
         String var2 = (String) null;
         PillarComponent.a((String) null, 34, (cn) null, (String) null);
-        return wu.field_a.e(param0 ^ 7110);
+        return ModelFactory.field_a.e(param0 ^ 7110);
     }
 
     final boolean s(int param0) {

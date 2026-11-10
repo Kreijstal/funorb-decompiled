@@ -117,7 +117,7 @@ final class tn extends IntrusiveNode {
           return voa.field_s;
         }
         if (!tk.field_b.b(-97)) {
-          return cv.field_r;
+          return SwitchModel.field_r;
         }
         if (!tk.field_b.c("commonui", param0 ^ 10971)) {
           return q.field_o + " - " + tk.field_b.a("commonui", true) + "%";

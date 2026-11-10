@@ -619,7 +619,7 @@ abstract class wv extends dfa {
                 return true;
               }
               if (var7 == 38) {
-                Trap.a(0, kva.field_s);
+                Trap.a(0, PitModel.field_s);
                 return true;
               }
               if (var7 == 39 &&

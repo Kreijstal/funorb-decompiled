@@ -79,8 +79,8 @@ final class TrackingCrusherComponent extends PrefabComponent {
         RuntimeException var4 = null;
         ApproachPlayerLocomotor var5 = null;
         CrusherBehaviour var6 = null;
-        mfa var7 = null;
-        dc var8 = null;
+        ModelCodec var7 = null;
+        CrusherModel var8 = null;
         Trap var9 = null;
         Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -103,7 +103,7 @@ final class TrackingCrusherComponent extends PrefabComponent {
           var6.b((byte) 127, true);
           var9.addBehaviour((byte) 83, (Behaviour) (var6));
           var7 = rm.field_a;
-          var8 = (dc) (var7.a(11, param1 ^ 116));
+          var8 = (CrusherModel) (var7.createModel(11, param1 ^ 116));
           var9.a(var6, (byte) 124, var8);
           stackIn_1_0 = var9;
           return stackIn_1_0;

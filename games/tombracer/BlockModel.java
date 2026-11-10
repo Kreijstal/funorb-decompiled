@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class boa extends dg {
+final class BlockModel extends TrapModel {
     private int field_m;
     static pl field_s;
     static long field_t;
@@ -19,7 +19,7 @@ final class boa extends dg {
     final void a(int param0, Room param1, BitPacketBuffer param2) {
         try {
           if (param0 <= 119) {
-            boa.releaseStatics(false);
+            BlockModel.releaseStatics(false);
           }
           super.a(122, param1, param2);
           this.field_v = param2.readBits((byte) 44, 4);
@@ -145,7 +145,7 @@ final class boa extends dg {
         this.field_v = param1;
     }
 
-    boa(int param0, Room param1, BitPacketBuffer param2) {
+    BlockModel(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
         this.field_m = 1;
         this.field_p = 1;
@@ -365,7 +365,7 @@ final class boa extends dg {
         }
     }
 
-    boa(int param0) {
+    BlockModel(int param0) {
         super(param0);
         this.field_m = 1;
         this.field_p = 1;

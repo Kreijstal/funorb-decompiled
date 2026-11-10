@@ -65,7 +65,7 @@ final class ConsoleToken extends IntrusiveNode {
               var9 = stackIn_17_0;
               var2 = var2 + aqa.field_a;
               if (var9 != null) {
-                var9.a((byte) 57, (vra.field_a << 1) + var7, var2, var8 - vra.field_a, am.field_n + (vf.field_d << 1));
+                var9.a((byte) 57, (vra.field_a << 1) + var7, var2, var8 - vra.field_a, FurnitureModel.field_n + (vf.field_d << 1));
               }
               var2 = var2 + vf.field_d;
             }
@@ -74,7 +74,7 @@ final class ConsoleToken extends IntrusiveNode {
               var2 = var2 + uda.field_x;
             } else {
               bta.field_d.c(var6, var8, var2 + vo.field_f, var5, -1);
-              var2 = var2 + (aqa.field_a + vf.field_d + am.field_n);
+              var2 = var2 + (aqa.field_a + vf.field_d + FurnitureModel.field_n);
             }
           }
           return;
@@ -89,7 +89,7 @@ final class ConsoleToken extends IntrusiveNode {
         if (tr.field_f == this.kind) {
           return "Method{" + this.text + "}";
         }
-        if (this.kind == dc.field_o) {
+        if (this.kind == CrusherModel.field_o) {
           return "Number{" + this.text + "}";
         }
         if (PressureSwitchBehaviour.field_r == this.kind) {
@@ -183,7 +183,7 @@ final class ConsoleToken extends IntrusiveNode {
               stackIn_9_0 = pc.a(param1, 19, this.text, var8);
               return stackIn_9_0;
             }
-            if (dc.field_o == this.kind) {
+            if (CrusherModel.field_o == this.kind) {
               var3_int = Character.toLowerCase(this.text.charAt(this.text.length() - 1));
               if (var3_int == 102) {
                 stackIn_13_0 = new bfa(Float.valueOf(this.text).floatValue());

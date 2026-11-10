@@ -41,7 +41,7 @@ final class vh {
         }
         var3 = 0;
         while (var2 < 8) {
-          this.field_m[var2] = oo.a(oo.a(oo.a(oo.a(vi.a((long)this.field_e[4 + var3] << 24, 4278190080L), oo.a(vi.a(255L, (long)this.field_e[3 + var3]) << 32, oo.a(oo.a((long)this.field_e[var3] << 56, vi.a((long)this.field_e[1 + var3] << 48, 71776119061217280L)), vi.a(280375465082880L, (long)this.field_e[var3 + 2] << 40)))), vi.a((long)this.field_e[5 + var3], 255L) << 16), vi.a(255L, (long)this.field_e[6 + var3]) << 8), vi.a((long)this.field_e[7 + var3], 255L));
+          this.field_m[var2] = SnakePitModel.a(SnakePitModel.a(SnakePitModel.a(SnakePitModel.a(vi.a((long)this.field_e[4 + var3] << 24, 4278190080L), SnakePitModel.a(vi.a(255L, (long)this.field_e[3 + var3]) << 32, SnakePitModel.a(SnakePitModel.a((long)this.field_e[var3] << 56, vi.a((long)this.field_e[1 + var3] << 48, 71776119061217280L)), vi.a(280375465082880L, (long)this.field_e[var3 + 2] << 40)))), vi.a((long)this.field_e[5 + var3], 255L) << 16), vi.a(255L, (long)this.field_e[6 + var3]) << 8), vi.a((long)this.field_e[7 + var3], 255L));
           var2++;
           var3 += 8;
         }
@@ -49,7 +49,7 @@ final class vh {
           dupTemp$0 = this.field_l[var2Lifetime1];
           arrayValue$1 = this.field_m[var2Lifetime1];
           this.field_i[var2Lifetime1] = dupTemp$0;
-          this.field_f[var2Lifetime1] = oo.a(arrayValue$1, dupTemp$0);
+          this.field_f[var2Lifetime1] = SnakePitModel.a(arrayValue$1, dupTemp$0);
         }
         for (var2Lifetime2 = 1; var2Lifetime2 <= 10; var2Lifetime2++) {
           for (var3Lifetime1 = 0; 8 > var3Lifetime1; var3Lifetime1++) {
@@ -57,7 +57,7 @@ final class vh {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_j[var3Lifetime1] = oo.a(this.field_j[var3Lifetime1], PortalComponent.field_I[var4][SnakePitBehaviour.c(255, (int)(this.field_i[SnakePitBehaviour.c(-var4 + var3Lifetime1, 7)] >>> var5))]);
+              this.field_j[var3Lifetime1] = SnakePitModel.a(this.field_j[var3Lifetime1], PortalComponent.field_I[var4][SnakePitBehaviour.c(255, (int)(this.field_i[SnakePitBehaviour.c(-var4 + var3Lifetime1, 7)] >>> var5))]);
               var5 -= 8;
               var4++;
             }
@@ -65,14 +65,14 @@ final class vh {
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.field_i[var3Lifetime1Lifetime1] = this.field_j[var3Lifetime1Lifetime1];
           }
-          this.field_i[0] = oo.a(this.field_i[0], PortalComponent.field_H[var2Lifetime2]);
+          this.field_i[0] = SnakePitModel.a(this.field_i[0], PortalComponent.field_H[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; 8 > var3Lifetime1Lifetime2; var3Lifetime1Lifetime2++) {
             this.field_j[var3Lifetime1Lifetime2] = this.field_i[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (8 > var7) {
-              this.field_j[var3Lifetime1Lifetime2] = oo.a(this.field_j[var3Lifetime1Lifetime2], PortalComponent.field_I[var7][SnakePitBehaviour.c(255, (int)(this.field_f[SnakePitBehaviour.c(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1))]);
+              this.field_j[var3Lifetime1Lifetime2] = SnakePitModel.a(this.field_j[var3Lifetime1Lifetime2], PortalComponent.field_I[var7][SnakePitBehaviour.c(255, (int)(this.field_f[SnakePitBehaviour.c(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1))]);
               var7++;
               var5Lifetime1 -= 8;
             }
@@ -82,7 +82,7 @@ final class vh {
           }
         }
         for (var2Lifetime3 = 0; 8 > var2Lifetime3; var2Lifetime3++) {
-          this.field_l[var2Lifetime3] = oo.a(this.field_l[var2Lifetime3], oo.a(this.field_m[var2Lifetime3], this.field_f[var2Lifetime3]));
+          this.field_l[var2Lifetime3] = SnakePitModel.a(this.field_l[var2Lifetime3], SnakePitModel.a(this.field_m[var2Lifetime3], this.field_f[var2Lifetime3]));
         }
     }
 
@@ -227,7 +227,7 @@ final class vh {
             for (var6_int = 1; var6_int < var4; var6_int++) {
               bra.field_M[var6_int] = var14.readString((byte) -76);
             }
-            dc.a(var4, var5, (byte) 47);
+            CrusherModel.a(var4, var5, (byte) 47);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               dga.a(var14, 0);
               if (var6_intLifetime1 != 0) {
@@ -251,7 +251,7 @@ final class vh {
             var9 = 0;
             var10 = 0;
             while (var8 > var9) {
-              var11 = boa.field_n[var9];
+              var11 = BlockModel.field_n[var9];
               var6[0][var10] = bra.field_M[var11];
               var7[0][4 * var10] = jk.field_h[var11];
               var7[0][1 + 4 * var10] = DamageableBehaviour.field_o[var11];
@@ -269,7 +269,7 @@ final class vh {
             var13 = 0;
             var10Lifetime1 = var13;
             while (var8 > var9Lifetime1) {
-              var11Lifetime1 = boa.field_n[var5 + var9Lifetime1];
+              var11Lifetime1 = BlockModel.field_n[var5 + var9Lifetime1];
               var6[1][var13] = bra.field_M[var11Lifetime1];
               var7[1][4 * var13] = jk.field_h[var11Lifetime1];
               var7[1][1 + var13 * 4] = DamageableBehaviour.field_o[var11Lifetime1];

@@ -450,7 +450,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
             }
           }
           if (this.n((byte) -122)) {
-            this.field_r = oo.a(4, 8192, 0, param2.readBits((byte) 44, 4));
+            this.field_r = SnakePitModel.a(4, 8192, 0, param2.readBits((byte) 44, 4));
           }
           if (20 <= param0.formatVersion &&
             this.a(6)) {

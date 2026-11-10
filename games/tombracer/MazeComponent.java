@@ -194,9 +194,9 @@ abstract class MazeComponent extends PrefabComponent {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        dg var8 = null;
+        TrapModel var8 = null;
         MiscItemBehaviour var11 = null;
-        mfa var12 = null;
+        ModelCodec var12 = null;
         try {
           if (this.field_I <= 0) {
             return null;

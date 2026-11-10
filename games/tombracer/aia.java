@@ -284,7 +284,7 @@ final class aia extends IntrusiveNode {
 
     final static int e(int param0) {
         if (null == baa.field_d.field_i) {
-          BitPacketBuffer.a(true, WeaponShooterBehaviour.field_r, kva.field_s);
+          BitPacketBuffer.a(true, WeaponShooterBehaviour.field_r, PitModel.field_s);
           return 4;
         }
         if (kra.field_a == baa.field_d.field_i.field_b) {

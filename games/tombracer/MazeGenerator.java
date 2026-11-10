@@ -22,13 +22,13 @@ abstract class MazeGenerator {
           if (k.field_A == param3) {
             if (param0 == 1 &&
               param3 != nba.field_b) {
-              ce.field_B = true;
+              PlatformModel.field_B = true;
               nba.field_b = param3;
               wga.a(true, param1);
             }
             if (param0 == 2 &&
               caa.field_i != param3) {
-              ce.field_B = true;
+              PlatformModel.field_B = true;
               caa.field_i = param3;
               wga.a(true, param1);
             }
@@ -37,7 +37,7 @@ abstract class MazeGenerator {
             return;
           }
           k.field_A = param3;
-          ce.field_B = true;
+          PlatformModel.field_B = true;
           wga.a(true, param1);
         }
         if (param0 == 1) {
@@ -50,7 +50,7 @@ abstract class MazeGenerator {
                 if (param2 != 108) {
                 }
               } else {
-                ce.field_B = true;
+                PlatformModel.field_B = true;
                 caa.field_i = param3;
                 wga.a(true, param1);
                 if (param2 == 108) {
@@ -59,13 +59,13 @@ abstract class MazeGenerator {
             }
             return;
           }
-          ce.field_B = true;
+          PlatformModel.field_B = true;
           nba.field_b = param3;
           wga.a(true, param1);
         }
         if (param0 == 2 &&
           caa.field_i != param3) {
-          ce.field_B = true;
+          PlatformModel.field_B = true;
           caa.field_i = param3;
           wga.a(true, param1);
         }

@@ -135,7 +135,7 @@ final class BoulderComponent extends PathMoverComponent {
           lja.field_c = false;
           hf.field_b = at.field_X;
           jm.field_m = cr.field_d;
-          lba.field_p = ria.field_m;
+          lba.field_p = TestModel.field_m;
           at.field_X = 0;
         }
     }
@@ -146,8 +146,8 @@ final class BoulderComponent extends PathMoverComponent {
         Effect var6 = null;
         SimpleBlockBehaviour var7 = null;
         PathMoveLocomotor var8 = null;
-        mfa var9 = null;
-        fu var10 = null;
+        ModelCodec var9 = null;
+        HazardModel var10 = null;
         Trap var11 = null;
         Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -173,7 +173,7 @@ final class BoulderComponent extends PathMoverComponent {
           var8 = this.createPathMove((byte) -30, param2, param0);
           var11.addLocomotor(var8, 0);
           var9 = rm.field_a;
-          var10 = (fu) (var9.a(8, param1 ^ 76));
+          var10 = (HazardModel) (var9.createModel(8, param1 ^ 76));
           var10.a(false, 0);
           var11.a(var5, (byte) 124, var10);
           stackIn_1_0 = var11;

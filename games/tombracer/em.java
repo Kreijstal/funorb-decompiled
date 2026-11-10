@@ -15,7 +15,7 @@ final class em extends vw {
         } else {
           this.field_c.e(1, false);
           this.field_c.a(true, (iva) null);
-          this.field_c.a(kga.field_o, (byte) 0);
+          this.field_c.a(ItemModel.field_o, (byte) 0);
           this.field_c.p((byte) 127);
           if (!this.field_d) {
             this.field_c.a(iw.field_c, (byte) -110, iw.field_c);

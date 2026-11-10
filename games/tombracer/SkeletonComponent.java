@@ -67,8 +67,8 @@ final class SkeletonComponent extends dna {
         SimpleBlockBehaviour var7 = null;
         DamageableBehaviour var8 = null;
         kpa var9 = null;
-        mfa var10 = null;
-        aka var11 = null;
+        ModelCodec var10 = null;
+        MonsterModel var11 = null;
         Trap var12 = null;
         Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -104,7 +104,7 @@ final class SkeletonComponent extends dna {
           var9.a(2, param1 ^ -17074, true);
           var12.addBehaviour((byte) 83, (Behaviour) (var8));
           var10 = rm.field_a;
-          var11 = (aka) (var10.a(18, 98));
+          var11 = (MonsterModel) (var10.createModel(18, 98));
           var11.b(param1 + 87, 0);
           var12.a((TrapPart) null, (byte) 124, var11);
           var12.e(0, 122);

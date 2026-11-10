@@ -65,7 +65,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
               !Character.isDigit(var5.charAt(0))) {
               var4Lifetime1 = tr.field_f;
             } else {
-              var4Lifetime1 = dc.field_o;
+              var4Lifetime1 = CrusherModel.field_o;
             }
           } else {
             var4Lifetime1 = PressureSwitchBehaviour.field_r;

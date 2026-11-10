@@ -6,8 +6,8 @@ final class LaserShooterComponent extends ShooterComponent {
         RuntimeException var4 = null;
         BeamShooterBehaviour var5 = null;
         Effect var6 = null;
-        mfa var7 = null;
-        boa var8 = null;
+        ModelCodec var7 = null;
+        BlockModel var8 = null;
         Trap var9 = null;
         Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -26,7 +26,7 @@ final class LaserShooterComponent extends ShooterComponent {
           this.a((byte) 43, var5, param2);
           var9.addBehaviour((byte) 83, (Behaviour) (var5));
           var7 = rm.field_a;
-          var8 = (boa) (var7.a(7, 100));
+          var8 = (BlockModel) (var7.createModel(7, 100));
           var8.b(114, 16);
           var9.a(var5, (byte) 124, var8);
           this.a(var9, param1 ^ 3, var5, 16777130);

@@ -43,7 +43,7 @@ final class DoorwayComponent extends PrefabComponent {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         int var5 = 0;
-        mfa var6 = null;
+        ModelCodec var6 = null;
         Trap var7_ref_fsa = null;
         int var7 = 0;
         SimpleBlockBehaviour var8 = null;
@@ -55,9 +55,9 @@ final class DoorwayComponent extends PrefabComponent {
         PathMoveLocomotor var14 = null;
         int var15 = 0;
         int var16 = 0;
-        lfa var17_ref = null;
-        lfa var18_ref = null;
-        lfa var21_ref = null;
+        DoorwayModel var17_ref = null;
+        DoorwayModel var18_ref = null;
+        DoorwayModel var21_ref = null;
         var17 = null;
         var18 = null;
         var21 = null;
@@ -117,11 +117,11 @@ final class DoorwayComponent extends PrefabComponent {
             } else {
               var16 = 1;
             }
-            var17_ref = (lfa) (var6.a(6, 87));
+            var17_ref = (DoorwayModel) (var6.createModel(6, 87));
             var17_ref.a(var15, true);
             var7_ref_fsa.a((TrapPart) null, (byte) 124, var17_ref);
             var7_ref_fsa.f(param1 + 7, 1048576);
-            var18_ref = (lfa) (var6.a(6, 101));
+            var18_ref = (DoorwayModel) (var6.createModel(6, 101));
             var18_ref.a(var16, true);
             var11.a((TrapPart) null, (byte) 124, var18_ref);
             var11.f(param1 + 7, 1048576);
@@ -131,7 +131,7 @@ final class DoorwayComponent extends PrefabComponent {
           } else {
             var7 = 2;
           }
-          var21_ref = (lfa) (var6.a(6, 126));
+          var21_ref = (DoorwayModel) (var6.createModel(6, 126));
           var21_ref.a(var7, true);
           var20.a((TrapPart) null, (byte) 124, var21_ref);
           stackIn_23_0 = var20;

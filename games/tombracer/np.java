@@ -830,7 +830,7 @@ final class np extends ka {
           }
           if (decompiledFrameCompleted4) {
             if (!upa.a(this.field_u, 0, param1)) {
-              if (!wu.a(-17, this.field_u, param1)) {
+              if (!ModelFactory.a(-17, this.field_u, param1)) {
                 param5.field_ab = null;
                 decompiledFrameRemainder0 = (var13 != 0);
               }
@@ -1348,9 +1348,9 @@ final class np extends ka {
             return;
           }
           eqa.field_a = var5.field_k * var6.field_r + var6.field_k * var5.field_l + var6.field_h * var5.field_s;
-          aka.field_B = var5.field_s * var6.field_o + (var6.field_p * var5.field_k + var5.field_l * var6.field_m) + var5.field_m;
-          var11 = aka.field_B + eqa.field_a * (float)this.field_eb;
-          var12 = (float)this.field_v * eqa.field_a + aka.field_B;
+          MonsterModel.field_B = var5.field_s * var6.field_o + (var6.field_p * var5.field_k + var5.field_l * var6.field_m) + var5.field_m;
+          var11 = MonsterModel.field_B + eqa.field_a * (float)this.field_eb;
+          var12 = (float)this.field_v * eqa.field_a + MonsterModel.field_B;
           if (!(var11 > var12)) {
             var14 = (var12 + (float)this.field_M) * (float)this.field_R.field_W;
             var13 = (float)this.field_R.field_W * (var11 - (float)this.field_M);
@@ -2374,7 +2374,7 @@ final class np extends ka {
                 var6 = (float)(this.field_P[var4.field_b] + this.field_P[var4.field_k] + this.field_P[var4.field_m]) * 0.3333333134651184f;
                 var7 = 0.3333333134651184f * (float)(this.field_K[var4.field_b] + this.field_K[var4.field_k] + this.field_K[var4.field_m]);
                 var8 = (float)(this.field_A[var4.field_k] + this.field_A[var4.field_m] + this.field_A[var4.field_b]) * 0.3333333134651184f;
-                var9 = aka.field_B + (var8 * mu.field_ub + (eqa.field_a * var7 + var6 * is.field_Ab));
+                var9 = MonsterModel.field_B + (var8 * mu.field_ub + (eqa.field_a * var7 + var6 * is.field_Ab));
                 var10 = WeaponItemBehaviour.field_s + (var6 * AllPlatformsMazeComponent.field_L + nw.field_u * var7 + bva.field_c * var8);
                 var11 = bja.field_b + (kka.field_q * var8 + (var7 * it.field_a + var6 * Weapon.field_u));
                 var12 = (float)(1.0 / Math.sqrt((double)(var11 * var11 + (var10 * var10 + var9 * var9)))) * (float)var4.field_j;
@@ -2466,9 +2466,9 @@ final class np extends ka {
             return;
           }
           eqa.field_a = var5.field_h * var4.field_s + (var5.field_r * var4.field_k + var5.field_k * var4.field_l);
-          aka.field_B = var5.field_m * var4.field_l + var5.field_p * var4.field_k + var4.field_s * var5.field_o + var4.field_m;
-          var10 = aka.field_B + (float)this.field_eb * eqa.field_a;
-          var11 = eqa.field_a * (float)this.field_v + aka.field_B;
+          MonsterModel.field_B = var5.field_m * var4.field_l + var5.field_p * var4.field_k + var4.field_s * var5.field_o + var4.field_m;
+          var10 = MonsterModel.field_B + (float)this.field_eb * eqa.field_a;
+          var11 = eqa.field_a * (float)this.field_v + MonsterModel.field_B;
           if (!(var10 > var11)) {
             var13 = (float)this.field_R.field_W * (var11 + (float)this.field_M);
             var12 = (var10 - (float)this.field_M) * (float)this.field_R.field_W;
@@ -4410,7 +4410,7 @@ final class np extends ka {
           if (hha.a(param5, 0, param2)) {
             this.field_g = new tj((va) null, 5126, 3, 0);
           }
-          if (wu.a(-17, param5, param2)) {
+          if (ModelFactory.a(-17, param5, param2)) {
             this.field_ab = new tj((va) null, 5126, 2, 0);
           }
           if (kb.a(param5, param2, (byte) 17)) {

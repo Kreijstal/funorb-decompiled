@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lma extends dg {
+final class WallModel extends TrapModel {
     private int field_A;
     private int field_v;
     private int field_y;
@@ -77,7 +77,7 @@ final class lma extends dg {
         }
     }
 
-    lma(int param0) {
+    WallModel(int param0) {
         super(param0);
         this.field_p = true;
     }
@@ -1102,7 +1102,7 @@ final class lma extends dg {
         return true;
     }
 
-    lma(int param0, Room param1, BitPacketBuffer param2) {
+    WallModel(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
     }
 

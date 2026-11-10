@@ -9,8 +9,8 @@ final class CauldronComponent extends SwitchComponent {
         EffectSwitchBehaviour var5 = null;
         jma var6 = null;
         int var7 = 0;
-        mfa var8 = null;
-        cv var9 = null;
+        ModelCodec var8 = null;
+        SwitchModel var9 = null;
         Trap var10 = null;
         Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -36,7 +36,7 @@ final class CauldronComponent extends SwitchComponent {
           var6.a(var7, 0, 0, 0, 5, 0);
           var10.addBehaviour((byte) 83, (Behaviour) (var5));
           var8 = rm.field_a;
-          var9 = (cv) (var8.a(9, 123));
+          var9 = (SwitchModel) (var8.createModel(9, 123));
           var9.b(1, (byte) -112);
           var10.a(var5, (byte) 124, var9);
           stackIn_1_0 = var10;

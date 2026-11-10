@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kva extends dg {
+final class PitModel extends TrapModel {
     private uh field_u;
     private oia[][] field_q;
     static en field_n;
@@ -13,7 +13,7 @@ final class kva extends dg {
     private int field_v;
     private int field_o;
 
-    kva(int param0) {
+    PitModel(int param0) {
         super(param0);
     }
 
@@ -219,7 +219,7 @@ final class kva extends dg {
         }
     }
 
-    kva(int param0, Room param1, BitPacketBuffer param2) {
+    PitModel(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
     }
 

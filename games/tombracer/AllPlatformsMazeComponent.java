@@ -56,7 +56,7 @@ final class AllPlatformsMazeComponent extends MazeComponent {
           java.lang.reflect.Method var8 = null;
           File var9 = null;
           try {
-            var3 = (Class) (cv.field_m.get(param1));
+            var3 = (Class) (SwitchModel.field_m.get(param1));
             if (var3 != null) {
               if (var3.getClassLoader() == param2.getClassLoader()) {
                 return true;
@@ -83,13 +83,13 @@ final class AllPlatformsMazeComponent extends MazeComponent {
               var7.invoke((Object) (var8), new Object[]{Boolean.TRUE});
               var8.invoke((Object) (Runtime.getRuntime()), new Object[]{param2, var9.getPath()});
               var7.invoke((Object) (var8), new Object[]{Boolean.FALSE});
-              cv.field_m.put(param1, param2);
+              SwitchModel.field_m.put(param1, param2);
               return true;
             } catch (java.lang.NoSuchMethodException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5_ref = (NoSuchMethodException) (Object) decompiledCaughtException;
               System.load(((File) (var4)).getPath());
-              cv.field_m.put(param1, qt.class);
+              SwitchModel.field_m.put(param1, qt.class);
               return true;
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
@@ -125,8 +125,8 @@ final class AllPlatformsMazeComponent extends MazeComponent {
         Trap var4 = null;
         RuntimeException var4_ref = null;
         PlatformBehaviour var5 = null;
-        mfa var6 = null;
-        ce var7 = null;
+        ModelCodec var6 = null;
+        PlatformModel var7 = null;
         Trap stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -143,7 +143,7 @@ final class AllPlatformsMazeComponent extends MazeComponent {
           var5.a(1, (byte) 71);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
-          var7 = (ce) (var6.a(17, 81));
+          var7 = (PlatformModel) (var6.createModel(17, 81));
           var7.b(4, (byte) 23);
           var4.a(var5, (byte) 124, var7);
           stackIn_3_0 = var4;
@@ -327,8 +327,8 @@ final class AllPlatformsMazeComponent extends MazeComponent {
         Trap var4 = null;
         RuntimeException var4_ref = null;
         PlatformBehaviour var5 = null;
-        mfa var6 = null;
-        ce var7 = null;
+        ModelCodec var6 = null;
+        PlatformModel var7 = null;
         Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -341,7 +341,7 @@ final class AllPlatformsMazeComponent extends MazeComponent {
           var5.b(-5, 0);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
-          var7 = (ce) (var6.a(17, 87));
+          var7 = (PlatformModel) (var6.createModel(17, 87));
           var7.b(4, (byte) 23);
           var4.a(var5, (byte) 124, var7);
           stackIn_1_0 = var4;

@@ -77,8 +77,8 @@ final class MovingPlatformComponent extends PathMoverComponent {
         RuntimeException var4_ref = null;
         PlatformBehaviour var5 = null;
         PathMoveLocomotor var6 = null;
-        mfa var7 = null;
-        ce var8 = null;
+        ModelCodec var7 = null;
+        PlatformModel var8 = null;
         Trap stackIn_2_0 = null;
         Trap stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
@@ -99,7 +99,7 @@ final class MovingPlatformComponent extends PathMoverComponent {
           var6 = this.createPathMove((byte) -104, param2, param0);
           var4.addLocomotor(var6, 0);
           var7 = rm.field_a;
-          var8 = (ce) (var7.a(17, 88));
+          var8 = (PlatformModel) (var7.createModel(17, 88));
           var8.b(2, (byte) 23);
           var4.a(var5, (byte) 124, var8);
           stackIn_4_0 = var4;

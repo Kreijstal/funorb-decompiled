@@ -9,7 +9,7 @@ final class SwitchableId {
 
     final static void a(int param0) {
         rg.a((byte) -114);
-        oo.a(vda.field_m[0].field_n, (byte) -104, mna.field_d, io.field_a, wg.field_i, di.field_a);
+        SnakePitModel.a(vda.field_m[0].field_n, (byte) -104, mna.field_d, io.field_a, wg.field_i, di.field_a);
         if (param0 < 50) {
           SwitchableId.a(76);
         }

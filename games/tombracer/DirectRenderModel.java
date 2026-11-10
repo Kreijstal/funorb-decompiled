@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ao extends dg {
+final class DirectRenderModel extends TrapModel {
     static String field_m;
 
-    ao(int param0, Room param1, BitPacketBuffer param2) {
+    DirectRenderModel(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
     }
 
-    ao(int param0) {
+    DirectRenderModel(int param0) {
         super(param0);
     }
 
@@ -38,7 +38,7 @@ final class ao extends dg {
 
     public static void releaseStatics(int param0) {
         if (param0 > -113) {
-          ao.releaseStatics(100);
+          DirectRenderModel.releaseStatics(100);
           field_m = null;
           return;
         }

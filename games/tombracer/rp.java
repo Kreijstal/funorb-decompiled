@@ -41,7 +41,7 @@ final class rp extends IntrusiveNode {
         if (param0 != 8824) {
           return;
         }
-        pqa.i(0);
+        GasVentModel.i(0);
     }
 
     final void b(int param0) {

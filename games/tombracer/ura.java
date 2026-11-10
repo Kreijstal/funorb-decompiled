@@ -22,15 +22,15 @@ final class ura {
           if (param0 == 255) {
             stackIn_10_0 = -108;
             stackIn_11_1 = !(wua.field_n >= 13);
-            ki.field_n = es.$cfr$intArgs$a$78544449ccb1(stackIn_10_0, stackIn_11_1);
+            PlantModel.field_n = es.$cfr$intArgs$a$78544449ccb1(stackIn_10_0, stackIn_11_1);
           } else {
             if (param0 < 100) {
-              ki.field_n = doa.a(param3, param0, (byte) 114);
+              PlantModel.field_n = doa.a(param3, param0, (byte) 114);
             } else {
               if (param0 <= 105) {
-                ki.field_n = pla.a(param2 + 228, param1);
+                PlantModel.field_n = pla.a(param2 + 228, param1);
               } else {
-                ki.field_n = doa.a(param3, param0, (byte) 114);
+                PlantModel.field_n = doa.a(param3, param0, (byte) 114);
               }
             }
           }

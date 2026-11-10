@@ -1316,7 +1316,7 @@ final class kda extends eo {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (param0 != kga.field_o) {
+          if (param0 != ItemModel.field_o) {
             var3_int = dk.a(param0, 0);
             jaggl.OpenGL.glTexGeni(8192, 9472, var3_int);
             jaggl.OpenGL.glEnable(3168);

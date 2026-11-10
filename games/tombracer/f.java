@@ -393,8 +393,8 @@ final class f {
 
     final static void b(int param0) {
         vo.field_b = false;
-        if (kga.field_n != null) {
-          kga.field_n.a(true);
+        if (ItemModel.field_n != null) {
+          ItemModel.field_n.a(true);
         }
         int var1 = -18 % ((-10 - param0) / 43);
         if (bta.field_q != 0) {
@@ -542,16 +542,16 @@ final class f {
           if (!lca.a(param0)) {
             return -1;
           }
-          if (null != wu.field_a.a((byte) 127)) {
-            return wu.field_a.a((byte) -73).field_i;
+          if (null != ModelFactory.field_a.a((byte) 127)) {
+            return ModelFactory.field_a.a((byte) -73).field_i;
           }
           return -1;
         }
         if (!lca.a(param0)) {
           return -1;
         }
-        if (null != wu.field_a.a((byte) 127)) {
-          return wu.field_a.a((byte) -73).field_i;
+        if (null != ModelFactory.field_a.a((byte) 127)) {
+          return ModelFactory.field_a.a((byte) -73).field_i;
         }
         return -1;
     }

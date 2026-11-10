@@ -133,9 +133,9 @@ final class BrazierComponent extends PrefabComponent {
     final Trap createTrap(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         SimpleBlockBehaviour var5 = null;
-        mfa var6 = null;
-        am var7 = null;
-        gaa var8 = null;
+        ModelCodec var6 = null;
+        FurnitureModel var7 = null;
+        LightSourceModel var8 = null;
         Trap var9 = null;
         Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -152,10 +152,10 @@ final class BrazierComponent extends PrefabComponent {
           var9.a(1, (byte) -12, false);
           var9.h(3, param1 - 3);
           var6 = rm.field_a;
-          var7 = (am) (var6.a(4, 91));
+          var7 = (FurnitureModel) (var6.createModel(4, 91));
           var7.b(0, (byte) 77);
           var9.a((TrapPart) null, (byte) 124, var7);
-          var8 = (gaa) (var6.a(5, 74));
+          var8 = (LightSourceModel) (var6.createModel(5, 74));
           var8.a(64, 122);
           var8.a(true, 16633231);
           var8.b(1, 128);

@@ -273,7 +273,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
               var11 >= 1) {
               var11--;
               var12 = var12 - (var11 << 1);
-              pqa.field_m[var11] = var7_int;
+              GasVentModel.field_m[var11] = var7_int;
             }
             var7_int++;
             if (0 <= var10) {
@@ -293,7 +293,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
                     nra.a((byte) -55, param4, var17Lifetime1, vaa.field_a[var15], var18Lifetime1);
                   }
                 } else {
-                  var17Lifetime1 = pqa.field_m[var9];
+                  var17Lifetime1 = GasVentModel.field_m[var9];
                   var18Lifetime1 = rp.a(ss.field_c, -16226, pka.field_b, param6 + var7_int);
                   var19Lifetime1 = rp.a(ss.field_c, -16226, pka.field_b, -var7_int + param6);
                   var20 = rp.a(ss.field_c, -16226, pka.field_b, var17Lifetime1 + param6);
@@ -342,7 +342,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
               continue;
             }
             if (var11 < var7_int) {
-              stackIn_41_0 = pqa.field_m[var7_int];
+              stackIn_41_0 = GasVentModel.field_m[var7_int];
             } else {
               stackIn_41_0 = var11;
             }

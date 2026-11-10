@@ -174,7 +174,7 @@ final class IntrusiveDeque {
             } else {
               dn.field_b.field_vb.field_vb.field_r = DivisionMazeGenerator.field_b;
             }
-            vsa.a(-106, dn.field_b.field_tb);
+            BridgeModel.a(-106, dn.field_b.field_tb);
             decompiledFrameRemainder1 = (var19 != 0);
           }
           if (decompiledFrameRemainder1) {

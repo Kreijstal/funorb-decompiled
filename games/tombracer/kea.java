@@ -8,13 +8,13 @@ final class kea {
 
     final static void b(int param0) {
         if (param0 <= -17) {
-          wu.field_a.e(true);
-          wu.field_a.c(new at(wu.field_a), 89);
+          ModelFactory.field_a.e(true);
+          ModelFactory.field_a.c(new at(ModelFactory.field_a), 89);
           return;
         }
         field_a = (String) null;
-        wu.field_a.e(true);
-        wu.field_a.c(new at(wu.field_a), 89);
+        ModelFactory.field_a.e(true);
+        ModelFactory.field_a.c(new at(ModelFactory.field_a), 89);
     }
 
     public static void releaseStatics(int param0) {

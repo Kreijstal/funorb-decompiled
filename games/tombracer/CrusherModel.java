@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dc extends dg {
+final class CrusherModel extends TrapModel {
     private int field_r;
     private int field_m;
     private int field_t;
@@ -44,7 +44,7 @@ final class dc extends dg {
         }
     }
 
-    dc(int param0, Room param1, BitPacketBuffer param2) {
+    CrusherModel(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
         this.field_n = 160;
     }
@@ -70,9 +70,9 @@ final class dc extends dg {
               !(param0 <= ic.field_c.length)) {
               ic.field_c = new int[param0 * 2];
             }
-            if (boa.field_n == null ||
-              !(param1 + param0 <= boa.field_n.length)) {
-              boa.field_n = new int[2 * (param1 + param0)];
+            if (BlockModel.field_n == null ||
+              !(param1 + param0 <= BlockModel.field_n.length)) {
+              BlockModel.field_n = new int[2 * (param1 + param0)];
             }
             if (gja.field_B == null ||
               !(gja.field_B.length >= param0)) {
@@ -89,9 +89,9 @@ final class dc extends dg {
                 !(param0 <= ic.field_c.length)) {
                 ic.field_c = new int[param0 * 2];
               }
-              if (boa.field_n == null ||
-                !(param1 + param0 <= boa.field_n.length)) {
-                boa.field_n = new int[2 * (param1 + param0)];
+              if (BlockModel.field_n == null ||
+                !(param1 + param0 <= BlockModel.field_n.length)) {
+                BlockModel.field_n = new int[2 * (param1 + param0)];
               }
               if (gja.field_B == null ||
                 !(gja.field_B.length >= param0)) {
@@ -104,9 +104,9 @@ final class dc extends dg {
                   !(param0 <= ic.field_c.length)) {
                   ic.field_c = new int[param0 * 2];
                 }
-                if (boa.field_n == null ||
-                  !(param1 + param0 <= boa.field_n.length)) {
-                  boa.field_n = new int[2 * (param1 + param0)];
+                if (BlockModel.field_n == null ||
+                  !(param1 + param0 <= BlockModel.field_n.length)) {
+                  BlockModel.field_n = new int[2 * (param1 + param0)];
                 }
                 if (gja.field_B == null ||
                   !(gja.field_B.length >= param0)) {
@@ -119,9 +119,9 @@ final class dc extends dg {
                     !(param0 <= ic.field_c.length)) {
                     ic.field_c = new int[param0 * 2];
                   }
-                  if (boa.field_n == null ||
-                    !(param1 + param0 <= boa.field_n.length)) {
-                    boa.field_n = new int[2 * (param1 + param0)];
+                  if (BlockModel.field_n == null ||
+                    !(param1 + param0 <= BlockModel.field_n.length)) {
+                    BlockModel.field_n = new int[2 * (param1 + param0)];
                   }
                   if (gja.field_B == null ||
                     !(gja.field_B.length >= param0)) {
@@ -132,9 +132,9 @@ final class dc extends dg {
                     !(param0 <= ic.field_c.length)) {
                     ic.field_c = new int[param0 * 2];
                   }
-                  if (boa.field_n == null ||
-                    !(param1 + param0 <= boa.field_n.length)) {
-                    boa.field_n = new int[2 * (param1 + param0)];
+                  if (BlockModel.field_n == null ||
+                    !(param1 + param0 <= BlockModel.field_n.length)) {
+                    BlockModel.field_n = new int[2 * (param1 + param0)];
                   }
                   if (gja.field_B == null) {
                     gja.field_B = new boolean[2 * param0];
@@ -159,9 +159,9 @@ final class dc extends dg {
                 !(param0 <= ic.field_c.length)) {
                 ic.field_c = new int[param0 * 2];
               }
-              if (boa.field_n == null ||
-                !(param1 + param0 <= boa.field_n.length)) {
-                boa.field_n = new int[2 * (param1 + param0)];
+              if (BlockModel.field_n == null ||
+                !(param1 + param0 <= BlockModel.field_n.length)) {
+                BlockModel.field_n = new int[2 * (param1 + param0)];
               }
               if (gja.field_B == null ||
                 !(gja.field_B.length >= param0)) {
@@ -178,9 +178,9 @@ final class dc extends dg {
                   !(param0 <= ic.field_c.length)) {
                   ic.field_c = new int[param0 * 2];
                 }
-                if (boa.field_n == null ||
-                  !(param1 + param0 <= boa.field_n.length)) {
-                  boa.field_n = new int[2 * (param1 + param0)];
+                if (BlockModel.field_n == null ||
+                  !(param1 + param0 <= BlockModel.field_n.length)) {
+                  BlockModel.field_n = new int[2 * (param1 + param0)];
                 }
                 if (gja.field_B == null ||
                   !(gja.field_B.length >= param0)) {
@@ -193,9 +193,9 @@ final class dc extends dg {
                     !(param0 <= ic.field_c.length)) {
                     ic.field_c = new int[param0 * 2];
                   }
-                  if (boa.field_n == null ||
-                    !(param1 + param0 <= boa.field_n.length)) {
-                    boa.field_n = new int[2 * (param1 + param0)];
+                  if (BlockModel.field_n == null ||
+                    !(param1 + param0 <= BlockModel.field_n.length)) {
+                    BlockModel.field_n = new int[2 * (param1 + param0)];
                   }
                   if (gja.field_B == null ||
                     !(gja.field_B.length >= param0)) {
@@ -208,9 +208,9 @@ final class dc extends dg {
                       !(param0 <= ic.field_c.length)) {
                       ic.field_c = new int[param0 * 2];
                     }
-                    if (boa.field_n == null ||
-                      !(param1 + param0 <= boa.field_n.length)) {
-                      boa.field_n = new int[2 * (param1 + param0)];
+                    if (BlockModel.field_n == null ||
+                      !(param1 + param0 <= BlockModel.field_n.length)) {
+                      BlockModel.field_n = new int[2 * (param1 + param0)];
                     }
                     if (gja.field_B == null ||
                       !(gja.field_B.length >= param0)) {
@@ -221,9 +221,9 @@ final class dc extends dg {
                       !(param0 <= ic.field_c.length)) {
                       ic.field_c = new int[param0 * 2];
                     }
-                    if (boa.field_n == null ||
-                      !(param1 + param0 <= boa.field_n.length)) {
-                      boa.field_n = new int[2 * (param1 + param0)];
+                    if (BlockModel.field_n == null ||
+                      !(param1 + param0 <= BlockModel.field_n.length)) {
+                      BlockModel.field_n = new int[2 * (param1 + param0)];
                     }
                     if (gja.field_B == null) {
                       gja.field_B = new boolean[2 * param0];
@@ -248,9 +248,9 @@ final class dc extends dg {
                 !(param0 <= ic.field_c.length)) {
                 ic.field_c = new int[param0 * 2];
               }
-              if (boa.field_n == null ||
-                !(param1 + param0 <= boa.field_n.length)) {
-                boa.field_n = new int[2 * (param1 + param0)];
+              if (BlockModel.field_n == null ||
+                !(param1 + param0 <= BlockModel.field_n.length)) {
+                BlockModel.field_n = new int[2 * (param1 + param0)];
               }
               if (gja.field_B == null) {
                 gja.field_B = new boolean[2 * param0];
@@ -270,9 +270,9 @@ final class dc extends dg {
                   !(param0 <= ic.field_c.length)) {
                   ic.field_c = new int[param0 * 2];
                 }
-                if (boa.field_n == null ||
-                  !(param1 + param0 <= boa.field_n.length)) {
-                  boa.field_n = new int[2 * (param1 + param0)];
+                if (BlockModel.field_n == null ||
+                  !(param1 + param0 <= BlockModel.field_n.length)) {
+                  BlockModel.field_n = new int[2 * (param1 + param0)];
                 }
                 if (gja.field_B == null ||
                   !(gja.field_B.length >= param0)) {
@@ -285,9 +285,9 @@ final class dc extends dg {
                     !(param0 <= ic.field_c.length)) {
                     ic.field_c = new int[param0 * 2];
                   }
-                  if (boa.field_n == null ||
-                    !(param1 + param0 <= boa.field_n.length)) {
-                    boa.field_n = new int[2 * (param1 + param0)];
+                  if (BlockModel.field_n == null ||
+                    !(param1 + param0 <= BlockModel.field_n.length)) {
+                    BlockModel.field_n = new int[2 * (param1 + param0)];
                   }
                 } else {
                   if (param0 <= PortalBehaviour.field_o.length) {
@@ -295,9 +295,9 @@ final class dc extends dg {
                       !(param0 <= ic.field_c.length)) {
                       ic.field_c = new int[param0 * 2];
                     }
-                    if (boa.field_n == null ||
-                      !(param1 + param0 <= boa.field_n.length)) {
-                      boa.field_n = new int[2 * (param1 + param0)];
+                    if (BlockModel.field_n == null ||
+                      !(param1 + param0 <= BlockModel.field_n.length)) {
+                      BlockModel.field_n = new int[2 * (param1 + param0)];
                     }
                   } else {
                     PortalBehaviour.field_o = new int[param0 * 2];
@@ -305,9 +305,9 @@ final class dc extends dg {
                       !(param0 <= ic.field_c.length)) {
                       ic.field_c = new int[param0 * 2];
                     }
-                    if (boa.field_n == null ||
-                      !(param1 + param0 <= boa.field_n.length)) {
-                      boa.field_n = new int[2 * (param1 + param0)];
+                    if (BlockModel.field_n == null ||
+                      !(param1 + param0 <= BlockModel.field_n.length)) {
+                      BlockModel.field_n = new int[2 * (param1 + param0)];
                     }
                   }
                 }
@@ -704,7 +704,7 @@ final class dc extends dg {
         return;
     }
 
-    dc(int param0) {
+    CrusherModel(int param0) {
         super(param0);
         this.field_n = 160;
     }

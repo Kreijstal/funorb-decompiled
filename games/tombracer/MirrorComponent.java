@@ -137,12 +137,12 @@ final class MirrorComponent extends PrefabComponent {
         SimpleBlockBehaviour var5 = null;
         Trap var6 = null;
         MirrorBehaviour var7 = null;
-        mfa var8 = null;
+        ModelCodec var8 = null;
         int var10 = 0;
         Trap var11 = null;
-        nq var12 = null;
-        nq var13 = null;
-        boa var14 = null;
+        TrapBaseModel var12 = null;
+        TrapBaseModel var13 = null;
+        BlockModel var14 = null;
         Trap stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -174,15 +174,15 @@ final class MirrorComponent extends PrefabComponent {
           var11.addChild(-98, var6);
           var8 = rm.field_a;
           if (this.typeId != 19) {
-            var13 = (nq) (var8.a(16, param1 ^ 105));
+            var13 = (TrapBaseModel) (var8.createModel(16, param1 ^ 105));
             var13.b(8022, 4);
             var11.a((TrapPart) null, (byte) 124, var13);
           } else {
-            var12 = (nq) (var8.a(16, 127));
+            var12 = (TrapBaseModel) (var8.createModel(16, 127));
             var12.b(param1 + 8019, 1);
             var11.a((TrapPart) null, (byte) 124, var12);
           }
-          var14 = (boa) (var8.a(7, 125));
+          var14 = (BlockModel) (var8.createModel(7, 125));
           var14.b(param1 + 116, 9);
           var11.a(var7, (byte) 124, var14);
           stackIn_8_0 = var11;

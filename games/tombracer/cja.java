@@ -53,7 +53,7 @@ final class cja {
             var8_int = 1;
             var9 = 0;
             while (true) {
-              if (var9 >= ce.field_A.length) {
+              if (var9 >= PlatformModel.field_A.length) {
                 if (var8_int == 0) {
                   decompiledFrameCompleted2 = false;
                   break;
@@ -62,7 +62,7 @@ final class cja {
                 decompiledFrameCompleted1 = false;
                 break;
               }
-              var19 = ce.field_A[var9];
+              var19 = PlatformModel.field_A[var9];
               var17 = var19;
               var10_ref_int__ = var17;
               var11 = 0;

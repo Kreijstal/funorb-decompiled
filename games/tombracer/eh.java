@@ -4,7 +4,7 @@
 final class eh implements Renderable {
     int field_f;
     static byte[][] field_i;
-    ce field_e;
+    PlatformModel field_e;
     int field_h;
     int field_a;
     bua field_g;

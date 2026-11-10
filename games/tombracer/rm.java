@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rm {
-    static mfa field_a;
+    static ModelCodec field_a;
     static lla field_e;
     static ToolkitSprite field_c;
     static ur field_d;

@@ -402,7 +402,7 @@ final class voa extends ci {
           uu.field_a.field_Mb >= uu.field_a.field_Jb) {
           rra.field_e.field_X = false;
           bsa.field_j.field_vb.field_r = RandomAccessFileHandle.field_c;
-          vsa.a(-116, bsa.field_j.field_tb);
+          BridgeModel.a(-116, bsa.field_j.field_tb);
         } else {
           rra.field_e.field_X = true;
           bsa.field_j.field_vb.field_r = null;

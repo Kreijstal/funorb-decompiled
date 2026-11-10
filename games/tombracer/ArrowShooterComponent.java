@@ -81,8 +81,8 @@ final class ArrowShooterComponent extends ShooterComponent {
         WeaponShooterBehaviour var5 = null;
         Weapon var6 = null;
         int var7_int = 0;
-        mfa var7 = null;
-        boa var8 = null;
+        ModelCodec var7 = null;
+        BlockModel var8 = null;
         Trap var9 = null;
         Trap stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -107,7 +107,7 @@ final class ArrowShooterComponent extends ShooterComponent {
           this.a((byte) 43, var5, param2);
           var9.addBehaviour((byte) 83, (Behaviour) (var5));
           var7 = rm.field_a;
-          var8 = (boa) (var7.a(7, 86));
+          var8 = (BlockModel) (var7.createModel(7, 86));
           var8.b(127, 12);
           var9.a(var5, (byte) 124, var8);
           stackIn_6_0 = var9;

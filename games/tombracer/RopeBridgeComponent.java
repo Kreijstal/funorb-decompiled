@@ -67,8 +67,8 @@ final class RopeBridgeComponent extends PrefabComponent {
         Trap var7 = null;
         SimpleBlockBehaviour var8 = null;
         SimpleBlockBehaviour var9 = null;
-        mfa var10 = null;
-        vsa var11 = null;
+        ModelCodec var10 = null;
+        BridgeModel var11 = null;
         int var12 = 0;
         Trap var13 = null;
         Trap stackIn_8_0 = null;
@@ -116,7 +116,7 @@ final class RopeBridgeComponent extends PrefabComponent {
           var13.addChild(-107, var6);
           var13.addChild(param1 ^ -61, var7);
           var10 = rm.field_a;
-          var11 = (vsa) (var10.a(19, param1 ^ 106));
+          var11 = (BridgeModel) (var10.createModel(19, param1 ^ 106));
           var11.b((byte) 80, 0);
           var13.a(var5, (byte) 124, var11);
           stackIn_8_0 = var13;

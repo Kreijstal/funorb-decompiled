@@ -73,7 +73,7 @@ final class ControllerLocomotor extends Locomotor {
           var4_int = param1.readBits((byte) 44, 2);
           this.field_u = new Locomotor[var4_int];
           for (var5 = 0; var4_int > var5; var5++) {
-            var6 = ki.readLocomotor(param1, (byte) -118, param0, param2);
+            var6 = PlantModel.readLocomotor(param1, (byte) -118, param0, param2);
             this.field_u[var5] = var6;
           }
           this.field_s = param1.readBits((byte) 44, 2);

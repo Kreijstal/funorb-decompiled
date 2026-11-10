@@ -277,7 +277,7 @@ final class qh extends dfa implements rqa {
           this.field_v[0][3] = var9[fp.field_a];
           this.field_v[0][4] = var9[gsa.field_j];
           this.field_v[0][7] = var9[mv.field_i];
-          this.field_v[0][5] = var9[ki.field_o];
+          this.field_v[0][5] = var9[PlantModel.field_o];
           this.field_v[0][8] = var9[rta.field_g];
           this.field_v[0][6] = var9[hra.field_b];
           this.field_v[1][1] = var9[97];

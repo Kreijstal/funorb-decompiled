@@ -84,7 +84,7 @@ final class rg extends qr {
         wg.field_j = new String[3];
         TripBeamBehaviour.field_w[1][1] = waa.field_b;
         wg.field_j[1] = CircleMovementLocomotor.field_s;
-        wg.field_j[0] = lfa.field_m;
+        wg.field_j[0] = DoorwayModel.field_m;
         bq.field_k = new String[13];
         wg.field_j[2] = gla.field_o;
         bq.field_k[5] = gqa.field_a;
@@ -97,9 +97,9 @@ final class rg extends qr {
         bq.field_k[3] = hg.field_d;
         bq.field_k[4] = uj.field_e;
         bq.field_k[11] = bf.field_f;
-        bq.field_k[6] = kga.field_q;
+        bq.field_k[6] = ItemModel.field_q;
         bq.field_k[8] = tv.field_ub;
-        bq.field_k[1] = aka.field_A;
+        bq.field_k[1] = MonsterModel.field_A;
         dta.field_b = new String[4];
         dta.field_b[1] = S2CNewRoomPacket.field_g;
         dta.field_b[2] = vh.field_b;
@@ -162,7 +162,7 @@ final class rg extends qr {
           tk.field_a[7] = fpa.snakeDeathMessages;
           tk.field_a[4] = or.fallingObjectDeathMessages;
           IntrusiveDeque.field_d[0] = new String[]{ela.field_m, fr.field_a, null, null, null, null, qfa.field_a};
-          Effect.field_h[0] = new String[]{daa.field_f, ioa.field_o, mr.field_H, PushableBlockMazeComponent.field_K, pba.field_c, hsa.field_c};
+          Effect.field_h[0] = new String[]{daa.field_f, LegacySwitchModel.field_o, mr.field_H, PushableBlockMazeComponent.field_K, pba.field_c, hsa.field_c};
           IntrusiveDeque.field_d[1] = new String[]{ct.field_c, pn.field_o, dka.field_c};
           Effect.field_h[1] = new String[]{dk.field_k, BitPacketBuffer.field_m, ne.field_e};
           IntrusiveDeque.field_d[2] = new String[]{kea.field_b, baa.field_a, dk.field_a};
@@ -171,7 +171,7 @@ final class rg extends qr {
           IntrusiveDeque.field_d[4] = new String[]{ConstrainToCircleLocomotor.field_t, fv.field_b, RopeBridgeComponent.field_G};
           Effect.field_h[3] = new String[]{sba.field_o, vk.field_a, koa.field_d};
           Effect.field_h[4] = new String[]{at.field_R, gn.field_y, tr.field_d};
-          IntrusiveDeque.field_d[5] = new String[]{TripBeamComponent.field_J, td.field_u, kva.field_r};
+          IntrusiveDeque.field_d[5] = new String[]{TripBeamComponent.field_J, td.field_u, PitModel.field_r};
           Effect.field_h[5] = new String[]{gu.field_k, MazeComponent.field_G, du.field_b};
           IntrusiveDeque.field_d[6] = new String[]{ConstrainToCircleLocomotor.field_v, VortexBehaviour.field_o, PowerUpItemBehaviour.field_s};
           Effect.field_h[6] = new String[]{apa.field_b, pna.field_k, bq.field_e};
@@ -214,7 +214,7 @@ final class rg extends qr {
         tk.field_a[7] = fpa.snakeDeathMessages;
         tk.field_a[4] = or.fallingObjectDeathMessages;
         IntrusiveDeque.field_d[0] = new String[]{ela.field_m, fr.field_a, null, null, null, null, qfa.field_a};
-        Effect.field_h[0] = new String[]{daa.field_f, ioa.field_o, mr.field_H, PushableBlockMazeComponent.field_K, pba.field_c, hsa.field_c};
+        Effect.field_h[0] = new String[]{daa.field_f, LegacySwitchModel.field_o, mr.field_H, PushableBlockMazeComponent.field_K, pba.field_c, hsa.field_c};
         IntrusiveDeque.field_d[1] = new String[]{ct.field_c, pn.field_o, dka.field_c};
         Effect.field_h[1] = new String[]{dk.field_k, BitPacketBuffer.field_m, ne.field_e};
         IntrusiveDeque.field_d[2] = new String[]{kea.field_b, baa.field_a, dk.field_a};
@@ -223,7 +223,7 @@ final class rg extends qr {
         IntrusiveDeque.field_d[4] = new String[]{ConstrainToCircleLocomotor.field_t, fv.field_b, RopeBridgeComponent.field_G};
         Effect.field_h[3] = new String[]{sba.field_o, vk.field_a, koa.field_d};
         Effect.field_h[4] = new String[]{at.field_R, gn.field_y, tr.field_d};
-        IntrusiveDeque.field_d[5] = new String[]{TripBeamComponent.field_J, td.field_u, kva.field_r};
+        IntrusiveDeque.field_d[5] = new String[]{TripBeamComponent.field_J, td.field_u, PitModel.field_r};
         Effect.field_h[5] = new String[]{gu.field_k, MazeComponent.field_G, du.field_b};
         IntrusiveDeque.field_d[6] = new String[]{ConstrainToCircleLocomotor.field_v, VortexBehaviour.field_o, PowerUpItemBehaviour.field_s};
         Effect.field_h[6] = new String[]{apa.field_b, pna.field_k, bq.field_e};

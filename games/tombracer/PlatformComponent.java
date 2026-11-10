@@ -119,8 +119,8 @@ final class PlatformComponent extends PrefabComponent {
         Trap var4 = null;
         RuntimeException var4_ref = null;
         PlatformBehaviour var5 = null;
-        mfa var6 = null;
-        ce var7 = null;
+        ModelCodec var6 = null;
+        PlatformModel var7 = null;
         Trap stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -137,7 +137,7 @@ final class PlatformComponent extends PrefabComponent {
             this.t(49);
           }
           if (60 != this.typeId) {
-            var7 = (ce) (var6.a(17, param1 ^ 93));
+            var7 = (PlatformModel) (var6.createModel(17, param1 ^ 93));
             var7.b(2, (byte) 23);
             var4.a(var5, (byte) 124, var7);
           }

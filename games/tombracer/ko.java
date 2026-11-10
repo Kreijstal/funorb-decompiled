@@ -325,7 +325,7 @@ final class ko {
 
     final static void c(byte param0) {
         afa.field_c = qk.h(122);
-        wu.field_a = new jta();
+        ModelFactory.field_a = new jta();
         if (param0 < 10) {
           ko.c((byte) -39);
           kea.b(-114);

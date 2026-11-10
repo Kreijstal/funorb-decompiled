@@ -48,11 +48,11 @@ final class iv extends jea {
           }
           if (var2 == 1) {
             var4_int = var10.readSignedSmart((byte) -128);
-            var5_ref_toa = (toa) (vsa.field_m.first(-80));
+            var5_ref_toa = (toa) (BridgeModel.field_m.first(-80));
             while (var5_ref_toa != null) {
               if (var5_ref_toa.field_i != var3 ||
                 var4_int != var5_ref_toa.field_k) {
-                var5_ref_toa = (toa) (vsa.field_m.next(param0 + 123));
+                var5_ref_toa = (toa) (BridgeModel.field_m.next(param0 + 123));
                 continue;
               }
               break;

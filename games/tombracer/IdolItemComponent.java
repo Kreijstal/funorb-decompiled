@@ -13,8 +13,8 @@ final class IdolItemComponent extends ItemComponent {
         Trap var4 = null;
         RuntimeException var4_ref = null;
         MiscItemBehaviour var5 = null;
-        mfa var6 = null;
-        kga var7 = null;
+        ModelCodec var6 = null;
+        ItemModel var7 = null;
         Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -27,7 +27,7 @@ final class IdolItemComponent extends ItemComponent {
           var5.setItemType(3, false);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
-          var7 = (kga) (var6.a(12, param1 ^ 117));
+          var7 = (ItemModel) (var6.createModel(12, param1 ^ 117));
           var7.b((byte) 98, 2);
           var4.a(var5, (byte) 124, var7);
           stackIn_1_0 = var4;

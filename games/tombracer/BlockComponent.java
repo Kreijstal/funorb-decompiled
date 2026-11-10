@@ -13,8 +13,8 @@ final class BlockComponent extends PrefabComponent {
         SimpleBlockBehaviour var9 = null;
         DamageableBehaviour var10 = null;
         kpa var11 = null;
-        mfa var12 = null;
-        boa var13 = null;
+        ModelCodec var12 = null;
+        BlockModel var13 = null;
         int var14 = 0;
         Trap var15 = null;
         Trap stackIn_8_0 = null;
@@ -59,7 +59,7 @@ final class BlockComponent extends PrefabComponent {
           var11.a(0, -17075, true);
           var15.addBehaviour((byte) 83, (Behaviour) (var10));
           var12 = rm.field_a;
-          var13 = (boa) (var12.a(7, 92));
+          var13 = (BlockModel) (var12.createModel(7, 92));
           var13.b(107, var7);
           var15.a((TrapPart) null, (byte) 124, var13);
           stackIn_8_0 = var15;

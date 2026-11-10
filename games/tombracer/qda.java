@@ -56,10 +56,10 @@ abstract class qda {
           if (param1 != -21) {
             return;
           }
-          var4 = (toa) (vsa.field_m.first(-80));
+          var4 = (toa) (BridgeModel.field_m.first(-80));
           while (var4 != null) {
             uca.a(param0, var4, (byte) 93);
-            var4 = (toa) (vsa.field_m.next(113));
+            var4 = (toa) (BridgeModel.field_m.next(113));
           }
           var5 = (ik) (Player.field_I.first(param1 ^ 91));
           while (var5 != null) {

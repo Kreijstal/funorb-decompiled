@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lfa extends dg {
+final class DoorwayModel extends TrapModel {
     private fla field_s;
     private int field_p;
     private int field_r;
@@ -25,7 +25,7 @@ final class lfa extends dg {
         }
     }
 
-    lfa(int param0, Room param1, BitPacketBuffer param2) {
+    DoorwayModel(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
     }
 
@@ -242,7 +242,7 @@ final class lfa extends dg {
         }
     }
 
-    lfa(int param0) {
+    DoorwayModel(int param0) {
         super(param0);
     }
 

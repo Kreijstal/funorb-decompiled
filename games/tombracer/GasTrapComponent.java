@@ -80,8 +80,8 @@ final class GasTrapComponent extends PrefabComponent {
         int var8 = 0;
         int var9 = 0;
         SimpleBlockBehaviour var10 = null;
-        mfa var11 = null;
-        pqa var12 = null;
+        ModelCodec var11 = null;
+        GasVentModel var12 = null;
         Trap var13 = null;
         Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -117,7 +117,7 @@ final class GasTrapComponent extends PrefabComponent {
           param2.addTrap(var7, (byte) 32);
           var6.k((byte) -115).h(1).a(9, new lj[]{(lj) ((Object) var7)});
           var11 = rm.field_a;
-          var12 = (pqa) (var11.a(20, 83));
+          var12 = (GasVentModel) (var11.createModel(20, 83));
           var13.a(var6, (byte) 124, var12);
           stackIn_1_0 = var13;
           return stackIn_1_0;

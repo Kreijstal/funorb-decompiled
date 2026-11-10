@@ -294,14 +294,14 @@ final class sw extends jea {
             if (dq.field_f != null &&
               dq.field_f.field_b) {
               og.b(0);
-              wu.field_a.c(new gga(wu.field_a, or.field_j), 122);
+              ModelFactory.field_a.c(new gga(ModelFactory.field_a, or.field_j), 122);
             }
             return;
           }
-          wu.field_a.a(sc.field_k, true, ConstrainToFacingArcLocomotor.field_w, param0 ^ -11);
-          wu.field_a.g((byte) -128);
+          ModelFactory.field_a.a(sc.field_k, true, ConstrainToFacingArcLocomotor.field_w, param0 ^ -11);
+          ModelFactory.field_a.g((byte) -128);
           while (es.a(true)) {
-            wu.field_a.a((byte) -53, fna.field_h, kda.field_td);
+            ModelFactory.field_a.a((byte) -53, fna.field_h, kda.field_td);
           }
           if (param0 == 100) {
             return;

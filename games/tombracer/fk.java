@@ -22,7 +22,7 @@ final class fk {
           throw new RuntimeException("Can only retrieve a full image cache");
         }
         for (var3 = 0; var3 < this.field_e; var3++) {
-          this.field_k[var3] = ioa.field_n;
+          this.field_k[var3] = LegacySwitchModel.field_n;
         }
         return this.field_a;
     }
@@ -41,7 +41,7 @@ final class fk {
         if (this.field_c == this.field_e) {
           stackIn_4_1 = (this.field_k[param0] == null);
           this.field_f = stackIn_4_1;
-          this.field_k[param0] = ioa.field_n;
+          this.field_k[param0] = LegacySwitchModel.field_n;
           return this.field_a[param0];
         }
         if (this.field_e == 1) {
@@ -96,11 +96,11 @@ final class fk {
               var6 = apa.$cfr$intArgs$a$62abead39cee(-50, true, cna.field_b[var3_int]);
               var7 = gda.field_a - (var6 >> 1);
               var4 = var4 + aqa.field_a;
-              if (CrusherBehaviour.a(param2, var6 + (vra.field_a << 1), var7 - vra.field_a, param0, am.field_n + (vf.field_d << 1), false, var4)) {
+              if (CrusherBehaviour.a(param2, var6 + (vra.field_a << 1), var7 - vra.field_a, param0, FurnitureModel.field_n + (vf.field_d << 1), false, var4)) {
                 stackIn_9_0 = var5;
                 return stackIn_9_0;
               }
-              var4 = var4 + ((vf.field_d << 1) + (aqa.field_a + am.field_n));
+              var4 = var4 + ((vf.field_d << 1) + (aqa.field_a + FurnitureModel.field_n));
             } else {
               var4 = var4 + uda.field_x;
             }

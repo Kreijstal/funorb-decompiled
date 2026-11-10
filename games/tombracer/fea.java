@@ -745,7 +745,7 @@ final class fea {
           if (decompiledFrameRemainder0) {
             if (!kda.field_pd) {
               if (fr.field_c >= bda.field_m) {
-                stackIn_17_0 = (fr.field_c < bda.field_m + gaa.field_p) ? 1 : 0;
+                stackIn_17_0 = (fr.field_c < bda.field_m + LightSourceModel.field_p) ? 1 : 0;
               } else {
                 stackIn_17_0 = 0;
               }

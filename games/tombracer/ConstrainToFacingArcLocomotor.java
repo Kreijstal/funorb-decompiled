@@ -104,7 +104,7 @@ final class ConstrainToFacingArcLocomotor extends ConstraintLocomotor {
         super(param0, param1, param2);
         this.field_u = 1024;
         try {
-          this.field_u = oo.a(8, 8192, 0, param1.readBits((byte) 44, 8));
+          this.field_u = SnakePitModel.a(8, 8192, 0, param1.readBits((byte) 44, 8));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "oqa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

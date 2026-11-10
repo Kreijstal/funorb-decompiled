@@ -67,7 +67,7 @@ final class pq implements os {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ki.a(-18520, (java.awt.Component) ((Object) param0));
+          PlantModel.a(-18520, (java.awt.Component) ((Object) param0));
           tia.a(0, (java.awt.Component) ((Object) param0));
           if (param1) {
             return;

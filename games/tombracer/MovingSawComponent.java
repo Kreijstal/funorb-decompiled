@@ -58,8 +58,8 @@ final class MovingSawComponent extends PathMoverComponent {
         Effect var7 = null;
         Trap var8 = null;
         SimpleBlockBehaviour var9 = null;
-        mfa var10 = null;
-        fu var11 = null;
+        ModelCodec var10 = null;
+        HazardModel var11 = null;
         Trap var12 = null;
         Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -91,7 +91,7 @@ final class MovingSawComponent extends PathMoverComponent {
           var8.addBehaviour((byte) 83, (Behaviour) (var9));
           var12.addChild(-128, var8);
           var10 = rm.field_a;
-          var11 = (fu) (var10.a(8, param1 + 119));
+          var11 = (HazardModel) (var10.createModel(8, param1 + 119));
           var11.a(false, 1);
           var12.a(var6, (byte) 124, var11);
           stackIn_1_0 = var12;

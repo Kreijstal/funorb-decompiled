@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oia implements gs {
-    kva field_c;
+    PitModel field_c;
     int field_a;
     static String field_e;
     private static String[] field_d;

@@ -226,7 +226,7 @@ final class mp {
           mka.field_b.field_w = var16;
           RotaterMountComponent.field_K.b(-125, mka.field_b);
           bt.field_c = new jea[5];
-          kva.field_p = new jea[5];
+          PitModel.field_p = new jea[5];
           oka.field_y = new jea[5];
           wba.field_p = new jea[5];
           var18 = 0;
@@ -258,11 +258,11 @@ final class mp {
                 bt.field_c[var18] = new jea(0L, VortexBehaviour.field_t, var19);
                 oka.field_y[var18] = new jea(0L, (jea) null);
                 oka.field_y[var18].field_bb = 1;
-                kva.field_p[var18] = new jea(0L, VortexBehaviour.field_t);
-                kva.field_p[var18].field_bb = 1;
+                PitModel.field_p[var18] = new jea(0L, VortexBehaviour.field_t);
+                PitModel.field_p[var18].field_bb = 1;
                 wba.field_p[var18].b(-122, bt.field_c[var18]);
                 wba.field_p[var18].b(param6 - 125, oka.field_y[var18]);
-                wba.field_p[var18].b(-125, kva.field_p[var18]);
+                wba.field_p[var18].b(-125, PitModel.field_p[var18]);
                 wba.field_p[var18].a(-10966);
                 era.field_e.b(-127, wba.field_p[var18]);
                 gka.field_g = gka.field_g + 1;

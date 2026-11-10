@@ -88,7 +88,7 @@ final class ck {
           DoorwayComponent.field_L = param7;
           eda.field_e = param9;
           pda.field_d = param3;
-          oo.field_n = param12;
+          SnakePitModel.field_n = param12;
           aca.field_i = param6;
           MirrorMoverLocomotor.field_r = param2;
           kma.field_e = param4;
@@ -125,8 +125,8 @@ final class ck {
           st.field_j = new jea(0L, ssa.field_g, S2CActionPacket.field_g.toUpperCase());
           ap.field_a = new jea(0L, uda.field_s, tha.field_B.toUpperCase());
           db.field_s = new jea(0L, CommonChooseReward.field_c);
-          gta.field_b = new jea(0L, ooa.field_f, oo.field_m);
-          iia.field_r = new jea(0L, cs.field_a, ria.field_r);
+          gta.field_b = new jea(0L, ooa.field_f, SnakePitModel.field_m);
+          iia.field_r = new jea(0L, cs.field_a, TestModel.field_r);
           RotateLocomotor.field_o = new jea(0L, cs.field_a, du.field_a);
           l.field_K = new jea(0L, cs.field_a, qo.field_i);
           MirrorComponent.field_I = new jea(0L, cs.field_a, MatchState.field_N);
@@ -168,13 +168,13 @@ final class ck {
           rv.field_c.field_bb = 0;
           rv.field_c.field_z = 1;
           bma.field_v = new jea(0L, dp.field_i, nf.field_j.toUpperCase());
-          wo.field_k = new jea(0L, lma.field_r);
+          wo.field_k = new jea(0L, WallModel.field_r);
           wo.field_k.b(param11 - 25572, rv.field_c);
           wo.field_k.b(-122, bma.field_v);
-          fu.field_t = new jea(0L, rfa.field_C);
-          fu.field_t.a(false, Corpse.field_i);
-          fu.field_t.field_bb = 1;
-          var16 = fu.field_t;
+          HazardModel.field_t = new jea(0L, rfa.field_C);
+          HazardModel.field_t.a(false, Corpse.field_i);
+          HazardModel.field_t.field_bb = 1;
+          var16 = HazardModel.field_t;
           var16.field_z = 1;
           lk.field_l = new jea(0L, (jea) null);
           cea.field_a = new jea(0L, Corpse.field_i);
@@ -250,13 +250,13 @@ final class ck {
           scanLoop2: while (true) {
             if (var17_int < param0) {
               SimpleConditionBehaviour.field_p[var17_int + 4] = new jea(0L, una.field_j, kma.field_e[var17_int]);
-              array$2 = new tv[1 + SnakePitBehaviour.c((int) oo.field_n[var17_int], 255)];
+              array$2 = new tv[1 + SnakePitBehaviour.c((int) SnakePitModel.field_n[var17_int], 255)];
               bf.field_b[4 + var17_int] = array$2;
               bf.field_b[var17_int + 4][0] = new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b);
               stackIn_71_0 = 0;
               if (var21 == 0) {
                 var18 = stackIn_71_0;
-                while (var18 < (oo.field_n[var17_int] & 255)) {
+                while (var18 < (SnakePitModel.field_n[var17_int] & 255)) {
                   stackIn_78_0 = null;
                   if (stackIn_78_0 == efa.field_w) {
                     stackIn_61_0 = null;

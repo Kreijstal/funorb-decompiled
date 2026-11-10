@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class cda extends dg {
+abstract class cda extends TrapModel {
     private boolean field_r;
     private boolean field_t;
     private boolean field_q;

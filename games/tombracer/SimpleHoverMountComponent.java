@@ -196,8 +196,8 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
         Trap var4 = null;
         RuntimeException var4_ref = null;
         PathMoveLocomotor var5 = null;
-        mfa var6 = null;
-        nq var7 = null;
+        ModelCodec var6 = null;
+        TrapBaseModel var7 = null;
         Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -215,7 +215,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
           var5 = this.createPathMove((byte) -60, param2, param0);
           var4.addLocomotor(var5, 0);
           var6 = rm.field_a;
-          var7 = (nq) (var6.a(16, 78));
+          var7 = (TrapBaseModel) (var6.createModel(16, 78));
           var7.b(8022, 3);
           var4.a((TrapPart) null, (byte) 124, var7);
           stackIn_1_0 = var4;

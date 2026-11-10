@@ -162,8 +162,8 @@ final class WheeledMountComponent extends PathMoverComponent {
     final Trap createTrap(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         PathMoveLocomotor var5 = null;
-        mfa var6 = null;
-        nq var7 = null;
+        ModelCodec var6 = null;
+        TrapBaseModel var7 = null;
         Trap var8 = null;
         Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -185,7 +185,7 @@ final class WheeledMountComponent extends PathMoverComponent {
           var5.c(this.field_Q * 8, -60);
           var8.addLocomotor(var5, 0);
           var6 = rm.field_a;
-          var7 = (nq) (var6.a(16, param1 + 71));
+          var7 = (TrapBaseModel) (var6.createModel(16, param1 + 71));
           var7.b(8022, 0);
           var8.a((TrapPart) null, (byte) 124, var7);
           stackIn_1_0 = var8;

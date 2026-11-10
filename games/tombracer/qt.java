@@ -14,7 +14,7 @@ final class qt {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, byte param5) {
         ItemBehaviour.field_p[ola.field_Eb] = param3;
-        boa.field_n[ola.field_Eb] = ola.field_Eb;
+        BlockModel.field_n[ola.field_Eb] = ola.field_Eb;
         jk.field_h[ola.field_Eb] = param4;
         if (ap.field_d < param4) {
           ma.field_g = param4;
@@ -441,7 +441,7 @@ final class qt {
           al.field_j = param6;
           wua.field_n = param2;
           ConstraintLocomotor.field_p = param4;
-          ki.field_n = null;
+          PlantModel.field_n = null;
           faa.field_g = param3;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

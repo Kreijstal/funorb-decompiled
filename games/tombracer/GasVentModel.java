@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pqa extends dg {
+final class GasVentModel extends TrapModel {
     private int field_q;
     static String field_r;
     private ut field_n;
@@ -79,7 +79,7 @@ final class pqa extends dg {
         }
     }
 
-    pqa(int param0, Room param1, BitPacketBuffer param2) {
+    GasVentModel(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
         this.field_q = 0;
         this.field_o = 0;
@@ -93,7 +93,7 @@ final class pqa extends dg {
         }
     }
 
-    pqa(int param0) {
+    GasVentModel(int param0) {
         super(param0);
         this.field_q = 0;
         this.field_o = 0;

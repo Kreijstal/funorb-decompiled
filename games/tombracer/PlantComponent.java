@@ -33,7 +33,7 @@ final class PlantComponent extends PrefabComponent {
     }
 
     final Trap createTrap(boolean param0, int param1, Room param2) {
-        mfa var5 = null;
+        ModelCodec var5 = null;
         int var7_int = 0;
         int var8 = 0;
         Trap var9 = null;
@@ -45,7 +45,7 @@ final class PlantComponent extends PrefabComponent {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         int var6 = 0;
-        ki var7 = null;
+        PlantModel var7 = null;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
           var9 = new Trap(param2, param0);
@@ -73,7 +73,7 @@ final class PlantComponent extends PrefabComponent {
             stackIn_15_0 = (Trap) null;
             return stackIn_15_0;
           }
-          var7 = (ki) (var5.a(14, 82));
+          var7 = (PlantModel) (var5.createModel(14, 82));
           var7.a(true, var6);
           var9.a((TrapPart) null, (byte) 124, var7);
           stackIn_17_0 = var9;
@@ -230,8 +230,8 @@ final class PlantComponent extends PrefabComponent {
           PlantComponent.A(33);
         }
         if (lca.a(false) &&
-          wu.field_a.a((byte) 70) != null) {
-          return wu.field_a.a((byte) 101).field_n;
+          ModelFactory.field_a.a((byte) 70) != null) {
+          return ModelFactory.field_a.a((byte) 101).field_n;
         }
         return -1;
     }

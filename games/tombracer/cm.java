@@ -443,7 +443,7 @@ final class cm implements GamePacket {
               var16Lifetime1 = stackIn_218_0;
               if (var16Lifetime1 == 0 &&
                 var9 >= 0 &&
-                ce.field_A != null && (!param3 ||
+                PlatformModel.field_A != null && (!param3 ||
                 !qa.field_o)) {
                 mm.field_g = false;
                 if (null == tba.field_m) {

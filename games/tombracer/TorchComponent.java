@@ -11,9 +11,9 @@ final class TorchComponent extends PrefabComponent {
     final Trap createTrap(boolean param0, int param1, Room param2) {
         Trap var4 = null;
         RuntimeException var4_ref = null;
-        mfa var5 = null;
-        am var6 = null;
-        gaa var7 = null;
+        ModelCodec var5 = null;
+        FurnitureModel var6 = null;
+        LightSourceModel var7 = null;
         Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -24,10 +24,10 @@ final class TorchComponent extends PrefabComponent {
           var4.b((byte) -11, this.field_k, this.field_l);
           var4.a((byte) -3, 5);
           var5 = rm.field_a;
-          var6 = (am) (var5.a(4, 80));
+          var6 = (FurnitureModel) (var5.createModel(4, 80));
           var6.b(1, (byte) 77);
           var4.a((TrapPart) null, (byte) 124, var6);
-          var7 = (gaa) (var5.a(5, 88));
+          var7 = (LightSourceModel) (var5.createModel(5, 88));
           var7.a(64, 119);
           var7.a(true, 16633231);
           var7.b(1, 96);

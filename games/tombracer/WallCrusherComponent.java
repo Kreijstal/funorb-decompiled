@@ -42,8 +42,8 @@ final class WallCrusherComponent extends PrefabComponent {
         mg var9 = null;
         int var10 = 0;
         jma var11 = null;
-        mfa var12 = null;
-        lma var13 = null;
+        ModelCodec var12 = null;
+        WallModel var13 = null;
         Trap var14 = null;
         Trap stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
@@ -88,7 +88,7 @@ final class WallCrusherComponent extends PrefabComponent {
           var11.h(param1 - 2).a(9, new lj[]{(lj) ((Object) var6), (lj) ((Object) var7)});
           var14.addBehaviour((byte) 83, (Behaviour) (this.field_G));
           var12 = rm.field_a;
-          var13 = (lma) (var12.a(15, 93));
+          var13 = (WallModel) (var12.createModel(15, 93));
           var14.a((TrapPart) null, (byte) 124, var13);
           stackIn_7_0 = var14;
           return stackIn_7_0;

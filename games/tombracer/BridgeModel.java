@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vsa extends dg {
+final class BridgeModel extends TrapModel {
     private faa[][] field_q;
     private int field_p;
     static IntrusiveDeque field_m;
@@ -84,7 +84,7 @@ final class vsa extends dg {
             var12 = var12 + var14;
             if (0 <= var12 &&
               var11 >= 1) {
-              pqa.field_m[var11] = var7_int;
+              GasVentModel.field_m[var11] = var7_int;
               var11--;
               var12 = var12 - (var11 << 1);
             }
@@ -103,7 +103,7 @@ final class vsa extends dg {
               } else {
                 var28 = vaa.field_a[param0 + var9];
                 var29 = vaa.field_a[-var9 + param0];
-                var20 = pqa.field_m[var9];
+                var20 = GasVentModel.field_m[var9];
                 var21 = param6 + var7_int;
                 var22 = -var7_int + param6;
                 var23 = param6 + var20;
@@ -126,7 +126,7 @@ final class vsa extends dg {
               continue;
             }
             if (var7_int > var11) {
-              stackIn_20_0 = pqa.field_m[var7_int];
+              stackIn_20_0 = GasVentModel.field_m[var7_int];
             } else {
               stackIn_20_0 = var11;
             }
@@ -242,7 +242,7 @@ final class vsa extends dg {
         }
     }
 
-    vsa(int param0, Room param1, BitPacketBuffer param2) {
+    BridgeModel(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
     }
 
@@ -591,7 +591,7 @@ final class vsa extends dg {
         field_m = null;
     }
 
-    vsa(int param0) {
+    BridgeModel(int param0) {
         super(param0);
     }
 

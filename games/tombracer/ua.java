@@ -159,17 +159,17 @@ final class ua implements GamePacket {
             return stackIn_30_0;
           }
           if (11 == param0) {
-            stackIn_33_0 = gl.$cfr$intArgs$a$53ce4ab4c593(112, ioa.field_m, new String[]{param1});
+            stackIn_33_0 = gl.$cfr$intArgs$a$53ce4ab4c593(112, LegacySwitchModel.field_m, new String[]{param1});
             return stackIn_33_0;
           }
           if (12 == param0) {
-            stackIn_37_0 = gl.$cfr$intArgs$a$53ce4ab4c593(82, ria.field_p, new String[]{param1});
+            stackIn_37_0 = gl.$cfr$intArgs$a$53ce4ab4c593(82, TestModel.field_p, new String[]{param1});
             return stackIn_37_0;
           }
           if (param0 != 13) {
             return null;
           }
-          stackIn_41_0 = gl.$cfr$intArgs$a$53ce4ab4c593(96, lfa.field_n, new String[]{param1});
+          stackIn_41_0 = gl.$cfr$intArgs$a$53ce4ab4c593(96, DoorwayModel.field_n, new String[]{param1});
           return stackIn_41_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

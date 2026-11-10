@@ -49,8 +49,8 @@ final class BladeShooterComponent extends ShooterComponent {
         RuntimeException var4 = null;
         WeaponShooterBehaviour var5 = null;
         Weapon var6 = null;
-        mfa var7 = null;
-        boa var8 = null;
+        ModelCodec var7 = null;
+        BlockModel var8 = null;
         Trap var9 = null;
         Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -69,7 +69,7 @@ final class BladeShooterComponent extends ShooterComponent {
           this.a((byte) 43, var5, param2);
           var9.addBehaviour((byte) 83, (Behaviour) (var5));
           var7 = rm.field_a;
-          var8 = (boa) (var7.a(7, param1 ^ 122));
+          var8 = (BlockModel) (var7.createModel(7, param1 ^ 122));
           var8.b(106, 13);
           var9.a(var5, (byte) 124, var8);
           stackIn_1_0 = var9;

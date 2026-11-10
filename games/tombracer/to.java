@@ -19,8 +19,8 @@ final class to extends za {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         rua.field_gb.a(param0, param5, param3 ^ -23751, param6, param1);
-        if (kga.field_n != null) {
-          kga.field_n.a(param4, -wv.field_j + param2, -3269, param5, param5, param2);
+        if (ItemModel.field_n != null) {
+          ItemModel.field_n.a(param4, -wv.field_j + param2, -3269, param5, param5, param2);
         }
         if (param3 != 25) {
           to.a(-20, 16, -95, -68, -87, 79, 16);

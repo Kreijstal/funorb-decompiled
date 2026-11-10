@@ -44,11 +44,11 @@ final class PressureSwitchComponent extends SwitchComponent {
               }
               var6 = gda.a(var4_int, -20011);
               oka.field_y[var4_int].field_R = vda.field_m[var6];
-              kva.field_p[var4_int].field_r = StripedMazeGenerator.field_c[var6];
+              PitModel.field_p[var4_int].field_r = StripedMazeGenerator.field_c[var6];
             }
           }
           if (0 != ara.field_ub.field_y) {
-            fj.field_c = new wla(ara.field_ub.field_q, ara.field_ub.field_A, ara.field_ub.field_G, ara.field_ub.field_t, param2, lma.field_r, oba.field_f, cga.field_g, Corpse.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p, (String) null, 0L);
+            fj.field_c = new wla(ara.field_ub.field_q, ara.field_ub.field_A, ara.field_ub.field_G, ara.field_ub.field_t, param2, WallModel.field_r, oba.field_f, cga.field_g, Corpse.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p, (String) null, 0L);
           }
           var9 = mna.a((byte) 73, param3, di.field_a, mna.field_d);
           if (var9 != null) {
@@ -162,8 +162,8 @@ final class PressureSwitchComponent extends SwitchComponent {
         RuntimeException var4 = null;
         int var5_int = 0;
         PressureSwitchBehaviour var5 = null;
-        mfa var6 = null;
-        cv var7 = null;
+        ModelCodec var6 = null;
+        SwitchModel var7 = null;
         int var8 = 0;
         int var9 = 0;
         Trap var10 = null;
@@ -184,7 +184,7 @@ final class PressureSwitchComponent extends SwitchComponent {
           this.a(var5, (byte) -94);
           var10.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
-          var7 = (cv) (var6.a(9, param1 ^ 113));
+          var7 = (SwitchModel) (var6.createModel(9, param1 ^ 113));
           if (param1 != 3) {
             this.field_K = 33;
           }

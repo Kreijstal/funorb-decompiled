@@ -18,7 +18,7 @@ final class fl extends ci {
           for (var4 = 0; ns.field_g > var4; var4++) {
             this.d(var4, param1, -5455);
             var5 = this.c(0, -70, fv.field_e);
-            var8[var4] = var5[boa.field_o];
+            var8[var4] = var5[BlockModel.field_o];
           }
         }
         return var3;
@@ -94,40 +94,40 @@ final class fl extends ci {
         if ((double)var6 >= -3.141592653589793 &&
           -2.356194490192345 >= (double)var6) {
           fv.field_e = param1;
-          boa.field_o = param0;
+          BlockModel.field_o = param0;
         } else if ((double)var6 <= -1.5707963267948966 &&
           (double)var6 >= -2.356194490192345) {
-          boa.field_o = param1;
+          BlockModel.field_o = param1;
           fv.field_e = param0;
         } else if (-0.7853981633974483 >= (double)var6 &&
           -1.5707963267948966 <= (double)var6) {
           fv.field_e = param0;
-          boa.field_o = -param1 + ns.field_g;
+          BlockModel.field_o = -param1 + ns.field_g;
         } else if (var6 <= 0.0f &&
           (double)var6 >= -0.7853981633974483) {
-          boa.field_o = param0;
+          BlockModel.field_o = param0;
           fv.field_e = qda.field_i - param1;
         } else if (0.0f <= var6 &&
           (double)var6 <= 0.7853981633974483) {
           fv.field_e = qda.field_i - param1;
-          boa.field_o = ns.field_g - param0;
+          BlockModel.field_o = ns.field_g - param0;
         } else if ((double)var6 >= 0.7853981633974483 &&
           (double)var6 <= 1.5707963267948966) {
-          boa.field_o = ns.field_g - param1;
+          BlockModel.field_o = ns.field_g - param1;
           fv.field_e = qda.field_i - param0;
         } else if ((double)var6 >= 1.5707963267948966 &&
           2.356194490192345 >= (double)var6) {
-          boa.field_o = param1;
+          BlockModel.field_o = param1;
           fv.field_e = qda.field_i - param0;
         } else {
           if (2.356194490192345 <= (double)var6 &&
             (double)var6 <= 3.141592653589793) {
             fv.field_e = param1;
-            boa.field_o = -param0 + ns.field_g;
+            BlockModel.field_o = -param0 + ns.field_g;
           }
         }
         fv.field_e = fv.field_e & hba.field_b;
-        boa.field_o = boa.field_o & una.field_b;
+        BlockModel.field_o = BlockModel.field_o & una.field_b;
     }
 
     final void a(byte param0, PacketBuffer param1, int param2) {
@@ -178,9 +178,9 @@ final class fl extends ci {
           for (var7 = 0; var7 < ns.field_g; var7++) {
             this.d(var7, param0, -5455);
             var14 = this.a(fv.field_e, 0, -1);
-            var4[var7] = var14[0][boa.field_o];
-            var5[var7] = var14[1][boa.field_o];
-            var6[var7] = var14[2][boa.field_o];
+            var4[var7] = var14[0][BlockModel.field_o];
+            var5[var7] = var14[1][BlockModel.field_o];
+            var6[var7] = var14[2][BlockModel.field_o];
           }
         }
         if (param1 != -1) {

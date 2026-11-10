@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nq extends cda {
+final class TrapBaseModel extends cda {
     private int field_w;
 
     final void d(int param0) {
@@ -10,7 +10,7 @@ final class nq extends cda {
         }
     }
 
-    nq(int param0, Room param1, BitPacketBuffer param2) {
+    TrapBaseModel(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
     }
 
@@ -95,7 +95,7 @@ final class nq extends cda {
         }
     }
 
-    nq(int param0) {
+    TrapBaseModel(int param0) {
         super(param0);
     }
 
