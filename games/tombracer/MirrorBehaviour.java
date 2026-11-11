@@ -209,7 +209,7 @@ final class MirrorBehaviour extends Behaviour {
           var5.a(var6, (var12 >> 8) * var15 + var6, var7, (var13 >> 8) * var15 + var7, 44);
           var5.field_b = var14;
           var16 = this.getRoom(true);
-          var16.a(this.field_q, this.trap, -108, var5, this.getRoot(6), param1);
+          var16.castBeamSegment(this.field_q, this.trap, -108, var5, this.getRoot(6), param1);
           stackIn_14_0 = 0;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

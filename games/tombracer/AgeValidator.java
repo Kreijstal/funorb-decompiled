@@ -38,7 +38,7 @@ final class AgeValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param1);
-          if (!sqa.a(var4, -3)) {
+          if (!SoundEventQueue.a(var4, -3)) {
             stackIn_2_0 = fp.field_c;
             return stackIn_2_0;
           }
@@ -82,7 +82,7 @@ final class AgeValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.validateText((byte) 14, param1) == fp.field_c) {
-            stackIn_2_0 = fm.field_l;
+            stackIn_2_0 = SoundEvent.field_l;
             return stackIn_2_0;
           }
           if (param0 == -1) {

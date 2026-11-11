@@ -105,7 +105,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
         return this.trap;
     }
 
-    void a(Collidable param0, byte param1, WorldBody param2, int param3) {
+    void onSupport(Collidable param0, byte param1, WorldBody param2, int param3) {
         try {
           if (param1 < 18) {
             this.getRoot(-16);
@@ -122,13 +122,13 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
         this.stopped = true;
     }
 
-    void a(int param0, ui param1, boolean param2, ui param3) {
+    void a(int param0, SwitchableIdAllocator param1, boolean param2, SwitchableIdAllocator param3) {
         try {
           if (param1 != null) {
-            this.field_j = param1.a(84, param2);
+            this.field_j = param1.allocate(84, param2);
           }
           if (param3 != null) {
-            this.field_l = param3.a(-57, false);
+            this.field_l = param3.allocate(-57, false);
           }
           int var5_int = -32 / ((param0 + 58) / 57);
         } catch (RuntimeException runtimeException) {
@@ -246,7 +246,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
         }
     }
 
-    int a(int param0, int param1, int param2, int param3, byte param4, int param5) {
+    int getSurfaceCoverage(int param0, int param1, int param2, int param3, byte param4, int param5) {
         if (param4 < 79) {
           field_h = (String) null;
           return 0;
@@ -414,7 +414,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
     boolean freezesInTimeStop(byte param0) {
         if (param0 != 120) {
           WorldBody var3 = (WorldBody) null;
-          this.a((Collidable) null, (byte) -1, (WorldBody) null, 16);
+          this.onSupport((Collidable) null, (byte) -1, (WorldBody) null, 16);
           return false;
         }
         return false;
@@ -424,8 +424,8 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
 
     Switchable a(int param0, int param1, boolean param2) {
         if (param0 != 0) {
-          ui var5 = (ui) null;
-          this.a(-91, (ui) null, true, (ui) null);
+          SwitchableIdAllocator var5 = (SwitchableIdAllocator) null;
+          this.a(-91, (SwitchableIdAllocator) null, true, (SwitchableIdAllocator) null);
           if (WhirlpoolDigest.matchesSwitchableId(param1, param2, -27201, (Switchable) (this))) {
             return (Switchable) (this);
           }
@@ -466,7 +466,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
         this.locked = false;
         try {
           this.room = param0;
-          this.a(48, param0.e(-38), param1, (ui) null);
+          this.a(48, param0.getTrapIdAllocator(-38), param1, (SwitchableIdAllocator) null);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "nv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

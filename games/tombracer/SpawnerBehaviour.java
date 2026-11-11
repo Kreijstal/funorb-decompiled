@@ -67,11 +67,11 @@ final class SpawnerBehaviour extends Behaviour {
         }
     }
 
-    final void a(int param0, ui param1, boolean param2, ui param3) {
+    final void a(int param0, SwitchableIdAllocator param1, boolean param2, SwitchableIdAllocator param3) {
         try {
           super.a(-125, param1, param2, param3);
           if (null != this.field_q) {
-            this.field_q.a((byte) -36, new ui(), param2, param1);
+            this.field_q.a((byte) -36, new SwitchableIdAllocator(), param2, param1);
           }
           int var5_int = -85 % ((param0 + 58) / 57);
         } catch (RuntimeException runtimeException) {

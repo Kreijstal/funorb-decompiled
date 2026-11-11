@@ -205,7 +205,7 @@ final class StandingsPhase extends MatchPhase {
                 SocketConnector.a(DateInputWidget.field_y.toUpperCase(), 1, kn.field_p, var13, 16, 70, 1, var10 - 243, -50 + var11, 0, (byte) 60, 100);
               }
               if (this.matchState.g(69, var22)) {
-                SocketConnector.a(w.field_d.toUpperCase(), 1, kn.field_p, 3385907, 16, 40, 1, var10 - 203, -50 + var11, 0, (byte) 60, 100);
+                SocketConnector.a(SoundEventPlayer.field_d.toUpperCase(), 1, kn.field_p, 3385907, 16, 40, 1, var10 - 203, -50 + var11, 0, (byte) 60, 100);
               }
             } else {
               MembersUpsellMenu.a(id.field_i.toUpperCase(), 11141120, kn.field_p, -1, var10 - 190, var11, 0);
@@ -245,7 +245,7 @@ final class StandingsPhase extends MatchPhase {
               }
               if (C2SActionPacket.field_j == 2) {
                 var13_ref_String = qna.field_c;
-                var12_ref = bca.field_d;
+                var12_ref = VariantMask.field_d;
               }
               if (C2SActionPacket.field_j == 1) {
                 var13_ref_String = MovingPlatformComponent.field_P;
@@ -269,8 +269,8 @@ final class StandingsPhase extends MatchPhase {
             za.field_g.a(-200 + var3, var4 + 60);
             var13 = LegacyOpenGlShoreWaveWaterEffect.a(var9, 0);
             RoomEffectTraps.a(-1, -36, var4 + 79, dea.a(var13, (byte) -8), -200 + (var3 + za.field_g.paddedWidth()) + 5, kn.field_p, 2431750);
-            bca.field_d.a(var3 - 110, 60 + var4);
-            RoomEffectTraps.a(-1, -92, 79 + var4, dea.a(var13 + var13 / 2, (byte) -8), bca.field_d.paddedWidth() + (var3 - 110) + 5, kn.field_p, 2431750);
+            VariantMask.field_d.a(var3 - 110, 60 + var4);
+            RoomEffectTraps.a(-1, -92, 79 + var4, dea.a(var13 + var13 / 2, (byte) -8), VariantMask.field_d.paddedWidth() + (var3 - 110) + 5, kn.field_p, 2431750);
             MembersUpsellMenu.a(ContentTransitionDialog.field_L.toUpperCase(), 2431750, eda.field_f, -1, 5 + var4, 120 + var3, -1);
             var14 = this.screen.matchState.simulations[this.screen.localPlayerIndex].player.getScore(110);
             MembersUpsellMenu.a(Integer.toString(var14), 2431750, eda.field_f, -1, var4 + 22, var3 + 120, -1);
@@ -324,7 +324,7 @@ final class StandingsPhase extends MatchPhase {
           this.draw(-124, false);
         }
         if (param1 == 0) {
-          this.screen.b(false, true, 0);
+          this.screen.endMatch(false, true, 0);
           if (this.screen.field_D) {
             r.a(0, this.screen.isSpectating((byte) 120));
           } else {

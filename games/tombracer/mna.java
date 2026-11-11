@@ -106,12 +106,12 @@ abstract class mna {
         return (gqa) (var4);
     }
 
-    final static g a(int param0, int param1) {
+    final static RoomDefinition a(int param0, int param1) {
         int var3 = 0;
-        g[] var2;
-        g var4;
+        RoomDefinition[] var2;
+        RoomDefinition var4;
         int var5;
-        g[] var6;
+        RoomDefinition[] var6;
         var5 = TombRacer.field_G ? 1 : 0;
         var6 = sja.field_i;
         var2 = var6;

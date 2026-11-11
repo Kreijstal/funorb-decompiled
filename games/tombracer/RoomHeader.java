@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fq {
+final class RoomHeader {
     private int field_d;
     static int field_g;
     private int field_b;
@@ -67,12 +67,12 @@ final class fq {
           return;
         }
         byte[] var2 = (byte[]) null;
-        fq.a((byte[]) null, (byte) 68);
+        RoomHeader.a((byte[]) null, (byte) 68);
         CharSequence var3 = (CharSequence) ((Object) MenuEntry.field_k);
         tia.field_b = jd.normalizeDisplayName(1, var3);
     }
 
-    final void a(BitPacketBuffer param0, int param1) {
+    final void encode(BitPacketBuffer param0, int param1) {
         try {
           if (param1 != 23) {
             this.a(-16);
@@ -100,12 +100,12 @@ final class fq {
         return this.field_a;
     }
 
-    fq() {
+    RoomHeader() {
         this.field_f = 0;
         this.field_b = 10;
     }
 
-    fq(int param0, BitPacketBuffer param1) {
+    RoomHeader(int param0, BitPacketBuffer param1) {
         RuntimeException var3 = null;
         boolean stackIn_5_1 = false;
         RuntimeException stackIn_18_0 = null;

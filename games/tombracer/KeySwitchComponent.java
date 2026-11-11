@@ -74,7 +74,7 @@ final class KeySwitchComponent extends SwitchComponent {
           var7 = rm.field_a;
           var8 = (SwitchModel) (var7.createModel(9, param1 + 103));
           var8.b(3, (byte) -112);
-          var9.a(var5, (byte) 124, var8);
+          var9.addModel(var5, (byte) 124, var8);
           stackIn_1_0 = var9;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

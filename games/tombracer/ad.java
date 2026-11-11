@@ -112,14 +112,14 @@ final class ad extends IntrusiveNode {
           var2 = decompiledCaughtException;
           throw tba.a((Throwable) ((Object) var2), "ad.B(" + param0 + ',' + param1 + ')');
         }
-        stackIn_6_0 = bca.field_a;
+        stackIn_6_0 = VariantMask.field_a;
         try {
           while (stackIn_6_0.length > var2_int) {
-            if (param1 == bca.field_a[var2_int]) {
+            if (param1 == VariantMask.field_a[var2_int]) {
               return true;
             }
             var2_int++;
-            stackIn_6_0 = bca.field_a;
+            stackIn_6_0 = VariantMask.field_a;
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

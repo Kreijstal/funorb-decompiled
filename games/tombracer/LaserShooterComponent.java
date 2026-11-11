@@ -28,7 +28,7 @@ final class LaserShooterComponent extends ShooterComponent {
           var7 = rm.field_a;
           var8 = (BlockModel) (var7.createModel(7, 100));
           var8.b(114, 16);
-          var9.a(var5, (byte) 124, var8);
+          var9.addModel(var5, (byte) 124, var8);
           this.a(var9, param1 ^ 3, var5, 16777130);
           stackIn_1_0 = var9;
           return stackIn_1_0;

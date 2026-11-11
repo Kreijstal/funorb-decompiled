@@ -71,7 +71,7 @@ final class BladeShooterComponent extends ShooterComponent {
           var7 = rm.field_a;
           var8 = (BlockModel) (var7.createModel(7, param1 ^ 122));
           var8.b(106, 13);
-          var9.a(var5, (byte) 124, var8);
+          var9.addModel(var5, (byte) 124, var8);
           stackIn_1_0 = var9;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -61,7 +61,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
         return true;
     }
 
-    void a(boolean param0, byte param1, ui param2, ui param3) {
+    void a(boolean param0, byte param1, SwitchableIdAllocator param2, SwitchableIdAllocator param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -71,10 +71,10 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != null) {
-            this.field_h = param2.a(-75, param0);
+            this.field_h = param2.allocate(-75, param0);
           }
           if (param3 != null) {
-            this.field_g = param3.a(-47, false);
+            this.field_g = param3.allocate(-47, false);
           }
           if (param1 <= -106) {
             return;
@@ -275,7 +275,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
         IntPoint discarded$0 = new IntPoint();
         try {
           this.room = param0;
-          this.a(param1, (byte) -119, param0.e(116), (ui) null);
+          this.a(param1, (byte) -119, param0.getTrapIdAllocator(116), (SwitchableIdAllocator) null);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wda.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

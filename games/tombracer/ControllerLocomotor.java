@@ -46,7 +46,7 @@ final class ControllerLocomotor extends Locomotor {
         }
     }
 
-    final void a(boolean param0, byte param1, ui param2, ui param3) {
+    final void a(boolean param0, byte param1, SwitchableIdAllocator param2, SwitchableIdAllocator param3) {
         int var5_int = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
         super.a(param0, (byte) -125, param2, param3);

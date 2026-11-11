@@ -157,7 +157,7 @@ final class TileGrid implements Renderable {
         return this.rowCount;
     }
 
-    final void f(byte param0) {
+    final void mirror(byte param0) {
         int var3 = 0;
         int var4 = 0;
         TileGridCell var5 = null;
@@ -200,7 +200,7 @@ final class TileGrid implements Renderable {
 
     public final boolean isRenderExpired(byte param0) {
         if (param0 != 48) {
-          this.a(8, 65, true, 67, -80, 46, 77);
+          this.removeOccupancy(8, 65, true, 67, -80, 46, 77);
         }
         return false;
     }
@@ -222,7 +222,7 @@ final class TileGrid implements Renderable {
           }
           for (var3_int = 0; var3_int < this.columnSpan; var3_int++) {
             for (var4 = 0; this.rowSpan > var4; var4++) {
-              this.getCell(-118, var3_int, var4).a((byte) 117, param1);
+              this.getCell(-118, var3_int, var4).render((byte) 117, param1);
             }
           }
           var6 = (lk) (this.field_p.first(-80));
@@ -272,8 +272,8 @@ final class TileGrid implements Renderable {
         return this.columnCount;
     }
 
-    final void a(int param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
-        this.a(param6, param3, -123, param0, param4, param1, param5, -1);
+    final void removeOccupancy(int param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
+        this.adjustOccupancy(param6, param3, -123, param0, param4, param1, param5, -1);
         if (!param2) {
           this.tiles = (TileGridCell[]) null;
         }
@@ -286,7 +286,7 @@ final class TileGrid implements Renderable {
         return this.tileSize;
     }
 
-    final boolean b(int param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
+    final boolean isBoxOccupied(int param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
         int var15 = 0;
         int var16 = 0;
         int var8;
@@ -317,7 +317,7 @@ final class TileGrid implements Renderable {
               }
             } else {
               var17 = this.getCell(-115, var15, var16);
-              if (var17.a(param6, 0)) {
+              if (var17.isOccupied(param6, 0)) {
                 return true;
               }
             }
@@ -357,7 +357,7 @@ final class TileGrid implements Renderable {
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           for (var3_int = param1; var3_int < this.tiles.length; var3_int++) {
-            this.tiles[var3_int].a(param0, (byte) 84);
+            this.tiles[var3_int].addToScene(param0, (byte) 84);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -374,7 +374,7 @@ final class TileGrid implements Renderable {
         }
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void expand(int param0, int param1, int param2) {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
@@ -393,7 +393,7 @@ final class TileGrid implements Renderable {
           for (var10 = 0; this.rowSpan > var10; var10++) {
             var11 = za.$cfr$intArgs$a$c604db63f465(0, 113, var5 - 1, var9_int - var7);
             var12 = za.$cfr$intArgs$a$c604db63f465(0, 85, -1 + var6, var10 - var8);
-            this.getCell(param1 - 115, var9_int, var10).a(var4[var12 * var5 + var11], 21324);
+            this.getCell(param1 - 115, var9_int, var10).copyTileType(var4[var12 * var5 + var11], 21324);
           }
         }
         lk var9 = (lk) (this.field_p.first(-80));
@@ -404,7 +404,7 @@ final class TileGrid implements Renderable {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final void adjustOccupancy(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var16 = 0;
         int var17 = 0;
         int var9;
@@ -438,18 +438,18 @@ final class TileGrid implements Renderable {
             if (this.containsCell(var17, (byte) 48, var16)) {
               var18 = this.getCell(127, var16, var17);
               if (param5 != -1) {
-                var18.a(param7, param5, true);
+                var18.addOccupancy(param7, param5, true);
               }
               if (param1 != -1) {
-                var18.a((byte) 29, param7);
+                var18.addWideOccupancy((byte) 29, param7);
               }
             }
           }
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
-        this.a(param3, param0, -110, param5, param1, param4, param2, 1);
+    final void addOccupancy(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+        this.adjustOccupancy(param3, param0, -110, param5, param1, param4, param2, 1);
         if (!param6) {
           this.field_p = (IntrusiveDeque) null;
         }
@@ -476,7 +476,7 @@ final class TileGrid implements Renderable {
         return this.getCell(-116, var4, var5);
     }
 
-    final void a(int param0, byte param1) {
+    final void removeObjectsOutsideVariant(int param0, byte param1) {
         int var4 = TombRacer.field_G ? 1 : 0;
         lk var5 = (lk) (this.field_p.first(-80));
         while (var5 != null) {

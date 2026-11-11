@@ -53,14 +53,14 @@ abstract class PrefabComponent extends RoomComponent {
         Trap var13 = null;
         var12 = TombRacer.field_G ? 1 : 0;
         try {
-          if (!this.field_z.a(param5, 14530)) {
+          if (!this.field_z.includes(param5, 14530)) {
             return;
           }
           var13 = this.createTrap(param0, 3, param2);
           if (param6 != null) {
             var13.setAttachedToParent(true, 11468);
           }
-          var13.a(this.field_z, (byte) 121);
+          var13.setVariantMask(this.field_z, (byte) 121);
           var13.setLocalX(1, this.x);
           if (!param1) {
             this.field_A = (Trap) null;
@@ -68,7 +68,7 @@ abstract class PrefabComponent extends RoomComponent {
           var13.setLocalY(this.y, -19879);
           var13.setAngle(this.angle + param4, (byte) 110);
           var13.addHeight(10, param3);
-          var13.z(1);
+          var13.reinsertIntoCollisionGrid(1);
           for (var9 = 0; this.mounts.length > var9; var9++) {
             var10 = this.mounts[var9];
             var11 = var10.getChild(-89);

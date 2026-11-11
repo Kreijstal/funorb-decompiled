@@ -35,11 +35,11 @@ final class RevolverItemComponent extends ItemComponent {
           var5 = new WeaponItemBehaviour(param2, param0);
           var5.a(TextureOperator.a(4, -1), 5);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
-          var4.l(param1, 146366800);
+          var4.setStatCategory(param1, 146366800);
           var6 = rm.field_a;
           var7 = (ItemModel) (var6.createModel(12, 104));
           var7.b((byte) 74, 4);
-          var4.a(var5, (byte) 124, var7);
+          var4.addModel(var5, (byte) 124, var7);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

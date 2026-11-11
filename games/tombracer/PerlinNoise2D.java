@@ -291,7 +291,7 @@ final class PerlinNoise2D extends TextureOperator {
         return var4;
     }
 
-    final static void a(g[] param0, int param1, int param2, int param3) {
+    final static void a(RoomDefinition[] param0, int param1, int param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         if (param1 >= param2) {

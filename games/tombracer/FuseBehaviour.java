@@ -148,7 +148,7 @@ final class FuseBehaviour extends Behaviour {
           for (var3_int = 0; var3_int < 6; var3_int++) {
             if (this.field_x.get(0, var3_int) ||
               this.field_q.get(0, var3_int)) {
-              param1.a(26492, true, var3_int);
+              param1.setHandlesEffectType(26492, true, var3_int);
             }
           }
           return;

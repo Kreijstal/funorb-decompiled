@@ -39,9 +39,9 @@ final class jk extends IntrusiveNode {
     final static int a(byte param0, BitSet param1, boolean param2) {
         int var3_int = 0;
         int var4 = 0;
-        g[] var5 = null;
+        RoomDefinition[] var5 = null;
         int var6 = 0;
-        g var7 = null;
+        RoomDefinition var7 = null;
         int var8 = 0;
         int stackIn_3_0 = 0;
         int stackIn_17_0 = 0;
@@ -119,9 +119,9 @@ final class jk extends IntrusiveNode {
     final static int $cfr$intArgs$a$922851b022bc(int param0, BitSet param1, boolean param2) {
         int var3_int = 0;
         int var4 = 0;
-        g[] var5 = null;
+        RoomDefinition[] var5 = null;
         int var6 = 0;
-        g var7 = null;
+        RoomDefinition var7 = null;
         int var8 = 0;
         int stackIn_3_0 = 0;
         int stackIn_17_0 = 0;

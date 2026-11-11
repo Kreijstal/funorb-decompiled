@@ -150,7 +150,7 @@ final class qna {
                 DefaultTileRenderable.field_g[var5] = ClientMemoryVertexArray.field_c[var5];
               }
               DefaultTileRenderable.field_g[var4 - 3] = "";
-              DefaultTileRenderable.field_g[-2 + var4] = sqa.field_a;
+              DefaultTileRenderable.field_g[-2 + var4] = SoundEventQueue.field_a;
               CoinItemComponent.field_H[var4 - 2] = 0;
               SpriteTileOperator.field_w[0] = 3;
               DefaultTileRenderable.field_g[var4 - 1] = BitPacketBuffer.field_j;

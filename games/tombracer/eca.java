@@ -18,7 +18,7 @@ final class eca {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!sqa.a(param1, 83, param3, param4, param2)) {
+          if (!SoundEventQueue.a(param1, 83, param3, param4, param2)) {
             return false;
           }
           var6_int = 17 / ((-37 - param0) / 62);

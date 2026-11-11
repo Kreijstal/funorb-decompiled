@@ -103,7 +103,7 @@ final class RoomEffectTraps {
           if (param1 >= -11) {
             field_b = -58;
           }
-          param5.a(param2, false, param3, param4, fm.a(false, param6), fm.a(false, param0));
+          param5.a(param2, false, param3, param4, SoundEvent.a(false, param6), SoundEvent.a(false, param0));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ts.M(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }
@@ -213,7 +213,7 @@ final class RoomEffectTraps {
               } else {
                 stackIn_35_6 = -(32 * var11) + (var9 - 16);
               }
-              if (((Room) (Object) stackIn_34_0).a((Collidable) (stackIn_34_1), stackIn_34_2, stackIn_34_3, stackIn_34_4, stackIn_34_5, stackIn_35_6 << 16, false, (WorldBody) null, 2097152)) {
+              if (((Room) (Object) stackIn_34_0).isBoxBlocked((Collidable) (stackIn_34_1), stackIn_34_2, stackIn_34_3, stackIn_34_4, stackIn_34_5, stackIn_35_6 << 16, false, (WorldBody) null, 2097152)) {
                 continue;
               }
               var12 = 1;
@@ -258,7 +258,7 @@ final class RoomEffectTraps {
               } else {
                 stackIn_15_5 = var11 * 32 + 16;
               }
-              if (((Room) (Object) stackIn_14_0).a((Collidable) (stackIn_14_1), stackIn_14_2, stackIn_14_3, stackIn_14_4, stackIn_15_5 << 16, 16 + 32 * var13 << 16, false, (WorldBody) null, 2097152)) {
+              if (((Room) (Object) stackIn_14_0).isBoxBlocked((Collidable) (stackIn_14_1), stackIn_14_2, stackIn_14_3, stackIn_14_4, stackIn_15_5 << 16, 16 + 32 * var13 << 16, false, (WorldBody) null, 2097152)) {
                 continue;
               }
               var12 = 1;
@@ -309,7 +309,7 @@ final class RoomEffectTraps {
           this.a(-57, -122, (byte) 28, -22);
         }
         this.field_a = !this.field_a ? true : false;
-        this.room.b(7, true);
+        this.room.mirrorRoom(7, true);
     }
 
     public static void releaseStatics(int param0) {
@@ -381,7 +381,7 @@ final class RoomEffectTraps {
               if (4096 > var15 * var15 + var14 * var14) {
                 continue;
               }
-              stackIn_17_0 = (!this.room.a((Collidable) null, var7, 2, 1, var13, var12, false, (WorldBody) null, var6)) ? 0 : 1;
+              stackIn_17_0 = (!this.room.isBoxBlocked((Collidable) null, var7, 2, 1, var13, var12, false, (WorldBody) null, var6)) ? 0 : 1;
               var11 = stackIn_17_0;
               if (var11 != 0) {
                 continue;

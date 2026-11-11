@@ -26,7 +26,7 @@ final class WallModel extends TrapModel {
         }
     }
 
-    final int m(byte param0) {
+    final int getOccupancyLayer(byte param0) {
         if (param0 > -63) {
           this.field_q = 91;
         }
@@ -61,7 +61,7 @@ final class WallModel extends TrapModel {
             var4 = (RenderScene) null;
             this.addToLayer((byte) -105, 15, (RenderScene) null);
           }
-          stackIn_11_0 = this.getRoom(40).e(true).nextBounded(100, 0);
+          stackIn_11_0 = this.getRoom(40).getSeededRandom(true).nextBounded(100, 0);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -87,26 +87,26 @@ final class WallModel extends TrapModel {
         Trap var3;
         int var4;
         WallTile var5;
-        w var6;
+        SoundEventPlayer var6;
         super.tick(param0 ^ 0);
         if (param0 != -1) {
           var5 = (WallTile) null;
           discarded$1 = this.b((WallTile) null, (byte) 19);
         }
-        var6 = (w) (this.getRoom(param0 + 58).field_G);
+        var6 = (SoundEventPlayer) (this.getRoom(param0 + 58).soundQueue);
         if (var6 == null) {
           return;
         }
         if (this.body instanceof Trap) {
           var3 = (Trap) (this.body);
-          var4 = var3.d(param0 + 51, false) ? 1 : 0;
+          var4 = var3.hasMovedThisTick(param0 + 51, false) ? 1 : 0;
           if (this.field_o == null &&
             var4 != 0) {
-            this.field_o = var6.a(new fm(17, this.getRenderX((byte) -105), this.getRenderY((byte) 94), this.getRenderZ((byte) -114)), -58);
+            this.field_o = var6.play(new SoundEvent(17, this.getRenderX((byte) -105), this.getRenderY((byte) 94), this.getRenderZ((byte) -114)), -58);
           } else {
             if (this.field_o != null &&
               var4 == 0) {
-              var6.a(new fm(18, this.getRenderX((byte) 101), this.getRenderY((byte) 109), this.getRenderZ((byte) -89)), -58);
+              var6.play(new SoundEvent(18, this.getRenderX((byte) 101), this.getRenderY((byte) 109), this.getRenderZ((byte) -89)), -58);
               this.field_o.a(14, var6);
               this.field_o = null;
             }
@@ -117,7 +117,7 @@ final class WallModel extends TrapModel {
         }
     }
 
-    final int f(byte param0) {
+    final int getWideOccupancyMode(byte param0) {
         if (this.k(10)) {
           return -1;
         }
@@ -358,12 +358,12 @@ final class WallModel extends TrapModel {
           }
         }
         if (param0 <= 0) {
-          this.m((byte) 122);
+          this.getOccupancyLayer((byte) 122);
         }
     }
 
     private final boolean k(int param0) {
-        if (this.body.b(true)) {
+        if (this.body.isMobile(true)) {
           return true;
         }
         if (this.body instanceof Trap) {
@@ -521,27 +521,27 @@ final class WallModel extends TrapModel {
                 var20 = stackIn_51_0;
               }
               if (var19 == 0) {
-                stackIn_58_0 = (var38.a(var23 - 2097152, 2097152, var24, 2097152, true, 0, (byte) 102)) ? 1 : 0;
+                stackIn_58_0 = (var38.isTileBoxOccupied(var23 - 2097152, 2097152, var24, 2097152, true, 0, (byte) 102)) ? 1 : 0;
               } else {
                 stackIn_58_0 = 1;
               }
               var19 = stackIn_58_0;
               if (var20 == 0) {
-                stackIn_66_0 = (var38.a(2097152 + var23, 2097152, var24, 2097152, true, 0, (byte) -99)) ? 1 : 0;
+                stackIn_66_0 = (var38.isTileBoxOccupied(2097152 + var23, 2097152, var24, 2097152, true, 0, (byte) -99)) ? 1 : 0;
                 var20 = stackIn_66_0;
               } else {
                 stackIn_61_0 = 1;
                 var20 = stackIn_61_0;
               }
               if (var21 == 0) {
-                stackIn_75_0 = (var38.a(var23, 2097152, var24 - 2097152, 2097152, true, 0, (byte) -103)) ? 1 : 0;
+                stackIn_75_0 = (var38.isTileBoxOccupied(var23, 2097152, var24 - 2097152, 2097152, true, 0, (byte) -103)) ? 1 : 0;
                 var21 = stackIn_75_0;
               } else {
                 stackIn_70_0 = 1;
                 var21 = stackIn_70_0;
               }
               if (var22 == 0) {
-                stackIn_84_0 = (var38.a(var23, 2097152, var24 + 2097152, 2097152, true, 0, (byte) 72)) ? 1 : 0;
+                stackIn_84_0 = (var38.isTileBoxOccupied(var23, 2097152, var24 + 2097152, 2097152, true, 0, (byte) 72)) ? 1 : 0;
                 var22 = stackIn_84_0;
               } else {
                 stackIn_79_0 = 1;
@@ -584,7 +584,7 @@ final class WallModel extends TrapModel {
                 } else {
                   if (var12 >= 2097152) {
                     if (var10 >= 2097152) {
-                      stackIn_162_0 = (var38.a(var12 - 2097152, 2097152, -2097152 + var10, 2097152, true, 0, (byte) 72)) ? 1 : 0;
+                      stackIn_162_0 = (var38.isTileBoxOccupied(var12 - 2097152, 2097152, -2097152 + var10, 2097152, true, 0, (byte) 72)) ? 1 : 0;
                     } else {
                       stackIn_162_0 = 1;
                     }
@@ -600,7 +600,7 @@ final class WallModel extends TrapModel {
                 } else {
                   if (var12 <= var3 - 2097152) {
                     if (var10 >= 2097152) {
-                      stackIn_181_0 = (var38.a(var12 + 2097152, 2097152, -2097152 + var10, 2097152, true, 0, (byte) 103)) ? 1 : 0;
+                      stackIn_181_0 = (var38.isTileBoxOccupied(var12 + 2097152, 2097152, -2097152 + var10, 2097152, true, 0, (byte) 103)) ? 1 : 0;
                       var29 = stackIn_181_0;
                     } else {
                       stackIn_176_0 = 1;
@@ -618,7 +618,7 @@ final class WallModel extends TrapModel {
                 } else {
                   if (var12 >= 2097152) {
                     if (-2097152 + var4 >= var10) {
-                      stackIn_196_0 = (var38.a(-2097152 + var12, 2097152, var10 + 2097152, 2097152, true, 0, (byte) -55)) ? 1 : 0;
+                      stackIn_196_0 = (var38.isTileBoxOccupied(-2097152 + var12, 2097152, var10 + 2097152, 2097152, true, 0, (byte) -55)) ? 1 : 0;
                     } else {
                       stackIn_196_0 = 1;
                     }
@@ -633,7 +633,7 @@ final class WallModel extends TrapModel {
                 } else {
                   if (-2097152 + var3 >= var12) {
                     if (var10 <= -2097152 + var4) {
-                      stackIn_209_0 = (var38.a(2097152 + var12, 2097152, var10 + 2097152, 2097152, true, 0, (byte) 55)) ? 1 : 0;
+                      stackIn_209_0 = (var38.isTileBoxOccupied(2097152 + var12, 2097152, var10 + 2097152, 2097152, true, 0, (byte) 55)) ? 1 : 0;
                     } else {
                       stackIn_209_0 = 1;
                     }
@@ -752,13 +752,13 @@ final class WallModel extends TrapModel {
                 }
                 break;
             }
-            stackIn_225_0 = (!var38.a(-2097152 + var23, 2097152, var24, 2097152, false, 2, (byte) 98)) ? 0 : 1;
+            stackIn_225_0 = (!var38.isTileBoxOccupied(-2097152 + var23, 2097152, var24, 2097152, false, 2, (byte) 98)) ? 0 : 1;
             var28 = stackIn_225_0;
-            stackIn_228_0 = (!var38.a(var23 + 2097152, 2097152, var24, 2097152, false, 2, (byte) -108)) ? 0 : 1;
+            stackIn_228_0 = (!var38.isTileBoxOccupied(var23 + 2097152, 2097152, var24, 2097152, false, 2, (byte) -108)) ? 0 : 1;
             var29 = stackIn_228_0;
-            stackIn_231_0 = (!var38.a(var23, 2097152, var24 - 2097152, 2097152, false, 2, (byte) 118)) ? 0 : 1;
+            stackIn_231_0 = (!var38.isTileBoxOccupied(var23, 2097152, var24 - 2097152, 2097152, false, 2, (byte) 118)) ? 0 : 1;
             var30 = stackIn_231_0;
-            stackIn_234_0 = (!var38.a(var23, 2097152, 2097152 + var24, 2097152, false, 2, (byte) 116)) ? 0 : 1;
+            stackIn_234_0 = (!var38.isTileBoxOccupied(var23, 2097152, 2097152 + var24, 2097152, false, 2, (byte) 116)) ? 0 : 1;
             var31 = stackIn_234_0;
             if (var28 == 0) {
               if (var29 == 0) {
@@ -815,7 +815,7 @@ final class WallModel extends TrapModel {
                 var19 != 0) {
                 stackIn_273_0 = 0;
               } else {
-                stackIn_273_0 = (!var38.a(var23 - 2097152, 2097152, var24 - 2097152, 2097152, true, 0, (byte) 98)) ? 0 : 1;
+                stackIn_273_0 = (!var38.isTileBoxOccupied(var23 - 2097152, 2097152, var24 - 2097152, 2097152, true, 0, (byte) 98)) ? 0 : 1;
               }
             } else {
               stackIn_273_0 = 0;
@@ -826,7 +826,7 @@ final class WallModel extends TrapModel {
                 var20 != 0) {
                 stackIn_282_0 = 0;
               } else {
-                stackIn_282_0 = (!var38.a(2097152 + var23, 2097152, -2097152 + var24, 2097152, true, 0, (byte) 79)) ? 0 : 1;
+                stackIn_282_0 = (!var38.isTileBoxOccupied(2097152 + var23, 2097152, -2097152 + var24, 2097152, true, 0, (byte) 79)) ? 0 : 1;
               }
             } else {
               stackIn_282_0 = 0;
@@ -837,7 +837,7 @@ final class WallModel extends TrapModel {
                 var19 != 0) {
                 stackIn_291_0 = 0;
               } else {
-                stackIn_291_0 = (!var38.a(var23 - 2097152, 2097152, 2097152 + var24, 2097152, true, 0, (byte) -88)) ? 0 : 1;
+                stackIn_291_0 = (!var38.isTileBoxOccupied(var23 - 2097152, 2097152, 2097152 + var24, 2097152, true, 0, (byte) -88)) ? 0 : 1;
               }
             } else {
               stackIn_291_0 = 0;
@@ -848,7 +848,7 @@ final class WallModel extends TrapModel {
                 var20 != 0) {
                 stackIn_300_0 = 0;
               } else {
-                stackIn_300_0 = (!var38.a(var23 + 2097152, 2097152, 2097152 + var24, 2097152, true, 0, (byte) 117)) ? 0 : 1;
+                stackIn_300_0 = (!var38.isTileBoxOccupied(var23 + 2097152, 2097152, 2097152 + var24, 2097152, true, 0, (byte) 117)) ? 0 : 1;
               }
             } else {
               stackIn_300_0 = 0;
@@ -950,22 +950,22 @@ final class WallModel extends TrapModel {
               if (var2 == 0) {
                 for (var15 = 0; var15 < 5; var15++) {
                   var16 = -2 + var15;
-                  var23[var15][0] = var3.a(var7 + 2097152 * var16, 2097152, -var4 + var8, 2097152, true, 0, (byte) -39);
+                  var23[var15][0] = var3.isTileBoxOccupied(var7 + 2097152 * var16, 2097152, -var4 + var8, 2097152, true, 0, (byte) -39);
                   if (var23[var15][0]) {
                     var14++;
                   }
-                  var23[var15][4] = var3.a(2097152 * var16 + var7, 2097152, var8 + var4, 2097152, true, 0, (byte) 91);
+                  var23[var15][4] = var3.isTileBoxOccupied(2097152 * var16 + var7, 2097152, var8 + var4, 2097152, true, 0, (byte) 91);
                   if (var23[var15][4]) {
                     var14++;
                   }
                 }
                 for (var15 = 0; var15 < 3; var15++) {
                   var16 = var15 - 1;
-                  var23[0][1 + var15] = var3.a(-var4 + var7, 2097152, 2097152 * var16 + var8, 2097152, true, 0, (byte) -20);
+                  var23[0][1 + var15] = var3.isTileBoxOccupied(-var4 + var7, 2097152, 2097152 * var16 + var8, 2097152, true, 0, (byte) -20);
                   if (var23[0][var15 + 1]) {
                     var14++;
                   }
-                  var23[4][1 + var15] = var3.a(var7 + var4, 2097152, var8 + 2097152 * var16, 2097152, true, 0, (byte) 88);
+                  var23[4][1 + var15] = var3.isTileBoxOccupied(var7 + var4, 2097152, var8 + 2097152 * var16, 2097152, true, 0, (byte) 88);
                   if (var23[4][var15 + 1]) {
                     var14++;
                   }

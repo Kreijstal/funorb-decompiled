@@ -92,14 +92,14 @@ final class RopeBridgeComponent extends PrefabComponent {
           var7 = new Trap(param2, param0);
           if (this.typeId == 46) {
             var6.setSize((byte) -11, 524288, this.width);
-            var6.b(437453352, -1835008, 0);
+            var6.setLocalPosition(437453352, -1835008, 0);
             var7.setSize((byte) -11, 524288, this.width);
-            var7.b(437453352, 1835008, 0);
+            var7.setLocalPosition(437453352, 1835008, 0);
           } else {
             var6.setSize((byte) -11, this.height, 524288);
-            var6.b(437453352, 0, -1835008);
+            var6.setLocalPosition(437453352, 0, -1835008);
             var7.setSize((byte) -11, this.height, 524288);
-            var7.b(437453352, 0, 1835008);
+            var7.setLocalPosition(437453352, 0, 1835008);
           }
           var6.setFloating((byte) 17, false);
           var6.setObstructionLevel(3, param1 - 3);
@@ -118,7 +118,7 @@ final class RopeBridgeComponent extends PrefabComponent {
           var10 = rm.field_a;
           var11 = (BridgeModel) (var10.createModel(19, param1 ^ 106));
           var11.b((byte) 80, 0);
-          var13.a(var5, (byte) 124, var11);
+          var13.addModel(var5, (byte) 124, var11);
           stackIn_8_0 = var13;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -63,7 +63,7 @@ final class FleeLocomotor extends Locomotor {
         var3 = -103 / ((-69 - param0) / 42);
         this.field_s.x = var14.getX(3);
         this.field_s.y = var14.getY(9648);
-        this.trap.a(this.field_s, 117);
+        this.trap.toParentSpace(this.field_s, 117);
         var4 = this.field_s.x - this.trap.getLocalX(25745);
         var5 = this.field_s.y - this.trap.getLocalY(false);
         var6 = (var5 >> 16) * (var5 >> 16) + (var4 >> 16) * (var4 >> 16);

@@ -467,7 +467,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
-                      if (sqa.a((CharSequence) ((Object) var4), -3) &&
+                      if (SoundEventQueue.a((CharSequence) ((Object) var4), -3) &&
                         !(WhiteLightSensorComponent.parseDecimalInt((CharSequence) ((Object) var4), (byte) 70) >= 10)) {
                         this.reportError(-6738, "wrongjava");
                         decompiledFrameRemainder3 = (var5 != 0);
@@ -528,7 +528,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 this.recreateCanvas((byte) 68);
                 gn.field_C = LegacyOpenGlTurbulentTextureEffect.a(117, mma.field_a, (java.awt.Component) ((Object) nma.field_l), qf.field_i);
                 this.initializeGame(-71);
-                cq.field_a = bca.a(0);
+                cq.field_a = VariantMask.a(0);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (BlockModel.field_t != 0L) {

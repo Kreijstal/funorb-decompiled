@@ -43,9 +43,9 @@ abstract class Transform3D {
         qg[] var10 = null;
         int var3 = 0;
         qg var4 = null;
-        g[] var5 = null;
+        RoomDefinition[] var5 = null;
         int var6 = 0;
-        g var7 = null;
+        RoomDefinition var7 = null;
         byte[] var14 = null;
         int var9 = TombRacer.field_G ? 1 : 0;
         try {

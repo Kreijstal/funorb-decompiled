@@ -106,7 +106,7 @@ final class GasTrapComponent extends PrefabComponent {
           var8 = param2.getWidth((byte) -86);
           var9 = param2.getHeight(-127);
           var7.setSize((byte) -11, var9, var8);
-          var7.b(437453352, var9 / 2, var8 / 2);
+          var7.setLocalPosition(437453352, var9 / 2, var8 / 2);
           var7.setWeight((byte) -3, 0);
           var7.setFloating((byte) 17, true);
           var10 = new SimpleBlockBehaviour(param2, true);
@@ -118,7 +118,7 @@ final class GasTrapComponent extends PrefabComponent {
           var6.getSwitchState((byte) -115).getLinks(1).setTargets(9, new Switchable[]{(Switchable) ((Object) var7)});
           var11 = rm.field_a;
           var12 = (GasVentModel) (var11.createModel(20, 83));
-          var13.a(var6, (byte) 124, var12);
+          var13.addModel(var6, (byte) 124, var12);
           stackIn_1_0 = var13;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

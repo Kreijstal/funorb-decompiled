@@ -120,7 +120,7 @@ final class SnakePitBehaviour extends Behaviour {
         try {
           super.attachToTrap(param0, param1);
           this.d(param0);
-          param1.a(26492, true, 3);
+          param1.setHandlesEffectType(26492, true, 3);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sea.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

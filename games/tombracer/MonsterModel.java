@@ -42,7 +42,7 @@ final class MonsterModel extends MotionTrackingModel {
         int var3;
         int var4;
         int var5_int;
-        w var5;
+        SoundEventPlayer var5;
         nta var6;
         int var5_intLifetime1;
         super.a((byte) 51, param1);
@@ -65,18 +65,18 @@ final class MonsterModel extends MotionTrackingModel {
           var6 = new nta(this.getRenderX((byte) 40), this.getRenderY((byte) 123), this.getRenderZ((byte) -96), this.field_C, var5_intLifetime1, var3);
           var6.a((byte) -113, this.body.getRoom((byte) -109).getScene((byte) -118), this.getSceneLayer((byte) -99));
         }
-        var5 = (w) (this.body.getRoom((byte) -99).field_G);
+        var5 = (SoundEventPlayer) (this.body.getRoom((byte) -99).soundQueue);
         if (var5 == null) {
           return;
         }
         if (param1 == 3) {
-          var5.a(new fm(78, this.getRenderX((byte) 71), this.getRenderY((byte) 106), this.getRenderZ((byte) -91)), -58);
+          var5.play(new SoundEvent(78, this.getRenderX((byte) 71), this.getRenderY((byte) 106), this.getRenderZ((byte) -91)), -58);
           return;
         }
         if (param1 != 2) {
           return;
         }
-        var5.a(new fm(80, this.getRenderX((byte) 90), this.getRenderY((byte) 94), this.getRenderZ((byte) -108)), -58);
+        var5.play(new SoundEvent(80, this.getRenderX((byte) 90), this.getRenderY((byte) 94), this.getRenderZ((byte) -108)), -58);
         return;
     }
 
@@ -158,7 +158,7 @@ final class MonsterModel extends MotionTrackingModel {
         int var3;
         int var4;
         int var5_int;
-        w var5;
+        SoundEventPlayer var5;
         int var7;
         int var8;
         Trap var9;
@@ -187,7 +187,7 @@ final class MonsterModel extends MotionTrackingModel {
           this.field_C.a(1, false, (byte) -114, var4);
         }
         this.field_C.a(param0 ^ param0);
-        var5 = (w) (this.body.getRoom((byte) -79).field_G);
+        var5 = (SoundEventPlayer) (this.body.getRoom((byte) -79).soundQueue);
         if (var5 == null) {
           return;
         }
@@ -202,7 +202,7 @@ final class MonsterModel extends MotionTrackingModel {
               var7 = var12.intersectsRect((byte) 110, var12.getPlayer(param0 ^ -4445).getY(param0 ^ -13502), var12.getPlayer(66).getX(param0 ^ -4367), var12.getPlayer(-128).getHeight((byte) 55), var12.getPlayer(-120).getWidth(-125)) ? 1 : 0;
               if (var7 != 0 &&
                 !this.field_w) {
-                var5.a(new fm(81, this.getRenderX((byte) 56), this.getRenderY((byte) 99), this.getRenderZ((byte) -117)), -58);
+                var5.play(new SoundEvent(81, this.getRenderX((byte) 56), this.getRenderY((byte) 99), this.getRenderZ((byte) -117)), -58);
                 this.field_w = true;
               }
               if (var7 == 0 &&
@@ -211,7 +211,7 @@ final class MonsterModel extends MotionTrackingModel {
               }
               return;
             }
-            var5.a(new fm(79, this.getRenderX((byte) -112), this.getRenderY((byte) 121), this.getRenderZ((byte) -119)), param0 + 4308);
+            var5.play(new SoundEvent(79, this.getRenderX((byte) -112), this.getRenderY((byte) 121), this.getRenderZ((byte) -119)), param0 + 4308);
             this.field_y = true;
           }
           var13 = (Trap) (this.body);
@@ -227,7 +227,7 @@ final class MonsterModel extends MotionTrackingModel {
               }
               return;
             }
-            var5.a(new fm(81, this.getRenderX((byte) 56), this.getRenderY((byte) 99), this.getRenderZ((byte) -117)), -58);
+            var5.play(new SoundEvent(81, this.getRenderX((byte) 56), this.getRenderY((byte) 99), this.getRenderZ((byte) -117)), -58);
             this.field_w = true;
           }
           if (var7Lifetime4 != 0) {
@@ -240,11 +240,11 @@ final class MonsterModel extends MotionTrackingModel {
           return;
         }
         if (this.field_z == 20) {
-          var5.a(new fm(77, this.getRenderX((byte) 49), this.getRenderY((byte) 108), this.getRenderZ((byte) -87)), -58);
+          var5.play(new SoundEvent(77, this.getRenderX((byte) 49), this.getRenderY((byte) 108), this.getRenderZ((byte) -87)), -58);
           this.field_z = 0;
           if (!this.field_y &&
             this.body.isFallingIntoPit(-1)) {
-            var5.a(new fm(79, this.getRenderX((byte) -112), this.getRenderY((byte) 121), this.getRenderZ((byte) -119)), param0 + 4308);
+            var5.play(new SoundEvent(79, this.getRenderX((byte) -112), this.getRenderY((byte) 121), this.getRenderZ((byte) -119)), param0 + 4308);
             this.field_y = true;
           }
           var11 = (Trap) (this.body);
@@ -254,7 +254,7 @@ final class MonsterModel extends MotionTrackingModel {
           var7Lifetime1 = var11.intersectsRect((byte) 110, var11.getPlayer(param0 ^ -4445).getY(param0 ^ -13502), var11.getPlayer(66).getX(param0 ^ -4367), var11.getPlayer(-128).getHeight((byte) 55), var11.getPlayer(-120).getWidth(-125)) ? 1 : 0;
           if (var7Lifetime1 != 0) {
             if (!this.field_w) {
-              var5.a(new fm(81, this.getRenderX((byte) 56), this.getRenderY((byte) 99), this.getRenderZ((byte) -117)), -58);
+              var5.play(new SoundEvent(81, this.getRenderX((byte) 56), this.getRenderY((byte) 99), this.getRenderZ((byte) -117)), -58);
               this.field_w = true;
             }
             if (var7Lifetime1 == 0 &&
@@ -277,7 +277,7 @@ final class MonsterModel extends MotionTrackingModel {
           var7Lifetime2 = var9.intersectsRect((byte) 110, var9.getPlayer(param0 ^ -4445).getY(param0 ^ -13502), var9.getPlayer(66).getX(param0 ^ -4367), var9.getPlayer(-128).getHeight((byte) 55), var9.getPlayer(-120).getWidth(-125)) ? 1 : 0;
           if (var7Lifetime2 != 0) {
             if (!this.field_w) {
-              var5.a(new fm(81, this.getRenderX((byte) 56), this.getRenderY((byte) 99), this.getRenderZ((byte) -117)), -58);
+              var5.play(new SoundEvent(81, this.getRenderX((byte) 56), this.getRenderY((byte) 99), this.getRenderZ((byte) -117)), -58);
               this.field_w = true;
             }
             if (var7Lifetime2 == 0 &&
@@ -292,7 +292,7 @@ final class MonsterModel extends MotionTrackingModel {
           return;
         }
         if (this.body.isFallingIntoPit(-1)) {
-          var5.a(new fm(79, this.getRenderX((byte) -112), this.getRenderY((byte) 121), this.getRenderZ((byte) -119)), param0 + 4308);
+          var5.play(new SoundEvent(79, this.getRenderX((byte) -112), this.getRenderY((byte) 121), this.getRenderZ((byte) -119)), param0 + 4308);
           this.field_y = true;
         }
         var10 = (Trap) (this.body);
@@ -306,7 +306,7 @@ final class MonsterModel extends MotionTrackingModel {
           }
         } else {
           if (!this.field_w) {
-            var5.a(new fm(81, this.getRenderX((byte) 56), this.getRenderY((byte) 99), this.getRenderZ((byte) -117)), -58);
+            var5.play(new SoundEvent(81, this.getRenderX((byte) 56), this.getRenderY((byte) 99), this.getRenderZ((byte) -117)), -58);
             this.field_w = true;
           }
           if (var7Lifetime3 == 0 &&

@@ -139,7 +139,7 @@ final class PlatformComponent extends PrefabComponent {
           if (60 != this.typeId) {
             var7 = (PlatformModel) (var6.createModel(17, param1 ^ 93));
             var7.b(2, (byte) 23);
-            var4.a(var5, (byte) 124, var7);
+            var4.addModel(var5, (byte) 124, var7);
           }
           stackIn_5_0 = var4;
           return stackIn_5_0;

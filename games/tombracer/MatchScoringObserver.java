@@ -189,7 +189,7 @@ class MatchScoringObserver extends SimulationObserver {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          var3_int = param0.w(17825792);
+          var3_int = param0.getDestroyStatType(17825792);
           if (var3_int == -1) {
             return;
           }
@@ -248,10 +248,10 @@ class MatchScoringObserver extends SimulationObserver {
             var6 = var5;
             for (var7 = 0; var7 < var6.length; var7++) {
               var8 = var6[var7];
-              if (var8.E((byte) 3) == 1) {
+              if (var8.getStatCategory((byte) 3) == 1) {
                 PenaltyNotice.a((byte) -32, var4_int);
               }
-              if (2 == var8.E((byte) 3)) {
+              if (2 == var8.getStatCategory((byte) 3)) {
                 ComponentMount.a(13, var4_int);
               }
             }
@@ -347,7 +347,7 @@ class MatchScoringObserver extends SimulationObserver {
             iqa.field_c.a(0, var9_ref_jha);
             var10 = param0.getRoomTreasureScore(-7991);
             if (var10 > 0) {
-              dupTemp$0 = RewardChoicePhase.createTextMessage(-96, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(82, bca.field_c, new String[]{String.valueOf(var10)}));
+              dupTemp$0 = RewardChoicePhase.createTextMessage(-96, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(82, VariantMask.field_c, new String[]{String.valueOf(var10)}));
               var12 = dupTemp$0;
               var9_ref_jhaLifetime1 = dupTemp$0;
               iqa.field_c.a(3, 0, var12);

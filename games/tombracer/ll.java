@@ -29,11 +29,11 @@ final class ll {
 
     final static int a(int param0, int param1) {
         int var3 = 0;
-        g[] var2 = null;
+        RoomDefinition[] var2 = null;
         RuntimeException var2_ref = null;
-        g var4 = null;
+        RoomDefinition var4 = null;
         int var5 = 0;
-        g[] var6 = null;
+        RoomDefinition[] var6 = null;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         RuntimeException decompiledCaughtException = null;

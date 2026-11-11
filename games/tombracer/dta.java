@@ -309,7 +309,7 @@ final class dta {
                     }
                     if (var35[var36_int].isPushable((byte) -55, false) &&
                       var37 != 0 &&
-                      0 != var35[var36_int].w(17825792)) {
+                      0 != var35[var36_int].getDestroyStatType(17825792)) {
                       var31Lifetime2 = 1;
                     }
                   }
@@ -335,20 +335,20 @@ final class dta {
                   var38 = 0;
                 }
                 if (var30Lifetime3 != 0) {
-                  var39 = var36.a((aa) null, param1, var37Lifetime1, 0, param6 - 28, fm.a(false, 0), SpriteState.field_l, var38, fm.a(false, 11903361), aca.field_g, (byte) 124, 48, 0, id.field_h, param0, 2);
+                  var39 = var36.a((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.a(false, 0), SpriteState.field_l, var38, SoundEvent.a(false, 11903361), aca.field_g, (byte) 124, 48, 0, id.field_h, param0, 2);
                   param6 = param6 - var37Lifetime1 * var39;
                 }
                 if (var32Lifetime1 != 0) {
-                  var39Lifetime1 = var36.a((aa) null, param1, var37Lifetime1, 0, param6 - 28, fm.a(false, 0), SpriteState.field_l, var38, fm.a(false, 11903361), hda.field_h, (byte) 72, 48, 0, id.field_h, param0, 2);
+                  var39Lifetime1 = var36.a((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.a(false, 0), SpriteState.field_l, var38, SoundEvent.a(false, 11903361), hda.field_h, (byte) 72, 48, 0, id.field_h, param0, 2);
                   param6 = param6 - var37Lifetime1 * var39Lifetime1;
                 } else {
                   if (var31Lifetime2 != 0) {
-                    var39Lifetime1 = var36.a((aa) null, param1, var37Lifetime1, 0, param6 - 28, fm.a(false, 0), SpriteState.field_l, var38, fm.a(false, 11903361), qja.field_k, (byte) -106, 48, 0, id.field_h, param0, 2);
+                    var39Lifetime1 = var36.a((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.a(false, 0), SpriteState.field_l, var38, SoundEvent.a(false, 11903361), qja.field_k, (byte) -106, 48, 0, id.field_h, param0, 2);
                     param6 = param6 - var39Lifetime1 * var37Lifetime1;
                   }
                 }
                 if (var33 != 0) {
-                  var39Lifetime2 = var36.a((aa) null, param1, var37Lifetime1, 0, param6 - 28, fm.a(false, 0), SpriteState.field_l, var38, fm.a(false, 11903361), bb.field_l, (byte) 107, 48, 0, id.field_h, param0, 2);
+                  var39Lifetime2 = var36.a((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.a(false, 0), SpriteState.field_l, var38, SoundEvent.a(false, 11903361), bb.field_l, (byte) 107, 48, 0, id.field_h, param0, 2);
                   param6 = param6 - var37Lifetime1 * var39Lifetime2;
                 }
               }

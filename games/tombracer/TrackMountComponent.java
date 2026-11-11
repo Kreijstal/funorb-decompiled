@@ -55,7 +55,7 @@ final class TrackMountComponent extends PrefabComponent {
           var7 = rm.field_a;
           var8 = (TrapBaseModel) (var7.createModel(16, param1 + 119));
           var8.b(param1 ^ 8021, 0);
-          var9.a(var5, (byte) 124, var8);
+          var9.addModel(var5, (byte) 124, var8);
           stackIn_7_0 = var9;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

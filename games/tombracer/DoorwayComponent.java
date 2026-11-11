@@ -81,7 +81,7 @@ final class DoorwayComponent extends PrefabComponent {
           if (var5 != 0) {
             var7_ref_fsa = new Trap(param2, param0);
             var7_ref_fsa.setSize((byte) -11, this.height / 3, this.width / 2);
-            var7_ref_fsa.b(437453352, -327680, -this.width / 4);
+            var7_ref_fsa.setLocalPosition(437453352, -327680, -this.width / 4);
             var7_ref_fsa.setObstructionLevel(3, 0);
             var8 = new SimpleBlockBehaviour(param2, param0);
             var7_ref_fsa.addBehaviour((byte) 83, (Behaviour) (var8));
@@ -94,7 +94,7 @@ final class DoorwayComponent extends PrefabComponent {
             var7_ref_fsa.addLocomotor(var10, 0);
             var11 = new Trap(param2, param0);
             var11.setSize((byte) -11, this.height / 3, this.width / 2);
-            var11.b(437453352, -327680, this.width / 4);
+            var11.setLocalPosition(437453352, -327680, this.width / 4);
             var11.setObstructionLevel(3, 0);
             var12 = new SimpleBlockBehaviour(param2, param0);
             var11.addBehaviour((byte) 83, (Behaviour) (var12));
@@ -119,11 +119,11 @@ final class DoorwayComponent extends PrefabComponent {
             }
             var17_ref = (DoorwayModel) (var6.createModel(6, 87));
             var17_ref.a(var15, true);
-            var7_ref_fsa.a((TrapPart) null, (byte) 124, var17_ref);
+            var7_ref_fsa.addModel((TrapPart) null, (byte) 124, var17_ref);
             var7_ref_fsa.addHeight(param1 + 7, 1048576);
             var18_ref = (DoorwayModel) (var6.createModel(6, 101));
             var18_ref.a(var16, true);
-            var11.a((TrapPart) null, (byte) 124, var18_ref);
+            var11.addModel((TrapPart) null, (byte) 124, var18_ref);
             var11.addHeight(param1 + 7, 1048576);
           }
           if (this.field_H != param1) {
@@ -133,7 +133,7 @@ final class DoorwayComponent extends PrefabComponent {
           }
           var21_ref = (DoorwayModel) (var6.createModel(6, 126));
           var21_ref.a(var7, true);
-          var20.a((TrapPart) null, (byte) 124, var21_ref);
+          var20.addModel((TrapPart) null, (byte) 124, var21_ref);
           stackIn_23_0 = var20;
           return stackIn_23_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

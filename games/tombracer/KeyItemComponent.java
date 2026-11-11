@@ -33,7 +33,7 @@ final class KeyItemComponent extends ItemComponent {
           var6 = rm.field_a;
           var7 = (ItemModel) (var6.createModel(12, param1 + 94));
           var7.b((byte) 123, param1);
-          var4.a(var5, (byte) 124, var7);
+          var4.addModel(var5, (byte) 124, var7);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

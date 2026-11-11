@@ -31,8 +31,8 @@ final class qha extends CourseGenerator {
         int var9;
         int var10;
         int var12;
-        g var13;
-        g var14;
+        RoomDefinition var13;
+        RoomDefinition var14;
         int var8Lifetime1;
         int var9Lifetime1;
         int var10Lifetime1;

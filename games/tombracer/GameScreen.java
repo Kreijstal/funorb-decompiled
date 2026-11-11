@@ -15,7 +15,7 @@ abstract class GameScreen {
         String var4Lifetime2;
         String var4Lifetime3;
         if (MenuEntry.field_h == 9) {
-          if (!sqa.a(uba.field_f, 110, fp.field_d, tba.field_g, CoinItemComponent.field_I)) {
+          if (!SoundEventQueue.a(uba.field_f, 110, fp.field_d, tba.field_g, CoinItemComponent.field_I)) {
             if (MenuEntry.field_h == 10) {
               if (var3 != 0) {
                 return false;

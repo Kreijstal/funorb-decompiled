@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bca {
+final class VariantMask {
     static ToolkitSprite field_d;
-    private FlagSet field_b;
+    private FlagSet flags;
     static String field_c;
     static int[] field_a;
 
@@ -23,18 +23,18 @@ final class bca {
     final static GameClock a(int param0) {
         if (param0 != 0) {
           vb var2 = (vb) null;
-          bca.a((vb) null, (byte) 31);
+          VariantMask.a((vb) null, (byte) 31);
           return (GameClock) ((Object) new NanoTickClock());
         }
         return (GameClock) ((Object) new NanoTickClock());
     }
 
-    private final void a(byte param0) {
-        this.field_b = new FlagSet(3);
+    private final void init(byte param0) {
+        this.flags = new FlagSet(3);
         if (param0 != -101) {
           return;
         }
-        this.field_b.setAll(true, 106);
+        this.flags.setAll(true, 106);
     }
 
     final static void b(byte param0) {
@@ -44,9 +44,9 @@ final class bca {
         }
     }
 
-    final void a(byte param0, BitPacketBuffer param1) {
+    final void encode(byte param0, BitPacketBuffer param1) {
         try {
-          this.field_b.encode(param1, (byte) -120);
+          this.flags.encode(param1, (byte) -120);
           if (param0 >= -13) {
             field_d = (ToolkitSprite) null;
           }
@@ -59,28 +59,28 @@ final class bca {
         try {
           PitModel.field_n.b(param0.field_f);
           if (param1 != -42) {
-            bca.b((byte) -90);
+            VariantMask.b((byte) -90);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "bca.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final boolean a(int param0, int param1) {
+    final boolean includes(int param0, int param1) {
         if (param1 != 14530) {
           return false;
         }
         if (-1 == param0) {
           return true;
         }
-        return this.field_b.get(0, param0);
+        return this.flags.get(0, param0);
     }
 
-    public bca() {
-        this.a((byte) -101);
+    public VariantMask() {
+        this.init((byte) -101);
     }
 
-    bca(int param0, BitPacketBuffer param1) {
+    VariantMask(int param0, BitPacketBuffer param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -88,10 +88,10 @@ final class bca {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 8) {
-            this.a((byte) -101);
+            this.init((byte) -101);
             return;
           }
-          this.field_b = new FlagSet(3, param0, param1);
+          this.flags = new FlagSet(3, param0, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

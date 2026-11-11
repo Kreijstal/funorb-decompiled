@@ -29,7 +29,7 @@ final class DoorwayModel extends TrapModel {
         super(param0, param1, param2);
     }
 
-    final int m(byte param0) {
+    final int getOccupancyLayer(byte param0) {
         if (param0 > -63) {
           return -74;
         }
@@ -154,7 +154,7 @@ final class DoorwayModel extends TrapModel {
         field_n = null;
     }
 
-    final int f(byte param0) {
+    final int getWideOccupancyMode(byte param0) {
         int var2 = -36 % ((15 - param0) / 45);
         int var3 = this.field_q;
         if (var3 == 2) {
@@ -172,11 +172,11 @@ final class DoorwayModel extends TrapModel {
         Trap var3;
         int var5;
         Object var6;
-        w var6_ref;
+        SoundEventPlayer var6_ref;
         IntrusiveDeque var7;
         IntrusiveDeque var8;
         var6 = null;
-        var6_ref = (w) (this.getRoom(110).field_G);
+        var6_ref = (SoundEventPlayer) (this.getRoom(110).soundQueue);
         if (var6_ref == null) {
           return;
         }
@@ -218,7 +218,7 @@ final class DoorwayModel extends TrapModel {
         this.field_p = var3.getY(param0 + 9649);
         if (var5 != 0 &&
           this.field_s == null) {
-          this.field_s = var6_ref.a(new fm(55, this.getRenderX((byte) 89), this.getRenderY((byte) 117), this.getRenderZ((byte) -122)), -58);
+          this.field_s = var6_ref.play(new SoundEvent(55, this.getRenderX((byte) 89), this.getRenderY((byte) 117), this.getRenderZ((byte) -122)), -58);
           return;
         }
         if (var5 != 0) {

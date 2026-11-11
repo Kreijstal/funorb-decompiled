@@ -61,7 +61,7 @@ final class BlockComponent extends PrefabComponent {
           var12 = rm.field_a;
           var13 = (BlockModel) (var12.createModel(7, 92));
           var13.b(107, var7);
-          var15.a((TrapPart) null, (byte) 124, var13);
+          var15.addModel((TrapPart) null, (byte) 124, var13);
           stackIn_8_0 = var15;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

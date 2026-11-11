@@ -24,7 +24,7 @@ interface Collidable {
 
     public abstract int applyProjectileEffect(Effect param0, Projectile param1, int param2);
 
-    public abstract int a(boolean param0, int param1, int param2, int param3, int param4, int param5);
+    public abstract int getSurfaceCoverage(boolean param0, int param1, int param2, int param3, int param4, int param5);
 
     public abstract int getHeight(byte param0);
 

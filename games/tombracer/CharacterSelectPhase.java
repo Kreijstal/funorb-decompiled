@@ -182,7 +182,7 @@ final class CharacterSelectPhase extends MatchPhase {
         this.field_u = -1;
         try {
           this.field_m = new daa(this.matchState);
-          this.field_m.field_b = new w();
+          this.field_m.field_b = new SoundEventPlayer();
           this.field_n = new IntrusiveDeque();
           for (var3_int = 0; var3_int < 13; var3_int++) {
             var4 = aaa.a(false);
@@ -261,16 +261,16 @@ final class CharacterSelectPhase extends MatchPhase {
           PlayerModel.field_b == 1) {
           this.a(true, this.field_v);
         }
-        if (this.screen.g(0, 2)) {
+        if (this.screen.isActionJustPressed(0, 2)) {
           this.field_v = this.field_v - 7;
         }
-        if (this.screen.g(0, 3)) {
+        if (this.screen.isActionJustPressed(0, 3)) {
           this.field_v = this.field_v + 7;
         }
-        if (this.screen.g(param0 ^ param0, 0)) {
+        if (this.screen.isActionJustPressed(param0 ^ param0, 0)) {
           this.field_v = this.field_v - 1;
         }
-        if (this.screen.g(0, 1)) {
+        if (this.screen.isActionJustPressed(0, 1)) {
           this.field_v = this.field_v + 1;
         }
         if (this.field_v >= 13) {
@@ -281,8 +281,8 @@ final class CharacterSelectPhase extends MatchPhase {
         }
         while (!this.a(this.field_v, (byte) -74)) {
           stackIn_26_1 = this.field_v;
-          if (!this.screen.g(0, 0) &&
-            !this.screen.g(0, 2)) {
+          if (!this.screen.isActionJustPressed(0, 0) &&
+            !this.screen.isActionJustPressed(0, 2)) {
             stackIn_28_2 = 1;
           } else {
             stackIn_28_2 = -1;

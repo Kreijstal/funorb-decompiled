@@ -11,8 +11,8 @@ final class LegacyOpenGlShoreWaveWaterEffect extends LegacyOpenGlEffect {
         int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
-        g[] var3 = null;
-        g var5 = null;
+        RoomDefinition[] var3 = null;
+        RoomDefinition var5 = null;
         int var6 = 0;
         int stackIn_5_0 = 0;
         RuntimeException decompiledCaughtException = null;

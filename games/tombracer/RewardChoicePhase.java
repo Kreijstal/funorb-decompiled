@@ -62,7 +62,7 @@ final class RewardChoicePhase extends MatchPhase {
         this.field_v = 0;
         try {
           this.rewardChoice = this.matchState.rewardChoice;
-          this.rewardChoice.field_g = new w();
+          this.rewardChoice.field_g = new SoundEventPlayer();
           var3_int = this.rewardChoice.getRewardCount(-28958);
           this.field_q = 3;
           this.field_s = 1;
@@ -172,7 +172,7 @@ final class RewardChoicePhase extends MatchPhase {
                 if (this.isLocalPlayersTurn(true) &&
                   var10 == this.field_u &&
                   var11_int == this.field_m) {
-                  tga.field_a.c(fm.a(false, wga.field_a[this.screen.localPlayerIndex]), var12_ref_fv.field_g, var12_ref_fv.field_j, var12_ref_fv.field_c, -22971, var12_ref_fv.field_i);
+                  tga.field_a.c(SoundEvent.a(false, wga.field_a[this.screen.localPlayerIndex]), var12_ref_fv.field_g, var12_ref_fv.field_j, var12_ref_fv.field_c, -22971, var12_ref_fv.field_i);
                 }
                 var12_ref_fv.a(1);
               }
@@ -199,7 +199,7 @@ final class RewardChoicePhase extends MatchPhase {
               if (var14 >= var15) {
                 if (var14 != var15) {
                   var12 = 12303291;
-                  var11 = g.field_i;
+                  var11 = RoomDefinition.field_i;
                 } else {
                   var12 = 16777215;
                   var11 = RoundWinnerPhase.field_o;
@@ -322,19 +322,19 @@ final class RewardChoicePhase extends MatchPhase {
           PlayerModel.field_b == 1) {
           this.i(12721);
         }
-        if (this.screen.g(param0, 2)) {
+        if (this.screen.isActionJustPressed(param0, 2)) {
           this.a(0, -1, (byte) 56);
         }
-        if (this.screen.g(0, 3)) {
+        if (this.screen.isActionJustPressed(0, 3)) {
           this.a(0, 1, (byte) 80);
         }
-        if (this.screen.g(0, 0)) {
+        if (this.screen.isActionJustPressed(0, 0)) {
           this.a(-1, 0, (byte) 51);
         }
-        if (this.screen.g(0, 1)) {
+        if (this.screen.isActionJustPressed(0, 1)) {
           this.a(1, 0, (byte) 73);
         }
-        if (this.screen.g(0, 4)) {
+        if (this.screen.isActionJustPressed(0, 4)) {
           this.i(12721);
         }
     }

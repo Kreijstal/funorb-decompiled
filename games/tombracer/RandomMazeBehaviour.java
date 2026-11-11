@@ -333,7 +333,7 @@ final class RandomMazeBehaviour extends Behaviour {
         var6 = var4 / 2;
         var7 = -2 + var5;
         if (var6 == 2 * (var6 / 2)) {
-          if (this.getRoom(true).h((byte) -77)) {
+          if (this.getRoom(true).isMirrored((byte) -77)) {
             var6++;
           } else {
             var6--;
@@ -636,9 +636,9 @@ final class RandomMazeBehaviour extends Behaviour {
         if (1048576 > this.field_t) {
           this.field_t = 1048576;
         }
-        this.field_r.c((byte) 77, false);
+        this.field_r.setTopLevel((byte) 77, false);
         this.field_r.setSize((byte) -11, this.field_t, this.field_t);
-        this.field_A.c((byte) 59, false);
+        this.field_A.setTopLevel((byte) 59, false);
         this.field_A.setSize((byte) -11, this.field_t, this.field_t);
         if (!param0) {
           this.field_o = (Trap) null;

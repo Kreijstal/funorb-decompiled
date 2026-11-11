@@ -14,10 +14,10 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
     private int width;
     private int height;
     static jea field_s;
-    private bca field_o;
+    private VariantMask field_o;
     private boolean modelsBuilt;
 
-    public final int a(boolean param0, int param1, int param2, int param3, int param4, int param5) {
+    public final int getSurfaceCoverage(boolean param0, int param1, int param2, int param3, int param4, int param5) {
         if (!param0) {
           this.getFacingAngle(25);
           return 0;
@@ -29,11 +29,11 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
         int var3 = TombRacer.field_G ? 1 : 0;
         TrapModel var4 = (TrapModel) (this.models.first(-80));
         while (var4 != null) {
-          var4.i((byte) -30);
+          var4.detachBody((byte) -30);
           var4 = (TrapModel) (this.models.next(param0 ^ 112));
         }
         if (param0 != 0) {
-          this.field_o = (bca) null;
+          this.field_o = (VariantMask) null;
         }
         this.models.clear(param0 + 8);
     }
@@ -142,7 +142,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
         }
     }
 
-    public final boolean b(boolean param0) {
+    public final boolean isMobile(boolean param0) {
         if (!param0) {
           this.room = (Room) null;
           return false;
@@ -173,14 +173,14 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
         return false;
     }
 
-    public final boolean l(int param0) {
+    public final boolean isOutsideActiveVariant(int param0) {
         TrapModel var3;
         boolean stackIn_6_0 = false;
         if (param0 != 0) {
           var3 = (TrapModel) null;
           this.addModel((TrapModel) null, false);
         }
-        stackIn_6_0 = (this.room.o((byte) -82)) && (!this.b(this.room.i(param0 ^ 6029), 1569));
+        stackIn_6_0 = (this.room.hasActiveVariant((byte) -82)) && (!this.b(this.room.getActiveVariant(param0 ^ 6029), 1569));
         return stackIn_6_0;
     }
 
@@ -377,7 +377,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
         int var3 = TombRacer.field_G ? 1 : 0;
         TrapModel var4 = (TrapModel) (this.models.first(-80));
         while (var4 != null) {
-          var4.e(-41);
+          var4.refreshTileOccupancy(-41);
           var4 = (TrapModel) (this.models.next(118));
         }
         if (!param0) {
@@ -404,7 +404,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
               var5 = (TrapModel) (this.models.next(127));
             }
           }
-          this.field_o.a((byte) -79, param1);
+          this.field_o.encode((byte) -79, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "db.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -520,7 +520,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
         if (param0 != 24269) {
           this.tryPush(58, true, 114, 87, -117, -85);
         }
-        return this.room.o((byte) -82);
+        return this.room.hasActiveVariant((byte) -82);
     }
 
     public final int getCollisionId(boolean param0) {
@@ -658,7 +658,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
           WorldBody var4 = (WorldBody) null;
           this.canBeCrushedBy((WorldBody) null, -24);
         }
-        return this.field_o.a(param0, 14530);
+        return this.field_o.includes(param0, 14530);
     }
 
     final void ensureModels(int param0) {
@@ -718,7 +718,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
         RuntimeException var3 = null;
         TrapModel var5 = null;
         this.models = new IntrusiveDeque();
-        this.field_o = new bca();
+        this.field_o = new VariantMask();
         this.modelsBuilt = false;
         try {
           this.room = param0;
@@ -742,7 +742,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
           } else {
             this.n(-8195);
           }
-          this.field_o = new bca(param0.formatVersion, param1);
+          this.field_o = new VariantMask(param0.formatVersion, param1);
           fieldTemp$0 = FixedPointPerlinNoise3D.field_c;
           FixedPointPerlinNoise3D.field_c = FixedPointPerlinNoise3D.field_c + 1;
           this.field_n = fieldTemp$0;

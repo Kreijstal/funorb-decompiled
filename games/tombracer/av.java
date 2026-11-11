@@ -52,7 +52,7 @@ final class av {
           var12 = 5 + (param6 + var10);
           ClientMemoryVertexArray.field_e.a(var9_int, param1, -23776, 0, 0);
           Projectile.field_r.a(var9_int, var12, -23776, param1, 0);
-          Projectile.field_r.field_w = Player.c(Projectile.field_r.field_t, 2105376, 3, 11579568, -112, 8421504);
+          Projectile.field_r.field_w = Player.createScrollbarSprites(Projectile.field_r.field_t, 2105376, 3, 11579568, -112, 8421504);
           var12 = var12 + param1;
           SimpleMoveLocomotor.field_s.a(var9_int, var12, -23776, -(var12 / 2) + param0, -(var9_int / 2) + param8);
         } catch (RuntimeException runtimeException) {

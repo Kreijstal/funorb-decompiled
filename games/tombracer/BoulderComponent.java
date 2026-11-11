@@ -162,7 +162,7 @@ final class BoulderComponent extends PathMoverComponent {
           var11.setWeight((byte) -3, 10);
           var11.setFloating((byte) 17, false);
           var11.setPushMode(108, 2);
-          var11.l(2, 146366800);
+          var11.setStatCategory(2, 146366800);
           var5 = new ConstantEffectBehaviour(param2, param0);
           var6 = new Effect(0, 10);
           var6.b(1, 14);
@@ -175,7 +175,7 @@ final class BoulderComponent extends PathMoverComponent {
           var9 = rm.field_a;
           var10 = (HazardModel) (var9.createModel(8, param1 ^ 76));
           var10.a(false, 0);
-          var11.a(var5, (byte) 124, var10);
+          var11.addModel(var5, (byte) 124, var10);
           stackIn_1_0 = var11;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

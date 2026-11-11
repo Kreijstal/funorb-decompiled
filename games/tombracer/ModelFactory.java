@@ -401,7 +401,7 @@ final class ModelFactory implements ModelCodec {
                     if (!(param0 instanceof ItemBehaviour)) {
                       if (!(param0 instanceof mra)) {
                         if (param0 instanceof SimpleBlockBehaviour &&
-                          ((Trap) (param1)).d(true)) {
+                          ((Trap) (param1)).hasChildren(true)) {
                           var4_int = 16;
                         } else {
                           if (!(param0 instanceof TouchSwitchBehaviour) &&

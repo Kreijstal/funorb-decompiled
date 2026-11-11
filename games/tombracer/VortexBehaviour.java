@@ -80,7 +80,7 @@ final class VortexBehaviour extends Behaviour {
         for (var19 = 0; var19 < var18.length; var19++) {
           var20 = var18[var19];
           if (this.trap != var20 &&
-            !this.trap.a(var20, true)) {
+            !this.trap.ignoresCollidable(var20, true)) {
             var21 = var20.getX(3);
             var22 = var20.getY(9648);
             if (this.trap.intersectsRect((byte) 110, var22, var21, var20.getHeight((byte) 55), var20.getWidth(-40))) {

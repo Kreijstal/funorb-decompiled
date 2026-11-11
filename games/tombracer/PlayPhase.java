@@ -41,8 +41,8 @@ final class PlayPhase extends MatchPhase {
           }
         }
         if (this.screen.isSpectating((byte) 95)) {
-          if (!this.screen.g(0, 0)) {
-            if (this.screen.g(param0 - 80, 1)) {
+          if (!this.screen.isActionJustPressed(0, 0)) {
+            if (this.screen.isActionJustPressed(param0 - 80, 1)) {
               this.screen.cycleViewedPlayer(1, 17219);
             }
           } else {
@@ -80,7 +80,7 @@ final class PlayPhase extends MatchPhase {
         int var6;
         int[][] var6_ref_int____;
         int var7_int;
-        g var7;
+        RoomDefinition var7;
         int var8;
         int var9;
         int var10;
@@ -174,7 +174,7 @@ final class PlayPhase extends MatchPhase {
             var5_intLifetime1 = var5_intLifetime1 + (var7_intLifetime1 + 16);
             var7_intLifetime1Lifetime2 = 32;
             PlayerViewport.a(var7_intLifetime1Lifetime2, var6Lifetime1, (byte) 80, var4_intLifetime1, aq.field_a, var5_intLifetime1);
-            kn.field_p.a((aa) null, var6Lifetime1, 40, 0, var5_intLifetime1 + 2, fm.a(false, 0), SpriteState.field_l, 1, fm.a(false, 11903361), WhiteLightShooterComponent.field_J, (byte) 116, var7_intLifetime1Lifetime2, 0, id.field_h, var4_intLifetime1, 1);
+            kn.field_p.a((aa) null, var6Lifetime1, 40, 0, var5_intLifetime1 + 2, SoundEvent.a(false, 0), SpriteState.field_l, 1, SoundEvent.a(false, 11903361), WhiteLightShooterComponent.field_J, (byte) 116, var7_intLifetime1Lifetime2, 0, id.field_h, var4_intLifetime1, 1);
           }
           if (!param1) {
             return;
@@ -320,11 +320,11 @@ final class PlayPhase extends MatchPhase {
           }
           var6 = this.matchState.getSimulation(this.screen.localPlayerIndex, param1 - 25);
           if (param2 == 25) {
-            var6.getCurrentRoom((byte) -114).b(7, true);
+            var6.getCurrentRoom((byte) -114).mirrorRoom(7, true);
             return true;
           }
           if (param2 == 24) {
-            if (!this.screen.d(0)) {
+            if (!this.screen.hasMessageOverlay(0)) {
               var5 = new MessageOverlay(this.screen, (MessagePanel) null);
               var5.a("TITLE!", "Lalala here is some text to test with", "Press fire to continue. Or not.", (byte) 125);
               this.screen.addOverlay(var5, param1 + 655);

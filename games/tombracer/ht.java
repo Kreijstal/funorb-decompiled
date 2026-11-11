@@ -197,7 +197,7 @@ final class ht extends jea {
 
     final static int[] d(int param0, boolean param1) {
         int var5 = 0;
-        g var6 = null;
+        RoomDefinition var6 = null;
         int incrementValue$0 = 0;
         int var7 = TombRacer.field_G ? 1 : 0;
         int[] var8 = new int[rga.b(26499, param0)];
@@ -206,7 +206,7 @@ final class ht extends jea {
           field_Db = (SpriteData) null;
         }
         int var3 = 0;
-        g[] var4 = cm.field_a[param0].field_c;
+        RoomDefinition[] var4 = cm.field_a[param0].field_c;
         for (var5 = 0; var5 < var4.length; var5++) {
           var6 = var4[var5];
           incrementValue$0 = var3;

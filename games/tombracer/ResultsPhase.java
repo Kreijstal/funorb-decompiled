@@ -688,7 +688,7 @@ final class ResultsPhase extends MatchPhase {
           }
           TripBeamComponent.b(1, 0);
           this.field_s = false;
-          AccountRegistrationPanel.field_w = new w();
+          AccountRegistrationPanel.field_w = new SoundEventPlayer();
           var5 = 0.0;
           var7 = 0.0;
           var9 = 0.0;
@@ -812,7 +812,7 @@ final class ResultsPhase extends MatchPhase {
 
     final void update(int param0, boolean param1) {
         int var4 = 0;
-        w stackIn_21_0 = null;
+        SoundEventPlayer stackIn_21_0 = null;
         int stackIn_21_1 = 0;
         boolean stackIn_22_2 = false;
         int var3;
@@ -848,7 +848,7 @@ final class ResultsPhase extends MatchPhase {
         stackIn_21_0 = AccountRegistrationPanel.field_w;
         stackIn_21_1 = param0 + 35;
         stackIn_22_2 = (param1) ? false : true;
-        ((w) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_22_2);
+        ((SoundEventPlayer) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_22_2);
     }
 
     static {

@@ -217,7 +217,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
           var6 = rm.field_a;
           var7 = (TrapBaseModel) (var6.createModel(16, 78));
           var7.b(8022, 3);
-          var4.a((TrapPart) null, (byte) 124, var7);
+          var4.addModel((TrapPart) null, (byte) 124, var7);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

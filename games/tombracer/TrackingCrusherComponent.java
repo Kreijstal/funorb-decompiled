@@ -104,7 +104,7 @@ final class TrackingCrusherComponent extends PrefabComponent {
           var9.addBehaviour((byte) 83, (Behaviour) (var6));
           var7 = rm.field_a;
           var8 = (CrusherModel) (var7.createModel(11, param1 ^ 116));
-          var9.a(var6, (byte) 124, var8);
+          var9.addModel(var6, (byte) 124, var8);
           stackIn_1_0 = var9;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

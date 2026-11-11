@@ -38,7 +38,7 @@ final class PitBehaviour extends Behaviour {
         }
     }
 
-    final void a(Collidable param0, byte param1, WorldBody param2, int param3) {
+    final void onSupport(Collidable param0, byte param1, WorldBody param2, int param3) {
         int var15 = 0;
         int var16 = 0;
         RuntimeException stackIn_55_0 = null;
@@ -73,7 +73,7 @@ final class PitBehaviour extends Behaviour {
         var18 = null;
         var17 = TombRacer.field_G ? 1 : 0;
         try {
-          super.a(param0, (byte) 54, param2, param3);
+          super.onSupport(param0, (byte) 54, param2, param3);
           if (param3 != 1) {
             return;
           }
@@ -88,19 +88,19 @@ final class PitBehaviour extends Behaviour {
             var12 = var5_int % this.field_u;
             var13 = this.field_u / 2;
             if (var11 > var13 &&
-              !var8_ref_tqa.getCell(79, var9, 1 + var10).a(-111, new int[]{1, 0})) {
+              !var8_ref_tqa.getCell(79, var9, 1 + var10).isOccupiedByAny(-111, new int[]{1, 0})) {
               return;
             }
             if (var11 < var13 &&
-              !var8_ref_tqa.getCell(74, var9, var10 - 1).a(-126, new int[]{1, 0})) {
+              !var8_ref_tqa.getCell(74, var9, var10 - 1).isOccupiedByAny(-126, new int[]{1, 0})) {
               return;
             }
             if (var12 < var13 &&
-              !var8_ref_tqa.getCell(-108, var9 - 1, var10).a(-117, new int[]{1, 0})) {
+              !var8_ref_tqa.getCell(-108, var9 - 1, var10).isOccupiedByAny(-117, new int[]{1, 0})) {
               return;
             }
             if (var12 > var13 &&
-              !var8_ref_tqa.getCell(-112, var9 + 1, var10).a(-111, new int[]{1, 0})) {
+              !var8_ref_tqa.getCell(-112, var9 + 1, var10).isOccupiedByAny(-111, new int[]{1, 0})) {
               return;
             }
             var19 = (Player) (param2);
@@ -122,7 +122,7 @@ final class PitBehaviour extends Behaviour {
           var6Lifetime1 = param2.getY(9648);
           var7 = param2.getWidth(-93);
           var8 = param2.getHeight((byte) 55);
-          var9Lifetime1 = var5_intLifetime1 - var7 / 2 - this.trap.r((byte) -95) - this.field_o;
+          var9Lifetime1 = var5_intLifetime1 - var7 / 2 - this.trap.getLeft((byte) -95) - this.field_o;
           var10Lifetime1 = var6Lifetime1 - var8 / 2 + (-this.trap.getTop(2) - this.field_q);
           var11Lifetime1 = var9Lifetime1 + (var7 - 1);
           var12Lifetime1 = var10Lifetime1 + var8 - 1;
@@ -197,21 +197,21 @@ final class PitBehaviour extends Behaviour {
         try {
           super.attachToTrap(param0, param1);
           this.trap.b((byte) -102, 4);
-          this.trap.a(true, (byte) -25, 0);
-          this.trap.a((byte) -114, true, 1);
+          this.trap.setProvidesSurface(true, (byte) -25, 0);
+          this.trap.setReactsToSupport((byte) -114, true, 1);
           this.trap.setFloating((byte) 17, param0);
           var3_int = this.trap.getWidth(-56) / this.field_u;
           var4 = this.trap.getHeight((byte) 55) / this.field_u;
           this.field_t = new MazeGrid(var3_int, var4, 0);
           this.field_o = (this.trap.getWidth(-92) - this.field_t.width * this.field_u) / 2;
           this.field_q = (this.trap.getHeight((byte) 55) - this.field_t.height * this.field_u) / 2;
-          this.trap.getRoom((byte) -93).a(1, -1, this.trap.getX(3), this.trap.getY(9648), this.trap.getWidth(-27), this.trap.getHeight((byte) 55), 123);
+          this.trap.getRoom((byte) -93).addTileOccupancy(1, -1, this.trap.getX(3), this.trap.getY(9648), this.trap.getWidth(-27), this.trap.getHeight((byte) 55), 123);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "mo.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final int a(int param0, int param1, int param2, int param3, byte param4, int param5) {
+    final int getSurfaceCoverage(int param0, int param1, int param2, int param3, byte param4, int param5) {
         int var14 = 0;
         int var15 = 0;
         int var7;
@@ -230,7 +230,7 @@ final class PitBehaviour extends Behaviour {
           return 0;
         }
         var7 = 0;
-        var8 = this.trap.r((byte) -95) + this.field_o;
+        var8 = this.trap.getLeft((byte) -95) + this.field_o;
         if (param4 < 79) {
           this.getTypeId(false);
         }

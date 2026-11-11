@@ -92,8 +92,8 @@ final class no extends MatchOverlay {
           }
           return;
         }
-        if (null != SecondaryNodeDequeIterator.field_a.field_g) {
-          SecondaryNodeDequeIterator.field_a.field_g[SecondaryNodeDequeIterator.field_a.getViewedPlayerIndex(92)].a(new fm(93, 0, 0, 0), -58);
+        if (null != SecondaryNodeDequeIterator.field_a.soundPlayers) {
+          SecondaryNodeDequeIterator.field_a.soundPlayers[SecondaryNodeDequeIterator.field_a.getViewedPlayerIndex(92)].play(new SoundEvent(93, 0, 0, 0), -58);
           this.field_t = this.field_t + 1;
           if (param0 >= -107) {
             return;

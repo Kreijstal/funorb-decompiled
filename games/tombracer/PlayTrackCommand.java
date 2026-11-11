@@ -195,7 +195,7 @@ final class PlayTrackCommand extends ConsoleMethod {
               var45.field_bb = 1;
               for (var18_int = 0; ColourRowCache.field_b > var18_int; var18_int++) {
                 var12.field_Ub[var18_int] = new jea(0L, (jea) null);
-                if ((1 << var18_int + fm.field_m & var14) != 0) {
+                if ((1 << var18_int + SoundEvent.field_m & var14) != 0) {
                   var12.field_Eb.b(-126, var12.field_Ub[var18_int]);
                 }
                 var12.field_Ub[var18_int].field_bb = 1;
@@ -366,7 +366,7 @@ final class PlayTrackCommand extends ConsoleMethod {
               var12.field_Eb.a(-2 + (-var33_intLifetime1 + 365), di.field_a, -23776, var31, var33_intLifetime1);
               var34_int = pda.field_c;
               if (0 != (var14Lifetime1 & 1 << PowerUpItemBehaviour.field_w)) {
-                var50_ref = w.field_f[var12.field_cc];
+                var50_ref = SoundEventPlayer.field_f[var12.field_cc];
                 var12.field_xb.field_R = var50_ref;
                 var12.field_xb.a(var50_ref.field_n, var12.field_Eb.field_t, -23776, 0, var34_int);
                 var34_int = var34_int + (var50_ref.field_n + pda.field_c);
@@ -410,7 +410,7 @@ final class PlayTrackCommand extends ConsoleMethod {
               if (pda.field_d != null) {
                 for (var36Lifetime1 = 0; ColourRowCache.field_b > var36Lifetime1; var36Lifetime1++) {
                   if (null != pda.field_d[var36Lifetime1] &&
-                    0 != (1 << var36Lifetime1 + fm.field_m & var14Lifetime1)) {
+                    0 != (1 << var36Lifetime1 + SoundEvent.field_m & var14Lifetime1)) {
                     var42 = pda.field_d[var36Lifetime1][var12.field_ac[var36Lifetime1] & 255];
                     var54 = var42;
                     var12.field_Ub[var36Lifetime1].field_R = var42;

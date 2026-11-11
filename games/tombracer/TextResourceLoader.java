@@ -1635,7 +1635,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 124, "create_alert_invalidage");
                 if (null != var2) {
-                  fm.field_l = jaa.decodeText((byte) 101, var2);
+                  SoundEvent.field_l = jaa.decodeText((byte) 101, var2);
                 }
                 var2 = dn.a((byte) 106, "create_alert_yearrange");
                 if (null != var2) {
@@ -2699,7 +2699,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 117, "fs_button_tryagain");
                 if (null != var2) {
-                  sqa.field_a = jaa.decodeText((byte) 99, var2);
+                  SoundEventQueue.field_a = jaa.decodeText((byte) 99, var2);
                 }
                 var2 = dn.a((byte) -110, "graphics_ui_fs_countdown");
                 if (null != var2) {

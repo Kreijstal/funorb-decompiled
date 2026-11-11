@@ -131,8 +131,8 @@ final class RoomViewRenderer {
           var16_ref.a(-30023, param1 + var26 / 2, param3 + var27 / 2);
           var28 = var16_ref.c(-30661);
           var29 = var16_ref.b((byte) 70);
-          param5.field_g[param0].a(var29 << 16, 50, var28 << 16);
-          param5.field_g[param0].b(var9.getY(9648), var9.getX(3), 89);
+          param5.soundPlayers[param0].a(var29 << 16, 50, var28 << 16);
+          param5.soundPlayers[param0].b(var9.getY(9648), var9.getX(3), 89);
           var22 = var28 << 2;
           var23 = var29 << 2;
           var30 = var20;

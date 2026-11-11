@@ -16,7 +16,7 @@ interface WorldBody {
 
     public abstract boolean isExpired(int param0);
 
-    public abstract boolean l(int param0);
+    public abstract boolean isOutsideActiveVariant(int param0);
 
     public abstract boolean intersectsRect(byte param0, int param1, int param2, int param3, int param4);
 
@@ -26,7 +26,7 @@ interface WorldBody {
 
     public abstract int getElevation(byte param0);
 
-    public abstract boolean b(boolean param0);
+    public abstract boolean isMobile(boolean param0);
 
     public abstract int getWeight(int param0);
 

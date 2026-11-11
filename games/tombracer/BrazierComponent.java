@@ -154,13 +154,13 @@ final class BrazierComponent extends PrefabComponent {
           var6 = rm.field_a;
           var7 = (FurnitureModel) (var6.createModel(4, 91));
           var7.b(0, (byte) 77);
-          var9.a((TrapPart) null, (byte) 124, var7);
+          var9.addModel((TrapPart) null, (byte) 124, var7);
           var8 = (LightSourceModel) (var6.createModel(5, 74));
           var8.setElevationOffset(64, 122);
           var8.a(true, 16633231);
           var8.b(1, 128);
           var8.a(0, param1, 1, true);
-          var9.a((TrapPart) null, (byte) 124, var8);
+          var9.addModel((TrapPart) null, (byte) 124, var8);
           stackIn_1_0 = var9;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

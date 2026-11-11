@@ -274,7 +274,7 @@ abstract class MenuScreen extends GameScreen {
         boolean stackIn_12_2 = false;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
-        w var4 = null;
+        SoundEventPlayer var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         var5 = TombRacer.field_G ? 1 : 0;
@@ -325,7 +325,7 @@ abstract class MenuScreen extends GameScreen {
             if (SecondaryNodeDequeIterator.field_a != null &&
               null != SecondaryNodeDequeIterator.field_a.matchState &&
               SecondaryNodeDequeIterator.field_a.matchState.getPlayerRoom(param2 ^ 15283, SecondaryNodeDequeIterator.field_a.getViewedPlayerIndex(param2 ^ 15336)) != null) {
-              var4 = (w) (SecondaryNodeDequeIterator.field_a.matchState.getPlayerRoom(0, SecondaryNodeDequeIterator.field_a.getViewedPlayerIndex(param2 ^ 15326)).field_G);
+              var4 = (SoundEventPlayer) (SecondaryNodeDequeIterator.field_a.matchState.getPlayerRoom(0, SecondaryNodeDequeIterator.field_a.getViewedPlayerIndex(param2 ^ 15326)).soundQueue);
               if (var4 != null) {
                 var4.a(108, true);
               }
@@ -487,7 +487,7 @@ abstract class MenuScreen extends GameScreen {
             }
             if (var7 == 33) {
               if (null != SecondaryNodeDequeIterator.field_a) {
-                SecondaryNodeDequeIterator.field_a.b(param1, true, 0);
+                SecondaryNodeDequeIterator.field_a.endMatch(param1, true, 0);
                 r.a(0, SecondaryNodeDequeIterator.field_a.isSpectating((byte) 86));
               }
               return true;
@@ -526,7 +526,7 @@ abstract class MenuScreen extends GameScreen {
                 return true;
               }
               if (var7 == 16) {
-                SecondaryNodeDequeIterator.field_a.b(param1, true, 0);
+                SecondaryNodeDequeIterator.field_a.endMatch(param1, true, 0);
                 return true;
               }
               if (41 == var7 &&
@@ -536,7 +536,7 @@ abstract class MenuScreen extends GameScreen {
                 var6 = SecondaryNodeDequeIterator.field_a.matchState.field_K;
                 TextLayout.a(var4_int, (byte) 101, var6);
                 SecondaryNodeDequeIterator.field_a.setCharacterChoice(var5, 50, 0);
-                SecondaryNodeDequeIterator.field_a.j((byte) -49);
+                SecondaryNodeDequeIterator.field_a.initPlayers((byte) -49);
                 SecondaryNodeDequeIterator.field_a.startRound(125);
                 if (3 == var6) {
                   SecondaryNodeDequeIterator.field_a.startTutorial((byte) 110);

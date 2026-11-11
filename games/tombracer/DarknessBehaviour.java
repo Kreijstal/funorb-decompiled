@@ -25,7 +25,7 @@ final class DarknessBehaviour extends Behaviour {
         if (!this.enabled) {
           this.e(false);
         } else {
-          if (this.getRoom(true).o((byte) -82)) {
+          if (this.getRoom(true).hasActiveVariant((byte) -82)) {
             this.a((byte) -115, this.field_p);
           }
         }
@@ -79,16 +79,16 @@ final class DarknessBehaviour extends Behaviour {
         try {
           super.attachToTrap(param0, param1);
           this.b(0);
-          param1.a(26492, true, 1);
+          param1.setHandlesEffectType(26492, true, 1);
           param1.setAlwaysBlocksBeams(param0, 35);
           param1.b((byte) 112, 8);
-          param1.a(true, (byte) 109, 2);
+          param1.setProvidesSurface(true, (byte) 109, 2);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ana.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final int a(int param0, int param1, int param2, int param3, byte param4, int param5) {
+    final int getSurfaceCoverage(int param0, int param1, int param2, int param3, byte param4, int param5) {
         int var17 = 0;
         int var19 = 0;
         int var7;
@@ -396,7 +396,7 @@ final class DarknessBehaviour extends Behaviour {
         if (param0 != 0) {
           return;
         }
-        if (this.getRoom(true).o((byte) -82)) {
+        if (this.getRoom(true).hasActiveVariant((byte) -82)) {
           this.field_p = 128;
         } else {
           this.field_p = 255;
@@ -428,7 +428,7 @@ final class DarknessBehaviour extends Behaviour {
         if (null == this.field_r) {
           return;
         }
-        if (this.getRoom(true).o((byte) -82)) {
+        if (this.getRoom(true).hasActiveVariant((byte) -82)) {
           param1 = param1 / 2;
         }
         int[] var6 = this.field_r.pixels;

@@ -93,7 +93,7 @@ final class MovingSawComponent extends PathMoverComponent {
           var10 = rm.field_a;
           var11 = (HazardModel) (var10.createModel(8, param1 + 119));
           var11.a(false, 1);
-          var12.a(var6, (byte) 124, var11);
+          var12.addModel(var6, (byte) 124, var11);
           stackIn_1_0 = var12;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

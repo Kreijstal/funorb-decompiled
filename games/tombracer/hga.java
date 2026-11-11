@@ -59,7 +59,7 @@ class hga extends TextWidgetPainter {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        g[] var15 = null;
+        RoomDefinition[] var15 = null;
         int var16 = 0;
         int var17 = 0;
         int var19 = 0;
@@ -150,7 +150,7 @@ class hga extends TextWidgetPainter {
                 var14Lifetime1++;
               }
             }
-            var15 = new g[var14Lifetime1];
+            var15 = new RoomDefinition[var14Lifetime1];
             RasterizerOperator.field_n[var13Lifetime1] = var14Lifetime1;
             var16Lifetime1 = 0;
             var17 = 0;
@@ -188,7 +188,7 @@ class hga extends TextWidgetPainter {
                 var24 = stackIn_56_0;
                 incrementValue$0 = var17;
                 var17++;
-                var15[incrementValue$0] = new g(var31[var18][var6], var31[var18][var4], var21, var22, var23 != 0, var24);
+                var15[incrementValue$0] = new RoomDefinition(var31[var18][var6], var31[var18][var4], var21, var22, var23 != 0, var24);
                 var25 = var31[var18][var7].equalsIgnoreCase("Tutorial") ? 1 : 0;
                 var16Lifetime1 = var25;
                 var31[var18][var7].equalsIgnoreCase("Corridor");

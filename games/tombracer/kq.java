@@ -190,12 +190,12 @@ final class kq {
         }
     }
 
-    final static g a(int param0, int param1) {
+    final static RoomDefinition a(int param0, int param1) {
         int var3 = 0;
         qg var4_ref_qg = null;
-        g[] var5 = null;
+        RoomDefinition[] var5 = null;
         int var6 = 0;
-        g var7 = null;
+        RoomDefinition var7 = null;
         int var8 = TombRacer.field_G ? 1 : 0;
         qg[] var9 = cm.field_a;
         qg[] var2 = var9;

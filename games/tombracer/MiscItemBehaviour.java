@@ -88,20 +88,20 @@ final class MiscItemBehaviour extends ItemBehaviour {
           }
           var3_int = this.itemType;
           if (var3_int == 0) {
-            param1.g(62, 106);
+            param1.playSound(62, 106);
           } else {
             if (var3_int != 1) {
               if (var3_int == 2) {
-                param1.g(64, 115);
+                param1.playSound(64, 115);
               } else {
                 if (3 == var3_int) {
-                  param1.g(65, 123);
+                  param1.playSound(65, 123);
                 } else {
-                  param1.g(63, -74);
+                  param1.playSound(63, -74);
                 }
               }
             } else {
-              param1.g(63, 110);
+              param1.playSound(63, 110);
             }
           }
           if (param0 > -114) {
@@ -179,7 +179,7 @@ final class MiscItemBehaviour extends ItemBehaviour {
           return;
         }
         if (0 == this.itemType) {
-          this.getRoom(true).a(0, 0, 67, 0, (byte) 6);
+          this.getRoom(true).queueSound(0, 0, 67, 0, (byte) 6);
           return;
         }
     }

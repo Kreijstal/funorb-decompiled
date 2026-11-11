@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class g {
+final class RoomDefinition {
     int field_a;
     int field_f;
     String field_g;
@@ -10,7 +10,7 @@ final class g {
     boolean field_d;
     BitPacketBuffer field_c;
     String field_b;
-    fq field_e;
+    RoomHeader field_e;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var24 = 0;
@@ -82,7 +82,7 @@ final class g {
           if (param4 < -17) {
             return;
           }
-          g.releaseStatics(true);
+          RoomDefinition.releaseStatics(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -98,7 +98,7 @@ final class g {
         field_i = null;
     }
 
-    g(String param0, String param1, int param2, int param3, boolean param4, int param5) {
+    RoomDefinition(String param0, String param1, int param2, int param3, boolean param4, int param5) {
         try {
           if (-1 == param1.indexOf(".trlev")) {
             param1 = param1 + ".trlev";

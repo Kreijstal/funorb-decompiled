@@ -182,7 +182,7 @@ final class ara extends jea {
           this.field_tb.a(15, 15, -23776, 5, -20 + var17.field_G);
           var8.a(this.field_G, this.field_t - var17.field_t, -23776, var17.field_t, 0);
           var9.a(this.field_G, 15, -23776, 20, 0);
-          var8.field_w = Player.c(var8.field_t, 2105376, 3, 11579568, -125, 8421504);
+          var8.field_w = Player.createScrollbarSprites(var8.field_t, 2105376, 3, 11579568, -125, 8421504);
           var17.b(-125, this.field_tb);
           var8.b(-128, var9);
           this.b(-123, var17);

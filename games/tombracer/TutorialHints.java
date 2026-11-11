@@ -44,23 +44,23 @@ final class TutorialHints {
           for (var7 = 0; var7 < var6_ref_fsa__.length; var7++) {
             var8 = var6_ref_fsa__[var7];
             if (!this.field_h &&
-              var8.s((byte) -119)) {
+              var8.isPushableNow((byte) -119)) {
               this.field_h = true;
               this.queueHint(WhirlpoolDigest.field_c, (MessagePanel) null, 25, -89);
             }
             if (!this.field_i) {
-              if (var8.E((byte) 3) == 1) {
+              if (var8.getStatCategory((byte) 3) == 1) {
                 this.field_i = true;
                 this.queueHint(GasTrapComponent.field_F, new jia(), 25, param0 - 10059);
               }
               if (!this.field_m &&
-                3 == var8.E((byte) 3)) {
+                3 == var8.getStatCategory((byte) 3)) {
                 this.field_m = true;
                 this.queueHint(gca.field_l, (MessagePanel) null, 25, -61);
               }
             } else {
               if (!this.field_m &&
-                3 == var8.E((byte) 3)) {
+                3 == var8.getStatCategory((byte) 3)) {
                 this.field_m = true;
                 this.queueHint(gca.field_l, (MessagePanel) null, 25, -61);
               }
@@ -140,7 +140,7 @@ final class TutorialHints {
           if (var2.field_k > 0) {
             var2.field_k = var2.field_k - 1;
           } else {
-            if (!this.field_l.d(0)) {
+            if (!this.field_l.hasMessageOverlay(0)) {
               this.field_l.addOverlay(var2.field_h, param0 ^ 644);
               var2.unlink(param0 ^ 18);
             }

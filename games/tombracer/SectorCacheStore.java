@@ -385,7 +385,7 @@ final class SectorCacheStore {
         try {
           ql.field_k.writeCipheredOpcode(99, -2988);
           ql.field_k.writeShort(-1477662136, param0.getId((byte) -82));
-          ql.field_k.writeShort(-1477662136, param0.a((byte) 107));
+          ql.field_k.writeShort(-1477662136, param0.getTicksSinceReset((byte) 107));
           int var3_int = 79 / ((param1 - 9) / 53);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ppa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

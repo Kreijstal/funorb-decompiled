@@ -8,7 +8,7 @@ final class WhiteLightShooterComponent extends ShooterComponent {
 
     final static Room createCourseRoom(int param0, boolean param1, PlayerSimulation param2, int param3, byte param4) {
         Object var5 = null;
-        g var5_ref = null;
+        RoomDefinition var5_ref = null;
         RuntimeException var5_ref2 = null;
         Room stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -168,7 +168,7 @@ final class WhiteLightShooterComponent extends ShooterComponent {
           var6 = rm.field_a;
           var7 = (BlockModel) (var6.createModel(7, param1 ^ 77));
           var7.b(113, 15);
-          var4.a(var5, (byte) 124, var7);
+          var4.addModel(var5, (byte) 124, var7);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

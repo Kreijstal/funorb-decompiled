@@ -113,7 +113,7 @@ final class SnakePitModel extends TrapModel {
         }
     }
 
-    final int m(byte param0) {
+    final int getOccupancyLayer(byte param0) {
         if (param0 >= -63) {
           return -82;
         }
@@ -227,7 +227,7 @@ final class SnakePitModel extends TrapModel {
                 var9.field_f = 1;
                 break;
             }
-            var9.field_c = var17.e(true).nextBounded(100, param0 + 3440);
+            var9.field_c = var17.getSeededRandom(true).nextBounded(100, param0 + 3440);
             var9.field_a = this;
             var9.field_e = GameScreen.positiveModulo(var15 + OpenGlTexture.field_d[var9.field_f], 2048, -78);
             var9.field_d = -var4 + var5;
@@ -441,19 +441,19 @@ final class SnakePitModel extends TrapModel {
     }
 
     final void tick(int param0) {
-        w var2;
+        SoundEventPlayer var2;
         int var3_int;
         Trap var3;
         Player var4;
         PlayerAnimator var5;
         int var6;
-        w var7;
+        SoundEventPlayer var7;
         var6 = TombRacer.field_G ? 1 : 0;
         super.tick(param0 ^ 0);
         if (this.field_s == null) {
           return;
         }
-        var7 = (w) (this.getRoom(47).field_G);
+        var7 = (SoundEventPlayer) (this.getRoom(47).soundQueue);
         var2 = var7;
         if (var2 == null) {
           return;
@@ -464,9 +464,9 @@ final class SnakePitModel extends TrapModel {
           this.field_u = uca.cosmeticRandom.nextBounded(100, 0) + 50;
           var3_int = uca.cosmeticRandom.nextBounded(this.field_s.length, ~param0);
           if (this.field_s[var3_int].field_e.a(0)) {
-            var2.a(new fm(24, this.field_s[var3_int].getRenderX((byte) -123), this.field_s[var3_int].getRenderY((byte) 94), this.field_s[var3_int].getRenderZ((byte) -112)), param0 - 57);
+            var2.play(new SoundEvent(24, this.field_s[var3_int].getRenderX((byte) -123), this.field_s[var3_int].getRenderY((byte) 94), this.field_s[var3_int].getRenderZ((byte) -112)), param0 - 57);
           } else {
-            var7.a(new fm(23, this.field_s[var3_int].getRenderX((byte) -83), this.field_s[var3_int].getRenderY((byte) 122), this.field_s[var3_int].getRenderZ((byte) -107)), param0 - 57);
+            var7.play(new SoundEvent(23, this.field_s[var3_int].getRenderX((byte) -83), this.field_s[var3_int].getRenderY((byte) 122), this.field_s[var3_int].getRenderZ((byte) -107)), param0 - 57);
           }
         }
         var3 = (Trap) (this.body);
@@ -537,7 +537,7 @@ final class SnakePitModel extends TrapModel {
         }
     }
 
-    final int f(byte param0) {
+    final int getWideOccupancyMode(byte param0) {
         int var2 = 94 / ((param0 - 15) / 45);
         return -1;
     }

@@ -64,7 +64,7 @@ final class FacePlayerMountComponent extends PrefabComponent {
           var6 = rm.field_a;
           var7 = (TrapBaseModel) (var6.createModel(16, param1 ^ 82));
           var7.b(8022, 2);
-          var8.a(var5, (byte) 124, var7);
+          var8.addModel(var5, (byte) 124, var7);
           stackIn_1_0 = var8;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

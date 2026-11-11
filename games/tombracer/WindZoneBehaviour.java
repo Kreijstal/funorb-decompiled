@@ -152,7 +152,7 @@ final class WindZoneBehaviour extends Behaviour {
           }
           ((Particle) (Object) stackIn_22_0).b(stackIn_22_1, stackIn_22_2, stackIn_23_3);
         } else {
-          var24 = this.getRoom(true).spawnParticle(this.trap.r((byte) -95) + this.getRandom((byte) 46).nextBounded(var4, 0), var11, (byte) 100, var14);
+          var24 = this.getRoom(true).spawnParticle(this.trap.getLeft((byte) -95) + this.getRandom((byte) 46).nextBounded(var4, 0), var11, (byte) 100, var14);
           var24.a(false, 2, 3, 8, 10);
           stackIn_18_0 = var24;
           stackIn_18_1 = 79;
@@ -168,7 +168,7 @@ final class WindZoneBehaviour extends Behaviour {
         for (var17 = 0; var17 < var16.length; var17++) {
           var18 = var16[var17];
           if (var18 != this.trap &&
-            !this.trap.a(var18, true)) {
+            !this.trap.ignoresCollidable(var18, true)) {
             var19 = var18.getX(3);
             var20 = var18.getY(param0 + 4230);
             if (this.trap.intersectsRect((byte) 110, var20, var19, 1, 1)) {
@@ -200,7 +200,7 @@ final class WindZoneBehaviour extends Behaviour {
                 }
               }
               if (!(var22 > 262144) ||
-                !this.getRoom(true).a(1, this.field_v, this.getRoot(param0 ^ 5420), (byte) 60)) {
+                !this.getRoom(true).traceBeamSegment(1, this.field_v, this.getRoot(param0 ^ 5420), (byte) 60)) {
                 var8 = GameEvent.divideFixed16(var12, param0 ^ -25604, var22);
                 var8 = -gqa.a(var8, (byte) 24, -var9 + var10) + var10;
                 var8 = za.$cfr$intArgs$a$c604db63f465(var9, 113, var10, var8);

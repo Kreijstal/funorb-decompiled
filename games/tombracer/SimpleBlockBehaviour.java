@@ -256,7 +256,7 @@ final class SimpleBlockBehaviour extends Behaviour {
             this.blocksOverlap(-117, 44, 70, 106, 36, -110, (Collidable) null);
             return;
           }
-          this.getRoom(true).r(-36);
+          this.getRoom(true).reenterAtEntrance(-36);
           if (param0 == 5418) {
             return;
           }

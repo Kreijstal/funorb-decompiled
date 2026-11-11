@@ -4,7 +4,7 @@
 final class lk extends IntrusiveNode implements qn, Renderable, noa {
     private int field_o;
     private int field_p;
-    private bca field_m;
+    private VariantMask field_m;
     static boolean[] field_h;
     private boolean field_g;
     private int field_n;
@@ -25,7 +25,7 @@ final class lk extends IntrusiveNode implements qn, Renderable, noa {
         if (param1) {
           this.getRenderY((byte) -27);
         }
-        return this.field_m.a(param0, 14530);
+        return this.field_m.includes(param0, 14530);
     }
 
     final void a(Room param0, byte param1) {
@@ -64,7 +64,7 @@ final class lk extends IntrusiveNode implements qn, Renderable, noa {
         if (param0 != -1) {
           return false;
         }
-        stackIn_6_0 = (this.field_i.o((byte) -82)) && (!this.a(this.field_i.i(6029), false));
+        stackIn_6_0 = (this.field_i.hasActiveVariant((byte) -82)) && (!this.a(this.field_i.getActiveVariant(6029), false));
         return stackIn_6_0;
     }
 
@@ -126,7 +126,7 @@ final class lk extends IntrusiveNode implements qn, Renderable, noa {
           param1.writeBits((byte) -128, this.field_o >> 16, 10);
           param1.writeBits((byte) -127, this.field_g ? 1 : 0, 1);
           param1.writeBits((byte) 86, !this.field_f ? 0 : 1, 1);
-          this.field_m.a((byte) -86, param1);
+          this.field_m.encode((byte) -86, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "lk.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -205,7 +205,7 @@ final class lk extends IntrusiveNode implements qn, Renderable, noa {
           this.field_o = param1.readBits((byte) 44, 10) << 16;
           this.field_g = param1.readBits((byte) 44, 1) == 1 ? true : false;
           this.field_f = param1.readBits((byte) 44, 1) == 1 ? true : false;
-          this.field_m = new bca(param0.formatVersion, param1);
+          this.field_m = new VariantMask(param0.formatVersion, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "lk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

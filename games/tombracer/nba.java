@@ -23,7 +23,7 @@ final class nba {
             ql.field_k.writeCipheredOpcode(98, -2988);
             ql.field_k.writeShort(-1477662136, param1.getId((byte) -82));
             var3_int = 8 % ((param2 - 51) / 36);
-            ql.field_k.writeShort(-1477662136, param1.a((byte) 107));
+            ql.field_k.writeShort(-1477662136, param1.getTicksSinceReset((byte) 107));
             return;
           }
           return;

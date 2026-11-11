@@ -1550,7 +1550,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
                       if (120 == var21.charAt(0) &&
                         3 <= var21.length()) {
                         var31 = (CharSequence) ((Object) var21.substring(1, 3));
-                        if (sqa.a(var31, -3)) {
+                        if (SoundEventQueue.a(var31, -3)) {
                           var13 = 1;
                           var16 = var21.substring(1);
                         }
@@ -1562,7 +1562,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
                         }
                         if (var16.length() >= 4) {
                           var32 = (CharSequence) ((Object) var16.substring(0, 4));
-                          if (sqa.a(var32, -3)) {
+                          if (SoundEventQueue.a(var32, -3)) {
                             var33 = (CharSequence) ((Object) var16.substring(0, 4));
                             var11_int = WhiteLightSensorComponent.parseDecimalInt(var33, (byte) 70);
                             decompiledRegionSelector0 = 1;

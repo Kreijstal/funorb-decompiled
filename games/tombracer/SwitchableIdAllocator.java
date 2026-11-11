@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ui {
+final class SwitchableIdAllocator {
     static int field_a;
     static Object field_c;
-    private int field_d;
-    private int field_b;
+    private int nextLocalId;
+    private int nextGlobalId;
 
     final static void a(ResourceArchive param0, String param1, int param2, int param3) {
         int incrementValue$9 = 0;
@@ -320,11 +320,11 @@ final class ui {
           ControllerLocomotor.field_p[13] = gha.a("", "objects/youarehere/youarehere_yellow", 91, param0);
           tba.field_l = gha.a("", "test/javatextures", -117, param0);
           if (param3 > -48) {
-            ui.a(57);
+            SwitchableIdAllocator.a(57);
           }
-          bca.field_a = new int[tba.field_l.field_r.length];
+          VariantMask.field_a = new int[tba.field_l.field_r.length];
           for (var17 = 0; tba.field_l.field_r.length > var17; var17++) {
-            bca.field_a[var17] = tba.field_l.field_r[var17];
+            VariantMask.field_a[var17] = tba.field_l.field_r[var17];
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -357,17 +357,17 @@ final class ui {
         }
     }
 
-    final SwitchableId a(int param0, boolean param1) {
+    final SwitchableId allocate(int param0, boolean param1) {
         SwitchableId var3;
         int var4;
         if (param1) {
-          var3 = new SwitchableId(this.field_b);
-          this.field_b = this.field_b + 1;
+          var3 = new SwitchableId(this.nextGlobalId);
+          this.nextGlobalId = this.nextGlobalId + 1;
         } else {
-          var3 = new SwitchableId(this.field_d);
-          this.field_d = this.field_d + 1;
-          if (this.field_d >= 256) {
-            this.field_d = 0;
+          var3 = new SwitchableId(this.nextLocalId);
+          this.nextLocalId = this.nextLocalId + 1;
+          if (this.nextLocalId >= 256) {
+            this.nextLocalId = 0;
           }
         }
         var4 = -76 / ((10 - param0) / 55);
@@ -378,19 +378,19 @@ final class ui {
         field_c = null;
         if (param0 != 4) {
           String var2 = (String) null;
-          ui.a((ResourceArchive) null, (String) null, -10, 115);
+          SwitchableIdAllocator.a((ResourceArchive) null, (String) null, -10, 115);
         }
     }
 
-    final void a(byte param0) {
-        this.field_b = 1024;
+    final void reset(byte param0) {
+        this.nextGlobalId = 1024;
         int var2 = 114 / ((param0 + 4) / 53);
-        this.field_d = 0;
+        this.nextLocalId = 0;
     }
 
-    public ui() {
-        this.field_b = 1024;
-        this.field_d = 0;
+    public SwitchableIdAllocator() {
+        this.nextGlobalId = 1024;
+        this.nextLocalId = 0;
     }
 
     static {

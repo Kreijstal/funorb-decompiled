@@ -73,8 +73,8 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
               }
             }
           }
-          if ((null != fq.field_e) &&
-            (stackIn_20_0 = fq.field_e.a((byte) -114))) {
+          if ((null != RoomHeader.field_e) &&
+            (stackIn_20_0 = RoomHeader.field_e.a((byte) -114))) {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

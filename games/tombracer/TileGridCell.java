@@ -10,11 +10,11 @@ final class TileGridCell {
     private int column;
     private int centerX;
     private TileRenderable renderable;
-    private int field_g;
+    private int wideOccupancy;
     private TileGrid grid;
     int tileType;
     static Sprite[] field_k;
-    private int[] field_d;
+    private int[] layerOccupancy;
 
     final TileGrid getGrid(int param0) {
         if (param0 != 18641) {
@@ -23,7 +23,7 @@ final class TileGridCell {
         return this.grid;
     }
 
-    final void a(byte param0, iq param1) {
+    final void render(byte param0, iq param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -31,7 +31,7 @@ final class TileGridCell {
         RuntimeException var3 = null;
         try {
           if (param0 <= 104) {
-            this.field_d = (int[]) null;
+            this.layerOccupancy = (int[]) null;
           }
           if (this.renderable != null) {
             this.renderable.render(113, param1);
@@ -51,14 +51,14 @@ final class TileGridCell {
         }
     }
 
-    final int c(byte param0) {
+    final int getColumn(byte param0) {
         if (param0 <= 48) {
           this.column = -59;
         }
         return this.column;
     }
 
-    final int a(byte param0) {
+    final int getCenterX(byte param0) {
         if (param0 != -104) {
           return 95;
         }
@@ -84,7 +84,7 @@ final class TileGridCell {
         }
     }
 
-    final boolean a(int param0, int[] param1) {
+    final boolean isOccupiedByAny(int param0, int[] param1) {
         int var4 = 0;
         int[] var3 = null;
         RuntimeException var3_ref = null;
@@ -100,11 +100,11 @@ final class TileGridCell {
           var7 = param1;
           var3 = var7;
           if (param0 > -110) {
-            this.a((byte) 5);
+            this.getCenterX((byte) 5);
           }
           for (var4 = 0; var7.length > var4; var4++) {
             var5 = var7[var4];
-            if (this.a(var5, 0)) {
+            if (this.isOccupied(var5, 0)) {
               return true;
             }
           }
@@ -131,18 +131,18 @@ final class TileGridCell {
         field_k = null;
     }
 
-    final boolean a(int param0, int param1) {
+    final boolean isOccupied(int param0, int param1) {
         if (param1 != 0) {
           this.getGrid(21);
         }
-        return 0 < this.field_d[param0] ? true : false;
+        return 0 < this.layerOccupancy[param0] ? true : false;
     }
 
-    final boolean b(boolean param0) {
+    final boolean hasWideOccupancy(boolean param0) {
         if (param0) {
           this.getGrid(106);
         }
-        return this.field_g > 0 ? true : false;
+        return this.wideOccupancy > 0 ? true : false;
     }
 
     final void encode(BitPacketBuffer param0, int param1) {
@@ -164,15 +164,15 @@ final class TileGridCell {
           this.centerX = param3.getTileSize(-30551) * param0 + param3.getTileSize(-30551) / 2;
           this.centerY = param3.getTileSize(-30551) * param2 + param3.getTileSize(-30551) / 2;
           if (param1 <= 124) {
-            this.a(-52, 68, true);
+            this.addOccupancy(-52, 68, true);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pca.T(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, int param1, boolean param2) {
-        this.field_d[param1] = this.field_d[param1] + param0;
+    final void addOccupancy(int param0, int param1, boolean param2) {
+        this.layerOccupancy[param1] = this.layerOccupancy[param1] + param0;
         if (!param2) {
           field_a = (String) null;
         }
@@ -194,7 +194,7 @@ final class TileGridCell {
         return this.grid.getRoom(0);
     }
 
-    final void a(RenderScene param0, byte param1) {
+    final void addToScene(RenderScene param0, byte param1) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -222,8 +222,8 @@ final class TileGridCell {
         }
     }
 
-    final void a(byte param0, int param1) {
-        this.field_g = this.field_g + param1;
+    final void addWideOccupancy(byte param0, int param1) {
+        this.wideOccupancy = this.wideOccupancy + param1;
         if (param0 <= 5) {
           this.grid = (TileGrid) null;
         }
@@ -238,7 +238,7 @@ final class TileGridCell {
         }
     }
 
-    final void a(TileGridCell param0, int param1) {
+    final void copyTileType(TileGridCell param0, int param1) {
         try {
           this.tileType = param0.tileType;
           if (param1 != 21324) {
@@ -334,16 +334,16 @@ final class TileGridCell {
 
     final TileRenderable getRenderable(byte param0) {
         if (param0 >= -79) {
-          this.a(true);
+          this.getCenterY(true);
         }
         return this.renderable;
     }
 
     TileGridCell() {
-        this.field_d = new int[3];
+        this.layerOccupancy = new int[3];
     }
 
-    final int a(boolean param0) {
+    final int getCenterY(boolean param0) {
         if (!param0) {
           return -58;
         }
@@ -357,7 +357,7 @@ final class TileGridCell {
         }
     }
 
-    final int f(int param0) {
+    final int getRow(int param0) {
         int var2 = -8 / ((param0 - 44) / 50);
         return this.row;
     }

@@ -25,7 +25,7 @@ final class PillarComponent extends PrefabComponent {
           var6 = rm.field_a;
           var7 = (FurnitureModel) (var6.createModel(4, 108));
           var7.b(param1, (byte) 77);
-          var4.a((TrapPart) null, (byte) 124, var7);
+          var4.addModel((TrapPart) null, (byte) 124, var7);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -97,27 +97,27 @@ final class PillarComponent extends PrefabComponent {
         this.setSize(-91, 2097152, 2097152);
     }
 
-    final static fq a(int param0, BitPacketBuffer param1) {
+    final static RoomHeader a(int param0, BitPacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        fq stackIn_2_0 = null;
-        fq stackIn_5_0 = null;
-        fq stackIn_7_0 = null;
+        RoomHeader stackIn_2_0 = null;
+        RoomHeader stackIn_5_0 = null;
+        RoomHeader stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == null) {
-            stackIn_2_0 = new fq();
+            stackIn_2_0 = new RoomHeader();
             return stackIn_2_0;
           }
           var2_int = param1.readBits((byte) 44, 8);
           if (param0 == -1) {
-            stackIn_7_0 = new fq(var2_int, param1);
+            stackIn_7_0 = new RoomHeader(var2_int, param1);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (fq) null;
+          stackIn_5_0 = (RoomHeader) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

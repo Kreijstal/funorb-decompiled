@@ -43,7 +43,7 @@ final class ApproachPlayerLocomotor extends Locomotor {
         }
         this.field_o.x = var14.getX(3);
         this.field_o.y = var14.getY(9648);
-        this.trap.a(this.field_o, 30);
+        this.trap.toParentSpace(this.field_o, 30);
         var4 = this.field_o.x - this.trap.getLocalX(25745);
         var5 = this.field_o.y - this.trap.getLocalY(false);
         var6 = this.field_q >> 16;

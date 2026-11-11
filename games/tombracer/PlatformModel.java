@@ -147,7 +147,7 @@ final class PlatformModel extends TrapModel {
           if (param2 instanceof PortalBehaviour) {
             this.field_q = 1;
           }
-          if (param0.b(true)) {
+          if (param0.isMobile(true)) {
             this.field_q = 3;
           }
           return;
@@ -288,7 +288,7 @@ final class PlatformModel extends TrapModel {
                               if (var13 != 0) {
                                 var9.field_a = GameScreen.positiveModulo(var15 + mpa.field_W[var9.field_h], 2048, -70);
                                 var9.field_e = this;
-                                var9.field_b = var17.e(true).nextBounded(100, 0);
+                                var9.field_b = var17.getSeededRandom(true).nextBounded(100, 0);
                                 var9.field_c = var5 - var4;
                                 var9.field_d = -var3 + var7;
                                 var9.field_f = this.a(var9, 2);
@@ -326,7 +326,7 @@ final class PlatformModel extends TrapModel {
               }
               if (decompiledFrameRemainder0) {
                 var9.field_e = this;
-                var9.field_b = var17.e(true).nextBounded(100, 0);
+                var9.field_b = var17.getSeededRandom(true).nextBounded(100, 0);
                 var9.field_c = var5 - var4;
                 var9.field_d = -var3 + var7;
                 var9.field_f = this.a(var9, 2);
@@ -363,18 +363,18 @@ final class PlatformModel extends TrapModel {
     }
 
     final void a(byte param0, int param1) {
-        w var3 = null;
+        SoundEventPlayer var3 = null;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
           super.a((byte) 92, param1);
-          var3 = (w) (this.getRoom(29).field_G);
+          var3 = (SoundEventPlayer) (this.getRoom(29).soundQueue);
           var4 = -57 % ((7 - param0) / 36);
           if (var3 == null) {
             return;
           }
-          var3.a(new fm(3, this.getRenderX((byte) -93), this.getRenderY((byte) 115), this.getRenderZ((byte) -89)), -58);
+          var3.play(new SoundEvent(3, this.getRenderX((byte) -93), this.getRenderY((byte) 115), this.getRenderZ((byte) -89)), -58);
           if (this.field_t != null) {
             this.field_t.a(-120, var3);
             this.field_t = null;
@@ -400,7 +400,7 @@ final class PlatformModel extends TrapModel {
         RuntimeException var2 = null;
         int var3 = 0;
         Object var4 = null;
-        w var4_ref = null;
+        SoundEventPlayer var4_ref = null;
         Object var5 = null;
         Trap var5_ref = null;
         int var6 = 0;
@@ -438,7 +438,7 @@ final class PlatformModel extends TrapModel {
               var3 = 1;
             }
           }
-          var4_ref = (w) (this.getRoom(94).field_G);
+          var4_ref = (SoundEventPlayer) (this.getRoom(94).soundQueue);
           if (var4_ref == null) {
             return;
           }
@@ -458,7 +458,7 @@ final class PlatformModel extends TrapModel {
           if (1 != this.field_q) {
             if (var2_int != 0 &&
               this.field_t == null) {
-              this.field_t = var4_ref.a(new fm(19, this.getRenderX((byte) 84), this.getRenderY((byte) 123), this.getRenderZ((byte) -118)), param0 ^ 57);
+              this.field_t = var4_ref.play(new SoundEvent(19, this.getRenderX((byte) 84), this.getRenderY((byte) 123), this.getRenderZ((byte) -118)), param0 ^ 57);
             } else {
               if (var2_int == 0 &&
                 null != this.field_t) {
@@ -468,7 +468,7 @@ final class PlatformModel extends TrapModel {
             }
             if (var3 != 0 &&
               !this.field_p) {
-              var4_ref.a(new fm(7, this.getRenderX((byte) -109), this.getRenderY((byte) 125), this.getRenderZ((byte) -115)), param0 ^ 57);
+              var4_ref.play(new SoundEvent(7, this.getRenderX((byte) -109), this.getRenderY((byte) 125), this.getRenderZ((byte) -115)), param0 ^ 57);
             }
             stackIn_51_1 = (var3 != 0);
             this.field_p = stackIn_51_1;
@@ -479,18 +479,18 @@ final class PlatformModel extends TrapModel {
             while (var18_ref != null) {
               if (var18_ref instanceof PathMoveLocomotor) {
                 if (((PathMoveLocomotor) (var18_ref)).d(false) != this.field_y) {
-                  var4_ref.a(new fm(20, this.getRenderX((byte) 39), this.getRenderY((byte) 109), this.getRenderZ((byte) -116)), -58);
+                  var4_ref.play(new SoundEvent(20, this.getRenderX((byte) 39), this.getRenderY((byte) 109), this.getRenderZ((byte) -116)), -58);
                   this.field_y = ((PathMoveLocomotor) (var18_ref)).d(false);
                 }
                 if (var18_ref.isEnabled(-58) &&
                   this.field_y == 0) {
                   if (((PathMoveLocomotor) (var18_ref)).e(69) == 4096 &&
                     this.field_v == null) {
-                    this.field_v = var4_ref.a(new fm(21, this.getRenderX((byte) 114), this.getRenderY((byte) 94), this.getRenderZ((byte) -124)), -58);
+                    this.field_v = var4_ref.play(new SoundEvent(21, this.getRenderX((byte) 114), this.getRenderY((byte) 94), this.getRenderZ((byte) -124)), -58);
                   } else {
                     if (((PathMoveLocomotor) (var18_ref)).e(114) == 327680 &&
                       null == this.field_v) {
-                      this.field_v = var4_ref.a(new fm(22, this.getRenderX((byte) -86), this.getRenderY((byte) 101), this.getRenderZ((byte) -113)), -58);
+                      this.field_v = var4_ref.play(new SoundEvent(22, this.getRenderX((byte) -86), this.getRenderY((byte) 101), this.getRenderZ((byte) -113)), -58);
                     }
                   }
                   var17 = 1;
@@ -505,7 +505,7 @@ final class PlatformModel extends TrapModel {
             }
           } else if (this.field_o == null &&
             var6 != 0) {
-            this.field_o = var4_ref.a(new fm(9, this.getRenderX((byte) -101), this.getRenderY((byte) 99), this.getRenderZ((byte) -98)), param0 ^ 57);
+            this.field_o = var4_ref.play(new SoundEvent(9, this.getRenderX((byte) -101), this.getRenderY((byte) 99), this.getRenderZ((byte) -98)), param0 ^ 57);
           } else {
             if (this.field_o != null &&
               var6 == 0) {
@@ -678,7 +678,7 @@ final class PlatformModel extends TrapModel {
           var2.field_d = 0;
           var2.field_h = 0;
           var2.field_e = this;
-          var2.field_b = this.getRoom(53).e(true).nextBounded(100, 0);
+          var2.field_b = this.getRoom(53).getSeededRandom(true).nextBounded(100, 0);
           var2.field_f = this.a(var3, 2);
           this.field_r[0][0] = var3;
         } catch (RuntimeException runtimeException) {

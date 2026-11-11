@@ -1,54 +1,54 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class w extends sqa {
-    private boolean field_e;
-    int[] field_i;
+final class SoundEventPlayer extends SoundEventQueue {
+    private boolean muted;
+    int[] playingCounts;
     int field_c;
     int field_h;
-    private IntrusiveDeque field_g;
+    private IntrusiveDeque playing;
     static Sprite[] field_f;
     static String field_d;
 
-    private final void a(boolean param0) {
+    private final void resetCounts(boolean param0) {
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
         int var2Lifetime1;
         if (param0) {
-          for (var2 = 0; this.field_i.length > var2; var2++) {
-            this.field_i[var2] = 0;
+          for (var2 = 0; this.playingCounts.length > var2; var2++) {
+            this.playingCounts[var2] = 0;
           }
           return;
         }
-        this.field_g = (IntrusiveDeque) null;
-        for (var2Lifetime1 = 0; this.field_i.length > var2Lifetime1; var2Lifetime1++) {
-          this.field_i[var2Lifetime1] = 0;
+        this.playing = (IntrusiveDeque) null;
+        for (var2Lifetime1 = 0; this.playingCounts.length > var2Lifetime1; var2Lifetime1++) {
+          this.playingCounts[var2Lifetime1] = 0;
         }
     }
 
-    final void a(byte param0) {
+    final void stopAll(byte param0) {
         fla var4 = null;
         int var3 = TombRacer.field_G ? 1 : 0;
         fla var4Lifetime1;
         if (param0 >= -118) {
-          this.field_g = (IntrusiveDeque) null;
+          this.playing = (IntrusiveDeque) null;
         } else {
-          var4 = (fla) (this.field_g.first(-80));
+          var4 = (fla) (this.playing.first(-80));
           while (var4 != null) {
             rs.a(var4, 107);
-            var4 = (fla) (this.field_g.next(107));
+            var4 = (fla) (this.playing.next(107));
           }
-          this.field_g.clear(8);
-          this.a(true);
+          this.playing.clear(8);
+          this.resetCounts(true);
           return;
         }
-        var4Lifetime1 = (fla) (this.field_g.first(-80));
+        var4Lifetime1 = (fla) (this.playing.first(-80));
         while (var4Lifetime1 != null) {
           rs.a(var4Lifetime1, 107);
-          var4Lifetime1 = (fla) (this.field_g.next(107));
+          var4Lifetime1 = (fla) (this.playing.next(107));
         }
-        this.field_g.clear(8);
-        this.a(true);
+        this.playing.clear(8);
+        this.resetCounts(true);
     }
 
     final static int a(PacketBuffer param0, int param1, IntrusiveDeque param2) {
@@ -138,7 +138,7 @@ final class w extends sqa {
         }
     }
 
-    final fla a(fm param0, int param1) {
+    final fla play(SoundEvent param0, int param1) {
         Object stackIn_11_0 = null;
         Object stackIn_20_0 = null;
         fla stackIn_37_0 = null;
@@ -158,11 +158,11 @@ final class w extends sqa {
         vb var11 = null;
         fla var12 = null;
         try {
-          var3_int = param0.e(9800);
-          if (this.field_e) {
+          var3_int = param0.getSoundId(9800);
+          if (this.muted) {
             return null;
           }
-          if (this.field_g.size((byte) -16) >= 15) {
+          if (this.playing.size((byte) -16) >= 15) {
             return null;
           }
           if (var3_int < 0) {
@@ -171,15 +171,15 @@ final class w extends sqa {
           if (var3_int >= 98) {
             return null;
           }
-          if (this.field_i[var3_int] >= QueuedPlayerEvent.field_f[var3_int]) {
+          if (this.playingCounts[var3_int] >= QueuedPlayerEvent.field_f[var3_int]) {
             stackIn_11_0 = null;
             return (fla) (stackIn_11_0);
           }
           if (26 == var3_int) {
-            this.a(-101, new fm(28, param0.b(param1 - 43), param0.a(-127), param0.c(4)));
+            this.enqueue(-101, new SoundEvent(28, param0.getX(param1 - 43), param0.getY(-127), param0.getParameter(4)));
           }
           if (this.a(-123, var3_int)) {
-            this.a(param1 ^ 86, new fm(89, param0.b(param1 + 105), param0.a(-121), param0.c(param1 ^ -62)));
+            this.enqueue(param1 ^ 86, new SoundEvent(89, param0.getX(param1 + 105), param0.getY(-121), param0.getParameter(param1 ^ -62)));
           }
           var4 = to.field_j[var3_int];
           if (var4 == -1) {
@@ -205,16 +205,16 @@ final class w extends sqa {
           var9 = -1;
           var10 = to.field_n[var3_int];
           if (var8 == 0) {
-            var9 = AgeValidator.a(this.field_h, true, param0.b(param1 - 52));
-            var10 = ol.a(param0.b(-118), var3_int, (byte) -91, this.field_h, param0.a(-121), this.field_c);
+            var9 = AgeValidator.a(this.field_h, true, param0.getX(param1 - 52));
+            var10 = ol.a(param0.getX(-118), var3_int, (byte) -91, this.field_h, param0.getY(-121), this.field_c);
           }
           var11 = MatchProtocol.a(100, (byte) -58, var9, var4, var6, var10);
           if (var7 != 0) {
             var11.field_f.b(-1);
           }
           var12 = new fla(var11, var3_int, var7 != 0, var4, var10, var9);
-          this.field_g.addLast((byte) -100, var12);
-          this.field_i[var3_int] = this.field_i[var3_int] + 1;
+          this.playing.addLast((byte) -100, var12);
+          this.playingCounts[var3_int] = this.playingCounts[var3_int] + 1;
           stackIn_37_0 = var12;
           return stackIn_37_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -233,22 +233,22 @@ final class w extends sqa {
 
     final void a(int param0, int param1, int param2) {
         if (param1 < 9) {
-          this.field_g = (IntrusiveDeque) null;
+          this.playing = (IntrusiveDeque) null;
         }
     }
 
-    final void a(boolean param0, int param1) {
+    final void setMuted(boolean param0, int param1) {
         if (param1 == 0) {
-          this.field_e = param0 ? true : false;
+          this.muted = param0 ? true : false;
           return;
         }
         this.a(110, true);
-        this.field_e = param0 ? true : false;
+        this.muted = param0 ? true : false;
     }
 
     private final boolean a(int param0, int param1) {
         if (param0 > -89) {
-          this.field_g = (IntrusiveDeque) null;
+          this.playing = (IntrusiveDeque) null;
           if (param1 == 85) {
             return true;
           }
@@ -303,33 +303,33 @@ final class w extends sqa {
         boolean discarded$1 = false;
         fla var6 = null;
         int var4 = TombRacer.field_G ? 1 : 0;
-        fm var5 = (fm) (this.field_b.first(-80));
+        SoundEvent var5 = (SoundEvent) (this.events.first(-80));
         fla var6Lifetime1;
         while (var5 != null) {
-          this.a(var5, -58);
+          this.play(var5, -58);
           var5.unlink(15);
-          var5 = (fm) (this.field_b.next(124));
+          var5 = (SoundEvent) (this.events.next(124));
         }
         if (param0 < 75) {
           discarded$1 = this.a(53, -23);
         } else {
-          var6 = (fla) (this.field_g.first(-80));
+          var6 = (fla) (this.playing.first(-80));
           while (var6 != null) {
             var6.a(564550600, this, param1);
-            var6 = (fla) (this.field_g.next(110));
+            var6 = (fla) (this.playing.next(110));
           }
           return;
         }
-        var6Lifetime1 = (fla) (this.field_g.first(-80));
+        var6Lifetime1 = (fla) (this.playing.first(-80));
         while (var6Lifetime1 != null) {
           var6Lifetime1.a(564550600, this, param1);
-          var6Lifetime1 = (fla) (this.field_g.next(110));
+          var6Lifetime1 = (fla) (this.playing.next(110));
         }
     }
 
-    public w() {
-        this.field_i = new int[98];
-        this.field_g = new IntrusiveDeque();
+    public SoundEventPlayer() {
+        this.playingCounts = new int[98];
+        this.playing = new IntrusiveDeque();
     }
 
     static {

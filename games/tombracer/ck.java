@@ -6,7 +6,7 @@ final class ck {
     static String field_b;
     static ResourceArchive field_a;
 
-    final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6, int param7, int param8) {
+    final static boolean containsCentredBox(int param0, int param1, int param2, int param3, int param4, int param5, byte param6, int param7, int param8) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var9 = null;
         try {
@@ -97,7 +97,7 @@ final class ck {
           efa.field_w = param13;
           SafeZoneBehaviour.field_u = param14;
           RasterizerOperator.field_m = param5;
-          w.field_f = BoulderComponent.a(param10, "lobby", 5, "gameprivacy");
+          SoundEventPlayer.field_f = BoulderComponent.a(param10, "lobby", 5, "gameprivacy");
           wt.field_c = BoulderComponent.a(param10, "lobby", 5, "ratedgame");
           InvisibleTouchSwitchComponent.field_K = BoulderComponent.a(param10, "lobby", 5, "opentome");
           TileGridCell.field_k = BoulderComponent.a(param10, "lobby", 5, "allowspectators");
@@ -200,7 +200,7 @@ final class ck {
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var17_int < 5) {
-              bf.field_b[0][1 + var17_int] = new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, w.field_f[var17_int], SocketArchiveNetworkClient.field_w[var17_int]);
+              bf.field_b[0][1 + var17_int] = new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, SoundEventPlayer.field_f[var17_int], SocketArchiveNetworkClient.field_w[var17_int]);
               var17_int++;
               if (var21 == 0) {
                 continue;
@@ -561,7 +561,7 @@ final class ck {
             }
           }
           if (param3 != -8234) {
-            ck.a(-21, -102, 54, 120, -98, -42, (byte) -6, -39, 90);
+            ck.containsCentredBox(-21, -102, 54, 120, -98, -42, (byte) -6, -39, 90);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class sqa {
+abstract class SoundEventQueue {
     static String field_a;
-    IntrusiveDeque field_b;
+    IntrusiveDeque events;
 
     final static boolean a(CharSequence param0, int param1) {
         RuntimeException var2 = null;
@@ -32,11 +32,11 @@ abstract class sqa {
         }
     }
 
-    abstract void a(byte param0);
+    abstract void stopAll(byte param0);
 
-    final void a(int param0, fm param1) {
+    final void enqueue(int param0, SoundEvent param1) {
         try {
-          this.field_b.addLast((byte) -122, param1);
+          this.events.addLast((byte) -122, param1);
           if (param0 >= -84) {
             field_a = (String) null;
           }
@@ -96,17 +96,17 @@ abstract class sqa {
         }
     }
 
-    protected sqa() {
-        this.field_b = new IntrusiveDeque();
+    protected SoundEventQueue() {
+        this.events = new IntrusiveDeque();
     }
 
-    final void c(byte param0) {
+    final void clear(byte param0) {
         if (param0 < 108) {
-          this.c((byte) 15);
-          this.field_b.clear(8);
+          this.clear((byte) 15);
+          this.events.clear(8);
           return;
         }
-        this.field_b.clear(8);
+        this.events.clear(8);
     }
 
     static {

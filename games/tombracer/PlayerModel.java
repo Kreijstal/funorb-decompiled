@@ -243,7 +243,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
         int stackIn_35_0 = 0;
         int stackIn_41_0 = 0;
         boolean stackIn_50_1 = false;
-        w var2;
+        SoundEventPlayer var2;
         int var3_int;
         TileGridCell var3;
         int var4;
@@ -251,7 +251,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
         var5 = TombRacer.field_G ? 1 : 0;
         if (this.field_p != null &&
           this.field_p.getRoom((byte) 108) != null) {
-          var2 = (w) (this.field_p.getRoom((byte) 90).field_G);
+          var2 = (SoundEventPlayer) (this.field_p.getRoom((byte) 90).soundQueue);
           if (param0 != 21463) {
             return;
           }
@@ -265,22 +265,22 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
               this.field_g = this.field_g - 1;
               if (var5 != 0) {
                 if (this.f((byte) 62)) {
-                  var2.a(new fm(69, this.getRenderX((byte) 116), this.getRenderY((byte) 121), this.getRenderZ((byte) -105)), param0 ^ -21487);
-                  var2.a(new fm(70, this.getRenderX((byte) -122), this.getRenderY((byte) 93), this.getRenderZ((byte) -87)), param0 ^ -21487);
+                  var2.play(new SoundEvent(69, this.getRenderX((byte) 116), this.getRenderY((byte) 121), this.getRenderZ((byte) -105)), param0 ^ -21487);
+                  var2.play(new SoundEvent(70, this.getRenderX((byte) -122), this.getRenderY((byte) 93), this.getRenderZ((byte) -87)), param0 ^ -21487);
                 } else {
-                  var2.a(new fm(70, this.getRenderX((byte) -122), this.getRenderY((byte) 93), this.getRenderZ((byte) -87)), param0 ^ -21487);
+                  var2.play(new SoundEvent(70, this.getRenderX((byte) -122), this.getRenderY((byte) 93), this.getRenderZ((byte) -87)), param0 ^ -21487);
                 }
                 this.field_g = 50;
               }
             }
           } else {
             if (this.f((byte) 62)) {
-              var2.a(new fm(69, this.getRenderX((byte) 116), this.getRenderY((byte) 121), this.getRenderZ((byte) -105)), param0 ^ -21487);
+              var2.play(new SoundEvent(69, this.getRenderX((byte) 116), this.getRenderY((byte) 121), this.getRenderZ((byte) -105)), param0 ^ -21487);
               if (var5 != 0) {
-                var2.a(new fm(70, this.getRenderX((byte) -122), this.getRenderY((byte) 93), this.getRenderZ((byte) -87)), param0 ^ -21487);
+                var2.play(new SoundEvent(70, this.getRenderX((byte) -122), this.getRenderY((byte) 93), this.getRenderZ((byte) -87)), param0 ^ -21487);
               }
             } else {
-              var2.a(new fm(70, this.getRenderX((byte) -122), this.getRenderY((byte) 93), this.getRenderZ((byte) -87)), param0 ^ -21487);
+              var2.play(new SoundEvent(70, this.getRenderX((byte) -122), this.getRenderY((byte) 93), this.getRenderZ((byte) -87)), param0 ^ -21487);
             }
             this.field_g = 50;
           }
@@ -310,12 +310,12 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
             if (var4 != 0) {
               if (2 == this.field_k) {
                 if (!this.field_m) {
-                  var2.a(new fm(73, this.getRenderX((byte) -102), this.getRenderY((byte) 96), this.getRenderZ((byte) -114)), -58);
+                  var2.play(new SoundEvent(73, this.getRenderX((byte) -102), this.getRenderY((byte) 96), this.getRenderZ((byte) -114)), -58);
                   if (var5 != 0) {
-                    var2.a(new fm(72, this.getRenderX((byte) -119), this.getRenderY((byte) 120), this.getRenderZ((byte) -116)), -58);
+                    var2.play(new SoundEvent(72, this.getRenderX((byte) -119), this.getRenderY((byte) 120), this.getRenderZ((byte) -116)), -58);
                   }
                 } else {
-                  var2.a(new fm(72, this.getRenderX((byte) -119), this.getRenderY((byte) 120), this.getRenderZ((byte) -116)), -58);
+                  var2.play(new SoundEvent(72, this.getRenderX((byte) -119), this.getRenderY((byte) 120), this.getRenderZ((byte) -116)), -58);
                 }
                 stackIn_50_1 = !(this.field_m);
                 this.field_m = stackIn_50_1;
@@ -323,14 +323,14 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
               }
               if (decompiledFrameRemainder0) {
                 if (this.field_k == 1) {
-                  var2.a(new fm(71, this.getRenderX((byte) -98), this.getRenderY((byte) 98), this.getRenderZ((byte) -127)), -58);
+                  var2.play(new SoundEvent(71, this.getRenderX((byte) -98), this.getRenderY((byte) 98), this.getRenderZ((byte) -127)), -58);
                   if ((var5 != 0) &&
                     (this.field_k == 3)) {
-                    var2.a(new fm(74, this.getRenderX((byte) 70), this.getRenderY((byte) 111), this.getRenderZ((byte) -96)), -58);
+                    var2.play(new SoundEvent(74, this.getRenderX((byte) 70), this.getRenderY((byte) 111), this.getRenderZ((byte) -96)), -58);
                   }
                 } else {
                   if (this.field_k == 3) {
-                    var2.a(new fm(74, this.getRenderX((byte) 70), this.getRenderY((byte) 111), this.getRenderZ((byte) -96)), -58);
+                    var2.play(new SoundEvent(74, this.getRenderX((byte) 70), this.getRenderY((byte) 111), this.getRenderZ((byte) -96)), -58);
                   }
                 }
               }
@@ -347,7 +347,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
           }
           if (!this.field_o &&
             this.field_p.isFallingIntoPit(-1)) {
-            var2.a(new fm(79, this.getRenderX((byte) 77), this.getRenderY((byte) 114), this.getRenderZ((byte) -123)), -58);
+            var2.play(new SoundEvent(79, this.getRenderX((byte) 77), this.getRenderY((byte) 114), this.getRenderZ((byte) -123)), -58);
             this.field_o = true;
           }
           return;
@@ -405,7 +405,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
     }
 
     public final void a(int param0, int param1, boolean param2) {
-        sqa stackIn_8_0 = null;
+        SoundEventQueue stackIn_8_0 = null;
         int stackIn_51_0 = 0;
         int stackIn_58_0 = 0;
         int stackIn_65_0 = 0;
@@ -414,7 +414,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
         int var6;
         int var7;
         Room var8;
-        w var9;
+        SoundEventPlayer var9;
         int var10;
         int var11;
         int var12;
@@ -431,11 +431,11 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
         var7 = this.field_p.getHeldItemKind((byte) 127);
         var8 = this.field_p.getRoom((byte) 98);
         if (var8 != null) {
-          stackIn_8_0 = var8.field_G;
+          stackIn_8_0 = var8.soundQueue;
         } else {
           stackIn_8_0 = null;
         }
-        var9 = (w) (stackIn_8_0);
+        var9 = (SoundEventPlayer) (stackIn_8_0);
         var10 = param1;
         switch ((var12 == 0
           || var10 == 0
@@ -658,12 +658,12 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
           case 12:
             {
               if (!this.f((byte) 62)) {
-                var9.a(-103, new fm(86, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
+                var9.enqueue(-103, new SoundEvent(86, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
                 if (var12 != 0) {
-                  var9.a(-107, new fm(85, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
+                  var9.enqueue(-107, new SoundEvent(85, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
                 }
               } else {
-                var9.a(-107, new fm(85, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
+                var9.enqueue(-107, new SoundEvent(85, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
               }
             }
             var4 = 18;
@@ -672,14 +672,14 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
             }
           case 13:
             {
-              var9.a(-103, new fm(83, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
+              var9.enqueue(-103, new SoundEvent(83, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
               if (!this.f((byte) 62)) {
-                var9.a(param0 ^ -124, new fm(88, this.field_p.getX(param0 - 23), this.field_p.getY(param0 + 9622), this.field_p.getElevation((byte) 115)));
+                var9.enqueue(param0 ^ -124, new SoundEvent(88, this.field_p.getX(param0 - 23), this.field_p.getY(param0 + 9622), this.field_p.getElevation((byte) 115)));
                 if (var12 != 0) {
-                  var9.a(param0 - 143, new fm(87, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
+                  var9.enqueue(param0 - 143, new SoundEvent(87, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
                 }
               } else {
-                var9.a(param0 - 143, new fm(87, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
+                var9.enqueue(param0 - 143, new SoundEvent(87, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
               }
             }
             var4 = 10;
@@ -688,14 +688,14 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
             }
           case 14:
             {
-              var9.a(-128, new fm(78, this.field_p.getX(3), this.field_p.getY(param0 + 9622), this.field_p.getElevation((byte) 115)));
+              var9.enqueue(-128, new SoundEvent(78, this.field_p.getX(3), this.field_p.getY(param0 + 9622), this.field_p.getElevation((byte) 115)));
               if (this.f((byte) 62)) {
-                var9.a(-103, new fm(87, this.field_p.getX(3), this.field_p.getY(param0 ^ 9642), this.field_p.getElevation((byte) 115)));
+                var9.enqueue(-103, new SoundEvent(87, this.field_p.getX(3), this.field_p.getY(param0 ^ 9642), this.field_p.getElevation((byte) 115)));
                 if (var12 != 0) {
-                  var9.a(-116, new fm(88, this.field_p.getX(3), this.field_p.getY(param0 ^ 9642), this.field_p.getElevation((byte) 115)));
+                  var9.enqueue(-116, new SoundEvent(88, this.field_p.getX(3), this.field_p.getY(param0 ^ 9642), this.field_p.getElevation((byte) 115)));
                 }
               } else {
-                var9.a(-116, new fm(88, this.field_p.getX(3), this.field_p.getY(param0 ^ 9642), this.field_p.getElevation((byte) 115)));
+                var9.enqueue(-116, new SoundEvent(88, this.field_p.getX(3), this.field_p.getY(param0 ^ 9642), this.field_p.getElevation((byte) 115)));
               }
             }
             var4 = 9;
@@ -704,14 +704,14 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
             }
           case 16:
             {
-              var9.a(-106, new fm(84, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
+              var9.enqueue(-106, new SoundEvent(84, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
               if (!this.f((byte) 62)) {
-                var9.a(-110, new fm(88, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
+                var9.enqueue(-110, new SoundEvent(88, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
                 if (var12 != 0) {
-                  var9.a(-105, new fm(87, this.field_p.getX(param0 - 23), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
+                  var9.enqueue(-105, new SoundEvent(87, this.field_p.getX(param0 - 23), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
                 }
               } else {
-                var9.a(-105, new fm(87, this.field_p.getX(param0 - 23), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
+                var9.enqueue(-105, new SoundEvent(87, this.field_p.getX(param0 - 23), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
               }
             }
             var4 = 21;
@@ -719,28 +719,28 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
               break;
             }
           case 17:
-            var9.a(-122, new fm(80, this.field_p.getX(param0 - 23), this.field_p.getY(param0 ^ 9642), this.field_p.getElevation((byte) 115)));
+            var9.enqueue(-122, new SoundEvent(80, this.field_p.getX(param0 - 23), this.field_p.getY(param0 ^ 9642), this.field_p.getElevation((byte) 115)));
             var4 = 22;
             if (!this.f((byte) 62)) {
-              var9.a(param0 ^ -78, new fm(88, this.field_p.getX(param0 ^ 25), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
+              var9.enqueue(param0 ^ -78, new SoundEvent(88, this.field_p.getX(param0 ^ 25), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
               if (var12 == 0) {
                 break;
               }
             }
-            var9.a(-118, new fm(87, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
+            var9.enqueue(-118, new SoundEvent(87, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
             if (var12 == 0) {
               break;
             }
           case 20:
             {
-              var9.a(-98, new fm(78, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
+              var9.enqueue(-98, new SoundEvent(78, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
               if (this.f((byte) 62)) {
-                var9.a(-110, new fm(87, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
+                var9.enqueue(-110, new SoundEvent(87, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
                 if (var12 != 0) {
-                  var9.a(-91, new fm(88, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
+                  var9.enqueue(-91, new SoundEvent(88, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
                 }
               } else {
-                var9.a(-91, new fm(88, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
+                var9.enqueue(-91, new SoundEvent(88, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
               }
             }
             var4 = 25;
@@ -750,12 +750,12 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
           case 21:
             {
               if (this.f((byte) 62)) {
-                var9.a(-96, new fm(87, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
+                var9.enqueue(-96, new SoundEvent(87, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
                 if (var12 != 0) {
-                  var9.a(param0 - 148, new fm(88, this.field_p.getX(3), this.field_p.getY(param0 + 9622), this.field_p.getElevation((byte) 115)));
+                  var9.enqueue(param0 - 148, new SoundEvent(88, this.field_p.getX(3), this.field_p.getY(param0 + 9622), this.field_p.getElevation((byte) 115)));
                 }
               } else {
-                var9.a(param0 - 148, new fm(88, this.field_p.getX(3), this.field_p.getY(param0 + 9622), this.field_p.getElevation((byte) 115)));
+                var9.enqueue(param0 - 148, new SoundEvent(88, this.field_p.getX(3), this.field_p.getY(param0 + 9622), this.field_p.getElevation((byte) 115)));
               }
             }
             var4 = 34;
@@ -763,15 +763,15 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
               break;
             }
           case 22:
-            var9.a(-124, new fm(82, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
+            var9.enqueue(-124, new SoundEvent(82, this.field_p.getX(3), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
             var4 = 35;
             if (this.f((byte) 62)) {
-              var9.a(-120, new fm(87, this.field_p.getX(param0 ^ 25), this.field_p.getY(param0 + 9622), this.field_p.getElevation((byte) 115)));
+              var9.enqueue(-120, new SoundEvent(87, this.field_p.getX(param0 ^ 25), this.field_p.getY(param0 + 9622), this.field_p.getElevation((byte) 115)));
               if (var12 == 0) {
                 break;
               }
             }
-            var9.a(-115, new fm(88, this.field_p.getX(param0 - 23), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
+            var9.enqueue(-115, new SoundEvent(88, this.field_p.getX(param0 - 23), this.field_p.getY(9648), this.field_p.getElevation((byte) 115)));
             if (var12 == 0) {
               break;
             }

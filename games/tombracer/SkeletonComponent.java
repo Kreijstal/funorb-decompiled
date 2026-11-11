@@ -106,8 +106,8 @@ final class SkeletonComponent extends dna {
           var10 = rm.field_a;
           var11 = (MonsterModel) (var10.createModel(18, 98));
           var11.b(param1 + 87, 0);
-          var12.a((TrapPart) null, (byte) 124, var11);
-          var12.e(0, 122);
+          var12.addModel((TrapPart) null, (byte) 124, var11);
+          var12.setDestroyStatType(0, 122);
           stackIn_1_0 = var12;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

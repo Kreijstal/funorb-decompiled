@@ -3,7 +3,7 @@
  */
 final class sja extends ProceduralTextureProvider {
     static int[] field_h;
-    static g[] field_i;
+    static RoomDefinition[] field_i;
 
     public static void releaseStatics(byte param0) {
         field_i = null;
@@ -48,7 +48,7 @@ final class sja extends ProceduralTextureProvider {
           }
           return 6407;
         }
-        field_i = (g[]) null;
+        field_i = (RoomDefinition[]) null;
         if (param0 == 6407) {
           return 6407;
         }
@@ -97,7 +97,7 @@ final class sja extends ProceduralTextureProvider {
 
     public final boolean isTextureReady(int param0, byte param1) {
         if (param1 < 10) {
-          field_i = (g[]) null;
+          field_i = (RoomDefinition[]) null;
           if (((lqa) (baa.field_d.field_i.field_b)).field_j) {
             return super.isTextureReady(param0, (byte) 79);
           }

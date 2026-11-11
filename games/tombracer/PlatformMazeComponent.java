@@ -140,7 +140,7 @@ final class PlatformMazeComponent extends MazeComponent {
           var6 = rm.field_a;
           var7 = (PlatformModel) (var6.createModel(17, 102));
           var7.b(0, (byte) 23);
-          var4.a(var5, (byte) 124, var7);
+          var4.addModel(var5, (byte) 124, var7);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

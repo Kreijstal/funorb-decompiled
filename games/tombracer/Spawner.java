@@ -4,7 +4,7 @@
 abstract class Spawner implements noa {
     Room field_a;
 
-    abstract void a(byte param0, ui param1, boolean param2, ui param3);
+    abstract void a(byte param0, SwitchableIdAllocator param1, boolean param2, SwitchableIdAllocator param3);
 
     void encode(BitPacketBuffer param0, byte param1) {
         try {

@@ -42,12 +42,12 @@ final class doa {
         return gqa.a(param2, (byte) 24, param1 >> 8) << 8;
     }
 
-    final static g b(int param0, int param1, int param2) {
+    final static RoomDefinition b(int param0, int param1, int param2) {
         int var4 = 0;
-        g[] var3;
-        g var5;
+        RoomDefinition[] var3;
+        RoomDefinition var5;
         int var6;
-        g[] var7;
+        RoomDefinition[] var7;
         var6 = TombRacer.field_G ? 1 : 0;
         var7 = cm.field_a[param2].field_c;
         var3 = var7;

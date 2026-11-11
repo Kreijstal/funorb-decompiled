@@ -3,8 +3,8 @@
  */
 final class qg {
     private boolean field_b;
-    static g[] field_a;
-    g[] field_c;
+    static RoomDefinition[] field_a;
+    RoomDefinition[] field_c;
 
     public static void releaseStatics(int param0) {
         if (param0 != -1485) {
@@ -20,7 +20,7 @@ final class qg {
         return this.field_b;
     }
 
-    qg(g[] param0, boolean param1) {
+    qg(RoomDefinition[] param0, boolean param1) {
         try {
           this.field_c = param0;
           this.field_b = param1 ? true : false;

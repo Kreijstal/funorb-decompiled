@@ -260,7 +260,7 @@ final class MembersUpsellMenu extends MenuScreen {
 
     final static void a(String param0, int param1, GameFont param2, int param3, int param4, int param5, int param6) {
         try {
-          param2.a(fm.a(false, param6), param3, param5, fm.a(false, param1), param4, param0);
+          param2.a(SoundEvent.a(false, param6), param3, param5, SoundEvent.a(false, param1), param4, param0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "oka.GA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }

@@ -86,7 +86,7 @@ abstract class ShooterComponent extends PrefabComponent {
           var6.b(1, 96);
           var6.setElevationOffset(16, 120);
           var6.a(param1, 0, 1, false);
-          param0.a(param2, (byte) 124, var6);
+          param0.addModel(param2, (byte) 124, var6);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ge.CC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

@@ -14,9 +14,9 @@ final class DefaultTileRenderable extends TileRenderable {
     public final int getRenderY(byte param0) {
         if (param0 < 91) {
           this.getRenderZ((byte) -93);
-          return this.cell.a(true);
+          return this.cell.getCenterY(true);
         }
-        return this.cell.a(true);
+        return this.cell.getCenterY(true);
     }
 
     private final void h(byte param0) {
@@ -65,7 +65,7 @@ final class DefaultTileRenderable extends TileRenderable {
         int var2Lifetime2;
         var5 = TombRacer.field_G ? 1 : 0;
         if (0 == this.h(16094)) {
-          this.field_k = this.getRoom(10685).e(true).nextBounded(100, 0);
+          this.field_k = this.getRoom(10685).getSeededRandom(true).nextBounded(100, 0);
           this.field_m = -1;
           this.field_n = 0;
           this.field_i = -1;
@@ -83,8 +83,8 @@ final class DefaultTileRenderable extends TileRenderable {
           this.g(97);
           return;
         }
-        var2Lifetime1 = this.cell.c((byte) 106) / 2 * 2;
-        var3 = this.cell.f(116) / 2 * 2;
+        var2Lifetime1 = this.cell.getColumn((byte) 106) / 2 * 2;
+        var3 = this.cell.getRow(116) / 2 * 2;
         var4 = this.cell.getGrid(18641).getCell(25, var2Lifetime1, var3).getRenderable((byte) -95);
         if (var4 instanceof DefaultTileRenderable) {
           this.field_k = ((DefaultTileRenderable) (var4)).field_k;
@@ -154,10 +154,10 @@ final class DefaultTileRenderable extends TileRenderable {
 
     private final int h(int param0) {
         if (param0 == 16094) {
-          return this.cell.c((byte) 102) % 2 + 2 * (this.cell.f(-77) % 2);
+          return this.cell.getColumn((byte) 102) % 2 + 2 * (this.cell.getRow(-77) % 2);
         }
         field_g = (String[]) null;
-        return this.cell.c((byte) 102) % 2 + 2 * (this.cell.f(-77) % 2);
+        return this.cell.getColumn((byte) 102) % 2 + 2 * (this.cell.getRow(-77) % 2);
     }
 
     public final void render(int param0, iq param1) {
@@ -178,8 +178,8 @@ final class DefaultTileRenderable extends TileRenderable {
         TileGridCell var13 = null;
         int var11Lifetime1;
         try {
-          var3_int = this.cell.c((byte) 83);
-          var4 = this.cell.f(111);
+          var3_int = this.cell.getColumn((byte) 83);
+          var4 = this.cell.getRow(111);
           var5 = this.cell.getGrid(18641).getRowCount(31);
           if (param0 < 103) {
             this.getRenderY((byte) 39);
@@ -192,9 +192,9 @@ final class DefaultTileRenderable extends TileRenderable {
           if (var4 >= var7) {
             return;
           }
-          var8 = this.cell.a((byte) -104);
-          var9 = this.cell.a(true);
-          if (!this.cell.b(false)) {
+          var8 = this.cell.getCenterX((byte) -104);
+          var9 = this.cell.getCenterY(true);
+          if (!this.cell.hasWideOccupancy(false)) {
             if (-1 != this.field_m) {
               gqa.a(0, -83584144, var9, var8, gca.field_g[this.field_m], 0);
             }
@@ -210,8 +210,8 @@ final class DefaultTileRenderable extends TileRenderable {
             0 < var3_int &&
             var3_int % 2 == 1) {
             var12 = this.cell.getGrid(18641).getCell(-104, var3_int - 1, var4);
-            if (var12 != null && (!this.cell.b(false) ||
-              !var12.b(false))) {
+            if (var12 != null && (!this.cell.hasWideOccupancy(false) ||
+              !var12.hasWideOccupancy(false))) {
               var11 = this.cell.getGrid(18641).getTileSize(-30551) / 2;
               gqa.a(1024, -83584144, -var11 + var9, var8 - var11, gca.field_g[25], 65536);
             }
@@ -221,8 +221,8 @@ final class DefaultTileRenderable extends TileRenderable {
             1 == var3_int % 2) {
             var13 = this.cell.getGrid(18641).getCell(-100, var3_int - 1, var4);
             if (var13 != null) {
-              if (this.cell.b(false) &&
-                var13.b(false)) {
+              if (this.cell.hasWideOccupancy(false) &&
+                var13.hasWideOccupancy(false)) {
                 return;
               }
               var11Lifetime1 = this.cell.getGrid(18641).getTileSize(-30551) / 2;
@@ -267,7 +267,7 @@ final class DefaultTileRenderable extends TileRenderable {
 
     public final int getRenderX(byte param0) {
         int var2 = -111 % ((-23 - param0) / 53);
-        return this.cell.a((byte) -104);
+        return this.cell.getCenterX((byte) -104);
     }
 
     private final void a(byte param0) {

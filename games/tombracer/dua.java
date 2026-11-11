@@ -136,8 +136,8 @@ final class dua extends MatchOverlay {
               var25.getCourseIndex(-87) < var7) {
               var15 = 16;
               var16Lifetime3 = var9Lifetime3 - var4 * this.field_g.getPlayerCourseIndex(1, var13Lifetime3);
-              var16Lifetime3 = var16Lifetime3 + var4 * this.field_g.players[var13Lifetime3].f(false) / var25.getHeight(-113);
-              var15 = var15 + var3 * this.field_g.players[var13Lifetime3].w(63) / var25.getWidth((byte) -86);
+              var16Lifetime3 = var16Lifetime3 + var4 * this.field_g.players[var13Lifetime3].getRawY(false) / var25.getHeight(-113);
+              var15 = var15 + var3 * this.field_g.players[var13Lifetime3].getRawX(63) / var25.getWidth((byte) -86);
               this.field_g.players[var13Lifetime3].getAnimator((byte) -111).a(var15, 124, var16Lifetime3);
             }
             var19++;
@@ -201,8 +201,8 @@ final class dua extends MatchOverlay {
             var22.getCourseIndex(-87) < var7Lifetime1) {
             var15Lifetime1 = 16;
             var16Lifetime2 = var9Lifetime2 - var4Lifetime1 * this.field_g.getPlayerCourseIndex(1, var13Lifetime2);
-            var16Lifetime2 = var16Lifetime2 + var4Lifetime1 * this.field_g.players[var13Lifetime2].f(false) / var22.getHeight(-113);
-            var15Lifetime1 = var15Lifetime1 + var3Lifetime1 * this.field_g.players[var13Lifetime2].w(63) / var22.getWidth((byte) -86);
+            var16Lifetime2 = var16Lifetime2 + var4Lifetime1 * this.field_g.players[var13Lifetime2].getRawY(false) / var22.getHeight(-113);
+            var15Lifetime1 = var15Lifetime1 + var3Lifetime1 * this.field_g.players[var13Lifetime2].getRawX(63) / var22.getWidth((byte) -86);
             this.field_g.players[var13Lifetime2].getAnimator((byte) -111).a(var15Lifetime1, 124, var16Lifetime2);
           }
           var19Lifetime1++;

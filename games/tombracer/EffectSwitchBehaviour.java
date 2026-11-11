@@ -333,7 +333,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
           for (var3_int = 0; var3_int < 6; var3_int++) {
             if (this.field_u.get(0, var3_int) ||
               this.field_t.get(0, var3_int)) {
-              param1.a(26492, true, var3_int);
+              param1.setHandlesEffectType(26492, true, var3_int);
             }
           }
           if (4 > this.getRoom(true).formatVersion) {

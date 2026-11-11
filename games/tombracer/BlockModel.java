@@ -31,15 +31,15 @@ final class BlockModel extends TrapModel {
     final void a(byte param0, int param1) {
         super.a((byte) 97, param1);
         this.getRoom(28).getParticleEffects(false).a(this.body.getY(9648), this.body.getElevation((byte) 115), (byte) 46, this.body.getX(3));
-        w var5 = (w) (this.getRoom(30).field_G);
+        SoundEventPlayer var5 = (SoundEventPlayer) (this.getRoom(30).soundQueue);
         if (var5 == null) {
           return;
         }
         int var4 = -67 / ((7 - param0) / 36);
         if (this.field_v == 0) {
-          var5.a(new fm(3, this.getRenderX((byte) -118), this.getRenderY((byte) 95), this.getRenderZ((byte) -89)), -58);
+          var5.play(new SoundEvent(3, this.getRenderX((byte) -118), this.getRenderY((byte) 95), this.getRenderZ((byte) -89)), -58);
         } else {
-          var5.a(new fm(2, this.getRenderX((byte) -122), this.getRenderY((byte) 109), this.getRenderZ((byte) -97)), -58);
+          var5.play(new SoundEvent(2, this.getRenderX((byte) -122), this.getRenderY((byte) 109), this.getRenderZ((byte) -97)), -58);
         }
         if (null != this.field_r) {
           this.field_r.a(-98, var5);
@@ -56,7 +56,7 @@ final class BlockModel extends TrapModel {
     }
 
     final void updateSceneLayer(int param0, RenderScene param1) {
-        w var3 = null;
+        SoundEventPlayer var3 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -64,7 +64,7 @@ final class BlockModel extends TrapModel {
         RuntimeException var3_ref = null;
         try {
           super.updateSceneLayer(-61, param1);
-          var3 = (w) (this.getRoom(21).field_G);
+          var3 = (SoundEventPlayer) (this.getRoom(21).soundQueue);
           if (var3 == null) {
             return;
           }
@@ -182,7 +182,7 @@ final class BlockModel extends TrapModel {
         int var8;
         BeamSegment var9;
         int var10;
-        w var11;
+        SoundEventPlayer var11;
         IntrusiveDeque var12;
         IntrusiveDequeCursor var13;
         IntrusiveDeque var14;
@@ -192,21 +192,21 @@ final class BlockModel extends TrapModel {
         int var8Lifetime1;
         BeamSegment var9Lifetime1;
         var10 = TombRacer.field_G ? 1 : 0;
-        var11 = (w) (this.getRoom(111).field_G);
+        var11 = (SoundEventPlayer) (this.getRoom(111).soundQueue);
         if (var11 == null) {
           return;
         }
         {
           var3 = (Trap) (this.body);
-          var4 = var3.d(50, false) ? 1 : 0;
+          var4 = var3.hasMovedThisTick(50, false) ? 1 : 0;
           if ((this.field_r == null ||
             !this.field_r.isLinked((byte) -116)) && var4 != 0) {
             if (this.i(param0 ^ -78)) {
-              this.field_r = var11.a(new fm(0, this.getRenderX((byte) -113), this.getRenderY((byte) 118), this.getRenderZ((byte) -114)), -58);
+              this.field_r = var11.play(new SoundEvent(0, this.getRenderX((byte) -113), this.getRenderY((byte) 118), this.getRenderZ((byte) -114)), -58);
             } else if (this.field_v == 9) {
-              this.field_r = var11.a(new fm(4, this.getRenderX((byte) -112), this.getRenderY((byte) 92), this.getRenderZ((byte) -87)), -58);
+              this.field_r = var11.play(new SoundEvent(4, this.getRenderX((byte) -112), this.getRenderY((byte) 92), this.getRenderZ((byte) -87)), -58);
             } else {
-              this.field_r = var11.a(new fm(1, this.getRenderX((byte) 39), this.getRenderY((byte) 92), this.getRenderZ((byte) -109)), -58);
+              this.field_r = var11.play(new SoundEvent(1, this.getRenderX((byte) 39), this.getRenderY((byte) 92), this.getRenderZ((byte) -109)), -58);
             }
           } else {
             if (null != this.field_r &&
@@ -230,13 +230,13 @@ final class BlockModel extends TrapModel {
           boolean decompiledFrameRemainder0 = true;
           if (var7_int != 0 && (this.field_x == null ||
             !this.field_x.isLinked((byte) -100))) {
-            this.field_x = var11.a(new fm(5, this.getRenderX((byte) -97), this.getRenderY((byte) 107), this.getRenderZ((byte) -107)), -58);
+            this.field_x = var11.play(new SoundEvent(5, this.getRenderX((byte) -97), this.getRenderY((byte) 107), this.getRenderZ((byte) -107)), -58);
             decompiledFrameRemainder0 = false;
           }
           else {
             if (var7_int == 0 &&
               null != this.field_x) {
-              var11.a(new fm(6, this.getRenderX((byte) 117), this.getRenderY((byte) 108), this.getRenderZ((byte) -116)), -58);
+              var11.play(new SoundEvent(6, this.getRenderX((byte) 117), this.getRenderY((byte) 108), this.getRenderZ((byte) -116)), -58);
               this.field_x.a(81, var11);
               this.field_x = null;
             }
@@ -269,14 +269,14 @@ final class BlockModel extends TrapModel {
                   continue;
                 }
                 if (this.field_m < var8) {
-                  var11.a(-92, new fm(var8 - 2 + 34, this.getRenderX((byte) 30), this.getRenderY((byte) 105), this.getRenderZ((byte) -105)));
+                  var11.enqueue(-92, new SoundEvent(var8 - 2 + 34, this.getRenderX((byte) 30), this.getRenderY((byte) 105), this.getRenderZ((byte) -105)));
                 }
                 this.field_m = var8;
                 if (null != this.field_w) {
                   this.field_w.a(-119, var11);
                   this.field_w = null;
                 }
-                this.field_w = var11.a(new fm(29 + this.field_m - 1, this.getRenderX((byte) -80), this.getRenderY((byte) 109), this.getRenderZ((byte) -97)), -58);
+                this.field_w = var11.play(new SoundEvent(29 + this.field_m - 1, this.getRenderX((byte) -80), this.getRenderY((byte) 109), this.getRenderZ((byte) -97)), -58);
               } else {
                 if (null != this.field_w) {
                   this.field_w.a(-94, var11);
@@ -324,21 +324,21 @@ final class BlockModel extends TrapModel {
               stackIn_75_0 = ~var8Lifetime1;
               stackIn_75_1 = ~this.field_p;
               if (stackIn_75_0 < stackIn_75_1) {
-                var11.a(-104, new fm(var8Lifetime1 - 2 + 44, this.getRenderX((byte) -85), this.getRenderY((byte) 125), this.getRenderZ((byte) -117)));
+                var11.enqueue(-104, new SoundEvent(var8Lifetime1 - 2 + 44, this.getRenderX((byte) -85), this.getRenderY((byte) 125), this.getRenderZ((byte) -117)));
               }
               this.field_p = var8Lifetime1;
               if (this.field_u != null) {
                 this.field_u.a(-123, var11);
                 this.field_u = null;
               }
-              this.field_u = var11.a(new fm(39 + this.field_p - 1, this.getRenderX((byte) 87), this.getRenderY((byte) 127), this.getRenderZ((byte) -111)), -58);
+              this.field_u = var11.play(new SoundEvent(39 + this.field_p - 1, this.getRenderX((byte) 87), this.getRenderY((byte) 127), this.getRenderZ((byte) -111)), -58);
             }
             var7 = (Behaviour) (var17.next(-1));
           }
         }
         if (var3.isFallingIntoPit(param0) &&
           null == this.field_q) {
-          this.field_q = var11.a(new fm(7, this.getRenderX((byte) 122), this.getRenderY((byte) 92), this.getRenderZ((byte) -99)), param0 ^ 57);
+          this.field_q = var11.play(new SoundEvent(7, this.getRenderX((byte) 122), this.getRenderY((byte) 92), this.getRenderZ((byte) -99)), param0 ^ 57);
         } else {
           if (!var3.isFallingIntoPit(-1) &&
             null != this.field_q) {

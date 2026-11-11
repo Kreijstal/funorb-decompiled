@@ -69,14 +69,14 @@ final class ta extends jea {
         field_ub = null;
     }
 
-    final static g d(int param0, boolean param1) {
-        g[] var2;
+    final static RoomDefinition d(int param0, boolean param1) {
+        RoomDefinition[] var2;
         int var3;
-        g var4;
+        RoomDefinition var4;
         int var5;
-        g[] var6;
+        RoomDefinition[] var6;
         int var3Lifetime1;
-        g var4Lifetime1;
+        RoomDefinition var4Lifetime1;
         var5 = TombRacer.field_G ? 1 : 0;
         var6 = qg.field_a;
         var2 = var6;

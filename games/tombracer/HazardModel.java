@@ -219,7 +219,7 @@ final class HazardModel extends TrapModel {
         Behaviour var8 = null;
         int var9 = 0;
         Object var10 = null;
-        w var10_ref = null;
+        SoundEventPlayer var10_ref = null;
         IntrusiveDeque var11 = null;
         IntrusiveDequeCursor var12 = null;
         IntrusiveDeque var13 = null;
@@ -249,7 +249,7 @@ final class HazardModel extends TrapModel {
               this.field_q = GameScreen.positiveModulo(this.field_q - (S2CNextRoundPacket.abs(var2_int >> 13, -113) + S2CNextRoundPacket.abs(var3_int >> 13, 67)), 2048, -100);
               if (!(65536 >= S2CNextRoundPacket.abs(var2_int, param0 + 93)) ||
                 !(S2CNextRoundPacket.abs(var3_int, param0 ^ -85) <= 65536)) {
-                this.getRoom(103).a(false, this.getRenderX((byte) -119), 0, -var2_int, this.getRenderY((byte) 127), -var3_int);
+                this.getRoom(103).spawnDust(false, this.getRenderX((byte) -119), 0, -var2_int, this.getRenderY((byte) 127), -var3_int);
               }
             }
           } else {
@@ -258,12 +258,12 @@ final class HazardModel extends TrapModel {
               this.field_m = GameScreen.positiveModulo(128 + this.field_m, 2048, 122);
             }
           }
-          var10_ref = (w) (this.getRoom(param0 + 64).field_G);
+          var10_ref = (SoundEventPlayer) (this.getRoom(param0 + 64).soundQueue);
           if (var10_ref == null) {
             return;
           }
           var3_ref = (Trap) (this.body);
-          if (!var3_ref.d(50, false)) {
+          if (!var3_ref.hasMovedThisTick(50, false)) {
             stackIn_28_0 = (this.field_u == 1) ? 1 : 0;
           } else {
             stackIn_28_0 = 1;
@@ -273,10 +273,10 @@ final class HazardModel extends TrapModel {
             if (var4Lifetime1 != 0 && (null == this.field_v ||
               !this.field_v.isLinked((byte) -101))) {
               if (this.field_u == 0) {
-                this.field_v = var10_ref.a(new fm(10, this.getRenderX((byte) -90), this.getRenderY((byte) 103), this.getRenderZ((byte) -103)), param0 - 57);
+                this.field_v = var10_ref.play(new SoundEvent(10, this.getRenderX((byte) -90), this.getRenderY((byte) 103), this.getRenderZ((byte) -103)), param0 - 57);
               } else if (this.field_u != 1) {
               } else {
-                this.field_v = var10_ref.a(new fm(11, this.getRenderX((byte) 112), this.getRenderY((byte) 121), this.getRenderZ((byte) -125)), -58);
+                this.field_v = var10_ref.play(new SoundEvent(11, this.getRenderX((byte) 112), this.getRenderY((byte) 121), this.getRenderZ((byte) -125)), -58);
               }
             } else {
               if (this.field_v != null &&
@@ -303,7 +303,7 @@ final class HazardModel extends TrapModel {
             }
             if (var7_int != 0 &&
               null == this.field_r) {
-              this.field_r = var10_ref.a(new fm(12, this.getRenderX((byte) -105), this.getRenderY((byte) 104), this.getRenderZ((byte) -119)), -58);
+              this.field_r = var10_ref.play(new SoundEvent(12, this.getRenderX((byte) -105), this.getRenderY((byte) 104), this.getRenderZ((byte) -119)), -58);
             }
             if (this.field_r != null &&
               this.field_r.field_i.field_f.isOutOfRange()) {
@@ -318,7 +318,7 @@ final class HazardModel extends TrapModel {
             while (var7 != null) {
               if (var7 instanceof PathMoveLocomotor &&
                 ((PathMoveLocomotor) (var7)).d(false) != this.field_s) {
-                var10_ref.a(new fm(3, this.getRenderX((byte) 68), this.getRenderY((byte) 124), this.getRenderZ((byte) -111)), -58);
+                var10_ref.play(new SoundEvent(3, this.getRenderX((byte) 68), this.getRenderY((byte) 124), this.getRenderZ((byte) -111)), -58);
                 this.field_s = ((PathMoveLocomotor) (var7)).d(false);
               }
               var7 = (Locomotor) (var14.next(param0 + 0));

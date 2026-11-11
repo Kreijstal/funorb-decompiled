@@ -155,7 +155,7 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
               return false;
             }
           } else {
-            if (!ck.a(param0.getX(3), param0.getHeight((byte) 55), this.trap.getX(3), this.trap.getWidth(-113), this.trap.getHeight((byte) 55), param0.getY(9648), (byte) 67, this.trap.getY(9648), param0.getWidth(-51))) {
+            if (!ck.containsCentredBox(param0.getX(3), param0.getHeight((byte) 55), this.trap.getX(3), this.trap.getWidth(-113), this.trap.getHeight((byte) 55), param0.getY(9648), (byte) 67, this.trap.getY(9648), param0.getWidth(-51))) {
               return false;
             }
           }

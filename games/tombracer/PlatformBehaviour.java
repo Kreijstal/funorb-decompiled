@@ -26,7 +26,7 @@ final class PlatformBehaviour extends Behaviour {
         }
     }
 
-    final int a(int param0, int param1, int param2, int param3, byte param4, int param5) {
+    final int getSurfaceCoverage(int param0, int param1, int param2, int param3, byte param4, int param5) {
         if (this.field_r) {
           return 0;
         }
@@ -62,8 +62,8 @@ final class PlatformBehaviour extends Behaviour {
         try {
           super.attachToTrap(param0, param1);
           param1.b((byte) 91, 3);
-          param1.a(true, (byte) -119, 1);
-          param1.a((byte) -112, true, 2);
+          param1.setProvidesSurface(true, (byte) -119, 1);
+          param1.setReactsToSupport((byte) -112, true, 2);
           param1.setFloating((byte) 17, param0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "lpa.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -73,7 +73,7 @@ final class PlatformBehaviour extends Behaviour {
     final void b(int param0, int param1) {
         this.field_n = param1;
         if (param0 != -5) {
-          this.a(3, -95, -50, 37, (byte) -23, 92);
+          this.getSurfaceCoverage(3, -95, -50, 37, (byte) -23, 92);
         }
     }
 
@@ -188,7 +188,7 @@ final class PlatformBehaviour extends Behaviour {
         this.field_t = 0;
     }
 
-    final void a(Collidable param0, byte param1, WorldBody param2, int param3) {
+    final void onSupport(Collidable param0, byte param1, WorldBody param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -199,7 +199,7 @@ final class PlatformBehaviour extends Behaviour {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          super.a(param0, (byte) 101, param2, param3);
+          super.onSupport(param0, (byte) 101, param2, param3);
           if (this.field_r) {
             return;
           }
@@ -210,8 +210,8 @@ final class PlatformBehaviour extends Behaviour {
             return;
           }
           if (this.trap == param0) {
-            var5_int = this.trap.getX(3) - this.trap.I(-16423);
-            var6 = this.trap.getY(9648) - this.trap.y((byte) -91);
+            var5_int = this.trap.getX(3) - this.trap.getTickStartX(-16423);
+            var6 = this.trap.getY(9648) - this.trap.getTickStartY((byte) -91);
             if (var5_int != 0) {
               param2.tryPush(125, true, 1, var6, var5_int, 0);
             } else {

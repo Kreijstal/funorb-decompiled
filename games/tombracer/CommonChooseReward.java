@@ -8,7 +8,7 @@ final class CommonChooseReward implements dv {
     private int takenCount;
     static jea field_c;
     private boolean finished;
-    w field_g;
+    SoundEventPlayer field_g;
     private MatchState field_j;
     private int currentPos;
     static long field_b;
@@ -37,7 +37,7 @@ final class CommonChooseReward implements dv {
             }
           }
           if (this.field_g != null) {
-            this.field_g.a(new fm(var3, 0, 0, 0), -58);
+            this.field_g.play(new SoundEvent(var3, 0, 0, 0), -58);
           }
           this.field_j.players[this.currentPlayerId].setChosenReward(18202625, this.reward[param0]);
           this.reward[param0] = -1;
@@ -80,7 +80,7 @@ final class CommonChooseReward implements dv {
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
         if (param0 != -14447) {
-          this.field_g = (w) null;
+          this.field_g = (SoundEventPlayer) null;
           if (this.takenCount >= this.reward.length) {
             this.currentPlayerId = -1;
           } else {
@@ -305,7 +305,7 @@ final class CommonChooseReward implements dv {
 
     final void clearRewards(byte param0) {
         if (null != this.field_g) {
-          this.field_g.a(new fm(61, 0, 0, 0), -58);
+          this.field_g.play(new SoundEvent(61, 0, 0, 0), -58);
           if (param0 >= -44) {
             this.reward = (int[]) null;
             return;

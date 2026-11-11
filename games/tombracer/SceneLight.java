@@ -81,7 +81,7 @@ abstract class SceneLight extends IntrusiveNode {
           PerlinNoise2D.field_m = LoadLevelCommand.a(param0, WidgetStyleLayer.field_f, -77);
           su.createToolkitSprite(MatchStatistics.field_g, param0, (byte) 126);
           za.field_g = su.createToolkitSprite(TextResourceLoader.field_b, param0, (byte) -50);
-          bca.field_d = su.createToolkitSprite(sla.field_a, param0, (byte) -38);
+          VariantMask.field_d = su.createToolkitSprite(sla.field_a, param0, (byte) -38);
           rm.field_c = su.createToolkitSprite(SocketArchiveNetworkClient.field_s, param0, (byte) 126);
           CharacterSelectPhase.field_r = su.createToolkitSprite(aa.field_a, param0, (byte) 125);
           je.field_E = su.createToolkitSprite(pha.field_Bb, param0, (byte) -119);
@@ -126,7 +126,7 @@ abstract class SceneLight extends IntrusiveNode {
           TripBeamBehaviour.field_y = su.createToolkitSprite(ResourceArchive.field_h, param0, (byte) 127);
           haa.field_z = su.createToolkitSprite(re.field_a, param0, (byte) 126);
           aq.field_a = LoadLevelCommand.a(param0, mna.field_c, -55);
-          MirrorBehaviour.field_r = su.createToolkitSprite(fm.field_h, param0, (byte) 127);
+          MirrorBehaviour.field_r = su.createToolkitSprite(SoundEvent.field_h, param0, (byte) 127);
           OpenGlEnvironmentWaterEffect.field_d = SweepRotateLocomotor.a(param0, (byte) -105, haa.field_A.field_f);
           Room.field_j = SweepRotateLocomotor.a(param0, (byte) -104, du.field_c.field_f);
         } catch (RuntimeException runtimeException) {

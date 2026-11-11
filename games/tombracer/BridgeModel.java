@@ -540,7 +540,7 @@ final class BridgeModel extends TrapModel {
             var12.field_e = GameScreen.positiveModulo(var18 + IntrusiveDequeCursor.field_c[var12.field_b], 2048, -54);
             var12.field_a = var7 - var4;
             var12.field_d = var10 - var3;
-            var20.e(true).nextBounded(100, 0);
+            var20.getSeededRandom(true).nextBounded(100, 0);
             var10 = var10 + 2097152;
             this.a(true, var12);
           }

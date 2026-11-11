@@ -21,7 +21,7 @@ abstract class TextLayout {
         wka.field_d = false;
         id var6 = new id(param0, var5);
         SecondaryNodeDequeIterator.field_a = new MatchScreen(false, var5, var4, 0, false, rga.b(26499, param0), 0, 1, param2, param0, (BitSet[]) null, new boolean[]{ReportAbuseDialog.field_ub > 0 ? true : false}, var6);
-        SecondaryNodeDequeIterator.field_a.j((byte) -64);
+        SecondaryNodeDequeIterator.field_a.initPlayers((byte) -64);
         SecondaryNodeDequeIterator.field_a.showCharacterSelect((byte) -52);
         int var7 = -125 / ((param1 - 57) / 38);
         iqa.field_c.g(0);

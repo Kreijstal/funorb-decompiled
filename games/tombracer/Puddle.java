@@ -68,7 +68,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
     private final int a(int param0, int param1, int param2, int param3, int param4) {
         if (this.kind == 1) {
           int var6 = 80 / ((-23 - param1) / 56);
-          return this.room.a((Collidable) (this), (WorldBody) (this), 1, this.size, param3, 12, this.size, this.x, param4, param0, this.y, param2, true);
+          return this.room.resolveMove((Collidable) (this), (WorldBody) (this), 1, this.size, param3, 12, this.size, this.x, param4, param0, this.y, param2, true);
         }
         return 0;
     }
@@ -533,7 +533,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
         return this.previousX;
     }
 
-    public final boolean l(int param0) {
+    public final boolean isOutsideActiveVariant(int param0) {
         if (param0 != 0) {
           return false;
         }
@@ -678,7 +678,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
         return this.expired;
     }
 
-    public final int a(boolean param0, int param1, int param2, int param3, int param4, int param5) {
+    public final int getSurfaceCoverage(boolean param0, int param1, int param2, int param3, int param4, int param5) {
         if (!param0) {
           return 75;
         }
@@ -708,7 +708,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
           }
           var5 = this.room.getPlayer(-37);
           if (this.intersectsRect((byte) 110, var5.getY(9648), var5.getX(3), var5.getHeight((byte) 55), var5.getWidth(param0 ^ 104))) {
-            var5.G(31027);
+            var5.applySlow(31027);
           }
           return;
         }
@@ -733,7 +733,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
             }
             var6 = this.room.getPlayer(-37);
             if (this.intersectsRect((byte) 110, var6.getY(9648), var6.getX(3), var6.getHeight((byte) 55), var6.getWidth(param0 ^ 104))) {
-              var6.G(31027);
+              var6.applySlow(31027);
             }
             return;
           }
@@ -750,7 +750,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
         }
         var7 = this.room.getPlayer(-37);
         if (this.intersectsRect((byte) 110, var7.getY(9648), var7.getX(3), var7.getHeight((byte) 55), var7.getWidth(param0 ^ 104))) {
-          var7.G(31027);
+          var7.applySlow(31027);
         }
         return;
     }
@@ -858,8 +858,8 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
     }
 
     Puddle() {
-        int fieldTemp$0 = ui.field_a;
-        ui.field_a = ui.field_a + 1;
+        int fieldTemp$0 = SwitchableIdAllocator.field_a;
+        SwitchableIdAllocator.field_a = SwitchableIdAllocator.field_a + 1;
         this.field_w = fieldTemp$0;
     }
 
@@ -879,7 +879,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
         return false;
     }
 
-    public final boolean b(boolean param0) {
+    public final boolean isMobile(boolean param0) {
         if (param0) {
           return this.kind == 1 ? true : false;
         }

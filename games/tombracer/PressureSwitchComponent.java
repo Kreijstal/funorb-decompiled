@@ -195,7 +195,7 @@ final class PressureSwitchComponent extends SwitchComponent {
                 var7.b(4, (byte) -112);
               } else {
                 if (var8 != 55) {
-                  var10.a(var5, (byte) 124, var7);
+                  var10.addModel(var5, (byte) 124, var7);
                   return var10;
                 }
                 var7.b(5, (byte) -112);
@@ -206,7 +206,7 @@ final class PressureSwitchComponent extends SwitchComponent {
           } else {
             var7.b(0, (byte) -112);
           }
-          var10.a(var5, (byte) 124, var7);
+          var10.addModel(var5, (byte) 124, var7);
           stackIn_20_0 = var10;
           return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

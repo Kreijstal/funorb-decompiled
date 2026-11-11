@@ -106,7 +106,7 @@ final class SimpleConditionBehaviour extends Behaviour {
           return;
         }
         if (var3 == 1) {
-          this.field_s = this.trap.d(50, false);
+          this.field_s = this.trap.hasMovedThisTick(50, false);
           if (param0 == 79) {
             return;
           }
@@ -123,7 +123,7 @@ final class SimpleConditionBehaviour extends Behaviour {
           this.resolveSwitchLinks(91);
           return;
         }
-        var2 = this.getRoom(true).a(this.trap.getY(9648), this.trap.getWidth(-96), param0 ^ 79, 2, this.trap.getHeight((byte) 55), this.trap.getX(param0 - 76), this.getRoot(6));
+        var2 = this.getRoom(true).sumSurfaceCoverage(this.trap.getY(9648), this.trap.getWidth(-96), param0 ^ 79, 2, this.trap.getHeight((byte) 55), this.trap.getX(param0 - 76), this.getRoot(6));
         stackIn_8_1 = !(var2 < (this.trap.getWidth(param0 ^ -51) >> 16) * (this.trap.getHeight((byte) 55) >> 16));
         this.field_s = stackIn_8_1;
         if (param0 == 79) {

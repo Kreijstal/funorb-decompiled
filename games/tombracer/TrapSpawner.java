@@ -36,7 +36,7 @@ final class TrapSpawner extends Spawner {
         super(param0, param1);
         try {
           this.template = new Trap(this.field_a, param1, false);
-          this.template.c((byte) 50, false);
+          this.template.setTopLevel((byte) 50, false);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -49,10 +49,10 @@ final class TrapSpawner extends Spawner {
         }
     }
 
-    final void a(byte param0, ui param1, boolean param2, ui param3) {
+    final void a(byte param0, SwitchableIdAllocator param1, boolean param2, SwitchableIdAllocator param3) {
         try {
           int var5_int = -11 % ((param0 - 31) / 61);
-          this.template.a(true, param2, param3, param1);
+          this.template.assignSwitchableIds(true, param2, param3, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vja.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -77,7 +77,7 @@ final class TrapSpawner extends Spawner {
         if (param1 > -3) {
           return (Switchable) null;
         }
-        return this.template.a(param0, param2, (byte) -26);
+        return this.template.findSwitchableRecursive(param0, param2, (byte) -26);
     }
 
     final void encode(BitPacketBuffer param0, byte param1) {

@@ -51,7 +51,7 @@ final class WheeledMountComponent extends PathMoverComponent {
           while (var2 != null) {
             var2.c(-97);
             if (var2.field_h <= 0) {
-              bca.a(var2.field_i, (byte) -42);
+              VariantMask.a(var2.field_i, (byte) -42);
               var2.unlink(25);
             }
             var2 = (fla) (nl.field_f.next(107));
@@ -187,7 +187,7 @@ final class WheeledMountComponent extends PathMoverComponent {
           var6 = rm.field_a;
           var7 = (TrapBaseModel) (var6.createModel(16, param1 + 71));
           var7.b(8022, 0);
-          var8.a((TrapPart) null, (byte) 124, var7);
+          var8.addModel((TrapPart) null, (byte) 124, var7);
           stackIn_1_0 = var8;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

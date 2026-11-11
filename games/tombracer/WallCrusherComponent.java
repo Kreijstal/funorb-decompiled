@@ -89,7 +89,7 @@ final class WallCrusherComponent extends PrefabComponent {
           var14.addBehaviour((byte) 83, (Behaviour) (this.field_G));
           var12 = rm.field_a;
           var13 = (WallModel) (var12.createModel(15, 93));
-          var14.a((TrapPart) null, (byte) 124, var13);
+          var14.addModel((TrapPart) null, (byte) 124, var13);
           stackIn_7_0 = var14;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

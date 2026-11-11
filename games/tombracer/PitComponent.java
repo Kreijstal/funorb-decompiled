@@ -182,7 +182,7 @@ final class PitComponent extends PrefabComponent {
               var5.a(16, false);
             }
           }
-          var9.a(var5, (byte) 124, var7);
+          var9.addModel(var5, (byte) 124, var7);
           stackIn_9_0 = var9;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

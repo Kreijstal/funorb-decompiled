@@ -6,7 +6,7 @@ final class daa {
     static lqa field_d;
     private MatchState field_a;
     static String field_c;
-    w field_b;
+    SoundEventPlayer field_b;
     private boolean field_e;
 
     final void a(byte param0, int param1, int param2) {
@@ -24,7 +24,7 @@ final class daa {
         }
         this.field_a.characterChoices[param2].setCharacter(param1, (byte) 37);
         if (null != this.field_b) {
-          this.field_b.a(new fm(64, 0, 0, 0), -58);
+          this.field_b.play(new SoundEvent(64, 0, 0, 0), -58);
         }
         if (this.field_a.allCharactersChosen(-112)) {
           this.field_e = true;

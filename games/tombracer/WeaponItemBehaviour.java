@@ -21,7 +21,7 @@ final class WeaponItemBehaviour extends ItemBehaviour {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          param1.g(62, 106);
+          param1.playSound(62, 106);
           param1.equipWeapon(this.field_t, true);
           if (param0 < -114) {
             return true;

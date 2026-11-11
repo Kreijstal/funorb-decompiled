@@ -100,7 +100,7 @@ final class gsa {
           }
         }
         if (var4 != -1) {
-          AccountRegistrationPanel.field_w.a(new fm(var4, 0, 0, 0), -58);
+          AccountRegistrationPanel.field_w.play(new SoundEvent(var4, 0, 0, 0), -58);
         }
         var5 = -this.field_m + this.field_x;
         var6 = 0;
@@ -122,7 +122,7 @@ final class gsa {
             decompiledFrameRemainder0 = false;
           }
           else {
-            this.field_t = AccountRegistrationPanel.field_w.a(new fm(param2 + 94, 0, 0, 0), -58);
+            this.field_t = AccountRegistrationPanel.field_w.play(new SoundEvent(param2 + 94, 0, 0, 0), -58);
             if (var6 == 0 &&
               null != this.field_t) {
               this.field_t.a(AccountRegistrationPanel.field_w, (byte) -113);

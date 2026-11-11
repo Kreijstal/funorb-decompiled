@@ -338,7 +338,7 @@ final class CrusherModel extends TrapModel {
         int var6;
         int var7;
         Trap var8;
-        w var9;
+        SoundEventPlayer var9;
         Object var16;
         Object var17;
         int stackIn_16_0 = 0;
@@ -347,12 +347,12 @@ final class CrusherModel extends TrapModel {
         int stackIn_118_0 = 0;
         int stackIn_149_0 = 0;
         Trap var10;
-        w var11;
+        SoundEventPlayer var11;
         Trap var12;
-        w var13;
+        SoundEventPlayer var13;
         Trap var14;
-        w var15;
-        w var17_ref;
+        SoundEventPlayer var15;
+        SoundEventPlayer var17_ref;
         Trap var18;
         int var6Lifetime1;
         int var6Lifetime2;
@@ -382,12 +382,12 @@ final class CrusherModel extends TrapModel {
               var2 != 0) {
               this.getRoom(42).getParticleEffects(false).a(0, this.getRenderY((byte) 92), 0, 0, 0, this.getRenderX((byte) 52));
             }
-            var13 = (w) (this.getRoom(param0 + 44).field_G);
+            var13 = (SoundEventPlayer) (this.getRoom(param0 + 44).soundQueue);
             if (var13 == null) {
               return;
             }
             var12 = (Trap) (this.body);
-            if (var12.d(param0 + 51, false)) {
+            if (var12.hasMovedThisTick(param0 + 51, false)) {
               stackIn_85_0 = (var3 != 0) ? 1 : 0;
             } else {
               stackIn_85_0 = 0;
@@ -395,31 +395,31 @@ final class CrusherModel extends TrapModel {
             var6 = stackIn_85_0;
             if (this.field_s == null &&
               var6 != 0) {
-              var13.a(new fm(56, this.getRenderX((byte) -93), this.getRenderY((byte) 124), this.getRenderZ((byte) -118)), -58);
-              this.field_s = var13.a(new fm(57, this.getRenderX((byte) 32), this.getRenderY((byte) 118), this.getRenderZ((byte) -95)), -58);
+              var13.play(new SoundEvent(56, this.getRenderX((byte) -93), this.getRenderY((byte) 124), this.getRenderZ((byte) -118)), -58);
+              this.field_s = var13.play(new SoundEvent(57, this.getRenderX((byte) 32), this.getRenderY((byte) 118), this.getRenderZ((byte) -95)), -58);
             } else {
               if (this.field_s != null &&
                 var6 == 0) {
                 this.field_s.a(1, var13);
                 this.field_s = null;
-                var13.a(new fm(58, this.getRenderX((byte) -99), this.getRenderY((byte) 95), this.getRenderZ((byte) -122)), param0 ^ 57);
+                var13.play(new SoundEvent(58, this.getRenderX((byte) -99), this.getRenderY((byte) 95), this.getRenderZ((byte) -122)), param0 ^ 57);
               }
             }
             if (var6 == 0 &&
               !this.field_u &&
               this.field_v.isWaiting(110)) {
-              var13.a(new fm(59, this.getRenderX((byte) -121), this.getRenderY((byte) 92), this.getRenderZ((byte) -105)), -58);
+              var13.play(new SoundEvent(59, this.getRenderX((byte) -121), this.getRenderY((byte) 92), this.getRenderZ((byte) -105)), -58);
             }
             this.field_u = this.field_v.isWaiting(param0 - 77);
             if (var6 == 0 &&
               !this.field_p &&
               this.field_v.isWindingUp(-110)) {
-              var13.a(new fm(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
+              var13.play(new SoundEvent(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
             }
             this.field_p = this.field_v.isWindingUp(-59);
             if (this.field_r == 0 &&
               var2 != 0) {
-              var13.a(new fm(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
+              var13.play(new SoundEvent(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
             }
             return;
           }
@@ -430,12 +430,12 @@ final class CrusherModel extends TrapModel {
               var2 != 0) {
               this.getRoom(42).getParticleEffects(false).a(0, this.getRenderY((byte) 92), 0, 0, 0, this.getRenderX((byte) 52));
             }
-            var9 = (w) (this.getRoom(param0 + 44).field_G);
+            var9 = (SoundEventPlayer) (this.getRoom(param0 + 44).soundQueue);
             if (var9 == null) {
               return;
             }
             var8 = (Trap) (this.body);
-            if (var8.d(param0 + 51, false)) {
+            if (var8.hasMovedThisTick(param0 + 51, false)) {
               stackIn_16_0 = (var3 != 0) ? 1 : 0;
             } else {
               stackIn_16_0 = 0;
@@ -443,31 +443,31 @@ final class CrusherModel extends TrapModel {
             var6Lifetime3 = stackIn_16_0;
             if (this.field_s == null &&
               var6Lifetime3 != 0) {
-              var9.a(new fm(56, this.getRenderX((byte) -93), this.getRenderY((byte) 124), this.getRenderZ((byte) -118)), -58);
-              this.field_s = var9.a(new fm(57, this.getRenderX((byte) 32), this.getRenderY((byte) 118), this.getRenderZ((byte) -95)), -58);
+              var9.play(new SoundEvent(56, this.getRenderX((byte) -93), this.getRenderY((byte) 124), this.getRenderZ((byte) -118)), -58);
+              this.field_s = var9.play(new SoundEvent(57, this.getRenderX((byte) 32), this.getRenderY((byte) 118), this.getRenderZ((byte) -95)), -58);
             } else {
               if (this.field_s != null &&
                 var6Lifetime3 == 0) {
                 this.field_s.a(1, var9);
                 this.field_s = null;
-                var9.a(new fm(58, this.getRenderX((byte) -99), this.getRenderY((byte) 95), this.getRenderZ((byte) -122)), param0 ^ 57);
+                var9.play(new SoundEvent(58, this.getRenderX((byte) -99), this.getRenderY((byte) 95), this.getRenderZ((byte) -122)), param0 ^ 57);
               }
             }
             if (var6Lifetime3 == 0 &&
               !this.field_u &&
               this.field_v.isWaiting(110)) {
-              var9.a(new fm(59, this.getRenderX((byte) -121), this.getRenderY((byte) 92), this.getRenderZ((byte) -105)), -58);
+              var9.play(new SoundEvent(59, this.getRenderX((byte) -121), this.getRenderY((byte) 92), this.getRenderZ((byte) -105)), -58);
             }
             this.field_u = this.field_v.isWaiting(param0 - 77);
             if (var6Lifetime3 == 0 &&
               !this.field_p &&
               this.field_v.isWindingUp(-110)) {
-              var9.a(new fm(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
+              var9.play(new SoundEvent(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
             }
             this.field_p = this.field_v.isWindingUp(-59);
             if (this.field_r == 0 &&
               var2 != 0) {
-              var9.a(new fm(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
+              var9.play(new SoundEvent(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
             }
             return;
           }
@@ -478,12 +478,12 @@ final class CrusherModel extends TrapModel {
               var2 != 0) {
               this.getRoom(42).getParticleEffects(false).a(0, this.getRenderY((byte) 92), 0, 0, 0, this.getRenderX((byte) 52));
             }
-            var11 = (w) (this.getRoom(param0 + 44).field_G);
+            var11 = (SoundEventPlayer) (this.getRoom(param0 + 44).soundQueue);
             if (var11 == null) {
               return;
             }
             var10 = (Trap) (this.body);
-            if (var10.d(param0 + 51, false)) {
+            if (var10.hasMovedThisTick(param0 + 51, false)) {
               stackIn_51_0 = (var3 != 0) ? 1 : 0;
             } else {
               stackIn_51_0 = 0;
@@ -491,43 +491,43 @@ final class CrusherModel extends TrapModel {
             var6Lifetime4 = stackIn_51_0;
             if (this.field_s == null &&
               var6Lifetime4 != 0) {
-              var11.a(new fm(56, this.getRenderX((byte) -93), this.getRenderY((byte) 124), this.getRenderZ((byte) -118)), -58);
-              this.field_s = var11.a(new fm(57, this.getRenderX((byte) 32), this.getRenderY((byte) 118), this.getRenderZ((byte) -95)), -58);
+              var11.play(new SoundEvent(56, this.getRenderX((byte) -93), this.getRenderY((byte) 124), this.getRenderZ((byte) -118)), -58);
+              this.field_s = var11.play(new SoundEvent(57, this.getRenderX((byte) 32), this.getRenderY((byte) 118), this.getRenderZ((byte) -95)), -58);
             } else {
               if (this.field_s != null &&
                 var6Lifetime4 == 0) {
                 this.field_s.a(1, var11);
                 this.field_s = null;
-                var11.a(new fm(58, this.getRenderX((byte) -99), this.getRenderY((byte) 95), this.getRenderZ((byte) -122)), param0 ^ 57);
+                var11.play(new SoundEvent(58, this.getRenderX((byte) -99), this.getRenderY((byte) 95), this.getRenderZ((byte) -122)), param0 ^ 57);
               }
             }
             if (var6Lifetime4 == 0 &&
               !this.field_u &&
               this.field_v.isWaiting(110)) {
-              var11.a(new fm(59, this.getRenderX((byte) -121), this.getRenderY((byte) 92), this.getRenderZ((byte) -105)), -58);
+              var11.play(new SoundEvent(59, this.getRenderX((byte) -121), this.getRenderY((byte) 92), this.getRenderZ((byte) -105)), -58);
             }
             this.field_u = this.field_v.isWaiting(param0 - 77);
             if (var6Lifetime4 == 0 &&
               !this.field_p &&
               this.field_v.isWindingUp(-110)) {
-              var11.a(new fm(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
+              var11.play(new SoundEvent(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
             }
             this.field_p = this.field_v.isWindingUp(-59);
             if (this.field_r == 0 &&
               var2 != 0) {
-              var11.a(new fm(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
+              var11.play(new SoundEvent(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
             }
             return;
           }
         }
         if (this.field_r == 0) {
           if (var2 == 0) {
-            var15 = (w) (this.getRoom(param0 + 44).field_G);
+            var15 = (SoundEventPlayer) (this.getRoom(param0 + 44).soundQueue);
             if (var15 == null) {
               return;
             }
             var14 = (Trap) (this.body);
-            if (var14.d(param0 + 51, false)) {
+            if (var14.hasMovedThisTick(param0 + 51, false)) {
               stackIn_118_0 = (var3 != 0) ? 1 : 0;
             } else {
               stackIn_118_0 = 0;
@@ -535,42 +535,42 @@ final class CrusherModel extends TrapModel {
             var6Lifetime1 = stackIn_118_0;
             if (this.field_s == null &&
               var6Lifetime1 != 0) {
-              var15.a(new fm(56, this.getRenderX((byte) -93), this.getRenderY((byte) 124), this.getRenderZ((byte) -118)), -58);
-              this.field_s = var15.a(new fm(57, this.getRenderX((byte) 32), this.getRenderY((byte) 118), this.getRenderZ((byte) -95)), -58);
+              var15.play(new SoundEvent(56, this.getRenderX((byte) -93), this.getRenderY((byte) 124), this.getRenderZ((byte) -118)), -58);
+              this.field_s = var15.play(new SoundEvent(57, this.getRenderX((byte) 32), this.getRenderY((byte) 118), this.getRenderZ((byte) -95)), -58);
             } else {
               if (this.field_s != null &&
                 var6Lifetime1 == 0) {
                 this.field_s.a(1, var15);
                 this.field_s = null;
-                var15.a(new fm(58, this.getRenderX((byte) -99), this.getRenderY((byte) 95), this.getRenderZ((byte) -122)), param0 ^ 57);
+                var15.play(new SoundEvent(58, this.getRenderX((byte) -99), this.getRenderY((byte) 95), this.getRenderZ((byte) -122)), param0 ^ 57);
               }
             }
             if (var6Lifetime1 == 0 &&
               !this.field_u &&
               this.field_v.isWaiting(110)) {
-              var15.a(new fm(59, this.getRenderX((byte) -121), this.getRenderY((byte) 92), this.getRenderZ((byte) -105)), -58);
+              var15.play(new SoundEvent(59, this.getRenderX((byte) -121), this.getRenderY((byte) 92), this.getRenderZ((byte) -105)), -58);
             }
             this.field_u = this.field_v.isWaiting(param0 - 77);
             if (var6Lifetime1 == 0 &&
               !this.field_p &&
               this.field_v.isWindingUp(-110)) {
-              var15.a(new fm(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
+              var15.play(new SoundEvent(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
             }
             this.field_p = this.field_v.isWindingUp(-59);
             if (this.field_r == 0 &&
               var2 != 0) {
-              var15.a(new fm(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
+              var15.play(new SoundEvent(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
             }
             return;
           }
           this.getRoom(42).getParticleEffects(false).a(0, this.getRenderY((byte) 92), 0, 0, 0, this.getRenderX((byte) 52));
         }
-        var17_ref = (w) (this.getRoom(param0 + 44).field_G);
+        var17_ref = (SoundEventPlayer) (this.getRoom(param0 + 44).soundQueue);
         if (var17_ref == null) {
           return;
         }
         var18 = (Trap) (this.body);
-        if (var18.d(param0 + 51, false)) {
+        if (var18.hasMovedThisTick(param0 + 51, false)) {
           stackIn_149_0 = (var3 == 0) ? 0 : 1;
         } else {
           stackIn_149_0 = 0;
@@ -578,21 +578,21 @@ final class CrusherModel extends TrapModel {
         var6Lifetime2 = stackIn_149_0;
         if (this.field_s == null &&
           var6Lifetime2 != 0) {
-          var17_ref.a(new fm(56, this.getRenderX((byte) -93), this.getRenderY((byte) 124), this.getRenderZ((byte) -118)), -58);
-          this.field_s = var17_ref.a(new fm(57, this.getRenderX((byte) 32), this.getRenderY((byte) 118), this.getRenderZ((byte) -95)), -58);
+          var17_ref.play(new SoundEvent(56, this.getRenderX((byte) -93), this.getRenderY((byte) 124), this.getRenderZ((byte) -118)), -58);
+          this.field_s = var17_ref.play(new SoundEvent(57, this.getRenderX((byte) 32), this.getRenderY((byte) 118), this.getRenderZ((byte) -95)), -58);
           if (var6Lifetime2 == 0 &&
             !this.field_u &&
             this.field_v.isWaiting(110)) {
-            var17_ref.a(new fm(59, this.getRenderX((byte) -121), this.getRenderY((byte) 92), this.getRenderZ((byte) -105)), -58);
+            var17_ref.play(new SoundEvent(59, this.getRenderX((byte) -121), this.getRenderY((byte) 92), this.getRenderZ((byte) -105)), -58);
             this.field_u = this.field_v.isWaiting(param0 - 77);
             if (!this.field_p &&
               this.field_v.isWindingUp(-110)) {
-              var17_ref.a(new fm(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
+              var17_ref.play(new SoundEvent(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
             }
             this.field_p = this.field_v.isWindingUp(-59);
             if (this.field_r == 0 &&
               var2 != 0) {
-              var17_ref.a(new fm(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
+              var17_ref.play(new SoundEvent(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
             }
             return;
           }
@@ -603,11 +603,11 @@ final class CrusherModel extends TrapModel {
               this.field_p = this.field_v.isWindingUp(-59);
               if (this.field_r == 0 &&
                 var2 != 0) {
-                var17_ref.a(new fm(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
+                var17_ref.play(new SoundEvent(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
               }
               return;
             }
-            var17_ref.a(new fm(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
+            var17_ref.play(new SoundEvent(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
           }
           this.field_p = this.field_v.isWindingUp(-59);
           if (this.field_r != 0) {
@@ -616,58 +616,58 @@ final class CrusherModel extends TrapModel {
           if (var2 == 0) {
             return;
           }
-          var17_ref.a(new fm(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
+          var17_ref.play(new SoundEvent(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
           return;
         }
         if (this.field_s != null) {
           if (var6Lifetime2 == 0) {
             this.field_s.a(1, var17_ref);
             this.field_s = null;
-            var17_ref.a(new fm(58, this.getRenderX((byte) -99), this.getRenderY((byte) 95), this.getRenderZ((byte) -122)), param0 ^ 57);
+            var17_ref.play(new SoundEvent(58, this.getRenderX((byte) -99), this.getRenderY((byte) 95), this.getRenderZ((byte) -122)), param0 ^ 57);
             if (!this.field_u &&
               this.field_v.isWaiting(110)) {
-              var17_ref.a(new fm(59, this.getRenderX((byte) -121), this.getRenderY((byte) 92), this.getRenderZ((byte) -105)), -58);
+              var17_ref.play(new SoundEvent(59, this.getRenderX((byte) -121), this.getRenderY((byte) 92), this.getRenderZ((byte) -105)), -58);
             }
             this.field_u = this.field_v.isWaiting(param0 - 77);
             if (!this.field_p &&
               this.field_v.isWindingUp(-110)) {
-              var17_ref.a(new fm(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
+              var17_ref.play(new SoundEvent(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
             }
           } else {
             if (var6Lifetime2 == 0 &&
               !this.field_u &&
               this.field_v.isWaiting(110)) {
-              var17_ref.a(new fm(59, this.getRenderX((byte) -121), this.getRenderY((byte) 92), this.getRenderZ((byte) -105)), -58);
+              var17_ref.play(new SoundEvent(59, this.getRenderX((byte) -121), this.getRenderY((byte) 92), this.getRenderZ((byte) -105)), -58);
             }
             this.field_u = this.field_v.isWaiting(param0 - 77);
             if (var6Lifetime2 == 0 &&
               !this.field_p &&
               this.field_v.isWindingUp(-110)) {
-              var17_ref.a(new fm(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
+              var17_ref.play(new SoundEvent(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
             }
           }
           this.field_p = this.field_v.isWindingUp(-59);
           if (this.field_r == 0 &&
             var2 != 0) {
-            var17_ref.a(new fm(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
+            var17_ref.play(new SoundEvent(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
           }
           return;
         }
         if (var6Lifetime2 == 0 &&
           !this.field_u &&
           this.field_v.isWaiting(110)) {
-          var17_ref.a(new fm(59, this.getRenderX((byte) -121), this.getRenderY((byte) 92), this.getRenderZ((byte) -105)), -58);
+          var17_ref.play(new SoundEvent(59, this.getRenderX((byte) -121), this.getRenderY((byte) 92), this.getRenderZ((byte) -105)), -58);
           this.field_u = this.field_v.isWaiting(param0 - 77);
           if (!this.field_p) {
             if (!this.field_v.isWindingUp(-110)) {
               this.field_p = this.field_v.isWindingUp(-59);
               if (this.field_r == 0 &&
                 var2 != 0) {
-                var17_ref.a(new fm(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
+                var17_ref.play(new SoundEvent(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
               }
               return;
             }
-            var17_ref.a(new fm(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
+            var17_ref.play(new SoundEvent(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
           }
           this.field_p = this.field_v.isWindingUp(-59);
           if (this.field_r != 0) {
@@ -676,7 +676,7 @@ final class CrusherModel extends TrapModel {
           if (var2 == 0) {
             return;
           }
-          var17_ref.a(new fm(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
+          var17_ref.play(new SoundEvent(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
           return;
         }
         this.field_u = this.field_v.isWaiting(param0 - 77);
@@ -690,15 +690,15 @@ final class CrusherModel extends TrapModel {
             if (var2 == 0) {
               return;
             }
-            var17_ref.a(new fm(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
+            var17_ref.play(new SoundEvent(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
             return;
           }
-          var17_ref.a(new fm(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
+          var17_ref.play(new SoundEvent(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
         }
         this.field_p = this.field_v.isWindingUp(-59);
         if (this.field_r == 0 &&
           var2 != 0) {
-          var17_ref.a(new fm(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
+          var17_ref.play(new SoundEvent(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
           return;
         }
         return;

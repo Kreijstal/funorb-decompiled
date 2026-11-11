@@ -170,7 +170,7 @@ final class GameAssetLoader implements LoadingStage {
           return;
         }
         if (this.field_j != null) {
-          ui.a(this.field_j, uba.loadingQuipsShort[7], 80, -79);
+          SwitchableIdAllocator.a(this.field_j, uba.loadingQuipsShort[7], 80, -79);
           this.field_j = null;
           C2SActionPacket.a(-33);
           return;

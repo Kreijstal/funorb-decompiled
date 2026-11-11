@@ -38,7 +38,7 @@ final class CauldronComponent extends SwitchComponent {
           var8 = rm.field_a;
           var9 = (SwitchModel) (var8.createModel(9, 123));
           var9.b(1, (byte) -112);
-          var10.a(var5, (byte) 124, var9);
+          var10.addModel(var5, (byte) 124, var9);
           stackIn_1_0 = var10;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

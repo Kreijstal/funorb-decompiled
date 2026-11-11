@@ -62,7 +62,7 @@ final class PushableMountComponent extends PrefabComponent {
           var6 = rm.field_a;
           var7 = (BlockModel) (var6.createModel(7, 103));
           var7.b(125, 0);
-          var4.a((TrapPart) null, (byte) 124, var7);
+          var4.addModel((TrapPart) null, (byte) 124, var7);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

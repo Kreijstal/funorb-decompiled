@@ -134,7 +134,7 @@ final class MatchState implements dv {
           if (!param0) {
             return;
           }
-          if (param1.o((byte) -82)) {
+          if (param1.hasActiveVariant((byte) -82)) {
             return;
           }
           var3_int = param1.getCourseIndex(91);

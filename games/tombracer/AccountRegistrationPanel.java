@@ -11,7 +11,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
     private ValidatedTextInputWidget field_z;
     UsernameSuggestionsPanel field_y;
     private ValidatedTextInputWidget field_G;
-    static w field_w;
+    static SoundEventPlayer field_w;
     private ValidatedTextInputWidget field_J;
     private ValidatedTextInputWidget field_C;
     static String field_H;
@@ -568,7 +568,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
           var8 = new jsa(20, param1, 120 + param4, 25, param0, false, 120, 3, KeySwitchComponent.field_J, 16777215, param3);
           this.addChild(var8, -1);
           if (param2 < 51) {
-            field_w = (w) null;
+            field_w = (SoundEventPlayer) null;
           }
           var7 = new mha(((ValidationProvider) ((Object) param0)).getValidationSource((byte) 106));
           this.addChild(var7, -1);

@@ -12,13 +12,13 @@ final class fla extends IntrusiveNode {
     int field_h;
     static IntrusiveDeque field_f;
 
-    final void a(w param0, byte param1) {
+    final void a(SoundEventPlayer param0, byte param1) {
         try {
           if (param1 > -32) {
             this.field_l = 53;
           }
-          if (!(0 >= param0.field_i[this.field_l])) {
-            param0.field_i[this.field_l] = param0.field_i[this.field_l] - 1;
+          if (!(0 >= param0.playingCounts[this.field_l])) {
+            param0.playingCounts[this.field_l] = param0.playingCounts[this.field_l] - 1;
           }
           this.unlink(25);
           rs.a(this, -110);
@@ -27,7 +27,7 @@ final class fla extends IntrusiveNode {
         }
     }
 
-    final void a(int param0, w param1, boolean param2) {
+    final void a(int param0, SoundEventPlayer param1, boolean param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -103,17 +103,17 @@ final class fla extends IntrusiveNode {
           this.field_i.a(this.field_m, this.field_h, (byte) -21);
           return;
         }
-        w var7 = (w) null;
-        this.a(-1, (w) null, false);
+        SoundEventPlayer var7 = (SoundEventPlayer) null;
+        this.a(-1, (SoundEventPlayer) null, false);
         this.field_m = AgeValidator.a(param3, true, param0);
         this.field_i.a(this.field_m, this.field_h, (byte) -21);
     }
 
-    final void a(int param0, w param1) {
+    final void a(int param0, SoundEventPlayer param1) {
         try {
           int var3_int = 54 % ((-44 - param0) / 44);
-          if (!(0 >= param1.field_i[this.field_l])) {
-            param1.field_i[this.field_l] = param1.field_i[this.field_l] - 1;
+          if (!(0 >= param1.playingCounts[this.field_l])) {
+            param1.playingCounts[this.field_l] = param1.playingCounts[this.field_l] - 1;
           }
           this.unlink(18);
           rs.a(this, -77);

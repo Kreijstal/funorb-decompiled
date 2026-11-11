@@ -183,7 +183,7 @@ final class fp {
         lt.field_a = SpriteData.loadSprite(param2, "", "room_total");
         FleeLocomotor.field_C = SpriteData.loadSprite(param2, "", "tombname_frame");
         mna.field_c = SpriteData.loadSheet(param2, "", "blackframe");
-        fm.field_h = SpriteData.loadSprite(param2, "", "sandblock");
+        SoundEvent.field_h = SpriteData.loadSprite(param2, "", "sandblock");
         TextResourceLoader.field_b = SpriteData.loadSprite(param2, "", "medal_gold");
         sla.field_a = SpriteData.loadSprite(param2, "", "medal_silver");
         if (param3 != 17) {

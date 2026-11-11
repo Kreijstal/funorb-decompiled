@@ -297,7 +297,7 @@ final class PitModel extends TrapModel {
             var15 = stackIn_18_0;
             if (var12 == 0) {
               if (2097152 <= var9) {
-                stackIn_26_0 = (var30.a(var9 - 2097152, 2097152, var7, 2097152, true, 1, (byte) -101)) ? 1 : 0;
+                stackIn_26_0 = (var30.isTileBoxOccupied(var9 - 2097152, 2097152, var7, 2097152, true, 1, (byte) -101)) ? 1 : 0;
               } else {
                 stackIn_26_0 = 1;
               }
@@ -307,7 +307,7 @@ final class PitModel extends TrapModel {
             var16 = stackIn_26_0;
             if (var13 == 0) {
               if (var9 <= var3 - 2097152) {
-                stackIn_34_0 = (var30.a(2097152 + var9, 2097152, var7, 2097152, true, 1, (byte) -86)) ? 1 : 0;
+                stackIn_34_0 = (var30.isTileBoxOccupied(2097152 + var9, 2097152, var7, 2097152, true, 1, (byte) -86)) ? 1 : 0;
               } else {
                 stackIn_34_0 = 1;
               }
@@ -317,7 +317,7 @@ final class PitModel extends TrapModel {
             var17 = stackIn_34_0;
             if (var14 == 0) {
               if (var7 >= 2097152) {
-                stackIn_42_0 = (var30.a(var9, 2097152, -2097152 + var7, 2097152, true, 1, (byte) -44)) ? 1 : 0;
+                stackIn_42_0 = (var30.isTileBoxOccupied(var9, 2097152, -2097152 + var7, 2097152, true, 1, (byte) -44)) ? 1 : 0;
               } else {
                 stackIn_42_0 = 1;
               }
@@ -327,7 +327,7 @@ final class PitModel extends TrapModel {
             var18 = stackIn_42_0;
             if (var15 == 0) {
               if (var7 <= -2097152 + var4) {
-                stackIn_50_0 = (var30.a(var9, 2097152, 2097152 + var7, 2097152, true, 1, (byte) 92)) ? 1 : 0;
+                stackIn_50_0 = (var30.isTileBoxOccupied(var9, 2097152, 2097152 + var7, 2097152, true, 1, (byte) 92)) ? 1 : 0;
               } else {
                 stackIn_50_0 = 1;
               }
@@ -357,7 +357,7 @@ final class PitModel extends TrapModel {
                 } else {
                   if (var9 >= 2097152) {
                     if (var7 >= 2097152) {
-                      stackIn_105_0 = (var30.a(-2097152 + var9, 2097152, var7 - 2097152, 2097152, true, 1, (byte) -103)) ? 1 : 0;
+                      stackIn_105_0 = (var30.isTileBoxOccupied(-2097152 + var9, 2097152, var7 - 2097152, 2097152, true, 1, (byte) -103)) ? 1 : 0;
                     } else {
                       stackIn_105_0 = 1;
                     }
@@ -372,7 +372,7 @@ final class PitModel extends TrapModel {
                 } else {
                   if (var9 <= -2097152 + var3) {
                     if (var7 >= 2097152) {
-                      stackIn_117_0 = (var30.a(2097152 + var9, 2097152, var7 - 2097152, 2097152, true, 1, (byte) 114)) ? 1 : 0;
+                      stackIn_117_0 = (var30.isTileBoxOccupied(2097152 + var9, 2097152, var7 - 2097152, 2097152, true, 1, (byte) 114)) ? 1 : 0;
                     } else {
                       stackIn_117_0 = 1;
                     }
@@ -387,7 +387,7 @@ final class PitModel extends TrapModel {
                 } else {
                   if (var9 >= 2097152) {
                     if (var7 <= -2097152 + var4) {
-                      stackIn_129_0 = (var30.a(var9 - 2097152, 2097152, var7 + 2097152, 2097152, true, 1, (byte) 126)) ? 1 : 0;
+                      stackIn_129_0 = (var30.isTileBoxOccupied(var9 - 2097152, 2097152, var7 + 2097152, 2097152, true, 1, (byte) 126)) ? 1 : 0;
                     } else {
                       stackIn_129_0 = 1;
                     }
@@ -402,7 +402,7 @@ final class PitModel extends TrapModel {
                 } else {
                   if (var9 <= var3 - 2097152) {
                     if (var7 <= -2097152 + var4) {
-                      stackIn_141_0 = (var30.a(2097152 + var9, 2097152, var7 + 2097152, 2097152, true, 1, (byte) 77)) ? 1 : 0;
+                      stackIn_141_0 = (var30.isTileBoxOccupied(2097152 + var9, 2097152, var7 + 2097152, 2097152, true, 1, (byte) 77)) ? 1 : 0;
                     } else {
                       stackIn_141_0 = 1;
                     }
@@ -434,18 +434,18 @@ final class PitModel extends TrapModel {
                 if (var18 != 0) {
                   if (var19 != 0) {
                     if (var17 == 0) {
-                      var31.field_g = var30.a(2097152 + var9, 2097152, var7, 2097152, true, 0, (byte) -88);
+                      var31.field_g = var30.isTileBoxOccupied(2097152 + var9, 2097152, var7, 2097152, true, 0, (byte) -88);
                       var21 = -512;
                     } else {
-                      var31.field_g = var30.a(var9 - 2097152, 2097152, var7, 2097152, true, 0, (byte) 108);
+                      var31.field_g = var30.isTileBoxOccupied(var9 - 2097152, 2097152, var7, 2097152, true, 0, (byte) 108);
                       var21 = 512;
                     }
                   } else {
                     var21 = 0;
-                    var31.field_g = var30.a(var9, 2097152, 2097152 + var7, 2097152, true, 0, (byte) -52);
+                    var31.field_g = var30.isTileBoxOccupied(var9, 2097152, 2097152 + var7, 2097152, true, 0, (byte) -52);
                   }
                 } else {
-                  var31.field_g = var30.a(var9, 2097152, -2097152 + var7, 2097152, true, 0, (byte) -20);
+                  var31.field_g = var30.isTileBoxOccupied(var9, 2097152, -2097152 + var7, 2097152, true, 0, (byte) -20);
                   var21 = 1024;
                 }
                 break;
@@ -490,7 +490,7 @@ final class PitModel extends TrapModel {
                 var29.field_j = 3;
                 break;
             }
-            var31.field_d = var30.e(true).nextBounded(100, param0 + 110);
+            var31.field_d = var30.getSeededRandom(true).nextBounded(100, param0 + 110);
             var31.field_f = GameScreen.positiveModulo(var21 + LegacyOpenGlUnderwaterEffect.field_j[var31.field_j], 2048, param0 ^ -57);
             var31.field_a = -var6 + var7;
             var31.field_i = -var5 + var9;
@@ -510,7 +510,7 @@ final class PitModel extends TrapModel {
         }
     }
 
-    final int m(byte param0) {
+    final int getOccupancyLayer(byte param0) {
         if (param0 >= -63) {
           return -93;
         }
@@ -618,7 +618,7 @@ final class PitModel extends TrapModel {
         }
     }
 
-    final int f(byte param0) {
+    final int getWideOccupancyMode(byte param0) {
         int var2 = 89 / ((param0 - 15) / 45);
         return 1;
     }
@@ -689,7 +689,7 @@ final class PitModel extends TrapModel {
         RuntimeException var4 = null;
         try {
           if (param0 <= 119) {
-            this.f((byte) -126);
+            this.getWideOccupancyMode((byte) -126);
           }
           super.decode(122, param1, param2);
           if (param1.formatVersion >= 19) {

@@ -1177,7 +1177,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("offering_rematch", (byte) 105);
                 if (null != var2) {
-                  w.field_d = jaa.decodeText((byte) 33, var2);
+                  SoundEventPlayer.field_d = jaa.decodeText((byte) 33, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("rank", (byte) 122);
                 if (var2 != null) {
@@ -1337,7 +1337,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("room_points", (byte) 101);
                 if (var2 != null) {
-                  bca.field_c = jaa.decodeText((byte) 43, var2);
+                  VariantMask.field_c = jaa.decodeText((byte) 43, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("room_complete_points", (byte) 121);
                 if (null != var2) {
@@ -1405,7 +1405,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("reward_none_waiting", (byte) 116);
                 if (var2 != null) {
-                  g.field_i = jaa.decodeText((byte) 35, var2);
+                  RoomDefinition.field_i = jaa.decodeText((byte) 35, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("reward_none_dnf", (byte) 123);
                 if (null != var2) {

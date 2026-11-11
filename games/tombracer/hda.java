@@ -7,9 +7,9 @@ final class hda extends tc {
     final pl a(byte param0) {
         if (param0 != 113) {
           hda.releaseStatics((byte) -6);
-          return fq.field_c;
+          return RoomHeader.field_c;
         }
-        return fq.field_c;
+        return RoomHeader.field_c;
     }
 
     public static void releaseStatics(byte param0) {

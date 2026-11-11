@@ -201,18 +201,18 @@ final class AnimatedLight {
         return new nl[]{ShaderEffect.field_a, ObjectList.field_d, CollisionGrid.field_f};
     }
 
-    final static g a(boolean param0, int param1) {
+    final static RoomDefinition a(boolean param0, int param1) {
         int var3 = 0;
         int var6 = 0;
         qg[] var2;
         qg var4;
-        g[] var5;
-        g var7;
+        RoomDefinition[] var5;
+        RoomDefinition var7;
         int var8;
         qg[] var9;
         var8 = TombRacer.field_G ? 1 : 0;
         if (param0) {
-          return (g) null;
+          return (RoomDefinition) null;
         }
         var9 = cm.field_a;
         var2 = var9;

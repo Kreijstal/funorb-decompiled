@@ -243,10 +243,10 @@ final class CrusherBehaviour extends Behaviour {
         if (var3 == 0) {
           if (this.phase != 0) {
             if (1 == this.phase) {
-              var3 = ck.a(var8.getX(3), 1, var4, this.trap.getWidth(param0 - 5496), this.trap.getHeight((byte) 55), var8.getY(9648), (byte) 82, var5, 1) ? 1 : 0;
+              var3 = ck.containsCentredBox(var8.getX(3), 1, var4, this.trap.getWidth(param0 - 5496), this.trap.getHeight((byte) 55), var8.getY(9648), (byte) 82, var5, 1) ? 1 : 0;
             }
           } else {
-            var3 = ck.a(var8.getX(3), var8.getHeight((byte) 55), var4, this.trap.getWidth(-23), this.trap.getHeight((byte) 55), var8.getY(9648), (byte) 69, var5, var8.getWidth(param0 - 5519)) ? 1 : 0;
+            var3 = ck.containsCentredBox(var8.getX(3), var8.getHeight((byte) 55), var4, this.trap.getWidth(-23), this.trap.getHeight((byte) 55), var8.getY(9648), (byte) 69, var5, var8.getWidth(param0 - 5519)) ? 1 : 0;
           }
         }
         var6_int = this.phase;

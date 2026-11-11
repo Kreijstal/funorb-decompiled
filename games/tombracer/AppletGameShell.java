@@ -286,7 +286,7 @@ abstract class AppletGameShell extends GameApplet {
                             var3 = ila.a(stackIn_24_0, stackIn_25_1);
                             k.a((byte) 113, var3);
                           } else {
-                            fq.a((byte) -68);
+                            RoomHeader.a((byte) -68);
                           }
                         }
                       } else {
@@ -423,8 +423,8 @@ abstract class AppletGameShell extends GameApplet {
         bi.field_c = param2;
         MonochromeFillOperator.field_p = param3;
         tj.field_c = param6;
-        fq.field_g = param1;
-        fm.field_j = param0;
+        RoomHeader.field_g = param1;
+        SoundEvent.field_j = param0;
         this.initializePacketLengths(16);
         MirrorMoverLocomotor.f(29320);
     }
@@ -668,9 +668,9 @@ abstract class AppletGameShell extends GameApplet {
           if (0 != ApproachPlayerLocomotor.field_t) {
             InvisibleTouchSwitchComponent.field_J = SoftReferenceCache.openArchive(MonochromeFillOperator.field_p, 1);
           }
-          tk.field_b = FacePointLocomotor.a(true, fq.field_g, false, 1, (byte) -95);
+          tk.field_b = FacePointLocomotor.a(true, RoomHeader.field_g, false, 1, (byte) -95);
           OpenGlTexture2D.field_n = FacePointLocomotor.a(true, bi.field_c, false, 1, (byte) -109);
-          WeaveOperator.field_p = FacePointLocomotor.a(true, fm.field_j, false, 1, (byte) -79);
+          WeaveOperator.field_p = FacePointLocomotor.a(true, SoundEvent.field_j, false, 1, (byte) -79);
           cga.field_f = 2;
           PitComponent.field_G = tk.field_b;
           ota.field_b = OpenGlTexture2D.field_n;

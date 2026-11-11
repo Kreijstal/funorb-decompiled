@@ -51,7 +51,7 @@ final class gba extends IntrusiveNode {
         }
     }
 
-    final static Room a(int param0, boolean param1, g param2, int param3, PlayerSimulation param4) {
+    final static Room a(int param0, boolean param1, RoomDefinition param2, int param3, PlayerSimulation param4) {
         Room var5 = null;
         Exception var5_ref = null;
         RuntimeException var5_ref2 = null;
@@ -66,7 +66,7 @@ final class gba extends IntrusiveNode {
         try {
           try {
             var5 = new Room(param4, param2.field_f, param2.field_c, param0, param1);
-            var5.a((byte) 46, param2.field_e);
+            var5.setHeader((byte) 46, param2.field_e);
             if (param3 != 21789) {
               field_f = (int[]) null;
             }

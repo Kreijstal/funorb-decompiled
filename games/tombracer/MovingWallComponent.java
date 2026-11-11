@@ -31,7 +31,7 @@ final class MovingWallComponent extends PathMoverComponent {
           var9.addLocomotor(var6, param1 ^ 3);
           var7 = rm.field_a;
           var8 = (WallModel) (var7.createModel(15, 111));
-          var9.a((TrapPart) null, (byte) 124, var8);
+          var9.addModel((TrapPart) null, (byte) 124, var8);
           stackIn_1_0 = var9;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

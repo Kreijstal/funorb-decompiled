@@ -27,13 +27,13 @@ final class uo {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        g var11 = null;
+        RoomDefinition var11 = null;
         int var12 = 0;
         int var13 = 0;
-        g var14 = null;
-        g var15 = null;
+        RoomDefinition var14 = null;
+        RoomDefinition var15 = null;
         ObjectList var16 = null;
-        g var17 = null;
+        RoomDefinition var17 = null;
         int var4Lifetime1;
         int var5Lifetime1;
         int var6Lifetime1;
@@ -53,7 +53,7 @@ final class uo {
                   var9 = 0;
                   var10 = 0;
                   while (var16.size(-1) > var10) {
-                    var11 = (g) (var16.get(true, var10));
+                    var11 = (RoomDefinition) (var16.get(true, var10));
                     var12 = var11.field_e.c(1);
                     if (var8 >= var12 && (var8 != var12 ||
                       !(var11.field_a > var15.field_a))) {
@@ -76,15 +76,15 @@ final class uo {
               }
             }
           }
-          qg.field_a = new g[var2];
-          sja.field_i = new g[var3];
+          qg.field_a = new RoomDefinition[var2];
+          sja.field_i = new RoomDefinition[var3];
           if (param0 > -54) {
             return;
           }
           var4Lifetime1 = 0;
           var5Lifetime1 = 0;
           for (var6Lifetime1 = 0; var16.size(-1) > var6Lifetime1; var6Lifetime1++) {
-            var14 = (g) (var16.get(true, var6Lifetime1));
+            var14 = (RoomDefinition) (var16.get(true, var6Lifetime1));
             var17 = var14;
             if (!var17.field_e.a(-25584)) {
               incrementValue$0 = var4Lifetime1;

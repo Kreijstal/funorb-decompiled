@@ -116,7 +116,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
 
     private final void b(boolean param0, boolean param1) {
         if (param0) {
-          this.room.a(this.y, this.x, this.field_m, this.z, (byte) 6);
+          this.room.queueSound(this.y, this.x, this.field_m, this.z, (byte) 6);
           if (this.field_B) {
             if (this.velocityX != 0) {
               this.velocityX = 0;
@@ -151,7 +151,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
           return;
         }
         this.size = -115;
-        this.room.a(this.y, this.x, this.field_m, this.z, (byte) 6);
+        this.room.queueSound(this.y, this.x, this.field_m, this.z, (byte) 6);
         if (!this.field_B) {
           this.h((byte) 32);
           if (!param1) {
@@ -717,7 +717,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
         return (PooledObject) ((Object) new Projectile());
     }
 
-    public final int a(boolean param0, int param1, int param2, int param3, int param4, int param5) {
+    public final int getSurfaceCoverage(boolean param0, int param1, int param2, int param3, int param4, int param5) {
         if (!param0) {
           this.getRenderZ((byte) -115);
           return 0;
@@ -913,9 +913,9 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
           var4 = 1;
         }
         if (!this.field_p) {
-          return this.room.a((Collidable) (this), this.baseSize, 2, var4, this.y, this.x, false, this.effect.field_g, this.baseSize);
+          return this.room.isBoxBlocked((Collidable) (this), this.baseSize, 2, var4, this.y, this.x, false, this.effect.field_g, this.baseSize);
         }
-        return this.room.a((Collidable) (this), this.effect.field_g, var4, this.baseSize, param0 / 4, 12, this.baseSize, this.x, 1, param1 / 4, this.y, 0, false) != 0 ? true : false;
+        return this.room.resolveMove((Collidable) (this), this.effect.field_g, var4, this.baseSize, param0 / 4, 12, this.baseSize, this.x, 1, param1 / 4, this.y, 0, false) != 0 ? true : false;
     }
 
     final int getSize(int param0) {

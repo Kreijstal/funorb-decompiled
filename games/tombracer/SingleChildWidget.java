@@ -231,7 +231,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           joa.field_d = new jea(0L, (jea) null);
           joa.field_d.field_w = tba.a(-74, false, 120, 8421504, 4210752, false);
           NodeHashTable.field_g = new jea(0L, (jea) null);
-          NodeHashTable.field_g.field_w = Player.c(114, 1, 3, 6316128, -111, 6316128);
+          NodeHashTable.field_g.field_w = Player.createScrollbarSprites(114, 1, 3, 6316128, -111, 6316128);
           lw.field_a = new jea(0L, (jea) null);
           lw.field_a.field_w = rfa.a(BoulderComponent.a(param4, "lobby", 5, "popup"), 113);
           var12 = rfa.a(BoulderComponent.a(param4, "lobby", 5, "popup_mouseover"), 122);
@@ -297,9 +297,9 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           Effect.field_a.field_C = rfa.a(BoulderComponent.a(param4, "lobby", 5, "tab_mouseover"), 113);
           Effect.field_a.field_n = var14;
           CachedArchiveSource.field_d = new jea(0L, (jea) null);
-          CachedArchiveSource.field_d.field_w = Player.c(206, -1, 3, 1856141, -113, 1127256);
+          CachedArchiveSource.field_d.field_w = Player.createScrollbarSprites(206, -1, 3, 1856141, -113, 1127256);
           CommonChooseReward.field_c = new jea(0L, (jea) null);
-          CommonChooseReward.field_c.field_w = Player.c(290, -1, 3, 11579568, -120, 6052956);
+          CommonChooseReward.field_c.field_w = Player.createScrollbarSprites(290, -1, 3, 11579568, -120, 6052956);
           hg.field_g = new jea(0L, var15);
           hg.field_g.field_W = 1;
           hg.field_g.field_v = 1;

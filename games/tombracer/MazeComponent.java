@@ -220,7 +220,7 @@ abstract class MazeComponent extends PrefabComponent {
           }
           var12 = rm.field_a;
           var8 = var12.a(var6, var9, -102);
-          var9.a(var6, (byte) 124, var8);
+          var9.addModel(var6, (byte) 124, var8);
           stackIn_9_0 = var9;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -239,9 +239,9 @@ abstract class MazeComponent extends PrefabComponent {
 
     abstract boolean D(int param0);
 
-    final static g b(int param0, int param1) {
+    final static RoomDefinition b(int param0, int param1) {
         if (param0 != 0) {
-          return (g) null;
+          return (RoomDefinition) null;
         }
         return sja.field_i[param1];
     }
@@ -406,7 +406,7 @@ abstract class MazeComponent extends PrefabComponent {
           PlayerModel.field_a.a(360, -134 + (SoftwareRasterizer.height - 10), -23776, 10, SoftwareRasterizer.width - 360 >> 1);
           S2CEventPacket.field_e.a(PlayerModel.field_a.field_G, 24, -23776, 0, 0);
           vs.field_R.a(PlayerModel.field_a.field_G, -24 + PlayerModel.field_a.field_t, -23776, 24, 0);
-          vs.field_R.field_w = Player.c(vs.field_R.field_t, 1, 3, 11579568, param1 ^ -116, 8421504);
+          vs.field_R.field_w = Player.createScrollbarSprites(vs.field_R.field_t, 1, 3, 11579568, param1 ^ -116, 8421504);
           RasterShape.field_e.a(-10 + vs.field_R.field_G, -24 + vs.field_R.field_t - 12, -23776, 5, 5);
           Trap.field_q.a(80, 24, -23776, -5 + (vs.field_R.field_t - 24), (-80 + vs.field_R.field_G) / 2);
           GameFont.a(false);

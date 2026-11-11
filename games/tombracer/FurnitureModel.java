@@ -71,7 +71,7 @@ final class FurnitureModel extends TrapModel {
           if (param0 <= 50) {
             field_n = -110;
           }
-          var9 = this.getRoom(46).e(true);
+          var9 = this.getRoom(46).getSeededRandom(true);
           this.field_g = var9.nextBounded(100, 0);
           var5 = 0;
           var7 = this.field_m;

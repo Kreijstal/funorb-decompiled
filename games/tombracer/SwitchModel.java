@@ -152,7 +152,7 @@ final class SwitchModel extends TrapModel {
         }
     }
 
-    final int f(byte param0) {
+    final int getWideOccupancyMode(byte param0) {
         int var2 = 56 / ((param0 - 15) / 45);
         return -1;
     }
@@ -209,13 +209,13 @@ final class SwitchModel extends TrapModel {
         boolean stackIn_368_1 = false;
         int var3;
         int var4;
-        w var6;
-        w var7;
+        SoundEventPlayer var6;
+        SoundEventPlayer var7;
         int var3Lifetime1;
         int var3Lifetime2;
         var4 = TombRacer.field_G ? 1 : 0;
         if (null == this.field_s) {
-          var6 = (w) (this.getRoom(58).field_G);
+          var6 = (SoundEventPlayer) (this.getRoom(58).soundQueue);
           if (param0 != -1) {
             this.field_o = (SwitchSource) null;
           }
@@ -229,7 +229,7 @@ final class SwitchModel extends TrapModel {
                 if (this.field_q == 1) {
                   if (this.field_o.getSwitchState((byte) -126).b((byte) 89)) {
                     if (this.field_p == null) {
-                      this.field_p = var6.a(new fm(53, this.getRenderX((byte) -102), this.getRenderY((byte) 116), this.getRenderZ((byte) -89)), -58);
+                      this.field_p = var6.play(new SoundEvent(53, this.getRenderX((byte) -102), this.getRenderY((byte) 116), this.getRenderZ((byte) -89)), -58);
                     } else {
                       if (this.field_q == 1 &&
                         !this.field_o.getSwitchState((byte) -87).b((byte) 72) &&
@@ -262,7 +262,7 @@ final class SwitchModel extends TrapModel {
                 if (this.field_q == 1) {
                   if (this.field_o.getSwitchState((byte) -126).b((byte) 89)) {
                     if (this.field_p == null) {
-                      this.field_p = var6.a(new fm(53, this.getRenderX((byte) -102), this.getRenderY((byte) 116), this.getRenderZ((byte) -89)), -58);
+                      this.field_p = var6.play(new SoundEvent(53, this.getRenderX((byte) -102), this.getRenderY((byte) 116), this.getRenderZ((byte) -89)), -58);
                     } else {
                       if (this.field_q == 1 &&
                         !this.field_o.getSwitchState((byte) -87).b((byte) 72) &&
@@ -291,19 +291,19 @@ final class SwitchModel extends TrapModel {
                 this.field_n = stackIn_54_1;
                 return;
               }
-              var6.a(new fm(68, this.getRenderX((byte) -107), this.getRenderY((byte) 123), this.getRenderZ((byte) -111)), -58);
+              var6.play(new SoundEvent(68, this.getRenderX((byte) -107), this.getRenderY((byte) 123), this.getRenderZ((byte) -111)), -58);
             } else {
               if (var3 != 0) {
-                var6.a(new fm(51, this.getRenderX((byte) 90), this.getRenderY((byte) 119), this.getRenderZ((byte) -106)), param0 ^ 57);
+                var6.play(new SoundEvent(51, this.getRenderX((byte) 90), this.getRenderY((byte) 119), this.getRenderZ((byte) -106)), param0 ^ 57);
               } else {
-                var6.a(new fm(52, this.getRenderX((byte) -119), this.getRenderY((byte) 112), this.getRenderZ((byte) -96)), -58);
+                var6.play(new SoundEvent(52, this.getRenderX((byte) -119), this.getRenderY((byte) 112), this.getRenderZ((byte) -96)), -58);
               }
             }
           }
           if (this.field_q == 1 &&
             this.field_o.getSwitchState((byte) -126).b((byte) 89)) {
             if (this.field_p == null) {
-              this.field_p = var6.a(new fm(53, this.getRenderX((byte) -102), this.getRenderY((byte) 116), this.getRenderZ((byte) -89)), -58);
+              this.field_p = var6.play(new SoundEvent(53, this.getRenderX((byte) -102), this.getRenderY((byte) 116), this.getRenderZ((byte) -89)), -58);
               stackIn_62_1 = (var3 != 0);
               this.field_n = stackIn_62_1;
             } else {
@@ -340,7 +340,7 @@ final class SwitchModel extends TrapModel {
           return;
         }
         this.field_s.a(param0 + 1);
-        var7 = (w) (this.getRoom(58).field_G);
+        var7 = (SoundEventPlayer) (this.getRoom(58).soundQueue);
         if (param0 == -1) {
           if (var7 == null) {
             return;
@@ -352,7 +352,7 @@ final class SwitchModel extends TrapModel {
                 if (this.field_q == 1) {
                   if (this.field_o.getSwitchState((byte) -126).b((byte) 89)) {
                     if (this.field_p == null) {
-                      this.field_p = var7.a(new fm(53, this.getRenderX((byte) -102), this.getRenderY((byte) 116), this.getRenderZ((byte) -89)), -58);
+                      this.field_p = var7.play(new SoundEvent(53, this.getRenderX((byte) -102), this.getRenderY((byte) 116), this.getRenderZ((byte) -89)), -58);
                     } else {
                       if (this.field_q == 1 &&
                         !this.field_o.getSwitchState((byte) -87).b((byte) 72) &&
@@ -385,7 +385,7 @@ final class SwitchModel extends TrapModel {
                 if (this.field_q == 1 &&
                   this.field_o.getSwitchState((byte) -126).b((byte) 89) &&
                   this.field_p == null) {
-                  this.field_p = var7.a(new fm(53, this.getRenderX((byte) -102), this.getRenderY((byte) 116), this.getRenderZ((byte) -89)), -58);
+                  this.field_p = var7.play(new SoundEvent(53, this.getRenderX((byte) -102), this.getRenderY((byte) 116), this.getRenderZ((byte) -89)), -58);
                 } else {
                   if (this.field_q == 1 &&
                     !this.field_o.getSwitchState((byte) -87).b((byte) 72) &&
@@ -398,19 +398,19 @@ final class SwitchModel extends TrapModel {
                 this.field_n = stackIn_136_1;
                 return;
               }
-              var7.a(new fm(68, this.getRenderX((byte) -107), this.getRenderY((byte) 123), this.getRenderZ((byte) -111)), -58);
+              var7.play(new SoundEvent(68, this.getRenderX((byte) -107), this.getRenderY((byte) 123), this.getRenderZ((byte) -111)), -58);
             } else {
               if (var3Lifetime1 != 0) {
-                var7.a(new fm(51, this.getRenderX((byte) 90), this.getRenderY((byte) 119), this.getRenderZ((byte) -106)), param0 ^ 57);
+                var7.play(new SoundEvent(51, this.getRenderX((byte) 90), this.getRenderY((byte) 119), this.getRenderZ((byte) -106)), param0 ^ 57);
               } else {
-                var7.a(new fm(52, this.getRenderX((byte) -119), this.getRenderY((byte) 112), this.getRenderZ((byte) -96)), -58);
+                var7.play(new SoundEvent(52, this.getRenderX((byte) -119), this.getRenderY((byte) 112), this.getRenderZ((byte) -96)), -58);
               }
             }
           }
           if (this.field_q == 1 &&
             this.field_o.getSwitchState((byte) -126).b((byte) 89)) {
             if (this.field_p == null) {
-              this.field_p = var7.a(new fm(53, this.getRenderX((byte) -102), this.getRenderY((byte) 116), this.getRenderZ((byte) -89)), -58);
+              this.field_p = var7.play(new SoundEvent(53, this.getRenderX((byte) -102), this.getRenderY((byte) 116), this.getRenderZ((byte) -89)), -58);
               stackIn_144_1 = (var3Lifetime1 != 0);
               this.field_n = stackIn_144_1;
             } else {
@@ -455,7 +455,7 @@ final class SwitchModel extends TrapModel {
           if (this.field_q == 1 &&
             this.field_o.getSwitchState((byte) -126).b((byte) 89)) {
             if (this.field_p == null) {
-              this.field_p = var7.a(new fm(53, this.getRenderX((byte) -102), this.getRenderY((byte) 116), this.getRenderZ((byte) -89)), -58);
+              this.field_p = var7.play(new SoundEvent(53, this.getRenderX((byte) -102), this.getRenderY((byte) 116), this.getRenderZ((byte) -89)), -58);
               stackIn_184_1 = (var3Lifetime2 != 0);
               this.field_n = stackIn_184_1;
             } else {
@@ -504,11 +504,11 @@ final class SwitchModel extends TrapModel {
         }
         if (1 == this.field_q) {
           if (var3Lifetime2 != 0) {
-            var7.a(new fm(51, this.getRenderX((byte) 90), this.getRenderY((byte) 119), this.getRenderZ((byte) -106)), param0 ^ 57);
+            var7.play(new SoundEvent(51, this.getRenderX((byte) 90), this.getRenderY((byte) 119), this.getRenderZ((byte) -106)), param0 ^ 57);
             if (this.field_q == 1 &&
               this.field_o.getSwitchState((byte) -126).b((byte) 89)) {
               if (this.field_p == null) {
-                this.field_p = var7.a(new fm(53, this.getRenderX((byte) -102), this.getRenderY((byte) 116), this.getRenderZ((byte) -89)), -58);
+                this.field_p = var7.play(new SoundEvent(53, this.getRenderX((byte) -102), this.getRenderY((byte) 116), this.getRenderZ((byte) -89)), -58);
                 stackIn_280_1 = true;
                 this.field_n = stackIn_280_1;
                 return;
@@ -539,11 +539,11 @@ final class SwitchModel extends TrapModel {
             this.field_n = stackIn_284_1;
             return;
           }
-          var7.a(new fm(52, this.getRenderX((byte) -119), this.getRenderY((byte) 112), this.getRenderZ((byte) -96)), -58);
+          var7.play(new SoundEvent(52, this.getRenderX((byte) -119), this.getRenderY((byte) 112), this.getRenderZ((byte) -96)), -58);
           if (this.field_q == 1 &&
             this.field_o.getSwitchState((byte) -126).b((byte) 89)) {
             if (this.field_p == null) {
-              this.field_p = var7.a(new fm(53, this.getRenderX((byte) -102), this.getRenderY((byte) 116), this.getRenderZ((byte) -89)), -58);
+              this.field_p = var7.play(new SoundEvent(53, this.getRenderX((byte) -102), this.getRenderY((byte) 116), this.getRenderZ((byte) -89)), -58);
               stackIn_251_1 = false;
               this.field_n = stackIn_251_1;
               return;
@@ -578,7 +578,7 @@ final class SwitchModel extends TrapModel {
           if (this.field_q == 1 &&
             this.field_o.getSwitchState((byte) -126).b((byte) 89) &&
             this.field_p == null) {
-            this.field_p = var7.a(new fm(53, this.getRenderX((byte) -102), this.getRenderY((byte) 116), this.getRenderZ((byte) -89)), -58);
+            this.field_p = var7.play(new SoundEvent(53, this.getRenderX((byte) -102), this.getRenderY((byte) 116), this.getRenderZ((byte) -89)), -58);
             stackIn_300_1 = (var3Lifetime2 != 0);
             this.field_n = stackIn_300_1;
             return;
@@ -597,11 +597,11 @@ final class SwitchModel extends TrapModel {
           return;
         }
         if (var3Lifetime2 != 0) {
-          var7.a(new fm(68, this.getRenderX((byte) -107), this.getRenderY((byte) 123), this.getRenderZ((byte) -111)), -58);
+          var7.play(new SoundEvent(68, this.getRenderX((byte) -107), this.getRenderY((byte) 123), this.getRenderZ((byte) -111)), -58);
           if (this.field_q == 1 &&
             this.field_o.getSwitchState((byte) -126).b((byte) 89)) {
             if (this.field_p == null) {
-              this.field_p = var7.a(new fm(53, this.getRenderX((byte) -102), this.getRenderY((byte) 116), this.getRenderZ((byte) -89)), -58);
+              this.field_p = var7.play(new SoundEvent(53, this.getRenderX((byte) -102), this.getRenderY((byte) 116), this.getRenderZ((byte) -89)), -58);
               stackIn_364_1 = true;
               this.field_n = stackIn_364_1;
               return;
@@ -635,7 +635,7 @@ final class SwitchModel extends TrapModel {
         if (this.field_q == 1 &&
           this.field_o.getSwitchState((byte) -126).b((byte) 89)) {
           if (this.field_p == null) {
-            this.field_p = var7.a(new fm(53, this.getRenderX((byte) -102), this.getRenderY((byte) 116), this.getRenderZ((byte) -89)), -58);
+            this.field_p = var7.play(new SoundEvent(53, this.getRenderX((byte) -102), this.getRenderY((byte) 116), this.getRenderZ((byte) -89)), -58);
             stackIn_339_1 = false;
             this.field_n = stackIn_339_1;
           } else {
@@ -677,7 +677,7 @@ final class SwitchModel extends TrapModel {
         this.field_n = false;
     }
 
-    final int m(byte param0) {
+    final int getOccupancyLayer(byte param0) {
         if (param0 > -63) {
           return 69;
         }

@@ -152,8 +152,8 @@ final class rga {
         if (cm.field_a == null) {
           return 0;
         }
-        g[] var4 = cm.field_a[param1].field_c;
-        g[] var2 = var4;
+        RoomDefinition[] var4 = cm.field_a[param1].field_c;
+        RoomDefinition[] var2 = var4;
         return var4.length;
     }
 

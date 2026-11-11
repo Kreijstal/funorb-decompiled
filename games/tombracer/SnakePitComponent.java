@@ -18,7 +18,7 @@ final class SnakePitComponent extends PrefabComponent {
           }
           var4 = new Trap(param2, param0);
           var4.setSize((byte) -11, this.height, this.width);
-          var4.l(1, 146366800);
+          var4.setStatCategory(1, 146366800);
           var4.addBehaviour((byte) 83, (Behaviour) (new SnakePitBehaviour(param2, false)));
           stackIn_3_0 = var4;
           return stackIn_3_0;
